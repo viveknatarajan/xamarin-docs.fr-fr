@@ -1,0 +1,118 @@
+---
+title: Infrastructures prises en charge et non pris en charge
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 06/07/2016
+ms.openlocfilehash: adb2b5bf0a13d842fbbb73a094fa93f3e1ea8529
+ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/27/2018
+---
+# <a name="supported-and-unsupported-frameworks"></a>Infrastructures prises en charge et non pris en charge
+
+<a name="Supported-Frameworks" />
+
+## <a name="supported-frameworks"></a>Infrastructures prises en charge
+
+Il s’agit d’une liste des infrastructures fournies par Apple pour une utilisation dans vos applications Xamarin.tvOS :
+
+* Accélérer
+* AudioToolbox
+* AudioUnit
+* AVFoundation
+* AVKit
+* CFNetwork
+* CloudKit
+* CoreBluetooth
+* CoreData
+* CoreFoundation
+* CoreGraphics
+* CoreImage
+* CoreLocation
+* CoreMedia
+* CoreSpotlight
+* CoreText
+* CoreVideo
+* Darwin
+* Foundation
+* GameController
+* GameKit
+* Jeu
+* GLKit
+* ImageIO
+* MachO
+* MediaAccessibility
+* MediaPlayer
+* MediaToolbox
+* Metal
+* MetalKit
+* MetalPerformanceShaders
+* MobileCoreServices
+* ModelIO
+* OpenGES
+* SceneKit
+* Sécurité
+* SIMD
+* SpriteKit
+* StoreKit
+* SystemConfiguration
+* TVMLKit (ajouté)
+* TVServices (ajouté)
+* UIKit
+
+<a name="Unsupported-Frameworks" />
+
+## <a name="unsupported-frameworks"></a>Non pris en charge des infrastructures
+
+Voici une liste des infrastructures qui sont pris en charge par iOS 9, mais ont été supprimées de prise en charge de tvOS 9 par Apple et par conséquent, ne peut pas être utilisé dans vos applications Xamarin.tvOS :
+
+* Comptes
+* AddressBook
+* AddressBookUI
+* AssetsLibrary
+* Contacts
+* ContactsUI
+* CoreAudioKit
+* CoreMIDI
+* CoreMotion
+* CoreTelephony
+* EventKit
+* EventKitUI
+* ExternalAccessory
+* GSS
+* HealthKit
+* HomeKit
+* iAd
+* LocalAuthentication
+* MapKit
+* MessageUI
+* MultipeerConnectivity
+* NetworkExtension
+* NewsstandKit
+* NotificationCenter
+* PassKit
+* Photos
+* PhotosUI
+* PushKit
+* QuickLook
+* ReplayKit
+* SafariServices
+* Social
+* Twitter
+* VideoToolbox
+* WatchConnectivity
+* WatchKit
+* WebKit
+
+
+
+## <a name="related-links"></a>Liens associés
+
+- [tvOS](https://developer.apple.com/tvos/)
+- [tvOS les Guides Interface humaine](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guide de programmation d’application de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

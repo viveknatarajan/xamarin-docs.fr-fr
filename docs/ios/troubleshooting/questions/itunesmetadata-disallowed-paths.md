@@ -1,0 +1,21 @@
+---
+title: "Pourquoi mon envoi de l’application échoue avec : interdit les chemins d’accès (iTunesMetadata.plist) trouvés... à ?"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: AE1BBDC6-4D3A-4471-876B-FE28B6E59A24
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.openlocfilehash: 7c96a879a90999a494e9b8e14f028aa3bfd1c4a7
+ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/27/2018
+---
+# <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--"></a>Pourquoi mon envoi de l’application échoue avec : interdit les chemins d’accès (iTunesMetadata.plist) trouvés... à ?
+
+> Erreur : Erreur éléments-90047 : « interdit les chemins d’accès (« iTunesMetadata.plist »), consultez : Payload/iPhoneApp1.app »
+
+Cette erreur est le résultat d’une modification du processus de vérification App Store d’Apple pour empêcher les utilisateurs de problèmes tels que [bogue 29180](https://bugzilla.xamarin.com/show_bug.cgi?id=29180). Cette erreur spécifique est _pas_ liées à une version particulière de Xamarin, vous avez installé, par conséquent, la rétrogradation sera _pas_ aide.
+
+Consultez le forum de discussion [ici](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1) pour les informations de la solution de contournement et les dernières mises à jour pour résoudre ce problème.
