@@ -1,0 +1,20 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Exemples Xamarin.Mac
+metadata:
+  description: "Exemples d’applications Xamarin.Android multiplateforme pour les développeurs d’applications mobiles."
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02/17/2018
+  ms.topic: article
+  ms.openlocfilehash: 839a4df38f8d297a90d6d7b202bf0f20c76588b7
+  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 02/27/2018
+abstract:
+  description: "Exemples d’applications multiplateforme et démonstrations de code Xamarin pour vous aider à créer des applications mobiles avec C# et Xamarin."
+  menu:
+    items:
+    - href: https://developer.xamarin.com/samples/mac/all/
+      text: Tous les exemples Xamarin.Mac
