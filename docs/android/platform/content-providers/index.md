@@ -44,7 +44,7 @@ Les rubriques de cette section fournissent des exemples simples de consommation 
 
 ## <a name="related-links"></a>Liens associés
 
-- [](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
+- [Démonstration de ContactsAdapter (exemple)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
 - [SimpleContentProvider (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
 - [Guide du développeur de fournisseurs de contenu](http://developer.android.com/guide/topics/providers/content-providers.html)
 - [Référence de classe de ContentProvider](https://developer.xamarin.com/api/type/Android.Content.ContentProvider/)

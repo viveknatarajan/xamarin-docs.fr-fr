@@ -46,9 +46,9 @@ Thème du matériel est pris en charge uniquement sur Android 5.0 et versions ul
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités de thème de matériel Android 5.0 dans les applications Xamarin :
 
--  ** 
+-  **Xamarin.Android** &ndash; Xamarin.Android 4.20 ou version ultérieure doit être installé et configuré avec Visual Studio ou Visual Studio pour Mac. 
 
--  **
+-  **Kit de développement logiciel Android** &ndash; Android 5.0 (API 21) ou version ultérieure doit être installé via le Gestionnaire de kit de développement logiciel Android.
 
 -  **Java JDK 1.8** &ndash; JDK 1.7 peut être utilisé si vous n’êtes plus précisément au niveau du ciblage API 23 et les versions antérieur. JDK 1.8 est disponible à partir de [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
@@ -288,7 +288,7 @@ Cet article a introduit le nouveau style d’interface utilisateur matériau th�
 - [Introduction à l’interface Lollipop](~/android/platform/lollipop.md)
 - [CardView](~/android/user-interface/controls/card-view.md)
 - [Autres ressources](~/android/app-fundamentals/resources-in-android/alternate-resources.md)
-- [](http://developer.android.com/preview/index.html)
-- [](http://developer.android.com/preview/material/index.html)
-- [](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)
+- [L Android Developer Preview](http://developer.android.com/preview/index.html)
+- [Conception de matériel](http://developer.android.com/preview/material/index.html)
+- [Principes de conception de matériel](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)
 - [Maintenir la compatibilité](http://developer.android.com/preview/material/compatibility.html)

@@ -104,7 +104,7 @@ Pour créer un projet Xamarin.Android pour Android Marshmallow, vous devez d’a
 
 -   Démarrez le Gestionnaire de SDK Android (dans Visual Studio pour Mac, utilisez **Outils > Gestionnaire de SDK**; dans Visual Studio, utilisez **Outils > Android > Android SDK Manager**) et installez les derniers outils de kit de développement logiciel Android :
 
-    [![](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png)
+    [![Sélection d’outils du SDK Android dans le Gestionnaire de kit de développement logiciel Android.](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png)
 
 -   En outre, installez la dernière version **Android 6.0** packages SDK :
 
@@ -302,7 +302,7 @@ Cet article introduit d’Android Marshmallow et explique comment installer et c
 ## <a name="related-links"></a>Liens associés
 
 - [Android Marshmallow 6.0](http://developer.android.com/about/versions/marshmallow/index.html)
-- [](https://developer.android.com/sdk/index.html#Other)
+- [Obtenir le Kit de développement logiciel Android](https://developer.android.com/sdk/index.html#Other)
 - [Vue d’ensemble](https://developer.android.com/preview/api-overview.html)
 - [Notes de publication](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1.99/)
 - [RuntimePermissions (exemple)](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions)

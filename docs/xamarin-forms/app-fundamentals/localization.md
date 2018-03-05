@@ -919,7 +919,7 @@ En règle générale, les images sont traitées de façon spécifique à la plat
 - [Exemple de localisation RESX](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
 - [TodoLocalized exemple d’application](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalized/)
 - [Localisation interplateforme](~/cross-platform/app-fundamentals/localization.md)
-- [](~/ios/app-fundamentals/localization/index.md)
+- [Localisation d’iOS](~/ios/app-fundamentals/localization/index.md)
 - [Localisation Android](~/android/app-fundamentals/localization.md)
 - [À l’aide de la classe CultureInfo (MSDN)](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
 - [Recherche et utilisation des ressources pour une Culture spécifique (MSDN)](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)

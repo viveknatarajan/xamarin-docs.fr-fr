@@ -401,9 +401,9 @@ Vous pouvez en savoir plus sur i18n et L10n pour les applications iOS, Android e
 
 ## <a name="related-links"></a>Liens associés
 
-- [](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
+- [Tasky (localisé dans le code) (exemple)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 - [Tasky (storyboard localisée) (exemple)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Guide de localisation d’Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [Vue d’ensemble de la localisation d’inter-plateformes](~/cross-platform/app-fundamentals/localization.md)
-- [](~/xamarin-forms/app-fundamentals/localization.md)
+- [Localisation de Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization.md)
 - [Localisation Android](~/android/app-fundamentals/localization.md)
