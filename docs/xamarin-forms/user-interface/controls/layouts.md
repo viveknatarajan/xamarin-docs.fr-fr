@@ -10,7 +10,7 @@ ms.author: dabritch
 ms.date: 01/12/2016
 ms.openlocfilehash: ecea0f55360fcde7a50c52bb33c45a2c5fff5eeb
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/28/2018
 ---
@@ -22,7 +22,7 @@ _Présentation de Xamarin.Forms est utilisés pour composer des contrôles d’i
 
 ## <a name="layouts"></a>Mises en page
 
-Le [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) classe dans Xamarin.Forms est un sous-type spécialisé de vue, qui agit comme un conteneur pour d’autres dispositions ou des vues. Il contient généralement une logique pour définir la position et la taille des éléments enfants dans les applications de Xamarin.Forms.
+Le [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) classe dans Xamarin.Forms est un sous-type spécialisé de vue, qui agit comme un conteneur pour d’autres dispositions ou des vues. Il contient généralement une logique pour définir la position et la taille des éléments enfants dans les applications de Xamarin.Forms.
 
  [ ![](layouts-images/layouts-sml.png "Types de mise en page Xamarin.Forms")](layouts-images/layouts.png "Types de disposition de Xamarin.Forms")
 
