@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 04/14/2017
 ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/27/2018
 ---
@@ -27,7 +27,7 @@ Il est difficile à développer ce `SKMatrix` transformation fonctionne uniqueme
 
 Un système de coordonnées en trois dimensions ajoute un troisième axe appelé Z. point de vue conceptuel, l’axe des Z perpendiculairement à l’écran. Points de coordonnées dans l’espace 3D sont indiqués par trois nombres : (x, y, z). Dans la 3D système de coordonnées utilisé dans cet article, augmenter les valeurs de X sont à droite et des valeurs croissantes de Y s’arrêtent, comme dans les deux dimensions. Les valeurs Z positifs croissantes sortent de l’écran. L’origine sont l’angle supérieur gauche, comme dans les graphiques 2D. Vous pouvez considérer l’écran comme un plan XY avec l’axe des Z perpendiculairement à ce plan.
 
-Il s’agit d’un système de coordonnées de gauche. Si vous pointez l’index de la main gauche dans la direction x positive coordonnées coordonnées (à droite), et votre doigt intermédiaire dans le sens d’augmentation Y (points vers le bas), puis votre curseur dans le sens d’augmentation des coordonnées Z & #x 2014 ; s’étend à partir de l’écran.
+Il s’agit d’un système de coordonnées de gauche. Si vous pointez l’index de la main gauche dans la direction x positive coordonnées coordonnées (à droite), et votre doigt intermédiaire dans le sens d’augmentation Y (points vers le bas), puis votre curseur dans le sens d’augmentation des coordonnées &#x2014; s’étend à partir de l’écran.
 
 Dans les graphiques 3D, les transformations sont basées sur une matrice 4 x 4. Voici la matrice d’identité 4 x 4 :
 
@@ -109,7 +109,7 @@ Rotation autour de l’axe Z est le même que dans les graphiques 2D :
 |    0       0     0  1  |
 </pre>
 
-La direction de rotation est impliquée par l’ergonomie du système de coordonnées. Il s’agit d’un système utilisant, si vous pointez le curseur de la main gauche pour augmenter les valeurs pour un axe particulier & le #x 2014 ; à droite de rotation autour de l’axe X, vers le bas de la rotation autour de l’axe Y et à vous de rotation autour de l’axe Z & #x 2014 ; puis la courbe de vos autres doigts indique la direction de rotation pour les valeurs positives.
+La direction de rotation est impliquée par l’ergonomie du système de coordonnées. Il s’agit d’un système utilisant, si vous pointez le curseur de la main gauche pour augmenter les valeurs pour un axe particulier &#x2014; à droite de rotation autour de l’axe X, vers le bas de la rotation autour de l’axe Y et à vous de rotation autour de l’axe &#x2014; puis la courbe de vos autres doigts indique la direction de rotation pour les valeurs positives.
 
 `SKMatrix44` a généralisé statique [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) et [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) méthodes qui vous permettent de spécifier l’axe autour duquel la rotation se produit :
 
@@ -442,7 +442,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-Le `OnAppearing` remplacement définit trois Xamarin.Forms `Animation` objets à animer la `xRotationDegrees`, `yRotationDegrees`, et `zRotationDegrees` champs à différentes vitesses. Notez que les périodes de ces animations sont définies pour les nombres premiers & #x 2014 ; les 5 secondes, 7 secondes et 11 secondes & #x 2014 ; Par conséquent, la combinaison répète uniquement chaque 385 secondes ou plus de 10 minutes :
+Le `OnAppearing` remplacement définit trois Xamarin.Forms `Animation` objets à animer la `xRotationDegrees`, `yRotationDegrees`, et `zRotationDegrees` champs à différentes vitesses. Notez que les périodes de ces animations sont définies pour les nombres premiers &#x2014; les 5 secondes, 7 secondes et 11 secondes &#x2014; Par conséquent, la combinaison répète uniquement chaque 385 secondes ou plus de 10 minutes :
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
