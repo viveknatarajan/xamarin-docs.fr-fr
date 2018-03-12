@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e78b76a531e9f8ea88adca46fc59b2063fce14cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>Procédure pas à pas - à l’aide de contrôles personnalisés avec le Concepteur de Xamarin pour iOS
 
@@ -33,13 +33,13 @@ Ce guide suppose que vous connaissez le contenu traitées dans le [Getting Start
 1. Créez une solution à partir de la **iOS > application > Application vue unique > C#** modèle, nommez-le `ScratchTicket`et suivez les instructions de l’Assistant Nouveau projet :
 
 
-    [![](ios-designable-controls-walkthrough-images/01new.png "Créer une nouvelle solution")](ios-designable-controls-walkthrough-images/01new.png)
+    [![](ios-designable-controls-walkthrough-images/01new.png "Créer une nouvelle solution")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
 
 1. Créer un nouveau fichier de classe vide nommé `ScratchTicketView`:
 
 
-    [![](ios-designable-controls-walkthrough-images/02new.png "Créez une classe ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png)
+    [![](ios-designable-controls-walkthrough-images/02new.png "Créez une classe ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
 
 
 1. Ajoutez le code suivant pour `ScratchTicketView` classe :
@@ -168,63 +168,50 @@ Ce guide suppose que vous connaissez le contenu traitées dans le [Getting Start
     
 1. Double-cliquez sur le `Main.storyboard` fichier pour l’ouvrir dans le concepteur :
 
-    
-    [![](ios-designable-controls-walkthrough-images/03new.png "Le concepteur iOS")](ios-designable-controls-walkthrough-images/03new.png)
-
+    [![](ios-designable-controls-walkthrough-images/03new.png "Le concepteur iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 
 1. Glisser-déplacer un **affichage Image** à partir de la **boîte à outils** sur la vue dans le plan conceptuel.
 
-    
-    [![](ios-designable-controls-walkthrough-images/04new.png "Affichage d’une Image est ajoutée à la mise en page")](ios-designable-controls-walkthrough-images/04new.png)
+    [![](ios-designable-controls-walkthrough-images/04new.png "Affichage d’une Image est ajoutée à la mise en page")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
 
 1. Sélectionnez le **affichage Image** et modifiez son **Image** propriété `Monkey.png`.
 
-    
-    [![](ios-designable-controls-walkthrough-images/05new.png "Définition de la propriété Image d’affichage Image à Monkey.png")](ios-designable-controls-walkthrough-images/05new.png)
+    [! [] (ios-possible-contrôles-walkthrough-images/05new.png « propriété d’Image d’affichage du paramètre Image à Monkey.png)](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
     
 1. Nous utilisons des classes de taille nous devrons limiter cette vue de l’image. Cliquez sur l’image à deux reprises pour placer en mode de contrainte. Nous allons limiter au centre en cliquant sur le handle de l’épinglage de centre et l’aligner verticalement et horizontalement :
-    
-    
-    [![](ios-designable-controls-walkthrough-images/06new.png "Centrer l’image")](ios-designable-controls-walkthrough-images/06new.png)
 
-    
+    [![](ios-designable-controls-walkthrough-images/06new.png "Centrer l’image")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
+
 1. Pour limiter la hauteur et la largeur, cliquez sur les poignées de l’épinglage de taille (les poignées 'segment' en forme), puis sélectionnez les largeur et hauteur respectivement :
 
-    
-    [![](ios-designable-controls-walkthrough-images/07new.png "Ajout de contraintes")](ios-designable-controls-walkthrough-images/07new.png)
+    [![](ios-designable-controls-walkthrough-images/07new.png "Ajout de contraintes")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 
 1. Mettre à jour le frame en fonction de contraintes en cliquant sur le bouton de mise à jour dans la barre d’outils :
 
-
-    [![](ios-designable-controls-walkthrough-images/08new.png "La barre d’outils de contraintes")](ios-designable-controls-walkthrough-images/08new.png)
+    [![](ios-designable-controls-walkthrough-images/08new.png "La barre d’outils de contraintes")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 
 1. Ensuite, générez le projet afin que les **vue de Ticket Scratch** s’affiche sous **des composants personnalisés** dans la boîte à outils :
 
-    
-    [![](ios-designable-controls-walkthrough-images/09new.png "La boîte à outils des composants personnalisés")](ios-designable-controls-walkthrough-images/09new.png)
+    [![](ios-designable-controls-walkthrough-images/09new.png "La boîte à outils des composants personnalisés")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 
 1. Faites glisser et déposez un **vue de Ticket Scratch** afin qu’il apparaisse sur l’image singe. Ajuster les poignées pour la vue de Ticket Scratch couvre le singe complètement, comme indiqué ci-dessous :
 
-    
-    [![](ios-designable-controls-walkthrough-images/10new.png "Une vue de Ticket de travail sur la vue de l’Image")](ios-designable-controls-walkthrough-images/10new.png)
-
+    [![](ios-designable-controls-walkthrough-images/10new.png "Une vue de Ticket de travail sur la vue de l’Image")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
 1. Limiter l’affichage de Ticket de travail à l’affichage de l’Image en dessinant un rectangle englobant pour sélectionner les deux vues. Sélectionnez les options pour limiter aux images largeur, hauteur, centre et au milieu et mise à jour en fonction de contraintes, comme indiqué ci-dessous :
- 
-    
-    [![](ios-designable-controls-walkthrough-images/11new.png "Centrage et ajout de contraintes")](ios-designable-controls-walkthrough-images/11new.png)
+
+    [![](ios-designable-controls-walkthrough-images/11new.png "Centrage et ajout de contraintes")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 
 1. Exécutez l’application et « scratch off » l’image pour faire apparaître le singe.
 
-
- [ ![](ios-designable-controls-walkthrough-images/10-app.png "Un exemple d’application de s’exécuter")](ios-designable-controls-walkthrough-images/10-app.png)
+    [![](ios-designable-controls-walkthrough-images/10-app.png "Un exemple d’application de s’exécuter")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="adding-design-time-properties"></a>Ajout de propriétés au moment du Design
 
@@ -286,7 +273,7 @@ public override void Draw(CGRect rect)
 
 Y compris une `ExportAttribute` et un `BrowsableAttribute` avec l’argument défini `true` entraîne la propriété qui est affichée dans le concepteur **propriété** Panneau de configuration. Modification de la propriété à une autre image incluse avec le projet, tel que `FillTexture2.png`, entraîne la mise à jour du contrôle au moment du design, comme indiqué ci-dessous :
 
- [ ![](ios-designable-controls-walkthrough-images/11-customproperty.png "Modification des propriétés au moment du Design")](ios-designable-controls-walkthrough-images/10-app.png)
+ [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Modification des propriétés au moment du Design")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="summary"></a>Récapitulatif
 
