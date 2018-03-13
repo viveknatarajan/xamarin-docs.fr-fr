@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: 371ffae8e14a630cb548f4a9ee2bf0bd06f7284c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acecc53e8429ac3ca963053fe7a1786937d37ae3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="responding-to-authentication-callbacks"></a>Répond aux rappels de l’authentification
 
@@ -27,7 +27,7 @@ Si un `CryptoObject` a été utilisée lors de l’appel `Authenticate`, il est 
 
 
 > [!NOTE]
-> **Remarque :** il est recommandé de conserver le poids relativement faible de classe de rappel et libérer de la logique d’application spécifique. Les rappels doivent agir en tant que « cop de trafic « entre l’application Android et les résultats à partir du lecteur d’empreintes digitales.
+> Il est recommandé pour conserver le poids relativement faible de classe de rappel et de libérer la logique d’application spécifique. Les rappels doivent agir en tant que « cop de trafic « entre l’application Android et les résultats à partir du lecteur d’empreintes digitales.
 
 ## <a name="a-sample-authentication-callback-handler"></a>Un exemple de gestionnaire de rappel d’authentification
 

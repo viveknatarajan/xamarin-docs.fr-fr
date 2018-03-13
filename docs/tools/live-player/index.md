@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: edc1dd9f9544d1ab03781e7f3181a78b72f53909
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1fea2e2f7210e282fa1e27ad3a1203da2216791e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-live-player"></a>Xamarin Live Player
 
 Xamarin Player de Live permet d’apporter des modifications en direct à votre application et de ces modifications répercuter en temps réel sur votre appareil. Votre code s’exécute à l’intérieur de l’application Xamarin Live Player : il est inutile de configurer des émulateurs ou d’utiliser des câbles pour déployer le code !
 
-[ ![Xamarin Player en direct : Code, analyse, de Test](images/xamarin-live.png)](images/xamarin-live-sml.png)
+[![Xamarin Player en direct : Code, analyse, de Test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
 1. Activer la *Xamarin Live Player* dans **préférences**, puis sélectionnez le **périphériques** liste.
 2. Déboguer ou exécuter et puis analyser la paire QRCodeto votre appareil.
@@ -28,11 +28,11 @@ Xamarin Player de Live permet d’apporter des modifications en direct à votre 
 
 Configurer votre IDE pour utiliser Xamarin Player de Live sur Visual Studio 2017 ou Visual Studio pour Mac. Le lecteur Xamarin Live prend en charge les projets Android, iOS et Xamarin.Forms.
 
-## <a name="xamarin-live-player-appplayermd"></a>[Application Xamarin de lecteur en direct](player.md)
+## <a name="xamarin-live-player-appplayermd"></a>[Application Xamarin Live Player](player.md)
 
 À l’aide de la Xamarin Live application de lecteur.
 
-## <a name="xaml-live-previewinglive-viewmd"></a>[XAML Live Aperçu avant impression](live-view.md)
+## <a name="xaml-live-previewinglive-viewmd"></a>[Préversion XAML Live](live-view.md)
 
 À l’aide de la fonctionnalité « Exécuter en cours affichage en direct ».
 

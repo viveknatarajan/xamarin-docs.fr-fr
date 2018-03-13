@@ -7,18 +7,17 @@ ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: c334e78793f90b4f349f87e12e6b0093fe5cacf8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 4f6cfe61b5f91fb6703fdcdd20513ce6bc2dc161
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-android-wear"></a>Introduction à usure Android
 
 _Avec l’introduction de porter Android de Google, vous n’êtes plus limité aux simplement les téléphones portables et tablettes en matière de développement de superbes applications Android. Prise en charge de Xamarin.Android pour porter Android rend possible d’exécuter du code c# sur votre poignet ! Cette présentation fournit une vue d’ensemble d’usure Android, décrit ses principales fonctionnalités et offre une vue d’ensemble des fonctionnalités disponibles dans Android 2.0 porter. Il répertorie certaines des appareils Android d’usure plus populaires, et il fournit des liens vers la documentation de Google Android usure essentielle pour plus d’informations._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -29,47 +28,40 @@ Usure Android s’exécute sur divers appareils, y compris la première généra
 Prend en charge de Xamarin.Android 5.0 et versions ultérieures prend en charge l’usure Android via notre 4.4W Android (API 20) et contrôles d’interface utilisateur spécifique à l’usure un package NuGet ajoute supplémentaires. Xamarin.Android 5.0 et versions ultérieures inclut également les fonctionnalités pour empaqueter vos applications d’usure. Les packages NuGet sont également disponibles pour Android usure 2.0 comme décrit plus loin dans ce guide.
 
 
-<a name="basics" />
-
 ## <a name="android-wear-basics"></a>Principes de base usure Android
 
 Android usure a un modèle d’interface utilisateur qui diffère de celui des applications de poche Android. La première vague d’usure applications ont été conçues pour étendre un Assistant Application poche dans certains façon, mais l’usure Android 2.0 à compter, usure applications peut être autonome utilisé. Lorsque vous déployez une application d’usure, il est empaqueté avec une application de poche d’accompagnement. Étant donné que la plupart d’usure applications dépendent d’une application auxiliaire de poche, ils ont besoin d’un moyen de communiquer avec les applications de poche. Les sections suivantes décrivent ces scénarios d’utilisation et présentent les fonctionnalités essentielles d’usure Android. 
 
 
-<a name="scenarios" />
 
 ### <a name="usage-scenarios"></a>Scénarios d'utilisation
 
 La première version de porter Android a été principalement axée sur extension d’applications de poche actuelles avec les notifications améliorées et la synchronisation des données entre l’application de poche et de l’application portable. Par conséquent, ces scénarios sont relativement faciles à implémenter.
 
-<a name="notifications" />
 
 #### <a name="wearable-notifications"></a>Notifications de portable
 
 Pour prendre en charge l’usure Android, le plus simple consiste à tirer parti de la nature partagée des notifications entre l’ordinateur de poche et l’appareil portable. À l’aide de l’API de notification prise en charge v4 et `WearableExtender` classe (disponible dans le [bibliothèque de prise en charge Android Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), vous pouvez exploiter les fonctionnalités natives de la plateforme, tels que des cartes de style de la boîte de réception ou d’entrée de la voix. Le [RecipeAssistant](https://developer.xamarin.com/samples/monodroid/wear/RecipeAssistant/) exemple fournit des exemples de code qui montre comment envoyer une liste des notifications sur un appareil Android d’usure. 
 
 
-<a name="companion" />
 
 #### <a name="companion-applications"></a>Applications d’accompagnement
 
 Une autre stratégie consiste à créer une application complète qui s’exécute en mode natif sur le périphérique portable et paires avec une application de poche d’accompagnement. Un bon exemple de cette approche est la [questionnaire](https://developer.xamarin.com/samples/monodroid/wear/Quiz/) exemple d’application, qui montre comment créer un questionnaire qui s’exécute sur un ordinateur de poche et pose des questions de questionnaire sur l’appareil portable. 
 
 
-<a name="ui" />
 
 ### <a name="user-interface"></a>Interface utilisateur
 
 Le modèle de navigation principale d’usure est une série de cartes verticalement. Chacune de ces cartes permettre avoir des actions associées sont en couche sur la même ligne. Le `GridViewPager` classe fournit cette fonctionnalité ; il respecte le même concept de carte en tant que `ListView`. En général, vous associez la `GridViewPager` avec un `FragmentGridPagerAdaptor` (ou `GridPagerAdaptor`) qui vous permet de représenter les cellules de chaque ligne et de colonne en tant qu’un `Fragment`: 
 
-[ ![Navigation d’usure](intro-to-wear-images/2d-picker-sml.png "usure Navigation")](intro-to-wear-images/2d-picker.png)
+[![Navigation d’usure](intro-to-wear-images/2d-picker-sml.png "usure Navigation")](intro-to-wear-images/2d-picker.png#lightbox)
 
 Porter également facilite l’utilisation de boutons d’action qui se composent d’un grand cercle avec le texte de description de petits situés en dessous (comme illustré ci-dessus) de couleur.  Le [GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/) exemple montre comment utiliser `GridViewPager` et `GridPagerAdapter` dans une application d’usure.
 
 Android usure 2.0 ajoute un tiroir de navigation, un tiroir de l’action et les boutons d’action inline à l’interface utilisateur de l’usure. Pour plus d’informations sur les éléments d’interface utilisateur d’usure Android version 2.0, consultez le Android [Anatomie](https://www.google.com/design/spec-wear/system-overview/anatomy.html) rubrique. 
 
 
-<a name="comm" />
 
 ### <a name="communications"></a>Communications
 
@@ -86,7 +78,6 @@ Ce service sera automatiquement instancié par l’usure Android.
 Le [FindMyPhone](https://developer.xamarin.com/samples/monodroid/wear/FindMyPhoneSample/) exemple illustre comment implémenter un `WearableListenerService`.
 
 
-<a name="deploy" />
 
 ### <a name="deployment"></a>Déploiement
 
@@ -94,7 +85,6 @@ Chaque application portable est déployée avec son propre fichier APK incorpor�
 [Utilisation avec l’empaquetage](~/android/wear/deploy-test/packaging.md) explique le déploiement en détail. 
 
 
-<a name="further" />
 
 ## <a name="going-further"></a>Aller plus loin 
 
@@ -114,34 +104,30 @@ Après avoir créé votre première application usure, vous voudrez réessayer d
 [Création d’un visage espion](~/android/wear/platform/creating-a-watchface.md) fournit des instructions pas à pas, l’exemple de code pour le développement d’un élément supprimé service de face espion numérique, suivi par le code plus améliore à un type de style analogique Espion avec des fonctionnalités supplémentaires. 
 
 
-<a name="wear2" />
 
 ## <a name="android-wear-20"></a>Android usure 2.0
 
 Android 2.0 usure présente diverses nouvelles fonctionnalités et fonctions, telles que *complications*, courbes de disposition, les tiroirs de navigation et l’action et les notifications étendues. Usure version 2.0 permet également de générer des applications autonomes qui fonctionnent indépendamment des applications de poche. La nouvelle *les mouvements poignet* permet une interactions avec votre application. Les sections suivantes illustrent ces fonctionnalités et fournissent des liens pour vous aider à démarrer les utiliser dans votre application.
 
 
-<a name="install2" />
 
 ### <a name="install-wear-20-packages"></a>Installation d’usure 2.0 Packages
 
 Pour générer une application de la version 2.0 d’usure avec Xamarin.Android, vous devez ajouter le **Xamarin.Android.Wear v2.0** package pour votre projet (cliquez sur le **onglet Parcourir**) :
 
-[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "installer NuGet Xamarin.Android.Wear v2.0")](intro-to-wear-images/wear-nuget-2.0.png)
+[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "installer NuGet Xamarin.Android.Wear v2.0")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
 
 Ce package NuGet contient des liaisons pour à la fois la prise en charge de Android portable et Compat d’usure les bibliothèques.
 
 En plus de **Xamarin.Android.Wear**, nous vous recommandons d’installer le **Xamarin.GooglePlayServices.Wearable** NuGet : 
 
-[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "installer Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png)
+[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "installer Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
-<a name="wear2feat" />
 
 ### <a name="key-features-of-wear-20"></a>Principales fonctionnalités d’usure 2.0
 
 Android 2.0 usure est la mise à jour plus grand porter Android depuis son lancement initial en 2014. Les sections suivantes illustrent les fonctionnalités clés de la version 2.0 d’usure Android, et des liens sont fournis pour aider à commencer à utiliser ces nouvelles fonctionnalités dans votre application. 
 
-<a name="compl" />
 
 #### <a name="complications"></a>Complications
 
@@ -152,7 +138,6 @@ Android 2.0 usure est la mise à jour plus grand porter Android depuis son lance
 Pour plus d’informations sur les problèmes, consultez le Android [espion Face Complications](https://developer.android.com/wear/preview/features/complications.html) rubrique. 
 
 
-<a name="drawers" />
 
 #### <a name="navigation-and-action-drawers"></a>Navigation et tiroirs de l’Action 
 
@@ -163,7 +148,6 @@ Deux bacs nouvelle sont inclus dans l’usure version 2.0. Le *tiroir de navigat
 Pour plus d’informations sur ces deux bacs interactifs de nouveau, consultez le Android [porter la Navigation et les Actions](https://developer.android.com/wear/preview/features/ui-nav-actions.html) rubrique. 
 
 
-<a name="curved" />
 
 #### <a name="curved-layouts"></a>Dispositions en arc 
 
@@ -174,14 +158,12 @@ Usure 2.0 introduit de nouvelles fonctionnalités pour l’affichage des disposi
 `WearableRecyclerView` étend la `RecyclerView` classe pour prendre en charge des dispositions et des mouvements de défilement circulaires. Pour plus d’informations, consultez le Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) documentation de l’API. 
 
 
-<a name="standalone" />
 
 #### <a name="standalone-apps"></a>Applications autonomes 
 
 2.0 de porter des applications Android peuvent travailler indépendamment des applications de poche. Cela signifie que, par exemple, un espion actif pouvez continuer à offrir des fonctionnalités complètes même si l’ordinateur de poche Compagnon est désactivé ou éloigné de l’appareil portable. Pour plus d’informations sur cette fonctionnalité, consultez le Android [autonome applications](https://developer.android.com/wear/preview/features/standalone-apps.html) rubrique.
 
 
-<a name="wrist" />
 
 #### <a name="wrist-gestures"></a>Mouvements de poignet 
 
@@ -196,7 +178,6 @@ Pour plus d’informations, consultez le Android [poignet mouvements](https://de
 Il existe beaucoup d’autres fonctionnalités 2.0 d’usure telles que les actions inline, smart entrée à distance, notifications étendues, réponse et un nouveau mode de pontage pour les notifications. Pour plus d’informations sur les nouvelles fonctionnalités d’usure version 2.0, consultez le Android [présentation de l’API](https://developer.android.com/wear/preview/api-overview.html). 
 
 
-<a name="devices" />
 
 ## <a name="devices"></a>Appareils
 
@@ -210,7 +191,6 @@ Voici quelques exemples des appareils qui peuvent s’exécuter usure Android :
 * [ASU ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 
-<a name="reading" />
 
 ## <a name="further-reading"></a>informations supplémentaires
 
@@ -222,7 +202,6 @@ Passez en revue de la documentation d’usure Android de Google :
 * [Android usure 2.0](https://developer.android.com/wear/preview/index.html)
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

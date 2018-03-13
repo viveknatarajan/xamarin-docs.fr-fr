@@ -6,16 +6,15 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ce62e844a9ec76217947c0f0f5ed5e9a81336c7e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 145c8507ca5ebea6197fa8827b93f58fbc9bb078
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting-tips"></a>Conseils de dépannage
 
-<a name="Getting_Diagnostic_Information" />
 
 ## <a name="getting-diagnostic-information"></a>Obtention des informations de Diagnostic
 
@@ -27,14 +26,13 @@ Elles incluent notamment :
 3.  Sortie du journal de débogage Android.
 
 
- <a name="Diagnostic_MSBuild_Output" />
-
+<a name="Diagnostic_MSBuild_Output" />
 
 ## <a name="diagnostic-msbuild-output"></a>Diagnostic de sortie MSBuild
 
 MSBuild diagnostic contiennent des informations supplémentaires relatives à la création de package et peut contenir des informations de déploiement de package.
 
-Pour activer un diagnostic de sortie de MSBuild dans Visual Studio :
+Pour activer la sortie MSBuild de diagnostic dans Visual Studio :
 
 1.  Cliquez sur **Outils > Options...**
 2.  Dans l’arborescence à gauche, sélectionnez **projets et Solutions > Générer et exécuter**
@@ -50,12 +48,11 @@ Pour activer un diagnostic de sortie de MSBuild dans Visual Studio pour Mac/OS x
 2.  Dans l’arborescence à gauche, sélectionnez **projets > Générer**
 3.  Dans le volet droit, définissez le journal de détail liste déroulante pour le Diagnostic
 4.  Cliquez sur **OK**.
-5.  Redémarrez Visual Studio pour Mac
+5.  Redémarrer Visual Studio pour Mac
 6.  Nettoyez et regénérez votre package.
 7.  Sortie de diagnostic est visible dans la zone d’erreurs (**vue > remplit > erreurs** ), en cliquant sur le bouton de sortie de génération.
 
 
- <a name="Device_Deployment_Logs" />
 
 
 ## <a name="device-deployment-logs"></a>Journaux de déploiement de périphérique
@@ -74,7 +71,6 @@ Visual Studio pour Mac écrit toujours les journaux de déploiement de périphé
 -  Sur OS X, les fichiers journaux sont écrits dans `$HOME/Library/Logs/XamarinStudio-{VERSION}`.
 
 
- <a name="Android_Debug_Log_Output" />
 
 
 ## <a name="android-debug-log-output"></a>Sortie du journal débogage Android
@@ -88,10 +84,9 @@ adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 
 Propriétés système sont lues lors du démarrage du processus et doivent donc être défini avant que l’application est lancée ou l’application doit être redémarrée une fois les propriétés système sont modifiées.
 
-<a name="Xamarin.Android_System_Properties" />
 
 
-### <a name="xamarinandroid-system-properties"></a>Propriétés du système de Xamarin.Android
+### <a name="xamarinandroid-system-properties"></a>Propriétés système de Xamarin.Android
 
 Xamarin.Android prend en charge les propriétés système suivantes :
 
@@ -130,7 +125,6 @@ Cette erreur se produit en raison d’une incompatibilité avec Visual Studio.
 
 Veuillez choisir System.ValueTuple NuGet correct qui correspond à votre installation de Visual Studio 2017.
 
-<a name="GC_Messages" />
 
 ## <a name="gc-messages"></a>Messages dans le catalogue global
 
@@ -162,7 +156,6 @@ Dans le `GC_MINOR` et `GC_MAJOR` messages, `total` est la quantité de temps pen
 
  *En général*, plus la valeur de `num_hash_entries`, le plus de temps que la `bridge` collections prendra et le plus grand le `total` sera de temps passé à collecter.
 
- <a name="Global_Reference_Messages" />
 
 
 ## <a name="global-reference-messages"></a>Messages de référence globale
@@ -254,14 +247,12 @@ Vous pouvez interroger les nombres de GREF et de WREF en interrogeant le `JniRun
 
 `Java.Interop.JniRuntime.CurrentRuntime.WeakGlobalReferenceCount` -Nombre de références faible
 
- <a name="Offline_Activation" />
 
 
 ## <a name="offline-activation"></a>Activation hors connexion
 
 Si vous n’êtes pas parvenu à activer Xamarin.Android sur Windows ou Impossible d’installer la version complète de Xamarin.Android sur Mac OS X, consultez la [Activation hors connexion](~/android/get-started/installation/index.md) page.
 
- <a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
 
 
 ## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>Ne peut pas mettre à niveau vers contient/entreprise à partir de la version d’évaluation de compte
@@ -275,7 +266,6 @@ Si vous acheté récemment Xamarin.Android et démarrée précédemment une vers
 
 Cela doit disposer de haut et en cours d’exécution. Si vous continuez à rencontrer des problèmes, vous pouvez éventuellement essayer un [Activation hors connexion](~/android/get-started/installation/index.md) pour effectuer l’activation de votre station de travail.
 
- <a name="Receiving_'Activation_Incomplete'_Error_Message" />
 
 
 ## <a name="receiving-activation-incomplete-error-message"></a>Réception de « Message d’erreur incomplet d’Activation
@@ -285,7 +275,6 @@ Ce problème peut se produire lors de l’utilisation de Xamarin.Android pour Vi
 -  Emplacement du journal : **%LocalAppData%\\Xamarin\\journaux**
 
 
- <a name="Receiving_'Error_Retrieving_Update_Information'_Error_Message" />
 
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>Message d’erreur « Erreur de récupération des informations de mise à jour »
@@ -315,14 +304,12 @@ Pour ce faire, Veuillez trouver votre plateforme de choix ci-dessous et suivez l
 Si ce message d’erreur continue d’apparaître, envoyez un e-mail  **contact@xamarin.com** .
 
 
- <a name="Android_Debug_Logs" />
 
 
 ## <a name="android-debug-logs"></a>Journaux de débogage Android
 
 Le [les journaux de débogage Android](~/android/deploy-test/debugging/android-debug-log.md) peut fournir un contexte supplémentaire concernant des erreurs d’exécution que vous voyez.
 
- <a name="Floating-Point_performance_is_terrible!" />
 
 
 ## <a name="floating-point-performance-is-terrible"></a>Les performances à virgule flottante sont horribles !
@@ -339,7 +326,6 @@ Versions Release contiendra uniquement les ABIs sélectionnés dans l’onglet P
 
 Si votre application nécessite la performance acceptable à virgule flottante (par exemple, les jeux), vous devez activer la *armeabi-v7a* ABI. Vous pouvez souhaiter prennent uniquement en charge la *armeabi-v7a* runtime, bien que cela signifie qu’anciens appareils qui prennent uniquement en charge *armeabi* ne pourra pas exécuter votre application.
 
- <a name="Could_not_locate_Android_SDK" />
 
 
 ## <a name="could-not-locate-android-sdk"></a>Kit de développement logiciel Android est introuvable.
@@ -347,9 +333,8 @@ Si votre application nécessite la performance acceptable à virgule flottante (
 Il n’y a 2 téléchargements disponibles à partir de Google pour le Kit de développement logiciel Android pour Windows.
 Si vous choisissez le programme d’installation .exe, il écrit des clés de Registre qui indiquent à Xamarin.Android où il a été installé. Si vous choisissez le fichier .zip et décompressez vous-même, Xamarin.Android ne sait pas où rechercher le Kit de développement. Vous savez Xamarin.Android où le Kit de développement dans Visual Studio en accédant à **Outils > Options > Xamarin > Paramètres Android**:
 
-[![Emplacement du SDK Android dans Xamarin Android paramètres](troubleshooting-images/01a.png)]()
+[![Emplacement du SDK Android dans Xamarin Android paramètres](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
 
-<a name="IDE_does_not_display_target_device" />
 
 
 ## <a name="ide-does-not-display-target-device"></a>IDE n’affiche pas le périphérique cible
@@ -393,7 +378,6 @@ emulator -partition-size 512 -avd MonoDroid
 
 Assurez-vous que vous utilisez le nom correct de simulateur, c'est-à-dire [le nom que vous avez utilisé lors de la configuration du simulateur](~/android/get-started/installation/windows.md#device).
 
-<a name="INSTALL_FAILED_INVALID_APK_when_installing_a_package" />
 
 ## <a name="installfailedinvalidapk-when-installing-a-package"></a>INSTALLER\_n’a pas pu\_non valide\_APK lors de l’installation d’un package
 
@@ -410,7 +394,6 @@ Les noms de package Android *doit* contient un point («*.*'). Modifier le nom d
     -   Modifiez le champ de nom de Package de contenir un '.'.
 
 
-<a name="INSTALL_FAILED_MISSING_SHARED_LIBRARY_when_installing_a_package" />
 
 
 ## <a name="installfailedmissingsharedlibrary-when-installing-a-package"></a>INSTALLER\_n’a pas pu\_manquant\_SHARED\_bibliothèque lors de l’installation d’un package
@@ -424,7 +407,6 @@ Pour déterminer les bibliothèques partagées sont requis, voir la *généré*
 
 Par exemple, ajoutez une référence d’assembly à *Mono.Android.GoogleMaps.dll* ajoute implicitement un `<uses-library/>` pour la bibliothèque partagée Google Maps.
 
-<a name="INSTALL_FAILED_UPDATE_INCOMPATIBLE_when_installing_a_package" />
 
 
 ## <a name="installfailedupdateincompatible-when-installing-a-package"></a>INSTALLER\_n’a pas pu\_mise à jour\_incompatibles lors de l’installation d’un package
@@ -450,7 +432,6 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 
 Pour corriger cette erreur, supprimez complètement l’application à partir de votre appareil avant de réinstaller.
 
-<a name="INSTALL_FAILED_UID_CHANGED_when_installing_a_package" />
 
 ## <a name="installfaileduidchanged-when-installing-a-package"></a>INSTALLER\_n’a pas pu\_UID\_modifié lors de l’installation d’un package
 
@@ -475,7 +456,6 @@ $ adb uninstall @PACKAGE_NAME@
 **N’utilisez pas** `adb uninstall -k`, comme ceci va *conserver* données d’application et ainsi conserver l’UID en conflit sur l’appareil cible.
 
 
-<a name="Release_apps_fail_to_launch_on_device" />
 
 ## <a name="release-apps-fail-to-launch-on-device"></a>Les applications de mise en production échouent du lancement sur l’appareil
 
@@ -603,7 +583,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 [Ce problème sera résolu dans une prochaine version](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
 
-<a name="Unexpected_NullReferenceExceptions" />
 
 ## <a name="unexpected-nullreferenceexceptions"></a>Exceptions NullReferenceException inattendue
 
@@ -635,7 +614,6 @@ Pour savoir si c’est le cas, vérifiez le journal de débogage Android pour un
 E/dalvikvm(  123): VM aborting
 ```
 
-<a name="Abort_due_to_Global_Reference_Exhaustion" />
 
 ## <a name="abort-due-to-global-reference-exhaustion"></a>Abandon en raison de l’épuisement de référence globale
 
@@ -726,7 +704,6 @@ En règle générale, une solution utile consiste à trouver le type a trop d’
 
 Vous pouvez activer [GREF journalisation](~/android/troubleshooting/index.md) lorsque GREFs sont créés et leur nombre.
 
-<a name="Abort_due_to_JNI_type_mismatch" />
 
 ## <a name="abort-due-to-jni-type-mismatch"></a>Abandon en raison d’une incompatibilité de type JNI
 

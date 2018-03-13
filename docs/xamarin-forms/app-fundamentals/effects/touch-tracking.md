@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 89d3b56a15110d0c106c43ce227f11f86bbdf404
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0fd037e62bcdb1b2be4c93dc0d32ca76f4e1ba8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="invoking-events-from-effects"></a>Appel des événements à partir des effets
 
@@ -448,7 +448,7 @@ Le `Moved` logique déplace le `BoxView` en modifiant le `LayoutBounds` proprié
 
 Vous pouvez déplacer plusieurs `BoxView` éléments simultanément à l’aide de différents doigts.
 
-[![](touch-tracking-images/boxviewdragging-small.png "Capture d’écran de triple de la page en faisant glisser des BoxView")](touch-tracking-images/boxviewdragging-large.png "Triple capture d’écran de la page BoxView en faisant glisser")
+[![](touch-tracking-images/boxviewdragging-small.png "Capture d’écran de triple de la page en faisant glisser des BoxView")](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple capture d’écran de la page BoxView en faisant glisser")
 
 ### <a name="subclassing-the-view"></a>Sous-classer la vue
 
@@ -511,7 +511,7 @@ Les deux démonstrations nécessitent des graphiques, et utilisent SkiaSharp à 
 
 Le **Ellipse dessin** page vous permet de dessiner une ellipse en passant le doigt sur l’écran. Selon la façon dont vous déplacez votre doigt, vous pouvez dessiner l’ellipse à partir de l’angle supérieur gauche de l’angle inférieur droit, ou à partir de n’importe quel autre angle vers le coin opposé. Les points de suspension est dessiné avec une couleur aléatoire et une opacité.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "Capture d’écran de triple de la page de dessin de l’Ellipse")](touch-tracking-images/ellipsedrawing-large.png "Triple capture d’écran de la page de dessin des points de suspension")
+[![](touch-tracking-images/ellipsedrawing-small.png "Capture d’écran de triple de la page de dessin de l’Ellipse")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple capture d’écran de la page de dessin des points de suspension")
 
 Si vous sélectionnez puis parmi les points de suspension, vous pouvez faire glisser vers un autre emplacement. Cela nécessite une technique appelée « le test de positionnement, » qui implique la recherche de l’objet graphique à un moment donné. Les points de suspension SkiaSharp ne sont pas des éléments de Xamarin.Forms, pour qu’ils ne peuvent pas exécuter leur propre `TouchEffect` de traitement. Le `TouchEffect` doivent s’appliquer à l’ensemble du `SKCanvasView` objet.
 
@@ -683,7 +683,7 @@ case TouchActionType.Pressed:
 
 L’autre exemple SkiaSharp est la **doigt peinture** page. Vous pouvez sélectionner une couleur de contour et la largeur du trait à partir de deux `Picker` vues, puis dessinez avec un ou plusieurs doigts :
 
-[![](touch-tracking-images/fingerpaint-small.png "Capture d’écran de triple de la page de dessin du doigt")](touch-tracking-images/fingerpaint-large.png "Triple capture d’écran de la page de dessin du doigt")
+[![](touch-tracking-images/fingerpaint-small.png "Capture d’écran de triple de la page de dessin du doigt")](touch-tracking-images/fingerpaint-large.png#lightbox "Triple capture d’écran de la page de dessin du doigt")
 
 Cet exemple nécessite également une classe distincte pour représenter chaque ligne peinte sur l’écran :
 
@@ -791,7 +791,7 @@ Le `AddToList` et `RemoveFromList` méthodes vérifient si le `List` a changé e
 
 Les différentes `WhiteKey` et `BlackKey` éléments sont disposés dans la page [fichier XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml), ce qui convient le mieux lorsque le téléphone est maintenu en mode paysage :
 
-[![](touch-tracking-images/silentkeyboard-small.png "Capture d’écran de triple de la page en mode silencieux clavier")](touch-tracking-images/silentkeyboard-large.png "Triple capture d’écran de la page de clavier en mode silencieux")
+[![](touch-tracking-images/silentkeyboard-small.png "Capture d’écran de triple de la page en mode silencieux clavier")](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple capture d’écran de la page de clavier en mode silencieux")
 
 Si vous balayage votre doigt sur les clés, vous verrez par les légères modifications de couleur que les événements tactiles sont transférés à partir d’une clé à un autre.
 

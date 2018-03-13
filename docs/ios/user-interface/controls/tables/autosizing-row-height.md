@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c5deb294aac679d60535f3f3bd6c9745e8bff358
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c8d66ff8199d451ce7469fa893b7673589c9e320
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-sizing-row-height"></a>Hauteur de ligne de redimensionnement automatique
 
@@ -23,25 +23,25 @@ iOS 11 a ajouté la possibilité pour les lignes développer automatiquement. Ce
 
 Ouvrez le plan conceptuel pour l’affichage de la Table que vous souhaitez disposer de redimensionnement automatique de la ligne pour dans le concepteur, iOS sélectionnez la cellule *Prototype* et concevoir la disposition de la cellule. Exemple :
 
-[ ![](autosizing-row-height-images/table01.png "Création du Prototype de la cellule")](autosizing-row-height-images/table01.png)
+[![](autosizing-row-height-images/table01.png "Création du Prototype de la cellule")](autosizing-row-height-images/table01.png#lightbox)
 
 Pour chaque élément dans le Prototype, ajouter des contraintes pour conserver les éléments dans la position correcte, comme l’affichage de la Table est redimensionnée pour rotation ou iOS différentes tailles d’écran de périphérique. Par exemple, l’épinglage le `Title` vers le haut, gauche et droite de la cellule *affichage du contenu*:
 
-[ ![](autosizing-row-height-images/table02.png "Épingler le titre en haut, gauche et droite de l’affichage de contenu des cellules")](autosizing-row-height-images/table02.png)
+[![](autosizing-row-height-images/table02.png "Épingler le titre en haut, gauche et droite de l’affichage de contenu des cellules")](autosizing-row-height-images/table02.png#lightbox)
 
 Dans le cas de notre exemple de table, la petite `Label` (sous le `Title`) est le champ que vous pouvez réduire et s’agrandir pour augmenter ou diminuer la hauteur de ligne. Pour parvenir à cet effet, ajoutez les contraintes suivantes pour épingler gauche, droite, haut et bas de l’étiquette :
 
-[ ![](autosizing-row-height-images/table03.png "Ces contraintes pour épingler gauche, droite, haut et bas de l’étiquette")](autosizing-row-height-images/table03.png)
+[![](autosizing-row-height-images/table03.png "Ces contraintes pour épingler gauche, droite, haut et bas de l’étiquette")](autosizing-row-height-images/table03.png#lightbox)
 
 Maintenant que nous avons entièrement restreint les éléments dans la cellule, nous devons préciser que l’élément doit être étirée. Pour ce faire, définissez la **contenu priorité Hugging** et **priorité de résistance à la Compression de contenu** en fonction des besoins dans les **disposition** section de la zone de propriétés :
 
-[ ![](autosizing-row-height-images/table03a.png "La section disposition de la zone de propriétés")](autosizing-row-height-images/table03a.png)
+[![](autosizing-row-height-images/table03a.png "La section disposition de la zone de propriétés")](autosizing-row-height-images/table03a.png#lightbox)
 
 Définir l’élément que vous souhaitez développer pour avoir un **inférieure** valeur de priorité de Hugging et un **inférieure** valeur de priorité de résistance à la Compression.
 
 Ensuite, nous devons sélectionner le Prototype de la cellule et lui donner un unique **identificateur**:
 
-[ ![](autosizing-row-height-images/table04.png "En donnant le Prototype de la cellule en un identificateur unique")](autosizing-row-height-images/table04.png)
+[![](autosizing-row-height-images/table04.png "En donnant le Prototype de la cellule en un identificateur unique")](autosizing-row-height-images/table04.png#lightbox)
 
 Dans le cas de notre exemple, `GrowCell`. Nous allons utiliser cette valeur ultérieurement, lorsque nous remplir la table.
 
@@ -50,19 +50,19 @@ Dans le cas de notre exemple, `GrowCell`. Nous allons utiliser cette valeur ult�
 
 Pour chaque élément de notre Prototype de la cellule, vous devez affecter un **nom** pour l’exposer au code c#. Exemple :
 
-[ ![](autosizing-row-height-images/table05.png "Attribuez un nom pour l’exposer au code c#")](autosizing-row-height-images/table05.png)
+[![](autosizing-row-height-images/table05.png "Attribuez un nom pour l’exposer au code c#")](autosizing-row-height-images/table05.png#lightbox)
 
 Ensuite, ajoutez une classe personnalisée pour le `UITableViewController`, le `UITableView` et `UITableCell` (Prototype). Exemple : 
 
-[ ![](autosizing-row-height-images/table06.png "Ajout d’une classe personnalisée pour le UITableViewController, le UITableView et le UITableCell")](autosizing-row-height-images/table06.png)
+[![](autosizing-row-height-images/table06.png "Ajout d’une classe personnalisée pour le UITableViewController, le UITableView et le UITableCell")](autosizing-row-height-images/table06.png#lightbox)
 
 Enfin, pour vous assurer que tous les attendue de contenu est affiché dans notre étiquette, définissez la **lignes** propriété `0`:
 
-[ ![](autosizing-row-height-images/table06.png "La propriété de lignes est définie sur 0")](autosizing-row-height-images/table06a.png)
+[![](autosizing-row-height-images/table06.png "La propriété de lignes est définie sur 0")](autosizing-row-height-images/table06a.png#lightbox)
 
 Avec l’interface utilisateur définie, vous allez ajouter le code pour activer le redimensionnement de hauteur de ligne automatique.
 
-##<a name="enabling-auto-resizing-height"></a>L’activation de hauteur de redimensionnement automatique
+## <a name="enabling-auto-resizing-height"></a>L’activation de hauteur de redimensionnement automatique
 
 Dans le de source de données notre Table de vue (`UITableViewDatasource`) ou la Source (`UITableViewSource`), lorsque nous dequeue une cellule que nous devons utiliser la `Identifier` que nous avons défini dans le concepteur. Exemple :
 
@@ -106,7 +106,7 @@ Cette estimation ne doit pas nécessairement être exacte, une estimation de la 
 
 Avec ce code en place, lorsque l’application est exécutée, chaque ligne sera réduire et augmenter en fonction de la hauteur de la dernière étiquette dans le Prototype de la cellule. Exemple :
 
-[ ![](autosizing-row-height-images/table07.png "Un exemple de table exécuter")](autosizing-row-height-images/table07.png)
+[![](autosizing-row-height-images/table07.png "Un exemple de table exécuter")](autosizing-row-height-images/table07.png#lightbox)
 
 
 ## <a name="related-links"></a>Liens associés

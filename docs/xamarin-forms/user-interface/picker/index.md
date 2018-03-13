@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: edc724eb73b314c0accd3e8775b9b26b6eac16d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc1aaffe4e31b596d57b5de30c87217ffba3772e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="picker"></a>Sélecteur
 
@@ -20,11 +20,11 @@ _L’affichage du sélecteur est un contrôle pour la sélection d’un élémen
 
 A [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) affiche une liste courte d’éléments, à partir de laquelle l’utilisateur peut sélectionner. Toutefois, un [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) n’affiche pas toutes les données lors de son premier affichage. Au lieu de cela, la valeur de sa [ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/) propriété est affichée comme un espace réservé sur la plateforme iOS et Android utilisent :
 
-[![](images/picker-initial.png "Affichage du sélecteur d’initiale")](images/picker-initial-large.png "initiale d’affichage du sélecteur")
+[![](images/picker-initial.png "Affichage du sélecteur d’initiale")](images/picker-initial-large.png#lightbox "initiale d’affichage du sélecteur")
 
 Lorsque le [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) gains focus, ses données s’affiche et l’utilisateur peut sélectionner un élément :
 
-[![](images/picker-selection.png "Sélecteur de sélection d’un élément")](images/picker-selection-large.png "sélecteur de sélection d’un élément")
+[![](images/picker-selection.png "Sélecteur de sélection d’un élément")](images/picker-selection-large.png#lightbox "sélecteur de sélection d’un élément")
 
 Après sélection, l’élément sélectionné est affiché par le [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/):
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ba5249a275d3aa695ccc6527805c56907bbda0ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a5dbd65cc32ed63c0fa6f8abe3a13ffee4e9df63
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="enhanced-user-notifications"></a>Notifications utilisateur améliorée
 
@@ -168,11 +168,11 @@ Pour fournir les droits requis, procédez comme suit :
 1. Double-cliquez sur le `Entitlements.plist` de fichiers dans le **Solution remplissage** à ouvrir pour le modifier.
 2. Basculez vers le **Source** vue : 
 
-    [ ![](enhanced-user-notifications-images/setup01.png "La vue de Source")](enhanced-user-notifications-images/setup01.png)
+    [![](enhanced-user-notifications-images/setup01.png "La vue de Source")](enhanced-user-notifications-images/setup01.png#lightbox)
 3. Cliquez sur le  **+**  pour ajouter une nouvelle clé.
 4. Entrez `aps-environment` pour le **propriété**, laissez le **Type** en tant que `String` et entrez `development` ou `production` pour le **valeur**: 
 
-    [ ![](enhanced-user-notifications-images/setup02.png "La propriété de l’environnement de points d’accès")](enhanced-user-notifications-images/setup02.png)
+    [![](enhanced-user-notifications-images/setup02.png "La propriété de l’environnement de points d’accès")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. Enregistrez les modifications dans le fichier.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -181,7 +181,7 @@ Pour fournir les droits requis, procédez comme suit :
 3. Cliquez sur le  **+**  pour ajouter une nouvelle clé.
 4. Entrez `aps-environment` pour le **propriété**, laissez le **Type** en tant que `String` et entrez `development` ou `production` pour le **valeur**: 
 
-    [ ![](enhanced-user-notifications-images/setup02w.png "La propriété de l’environnement de points d’accès")](enhanced-user-notifications-images/setup02.png)
+    [![](enhanced-user-notifications-images/setup02w.png "La propriété de l’environnement de points d’accès")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. Enregistrez les modifications dans le fichier.
 
 -----
@@ -190,7 +190,7 @@ Pour fournir les droits requis, procédez comme suit :
 
 Si l’application sera envoyer et recevoir des Notifications à distance, elle devra toujours faire _d’inscription de jeton_ à l’aide des `UIApplication` API. L’inscription nécessite l’appareil pour avoir un accès à la connexion réseau actif APNs, ce qui génère le jeton nécessaire qui sera envoyé à l’application. L’application doit ensuite transférer ce jeton pour l’application côté serveur du développeur pour s’inscrire aux notifications à distance :
 
-[ ![](enhanced-user-notifications-images/token01.png "Vue d’ensemble de jeton d’inscription")](enhanced-user-notifications-images/token01.png)
+[![](enhanced-user-notifications-images/token01.png "Vue d’ensemble de jeton d’inscription")](enhanced-user-notifications-images/token01.png#lightbox)
 
 Utilisez le code suivant pour initialiser l’inscription requise :
 
@@ -200,7 +200,7 @@ UIApplication.SharedApplication.RegisterForRemoteNotifications ();
 
 Le jeton qui est envoyé à l’application côté serveur du développeur doit être inclus comme partie de la charge utile de Notification que get envoyée à partir du serveur pour APNs lors de l’envoi d’une Notification à distance :
 
-[ ![](enhanced-user-notifications-images/token02.png "Le jeton fait partie de la charge utile de Notification")](enhanced-user-notifications-images/token02.png)
+[![](enhanced-user-notifications-images/token02.png "Le jeton fait partie de la charge utile de Notification")](enhanced-user-notifications-images/token02.png#lightbox)
 
 Le jeton fait Office de la clé qui associe la notification et l’application utilisé pour ouvrir ou de répondre à la notification.
 
@@ -519,7 +519,7 @@ Le `UserText` propriété conserve la valeur d’entrée de texte n’importe qu
 
 Lorsque vous travaillez avec des Notifications à distance, _les Extensions de Service_ fournissent un moyen pour activer le chiffrement de bout en bout à l’intérieur de la charge utile de Notification. Les Extensions de service sont une extension sans Interface utilisateur (disponible dans iOS 10) qui s’exécutent en arrière-plan avec l’objectif principal de l’augmentation ou de remplacer le contenu visible d’une Notification avant qu’il est présenté à l’utilisateur. 
 
-[ ![](enhanced-user-notifications-images/extension01.png "Vue d’ensemble de l’Extension de service")](enhanced-user-notifications-images/extension01.png)
+[![](enhanced-user-notifications-images/extension01.png "Vue d’ensemble de l’Extension de service")](enhanced-user-notifications-images/extension01.png#lightbox)
 
 Les Extensions de service sont conçues pour s’exécuter rapidement de reçoivent uniquement un court laps de temps à exécuter par le système. Dans le cas où l’Extension de Service ne parvient pas à effectuer sa tâche dans le délai imparti, une méthode de secours sera appelée. Si le secours échoue, le contenu d’origine Notification s’affichera à l’utilisateur.
 
@@ -538,13 +538,13 @@ Pour implémenter une Extension de Service dans une application Xamarin.iOS, pro
 2. Avec le bouton droit sur le nom de la Solution dans le **Solution remplissage** et sélectionnez **ajouter** > **ajouter un nouveau projet**.
 3. Sélectionnez **iOS** > **Extensions** > **Extensions de Service de Notification** et cliquez sur le **suivant** bouton : 
 
-    [ ![](enhanced-user-notifications-images/extension02.png "Sélectionnez les Extensions de Service de Notification")](enhanced-user-notifications-images/extension02.png)
+    [![](enhanced-user-notifications-images/extension02.png "Sélectionnez les Extensions de Service de Notification")](enhanced-user-notifications-images/extension02.png#lightbox)
 4. Entrez un **nom** pour l’extension et cliquez sur le **suivant** bouton : 
 
-    [ ![](enhanced-user-notifications-images/extension03.png "Entrez un nom pour l’extension")](enhanced-user-notifications-images/extension03.png)
+    [![](enhanced-user-notifications-images/extension03.png "Entrez un nom pour l’extension")](enhanced-user-notifications-images/extension03.png#lightbox)
 5. Ajuster la **nom du projet** et/ou **nom de la Solution** si nécessaire et cliquez sur le **créer** bouton : 
 
-    [ ![](enhanced-user-notifications-images/extension04.png "Ajuster le nom du projet et/ou le nom de la Solution")](enhanced-user-notifications-images/extension04.png) 
+    [![](enhanced-user-notifications-images/extension04.png "Ajuster le nom du projet et/ou le nom de la Solution")](enhanced-user-notifications-images/extension04.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -552,7 +552,7 @@ Pour implémenter une Extension de Service dans une application Xamarin.iOS, pro
 2. Avec le bouton droit sur le nom de la Solution dans le **l’Explorateur de solutions** et sélectionnez **ajouter** > **ajouter un nouveau projet**.
 3. Sélectionnez **iOS** > **Extensions** > **Extensions de Service de Notification**: 
 
-    [ ![](enhanced-user-notifications-images/extension01w.png "Sélectionnez les Extensions de Service de Notification")](enhanced-user-notifications-images/extension01w.png)
+    [![](enhanced-user-notifications-images/extension01w.png "Sélectionnez les Extensions de Service de Notification")](enhanced-user-notifications-images/extension01w.png#lightbox)
 4. Entrez un **nom** pour l’extension et cliquez sur le **OK** bouton.
 
 -----

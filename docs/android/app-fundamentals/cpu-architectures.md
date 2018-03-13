@@ -7,12 +7,12 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6139b5e27e9689da6366a2107acc14a6adcfc928
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 3df6dc72eaed74ad335596d55db8b1295b16f3c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cpu-architectures"></a>Architectures de processeur
 
@@ -32,7 +32,7 @@ En règle générale, vous sélectionnez explicitement une architecture (ou arch
 
 Dans Visual Studio, double-cliquez sur **propriétés** sous votre projet dans **l’Explorateur de solutions** et sélectionnez le **Options Android** page. Cliquez sur le **empaquetage** onglet et vérifiez que **utiliser le Runtime partagé** est désactivée (désactivation de cette option vous permet de sélectionner explicitement les ABIs pour prendre en charge). Cliquez sur le **avancé** onglet et, sous **propriétés avancées**, vérifiez les architectures que vous souhaitez prendre en charge :
 
-[ ![Sélection armeabi et armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png)
+[![Sélection armeabi et armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -40,12 +40,12 @@ En règle générale, vous sélectionnez explicitement une architecture (ou arch
 
 Dans Visual Studio pour Mac, localisez votre projet dans le **Solution** de remplissage, cliquez sur l’icône d’engrenage en regard de votre projet et sélectionnez **Options**. Dans le **Options du projet** boîte de dialogue, cliquez sur **générer Android**. Cliquez sur le **général** onglet et vérifiez que **partagés runtime Mono** est désactivée (désactivation de cette option vous permet de sélectionner explicitement les ABIs pour prendre en charge). Cliquez sur le **avancé** onglet et, sous **ABIs de prise en charge**, vérifiez les ABIs pour les architectures que vous souhaitez prendre en charge :
 
-[ ![Sélection armeabi et armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png)
+[![Sélection armeabi et armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
 
 
-Xamarin.Android prend en charge les architectures suivantes :
+Xamarin.Android prend en charge les architectures suivantes :
 
 -   **armeabi** &ndash; ARM-unités centrales qui prennent en charge au moins le jeu d’instructions ARMv5TE. Notez que `armeabi` n’est pas thread-safe et ne doit pas être utilisée sur les appareils multiprocesseur.
 
@@ -66,7 +66,7 @@ Pour cibler plusieurs architectures d’UC, vous pouvez sélectionner plusieurs 
 Vous n’êtes pas obligé de sélectionner **arm64-v8a** ou **x86_64** pour cibler des périphériques 64 bits ; prise en charge 64 bits n’est pas nécessaire pour exécuter votre application sur un matériel 64 bits. Par exemple, les appareils ARM 64 bits (tels que les [Nexus 9](http://www.google.com/nexus/9/)) peuvent exécuter des applications configurées pour `armeabi-v7a`. Le principal avantage de permettre la prise en charge 64 bits est de permettre à votre application d’adresser plus de mémoire.
 
 > [!NOTE]
-> **Remarque :**: prise en charge du runtime 64 bits est une fonctionnalité expérimentale. N’oubliez pas que les runtimes 64 bits sont *pas* requis pour exécuter votre application sur des périphériques 64 bits. 
+> fonctionnalité expérimentale est actuellement prise en charge du runtime 64 bits. N’oubliez pas que les runtimes 64 bits sont *pas* requis pour exécuter votre application sur des périphériques 64 bits. 
 
 ## <a name="additional-information"></a>Informations supplémentaires
 

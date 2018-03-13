@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: beff54d2b2bb72b2adf1e77819c56004b92e13f7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 279b5bc1188c973fddc033f9b592e9acec703a59
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="passkit"></a>PassKit
 
@@ -22,7 +22,7 @@ Portefeuille est une application pour iPhone et iPod touche avec iOS 6. Il stock
 
 Ce document présente le portefeuille, à l’aide de l’API du Kit de transmettre avec Xamarin.iOS et explique comment implémenter des Passes sur votre serveur.
 
- [ ![](passkit-images/image1.png "Le portefeuille stocke et d’organise tous les tests sur un téléphone")](passkit-images/image1.png)
+ [![](passkit-images/image1.png "Le portefeuille stocke et d’organise tous les tests sur un téléphone")](passkit-images/image1.png#lightbox)
 
 
 ## <a name="requirements"></a>Configuration requise
@@ -55,7 +55,7 @@ Fondamentalement, passez le Kit fournit un moyen simple et pratique pour stocker
 
 Kit de test n’est pas simplement une API dans CocoaTouch, au lieu de cela il fait partie d’un plus grand écosystème d’applications, données et services qui facilitent le partage sécurisé et gestion des codes-barres et autres données. Ce diagramme de haut niveau montre les différentes entités qui peuvent être impliquées dans la création et à l’aide de Passes :
 
- [ ![](passkit-images/image2.png "Ce diagramme de haut niveau indique les entités impliquées dans la création et à l’aide de Passes")](passkit-images/image2.png)
+ [![](passkit-images/image2.png "Ce diagramme de haut niveau indique les entités impliquées dans la création et à l’aide de Passes")](passkit-images/image2.png#lightbox)
 
 Chaque partie de l’écosystème a un rôle clairement défini :
 
@@ -86,7 +86,7 @@ Actuellement cinq types pris en charge, qui peuvent être distingués dans l’a
 
 Les types de cinq passe sont affichés dans cette capture d’écran (dans l’ordre : coupon, générique, stocker la carte, passez d’embarquement et ticket d’événement) :
 
- [ ![](passkit-images/image3.png "Les types de cinq passe sont affichés dans cette capture d’écran")](passkit-images/image3.png)
+ [![](passkit-images/image3.png "Les types de cinq passe sont affichés dans cette capture d’écran")](passkit-images/image3.png#lightbox)
 
 ### <a name="file-structure"></a>Structure de fichiers
 
@@ -103,7 +103,7 @@ Un fichier de test est en fait une archive ZIP avec un **.pkpass** extension, co
 
 Structure de répertoires d’un fichier de test est indiqué ci-dessous (c’est le contenu de l’archive ZIP) :
 
- [ ![](passkit-images/image4.png "Structure de répertoires d’un fichier de test est illustrée ici")](passkit-images/image4.png)
+ [![](passkit-images/image4.png "Structure de répertoires d’un fichier de test est illustrée ici")](passkit-images/image4.png#lightbox)
 
 ### <a name="passjson"></a>pass.json
 
@@ -238,9 +238,9 @@ Pour créer un faire passer un ID de Type suit.
 
 La première étape consiste à configurer un ID de Type passer pour chaque autre _type_ de passe d’être pris en charge. Le transmettre l’ID (ou l’identificateur de passer un Type) crée un identificateur unique pour le test. Nous allons utiliser cet ID pour lier la passe de votre compte de développeur à l’aide d’un certificat.
 
-1. Dans le [section certificats, les identificateurs et les profils du portail d’approvisionnement iOS](https://developer.apple.com/account/overview.action), accédez à **identificateurs** et sélectionnez **passer un ID de Type** . Puis sélectionnez le  **+**  bouton permettant de créer un nouveau type de test : [ ![ ] (passkit-images/passid.png "créer un nouveau type de test")](passkit-images/passid.png)
+1. Dans le [section certificats, les identificateurs et les profils du portail d’approvisionnement iOS](https://developer.apple.com/account/overview.action), accédez à **identificateurs** et sélectionnez **passer un ID de Type** . Puis sélectionnez le  **+**  bouton permettant de créer un nouveau type de test : [ ![ ] (passkit-images/passid.png "créer un nouveau type de test")](passkit-images/passid.png#lightbox)
 
-2.   Fournir un **Description** (nom) et **identificateur** (chaîne unique) pour le test. Notez que tous les ID de Type passer doit commencer par la chaîne `pass.` dans cet exemple, nous utilisons `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "fournir une Description et un identificateur")](passkit-images/register.png)
+2.   Fournir un **Description** (nom) et **identificateur** (chaîne unique) pour le test. Notez que tous les ID de Type passer doit commencer par la chaîne `pass.` dans cet exemple, nous utilisons `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "fournir une Description et un identificateur")](passkit-images/register.png#lightbox)
 
 
 3.   Confirmer l’ID de passer en appuyant sur la **inscrire** bouton.
@@ -252,11 +252,11 @@ La première étape consiste à configurer un ID de Type passer pour chaque autr
 
 Pour créer un nouveau certificat pour ce code de Type passer, procédez comme suit :
 
-1.  Sélectionnez l’ID de passer nouvellement créé dans la liste, puis cliquez sur **modifier** : [ ![ ] (passkit-images/pass-done.png "sélectionnez le nouvel ID de passer dans la liste")](passkit-images/pass-done.png)
+1.  Sélectionnez l’ID de passer nouvellement créé dans la liste, puis cliquez sur **modifier** : [ ![ ] (passkit-images/pass-done.png "sélectionnez le nouvel ID de passer dans la liste")](passkit-images/pass-done.png#lightbox)
 
     Ensuite, sélectionnez **créer un certificat...** :
 
-    [ ![](passkit-images/cert-dist.png "Sélectionnez Créer le certificat")](passkit-images/cert-dist.png)
+    [![](passkit-images/cert-dist.png "Sélectionnez Créer le certificat")](passkit-images/cert-dist.png#lightbox)
 
 
 2.  Suivez les étapes pour créer un certificat de demande (signature).
@@ -286,7 +286,7 @@ Maintenant que nous avons créé le Type passer, nous pouvons créer manuellemen
 
 Il existe certains fichiers sources dans l’exemple de code pour cet article peut être utilisé pour générer un test. Utiliser les fichiers dans le `CouponBanana.raw` répertoire du répertoire CreateAPassManually. Les fichiers suivants sont présents :
 
- [ ![](passkit-images/image18.png "Ces fichiers sont présentes")](passkit-images/image18.png)
+ [![](passkit-images/image18.png "Ces fichiers sont présentes")](passkit-images/image18.png#lightbox)
 
 Ouvrez pass.json et modifier le fichier JSON. Vous devez au moins mettre à jour le `passTypeIdentifier` et `teamIdentifer` pour correspondre à votre compte de développeur d’Apple.
 
@@ -330,11 +330,11 @@ Dans l’exemple de code de cet article, il est un projet appelé `signpassnet` 
 
 Si vous deviez examiner la sortie de ces outils (en définissant le nom de fichier par .zip, puis en l’ouvrant), vous visualiserez les fichiers suivants (Notez l’ajout de la `manifest.json` et `signature` fichiers) :
 
- [ ![](passkit-images/image19.png "Examen de la sortie de ces outils")](passkit-images/image19.png)
+ [![](passkit-images/image19.png "Examen de la sortie de ces outils")](passkit-images/image19.png#lightbox)
 
 Une fois que vous avez signé, compressés et renommer le fichier (par exemple). pour `BananaCoupon.pkpass`) vous pouvez faire glisser dans le simulateur pour tester ou envoyer à vous-même à récupérer sur un périphérique réel. Vous devez voir un écran à **ajouter** le passage, comme suit :
 
- [ ![](passkit-images/image20.png "Ajouter l’écran de test")](passkit-images/image20.png)
+ [![](passkit-images/image20.png "Ajouter l’écran de test")](passkit-images/image20.png#lightbox)
 
 Ce processus serait normalement être automatisé sur un serveur, la création de pass toutefois manuelle peut être une option pour les petites entreprises qui créez uniquement des coupons qui ne nécessitent pas la prise en charge d’un serveur principal.
 
@@ -344,7 +344,7 @@ Ce processus serait normalement être automatisé sur un serveur, la création d
 
 Portefeuille est la partie centrale de l’écosystème de passer un Kit. Cette capture d’écran montre le portefeuille vide et l’aspect que la liste de test et les passe individuels :
 
- [ ![](passkit-images/image21.png "Cette capture d’écran montre le portefeuille vide et l’aspect que la liste de test et les passe individuels")](passkit-images/image21.png)
+ [![](passkit-images/image21.png "Cette capture d’écran montre le portefeuille vide et l’aspect que la liste de test et les passe individuels")](passkit-images/image21.png#lightbox)
 
 Fonctionnalités de portefeuille :
 
@@ -377,9 +377,9 @@ Applications de canal sont des applications intermédiaires qui recevront les tr
 
 Cette capture d’écran montre comment **Mail** dans iOS 6 reconnaît une pièce jointe de test et (lors d’un contact) propose de **ajouter** à portefeuille.
 
- [ ![](passkit-images/image22.png "Cette capture d’écran montre comment la messagerie dans iOS 6 reconnaît une pièce jointe de test")](passkit-images/image22.png)
+ [![](passkit-images/image22.png "Cette capture d’écran montre comment la messagerie dans iOS 6 reconnaît une pièce jointe de test")](passkit-images/image22.png#lightbox)
 
- [ ![](passkit-images/image23.png "Cette capture d’écran montre comment le courrier fournit ajouter une pièce jointe de test de portefeuille")](passkit-images/image23.png)
+ [![](passkit-images/image23.png "Cette capture d’écran montre comment le courrier fournit ajouter une pièce jointe de test de portefeuille")](passkit-images/image23.png#lightbox)
 
 Si vous générez une application qui peut être un tuyau pour passe, ils peuvent être identifiés par :
 
@@ -400,7 +400,7 @@ Applications d’accompagnement ne doivent pas tenter de dupliquer les fonctionn
 
 Cette suite de cette section décrit comment générer une application auxiliaire base qui interagit avec le Kit de passer.
 
-### <a name="provisioning"></a>Mise en service
+### <a name="provisioning"></a>Provisionnement
 
 Portefeuille étant une technologie de stockage, l’application doit être configuré séparément et ne peut pas utiliser de profil de configuration de l’équipe ou Wildcard application ID. Reportez-vous à la [utilisation des fonctionnalités](~/ios/deploy-test/provisioning/capabilities/wallet-capabilities.md) guide pour créer un ID d’application et la configuration de profil unique pour l’application de portefeuille.
 
@@ -498,7 +498,7 @@ var passes = library.GetPasses ();  // returns PKPass[]
 
 Notez que le simulateur ne filtre pas la liste des Passes retourné, afin de cette méthode doit toujours être testée sur des appareils réels. Cette liste peut être affichée dans un UITableView, l’application exemple doit ressembler à cela deux coupons ont été ajoutés :
 
- [ ![](passkit-images/image29.png "L’apparence d’application exemple comme suit après ont ajouté les deux coupons")](passkit-images/image29.png)
+ [![](passkit-images/image29.png "L’apparence d’application exemple comme suit après ont ajouté les deux coupons")](passkit-images/image29.png#lightbox)
 
 
 ### <a name="displaying-passes"></a>Affichage des Passes
@@ -520,7 +520,7 @@ string passInfo =
 
 Cette chaîne est affichée comme une alerte dans l’exemple :
 
- [ ![](passkit-images/image30.png "L’alerte du Coupon est sélectionné dans l’exemple")](passkit-images/image30.png)
+ [![](passkit-images/image30.png "L’alerte du Coupon est sélectionné dans l’exemple")](passkit-images/image30.png#lightbox)
 
 Vous pouvez également utiliser le `LocalizedValueForFieldKey()` méthode pour récupérer des données à partir des champs dans les passes que vous avez conçu (étant donné que vous connaîtrez les champs doit être présent). L’exemple de code ne montre pas cela.
 
@@ -541,7 +541,7 @@ NavigationController.PresentModalViewController (pkapvc, true);
 
 Le test est présenté avec **ajouter** et **Annuler** options :
 
- [ ![](passkit-images/image20.png "La passe présentée avec les options Ajouter et annuler")](passkit-images/image20.png)
+ [![](passkit-images/image20.png "La passe présentée avec les options Ajouter et annuler")](passkit-images/image20.png#lightbox)
 
 ### <a name="replace-an-existing-pass"></a>Remplacer un test existant
 

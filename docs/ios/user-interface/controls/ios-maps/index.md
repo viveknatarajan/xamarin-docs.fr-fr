@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1665168344a1e1da4f5b07909a8119d77ef2583a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 540a459be24296c8446c2136773ddde59f9d4dd7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps"></a>Maps
 
@@ -234,6 +234,8 @@ Pour effectuer une recherche locale, une application procédez comme suit :
 
 
 La recherche locale API elle-même ne fournit aucune interface utilisateur. Il ne nécessite pas même un mappage à utiliser. Toutefois, pour rendre l’utilisation pratique de recherche locale, une application doit fournir un moyen de spécifier une requête de recherche et afficher les résultats. En outre, étant donné que les résultats contiendra les données d’emplacement, il est souvent judicieux de les afficher sur une carte.
+
+<a name="Adding_a_Local_Search_UI"/>
 
 ### <a name="adding-a-local-search-ui"></a>Ajout d’une interface utilisateur de recherche Local
 

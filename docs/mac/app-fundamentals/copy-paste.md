@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 115f3340c5678c0ead06cf773e193fbdc4ba3d07
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ba937a6eae7f0f74bcf044f1248d49a421e82de5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="copy-and-paste"></a>en effectuant un copier-coller ;
 
@@ -27,7 +27,7 @@ Dans cet article que nous aborderons les deux façons d’utiliser la table de m
 1. **Types de données standard** -étant donné que les opérations de table de montage sont généralement effectuées entre les deux applications non liées, aucune application connaît les types de données prenant en charge l’autre. Pour optimiser le risque de partage, la table de montage peut contenir plusieurs représentations sous forme d’un élément donné (à l’aide d’un jeu standard de types de données courants), ainsi l’application consommatrice de choisir la version qui convient le mieux à ses besoins.
 2. **Données personnalisées** - pour prendre en charge la copie et collage de données complexes dans votre Xamarin.Mac que vous pouvez définir un type de données personnalisé qui sera géré par la table de montage. Par exemple, une application de dessin vectoriel qui permet à l’utilisateur de copier et coller des formes complexes qui sont composées de plusieurs types de données et les points.
 
-[![Exemple de l’application en cours d’exécution](copy-paste-images/intro01.png "exemple de l’application en cours d’exécution")](copy-paste-images/intro01-large.png)
+[![Exemple de l’application en cours d’exécution](copy-paste-images/intro01.png "exemple de l’application en cours d’exécution")](copy-paste-images/intro01-large.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de l’utilisation de la table de montage dans une application Xamarin.Mac pour prendre en charge la copie et les opérations de collage. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -50,14 +50,14 @@ Effectuez ce qui suit :
 1. Démarrez Visual Studio pour Mac et cliquez sur le **nouveau projet...**  lien.
 2. Sélectionnez **Mac** > **application** > **/Cocoa application**, puis cliquez sur le **suivant** bouton : 
 
-    [![Création d’un projet d’application/Cocoa](copy-paste-images/sample01.png "création d’un projet d’application/Cocoa")](copy-paste-images/sample01-large.png)
+    [![Création d’un projet d’application/Cocoa](copy-paste-images/sample01.png "création d’un projet d’application/Cocoa")](copy-paste-images/sample01-large.png#lightbox)
 3. Entrez `MacCopyPaste` pour le **nom du projet** et conserver tout le reste comme valeur par défaut. Cliquez sur suivant : 
 
-    [![Définition du nom du projet](copy-paste-images/sample01a.png "la définition du nom du projet")](copy-paste-images/sample01a-large.png)
+    [![Définition du nom du projet](copy-paste-images/sample01a.png "la définition du nom du projet")](copy-paste-images/sample01a-large.png#lightbox)
 
 4. Cliquez sur le **créer** bouton : 
 
-    [![Confirmer les nouveaux paramètres de projet](copy-paste-images/sample02.png "confirmer les nouveaux paramètres de projet")](copy-paste-images/sample02-large.png)
+    [![Confirmer les nouveaux paramètres de projet](copy-paste-images/sample02.png "confirmer les nouveaux paramètres de projet")](copy-paste-images/sample02-large.png#lightbox)
 
 ### <a name="add-an-nsdocument"></a>Ajouter un NSDocument
 
@@ -265,7 +265,7 @@ Avec ce document en place, nous allons créer l’interface utilisateur de l’a
 
 Double-cliquez sur le **Main.storyboard** fichier et ouvrez-le dans Xcode. Ensuite, ajoutez une barre d’outils et d’une image de bien et configurez-les comme suit :
 
-[![La barre d’outils](copy-paste-images/sample04.png "la barre d’outils")](copy-paste-images/sample04-large.png)
+[![La barre d’outils](copy-paste-images/sample04.png "la barre d’outils")](copy-paste-images/sample04-large.png#lightbox)
 
 Ajouter une copie et collez **élément de barre d’outils Image** sur le côté gauche de la barre d’outils. Nous allez utiliser ces raccourcis pour copier et coller dans le menu Edition. Ensuite, ajoutez quatre **des éléments de barre d’outils Image** à droite de la barre d’outils. Nous allons utiliser ceux-ci pour remplir l’image correctement avec certaines images par défaut.
 
@@ -273,7 +273,7 @@ Pour plus d’informations sur l’utilisation des barres d’outils, consultez 
 
 Ensuite, nous allons également exposer les prises de courant et les actions pour les éléments de barre d’outils et de l’image suivante :
 
-[![Création de points de vente et les actions](copy-paste-images/sample05.png "création prises et actions")](copy-paste-images/sample05-large.png)
+[![Création de points de vente et les actions](copy-paste-images/sample05.png "création prises et actions")](copy-paste-images/sample05-large.png#lightbox)
 
 Pour plus d’informations sur l’utilisation des points de vente et les actions, consultez la [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) section de notre [Hello, Mac](~/mac/get-started/hello-mac.md) documentation.
 

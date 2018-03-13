@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: eb310b13a97e345bab68bf4e878f81a6187da691
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c31dbfeea3134de95f3275a7fa79c508a94d6a91
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="handling-rotation"></a>Rotation de la gestion
 
 _Cette rubrique décrit comment gérer les modifications de l’orientation de périphérique dans Xamarin.Android. Elle couvre l’utilisation avec le système de ressource Android pour charger automatiquement les ressources pour une orientation de périphérique particulier, ainsi que la manière de gérer par programme l’orientation change._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -30,7 +29,6 @@ Ce guide présente les rubriques d’orientation suivantes :
 
 -   **Rotation de disposition par programmation** &ndash; comment ajouter des contrôles par programme, ainsi que comment gérer manuellement les modifications de l’orientation.
 
-<a name="Handling_Rotation_Declaratively_with_Layouts" />
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>Rotation de façon déclarative avec les dispositions de gestion
 
@@ -41,13 +39,12 @@ Cela inclut la prise en charge pour :
 
 -   *Ressources drawable* &ndash; spécifiant les drawables sont chargés pour chaque orientation.
 
-<a name="Layout_Resources" />
 
 ### <a name="layout-resources"></a>Ressources de mise en page
 
 Par défaut, les fichiers XML Android (AXML) inclus dans le **ressources/disposition** dossier sont utilisés pour le rendu des vues pour une activité. Les ressources de ce dossier sont utilisés pour l’orientation portrait et paysage si aucune ressource de mise en forme supplémentaires n’est fournies spécifiquement pour paysage. Considérez la structure de projet créée par le modèle de projet par défaut :
 
-[ ![Structure de modèle de projet par défaut](handling-rotation-images/00.png)](handling-rotation-images/00.png)
+[![Structure de modèle de projet par défaut](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
 
 Ce projet crée un seul **Main.axml** de fichiers dans le **ressources/disposition** dossier. Lors de l’activité `OnCreate` est appelée, elle augmente la vue définie dans **Main.axml,** qui déclare un bouton, comme indiqué dans le code XML ci-dessous :
 
@@ -67,9 +64,8 @@ Ce projet crée un seul **Main.axml** de fichiers dans le **ressources/dispositi
 
 Si l’appareil passe en orientation paysage, l’activité de `OnCreate` méthode est appelée à nouveau et le même **Main.axml** fichier est agrandie, comme indiqué dans la capture d’écran ci-dessous :
 
-[ ![Même écran mais en orientation paysage](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png)
+[![Même écran mais en orientation paysage](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
 
-<a name="Orientation-Specific_Layouts" />
 
 #### <a name="orientation-specific-layouts"></a>Dispositions spécifiques à l’orientation
 
@@ -105,9 +101,8 @@ Si un dossier nommé terrestres mise en page qui contient un autre **Main.axml**
 
 Ce code en cours d’exécution et de faire pivoter l’appareil de portrait à paysage montrent le nouveau chargement de XML, comme indiqué ci-dessous :
 
-[ ![Captures d’écran portrait et paysage imprimer le mode portrait](handling-rotation-images/02.png)](handling-rotation-images/02.png)
+[![Captures d’écran portrait et paysage imprimer le mode portrait](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
-<a name="Drawable_Resources" />
 
 ### <a name="drawable-resources"></a>Ressources drawable
 
@@ -126,15 +121,13 @@ Par exemple, le projet inclut une image nommée Monkey.png dans le **drawable/re
 
 Imaginons qu’une version différente de **Monkey.png** est inclus sous **ressources/drawable-terrestres**. Tout comme avec les fichiers de mise en page, quand l’appareil est pivoté, les modifications drawable pour l’orientation donnée, comme indiqué ci-dessous :
 
-[ ![Version différente de Monkey.png indiqué dans les modes portrait et paysage](handling-rotation-images/03.png)](handling-rotation-images/03.png)
+[![Version différente de Monkey.png indiqué dans les modes portrait et paysage](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
-<a name="Handling_Rotation_Programmatically" />
 
 ## <a name="handling-rotation-programmatically"></a>Gestion par programme de Rotation
 
 Parfois, nous définissons mises en page dans le code. Cela peut se produire pour diverses raisons, y compris les limitations techniques, de préférence de développeur, etc. Lorsque nous ajoutons des contrôles par programme, une application doit tenir compte manuellement l’orientation du périphérique, qui est géré automatiquement quand vous utilisez les ressources XML.
 
-<a name="Adding_Controls_in_Code" />
 
 ### <a name="adding-controls-in-code"></a>Ajout de contrôles dans le Code
 
@@ -178,9 +171,8 @@ protected override void OnCreate (Bundle bundle)
 
 Ce code crée une instance d’un `RelativeLayout` classe et définit son `LayoutParameters` propriété. La `LayoutParams` classe consiste d’Android encapsulant la façon dont les contrôles sont positionnés de façon réutilisable. Après la création d’une instance d’une disposition, les contrôles peuvent être créés et ajoutés. Les contrôles ont également `LayoutParameters`, telles que le `TextView` dans cet exemple. Après le `TextView` est créé, en ajoutant à la `RelativeLayout` et en définissant le `RelativeLayout` en tant que les résultats de l’affichage du contenu dans l’affichage de l’application le `TextView` comme indiqué :
 
-[ ![Bouton de compteur d’incrément affiché en mode portrait et paysage](handling-rotation-images/04.png)](handling-rotation-images/04.png)
+[![Bouton de compteur d’incrément affiché en mode portrait et paysage](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
 
-<a name="Detecting_Orientation_in_Code" />
 
 ### <a name="detecting-orientation-in-code"></a>Détection de l’Orientation dans le Code
 
@@ -226,9 +218,8 @@ protected override void OnCreate (Bundle bundle)
 
 Ce code définit le `TextView` à être positionnées à 100 pixels de haut en gauche de l’écran, l’animation automatiquement à la nouvelle disposition, lorsque vous faites pivoter paysage, comme illustré ici :
 
-[ ![État d’affichage est conservé entre les modes portrait et paysage](handling-rotation-images/05.png)](handling-rotation-images/05.png)
+[![État d’affichage est conservé entre les modes portrait et paysage](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
 
-<a name="Preventing_Activity_Restart" />
 
 ### <a name="preventing-activity-restart"></a>Empêche le redémarrage de l’activité
 
@@ -292,7 +283,6 @@ Ici le `TextView's` les paramètres de mise en page sont initialisés pour portr
 
 Lorsque nous exécutons l’application, Android charge les modifications de l’interface utilisateur, comme la rotation de l’appareil se produit et ne redémarre pas l’activité.
 
-<a name="Preventing_Activity_Restart_for_Declarative_Layouts" />
 
 ## <a name="preventing-activity-restart-for-declarative-layouts"></a>Empêche le redémarrage de l’activité pour les dispositions déclaratives
 
@@ -300,7 +290,6 @@ Les redémarrages d’activité dus à la rotation du périphérique peuvent emp
 
 Pour ce faire, nous la même procédure que nous utilisons avec une disposition par programmation. Il suffit de définir `ConfigurationChanges` dans les `ActivityAttribute`, comme nous l’avons fait le `CodeLayoutActivity` précédemment. Tout code qui doit-elle s’exécuter pendant la modification de l’orientation peut à nouveau être implémentée dans le `OnConfigurationChanged` (méthode).
 
-<a name="Maintaining_State_During_Orientation_Changes" />
 
 ## <a name="maintaining-state-during-orientation-changes"></a>Gestion de l’état lors de la modification de l’Orientation
 
@@ -308,7 +297,6 @@ Si la gestion des rotation de façon déclarative ou par programme, toutes les a
 
 Pour plus d’informations sur la persistance de l’état dans Android, reportez-vous à la [cycle de vie des activités](~/android/app-fundamentals/activity-lifecycle/index.md) guide.
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

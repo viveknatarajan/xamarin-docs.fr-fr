@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ce20322b576b12ff9dfe56ef0bc9d2e1ca27792
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 530e53230e9f0dea165b083fa6795558025a293f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinmac-extension-support"></a>Prise en charge de l’Extension de Xamarin.Mac
 
@@ -42,7 +42,7 @@ Les conseils suivants peuvent être utiles lorsque vous travaillez avec des exte
 - Toutes les exceptions non interceptées seront bloque le processus d’extension, qui fournit uniquement une petite quantité d’informations utiles dans le **dans le journal système**. Renvoi à la ligne de code problématique dans un `try/catch` (Exception) qui bloquent `NSLog`d’avant de lever à nouveau peut s’avérer utile.
 - Le **dans le journal système** est accessible à partir de la **Console** application sous **Applications** > **utilitaires**:
 
-    [ ![](extensions-images/extension02.png "Le journal système")](extensions-images/extension02.png)
+    [![](extensions-images/extension02.png "Le journal système")](extensions-images/extension02.png#lightbox)
 - Comme indiqué ci-dessus, l’application hôte d’extension en cours d’exécution inscrit avec le système. Suppression de l’offre groupée d’application avec annuler son inscription. 
 - Si des versions « isolées » des extensions de l’application sont inscrits, utilisez la commande suivante pour localiser les (afin qu’ils peuvent être supprimés) : `plugin kit -mv`
 
@@ -65,4 +65,4 @@ Cet article a pris un coup de œil rapide à l’utilisation des extensions dans
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [Indications de l’Interface du système d’exploitation X humaines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

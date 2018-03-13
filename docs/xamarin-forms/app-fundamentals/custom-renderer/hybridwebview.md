@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ef016d963f710ff54fc57b5e6e57181df030c8f6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e67646e5072f703af71fc3f0a7901fd8485f9710
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implémentation d’un HybridWebView
 
@@ -151,7 +151,7 @@ Le processus de création de la classe de convertisseur personnalisé est comme 
 1. Ajouter un `ExportRenderer` d’attribut à la classe de convertisseur personnalisé pour spécifier qu’il sera utilisé pour restituer le contrôle personnalisé Xamarin.Forms. Cet attribut est utilisé pour inscrire le convertisseur personnalisé avec Xamarin.Forms.
 
 > [!NOTE]
-> **Remarque**: pour la plupart des éléments de Xamarin.Forms, il est facultatif pour fournir un convertisseur personnalisé dans chaque projet de plateforme. Si un convertisseur personnalisé n’est pas inscrit, puis le convertisseur par défaut pour la classe de base du contrôle sera utilisé. Toutefois, les convertisseurs personnalisés sont nécessaires dans chaque projet de plateforme lors du rendu d’un [vue](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) élément.
+> Pour la plupart des éléments de Xamarin.Forms, il est facultatif fournir un convertisseur personnalisé dans chaque projet de plateforme. Si un convertisseur personnalisé n’est pas inscrit, puis le convertisseur par défaut pour la classe de base du contrôle sera utilisé. Toutefois, les convertisseurs personnalisés sont nécessaires dans chaque projet de plateforme lors du rendu d’un [vue](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) élément.
 
 Le diagramme suivant illustre les responsabilités de chaque projet dans l’exemple d’application, ainsi que les relations entre eux :
 
@@ -316,7 +316,7 @@ Cette fonctionnalité est fournie comme suit :
   - Les ressources sont libérées.
 
 > [!NOTE]
-> **Remarque**: le `WKWebView` classe est uniquement pris en charge dans iOS 8 et versions ultérieures.
+> La `WKWebView` classe est uniquement pris en charge dans iOS 8 et versions ultérieures.
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Création du convertisseur personnalisé sur Android
 
@@ -411,7 +411,7 @@ public class JSBridge : Java.Lang.Object
 La classe doit dériver de `Java.Lang.Object`, et les méthodes qui sont exposées à JavaScript doivent être décorées avec le `[JavascriptInterface]` et `[Export]` attributs. Par conséquent, lorsque le `invokeCSharpAction` fonction JavaScript est injectée dans la page web et est exécutée, il appellera la `JSBridge.InvokeAction` méthode en raison d’être décorée avec le `[JavascriptInterface]` et `[Export("invokeAction")]` attributs. À son tour, le `InvokeAction` méthode appelle la `HybridWebView.InvokeAction` méthode, qui sera appelée l’action inscrite pour afficher la fenêtre contextuelle.
 
 > [!NOTE]
-> **Remarque**: les projets qui utilisent la `[Export]` attribut doit inclure une référence à `Mono.Android.Export`, ou une erreur du compilateur se produit.
+> Les projets qui utilisent la `[Export]` attribut doit inclure une référence à `Mono.Android.Export`, ou une erreur du compilateur se produit.
 
 Notez que la `JSBridge` classe maintient une `WeakReference` à la `HybridWebViewRenderer` classe. Il s’agit pour éviter de créer une référence circulaire entre les deux classes. Pour plus d’informations, consultez [références faibles](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) sur MSDN.
 

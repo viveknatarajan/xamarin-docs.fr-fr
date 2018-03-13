@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 11a7c9dcbe9481209d2eb90ff9d981f7437a1c99
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b970432d7cd5b6a84b8af72ab616493f3cd36a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="limitations"></a>Limitations
 
@@ -19,13 +19,11 @@ ms.lasthandoff: 02/27/2018
 
 Voici les limitations de Xamarin.Android par rapport au bureau Mono :
 
-<a name="Limited_Dynamic_Language_Support" />
 
 ## <a name="limited-dynamic-language-support"></a>Prise en charge limitée de langage dynamique
 
  [Les wrappers RCW Android](~/android/platform/java-integration/android-callable-wrappers.md) sont nécessaires à tout moment, le runtime Android doit appeler le code managé. Les wrappers RCW Android sont générées au moment de la compilation, en fonction de l’analyse statique du code IL. Le résultat net de cet : vous *ne peut pas* utiliser les langages dynamiques (IronPython, IronRuby, etc.) dans tout scénario où le sous-classement de types Java est requis (y compris le sous-classement indirect), car il n’existe aucun moyen de l’extraction de ces types dynamiques au moment de la compilation pour générer les wrappers Android nécessaires.
 
-<a name="Limited_Java_Generation_Support" />
 
 ## <a name="limited-java-generation-support"></a>Prise en charge de la génération Java limité
 
@@ -88,7 +86,6 @@ class MyIntentService : IntentService {
 }
 ```
 
-<a name="Generic_Csharp_classes" />
 
 ### <a name="generic-c-classes"></a>Classes génériques c#
 
@@ -150,7 +147,6 @@ Classes génériques c# ne sont que partiellement prises en charge. Les limitati
     }
     ```
 
-<a name="Partial_Java_Generics_Support" />
 
 ## <a name="partial-java-generics-support"></a>Prise en charge des génériques Java partielle
 
@@ -160,7 +156,7 @@ Nous avons des classes qui ne s’appliquent pas cette limitation, mais elles so
 
 ## <a name="related-links"></a>Liens associés
 
-- [Wrappers RCW Android](~/android/platform/java-integration/android-callable-wrappers.md)
+- [Wrappers pouvant être appelés par Android](~/android/platform/java-integration/android-callable-wrappers.md)
 - [Utilisation de JNI](~/android/platform/java-integration/working-with-jni.md)
 - [ExportAttribute](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute/)
 - [SuperString](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/)

@@ -8,23 +8,23 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b07a88f25da1ea504785ddc4a0db8db1ed0e2650
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2a04dc047674b67b8f21571ed9e7890ddf773f64
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migration d’une liaison vers l’API unifiée
 
 _Cet article décrit les étapes requises pour mettre à jour un projet de liaison de Xamarin existant pour prendre en charge les API unifiée pour les applications Xamarin.IOS et Xamarin.Mac._
 
-#<a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble
 
 En commençant le 1er février 2015 Apple exige que tous les envois de nouveau à l’iTunes et Mac App Store les applications 64 bits. Par conséquent, toute nouvelle application Xamarin.iOS ou Xamarin.Mac devrez être à l’aide de la nouvelle API unifiée au lieu des MonoTouch classique et MonoMac APIs existant pour prendre en charge 64 bits.
 
 En outre, un projet de liaison Xamarin doit prennent également en charge les nouvelles API unifiée à inclure dans un projet de Xamarin.Mac ou le Xamarin.iOS de 64 bits. Cet article décrit les étapes requises pour mettre à jour un projet existant de la liaison pour utiliser l’API unifiée.
 
-#<a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont nécessaire pour terminer les étapes présentées dans cet article :
 
@@ -33,7 +33,7 @@ Les éléments suivants sont nécessaire pour terminer les étapes présentées 
 
 Les projets de liaison ne sont pas pris en charge dans Visual studio sur un ordinateur Windows.
 
-#<a name="modify-the-using-statements"></a>Modifier les instructions Using
+## <a name="modify-the-using-statements"></a>Modifier les instructions Using
 
 Les API unifiée rend plus facile que jamais à partager du code entre Mac et iOS, ainsi que ce qui permet de prendre en charge 32 et 64 bits des applications avec le même binaire. En supprimant le _MonoMac_ et _MonoTouch_ préfixes des espaces de noms, partage plus simple s’effectue entre les projets d’application Xamarin.Mac et Xamarin.iOS.
 
@@ -61,9 +61,9 @@ using ObjCRuntime;
 
 Là encore, nous devons faire pour toute `.cs` fichier dans notre projet de liaison. Cette modification en place, l’étape suivante consiste à mettre à jour notre projet de liaison pour utiliser les nouveaux Types de données natif.
 
-Pour plus d’informations sur l’API unifiée, consultez le [API unifiée](~/cross-platform/macios/unified/index.md) documentation. Pour plus d’informations sur la prise en charge 32 et 64 bits les applications et informations sur les infrastructures de voir les [32 et 64 bits des considérations relatives à la plateforme](~/cross-platform/macios/32-and-64.md) documentation.
+Pour plus d’informations sur l’API unifiée, consultez le [API unifiée](~/cross-platform/macios/unified/index.md) documentation. Pour plus d’informations sur la prise en charge 32 et 64 bits les applications et informations sur les infrastructures de voir les [32 et 64 bits des considérations relatives à la plateforme](~/cross-platform/macios/32-and-64/index.md) documentation.
 
-#<a name="update-to-native-data-types"></a>Mise à jour pour les Types de données natifs
+## <a name="update-to-native-data-types"></a>Mise à jour pour les Types de données natifs
 
 Objective-C mappe le `NSInteger` type de données à `int32_t` sur les systèmes 32 bits et en `int64_t` sur les systèmes 64 bits. Pour faire correspondre ce comportement, la nouvelle API unifiée remplace les utilisations précédentes de `int` (qui dans .NET est définie comme étant toujours `System.Int32`) à un type de données : `System.nint`.
 
@@ -94,7 +94,7 @@ Si nous sommes le mappage vers une bibliothèque de tiers 3e de version plus ré
 
 Pour plus d’informations sur ces modifications de types de données, consultez la [Types natifs](~/cross-platform/macios/nativetypes.md) document.
 
-#<a name="update-the-coregraphics-types"></a>Mettre à jour les Types de CoreGraphics
+## <a name="update-the-coregraphics-types"></a>Mettre à jour les Types de CoreGraphics
 
 Les types de données de point, la taille et rectangle qui sont utilisés avec `CoreGraphics` utiliser 32 ou 64 bits en fonction de l’appareil qu’ils sont exécutent sur. Lorsque Xamarin liée à l’origine iOS et Mac API nous avons utilisé les structures de données existantes qui se sont produites pour faire correspondre les types de données dans `System.Drawing` (`RectangleF` par exemple).
 
@@ -130,12 +130,12 @@ IntPtr Constructor (CGRect frame);
 
 Toutes les modifications de code maintenant en place, nous devons modifier notre projet de liaison ou vérifiez le fichier à lier à l’API unifiée.
 
-#<a name="modify-the-binding-project"></a>Modifier le projet de liaison
+## <a name="modify-the-binding-project"></a>Modifier le projet de liaison
 
 Comme dernière étape de mise à jour notre projet de liaison pour utiliser les API unifiée, nous devons modifier le `MakeFile` qui nous permet de générer le projet ou le Type de projet Xamarin (si nous créons une liaison à partir de Visual Studio pour Mac) et indiquez à _btouch_  à lier à l’API unifiée au lieu de ceux qui sont standard.
 
 
-##<a name="updating-a-makefile"></a>Mise à jour d’un MakeFile
+### <a name="updating-a-makefile"></a>Mise à jour d’un MakeFile
 
 Si nous utilisons un makefile pour générer votre projet de liaison dans un Xamarin. DLL, nous devons inclure le `--new-style` l’option de ligne de commande et appelez `btouch-native` au lieu de `btouch`.
 
@@ -189,7 +189,7 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 
 Nous pouvons maintenant exécuter notre `MakeFile` normalement pour générer la nouvelle version 64 bits de notre API.
 
-##<a name="updating-a-binding-project-type"></a>Mise à jour d’un Type de projet de liaison
+### <a name="updating-a-binding-project-type"></a>Mise à jour d’un Type de projet de liaison
 
 Si nous utilisons un Mac liaison de modèle de projet de Visual Studio pour créer notre API, nous devrons mettre à jour vers la nouvelle version d’API unifiée du modèle de projet de liaison. Pour ce faire, le plus simple consiste à démarrer un nouveau projet de liaison d’API unifiée et copie sur l’ensemble du code et des paramètres existants.
 
@@ -199,7 +199,7 @@ Effectuez ce qui suit :
 2. Sélectionnez **fichier** > **nouveau** > **Solution...**
 3. Dans la boîte de dialogue Nouvelle Solution, sélectionnez **iOS** > **API unifiée** > **iOS projet Binding**: 
 
-    [ ![](update-binding-images/image01new.png "Dans la boîte de dialogue Nouvelle Solution, sélectionnez iOS / API unifiée / projet de liaison iOS")](update-binding-images/image01new.png)
+    [![](update-binding-images/image01new.png "Dans la boîte de dialogue Nouvelle Solution, sélectionnez iOS / API unifiée / projet de liaison iOS")](update-binding-images/image01new.png#lightbox)
 4. Dans la boîte de dialogue « Configurer votre nouveau projet » Entrez un **nom** pour le nouveau projet de liaison et cliquez sur le **OK** bouton.
 5. Incluez la version 64 bits de bibliothèque Objective-C que vous allez créer des liaisons pour.
 6. Copiez le code source à partir de votre projet de liaison d’API classique 32 bits existant (tel que le `ApiDefinition.cs` et `StructsAndEnums.cs` fichiers).
@@ -207,7 +207,7 @@ Effectuez ce qui suit :
 
 Toutes ces modifications en place, vous pouvez créer la nouvelle version 64 bits de l’API comme vous le feriez pour la version 32 bits.
 
-#<a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif
 
 Dans cet article, nous avons montré les modifications qui doivent être apportées à un projet de liaison Xamarin existant pour prendre en charge les nouvelles API unifiée et les appareils de 64 bits et les étapes requises pour générer la nouvelle version compatible 64 bits d’une API.
 
@@ -217,7 +217,7 @@ Dans cet article, nous avons montré les modifications qui doivent être apport�
 
 - [Mac et iOS](~/cross-platform/macios/index.md)
 - [API unifiée](~/cross-platform/macios/nativetypes.md)
-- [Considérations relatives à la plate-forme 32/64 bits](~/cross-platform/macios/32-and-64.md)
+- [Considérations relatives à la plate-forme 32/64 bits](~/cross-platform/macios/32-and-64/index.md)
 - [La mise à niveau des applications iOS existante](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [API unifiée](~/cross-platform/macios/unified/index.md)
 - [BindingSample](https://developer.xamarin.com/samples/monotouch/BindingSample/)

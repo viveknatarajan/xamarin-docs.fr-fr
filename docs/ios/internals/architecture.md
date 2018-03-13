@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: bf9d292acf43bbbe3e4ba76b5a264a11288b7225
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 732f60a413077bc15018679fe8f8bc0a18227246
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-architecture"></a>Architecture d’iOS
 
@@ -20,7 +20,7 @@ Xamarin.iOS applications s’exécutent dans l’environnement d’exécution Mo
 
 Le diagramme suivant montre une vue d’ensemble de cette architecture :
 
-[ ![](architecture-images/ios-arch-small.png "Ce diagramme montre une vue d’ensemble de l’architecture de compilation de manière anticipée de la durée (AOA)")](architecture-images/ios-arch.png)
+[ ![](architecture-images/ios-arch-small.png "Ce diagramme montre une vue d’ensemble de l’architecture de compilation de manière anticipée de la durée (AOA)")](architecture-images/ios-arch.png#lightbox)
 
 ## <a name="native-and-managed-code-an-explanation"></a>Code natif et managé : une explication
 
@@ -36,7 +36,7 @@ Lorsque vous compilez une application de plateforme de Xamarin, le compilateur c
 Toutefois, il est une restriction de sécurité sur iOS, définie par Apple, qui n’autorise pas l’exécution du code généré dynamiquement sur un appareil.
 Pour vous assurer que vous nous communiquerez ces protocoles de sécurité, Xamarin.iOS utilise à la place un compilateur de manière anticipée de la durée (AOA) pour compiler le code managé. Cela produit un iOS natif binaire, éventuellement optimisé avec LLVM pour les appareils, ce qui peuvent être déployés sur le processeur ARM d’Apple. Un diagramme approximative de la façon dont il s’ajuste est illustré ci-dessous :
 
-[ ![](architecture-images/aot.png "Un diagramme approximative de la façon dont il s’ajuste")](architecture-images/aot-large.png)
+[![](architecture-images/aot.png "Un diagramme approximative de la façon dont il s’ajuste")](architecture-images/aot-large.png#lightbox)
 
 À l’aide d’AOA a un nombre de limitations qui sont décrites en détail dans les [Limitations](~/ios/internals/limitations.md) guide. Il fournit également un certain nombre d’améliorations sur JIT par une réduction dans le temps de démarrage et différentes optimisations des performances
 
@@ -101,7 +101,7 @@ Il existe deux types de bureaux d’enregistrement utilisé dans Xamarin.iOS –
 
 - **Les bureaux d’enregistrement statiques** – le bureau d’enregistrement statique génère le code Objective-C pendant la génération, qui est ensuite compilée dans une bibliothèque statique et liée dans le fichier exécutable. Cela permet un démarrage plus rapide, mais prend plus de temps au moment de la build. Il est utilisé par défaut pour les versions de l’appareil. Le bureau d’enregistrement statique peut également servir au Simulateur iOS en passant `--registrar:static` comme une `mtouch` d’attribut dans les options de génération de votre projet, comme indiqué ci-dessous :
 
-    [ ![](architecture-images/image1.png "Définition des arguments supplémentaires mtouch")](architecture-images/image1.png)
+    [![](architecture-images/image1.png "Définition des arguments supplémentaires mtouch")](architecture-images/image1.png#lightbox)
 
 Pour plus d’informations sur les spécificités du système de l’enregistrement du Type utilisé par Xamarin.iOS iOS, reportez-vous à la [bureau d’enregistrement de Type](~/ios/internals/registrar.md) guide.
 
@@ -182,4 +182,4 @@ Ce guide étudié AOA compilation de Xamarin.iOS applications et Explorer Xamari
 - [Liaison Objective-C](~/cross-platform/macios/binding/overview.md)
 - [Sélecteurs objective-C](~/ios/internals/objective-c-selectors.md)
 - [Bureau d’enregistrement de type](~/ios/internals/registrar.md)
-- [Linker](~/ios/deploy-test/linker.md)
+- [Éditeur de liens](~/ios/deploy-test/linker.md)

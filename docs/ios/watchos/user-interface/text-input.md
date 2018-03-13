@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: b606773b44d32b724fe7f4dfa2ef18fe34b85cae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 170131a2449b37acfa411eeca54f7aa921b0d9e4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-text-input"></a>Utilisation de l’entrée de texte
 
@@ -62,7 +62,7 @@ Lorsque le mode brut est défini, l’utilisateur peut choisir :
 - Scribble, ou
 - à partir d’une liste prédéfinie qui fournit de l’application.
 
-[ ![](text-input-images/plain-scribble-sml.png "Dictée, Scribble, ou à partir d’une liste prédéfinie qui fournit de l’application")](text-input-images/plain-scribble.png)
+[![](text-input-images/plain-scribble-sml.png "Dictée, Scribble, ou à partir d’une liste prédéfinie qui fournit de l’application")](text-input-images/plain-scribble.png#lightbox)
 
 Le résultat retourné est toujours un `NSObject` qui peut être casté en un `string`.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 035956f5c39a77c625a6f4cb92cbfa67a42f2402
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e7a61dcf2cf2fabf575e30ef402121db3bea7912
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-user-interface-objects"></a>Création d’objets d’Interface utilisateur
 
@@ -42,17 +42,17 @@ Pour commencer à créer votre interface utilisateur dans le concepteur iOS, dou
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
- [ ![](creating-ui-objects-images/image2b.png "Remplissage de la boîte à outils")](creating-ui-objects-images/image2b.png)
+ [![](creating-ui-objects-images/image2b.png "Remplissage de la boîte à outils")](creating-ui-objects-images/image2b.png#lightbox)
  
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
- [ ![](creating-ui-objects-images/image2b-vs.png "Remplissage de la boîte à outils - Visual Studio")](creating-ui-objects-images/image2b.png)
+ [![](creating-ui-objects-images/image2b-vs.png "Remplissage de la boîte à outils - Visual Studio")](creating-ui-objects-images/image2b.png#lightbox)
  
 -----
 
 Quand un contrôle est sélectionné sur l’aire de conception du **propriétés remplissage** affichent les attributs de ce contrôle. Le **Widget > identité > nom** champ, qui est chargé dans la capture d’écran ci-dessous, est utilisé en tant que le *prise* nom. Voici comment vous pouvez référencer le contrôle en c# :
 
- [ ![](creating-ui-objects-images/image3b.png "Remplissage de Widget de propriétés")](creating-ui-objects-images/image3b.png)
+ [![](creating-ui-objects-images/image3b.png "Remplissage de Widget de propriétés")](creating-ui-objects-images/image3b.png#lightbox)
 
 Pour approfondir l’aide du concepteur iOS, reportez-vous à la [présentation dans le concepteur iOS](~/ios/user-interface/designer/introduction.md) guide.
 
@@ -64,27 +64,27 @@ Pour ouvrir un plan conceptuel dans Xcode, droit pour accéder au menu contextue
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
- [ ![](creating-ui-objects-images/imagexcode.png "Menu contextuel de table de montage séquentiel : Xcode")](creating-ui-objects-images/imagexcode.png)
+ [![](creating-ui-objects-images/imagexcode.png "Menu contextuel de table de montage séquentiel : Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
  
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](creating-ui-objects-images/imagexcode-vs.png "Menu contextuel de table de montage séquentiel : Xcode")](creating-ui-objects-images/imagexcode-vs.png)
+[![](creating-ui-objects-images/imagexcode-vs.png "Menu contextuel de table de montage séquentiel : Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
 
 -----
 
 Faire glisser les contrôles sur l’aire de conception à partir de la **bibliothèque d’objets** illustré ci-dessous :
 
- [ ![](creating-ui-objects-images/image5a.png "Bibliothèque d’objets de Xcode")](creating-ui-objects-images/image5a.png)
+ [![](creating-ui-objects-images/image5a.png "Bibliothèque d’objets de Xcode")](creating-ui-objects-images/image5a.png#lightbox)
 
 Lorsque vous concevez votre interface utilisateur avec le Générateur de l’Interface que vous devez créer un **prise** pour chaque contrôle que vous voulez référencer dans c#. Cela est effectué en activant le **Assistant éditeur** à l’aide du centre de **éditeur** bouton sur le bouton de barre d’outils Xcode :
 
- [ ![](creating-ui-objects-images/image6a.png "Bouton de l’éditeur de l’Assistant")](creating-ui-objects-images/image6a.png)
+ [![](creating-ui-objects-images/image6a.png "Bouton de l’éditeur de l’Assistant")](creating-ui-objects-images/image6a.png#lightbox)
 
 Cliquez sur un objet d’interface utilisateur ; puis **faites glisser le contrôle** dans le fichier .h. Pour ** contrôle glisser **, maintenez enfoncée la touche CTRL puis cliquez sur l’objet d’interface utilisateur que vous créez la sortie (ou action) pour. Maintenez la touche CTRL enfoncée pendant que vous faites glisser dans le fichier d’en-tête. Terminer en faisant glisser sous le `@interface` définition. Une ligne bleue doit apparaître avec une légende insérer la sortie ou une Collection de sortie, comme illustré dans la capture d’écran ci-dessous.
 
 Lorsque vous relâchez la, cliquez sur, vous devrez fournir un nom pour la sortie, qui sera utilisé pour créer une propriété c# qui peut être référencée dans le code :
 
- [ ![](creating-ui-objects-images/image8a.png "Création d’une prise de courant")](creating-ui-objects-images/image8a.png)
+ [![](creating-ui-objects-images/image8a.png "Création d’une prise de courant")](creating-ui-objects-images/image8a.png#lightbox)
 
 Pour plus d’informations sur comment le Générateur de Xcode Interface s’intègre avec Visual Studio pour Mac, reportez-vous à la [génération de Code Xib](~/ios/internals/xib-code-generation.md#generated) document.
 
@@ -118,7 +118,7 @@ public override void ViewDidLoad () {
 
 Lors de l’affichage des contrôleurs sont ajoutés à l’aire de conception, deux c# fichiers correspondants sont créés dans le projet. Dans cet exemple, `ControlsViewController.cs` et `ControlsViewController.designer.cs` ont été créés automatiquement :
 
- [ ![](creating-ui-objects-images/image9b.png "Classe partielle de ViewController")](creating-ui-objects-images/image9b.png)
+ [![](creating-ui-objects-images/image9b.png "Classe partielle de ViewController")](creating-ui-objects-images/image9b.png#lightbox)
 
 Le `MainViewController.cs` fichier est conçu pour *votre code*. C’est là la `View` du cycle de vie des méthodes telles que `ViewDidLoad` et `ViewWillAppear` sont implémentées et où vous pouvez ajouter vos propres propriétés, les champs et les méthodes.
 

@@ -3,14 +3,15 @@ title: "Résumé du chapitre 9. Appels d’API spécifiques à la plateforme"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 637096d3ebb7fb90321f7f459e0ca9e51572d935
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 84650c930445172d27520129123d493253851642
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Résumé du chapitre 9. Appels d’API spécifiques à la plateforme
 
@@ -20,7 +21,7 @@ Il est parfois nécessaire d’exécuter du code qui varie selon la plateforme. 
 
 Un projet d’actifs partagés Xamarin.Forms peuvent exécuter un code différent pour chaque plate-forme en utilisant les directives de préprocesseur c# `#if`, `#elif`, et `endif`. Cela est illustré dans [ **PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
 
-[![Capture d’écran de triple de la variable au format paragraphe](images/ch09fg01-small.png "modèle d’appareil et le système d’exploitation")](images/ch09fg01-large.png "modèle d’appareil et le système d’exploitation")
+[![Capture d’écran de triple de la variable au format paragraphe](images/ch09fg01-small.png "modèle d’appareil et le système d’exploitation")](images/ch09fg01-large.png#lightbox "modèle d’appareil et le système d’exploitation")
 
 Toutefois, le code résultant peut être laid et difficiles à lire.
 

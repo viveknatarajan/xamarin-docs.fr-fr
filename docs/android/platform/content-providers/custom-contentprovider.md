@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: 66b956eddc48699c6fd61e9cb52a7fbc3fa70a51
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9fac4a233cecd9332602047bc83830d145b5fb08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-custom-contentprovider"></a>Création d’un ContentProvider personnalisé
 
@@ -28,7 +28,6 @@ Une classe de fournisseur de contenu doit hériter de `ContentProvider`. Il doit
 
 En Mono pour Android, la classe de fournisseur de contenu doit avoir un `[ContentProvider]` attribut pour spécifier l’Uri (ou URI) qui doit être ajouté à **AndroidManifest.xml**.
 
-<a name="Mime_Type" />
 
 ### <a name="mime-type"></a>Type MIME
 
@@ -40,7 +39,6 @@ Le format par défaut pour les Types MIME se compose de deux parties. Android `C
 
 La deuxième partie du Type MIME est spécifique à votre application et doit utiliser une norme DNS inverse avec un `vnd.` préfixe. L’exemple de code utilise `vnd.com.xamarin.sample.Vegetables`.
 
-<a name="Data_Model_Metadata" />
 
 ### <a name="data-model-metadata"></a>Métadonnées de modèle de données
 
@@ -50,7 +48,6 @@ Pour vous assurer que seules les requêtes Uri valides sont construits, il est d
 
 Dans l’exemple précédent la `android.provider.ContactsContract` classe exposée les métadonnées pour les données de Contacts. Pour notre propre `ContentProvider` nous expose uniquement les constantes sur la classe elle-même.
 
-<a name="Implementation" />
 
 ## <a name="implementation"></a>Implémentation
 
@@ -64,7 +61,6 @@ Il existe trois étapes de création et utilisation d’une personnalisée `Cont
 
 Comme indiqué précédemment, `ContentProviders` peuvent être utilisés à partir d’applications autres qu’où ils sont définis. Dans cet exemple, les données sont consommées dans la même application, mais n’oubliez pas que les autres applications peuvent également y accéder tant qu’ils connaissent l’Uri et les informations sur le schéma (qui est généralement exposé en tant que valeurs de constante).
 
-<a name="Create_a_database" />
 
 ## <a name="create-a-database"></a>Créer une base de données
 
@@ -98,13 +94,11 @@ class VegetableDatabase  : SQLiteOpenHelper {
 
 Lui-même l’implémentation de base de données n’a pas besoin de considérations spéciales à exposer avec un `ContentProvider`, toutefois si vous souhaitez lier le `ContentProvider's` données à un `ListView` contrôle ensuite une colonne d’entiers unique nommée `_id` doit faire partie de la jeu de résultats. Consultez le [ListViews et adaptateurs](~/android/user-interface/layouts/list-view/index.md) document pour plus d’informations sur l’utilisation de la `ListView` contrôle.
 
-<a name="Create_the_ContentProvider" />
 
 ## <a name="create-the-contentprovider"></a>Créer le ContentProvider
 
 Le reste de cette section donne des instructions détaillées sur la façon dont le **SimpleContentProvider/VegetableProvider.cs** exemple de classe a été généré.
 
-<a name="Initialize_the_Database" />
 
 ### <a name="initialize-the-database"></a>Initialiser la base de données
 
@@ -124,7 +118,6 @@ public class VegetableProvider : ContentProvider
 
 Le reste du code forment l’implémentation du fournisseur de contenu réel qui permet aux données d’être découverts et interrogé.
 
-<a name="Add_Metadata_for_Consumers" />
 
 
 ## <a name="add-metadata-for-consumers"></a>Ajouter des métadonnées pour les consommateurs
@@ -165,7 +158,6 @@ public class VegetableProvider : ContentProvider
 }
 ```
 
-<a name="Implement_the_URI_Parsing_Helper" />
 
 ## <a name="implement-the-uri-parsing-helper"></a>Implémenter l’URI de l’analyse d’assistance
 
@@ -195,7 +187,6 @@ static UriMatcher BuildUriMatcher()
 
 Ce code est privé tout le `ContentProvider` classe. Reportez-vous à [documentation de UriMatcher de Google](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/) pour plus d’informations.
 
-<a name="Implement_the_QueryMethod" />
 
 ## <a name="implement-the-querymethod"></a>Implémentez la QueryMethod
 
@@ -241,7 +232,6 @@ public override String GetType(Android.Net.Uri uri)
 }
 ```
 
-<a name="Implement_the_Other_Overrides" />
 
 ## <a name="implement-the-other-overrides"></a>Implémentez les autres substitutions
 
@@ -264,13 +254,11 @@ public override int Update(Android.Net.Uri uri, ContentValues values, string sel
 
 Ainsi se termine le basic `ContentProvider` implémentation. Une fois que l’application a été installée, les données qu’il expose seront disponibles à la fois à l’intérieur de l’application, mais aussi à toute autre application qui connaît l’Uri pour la référencer.
 
-<a name="Access_the_ContentProvider" />
 
 ## <a name="access-the-contentprovider"></a>Accéder à la ContentProvider
 
 Une fois le `VegetableProvider` a été implémenté, y accéder s’effectue la même façon que le fournisseur de Contacts au début de ce document : obtenir un curseur à l’aide de l’Uri spécifié, puis utilisez un adaptateur pour accéder aux données.
 
-<a name="Bind_a_ListView_to_a_ContentProvider" />
 
 ## <a name="bind-a-listview-to-a-contentprovider"></a>Lier un contrôle ListView à une ContentProvider
 
@@ -296,10 +284,9 @@ listView.Adapter = adapter;
 
 L’application résultante ressemble à ceci :
 
-[![Capture d’écran de l’application de liste de légumes, Fruits, boutons, coupés fleur, légumes, ampoules, tubercules](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png)
+[![Capture d’écran de l’application de liste de légumes, Fruits, boutons, coupés fleur, légumes, ampoules, tubercules](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
 
 
-<a name="Retrieve_a_Single_Item_from_a_ContentProvider" />
 
 ## <a name="retrieve-a-single-item-from-a-contentprovider"></a>Récupérer un élément unique à partir d’un ContentProvider
 

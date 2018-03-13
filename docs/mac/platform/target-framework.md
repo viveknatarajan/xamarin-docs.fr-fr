@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: ac4644f65486d70fcbb7da1a03574fb238348313
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f657fc3dd87d5c39d442a863e4acc00ac320b00d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="target-framework"></a>Framework cible
 
@@ -41,12 +41,12 @@ Il existe trois options de cible de .NET Framework pour Xamarin.Mac, chacun avec
 Pour modifier le type de cible de .NET Framework pour un projet Xamarin.Mac, procédez comme suit :
 
 1. Ouvrez le projet Xamarin.Mac dans Visual Studio pour Mac.
-2. Dans le **l’Explorateur de solutions**, double-cliquez sur le fichier projet pour ouvrir la **Options du projet** boîte de dialogue.
+2. Dans l’**Explorateur de solutions**, double-cliquez sur le fichier projet pour ouvrir la boîte de dialogue **Options du projet**.
 3. À partir de la **général** , sélectionnez le type de **Framework cible** qui répond aux besoins de votre application :
 
-  [![À l’aide de la fenêtre des Options de projet pour choisir une infrastructure cible](target-framework-images/select-target-full.png "à l’aide de la fenêtre des Options de projet pour choisir une infrastructure cible")](target-framework-images/select-target-full-large.png)
+  [![À l’aide de la fenêtre des Options de projet pour choisir une infrastructure cible](target-framework-images/select-target-full.png "à l’aide de la fenêtre des Options de projet pour choisir une infrastructure cible")](target-framework-images/select-target-full-large.png#lightbox)
 
-4. Cliquez sur le **OK** bouton pour enregistrer vos modifications.
+4. Cliquez sur le bouton **OK** pour enregistrer vos changements.
 
 Vous devez **Clean** , puis **reconstruire** votre projet Xamarin.Mac après le passage du type de cible de .NET Framework.
 

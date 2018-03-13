@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: c305075d37a25bfe828f16d4e69955437a591f9a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 648125ca8bd2c7c8a015b4c29195dc75c0bbf0a0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="scrollview"></a>ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) contient des mises en page et leur permet de défilement hors écran. `ScrollView` est également utilisé pour autoriser des vues déplacer automatiquement dans la partie visible de l’écran lors de l’affichage de l’aide du clavier.
 
-[ ![](scroll-view-images/layouts-sml.png "Les dispositions de Xamarin.Forms")](scroll-view-images/layouts.png "Xamarin.Forms dispositions")
+[![](scroll-view-images/layouts-sml.png "Les dispositions de Xamarin.Forms")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms dispositions")
 
 Cet article décrit :
 
@@ -35,7 +35,7 @@ Cet article décrit :
 ## <a name="usage"></a>Utilisation
 
 > [!NOTE]
-> **Remarque**: `ScrollView`s ne doivent pas être imbriquées. En outre, `ScrollView`s ne doit pas être imbriqué avec d’autres contrôles qui fournissent le défilement, tel que `ListView` et `WebView`.
+> `ScrollView`s ne doivent pas être imbriquées. En outre, `ScrollView`s ne doit pas être imbriqué avec d’autres contrôles qui fournissent le défilement, tel que `ListView` et `WebView`.
 
 `ScrollView` expose un `Content` propriété qui peut être définie sur une vue unique ou une disposition. Prenons l’exemple d’une disposition avec un très grand boxView, suivi d’un `Entry`:
 

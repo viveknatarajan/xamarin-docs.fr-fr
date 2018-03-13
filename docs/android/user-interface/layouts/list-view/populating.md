@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: 74d8533d0a757a307d88125701a482dfefd5eec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 12197d238ddc6ddc2bd8f48f77aa15f5eff22a0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-listview-with-data"></a>Remplissage d’une liste avec des données
 
-<a name="overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -23,7 +22,6 @@ Pour ajouter des lignes à un `ListView` vous devez l’ajouter à votre disposi
 
 Les adaptateurs intégrés prennent un ID de ressource de vue en tant que paramètre utilisée pour chaque ligne. Vous pouvez utiliser des ressources intégrées telles que celles dans `Android.Resource.Layout` vous n’avez pas besoin d’écrire votre propre.
 
-<a name="Using_ListActivity_and_ArrayAdapterString" />
 
 ## <a name="using-listactivity-and-arrayadapterltstringgt"></a>À l’aide de ListActivity et ArrayAdapter&lt;chaîne&gt;
 
@@ -43,13 +41,12 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-<a name="Handling_Row_Clicks" />
 
 ### <a name="handling-row-clicks"></a>La gestion des lignes clique sur
 
 Généralement un `ListView` permet également à l’utilisateur toucher une ligne pour effectuer une action (par exemple, chanson, appel d’un contact ou afficher un autre écran). Pour répondre à touche utilisateur doit être une méthode plus implémentée dans le `ListActivity` &ndash; `OnListItemClick` &ndash; comme suit :
 
-[![Capture d’écran d’un SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png)
+[![Capture d’écran d’un SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -61,9 +58,8 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 À présent l’utilisateur peut se toucher une ligne et un `Toast` alerte s’affiche :
 
-[![Capture d’écran de Toast qui s’affiche lorsqu’une ligne est affectée.](populating-images/basictable2.png)](populating-images/basictable2.png)
+[![Capture d’écran de Toast qui s’affiche lorsqu’une ligne est affectée.](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
-<a name="Implementing_a_ListAdapter" />
 
 ## <a name="implementing-a-listadapter"></a>Implémentation d’un ListAdapter
 
@@ -110,7 +106,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-<a name="Using_a_Custom_Adapter" />
 
 ### <a name="using-a-custom-adapter"></a>À l’aide d’un adaptateur personnalisé
 
@@ -122,7 +117,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 
 Étant donné que cet exemple utilise la même disposition de ligne (`SimpleListItem1`) l’application résultante sera identique à l’exemple précédent.
 
-<a name="Row_View_Re-Use" />
 
 ### <a name="row-view-re-use"></a>Réutilisation de vue lignes
 
@@ -147,13 +141,12 @@ Implémentations d’adaptateur personnalisé doivent *toujours* réutiliser le 
 
 Certaines implémentations d’adaptateur (telles que la `CursorAdapter`) n’avez pas un `GetView` méthode, au lieu de cela, ils nécessitent deux méthodes `NewView` et `BindView` qui applique la réutilisation de ligne en séparant les responsabilités de `GetView` en deux méthodes. Il existe un `CursorAdapter` exemple plus loin dans le document.
 
-<a name="Enabling_Fast_Scrolling" />
 
 ## <a name="enabling-fast-scrolling"></a>L’activation de défilement rapide
 
 Défilement rapide vous aide à l’utilisateur de faire défiler les longues listes en fournissant un handle supplémentaire qui agit comme une barre de défilement pour accéder directement à une partie de la liste. Cette capture d’écran montre la poignée de défilement rapide :
 
-[![Capture d’écran de défilement rapide avec un descripteur de défilement](populating-images/fastscroll.png)](populating-images/fastscroll.png)
+[![Capture d’écran de défilement rapide avec un descripteur de défilement](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 À l’origine de la poignée de défilement rapide à afficher est aussi simple que le paramètre de la `FastScrollEnabled` propriété `true`:
 
@@ -161,13 +154,12 @@ Défilement rapide vous aide à l’utilisateur de faire défiler les longues li
 ListView.FastScrollEnabled = true;
 ```
 
-<a name="Adding_a_Section_Index" />
 
 ### <a name="adding-a-section-index"></a>Ajout d’un Index de Section
 
 Un index de la section fournit des commentaires supplémentaires pour les utilisateurs lorsqu’ils sont fast-défiler une longue liste &ndash; il montre quels qu’ils se trouvent à 'section'. À l’index de section s’affichent la sous-classe de l’adaptateur doit implémenter la `ISectionIndexer` interface pour fournir le texte de l’index selon les lignes affichées :
 
-[![Capture d’écran de H figurant au-dessus de section qui commence par H](populating-images/sectionindex.png)](populating-images/sectionindex.png)
+[![Capture d’écran de H figurant au-dessus de section qui commence par H](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
 Pour implémenter `ISectionIndexer` vous devez ajouter les trois méthodes à une carte :
 

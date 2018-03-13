@@ -2,16 +2,16 @@
 title: "Implémentation d’un lecteur vidéo"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
+ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e818bc3fa9793f093c10ac2617c5a822d08213d4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a889be5ee31f667117d2c36859e667980f0e6610
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="implementing-a-video-player"></a>Implémentation d’un lecteur vidéo
 
@@ -27,7 +27,7 @@ Dans le [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-f
 
 Exiger des lecteurs vidéo *contrôles de transport*, qui sont des boutons de lecture et de la suspension de la vidéo et un positionnement de la barre qui indique la progression dans la vidéo et permet à l’utilisateur passer rapidement à un autre emplacement. `VideoPlayer` peut utiliser des contrôles de transport et barre de positionnement fournie par la plate-forme (comme indiqué ci-dessous), ou vous pouvez fournir des contrôles de transport personnalisé et une barre de positionnement. Voici le programme en cours d’exécution sous iOS, Android et la plateforme Windows universelle :
 
-[![Lire une vidéo de Web](web-videos-images/playwebvideo-small.png "lire une vidéo de Web")](web-videos-images/playwebvideo-large.png "lire la vidéo sur le Web")
+[![Lire une vidéo de Web](web-videos-images/playwebvideo-small.png "lire une vidéo de Web")](web-videos-images/playwebvideo-large.png#lightbox "lire la vidéo sur le Web")
 
 Bien entendu, vous pouvez activer le téléphone sur le côté pour agrandir la vue.
 

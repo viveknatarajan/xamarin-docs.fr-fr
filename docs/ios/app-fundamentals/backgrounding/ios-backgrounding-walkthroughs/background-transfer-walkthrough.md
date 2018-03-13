@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 015bce612f369797f0540a0cb55f71f420f007a2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Procédure pas à pas - à l’aide de NSURLSession et le Service de transfert en arrière-plan
 
@@ -20,7 +20,7 @@ _Dans cette procédure pas à pas, nous utilisons le Service de transfert en arr
 
 Un transfert en arrière-plan est lancé en configurant un arrière-plan `NSURLSession` et file d’attente charger ou télécharger des tâches. Si les tâches se termine lors de l’application est backgrounded, suspendue ou arrêtée, iOS informe l’application en appelant le Gestionnaire d’achèvement de l’application *AppDelegate*. Le diagramme suivant illustre cela en action :
 
- [ ![](background-transfer-walkthrough-images/transfer.png "Un transfert en arrière-plan est initialisé en configurant un arrière-plan NSURLSession et file d’attente charger ou télécharger des tâches")](background-transfer-walkthrough-images/transfer.png)
+ [![](background-transfer-walkthrough-images/transfer.png "Un transfert en arrière-plan est initialisé en configurant un arrière-plan NSURLSession et file d’attente charger ou télécharger des tâches")](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 Voyons à quoi cela ressemble dans le code.
 

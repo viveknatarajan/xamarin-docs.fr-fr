@@ -7,11 +7,11 @@ ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 44df6fce4ec6d667c096da01cfc339ec2afdb077
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec5ca2883c6e109a67ee8a4ecb25fe938d0df4ec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>Procédure pas à pas : Création d’une application à l’aide de l’API de réflexion
 
@@ -34,7 +34,7 @@ Le MT. API de réflexion D permet aux classes être décoré avec des attributs 
 
 Examinons un exemple pour illustrer l’utilisation de l’API de réflexion. Dans cet exemple, nous allons construire un écran d’entrée de données simple comme indiqué ci-dessous :
 
- [ ![](reflection-api-walkthrough-images/01-expense-entry.png "Dans cet exemple, nous allons construire un écran d’entrée de données simple comme indiqué ici")](reflection-api-walkthrough-images/01-expense-entry.png)
+ [![](reflection-api-walkthrough-images/01-expense-entry.png "Dans cet exemple, nous allons construire un écran d’entrée de données simple comme indiqué ici")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
 
@@ -119,7 +119,7 @@ window.RootViewController = nav;
 
 Maintenant lorsque nous exécutons l’application, le titre s’affiche dans le `UINavigationController’s` barre de navigation en tant que la capture d’écran ci-dessous montre :
 
- [ ![](reflection-api-walkthrough-images/02-create-task.png "Lorsque nous exécutons l’application, le titre apparaît désormais dans la barre de navigation UINavigationControllers")](reflection-api-walkthrough-images/02-create-task.png)
+ [![](reflection-api-walkthrough-images/02-create-task.png "Lorsque nous exécutons l’application, le titre apparaît désormais dans la barre de navigation UINavigationControllers")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
 En incluant un `UINavigationController`, nous pouvons à présent tirer parti d’autres fonctionnalités de MT. D pour lesquels la navigation est nécessaire. Par exemple, nous pouvons ajouter une énumération pour la `Expense` classe pour définir la catégorie des dépenses et MT. D créera automatiquement un écran de sélection. Pour illustrer, modifiez le `Expense` classe pour inclure un `ExpenseCategory` champ comme suit :
 
@@ -142,11 +142,11 @@ public class Expense
 
 Exécution de l’application maintenant aboutit dans une nouvelle ligne dans la table pour la catégorie :
 
- [ ![](reflection-api-walkthrough-images/03-set-details.png "Exécution de l’application maintenant aboutit dans une nouvelle ligne dans la table pour la catégorie")](reflection-api-walkthrough-images/03-set-details.png)
+ [![](reflection-api-walkthrough-images/03-set-details.png "Exécution de l’application maintenant aboutit dans une nouvelle ligne dans la table pour la catégorie")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
 
 En sélectionnant la ligne entraîne l’application accédant à un nouvel écran avec des lignes correspondant à l’énumération, comme indiqué ci-dessous :
 
- [ ![](reflection-api-walkthrough-images/04-set-category.png "En sélectionnant la ligne entraîne la navigation application vers un nouvel écran avec les lignes correspondant à l’énumération")](reflection-api-walkthrough-images/04-set-category.png)
+ [![](reflection-api-walkthrough-images/04-set-category.png "En sélectionnant la ligne entraîne la navigation application vers un nouvel écran avec les lignes correspondant à l’énumération")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
  <a name="Summary" />
 

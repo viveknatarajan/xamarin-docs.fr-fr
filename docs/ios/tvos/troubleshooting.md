@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 278b9e782073a26dc04bac9418613ea4c09db445
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b6d0901f8b01668626fc3b6a70a091e99e2287e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -46,7 +46,7 @@ Pour résoudre ce problème, procédez comme suit :
 1. Dans Visual Studio pour Mac, cliquez sur votre fichier de projet Xamarin.tvOS dans les **l’Explorateur de solutions** et sélectionnez **Options**.
 2. Sélectionnez **tvOS Build** et assurez-vous que vous êtes sur le **version** configuration : 
 
-    [ ![](troubleshooting-images/ts01.png "Sélectionnez les options de génération de tvOS")](troubleshooting-images/ts01.png)
+    [![](troubleshooting-images/ts01.png "Sélectionnez les options de génération de tvOS")](troubleshooting-images/ts01.png#lightbox)
 3. Ajouter `--bitcode=asmonly` à la **les arguments supplémentaires mtouch** champ et cliquez sur le **OK** bouton.
 4. Régénérez votre application dans le **version** configuration.
 
@@ -124,7 +124,7 @@ Recompiler votre application pour la mise en production et soumettez à nouveau 
 
 Si vous utilisez une bibliothèque tiers 3e (par exemple, MonoGame) et la compilation de votre version a échoué avec une longue série de messages d’erreur se terminant par `Task "MTouch" execution -- FAILED`, essayez d’ajouter `-gcc_flags="-framework OpenAL"` à votre **les arguments supplémentaires tactile**:
 
-[ ![](troubleshooting-images/mtouch01.png "Exécution des tâches MTouch")](troubleshooting-images/mtouch01.png)
+[![](troubleshooting-images/mtouch01.png "Exécution des tâches MTouch")](troubleshooting-images/mtouch01.png#lightbox)
 
 Vous devez également inclure `--bitcode=asmonly` dans le **les arguments supplémentaires tactile**, avoir vos options de l’éditeur de liens **lien toutes les** et effectuer une compilation propre.
 

@@ -4,14 +4,15 @@ description: Explorer les effets et les animations possibles avec la transformat
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: c87f9a561ac2f7a8c3da1c1e4ab839431073fcb9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 146093e15651316e84947e2bd81eeee3bf55cedb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-rotate-transform"></a>La transformation de rotation
 
@@ -57,7 +58,7 @@ using (SKPaint textPaint = new SKPaint
 
 Étant donné que la rotation est centrée autour de l’angle supérieur gauche de la zone de dessin, pour la plupart des angles défini dans ce programme, la rotation du texte désactivé l’écran :
 
-[![](rotate-images/basicrotate-small.png "Capture d’écran de triple de la page pivoter base")](rotate-images/basicrotate-large.png "Triple capture d’écran de la page de rotation de base")
+[![](rotate-images/basicrotate-small.png "Capture d’écran de triple de la page pivoter base")](rotate-images/basicrotate-large.png#lightbox "Triple capture d’écran de la page de rotation de base")
 
 Très souvent, vous souhaiterez faire pivoter un objet centrée autour d’un point pivot spécifiée à l’aide de ces versions de la [ `RotateDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/System.Single/System.Single/) et [ `RotateRadians` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/System.Single/System.Single/) méthodes :
 
@@ -85,7 +86,7 @@ using (SKPaint textPaint = new SKPaint
 
 Désormais, le texte pivote autour du point utilisé pour positionner le texte, qui est le Centre horizontal de la ligne de base du texte :
 
-[![](rotate-images/centeredrotate-small.png "Capture d’écran de triple de la page centrée pivoter")](rotate-images/centeredrotate-large.png "Triple capture d’écran de la page centrée faire pivoter")
+[![](rotate-images/centeredrotate-small.png "Capture d’écran de triple de la page centrée pivoter")](rotate-images/centeredrotate-large.png#lightbox "Triple capture d’écran de la page centrée faire pivoter")
 
 Comme avec la version centrée de la `Scale` (méthode), la version centrée de la `RotateDegrees` appel est un raccourci :
 
@@ -139,7 +140,7 @@ Point de vue conceptuel, les deux sont appliquées dans l’ordre inverse de cel
 
 Il existe généralement plusieurs façons de combiner la rotation et la translation. Le **pivoter le texte** page crée l’affichage suivant :
 
-[![](rotate-images/rotatedtext-small.png "Capture d’écran de triple de la page pivoter le texte")](rotate-images/rotatedtext-large.png "Triple capture d’écran de la page de rotation de texte")
+[![](rotate-images/rotatedtext-small.png "Capture d’écran de triple de la page pivoter le texte")](rotate-images/rotatedtext-large.png#lightbox "Triple capture d’écran de la page de rotation de texte")
 
 Voici le `PaintSurface` Gestionnaire de la [ `RotatedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) classe :
 
@@ -363,7 +364,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 L’horloge est certainement fonctionnelle même si les mains sont plutôt brutes :
 
-[![](rotate-images/uglyanalogclock-small.png "Capture d’écran de triple de la page de texte de l’horloge analogique laid")](rotate-images/uglyanalogclock-large.png "Triple screenshot of the Ugly Analog page")
+[![](rotate-images/uglyanalogclock-small.png "Capture d’écran de triple de la page de texte de l’horloge analogique laid")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
 
 
 ## <a name="related-links"></a>Liens associés

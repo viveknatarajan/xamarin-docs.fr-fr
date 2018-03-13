@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2b16fd970e724228215fd0dd1c9022227ab84435
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-stacked-view"></a>Utilisation d’une vue empilée
 
@@ -23,7 +23,7 @@ Le contrôle de la vue de la pile (`UIStackView`) tire parti de la puissance de 
 
 La disposition de tous les sous-vues attaché à une vue de la pile sont gérées par en fonction des propriétés de développeur défini comme axe, distribution, alignement et l’espacement :
 
-[ ![](stacked-views-images/stacked01.png "Diagramme de disposition sous-affichage")](stacked-views-images/stacked01.png)
+[![](stacked-views-images/stacked01.png "Diagramme de disposition sous-affichage")](stacked-views-images/stacked01.png#lightbox)
 
 Lorsque vous utilisez un `UIStackView` dans une application Xamarin.tvOS, le développeur peut définir soit des sous-vues soit à l’intérieur d’un plan conceptuel dans le concepteur iOS, ou en ajoutant et supprimant des sous-vues en code c#.
 
@@ -103,21 +103,21 @@ Pour utiliser des vues de la pile dans une application Xamarin.tvOS, le plus sim
 1. Dans le **Solution remplissage**, en double-cliquant sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Concevoir la disposition de vos éléments individuels que vous vous apprêtez à ajouter à la vue de la pile : 
 
-    [ ![](stacked-views-images/layout01.png "Exemple de mise en page d’élément")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "Exemple de mise en page d’élément")](stacked-views-images/layout01.png#lightbox)
 1. Ajouter toutes les contraintes nécessaires aux éléments afin de que s’adapter correctement. Cette étape est importante, une fois que l’élément est ajouté à la vue de la pile.
 1. Vérifiez le nombre de copies (quatre dans ce cas) requis : 
 
-    [ ![](stacked-views-images/layout02.png "Le nombre de copies requis")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "Le nombre de copies requis")](stacked-views-images/layout02.png#lightbox)
 1. Faites glisser un **vue pile** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](stacked-views-images/layout03.png "Une vue de la pile")](stacked-views-images/layout03.png)
+    [![](stacked-views-images/layout03.png "Une vue de la pile")](stacked-views-images/layout03.png#lightbox)
 1. Sélectionnez la vue de la pile, dans le **onglet Widget** de la **propriétés remplissage** sélectionnez **remplir** pour le **alignement**, **remplir Tout aussi** pour le **Distribution** et entrez `25` pour le **espacement**: 
 
-    [ ![](stacked-views-images/layout04.png "L’onglet du Widget")](stacked-views-images/layout04.png)
+    [![](stacked-views-images/layout04.png "L’onglet du Widget")](stacked-views-images/layout04.png#lightbox)
 1. Position de la vue de la pile à l’écran où vous le souhaitez et ajoutez des contraintes pour le conserver dans l’emplacement requis.
 1. Sélectionnez les éléments individuels et faites-les glisser dans la vue de la pile : 
 
-    [ ![](stacked-views-images/layout05.png "Les éléments individuels dans la vue de la pile")](stacked-views-images/layout05.png)
+    [![](stacked-views-images/layout05.png "Les éléments individuels dans la vue de la pile")](stacked-views-images/layout05.png#lightbox)
 1. La disposition sera ajustée et les éléments seront disposés dans la vue de la pile selon les attributs que vous avez précédemment défini.
 1. Affecter **noms** dans les **onglet Widget** de la **l’Explorateur de propriétés** pour travailler avec les contrôles d’IU dans le code c#.
 1. Enregistrez les modifications apportées.
@@ -127,21 +127,21 @@ Pour utiliser des vues de la pile dans une application Xamarin.tvOS, le plus sim
 1. Dans le **l’Explorateur de solutions**, en double-cliquant sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Concevoir la disposition de vos éléments individuels que vous vous apprêtez à ajouter à la vue de la pile : 
 
-    [ ![](stacked-views-images/layout01.png "Exemple de disposition élément")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "Exemple de disposition élément")](stacked-views-images/layout01.png#lightbox)
 1. Ajouter toutes les contraintes nécessaires aux éléments afin de que s’adapter correctement. Cette étape est importante, une fois que l’élément est ajouté à la vue de la pile.
 1. Vérifiez le nombre de copies (quatre dans ce cas) requis : 
 
-    [ ![](stacked-views-images/layout02.png "Le nombre de copies requis")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "Le nombre de copies requis")](stacked-views-images/layout02.png#lightbox)
 1. Faites glisser un **vue pile** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](stacked-views-images/layout03-vs.png "Une vue de la pile")](stacked-views-images/layout03-vs.png)
+    [![](stacked-views-images/layout03-vs.png "Une vue de la pile")](stacked-views-images/layout03-vs.png#lightbox)
 1. Sélectionnez la vue de la pile, dans le **onglet Widget** de la **l’Explorateur de propriétés** sélectionnez **remplir** pour le **alignement**, **remplir Tout aussi** pour le **Distribution** et entrez `25` pour le **espacement**: 
 
-    [ ![](stacked-views-images/layout04-vs.png "L’onglet du Widget")](stacked-views-images/layout04-vs.png)
+    [![](stacked-views-images/layout04-vs.png "L’onglet du Widget")](stacked-views-images/layout04-vs.png#lightbox)
 1. Position de la vue de la pile à l’écran où vous le souhaitez et ajoutez des contraintes pour le conserver dans l’emplacement requis.
 1. Sélectionnez les éléments individuels et faites-les glisser dans la vue de la pile : 
 
-    [ ![](stacked-views-images/layout05-vs.png "Les éléments individuels dans la vue de la pile")](stacked-views-images/layout05-vs.png)
+    [![](stacked-views-images/layout05-vs.png "Les éléments individuels dans la vue de la pile")](stacked-views-images/layout05-vs.png#lightbox)
 1. La disposition sera ajustée et les éléments seront disposés dans la vue de la pile selon les attributs que vous avez précédemment défini.
 1. Affecter **noms** dans les **onglet Widget** de la **l’Explorateur de propriétés** pour travailler avec les contrôles d’IU dans le code c#.
 1. Enregistrez les modifications apportées.
@@ -190,11 +190,11 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 
 Lorsque l’application est exécutée, les quatre éléments seront répartis dans la vue de la pile :
 
-[ ![](stacked-views-images/layout06.png "Lorsque l’application est exécutée, les quatre éléments seront également distribuées en vue de la pile")](stacked-views-images/layout06.png)
+[![](stacked-views-images/layout06.png "Lorsque l’application est exécutée, les quatre éléments seront également distribuées en vue de la pile")](stacked-views-images/layout06.png#lightbox)
 
 Si le nombre de lecteurs est réduit, les vues inutilisés sont masqués et la vue pile ajuster la disposition en fonction de :
 
-[ ![](stacked-views-images/layout07.png "Si le nombre de lecteurs est réduit, les vues inutilisés sont masqués et la vue pile ajuster la disposition en fonction de")](stacked-views-images/layout07.png)
+[![](stacked-views-images/layout07.png "Si le nombre de lecteurs est réduit, les vues inutilisés sont masqués et la vue pile ajuster la disposition en fonction de")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 

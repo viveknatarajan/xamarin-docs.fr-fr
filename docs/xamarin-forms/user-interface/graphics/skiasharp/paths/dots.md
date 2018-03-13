@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 30b7e322d618492164fac5e439c5187616d61717
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 32326eb472b1bb8b4fbaf4066edc36255f5948ca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dots-and-dashes"></a>Points et des tirets
 
@@ -155,7 +155,7 @@ float[] GetPickerArray(Picker picker)
 
 Dans les captures d’écran ci-dessous, l’écran iOS à l’extrême gauche affiche une ligne en pointillés :
 
-[![](dots-images/dotsanddashes-small.png "Capture d’écran de triple de la page points et de tirets")](dots-images/dotsanddashes-large.png "Triple capture d’écran de la page points et des tirets")
+[![](dots-images/dotsanddashes-small.png "Capture d’écran de triple de la page points et de tirets")](dots-images/dotsanddashes-large.png#lightbox "Triple capture d’écran de la page points et des tirets")
 
 Toutefois, l’écran Android est également prévu pour afficher une ligne en pointillés à l’aide du tableau {10, 10}, mais au lieu de cela, la ligne est pleine. Que s'est-il passé ? Le problème est que l’écran Android a également un paramètre de majuscules de trait de `Square`. Cela permet d’étendre tous les tirets par moitié la largeur du trait, d'où leur combler les vides.
 
@@ -213,7 +213,7 @@ protected override void OnAppearing()
 
 Bien entendu, vous devrez qui exécutent ce programme pour voir l’animation :
 
-[![](dots-images/animatedspiral-small.png "Triple capture d’écran de la page animé de spirale")](dots-images/animatedspiral-large.png "Triple capture d’écran de la page spirale d’animation")
+[![](dots-images/animatedspiral-small.png "Triple capture d’écran de la page animé de spirale")](dots-images/animatedspiral-large.png#lightbox "Triple capture d’écran de la page spirale d’animation")
 
 Vous savez maintenant pour dessiner des lignes et de définir des courbes à l’aide des équations paramétriques. Une section pour être publiées ultérieurement décrit les différents types de courbes qui `SKPath` prend en charge.
 

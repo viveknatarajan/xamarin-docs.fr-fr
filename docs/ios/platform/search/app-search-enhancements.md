@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 95f7ad5069abfe4dff82659c0fbc79eef2125e15
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af124c2ae0390c5321e9dd34158c7b53b33b2c48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-search-enhancements"></a>Améliorations de la recherche de l’application
 
@@ -54,17 +54,15 @@ Dans iOS les 10 Apple s’appuie sur cette fonctionnalité, en permettant à l�
 
 Pour implémenter cette fonctionnalité, modifiez l’application `Info.plist` , ajoutez le `CoreSpotlightContinuation` clé de type **booléenne** et définissez sa valeur sur `YES`:
 
-[[ide name="xs]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![](app-search-enhancements-images/search01.png "Modification CoreSpotlightContinuation dans le fichier Info.plist")](app-search-enhancements-images/search01.png)
+[![](app-search-enhancements-images/search01.png "Modification CoreSpotlightContinuation dans le fichier Info.plist")](app-search-enhancements-images/search01.png#lightbox)
 
-[[/ide]]
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[[ide name="vs]]
+[![](app-search-enhancements-images/searchw01.png "Modification CoreSpotlightContinuation dans le fichier Info.plist")](app-search-enhancements-images/search01.png#lightbox)
 
-[ ![](app-search-enhancements-images/searchw01.png "Modification CoreSpotlightContinuation dans le fichier Info.plist")](app-search-enhancements-images/search01.png)
-
-[[/ide]]
+-----
 
 Pour répondre à l’utilisateur poursuivre un résultat de recherche (`NSUserActivity`), modifier le `AppDelegate.cs` de fichier et remplacez le `ContinueUserActivity` (méthode). Exemple :
 

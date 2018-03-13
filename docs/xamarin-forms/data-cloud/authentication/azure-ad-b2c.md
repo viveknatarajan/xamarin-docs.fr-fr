@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3b862f03a81364594f33d82ebf02d75440d7bc4c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5d64c7c1dbc502acd3876c2442f9bae1c46eeb74
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>L’authentification des utilisateurs avec Azure Active Directory B2C
 
@@ -21,7 +21,7 @@ _Azure B2C Active Directory est une solution de gestion d’identité cloud pour
 ![](~/media/shared/preview.png "Cette API méthode est actuellement en version préliminaire")
 
 > [!NOTE]
-> **Remarque**: le [bibliothèque d’authentification Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) est encore en version préliminaire, mais peut être utilisé dans un environnement de production. Toutefois, il peut être modifications avec rupture à l’API, le format du cache interne et autres mécanismes de la bibliothèque, ce qui peut avoir un impact sur votre application.
+> Le [bibliothèque d’authentification Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) est encore en version préliminaire, mais peut être utilisé dans un environnement de production. Toutefois, il peut être modifications avec rupture à l’API, le format du cache interne et autres mécanismes de la bibliothèque, ce qui peut avoir un impact sur votre application.
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -38,12 +38,12 @@ Le processus permettant d’intégrer le service de gestion d’identité Azure 
 1. Utilisez le [bibliothèque d’authentification Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) dans votre application mobile pour lancer un flux de travail de l’authentification auprès de votre client Azure Active Directory B2C.
 
 > [!NOTE]
-> **Remarque**:, ainsi que l’intégration de la gestion des identités Azure Active Directory B2C dans des applications mobiles, MSAL peut également servir à intégrer la gestion des identités Azure Active Directory dans les applications mobiles. Cela peut être accompli en inscrivant une application mobile avec Azure Active Directory à la [portail de l’enregistrement d’Application](https://apps.dev.microsoft.com/). Le processus d’inscription assigne un **ID d’Application** qui identifie de façon unique votre application, qui doit être spécifiée lors de l’utilisation de MSAL. Pour plus d’informations, consultez [comment inscrire une application avec le point de terminaison v2.0](/azure/active-directory/develop/active-directory-v2-app-registration/), et [authentifier votre Mobile Apps à l’aide de Microsoft bibliothèque d’authentification](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/) sur le blog de Xamarin.
+> Ainsi que l’intégration de la gestion des identités Azure Active Directory B2C dans des applications mobiles, MSAL peut également servir à intégrer la gestion des identités Azure Active Directory dans les applications mobiles. Cela peut être accompli en inscrivant une application mobile avec Azure Active Directory à la [portail de l’enregistrement d’Application](https://apps.dev.microsoft.com/). Le processus d’inscription assigne un **ID d’Application** qui identifie de façon unique votre application, qui doit être spécifiée lors de l’utilisation de MSAL. Pour plus d’informations, consultez [comment inscrire une application avec le point de terminaison v2.0](/azure/active-directory/develop/active-directory-v2-app-registration/), et [authentifier votre Mobile Apps à l’aide de Microsoft bibliothèque d’authentification](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/) sur le blog de Xamarin.
 
 MSAL utilise le navigateur web de l’appareil pour effectuer l’authentification. Cela permet d’améliorer la facilité d’utilisation d’une application, comme les utilisateurs doivent uniquement se connecter une fois par périphérique, améliorer le taux de conversion de l’authentification et l’autorisation de flux dans l’application. Le navigateur d’appareil offre également une sécurité accrue. Une fois que l’utilisateur termine le processus d’authentification, contrôle retourne à l’application à partir de l’onglet de navigateur web. Cela est possible en inscrivant un modèle d’URL personnalisé pour l’URL de redirection qui est retourné par le processus d’authentification, détection et gestion de l’URL personnalisée une fois qu’elle est envoyée. Pour plus d’informations sur le choix d’un modèle d’URL personnalisé, consultez [en choisissant un URI de redirection application native](/azure/active-directory-b2c/active-directory-b2c-app-registration#choosing-a-native-app-redirect-uri/).
 
 > [!NOTE]
-> **Remarque**: le mécanisme de l’inscription d’un modèle d’URL personnalisé avec le système d’exploitation et le schéma de manutention est spécifique à chaque plateforme.
+> Le mécanisme de l’inscription d’un modèle d’URL personnalisé avec le système d’exploitation et le schéma de manutention est spécifique à chaque plateforme.
 
 Chaque demande est envoyée à un locataire Azure Active Directory B2C spécifie un *stratégie*. Stratégies décrivent les expériences d’identité consommateur telles que l’inscription, ou se connecter. Par exemple, une stratégie d’inscription permet le comportement du client Azure Active Directory B2C être configuré via les paramètres suivants :
 
@@ -127,7 +127,7 @@ namespace TodoAzure.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             LoadApplication(new App());
-            App.UiParent = new UIParent(Xamarin.Forms.Forms.Context as Activity);
+            App.UiParent = new UIParent(this);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

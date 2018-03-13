@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1b0b1db6bf73b03eed99c5ede038d07bb3ccf284
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 23aa944b88fe3e743b6b29810c29d1843f2efc29
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="api-design"></a>Conception de l’API
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -23,7 +22,6 @@ Outre le noyau de bibliothèques de classes de Base qui font partie de Mono, Xam
 
 Au cœur de Xamarin.Android est un moteur d’interopérabilité que world ponts c# avec le monde Java et permet aux développeurs d’accéder aux API Java à partir de c# ou d’autres langages .NET.
 
-<a name="Design_Principles" />
 
 ## <a name="design-principles"></a>Principes de conception
 
@@ -64,7 +62,6 @@ Quelques-uns de nos principes de conception pour la liaison de Xamarin.Android
     - Fournissent un mécanisme pour appeler des bibliothèques Java arbitraires ( [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)).
 
 
-<a name="Assemblies" />
 
 ## <a name="assemblies"></a>Assemblys
 
@@ -72,11 +69,9 @@ Xamarin.Android inclut un nombre d’assemblys qui constituent le *MonoMobile pr
 
 Les liaisons pour la plateforme Android sont contenus dans le `Mono.Android.dll` assembly. Cet assembly contient l’ensemble de la liaison pour l’API Android beaucoup d’et de la communication avec le runtime Android machine virtuelle.
 
-<a name="Binding_Design" />
 
 ## <a name="binding-design"></a>Conception de la liaison
 
-<a name="Collections" />
 
 ### <a name="collections"></a>Collections
 
@@ -112,7 +107,6 @@ if (goodSource.Count != 4) // false
     throw new InvalidOperationException ("should not be reached.");
 ```
 
-<a name="Properties" />
 
 ### <a name="properties"></a>Propriétés
 
@@ -127,7 +121,6 @@ Méthodes Java sont transformés en propriétés, lorsque cela est approprié :
 -  Les propriétés sont *pas* générée si le type de propriété serait un tableau.
 
 
-<a name="Events_and_Listeners" />
 
 ### <a name="events-and-listeners"></a>Les événements et les écouteurs
 
@@ -177,7 +170,6 @@ Nous avons l’intention d’ajouter des surcharges pour les autres méthodes et
 
 Toutes les interfaces d’écouteurs implémentent le [ `Android.Runtime.IJavaObject` ](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) interface, en raison des détails d’implémentation de la liaison, les classes de l’écouteur doivent implémenter cette interface. Cela est possible en implémentant l’interface de l’écouteur sur une sous-classe de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) ou tout autre objet Java, comme une activité Android.
 
-<a name="Runnables" />
 
 ### <a name="runnables"></a>Runnables
 
@@ -188,7 +180,6 @@ Le `Runnable` interface contient une seule méthode void, [run()](https://develo
 
 Nous avons laissé le [IRunnable](https://developer.xamarin.com/api/type/Java.Lang.IRunnable/) surcharges en place au lieu de les remplacer, car plusieurs types implémentent l’interface et peuvent par conséquent être passés en tant que runnables directement.
 
-<a name="Inner_Classes" />
 
 ### <a name="inner-classes"></a>Classes internes
 
@@ -227,7 +218,6 @@ class CubeWallpaper : WallpaperService {
 
 Notez comment `CubeWallpaper.CubeEngine` est imbriquée dans `CubeWallpaper`, `CubeWallpaper` hérite de la classe de conteneur de `WallpaperService.Engine`, et `CubeWallpaper.CubeEngine` a un constructeur qui accepte le type déclarant-- `CubeWallpaper` dans ce cas, comme spécifié ci-dessus.
 
-<a name="Interfaces" />
 
 ### <a name="interfaces"></a>Interfaces
 
@@ -254,7 +244,7 @@ Le *Parcelable* constantes d’interface sont placés dans le [Android.OS.Parcel
 
 
 > [!NOTE]
-> **Remarque :** avec Xamarin.Android 1.9, constantes d’interface Java sont <em>dupliqué</em> dans le but de simplifier Java de portage de code. Cela contribue à améliorer le portage de code Java qui s’appuie sur [fournisseur android](http://developer.android.com/reference/android/provider/package-summary.html) constantes de l’interface.
+> À partir de Xamarin.Android 1.9, constantes d’interface Java sont les <em>dupliqué</em> dans le but de simplifier Java de portage de code. Cela contribue à améliorer le portage de code Java qui s’appuie sur [fournisseur android](http://developer.android.com/reference/android/provider/package-summary.html) constantes de l’interface.
 
 Outre les types ci-dessus, il existe quatre autres modifications :
 
@@ -277,7 +267,6 @@ Auparavant, pour porter cette expression en c# vous devez examiner toutes les in
 
 Enfin, les types avec un *les constructeurs de la* tels que *Android.OS.ParcelableConsts* sont désormais obsolètes, autres que les nouveaux InterfaceConsts les types imbriqués. Ils seront supprimés dans Xamarin.Android 3.0.
 
-<a name="Resources" />
 
 ## <a name="resources"></a>Ressources
 
@@ -323,7 +312,6 @@ public class Resource {
 
 Vous devez utiliser `Resource.Drawable.icon` référence le `drawable/icon.png` fichier, ou `Resource.Layout.main` référence le `layout/main.xml` fichier, ou `Resource.String.first_string` pour faire référence à la première chaîne dans le fichier de dictionnaire `values/strings.xml`.
 
-<a name="Constants_and_Enumerations" />
 
 ## <a name="constants-and-enumerations"></a>Constantes et énumérations
 

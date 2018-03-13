@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fdd4311072efd5571724fbe00d12a96921054fa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4c5b9fcbfaabbfc78da1064396dc3fec2d3fde8d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deployment-and-testing"></a>Déploiement et tests
 
@@ -23,7 +23,7 @@ Si vous déployez à un test de surveillance, ou télécharger vers l’App Stor
 - Dans le **iOS Dev Center**:
   - [ID d’application](#App_IDs) ont été créés.
   - [Groupes d’applications](#App_Groups) configuré (si nécessaire).
-  - [*Distribution* ou les profils de configuration](#Provisioning_Profiles) créé.
+  - Distribution de configuration ou les profils créés
 
 - Dans votre solution :
 
@@ -36,6 +36,7 @@ Si vous déployez à un test de surveillance, ou télécharger vers l’App Stor
   - [Déployer sur un Apple Watch pour le test](~/ios/watchos/deploy-test/device.md), ou
   - [Télécharger vers le magasin d’applications](~/ios/watchos/deploy-test/appstore.md).
 
+<a name="App_IDs"/>
 
 ## <a name="app-ids"></a>ID d’application
 
@@ -65,7 +66,7 @@ Notez que certaines fonctionnalités ne peut pas être utilisées avec un ID d�
 
 Pour la distribution, vous devez uniquement créer un profil de configuration Distribution pour le caractère générique identifiant d’application.
 
-<a name="app-groups" />
+<a name="App_Groups" />
 
 ## <a name="app-groups"></a>App Groups
 
@@ -102,8 +103,6 @@ Double-cliquez pour modifier la **Entitlements.plist** fichier dans ces projets�
 .![L’éditeur Entitlements.plist](images/entitlements-plist-sml.png)
 
 Faire **pas** activez les droits dans le projet d’application de surveillance. Il n’est pas nécessaire d’être activé sur la montre.
-
-
 
 ## <a name="related-links"></a>Liens associés
 

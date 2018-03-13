@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7da0f52816d4efc102e830411589e0ac38a73574
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="message-app-extension-basics"></a>Principes de base de message Extension d’application
 
@@ -121,13 +121,13 @@ Quels sont les avantages de la création d’une expérience de vignette personn
 2. Ouvrez la solution pour ajouter une Extension d’application de Message. 
 3. Sélectionnez **iOS** > **Extensions** > **iMessage Extension** et cliquez sur le **suivant** bouton : 
 
-    [ ![](intro-to-message-app-extensions-images/message01.png "Sélectionnez iMessage Extension")](intro-to-message-app-extensions-images/message01.png)
+    [![](intro-to-message-app-extensions-images/message01.png "Sélectionnez iMessage Extension")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Entrez un **nom de l’Extension** et cliquez sur le **suivant** bouton : 
 
-    [ ![](intro-to-message-app-extensions-images/message02.png "Entrez un nom d’Extension")](intro-to-message-app-extensions-images/message02.png)
+    [![](intro-to-message-app-extensions-images/message02.png "Entrez un nom d’Extension")](intro-to-message-app-extensions-images/message02.png#lightbox)
 5. Cliquez sur le **créer** pour générer l’Extension : 
 
-    [ ![](intro-to-message-app-extensions-images/message03.png "Cliquez sur le bouton Créer")](intro-to-message-app-extensions-images/message03.png)
+    [![](intro-to-message-app-extensions-images/message03.png "Cliquez sur le bouton Créer")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -135,7 +135,7 @@ Quels sont les avantages de la création d’une expérience de vignette personn
 2. Ouvrez la solution pour ajouter une Extension d’application de Message. 
 3. Sélectionnez **iOS** > **Extensions** > **iMessage Extension** et cliquez sur le **suivant** bouton : 
 
-    [ ![](intro-to-message-app-extensions-images/message01w.png "Sélectionnez iMessage Extension")](intro-to-message-app-extensions-images/message01.png)
+    [![](intro-to-message-app-extensions-images/message01w.png "Sélectionnez iMessage Extension")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. Entrez un **nom de l’Extension** et cliquez sur le **OK** bouton
 
 -----
@@ -159,7 +159,7 @@ Effectuez ce qui suit :
 1. Dans le **Solution remplissage**, avec le bouton droit sur le nom de l’Extension projet et sélectionnez **ajouter** > **nouveau fichier...**   >  **iOS | Apple Watch** > **contrôleur d’Interface**.
 2. Entrez `StickerBrowserViewController` pour le **nom** et cliquez sur le **nouveau** bouton : 
 
-    [ ![](intro-to-message-app-extensions-images/browser01.png "Entrez StickerBrowserViewController pour le nom")](intro-to-message-app-extensions-images/browser01.png)
+    [![](intro-to-message-app-extensions-images/browser01.png "Entrez StickerBrowserViewController pour le nom")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Ouvrez le `StickerBrowserViewController.cs` fichier pour le modifier.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -167,7 +167,7 @@ Effectuez ce qui suit :
 1. Dans le **l’Explorateur de solutions**, avec le bouton droit sur le nom de l’Extension projet et sélectionnez **ajouter** > **nouveau fichier...**   >  **iOS | Apple Watch** > **contrôleur d’Interface**.
 2. Entrez `StickerBrowserViewController` pour le **nom** et cliquez sur le **nouveau** bouton : 
 
-    [ ![](intro-to-message-app-extensions-images/browser01w.png "Entrez StickerBrowserViewController pour le nom")](intro-to-message-app-extensions-images/browser01.png)
+    [![](intro-to-message-app-extensions-images/browser01w.png "Entrez StickerBrowserViewController pour le nom")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Ouvrez le `StickerBrowserViewController.cs` fichier pour le modifier.
 
 -----

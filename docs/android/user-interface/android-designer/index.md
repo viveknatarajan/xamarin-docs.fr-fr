@@ -7,17 +7,17 @@ ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: c06dab9bf280a2543585d36147c7c3311f6445ad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-designer"></a>Android Designer
 
 _Cet article couvre les fonctionnalités du Concepteur de Xamarin.Android. Elle couvre basics concepteur, montrant comment utiliser le concepteur pour disposer les widgets visuellement et comment modifier les propriétés. Il montre également comment utiliser le concepteur pour travailler avec des interfaces utilisateur et les ressources dans différentes configurations, telles que les thèmes, les langues et les configurations de périphérique, ainsi que la conception pour des vues comme paysage et portrait._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -37,7 +37,6 @@ Cet article examine les nombreuses fonctionnalités du Concepteur de Xamarin.And
 9.  Comment utiliser les outils de conception de matériel pour créer des applications compatibles matériau conception.
 
 
-<a name="Sections" />
 
 ## <a name="sections"></a>Sections
 
@@ -52,7 +51,6 @@ Cet article examine les nombreuses fonctionnalités du Concepteur de Xamarin.And
  [Fonctionnalités de conception matérielle](~/android/user-interface/android-designer/material-design-features.md)
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

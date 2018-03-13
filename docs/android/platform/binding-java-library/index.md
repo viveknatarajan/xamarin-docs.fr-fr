@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 01708f12340ec57bf1cb0e2bd076b680c99dff39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-java-library"></a>Liaison d’une bibliothèque de Java
 
@@ -30,7 +30,7 @@ Ce guide explique la première option : comment créer un *bibliothèque de lia
 
 Xamarin.Android implémente des liaisons à l’aide de *gérés Callable Wrappers* (*MCW*). MCW est un pont JNI qui est utilisé lorsque le code managé doit appeler le code Java. Wrappers CCW managés prennent également en charge de sous-classement types Java et de substitution des méthodes virtuelles des types Java. De même, chaque fois que le code d’exécution Android (ART) souhaite appeler du code managé, il le fait via un autre pont JNI connu en tant que Android Callable Wrappers (ACW). Cela [architecture](~/android/internals/architecture.md) est illustré dans le diagramme suivant :
 
-[ ![Architecture de pont Android JNI](images/architecture.png)](images/architecture.png)
+[![Architecture de pont Android JNI](images/architecture.png)](images/architecture.png#lightbox)
 
 Une bibliothèque de liaisons est un assembly contenant géré Callable Wrappers pour les types Java. Par exemple, est un type Java, `MyClass`, que nous souhaitons encapsuler dans une bibliothèque de liaisons :
 
@@ -74,7 +74,6 @@ Lors de la liaison d’une bibliothèque Android existante, il est nécessaire �
 
 * **Détermine la version du JDK a été utilisée pour compiler la bibliothèque ?** &ndash; Erreurs de liaison peuvent se produire si la bibliothèque Android a été créée avec une autre version du JDK à en cours d’utilisation par Xamarin.Android. Si possible, recompilez la bibliothèque Android à l’aide de la même version du JDK utilisé par votre installation de Xamarin.Android.
 
-<a name="BUILD_ACTIONS" />
 
 ## <a name="build-actions"></a>Actions de génération
 
@@ -127,7 +126,6 @@ Le Générateur de liaison de Xamarin.Android change certains idiomes de Java et
 -   Un _classe interne_ dans Java est un _classe imbriquée_ avec un constructeur d’instance en c#.
 
 
-<a name="BINDING_SCENARIOS" />
 
 ## <a name="binding-scenarios"></a>Scénarios de liaison
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 20b18cd79eeaabab8019c367e241a4975dc37b0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-core-spotlight"></a>Recherche avec Core Spotlight
 
@@ -46,7 +46,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 Ces informations ressemble à ce qui suit dans un résultat de recherche :
 
-[ ![](corespotlight-images/corespotlight01.png "Vue d’ensemble de résultats de recherche Spotlight de base")](corespotlight-images/corespotlight01.png)
+[![](corespotlight-images/corespotlight01.png "Vue d’ensemble de résultats de recherche Spotlight de base")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>Restauration d’un élément
 
@@ -80,7 +80,7 @@ Notez que cette fois nous sont pour l’activité ayant une `ActivityType` de `C
 Il peut arriver lorsqu’un élément de Index que nous avons créé avec Core Spotlight doivent être modifiés, telle qu’une modification dans le titre ou une image miniature est requise. Pour ce faire, nous utilisons la même méthode que celle utilisée pour créer initialement l’index.
 Nous créons un nouveau `CSSearchableItem` utilisant le même ID que celui utilisé pour créer l’élément et d’attacher un nouveau `CSSearchableItemAttributeSet` contenant des attributs modifiés :
 
-[ ![](corespotlight-images/corespotlight02.png "Mise à jour d’une vue d’ensemble de l’élément")](corespotlight-images/corespotlight02.png)
+[![](corespotlight-images/corespotlight02.png "Mise à jour d’une vue d’ensemble de l’élément")](corespotlight-images/corespotlight02.png#lightbox)
 
 Lorsque cet élément est écrit dans l’index de recherche, l’élément existant est mis à jour avec les nouvelles informations.
 

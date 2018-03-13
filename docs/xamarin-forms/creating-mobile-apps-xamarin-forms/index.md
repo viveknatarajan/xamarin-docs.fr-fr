@@ -8,15 +8,15 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
-ms.openlocfilehash: b6054b4037b14a73cb5bfe50b619e805fdcf1737
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: caee0d685838f7c0a54e19611fdf72df5730c037
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Création d’applications mobiles avec l’édition du premier livre de Xamarin.Forms
 
-<p><img src="Images/Cover-sml.png" title="Création d’applications mobiles avec Xamarin.Forms livre" align="left"/>Dernier ouvrage de Petzold - <i>créer des applications mobiles avec Xamarin.Forms</i> - a été envoyé à appuyer sur (électronique) et est désormais disponible en téléchargement !</p>
+<p><img src="Images/Cover-sml.png" title="Création d’applications mobiles avec Xamarin.Forms livre" align="left" />Dernier ouvrage de Petzold - <i>créer des applications mobiles avec Xamarin.Forms</i> - a été envoyé à appuyer sur (électronique) et est désormais disponible en téléchargement !</p>
 
 Cela *première édition* a 27 chapitres et couvre les Xamarin.Forms&nbsp;2.x, y compris l’Animation, MVVM, déclencheurs, comportements, des dispositions personnalisées, les convertisseurs personnalisés et bien plus encore.
 Chapitre 28 est désormais disponible en ligne entre les chapitres individuels répertoriés ci-dessous.

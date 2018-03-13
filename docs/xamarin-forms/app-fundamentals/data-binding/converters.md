@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: aaa4c93eda9edb0eb5d568b3470c02352bdb7467
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: df6a0afe18b6929f8e03ce4d9bf35198034508bf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-value-converters"></a>Convertisseurs de valeurs de liaison
 
@@ -95,7 +95,7 @@ Si un convertisseur de valeurs est utilisé dans plusieurs pages de votre applic
 
 Le **activer les boutons** page montre commune besoin quand un `Button` effectue une opération basée sur du texte que l’utilisateur tape dans un `Entry` vue. Si rien n’a été tapé dans le `Entry`, la `Button` doit être désactivée. Chaque `Button` contient une liaison de données sur son `IsEnabled` propriété. La source de liaison de données est la `Length` propriété de la `Text` propriété correspondantes `Entry`. Si ce `Length` propriété n’est pas 0, le convertisseur de valeur retourne `true` et `Button` est activé :
 
-[![Activer les boutons](converters-images/enablebuttons-small.png "activer les boutons")](converters-images/enablebuttons-large.png "activer les boutons")
+[![Activer les boutons](converters-images/enablebuttons-small.png "activer les boutons")](converters-images/enablebuttons-large.png#lightbox "activer les boutons")
 
 Notez que la `Text` propriété dans chaque `Entry` est initialisé avec une chaîne vide. Le `Text` propriété `null` par défaut et les données de liaison ne fonctionnera pas dans ce cas.
 
@@ -236,7 +236,7 @@ Le **commutateur indicateurs** page montre comment il peut être utilisé pour a
 
 Au cours des trois `Switch` et `Label` paires, l’argument générique a la valeur `Style`et ensemble `Style` objets sont fournis pour les valeurs de `TrueObject` et `FalseObject`. Ces remplacent le style implicit pour `Label` définie dans le dictionnaire de ressources, par conséquent, les propriétés de ce style sont explicitement affectées à la `Label`. Basculement de la `Switch` provoque correspondant `Label` pour refléter la modification :
 
-[![Passez les indicateurs](converters-images/switchindicators-small.png "basculer les indicateurs")](converters-images/switchindicators-large.png "basculer les indicateurs")
+[![Passez les indicateurs](converters-images/switchindicators-small.png "basculer les indicateurs")](converters-images/switchindicators-large.png#lightbox "basculer les indicateurs")
 
 Il est également possible d’utiliser [ `Triggers` ](~/xamarin-forms/app-fundamentals/triggers.md) pour implémenter des modifications similaires dans l’interface utilisateur basée sur les autres vues.
 
@@ -460,7 +460,7 @@ Les valeurs de la `Red` et `Green` propriétés sont affichées avec un `Binding
 
 Voici le résultat :
 
-[![Sélecteur de couleurs RVB](converters-images/rgbcolorselector-small.png "sélecteur de couleurs RVB")](converters-images/rgbcolorselector-large.png "sélecteur de couleurs RVB")
+[![Sélecteur de couleurs RVB](converters-images/rgbcolorselector-small.png "sélecteur de couleurs RVB")](converters-images/rgbcolorselector-large.png#lightbox "sélecteur de couleurs RVB")
 
 
 ## <a name="related-links"></a>Liens associés

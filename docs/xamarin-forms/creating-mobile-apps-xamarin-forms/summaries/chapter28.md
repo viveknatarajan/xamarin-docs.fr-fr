@@ -3,14 +3,15 @@ title: "Résumé du chapitre 28. Emplacement et des mappages"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7361f65fecfed9d61b9df7088f9021ffa0192ad8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Résumé du chapitre 28. Emplacement et des mappages
 
@@ -215,7 +216,7 @@ Le [ `PositionExtensions` ](https://github.com/xamarin/xamarin-forms-book-sample
 
 Cela est utilisé dans le [LocalMuseumsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml) fichier et [LocalMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml.cs) fichier code-behind pour afficher également la distance à la musée à partir de l’emplacement de l’utilisateur :
 
-[![Capture d’écran de triple de la Page musées locale](images/ch28fg28-small.png "Distance vers un emplacement")](images/ch28fg28-large.png "Distance vers un emplacement")
+[![Capture d’écran de triple de la Page musées locale](images/ch28fg28-small.png "Distance vers un emplacement")](images/ch28fg28-large.png#lightbox "Distance vers un emplacement")
 
 Le programme montre également comment dynamiquement restreindre le nombre de codes confidentiels en fonction de l’emplacement de la carte.
 

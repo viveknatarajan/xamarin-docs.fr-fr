@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 7441fbe1fc686dc4fa5cb67cbfc5ae6353f32c93
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5c058f173f64efe4a5c777872e9ea67120115f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough"></a>Procédure pas à pas
 
@@ -21,7 +21,7 @@ Dans les étapes suivantes, une application de base est créée avec des fragmen
 
 Créez un nouveau projet Xamarin.Android appelé **FragmentSample**. Le **Minimum Android** version doit être définie pour Android 3.1 ou version ultérieure, comme indiqué dans l’image ci-dessous :
 
-[![Définition de la version minimale Android](walkthrough-images/00.png)](walkthrough-images/00.png)
+[![Définition de la version minimale Android](walkthrough-images/00.png)](walkthrough-images/00.png#lightbox)
 
 
 ## <a name="2-create-the-mainactivity"></a>2. Créer le MainActivity
@@ -47,7 +47,7 @@ public class MainActivity : Activity
 
 Les deux différentes tailles d’écran requièrent deux fichiers de mise en page différente. Nous allons créer un nouveau dossier, **ressources/disposition-Large**et créer une nouvelle disposition appelée **activity_main.axml**. Nous allons également renommer le fichier de disposition par défaut en tant que **Resources/Layout/activity_main.axml**. Après ces modifications, les dossiers de mise en page doivent ressembler à la capture d’écran suivante :
 
-[![Capture d’écran de dossiers de disposition dans l’IDE](walkthrough-images/01.png)](walkthrough-images/01.png)
+[![Capture d’écran de dossiers de disposition dans l’IDE](walkthrough-images/01.png)](walkthrough-images/01.png#lightbox)
 
 
 Charge et utiliser le fichier de disposition dans tous les appareils **disposition/ressources**.
@@ -92,7 +92,7 @@ Le fichier de disposition pour les écrans plus grands est légèrement différe
 
 `TitlesFragment` s’afficher les titres de la lecture de différentes, par conséquent, nous allons ajouter un nouveau fragment au projet appelé `TitlesFragment`:
 
-[![Ajout d’un nouveau fragment au projet TitlesFragment](walkthrough-images/02.png)](walkthrough-images/02.png)
+[![Ajout d’un nouveau fragment au projet TitlesFragment](walkthrough-images/02.png)](walkthrough-images/02.png#lightbox)
 
 Après avoir `TitlesFragment` a été ajouté, nous devons modifier la classe afin qu’elle hérite de `Android.App.ListFragment`. `ListFragment` est un type de fragment spécialisées qui inclut les fonctionnalités de la liste.
 `TitlesFragment` remplace également `OnActivityCreated` (une autre méthode de cycle de vie de fragment) et fournir une `Adapter` qui `ListFragment` utilisera pour remplir la liste :
@@ -162,7 +162,6 @@ private void ShowDetails(int playId)
 
 Le code détermine à partir de l’appareil comment mettre en forme et afficher les guillemets de la lecture sélectionnée. Dans le cas des tablettes, le `_isDualPane` indicateur a la valeur `true`, et par conséquent, la demande s’affiche à côté du `TitlesFragment`. Si la lecture sélectionnée `id` n’est pas déjà affiché, puis une nouvelle `DetailsFragment` est créé et ensuite chargées dans le `FrameLayout` sur l’activité. Pour d’autres périphériques qui n’ont pas d’un affichage de grande taille &ndash; les téléphones, par exemple &ndash; `isDualPane` a la valeur `false` donc un nouveau `DetailsActivity` sera démarré.
 
-<a name="5. Create_the_DetailsActivity" />
 
 ## <a name="5-create-the-detailsactivity"></a>5. Créer le DetailsActivity
 
@@ -187,7 +186,6 @@ public class DetailsActivity : Activity
 
 Notez qu’aucun fichier de disposition est chargé pour `DetailsActivity`. Au lieu de cela, `DetailsFragment` est chargé dans l’affichage de l’activité racine. Cette vue racine a l’ID spécial `Android.Resource.Id.Content`. Un nouveau `DetailFragment` est créé, puis à cette vue racine à l’intérieur d’un `FragmentTransaction` qui est créé par l’activité `FragmentManager`.
 
-<a name="6. Create_the_DetailsFragment" />
 
 ## <a name="6-create-the-detailsfragment"></a>6. Créer le DetailsFragment
 

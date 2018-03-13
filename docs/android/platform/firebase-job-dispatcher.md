@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6b55e525849d57f2ad9e40ea64b75cfc65ef0727
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Répartiteur de travail firebase
 
@@ -138,7 +138,7 @@ Le `Job.Builder` effectue des vérifications de validation de base sur les valeu
 * A `Job`de _durée de vie_ (la durée pendant laquelle elle est planifiée pour être exécuté) est uniquement jusqu'à ce que l’appareil redémarre &ndash; une fois que l’appareil redémarre le `Job` est perdue.
 * A `Job` n’est pas récurrente &ndash; il exécute qu’une seule fois.
 * A `Job` est programmé pour s’exécuter dès que possible.
-* La stratégie de nouvelle tentative par défaut pour un `Job` consiste à utiliser un _interruption exponentielle_ (décrite plus en détail ci-dessous dans la section sur les [définissant un RetryStrategy](#Setting_a_RestryStrategy))
+* La stratégie de nouvelle tentative par défaut pour un `Job` consiste à utiliser un _interruption exponentielle_ (décrite plus en détail ci-dessous dans la section sur les [définissant un RetryStrategy](#Setting_a_RetryStrategy))
 
 ### <a name="scheduling-a-job"></a>Planification d’une `Job`
 
@@ -164,12 +164,14 @@ La valeur retournée par `FirebaseJobDispatcher.Schedule` est une des valeurs en
 
 Il est possible de personnaliser une tâche. Voici quelques exemples de la façon dont un travail peut-être être personnalisé :
 
-* [Passer des paramètres à un travail](#Passing_Parameters_to_a_Job) &ndash; A `Job` peut nécessiter des valeurs supplémentaires à effectuer leur travail, par exemple le téléchargement de fichier.
+* [Passage de paramètres à un travail](#Passing_Parameters_to_a_Job) &ndash; A `Job` peut nécessiter des valeurs supplémentaires à effectuer leur travail, par exemple le téléchargement de fichier.
 * [Définir des contraintes](#Setting_Constraints) &ndash; il peut être nécessaire exécuter uniquement une tâche lorsque certaines conditions sont remplies. Par exemple, ne s’exécutent un `Job` lorsque l’appareil est en cours de chargement. 
 * [Spécifiez à quel moment un `Job` doit s’exécuter](#Setting_Job_Triggers) &ndash; le répartiteur de travail Firebase permet aux applications de spécifier une heure quand la tâche doit s’exécuter.  
 * [Déclarez une stratégie de nouvelle tentative pour les travaux ayant échouées](#Setting_a_RetryStrategy) &ndash; A _stratégie de nouvelle tentative_ fournit des conseils pour la `FirebaseJobDispatcher` sur quoi faire avec `Jobs` qui ne parviennent pas à. 
 
 Chacune de ces rubriques est étudiées plus en détail dans les sections suivantes.
+
+<a name="Passing_Parameters_to_a_Job" />
 
 #### <a name="passing-parameters-to-a-job"></a>Passage de paramètres à un travail
 
@@ -197,6 +199,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
+<a name="Setting_Constraints" />
 
 #### <a name="setting-constraints"></a>Définition de contraintes
 
@@ -215,6 +218,8 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
+<a name="Setting_Job_Triggers" />
+
 #### <a name="setting-job-triggers"></a>Déclencheurs de tâche de paramètre
 
 Le `JobTrigger` fournit des conseils pour le système d’exploitation sur laquelle la tâche doit commencer. A `JobTrigger` a un _l’exécution de fenêtre_ qui définit une heure planifiée lorsque la `Job` doit s’exécuter. La fenêtre d’exécution a un _démarrer fenêtre_ valeur et un _fenêtre Terminer_ valeur. La fenêtre de démarrage est le nombre de secondes que l’appareil doit attendre avant d’exécuter le travail et la valeur de fenêtre de fin est le nombre maximal de secondes à attendre avant d’exécuter le `Job`. 
@@ -230,6 +235,8 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 La valeur par défaut `JobTrigger` pour une tâche est représentée par la valeur `Trigger.Now`, ce qui indique qu’une tâche est exécutée dès que possible après la planification...
+
+<a name="Setting_a_RetryStrategy" />
 
 #### <a name="setting-a-retrystrategy"></a>Définition d’un RetryStrategy
 

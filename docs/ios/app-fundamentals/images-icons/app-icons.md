@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 6de57e9523ff336c2e06e39903280db9c9ab95fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df9059b0e64b4a05b554f25b5f9d7f6031406633
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icons"></a>Icônes d’application
 
@@ -32,13 +32,13 @@ De la même façon qu’une application Xamarin.iOS pouvez utiliser des ressourc
 
 - **Icône de l’application** -toutes les applications iOS doivent définir une icône d’application. Voici l’icône appuieront par l’utilisateur à partir de l’écran d’accueil pour lancer l’application iOS. En outre, cette icône est utilisée par le centre de jeu, le cas échéant. Exemple : 
 
-    [ ![](app-icons-images/000.png "Icône de l’application")](app-icons-images/000-full.png)
+    [![](app-icons-images/000.png "Icône de l’application")](app-icons-images/000-full.png#lightbox)
 - **Mettre en évidence icône** - chaque fois que l’utilisateur entre le nom d’une application dans une recherche Spotlight, cette icône s’affiche. Exemple : 
 
-    [ ![](app-icons-images/000a.png "Icône de la galerie")](app-icons-images/000a-full.png)
+    [![](app-icons-images/000a.png "Icône de la galerie")](app-icons-images/000a-full.png#lightbox)
 - **Icône des paramètres** - si l’utilisateur entre le **paramètres** application sur son appareil iOS, cette icône s’affichera à la fin de la **paramètres** liste pour l’application. Exemple : 
 
-    [ ![](app-icons-images/000b.png "Icône des paramètres")](app-icons-images/000b-full.png)
+    [![](app-icons-images/000b.png "Icône des paramètres")](app-icons-images/000b-full.png#lightbox)
 
 Les tailles d’image de ressource et les résolutions suivant seront nécessaire pour prendre en charge tous les types d’icône requis par une application Xamarin.iOS cibler iOS 5 via iOS 9 (ou version ultérieure) :
 

@@ -7,18 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: de4683ca660224aa3cf17398ac649086b7e4ad88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6c0f2b92b34ce4d446e51b0aafa56f6283701dd1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="extending-the-recyclerview-example"></a>Pour étendre l’exemple RecyclerView
 
 
 L’application de base décrits dans [exemple RecyclerView A](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) réellement ne fait pas grand-chose &ndash; simplement défile elle affiche une liste fixe d’éléments de photographie pour faciliter la navigation. Dans les applications réelles, les utilisateurs souhaitent pouvoir interagir avec l’application en appuyant sur les éléments dans l’affichage. En outre, la source de données sous-jacente peut modifier (ou être modifiée par l’application), et le contenu de l’affichage doit rester cohérent avec ces modifications. Dans les sections suivantes, vous allez apprendre à gérer les événements de clic de l’élément et de mettre à jour `RecyclerView` lorsque les modifications de source de données sous-jacentes.
 
-<a name="itemclick" />
 
 ### <a name="handling-item-click-events"></a>La gestion des événements de clic de l’élément
 
@@ -91,7 +90,7 @@ PhotoViewHolder vh = new PhotoViewHolder (itemView, OnClick);
 
 Maintenant lorsque vous générez et exécutez l’exemple d’application Affichage, en appuyant sur une photo dans l’affichage entraîne un toast à afficher que les rapports qui photographie a été couvertes :
 
-[ ![Exemple Toast qui apparaît lorsqu’une carte de la photo est cliqué.](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png)
+[![Exemple Toast qui apparaît lorsqu’une carte de la photo est cliqué.](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png#lightbox)
 
 Cet exemple montre qu’une seule approche pour implémenter des gestionnaires d’événements avec `RecyclerView`. Une autre approche qui peut être utilisée ici consiste à placer des événements sur le détenteur de l’affichage et de disposer de l’adaptateur s’abonner à ces événements. Si l’exemple d’application photo fourni une capacité d’édition de photos, des événements distincts seraient nécessaires pour le `ImageView` et `TextView` dans chaque `CardView`: aborde la `TextView` lance une `EditView` boîte de dialogue qui permet à l’utilisateur de modifier la légende et des touches finales sur le `ImageView` lance un outil retouches photo qui permet à l’utilisateur rogner ou faire pivoter la photo. Selon les besoins de votre application, vous devez concevoir la meilleure approche pour la gestion et de réponse aux événements tactiles.
 
@@ -159,7 +158,7 @@ randomPickBtn.Click += delegate
 
 Désormais, lorsque le **Pick aléatoire** bouton drainé, `RecyclerView` met à jour l’affichage pour afficher qu’une photo plus bas dans la collection ont été permutée avec la première photo dans la collection :
 
-[ ![Capture d’écran de première avant la permutation, la capture d’écran seconde après l’échange](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png)
+[![Capture d’écran de première avant la permutation, la capture d’écran seconde après l’échange](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
 Bien entendu, `NotifyDataSetChanged` aurait pu être appelé au lieu d’effectuer les deux appels à `NotifyItemChanged`, mais cela forcera `RecyclerView` pour actualiser la collection entière, même si seulement deux éléments de la collection avaient changé. Appel de `NotifyItemChanged` est beaucoup plus efficace que l’appel `NotifyDataSetChanged`.
 

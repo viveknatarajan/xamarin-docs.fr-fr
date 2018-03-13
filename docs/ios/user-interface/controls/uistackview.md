@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 4555906512ecc36e3387f1b2483753e7f50a51ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="stack-view"></a>Vue de la pile
 
@@ -25,11 +26,15 @@ Le contrôle de la vue de la pile (`UIStackView`) tire parti de la puissance de 
 
 La disposition de tous les sous-vues attaché à une vue de la pile sont gérées par en fonction des propriétés de développeur défini comme axe, distribution, alignement et l’espacement :
 
-[ ![](uistackview-images/stacked01.png "Diagramme de mise en page de vue de pile")](uistackview-images/stacked01.png)
+[![](uistackview-images/stacked01.png "Diagramme de mise en page de vue de pile")](uistackview-images/stacked01.png#lightbox)
 
 Lorsque vous utilisez un `UIStackView` dans une application Xamarin.iOS, le développeur peut définir les sous-vues soit à l’intérieur d’un plan conceptuel dans le concepteur iOS, ou en ajoutant et supprimant des sous-vues en code c#.
 
 Ce document se compose de deux parties : un démarrage rapide pour vous aider à implémenter votre pile afficher et puis certains plus de détails techniques sur son fonctionnement.
+
+> [!VIDEO https://youtube.com/embed/p3po6507Ip8]
+
+**UIStackView, par [Xamarin University](https://university.xamarin.com/)**
 
 ## <a name="uistackview-quickstart"></a>Démarrage rapide de UIStackView
 
@@ -39,11 +44,11 @@ Comme une introduction rapide à le `UIStackView` (contrôle), nous allons crée
 
 Démarrer un nouveau projet de Xamarin.iOS et de modifier le **Main.storyboard** fichier dans le Générateur de Xcode Interface. Tout d’abord, faites glisser un seul **Vertical vue pile** sur la **View Controller**:
 
-[ ![](uistackview-images/quick01.png "Faites glisser une seule vue pile verticale sur le contrôleur d’affichage")](uistackview-images/quick01.png)
+[![](uistackview-images/quick01.png "Faites glisser une seule vue pile verticale sur le contrôleur d’affichage")](uistackview-images/quick01.png#lightbox)
 
 Dans le **inspecteur de l’attribut**, définissez les options suivantes :
 
-[ ![](uistackview-images/quick02.png "Définir les options de vue de la pile")](uistackview-images/quick02.png)
+[![](uistackview-images/quick02.png "Définir les options de vue de la pile")](uistackview-images/quick02.png#lightbox)
 
 Où :
 
@@ -61,17 +66,17 @@ Lorsque vous travaillez avec une vue de la pile, vous pouvez considérer le **al
 
 Continuer à disposition interface de l’application en ajoutant une étiquette, ImageView, deux boutons et une vue pile Horizontal afin qu’il ressemble à ceci :
 
-[ ![](uistackview-images/quick03.png "Disposition de l’interface utilisateur de vue pile")](uistackview-images/quick03.png)
+[![](uistackview-images/quick03.png "Disposition de l’interface utilisateur de vue pile")](uistackview-images/quick03.png#lightbox)
 
 Configurer l’affichage Horizontal de la pile avec les options suivantes :
 
-[ ![](uistackview-images/quick04.png "Configurez les options de vue de la pile horizontale")](uistackview-images/quick04.png)
+[![](uistackview-images/quick04.png "Configurez les options de vue de la pile horizontale")](uistackview-images/quick04.png#lightbox)
 
 Car nous ne voulons pas l’icône qui représente chaque « point » dans l’évaluation étiré lorsqu’il est ajouté à la vue pile horizontale, nous avons défini le **alignement** à **Center** et  **Distribution** à **remplir tout aussi**.
 
 Enfin, des câbles suivantes **prises** et **Actions**:
 
-[ ![](uistackview-images/quick05.png "Les prises de vue pile et les Actions")](uistackview-images/quick05.png)
+[![](uistackview-images/quick05.png "Les prises de vue pile et les Actions")](uistackview-images/quick05.png#lightbox)
 
 ### <a name="populate-a-uistackview-from-code"></a>Remplir un UIStackView à partir du Code
 
@@ -168,7 +173,7 @@ Avec tous les éléments d’interface utilisateur et requis code en place, vous
 
 Lorsque l’utilisateur appuie sur le **augmenter la note** bouton, un autre « étoile » est ajoutée à l’écran (jusqu'à un maximum de 5) :
 
-[ ![](uistackview-images/intro01.png "L’exemple d’application de s’exécuter")](uistackview-images/intro01.png)
+[![](uistackview-images/intro01.png "L’exemple d’application de s’exécuter")](uistackview-images/intro01.png#lightbox)
 
 Les « étoiles » seront automatiquement centrées et répartis dans l’affichage Horizontal de la pile. Lorsque l’utilisateur appuie sur le **baisser la note** bouton, une « étoile » est supprimé (jusqu'à ce qu’aucun sont à gauche).
 

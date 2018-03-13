@@ -3,16 +3,16 @@ title: "Plateforme-spécifiques à Windows"
 description: "Caractéristiques de la plateforme vous permettent de vous permet d’utiliser la fonctionnalité est disponible uniquement sur une plateforme spécifique, sans avoir à implémenter des convertisseurs personnalisés ou les effets. Cet article montre comment utiliser les plateforme-spécifiques à Windows qui sont intégrées dans Xamarin.Forms."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: da9279939af8dc4033cd89769a7add60a745ac85
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01b32d1ca5356ed69480dff0d31c210a8c460417
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows-platform-specifics"></a>Plateforme-spécifiques à Windows
 
@@ -52,7 +52,7 @@ Le `Page.On<Windows>` méthode spécifie que cette plate-forme spécifique sera 
 
 Le résultat est que le placement de la barre d’outils spécifiée est appliqué à la [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) instance :
 
-[![](windows-images/toolbar-placement.png "Barre d’outils emplacement spécifique à la plateforme")](windows-images/toolbar-placement-large.png "barre d’outils emplacement spécifique à la plateforme")
+[![](windows-images/toolbar-placement.png "Barre d’outils emplacement spécifique à la plateforme")](windows-images/toolbar-placement-large.png#lightbox "barre d’outils emplacement spécifique à la plateforme")
 
 <a name="collapsable_navigation_bar" />
 
@@ -84,7 +84,7 @@ Le `MasterDetailPage.On<Windows>` méthode spécifie que cette plate-forme spéc
 
 Le résultat qui est spécifié [ `CollapseStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/) est appliqué à la [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) instance, avec la largeur spécifiée également :
 
-[![](windows-images/collapsed-navigation-bar.png "Réduit la barre de Navigation spécifiques à une plateforme")](windows-images/collapsed-navigation-bar-large.png "réduit la barre de Navigation spécifique à la plateforme")
+[![](windows-images/collapsed-navigation-bar.png "Réduit la barre de Navigation spécifiques à une plateforme")](windows-images/collapsed-navigation-bar-large.png#lightbox "réduit la barre de Navigation spécifique à la plateforme")
 
 ## <a name="summary"></a>Récapitulatif
 
@@ -93,6 +93,6 @@ Cet article vous a montré comment utiliser les plateforme-spécifiques à Windo
 
 ## <a name="related-links"></a>Liens associés
 
-- [Caractéristiques de la plateforme de création](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [Création de caractéristiques de la plateforme](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (exemple)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [WindowsSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.WindowsSpecific/)

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 500ad02d79cea79f59b1aca91b0312c9a9d6bac3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b82c0471985306962133c3bf7b084b49d5588bb6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="basic-bindings"></a>Liaisons de base
 
@@ -94,7 +94,7 @@ Toutefois, y compris le nom de classe est un rappel de l’objet cible.
 
 Lorsque vous manipulez les `Slider`, le `Label` pivote en conséquence :
 
-[![Code Basice liaison](basic-bindings-images/basiccodebinding-small.png "Code base liaison")](basic-bindings-images/basiccodebinding-large.png "liaison du Code de base")
+[![Code Basice liaison](basic-bindings-images/basiccodebinding-small.png "Code base liaison")](basic-bindings-images/basiccodebinding-large.png#lightbox "liaison du Code de base")
 
 Le **base liaison Xaml** page est identique à **liaison de Code base** , sauf qu’elle définit la liaison de données entier dans XAML :
 
@@ -190,7 +190,7 @@ Le `Binding` constructeur a 6 de paramètres, donc la `source` paramètre est sp
 
 Exécuter ce programme peut s’avérer un peu surprenant :
 
-[![Liaison de Code alternatif](basic-bindings-images/alternativecodebinding-small.png "Code alternatif liaison")](basic-bindings-images/alternativecodebinding-large.png "Code alternatif liaison")
+[![Liaison de Code alternatif](basic-bindings-images/alternativecodebinding-small.png "Code alternatif liaison")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Code alternatif liaison")
 
 L’écran d’e/s sur la gauche montre comment l’écran lorsque la page s’affiche pour la première fois. Où est le `Label`? 
 
@@ -319,7 +319,7 @@ Le **l’héritage du contexte de liaison** exemple est une démonstration simpl
 
 Le `BindingContext` propriété de la `StackLayout` est défini sur le `slider` objet. Ce contexte de liaison est hérité par les deux le `Label` et le `BoxView`, à la fois de qui ont leur `Rotation` propriétés définies sur le `Value` propriété de la `Slider`: 
 
-[![L’héritage du contexte de liaison](basic-bindings-images/bindingcontextinheritance-small.png "l’héritage du contexte de liaison")](basic-bindings-images/bindingcontextinheritance-large.png "l’héritage du contexte de liaison")
+[![L’héritage du contexte de liaison](basic-bindings-images/bindingcontextinheritance-small.png "l’héritage du contexte de liaison")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "l’héritage du contexte de liaison")
 
 Dans le [l’article suivant](binding-mode.md), vous verrez comment les *mode de liaison* peut modifier le flux de données entre les objets source et cible.
 

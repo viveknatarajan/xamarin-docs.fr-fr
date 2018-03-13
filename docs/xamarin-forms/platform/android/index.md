@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2016
-ms.openlocfilehash: d68d84671028ded14b4b885f2c134656fc639f9e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b5e9a4c449bc99bd88fc415f5ebb969d2c2a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-features"></a>Fonctionnalités de la plateforme Android
 
@@ -28,14 +28,14 @@ Pour ajouter des thèmes de matériau à votre projet Xamarin.Forms Android, sui
 
 Voici le **Todo** exemple avec la valeur par défaut `FormsApplicationActivity`:
 
-[ ![](images/before-appcompat-sml.png "Exemple de tâches d’Application sans AppCompat")](images/before-appcompat.png "Application Todo exemple sans AppCompat")
+[![](images/before-appcompat-sml.png "Exemple de tâches d’Application sans AppCompat")](images/before-appcompat.png#lightbox "Application Todo exemple sans AppCompat")
 
 C’est le même code après la mise à niveau le projet à utiliser `FormsAppCompatActivity` (et ajouter les informations de thème supplémentaires) :
 
-[ ![](images/post-appcompat-sml.png "Exemple de tâches d’Application avec AppCompat et des thèmes")](images/post-appcompat.png "Application Todo exemple avec AppCompat et thèmes")
+[![](images/post-appcompat-sml.png "Exemple de tâches d’Application avec AppCompat et des thèmes")](images/post-appcompat.png#lightbox "Application Todo exemple avec AppCompat et thèmes")
 
 > [!NOTE]
-> **Remarque**: lorsque vous utilisez `FormsAppCompatActivity`, le [classes de base pour certains convertisseurs personnalisés Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) sera différente.
+> Lorsque vous utilisez `FormsAppCompatActivity`, le [classes de base pour certains convertisseurs personnalisés Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) sera différente.
 
 
 ## <a name="related-links"></a>Liens associés

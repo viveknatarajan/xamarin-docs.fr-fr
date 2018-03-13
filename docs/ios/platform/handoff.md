@@ -7,11 +7,11 @@ ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0b3471f607bbde6560af597b6b901e6fbd1ec0b0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="handoff"></a>Procédure de transfert
 
@@ -19,7 +19,7 @@ _Cet article couvre utilisation de remise dans une application Xamarin.iOS à tr
 
 Apple a introduit le transfert dans iOS 8 et OS X Yosemite (10.10) pour fournir un mécanisme commun pour l’utilisateur à transférer des activités a démarré sur l’un de leurs appareils, sur un autre appareil exécutant la même application ou une autre application qui prend en charge la même activité.
 
-[ ![](handoff-images/handoff02.png "Un exemple d’une opération de transfert")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "Un exemple d’une opération de transfert")](handoff-images/handoff02.png#lightbox)
 
 Cet article prend un coup de œil rapide à l’activation d’activité partage dans une application Xamarin.iOS et couvrent l’infrastructure de remise en détail :
 
@@ -45,7 +45,7 @@ Procédure de transfert transmet au minimum d’informations pour définir l’a
 
 Sur le périphérique de réception, l’utilisateur recevra une notification qu’une activité est disponible pour la continuation. Si l’utilisateur choisit de continuer l’activité sur le nouveau périphérique, l’application spécifiée est lancée (pas déjà en cours d’exécution) et la charge utile de la `NSUserActivity` est utilisée pour redémarrer l’activité.
 
-[ ![](handoff-images/handoffinteractions.png "Une vue d’ensemble des activités de l’utilisateur continue")](handoff-images/handoffinteractions.png)
+[![](handoff-images/handoffinteractions.png "Une vue d’ensemble des activités de l’utilisateur continue")](handoff-images/handoffinteractions.png#lightbox)
 
 Seules les applications qui partagent le même ID d’équipe de développeur et de répondant à une donnée _Type d’activité_ sont éligibles pour la continuation. Une application définit les Types d’activité pris en charge sous le `NSUserActivityTypes` clé de sa **Info.plist** fichier. Compte tenu de cela, un appareil continu choisit l’application pour effectuer la continuation en fonction de l’ID d’équipe, Type d’activité et éventuellement le _titre de l’activité_.
 
@@ -114,21 +114,21 @@ Effectuez ce qui suit :
 3. Si vous n’avez pas déjà fait, cliquez sur **identificateurs** et créer un ID de votre application (par exemple, `com.company.appname`), sinon modifier votre code existant.
 4. Vérifiez que le **iCloud** service a été activé pour l’ID donné : 
 
-    [ ![](handoff-images/provision01.png "Activer le service iCloud pour l’ID donné")](handoff-images/provision01.png)
+    [![](handoff-images/provision01.png "Activer le service iCloud pour l’ID donné")](handoff-images/provision01.png#lightbox)
 5. Enregistrez les modifications apportées.
 4. Cliquez sur **profils de configuration** > **développement** et créer un profil de configuration pour vous de développement nouvelle application : 
 
-    [ ![](handoff-images/provision02.png "Créer un nouveau développement, profil de configuration pour l’application")](handoff-images/provision02.png)
+    [![](handoff-images/provision02.png "Créer un nouveau développement, profil de configuration pour l’application")](handoff-images/provision02.png#lightbox)
 5. Télécharger et installer le profil de configuration ou utiliser Xcode pour télécharger et installer le profil.
 6. Modifier les options de votre projet de Xamarin.iOS et vérifiez que vous utilisez le profil de configuration que vous venez de créer : 
 
-    [ ![](handoff-images/provision03.png "Sélectionnez le profil de configuration venez de créer")](handoff-images/provision03.png)
+    [![](handoff-images/provision03.png "Sélectionnez le profil de configuration venez de créer")](handoff-images/provision03.png#lightbox)
 7. Ensuite, modifiez votre **Info.plist** de fichier et vérifiez que vous utilisez l’ID d’application qui a été utilisé pour créer le profil de configuration : 
 
-    [ ![](handoff-images/provision04.png "Définir l’ID de l’application")](handoff-images/provision04.png)
+    [![](handoff-images/provision04.png "Définir l’ID de l’application")](handoff-images/provision04.png#lightbox)
 8. Faites défiler vers le **Modes d’arrière-plan** section et vérifiez les éléments suivants : 
 
-    [ ![](handoff-images/provision05.png "Activer les modes d’arrière-plan requis")](handoff-images/provision05.png)
+    [![](handoff-images/provision05.png "Activer les modes d’arrière-plan requis")](handoff-images/provision05.png#lightbox)
 9. Enregistrez les modifications à tous les fichiers.
 
 Avec ces paramètres en place, l’application est maintenant prête à accéder aux API d’infrastructure de remise. Pour plus d’informations sur la configuration, consultez notre [vos appareils](~/ios/get-started/installation/device-provisioning/index.md) et [de configuration de votre application](~/ios/get-started/installation/device-provisioning/index.md) guides.
@@ -155,7 +155,7 @@ Par exemple, nous allons créer un exemple d’application appelé **MonkeyBrows
 
 Pour créer les identificateurs de Type d’activité requis pour prendre en charge ce comportement, modifiez le **Info.plist** de fichiers et de basculer vers le **Source** vue. Ajouter un `NSUserActivityTypes` de clé et de créer les identificateurs suivants :
 
-[ ![](handoff-images/type01.png "Les identificateurs requis dans l’éditeur plist NSUserActivityTypes clé")](handoff-images/type01.png)
+[![](handoff-images/type01.png "Les identificateurs requis dans l’éditeur plist NSUserActivityTypes clé")](handoff-images/type01.png#lightbox)
 
 Nous avons créé quatre nouveaux identificateurs de Type d’activité, un pour chacun des onglets dans l’exemple **MonkeyBrowser** application. Lorsque vous créez vos propres applications, remplacez le contenu de la `NSUserActivityTypes` de tableau avec les identificateurs de Type d’activité spécifiques aux activités de votre application prend en charge.
 
@@ -610,15 +610,15 @@ Ainsi, à l’aide de la procédure de transfert dans une application Xamarin.iO
 
 Sur un onglet, lorsque l’utilisateur entre une URL et les drainages de nouveau la **accédez** bouton, un nouveau `NSUserActivity` est créé pour cet onglet qui contient l’URL de l’utilisateur parcourt actuellement :
 
-[ ![](handoff-images/handoff01.png "Exemple d’application remise")](handoff-images/handoff01.png)
+[![](handoff-images/handoff01.png "Exemple d’application remise")](handoff-images/handoff01.png#lightbox)
 
 Si un autre des périphériques de l’utilisateur a le **MonkeyBrowser** application installée, iCloud utilisant le même compte d’utilisateur est connecté, se trouve sur le même réseau et à proximité du périphérique ci-dessus, l’activité de remise s’affichera sur la page d’accueil écran (dans le coin inférieur gauche) :
 
-[ ![](handoff-images/handoff02.png "L’activité de remise affiché sur l’écran d’accueil dans le coin inférieur gauche")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "L’activité de remise affiché sur l’écran d’accueil dans le coin inférieur gauche")](handoff-images/handoff02.png#lightbox)
 
 Si l’utilisateur fait glisser vers le haut sur l’icône de transfert, l’application est lancée et l’activité de l’utilisateur spécifié dans le `NSUserActivity` sera poursuivie sur le nouveau périphérique :
 
-[ ![](handoff-images/handoff03.png "Suite de l’activité des utilisateurs sur le nouveau périphérique")](handoff-images/handoff03.png)
+[![](handoff-images/handoff03.png "Suite de l’activité des utilisateurs sur le nouveau périphérique")](handoff-images/handoff03.png#lightbox)
 
 Lorsque l’activité des utilisateurs a été correctement envoyée à un autre appareil Apple, le périphérique d’envoi `NSUserActivity` recevra un appel à la `UserActivityWasContinued` méthode sur son `NSUserActivityDelegate` pour lui indiquer que l’activité des utilisateurs a été transférée vers un autre périphérique.
 

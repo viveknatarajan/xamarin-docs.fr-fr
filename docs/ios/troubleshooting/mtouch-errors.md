@@ -6,19 +6,18 @@ ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/26/2017
-ms.openlocfilehash: 5a11ca19de7ce06088478f1a39dae5a246d701a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/06/2018
+ms.openlocfilehash: 32a73232667e54eef7536f0bb0d1baa190269d8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinios-errors"></a>Erreurs de Xamarin.iOS
 
-
 ## <a name="mt0xxx-mtouch-error-messages"></a>MT0xxx : messages d’erreur mtouch
 
-E.g. paramètres, environnement, manquant d’outils.
+Par exemple, paramètres, environnement, manquant d’outils.
 
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
@@ -102,7 +101,6 @@ Cela peut se produire dans les circonstances suivantes :
 *  ARMv6 est activée et Xcode 4.5 ou version ultérieure est installé.
 *  ARMv7s est activée et Xcode 4.4 ou version antérieure est installé.
 
-
 Vérifiez que la version installée de Xcode prend en charge les architectures sélectionnées.
 
 ### <a name="a-namemt0015mt0015-invalid-abi--supported-abis-are-i386-x8664--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a><a name="MT0015"/>MT0015 : Les ABI non valide : *. ABIs pris en charge sont : i386, x86_64, armv7, armv7 llvm, armv7 + llvm + thumb2, armv7s, armv7s + llvm, armv7s + llvm + thumb2, arm64 et arm64 + llvm.
@@ -132,16 +130,9 @@ Il existe plusieurs options pour mtouch ne peuvent pas être utilisés simultan�
 -  --launchdebug
 -  --launchsim
 
-
-
-
 ### <a name="a-namemt0020mt0020-the-valid-options-for--are-"></a><a name="MT0020"/>MT0020 Les options valides pour '\*'sont'\*'.
 
-
-
 ### <a name="a-namemt0021mt0021-cannot-compile-using-gccg---use-gcc-when-using-the-static-registrar-this-is-the-default-when-compiling-for-device-either-remove-the---use-gcc-flag-or-use-the-dynamic-registrar---registrardynamic"></a><a name="MT0021"/>MT0021 ne peut pas de compilation à l’aide de gcc / g ++ (--utilisez-gcc) lorsque vous utilisez le bureau d’enregistrement statique (il s’agit de la valeur par défaut lors de la compilation de l’appareil). Supprimez le--utilisez-gcc indicateur ou utiliser le bureau d’enregistrement dynamique (--bureau d’enregistrement : dynamique).
-
-
 
 ### <a name="a-namemt0022mt0022-the-options---unsupported--enable-generics-in-registrar-and---registrar-are-not-compatible"></a><a name="MT0022"/>MT0022 Options '--non pris en charge--enable-génériques-de-bureau d’enregistrement de' et '--bureau d’enregistrement ' ne sont pas compatibles.
 
@@ -155,23 +146,13 @@ Nom de l’assembly exécutable et le nom de l’application ne peut pas corresp
 
 ### <a name="a-namemt0024mt0024-could-not-find-required-file-"></a><a name="MT0024"/>MT0024 Impossible de trouver le fichier requis ' *'.
 
-
-
 ### <a name="a-namemt0025mt0025-no-sdk-version-was-provided-please-add---sdkxy-to-specify-which-ios-sdk-should-be-used-to-build-your-application"></a><a name="MT0025"/>Version du Kit de développement logiciel MT0025 non a été fournie. Veuillez ajouter `--sdk=X.Y` pour spécifier quels iOS SDK doit être utilisé pour générer votre application.
-
-
 
 ### <a name="a-namemt0026mt0026-could-not-parse-the-command-line-argument--"></a><a name="MT0026"/>Impossible de MT0026 pas analyser l’argument de ligne de commande ' *': *
 
-
-
 ### <a name="a-namemt0027mt0027-the-options--and--are-not-compatible"></a><a name="MT0027"/>MT0027 Les options'\*'et'\*' ne sont pas compatibles.
 
-
-
 ### <a name="a-namemt0028mt0028-cannot-enable-pie--pie-when-targeting-ios-41-or-earlier-please-disable-pie--piefalse-or-set-the-deployment-target-to-at-least-ios-42"></a><a name="MT0028"/>MT0028 ne peut pas activer le graphique à secteurs (-secteur) lors du ciblage iOS 4.1 ou une version antérieure. Désactivez le graphique à secteurs (-graphique à secteurs : false) ou définir la cible de déploiement au moins iOS 4.2
-
-
 
 ### <a name="a-namemt0029mt0029-repl---enable-repl-is-only-supported-in-the-simulator---sim"></a><a name="MT0029"/>MT0029 : REPL (--enable-repl) est uniquement prise en charge dans le simulateur (--sim).
 
@@ -486,7 +467,6 @@ Partage de code natif est actuellement pas pris en charge si l’application de 
 
 Partage de code natif requiert n’est pas prise en charge pour les projets qui utilisent des définitions xml personnalisé pour l’éditeur de liens managé.
 
-
 ### <a name="a-namemt0113mt0113-native-code-sharing-has-been-disabled-for-the-extension--because-"></a><a name="MT0113"/>MT0113 : Partage de code natif a été désactivé pour l’extension ' *', car *.
 
 * Étant donné que les options bitcode diffèrent entre l’application conteneur (\*) et l’extension (\*).
@@ -561,6 +541,49 @@ La solution consiste à supprimer la `--dynamic-symbol-mode=linker` argument à 
 
 <!-- 0116 - 0124: free to use -->
 
+### <a name="a-namemt0116mt0116-invalid-architecture-arch-32-bit-architectures-are-not-supported-when-deployment-target-is-11-or-later-make-sure-the-project-does-not-build-for-a-32-bit-architecture"></a><a name="MT0116"/>MT0116 : Architecture non valide : {arch}. architectures 32 bits ne sont pas prises en charge lors de la cible de déploiement est 11 ou version ultérieure. Assurez-vous que le projet ne génère pas d’une architecture 32 bits.
+
+iOS 11 ne contient pas de prise en charge pour les applications 32 bits, donc il n’est pas pris en charge pour générer pour une application 32 bits lorsque la cible de déploiement est iOS 11 ou version ultérieure.
+
+Modifier l’architecture cible dans les options de génération du projet iOS à arm64, ou modifier la cible de déploiement dans le fichier Info.plist du projet vers une version d’iOS antérieure.
+
+### <a name="a-namemt0117mt0117-cant-launch-a-32-bit-app-on-a-simulator-that-only-supports-64-bit"></a><a name="MT0117"/>MT0117 : Impossible de lancer une application 32 bits sur un simulateur prend uniquement en charge 64 bits.
+
+### <a name="a-namemt0118mt0118-aot-files-could-not-be-found-at-the-expected-directory-msymdir"></a><a name="MT0118"/>MT0118 : Les fichiers AOA est introuvable dans le répertoire attendu '{msymdir}'.
+
+<!-- 0119 - 0123: free to use -->
+
+### <a name="a-namemt0123mt0123-the-executable-assembly--does-not-reference-"></a><a name="MT0123"/>MT0123 : L’assembly exécutable * ne fait pas référence à *.
+
+Aucune référence n’a été trouvé pour l’assembly de plateforme (Xamarin.iOS.dll / Xamarin.TVOS.dll / Xamarin.WatchOS.dll) dans l’assembly exécutable.
+
+Cela se produit généralement où il n’existe pas de code dans le projet exécutable qui utilise quoi que ce soit à partir de l’assembly de plateforme ; par exemple une méthode Main vide (et aucun autre code) affichera-t-il cette erreur :
+
+```csharp
+class Program {
+    void Main (string[] args)
+    {
+    }
+}
+```
+
+À l’aide d’une API à partir de l’assembly de plateforme corrige l’erreur :
+
+```csharp
+class Program {
+    void Main (string[] args)
+    {
+        System.Console.WriteLine (typeof (UIKit.UIWindow));
+    }
+}
+```
+
+### <a name="a-namemt0124mt0124-could-not-set-the-current-language-to-lang-according-to-langlang-exception"></a><a name="MT0124"/>MT0124 : Impossible de définir la langue actuelle sur « {lang} » (en fonction de LANG = {LANG}) : {exception}
+
+Il s’agit d’un avertissement indiquant que le langage actuel n’a pas pu être défini pour la langue du message d’erreur.
+
+La langue du système par défaut est la langue actuelle.
+
 ### <a name="a-namemt0125mt0125-the---assembly-build-target-command-line-argument-is-ignored-in-the-simulator"></a><a name="MT0125"/>MT0125 : L’assembly-cible de génération argument de ligne de commande est ignorée dans le simulateur.
 
 Aucune action n’est requise, ce message est purement informatif.
@@ -577,6 +600,12 @@ Aucune action n’est requise, ce message est purement informatif.
 
 Pour plus d’informations, consultez bogue[52727](https://bugzilla.xamarin.com/show_bug.cgi?id=52727).
 
+### <a name="a-namemt0128mt0128-could-not-touch-the-file--"></a><a name="MT0128"/>MT0128 : N’a pas pu toucher le fichier ' *': *
+
+Une erreur s’est produite lors de la toucher un fichier (qui est effectué pour garantir des builds partielles sont correctement effectuées).
+
+Cet avertissement peut probablement être ignoré ; dans le cas des problèmes signaler un bogue (https://bugzilla.xamarin.com] (https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) et il est examiné.
+
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx : Messages d’erreur d’au projet
 
 ### <a name="mt10xx-installer--mtouch"></a>MT10xx : Programme d’installation / mtouch
@@ -588,35 +617,19 @@ Pour plus d’informations, consultez bogue[52727](https://bugzilla.xamarin.com/
 
 ### <a name="a-namemt1001mt1001-could-not-find-an-application-at-the-specified-directory"></a><a name="MT1001"/>MT1001 Impossible de trouver l’application dans le répertoire spécifié
 
-
-
 ### <a name="a-namemt1002mt1002-could-not-create-symlinks-files-were-copied"></a><a name="MT1002"/>Impossible de la MT1002 de créer des liens symboliques, de fichiers ont été copiés
-
-
 
 ### <a name="a-namemt1003mt1003-could-not-kill-the-application--you-may-have-to-kill-the-application-manually"></a><a name="MT1003"/>Impossible de MT1003 d’interrompre l’application ' *'. Vous devrez peut-être supprimer l’application manuellement.
 
-
-
 ### <a name="a-namemt1004mt1004-could-not-get-the-list-of-installed-applications"></a><a name="MT1004"/>Impossible de MT1004 d’obtenir la liste des applications installées.
-
-
 
 ### <a name="a-namemt1005mt1005-could-not-kill-the-application--on-the-device----you-may-have-to-kill-the-application-manually"></a><a name="MT1005"/>Impossible de MT1005 d’interrompre l’application '\*'sur l’appareil'\*' : *-il se peut que vous deviez arrêter l’application manuellement.
 
-
-
 ### <a name="a-namemt1006mt1006-could-not-install-the-application--on-the-device--"></a><a name="MT1006"/>Impossible de MT1006 pas installer l’application '\*'sur l’appareil'\*' : *.
-
-
 
 ### <a name="a-namemt1007mt1007-failed-to-launch-the-application--on-the-device---you-can-still-launch-the-application-manually-by-tapping-on-it"></a><a name="MT1007"/>MT1007 n’a pas pu lancer l’application '\*'sur l’appareil'\*' : *. Vous pouvez toujours lancer l’application manuellement en appuyant sur dessus.
 
-
-
 ### <a name="a-namemt1008mt1008-failed-to-launch-the-simulator"></a><a name="MT1008"/>MT1008 : Impossible de lancer le simulateur
-
-
 
 Cette erreur est signalée si mtouch n’a pas pu lancer le simulateur.   Cela peut arriver parfois car il existe déjà un processus de simulateur obsolètes ou morts en cours d’exécution.
 
@@ -632,7 +645,7 @@ Il s’agit d’un problème connu dans certaines versions de Xamarin.iOS.
 
 Si cela se produit pour vous, essayez la solution de contournement suivante :
 
-```csharp
+```bash
 sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/*/*.mdb
 ```
 
@@ -640,23 +653,15 @@ Toutefois, étant donné que ce problème a été résolu dans la dernière vers
 
 ### <a name="a-namemt1010mt1010-could-not-load-the-assembly--"></a><a name="MT1010"/>MT1010 Impossible de charger l’assembly ' *': *
 
-
-
 ### <a name="a-namemt1011mt1011-could-not-add-missing-resource-file-"></a><a name="MT1011"/>MT1011 Impossible d’ajouter le fichier de ressources manquant : ' *'
 
-
-
 ### <a name="a-namemt1012mt1012-failed-to-list-the-apps-on-the-device--"></a><a name="MT1012"/>Échec de MT1012 pour répertorier les applications sur l’appareil ' *': *
-
-
 
 ### <a name="a-namemt1013mt1013-dependency-tracking-error-no-files-to-compare-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a><a name="MT1013"/>Dépendance de MT1013 suivi d’erreur : aucun fichier à comparer. Veuillez archiver un rapport de bogue à http://bugzilla.xamarin.com avec un cas de test.
 
 Cela indique un bogue dans Xamarin.iOS. Veuillez entrer un bogue sur [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) avec un caes de test.
 
 ### <a name="a-namemt1014mt1014-failed-to-re-use-cached-version-of--"></a><a name="MT1014"/>MT1014 n’a pas pu réutiliser une version mise en cache de ' *': *.
-
-
 
 ### <a name="a-namemt1015mt1015--failed-to-create-the-executable--"></a><a name="MT1015"/>MT1015 n’a pas pu créer l’exécutable ' *': *
 
@@ -681,7 +686,6 @@ Cela peut se produire si :
   Solutions possibles :
   - Créer une application à partir d’un modèle dans Xcode, sélectionnez le même profil de configuration et déployer sur le même appareil. Parfois Xcode peut actualiser automatiquement les profils de configuration avec les nouveaux appareils (dans les autres cas que Xcode vous demande comment procéder).
   -Aller dans le centre de développement iOS et mettre à jour le profil de configuration avec le nouveau périphérique, puis téléchargez le profil de configuration mis à jour sur votre ordinateur.
-
 
 Dans la plupart des cas que plus d’informations sur l’échec est imprimée dans le journal de l’appareil iOS, ce qui peut aider à diagnostiquer le problème.
 
@@ -784,27 +788,15 @@ Cette erreur est signalée uniquement avec [MT1036](#MT1036). Consultez [MT1036]
 
 ### <a name="a-namemt1101mt1101-could-not-start-app"></a><a name="MT1101"/>Impossible de MT1101 ne démarrer pas d’application
 
-
-
 ### <a name="a-namemt1102mt1102-could-not-attach-to-the-app-to-kill-it-"></a><a name="MT1102"/>MT1102 a pas pu attacher à l’application (pour les supprimer) : *
-
-
 
 ### <a name="a-namemt1103mt1103-could-not-detach"></a><a name="MT1103"/>MT1103 Impossible de détacher
 
-
-
 ### <a name="a-namemt1104mt1104-failed-to-send-packet-"></a><a name="MT1104"/>MT1104 n’a pas pu envoyer le paquet : *
-
-
 
 ### <a name="a-namemt1105mt1105-unexpected-response-type"></a><a name="MT1105"/>Type de réponse MT1105 inattendue
 
-
-
 ### <a name="a-namemt1106mt1106-could-not-get-list-of-applications-on-the-device-request-timed-out"></a><a name="MT1106"/>Impossible de MT1106 d’obtenir la liste des applications sur l’appareil : demande a expiré.
-
-
 
 ### <a name="a-namemt1107mt1107-application-failed-to-launch-"></a><a name="MT1107"/>MT1107 : Échec de l’Application lancer : *
 
@@ -818,7 +810,6 @@ Quelques opérations de mtouch requièrent le <tt>DeveloperDiskImage.dmg</tt> fi
 
 Cette erreur peut se produire soit parce que vous n’avez pas un DeveloperDiskImage.dmg qui correspond à l’appareil que vous avez connectée.
 
-
 ### <a name="a-namemt1109mt1109-application-failed-to-launch-because-the-device-is-locked-please-unlock-the-device-and-try-again"></a><a name="MT1109"/>MT1109 : Échec de l’Application à lancer, car l’appareil est verrouillé. Veuillez déverrouiller l’appareil, puis réessayez.
 
 Vérifiez si votre appareil est verrouillé.
@@ -826,6 +817,8 @@ Vérifiez si votre appareil est verrouillé.
 ### <a name="a-namemt1110mt1110-application-failed-to-launch-because-of-ios-security-restrictions-please-ensure-the-developer-is-trusted"></a><a name="MT1110"/>MT1110 : Échec de l’Application lancer en raison des restrictions de sécurité iOS. Vérifiez que le développeur est approuvé.
 
 Si vous déployez une application d’entreprise ou à l’aide d’un profil d’approvisionnement, vous devez faire confiance au développeur (cela est expliqué <a href="http://stackoverflow.com/a/30726375/183422">ici</a>).
+
+### <a name="a-namemt1111mt1111-application-launched-successfully-but-its-not-possible-to-wait-for-the-app-to-exit-as-requested-because-its-not-possible-to-detect-app-termination-when-launching-using-gdbserver"></a><a name="MT1111"/>MT1111 : Application lancée correctement, mais il n’est pas possible d’attendre que l’application quitter le programme demandé, car il n’est pas possible de détecter l’arrêt de l’application lors de l’exécution à l’aide de gdbserver.
 
 ### <a name="mt12xx-simulator"></a>MT12xx : simulateur
 
@@ -874,10 +867,7 @@ Regardez simulateurs peuvent être associés à iOS simulateurs à l’aide de l
   MT13xx [LinkWith]
   -->
 
-
 ### <a name="a-namemt1301mt1301-native-library---was-ignored-since-it-does-not-match-the-current-build-architectures-"></a><a name="MT1301"/>La bibliothèque Native MT1301 `*` (\*) a été ignoré, car il ne correspond pas à l’architecture(s) de build en cours (\*)
-
-
 
 ### <a name="a-namemt1302mt1302-could-not-extract-the-native-library--from--please-ensure-the-native-library-was-properly-embedded-in-the-managed-assembly-if-the-assembly-was-built-using-a-binding-project-the-native-library-must-be-included-in-the-project-and-its-build-action-must-be-objcbindingnativelibrary"></a><a name="MT1302"/>Impossible de MT1302 pas extraire la bibliothèque native ' *' à partir de '+'. Vérifiez que la bibliothèque native a été correctement incorporée dans l’assembly managé (si l’assembly a été généré à l’aide d’un projet de liaison, la bibliothèque native doit être incluse dans le projet et son Action de génération doit être 'ObjcBindingNativeLibrary').
 
@@ -1058,7 +1048,7 @@ Le format d’un fichier peut être vérifié à l’aide de la `file` commande 
 
 Cette erreur signifie que l’éditeur de liens managé a rencontré une erreur inattendue, par exemple, une exception et ne peut pas terminer ou enregistrez l’assembly en cours de traitement. Plus d’informations sur l’erreur exacte fera partie du journal de génération, par exemple
 
-``` 
+```
 error MT2001: Could not link assemblies.
     Method: `System.Void Todo.TodoListPageCS/<<-ctor>b__1_0>d::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)`
     Assembly: `QuickTodo, Version=1.0.6297.28241, Culture=neutral, PublicKeyToken=null`
@@ -1068,22 +1058,13 @@ Parameter name: instruction
 
 Il est important d’un rapport de bogue pour ces problèmes. Dans la plupart des cas, une solution de contournement peut être fournie avant la publication d’un correctif approprié. Les informations ci-dessus sont critiques (ainsi que d’un cas de test et/ou le binairy assembly) pour résoudre le problème.
 
-
 ### <a name="a-namemt2002mt2002-can-not-resolve-reference-"></a><a name="MT2002"/>MT2002 peut résoudre la référence : *
-
-
 
 ### <a name="a-namemt2003mt2003-option--will-be-ignored-since-linking-is-disabled"></a><a name="MT2003"/>Option de MT2003 ' *' sera ignoré, car la liaison est désactivée.
 
-
-
 ### <a name="a-namemt2004mt2004-extra-linker-definitions-file--could-not-be-located"></a><a name="MT2004"/>Fichier de définitions de l’éditeur de liens supplémentaires MT2004 ' *' n’a pas été trouvé.
 
-
-
 ### <a name="a-namemt2005mt2005-definitions-from--could-not-be-parsed"></a><a name="MT2005"/>MT2005 des définitions à partir de ' *' a pas pu être analysé.
-
-
 
 ### <a name="a-namemt2006mt2006-can-not-load-mscorlibdll-from--please-reinstall-xamarinios"></a><a name="MT2006"/>MT2006 : Ne peut pas charger de mscorlib.dll à partir de : *. Réinstallez Xamarin.iOS.
 
@@ -1168,9 +1149,17 @@ Un événement inattendu s’est produite lors de la tentative réduire les mét
 
 Un événement inattendu s’est produite lors de la tentative de marquer `NSObject` sous-classes à partir de l’application. L’assembly à l’origine du problème est nommé dans le message d’erreur. Pour résoudre ce problème à l’assembly sera doivent être fournies dans un [des bogues, rapport](http://bugzilla.xamarin.com) ainsi que d’un journal de génération complète avec commentaires activée (c'est-à-dire `-v -v -v -v` dans les **les arguments supplémentaires mtouch**).
 
+### <a name="a-namemt2090mt2090-inliner-failed-processing-"></a><a name="MT2090"/>MT2090 : Échec du traitement du Incorporateur `...`.
+
+Un événement inattendu s’est produite lors de la tentative de code inline à partir de l’application. L’assembly à l’origine du problème est nommé dans le message d’erreur. Pour résoudre ce problème à l’assembly sera doivent être fournies dans un [des bogues, rapport](https://bugzilla.xamarin.com) ainsi que d’un journal de génération complète avec commentaires activée (c'est-à-dire `-v -v -v -v` dans le **mtouch supplémentaires arguments**).
+
 <!-- MT21xx: more linker errors -->
 
 <!--- 2100 used by mmp -->
+
+### <a name="a-namemt2100mt2100-smart-enum-conversion-preserver-failed-processing-"></a><a name="MT2100"/>MT2100 : Échec du traitement du Smart préserver de l’Enum Conversion `...`.
+
+Un événement inattendu s’est produite lors de la tentative de marquer les méthodes de conversion pour les enums actives à partir de l’application. L’assembly à l’origine du problème est nommé dans le message d’erreur. Pour résoudre ce problème à l’assembly sera doivent être fournies dans un [des bogues, rapport](https://bugzilla.xamarin.com) ainsi que d’un journal de génération complète avec commentaires activée (c'est-à-dire `-v -v -v -v` dans le **mtouch supplémentaires arguments**).
 
 ### <a name="a-namemt2101mt2101-cant-resolve-the-reference--referenced-from-the-method--in-"></a><a name="MT2101"/>MT2101 : Impossible de résoudre la référence '\*', référencé à partir de la méthode'\*' dans ' *'.
 
@@ -1183,6 +1172,18 @@ L’assembly à l’origine du problème est nommé dans le message d’erreur. 
 Un événement inattendu s’est produite lors de la tentative de marquer la méthode indiquée dans le message d’erreur.
 
 L’assembly à l’origine du problème est nommé dans le message d’erreur. Pour résoudre ce problème à l’assembly sera doivent être fournies dans un [des bogues, rapport](https://bugzilla.xamarin.com) ainsi que d’un journal de génération complète avec commentaires activée (c'est-à-dire `-v -v -v -v` dans les **les arguments supplémentaires mtouch**).
+
+### <a name="a-namemt2103mt2103-error-processing-assembly--"></a><a name="MT2103"/>MT2103 : Erreur lors du traitement assembly '\*' : *
+
+Une erreur inattendue s’est produite lors du traitement d’un assembly.
+
+L’assembly à l’origine du problème est nommé dans le message d’erreur. Pour résoudre ce problème à l’assembly sera doivent être fournies dans un [des bogues, rapport](https://bugzilla.xamarin.com) ainsi que d’un journal de génération complète avec commentaires activée (c'est-à-dire `-v -v -v -v` dans le **mtouch supplémentaires arguments**).
+
+### <a name="a-namemt2104mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a><a name="MT2104"/>MM2104 : Impossible de lier l’assembly '{0}', car il est en mode mixte.
+
+Les assemblys en mode mixte ne peuvent pas être traités par l’éditeur de liens.
+
+Consultez https://msdn.microsoft.com/en-us/library/x0w2664k.aspx pour plus d’informations sur les assemblys en mode mixte.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx : Messages d’erreur AOA
 
@@ -1201,15 +1202,11 @@ Il est parfois possible de contourner ce problème en désactivant les générat
 
 Ce message d’erreur provient le compilateur AOA.
 
-
-
 ### <a name="a-namemt3003mt3003-conflicting---debug-and---llvm-options-soft-debugging-is-disabled"></a><a name="MT3003"/>MT3003 En conflit--llvm--options et débogage. Soft-débogage est désactivé.
 
 Le débogage n’est pas pris en charge lorsque LLVM est activé. Si vous avez besoin déboguer l’application, désactivez d’abord LLVM.
 
 ### <a name="a-namemt3004mt3004-could-not-aot-the-assembly--because-it-doesnt-exist"></a><a name="MT3004"/>Impossible de MT3004 pas AOA l’assembly ' *', car il n’existe pas.
-
-
 
 ### <a name="a-namemt3005mt3005-the-dependency--of-the-assembly--was-not-found-please-review-the-projects-references"></a><a name="MT3005"/>MT3005 La dépendance '\*'de l’assembly'\*' n’a été trouvé. Passez en revue les références du projet.
 
@@ -1305,39 +1302,21 @@ Il s’agit toujours d’un bogue dans Xamarin.iOS ; Veuillez archiver un rappo
 
 ### <a name="a-namemt4110mt4110-the-registrar-cannot-marshal-the-out-parameter-of-type--in-signature-for-method-"></a><a name="MT4110"/>MT4110 Le bureau d’enregistrement ne peut pas marshaler le paramètre out de type `*` dans la signature de méthode `*`.
 
-
-
 ### <a name="a-namemt4111mt4111-the-registrar-cannot-build-a-signature-for-type--in-method-"></a><a name="MT4111"/>MT4111 Le bureau d’enregistrement ne peut pas générer une signature pour le type `*` dans la méthode `*`.
-
-
 
 ### <a name="a-namemt4112mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvancedtopicsregistrarhttpsdeveloperxamarincomguidesiosadvancedtopicsregistrar-for-more-information"></a><a name="MT4112"/>MT4112 Bureau d’enregistrement de trouver un type non valide `*`. L’inscription des types génériques avec Objective-C n’est pas prise en charge et peut entraîner un comportement aléatoire et/ou des pannes (pour descendante compatibilité avec les versions antérieures de Xamarin.iOS il est possible d’ignorer cette erreur en passant `--unsupported--enable-generics-in-registrar` comme un mtouch supplémentaire argument dans la page d’options Build du projet iOS. Consultez [developer.xamarin.com/guides/ios/advanced_topics/registrar](https://developer.xamarin.com/guides/ios/advanced_topics/registrar) pour plus d’informations).
 
-
-
 ### <a name="a-namemt4113mt4113-the-registrar-found-a-generic-method--exporting-generic-methods-is-not-supported-and-will-lead-to-random-behavior-andor-crashes"></a><a name="MT4113"/>MT4113 Bureau d’enregistrement de trouver une méthode générique : '\*.\*'. Exportation des méthodes génériques n’est pas prise en charge et entraîne un comportement aléatoire et/ou de pannes.
-
-
 
 ### <a name="a-namemt4114mt4114-unexpected-error-in-the-registrar-for-the-method----please-file-a-bug-report-at-httpbugzillaxamarincom"></a><a name="MT4114"/>Une erreur inattendue de MT4114 dans le bureau d’enregistrement pour la méthode '\*.\*'-Veuillez archiver un rapport de bogue à http://bugzilla.xamarin.com
 
-
-
 ### <a name="a-namemt4116mt4116-could-not-register-the-assembly--"></a><a name="MT4116"/>Impossible de MT4116 pas inscrire l’assembly ' *': *
-
-
 
 ### <a name="a-namemt4117mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a><a name="MT4117"/>MT4117 Le bureau d’enregistrement a trouvé une non-correspondance de signature dans la méthode '*.*»-le sélecteur indique que la méthode prend * paramètres, alors que la méthode managée a * paramètres.
 
-
-
 ### <a name="a-namemt4118mt4118-cannot-register-two-managed-types--and--with-the-same-native-name-"></a><a name="MT4118"/>MT4118 ne peut pas inscrire deux types managés ('\*'et'\*') avec le même nom natif ('* ').
 
-
-
 ### <a name="a-namemt4119mt4119-could-not-register-the-selector--of-the-member--because-the-selector-is-already-registered-on-a-different-member"></a><a name="MT4119"/>MT4119 peut pas inscrire le sélecteur '\*'du membre'\*. *', car le sélecteur est déjà enregistré sur un autre membre.
-
-
 
 ### <a name="a-namemt4120mt4120-the-registrar-found-an-unknown-field-type--in-field--please-file-a-bug-report-at-httpbugzillaxamarincom"></a><a name="MT4120"/>MT4120 Bureau d’enregistrement de trouver un type de champ inconnu '\*« dans le champ'\*. *'. Veuillez soumettre un rapport de bogue à http://bugzilla.xamarin.com
 
@@ -1345,15 +1324,9 @@ Cette erreur indique un bogue dans Xamarin.iOS. Veuillez archiver un rapport de 
 
 ### <a name="a-namemt4121mt4121-cannot-use-gccg-to-compile-the-generated-code-from-the-static-registrar-when-using-the-accounts-framework-the-header-files-provided-by-apple-used-during-the-compilation-require-clang-either-use-clang---compilerclang-or-the-dynamic-registrar---registrardynamic"></a><a name="MT4121"/>MT4121 ne peut pas utiliser GCC / G ++ pour compiler le code généré à partir du bureau d’enregistrement statique lors de l’utilisation de l’infrastructure de comptes (les fichiers d’en-tête fournies par Apple utilisé lors de la compilation requièrent Clang). Utilisez l’option Clang (--du compilateur : clang) ou le bureau d’enregistrement dynamique (--bureau d’enregistrement : dynamique).
 
-
-
 ### <a name="a-namemt4122mt4122-cannot-use-the-clang-compiler-provided-in-the--sdk-to-compile-the-generated-code-from-the-static-registrar-when-non-ascii-type-names--are-present-in-the-application-either-use-gccg---compilergccg-the-dynamic-registrar---registrardynamic-or-a-newer-sdk"></a><a name="MT4122"/>MT4122 ne peut pas utiliser le compilateur Clang fourni dans le *.* Kit de développement logiciel pour compiler le code généré à partir du bureau d’enregistrement statique lors de la non-ASCII les noms de type ('* ') sont présents dans l’application. Utilisez l’option GCC / G ++ (--du compilateur : gcc | g ++), le bureau d’enregistrement dynamique (--bureau d’enregistrement : dynamiques) ou d’un kit de développement logiciel plus récent.
 
-
-
 ### <a name="a-namemt4123mt4123-the-type-of-the-variadic-parameter-in-the-variadic-function--must-be-systemintptr"></a><a name="MT4123"/>MT4123 Le type du paramètre variadique dans la fonction variadique ' *' doit être System.IntPtr.
-
-
 
 ### <a name="a-namemt4124mt4124-invalid--found-on--please-file-a-bug-report-at-httpbugzillaxamarincom"></a><a name="MT4124"/>MT4124 non valide * trouvé sur ' *'. Veuillez soumettre un rapport de bogue à http://bugzilla.xamarin.com
 
@@ -1361,15 +1334,9 @@ Cette erreur indique un bogue dans Xamarin.iOS. Veuillez archiver un rapport de 
 
 ### <a name="a-namemt4125mt4125-the-registrar-found-an-invalid-type--in-signature-for-method--the-interface-must-have-a-protocol-attribute-specifying-its-wrapper-type"></a><a name="MT4125"/>MT4125 Bureau d’enregistrement de trouver un type non valide '\*« dans la signature de méthode'\*' : l’interface doit posséder un attribut de protocole en spécifiant son type de wrapper.
 
-
-
 ### <a name="a-namemt4126mt4126-cannot-register-two-managed-protocols--and--with-the-same-native-name-"></a><a name="MT4126"/>MT4126 ne peut pas inscrire deux protocoles managés ('\*'et'\*') avec le même nom natif ('* ').
 
-
-
 ### <a name="a-namemt4127mt4127-cannot-register-more-than-one-interface-method-for-the-method--which-is-implementing-"></a><a name="MT4127"/>MT4127 ne peut pas inscrire plus d’une méthode d’interface pour la méthode '\*» (qui implémente '\*').
-
-
 
 ### <a name="a-namemt4128mt4128--the-registrar-found-an-invalid-generic-parameter-type--in-the-method--the-generic-parameter-must-have-an-nsobject-constraint"></a><a name="MT4128"/>MT4128 Bureau d’enregistrement de trouver un type de paramètre générique non valide '\*« dans la méthode'\*'. Le paramètre générique doit avoir une contrainte de 'NSObject'.
 
@@ -1506,6 +1473,30 @@ Le nom de Objective-C pour le type en question n’est pas un identificateur val
 
 Veuillez utiliser un identificateur valide de Objective-C.
 
+### <a name="a-namemt4169mt4169-failed-to-generate-a-pinvoke-wrapper-for-method-message"></a><a name="MT4169"/>MT4169 : Impossible de générer un wrapper de P/Invoke de {méthode} : {message}
+
+Échec de Xamarin.iOS générer une fonction wrapper de P/Invoke pour indiquée.
+Vérifiez le message d’erreur signalée pour la cause sous-jacente.
+
+### <a name="a-namemt4170mt4170-the-registrar-cant-convert-from-managed-type-to-native-type-for-the-return-value-in-the-method-method"></a><a name="MT4170"/>MT4170 : Le bureau d’enregistrement ne peut pas convertir à partir de '{'type managé} '{type natif}' pour la valeur de retour dans la méthode {méthode}.
+
+Consultez la description de l’erreur <a href="#MT4172">MT4172</a>.
+
+### <a name="a-namemt4171mt4171-the-bindas-attribute-on-the-member-member-is-invalid-the-bindas-type-type-is-different-from-the-property-type-type"></a><a name="MT4171"/>MT4171 : L’attribut BindAs sur le membre {membre} n’est pas valide : le type de BindAs {type} est différent du type de propriété {type}.
+
+Assurez-vous que le type dans l’attribut BindAs correspond au type du membre, qu'il est attaché.
+
+### <a name="a-namemt4172mt4172-the-registrar-cant-convert-from-native-type-to-managed-type-for-the-parameter-parameter-name-in-the-method-method"></a><a name="MT4172"/>MT4172 : Le bureau d’enregistrement ne peut pas convertir à partir de '{type natif}' '{type}' managé pour le paramètre '{parameter name}' dans la méthode {méthode}.
+
+Le bureau d’enregistrement ne prend pas en charge la conversion entre les types mentionnés.
+
+Cela constitue un bogue dans Xamarin.iOS si l’API en question est fourni par Xamarin.iOS ; Veuillez entrer un bogue sur [http://bugzilla.xamarin.com][1].
+
+Si vous rencontrez ce lors du développement d’un projet de liaison pour une bibliothèque native, nous sommes ouverts permettant de prévoir la prise en charge de nouvelles combinaisons de types. Si c’est le cas, veuillez soumettre une demande d’amélioration ([http://bugzilla.xamarin.com][2]) avec un test de cas et nous allons évaluer.
+
+[1]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS
+[2]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS&component=General&bug_severity=enhancement
+
 ## <a name="mt5xxx-gcc-and-toolchain-error-messages"></a>MT5xxx : Messages d’erreur GCC et la chaîne d’outils
 
 ### <a name="mt51xx-compilation"></a>MT51xx : Compilation
@@ -1517,15 +1508,9 @@ Veuillez utiliser un identificateur valide de Objective-C.
 
 ### <a name="a-namemt5101mt5101-missing--compiler-please-install-xcode-command-line-tools-component"></a><a name="MT5101"/>MT5101 manquant ' *' compilateur. Installez Xcode composant « Outils de ligne de commande »
 
-
-
 ### <a name="a-namemt5102mt5102-failed-to-assemble-the-file--please-file-a-bug-report-at-httpbugzillaxamarincom"></a><a name="MT5102"/>Échec de MT5102 pour assembler le fichier ' *'. Veuillez soumettre un rapport de bogue à http://bugzilla.xamarin.com
 
-
-
 ### <a name="a-namemt5103mt5103-failed-to-compile-the-file--please-file-a-bug-report-at-httpbugzillaxamarincom"></a><a name="MT5103"/>MT5103 n’a pas pu compiler le fichier ' *'. Veuillez soumettre un rapport de bogue à http://bugzilla.xamarin.com
-
-
 
 ### <a name="a-namemt5104mt5104-could-not-find-neither-the--nor-the--compiler-please-install-xcode-command-line-tools-component"></a><a name="MT5104"/>MT5104 trouvé ni la «\*'et'\*' compilateur. Installez Xcode composant « Outils de ligne de commande »
 
@@ -1572,8 +1557,6 @@ Cela se produit lorsque l’éditeur de liens natif ne peut pas rechercher un sy
 
   - Si vous ne pouvez pas modifier la liaison de l’application tierce ou si vous attachez manuellement avec une bibliothèque tierce, vous pouvez définir l’indicateur équivalent en passant <code>-cxx</code> à mtouch (cela en modifiant les arguments mtouch supplémentaires dans la page d’options Build du projet iOS . N’oubliez pas que cela doit être effectuée pour chaque configuration de projet).
 
-
-
 ### <a name="a-namemt5211mt5211-native-linking-failed-undefined-objective-c-class--the-symbol--could-not-be-found-in-any-of-the-libraries-or-frameworks-linked-with-your-application"></a><a name="MT5211"/>MT5211 : Liaison natif a échoué, classe Objective-C non définie : \*. Le symbole '\*' est introuvable dans les bibliothèques ou les infrastructures liés à votre application.
 
 Cela se produit lorsque l’éditeur de liens natif ne peut pas trouver une classe Objective-C qui est référencée ailleurs. Il existe plusieurs raisons, cela peut se produire : les mêmes que pour [MT5210](#MT5210) et, en outre :
@@ -1587,12 +1570,9 @@ Cela se produit lorsque l’éditeur de liens natif ne peut pas trouver une clas
               {
               }
 
-
-
 ### <a name="a-namemt5212mt5212-native-linking-failed-duplicate-symbol-"></a><a name="MT5212"/>MT5212 : Liaison natif a échoué, symbole dupliqué : *.
 
 Cela se produit lorsque l’éditeur de liens natif rencontre des symboles dupliqués entre toutes les bibliothèques natives. Ce message d’erreur Il peut y avoir un ou plusieurs [MT5213](#MT5213) erreurs avec l’emplacement pour chaque occurrence du symbole. Raisons possibles de cette erreur :
-
 
 * La même bibliothèque native est incluse deux fois.
 * Deux des bibliothèques natives distinctes se produisent pour définir les mêmes symboles.
@@ -1616,7 +1596,6 @@ Cela se produit lorsque l’éditeur de liens natif rencontre des symboles dupli
   - Demande que le fournisseur de la bibliothèque native Corrigez-le et fournit la version mise à jour.
   - Résoudre vous-même en supprimant les fichiers d’objet supplémentaire (fonctionne uniquement si le problème est en fait des fichiers objets en double)
 
-
             # Find out if the library is a fat library, and which
             # architectures it contains.
             lipo -info libNative.a
@@ -1638,7 +1617,6 @@ Cela se produit lorsque l’éditeur de liens natif rencontre des symboles dupli
             # Reassemble the fat library
             lipo *.a -create -output libNative.a
 
-
   - Demandez à l’éditeur de liens à supprimer du code non utilisé. Xamarin.iOS fera automatiquement si toutes les conditions suivantes sont remplies :
     - Toutes les liaisons des tiers `[LinkWith]` attributs ont activé SmartLink :
 
@@ -1646,7 +1624,6 @@ Cela se produit lorsque l’éditeur de liens natif rencontre des symboles dupli
 
     - Ne `-gcc_flags` est passé à mtouch (dans le champ d’arguments supplémentaires mtouch d’e/s du projet options de Build).
     - Il est également possible de demander à l’éditeur de liens directement à supprimer du code non utilisé en ajoutant `-gcc_flags -dead_strip` options de génération pour les arguments supplémentaires mtouch dans les e/s du projet.
-
 
 ### <a name="a-namemt5213mt5213-duplicate-symbol-in--location-related-to-previous-error"></a><a name="MT5213"/>MT5213 : Dupliquer le symbole dans : * (emplacement liés à l’erreur précédente)
 
@@ -1723,11 +1700,7 @@ Il existe deux raisons à cela :
 
 ### <a name="a-namemt5301mt5301-missing-strip-tool-please-install-xcode-command-line-tools-component"></a><a name="MT5301"/>MT5301 : Manquant 'supprimer' un outil. Installez Xcode composant « Outils de ligne de commande »
 
-
-
 ### <a name="a-namemt5302mt5302-missing-dsymutil-tool-please-install-xcode-command-line-tools-component"></a><a name="MT5302"/>MT5302 : Outil de 'dsymutil' manquant. Installez Xcode composant « Outils de ligne de commande »
-
-
 
 ### <a name="a-namemt5303mt5303-failed-to-generate-the-debug-symbols-dsym-directory-please-review-the-build-log"></a><a name="MT5303"/>MT5303 : Impossible de générer les symboles de débogage (répertoire dSYM). Passez en revue le journal de génération.
 
@@ -1738,8 +1711,6 @@ Une erreur s’est produite lors de l’exécution dsymutil sur le répertoire f
 Une erreur s’est produite lors de l’exécution de l’outil de « bande » pour supprimer les informations de débogage de l’application.
 
 ### <a name="a-namemt5305mt5305-missing-lipo-tool-please-install-xcode-command-line-tools-component"></a><a name="MT5305"/>MT5305 : Outil de 'lipo' manquant. Installez Xcode composant « Outils de ligne de commande »
-
-
 
 ### <a name="a-namemt5306mt5306-failed-to-create-the-a-fat-library-please-review-the-build-log"></a><a name="MT5306"/>MT5306 : Impossible de créer l’une bibliothèque fat. Passez en revue le journal de génération.
 
@@ -2064,7 +2035,6 @@ Où * peut être :
 
 *Tâche MSBuild : PropertyListEditorTaskBase*
 
-
 ## <a name="mt8xxx-runtime-error-messages"></a>MT8xxx : Messages d’erreur d’exécution
 
 <!--
@@ -2157,5 +2127,9 @@ Cela indique un bogue dans Xamarin.iOS. Veuillez entrer un bogue sur [http://bug
 Cela indique un bogue dans Xamarin.iOS. Veuillez entrer un bogue sur [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 
 ### <a name="a-namemt8023mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a><a name="MT8023"/>MT8023 : Un objet d’instance est requis pour construire une méthode générique fermée de la méthode générique ouverte : * (référence de jeton : *). Veuillez archiver un rapport de bogue à http://bugzilla.xamarin.com.
+
+Cela indique un bogue dans Xamarin.iOS. Veuillez entrer un bogue sur [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+
+### <a name="a-namemt8024mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smarttype-please-file-a-bug-at-httpsbugzillaxamarincom"></a><a name="MT8024"/>MT8024 : Impossible de trouver un type d’extension valide pour l’enum Active '{smart_type}'. Veuillez entrer un bogue à https://bugzilla.xamarin.com.
 
 Cela indique un bogue dans Xamarin.iOS. Veuillez entrer un bogue sur [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).

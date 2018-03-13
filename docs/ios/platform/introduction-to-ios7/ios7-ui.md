@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 6df47bd54611feedd0d355a976a055d62f37afeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 présentation de l’Interface utilisateur
 
@@ -146,7 +146,7 @@ Lorsque vous préparez votre application pour iOS 7, vous pouvez réalignez sous
 
  `TopLayoutGuide` et `BottomLayoutGuide` servir de référence pour les où doit commencer ou se terminer, afin que le contenu n’est pas chevauché par un translucide `UIKit` barre, comme dans l’exemple suivant :
 
- [ ![](ios7-ui-images/clipped.png "Exemple de contenu ne chevauché ne pas par une barre UIKit translucide")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "Exemple de contenu ne chevauché ne pas par une barre UIKit translucide")](ios7-ui-images/clipped.png#lightbox)
 
 Ces API peut être utilisé pour calculer le déplacement d’une vue du haut ou le bas de l’écran et ajuster en conséquence de positionnement du contenu :
 
@@ -166,7 +166,7 @@ public override void ViewDidLayoutSubviews ()
 
 Nous pouvons utiliser la valeur calculée ci-dessus pour définir notre `ImageView`de déplacement à partir du haut de l’écran, par conséquent, l’ensemble de l’image est visible :
 
- [ ![](ios7-ui-images/good2.png "Déplacement de ImageViews exemple à partir du haut de l’écran")](ios7-ui-images/good2.png)
+ [![](ios7-ui-images/good2.png "Déplacement de ImageViews exemple à partir du haut de l’écran")](ios7-ui-images/good2.png#lightbox)
 
 Reportez-vous à la [afficheur d’images](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) pour obtenir un exemple fonctionnel.
 
@@ -179,15 +179,15 @@ La valeur de déplacement est générée dynamiquement une fois que la vue a ét
 
 Cette API indique quels bords d’une vue doivent être étendus en plein écran, indépendamment de la transparence de la barre. Dans iOS 7, les barres d’outils et les barres de navigation apparaissent disposés en vue du contrôleur - Contrairement à dans iOS précédentes versions, où ils n’occupent le même espace. L’application de Photos iOS 7 illustre la valeur par défaut `UIViewController.EdgesForExtendedLayout` valeur, `UIRectEdge.All`. Ce paramètre remplit les quatre bords dans la vue de contenu, de création de l’effet qui se chevauchent et plein écran :
 
- [ ![](ios7-ui-images/photos.png "Exemple EdgesForExtendedLayout")](ios7-ui-images/photos.png)
+ [![](ios7-ui-images/photos.png "Exemple EdgesForExtendedLayout")](ios7-ui-images/photos.png#lightbox)
 
 Si vous appuyez sur l’image supprime les barres et montre l’image plein écran :
 
- [ ![](ios7-ui-images/photos2.png "EdgesForExtendedLayout avec les barres supprimé")](ios7-ui-images/photos2.png)
+ [![](ios7-ui-images/photos2.png "EdgesForExtendedLayout avec les barres supprimé")](ios7-ui-images/photos2.png#lightbox)
 
 Contenu de plein écran est la valeur par défaut, les applications configurées pour iOS 6 aura donc partie de la vue détourée, comme dans la capture d’écran ci-dessous :
 
- [ ![](ios7-ui-images/clipped.png "Applications configurées pour iOS 6 aura une partie de la vue détourée, comme dans cette capture d’écran")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "Applications configurées pour iOS 6 aura une partie de la vue détourée, comme dans cette capture d’écran")](ios7-ui-images/clipped.png#lightbox)
 
 Modification de la `UIViewController.EdgesForExtendedLayout` propriété ajuste pour ce comportement. Nous pouvons spécifier que la vue ne remplisse pas les bords, notre vue sera ainsi éviter d’affichage du contenu dans l’espace occupé par la navigation ou les barres d’outils (à chaque orientation) :
 
@@ -199,7 +199,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
 Dans notre application, nous verrons que la vue est repositionnée à nouveau, l’ensemble de l’image est visible :
 
- [ ![](ios7-ui-images/good.png "Exemple avec l’ensemble de l’image visible")](ios7-ui-images/good.png)
+ [![](ios7-ui-images/good.png "Exemple avec l’ensemble de l’image visible")](ios7-ui-images/good.png#lightbox)
 
 Notez que pendant les effets de la `TopLayoutGuide/BottomLayoutGuide` et `EdgesForExtendedLayout` API est similaires, ils sont conçus pour remplir des objectifs différents. Modification de la `EdgesForExtendedLayout` paramètre à partir de la valeur par défaut peut résoudre les vues découpées dans les applications conçues pour iOS 6, mais une conception bon iOS 7 doit respecter l’esthétique plein écran et fournir l’expérience d’affichage, la partie de confiance sur le plein écran `TopLayoutGuide` et `BottomLayoutGuide`pour positionner correctement le contenu qui est destiné à être manipulé dans un endroit à l’aise pour l’utilisateur.
 

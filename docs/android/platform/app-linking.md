@@ -3,16 +3,16 @@ title: La liaison App dans Android
 description: "Ce guide explique comment Android 6.0 prend en charge la liaison application, une technique qui permet de répondre aux URL sur les sites Web des applications mobiles. Il explique quelles applications liaison est l’implémentation de la liaison application dans une application Android 6.0 et comment configurer un site Web pour accorder des autorisations à l’application mobile pour un domaine."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
+ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 726890e48407dd26f52c5aeaecf4eab51dcc5182
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-linking-in-android"></a>La liaison App dans Android
 
@@ -84,7 +84,7 @@ Android vérifie chaque hôte qui est identifié par les filtres intentionnels p
 Android 6.0 application la liaison requiert que Android vérifier l’association entre l’application et le site Web avant de définir l’application en tant que gestionnaire par défaut pour l’URI. Cette vérification se produit lors de la première installation de l’application. Le *des liens actifs numériques* fichier est un fichier JSON qui est hébergé par le webdomain(s) pertinentes.
 
 > [!NOTE]
-> **Remarque :** le `android:autoVerify` attribut doit être défini par le filtre intention &ndash; sinon Android n’effectuera pas la vérification.
+> Le `android:autoVerify` attribut doit être défini par le filtre intention &ndash; sinon Android n’effectuera pas la vérification.
 
 Le fichier est placé par l’administrateur du domaine à l’emplacement **https://domain/.well-known/assetlinks.json**.
 

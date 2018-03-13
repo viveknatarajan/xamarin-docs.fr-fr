@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3b54ed876857f0cd04d7a304ff05b9710fbd9e04
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6735e9c03bee981f048231b53539c3b239f64484
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="string-formatting"></a>Chaîne mise en forme
 
@@ -121,7 +121,7 @@ Les jeux de section dernière le `BindingContext` à la valeur de `Math.PI` et l
 
 Voici le programme en cours d’exécution sur les trois plateformes :
 
-[![Mise en forme de chaîne](string-formatting-images/stringformatting-small.png "mise en forme de chaîne")](string-formatting-images/stringformatting-large.png "mise en forme de chaîne")
+[![Mise en forme de chaîne](string-formatting-images/stringformatting-small.png "mise en forme de chaîne")](string-formatting-images/stringformatting-large.png#lightbox "mise en forme de chaîne")
 
 ## <a name="viewmodels-and-string-formatting"></a>ViewModel et mise en forme de chaîne
 
@@ -174,7 +174,7 @@ Cette approche est illustrée dans le **mieux sélecteur de couleurs** exemple q
 
 Il existe désormais trois paires de `Slider` et `Label` éléments qui sont liés à la même propriété dans la source du `HslColorViewModel` objet. La seule différence est que `Label` a un `StringFormat` à afficher chaque propriété `Slider` valeur.
 
-[![Sélecteur de couleurs mieux](string-formatting-images/bettercolorselector-small.png "mieux sélecteur de couleurs")](string-formatting-images/bettercolorselector-large.png "mieux sélecteur de couleurs")
+[![Sélecteur de couleurs mieux](string-formatting-images/bettercolorselector-small.png "mieux sélecteur de couleurs")](string-formatting-images/bettercolorselector-large.png#lightbox "mieux sélecteur de couleurs")
 
 Vous vous demandez peut-être comment vous pouvez afficher les valeurs RVB (rouges, verts, bleus) au format de hexadécimal à deux chiffres traditionnel. Ces valeurs entières ne sont pas directement disponibles à partir de la `Color` structure. Une solution consisterait à calculer les valeurs entières des composantes de couleur dans le modèle de vues et de les exposer en tant que propriétés. Vous pouvez ensuite les mettre en forme à l’aide de la `X2` spécification de mise en forme.
 

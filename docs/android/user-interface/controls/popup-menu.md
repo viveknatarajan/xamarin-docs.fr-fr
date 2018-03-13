@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 54b6809b7e27dc87be6d510e4a4b6071e4ae22e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f976d798ae1b1279fc8f82d3cf1d738bb2c93911
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="popup-menu"></a>Menu contextuel
 
 La `PopupMenu` classe ajoute la prise en charge pour l’affichage des menus contextuels qui sont attachés à une vue particulière. L’illustration suivante montre un menu contextuel présenté à partir d’un bouton, le deuxième élément mis en surbrillance uniquement lorsqu’elle est sélectionnée :
 
- [ ![Exemple d’un PopopMenu avec trois trois éléments](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png)
+ [![Exemple d’un PopopMenu avec trois trois éléments](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
 
 Android 4 ajouté deux nouvelles fonctionnalités à `PopupMenu` qui rendent un peu plus facile à manipuler, à savoir :
 
@@ -26,9 +26,8 @@ Android 4 ajouté deux nouvelles fonctionnalités à `PopupMenu` qui rendent un 
 
 Examinons ces améliorations. Dans cet exemple, nous avons une activité unique qui contient un bouton. Lorsque l’utilisateur clique sur le bouton, un menu contextuel s’affiche comme indiqué ci-dessous :
 
- [ ![Exemple d’application en cours d’exécution dans un émulateur avec le bouton et menu contextuel d’élément de 3](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png)
+ [![Exemple d’application en cours d’exécution dans un émulateur avec le bouton et menu contextuel d’élément de 3](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
 
-<a name="Creating_a_Popup_Menu" />
 
 ## <a name="creating-a-popup-menu"></a>Création d’un Menu contextuel
 
@@ -62,7 +61,6 @@ showPopupMenu.Click += (s, arg) => {
 
 Dans le code ci-dessus, après avoir gonfler le menu nous simplement appeler `menu.Show` pour l’afficher à l’écran.
 
-<a name="Handling_Menu_Events" />
 
 ## <a name="handling-menu-events"></a>La gestion des événements de Menu
 

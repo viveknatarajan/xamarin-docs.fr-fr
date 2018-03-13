@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 0bc039385a6b2077c3b5fa5114b35b586a14a150
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b75bc7e4ccf53e82ff107c867c5ba01813960ea5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-command-interface"></a>L’Interface de commande
 
@@ -279,7 +279,7 @@ Voici comment il fonctionne : l’utilisateur premier appuie le **nouveau** bou
 
 L’écran iOS situé à gauche montre la disposition avant un âge valid est entré. Afficher des écrans de l’Android et la plateforme Windows universelle la **Submit** bouton activé après une durée de vie a été définie :
 
-[![Entrée de la personne](commanding-images/personentry-small.png "personne entrée")](commanding-images/personentry-large.png "entrée à la personne")
+[![Entrée de la personne](commanding-images/personentry-small.png "personne entrée")](commanding-images/personentry-large.png#lightbox "entrée à la personne")
 
 Le programme n’a pas de toute installation pour modifier les entrées existantes et n’enregistre pas les entrées lorsque vous quittez la page.
 
@@ -531,7 +531,7 @@ Les 11 boutons pour les 10 chiffres et de la virgule décimale partagent la mêm
 
 Voici le programme en action :
 
-[![Clavier décimal](commanding-images/decimalkeyboard-small.png "clavier décimal")](commanding-images/decimalkeyboard-large.png "clavier décimal")
+[![Clavier décimal](commanding-images/decimalkeyboard-small.png "clavier décimal")](commanding-images/decimalkeyboard-large.png#lightbox "clavier décimal")
 
 Notez que le bouton de la virgule décimale dans toutes les captures d’écran de trois est désactivé, car le nombre entré contient déjà une virgule décimale. 
 

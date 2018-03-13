@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0846dc8bdb3ac722838faa4173f5d30233912ecc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86514dbd6b40e9d59ea9a598395cf6f0a3f4889a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publication sur l’App Store
 
@@ -32,7 +32,7 @@ Ce document explique comment utiliser Visual Studio pour Mac et Xcode pour défi
 
 Quand le développeur rejoint le [programme pour les développeurs Mac](https://developer.apple.com/devcenter/mac/), il a le choix entre le rejoindre comme individu ou comme société, comme indiqué dans la capture d’écran ci-dessous :
 
-[![Le portail des développeurs Apple](images/image1.png "Le portail des développeurs Apple")](images/image1-large.png)
+[![Le portail des développeurs Apple](images/image1.png "Le portail des développeurs Apple")](images/image1-large.png#lightbox)
 
 Choisissez le type d’inscription adapté à votre situation.
 
@@ -73,5 +73,5 @@ Ce guide présente en détail le chargement d’une application Xamarin.Mac en v
 ## <a name="related-links"></a>Liens associés
 
 - [Installation](/visualstudio/mac/installation/)
-- [Exemple Hello, Mac](~/mac/get-started/hello-mac.md)
+- [Exemple Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ID de développeur et GateKeeper](https://developer.apple.com/resources/developer-id/)

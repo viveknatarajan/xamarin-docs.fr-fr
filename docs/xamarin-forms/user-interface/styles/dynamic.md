@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 2088ae055fb18b3b00712f063d2178f759021088
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9710e322460058902d89ec1a57c374b93beb82fb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dynamic-styles"></a>Styles dynamiques
 
@@ -81,8 +81,8 @@ public partial class DynamicStylesPage : ContentPage
 
 Lorsque le `OnButtonClicked` Gestionnaire d’événements est exécuté, `searchBarStyle` basculent entre `blueSearchBarStyle` et `greenSearchBarStyle`. Cela provoque l’affichage indiqué dans les captures d’écran suivants :
 
-[![](dynamic-images/dynamic-style-blue.png "Bleu Dynamic Style exemple")](dynamic-images/dynamic-style-blue-large.png "bleu Dynamic Style exemple")
-[![](dynamic-images/dynamic-style-green.png "vert Dynamic Style exemple") ] (dynamic-images/dynamic-style-green-large.png "Vert Dynamic Style exemple")
+[![](dynamic-images/dynamic-style-blue.png "Bleu Dynamic Style exemple")](dynamic-images/dynamic-style-blue-large.png#lightbox "bleu Dynamic Style exemple")
+[![](dynamic-images/dynamic-style-green.png "vert Dynamic Style exemple") ] (dynamic-images/dynamic-style-green-large.png#lightbox "Vert Dynamic Style exemple")
 
 L’exemple de code suivant illustre la page équivalente dans c# :
 
@@ -162,8 +162,8 @@ Le [ `SearchBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBa
 
 Dans le fichier code-behind, le constructeur crée un [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) entrée avec la clé `searchBarStyle`, selon l’exemple précédent qui a démontré styles dynamiques. Lorsque le `OnButtonClicked` Gestionnaire d’événements est exécuté, `searchBarStyle` basculent entre `blueSearchBarStyle` et `greenSearchBarStyle`. Cela provoque l’affichage indiqué dans les captures d’écran suivants :
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "Exemple d’héritage de Style dynamiques de bleu")](dynamic-images/dynamic-style-inheritance-blue-large.png "bleu exemple d’héritage de Style dynamiques")
-[![](dynamic-images/dynamic-style-inheritance-green.png "vert Dynamic Style Exemple d’héritage")](dynamic-images/dynamic-style-inheritance-green-large.png "vert Style dynamique un exemple d’héritage")
+[![](dynamic-images/dynamic-style-inheritance-blue.png "Exemple d’héritage de Style dynamiques de bleu")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "bleu exemple d’héritage de Style dynamiques")
+[![](dynamic-images/dynamic-style-inheritance-green.png "vert Dynamic Style Exemple d’héritage")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "vert Style dynamique un exemple d’héritage")
 
 L’exemple de code suivant illustre la page équivalente dans c# :
 

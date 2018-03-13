@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4e640979305a568649c59f6c75033296153b99de
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 838a11f078d735759eda1d45a082ccbad51e2779
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-ios"></a>Touch dans iOS
 
@@ -23,7 +23,7 @@ Contrôles de `UIKit` – ces sous-classé à partir du contrôle – dépendent
 
 Toutefois, un grand nombre des vues dans `UIKit` n’ont pas de touche activée par défaut. Il existe deux façons d’activer des fonctions tactiles sur un contrôle. La première consiste à vérifier la case à cocher activée d’Interaction utilisateur dans la zone de propriété du concepteur, iOS comme indiqué dans la capture d’écran suivante :
 
- [ ![](touch-in-ios-images/image1.png "Case à cocher activée d’Interaction utilisateur dans la zone de propriété du concepteur iOS")](touch-in-ios-images/image1.png)
+ [![](touch-in-ios-images/image1.png "Case à cocher activée d’Interaction utilisateur dans la zone de propriété du concepteur iOS")](touch-in-ios-images/image1.png#lightbox)
 
 Nous pouvons également utiliser un contrôleur pour définir le `UserInteractionEnabled` propriété la valeur true sur un `UIView` classe. Cela est nécessaire si l’interface utilisateur est créé dans le code.
 
@@ -81,7 +81,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 Tactiles n’est pas activé par défaut sur les contrôles. Tactiles peut être activée dans le concepteur, iOS, comme illustré par la capture d’écran suivante :
 
- [ ![](touch-in-ios-images/image2.png "Tactiles activée dans le concepteur iOS")](touch-in-ios-images/image2.png)
+ [![](touch-in-ios-images/image2.png "Tactiles activée dans le concepteur iOS")](touch-in-ios-images/image2.png#lightbox)
 
 Il est également possible de définir tactiles par programme en définissant le `MultipleTouchEnabled` propriété comme indiqué dans la ligne de code suivante :
 

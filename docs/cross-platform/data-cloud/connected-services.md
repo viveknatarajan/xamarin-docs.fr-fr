@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: cc2deb11d544bc4e933e690d6089eb001a186c79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c9ae8d65a2bfdd035cccb6b911448ea047f8c40
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="connected-services-walkthrough"></a>Procédure pas à pas de Services connectés
 
@@ -24,22 +24,22 @@ Cette procédure pas à pas montre comment ajouter un service Azure principal, q
 1.  Commencez par double-clic sur le **Services connectés** nœud dans la solution, qui s’affiche la **galerie Services**.
   Il s’agit d’une liste de tous les services disponibles pour ce type d’application. Sélectionnez un service (tel que **backend Mobile avec Azure App Service**) en cliquant dessus.
 
-  [ ![](connected-services-images/image001-sml.png "Connecté nœud Services dans Visual Studio pour Mac")](connected-services-images/image001.png)
+  [![](connected-services-images/image001-sml.png "Connecté nœud Services dans Visual Studio pour Mac")](connected-services-images/image001.png#lightbox)
 
 2. La Page Détails du Service comporte une description du service et les dépendances à installer.
   Cliquez sur le **ajouter** pour ajouter les dépendances à l’application :
 
-  [ ![](connected-services-images/image002-sml.png "Service principal mobile avec Azure")](connected-services-images/image002.png)
+  [![](connected-services-images/image002-sml.png "Service principal mobile avec Azure")](connected-services-images/image002.png#lightbox)
 
 3. Les dépendances doivent être ajoutés à la bibliothèque de classes portables et les projets spécifiques à une plateforme pour fonctionner.
   Sélectionnez les cases à cocher pour ajouter le service à chaque projet qui référence (directement ou indirectement) :
 
-  [ ![](connected-services-images/image003-sml.png "Vérifiez tous les projets qui doivent référencer le service")](connected-services-images/image003.png)
+  [![](connected-services-images/image003-sml.png "Vérifiez tous les projets qui doivent référencer le service")](connected-services-images/image003.png#lightbox)
 
 4. Choisissez **accepter** sur la **acceptation de licence** boîtes de dialogue pour les packages NuGet.
   Il peut y avoir deux boîtes de dialogue pour accepter un pour le Clientmobile et les dépendances et l’autre pour SQLiteStore, ce qui est nécessaire pour la synchronisation de données hors connexion :
 
-  [ ![](connected-services-images/image004-sml.png "Acceptez les contrats de licence")](connected-services-images/image004.png)
+  [![](connected-services-images/image004-sml.png "Acceptez les contrats de licence")](connected-services-images/image004.png#lightbox)
 
   ![](connected-services-images/image005.png "Fenêtre d’acceptation de licence")
 
@@ -48,7 +48,7 @@ Cette procédure pas à pas montre comment ajouter un service Azure principal, q
 
 6. Sélectionnez un service d’application dans la liste. Cela remplira le code du modèle pour le `MobileServiceClient` objet avec l’URL correspondante du service application sur Azure :
 
-  [ ![](connected-services-images/image006-sml.png "Sélectionnez le service d’applications à partir de la liste")](connected-services-images/image006.png)
+  [![](connected-services-images/image006-sml.png "Sélectionnez le service d’applications à partir de la liste")](connected-services-images/image006.png#lightbox)
 
   S’il n’y a aucun service répertorié, cliquez sur le **nouveau** bouton (voir l’étape 9.)
 
@@ -59,12 +59,12 @@ Cette procédure pas à pas montre comment ajouter un service Azure principal, q
 
 8. Suivre la documentation **étapes** pour ajouter des données, la synchronisation hors connexion, l’authentification et des notifications push à votre application :
 
-  [ ![](connected-services-images/image008-sml.png "Passez en revue les instructions de procédure suivantes")](connected-services-images/image008.png)
+  [![](connected-services-images/image008-sml.png "Passez en revue les instructions de procédure suivantes")](connected-services-images/image008.png#lightbox)
 
 10. Si vous n’avez pas tous les services d’application existant, vous pouvez créer de nouveaux services à partir de Visual Studio pour Mac.
   Cliquez sur le **nouveau** bouton dans la partie inférieure gauche de la liste des services pour ouvrir la **nouveau Service App** boîte de dialogue :
 
-  [ ![](connected-services-images/image009-sml.png "Créer un nouveau service d’application dans Visual Studio pour Mac")](connected-services-images/image009.png)
+  [![](connected-services-images/image009-sml.png "Créer un nouveau service d’application dans Visual Studio pour Mac")](connected-services-images/image009.png#lightbox)
 
 Un nouveau service requiert les paramètres suivants :
 

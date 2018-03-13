@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 9579acc6c070bf692b0db1bd444a31c9ea4aa7ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="architecture"></a>Architecture
 
@@ -22,15 +22,14 @@ Vous pouvez utiliser la [système](http://msdn.microsoft.com/en-us/library/syste
 
 Sur Android, la plupart des installations du système tels que Audio, des graphiques, OpenGL et téléphonie n’est pas accessible directement aux applications natives, ils ne sont plus exposés via les API de Java Runtime Android résidant dans un de le [Java](https://developer.xamarin.com/api/namespace/Java.Lang/). * espaces de noms ou le [Android](https://developer.xamarin.com/api/namespace/Android/). * espaces de noms. L’architecture est à peu près comme suit :
 
-[![Diagramme de Mono et de créations au-dessus du noyau et sous .NET/Java + liaisons](architecture-images/architecture1.png)](architecture-images/architecture1.png)
+[![Diagramme de Mono et de créations au-dessus du noyau et sous .NET/Java + liaisons](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Les développeurs de Xamarin.Android accéder les diverses fonctionnalités du système d’exploitation en appelant des API .NET qu’ils connaissent (pour l’accès de bas niveau) ou l’utilisation des classes exposées dans les espaces de noms Android qui fournit un pont à l’API Java qui sont exposées par le Runtime Android.
 
 Pour plus d’informations sur la façon dont les classes Android communiquent avec les classes d’exécution Android, consultez le [conception de l’API](~/android/internals/api-design.md) document.
 
-<a name="Application_Packages" />
 
-## <a name="application-packages"></a>Packages d’applications
+## <a name="application-packages"></a>Packages d’application
 
 Packages d’application Android sont des conteneurs ZIP avec un *.apk* extension de fichier. Les packages d’applications Xamarin.Android ont la même structure et la disposition en tant que les packages Android normales, avec les ajouts suivants :
 
@@ -44,7 +43,6 @@ Packages d’application Android sont des conteneurs ZIP avec un *.apk* extensio
 Contiennent également des applications de Xamarin.Android *Android Callable Wrappers* permettant d’Android pour l’appel de code managé.
 
 
-<a name="Android_Callable_Wrappers" />
 
 ## <a name="android-callable-wrappers"></a>Wrappers RCW Android
 
@@ -67,7 +65,6 @@ Références globales peuvent être libérées explicitement en appelant [Java.L
 Vous devez être prudent lors de la mettre à disposition gérés Callable Wrappers si l’instance peut être partagée par inadvertance entre les threads, comme la suppression de l’instance a un impact sur les références à partir de tous les autres threads. Pour une sécurité optimale, uniquement `Dispose()` d’instances qui ont été attribuées via `new` *ou* à partir des méthodes que vous pouvez *connaître* toujours allouer de nouvelles instances et les instances non mis en cache peuvent provoquer le partage entre les threads de l’instance accidentelle.
 
 
-<a name="Managed_Callable_Wrapper_Subclasses" />
 
 ## <a name="managed-callable-wrapper-subclasses"></a>Géré des sous-classes de Wrapper RCW
 
@@ -76,7 +73,6 @@ Les sous-classes de wrapper CCW managé sont où toute la logique spécifique à
 Comme gérés callable wrappers, gérés sous-classes du wrapper CCW contient également une référence globale, accessible via la [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propriété. Tout comme avec les wrappers CCW gérés références globales peuvent être libérées explicitement en appelant [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
 Contrairement aux wrappers CCW gérés *précaution* doit être prise avant la suppression d’instances de ce type, en tant que *Dispose()*effectue une opération de l’instance s’arrêtera le mappage entre l’instance Java (une instance d’un Android Callable Wrapper) et l’instance gérée.
 
-<a name="Java_Activation" />
 
 ### <a name="java-activation"></a>Activation de Java
 
@@ -182,7 +178,6 @@ I/mono-stdout( 2993): [Managed: Value=]
 Uniquement *Dispose()* de gérés sous-classes de wrapper RCW lorsque vous savez que l’objet Java ne sera pas plus utilisé, ou la sous-classe ne contient aucune donnée d’instance et un *(IntPtr, JniHandleOwnership)* constructeur a été fourni.
 
 
-<a name="Application_Startup" />
 
 ## <a name="application-startup"></a>Démarrage de l'application
 

@@ -4,14 +4,15 @@ description: "Matrice de l’utilisation des transformations pour implémenter e
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: b418e0179c95a424c88d5f5063a09f984bb13ec0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 16e9423c84e591e15a703b4d5bb204a8b642bb40
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="touch-manipulations"></a>Manipulations tactile
 
@@ -545,7 +546,7 @@ public partial class TouchManipulationPage : ContentPage
 
 Le `PaintSurface` gestionnaire se termine en affichant un `MatrixDisplay` objet en affichant la matrice tactile cumulée :
 
-[![](touch-images/touchmanipulation-small.png "Capture d’écran de triple de la page de Manipulation de Touch")](touch-images/touchmanipulation-large.png "Triple capture d’écran de la page de Manipulation de tactile")
+[![](touch-images/touchmanipulation-small.png "Capture d’écran de triple de la page de Manipulation de Touch")](touch-images/touchmanipulation-large.png#lightbox "Triple capture d’écran de la page de Manipulation de tactile")
 
 ## <a name="manipulating-multiple-bitmaps"></a>Manipuler plusieurs Bitmaps
 
@@ -684,7 +685,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 Le code parcourt la collection et affiche l’accumulation des images bitmap depuis le début de la collection à la fin :
 
-[![](touch-images/bitmapscatterview-small.png "Capture d’écran de triple de la page de vue à nuages de points de Bitmap")](touch-images/bitmapscatterview-large.png "Triple capture d’écran de la page de vue de Bitmap à nuages de points")
+[![](touch-images/bitmapscatterview-small.png "Capture d’écran de triple de la page de vue à nuages de points de Bitmap")](touch-images/bitmapscatterview-large.png#lightbox "Triple capture d’écran de la page de vue de Bitmap à nuages de points")
 
 
 ## <a name="related-links"></a>Liens associés

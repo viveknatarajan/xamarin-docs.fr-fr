@@ -3,14 +3,15 @@ title: "Résumé du chapitre 6. Clics de bouton"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 44dbb4d2cdc573e721bb772fdd05d392c90b746a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 972d0d76fd55981ebca70acce69533d98c3fc0b5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Résumé du chapitre 6. Clics de bouton
 
@@ -52,7 +53,7 @@ Plusieurs `Button` objets peuvent également être distinguées en définissant 
 
 Le [ **SimplestKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) exemple utilise le même gestionnaire d’événements pour toutes les clés de nombre 10 sur un pavé numérique et fait la distinction entre eux avec le `StyleId` propriété :
 
-[![Capture d’écran de triple du pavé la plus simple](images/ch06fg04-small.png "calculatrice")](images/ch06fg04-large.png "calculatrice")
+[![Capture d’écran de triple du pavé la plus simple](images/ch06fg04-small.png "calculatrice")](images/ch06fg04-large.png#lightbox "calculatrice")
 
 ## <a name="saving-transient-data"></a>L’enregistrement de données temporaires
 

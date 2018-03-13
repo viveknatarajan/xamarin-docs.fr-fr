@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 15f198465c544989b347fe534978956741478ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e03acbbac737bffd21ee3b592ab017d227f822ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-compression"></a>Compression des dispositions
 
@@ -60,7 +60,7 @@ La hiérarchie de l’affichage imbriqué résultante peut être examinée avec 
 La compression de disposition, qui est disponible pour les applications de Xamarin.Forms sur la plateforme iOS et Android utilisent, vise à aplanir la vue en supprimant des dispositions spécifiées à partir de l’arborescence d’éléments visuels, ce qui peut améliorer les performances de rendu de page d’imbrication. Le gain de performances est remis varie selon la complexité d’une page, la version du système d’exploitation utilisé et l’appareil sur lequel l’application est en cours d’exécution. Toutefois, les gains en termes de performances les plus importants seront visibles sur les appareils les plus anciens.
 
 > [!NOTE]
-> **Remarque**: alors que cet article se concentre sur les résultats de l’application de la compression de disposition sur Android, il s’applique également à iOS.
+> Alors que cet article se concentre sur les résultats de l’application de la compression de disposition sur Android, il s’applique également à iOS.
 
 ## <a name="layout-compression"></a>Compression des dispositions
 
@@ -120,5 +120,5 @@ Compression de la mise en page supprime les mises en page spécifiées à partir
 ## <a name="related-links"></a>Liens associés
 
 - [Création d’une disposition personnalisée](~/xamarin-forms/user-interface/layouts/custom.md)
-- [Renderers rapides](~/xamarin-forms/internals/fast-renderers.md)
+- [Convertisseurs rapides](~/xamarin-forms/internals/fast-renderers.md)
 - [LayoutCompression (exemple)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutcompression/)

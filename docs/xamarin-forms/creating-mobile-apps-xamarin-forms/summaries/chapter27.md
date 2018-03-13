@@ -3,14 +3,15 @@ title: "Résumé du chapitre 27. Convertisseurs personnalisés"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0c1dc9ba5cf382551a1142110c68d16421db07e4
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6d7c2b17e9596b7d2dd26aaf77cf13f7f8086cd5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Résumé du chapitre 27. Convertisseurs personnalisés
 
@@ -66,7 +67,7 @@ Le [ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Tous les le `ViewRenderer` dérivés contiennent un `ExportRenderer` attribut sur le niveau de l’assembly qui associe le `HelloView` classe avec particulier `HelloViewRenderer` classe. Voici comment Xamarin.Forms localise les convertisseurs dans les projets de plateforme individuels :
 
-[![Capture d’écran de triple de vue Hello](images/ch27fg02-small.png "convertisseurs personnalisés")](images/ch27fg02-large.png "convertisseurs personnalisés")
+[![Capture d’écran de triple de vue Hello](images/ch27fg02-small.png "convertisseurs personnalisés")](images/ch27fg02-large.png#lightbox "convertisseurs personnalisés")
 
 ## <a name="renderers-and-properties"></a>Les convertisseurs et les propriétés
 
@@ -89,7 +90,7 @@ Le `OnElementPropertyChanged` remplacement peut donc transférer la `Color` vale
 
 Le [ **EllipseDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) classe affiche plusieurs de ces `EllipseView` objets :
 
-[![Capture d’écran de triple de démonstration de l’Ellipse](images/ch27fg03-small.png "convertisseurs personnalisés de EllipseView")](images/ch27fg03-large.png "convertisseurs personnalisés de EllipseView")
+[![Capture d’écran de triple de démonstration de l’Ellipse](images/ch27fg03-small.png "convertisseurs personnalisés de EllipseView")](images/ch27fg03-large.png#lightbox "convertisseurs personnalisés de EllipseView")
 
 Le [ **BouncingBall** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) rebondit un `EllipseView` désactivé les côtés de l’écran.
 
@@ -113,4 +114,4 @@ Le [ **StepSliderDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 - [Recherche en texte intégral chapitre 27 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf)
 - [Exemples de chapitre 27](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
-- [Convertisseurs personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderers personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3d5b4b0d3e6e9388906efa3bff2db0ea38fa8605
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9c6bbf27d4c8227d96e372e91e1ccf2c9e841ff8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-controllers"></a>Utilisation de contrôleurs de Navigation
 
@@ -20,7 +20,7 @@ _Cet article décrit la conception et l’utilisation des barres de Navigation �
 
 Barres de navigation peuvent être ajoutés en haut des vues pour afficher le titre et des boutons de barre de Navigation facultatifs. En règle générale, ils sont utilisés lorsque l’utilisateur a accédé à partir d’une page principale, comme une Table de vue, la Collection ou le Menu pour un sous-affichage présentant les détails de l’élément sélectionné.
 
-[ ![](navigation-bars-images/navbar01.png "Exemple de barre de Navigation")](navigation-bars-images/navbar01.png)
+[![](navigation-bars-images/navbar01.png "Exemple de barre de Navigation")](navigation-bars-images/navbar01.png#lightbox)
 
 En outre, le titre (qui s’affiche dans le centre), les barres de Navigation peut contenir un ou plusieurs boutons de barre de Navigation (`UIBarButtonItem`) sur les côtés gauche et droit de la barre.
 
@@ -42,16 +42,16 @@ Pour travailler avec les barres de Navigation dans une application Xamarin.tvOS,
 1. Dans le **Solution remplissage**, double-cliquez sur `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **barre de Navigation** à partir de la **boîte à outils** et déposez-la sur la vue en haut de l’écran : 
 
-    [ ![](navigation-bars-images/navbar02.png "Une barre de Navigation")](navigation-bars-images/navbar02.png)
+    [![](navigation-bars-images/navbar02.png "Une barre de Navigation")](navigation-bars-images/navbar02.png#lightbox)
 1. Double-cliquez sur le **barre de Navigation** pour **élément de Navigation**. Dans le **Widget** onglet de la **propriétés remplissage**, vous pouvez définir le **titre**: 
 
-    [ ![](navigation-bars-images/navbar03.png "Définir le titre")](navigation-bars-images/navbar03.png)
+    [![](navigation-bars-images/navbar03.png "Définir le titre")](navigation-bars-images/navbar03.png#lightbox)
 1. Ensuite, vous pouvez ajouter un ou plusieurs **éléments de la barre** à chaque extrémité de la barre : 
 
-    [ ![](navigation-bars-images/navbar04.png "Un élément de bouton de la barre")](navigation-bars-images/navbar04.png)
+    [![](navigation-bars-images/navbar04.png "Un élément de bouton de la barre")](navigation-bars-images/navbar04.png#lightbox)
 1. Enfin, des fils le **les éléments de bouton de barre de** à des Actions de la **événements** onglet de la **l’Explorateur de propriétés**: 
 
-    [ ![](navigation-bars-images/navbar05.png "Une Action de l’élément bouton de la barre")](navigation-bars-images/navbar05.png)
+    [![](navigation-bars-images/navbar05.png "Une Action de l’élément bouton de la barre")](navigation-bars-images/navbar05.png#lightbox)
 1. Enregistrez les modifications apportées.
 
 
@@ -61,16 +61,16 @@ Pour travailler avec les barres de Navigation dans une application Xamarin.tvOS,
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **barre de Navigation** à partir de la **boîte à outils** et déposez-la sur la vue en haut de l’écran : 
 
-    [ ![](navigation-bars-images/navbar02-vs.png "Une barre de Navigation")](navigation-bars-images/navbar02-vs.png)
+    [![](navigation-bars-images/navbar02-vs.png "Une barre de Navigation")](navigation-bars-images/navbar02-vs.png#lightbox)
 1. Double-cliquez sur le **barre de Navigation** pour **élément de Navigation**. Dans le **Widget** onglet de la **l’Explorateur de propriétés**, vous pouvez définir le **titre**: 
 
-    [ ![](navigation-bars-images/navbar03-vs.png "Définir le titre")](navigation-bars-images/navbar03-vs.png)
+    [![](navigation-bars-images/navbar03-vs.png "Définir le titre")](navigation-bars-images/navbar03-vs.png#lightbox)
 1. Ensuite, vous pouvez ajouter un ou plusieurs **éléments de la barre** à chaque extrémité de la barre : 
 
-    [ ![](navigation-bars-images/navbar04-vs.png "Un bouton éléments à barres")](navigation-bars-images/navbar04-vs.png)
+    [![](navigation-bars-images/navbar04-vs.png "Un bouton éléments à barres")](navigation-bars-images/navbar04-vs.png#lightbox)
 1. Enfin, des fils le **les éléments de bouton de barre de** à des Actions de la **événements** onglet de la **l’Explorateur de propriétés**: 
 
-    [ ![](navigation-bars-images/navbar05-vs.png "Un bouton élément Actions à barres")](navigation-bars-images/navbar05-vs.png)
+    [![](navigation-bars-images/navbar05-vs.png "Un bouton élément Actions à barres")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Enregistrez les modifications apportées.
 
 
@@ -147,7 +147,7 @@ Cet article a couvert la conception et l’utilisation des barres de Navigation 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Exemples de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Exemples tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS les Guides Interface humaine](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guide de programmation d’application de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

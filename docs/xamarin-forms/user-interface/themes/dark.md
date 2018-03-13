@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 0b3a714e8295ed60f201c202fbe30e45dbdcc205
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 7314074424933451ab3cc3ebbf63d0b6f56d9c30
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dark-theme"></a>Thème sombre
 
@@ -50,7 +50,7 @@ Suivez cette [dépannage étape](~/xamarin-forms/user-interface/themes/index.md)
 
 Voici un exemple des boutons et des étiquettes dans le thème sombre, ainsi que le balisage qui produit les.
 
-[ ![](dark-images/dark-theme-sml.png "Boutons et des étiquettes dans le thème sombre")](dark-images/dark-theme.png "des boutons et des étiquettes dans le thème sombre")
+[![](dark-images/dark-theme-sml.png "Boutons et des étiquettes dans le thème sombre")](dark-images/dark-theme.png#lightbox "des boutons et des étiquettes dans le thème sombre")
 
 ```xaml
 <StackLayout Padding="20">

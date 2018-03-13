@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: bd6d47f98435cc68ecf4156423526c31dbac09da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c923208b7ca4d41914504b4b0aa0687db1d49f01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="inspecting-live-applications"></a>L’inspection des Applications en direct
 
@@ -27,11 +27,11 @@ Inspection de l’application en temps réel est disponible pour les clients d�
 
 
 
-[ ![](inspect-images/mac-heres-the-button.png "Cliquez sur ce bouton dans la barre d’outils de l’IDE")](inspect-images/mac-heres-the-button.png)
+[![](inspect-images/mac-heres-the-button.png "Cliquez sur ce bouton dans la barre d’outils de l’IDE")](inspect-images/mac-heres-the-button.png#lightbox)
 
 Une nouvelle fenêtre de client Xamarin inspecteur s’ouvre, avec une nouvelle invite de commandes REPL.
 
-[ ![](inspect-images/inspector-0.7.0-map-inspect-small.png "Une nouvelle fenêtre de client Xamarin inspecteur s’ouvre, avec une nouvelle invite de commandes REPL")](inspect-images/inspector-0.7.0-map-inspect.png)
+[![](inspect-images/inspector-0.7.0-map-inspect-small.png "Une nouvelle fenêtre de client Xamarin inspecteur s’ouvre, avec une nouvelle invite de commandes REPL")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
 
 Une fois cette fenêtre s’affiche, vous disposez d’une invite interactive c# que vous pouvez utiliser pour exécuter et évaluer des expressions et instructions c#. Ce qui complique uniques, c’est que le code est évalué dans le contexte du processus cible. Dans ce cas, nous montrons le code en cours d’exécution par rapport à l’application iOS affichée.
 

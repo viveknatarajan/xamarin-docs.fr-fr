@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 14abb7a4b85b493bb0ab96a982d989fad783fabd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Mises en page à onglets avec le ActionBar
 
 _Ce guide présente et explique comment utiliser les APIs ActionBar pour créer une interface utilisateur à onglets dans une application Xamarin.Android._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -27,7 +26,6 @@ La barre d’action est un modèle d’interface utilisateur Android qui est uti
 Notez que `Toolbar` est un composant de barre d’action plus récent et plus généralisé que vous devez utiliser à la place de `ActionBar` (`Toolbar` a été conçu pour remplacer `ActionBar`). Pour plus d’informations, consultez [barre d’outils](~/android/user-interface/controls/tool-bar/index.md). 
 
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -36,7 +34,6 @@ Toute application Xamarin.Android qui cible le niveau de l’API 11 (Android 3.0
 Certaines APIs ActionBar ont été transférés revenir au niveau de l’API 7 (Android 2.1) et sont disponibles via le [V7 AppCompat bibliothèque](http://developer.android.com/tools/support-library/features.html#v7-appcompat), mis à disposition pour les applications Xamarin.Android via la [Xamarin de bibliothèque de prise en charge Android - V7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) package.
 
 
-<a name="Introducing_tabs_in_the_ActionBar" />
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>Présentation des onglets dans le ActionBar
 
@@ -63,7 +60,6 @@ Xamarin.Android encapsule le `ActionBar.ITabListener` avec des événements sur 
 -  TabUnselected
 
 
-<a name="Adding_Tabs_to_the_ActionBar" />
 
 ### <a name="adding-tabs-to-the-actionbar"></a>Ajout d’onglets à la ActionBar
 
@@ -111,7 +107,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-<a name="Event_Handlers_vs_ActionBar.ITabListener" />
 
 #### <a name="event-handlers-vs-actionbaritablistener"></a>Gestionnaires d’événements et ActionBar.ITabListener
 
@@ -120,7 +115,6 @@ Les applications doivent utiliser des gestionnaires d’événements et `ActionB
 Lorsque vous traitez avec trop d’onglets, ou des fonctionnalités communes entre les onglets de ActionBar de partage, il peut être plus efficace en termes de mémoire et de performances pour créer une classe personnalisée qui implémente `ActionBar.ITabListener`et le partage d’une seule instance de la classe. Cela réduira le nombre de GREF qui utilise une application de Xamarin.Android. 
 
 
-<a name="Backwards_Compatibility_for_Older_Devices" />
 
 ### <a name="backwards-compatibility-for-older-devices"></a>Vers l’arrière la compatibilité des plus anciens
 
@@ -177,7 +171,6 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

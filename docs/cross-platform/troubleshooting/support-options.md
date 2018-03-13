@@ -6,17 +6,13 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 165313fb0150c2d9832566d5bc32842722b0a039
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>Les options de support sont disponibles pour Xamarin ?
-
-## <a name="overview"></a>Vue d'ensemble
-- [Résumé des Options de prise en charge](#Summary_of_Support_Options)
-- [Recommandations détaillées](#Detailed_Recommendations)
 
 ## <a name="summary-of-support-options"></a>Résumé des Options de prise en charge
 
@@ -46,6 +42,8 @@ Comme indiqué dans le [page de prise en charge de Xamarin](https://www.xamarin.
 </table>
 
 L’équipe de support Xamarin permet de surveiller de chacune de ces options.  Nous encourageons tous les utilisateurs à contribuer leurs questions réfléchies et des rapports pour tirer parti d’et aider à la croissance de la Communauté de développeurs Xamarin bien informée.  Pour les erreurs de suspicion, veillez à envoyer des rapports de bogue lorsque cela est possible garantir que les problèmes sont officiellement suivies par l’équipe d’ingénierie Xamarin.
+
+<a name="Visual_Studio_email_support_incidents_for_Xamarin_topics"/>
 
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Incidents de support par courrier électronique de Visual Studio pour les rubriques de Xamarin
 
@@ -95,7 +93,7 @@ Veuillez [signaler un bogue sur Xamarin Bugzilla](https://bugzilla.xamarin.com/p
 
 Pour une discussion de la Communauté sur les problèmes connus et les solutions possibles, publier une question sur le forum d’aperçu correspondant :
 
--   [Lecteur Xamarin dynamique](https://forums.xamarin.com/categories/live-player)
+-   [Xamarin Live Player](https://forums.xamarin.com/categories/live-player)
 -   Pour afficher un aperçu des liaisons de kit de développement logiciel de nouvelles versions des kits de développement logiciel de macOS, iOS et Android, recherchez l’annonce de version aperçu correspondant dans le [Xamarin.Android](http://forums.xamarin.com/categories/android), [Xamarin.iOS](http://forums.xamarin.com/categories/ios), ou [Xamarin.Mac ](http://forums.xamarin.com/categories/mac) forum.
 -   D’autres fonctionnalités d’aperçu, recherchez une annonce de version correspondant dans le [la version préliminaire et les versions bêta](http://forums.xamarin.com/categories/xamarin-prerelease) forum.  Ou, s’il n’existe aucune annonce correspondante, n’hésitez pas à augmenter votre question dans son propre thread dans ce forum.
 

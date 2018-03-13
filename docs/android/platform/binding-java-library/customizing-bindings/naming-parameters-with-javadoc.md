@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/20/2017
-ms.openlocfilehash: 84dfe88e912241eb0024143bca568ae75e5bfa28
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d83135aa9c101e06a680b458cce8c12dcdddd947
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="naming-parameters-with-javadoc"></a>Paramètres d’affectation de noms avec Javadoc
 
 _Cet article explique comment récupérer les noms de paramètres dans un projet de liaison Java à l’aide de Javadoc généré à partir du projet Java._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -38,9 +37,8 @@ Une fois cette opération est effectuée, les noms de paramètre Java d’origin
 
 
 > [!NOTE]
-> **Remarque :** est une grande partie de la variance dans la sortie JavaDoc. La barre d’outils. Chaîne d’outils JAR liaison ne prend pas en charge chaque combinaison possible unique et, par conséquent, certains paramètres ne peut pas être correctement nommé.
+> Il existe une grande partie de la variance dans la sortie JavaDoc. La barre d’outils. Chaîne d’outils JAR liaison ne prend pas en charge chaque combinaison possible unique et, par conséquent, certains paramètres ne peut pas être correctement nommé.
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: f55620720bb986142a56de7e8602be56280006d4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2c48ae5386fda63aed43c24c09c10cfb87b93637
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -34,7 +34,7 @@ Les éléments suivants sont nécessaire pour terminer les étapes présentées 
 
 CloudKit consiste à donner au développeur l’accès sur le serveurs iCloud. Il fournit la base d’iCloud lecteur et iCloud bibliothèque de photos. CloudKit est pris en charge sur les appareils Mac OS X et Apple iOS.
 
- [ ![](intro-to-cloudkit-images/image1.png "Comment CloudKit est pris en charge sur Mac OS X et des périphériques Apple iOS")](intro-to-cloudkit-images/image1.png)
+ [![](intro-to-cloudkit-images/image1.png "Comment CloudKit est pris en charge sur Mac OS X et des périphériques Apple iOS")](intro-to-cloudkit-images/image1.png#lightbox)
 
 CloudKit utilise l’infrastructure de compte iCloud. En l’absence d’un utilisateur connecté à un compte sur le périphérique iCloud, CloudKit utilisera leur ID pour identifier l’utilisateur. Si aucun compte n’est disponible, un accès limité en lecture seule doivent être fourni.
 
@@ -55,11 +55,11 @@ Une application Xamarin peut utiliser l’infrastructure CloudKit, l’applicati
 1.  Ouvrez le projet dans Visual Studio pour Mac ou Visual Studio.
 2.  Dans le **l’Explorateur de solutions**, ouvrez le **Info.plist** de fichier et vérifiez que le **identificateur de lot** correspond à celle qui a été définie dans **ID d’application**créé comme partie de l’approvisionnement configurer :
  
-    [ ![](intro-to-cloudkit-images/image26a.png "Entrez l’identificateur de lot")](intro-to-cloudkit-images/image26a-orig.png "Info.plist file displaying Bundle Identifier")
+    [![](intro-to-cloudkit-images/image26a.png "Entrez l’identificateur de lot")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
 3.  Faites défiler jusqu’en bas de la **Info.plist** fichier et sélectionnez **Modes d’arrière-plan activé**, **mises à jour de l’emplacement** et **des Notifications à distance**:
 
-    [ ![](intro-to-cloudkit-images/image27a.png "Sélectionnez les Modes d’arrière-plan activé, les mises à jour de l’emplacement et les Notifications à distance")](intro-to-cloudkit-images/image27a-orig.png "Info.plist file displaying background modes")
+    [![](intro-to-cloudkit-images/image27a.png "Sélectionnez les Modes d’arrière-plan activé, les mises à jour de l’emplacement et les Notifications à distance")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
 4.  Cliquez sur le projet iOS dans la solution et sélectionnez **Options**.
 5.  Sélectionnez **signature d’offre groupée iOS**, sélectionnez le **développeur identité** et **profil de préparation** créé ci-dessus.
 6.  Vérifiez le **Entitlements.plist** inclut **activer iCloud** , **stockage de clé-valeur** et **CloudKit** .
@@ -95,7 +95,7 @@ Le concept consistant à prendre une application cliente et séparée des autres
 
 CloudKit a été conçu pour fournir les mêmes avantages comme indiqué ci-dessus et les appliquer à l’utilisation des informations sur le cloud :
 
- [ ![](intro-to-cloudkit-images/image31.png "Les applications CloudKit communiquent à l’aide de conteneurs")](intro-to-cloudkit-images/image31.png)
+ [![](intro-to-cloudkit-images/image31.png "Les applications CloudKit communiquent à l’aide de conteneurs")](intro-to-cloudkit-images/image31.png#lightbox)
 
 Tout comme l’application en cours de-plusieurs en cours d’exécution sur l’appareil, est donc les communications de l’application avec iCloud de-plusieurs. Chacun de ces silos de communication différentes sont appelés des conteneurs.
 
@@ -117,13 +117,13 @@ Alors que les conteneurs sont, par défaut, lié univoque à une application don
 
 Une des principales fonctions de CloudKit consiste à mettre les modèle de données d’une application et la réplication ce modèle sur les serveurs iCloud. Certaines informations sont destinées à l’utilisateur qui l’a créé, autres informations sont les données publiques qui peuvent être créées par un utilisateur pour une utilisation publique (comme critique d’un restaurant) ou il peut s’agir des informations que le développeur a publié pour l’application. Dans les deux cas, l’audience n’est pas simplement un seul utilisateur, mais est une Communauté d’utilisateurs.
 
- [ ![](intro-to-cloudkit-images/image32.png "Diagramme du conteneur CloudKit")](intro-to-cloudkit-images/image32.png)
+ [![](intro-to-cloudkit-images/image32.png "Diagramme du conteneur CloudKit")](intro-to-cloudkit-images/image32.png#lightbox)
 
 À l’intérieur d’un conteneur, tout d’abord est la base de données public. Il s’agit où toutes les informations publiques réside et même emplacement mingles. En outre, il existe de plusieurs bases de données privées individuelles pour chaque utilisateur de l’application.
 
 Lors de l’exécution sur un appareil iOS, l’application aura uniquement accès aux informations de l’utilisateur actuellement connecté sur iCloud. Vue de l’application du conteneur est donc comme suit :
 
- [ ![](intro-to-cloudkit-images/image33.png "La vue applications de conteneur")](intro-to-cloudkit-images/image33.png)
+ [![](intro-to-cloudkit-images/image33.png "La vue applications de conteneur")](intro-to-cloudkit-images/image33.png#lightbox)
 
 Il peut voir uniquement les bases de données public et privé associé à l’utilisateur actuellement connecté sur iCloud.
 
@@ -186,7 +186,7 @@ Voici les différences entre les types de base de données :
 
 Les conteneurs renferment des bases de données, et à l’intérieur des bases de données sont des enregistrements. Les enregistrements sont le mécanisme dans laquelle les données structurées sont déplacées vers et à partir de CloudKit :
 
- [ ![](intro-to-cloudkit-images/image34.png "Les conteneurs renferment des bases de données, et à l’intérieur des bases de données sont des enregistrements")](intro-to-cloudkit-images/image34.png)
+ [![](intro-to-cloudkit-images/image34.png "Les conteneurs renferment des bases de données, et à l’intérieur des bases de données sont des enregistrements")](intro-to-cloudkit-images/image34.png#lightbox)
 
 Les enregistrements sont exposées dans le CloudKit Framework via la `CKRecord` classe qui encapsule des paires clé-valeur. Une instance d’un objet dans une application est équivalente à une `CKRecord` dans CloudKit. En outre, chaque `CKRecord` possède un type d’enregistrement, qui est équivalent à la classe d’un objet.
 
@@ -227,11 +227,11 @@ await CloudManager.SaveAsync (newRecord);
 
 Enregistrements n’existent pas directement dans une base de données : groupes d’enregistrements sont à l’intérieur d’une Zone d’enregistrement. Zones de l’enregistrement peut être considérés comme des Tables dans une base de données relationnelle classique :
 
- [ ![](intro-to-cloudkit-images/image35.png "Groupes d’enregistrements sont à l’intérieur d’une Zone d’enregistrement")](intro-to-cloudkit-images/image35.png)
+ [![](intro-to-cloudkit-images/image35.png "Groupes d’enregistrements sont à l’intérieur d’une Zone d’enregistrement")](intro-to-cloudkit-images/image35.png#lightbox)
 
 Il peut y avoir plusieurs enregistrements dans une Zone d’enregistrement donnée et plusieurs Zones d’enregistrement au sein d’une base de données. Chaque base de données contient une Zone d’enregistrement par défaut :
 
- [ ![](intro-to-cloudkit-images/image36.png "Chaque base de données contient une Zone d’enregistrement par défaut et une Zone personnalisée")](intro-to-cloudkit-images/image36.png)
+ [![](intro-to-cloudkit-images/image36.png "Chaque base de données contient une Zone d’enregistrement par défaut et une Zone personnalisée")](intro-to-cloudkit-images/image36.png#lightbox)
 
 Il s’agit dans lequel les enregistrements sont stockés par défaut. En outre, les Zones d’enregistrement personnalisés peuvent être créés. Représentent des Zones d’enregistrement la granularité de base auxquelles les validations atomique et le suivi des modifications est effectuée.
 
@@ -258,7 +258,7 @@ var recordID =  new CKRecordID("My Record");
 
 Références fournissent des relations entre les enregistrements connexes dans une base de données :
 
- [ ![](intro-to-cloudkit-images/image37.png "Références fournissent des relations entre les enregistrements connexes dans une base de données")](intro-to-cloudkit-images/image37.png)
+ [![](intro-to-cloudkit-images/image37.png "Références fournissent des relations entre les enregistrements connexes dans une base de données")](intro-to-cloudkit-images/image37.png#lightbox)
 
 Dans l’exemple ci-dessus, Parents possèdent des enfants afin que l’enfant est un enregistrement enfant de l’enregistrement parent. La relation passe de l’enregistrement enfant à l’enregistrement parent et qu’il est appelée un *référence arrière*.
 
@@ -283,7 +283,7 @@ var reference = new CKReference(newRecord, new CKReferenceAction());
 
 Autoriser les ressources pour un fichier de données non structurées volumineux pour être téléchargé sur iCloud et associé à un enregistrement donné :
 
- [ ![](intro-to-cloudkit-images/image38.png "Autoriser les ressources pour un fichier de données non structurées volumineux pour être téléchargé sur iCloud et associé à un enregistrement donné")](intro-to-cloudkit-images/image38.png)
+ [![](intro-to-cloudkit-images/image38.png "Autoriser les ressources pour un fichier de données non structurées volumineux pour être téléchargé sur iCloud et associé à un enregistrement donné")](intro-to-cloudkit-images/image38.png#lightbox)
 
 Sur le client, un `CKRecord` est créé qui décrit le fichier qui vont être téléchargées sur le serveur iCloud. A `CKAsset` est créé pour contenir le fichier et est lié à l’enregistrement de description.
 
@@ -594,7 +594,7 @@ Les abonnements sont exposées dans le CloudKit Framework via la `CKSubscription
 
 Avant d’implémenter l’abonnement dans le code c#, prenons une rapide vue d’ensemble du fonctionnement des abonnements :
 
- [ ![](intro-to-cloudkit-images/image39.png "Une vue d’ensemble du fonctionnement des abonnements")](intro-to-cloudkit-images/image39.png)
+ [![](intro-to-cloudkit-images/image39.png "Une vue d’ensemble du fonctionnement des abonnements")](intro-to-cloudkit-images/image39.png#lightbox)
 
 Le graphique ci-dessus illustre le processus d’inscription standard comme suit :
 
@@ -697,7 +697,7 @@ Ensuite, nous allons nous intéresser à ces rubriques en détail.
 
 Comme indiqué ci-dessus, CloudKit fournit un moyen de l’application identifier de façon unique un utilisateur donné :
 
- [ ![](intro-to-cloudkit-images/image40.png "Identifie de façon unique identifier un utilisateur donné")](intro-to-cloudkit-images/image40.png)
+ [![](intro-to-cloudkit-images/image40.png "Identifie de façon unique identifier un utilisateur donné")](intro-to-cloudkit-images/image40.png#lightbox)
 
 Il existe une application cliente en cours d’exécution sur les périphériques d’un utilisateur et toutes les bases de données utilisateur privées spécifiques à l’intérieur du conteneur CloudKit. L’application cliente va être lié à un de ces utilisateurs spécifiques. Il est basé sur l’utilisateur qui est connecté à iCloud localement sur l’appareil.
 
@@ -732,7 +732,7 @@ Le code ci-dessus est demandant le conteneur CloudKit pour fournir l’ID de l�
 
 Chaque utilisateur CloudKit possède des métadonnées spécifiques qui les décrit. Ces métadonnées sont représentée comme un enregistrement CloudKit :
 
- [ ![](intro-to-cloudkit-images/image41.png "Chaque utilisateur CloudKit possède des métadonnées spécifiques qui les décrit")](intro-to-cloudkit-images/image41.png)
+ [![](intro-to-cloudkit-images/image41.png "Chaque utilisateur CloudKit possède des métadonnées spécifiques qui les décrit")](intro-to-cloudkit-images/image41.png#lightbox)
 
 À l’intérieur de la base de données privée pour un utilisateur spécifique d’un conteneur, il est un enregistrement qui définit cet utilisateur. Il existe plusieurs enregistrements d’utilisateur à l’intérieur de la base de données publique, une pour chaque utilisateur du conteneur. Un de ces aura un ID d’enregistrement qui correspond à l’ID d’enregistrement de l’utilisateur actuellement connecté
 
@@ -768,7 +768,7 @@ Dans ce cas, l’application peut demander que l’utilisateur divulguer ces inf
 
 En supposant que l’utilisateur en tant que choisi d’autoriser l’application un accès limité à leurs informations de compte d’utilisateur, ils peuvent être détectables à d’autres utilisateurs de l’application :
 
- [ ![](intro-to-cloudkit-images/image42.png "Un utilisateur peut être détectable à d’autres utilisateurs de l’application")](intro-to-cloudkit-images/image42.png)
+ [![](intro-to-cloudkit-images/image42.png "Un utilisateur peut être détectable à d’autres utilisateurs de l’application")](intro-to-cloudkit-images/image42.png#lightbox)
 
 L’application cliente communique avec un conteneur, et iCloud pour accéder aux informations d’utilisateur communique avec le conteneur. L’utilisateur peut fournir une adresse de messagerie et de découverte peut être utilisée pour obtenir des informations relatives à l’utilisateur précédent. Si vous le souhaitez, l’ID d’utilisateur peut également servir à découvrir des informations sur l’utilisateur.
 
@@ -849,40 +849,40 @@ Effectuez ce qui suit :
 
 1. Dans Visual Studio pour l’agent de gestion, compilez l’application pour **version** > **appareil iOS**: 
 
-    [![](intro-to-cloudkit-images/shipping01.png "Compilez l’application pour la mise en production")](intro-to-cloudkit-images/shipping01.png)
+    [![](intro-to-cloudkit-images/shipping01.png "Compilez l’application pour la mise en production")](intro-to-cloudkit-images/shipping01.png#lightbox)
 
 2. À partir de la **générer** menu, sélectionnez **Archive**: 
 
-    [![](intro-to-cloudkit-images/shipping02.png "Sélectionnez l’Archive")](intro-to-cloudkit-images/shipping02.png)
+    [![](intro-to-cloudkit-images/shipping02.png "Sélectionnez l’Archive")](intro-to-cloudkit-images/shipping02.png#lightbox)
 
 3. Le **Archive** est créé et affiché dans Visual Studio pour Mac : 
 
-    [![](intro-to-cloudkit-images/shipping03.png "L’Archive est créée et affichée")](intro-to-cloudkit-images/shipping03.png)
+    [![](intro-to-cloudkit-images/shipping03.png "L’Archive est créée et affichée")](intro-to-cloudkit-images/shipping03.png#lightbox)
 
 4. Démarrez **Xcode**.
 5. À partir de la **fenêtre** menu, sélectionnez **organisateur**: 
 
-    [![](intro-to-cloudkit-images/shipping04.png "Sélectionnez la bibliothèque multimédia")](intro-to-cloudkit-images/shipping04.png)
+    [![](intro-to-cloudkit-images/shipping04.png "Sélectionnez la bibliothèque multimédia")](intro-to-cloudkit-images/shipping04.png#lightbox)
 
 6. Sélectionnez l’archive de l’application et cliquez sur le **exporter...**  bouton : 
 
-    [![](intro-to-cloudkit-images/shipping05.png "Archive de l’application")](intro-to-cloudkit-images/shipping05.png)
+    [![](intro-to-cloudkit-images/shipping05.png "Archive de l’application")](intro-to-cloudkit-images/shipping05.png#lightbox)
     
 7. Sélectionnez une méthode pour l’exportation, cliquez sur le **suivant** bouton : 
 
-    [![](intro-to-cloudkit-images/shipping06.png "Sélectionnez une méthode d’exportation")](intro-to-cloudkit-images/shipping06.png)
+    [![](intro-to-cloudkit-images/shipping06.png "Sélectionnez une méthode d’exportation")](intro-to-cloudkit-images/shipping06.png#lightbox)
 
 8. Sélectionnez le **équipe de développement** dans la liste déroulante et cliquez sur le **choisir** bouton : 
 
-    [![](intro-to-cloudkit-images/shipping07.png "Sélectionnez l’équipe de développement dans la liste déroulante")](intro-to-cloudkit-images/shipping07.png)
+    [![](intro-to-cloudkit-images/shipping07.png "Sélectionnez l’équipe de développement dans la liste déroulante")](intro-to-cloudkit-images/shipping07.png#lightbox)
 
 9. Sélectionnez **Production** dans la liste déroulante et cliquez sur le **suivant** bouton : 
 
-    [![](intro-to-cloudkit-images/shipping08.png "Sélectionnez Production dans la liste déroulante")](intro-to-cloudkit-images/shipping08.png)
+    [![](intro-to-cloudkit-images/shipping08.png "Sélectionnez Production dans la liste déroulante")](intro-to-cloudkit-images/shipping08.png#lightbox)
 
 10. Passez en revue le paramètre et cliquez sur le **exporter** bouton : 
 
-    [![](intro-to-cloudkit-images/shipping09.png "Passez en revue les paramètres")](intro-to-cloudkit-images/shipping09.png)
+    [![](intro-to-cloudkit-images/shipping09.png "Passez en revue les paramètres")](intro-to-cloudkit-images/shipping09.png#lightbox)
 
 11. Choisissez un emplacement pour générer l’application résultante `.ipa` fichier.
 

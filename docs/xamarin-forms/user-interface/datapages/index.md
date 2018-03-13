@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 10c473656947dfea8bf832ae5a5704897ef4ce63
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 60973068b56ea4160c3e5ae53d387b063c601afe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="datapages"></a>DataPages
 
@@ -26,7 +26,7 @@ Pages de données fournissent une API pour rapidement et facilement lier une sou
 
 Pour voir comment la démo keynote Evolve fonctionne, consultez la [mise en route](get-started.md).
 
-[ ![](images/demo-sml.png "Exemple de pages de données d’Application")](images/demo.png "exemple des pages de données d’Application")
+[![](images/demo-sml.png "Exemple de pages de données d’Application")](images/demo.png#lightbox "exemple des pages de données d’Application")
 
 ## <a name="introduction"></a>Introduction
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 29b405c61b745c26c74318243f75e5809ecfdd7d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a33993bdef16191b66127dcc68c57661636c0f8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-references"></a>Références natives
 
@@ -78,13 +78,13 @@ L’étape suivante sont nécessaires pour incorporer une structure dans un proj
 1. Créer un nouveau ou ouvrir un projet existant de Xamarin.iOS, Xamarin.Mac ou liaison.
 2. Dans le **l’Explorateur de solutions**, avec le bouton droit sur le nom du projet et sélectionnez **ajouter** > **ajouter une référence Native**: 
 
-    [ ![](native-references-images/ref01.png "Dans l’Explorateur de solutions, avec le bouton droit sur le nom du projet et sélectionnez Ajouter une référence Native")](native-references-images/ref01.png)
+    [![](native-references-images/ref01.png "Dans l’Explorateur de solutions, avec le bouton droit sur le nom du projet et sélectionnez Ajouter une référence Native")](native-references-images/ref01.png#lightbox)
 3. À partir de la **ouvrir** boîte de dialogue, sélectionnez le nom de l’infrastructure Native que vous souhaitez incorporer, cliquez sur le **ouvrir** bouton : 
 
-    [ ![](native-references-images/ref02.png "Sélectionnez le nom de l’infrastructure Native pour incorporer, cliquez sur le bouton Ouvrir")](native-references-images/ref02.png)
+    [![](native-references-images/ref02.png "Sélectionnez le nom de l’infrastructure Native pour incorporer, cliquez sur le bouton Ouvrir")](native-references-images/ref02.png#lightbox)
 4. Le framework vont être ajouté à l’arborescence du projet : 
 
-    [ ![](native-references-images/ref03.png "Le framework sera ajouté à l’arborescence de projets")](native-references-images/ref03.png)
+    [![](native-references-images/ref03.png "Le framework sera ajouté à l’arborescence de projets")](native-references-images/ref03.png#lightbox)
 
 Lorsque le projet est compilé, le Framework natif seront incorporé dans l’offre groupée de l’application.
 

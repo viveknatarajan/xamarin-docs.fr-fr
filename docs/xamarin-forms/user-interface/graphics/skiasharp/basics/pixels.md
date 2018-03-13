@@ -4,14 +4,15 @@ description: "Explorez les différences entre les coordonnées SkiaSharp et Xama
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 2643e06474ffe0fd60830db3f315bf525c2f84eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e07377584996694aa8597af79317957c51050ec
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Unités indépendantes du périphérique et pixels
 
@@ -98,7 +99,7 @@ La méthode commence à la première ligne de texte avec une coordonnée X de 20
 
 Voici le programme en cours d’exécution sur les trois plateformes :
 
-[![](pixels-images/surfacesize-small.png "Capture d’écran de triple de la page de la taille de la Surface")](pixels-images/surfacesize-large.png "Triple capture d’écran de la page de la taille de la Surface")
+[![](pixels-images/surfacesize-small.png "Capture d’écran de triple de la page de la taille de la Surface")](pixels-images/surfacesize-large.png#lightbox "Triple capture d’écran de la page de la taille de la Surface")
 
 Comme vous pouvez le voir, la `CanvasSize` propriété de la `SKCanvasView` et le `Size` propriété de la `SKImageInfo` valeur sont cohérentes dans les dimensions en pixels de création de rapports. Le `Height` et `Width` propriétés de la `SKCanvasView` sont des propriétés de Xamarin.Forms et la taille de la vue dans les unités indépendantes du périphérique définies par la plateforme de rapports.
 
@@ -141,7 +142,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ici, il s’exécute sur les plateformes de trois :
 
-[![](pixels-images/ellipsefill-small.png "Capture d’écran de triple de la page de la taille de la Surface")](pixels-images/ellipsefill-large.png "Triple capture d’écran de la page de la taille de la Surface")
+[![](pixels-images/ellipsefill-small.png "Capture d’écran de triple de la page de la taille de la Surface")](pixels-images/ellipsefill-large.png#lightbox "Triple capture d’écran de la page de la taille de la Surface")
 
 Le [autres `DrawOval` méthode](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/) a un [ `SGRect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRect/) argument, qui est un rectangle défini d’après les coordonnées X et Y de son coin supérieur gauche et le coin inférieur droit. L’ellipse remplit ce rectangle, ce qui suggère qu’il est possible d’utiliser dans le **Ellipse remplir** page comme suit :
 

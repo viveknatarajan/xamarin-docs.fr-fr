@@ -4,14 +4,15 @@ description: "Voir la rubrique déterminer la taille de la chaîne de texte rend
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a8cfac8911b1a8a13a4b6f149d02cd2f2c78453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1cb6b6fcd8a9d02910842eb3eba966fce281d977
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="integrating-text-and-graphics"></a>Intégration de texte et des graphiques
 
@@ -113,7 +114,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Après cela, le reste de la méthode est simple. Il crée un autre `SKPaint` objet pour les bordures et les appels `DrawRoundRect` à deux reprises. Le deuxième appel utilise un rectangle agrandie par un autre 10 pixels. Le premier appel spécifie un rayon d’angle de 20 pixels. la seconde a un rayon d’angle 30 pixels, afin qu’ils semblent être parallèle :
 
- [![](text-images/framedtext-small.png "Capture d’écran de triple de la page de texte d’encadré")](text-images/framedtext-large.png "Triple capture d’écran de la page de texte d’encadré")
+ [![](text-images/framedtext-small.png "Capture d’écran de triple de la page de texte d’encadré")](text-images/framedtext-large.png#lightbox "Triple capture d’écran de la page de texte d’encadré")
 
 Vous pouvez activer votre téléphone ou le simulateur sur le côté pour afficher le texte et l’augmentation de taille de trame.
 
@@ -121,7 +122,7 @@ Si vous devez uniquement centrer du texte sur l’écran, vous pouvez le faire e
 
 Texte proprement dit peut être traitée beaucoup comme une option graphique. Une option simple est d’afficher le plan de caractères du texte plutôt que de l’affichage plein normal :
 
-[![](text-images/outlinedtext-small.png "Le triple de capture d’écran de la page de texte de décrites")](text-images/outlinedtext-large.png "Triple capture d’écran de la page décrite de texte")
+[![](text-images/outlinedtext-small.png "Le triple de capture d’écran de la page de texte de décrites")](text-images/outlinedtext-large.png#lightbox "Triple capture d’écran de la page décrite de texte")
 
 Cela est fait simplement en modifiant la normale `Style` propriété de la `SKPaint` objet à partir de sa valeur par défaut `SKPaintStyle.Fill` à `SKPaintStyle.Stroke` et en spécifiant une largeur de trait. Le `PaintSurface` Gestionnaire de la **décrites de texte** page montre comment procéder :
 

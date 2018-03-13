@@ -5,20 +5,24 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: b2decf1331764ed6b1696126d8b23318e329e0c7
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 38d3b6da0dd33e038f2d50209280f2983faf6013
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexation de l’application et lien profond
 
 _Indexation de l’application permet aux applications seraient autrement être oubliées après quelques utilise pour rester en apparaissant dans les résultats de la recherche. Lien profond permet à un résultat de recherche qui contient les données d’application, généralement en accédant à une page référencée à partir d’un lien vers des applications. Cet article explique comment utiliser l’indexation de l’application et lien profond pour rendre le contenu de l’application Xamarin.Forms recherche sur des appareils iOS et Android._
 
-## <a name="overview"></a>Vue d'ensemble
+> [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
+
+**Profondeur en liaison avec Xamarin.Forms et Azure, [University de Xamarin](https://university.xamarin.com/)**
+
 
 L’indexation d’application Xamarin.Forms et lien profond fournissent une API pour la publication des métadonnées pour l’indexation des applications que les utilisateurs accèdent via des applications. Contenu indexé peut ensuite être recherché dans la recherche Spotlight, dans la recherche de Google ou dans une recherche sur le web. En appuyant sur un résultat de recherche qui contient un lien ciblé se déclenche un événement qui peut être géré par une application et est généralement utilisé pour accéder à la page référencée à partir du lien profond.
 
@@ -31,7 +35,7 @@ Chaque `TodoItem` instance créée par l’utilisateur est indexé. Recherches s
 Pour plus d’informations sur l’utilisation d’une base de données SQLite, consultez [fonctionne avec une base de données locale](~/xamarin-forms/app-fundamentals/databases.md).
 
 > [!NOTE]
-> **Remarque**: application Xamarin.Forms l’indexation et la profondeur des fonctionnalités de liaison est uniquement disponible sur la plateforme iOS et Android utilisent et nécessite d’iOS 9 et API 23 respectivement.
+> L’indexation d’application Xamarin.Forms approfondie des fonctionnalités de liaison est uniquement disponible sur la plateforme iOS et Android utilisent et nécessite d’iOS 9 et API 23 respectivement.
 
 ## <a name="setup"></a>Installation
 
@@ -106,7 +110,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 Cette opération ajoute le [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance à l’application [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) collection.
 
 > [!NOTE]
-> **Remarque**: le `RegisterLink` méthode peut également être utilisée pour mettre à jour le contenu indexé pour la page.
+> Le `RegisterLink` méthode peut également être utilisée pour mettre à jour le contenu indexé pour la page.
 
 Une fois un [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance a été inscrit pour l’indexation, elle peut apparaître dans les résultats de la recherche. La capture d’écran suivante montre le contenu indexé apparaissant dans les résultats de recherche sur la plateforme iOS :
 
@@ -123,7 +127,7 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 Cette opération supprime le [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instance à partir de l’application [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) collection.
 
 > [!NOTE]
-> **Remarque**: sur Android n’est pas possible de supprimer le contenu indexé à partir des résultats de la recherche.
+> Sur Android, il n’est pas possible de supprimer le contenu indexé à partir des résultats de la recherche.
 
 <a name="responding" />
 
@@ -211,7 +215,7 @@ En outre, les valeurs pour les clés suivantes peuvent être spécifiées :
 - `shouldAddToPublicIndex` – un `string` du `true` ou `false` qui contrôle ou non ajouter le contenu indexé à index de cloud public d’Apple, qui peut ensuite être présenté aux utilisateurs qui n’ont pas installé l’application sur son appareil iOS. Toutefois, parce que le contenu a été défini pour l’indexation de public, cela ne signifie pas qu’il sera être ajouté automatiquement à index de cloud public d’Apple. Pour plus d’informations, consultez [Public l’indexation de recherche](~/ios/platform/search/nsuseractivity.md). Notez que cette clé doit être définie sur `false` lors de l’ajout des données personnelles le [ `KeyValues` ](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) collection.
 
 > [!NOTE]
-> **Remarque**: le `KeyValues` collection n’est pas utilisé sur la plateforme Android.
+> Le `KeyValues` collection n’est pas utilisé sur la plateforme Android.
 
 Pour plus d’informations sur la procédure de transfert, consultez [Introduction à la procédure de transfert](~/ios/platform/handoff.md).
 

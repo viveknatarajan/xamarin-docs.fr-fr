@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: b471742ae9fb365d75e8dd3ca0f93f5e55208f19
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 343694163c79ab4d7e8b78875282e7077db979e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="adding-a-second-toolbar"></a>Ajout d’une seconde barre d’outils
 
-<a name="overview" />
 
 ## <a name="overview"></a>Vue d'ensemble 
 
 Le `Toolbar` peut faire plus que remplacer la barre d’action &ndash; il peut être utilisé plusieurs fois dans une activité, il peut être personnalisé pour la sélection élective n’importe où sur l’écran, et il peut être configuré pour qu’ils concernent uniquement une largeur partielle de l’écran. Les exemples ci-dessous montrent comment créer un second `Toolbar` et le placer en bas de l’écran. Cela `Toolbar` implémente **copie**, **couper**, et **coller** des éléments de menu. 
 
-<a name="define_second" />
 
 ## <a name="define-the-second-toolbar"></a>Définir la seconde barre d’outils 
 
@@ -78,10 +76,9 @@ Modifier **Resources/values/styles.xml** et ajouter la couleur d’accentuation 
 
 Ainsi, la barre d’outils en bas une couleur orange foncée. Génération et exécution de l’application affiche une barre d’outils deuxième vide en bas de l’écran : 
 
-[![Capture d’écran de l’application avec jaune seconde barre d’outils en bas de l’écran](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png)
+[![Capture d’écran de l’application avec jaune seconde barre d’outils en bas de l’écran](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
 
-<a name="second_menus" />
  
 ## <a name="add-edit-menu-items"></a>Ajouter des éléments de Menu Edition 
 
@@ -100,7 +97,6 @@ Pour ajouter des éléments de menu à une base de données secondaire `Toolbar`
 Les sections suivantes illustrent ce processus en détail : **couper**, **copie**, et **coller** des éléments de menu sont ajoutés à la partie inférieure `Toolbar`. 
 
 
-<a name="second_resource" />
 
 ### <a name="define-the-edit-menu-resource"></a>Définir la ressource de Menu Edition
 
@@ -130,7 +126,6 @@ Dans le **menu/ressources** sous-répertoire, créez un nouveau fichier XML appe
 Ce code XML crée les **couper**, **copie**, et **coller** des éléments de menu (à l’aide des icônes qui ont été ajoutés à la `mipmap-` dossiers dans [en remplaçant la barre d’Action ](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 
-<a name="inflate_menus" />
 
 ### <a name="inflate-the-menus"></a>Valeur de l’augmentation les Menus
 
@@ -149,18 +144,17 @@ Ce code localise le `edit_toolbar` vue définie dans **Main.axml**, définit son
 
 Générez et exécutez l’application. Lorsque l’application s’exécute, le texte et les icônes ajoutées ci-dessus seront affiche comme illustré ici : 
 
-[![Diagramme de bas barre d’outils avec des icônes de couper, copier et coller](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png)
+[![Diagramme de bas barre d’outils avec des icônes de couper, copier et coller](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
 Si vous appuyez sur la **couper** icône du menu provoque le toast suivant s’affiche : 
 
-[![Capture d’écran de Toast indiquant que l'on a cliqué sur l’icône du menu Couper](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png)
+[![Capture d’écran de Toast indiquant que l'on a cliqué sur l’icône du menu Couper](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
 En appuyant sur les éléments de menu dans une barre d’outils affiche les toasts obtenus : 
 
-[![Captures d’écran de Toasts pour enregistrer, copier et coller des éléments de menu est activé par un clic](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png)
+[![Captures d’écran de Toasts pour enregistrer, copier et coller des éléments de menu est activé par un clic](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
 
-<a name="up_button" />
 
 ## <a name="the-up-button"></a>Le bouton haut 
 
@@ -187,7 +181,7 @@ SupportActionBar.SetHomeButtonEnabled (true);
 
 Lorsque l’utilisateur navigue parmi `MainActivity` à `DetailActivity`, le `DetailActivity` affiche un **des** bouton (flèche gauche), comme illustré dans la capture d’écran :
 
-[![Capture d’écran exemple de flèche haut bouton gauche dans la barre d’outils](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png)
+[![Capture d’écran exemple de flèche haut bouton gauche dans la barre d’outils](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 En appuyant sur cette **des** bouton entraîne l’application revenir à `MainActivity`. Dans une application plus complexe avec plusieurs niveaux de hiérarchie, ce bouton renvoie l’utilisateur au niveau supérieur dans l’application plutôt qu’à l’écran précédent. 
 

@@ -3,14 +3,15 @@ title: "Résumé du chapitre 26. Dispositions personnalisées"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: dbddaaf2f4a5ad9d7161013f2ae11466b953e20c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9447f9fb47a3de0f278a89d45d657158be9b70b9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Résumé du chapitre 26. Dispositions personnalisées
 
@@ -98,9 +99,9 @@ Cette méthode est désormais déconseillée et remplacée par :
 Chaque classe qui dérive de `Layout` ou `Layout<T>` doit remplacer `OnSizeRequest` ou `OnMeasure`. Il s’agit d’où une classe de disposition détermine sa taille, ce qui est généralement basée sur la taille de ses enfants, il obtient en appelant `GetSizeRequest` ou `Measure` sur les enfants. Avant et après l’appel `OnSizeRequest` ou `OnMeasure`, `GetSizeRequest` ou `Measure` ajuste basée sur les propriétés suivantes :
 
 - [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/)de type `double`, affecte le `Request` propriété de `SizeRequest`
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/)de type `double`, affecte le `Request` propriété de `SizeRequest`
-- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/)de type `double`, affecte le `Minimum` propriété de `SizeRequest`
-- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/)de type `double`, affecte le `Minimum` propriété de `SizeRequest`
+- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) de type `double`, affecte le `Request` propriété de `SizeRequest`
+- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/) de type `double`, affecte le `Minimum` propriété de `SizeRequest`
+- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/) de type `double`, affecte le `Minimum` propriété de `SizeRequest`
 
 ### <a name="infinite-constraints"></a>Contraintes infinies
 
@@ -159,7 +160,7 @@ Le [ `UniformGridLayout` ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Le [ **PhotoGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) illustre `UniformGridLayout`:
 
-[![Capture d’écran de triple de la grille de Photo](images/ch26fg08-small.png "mise en page de grille uniforme")](images/ch26fg08-large.png "mise en page de grille uniforme")
+[![Capture d’écran de triple de la grille de Photo](images/ch26fg08-small.png "mise en page de grille uniforme")](images/ch26fg08-large.png#lightbox "mise en page de grille uniforme")
 
 ### <a name="overlapping-children"></a>Enfants superposés
 
@@ -174,7 +175,7 @@ Pour les enfants qui se chevauchent, les enfants à la fin de la collection sont
 
 Le [ `OverlapLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) classe dans le [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) bibliothèque définit une propriété jointe pour indiquer l’ordre de rendu et permettre ainsi à l’un de ses enfants à afficher sur les autres. Le [ **StudentCardFile** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) illustre cela :
 
-[![Capture d’écran de triple de grille de fichier de carte de Student](images/ch26fg10-small.png "enfants de la disposition qui se chevauchent")](images/ch26fg10-large.png "enfants de la disposition qui se chevauchent")
+[![Capture d’écran de triple de grille de fichier de carte de Student](images/ch26fg10-small.png "enfants de la disposition qui se chevauchent")](images/ch26fg10-large.png#lightbox "enfants de la disposition qui se chevauchent")
 
 ### <a name="more-attached-bindable-properties"></a>Plus joint propriétés pouvant être liées
 

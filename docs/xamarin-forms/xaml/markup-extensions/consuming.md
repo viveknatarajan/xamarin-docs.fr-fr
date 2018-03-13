@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: cc4407be9dee7e19dbf1f3cc03b3b88191717e6f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0c68d2cfd43eb535fe2e02b5662250cb6e453ddd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilisation des Extensions de balisage XAML
 
@@ -137,7 +137,7 @@ Le dernier exemple affiche la `Device.RuntimePlatform` valeur. Le `Environment.N
 
 Voici l’exemple en cours d’exécution sur les trois plateformes :
 
-[![x : Static démonstration](consuming-images/staticdemo-small.png "x : Static démonstration")](consuming-images/staticdemo-large.png "x : Static démonstration")
+[![x : Static démonstration](consuming-images/staticdemo-small.png "x : Static démonstration")](consuming-images/staticdemo-large.png#lightbox "x : Static démonstration")
 
 <a name="reference" />
 
@@ -181,7 +181,7 @@ Le **x : Reference démonstration** page montre deux utilisations de `x:Referen
 
 Les deux `x:Reference` expressions utilisent la version abrégée de le `ReferenceExtension` nom de classe et d’éliminer la `Name=` dans le cadre de l’expression. Dans le premier exemple, le `x:Reference` extension de balisage est incorporée dans le `Binding` extension de balisage. Notez que la `Source` et `StringFormat` paramètres sont séparés par des virgules. Voici le programme en cours d’exécution sur les trois plateformes :
 
-[![Démonstration de x : Reference](consuming-images/referencedemo-small.png "x : Reference démonstration")](consuming-images/referencedemo-large.png "x : Reference démonstration")
+[![Démonstration de x : Reference](consuming-images/referencedemo-small.png "x : Reference démonstration")](consuming-images/referencedemo-large.png#lightbox "x : Reference démonstration")
 
 <a name="type" />
 
@@ -236,7 +236,7 @@ Il s’agit de comment le menu de navigation dans `MainPage` dans les **les Exte
 
 Voici la page d’accueil principale **les Extensions de balisage**:
 
-[![Principale Page](consuming-images/mainpage-small.png "Main Page")](consuming-images/mainpage-large.png "Main Page")
+[![Principale Page](consuming-images/mainpage-small.png "Main Page")](consuming-images/mainpage-large.png#lightbox "Main Page")
 
 Chaque `CommandParameter` est définie sur une `x:Type` extension de balisage qui fait référence à une des autres pages. Le `Command` propriété est liée à une propriété nommée `NavigateCommand`. Cette propriété est définie dans le `MainPage` fichier code-behind :
 
@@ -319,7 +319,7 @@ public partial class TypeDemoPage : ContentPage
 
 La méthode qui est exécutée lorsque un `Button` est enfoncé crée une nouvelle instance de l’argument, définit son `VerticalOptions` propriété et l’ajoute à la `StackLayout`. Les trois `Button` éléments puis partagent la page avec les vues créées dynamiquement :
 
-[![x : Type démonstration](consuming-images/typedemo-small.png "x : Type démonstration")](consuming-images/typedemo-large.png "démonstration de x : Type")
+[![x : Type démonstration](consuming-images/typedemo-small.png "x : Type démonstration")](consuming-images/typedemo-large.png#lightbox "démonstration de x : Type")
 
 <a name="array" />
 
@@ -376,7 +376,7 @@ Le **x : Array démonstration** page montre comment utiliser `x:Array` pour ajo
 
 Le `ViewCell` crée un simple `BoxView` pour chaque entrée de couleur :
 
-[![x : Array démonstration](consuming-images/arraydemo-small.png "x : Array démonstration")](consuming-images/arraydemo-large.png "x : Array, démonstration")
+[![x : Array démonstration](consuming-images/arraydemo-small.png "x : Array démonstration")](consuming-images/arraydemo-large.png#lightbox "x : Array, démonstration")
 
 Il existe plusieurs façons de spécifier la personne `Color` éléments de ce tableau. Vous pouvez utiliser un `x:Static` extension de balisage :
 
@@ -449,7 +449,7 @@ Puis vous découvrez que pour l’une de la `Label` éléments, vous voulez tous
 
 Voici le programme en cours d’exécution sur les plateformes de trois :
 
-[![Démonstration de x : Null](consuming-images/nulldemo-small.png "x : Null démonstration")](consuming-images/nulldemo-large.png "démonstration de x : Null")
+[![Démonstration de x : Null](consuming-images/nulldemo-small.png "x : Null démonstration")](consuming-images/nulldemo-large.png#lightbox "démonstration de x : Null")
 
 Remarquez que quatre de la `Label` éléments ont une police sans serif, mais le centre de `Label` a la police sans serif par défaut.
 
@@ -463,5 +463,5 @@ Si vous avez rencontré un besoin pour une extension de balisage XAML qui n’es
 - [Extensions de balisage (exemple)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 - [Chapitre d’extensions de balisage XAML à partir du carnet de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Dictionnaires de ressources](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Dynamic Styles](~/xamarin-forms/user-interface/styles/dynamic.md)
+- [Styles dynamiques](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Liaison de données](~/xamarin-forms/app-fundamentals/data-binding/index.md)

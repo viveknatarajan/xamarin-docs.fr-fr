@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 3ff8800f4e8690069f5394193d11552d917baffe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e699fdc2092d17834c348c07f2440e40441ad86
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-settings"></a>Utilisation des paramètres
 
@@ -27,7 +27,7 @@ Dans le **application iPhone** dans votre solution (*pas* l’application watch 
 
 1. Avec le bouton droit **Ajouter > nouveau fichier...**  et choisissez **Settings.bundle** (vous ne pouvez pas modifier le nom dans la **nouveau fichier** boîte de dialogue) :
 
-   [ ![](settings-images/settings-add-sml.png "Ajouter un nouveau groupe de paramètres")](settings-images/settings-add.png)
+   [![](settings-images/settings-add-sml.png "Ajouter un nouveau groupe de paramètres")](settings-images/settings-add.png#lightbox)
 
 2. Remplacez le nom par **paramètres-Watch.bundle** (sélectionnez et tapez **commande + R** renommer) :
 
@@ -35,12 +35,12 @@ Dans le **application iPhone** dans votre solution (*pas* l’application watch 
 
 3. Ajoutez une nouvelle clé `ApplicationGroupContainerIdentifier` à la **Root.plist** avec la valeur définie pour le groupe d’application que vous avez configuré, (par exemple). `group.com.xamarin.WatchSettings` dans l’exemple) :
 
-   [ ![](settings-images/settings-appgroup-sml.png "Ajouter une clé ApplicationGroupContainerIdentifier le Root.plist")](settings-images/settings-appgroup.png)
+   [ ![](settings-images/settings-appgroup-sml.png "Ajouter une clé ApplicationGroupContainerIdentifier le Root.plist")](settings-images/settings-appgroup.png#lightbox)
 
 4. Modifier la **Settings-Watch.bundle/Root.plist** pour contenir les options que vous souhaitez utiliser - le fichier modèle contient un groupe.
   TextField, bouton bascule et curseur par défaut (que vous pouvez supprimer et remplacer avec vos propres paramètres) :
 
-  [ ![](settings-images/rootplist-sml.png "Modifier le Settings-Watch.bundle/Root.plist")](settings-images/rootplist.png)
+  [![](settings-images/rootplist-sml.png "Modifier le Settings-Watch.bundle/Root.plist")](settings-images/rootplist.png#lightbox)
 
 
 ## <a name="use-settings-in-the-watch-app"></a>Utiliser les paramètres dans l’application de surveillance
@@ -58,7 +58,7 @@ var userName = shared.StringForKey ("name_preference");
 
 ## <a name="apple-watch-app"></a>Application d’Apple Watch
 
-[ ![](settings-images/settings-app-sml.png "La nouvelle application Apple Watch sur l’iPhone")](settings-images/settings-app.png)
+[![](settings-images/settings-app-sml.png "La nouvelle application Apple Watch sur l’iPhone")](settings-images/settings-app.png#lightbox)
 
 Les utilisateurs interagissent avec les paramètres via la nouvelle **Apple Watch** application sur leur iPhone. Cette application permet à l’utilisateur permettant d’afficher/masquer les applications sur la surveillance, ainsi que modifier les paramètres exposées à l’aide du **Watch.bundle de paramètres**.
 

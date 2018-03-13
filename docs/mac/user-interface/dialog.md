@@ -3,16 +3,16 @@ title: "Boîtes de dialogue"
 description: "Cet article décrit l’utilisation des boîtes de dialogue et fenêtres modales dans une application Xamarin.Mac. Il décrit la création de fenêtres modales dans le générateur Xcode et d’Interface, utilisation des boîtes de dialogue standard et d’interagir avec ces contrôles dans le code c#."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
+ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9b65e870fae0074726d0bdd46d9eecbe99240e98
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 661874ae8599fed35ce10213fece383eb81de94d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="dialogs"></a>Boîtes de dialogue
 
@@ -22,7 +22,7 @@ Une boîte de dialogue s’affiche en réponse à une action de l’utilisateur 
 
 Windows peut être utilisée dans un état non modal (par exemple, un éditeur de texte qui peut ouvrir plusieurs documents en une seule fois) ou modale (par exemple, une boîte de dialogue d’exportation et doit être fermée avant que l’application peut continuer).
 
-[ ![](dialog-images/dialog03.png "Une boîte de dialogue Ouvrir")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "Une boîte de dialogue Ouvrir")](dialog-images/dialog03.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de l’utilisation des boîtes de dialogue et fenêtres modales dans une application Xamarin.Mac. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -44,25 +44,25 @@ En fonction d’Apple, il existe trois façons de présenter une boîte de dialo
 
 Norme `NSWindow` peut être utilisé comme une boîte de dialogue personnalisée en l’affichant sous forme modale :
 
-[ ![](dialog-images/modal01.png "Une fenêtre modale exemple")](dialog-images/modal01.png)
+[![](dialog-images/modal01.png "Une fenêtre modale exemple")](dialog-images/modal01.png#lightbox)
 
 ### <a name="document-modal-dialog-sheets"></a>Feuilles de boîte de dialogue modale de document
 
 A _feuille_ est une boîte de dialogue modale qui est attaché à une fenêtre de document donné, empêchant les utilisateurs d’interagir avec la fenêtre jusqu'à ce qu’ils faire disparaître la boîte de dialogue. Une feuille est attachée à la fenêtre à partir duquel il ressort, et qu’une seule feuille peut être ouverte pour une fenêtre à tout moment.
 
-[ ![](dialog-images/sheet08.png "Un exemple de feuille modale")](dialog-images/sheet08.png)
+[![](dialog-images/sheet08.png "Un exemple de feuille modale")](dialog-images/sheet08.png#lightbox)
 
 ### <a name="preferences-windows"></a>Préférences Windows
 
 Une fenêtre de préférences est une boîte de dialogue non modale qui contient les paramètres d’application que l’utilisateur change rarement. Préférences Windows incluent souvent une barre d’outils qui permet à l’utilisateur basculer entre les différents groupes de paramètres :
 
-[ ![](dialog-images/dialog02.png "Une fenêtre de préférence d’exemple")](dialog-images/dialog02.png)
+[![](dialog-images/dialog02.png "Une fenêtre de préférence d’exemple")](dialog-images/dialog02.png#lightbox)
 
 ### <a name="open-dialog"></a>Boîte de dialogue Ouvrir
 
 La boîte de dialogue Ouvrir fournit aux utilisateurs un moyen cohérent de rechercher et ouvrir un élément dans une application :
 
-[ ![](dialog-images/dialog03.png "Une boîte de dialogue Ouvrir")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "Une boîte de dialogue Ouvrir")](dialog-images/dialog03.png#lightbox)
 
 
 ### <a name="print-and-page-setup-dialogs"></a>Impression et boîtes de dialogue Mise en Page
@@ -71,37 +71,37 @@ macOS fournit impression standard et expérience de la Page le programme d’ins
 
 La boîte de dialogue d’impression peuvent être affiché à la fois une boîte de dialogue flottante libre :
 
-[ ![](dialog-images/print01.png "Une boîte de dialogue Imprimer")](dialog-images/print01.png)
+[![](dialog-images/print01.png "Une boîte de dialogue Imprimer")](dialog-images/print01.png#lightbox)
 
 Ou bien, il peut être affiché sous forme de tableau :
 
-[ ![](dialog-images/print02.png "Une feuille d’impression")](dialog-images/print02.png)
+[![](dialog-images/print02.png "Une feuille d’impression")](dialog-images/print02.png#lightbox)
 
 La boîte de dialogue de configuration de Page peut être affichée en tant que les deux une boîte de dialogue flottante libre :
 
-[ ![](dialog-images/print03.png "Une boîte de dialogue de configuration de page")](dialog-images/print03.png)
+[![](dialog-images/print03.png "Une boîte de dialogue de configuration de page")](dialog-images/print03.png#lightbox)
 
 Ou bien, il peut être affiché sous forme de tableau :
 
-[ ![](dialog-images/print04.png "Une feuille le programme d’installation")](dialog-images/print04.png)
+[![](dialog-images/print04.png "Une feuille le programme d’installation")](dialog-images/print04.png#lightbox)
 
 ### <a name="save-dialogs"></a>Enregistrer des boîtes de dialogue
 
 La boîte de dialogue Enregistrer offre aux utilisateurs un moyen cohérent pour enregistrer un élément dans une application. La boîte de dialogue Enregistrer a deux états : **minimale** (également appelé réduite) :
 
-[ ![](dialog-images/save01.png "Une boîte de dialogue d’enregistrement")](dialog-images/save01.png)
+[![](dialog-images/save01.png "Une boîte de dialogue d’enregistrement")](dialog-images/save01.png#lightbox)
 
 Et le **développée** état :
 
-[ ![](dialog-images/save02.png "Boîte de dialogue Enregistrer une étendue")](dialog-images/save02.png)
+[![](dialog-images/save02.png "Boîte de dialogue Enregistrer une étendue")](dialog-images/save02.png#lightbox)
 
 Le **minimale** boîte de dialogue Enregistrer peut également être affiché sous forme de tableau :
 
-[ ![](dialog-images/save03.png "Un nombre minimal d’enregistrement feuille")](dialog-images/save03.png)
+[![](dialog-images/save03.png "Un nombre minimal d’enregistrement feuille")](dialog-images/save03.png#lightbox)
 
 Comme vous pouvez le **développée** boîte de dialogue Enregistrer :
 
-[ ![](dialog-images/save04.png "Enregistrer une étendue")](dialog-images/save04.png)
+[![](dialog-images/save04.png "Enregistrer une étendue")](dialog-images/save04.png#lightbox)
 
 Pour plus d’informations, consultez la [boîtes de dialogue](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1) section d’Apple [indications de l’Interface du système d’exploitation X humaine](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
@@ -116,20 +116,20 @@ Pour ajouter une nouvelle fenêtre, procédez comme suit :
 1. Dans le **l’Explorateur de solutions**, ouvrez le `Main.storyboard` fichier pour le modifier dans le Générateur de Xcode Interface.
 2. Faites glisser une nouvelle **View Controller** dans l’aire de conception :
 
-    [ ![](dialog-images/new01.png "Sélection d’un contrôleur de vue de la bibliothèque")](dialog-images/new01.png)
+    [![](dialog-images/new01.png "Sélection d’un contrôleur de vue de la bibliothèque")](dialog-images/new01.png#lightbox)
 3. Dans le **inspecteur d’identité**, entrez `CustomDialogController` pour le **nom de la classe**: 
 
-    [ ![](dialog-images/new02.png "Définition du nom de classe")](dialog-images/new02.png)
+    [![](dialog-images/new02.png "Définition du nom de classe")](dialog-images/new02.png#lightbox)
 4. Basculez vers Visual Studio pour Mac, qu’il puisse synchroniser avec Xcode et créer le `CustomDialogController.h` fichier.
 5. Revenir à Xcode et concevoir votre interface : 
 
-    [ ![](dialog-images/new03.png "Conception de l’interface utilisateur dans Xcode")](dialog-images/new03.png)
+    [![](dialog-images/new03.png "Conception de l’interface utilisateur dans Xcode")](dialog-images/new03.png#lightbox)
 6. Créer un **Segue modale** à partir de la fenêtre principale de votre application sur le nouveau contrôleur de vue en faisant glisser le contrôle à partir de l’élément d’interface utilisateur qui ouvre la boîte de dialogue dans une fenêtre de la boîte de dialogue. Affecter le **identificateur** `ModalSegue`: 
 
-    [ ![](dialog-images/new06.png "Un segue modale")](dialog-images/new06.png)
+    [![](dialog-images/new06.png "Un segue modale")](dialog-images/new06.png#lightbox)
 6. Câble à distance les **Actions** et **prises**: 
 
-    [ ![](dialog-images/new04.png "Configuration d’une Action")](dialog-images/new04.png)
+    [![](dialog-images/new04.png "Configuration d’une Action")](dialog-images/new04.png#lightbox)
 6. Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
 Rendre le `CustomDialogController.cs` fichier ressemble les éléments suivants :
@@ -249,7 +249,7 @@ Ce code initialise le segue que nous avons défini dans le Générateur de Xcode
 
 Nous pouvons exécuter notre application et afficher la boîte de dialogue personnalisée :
 
-[ ![](dialog-images/new05.png "Une boîte de dialogue d’exemple")](dialog-images/new05.png)
+[![](dialog-images/new05.png "Une boîte de dialogue d’exemple")](dialog-images/new05.png#lightbox)
 
 Pour plus d’informations sur l’utilisation de windows dans une application Xamarin.Mac, veuillez consulter notre [utilisation des fenêtres](~/mac/user-interface/window.md) documentation.
 
@@ -264,19 +264,19 @@ Pour créer une feuille personnalisée dans Xamarin.Mac, nous allons effectuer l
 1. Dans le **l’Explorateur de solutions**, ouvrez le `Main.storyboard` fichier pour le modifier dans le Générateur de Xcode Interface.
 2. Faites glisser une nouvelle **View Controller** dans l’aire de conception :
 
-    [ ![](dialog-images/new01.png "Sélection d’un contrôleur de vue de la bibliothèque")](dialog-images/new01.png)
+    [![](dialog-images/new01.png "Sélection d’un contrôleur de vue de la bibliothèque")](dialog-images/new01.png#lightbox)
 2. Concevoir votre interface utilisateur :
 
-    [ ![](dialog-images/sheet01.png "La conception de l’interface utilisateur")](dialog-images/sheet01.png)
+    [![](dialog-images/sheet01.png "La conception de l’interface utilisateur")](dialog-images/sheet01.png#lightbox)
 3. Créer un **feuille Segue** à partir de votre fenêtre principale pour le nouveau contrôleur de vue : 
 
-    [ ![](dialog-images/sheet02.png "Sélection du type de segue feuille")](dialog-images/sheet02.png)
+    [![](dialog-images/sheet02.png "Sélection du type de segue feuille")](dialog-images/sheet02.png#lightbox)
 4. Dans le **inspecteur d’identité**, nommez le contrôleur de vue **classe** `SheetViewController`: 
 
-    [ ![](dialog-images/sheet03.png "Définition du nom de classe")](dialog-images/sheet03.png)
+    [![](dialog-images/sheet03.png "Définition du nom de classe")](dialog-images/sheet03.png#lightbox)
 5. Définir les nécessaires **prises** et **Actions**: 
 
-    [ ![](dialog-images/sheet04.png "Définition des prises et des Actions requises")](dialog-images/sheet04.png)
+    [![](dialog-images/sheet04.png "Définition des prises et des Actions requises")](dialog-images/sheet04.png#lightbox)
 6. Enregistrez vos modifications et revenir à Visual Studio pour Mac à synchroniser.
 
 Modifiez ensuite le `SheetViewController.cs` de fichier et le rendre l’aspect suivant :
@@ -407,7 +407,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 Si nous exécuter notre application et ouvrez la feuille, il sera attachée à la fenêtre :
 
-[ ![](dialog-images/sheet08.png "Un exemple de feuille")](dialog-images/sheet08.png)
+[![](dialog-images/sheet08.png "Un exemple de feuille")](dialog-images/sheet08.png#lightbox)
 
 <a name="Creating_a_Preferences_Dialog" />
 
@@ -481,36 +481,36 @@ Pour ajouter une nouvelle fenêtre, procédez comme suit :
 1. Dans le **l’Explorateur de solutions**, ouvrez le `Main.storyboard` fichier pour le modifier dans le Générateur de Xcode Interface.
 2. Faites glisser une nouvelle **fenêtre contrôleur** dans l’aire de conception :
 
-    [ ![](dialog-images/pref01.png "Sélectionnez un contrôleur de fenêtre à partir de la bibliothèque")](dialog-images/pref01.png)
+    [![](dialog-images/pref01.png "Sélectionnez un contrôleur de fenêtre à partir de la bibliothèque")](dialog-images/pref01.png#lightbox)
 3. Réorganiser la fenêtre près le **barre de menus** concepteur :
 
-    [ ![](dialog-images/pref02.png "Ajout de la nouvelle fenêtre")](dialog-images/pref02.png)
+    [![](dialog-images/pref02.png "Ajout de la nouvelle fenêtre")](dialog-images/pref02.png#lightbox)
 4. Créer des copies du contrôleur Vue attachée car il sera onglets dans votre affichage de préférence :
 
-    [ ![](dialog-images/pref03.png "Ajout de l’affichage des contrôleurs requis")](dialog-images/pref03.png)
+    [![](dialog-images/pref03.png "Ajout de l’affichage des contrôleurs requis")](dialog-images/pref03.png#lightbox)
 5. Faites glisser une nouvelle **contrôleur de la barre d’outils** à partir de la **bibliothèque**:
 
-    [ ![](dialog-images/pref04.png "Sélectionnez un contrôleur de barre d’outils à partir de la bibliothèque")](dialog-images/pref04.png)
+    [![](dialog-images/pref04.png "Sélectionnez un contrôleur de barre d’outils à partir de la bibliothèque")](dialog-images/pref04.png#lightbox)
 6. Et déposez-la sur la fenêtre dans l’aire de conception :
 
-    [ ![](dialog-images/pref05.png "Ajoutez un nouveau contrôleur de barre d’outils")](dialog-images/pref05.png)
+    [![](dialog-images/pref05.png "Ajoutez un nouveau contrôleur de barre d’outils")](dialog-images/pref05.png#lightbox)
 7. La conception de votre barre d’outils de disposition :
 
-    [ ![](dialog-images/pref06.png "La barre d’outils de disposition")](dialog-images/pref06.png)
+    [![](dialog-images/pref06.png "La barre d’outils de disposition")](dialog-images/pref06.png#lightbox)
 8. Cliquez sur le contrôle et faites glisser à partir de chaque **bouton de barre d’outils** pour les vues que vous avez créé précédemment. Sélectionnez un **personnalisé** segue type :
 
-    [ ![](dialog-images/pref07.png "La définition du type segue")](dialog-images/pref07.png)
+    [![](dialog-images/pref07.png "La définition du type segue")](dialog-images/pref07.png#lightbox)
 9. Sélectionnez le nouveau Segue et définissez la **classe** à `ReplaceViewSegue`:
 
-    [ ![](dialog-images/pref08.png "Définition de la classe segue")](dialog-images/pref08.png)
+    [![](dialog-images/pref08.png "Définition de la classe segue")](dialog-images/pref08.png#lightbox)
 10. Dans le **Menubar concepteur** sur l’aire de conception, dans le Menu Application, sélectionnez **préférences...** la touche CTRL enfoncée et faire glisser vers la fenêtre de préférences pour créer un **afficher** segue :
 
-    [ ![](dialog-images/pref09.png "La définition du type segue")](dialog-images/pref09.png)
+    [![](dialog-images/pref09.png "La définition du type segue")](dialog-images/pref09.png#lightbox)
 11. Enregistrez vos modifications et revenir à Visual Studio pour Mac à synchroniser.
 
 Si nous exécuter le code et sélectionnez le **préférences...**  à partir de la **Menu Application**, la fenêtre s’affichera :
 
-[ ![](dialog-images/pref10.png "Une fenêtre de préférences de l’exemple")](dialog-images/pref10.png)
+[![](dialog-images/pref10.png "Une fenêtre de préférences de l’exemple")](dialog-images/pref10.png#lightbox)
 
 Pour plus d’informations sur l’utilisation de Windows et des barres d’outils, consultez notre [Windows](~/mac/user-interface/window.md) et [barres d’outils](~/mac/user-interface/toolbar.md) documentation.
 
@@ -719,7 +719,7 @@ namespace SourceWriter
 
 Connectez-vous ensuite la classe de préférence pour les éléments d’interface utilisateur dans la fenêtre de préférence et de vues créé ci-dessus. Dans le Générateur de l’Interface, sélectionnez un contrôleur de vue de préférence et basculer vers le **inspecteur d’identité**, créez une classe personnalisée pour le contrôleur : 
 
-[ ![](dialog-images/prefs12.png "L’inspecteur de l’identité")](dialog-images/prefs12.png)
+[![](dialog-images/prefs12.png "L’inspecteur de l’identité")](dialog-images/prefs12.png#lightbox)
 
 Revenez à Visual Studio pour Mac synchroniser vos modifications et ouvrez la classe qui vient d’être créée pour la modification. Rendre la classe ressembler aux éléments suivants :
 
@@ -758,7 +758,7 @@ Notez que cette classe a fait deux choses ici : tout d’abord, est une applica
 
 Ensuite, double-cliquez sur le fichier d’animation pour rouvrir dans le Générateur de Interface (et voir les modifications apportées juste au-dessus). Faites glisser les contrôles d’interface utilisateur requis pour générer l’interface Préférences dans la vue. Pour chaque contrôle, basculez vers le **l’inspecteur de liaison** et lier les propriétés individuelles de la **AppPreference** classe :
 
-[ ![](dialog-images/prefs13.png "L’inspecteur de liaison")](dialog-images/prefs13.png)
+[![](dialog-images/prefs13.png "L’inspecteur de liaison")](dialog-images/prefs13.png#lightbox)
 
 Répétez les étapes ci-dessus pour tous les panneaux (affichage des contrôleurs) et les propriétés de préférence requises.
 
@@ -903,7 +903,7 @@ namespace SourceWriter
 
 Avec toutes ces modifications en place, si l’utilisateur modifie les préférences de l’application et ferme la fenêtre de préférence, les modifications seront appliquées à toutes les fenêtres ouvertes :
 
-[ ![](dialog-images/prefs14.png "Une fenêtre de préférences de l’exemple")](dialog-images/prefs14.png)
+[![](dialog-images/prefs14.png "Une fenêtre de préférences de l’exemple")](dialog-images/prefs14.png#lightbox)
 
 <a name="The_Open_Dialog" />
 
@@ -954,7 +954,7 @@ La boîte de dialogue Ouvrir retourne les fichiers sélectionnés ou les répert
 
 Si nous exécuter le programme et sélectionnez le **ouvrir...**  d’élément à partir de la **fichier** menu, le texte suivant s’affiche : 
 
-[ ![](dialog-images/dialog03.png "Une boîte de dialogue Ouvrir")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "Une boîte de dialogue Ouvrir")](dialog-images/dialog03.png#lightbox)
 
 <a name="The_Print_and_Page_Setup_Dialogs" />
 
@@ -991,11 +991,11 @@ void ShowDocument (NSObject sender) {
 
 Si vous définissez la `ShowPrintAsSheet` propriété `false`, exécutez l’application et afficher la boîte de dialogue d’impression, ce qui suit s’affiche :
 
-[ ![](dialog-images/print01.png "Une boîte de dialogue Imprimer")](dialog-images/print01.png)
+[![](dialog-images/print01.png "Une boîte de dialogue Imprimer")](dialog-images/print01.png#lightbox)
 
 Si défini le `ShowPrintAsSheet` propriété `true`, exécutez l’application et afficher la boîte de dialogue d’impression, ce qui suit s’affiche :
 
-[ ![](dialog-images/print02.png "Une feuille d’impression")](dialog-images/print02.png)
+[![](dialog-images/print02.png "Une feuille d’impression")](dialog-images/print02.png#lightbox)
 
 Le code suivant affiche la boîte de dialogue Mise en Page :
 
@@ -1022,11 +1022,11 @@ void ShowLayout (NSObject sender) {
 
 Si vous définissez la `ShowPrintAsSheet` propriété `false`, exécutez l’application et afficher la boîte de dialogue d’impression, ce qui suit s’affiche :
 
-[ ![](dialog-images/print03.png "Une boîte de dialogue de configuration de page")](dialog-images/print03.png)
+[![](dialog-images/print03.png "Une boîte de dialogue de configuration de page")](dialog-images/print03.png#lightbox)
 
 Si défini le `ShowPrintAsSheet` propriété `true`, exécutez l’application et afficher la boîte de dialogue d’impression, ce qui suit s’affiche :
 
-[ ![](dialog-images/print04.png "Une feuille le programme d’installation")](dialog-images/print04.png)
+[![](dialog-images/print04.png "Une feuille le programme d’installation")](dialog-images/print04.png#lightbox)
 
 Pour plus d’informations sur l’utilisation de l’impression et de boîtes de dialogue de Page le programme d’installation, consultez le site d’Apple [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092), [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) et [présentation de l’impression](http://sdg.mesonet.org/people/brad/XCode3/Documentation/DocSets/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.docset/Contents/Resources/Documents/#documentation/Cocoa/Conceptual/Printing/Printing.html#//apple_ref/doc/uid/10000083-SW1) documentation.
 
@@ -1076,19 +1076,19 @@ Le `AllowedFileTypes` propriété est un tableau de types de fichiers que l’ut
 
 Si vous définissez la `ShowSaveAsSheet` propriété `false`, exécutez l’application et sélectionnez **Enregistrer sous...**  à partir de la **fichier** menu, ce qui suit s’affiche :
 
-[ ![](dialog-images/save01.png "Une boîte de dialogue d’enregistrement")](dialog-images/save01.png)
+[![](dialog-images/save01.png "Une boîte de dialogue d’enregistrement")](dialog-images/save01.png#lightbox)
 
 L’utilisateur peut développer la boîte de dialogue :
 
-[ ![](dialog-images/save02.png "Boîte de dialogue Enregistrer une étendue")](dialog-images/save02.png)
+[![](dialog-images/save02.png "Boîte de dialogue Enregistrer une étendue")](dialog-images/save02.png#lightbox)
 
 Si vous définissez la `ShowSaveAsSheet` propriété `true`, exécutez l’application et sélectionnez **Enregistrer sous...**  à partir de la **fichier** menu, ce qui suit s’affiche :
 
-[ ![](dialog-images/save03.png "Un enregistrement feuille")](dialog-images/save03.png)
+[![](dialog-images/save03.png "Un enregistrement feuille")](dialog-images/save03.png#lightbox)
 
 L’utilisateur peut développer la boîte de dialogue :
 
-[ ![](dialog-images/save04.png "Enregistrer une étendue")](dialog-images/save04.png)
+[![](dialog-images/save04.png "Enregistrer une étendue")](dialog-images/save04.png#lightbox)
 
 Pour plus d’informations sur l’utilisation de la boîte de dialogue Enregistrer, consultez le site d’Apple [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) documentation.
 
@@ -1105,7 +1105,7 @@ Cet article a pris une présentation détaillée sur l’utilisation des fenêtr
 - [Menus](~/mac/user-interface/menu.md)
 - [Fenêtres](~/mac/user-interface/window.md)
 - [Barres d’outils](~/mac/user-interface/toolbar.md)
-- [Indications de l’Interface du système d’exploitation X humaines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduction à Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 - [Présentation des feuilles](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Sheets/Sheets.html#//apple_ref/doc/uid/10000002i)
 - [Présentation de l’impression](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Printing/osxp_aboutprinting/osxp_aboutprt.html)

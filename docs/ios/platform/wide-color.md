@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ab6124e2b11d26d4c10330e7b824e4761ebf4603
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="wide-color"></a>Couleur large
 
@@ -38,19 +38,19 @@ Les concepts de couleur de base suivants doivent être couverts avant d’effect
 
 Un espace de couleurs est un environnement dans lequel les couleurs peuvent être représentés et comparées. Il peut être un espace de dimensions d’un à quatre est défini par l’intensité de ses composants de couleur. 
 
-[ ![](wide-color-images/color00.png "Un espace de couleurs")](wide-color-images/color00.png)
+[![](wide-color-images/color00.png "Un espace de couleurs")](wide-color-images/color00.png#lightbox)
 
 ### <a name="color-channels"></a>Les canaux de couleur
 
 Les composants de couleur peuvent également être appelés canaux de couleur. Certaines représentations familiers serait les espaces RVB, gris espaces, espaces CMJN ou appareil indépendants espaces. 
 
-[ ![](wide-color-images/color02.png "Les composants de couleur peuvent également être appelés canaux de couleur")](wide-color-images/color02.png)
+[![](wide-color-images/color02.png "Les composants de couleur peuvent également être appelés canaux de couleur")](wide-color-images/color02.png#lightbox)
 
 ### <a name="color-primaries"></a>Couleurs primaires
 
 Couleurs primaires fournissent le système de coordonnées qui est utilisé pour comparer et le calcul des couleurs. Couleurs primaires appartiennent généralement les plus intense version de la couleur donnée peut être générée dans le canal de couleur.
 
-[ ![](wide-color-images/color01.png "Le système de coordonnées qui est utilisé pour comparer et couleurs de calcul fournissent des couleurs primaires")](wide-color-images/color01.png)
+[![](wide-color-images/color01.png "Le système de coordonnées qui est utilisé pour comparer et couleurs de calcul fournissent des couleurs primaires")](wide-color-images/color01.png#lightbox)
 
 Dans le cas de l’espace de couleurs RVB représenté ci-dessus, les couleurs primaires sont où le `1.0` coordonnées sont ancrées (tel que `[1.0, 0.0, 0.0]` pour le rouge).
 
@@ -58,7 +58,7 @@ Dans le cas de l’espace de couleurs RVB représenté ci-dessus, les couleurs p
 
 Gamme de couleurs fait référence à toutes les couleurs qui peuvent être définies comme une combinaison des canaux de couleurs individuels au sein d’un espace de couleurs donné.
 
-[ ![](wide-color-images/color03.png "Exemple de gamme de couleurs")](wide-color-images/color03.png)
+[![](wide-color-images/color03.png "Exemple de gamme de couleurs")](wide-color-images/color03.png#lightbox)
 
 ## <a name="what-is-wide-color"></a>Quelle est la couleur large
 
@@ -80,7 +80,7 @@ Les utilisateurs qui ont été capture d’images numériques au format brut peu
 
 2015, Apple a publié des nouveaux produits (iMac et iPad Pro 9.7") qui fournissent le nouvel espace de couleur P3 complet pour gérer les problèmes créés par l’espace colorimétrique sRGB.
 
-[ ![](wide-color-images/color04.png "Le nouvel espace de couleur P3 affichage")](wide-color-images/color04.png)
+[![](wide-color-images/color04.png "Le nouvel espace de couleur P3 affichage")](wide-color-images/color04.png#lightbox)
 
 L’espace de couleurs d’affichage P3 a les propriétés suivantes :
 
@@ -112,7 +112,7 @@ En permettant à des valeurs inférieures à zéro et supérieur à un, le sRGB 
 
 Pour voir comment les valeurs en dehors de zéro et un fonctionnent dans l’espace colorimétrique de plage étendue sRGB, prenons l’exemple suivant de la de la plus saturée rouge disponible dans l’espace de couleurs d’affichage P3 :
 
-[ ![](wide-color-images/color05.png "Fonctionnement des valeurs en dehors de zéro et un dans l’espace colorimétrique de plage étendue sRGB")](wide-color-images/color05.png)
+[![](wide-color-images/color05.png "Fonctionnement des valeurs en dehors de zéro et un dans l’espace colorimétrique de plage étendue sRGB")](wide-color-images/color05.png#lightbox)
 
 Dans l’affichage, P3, cette couleur est représentée en tant que `[1.0, 0.0, 0.0]` et sRVB de plage étendue il serait `[1.358, -0.074, -0.012]`. Les valeurs sRGB étant complètes contenue à l’intérieur d’affichage P3 et les valeurs d’affichage P3 disposer « en dehors de » des plages sRVB.
 

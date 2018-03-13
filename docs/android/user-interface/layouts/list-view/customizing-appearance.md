@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 18c53ed6428eff911420c696d45b341d8e0fa5c1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1bf481e4999365f4afc52cb9dda83c6e627950e1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-listviews-appearance"></a>Personnaliser l’apparence d’une liste
 
-<a name="overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
 L’apparence d’un contrôle ListView est dictée par la disposition des lignes affichées. Pour modifier l’apparence d’un `ListView`, utilisez une disposition de ligne différentes.
 
-<a name="Built-in_Row_Views" />
 
 ## <a name="built-in-row-views"></a>Vues de ligne intégré
 
@@ -53,11 +51,11 @@ Il existe des douze vues intégrées qui peuvent être référencés à l’aide
 
 Chaque vue de ligne intégré possède un style intégré associé. Ces captures d’écran montrent comment chaque vue s’affiche :
 
-[![Captures d’écran de TestListItem, SimpleSelectableListItem, SimpleListitem1 et SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png)
+[![Captures d’écran de TestListItem, SimpleSelectableListItem, SimpleListitem1 et SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
 
-[![Captures d’écran de SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked et SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png)
+[![Captures d’écran de SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked et SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
 
-[![Captures d’écran de SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem et SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png)
+[![Captures d’écran de SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem et SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
 
 Le **BuiltInViews/HomeScreenAdapter.cs** exemple de fichier (dans le **BuiltInViews** solution) contient le code pour produire les écrans d’élément de liste non extensible. La vue est définie le `GetView` méthode comme suit :
 
@@ -88,7 +86,6 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 Les propriétés de l’affichage du groupe et de la vue enfant peuvent ensuite être définies en faisant référence à la norme `Text1` et `Text2` contrôle des identificateurs comme indiqué ci-dessus. La capture d’écran SimpleExpandableListItem (illustré ci-dessus) fournit un exemple d’un groupe d’une ligne (SimpleExpandableListItem1) et une vue de deux lignes enfants (SimpleExpandableListItem2). Ou bien, l’affichage du groupe peut être configuré pour les deux lignes (SimpleExpandableListItem2) et la vue enfant peut être configurée pour une seule ligne (SimpleExpandableListItem1), ou les deux groupe vue et vue enfant peut avoir le même nombre de lignes. 
 
 
-<a name="Accessories" />
 
 ## <a name="accessories"></a>Accessoires
 
@@ -102,7 +99,7 @@ Lignes peuvent avoir des accessoires ajoutées à droite de la vue pour indiquer
 
 Les accessoires susmentionnés sont illustrées dans les écrans suivants, dans leur ordre respectif :
 
-[![Captures d’écran de SimpleListItemChecked, SimpleListItemSingleChoice et SimpleListItemMultipleChoice avec accessoires](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png)
+[![Captures d’écran de SimpleListItemChecked, SimpleListItemSingleChoice et SimpleListItemMultipleChoice avec accessoires](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
 
 Pour afficher l’un de ces passe accessoires l’ID de ressource de disposition requises pour l’adaptateur puis définie manuellement l’état de sélection pour les lignes requises. Cette ligne de code montre comment créer et affecter un `Adapter` en utilisant l’une de ces mises en page :
 
@@ -112,7 +109,6 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 
 Le `ListView` lui-même prend en charge différents modes de sélection, quel que soit l’accessoire affiché. Pour éviter toute confusion, utilisez `Single` en mode de sélection avec `Checked` et `SingleChoice` accessoires et les `Multiple` mode avec la `MultipleChoice` style. Le mode de sélection est contrôlé par le `ChoiceMode` propriété de la `ListView`.
 
-<a name="Handling_API_Level" />
 
 ### <a name="handling-api-level"></a>Niveau de la gestion des API
 
@@ -137,7 +133,6 @@ lv.ChoiceMode = Android.Widget.ChoiceMode.Single; // Single
 */
 ```
 
-<a name="Selecting_Items_Programmatically" />
 
 ### <a name="selecting-items-programmatically"></a>Sélection d’éléments par programmation
 
@@ -165,7 +160,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-<a name="Creating_Custom_Row_Layouts" />
 
 ## <a name="creating-custom-row-layouts"></a>Créer des dispositions de ligne personnalisée
 
@@ -188,7 +182,6 @@ Cet exemple diffère des exemples précédents de plusieurs façons :
 
 Ces modifications sont détaillées ci-dessous, en commençant par la création de l’activité et la vue de ligne personnalisée et puis portant sur les modifications apportées à l’adaptateur et l’activité afin de les afficher.
 
-<a name="Adding_a_ListView_to_an_Activity_Layout" />
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>Ajout d’un contrôle ListView à une disposition d’activité
 
@@ -220,7 +213,6 @@ Ces modifications sont détaillées ci-dessous, en commençant par la création 
 
 L’avantage d’utiliser un `Activity` avec une disposition personnalisée (au lieu d’un `ListActivity`) réside dans leur capacité à ajouter des contrôles supplémentaires à l’écran, telles que l’en-tête `TextView` dans cet exemple.
 
-<a name="Creating_a_Custom_Row_Layout" />
 
 ### <a name="creating-a-custom-row-layout"></a>Création d’une disposition de ligne personnalisée
 
@@ -267,7 +259,6 @@ Un autre fichier de disposition AXML est requise pour contenir la disposition pe
 
 Lors d’une disposition de ligne personnalisée peut contenir de nombreux contrôles différents, le défilement de performances peut être affecté par des conceptions complexes et à l’aide de l’image (en particulier si elles doivent être chargées sur le réseau). Voir l’article de Google pour plus d’informations sur les problèmes de performances défilement.
 
-<a name="Referencing_a_Custom_Row_View" />
 
 ### <a name="referencing-a-custom-row-view"></a>Faisant référence à une vue de ligne personnalisée
 
@@ -309,7 +300,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-<a name="Referencing_the_Custom_ListView_in_the_Activity" />
 
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>Référencement de ListView personnalisé dans l’activité
 
@@ -343,10 +333,9 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 L’écran ressemble à ceci :
 
-[![Capture d’écran de la CustomRowView résultant](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png)
+[![Capture d’écran de la CustomRowView résultant](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
 
 
-<a name="Customizing_the_Row_Selector_Color" />
 
 ### <a name="customizing-the-row-selector-color"></a>Personnalisation de la couleur de sélecteur de ligne
 
@@ -386,10 +375,9 @@ android:background="@drawable/CustomSelector"
 
 Une ligne sélectionnée et correspondants `Toast` message se présente comme suit :
 
-[![Une ligne sélectionnée en orange, avec le message de Toast affichant le nom de la ligne sélectionnée](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png)
+[![Une ligne sélectionnée en orange, avec le message de Toast affichant le nom de la ligne sélectionnée](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
 
-<a name="Preventing_Flickering_on_Custom_Layouts" />
 
 ### <a name="preventing-flickering-on-custom-layouts"></a>Empêche le scintillement dans les dispositions personnalisées
 

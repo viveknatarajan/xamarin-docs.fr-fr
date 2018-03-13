@@ -1,5 +1,6 @@
 ---
 title: "Informations de référence sur les contrôles"
+description: "Description de tous les éléments visuels utilisés pour construire une application de Xamarin.Forms."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
@@ -7,33 +8,31 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 0e348759164668a223e19fb6355b3b8d758395a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e1e6234f0eadcbcbecc8d58a4774db88606be290
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="controls-reference"></a>Informations de référence sur les contrôles
 
-Xamarin.Forms utilise les contrôles natifs de chaque plateforme cible.
-Cela signifie que les applications peuvent utiliser [bibliothèques de classes portables](~/cross-platform/app-fundamentals/pcl.md) ou [projets partagés](~/cross-platform/app-fundamentals/shared-projects.md) à héberger ce code partagé, puis vérifiez les applications de spécifique de plate-forme qui consommeront le code partagé.
+_Description de tous les éléments visuels utilisés pour construire une application de Xamarin.Forms._
 
-Il existe quatre groupes de contrôle principal permet de créer l’interface utilisateur d’une application Xamarin.Forms :
+L’interface visuelle d’une application de Xamarin.Forms est construit des objets qui mappent aux contrôles natifs de chaque plateforme cible. Cela permet aux applications spécifiques à la plateforme pour iOS, Android et la plateforme Windows universelle à utiliser le code de Xamarin.Forms contenu dans un [bibliothèque de classes portables](~/cross-platform/app-fundamentals/pcl.md), un [bibliothèque Standard de .NET](~/cross-platform/app-fundamentals/net-standard.md), ou un [ Projet partagés](~/cross-platform/app-fundamentals/shared-projects.md).
+
+Les quatre groupes de contrôle principal permet de créer l’interface utilisateur d’une application Xamarin.Forms sont répertoriées dans les articles suivants de quatre :
 
 - [**Pages**](pages.md)
 - [**Mises en page**](layouts.md)
 - [**Views**](views.md)
 - [**Cells**](cells.md)
 
-Lors de l’exécution de que chaque contrôle est mappée en son équivalent natif, ce qui est ce que sera restitué.
+En règle générale, une page Xamarin.Forms occupe tout l’écran. La page contient généralement une mise en page, qui contient les vues et éventuellement d’autres dispositions. Les cellules sont des composants spécialisés utilisés par [ `TableView` ](views.md#tableView) et [ `ListView` ](views.md#listView).
 
-Cette section sert de référence indiquant la plupart des contrôles d’interface utilisateur disponibles pour une utilisation avec Xamarin.Forms et est accompagnée par le [FormsGallery exemple](https://developer.xamarin.com/samples/FormsGallery/), qui montre une utilisation de base de chaque contrôle.
-Chaque description est également liée à la [Documentation de l’API](https://developer.xamarin.com/api/namespace/Xamarin.Forms/).
-
-
+Dans les quatre articles sur [ **Pages**](pages.md), [ **dispositions**](layouts.md), [ **vues** ](views.md), et [ **cellules**](cells.md), chaque type de contrôle est décrit avec des liens vers un ou plusieurs exemples de programmes, un article décrivant son utilisation (le cas échéant) et sa documentation API (s’ils existent). Chaque type de contrôle est également accompagné d’une capture d’écran montrant une page à partir de la [ **FormsGallery** ](https://developer.xamarin.com/samples/FormsGallery/) exemple en cours d’exécution sur iOS, Android et UWP périphériques. Chaque capture d’écran ci-dessous sont des liens vers le code source pour le langage c#, la page équivalent XAML et (le cas échéant) le fichier code-behind c# pour la page XAML.
 
 ## <a name="related-links"></a>Liens associés
 
 - [Introduction à Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [La galerie de Xamarin.Forms (exemple)](https://developer.xamarin.com/samples/FormsGallery/)
-- [Documentation de l’API](https://developer.xamarin.com/api/namespace/Xamarin.Forms/)
+- [Exemple de Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
+- [Documentation de l’API](https://developer.xamarin.com/api/root/Xamarin.Forms/)

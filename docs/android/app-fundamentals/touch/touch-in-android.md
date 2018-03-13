@@ -6,12 +6,12 @@ ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 83997018f4e08567a9150bf1e21374a98c8ddb4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 1d9cf345aa971c40f4132cc7970ed1244640da14
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-android"></a>Touch dans Android
 
@@ -33,7 +33,7 @@ Le `MotionEvent` objet sera passé à une méthode appropriée dans une applicat
 
 
 > [!NOTE]
-> **Remarque :** pas tous les appareils Android prennent en charge les écrans tactiles. 
+> Tous les périphériques Android prend en charge les écrans tactiles. 
 
 Ajout de la balise suivante à votre fichier manifeste entraîne Google Play pour affichage uniquement votre application à ces appareils sont tactile :
 
@@ -90,11 +90,11 @@ Mouvements sont un excellent moyen pour les utilisateurs à interagir avec une a
 
 Depuis Android 1.6, le Kit de développement logiciel Android est fourni avec une application préinstallée sur l’émulateur de générateur de mouvements. Cette application permet à un développeur créer des mouvements prédéfinis qui peuvent être incorporés dans une application. La capture d’écran suivante montre un exemple de générateur de mouvements :
 
-[![Capture d’écran de générateur de mouvements avec des mouvements de l’exemple](touch-in-android-images/image11.png)](touch-in-android-images/image11.png)
+[![Capture d’écran de générateur de mouvements avec des mouvements de l’exemple](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 Une version améliorée de cette application appelée outil de mouvement sont accessibles Google Play. Outil de mouvement est très similaire à un générateur de mouvements, sauf qu’elle vous permet de tester les mouvements après que qu’ils ont été créés. Cette capture d’écran suivante montre le Générateur de mouvements :
 
-[![Capture d’écran de mouvement outil avec des mouvements de l’exemple](touch-in-android-images/image12.png)](touch-in-android-images/image12.png)
+[![Capture d’écran de mouvement outil avec des mouvements de l’exemple](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 Outil de mouvement est un peu plus utile pour créer des mouvements personnalisés car elle permet les mouvements à tester leur création et est facilement disponible via Google Play.
 

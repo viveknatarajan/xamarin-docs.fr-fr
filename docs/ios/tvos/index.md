@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c40472f794be9a21045da4f4477d4104c3ddbdd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7246379fbe5918671de68cd4af10d1ce497e7c4e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-tvos"></a>Présentation de tvOS
 
@@ -23,6 +24,10 @@ Apple a publié la génération 5 du matériel Apple TV, le Kit de développemen
 La plateforme Apple TV est ouverte pour les développeurs, en les autorisant à créer des applications riches et réalistes et de les libérer par le biais du magasin d’applications Apple téléviseurs intégrés.
 
 Pour plus d’informations sur tvOS, consultez la [mise en route](~/ios/tvos/get-started/index.md) document.
+
+> [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
+
+**tvOS avec Xamarin, par [Xamarin University](https://university.xamarin.com/)**
 
 ## <a name="documentation"></a>Documentation
 
@@ -70,7 +75,7 @@ Signaler les problèmes et les suggestions [sur GitHub](https://github.com/xamar
 
 ## <a name="related-links"></a>Liens associés
 
-- [Exemples de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Exemples tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS les Guides Interface humaine](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guide de programmation d’application de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

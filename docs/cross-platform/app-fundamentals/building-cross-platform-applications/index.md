@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: 8db4a816becca54428b3524f79b6ebc5ff4ec084
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7934738a546a266036573b81e15ef9b2fa28d7b4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sharing-code-options"></a>Options de partage de Code
 
@@ -51,7 +51,7 @@ Les principes présentés dans ce document sont placées dans la pratique dans l
 Tasky est une application de liste de tâches simple pour iOS, Android et Windows Phone.
 Il illustre les principes fondamentaux de la création d’une application multiplateforme avec Xamarin et utilise une base de données local SQLite.
 
- [ ![liste tasky](images/iphone-list-sml.png)](images/iphone-list.png) [ ![tasky détail](images/iphone-detail-sml.png)](images/iphone-detail.png)
+ [![liste tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [ ![tasky liste](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 Lecture la [étude de cas Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 

@@ -7,12 +7,12 @@ ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: adfc0da404c6b9df79c3b2be51f8cafa302a6bc3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: c4800c1fe844a03c20b28079640a5ddab8046b1f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-localization"></a>Localisation Android
 
@@ -81,7 +81,7 @@ La plupart des développeurs sont déjà familiarisés avec l’utilisation de *
 ![Capture d’écran de dossiers de ressources/drawable et ressources/valeurs pour plusieurs identificateurs de culturels](localization-images/resources.png)
 
 > [!NOTE]
-> **Remarque :** lors de la spécification d’un langage de niveau supérieur comme `es` seuls deux caractères sont requis ; Toutefois, lorsque vous spécifiez un ensemble des paramètres régionaux, le format du nom de répertoire requiert un tiret et les minuscules **r** pour séparer les deux parties, par exemple **pt-rBR** ou **zh-rCN**. Comparer la valeur retournée dans le code, ce qui a un trait de soulignement (par exemple). `pt_BR`). Ces deux éléments sont différents de la valeur .NET `CultureInfo` classe, qui a un tiret uniquement (par exemple). `pt-BR`). Gardez ces différences à l’esprit lorsque vous travaillez sur plusieurs plateformes de Xamarin.
+> Lorsque vous spécifiez un langage de niveau supérieur comme `es` seuls deux caractères sont requis ; Toutefois, lorsque vous spécifiez un ensemble des paramètres régionaux, le format du nom de répertoire requiert un tiret et les minuscules **r** pour séparer les deux parties, par exemple **pt-rBR** ou **zh-rCN**. Comparer la valeur retournée dans le code, ce qui a un trait de soulignement (par exemple). `pt_BR`). Ces deux éléments sont différents de la valeur .NET `CultureInfo` classe, qui a un tiret uniquement (par exemple). `pt-BR`). Gardez ces différences à l’esprit lorsque vous travaillez sur plusieurs plateformes de Xamarin.
 
 #### <a name="stringsxml-file-format"></a>Format de fichier Strings.Xml
 
@@ -164,13 +164,13 @@ Dans la **Strings.xml**
 
 ```xml
 <plurals name="numberOfTasks">
-         <!--
-                    As a developer, you should always supply "one" and "other"
-                    strings. Your translators will know which strings are actually
-                    needed for their language.
-             -->
-         <item quantity="one">There is %d task left.</item>
-         <item quantity="other">There are %d tasks still to do.</item>
+   <!--
+      As a developer, you should always supply "one" and "other"
+      strings. Your translators will know which strings are actually
+      needed for their language.
+    -->
+   <item quantity="one">There is %d task left.</item>
+   <item quantity="other">There are %d tasks still to do.</item>
  </plurals>
 ```
 
@@ -229,15 +229,13 @@ Lorsque vous utilisez Android 4.2 (API niveau 17) et alignement plus récente, l
 
 La capture d’écran suivante affiche le [localisée **Tasky** exemple](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) en chiffres arabes :
 
-[![Capture d’écran de l’application Tasky en arabe](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png) 
+[![Capture d’écran de l’application Tasky en arabe](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 La capture d’écran suivante affiche le [localisée **Tasky** exemple](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) en hébreu :
 
-[![Capture d’écran de l’application Tasky en hébreu](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png)
+[![Capture d’écran de l’application Tasky en hébreu](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 Texte de droite à gauche est localisé à l’aide de **Strings.xml** les fichiers de la même façon sous forme de texte LTR.
-
-<a name="testing" />
 
 ## <a name="testing"></a>Test
 

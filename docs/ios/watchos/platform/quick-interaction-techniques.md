@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 75a8e807a68a3fccfa76fc7ba1f260818b25174d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf93744914a0caf4f6599fc333ae200468d66e48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-interaction-techniques-for-watchos-3"></a>Techniques d’Interaction rapide pour watchOS 3
 
@@ -77,7 +77,7 @@ Dans le code, répondre à l’Action de la reconnaissance à gérer le mouvemen
 
 Pour les mouvements discrètes, l’Action est appelée lorsque le mouvement est reconnu et un état (`WKGestureRecognizerState`) est attribué en tant que :
 
-[ ![](quick-interaction-techniques-images/quick01.png "États de mouvement discrets")](quick-interaction-techniques-images/quick01.png)
+[![](quick-interaction-techniques-images/quick01.png "États de mouvement discrets")](quick-interaction-techniques-images/quick01.png#lightbox)
 
 Tous les mouvements discrètes démarrent le `Possible` état et la transition vers un le `Failed` ou `Recognized` état. Lorsque vous utilisez des mouvements discrètes, le développeur ne traitent généralement directement avec l’état. Au lieu de cela, elles s’appuient sur l’Action qui est appelée lorsque le mouvement est reconnu uniquement.
 
@@ -85,7 +85,7 @@ Tous les mouvements discrètes démarrent le `Possible` état et la transition v
 
 Les mouvements continues diffèrent légèrement de mouvements discret, où l’Action est appelée plusieurs fois, comme les mouvements est reconnu :
 
-[ ![](quick-interaction-techniques-images/quick02.png "États de mouvement continu")](quick-interaction-techniques-images/quick02.png)
+[![](quick-interaction-techniques-images/quick02.png "États de mouvement continu")](quick-interaction-techniques-images/quick02.png#lightbox)
 
 Là encore, les mouvements continue commence dans le `Possible` état, mais ils la progression des mises à jour. Ici le développeur doit prendre en compte les état du module de reconnaissance et de mettre à jour de l’interface utilisateur de l’application pendant la `Changed` phase jusqu'à ce que le mouvement est enfin `Recognized` ou `Canceled`.
 
@@ -168,7 +168,7 @@ Apple a laissé au développeur de déterminer la façon dont les nombres de rot
 
 Le signe (`+/-`) de la rotation Delta indique la direction que l’utilisateur aura la couronne numérique :
 
-[ ![](quick-interaction-techniques-images/quick03.png "Le signe de l’écart de rotation indique la direction que l’utilisateur aura la couronne numérique")](quick-interaction-techniques-images/quick03.png)
+[![](quick-interaction-techniques-images/quick03.png "Le signe de l’écart de rotation indique la direction que l’utilisateur aura la couronne numérique")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 
 Si l’utilisateur est défilement vers le haut, WatchKit retournera les deltas positifs et si le défilement vers le bas, puis deltas négatifs seront renvoyés, quel que soit le quelles orientation de l’utilisateur porte l’observation dans.
@@ -189,15 +189,15 @@ Il incombe au développeur de déterminer quand l’élément d’interface pers
 
 Le standard qu’un utilisateur accède à une vue de Table dans une application watchOS consiste à accéder à l’élément souhaité de données, appuyer sur une ligne spécifique pour afficher la vue détaillée, cliquez sur le bouton précédent lorsque terminé de consulter les détails et répétez le processus pour toute autre information qui le y intéressent à partir de la table :
 
-[ ![](quick-interaction-techniques-images/quick04.png "Déplacement entre une table et l’affichage des détails")](quick-interaction-techniques-images/quick04.png)
+[![](quick-interaction-techniques-images/quick04.png "Déplacement entre une table et l’affichage des détails")](quick-interaction-techniques-images/quick04.png#lightbox)
 
 Nouveau pour watchOS 3, le développeur peut activer la pagination verticale sur leurs contrôles d’affichage de la Table. Avec cette fonctionnalité est activée, l’utilisateur peut faire défiler pour rechercher une ligne de la Table de vue, puis appuyez sur la ligne pour afficher ses détails comme avant. Toutefois, ils peuvent maintenant balayez vers haut pour sélectionner la ligne suivante dans la table, ou pour sélectionner la ligne précédente (ou utilisez la couronne numérique), tout cela sans avoir à revenir à l’affichage de la Table tout d’abord :
 
-[ ![](quick-interaction-techniques-images/quick05.png "Déplacement entre une table et la vue de détail et le glissement haut et bas pour vous déplacer entre les autres lignes")](quick-interaction-techniques-images/quick05.png)
+[![](quick-interaction-techniques-images/quick05.png "Déplacement entre une table et la vue de détail et le glissement haut et bas pour vous déplacer entre les autres lignes")](quick-interaction-techniques-images/quick05.png#lightbox)
 
 Pour activer ce mode, ouvrez Storyboard l’application watchOS dans Xcode pour la modification, sélectionnez la vue de Table et vérifier les **Vertical en détail la pagination** case à cocher :
 
-[ ![](quick-interaction-techniques-images/quick06.png "Cochez la case de pagination de détail Vertical")](quick-interaction-techniques-images/quick06.png)
+[![](quick-interaction-techniques-images/quick06.png "Cochez la case de pagination de détail Vertical")](quick-interaction-techniques-images/quick06.png#lightbox)
 
 Assurez-vous que la Table utilise Segues pour afficher la vue détaillée et enregistrez les modifications dans la table de montage séquentiel et retournez dans Visual Studio pour Mac à synchroniser.
 
@@ -313,7 +313,7 @@ Une expérience d’interaction rapide bien conçue permet aux utilisateurs la c
 
 Plus précisément, cela devient un problème est lorsque l’application espion est n’importe quel type de connexion réseau ou de partager des informations avec son application d’iPhone d’accompagnement. Cela mène souvent à un indicateur en attente pendant que la transaction est en place, ce qui n’est pas souhaitable pendant une interaction rapide. Prenons l’exemple suivant :
 
-[ ![](quick-interaction-techniques-images/quick07.png "Diagramme de l’application espion effectuant une connexion réseau et partage des informations avec son application d’iPhone d’accompagnement")](quick-interaction-techniques-images/quick07.png)
+[![](quick-interaction-techniques-images/quick07.png "Diagramme de l’application espion effectuant une connexion réseau et partage des informations avec son application d’iPhone d’accompagnement")](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. L’utilisateur choisit un élément d’achat sur la surveillance.
 2. Ils appuyer sur le bouton acheter.
@@ -325,7 +325,7 @@ Plus précisément, cela devient un problème est lorsque l’application espion
 
 À l’aide du modèle suggéré de d’Apple, examinons l’interaction rapide même à nouveau :
 
-[ ![](quick-interaction-techniques-images/quick08.png "Diagramme de modèle suggéré pommes")](quick-interaction-techniques-images/quick08.png)
+[![](quick-interaction-techniques-images/quick08.png "Diagramme de modèle suggéré pommes")](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. L’utilisateur choisit un élément d’achat sur la surveillance.
 2. Ils appuyer sur le bouton acheter.

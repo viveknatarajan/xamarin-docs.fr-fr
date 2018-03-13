@@ -7,11 +7,11 @@ ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2d802a96fcc8dad1d610b99a1cddffdc4398da38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ec8cb9b6fdb391afcb8f9baaa641da5aec38f6d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-search-apis"></a>Nouvelles API de recherche
 
@@ -21,7 +21,7 @@ Recherche a été développée dans iOS 9 pour fournir de nouvelles façons d’
 
 En outre, les nouvelles API de recherche facilitent intégrer la recherche dans votre application sans expérience de mise en œuvre de recherche antérieure. Pour cette raison, Apple revendications qu’il prend généralement quelques heures pour rendre le contenu de l’application iOS 9 universellement consultable à l’aide de la recherche de l’application.
 
-[ ![](images/intro01.png "Un exemple de contenu de l’application iOS 9 universellement consultable à l’aide de la recherche de l’application")](images/intro01.png)
+[![](images/intro01.png "Un exemple de contenu de l’application iOS 9 universellement consultable à l’aide de la recherche de l’application")](images/intro01.png#lightbox)
 
 Recherche de l’application est composé de trois API :
 

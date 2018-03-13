@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 053696ebf37e73e3b121e2aa52b80b7ea1b8ed64
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f870cda73625197fb15bf19be1cdabbd675124d6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Mise en page pour les applications de bureau et les Tablet PC
 
@@ -41,7 +41,7 @@ Pour fournir une expérience de démarrage agréable et garantir la résolution 
 Avant d’iOS 9 toutes les applications s’élevait à mode plein écran sur l’appareil, mais certains iPad peut maintenant effectuer [fractionner écran multitâche](~/ios/platform/multitasking.md).
 Cela signifie que votre application peut prendre qu’une colonne de fine sur le côté de l’écran, 50 % de la largeur de l’écran ou la totalité de l’écran.
 
-[ ![](tablet-images/ipad-sml.png "iPad fractionnement écran exemple")](tablet-images/ipad.png "iPad exemple d’écran de fractionnement")
+[![](tablet-images/ipad-sml.png "iPad fractionnement écran exemple")](tablet-images/ipad.png#lightbox "iPad exemple d’écran de fractionnement")
 
 Fonctionnalités de l’écran fractionné signifie que vous devez concevoir votre application pour fonctionner avec au minimum de 320 pixels de larges, ou autant que 1366 pixels de large.
 
@@ -63,7 +63,7 @@ Pour prendre en charge les tablettes et ordinateurs de bureau Windows en cours d
 
 Applications qui s’exécutent sur des ordinateurs de bureau et des tablettes Windows peuvent être redimensionnées en outre aux dimensions arbitraires en mode plein écran en cours d’exécution.
 
-[ ![](tablet-images/splitscreen-sml.png "Fenêtres fractionnées divisent l’écran exemple")](tablet-images/splitscreen.png "les fenêtres fractionnées divisent l’exemple de l’écran")
+[![](tablet-images/splitscreen-sml.png "Fenêtres fractionnées divisent l’écran exemple")](tablet-images/splitscreen.png#lightbox "les fenêtres fractionnées divisent l’exemple de l’écran")
 
 
 <a name="optimize" />

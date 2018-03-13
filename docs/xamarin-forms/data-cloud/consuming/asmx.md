@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3362744d0d201ef82c846c80b0e1a87426953c85
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Utilisation d’un Service Web ASP.NET (ASMX)
 
@@ -74,7 +74,7 @@ Le service ASMX fournit les opérations suivantes :
 Pour plus d’informations sur le modèle de données utilisé dans l’application, consultez [modélisation de données](~/xamarin-forms/data-cloud/walkthrough.md).
 
 > [!NOTE]
-> **Remarque**: l’exemple d’application consomme le service ASMX de hébergé de Xamarin qui fournit l’accès en lecture seule au service web. Par conséquent, les opérations créent, mettre à jour et supprimer des données ne modifiera pas les données utilisées dans l’application. Toutefois, une version principale du service ASMX est disponible dans le **TodoASMXService** dossier dans l’exemple d’application qui l’accompagne. Cette version principale d’autorisés par le service ASMX complètes créer, mettre à jour, lire et supprimer l’accès aux données.
+> L’exemple d’application consomme le service ASMX de hébergé de Xamarin qui fournit l’accès en lecture seule au service web. Par conséquent, les opérations créent, mettre à jour et supprimer des données ne modifiera pas les données utilisées dans l’application. Toutefois, une version principale du service ASMX est disponible dans le **TodoASMXService** dossier dans l’exemple d’application qui l’accompagne. Cette version principale d’autorisés par le service ASMX complètes créer, mettre à jour, lire et supprimer l’accès aux données.
 
 A *proxy* doivent être générées pour consommer le service ASMX, ce qui permet de se connecter au service. Le proxy est construit par la consommation des métadonnées de service qui définit les méthodes et la configuration de service associé. Ces métadonnées sont exposées sous la forme d’un document Web Services Description Language (WSDL) généré par le service web. Le proxy est créé en ajoutant une référence web pour le service web pour les projets spécifiques à la plateforme.
 

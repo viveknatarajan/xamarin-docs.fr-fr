@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 53e972211ce506b6bf32ee4785c853982528d92e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e90f49ba9aa217659e20d4bef1fc826fe085fa7f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="multi-touch-finger-tracking"></a>Suivi de tactiles doigt
 
@@ -192,7 +192,7 @@ public override bool OnTouchEvent(MotionEvent args)
 
 Ce type de traitement permet la [peinture avec les doigts](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint) programme pour effectuer le suivi des doigts individuels et dessiner les résultats à l’écran :
 
-[![Capture d’écran de peinture avec les doigts exemple](touch-tracking-images/image01.png)](touch-tracking-images/image01.png)
+[![Capture d’écran de peinture avec les doigts exemple](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
 Vous avez maintenant vu comment vous pouvez effectuer le suivi des doigts sur l’écran et faire la distinction entre eux.
 

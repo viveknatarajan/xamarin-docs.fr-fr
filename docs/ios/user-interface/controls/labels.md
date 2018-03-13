@@ -7,19 +7,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 695d02c5fa0477053cd95d73e1b738332d14f0f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0fdeecc4465aa5709b452ef0b591ec4e5c262e3d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="labels"></a>Étiquettes
 
-Le `UILabel` contrôle est utilisé pour l’affichage unique et plusieurs lignes, texte en lecture seule. Cet article couvre les rubriques suivantes :
-
-- [Implémentation d’une étiquette](#Implementing_a_Label)
-- [Troncation et de renvoi à la ligne](#Truncating_and_Wrapping)
-- [Mise en forme de texte et étiquette](#Formatting_Text_and_Label)
+Le `UILabel` contrôle est utilisé pour l’affichage unique et plusieurs lignes, texte en lecture seule. 
 
 ## <a name="implementing-a-label"></a>Implémentation d’une étiquette
 
@@ -52,6 +48,8 @@ Les propriétés suivantes peuvent être ajustées pour la zone de propriétés�
 ## <a name="truncating-and-wrapping"></a>Troncation et de renvoi à la ligne
 
 Pour plus d’informations sur l’utilisation de la ligne s’arrête dans iOS, reportez-vous à la [tronquer et habiller le texte](https://developer.xamarin.com/recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text/) recette.
+
+<a name="Formatting_Text_and_Label"/>
 
 ## <a name="formatting-text-and-label"></a>Mise en forme de texte et étiquette
 

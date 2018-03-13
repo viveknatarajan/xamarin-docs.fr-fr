@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: c8f6832f618c37b3593f28c8efaeb87e4df5df03
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-resource-basics"></a>Principes de base de ressource Android
 
@@ -39,7 +39,6 @@ Les cinq fichiers qui composent les ressources par défaut ont été créés dan
 
 -  **Resource.Designer.cs** &ndash; ce fichier est automatiquement généré et géré par Xamarin.Android et contient l’unique ID affecté à chaque ressource. Il s’agit très similaires ou identiques dans l’objet dans le fichier R.java ayant une application Android écrite en Java. Il est automatiquement créé par les outils de Xamarin.Android et va être régénérée de temps à autre.
 
-<a name="Creating_and_Accessing_Resources" />
 
 ## <a name="creating-and-accessing-resources"></a>Création et l’accès aux ressources
 
@@ -62,7 +61,6 @@ En outre, il est important de noter que pendant que Android prend uniquement en 
 
 Une fois que les ressources ont été ajoutés à un projet, il existe deux façons de les utiliser dans une application &ndash; par programmation (à l’intérieur de code) ou à partir de fichiers XML.
 
-<a name="Referencing_Resources_Programmatically" />
 
 ## <a name="referencing-resources-programmatically"></a>Référence à des ressources par programmation
 
@@ -108,7 +106,6 @@ Lorsque vous référencez des ressources par programme (dans le code), ils sont 
 
 -  **Nom de la ressource** &ndash; il s’agit du nom de fichier de la ressource (sans l’extension) ou la valeur de l’attribut android : name pour les ressources qui sont dans un élément XML.
 
-<a name="Referencing_Resources_from_XML" />
 
 ## <a name="referencing-resources-from-xml"></a>Référence à des ressources à partir de XML
 

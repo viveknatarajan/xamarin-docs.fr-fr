@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 8b1715c8e7c3e9bb296577acd3d09a0f22488250
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5f27c1acefa63ee26184b8997594630e24cb0acc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authentication-and-authorization"></a>Authentification et autorisation
 
@@ -48,7 +48,7 @@ L’application mobile eShopOnContainers communique avec l’identité microserv
 -   L’accès à une ressource avec IdentityServer est obtenue par l’application mobile demande un *accès* jeton, ce qui permet d’accéder à une ressource de l’API. Clients de demander des jetons d’accès et les transfèrent à l’API. Les jetons d’accès contiennent des informations sur le client et l’utilisateur (le cas échéant). Ensuite, les API utiliser ces informations pour autoriser l’accès à leurs données.
 
 > [!NOTE]
-> **Remarque**: un client doit être inscrit à IdentityServer il peut demander des jetons.
+> Il peut demander des jetons, un client doit être inscrit avec IdentityServer.
 
 ### <a name="adding-identityserver-to-a-web-application"></a>Ajout de IdentityServer à une Application Web
 

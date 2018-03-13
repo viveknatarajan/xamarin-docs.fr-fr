@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: df1287d2389d7645ee3f17b166af790f79aa70e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 585d0422b4dc2b35fc8ba50ed82d2d34e53a784e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passage de paramètres effet en tant que propriétés jointes
 
@@ -29,7 +29,7 @@ Le processus de création de paramètres d’effet qui répondent aux modificati
 Paramètres peuvent ensuite être passés à l’effet en ajoutant des propriétés jointes, les valeurs de propriété pour le contrôle approprié. En outre, les paramètres peuvent être modifiés lors de l’exécution en spécifiant une nouvelle valeur de propriété jointe.
 
 > [!NOTE]
-> **Remarque**: une propriété jointe est un type spécial de propriété pouvant être liée, définie dans une classe mais jointe à d’autres objets et reconnaissable dans XAML en tant qu’attributs qui contiennent une classe et un nom de propriété séparés par un point. Pour plus d’informations, consultez [propriétés rattaché](~/xamarin-forms/xaml/attached-properties.md).
+> Une propriété jointe est un type spécial de propriété pouvant être liée, définie dans une classe mais jointe à d’autres objets et reconnaissable dans XAML en tant qu’attributs qui contiennent une classe et un nom de propriété séparés par un point. Pour plus d’informations, consultez [propriétés rattaché](~/xamarin-forms/xaml/attached-properties.md).
 
 L’exemple d’application montre un `ShadowEffect` qui ajoute une ombre au texte affiché par un [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) contrôle. En outre, la couleur de l’ombre peut être modifiée pendant l’exécution. Le diagramme suivant illustre les responsabilités de chaque projet dans l’exemple d’application, ainsi que les relations entre eux :
 
@@ -434,7 +434,7 @@ Cet article a illustré à l’aide de propriétés jointes à passer des param�
 
 ## <a name="related-links"></a>Liens associés
 
-- [Convertisseurs personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderers personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
 - [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
 - [RoutingEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/)

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: bd53074fcde25736d37544efc719ecef1110c364
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="interactive-workbooks"></a>Classeurs interactifs
 
@@ -30,7 +30,7 @@ Les classeurs peuvent être enregistrés et ouvert ultérieurement dans l’appl
 
 La fenêtre d’édition de code fournit l’exécution de code, la coloration de syntaxe, inline live-diagnostics et prise en charge de l’instruction de plusieurs lignes.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "La fenêtre d’édition de code fournit l’exécution de code, la coloration de syntaxe, inline live-diagnostics et prise en charge de l’instruction de ligne multiples")](workbook-images/inspector-0.6.0-repl.png)
+[ ![](workbook-images/inspector-0.6.0-repl-small.png "La fenêtre d’édition de code fournit l’exécution de code, la coloration de syntaxe, inline live-diagnostics et prise en charge de l’instruction de ligne multiples")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin classeurs sont enregistrés dans un `.workbook` fichier, qui est un fichier CommonMark avec des métadonnées en haut (voir [les Types de fichiers de classeurs](#Workbooks_Files_Types) pour plus d’informations sur la façon dont les classeurs peuvent être enregistrés).
 

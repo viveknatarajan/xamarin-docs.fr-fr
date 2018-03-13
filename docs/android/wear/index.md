@@ -1,5 +1,5 @@
 ---
-title: Usure Android
+title: Android Wear
 description: "Création d’applications pour les appareils Android portable."
 ms.topic: article
 ms.prod: xamarin
@@ -8,15 +8,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1dad5e859efdf69e7003b45724f718b16faffd62
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac83b74f39497333de7aa80079784adf61bf2e65
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="android-wear"></a>Usure Android
-
-## <a name="android-wear"></a>Usure Android
+# <a name="android-wear"></a>Android Wear
 
 Usure Android est une version d’Android est conçu pour des périphériques portable observe actives. Cette section inclut des instructions sur la façon d’installer et configurer les outils requis pour le développement d’usure, une procédure pas à pas détaillées pour la création de votre premier appareil usure et une liste d’exemples que vous pouvez consulter pour porter des applications pour créer votre propre.
 
@@ -28,7 +26,7 @@ Introduit l’usure Android, explique comment installer et configurer votre ordi
 
 Explique Android usure contrôle et fournit des liens vers des exemples qui illustrent l’utilisation de ces contrôles.
 
-##  <a name="platform-featuresandroidwearplatformindexmd"></a>[Fonctionnalités de plateforme](~/android/wear/platform/index.md)
+##  <a name="platform-featuresandroidwearplatformindexmd"></a>[Fonctionnalités de la plateforme](~/android/wear/platform/index.md)
 
 Documents de cette section couvrent les fonctionnalités spécifiques à l’usure Android. Vous trouverez ici une rubrique qui explique comment créer un WatchFace.
 
@@ -41,7 +39,6 @@ Afficher un aperçu et optimiser votre interface utilisateur pour les tailles d�
 Explique comment déployer votre application d’usure Android sur un appareil Android d’usure ou émulateur Android configuré pour l’usure. Il inclut également le débogage des conseils et informations pour savoir comment configurer une connexion Bluetooth entre votre ordinateur de développement et un appareil Android.
 
 
-<a name="Samples" />
 
 ## <a name="samples"></a>Exemples
 
@@ -137,21 +134,21 @@ Consultez ces vidéo liens qui traitent de Xamarin.Android avec usure prennent e
 <table align="center" border="0" cellpadding="1" cellspacing="1">
     <tr>
         <td>
-        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0"/ /></td>
+        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0" /></td>
         <td><a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/">Android L et bien plus encore</a>
         <br />
 Le Android Developer Preview L a introduit une multitude de nouvelles API permettant aux développeurs de tirer parti de, y compris les documents de conception, les notifications et les nouvelles animations pour citer que quelques.</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=80H8tXByZQc">C# est enchante et mes yeux : Google Glass et usure Android</a>
         <br />
 Informatique portable peut sembler quelque chose de demain (ou un épisode Inspecteur Gadget), mais de nombreuses personnes déjà adoptent le futur dès aujourd'hui ! Les développeurs c# cette information et aient déjà les outils et les compétences nécessaires pour exploiter la puissance de périphériques portable (à partir de Evolve 2014).</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU">Nouveautés de Xamarin.Android</a>
         <br />
         <i>Android L, usure Android, TV Android, Android automatique, conception de matériel et ART ; que cela signifie pour vous en tant que Xamarin développeur ? </i> de faire évoluer 2014.</td>

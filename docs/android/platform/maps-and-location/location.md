@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: beb690fe495d142bb4b0424ad752101fc46da590
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="location-services"></a>Services d’emplacement
 
@@ -54,7 +54,7 @@ Pour les applications qui ciblent la version 21 (Android 5.0 Lollipop) de l’AP
 
 Pour définir les autorisations, développez le **propriétés** dossier dans le **Solution remplissage** et double-cliquez sur **AndroidManifest.xml**. Les autorisations sont répertoriées sous **autorisations requises**:
 
-[![Capture d’écran des paramètres des autorisations requises de manifeste Android](location-images/location-01-xs.png)](location-images/location-01-xs.png)
+[![Capture d’écran des paramètres des autorisations requises de manifeste Android](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
 
 Une de ces autorisations indique à Android que votre application a besoin de l’autorisation de l’utilisateur afin d’accéder aux fournisseurs d’emplacement. Périphériques API niveau 22 (Android 5.1) d’exécution ou faible demande à l’utilisateur pour accorder ces autorisations à chaque fois que l’application est installée. Sur les appareils exécutant des API de niveau 23 (Android 6.0) ou une version ultérieure, l’application doit effectuer une vérification d’autorisation d’exécution avant d’effectuer une demande du fournisseur de localisation. 
 
@@ -334,11 +334,11 @@ else
 > [!NOTE]
 >  Si l’utilisateur a désactivé tous les fournisseurs de localisation, `GetBestProvider` retournera `null`. Pour voir comment ce code fonctionne sur un appareil réel, veillez à activer GPS, Wi-Fi et les réseaux cellulaires sous **Google Paramètres > emplacement > Mode** comme indiqué dans cette capture d’écran :
 
-[![Écran des paramètres de Mode d’emplacement sur un téléphone Android](location-images/location-02.png)](location-images/location-02.png)
+[![Écran des paramètres de Mode d’emplacement sur un téléphone Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
 
 La capture d’écran ci-dessous montre l’emplacement application en cours d’exécution à l’aide de `GetBestProvider`:
 
-[![Application GetBestProvider affichage latitude et longitude fournisseur](location-images/location-03.png)](location-images/location-03.png)
+[![Application GetBestProvider affichage latitude et longitude fournisseur](location-images/location-03.png)](location-images/location-03.png#lightbox)
 
 N’oubliez pas que `GetBestProvider` ne modifie pas le fournisseur dynamiquement. Au lieu de cela, il détermine le fournisseur le plus disponible une fois pendant le cycle de vie d’activité. Si l’état du fournisseur est modifié après qu’elle a été définie, l’application nécessite un code supplémentaire dans le `ILocationListener` méthodes &ndash; `OnProviderEnabled`, `OnProviderDisabled`, et `OnStatusChanged` &ndash; pour gérer chaque risque lié à la commutateur de fournisseur.
 

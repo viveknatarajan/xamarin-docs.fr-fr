@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad621fa093379d5ad2dd81c81ce42dcaaa9bd923
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d915191e24b5238d5165237f6ede74635b31e08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
 `RelativeLayout` est utilisé pour la position et les vues de taille par rapport aux propriétés des vues frères ou de mise en page. Contrairement aux `AbsoluteLayout`, `RelativeLayout` n’a pas le concept de l’ancre de déplacement et ne dispose pas des fonctions de positionnement des éléments par rapport à bas ou les bords droit de la disposition. `RelativeLayout` prend en charge de positionnement des éléments en dehors de ses propres limites.
 
-[ ![](relative-layout-images/layouts-sml.png "Les dispositions de Xamarin.Forms")](relative-layout-images/layouts.png "Xamarin.Forms dispositions")
+[![](relative-layout-images/layouts-sml.png "Les dispositions de Xamarin.Forms")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms dispositions")
 
 ## <a name="purpose"></a>Objectif
 
@@ -76,7 +76,7 @@ Notez les aspects suivants de la disposition ci-dessus :
 - La zone de `y` coordonnée est définie en tant que la moitié de la hauteur de la page parente, -100.
 
 > [!NOTE]
-> **Remarque**: en raison du mode contraintes sont définies, il est possible d’effectuer des mises en page plus complexes dans c# que peut être spécifié avec XAML.
+> En raison du mode contraintes sont définies, il est possible d’effectuer des mises en page plus complexes dans c# que peut être spécifié avec XAML.
 
 Les deux exemples ci-dessus définissent les contraintes en tant que `RelativeToParent` &ndash; , autrement dit, leurs valeurs sont par rapport à l’élément parent. Il est également possible de définir des contraintes par rapport à une autre vue. Cela permet pour les dispositions plus intuitives (pour le développeur) et que vous pouvez apporter plus clairement l’objectif de votre code de mise en page.
 

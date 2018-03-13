@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0117364f02302add1f8788de1a79e4c4210fd07b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4363258a9047ee4e2de4f53595a6eedc5dfe5861
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-macos"></a>Accessibilité sur macOS
 
@@ -30,7 +30,7 @@ AppKit utilise le `NSAccessibility` protocole pour exposer des API qui permetten
 Xamarin.Mac utilise le constructeur d’Interface Xcode pour modifier des fichiers de la table de montage séquentiel.
 Informations sur l’accessibilité peuvent être modifiées dans le **inspecteur d’identité** lorsqu’un contrôle est sélectionné sur l’aire de conception (comme indiqué dans la capture d’écran ci-dessous) :
 
-[![Ajout d’accessibilité dans le Générateur de Xcode Interface](accessibility-images/xcode.png "Ajout d’accessibilité dans le Générateur de Xcode Interface")](accessibility-images/xcode-large.png)
+[![Ajout d’accessibilité dans le Générateur de Xcode Interface](accessibility-images/xcode.png "Ajout d’accessibilité dans le Générateur de Xcode Interface")](accessibility-images/xcode-large.png#lightbox)
 
 ### <a name="code"></a>Code
 
@@ -80,7 +80,7 @@ Déverrouiller l’écran des paramètres (si nécessaire, dans le coin inférie
 
 Une fois activée, l’inspecteur apparaît comme une fenêtre flottante qui peut être déplacée sur l’écran. La capture d’écran ci-dessous montre l’inspecteur d’en cours d’exécution en regard d’un exemple d’application Mac. Comme le curseur est déplacé au-dessus de la fenêtre, l’inspecteur affiche toutes les propriétés accessibles de chaque contrôle :
 
-[![Exemple de l’exécution de l’inspecteur de l’accessibilité](accessibility-images/accessibility-example.png "en cours d’exécution de l’exemple d’accessibilité inspecteur")](accessibility-images/accessibility-example-large.png)
+[![Exemple de l’exécution de l’inspecteur de l’accessibilité](accessibility-images/accessibility-example.png "en cours d’exécution de l’exemple d’accessibilité inspecteur")](accessibility-images/accessibility-example-large.png#lightbox)
 
 Pour plus d’informations, consultez la [test d’accessibilité pour le guide du système d’exploitation X](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
 

@@ -8,35 +8,18 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 56d868f64de009d01930ec34ee2cb436276006ef
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cross-platform-performance"></a>Niveau de performance multiplateforme
 
 _De nombreuses techniques permettent d’accroître le niveau de performance des applications générées sur la plateforme Xamarin. Ensemble, ces techniques peuvent considérablement réduire la charge de travail d’un processeur, de même que la quantité de mémoire consommée par une application. Cet article décrit et explique ces techniques._
 
-Le mauvais niveau de performance d’une application se présente de plusieurs façons. L’application semble ne pas répondre, le défilement de l’affichage est ralenti et la durée de vie de la batterie de l’appareil réduite. Toutefois, l’optimisation des performances implique davantage de choses que l’implémentation d’un code efficace. L’expérience utilisateur liée au niveau de performance de l’application doit également être prise en compte. Par exemple, le fait de garantir que l’exécution de certaines opérations ne va pas empêcher l’utilisateur d’effectuer d’autres activités peut améliorer son expérience de l’application.
+Le mauvais niveau de performance d’une application se présente de plusieurs façons. L’application semble ne pas répondre, le défilement de l’affichage est ralenti et la durée de vie de la batterie de l’appareil réduite. Toutefois, l’optimisation des performances implique davantage de choses que l’implémentation d’un code efficace. L’expérience utilisateur liée au niveau de performance de l’application doit également être prise en compte. Par exemple, pour contribuer à améliorer l’expérience utilisateur, vous devez vérifier que les opérations s’exécutent sans empêcher l’utilisateur d’effectuer d’autres activités.
 
-De nombreuses techniques permettent d’accroître les performances des applications conçues sur la plateforme Xamarin (y compris du point de vue de l’utilisateur). Elles comprennent :
-
-- [Utiliser le profileur](#profiler)
-- [Libérer des ressources IDisposable](#idisposable)
-- [Se désabonner d’événements](#events)
-- [Utiliser des références faibles pour empêcher les objets immortels](#weakreferences)
-- [Retarder le coût de la création d’objets](#lazy)
-- [Implémenter des opérations asynchrones](#async)
-- [Utiliser le récupérateur de mémoire SGen](#sgen)
-- [Réduire la taille de l’application](#linker)
-- [Optimiser les ressources d’images](#optimizeimages)
-- [Réduire la période d’activation de l’application](#activationperiod)
-- [Réduire la communication du service web](#webservicecommunication)
-
-Cette [vidéo Xamarin University](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps) gratuite fournit également des conseils utiles pour la conception d’applications Xamarin.
-
-[ ![](memory-perf-best-practices-images/clancey-sml.png "Vidéo Xamarin University gratuite pour éviter les pièges les plus courants")](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
 
 <a name="profiler" />
 

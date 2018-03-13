@@ -7,12 +7,12 @@ ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 36cabddc2439d64ad2d1135bbd0d453a7f411750
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Procédure pas à pas : enregistrement de l’état d’activité
 
@@ -22,7 +22,7 @@ _Nous avons évoqué ici la théorie d’enregistrement de l’état dans le gui
 
 Ouvrez le **ActivityLifecycle_Start** projet (dans le [ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle) exemple), générer et exécuter. Il s’agit d’un projet très simple qui a deux activités pour montrer le cycle de vie des activités et comment les différentes méthodes de cycle de vie sont appelées. Lorsque vous démarrez l’application, l’écran de `MainActivity` s’affiche : 
 
-[ ![Écran de l’activité A](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png)
+[![Écran de l’activité A](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### <a name="viewing-state-transitions"></a>Transitions d’état d’affichage
 
@@ -48,7 +48,7 @@ Lorsque vous cliquez sur le **démarrer activité B** bouton, nous constatons *a
 
 Par conséquent, *activité B* est démarré et affiché à la place de *activité A*: 
 
-[ ![Écran de l’activité B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png)
+[![Écran de l’activité B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 Lorsque vous cliquez sur le **précédent** bouton, *activité B* est détruit et *activité A* reprise : 
 
@@ -62,7 +62,7 @@ Lorsque vous cliquez sur le **précédent** bouton, *activité B* est détruit e
 ```
 ### <a name="adding-a-click-counter"></a>Ajout d’un compteur de clic
 
-Ensuite, nous allons modifier l’application afin que nous avons un bouton qui compte et affiche le nombre de fois que vous cliquez dessus. Tout d’abord, nous allons ajouter un `_counter` à la variable d’instance `MainActivity`: 
+Ensuite, nous allons modifier l’application afin que nous avons un bouton qui compte et affiche le nombre de fois que vous cliquez dessus. Tout d’abord, nous allons ajouter un `_counter` à la variable d’instance `MainActivity`:
 
 ```csharp
 int _counter = 0;
@@ -105,11 +105,11 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 
 Lorsque nous créons et réexécutez l’application, un nouveau bouton s’affiche qui incrémente et affiche la valeur de `_counter` sur chaque clic :
 
-[![Ajouter le nombre de fonctions tactiles](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png)
+[![Ajouter le nombre de fonctions tactiles](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 Toutefois, lorsque nous faire pivoter l’appareil en mode paysage, ce nombre est perdu :
 
-[ ![Rotation paysage définit le nombre de remettre à zéro](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png)
+[![Rotation paysage définit le nombre de remettre à zéro](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 En examinant la sortie de l’application, nous constatons que *activité A* a été suspendu, arrêté, détruit, recréé, redémarré, puis redémarrée au cours de la rotation de l’affichage portrait en mode paysage : 
 
@@ -152,7 +152,7 @@ if (bundle != null)
 
 Générez et exécutez de nouveau l’application, puis cliquez sur le deuxième bouton plusieurs fois. Lorsque nous faire pivoter l’appareil en mode paysage, le nombre est conservé.
 
-[ ![Rotation de l’écran d’indique le nombre de quatre conservé](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png)
+[![Rotation de l’écran d’indique le nombre de quatre conservé](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 
 Examinons la fenêtre Sortie pour voir ce qui s’est produit :

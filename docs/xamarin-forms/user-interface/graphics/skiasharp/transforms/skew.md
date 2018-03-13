@@ -4,14 +4,15 @@ description: "Découvrez comment la transformation d’inclinaison peut créer d
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: b8bb4db49d3800d694724d6be8fe949b55060c21
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a18b60d486a911e4a76298fd20a70f16ac392881
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-skew-transform"></a>La transformation d’inclinaison
 
@@ -69,7 +70,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Les valeurs de la `xSkew` argument Décalage vers le bas du texte pour les valeurs positives à droite ou gauche pour les valeurs négatives. Les valeurs de `ySkew` décalage vers la droite du texte vers le bas pour les valeurs positives ou pour les valeurs négatives :
 
-[![](skew-images/skewexperiment-small.png "Capture d’écran de triple de la page d’inclinaison de l’expérience")](skew-images/skewexperiment-large.png "Triple capture d’écran de la page d’inclinaison de l’expérience")
+[![](skew-images/skewexperiment-small.png "Capture d’écran de triple de la page d’inclinaison de l’expérience")](skew-images/skewexperiment-large.png#lightbox "Triple capture d’écran de la page d’inclinaison de l’expérience")
 
 Si `xSkew` est la valeur négative de `ySkew`, le résultat est la rotation, mais également mis à l’échelle un peu comme les fenêtres d’affichage indique.
 
@@ -152,7 +153,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 Un angle d’approche de 90 degrés positifs ou négatifs, la tangente est proche de l’infini, mais les angles jusqu’environ 80 degrés sont utilisables :
 
-[![](skew-images/skewangleexperiment-small.png "Capture d’écran de triple de la page de l’expérience de Angle d’inclinaison")](skew-images/skewangleexperiment-large.png "Triple capture d’écran de la page de l’expérience de Angle d’inclinaison")
+[![](skew-images/skewangleexperiment-small.png "Capture d’écran de triple de la page de l’expérience de Angle d’inclinaison")](skew-images/skewangleexperiment-large.png#lightbox "Triple capture d’écran de la page de l’expérience de Angle d’inclinaison")
 
 Une inclinaison horizontale négative petite peut simuler texte en italique ou oblique de, comme le **texte Oblique** montre de page. Le [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe montre comment procéder :
 
@@ -188,7 +189,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 Le `TextAlign` propriété du `SKPaint` a la valeur `Center`. Sans les transformations, le `DrawText` appeler avec les coordonnées de (0, 0) positionne le texte avec le Centre horizontal de la ligne de base dans l’angle supérieur gauche. Le `SkewDegrees` inclinaisons le texte horizontalement par rapport à la ligne de base de 20 degrés. Le `Translate` appel déplace le Centre horizontal de la ligne de base du texte au centre de la zone de dessin :
 
-[![](skew-images/obliquetext-small.png "Capture d’écran de triple de la page de texte Oblique")](skew-images/obliquetext-large.png "Triple capture d’écran de la page de texte Oblique")
+[![](skew-images/obliquetext-small.png "Capture d’écran de triple de la page de texte Oblique")](skew-images/obliquetext-large.png#lightbox "Triple capture d’écran de la page de texte Oblique")
 
 Le **incliner le texte ombré** page montre comment utiliser une combinaison d’une échelle d’inclinaison verticale et de 45 degrés pour ajouter une ombre de texte qui fait pivoter le texte en s’éloignant de. Voici la partie pertinente du `PaintSurface` gestionnaire :
 
@@ -221,11 +222,11 @@ using (SKPaint textPaint = new SKPaint())
 
 L’ombre est affiché en premier, puis le texte :
 
-[![](skew-images/skewshadowtext1-small.png "Capture d’écran de triple de la page de texte de clichés instantanés incliner")](skew-images/skewshadowtext1-large.png "Triple capture d’écran de la page d’inclinaison de texte de clichés instantanés")
+[![](skew-images/skewshadowtext1-small.png "Capture d’écran de triple de la page de texte de clichés instantanés incliner")](skew-images/skewshadowtext1-large.png#lightbox "Triple capture d’écran de la page d’inclinaison de texte de clichés instantanés")
 
 Coordonnée verticale est passé à la `DrawText` méthode indique la position du texte par rapport à la ligne de base. Qui est la même coordonnée verticale utilisée pour le centre d’inclinaison. Cette technique ne fonctionnera pas si la chaîne de texte contient les jambages inférieurs. Par exemple, remplacez le mot « étrange » pour « Shadow » et ici du résultat :
 
-[![](skew-images/skewshadowtext2-small.png "Capture d’écran de triple de la page de texte de clichés instantanés incliner avec un autre mot descendants")](skew-images/skewshadowtext2-large.png "Triple capture d’écran de la page de texte de clichés instantanés incliner avec un autre mot descendants")
+[![](skew-images/skewshadowtext2-small.png "Capture d’écran de triple de la page de texte de clichés instantanés incliner avec un autre mot descendants")](skew-images/skewshadowtext2-large.png#lightbox "Triple capture d’écran de la page de texte de clichés instantanés incliner avec un autre mot descendants")
 
 Les clichés instantanés et le texte sont alignés au niveau de la ligne de base, mais uniquement l’effet semble incorrect. Pour corriger cela, vous devez obtenir les limites de texte :
 
@@ -245,7 +246,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 Maintenant, l’ombre s’étend au bas de ces descendants :
 
-[![](skew-images/skewshadowtext3-small.png "Capture d’écran de triple de la page de texte de clichés instantanés incliner ajustements pour hampes")](skew-images/skewshadowtext3-large.png "Triple capture d’écran de la page de texte de clichés instantanés incliner ajustements pour hampes")
+[![](skew-images/skewshadowtext3-small.png "Capture d’écran de triple de la page de texte de clichés instantanés incliner ajustements pour hampes")](skew-images/skewshadowtext3-large.png#lightbox "Triple capture d’écran de la page de texte de clichés instantanés incliner ajustements pour hampes")
 
 
 ## <a name="related-links"></a>Liens associés

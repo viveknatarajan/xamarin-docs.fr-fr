@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: bcb6f033c7fad76a17a7a5aa82f48a76b1ae501d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 5c63bda11a57c0f27efa1db6f0455b25f7da531b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pile de HttpClient et sélecteur d’implémentation de SSL/TLS pour Android
 
@@ -23,34 +23,31 @@ _Les sélecteurs de pile du client HTTP et l’implémentation de SSL/TLS déter
 Xamarin.Android fournit deux zones de liste déroulante qui contrôlent les paramètres TLS pour une application Android. Une zone de liste déroulante qui identifiera `HttpMessageHandler` utilisera lors de l’instanciation d’un `HttpClient` de l’objet, tandis que l’autre identifie quelle implémentation de TLS sera utilisée par les demandes web.
 
 > [!NOTE]
-> **Remarque :** projets doivent faire référence à la **System.Net.Http** assembly.
+> Projets doivent faire référence à la **System.Net.Http** assembly.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Les paramètres de la pile HttpClient sont trouvent dans les Options de projet pour un projet Xamarin.Android. Cliquez sur le **Options Android** onglet, puis cliquez sur le **Options avancées** bouton. Cette action affiche la **avancée Android** boîte de dialogue qui comprend des zones de liste déroulante, une pour l’implémentation du client HTTP et pour l’implémentation de SSL/TLS :
 
 
-[ ![Options Android Visual Studio](http-stack-images/tls07-vs-sml.png)](http-stack-images/tls07-vs.png)
+[![Options Android Visual Studio](http-stack-images/tls07-vs-sml.png)](http-stack-images/tls07-vs.png#lightbox)
+
+## <a name="httpclient-stack-selector"></a>Sélecteur de pile de HttpClient
+
+Cette option de projet de contrôle qui `HttpMessageHandler` implémentation sera utilisée chaque fois qu’un `HttpClient` objet est instancié. Par défaut, il s’agit managé `HttpClientHandler`.
+
+[![Zone de liste déroulante HttpClient implémentation Android dans Visual Studio](http-stack-images/tls04-vs-sml.png)](http-stack-images/tls04-vs.png#lightbox) 
 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 Les paramètres de la pile HttpClient sont trouvent dans les Options de projet pour un projet Xamarin.Android. Cliquez sur le **Générer > Générer Android** paramètres, puis cliquez sur le **général** onglet :
 
-[ ![Visual Studio pour Mac des Options Android](http-stack-images/tls07-xs-sml.png)](http-stack-images/tls07-xs.png)
-
-
------
+[![Visual Studio pour Mac des Options Android](http-stack-images/tls07-xs-sml.png)](http-stack-images/tls07-xs.png#lightbox)
 
 ## <a name="httpclient-stack-selector"></a>Sélecteur de pile de HttpClient
 
 Cette option de projet de contrôle qui `HttpMessageHandler` implémentation sera utilisée chaque fois qu’un `HttpClient` objet est instancié. Par défaut, il s’agit managé `HttpClientHandler`.
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[ ![Zone de liste déroulante HttpClient implémentation Android dans Visual Studio](http-stack-images/tls04-vs-sml.png)](http-stack-images/tls04-vs.png) 
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 ![Zone de liste déroulante HttpClient implémentation Android dans Visual Studio pour Mac](http-stack-images/tls04-xs.png )
 
@@ -84,10 +81,32 @@ AndroidClientHandler est le nouveau gestionnaire qui délègue au lieu d’impl�
 - Nécessite Android 5.0 ou version ultérieure.
 - Certaines fonctionnalités de client HTTP/options ne sont pas disponibles.
 
+### <a name="choosing-a-handler"></a>Choix d’un gestionnaire
+
+Le choix entre `AndroidClientHandler` et `HttpClientHandler` dépend des besoins de votre application. `AndroidClientHandler` est un bon choix si toutes les conditions suivantes s’appliquent :
+
+-   Vous avez besoin de que prendre en charge de TLS 1.2 +.
+-   Votre application cible Android 5.0 (API 21) ou version ultérieure.
+-   Vous avez besoin de TLS 1.2 + prend en charge pour `HttpClient`.
+-   Vous n’avez pas besoin de TLS 1.2 + prend en charge pour `WebClient`.
+
+`HttpClientHandler` est un bon choix si vous avez besoin de TLS 1.2 + prend en charge mais doit prendre en charge les versions antérieures à Android 5.0 Android. Il est également un bon choix si vous avez besoin de TLS 1.2 + prend en charge pour `WebClient`.
+
+À partir de Xamarin.Android 8.3, `HttpClientHandler` valeur par défaut est ennuyeuse de SSL (`btls`) en tant que le fournisseur sous-jacent de TLS. Le fournisseur ennuyeuse SSL, TLS offre les avantages suivants :
+
+-   Il prend en charge TLS 1.2.
+-   Il prend en charge toutes les versions d’Android.
+-   Il prend en charge de TLS 1.2 pour les deux `HttpClient` et `WebClient`.
+
+L’inconvénient de l’utilisation de SSL d’ennuyeuse comme fournisseur de TLS sous-jacent n’est que cela peut augmenter la taille de APK résultant (elle ajoute environ 1 Mo de taille APK supplémentaire par ABI pris en charge).
+
+À partir de Xamarin.Android 8.3, le fournisseur TLS par défaut est ennuyeuse de SSL (`btls`). Si vous ne souhaitez pas utiliser ennuyeuse de SSL, vous pouvez revenir à l’implémentation de SSL managée historique en définissant le `$(AndroidTlsProvider)` propriété `legacy` (pour plus d’informations sur la définition des propriétés de build, consultez [processus de génération](~/android/deploy-test/building-apps/build-process.md)).
+
 
 ### <a name="programatically-using-androidclienthandler"></a>Par programmation à l’aide de `AndroidClientHandler`
 
-Le `Xamarin.Android.Net.AndroidClientHandler` est un `HttpMessageHandler` implémentation spécifiquement pour Xamarin.Android. Les instances de cette classe utilisent natif `java.net.URLConnection` implémentation pour toutes les connexions HTTP. Cela fournit une augmentation des performances de HTTP et de plus petite taille APK théoriquement.
+Le `Xamarin.Android.Net.AndroidClientHandler` est un `HttpMessageHandler` implémentation spécifiquement pour Xamarin.Android.
+Les instances de cette classe utilisent natif `java.net.URLConnection` implémentation pour toutes les connexions HTTP. Cela fournit une augmentation des performances de HTTP et de plus petite taille APK théoriquement.
 
 Cet extrait de code est un exemple montrant comment explicitement pour une instance unique de la `HttpClient` classe :
 
@@ -97,7 +116,7 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 ```
 
 > [!NOTE]
->  **Remarque**: l’appareil Android sous-jacente doit prendre en charge TLS 1.2 (ie. Android 5.0 et versions ultérieures)
+> L’appareil Android sous-jacente doit prendre en charge TLS 1.2 (ie. Android 5.0 et versions ultérieures)
 
 
 ## <a name="ssltls-implementation-build-option"></a>Option de génération de mise en œuvre de SSL/TLS
@@ -106,11 +125,11 @@ Cette option de projet contrôle sous-jacent bibliothèque TLS sera utilisé par
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Zone de liste déroulante d’implémentation de TLS/SSL dans Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png)
+[![Zone de liste déroulante d’implémentation de TLS/SSL dans Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![Zone de liste déroulante d’implémentation de TLS/SSL dans Visual Studio pour Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png)
+[![Zone de liste déroulante d’implémentation de TLS/SSL dans Visual Studio pour Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
 
 -----
 
@@ -132,8 +151,7 @@ Il existe trois façons qu’une application de Xamarin.Android peut contrôler 
 2. Par programmation à l’aide de `Xamarin.Android.Net.AndroidClientHandler`.
 3. Déclarer des variables d’environnement (facultatif).
 
-Les trois choix, l’approche recommandée consiste à utiliser les options de projet Xamarin.Android pour déclarer la valeur par défaut `HttpMessageHandler` et TLS pour l’application entière. Ensuite, si nécessaire, d’instancier `Xamarin.Android.Net.AndroidClientHandler` objets.
-Ces options sont décrites ci-dessus.
+Les trois choix, l’approche recommandée consiste à utiliser les options de projet Xamarin.Android pour déclarer la valeur par défaut `HttpMessageHandler` et TLS pour l’application entière. Ensuite, si nécessaire, d’instancier `Xamarin.Android.Net.AndroidClientHandler` objets. Ces options sont décrites ci-dessus.
 
 La troisième option &ndash; à l’aide de variables d’environnement &ndash; est expliqué ci-dessous.
 

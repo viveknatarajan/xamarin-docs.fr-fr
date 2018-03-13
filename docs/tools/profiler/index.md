@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 9c95a1b71f83ee810b775420aab3ceafeeca0379
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5c17c53c154eb4da4ec76e567c1c73695de7e35
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -212,11 +212,11 @@ Xamarin Profiler est composé de cinq sections, comme illustré ci-dessous :
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![](images/profiler-mac-sml.png "Sections du Générateur de profils dans Visual Studio pour Mac")](images/profiler-mac.png) 
+[![](images/profiler-mac-sml.png "Sections du Générateur de profils dans Visual Studio pour Mac")](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/profiler-vs.png "Sections du Générateur de profils dans Visual Studio")](images/profiler-vs.png)
+[![](images/profiler-vs.png "Sections du Générateur de profils dans Visual Studio")](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -234,11 +234,11 @@ En haut du profileur est les allocations qui affiche la quantité de mémoire al
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![](images/allocations1.png "Informations relatives aux allocations")](images/allocations1.png) 
+[![](images/allocations1.png "Informations relatives aux allocations")](images/allocations1.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/allocations1-vs.png "Informations relatives aux allocations")](images/allocations1-vs.png)
+[![](images/allocations1-vs.png "Informations relatives aux allocations")](images/allocations1-vs.png#lightbox)
 
 -----
 
@@ -248,11 +248,11 @@ Il existe différentes vues de données dans l’acte d’Allocations, qui perme
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-  [![](images/allocations3.png "Onglet d’allocations")](images/allocations3.png) 
+  [![](images/allocations3.png "Onglet d’allocations")](images/allocations3.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations2-vs.png "Onglet d’allocations")](images/allocations2-vs.png)
+  [![](images/allocations2-vs.png "Onglet d’allocations")](images/allocations2-vs.png#lightbox)
 
 -----
 
@@ -264,11 +264,11 @@ La vue de l’inspecteur pour les Allocations fournit les options de filtrage et
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-  [![](images/allocations2.png "Onglet d’arborescence des appels")](images/allocations2.png) 
+  [![](images/allocations2.png "Onglet d’arborescence des appels")](images/allocations2.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations3-vs.png "Onglet d’arborescence des appels")](images/allocations3-vs.png)
+  [![](images/allocations3-vs.png "Onglet d’arborescence des appels")](images/allocations3-vs.png#lightbox)
 
 -----
 
@@ -276,11 +276,11 @@ La vue de l’inspecteur pour les Allocations fournit les options de filtrage et
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-  [![](images/allocations4.png "Onglet de captures instantanées")](images/allocations4.png) 
+  [![](images/allocations4.png "Onglet de captures instantanées")](images/allocations4.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations4-vs.png "Onglet de captures instantanées")](images/allocations4-vs.png)
+  [![](images/allocations4-vs.png "Onglet de captures instantanées")](images/allocations4-vs.png#lightbox)
 
 -----
 
@@ -292,15 +292,15 @@ Le graphique, comme illustré dans la capture d’écran ci-dessous, affiche le 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Heure du profileur Instrument](images/time1.png)](images/time1.png) 
+[![Heure du profileur Instrument](images/time1.png)](images/time1.png#lightbox) 
 
-[![Heure du profileur Instrument : liste d’exemples](images/time3.png)](images/time3.png) 
+[![Heure du profileur Instrument : liste d’exemples](images/time3.png)](images/time3.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Heure du profileur Instrument](images/time1-vs.png)](images/time1-vs.png) 
+[![Heure du profileur Instrument](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
-[![Heure du profileur Instrument : liste d’exemples](images/time3-vs.png)](images/time3-vs.png) 
+[![Heure du profileur Instrument : liste d’exemples](images/time3-vs.png)](images/time3-vs.png#lightbox) 
 
 -----
 
@@ -309,11 +309,11 @@ Le graphique, comme illustré dans la capture d’écran ci-dessous, affiche le 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-  [![](images/time2.png "Heure du profileur Instrument – arborescence des appels")](images/time2.png) 
+  [![](images/time2.png "Heure du profileur Instrument – arborescence des appels")](images/time2.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/time2-vs.png "Heure du profileur Instrument – arborescence des appels")](images/time2-vs.png) 
+  [![](images/time2-vs.png "Heure du profileur Instrument – arborescence des appels")](images/time2-vs.png#lightbox) 
 
 -----
 
@@ -325,7 +325,7 @@ Grâce à l’utilisation de code c# et F # gérés, il peut être assez courant
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Les cycles de pré-instrumentation](images/cycles-vs.png)](images/time1-vs.png) 
+[![Les cycles de pré-instrumentation](images/cycles-vs.png)](images/time1-vs.png#lightbox) 
 
 -----
 
@@ -338,11 +338,11 @@ Si vous profilez une application avec toute autre configuration, la boîte de di
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Boîte de dialogue Erreur de profilage](images/image001.png)](images/image001.png) 
+[![Boîte de dialogue Erreur de profilage](images/image001.png)](images/image001.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/image1vs.png "Boîte de dialogue Erreur de profilage")](images/image1vs.png) 
+[![](images/image1vs.png "Boîte de dialogue Erreur de profilage")](images/image1vs.png#lightbox) 
 
 -----
 
@@ -350,7 +350,7 @@ Si vous profilez une application avec toute autre configuration, la boîte de di
 Sélectionnez **mise à jour** pour continuer.
 
 <!---
-##Profiling Android Applications
+## Profiling Android Applications
 
 
 Due to the recent inclusion of the profiling libraries into any new Android project template, you will find that when profiling any legacy applications you are greeted with the message dialog above.
@@ -358,7 +358,7 @@ Due to the recent inclusion of the profiling libraries into any new Android proj
 You will need to enable this to make sure that the profiling libraries are included in your Android application, for debug builds. This should not be checked for release builds as it creates overhead.
 
 
-##Profiling iOS Applications
+## Profiling iOS Applications
 
 ### Profiling tvOS
 

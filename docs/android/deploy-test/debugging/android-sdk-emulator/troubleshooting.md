@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 51cc7a4700e8cb3ece556b0ada841d70d5f2bb8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 486df3bbee3f8af511140e2d287f9f95571c7b3d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-sdk-emulator-troubleshooting"></a>Résolution des problèmes liés à l’émulateur du kit Android SDK
 
@@ -83,7 +83,7 @@ Pour résoudre cette erreur, consultez [How to Use the Intel Hardware Accelerate
 
 Si vous préférez ne pas afficher les avertissements liés aux performances, vous pouvez les désactiver. Dans Visual Studio, cliquez sur **Outils > Options > Xamarin > Paramètres Android** et désactivez l’option **Avertir si l'accélération AVD n'est pas prise en charge (HAXM)** :
 
-[![Désactivation des avertissements d’accélération AVD](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png)
+[![Désactivation des avertissements d’accélération AVD](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -110,13 +110,11 @@ Cette boîte de dialogue s’affiche si l’émulateur ne parvient pas à démar
 
 -----
 
-<a name="solutions" />
 
 ## <a name="solutions-to-common-problems"></a>Solutions aux problèmes courants
 
 De nombreux problèmes courants liés à l’émulateur du kit Android SDK peuvent être résolus en apportant des modifications à la configuration de votre ordinateur ou en installant des logiciels supplémentaires. Les sections suivantes décrivent ces problèmes et fournissent des solutions.
 
-<a name="deployment" />
 
 ### <a name="deployment-issues"></a>Problèmes de déploiement
 
@@ -142,7 +140,6 @@ Si un message d’erreur indiquant que l’installation de l’APK sur l’émul
 5. Si l’émulateur n’apparaît pas dans cette liste, démarrez le **Gestionnaire du kit Android SDK**, appliquez les mises à jour, puis essayez à nouveau de lancer l’émulateur.
 
 
-<a name="haxm-issues" />
 
 ### <a name="haxm-issues"></a>Problèmes liés à HAXM
 
@@ -162,7 +159,6 @@ HAXM peut entrer en conflit avec d’autres technologies qui utilisent la virtua
 
 - **Logiciel antivirus** &ndash; Si vous exécutez un logiciel antivirus qui utilise la virtualisation à assistance matérielle (comme Avast), désactivez ou désinstallez ce logiciel, redémarrez et essayez à nouveau de démarrer l’émulateur du kit Android SDK.
 
-<a name="bios" />
 
 #### <a name="incorrect-bios-settings"></a>Paramètres du BIOS incorrects
 

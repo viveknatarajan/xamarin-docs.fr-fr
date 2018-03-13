@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7e6621dc580e478873ce2db7139b04284bee355c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fcfd1fd2ec9271bb5e8d9e09b43b7dc4cf3b3f12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="advanced-message-app-extensions"></a>Extensions d’application Message avancés
 
@@ -50,11 +50,11 @@ Extensions des applications de message sont uniquement pris en charge sur iOS 10
 
 Messages interactifs présentent une bulle de Message personnalisé et sont fournies par une Extension d’application de Message. Ils permettent à l’utilisateur créer le contenu du Message interactif, insérez-le dans le champ d’entrée de Message et l’envoient.
 
-[ ![](advanced-message-app-extensions-images/interactive01.png "Création de contenu de Message interactif")](advanced-message-app-extensions-images/interactive01.png)
+[![](advanced-message-app-extensions-images/interactive01.png "Création de contenu de Message interactif")](advanced-message-app-extensions-images/interactive01.png#lightbox)
 
 L’utilisateur destinataire peut répondre à un Message interactif en appuyant sur ses bulles de Message de l’historique des messages pour charger l’Extension d’application de Message qui l’a créée. L’Extension sera être lancé plein écran et autoriser l’utilisateur à composer une réponse et l’envoyer à l’utilisateur d’origine.
 
-[ ![](advanced-message-app-extensions-images/interactive02.png "L’Extension lancé plein écran")](advanced-message-app-extensions-images/interactive02.png)
+[![](advanced-message-app-extensions-images/interactive02.png "L’Extension lancé plein écran")](advanced-message-app-extensions-images/interactive02.png#lightbox)
 
 
 Les rubriques suivantes sont traitées en détail ci-dessous :
@@ -68,7 +68,7 @@ Les rubriques suivantes sont traitées en détail ci-dessous :
 
 Lorsqu’elle est appelée par l’utilisateur, une Extension d’application Message s’affichera au bas de l’historique du Message dans le mode d’affichage compact :
 
-[ ![](advanced-message-app-extensions-images/interactive03.png "Vue d’ensemble des API de messages")](advanced-message-app-extensions-images/interactive03.png)
+[![](advanced-message-app-extensions-images/interactive03.png "Vue d’ensemble des API de messages")](advanced-message-app-extensions-images/interactive03.png#lightbox)
 
 1. Le `MSMessageAppViewController` objet dans l’Extension d’application de Message est la classe principale qui est appelée lors de l’affichage de l’extension à l’utilisateur.
 2. La conversation est présentée à l’utilisateur comme un `MSConversation` instance d’objet.
@@ -80,7 +80,7 @@ Lorsqu’elle est appelée par l’utilisateur, une Extension d’application Me
 
 Examinez le processus d’une Extension d’application Message devient active :
 
-[ ![](advanced-message-app-extensions-images/interactive04.png "Le processus d’une Extension d’application Message devient active")](advanced-message-app-extensions-images/interactive04.png)
+[![](advanced-message-app-extensions-images/interactive04.png "Le processus d’une Extension d’application Message devient active")](advanced-message-app-extensions-images/interactive04.png#lightbox)
 
 1. Lorsqu’une extension est lancée (par exemple sur le contenu de l’application), l’application Message lance un processus.
 2. Le `DidBecomeActive` méthode est appelée et reçoit un `MSConversation` qui représente la conversation dont l’Extension d’application de Message est en cours d’exécution dans.
@@ -88,7 +88,7 @@ Examinez le processus d’une Extension d’application Message devient active 
 
 Ensuite, examinez le processus d’une Extension d’application Message devient désactivé :
 
-[ ![](advanced-message-app-extensions-images/interactive05.png "Le processus d’une Extension d’application Message devient désactivé")](advanced-message-app-extensions-images/interactive05.png)
+[![](advanced-message-app-extensions-images/interactive05.png "Le processus d’une Extension d’application Message devient désactivé")](advanced-message-app-extensions-images/interactive05.png#lightbox)
 
 1. Lors de l’Extension d’application de Message est en cours de désactivation, le `ViewWillDisappear` méthode est appelée en premier.
 2. Le `ViewDidDisappear` méthode sera appelée.
@@ -128,7 +128,7 @@ Si l’utilisateur clique sur la bulle de Message dans la conversation sur macOS
 
 Le `AccessibilityLabel` propriété est utilisée par les lecteurs d’écran pour lire la transcription de la conversation à l’utilisateur. Le `Layout` propriété spécifie la façon dont le message s’affichera, actuellement uniquement la `MSMessageTemplateLayout` est pris en charge et se présente comme suit :
 
-[ ![](advanced-message-app-extensions-images/interactive06.png "Le modèle MSMessageTemplateLayout")](advanced-message-app-extensions-images/interactive06.png)
+[![](advanced-message-app-extensions-images/interactive06.png "Le modèle MSMessageTemplateLayout")](advanced-message-app-extensions-images/interactive06.png#lightbox)
 
 Le `Image` propriété de la `MSMessageTemplateLayout` fournit du contenu pour le corps principal de la MessageBubble sur l’écran. Le `MediaFileUrl` propriété également fournit du contenu pour le corps de la bulle de Message, mais autorise pour le contenu qui n’est pas pris en charge par `UIImage` (par exemple, un fichier vidéo qui effectuerait une boucle en arrière-plan). Si les deux le `Image` et `MediaFileUrl` propriétés sont fournies, le `Image` propriété aura la priorité. Le `MediaFileUrl` prend en charge PNG, JPEG, GIF et vidéo (dans n’importe quel format qui peut être lu par l’infrastructure de lecteur) formats multimédias.
 
@@ -140,7 +140,7 @@ Le `ImageTitle` et `ImageSubtitle` propriétés fournissent une description pour
 
 Le `Caption`, `SubCaption`, `TrailingCaption` et `TrailingSubcaption` propriétés décrivent l’image supplémentaire et est restituées dans une section sous l’image. Le paramétrage de ces propriétés pour `null` créera une bulle de Message sans la zone de légende :
 
-[ ![](advanced-message-app-extensions-images/interactive07.png "Une bulle de Message sans la zone de légende")](advanced-message-app-extensions-images/interactive07.png)
+[![](advanced-message-app-extensions-images/interactive07.png "Une bulle de Message sans la zone de légende")](advanced-message-app-extensions-images/interactive07.png#lightbox)
 
 La dernière chose à noter est que l’application Messages dessinera icône de l’Extension application de messages dans le coin supérieur gauche de la bulle de Message.
 
@@ -181,7 +181,7 @@ Une fois le nouveau contenu dans le champ d’entrée, l’utilisateur est en me
 
 Une Extension d’application de Message peut être affichée dans un des deux modes d’affichage différents :
 
-[ ![](advanced-message-app-extensions-images/interactive08.png "Une Extension d’application Message affiché dans les deux modes d’affichage différents : Compact et développée")](advanced-message-app-extensions-images/interactive08.png)
+[![](advanced-message-app-extensions-images/interactive08.png "Une Extension d’application Message affiché dans les deux modes d’affichage différents : Compact et développée")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -il s’agit du mode par défaut où l’Extension d’application Message occupe de 25 % en bas de l’affichage du Message. En mode réduit, l’application n’a pas d’accès pour le clavier, le défilement horizontal ou reconnaissances de mouvement de balayage. L’application a accès au champ d’entrée et appelle à `InsertMessage` s’affichera instantanément à l’utilisateur.
 - **Développé** -l’Extension d’application Message remplit toute la vue de Message. Il n’a pas accès au champ d’entrée, mais n’a pas accès au clavier, défilement horizontal et reconnaissances de mouvement de balayage.
@@ -384,7 +384,7 @@ Si vous le souhaitez, l’application pourrait avoir utilisé le `WillTransition
 
 Il existe deux cas nécessitant une Extension d’application Message gérer lors de la réponse à un message :
 
-[ ![](advanced-message-app-extensions-images/interactive09.png "L’Extension d’application de Message dans les modes inactif et actif")](advanced-message-app-extensions-images/interactive09.png)
+[![](advanced-message-app-extensions-images/interactive09.png "L’Extension d’application de Message dans les modes inactif et actif")](advanced-message-app-extensions-images/interactive09.png#lightbox)
 
 - **L’extension est inactif** -il est une des bulles de Message de l’Extension application de messages dans la transcription de Message que l’utilisateur peut appuyer pour activer les extensions et poursuivre la conversation interactive.
 - **Extension est Active** -l’utilisateur peut appuyer à bulles de Message de l’Extension d’application Message dans la transcription de Message pour entrer le mode d’affichage développé et continuer le processus interactif à partir de leur point d’interruption.
@@ -393,7 +393,7 @@ Il existe deux cas nécessitant une Extension d’application Message gérer lor
 
 Lorsque l’utilisateur clique sur une bulle de Message par l’utilisateur dans la transcription de Message et l’Extension d’application de Message est inactive, le processus suivant se produit :
 
-[ ![](advanced-message-app-extensions-images/interactive10.png "Gestion d’une bulle de Message inactif")](advanced-message-app-extensions-images/interactive10.png)
+[![](advanced-message-app-extensions-images/interactive10.png "Gestion d’une bulle de Message inactif")](advanced-message-app-extensions-images/interactive10.png#lightbox)
 
 1. L’utilisateur appuie sur la bulle de Message de l’extension.
 2. Lorsqu’une extension est lancée, l’application Message lance un processus.
@@ -406,7 +406,7 @@ Lorsque le processus est terminé, l’Extension d’application de Message s’
 
 Lorsqu’une bulle de Message est tapée par l’utilisateur dans la transcription de Message et l’Extension d’application de Message est active, le processus suivant se produit :
 
-[ ![](advanced-message-app-extensions-images/interactive11.png "Gestion d’une bulle de Message active")](advanced-message-app-extensions-images/interactive11.png)
+[![](advanced-message-app-extensions-images/interactive11.png "Gestion d’une bulle de Message active")](advanced-message-app-extensions-images/interactive11.png#lightbox)
 
 1. L’utilisateur appuie sur la bulle de Message de l’extension.
 2. Étant donné que l’Extension d’application de Message est déjà active, le `WillTransition` méthode de la `MSMessagesAppViewController` est appelé pour gérer le basculement à partir du CD-ROM vers le mode d’affichage développé.
@@ -457,11 +457,11 @@ Le message sélectionné doit être indiqué dans l’interface utilisateur de l
 
 Lors de l’envoi des différentes étapes d’interactif d’une conversation entre deux l’utilisateur de la conversation, les bulles de Message partiellement terminée peut commencer à encombrer la transcription de Message :
 
-[ ![](advanced-message-app-extensions-images/interactive12.png "Les bulles de Message partiellement terminée peuvent encombrer la transcription de Message")](advanced-message-app-extensions-images/interactive12.png)
+[![](advanced-message-app-extensions-images/interactive12.png "Les bulles de Message partiellement terminée peuvent encombrer la transcription de Message")](advanced-message-app-extensions-images/interactive12.png#lightbox)
 
 Au lieu de cela, l’Extension d’application de Message doit réduire le précédent Message remonte dans un commentaire concis dans la transcription de Message :
 
-[ ![](advanced-message-app-extensions-images/interactive13.png "Réduction des bulles de Message précédent dans la transcription de Message")](advanced-message-app-extensions-images/interactive13.png)
+[![](advanced-message-app-extensions-images/interactive13.png "Réduction des bulles de Message précédent dans la transcription de Message")](advanced-message-app-extensions-images/interactive13.png#lightbox)
 
 Ceci est géré à l’aide un `MSSession` pour réduire toutes les étapes existants. Par conséquent, le `DidSelectMessage` méthode de la `MSMessagesAppViewController` classe peut être modifiée pour ressembler à ce qui suit :
 
@@ -516,7 +516,7 @@ Une Extension d’application Message utilisable pendant que les utilisateurs so
 
 Examinons l’interaction suivante dans une conversation de groupe avec trois utilisateurs :
 
-[ ![](advanced-message-app-extensions-images/interactive14.png "Interaction dans une conversation de groupe avec trois utilisateurs")](advanced-message-app-extensions-images/interactive14.png)
+[![](advanced-message-app-extensions-images/interactive14.png "Interaction dans une conversation de groupe avec trois utilisateurs")](advanced-message-app-extensions-images/interactive14.png#lightbox)
 
 1. L’utilisateur 1 envoie un Message interactif de groupe demandant l’utilisateur 2 et 3 de l’utilisateur de choisir un remplissage d’un hamburger.
 2. L’utilisateur 2 choisit tomatoes.
@@ -531,7 +531,7 @@ Lorsque l’utilisateur envoie un message, un jeton de session est généré et 
 
 Pour discuter de l’accès à l’identificateur de l’expéditeur d’un message, prenons l’exemple d’une conversation de groupe ci-dessus :
 
-[ ![](advanced-message-app-extensions-images/interactive15.png "Envoi d’identificateurs de conversation de groupe")](advanced-message-app-extensions-images/interactive15.png)
+[![](advanced-message-app-extensions-images/interactive15.png "Envoi d’identificateurs de conversation de groupe")](advanced-message-app-extensions-images/interactive15.png#lightbox)
 
 1. Là encore, utilisateur 1 envoie un Message interactif groupe demandant l’utilisateur 2 et 3 de l’utilisateur de choisir un remplissage d’un hamburger.
 2. L’utilisateur 3 choisit cornichons.

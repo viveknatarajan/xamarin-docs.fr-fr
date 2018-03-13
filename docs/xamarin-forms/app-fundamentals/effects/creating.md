@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 84450527a1301cf95c93a5dc2796a2cf76f4ae2b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3a66ec9f935159e4854a12584a6c9f70ab805abb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-an-effect"></a>Création d’un effet
 
@@ -29,7 +29,7 @@ Le processus de création d’un effet dans chaque projet spécifique à la plat
 L’effet peut ensuite être consommé en le joignant au contrôle approprié.
 
 > [!NOTE]
-> **Remarque**: il est facultatif fournir un effet dans chaque projet de plateforme. Tente d’utiliser un effet quand un n’est pas enregistré retourne une valeur non null qui ne fait rien.
+> Il est facultatif pour fournir un effet dans chaque projet de plateforme. Tente d’utiliser un effet quand un n’est pas enregistré retourne une valeur non null qui ne fait rien.
 
 L’exemple d’application montre un `FocusEffect` qui modifie la couleur d’arrière-plan d’un contrôle lorsqu’il acquiert un focus. Le diagramme suivant illustre les responsabilités de chaque projet dans l’exemple d’application, ainsi que les relations entre eux :
 
@@ -195,7 +195,7 @@ Le processus pour l’utilisation d’un effet dans une bibliothèque de classes
 1. Attacher l’effet au contrôle en l’ajoutant à du contrôle [ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) collection.
 
 > [!NOTE]
-> **Remarque**: une instance de l’effet peut uniquement être attachée à un seul contrôle. Par conséquent, un effet doit être résolu à deux reprises pour l’utiliser sur les deux contrôles.
+> Une instance d’effet peut uniquement être attachée à un seul contrôle. Par conséquent, un effet doit être résolu à deux reprises pour l’utiliser sur les deux contrôles.
 
 ## <a name="consuming-the-effect-in-xaml"></a>Utilisation de l’effet en XAML
 

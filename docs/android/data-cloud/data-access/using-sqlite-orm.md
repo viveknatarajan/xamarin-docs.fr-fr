@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: b1eb886685597e671dccf70063c34e102ce2cac9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b9523d76c04dae97b74744fbe2bd6bc7022c3194
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-sqlitenet"></a>À l’aide de SQLite.NET
 
@@ -21,7 +21,7 @@ La bibliothèque de SQLite.NET Xamarin recommande est un ORM très simple qui vo
 
 Pour inclure la bibliothèque SQLite.NET dans une application Xamarin, ajoutez le [package NuGet de bibliothèque PCL SQLite.net](https://www.nuget.org/packages/sqlite-net-pcl/) dans le projet en utilisant le **SQLite-net PCL** package NuGet :
 
-[ ![Package NuGet de SQLite.NET](using-sqlite-orm-images/image1a-sml.png "package NuGet de SQLite.NET")](using-sqlite-orm-images/image1a.png)
+[![Package NuGet de SQLite.NET](using-sqlite-orm-images/image1a-sml.png "package NuGet de SQLite.NET")](using-sqlite-orm-images/image1a.png#lightbox)
 
 Une fois que vous avez la bibliothèque SQLite.NET disponible, suivez ces trois étapes pour l’utiliser pour accéder à une base de données :
 
@@ -185,7 +185,7 @@ foreach (var s in stocksStartingWithA) {
 ```
 
 > [!NOTE]
-> **Remarque :** lors de l’écriture d’instructions SQL directement de la création d’une dépendance sur les noms des tables et des colonnes dans votre base de données qui ont été générés à partir de vos classes et leurs attributs. Si vous modifiez ces noms dans votre code vous devez mettre à jour toutes les instructions SQL écrites manuellement.
+> Lors de l’écriture d’instructions SQL directement, vous créez une dépendance sur les noms des tables et des colonnes dans votre base de données qui ont été générés à partir de vos classes et leurs attributs. Si vous modifiez ces noms dans votre code vous devez mettre à jour toutes les instructions SQL écrites manuellement.
 
 ### <a name="deleting-an-object"></a>Suppression d’un objet
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: b7756c63901d3b4fbfea70587b3fdf8e5cf9df72
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 965d4987c154acc5a2f95d4ca622266ebdc2a1c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Synchronisation des données hors connexion avec les applications mobiles Azure
 
@@ -133,7 +133,7 @@ Le `IMobileServiceSyncTable.PushAsync` méthode opère sur le contexte de synchr
 Extraction est effectuée par le `IMobileServiceSyncTable.PullAsync` méthode sur une seule table. Le premier paramètre de la `PullAsync` méthode est un nom de requête qui est utilisé uniquement sur l’appareil mobile. Fournissant des résultats de nom dans le Kit de développement logiciel Azure Mobile Client qui exécute une requête non null une *synchronisation incrémentielle*, où chaque fois qu’une opération d’extraction retourne des résultats, la dernière `updatedAt` horodatage à partir des résultats est stocké dans l’ordinateur local tables système. Les opérations d’extraction suivantes puis uniquement récupèrent des enregistrements après cet horodatage. Vous pouvez également *une synchronisation complète* peut être obtenue en passant `null` en tant que le nom de la requête, ce qui aboutit dans tous les enregistrements en cours de récupération sur chaque opération d’extraction. Après toute opération de synchronisation, les données reçues sont insérées dans le magasin local.
 
 > [!NOTE]
-> **Remarque**: si une extraction est exécutée sur une table qui est en attente de mises à jour locales, l’extraction tout d’abord exécute un push sur le contexte de synchronisation. Cela réduit les conflits entre les modifications qui sont déjà en file d’attente et de nouvelles données à partir de l’instance Azure Mobile Apps.
+> Si une extraction est exécutée sur une table qui est en attente de mises à jour locales, l’extraction s’exécute tout d’abord un push sur le contexte de synchronisation. Cela réduit les conflits entre les modifications qui sont déjà en file d’attente et de nouvelles données à partir de l’instance Azure Mobile Apps.
 
 La `SyncAsync` inclut également une implémentation de base pour la gestion des conflits lors de l’enregistrement même a changé dans les deux le magasin local et dans l’instance Azure Mobile Apps. Lorsque le conflit est que les données a été mis à jour dans le magasin local et dans l’instance Azure Mobile Apps, le `SyncAsync` méthode met à jour les données dans le magasin local à partir des données stockées dans l’instance Azure Mobile Apps. Lorsque toutes les autres conflit se produit, le `SyncAsync` méthode ignore la modification locale. Cela permet de gérer le scénario dans lequel il existe une modification locale pour les données qui a été supprimées de l’instance Azure Mobile Apps.
 
@@ -150,7 +150,7 @@ await todoTable.PurgeAsync(todoTable.Where(item => item.Done));
 Un appel à `PurgeAsync` déclenche également une opération de diffusion. Par conséquent, tous les éléments qui sont marqués comme étant exécutées localement recevront à l’instance Azure Mobile Apps avant d’être supprimée à partir du magasin local. Toutefois, s’il existe des opérations en attente de synchronisation avec l’instance Azure Mobile Apps, la purge lèvera une `InvalidOperationException` , sauf si le `force` paramètre est défini sur `true`. Une autre stratégie consiste à examiner le `IMobileServiceSyncContext.PendingOperations` propriété, qui retourne le nombre d’opérations qui n’ont pas été envoyées à l’instance Azure Mobile Apps uniquement effectuer la purge si la propriété est égale à zéro en attente.
 
 > [!NOTE]
-> **Remarque**: appel `PurgeAsync` avec la `force` paramètre la valeur `true` perdrez les modifications en attente.
+> Appel de `PurgeAsync` avec la `force` paramètre la valeur `true` perdrez les modifications en attente.
 
 ## <a name="initiating-synchronization"></a>Lancement de la synchronisation
 

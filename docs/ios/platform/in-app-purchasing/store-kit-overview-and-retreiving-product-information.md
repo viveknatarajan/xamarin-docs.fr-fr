@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a636a5ee2b027a2b2889c375f1fef5be67c379b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bafada037f912007201fd5e81b17302b21de3092
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="store-kit-overview-and-retrieving-product-information"></a>Stocker les informations de produit lors de la récupération et de vue d’ensemble du Kit
 
@@ -19,7 +19,7 @@ L’interface utilisateur pour un achat dans l’application est indiqué dans l
 Avant toute transaction se produit, l’application doit récupérer des prix du produit et une description pour l’affichage. Lorsque l’utilisateur appuie sur **acheter**, l’application effectue une demande à StoreKit qui gère la connexion d’ID Apple et la boîte de dialogue de confirmation. La transaction puis réussit, StoreKit notifie le code d’application, qui doit stocker le résultat de la transaction et fournir à l’utilisateur d’accéder à leur achat.   
 
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit notifie le code d’application, qui doit stocker le résultat de la transaction et fournir à l’utilisateur d’accéder à leur achat")](store-kit-overview-and-retreiving-product-information-images/image14.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit notifie le code d’application, qui doit stocker le résultat de la transaction et fournir à l’utilisateur d’accéder à leur achat")](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
 
 ## <a name="classes"></a>Classes
 
@@ -41,7 +41,7 @@ Le diagramme suivant montre les relations entre les différentes classes de Stor
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image15.png "Les relations entre les différentes classes abstraites de classes de StoreKit doivent être implémentées dans l’application")](store-kit-overview-and-retreiving-product-information-images/image15.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image15.png "Les relations entre les différentes classes abstraites de classes de StoreKit doivent être implémentées dans l’application")](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
    
    
    
@@ -64,7 +64,7 @@ Si vous essayez de vous connecter à dans le magasin réel avec un compte de tes
 
 Pour tester le code de StoreKit, vous devez le déconnecter de votre compte de test iTunes régulière et la connexion avec un compte de test spéciale (créé dans iTunes Connect) qui est lié à la banque de test. Pour vous déconnecter de la visite du compte actuel **Paramètres > iTunes et App Store** comme indiqué ici :
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image16.png "Pour vous déconnecter de la visite du compte actuel paramètres iTunes et App Store")](store-kit-overview-and-retreiving-product-information-images/image16.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image16.png "Pour vous déconnecter de la visite du compte actuel paramètres iTunes et App Store")](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
  
 puis connectez-vous avec un compte de test *lorsqu’il est demandé par StoreKit au sein de votre application*:
 
@@ -72,19 +72,19 @@ puis connectez-vous avec un compte de test *lorsqu’il est demandé par StoreKi
 
 Pour créer des utilisateurs de test dans iTunes Connect cliquent sur **utilisateurs et rôles** dans la page principale.
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image17.png "Pour créer des utilisateurs de test dans iTunes Connect cliquez sur utilisateurs et rôles dans la page principale")](store-kit-overview-and-retreiving-product-information-images/image17.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image17.png "Pour créer des utilisateurs de test dans iTunes Connect cliquez sur utilisateurs et rôles dans la page principale")](store-kit-overview-and-retreiving-product-information-images/image17.png#lightbox)
 
 Sélectionnez **testeurs de bac à sable**
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image18.png "En sélectionnant les testeurs de bac à sable")](store-kit-overview-and-retreiving-product-information-images/image18.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image18.png "En sélectionnant les testeurs de bac à sable")](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
 
 La liste des utilisateurs existants s’affiche. Vous pouvez ajouter un nouvel utilisateur ou supprimer un enregistrement existant. Le portail n’effectue pas (actuellement) vous permettent d’afficher ou modifier les existants de tester les utilisateurs, il est recommandé de conserver un enregistrement de bon de chaque utilisateur de test qui est créé (en particulier le mot de passe). Une fois que vous supprimez un utilisateur de test de l’adresse de messagerie ne peut pas être réutilisée pour un autre compte de test.  
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image19.png "La liste des utilisateurs existants s’affiche.")](store-kit-overview-and-retreiving-product-information-images/image19.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image19.png "La liste des utilisateurs existants s’affiche.")](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
    
  Nouveaux utilisateurs de test ont des attributs similaires à un ID Apple réel (par exemple, le nom, un mot de passe, question et la réponse). Conservez un enregistrement de tous les détails de l’entrée ici. Le **sélectionner un magasin iTunes** champ détermine la devise et de langue achats dans l’application utilisera quand connecté en tant que cet utilisateur.
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image20.png "Le champ de sélectionner un magasin iTunes déterminera la devise et la langue pour leurs achats dans l’application de l’utilisateur")](store-kit-overview-and-retreiving-product-information-images/image20.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image20.png "Le champ de sélectionner un magasin iTunes déterminera la devise et la langue pour leurs achats dans l’application de l’utilisateur")](store-kit-overview-and-retreiving-product-information-images/image20.png#lightbox)
 
 ## <a name="retrieving-product-information"></a>La récupération des informations de produit
 
@@ -102,7 +102,7 @@ La première étape de vente d’un produit dans l’application achat affiche 
 
 L’interaction globale ressemble à ceci ( **StoreKit** est intégrée pour iOS et le **App Store** représente des serveurs Apple) :
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image21.png "Graphique lors de la récupération d’informations sur le produit")](store-kit-overview-and-retreiving-product-information-images/image21.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image21.png "Graphique lors de la récupération d’informations sur le produit")](store-kit-overview-and-retreiving-product-information-images/image21.png#lightbox)
 
 ### <a name="displaying-product-information-example"></a>Afficher l’exemple des informations de produit
 
@@ -110,7 +110,7 @@ Le [InAppPurchaseSample](https://developer.xamarin.com/samples/monotouch/StoreKi
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image23.png "L’écran principal affiche des informations sur les produits extraites de l’App Store")](store-kit-overview-and-retreiving-product-information-images/image23.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image23.png "L’écran principal affiche des informations sur les produits extraites de l’App Store")](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
    
    
    
@@ -235,7 +235,7 @@ public override void RequestFailed (SKRequest request, NSError error)
 
 Cette capture d’écran montre l’exemple d’application immédiatement après le chargement (lorsqu’aucune information de produit n’est disponible) :
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image24.png "L’exemple d’application immédiatement après le chargement lorsque aucune information de produit est disponible")](store-kit-overview-and-retreiving-product-information-images/image24.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image24.png "L’exemple d’application immédiatement après le chargement lorsque aucune information de produit est disponible")](store-kit-overview-and-retreiving-product-information-images/image24.png#lightbox)
 
 ## <a name="invalid-products"></a>Produits non valides
 
@@ -296,7 +296,7 @@ buy5Button.SetTitle(String.Format(Buy, product.LocalizedPrice()), UIControlState
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image25.png "Deux iTunes autres test comptabilité de langue des résultats spécifiques")](store-kit-overview-and-retreiving-product-information-images/image25.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image25.png "Deux iTunes autres test comptabilité de langue des résultats spécifiques")](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
    
    
    

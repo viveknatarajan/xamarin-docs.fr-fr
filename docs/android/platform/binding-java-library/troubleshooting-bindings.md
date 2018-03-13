@@ -7,18 +7,17 @@ ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 84ef87f5ed84fcd0a9aa2504c52a0fec17404e1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="troubleshooting-bindings"></a>Résolution des problèmes de liaisons
 
 _Cet article présente plusieurs erreurs courantes qui peuvent se produire lors de la génération des liaisons, ainsi que les causes et les solutions suggérées pour les résoudre._
 
-<a name="OVERVIEW" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -38,7 +37,6 @@ Après l’activation de la sortie de diagnostic, régénérez le projet de liai
 
 Il peut également s’avérer utile de décompiler la bibliothèque Android et examiner les types et méthodes Xamarin.Android essaie de lier. Ce sujet est abordé plus en détail plus loin dans ce guide.
 
-<a name="DECOMPILING_AN_ANDROID_LIBRARY" />
 
 ## <a name="decompiling-an-android-library"></a>Décompiler une bibliothèque Android
 
@@ -59,9 +57,8 @@ Une fois que vous avez décompilé la bibliothèque Android, examinez le code so
 - **`import` instructions pour les bibliothèques non référencés** &ndash; identifier la bibliothèque non référencée et ajouter ces dépendances pour le projet de liaison de Xamarin.Android avec un **Action de génération** de **ReferenceJar**  ou **EmbedddedReferenceJar**.
 
 > [!NOTE]
-> **Remarque :** décompiler une bibliothèque de Java peut être interdite ou soumis aux restrictions juridiques en fonction des lois ou la licence sous lequel la bibliothèque de Java a été publiée. Si nécessaire, intégrer les services d’un professionnel du juridique avant de tenter de décompiler une bibliothèque Java et inspecter le code source.
+> Décompiler une bibliothèque Java est interdit ou soumis aux restrictions juridiques en fonction des lois ou la licence sous lequel la bibliothèque de Java a été publiée. Si nécessaire, intégrer les services d’un professionnel du juridique avant de tenter de décompiler une bibliothèque Java et inspecter le code source.
 
-<a name="INSPECTING_API_XML" />
 
 ## <a name="inspect-apixml"></a>Inspectez les API. XML
 
@@ -71,19 +68,16 @@ Dans le cadre de la création d’un projet de liaison, Xamarin.Android génère
 
 Ce fichier fournit une liste de toutes les API Java que Xamarin.Android est la tentative de liaison. Le contenu de ce fichier peut aider à identifier les types ou les méthodes manquant, la liaison en double. Bien que l’inspection de ce fichier est long et fastidieux, elle peut fournir des indices sur ce qui pourrait provoquer des problèmes de liaison. Par exemple, **api.xml** peut révéler qu’une propriété retourne un type inapproprié, ou qu’il existe deux types qui partagent le même nom managé.
 
-<a name="KNOWN_ISSUES" />
 
 ## <a name="known-issues"></a>Problèmes connus
 
 Cette section répertorie certains des problèmes ou des messages d’erreur courants que mon se produisent lorsque vous tentez de lier une bibliothèque Android.
 
-<a name="PROBLEM_JAVA_VERSION_MISMATCH" />
 
 ### <a name="problem-java-version-mismatch"></a>Problème : Incompatibilité de Version Java
 
 Parfois, les types ne seront pas générés ou des pannes inattendues peuvent se produire, car vous utilisez une version plus récente ou plus anciennes de Java par rapport à la bibliothèque qui a été compilée avec. Recompilez la bibliothèque Android avec la même version du JDK qui utilise votre projet Xamarin.Android.
 
-<a name="PROBLEM_AT_LEAST_ONE_JAVA_LIBRARY_IS_REQUIRED" />
 
 ### <a name="problem-at-least-one-java-library-is-required"></a>Problème : au moins une bibliothèque de Java est requise
 
@@ -93,7 +87,6 @@ Vous recevez l’erreur « au moins une bibliothèque de Java est requise, » 
 
 Assurez-vous que l’action de génération est définie `EmbeddedJar`. Dans la mesure où il existe plusieurs actions de génération pour. Fichiers JAR (tel que `InputJar`, `EmbeddedJar`, `ReferenceJar` et `EmbeddedReferenceJar`), le Générateur de liaison ne peut pas deviner automatiquement l’application à utiliser par défaut. Pour plus d’informations sur les actions de génération, consultez [générer les Actions](~/android/platform/binding-java-library/index.md).
 
-<a name="PROBLEM_BINDING_TOOLS_CANNOT_LOAD_THE_JAR_LIBRARY" />
 
 ### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problème : Outils de liaison ne peut pas charger le. Bibliothèque JAR
 
@@ -104,7 +97,6 @@ Le Générateur de bibliothèque de liaison ne peut pas charger le. Bibliothèqu
 Certains. Impossible de charger les bibliothèques JAR qui utilisent l’obscurcissement de code (via des outils tels que Proguard) par les outils Java. Étant donné que notre outil rend l’utilisation de la réflexion de Java et le code d’octet ASM bibliothèque d’ingénierie, ces outils dépendants peuvent rejeter les bibliothèques obscurcis tandis que les outils Android runtime peuvent passer. La solution consiste à lier manuellement ces bibliothèques au lieu d’utiliser le Générateur de liaison.
 
 
-<a name="PROBLEM_MISSING_C_TYPES_IN_GENERATED_OUTPUT_" />
 
 ### <a name="problem-missing-c-types-in-generated-output"></a>Problème : Pas de types c# dans la sortie générée.
 
@@ -253,8 +245,6 @@ La solution à ce problème consiste à charger manuellement le **.so** biblioth
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
-
-<a name=summary />
 
 ## <a name="summary"></a>Récapitulatif
 

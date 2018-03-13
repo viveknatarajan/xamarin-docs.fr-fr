@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1cc74fb30e59ecd5f6be3cf3e1c84f60cd5ca0a6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1fba2219a10a83043097d1b5ca6fb293de4d6c70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="source-lists"></a>Listes sources
 
@@ -22,7 +22,7 @@ Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous a
 
 Une liste de Source est un type spécial de mode plan utilisé pour afficher la source d’une action, telles que la barre de recherche ou iTunes.
 
-[ ![](source-list-images/source05.png "Un exemple de liste source")](source-list-images/source05.png)
+[![](source-list-images/source05.png "Un exemple de liste source")](source-list-images/source05.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de l’utilisation de listes de code Source dans une application Xamarin.Mac. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -50,7 +50,7 @@ Une liste de Source est un type spécial de mode plan utilisé pour afficher la 
 
 Tout d’abord, nous allons créer un nouveau `SourceListItem` classe pour contenir les données de notre liste Source. Dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListItem` pour le **nom** et cliquez sur le **nouveau** bouton :
 
-[ ![](source-list-images/source01.png "Ajout d’une classe vide")](source-list-images/source01.png)
+[![](source-list-images/source01.png "Ajout d’une classe vide")](source-list-images/source01.png#lightbox)
 
 Rendre le `SourceListItem.cs` fichier ressemble les éléments suivants : 
 
@@ -532,19 +532,19 @@ Cette opération crée une sous-classe personnalisée et réutilisable de `NSOut
 
 Maintenant, nous allons créer notre liste Source dans le Générateur de l’Interface. Double-cliquez sur le `Main.storyboard` fichier à ouvrir pour le modifier dans le Générateur de Interface et faites glisser à partir de fractionnement la **bibliothèque inspecteur**, ajoutez-le au contrôleur de vue et la définir à redimensionner avec la vue dans le **éditeur de contraintes** :
 
-[ ![](source-list-images/source00.png "Modification des contraintes")](source-list-images/source00.png)
+[![](source-list-images/source00.png "Modification des contraintes")](source-list-images/source00.png#lightbox)
 
 Ensuite, faites glisser une liste de sources de la **bibliothèque inspecteur**, ajoutez-le au côté gauche de la vue de fractionnement et la définir à redimensionner avec la vue dans le **éditeur de contraintes**:
 
-[ ![](source-list-images/source02.png "Modification des contraintes")](source-list-images/source02.png)
+[![](source-list-images/source02.png "Modification des contraintes")](source-list-images/source02.png#lightbox)
 
 Ensuite, basculez vers le **identité vue**, sélectionnez la liste des sources et le modifier de **classe** à `SourceListView`:
 
-[ ![](source-list-images/source03.png "Définition du nom de classe")](source-list-images/source03.png)
+[![](source-list-images/source03.png "Définition du nom de classe")](source-list-images/source03.png#lightbox)
 
 Enfin, créez un **prise** pour notre liste Source appelé `SourceList` dans le `ViewController.h` fichier :
 
-[ ![](source-list-images/source04.png "Configuration d’une prise de courant")](source-list-images/source04.png)
+[![](source-list-images/source04.png "Configuration d’une prise de courant")](source-list-images/source04.png#lightbox)
 
 Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
@@ -614,7 +614,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Si nous exécutons notre application, les informations suivantes s’affichent :
 
-[ ![](source-list-images/source05.png "Un exemple d’application exécuter")](source-list-images/source05.png)
+[![](source-list-images/source05.png "Un exemple d’application exécuter")](source-list-images/source05.png#lightbox)
 
 <a name="Summary" />
 
@@ -628,7 +628,7 @@ Cet article a pris une présentation détaillée sur l’utilisation de listes d
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Vues Table](~/mac/user-interface/table-view.md)
 - [Modes Plan](~/mac/user-interface/outline-view.md)
-- [Indications de l’Interface du système d’exploitation X humaines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Présentation de montrer les vues](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)

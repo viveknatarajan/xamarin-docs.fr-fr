@@ -8,19 +8,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: b7b5093f9a564c0711ddc8a711f9b609d44e7dad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a750167cb9e6bde3a4a9abe11c5386497f9a12ae
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-performance"></a>Performances des applications Xamarin.Forms
 
 _De nombreuses techniques permettent d’accroître les performances des applications Xamarin.Forms. Ensemble, ces techniques peuvent considérablement réduire la charge de travail d’un processeur, de même que la quantité de mémoire consommée par une application. Cet article décrit et explique ces techniques._
 
-[ ![](performance-images/evolve-jason-perf-sml.png "Optimisation des performances des applications avec Xamarin.Forms")](https://evolve.xamarin.com/session/56e205b0bad314273ca4d817)
+> [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
-[Evolve 2016 : Optimisation des performances des applications avec Xamarin.Forms](https://evolve.xamarin.com/session/56e205b0bad314273ca4d817)
+**Evolve 2016 : Optimisation des performances des applications avec Xamarin.Forms**
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -41,7 +41,7 @@ De nombreuses techniques permettent d’accroître les performances, notamment c
 - [Utiliser le modèle de renderer personnalisé](#rendererpattern)
 
 > [!NOTE]
->  Avant de lire cet article, lisez d’abord [Performances multiplateformes](~/cross-platform/deploy-test/memory-perf-best-practices.md), qui décrit les techniques indépendantes des plateformes permettant améliorer l’utilisation de la mémoire et les performances des applications générées avec la plateforme Xamarin.
+>  Avant de lire cet article, lisez d’abord [Niveau de performance multiplateforme](~/cross-platform/deploy-test/memory-perf-best-practices.md), qui décrit les techniques spécifiques indépendantes des plateformes qui permettent d’améliorer l’utilisation de la mémoire et le niveau de performance des applications générées à l’aide de la plateforme Xamarin.
 
 <a name="xamlc" />
 

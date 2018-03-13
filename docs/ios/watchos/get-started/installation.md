@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/05/2017
-ms.openlocfilehash: f7e511d7f0a933ab7f29369e5e5f0aa46607c8f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c423c9bf49c735673793f8e61134f7e705816d54
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation"></a>Installation
 
@@ -55,19 +55,19 @@ Vous ne pouvez pas créer une « espion Solution »... au lieu de cela, vous p
 
 1. Si vous n’avez pas un projet existant, vous devez tout d’abord choisir **fichier > Nouvelle Solution** et créer une application iOS (par exemple, un **unique afficher l’application**) :
 
-    [ ![](installation-images/cycle8-2-sml.png "Choisissez Fichier > Nouvelle Solution et créer une application iOS")](installation-images/cycle8-2.png)
+    [![](installation-images/cycle8-2-sml.png "Choisissez Fichier > Nouvelle Solution et créer une application iOS")](installation-images/cycle8-2.png#lightbox)
 
 2. Une fois que l’application iOS est créée (ou si vous envisagez d’utiliser votre application iOS existante), avec le bouton droit sur la solution et choisissez **Ajouter > Ajouter un nouveau projet...** . Dans le **nouveau projet** sélectionnez **watchOS > applications > WatchKit application**:
 
-    [ ![](installation-images/cycle8-6-sml.png "Sélectionnez watchOS > applications > WatchKit application")](installation-images/cycle8-6.png)
+    [![](installation-images/cycle8-6-sml.png "Sélectionnez watchOS > applications > WatchKit application")](installation-images/cycle8-6.png#lightbox)
 
 3. L’écran suivant vous permet de choisir le projet d’application iOS doit inclure l’application de surveillance :
 
-    [ ![](installation-images/cycle8-7-sml.png "Choisissez le projet d’application iOS doit inclure l’application de surveillance")](installation-images/cycle8-7.png)
+    [![](installation-images/cycle8-7-sml.png "Choisissez le projet d’application iOS doit inclure l’application de surveillance")](installation-images/cycle8-7.png#lightbox)
 
 4. Enfin, choisissez l’emplacement où enregistrer le projet (et éventuellement a activé le contrôle de code source) :
 
-    [ ![](installation-images/cycle8-8-sml.png "Choisissez l’emplacement où enregistrer le projet")](installation-images/cycle8-8.png)
+    [![](installation-images/cycle8-8-sml.png "Choisissez l’emplacement où enregistrer le projet")](installation-images/cycle8-8.png#lightbox)
 
 5. Visual Studio pour Mac configure automatiquement [références de projet et **Info.plist** paramètres](~/ios/watchos/get-started/project-references.md) pour vous.
 
@@ -81,11 +81,11 @@ Double-cliquez sur l’application de surveillance **Interface.storyboard** à m
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![](installation-images/iosdesigner-sml.png "Le plan conceptuel dans le Concepteur")](installation-images/iosdesigner.png)
+[![](installation-images/iosdesigner-sml.png "Le plan conceptuel dans le Concepteur")](installation-images/iosdesigner.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](installation-images/iosdesigner-sml-vs.png "Le plan conceptuel dans le Concepteur")](installation-images/iosdesigner-vs.png)
+[![](installation-images/iosdesigner-sml-vs.png "Le plan conceptuel dans le Concepteur")](installation-images/iosdesigner-vs.png#lightbox)
 
 -----
 
@@ -152,7 +152,7 @@ Il existe deux modes pour le lancement d’une application WatchKit :
 Une fois Xcode 8 (ou version ultérieure) est installé, les simulateurs Apple Watch sont distincts d’iOS simulateurs (contrairement aux [Xcode 6](#xcode6), où elles apparaissaient comme un *affichage externe*).
 Lorsque vous sélectionnez le projet d’application de surveillance et que le projet de démarrage, la liste des simulateurs affichera les *iOS simulateurs* sélectionnables (comme indiqué ci-dessous).
 
-[ ![](installation-images/xs-xcode8-watchos3-sml.png "Sélectionner le type de simulateur")](installation-images/xs-xcode8-watchos3.png)
+[![](installation-images/xs-xcode8-watchos3-sml.png "Sélectionner le type de simulateur")](installation-images/xs-xcode8-watchos3.png#lightbox)
 
 Lorsque vous démarrez le débogage, *deux* simulateurs doit démarrer - simulateur iOS *et* le simulateur d’Apple Watch. Utilisez **commande + MAJ + H** pour accéder à l’image de menu et d’horloge espion ; et utiliser le **matériel** menu pour définir le **Force Touch la sollicitation de la**. Le défilement sur la souris ou du pavé tactile simule à l’aide de la couronne numérique.
 
@@ -195,13 +195,13 @@ Visual Studio pour Mac peut démarrer l’application de surveillance avec une n
 Avec le bouton droit sur le projet d’application espion et choisissez **exécuter avec > Configuration personnalisée...** :
 
 
-[![](installation-images/runwith-customparams-sml.png "Une Configuration personnalisée en cours d’exécution")](installation-images/runwith-customparams.png)
+[![](installation-images/runwith-customparams-sml.png "Une Configuration personnalisée en cours d’exécution")](installation-images/runwith-customparams.png#lightbox)
 
 
 Cette opération ouvre le **les paramètres personnalisés** fenêtre dans laquelle vous pouvez sélectionner **Notification** (et fournir une charge utile JSON), puis appuyez sur **exécuter** pour démarrer l’application de surveillance dans le simulateur :
 
 
-[![](installation-images/runwith-execargs-sml.png "Définition de la Notification et la charge utile")](installation-images/runwith-execargs.png)
+[![](installation-images/runwith-execargs-sml.png "Définition de la Notification et la charge utile")](installation-images/runwith-execargs.png#lightbox)
 
 
 

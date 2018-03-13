@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/11/2016
-ms.openlocfilehash: 7937e80b13ca7e3ecec1dc179adade666bd90635
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9cbc756c5ba61d764404ffabd347232a25dbdc58
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>À l’aide de UrhoSharp dans Xamarin.Forms
 
@@ -33,7 +33,7 @@ Avant d’utiliser UrhoSharp, les développeurs doivent ajouter le package Nuget
 Le package Nuget de UrhoSharp.Forms contient tous les objets nécessaires pour créer des objets de UrhoSharp. Le package nuget UrhoSharp.Forms inclut la `UrhoSurface` classe, qui est utilisé pour héberger le UrhoSharp dans Xamarin.Forms.
 Pour commencer, cliquez sur la bibliothèque de classes portables **Packages** et sélectionnez **ajouter des Packages en cours...** . Entrez le terme de recherche **UrhoSharp.Forms**, sélectionnez **UrhoSharp pour Xamarin.Forms**, puis cliquez sur **ajouter un Package**.
 
-[ ![](urhosharp-images/add-package-sml.png "Packages de boîte de dialogue Ajouter")](urhosharp-images/add-package.png "Packages la boîte de dialogue Ajouter")
+[![](urhosharp-images/add-package-sml.png "Packages de boîte de dialogue Ajouter")](urhosharp-images/add-package.png#lightbox "Packages la boîte de dialogue Ajouter")
 
 Le package NuGet de UrhoSharp.Forms vont être ajouté au projet :
 

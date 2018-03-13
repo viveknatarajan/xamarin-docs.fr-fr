@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 0ab1daa9ce76900067f374cda58040354688c7be
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e77c5653171ec6c69608858805de28843fc0db56
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="shared-projects"></a>Projets partagés
 
@@ -25,20 +25,8 @@ Ils prennent en charge les directives du compilateur afin que vous pouvez inclur
 Si vous avez utilisé la liaison de fichiers dans le passé pour partager du code entre les projets, les projets partagés fonctionne de façon similaire, mais avec prise en charge IDE considérablement améliorée.
 
 
-# <a name="requirements"></a>Configuration requise
 
-Projet de prise en charge a été ajoutée dans Xamarin Studio 5 et Visual Studio 2013 Update 2 (voir Remarque) partagés.
-
-> [!IMPORTANT]
->  Microsoft a publié ce nouveau type de projet - **les projets partagés ([télécharger la version préliminaire de Visual Studio extension](http://visualstudiogallery.msdn.microsoft.com/315c13a7-2787-4f57-bdf7-adae6ed54450))** - pour Visual Studio 2013 Update 2 (avril 2014). Faire de Microsoft [Windows Phone 8.1](http://blogs.msdn.com/b/visualstudio/archive/2014/04/08/building-windows-phone-8-1-apps-in-html.aspx) et [Microsoft Store](http://msdn.microsoft.com/en-us/library/windows/apps/dn609832.aspx#CrossPlatform) docs pour plus d’informations sur son fonctionnement avec ces plateformes.
-
-
-
-
- <a name="Walkthrough" />
-
-
-# <a name="what-is-a-shared-project"></a>Qu’est un projet partagé ?
+## <a name="what-is-a-shared-project"></a>Qu’est un projet partagé ?
 
 Contrairement à la plupart des autres types de projets un projet partagé n’a pas de sortie (sous forme DLL), au lieu de cela, le code est compilé dans chaque projet qui y fait référence. Ceci est illustré dans le diagramme ci-dessous - point de vue conceptuel la totalité du projet partagé est « copiées » chaque projet de référence et compilée comme si elle faisait partie d'entre eux.
 
@@ -54,9 +42,7 @@ Notez que les projets d’application Android ne peut pas référencer d’autre
 
 
 
-<a name="Xamarin_Studio_Walkthrough" />
-
-# <a name="visual-studio-for-mac-walkthrough"></a>Procédure pas à pas Visual Studio pour Mac
+## <a name="visual-studio-for-mac-walkthrough"></a>Procédure pas à pas Visual Studio pour Mac
 
 
 Cette section vous montre comment créer et utiliser un projet partagé à l’aide de Visual Studio pour Mac. Consultez le pour [exemple de projet partagé](#Shared_Project_Example) section pour obtenir un exemple complet.
@@ -109,15 +95,13 @@ Le **Options** écran ci-dessous - le projet **nom** et **par défaut de Namespa
 
 
 
-<a name="Visual_Studio_Walkthrough" />
-
-# <a name="visual-studio-walkthrough"></a>Procédure pas à pas Visual Studio
+## <a name="visual-studio-walkthrough"></a>Procédure pas à pas Visual Studio
 
 
 Cette section décrit comment créer et utiliser un projet partagé à l’aide de Visual Studio. Consultez le pour [exemple de projet partagé](#Shared_Project_Example) section pour une implémentation complète.
 
 
-## <a name="creating-a-shared-project"></a>Création d’un projet partagé
+### <a name="creating-a-shared-project"></a>Création d’un projet partagé
 
 
 Pour créer un nouveau projet partagé atteindre **fichier > Nouvelle Solution...**  et choisissez un nom pour le projet et la solution.
@@ -145,7 +129,7 @@ Ajout d’une référence à un projet partagé est effectuée de la même faço
 Une fois le projet partagé est référencé par une autre bibliothèque ou une application, vous pouvez générer la solution et afficher toutes les erreurs dans le code. Lorsque le projet partagé est référencé par _deux ou plusieurs_ autres projets, un menu s’affiche dans le coin supérieur gauche de l’éditeur de code source pour voir les projets qui référencent le fichier de code en cours.
 
 
-## <a name="shared-project-properties"></a>Propriétés du projet partagé
+### <a name="shared-project-properties"></a>Propriétés du projet partagé
 
 
 Lorsque vous sélectionnez un projet partagé il moins de paramètres dans le volet de propriétés que les autres types de projet. Étant donné que les projets partagés ne sont pas compilées (sur leurs propres), vous ne peut pas définir les options du compilateur ou de sortie, les configurations de projet, la signature d’assembly ou des commandes personnalisées. Le code dans un projet partagé hérite efficacement ces valeurs à partir de tout ce qui les référence.
@@ -161,10 +145,9 @@ Le **propriétés** Panneau de configuration est indiqué ci-dessous - le **raci
 
 -----
 
- <a name="Shared_Project_Example" />
+<a name="Shared_Project_Example"/>
 
-
-# <a name="shared-project-example"></a>Exemple de projet partagé
+## <a name="shared-project-example"></a>Exemple de projet partagé
 
 Le [Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky) exemple utilise un projet partagé pour contenir le code commun utilisé par les deux iOS, Android et Windows Phone applications. À la fois le `SQLite.cs` et `TaskRepository.cs` les fichiers de code source utilisent des directives du compilateur (par exemple). `#if __ANDROID__`) pour produire une sortie différente pour chacune des applications qui les référencent.
 
@@ -186,10 +169,9 @@ Les applications en cours d’exécution sont indiquées ci-dessous.
 
  ![](shared-projects-images/example.png "obtenir des exemples iOS, Android, Windows Phone")
 
- <a name="Summary" />
 
 
-# <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif
 
 Ce document décrit comment les projets partagés fonctionnent, comment ils peuvent être créés et utilisés dans Visual Studio pour Mac et Visual Studio et a introduit un exemple simple d’application qui illustre un projet partagé dans l’action.
 

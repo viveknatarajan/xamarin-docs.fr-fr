@@ -4,14 +4,15 @@ description: "Découvrez les différents effets de chemin d’accès qui autoris
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 4344559c85ad637ad198b3afc28b17e694a14f82
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 60d60939c0f7bd3961400a3e8d769fdfa17184a2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="path-effects"></a>Effets de chemin d’accès
 
@@ -48,7 +49,7 @@ La fin des tirets est affectée par la `StrokeCap` propriété du `SKPaint`. Lar
 
 Le **animés de texte séparée par des points** page est similaire à la **décrites de texte** page décrite dans l’article [ **intégration de texte et des graphiques** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) dans qu’il affiche décrit les caractères de texte en définissant le `Style` propriété de la `SKPaint` objet `SKPaintStyle.Stroke`. En outre, **animés de texte séparée par des points** utilise `SKPathEffect.CreateDash` pour permettre à ce plan une apparence en pointillé, et le programme anime également la `phase` argument de la `SKPathEffect.CreateDash` méthode pour rendre les points semblent voyager autour du texte caractères. Voici la page en mode paysage :
 
-[![](effects-images/animateddottedtext-small.png "Capture d’écran de triple de la page de texte de pointillés animée")](effects-images/animateddottedtext-large.png "Triple capture d’écran de la page de texte de pointillés animée")
+[![](effects-images/animateddottedtext-small.png "Capture d’écran de triple de la page de texte de pointillés animée")](effects-images/animateddottedtext-large.png#lightbox "Triple capture d’écran de la page de texte de pointillés animée")
 
 Le [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) classe commence par définir certaines constantes et substitue le `OnAppearing` et `OnDisappearing` les méthodes de l’animation :
 
@@ -156,7 +157,7 @@ Il est possible d’ajuster la longueur du modèle de tiret pour s’ajuster à 
 
 Le **point / tiret Morph** programme anime le motif de pointillés lui-même afin que les tirets semblent diviser en points, qui combinent les tirets de formulaire à nouveau :
 
-[![](effects-images/dotdashmorph-small.png "Capture d’écran de triple de la page point tiret Morph")](effects-images/dotdashmorph-large.png "Triple capture d’écran de la page point tiret Morph")
+[![](effects-images/dotdashmorph-small.png "Capture d’écran de triple de la page point tiret Morph")](effects-images/dotdashmorph-large.png#lightbox "Triple capture d’écran de la page point tiret Morph")
 
 Le [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) substitue le `OnAppearing` et `OnDisappearing` tout comme le fait du programme précédent, mais la classe définit des méthodes le `SKPaint` objet en tant que champ :
 
@@ -396,7 +397,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 Le `PaintSurface` gestionnaire crée une courbe de Bézier qui boucle elle-même et accède au sélecteur pour déterminer quelle `PathEffect` doit être utilisé pour le contour. Les trois options : `Translate`, `Rotate`, et `Morph` , sont affichées de gauche à droite :
 
-[![](effects-images/1dpatheffect-small.png "Capture d’écran de triple de la page d’effet 1D")](effects-images/1dpatheffect-large.png "Triple capture d’écran de la page d’effet 1D")
+[![](effects-images/1dpatheffect-small.png "Capture d’écran de triple de la page d’effet 1D")](effects-images/1dpatheffect-large.png#lightbox "Triple capture d’écran de la page d’effet 1D")
 
 Le chemin d’accès spécifié dans le `SKPathEffect.Create1DPath` (méthode) est toujours remplie. Le chemin d’accès spécifié dans le `DrawPath` méthode est rayée toujours si le `SKPaint` objet possède ses `PathEffect` un effet 1D la valeur de propriété. Notez que la `pathPaint` objet n’a aucun `Style` paramètre, qui est normalement par défaut `Fill`, mais le chemin d’accès est rayé quel que soit.
 
@@ -408,7 +409,7 @@ La forme de rectangle dans le `Morph` exemple est 50 pixels en largeur avec un `
 
 Si le `advance` argument est inférieure à la taille du chemin d’accès, puis les chemins d’accès répliquées peuvent se chevaucher. Cela peut entraîner des effets intéressants. Le **chaîne liée** page affiche une série de cercles qui semblent se présenter comme une chaîne liée, qui se bloque dans la forme distinctif d’un caténaire superposés :
 
-[![](effects-images/linkedchain-small.png "Capture d’écran de triple de la page de la chaîne liée")](effects-images/linkedchain-large.png "Triple capture d’écran de la page de la chaîne liée")
+[![](effects-images/linkedchain-small.png "Capture d’écran de triple de la page de la chaîne liée")](effects-images/linkedchain-large.png#lightbox "Triple capture d’écran de la page de la chaîne liée")
 
 Recherchez très proches et vous verrez que ce ne sont pas réellement des cercles. Chaque lien de la chaîne est deux arcs, dimensionné et positionné afin qu’ils semblent se connecter avec des liens adjacentes.
 
@@ -547,7 +548,7 @@ Ce programme définit le chemin d’accès utilisé dans `Create1DPath` pour que
 
 Le **tapis roulant** page crée un chemin d’accès qui ressemble à un tapis roulant allongées avec une courbe haut et le bas valeur dimensionnée pour les dimensions de la fenêtre. Ce chemin d’accès est tracée à l’aide `SKPaint` objet 20 pixels de largeur et de couleur grise, puis dessinés à nouveau avec un autre `SKPaint` de l’objet avec un `SKPathEffect` objet faisant référence à un chemin d’accès qui ressemble à un compartiment peu :
 
-[![](effects-images/conveyorbelt-small.png "Capture d’écran de triple de la page tapis roulant")](effects-images/conveyorbelt-large.png "Triple capture d’écran de la page de tapis roulant")
+[![](effects-images/conveyorbelt-small.png "Capture d’écran de triple de la page tapis roulant")](effects-images/conveyorbelt-large.png#lightbox "Triple capture d’écran de la page de tapis roulant")
 
 Le (0, 0) point du chemin d’accès de compartiment est le handle, par conséquent, lorsque le `phase` argument est animé, les compartiments semblent concernent le tapis roulant, peut-être la limitation d’étendue de l’eau en bas et le vidage de son évolution horizontale en haut.
 
@@ -796,7 +797,7 @@ Si vous examinez attentivement les résultats, vous verrez que les lignes de hac
 
 Le `PaintSurface` gestionnaire se termine par un appel à tracer simplement le rectangle arrondi, afin de voir la différence avec les lignes de hachurage rouges et bleues :
 
-[![](effects-images/hatchfill-small.png "Capture d’écran de triple de la page de hachurage de remplissage")](effects-images/hatchfill-large.png "Triple capture d’écran de la page de hachurage de remplissage")
+[![](effects-images/hatchfill-small.png "Capture d’écran de triple de la page de hachurage de remplissage")](effects-images/hatchfill-large.png#lightbox "Triple capture d’écran de la page de hachurage de remplissage")
 
 L’écran Android ne ressemble pas vraiment que : la mise à l’échelle de la capture d’écran a provoqué la fins et des lignes rouges léger pour consolider dans les lignes rouges apparemment plus large et les espaces plus larges.
 
@@ -850,7 +851,7 @@ public class PathTileFillPage : ContentPage
 
 Dans le `PaintSurface` gestionnaire, la `SKPathEffect.Create2DPath` appels définit l’espacement horizontal et vertical à 64 pour provoquer les vignettes carrés 80 pixels se chevaucher. Heureusement, le chemin d’accès ressemble à une pièce, maillage bien avec voisines de vignettes :
 
-[![](effects-images/pathtilefill-small.png "Capture d’écran de triple de la page de mosaïque remplit de chemin d’accès")](effects-images/pathtilefill-large.png "Triple capture d’écran de la page de mosaïque remplit de chemin d’accès")
+[![](effects-images/pathtilefill-small.png "Capture d’écran de triple de la page de mosaïque remplit de chemin d’accès")](effects-images/pathtilefill-large.png#lightbox "Triple capture d’écran de la page de mosaïque remplit de chemin d’accès")
 
 La mise à l’échelle à partir de la capture d’écran d’origine de provoque certains distorsion, en particulier sur l’écran Android.
 
@@ -923,7 +924,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Vous pouvez utiliser cet effet avec contour ou remplissage basé sur le `Style` propriété de la `SKPaint` objet. Ici, il est sur les trois plateformes :
 
-[![](effects-images/anotherroundedheptagon-small.png "Capture d’écran de triple de la page d’un autre sur un heptagone arrondi")](effects-images/anotherroundedheptagon-large.png "Triple capture d’écran de la page d’un autre sur un heptagone arrondi")
+[![](effects-images/anotherroundedheptagon-small.png "Capture d’écran de triple de la page d’un autre sur un heptagone arrondi")](effects-images/anotherroundedheptagon-large.png#lightbox "Triple capture d’écran de la page d’un autre sur un heptagone arrondi")
 
 Vous verrez que cet sur un heptagone arrondi est identique au programme précédent. Si vous avez besoin de plus de convaincre que le rayon d’angle est véritablement 100 plutôt que les 50 spécifié dans le `SKPathEffect.CreateCorner` appel, vous pouvez ne pas commenter la dernière instruction dans le programme et voir un rayon de 100 superposées dans l’angle.
 
@@ -942,7 +943,7 @@ L’argument final est une valeur de départ utilisée pour générer la séquen
 
 Le **instabilité expérimenter** page vous permet de faire des essais avec différentes valeurs de contour d’un rectangle :
 
-[![](effects-images/jitterexperiment-small.png "Capture d’écran de triple de la page de l’expérience d’instabilité")](effects-images/jitterexperiment-large.png "Triple screenshot of the JitterExperiment page")
+[![](effects-images/jitterexperiment-small.png "Capture d’écran de triple de la page de l’expérience d’instabilité")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
 
 Le programme est suffirait. Le [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) fichier instancie deux `Slider` éléments et une `SKCanvasView`:
 
@@ -1068,7 +1069,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ici, il s’exécute en mode paysage sur les trois plateformes :
 
-[![](effects-images/jittertext-small.png "Capture d’écran de triple de la page de l’instabilité de texte")](effects-images/jittertext-large.png "Triple screenshot of the JitterText page")
+[![](effects-images/jittertext-small.png "Capture d’écran de triple de la page de l’instabilité de texte")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 
 ## <a name="path-outlining"></a>Chemin d’accès du mode plan
 
@@ -1169,11 +1170,11 @@ public partial class TapToOutlineThePathPage : ContentPage
 
 Le cercle rempli et dessiné comme prévu :
 
-[![](effects-images/taptooutlinethepathnormal-small.png "Capture d’écran de triple de la page appuyez sur plan le chemin normale")](effects-images/taptooutlinethepathnormal-large.png "Triple capture d’écran de la page appuyez sur plan le chemin normale")
+[![](effects-images/taptooutlinethepathnormal-small.png "Capture d’écran de triple de la page appuyez sur plan le chemin normale")](effects-images/taptooutlinethepathnormal-large.png#lightbox "Triple capture d’écran de la page appuyez sur plan le chemin normale")
 
 Lorsque vous cliquez sur l’écran, `outlineThePath` a la valeur `true`et le `PaintSurface` gestionnaire crée une nouvelle `SKPath` de l’objet et l’utilise comme le chemin d’accès de destination dans un appel à `GetFillPath` sur la `redThickStroke` objet paint. Ce chemin d’accès de destination est ensuite remplie et dessiné avec `redThinStroke`, se traduisant par les éléments suivants :
 
-[![](effects-images/taptooutlinethepathoutlined-small.png "Capture d’écran de triple de la page appuyez sur pour le tracé de contour encadrée")](effects-images/taptooutlinethepathoutlined-large.png "Triple capture d’écran de la page appuyez sur pour le tracé de contour avec contour")
+[![](effects-images/taptooutlinethepathoutlined-small.png "Capture d’écran de triple de la page appuyez sur pour le tracé de contour encadrée")](effects-images/taptooutlinethepathoutlined-large.png#lightbox "Triple capture d’écran de la page appuyez sur pour le tracé de contour avec contour")
 
 Les deux cercles rouges indiquent clairement que le chemin d’accès circulaire d’origine a été converti en deux profils circulaires.
 
@@ -1237,7 +1238,7 @@ Vous avez déjà vu comment la `GetFillPath` méthode de `SKPaint` peut converti
 
 Une utilisation évidente de `CreateSum` consiste à définir un `SKPaint` objet qui remplit un chemin d’accès avec un effet un chemin d’accès et le chemin d’accès avec un autre effet de chemin d’accès des traits. Cela est illustré dans le **chats dans le cadre de** exemple, qui affiche un tableau de chats au sein d’un frame avec bords festonnées :
 
-[![](effects-images/catsinframe-small.png "Capture d’écran de triple de la page chats dans le cadre")](effects-images/catsinframe-large.png "Triple capture d’écran de la page chats dans le Frame")
+[![](effects-images/catsinframe-small.png "Capture d’écran de triple de la page chats dans le cadre")](effects-images/catsinframe-large.png#lightbox "Triple capture d’écran de la page chats dans le Frame")
 
 Le [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) classe commence en définissant plusieurs champs. Vous pourriez rencontrer le premier champ de la [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe à partir de la [ **SVG chemin d’accès de données** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) article. Le deuxième chemin d’accès est basée sur une ligne et un arc pour le modèle de crête de l’image :
 
@@ -1405,7 +1406,7 @@ public class DashedHatchLinesPage : ContentPage
 
 En tant que vous avez déjà détectée, les lignes de hachurage ne sont pas précisément restreints à l’intérieur de la zone, et dans cet exemple, ils commencent toujours à gauche avec un tiret entier :
 
-[![](effects-images/dashedhatchlines-small.png "Capture d’écran de triple de la page de lignes en pointillés hachurage")](effects-images/dashedhatchlines-large.png "Triple capture d’écran de la page de hachurage de lignes en pointillés")
+[![](effects-images/dashedhatchlines-small.png "Capture d’écran de triple de la page de lignes en pointillés hachurage")](effects-images/dashedhatchlines-large.png#lightbox "Triple capture d’écran de la page de hachurage de lignes en pointillés")
 
 Maintenant que vous avez vu les effets de chemin d’accès entre simples points et des tirets et des combinaisons étranges, utilisez votre et voir ce que vous pouvez créer.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: c70e4c9ec49b48c3bf6ecc6a4944d992f8ae930a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 160dd4b2326529abbb456e77391f0f73ee374f50
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-behaviors"></a>Comportements de Xamarin.Forms
 
@@ -85,7 +85,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 Le `NumericValidationBehavior` dérive le [ `Behavior<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) (classe), où `T` est un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/). Le [ `OnAttachedTo` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnAttachedTo/p/Xamarin.Forms.BindableObject/) méthode inscrit un gestionnaire d’événements pour le [ `TextChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/) événement, avec la [ `OnDetachingFrom` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnDetachingFrom/p/Xamarin.Forms.BindableObject/) méthode annule l’inscription du `TextChanged`fuites d’événement pour éviter de la mémoire. Les fonctionnalités principales du comportement sont fournie par le `OnEntryTextChanged` (méthode), qui analyse la valeur entrée par l’utilisateur dans le `Entry`et définit les [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.TextColor/) propriété rouge si la valeur n’est pas un `double`.
 
 > [!NOTE]
-> **Remarque**: Xamarin.Forms ne définit pas le `BindingContext` d’un comportement, étant donné que les comportements peuvent être partagés et appliquées à plusieurs contrôles avec des styles.
+> Xamarin.Forms ne définit pas le `BindingContext` d’un comportement, étant donné que les comportements peuvent être partagés et appliquées à plusieurs contrôles avec des styles.
 
 ## <a name="consuming-a-xamarinforms-behavior"></a>Utilisation d’un comportement de Xamarin.Forms
 
@@ -108,10 +108,10 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 Lors de l’exécution le comportement doit répondre à l’interaction avec le contrôle, en fonction de l’implémentation de comportement. Les captures d’écran suivantes illustrent le comportement de répondre à l’entrée non valide :
 
-[ ![](creating-images/screenshots-sml.png "Exemple d’Application avec un comportement Xamarin.Forms")](creating-images/screenshots.png "exemple d’Application avec le comportement de Xamarin.Forms")
+[![](creating-images/screenshots-sml.png "Exemple d’Application avec un comportement Xamarin.Forms")](creating-images/screenshots.png#lightbox "exemple d’Application avec le comportement de Xamarin.Forms")
 
 > [!NOTE]
-> **Remarque**: comportements sont écrites pour un type de contrôle spécifique (ou d’une superclasse qui permettre s’appliquent à de nombreux contrôles), et elles doivent uniquement être ajoutés à un contrôle compatible. Toute tentative d’attachement d’un comportement à un contrôle incompatible entraîne la levée d’une exception.
+> Comportements sont écrites pour un type de contrôle spécifique (ou d’une superclasse qui permettre s’appliquent à de nombreux contrôles), et elles doivent uniquement être ajoutés à un contrôle compatible. Toute tentative d’attachement d’un comportement à un contrôle incompatible entraîne la levée d’une exception.
 
 ### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>Utilisation d’un comportement Xamarin.Forms avec un Style
 
@@ -181,7 +181,7 @@ Le [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) peuv
 Pour plus d’informations sur les styles, consultez [Styles](~/xamarin-forms/user-interface/styles/index.md).
 
 > [!NOTE]
-> **Remarque**: vous pouvez ajouter des propriétés pouvant être liées à un comportement qui est définie ou interrogée dans XAML, si vous créez des comportements qui présentent l’état qu’ils ne doivent pas être partagées entre les contrôles dans un `Style` dans un `ResourceDictionary`.
+> Vous pouvez ajouter des propriétés pouvant être liées à un comportement qui est définie ou interrogée dans XAML, si vous créez des comportements qui présentent l’état qu’ils ne doivent pas être partagées entre les contrôles dans un `Style` dans un `ResourceDictionary`.
 
 ### <a name="removing-a-behavior-from-a-control"></a>Suppression d’un comportement d’un contrôle
 

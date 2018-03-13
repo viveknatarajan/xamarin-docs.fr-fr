@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1625fe15d76ffe2bd3712d9126d9bd217bf60085
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f47fded9c09849f6d5f1329a4efd652df80816d5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manually-signing-the-apk"></a>Signature manuelle de l’APK
 
-<a name="signing_legacy" />
 
 Une fois l’application générée pour sa mise en production, l’APK doit être signé avant distribution afin de pouvoir être exécuté sur un appareil Android. Ce processus est généralement géré par l’environnement IDE. Toutefois, dans certaines situations, il est nécessaire de signer l’APK manuellement au niveau de la ligne de commande. La signature d’un APK met en œuvre les étapes suivantes :
 
@@ -29,7 +28,6 @@ Une fois l’application générée pour sa mise en production, l’APK doit êt
 L’ordre des étapes est important et dépend de l’outil utilisé pour signer l’APK. Si vous utilisez **apksigner**, il est important de commencer par compresser l’application dans un fichier **zipalign**, puis de le signer avec **apksigner**.  Si **jarsigner** doit être utilisé pour signer l’APK, il est important de commencer par signer l’APK, puis d’exécuter **zipalign**. 
 
 
-<a name="Prerequisites" />
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -38,7 +36,6 @@ Ce guide met l’accent sur l’utilisation de l’utilitaire **apksigner** disp
 Les applications qui sont générées à l’aide d’une version antérieure des outils de génération du kit Android SDK doivent utiliser **jarsigner** comme décrit dans [Signer l’APK avec jarsigner](#Sign_the_APK_with_jarsigner) ci-dessous.
 
 
-<a name="Creating_a_Private_Keystore" />
 
 ## <a name="create-a-private-keystore"></a>Créer un magasin de clés privé
 
@@ -53,7 +50,6 @@ Il est important de protéger ce magasin de clés. S’il est perdu, il ne sera 
 En cas de perte d’un magasin de clés, la seule solution est de créer un nouveau magasin de clés, de resigner l’APK avec la nouvelle clé, puis de soumettre une nouvelle application. L’ancienne application devra ensuite être supprimée de Google Play. De même, si ce nouveau magasin de clés est compromis ou distribué publiquement, des versions non officielles ou malveillantes d’une application peuvent alors être distribuées.
 
 
-<a name="Create_a_New_Keystore" />
 
 ### <a name="create-a-new-keystore"></a>Créer un magasin de clés
 
@@ -99,7 +95,6 @@ Pour afficher la liste des clés qui sont stockées dans un magasin de clés, ut
 $ keytool -list -keystore xample.keystore
 ```
 
-<a name="Zipalign_the_APK" />
 
 ## <a name="zipalign-the-apk"></a>Compresser l’APK dans un fichier zipalign
 
@@ -111,7 +106,6 @@ La commande suivante utilise l’APK signé et produit un APK compressé dans un
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
 
-<a name="Manually_Signing_the_APK" />
 
 ## <a name="sign-the-apk"></a>Signer l’APK
 

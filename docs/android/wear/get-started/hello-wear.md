@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: bac9402df544a57cceb98e816e268eb2dcb99c72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-wear"></a>Hello, usure
 
@@ -30,11 +30,11 @@ Créer un nouveau **Android Application usure**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Création d’une nouvelle Application de porter Android dans la boîte de dialogue Nouveau projet](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png)
+[![Création d’une nouvelle Application de porter Android dans la boîte de dialogue Nouveau projet](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Création d’une nouvelle Application de porter Android dans la boîte de dialogue Nouvelle Solution](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png)
+[![Création d’une nouvelle Application de porter Android dans la boîte de dialogue Nouvelle Solution](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -47,13 +47,13 @@ Ce modèle inclut automatiquement la **Xamarin de bibliothèque portable Android
 
 Vérifiez que **Minimum Android à cibler** a la valeur **Android 5.0 (Lollipop)** ou version ultérieure : 
 
-[![Définir le Framework cible pour Android 5.0 dans Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png)
+[![Définir le Framework cible pour Android 5.0 dans Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 Vérifiez le framework cible est défini sur **Android 5.0 (Lollipop)** ou version ultérieure :
 
-[ ![Définir le Framework cible pour Android 5.0 dans Visual Studio pour Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png)
+[![Définir le Framework cible pour Android 5.0 dans Visual Studio pour Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -144,11 +144,11 @@ L’appareil Android d’usure doit apparaître dans le menu déroulant de péri
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![En choisissant un AVD porter dans le menu de périphérique Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png)
+[![En choisissant un AVD porter dans le menu de périphérique Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![En choisissant un AVD usure dans Visual Studio pour le menu du périphérique Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png)
+[![En choisissant un AVD usure dans Visual Studio pour le menu du périphérique Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -160,11 +160,11 @@ Si vous utilisez un émulateur espion, il peut prendre un certain temps pour pou
 
 Après que l’application a été déployé avec succès, l’écran de l’appareil d’usure doit afficher un écran comme suit :
 
-[![Écran initial de l’application d’usure](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png)
+[![Écran initial de l’application d’usure](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Appuyez sur la **CLICK ME !** bouton sur le périphérique d’usure et voir l’incrément de nombre avec chaque drainage :
 
-[![Capture d’écran de porter une application après 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png)
+[![Capture d’écran de porter une application après 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>Étapes suivantes

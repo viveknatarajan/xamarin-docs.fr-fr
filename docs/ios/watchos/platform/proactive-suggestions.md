@@ -3,16 +3,16 @@ title: Suggestions proactive
 description: "Cet article explique comment utiliser des Suggestions Proactive dans une application watchOS 3 à l’engagement de lecteur en permettant au système de façon proactive présenter automatiquement des informations utiles à l’utilisateur."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ca2476eef120c7d86b939934ec4b286e871d6a78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="proactive-suggestions"></a>Suggestions proactive
 
@@ -61,7 +61,7 @@ Toutes ces fonctionnalités ont un point commun, ils utilisent tous `NSUserActiv
 
 Comme indiqué précédemment, `NSUserActivity` permet le système qui décrit les informations que l’utilisateur travaille actuellement avec sur l’écran. `NSUserActivity` un état non activable met en cache le mécanisme de capture de l’activité de l’utilisateur lorsqu’ils naviguent dans l’application. Examinons, par exemple, l’application de restaurant :
 
-[ ![](proactive-suggestions-images/activity02.png "L’application de restaurant")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "L’application de restaurant")](proactive-suggestions-images/activity02.png#lightbox)
 
 Avec les interactions suivantes :
 
@@ -71,7 +71,7 @@ Avec les interactions suivantes :
 
 Regardez plus près le dernier écran :
 
-[ ![](proactive-suggestions-images/activity03.png "La charge utile NSUserActivity")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "La charge utile NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 L’application consiste à créer ici un `NSUserActivity` et il a été remplie avec les informations pour recréer l’état ultérieurement. L’application a également inclus des métadonnées telles que le nom et l’adresse de l’emplacement. Avec cette activité est créée, l’application informe iOS qu’il représente l’état actuel de l’utilisateur.
 

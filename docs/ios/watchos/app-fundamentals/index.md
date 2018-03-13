@@ -6,14 +6,13 @@ ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a470314097342e9c2e068a6015664074540d0ddd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 06c2fbe7537df004641a2c1bd6e7d4e420fef1c7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-application-fundamentals"></a>watchOS Application notions de base
-
 
 ##  <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[Application parent](~/ios/watchos/app-fundamentals/parent-app.md)
 
@@ -23,7 +22,7 @@ Surveiller les applications peuvent communiquer avec leur application parent en 
 
 Partage les paramètres et les données entre les applications de surveillance et iOS.
 
-##  <a name="iconsioswatchosapp-fundamentalsiconsmd"></a>[Icons](~/ios/watchos/app-fundamentals/icons.md)
+##  <a name="iconsioswatchosapp-fundamentalsiconsmd"></a>[Icônes](~/ios/watchos/app-fundamentals/icons.md)
 
 Comment ajouter des icônes pour les applications Apple Watch.
 
@@ -43,7 +42,7 @@ En savoir plus sur les deux options de navigation disponibles pour les applicati
 
 Afficher un aperçu et optimiser votre interface utilisateur pour les deux tailles espion disponibles.
 
-##  <a name="settingsioswatchosapp-fundamentalssettingsmd"></a>[Settings](~/ios/watchos/app-fundamentals/settings.md)
+##  <a name="settingsioswatchosapp-fundamentalssettingsmd"></a>[Réglages](~/ios/watchos/app-fundamentals/settings.md)
 
 Ajouter un écran de paramètres pour votre application de surveillance.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 83ba2df0c50d37476ae5c06b4234cdc0ad063332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 174d1cf974c39420b932d494d5b28c62d7fd1eb1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -22,7 +22,7 @@ La signature de code et le provisionnement avec iOS sont des processus assez dé
 
 * Les grandes équipes doivent éviter d’utiliser le bouton « Fix issue » dans Xcode, illustré ici :
 
-    [![](troubleshooting-images/fixissue.png "Boîte de dialogue Fix issue")](troubleshooting-images/fixissue.png)
+    [![](troubleshooting-images/fixissue.png "Boîte de dialogue Fix issue")](troubleshooting-images/fixissue.png#lightbox)
 
     Cette action entraîne la création de certificats et profils de provisionnement supplémentaires. Dans le meilleur des cas, elle crée un profil de provisionnement chaque fois qu’un membre de l’équipe clique sur le bouton, ce qui nuit à la bonne organisation des profils. Dans le pire des cas, cette action révoque les certificats des autres utilisateurs dans l’entreprise, lesquels ne peuvent alors plus utiliser leurs applications.
 

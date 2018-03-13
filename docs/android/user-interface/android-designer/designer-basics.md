@@ -7,18 +7,17 @@ ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: b2ed48ae9df7e950525fdc0cb97181ebe5a44dfb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d9342dc3a8d324f03cd31e1d03600449bfcf23f1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="designer-basics"></a>Principes de base de concepteur
 
 _Cette rubrique présente les fonctionnalités du concepteur, explique comment lancer le concepteur, décrit l’aire de conception et explique comment utiliser le volet Propriétés pour modifier les propriétés de widget._
 
-<a name="Launching_the_Designer" />
 
 ## <a name="launching-the-designer"></a>Lancer le Concepteur
 
@@ -26,11 +25,11 @@ Le concepteur est lancé automatiquement lorsqu’une disposition est créée, o
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Écran de définition dans Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png)
+[![Écran de définition dans Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Écran de définition dans Visual Studio pour Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png)
+[![Écran de définition dans Visual Studio pour Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
 
 -----
 
@@ -39,20 +38,19 @@ Le concepteur est lancé automatiquement lorsqu’une disposition est créée, o
 
 De même, vous pouvez ajouter une nouvelle disposition en cliquant sur le **disposition** dossier dans le **l’Explorateur de solutions** et en sélectionnant **Ajouter > nouvel élément... > disposition Android**:
 
-[![Ajouter un nouvel élément de boîte de dialogue](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png)
+[![Ajouter un nouvel élément de boîte de dialogue](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 De même, vous pouvez ajouter une nouvelle disposition en cliquant sur le **disposition** dossier dans le **Solution remplissage** et en sélectionnant **Ajouter > nouveau fichier > Android > disposition**:
 
-[![Boîte de dialogue Nouveau fichier ajouter](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png)
+[![Boîte de dialogue Nouveau fichier ajouter](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
 
 -----
 
 Cela crée un fichier .axml et les charge vers l’aire de conception.
 
 
-<a name="Designer_Features" />
 
 ## <a name="designer-features"></a>Fonctionnalités du Concepteur
 
@@ -60,11 +58,11 @@ Le concepteur est composé de plusieurs sections qui prennent en charge ses dive
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Diagramme des volets du Concepteur](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png)
+[![Diagramme des volets du Concepteur](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Diagramme des volets du Concepteur](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png)
+[![Diagramme des volets du Concepteur](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
 
 -----
 
@@ -97,7 +95,6 @@ Lorsque vous modifiez une mise en page dans le concepteur, vous utilisez les fon
 -----
 
 
-<a name="Toolbar" />
 
 ## <a name="toolbar"></a>ToolBar
 
@@ -105,11 +102,11 @@ La barre d’outils (au-dessus de l’aire de conception) présente des sélecte
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Diagramme de la barre d’outils Concepteur](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png)
+[![Diagramme de la barre d’outils Concepteur](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Diagramme de la barre d’outils Concepteur](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png)
+[![Diagramme de la barre d’outils Concepteur](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
 
 -----
 
@@ -143,7 +140,6 @@ Chacune de ces fonctionnalités est expliquée plus en détail dans les rubrique
 [Les fonctionnalités de conception matérielles](~/android/user-interface/android-designer/material-design-features.md) fournit une vue d’ensemble complète de la **éditeur de thème** et le **grille de création de documents**.
 
 
-<a name="Design_Surface" />
 
 ## <a name="design-surface"></a>Aire de conception
 
@@ -151,17 +147,16 @@ Le concepteur vous permet de vous faire glisser et déposer des widgets à parti
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Exemples de lignes d’insertion sur l’aire de conception](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png)
+[![Exemples de lignes d’insertion sur l’aire de conception](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Exemples de lignes d’insertion sur l’aire de conception](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png)
+[![Exemples de lignes d’insertion sur l’aire de conception](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
 
 -----
 
 En outre, les widgets peuvent être copiés : vous pouvez utiliser les copier et coller pour copier un widget, ou vous pouvez glisser- déposer un widget existant tout en maintenant la <kbd>Ctrl</kbd> clé.
 
-<a name="Context_Menu_Commands" />
 
 ### <a name="context-menu-commands"></a>Commandes de Menu contextuel
 
@@ -169,7 +164,7 @@ Un menu contextuel est disponible dans l’aire de conception et dans la structu
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Menu de contexte exemple droit de l’aire de conception](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png)
+[![Menu de contexte exemple droit de l’aire de conception](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
 
 Dans cet exemple, droit une `TextView` ouvre un menu contextuel qui fournit plusieurs options :
 
@@ -179,7 +174,7 @@ Dans cet exemple, droit une `TextView` ouvre un menu contextuel qui fournit plus
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Menu de contexte exemple droit de l’aire de conception](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png)
+[![Menu de contexte exemple droit de l’aire de conception](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
 
 Dans cet exemple, droit une `TextView` ouvre un menu contextuel qui fournit plusieurs options :
 
@@ -198,7 +193,6 @@ Dans cet exemple, droit une `TextView` ouvre un menu contextuel qui fournit plus
 -   **Supprimer**, **copie**, et **couper** &ndash; les opérations qui s’appliquent à la méthode `TextView`.
 
 
-<a name="Zoom_Controls" />
 
 ### <a name="zoom-controls"></a>Contrôles de zoom
 
@@ -206,11 +200,11 @@ L’aire de conception prend en charge le zoom via plusieurs contrôles, comme i
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Diagramme de l’aire de conception les contrôles de zoom](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png)
+[![Diagramme de l’aire de conception les contrôles de zoom](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Diagramme de l’aire de conception les contrôles de zoom](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png)
+[![Diagramme de l’aire de conception les contrôles de zoom](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
 
 -----
 
@@ -228,7 +222,6 @@ Ces contrôles rendent plus faciles à voir certaines zones de l’interface uti
 
 Notez que le paramètre du zoom choisi n’affecte pas l’interface utilisateur de l’application lors de l’exécution.
 
-<a name="property_pad" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -238,11 +231,10 @@ Notez que le paramètre du zoom choisi n’affecte pas l’interface utilisateur
 
 Le concepteur prend en charge la modification des propriétés de widget via la **remplissage de la propriété**. Les propriétés répertoriées dans la modification de remplissage de la propriété selon laquelle le widget est sélectionné dans l’aire du concepteur. Lorsque le `Button` dans l’exemple précédent est sélectionné, les propriétés qui `Button` widget sont affichés :
 
-[![Capture d’écran de la zone de propriété](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png)
+[![Capture d’écran de la zone de propriété](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
 
 -----
 
-<a name="Property_Pad_Sections" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -272,7 +264,6 @@ Le remplissage de la propriété est divisé en plusieurs sections qui regroupen
 -----
 
 
-<a name="Default_Values" />
 
 ### <a name="default-values"></a>Valeurs par défaut
 
@@ -287,7 +278,6 @@ Les propriétés de la plupart des widgets seront vides dans le **remplissage de
 
 -----
 
-<a name="Referencing_resources" />
 
 ### <a name="referencing-resources"></a>Référence à des ressources
 
@@ -299,13 +289,13 @@ Ce bouton ouvre un sélecteur de ressources quand vous cliquez dessus.
 
 Par exemple, la capture d’écran suivante montre les ressources disponibles lorsque vous cliquez sur les points de suspension à droite du champ de texte pour un `Button` widget dans le **propriétés** fenêtre :
 
-[![Capture d’écran de ressources exemple avec deux ressources répertoriées](designer-basics-images/vs/09-resources-sml.png)](designer-basics-images/vs/09-resources.png)
+[![Capture d’écran de ressources exemple avec deux ressources répertoriées](designer-basics-images/vs/09-resources-sml.png)](designer-basics-images/vs/09-resources.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 Par exemple, la capture d’écran suivante montre les ressources disponibles lorsque vous cliquez sur les points de suspension à droite du champ de texte pour un `Button` widget dans le **remplissage de la propriété**:
 
-[![Capture d’écran de ressources exemple avec deux ressources répertoriées](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png)
+[![Capture d’écran de ressources exemple avec deux ressources répertoriées](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
 
 -----
 
@@ -313,16 +303,15 @@ L’exemple suivant illustre le sélecteur de ressource pour le `Src` propriét�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Sélecteur de ressources qui répertorie la ressource icône pour un ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png)
+[![Sélecteur de ressources qui répertorie la ressource icône pour un ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Sélecteur de ressources qui répertorie la ressource icône pour un ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png)
+[![Sélecteur de ressources qui répertorie la ressource icône pour un ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
 
 -----
 
 
-<a name="Boolean_Property_References" />
 
 ### <a name="boolean-property-references"></a>Références de propriété booléenne
 
@@ -336,25 +325,21 @@ L’exemple suivant illustre le sélecteur de ressource pour le `Src` propriét�
 
 *Boolean* propriétés figurent normalement en tant qu’une case à cocher dans la zone de propriété. Lorsqu’un `Boolean` propriété prend en charge les références de ressources, une petite case à cocher s’affiche en regard de la propriété. Une case à cocher activé signifie `true` et une zone vide signifie `false`. Vous pouvez également directement entrer une valeur comme `true` ou `false`. Vous pointez votre souris sur l’entrée affiche une icône de champ de texte de petite taille. Si vous souhaitez entrer la valeur manuellement, vous pouvez cliquer dessus.
 
-[![Exemple de définition de propriétés booléennes](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png)
+[![Exemple de définition de propriétés booléennes](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
-<a name="Grouped_Properties" />
 
 ## <a name="grouped-properties"></a>Propriétés groupées
 
 Certains widgets ont des propriétés à valeurs multiples sont regroupées ensemble (tel que `Padding`, par exemple). Ces valeurs de propriété sont répertoriées dans le **remplissage de la propriété** dans une ligne unique et peut être développée. Certaines de ces propriétés peuvent être modifiées directement dans la ligne groupée, telles que le `Padding` propriété indiquée ci-dessous :
 
-[![Exemples de paramètres pour la propriété de remplissage](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png)
+[![Exemples de paramètres pour la propriété de remplissage](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
 
 -----
 
-<a name="Editing_Properties_Inline" />
 
 ## <a name="editing-properties-inline"></a>Modification des propriétés Inline
 
 Le concepteur Android prend en charge la modification directe de certaines propriétés sur l’aire de conception (de sorte que vous n’êtes pas obligé de ces propriétés dans la liste de propriétés de recherche). Les propriétés qui peuvent être modifiées directement incluent le texte, marge et la taille.
-
-<a name="Text" />
 
 ### <a name="text"></a>Texte
 
@@ -366,7 +351,7 @@ Les propriétés du texte de certains widgets (tel que `Button` et `TextView`), 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Ressource de texte pour la chaîne hello](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png)
+[![Ressource de texte pour la chaîne hello](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
 
 -----
 
@@ -378,7 +363,7 @@ Vous pouvez entrer une nouvelle valeur de texte, ou vous pouvez entrer une nouve
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![MAJ + ENTRÉE pour le texte se lient automatiquement à une nouvelle ressource](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png)
+[![MAJ + ENTRÉE pour le texte se lient automatiquement à une nouvelle ressource](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png#lightbox)
 
 -----
 
@@ -386,7 +371,6 @@ Cette modification est stockée dans son `text` propriété ; il ne modifie pas
 Lorsque vous la clé dans une nouvelle chaîne de texte, vous pouvez appuyer sur <kbd>MAJ</kbd> +
 <kbd>entrée</kbd> pour le texte entré se lient automatiquement à une nouvelle ressource.
 
-<a name="Margin" />
 
 ### <a name="margin"></a>Marge
 
@@ -400,7 +384,7 @@ Lorsque vous cliquez sur un widget pour la première fois, les poignées de marg
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Capture d’écran de marge gère dans le Concepteur](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png)
+[![Capture d’écran de marge gère dans le Concepteur](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
 
 -----
 
@@ -412,12 +396,11 @@ Si une marge a déjà été définie, les traits en pointillés s’affichent, q
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Exemple de lignes en pointillés marquage espace autour d’un bouton](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png)
+[![Exemple de lignes en pointillés marquage espace autour d’un bouton](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
 -----
 
 
-<a name="Size" />
 
 ### <a name="size"></a>Size
 
@@ -429,7 +412,7 @@ Comme mentionné précédemment, vous pouvez basculer en mode d’édition-taill
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Poignées de contenu de type Wrap et de redimensionnement](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png)
+[![Poignées de contenu de type Wrap et de redimensionnement](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
 
 -----
 
@@ -443,7 +426,7 @@ Lorsque la valeur de taille a la valeur **encapsuler le contenu**, le concepteur
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Handle de parent de correspondance](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png)
+[![Handle de parent de correspondance](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
 
 -----
 
@@ -457,7 +440,7 @@ En outre, vous pouvez faire glisser la poignée de redimensionnement circulaire 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Poignées de redimensionnement circulaire](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png)
+[![Poignées de redimensionnement circulaire](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
 
 -----
 
@@ -469,12 +452,11 @@ Pas tous les conteneurs permettent de modifier le `Size` d’un widget. Par exem
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Sans poignées de redimensionnement](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png)
+[![Sans poignées de redimensionnement](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
 
 -----
 
 
-<a name="Outline_View" />
 
 ## <a name="document-outline"></a>Structure du document
 
@@ -487,7 +469,7 @@ Dans l’exemple suivant, le contenant `LinearLayout` widget est sélectionnée�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Structure du document](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png)
+[![Structure du document](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
 
 -----
 

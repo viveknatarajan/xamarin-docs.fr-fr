@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b5d3a03324e73b06bd3defe7e6610163c3d1b26d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c021550e17cf8206d59102856a11c72000ad06aa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-progress-indicators"></a>Utilisation des indicateurs de progression
 
@@ -21,7 +21,7 @@ _Cet article décrit la conception et l’utilisation des indicateurs de progres
 
 Il peut arriver lorsque votre application Xamarin.tvOS doit charger le contenu nouveau ou effectuer une opération de traitement de longue durée. Durant ces périodes, vous devez présenter un indicateur d’activité ou barre de progression pour informer l’utilisateur que l’application est en cours d’exécution et leur donner une indication quant à la durée de la tâche en cours d’exécution.
 
-[ ![](progress-indicators-images/intro01.png "Indicateurs de progression de l’exemple")](progress-indicators-images/intro01.png)
+[![](progress-indicators-images/intro01.png "Indicateurs de progression de l’exemple")](progress-indicators-images/intro01.png#lightbox)
 
 <a name="About-Activity-Indicators" />
 
@@ -57,19 +57,19 @@ Pour travailler avec l’indicateur de progression dans une application Xamarin.
 1. Dans le **Solution remplissage**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **voyant d’activité** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](progress-indicators-images/activity01.png "Un indicateur d’activité")](progress-indicators-images/activity01.png)
+    [![](progress-indicators-images/activity01.png "Un indicateur d’activité")](progress-indicators-images/activity01.png#lightbox)
 1. Dans le **onglet Widget** de la **propriétés remplissage**, vous pouvez ajuster plusieurs propriétés de l’indicateur d’activité tels que son **Style** et **comportement**: 
 
-    [ ![](progress-indicators-images/activity02.png "L’onglet du Widget ")](progress-indicators-images/activity02.png)
+    [![](progress-indicators-images/activity02.png "L’onglet du Widget ")](progress-indicators-images/activity02.png#lightbox)
 1. Faites glisser un **cours** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](progress-indicators-images/activity03.png "Une vue de la progression")](progress-indicators-images/activity03.png)
+    [![](progress-indicators-images/activity03.png "Une vue de la progression")](progress-indicators-images/activity03.png#lightbox)
 1. Dans le **onglet Widget** de la **Explorateur de propriétés**, vous pouvez ajuster plusieurs propriétés de la vue de la progression, tels que son **Style** et **progression**(pourcentage achevé) : 
 
-    [ ![](progress-indicators-images/activity04.png "L’onglet du Widget")](progress-indicators-images/activity04.png)
+    [![](progress-indicators-images/activity04.png "L’onglet du Widget")](progress-indicators-images/activity04.png#lightbox)
 1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
-    [ ![](progress-indicators-images/activity05.png "Attribuez un nom")](progress-indicators-images/activity05.png)
+    [![](progress-indicators-images/activity05.png "Attribuez un nom")](progress-indicators-images/activity05.png#lightbox)
 1. Enregistrez les modifications apportées.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -77,19 +77,19 @@ Pour travailler avec l’indicateur de progression dans une application Xamarin.
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **voyant d’activité** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](progress-indicators-images/activity01-vs.png "Un indicateur d’activité")](progress-indicators-images/activity01-vs.png)
+    [![](progress-indicators-images/activity01-vs.png "Un indicateur d’activité")](progress-indicators-images/activity01-vs.png#lightbox)
 1. Dans le **onglet Widget** de la **l’Explorateur de propriétés**, vous pouvez ajuster plusieurs propriétés de l’indicateur d’activité tels que son **Style** et **decomportement**: 
 
-    [ ![](progress-indicators-images/activity02-vs.png "L’onglet du Widget")](progress-indicators-images/activity02-vs.png)
+    [![](progress-indicators-images/activity02-vs.png "L’onglet du Widget")](progress-indicators-images/activity02-vs.png#lightbox)
 1. Faites glisser un **cours** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](progress-indicators-images/activity03-vs.png "Une vue de la progression")](progress-indicators-images/activity03-vs.png)
+    [![](progress-indicators-images/activity03-vs.png "Une vue de la progression")](progress-indicators-images/activity03-vs.png#lightbox)
 1. Dans le **onglet Widget** de la **Explorateur de propriétés**, vous pouvez ajuster plusieurs propriétés de la vue de la progression, tels que son **Style** et **progression**(pourcentage achevé) : 
 
-    [ ![](progress-indicators-images/activity04-vs.png "L’onglet du Widget")](progress-indicators-images/activity04-vs.png)
+    [![](progress-indicators-images/activity04-vs.png "L’onglet du Widget")](progress-indicators-images/activity04-vs.png#lightbox)
 1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
-    [ ![](progress-indicators-images/activity05-vs.png "Attribuez un nom")](progress-indicators-images/activity05-vs.png)
+    [![](progress-indicators-images/activity05-vs.png "Attribuez un nom")](progress-indicators-images/activity05-vs.png#lightbox)
 1. Enregistrez les modifications apportées.
 
 -----

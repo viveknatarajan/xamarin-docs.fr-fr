@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cf43cfe31811e91524af7894ea347e3dba784d92
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 52a9fc206a2c303d13d80be4de743d98056f7684
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="menus"></a>Menus
 
@@ -28,7 +28,7 @@ Menus font partie intégrante de l’expérience utilisateur de l’application 
 - **Ancrer menu** -menu pour chaque application de la station d’accueil qui apparaît lorsque l’utilisateur clique ou contrôle-clique sur l’icône de l’application, ou lorsque l’utilisateur left-clicks l’icône et appuie sur le bouton de la souris.
 - **Bouton contextuelle et les listes déroulantes** -un bouton déroulant affiche un élément sélectionné et présente la liste des options à sélectionner à partir de clic de l’utilisateur. Une liste déroulante est un type de bouton déroulant généralement utilisé pour la sélection des commandes spécifiques au contexte de la tâche en cours. Les deux peuvent apparaître n’importe où dans une fenêtre.
 
-[![Un exemple de menu](menu-images/intro01.png "un exemple de menu")](menu-images/intro01-large.png)
+[![Un exemple de menu](menu-images/intro01.png "un exemple de menu")](menu-images/intro01-large.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de l’utilisation des éléments de menu dans une application Xamarin.Mac, les menus et barres de menus/Cocoa. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -38,7 +38,7 @@ Vous souhaiterez peut-être examiner la [classes exposition c# / méthodes pour 
 
 Contrairement aux applications en cours d’exécution sur le système d’exploitation Windows où chaque fenêtre peut avoir sa propre barre de menus attaché, chaque application s’exécutant sur macOS a une barre de menus unique qui s’exécute sur le haut de l’écran qui est utilisé pour chaque fenêtre de l’application :
 
-[![Une barre de menus](menu-images/appmenu01.png "une barre de menus")](menu-images/appmenu01-large.png)
+[![Une barre de menus](menu-images/appmenu01.png "une barre de menus")](menu-images/appmenu01-large.png#lightbox)
 
 Éléments dans cette barre de menus sont activées ou désactivées selon le contexte actuel ou l’état de l’application et son interface utilisateur à un moment donné. Par exemple : si l’utilisateur sélectionne un champ de texte, des éléments sur le **modifier** menu seront activé comme **copie** et **couper**.
 
@@ -64,21 +64,21 @@ Chaque fois que vous créez un nouveau projet Xamarin.Mac, vous obtenez automati
 
 Double-cliquez sur le **Main.storyboard** fichier pour l’ouvrir pour le modifier dans le Générateur de Xcode Interface et vous verrez l’interface de l’éditeur de menu :
 
-[![Modification de l’interface utilisateur dans Xcode](menu-images/defaultbar01.png "modification de l’interface utilisateur dans Xcode")](menu-images/defaultbar01-large.png)
+[![Modification de l’interface utilisateur dans Xcode](menu-images/defaultbar01.png "modification de l’interface utilisateur dans Xcode")](menu-images/defaultbar01-large.png#lightbox)
 
 À partir d’ici vous pouvez cliquer sur des éléments tels que les **ouvrir** élément de menu dans le **fichier** menu et de modifier ou ajuster ses propriétés dans le **inspecteur d’attributs**:
 
-[![Modification des attributs d’un menu](menu-images/defaultbar02.png "la modification des attributs d’un menu")](menu-images/defaultbar02-large.png)
+[![Modification des attributs d’un menu](menu-images/defaultbar02.png "la modification des attributs d’un menu")](menu-images/defaultbar02-large.png#lightbox)
 
 Nous aborderons Ajout, modification et suppression des menus et des éléments plus loin dans cet article. Maintenant, nous voulons que juste voir les menus et les éléments de menu sont disponibles par défaut et la façon dont ils ont été exposés automatiquement au code via un ensemble de sorties prédéfinies et les actions (pour plus d’informations, consultez notre [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) documentation).
 
 Par exemple, si nous cliquons sur le **connexion inspecteur** pour le **ouvrir** élément de menu, nous pouvons voir automatiquement de connexion à la `openDocument:` action : 
 
-[![Affichage de l’action attachée](menu-images/defaultbar03.png "affichage de l’action attachée")](menu-images/defaultbar03-large.png)
+[![Affichage de l’action attachée](menu-images/defaultbar03.png "affichage de l’action attachée")](menu-images/defaultbar03-large.png#lightbox)
 
 Si vous sélectionnez le **répondeur première** dans le **hiérarchie de l’Interface** et faites défiler la **inspecteur de connexion**, et vous verrez la définition de la `openDocument:` action qui le **ouvrir** élément de menu est attaché à (ainsi que plusieurs autres actions par défaut pour l’application et ne sont pas automatiquement liées au contrôle) :
 
-[![Affichage des actions reliées](menu-images/defaultbar04.png "affichage de toutes les actions attachées")](menu-images/defaultbar04-large.png) 
+[![Affichage des actions reliées](menu-images/defaultbar04.png "affichage de toutes les actions attachées")](menu-images/defaultbar04-large.png#lightbox) 
 
 Pourquoi est-ce important ? Dans la prochaine section verrez le fonctionnement de ces actions définies automatiquement avec d’autres éléments d’interface utilisateur/Cocoa automatiquement activer et désactiver les éléments de menu, ainsi que, fournir des fonctionnalités intégrées pour les éléments.
 
@@ -98,11 +98,11 @@ Même si d’autres éléments de menu, tels que **couper**, **copie**, et **col
 
 Nous allons arrêter l’application et double-cliquez sur le **Main.storyboard** de fichiers dans le **Solution remplissage** pour ouvrir pour le modifier dans Xcode du constructeur d’Interface. Ensuite, faites glisser un **affichage texte** à partir de la **bibliothèque** sur le contrôleur de vue de la fenêtre de la **éditeur de l’Interface**:
 
-[![Sélectionnez une vue de texte dans la bibliothèque](menu-images/appmenu05.png "en sélectionnant une vue de texte à partir de la bibliothèque")](menu-images/appmenu05-large.png)
+[![Sélectionnez une vue de texte dans la bibliothèque](menu-images/appmenu05.png "en sélectionnant une vue de texte à partir de la bibliothèque")](menu-images/appmenu05-large.png#lightbox)
 
 Dans le **éditeur de contrainte** nous allons épingler l’affichage de texte sur les bords de la fenêtre et la définir où il se développe et réduit la fenêtre en cliquant sur toutes les quatre rouge I-FAISCEAUX en haut de l’éditeur sur le **ajouter des contraintes 4** bouton :
 
-[![Modifier les contraintes](menu-images/appmenu06.png "modifier les contraintes")](menu-images/appmenu06-large.png)
+[![Modifier les contraintes](menu-images/appmenu06.png "modifier les contraintes")](menu-images/appmenu06-large.png#lightbox)
 
 Enregistrez vos modifications dans la conception de l’interface utilisateur et revenir à Visual Studio pour Mac synchroniser les modifications apportées à votre projet Xamarin.Mac. Démarrer l’application, tapez du texte dans l’affichage de texte, sélectionnez-le, puis ouvrez maintenant le **modifier** menu :
 
@@ -209,7 +209,7 @@ Si vous cliquez sur le **ouvrir** bouton, notre message d’alerte s’affichera
 
 La ligne de clé a été `[Export ("openDocument:")]`, elle indique `NSMenu` qui notre **AppDelegate** a une méthode `void OpenDialog (NSObject sender)` qui répond à la `openDocument:` action. Si vous devez vous rappeler ci-dessus, le **ouvrir** élément de menu est automatiquement câblé accès à cette action par défaut dans le Générateur de Interface :
 
-[![Afficher les actions attachées](menu-images/defaultbar03.png "afficher les actions attachées")](menu-images/defaultbar03-large.png)
+[![Afficher les actions attachées](menu-images/defaultbar03.png "afficher les actions attachées")](menu-images/defaultbar03-large.png#lightbox)
 
 Suivant Examinons créer notre propre menu, les éléments de menu et les actions et répondre les uns aux autres dans le code.
 
@@ -453,7 +453,7 @@ La touche CTRL enfoncée et faire glisser à partir d’un élément de menu pou
 
 Enregistrez les modifications dans la table de montage séquentiel et revenir à Visual Studio pour Mac synchroniser les modifications. Si vous exécutez l’application, l’élément de menu que vous avez connecté l’action personnalisée sera automatiquement être activé ou désactivé (basé sur la fenêtre avec l’action ne soit ouverte) et en sélectionnant l’élément de menu déclenche l’action :
 
-[![Pour tester l’action nouvelle](menu-images/action05.png "pour tester la nouvelle action")](menu-images/action05-large.png)
+[![Pour tester l’action nouvelle](menu-images/action05.png "pour tester la nouvelle action")](menu-images/action05-large.png#lightbox)
 
 <a name="Adding,_Editing_and_Deleting_Menus" />
 
@@ -465,7 +465,7 @@ Dans cette section, nous allons examiner des éléments de menu qui nous n’ave
 
 Double-cliquez sur le **Main.storyboard** de fichiers dans le **Solution remplissage** à ouvrir pour le modifier :
 
-[![Modification de l’interface utilisateur dans Xcode](menu-images/maint01.png "modification de l’interface utilisateur dans Xcode")](menu-images/maint01-large.png)
+[![Modification de l’interface utilisateur dans Xcode](menu-images/maint01.png "modification de l’interface utilisateur dans Xcode")](menu-images/maint01-large.png#lightbox)
 
 Pour notre application Xamarin.Mac spécifique nous n’allons pas à la valeur par défaut **vue** menu, nous allons supprimer. Dans le **hiérarchie de l’Interface** sélectionner le **vue** élément de menu qui fait partie de la barre de menus principale :
 
@@ -477,19 +477,19 @@ Appuyez sur SUPPR ou retour arrière pour supprimer le menu. Ensuite, nous n’a
 
 Faites glisser les éléments sous le parent **Menu** dans le sous-menu là où ils sont actuellement :
 
-[![En faisant glisser des éléments de menu au menu parent](menu-images/maint04.png "en faisant glisser des éléments de menu au menu parent")](menu-images/maint04-large.png)
+[![En faisant glisser des éléments de menu au menu parent](menu-images/maint04.png "en faisant glisser des éléments de menu au menu parent")](menu-images/maint04-large.png#lightbox)
 
 Votre menu doit maintenant ressembler à :
 
-[![Les éléments dans le nouvel emplacement](menu-images/maint05.png "les éléments dans le nouvel emplacement")](menu-images/maint05-large.png)
+[![Les éléments dans le nouvel emplacement](menu-images/maint05.png "les éléments dans le nouvel emplacement")](menu-images/maint05-large.png#lightbox)
 
 Suivant faisons glisser le **texte** sous-menu out sous le **Format** menu et placez-la sur la barre de menus principale entre la **Format** et **fenêtre** menus :
 
-[![Le menu de texte](menu-images/maint06.png "menu le texte")](menu-images/maint06-large.png)
+[![Le menu de texte](menu-images/maint06.png "menu le texte")](menu-images/maint06-large.png#lightbox)
 
 Passons sous le **Format** menu et supprimer la **police** élément de sous-menu. Ensuite, sélectionnez le **Format** menu et renommez-la « Police » :
 
-[![Le menu police](menu-images/maint07.png "menu la police")](menu-images/maint07-large.png)
+[![Le menu police](menu-images/maint07.png "menu la police")](menu-images/maint07-large.png#lightbox)
 
 Ensuite, nous allons créer un menu personnalisé d’expressions prédéfini qui sera obtenir automatiquement ajouté à du texte dans l’affichage de texte lorsqu’ils sont sélectionnés. Dans la zone de recherche en bas sur la **bibliothèque inspecteur** type dans « menu ». Cela rend plus faciles à trouver et fonctionne avec tous les éléments d’interface utilisateur de menu :
 
@@ -502,42 +502,42 @@ Maintenant nous allons suivre la commande suivante pour créer notre menu :
     ![Sélection d’un élément de menu dans la bibliothèque](menu-images/maint10.png "en sélectionnant un élément de menu dans la bibliothèque")
 2. Renommer l’élément « Expressions » : 
 
-    [![Définition du nom de menu](menu-images/maint09.png "la définition du nom de menu")](menu-images/maint09-large.png)
+    [![Définition du nom de menu](menu-images/maint09.png "la définition du nom de menu")](menu-images/maint09-large.png#lightbox)
 3. Ensuite faire glisser un **Menu** à partir de la **bibliothèque inspecteur**: 
 
     ![Sélection d’un menu de la bibliothèque](menu-images/maint11.png "en sélectionnant un menu de la bibliothèque")
 4. Liste déroulante, puis **Menu** sur le nouveau **élément de Menu** nous venez de créer et modifier son nom « Expressions » : 
 
-    [![Modification du nom de menu](menu-images/maint12.png "modification du nom de menu")](menu-images/maint12-large.png)
+    [![Modification du nom de menu](menu-images/maint12.png "modification du nom de menu")](menu-images/maint12-large.png#lightbox)
 5. Maintenant nous allons renommer la valeur par défaut trois **des éléments de Menu** « Address », « Date » et « Greeting » : 
 
-    [![Le menu de Phrases](menu-images/maint13.png "menu de Phrases le")](menu-images/maint13-large.png)
+    [![Le menu de Phrases](menu-images/maint13.png "menu de Phrases le")](menu-images/maint13-large.png#lightbox)
 6. Ajoutons un quatrième **élément de Menu** en faisant glisser un **élément de Menu** à partir de la **bibliothèque inspecteur** et l’appeler « Signature » : 
 
-    [![Modification du nom d’élément de menu](menu-images/maint14.png "modification du nom d’élément de menu")](menu-images/maint14-large.png)
+    [![Modification du nom d’élément de menu](menu-images/maint14.png "modification du nom d’élément de menu")](menu-images/maint14-large.png#lightbox)
 7. Enregistrez les modifications dans la barre de menus.
 
 Maintenant nous allons créer un jeu d’actions personnalisées, afin que nos nouveaux éléments de menu sont exposés au code c#. Dans Xcode passons à la **Assistant** vue :
 
-[![Créer les actions requises](menu-images/maint15.png "création les actions requises")](menu-images/maint15-large.png)
+[![Créer les actions requises](menu-images/maint15.png "création les actions requises")](menu-images/maint15-large.png#lightbox)
 
 Nous allons effectuer les opérations suivantes :
 
 1. Faites glisser le contrôle à partir de la **adresse** élément de menu pour le **AppDelegate.h** fichier.
 2. Commutateur le **connexion** type **Action**: 
 
-    [![En sélectionnant le type d’action](menu-images/maint17.png "en sélectionnant le type d’action")](menu-images/maint17-large.png)
+    [![En sélectionnant le type d’action](menu-images/maint17.png "en sélectionnant le type d’action")](menu-images/maint17-large.png#lightbox)
 3. Entrez un **nom** de « phraseAddress » et appuyez sur la **Connect** bouton permettant de créer la nouvelle action : 
 
-    [![Configuration de l’action](menu-images/maint18.png "configuration de l’action")](menu-images/maint18-large.png)
+    [![Configuration de l’action](menu-images/maint18.png "configuration de l’action")](menu-images/maint18-large.png#lightbox)
 4. Répétez les étapes ci-dessus pour le **Date**, **salutation**, et **Signature** des éléments de menu : 
 
-    [![Les actions terminées](menu-images/maint19.png "les actions terminées")](menu-images/maint19-large.png)
+    [![Les actions terminées](menu-images/maint19.png "les actions terminées")](menu-images/maint19-large.png#lightbox)
 5. Enregistrez les modifications dans la barre de menus.
 
 Ensuite, nous avons besoin créer une sortie pour notre vue de texte afin que nous pouvons ajuster son contenu à partir du code. Sélectionnez le **ViewController.h** de fichiers dans le **Assistant éditeur** et créer un nouveau magasin appelé `documentText`:
 
-[![Création d’une prise de courant](menu-images/maint20.png "création d’une prise de courant")](menu-images/maint20-large.png)
+[![Création d’une prise de courant](menu-images/maint20.png "création d’une prise de courant")](menu-images/maint20-large.png#lightbox)
 
 Revenez à Visual Studio pour Mac synchroniser les modifications de Xcode. Modifiez ensuite la **ViewController.cs** de fichier et le rendre l’aspect suivant :
 
@@ -895,36 +895,36 @@ Menus contextuels s’affichent lorsque l’utilisateur clique ou contrôle-cliq
 
 Permet de modifier notre **Main.storyboard** dans Xcode et ajoutez un **fenêtre** fenêtre à notre conception, définissez son **classe** à « NSPanel » dans le **inspecteur d’identité**, ajouter un nouveau **Assistant** d’élément à la **fenêtre** menu et l’associer à la nouvelle fenêtre en utilisant un **afficher Segue**:
 
-[![La définition du type segue](menu-images/context01.png "la définition du type segue")](menu-images/context01-large.png)
+[![La définition du type segue](menu-images/context01.png "la définition du type segue")](menu-images/context01-large.png#lightbox)
 
 Nous allons effectuer les opérations suivantes :
 
 1. Faites glisser un **étiquette** à partir de la **inspecteur de bibliothèque** sur le **panneau** fenêtre et définir son texte sur « Propriété » : 
 
-    [![Modification de la valeur de l’étiquette](menu-images/context03.png "modification de la valeur de l’étiquette")](menu-images/context03-large.png)
+    [![Modification de la valeur de l’étiquette](menu-images/context03.png "modification de la valeur de l’étiquette")](menu-images/context03-large.png#lightbox)
 2. Ensuite faire glisser un **Menu** à partir de la **bibliothèque inspecteur** sur le contrôleur de vue des afficher la hiérarchie et les éléments de menu par défaut de renommer les trois **Document**, **texte**  et **police**:
 
-    [![Les éléments de menu requis](menu-images/context02.png "les éléments de menu requis")](menu-images/context02-large.png)
+    [![Les éléments de menu requis](menu-images/context02.png "les éléments de menu requis")](menu-images/context02-large.png#lightbox)
 3. Maintenant contrôle, faites glisser le **étiquette de la propriété** sur la **Menu**:
 
-    [![Déplacement pour créer un segue](menu-images/context04.png "déplacement pour créer un segue")](menu-images/context04-large.png)
+    [![Déplacement pour créer un segue](menu-images/context04.png "déplacement pour créer un segue")](menu-images/context04-large.png#lightbox)
 4. Dans la boîte de dialogue contextuelle, sélectionnez **Menu**: 
 
     ![La définition du type segue](menu-images/context05.png "la définition du type segue")
 5. À partir de la **identité inspecteur**, définir la classe du contrôleur de la vue à « PanelViewController » : 
 
-    [![Définition de la classe segue](menu-images/context10.png "définition de la classe segue")](menu-images/context10-large.png)
+    [![Définition de la classe segue](menu-images/context10.png "définition de la classe segue")](menu-images/context10-large.png#lightbox)
 6. Revenez à Visual Studio pour Mac à synchroniser, puis revenir à l’Interface générateur.
 7. Basculez vers le **Assistant éditeur** et sélectionnez le **PanelViewController.h** fichier.
 8. Créer une action pour le **Document** élément de menu appelé `propertyDocument`: 
 
-    [![Configuration de l’action](menu-images/context06.png "configuration de l’action")](menu-images/context06-large.png)
+    [![Configuration de l’action](menu-images/context06.png "configuration de l’action")](menu-images/context06-large.png#lightbox)
 9. Répétez les actions de création pour les autres éléments de menu : 
 
-    [![Les actions requises](menu-images/context07.png "les actions requises")](menu-images/context07-large.png)
+    [![Les actions requises](menu-images/context07.png "les actions requises")](menu-images/context07-large.png#lightbox)
 10. Pour finir, une prise pour créer le **étiquette de la propriété** appelée `propertyLabel`: 
 
-    [![Configuration de la prise de](menu-images/context08.png "configuration de la sortie")](menu-images/context08-large.png)
+    [![Configuration de la prise de](menu-images/context08.png "configuration de la sortie")](menu-images/context08-large.png#lightbox)
 11. Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
 Modifier la **PanelViewController.cs** et ajoutez le code suivant :
@@ -1013,26 +1013,26 @@ Nous allons créer un menu d’ancrage personnalisé pour notre application en p
     ![Ajout d’une définition d’interface vide](menu-images/dock02.png "Ajout d’une définition d’interface vide")
 2. Dans le **Solution remplissage**, double-cliquez sur le **DockMenu.xib** fichier à ouvrir pour le modifier dans Xcode. Créer un nouveau **Menu** avec les éléments suivants : **adresse**, **Date**, **salutation**, et **Signature** 
 
-    [![Disposition de l’interface utilisateur](menu-images/dock03.png "disposition de l’interface utilisateur")](menu-images/dock03-large.png)
+    [![Disposition de l’interface utilisateur](menu-images/dock03.png "disposition de l’interface utilisateur")](menu-images/dock03-large.png#lightbox)
 3. Ensuite, nous allons connecter nos nouveaux éléments de menu à notre actions existantes que vous avez créée pour notre menu personnalisé dans le [Ajout, modification et suppression des Menus](#Adding,_Editing_and_Deleting_Menus) section ci-dessus. Basculer vers le **connexion inspecteur** et sélectionnez le **répondeur première** dans le **hiérarchie de l’Interface**. Faites défiler vers le bas et recherchez le `phraseAddress:` action. Faites glisser une ligne à partir du cercle sur l’action pour le **adresse** élément de menu :
 
-    [![En faisant glisser permet de rattacher une action](menu-images/dock04.png "en faisant glisser permet de rattacher une action")](menu-images/dock04-large.png)
+    [![En faisant glisser permet de rattacher une action](menu-images/dock04.png "en faisant glisser permet de rattacher une action")](menu-images/dock04-large.png#lightbox)
 4. Répétez pour tous les autres éléments de menu les joindre à leurs actions correspondantes : 
 
-    [![Les actions requises](menu-images/dock05.png "les actions requises")](menu-images/dock05-large.png)
+    [![Les actions requises](menu-images/dock05.png "les actions requises")](menu-images/dock05-large.png#lightbox)
 5. Ensuite, sélectionnez le **Application** dans les **hiérarchie de l’Interface**. Dans le **connexion inspecteur**, faites glisser une ligne à partir du cercle le `dockMenu` prise au menu nous venons de créer :
 
-    [![En faisant glisser la rattacher à la prise de](menu-images/dock06.png "en faisant glisser la rattacher à la sortie")](menu-images/dock06-large.png)
+    [![En faisant glisser la rattacher à la prise de](menu-images/dock06.png "en faisant glisser la rattacher à la sortie")](menu-images/dock06-large.png#lightbox)
 6. Enregistrez vos modifications et revenez à Visual Studio pour Mac pour la synchronisation avec Xcode.
 7. Double-cliquez sur le **Info.plist** fichier à ouvrir pour le modifier : 
 
-    [![Modification du fichier Info.plist](menu-images/dock07.png "modifiant le fichier Info.plist")](menu-images/dock07-large.png)
+    [![Modification du fichier Info.plist](menu-images/dock07.png "Modification du fichier Info.plist")](menu-images/dock07-large.png#lightbox)
 8. Cliquez sur le **Source** onglet en bas de l’écran : 
 
-    [![En sélectionnant la vue de Source](menu-images/dock08.png "en sélectionnant la vue de Source")](menu-images/dock08-large.png)
+    [![En sélectionnant la vue de Source](menu-images/dock08.png "en sélectionnant la vue de Source")](menu-images/dock08-large.png#lightbox)
 9. Cliquez sur **ajouter une nouvelle entrée**définir le nom de propriété à « AppleDockMenu » et la valeur à « DockMenu » (le nom de notre nouveau fichier .xib sans l’extension), cliquez sur le bouton plus vert : 
 
-    [![Ajout de l’élément DockMenu](menu-images/dock09.png "Ajout de l’élément DockMenu")](menu-images/dock09-large.png)
+    [![Ajout de l’élément DockMenu](menu-images/dock09.png "Ajout de l’élément DockMenu")](menu-images/dock09-large.png#lightbox)
 
 Si nous exécuter notre application et avec le bouton droit sur son icône dans la station d’accueil, nos nouveaux éléments de menu apparaît à présent :
 
@@ -1050,16 +1050,16 @@ Nous allons créer un bouton déroulant personnalisé pour notre application en 
 
 1. Modifier le **Main.storyboard** fichier dans Xcode et faites glisser un **bouton de menu contextuel** à partir de la **inspecteur de bibliothèque** sur le **panneau** fenêtre que nous avons créé dans le [des menus contextuels](#Contextual_Menus) section : 
 
-    [![Ajout d’un bouton de menu contextuel](menu-images/popup01.png "Ajout d’un bouton de menu contextuel")](menu-images/popup01-large.png)
+    [![Ajout d’un bouton de menu contextuel](menu-images/popup01.png "Ajout d’un bouton de menu contextuel")](menu-images/popup01-large.png#lightbox)
 2. Ajouter un nouvel élément de menu et définir les titres des éléments dans le menu contextuel pour : **adresse**, **Date**, **salutation**, et **Signature** 
 
-    [![Configurer les éléments de menu](menu-images/popup02.png "configurant les éléments de menu")](menu-images/popup02-large.png)
+    [![Configurer les éléments de menu](menu-images/popup02.png "configurant les éléments de menu")](menu-images/popup02-large.png#lightbox)
 3. Ensuite, nous allons connecter nos nouveaux éléments de menu pour les actions que vous avez créée pour notre menu personnalisé dans le [Ajout, modification et suppression des Menus](#Adding,_Editing_and_Deleting_Menus) section ci-dessus. Basculer vers le **connexion inspecteur** et sélectionnez le **répondeur première** dans le **hiérarchie de l’Interface**. Faites défiler vers le bas et recherchez le `phraseAddress:` action. Faites glisser une ligne à partir du cercle sur l’action pour le **adresse** élément de menu : 
 
-    [![En faisant glisser permet de rattacher une action](menu-images/popup03.png "en faisant glisser permet de rattacher une action")](menu-images/popup03-large.png)
+    [![En faisant glisser permet de rattacher une action](menu-images/popup03.png "en faisant glisser permet de rattacher une action")](menu-images/popup03-large.png#lightbox)
 4. Répétez pour tous les autres éléments de menu les joindre à leurs actions correspondantes : 
 
-    [![Toutes les actions nécessaires](menu-images/popup04.png "toutes les actions nécessaires")](menu-images/popup04-large.png)
+    [![Toutes les actions nécessaires](menu-images/popup04.png "toutes les actions nécessaires")](menu-images/popup04-large.png#lightbox)
 5. Enregistrez vos modifications et revenez à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
 Maintenant, si nous exécuter notre application et que vous sélectionnez un élément dans la fenêtre contextuelle, le texte dans la vue de texte change :

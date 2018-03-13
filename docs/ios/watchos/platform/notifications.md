@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0f1d968dcee0cb9b6cd0cee8fa60be4f4dbb2833
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 600d651eae1f470f17511afaf9bc86c80ffc1a75
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications"></a>Notifications
 
@@ -99,17 +99,17 @@ Vous *doit* fournissent une charge utile JSON de test lorsque vous testez le mod
 Visual Studio pour Mac affiche des options supplémentaires quand une extension de surveillance est définie comme le **projet de démarrage**.
 Avec le bouton droit sur le projet d’extension espion et choisissez **exécuter avec > Personnaliser les paramètres...** :
     
-[![](notifications-images/runwith-customparams-sml.png "En cours d’exécution avec les propriétés personnalisées")](notifications-images/runwith-customparams.png)
+[![](notifications-images/runwith-customparams-sml.png "En cours d’exécution avec les propriétés personnalisées")](notifications-images/runwith-customparams.png#lightbox)
     
 Cette opération ouvre le **Arguments d’exécution** fenêtre qui contient un **WatchKit** onglet. Sélectionnez **Notification** et fournir une charge utile JSON, puis appuyez sur **Execute** pour démarrer l’application de surveillance dans le simulateur :
     
-[![](notifications-images/runwith-execargs-sml.png "Sélectionnez la valeur par défaut de charge utile de Notification")](notifications-images/runwith-execargs.png)
+[![](notifications-images/runwith-execargs-sml.png "Sélectionnez la valeur par défaut de charge utile de Notification")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Pour définir la charge utile de notification test dans avec le bouton droit de Visual Studio sur l’extension de surveillance pour modifier la **propriétés de projet**. Accédez à la **déboguer** section et sélectionnez un fichier JSON de notifications à partir de la liste (il sera automatiquement tous les fichiers JSON inclus dans le projet).
     
-[![](notifications-images/runwith-execargs-sml-vs.png "Sélectionnez un fichier JSON de notifications")](notifications-images/runwith-execargs-vs.png)
+[![](notifications-images/runwith-execargs-sml-vs.png "Sélectionnez un fichier JSON de notifications")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 Lorsque l’extension de surveillance est la **projet de démarrage**, Visual Studio affiche des options supplémentaires, comme indiqué ci-dessous. Choisissez parmi les **Notification** options pour démarrer l’application de surveillance dans **Notification** mode (à l’aide du fichier JSON sélectionné dans la fenêtre Propriétés) :
     

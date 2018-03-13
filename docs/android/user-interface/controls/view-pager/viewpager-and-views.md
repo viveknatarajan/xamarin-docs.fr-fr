@@ -7,18 +7,17 @@ ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: d81f897fb7af39334cec4ea9f806533f09754079
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 9c30cf9d76498e95aba6f9a003bc40c7d14e21de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="viewpager-with-views"></a>ViewPager avec des vues
 
 _ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation geste. Navigation geste permet à l’utilisateur pour le passage de gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter une interface utilisateur de swipeable avec ViewPager et PagerTabStrip, comme les pages de données à l’aide de vues (ultérieur guide couvre l’utilisation de Fragments pour les pages)._
 
-<a name="overview" />
  
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -27,18 +26,16 @@ Ce guide est une procédure pas à pas qui présente une démonstration détaill
 Bien que `ViewPager`-en fonction des applications sont souvent implémentées avec `Fragment`s, il existe certains scénarios d’utilisation relativement simple où la complexité supplémentaire de `Fragment`s n’est pas nécessaire. Par exemple, l’application de la galerie de base des images illustrée dans cette procédure pas à pas ne requiert pas l’utilisation de `Fragment`s. Étant donné que le contenu est statique et l’utilisateur uniquement Assistant numérique avec leur dans les deux sens entre les différentes images, l’implémentation peut être conservée plus simple à l’aide de la disposition et les vues Android standards. 
 
 
-<a name="start" />
 
 ## <a name="start-an-app-project"></a>Démarrer un projet d’application
 
 Créez un projet Android appelé **TreePager** (consultez [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) pour plus d’informations sur la création de nouveaux projets Android). Ensuite, lancez le Gestionnaire de Package NuGet. (Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas :, y compris un NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). Rechercher et installer **bibliothèque de prise en charge Android v4**: 
 
-[![Capture d’écran de prise en charge v4 Nuget est sélectionné dans le Gestionnaire de Package NuGet.](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png)
+[![Capture d’écran de prise en charge v4 Nuget est sélectionné dans le Gestionnaire de Package NuGet.](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 Il installe également tout reaquired de packages supplémentaires par **bibliothèque de prise en charge Android v4**.
 
 
-<a name="datasource" />
 
 ## <a name="add-an-example-data-source"></a>Ajouter une Source de données exemple
 
@@ -58,7 +55,6 @@ int imageId = treeCatalog[2].imageId;
 Étant donné que les détails d’implémentation de `TreeCatalog` ne sont pas pertinentes pour comprendre `ViewPager`, le `TreeCatalog` code n’est pas répertorié ici. Le code source `TreeCatalog` est disponible à l’adresse [TreeCatalog.cs](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/TreePager/TreeCatalog.cs). Télécharger ce fichier source (ou copiez et collez le code dans un nouveau **TreeCatalog.cs** fichier) et l’ajouter à votre projet. En outre, téléchargez et décompressez le [fichiers image](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/Resources/tree-images.zip?raw=true) dans votre **drawable/ressources** dossier et les inclure dans le projet. 
 
 
-<a name="layout" />
 
 ## <a name="create-a-viewpager-layout"></a>Créer une disposition de ViewPager
 
@@ -82,8 +78,6 @@ available only from
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
 it is not available in the Android SDK. 
 
-
-<a name="setup" />
 
 ## Set up ViewPager
 
@@ -115,12 +109,10 @@ Ce code effectue les opérations suivantes :
 
 Lorsque vous générez et exécutez ce code, vous devez voir un affichage semblable à la capture d’écran suivante : 
 
-[![Capture d’écran de l’application affichant une ViewPager vide](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png)
+[![Capture d’écran de l’application affichant une ViewPager vide](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
 
 À ce stade, le `ViewPager` est vide, car il lui manque un adaptateur pour l’accès au contenu dans **TreeCatalog**. Dans la section suivante, un **PagerAdapter** est créé pour connecter le `ViewPager` à la **TreeCatalog**. 
 
-
-<a name="adapter" />
 
 ## <a name="create-the-adapter"></a>Créer l’adaptateur
 
@@ -178,7 +170,6 @@ namespace TreePager
 Ce code choisit essentielles `PagerAdapter` implémentation. Dans les sections suivantes, chacune de ces méthodes est remplacé par code de travail. 
 
 
-<a name="ctor" />
 
 ### <a name="implement-the-constructor"></a>Implémentez le constructeur
 
@@ -198,7 +189,6 @@ public TreePagerAdapter (Context context, TreeCatalog treeCatalog)
 L’objectif de ce constructeur est de stocker le contexte et `TreeCatalog` de l’instance qui le `TreePagerAdapter` utilisera. 
 
 
-<a name="count" />
 
 ### <a name="implement-count"></a>Nombre de mettre en œuvre
 
@@ -214,7 +204,6 @@ public override int Count
 Le `NumTrees` propriété du `TreeCatalog` retourne le nombre d’arbres (nombre de pages) dans le jeu de données.
 
 
-<a name="instantiateitem" />
 
 ### <a name="implement-instantiateitem"></a>Implémenter InstantiateItem
 
@@ -247,7 +236,6 @@ Ce code effectue les opérations suivantes :
 Lorsque le `ViewPager` affiche l’image à `position`, il affiche cette `ImageView`. Au départ, `InstantiateItem` est appelée deux fois pour remplir les deux premières pages avec des vues. Comme l’utilisateur fait défiler, elle est appelée à nouveau pour mettre à jour les vues juste derrière et avant l’élément actuellement affiché. 
 
 
-<a name="destroyitem" />
 
 ### <a name="implement-destroyitem"></a>Implémenter DestroyItem
 
@@ -272,7 +260,6 @@ Ce code effectue les opérations suivantes :
 3.  Supprime la vue de la `ViewPager`. 
 
 
-<a name="isviewfromobject" />
 
 ### <a name="implement-isviewfromobject"></a>Implémenter IsViewFromObject
 
@@ -287,7 +274,6 @@ public override bool IsViewFromObject(View view, Java.Lang.Object obj)
 }
 ```
 
-<a name="addadapter" />
 
 ## <a name="add-the-adapter-to-the-viewpager"></a>Ajouter l’adaptateur à la ViewPager
 
@@ -301,10 +287,9 @@ Ce code instancie le `TreePagerAdapter`, en passant le `MainActivity` comme cont
 
 L’implémentation de base est maintenant terminée &ndash; générer et exécuter l’application. Vous devez voir la première image du catalogue d’arborescence apparaît à l’écran comme indiqué sur la gauche dans la capture d’écran suivante. Faites défiler pour voir plusieurs vues de l’arborescence, puis balayez vers la droite pour reculer dans le catalogue de l’arborescence : 
 
-[![Application des captures d’écran de TreePager passant par les images de l’arborescence](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png)
+[![Application des captures d’écran de TreePager passant par les images de l’arborescence](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
 
 
-<a name="pagetabstrip" />
 
 ## <a name="add-a-pager-indicator"></a>Ajouter un indicateur de récepteur de radiomessagerie
 
@@ -333,10 +318,9 @@ Ouvrez **Resources/layout/Main.axml** et ajoutez un `PagerTabStrip` à la dispos
 
 `ViewPager` et `PagerTabStrip` sont conçus pour fonctionner ensemble. Lorsque vous déclarez un `PagerTabStrip` à l’intérieur d’un `ViewPager` mise en page, le `ViewPager` recherche automatiquement le `PagerTabStrip` et le connecter à l’adaptateur. Lorsque vous générez et exécutez l’application, vous devez voir le vide `PagerTabStrip` affiché en haut de chaque écran : 
 
-[![Capture d’écran de la vue rapprochée d’un PagerTabStrip vide](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png)
+[![Capture d’écran de la vue rapprochée d’un PagerTabStrip vide](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 
-<a name="title" />
 
 ### <a name="display-a-title"></a>Afficher un titre
 
@@ -351,23 +335,21 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 Ce code extrait la chaîne de légende d’arborescence de la page spécifiée (position) dans le catalogue de l’arborescence, les convertit en Java `String`et le retourne à la `ViewPager`. Lorsque vous exécutez l’application avec cette nouvelle méthode, chaque page affiche la légende de l’arborescence de la `PagerTabStrip`. Vous devez voir le nom de l’arborescence en haut de l’écran sans soulignement : 
 
-[![Captures d’écran de pages contenant des onglets de PagerTabStrip remplie de texte](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png)
+[![Captures d’écran de pages contenant des onglets de PagerTabStrip remplie de texte](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png#lightbox)
 
 Vous pouvez passez en arrière pour afficher chaque image de l’arborescence de la légende dans le catalogue. 
 
 
-<a name="pagertitlestrip" />
 
 ### <a name="pagertitlestrip-variation"></a>Variante de PagerTitleStrip
 
 `PagerTitleStrip` est très similaire à `PagerTabStrip` , sauf que `PagerTabStrip` ajoute un trait de soulignement de l’onglet actuellement sélectionné. Vous pouvez remplacer `PagerTabStrip` avec `PagerTitleStrip` dans la disposition et l’exécution de l’application pour vérifier son fonctionnement avec ci-dessus `PagerTitleStrip`: 
 
-[![PagerTitleStrip par des soulignements supprimées du texte](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png)
+[![PagerTitleStrip par des soulignements supprimées du texte](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png#lightbox)
 
 Notez que le soulignement est supprimé lorsque vous convertissez `PagerTitleStrip`. 
 
 
-<a name="summary" />
  
 ## <a name="summary"></a>Récapitulatif
 

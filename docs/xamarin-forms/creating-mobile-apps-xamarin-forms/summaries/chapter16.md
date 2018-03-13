@@ -3,14 +3,15 @@ title: "Résumé du chapitre 16. Liaison de données"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 954d5d9e270db156f5ef2577706c667e05ab544c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf08874f66c9ab21cd0ede642c8c94821b6c5a2a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Résumé du chapitre 16. Liaison de données
 
@@ -95,7 +96,7 @@ Le [ **BindingModes** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 Le [ **ReverseBinding** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ReverseBinding) exemple définit les liaisons sur le `Value` propriété de la `Slider` faisant référence à la `FontSize` propriété de chaque `Label`. Cela semble être descendante, mais elle fonctionne mieux dans l’initialisation du `Slider` éléments, car le `Value` propriété de la `Slider` a un `DefaultBindingMode` de `TwoWay`.
 
-[![Capture d’écran de triple d’inverser la liaison](images/ch16fg06-small.png "inverser la liaison")](images/ch16fg06-large.png "inverser la liaison")
+[![Capture d’écran de triple d’inverser la liaison](images/ch16fg06-small.png "inverser la liaison")](images/ch16fg06-large.png#lightbox "inverser la liaison")
 
 Cela est analogue à la façon dont les liaisons sont définies dans MVVM, et vous allez utiliser ce type de liaison fréquemment.
 

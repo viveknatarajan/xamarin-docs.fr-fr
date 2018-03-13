@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0be4e7f1d8719fdd174d51399178eb1bc000c4b3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding avec des tâches
 
@@ -114,11 +114,11 @@ Un changement majeur dans iOS 7 en ce qui concerne les tâches en arrière-plan 
 
 Rappelez-vous que préliminaire iOS 7, une tâche qui s’exécute en arrière-plan est 600 secondes pour terminer. L’une des raisons pour cette limite sont qu’une tâche en cours d’exécution en arrière-plan conservez l’appareil allumé pendant la durée de la tâche :
 
- [ ![](ios-backgrounding-with-tasks-images/ios6.png "Graphique de la tâche en conservant l’application iOS préliminaire éveillés 7")](ios-backgrounding-with-tasks-images/ios6.png)
+ [![](ios-backgrounding-with-tasks-images/ios6.png "Graphique de la tâche en conservant l’application iOS préliminaire éveillés 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
 
 le traitement en arrière-plan iOS 7 est optimisé pour une plus grande autonomie. Dans iOS 7, backgrounding devient opportuniste : au lieu de garder l’appareil allumé, tâches respectent lors de l’appareil accède à la mise en veille et à la place effectuer leur traitement en segments lorsque l’appareil sort de veille pour gérer les appels téléphoniques, notifications, entrant des messages électroniques et autres interruptions courantes. Le diagramme suivant fournit un aperçu de la façon dont une tâche peut être rompue des :
 
- [ ![](ios-backgrounding-with-tasks-images/ios7.png "Graphique de la tâche divisée en blocs postérieur à iOS 7")](ios-backgrounding-with-tasks-images/ios7.png)
+ [![](ios-backgrounding-with-tasks-images/ios7.png "Graphique de la tâche divisée en blocs postérieur à iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
 
 Étant donné que la tâche d’exécution n’est pas continue de plus, les tâches qui effectuent des transferts réseau doivent être gérés différemment dans iOS 7. Les développeurs sont encouragés à utiliser le `NSURlSession` API pour gérer les transferts de réseau. La section suivante est une vue d’ensemble des transferts en arrière-plan.
 

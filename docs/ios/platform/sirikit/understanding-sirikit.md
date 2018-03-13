@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 36d8e27ce06e38e1cf652558bfb5a83f572e4403
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 202df615f1b35504f1fe5c9fd64c9c4b4db77a2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>Présentation des Concepts de SiriKit
 
@@ -57,7 +57,7 @@ Siri et cartes de gérer toutes les interactions de l’utilisateur et affichent
 
 Cette section présente une vue d’ensemble de la manière dont SiriKit permet à l’utilisateur d’interagir avec l’application à l’aide de Siri. Cet exemple, nous utiliserons l’application MonkeyChat fausse :
 
-[ ![](understanding-sirikit-images/monkeychat01.png "L’icône MonkeyChat")](understanding-sirikit-images/monkeychat01.png)
+[![](understanding-sirikit-images/monkeychat01.png "L’icône MonkeyChat")](understanding-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat conserve son propre contact Carnet d’adresses de vos amis de l’utilisateur, chacune associée à un nom de l’écran (par exemple, Bobo par exemple) et permet à l’utilisateur d’envoyer des conversations de texte à chaque ami par leur nom de l’écran.
 
@@ -179,7 +179,7 @@ Quelle que soit la façon dont une demande est faite ou comment Siri répond à 
 
 Lorsque l’utilisateur effectue une demande verbale de Siri, voici les étapes qui suivre Siri :
 
-[ ![](understanding-sirikit-images/monkeychat02.png "Les étapes qui suivre Siri")](understanding-sirikit-images/monkeychat02.png)
+[![](understanding-sirikit-images/monkeychat02.png "Les étapes qui suivre Siri")](understanding-sirikit-images/monkeychat02.png#lightbox)
 
 1. Tout d’abord, Siri prend le fichier audio de l’utilisateur **vocale** et le convertit en texte.
 2. Ensuite, le texte est converti en un **intention**, un structuré en représentation sous forme de demande de l’utilisateur.
@@ -188,7 +188,7 @@ Lorsque l’utilisateur effectue une demande verbale de Siri, voici les étapes 
 
 Il existe trois manières principales que l’application puisse participer à la conversation de l’utilisateur avec Siri :
 
-[ ![](understanding-sirikit-images/monkeychat03.png "Les trois méthodes principales que l’application peut prendre part à la conversation d’utilisateurs avec Siri")](understanding-sirikit-images/monkeychat03.png)
+[![](understanding-sirikit-images/monkeychat03.png "Les trois méthodes principales que l’application peut prendre part à la conversation d’utilisateurs avec Siri")](understanding-sirikit-images/monkeychat03.png#lightbox)
 
 1. **Vocabulaire** -Voici comment l’application indique Siri les mots qu’il a besoin pour interagir avec elle.
 2. **Logique de l’application** - Voici les actions et les réponses que l’application doit prendre selon donné intentions.
@@ -219,7 +219,7 @@ Il existe trois manières principales que l’application puisse participer à l
 
 Le premier rôle de l’application prend à la conversation doit comprendre Siri vocale de l’utilisateur :
 
-[ ![](understanding-sirikit-images/monkeychat04.png "Description des Siri vocal des utilisateurs")](understanding-sirikit-images/monkeychat04.png)
+[![](understanding-sirikit-images/monkeychat04.png "Description des Siri vocal des utilisateurs")](understanding-sirikit-images/monkeychat04.png#lightbox)
 
 Siri ne possède pas le nom « Bobo » dans sa base de données, mais l’application et partage ces informations avec Siri via son vocabulaire. L’application permet également de Siri reconnaître que Bobo un destinataire, car il leur spécifié à Siri comme un *Contact*.
 
@@ -227,7 +227,7 @@ Siri sait que plus est requise pour envoyer un message à un destinataire unique
 
 Dans l’exemple ci-dessus, l’utilisateur a répondu, *« Veuillez envoyer plus banane »*, qui Siri sera regrouper dans un texte structuré **intention**:
 
-[ ![](understanding-sirikit-images/monkeychat05.png "Siri regroupera la réponse de l’utilisateur dans un but structuré")](understanding-sirikit-images/monkeychat05.png)
+[![](understanding-sirikit-images/monkeychat05.png "Siri regroupera la réponse de l’utilisateur dans un but structuré")](understanding-sirikit-images/monkeychat05.png#lightbox)
 
 L’objectif structurée contient les informations suivantes :
 
@@ -248,7 +248,7 @@ Siri générera automatiquement une `NSUserActivity` pour démarrer l’applicat
 
 Une fois que l’application a traité l’intention et a retourné une réponse à Siri, il présente ensuite les résultats à l’utilisateur (verbalement et visuellement) :
 
-[ ![](understanding-sirikit-images/monkeychat06.png "Les résultats présentés à l’utilisateur à la fois verbalement et visuellement")](understanding-sirikit-images/monkeychat06.png)
+[![](understanding-sirikit-images/monkeychat06.png "Les résultats présentés à l’utilisateur à la fois verbalement et visuellement")](understanding-sirikit-images/monkeychat06.png#lightbox)
 
 Siri a réponse intégré plusieurs Interfaces utilisateur pour chacun des domaines disponibles pour l’application. Toutefois, étant donné que MonkeyChat a fourni une Extension facultative d’intention de l’interface utilisateur, il est utilisé pour présenter les résultats de la conversation à l’utilisateur dans l’exemple ci-dessus.
 
@@ -256,7 +256,7 @@ Siri a réponse intégré plusieurs Interfaces utilisateur pour chacun des domai
 
 Il existe trois tâches principales que l’Extension d’application doit effectuer lors du traitement de modes :
 
-[ ![](understanding-sirikit-images/monkeychat07.png "Le cycle de vie Intent")](understanding-sirikit-images/monkeychat07.png)
+[![](understanding-sirikit-images/monkeychat07.png "Le cycle de vie Intent")](understanding-sirikit-images/monkeychat07.png#lightbox)
 
 1. L’application doit **résoudre** chaque paramètre d’un événement. Par conséquent, l’application appelle résoudre plusieurs fois (une fois par chaque paramètre) et parfois plusieurs fois sur le même paramètre jusqu'à ce que l’application et l’utilisateur sont d’accord sur ce qui est demandé.
 2. L’application doit **confirmer** qu’il peut gérer l’intention demandée et informer Siri le résultat attendu.
@@ -329,7 +329,7 @@ Il existe également une API pour fournir des mots et expressions à Siri à l�
 
 L’Extension intentions est responsable de la gestion des interactions entre l’application et les Siri principales comme suit :
 
-[ ![](understanding-sirikit-images/intents01.png "L’Extension de modes")](understanding-sirikit-images/intents01.png)
+[![](understanding-sirikit-images/intents01.png "L’Extension de modes")](understanding-sirikit-images/intents01.png#lightbox)
 
 L’intention de l’Extension peut prendre en charge un ou plusieurs objectifs, il incombe au développeur de déterminer la manière dont ils souhaitent mettre en œuvre SiriKit dans l’application. Le développeur peut également ajouter une intention qu’Extension distincte pour chaque objectif devant être gérées.  Ceci dit, Apple demande que le développeur de limiter le nombre d’Extensions de l’intention afin que plusieurs processus n’est ouverte par rapport à l’application, qui nécessitent plus de mémoire et temps à gérer pour Siri.
 
@@ -355,7 +355,7 @@ Une des opérations courantes que les utilisateurs seront effectuer consiste à 
 
 L’Extension de l’interface utilisateur intentions présente la possibilité d’afficher l’interface utilisateur de l’application et les personnalisations dans l’expérience de Siri et rendre les utilisateurs sentir connecté à l’application. Avec cette extension, l’application peut mettre la marque, ainsi que visual et d’autres informations dans la transcription.
 
-[ ![](understanding-sirikit-images/intents02.png "Exemple de sortie intentions Extension d’interface utilisateur")](understanding-sirikit-images/intents02.png)
+[![](understanding-sirikit-images/intents02.png "Exemple de sortie intentions Extension d’interface utilisateur")](understanding-sirikit-images/intents02.png#lightbox)
 
 L’Extension de l’interface utilisateur intentions retourne toujours un `UIViewController` et l’application peut ajouter quoi que ce soit nécessaire dans le contrôleur de vue telles que de l’affichage des informations supplémentaires qui va au-delà de la réponse initiale. L’interface utilisateur intentions peut également mettre à jour l’utilisateur avec l’état d’un événement en cours d’exécution longue, telles que combien de temps prendra une porté voiture pour accéder à leur emplacement de partage.
 

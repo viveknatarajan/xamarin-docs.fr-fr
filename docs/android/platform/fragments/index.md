@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 0486b9e4371a1bcab02921da42bcb929f00a782f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fragments"></a>Fragments
 
@@ -28,13 +28,13 @@ Prise en charge des Packages ont été appelées à l’origine *compatibilité 
 
 Par exemple, l’image ci-dessous montre comment une application utilise des Fragments sur différents facteurs de forme de périphérique.
 
-[![Diagramme de l’utilisation des fragments dans les tablettes et téléphones](images/00.png)](images/00.png)
+[![Diagramme de l’utilisation des fragments dans les tablettes et téléphones](images/00.png)](images/00.png#lightbox)
 
 *Fragment A* contient une liste, tandis que *Fragment B* contient les détails d’un élément sélectionné dans cette liste. Lorsque l’application est exécutée sur une tablette, il peut afficher les deux Fragments sur la même activité. Lors de la même application est exécutée sur un combiné (avec sa taille minimale de l’écran), les Fragments sont hébergés dans les deux activités distinctes. Fragment A et B du Fragment sont les mêmes sur les deux facteurs de forme, mais les activités qui les hébergent sont différentes.
 
 Pour une activité coordonner et gérer tous ces Fragments, Android introduit une nouvelle classe appelée le *FragmentManager*. Chaque activité possède sa propre instance d’un `FragmentManager` pour l’ajout, suppression et recherche hébergé Fragments. Le diagramme suivant illustre la relation entre les Fragments et des activités :
 
-[![Diagramme illustrant les relations entre les activités, le Gestionnaire de Fragment et Fragments](images/01.png)](images/01.png)
+[![Diagramme illustrant les relations entre les activités, le Gestionnaire de Fragment et Fragments](images/01.png)](images/01.png#lightbox)
 
 Certains ce qui est, Fragments peuvent être considérés comme contrôles composites, ou en tant qu’activités de mini. Ils regroupement des éléments d’interface utilisateur dans des modules réutilisables qui peuvent ensuite être utilisées de façon indépendante par les développeurs dans les activités. Un Fragment dispose d’une hiérarchie de la vue, tout comme une activité, mais, contrairement à une activité, il peut être partagé entre les écrans. Vues de la différence des Fragments de Fragments ont leur propre cycle de vie ; les vues ne le font pas.
 
@@ -51,11 +51,11 @@ Ce guide contient une couverture complète sur l’utilisation de Fragments, y c
 
 Fragments sont disponibles dans le SDK Android, en commençant par le niveau de l’API 11 (Android version 3.0), comme indiqué dans la capture d’écran suivante :
 
-[![En sélectionnant le niveau de l’API dans le Gestionnaire de kit de développement logiciel Android.](images/02.png)](images/02.png)
+[![En sélectionnant le niveau de l’API dans le Gestionnaire de kit de développement logiciel Android.](images/02.png)](images/02.png#lightbox)
 
 Les fragments sont disponibles dans Xamarin.Android 4.0 et versions ultérieures. Une application de Xamarin.Android doit cibler au moins le niveau API 11 (Android 3.0) ou une version ultérieure pour pouvoir utiliser des Fragments. Le Framework cible peut être défini dans les Options de projet, comme indiqué ci-dessous :
 
-[![Définition du niveau de l’API de l’infrastructure cible dans les Options de projet](images/03.png)](images/03.png)
+[![Définition du niveau de l’API de l’infrastructure cible dans les Options de projet](images/03.png)](images/03.png#lightbox)
 
 Il est possible d’utiliser des Fragments dans les versions antérieures d’Android à l’aide du Package de prise en charge Android et Xamarin.Android 4.2 ou version ultérieure. Comment effectuer cette opération est couvert plus en détail dans les documents de cette section.
 

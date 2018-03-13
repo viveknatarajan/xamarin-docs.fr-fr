@@ -2,20 +2,19 @@
 title: "Attribut débogable"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
+ms.assetid: 1ABF90F1-6A70-45AE-9271-D90DC42807D0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: db09ebe29b6c404bac892fd76389faf0b9e03d5b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 65037029d01d499421fd825f72347ae1bebd9966
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="debuggable-attribute"></a>Attribut débogable
 
-<a name="Overview" />
 
 
 Pour permettre le débogage, Android prend en charge Java Debug Wire Protocol (JDWP). Cette technologie permet à des outils tels qu’ADB de communiquer avec une machine virtuelle Java. JDWP est important pendant le développement, mais il doit être désactivé avant la publication de l’application.

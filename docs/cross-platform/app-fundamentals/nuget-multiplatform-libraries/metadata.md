@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 8afce6021c2816f354e26ccecd7d0c40ceb2a9bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: babbe0344130dc0ce38023eabe7479d2b464276b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing-nuget-metadata"></a>Modification des métadonnées de NuGet
 
@@ -26,7 +26,7 @@ Le **métadonnées** section configure les valeurs utilisées dans les [ **.nusp
 
 Le **général** onglet contient quatre champs qui doivent être entrés pour générer un package NuGet :
 
-[ ![](metadata-images/metadata-general-sml.png "Fenêtre de métadonnées requises de package NuGet.")](metadata-images/metadata-general.png)
+[![](metadata-images/metadata-general-sml.png "Fenêtre de métadonnées requises de package NuGet.")](metadata-images/metadata-general.png#lightbox)
 
 - **ID** : l’identificateur de package, qui doit être unique dans Nuget.org (ou, là où le package sera distribué). Suivez cette [conseils](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) et utiliser uniquement des caractères qui sont valides dans une URL (sans espaces et évitez les caractères spéciaux plus).
 - **Version** : choisissez un numéro de version cohérent avec [les règles de contrôle de version de NuGet](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions).
@@ -45,7 +45,7 @@ Pour plus d’informations, consultez la [référence des éléments requis](htt
 
 Le **détails** onglet contient les champs facultatifs à inclure dans le fichier manifeste du package NuGet.
 
-[ ![](metadata-images/metadata-detail-sml.png "Fenêtre de métadonnées optionnelles de package NuGet")](metadata-images/metadata-detail.png)
+[![](metadata-images/metadata-detail-sml.png "Fenêtre de métadonnées optionnelles de package NuGet")](metadata-images/metadata-detail.png#lightbox)
 
 Reportez-vous à la [référence des éléments facultatifs](https://docs.microsoft.com/en-us/nuget/schema/nuspec#optional-metadata-elements) pour plus d’informations sur les champs obligatoires et facultatifs.
 

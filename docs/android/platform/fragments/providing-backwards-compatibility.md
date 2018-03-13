@@ -7,32 +7,31 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: f1567815ec342a958b48ec4801e2918f2981de3d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 670ec465843bbe819b41a53fff71b01ab78b0059
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Fournissant vers l’arrière de la compatibilité avec le Package de prise en charge Android
 
 L’utilité des Fragments serait limitée sans vers l’arrière sur la compatibilité avec des périphériques (API niveau 11) 3.0 préalable Android. Pour fournir cette fonctionnalité, Google a introduit le [bibliothèque de prise en charge](http://developer.android.com/sdk/compatibility-library.html) (appelée à l’origine le *Android bibliothèque de compatibilité* lorsqu’elle a été publiée) qui backports certaines API à partir de versions plus récentes de Android aux anciennes versions d’Android. Il est le Package de prise en charge Android qui permet aux périphériques exécutant Android 2.3.3 1.6 Android (API niveau 4). (API niveau 10).
 
 > [!NOTE]
-> **Remarque**: uniquement le `ListFragment` et `DialogFragment` sont disponibles via le Package de prise en charge Android. Aucune des autres fragments sous-classes, telles que le `PreferenceFragment,` sont pris en charge dans le Package de prise en charge Android. Elles ne fonctionneront pas dans les 3.0 applications préalable Android. 
+> Uniquement les `ListFragment` et `DialogFragment` sont disponibles via le Package de prise en charge Android. Aucune des autres fragments sous-classes, telles que le `PreferenceFragment,` sont pris en charge dans le Package de prise en charge Android. Elles ne fonctionneront pas dans les 3.0 applications préalable Android. 
 
-<a name="Adding_the_Support_Package" /> 
 
 ## <a name="adding-the-support-package"></a>Ajout du Package de prise en charge
 
 Le Package de prise en charge Android n’est pas automatiquement ajouté à une application Xamarin.Android. Xamarin fournit le [package de bibliothèque de prise en charge Android v4 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) pour simplifier l’ajout des prise en charge des bibliothèques à une application Xamarin.Android. Pour inclure les packages de prise en charge dans votre application inclure de Xamarin.Android le [bibliothèque de prise en charge Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) composant dans votre projet Xamarin.Android, comme illustré dans la capture d’écran suivante : 
 
-[![Package v4 de capture d’écran de bibliothèque de prise en charge Android ajouté au projet](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png)
+[![Package v4 de capture d’écran de bibliothèque de prise en charge Android ajouté au projet](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png#lightbox)
 
 Après ont effectué ces étapes, il devient possible d’utiliser des Fragments dans les versions antérieures d’Android. Les API de Fragment fonctionnera désormais même dans les versions antérieures, avec les exceptions suivantes : 
 
 -   **Modifier la Version Android minimale** &ndash; l’application n’a plus besoin de cibler Android version 3.0 ou ultérieure, comme indiqué ci-dessous : 
 
-    [![Capture d’écran de Minimum Android cible définie dans les propriétés de l’Application](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png)
+    [![Capture d’écran de Minimum Android cible définie dans les propriétés de l’Application](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
 -   **Étendre FragmentActivity** &ndash; les activités qui hébergent des Fragments doit maintenant hériter `Android.Support.V4.App.FragmentActivity` et non à partir `Android.App.Activity` . 
 

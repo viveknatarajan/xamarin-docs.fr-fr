@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 85413cf223e794ad2fda093601f9221d0261af39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac4c788b4bd48991d7628d892ad1ece3d2451228
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>L’authentification des utilisateurs avec un Service de SimpleDB Amazon
 
@@ -61,7 +61,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 Le `SelectAsync` méthode retourne une réponse contenant une collection d’éléments et attributs qui correspondent à l’expression de requête. L’expression de requête garantit que seuls les éléments qui correspondent aux adresse de messagerie de l’utilisateur sont récupérées. Pour plus d’informations sur les expressions de requête, consultez [de choisir de créer des requêtes Amazon SimpleDB](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/UsingSelect.html) sur le site Web d’Amazon.
 
 > [!NOTE]
-> **Remarque**: veillez à respecter les règles d’indentation lors de la construction de l’expression de requête. Pour plus d’informations, consultez [sélectionner les règles de devis](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) sur le site Web d’Amazon.
+> Veillez à suivre les règles d’indentation lors de la construction de l’expression de requête. Pour plus d’informations, consultez [sélectionner les règles de devis](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) sur le site Web d’Amazon.
 
 ## <a name="summary"></a>Récapitulatif
 

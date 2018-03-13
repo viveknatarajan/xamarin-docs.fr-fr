@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: f7e949902e2f960a9aa68c600514b7fefc8ae30d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9d774870a541630d8c6519f9dfeaeb21cacb98e8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="master-detail-page"></a>Page maître / détail
 
@@ -22,7 +22,7 @@ _Le Xamarin.Forms MasterDetailPage est une page qui gère deux pages connexes d�
 
 Une page maître affiche généralement une liste d’éléments, comme indiqué dans les captures d’écran suivants :
 
-[![](master-detail-page-images/masterpage-components.png "Composants de la Page maître")](master-detail-page-images/masterpage-components-large.png "composants de la Page maître")
+[![](master-detail-page-images/masterpage-components.png "Composants de la Page maître")](master-detail-page-images/masterpage-components-large.png#lightbox "composants de la Page maître")
 
 L’emplacement de la liste des éléments est identique sur chaque plateforme, et en sélectionnant un des éléments permet d’accéder à la page de détails correspondante. En outre, la page maître comporte également une barre de navigation qui contient un bouton qui peut être utilisé pour accéder à la page active en détail :
 

@@ -4,14 +4,15 @@ description: "Balises de lecture Communication NFC (Near Field) à l’aide d’
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-ios
+ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2016
-ms.openlocfilehash: 4975b4008c635ad2355ca2806ba867636dd50201
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 72c19ef09843c137514983b1d7ee7104e3cb32c5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="core-nfc"></a>Core NFC
 
@@ -62,7 +63,7 @@ Votre application doit demander le **près de lecture de balise Communications c
 
 Créer un nouveau **ID d’application** et vérifiez que le **la lecture des balises NFC** service est activée :
 
-[ ![Page de portail nouvel ID d’application de développeur avec la lecture des balises NFC sélectionné](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png)
+[![Page de portail nouvel ID d’application de développeur avec la lecture des balises NFC sélectionné](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 Puis créer un profil de configuration pour ce code d’application, puis téléchargez et installez-la sur le développement de votre Mac.
 

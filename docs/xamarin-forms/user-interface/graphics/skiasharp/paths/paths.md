@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f02c5cfd75fd9d9cd97d28ca276b32808f7a45ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-basics"></a>Principes fondamentaux de chemin d’accès
 
@@ -99,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Le premier contour se compose d’un appel à [ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) à l’aide des coordonnées X et Y plutôt qu’une `SKPoint` valeur suivie de trois appels à [ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) pour dessiner les trois parties de la triangle. Le deuxième contour a uniquement deux appels à `LineTo` mais il termine le contour avec un appel à [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), qui ferme le contour. La différence est importante :
 
-[![](paths-images/twotrianglecontours-small.png "Capture d’écran de triple de la page de deux profils de Triangle")](paths-images/twotrianglecontours-large.png "Triple capture d’écran de la page de deux profils de Triangle")
+[![](paths-images/twotrianglecontours-small.png "Capture d’écran de triple de la page de deux profils de Triangle")](paths-images/twotrianglecontours-large.png#lightbox "Triple capture d’écran de la page de deux profils de Triangle")
 
 Comme vous pouvez le voir, le premier contour est évidemment une série de trois lignes connectées, mais la fin ne connecte pas au début. Les deux lignes se chevauchent en haut. Le contour du deuxième est évidemment fermé et a été effectué avec un moins `LineTo` appelle, car le `Close` méthode ajoute automatiquement une ligne finale pour fermer le contour.
 
@@ -189,7 +189,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Voici le programme en cours d’exécution sur les plateformes de trois :
 
-[![](paths-images/strokejoins-small.png "Triple capture d’écran de la page trait joint")](paths-images/strokejoins-large.png "Triple capture d’écran de la page joint de trait")
+[![](paths-images/strokejoins-small.png "Triple capture d’écran de la page trait joint")](paths-images/strokejoins-large.png#lightbox "Triple capture d’écran de la page joint de trait")
 
 La jointure d’angle se compose d’un point aigu où les lignes de se connectent. Lorsque deux lignes se joindre à un petit angle, la jointure de pointe permettre considérablement s’allonger. Pour empêcher qu’excessivement longs les jointures, la longueur de la jointure de pointe est limitée par la valeur de la [ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) propriété du `SKPaint`. Une jointure de pointe qui dépasse cette longueur est coupée pour devenir un biseau.
 

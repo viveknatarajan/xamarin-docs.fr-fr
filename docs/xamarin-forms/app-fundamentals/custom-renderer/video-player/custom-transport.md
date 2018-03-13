@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d37c2c9dbb12668680b5813e9e083d2ebb184c66
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-transport-controls"></a>Contrôles de transport vidéo personnalisée
 
@@ -646,11 +646,11 @@ namespace VideoPlayerDemos
 
 Étant donné que `AutoPlay` a la valeur `false` dans les **CustomTransport.xaml** fichier, vous devrez appuyer sur le **lire** bouton lorsque celui-ci est activé pour commencer la vidéo. Les boutons sont définies afin que les caractères Unicode abordées ci-dessus sont accompagnés de leurs équivalents de texte. Les boutons ont une apparence cohérente sur chaque plateforme lors de la lecture :
 
-[![Lecture du Transport personnalisé](custom-transport-images/customtransportplaying-small.png "Transport personnalisé lecture")](custom-transport-images/customtransportplaying-large.png "lecture du Transport personnalisé")
+[![Lecture du Transport personnalisé](custom-transport-images/customtransportplaying-small.png "Transport personnalisé lecture")](custom-transport-images/customtransportplaying-large.png#lightbox "lecture du Transport personnalisé")
 
 Mais sur Android et la plateforme Windows universelle, le **lire** bouton ressemble très différente lorsque la vidéo est suspendue :
 
-[![Transport personnalisé en pause](custom-transport-images/customtransportpaused-small.png "Transport personnalisé en pause")](custom-transport-images/customtransportpaused-large.png "Transport personnalisé en pause")
+[![Transport personnalisé en pause](custom-transport-images/customtransportpaused-small.png "Transport personnalisé en pause")](custom-transport-images/customtransportpaused-large.png#lightbox "Transport personnalisé en pause")
 
 Dans une application de production, vous souhaiterez probablement utiliser vos propres images bitmap pour les boutons pour atteindre l’uniformité de visual.
 

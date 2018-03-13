@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 524d551a96dd1352d86671238a63c103cef9b0c5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 83841e62d863bf4be4edef5c0b6b7d486f192f4d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="background-tasks"></a>Tâches d’arrière-plan
 
@@ -30,7 +30,7 @@ Avant d’examiner toutes les méthodes, qu'un développeur peut conserver les d
 
 Prenons l’exemple suivant :
 
-[ ![](background-tasks-images/update00.png "Comment un utilisateur peut déplacer entre leur iPhone et leurs Apple Watch pendant la journée")](background-tasks-images/update00.png)
+[![](background-tasks-images/update00.png "Comment un utilisateur peut déplacer entre leur iPhone et leurs Apple Watch pendant la journée")](background-tasks-images/update00.png#lightbox)
 
 1. Le matin, tout en un café, l’utilisateur parcourt toutes les informations en cours sur leur iPhone pendant plusieurs minutes.
 2. Avant de quitter le café-restaurant, ils vérifient rapidement la météo avec le des complications sur leur face espion.
@@ -43,7 +43,7 @@ En raison de la « aperçu rapide » (moins de trois secondes) la nature de la
 
 À l’aide de la nouvelle API Apple a inclus dans watchOS 3, l’application peut planifier une _actualisation en arrière-plan_ et avoir les informations souhaitées prêt avant que l’utilisateur le demande. Prenons l’exemple de la Complication météo ci-dessus :
 
-[ ![](background-tasks-images/update01.png "Un exemple de la Complication météo")](background-tasks-images/update01.png)
+[![](background-tasks-images/update01.png "Un exemple de la Complication météo")](background-tasks-images/update01.png#lightbox)
 
 1. Les planifications de l’application d’être réveillés par le système à un moment donné. 
 2. L’application récupère les informations que vous devez pour générer la mise à jour.
@@ -52,7 +52,7 @@ En raison de la « aperçu rapide » (moins de trois secondes) la nature de la
 
 Comme indiqué ci-dessus, le système watchOS sort de l’application à l’aide d’une ou plusieurs tâches, dont il dispose d’un pool très limité disponible :
 
-[ ![](background-tasks-images/update02.png "Le système watchOS sort de l’application à l’aide d’une ou plusieurs tâches")](background-tasks-images/update02.png)
+[![](background-tasks-images/update02.png "Le système watchOS sort de l’application à l’aide d’une ou plusieurs tâches")](background-tasks-images/update02.png#lightbox)
 
 Apple suggérer tirer pleinement parti de cette tâche (car il est de ce type d’une ressource limitée à l’application) à maintenir jusqu'à ce que l’application a terminé le processus de mise à jour lui-même.
 
@@ -86,7 +86,7 @@ namespace MonkeyWatch.MonkeySeeExtension
 
 Lorsque l’application a terminé la tâche donnée, elle le retourne au système en le marquant terminée :
 
-[ ![](background-tasks-images/update03.png "La tâche retourne au système en le marquant terminée")](background-tasks-images/update03.png)
+[![](background-tasks-images/update03.png "La tâche retourne au système en le marquant terminée")](background-tasks-images/update03.png#lightbox)
 
 <a name="New-Background-Tasks" />
 
@@ -107,7 +107,7 @@ Ces tâches seront abordées en détail dans les sections ci-dessous.
 
 Le `WKApplicationRefreshBackgroundTask` est une tâche générique qui peut être planifiée pour que l’application quitte le mode veille à une date ultérieure :
 
-[ ![](background-tasks-images/update04.png "Un WKApplicationRefreshBackgroundTask quitte le mode veille à une date ultérieure")](background-tasks-images/update04.png)
+[![](background-tasks-images/update04.png "Un WKApplicationRefreshBackgroundTask quitte le mode veille à une date ultérieure")](background-tasks-images/update04.png#lightbox)
 
 Dans l’exécution de la tâche, l’application peut effectuer n’importe quel type de traitement local, telles que mise à jour une chronologie des complications ou extraire des données requises avec une `NSUrlSession`.
 
@@ -118,7 +118,7 @@ Dans l’exécution de la tâche, l’application peut effectuer n’importe que
 
 Le système envoie un `WKURLSessionRefreshBackgroundTask` lorsque les données a terminé le téléchargement et prêt à être traité par l’application :
 
-[ ![](background-tasks-images/update05.png "Le WKURLSessionRefreshBackgroundTask lorsque les données de téléchargement sont terminé")](background-tasks-images/update05.png)
+[![](background-tasks-images/update05.png "Le WKURLSessionRefreshBackgroundTask lorsque les données de téléchargement sont terminé")](background-tasks-images/update05.png#lightbox)
 
 Une application ne reste pas en cours d’exécution pendant le téléchargement de données en arrière-plan. Au lieu de cela, l’application planifie la demande de données, puis elle est suspendue et le système gère le téléchargement des données, reawakening uniquement l’application lorsque le téléchargement est terminé.
 
@@ -128,17 +128,17 @@ Une application ne reste pas en cours d’exécution pendant le téléchargement
 
 Dans watchOS 3, Apple a ajouté la station d’accueil où les utilisateurs peuvent épingler leurs applications favorites et y accéder rapidement. Lorsque l’utilisateur appuie sur le bouton sur l’Apple Watch, une galerie d’instantanés de l’application épinglé s’affiche. L’utilisateur peut passez gauche ou droite pour rechercher l’application souhaitée, puis cliquez sur l’application pour le lancer en remplaçant l’instantané avec l’interface de l’application en cours d’exécution.
 
-[ ![](background-tasks-images/update06.png "Remplacement de l’instantané avec l’interface d’applications en cours d’exécution")](background-tasks-images/update06.png)
+[![](background-tasks-images/update06.png "Remplacement de l’instantané avec l’interface d’applications en cours d’exécution")](background-tasks-images/update06.png#lightbox)
 
 Le système prend régulièrement des instantanés de l’interface utilisateur de l’application (en envoyant un `WKSnapshotRefreshBackgroundTask`) et utilise ces instantanés pour remplir la station d’accueil. watchOS permet à l’application pour mettre à jour son contenu et l’interface utilisateur avant la prise de cet instantané.
 
 Les instantanés sont très importants watchOS 3 dans la mesure où ils fonctionnent comme des images de l’aperçu et le lancement de l’application. Si l’utilisateur se règle sur une application de la station d’accueil, sera développer en plein écran, entrez le premier plan et commencer à exécuter, il est impératif que l’instantané soit à jour :
 
-[ ![](background-tasks-images/update07.png "Si l’utilisateur se règle sur une application de la station d’accueil, il se développe en plein écran")](background-tasks-images/update07.png)
+[![](background-tasks-images/update07.png "Si l’utilisateur se règle sur une application de la station d’accueil, il se développe en plein écran")](background-tasks-images/update07.png#lightbox)
 
 Là encore, le système émet un `WKSnapshotRefreshBackgroundTask` afin de pouvoir préparer l’application (par la mise à jour les données et l’interface utilisateur) avant l’instantané :
 
-[ ![](background-tasks-images/update08.png "Préparer l’application en mettant à jour les données et l’interface utilisateur avant de l’instantané")](background-tasks-images/update08.png)
+[![](background-tasks-images/update08.png "Préparer l’application en mettant à jour les données et l’interface utilisateur avant de l’instantané")](background-tasks-images/update08.png#lightbox)
 
 Lorsque l’application marque le `WKSnapshotRefreshBackgroundTask` terminé, le système mettra automatiquement un instantané de l’interface utilisateur de l’application.
 
@@ -150,7 +150,7 @@ Lorsque l’application marque le `WKSnapshotRefreshBackgroundTask` terminé, le
 
 En outre, lorsque l’utilisateur reçoit une notification à partir de l’application et clique sur dessus afin de mettre l’application au premier plan, l’instantané doit être mis à jour, car il agit en tant que de l’écran d’installation :
 
-[ ![](background-tasks-images/update09.png "L’utilisateur reçoit une notification à partir de l’application et clique sur dessus afin de mettre l’application au premier plan")](background-tasks-images/update09.png)
+[![](background-tasks-images/update09.png "L’utilisateur reçoit une notification à partir de l’application et clique sur dessus afin de mettre l’application au premier plan")](background-tasks-images/update09.png#lightbox)
 
 S’il a été plus d’une heure dans la mesure où l’utilisateur interagisse avec une application watchOS, il sera en mesure de retourner à son état par défaut. L’état par défaut peut signifier différentes choses pour différentes applications et, en fonction de la conception d’une application, est peut-être pas un état par défaut du tout.
 
@@ -162,13 +162,13 @@ S’il a été plus d’une heure dans la mesure où l’utilisateur interagisse
 
 Dans watchOS 3, Apple a intégré espion connectivité avec l’API d’actualisation en arrière-plan via la nouvelle `WKWatchConnectivityRefreshBackgroundTask`. Cette nouvelle fonctionnalité, une application iPhone peut de fournir les données actualisées en son équivalent application espion, pendant l’exécution de l’application watchOS en arrière-plan :
 
-[ ![](background-tasks-images/update10.png "Une application iPhone peut offrir de nouvelles données à son homologue application espion, pendant l’exécution de l’application watchOS en arrière-plan")](background-tasks-images/update10.png)
+[![](background-tasks-images/update10.png "Une application iPhone peut offrir de nouvelles données à son homologue application espion, pendant l’exécution de l’application watchOS en arrière-plan")](background-tasks-images/update10.png#lightbox)
 
 Lancement d’un Push de la Complication, contexte d’application, envoi d’un fichier ou de mise à jour des informations sur l’utilisateur à partir de l’application iPhone sera mise en éveil l’application de l’Apple Watch en arrière-plan.
 
 Lorsque l’application watch quitte le mode veille un `WKWatchConnectivityRefreshBackgroundTask` elle devra utiliser les méthodes API standard pour recevoir les données de l’application iPhone.
 
-[ ![](background-tasks-images/update11.png "Le flux de données WKWatchConnectivityRefreshBackgroundTask")](background-tasks-images/update11.png)
+[![](background-tasks-images/update11.png "Le flux de données WKWatchConnectivityRefreshBackgroundTask")](background-tasks-images/update11.png#lightbox)
 
 1. Assurez-vous que la Session est activé.
 2. Surveiller la nouvelle `HasContentPending` propriété tant que la valeur est `true`, l’application possède toujours des données à traiter. Comme avant, l’application doit conserver la tâche jusqu'à ce qu’il a terminé le traitement de toutes les données.
@@ -180,7 +180,7 @@ Lorsque l’application watch quitte le mode veille un `WKWatchConnectivityRefre
 
 Placer tous les éléments de la nouvelle API de tâches en arrière-plan, un ensemble typique d’interactions se présente comme suit :
 
-[ ![](background-tasks-images/update12.png "Le cycle de vie des API en arrière-plan")](background-tasks-images/update12.png)
+[![](background-tasks-images/update12.png "Le cycle de vie des API en arrière-plan")](background-tasks-images/update12.png#lightbox)
 
 1. Tout d’abord, l’application watchOS planifie un tâche pour être en éveil en tant qu’un moment donné dans le futur en arrière-plan.
 2. Quitte le mode veille par le système et envoi d’une tâche de l’application.
@@ -196,7 +196,7 @@ Il est essentiel qu’une application watchOS se comporte de façon responsable 
 
 Examinez le scénario suivant :
 
-[ ![](background-tasks-images/update13.png "Une application watchOS limite son drainage sur des ressources partagées du système")](background-tasks-images/update13.png)
+[![](background-tasks-images/update13.png "Une application watchOS limite son drainage sur des ressources partagées du système")](background-tasks-images/update13.png#lightbox)
 
 1. L’utilisateur lance une application watchOS à 1 h 00.
 2. L’application planifie une tâche pour sortir de veille et de télécharger le nouveau contenu en une heure à 2 h 00.
@@ -213,7 +213,7 @@ Par exemple, ce document utilisera l’application de sports MonkeySoccer factic
 
 Examinez le scénario classique d’utilisation suivantes :
 
-[ ![](background-tasks-images/update14.png "Le scénario classique d’utilisation")](background-tasks-images/update14.png)
+[![](background-tasks-images/update14.png "Le scénario classique d’utilisation")](background-tasks-images/update14.png#lightbox)
 
 Équipe de football Favoris de l’utilisateur en cours de lecture de correspondance big entre 7:00 à 9:00 PM afin que l’application doit attendre l’utilisateur à vérifier régulièrement le score et elle décide d’un intervalle de mise à jour de 30 minutes.
 
@@ -262,7 +262,7 @@ Le système renvoie un `NSError` si elle n’a pas pu planifier la tâche demand
 
 Ensuite, prenez une présentation détaillée dans la fenêtre de 5 minutes montrant les étapes requises pour mettre à jour le score :
 
-[ ![](background-tasks-images/update15.png "La fenêtre de 5 minutes montrant les étapes requises pour mettre à jour le score")](background-tasks-images/update15.png)
+[![](background-tasks-images/update15.png "La fenêtre de 5 minutes montrant les étapes requises pour mettre à jour le score")](background-tasks-images/update15.png#lightbox)
 
 1. À 7 h 30:02 mis en éveil par le système et de l’application étant donnée l’arrière-plan de la mise à jour de tâche. Sa priorité est pour obtenir les derniers résultats à partir du serveur. Consultez [planification une NSUrlSession](#Scheduling-a-NSUrlSession) ci-dessous.
 2. À 7 h 30:05, l’application termine la tâche d’origine, le système met l’application en veille et qu’il continue à télécharger les données demandées en arrière-plan.
@@ -529,7 +529,7 @@ En outre, il indique également la tâche d’instantané que l’application ne
 
 Comme dans l’exemple précédent de la fenêtre de cinq minutes que l’application MonkeySoccer suivies pour mettre à jour ses résultats, en ne fonctionne efficacement à l’aide de la nouvelle watchOS 3 tâches en arrière-plan, l’application était uniquement active pour un total de 15 secondes : 
 
-[ ![](background-tasks-images/update16.png "L’application n’était active pour un total de 15 secondes")](background-tasks-images/update16.png)
+[![](background-tasks-images/update16.png "L’application n’était active pour un total de 15 secondes")](background-tasks-images/update16.png#lightbox)
 
 Cela réduit l’impact de l’application sur les ressources de l’Apple Watch disponibles et la durée des batteries et permet également à l’application pour mieux fonctionner avec d’autres applications s’exécutant sur la surveillance.
 
@@ -617,7 +617,7 @@ Elle utilise le `RemainingComplicationUserInfoTransfers` propriété de la `WCSe
 
 Dans watchOS 3, Apple a ajouté la station d’accueil où les utilisateurs peuvent épingler leurs applications favorites et y accéder rapidement. Lorsque l’utilisateur appuie sur le bouton sur l’Apple Watch, une galerie d’instantanés de l’application épinglé s’affiche. L’utilisateur peut passez gauche ou droite pour rechercher l’application souhaitée, puis cliquez sur l’application pour le lancer en remplaçant l’instantané avec l’interface de l’application en cours d’exécution.
 
-[ ![](background-tasks-images/dock01.png "La station d’accueil")](background-tasks-images/dock01.png)
+[![](background-tasks-images/dock01.png "La station d’accueil")](background-tasks-images/dock01.png#lightbox)
 
 Périodiquement, le système de prend des instantanés de l’interface utilisateur de l’application et utilise ces instantanés pour remplir les documents. watchOS permet à l’application pour mettre à jour son contenu et l’interface utilisateur avant la prise de cet instantané.
 
@@ -676,7 +676,7 @@ Lorsque vous travaillez avec des mises à jour de l’instantané, Apple rend le
 
 Apple suggérer les éléments suivants pour l’utilisation des flux de données :
 
-[ ![](background-tasks-images/update17.png "Diagramme de flux de données d’application")](background-tasks-images/update17.png)
+[![](background-tasks-images/update17.png "Diagramme de flux de données d’application")](background-tasks-images/update17.png#lightbox)
 
 Un événement externe (par exemple, Espion connectivité) sort de l’application. Cela force l’application à mettre à jour le modèle de données (qui représente l’état actuel d’applications). Par conséquent de la modification du modèle de données l’application devez mettre à jour ses Complications, demande un nouvel instantané, de démarrer un arrière-plan `NSURLSession` pour extraire des données et planifier davantage en arrière-plan actualise.
 

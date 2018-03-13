@@ -8,23 +8,22 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: ebb53398edba64e255f1a534556836df8734ba6f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-with-fragments"></a>Mise en œuvre avec des Fragments
 
 _Android 3.0 introduit des Fragments. Les fragments sont des composants autonomes et modulaires qui aident à gérer la complexité de l’écriture d’applications exécutées sur des écrans de différentes tailles. Cet article montre comment l’utilisation de fragments de développer des applications de Xamarin.Android et la prise en charge des fragments sur les appareils Android préalable 3.0._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
 Dans cette section, nous examinerons comment créer une application qui affiche une liste de la lecture de Shakespeare et un guillemet à partir de chaque jeu sélectionné. Notre application utilisera fragments afin que nous puissions définir des composants d’interface utilisateur dans un seul emplacement, mais puis de les utiliser sur différents facteurs de forme. Par exemple, les captures d’écran ci-après affichent l’application en cours d’exécution sur une tablette 10 », ainsi que sur un téléphone :
 
-[![Captures d’écran de l’exemple d’application en cours d’exécution sur une tablette et téléphone](images/intro-screenshot-sml.png)](images/intro-screenshot.png)
+[![Captures d’écran de l’exemple d’application en cours d’exécution sur une tablette et téléphone](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
 
 Cette section couvre les rubriques suivantes :
 
@@ -34,13 +33,11 @@ Cette section couvre les rubriques suivantes :
 
 - **L’utilisation du Package de prise en charge Android** &ndash; implémente le Package de prise en charge Android, puis effectue quelques changements mineurs aux activités dans l’application, ce qui permet de s’exécuter sur des versions antérieures d’Android.
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>Configuration requise
 
 Cette procédure pas à pas requiert Xamarin.Android 4.0 ou version ultérieure. Il sera également être nécessaire installer le Package de prise en charge Android, comme indiqué dans la documentation de Fragments.
 
-<a name="Introduction" />
 
 ## <a name="introduction"></a>Introduction
 

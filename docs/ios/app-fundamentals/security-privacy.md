@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: acdcdc2b76a995ca324532c6a034b2fdf8e21db5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>e/s de fonctionnalités de sécurité et confidentialité
 
@@ -76,7 +76,7 @@ Pour plus d’informations sur l’utilisation de `Info.plist` clés, consultez 
 
 Prenons l’exemple suivant de l’accès HomeKit sur iOS 10 (et supérieur), le développeur doit ajouter la `NSHomeKitUsageDescription` clé pour l’application `Info.plist` de fichier et fournir une chaîne de déclaration pourquoi l’application souhaite accéder à la base de données de l’utilisateur HomeKit. Cette chaîne s’affiche à l’heure de l’utilisateur à la première qu'exécution de l’application :
 
-[ ![](security-privacy-images/info01.png "Une alerte de NSHomeKitUsageDescription exemple")](security-privacy-images/info01.png)
+[![](security-privacy-images/info01.png "Une alerte de NSHomeKitUsageDescription exemple")](security-privacy-images/info01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -87,7 +87,7 @@ Xamarin.iOS for Visual Studio actuel ne prend pas en charge la modification de l
 3. Ajoutez le nœud suivant pour fournir la description : `<string>Allows the app to control HomeKit enabled devices.</string>`
 4. Le `Info.plist` fichier doit se présenter comme suit : 
 
-    [ ![](security-privacy-images/info02vs.png "Le fichier Info.plist doit ressembler à ce qui suit")](security-privacy-images/info02vs.png)
+    [![](security-privacy-images/info02vs.png "Le fichier Info.plist doit ressembler à ce qui suit")](security-privacy-images/info02vs.png#lightbox)
 4. Enregistrez les modifications dans le fichier.
 5. Revenez à Visual Studio et la recompilation de l’application.
 
@@ -100,10 +100,10 @@ Pour définir toutes les clés de confidentialité, procédez comme suit :
 3. Ajouter un nouveau **entrée** à la liste.
 4. Dans la liste déroulante, sélectionnez une clé privée (tel que **confidentialité - Description de l’utilisation de HomeKit**) : 
 
-    [ ![](security-privacy-images/info02.png "Sélectionnez une clé privée")](security-privacy-images/info02.png)
+    [![](security-privacy-images/info02.png "Sélectionnez une clé privée")](security-privacy-images/info02.png#lightbox)
 5. Entrez une description pour la raison pour laquelle l’application souhaite accéder aux informations de fonctionnalité ou un utilisateur données : 
 
-    [ ![](security-privacy-images/info03.png "Entrez une description")](security-privacy-images/info03.png)
+    [![](security-privacy-images/info03.png "Entrez une description")](security-privacy-images/info03.png#lightbox)
 6. Enregistrez les modifications dans le fichier.
 
 -----

@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: c02ad78cc15f2d71f19d605f7a4d6889bbe3ca01
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec8d000f235a8e0da5198e425f9f1e630b2c662a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Procédure pas à pas - à l’aide des fonctions tactiles dans Android
 
 Nous expliquons comment utiliser les concepts de la section précédente dans une application. Nous allons créer une application avec quatre activités. La première activité à un menu ou à un menu général qui lance les autres activités pour illustrer les différentes API. La capture d’écran suivante montre l’activité principale :
 
-[![Capture d’écran de l’exemple avec Touch Me bouton](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png)
+[![Capture d’écran de l’exemple avec Touch Me bouton](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png#lightbox)
 
 La première activité, exemple Touch, affiche l’utilisation des gestionnaires d’événements pour toucher les vues. L’activité de reconnaissance de mouvement va vous montrer comment créer une sous-classe `Android.View.Views` et gérer les événements ainsi montrent comment gérer les mouvements de pincement. La troisième et dernière activité, **des mouvements personnalisés**, sera montrent comment utiliser des mouvements personnalisés. Pour simplifier les choses à suivre et absorber, nous allons scinder cette procédure pas à pas en sections, avec chaque section en mettant l’accent sur une des activités.
 
@@ -25,7 +25,7 @@ La première activité, exemple Touch, affiche l’utilisation des gestionnaires
 
 -   Ouvrez le projet **TouchWalkthrough\_Démarrer**. Le **MainActivity** atteindre la valeur tous les &ndash; c’est à nous pour implémenter le comportement tactile dans l’activité. Si vous exécutez l’application et cliquez sur **toucher l’exemple**, l’activité suivante doit démarrer :
 
-    [![Capture d’écran de l’activité commence Touch affiché](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+    [![Capture d’écran de l’activité commence Touch affiché](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 -   Maintenant que nous avons vérifié que l’activité démarre, ouvrez le fichier **TouchActivity.cs** et ajoutez un gestionnaire pour le `Touch` l’événement de la `ImageView`:
 
@@ -63,11 +63,11 @@ Notez que, dans le code ci-dessus que nous utilisons le `Move` et `Down` action 
 
 Chaque fois que l’utilisateur touche le `ImageView`, le `Touch` événement sera déclenché et notre gestionnaire affichera le message **tactile commence** sur l’écran, comme illustré dans la capture d’écran suivante :
 
-[![Capture d’écran de l’activité avec Touch commence](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+[![Capture d’écran de l’activité avec Touch commence](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 Tant que l’utilisateur touche le `ImageView`, **tactile commence** s’affichera dans le `TextView`. Lorsque l’utilisateur n’est plus affecte le `ImageView`, le message **tactile se termine** s’affichera dans le `TextView`, comme illustré dans la capture d’écran suivante :
 
-[![Capture d’écran de l’activité avec Touch se termine](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png)
+[![Capture d’écran de l’activité avec Touch se termine](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
 
 ## <a name="gesture-recognizer-activity"></a>Activité de module de reconnaissance de mouvement
@@ -234,11 +234,11 @@ Vous permet de mettre en œuvre de l’activité de reconnaissance de mouvement.
 -   Maintenant, exécutez l’application et démarrer l’activité de reconnaissance de mouvement.
     Lorsqu’il démarre l’écran doit ressembler à la capture d’écran ci-dessous :
 
-    [![Écran de démarrage de reconnaissance de mouvement avec icône Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png)
+    [![Écran de démarrage de reconnaissance de mouvement avec icône Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
 -   Maintenant sélectionnez l’icône et faites-le glisser dans l’écran. Essayez du mouvement de pincement pour zoomer. À un moment donné votre écran doit ressembler à la capture d’écran suivante :
 
-    [![Icône de déplacement de mouvements autour de l’écran](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png)
+    [![Icône de déplacement de mouvements autour de l’écran](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
 À ce stade, vous devez donner vous-même un jeton d’accès personnel à l’arrière : vous venez d’implémenter deux doigts pour zoomer dans une application Android ! Faites une pause rapide et permet de passer à la troisième et dernière activité dans cette procédure pas à pas &ndash; à l’aide des mouvements personnalisés.
 
@@ -341,17 +341,17 @@ Dans le cadre de cette procédure pas à pas, la bibliothèque de mouvements dé
 
 -   Exécutez l’application et démarrer l’activité de reconnaissance de mouvement personnalisée. Il doit ressembler à la capture d’écran suivante :
 
-    [![Capture d’écran avec Me vérifier l’image](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png)
+    [![Capture d’écran avec Me vérifier l’image](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
     Maintenant dessiner une coche sur l’écran et la bitmap affichée doit ressembler à celui illustré dans les captures d’écran suivante :
 
-    [![Dessiné coche](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png)
-    [![reconnues coche](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png)
+    [![Dessiné coche](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+    [![reconnues coche](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
     Enfin, dessinez un dessin à main levée sur l’écran. La case à cocher doit modifier à son image d’origine, comme indiqué dans les captures d’écran :
 
-    [![Dessin à main levée dans l’écran](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png)
-    [![image d’origine s’affiche.](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png)
+    [![Dessin à main levée dans l’écran](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
+    [![image d’origine s’affiche.](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
 
 Vous avez maintenant comprendre comment intégrer des fonctions tactiles et des mouvements dans une application Android à l’aide de Xamarin.Android.
 

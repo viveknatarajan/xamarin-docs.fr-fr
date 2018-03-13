@@ -4,14 +4,15 @@ description: "Découvrir la transformation d’échelle SkiaSharp mise à l’é
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 3ea498b3672c0b9ef4efeff7ec5981dca5a36912
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-scale-transform"></a>La transformation d’échelle
 
@@ -103,7 +104,7 @@ Vous vous demandez peut-être : comment les facteurs d’échelle affectent la 
 
 Comme vous pouvez le voir, tous les éléments dessinés après le `Scale` appeler augmente proportionnellement :
 
-[![](scale-images/basicscale-small.png "Capture d’écran de triple de la page de l’échelle de base")](scale-images/basicscale-large.png "Triple capture d’écran de la page de l’échelle de base")
+[![](scale-images/basicscale-small.png "Capture d’écran de triple de la page de l’échelle de base")](scale-images/basicscale-large.png#lightbox "Triple capture d’écran de la page de l’échelle de base")
 
 Le texte, la largeur de la ligne en pointillés, la longueur des tirets dans la ligne, l’arrondi des angles et la marge de 10 pixels entre les bords gauche et supérieure de la zone de dessin et le rectangle arrondi subissent tous les facteurs d’échelle mêmes.
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 L’angle supérieur gauche du rectangle arrondi est positionné `margin` pixels à partir de la gauche du canevas et `margin` pixels à partir du haut. Les deux derniers arguments pour le `Scale` méthode sont définies sur ces valeurs ainsi que la largeur et la hauteur du texte, qui est également la largeur et la hauteur du rectangle arrondi. Cela signifie que la mise à l’échelle tous les est par rapport au centre du rectangle :
 
-[![](scale-images/centeredscale-small.png "Capture d’écran de triple de la page de mise à l’échelle centré")](scale-images/centeredscale-large.png "Triple capture d’écran de la page de mise à l’échelle centré")
+[![](scale-images/centeredscale-small.png "Capture d’écran de triple de la page de mise à l’échelle centré")](scale-images/centeredscale-large.png#lightbox "Triple capture d’écran de la page de mise à l’échelle centré")
 
 Le `Slider` les éléments de ce programme posséder un #x 2013 ; & de la plage de 10 à 10. Comme vous pouvez le voir, les valeurs négatives de mise à l’échelle (par exemple, sur le Android dans le centre de l’écran) à la verticale entraînent des objets faire pivoter autour de l’axe horizontal qui passe par le centre de mise à l’échelle. Les valeurs négatives de mise à l’échelle (par exemple, comme dans l’écran de Windows sur la droite) à l’horizontale entraînent des objets faire pivoter autour de l’axe vertical qui transitent dans le centre de mise à l’échelle.
 
@@ -246,7 +247,7 @@ using (SKPaint strokePaint = new SKPaint
 
 Le `pathBounds` rectangle est obtenu au début de ce code et ensuite utilisé avec la largeur et la hauteur de la zone de dessin dans la `Scale` appeler. Que l’appel par lui-même l’échelle les coordonnées du chemin d’accès lorsqu’il est restitué par le `DrawPath` appel mais l’étoile sera centré dans le coin supérieur droit de la zone de dessin. Il doit être décalés vers le bas et vers la gauche. Il s’agit du travail de le `Translate` appeler. Ces deux propriétés de `pathBounds` étant environ -100, les facteurs de traduction sont environ 100. Étant donné que la `Translate` appel est après le `Scale` appeler, ces valeurs efficacement à l’échelle par les facteurs d’échelle, pour pouvoir les déplacer vers le centre de la zone de dessin du centre de l’étoile :
 
-[![](scale-images/anisotropicscaling-small.png "Capture d’écran de triple de la page de mise à l’échelle ANISOTROPIQUE")](scale-images/anisotropicscaling-large.png "Triple capture d’écran de la page de mise à l’échelle ANISOTROPIQUE")
+[![](scale-images/anisotropicscaling-small.png "Capture d’écran de triple de la page de mise à l’échelle ANISOTROPIQUE")](scale-images/anisotropicscaling-large.png#lightbox "Triple capture d’écran de la page de mise à l’échelle ANISOTROPIQUE")
 
 Une autre façon, vous pouvez considérer le `Scale` et `Translate` appels consiste à déterminer l’effet dans l’ordre inverse : le `Translate` appel déplace le chemin d’accès afin qu’il devienne complètement visible mais orientée dans le coin supérieur gauche de la zone de dessin. Le `Scale` méthode rend ensuite ce étoile supérieure par rapport à l’angle supérieur gauche.
 
@@ -289,7 +290,7 @@ using (SKPaint textPaint = new SKPaint
 
 Il s’agit d’une logique similaire, et le texte s’étend à la taille de la page selon le rectangle de limites de texte retourné à partir de `MeasureText` (qui est un peu plus le texte) :
 
-[![](scale-images/anisotropictext-small.png "Capture d’écran de triple de la page de Test ANISOTROPIQUE")](scale-images/anisotropictext-large.png "Triple capture d’écran de la page de Test ANISOTROPIQUE")
+[![](scale-images/anisotropictext-small.png "Capture d’écran de triple de la page de Test ANISOTROPIQUE")](scale-images/anisotropictext-large.png#lightbox "Triple capture d’écran de la page de Test ANISOTROPIQUE")
 
 Si vous avez besoin de conserver les proportions des objets graphiques, vous vous souhaitez utiliser la mise à l’échelle isotropes. Le **mise à l’échelle isotropes** page illustre cette méthode pour l’étoile pointes sur 11. Point de vue conceptuel, les étapes pour l’affichage d’un objet graphique dans le centre de la page avec la mise à l’échelle isotropes sont :
 
@@ -338,7 +339,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Le code affiche également l’étoile dix fois de plus, chaque fois que la diminution de la mise à l’échelle du facteur de 10 et changement progressivement de couleur rouge bleu :
 
-[![](scale-images/isotropicscaling-small.png "Capture d’écran de triple de la page de mise à l’échelle isotropes")](scale-images/isotropicscaling-large.png "Triple capture d’écran de la page de mise à l’échelle isotrope")
+[![](scale-images/isotropicscaling-small.png "Capture d’écran de triple de la page de mise à l’échelle isotropes")](scale-images/isotropicscaling-large.png#lightbox "Triple capture d’écran de la page de mise à l’échelle isotrope")
 
 
 ## <a name="related-links"></a>Liens associés

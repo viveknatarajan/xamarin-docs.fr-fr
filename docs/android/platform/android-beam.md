@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: bea8480c66a2ecf499375636c98511ca55ce7693
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-beam"></a>Faisceaux Android
 
 Faisceaux Android est une nouvelle technologie de Communication NFC (Near Field) dans Android 4 qui permet aux applications de partager des informations sur NFC lorsqu’à proximité.
 
-[![Diagramme illustrant les deux périphériques à proximité de partage d’informations](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png)
+[![Diagramme illustrant les deux périphériques à proximité de partage d’informations](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 Faisceaux Android fonctionne en envoyant des messages via NFC lorsque deux périphériques sont à portée. Périphériques sur 4cm entre eux peuvent partager des données à l’aide de faisceaux Android. Une activité sur un périphérique crée un message et spécifie une activité (ou les activités) qui peut gérer la publier. Lorsque l’activité spécifiée est au premier plan et les périphériques sont à portée, faisceaux Android transmet le message à la deuxième unité. Sur le périphérique de réception, une intention est appelée contenant les données du message.
 
@@ -30,7 +30,6 @@ Android prend en charge deux méthodes de définition de messages avec FAISCEAUX
 
 Dans les deux cas, pour envoyer des données avec FAISCEAUX Android, une application envoie un `NdefMessage`, empaqueter les données dans plusieurs `NdefRecords`. Jetons un œil sur les points clés qui doivent être résolus avant que nous pouvons déclencher FAISCEAUX Android. Tout d’abord, nous utiliserons avec le style de rappel de création d’un `NdefMessage`.
 
-<a name="Creating_a_Message" />
 
 ## <a name="creating-a-message"></a>Création d’un Message
 
@@ -66,7 +65,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-<a name="Receiving_a_Message" />
 
 ## <a name="receiving-a-message"></a>Réception d’un Message
 
@@ -79,7 +77,7 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 
 Pour obtenir un exemple de code complet qui utilise des faisceaux Android, indiqué en cours d’exécution dans la capture d’écran ci-dessous, consultez le [démonstration de faisceaux Android](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) dans la galerie d’exemples.
 
-[![Captures d’écran à partir de la démonstration FAISCEAUX Android](android-beam-images/24.png)](android-beam-images/24.png)
+[![Captures d’écran à partir de la démonstration FAISCEAUX Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 

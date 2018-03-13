@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: ea9046c0c546a2f331aefd2332008e10ec6db3c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e3c986b03408dae98a5a79f257029c10909aeabd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Prise en main de l’authentification par empreinte digitale
 
@@ -27,13 +27,13 @@ Pour commencer, nous allons couvrir de tout d’abord comment configurer un proj
 
 Une application Android doit demander le `USE_FINGERPRINT` autorisation dans le manifeste. La capture d’écran suivante illustre l’ajout de cette autorisation à l’application dans Visual Studio 2015 :
 
-[![L’activation\_par empreinte digitale dans l’écran de manifeste Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png) 
+[![L’activation\_par empreinte digitale dans l’écran de manifeste Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 Une application Android doit demander le `USE_FINGERPRINT` autorisation dans le manifeste. La capture d’écran suivante illustre l’ajout de cette autorisation à l’application dans Visual Studio pour Mac :
 
-[![L’activation de UseFingerprint dans l’écran de l’Application Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png) 
+[![L’activation de UseFingerprint dans l’écran de l’Application Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
 
 -----
 

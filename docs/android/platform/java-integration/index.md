@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 88e8c66d36956649f0a996046f038d89a7267cf5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="java-integration-overview"></a>Vue d’ensemble de l’intégration de Java
 
 _L’écosystème de Java inclut une collection considérable les différents composants. Plusieurs de ces composants peuvent être utilisés pour réduire le temps que nécessaire pour développer une application Android. Ce document présente et fournir une vue d’ensemble de certaines des méthodes que les développeurs peuvent utiliser ces composants Java existants afin d’améliorer leur expérience de développement d’application Xamarin.Android._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -41,7 +40,6 @@ La seconde technique, à l’aide de JNI, fonctionne à un niveau beaucoup plus 
 La troisième technique est radicalement différente dans les deux précédents : le code à partir de Java en c#. Portage du code d’une langue à l’autre peut être un processus très laborieuse, mais il est possible de réduire qu’effort à l’aide d’un outil appelé *l’accentuation*. Netteté est un outil open source qui est un Java-à-convertisseur c#. 
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

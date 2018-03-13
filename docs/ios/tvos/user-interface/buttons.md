@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 05a162dab3b427ec345f22818b6c6d9df82c498b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-buttons"></a>Utilisation des boutons
 
@@ -21,7 +21,7 @@ _Cet article décrit la conception et l’utilisation des boutons à l’intéri
 
 Utiliser une instance de la `UIButton` classe pour créer un bouton peut être actif, sélectionnable dans une fenêtre de tvOS. Lorsque l’utilisateur sélectionne un bouton, il envoie un message d’Action à l’objet cible autoriser votre réponse d’application Xamarin.tvOS à l’utilisateur d’entrée.
 
-[ ![](buttons-images/buttons01.png "Boutons de l’exemple")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "Boutons de l’exemple")](buttons-images/buttons01.png#lightbox)
 
 Pour plus d’informations sur l’utilisation avec le Focus et en accédant à la distance Siri, veuillez consulter notre [utilisation de Navigation et le Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) et [Siri distants et les contrôleurs Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentation.
 
@@ -31,7 +31,7 @@ Pour plus d’informations sur l’utilisation avec le Focus et en accédant à 
 
 Dans tvOS, les boutons sont utilisés pour des actions spécifiques de l’application et peuvent contenir un titre, une icône ou les deux. Comme l’utilisateur accède à l’aide de l’Interface utilisateur de l’application le [Siri distant](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), la sélection se déplace sur le bouton donné rendant modifier les couleurs de texte et d’arrière-plan. Un cliché instantané est également appliquée sur le bouton d’ajout d’un effet 3D, ce qui semble dépassent le reste de l’Interface utilisateur.
 
-[ ![](buttons-images/buttons01.png "Boutons de l’exemple")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "Boutons de l’exemple")](buttons-images/buttons01.png#lightbox)
 
 Apple a les suggestions suivantes pour l’utilisation des boutons :
 
@@ -70,19 +70,19 @@ Pour travailler avec les boutons dans une application Xamarin.tvOS, le plus simp
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **bouton** à partir de la **bibliothèque** et déposez-la sur la vue : 
 
-    [ ![](buttons-images/storyboard01.png "Un bouton")](buttons-images/storyboard01.png)
+    [![](buttons-images/storyboard01.png "Un bouton")](buttons-images/storyboard01.png#lightbox)
 1. Dans le **l’Explorateur de propriétés**, vous pouvez ajuster plusieurs propriétés du bouton telles que sa **titre** et **couleur du texte**: 
 
-    [ ![](buttons-images/storyboard02.png "Propriétés d’un bouton")](buttons-images/storyboard02.png)
+    [![](buttons-images/storyboard02.png "Propriétés d’un bouton")](buttons-images/storyboard02.png#lightbox)
 1. Ensuite, basculez vers le **onglet événements** et rattachement un **événement** à partir de la **bouton** et appelez-le `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03.png "L’onglet événements")](buttons-images/storyboard03.png)
+    [![](buttons-images/storyboard03.png "L’onglet événements")](buttons-images/storyboard03.png#lightbox)
 1. Vous va passer automatiquement à la `ViewController.cs` mode dans lequel vous pouvez placer la nouvelle Action dans votre code à l’aide du **des** et **vers le bas** touches de direction : 
 
-    [ ![](buttons-images/storyboard04.png "Placer une Action dans le code")](buttons-images/storyboard04.png)
+    [![](buttons-images/storyboard04.png "Placer une Action dans le code")](buttons-images/storyboard04.png#lightbox)
 1. Appuyez sur la **entrée** pour sélectionner l’emplacement : 
 
-    [ ![](buttons-images/storyboard05.png "L’éditeur de code")](buttons-images/storyboard05.png)
+    [![](buttons-images/storyboard05.png "L’éditeur de code")](buttons-images/storyboard05.png#lightbox)
 1. Enregistrez les modifications à tous les fichiers.
 
 
@@ -91,13 +91,13 @@ Pour travailler avec les boutons dans une application Xamarin.tvOS, le plus simp
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **bouton** à partir de la **bibliothèque** et déposez-la sur la vue : 
 
-    [ ![](buttons-images/storyboard01vs.png "Un bouton")](buttons-images/storyboard01vs.png)
+    [![](buttons-images/storyboard01vs.png "Un bouton")](buttons-images/storyboard01vs.png#lightbox)
 1. Dans le **l’Explorateur de propriétés**, vous pouvez ajuster plusieurs propriétés du bouton telles que sa **titre** et **couleur du texte**: 
 
-    [ ![](buttons-images/storyboard02vs.png "L’Explorateur de propriétés")](buttons-images/storyboard02vs.png)
+    [![](buttons-images/storyboard02vs.png "L’Explorateur de propriétés")](buttons-images/storyboard02vs.png#lightbox)
 1. Ensuite, basculez vers le **onglet événements** et rattachement un **événement** à partir de la **bouton** et appelez-le `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03vs.png "L’onglet événements")](buttons-images/storyboard03vs.png)
+    [![](buttons-images/storyboard03vs.png "L’onglet événements")](buttons-images/storyboard03vs.png#lightbox)
 1. Enregistrez les modifications à tous les fichiers.
 
 
@@ -270,7 +270,7 @@ Cet article a couvert la conception et l’utilisation des boutons à l’intér
 
 ## <a name="related-links"></a>Liens associés
 
-- [Exemples de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Exemples tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS les Guides Interface humaine](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guide de programmation d’application de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

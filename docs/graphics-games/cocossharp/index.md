@@ -6,11 +6,11 @@ ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 2801fd74e9f5f8f2927b06dc7b68cdf004faa104
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a1e28bc9a8a17b4b06ec45746a6ce60ddd129ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cocossharp"></a>CocosSharp
 
@@ -22,7 +22,7 @@ CocosSharp est une bibliothèque facile à utiliser pour les jeux 2D à l’aide
 
 Cette vidéo pratique montre comment créer un CocosSharp inter-plateformes simple jeu.
 
-<iframe src="//channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player" width="800" height="450" allowFullScreen frameBorder="0"></iframe>
+> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player]
 
 ###  <a name="introduction-to-game-development-with-cocossharpgraphics-gamescocossharpfirst-gameindexmd"></a>[Introduction au développement de jeux avec CocosSharp](~/graphics-games/cocossharp/first-game/index.md)
 
@@ -32,7 +32,7 @@ Cette procédure pas à pas plusieurs parties montre comment créer un simple je
 
 
 
-##  <a name="fruity-falls-game-detailsgraphics-gamescocossharpfruity-fallsmd"></a>[Détails de jeu se situe, agréables](~/graphics-games/cocossharp/fruity-falls.md)
+##  <a name="fruity-falls-game-detailsgraphics-gamescocossharpfruity-fallsmd"></a>[Détails du jeu Fruity Falls](~/graphics-games/cocossharp/fruity-falls.md)
 
 ![](images/fruity-falls.png "Ce guide passe en revue le jeu Fruity concernent la plage")
 
@@ -64,7 +64,7 @@ CCDrawNode fournit des méthodes pour dessiner des objets de type primitif tels 
 
 
 
-## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[À l’aide de mosaïque avec CocosSharp](~/graphics-games/cocossharp/tiled.md)
+## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[Utilisation de Tiled avec CocosSharp](~/graphics-games/cocossharp/tiled.md)
 
 ![](images/tiled.png "Mosaïque est un outil puissant, flexible et une application déjà rodée pour la création de vignette orthogonal et isométrique est mappé pour les jeux") en mosaïque est un outil puissant, flexible et une application déjà rodée pour la création de vignette orthogonal et isométrique est mappé pour les jeux. CocosSharp fournit une intégration intégrée pour le format de fichier natif de mosaïque.
 
@@ -78,7 +78,7 @@ Le modèle d’entité est une méthode efficace pour organiser le code de jeu. 
 
 
 
-##  <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[Gestion de plusieurs résolutions dans CocosSharp](~/graphics-games/cocossharp/resolutions.md)
+##  <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[Gestion de résolutions multiples dans CocosSharp](~/graphics-games/cocossharp/resolutions.md)
 
 ![](images/resolutions.png "Ce guide montre comment utiliser des CocosSharp pour développer des jeux qui s’affiche correctement sur les périphériques de résolution différente")
 
@@ -86,7 +86,7 @@ Ce guide montre comment travailler avec CocosSharp pour développer des jeux qui
 
 
 
-##  <a name="cocossharp-content-pipelinegraphics-gamescocossharpcontent-pipelineindexmd"></a>[Contenu de CocosSharp Pipeline](~/graphics-games/cocossharp/content-pipeline/index.md)
+##  <a name="cocossharp-content-pipelinegraphics-gamescocossharpcontent-pipelineindexmd"></a>[Pipeline de contenu de CocosSharp](~/graphics-games/cocossharp/content-pipeline/index.md)
 
 ![](images/content-pipeline.png "Pipelines de contenu sont souvent utilisés dans le développement de jeux pour optimiser le contenu et format")
 

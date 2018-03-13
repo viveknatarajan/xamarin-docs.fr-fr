@@ -7,11 +7,11 @@ ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 19e20015d1872cbaea21dd8b8e5431981e463c33
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 19e1ab4000e473aa773bf75015ff520a1f9a96d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---creating-an-application-using-the-elements-api"></a>Procédure pas à pas : création d’une application à l’aide de l’API d’éléments
 
@@ -19,7 +19,7 @@ _Cet article s’appuie sur les informations présentées dans l’Introduction 
 
 Dans cette procédure pas à pas, nous allons utiliser le MT. API d’éléments D pour créer un style maître / détail de l’application qui affiche une liste de tâches. Lorsque l’utilisateur sélectionne le <span class="ui"> + </span> bouton dans la barre de navigation, une nouvelle ligne est ajoutée à la table de la tâche. En sélectionnant la ligne permet d’accéder à l’écran de détails qui nous permet de mettre à jour la description de la tâche et la date d’échéance, comme illustré ci-dessous :
 
- [ ![](elements-api-walkthrough-images/01-task-list-app.png "En sélectionnant la ligne pour accéder à l’écran de détails qui nous permet de mettre à jour la description de la tâche et la date d’échéance")](elements-api-walkthrough-images/01-task-list-app.png)
+ [![](elements-api-walkthrough-images/01-task-list-app.png "En sélectionnant la ligne pour accéder à l’écran de détails qui nous permet de mettre à jour la description de la tâche et la date d’échéance")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
  <a name="Elements_API_Walkthrough" />
 
@@ -72,7 +72,7 @@ public override bool FinishedLaunching (UIApplication app,
 
 Le code ci-dessus crée une instance d’un `RootElement` et la passe le `DialogViewController`. Le `DialogViewController` a toujours un `RootElement` en haut de sa hiérarchie. Dans cet exemple, le `RootElement` est créée avec la chaîne « Liste des tâches, » qui sert de titre dans la barre de navigation du contrôleur de navigation. À ce stade, l’application en cours d’exécution présente l’écran ci-dessous :
 
- [ ![](elements-api-walkthrough-images/02-to-do-list-screen-.png "Exécution de l’application présente l’écran illustré ici")](elements-api-walkthrough-images/02-to-do-list-screen-.png)
+ [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "Exécution de l’application présente l’écran illustré ici")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
 
 Nous allons voir comment utiliser la structure hiérarchique de MonoTouch.Dialog de `Sections` et `Elements` pour ajouter plusieurs écrans.
 
@@ -148,11 +148,11 @@ Nous avons utilisé un `RootElement` afin que MonoTouch.Dialog serait automatiqu
 
 L’écran de détails de tâche elle-même se compose de deux sections. chacune de ces sections contient un élément unique. Le premier élément est créé à partir une `EntryElement` pour fournir une ligne modifiable pour la tâche `Description` propriété. Lorsque l’élément est sélectionné, un clavier pour modifier le texte est présenté comme indiqué ci-dessous :
 
- [ ![](elements-api-walkthrough-images/03-create-task.png "Lorsque l’élément est sélectionné, un clavier pour modifier le texte est présenté comme")](elements-api-walkthrough-images/03-create-task.png)
+ [![](elements-api-walkthrough-images/03-create-task.png "Lorsque l’élément est sélectionné, un clavier pour modifier le texte est présenté comme")](elements-api-walkthrough-images/03-create-task.png#lightbox)
 
 La deuxième section contient un `DateElement` qui nous permet de gérer de la tâche `DueDate` propriété. Sélection de la date de charge automatiquement un sélecteur de dates comme indiqué :
 
- [ ![](elements-api-walkthrough-images/04-date-picker.png "Sélection de la date de charge automatiquement un sélecteur de dates en tant que")](elements-api-walkthrough-images/04-date-picker.png)
+ [![](elements-api-walkthrough-images/04-date-picker.png "Sélection de la date de charge automatiquement un sélecteur de dates en tant que")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
 
 À la fois dans le `EntryElement` et `DateElement` cas (ou pour tout élément d’entrée de données dans MonoTouch.Dialog), les modifications apportées aux valeurs sont automatiquement conservées. Nous pouvons illustrer cela en modifiant la date et de puis d’y accéder dans les deux sens entre l’écran de la racine et divers détails de la tâche, où les valeurs dans les écrans de détails sont conservées.
 

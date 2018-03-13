@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a3090873569db2466db9ab25cc105ea59401df3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Lignes et les extrémités de trait
 
@@ -92,7 +92,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Pour chaque membre de la `SKStrokeCap` énumération, le gestionnaire dessine deux lignes, une avec une épaisseur de trait de 50 pixels et une autre ligne positionné en haut, avec une épaisseur de trait de 2 pixels. Cette deuxième ligne est destinée à illustrer début géométrique et fin de la ligne indépendante de l’épaisseur du trait et une extrémité de trait :
 
-[![](lines-images/strokecaps-small.png "Capture d’écran de triple de la page des extrémités de trait")](lines-images/strokecaps-large.png "Triple capture d’écran de la page des extrémités de trait")
+[![](lines-images/strokecaps-small.png "Capture d’écran de triple de la page des extrémités de trait")](lines-images/strokecaps-large.png#lightbox "Triple capture d’écran de la page des extrémités de trait")
 
 Comme vous pouvez le voir, la `Square` et `Round` extrémités de trait développer de manière efficace la longueur de la ligne à la moitié l’épaisseur du trait au début de la ligne et de nouveau à la fin. Cette extension est importante lorsqu’il est nécessaire de déterminer les dimensions d’un objet rendu graphique.
 
@@ -230,7 +230,7 @@ T GetPickerItem<T>(Picker picker)
 
 La capture d’écran affiche diverses `Picker` sélections sur les plateformes de trois :
 
-[![](lines-images/multiplelines-small.png "Capture d’écran de triple de la page de plusieurs lignes")](lines-images/multiplelines-large.png "Triple capture d’écran de la page de plusieurs lignes")
+[![](lines-images/multiplelines-small.png "Capture d’écran de triple de la page de plusieurs lignes")](lines-images/multiplelines-large.png#lightbox "Triple capture d’écran de la page de plusieurs lignes")
 
 IPhone à gauche montre comment la `SKPointMode.Points` entraîne de membre de l’énumération `DrawPoints` pour chacun des points de restituer le `SKPoint` tableau sous la forme d’un carré si embout de ligne est `Butt` ou `Square`. Cercles sont rendus si embout de ligne est `Round`.
 

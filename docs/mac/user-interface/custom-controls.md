@@ -3,16 +3,16 @@ title: "Création de contrôles personnalisés"
 description: "Cet article décrit comment créer des contrôles personnalisés et les utiliser dans le constructeur d’Interface."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f3d6301bc2c0237a268669fff437801bfb2657d1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ea88810384dfe8b1a08080953db19caddf25d6a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-custom-controls"></a>Création de contrôles personnalisés
 
@@ -22,7 +22,7 @@ Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous a
 
 Alors que macOS fournit une multitude de contrôles utilisateur intégrés, il peut arriver que vous devez créer un contrôle personnalisé pour fournir la fonctionnalité ne fournie pas out of box ou pour correspondre à un thème personnalisé de l’interface utilisateur (par exemple, une interface de jeu).
 
-[ ![](custom-controls-images/intro01.png "Exemple d’un contrôle d’interface utilisateur personnalisé")](custom-controls-images/intro01.png)
+[![](custom-controls-images/intro01.png "Exemple d’un contrôle d’interface utilisateur personnalisé")](custom-controls-images/intro01.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de la création d’un contrôle d’Interface utilisateur personnalisés réutilisables dans une application Xamarin.Mac. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -50,7 +50,7 @@ Dans cet article a, créer un composant personnalisé de retourner un commutateu
 
 Dans Visual Studio pour Mac, ouvrez le projet Xamarin.Mac que vous souhaitez créer un contrôle d’Interface utilisateur personnalisée pour (ou créez-en un). Ajoutez une nouvelle classe et l’appeler `NSFlipSwitch`:
 
-[ ![](custom-controls-images/custom01.png "Ajout d’une nouvelle classe")](custom-controls-images/custom01.png)
+[![](custom-controls-images/custom01.png "Ajout d’une nouvelle classe")](custom-controls-images/custom01.png#lightbox)
 
 Modifiez ensuite la `NSFlipSwitch.cs` classe et qu’elle ressemble à ce qui suit :
 
@@ -336,19 +336,19 @@ Grâce au contrôle personnalisé entièrement défini, nous pouvons ajouter il 
 
 Pour ajouter le contrôle à l’aide du constructeur d’Interface, commencez par effectuer un nettoyage de build du projet Xamarin.Mac, puis double-cliquez sur le `Main.storyboard` fichier pour l’ouvrir dans l’Interface générateur pour les modifier :
 
-[ ![](custom-controls-images/custom02.png "Modification du plan conceptuel dans Xcode")](custom-controls-images/custom02.png)
+[![](custom-controls-images/custom02.png "Modification du plan conceptuel dans Xcode")](custom-controls-images/custom02.png#lightbox)
 
 Ensuite, faites glisser un `Custom View` dans la conception de l’Interface utilisateur :
 
-[ ![](custom-controls-images/custom03.png "Sélection d’un affichage personnalisé à partir de la bibliothèque")](custom-controls-images/custom03.png)
+[![](custom-controls-images/custom03.png "Sélection d’un affichage personnalisé à partir de la bibliothèque")](custom-controls-images/custom03.png#lightbox)
 
 Avec la vue personnalisée étant toujours sélectionnée, basculez vers le **inspecteur d’identité** et modifier la vue **classe** à `NSFlipSwitch`:
 
-[ ![](custom-controls-images/custom04.png "Définition de la classe de vue")](custom-controls-images/custom04.png)
+[![](custom-controls-images/custom04.png "Définition de la classe de vue")](custom-controls-images/custom04.png#lightbox)
 
 Basculez vers le **Assistant éditeur** et créer un **prise** pour le contrôle personnalisé (en veillant à lier dans le `ViewControler.h` fichier et non le `.m` fichier) :
 
-[ ![](custom-controls-images/custom05.png "Configuration d’un nouveau magasin")](custom-controls-images/custom05.png)
+[![](custom-controls-images/custom05.png "Configuration d’un nouveau magasin")](custom-controls-images/custom05.png#lightbox)
 
 Enregistrer vos modifications, revenez à Visual Studio pour Mac et autoriser les modifications à synchroniser. Modifier la `ViewController.cs` et effectuez le `ViewDidLoad` détaillée de la méthode comme suit :
 
@@ -369,7 +369,7 @@ Ici, nous répondre à la `ValueChanged` événement nous définis ci-dessus sur
 
 Si vous le souhaitez, nous pouvons retourner à l’Interface générateur et définir un **Action** sur le contrôle :
 
-[ ![](custom-controls-images/custom06.png "Configuration d’une nouvelle Action")](custom-controls-images/custom06.png)
+[![](custom-controls-images/custom06.png "Configuration d’une nouvelle Action")](custom-controls-images/custom06.png#lightbox)
 
 Là encore, modifier le `ViewController.cs` et ajoutez la méthode suivante :
 
@@ -394,5 +394,5 @@ Cet article a pris une présentation détaillée de la création d’un contrôl
 - [MacCustomControl (exemple)](https://developer.xamarin.com/samples/mac/MacCustomControl/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Liaison de données et codage de clé-valeur](~/mac/app-fundamentals/databinding.md)
-- [Indications de l’Interface du système d’exploitation X humaines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [La gestion des événements de souris](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/EventOverview/HandlingMouseEvents/HandlingMouseEvents.html)

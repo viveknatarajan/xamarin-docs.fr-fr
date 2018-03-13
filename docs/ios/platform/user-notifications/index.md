@@ -3,16 +3,16 @@ title: Infrastructure de Notifications utilisateur
 description: "Cet article couvre toutes les méthodes que la Notification des utilisateurs ont été améliorée par iOS 10 et comment les utiliser dans une application Xamarin.iOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/01/2016
-ms.openlocfilehash: 473f9b4d4fa2a034c7f39ce309fb3f921d809a10
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ab0a4add92db21c352dbaeadc71a3ff1e3d0cf9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="user-notifications-framework"></a>Infrastructure de Notifications utilisateur
 

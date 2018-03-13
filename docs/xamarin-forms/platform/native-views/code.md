@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 55864073aecb48176d650da6edefad24c3248767
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0c4014ecda0501e9309a17901c439444e4b48e86
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-views-in-c"></a>Vues natives en c#
 
@@ -24,7 +24,7 @@ N’importe quel contrôle Xamarin.Forms qui permet de `Content` pour être déf
 
 Les captures d’écran suivantes illustrent spécifique à la plateforme vues ayant été ajouté à un Xamarin.Forms [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 
-[![](code-images/screenshots-sml.png "StackLayout contenant des affichages spécifiques à la plateforme")](code-images/screenshots.png "StackLayout contenant des affichages spécifiques à la plateforme")
+[![](code-images/screenshots-sml.png "StackLayout contenant des affichages spécifiques à la plateforme")](code-images/screenshots.png#lightbox "StackLayout contenant des affichages spécifiques à la plateforme")
 
 La possibilité d’ajouter des affichages spécifiques à la plateforme à une présentation de Xamarin.Forms est activée par les deux méthodes d’extension sur chaque plateforme :
 
@@ -64,7 +64,7 @@ L’exemple part du principe que la `stackLayout` et `contentView` instances pr�
 L’exemple de code suivant montre comment ajouter un `TextView` à un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) et un [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
 
 ```csharp
-var textView = new TextView (Forms.Context) { Text = originalText, TextSize = 14 };
+var textView = new TextView (MainActivity.Instance) { Text = originalText, TextSize = 14 };
 stackLayout.Children.Add (textView);
 contentView.Content = textView.ToView();
 ```
@@ -188,7 +188,7 @@ public class CustomControl : TextView
 Une instance de cette vue est ajoutée à un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), comme illustré dans l’exemple de code suivant :
 
 ```csharp
-var customControl = new CustomControl (Forms.Context) {
+var customControl = new CustomControl (MainActivity.Instance) {
   Text = "This control has incorrect sizing - it doesn't occupy the available width of the device.",
   TextSize = 14
 };

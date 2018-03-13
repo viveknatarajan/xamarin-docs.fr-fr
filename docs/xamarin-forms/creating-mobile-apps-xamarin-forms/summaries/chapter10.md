@@ -3,14 +3,15 @@ title: "Résumé du chapitre 10. Extensions de balisage XAML"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 8ded1dba0e1d4d1a9062d0f75935b3d748a83370
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e9f630fbfc9f7a1d6346b6dd8308504a6806e1a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Résumé du chapitre 10. Extensions de balisage XAML
 
@@ -36,7 +37,7 @@ Ces quatre extensions de balisage XAML sont prises en charge par de nombreuses i
 
 - `StaticResource` Prise en charge par [`StaticResourceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticResourceExtension/)
 - `DynamicResource` Prise en charge par [`DynamicResourceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.DynamicResourceExtension/)
-- `Binding` prise en charge par [ `BindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) &mdash;abordés dans [chapitre 16. liaison de données](#chapter16)
+- `Binding` prise en charge par [ `BindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) &mdash;abordés dans [chapitre 16. Liaison de données](#chapter16)
 - `TemplateBinding` prise en charge par [ `TemplateBindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.TemplateBindingExtension/) &mdash;non traitées dans l’annuaire
 
 Une extension de balisage XAML supplémentaire est incluse dans Xamarin.Forms par [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/):
@@ -57,7 +58,7 @@ Le `VisualElement` classe définit une propriété nommée [ `Resources` ](https
 
 Dans la plupart des cas, vous utiliserez le [ `StaticResource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticResourceExtension/) extension de balisage pour faire référence à un élément du dictionnaire de ressources, comme illustré dans le [ **ResourceSharing** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceSharing) exemple . Vous pouvez utiliser un `StaticResourceExtension` élément ou `StaticResource` entre accolades :
 
-[![Capture d’écran de triple de partage des ressources](images/ch10fg03-small.png "partage des ressources")](images/ch10fg03-large.png "partage des ressources")
+[![Capture d’écran de triple de partage des ressources](images/ch10fg03-small.png "partage des ressources")](images/ch10fg03-large.png#lightbox "partage des ressources")
 
 Ne confondez pas la `x:Static` extension de balisage et le `StaticResource` extension de balisage.
 

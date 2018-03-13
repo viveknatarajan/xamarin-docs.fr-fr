@@ -7,11 +7,11 @@ ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4dde338a7c289f228f877fa4d968d156a941ba16
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-localization"></a>Utilisation de la localisation
 
@@ -67,7 +67,7 @@ Le projet d’application espion ressemble à ceci une fois ces modifications on
 
 Lorsque vous modifiez le plan conceptuel, sélectionnez chaque élément et l’avis de le **ID de localisation** qui s’affiche dans le **propriétés** remplissage :
 
-  [ ![](localization-images/storyboard-sml.png "L’ID de localisation qui s’affiche dans la zone de propriétés")](localization-images/storyboard.png)
+  [![](localization-images/storyboard-sml.png "L’ID de localisation qui s’affiche dans la zone de propriétés")](localization-images/storyboard.png#lightbox)
 
 Dans le **Base.lproj** dossier, créez des paires clé-valeur comme indiqué ci-dessous, où la clé est formée par la **ID de localisation** et un nom de propriété sur le contrôle, jointe à un point (`.`).
 

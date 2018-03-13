@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 523d79adbc5d4f88d4a2670b6422a58fb9256ab2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e40fd215d23e7da6f1356bba17fac84ce91007ae
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="polylines-and-parametric-equations"></a>Polylignes et équations paramétriques
 
@@ -109,7 +109,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Le résultat est également appelé un *spirale arithmétique* , car le décalage entre chaque boucle est constant :
 
-[![](polylines-images/archimedeanspiral-small.png "Capture d’écran de triple de la page Archimède spirale")](polylines-images/archimedeanspiral-large.png "Triple capture d’écran de la page Archimède spirale")
+[![](polylines-images/archimedeanspiral-small.png "Capture d’écran de triple de la page Archimède spirale")](polylines-images/archimedeanspiral-large.png#lightbox "Triple capture d’écran de la page Archimède spirale")
 
 Notez que la `SKPath` est créé dans un `using` bloc. Cela `SKPath` consomme plus de mémoire que le `SKPath` objets dans les programmes précédentes, ce qui suggère qu’un `using` bloc est la plus approprié supprimer les ressources non managées.
 

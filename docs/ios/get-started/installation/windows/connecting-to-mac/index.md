@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d0234cad243e523716d95f467e3fe44c50a182d5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c60927593f062c8ac9694d889ffbf581c09bab82
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="connecting-to-the-mac"></a>Connexion au Mac
 
@@ -36,7 +36,7 @@ La connexion au Mac se compose de plusieurs processus correspondant aux différe
 
 Le diagramme ci-dessous présente une vue d’ensemble du workflow de développement Xamarin.iOS :
 
-[![Workflow de développement iOS](images/xma2.png)](images/xma2.png)
+[![Workflow de développement iOS](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
 >  En fait, Visual Studio lance un processus MSBuild distinct pour générer les projets. Ce processus crée une autre connexion au Mac, ce qui signifie qu’il existe en fait deux connexions SSH de Windows vers Mac quand Visual Studio effectue la génération. La génération à partir de la [ligne de commande](#commandline) crée uniquement le processus MSBuild. Pour simplifier ce diagramme, toutes les connexions sont simplement représentées par une seule flèche.
@@ -70,11 +70,11 @@ Pour configurer l’hôte Mac, vous devez activer la communication entre l’ext
 
 1. Ouvrez *Spotlight* (**⌘-Espace**), recherchez *Session à distance*, puis sélectionnez le résultat *Partage*. Les *Préférences Système* s’affichent dans le panneau *Partage* :
 
-   [![Recherche Spotlight pour la session à distance](images/spotlight.png)](images/spotlight.png)
+   [![Recherche Spotlight pour la session à distance](images/spotlight.png)](images/spotlight.png#lightbox)
 
 2. Cochez l’option *Session à distance* dans la liste *Service* à gauche pour permettre à Xamarin pour Visual Studio de se connecter au Mac :
 
-   [![Cocher l’option Session à distance dans la liste Service](images/sharing.png)](images/sharing.png)
+   [![Cocher l’option Session à distance dans la liste Service](images/sharing.png)](images/sharing.png#lightbox)
 
 3. Vérifiez que l’option *Session à distance* est définie pour autoriser l’accès pour *Tous les utilisateurs*, ou que votre nom d’utilisateur ou groupe Mac figure dans la liste des utilisateurs autorisés affichée à droite.
 
@@ -94,21 +94,21 @@ Il existe deux façons de se connecter à l’hôte de build Mac :
 
 Dans la barre d’outils iOS :
 
-[![La barre d’outils iOS](images/image1.png)](images/image1.png)
+[![La barre d’outils iOS](images/image1.png)](images/image1.png#lightbox)
 
 Ou en accédant à **Outils > Options** dans Visual Studio, en sélectionnant **Xamarin > Paramètres iOS**, puis en cliquant sur le bouton **Rechercher Mac Agent Xamarin** :
 
-[![Rechercher Mac Agent Xamarin](images/image2.png)](images/image2.png)
+[![Rechercher Mac Agent Xamarin](images/image2.png)](images/image2.png#lightbox)
 
 Quel que soit le mode de navigation utilisé, la boîte de dialogue **Mac Agent**, illustrée ci-dessous, s’affiche :
 
-[![La boîte de dialogue Mac Agent](images/image3.png)](images/image3.png)
+[![La boîte de dialogue Mac Agent](images/image3.png)](images/image3.png#lightbox)
 
 La liste alors affichée contient tous les ordinateurs qui ont déjà été connectés et qui sont stockés comme ordinateurs connus, ou bien ceux qui sont disponibles pour la *session à distance*.
 
 Sélectionnez un Mac en double-cliquant dessus pour vous y connecter. La première fois que vous vous connectez à un Mac, vous êtes invité à entrer vos informations d’identification d’utilisateur Mac pour autoriser la session à distance :
 
-[![Entrer les informations d’identification d’utilisateur Mac](images/image4.png)](images/image4.png)
+[![Entrer les informations d’identification d’utilisateur Mac](images/image4.png)](images/image4.png#lightbox)
 
 L’agent utilise ces informations d’identification pour créer une connexion SSH au Mac. En cas de réussite, une clé SSH est créée et est [inscrite](#commandline) dans le fichier `authorized_keys` sur ce Mac. Lors des connexions suivantes, l’agent utilise le nom d’utilisateur et le fichier de clé pour se connecter à l’hôte de build connu le plus récemment connecté.
 
@@ -119,13 +119,13 @@ L’agent utilise ces informations d’identification pour créer une connexion 
 
 Quand une connexion a été établie avec succès, elle s’affiche dans la boîte de dialogue Sélection de l’hôte avec une icône de **connexion établie** en regard de celle-ci, comme illustré ci-dessous :
 
-[![La boîte de dialogue Sélection de l’hôte avec une icône de connexion établie](images/image6.png)](images/image6.png)
+[![La boîte de dialogue Sélection de l’hôte avec une icône de connexion établie](images/image6.png)](images/image6.png#lightbox)
 
 Il ne peut y avoir qu’un seul Mac connecté à la fois.
 
 Chaque ordinateur de la liste, connecté ou non, affiche un menu contextuel quand vous cliquez dessus avec le bouton droit, vous permettant de vous **Connecter**, de vous **Déconnecter** ou d’**Oublier ce Mac** en fonction des besoins :
 
-[![Les menus contextuels Connecter, Déconnecter ou Oublier ce Mac](images/image7.png)](images/image7.png)
+[![Les menus contextuels Connecter, Déconnecter ou Oublier ce Mac](images/image7.png)](images/image7.png#lightbox)
 
 Si vous choisissez **Oublier ce Mac**, vous devrez entrer à nouveau vos informations d’identification pour vous y reconnecter.
 
@@ -137,23 +137,23 @@ Dans certaines circonstances, vous souhaiterez peut-être ajouter manuellement u
 
 1. Recherchez l’adresse IP de votre Mac en accédant à **Préférences Système > Partage > Session à distance** sur votre Mac :
 
-   [![L’adresse IP du Mac dans les préférences système](images/image8.png)](images/image8.png)
+   [![L’adresse IP du Mac dans les préférences système](images/image8.png)](images/image8.png#lightbox)
 
    Si vous préférez utiliser la ligne de commande, vous trouverez votre adresse IP en entrant `ipconfig getifaddr en0` dans Terminal. (Notez qu’en fonction du type de connexion, la variable peut être `en1`, `en2`, etc.) :
 
-   [![L’adresse IP dans l’application Terminal](images/image9.png)](images/image9.png)
+   [![L’adresse IP dans l’application Terminal](images/image9.png)](images/image9.png#lightbox)
 
 2. Retournez dans Visual Studio, puis dans la boîte de dialogue Sélection de l’hôte, sélectionnez **Ajouter un Mac...** :
 
-   [![La boîte de dialogue Sélection de l’hôte](images/image10.png)](images/image10.png)
+   [![La boîte de dialogue Sélection de l’hôte](images/image10.png)](images/image10.png#lightbox)
 
 3. Entrez l’adresse IP de votre Mac dans la boîte de dialogue Ajouter un Mac, puis cliquez sur **Ajouter** :
 
-   [![Entrer l’adresse IP du Mac dans la boîte de dialogue Ajouter un Mac](images/image11.png)](images/image11.png)
+   [![Entrer l’adresse IP du Mac dans la boîte de dialogue Ajouter un Mac](images/image11.png)](images/image11.png#lightbox)
 
 4. Enfin, entrez le nom d’utilisateur (et non pas le nom complet) de votre compte administrateur Mac et le mot de passe correspondant :
 
-   [![Entrer le nom d’utilisateur et le mot de passe](images/image12.png)](images/image12.png)
+   [![Entrer le nom d’utilisateur et le mot de passe](images/image12.png)](images/image12.png#lightbox)
 
 Une fois que vous cliquez sur **Connexion**, Visual Studio se connecte à l’ordinateur Mac à l’aide de SSH et ajoute ce Mac comme ordinateur connu.
 

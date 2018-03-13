@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0f270111ad4e10f035a3cb695564d789f40097fd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-android-manifest"></a>Utilisation avec le manifeste Android
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -24,7 +23,6 @@ ms.lasthandoff: 02/27/2018
 **AndroidManifest.xml** est généré dans le processus de génération et le code XML trouvé dans **Properties/AndroidManifest.xml** est fusionné avec le code XML qui est généré à partir des attributs personnalisés. Résultant fusionnée **AndroidManifest.xml** réside dans le **obj** sous-répertoire ; par exemple, il se situe à **obj/Debug/android/AndroidManifest.xml** pour les versions Debug . Le processus de fusion est simple : il utilise des attributs personnalisés dans le code pour générer des éléments XML, et *insère* ces éléments en **AndroidManifest.xml**. 
 
 
-<a name="The_Basics" />
 
 ## <a name="the-basics"></a>Principes de base
 
@@ -60,7 +58,6 @@ Cet exemple montre le fragment xml suivant à ajouter à **AndroidManifest.xml**
 Le `[Activity]` attribut n’a aucun effet `abstract` types ; `abstract` types sont ignorés.
 
 
-<a name="Activity_Name" />
 
 ### <a name="activity-name"></a>Nom de l'activité
 
@@ -83,7 +80,6 @@ Cet exemple génère le fragment xml suivant :
 
 *Remarque*: vous devez utiliser le `Name` propriété uniquement pour des raisons de compatibilité descendante, changement de nom en tant que tel peut ralentir la recherche de type lors de l’exécution. Si vous avez du code hérité qui attend que le nom de type par défaut de l’activité doit être basé sur l’espace de noms minuscule et le nom de classe, consultez [Android Callable Wrapper d’affectation de noms](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) pour obtenir des conseils sur la gestion de compatibilité. 
 
-<a name="Activity_Title_Bar" />
 
 ### <a name="activity-title-bar"></a>Barre de titre d’activité
 
@@ -104,7 +100,6 @@ Cet exemple génère le fragment xml suivant :
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-<a name="Launchable_from_Application_Chooser" />
 
 ### <a name="launchable-from-application-chooser"></a>Accessible à partir du sélecteur de l’Application
 
@@ -130,7 +125,6 @@ Cet exemple génère le fragment xml suivant :
 ```
 
 
-<a name="Activity_Icon" />
 
 ### <a name="activity-icon"></a>Icône d’activité
 
@@ -155,7 +149,6 @@ Cet exemple génère le fragment xml suivant :
 </activity>
 ```
 
-<a name="Permissions" />
 
 ### <a name="permissions"></a>Autorisations
 
@@ -178,11 +171,9 @@ Dans la version build version du manifeste (à **obj/Debug/android/AndroidManife
 
 
 
-<a name="Advanced_Features" />
 
 ## <a name="advanced-features"></a>Fonctionnalités avancées
 
-<a name="Intent_Actions_and_Features" />
 
 ### <a name="intent-actions-and-features"></a>Fonctions et Actions intentionnels
 
@@ -214,7 +205,6 @@ Cet exemple génère le fragment xml suivant :
 </activity>
 ```
 
-<a name="Application_Element" />
 
 ### <a name="application-element"></a>Élément d’application
 
@@ -243,7 +233,6 @@ Le `Application` élément n’est pas la seule façon de configurer `<applicati
 Il existe de nombreux attributs de l’application que vous pouvez configurer dans le `<application>` élément ; pour plus d’informations sur ces paramètres, consultez le [propriétés publiques](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/#Public_Properties) section de [ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/). 
 
 
-<a name="List_of_Custom_Attributes" />
 
 ## <a name="list-of-custom-attributes"></a>Liste d’attributs personnalisés
 

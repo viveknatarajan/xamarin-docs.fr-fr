@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c0cfe437b03a1f0dea05a506b1dfce62a4658bb4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e96e98f90c7f4c849a9f679b2de819ccaabfec0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-distribution-overview"></a>Vue d’ensemble de la distribution d’applications
 
@@ -22,7 +22,7 @@ _Ce document donne une vue d’ensemble des techniques de distribution qui sont 
 Une fois que votre application Xamarin.tvOS a été développée, l’étape suivante du cycle de vie de développement logiciel est à distribuer votre application aux utilisateurs, comme indiqué dans la section en surbrillance le schéma ci-dessous :
 
 
-[![La vue d’ensemble du cycle de vie de développement logiciel](images/publishingdiagram.png)](images/publishingdiagram.png)
+[![La vue d’ensemble du cycle de vie de développement logiciel](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
 
 Apple fournit les méthodes suivantes pour distribuer une application de tvOS, qui sont pris en charge par Xamarin.tvOS :
@@ -70,7 +70,7 @@ Parfois appelée *Distribution d’entreprise*, la distribution en interne perme
 
 Pour plus d’informations sur l’obtention de la configuration et la distribution de votre application en interne, reportez-vous à la [guide de Distribution interne](~/ios/deploy-test/app-distribution/in-house-distribution.md). Ce document est spécifique à iOS, mais les mêmes techniques sont utilisés pour les applications de tvOS.
 
-<a name="Ad-Hoc-Distribution" />
+<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Distribution ad hoc
 

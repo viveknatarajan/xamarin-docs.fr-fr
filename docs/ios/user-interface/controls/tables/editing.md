@@ -7,30 +7,22 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ea4489cd6f9839d5d32c97aa7ded41e4f15538a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eb8bae676a4b5c682cdb204c6d38ffc1112b483a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing"></a>Modification
 
 Les fonctionnalités de modification de table sont activées par substitution de méthodes dans un `UITableViewSource` sous-classe. Le comportement d’édition la plus simple est le mouvement de balayage à supprimer peut être implémenté avec une seule méthode de remplacement.
 Modification des plus complexes (y compris les lignes mobiles) peut faire avec la table en mode édition.
 
-Ce guide présente les éléments suivants :
-
-- [Effectuez un balayage à supprimer](#Swipe_to_Delete)
-- [Mode Édition](#Edit_Mode)
-- [Style de modification de ligne d’Insertion](#row_insertion_editing_style)
-
-<a name="Swipe_to_delete" />
-
 ## <a name="swipe-to-delete"></a>Effectuez un balayage à supprimer
 
 Le passage de supprimer la fonctionnalité est un mouvement naturel dans iOS que les utilisateurs s’attendent. 
 
- [ ![](editing-images/image10.png "Exemple de balayage à supprimer")](editing-images/image10.png)
+ [![](editing-images/image10.png "Exemple de balayage à supprimer")](editing-images/image10.png#lightbox)
 
 Il existe trois substitutions de méthode qui affectent le mouvement de balayage pour afficher un **supprimer** bouton dans une cellule :
 
@@ -68,14 +60,13 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 Pour cet exemple le `UITableViewSource` a été mis à jour pour utiliser un `List<TableItem>` (au lieu d’un tableau de chaînes) comme source de données, car il prend en charge Ajout et suppression d’éléments de la collection.
 
-<a name="Edit_mode" />
 
 ## <a name="edit-mode"></a>Mode Édition
 
 Lorsqu’une table est en mode édition l’utilisateur voit un widget rouge « stop » sur chaque ligne, ce qui permet de révéler un bouton Supprimer lors d’un contact. Le tableau affiche également une icône de « handle » pour indiquer que la ligne peut être déplacée pour modifier l’ordre.
 Le **TableEditMode** exemple implémente ces fonctionnalités, comme indiqué.
 
- [ ![](editing-images/image11.png "L’exemple TableEditMode implémente ces fonctionnalités, comme indiqué")](editing-images/image11.png)
+ [![](editing-images/image11.png "L’exemple TableEditMode implémente ces fonctionnalités, comme indiqué")](editing-images/image11.png#lightbox)
 
 Il existe de nombreuses méthodes différentes sur `UITableViewSource` qui affectent le comportement en mode de modification d’une table :
 
@@ -136,13 +127,12 @@ et lorsque l’utilisateur est terminé modification, le **fait** bouton doit d�
 table.SetEditing (false, true);
 ```
 
-<a name="Edit_mode_–_row_insertion_editing_style" />
 
 ## <a name="row-insertion-editing-style"></a>Style de modification de ligne d’Insertion
 
 Insertion de ligne à partir de la table est une interface utilisateur rare, l’exemple principal dans les applications iOS standard est la **modifier le Contact** écran. Cette capture d’écran illustre le fonctionne de la fonctionnalité d’insertion de ligne : en cours de modification supplémentaire des lignes que (clic) est le mode insère des lignes supplémentaires dans les données. Lorsque la modification est terminée, la fichier temporaire **(Ajouter)** ligne est supprimée.
 
- [ ![](editing-images/image12.png "Lors de la modification est terminée, la variable temporaire ajouter une nouvelle ligne est supprimée.")](editing-images/image12.png)
+ [![](editing-images/image12.png "Lors de la modification est terminée, la variable temporaire ajouter une nouvelle ligne est supprimée.")](editing-images/image12.png#lightbox)
 
 Il existe de nombreuses méthodes différentes sur `UITableViewSource` qui affectent le comportement en mode de modification d’une table. Ces méthodes ont été implémentées comme suit dans l’exemple de code :
 

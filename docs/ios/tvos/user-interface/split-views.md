@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8787913c04b11a84828cd98960407f0cc27aa391
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86a7690d4cf7291a4e44507a6250e3469c8f7ed2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-split-view-controllers"></a>Utilisation de l’affichage des contrôleurs de fractionnement
 
@@ -21,7 +21,7 @@ _Cet article décrit la conception et l’utilisation de contrôleurs d’affich
 
 Un contrôleur d’affichage fractionné présente et gère un maître et détail-View-Controller-côte, à l’écran en même temps. Affichage des contrôleurs de fractionnement utilisés pour présenter le contenu persistant, peut être actif dans la vue principale (la plus petite section sur la gauche) et liés détails dans la vue de détail (la section supérieure droite).
 
-[ ![](split-views-images/intro01.png "Exemple de fractionnement")](split-views-images/intro01.png)
+[![](split-views-images/intro01.png "Exemple de fractionnement")](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers" />
 
@@ -31,7 +31,7 @@ Comme indiqué ci-dessus, un fractionnement View Controller gère un maître et 
 
 En outre, le peut Master-View-Controller été masquée ou affichée selon les besoins : 
 
-[ ![](split-views-images/intro02.png "Le contrôleur de vue masqué")](split-views-images/intro02.png)
+[![](split-views-images/intro02.png "Le contrôleur de vue masqué")](split-views-images/intro02.png#lightbox)
 
 Fractionnement des vues contrôleurs sont utilisent souvent pour présenter une liste du contenu filtrable, avec les catégories dans la vue principale et les résultats filtrés dans la vue détaillée. Cela est généralement présenté comme une vue de Table sur la gauche et un [vue de Collection](~/ios/tvos/user-interface/collection-views.md) sur la droite.
 
@@ -54,18 +54,18 @@ Pour travailler avec les contrôleurs d’affichage fractionné dans une applica
 1. Dans le **Solution remplissage**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **affichage des contrôleurs de fractionnement** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](split-views-images/activity01.png "Un contrôleur d’affichage fractionné")](split-views-images/activity01.png)
+    [![](split-views-images/activity01.png "Un contrôleur d’affichage fractionné")](split-views-images/activity01.png#lightbox)
 1. Par défaut, le concepteur iOS installera un contrôleur de Navigation et un contrôleur de la vue dans la vue principale. Si cela ne tient pas les exigences de votre application, simplement les supprimer.
 1. Si vous ne supprimez pas la valeur par défaut le mode Masque, faites glisser un nouveau contrôleur de la vue sur l’aire de conception : 
 
-    [ ![](split-views-images/activity02.png "Un contrôleur de vue")](split-views-images/activity02.png)
+    [![](split-views-images/activity02.png "Un contrôleur de vue")](split-views-images/activity02.png#lightbox)
 1. La touche CTRL enfoncée et faites glisser à partir du contrôleur de mode de fractionnement vers le nouveau contrôleur de la vue principale. 
 1. Sélectionnez **Master** à partir de la **Menu contextuel**: 
 
-    [ ![](split-views-images/activity03.png "Sélectionnez maître dans le Menu contextuel")](split-views-images/activity03.png)
+    [![](split-views-images/activity03.png "Sélectionnez maître dans le Menu contextuel")](split-views-images/activity03.png#lightbox)
 1. Le contenu de votre principale et les vues de détail de la conception : 
 
-    [ ![](split-views-images/activity04.png "Exemple de disposition")](split-views-images/activity04.png)
+    [![](split-views-images/activity04.png "Exemple de disposition")](split-views-images/activity04.png#lightbox)
 1. Affecter **noms** dans les **onglet Widget** de la **propriétés remplissage** pour travailler avec les contrôles d’IU dans le code c#.
 1. Enregistrer vos modifications et revenir à Visual Studio pour Mac.
 
@@ -74,18 +74,18 @@ Pour travailler avec les contrôleurs d’affichage fractionné dans une applica
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **affichage des contrôleurs de fractionnement** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](split-views-images/activity01-vs.png "Un contrôleur d’affichage fractionné")](split-views-images/activity01-vs.png)
+    [![](split-views-images/activity01-vs.png "Un contrôleur d’affichage fractionné")](split-views-images/activity01-vs.png#lightbox)
 1. Par défaut, le concepteur iOS ajoutera un contrôleur de Navigation et d’un contrôleur d’affichage dans la vue principale. Si cela ne tient pas les exigences de votre application, simplement les supprimer.
 1. Si vous ne supprimez pas la valeur par défaut le mode Masque, faites glisser un nouveau contrôleur de la vue sur l’aire de conception : 
 
-    [ ![](split-views-images/activity02-vs.png "Un contrôleur de vue")](split-views-images/activity02-vs.png)
+    [![](split-views-images/activity02-vs.png "Un contrôleur de vue")](split-views-images/activity02-vs.png#lightbox)
 1. La touche CTRL enfoncée et faites glisser à partir du contrôleur de mode de fractionnement vers le nouveau contrôleur de la vue principale. 
 1. Sélectionnez **Master** à partir de la **Menu contextuel**: 
 
-    [ ![](split-views-images/activity03-vs.png "Sélectionnez maître dans le Menu contextuel")](split-views-images/activity03-vs.png)
+    [![](split-views-images/activity03-vs.png "Sélectionnez maître dans le Menu contextuel")](split-views-images/activity03-vs.png#lightbox)
 1. Le contenu de votre principale et les vues de détail de la conception : 
 
-    [ ![](split-views-images/activity04.png "Disposition du contenu")](split-views-images/activity04.png)
+    [![](split-views-images/activity04.png "Disposition du contenu")](split-views-images/activity04.png#lightbox)
 1. Affecter **noms** dans les **onglet Widget** de la **l’Explorateur de propriétés** pour travailler avec les contrôles d’IU dans le code c#.
 1. Enregistrez les modifications apportées.
     

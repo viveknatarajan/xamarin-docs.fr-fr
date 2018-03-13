@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d0842a54f725e5a9504668f977ba06648a96ee6d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 209b301c44da9bbb52ad8bf7fe867811a9b7617f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-video-sources-to-the-player"></a>Liaison de sources vidéo du lecteur
 
@@ -72,7 +72,7 @@ namespace VideoPlayerDemos
 
 Lorsque le chargement de la page, aucun élément n’est sélectionné dans le `ListView`, donc vous devez sélectionner l’une pour la vidéo commencer la lecture :
 
-[![Sélectionnez la vidéo Web](source-bindings-images/selectwebvideo-small.png "sélectionnez vidéo Web")](source-bindings-images/selectwebvideo-large.png "sélectionnez vidéo sur le Web")
+[![Sélectionnez la vidéo Web](source-bindings-images/selectwebvideo-small.png "sélectionnez vidéo Web")](source-bindings-images/selectwebvideo-large.png#lightbox "sélectionnez vidéo sur le Web")
 
 Le `Source` propriété du `VideoPlayer` est soutenu par une propriété pouvant être liée, ce qui signifie qu’il peut être la cible d’une liaison de données. Cela est illustré par le **lier à VideoPlayer** page. Le balisage dans le **BindToVideoPlayer.xaml** fichier est pris en charge par la classe suivante qui encapsule un titre d’une vidéo et correspondante `VideoSource` objet :
 

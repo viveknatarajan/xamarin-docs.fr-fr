@@ -2,16 +2,16 @@
 title: Gestion des comptes Apple
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
+ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: 0cf7456cec2e934516e15ac6cbc57109e6b57a79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 465ba4822a1004100160703f1607d99199f28a16
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="apple-account-management"></a>Gestion des comptes Apple
 
@@ -44,7 +44,7 @@ Vous devez disposer d’un compte Apple Developer pour utiliser cette fonctionna
 - Assurez-vous d’avoir les tout derniers outils fastlane de [https://download.fastlane.tools](https://download.fastlane.tools).
 - Avant de commencer, assurez-vous d’accepter des contrats de licence utilisateur dans le [portail des développeurs](https://developer.apple.com/account/).
 
-# <a name="adding-an-apple-developer-account"></a>Ajout d’un compte de développeur Apple
+## <a name="adding-an-apple-developer-account"></a>Ajout d’un compte de développeur Apple
 
 1. Pour ouvrir la boîte de dialogue de gestion de compte atteindre **Visual Studio > Préférences > compte de développeur Apple**:
 
@@ -68,8 +68,11 @@ Vous devez disposer d’un compte Apple Developer pour utiliser cette fonctionna
 
     ![](apple-account-management-images/image6.png)
 
-<a name="managing">
+
+<a name="managing"/>
     
+
+
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>La gestion des identités de signature et profils de configuration
 
 La boîte de dialogue Détails de l’équipe affiche une liste des identités de signature, organisées par type. Le **état** colonne vous indique si le certificat est : 
@@ -84,7 +87,7 @@ La boîte de dialogue Détails de l’équipe affiche une liste des identités d
 
   ![](apple-account-management-images/image7.png)
 
-### <a name="create-a-signing-identities"></a>Créer une identité de signature
+## <a name="create-a-signing-identities"></a>Créer une identité de signature
 
 Pour créer une nouvelle identité de signature, sélectionnez le **créer un nouveau certificat** bouton de liste déroulante et sélectionnez le type dont vous avez besoin. Si vous avez les autorisations appropriées pour une signature nouvelle identité s’affiche après quelques secondes.
 
@@ -92,7 +95,7 @@ Si une option dans la liste déroulante est grisée et désactivée, comme illus
 
 ![](apple-account-management-images/image8.png)
 
-### <a name="download-provisioning-profiles"></a>Télécharger des profils de configuration
+## <a name="download-provisioning-profiles"></a>Télécharger des profils de configuration
 
 La boîte de dialogue Détails de l’équipe affiche également une liste de tous les profils de configuration connecté à votre compte de développeur. Vous pouvez télécharger tous les profils de configuration sur votre ordinateur local en appuyant sur la **télécharger tous les profils** bouton
 
@@ -102,29 +105,28 @@ La boîte de dialogue Détails de l’équipe affiche également une liste de to
 
 Pour plus d’informations sur le déploiement de votre application sur un périphérique, reportez-vous à la [vos appareils](~/ios/get-started/installation/device-provisioning/index.md) guide.
 
-
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-#### <a name="view-details-dialog-is-empty"></a>Boîte de dialogue Vue détails est vide
+### <a name="view-details-dialog-is-empty"></a>Boîte de dialogue Vue détails est vide
 
 Il s’agit d’un problème connu, relatives aux bogues actuellement [#53906](https://bugzilla.xamarin.com/show_bug.cgi?id=53906). Assurez-vous que vous utilisez la dernière version stable de Visual Studio pour Mac
 
-#### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Si vous rencontrez des problèmes de connexion dans votre compte, essayez les opérations suivantes :
+### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Si vous rencontrez des problèmes de connexion dans votre compte, essayez les opérations suivantes :
 
 * Ouvrez l’application trousseau et sous la catégorie sélectionnez *des mots de passe*. Recherchez `deliver.`et supprimer toutes les entrées.
 
-#### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>« Erreur lors de l’ajout du compte. Veuillez vous connecter avec un mot de passe spécifiques de l’application »
+### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>« Erreur lors de l’ajout du compte. Veuillez vous connecter avec un mot de passe spécifiques de l’application »
 
 Il s’agit, car l’authentification à 2 facteurs est activée sur votre compte. Assurez-vous que vous utilisez la dernière version stable de Visual Studio pour Mac
 
-#### <a name="failed-to-create-new-certificate"></a>Impossible de créer un nouveau certificat
+### <a name="failed-to-create-new-certificate"></a>Impossible de créer un nouveau certificat
 « Vous avez atteint la limite pour les certificats de ce type »
 
 ![](apple-account-management-images/image10.png)
 
 Le nombre maximal de certificats autorisés a été généré. Pour résoudre ce problème, accédez à la [Apple Developer Center](https://developer.apple.com/account/ios/certificate/distribution) et révoquer le certificat de Production.
 
-#### <a name="known-issues"></a>Problèmes connus :
+## <a name="known-issues"></a>Problèmes connus
 
 * Parfois, la boîte de dialogue Détails de l’affichage peut prendre énormément de temps pour extraire les profils et les identités de signature.
 * Le focus ne peut pas retournent souvent à Visual Studio pour Mac après avoir entré vos informations, à l’origine de votre compte, ne pas à ajouter. Si c’est le cas, essayez à nouveau le processus.

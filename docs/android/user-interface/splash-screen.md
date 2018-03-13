@@ -7,18 +7,17 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 9acb1ad6ab1425edb98b938e8c03edc3704f50ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 9f88899d390f7f268f1b2f435617dc952f9eb205
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="splash-screen"></a>Écran de démarrage
 
 _Une application Android prend un certain temps à démarrer, en particulier lorsque l’application est lancée tout d’abord sur un appareil. Un écran de démarrage peut afficher début jusqu'à la progression à l’utilisateur ou pour indiquer la marque._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -32,10 +31,8 @@ Ce guide décrit une technique pour implémenter un écran de démarrage dans un
 
 3.  Ajouter une nouvelle activité à l’application qui sera utilisée en tant que l’écran de démarrage défini par le thème créé à l’étape précédente.
 
-[![Écran de démarrage logo Xamarin exemple suivi d’écran de l’application](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png)
+[![Écran de démarrage logo Xamarin exemple suivi d’écran de l’application](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -43,7 +40,6 @@ Ce guide part du principe que l’application cible Android API niveau 15 (Andro
 
 Tous le code et le code XML dans ce guide se trouvent dans le [SplashScreen](https://developer.xamarin.com/samples/monodroid/SplashScreen) exemple de projet pour ce guide.
 
-<a name="implement" />
 
 ## <a name="implementing-a-splash-screen"></a>Implémentation d’un écran de démarrage
 
@@ -51,7 +47,6 @@ Pour afficher l’écran de démarrage, la plus rapide consiste à créer un th�
 
 L’écran de démarrage est implémenté comme une activité qui affiche la marque drawable, effectue les initialisations et toutes les tâches de démarrage. Une fois que l’application a été amorcé, l’écran de démarrage activité démarre l’activité principale et lui-même supprime de la pile back.
 
-<a name="drawable" />
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>Création d’un Drawable pour l’écran de démarrage
 
@@ -79,7 +74,6 @@ Placez ce fichier dans le **drawable/ressources** dossier (par exemple, **Resour
 
 Une fois que l’écran de démarrage drawable a été créé, l’étape suivante consiste à créer un thème de l’écran de démarrage.
 
-<a name="theme" />
 
 ### <a name="implementing-a-theme"></a>Implémentation d’un thème
 
@@ -103,7 +97,6 @@ Pour créer un thème personnalisé pour l’activité de l’écran de démarra
 
 **MyTheme.Splash** est très spartan &ndash; il déclare l’arrière-plan de la fenêtre, explicitement supprime la barre de titre de la fenêtre et déclare qu’il est plein écran. Si vous souhaitez créer un écran de démarrage qui émule l’interface utilisateur de votre application avant de l’activité augmente la première mise en page, vous pouvez utiliser `windowContentOverlay` plutôt que `windowBackground` dans votre définition de style. Dans ce cas, vous devez également modifier le **splash_screen.xml** drawable afin qu’il affiche une émulation de l’interface utilisateur.
 
-<a name="activity" />
 
 ### <a name="create-a-splash-activity"></a>Créer une activité de démarrage
 
@@ -161,7 +154,6 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

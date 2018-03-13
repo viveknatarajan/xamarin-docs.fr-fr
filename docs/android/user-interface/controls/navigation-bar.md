@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 396ed31cba336976342a8dfb26f31eeda20cf494
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe76c93afc149553e44b5e8fa29a21767becf5c5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="navigation-bar"></a>Barre de navigation
 
 Android 4 a introduit une nouvelle fonctionnalité d’interface utilisateur système appelée un *barre de Navigation*, qui fournit des contrôles de navigation sur les appareils qui n’incluent pas de boutons **accueil**, **précédent** , et **Menu**.
 La capture d’écran suivante montre la barre de Navigation à partir d’un appareil Nexus premiers :
 
- [ ![Exemple d’une barre de navigation Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png)
+ [![Exemple d’une barre de navigation Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
 Plusieurs nouveaux indicateurs sont disponibles afin de contrôler la visibilité de la barre de Navigation et de ses contrôles, ainsi que la visibilité de la barre de système qui a été introduite dans 3 Android. Les indicateurs sont définis dans la `Android.View.View` classe et sont répertoriées ci-dessous :
 
@@ -31,7 +31,7 @@ Ces indicateurs peuvent être appliquées à n’importe quelle vue dans la hié
 
 L’exemple suivant montre une application simple où en cliquant sur les boutons de change le `SystemUiVisibility`:
 
- [ ![Captures d’écran montrant Visible, profil bas et SystemUiVisibility de masqué](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png)
+ [![Captures d’écran montrant Visible, profil bas et SystemUiVisibility de masqué](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
 Le code pour modifier le `SystemUiVisibility` définit la propriété sur un `TextView` à partir de chaque bouton Cliquez sur Gestionnaire d’événements comme indiqué ci-dessous :
 

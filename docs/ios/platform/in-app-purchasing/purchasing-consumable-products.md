@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7366a4ce5cbb6a3026a7445a03f03b45d89d9210
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e5875249d7a84412b1c30580c3a8038cb53892f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="purchasing-consumable-products"></a>Achat de produits consommables
 
@@ -21,7 +21,7 @@ Consommables sont le plus simple à implémenter, car il n’existe aucune exige
 
 L’exemple de code qui accompagne ce document illustre les produits intégrés : les ID de produit sont codées en dur dans l’application, car ils sont étroitement liés au code de 'déverrouillage » de la fonctionnalité après le paiement. Le processus d’achat peut être visualisé comme suit :   
    
-[ ![La visualisation de processus d’achat](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png)     
+[![La visualisation de processus d’achat](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  Le workflow de base est la suivante :   
    
@@ -49,7 +49,7 @@ Le [InAppPurchaseSample code](https://developer.xamarin.com/samples/monotouch/St
    
    
    
- [ ![Chaque fournisseur ajoute des crédits singe plus à l’équilibre entre les utilisateurs](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png)   
+ [![Chaque fournisseur ajoute des crédits singe plus à l’équilibre entre les utilisateurs](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
    
    
    
@@ -57,7 +57,7 @@ Le [InAppPurchaseSample code](https://developer.xamarin.com/samples/monotouch/St
    
    
    
- [ ![Les interactions entre les classes personnalisées, StoreKit et l’App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png)
+ [![Les interactions entre les classes personnalisées, StoreKit et l’App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 &nbsp;
 
@@ -214,7 +214,7 @@ public void CompleteTransaction (SKPaymentTransaction transaction)
 
 Lorsque l’utilisateur achète des quantités multiples, l’alerte de confirmation StoreKit reflètent la quantité, le prix unitaire et le prix total, qu'ils seront facturés, comme indiqué dans la capture d’écran suivante :
 
-[ ![Un achat confirmé](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png)
+[![Un achat confirmé](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
 
 ## <a name="handling-network-outages"></a>Gestion des défaillances du réseau
 
@@ -328,7 +328,7 @@ Pour tester cette méthode, utilisez la **Restrictions** fonctionnalité d’e/s
    
    
    
- [ ![Utilisez la fonctionnalité de Restrictions d’e/s pour désactiver les achats dans l’application](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png)   
+ [![Utilisez la fonctionnalité de Restrictions d’e/s pour désactiver les achats dans l’application](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
    
    
    
@@ -352,7 +352,7 @@ L’application ressemble à lors la **achats dans l’application** fonctionnal
    
    
    
- [ ![L’application ressemble à ceci lorsque les achats In-App fonctionnalité est limitée à l’achat de boutons sont désactivés](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png)   
+ [![L’application ressemble à ceci lorsque les achats In-App fonctionnalité est limitée à l’achat de boutons sont désactivés](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
    
    
    
@@ -361,7 +361,7 @@ Informations sur les produits peuvent toujours être demandé lorsque `CanMakePa
    
    
    
- [ ![Achats dans l’application ne sont pas autorisés.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png)   
+ [![Achats dans l’application ne sont pas autorisés.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
    
    
    

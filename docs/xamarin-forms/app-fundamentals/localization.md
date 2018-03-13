@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: ad9129e06f43eea69518c4d876edc7cfd462f4e0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ffde89558495c4b9ccb9ec41761b5fc7ca53db38
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="localization"></a>Localisation
 
@@ -71,7 +71,7 @@ Le fichier de ressources de base (RESX) contient les chaînes de langue par déf
 
 Choisissez un nom significatif tel que **AppResources** et appuyez sur **OK**.
 
-[ ![Ajouter le fichier de ressources](localization-images/resx-new-file-sml.png "boîte de dialogue Nouveau fichier")](localization-images/resx-new-file.png "nouvelle boîte de dialogue fichier")
+[![Ajouter le fichier de ressources](localization-images/resx-new-file-sml.png "boîte de dialogue Nouveau fichier")](localization-images/resx-new-file.png#lightbox "nouvelle boîte de dialogue fichier")
 
 Deux fichiers seront ajoutés au projet :
 
@@ -88,32 +88,32 @@ Par défaut lorsque fortement typée de références à des chaînes sont géné
 
 Sélectionnez le **AppResources.resx** de fichiers et d’afficher le **propriétés** configurer de remplissage pour voir où cet outil de génération. La capture d’écran ci-dessous montre le **un outil personnalisé : ResXFileCodeGenerator**.
 
-[[ide name="xs]]
 
-[ ![](localization-images/xs-resx-internal-sml.png "Liste des propriétés AppResources.Resx")](localization-images/xs-resx-internal.png)
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[[/ide]]
+[![](localization-images/vs-resx-internal-sml.png "Fenêtre des propriétés de AppResources.Resx")](localization-images/vs-resx-internal.png#lightbox)
 
-[[ide name="vs]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![](localization-images/vs-resx-internal-sml.png "Fenêtre des propriétés de AppResources.Resx")](localization-images/vs-resx-internal.png)
+[![](localization-images/xs-resx-internal-sml.png "Liste des propriétés AppResources.Resx")](localization-images/xs-resx-internal.png#lightbox)
 
-[[/ide]]
+-----
 
 Pour rendre les propriétés de chaîne de fortement typée `public`, vous devez modifier manuellement la configuration de **un outil personnalisé : PublicResXFileCodeGenerator**, comme illustré dans la capture d’écran ci-dessous :
 
 
-[[ide name="xs]]
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](localization-images/xs-resx-public-sml.png "Liste des propriétés AppResources.Resx")](localization-images/xs-resx-public.png)
+[![](localization-images/vs-resx-public-sml.png "Fenêtre des propriétés de AppResources.Resx")](localization-images/vs-resx-public.png#lightbox)
 
-[[/ide]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[[ide name="vs]]
+[![](localization-images/xs-resx-internal-sml.png "Liste des propriétés AppResources.Resx")](localization-images/xs-resx-internal.png#lightbox)
 
-[ ![](localization-images/vs-resx-public-sml.png "Fenêtre des propriétés de AppResources.Resx")](localization-images/vs-resx-public.png)
 
-[[/ide]]
+[![](localization-images/xs-resx-public-sml.png "Liste des propriétés AppResources.Resx")](localization-images/xs-resx-public.png#lightbox)
+
+-----
 
 Cette modification est facultative et est uniquement nécessaire si vous souhaitez faire référence à des chaînes localisées dans des assemblys différents (par exemple, si vous placez les fichiers RESX dans un autre assembly à votre code). L’exemple de cette rubrique laisse les chaînes `internal` car ils sont définis dans le même assembly Xamarin.Forms PCL où ils sont utilisés.
 
@@ -605,13 +605,13 @@ Si ces paramètres ne sont pas mis à jour les ressources RESX localisées ne se
 
 Avec le bouton droit sur le projet Windows Phone et sélectionnez **propriétés**. Dans le **Application** onglet graduation la **prise en charge des Cultures** qui prend en charge de l’application :
 
-[ ![](localization-images/winphone-projectproperties-sml.png "Propriétés - Cultures prises en charge de projet")](localization-images/winphone-projectproperties.png "propriétés - Cultures prises en charge de projet")
+[![](localization-images/winphone-projectproperties-sml.png "Propriétés - Cultures prises en charge de projet")](localization-images/winphone-projectproperties.png#lightbox "propriétés - Cultures prises en charge de projet")
 
 ##### <a name="wmappmanifestxml"></a>WMAppManifest.xml
 
 Développez le nœud Propriétés dans le projet Windows Phone et double-cliquez sur le **WMAppManifest.xml** fichier. Cliquez sur le **empaquetage** onglet et cochez toutes les langues prises en charge par l’application.
 
-[ ![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml - les langues prises en charge")](localization-images/winphone-wmappmanifest.png "WMAppManifest.xml - les langues prises en charge")
+[![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml - les langues prises en charge")](localization-images/winphone-wmappmanifest.png#lightbox "WMAppManifest.xml - les langues prises en charge")
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 

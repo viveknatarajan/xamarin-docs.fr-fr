@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: f1f420641691e700894687fef8ea3bd44fd60ff2
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d7f7e031d91cd1505ee255bbf0d25198bd9ae82a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-contentpage"></a>Personnalisation d’un ContentPage
 
@@ -99,7 +99,7 @@ Le processus de création de la classe de convertisseur personnalisé est comme 
 1. Ajouter un `ExportRenderer` d’attribut à la classe de convertisseur de page pour spécifier qu’il sera utilisé pour restituer la page Xamarin.Forms. Cet attribut est utilisé pour inscrire le convertisseur personnalisé avec Xamarin.Forms.
 
 > [!NOTE]
-> **Remarque**: il est facultatif fournir un convertisseur de page dans chaque projet de plateforme. Si un convertisseur de page n’est pas inscrit, le convertisseur par défaut de la page d’être utilisé.
+> Il est facultatif pour fournir un convertisseur de page dans chaque projet de plateforme. Si un convertisseur de page n’est pas inscrit, le convertisseur par défaut de la page d’être utilisé.
 
 Le diagramme suivant illustre les responsabilités de chaque projet dans l’exemple d’application, ainsi que la relation entre eux :
 
@@ -248,7 +248,7 @@ Sur la plateforme Windows Phone, une référence typée à la page natif utilis�
 Lorsque vous implémentez un convertisseur personnalisé qui dérive de `PageRenderer` sur le Windows Runtime, le `ArrangeOverride` méthode doit également être implémentée pour organiser les contrôles de la page, étant donné que le convertisseur de base ne sait pas comment procéder avec eux. Sinon, il en résulte une page vierge. Par conséquent, dans cet exemple la `ArrangeOverride` les appels de méthode le `Arrange` méthode sur le `Page` instance.
 
 > [!NOTE]
-> **Remarque**: il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans une application Windows Phone 8.1 WinRT. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez la `CleanUpCaptureResourcesAsync` méthode dans le projet Windows Phone dans l’exemple de solution, et [démarrage rapide : capture vidéo à l’aide de l’API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
+> Il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans une application Windows Phone 8.1 WinRT. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez la `CleanUpCaptureResourcesAsync` méthode dans le projet Windows Phone dans l’exemple de solution, et [démarrage rapide : capture vidéo à l’aide de l’API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Création du convertisseur de Page sur la plateforme Windows universelle
 
@@ -297,7 +297,7 @@ L’appel à la classe de base `OnElementChanged` méthode instancie un `Framewo
 Lorsque vous implémentez un convertisseur personnalisé qui dérive de `PageRenderer` sur la plateforme Windows universelle, le `ArrangeOverride` méthode doit également être implémentée pour organiser les contrôles de la page, étant donné que le convertisseur de base ne sait pas comment procéder avec eux. Sinon, il en résulte une page vierge. Par conséquent, dans cet exemple la `ArrangeOverride` les appels de méthode le `Arrange` méthode sur le `Page` instance.
 
 > [!NOTE]
-> **Remarque**: il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans une application UWP. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez [afficher l’aperçu de l’appareil photo](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
+> Il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans une application UWP. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez [afficher l’aperçu de l’appareil photo](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
 
 ## <a name="summary"></a>Récapitulatif
 

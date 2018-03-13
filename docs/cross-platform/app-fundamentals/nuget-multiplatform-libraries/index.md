@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017
-ms.openlocfilehash: 66bf9c215e3d30687fa8037220b8b35409ca285d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 49e7c00feb697d25d61a5e09b051c41945c260c6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="nuget-projects-nugetizer-3000"></a>Projets NuGet (Nugetizer 3000)
 
@@ -21,14 +21,18 @@ _Créer automatiquement les packages NuGet pour partager du code entre plateform
 Il est possible de créer automatiquement les packages NuGet pour partager du code entre plateformes à l’aide de la _Nugetizer 3000_. Cela rend est possible de créer des packages NuGet dans des projets de bibliothèque existants ou en créant un **projet de bibliothèque multiplateforme**.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+
 Le 3000 Nugetizer est inclus dans Visual Studio pour Mac 6.2.
+
+[![](images/mulitplatform-library-sml.png "Créer une nouvelle fenêtre de la bibliothèque de plateformes multiples")](images/mulitplatform-library.png#lightbox)
+
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-<a name="to-use-the-nugetizer-3000-in-visual-studio-please-download-and-run-the-vsix-installerhttpbitlynugetizer-2017"></a>Pour utiliser le 3000 Nugetizer dans Visual Studio, veuillez [Téléchargez et exécutez le programme d’installation VSIX](http://bit.ly/nugetizer-2017).
+
+Pour utiliser le 3000 Nugetizer dans Visual Studio, veuillez [Téléchargez et exécutez le programme d’installation VSIX](http://bit.ly/nugetizer-2017).
+
 -----
 
-
-
-[ ![](images/mulitplatform-library-sml.png "Créer une nouvelle fenêtre de la bibliothèque de plateformes multiples")](images/mulitplatform-library.png)
+## <a name="building-nuget-packages"></a>Packages NuGet de génération
 
 Une fois configuré, chaque génération du projet génère un package NuGet terminé, ce qui peut être utilisé pour partager du code en interne avec d’autres applications ou téléchargé sur [NuGet.org](https://www.nuget.org).
 
@@ -49,7 +53,7 @@ Il existe trois scénarios d’utilisation de cette fonctionnalité :
 Reportez-vous à la [guide de métadonnées](metadata.md) pour plus d’informations sur les métadonnées obligatoires et facultatifs qui doivent être ajoutées à n’importe quel package NuGet.
 
 
-## <a name="further-nuget-information"></a>Informations complémentaires de NuGet
+## <a name="further-nuget-information"></a>Plus d’informations de NuGet
 
 En savoir plus sur [création manuelle de NuGets pour Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md) et comment [incluent un package NuGet dans une application](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 

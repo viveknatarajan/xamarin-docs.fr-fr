@@ -4,14 +4,15 @@ description: "Découvrez comment utiliser SkiaSharp pour définir des arcs de tr
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 236f5da78022d6f6482ed66ffd439c4cd15766a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 390c8f4634ea38ecb93e3f21175db00fef27b8e4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Trois méthodes pour dessiner un Arc
 
@@ -100,7 +101,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Comme vous pouvez le voir, l’angle de début et de l’angle de balayage peuvent prendre les valeurs négatives :
 
-[![](arcs-images/anglearc-small.png "Capture d’écran de triple de la page de l’Angle d’arc de cercle")](arcs-images/anglearc-large.png "Triple capture d’écran de la page de l’Angle d’arc de cercle")
+[![](arcs-images/anglearc-small.png "Capture d’écran de triple de la page de l’Angle d’arc de cercle")](arcs-images/anglearc-large.png#lightbox "Triple capture d’écran de la page de l’Angle d’arc de cercle")
 
 Cette approche à la génération d’un arc est obtenue la plus simple, et il est facile de dériver les équations paramétriques qui décrivent l’arc. Connaître la taille et l’emplacement de l’ellipse, ainsi que les angles de début et de balayage, le début et points de terminaison de l’arc peut être calculées à l’aide de la trigonométrie simple :
 
@@ -205,11 +206,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Un nouveau `SKPath` objet est créé pour chaque secteur. Le chemin d’accès se compose d’une ligne à partir du centre, alors un `ArcTo` pour dessiner l’arc et une autre ligne de retour pour les résultats du centre du `Close` appeler. Ce programme affiche « éclaté » secteurs en les déplaçant toutes les à partir du centre de 50 pixels. Cette tâche nécessite un vecteur dans le sens du milieu de l’angle de balayage pour chaque secteur :
 
-[![](arcs-images/explodedpiechart-small.png "Capture d’écran de triple de la page éclaté un graphique à secteurs")](arcs-images/explodedpiechart-large.png "Triple capture d’écran de la page éclaté un graphique à secteurs")
+[![](arcs-images/explodedpiechart-small.png "Capture d’écran de triple de la page éclaté un graphique à secteurs")](arcs-images/explodedpiechart-large.png#lightbox "Triple capture d’écran de la page éclaté un graphique à secteurs")
 
 Pour voir à quoi il ressemble sans le « éclatement », simplement en commentaire la `Translate` appeler :
 
-[![](arcs-images/explodedpiechartunexploded-small.png "Capture d’écran de triple de la page éclaté un graphique à secteurs sans l’explosion")](arcs-images/explodedpiechartunexploded-large.png "Triple capture d’écran de la page éclaté un graphique à secteurs sans l’explosion")
+[![](arcs-images/explodedpiechartunexploded-small.png "Capture d’écran de triple de la page éclaté un graphique à secteurs sans l’explosion")](arcs-images/explodedpiechartunexploded-large.png#lightbox "Triple capture d’écran de la page éclaté un graphique à secteurs sans l’explosion")
 
 ## <a name="the-tangent-arc"></a>L’Arc tangente
 
@@ -413,7 +414,7 @@ public partial class TangentArcPage : InteractivePage
 
 Voici le **tangente Arc** page en cours d’exécution sur les trois plateformes :
 
-[![](arcs-images/tangentarc-small.png "Capture d’écran de triple de la page de la tangente d’arc de cercle")](arcs-images/tangentarc-large.png "Triple capture d’écran de la page de la tangente d’arc de cercle")
+[![](arcs-images/tangentarc-small.png "Capture d’écran de triple de la page de la tangente d’arc de cercle")](arcs-images/tangentarc-large.png#lightbox "Triple capture d’écran de la page de la tangente d’arc de cercle")
 
 Sur l’appareil Windows Mobile, les trois points sont colinéaires presque, et l’arc est très faible.
 
@@ -490,7 +491,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Voici le programme en cours d’exécution sur les plateformes de trois :
 
-[![](arcs-images/roundedheptagon-small.png "Capture d’écran de triple de la page de l’arrondi de sur un heptagone")](arcs-images/roundedheptagon-large.png "Triple capture d’écran de la page de l’arrondi de sur un heptagone")
+[![](arcs-images/roundedheptagon-small.png "Capture d’écran de triple de la page de l’arrondi de sur un heptagone")](arcs-images/roundedheptagon-large.png#lightbox "Triple capture d’écran de la page de l’arrondi de sur un heptagone")
 
 ## <a name="the-elliptical-arc"></a>L’Arc elliptique
 
@@ -585,7 +586,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ici, il s’exécute sur les plateformes de trois :
 
-[![](arcs-images/ellipticalarc-small.png "Capture d’écran de triple de la page de l’Arc elliptique")](arcs-images/ellipticalarc-large.png "Triple capture d’écran de la page de l’Arc elliptique")
+[![](arcs-images/ellipticalarc-small.png "Capture d’écran de triple de la page de l’Arc elliptique")](arcs-images/ellipticalarc-large.png#lightbox "Triple capture d’écran de la page de l’Arc elliptique")
 
 Le **d’arc de cercle infini** page utilise l’arc elliptique pour dessiner un signe de l’infini. Le signe de l’infini est basé sur deux cercles à rayon de 100 unités séparées par des unités de 100 :
 
@@ -653,7 +654,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Le code utilise le `Bounds` propriété du `SKPath` pour déterminer les dimensions du sinus de l’infini à l’échelle à la taille de la zone de dessin :
 
-[![](arcs-images/arcinfinity-small.png "Capture d’écran de triple de la page d’arc de cercle infini")](arcs-images/arcinfinity-large.png "Triple capture d’écran de la page de l’infini d’Arc")
+[![](arcs-images/arcinfinity-small.png "Capture d’écran de triple de la page d’arc de cercle infini")](arcs-images/arcinfinity-large.png#lightbox "Triple capture d’écran de la page de l’infini d’Arc")
 
 Le résultat paraît peu, ce qui suggère que le `Bounds` propriété du `SKPath` signale une taille supérieure au chemin d’accès.
 
@@ -661,7 +662,7 @@ En interne, Skia effectue une approximation de l’arc à l’aide de plusieurs 
 
 Pour obtenir un ajustement plus strict, utilisez le `TightBounds` propriété, ce qui exclut les points de contrôle. Voici le programme en cours d’exécution en mode paysage et en utilisant le `TightBounds` propriété pour obtenir les limites de chemin d’accès :
 
-[![](arcs-images/arcinfinitytightbounds-small.png "Capture d’écran de triple de la page d’arc de cercle infini avec des limites étroits")](arcs-images/arcinfinitytightbounds-large.png "Triple capture d’écran de la page d’arc de cercle infini avec des limites étroits")
+[![](arcs-images/arcinfinitytightbounds-small.png "Capture d’écran de triple de la page d’arc de cercle infini avec des limites étroits")](arcs-images/arcinfinitytightbounds-large.png#lightbox "Triple capture d’écran de la page d’arc de cercle infini avec des limites étroits")
 
 Bien que les connexions entre les lignes droites et d’arcs de cercle sont mathématiquement smooth, la modification de l’arc linéaire peut sembler un peu brusque. Un signe de l’infini meilleure est présenté dans la page suivante.
 

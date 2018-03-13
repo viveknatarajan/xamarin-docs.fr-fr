@@ -4,14 +4,15 @@ description: Plonger dans les transformations SkiaSharp avec la matrice de trans
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 85402768990869a2121cdea5ab7d232d80d64ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="matrix-transforms"></a>Transformations de matrice
 
@@ -401,7 +402,7 @@ public class PathTransformPage : ContentPage
 
 Il s’affiche dans le coin supérieur gauche de la zone de dessin :
 
-[![](matrix-images/pathtransform-small.png "Capture d’écran de triple de la page de la transformation de chemin d’accès")](matrix-images/pathtransform-large.png "Triple capture d’écran de la page de la transformation de chemin d’accès")
+[![](matrix-images/pathtransform-small.png "Capture d’écran de triple de la page de la transformation de chemin d’accès")](matrix-images/pathtransform-large.png#lightbox "Triple capture d’écran de la page de la transformation de chemin d’accès")
 
 Le constructeur de ce programme s’applique à la matrice pour le chemin d’accès avec l’appel suivant :
 
@@ -588,7 +589,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 L’écran d’iOS ci-dessous montre l’image bitmap lorsque la page est chargée, tandis que les deux autres écrans de l’afficher après quelques manipulation :
 
-[![](matrix-images/showaffinematrix-small.png "Capture d’écran de triple de la page Afficher la matrice Affine")](matrix-images/showaffinematrix-large.png "Triple capture d’écran de la page Afficher la matrice Affine")
+[![](matrix-images/showaffinematrix-small.png "Capture d’écran de triple de la page Afficher la matrice Affine")](matrix-images/showaffinematrix-large.png#lightbox "Triple capture d’écran de la page Afficher la matrice Affine")
 
 Bien qu’il semble que si les points tactiles faites glisser les angles de l’image bitmap, qui est uniquement une impression. La matrice calculée à partir des points tactiles transforme l’image bitmap afin que les angles coïncident avec les points tactiles.
 

@@ -8,25 +8,24 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 99a35705c408d16f5b4b0e71e53dd453ae377341
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>Procédure pas à pas : création d’une interface utilisateur à onglets avec TabHost
 
 _Cet article vous guide dans la création d’une interface utilisateur à onglets dans Xamarin.Android à l’aide de l’API TabHost._
 
 > [!NOTE]
-> **Remarque :** `TabHost` est une ancienne API a été déconseillée par Google. Les développeurs sont encouragés à créer des applications à onglets à l’aide de la [ActionBar](~/android/user-interface/controls/action-bar.md). Le `ActionBar` est disponible dans toutes les version d’Android. Il a été introduite dans 3.0 Android (API niveau 11) et a été déplacée dans Android 2.2 (API niveau 8) et Android 2.3 (API de niveau 10) dans le [V7 AppCompat bibliothèque](http://developer.android.com/tools/support-library/features.html#v7-appcompat), qui est disponible pour Xamarin.Android via la [Xamarin Bibliothèque de prise en charge Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) package.
+> `TabHost` est une ancienne API a été déconseillée par Google. Les développeurs sont encouragés à créer des applications à onglets à l’aide de la [ActionBar](~/android/user-interface/controls/action-bar.md). Le `ActionBar` est disponible dans toutes les version d’Android. Il a été introduite dans 3.0 Android (API niveau 11) et a été déplacée dans Android 2.2 (API niveau 8) et Android 2.3 (API de niveau 10) dans le [V7 AppCompat bibliothèque](http://developer.android.com/tools/support-library/features.html#v7-appcompat), qui est disponible pour Xamarin.Android via la [Xamarin Bibliothèque de prise en charge Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) package.
 
 Cet article vous guide dans la création d’une interface utilisateur à onglets dans Xamarin.Android à l’aide de la `TabHost` API. Il s’agit d’une ancienne API est disponible dans toutes les versions d’Android. Cet exemple crée une application avec trois onglets, avec la logique de chaque onglet encapsulée dans une activité.
 La capture d’écran suivante est un exemple de l’application que nous allons créer :
 
 ![Capture d’écran de l’application avec plusieurs onglets](creating-a-tabbed-ui-images/image02.png)
 
-<a name="Creating_the_Application" />
 
 ## <a name="creating-the-application"></a>Création de l’application
 
@@ -61,7 +60,7 @@ Première nous allons mettre à jour le fichier de disposition **Resources/Layou
 
 La capture d’écran suivante montre la mise en page dans le Concepteur de Xamarin :
 
-[![Capture d’écran de la mise en page TabHost dans le Concepteur de Xamarin](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png)
+[![Capture d’écran de la mise en page TabHost dans le Concepteur de Xamarin](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png#lightbox)
 
 Le TabHost doit avoir deux vues enfants qu’il contient : un `TabWidget` et un `FrameLayout`. À la position la `TabWidget` et `FrameLayout` verticalement à l’intérieur du `TabHost`, un `LinearLayout` est utilisé. Le FrameLayout est l’emplacement du contenu pour chaque onglet, qui est vide, car le `TabHost` incorporeront automatiquement chaque activité lors de l’exécution. Il existe plusieurs règles qui doivent être observées en matière de création de la disposition pour les interfaces utilisateur à onglets :
 
@@ -203,7 +202,6 @@ Exécutez l'application. Votre application doit ressembler à la capture d’éc
 C’est tout ! Nous avons créé une application à onglets qui donne à l’utilisateur de facilement accéder aux différentes parties d’une application.
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

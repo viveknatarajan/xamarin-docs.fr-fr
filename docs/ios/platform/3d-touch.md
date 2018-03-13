@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 66cc67b38d70992fe815732407317fab3dc52528
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-3d-touch"></a>Introduction à la 3D Touch
 
 _Cet article couvre l’utilisation de la nouvelle iPhone 6 s et iPhone 6 s Plus 3D Touch mouvements dans votre application._
 
-[ ![](3d-touch-images/info01.png "Exemples de 3D Touch des applications activé")](3d-touch-images/info01.png)
+[![](3d-touch-images/info01.png "Exemples de 3D Touch des applications activé")](3d-touch-images/info01.png#lightbox)
 
 Cet article fournit et introduction à l’aide des API Touch 3D nouveau pour ajouter des mouvements de pression sensibles à vos applications Xamarin.iOS qui sont exécutent sur le nouveau iPhone 6 s et iPhone 6 s ainsi que les appareils.
 
@@ -29,7 +29,7 @@ Avec 3D Touch, une application iPhone peut désormais non seulement indiquer que
 - [Sensibilité à la pression](#Pressure-Sensitivity) - applications peuvent mesurer maintenant manuels ou lumière l’utilisateur touche l’écran et profitez de ces informations.
   Par exemple, une application de peinture peut rendre une ligne épaisse ou plus fin en fonction de laquelle l’utilisateur touche l’écran.
 - [Lire et Pop](#Peek-and-Pop) -votre application peut permettent désormais d’interagir avec ses données sans avoir à naviguer en dehors de leur contexte actuel de l’utilisateur. En appuyant sur disque dur sur l’écran de l’écran, il peuvent lire l’élément qui que les intéresse (par exemple, pour afficher un aperçu d’un message). En appuyant sur plus difficile, elles consiste à faire apparaître dans l’élément.
-- [Actions rapides](#Quick-Action) -considérer des Actions rapides, comme les menus contextuels qui peuvent être dépilés à distance lorsqu’un utilisateur clique sur un élément dans une application de bureau.
+- [Actions rapides](#Quick-Actions) -considérer des Actions rapides, comme les menus contextuels qui peuvent être dépilés à distance lorsqu’un utilisateur clique sur un élément dans une application de bureau.
   À l’aide des Actions rapides, vous pouvez ajouter des raccourcis vers les fonctions dans votre application directement à partir de l’icône d’application sur l’écran d’accueil.
 - [Dans le simulateur de test 3D Touch](#Testing-3D-Touch-in-the-Simulator) -avec le matériel Mac, vous pouvez tester des applications tactile 3D dans le simulateur iOS.
 
@@ -39,7 +39,7 @@ Avec 3D Touch, une application iPhone peut désormais non seulement indiquer que
 
 Comme indiqué précédemment, à l’aide des nouvelles propriétés de la [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) classe que vous pouvez mesurer la quantité de pression de l’application de l’utilisateur à écran de l’appareil iOS et utiliser ces informations dans votre interface utilisateur. Par exemple, rendre un trait de pinceau plus transparent ou opaque en fonction de la quantité de pression.
 
-[ ![](3d-touch-images/pressure01.png "Un trait de pinceau rendu plus transparent ou opaque selon la quantité de pression")](3d-touch-images/pressure01.png)
+[![](3d-touch-images/pressure01.png "Un trait de pinceau rendu plus transparent ou opaque selon la quantité de pression")](3d-touch-images/pressure01.png#lightbox)
 
 À la suite de 3D Touch, si votre application s’exécute sur iOS 9 (ou version ultérieure) et l’appareil iOS est capable de prise en charge 3D Touch, modifications apportées à une sollicitation de la provoqueront la `TouchesMoved` événement soit déclenché.
 
@@ -80,7 +80,7 @@ Pour plus d’informations, consultez le site d’Apple [TouchCanvas : à l’a
 
 Par exemple, si votre application affiche une table des messages, l’utilisateur peut appuyer sur dur sur un élément pour afficher un aperçu de son contenu dans un mode de superposition (laquelle Apple désigne comme un *aperçu*).
 
-[ ![](3d-touch-images/peekandpop01.png "Un exemple de lecture au contenu")](3d-touch-images/peekandpop01.png)
+[![](3d-touch-images/peekandpop01.png "Un exemple de lecture au contenu")](3d-touch-images/peekandpop01.png#lightbox)
 
 Si l’utilisateur appuie sur plus difficile, celui-ci doit entrer la vue de message normal (qui est appelé *Pop*-ping dans la vue).
 
@@ -208,9 +208,8 @@ Pour plus d’informations, consultez notre [iOS 9 ApplicationShortcuts exemple]
 
 Comme indiqué ci-dessus, vous pouvez considérer Actions rapides comme les menus contextuels qui peuvent être dépilés à distance lorsqu’un utilisateur clique sur un élément dans une application de bureau. Vous devez utiliser des Actions rapides pour fournir des raccourcis vers les fonctions ou les fonctionnalités de votre application plus courantes.
 
-[ ![](3d-touch-images/quickactions01.png "Un exemple d’un menu d’Actions rapides")](3d-touch-images/quickactions01.png)
+[![](3d-touch-images/quickactions01.png "Un exemple d’un menu d’Actions rapides")](3d-touch-images/quickactions01.png#lightbox)
 
-<a name="Defining-Static-Quick-Actions" />
 
 ### <a name="defining-static-quick-actions"></a>Définition des Actions rapides statiques
 
@@ -287,7 +286,6 @@ Nous examinons ici définir deux éléments d’Action rapide statiques avec les
 
 
 
-<a name="Identifying-Quick-Action-Items" />
 
 ### <a name="identifying-quick-action-items"></a>Identification des éléments d’Action rapide
 
@@ -389,7 +387,6 @@ Ensuite, nous remplaçons le `OnActivated` méthode et passe les sélectionné d
 
 Enfin, si votre application a été déjà en cours d’exécution, le `PerformActionForShortcutItem` méthode serait appelée pour gérer l’élément Action rapide afin de nous devons remplacer et appeler notre `HandleShortcutItem` méthode ici également.
 
-<a name="Creating-Dynamic-Quick-Action-Items" />
 
 ### <a name="creating-dynamic-quick-action-items"></a>Création d’actions rapide dynamique
 
@@ -442,7 +439,7 @@ Lorsqu’à l’aide de la dernière version de Xcode et le simulateur iOS sur u
 
 Pour activer cette fonctionnalité, exécutez n’importe quelle application dans le matériel simulé iPhone qui prend en charge 3D Touch (iPhone 6 s et supérieur). Ensuite, sélectionnez le **matériel** menu dans iOS Simulator et activer la **Force de pavé tactile d’utilisation pour les fonctions tactiles 3D** élément de menu :
 
-[ ![](3d-touch-images/simulator01.png "Sélectionnez le menu de matériel dans le simulateur iOS et activer la Force du pavé tactile utilisation pour l’élément de menu 3D touch")](3d-touch-images/simulator01.png)
+[![](3d-touch-images/simulator01.png "Sélectionnez le menu de matériel dans le simulateur iOS et activer la Force du pavé tactile utilisation pour l’élément de menu 3D touch")](3d-touch-images/simulator01.png#lightbox)
 
 Avec cette fonctionnalité active, vous pouvez appuyer sur plus difficile du pavé tactile du Mac pour activer la 3D Touch comme vous le feriez sur du matériel de l’iPhone réel.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/16/2017
-ms.openlocfilehash: a95b49fa3f090339773233dada46a14e69c8bb43
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 798bb2b15534a620acbe76080e171af1a548ac25
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-platform-specifics"></a>Caractéristiques de la plateforme d’iOS
 
@@ -180,10 +180,10 @@ Le `Page.On<iOS>` méthode spécifie que cette plate-forme spécifique sera exé
 
 Le résultat est que le contenu de la page peut être positionné sur une zone de l’écran qui est sécurisé pour tous les iPhone :
 
-[![](ios-images/safe-area-layout.png "Guide de mise en page de zone de sécurité")](ios-images/safe-area-layout-large.png "Guide de mise en page de zone de sécurité")
+[![](ios-images/safe-area-layout.png "Guide de mise en page de zone de sécurité")](ios-images/safe-area-layout-large.png#lightbox "Guide de mise en page de zone de sécurité")
 
 > [!NOTE]
-> **Remarque**: la zone de sans échec définie par Apple utilisée dans Xamarin.Forms pour définir le [ `Page.Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) propriété et remplace toutes les valeurs précédentes de cette propriété qui ont été définies.
+> La zone de sans échec définie par Apple utilisée dans Xamarin.Forms pour définir le [ `Page.Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) propriété et remplace toutes les valeurs précédentes de cette propriété qui ont été définies.
 
 La zone de sans échec peut être personnalisée en récupérant sa [ `Thickness` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/) valeur avec le `Page.SafeAreaInsets` méthode à partir de la [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) espace de noms. Il peut ensuite être modifié en tant que nécessaire et réaffecté à la `Padding` propriété dans le constructeur de la page ou [ `OnAppearing` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing()/) remplacer :
 
@@ -385,7 +385,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 Le résultat qui est spécifié `UpdateMode` est appliqué à la [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/), qui contrôle lorsque la sélection d’éléments se produit :
 
-[![](ios-images/picker-updatemode.png "Sélecteur UpdateMode spécifique à la plateforme")](ios-images/picker-updatemode-large.png "Picker UpdateMode Plaform-Specific")
+[![](ios-images/picker-updatemode.png "Sélecteur UpdateMode spécifique à la plateforme")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
 
 <a name="set_status_bar_visibility" />
 
@@ -468,7 +468,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 Le résultat est qu’un [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) peut désactiver ce qui retarde la réception des touches finales, le contenu, ainsi que dans ce scénario la [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) reçoit le mouvement plutôt que la [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) page de la [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
 
-[![](ios-images/scrollview-delay-content-touches.png "Délai de ScrollView contenu touche spécifique à la plateforme")](ios-images/scrollview-delay-content-touches-large.png "ScrollView Delay Content Touches Plaform-Specific")
+[![](ios-images/scrollview-delay-content-touches.png "Délai de ScrollView contenu touche spécifique à la plateforme")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
 
 ## <a name="summary"></a>Récapitulatif
 
@@ -477,6 +477,6 @@ Cet article vous a montré comment consommer les iOS plateforme-spécificités q
 
 ## <a name="related-links"></a>Liens associés
 
-- [Caractéristiques de la plateforme de création](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [Création de caractéristiques de la plateforme](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (exemple)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [iOSSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/)

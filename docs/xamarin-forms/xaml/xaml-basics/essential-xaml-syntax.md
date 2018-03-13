@@ -3,16 +3,16 @@ title: Partie 2. Syntaxe XAML essentiels
 description: "XAML est principalement conçu pour l’instanciation et initialisation d’objets. Souvent, mais propriétés doivent être définies pour les objets complexes ne peuvent pas facilement être représentées en tant que chaînes XML et parfois des propriétés définies par une classe doivent être définies sur une classe enfant. Ces deux besoins nécessitent les fonctionnalités de syntaxe XAML essentielles des éléments de propriété et les propriétés jointes."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: f99d4b177f5957b2e5f8c22171fe92799af8505a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77ed7c49a901a877d822c2274263bcb8dbe19ac6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Partie 2. Syntaxe XAML essentiels
 
@@ -253,7 +253,7 @@ Le `Grid.Row` et `Grid.Column` paramètres 0 ne sont pas nécessaires mais sont 
 
 Voici à quoi elle ressemble sur les trois plateformes :
 
-[ ![](essential-xaml-syntax-images/griddemo.png "Disposition en grille")](essential-xaml-syntax-images/griddemo-large.png "mise en page de grille")
+[![](essential-xaml-syntax-images/griddemo.png "Disposition en grille")](essential-xaml-syntax-images/griddemo-large.png#lightbox "mise en page de grille")
 
 Évaluer uniquement à partir de la syntaxe, ces `Grid.Row`, `Grid.Column`, `Grid.RowSpan`, et `Grid.ColumnSpan` attributs semblent être des champs statiques ou des propriétés de `Grid`, mais il est intéressant, `Grid` ne définit aucun élément nommé `Row`, `Column`, `RowSpan`, ou `ColumnSpan`.
 
@@ -310,7 +310,7 @@ Le `AbsoluteLayout` classe définit deux propriétés jointes nommées `LayoutBo
 
 Et ici :
 
-[ ![](essential-xaml-syntax-images/absolutedemo-large.png "Disposition absolue")](essential-xaml-syntax-images/absolutedemo-large.png "disposition absolue")
+[![](essential-xaml-syntax-images/absolutedemo-large.png "Disposition absolue")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "disposition absolue")
 
 Pour une telle opération, vous pourrez question de demander à l’aide de XAML. Certes, la répétition et régularité de la `LayoutBounds` rectangle suggère qu’il peut être mieux réalisé dans le code.
 

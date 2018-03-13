@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 70a7abb186c102fb803c0ab6fa38c7b2d8222292
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2d5a83b9f6278406e9b643277357df253f5fd524
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="listview"></a>Affichage de liste
 
 _ListView est un composant essentiel de l’interface utilisateur des applications Android ; Il est utilisé partout dans les listes de courte des options de menu à longues listes de contacts ou favoris internet. Il fournit un moyen simple pour présenter une liste déroulante de lignes qui peuvent être mis en forme avec un style prédéfini ou personnalisé de manière intensive._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -30,10 +29,9 @@ Tout d’abord, un court didacticiel présente le `ListView` avec un exemple de 
 
 
 > [!NOTE]
-> **Remarque**: le `RecyclerView` widget est une version plus avancée et plus souple de `ListView`. Étant donné que `RecyclerView` est conçu pour être le successeur de `ListView` (et `GridView`), nous vous recommandons d’utiliser `RecyclerView` plutôt que `ListView` nouveau développement d’applications. Pour plus d’informations, consultez [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
+> Le `RecyclerView` widget est une version plus avancée et plus souple de `ListView`. Étant donné que `RecyclerView` est conçu pour être le successeur de `ListView` (et `GridView`), nous vous recommandons d’utiliser `RecyclerView` plutôt que `ListView` nouveau développement d’applications. Pour plus d’informations, consultez [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
 
-<a name="tutorial" />
 
 ## <a name="listview-tutorial"></a>Didacticiel de ListView
 
@@ -147,7 +145,7 @@ Il s’agit du tableau de chaînes qui seront placés dans le [ `ListView` ](htt
 
 Exécutez l'application. Vous pouvez faire défiler la liste, ou tapez pour filtrer, puis cliquez sur un élément pour afficher un message. Vous devez voir quelque chose de similaire à :
 
-[ ![Capture d’écran de ListView avec des noms de pays](images/helloviews6.png)](images/helloviews6.png)
+[![Capture d’écran de ListView avec des noms de pays](images/helloviews6.png)](images/helloviews6.png#lightbox)
 
 Notez qu’en utilisant un tableau de chaîne codée en dur n’est pas la meilleure pratique de conception. Un est utilisé dans ce didacticiel, par souci de simplicité, pour illustrer le [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) widget. La meilleure pratique consiste à faire référence à un tableau de chaînes défini par une ressource externe, comme avec un `string-array` ressources dans votre projet **Resources/Values/Strings.xml** fichier. Exemple :
 
@@ -173,7 +171,6 @@ string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
 
-<a name="going_further" />
 
 ## <a name="going-further-with-listview"></a>Aller plus loin avec ListView
 
@@ -200,7 +197,6 @@ La discussion (divisée en six parties) commence par une vue d’ensemble de la 
 -   [Utilisation d’un ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
 -   [ListView et le cycle de vie des activités](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
-<a name="summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 11/16/2017
-ms.openlocfilehash: 32a058ace69fe5647d3285ac46bc981ddef39a51
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0113cc15bf1de5e0e668b05c2b0288a6ead141b5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="where-can-i-set-my-android-sdk-locations"></a>Où puis-je définir mes emplacements du SDK Android ?
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 
 Dans Visual Studio, accédez à **Outils > Options > Xamarin > Paramètres Android** pour afficher et définir l’emplacement du SDK Android :
 
-[![Onglet emplacements exemple préférences](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png)
+[![Onglet emplacements exemple préférences](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
 L’emplacement par défaut pour chaque chemin d’accès est comme suit :
 
@@ -44,7 +44,7 @@ Par exemple, si votre emplacement du SDK Android se trouve **C:\\utilisateurs\\n
 
 Dans Visual Studio pour Mac, accédez à **Préférences > projets > emplacements du SDK > Android**. Dans le **Android** , cliquez sur le **emplacements** onglet pour afficher et définir l’emplacement du Kit de développement logiciel :
 
-[![Onglet emplacements exemple préférences](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png)
+[![Onglet emplacements exemple préférences](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
 
 L’emplacement par défaut pour chaque chemin d’accès est comme suit :
 
@@ -62,6 +62,6 @@ L’emplacement par défaut pour chaque chemin d’accès est comme suit :
 
 Notez que le numéro de version de la NDK peut-être varier. Par exemple, au lieu de **android-ndk-r14b**, il peut être une version antérieure, tel que **android-ndk-r10e**.
 
-Pour définir l’emplacement du SDK Android, entrez le chemin d’accès complet du répertoire du SDK Android dans le **emplacement du Kit de développement logiciel Android** boîte. Vous pouvez sélectionner le dossier SDK Android dans l’outil de recherche, appuyez sur **CTRL + &#8984; + I** pour afficher les informations de dossier, cliquez et faites glisser de chemin d’accès à droite de **où :**, copier, puis collez-le dans le **du SDK Android Emplacement** zone le **emplacements** onglet. Par exemple, si votre emplacement du SDK Android se trouve **~/Library/Developer/Android/Sdk**, désactivez l’ancien chemin d’accès dans le **emplacement du Kit de développement logiciel Android** , collez dans ce chemin d’accès, puis cliquez sur **OK**.
+Pour définir l’emplacement du SDK Android, entrez le chemin d’accès complet du répertoire du SDK Android dans le **emplacement du Kit de développement logiciel Android** boîte. Vous pouvez sélectionner le dossier SDK Android dans l’outil de recherche, appuyez sur **CTRL +&#8984;+ I** pour afficher les informations de dossier, cliquez et faites glisser de chemin d’accès à droite de **où :**, copier, puis collez-le dans le **du SDK Android Emplacement** zone le **emplacements** onglet. Par exemple, si votre emplacement du SDK Android se trouve **~/Library/Developer/Android/Sdk**, désactivez l’ancien chemin d’accès dans le **emplacement du Kit de développement logiciel Android** , collez dans ce chemin d’accès, puis cliquez sur **OK**.
 
 -----

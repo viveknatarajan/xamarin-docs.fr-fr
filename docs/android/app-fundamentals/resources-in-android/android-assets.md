@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/30/2017
-ms.openlocfilehash: bbf20155fe097f0229aa28c1f0d046cb3ef31a63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 83e58625438a0b50d89ca8dac3e940c8742e5aec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-android-assets"></a>À l’aide des ressources Android
 
@@ -20,7 +20,6 @@ _Ressources_ fournissent une façon d’inclure des fichiers arbitraires, texte,
 Actifs ajoutés à votre projet apparaît comme un système de fichiers qui permettre lire par votre application à l’aide de [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/).
 Dans cette démonstration simple, nous allons ajouter une ressource de fichier texte à notre projet, lecture à l’aide de `AssetManager`et les afficher dans un contrôle TextView.
 
-<a name="Add_Asset_to_Project" />
 
 ## <a name="add-asset-to-project"></a>Ajoute un élément multimédia au projet
 
@@ -36,13 +35,12 @@ Visual Studio doit avoir le **Action de génération** pour ce fichier **Android
 
 Visual Studio pour Mac doit avoir le **Action de génération** pour ce fichier **AndroidAsset**:
 
-[![Définition de l’action de génération pour AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png)
+[![Définition de l’action de génération pour AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
 En sélectionnant le bon **Buiidaction** garantit que le fichier est empaqueté dans APK au moment de la compilation.
 
-<a name="Reading_Assets" />
 
 ## <a name="reading-assets"></a>La lecture des éléments multimédias
 
@@ -71,7 +69,6 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-<a name="Running_the_Application" />
 
 ## <a name="running-the-application"></a>Exécution de l'application
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: fb0e4341d8d8ad0719f35c691add9bad1d3f85a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe62b917946dda4cf669f5b15c91a5e3b596a0fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-table-with-data"></a>Remplissage d’une Table avec des données
 
@@ -88,7 +88,7 @@ public override void ViewDidLoad ()
 
 La table résultante ressemble à ceci :
 
- [ ![](populating-a-table-with-data-images/image3.png "Exemple de table en cours d’exécution")](populating-a-table-with-data-images/image3.png)
+ [![](populating-a-table-with-data-images/image3.png "Exemple de table en cours d’exécution")](populating-a-table-with-data-images/image3.png#lightbox)
 
 La plupart des tables autoriser l’utilisateur à se touchent une ligne pour la sélectionner et effectuer d’autres actions (par exemple, chanson, appel d’un contact ou afficher un autre écran). Pour ce faire, il existe quelques éléments, que nous devons faire. Tout d’abord, nous allons créer une AlertController pour afficher un message lorsque l’utilisateur clique sur une ligne en ajoutant le code suivant à la `RowSelected` méthode :
 
@@ -140,7 +140,7 @@ Maintenant l’utilisateur peut se toucher une ligne et une alerte s’affiche 
 
 
 
- [ ![](populating-a-table-with-data-images/image4.png "L’alerte sélectionnée de ligne")](populating-a-table-with-data-images/image4.png)
+ [![](populating-a-table-with-data-images/image4.png "L’alerte sélectionnée de ligne")](populating-a-table-with-data-images/image4.png#lightbox)
 
 
 ## <a name="cell-reuse"></a>Réutilisation de cellule
@@ -220,7 +220,7 @@ Vous pouvez voir des exemples des rubriques expliqués ci-dessus dans le **Basic
 
 Un index permet à l’utilisateur de parcourir de longues listes, généralement classés par ordre alphabétique bien que vous pouvez indexer en fonction des critères que vous souhaitez. Le **BasicTableIndex** exemple charge beaucoup plus longue liste d’éléments d’un fichier afin d’illustrer l’index. Chaque élément dans l’index correspond à une section de la table.
 
- [ ![](populating-a-table-with-data-images/image5.png "L’affichage de l’Index")](populating-a-table-with-data-images/image5.png)
+ [![](populating-a-table-with-data-images/image5.png "L’affichage de l’Index")](populating-a-table-with-data-images/image5.png#lightbox)
 
 Pour prendre en charge 'sections' les données sous-jacentes de la table doivent être regroupés, donc l’exemple BasicTableIndex crée un `Dictionary<>` à partir du tableau de chaînes à l’aide de la première lettre de chaque élément en tant que clé de dictionnaire :
 
@@ -270,7 +270,7 @@ Les index sont uniquement utilisées avec le style de table simple.
 En-têtes et pieds de page peuvent être utilisés pour regrouper visuellement des lignes dans une table. La structure de données requises est très similaire à l’ajout d’un index – un `Dictionary<>` fonctionne très bien. Au lieu d’utiliser l’alphabet pour regrouper les cellules, cet exemple permet de regrouper les légumes par type Botanique.
 La sortie ressemble à ceci :
 
- [ ![](populating-a-table-with-data-images/image6.png "Exemples d’en-têtes et pieds de page")](populating-a-table-with-data-images/image6.png)
+ [![](populating-a-table-with-data-images/image6.png "Exemples d’en-têtes et pieds de page")](populating-a-table-with-data-images/image6.png#lightbox)
 
 Pour afficher des en-têtes et pieds de page le `UITableViewSource` sous-classe requiert ces méthodes supplémentaires :
 

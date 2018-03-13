@@ -3,14 +3,15 @@ title: "Résumé du chapitre 21. Transformations"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 378ce3fb39cfb5c42d5ec7611415f5420146a9cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Résumé du chapitre 21. Transformations
 
@@ -49,7 +50,7 @@ Le [ **TranslationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Une utilisation courante des propriétés de la traduction est pour décaler légèrement le rendu de texte. Cela est illustré dans le [ **TextOffsets** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets) exemple :
 
-[![Capture d’écran de triple des Offsets de texte](images/ch21fg03-small.png "texte Offsets")](images/ch21fg03-large.png "Offsets du texte")
+[![Capture d’écran de triple des Offsets de texte](images/ch21fg03-small.png "texte Offsets")](images/ch21fg03-large.png#lightbox "Offsets du texte")
 
 Un autre effet consiste à rendre plusieurs copies d’un `Label` ressemble à un bloc 3D, comme illustré dans le [ **BlockText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText) exemple.
 
@@ -101,7 +102,7 @@ Le [ **MinimalBoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-sam
 
 Le [ **BoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock) utilise `BoxView` pour les graphiques plus étendues, y compris les graduations marque autour de l’image de l’horloge et remet que faire pivoter une peu la distance à partir de leurs extrémités :
 
-[![Capture d’écran de triple d’horloge de BoxView](images/ch21fg17-small.png "cadran analogique")](images/ch21fg17-large.png "cadran analogique")
+[![Capture d’écran de triple d’horloge de BoxView](images/ch21fg17-small.png "cadran analogique")](images/ch21fg17-large.png#lightbox "cadran analogique")
 
 En outre un [ `SecondBackEaseConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) classe dans **Xamarin.FormsBook.Toolkit** provoque l’aiguille d’extraire un peu avant de passer en avance, puis replacez dans sa position correcte.
 

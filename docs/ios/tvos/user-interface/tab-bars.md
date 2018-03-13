@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 37c0b3f1f826893bef5c1a7ffb5d422c1c8c5c78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc9765b3f6a77f47fdce32dbc3805dd7bd70a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tab-bar-controller"></a>Fonctionne avec le contrôleur de la barre d’onglet
 
@@ -20,7 +20,7 @@ _Cet article décrit la conception et fonctionne avec le contrôleur de barre d�
 
 Pour de nombreux types d’applications de tvOS, navigation principale est présentée comme une barre d’onglets dans la partie supérieure de l’écran. L’utilisateur fait glisser sa gauche et droite sur la liste des catégories possibles et la zone de contenu ci-dessous les modifications pour refléter la sélection de l’utilisateur.
 
-[ ![](tab-bars-images/tab01.png "Exemple de barre d’onglet")](tab-bars-images/tab01.png)
+[![](tab-bars-images/tab01.png "Exemple de barre d’onglet")](tab-bars-images/tab01.png#lightbox)
 
 La barre d’onglet est transparente par défaut et apparaît toujours en haut de l’écran. Dans le focus, une barre d’onglets couvrent 140 pixels supérieur de l’écran, mais sera rapidement diapositive immédiatement lors de la sélection se déplace vers la zone de contenu ci-dessous.
 
@@ -64,22 +64,22 @@ Pour travailler avec des barres de l’onglet dans une application Xamarin.tvOS,
     
 1. Démarrez une nouvelle application Xamarin.tvOS et sélectionnez **tvOS** > **application** > **avec onglet l’application**: 
 
-    [ ![](tab-bars-images/tab02.png "Sélectionnez une application avec onglets")](tab-bars-images/tab02.png)
+    [![](tab-bars-images/tab02.png "Sélectionnez une application avec onglets")](tab-bars-images/tab02.png#lightbox)
 1. Suivez toutes les invites pour créer une nouvelle Xamarin.tvOS Solution.
 1. Dans le **Solution remplissage**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Pour modifier la **icône** ou **titre** pour une catégorie donnée, sélectionnez le **élément de barre d’onglet** pour le **View Controller** dans le  **Structure du document**:
 
-    [ ![](tab-bars-images/tab03a.png "Élément de la barre d’onglet pour le contrôleur de la vue dans la structure du Document")](tab-bars-images/tab03a.png)
+    [![](tab-bars-images/tab03a.png "Élément de la barre d’onglet pour le contrôleur de la vue dans la structure du Document")](tab-bars-images/tab03a.png#lightbox)
 1. Puis définissez les propriétés requises dans le **onglet Widget** de la **l’Explorateur de propriétés**: 
 
-    [ ![](tab-bars-images/tab03.png "L’onglet du Widget")](tab-bars-images/tab03.png)
+    [![](tab-bars-images/tab03.png "L’onglet du Widget")](tab-bars-images/tab03.png#lightbox)
 1. Pour ajouter une nouvelle catégorie (onglet), déposez une **View Controller** votre aire de conception : 
 
-    [ ![](tab-bars-images/tab04.png "Un contrôleur de vue")](tab-bars-images/tab04.png)
+    [![](tab-bars-images/tab04.png "Un contrôleur de vue")](tab-bars-images/tab04.png#lightbox)
 1. Cliquez sur le contrôle et faites glisser à partir de la **onglet-View-Controller** au nouveau **View Controller**.
 1. Dans le menu contextuel, sélectionnez **afficher les contrôleurs** pour ajouter la nouvelle vue sous forme d’onglet (catégorie) : 
 
-    [ ![](tab-bars-images/tab05.png "Sélectionnez l’onglet")](tab-bars-images/tab05.png)
+    [![](tab-bars-images/tab05.png "Sélectionnez l’onglet")](tab-bars-images/tab05.png#lightbox)
 1. Concevoir la disposition de l’interface utilisateur pour chaque zone de contenu Caterogies comme d’habitude, en ajoutant des éléments d’interface utilisateur dans le concepteur iOS.
 1. Exposer tous les événements requis pour travailler avec les contrôles d’IU dans le code c#.
 1. Nommez les contrôles d’interface utilisateur que vous souhaitez exposer dans le code c#.
@@ -89,22 +89,22 @@ Pour travailler avec des barres de l’onglet dans une application Xamarin.tvOS,
     
 1. Démarrez une nouvelle application Xamarin.tvOS et sélectionnez **tvOS** > **application** > **avec onglet l’application**: 
 
-    [ ![](tab-bars-images/tab02vs.png "Sélectionnez une application avec onglets")](tab-bars-images/tab02vs.png)
+    [![](tab-bars-images/tab02vs.png "Sélectionnez une application avec onglets")](tab-bars-images/tab02vs.png#lightbox)
 1. Suivez toutes les invites pour créer une nouvelle Xamarin.tvOS Solution.
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Pour modifier la **icône** ou **titre** pour une catégorie donnée, sélectionnez le **élément de barre d’onglet** pour le **View Controller** dans le  **Structure du document**:
 
-    [ ![](tab-bars-images/tab03avs.png "Le contrôleur de la vue dans la structure du Document")](tab-bars-images/tab03avs.png)
+    [![](tab-bars-images/tab03avs.png "Le contrôleur de la vue dans la structure du Document")](tab-bars-images/tab03avs.png#lightbox)
 1. Puis définissez les propriétés requises dans le **onglet Widget** de la **l’Explorateur de propriétés**: 
 
-    [ ![](tab-bars-images/tab03vs.png "L’onglet du Widget")](tab-bars-images/tab03vs.png)
+    [![](tab-bars-images/tab03vs.png "L’onglet du Widget")](tab-bars-images/tab03vs.png#lightbox)
 1. Pour ajouter une nouvelle catégorie (onglet), faites glisser un **View Controller** à partir de la **boîte à outils** et déposez-le sur votre surface de conception : 
 
-    [ ![](tab-bars-images/tab04vs.png "Un contrôleur de vue")](tab-bars-images/tab04vs.png)
+    [![](tab-bars-images/tab04vs.png "Un contrôleur de vue")](tab-bars-images/tab04vs.png#lightbox)
 1. Cliquez sur le contrôle et faites glisser à partir de la **onglet-View-Controller** au nouveau **View Controller**.
 1. Dans le menu contextuel, sélectionnez **afficher les contrôleurs** pour ajouter la nouvelle vue sous forme d’onglet (catégorie) : 
 
-    [ ![](tab-bars-images/tab05vs.png "Sélectionnez l’onglet")](tab-bars-images/tab05vs.png)
+    [![](tab-bars-images/tab05vs.png "Sélectionnez l’onglet")](tab-bars-images/tab05vs.png#lightbox)
 1. Concevoir la disposition de l’interface utilisateur pour chaque zone de contenu Caterogies comme d’habitude, en ajoutant des éléments d’interface utilisateur dans le Concepteur d’iOS.
 1. Exposer tous les événements requis pour travailler avec les contrôles d’IU dans le code c#.
 1. Nommez les contrôles d’interface utilisateur que vous souhaitez exposer dans le code c#.
@@ -137,7 +137,7 @@ TabBar.Items [2].BadgeValue = "10";
 
 Ce qui produit les résultats suivants lorsque vous exécutez :
 
-[ ![](tab-bars-images/tab06.png "Un élément de barre d’onglet avec badge")](tab-bars-images/tab06.png)
+[![](tab-bars-images/tab06.png "Un élément de barre d’onglet avec badge")](tab-bars-images/tab06.png#lightbox)
 
 Utilisez le `Title` propriété de la `UITabBarItem` pour modifier le titre et le `Image` propriété à modifier l’icône.
 

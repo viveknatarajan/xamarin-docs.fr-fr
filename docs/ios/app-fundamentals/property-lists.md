@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d7b4c5a539470a3544d0117251f40fd6bd37f2b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 778e70f6817b71e5910aa85425d46261dfe9c803
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-property-lists"></a>Utilisation des listes de propriétés
 
@@ -24,7 +24,7 @@ Visual Studio pour Mac propose un éditeur graphique .plist qui facilite la modi
 
 La liste des propriétés d’informations ( `Info.plist`) est un fichier requis iOS qui fournit des informations sur la configuration de votre application dans le système. Personnalisée du Visual Studio pour Mac `Info.plist` trois panneaux contrôlées par des tabulations en bas à gauche de la fenêtre Éditeur de fonctionnalités de l’éditeur :
 
- [ ![](property-lists-images/tabs.png "Les onglets de l’éditeur Info.plist en bas à gauche de la fenêtre de l’éditeur")](property-lists-images/tabs.png)
+ [![](property-lists-images/tabs.png "Les onglets de l’éditeur Info.plist en bas à gauche de la fenêtre de l’éditeur")](property-lists-images/tabs.png#lightbox)
 
 Chaque panneau contrôles différentes propriétés, comme indiqué ci-dessous :
 
@@ -57,11 +57,11 @@ Ceux-ci sont décrits plus en détail dans les sections suivantes.
 Cette section contient des informations importantes qui décrit votre application.
 Le **identificateur** stockées ici doit correspondre à l’identificateur de lot est entré dans iTunes Connect (pour les applications App Store) et également dans la liste des ID des applications de portail de configuration iOS et le développement et la Distribution des certificats.
 
- [ ![](property-lists-images/image24.png "e/s d’Application cible")](property-lists-images/image24.png)
+ [![](property-lists-images/image24.png "e/s d’Application cible")](property-lists-images/image24.png#lightbox)
 
 ### <a name="device-deployment"></a>Déploiement de périphérique
 
- [ ![](property-lists-images/deployment.png "Déploiement de périphérique")](property-lists-images/deployment.png)
+ [![](property-lists-images/deployment.png "Déploiement de périphérique")](property-lists-images/deployment.png#lightbox)
 
 L’appareil **déploiement** sections d’informations sont affichées de manière sélective, selon la sélection dans le **périphériques** liste déroulante dans le **Application cible** section ci-dessus. Le **Interface principale** liste déroulante est définie sur **MainStoryboard** dans des applications pilotées par table de montage séquentiel. Si l’interface utilisateur est écrite entièrement en code puis cela peut être vide.
 
@@ -73,7 +73,7 @@ L’appareil **déploiement** sections d’informations sont affichées de mani�
 
 Le **Styles de barre d’état** section est une interface graphique pour la modification d’une application `UIStatusBarStyle`:
 
- [ ![](property-lists-images/status.png "Styles de barre d’état")](property-lists-images/status.png)
+ [![](property-lists-images/status.png "Styles de barre d’état")](property-lists-images/status.png#lightbox)
 
  <a name="Icons" />
 
@@ -89,11 +89,11 @@ Vous trouverez des informations sur l’utilisation des icônes, des images et d
 
 Le `Info.plist` contient des sections particulières pour spécifier les maps intégration et backgrounding des modes. Vous choisissez les options que vous souhaitez prendre en charge ajoutera les propriétés requises pour votre application pour vous.
 
- [ ![](property-lists-images/maps.png "Intégration de mappages")](property-lists-images/maps.png)
+ [![](property-lists-images/maps.png "Intégration de mappages")](property-lists-images/maps.png#lightbox)
 
 Pour plus d’informations sur l’utilisation des mappages, reportez-vous à la Xamarin [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md) guide.
 
- [ ![](property-lists-images/bging.png "Modes d’arrière-plan")](property-lists-images/bging.png)
+ [![](property-lists-images/bging.png "Modes d’arrière-plan")](property-lists-images/bging.png#lightbox)
 
 Pour plus d’informations sur les Modes d’arrière-plan, reportez-vous à la Xamarin [Backgrounding dans iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md) guide.
 
@@ -101,7 +101,7 @@ Pour plus d’informations sur les Modes d’arrière-plan, reportez-vous à la 
 
 Le panneau de configuration avancée contrôle les types de document et les schémas d’URL qui prend en charge de l’application.
 
- [ ![](property-lists-images/image34.png "Panneau de configuration avancée")](property-lists-images/image34.png)
+ [![](property-lists-images/image34.png "Panneau de configuration avancée")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
 
@@ -116,7 +116,7 @@ Reportez-vous à la documentation sur [enregistrer le fichier de Types de votre 
 
 Parfois, une application doit prendre en charge l’ouverture d’un type de fichier personnalisé. Par exemple, nous pouvons adopter ouvrir des fichiers image avec une extension personnalisée *.xam*. Pour spécifier un type de fichier personnalisé, nous allons créer un utilitaire - identificateur de Type universel - personnalisée à l’aide du `UIExportedTypeDeclarations` clé. La capture d’écran ci-dessous illustre comment créer un utilitaire personnalisé pour l’extension .xam :
 
- [ ![](property-lists-images/uti.png "Éditeur de UTIs")](property-lists-images/uti.png)
+ [![](property-lists-images/uti.png "Éditeur de UTIs")](property-lists-images/uti.png#lightbox)
 
 Type simplement comme exporté UTIs spécifier UTIs personnalisés spécifiques à votre application, le *type UTIs importé* ( `UIImportedTypeDeclarations` clé) spécifier les types personnalisés pris en charge mais non détenus par votre application.
 
@@ -126,7 +126,7 @@ Pour plus d’informations sur l’utilisation de UTIs personnalisés, reportez-
 
 Un nom de schéma d’URL (également appelé protocole) est la première partie de l’URL. Par exemple, `http://` et `https://` sont les schémas d’URL courantes. Vous avez la possibilité de créer un modèle d’URL personnalisé pour votre application. Les schémas d’URL personnalisés sont utilisés pour communiquer et envoyer des données dans les deux sens avec d’autres applications. La capture d’écran suivante illustre la création d’un nouveau schéma d’URL personnalisé appelé `monkeys://`:
 
- [ ![](property-lists-images/url.png "URL personnalisées")](property-lists-images/url.png)
+ [![](property-lists-images/url.png "URL personnalisées")](property-lists-images/url.png#lightbox)
 
 
 
@@ -136,15 +136,15 @@ Pour plus d’informations sur l’implémentation des modèles d’URL personna
 
 Le **Source** onglet de le `Info.plist` fichier autorise des valeurs personnalisées être ajoutés ou modifiés. Visual Studio pour Mac fournit une liste de propriétés les plus courantes :
 
- [ ![](property-lists-images/image31.png "Ajout d’une nouvelle propriété à partir d’une liste déroulante")](property-lists-images/image31.png)
+ [![](property-lists-images/image31.png "Ajout d’une nouvelle propriété à partir d’une liste déroulante")](property-lists-images/image31.png#lightbox)
 
 Pour les propriétés connues Visual Studio pour Mac est une liste de valeurs valides, comme illustré par la capture d’écran suivante :
 
- [ ![](property-lists-images/image32.png "Sélectionnez une valeur dans une liste de valeurs connus")](property-lists-images/image32.png)
+ [![](property-lists-images/image32.png "Sélectionnez une valeur dans une liste de valeurs connus")](property-lists-images/image32.png#lightbox)
 
 Visual Studio pour Mac détecte également le Type de propriété, comme indiqué :
 
- [ ![](property-lists-images/image33.png "Les types de propriétés disponibles")](property-lists-images/image33.png)
+ [![](property-lists-images/image33.png "Les types de propriétés disponibles")](property-lists-images/image33.png#lightbox)
 
 Passez en revue d’Apple [ressources connexes d’application](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) des liens pour plus d’informations sur les propriétés facultatives.
 

@@ -3,16 +3,16 @@ title: "accès aux données d’iOS"
 description: "La plupart des applications ont une spécification pour enregistrer les données sur le périphérique local. Sauf si la quantité de données est petite plus simplement, ceci nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès à la base de données. iOS a le moteur de base de données SQLite « intégré » et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Ce document montre comment accéder à une base de données SQLite."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
+ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 9ca929f584ec2b0d98300e7645707131df89969f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dba862055cc266b2af1eaf87418fe7ebf5830c5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-data-access"></a>accès aux données d’iOS
 

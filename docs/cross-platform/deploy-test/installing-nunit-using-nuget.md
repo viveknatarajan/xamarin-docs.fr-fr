@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 9dc50aeec88131a1ce49c7e3357382c019774450
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7f42d6e36638bf5c7e98b9363295e37997ee067
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-nunit-264-using-nuget"></a>Installation de NUnit 2.6.4 à l’aide de NuGet
 
@@ -43,16 +43,16 @@ Les étapes qui suivent expliquent comment installer NUnit 2.6.4.
 
 1. **Ouvrez le gestionnaire de package** : Cliquez avec le bouton droit sur **Packages**, puis sélectionnez **Ajouter des packages** dans le menu contextuel :
 
-    [![](installing-nunit-using-nuget-images/add-packages-xs.png "Cliquez avec le bouton droit sur Packages, puis sélectionnez Ajouter des packages dans le menu contextuel")](installing-nunit-using-nuget-images/add-packages-xs.png)
+    [![](installing-nunit-using-nuget-images/add-packages-xs.png "Cliquez avec le bouton droit sur Packages, puis sélectionnez Ajouter des packages dans le menu contextuel")](installing-nunit-using-nuget-images/add-packages-xs.png#lightbox)
     
 1. **Recherchez `NUnit version:2.6.4`** : Visual Studio pour Mac désinstalle NUnit 3.0 (si nécessaire), puis télécharge et installe NUnit 2.6.4. Dans la boîte de dialogue **Ajouter des packages**, entrez le texte `nunit version:2.6.4` dans le champ de **recherche** situé dans le coin supérieur droit. Sélectionnez **NUnit** dans les résultats de la recherche, puis cliquez sur le bouton **Ajouter un package** :
 
-    [![](installing-nunit-using-nuget-images/nunit-search-xs.png "Sélectionnez NUnit dans les résultats de la recherche, puis cliquez sur le bouton Ajouter un package")](installing-nunit-using-nuget-images/nunit-search-xs.png)
+    [![](installing-nunit-using-nuget-images/nunit-search-xs.png "Sélectionnez NUnit dans les résultats de la recherche, puis cliquez sur le bouton Ajouter un package")](installing-nunit-using-nuget-images/nunit-search-xs.png#lightbox)
 
 
 Vous pouvez vérifier que NUnit 2.6.4 a été installé en regardant le numéro de version du package NUnit dans le panneau Solutions :
 
-[![](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png "Vérifiez le numéro de version du package NUnit dans le panneau Solutions")](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png)
+[![](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png "Vérifiez le numéro de version du package NUnit dans le panneau Solutions")](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png#lightbox)
 
 ## <a name="summary"></a>Récapitulatif
 
@@ -68,7 +68,7 @@ Cette section aborde l’utilisation de la _Console du gestionnaire de package N
 
 1. **Démarrez la console du gestionnaire de package NuGet** : Sélectionnez **Outils > Gestionnaire de package NuGet > Console du gestionnaire de package** :
 
-    [![](installing-nunit-using-nuget-images/package-manager-console.png "Démarrez la console du gestionnaire de package NuGet : Sélectionnez Outils > Gestionnaire de package NuGet > Console du gestionnaire de package")](installing-nunit-using-nuget-images/package-manager-console.png)
+    [![](installing-nunit-using-nuget-images/package-manager-console.png "Démarrez la console du gestionnaire de package NuGet : Sélectionnez Outils > Gestionnaire de package NuGet > Console du gestionnaire de package")](installing-nunit-using-nuget-images/package-manager-console.png#lightbox)
     
 1. **Vérifiez la version de NUnit** : Si vous le souhaitez, vous pouvez vérifier la version de NUnit qui est installée en exécutant la commande `Get-Package -Project <UITEST PROJECT>` :
 

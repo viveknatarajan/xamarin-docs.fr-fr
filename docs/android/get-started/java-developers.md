@@ -7,17 +7,17 @@ ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: fb74e0efd62c6347534e6f301953325bd4d378d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 240fc917a154085a459c6612f68c8b71e3ef01bb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin pour les développeurs Java
 
 _Si vous êtes un développeur Java, vous allez pouvoir tirer parti de vos compétences et de votre code existant sur la plateforme Xamarin tout en bénéficiant des avantages de réutilisation de code de C#. Vous constaterez que la syntaxe C# est très similaire à la syntaxe de Java, et que les deux langages fournissent des fonctionnalités similaires. Vous constaterez que la syntaxe C# est très similaire à la syntaxe de Java, et que les deux langages fournissent des fonctionnalités similaires._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -91,7 +91,6 @@ Enfin, Xamarin vous permet de [tirer parti des ressources Java existantes](#inte
 Les sections suivantes décrivent les principales différences de prise en main entre les langages C# et Java ; une section ultérieure décrit les différences de programmation orientée objet entre ces langages.
 
 
-<a name="assemblies" />
 
 ### <a name="libraries-vs-assemblies"></a>Bibliothèques vs. Assemblys
 
@@ -99,7 +98,6 @@ Java empaquète généralement les classes connexes dans des fichiers **.jar**. 
 
 Pour plus d’informations, consultez la rubrique [Assemblys et le Global Assembly Cache](https://msdn.microsoft.com/en-us/library/ms173099.aspx) de MSDN.
 
-<a name="namespaces" />
 
 ### <a name="packages-vs-namespaces"></a>Packages vs. Espaces de noms
 
@@ -111,7 +109,6 @@ namespace WeatherApp
     ...
 ```
 
-<a name="imports" />
 
 ### <a name="importing-types"></a>Importation de types
 
@@ -146,7 +143,6 @@ using System.Threading.Tasks;
 Ces instructions importent les fonctionnalités des espaces de noms `System`, `Android.App`, `Android.Content`, etc.
 
 
-<a name="generics" />
 
 ### <a name="generics"></a>Génériques
 
@@ -197,7 +193,6 @@ Toutefois, il y a des différences importantes :
 -   C# utilise une syntaxe de destructeur de style C++ pour exprimer les finaliseurs. La syntaxe est différente de la méthode `finalize` de Java, mais la sémantique est quasiment identique. (Notez qu’en C#, les destructeurs appellent automatiquement le destructeur de classe de base &ndash; contrairement à Java où un appel explicite à `super.finalize` est utilisé.)
 
 
-<a name="inheritance" />
 
 ### <a name="class-inheritance"></a>Héritage de classe
 
@@ -251,7 +246,6 @@ L’accès aux propriétés peut être en lecture/écriture, en lecture seule ou
 Pour plus d’informations sur les propriétés C#, consultez le site la rubrique [Propriétés](https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx) de MSDN.
 
 
-<a name="basemethods" />
 
 ### <a name="calling-base-class-methods"></a>Appel de méthodes de classe de base
 
@@ -287,7 +281,6 @@ public class MainActivity : Activity
 Dans ce cas, la méthode `OnCreate` définie par la classe dérivée (`MainActivity`) appelle la méthode `OnCreate` de la classe de base (`Activity`).
 
 
-<a name="accessmodifiers" />
 
 ### <a name="access-modifiers"></a>Modificateurs d’accès
 
@@ -300,7 +293,6 @@ Java et C# prennent en charge les modificateurs d’accès `public`, `private` e
 Pour plus d’informations sur les modificateurs d’accès C#, consultez la rubrique [Modificateurs d’accès](https://msdn.microsoft.com/en-us/library/ms173121.aspx) de MSDN.
 
 
-<a name="virtualoverride" />
 
 ### <a name="virtual-and-override-methods"></a>Méthodes virtuelles et de substitution
 
@@ -792,7 +784,6 @@ Si vous disposez de fonctionnalités Java existantes que vous ne souhaitez pas c
 Pour plus d’informations sur ces techniques, consultez [Présentation de l’intégration Java](~/android/platform/java-integration/index.md).
 
 
-<a name="further" />
 
 ## <a name="for-further-reading"></a>Pour obtenir des informations supplémentaires
 
@@ -803,7 +794,6 @@ De la même façon que les connaissances de Java impliquent autant la familiaris
 Lorsque vous êtes prêt à gérer votre premier projet Xamarin.Android en C#, notre série [Hello, Android](~/android/get-started/hello-android/index.md) peut vous aider à créer votre première application Xamarin.Android, et approfondir votre compréhension des principes fondamentaux du développement d’applications Android avec Xamarin.
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

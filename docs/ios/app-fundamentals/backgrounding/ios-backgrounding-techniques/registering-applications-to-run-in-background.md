@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: dddd1ad4ae70b97f17ba71a7e96b553759e35695
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5fcb41f4f60adc8ca5be761c2b9a7449387a89d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="registering-applications-to-run-in-the-background"></a>L’inscription des Applications à s’exécuter en arrière-plan
 
@@ -34,7 +34,7 @@ Applications inscrites peuvent appartenir à plusieurs catégories :
 
 Les applications peuvent être inscrits en définissant le **Modes d’arrière-plan requis** propriété dans l’application *Info.plist*. Une application peut enregistrer dans autant de catégories car il nécessite :
 
- [ ![](registering-applications-to-run-in-background-images/bgmodes.png "Définir les modes d’arrière-plan")](registering-applications-to-run-in-background-images/bgmodes.png)
+ [![](registering-applications-to-run-in-background-images/bgmodes.png "Définir les modes d’arrière-plan")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 Pour un guide pas à pas pour l’inscription d’une application pour les mises à jour en arrière-plan emplacement, consultez le [procédure pas à pas d’arrière-plan emplacement](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
 
@@ -42,7 +42,7 @@ Pour un guide pas à pas pour l’inscription d’une application pour les mises
 
 Une autre propriété qui peut être définie dans *Info.plist* est la *Application n’est pas exécuté en arrière-plan*, ou `UIApplicationExitsOnSuspend` propriété :
 
- [ ![](registering-applications-to-run-in-background-images/plist.png "La désactivation en arrière-plan en cours d’exécution")](registering-applications-to-run-in-background-images/plist.png)
+ [![](registering-applications-to-run-in-background-images/plist.png "La désactivation en arrière-plan en cours d’exécution")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 Cela a exactement le même effet que le paramètre d’actualisation en arrière-plan application OFF dans iOS 7 +, mais il peut uniquement être modifié sur le côté du développeur et est disponible pour les e/s 4 et versions ultérieures. L’application sera suspendue immédiatement après l’entrée de l’arrière-plan et ne sera pas en mesure d’effectuer tout traitement.
 

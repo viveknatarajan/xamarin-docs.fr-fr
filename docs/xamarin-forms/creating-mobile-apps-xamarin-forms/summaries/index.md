@@ -3,14 +3,15 @@ title: "Résumés de chapitre pour la création d’applications mobiles avec Xa
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 14A1A56C-CE91-4F86-BCF2-A4CB055A861E
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b88d227b272c34dd1c4d22fc707edce4df6dd91f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2cf6033958848f0c1b16e78fbc3a3d18a6b4fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="chapter-summaries-for-creating-mobile-apps-with-xamarinforms"></a>Résumés de chapitre pour la création d’applications mobiles avec Xamarin.Forms
 
@@ -26,27 +27,27 @@ Le **code d’origine à partir de livre** branche de la [ **xamarin-forms-livre
 
 ## <a name="contents"></a>Sommaire
 
-[Chapitre 1. Comment convient-elle Xamarin.Forms ?](chapter01.md)
+[Chapitre 1. Comment Xamarin.Forms est-il intégré ?](chapter01.md)
 
 [Chapitre 2. Anatomie d’une application](chapter02.md)
 
-[Chapitre 3. Plus de texte](chapter03.md)
+[Chapitre 3. Détails du texte](chapter03.md)
 
 [Chapitre 4. Défilement de la pile](chapter04.md)
 
-[Chapitre 5. Vous traitez des tailles](chapter05.md)
+[Chapitre 5. Gestion des tailles](chapter05.md)
 
 [Chapitre 6. Clics de bouton](chapter06.md)
 
 [Chapitre 7. XAML et code](chapter07.md)
 
-[Chapitre 8. XAML en harmonie et code](chapter08.md)
+[Chapitre 8. Code et XAML en harmonie](chapter08.md)
 
-[Chapitre 9. Appels d’API spécifiques à la plateforme](chapter09.md)
+[Chapitre 9. Appels d’API spécifiques de la plateforme](chapter09.md)
 
 [Chapitre 10. Extensions de balisage XAML](chapter10.md)
 
-[Chapitre 11. L’infrastructure pouvant être liée](chapter11.md)
+[Chapitre 11. Infrastructure Bindable](chapter11.md)
 
 [Chapitre 12. Styles](chapter12.md)
 
@@ -56,31 +57,31 @@ Le **code d’origine à partir de livre** branche de la [ **xamarin-forms-livre
 
 [Chapitre 15. L’interface interactive](chapter15.md)
 
-[Chapitre 16. liaison de données](chapter16.md)
+[Chapitre 16. Liaison de données](chapter16.md)
 
-[Chapitre 17. La maîtrise de la grille](chapter17.md)
+[Chapitre 17. Maîtrise de la grille](chapter17.md)
 
 [Chapitre 18. MVVM](chapter18.md)
 
 [Chapitre 19. Vues de collection](chapter19.md)
 
-[Chapitre 20. E/s asynchrones et fichier](chapter20.md)
+[Chapitre 20. E/S de fichier et asynchrone](chapter20.md)
 
-[Chapitre 21. Transforms](chapter21.md)
+[Chapitre 21. Transformations](chapter21.md)
 
 [Chapitre 22. Animation](chapter22.md)
 
-[Chapitre 23. Les déclencheurs et les comportements](chapter23.md)
+[Chapitre 23. Déclencheurs et comportements](chapter23.md)
 
 [Chapitre 24. Navigation entre les pages](chapter24.md)
 
-[Chapitre 25. Variétés de page](chapter25.md)
+[Chapitre 25. Types de page](chapter25.md)
 
 [Chapitre 26. Dispositions personnalisées](chapter26.md)
 
-[Chapitre 27. Convertisseurs personnalisés](chapter27.md)
+[Chapitre 27. Renderers personnalisés](chapter27.md)
 
-[Chapitre 28. Emplacement et des mappages](chapter28.md)
+[Chapitre 28. Emplacement et mappages](chapter28.md)
 
 
 

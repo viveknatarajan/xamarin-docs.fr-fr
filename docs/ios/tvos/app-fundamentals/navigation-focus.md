@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 82151599b92094b816f4763c533ed7746db37920
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>Utilisation de Navigation et le Focus
 
@@ -21,7 +21,7 @@ _Cet article décrit le concept de Focus et comment il est utilisé pour présen
 
 Cet article décrit le concept de [Focus](#Focus-and-Selection) et comment il est utilisé pour gérer [Navigation](#Navigation) dans l’Interface utilisateur d’une application Xamarin.tvOS. Nous allons aborder l’utilisation de Focus, mise en surbrillance et la sélection pour fournir la Navigation dans l’Interface utilisateur de votre application Xamarin.tvOS dans les contrôles de Navigation de tvOS intégrés.
 
-[ ![](navigation-focus-images/intro01.png "applications tvOS Navigation de l’Interface utilisateur")](navigation-focus-images/intro01.png)
+[![](navigation-focus-images/intro01.png "applications tvOS Navigation de l’Interface utilisateur")](navigation-focus-images/intro01.png#lightbox)
 
 Ensuite, nous allons examiner comment le Focus peut être utilisé avec [parallaxe](#Focus-and-Parallax) et *en couche des Images* pour fournir des indices visuels à l’utilisateur final pour l’état actuel de la Navigation.
 
@@ -35,7 +35,7 @@ Les utilisateurs de votre application Xamarin.tvOS pas interagir avec son interf
 
 Une application réussie tvOS implémente la navigation de manière fluide prend en charge l’objectif de l’application et la structure des données, qu'il s’affiche sans attirer l’attention sur la barre de navigation. Concevoir votre navigation afin qu’il est naturel et familier sans dominent l’Interface utilisateur ou éloignez le contenu et l’expérience utilisateur applications le focus de dessin.
 
-[ ![](navigation-focus-images/nav01.png "L’application de paramètres tvOS")](navigation-focus-images/nav01.png)
+[![](navigation-focus-images/nav01.png "L’application de paramètres tvOS")](navigation-focus-images/nav01.png#lightbox)
 
 Alors que, généralement à l’aide d’un Apple TV, l’utilisateur navigue dans un ensemble empilé d’écrans, chacune présentant un ensemble donné de contenu. À son tour, chaque nouvel écran peut entraîner un ou plusieurs écrans sous-chemin de contenu à l’aide de contrôles d’interface utilisateur standards comme [boutons](~/ios/tvos/user-interface/buttons.md), [onglet barres](~/ios/tvos/user-interface/tab-bars.md), Tables, [vues de Collection](~/ios/tvos/user-interface/collection-views.md) ou [ Fractionner les affichages](~/ios/tvos/user-interface/split-views.md).
 
@@ -58,7 +58,7 @@ Apple suggère en n’oubliant pas les éléments suivants lorsque vous créez l
 
 Sur l’Apple TV, une image, bouton ou autre élément d’interface utilisateur est considéré comme _focus_ lorsqu’il est la cible de la navigation en cours.
 
-[ ![](navigation-focus-images/focus01.png "Exemple de la sélection")](navigation-focus-images/focus01.png)
+[![](navigation-focus-images/focus01.png "Exemple de la sélection")](navigation-focus-images/focus01.png#lightbox)
 
 À la différence des appareils iOS où l’utilisateur interagit directement avec des éléments sur l’écran tactile du périphérique, les utilisateurs interagissent avec les éléments tvOS à partir de sur l’espace à l’aide de l’instance distante de Siri. Pour présenter et gérer l’interaction utilisateur, l’Apple TV utilise un _Focus_ en fonction du modèle.
 
@@ -138,7 +138,7 @@ Toutefois, il peut arriver, en raison de l’outils de conception de votre inter
 
 Effectuez la mise en page de l’interface utilisateur suivant pour obtenir un exemple :
 
- [ ![](navigation-focus-images/guide01.png "Utilisation de l’exemple de repères de Focus")](navigation-focus-images/guide01.png)
+ [![](navigation-focus-images/guide01.png "Utilisation de l’exemple de repères de Focus")](navigation-focus-images/guide01.png#lightbox)
  
 Étant donné que la **informations** bouton n’est pas un quadrillage horizontal et vertical avec le **acheter** bouton il serait inaccessible à l’utilisateur. Toutefois, cela peut être facilement corrigée à l’aide un _Focus Guide_ pour fournir des indicateurs de mouvements au moteur de Focus. 
 
@@ -170,7 +170,7 @@ Tout d’abord, un nouveau `UIFocusGuide` est créé et ajouté à la collection
 
 Ensuite, le Guide de Focus haut, gauche, largeur et hauteur ancres sont ajustées relatif à la **informations** et **acheter** boutons à placer entre eux. Consultez :
 
-[ ![](navigation-focus-images/guide02.png "Guide de Focus d’exemple")](navigation-focus-images/guide02.png)
+[![](navigation-focus-images/guide02.png "Guide de Focus d’exemple")](navigation-focus-images/guide02.png#lightbox)
 
 Il est également important de noter que les nouvelles contraintes sont en cours d’activation comme elles sont créées en définissant leurs `Active` propriété `true`:
 
@@ -283,7 +283,7 @@ Cet article a couvert le concept de Focus et comment il est utilisé pour gérer
 
 ## <a name="related-links"></a>Liens associés
 
-- [Exemples de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Exemples tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS les Guides Interface humaine](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guide de programmation d’application de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -6,12 +6,12 @@ ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: b1ddcca25fd83a806e8383a5717462b518b46d0b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 89679f7d825422ab34dd77b31a7a3fde60f36e99
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="recyclerview-parts-and-functionality"></a>Fonctionnalités et les parties RecyclerView
 
@@ -57,7 +57,7 @@ Si vous n’étendez pas `ItemDecoration` et `ItemAnimator`, `RecyclerView` util
 
 `RecyclerView` n’alloue pas une vue d’article pour chaque élément de source de données. Au lieu de cela, il alloue uniquement le nombre de vues des éléments qui correspondent à l’écran, et il réutilise les dispositions de l’élément en tant que l’utilisateur fait défiler. Lorsque la vue défile tout d’abord basculer vers elle, il passe par le processus de recyclage illustré dans la figure suivante :
 
-[ ![Diagramme illustrant les six étapes de la vue de recyclage](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png)
+[![Diagramme illustrant les six étapes de la vue de recyclage](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
 1.  Lorsqu’une vue fait défiler la vue et n’est plus affichée, il devient un *mise au rebut de vue*.
 
@@ -75,7 +75,6 @@ Si vous n’étendez pas `ItemDecoration` et `ItemAnimator`, `RecyclerView` util
 En plus de la réutilisation de l’affichage des éléments, `RecyclerView` utilise également une autre optimisation de l’efficacité : afficher les détenteurs. A *détenteur de la vue* est une classe simple que caches afficher les références. Chaque fois que l’adaptateur augmente d’un fichier de disposition de l’élément, il crée également un détenteur de vue correspondante. Le détenteur de la vue utilise `FindViewById` pour obtenir des références aux vues dans le fichier de disposition d’élément augmentée. Ces références sont utilisées pour charger les nouvelles données dans les vues chaque fois que la disposition est recyclée pour afficher les nouvelles données.
  
 
-<a name="layoutmanager" />
 
 ### <a name="the-layout-manager"></a>Le Gestionnaire de disposition
 
@@ -96,7 +95,6 @@ Pour spécifier le Gestionnaire de disposition, instancier votre gestionnaire de
 
 Pour plus d’informations sur le Gestionnaire de disposition, consultez la [référence de classe RecyclerView.LayoutManager](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-<a name="viewholder" />
 
 ### <a name="the-view-holder"></a>Le détenteur de l’affichage
 
@@ -109,7 +107,6 @@ Le détenteur de la vue est une classe que vous définissez pour afficher les r�
 Un exemple détaillé d’un `ViewHolder` implémentation est présenté dans [A base RecyclerView exemple](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
 Pour plus d’informations sur `RecyclerView.ViewHolder`, consultez la [référence de classe RecyclerView.ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
-<a name="adapter" />
 
 ### <a name="the-adapter"></a>L’adaptateur
 
@@ -118,7 +115,7 @@ La plupart de la « lourdes » de la `RecyclerView` code d’intégration a li
 
 Le dessin suivant montre comment l’adaptateur mappe le contenu dans une source de données par le biais des détenteurs de vue à des vues dans chaque élément de ligne dans le `RecyclerView`:
 
-[ ![Diagramme illustrant la carte de connexion de Source de données à ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png)
+[![Diagramme illustrant la carte de connexion de Source de données à ViewHolders](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
 
 L’adaptateur charge chacun `RecyclerView` ligne contenant des données pour un élément de ligne particulière. Pour la position de ligne *P*, par exemple, l’adaptateur recherche les données associées à la position *P* au sein de la source de données et les copies de ces données à la ligne d’élément à la position *P* dans le `RecyclerView` collection.
 Dans le dessin ci-dessus, par exemple, l’adaptateur utilise le détenteur de la vue pour rechercher les références pour le `ImageView` et `TextView` à cet emplacement afin qu’il ne doit pas nécessairement appeler `FindViewById` pour ces vues en tant que l’utilisateur fait défiler la collection et réutilise les vues.
@@ -134,7 +131,6 @@ Lorsque vous implémentez un adaptateur, vous devez substituer les éléments su
 Le Gestionnaire de disposition appelle ces méthodes pendant qu’il est positionner des éléments dans le `RecyclerView`. 
 
 
-<a name="datachanges" />
 
 ### <a name="notifying-recyclerview-of-data-changes"></a>RecyclerView de notification des modifications de données
 

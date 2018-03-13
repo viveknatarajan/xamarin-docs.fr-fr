@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 12314e6ec5951a5a094ed8b0a5536b450853c5fb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a3f8ca8f4502b9585536815aef81f66cacd214f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-tables-appearance"></a>Personnaliser l’apparence de la Table
 
@@ -29,7 +29,7 @@ Il existe quatre styles intégrés :
 
 Ces captures d’écran montrent comment chaque style s’affiche :
 
- [ ![](customizing-table-appearance-images/image7.png "Ces captures d’écran montrent comment chaque style s’affiche")](customizing-table-appearance-images/image7.png)
+ [![](customizing-table-appearance-images/image7.png "Ces captures d’écran montrent comment chaque style s’affiche")](customizing-table-appearance-images/image7.png#lightbox)
 
 L’exemple **CellDefaultTable** contient le code pour générer ces écrans. Le style de cellule est défini dans le `UITableViewCell` constructeur, comme suit :
 
@@ -60,7 +60,7 @@ Cellules peuvent avoir les accessoires suivants ajoutées à droite de la vue :
 
 Voici à quoi ils ressemblent :
 
- [ ![](customizing-table-appearance-images/image8.png "Exemple accessoires")](customizing-table-appearance-images/image8.png)
+ [![](customizing-table-appearance-images/image8.png "Exemple accessoires")](customizing-table-appearance-images/image8.png#lightbox)
 
 Pour afficher l’un de ces accessoires que vous pouvez définir le `Accessory` propriété dans la `GetCell` méthode :
 
@@ -119,7 +119,7 @@ Pour modifier le style visuel d’une table, que vous devez fournir des cellules
 
 L’exemple CellCustomTable implémente un `UITableViewCell` sous-classe qui définit une disposition personnalisée de `UILabel`s et un `UIImage` avec différentes polices et couleurs. Les cellules qui en résulte se présenter comme suit :
 
- [ ![](customizing-table-appearance-images/image9.png "Dispositions de cellule personnalisé")](customizing-table-appearance-images/image9.png)
+ [![](customizing-table-appearance-images/image9.png "Dispositions de cellule personnalisé")](customizing-table-appearance-images/image9.png#lightbox)
 
 La classe de cellule personnalisée se compose de trois méthodes :
 

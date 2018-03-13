@@ -3,14 +3,15 @@ title: "Résumé du chapitre 2. Anatomie d’une application"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 893030170175403c7f7d6885e924e425b4f73c05
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f1569911eb47f28ea6aee2313d01e07c801746df
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Résumé du chapitre 2. Anatomie d’une application
 
@@ -186,7 +187,7 @@ En général ces propriétés ne sont pas utilisées directement. Au lieu de cel
 
 Voici le résultat avec la `HorizontalOptions` et `VerticalOptions` propriétés de `Label` tous deux la valeur `LayoutOptions.Center`:
 
-[![Capture d’écran de triple du programme de greetings](images/ch02fg05-small.png "horizontalement et verticalement centré étiquette")](images/ch02fg05-large.png "horizontalement et verticalement centré d’étiquette")
+[![Capture d’écran de triple du programme de greetings](images/ch02fg05-small.png "horizontalement et verticalement centré étiquette")](images/ch02fg05-large.png#lightbox "horizontalement et verticalement centré d’étiquette")
 
 ## <a name="solution-5-center-the-text-within-the-label"></a>Solution de 5. Centre le texte dans l’étiquette
 

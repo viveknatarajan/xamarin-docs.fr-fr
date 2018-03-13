@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 55a9e56585521a0a7b89a7b881dfecd4e1c14b08
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-user-interface-styles"></a>Nouveaux Styles de l’interface utilisateur
 
@@ -29,11 +29,11 @@ Comme indiqué ci-dessus, tvOS 10 maintenant prend en charge un thème sombre et
 
 L’utilisateur peut basculer ce thème en accédant à **paramètres** > **général** > **apparence** et commutation entre **clair**  et **foncé**:
 
-[ ![](user-interface-styles-images/theme01.png "L’application de paramètres")](user-interface-styles-images/theme01.png)
+[![](user-interface-styles-images/theme01.png "L’application de paramètres")](user-interface-styles-images/theme01.png#lightbox)
 
 Lorsque le **foncé** thème est sélectionné, tous les éléments d’Interface utilisateur passe en texte clair sur un arrière-plan foncé :
 
-[ ![](user-interface-styles-images/theme02.png "Le thème sombre")](user-interface-styles-images/theme02.png)
+[![](user-interface-styles-images/theme02.png "Le thème sombre")](user-interface-styles-images/theme02.png#lightbox)
 
 L’utilisateur a la possibilité de basculer le thème à tout moment et peut le faire donc basé sur l’activité en cours, où se trouve l’Apple TV ou l’heure du jour.
 
@@ -51,10 +51,10 @@ Pour participer à la prise en charge de thème clairs et foncés, procédez com
 2. Sélectionnez le **Source** vue (du bas de l’éditeur).
 3. Ajoutez une nouvelle clé et l’appeler `UIUserInterfaceStyle`: 
 
-    [ ![](user-interface-styles-images/theme03.png "La clé UIUserInterfaceStyle")](user-interface-styles-images/theme03.png)
+    [![](user-interface-styles-images/theme03.png "La clé UIUserInterfaceStyle")](user-interface-styles-images/theme03.png#lightbox)
 4. Laissez le type défini sur `String` et entrez la valeur `Automatic`: 
 
-    [ ![](user-interface-styles-images/theme04.png "Entrez automatique")](user-interface-styles-images/theme04.png)
+    [![](user-interface-styles-images/theme04.png "Entrez automatique")](user-interface-styles-images/theme04.png#lightbox)
 5. Enregistrez les modifications dans le fichier.
 
 Il existe trois valeurs possibles pour le `UIUserInterfaceStyle` clé :
@@ -173,13 +173,13 @@ Pour activer la prise en charge de la Collection de caractéristiques, procédez
 
 1. Avec le bouton droit sur le fichier d’animation dans le **l’Explorateur de solutions** et sélectionnez **ouvrir avec** > **Xcode Interface Builder**: 
 
-    [ ![](user-interface-styles-images/theme05.png "Ouvrir avec le générateur Xcode Interface")](user-interface-styles-images/theme05.png) 
+    [![](user-interface-styles-images/theme05.png "Ouvrir avec le générateur Xcode Interface")](user-interface-styles-images/theme05.png#lightbox) 
 2. Pour activer la prise en charge de la Collection de caractéristiques, basculez vers le **inspecteur de fichier** et vérifiez la **utilisez caractéristique Variations** propriété dans le **Interface Générateur de Document** section : 
 
-    [ ![](user-interface-styles-images/theme06.png "Activer la prise en charge de la Collection de Trait")](user-interface-styles-images/theme06.png)
+    [![](user-interface-styles-images/theme06.png "Activer la prise en charge de la Collection de Trait")](user-interface-styles-images/theme06.png#lightbox)
 3. Confirmer la modification pour utiliser le Trait de variantes : 
 
-    [ ![](user-interface-styles-images/theme07.png "L’alerte de caractéristique Variations d’utilisation")](user-interface-styles-images/theme07.png)
+    [![](user-interface-styles-images/theme07.png "L’alerte de caractéristique Variations d’utilisation")](user-interface-styles-images/theme07.png#lightbox)
 4. Enregistrez les modifications dans le fichier d’animation.
 
 Apple a ajouté les capacités suivantes lorsque vous modifiez des animations tvOS dans le Générateur de Interface :
@@ -188,20 +188,20 @@ Apple a ajouté les capacités suivantes lorsque vous modifiez des animations tv
     
     * Plusieurs propriétés ont désormais une  **+**  en regard de ce qui peut être sélectionné pour ajouter une version spécifique de thème de l’interface utilisateur : 
 
-        [ ![](user-interface-styles-images/theme08.png "Ajouter une version spécifique de thème de l’interface utilisateur")](user-interface-styles-images/theme08.png) 
+        [![](user-interface-styles-images/theme08.png "Ajouter une version spécifique de thème de l’interface utilisateur")](user-interface-styles-images/theme08.png#lightbox) 
     
     * Le développeur peut spécifier une nouvelle propriété, ou cliquez sur le **x** bouton Supprimer : 
 
-        [ ![](user-interface-styles-images/theme09.png "Spécifiez une nouvelle propriété, ou cliquez sur le bouton x pour le supprimer")](user-interface-styles-images/theme09.png)
+        [![](user-interface-styles-images/theme09.png "Spécifiez une nouvelle propriété, ou cliquez sur le bouton x pour le supprimer")](user-interface-styles-images/theme09.png#lightbox)
 * Le développeur peut afficher un aperçu une conception d’interface utilisateur dans le thème sombre ou clair d’Interface Builder :
     
     * Le bas de l’aire de conception permet au développeur basculer le thème actuel de l’interface utilisateur : 
 
-        [ ![](user-interface-styles-images/theme10.png "Le bas de l’aire de conception")](user-interface-styles-images/theme10.png)
+        [![](user-interface-styles-images/theme10.png "Le bas de l’aire de conception")](user-interface-styles-images/theme10.png#lightbox)
         
     * Le nouveau thème s’affichera dans le constructeur d’Interface et les réglages spécifiques caractéristique Collection seront affichera : 
 
-        [ ![](user-interface-styles-images/theme11.png "Le thème affiché dans le constructeur d’Interface")](user-interface-styles-images/theme11.png)
+        [![](user-interface-styles-images/theme11.png "Le thème affiché dans le constructeur d’Interface")](user-interface-styles-images/theme11.png#lightbox)
 
 En outre, le simulateur de tvOS a maintenant un raccourci clavier pour permettre au développeur basculer rapidement entre les thèmes clairs et foncés lors du débogage d’une application tvOS. Utilisez le **commande-MAJ-D** séquence pour basculer entre les clairs et foncés de clavier.
 

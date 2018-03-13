@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 4798da42718658096509948bae07e5e5534d5af0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Générateur d’aperçu XAML pour Xamarin.Forms
 
@@ -30,13 +30,13 @@ Il existe plus d’informations dans le [notes de publication](https://developer
 
 Le **aperçu** bouton peut être affiché sur l’éditeur en double-cliquant sur un fichier XAML et en sélectionnant **ouvrir avec > visionneuse XAML**. Le volet de visualisation peut ensuite être affiché ou masqué en appuyant sur la **aperçu** situé dans l’angle supérieur droit de n’importe quelle fenêtre de document XAML :
 
-[ ![Aperçu du contrôle ListView dans Visual Studio pour Mac](xaml-previewer-images/xamlp-list-sml.png "aperçu des formulaires dans Visual Studio pour Mac")](xaml-previewer-images/xamlp-list.png "aperçu des formulaires dans Visual Studio pour Mac")
+[![Aperçu du contrôle ListView dans Visual Studio pour Mac](xaml-previewer-images/xamlp-list-sml.png "aperçu des formulaires dans Visual Studio pour Mac")](xaml-previewer-images/xamlp-list.png#lightbox "aperçu des formulaires dans Visual Studio pour Mac")
 
 ### <a name="visual-studio-on-windows"></a>Visual Studio sur Windows
 
 Utilisez le **vue > autres fenêtres > Aperçu de Xamarin.Forms** menu dans Visual Studio pour ouvrir la fenêtre d’aperçu. Utilisez le **fenêtre > Nouveau groupe d’onglets Vertical** menu pour la positionner côte-à-côte.
 
-[ ![Aperçu du contrôle ListView dans Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "aperçu des formulaires dans Visual Studio")](xaml-previewer-images/xamlp-list-vs.png "aperçu des formulaires dans Visual Studio")
+[![Aperçu du contrôle ListView dans Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "aperçu des formulaires dans Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "aperçu des formulaires dans Visual Studio")
 
 ## <a name="xaml-preview-options"></a>Options d’aperçu XAML
 

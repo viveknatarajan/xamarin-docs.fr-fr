@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4887b9a42c5a855353b5a4e422559aafcdc68173
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="table-control"></a>Contrôle de table
 
@@ -24,7 +24,7 @@ Le watchOS `WKInterfaceTable` contrôle est beaucoup plus simple que son équiva
 
 Faites glisser le **Table** contrôle dans une scène. Par défaut, il ressemblera cette (avec une disposition de ligne non spécifiée) :
 
-[ ![](table-images/add-table-sml.png "Ajout d’une table")](table-images/add-table.png)
+[![](table-images/add-table-sml.png "Ajout d’une table")](table-images/add-table.png#lightbox)
 
 Donnez un nom à la table dans le **propriétés** du remplissage **nom** zone, afin qu’il peut apparaître dans le code.
 
@@ -34,7 +34,7 @@ La table inclut automatiquement une ligne unique, représentée par un contrôle
 
 Pour définir le **classe** pour le contrôleur de ligne, sélectionnez la ligne dans le **structure du Document** et tapez un nom de classe dans le **propriétés** remplissage :
 
-[ ![](table-images/add-row-controller-sml.png "Entrez un nom de classe dans la zone de propriétés")](table-images/add-row-controller.png)
+[![](table-images/add-row-controller-sml.png "Entrez un nom de classe dans la zone de propriétés")](table-images/add-row-controller.png#lightbox)
 
 Une fois que la classe de contrôleur de la ligne est définie, l’IDE créera un fichier c# correspondant dans le projet. Faites glisser les contrôles (par exemple, les étiquettes) sur la ligne et les nommer afin qu’ils peuvent être référencés dans le code.
 

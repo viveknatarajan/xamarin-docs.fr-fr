@@ -7,11 +7,11 @@ ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63faa0c46abfb509a6834efa647f23ad0ed7f454
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1a5e4ab73c9090cbb743dc8cb339d6f50c5ff527
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>Procédure pas à pas : Utilisation d’un élément de JSON pour créer une Interface utilisateur
 
@@ -22,7 +22,7 @@ MT. D prend en charge la création d’interfaces utilisateur déclaré dans JSO
 
 MT. D prend en charge la gamme complète des fonctionnalités qui sont disponibles dans l’API d’éléments lors de l’utilisation de JSON. Par exemple, l’application dans la capture d’écran suivante est déclarée complètement à l’aide de JSON :
 
-[ ![](json-element-walkthrough-images/01-load-from-file.png "Par exemple, l’application dans cette capture d’écran est complètement déclarée à l’aide de JSON") ](json-element-walkthrough-images/01-load-from-file.png) [ ![ ] (json-element-walkthrough-images/02-load-from-file-details.png ", par exemple, l’application dans cette capture d’écran est complètement déclarée à l’aide de JSON")](json-element-walkthrough-images/02-load-from-file-details.png)
+[![](json-element-walkthrough-images/01-load-from-file.png "Par exemple, l’application dans cette capture d’écran est complètement déclarée à l’aide de JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png ", par exemple, l’application dans cette capture d’écran est complètement déclarée à l’aide de JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Nous allons revisiter l’exemple de la [API de procédure pas à pas les éléments](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) didacticiel, montrant comment ajouter un écran de détails de tâche à l’aide de JSON.
 
@@ -30,7 +30,7 @@ Nous allons revisiter l’exemple de la [API de procédure pas à pas les élém
 
 L’exemple de cette procédure pas à pas permet la création de tâches. Lorsqu’une tâche est sélectionnée dans le premier écran, un écran de détails est présenté comme indiqué :
 
- [ ![](json-element-walkthrough-images/03-task-list.png "Lorsqu’une tâche est sélectionnée dans le premier écran, un écran de détails est présenté comme")](json-element-walkthrough-images/03-task-list.png)
+ [![](json-element-walkthrough-images/03-task-list.png "Lorsqu’une tâche est sélectionnée dans le premier écran, un écran de détails est présenté comme")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
 ## <a name="creating-the-json"></a>Création de l’objet JSON
 
@@ -166,7 +166,7 @@ _rootElement = new RootElement ("Json Example"){
 
 Lors de l’exécution, le fichier sera récupéré et analysé par MT. D lorsque l’utilisateur navigue vers la seconde vue, comme indiqué dans la capture d’écran ci-dessous :
 
- [ ![](json-element-walkthrough-images/04-json-web-example.png "Le fichier sera récupéré et analysé par MT. D lorsque l’utilisateur navigue vers la seconde vue")](json-element-walkthrough-images/04-json-web-example.png)
+ [![](json-element-walkthrough-images/04-json-web-example.png "Le fichier sera récupéré et analysé par MT. D lorsque l’utilisateur navigue vers la seconde vue")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
  <a name="Summary" />
 

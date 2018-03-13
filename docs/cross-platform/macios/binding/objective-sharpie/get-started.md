@@ -7,23 +7,20 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 01c390af08e59f3b10888a183df7fa6758c2609c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5d1de42a398affc1b6b6c9b863df5bc86a016c08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started"></a>Prise en main
-
-<style type="text/css"> .Terminal-bleu {couleur : rgb(10,96,254) ;} .terminal-vert {couleur : rgb(12,156,26) ;} .terminal à magenta {couleur : rgb(152,12,103) ;} </style>
-
 
 > [!IMPORTANT]
 > **Avertissement :** Sharpie objectif est un outil pour les développeurs Xamarin expérimentés possédant des connaissances avancées de Objective-C (et par extension, C). Avant de tenter de lier une bibliothèque Objective-C, vous aurez solides connaissances de la génération de la bibliothèque native sur la ligne de commande (et une bonne compréhension du fonctionne de la bibliothèque native).
 
 <a name="installing" />
 
-# <a name="installing-objective-sharpie"></a>Lors de l’installation Sharpie objectif
+## <a name="installing-objective-sharpie"></a>Lors de l’installation Sharpie objectif
 
 Objectif Sharpie est un outil de ligne de commande autonome pour Mac OS X 10.10 et les versions ultérieures et est _pas un produit entièrement prise en charge de Xamarin_. Elle doit uniquement être utilisée par les développeurs expérimentés pour vous aider à créer un projet de liaison à un 3e partie Objective-C bibliothèque.
 
@@ -34,9 +31,10 @@ Exécuter le programme d’installation et suivez toutes les instructions à l�
   - [Télécharger la dernière version](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
   - [Annonce de forum](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
-> 💡 **Conseil :** utiliser le `sharpie update` commande pour mettre à jour vers la version la plus récente.
+> [!TIP]
+> Utilisez la `sharpie update` commande pour mettre à jour vers la version la plus récente.
 
-# <a name="basic-walkthrough"></a>Procédure de base
+## <a name="basic-walkthrough"></a>Procédure de base
 
 Objectif Sharpie est un outil de ligne de commande fournie par Xamarin qui aide à créer les définitions requises pour lier une bibliothèque de Objective-C 3e partie à c#.
 Même si vous utilisez Sharpie objectif, le développeur *sera* devez modifier les fichiers générés une fois objectif Sharpie terminée pour résoudre les problèmes qui ne peuvent pas être gérées automatiquement par l’outil.

@@ -3,14 +3,15 @@ title: "Résumé du chapitre 5. Vous traitez des tailles"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 4454150b4caad86eb063ab7fcf8a721cbab9b5ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1df1751c55c6a031bf9f26d774b739f4ca83fa91
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Résumé du chapitre 5. Vous traitez des tailles
 
@@ -62,7 +63,7 @@ Il est possible d’ajuster un bloc de texte dans un rectangle donné en calcula
 
 Le [ **EstimatedFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) exemple illustre cette technique. Ce programme a été écrit avant du [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) propriété était disponible, de sorte qu’elle utilise un [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) avec un [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) paramètre pour simuler un marge.
 
-[![Capture d’écran de triple de la taille de police estimé](images/ch05fg07-small.png "texte ajuster à la taille disponible")](images/ch05fg07-large.png "texte ajuster à la taille disponible")
+[![Capture d’écran de triple de la taille de police estimé](images/ch05fg07-small.png "texte ajuster à la taille disponible")](images/ch05fg07-large.png#lightbox "texte ajuster à la taille disponible")
 
 ## <a name="a-fit-to-size-clock"></a>Une horloge de la taille de l’ajustement
 

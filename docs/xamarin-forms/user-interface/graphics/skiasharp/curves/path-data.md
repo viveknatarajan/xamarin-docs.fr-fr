@@ -4,14 +4,15 @@ description: "Définir les chemins d’accès à l’aide de chaînes de texte d
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: feb4c5f4c7e7ad3fc5f762786001be9aa57ae718
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="svg-path-data"></a>Données de chemin d’accès SVG
 
@@ -216,7 +217,7 @@ public class PathDataHelloPage : ContentPage
 
 Le chemin d’accès remplit la zone de dessin, qui se présente plus raisonnable lorsqu’ils sont affichés en mode paysage :
 
-[![](path-data-images/pathdatahello-small.png "Capture d’écran de triple de la page de chemin d’accès données Hello")](path-data-images/pathdatahello-large.png "Triple capture d’écran de la page Hello chemin d’accès données")
+[![](path-data-images/pathdatahello-small.png "Capture d’écran de triple de la page de chemin d’accès données Hello")](path-data-images/pathdatahello-large.png#lightbox "Triple capture d’écran de la page Hello chemin d’accès données")
 
 Le **chemin d’accès données Cat** page est similaire. Les objets de chemin d’accès et peinture sont définis en tant que champs dans le [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe :
 
@@ -287,7 +288,7 @@ public class PathDataCatPage : ContentPage
 
 Voici le programme en cours d’exécution sur les trois plateformes :
 
-[![](path-data-images/pathdatacat-small.png "Capture d’écran de triple de la page de chemin d’accès données Cat")](path-data-images/pathdatacat-large.png "Triple capture d’écran de la page de chemin d’accès données Cat")
+[![](path-data-images/pathdatacat-small.png "Capture d’écran de triple de la page de chemin d’accès données Cat")](path-data-images/pathdatacat-large.png#lightbox "Triple capture d’écran de la page de chemin d’accès données Cat")
 
 Normalement, quand un `SKPath` objet est défini comme un champ, les contours du chemin d’accès doivent être définis dans le constructeur ou une autre méthode. Toutefois, lorsque vous utilisez des données de chemin d’accès SVG, vous avez vu que le chemin d’accès peut être spécifiée entièrement dans la définition du champ.
 
@@ -424,7 +425,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 Quelque chose de spécial est effectuée avec l’aiguille, toutefois. Étant donné que l’horloge est mise à jour toutes les 16 millisecondes, le `Millisecond` propriété de la `DateTime` valeur peut potentiellement être utilisée pour animer un balayage ensuite manuellement au lieu d’un objet qui se déplace dans sauts discrets à partir de la seconde à la seconde. Mais ce code n’autorise pas le déplacement à être lisse. En revanche, il utilise le Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) et [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) accélération des fonctions pour un autre type de déplacement de l’animation. Ces fonctions d’accélération provoquent l’aiguille déplacer d’une manière plus rapide & les #x 2014 ; extraire un peu avant son déplacement, puis légèrement investissements sa destination, un effet qui malheureusement ne peut pas être reproduit dans ces captures d’écran statiques :
 
-[![](path-data-images/prettyanalogclock-small.png "Capture d’écran de triple de la page de l’horloge analogique assez")](path-data-images/prettyanalogclock-large.png "Triple capture d’écran de la page de l’horloge analogique assez")
+[![](path-data-images/prettyanalogclock-small.png "Capture d’écran de triple de la page de l’horloge analogique assez")](path-data-images/prettyanalogclock-large.png#lightbox "Triple capture d’écran de la page de l’horloge analogique assez")
 
 
 ## <a name="related-links"></a>Liens associés

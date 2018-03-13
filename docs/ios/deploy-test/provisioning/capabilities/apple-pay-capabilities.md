@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 88db45135104f14ca3a4b18e466e95288853a6df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cc2c12ce2826f0b66cdf49a9a4df84d7f67f7713
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="apple-pay-capabilities"></a>Fonctionnalités Apple Pay
 
@@ -79,8 +79,8 @@ Un ID de marchand permet à Apple Pay de savoir que vous acceptez les paiements.
 7.  Faites défiler cette section développée jusqu’en bas et cliquez sur **Edit**.
 8.  Faites défiler la liste pour afficher Apple Pay et cliquez sur le bouton **Edit** :  
     
-    
     ![Détails de la modification de l’ID d’application pour Apple Pay](apple-pay-capabilities-images/image39.png)
+
 9.  Sélectionnez l’ID de marchand à utiliser avec cet ID d’application, puis cliquez sur **Continue** :  
     
     ![Sélectionner l’ID de marchand à utiliser pour l’ID d’application](apple-pay-capabilities-images/image40.png)

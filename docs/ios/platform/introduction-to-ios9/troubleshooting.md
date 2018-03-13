@@ -3,16 +3,16 @@ title: "Résolution des problèmes"
 description: "Cet article fournit des conseils de dépannage plusieurs pour travailler avec iOS 9 dans les applications Xamarin.iOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
+ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6ea274ca198a4ca76a87198b02b6229e0e1c88b2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ca3697b355a45e06f941a6dfd610cd19f922ca75
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -32,7 +32,7 @@ Si vous avez installé Xcode 7 (ou version ultérieure) il remplacera automatiqu
 
 Dans Xcode, sélectionnez le **Xcode** menu puis **préférences...**   >  **Télécharge**:
 
-[ ![](troubleshooting-images/ios8.png "Télécharge des simulateurs iOS 8")](troubleshooting-images/ios8.png)
+[![](troubleshooting-images/ios8.png "Télécharge des simulateurs iOS 8")](troubleshooting-images/ios8.png#lightbox)
 
 Cliquez sur le **Check et installer maintenant** bouton pour réinstaller les simulateurs iOS 8.
 
@@ -139,26 +139,26 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 Lorsque vous tentez d’exécuter la version d’iOS 9 de votre application Xamarin.iOS sur du matériel d’iOS réel, vous pouvez obtenir un message indiquant que votre compte de développeur n’a pas été approuvé sur l’appareil. Exemple :
 
-[ ![](troubleshooting-images/untrusted01.png "Alerte de développeur en entreprise non approuvée")](troubleshooting-images/untrusted01.png)
+[![](troubleshooting-images/untrusted01.png "Alerte de développeur en entreprise non approuvée")](troubleshooting-images/untrusted01.png#lightbox)
 
 Pour résoudre ce problème, procédez comme suit :
 
 1. Démarrer Xcode (la dernière version bêta) sur le développement Mac.
 2. Sélectionnez **périphériques** à partir de la **fenêtre** menu pour ouvrir la fenêtre de périphériques : 
 
-    [ ![](troubleshooting-images/untrusted02.png "La fenêtre de périphériques")](troubleshooting-images/untrusted02.png)
+    [![](troubleshooting-images/untrusted02.png "La fenêtre de périphériques")](troubleshooting-images/untrusted02.png#lightbox)
 3. Sous le **périphériques** côté du Panneau de configuration, sélectionnez votre appareil, avec le bouton droit, puis sélectionnez **afficher les profils de configuration...** : 
 
-    [ ![](troubleshooting-images/untrusted03.png "Profils d’approvisionnement SShow")](troubleshooting-images/untrusted03.png)
+    [![](troubleshooting-images/untrusted03.png "Profils d’approvisionnement SShow")](troubleshooting-images/untrusted03.png#lightbox)
 4. Sélectionnez chaque profil de configuration actuellement sur le périphérique et cliquez sur le  **-**  bouton Supprimer : 
 
-    [ ![](troubleshooting-images/untrusted04.png "Suppression d’un profil de configuration")](troubleshooting-images/untrusted04.png)
+    [![](troubleshooting-images/untrusted04.png "Suppression d’un profil de configuration")](troubleshooting-images/untrusted04.png#lightbox)
 5. À partir de la **Xcode** menu, sélectionnez **préférences...**  et **comptes**: 
 
-    [ ![](troubleshooting-images/untrusted05.png "Préférences du compte Xcode")](troubleshooting-images/untrusted05.png)
+    [![](troubleshooting-images/untrusted05.png "Préférences du compte Xcode")](troubleshooting-images/untrusted05.png#lightbox)
 6. Cliquez sur le **afficher les détails...**  , puis cliquez sur le **télécharger tous les** bouton : 
 
-    [ ![](troubleshooting-images/untrusted06.png "Télécharger tous les profils")](troubleshooting-images/untrusted06.png)
+    [![](troubleshooting-images/untrusted06.png "Télécharger tous les profils")](troubleshooting-images/untrusted06.png#lightbox)
 7. Lorsque la liste a terminé la mise à jour, cliquez sur le **fait** bouton et fermer la fenêtre Préférences.
 8. Supprimer la version existante de l’application Xamarin.iOS que vous essayiez de test à partir de l’appareil iOS.
 9. Revenez à Visual Studio pour Mac, un nettoyage de build et essayez d’exécuter à nouveau l’application sur l’appareil.

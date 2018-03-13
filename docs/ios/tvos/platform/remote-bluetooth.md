@@ -3,16 +3,16 @@ title: "Siri distants et les contrôleurs Bluetooth"
 description: "Cet article décrit la prise en charge les contrôleurs de jeu Siri distant et Bluetooth nouvelle dans vos applications Xamarin.tvOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5d74479e995c5c6ba6f6fd9fd23fbca78718ee31
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri distants et les contrôleurs Bluetooth
 
@@ -23,7 +23,7 @@ Les utilisateurs de votre application Xamarin.tvOS pas interagir avec son interf
 
 Si votre application est un jeu, vous pouvez éventuellement générer prise en charge de 3e partie effectuées pour iOS (IFM) [contrôleurs de jeu Bluetooth](#Bluetooth-Game-Controllers) dans votre application également.
 
-[ ![](remote-bluetooth-images/intro01.png "Le Bluetooth distant et le contrôleur de jeu")](remote-bluetooth-images/intro01.png)
+[![](remote-bluetooth-images/intro01.png "Le Bluetooth distant et le contrôleur de jeu")](remote-bluetooth-images/intro01.png#lightbox)
 
 Cet article décrit le [Siri distant](#The-Siri-Remote), [se touchent les mouvements de Surface](#Touch-Surface-Gestures) et [Siri des boutons à distance](#Siri-Remote-Buttons) et montre comment les utiliser via [mouvements et Storyboards](#Gestures-and-Storyboards), [de mouvements et Code](#Gestures-and-Code) et [la gestion des événements de bas niveau](#Low-Level-Event-Handling). Enfin, il décrit [utilisation de contrôleurs de jeu](#Working-with-Game-Controllers) dans une application Xamarin.tvOS.
 
@@ -35,7 +35,7 @@ Est le moyen principal que les utilisateurs d’interagir avec l’Apple TV et d
 
 Votre défi en tant qu’un développeur d’application tvOS est la créer une interface utilisateur rapide, facile à utiliser et visuellement agréables qui tire parti de la surface de tactile de la Siri Remote, accéléromètre, gyroscope et les boutons.
 
-[ ![](remote-bluetooth-images/remote01.png "Siri à distance")](remote-bluetooth-images/remote01.png)
+[![](remote-bluetooth-images/remote01.png "Siri à distance")](remote-bluetooth-images/remote01.png#lightbox)
 
 Siri distant a des utilisations attendues au sein de votre application tvOS et les fonctionnalités suivantes :
 
@@ -128,14 +128,14 @@ Pour ajouter un module de reconnaissance de mouvement, procédez comme suit :
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` et ouvrez-le pour le Concepteur de l’Interface de modification.
 2. Faites glisser un **appuyez sur la reconnaissance de mouvement** à partir de la **bibliothèque** et déposez-la sur la vue : 
 
-    [ ![](remote-bluetooth-images/storyboard01.png "Un module de reconnaissance de mouvement Tap")](remote-bluetooth-images/storyboard01.png)
+    [![](remote-bluetooth-images/storyboard01.png "Un module de reconnaissance de mouvement Tap")](remote-bluetooth-images/storyboard01.png#lightbox)
 3. Vérifiez **sélectionnez** dans les **bouton** section de la **inspecteur de l’attribut**: 
 
-    [ ![](remote-bluetooth-images/storyboard02.png "Activez")](remote-bluetooth-images/storyboard02.png)
+    [![](remote-bluetooth-images/storyboard02.png "Activez")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Sélectionnez** signifie que le mouvement répondra à l’utilisateur en cliquant sur le **Touch une Surface** sur Siri à distance. Vous avez également la possibilité de répondre à la **Menu**, **Lecture/Pause**, **des**, **vers le bas**, **gauche** et **Droite** boutons.
 5. Ensuite, rattachez une **Action** à partir de la **appuyez sur la reconnaissance de mouvement** et appelez-le `TouchSurfaceClicked`: 
 
-    [ ![](remote-bluetooth-images/storyboard03.png "Une Action à partir de la reconnaissance de mouvement Tap")](remote-bluetooth-images/storyboard03.png)
+    [![](remote-bluetooth-images/storyboard03.png "Une Action à partir de la reconnaissance de mouvement Tap")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Enregistrer vos modifications et revenir à Visual Studio pour Mac.
 
 Modifier votre vue contrôleur (exemple `FirstViewController.cs`) et ajoutez le code suivant pour gérer le mouvement de déclenchement :
@@ -314,7 +314,7 @@ Comme avec `UITouch` si vous avez besoin implémenter des événements le `UIPre
 
 En plus de distant Siri standard fourni Apple TV, 3e partie, e/s effectuées pour les contrôleurs de jeu Bluetooth (IFM) peut être associés à l’Apple TV et permettent de contrôler votre application Xamarin.tvOS.
 
-[ ![](remote-bluetooth-images/game01.png "Contrôleurs de jeu de Bluetooth")](remote-bluetooth-images/game01.png)
+[![](remote-bluetooth-images/game01.png "Contrôleurs de jeu de Bluetooth")](remote-bluetooth-images/game01.png#lightbox)
 
 Contrôleurs de jeu peuvent être utilisés pour améliorer le jeu et de fournir une idée d’immersion dans un jeu. Ils peuvent également servir à contrôler l’interface Apple TV standard afin de l’utilisation ne doit pas basculer entre le contrôleur et distant.
 
@@ -425,7 +425,7 @@ Apple présente plusieurs conditions spécifiques qui doivent être satisfaites 
 
 Pour activer la prise en charge de contrôleur de jeu dans votre application Xamarin.tvOS, double-cliquez sur le `Info.plist` de fichiers dans le **l’Explorateur de solutions** à ouvrir pour le modifier :
 
-[ ![](remote-bluetooth-images/game02.png "L’éditeur de fichier Info.plist.")](remote-bluetooth-images/game02.png)
+[![](remote-bluetooth-images/game02.png "L’éditeur de fichier Info.plist.")](remote-bluetooth-images/game02.png#lightbox)
 
 Sous le **contrôleur de jeu** section, cochez la case en **activer les contrôleurs de jeu**, puis vérifier tous les types de contrôleurs de jeu qui seront pris en charge par l’application.
 

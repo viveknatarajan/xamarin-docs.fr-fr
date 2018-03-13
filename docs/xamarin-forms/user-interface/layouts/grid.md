@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 4d074dce06d5737bd6589efbc559c611425e5f19
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 18df6082f634d633d3f1ca8ea1e8d3f493532f47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="grid"></a>Grille
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) prend en charge la réorganisation des vues en lignes et colonnes. Lignes et colonnes peuvent être définies à avoir une taille proportionnelle ou tailles absolues. Le `Grid` ne doivent pas être confondue avec les tables traditionnelles de mise en page et n’est pas destinée à présenter les données tabulaires. `Grid` n’a pas le concept de ligne, de colonne ou de mise en forme de cellule. Contrairement aux tableaux HTML, `Grid` est destiné exclusivement pour la disposition du contenu.
 
-[ ![](grid-images/layouts-sml.png "Les dispositions de Xamarin.Forms")](grid-images/layouts.png "Xamarin.Forms dispositions")
+[![](grid-images/layouts-sml.png "Les dispositions de Xamarin.Forms")](grid-images/layouts.png#lightbox "Xamarin.Forms dispositions")
 
 Cet article couvre :
 
@@ -54,7 +54,7 @@ Les informations de ligne et de colonne sont stockées dans `Grid`de `RowDefinit
 - **Absolu** &ndash; tailles des colonnes et des lignes avec des valeurs de hauteur et largeur fixes, spécifiques. Exprimé par une valeur et `GridUnitType.Absolute` en c# et en tant que `#` en XAML, avec `#` en cours de la valeur souhaitée.
 
 > [!NOTE]
-> **Remarque**: les valeurs de largeur pour les colonnes sont définies en tant que « * » par défaut dans Xamarin.Forms, ce qui garantit que la colonne remplissent l’espace disponible.
+> Les valeurs de largeur pour les colonnes sont définies en tant que « * » par défaut dans Xamarin.Forms, ce qui garantit que la colonne remplissent l’espace disponible.
 
 Imaginez une application qui a besoin de trois lignes et deux colonnes. La ligne inférieure doit être exactement les 200px en hauteur et la ligne supérieure doit être deux fois la hauteur de la ligne du milieu. La colonne de gauche doit être suffisamment large pour ajuster le contenu et la colonne de droite doit remplir l’espace restant.
 

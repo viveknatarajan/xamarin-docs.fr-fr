@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 21e35b056293e422b577b0ee8b51e8c43dbbf07d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ccee60b5d953987e858ef592d005cec9803b8b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introduction à des plans conceptuels
 
@@ -20,7 +20,7 @@ _Cet article fournit une introduction à l’utilisation des animations dans une
 
 Storyboards permettent de développer une Interface utilisateur pour votre application Xamarin.Mac qui comprend non seulement les contrôles et les définitions de la fenêtre, mais contient également les liens entre les différentes fenêtres (via est parfait pour) et des États d’affichage.
 
-[ ![](images/intro01.png "Un exemple d’interface utilisateur dans Xcode")](images/intro01.png)
+[![](images/intro01.png "Un exemple d’interface utilisateur dans Xcode")](images/intro01.png#lightbox)
 
 Cet article fournit une introduction à l’utilisation des animations pour définir l’Interface utilisateur de l’application d’un Xamarin.Mac.
 
@@ -36,11 +36,11 @@ Cet article fournit une introduction à l’utilisation des animations pour déf
 
 Comme indiqué ci-dessus, un plan conceptuel définit l’ensemble de l’interface utilisateur pour une application donnée est divisée en une vue d’ensemble fonctionnelle de son _affichage des contrôleurs de_. Dans le Générateur de Xcode Interface, chacune de ces contrôleurs réside dans son propre _scène_.
 
-[ ![](images/intro02.png "Un contrôleur de vue d’exemple")](images/intro02.png)
+[![](images/intro02.png "Un contrôleur de vue d’exemple")](images/intro02.png#lightbox)
 
 Chaque séquence représente une vue et la vue contrôleur paire donné avec un ensemble de lignes (appelée Segues) qui se connectent à chaque séquence dans l’interface utilisateur, montrant ainsi leurs relations. Certains Segues définir comment une vue contrôleur contient un ou plusieurs vues enfants ou les contrôleurs de la vue. Autres Segues, définir des transitions entre le contrôleur d’affichage (par exemple, l’affichage d’une boîte de dialogue ou popover). 
 
-[ ![](images/intro03.png "Un segue exemple")](images/intro03.png)
+[![](images/intro03.png "Un segue exemple")](images/intro03.png#lightbox)
 
 Le plus important de noter est que chaque Segue représente le flux de certains types de données entre l’élément donné de l’interface utilisateur de l’application.
 
@@ -50,7 +50,7 @@ Le plus important de noter est que chaque Segue représente le flux de certains 
 
 Affichage des contrôleurs définissent les relations entre une vue donnée d’informations dans une application Mac et le modèle de données qui fournit ces informations. Chaque séquence de niveau supérieur dans la table de montage séquentiel représente un contrôleur de vue dans le code de l’application Xamarin.Mac.
 
-[ ![](images/intro04.png "Un exemple des bons de contrôleur d’affichage")](images/intro04.png)
+[![](images/intro04.png "Un exemple des bons de contrôleur d’affichage")](images/intro04.png#lightbox)
 
 De cette manière, chaque contrôleur d’affichage est un couplage autonomes, réutilisables de représentation visuelle de l’information (vue) et la logique de présentation et de contrôler ces informations.
 
@@ -118,5 +118,5 @@ Cet article a pris un coup de œil rapide à l’utilisation des animations dans
 - [Hello, Mac (exemple)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilisation des fenêtres](~/mac/user-interface/window.md)
-- [Indications de l’Interface du système d’exploitation X humaines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduction à Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

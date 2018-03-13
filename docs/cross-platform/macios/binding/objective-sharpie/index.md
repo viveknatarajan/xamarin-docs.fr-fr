@@ -3,22 +3,20 @@ title: Objectif Sharpie
 description: "Cette section fournit une introduction à l’objectif Sharpie, outil de ligne de commande de Xamarin permettent d’automatiser le processus de création d’une liaison à une bibliothèque Objective-C"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
+ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 02eebb7d8f579a207b6777771dbea223d30211cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bcb7be862537a002e5a80462702ed1f2f8497cda
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="objective-sharpie"></a>Objectif Sharpie
 
 _Cette section fournit une introduction à l’objectif Sharpie, outil de ligne de commande de Xamarin permettent d’automatiser le processus de création d’une liaison à une bibliothèque Objective-C_
-
-<style type="text/css"> .Terminal-bleu {couleur : rgb(10,96,254) ;} .terminal-vert {couleur : rgb(12,156,26) ;} .terminal à magenta {couleur : rgb(152,12,103) ;} </style>
 
 - [Vue d’ensemble](#overview) & [historique](#history)
 - [Prise en main](get-started.md)
@@ -28,7 +26,7 @@ _Cette section fournit une introduction à l’objectif Sharpie, outil de ligne 
 - [Procédure pas à pas terminée](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Historique des versions](releases.md)
 
-#<a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble
 
 Objectif Sharpie est un outil de ligne de commande permettant de démarrer le premier test d’une liaison.
 Il fonctionne en analysant les fichiers d’en-tête d’une bibliothèque native pour mapper l’API publique dans le [définition de liaison](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) (processus qui a été effectué précédemment manuellement).
@@ -40,7 +38,7 @@ Objectif Sharpie utilise Clang analyse en-tête des fichiers, la liaison est exa
 
 
 
-#<a name="history"></a>Historique
+## <a name="history"></a>Historique
 
 Nous avons en constante évolution et à l’aide de l’objectif Sharpie en interne à Xamarin pour les trois dernières années. Inscrit à la puissance d’objectif Sharpie, API introduits dans Xamarin.iOS et Xamarin.Mac depuis iOS 8, Mac OS X 10.10 et watchOS 2.0 ont été amorcés entièrement avec Sharpie d’objectif. Xamarin s’appuie fortement sur objectif Sharpie en interne pour la création de ses propres produits.
 

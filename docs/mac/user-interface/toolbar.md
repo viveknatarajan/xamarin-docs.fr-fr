@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 641f62d5e646607b2ff61db412a5defce63a211d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 92b90f8d4655ea89b67e81f3235b6fd9b6d92833
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbars"></a>Barres d'outils
 
@@ -82,7 +82,7 @@ Pour exposer les éléments d’interface utilisateur au code c# via prises et a
 2. Sélectionnez le contrôleur de la fenêtre sur l’aire de conception.
 3. Basculez vers le **inspecteur d’identité** et entrez « WindowController » en tant que le **nom de la classe**: 
 
-    [![Définition d’un nom de classe personnalisée pour le contrôleur de fenêtre](toolbar-images/windowcontroller01.png "définition d’un nom de classe personnalisée pour le contrôleur de fenêtre")](toolbar-images/windowcontroller01-large.png) 
+    [![Définition d’un nom de classe personnalisée pour le contrôleur de fenêtre](toolbar-images/windowcontroller01.png "définition d’un nom de classe personnalisée pour le contrôleur de fenêtre")](toolbar-images/windowcontroller01-large.png#lightbox) 
 
 4. Enregistrez vos modifications et revenir à Visual Studio pour Mac à synchroniser.
 5. A **WindowController.cs** fichier sera ajouté à votre projet dans le **Solution remplissage** dans Visual Studio pour Mac : 
@@ -92,7 +92,7 @@ Pour exposer les éléments d’interface utilisateur au code c# via prises et a
 6. Rouvrez le plan conceptuel dans le Générateur de Xcode Interface.
 7. Le **WindowController.h** fichier sera disponible pour une utilisation : 
 
-    [![Le fichier WindowController.h](toolbar-images/windowcontroller03.png "WindowController.h le fichier")](toolbar-images/windowcontroller03-large.png)
+    [![Le fichier WindowController.h](toolbar-images/windowcontroller03.png "WindowController.h le fichier")](toolbar-images/windowcontroller03-large.png#lightbox)
 
 ## <a name="creating-and-maintaining-toolbars-in-xcode"></a>Créer et maintenir les barres d’outils dans Xcode
 
@@ -188,7 +188,7 @@ Pour tester cela, ouvrez la barre d’outils dans le **hiérarchie de l’Interf
 
 Plusieurs éléments de l’interface utilisateur/Cocoa interagissent avec les éléments de la barre d’outils standard par défaut. Par exemple, faites glisser un **mode texte** sur la fenêtre de l’application et placez-le pour remplir la zone de contenu :
 
-[![Ajout d’une vue de texte à l’application](toolbar-images/edit09.png "Ajout d’une vue de texte à l’application")](toolbar-images/edit09-large.png)
+[![Ajout d’une vue de texte à l’application](toolbar-images/edit09.png "Ajout d’une vue de texte à l’application")](toolbar-images/edit09-large.png#lightbox)
 
 Enregistrez le document, revenez à Visual Studio pour Mac à synchroniser avec Xcode, exécutez l’application, entrez du texte, sélectionnez-le, puis cliquez sur le **couleurs** élément de barre d’outils. Notez que l’affichage de texte fonctionne automatiquement avec le sélecteur de couleurs :
 
@@ -201,7 +201,7 @@ Enregistrez le document, revenez à Visual Studio pour Mac à synchroniser avec 
 1. Dans Visual Studio pour Mac, dans le **Solution remplissage**, avec le bouton droit le **ressources** et sélectionnez **ajouter** > **ajouter des fichiers** .
 2. À partir de la **ajouter des fichiers** boîte de dialogue zone, accédez aux images de votre choisis, sélectionnez-les et cliquez sur le **ouvrir** bouton : 
 
-    [![Sélection d’images à ajouter](toolbar-images/edit11.png "sélection d’images à ajouter")](toolbar-images/edit11-large.png)
+    [![Sélection d’images à ajouter](toolbar-images/edit11.png "sélection d’images à ajouter")](toolbar-images/edit11-large.png#lightbox)
 
 3. Sélectionnez **copie**, vérifiez **utilisent la même action pour tous les fichiers sélectionnés**, puis cliquez sur **OK**:
 
@@ -225,7 +225,7 @@ Enregistrez le document, revenez à Visual Studio pour Mac à synchroniser avec 
 
 9. Faites glisser un **séparateur de barre d’outils** à partir de la **bibliothèque inspecteur** la barre d’outils **autorisé des éléments de barre d’outils** zone : 
 
-    [![Un séparateur de barre d’outils est ajouté à la zone d’autorisé des éléments de barre d’outils](toolbar-images/edit17.png "un séparateur de barre d’outils élément ajouté à la zone d’autorisé des éléments de barre d’outils")](toolbar-images/edit17-large.png)
+    [![Un séparateur de barre d’outils est ajouté à la zone d’autorisé des éléments de barre d’outils](toolbar-images/edit17.png "un séparateur de barre d’outils élément ajouté à la zone d’autorisé des éléments de barre d’outils")](toolbar-images/edit17-large.png#lightbox)
 
 10. Faites glisser le séparateur et l’élément « Corbeille » à la **par défaut des éléments de barre d’outils** zone et le jeu d’éléments de l’ordre de la barre d’outils de gauche à droite comme suit (couleurs, polices, séparateur, Corbeille, espace Flexible, impression) : 
 
@@ -244,7 +244,7 @@ Pour accéder à une barre d’outils ou un élément de barre d’outils dans l
 1. Dans le **Solution remplissage**, double-cliquez sur **Main.storyboard** pour l’ouvrir dans Xcode.
 2. Vérifiez que la classe personnalisée « WindowController » a été attribué au contrôleur de fenêtre principale dans le **identité inspecteur**:
 
-    [![Pour définir une classe personnalisée pour le contrôleur de fenêtre à l’aide de l’inspecteur de l’identité](toolbar-images/edit20a.png "à l’aide de l’inspecteur de l’identité pour définir une classe personnalisée pour le contrôleur de fenêtre")](toolbar-images/edit20a-large.png)
+    [![Pour définir une classe personnalisée pour le contrôleur de fenêtre à l’aide de l’inspecteur de l’identité](toolbar-images/edit20a.png "à l’aide de l’inspecteur de l’identité pour définir une classe personnalisée pour le contrôleur de fenêtre")](toolbar-images/edit20a-large.png#lightbox)
 
 3. Ensuite, sélectionnez l’élément de barre d’outils dans le **hiérarchie de l’Interface**: 
 
@@ -253,11 +253,11 @@ Pour accéder à une barre d’outils ou un élément de barre d’outils dans l
 4. Ouvrir le **l’Assistant vue**, sélectionnez le **WindowController.h** de fichiers et faites glisser le contrôle de l’élément de barre d’outils pour le **WindowController.h** fichier.
 5. Définir le **connexion** type **Action**, entrez « trashDocument » pour le **nom**et cliquez sur le **Connect** bouton : 
 
-    [![Configuration d’une action pour un élément de barre d’outils](toolbar-images/edit23.png "configuration d’une action pour un élément de barre d’outils")](toolbar-images/edit23-large.png)
+    [![Configuration d’une action pour un élément de barre d’outils](toolbar-images/edit23.png "configuration d’une action pour un élément de barre d’outils")](toolbar-images/edit23-large.png#lightbox)
 
 6. Exposer le **mode texte** comme une sortie appelée « documentEditor » le **ViewController.h** fichier : 
 
-    [![Configuration d’une prise de courant pour l’affichage de texte](toolbar-images/edit24.png "configuration d’une prise de courant pour l’affichage de texte")](toolbar-images/edit24-large.png)
+    [![Configuration d’une prise de courant pour l’affichage de texte](toolbar-images/edit24.png "configuration d’une prise de courant pour l’affichage de texte")](toolbar-images/edit24-large.png#lightbox)
 
 7. Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 

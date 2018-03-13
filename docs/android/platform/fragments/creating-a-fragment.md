@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: c1dd3495b0d7f76197126094cfd10e50d0ca760d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 415c3a5e9446c5db545b62272f3b90a9ac73e401
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-a-fragment"></a>Création d’un Fragment
 
@@ -28,7 +28,7 @@ Le code ci-dessus augmenteront la vue `Resource.Layout.Example_Fragment`et l’a
 
 
 > [!NOTE]
-> **Remarque :** sous-classes Fragment doivent avoir une valeur par défaut public constructeur sans argument.
+> Sous-classes fragment doivent avoir une valeur par défaut public constructeur sans argument.
 
 ## <a name="adding-a-fragment-to-an-activity"></a>Ajout d’un Fragment à une activité
 
@@ -108,7 +108,7 @@ OU
 Fragments ont leur propre cycle de vie qui est quelque peu indépendant des, mais il est toujours affecté par le [cycle de vie de l’activité d’hébergement](~/android/app-fundamentals/activity-lifecycle/index.md).
 Par exemple, lorsqu’une activité est maintenu, tous ses Fragments associés sont suspendus. Le diagramme suivant présente le cycle de vie du Fragment.
 
-[![Diagramme illustrant le cycle de vie du Fragment](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png)
+[![Diagramme illustrant le cycle de vie du Fragment](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Méthodes de cycle de vie de création de fragment
@@ -238,4 +238,4 @@ public override void OnCreate(Bundle savedState)
 
 L’écran suivant montre l’apparence de ce menu :
 
-[![Capture d’écran de l’exemple d’application allers-retours mon affichage des éléments de menu](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png)
+[![Capture d’écran de l’exemple d’application allers-retours mon affichage des éléments de menu](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)

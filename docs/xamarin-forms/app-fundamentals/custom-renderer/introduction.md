@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: a9908429994f4575a9e41936d500bfd8906a843b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 837d75bd4ecde92d4c375c680a5f5e7ff231f825
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>Introduction aux convertisseurs personnalisés
 
@@ -52,7 +52,7 @@ Le `MyEntry` contrôle est un `Entry` contrôler l’utilisation de la `Backgrou
 Le `local` préfixe d’espace de noms peut être quoi que ce soit. Toutefois, le `namespace` et `assembly` valeurs doivent correspondre les détails du contrôle personnalisé. Une fois que l’espace de noms est déclaré, le préfixe est utilisé pour référencer le contrôle personnalisé.
 
 > [!NOTE]
-> **Remarque**: définition de la `xmlns` est beaucoup plus simple dans PCLs que les projets partagés. Une bibliothèque PCL est compilée dans un assembly, il est facile de déterminer la `assembly=CustomRenderer` la valeur doit être. Lors de l’utilisation de projets partagés, tous les composants partagés (y compris le code XAML) sont compilés dans les projets de référence, ce qui signifie que si l’iOS, Android et Windows Phone projets ont leurs propres *les noms d’assemblys* il est impossible pour écrire le `xmlns` déclaration, car la valeur doit être différent pour chaque application. Contrôles personnalisés dans XAML pour les projets partagés nécessitera chaque projet d’application soit configuré avec le même nom d’assembly.
+> Définir le `xmlns` est beaucoup plus simple dans PCLs que les projets partagés. Une bibliothèque PCL est compilée dans un assembly, il est facile de déterminer la `assembly=CustomRenderer` la valeur doit être. Lors de l’utilisation de projets partagés, tous les composants partagés (y compris le code XAML) sont compilés dans les projets de référence, ce qui signifie que si l’iOS, Android et Windows Phone projets ont leurs propres *les noms d’assemblys* il est impossible pour écrire le `xmlns` déclaration, car la valeur doit être différent pour chaque application. Contrôles personnalisés dans XAML pour les projets partagés nécessitera chaque projet d’application soit configuré avec le même nom d’assembly.
 
 Le `MyEntry` contrôle personnalisé est ensuite rendu sur chaque plateforme, avec un arrière-plan en gris, comme indiqué dans les captures d’écran suivants :
 
@@ -69,7 +69,7 @@ Le processus de création d’une classe de convertisseur personnalisé est comm
 1. Ajouter un `ExportRenderer` d’attribut à la classe de convertisseur personnalisé pour spécifier qu’il sera utilisé pour restituer le contrôle de Xamarin.Forms. Cet attribut est utilisé pour inscrire le convertisseur personnalisé avec Xamarin.Forms.
 
 > [!NOTE]
-> **Remarque**: pour la plupart des éléments de Xamarin.Forms, il est facultatif pour fournir un convertisseur personnalisé dans chaque projet de plateforme. Si un convertisseur personnalisé n’est pas inscrit, puis le convertisseur par défaut pour la classe de base du contrôle sera utilisé. Toutefois, les convertisseurs personnalisés sont nécessaires dans chaque projet de plateforme lors du rendu d’un [vue](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ou [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) élément.
+> Pour la plupart des éléments de Xamarin.Forms, il est facultatif fournir un convertisseur personnalisé dans chaque projet de plateforme. Si un convertisseur personnalisé n’est pas inscrit, puis le convertisseur par défaut pour la classe de base du contrôle sera utilisé. Toutefois, les convertisseurs personnalisés sont nécessaires dans chaque projet de plateforme lors du rendu d’un [vue](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ou [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) élément.
 
 Les rubriques de cette série fournissent des démonstrations et des explications de ce processus pour les différents éléments de Xamarin.Forms.
 

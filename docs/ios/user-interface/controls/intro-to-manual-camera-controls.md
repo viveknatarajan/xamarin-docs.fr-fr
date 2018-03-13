@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e5ff4e3732476415ff32e98b8281f3cb6e03e332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7111c1716ef3a8869f8b2401a7653d9e9941977b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manual-camera-controls"></a>Contrôles de la caméra manuelle
 
@@ -26,7 +26,7 @@ Ces contrôles peuvent également être utiles lors du développement d’applic
 
 Si prenant vidéo ou encore des images à l’aide de l’appareil photo sur un appareil iOS, le processus utilisé pour capturer ces images est essentiellement le même. Cela est vrai pour les applications qui utilisent les contrôles de caméra par défaut automatisée ou celles qui tirent parti des nouveaux contrôles de caméra manuel :
 
- [ ![](intro-to-manual-camera-controls-images/image1.png "Vue d’ensemble des objets de Capture AVFoundation")](intro-to-manual-camera-controls-images/image1.png)
+ [![](intro-to-manual-camera-controls-images/image1.png "Vue d’ensemble des objets de Capture AVFoundation")](intro-to-manual-camera-controls-images/image1.png#lightbox)
 
 Entrée est extraite d’un `AVCaptureDeviceInput` dans un `AVCaptureSession` par le biais d’un `AVCaptureConnection`. Le résultat est soit fourni sous la forme d’une image fixe ou un flux vidéo. L’ensemble du processus est contrôlé par un `AVCaptureDevice`.
 
@@ -280,11 +280,11 @@ En permettant à l’utilisateur final à prendre directement les contrôles de 
 
 Par exemple, un photographe professionnel peut atténuer le focus d’une image pour obtenir un [Bokeh effet](http://en.wikipedia.org/wiki/Bokeh):
 
-[ ![](intro-to-manual-camera-controls-images/image2.png "Un effet Bokeh")](intro-to-manual-camera-controls-images/image2.png)
+[![](intro-to-manual-camera-controls-images/image2.png "Un effet Bokeh")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
 Créer un [effet d’extraire le Focus](http://www.mediacollege.com/video/camera/focus/pull.html), telles que :
 
-[ ![](intro-to-manual-camera-controls-images/image3.png "L’effet d’extraction de Focus")](intro-to-manual-camera-controls-images/image3.png)
+[![](intro-to-manual-camera-controls-images/image3.png "L’effet d’extraction de Focus")](intro-to-manual-camera-controls-images/image3.png#lightbox)
 
 Pour des chercheurs ou un générateur d’applications médicales, l’application peut souhaiter déplacer par programmation la thématique des essais. Dans les deux cas, la nouvelle API permet de mettre l’utilisateur final ou l’application de prendre le contrôle sur le focus au moment où l’image.
 
@@ -292,7 +292,7 @@ Pour des chercheurs ou un générateur d’applications médicales, l’applicat
 
 Avant d’aborder les détails de contrôle du focus dans une application IOS 8. Jetons un œil rapide au fonctionnement du focus dans un appareil iOS :
 
-[ ![](intro-to-manual-camera-controls-images/image4.png "Fonctionnement du focus dans un appareil iOS")](intro-to-manual-camera-controls-images/image4.png)
+[![](intro-to-manual-camera-controls-images/image4.png "Fonctionnement du focus dans un appareil iOS")](intro-to-manual-camera-controls-images/image4.png#lightbox)
 
 Passe à l’objectif de l’appareil photo sur l’appareil iOS et se concentre sur un capteur d’image. La distance de l’objectif du capteur contrôle où le Point Focal (la zone où l’image apparaît le plus nets) est en relation avec le capteur. Loin est de l’objectif du capteur, objets de distance semblent plus nets et plus près des objets semblent nettes.
 
@@ -358,7 +358,7 @@ Comme indiqué dans le code ci-dessus, le périphérique de Capture doit être v
 
 Avec le code de configuration de Capture AV générale en place, un `UIViewController` peut être ajouté à la table de montage séquentiel de l’application et configuré comme suit :
 
-[ ![](intro-to-manual-camera-controls-images/image5.png "Un UIViewController peut être ajouté aux table de montage séquentiel d’applications et configuré comme illustré ici")](intro-to-manual-camera-controls-images/image5.png)
+[![](intro-to-manual-camera-controls-images/image5.png "Un UIViewController peut être ajouté aux table de montage séquentiel d’applications et configuré comme illustré ici")](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 La vue contient les éléments principaux suivants :
 
@@ -491,10 +491,10 @@ Procédez comme suit pour la transmission du contrôleur d’affichage pour le c
   
 1. Avec l’appareil photo dans le mode Auto, le curseur se déplace automatiquement que l’appareil photo ajuste le focus :
 
-    [![](intro-to-manual-camera-controls-images/image6.png "Le curseur se déplace automatiquement que l’appareil photo ajuste le focus dans cet exemple d’application")](intro-to-manual-camera-controls-images/image6.png)
+    [![](intro-to-manual-camera-controls-images/image6.png "Le curseur se déplace automatiquement que l’appareil photo ajuste le focus dans cet exemple d’application")](intro-to-manual-camera-controls-images/image6.png#lightbox)
 1. Appuyez sur le segment verrouillé et faites glisser le curseur de position pour ajuster la position de l’objectif manuellement :
 
-    [![](intro-to-manual-camera-controls-images/image7.png "Manuellement ajuster la position de l’objectif")](intro-to-manual-camera-controls-images/image7.png)
+    [![](intro-to-manual-camera-controls-images/image7.png "Manuellement ajuster la position de l’objectif")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. Arrêtez l’application.
 
 
@@ -506,7 +506,7 @@ Exposition fait référence à la luminosité d’une image par rapport à la lu
 
 À l’aide de contrôles exposition manuelle, l’utilisateur peut prendre une image à partir de réaliste clair à sombre et maussade :
 
-[ ![](intro-to-manual-camera-controls-images/image8.png "Un exemple une image montrant l’exposition de la plus réaliste vive foncé et maussade")](intro-to-manual-camera-controls-images/image8.png)
+[![](intro-to-manual-camera-controls-images/image8.png "Un exemple une image montrant l’exposition de la plus réaliste vive foncé et maussade")](intro-to-manual-camera-controls-images/image8.png#lightbox)
 
 Là encore, cela automatiquement à l’aide de contrôle par programmation pour les applications scientifiques ou via des contrôles manuels fournis par l’interface utilisateur des applications. Dans les deux cas, le nouveau iOS 8 exposition API permettent un contrôle précis sur les paramètres d’exposition de la caméra.
 
@@ -514,7 +514,7 @@ Là encore, cela automatiquement à l’aide de contrôle par programmation pour
 
 Avant d’aborder les détails de contrôle de l’exposition d’une application IOS 8. Jetons un œil rapide au fonctionne de l’exposition :
 
-[ ![](intro-to-manual-camera-controls-images/image9.png "Fonctionne de l’exposition")](intro-to-manual-camera-controls-images/image9.png)
+[![](intro-to-manual-camera-controls-images/image9.png "Fonctionne de l’exposition")](intro-to-manual-camera-controls-images/image9.png#lightbox)
 
 Les trois éléments de base qui permettent de contrôler l’exposition sont :
 
@@ -527,7 +527,7 @@ Les trois éléments de base qui permettent de contrôler l’exposition sont :
 
 Avant d’apprendre comment exposition manuelle fonctionne, il est important de comprendre comment continue exposition auto fonctionne dans un appareil iOS.
 
-[ ![](intro-to-manual-camera-controls-images/image10.png "Fonctionnement d’Exposition auto continue dans un appareil iOS")](intro-to-manual-camera-controls-images/image10.png)
+[![](intro-to-manual-camera-controls-images/image10.png "Fonctionnement d’Exposition auto continue dans un appareil iOS")](intro-to-manual-camera-controls-images/image10.png#lightbox)
 
 Tout d’abord est le bloc d’exposition automatique, il dispose de la tâche de calcul exposition idéale et est transmis en continu les statistiques de contrôle. Il utilise ces informations pour calculer le mélange optimal ISO et vitesse d’obturation pour obtenir la scène bien allumée. Ce cycle correspond à la boucle AE.
 
@@ -535,7 +535,7 @@ Tout d’abord est le bloc d’exposition automatique, il dispose de la tâche d
 
 Ensuite, nous allons examiner comment verrouillé works d’exposition dans les appareils iOS.
 
-[ ![](intro-to-manual-camera-controls-images/image11.png "Comment verrouillé exposition fonctionne dans les appareils iOS")](intro-to-manual-camera-controls-images/image11.png)
+[![](intro-to-manual-camera-controls-images/image11.png "Comment verrouillé exposition fonctionne dans les appareils iOS")](intro-to-manual-camera-controls-images/image11.png#lightbox)
 
 Là encore, vous avez le bloc d’exposition automatique qui tente de calculer les e/s optimales et les valeurs de durée. Toutefois, dans ce mode, le bloc AE est déconnecté du moteur de contrôle des statistiques.
 
@@ -589,7 +589,7 @@ Comme indiqué dans le code ci-dessus, le périphérique de Capture doit être v
 
 Avec le code de configuration de Capture AV générale en place, un `UIViewController` peut être ajouté à la table de montage séquentiel de l’application et configuré comme suit :
 
-[ ![](intro-to-manual-camera-controls-images/image12.png "Un UIViewController peut être ajouté aux table de montage séquentiel d’applications et configuré comme illustré ici")](intro-to-manual-camera-controls-images/image12.png)
+[![](intro-to-manual-camera-controls-images/image12.png "Un UIViewController peut être ajouté aux table de montage séquentiel d’applications et configuré comme illustré ici")](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 La vue contient les éléments principaux suivants :
 
@@ -791,13 +791,13 @@ Procédez comme suit pour câble du contrôleur d’affichage pour le contrôle 
   
 1. Avec l’appareil photo dans le mode Auto, les curseurs déplacera automatiquement comme la caméra ajuste l’exposition :
 
-    [![](intro-to-manual-camera-controls-images/image13.png "Les curseurs seront déplace automatiquement comme la caméra ajuste l’exposition")](intro-to-manual-camera-controls-images/image13.png)
+    [![](intro-to-manual-camera-controls-images/image13.png "Les curseurs seront déplace automatiquement comme la caméra ajuste l’exposition")](intro-to-manual-camera-controls-images/image13.png#lightbox)
 1. Appuyez sur le segment verrouillé et faites glisser le curseur de décalage pour ajuster le décalage de l’exposition automatique manuellement :
 
-    [![](intro-to-manual-camera-controls-images/image14.png "Ajuster le décalage de l’exposition automatique manuellement")](intro-to-manual-camera-controls-images/image14.png)
+    [![](intro-to-manual-camera-controls-images/image14.png "Ajuster le décalage de l’exposition automatique manuellement")](intro-to-manual-camera-controls-images/image14.png#lightbox)
 1. Appuyez sur le segment personnalisé, puis faites glisser les curseurs ISO et la durée pour contrôler manuellement l’exposition :
 
-    [![](intro-to-manual-camera-controls-images/image15.png "Faites glisser les curseurs ISO et la durée pour contrôler manuellement l’exposition")](intro-to-manual-camera-controls-images/image15.png)
+    [![](intro-to-manual-camera-controls-images/image15.png "Faites glisser les curseurs ISO et la durée pour contrôler manuellement l’exposition")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. Arrêtez l’application.
 
 
@@ -807,7 +807,7 @@ Le code ci-dessus a montré comment surveiller les paramètres de l’exposition
 
 Équilibre des blancs contrôles permettent aux utilisateurs d’ajuster le solde de colosr dans une image pour qu’elles apparaissent plus réaliste. Les sources de lumière différents ont des températures de couleur différente, et les paramètres de l’appareil photo utilisés pour capturer une image doivent être ajustées pour compenser ces différences. Là encore, en permettant à l’utilisateur le contrôle sur l’équilibre des blancs s’ajustements professionnels qui les routines automatique sont incapables de pour obtenir des effets artistiques.
 
-[ ![](intro-to-manual-camera-controls-images/image16.png "Un exemple d’image montrant les réglages de l’équilibre des blancs manuel")](intro-to-manual-camera-controls-images/image16.png)
+[![](intro-to-manual-camera-controls-images/image16.png "Un exemple d’image montrant les réglages de l’équilibre des blancs manuel")](intro-to-manual-camera-controls-images/image16.png#lightbox)
 
 Par exemple, l’heure d’été a un cast blueish, tandis que les lumières incandescentes tungstène comportent une teinte warmer orange-jaune. (Qui prête à confusion, les couleurs « froides » ont des températures de couleur plus élevées que les couleurs « actif ». Couleur températures sont une mesure physique, pas perceptible dans un index.)
 
@@ -821,7 +821,7 @@ Avant d’aborder les détails de contrôle de l’équilibre des blancs dans un
 
 Dans l’étude de la perception de la couleur, la [CEI 1931 RVB des couleurs espace et l’espace de couleurs CEI 1931 XYZ](http://en.wikipedia.org/wiki/CIE_1931_color_space) sont le premier mathématiquement les espaces de couleurs. Ils ont été créés par la Commission internationale de l’éclairage (CIE) dans 1931.
 
-[ ![](intro-to-manual-camera-controls-images/image17.png "Espace de couleurs de l’espace colorimétrique CEI 1931 RVB et CEI 1931 XYZ")](intro-to-manual-camera-controls-images/image17.png)
+[![](intro-to-manual-camera-controls-images/image17.png "Espace de couleurs de l’espace colorimétrique CEI 1931 RVB et CEI 1931 XYZ")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
 Le graphique ci-dessus montre toutes les couleurs visible à le œil humain, à partir des niveaux bleu vert vif rouge clair. N’importe quel point dans le diagramme peut être tracée avec une valeur de X et Y, comme indiqué dans le graphique ci-dessus.
 
@@ -900,7 +900,7 @@ Le périphérique de Capture doit être verrouillé pour la configuration avant 
 
 Avec le code de configuration de Capture AV générale en place, un `UIViewController` peut être ajouté à la table de montage séquentiel de l’application et configuré comme suit :
 
-[ ![](intro-to-manual-camera-controls-images/image18.png "Un UIViewController peut être ajouté aux table de montage séquentiel d’applications et configuré comme illustré ici")](intro-to-manual-camera-controls-images/image18.png)
+[![](intro-to-manual-camera-controls-images/image18.png "Un UIViewController peut être ajouté aux table de montage séquentiel d’applications et configuré comme illustré ici")](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 La vue contient les éléments principaux suivants :
 
@@ -1111,13 +1111,13 @@ Procédez comme suit pour câble du contrôleur de l’affichage de contrôle du
 1. Enregistrer les modifications du code et exécuter l’application.
 1. Avec l’appareil photo dans le mode Auto, les curseurs déplacera automatiquement que l’appareil photo règle blancs :
 
-    [![](intro-to-manual-camera-controls-images/image19.png "Les curseurs seront déplace automatiquement comme la caméra ajuste l’équilibre des blancs")](intro-to-manual-camera-controls-images/image19.png)
+    [![](intro-to-manual-camera-controls-images/image19.png "Les curseurs seront déplace automatiquement comme la caméra ajuste l’équilibre des blancs")](intro-to-manual-camera-controls-images/image19.png#lightbox)
 1. Appuyez sur le segment verrouillé et faites glisser les curseurs Temp et teinte pour ajuster l’équilibre des blancs manuellement :
 
-    [![](intro-to-manual-camera-controls-images/image20.png "Faites glisser les curseurs Temp et teinte pour ajuster l’équilibre des blancs manuellement")](intro-to-manual-camera-controls-images/image20.png)
+    [![](intro-to-manual-camera-controls-images/image20.png "Faites glisser les curseurs Temp et teinte pour ajuster l’équilibre des blancs manuellement")](intro-to-manual-camera-controls-images/image20.png#lightbox)
 1. Avec le segment verrouillé étant toujours sélectionné, placez une carte physique grise au premier plan de l’appareil photo et appuyez sur le bouton de la carte de gris pour ajuster l’équilibre des blancs au monde gris :
 
-    [![](intro-to-manual-camera-controls-images/image21.png "Appuyez sur le bouton de la carte de gris pour ajuster l’équilibre des blancs au monde en gris")](intro-to-manual-camera-controls-images/image21.png)
+    [![](intro-to-manual-camera-controls-images/image21.png "Appuyez sur le bouton de la carte de gris pour ajuster l’équilibre des blancs au monde en gris")](intro-to-manual-camera-controls-images/image21.png#lightbox)
 1. Arrêtez l’application.
 
 Le code ci-dessus a montré comment surveiller les paramètres de l’équilibre des blancs lorsque la caméra est en mode automatique, ou utilisez les curseurs pour contrôler l’équilibre des blancs lorsqu’il est en mode verrouillé.
@@ -1128,7 +1128,7 @@ La mise entre parenthèses de Capture est basée sur les paramètres de l’appa
 
 En termes simples, entre parenthèses de Capture est une rafale de toujours images prises avec une variété de paramètres d’image à l’image.
 
-[ ![](intro-to-manual-camera-controls-images/image22.png "Comment fonctionne la mise entre parenthèses de Capture")](intro-to-manual-camera-controls-images/image22.png)
+[![](intro-to-manual-camera-controls-images/image22.png "Comment fonctionne la mise entre parenthèses de Capture")](intro-to-manual-camera-controls-images/image22.png#lightbox)
 
 À l’aide de la mise entre parenthèses de Capture dans iOS 8, une application peut prédéfinir une série de contrôles de la caméra manuelle, émettre une commande unique et un ont la séquence actuelle retourner une série d’images pour chacune des présélections manuelles.
 
@@ -1187,7 +1187,7 @@ Avec ces informations à l’esprit, examinons un exemple d’utilisation de la 
 
 Avec le code de configuration de Capture AV générale en place, un `UIViewController` peut être ajouté à la table de montage séquentiel de l’application et configuré comme suit :
 
-[ ![](intro-to-manual-camera-controls-images/image23.png "Un UIViewController peut être ajouté aux table de montage séquentiel d’applications et configuré comme illustré ici")](intro-to-manual-camera-controls-images/image23.png)
+[![](intro-to-manual-camera-controls-images/image23.png "Un UIViewController peut être ajouté aux table de montage séquentiel d’applications et configuré comme illustré ici")](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 La vue contient les éléments principaux suivants :
 
@@ -1345,10 +1345,10 @@ Procédez comme suit pour la transmission du contrôleur d’affichage pour la C
 1. Enregistrer les modifications du code et exécuter l’application.
 1. Image d’une scène et appuyez sur le bouton capturer le crochet :
 
-    [![](intro-to-manual-camera-controls-images/image24.png "Image d’une scène et appuyez sur le bouton capturer le crochet")](intro-to-manual-camera-controls-images/image24.png)
+    [![](intro-to-manual-camera-controls-images/image24.png "Image d’une scène et appuyez sur le bouton capturer le crochet")](intro-to-manual-camera-controls-images/image24.png#lightbox)
 1. Effectuez un balayage de droite à gauche pour voir les trois images pris par la mise entre parenthèses de Capture :
 
-    [![](intro-to-manual-camera-controls-images/image25.png "Effectuez un balayage de droite à gauche pour voir les trois images pris par la mise entre parenthèses de Capture")](intro-to-manual-camera-controls-images/image25.png)
+    [![](intro-to-manual-camera-controls-images/image25.png "Effectuez un balayage de droite à gauche pour voir les trois images pris par la mise entre parenthèses de Capture")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. Arrêtez l’application.
 
 

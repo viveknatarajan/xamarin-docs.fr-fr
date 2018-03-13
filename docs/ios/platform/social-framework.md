@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: da096c8575896bc9f522a92b3fb94b81f9e772df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9892577d7e0ed3d3f622f881cc51db09eb44a8fd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="social-framework"></a>Infrastructure de réseaux sociaux
 
@@ -30,7 +30,7 @@ _Le Framework Social fournit une API unifiée pour interagir avec les réseaux s
 
 Pour vous connecter à Twitter à l’aide de l’infrastructure de réseaux sociaux, un compte doit être configuré dans les paramètres de périphérique, comme indiqué ci-dessous :
 
- [ ![](social-framework-images/twitter01.png "Paramètres de compte Twitter")](social-framework-images/twitter01.png)
+ [![](social-framework-images/twitter01.png "Paramètres de compte Twitter")](social-framework-images/twitter01.png#lightbox)
 
 Une fois qu’un compte a été entré et vérifié avec Twitter, n’importe quelle application sur le périphérique qui utilise les classes de réseaux sociaux Framework pour accéder à Twitter utilisera ce compte.
 
@@ -38,7 +38,7 @@ Une fois qu’un compte a été entré et vérifié avec Twitter, n’importe qu
 
 Le Framework sociaux inclut un contrôleur appelé `SLComposeViewController` qui présente une vue fourni par le système pour la modification et envoyer un tweet. La capture d’écran suivante montre un exemple de cette vue :
 
- [ ![](social-framework-images/twitter02.png "Cette capture d’écran montre un exemple de la SLComposeViewController")](social-framework-images/twitter02.png)
+ [![](social-framework-images/twitter02.png "Cette capture d’écran montre un exemple de la SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
 
 Pour utiliser un `SLComposeViewController` avec Twitter, une instance du contrôleur doit être créée en appelant le `FromService` méthode avec `SLServiceType.Twitter` comme indiqué ci-dessous :
 
@@ -284,7 +284,7 @@ request.PerformRequest ((data, response, error) => {
 
 Si les données a été chargées avec succès, les données JSON brutes seront affichera (comme dans l’exemple de sortie ci-dessous) :
 
-[ ![](social-framework-images/twitter03.png "Un exemple de l’affichage des données JSON brut")](social-framework-images/twitter03.png)
+[![](social-framework-images/twitter03.png "Un exemple de l’affichage des données JSON brut")](social-framework-images/twitter03.png#lightbox)
 
 Dans une application réelle, les résultats JSON peuvent ensuite être analysées comme normal et les résultats présentés à l’utilisateur. Consultez [présentation des Services Web](~/cross-platform/data-cloud/web-services/index.md) pour plus d’informations sur l’analyse de JSON.
 
@@ -294,7 +294,7 @@ Dans une application réelle, les résultats JSON peuvent ensuite être analysé
 
 La connexion à Facebook avec l’infrastructure de réseaux sociaux est presque identique au processus utilisé pour Twitter indiqué ci-dessus. Un compte d’utilisateur Facebook doit être configuré dans les paramètres de périphérique, comme indiqué ci-dessous :
 
-[ ![](social-framework-images/facebook01.png "Paramètres de compte Facebook")](social-framework-images/facebook01.png)
+[![](social-framework-images/facebook01.png "Paramètres de compte Facebook")](social-framework-images/facebook01.png#lightbox)
 
 Une fois configuré, n’importe quelle application sur le périphérique qui utilise l’infrastructure de réseaux sociaux utilisera ce compte pour se connecter à Facebook.
 
@@ -368,7 +368,7 @@ namespace SocialFrameworkDemo
 
 Lorsqu’il est utilisé avec Facebook, le `SLComposeViewController` affiche une vue qui est quasiment identique à l’exemple de Twitter, affichant **Facebook** comme titre dans ce cas :
 
-[ ![](social-framework-images/facebook02.png "L’affichage SLComposeViewController")](social-framework-images/facebook02.png)
+[![](social-framework-images/facebook02.png "L’affichage SLComposeViewController")](social-framework-images/facebook02.png#lightbox)
 
 ### <a name="calling-facebook-graph-api"></a>Appel d’API Graph de Facebook
 

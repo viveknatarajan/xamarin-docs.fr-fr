@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: fe1796839524a271760a9beb82895fd6e93c7ad0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d53494e61d702b83a28534c644f33fb5327b5958
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-graphics"></a>Graphique de base
 
@@ -40,6 +40,7 @@ Il existe quelques avantages de cette approche :
 -  Réduisant la nécessité d’images statiques dans l’offre groupée d’application peut réduire la taille de l’application.
 -  Graphiques deviennent plus résistante face aux modifications de résolution pour les appareils.
 
+<a name="Drawing_in_a_UIView_Subclass"/>
 
 ## <a name="drawing-in-a-uiview-subclass"></a>Dessin dans une sous-classe UIView
 
@@ -182,6 +183,8 @@ Ajout de ce code avant des résultats des opérations de dessin en unités de tr
  ![](core-graphics-images/02-dashed-stroke.png "Ajout de ce code avant les résultats des opérations de dessin de traits en pointillés")
  
 Notez que lorsque vous utilisez l’API unifiée dans Xamarin.iOS, le type de tableau doit être un `nfloat`et doit également être explicitement converties en Math.PI.
+
+<a name="Drawing_Images_and_Text"/>
 
 ## <a name="drawing-images-and-text"></a>Texte et des Images de dessin
 

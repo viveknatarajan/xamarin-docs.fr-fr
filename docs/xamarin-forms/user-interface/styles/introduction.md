@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6b4d63637eae7c1719f3f6e525327d416ddff59d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce5a7976f5bac68ca01b30a8d437aa83b8360580
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-styles"></a>Introduction aux Styles
 
@@ -84,7 +84,7 @@ public class NoStylesPageCS : ContentPage
 
 Chaque [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instance possède des valeurs de propriété identiques pour contrôler l’apparence du texte affiché par le `Label`. Cela provoque l’affichage indiqué dans les captures d’écran suivants :
 
-[![](introduction-images/no-styles.png "Étiquette d’apparence sans Styles")](introduction-images/no-styles-large.png "apparence sans style d’étiquette")
+[![](introduction-images/no-styles.png "Étiquette d’apparence sans Styles")](introduction-images/no-styles-large.png#lightbox "apparence sans style d’étiquette")
 
 Définir l’apparence de chaque contrôle individuel peut être répétitive et sujet aux erreurs. Au lieu de cela, vous pouvez créé un style qui définit l’apparence, puis appliquée pour les contrôles requis.
 

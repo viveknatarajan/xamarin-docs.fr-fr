@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e421a52b1ae97b0beef59352a756401ed661051e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alternate-resources"></a>Autres ressources
 
@@ -142,7 +142,7 @@ Android détermine les ressources de base en effectuant une itération sur le te
 
 Ces règles sont également illustrées dans l’organigramme suivant :
 
-[![Diagramme de flux de ressources](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png)
+[![Diagramme de flux de ressources](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 Lorsque le système recherche des ressources spécifiques à une densité et ne les trouvez pas, il va tenter de localiser les autres ressources spécifiques de densité et mettre à l’échelle. Android peut ne pas utiliser les ressources par défaut.
 Par exemple, lors de la recherche d’une ressource de faible DENSITE et il n’est pas disponible, Android peut sélectionner version haute densitée de la ressource sur les ressources par défaut ou la densité moyenne. Pour cela, car la ressource à densité élevée et peut être réduite par un facteur de 0,5, ce qui entraîne moins de problèmes de visibilité à l’échelle d’une ressource de densité moyenne, ce qui nécessiterait un facteur de 0,75.
@@ -196,4 +196,4 @@ L’élément suivant est l’identificateur de la densité de l’écran, `ldpi
 À la suite de ce processus, Android utilise les ressources drawable dans le répertoire de ressources `drawable-en-port-ldpi` pour le périphérique.
 
 > [!NOTE]
-> **Remarque :** les qualificateurs de taille d’écran fournissent une exception à ce processus de sélection. Il est possible pour Android sélectionner les ressources qui sont conçues pour un écran plus petit que le périphérique en cours. Par exemple, un appareil à écran large peut utiliser les ressources fournir pour un écran de taille normal. Cependant l’inverse de ce n’est pas vrai : le même périphérique grand écran n’utilisera pas les ressources fournies pour un écran xlarge. Si Android ne peut pas trouver un jeu de ressources qui correspond à une taille d’écran, l’application se bloque.
+> Les qualificateurs de taille d’écran fournissent une exception à ce processus de sélection. Il est possible pour Android sélectionner les ressources qui sont conçues pour un écran plus petit que le périphérique en cours. Par exemple, un appareil à écran large peut utiliser les ressources fournir pour un écran de taille normal. Cependant l’inverse de ce n’est pas vrai : le même périphérique grand écran n’utilisera pas les ressources fournies pour un écran xlarge. Si Android ne peut pas trouver un jeu de ressources qui correspond à une taille d’écran, l’application se bloque.

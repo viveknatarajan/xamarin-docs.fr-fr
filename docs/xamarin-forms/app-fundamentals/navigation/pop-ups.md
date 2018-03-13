@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 957db750b852b40daf1556e8dc8f7ba18e022dba
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 87b20dfd8882bf7da58b1bd078930fb69c46a79d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="displaying-pop-ups"></a>Afficher les fenêtres contextuelles
 
@@ -42,7 +42,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[ ![DisplayAlert](pop-ups-images/alert2-sml.png "boîte de dialogue avec deux boutons d’alerte")](pop-ups-images/alert2.png "boîte de dialogue avec deux boutons d’alerte")
+[![DisplayAlert](pop-ups-images/alert2-sml.png "boîte de dialogue avec deux boutons d’alerte")](pop-ups-images/alert2.png#lightbox "boîte de dialogue avec deux boutons d’alerte")
 
 ## <a name="guiding-users-through-tasks"></a>Guide pour les utilisateurs via des tâches
 
@@ -70,7 +70,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[ ![DisplayActionSheet](pop-ups-images/action2-sml.png "boîte de dialogue Action feuille avec le bouton de destruction")](pop-ups-images/action2.png "boîte de dialogue Action feuille avec le bouton de destruction")
+[![DisplayActionSheet](pop-ups-images/action2-sml.png "boîte de dialogue Action feuille avec le bouton de destruction")](pop-ups-images/action2.png#lightbox "boîte de dialogue Action feuille avec le bouton de destruction")
 
 ## <a name="summary"></a>Récapitulatif
 

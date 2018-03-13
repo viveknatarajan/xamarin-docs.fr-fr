@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e138fc1176c646a2e4e9caf94462028dd7c68e9f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77365d5ed62b2ef2e81407ab1fa5aef55c592d0b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="bundle-for-mac-app-store"></a>Bundle pour le Mac App Store
 
@@ -25,11 +25,11 @@ Cette section décrit les concepts de base de la génération d’une applicatio
 
 Définissez la **Configuration** sur **Release** avant de mettre à jour les options de signature du code et de packaging. Le développeur doit s’assurer qu’il utilise l’**identité** de sa société et le profil de provisionnement que nous avons créé ci-dessus lors de la signature de l’application en vue de sa mise en production dans l’App Store.
 
- [![Modification des options de signature du code](bundling-images/config02.png "Modification des options de signature du code")](bundling-images/config02-large.png)
+ [![Modification des options de signature du code](bundling-images/config02.png "Modification des options de signature du code")](bundling-images/config02-large.png#lightbox)
 
 Vérifiez que l’option permettant de créer un paquet d’installation a été cochée dans les paramètres **Build Mac** :
 
-[![Modification des options de build](bundling-images/config03.png "Modification des options de build")](bundling-images/config03-large.png)
+[![Modification des options de build](bundling-images/config03.png "Modification des options de build")](bundling-images/config03-large.png#lightbox)
 
 ## <a name="build"></a>Générer
 

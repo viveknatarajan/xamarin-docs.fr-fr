@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: 7e02c92f9c1aafeb97da4905c17898b02362c960
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce2130985eb954abc4b4a1f4022eec97341eb902
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -48,7 +48,7 @@ Pour configurer correctement une application à accéder iCloud :
 
 -   **Créer un nouvel ID d’application** - pour créer un ID d’application, suivez les étapes décrites dans le [de configuration pour la section de Technologies de stockage du guide de configuration du périphérique](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)et vérifiez **iCloud** comme un service autorisée :
 
- [ ![](introduction-to-icloud-images/icloud-sml.png "Recherche un service autorisé iCloud")](introduction-to-icloud-images/icloud.png)
+ [![](introduction-to-icloud-images/icloud-sml.png "Recherche un service autorisé iCloud")](introduction-to-icloud-images/icloud.png#lightbox)
 
 - **Créer un profil de configuration** - pour créer un profil de configuration, suivez les étapes décrites dans le [guide de configuration du périphérique](~/ios/get-started/installation/device-provisioning/index.md#Provisioning_Profile) .
 
@@ -83,7 +83,7 @@ Cette capture d’écran montre l’exemple en cours d’utilisation. Lors de la
 
 
 
- [ ![](introduction-to-icloud-images/icloud-kv-arrows.png "Le flux de messages entre les appareils")](introduction-to-icloud-images/icloud-kv-arrows.png)
+ [![](introduction-to-icloud-images/icloud-kv-arrows.png "Le flux de messages entre les appareils")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
 ### <a name="setting-and-retrieving-data"></a>Définition et récupération de données
 
@@ -151,13 +151,13 @@ iCloud de stockage de documents est conçu pour gérer les données importantes 
 
 Ce diagramme illustre comment tout s’ajuste. Chaque périphérique possède les données enregistrées sur le stockage local (la UbiquityContainer) et d’iCloud du système d’exploitation que démon prend en charge de l’envoi et réception de données dans le cloud. Tous les accès de fichier à la UbiquityContainer doivent être effectuée via FilePresenter/FileCoordinator pour empêcher l’accès simultané. La `UIDocument` classe implémente pour vous ; cet exemple montre comment utiliser UIDocument.
 
- [ ![](introduction-to-icloud-images/icloud-overview.png "La vue d’ensemble du stockage de document")](introduction-to-icloud-images/icloud-overview.png)
+ [![](introduction-to-icloud-images/icloud-overview.png "La vue d’ensemble du stockage de document")](introduction-to-icloud-images/icloud-overview.png#lightbox)
 
 L’exemple iCloudUIDoc implémente un simple `UIDocument` sous-classe qui contient un champ de texte unique. Le texte est rendu dans un `UITextView` et les modifications sont propagées par iCloud à d’autres périphériques avec un message de notification en rouge. L’exemple de code ne traite pas des fonctionnalités plus avancées telles que la résolution des conflits iCloud.
 
 Cette capture d’écran montre l’exemple d’application - après la modification du texte et en appuyant sur **UpdateChangeCount** le document est synchronisé via iCloud à d’autres périphériques.
 
- [ ![](introduction-to-icloud-images/iclouduidoc.png "Cette capture d’écran montre l’exemple d’application après la modification du texte et en appuyant sur UpdateChangeCount")](introduction-to-icloud-images/iclouduidoc.png)
+ [![](introduction-to-icloud-images/iclouduidoc.png "Cette capture d’écran montre l’exemple d’application après la modification du texte et en appuyant sur UpdateChangeCount")](introduction-to-icloud-images/iclouduidoc.png#lightbox)
 
 Il existe cinq parties à l’exemple iCloudUIDoc :
 
@@ -403,15 +403,15 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 
 Les utilisateurs peuvent gérer des documents dans iCloud le **Documents** répertoire du « conteneur omniprésence » en dehors de votre application via des paramètres ; ils peuvent afficher la liste des fichiers et effectuez un balayage à supprimer. Code de l’application doit être en mesure de gérer la situation où les documents sont supprimés par l’utilisateur. Ne stockez pas de données d’application interne dans le **Documents** active.
 
- [ ![](introduction-to-icloud-images/icloudstorage.png "La gestion des flux de travail de Documents iCloud")](introduction-to-icloud-images/icloudstorage.png)
+ [![](introduction-to-icloud-images/icloudstorage.png "La gestion des flux de travail de Documents iCloud")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
 
 
 Les utilisateurs recevront également différents avertissements lorsqu’ils tentent de supprimer une application iCloud à partir de son appareil, pour les informer de l’état des documents d’iCloud liés à cette application.
 
- [ ![](introduction-to-icloud-images/icloud-delete1.png "Exemple de dialogue lorsque l’utilisateur tente de supprimer une application compatible iCloud leur appareil")](introduction-to-icloud-images/icloud-delete1.png)
+ [![](introduction-to-icloud-images/icloud-delete1.png "Exemple de dialogue lorsque l’utilisateur tente de supprimer une application compatible iCloud leur appareil")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [ ![](introduction-to-icloud-images/icloud-delete2.png "Exemple de dialogue lorsque l’utilisateur tente de supprimer une application compatible iCloud leur appareil")](introduction-to-icloud-images/icloud-delete2.png)
+ [![](introduction-to-icloud-images/icloud-delete2.png "Exemple de dialogue lorsque l’utilisateur tente de supprimer une application compatible iCloud leur appareil")](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## <a name="icloud-backup"></a>iCloud de sauvegarde
 

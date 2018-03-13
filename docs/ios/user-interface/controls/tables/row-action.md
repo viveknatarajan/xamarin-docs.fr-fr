@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: e9d3e2eecd4c03e7b3046e1ad86dd8a0d70a7f73
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 23a8fcd0633757bfffdb1761c3fc811268341b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-row-actions"></a>L’utilisation d’Actions de ligne
 
@@ -177,7 +177,7 @@ table.Delegate = tableDelegate;
 
 Lorsque le code ci-dessus est exécuté et l’Assistant numérique avec leur utilisateur laissés sur une ligne de table, le **Hi** bouton s’affiche à la place de la **supprimer** bouton affiché par défaut :
 
-[ ![](row-action-images/action01.png "Le bouton Hi affiché au lieu du bouton Supprimer")](row-action-images/action01.png)
+[![](row-action-images/action01.png "Le bouton Hi affiché au lieu du bouton Supprimer")](row-action-images/action01.png#lightbox)
 
 Si l’utilisateur appuie sur le **Hi** bouton, `Hello World!` est écrit dans la console dans Visual Studio pour Mac ou Visual Studio lors de l’application est exécutée en mode débogage.
 

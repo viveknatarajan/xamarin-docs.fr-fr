@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 8bf47f1edfd4256e25c7af8ce2970ad1918b8027
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 237a986d6db2fb6984e99c6265fbbc212b35a351
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="subscriptions-and-reporting"></a>Rapports et abonnements
 
@@ -53,17 +53,17 @@ Le Secret partagé de fournisseur In-App doit être utilisé dans la demande JSO
 
 À partir de la page d’accueil de connexion, sélectionnez iTunes **mes applications**:   
    
- [ ![](subscriptions-and-reporting-images/image2.png "Sélectionner Mes apps")](subscriptions-and-reporting-images/image2.png)  
+ [![](subscriptions-and-reporting-images/image2.png "Sélectionnez Mes applications")](subscriptions-and-reporting-images/image2.png#lightbox)  
  
 Sélectionnez une application et cliquez sur le **achats dans l’application** onglet :
 
-[ ![](subscriptions-and-reporting-images/image6.png "Cliquez sur l’onglet achats dans l’application")](subscriptions-and-reporting-images/image6.png)
+[![](subscriptions-and-reporting-images/image6.png "Cliquez sur l’onglet achats dans l’application")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 Au bas de la page, sélectionnez **vue ou de générer un secret partagé**:
    
- [ ![](subscriptions-and-reporting-images/image40.png "Sélectionnez la vue ou de générer un secret partagé")](subscriptions-and-reporting-images/image40.png)
+ [![](subscriptions-and-reporting-images/image40.png "Sélectionnez la vue ou de générer un secret partagé")](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [ ![](subscriptions-and-reporting-images/image41.png "Générer un secret partagé")](subscriptions-and-reporting-images/image41.png)   
+ [![](subscriptions-and-reporting-images/image41.png "Générer un secret partagé")](subscriptions-and-reporting-images/image41.png#lightbox)   
    
    
    
@@ -115,9 +115,9 @@ iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) four
 
 Vous trouverez ci-dessous un exemple de rapport des ventes et les tendances :   
 
- [ ![](subscriptions-and-reporting-images/image42.png "Un exemple de rapport des ventes et les tendances")](subscriptions-and-reporting-images/image42.png)   
+ [![](subscriptions-and-reporting-images/image42.png "Un exemple de rapport des ventes et les tendances")](subscriptions-and-reporting-images/image42.png#lightbox)   
    
  Il existe également un [ **Mobile de se connecter CTI**l’application iOS (lien iTunes)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
 captures d’écran de l’iPhone pour les statistiques disponibles sont affichés ici :   
    
- [ ![](subscriptions-and-reporting-images/image43.png "captures d’écran de l’iPhone pour les statistiques disponibles")](subscriptions-and-reporting-images/image43.png)
+ [![](subscriptions-and-reporting-images/image43.png "captures d’écran de l’iPhone pour les statistiques disponibles")](subscriptions-and-reporting-images/image43.png#lightbox)

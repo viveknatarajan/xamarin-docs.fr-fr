@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 79ce4a1393b2affade3422f73e1c3d4680d199df
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1e65207e987dbdab8bf2fe5f48f0b0a500dd27bc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-datapages"></a>Prise en main de pages de données
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/28/2018
 
 Pour commencer la création d’une page de lecteur de données simple à l’aide de l’aperçu de pages de données, suivez les étapes ci-dessous. Ce utilise démonstration un style codé en dur (« événements ») dans l’aperçu de builds qui fonctionne uniquement avec le format JSON spécifique dans le code.
 
-[ ![](get-started-images/demo-sml.png "Exemple de pages de données d’Application")](get-started-images/demo.png "exemple des pages de données d’Application")
+[![](get-started-images/demo-sml.png "Exemple de pages de données d’Application")](get-started-images/demo.png#lightbox "exemple des pages de données d’Application")
 
 ## <a name="1-add-nuget-packages"></a>1. Ajouter des Packages NuGet
 
@@ -134,7 +134,7 @@ Un exemple des données JSON à partir de la [source demo](http://demo3143189.mo
 
 Les étapes ci-dessus doivent entraîner une page de données de travail :
 
-[ ![](get-started-images/demo-sml.png "Exemple de pages de données d’Application")](get-started-images/demo.png "exemple des pages de données d’Application")
+[![](get-started-images/demo-sml.png "Exemple de pages de données d’Application")](get-started-images/demo.png#lightbox "exemple des pages de données d’Application")
 
 Cela fonctionne parce que le style avant génération **« Événements »** existe dans le package Nuget de thème clair et a les styles définis qui correspondent à la source de données (par exemple). "title", "image", "presenter").
 
@@ -163,7 +163,7 @@ Le style hérité peut être remplacé par la spécification d’un modèle et �
 
 En fournissant un `DataTemplate` ce code substitue la `StyleClass` et utilise à la place de la disposition par défaut pour un `ListItemControl`.
 
-[ ![](get-started-images/custom-sml.png "Exemple de pages de données d’Application")](get-started-images/custom.png "exemple des pages de données d’Application")
+[![](get-started-images/custom-sml.png "Exemple de pages de données d’Application")](get-started-images/custom.png#lightbox "exemple des pages de données d’Application")
 
 Les développeurs qui préfèrent c# pour XAML peuvent créer des données de source de liaisons trop (n’oubliez pas d’inclure un `using Xamarin.Forms.Pages;` instruction) :
 

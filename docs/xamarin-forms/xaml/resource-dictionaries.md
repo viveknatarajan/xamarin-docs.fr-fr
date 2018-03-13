@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: 0c2765551c16be605bc78d9ef32a91fd2c4ead8c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9602e4d99e8f5c004fe75ab724bb3746aca46003
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="resource-dictionaries"></a>Dictionnaires de ressources
 
@@ -83,10 +83,10 @@ Chaque ressource a une clé qui est spécifiée à l’aide de la `x:Key` attrib
 
 La première [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instance récupère et utilise le `LabelPageHeadingStyle` définie dans le niveau de l’application de ressource [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), et de la seconde `Label` instance la récupération et la consommation du `LabelNormalStyle` définies dans le niveau de contrôle des ressources `ResourceDictionary`. De même, la [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) instance récupère et utilise le `NormalTextColor` définie dans le niveau de l’application de ressource `ResourceDictionary`et le `MediumBoldText` définies dans le niveau de contrôle des ressources `ResourceDictionary`. Cela provoque l’affichage indiqué dans les captures d’écran suivants :
 
-[![](resource-dictionaries-images/screenshots-sml.png "Consommation des ressources de ResourceDictionary")](resource-dictionaries-images/screenshots.png "consomment des ressources de ResourceDictionary")
+[![](resource-dictionaries-images/screenshots-sml.png "Consommation des ressources de ResourceDictionary")](resource-dictionaries-images/screenshots.png#lightbox "consomment des ressources de ResourceDictionary")
 
 > [!NOTE]
-> **Remarque**: ressources spécifiques à une page unique ne doit pas être inclus dans un dictionnaire de ressources de niveau application, en tant que tel ressources seront ensuite analysés au démarrage de l’application au lieu de lorsque requis par une page. Pour plus d’informations, consultez [réduire la taille de dictionnaire de ressources Application](~/xamarin-forms/deploy-test/performance.md).
+> Ressources qui sont spécifiques à une page unique ne doit pas être inclus dans un application au niveau dictionnaire de ressources, en tant que tel ressources seront ensuite analysés au démarrage de l’application au lieu de lorsque requis par une page. Pour plus d’informations, consultez [réduire la taille de dictionnaire de ressources Application](~/xamarin-forms/deploy-test/performance.md).
 
 ## <a name="overriding-resources"></a>Substitution de ressources
 
@@ -118,7 +118,7 @@ Lorsque [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.
 
 La version d’origine `PageBackgroundColor` et `NormalTextColor` instances, définies au niveau de l’application, sont remplacées par les `PageBackgroundColor` et `NormalTextColor` instances définies au niveau de la page. Par conséquent, la couleur d’arrière-plan de page devient bleue et le texte dans la page devient jaune, comme indiqué dans les captures d’écran suivantes :
 
-[![](resource-dictionaries-images/overridding-screenshots-sml.png "Substitution de ressources de ResourceDictionary")](resource-dictionaries-images/overridding-screenshots.png "substitution ResourceDictionary ressources")
+[![](resource-dictionaries-images/overridding-screenshots-sml.png "Substitution de ressources de ResourceDictionary")](resource-dictionaries-images/overridding-screenshots.png#lightbox "substitution ResourceDictionary ressources")
 
 Toutefois, notez que la barre de l’arrière-plan de la [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) est toujours jaune, car le [ `BarBackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.BarBackgroundColor/) est définie sur la valeur de la `PageBackgroundColor` défini dans l’application de ressource niveau [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/).
 
@@ -175,7 +175,7 @@ Lors de la fusion [ `ResourceDictionary` ](https://developer.xamarin.com/api/typ
 1. Les ressources contenues dans les dictionnaires de ressources qui ont été fusionnées via la `MergedDictionaries` collection, dans l’ordre d’apparition dans le `MergedDictionaries` propriété.
 
 > [!NOTE]
-> **Remarque**: recherche des dictionnaires de ressources peut être une tâche nécessitant si une application contient plusieurs dictionnaires de ressources volumineux. Par conséquent, assurez-vous que chaque page dans une application utilise uniquement les dictionnaires de ressources qui sont appropriées à la page, pour éviter des recherches superflues.
+> Recherche les dictionnaires de ressources peut être une tâche nécessitant si une application contient plusieurs dictionnaires de ressources volumineux. Par conséquent, assurez-vous que chaque page dans une application utilise uniquement les dictionnaires de ressources qui sont appropriées à la page, pour éviter des recherches superflues.
 
 ## <a name="summary"></a>Récapitulatif
 

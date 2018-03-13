@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 1689736ce3f2a8e20ceaa23edf410d3892038522
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5422d3f0a68f99790617fe534b30389aae2563c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tinyrenderer-workbooks"></a>Classeurs TinyRenderer
 
@@ -30,7 +30,7 @@ Une série de classeurs qui expliquent le fonctionnement de OpenGL, qui s’exé
 -    [La leçon 7 : Mappage de clichés instantanés](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson7.workbook)
 -    [Leçon 8 : Occlusion ambiante](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson8.workbook)
 
-[ ![](tinyrenderer-images/tinyrenderer-sml.png "Exemple de rendu filaire")](tinyrenderer-images/tinyrenderer.png)
+[![](tinyrenderer-images/tinyrenderer-sml.png "Exemple de rendu filaire")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 Le code c# dans ces classeurs est basé sur cette open source [code C++](https://github.com/ssloy/tinyrenderer) et le texte est à partir de ce [wiki](https://github.com/ssloy/tinyrenderer/wiki/). Nous serions heureux de recevoir que le travail d’origine est disponible sous licence qui nous ont permis à transformer en un ensemble de classeurs.
 

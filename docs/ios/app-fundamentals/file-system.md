@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: a2c3ce9e19340067d77a8bc131b5a247806ecfa1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 36c793e7a9b7b30bcb0cdf2c7959fd2df36c8775
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-file-system"></a>Utilisation avec le système de fichiers
 
@@ -26,7 +26,7 @@ iOS a également certaines fonctionnalités spécifiques du système de fichiers
 
 Cet article traite des fonctionnalités et restrictions du iOS système de fichiers en détail et inclut un exemple d’application qui illustre l’utilisation de Xamarin.iOS pour exécuter certaines opérations de système de fichiers simple :
 
- [ ![](file-system-images/05-sampleapp.png "Un exemple d’e/s de l’exécution de certaines opérations de système de fichiers simple")](file-system-images/05-sampleapp.png)
+ [![](file-system-images/05-sampleapp.png "Un exemple d’e/s de l’exécution de certaines opérations de système de fichiers simple")](file-system-images/05-sampleapp.png#lightbox)
 
  <a name="General_File_Access" />
 
@@ -110,7 +110,7 @@ Pour plus d’informations sur l’espace de noms System.IO, consultez le [Docum
 
 Utilisation de Json les données dans une application Xamarin.iOS sont très faciles à l’aide de la [Json.NET](http://www.newtonsoft.com/json) framework JSON de hautes performances pour le NuGet Package de .NET. Ajoutez simplement le package NuGet au projet de votre application : 
 
-[ ![](file-system-images/json01.png "Ajout du package NuGet pour le projet d’applications")](file-system-images/json01.png)
+[![](file-system-images/json01.png "Ajout du package NuGet pour le projet d’applications")](file-system-images/json01.png#lightbox)
 
 Ensuite, ajoutez une classe en tant que le modèle de données pour la sérialisation/désérialisation (dans ce cas `Account.cs`) :
 
@@ -217,11 +217,11 @@ Lorsque vous accédez à votre offre groupée d’Application dans le système d
 
 Pour afficher l’offre groupée d’Application pour l’exemple de code, avec le bouton droit sur le projet dans Visual Studio pour Mac, puis sélectionnez **ouvrir le dossier contenant**. Accédez ensuite à **bin/Debug/** où vous devez trouver une icône d’application (semblable à la capture d’écran ci-dessous).
 
- [ ![](file-system-images/40-bundle.png "Accédez au bin/Debug pour trouver une icône d’application similaire à cette capture d’écran")](file-system-images/40-bundle.png)
+ [![](file-system-images/40-bundle.png "Accédez au bin/Debug pour trouver une icône d’application similaire à cette capture d’écran")](file-system-images/40-bundle.png#lightbox)
 
 Avec le bouton droit sur cette icône, puis choisissez **afficher le contenu de Package** pour parcourir le contenu du répertoire de l’offre groupée d’Application. Le contenu s’affiche comme le contenu d’un répertoire régulière, comme illustré ici :
 
- [ ![](file-system-images/45-bundle.png "Le contenu de l’offre groupée")](file-system-images/45-bundle.png)
+ [![](file-system-images/45-bundle.png "Le contenu de l’offre groupée")](file-system-images/45-bundle.png#lightbox)
 
 L’offre groupée d’Application est ce qui est installé sur le simulateur ou sur votre appareil pendant le test, et finalement, c’est ce qui est soumis à Apple pour les inclure dans l’App Store.
 
@@ -313,7 +313,7 @@ Le contenu de ce répertoire n’est jamais exposé à l’utilisateur via iTune
 
 Cette capture d’écran montre la structure de répertoire dans une fenêtre de recherche :
 
- [ ![](file-system-images/08-library-directory.png "Cette capture d’écran montre la structure de répertoire dans une fenêtre de recherche")](file-system-images/08-library-directory.png)
+ [![](file-system-images/08-library-directory.png "Cette capture d’écran montre la structure de répertoire dans une fenêtre de recherche")](file-system-images/08-library-directory.png#lightbox)
 
  <a name="Accessing_Other_Directories_Programmatically" />
 
@@ -352,11 +352,11 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 Les utilisateurs peuvent accéder les fichiers dans le répertoire de Documents de votre application en modifiant `Info.plist` et la création d’un **Application prend en charge le partage iTunes** (`UIFileSharingEnabled`) entrée dans le **Source** vue, en tant que illustrée ici :
 
- [ ![](file-system-images/09-uifilesharingenabled-plist.png "Ajout d’une Application prend en charge les iTunes partage la propriété")](file-system-images/09-uifilesharingenabled-plist.png)
+ [![](file-system-images/09-uifilesharingenabled-plist.png "Ajout d’une Application prend en charge les iTunes partage la propriété")](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
 
 Ces fichiers sont accessibles dans iTunes lorsque l’appareil est connecté et que l’utilisateur choisit le `Apps` onglet. Par exemple, la capture d’écran suivante montre les fichiers dans l’application sélectionnée partagée via iTunes :
 
- [ ![](file-system-images/10-itunes-file-sharing.png "Cette capture d’écran montre les fichiers dans l’application sélectionnée partagée via iTunes")](file-system-images/10-itunes-file-sharing.png)
+ [![](file-system-images/10-itunes-file-sharing.png "Cette capture d’écran montre les fichiers dans l’application sélectionnée partagée via iTunes")](file-system-images/10-itunes-file-sharing.png#lightbox)
 
 Les utilisateurs peuvent accéder uniquement les éléments de niveau supérieur dans ce répertoire via iTunes. Ils ne peuvent pas voir le contenu de tous les sous-répertoires (bien qu’ils peuvent les copier sur leur ordinateur ou les supprimer). Par exemple, avec GoodReader, PDF et EPUB peut être partagé avec l’application afin que les utilisateurs peuvent les lire sur leurs périphériques iOS.
 
@@ -364,7 +364,7 @@ Les utilisateurs qui modifient le contenu du dossier des Documents peuvent entra
 
 L’exemple de code pour cet article crée un fichier et un dossier dans le dossier Documents (dans **SampleCode.cs**) et permet le partage de fichiers dans le **Info.plist** fichier. Cette capture d’écran montre comment ils apparaissent dans iTunes :
 
- [ ![](file-system-images/15-itunes-file-sharing-example.png "Cette capture d’écran montre comment les fichiers s’affichent dans iTunes")](file-system-images/15-itunes-file-sharing-example.png)
+ [![](file-system-images/15-itunes-file-sharing-example.png "Cette capture d’écran montre comment les fichiers s’affichent dans iTunes")](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
 Reportez-vous à la [utilisation des Images](~/ios/app-fundamentals/images-icons/index.md) article pour plus d’informations sur la façon de définir des icônes de l’application et pour les types de document personnalisées que vous créez.
 

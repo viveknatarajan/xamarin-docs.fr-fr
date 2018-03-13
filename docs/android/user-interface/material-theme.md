@@ -7,18 +7,14 @@ ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
-ms.openlocfilehash: ba73e03d6bdeea64918e0232b2188bf8e3b65084
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 479abf7fef695be156d4447592bc59dceabe3f03
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="material-theme"></a>Thème matière
-
-<a name="overview" />
-
-## <a name="overview"></a>Vue d'ensemble
 
 *Thème matière* est un style d’interface utilisateur qui détermine l’apparence des vues et des activités en commençant par Android 5.0 (Lollipop). Thème matière est intégré dans Android 5.0, afin qu’il est utilisé par le système de l’interface utilisateur, ainsi que par des applications. Thème matière n’est pas un « thème » dans le sens d’une option de l’apparence de l’échelle du système qu’un utilisateur peut choisir dynamiquement à partir d’un menu Paramètres. Au lieu de cela, le thème de matériel peut être considéré comme un ensemble de styles de base intégrés connexes que vous pouvez utiliser pour personnaliser l’apparence de votre application.
 
@@ -32,7 +28,7 @@ Android fournit trois styles de thème du matériel :
 
 Exemples de ces versions de thème du matériel sont affichés ici :
 
-[![Captures d’écran du thème foncé, le thème clair et thème sombre Action barre](material-theme-images/three-flavors-sml.png)](material-theme-images/three-flavors.png)
+[![Captures d’écran du thème foncé, le thème clair et thème sombre Action barre](material-theme-images/three-flavors-sml.png)](material-theme-images/three-flavors.png#lightbox)
 
 Vous pouvez dériver de thème de matériel pour créer votre propre thème, substituant certains ou tous les attributs de couleur. Par exemple, vous pouvez créer un thème qui dérive de `Theme.Material.Light`, mais se substitue à la couleur de barre d’application pour faire correspondre la couleur de votre image de marque. Vous pouvez également appliquer un style des vues ; par exemple, vous pouvez créer un style pour [CardView](~/android/user-interface/controls/card-view.md) qui a des angles arrondis plus et qui utilise une couleur d’arrière-plan plus sombre.
 
@@ -40,7 +36,6 @@ Vous pouvez utiliser un thème unique pour une application entière, ou vous pou
 
 Thème du matériel est pris en charge uniquement sur Android 5.0 et versions ultérieures, vous ne pouvez pas utiliser (ou un thème personnalisé dérivé de thème du matériel) au thème votre application pour l’exécution sur des versions antérieures d’Android. Toutefois, vous pouvez configurer votre application pour utiliser le thème de la documentation sur les appareils Android 5.0 et en douceur revient à un thème antérieur lorsqu’il s’exécute sur des versions antérieures d’Android (consultez la [compatibilité](#compatibility) section de cet article pour plus d’informations).
 
-<a name="requirements" />
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -54,13 +49,11 @@ Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités
 
 Pour savoir comment configurer un projet d’application Android 5.0, consultez [paramètre configurer un projet Android 5.0](~/android/platform/lollipop.md).
 
-<a name="builtinthemes" />
 
 ## <a name="using-the-built-in-themes"></a>À l’aide des thèmes intégrés
 
 À utiliser le thème de matériel, le plus simple consiste à configurer votre application pour utiliser un thème intégré sans personnalisation. Si vous ne souhaitez pas configurer explicitement un thème, votre application par défaut est `Theme.Material` (thème foncé). Si votre application n'a qu’une seule activité, vous pouvez configurer un thème au niveau de l’application. Si votre application a plusieurs activités, vous pouvez configurer un thème au niveau de l’application afin qu’il utilise le même thème sur toutes les activités, ou vous pouvez attribuer différents thèmes pour différentes activités. Les sections suivantes expliquent comment configurer des thèmes au niveau de l’application et au niveau de l’activité.
 
-<a name="themeanapp" />
 
 ### <a name="theming-an-application"></a>Une Application de thèmes
 
@@ -88,7 +81,6 @@ Ou bien, vous pouvez définir l’application `Theme` attribut **AssemblyInfo.cs
 
 Lorsque le thème de l’application a la valeur `@android:style/Theme.Material.Light`, chaque activité dans *MyApp* s’affichera à l’aide de `Theme.Material.Light`.
 
-<a name="activitytheme" />
 
 ### <a name="theming-an-activity"></a>Une activité de thèmes
 
@@ -125,11 +117,10 @@ Thème matière expose les attributs de disposition suivants pour la personnalis
 
 Ces zones de l’écran sont étiquetées dans le diagramme suivant :
 
-[ ![Diagramme des attributs et leurs zones d’écran associé](material-theme-images/screen-attributes-sml.png)](material-theme-images/screen-attributes.png)
+[![Diagramme des attributs et leurs zones d’écran associé](material-theme-images/screen-attributes-sml.png)](material-theme-images/screen-attributes.png#lightbox)
 
 Par défaut, `statusBarColor` est définie à la valeur de `colorPrimaryDark`. Vous pouvez définir `statusBarColor` une couleur unie, ou vous pouvez le définir sur `@android:color/transparent` pour rendre la barre d’état transparente. La barre de navigation permettre également être transparentes en définissant `navigationBarColor` à `@android:color/transparent`.
 
-<a name="customapptheme" />
 
 ### <a name="creating-a-custom-app-theme"></a>Création d’un thème d’application personnalisée
 
@@ -151,7 +142,7 @@ Vous pouvez créer un thème d’application personnalisée en créant et en mod
 
 -   Créer un **valeurs/ressources-v21** dossier. Dans ce dossier, créez un **styles.xml** fichier :
 
-    [ ![Emplacement de styles.xml dans le dossier de ressources/valeurs-21.xml](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png)
+    [![Emplacement de styles.xml dans le dossier de ressources/valeurs-21.xml](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png#lightbox)
 
     Notez que **valeurs/ressources-v21** est spécifique à Android 5.0 &ndash; des versions antérieures d’Android ne lira pas les fichiers dans ce dossier.
 
@@ -169,7 +160,7 @@ Vous pouvez créer un thème d’application personnalisée en créant et en mod
 
 -   À ce stade, une application qui utilise *MyCustomTheme* affichera le stock `Theme.Material.Light` thème sans personnalisation :
 
-    [ ![Apparence de thème personnalisé avant les personnalisations](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png)
+    [![Apparence de thème personnalisé avant les personnalisations](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png#lightbox)
 
 -   Ajouter des personnalisations de couleur pour **styles.xml** en définissant les couleurs des attributs de mise en page que vous souhaitez modifier. Par exemple, pour modifier la couleur de barre d’application pour `my_blue` et modifiez la couleur des contrôles d’interface utilisateur à `my_purple`, ajouter la couleur des remplacements afin de **styles.xml** qui font référence aux ressources de couleur configurés dans **colors.xml**:
 
@@ -188,7 +179,7 @@ Vous pouvez créer un thème d’application personnalisée en créant et en mod
 
 Avec ces modifications en place, une application qui utilise *MyCustomTheme* affichera une couleur de barre d’application dans `my_blue` et contrôles d’interface utilisateur dans `my_purple`, mais utilisez le `Theme.Material.Light` couleurs partout ailleurs :
 
-[ ![Apparence de thème personnalisé après les personnalisations](material-theme-images/custom-theme-after-sml.png)](material-theme-images/custom-theme-after.png)
+[![Apparence de thème personnalisé après les personnalisations](material-theme-images/custom-theme-after-sml.png)](material-theme-images/custom-theme-after.png#lightbox)
 
 Dans cet exemple, *MyCustomTheme* emprunte les couleurs de `Theme.Material.Light` pour l’arrière-plan de couleur, barre d’état et les couleurs de texte, mais il modifie la couleur de la barre d’application pour `my_blue` et définit la couleur du bouton radio `my_purple`.
 
@@ -225,11 +216,10 @@ Pour appliquer un style une vue individuelle, procédez comme suit :
 
 La capture d’écran suivante fournit un exemple de la valeur par défaut `CardView` (indiqué sur la gauche) par rapport à un `CardView` qui a été mis en forme avec personnalisé `CardView.MyBlue` thème (affiché sur la droite) :
 
-[ ![Exemples de valeur par défaut CardView et personnalisé CardView](material-theme-images/custom-cardview-sml.png)](material-theme-images/custom-cardview.png)
+[![Exemples de valeur par défaut CardView et personnalisé CardView](material-theme-images/custom-cardview-sml.png)](material-theme-images/custom-cardview.png#lightbox)
 
 Dans cet exemple, personnalisé `CardView` s’affiche avec la couleur d’arrière-plan `my_blue` et un rayon d’angle 18dp.
 
-<a name="compatibility" />
 
 ## <a name="compatibility"></a>Compatibilité
 

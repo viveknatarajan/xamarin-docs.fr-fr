@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: d18cf055bb206099eecea0d9f417af571f3819e0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8b266640bb0e1aa2bc584197e5fd7cbf4ab48e88
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-orientation"></a>Orientation du périphérique
 
@@ -31,7 +31,7 @@ Cet article vous guide dans la création d’applications qui tirent parti des f
 Lorsque vous utilisez Xamarin.Forms, la méthode prise en charge de contrôler l’orientation de l’appareil est d’utiliser les paramètres pour chaque projet individuel.
 
 > [!NOTE]
-> **Remarque**: de Xamarin.Forms 1.5.0, il existe un bogue qui empêche les tentatives de basé sur un convertisseur personnalisés pour contrôler l’orientation de l’échec. Consultez [cette discussion](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)cette discussion sur les forums de Xamarin pour plus d’informations.
+> À compter de Xamarin.Forms 1.5.0, il existe un bogue qui empêche personnalisé basé sur un convertisseur essaie de contrôler l’orientation de l’échec. Consultez [cette discussion](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)cette discussion sur les forums de Xamarin pour plus d’informations.
 
 ### <a name="ios"></a>iOS
 
@@ -123,7 +123,7 @@ Notez que Windows Phone prend en charge les vues paysage dans les deux (comme in
 Xamarin.Forms ne propose pas les événements natifs de notification de votre application des modifications de l’orientation de code partagé. Toutefois, le `SizeChanged` l’événement de la `Page` se déclenche lorsque la largeur ou la hauteur de la `Page` modifications. Lorsque la largeur de la `Page` est supérieure à la hauteur, l’appareil est en mode paysage. Pour plus d’informations, consultez [afficher une Image en fonction de l’orientation de l’écran](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/).
 
 > [!NOTE]
-> **Remarque**: il existe un package NuGet existant disponible pour recevoir des notifications de modifications de l’orientation dans le code partagé. Consultez le [référentiel GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) pour plus d’informations.
+> Il existe un package NuGet existant disponible pour recevoir des notifications de modifications de l’orientation dans le code partagé. Consultez le [référentiel GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) pour plus d’informations.
 
 Il est également possible de remplacer le [ `OnSizeAllocated` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnSizeAllocated(System.Double,System.Double)/) méthode sur un `Page`, insertion de toute disposition modifier logique. Le `OnSizeAllocated` méthode est appelée chaque fois qu’un `Page` est allouée à une nouvelle taille, ce qui se produit se rotation de l’appareil. Notez que l’implémentation de base de `OnSizeAllocated` exécute les fonctions de disposition importantes, il est donc important d’appeler l’implémentation de base dans le remplacement :
 
@@ -176,7 +176,7 @@ Il est possible d’interfaces de conception à l’aide de mises en page intég
 Les règles ci-dessus s’appliquent également lorsque implémentant les interfaces pour plusieurs tailles d’écran et sont généralement considérés comme des meilleures pratiques. Le reste de ce guide explique des exemples spécifiques de dispositions réactives à l’aide de chacune des mises en page principales dans Xamarin.Forms.
 
 > [!NOTE]
-> **Remarque**: par souci de clarté, les sections suivantes montrent comment implémenter des dispositions réactives à l’aide de simplement un type de `Layout` à la fois. Dans la pratique, il est souvent plus simple de mélanger les `Layout`s pour obtenir une présentation souhaitée à l’aide la plus simple ou plus intuitive `Layout` pour chaque composant.
+> Pour plus de clarté, les sections suivantes montrent comment implémenter des dispositions réactives à l’aide de simplement un type de `Layout` à la fois. Dans la pratique, il est souvent plus simple de mélanger les `Layout`s pour obtenir une présentation souhaitée à l’aide la plus simple ou plus intuitive `Layout` pour chaque composant.
 
 ### <a name="stacklayout"></a>StackLayout
 

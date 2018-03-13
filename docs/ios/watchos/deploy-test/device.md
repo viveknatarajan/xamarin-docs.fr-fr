@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fab2092837f9b9ca8ada53274c9644f131fb5659
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="testing-on-watch-devices"></a>Test sur les appareils espion
 
@@ -32,7 +32,7 @@ Test des applications iOS sur un iPhone réel ou un iPad exige toujours le péri
 
 Observations ne sont pas différentes : vous devez maintenant ajouter votre appareil Apple Watch avant de déployer des applications à celui-ci. Recherche la surveillance à l’aide de UDID **Xcode** (**Windows > appareils** liste). Lorsque le téléphone apparié est connecté les informations de la surveillance affichera également :
 
-[ ![](device-images/xcode-devices-sml.png "Informations de surveillance appariés")](device-images/xcode-devices.png)
+[![](device-images/xcode-devices-sml.png "Informations de surveillance appariés")](device-images/xcode-devices.png#lightbox)
 
 Lorsque vous connaissez l’observation UDID, ajoutez-le à la liste des périphériques dans le centre de développement :
 
@@ -99,12 +99,12 @@ Cela peut se produire lors de la génération en mode débogage pour déployer s
 
 Pour *temporairement* contourner ce problème, désactivez **générations incrémentielles** dans l’Extension Watch **Options du projet > Générer > watchOS Build** fenêtre :
 
-[ ![](device-images/disable-incremental-sml.png "La case à cocher générations incrémentielles")](device-images/disable-incremental.png)
+[![](device-images/disable-incremental-sml.png "La case à cocher générations incrémentielles")](device-images/disable-incremental.png#lightbox)
 
 Ce problème sera corrigé dans une version ultérieure, après quoi les générations incrémentielles peuvent être réactivées pour tirer parti des durées de génération plus rapides.
 
 
-#<a name="3-watch-app-fails-to-start-while-debugging-on-device"></a># 3 application watch ne peut pas démarrer lors du débogage sur l’appareil
+### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Surveiller le Qu'application ne parvient pas à démarrer lors du débogage sur l’appareil
 
 Lorsqu’une tentative de débogage d’une application de surveillance sur une unité physique, uniquement l’icône & le compteur de chargement s’affichent (et finalement délai d’attente). Cela sera résolu dans une version ultérieure. une solution de contournement consiste à exécuter une version Release (qui n’autorise pas le débogage).
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: cbabaf36ba8bfaa74ec17b0af0cd97e29f72d270
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 996723db83a1f972cce26090d1253f97b6c818d3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="contacts-and-contactsui"></a>Contacts et ContactsUI
 
@@ -27,7 +27,7 @@ Les deux infrastructures nouvelle contiennent les fonctionnalités suivantes :
 
 - [**ContactsUI** ](#contactsui) -éléments de l’interface utilisateur de Xamarin.iOS fournit à afficher, modifier et sélectionnez Créer des contacts sur les appareils iOS.
 
-[ ![](contacts-images/add01.png "Un exemple de feuille de Contact sur un appareil iOS")](contacts-images/add01.png)
+[![](contacts-images/add01.png "Un exemple de feuille de Contact sur un appareil iOS")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
 > **Remarque :** existants `AddressBook` et `AddressBookUI` utilisés par iOS 8 infrastructures (et versions antérieures) ont été déconseillés dans iOS 9 et doit être remplacés par la nouvelle `Contacts` et `ContactsUI` infrastructures dès que possible pour n’importe quel Xamarin.iOS existant application. Nouvelles applications doivent être écrits sur les infrastructures de nouveau.
@@ -43,11 +43,13 @@ Dans les sections suivantes, nous allons examiner ces nouvelles infrastructures 
 
 L’infrastructure de Contacts fournit l’accès de Xamarin.iOS pour les informations de contact de l’utilisateur. Étant donné que la plupart des applications nécessitent uniquement un accès en lecture seule, cette infrastructure a été optimisée pour un accès thread-safe en lecture seule.
 
+<a name="Contact_Objects" />
+
 ### <a name="contact-objects"></a>Objets de contact
 
 La `CNContact` classe fournit un accès aux propriétés d’un contact telles que nom, adresse ou les numéros de téléphone thread-safe en lecture seule. `CNContact` fonctionne comme un `NSDictionary` et contient plusieurs collections en lecture seule des propriétés (telles que les adresses ou les numéros de téléphone) :
 
-[ ![](contacts-images/contactobjects.png "Vue d’ensemble de l’objet de contact")](contacts-images/contactobjects.png)
+[![](contacts-images/contactobjects.png "Vue d’ensemble de l’objet de contact")](contacts-images/contactobjects.png#lightbox)
 
 Pour toute propriété qui peut avoir plusieurs valeurs (par exemple, les numéros d’adresse ou par courrier électronique), elles sont représentées comme un tableau de `NSLabeledValue` objets. `NSLabeledValue` est un tuple safe thread constitué d’un jeu en lecture seule des étiquettes et valeurs où l’étiquette définit la valeur à l’utilisateur (par exemple les e-mails d’accueil ou de travail). L’infrastructure de Contacts fournit une sélection d’étiquettes prédéfinies (via la `CNLabelKey` et `CNLabelPhoneNumberKey` les classes static) que vous pouvez utiliser dans votre application ou que vous avez la possibilité de définir des étiquettes personnalisées pour vos besoins.
 
@@ -111,7 +113,7 @@ else
 
 Si ce code est exécuté sur un appareil iOS 9, un nouveau contact sera ajouté à la collection de l’utilisateur. Exemple :
 
-[ ![](contacts-images/add01.png "Un nouveau contact ajouté à la collection de l’utilisateur")](contacts-images/add01.png)
+[![](contacts-images/add01.png "Un nouveau contact ajouté à la collection de l’utilisateur")](contacts-images/add01.png#lightbox)
 
 ### <a name="contact-formatting-and-localization"></a>Mise en forme de contact et la localisation
 
@@ -194,7 +196,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 
 Un utilisateur peut avoir différentes sources d’informations de contact pour une seule personne dans leur base de données de contact (comme iCloud, Facebook ou Google Mail). Dans iOS et OS X applications, ces informations seront automatiquement liées entre elles et affichées à l’utilisateur en tant qu’un seul, _unifiée contactez_:
 
-[ ![](contacts-images/unified01.png "Vue d’ensemble des Contacts unifiée")](contacts-images/unified01.png)
+[![](contacts-images/unified01.png "Vue d’ensemble des Contacts unifiée")](contacts-images/unified01.png#lightbox)
 
 Ce Contact unifiée est une vue temporaire en mémoire des informations de contact de lien qui a son propre identificateur unique (qui doit être utilisé pour extraire le contact si nécessaire). Par défaut, l’infrastructure de Contacts retournera un Contact unifiée autant que possible.
 
@@ -259,11 +261,11 @@ Chaque fois qu’un contact est modifié, le Contact de magasin valide un `CNCon
 
 Les contacts d’un utilisateur peuvent exister ou localement sur l’appareil de l’utilisateur en tant que contacts synchronisés à l’appareil à partir d’un ou plusieurs comptes de serveur (tels que Facebook ou Google). Chaque pool de contacts possède son propre _conteneur_ et un Contact donné peut uniquement exister dans un seul conteneur.
 
-[ ![](contacts-images/containers01.png "Vue d’ensemble des conteneurs et des groupes")](contacts-images/containers01.png)
+[![](contacts-images/containers01.png "Vue d’ensemble des conteneurs et des groupes")](contacts-images/containers01.png#lightbox)
 
 Certains conteneurs permettant d’être organisées en un ou plusieurs Contacts _groupes_ ou _sous-groupes_. Ce comportement dépend du magasin de stockage pour un conteneur donné. Par exemple, iCloud a un seul conteneur, mais peut avoir plusieurs groupes (mais pas sous-groupes). Microsoft Exchange ne prend pas en charge les groupes quant à eux, mais peuvent avoir plusieurs conteneurs (un pour chaque dossier Exchange).
 
-[ ![](contacts-images/containers02.png "Se chevaucher dans les conteneurs et les groupes")](contacts-images/containers02.png)
+[![](contacts-images/containers02.png "Se chevaucher dans les conteneurs et les groupes")](contacts-images/containers02.png#lightbox)
 
 <a name="contactsui" />
 

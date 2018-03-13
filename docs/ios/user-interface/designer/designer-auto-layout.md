@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 040a5979339ed12f212f932f3b7e51cf48a9d382
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Disposition automatique avec le Concepteur de Xamarin pour iOS
 
@@ -54,7 +54,7 @@ Par défaut, aucune contrainte n’est créés ou visible sur l’aire. Au lieu 
 
 ## <a name="constraints-toolbar"></a>Barre d’outils de contraintes
 
- [ ![](designer-auto-layout-images/toolbarnew.png "Les commandes de Menu contextuel")](designer-auto-layout-images/toolbarnew.png)
+ [![](designer-auto-layout-images/toolbarnew.png "Les commandes de Menu contextuel")](designer-auto-layout-images/toolbarnew.png#lightbox)
 
 La barre d’outils de contraintes a été mis à jour et maintenant se compose de deux parties principales :
 
@@ -83,7 +83,7 @@ Les poignées en forme de T 4 sur chaque côté de l’élément de définissent
 
 Pour créer une contrainte, choisir une poignée et faites-la glisser quelque part sur l’aire de conception. Lorsque vous démarrez l’opération glisser, une série de lignes/zones vertes apparaît sur l’aire de vous indiquant que vous pouvez limiter les. Par exemple, la capture d’écran ci-dessous, nous sommes en limitant le côté supérieur du bouton central :
 
- [ ![](designer-auto-layout-images/image07.png "En limitant le côté supérieur du bouton central")](designer-auto-layout-images/image07.png)
+ [![](designer-auto-layout-images/image07.png "En limitant le côté supérieur du bouton central")](designer-auto-layout-images/image07.png#lightbox)
 
 Notez les trois lignes vertes en pointillés entre les deux autres boutons. Les lignes vertes indiquent *zones de dépôt*, ou les attributs des autres éléments à laquelle nous pouvons limiter. Dans la capture d’écran ci-dessus, les deux autres boutons offrent les zones de dépôt vertical 3 ( *bas*, *centerY*, *haut*) pour contraindre notre bouton. La ligne en pointillés verte en haut de la vue signifie que le contrôleur de la vue offre une contrainte en haut de la vue, et la zone verte unie signifie que le contrôleur de la vue offre une contrainte ci-dessous le guide de présentation en haut.
 
@@ -98,13 +98,13 @@ Les trois sections suivantes présentent travailler avec différents types de co
 
 Avec les contraintes de taille - *hauteur* et *largeur* -vous avez deux options. La première option consiste à faire glisser la poignée pour limiter à une taille d’élément voisin, comme illustré dans l’exemple ci-dessus. L’autre option est de double-cliquer sur la poignée pour créer une contrainte de libre-service. Cela nous permet de spécifier une valeur de taille constante, comme illustré par la capture d’écran ci-dessous :
 
- [ ![](designer-auto-layout-images/sizec.png "Faites glisser la poignée pour limiter à une taille d’élément voisin, comme illustré ici")](designer-auto-layout-images/sizec.png)
+ [![](designer-auto-layout-images/sizec.png "Faites glisser la poignée pour limiter à une taille d’élément voisin, comme illustré ici")](designer-auto-layout-images/sizec.png#lightbox)
 
 ### <a name="center-constraints"></a>Centre des contraintes
 
 La poignée carrée créera un *centerX* ou *centerY* contrainte, en fonction du contexte. En faisant glisser la poignée carrée s’allument les autres éléments pour offrir les deux zones de dépôt de verticales et horizontales, comme illustré par la capture d’écran ci-dessous :
 
- [ ![](designer-auto-layout-images/centerc.png "Centre des contraintes")](designer-auto-layout-images/centerc.png)
+ [![](designer-auto-layout-images/centerc.png "Centre des contraintes")](designer-auto-layout-images/centerc.png#lightbox)
 
 Si vous choisissez une zone de liste verticale, un *centerY* contrainte sera créée. Si vous choisissez une zone de dépôt horizontale, la contrainte doit reposer sur *centerX*.
 
@@ -112,17 +112,17 @@ Si vous choisissez une zone de liste verticale, un *centerY* contrainte sera cr�
 
 Pour créer l’alignement et contraintes de l’égalité de taille entre deux éléments, vous pouvez sélectionner des éléments à partir d’une barre d’outils supérieure spécifier - que - alignement horizontal, alignement vertical et égalités de taille, comme illustré par la capture d’écran ci-dessous :
 
- [ ![](designer-auto-layout-images/image06.png "Contraintes COMBINATOIRES")](designer-auto-layout-images/image06.png)
+ [![](designer-auto-layout-images/image06.png "Contraintes COMBINATOIRES")](designer-auto-layout-images/image06.png#lightbox)
 
 ### <a name="visualizing-and-editing-constraints"></a>Visualisation et la modification des contraintes
 
 Lorsque vous ajoutez une contrainte, il s’affichera sur l’aire de conception en tant qu’une ligne bleue lorsque vous sélectionnez un élément :
 
- [ ![](designer-auto-layout-images/image09.png "Visualisation des contraintes")](designer-auto-layout-images/image09.png)
+ [![](designer-auto-layout-images/image09.png "Visualisation des contraintes")](designer-auto-layout-images/image09.png#lightbox)
 
 Vous pouvez sélectionner une contrainte en cliquant sur une ligne bleue et de modifier les valeurs de contrainte directement dans le panneau de configuration de propriété. Vous pouvez également double-cliquer sur une ligne bleue affiche un popover qui vous permet de modifier les valeurs directement sur l’aire de conception :
 
- [ ![](designer-auto-layout-images/image08.png "Modification des contraintes")](designer-auto-layout-images/image08.png)
+ [![](designer-auto-layout-images/image08.png "Modification des contraintes")](designer-auto-layout-images/image08.png#lightbox)
 
 ## <a name="constraint-issues"></a>Problèmes de contrainte
 
@@ -139,27 +139,27 @@ Cette section présente les trois problèmes répertoriés ci-dessus et fournit 
 
 Des contraintes en conflit sont marqués en rouge et un symbole d’avertissement. Vous pointez sur les symboles d’avertissement affiche une popover avec des informations sur le conflit :
 
- [ ![](designer-auto-layout-images/image11.png "Des contraintes en conflit avertissement")](designer-auto-layout-images/image11.png)
+ [![](designer-auto-layout-images/image11.png "Des contraintes en conflit avertissement")](designer-auto-layout-images/image11.png#lightbox)
 
 ### <a name="underconstrained-items"></a>Chargement des éléments
 
 Chargement des éléments s’affichent en orange et déclenchent l’apparence d’une icône orange de marqueur dans la barre de l’objet de vue contrôleur :
 
- [ ![](designer-auto-layout-images/image02.png "Chargement des éléments s’affichent en orange")](designer-auto-layout-images/image02.png)
+ [![](designer-auto-layout-images/image02.png "Chargement des éléments s’affichent en orange")](designer-auto-layout-images/image02.png#lightbox)
 
 Si vous cliquez sur cette icône du marqueur, vous pouvez obtenir des informations sur les éléments de chargement de la scène et résoudre les problèmes par soit entièrement les contraindre ou en supprimant des contraintes, comme illustré par la capture d’écran ci-dessous :
 
- [ ![](designer-auto-layout-images/image10.png "Correction de chargement des éléments")](designer-auto-layout-images/image10.png)
+ [![](designer-auto-layout-images/image10.png "Correction de chargement des éléments")](designer-auto-layout-images/image10.png#lightbox)
 
 ### <a name="frame-misplacement"></a>Erreur de trame
 
 Erreur de trame utilise le même code de couleur en tant qu’éléments de chargement. L’élément sera toujours rendu sur la surface à l’aide de son frame natif, mais dans le cas d’une erreur de trame un rectangle rouge marquera où l’élément se retrouve lorsque l’application s’exécute, comme illustré par la capture d’écran ci-dessous :
 
- [ ![](designer-auto-layout-images/image05.png "Exemple de vue Frame dues")](designer-auto-layout-images/image05.png)
+ [![](designer-auto-layout-images/image05.png "Exemple de vue Frame dues")](designer-auto-layout-images/image05.png#lightbox)
 
 Pour résoudre les erreurs de trame dues, sélectionnez le **mise à jour de Frames en fonction de contraintes** bouton à partir de la barre d’outils de contraintes (bouton à droite) :
 
- [ ![](designer-auto-layout-images/image03.png "Mettre à jour des Frames basés sur le bouton de barre d’outils de contraintes")](designer-auto-layout-images/image03.png)
+ [![](designer-auto-layout-images/image03.png "Mettre à jour des Frames basés sur le bouton de barre d’outils de contraintes")](designer-auto-layout-images/image03.png#lightbox)
 
 Il ajuste automatiquement le cadre de l’élément pour correspondent aux positions définies par les contrôles.
 
@@ -174,10 +174,10 @@ Pour accéder à une contrainte dans le code, vous devez d’abord l’exposer d
 1. Créer la contrainte normalement (à l’aide d’une des méthodes répertoriées ci-dessus).
 2. Dans le **Explorer de structure du Document**, trouver la contrainte et sélectionnez-la :
 
-    [ ![](designer-auto-layout-images/modify01.png "L’Explorateur de structure du Document")](designer-auto-layout-images/modify01.png)
+    [![](designer-auto-layout-images/modify01.png "L’Explorateur de structure du Document")](designer-auto-layout-images/modify01.png#lightbox)
 3. Ensuite, affectez un **nom** à la contrainte dans le **Widget** onglet de la **l’Explorateur de propriétés**:
 
-    [ ![](designer-auto-layout-images/modify02.png "L’onglet du Widget")](designer-auto-layout-images/modify02.png)
+    [![](designer-auto-layout-images/modify02.png "L’onglet du Widget")](designer-auto-layout-images/modify02.png#lightbox)
 4. Enregistrez les modifications apportées.
 
 Avec les modifications ci-dessus en place, vous pouvez accéder à la contrainte dans le code et modifier ses propriétés. Par exemple, vous pouvez utiliser les éléments suivants pour définir la hauteur de la vue attachée à zéro :
@@ -188,7 +188,7 @@ ViewInfoHeight.Constant = 0;
 
 Étant donné le paramètre suivant pour la contrainte dans le concepteur iOS :
 
-[ ![](designer-auto-layout-images/modify03.png "Modification d’une contrainte dans l’Explorateur de propriétés")](designer-auto-layout-images/modify03.png)
+[![](designer-auto-layout-images/modify03.png "Modification d’une contrainte dans l’Explorateur de propriétés")](designer-auto-layout-images/modify03.png#lightbox)
 
 ### <a name="the-deferred-layout-pass"></a>La passe de disposition différée
 

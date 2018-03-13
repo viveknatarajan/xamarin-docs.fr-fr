@@ -5,18 +5,25 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1fe290983bf7b130dee6f1a1878a32dce3efc4c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ede9bbb47f398a82d6eae5d827122f469ad6ea4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layouts"></a>Mises en page
 
-Xamarin.Forms a plusieurs dispositions et les fonctionnalités pour organiser le contenu sur l’écran. Chaque contrôle de disposition est décrite ci-dessous, ainsi que des détails sur la gestion des modifications de l’orientation d’écran :
+Xamarin.Forms a plusieurs dispositions et les fonctionnalités pour organiser le contenu sur l’écran. 
+
+> [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
+
+**Les dispositions de Xamarin.Forms par [Xamarin University](https://university.xamarin.com/)**
+
+Chaque contrôle de disposition est décrite ci-dessous, ainsi que des détails sur la gestion des modifications de l’orientation d’écran :
 
 * **[StackLayout](stack-layout.md)**  &ndash; utilisée pour agencer des vues de manière linéaire, horizontalement ou verticalement. Vues dans un StackLayout peuvent être alignés au centre, à gauche ou à droit de la disposition.
 * **[DispositionAbsolue](absolute-layout.md)**  &ndash; utilisé pour organiser les affichages en définissant les coordonnées de la & taille en termes de valeurs absolues ou des rapports. DispositionAbsolue peut servir à des vues de la couche ainsi que leur ancrage à gauche, droite ou au centre.
@@ -35,7 +42,7 @@ Contrôles de plateforme peuvent également servir directement dans les disposit
 
 Le graphique suivant visualise les contrôles de disposition :
 
-[ ![](images/layouts-sml.png "Les dispositions de Xamarin.Forms")](images/layouts.png "Xamarin.Forms dispositions")
+[![](images/layouts-sml.png "Les dispositions de Xamarin.Forms")](images/layouts.png#lightbox "Xamarin.Forms dispositions")
 
 ## <a name="choosing-the-right-layout"></a>Choisir la disposition de droite
 
@@ -156,7 +163,7 @@ Notez les aspects suivants du code ci-dessus :
 
 Le [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) structure peut être utilisée pour définir l’alignement et l’expansion d’une vue, par rapport à son parent.
 
-### <a name="margin-and-paddingmargin-and-paddingmd"></a>[Marge et marge intérieure](margin-and-padding.md)
+### <a name="margin-and-paddingmargin-and-paddingmd"></a>[Marge et remplissage](margin-and-padding.md)
 
 Le [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) et [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) propriétés contrôlent le comportement de disposition quand un élément est affiché dans l’interface utilisateur.
 
@@ -168,7 +175,7 @@ Chaque élément a un [ `InputTransparent` ](https://developer.xamarin.com/api/p
 
 Lorsque cette propriété est définie sur une classe de conteneur, tel qu’une classe de mise en page, sa valeur les transferts aux éléments enfants. Par conséquent, si le [ `InputTransparent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/) propriété `true` sur une disposition de classe génère les éléments au sein de la mise en page ne reçoit ne pas d’entrée.
 
-### <a name="device-orientationdevice-orientationmd"></a>[Orientation du périphérique](device-orientation.md)
+### <a name="device-orientationdevice-orientationmd"></a>[Orientation de l’appareil](device-orientation.md)
 
 Xamarin.Forms et ses mises en page intégrés sont capables de gérer les modifications apportées à l’orientation de l’appareil. Prendre en compte les orientations que votre application prend en charge, ainsi que la manière dont vous allez rendre utilisent l’espace fourni dans les modes paysage et portrait.
 
@@ -180,7 +187,7 @@ iOS, Android et Windows prennent toutes en charge les tailles d’écran supéri
 
 Xamarin.Forms définit quatre classes de mise en page - [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/), et [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), et chaque réorganise ses enfants d’une manière différente. Cependant, parfois ses besoins pour organiser le contenu de la page à l’aide d’une disposition ne pas fournies par Xamarin.Forms. Cet article explique comment écrire une classe de disposition personnalisée et illustre une orientation sensible `WrapLayout` classe réorganise ses enfants horizontalement sur la page, puis encapsule l’affichage des enfants suivants pour les lignes supplémentaires.
 
-### <a name="layout-compressionlayout-compressionmd"></a>[Compression de la mise en page](layout-compression.md)
+### <a name="layout-compressionlayout-compressionmd"></a>[Compression de la disposition](layout-compression.md)
 
 Compression de la mise en page supprime les mises en page spécifiées à partir de l’arborescence d’éléments visuels dans le but d’améliorer les performances de rendu de page. Les avantages en matière de performances de cette technique varient selon la complexité d’une page, la version du système d’exploitation utilisé et l’appareil sur lequel l’application est en cours d’exécution. Toutefois, les gains en termes de performances les plus importants seront visibles sur les appareils les plus anciens.
 

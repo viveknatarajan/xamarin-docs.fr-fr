@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9c9032b3206fa35d264bd69c94b7882e877b334f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS résolution des problèmes
 
@@ -61,7 +61,7 @@ Cette page contient des informations supplémentaires et des solutions pour les 
 - Vous ne pouvez pas ajouter deux `WKNotificationControllers` à un plan conceptuel.
     Solution de contournement : Le `notificationCategory` dans la table de montage séquentiel XML est toujours inséré avec la même `id`. Pour contourner ce problème, vous pouvez ajouter des contrôleurs de Notification de deux (ou plus), ouvrez le fichier d’animation dans un éditeur de texte et modifiez manuellement le `id` élément unique.
 
-    [ ![](troubleshooting-images/duplicate-id-sml.png "Ouverture de la table de montage séquentiel de fichiers dans un éditeur de texte et modifiez manuellement l’élément id pour être unique")](troubleshooting-images/duplicate-id.png)
+    [![](troubleshooting-images/duplicate-id-sml.png "Ouverture de la table de montage séquentiel de fichiers dans un éditeur de texte et modifiez manuellement l’élément id pour être unique")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - Vous pouvez voir une erreur « l’application n’a pas été construite » lorsque vous tentez de lancer l’application. Cela se produit après un **Clean** lorsque le projet de démarrage est défini pour le projet d’extension de surveillance.
     Le correctif consiste à sélectionner **Générer > Régénérer tout** , puis relancez l’application.

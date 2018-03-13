@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 004f7c815a1629310ba4c0f4c6f4219581a12366
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-watch-face"></a>Création d’un visage espion
 
@@ -22,11 +22,11 @@ _Ce guide explique comment implémenter un service de face espion personnalisé 
 
 Dans cette procédure pas à pas, un service de visage dans une base espion est créé pour illustrer l’essentiel de la création d’un visage d’espion usure Android personnalisé. Le service de face initiale Espion affiche un espion numérique simple qui affiche l’heure actuelle en heures et minutes : 
 
-[![Cadran de la montre numérique](creating-a-watchface-images/01-initial-face.png "capture d’écran de la face espion numérique initiale")](creating-a-watchface-images/01-initial-face.png)
+[![Cadran de la montre numérique](creating-a-watchface-images/01-initial-face.png "capture d’écran de la face espion numérique initiale")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
 Une fois cette face espion numérique est développée et testée, davantage de code est ajouté pour mettre à niveau à plus sophistiquées face espion analogique avec trois mains : 
 
-[ ![Cadran de la montre analogique](creating-a-watchface-images/02-example-watchface.png "capture d’écran de la face espion analogique final")](creating-a-watchface-images/02-example-watchface.png)
+[![Cadran de la montre analogique](creating-a-watchface-images/02-example-watchface.png "capture d’écran de la face espion analogique final")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
 Espion face services sont regroupés et installés dans le cadre d’une application d’usure. Dans les exemples suivants, `MainActivity` contient rien d’autre que le code à partir du modèle d’application usure afin que le service de face espion peut être empaqueté et déployé à la surveillance active dans le cadre de l’application. En effet, cette application servira exclusivement un véhicule pour obtenir le service de face espion chargé dans le périphérique d’usure (ou l’émulateur) pour le débogage et le test. 
 
@@ -47,11 +47,11 @@ Créer un projet Android d’usure appelé **WatchFace** (pour plus d’informat
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Boîte de dialogue Nouveau projet](creating-a-watchface-images/03-wear-project-vs-sml.png "sélectionner l’application d’usure dans la boîte de dialogue Nouveau projet")](creating-a-watchface-images/03-wear-project-vs.png)
+[![Boîte de dialogue Nouveau projet](creating-a-watchface-images/03-wear-project-vs-sml.png "sélectionner l’application d’usure dans la boîte de dialogue Nouveau projet")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![Boîte de dialogue Nouveau projet](creating-a-watchface-images/03-wear-project-xs-sml.png "sélectionner l’application d’usure dans la boîte de dialogue Nouveau projet")](creating-a-watchface-images/03-wear-project-xs.png)
+[![Boîte de dialogue Nouveau projet](creating-a-watchface-images/03-wear-project-xs-sml.png "sélectionner l’application d’usure dans la boîte de dialogue Nouveau projet")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
 
@@ -60,11 +60,11 @@ Le nom du package la valeur `com.xamarin.watchface`:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Configuration du nom du package](creating-a-watchface-images/04-package-name-vs.png "com.xamarin.watchface la valeur le nom du package")](creating-a-watchface-images/04-package-name-vs.png)
+[![Configuration du nom du package](creating-a-watchface-images/04-package-name-vs.png "com.xamarin.watchface la valeur le nom du package")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![Configuration du nom du package](creating-a-watchface-images/04-package-name-xs.png "com.xamarin.watchface la valeur le nom du package")](creating-a-watchface-images/04-package-name-xs.png)
+[![Configuration du nom du package](creating-a-watchface-images/04-package-name-xs.png "com.xamarin.watchface la valeur le nom du package")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
@@ -72,13 +72,13 @@ Le nom du package la valeur `com.xamarin.watchface`:
 
 En outre, faites défiler la liste et activez le **INTERNET** et **WAKE_LOCK** autorisations : 
 
-[ ![Autorisations requises](creating-a-watchface-images/05-required-permissions-vs.png "autorisations activer INTERNET et WAKE_LOCK")](creating-a-watchface-images/05-required-permissions-vs.png)
+[![Autorisations requises](creating-a-watchface-images/05-required-permissions-vs.png "autorisations activer INTERNET et WAKE_LOCK")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 Définissez la version minimale Android **5.1 Android (API niveau 22)**. En outre, activez la **Internet** et **WakeLock** autorisations :
 
-[ ![Autorisations requises](creating-a-watchface-images/05-required-permissions-xs.png "autorisations activer Internet et WakeLock")](creating-a-watchface-images/05-required-permissions-xs.png)
+[![Autorisations requises](creating-a-watchface-images/05-required-permissions-xs.png "autorisations activer Internet et WakeLock")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
 
 -----
 
@@ -91,24 +91,24 @@ Ensuite, téléchargez [preview.png](creating-a-watchface-images/preview.png) &n
 
 Démarrez le Gestionnaire de Package NuGet (dans Visual Studio, cliquez sur **références** dans les **l’Explorateur de solutions** et sélectionnez **gérer les Packages NuGet...** ). Mettre à jour le projet vers la dernière version stable de **Xamarin.Android.Wear**: 
 
-[ ![Gestionnaire de Package NuGet ajouter](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "ajouter le package Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png)
+[![Gestionnaire de Package NuGet ajouter](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "ajouter le package Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
 
 Ensuite, si **Xamarin.Android.Support.v13** est installé, désinstallez-le :
 
-[ ![Suppression du Gestionnaire de Package NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Xamarin.Support.v13 de suppression")](creating-a-watchface-images/07-uninstall-v13.png)
+[![Suppression du Gestionnaire de Package NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Xamarin.Support.v13 de suppression")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 Démarrez le Gestionnaire de Package NuGet (dans Visual Studio pour Mac, cliquez sur **Packages** dans les **volet Solution** et sélectionnez **ajouter des Packages** ). Mettre à jour le projet vers la dernière version stable de **Xamarin.Android.Wear**: 
 
-[ ![Gestionnaire de Package NuGet ajouter](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "ajouter le package Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png)
+[![Gestionnaire de Package NuGet ajouter](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "ajouter le package Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
 
 -----
 
 
 Générer et exécuter l’application sur un émulateur ou un périphérique d’usure (pour plus d’informations, consultez la [mise en route](~/android/wear/get-started/index.md) guide). Vous devez voir l’écran suivant de l’application sur le périphérique d’usure :
 
-[ ![Capture d’écran de l’application](creating-a-watchface-images/08-app-screen.png "écran de l’application sur l’appareil d’usure")](creating-a-watchface-images/08-app-screen.png)
+[![Capture d’écran de l’application](creating-a-watchface-images/08-app-screen.png "écran de l’application sur l’appareil d’usure")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 À ce stade, l’application d’usure base n’a pas espion face fonctionnalité car elle ne fournit pas encore d’une implémentation de service face espion. Ce service sera ensuite ajouté. 
 
@@ -117,7 +117,7 @@ Générer et exécuter l’application sur un émulateur ou un périphérique d�
 
 Android usure implémente regarder faces via la `CanvasWatchFaceService` classe. `CanvasWatchFaceService` est dérivé de `WatchFaceService`, qui elle-même est dérivée de `WallpaperService` comme indiqué dans le diagramme suivant : 
 
-[ ![Diagramme d’héritage](creating-a-watchface-images/09-inheritance-diagram-sml.png "diagramme de CanvasWatchFaceService d’héritage")](creating-a-watchface-images/09-inheritance-diagram.png)
+[![Diagramme d’héritage](creating-a-watchface-images/09-inheritance-diagram-sml.png "diagramme de CanvasWatchFaceService d’héritage")](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
 
 `CanvasWatchFaceService` inclut une liste imbriquée `CanvasWatchFaceService.Engine`; il instancie une `CanvasWatchFaceService.Engine` objet qui effectue le travail de dessin du cadran de la montre. `CanvasWatchFaceService.Engine` est dérivé de `WallpaperService.Engine` comme indiqué dans le diagramme ci-dessus. 
 
@@ -317,11 +317,11 @@ Action de génération de ce fichier **AndroidResource**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Action de génération](creating-a-watchface-images/10-android-resource-vs.png "ensemble build action AndroidResource")](creating-a-watchface-images/10-android-resource-vs.png)
+[![Action de génération](creating-a-watchface-images/10-android-resource-vs.png "ensemble build action AndroidResource")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![Action de génération](creating-a-watchface-images/10-android-resource-xs.png "ensemble build action AndroidResource")](creating-a-watchface-images/10-android-resource-xs.png)
+[![Action de génération](creating-a-watchface-images/10-android-resource-xs.png "ensemble build action AndroidResource")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
 
 -----
 
@@ -342,13 +342,13 @@ Générez et déployez l’application sur le périphérique d’usure. Vous dev
 
 4.  Sélectionnez le **Xamarin exemple** regarder face (affiché sur la droite) : 
 
-    [ ![Sélecteur de Watchface](creating-a-watchface-images/11-watchface-picker.png "balayez pour localiser le cadran de la montre des exemples de Xamarin")](creating-a-watchface-images/11-watchface-picker.png)
+    [![Sélecteur de Watchface](creating-a-watchface-images/11-watchface-picker.png "balayez pour localiser le cadran de la montre des exemples de Xamarin")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
 5.  Appuyez sur la **Xamarin exemple** regarder face pour le sélectionner. 
 
 Cela modifie la face espion de l’appareil d’usure pour utiliser le service de face espion personnalisé implémenté jusqu'à présent : 
 
-[ ![Cadran de la montre numérique](creating-a-watchface-images/12-digital-watchface.png "espion de numérique personnalisée en cours d’exécution sur l’appareil d’usure")](creating-a-watchface-images/12-digital-watchface.png)
+[![Cadran de la montre numérique](creating-a-watchface-images/12-digital-watchface.png "espion de numérique personnalisée en cours d’exécution sur l’appareil d’usure")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
 Il s’agit un visage espion relativement brute, car l’implémentation de l’application est donc minime (par exemple, il n’inclut pas un arrière-plan de face espion et il n’appelle pas `Paint` lissage des méthodes pour améliorer l’apparence). Toutefois, il implémente la fonctionnalité simple qui est requise pour créer un type personnalisé espion. 
 
@@ -476,7 +476,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 Générez et déployez l’application à l’appareil d’usure à nouveau. Sélectionnez la face espion dans le sélecteur de face d’espion comme avant. La version d’évaluation dans le sélecteur d’espion est indiquée sur la gauche, et le nouveau visage espion est affiché à droite :
 
-[ ![Cadran de la montre analogique](creating-a-watchface-images/13-analog-watchface.png "améliorée face analogique dans le sélecteur et sur l’appareil")](creating-a-watchface-images/13-analog-watchface.png)
+[![Cadran de la montre analogique](creating-a-watchface-images/13-analog-watchface.png "améliorée face analogique dans le sélecteur et sur l’appareil")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
 Dans cette capture d’écran, l’aiguille se déplacent une fois par seconde. Lorsque vous exécutez ce code sur un appareil usure, l’aiguille disparaît lors de la surveillance en mode ambiante.
 

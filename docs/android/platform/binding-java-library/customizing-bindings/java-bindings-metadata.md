@@ -7,18 +7,17 @@ ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 91e27fcaef0ef1b262eceecd4d3c71bac34e328d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="java-bindings-metadata"></a>Métadonnées de liaisons de Java
 
 _Code c# dans Xamarin.Android appelle bibliothèques Java via des liaisons qui sont un mécanisme qui résume les détails de bas niveau qui sont spécifiés dans Interface JNI (Java Native). Xamarin.Android fournit un outil qui génère ces liaisons. Cet outils vous permet du contrôle du développeur comment une liaison est créée à l’aide de métadonnées, qui permet aux procédures telles que la modification des espaces de noms et la modification du nom des membres. Ce document explique le fonctionnement des métadonnées, récapitule les attributs que les métadonnées prend en charge et explique comment résoudre les problèmes de liaison en modifiant ces métadonnées._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -74,7 +73,6 @@ Le **MetaData.xml** fichier est le meilleur parti d’importation de ces fichier
 
 Vous permet de passer à discuter **Metadata.xml** plus en détail.
 
-<a name="Metadata.xml_Transform_File" />
 
 ## <a name="metadataxml-transform-file"></a>Fichier de transformation de fichier Metadata.Xml
 
@@ -114,7 +112,6 @@ Voici quelques-uns des éléments XPath plus couramment utilisés pour l’API J
 -   `parameter` &ndash; Identifier un paramètre pour une méthode. Par exemple `/parameter[@name='p0']`
 
 
-<a name="ADDING_TYPES" />
 
 ### <a name="adding-types"></a>Ajout de Types
 
@@ -129,7 +126,6 @@ Le `add-node` élément indiquera le projet de liaison de Xamarin.Android pour a
 </add-node>
 ```
 
-<a name="REMOVING_TYPES" />
 
 ### <a name="removing-types"></a>Suppression de Types
 
@@ -138,8 +134,6 @@ Il est possible de demande au Générateur de liaisons de Xamarin.Android d’ig
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
 ```
-
-<a name="Renaming_Members" />
 
 ### <a name="renaming-members"></a>Modification du nom des membres
 
@@ -169,6 +163,8 @@ Pour modifier correctement le nom managé de type encapsulé (ou méthode), il e
     name="managedName">NewName</attr>
 ```
 
+<a name="Renaming_EventArg_Wrapper_Classes" />
+
 #### <a name="renaming-eventarg-wrapper-classes"></a>Changement de nom `EventArg` Classes Wrapper
 
 Lorsque le Générateur de liaison de Xamarin.Android identifie une `onXXX` méthode setter pour une _type d’écouteur_, un événement de c# et `EventArgs` sous-classe sera générée pour prendre en charge .NET préparés à l’API pour l’écouteur basée sur Java modèle. Par exemple, considérez la classe Java suivante et la méthode :
@@ -193,7 +189,6 @@ Cela n’est pas un nom de classe c# juridique. Pour corriger ce problème, l’
 ```
 
  
-<a name="Supported_Attributes" />
 
 ## <a name="supported-attributes"></a>Attributs pris en charge
 
@@ -341,7 +336,6 @@ Toutes ces modifications en place, vous pouvez utiliser le code suivant dans Xam
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

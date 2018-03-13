@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c3de0150bd34667a9310b796bf98a6bff6c07a67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 39186735749174884646a72871accfa051d2901c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="databases"></a>Bases de données
 
@@ -27,7 +27,7 @@ Dans cet article que nous aborderons deux façons d’accéder aux données de S
 1. **Accès direct** - en accédant directement à une base de données SQLite, nous pouvons utiliser des données à partir de la base de données pour le codage de la clé-valeur et la liaison de données avec les éléments d’interface utilisateur créé dans le Générateur de Xcode Interface. À l’aide de codage et liaison de données techniques dans votre application Xamarin.Mac clé-valeur, vous pouvez réduire considérablement la quantité de code que vous devez écrire et conserver pour remplir et utiliser des éléments d’interface utilisateur. Vous avez également l’avantage de découplage davantage de vos données de sauvegarde (_modèle de données_) à partir de votre premier plan mettre fin à l’Interface utilisateur (_Model-View-Controller_), début au plus facile à gérer, une application plus souple conception.
 2. **Les ORM SQLite.NET** - en utilisant l’open source [SQLite.NET](http://www.sqlite.org) relation Manager ORM (Object) nous pouvons réduire considérablement la quantité de code requis pour lire et écrire des données à partir d’une base de données SQLite. Ces données peuvent ensuite être utilisées pour remplir un élément d’interface utilisateur tel qu’une vue de Table.
 
-[![Un exemple de l’application en cours d’exécution](databases-images/intro01.png "un exemple de l’application en cours d’exécution")](databases-images/intro01-large.png)
+[![Un exemple de l’application en cours d’exécution](databases-images/intro01.png "un exemple de l’application en cours d’exécution")](databases-images/intro01-large.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de l’utilisation de la clé-valeur de codage et de la liaison de données avec les bases de données SQLite dans une application Xamarin.Mac. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -52,7 +52,7 @@ Effectuez ce qui suit :
 1. Dans le **Solution remplissage**, avec le bouton droit sur le **références** et sélectionnez **modifier les références**.
 2. Sélectionnez à la fois le **Mono.Data.Sqlite** et **System.Data** assemblys : 
 
-    [![Ajout des références requises](databases-images/reference01.png "Ajout des références requises")](databases-images/reference01-large.png)
+    [![Ajout des références requises](databases-images/reference01.png "Ajout des références requises")](databases-images/reference01-large.png#lightbox)
 3. Cliquez sur le **OK** bouton pour enregistrer vos modifications et ajoutez les références.
 
 ### <a name="modifying-the-data-model"></a>Modifier le modèle de données
@@ -1019,7 +1019,7 @@ Les contrôles de Menu disponibles pour macOS (par exemple, la zone de liste mod
 
 Par exemple, modifier l’exemple de liaison Simple ci-dessus dans le constructeur d’Interface, ajoutez une zone de liste modifiable et l’exposer à l’aide d’une sortie nommée `EmployeeSelector`:
 
-[![Exposition d’une prise de zone de liste modifiable](databases-images/combo01.png "exposer une prise de zone de liste déroulante")](databases-images/combo01-large.png)
+[![Exposition d’une prise de zone de liste modifiable](databases-images/combo01.png "exposer une prise de zone de liste déroulante")](databases-images/combo01-large.png#lightbox)
 
 Dans le **attributs inspecteur**, vérifiez le **Autocompletes** et **utilise une Source de données** propriétés :
 
@@ -1924,7 +1924,7 @@ Procédez comme suit pour ajouter le package :
 1. Dans le **Solution remplissage**, avec le bouton droit le **Packages** et sélectionnez **ajouter des Packages...**
 2. Entrez `SQLite.net` dans les **zone de recherche** et sélectionnez le **sqlite-net** entrée :
 
-    [![Ajout du package NuGet de SQLite](databases-images/nuget01.png "Ajout du package NuGet de SQLite")](databases-images/nuget01-large.png)
+    [![Ajout du package NuGet de SQLite](databases-images/nuget01.png "Ajout du package NuGet de SQLite")](databases-images/nuget01-large.png#lightbox)
 3. Cliquez sur le **ajouter un Package** bouton Terminer.
 
 ### <a name="creating-the-data-model"></a>Création du modèle de données
@@ -2063,7 +2063,7 @@ conn.Insert (Occupation);
 
 Comme un exemple d’utilisation, nous allons ajouter une vue de Table à notre interface utilisateur dans le Générateur de Xcode Interface. Nous allons exposer cette Table via une prise de vue (`OccupationTable`) afin de nous pouvons accéder à via le code c# :
 
-[![Exposition d’une prise de vue table](databases-images/table01.png "exposer une prise de vue de table")](databases-images/table01-large.png)
+[![Exposition d’une prise de vue table](databases-images/table01.png "exposer une prise de vue de table")](databases-images/table01-large.png#lightbox)
 
 Ensuite, nous allons ajouter des classes personnalisées pour remplir cette table avec des données à partir de la base de données SQLite.NET.
 

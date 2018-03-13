@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 332ce13b08f3d021553be5747b21b05d62aba6ea
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 21f8c6738c00d5738c02962ee95b415e3855d740
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="transactions-and-verification"></a>Vérification et transactions
 
@@ -148,7 +148,7 @@ Certains produits son contenu, telles que la documentation et magazines (ou un n
    
    
    
- [ ![](transactions-and-verification-images/image38.png "Mise en route de prix pour les produits remis de serveur")](transactions-and-verification-images/image38.png)   
+ [![](transactions-and-verification-images/image38.png "Mise en route de prix pour les produits remis de serveur")](transactions-and-verification-images/image38.png#lightbox)   
    
    
    
@@ -170,7 +170,7 @@ Certains produits son contenu, telles que la documentation et magazines (ou un n
 
 Étant donné que le serveur à distance nécessite un moyen de valider qu’une requête de contenu est valide (c.-à-d. a été payé), les informations de réception sont passées pour l’authentification. Le serveur distant transfère ces données à iTunes pour la vérification et, en cas de réussite, inclut le contenu du produit dans la réponse à l’application.   
    
- [ ![](transactions-and-verification-images/image39.png "Achat de produits remis de serveur")](transactions-and-verification-images/image39.png)   
+ [![](transactions-and-verification-images/image39.png "Achat de produits remis de serveur")](transactions-and-verification-images/image39.png#lightbox)   
    
  1. L’application ajoute une `SKPayment` à la file d’attente. Si nécessaire l’utilisateur sera invité à entrer leur ID Apple et invité à confirmer le paiement.   
    

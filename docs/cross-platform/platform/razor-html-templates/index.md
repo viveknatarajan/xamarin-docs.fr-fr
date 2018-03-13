@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 7e4d1cab532a5c81da1dfc47df33aa0628c7f6c6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c69b8e71cac5d9f0385728ca75a5f311cb24fc0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>Vues HTML de génération à l’aide de modèles Razor
 
@@ -34,7 +34,7 @@ Xamarin fournit un accès complet à l’API de la plateforme sous-jacente sur i
 
 Affichage HTML dans un contrôle UIWebView dans Xamarin.iOS prend également quelques lignes de code :
 
-```
+```csharp
 var webView = new UIWebView (View.Bounds);
 View.AddSubview(webView);
 string contentDirectoryPath = Path.Combine (NSBundle.MainBundle.BundlePath, "Content/");
@@ -48,7 +48,7 @@ Consultez le [iOS UIWebView](http://docs.xamarin.com/recipes/ios/content_control
 
 Affichage HTML dans un contrôle WebView à l’aide de Xamarin.Android s’effectue en quelques lignes de code :
 
-```
+```csharp
 // webView is declared in an AXML layout file
 var webView = FindViewById<WebView> (Resource.Id.webView);
 var html = "<html><h1>Hello</h1><p>World</p></html>";
@@ -61,19 +61,19 @@ Consultez le [WebView Android](http://docs.xamarin.com/recipes/android/controls/
 
 Sur les deux plateformes, il existe un paramètre qui spécifie le répertoire de base pour la page HTML. Il s’agit de l’emplacement sur le système de fichiers du périphérique qui est utilisé pour résoudre des références relatives aux ressources telles que des images et des fichiers CSS. Par exemple, comme les balises
 
-
-    <link rel="stylesheet" href="style.css" />
-    <img src="monkey.jpg" />
-    <script type="text/javascript" src="jscript.js">
-
+```html
+<link rel="stylesheet" href="style.css" />
+<img src="monkey.jpg" />
+<script type="text/javascript" src="jscript.js">
+```
 
 faire référence à ces fichiers : **style.css**, **monkey.jpg** et **jscript.js**. Le paramètre de répertoire de base indique à l’affichage web où ces fichiers se trouvent afin qu’ils peuvent être chargés dans la page.
 
 #### <a name="ios"></a>iOS
 
-La sortie de modèle est rendue dans iOS avec le code C ## suivant :
+La sortie de modèle est rendue dans iOS avec le code c# suivant :
 
-```
+```csharp
 webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 ```
 
@@ -89,7 +89,7 @@ L’Action de génération pour tous les fichiers de contenu statiques doit êtr
 
 Android requiert également un répertoire de base à passer lorsque les chaînes html sont affichés dans un affichage web en tant que paramètre.
 
-```
+```csharp
 webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
 ```
 
@@ -101,30 +101,30 @@ L’Action de génération pour tous les fichiers de contenu statiques doit êtr
 
  ![Action de génération de projet Android : AndroidAsset](images/image4_250x71.png)
 
-### <a name="calling-c-from-html-and-javascript"></a>Appel de C ## à partir de HTML et Javascript
+### <a name="calling-c-from-html-and-javascript"></a>Appel de c# à partir de HTML et Javascript
 
 Lorsqu’une page html est chargée dans un affichage web, il traite les liens et les formulaires comme c’est le cas si la page a été chargée à partir d’un serveur. Cela signifie que si l’utilisateur clique sur un lien ou envoie un formulaire l’affichage web tente de naviguer vers la cible spécifiée.
 
 Si la liaison est à un serveur externe (par exemple, google.com) l’affichage web tente de charger le site Web externe (en supposant qu’il existe une connexion internet).
 
-```
+```html
 <a href="http://google.com/">Google</a>
 ```
 
 Si le lien est relatif l’affichage web tente de charger ce contenu à partir du répertoire de base. Évidemment, aucune connexion réseau n’est requise pour ce faire, comme le contenu est stocké dans l’application sur l’appareil.
 
-```
+```html
 <a href="somepage.html">Local content</a>
 ```
 
 Les actions de formulaire suivent la même règle.
 
-```
+```html
 <form method="get" action="http://google.com/"></form>
 <form method="get" action="somepage.html"></form>
 ```
 
-Vous n’allez pas héberger un serveur web sur le client ; Toutefois, vous pouvez utiliser les mêmes techniques de communication de serveur utilisés dans les modèles de conception réactive aujourd'hui permet d’appeler des services via HTTP GET et gèrent les réponses de manière asynchrone en émettant Javascript (ou Javascript appelant déjà hébergée dans l’affichage web). Cela vous permet de passer facilement des données du code HTML dans le code C ## pour traitement, puis afficher que les résultats de la sauvegarde sur la page HTML.
+Vous n’allez pas héberger un serveur web sur le client ; Toutefois, vous pouvez utiliser les mêmes techniques de communication de serveur utilisés dans les modèles de conception réactive aujourd'hui permet d’appeler des services via HTTP GET et gèrent les réponses de manière asynchrone en émettant Javascript (ou Javascript appelant déjà hébergée dans l’affichage web). Cela vous permet de passer facilement des données du code HTML dans le code c# pour le traitement, puis afficher que les résultats de la sauvegarde sur la page HTML.
 
 IOS et Android fournissent un mécanisme pour le code d’application pour intercepter ces événements de navigation afin que le code d’application peut répondre (si nécessaire). Cette fonctionnalité est essentielle pour créer des applications hybrides, car elle permet le code natif pour interagir avec l’affichage web.
 
@@ -132,7 +132,7 @@ IOS et Android fournissent un mécanisme pour le code d’application pour inter
 
 L’événement ShouldStartLoad sur l’affichage web dans iOS peut être substituée pour autoriser le code d’application pour traiter une demande de navigation (par exemple, un clic de lien). Les paramètres de méthode fournissent toutes les informations
 
-```
+```csharp
 bool HandleShouldStartLoad (UIWebView webView, NSUrlRequest request, UIWebViewNavigationType navigationType) {
     // return true if handled in code
     // return false to let the web view follow the link
@@ -141,7 +141,7 @@ bool HandleShouldStartLoad (UIWebView webView, NSUrlRequest request, UIWebViewNa
 
 puis d’affecter le Gestionnaire d’événements :
 
-```
+```csharp
 webView.ShouldStartLoad += HandleShouldStartLoad;
 ```
 
@@ -149,7 +149,7 @@ webView.ShouldStartLoad += HandleShouldStartLoad;
 
 Sur Android simplement sous-classe WebViewClient, puis implémentez de code pour répondre à la demande de navigation.
 
-```
+```csharp
 class HybridWebViewClient : WebViewClient {
     public override bool ShouldOverrideUrlLoading (WebView webView, string url) {
         // return true if handled in code
@@ -160,19 +160,19 @@ class HybridWebViewClient : WebViewClient {
 
 puis définissez le client sur l’affichage web :
 
-```
+```csharp
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
 ### <a name="calling-javascript-from-c"></a>Appeler Javascript à partir de c#
 
-Outre la possibilité informe un affichage web pour charger une nouvelle page HTML, code C ## peut exécuter Javascript dans la page actuellement affichée. Les blocs de code Javascript entières peuvent être créés à l’aide de chaînes C ## et exécutés, ou vous pouvez créer des appels de méthode Javascript déjà disponible sur la page via `script` balises.
+Outre la possibilité informe un affichage web pour charger une nouvelle page HTML, code c# permettre exécuter Javascript dans la page actuellement affichée. Les blocs de code Javascript entières peuvent être créés à l’aide de chaînes de c# et exécutés, ou vous pouvez créer des appels de méthode Javascript déjà disponible sur la page via `script` balises.
 
 #### <a name="android"></a>Android
 
 Créer le code Javascript pour être exécuté et faites-le précéder « javascript : » et demandez à l’affichage web pour charger cette chaîne :
 
-```
+```csharp
 var js = "alert('test');";
 webView.LoadUrl ("javascript:" + js);
 ```
@@ -181,7 +181,7 @@ webView.LoadUrl ("javascript:" + js);
 
 affichages web du iOS fournissent une méthode spécifiquement pour appeler Javascript :
 
-```
+```csharp
 var js = "alert('test');";
 webView.EvaluateJavascript (js);
 ```
@@ -192,8 +192,8 @@ Cette section présente les fonctionnalités des contrôles web vue sur Android 
 
 -  La capacité à charger HTML à partir de chaînes générées dans le code,
 -  La capacité de référencer des fichiers locaux (CSS, Javascript, Images ou autres fichiers HTML)
--  La possibilité d’intercepter les demandes de navigation dans le code C ##,
--  Permet d’appeler Javascript à partir du code C ##.
+-  La possibilité d’intercepter les demandes de navigation dans le code c#,
+-  Permet d’appeler Javascript à partir de code c#.
 
 
 La section suivante présente Razor, ce qui le rend facile de créer le code HTML à utiliser dans des applications hybrides.
@@ -202,7 +202,7 @@ La section suivante présente Razor, ce qui le rend facile de créer le code HTM
 
 Razor est un moteur de création de modèles qui a été introduit avec ASP.NET MVC, à l’origine pour s’exécuter sur le serveur et générer du code HTML pour être pris en charge dans les navigateurs web.
 
-Le moteur de création de modèles Razor étend la syntaxe HTML standard avec C ## afin que vous pouvez exprimer la disposition et intégrer facilement des feuilles de style CSS et Javascript. Le modèle peut faire référence à une classe de modèle, ce qui peut être n’importe quel type personnalisé et dont les propriétés sont accessibles directement à partir du modèle. Un de ses avantages est la possibilité de mélanger la syntaxe HTML et C ## facilement.
+Le moteur de création de modèles Razor étend la syntaxe HTML standard avec c# afin que vous pouvez exprimer la disposition et intégrer facilement des feuilles de style CSS et Javascript. Le modèle peut faire référence à une classe de modèle, ce qui peut être n’importe quel type personnalisé et dont les propriétés sont accessibles directement à partir du modèle. Un de ses avantages est la possibilité de mélanger la syntaxe HTML et c# facilement.
 
 Modèles Razor ne sont pas limités à utilisation côté serveur, elles peuvent également être incluses dans des applications Xamarin. À l’aide de modèles Razor, ainsi que la possibilité de travailler par programmation avec les vues web permet d’applications sophistiquées inter-plateformes hybrides sont créées avec Xamarin.
 
@@ -214,7 +214,7 @@ Fichiers de modèle Razor ont un **.cshtml** extension de fichier. Ils peuvent �
 
 Un modèle Razor simple ( **RazorView.cshtml**) est indiqué ci-dessous.
 
-```
+```html
 @model string
 <html>
     <body>
@@ -225,18 +225,18 @@ Un modèle Razor simple ( **RazorView.cshtml**) est indiqué ci-dessous.
 
 Notez les différences suivantes à partir d’un fichier HTML normal :
 
--  Le `@` symbole a une signification spéciale dans les modèles Razor, il indique que l’expression suivante est C ## à évaluer.
+-  Le `@` symbole a une signification spéciale dans les modèles Razor, il indique que l’expression suivante est c# à évaluer.
 - `@model` la directive apparaît toujours comme première ligne d’un fichier de modèle Razor.
 -  Le `@model` la directive doit être suivie d’un Type. Dans cet exemple, une chaîne simple est transmise au modèle, mais cela peut être n’importe quelle classe personnalisée.
 -  Lorsque `@Model` est référencé dans le modèle, il fournit une référence à l’objet passé au modèle lorsqu’il est généré (dans cet exemple, il sera une chaîne).
 -  L’IDE génère automatiquement une classe partielle pour les modèles (fichiers avec le **.cshtml** extension). Vous pouvez afficher ce code, mais il ne doit pas être modifié.
- ![RazorView.cshtml](images/image6_125x34.png) la classe partielle est nommée RazorView pour correspondre au nom de fichier .cshtml modèle. C’est ce nom est utilisé pour faire référence au modèle dans le code C ##.
+ ![RazorView.cshtml](images/image6_125x34.png) la classe partielle est nommée RazorView pour correspondre au nom de fichier .cshtml modèle. Il est de ce nom est utilisé pour faire référence au modèle de code c#.
 - `@using` les instructions peuvent également être incluses en haut d’un modèle Razor pour inclure des espaces de noms supplémentaires.
 
 
-La sortie HTML finale peut être générée par le code C ## suivant. Notez que nous spécifions le modèle comme une chaîne « Hello World » qui est incorporée dans la sortie de modèle de rendu.
+La sortie HTML finale peut être générée par le code c# suivant. Notez que nous spécifions le modèle comme une chaîne « Hello World » qui est incorporée dans la sortie de modèle de rendu.
 
-```
+```csharp
 var template = new RazorView () { Model = "Hello World" };
 var page = template.GenerateString ();
 ```
@@ -249,7 +249,7 @@ Voici la sortie affichée dans un affichage web sur iOS Simulator et l’émulat
 
 Dans cette section, que nous allons présenter une syntaxe Razor base pour vous aider à commencer l’utilisez. Les exemples de cette section remplissent la classe suivante avec des données et les affichent à l’aide de Razor :
 
-```
+```csharp
 public class Monkey {
     public string Name { get; set; }
     public DateTime Birthday { get; set; }
@@ -259,7 +259,7 @@ public class Monkey {
 
 Tous les exemples utilisent le code d’initialisation de données suivant
 
-```
+```csharp
 var animal = new Monkey {
     Name = "Rupert",
     Birthday=new DateTime(2011, 04, 01),
@@ -272,7 +272,7 @@ var animal = new Monkey {
 
 Lorsque le modèle est une classe avec des propriétés, ils sont facilement référencés dans le modèle Razor comme indiqué dans cet exemple de modèle :
 
-```
+```html
 @model Monkey
 <html>
     <body>
@@ -284,7 +284,7 @@ Lorsque le modèle est une classe avec des propriétés, ils sont facilement ré
 
 Cela peut être rendu en une chaîne utilisant le code suivant :
 
-```
+```csharp
 var template = new RazorView () { Model = animal };
 var page = template.GenerateString ();
 ```
@@ -293,11 +293,11 @@ La sortie finale est illustrée ici dans un affichage web sur iOS Simulator et l
 
  ![Rupert](images/image8_516x160.png)
 
-#### <a name="c-statements"></a>Instructions C ##
+#### <a name="c-statements"></a>Instructions c#
 
-C plus complexes ## peuvent être inclus dans le modèle, telles que les mises à jour de la propriété modèle et le calcul de la durée de vie dans cet exemple :
+C# plus complexes peuvent être inclus dans le modèle, telles que les mises à jour de la propriété modèle et le calcul de la durée de vie dans cet exemple :
 
-```
+```html
 @model Monkey
 <html>
     <body>
@@ -312,15 +312,15 @@ C plus complexes ## peuvent être inclus dans le modèle, telles que les mises �
 </html>
 ```
 
-Vous pouvez écrire une ligne C ## des expressions complexes (par exemple, la durée de vie de la mise en forme) en entourant le code avec `@()`.
+Vous pouvez écrire une ligne c# des expressions complexes (par exemple, la durée de vie de la mise en forme) en entourant le code avec `@()`.
 
-Plusieurs instructions C ## peuvent être écrits en mettant les avec `@{}`.
+Plusieurs instructions c# peuvent être écrits en mettant les avec `@{}`.
 
 #### <a name="if-else-statements"></a>Instructions if-else
 
 Branches de code peuvent être exprimées avec `@if` comme indiqué dans cet exemple de modèle.
 
-```
+```html
 @model Monkey
 <html>
     <body>
@@ -341,7 +341,7 @@ Branches de code peuvent être exprimées avec `@if` comme indiqué dans cet exe
 
 Bouclage des constructions comme `foreach` peuvent également être ajoutés. Le `@` préfixe peut être utilisé sur la variable de boucle ( `@food` dans ce cas) pour effectuer le rendu en HTML.
 
-```
+```html
 @model Monkey
 <html>
     <body>
@@ -372,9 +372,9 @@ Cette section a couvert les principes fondamentaux de l’utilisation de modèle
 
 Cette section explique comment utiliser génération de votre propre application hybride à l’aide des modèles de la solution dans Visual Studio pour Mac. Il existe trois modèles disponibles à partir de la **fichier > Nouveau > Solution...**  fenêtre :
 
--  Android > applications > Application WebView Android
--  iOS > applications > Application WebView
-- Projet ASP.NET MVC
+- **Android > applications > Application WebView Android**
+- **iOS > applications > Application WebView**
+- **Projet ASP.NET MVC**
 
 
 
@@ -382,7 +382,7 @@ Le **nouvelle Solution** fenêtre ressemble à ceci pour iPhone et les projets A
 
  ![Création d’iPhone et les solutions Android](images/image13_1139x959.png)
 
-Notez que vous pouvez facilement ajouter une **.cshtml** modèle Razor à *tout* existant de projet Xamarin, il n’est pas nécessaire d’utiliser ces modèles de solution. les projets iOS ne nécessitent pas une table de montage séquentiel utiliser Razor. Ajoutez simplement un contrôle UIWebView à n’importe quelle vue par programmation et vous pouvez restituer les modèles Razor entière dans le code C ##.
+Notez que vous pouvez facilement ajouter une **.cshtml** modèle Razor à *tout* existant de projet Xamarin, il n’est pas nécessaire d’utiliser ces modèles de solution. les projets iOS ne nécessitent pas une table de montage séquentiel utiliser Razor. Ajoutez simplement un contrôle UIWebView à n’importe quelle vue par programmation et vous pouvez restituer les modèles Razor entière en code c#.
 
 Le contenu de solution de modèle par défaut pour iPhone et les projets Android figurent ci-dessous :
 
@@ -406,7 +406,7 @@ Contenu statique inclut des feuilles de style CSS, des images, des fichiers Java
 
 Les projets de modèle incluent une feuille de style minimal pour montrer comment inclure du contenu statique dans votre application hybride. La feuille de style CSS est référencé dans le modèle comme suit :
 
-```
+```html
 <link rel="stylesheet" href="style.css" />
 ```
 
@@ -414,7 +414,7 @@ Vous pouvez ajouter les fichiers Javascript que vous avez besoin, y compris les 
 
 ### <a name="razor-cshtml-templates"></a>Razor cshtml modèles
 
-Le modèle inclut un Razor **.cshtml** fichier qui a déjà écrit du code pour communiquer des données entre le HTML/Javascript et c#. Cela vous permettra de génération d’applications hybrides sophistiquées qui ne simplement afficher des données en lecture seule à partir du modèle, mais également accepter l’entrée d’utilisateur dans le code HTML et le passer au code C ## pour le traitement ou de stockage.
+Le modèle inclut un Razor **.cshtml** fichier qui a déjà écrit du code pour communiquer des données entre le HTML/Javascript et c#. Cela vous permettra de génération d’applications hybrides sophistiquées qui ne simplement afficher des données en lecture seule à partir du modèle, mais également accepter l’entrée d’utilisateur dans le code HTML et le passer au code c# pour le traitement ou de stockage.
 
 #### <a name="rendering-the-template"></a>Le modèle de rendu
 
@@ -422,23 +422,23 @@ Appel de la `GenerateString` sur un modèle de rendu HTML prêt pour l’afficha
 
  ![Organigramme de Razor](images/image12_700x421.png)
 
-#### <a name="calling-c-code-from-the-template"></a>Appeler du code C ## à partir du modèle
+#### <a name="calling-c-code-from-the-template"></a>Appeler du code c# à partir du modèle
 
-Communication à partir d’un affichage web rendu rappelant C ## est effectuée par la définition de l’URL pour l’affichage web, puis en interceptant la demande C ## pour gérer la demande native sans recharger l’affichage web.
+Communication à partir d’un affichage web rendu rappel du langage c# est effectuée par la définition de l’URL pour l’affichage web, puis en interceptant la demande en c# pour gérer la demande native sans recharger l’affichage web.
 
 Un exemple sont consultables dans modalités de bouton de RazorView. Le bouton a le code HTML suivant :
 
-```
+```html
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
 Le `InvokeCSharpWithFormValues` fonction Javascript lit toutes les valeurs à partir du formulaire HTML et les jeux de la `location.href` pour l’affichage web :
 
-```
+```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
 ```
 
-Il tente de naviguer dans l’affichage web vers une URL avec une méthode personnalisée qui nous avons composé de (`hybrid:`)
+Il tente de naviguer dans l’affichage web vers une URL avec un schéma personnalisé (par exemple). `hybrid:`)
 
 ```
 hybrid:UpdateLabel?textbox=SomeValue&UpdateLabel=Click
@@ -448,31 +448,31 @@ Lorsque l’affichage web natif traite cette requête de navigation, nous avons 
 
 Les mécanismes internes de ces deux intercepteurs de navigation sont essentiellement le même.
 
-Tout d’abord, nous vérifions l’URL affichage web tente de charger, et si elle ne commence pas par notre schéma personnalisé (`hybrid:`), nous permettre la navigation normalement.
+Vérifiez tout d’abord, l’URL de l’affichage web tente de charger, et si elle ne commence pas par le schéma personnalisé (`hybrid:`), autoriser la navigation normalement.
 
-Pour notre modèle d’URL personnalisée, nous considèrent tout dans l’URL entre le schéma et les « ? » comme le nom de la méthode d’être géré (dans ce cas, « UpdateLabel »). Tous les éléments de la chaîne de requête seront traité comme paramètres pour l’appel de méthode :
+Pour le schéma d’URL personnalisé, tous les éléments de l’URL entre le schéma et les « ? » est le nom de la méthode d’être géré (dans ce cas, « UpdateLabel »). Tous les éléments de la chaîne de requête seront traité comme paramètres pour l’appel de méthode :
 
-```
+```csharp
 var resources = url.Substring(scheme.Length).Split('?');
 var method = resources [0];
 var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 ```
 
-UpdateLabel dans cet exemple est une quantité minimale de manipulation de chaîne sur le paramètre de la zone de texte (ajoutant le préfixe « C ## indique que ' » à la chaîne) et puis rappelle à l’affichage web.
+`UpdateLabel` Dans cet exemple effectue une quantité minimale de manipulation de chaîne sur le paramètre de la zone de texte (en ajoutant « c# intitulée « à la chaîne) et puis rappelle à l’affichage web.
 
-À la fin de la gestion des URL, nous abandonner le volet de navigation afin que l’affichage web n’essaie pas terminer l’accès à nos URL personnalisée.
+Après le traitement de l’URL, la méthode abandonne le volet de navigation afin que l’affichage web ne tente pas à terminer la navigation vers l’URL personnalisée.
 
 #### <a name="manipulating-the-template-from-c"></a>Manipuler le modèle à partir de c#
 
-Communication avec un affichage web de rendu HTML à partir de C ## s’effectue en appelant Javascript dans l’affichage web. Sur iOS, cela est effectué en appelant `EvaluateJavascript` sur la UIWebView :
+Communication avec un affichage web de rendu HTML à partir de c# est effectuée en appelant Javascript dans l’affichage web. Sur iOS, cela est effectué en appelant `EvaluateJavascript` sur la UIWebView :
 
-```
+```csharp
 webView.EvaluateJavascript (js);
 ```
 
 Sur Android, Javascript peut être appelée dans l’affichage web en chargeant le Javascript comme une URL en utilisant le `"javascript:"` le modèle d’URL :
 
-```
+```csharp
 webView.LoadUrl ("javascript:" + js);
 ```
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: b8d8aed397f72df53fdca7e455b8ef723e48e0a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5334465905817336df91f5816596dc5723071811
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction"></a>Introduction
 
@@ -88,7 +88,7 @@ Pour plus d’informations sur l’implémentation de services principaux, consu
 
 Ce guide se concentre sur la création d’applications inter-plateformes enterprise à l’aide de Xamarin.Forms et utilise l’application mobile eShopOnContainers comme exemple. Figure 1-2 affiche les pages de l’application mobile eShopOnContainers qui fournissent les fonctionnalités décrites précédemment.
 
-[![](introduction-images/screenshots.png "L’application mobile eShopOnContainers")](introduction-images/screenshots-large.png "l’application mobile eShopOnContainers")
+[![](introduction-images/screenshots.png "L’application mobile eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "l’application mobile eShopOnContainers")
 
 **Figure 1-2**: l’application mobile eShopOnContainers
 

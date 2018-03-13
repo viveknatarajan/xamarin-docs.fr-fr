@@ -7,18 +7,17 @@ ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ea3fd7d73f104f7b9650431a5531fe4399a2630c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 02/28/2018
+ms.openlocfilehash: 91bd5ae83cd0d59872e11a6b1bdc7b84c751e64f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-audio"></a>Audio Android
 
 _Le système d’exploitation Android prend en charge étendue multimédia, qui comprennent des données audio et vidéo. Ce guide se concentre sur audio dans Android et couvre la lecture et l’enregistrement audio à l’aide du lecteur audio intégré et classes de l’enregistreur, ainsi que l’API de bas niveau audio. Elle traite également travailler avec les événements Audio diffusion par d’autres applications, afin que les développeurs peuvent créer des applications conformes._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -44,7 +43,6 @@ Il est nécessaire de demande le `RECORD_AUDIO` autorisations dans **AndroidMani
 ![Section autorisations de manifeste Android avec enregistrement requise\_AUDIO activé](android-audio-images/image01.png)
 
 
-<a name="Playing_Audio_with_the_MediaPlayer_Class" />
 
 ## <a name="playing-audio-with-the-mediaplayer-class"></a>Lecture Audio avec la classe MediaPlayer.
 
@@ -52,7 +50,6 @@ Le plus simple pour lire un fichier audio dans Android est avec la fonction int�
 `MediaPlayer` peut de lire les fichiers locaux ou distants en passant le chemin d’accès de fichier. Toutefois, `MediaPlayer` est très sensible en état et de l’appel de l’une de ses méthodes dans un état incorrect, une exception levée. Il est important d’interagir avec `MediaPlayer` dans l’ordre décrit ci-dessous pour éviter les erreurs.
 
 
-<a name="Initializing_and_Playing" />
 
 ### <a name="initializing-and-playing"></a>L’initialisation et lecture
 
@@ -84,7 +81,6 @@ public void StartPlayer(String  filePath)
 }
 ```
 
-<a name="Suspending_and_Resuming_Playback" />
 
 ### <a name="suspending-and-resuming-playback"></a>Suspension et reprise de la lecture
 
@@ -113,14 +109,12 @@ Lorsque le lecteur n’est plus nécessaire, les ressources doivent être libér
 player.Release();
 ```
 
-<a name="Using_the_MediaRecorder_Class_to_Record_Audio" />
 
 
 ## <a name="using-the-mediarecorder-class-to-record-audio"></a>À l’aide de la classe MediaRecorder enregistrement audio
 
 Le corollaire à `MediaPlayer` pour l’enregistrement audio dans Android est le [MediaRecorder](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/) classe. Comme le `MediaPlayer`, il est dépendant de l’état et passe par plusieurs États pour atteindre le point où il peut démarrer l’enregistrement. Pour enregistrer le contenu audio, la `RECORD_AUDIO` autorisation doit être définie. Pour obtenir des instructions sur la façon de mettre en application les autorisations consultez [utilisation de AndroidManifest.xml](~/android/platform/android-manifest.md).
 
-<a name="Initializing_and_Recording" />
 
 ### <a name="initializing-and-recording"></a>L’initialisation et d’enregistrement
 
@@ -170,7 +164,6 @@ void RecordAudio (String filePath)
 }
 ```
 
-<a name="Stopping_recording" />
 
 ### <a name="stopping-recording"></a>Arrêt de l’enregistrement
 
@@ -180,7 +173,6 @@ Pour arrêter l’enregistrement, appelez le `Stop` méthode sur le `MediaRecord
 recorder.Stop();
 ```
 
-<a name="Cleaning_up" />
 
 
 ### <a name="cleaning-up"></a>Nettoyage
@@ -197,18 +189,15 @@ Lorsque le `MediaRecorder` est n’est plus nécessaire, ses ressources doivent 
 recorder.Release();
 ```
 
-<a name="Managing_Audio_Notifications" />
 
 ## <a name="managing-audio-notifications"></a>Gestion des Notifications Audio
 
-<a name="The_AudioManager_Class" />
 
 
 ### <a name="the-audiomanager-class"></a>La classe AudioManager
 
 Le [AudioManager](https://developer.xamarin.com/api/type/Android.Media.AudioManager/) classe fournit l’accès à des notifications audio qui permettent aux applications de savoir quand se produisent les événements audio. Ce service fournit également l’accès à d’autres fonctionnalités audio, telles que le contrôle de mode de volume et sonnerie. Le `AudioManager` permet à une application gérer des notifications audio pour contrôler la lecture audio.
 
-<a name="Managing_Audio_Focus" />
 
 
 ### <a name="managing-audio-focus"></a>Gestion du Focus Audio
@@ -224,7 +213,6 @@ Focus audio peut être accordé immédiatement, ou initialement refusé et accor
 Pour plus d’informations sur le focus audio, consultez [la gestion de Focus Audio](http://developer.android.com/training/managing-audio/audio-focus.html).
 
 
-<a name="Registering_the_Callback_for_Audio_Focus" />
 
 #### <a name="registering-the-callback-for-audio-focus"></a>L’inscription du rappel de Focus Audio
 
@@ -235,7 +223,6 @@ Pour cette raison, l’objet de rappel est passé en tant que paramètre dans le
 Lorsque l’application a terminé d’utiliser les ressources audio, il appelle la `AbandonFocus` méthode de la `AudioManager`et le passe à nouveau dans le rappel. Cela annule l’inscription du rappel et libère les ressources audio, afin que les autres applications peuvent obtenir le focus audio.
 
 
-<a name="Requesting_Audio_Focus" />
 
 #### <a name="requesting-audio-focus"></a>Demande de Focus Audio
 
@@ -270,13 +257,11 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 }
 ```
 
-<a name="Releasing_Audio_Focus" />
 
 #### <a name="releasing-audio-focus"></a>Libérer le Focus Audio
 
 Lorsque la lecture de la piste est terminée, le `AbandonFocus` méthode `AudioManager` est appelée. Cela permet d’obtenir les ressources audio de l’appareil d’une autre application. Autres applications reçoit une notification de cette modification de focus audio si elles ont inscrit leurs propres écouteurs.
 
-<a name="Low_Level_Audio_API" />
 
 ## <a name="low-level-audio-api"></a>API Audio de niveau bas
 
@@ -289,14 +274,10 @@ L’API de bas niveau audio fournissent un plus grand contrôle sur la lecture e
 3.  Diffusion audio en continu.
 
 
- <a name="AudioTrack_Class" />
-
-
 ### <a name="audiotrack-class"></a>Classe de AudioTrack
 
 Le [AudioTrack](https://developer.xamarin.com/api/type/Android.Media.AudioTrack/) classe utilise l’API de bas niveau audio pour l’enregistrement et est l’équivalent de bas niveau de la `MediaPlayer` classe.
 
-<a name="Initializing_and_Playing" />
 
 #### <a name="initializing-and-playing"></a>L’initialisation et lecture
 
@@ -339,7 +320,6 @@ void PlayAudioTrack(byte[] audioBuffer)
 }
 ```
 
-<a name="Pausing_and_Stopping_the_Playback" />
 
 #### <a name="pausing-and-stopping-the-playback"></a>Suspension et arrêt de la lecture
 
@@ -355,7 +335,6 @@ Appel de la [arrêter](https://developer.xamarin.com/api/member/Android.Media.Au
 audioTrack.Stop();
 ```
 
-<a name="Cleaning_up" />
 
 #### <a name="cleanup"></a>Nettoyage
 
@@ -365,13 +344,11 @@ Lorsque le `AudioTrack` est n’est plus nécessaire, ses ressources doivent êt
 audioTrack.Release();
 ```
 
-<a name="The_AudioRecord_Class" />
 
 ### <a name="the-audiorecord-class"></a>La classe AudioRecord
 
 Le [AudioRecord](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/) classe est l’équivalent de `AudioTrack` sur le côté de l’enregistrement. Comme `AudioTrack`, il utilise des mémoires tampons directement, à la place de fichiers et d’URI. Il requiert que le `RECORD_AUDIO` autorisation être défini dans le manifeste.
 
-<a name="Initializing_and_Recording" />
 
 #### <a name="initializing-and-recording"></a>L’initialisation et d’enregistrement
 
@@ -423,7 +400,6 @@ void RecordAudio()
 }
 ```
 
-<a name="Stopping_the_Recording" />
 
 #### <a name="stopping-the-recording"></a>Arrêt de l’enregistrement
 
@@ -433,7 +409,6 @@ Appel de la [arrêter](https://developer.xamarin.com/api/member/Android.Media.Au
 audRecorder.Stop();
 ```
 
-<a name="Clean_Up" />
 
 #### <a name="cleanup"></a>Nettoyage
 
@@ -443,7 +418,6 @@ Lorsque le `AudioRecord` objet n’est plus nécessaire, appeler son [version](h
 audRecorder.Release();
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

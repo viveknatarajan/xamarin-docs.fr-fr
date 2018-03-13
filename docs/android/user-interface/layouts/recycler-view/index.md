@@ -3,16 +3,16 @@ title: RecyclerView
 description: "RecyclerView est un groupe d’affichage pour l’affichage de collections ; Il est conçu pour être un remplacement plus souple pour afficher les groupes plus anciens tels que ListView et GridView.  Ce guide explique comment utiliser et personnaliser RecyclerView dans les applications de Xamarin.Android."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
+ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/03/2018
-ms.openlocfilehash: ec8b3a4655c8e8d9e492c9f7a1807dd64ecc6ae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 028520742a84e717e28147f2fa1fafacfef34028
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -23,7 +23,7 @@ _RecyclerView est un groupe d’affichage pour l’affichage de collections ; I
 De nombreuses applications doivent afficher les collections du même type (par exemple, les messages, contacts, des images ou des morceaux) ; souvent, cette collection est trop volumineuse pour tenir sur l’écran, la collection est présentée dans une petite fenêtre qui peut faire défiler en continu via tous les éléments dans la collection.
 `RecyclerView` est un widget Android qui affiche une collection d’éléments dans une liste ou d’une grille, ce qui permet de parcourir la collection. Voici une capture d’écran d’une application d’exemple qui utilise `RecyclerView` pour afficher le contenu de la boîte de réception de courrier électronique dans une liste de défilement verticale :
 
-[ ![Exemple d’application à l’aide de RecyclerView pour les messages de la boîte de réception de liste](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png)
+[![Exemple d’application à l’aide de RecyclerView pour les messages de la boîte de réception de liste](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png#lightbox)
 
 `RecyclerView` propose deux fonctionnalités intéressantes :
 
@@ -38,7 +38,7 @@ Ce guide explique comment utiliser `RecyclerView` dans les applications de Xamar
 
 Bien que `RecyclerView` est souvent associée à l’interface Lollipop 5.0 Android, il est proposé comme une bibliothèque de prise en charge &ndash; `RecyclerView` fonctionne avec les applications de ce niveau de l’API cible 7 (Android 2.1) et versions ultérieures. Les éléments suivants sont requis pour utiliser `RecyclerView` dans les applications Xamarin :
 
--  **
+-  **Xamarin.Android** &ndash; Xamarin.Android 4.20 ou version ultérieure doit être installé et configuré avec Visual Studio ou Visual Studio pour Mac.
 
 -  Votre projet d’application doit inclure le **Xamarin.Android.Support.v7.RecyclerView** package. Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas :, y compris un NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 

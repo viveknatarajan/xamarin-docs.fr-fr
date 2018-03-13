@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 44a97114e7d325a1fa196d2c9828855ad1a30c94
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ef34b1be5f993a3be819cd4ae1a9dcd5dfc27715
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Création d’un NuGet à partir de projets de bibliothèque existant
 
@@ -21,7 +21,7 @@ Bibliothèques PCL existant ou .NET Standard peuvent être transformées en NuGe
 
 2. Accédez à la **NuGet Package > métadonnées** section et toutes les le [les informations nécessaires](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) dans les **général** onglet :
 
-  [ ![](existing-library-images/existing-metadata-sml.png "Entrez les métadonnées requises")](existing-library-images/existing-metadata.png)
+  [![](existing-library-images/existing-metadata-sml.png "Entrez les métadonnées requises")](existing-library-images/existing-metadata.png#lightbox)
 
 3. Si vous le souhaitez, [ajouter des métadonnées supplémentaires](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) dans les **détails** onglet.
 
@@ -31,7 +31,7 @@ Bibliothèques PCL existant ou .NET Standard peuvent être transformées en NuGe
 
 5. Pour créer le package NuGet sur _chaque_ générer ou déployer, accédez à la **NuGet Package > Générer** section et graduations **créer un NuGet Package lors de la génération du projet**:
 
-    [ ![](existing-library-images/existing-tickbox-sml.png "Graduations pour créer un package NuGet")](existing-library-images/existing-tickbox.png)
+    [![](existing-library-images/existing-tickbox-sml.png "Graduations pour créer un package NuGet")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
 > Création de NuGet package peut ralentir le processus de génération. Si cette case n’est pas cochée, vous pouvez toujours générer manuellement un package NuGet à tout moment à partir du menu contextuel du projet (indiqué à l’étape 4 ci-dessus).
@@ -47,4 +47,4 @@ Cette capture d’écran montre le contenu d’un NuGet basée sur la bibliothè
 
 ## <a name="related-links"></a>Liens associés
 
-- [Guide de métadonnées](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
+- [Guide sur les métadonnées](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)

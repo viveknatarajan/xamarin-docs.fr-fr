@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 8f9294c10f8d3287a2985ede9aadf84ce663c38a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0bc64d0b03aa4f80b19ea098904dc1e2155313f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-app-configuration"></a>Configuration d’application Mac
 
@@ -32,7 +32,7 @@ Pour modifier les paramètres d’une application Xamarin.Mac, double-cliquez su
 
 Cette action affiche les options disponibles pour l’application :
 
- [![Modification du fichier Info.plist](app-configuration-images/config01.png "Modification du fichier Info.plist")](app-configuration-images/config01-large.png)
+ [![Modification du fichier Info.plist](app-configuration-images/config01.png "Modification du fichier Info.plist")](app-configuration-images/config01-large.png#lightbox)
 
 L’exécution d’applications créées Mac avec Xamarin.Mac a la configuration requise suivante :
 
@@ -43,7 +43,7 @@ L’exécution d’applications créées Mac avec Xamarin.Mac a la configuration
 
 La section **Signature Mac** de la boîte de dialogue **Options du projet** permet au développeur de signer une application Xamarin.Mac à des fins de tests, pour une auto-publication ou pour une publication par le biais de l’Apple App Store :
 
-[![Éditeur Signature Mac](app-configuration-images/config02.png "Fenêtre Signature Mac")](app-configuration-images/config02-large.png)
+[![Éditeur Signature Mac](app-configuration-images/config02.png "Fenêtre Signature Mac")](app-configuration-images/config02-large.png#lightbox)
 
 À partir de là, sélectionnez l’identité, le profil de provisionnement et tous les droits personnalisés utilisés pour signer l’application au moment de sa compilation. Le développeur peut éventuellement signer le programme d’installation utilisé pour installer l’application sur un autre Mac.
 
@@ -52,7 +52,7 @@ La section **Signature Mac** de la boîte de dialogue **Options du projet** perm
 
 La section **Build Mac** de la boîte de dialogue **Options du projet** permet au développeur de sélectionner l’architecture d’une application Xamarin.Mac, de contrôler la version de macOS que l’application prendra en charge et de créer éventuellement un paquet d’installation quand l’application sera compilée avec succès :
 
- [![Modification des paramètres de build](app-configuration-images/config03.png "Modification des paramètres de build")](app-configuration-images/config03-large.png)
+ [![Modification des paramètres de build](app-configuration-images/config03.png "Modification des paramètres de build")](app-configuration-images/config03-large.png#lightbox)
 
 
 ## <a name="related-links"></a>Liens associés

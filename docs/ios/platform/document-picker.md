@@ -7,11 +7,11 @@ ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a10dcbbdcd7792cb7c54c883566911264b6d81e6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a8f1632076a12b1737ba8294ac8b2f28f19dc77
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="document-picker"></a>Sélecteur de document
 
@@ -54,7 +54,7 @@ Avant de plonger dans le code requis pour utiliser le sélecteur de Document ave
 
 Un fichier peut être modifié à partir de plusieurs emplacements, il est nécessaire de coordination afin d’éviter la perte de données.
 
- [ ![](document-picker-images/image1.png "À l’aide de la Coordination de fichier")](document-picker-images/image1.png)
+ [![](document-picker-images/image1.png "À l’aide de la Coordination de fichier")](document-picker-images/image1.png#lightbox)
 
 Jetons un œil sur l’illustration ci-dessus :
 
@@ -193,7 +193,7 @@ La façon de découvrir et de liste de Documents est à l’aide d’existants `
 
 Avant d’iOS 8, `NSMetadataQuery` était lente pour les modifications de collecte de fichiers local tel que : supprime, crée et renomme.
 
- [ ![](document-picker-images/image2.png "Vue d’ensemble de modifications de fichier local NSMetadataQuery")](document-picker-images/image2.png)
+ [![](document-picker-images/image2.png "Vue d’ensemble de modifications de fichier local NSMetadataQuery")](document-picker-images/image2.png#lightbox)
 
 Dans le diagramme ci-dessus :
 
@@ -208,7 +208,7 @@ En raison du délai dans la création de la `NSMetadata` enregistrement, l’app
 
 Dans iOS 8, `NSMetadataQuery` est plus facile à utiliser directement avec une nouvelle fonctionnalité appelée assemblage :
 
- [ ![](document-picker-images/image3.png "NSMetadataQuery avec une nouvelle fonctionnalité appelée assemblage")](document-picker-images/image3.png)
+ [![](document-picker-images/image3.png "NSMetadataQuery avec une nouvelle fonctionnalité appelée assemblage")](document-picker-images/image3.png#lightbox)
 
 À l’aide d’assemblage dans le diagramme ci-dessus :
 
@@ -824,7 +824,7 @@ Avant l’iOS 8, il était très difficile à accéder aux Documents à partir d
 
 ### <a name="existing-behavior"></a>Comportement existant
 
- [ ![](document-picker-images/image31.png "Vue d’ensemble de comportement existant")](document-picker-images/image31.png)
+ [![](document-picker-images/image31.png "Vue d’ensemble de comportement existant")](document-picker-images/image31.png#lightbox)
 
 Examinons l’accès à un document externe avant iOS 8 :
 
@@ -839,7 +839,7 @@ Examinons l’accès à un document externe avant iOS 8 :
 
 Dans iOS 8, une application est en mesure d’accéder à des Documents en dehors de son propre conteneur d’Application avec facilité :
 
- [ ![](document-picker-images/image32.png "Détection des Documents en dehors conteneur d’une application")](document-picker-images/image32.png)
+ [![](document-picker-images/image32.png "Détection des Documents en dehors conteneur d’une application")](document-picker-images/image32.png#lightbox)
 
 À l’aide d’iCloud nouveau sélecteur de Document ( `UIDocumentPickerViewController`), une application iOS peut directement découverte et l’accès en dehors de son conteneur d’Application. Le `UIDocumentPickerViewController` fournit un mécanisme pour l’utilisateur d’octroyer l’accès à et modifier ceux découverts Documents via des autorisations.
 
@@ -910,16 +910,16 @@ Voici un exemple de la façon dont le code ci-dessus affiche un sélecteur de Do
 
 1.  L’utilisateur démarre l’application et l’interface principale s’affiche :   
  
-    [ ![](document-picker-images/image33.png "L’interface principale s’affiche.")](document-picker-images/image33.png)
+    [![](document-picker-images/image33.png "L’interface principale s’affiche.")](document-picker-images/image33.png#lightbox)
 1.  Les clics d’utilisateur le **Action** bouton en haut de l’écran et est invité à sélectionner un **Document fournisseur** dans la liste des fournisseurs disponibles :   
  
-    [ ![](document-picker-images/image34.png "Sélectionnez un fournisseur de Document dans la liste des fournisseurs disponibles")](document-picker-images/image34.png)
+    [![](document-picker-images/image34.png "Sélectionnez un fournisseur de Document dans la liste des fournisseurs disponibles")](document-picker-images/image34.png#lightbox)
 1.  Le **Document sélecteur de vue contrôleur** s’affiche pour le **Document fournisseur**:   
  
-    [ ![](document-picker-images/image35.png "Le contrôleur de vue du sélecteur de Document s’affiche.")](document-picker-images/image35.png)
+    [![](document-picker-images/image35.png "Le contrôleur de vue du sélecteur de Document s’affiche.")](document-picker-images/image35.png#lightbox)
 1.  L’utilisateur appuie sur une **dossier de documents** pour afficher son contenu :   
  
-    [ ![](document-picker-images/image36.png "Le contenu du dossier de Document")](document-picker-images/image36.png)
+    [![](document-picker-images/image36.png "Le contenu du dossier de Document")](document-picker-images/image36.png#lightbox)
 1.  L’utilisateur sélectionne un **Document** et **Document sélecteur** est fermé.
 1.  L’interface principale s’affiche de nouveau la **Document** est chargé à partir du conteneur externe et son contenu affiché.
 
@@ -930,7 +930,7 @@ L’affichage actuel du Document sélecteur de vue contrôleur varie selon les f
 
 Comme expliqué ci-dessus, avant d’iOS 8, une application peut accéder aux documents qui faisaient partie de son conteneur d’Application. Dans iOS 8, une application peut accéder aux Documents provenant de sources externes :
 
- [ ![](document-picker-images/image37.png "Vue d’ensemble de la gestion des Documents externes")](document-picker-images/image37.png)
+ [![](document-picker-images/image37.png "Vue d’ensemble de la gestion des Documents externes")](document-picker-images/image37.png#lightbox)
 
 Lorsque l’utilisateur sélectionne un Document à partir d’une source externe, un Document de référence est écrite dans le conteneur d’Application qui pointe vers le Document d’origine.
 
@@ -1021,10 +1021,10 @@ Le contrôleur de vue du sélecteur de Document comporte deux modes d’opérati
 
 1.  **Ouvrir en Mode** : dans ce mode, lorsque l’utilisateur sélectionne et Document externe, le sélecteur de Document crée un signet d’une étendue de sécurité dans le conteneur de l’Application.   
  
-    [ ![](document-picker-images/image37.png "Signet dans le conteneur de l’Application d’une étendue de sécurité")](document-picker-images/image37.png)
+    [![](document-picker-images/image37.png "Signet dans le conteneur de l’Application d’une étendue de sécurité")](document-picker-images/image37.png#lightbox)
 1.  **Importer le Mode** : dans ce mode, lorsque l’utilisateur sélectionne et Document externe, le sélecteur de Document pas créer un signet, mais au lieu de cela, copiez le fichier dans un emplacement temporaire et fournissent de l’application à accéder au Document à cet emplacement :   
  
-    [ ![](document-picker-images/image38.png "Le sélecteur de Document seront copier le fichier dans un emplacement temporaire et fournir l’accès au Document à cet emplacement")](document-picker-images/image38.png)   
+    [![](document-picker-images/image38.png "Le sélecteur de Document seront copier le fichier dans un emplacement temporaire et fournir l’accès au Document à cet emplacement")](document-picker-images/image38.png#lightbox)   
  Une fois que l’application se termine pour une raison quelconque, l’emplacement temporaire est vidée et le fichier supprimé. Si l’application doit conserver l’accès au fichier, il doit faire une copie et placez-le dans son conteneur d’Application.
 
 
@@ -1069,7 +1069,7 @@ Cela est implémenté à l’aide des deux extensions différentes :
 
 Le diagramme suivant illustre le flux de données par défaut lorsque vous travaillez avec des Extensions de fournisseur de Document :
 
- [ ![](document-picker-images/image39.png "Ce diagramme illustre le flux de données par défaut lorsque vous travaillez avec des Extensions de fournisseur de Document")](document-picker-images/image39.png)
+ [![](document-picker-images/image39.png "Ce diagramme illustre le flux de données par défaut lorsque vous travaillez avec des Extensions de fournisseur de Document")](document-picker-images/image39.png#lightbox)
 
 Le processus suivant se produit :
 
@@ -1095,7 +1095,7 @@ Pour des raisons de sécurité iOS 8 a une couche d’Isolation qui conserve les
 
 Le diagramme suivant illustre le flux de données lorsque vous travaillez avec des signets et d’une Extension de fournisseur de Document :
 
- [ ![](document-picker-images/image40.png "Ce diagramme illustre le flux de données lorsque vous travaillez avec des signets et d’une Extension de fournisseur de Document")](document-picker-images/image40.png)
+ [![](document-picker-images/image40.png "Ce diagramme illustre le flux de données lorsque vous travaillez avec des signets et d’une Extension de fournisseur de Document")](document-picker-images/image40.png#lightbox)
 
 Le processus suivant se produit :
 

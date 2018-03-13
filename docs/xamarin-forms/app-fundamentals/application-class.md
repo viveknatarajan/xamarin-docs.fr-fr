@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: d7965c5d4d65dd6bf7aa4128f467acd3e2d39e60
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c383808d443685c1561113e418aed62467f1d5bd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-class"></a>Classe d’application
 
@@ -98,7 +98,7 @@ if (Application.Current.Properties.ContainsKey("id"))
 Vérifiez toujours la présence de la clé avant d’y accéder pour éviter des erreurs inattendues.
 
 > [!NOTE]
-> **Remarque :** le `Properties` dictionnaire ne peut sérialiser des types primitifs pour le stockage. Tentative de stocker d’autres types (tels que `List<string>`) peut échouer en mode silencieux.
+> Le `Properties` dictionnaire ne peut sérialiser des types primitifs pour le stockage. Tentative de stocker d’autres types (tels que `List<string>`) peut échouer en mode silencieux.
 
 <!-- bugzilla 28657 -->
 
@@ -196,7 +196,7 @@ public class MainActivity :
 ```
 
 > [!NOTE]
-> **Remarque :** est une version [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) classe de base qui peut être utilisé pour mieux prendre en charge de la conception de matériel Android.
+> Il existe une version [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) classe de base qui peut être utilisé pour mieux prendre en charge de la conception de matériel Android.
 > Celui-ci deviendra le modèle Android par défaut dans les futures, mais vous pouvez suivre [ces instructions](~/xamarin-forms/platform/android/appcompat.md) pour mettre à jour vos applications Android existantes.
 
 

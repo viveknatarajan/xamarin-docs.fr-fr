@@ -3,16 +3,16 @@ title: "Hello, Android multi-écran - En profondeur"
 description: "Dans ce guide en deux parties, l’application Phoneword de base (créée dans le guide Hello, Android) est étendue de manière à gérer un second écran. Vous y découvrirez également les composants d’une application Android. Vous allez plonger au cœur de l’architecture Android afin de mieux comprendre la structure et les fonctionnalités des applications Android."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: AD3BAE9A-963C-4CF7-9733-111033034289
+ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: a47dea43b1fb1e84a0cd3dffc07b483497edbe09
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android multi-écran - En profondeur
 
@@ -30,7 +30,6 @@ Dans ce guide, vous allez explorer l’architecture Android plus avancée avec l
 
 Dans [Hello, Android - En profondeur](~/android/get-started/hello-android/hello-android-deepdive.md), vous avez appris que les applications Android sont des programmes uniques, car ils ne disposent pas d’un point d’entrée unique. Le système d’exploitation (ou une autre application) démarre toute activité enregistrée de l’application qui, à son tour, démarre le processus de l’application. Cette plongée au cœur de l’architecture Android va vous permettre de mieux comprendre la manière dont les applications Android sont construites avec la présentation des composants d’une application Android et de leurs fonctions.
 
-<a name="AndroidApplicationBlocks" />
 
 ### <a name="android-application-blocks"></a>Blocs d’application Android
 
@@ -52,7 +51,6 @@ Android est conçu autour du *principe des privilèges minimum*. Les application
 
 Pour communiquer, les blocs d’application s’envoient des messages asynchrones appelés *intentions*. Les intentions contiennent des informations sur le bloc de réception et parfois des données. Une intention envoyée depuis un composant d’application déclenche une action dans un autre composant d’application, liant ainsi les deux composants d’application et leur permettant de communiquer. Par l’échange d’intentions, les blocs peuvent coordonner des actions complexes comme lancer l’application appareil-photo pour prendre des photos et les enregistrer, collecter des informations sur l’emplacement ou naviguer d’un écran à un autre.
 
-<a name="AndroidManifestXML" />
 
 ### <a name="androidmanifestxml"></a>AndroidManifest.XML
 

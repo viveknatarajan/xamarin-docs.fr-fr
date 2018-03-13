@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 670c990fb4f2e4d2a01ada83ea98e8e589b5c473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-icons-and-images"></a>Utilisation des icônes et des Images
 
@@ -67,13 +67,13 @@ Pour définir l’Image de lancement de votre projet de tvOS, procédez comme su
 
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur `Assets.xcassets` à ouvrir pour le modifier : 
 
-    [ ![](icons-images-images/asset01.png "Le fichier Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Le fichier Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. Dans le **Asset éditeur**, cliquez sur le `LaunchImages` actif : 
 
-    [ ![](icons-images-images/asset02.png "L’élément multimédia LaunchImages")](icons-images-images/asset02.png)
+    [![](icons-images-images/asset02.png "L’élément multimédia LaunchImages")](icons-images-images/asset02.png#lightbox)
 3. Cliquez sur le **1 x Apple TV** entrée et sélectionnez l’Image de lancer ou faites éventuellement glisser une nouvelle image le système de fichiers : 
 
-    [ ![](icons-images-images/asset03.png "Sélectionnez une Image de démarrage")](icons-images-images/asset03.png)
+    [![](icons-images-images/asset03.png "Sélectionnez une Image de démarrage")](icons-images-images/asset03.png#lightbox)
 4. Enregistrez les modifications apportées.
 
 <a name="Layered-Images" />
@@ -84,7 +84,7 @@ Nouveau pour Apple TV, travail superposées des Images avec l’effet parallaxe 
 
 Contiennent des Images en couches à partir de deux (2) à cinq (5) séparer les couches sont combinées pour former une image complète. À l’exception de la couche d’arrière-plan, chaque couche utilise son ordre de plan, ainsi que la transparence pour créer une illusion de profondeur. Quand l’utilisateur interagit avec une Image en couches, les couches supérieures ordonné Z sont mis à l’échelle et superposées pour créer cet effet.
 
-[ ![](icons-images-images/layered01.png "Diagramme d’Images Z ordonné superposé")](icons-images-images/layered01.png)
+[![](icons-images-images/layered01.png "Diagramme d’Images Z ordonné superposé")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > **Remarque :** superposées Images sont requis pour les icônes de votre application et sont facultatives pour les autres [éléments peut être actif](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (par exemple, l’Image de l’étagère haut). Toutefois, Apple suggère l’utilisation d’Images de couches pour toute image qui peut obtenir le focus dans votre application.
@@ -109,7 +109,7 @@ Chaque fois que possible, vous devez toujours utiliser la fonction intégrée `U
 
 Il est important de se rappeler à inclure un _Safe Zone_ bordure dans chaque couche qui constituera votre Image en couche. Étant donné que les couches individuelles peuvent être mis à l’échelle et rognées durant l’effet parallaxe, le contenu des couches peut retiré si elle est trop près bord de la couche :
 
-[ ![](icons-images-images/layered02.png "bordure de 35 pixels")](icons-images-images/layered02.png)
+[![](icons-images-images/layered02.png "bordure de 35 pixels")](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images" />
 
@@ -128,7 +128,7 @@ il fonctionne avec des Images en couche tvOS dans les formats suivants :
 
 Apple créé le [parallaxe aperçu](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) pour afficher un aperçu et des Images créées en couche requis pour les icônes de l’application et des éléments facultatifs peut être actif. Le Générateur d’aperçu montre chaque couche constituant l’Image en couche terminée :
 
-[ ![](icons-images-images/layered03.png "Le Générateur d’aperçu parallaxe")](icons-images-images/layered03.png)
+[![](icons-images-images/layered03.png "Le Générateur d’aperçu parallaxe")](icons-images-images/layered03.png#lightbox)
 
 Lors de l’aperçu d’une Image en couches, vous pouvez utiliser la souris pour faire pivoter l’image et afficher un aperçu de l’effet parallaxe. Utilisez le  **+**  (plus) et  **-**  (moins) de boutons permettant d’ajouter et supprimer des couches.
 
@@ -142,7 +142,7 @@ Pour plus d’informations sur la création et l’aperçu des Images de couches
 
 Votre application Xamarin.tvOS requiert non seulement une icône d’application pour l’écran d’accueil de Apple TV, mais également une icône pour le magasin d’applications. L’icône d’application est le votre premier modifier pour effectuer une impression excellente sur les utilisateurs potentiels et doit communiquer l’objectif de votre application en un coup de œil.
 
-[ ![](icons-images-images/icon01.png "L’icône d’application")](icons-images-images/icon01.png)
+[![](icons-images-images/icon01.png "L’icône d’application")](icons-images-images/icon01.png#lightbox)
 
 Chaque application doit fournir un petit et une version de grande taille de son icône de l’application. La petite icône servira à l’écran d’accueil de Apple TV lorsque l’application est installée. La version de grande taille est utilisée par l’App Store. L’icône d’application volumineux doit reproduire l’apparence de la version de la petite icône.
 
@@ -202,16 +202,16 @@ Pour définir les icônes d’application requis pour votre projet de tvOS, proc
 
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur `Assets.xcassets` à ouvrir pour le modifier : 
 
-    [ ![](icons-images-images/asset01.png "Le fileg Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Le fileg Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. Dans le **Asset éditeur**, développez le `App Icon & Top Shelf Image` actif : 
 
-    [ ![](icons-images-images/asset04.png "Développez l’élément multimédia en haut de l’étagère Image")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "Développez l’élément multimédia en haut de l’étagère Image")](icons-images-images/asset04.png#lightbox)
 3. Ensuite, développez le `App Icon - Small` actif : 
 
-    [ ![](icons-images-images/asset05.png "Développez l’icône d’application - petite actif")](icons-images-images/asset05.png)
+    [![](icons-images-images/asset05.png "Développez l’icône d’application - petite actif")](icons-images-images/asset05.png#lightbox)
 4. Puis développez le `Back` actif, puis cliquez sur le `Contents` entrée : 
 
-    [ ![](icons-images-images/asset06.png "Puis développez l’élément multimédia précédent")](icons-images-images/asset06.png)
+    [![](icons-images-images/asset06.png "Puis développez l’élément multimédia précédent")](icons-images-images/asset06.png#lightbox)
 5. Cliquez sur le **1 x entrée d’Apple TV** et sélectionnez un fichier image.
 6. Répétez les étapes ci-dessus pour le `Front` et `Middle` actifs.
 7. Puis répétez la même procédure pour définir le `App Icon - Large` actif.
@@ -223,7 +223,7 @@ Pour définir les icônes d’application requis pour votre projet de tvOS, proc
 
 Si l’utilisateur a placé votre application Xamarin.tvOS sur la ligne en haut de l’écran d’accueil de Apple TV, une grande Image de l’étagère haut s’affichera lorsque votre application sera sélectionnée par l’utilisateur. Cette image doit mettre en évidence les fonctionnalités de votre application ou fournir des liens directs vers son contenu.
 
-[ ![](icons-images-images/topshelf01.png "Exemple de l’étagère Image supérieure")](icons-images-images/topshelf01.png)
+[![](icons-images-images/topshelf01.png "Exemple de l’étagère Image supérieure")](icons-images-images/topshelf01.png#lightbox)
 
 L’Image de l’étagère Top peut être fourni en tant que statique unique `.png` ou `.lsr` fichier (voir [création d’Images en couche](#Creating-Layered-Images)) ou il peut être créé dynamiquement lors de l’exécution en tant qu’une seule ligne d’éléments peut être actif (consultez [ Le contenu dynamique haut de l’étagère](#Dynamic-Top-Shelf-Content) ci-dessous).
 
@@ -253,13 +253,13 @@ Pour définir l’Image de l’étagère haut requis pour votre projet de tvOS, 
 
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur `Assets.xcassets` à ouvrir pour le modifier : 
 
-    [ ![](icons-images-images/asset01.png "Le fichier Assets.xcassets")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Le fichier Assets.xcassets")](icons-images-images/asset01.png#lightbox)
 2. Dans le **Asset éditeur**, développez le `App Icon & Top Shelf Image` actif : 
 
-    [ ![](icons-images-images/asset04.png "Développez l’élément multimédia en haut de l’étagère Image")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "Développez l’élément multimédia en haut de l’étagère Image")](icons-images-images/asset04.png#lightbox)
 3. Cliquez sur le `Top Shelf Image` actif : 
 
-    [ ![](icons-images-images/asset07.png "L’élément multimédia en haut de l’étagère Image")](icons-images-images/asset07.png)
+    [![](icons-images-images/asset07.png "L’élément multimédia en haut de l’étagère Image")](icons-images-images/asset07.png#lightbox)
 5. Cliquez sur le **1 x entrée d’Apple TV** et sélectionnez un fichier image.
 6. Enregistrez les modifications apportées.
 
@@ -423,10 +423,10 @@ Effectuez ce qui suit :
 
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Info.plist` à ouvrir pour le modifier : 
 
-    [ ![](icons-images-images/info01.png "Le fichier Info.plist")](icons-images-images/info01.png)
+    [![](icons-images-images/info01.png "Le fichier Info.plist")](icons-images-images/info01.png#lightbox)
 2. Dans le **Info.Plist éditeur**, sélectionnez le catalogue de ressources (configuré ci-dessus dans le [définissant les icônes d’application](#Setting-the-App-Icons) section) pour le **icônes de l’application**: 
 
-    [ ![](icons-images-images/info02.png "L’éditeur de fichier Info.Plist.")](icons-images-images/info02.png)
+    [![](icons-images-images/info02.png "L’éditeur de fichier Info.Plist.")](icons-images-images/info02.png#lightbox)
 3. Ensuite, sélectionnez le catalogue de ressources (configuré ci-dessus dans le [définition de l’Image de lancement](#Setting-the-Launch-Image) section) pour le **lancer les Images**.
 4. Enregistrez les modifications apportées.
 

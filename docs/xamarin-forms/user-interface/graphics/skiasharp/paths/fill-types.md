@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6e8a37816e28120392f550376807e91fb3b5d458
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cee93f082386e78a643b8c07dd48d0196e8ecd6c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-path-fill-types"></a>Les Types de remplissage du chemin d’accès
 
@@ -164,7 +164,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normalement, le type de remplissage du chemin d’accès doit affecter uniquement les remplissages et traits pas, mais les deux `Inverse` modes affectent les remplissages et les traits. Pour les remplissages, les deux `Inverse` types de remplir des zones afin que la zone à l’extérieur de l’étoile est remplie. Pour les tracés, les deux `Inverse` types tout sauf le trait de couleur. À l’aide de ces types de remplissage inverse peut produire des effets impairs, comme illustré par la capture d’écran iOS dans :
 
-[![](fill-types-images/fivepointedstar-small.png "Capture d’écran de triple de la page Five-Pointed étoile")](fill-types-images/fivepointedstar-large.png "Triple capture d’écran de la page Five-Pointed étoile")
+[![](fill-types-images/fivepointedstar-small.png "Capture d’écran de triple de la page Five-Pointed étoile")](fill-types-images/fivepointedstar-large.png#lightbox "Triple capture d’écran de la page Five-Pointed étoile")
 
 Les captures d’écran mobiles Android et Windows montrant les effets de pair-impair et enroulement classiques, mais l’ordre de trait et de remplissage affecte également les résultats.
 
@@ -217,7 +217,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il s’agit d’une image intéressante créée avec un minimum de code :
 
-[![](fill-types-images/overlappingcircles-small.png "Capture d’écran de triple de la page de chevauchement des cercles")](fill-types-images/overlappingcircles-large.png "Triple capture d’écran de la page des cercles qui se chevauchent")
+[![](fill-types-images/overlappingcircles-small.png "Capture d’écran de triple de la page de chevauchement des cercles")](fill-types-images/overlappingcircles-large.png#lightbox "Triple capture d’écran de la page des cercles qui se chevauchent")
 
 
 ## <a name="related-links"></a>Liens associés

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: 677d672b3f00d4c3f3505ab2adf977f16fca4de5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 730cc1f815641d79350784790e3b33b743d1aebe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-the-contacts-contentprovider"></a>À l’aide de la ContentProvider de Contacts
 
@@ -40,7 +40,6 @@ Chacune de ces méthodes a le même ensemble de base d’entrées :
 -  **SortOrder** &ndash; colonnes à trier.
 
 
-<a name="Creating_Inputs_for_a_Query" />
 
 ## <a name="creating-inputs-for-a-query"></a>Création d’entrées pour une requête
 
@@ -60,14 +59,12 @@ string[] projection = {
 Pour cet exemple, le `selection`, `selectionArgs` et `sortOrder` sera ignorée en les définissant `null`.
 
 
-<a name="Creating_a_Cursor_from_a_Content_Provider_Uri" />
 
 ## <a name="creating-a-cursor-from-a-content-provider-uri"></a>Création d’un curseur à partir d’un Uri de fournisseur de contenu
 
 Une fois que les objets de paramètre ont été créées, elles peuvent servir de l’une des manières suivantes :
 
 
-<a name="Using_a_Managed_Query" />
 
 ### <a name="using-a-managed-query"></a>À l’aide d’une requête managée
 
@@ -80,7 +77,6 @@ var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 Ce curseur est géré par Android, vous n’avez pas besoin de le fermer.
 
 
-<a name="Using_ContentResolver" />
 
 ### <a name="using-contentresolver"></a>À l’aide de ContentResolver
 
@@ -100,7 +96,6 @@ cursor.Close();
 Vous pouvez également appeler `StartManagingCursor()` et `StopManagingCursor()` à « gérer » le curseur. Curseurs gérés sont automatiquement désactivés et interrogés de nouveau lorsque les activités sont arrêtées et redémarrées.
 
 
-<a name="Using_CursorLoader" />
 
 ### <a name="using-cursorloader"></a>À l’aide de CursorLoader
 
@@ -116,7 +111,6 @@ Le `CursorLoader` garantit que toutes les opérations de curseur sont effectuée
 Les versions antérieures d’Android peuvent également utiliser le `CursorLoader` classe à l’aide de la [v4 prise en charge des bibliothèques](http://developer.android.com/tools/support-library/index.html).
 
 
-<a name="Displaying_the_Cursor_Data_with_a_Custom_Adapter" />
 
 ## <a name="displaying-the-cursor-data-with-a-custom-adapter"></a>Afficher les données de curseur avec un adaptateur personnalisé
 
@@ -189,13 +183,12 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 
 L’image est affichée (si elle existe) à l’aide de l’Uri dans le fichier image sur l’appareil. L’application ressemble à ceci :
 
-[![Capture d’écran de l’application d’afficher les contacts dans un ListView ; une image est affichée à gauche d’une entrée](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png)
+[![Capture d’écran de l’application d’afficher les contacts dans un ListView ; une image est affichée à gauche d’une entrée](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png#lightbox)
 
 À l’aide d’un modèle de code similaire, votre application peut accéder à une grande variété de données système, y compris des photos, vidéos et musique de l’utilisateur.
 Certains types de données requièrent des autorisations spéciales à être demandés dans le fichier **AndroidManifest.xml**.
 
 
-<a name="Displaying_the_Cursor_Data_with_a_SimpleCursorAdapter" />
 
 ## <a name="displaying-the-cursor-data-with-a-simplecursoradapter"></a>Afficher les données de curseur avec un SimpleCursorAdapter
 

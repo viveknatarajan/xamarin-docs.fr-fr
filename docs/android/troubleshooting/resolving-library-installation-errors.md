@@ -7,12 +7,12 @@ ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 2df101615ed512d362fc065a1bb7080f3fd3bb33
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 5589d512f9a4ee9c1148810f36fee12d561f725c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="resolving-library-installation-errors"></a>Résolution des erreurs d’Installation de bibliothèque
 
@@ -23,7 +23,6 @@ _Dans certains cas, vous obtiendrez des erreurs lors de l’installation des bib
 Lors de la génération d’un projet d’application de Xamarin.Android, vous pouvez obtenir des erreurs de build lorsque Visual Studio ou Visual Studio pour Mac essayez de télécharger et installer les bibliothèques de dépendance. Nombre de ces erreurs sont dus à des problèmes de connectivité réseau, l’endommagement du fichier ou des problèmes de contrôle de version. Ce guide décrit les erreurs d’installation de bibliothèque prise en charge plus courantes et fournit les étapes pour résoudre ces problèmes et obtenir votre projet d’application réexécuter la génération. 
 
  
-<a name="m2repository" />
  
 ## <a name="errors-while-downloading-m2repository"></a>Erreurs lors du téléchargement de m2Repository
 
@@ -36,7 +35,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 Cet exemple concerne **android\_m2repository\_r16**, mais vous pouvez voir ce message d’erreur même pour une autre version, tel que **android\_m2repository\_r18**  ou **android\_m2repository\_r25**. 
 
 
-<a name="automatic" /> 
 
 ### <a name="automatic-recovery-from-m2repository-errors"></a>Récupération automatique à partir d’erreurs de m2repository 
 
@@ -50,11 +48,11 @@ Souvent, ce problème peut être résolu par la suppression de la bibliothèque 
 
 2. Recherchez le dossier de bibliothèque et la version correspondant au message d’erreur. Par exemple, le dossier de bibliothèque et la version pour le message d’erreur ci-dessus se trouve à **Android.Support.v4\\22.2.1**:
 
-    [![Emplacement du dossier exemple pour 22.2.1 prend en charge la bibliothèque](resolving-library-installation-errors-images/01-example-location.png)](resolving-library-installation-errors-images/01-example-location.png)
+    [![Emplacement du dossier exemple pour 22.2.1 prend en charge la bibliothèque](resolving-library-installation-errors-images/01-example-location.png)](resolving-library-installation-errors-images/01-example-location.png#lightbox)
 
 3. Supprimez le contenu du dossier de version. Veillez à supprimer la **.zip** fichier, ainsi que les **contenu** et **incorporé** sous-répertoires de ce dossier. Pour l’exemple de message d’erreur ci-dessus, les fichiers et sous-répertoires indiqués dans cette capture d’écran (**contenu**, **incorporé**, et **android_m2repository_r16.zip**) sont à Supprimer :
 
-    [![Contenu d’exemple de 22.2.1 prend en charge le dossier de bibliothèque](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png)
+    [![Contenu d’exemple de 22.2.1 prend en charge le dossier de bibliothèque](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png#lightbox)
 
    Notez qu’il est important de supprimer la *entière* contenu de ce dossier. Bien que ce dossier peut contenir initialement le « manquant » **android\_m2repository\_r16.zip** fichier, ce fichier peut avoir été partiellement téléchargés ou endommagé.
 
@@ -63,7 +61,6 @@ Souvent, ce problème peut être résolu par la suppression de la bibliothèque 
 Dans la plupart des cas, ces étapes seront résoudre l’erreur de génération et vous permettent de continuer. Si vous supprimez cette bibliothèque ne résout pas l’erreur de build, vous devez télécharger et installer manuellement le **android\_m2repository\_r_nn_.zip** comme décrit dans la section suivante du fichier. 
 
 
-<a name="download" /> 
 
 ### <a name="manually-downloading-m2repository"></a>Téléchargement manuel m2repository
 
@@ -119,13 +116,11 @@ Si vous avez essayé à l’aide de la procédure de récupération automatique 
 
     Par exemple, la capture d’écran suivante illustre le résultat lorsque **android\_m2repository\_r16.zip** est téléchargé et renommé le hachage MD5 de son URL de téléchargement sur Windows :
 
-    [![Exemple du référentiel r16.zip est renommé 0595E577D19D31708195A83087881EE6.zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png)
+    [![Exemple du référentiel r16.zip est renommé 0595E577D19D31708195A83087881EE6.zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
 
 Si cette procédure ne résout pas l’erreur de build, vous devez télécharger manuellement les **android\_m2repository\_r_nn_.zip** de fichiers, le décompresser et installer son contenu comme décrit dans la section suivante. 
 
-
-<a name="install" /> 
 
 ### <a name="manually-downloading-and-installing-m2repository-files"></a>Manuellement télécharger et installer les fichiers m2repository
 
@@ -140,36 +135,35 @@ Utilisez les étapes suivantes pour télécharger **m2repository** et installer 
 1.  Supprimez le contenu du dossier de bibliothèque correspondant au message d’erreur. Par exemple, dans le message d’erreur ci-dessus supprimer le contenu de **C:\\utilisateurs\\***nom d’utilisateur***\\AppData\\Local\\Xamarin\\ Android.Support.v4\\23.1.1.0**. 
     Comme décrit précédemment, vous devez supprimer tout le contenu de ce répertoire :
 
-    [![Suppression du contenu, incorporé et les dossiers android_m2repository le 23.1.1.0 dossier](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png)
+    [![Suppression du contenu, incorporé et les dossiers android_m2repository le 23.1.1.0 dossier](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
 
 2.  Téléchargez le **android\_m2repository\_r_nn_.zip** fichier à partir de Google qui correspond à l’erreur de message (voir le tableau dans la section précédente pour les liens).
 
 3.  Extraire cet **.zip** archive à n’importe quel emplacement (tel que le bureau). Il doit créer un répertoire qui correspond au nom de la **.zip** archive. Dans ce répertoire, vous devez trouver un sous-répertoire appelé **m2repository**: 
 
-    [![dossier m2repository trouvé dans l’archive zip extraits](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png)
+    [![dossier m2repository trouvé dans l’archive zip extraits](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png#lightbox)
 
 4.  Dans le répertoire des bibliothèques avec version qui vous purgées à l’étape 1, recréer les **contenu** et **embedded** dans les sous-répertoires. Par exemple, la capture d’écran suivante illustre **contenu** et **incorporé** sous-répertoires en cours de création dans le **23.1.1.0** dossier **android \_m2repository\_r25.zip**: 
 
-    [![Créer du contenu et dossiers incorporées dans le 23.1.1.0 dossier](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png)
+    [![Créer du contenu et dossiers incorporées dans le 23.1.1.0 dossier](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png#lightbox)
 
 5.  Copie **m2repository** à partir de l’extrait **.zip** dans les **contenu** active que vous avez créé à l’étape précédente : 
 
-    [![Capture d’écran de m2repository copiés dans le dossier de 23.1.1.0/content](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)
+    [![Capture d’écran de m2repository copiés dans le dossier de 23.1.1.0/content](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)](resolving-library-installation-errors-images/07-copied-m2repository-vs.png#lightbox)
 
 6.  Dans l’extrait **.zip** active, cliquez sur Parcourir pour **m2repository\\com\\android\\prennent en charge\\prise en charge-v4** et ouvrez le dossier correspondant le numéro de version créé précédemment (dans cet exemple, **23.1.1**) :
 
-    [![Liste des fichiers contenus dans le dossier support-v4/23.1.1 exemple](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png)
+    [![Liste des fichiers contenus dans le dossier support-v4/23.1.1 exemple](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png#lightbox)
 
 7.  Copiez tous les fichiers dans ce dossier pour le **incorporé** répertoire créé à l’étape 4 :
 
-    [![Exemple de fichiers copiés dans le dossier 23.1.1.0/embedded](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png)
+    [![Exemple de fichiers copiés dans le dossier 23.1.1.0/embedded](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
 8.  Vérifiez que tous les fichiers sont copiés. Le **incorporé** active doit maintenant contenir des fichiers tels que **.jar**, **.aar**, et **.pom**.
 
 À ce stade, vous avez installé manuellement les composants manquants et votre projet doit être généré sans erreurs. Dans le cas contraire, vérifiez que vous avez téléchargé le **m2repository** **.zip** archiver la version qui correspond exactement à la version du message d’erreur, puis vérifiez que vous avez installé son contenu dans le Corrigez les emplacements comme décrit dans les étapes ci-dessus. 
 
 
-<a name="summary" /> 
 
 ## <a name="summary"></a>Récapitulatif 
 

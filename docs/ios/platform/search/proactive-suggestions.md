@@ -3,16 +3,16 @@ title: "Présentation des Suggestions Proactive"
 description: "Cet article explique comment utiliser des Suggestions Proactive dans l’application Xamarin.iOS à l’engagement de lecteur en permettant au système de façon proactive présenter automatiquement des informations utiles à l’utilisateur."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2762487d25befd15d8b57a002c5da4e9dcb15bb8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>Présentation des Suggestions Proactive
 
@@ -63,7 +63,7 @@ Permet à l’application contacts (et des informations connexes contacts) s’a
 
 ## <a name="ride-sharing-based-suggestions"></a>Gérer des Suggestions en fonction de partage
 
-Si une application de partage de gestion utilise le [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API iOS 10 présente en tant qu’option dans le sélecteur de l’application lorsque l’utilisateur est susceptible de vouloir une commutation. L’application doit également être enregistrée en tant qu’une application de partage de compétences en spécifiant le `MKDirectionsModeRideShare` pour le [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW33) clé dans son `Info.plist` fichier.
+Si une application de partage de gestion utilise le [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API iOS 10 présente en tant qu’option dans le sélecteur de l’application lorsque l’utilisateur est susceptible de vouloir une commutation. L’application doit également être enregistrée en tant qu’une application de partage de compétences en spécifiant le `MKDirectionsModeRideShare` pour le [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) clé dans son `Info.plist` fichier.
 
 Si l’application prend uniquement en charge le partage des cas, la suggestion système débuteriez avec *« D’obtenir une porté à... »*, si d’autres types de direction de routage (par exemple, cannes ou vélo) sont pris en charge, le système utilisera *« Obtenir des instructions pour... »*
 
@@ -95,7 +95,7 @@ Toutes ces fonctionnalités ont un point commun, ils utilisent tous `NSUserActiv
 
 Comme indiqué précédemment, `NSUserActivity` permet le système qui décrit les informations que l’utilisateur travaille actuellement avec sur l’écran. `NSUserActivity` un état non activable met en cache le mécanisme de capture de l’activité de l’utilisateur lorsqu’ils naviguent dans l’application. Examinons, par exemple, une application de restaurant :
 
-[ ![](proactive-suggestions-images/activity02.png "L’état de non activable NSUserActivity mécanisme de mise en cache")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "L’état de non activable NSUserActivity mécanisme de mise en cache")](proactive-suggestions-images/activity02.png#lightbox)
 
 Avec les interactions suivantes :
 
@@ -105,7 +105,7 @@ Avec les interactions suivantes :
 
 Regardez plus près le dernier écran :
 
-[ ![](proactive-suggestions-images/activity03.png "Les détails de NSUserActivity")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "Les détails de NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 L’application consiste à créer ici un `NSUserActivity` et il a été remplie avec les informations pour recréer l’état ultérieurement. L’application a également inclus des métadonnées telles que le nom et l’adresse de l’emplacement. Avec cette activité est créée, l’application informe iOS qu’il représente l’état actuel de l’utilisateur.
 
@@ -324,7 +324,7 @@ Interactions de contact sont implémentées dans l’application à l’aide de 
 
 Découvrez comment l’application peut faire un don interactions :
 
-[ ![](proactive-suggestions-images/activity04.png "Vue d’ensemble des Interactions de don")](proactive-suggestions-images/activity04.png)
+[![](proactive-suggestions-images/activity04.png "Vue d’ensemble des Interactions de don")](proactive-suggestions-images/activity04.png#lightbox)
 
 L’application crée un `INInteraction` objet qui contient un **intention** (`INIntent`), **Participants** et **métadonnées**. Le **intention** représente une action de l’utilisateur comme un appel vidéo ou envoyer un message texte. Le **Participants** incluent les destinataires de la communication. Le **métadonnées** définit par exemple correctement envoyer le message, etc. plus d’informations.
 
@@ -334,7 +334,7 @@ Une fois que l’interaction est entièrement remplie, appelez le `DonateInterac
 
 Quand l’utilisateur interagit avec l’application à partir de la carte de visite, l’interaction obtient fournie avec un `NSUserActivity`, qui est ensuite utilisé pour lancer l’application :
 
-[ ![](proactive-suggestions-images/activity05.png "L’interaction obtient fournie avec un NSUserActivity qui est utilisé pour lancer l’application")](proactive-suggestions-images/activity05.png)
+[![](proactive-suggestions-images/activity05.png "L’interaction obtient fournie avec un NSUserActivity qui est utilisé pour lancer l’application")](proactive-suggestions-images/activity05.png#lightbox)
 
 Examinons l’exemple suivant d’un mode de Message d’envoi :
 
@@ -449,7 +449,7 @@ Certains arrière-plan Schema.org :
 - Il existe plus de 500 schémas représentant les différents concepts disponibles.
 - En implémentant la sur le site Web, le développeur peut acquérir quelques-uns des avantages de l’utilisation de `NSUserActivity` dans une application native.
 
-Les schémas sont organisées dans une arborescence de la structure, où spécifique types tels que *Restaurant*, hériter des types plus génériques tel que *entreprise Local*. Pour plus d’informations, consultez [Schema.org](#http://schema.org).
+Les schémas sont organisées dans une arborescence de la structure, où spécifique types tels que *Restaurant*, hériter des types plus génériques tel que *entreprise Local*. Pour plus d’informations, consultez [Schema.org](http://schema.org).
 
 Par exemple, si la page web contient les données suivantes :
 

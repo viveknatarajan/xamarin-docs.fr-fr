@@ -3,14 +3,15 @@ title: "Résumé du chapitre 4. Défilement de la pile"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 59d51c48cee30a242f5e1adcb1c886169334e9b2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Résumé du chapitre 4. Défilement de la pile
 
@@ -94,7 +95,7 @@ Souvent, vous devez définir le le [ `WidthRequest` ](https://developer.xamarin.
 
 Vous pouvez utiliser plusieurs instances de `StackLayout` pour combiner un `BoxView` et plusieurs `Label` les instances en un `Frame` pour afficher une couleur spécifique, puis placer chacune de ces vues dans une `StackLayout` dans un `ScrollView` pour créer le liste des couleurs affichées dans le [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) exemple :
 
-[![Capture d’écran de triple des blocs de couleur](images/ch04fg11-small.png "liste de couleurs")](images/ch04fg11-large.png "liste de couleurs")
+[![Capture d’écran de triple des blocs de couleur](images/ch04fg11-small.png "liste de couleurs")](images/ch04fg11-large.png#lightbox "liste de couleurs")
 
 ## <a name="a-scrollview-in-a-stacklayout"></a>Un ScrollView dans un StackLayout ?
 

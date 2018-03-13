@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/31/2018
-ms.openlocfilehash: 3046d779239076098a8b2fb74fc87e2f211074e9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a2445e49005175f62e4d7cd8aadccb5f596177bf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-designer-basics"></a>principes de base de concepteur d’iOS
 
@@ -38,15 +38,15 @@ Un contrôleur d’affichage comporte deux parties : une représentation visuel
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Un contrôleur de vue dans le concepteur iOS](introduction-images/1-storyboardwithviewcontroller-vsmac.png "un contrôleur de vue dans le concepteur iOS")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png)
+[![Un contrôleur de vue dans le concepteur iOS](introduction-images/1-storyboardwithviewcontroller-vsmac.png "un contrôleur de vue dans le concepteur iOS")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
 
-[![Le code d’un contrôleur de vue](introduction-images/2-viewcontrollercode-vsmac.png "le code d’un contrôleur de vue")](introduction-images/2-viewcontrollercode-vsmac-large.png)
+[![Le code d’un contrôleur de vue](introduction-images/2-viewcontrollercode-vsmac.png "le code d’un contrôleur de vue")](introduction-images/2-viewcontrollercode-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Un contrôleur de vue dans le concepteur iOS](introduction-images/1-storyboardwithviewcontroller-vs.png "un contrôleur de vue dans le concepteur iOS")](introduction-images/1-storyboardwithviewcontroller-vs-large.png)
+[![Un contrôleur de vue dans le concepteur iOS](introduction-images/1-storyboardwithviewcontroller-vs.png "un contrôleur de vue dans le concepteur iOS")](introduction-images/1-storyboardwithviewcontroller-vs-large.png#lightbox)
 
-[![Le code d’un contrôleur de vue](introduction-images/2-viewcontrollercode-vs.png "le code d’un contrôleur de vue")](introduction-images/2-viewcontrollercode-vs-large.png)
+[![Le code d’un contrôleur de vue](introduction-images/2-viewcontrollercode-vs.png "le code d’un contrôleur de vue")](introduction-images/2-viewcontrollercode-vs-large.png#lightbox)
 
 -----
 
@@ -54,11 +54,11 @@ Dans son état par défaut, un contrôleur de la vue ne fournit aucune fonctionn
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Un contrôleur de vue contenant un bouton](introduction-images/3-viewcontrollerwithbutton-vsmac.png "un contrôleur de vue contenant un bouton")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png)
+[![Un contrôleur de vue contenant un bouton](introduction-images/3-viewcontrollerwithbutton-vsmac.png "un contrôleur de vue contenant un bouton")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Un contrôleur de vue contenant un bouton](introduction-images/3-viewcontrollerwithbutton-vs.png "un contrôleur de vue contenant un bouton")](introduction-images/3-viewcontrollerwithbutton-vs-large.png)
+[![Un contrôleur de vue contenant un bouton](introduction-images/3-viewcontrollerwithbutton-vs.png "un contrôleur de vue contenant un bouton")](introduction-images/3-viewcontrollerwithbutton-vs-large.png#lightbox)
 
 -----
 
@@ -68,13 +68,13 @@ Certains contrôles, tels que les étiquettes contenant du texte statique, peuve
 
 Pour accéder et manipuler le bouton dans le code, il doit avoir un identificateur unique. Fournir un identificateur unique en sélectionnant le bouton, ouvrant la **propriétés remplissage**et en définissant son **nom** champ à une valeur telle que « SubmitButton » :
 
-[![Paramètre de nom d’un bouton dans la zone de propriétés](introduction-images/4-settingbuttonname-vsmac.png "définissant le nom d’un bouton dans la zone de propriétés")](introduction-images/4-settingbuttonname-vsmac-large.png)
+[![Paramètre de nom d’un bouton dans la zone de propriétés](introduction-images/4-settingbuttonname-vsmac.png "définissant le nom d’un bouton dans la zone de propriétés")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Pour accéder et manipuler le bouton dans le code, il doit avoir un identificateur unique. Fournir un identificateur unique en sélectionnant le bouton, ouvrant la **fenêtre Propriétés**et en définissant son **nom** champ à une valeur telle que « SubmitButton » :
 
-[![Définition du nom d’un bouton dans la fenêtre Propriétés](introduction-images/4-settingbuttonname-vs.png "définissant le nom d’un bouton dans la fenêtre Propriétés")](introduction-images/4-settingbuttonname-vs-large.png)
+[![Définition du nom d’un bouton dans la fenêtre Propriétés](introduction-images/4-settingbuttonname-vs.png "définissant le nom d’un bouton dans la fenêtre Propriétés")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
 -----
 
@@ -84,13 +84,13 @@ Maintenant que le bouton a un nom, il est accessible dans le code. Mais comment 
 
 Dans le **Solution remplissage**, la navigation vers **ViewController.cs** et en cliquant sur l’indicateur de divulgation d’informations indique que le contrôleur de vue `ViewController` étendues de définition de classe deux fichiers, chacun d’eux contient un [classe partielle](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) définition :
 
-[![Les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png)
+[![Les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Dans le **l’Explorateur de solutions**, la navigation vers **ViewController.cs** et en cliquant sur l’indicateur de divulgation d’informations indique que le contrôleur de vue `ViewController` définition de classe s’étend sur deux fichiers, chacun des qui contient un [classe partielle](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) définition :
 
-[![Les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png)
+[![Les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
 -----
 
@@ -125,11 +125,11 @@ La capture d’écran suivante illustre que IntelliSense reconnaît maintenant l
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![IntelliSense reconnaître la référence SubmitButton](introduction-images/6-submitbuttonintellisense-vsmac.png "IntelliSense reconnaître la référence SubmitButton")](introduction-images/6-submitbuttonintellisense-vsmac-large.png)
+[![IntelliSense reconnaître la référence SubmitButton](introduction-images/6-submitbuttonintellisense-vsmac.png "IntelliSense reconnaître la référence SubmitButton")](introduction-images/6-submitbuttonintellisense-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![IntelliSense reconnaître la référence SubmitButton](introduction-images/6-submitbuttonintellisense-vs.png "IntelliSense reconnaître la référence SubmitButton")](introduction-images/6-submitbuttonintellisense-vs-large.png)
+[![IntelliSense reconnaître la référence SubmitButton](introduction-images/6-submitbuttonintellisense-vs.png "IntelliSense reconnaître la référence SubmitButton")](introduction-images/6-submitbuttonintellisense-vs-large.png#lightbox)
 
 -----
 
@@ -147,13 +147,13 @@ Cette section présente les différentes parties du concepteur iOS et fournit un
 
 Les projets de Xamarin.iOS créées avec Visual Studio pour Mac incluent un plan conceptuel. Pour afficher le contenu d’un storyboard, double-cliquez sur le fichier .storyboard le **Solution remplissage**:
 
-[![Un plan conceptuel ouvrir dans le concepteur iOS](introduction-images/7-storyboardopen-vsmac.png "un storyboard ouvrir dans le concepteur iOS")](introduction-images/7-storyboardopen-vsmac-large.png)
+[![Un plan conceptuel ouvrir dans le concepteur iOS](introduction-images/7-storyboardopen-vsmac.png "un storyboard ouvrir dans le concepteur iOS")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 La plupart des projets de Xamarin.iOS créés avec Visual Studio 2015 ou 2017 incluent un plan conceptuel. Pour afficher le contenu d’un storyboard, double-cliquez sur le fichier .storyboard le **l’Explorateur de solutions**:
 
-[![Un plan conceptuel ouvrir dans le concepteur iOS](introduction-images/7-storyboardopen-vs.png "un storyboard ouvrir dans le concepteur iOS")](introduction-images/7-storyboardopen-vs-large.png)
+[![Un plan conceptuel ouvrir dans le concepteur iOS](introduction-images/7-storyboardopen-vs.png "un storyboard ouvrir dans le concepteur iOS")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 
 -----
 
@@ -165,7 +165,7 @@ Le concepteur iOS a six sections principales :
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Sections du concepteur iOS](introduction-images/8-sixpartsofiosdesigner-vsmac.png "Sections du concepteur iOS")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png)
+[![Sections du concepteur iOS](introduction-images/8-sixpartsofiosdesigner-vsmac.png "Sections du concepteur iOS")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png#lightbox)
 
 1. **Aire de conception** : espace de travail principal du concepteur iOS. Indiqué dans la zone de document, il permet la construction visuelle des interfaces utilisateur.
 2. **Barre d’outils de contraintes** – permet de basculer entre le mode édition et mode de modification de contrainte, deux façons différentes pour positionner des éléments dans une interface utilisateur de frame.
@@ -176,7 +176,7 @@ Le concepteur iOS a six sections principales :
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Sections du concepteur iOS](introduction-images/8-sixpartsofiosdesigner-vs.png "Sections du concepteur iOS")](introduction-images/8-sixpartsofiosdesigner-vs-large.png)
+[![Sections du concepteur iOS](introduction-images/8-sixpartsofiosdesigner-vs.png "Sections du concepteur iOS")](introduction-images/8-sixpartsofiosdesigner-vs-large.png#lightbox)
 
 1. **Aire de conception** : espace de travail principal du concepteur iOS. Indiqué dans la zone de document, il permet la construction visuelle des interfaces utilisateur.
 2. **Barre d’outils de contraintes** – permet de basculer entre le mode édition et mode de modification de contrainte, deux façons différentes pour positionner des éléments dans une interface utilisateur de frame.
@@ -211,7 +211,7 @@ La ligne en pointillés bleue dans l’exemple ci-dessus fournit des indications
 
 Un menu contextuel est disponible sur l’aire de conception et dans le **structure du Document**. Ce menu fournit des commandes pour le contrôle sélectionné et son parent, ce qui est utile lorsque vous travaillez avec des vues dans une hiérarchie imbriquée :
 
-[![Le menu contextuel sur l’aire de conception](introduction-images/10-contextmenudesignsurface-vsmac.png "le menu contextuel sur l’aire de conception")](introduction-images/10-contextmenudesignsurface-vsmac-large.png)
+[![Le menu contextuel sur l’aire de conception](introduction-images/10-contextmenudesignsurface-vsmac.png "le menu contextuel sur l’aire de conception")](introduction-images/10-contextmenudesignsurface-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -221,11 +221,11 @@ Un menu contextuel est disponible sur l’aire de conception et dans le **struct
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
  
-[![La barre d’outils de contraintes](introduction-images/11-constraintstoolbar-vsmac.png "la barre d’outils de contraintes")](introduction-images/11-constraintstoolbar-vsmac-large.png)
+[![La barre d’outils de contraintes](introduction-images/11-constraintstoolbar-vsmac.png "la barre d’outils de contraintes")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![La barre d’outils de contraintes](introduction-images/11-constraintstoolbar-vs.png "la barre d’outils de contraintes")](introduction-images/11-constraintstoolbar-vs-large.png)
+[![La barre d’outils de contraintes](introduction-images/11-constraintstoolbar-vs.png "la barre d’outils de contraintes")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -272,11 +272,11 @@ La barre d’outils inférieure fournit un moyen de sélectionner le périphéri
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![La barre d’outils inférieure, permet de sélectionner un périphérique et l’orientation de l’aire de conception](introduction-images/13-bottomtoolbar-vsmac.png "la barre d’outils inférieure, permet de sélectionner un périphérique et l’orientation de l’aire de conception")](introduction-images/13-bottomtoolbar-vsmac-large.png)
+[![La barre d’outils inférieure, permet de sélectionner un périphérique et l’orientation de l’aire de conception](introduction-images/13-bottomtoolbar-vsmac.png "la barre d’outils inférieure, permet de sélectionner un périphérique et l’orientation de l’aire de conception")](introduction-images/13-bottomtoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![La barre d’outils inférieure, permet de sélectionner un périphérique et l’orientation de l’aire de conception](introduction-images/13-bottomtoolbar-vs.png "la barre d’outils inférieure, permet de sélectionner un périphérique et l’orientation de l’aire de conception")](introduction-images/13-bottomtoolbar-vs-large.png)
+[![La barre d’outils inférieure, permet de sélectionner un périphérique et l’orientation de l’aire de conception](introduction-images/13-bottomtoolbar-vs.png "la barre d’outils inférieure, permet de sélectionner un périphérique et l’orientation de l’aire de conception")](introduction-images/13-bottomtoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -286,11 +286,11 @@ Développée, la barre d’outils du bas affiche tous les périphériques, les o
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![La barre d’outils inférieure, développée pour afficher les périphériques et les orientations](introduction-images/14-bottomtoolbarexpanded-vsmac.png "la barre d’outils inférieure, développée pour afficher les périphériques et les orientations")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png)
+[![La barre d’outils inférieure, développée pour afficher les périphériques et les orientations](introduction-images/14-bottomtoolbarexpanded-vsmac.png "la barre d’outils inférieure, développée pour afficher les périphériques et les orientations")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![La barre d’outils inférieure, développée pour afficher les périphériques et les orientations](introduction-images/14-bottomtoolbarexpanded-vs.png "la barre d’outils inférieure, développée pour afficher les périphériques et les orientations")](introduction-images/14-bottomtoolbarexpanded-vs-large.png)
+[![La barre d’outils inférieure, développée pour afficher les périphériques et les orientations](introduction-images/14-bottomtoolbarexpanded-vs.png "la barre d’outils inférieure, développée pour afficher les périphériques et les orientations")](introduction-images/14-bottomtoolbarexpanded-vs-large.png#lightbox)
 
 -----
 
@@ -303,11 +303,11 @@ Lorsque [classes de taille](~/ios/user-interface/storyboards/unified-storyboards
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![La barre d’outils inférieure utilisé pour faire varier d’une interface par la classe de taille](introduction-images/15-edittraitsbutton-vsmac.png "la barre d’outils inférieure utilisé pour faire varier d’une interface par la classe de taille")](introduction-images/15-edittraitsbutton-vsmac-large.png)
+[![La barre d’outils inférieure utilisé pour faire varier d’une interface par la classe de taille](introduction-images/15-edittraitsbutton-vsmac.png "la barre d’outils inférieure utilisé pour faire varier d’une interface par la classe de taille")](introduction-images/15-edittraitsbutton-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![La barre d’outils inférieure utilisé pour faire varier d’une interface par la classe de taille](introduction-images/15-edittraitsbutton-vs.png "la barre d’outils inférieure utilisé pour faire varier d’une interface par la classe de taille")](introduction-images/15-edittraitsbutton-vs-large.png)
+[![La barre d’outils inférieure utilisé pour faire varier d’une interface par la classe de taille](introduction-images/15-edittraitsbutton-vs.png "la barre d’outils inférieure utilisé pour faire varier d’une interface par la classe de taille")](introduction-images/15-edittraitsbutton-vs-large.png#lightbox)
 
 -----
 
@@ -340,7 +340,7 @@ Ces contrôles ajustent le zoom sur l’aire de conception. Ils n’affectent pa
 
 Utilisez le **propriétés remplissage** pour modifier l’identité, les styles visuels, accessibilité et le comportement d’un contrôle. La capture d’écran suivante illustre le **propriétés remplissage** options pour un bouton :
 
-[![La zone de propriétés pour un bouton](introduction-images/17-buttonpropertiespad-vsmac.png "le remplissage de propriétés pour un bouton")](introduction-images/17-buttonpropertiespad-vsmac-large.png)
+[![La zone de propriétés pour un bouton](introduction-images/17-buttonpropertiespad-vsmac.png "le remplissage de propriétés pour un bouton")](introduction-images/17-buttonpropertiespad-vsmac-large.png#lightbox)
 #### <a name="properties-pad-sections"></a>Sections de remplissage de propriétés
 
 Le **propriétés remplissage** contient trois sections :
@@ -351,7 +351,7 @@ Le **propriétés remplissage** contient trois sections :
 
 Utilisez le **fenêtre Propriétés** pour modifier l’identité, les styles visuels, accessibilité et le comportement d’un contrôle. La capture d’écran suivante illustre le **fenêtre Propriétés** options pour un bouton :
 
-[![La fenêtre Propriétés pour un bouton](introduction-images/17-buttonpropertieswindow-vs.png "la fenêtre de propriétés pour un bouton")](introduction-images/17-buttonpropertieswindow-vs-large.png)
+[![La fenêtre Propriétés pour un bouton](introduction-images/17-buttonpropertieswindow-vs.png "la fenêtre de propriétés pour un bouton")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
 
 #### <a name="properties-window-sections"></a>Sections de fenêtre de propriétés
 
@@ -369,9 +369,9 @@ Le **fenêtre Propriétés** contient trois sections :
 
 En plus de la modification visuelle sur l’aire de conception, le concepteur iOS prend en charge la modification des propriétés dans le **propriétés remplissage**. La modification de propriétés disponibles en fonction du contrôle sélectionné, comme illustré dans les captures d’écran ci-dessous :
 
-[![Bouton Propriétés](introduction-images/18a-buttonpropertiespad-vsmac.png "bouton Propriétés")](introduction-images/18a-buttonpropertiespad-vsmac-large.png)
+[![Bouton Propriétés](introduction-images/18a-buttonpropertiespad-vsmac.png "bouton Propriétés")](introduction-images/18a-buttonpropertiespad-vsmac-large.png#lightbox)
 
-[![Afficher les propriétés du contrôleur](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "afficher les propriétés du contrôleur")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png)
+[![Afficher les propriétés du contrôleur](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "afficher les propriétés du contrôleur")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -379,9 +379,9 @@ En plus de la modification visuelle sur l’aire de conception, le concepteur iO
 
 En plus de la modification visuelle sur l’aire de conception, le concepteur iOS prend en charge la modification des propriétés dans le **fenêtre Propriétés**. La modification de propriétés disponibles en fonction du contrôle sélectionné, comme illustré dans les captures d’écran ci-dessous :
 
-[![Bouton Propriétés](introduction-images/18a-buttonpropertieswindow-vs.png "bouton Propriétés")](introduction-images/18a-buttonpropertieswindow-vs-large.png)
+[![Bouton Propriétés](introduction-images/18a-buttonpropertieswindow-vs.png "bouton Propriétés")](introduction-images/18a-buttonpropertieswindow-vs-large.png#lightbox)
 
-[![Afficher les propriétés du contrôleur](introduction-images/18b-viewcontrollerpropertieswindow-vs.png "afficher les propriétés du contrôleur")](introduction-images/18b-viewcontrollerpropertieswindow-vs-large.png)
+[![Afficher les propriétés du contrôleur](introduction-images/18b-viewcontrollerpropertieswindow-vs.png "afficher les propriétés du contrôleur")](introduction-images/18b-viewcontrollerpropertieswindow-vs-large.png#lightbox)
 
 -----
 
@@ -406,13 +406,13 @@ Nombre de propriétés dans le **fenêtre Propriétés** afficher aucune valeur 
 
 Pour spécifier les gestionnaires d’événements personnalisés pour différents événements, utilisez le **événements** onglet de la **propriétés remplissage**. Par exemple, dans la capture d’écran ci-dessous, un `HandleClick` méthode gère du bouton **tactile dans** événement :
 
-[![La liste des propriétés, avec un gestionnaire d’événements pour un bouton](introduction-images/19-buttonpropertiespadevents-vsmac.png "le remplissage de propriétés, avec un gestionnaire d’événements pour un bouton")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png)
+[![La liste des propriétés, avec un gestionnaire d’événements pour un bouton](introduction-images/19-buttonpropertiespadevents-vsmac.png "le remplissage de propriétés, avec un gestionnaire d’événements pour un bouton")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Pour spécifier les gestionnaires d’événements personnalisés pour différents événements, utilisez le **événements** onglet de la **fenêtre Propriétés**. Par exemple, dans la capture d’écran ci-dessous, un `HandleClick` méthode gère du bouton **tactile dans** événement :
 
-[![La fenêtre Propriétés, avec un gestionnaire d’événements pour un bouton](introduction-images/19-buttonpropertieswindowevents-vs.png "la fenêtre Propriétés, avec un gestionnaire d’événements pour un bouton")](introduction-images/19-buttonpropertieswindowevents-vs-large.png)
+[![La fenêtre Propriétés, avec un gestionnaire d’événements pour un bouton](introduction-images/19-buttonpropertieswindowevents-vs.png "la fenêtre Propriétés, avec un gestionnaire d’événements pour un bouton")](introduction-images/19-buttonpropertieswindowevents-vs-large.png#lightbox)
 
 -----
 
@@ -420,13 +420,13 @@ Une fois qu’un gestionnaire d’événements a été spécifié, une méthode 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Une exception non reconnu sélecteur](introduction-images/20-unrecognizedselector-vsmac.png "une exception de sélecteur non reconnu")](introduction-images/20-unrecognizedselector-vsmac-large.png)
+[![Une exception non reconnu sélecteur](introduction-images/20-unrecognizedselector-vsmac.png "une exception de sélecteur non reconnu")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
 Notez que, après un gestionnaire d’événements a été spécifié dans le **propriétés remplissage**, iOS concepteur sera immédiatement ouvrir le fichier de code correspondant et d’offrir à insérer la déclaration de méthode. 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Une exception non reconnu sélecteur](introduction-images/20-unrecognizedselector-vs.png "une exception de sélecteur non reconnu")](introduction-images/20-unrecognizedselector-vs-large.png)
+[![Une exception non reconnu sélecteur](introduction-images/20-unrecognizedselector-vs.png "une exception de sélecteur non reconnu")](introduction-images/20-unrecognizedselector-vs-large.png#lightbox)
 
 -----
 
@@ -438,11 +438,11 @@ Le concepteur iOS peut également afficher la hiérarchie d’une interface de c
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![La structure du Document](introduction-images/21-buttonoutlineview-vsmac.png "la structure du Document")](introduction-images/21-buttonoutlineview-vsmac-large.png)
+[![La structure du Document](introduction-images/21-buttonoutlineview-vsmac.png "la structure du Document")](introduction-images/21-buttonoutlineview-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![La structure du Document](introduction-images/21-buttonoutlineview-vs.png "la structure du Document")](introduction-images/21-buttonoutlineview-vs-large.png)
+[![La structure du Document](introduction-images/21-buttonoutlineview-vs.png "la structure du Document")](introduction-images/21-buttonoutlineview-vs-large.png#lightbox)
 
 -----
 
@@ -454,7 +454,7 @@ Le contrôle sélectionné en mode plan reste synchronisé avec le contrôle sé
 
 Il est possible d’utiliser le concepteur et le générateur Xcode Interface iOS indifféremment. Pour ouvrir un plan conceptuel ou un fichier .xib dans Xcode Interface Builder, cliquez sur le fichier et sélectionnez **ouvrir avec > Xcode Interface Builder**, comme illustré par la capture d’écran ci-dessous :
 
-[![Ouverture d’un storyboard dans Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "ouverture d’un storyboard dans Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png)
+[![Ouverture d’un storyboard dans Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "ouverture d’un storyboard dans Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
 
 Après avoir apporté des modifications dans Xcode Interface Builder, enregistrez le fichier et revenir à Visual Studio pour Mac. Les modifications sont alors synchronisées avec le projet Xamarin.iOS.
 

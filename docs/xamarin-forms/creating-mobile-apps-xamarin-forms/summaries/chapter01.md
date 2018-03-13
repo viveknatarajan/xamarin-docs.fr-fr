@@ -3,14 +3,15 @@ title: "Résumé du chapitre 1. Comment convient-elle Xamarin.Forms ?"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c0f3313fa3c4d1075be7deeb871e303006c533e8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Résumé du chapitre 1. Comment convient-elle Xamarin.Forms ?
 
@@ -44,7 +45,7 @@ Les modèles de solution Xamarin.Forms actuelles ne comprennent pas les modèles
 
 Le bloc d’un programme Xamarin.Forms existe dans une bibliothèque de classes portables ou un SAP. Chacune des plateformes se compose d’un stub de petite application qui appelle la bibliothèque PCL. Xamarin.Forms APIs mapper à des contrôles natifs sur chaque plateforme, afin que chaque plate-forme conserve son apparence caractéristique :
 
-[![Capture d’écran de triple des éléments visuels de plateforme partage](images/ch01fg03-small.png "Xamarin.Forms des contrôles sur chaque plateforme")](images/ch01fg03-large.png "Xamarin.Forms des contrôles sur chaque plateforme")
+[![Capture d’écran de triple des éléments visuels de plateforme partage](images/ch01fg03-small.png "Xamarin.Forms des contrôles sur chaque plateforme")](images/ch01fg03-large.png#lightbox "Xamarin.Forms des contrôles sur chaque plateforme")
 
 Les captures d’écran de gauche à droite montrent un iPhone, un téléphone Android et un téléphone Windows 10 Mobile. Dans chaque écran, la page contient un Xamarin.Forms [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) pour afficher du texte, un [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) pour l’initiation d’actions, un [ `Switch` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) pour choix d’une valeur activé/désactivé et un [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) pour spécifier une valeur dans une plage continue. Les quatre de ces vues sont des enfants d’un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) sur un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/).
 

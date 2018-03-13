@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 28c8ecc77aaeb00eff6f343ad41fed1c653362db
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 78832c396f8968769f3134728cd435555aecbc8f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="checking-battery-status"></a>Vérification de l’état de la batterie
 
@@ -70,7 +70,7 @@ namespace DependencyServiceSample
 Codage de cette interface dans le code partagé permettent à l’application de Xamarin.Forms accéder à l’API de gestion de l’alimentation sur chaque plateforme.
 
 > [!NOTE]
-> **Remarque**: Classes implémentant l’Interface doivent avoir un constructeur sans paramètre pour travailler avec les `DependencyService`. Les constructeurs ne peuvent pas être définis par les interfaces.
+> Classes implémentant l’Interface doivent avoir un constructeur sans paramètre pour travailler avec les `DependencyService`. Les constructeurs ne peuvent pas être définis par les interfaces.
 
 <a name="iOS_Implementation" />
 
@@ -547,4 +547,4 @@ Cette application en cours d’exécution sur les plateformes Windows, Android o
 
 - [DependencyService (sample)](https://developer.xamarin.com/samples/DependencyService)
 - [À l’aide de DependencyService (exemple)](https://developer.xamarin.com/samples/UsingDependencyService/)
-- [Exemples de Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
+- [Exemples Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)

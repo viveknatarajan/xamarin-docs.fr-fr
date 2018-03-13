@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a219a5ed4045bff639f29fd49ef5288139140135
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0eec51a6c95894482a57bfe3bb1f95aec2045af4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessing-remote-data"></a>Accès aux données distantes
 
@@ -52,7 +52,7 @@ La `CatalogService` classe est utilisée pour gérer le processus de récupérat
 
 Figure 10-1 illustre l’interaction des classes qui lisent des données de catalogue à partir du catalogue microservice pour l’affichage par le `CatalogView`.
 
-[![](accessing-remote-data-images/catalogdata.png "La récupération des données à partir du catalogue microservice")](accessing-remote-data-images/catalogdata-large.png "la récupération des données à partir du catalogue microservice")
+[![](accessing-remote-data-images/catalogdata.png "La récupération des données à partir du catalogue microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "la récupération des données à partir du catalogue microservice")
 
 **Figure 10-1**: la récupération des données à partir du catalogue microservice
 
@@ -157,7 +157,7 @@ La `BasketService` classe est utilisée pour gérer la récupération de donnée
 
 Figure 10-2 illustre l’interaction des classes qui envoient les données du panier d’achat affichées par le `BasketView`, à la microservice du panier d’achat.
 
-[![](accessing-remote-data-images/basketdata.png "Envoi de données vers le panier d’achat microservice")](accessing-remote-data-images/basketdata-large.png "envoi de données à le microservice du panier d’achat")
+[![](accessing-remote-data-images/basketdata.png "Envoi de données vers le panier d’achat microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "envoi de données à le microservice du panier d’achat")
 
 **Figure 10-2**: envoi de données à le microservice du panier d’achat
 

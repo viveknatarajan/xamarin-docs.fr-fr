@@ -4,14 +4,15 @@ description: "Charger des bitmaps de différentes sources et les afficher."
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 9045fb2f54407fe8c9071efc5570296bb102f72e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: facdcb6231b77714d6f5d0c7d496db12f75b1d08
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="bitmap-basics"></a>Bitmap des principes de base
 
@@ -204,7 +205,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 La bitmap est étendue aux dimensions du rectangle, c’est pourquoi le singe est étiré horizontalement dans ces captures d’écran :
 
-[![](bitmaps-images/basicbitmaps-small.png "Une capture d’écran triple de la page de base Bitmaps")](bitmaps-images/basicbitmaps-large.png "une capture d’écran triple de la page de base Bitmaps")
+[![](bitmaps-images/basicbitmaps-small.png "Une capture d’écran triple de la page de base Bitmaps")](bitmaps-images/basicbitmaps-large.png#lightbox "une capture d’écran triple de la page de base Bitmaps")
 
 La troisième image & le même #x 2014 ; Vous pouvez obtenir uniquement si vous exécutez le programme et chargez une photo à partir de votre propre bibliothèque d’images & le #x 2014 ; s’affiche également dans un rectangle, mais du rectangle position et la taille sont ajustées pour conserver les proportions de l’image bitmap. Ce calcul est un peu plus complexe, car elle requiert le calcul une échelle en fonction de la taille de la bitmap et le rectangle de destination et centrage du rectangle dans la zone :
 

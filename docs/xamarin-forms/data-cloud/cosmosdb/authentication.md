@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: a16f72e6aaee93aa313aff0aba23887b51acf701
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 10c4a1e3355263722d170dff0a5e2707eb794818
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>L’authentification des utilisateurs avec une base de données du Document Cosmos Azure DB
 
@@ -81,7 +81,7 @@ Le processus d’hébergement de service broker jeton de ressource dans Azure Ap
 
     La capture d’écran suivante illustre cette configuration :
 
-    [![](authentication-images/azure-web-app-settings.png "Paramètres de l’application du Service d’applications Web")](authentication-images/azure-web-app-settings-large.png "paramètres de l’application du Service d’applications Web")
+    [![](authentication-images/azure-web-app-settings.png "Paramètres de l’application du Service d’applications Web")](authentication-images/azure-web-app-settings-large.png#lightbox "paramètres de l’application du Service d’applications Web")
 
 1. Publiez la solution de service Broker pour les jetons de ressource à l’application web de Service d’applications Azure.
 
@@ -117,7 +117,7 @@ Le processus de configuration de l’authentification simple du Service de l’a
 
   La capture d’écran suivante illustre cette configuration :
 
-  [![](authentication-images/app-service-authentication-settings.png "Paramètres d’authentification du Service d’applications Web application")](authentication-images/app-service-authentication-settings-large.png "paramètres d’authentification du Service d’applications Web App")
+  [![](authentication-images/app-service-authentication-settings.png "Paramètres d’authentification du Service d’applications Web application")](authentication-images/app-service-authentication-settings-large.png#lightbox "paramètres d’authentification du Service d’applications Web App")
 
 L’application web du Service d’applications doit également être configurée pour communiquer avec l’application Facebook pour activer le flux d’authentification. Cela peut être accompli en sélectionnant le fournisseur d’identité Facebook et en entrant le **ID d’application** et **Secret d’application** valeurs à partir des paramètres d’application Facebook sur le centre de développement Facebook. Pour plus d’informations, consultez [Facebook d’ajouter des informations à votre application](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 

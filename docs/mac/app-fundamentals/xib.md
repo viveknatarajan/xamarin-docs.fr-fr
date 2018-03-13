@@ -3,16 +3,16 @@ title: fichiers .xib
 description: "Cet article traite de travail avec les fichiers .xib créés dans le Générateur de Xcode Interface pour créer et gérer des interfaces utilisateur pour une application Xamarin.Mac."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 8ca187b86126c9a0f2d9931f63d75e99ac4d2b23
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: 9a4b8ac68da7bcb25ea55906e8fe060b7c7fdee9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xib-files"></a>fichiers .xib
 
@@ -27,7 +27,7 @@ Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous a
 
 Un fichier .xib est utilisé par macOS pour définir graphiquement les éléments d’interface utilisateur de votre application (par exemple, les Menus, Windows, les vues, étiquettes, des champs de texte) qui sont créés et gérés dans le Générateur de Xcode Interface.
 
-[![Un exemple de l’application en cours d’exécution](xib-images/intro01.png "un exemple de l’application en cours d’exécution")](xib-images/intro01-large.png)
+[![Un exemple de l’application en cours d’exécution](xib-images/intro01.png "un exemple de l’application en cours d’exécution")](xib-images/intro01-large.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de l’utilisation de fichiers .xib dans une application Xamarin.Mac. Il est fortement recommandé que vous parcourez les [Hello, Mac](~/mac/get-started/hello-mac.md) de l’article en premier lieu, elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -43,7 +43,7 @@ Dans le cadre de Xcode, Apple a créé un outil appelé générateur d’Interfa
 
 Lorsque vous ouvrez un fichier .xib dans Xcode à partir de Visual Studio pour Mac, il s’ouvre avec un **Project Navigator** sur la gauche, le **hiérarchie de l’Interface** et **éditeur de l’Interface** au milieu et un **propriétés & utilitaires** section à droite :
 
-[![Les composants de l’UI Xcode](xib-images/xcode03.png "les composants de l’UI Xcode")](xib-images/xcode03-large.png)
+[![Les composants de l’UI Xcode](xib-images/xcode03.png "les composants de l’UI Xcode")](xib-images/xcode03-large.png#lightbox)
 
 Nous allons jeter un coup de œil à la fonction de chacun de ces Xcode sections n’a et la façon dont vous les utiliserez pour créer l’interface de votre application Xamarin.Mac.
 
@@ -75,7 +75,7 @@ Initialement cette section est pratiquement vide, cependant si vous sélectionne
 
 Dans la section **Propriétés**, il existe 8 *onglets d’inspecteurs* différents, comme indiqué dans l’illustration suivante :
 
-[![Vue d’ensemble de tous les inspecteurs](xib-images/xcode05.png "une vue d’ensemble de tous les inspecteurs")](xib-images/xcode05-large.png)
+[![Vue d’ensemble de tous les inspecteurs](xib-images/xcode05.png "une vue d’ensemble de tous les inspecteurs")](xib-images/xcode05-large.png#lightbox)
 
 De gauche à droite, ces onglets sont :
 
@@ -123,17 +123,17 @@ Pour passer à l’aide d’un .xib interface utilisateur basée sur, procédez 
 10. Dans le **Solution remplissage**, double-cliquez sur le **Info.plist** fichier à ouvrir pour le modifier.
 11. Sélectionnez `MainMenu` à partir de la **Interface principale** liste déroulante :
 
-    [![Définition du menu principal](xib-images/setup05.png "définition du menu principal")](xib-images/setup05-large.png)
+    [![Définition du menu principal](xib-images/setup05.png "définition du menu principal")](xib-images/setup05-large.png#lightbox)
 12. Dans le **Solution remplissage**, double-cliquez sur le **MainMenu.xib** fichier à ouvrir pour le modifier dans le Générateur de Xcode Interface.
 13. Dans le **bibliothèque inspecteur**, type `object` dans le champ de recherche puis faites glisser une nouvelle **objet** sur l’aire de conception :
 
-    [![Modification du menu principal](xib-images/setup06.png "modification du menu principal")](xib-images/setup06-large.png)
+    [![Modification du menu principal](xib-images/setup06.png "modification du menu principal")](xib-images/setup06-large.png#lightbox)
 14. Dans le **inspecteur d’identité**, entrez `AppDelegate` pour le **classe**:
 
-    [![En sélectionnant le délégué de l’application](xib-images/setup07.png "en sélectionnant le délégué de l’application")](xib-images/setup07-large.png)
+    [![En sélectionnant le délégué de l’application](xib-images/setup07.png "en sélectionnant le délégué de l’application")](xib-images/setup07-large.png#lightbox)
 15. Sélectionnez **propriétaire du fichier** à partir de la **hiérarchie de l’Interface**, basculez vers le **inspecteur de connexion** et faites glisser une ligne à partir du délégué à la `AppDelegate` **Objet** simplement ajouté au projet :
 
-    [![Connectez le délégué de l’application](xib-images/setup08.png "connexion le délégué de l’application")](xib-images/setup08-large.png)
+    [![Connectez le délégué de l’application](xib-images/setup08.png "connexion le délégué de l’application")](xib-images/setup08-large.png#lightbox)
 16. Enregistrer les modifications et revenez à Visual Studio pour Mac.
 
 Toutes ces modifications en place, de modifier le **AppDelegate.cs** de fichier et le rendre l’aspect suivant :
@@ -168,13 +168,13 @@ namespace MacXib
 }
 ```
 
-Maintenant la fenêtre d’application principal est définie dans un .xib (système d’exploitation **X*- **I**interface) ( **B**uilder) inclus automatiquement dans le projet lors de l’ajout d’une fenêtre de fichier Contrôleur. Pour modifier votre conception de windows, dans le **Solution remplissage**, double-cliquez sur le **MainWindow.xib** fichier :
+Maintenant la fenêtre d’application principal est définie dans un **.xib** fichier inclus automatiquement dans le projet lors de l’ajout d’un contrôleur de fenêtre. Pour modifier votre conception de windows, dans le **Solution remplissage**, double-cliquez sur le **MainWindow.xib** fichier :
 
 ![En sélectionnant le fichier MainWindow.xib](xib-images/edit01.png "en sélectionnant le fichier MainWindow.xib")
 
 La conception de la fenêtre s’ouvre dans le Générateur de Xcode Interface :
 
-[![Modification de la MainWindow.xib](xib-images/edit02.png "modifier le MainWindow.xib")](xib-images/edit02-large.png)
+[![Modification de la MainWindow.xib](xib-images/edit02.png "modifier le MainWindow.xib")](xib-images/edit02-large.png#lightbox)
 
 
 ### <a name="standard-window-workflow"></a>Flux de travail de fenêtre standard
@@ -205,22 +205,22 @@ Par exemple :
 
 1. Dans Xcode, faites glisser un **bouton de commande** à partir de la **section Bibliothèque** :
 
-    [![Sélection d’un bouton de la bibliothèque](xib-images/xcode07.png "en sélectionnant un bouton de la bibliothèque")](xib-images/xcode07-large.png)
+    [![Sélection d’un bouton de la bibliothèque](xib-images/xcode07.png "en sélectionnant un bouton de la bibliothèque")](xib-images/xcode07-large.png#lightbox)
 2. Relâchez le bouton sur le **fenêtre** dans les **éditeur de l’Interface**:
 
-    [![Ajout d’un bouton dans la fenêtre](xib-images/xcode08.png "Ajout d’un bouton dans la fenêtre")](xib-images/xcode08-large.png)
+    [![Ajout d’un bouton dans la fenêtre](xib-images/xcode08.png "Ajout d’un bouton dans la fenêtre")](xib-images/xcode08-large.png#lightbox)
 3. Cliquez sur la propriété **Titre** dans l’**inspecteur d’attributs** et remplacez le titre du bouton par `Click Me` :
 
     ![Définir les attributs du bouton](xib-images/xcode09.png "définissant les attributs de bouton")
 4. Faites glisser une **étiquette** à partir de la **section Bibliothèque** :
 
-    [![Sélection d’une étiquette dans la bibliothèque](xib-images/xcode10.png "en sélectionnant une étiquette dans la bibliothèque")](xib-images/xcode10-large.png)
+    [![Sélection d’une étiquette dans la bibliothèque](xib-images/xcode10.png "en sélectionnant une étiquette dans la bibliothèque")](xib-images/xcode10-large.png#lightbox)
 5. Placez l’étiquette sur la **fenêtre** à côté du bouton dans l’**Éditeur d’interface** :
 
-    [![Ajout d’une étiquette à la fenêtre](xib-images/xcode11.png "Ajout d’une étiquette à la fenêtre")](xib-images/xcode11-large.png)
+    [![Ajout d’une étiquette à la fenêtre](xib-images/xcode11.png "Ajout d’une étiquette à la fenêtre")](xib-images/xcode11-large.png#lightbox)
 6. Saisissez la poignée droite de l’étiquette et faites-la glisser jusqu’à ce qu’elle soit près du bord de la fenêtre :
 
-    [![Redimensionnement de l’étiquette](xib-images/xcode12.png "l’étiquette de redimensionnement")](xib-images/xcode12-large.png)
+    [![Redimensionnement de l’étiquette](xib-images/xcode12.png "l’étiquette de redimensionnement")](xib-images/xcode12-large.png#lightbox)
 7. Avec l’étiquette toujours sélectionné dans le **éditeur de l’Interface**, basculez vers le **taille inspecteur**:
 
     ![Sélection de l’inspecteur de taille](xib-images/xcode13.png "en sélectionnant l’inspecteur de taille")
@@ -256,7 +256,7 @@ Effectuez ce qui suit :
 2. Sélectionnez le `NSWindowController` dans l’aire de conception.
 3. Basculez vers le **inspecteur d’identité** afficher et entrez `WindowController` en tant que le **nom de la classe**:
 
-    [![Modification du nom de la classe](xib-images/windowcontroller01.png "modification du nom de classe")](xib-images/windowcontroller01-large.png)
+    [![Modification du nom de la classe](xib-images/windowcontroller01.png "modification du nom de classe")](xib-images/windowcontroller01-large.png#lightbox)
 4. Enregistrez vos modifications et revenir à Visual Studio pour Mac à synchroniser.
 5. A **WindowController.cs** fichier sera ajouté à votre projet dans le **Solution remplissage** dans Visual Studio pour Mac :
 
@@ -264,7 +264,7 @@ Effectuez ce qui suit :
 6. Rouvrez le plan conceptuel dans le Générateur de Xcode Interface.
 7. Le **WindowController.h** fichier sera disponible pour une utilisation :
 
-    [![Le fichier .h correspondant dans Xcode](xib-images/windowcontroller03.png "le fichier .h correspondant dans Xcode")](xib-images/windowcontroller03-large.png)
+    [![Le fichier .h correspondant dans Xcode](xib-images/windowcontroller03.png "le fichier .h correspondant dans Xcode")](xib-images/windowcontroller03-large.png#lightbox)
 
 
 ### <a name="outlets-and-actions"></a>Prises et actions
@@ -278,7 +278,7 @@ Dans Xcode, les sorties et les actions sont ajoutées directement dans le code v
 
 Pour les développeurs Xamarin.Mac, cela signifie que vous faites glisser dans les fichiers stub Objective-C qui correspondent au fichier c# où vous souhaitez créer l’action ou sortie. Visual Studio pour Mac a créé un fichier appelé **MainWindow.h** dans le cadre du projet Xcode shim il généré pour utiliser le Générateur de l’Interface :
 
-[![Un exemple de fichier .h dans Xcode](xib-images/xcode16.png "un exemple de fichier .h dans Xcode")](xib-images/xcode16-large.png)
+[![Un exemple de fichier .h dans Xcode](xib-images/xcode16.png "un exemple de fichier .h dans Xcode")](xib-images/xcode16-large.png#lightbox)
 
 Ce fichier .h de stub reflète le **MainWindow.designer.cs** qui est automatiquement ajouté à un projet Xamarin.Mac lorsqu’un nouveau `NSWindow` est créé. Ce fichier permet de synchroniser les modifications apportées par le constructeur d’Interface et est où nous allons créer vos points de vente et les actions afin que les éléments d’interface utilisateur sont exposés au code c#.
 
@@ -291,22 +291,22 @@ Effectuez ce qui suit :
 
 1. Dans Xcode, dans le coin supérieur tout à droite de l’écran, cliquez sur le bouton **Double Circle** (Cercle double) pour ouvrir l’**Assistant Editor** (Éditeur d’Assistant) :
 
-    [![Sélection de l’éditeur de l’Assistant](xib-images/outlet01.png "en sélectionnant l’éditeur de l’Assistant")](xib-images/outlet01-large.png)
+    [![Sélection de l’éditeur de l’Assistant](xib-images/outlet01.png "en sélectionnant l’éditeur de l’Assistant")](xib-images/outlet01-large.png#lightbox)
 2. Xcode passe en mode fractionné avec l’**Éditeur d’interface** d’un côté et un **Éditeur de code** de l’autre.
 3. Notez que Xcode a sélectionnée automatiquement le **MainWindowController.m** de fichiers dans le **éditeur de Code**, qui est incorrect. Si vous vous souvenez de notre discussion sur ce que sont prises et les actions ci-dessus, nous devons disposer le **MainWindow.h** sélectionné.
 4. En haut de la **éditeur de Code** cliquez sur le **lien automatique** et sélectionnez le **MainWindow.h** fichier :
 
-    [![En sélectionnant le fichier .h correct](xib-images/outlet02.png "en sélectionnant le fichier .h correct")](xib-images/outlet02-large.png)
+    [![En sélectionnant le fichier .h correct](xib-images/outlet02.png "en sélectionnant le fichier .h correct")](xib-images/outlet02-large.png#lightbox)
 5. Le fichier approprié doit maintenant être sélectionné pour Xcode :
 
-    [![Le fichier approprié sélectionné](xib-images/outlet03.png "le fichier approprié est sélectionné")](xib-images/outlet03-large.png)
+    [![Le fichier approprié sélectionné](xib-images/outlet03.png "le fichier approprié est sélectionné")](xib-images/outlet03-large.png#lightbox)
 6. **La dernière étape était très importante !** Si vous n’avez pas le fichier approprié est sélectionné, vous ne pourrez pas créer prises et actions ou qu’ils seront exposées à la classe incorrecte dans c# !
 7. Dans le **éditeur de l’Interface**, maintenez enfoncée la touche la **contrôle** touche du clavier et cliquez et faites glisser l’étiquette créée précédemment sur l’éditeur de code sous le `@interface MainWindow : NSWindow { }` code :
 
-    [![Déplacement pour créer un nouveau magasin](xib-images/outlet04.png "déplacement pour créer un nouveau magasin")](xib-images/outlet04-large.png)
+    [![Déplacement pour créer un nouveau magasin](xib-images/outlet04.png "déplacement pour créer un nouveau magasin")](xib-images/outlet04-large.png#lightbox)
 8. Une boîte de dialogue s’affiche. Laissez le **connexion** valeur prise et entrez `ClickedLabel` pour le **nom**:
 
-    [![Définition des propriétés de sortie](xib-images/outlet05.png "définissant les propriétés de sortie")](xib-images/outlet05-large.png)
+    [![Définition des propriétés de sortie](xib-images/outlet05.png "définissant les propriétés de sortie")](xib-images/outlet05-large.png#lightbox)
 9. Cliquez sur le **Connect** bouton permettant de créer la sortie :
 
     ![La sortie terminée](xib-images/outlet06.png "la sortie terminée")
@@ -322,13 +322,13 @@ Effectuez ce qui suit :
 1. Assurez-vous que nous sommes toujours dans le **Assistant éditeur** et **MainWindow.h** fichier est visible dans le **éditeur de Code**.
 2. Dans le **éditeur de l’Interface**, maintenez enfoncée la touche la **contrôle** touche du clavier et cliquez et faites glisser le bouton créée précédemment sur l’éditeur de code sous le `@property (assign) IBOutlet NSTextField *ClickedLabel;` code :
 
-    [![Pour créer une Action de déplacement](xib-images/action01.png "déplacement pour créer une Action")](xib-images/action01-large.png)
+    [![Pour créer une Action de déplacement](xib-images/action01.png "déplacement pour créer une Action")](xib-images/action01-large.png#lightbox)
 3. Modifier la **connexion** type d’action :
 
-    [![Sélectionnez un type d’Action](xib-images/action02.png "sélectionner un type d’Action")](xib-images/action02-large.png)
+    [![Sélectionnez un type d’Action](xib-images/action02.png "sélectionner un type d’Action")](xib-images/action02-large.png#lightbox)
 4. Entrez `ClickedButton` comme **Nom** :
 
-    [![Configuration de l’Action](xib-images/action03.png "configuration de l’Action")](xib-images/action03-large.png)
+    [![Configuration de l’Action](xib-images/action03.png "configuration de l’Action")](xib-images/action03-large.png#lightbox)
 5. Cliquez sur le **Connect** bouton permettant de créer l’action :
 
     ![L’Action terminée](xib-images/action04.png "l’Action terminée")
@@ -341,7 +341,7 @@ Avec votre Interface utilisateur accès câblé et exposée au code c#, revenez 
 
 Avec votre Interface utilisateur créée et ses éléments d’interface utilisateur exposées au code via les sorties et les actions, vous êtes prêt à écrire le code pour faire de votre programme. Par exemple, ouvrez le **MainWindow.cs** fichier pour le modifier en double-cliquant dessus dans le **Solution remplissage**:
 
-[![Le fichier MainWindow.cs](xib-images/code01.png "MainWindow.cs le fichier")](xib-images/code01-large.png)
+[![Le fichier MainWindow.cs](xib-images/code01.png "MainWindow.cs le fichier")](xib-images/code01-large.png#lightbox)
 
 Ajoutez le code suivant à la `MainWindow` classe fonctionne avec la sortie d’exemple que vous avez créé précédemment :
 
@@ -407,7 +407,7 @@ Lorsque vous basculez vers Visual Studio pour Mac à partir de Xcode, toutes les
 
 Si vous sélectionnez le **MainWindow.designer.cs** dans les **Solution remplissage** vous serez en mesure de voir comment notre prise et l’action ont été associés dans notre code c# :
 
-[![Synchronisation des modifications avec Xcode](xib-images/sync01.png "synchronisation des modifications avec Xcode")](xib-images/sync01-large.png)
+[![Synchronisation des modifications avec Xcode](xib-images/sync01.png "synchronisation des modifications avec Xcode")](xib-images/sync01-large.png#lightbox)
 
 Notez comment les deux définitions dans le **MainWindow.designer.cs** fichier :
 
@@ -447,10 +447,10 @@ Pour ajouter une nouvelle fenêtre, procédez comme suit :
 3. Entrez `PreferencesWindow` comme **Nom**, puis cliquez sur le bouton **Nouveau**.
 4. Double-cliquez sur le **PreferencesWindow.xib** fichier à ouvrir pour le modifier dans le Générateur de Interface :
 
-    [![Modification de la fenêtre dans Xcode](xib-images/new02.png "modification de la fenêtre dans Xcode")](xib-images/new02-large.png)
+    [![Modification de la fenêtre dans Xcode](xib-images/new02.png "modification de la fenêtre dans Xcode")](xib-images/new02-large.png#lightbox)
 5. Concevoir votre interface :
 
-    [![Définition de la disposition de windows](xib-images/new03.png "pour concevoir la disposition de windows")](xib-images/new03-large.png)
+    [![Définition de la disposition de windows](xib-images/new03.png "pour concevoir la disposition de windows")](xib-images/new03-large.png#lightbox)
 6. Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
 Ajoutez le code suivant à **AppDelegate.cs** pour afficher votre nouvelle fenêtre :
@@ -488,7 +488,7 @@ Pour ajouter une nouvelle vue, procédez comme suit :
 3. Entrez `SubviewTable` comme **Nom**, puis cliquez sur le bouton **Nouveau**.
 4. Double-cliquez sur le **SubviewTable.xib** fichier à ouvrir pour le modifier dans le Générateur de Interface et concevoir l’Interface utilisateur :
 
-    [![Conception de la nouvelle vue dans Xcode](xib-images/view02.png "conception de la nouvelle vue dans Xcode")](xib-images/view02-large.png)
+    [![Conception de la nouvelle vue dans Xcode](xib-images/view02.png "conception de la nouvelle vue dans Xcode")](xib-images/view02-large.png#lightbox)
 5. Rattachez toutes les actions requises et les sorties.
 6. Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
@@ -529,7 +529,7 @@ public enum SubviewType
 
 Modifiez le fichier .xib de la fenêtre qui consomme de la vue et de l’afficher. Ajouter un **affichage personnalisé** qui agit comme conteneur pour la vue une fois qu’il est chargé en mémoire par le code c# et l’exposer à une sortie appelé `ViewContainer`:
 
-[![Création de la sortie requise](xib-images/view03.png "création de la sortie requise")](xib-images/view03-large.png)
+[![Création de la sortie requise](xib-images/view03.png "création de la sortie requise")](xib-images/view03-large.png#lightbox)
 
 Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
@@ -577,7 +577,7 @@ DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 
 Cela crée une instance du contrôleur d’affichage pour la nouvelle vue à afficher, définit son type (comme spécifié par l’énumération ajoutée au projet) et utilise le `DisplaySubview` méthode ajoutée à la classe de la fenêtre pour afficher la vue. Exemple :
 
-[![L’exemple d’application en cours d’exécution](xib-images/view04.png "l’exemple d’application en cours d’exécution")](xib-images/view04-large.png)
+[![L’exemple d’application en cours d’exécution](xib-images/view04.png "l’exemple d’application en cours d’exécution")](xib-images/view04-large.png#lightbox)
 
 Pour plus d’informations sur l’utilisation de Windows dans une application Xamarin.Mac, veuillez consulter notre [Windows](~/mac/user-interface/window.md) et [boîtes de dialogue](~/mac/user-interface/dialog.md) documentation.
 

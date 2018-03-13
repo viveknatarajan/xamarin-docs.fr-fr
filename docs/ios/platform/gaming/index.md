@@ -3,16 +3,16 @@ title: "API de jeux d’iOS"
 description: "Cet article décrit les nouvelles améliorations de jeu fournies par iOS 9 qui peut être utilisé pour améliorer les graphiques de votre jeu de Xamarin.iOS et les fonctions audio."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6c735c68ee61032d8dfe3a74e6858bc058c6fa47
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d0a66d4cfdb3050c7ad791d24e24d6917a031ee1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-gaming-apis"></a>API de jeux d’iOS
 
@@ -21,7 +21,7 @@ _Cet article décrit les nouvelles améliorations de jeu fournies par iOS 9 qui 
 Apple a apporté plusieurs améliorations à l’API de jeux dans iOS 9 technologiques qui le rendent plus facile à implémenter des graphismes des jeux et audio dans une application Xamarin.iOS.
 Ceux-ci incluent les deux facilité de développement par le biais des infrastructures de haut niveau et la puissance de GPU de l’appareil iOS pour l’amélioration de la vitesse et des fonctionnalités de graphique.
 
-[ ![](images/flocking01.png "Un exemple d’une application en cours d’exécution flocage")](images/flocking01.png)
+[![](images/flocking01.png "Un exemple d’une application en cours d’exécution flocage")](images/flocking01.png#lightbox)
 
 Cela inclut GameplayKit, ReplayKit, e/s du modèle, MetalKit et complète les nuanceurs de performances, ainsi que de nouvelles fonctionnalités améliorées de métal, SceneKit et SpriteKit.
 
@@ -56,7 +56,7 @@ Par exemple, une recherche via un labyrinthe ou un caractère 3D via un terrain 
 
 Prenez en compte la carte suivante :
 
-[ ![](images/gkpathfindpath.png "Un exemple de mappage pathfinding")](images/gkpathfindpath.png)
+[![](images/gkpathfindpath.png "Un exemple de mappage pathfinding")](images/gkpathfindpath.png#lightbox)
 
 À l’aide de pathfinding ce code c# trouverez un moyen de la carte :
 
@@ -367,7 +367,7 @@ public override void ViewWillLayoutSubviews ()
 
 Lorsque exécuté, le peu animé _« Boids »_ sera troupeau autour des drainages de notre doigt :
 
-[ ![](images/flocking01.png "Le peu animé Boids sera troupeau autour des drainages de doigt")](images/flocking01.png)
+[![](images/flocking01.png "Le peu animé Boids sera troupeau autour des drainages de doigt")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>Autres exemples d’Apple
 

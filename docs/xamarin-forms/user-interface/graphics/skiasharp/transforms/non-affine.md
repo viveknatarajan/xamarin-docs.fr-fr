@@ -4,14 +4,15 @@ description: "Créer une perspective et effets conique avec la troisième colonn
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 3fda8524b824042aa4aba07853da2801baf47027
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2e2e83404bc93bd07885008b868c51eba2ff7140
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="non-affine-transforms"></a>Transformations non affines
 
@@ -226,7 +227,7 @@ public partial class TestPerspectivePage : ContentPage
 
 Voici quelques exemples d’images :
 
-[![](non-affine-images/testperspective-small.png "Capture d’écran de triple de la page de la Perspective Test")](non-affine-images/testperspective-large.png "Triple capture d’écran de la page de la Perspective Test")
+[![](non-affine-images/testperspective-small.png "Capture d’écran de triple de la page de la Perspective Test")](non-affine-images/testperspective-large.png#lightbox "Triple capture d’écran de la page de la Perspective Test")
 
 Lorsque vous testez les curseurs, vous trouverez que les valeurs au-delà de 0.0066 ou en dessous –0.0066 entraînent l’image deviennent subitement détaché et incohérents. L’image bitmap en cours de transformation est le carré de 300 pixels. Il est transformé par rapport à son centre, de sorte que les coordonnées de l’image bitmap est comprise entre –150 et 150. N’oubliez pas que la valeur de z » est :
 
@@ -390,13 +391,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Voici quelques exemples :
 
-[![](non-affine-images/tapertransform-small.png "Capture d’écran de triple de la page Transformer conique")](non-affine-images/tapertransform-large.png "Triple capture d’écran de la page Transformer conique")
+[![](non-affine-images/tapertransform-small.png "Capture d’écran de triple de la page Transformer conique")](non-affine-images/tapertransform-large.png#lightbox "Triple capture d’écran de la page Transformer conique")
 
 Un autre type de transformations affines non généralisés est rotation 3D, qui est présentée dans l’article suivant, [Rotations 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
 
 La transformation non affines peut transformer un rectangle en n’importe quel quadrilatère convexe. Cela est illustré par le **afficher la matrice Non affines** page. Il est très similaire à la **afficher une matrice Affine** page à partir de la [matrice transforme](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) article, sauf qu’elle a une quatrième `TouchPoint` objet pour manipuler le quatrième coin de l’image bitmap :
 
-[![](non-affine-images/shownonaffinematrix-small.png "Capture d’écran de triple de la page Afficher la matrice Non affines")](non-affine-images/shownonaffinematrix-large.png "Triple capture d’écran de la page Afficher la matrice Non affines")
+[![](non-affine-images/shownonaffinematrix-small.png "Capture d’écran de triple de la page Afficher la matrice Non affines")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple capture d’écran de la page Afficher la matrice Non affines")
 
 Tant que vous ne tentez pas apporter un angle de l’intérieur de l’un des angles de l’image bitmap supérieur à 180 degrés ou deux côtés coupent, le programme calcule correctement la transformation à l’aide de cette méthode à partir de la [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) classe :
 

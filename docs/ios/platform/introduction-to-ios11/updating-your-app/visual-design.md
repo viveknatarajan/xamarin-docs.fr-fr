@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2904a7da73f5bf6e8960f65239d1f8dc52ab1aba
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d66d8cd722aa9a7b6fe27db3f6128ee24309a1de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="visual-design-updates"></a>Mises à jour de la conception visuelle
 
@@ -51,7 +51,7 @@ iOS 11 rend plus facile d’ajouter un contrôleur recherche directement à la b
 NavigationItem.SearchController = searchController;
 ```
 
-[![Titre de navigation de grande taille avec barre de recherche](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png)
+[![Titre de navigation de grande taille avec barre de recherche](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
 Selon les fonctionnalités de votre application, vous pouvez ou ne voulez ne peut-être pas la barre de recherche pour masquer lorsqu’un utilisateur fait défiler une liste. Vous pouvez modifier ce paramètre à l’aide de la `HidesSearchBarWhenScrolling` propriété.
 
@@ -75,7 +75,7 @@ iOS 7 [introduite](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `t
 
 La zone de sans échec est une nouvelle façon de réfléchir à l’espace visible de votre application et comment ajouter des contraintes entre une vue et une vue super. Par exemple, considérez l’illustration suivante :
 
-[![Visual Studio en haut de la zone sécurisée et le guide de mise en page bas](visual-design-images/image10-sml.png)](visual-design-images/image10.png)
+[![Visual Studio en haut de la zone sécurisée et le guide de mise en page bas](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
 Précédemment, si vous avez ajouté une vue et souhaitiez qu’il soit visible dans la zone verte ci-dessus, vous devez contraindre à la _bas_ de la `TopLayoutGuide` et _haut_ de la `BottomLayoutGuide`. Dans iOS 11, vous devez à la place contraindre à la _haut_ et _bas_ de la zone de sans échec. Voici un exemple :
 

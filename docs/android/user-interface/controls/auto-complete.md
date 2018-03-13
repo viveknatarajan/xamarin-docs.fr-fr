@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 857cafa475f24357b39da0640eb81c37f5a8634c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4118881272bb605607d528007064ada561cf7fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-complete"></a>Saisie semi-automatique
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -43,7 +42,6 @@ Dans ce didacticiel, vous allez créer un [ `AutoCompleteTextView` ](https://dev
 
 Le [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) est une étiquette qui présente la [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget.
 
-<a name="tutorial" />
 
 ## <a name="tutorial"></a>Didacticiel
 
@@ -156,10 +154,9 @@ Voici la liste de suggestions qui vous sera fournie dans une liste déroulante l
 
 Exécutez l'application. Lorsque vous tapez, vous devez voir quelque chose comme ceci :
 
-[![Saisie semi-automatique capture d’écran répertoriant les noms qui contiennent « AC »](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png)
+[![Saisie semi-automatique capture d’écran répertoriant les noms qui contiennent « AC »](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 
-<a name="More_Information" />
 
 ## <a name="more-information"></a>Informations complémentaires
 
@@ -187,7 +184,6 @@ string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
 
-<a name="References" />
 
 ### <a name="references"></a>Références
 

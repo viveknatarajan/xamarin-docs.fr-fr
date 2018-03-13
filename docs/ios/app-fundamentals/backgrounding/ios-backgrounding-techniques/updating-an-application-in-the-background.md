@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d878f922b74ea3e95fd0e1ebce9e7445063a2946
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>Mise à jour d’une Application en arrière-plan
 
@@ -44,7 +44,7 @@ Dans iOS 6, une application de saisie de premier plan nécessaire des temps de c
 
 Pour implémenter l’extraction en arrière-plan, modifier *Info.plist* et vérifiez la **activer les Modes d’arrière-plan** et **extraction en arrière-plan** cases à cocher :
 
- [ ![](updating-an-application-in-the-background-images/fetch.png "Modifier le fichier Info.plist et cochez les cases à cocher Activer les Modes d’arrière-plan et l’extraction de l’arrière-plan")](updating-an-application-in-the-background-images/fetch.png)
+ [![](updating-an-application-in-the-background-images/fetch.png "Modifier le fichier Info.plist et cochez les cases à cocher Activer les Modes d’arrière-plan et l’extraction de l’arrière-plan")](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
 Ensuite, dans le `AppDelegate`, remplacer le `FinishedLaunching` méthode pour définir l’intervalle de récupération minimale. Dans cet exemple, nous laissons le système d’exploitation en déterminer la fréquence à laquelle récupérer le nouveau contenu :
 
@@ -106,7 +106,7 @@ Dans iOS 6, les notifications push un entrant indique au système pour avertir l
 
 Pour implémenter des notifications à distance, vous devez modifier *Info.plist* et vérifiez la **activer les Modes d’arrière-plan** et **des notifications à distance** cases à cocher :
 
- [ ![](updating-an-application-in-the-background-images/remote.png "Mode d’arrière-plan définie pour activer les Modes d’arrière-plan et des notifications à distance")](updating-an-application-in-the-background-images/remote.png)
+ [![](updating-an-application-in-the-background-images/remote.png "Mode d’arrière-plan définie pour activer les Modes d’arrière-plan et des notifications à distance")](updating-an-application-in-the-background-images/remote.png#lightbox)
 
 Ensuite, définissez le `content-available` indicateur sur les notifications push lui-même à 1. Cela permet à l’application de savoir à extraire de nouveau contenu avant l’affichage de l’alerte :
 
@@ -153,7 +153,7 @@ La différence majeure entre normales et en mode silencieux les notifications à
 
 Toutefois, APNs permettra de notifications en mode silencieux « phagocytent » à côté d’une Notification à distance normal ou d’une réponse keep-alive. Des notifications régulières n’étant pas limité de taux, elles peuvent servir à pousser stockée des notifications en mode silencieux à partir de l’APNs sur le périphérique, comme illustré dans le diagramme suivant :
 
- [ ![](updating-an-application-in-the-background-images/silent.png "Des notifications régulières peuvent être utilisées pour envoyer des notifications silencieuses stockées à partir de l’APNs sur l’appareil, comme illustré dans ce schéma.")](updating-an-application-in-the-background-images/silent.png)
+ [![](updating-an-application-in-the-background-images/silent.png "Des notifications régulières peuvent être utilisées pour envoyer des notifications silencieuses stockées à partir de l’APNs sur l’appareil, comme illustré dans ce schéma.")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
 > **Remarque**: Apple encourage les développeurs pour envoyer des notifications push en mode silencieux, chaque fois que l’application requiert et que le certificat APNs permettent de planifier leur remise.

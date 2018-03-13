@@ -7,19 +7,17 @@ ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
-ms.openlocfilehash: cf2211a572d45b7c29018d00f36cb8408484483f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbar"></a>ToolBar
 
 _La barre d’outils est un composant de barre d’action qui offre plus de souplesse que la barre d’action par défaut : elle peut être placée n’importe où dans l’application, sa taille peut être modifiée et il peut utiliser un jeu de couleurs différent de thème de l’application. En outre, chaque écran de l’application peut avoir plusieurs barres d’outils._
 
-
-<a name="overview" />
  
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -27,7 +25,7 @@ Un élément de conception clés de toute activité Android est un *barre d’ac
 
 Le `Toolbar` widget (introduite dans Android 5.0 Lollipop) peut être considéré comme une généralisation de l’interface de barre d’action &ndash; elle est destinée à remplacer la barre d’action. Le `Toolbar` peuvent être utilisées partout dans une disposition de l’application, et il est beaucoup plus personnalisable que la barre d’action. La capture d’écran suivante illustre le personnalisé `Toolbar` exemple créé dans ce guide : 
 
-[![Capture d’écran de l’exemple d’une barre d’outils avec modifier, enregistrer et éléments de menu de dépassement de capacité](images/01-toolbar-sml.png)](images/01-toolbar.png)
+[![Capture d’écran de l’exemple d’une barre d’outils avec modifier, enregistrer et éléments de menu de dépassement de capacité](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
 
 Il existe des différences importantes entre le `Toolbar` et la barre d’action : 
 
@@ -72,7 +70,6 @@ Ce guide couvre les plus couramment utilisées `Toolbar` scénarios :
 -   À l’aide de la **bibliothèque de prise en charge Android v7 AppCompat** bibliothèque (appelé *AppCompat* dans le reste de ce guide) pour déployer `Toolbar` dans les versions antérieures d’Android. 
 
  
-<a name="requirements" />
  
 ## <a name="requirements"></a>Configuration requise
 

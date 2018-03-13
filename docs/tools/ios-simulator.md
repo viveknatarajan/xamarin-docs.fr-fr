@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 707ba5874c939fbd25f4e25a7cefd3dc5fc75131
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Distance iOS Simulator (pour Windows)
 
 _Tester et déboguer des applications iOS entièrement dans Visual Studio sous Windows_
 
-[ ![](ios-simulator-images/hero-sml.png "Simulateur iOS s’exécutant sous Windows")](ios-simulator-images/hero.png)
+[![](ios-simulator-images/hero-sml.png "Simulateur iOS s’exécutant sous Windows")](ios-simulator-images/hero.png#lightbox)
 
 ## <a name="download-and-install"></a>Téléchargez et installez
 
@@ -36,7 +36,7 @@ Pour utiliser le simulateur iOS à distance :
 
 Vous pouvez désactiver le simulateur iOS à distance à partir de **Outils > Options > Xamarin > Paramètres iOS** en désactivant la case à **distant simulateur Windows** indiqué ici :
 
-[ ![](ios-simulator-images/options-sml.png "case à cocher pour utiliser le simulateur")](ios-simulator-images/options.png)
+[![](ios-simulator-images/options-sml.png "case à cocher pour utiliser le simulateur")](ios-simulator-images/options.png#lightbox)
 
 Le simulateur iOS ouvrirez ensuite l’ordinateur Mac connecté. Activez cette option pour activer le simulateur iOS à distance.
 
@@ -54,14 +54,14 @@ La barre d’outils inclut un nombre de boutons permettant d’interagir avec le
 - [**Paramètres** ](#settings) – configurer le clavier et l’emplacement.
  - Autres [ **options** ](#options) – disponible telles que de faire pivoter, secouer une variété d’options de simulateur, ou appeler d’autres États dans le simulateur. Lorsque certaines options sont masquées, ils sont accessibles à partir de l’icône de points de suspension qui apparaît dans la barre d’outils, ou en cliquant sur la fenêtre.
 
-    [ ![](ios-simulator-images/maps-app-sml.png "Simulateur iOS mappe l’exemple")](ios-simulator-images/maps-app.png)
+    [![](ios-simulator-images/maps-app-sml.png "Simulateur iOS mappe l’exemple")](ios-simulator-images/maps-app.png#lightbox)
 
 
 ### <a name="settings"></a>Paramètres
 
 L’icône de « engrenage » ouvre le **paramètres** fenêtre :
 
-[ ![](ios-simulator-images/settings-sml.png "paramètres du simulateur iOS")](ios-simulator-images/settings.png)
+[![](ios-simulator-images/settings-sml.png "paramètres du simulateur iOS")](ios-simulator-images/settings.png#lightbox)
 
 Cela vous permet à activer le clavier physique sur le simulateur, choisissez l’emplacement est signalée à l’appareil (y compris un emplacement statique ou autres options d’emplacement de déplacement).
 
@@ -71,7 +71,7 @@ Cela vous permet à activer le clavier physique sur le simulateur, choisissez l�
 
 Cliquez n’importe où dans la fenêtre du simulateur pour afficher toutes les options disponibles dans le simulateur, telles que la rotation, déclencher un secouez et redémarrer le simulateur :
 
-[ ![](ios-simulator-images/more-sml.png "paramètres supplémentaires du simulateur iOS")](ios-simulator-images/more.png)
+[![](ios-simulator-images/more-sml.png "paramètres supplémentaires du simulateur iOS")](ios-simulator-images/more.png#lightbox)
 
 ### <a name="touchscreen-support"></a>Prise en charge de l’écran tactile
 

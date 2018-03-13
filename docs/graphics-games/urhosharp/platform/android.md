@@ -1,17 +1,17 @@
 ---
 title: Prise en charge UrhoSharp Android
-description: "Fonctionnalités et le programme d’installation spécifique android"
+description: "Le programme d’installation spécifique Android et fonctionnalités UrhoSharp."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 5100fd4ac573021e088a88446f5f6559d49c4972
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f99b8d2d9f779bc0cf14d76c110d9769ec49ad53
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="urhosharp-android-support"></a>Prise en charge UrhoSharp Android
 
@@ -21,11 +21,11 @@ Bien que Urho est une bibliothèque de classes portable et permet la même API �
 
 Dans les pages suivantes, supposons que `MyGame` est une sous-classe de la `Application` classe.
 
-# <a name="architectures"></a>Architectures
+## <a name="architectures"></a>Architectures
 
 **Architectures prises en charge**: x86, armeabi, armeabi-v7a
 
-# <a name="create-a-project"></a>Créer un projet
+## <a name="create-a-project"></a>Créer un projet
 
 Créer un projet Android et ajoutez le package NuGet de UrhoSharp.
 
@@ -33,7 +33,7 @@ Ajouter des données qui contient vos éléments multimédias à la **actifs** a
 
 ![Le programme d’installation de projet](android-images/image-3.png "ajouter des données qui contient les éléments multimédias dans le répertoire de ressources")
 
-# <a name="configure-and-launching-urho"></a>Configurer et de lancer Urho
+## <a name="configure-and-launching-urho"></a>Configurer et de lancer Urho
 
 Ajouter à l’aide des instructions pour la `Urho` et `Urho.Android` espaces de noms, puis ajoutez ce code pour l’initialisation Urho, ainsi que le lancement de votre application.
 
@@ -45,7 +45,7 @@ UrhoSurface.RunInActivity<MyGame>();
 
 Une activité en plein écran s’ouvre avec le jeu comme un contenu.
 
-# <a name="custom-embedding-of-urho"></a>Incorporation personnalisé de Urho
+## <a name="custom-embedding-of-urho"></a>Incorporation personnalisé de Urho
 
 Vous peut également avoir Urho prendre sur l’écran de l’ensemble de l’application, et pour l’utiliser en tant que composant de votre application, vous pouvez créer un `SurfaceView` via :
 

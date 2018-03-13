@@ -7,18 +7,16 @@ ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
-ms.openlocfilehash: 5f583fa78674b1b07d362e5171877e4ec3c861a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 012f563dcdaa70e33d641a4d8fb52df1622c260a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="setup-and-installation"></a>Installation et configuration
 
 _Cet article assiste les étapes d’installation et les détails de configuration requises pour préparer votre ordinateur et les périphériques pour le développement d’usure Android. À la fin de cet article, vous devez posséder un Xamarin.Android usure installation intégrée dans Visual Studio pour Mac et/ou de Microsoft Visual Studio, et vous serez prêt à commencer à créer votre première application Xamarin.Android usure._
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -35,9 +33,7 @@ Les éléments suivants requis pour créer des applications en fonction de Xamar
 Vous pouvez continuer à utiliser [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si vous êtes le développement en particulier pour les API de niveau 23 ou une version antérieure.
 
 > [!IMPORTANT]
-> **Remarque :** Xamarin.Android ne prend pas en charge JDK 9.
-
-<a name="installation" />
+> Xamarin.Android ne prend pas en charge JDK 9.
 
 ## <a name="installation"></a>Installation
 
@@ -49,7 +45,6 @@ Après avoir installé Xamarin.Android, procédez comme suit afin que vous êtes
 
 Ces étapes sont décrites dans les sections suivantes.
 
-<a name="sdktools" />
 
 ### <a name="install-android-sdk-and-tools"></a>Installer les outils et Kit de développement logiciel Android 
 

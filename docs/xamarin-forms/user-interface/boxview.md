@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 78ccb117e621b89d85e701b2ea027115f8681dc9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4d50ea5c3db0f5a141f1b48cf0a948c10b63f7f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="boxview"></a>BoxView
 
@@ -68,7 +68,7 @@ Le [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxV
 
 Voici le résultat :
 
-[![Base BoxView](boxview-images/basicboxview-small.png "BoxView base")](boxview-images/basicboxview-large.png "BasicBoxView")
+[![Base BoxView](boxview-images/basicboxview-small.png "BoxView base")](boxview-images/basicboxview-large.png#lightbox "BasicBoxView")
 
 Si le `VerticalOptions` et `HorizontalOptions` propriétés sont supprimées de la `BoxView` de balise ou utilisent `Fill`, le `BoxView` est limitée par la taille de la page et se développe pour remplir la page.
 
@@ -113,7 +113,7 @@ Vous pouvez utiliser la `BoxView` pour ajouter des décorations simples sur vos 
 
 Le balisage qui suit les enfants de le `StackLayout`. Ce balisage est composé de plusieurs types de décoratif `BoxView` éléments utilisés avec la `Label` élément :
 
-[![Décoration de texte](boxview-images/textdecoration-small.png "décoration de texte")](boxview-images/textdecoration-large.png "décoration de texte")
+[![Décoration de texte](boxview-images/textdecoration-small.png "décoration de texte")](boxview-images/textdecoration-large.png#lightbox "décoration de texte")
 
 L’en-tête élégant en haut de la page est obtenue avec un `AbsoluteLayout` dont les enfants sont les quatre `BoxView` éléments et un `Label`, tous les des qui sont affectés à des emplacements spécifiques et des tailles de :
 
@@ -168,7 +168,7 @@ Enfin, vous pouvez dessiner une ligne verticale sur le côté « un » d’un 
 
 Le `BoxView` est pratique pour l’affichage des couleurs. Ce programme utilise une `ListView` pour répertorier tous les champs statiques publics en lecture seule de la Xamarin.Forms `Color` structure :
 
-[![Couleurs de ListView](boxview-images/listviewcolors-small.png "ListView couleurs")](boxview-images/listviewcolors-large.png "les couleurs de ListView")
+[![Couleurs de ListView](boxview-images/listviewcolors-small.png "ListView couleurs")](boxview-images/listviewcolors-large.png#lightbox "les couleurs de ListView")
 
 Le [ **ListViewColors** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/ListViewColors/) programme inclut une classe nommée `NamedColor`. Le constructeur statique utilise la réflexion pour accéder à tous les champs de la `Color` de la structure et de créer un `NamedColor` objet pour chacun d’eux. Ils sont stockés dans la méthode statique `All` propriété :
 
@@ -350,7 +350,7 @@ class LifeCell : BoxView
 
 Le **GameOfLife** programme inclut également un `LifeGrid` classe qui encapsule une grande partie de la logique du jeu, et un `MainPage` classe qui gère des éléments visuels du programme. Ceux-ci incluent un segment de recouvrement qui décrit les règles du jeu. Voici le programme en action indiquant quelques centaines `LifeCell` objets de la page :
 
-[![Jeu de durée de vie](boxview-images/gameoflife-small.png "jeu de durée de vie")](boxview-images/gameoflife-large.png "jeu de durée de vie")
+[![Jeu de durée de vie](boxview-images/gameoflife-small.png "jeu de durée de vie")](boxview-images/gameoflife-large.png#lightbox "jeu de durée de vie")
 
 <a name="digitalclock" />
 
@@ -358,7 +358,7 @@ Le **GameOfLife** programme inclut également un `LifeGrid` classe qui encapsule
 
 Le [ **DotMatrixClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock/) programme crée 210 `BoxView` éléments pour simuler les points d’un affichage 5-par-7 matricielle traditionnelle. Vous pouvez lire l’heure en mode portrait ou paysage, mais il est plus grand en paysage :
 
-[![Dot-Matrix Clock](boxview-images/dotmatrixclock-small.png "Dot-Matrix Clock")](boxview-images/dotmatrixclock-large.png "Dot-Matrix Clock")
+[![Dot-Matrix Clock](boxview-images/dotmatrixclock-small.png "Dot-Matrix Clock")](boxview-images/dotmatrixclock-large.png#lightbox "Dot-Matrix Clock")
 
 Le fichier XAML instancie dépasse légèrement le `AbsoluteLayout` utilisé pour l’horloge :
 
@@ -594,7 +594,7 @@ public partial class MainPage : ContentPage
 
 Une horloge matricielle peut-être sembler une application évidente de `BoxView`, mais `BoxView` éléments sont également capables de réaliser une horloge analogique :
 
-[![Horloge de BoxView](boxview-images/boxviewclock-small.png "BoxView horloge")](boxview-images/boxviewclock-large.png "BoxView horloge")
+[![Horloge de BoxView](boxview-images/boxviewclock-small.png "BoxView horloge")](boxview-images/boxviewclock-large.png#lightbox "BoxView horloge")
 
 Tous les éléments visuels dans le [ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/) programme sont les enfants d’un `AbsoluteLayout`. Ces éléments sont dimensionnées en utilisant le `LayoutBounds` propriété jointe et de rotation à l’aide de la `Rotation` propriété. 
 

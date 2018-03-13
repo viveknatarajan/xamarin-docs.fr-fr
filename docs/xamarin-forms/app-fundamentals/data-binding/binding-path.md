@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 39d326714a6fee1abe242a7256888647784cdec3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb385a9c7d1dfd01d95691b77122cdbb84d814e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-path"></a>Chemin de liaison
 
@@ -136,7 +136,7 @@ Cet enfant est un `Label`, qui a un `Text` propriété de type `String`, qui a u
 
 Voici le programme en cours d’exécution sur les trois plateformes :
 
-[![Variantes de chemin d’accès](binding-path-images/pathvariations-small.png "Variations de chemin d’accès")](binding-path-images/pathvariations-large.png "Variations de chemin d’accès")
+[![Variantes de chemin d’accès](binding-path-images/pathvariations-small.png "Variations de chemin d’accès")](binding-path-images/pathvariations-large.png#lightbox "Variations de chemin d’accès")
 
 ## <a name="debugging-complex-paths"></a>Débogage des chemins d’accès complexes
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d5f9f86447886e2cea46a6317d05506cdbed90bb
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-view"></a>Implémentation d’une vue
 
@@ -115,7 +115,7 @@ Le processus de création de la classe de convertisseur personnalisé est comme 
 1. Ajouter un `ExportRenderer` d’attribut à la classe de convertisseur personnalisé pour spécifier qu’il sera utilisé pour restituer le contrôle personnalisé Xamarin.Forms. Cet attribut est utilisé pour inscrire le convertisseur personnalisé avec Xamarin.Forms.
 
 > [!NOTE]
-> **Remarque**: pour la plupart des éléments de Xamarin.Forms, il est facultatif pour fournir un convertisseur personnalisé dans chaque projet de plateforme. Si un convertisseur personnalisé n’est pas inscrit, puis le convertisseur par défaut pour la classe de base du contrôle sera utilisé. Toutefois, les convertisseurs personnalisés sont nécessaires dans chaque projet de plateforme lors du rendu d’un [vue](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) élément.
+> Pour la plupart des éléments de Xamarin.Forms, il est facultatif fournir un convertisseur personnalisé dans chaque projet de plateforme. Si un convertisseur personnalisé n’est pas inscrit, puis le convertisseur par défaut pour la classe de base du contrôle sera utilisé. Toutefois, les convertisseurs personnalisés sont nécessaires dans chaque projet de plateforme lors du rendu d’un [vue](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) élément.
 
 Le diagramme suivant illustre les responsabilités de chaque projet dans l’exemple d’application, ainsi que les relations entre eux :
 
@@ -318,7 +318,7 @@ namespace CustomRenderer.WinPhone81
 Autant que la `Control` propriété est `null`, un nouveau `CaptureElement` est instancié et `InitializeAsync` méthode est appelée, qui utilise le `MediaCapture` API pour fournir le flux d’aperçu de l’appareil photo. Le `SetNativeControl` méthode est alors appelée pour assigner une référence à la `CaptureElement` d’instance pour le `Control` propriété. Le `CaptureElement` contrôle expose un `Tapped` événement qui est géré par le `OnCameraPreviewTapped` méthode pour arrêter et démarrer l’aperçu vidéo lorsqu’il est activé par un clic. Le `Tapped` est être abonné à l’événement lorsque le convertisseur personnalisé est attaché à un nouvel élément Xamarin.Forms et désinscrit uniquement lorsque l’élément le convertisseur est attaché aux modifications.
 
 > [!NOTE]
-> **Remarque**: il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans une application Windows Phone ou UWP. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez et [démarrage rapide : capture vidéo à l’aide de l’API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) pour les applications Windows Runtime, et [afficher l’aperçu de l’appareil photo](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) pour applications UWP.
+> Il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans un Windows Phone ou une application UWP. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez et [démarrage rapide : capture vidéo à l’aide de l’API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) pour les applications Windows Runtime, et [afficher l’aperçu de l’appareil photo](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) pour applications UWP.
 
 ## <a name="summary"></a>Récapitulatif
 

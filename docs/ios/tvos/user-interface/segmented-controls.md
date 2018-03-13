@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fd31413b777e1179e7f4faf6f91f91bc6c41e82b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6561ff70997af05ed4df6b7bfe0ba6345fb44d9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-segmented-controls"></a>Utilisation des contrôles segmentés
 
@@ -21,7 +21,7 @@ _Cet article décrit la conception et l’utilisation de contrôles segmentés �
 
 Un contrôle segmenté fournit un ensemble d’éléments linéaires, chacun d’eux peut contenir un texte ou une icône et est utilisée pour fournir un ensemble de choix associée à l’utilisateur.
 
-[ ![](segmented-controls-images/segment01.png "Exemples de contrôles de segment")](segmented-controls-images/segment01.png)
+[![](segmented-controls-images/segment01.png "Exemples de contrôles de segment")](segmented-controls-images/segment01.png#lightbox)
 
 Apple a les suggestions suivantes pour travailler avec des contrôles segmentés :
 
@@ -57,36 +57,36 @@ Là encore, vous ne pouvez pas mélanger les formats texte et les icônes sur un
 
 Utilisation des contrôles de Segment dans une application Xamarin.tvOS, le plus simple consiste à ajouter à l’interface utilisateur de l’application d’utiliser le concepteur iOS.
 
-[[ide name="xs"]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 1. Dans le **Solution remplissage**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **Segment contrôle** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](segmented-controls-images/segment02.png "Un contrôle de Segment")](segmented-controls-images/segment02.png)
+    [![](segmented-controls-images/segment02.png "Un contrôle de Segment")](segmented-controls-images/segment02.png#lightbox)
 1. Dans le **onglet Widget** de la **remplissage de la propriété**, vous pouvez ajuster plusieurs propriétés du contrôle Segment, telles que son **Style** et **état**: 
 
-    [ ![](segmented-controls-images/segment03.png "L’onglet du Widget")](segmented-controls-images/segment03.png)
+    [![](segmented-controls-images/segment03.png "L’onglet du Widget")](segmented-controls-images/segment03.png#lightbox)
 1. Utilisez le **Segments** champ pour contrôler le nombre de Segments dans le contrôleur.
 1. Sélectionner un Segment donné à partir de la **Segment déroulante** ajuster ses propriétés individuelles telles que **titre** ou **Image** et de contrôler si un Segment donné est  **Activé** ou **sélectionnés** lorsque le contrôle est affiché.
 1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
-    [ ![](segmented-controls-images/segment04.png "Attribuez un nom")](segmented-controls-images/segment04.png)
+    [![](segmented-controls-images/segment04.png "Attribuez un nom")](segmented-controls-images/segment04.png#lightbox)
 1. Enregistrez les modifications apportées.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
     
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **Segment contrôle** à partir de la **boîte à outils** et déposez-la sur la vue : 
 
-    [ ![](segmented-controls-images/segment02-vs.png "Un contrôle de Segment")](segmented-controls-images/segment02-vs.png)
+    [![](segmented-controls-images/segment02-vs.png "Un contrôle de Segment")](segmented-controls-images/segment02-vs.png#lightbox)
 1. Dans le **onglet Widget** de la **Explorateur de propriétés**, vous pouvez ajuster plusieurs propriétés du contrôle Segment, telles que son **Style** et **état**: 
 
-    [ ![](segmented-controls-images/segment03-vs.png "L’onglet du Widget")](segmented-controls-images/segment03-vs.png)
+    [![](segmented-controls-images/segment03-vs.png "L’onglet du Widget")](segmented-controls-images/segment03-vs.png#lightbox)
 1. Utilisez le **Segments** champ pour contrôler le nombre de Segments dans le contrôleur.
 1. Sélectionner un Segment donné à partir de la **Segment déroulante** ajuster ses propriétés individuelles telles que **titre** ou **Image** et de contrôler si un Segment donné est  **Activé** ou **sélectionnés** lorsque le contrôle est affiché.
 1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
-    [ ![](segmented-controls-images/segment04-vs.png "Attribuez un nom")](segmented-controls-images/segment04-vs.png)
+    [![](segmented-controls-images/segment04-vs.png "Attribuez un nom")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Enregistrez les modifications apportées.
     
 -----

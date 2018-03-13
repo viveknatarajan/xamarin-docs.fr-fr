@@ -3,14 +3,15 @@ title: "Résumé du chapitre 11. L’infrastructure pouvant être liée"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 3e3cfb55f7b96751979d14b489e892bc07817780
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Résumé du chapitre 11. L’infrastructure pouvant être liée
 
@@ -22,7 +23,7 @@ Xamarin.Forms définit une définition de propriété améliorée appelée un *p
 
 Le [ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) exemple utilise la réflexion pour présenter une hiérarchie de classe de Xamarin.Forms et illustrer le rôle crucial joué par `BindableObject` dans cette hiérarchie. `BindableObject` dérive de `Object` et est la classe parente pour [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) à partir de laquelle [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) dérive. C’est la classe parente pour [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) et [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/), qui est la classe parente pour [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/):
 
-[![Capture d’écran de triple de la hiérarchie de classes partage](images/ch11fg01-small.png "la hiérarchie de la classe partage")](images/ch11fg01-large.png "partage de hiérarchie de classe")
+[![Capture d’écran de triple de la hiérarchie de classes partage](images/ch11fg01-small.png "la hiérarchie de la classe partage")](images/ch11fg01-large.png#lightbox "partage de hiérarchie de classe")
 
 ## <a name="a-peek-into-bindableobject-and-bindableproperty"></a>Un coup de œil dans BindableObject et BindableProperty
 

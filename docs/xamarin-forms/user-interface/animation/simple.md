@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d1d91804c11d2e944bb618fadb3d659b512c5905
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb7ca216978e4c890349a44b07d5a383e9ca2384
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="simple-animations"></a>Animations simples
 
@@ -130,7 +130,7 @@ Les captures d’écran suivantes illustrent la traduction en cours d’exécuti
 ![](simple-images/translateto.png "Translation Animation")
 
 > [!NOTE]
-> **Remarque**: si un élément est disposé initialement hors de l’écran et ensuite traduit à l’écran, après conversion, l’élément d’entrée reste disposition hors de l’écran et l’utilisateur ne peut pas interagir avec lui. Par conséquent, il est recommandé qu’une vue doit être disposée à sa dernière position et ensuite tous les traductions effectuées requis.
+> Si un élément est disposé initialement hors de l’écran et ensuite traduit à l’écran, après conversion disposition d’entrée de l’élément reste hors de l’écran et l’utilisateur ne peut pas interagir avec lui. Par conséquent, il est recommandé qu’une vue doit être disposée à sa dernière position et ensuite tous les traductions effectuées requis.
 
 ### <a name="fading"></a>Suppression
 
@@ -228,6 +228,6 @@ Création et l’annulation des animations à l’aide de cet article ne présen
 
 ## <a name="related-links"></a>Liens associés
 
-- [Présentation de la prise en charge asynchrone](~/cross-platform/platform/async.md)
+- [Vue d’ensemble de la prise en charge asynchrone](~/cross-platform/platform/async.md)
 - [Animation de base (exemple)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/basic/)
 - [ViewExtensions](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/)

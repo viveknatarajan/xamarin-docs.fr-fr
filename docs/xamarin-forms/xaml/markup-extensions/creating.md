@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: eb7189226e4f5d7eb2b55bf61728e65db44ba57b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 737c55aea087094ceb5e6070261d0a3d724e8a01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-xaml-markup-extensions"></a>Création d’Extensions de balisage XAML
 
@@ -117,7 +117,7 @@ Le **démonstration de couleur TSL** page affiche de différentes façons que `H
 
 Notez que lorsque `HslColorExtension` est une balise XML, les quatre propriétés sont définies en tant qu’attributs, mais lorsqu’il apparaît entre accolades, les quatre propriétés sont séparées par des points-virgules sans guillemets. Les valeurs par défaut pour `H`, `S`, et `L` sont 0 et la valeur par défaut de `A` est 1, ces propriétés peuvent être omises si vous souhaitez que les valeurs par défaut. Le dernier exemple montre un exemple où la luminosité est 0, ce qui entraîne normalement noir, mais le canal alpha est de 0,5, il est donc moitié transparent et s’affiche en gris par rapport à l’arrière-plan blanc, de la page :
 
-[![Démo sur les couleurs TSL](creating-images/hslcolordemo-small.png "démonstration de couleur TSL")](creating-images/hslcolordemo-large.png "démonstration de couleur TSL")
+[![Démo sur les couleurs TSL](creating-images/hslcolordemo-small.png "démonstration de couleur TSL")](creating-images/hslcolordemo-large.png#lightbox "démonstration de couleur TSL")
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>Une Extension de balisage pour l’accès aux Bitmaps
 
@@ -180,7 +180,7 @@ Bien que `ImageResourceExtension` requiert le `Source` propriété à définir, 
 
 Voici le programme en cours d’exécution sur les trois plateformes :
 
-[![Démo sur les ressources de l’image](creating-images/imageresourcedemo-small.png "démo sur les ressources de l’Image")](creating-images/imageresourcedemo-large.png "démo sur les ressources de l’Image")
+[![Démo sur les ressources de l’image](creating-images/imageresourcedemo-small.png "démo sur les ressources de l’Image")](creating-images/imageresourcedemo-large.png#lightbox "démo sur les ressources de l’Image")
 
 ## <a name="service-providers"></a>Fournisseurs de services
 

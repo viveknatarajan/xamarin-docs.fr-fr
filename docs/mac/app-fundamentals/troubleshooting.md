@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f7ded8fdc1274f7c98d8f7134f6a87c7ba767646
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b0d757c951f9244beb093a0a9b13ac1d069b507
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="reporting-bugs"></a>Signalement des bogues
 
@@ -70,7 +70,7 @@ Les sections suivantes abordent les problèmes connus et leurs solutions.
 
 Le débogueur se connecte à des applications de Xamarin.Mac via TCP, ce qui signifie que par défaut lorsque vous activez le sandboxing, il est impossible de se connecter à l’application, donc si vous essayez d’exécuter l’application sans les autorisations appropriées activées, vous obtenez une erreur *« Impossible de se connecter à le débogueur »*. 
 
-[![Modifier les droits](troubleshooting-images/debug01.png "modifier les droits")](troubleshooting-images/debug01-large.png)
+[![Modifier les droits](troubleshooting-images/debug01.png "modifier les droits")](troubleshooting-images/debug01-large.png#lightbox)
 
 Le **autoriser les connexions réseau sortantes (Client)** autorisation est celui requis pour le débogueur, l’activation de celle-ci permet normalement le débogage. Étant donné que vous ne pouvez pas déboguer sans lui, nous avons mis à jour le `CompileEntitlements` cibles pour `msbuild` pour ajouter automatiquement cette autorisation pour les droits pour les versions seulement n’importe quelle application est sable pour le débogage. Versions Release doivent utiliser les droits que ceux spécifiés dans le fichier de droits, non modifié.
 
@@ -80,7 +80,7 @@ Lorsque vous incluez des bibliothèques tierces 3e dans votre application Xamari
 
 Cela peut être résolu en ouvrant les options pour le projet Xamarin.Mac, en accédant à **Mac générer** > **internationalisation** et en vérifiant la **ouest** internationalisation :
 
-[![Modifier les options de build](troubleshooting-images/issue01.png "modifier les options de build")](troubleshooting-images/issue01-large.png)
+[![Modification des options de build](troubleshooting-images/issue01.png "Modification des options de build")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>Échec de compilation (mm5103)
 
@@ -100,7 +100,7 @@ Avec le nouveau Visual Studio pour Mac est installé, lorsque vous créez un pro
 
 Si vous double-cliquez sur le **Entitlements.plist** , l’éditeur de droits s’affichera :
 
-[![Modifier les droits](troubleshooting-images/entitlements02.png "modifier les droits")](troubleshooting-images/entitlements02-large.png)
+[![Modifier les droits](troubleshooting-images/entitlements02.png "modifier les droits")](troubleshooting-images/entitlements02-large.png#lightbox)
 
 Pour les projets Xamarin.Mac existants, vous devez créer manuellement le **Entitlements.plist** le fichier en cliquant sur le projet dans le **Solution remplissage** et en sélectionnant **ajouter**  >  **Nouveau fichier...** . Ensuite, sélectionnez **Xamarin.Mac** > **liste de propriétés vide**:
 
@@ -108,7 +108,7 @@ Pour les projets Xamarin.Mac existants, vous devez créer manuellement le **Enti
 
 Entrez `Entitlements` pour le nom et cliquez sur le **nouveau** bouton. Si votre projet inclut déjà un fichier des droits, vous devrez ajouter le projet au lieu de créer un nouveau fichier :
 
-[![Vérifier le remplacement d’un fichier](troubleshooting-images/entitlements04.png "vérifier le remplacement d’un fichier")](troubleshooting-images/entitlements04-large.png)
+[![Vérifier le remplacement d’un fichier](troubleshooting-images/entitlements04.png "vérifier le remplacement d’un fichier")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## <a name="contacting-support-business-or-enterprise-licenses"></a>Contacter le support (licences d’entreprise ou de l’entreprise)
 
@@ -124,14 +124,14 @@ La Communauté de développeurs à l’aide de Xamarin produits est incroyable e
 
 Vos commentaires nous sont précieux. Si vous constatez des problèmes avec Xamarin.Mac :
 
-- Recherche le [référentiel du problème](https://github.com/xamarin/xamarin-macios/issues) 
-- Avant de passer à des problèmes de GitHub, Xamarin problèmes ont été suivies sur [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Rechercher il pour la correspondance des problèmes.
-- Si vous ne trouvez pas un problème de correspondance, veuillez soumettre un nouveau problème dans le [référentiel de problème GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+- Recherchez dans le [dépôt des problèmes](https://github.com/xamarin/xamarin-macios/issues) 
+- Avant de devenir des problèmes GitHub, les problèmes Xamarin étaient suivis sur [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Recherchez-y des problèmes correspondants.
+- Si vous ne trouvez pas de problème correspondant, ouvrez un nouveau problème dans le [dépôt de problèmes GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Problèmes de GitHub sont tous les publics. Il n’est pas possible de masquer des commentaires ou des pièces jointes. 
+Les problèmes GitHub sont tous publics. Il n’est pas possible de masquer des commentaires ou des pièces jointes. 
 
-Veuillez inclure autant de ces possible :                                                                                                                                          
+Dans la mesure du possible, essayez d’inclure :                                                                                                                                          
 
-- Un exemple simple de reproduire le problème. Il s’agit de **inestimable** lorsque cela est possible. 
-- La trace de pile complet de l’incident.
-- Le code c# se rapportant à l’incident. 
+- Un exemple simple reproduisant le problème. Si vous pouvez en fournir un, c’est **inestimable**. 
+- La trace de pile complète du plantage.
+- Le code C# se rapportant au plantage. 

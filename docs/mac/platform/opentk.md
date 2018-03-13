@@ -8,17 +8,17 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4af76a37e5fd42ff1d6344f60642425c73e9d733
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f5383465f7bc5c4529eebefca02718c83a653e9f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-opentk"></a>Introduction aux OpenTK
 
 OpenTK (ouvrir le Toolkit) est une avancée de bas niveau c# bibliothèque qui facilite l’utilisation de OpenGL et OpenCL de OpenAL. OpenTK peut être utilisé pour les jeux, les applications scientifiques ou autres projets qui nécessitent des graphiques 3D, les fonctionnalités audio ou calcul. Cet article fournit une brève introduction à l’aide de OpenTK dans une application Xamarin.Mac.
 
-[ ![](opentk-images/intro01.png "Un exemple d’application exécuter")](opentk-images/intro01.png)
+[![](opentk-images/intro01.png "Un exemple d’application exécuter")](opentk-images/intro01.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de OpenTK dans une application Xamarin.Mac. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -54,11 +54,11 @@ Comme une présentation rapide à l’aide de OpenTK dans une application Xamari
 
 Démarrez Visual Studio pour Mac et créer une nouvelle solution Xamarin.Mac. Sélectionnez **Mac** > **application** > **général** > **/Cocoa application**:
 
-[ ![](opentk-images/sample01.png "Ajout d’une nouvelle application/Cocoa")](opentk-images/sample01.png)
+[![](opentk-images/sample01.png "Ajout d’une nouvelle application/Cocoa")](opentk-images/sample01.png#lightbox)
 
 Entrez `MacOpenTK` pour le **nom du projet**:
 
-[ ![](opentk-images/sample02.png "Définition du nom de projet")](opentk-images/sample02.png)
+[![](opentk-images/sample02.png "Définition du nom de projet")](opentk-images/sample02.png#lightbox)
 
 Cliquez sur le **créer** pour générer le nouveau projet.
 
@@ -70,7 +70,7 @@ Avant de pouvoir utiliser TK ouvert dans une application Xamarin.Mac, vous devez
 
 Cochez la case en `OpenTK` et cliquez sur le **OK** bouton :
 
-[ ![](opentk-images/sample03.png "Modifier les références de projet")](opentk-images/sample03.png)
+[![](opentk-images/sample03.png "Modifier les références de projet")](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK" />
 
@@ -296,7 +296,7 @@ Nous passons à la fréquence d’images souhaité que nous souhaitons l’affic
 
 Nous allons exécuter notre application et afficher la sortie :
 
-[ ![](opentk-images/intro01.png "Un exemple de la sortie d’applications")](opentk-images/intro01.png)
+[![](opentk-images/intro01.png "Un exemple de la sortie d’applications")](opentk-images/intro01.png#lightbox)
 
 Si nous redimensionner notre fenêtre, l’affichage du jeu sera également résider et le triangle sera redimensionné et mis à jour en temps réel ainsi.
 
@@ -329,5 +329,5 @@ Cet article a pris un coup de œil rapide à l’utilisation de OpenTK dans une 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilisation des fenêtres](~/mac/user-interface/window.md)
 - [La boîte à outils ouverte](http://www.opentk.com)
-- [Indications de l’Interface du système d’exploitation X humaines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduction à Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

@@ -3,16 +3,16 @@ title: Windows
 description: "Cet article décrit l’utilisation des fenêtres et des panneaux dans une application Xamarin.Mac. Il décrit la création des fenêtres et des panneaux dans Xcode et Générateur de l’Interface, les charger à partir des plans conceptuels et les fichiers .xib et leur utilisation par programmation."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
+ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: bcf95bf481d58f21e4adce6039c3eb02ce24b938
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows"></a>Windows
 
@@ -29,7 +29,7 @@ Windows peut être utilisée dans un état non modal (par exemple, un éditeur d
 
 Les panneaux sont un type spécial de fenêtre (une sous-classe de la base de `NSWindow` classe), qui n’ont généralement une fonction auxiliaire dans une application, tels que les fenêtres d’utilitaire telles que des inspecteurs de format de texte et de système de sélecteur de couleurs.
 
-[ ![](window-images/intro01.png "Modification d’une fenêtre dans Xcode")](window-images/intro01.png)
+[![](window-images/intro01.png "Modification d’une fenêtre dans Xcode")](window-images/intro01.png#lightbox)
 
 Dans cet article, nous aborderons les principes fondamentaux de l’utilisation des fenêtres et des panneaux dans une application Xamarin.Mac. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
 
@@ -96,7 +96,7 @@ Pour plus d’informations, consultez la [plein écran Windows](https://develope
 
 Un panneau de configuration est une fenêtre auxiliaire qui contient des contrôles et les options qui affectent le document actif ou la sélection (par exemple, le système de sélecteur de couleurs) :
 
-[ ![](window-images/panel01.png "Un panneau de couleur")](window-images/panel01.png)
+[![](window-images/panel01.png "Un panneau de couleur")](window-images/panel01.png#lightbox)
 
 Panneaux peut être _spécifique à l’application_ ou _système_. Les panneaux spécifiques de l’application Dissocier du haut des fenêtres de document de l’application et disparaissent lorsque l’application est en arrière-plan. Panneaux de l’échelle du système (telles que la **polices** Panneau de configuration), float au-dessus de toutes les fenêtres ouvertes, quel que soit l’application. 
 
@@ -112,7 +112,7 @@ Apple suggère les consignes suivantes :
 
 Les applications les plus récents macOS présentent les options qui affectent le document actif ou la sélection en tant qu’et les contrôles auxiliaires _inspecteurs_ qui font partie de la fenêtre principale (comme le **Pages** application illustrée ci-dessous), au lieu d’utiliser le panneau de configuration Windows :
 
-[ ![](window-images/panel02.png "Un inspecteur de l’exemple")](window-images/panel02.png)
+[![](window-images/panel02.png "Un inspecteur de l’exemple")](window-images/panel02.png#lightbox)
 
 Pour plus d’informations, consultez la [panneaux](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) section d’Apple [indications de l’Interface du système d’exploitation X humaine](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) et notre [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) exemple d’application pour une implémentation complète d’un **Interface inspecteur** dans une application Xamarin.Mac.
 
@@ -122,11 +122,11 @@ Pour plus d’informations, consultez la [panneaux](https://developer.apple.com/
 
 Lorsque vous créez une nouvelle application/Cocoa de Xamarin.Mac, vous obtenez une fenêtre vide, standard par défaut. Ce paramètre, windows est défini dans un `.storyboard` fichier inclus automatiquement dans le projet. Pour modifier votre conception de windows, dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` fichier :
 
-[ ![](window-images/edit01.png "En sélectionnant le storyboard principal")](window-images/edit01.png)
+[![](window-images/edit01.png "En sélectionnant le storyboard principal")](window-images/edit01.png#lightbox)
 
 La conception de la fenêtre s’ouvre dans le Générateur de Xcode Interface :
 
-[ ![](window-images/edit02.png "Modification de l’interface utilisateur dans Xcode")](window-images/edit02.png)
+[![](window-images/edit02.png "Modification de l’interface utilisateur dans Xcode")](window-images/edit02.png#lightbox)
 
 Dans le **inspecteur de l’attribut**, il existe plusieurs propriétés que vous pouvez utiliser pour définir et contrôler votre fenêtre :
 
@@ -160,7 +160,7 @@ Consultez d’Apple [Introduction à Windows](https://developer.apple.com/librar
 
 Pour définir la position initiale de la fenêtre et contrôler sa taille, basculez vers le **taille inspecteur**:
 
-[ ![](window-images/edit07.png "La taille par défaut et l’emplacement")](window-images/edit07.png)
+[![](window-images/edit07.png "La taille par défaut et l’emplacement")](window-images/edit07.png#lightbox)
 
 À partir d’ici vous pouvez définir la taille initiale de la fenêtre, lui donner une taille minimale et maximale, définir l’emplacement d’origine sur l’écran et contrôler les bordures autour de la fenêtre.
 
@@ -176,15 +176,15 @@ Effectuez ce qui suit :
 2. Sélectionnez le `NSWindowController` dans l’aire de conception.
 3. Basculez vers le **inspecteur d’identité** afficher et entrez `WindowController` en tant que le **nom de la classe**: 
 
-    [ ![](window-images/windowcontroller01.png "Définition du nom de classe")](window-images/windowcontroller01.png)
+    [![](window-images/windowcontroller01.png "Définition du nom de classe")](window-images/windowcontroller01.png#lightbox)
 4. Enregistrez vos modifications et revenir à Visual Studio pour Mac à synchroniser.
 5. A `WindowController.cs` fichier sera ajouté à votre projet dans le **l’Explorateur de solutions** dans Visual Studio pour Mac : 
 
-    [ ![](window-images/windowcontroller02.png "En sélectionnant le contrôleur de windows")](window-images/windowcontroller02.png)
+    [![](window-images/windowcontroller02.png "En sélectionnant le contrôleur de windows")](window-images/windowcontroller02.png#lightbox)
 6. Rouvrez le plan conceptuel dans le Générateur de Xcode Interface.
 7. Le `WindowController.h` fichier sera disponible pour une utilisation : 
 
-    [ ![](window-images/windowcontroller03.png "Modification du fichier WindowController.h")](window-images/windowcontroller03.png)
+    [![](window-images/windowcontroller03.png "Modification du fichier WindowController.h")](window-images/windowcontroller03.png#lightbox)
 
 <a name="Adding_UI_Elements" />
 
@@ -194,21 +194,21 @@ Pour définir le contenu d’une fenêtre, faites glisser les contrôles à part
 
 Par exemple, nous allons faire glisser une barre d’outils à partir de la **bibliothèque inspecteur** sur la fenêtre de la **éditeur de l’Interface**:
 
-[ ![](window-images/edit03.png "Sélection d’une barre d’outils à partir de la bibliothèque")](window-images/edit03.png)
+[![](window-images/edit03.png "Sélection d’une barre d’outils à partir de la bibliothèque")](window-images/edit03.png#lightbox)
 
 Ensuite, faites glisser un **mode texte** et le redimensionner pour remplir la zone sous la barre d’outils :
 
-[ ![](window-images/edit04.png "Ajout d’une vue de texte")](window-images/edit04.png)
+[![](window-images/edit04.png "Ajout d’une vue de texte")](window-images/edit04.png#lightbox)
 
 Étant donné que nous voulons le **affichage de texte** pour réduire et développer en tant que les modifications de la taille de la fenêtre, passons à la **éditeur de contrainte** et ajoutez les contraintes suivantes :
 
-[ ![](window-images/edit05.png "Modification des contraintes")](window-images/edit05.png)
+[![](window-images/edit05.png "Modification des contraintes")](window-images/edit05.png#lightbox)
 
 En cliquant sur le pour **rouge I-FAISCEAUX** en haut de l’éditeur et en cliquant sur **ajouter des contraintes de 4**, nous indiquons à l’affichage de texte, respectez les coordonnées X, Y donnée et la croissance ou la réduction horizontalement et verticalement en tant que la fenêtre est redimensionnée.
 
 Enfin, nous allons exposer le **affichage de texte** à l’aide de code une **prise** (en veillant à sélectionner le `ViewController.h` fichier) :
 
-[ ![](window-images/edit06.png "Configuration d’une prise de courant")](window-images/edit06.png)
+[![](window-images/edit06.png "Configuration d’une prise de courant")](window-images/edit06.png#lightbox)
 
 Enregistrez vos modifications et revenez à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
@@ -237,17 +237,17 @@ Maintenant que nous avons créée une fenêtre de base, nous allons examiner les
 
 Par défaut, une nouvelle application Xamarin.Mac s’affiche automatiquement la fenêtre définie dans le `MainWindow.xib` fichier lorsqu’il est démarré :
 
-[ ![](window-images/display01.png "Une fenêtre de l’exemple en cours d’exécution")](window-images/display01.png)
+[![](window-images/display01.png "Une fenêtre de l’exemple en cours d’exécution")](window-images/display01.png#lightbox)
 
 Étant donné que nous avons modifié la conception de cette fenêtre ci-dessus, il inclut désormais une barre d’outils par défaut et **mode texte** contrôle. Section de ce qui suit dans le `Info.plist` fichier est chargé d’afficher cette fenêtre :
 
-[ ![](window-images/display00.png "Modification du fichier Info.plist.")](window-images/display00.png)
+[![](window-images/display00.png "Modification du fichier Info.plist.")](window-images/display00.png#lightbox)
 
 Le **Interface principale** liste déroulante permet de sélectionner la table de montage séquentiel qui sera utilisé en tant que l’interface utilisateur principal de l’application (dans ce cas `Main.storyboard`).
 
 Un contrôleur de la vue est automatiquement ajouté au projet pour contrôler que Windows principale qui s’affiche (ainsi que sa vue principal). Il est défini dans le `ViewController.cs` de fichiers et attaché à la **propriétaire du fichier** dans le Générateur de Interface sous le **inspecteur d’identité**:
 
-[ ![](window-images/display02.png "Définir le propriétaire du fichier")](window-images/display02.png)
+[![](window-images/display02.png "Définir le propriétaire du fichier")](window-images/display02.png#lightbox)
 
 Pour notre fenêtre, nous souhaiterions qu’il ait un titre de `untitled` lorsqu’il commence par essai, commençons par remplacement le `ViewWillAppear` méthode dans le `ViewController.cs` ressemble à ce qui suit :
 
@@ -313,11 +313,11 @@ Pour fermer la `MyWindow` `NSWindow` instance.
 
 Dans macOS, Apple a fourni un moyen d’informer l’utilisateur que le contenu d’une fenêtre (`NSWindow`) a été modifié par l’utilisateur et doit être enregistré. Si la fenêtre contient le contenu modifié, un petit point noir s’affichera dans son **fermer** widget :
 
-[ ![](window-images/close01.png "Une fenêtre avec le marqueur modifié")](window-images/close01.png)
+[![](window-images/close01.png "Une fenêtre avec le marqueur modifié")](window-images/close01.png#lightbox)
 
 Si l’utilisateur tente de fermer la fenêtre ou quitter l’application Mac lorsqu’il y a non enregistrées modifications apportées au contenu de la fenêtre, vous devez présenter un [boîte de dialogue](~/mac/user-interface/dialog.md) ou [feuille modale](~/mac/user-interface/dialog.md) et autoriser l’utilisateur à enregistrer les modifications premier :
 
-[ ![](window-images/close02.png "Un enregistrement feuille est affichée lorsque la fenêtre est fermée.")](window-images/close02.png)
+[![](window-images/close02.png "Un enregistrement feuille est affichée lorsque la fenêtre est fermée.")](window-images/close02.png#lightbox)
 
 ### <a name="marking-a-window-as-modified"></a>Marquage d’une fenêtre modifiée
 
@@ -485,11 +485,11 @@ void NewDocument (NSObject sender) {
 
 Ce code crée une nouvelle version de notre contrôleur fenêtre charge de la nouvelle fenêtre, rend le principal et la fenêtre de la clé et lui affecte un titre. Maintenant, si nous exécuter notre application, puis sélectionnez **nouveau** à partir de la **fichier** menu sera ouvert et affiche une nouvelle fenêtre d’éditeur :
 
-[ ![](window-images/display04.png "Une nouvelle fenêtre sans nom a été ajoutée.")](window-images/display04.png)
+[![](window-images/display04.png "Une nouvelle fenêtre sans nom a été ajoutée.")](window-images/display04.png#lightbox)
 
 Si nous allons ouvrir le **Windows** menu, vous pouvez voir l’application est automatiquement suivi et de gestion de nos fenêtres ouvertes :
 
-[ ![](window-images/display05.png "Le menu Windows")](window-images/display05.png)
+[![](window-images/display05.png "Le menu Windows")](window-images/display05.png#lightbox)
 
 Pour plus d’informations sur l’utilisation des Menus dans une application Xamarin.Mac, veuillez consulter notre [utilisation des Menus](~/mac/user-interface/menu.md) documentation.
 
@@ -559,7 +559,7 @@ Il peut arriver dans lequel vous avez besoin pour surveiller les modifications d
 
 Pour surveiller les modifications de taille, vous devez d’abord vérifier que vous avez attribué une classe personnalisée pour le contrôleur de fenêtre dans le Générateur de Xcode Interface. Par exemple, `MasterWindowController` dans l’exemple suivant :
 
-[ ![](window-images/resize01.png "L’inspecteur de l’identité")](window-images/resize01.png)
+[![](window-images/resize01.png "L’inspecteur de l’identité")](window-images/resize01.png#lightbox)
 
 Modifiez ensuite la classe de contrôleur de fenêtre personnalisés et de moniteur le `DidResize` événement dans la fenêtre du contrôleur pour être averti des modifications de taille dynamique. Exemple :
 
@@ -643,11 +643,11 @@ public override void AwakeFromNib ()
 
 Nous sommes analyse également les `WillClose` événement dans la fenêtre et la vérification de l’état de la `DocumentEdited` propriété. S’il s’agit `true` nous devons donner à l’utilisateur la possibilité d’enregistrer les modifications dans le fichier. Si nous exécuter notre application et que vous entrez du texte, le point s’affichera :
 
-[ ![](window-images/file01.png "Une fenêtre modifiée")](window-images/file01.png)
+[![](window-images/file01.png "Une fenêtre modifiée")](window-images/file01.png#lightbox)
 
 Si vous essayez de fermer la fenêtre, nous obtenons une alerte :
 
-[ ![](window-images/file02.png "Affichage d’un enregistrement boîte de dialogue")](window-images/file02.png)
+[![](window-images/file02.png "Affichage d’un enregistrement boîte de dialogue")](window-images/file02.png#lightbox)
 
 Si nous allons charger un document à partir d’un fichier, nous pouvons définir le titre de la fenêtre pour le fichier nom à l’aide de la `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` (méthode) (étant donné que `path` est une chaîne qui représente le fichier ouvert). En outre, nous pouvons définir l’URL du fichier à l’aide du `window.RepresentedUrl = url;` (méthode).
 
@@ -690,11 +690,11 @@ void OpenDialog (NSObject sender)
 
 Maintenant si nous exécutons notre application, sélectionnez **ouvrir...**  à partir de la **fichier** menu, sélectionnez un fichier texte à partir de la **ouvrir** boîte de dialogue zone et ouvrez-le :
 
-[ ![](window-images/file03.png "Une boîte de dialogue Ouvrir")](window-images/file03.png)
+[![](window-images/file03.png "Une boîte de dialogue Ouvrir")](window-images/file03.png#lightbox)
 
 Le fichier s’affiche et le titre sera défini avec l’icône du fichier :
 
-[ ![](window-images/file04.png "Le contenu d’un fichier chargé")](window-images/file04.png)
+[![](window-images/file04.png "Le contenu d’un fichier chargé")](window-images/file04.png#lightbox)
 
 <a name="Adding_a_New_Window_to_a_Project" />
 
@@ -707,22 +707,22 @@ Pour ajouter une nouvelle fenêtre, procédez comme suit :
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Main.storyboard` fichier à ouvrir pour le modifier dans le Générateur de Xcode Interface.
 2. Faites glisser une nouvelle **fenêtre contrôleur** à partir de la **bibliothèque** et déposez-la sur la **aire de conception**:
 
-    [ ![](window-images/new01.png "Sélection d’un nouveau contrôleur de fenêtre dans la bibliothèque")](window-images/new01.png)
+    [![](window-images/new01.png "Sélection d’un nouveau contrôleur de fenêtre dans la bibliothèque")](window-images/new01.png#lightbox)
 3. Dans le **inspecteur d’identité**, entrez `PreferencesWindow` pour le **ID de la table de montage séquentiel**: 
 
-    [ ![](window-images/new02.png "Définition de l’ID de la table de montage séquentiel")](window-images/new02.png)
+    [![](window-images/new02.png "Définition de l’ID de la table de montage séquentiel")](window-images/new02.png#lightbox)
 5. Concevoir votre interface : 
 
-    [ ![](window-images/new03.png "Conception de l’interface utilisateur")](window-images/new03.png)
+    [![](window-images/new03.png "Conception de l’interface utilisateur")](window-images/new03.png#lightbox)
 6. Ouvrez le Menu de l’application (`MacWindows`), sélectionnez **préférences...** , Cliquez sur le contrôle et faites glisser vers la nouvelle fenêtre : 
 
-    [ ![](window-images/new05.png "Création d’un segue")](window-images/new05.png)
+    [![](window-images/new05.png "Création d’un segue")](window-images/new05.png#lightbox)
 7. Sélectionnez **afficher** dans le menu contextuel.
 6. Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
 Si nous exécuter le code et sélectionnez le **préférences...**  à partir de la **Menu Application**, la fenêtre s’affichera :
 
-[ ![](window-images/new04.png "Un menu de préférences de l’exemple")](window-images/new04.png)
+[![](window-images/new04.png "Un menu de préférences de l’exemple")](window-images/new04.png#lightbox)
 
 <a name="Working_with_Panels" />
 
@@ -742,7 +742,7 @@ Comme tout autre type de fenêtre que vous créez et travaillez dans votre appli
 
 Dans le **inspecteur de l’attribut**, vous disposez des options suivantes spécifiques aux panneaux :
 
-[ ![](window-images/panel03.png "L’inspecteur de l’attribut")](window-images/panel03.png)
+[![](window-images/panel03.png "L’inspecteur de l’attribut")](window-images/panel03.png#lightbox)
 
 - **Style** -vous permettent d’ajuster le style du Panneau de : panneau normal (semblable à une fenêtre standard), l’utilitaire du Panneau de configuration (a une plus petite barre de titre), panneau de configuration HUD (est translucide et la barre de titre fait partie de l’arrière-plan).
 - **Activation non** -détermine dans le panneau de configuration devient la fenêtre de clé.
@@ -754,20 +754,20 @@ Pour ajouter un nouveau panneau de configuration, procédez comme suit :
 1. Dans le **l’Explorateur de solutions**, avec le bouton droit sur le projet et sélectionnez **ajouter** > **nouveau fichier...** .
 2. Dans la boîte de dialogue Nouveau fichier, sélectionnez **Xamarin.Mac** > **fenêtre/Cocoa avec contrôleur**:
 
-    [ ![](window-images/panels00.png "Ajoutez un nouveau contrôleur de fenêtre")](window-images/panels00.png)
+    [![](window-images/panels00.png "Ajoutez un nouveau contrôleur de fenêtre")](window-images/panels00.png#lightbox)
 3. Entrez `DocumentPanel` comme **Nom**, puis cliquez sur le bouton **Nouveau**.
 4. Double-cliquez sur le `DocumentPanel.xib` fichier à ouvrir pour le modifier dans le Générateur de Interface : 
 
-    [ ![](window-images/new02.png "Modification de la pannel")](window-images/new02.png)
+    [![](window-images/new02.png "Modification de la pannel")](window-images/new02.png#lightbox)
 5. Supprimer la fenêtre existante et faites glisser un panneau de configuration à partir de la **bibliothèque inspecteur** dans le le **éditeur de l’Interface**: 
 
-    [ ![](window-images/panels01.png "Suppression de la fenêtre existante")](window-images/panels01.png)
+    [![](window-images/panels01.png "Suppression de la fenêtre existante")](window-images/panels01.png#lightbox)
 6. Le panneau de raccordement jusqu'à la **propriétaire du fichier*-**fenêtre*- **prise**: 
 
-    [ ![](window-images/panels02.png "En faisant glisser permet de rattacher le panneau de configuration")](window-images/panels02.png)
+    [![](window-images/panels02.png "En faisant glisser permet de rattacher le panneau de configuration")](window-images/panels02.png#lightbox)
 7. Basculez vers le **inspecteur d’identité** et les classe du panneau par la valeur `DocumentPanel`: 
 
-    [ ![](window-images/panels03.png "Définition de la classe du panneau")](window-images/panels03.png)
+    [![](window-images/panels03.png "Définition de la classe du panneau")](window-images/panels03.png#lightbox)
 6. Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 7. Modifier la `DocumentPanel.cs` de fichiers et de modifier la définition de classe pour les éléments suivants : 
 
@@ -788,7 +788,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Si nous exécutons notre application, le panneau s’affiche :
 
-[ ![](window-images/panels04.png "Le panneau de configuration dans une application en cours d’exécution")](window-images/panels04.png)
+[![](window-images/panels04.png "Le panneau de configuration dans une application en cours d’exécution")](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
 > Panneau de configuration Windows ont été déconseillées par Apple et doit être remplacés par **inspecteur Interfaces**. Pour obtenir un exemple complet de création d’un **inspecteur** dans une application Xamarin.Mac, veuillez consulter notre [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) exemple d’application.
@@ -805,5 +805,5 @@ Cet article a pris une présentation détaillée sur l’utilisation des fenêtr
 - [MacInspector (exemple)](https://developer.xamarin.com/samples/mac/MacInspector/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilisation des Menus](~/mac/user-interface/menu.md)
-- [Indications de l’Interface du système d’exploitation X humaines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduction à Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

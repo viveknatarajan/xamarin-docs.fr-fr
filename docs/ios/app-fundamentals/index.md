@@ -3,22 +3,22 @@ title: Notions de base des applications
 description: "Principaux Concepts d’applications"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: 9cace37a9e762a49a90963591931793d30d05453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f6c0bb75327f0c14d314a0e7ad9d114fd17c2a57
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>Notions de base des applications
 
 Cette section fournit un guide sur certaines des tâches de choses ou concepts que les développeurs doivent connaître lors du développement d’applications de Xamarin.iOS (anciennement MonoTouch) plus courant.
 
-## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[Sécurité de Transport de l’application](~/ios/app-fundamentals/ats.md)
+## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[Sécurité de transport de l’application](~/ios/app-fundamentals/ats.md)
 
 Cet article vous présente les modifications de sécurité qui applique la sécurité de Transport d’application sur une application iOS 9 et ce que cela signifie pour vos projets Xamarin.iOS, qui couvre les options de configuration de couches d’application et elle explique comment annuler des couches d’application, si nécessaire. Étant donné que les couches d’application est activé par défaut, toutes les connexions internet non sécurisées lève une exception dans les applications iOS 9 (sauf si vous avez explicitement autorisé).
 
@@ -56,7 +56,7 @@ Cet article explique comment créer des applications iOS entièrement dans le co
 
 La `NSUserDefaults` classe offre un moyen pour iOS, applications et des Extensions pour interagir avec le système par défaut à l’échelle du système. À l’aide du système par défaut, l’utilisateur peut configurer un comportement d’une application ou de styles pour répondre à leurs préférences (basés sur la conception de l’application). Par exemple, pour présenter des données dans Visual Studio métrique mesures impériales ou sélectionner un thème de l’interface utilisateur donné.
 
-## <a name="touchiosapp-fundamentalstouchindexmd"></a>[Touch](~/ios/app-fundamentals/touch/index.md)
+## <a name="touchiosapp-fundamentalstouchindexmd"></a>[Entrées tactiles](~/ios/app-fundamentals/touch/index.md)
 
 Les écrans tactiles sur de nombreux périphériques actuels permettent aux utilisateurs rapidement et efficacement d’interagir avec les périphériques de façon naturelle et intuitive. Cette interaction n’est pas limitée uniquement à la détection tactile : il est possible d’utiliser des gestes également. Par exemple, le mouvement de pincement pour zoomer est un exemple courant de cette solution par pincement une partie de l’écran de l’utilisateur peut effectuer un zoom avant ou arrière de deux doigts. Ce guide examine tactiles et mouvements dans iOS.
 

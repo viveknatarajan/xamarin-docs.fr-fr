@@ -6,18 +6,17 @@ ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 10/12/2017
-ms.openlocfilehash: aeb7115e3c7521f6679e8802eb759d7e56ba1cfe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: fcd77d97d492baee441cfd428e58ea83525f927e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-resources-for-varying-screens"></a>Création de ressources pour les différents écrans
 
 Android lui-même s’exécute sur de nombreux appareils différents, chacun possédant une grande variété de résolutions, les tailles d’écran et les densités de l’écran. Android effectuera la mise à l’échelle et le redimensionnement pour que votre application fonctionne sur ces appareils, mais cela peut entraîner une expérience utilisateur optimale. Par exemple, les images peuvent apparaître flous, images peuvent occuper trop (ou n’est pas suffisant) espace à l’écran qui provoque la position des éléments d’interface dans la disposition sera se chevaucher ou être trop éloignées.
 
-<a name="Concepts" />
 
 ## <a name="concepts"></a>Concepts
 
@@ -39,7 +38,6 @@ Notez que les trois premières de ces concepts liés entre &ndash; augmentation 
 
 Pour vous aider à gérer cette complexité, l’infrastructure Android préfère utiliser *indépendant de la densité de pixels (dp)* pour les dispositions d’écran. À l’aide de pixels indépendants de densité, les éléments d’interface utilisateur seront affiche à l’utilisateur d’avoir la même taille physique sur les écrans de densité différente.
 
-<a name="Supporting_Various_Screen_Sizes_and_Densities" />
 
 ## <a name="supporting-various-screen-sizes-and-densities"></a>Prise en charge différentes tailles d’écran et les densités
 
@@ -49,7 +47,6 @@ L’utilisation de pixels indépendants du densité au lieu de pixels réels de 
 Android évoluera le drawables lors de l’exécution à la taille appropriée.
 Toutefois, il est possible que cette mise à l’échelle entraînera bitmaps flou. Pour éviter ce problème, il peut être nécessaire de fournir des ressources pour les différentes densités de remplacement. Lors de la conception des périphériques pour plusieurs résolutions et des densités écran il s’avère plus facile pour commencer la résolution plus élevée ou la densité de l’image et ensuite à l’échelle. Cela empêchera flou ni distorsion qui peut-être résulter de l’opération de redimensionnement.
 
-<a name="Declare_the_Screen_Size_the_Application_Supports" />
 
 ### <a name="declare-the-screen-size-the-application-supports"></a>Déclarez la taille d’écran de l’Application prend en charge
 
@@ -59,29 +56,21 @@ Pour ce faire, dans Xamarin.Android, il faut d’abord ajouter un **AndroidManif
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Manifeste Android](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
-
-[![Manifeste Android](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png)
-
------
-
+[![Manifeste Android](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png#lightbox)
 
 **AndroidManifest.xml** est ajouté à la **propriétés** active. Le fichier est modifié pour inclure [prend en charge les écrans](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![L’ajout d’écrans de prend en charge](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png)
+[![L’ajout d’écrans de prend en charge](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![L’ajout d’écrans de prend en charge](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png)
+[![Manifeste Android](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png#lightbox)
+
+**AndroidManifest.xml** est ajouté à la **propriétés** active. Le fichier est modifié pour inclure [prend en charge les écrans](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+
+[![L’ajout d’écrans de prend en charge](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png#lightbox)
 
 -----
-
-
-<a name="Provide_Alternate_Layouts_for_Different_Screen_Sizes" />
 
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>Fournir différentes dispositions pour différentes tailles d’écran
 
@@ -148,7 +137,6 @@ Pour les applications qui couvrent les anciens et les nouveaux niveaux d’API, 
 -----
 
 
-<a name="Provide_Different_Bitmaps_for_Different_Screen_Densities" />
 
 ### <a name="provide-different-bitmaps-for-different-screen-densities"></a>Prévoir des Bitmaps différentes densités d’écran différente
 
@@ -162,17 +150,15 @@ Comparez cela à une disposition qui est conçue pour des ressources spécifique
 
 ![Captures d’écran avec des ressources spécifiques à une densité](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-<a name="Create_Varying_Density_Resources_with_Android_Asset_Studio" />
 
 ### <a name="create-varying-density-resources-with-android-asset-studio"></a>Créer des ressources de densité avec Asset Android Studio
 
 La création de ces bitmaps des densités différentes peut être un peu fastidieuse. Par conséquent, Google a créé un utilitaire en ligne, ce qui peut réduire certains fastidieuses impliquées dans la création de ces bitmaps appelé le [ **Android Studio Asset**](https://romannurik.github.io/AndroidAssetStudio/).
 
-[![Asset Android Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png)
+[![Asset Android Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 Ce site Web atout de la création d’images bitmap qui ciblent les densités d’écran courants quatre en fournissant une image. Android Studio actif puis crée les bitmaps avec certaines personnalisations et pouvoir être téléchargé sous la forme d’un fichier zip.
 
-<a name="Tips_for_Multiple_Screens" />
 
 ## <a name="tips-for-multiple-screens"></a>Conseils pour les écrans multiples
 
@@ -189,7 +175,6 @@ Android s’exécute sur un nombre déconcertante d’appareils, et la combinais
 
 - **Utiliser LayoutParams Height et Width** - lors de la définition des éléments d’interface utilisateur dans un fichier de mise en forme XML, une application Android à l’aide de la **wrap_content** et **fill_parent** valeurs ont plus de succès assurer un aspect approprié sur les différents appareils que l’utilisation des unités indépendantes pixel ou densité. Ces valeurs de dimension entraînent Android à l’échelle les ressources bitmap comme il convient. Pour cette même raison, les unités indépendantes de la densité sont mieux réservées quand spécifiant les marges et marge intérieure des éléments d’interface utilisateur.
 
-<a name="Testing_Multiple_Screens" />
 
 ## <a name="testing-multiple-screens"></a>Test de plusieurs écrans
 

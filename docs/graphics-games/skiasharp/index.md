@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 03089e4760ebf19849cd4d34cafb7047d8915a4d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee0625f22062fef3c27a697ce33488274abc24d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="2d-drawing"></a>Dessin 2D
 
 SkiaSharp fournit une API puissante c# pour créer des graphiques 2D. Il est alimenté par [bibliothèque de Skia de Google](http://skia.org), la même bibliothèque optimisant Google Chrome, Firefox et d’Android piles de graphique.
 
-[ ![](images/ide-sml.png "SkiaSharp fournit une API puissante c# pour créer des graphiques 2D")](images/ide.png)
+[![](images/ide-sml.png "SkiaSharp fournit une API puissante c# pour créer des graphiques 2D")](images/ide.png#lightbox)
 
 SkiaSharp est une bibliothèque Portable et est fournie pour des raisons pratiques comme un [package NuGet d’inter-plateformes](https://www.nuget.org/packages/SkiaSharp)et prend en charge les plateformes suivantes en dehors de la zone : macOS, Xamarin.Android et Xamarin.iOS le bureau Windows.
 
@@ -43,7 +43,7 @@ Apprendre à utiliser entre les graphiques de plateforme qui restituent dans Xam
   * [Les types de remplissage du chemin d’accès](~/xamarin-forms/user-interface/graphics/skiasharp/paths/fill-types.md)
   * [Polylignes et équations paramétriques](~/xamarin-forms/user-interface/graphics/skiasharp/paths/polylines.md)
   * [Points et des tirets](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)
-  * [Peinture de doigt](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
+  * [Peinture au doigt](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
 - [Transformations](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/index.md)
   * [La transformation de traduction](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)
   * [La transformation d’échelle](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/scale.md)
@@ -54,15 +54,15 @@ Apprendre à utiliser entre les graphiques de plateforme qui restituent dans Xam
   * [Transformations affines non](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)
   * [Rotation 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
 - [Chemins d’accès et des courbes](~/xamarin-forms/user-interface/graphics/skiasharp/curves/index.md)
-  * [Trois méthodes pour dessiner un Arc](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
-  * [Trois Types de courbes Bézier](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
-  * [Données de chemin d’accès SVG](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
-  * [Découpage avec des chemins d’accès et les régions](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
-  * [Effets de chemin d’accès](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
-  * [Chemins d’accès et le texte](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
-  * [Énumération et les informations de chemin d’accès](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
+  * [Trois façons de dessiner un arc](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
+  * [Trois types de courbes Bézier](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
+  * [Données de chemin SVG](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
+  * [Détourage avec chemins d’accès et régions](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
+  * [Effets de tracé](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
+  * [Chemins et texte](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
+  * [Informations de chemin et énumération](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
 
-## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[Notes sur les plateformes spécifiques](~/graphics-games/skiasharp/platform.md)
+## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[Remarques spécifiques de la plateforme](~/graphics-games/skiasharp/platform.md)
 
 Cette page décrit les instructions d’installation pour SkiaSharp sur différentes plateformes, y compris Windows, Mac OS, iOS et Android.
 

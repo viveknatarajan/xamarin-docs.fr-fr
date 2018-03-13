@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/05/2017
-ms.openlocfilehash: a6bfebb5272da3fd50f4f165fc25bb75574a0b63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4bcbd14b88f19dc48dc9d0694fb30aed31708153
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps-application"></a>Application de mappages
 
 Pour travailler avec les mappages de Xamarin.Android, le plus simple consiste à tirer parti de l’application de cartes intégrées indiquée ci-dessous :
 
-[![Capture d’écran de l’exemple d’application Google Maps intégrée](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png)
+[![Capture d’écran de l’exemple d’application Google Maps intégrée](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 Lorsque vous utilisez l’application de cartes, la carte ne fera pas partie de votre application. Au lieu de cela, lancez l’application de cartes et de votre application de charger la carte externe. La section suivante examine comment utiliser Xamarin.Android pour lancer les mappages comme ci-dessus.
 
-<a name="Creating_the_Intent" />
 
 ## <a name="creating-the-intent"></a>Création de l’objectif
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 Ce code est tout ce qui est nécessaire pour lancer le mappage indiqué dans la capture d’écran précédente. Outre la spécification de latitude et longitude, le schéma d’URI pour les mappages prend en charge plusieurs autres options.
 
-<a name="Geo_Uri_Scheme" />
 
 ## <a name="geo-uri-scheme"></a>Schéma d’URI de géo-réplication
 
@@ -52,10 +50,9 @@ Le code ci-dessus utilisé le schéma de géo-réplication pour créer un URI. C
 
 Les versions de l’URI qui prennent une requête (à savoir les rues adresse ou recherche termes) utilisent service de geocoder de Google pour extraire l’emplacement qui est ensuite affichée sur la carte. Par exemple, l’URI `geo:0,0?q=coop+Cambridge` entraîne le mappage indiqué ci-dessous :
 
-[![Capture d’écran montrant Google Maps avec un terme à rechercher](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png)
+[![Capture d’écran montrant Google Maps avec un terme à rechercher](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 
-<a name="Street_View" />
 
 Pour plus d’informations sur les schémas d’URI géo-réplication, consultez [affichent un emplacement sur une carte](http://developer.android.com/guide/components/intents-common.html#Maps).
 
@@ -64,7 +61,7 @@ Pour plus d’informations sur les schémas d’URI géo-réplication, consultez
 
 Outre le schéma de géo-réplication Android prend également en charge le chargement de la rues vues à partir d’une intention. Voici un exemple de l’application de la vue rue lancée à partir de Xamarin.Android :
 
-[![Capture d’écran de l’exemple d’une vue rue](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png)
+[![Capture d’écran de l’exemple d’une vue rue](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 Pour lancer une vue rue, utilisez simplement le `google.streetview` schéma d’URI, comme illustré dans le code suivant :
 

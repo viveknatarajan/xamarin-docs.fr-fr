@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/10/2017
-ms.openlocfilehash: 5237ed35116e5f8983df579d0ab68363996fb06f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b0f205c5ab2c65f0e2a99f912f3961f12a4f2b7a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="transport-layer-security-tls"></a>Transport Layer Security (TLS)
 
@@ -41,12 +41,12 @@ Cette section décrit certaines des options de configuration de mise en réseau 
 
 Ces paramètres se trouvent dans **Options du projet > Options Android** puis en cliquant sur le **avancé** bouton : 
 
-[![Configurer le client HTTP et TLS dans Visual Studio](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png)
+[![Configurer le client HTTP et TLS dans Visual Studio](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 Ces paramètres se trouvent dans **propriétés du projet > Options de Build > Avancé** onglet :
 
-[![Configurer le client HTTP et TLS dans Xamarin Studio et Visual Studio pour Mac](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png)
+[![Configurer le client HTTP et TLS dans Xamarin Studio et Visual Studio pour Mac](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png#lightbox)
 
 -----
 
@@ -79,7 +79,7 @@ Nouveaux projets Xamarin par défaut pour l’implémentation native qui prend e
 >
 > L’option Native est recommandée.
 
-# <a name="platform-specific-details"></a>Détails spécifiques à la plateforme
+## <a name="platform-specific-details"></a>Détails spécifiques à la plateforme
 
 Le résumé ci-dessus décrit les paramètres au niveau du projet pour l’implémentation d’un client HTTP et SSL/TLS dans les projets Xamarin. L’implémentation HttpClient peut également être définie dynamiquement dans le code, et sur iOS, il existe deux options de native.
 
@@ -87,7 +87,7 @@ Le résumé ci-dessus décrit les paramètres au niveau du projet pour l’impl�
 - [**iOS et Mac**](~/cross-platform/macios/http-stack.md)
 
 
-# <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif
 
 Applications doivent utiliser la sécurité TLS (Transport Layer) 1.2 autant que possible.
 De nouvelles applications par défaut maintenant à cette configuration, mais vous devrez peut-être mettre à jour les paramètres dans les applications existantes en suivant les instructions dans cet article.

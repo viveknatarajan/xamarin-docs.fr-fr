@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c59ddde44b0e47122865c55a7964707f106d2691
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilisation de Tables dans le concepteur iOS
 
@@ -40,7 +40,7 @@ Un `UITableView` avec un prototype de contenu est généralement destiné à aff
 
 L’exemple StoryboardTable contient une simple application maître / détail qui utilise les deux types de UITableView dans un plan conceptuel. Le reste de cette section décrit comment créer un exemple de liste de petites tâches qui ressemble à ceci lorsque vous avez terminé :
 
- [ ![Exemples d’écrans](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png)
+ [![Exemples d’écrans](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 L’interface utilisateur sera généré avec un plan conceptuel, et les deux écrans utilisera un UITableView. L’écran principal utilise *contenu de prototype* à la disposition de la ligne et le détail écran utilise *contenu statique* pour créer un formulaire de saisie de données à l’aide de dispositions de cellule personnalisé.
 
@@ -48,7 +48,7 @@ L’interface utilisateur sera généré avec un plan conceptuel, et les deux é
 
 Créer une nouvelle solution dans Visual Studio en utilisant **(créer) un nouveau projet... > unique vue App(C#)**et l’appeler _StoryboardTables_.
 
- [ ![Créer une boîte de dialogue Nouveau projet](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png)
+ [![Créer une boîte de dialogue Nouveau projet](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
 La solution s’ouvre avec certains fichiers c# et un `Main.storyboard` fichier déjà créé. Double-cliquez sur le `Main.storyboard` fichier pour l’ouvrir dans le concepteur iOS.
 
@@ -75,24 +75,24 @@ La première modification à la table de montage séquentiel est la suppression 
 2.  Faites glisser un **Navigation contrôleur** et un **Table View Controller** sur le plan conceptuel à partir de la boîte à outils. 
 3.  Créer un segue à partir du contrôleur d’affichage racine pour le second contrôleur de vue de Table qui vient d’être ajouté. Pour créer le segue, contrôle + glisser *à partir de la cellule de détail* à la UITableViewController récemment ajouté. Choisissez l’option **afficher*** sous **Segue de sélection**. 
 4.  Sélectionnez le nouveau segue que vous avez créé et lui donner un identificateur de référence ce segue dans le code. Cliquez sur le segue et entrez `TaskSegue` pour le **identificateur** dans les **propriétés remplissage**, comme suit :    
-  [ ![Dénomination segue dans Panneau de configuration de propriété](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png) 
+  [![Dénomination segue dans Panneau de configuration de propriété](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. Ensuite, configurez les deux vues de Table en les sélectionnant et à l’aide de la zone de propriétés. Veillez à sélectionner la vue et pas de vue contrôleur : vous pouvez utiliser la structure du Document pour aider à la sélection.
 
 6.  Modifier le contrôleur de la vue racine pour être **contenu : Prototypes dynamique** (la vue sur l’aire de conception est étiquetée **Prototype contenu** ) :
 
-    [ ![Définition de la propriété de contenu pour les prototypes dynamiques](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png)
+    [![Définition de la propriété de contenu pour les prototypes dynamiques](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
 7.  Modifier la nouvelle **UITableViewController** être **contenu : cellules statique**. 
 
 
 8. La nouvelle UITableViewController doit avoir son nom de classe et un identificateur défini. Sélectionnez le contrôleur d’affichage et le type _TaskDetailViewController_ pour le **classe** dans le **propriétés remplissage** – cela créera un nouveau `TaskDetailViewController.cs` fichier de la Solution Remplissage. Entrez le **StoryboardID** en tant que _détail_, comme illustré dans l’exemple ci-dessous. Cela sera utilisée ultérieurement pour charger cette vue dans le code c# :  
 
-    [ ![Définition de l’ID de la table de montage séquentiel](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png)
+    [![Définition de l’ID de la table de montage séquentiel](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. L’aire de conception de plan conceptuel doit maintenant ressembler à ceci (titre de contrôleur racine de la vue navigation de l’objet a été modifié au « Tableau de tâches ») :
 
-    [ ![Aire de conception](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png)  
+    [![Aire de conception](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
 
 
@@ -106,11 +106,11 @@ Maintenant que les vues et est parfait pour sont configurés, les éléments d�
 
 Tout d’abord, sélectionnez la cellule de prototype dans le contrôleur de la vue et définir le **identificateur** en tant que _taskcell_, comme illustré ci-dessous. Celui-ci doit servir plus tard dans le code pour récupérer une instance de cette UITableViewCell :
 
- [ ![définition de l’identificateur de cellule](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png)
+ [![définition de l’identificateur de cellule](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
 
 Ensuite, vous devez créer un bouton qui ajoute de nouvelles tâches, comme illustré ci-dessous :
 
-[ ![élément de bouton dans la barre de navigation de la barre](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png)
+[![élément de bouton dans la barre de navigation de la barre](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
 Effectuez ce qui suit : 
 
@@ -123,7 +123,7 @@ Effectuez ce qui suit :
 
 L’affichage des détails nécessite beaucoup plus de travail. Cellules de vue de tableau doivent être de faire glisser la vue et ensuite remplie avec des étiquettes, des affichages de texte et des boutons. La capture d’écran ci-dessous montre l’interface utilisateur terminé avec deux sections. Une section a trois cellules, trois légendes un commutateur et deux champs de texte, tandis que la deuxième section comporte une cellule contenant deux boutons :
 
- [ ![mise en page de la vue Détails](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png)
+ [![mise en page de la vue Détails](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 Les étapes permettant de générer la disposition complète sont :
 
@@ -137,7 +137,7 @@ Sélectionnez la vue de la table et ouvrez le **remplissage de la propriété**.
 Sélectionnez la section supérieure et, sous **Propriétés > Section de vue Table** modifier **lignes** à _3_, comme illustré ci-dessous :
 
 
- [ ![définition de la section supérieure à trois lignes](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png)
+ [![définition de la section supérieure à trois lignes](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 Pour chaque cellule ouvrir le **propriétés remplissage** et définissez :
 
@@ -152,7 +152,7 @@ Dans la deuxième section, définissez **lignes** à _1_ et saisissez la poigné
 -  **Définir l’arrière-plan**: _supprimer la couleur_ .
 -  Faites glisser deux boutons sur la cellule et de définir leurs titres correctement (par exemple, _enregistrer_ et _supprimer_), comme illustré ci-dessous :
 
-   [ ![deux boutons de paramètre dans la section inférieure](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png)
+   [![deux boutons de paramètre dans la section inférieure](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
 À ce stade vous pouvez également définir des contraintes sur vos cellules et des contrôles pour assurer une disposition adaptative.
 
@@ -342,7 +342,7 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 Ainsi se termine l’exemple de table de montage séquentiel – l’application terminée présente comme suit :
 
-[ ![Application terminée](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png)
+[![Application terminée](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 L’exemple montre :
 
@@ -356,4 +356,4 @@ L’exemple montre :
 ## <a name="related-links"></a>Liens associés
 
 - [StoryboardTable (exemple)](https://developer.xamarin.com/samples/monotouch/StoryboardTable/)
-- [Introduction à des plans conceptuels](~/ios/user-interface/storyboards/index.md)
+- [Introduction aux storyboards](~/ios/user-interface/storyboards/index.md)

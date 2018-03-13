@@ -3,16 +3,17 @@ title: "Liaison iOS bibliothèques"
 description: "Comment créer des bibliothèques natives iOS (et CocoaPods) accessible dans les applications Xamarin."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3afe1a03299e600502d49b1db039af4c6642e131
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eb3edb007885d9fe839c2407a2581c9824e109c9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="binding-ios-libraries"></a>Liaison iOS bibliothèques
 
@@ -39,7 +40,11 @@ Objectif Sharpie 3.0 a introduit la possibilité de lier directement des Cocoapo
 Cette page fournit une procédure pas à pas détaillées de création d’un projet de liaison iOS à l’aide de la source ouverte [ **InfColorPicker** ](https://github.com/InfinitApps/InfColorPicker) projet Objective-C comme exemple. Le **InfColorPicker** bibliothèque fournit un contrôleur de vue réutilisables qui permettent à l’utilisateur de sélectionner une couleur en fonction de sa représentation sous forme de TSL, effectuer une sélection de couleur plus conviviaux.
 Objectif Sharpie permet de faciliter le processus de liaison.
 
+## <a name="xamarin-university-lightning-lecture"></a>Xamarin University éclair conférence
 
+> [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
+
+**e/s en C/C++, les liaisons par [Xamarin University](https://university.xamarin.com/)**
 
 ## <a name="related-links"></a>Liens associés
 

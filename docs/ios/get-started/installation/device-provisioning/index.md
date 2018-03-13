@@ -8,21 +8,21 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/15/2017
-ms.openlocfilehash: 1a5120f088fca6997eef3a1bc27126b442380cac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b54adc28e318b263052bb6073390556a198cffe7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-provisioning"></a>Provisionnement des appareils
 
-_Une fois Xamarin.iOS installé, l’étape suivante du développement iOS consiste à provisionner l’appareil iOS. Ce guide explique comment demander des profils et des certificats de développement, comment utiliser des services d’application et comment déployer une application sur un appareil._
+_Une fois Xamarin.iOS installé avec succès, l’étape suivante du développement iOS consiste à configurer l’appareil iOS. Ce guide explique comment demander des profils et des certificats de développement, comment utiliser des services d’application et comment déployer une application sur un appareil._
 
 Pendant le développement d’une application Xamarin.iOS, il est essentiel de la tester en la déployant sur un appareil physique, en plus du simulateur. Des bogues propres aux appareils et des problèmes de performance peuvent surgir lors de l’exécution sur un appareil, en raison des limites matérielles comme la mémoire ou la connectivité réseau. Pour effectuer des tests sur un appareil physique, celui-ci doit être *provisionné* et Apple doit être informé que l’appareil va servir à des tests.
 
 Les sections mises en surbrillance dans l’image ci-dessous indiquent les étapes exigées pour préparer le provisionnement iOS :
 
-[![](images/provisioningdiagram.png "Les sections mises en surbrillance dans cette image indiquent les étapes exigées pour préparer le provisionnement iOS")](images/provisioningdiagram.png)
+[![](images/provisioningdiagram.png "Les sections mises en surbrillance dans cette image indiquent les étapes exigées pour préparer le provisionnement iOS")](images/provisioningdiagram.png#lightbox)
 
 L’étape suivante consiste à distribuer l’application. Pour plus d’informations sur le déploiement, consultez les guides de [distribution d’applications](~/ios/deploy-test/app-distribution/index.md).
 

@@ -2,20 +2,19 @@
 title: Polices
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA$
+ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 01/30/2018
-ms.openlocfilehash: 3b7c45a50ffb0748b5f63edfd444cb02af3fdc67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 7cde19a153585a6f9739aa02f3ea69dc4f09be58
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fonts"></a>Polices
 
-<a name="overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -60,7 +59,6 @@ Tant que d’une manière appropriée, les polices sont fournies à une applicat
 
 Ce guide sera tout d’abord expliquent comment utiliser des polices comme une ressource Android et passez à expliquer comment télécharger les polices lors de l’exécution.
 
-<a name="fonts_as_a_resource" />
 
 ## <a name="fonts-as-a-resource"></a>Polices en tant que ressource
 
@@ -139,7 +137,6 @@ Une fois qu’une famille de polices a été définie, il peut être utilisé de
     />
 ```
 
-<a name="programatically_assigning_fonts" />
 
 ### <a name="programmatically-assigning-fonts"></a>Assignation par programme des polices
 
@@ -158,7 +155,6 @@ var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceSt
 textView1.Typeface = typeface;
 ```
 
-<a name="downloading_fonts" />
 
 ## <a name="downloading-fonts"></a>Téléchargement de polices
 
@@ -202,7 +198,6 @@ Le `font-family` élément contient les attributs suivants, en déclarant les in
 
 Une fois les polices sont définis, il peut être nécessaire de fournir des informations sur la _les certificats de police_ impliqués dans le téléchargement.
 
-<a name="font_certificates" />
 
 ### <a name="font-certificates"></a>Certificats de police
 
@@ -232,7 +227,6 @@ Par exemple, le code XML suivant est nommé **Resources/values/fonts_cert.xml** 
 
 Ces fichiers de ressources en place, l’application est capable de télécharger les polices.
 
-<a name="downloadable_font_resource_declaration" />
 
 ### <a name="declaring-downloadable-fonts-as-resources"></a>Déclarer des polices à télécharger en tant que ressources
 
@@ -253,7 +247,6 @@ Pour télécharger ces polices, ils doivent être déclarés dans **AndroidManif
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
 
-<a name="programatically_downloading_fonts" />
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>Téléchargement d’une police avec les API de police
 
@@ -326,10 +319,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     }
 }
 
-
-/// <summary>
-/// EventArg when a font has been downloaded. 
-/// </summary>
 public class FontDownloadEventArg : EventArgs
 {
     public FontDownloadEventArg(Android.Graphics.Typeface typeface)
@@ -360,7 +349,6 @@ fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

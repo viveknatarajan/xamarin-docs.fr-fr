@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 22a0b0f5df5a44f2409a59b26eb841b97c920d8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 771e1607bc4e6be8f0991e159b5d34f6d4ea9c02
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fonts"></a>Polices
 
@@ -181,7 +181,7 @@ Lorsque vous spécifiez un type de police personnalisée, il est toujours judici
 
 À l’aide d’une police autre que les polices intégrés requiert certains codage spécifique à la plateforme. Cette capture d’écran montre la police personnalisée **correspondance** de [les polices open source de Google](https://www.google.com/fonts) rendus sur iOS, Android et Windows Phone à l’aide de Xamarin.Forms.
 
- [ ![Une police personnalisée sur iOS et Android](fonts-images/custom-sml.png "exemple des polices personnalisées")](fonts-images/custom.png "exemple des polices personnalisées")
+ [![Une police personnalisée sur iOS et Android](fonts-images/custom-sml.png "exemple des polices personnalisées")](fonts-images/custom.png#lightbox "exemple des polices personnalisées")
 
 Les étapes requises pour chaque plateforme sont décrites ci-dessous. En incluant des fichiers de police personnalisée à une application, veillez à vérifier que les licences de la police autorise pour la distribution.
 
@@ -229,7 +229,7 @@ new Label
 > [!NOTE]
 > Notez que le nom de fichier de police et le nom de la police peuvent être différents. Pour découvrir le nom de la police sur Windows, cliquez sur le fichier .ttf et sélectionnez **aperçu**. Le nom de la police peut ensuite être déterminé à partir de la fenêtre d’aperçu.
 
-Le code commun pour l’application est maintenant terminé. Le code du numéroteur téléphonique spécifique à la plateforme sera désormais implémenté comme [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
+Le code commun pour l’application est maintenant complet. Le code du numéroteur téléphonique spécifique à la plateforme sera désormais implémenté comme [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 ### <a name="xaml"></a>XAML
 

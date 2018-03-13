@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 234bd79754ae7f328d3207757156089441fc588c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0d418786a7364946e4e20100157fa0907b66deeb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-view"></a>Affichage Web
 
@@ -96,7 +96,7 @@ Ce code initialise le membre [ `WebView` ](https://developer.xamarin.com/api/typ
 
 Générez et exécutez l’application. Vous devez voir une application de visionneuse de page web simple que celui affiché dans la capture d’écran suivante :
 
-[![Exemple d’application affichant un WebView](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png)
+[![Exemple d’application affichant un WebView](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
 Pour gérer les **précédent** bouton sur une touche, ajoutez le code suivant à l’aide d’instruction :
 
@@ -122,7 +122,7 @@ Cela [ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/And
 
 Exécutez de nouveau l'application. Vous devez maintenant être en mesure de suivre les liens et de naviguer en arrière dans l’historique de la page :
 
-[![Captures d’écran du bouton précédent dans l’action](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png)
+[![Captures d’écran du bouton précédent dans l’action](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
 
 *Des parties de cette page sont des modifications en fonction de travail créés et partagés par projet Android Open Source utilisés en fonction des conditions décrites dans le*

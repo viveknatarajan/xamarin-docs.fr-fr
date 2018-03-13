@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: 3de935fd407524d7ba62a93205e333c7dd7adde0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b62af404ce0d3f5dacc479682a3002af49e968d1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="date-picker"></a>Sélecteur de dates
 
@@ -24,7 +24,7 @@ Les applications Android modernes doivent afficher le `DatePickerDialog` dans un
 
 Ce guide va vous montrer comment utiliser le `DatePickerDialog`, elle est encapsulée dans un `DialogFragment`. L’exemple d’application affiche la `DatePickerDialog` comme une boîte de dialogue modale lorsque l’utilisateur clique sur un bouton sur une activité. Lorsque la date est définie par l’utilisateur, un `TextView` met à jour avec la date à laquelle a été sélectionnée.
 
-[![Bouton de capture d’écran de prélèvement Date suivie de boîte de dialogue Sélecteur de dates](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png)
+[![Bouton de capture d’écran de prélèvement Date suivie de boîte de dialogue Sélecteur de dates](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -49,7 +49,6 @@ Il existe plusieurs façons le `DialogFragment` peut retourner la date sélectio
 3. **Utilisez un `Action`**  &ndash; le `DialogFragment` peuvent appeler une `Action<DateTime>` pour afficher la date dans l’activité. L’activité fournira le `Action<DateTime` lors de l’instanciation du `DialogFragment`. Cet exemple utilise la technique du tiers et nécessitent que l’activité de fournir un `Action<DateTime>` à la `DialogFragment`.
 
 
-<a name="extending_dialogfragment" />
 
 ### <a name="extending-dialogfragment"></a>Extension DialogFragment
 
@@ -99,10 +98,9 @@ Lorsque le fragment doit être affichée, Android appellera la méthode `OnCreat
 
 
 > [!NOTE]
-> **Remarque :** n’oubliez pas que la valeur du mois lorsque `IOnDateSetListener.OnDateSet` est appelé est dans la plage de 0 à 11 et pas de 1 à 12. Le jour du mois seront dans la plage de 1 à 31 (selon les mois a été sélectionné).
+> N’oubliez pas que la valeur du mois lorsque `IOnDateSetListener.OnDateSet` est appelé est dans la plage de 0 à 11 et pas de 1 à 12. Le jour du mois seront dans la plage de 1 à 31 (selon les mois a été sélectionné).
 
 
-<a name="date_picker_fragment" />
 
 ### <a name="showing-the-datepickerfragment"></a>Afficher le DatePickerFragment
 
@@ -136,7 +134,6 @@ public class MainActivity : Activity
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>Récapitulatif
 

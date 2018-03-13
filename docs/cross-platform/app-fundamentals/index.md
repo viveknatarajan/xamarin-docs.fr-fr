@@ -3,22 +3,22 @@ title: Notions de base des applications
 description: "Principaux Concepts d’applications"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 9e4e7705e1ca29b6abf716a48ae3fa0e7c1a19ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c5b823370e5b65fbcf9ba366cb89c05e003b1a89
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>Notions de base des applications
 
 Cette section fournit un guide sur certains des plus courants des tâches de choses ou concepts que les développeurs doivent connaître lors du développement d’applications mobiles.
 
-##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Création d’applications multiplateformes](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
 En choisissant de Xamarin et en conservant les quelques éléments à l’esprit lorsque vous concevez et développez vos applications mobiles, vous pouvez réaliser code considérable partage entre les plateformes mobiles, réduire le temps de commercialisation, tirer parti des compétences existantes, répondre à la demande du client pour l’accès mobile, et réduire la complexité d’inter-plateformes. &nbsp;Ce document présente des recommandations principales pour tirer parti de ces avantages pour les applications d’utilitaire et de productivité.
 
@@ -62,7 +62,7 @@ Conseils de création de packages NuGet qui fonctionnent avec la plateforme de X
 La plupart des applications ont une spécification pour enregistrer les données sur le périphérique local. Sauf si la quantité de données est petite plus simplement, ceci nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès à la base de données. iOS et Android ont le moteur de base de données SQLite « intégré » et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Le [accès aux données Android](~/android/data-cloud/data-access/index.md), [iOS l’accès aux données](~/ios/data-cloud/data/index.md), et [Xamarin.Forms l’accès aux données](~/xamarin-forms/data-cloud/index.md) guides fournissent des exemples d’accès aux SQLite sur chaque plateforme.
 
 
-##  <a name="transport-layer-securitytransport-layer-securitymd"></a>[Sécurité de la couche transport](transport-layer-security.md)
+##  <a name="transport-layer-securitytransport-layer-securitymd"></a>[Sécurité de la couche de transport](transport-layer-security.md)
 
 Informations sur l’implémentation de SSL/TLS correcte selectingthe pour sécuriser la connectivité de réseau de votre application.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 83e01bba82713b55a0a69858c2a83aa243f71588
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 70703797792a2f667a2eb20cbc45d1736e5e6b9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-views"></a>Affichages Web
 
@@ -40,7 +40,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 Cela génère l’affichage web suivant :
 
-[ ![](uiwebview-images/webview.png "L’effet de ScalesPagesToFit")](uiwebview-images/webview.png)
+[![](uiwebview-images/webview.png "L’effet de ScalesPagesToFit")](uiwebview-images/webview.png#lightbox)
 
 Pour plus d’informations sur l’utilisation de `UIWebView`, consultez les recettes suivantes :
 
@@ -68,7 +68,7 @@ Le code ci-dessous peut être utilisé pour lancer une `WKWebView` dans votre ap
 
 Cela génère l’affichage web suivant :
 
-[ ![](uiwebview-images/wkwebview.png "Une vue de web exemple sans ScalesPagesToFit")](uiwebview-images/wkwebview.png)
+[![](uiwebview-images/wkwebview.png "Une vue de web exemple sans ScalesPagesToFit")](uiwebview-images/wkwebview.png#lightbox)
 
 Il est important de noter que `WKWebView` se trouve dans l’espace de noms WebKit, vous devrez ajouter cela à l’aide de la directive au début de votre classe.
 
@@ -98,7 +98,7 @@ PresentViewController(sfViewController, true, null);
 
 Cela génère l’affichage web suivant :
 
-[ ![](uiwebview-images/sfsafariviewcontroller.png "Une vue web d’exemple avec SFSafariViewController")](uiwebview-images/sfsafariviewcontroller.png)
+[![](uiwebview-images/sfsafariviewcontroller.png "Une vue web d’exemple avec SFSafariViewController")](uiwebview-images/sfsafariviewcontroller.png#lightbox)
 
 ## <a name="safari"></a>Safari
 
@@ -113,7 +113,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 Cela génère l’affichage web suivant :
 
-[ ![](uiwebview-images/safari.png "Une page web présentée dans Safari")](uiwebview-images/safari.png)
+[![](uiwebview-images/safari.png "Une page web présentée dans Safari")](uiwebview-images/safari.png#lightbox)
 
 Navigation dans les utilisateurs en dehors de votre application à Safari doit généralement toujours être évitée. La plupart des utilisateurs s’attendront pas navigation en dehors de votre application, donc si vous naviguez en dehors de votre application, les utilisateurs ne peuvent jamais retourner, essentiellement tuer engagement.
 

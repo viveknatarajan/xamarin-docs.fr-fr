@@ -3,14 +3,15 @@ title: "Résumé du chapitre 24. Navigation entre les pages"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b8eac45c52093dea23c08a19d219fa0bbd8d55ab
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3390a298cd8d9967f0aea2bd9fb5a90830714ba5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Résumé du chapitre 24. Navigation entre les pages
 
@@ -99,7 +100,7 @@ Si une page modale particulier peut être accédée à plusieurs fois, il doit c
 
 Le [ **ViewGalleryType** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType) exemple montre comment utiliser un `TableView` pour répertorier les éléments de menu. Chaque élément est associé un `Type` objet pour une page particulière. Lorsque cet élément est sélectionné, le programme instancie la page et navigue vers elle.
 
-[![Capture d’écran de triple du Type de la vue bibliothèque](images/ch24fg21-small.png "TableView répertoriant les éléments de Menu")](images/ch24fg21-large.png "TableView répertoriant les éléments de Menu")
+[![Capture d’écran de triple du Type de la vue bibliothèque](images/ch24fg21-small.png "TableView répertoriant les éléments de Menu")](images/ch24fg21-large.png#lightbox "TableView répertoriant les éléments de Menu")
 
 Le [ **ViewGalleryInst** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst) exemple est un peu différent dans la mesure où le menu contient des instances de chaque page plutôt que des types. Cela permet de conserver les informations à partir de chaque page, mais toutes les pages doivent être instanciées au démarrage du programme.
 

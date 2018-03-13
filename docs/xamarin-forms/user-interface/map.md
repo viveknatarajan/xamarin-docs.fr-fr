@@ -3,16 +3,16 @@ title: Carte
 description: "Xamarin.Forms utilisant l’API de mappage natif sur chaque plateforme."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
+ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 98e6cade952e656046c6c0981a0b73ff0894c9d6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2f0ad800ed1ab3a336f10dd4431e234ac4ff9675
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="map"></a>Carte
 
@@ -28,7 +28,7 @@ Une fois configuré, le `Map` contrôle fonctionne exactement comme tout autre �
 
 Le contrôle de carte a été utilisé dans le [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) exemple illustré ci-dessous.
 
- [ ![Cartes dans l’exemple MobileCRM](map-images/maps-zoom-sml.png "exemple de mappage de contrôle")](map-images/maps-zoom.png "exemple de mappage de contrôle")
+ [![Cartes dans l’exemple MobileCRM](map-images/maps-zoom-sml.png "exemple de mappage de contrôle")](map-images/maps-zoom.png#lightbox "exemple de mappage de contrôle")
 
 Fonctionnalités de carte peuvent être améliorée en créant un [mapper convertisseur personnalisé](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -103,7 +103,7 @@ Après avoir suivi ces instructions, collez la clé d’API dans le **Properties
 Sans une clé d’API valide le contrôle maps affiche sous forme de zone grise sur Android.
 
 > [!NOTE]
-> **Remarque**: n’oubliez pas de générer une autre clé de l’aide du fichier de magasin de clés qui est utilisé pour signer la version de n’importe quelle application qui est téléchargée vers le Google Play store. La clé que vous générez pour le développement et le débogage ne fonctionnera pas et l’application téléchargée à partir de Google Play rompu affichage de la carte. Pensez également à régénérer la touche si l’application **nom du Package** modifications.
+> N’oubliez pas de générer une autre clé de l’aide du fichier de magasin de clés qui est utilisé pour signer la version de n’importe quelle application qui est téléchargée vers le Google Play store. La clé que vous générez pour le développement et le débogage ne fonctionnera pas et l’application téléchargée à partir de Google Play rompu affichage de la carte. Pensez également à régénérer la touche si l’application **nom du Package** modifications.
 
 Vous devez également activer des autorisations appropriées en cliquant sur le projet Android et en sélectionnant **Options > Générer > Application Android** et son cycle les éléments suivants :
 
@@ -185,7 +185,7 @@ slider.ValueChanged += (sender, e) => {
 };
 ```
 
- [ ![Cartes avec zoom](map-images/maps-zoom-sml.png "contrôle de carte Zoom")](map-images/maps-zoom.png "mappage de contrôle de Zoom")
+ [![Cartes avec zoom](map-images/maps-zoom-sml.png "contrôle de carte Zoom")](map-images/maps-zoom.png#lightbox "mappage de contrôle de Zoom")
 
 ### <a name="map-pins"></a>Codes confidentiels de carte
 

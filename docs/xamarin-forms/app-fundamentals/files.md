@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: 605374c0f2bfe656e564e48d14ffe18ce5b7dfe5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c6d10025ccc038ba160fe3c09f6ce92e97d916d2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="files"></a>Fichiers
 
@@ -40,18 +40,18 @@ Pour incorporer un fichier dans un **PCL** assembly, créer ou ajouter un fichie
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Configuration incorporé action de génération ressource](files-images/vs-embeddedresource-sml.png "paramètre EmbeddedResource Buiidaction")](files-images/vs-embeddedresource.png "paramètre EmbeddedResource génération")
+[![Configuration incorporé action de génération ressource](files-images/vs-embeddedresource-sml.png "paramètre EmbeddedResource Buiidaction")](files-images/vs-embeddedresource.png#lightbox "paramètre EmbeddedResource génération")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![Fichier texte incorporé dans la bibliothèque PCL, configuration de ressource incorporée build action](files-images/xs-embeddedresource-sml.png "paramètre EmbeddedResource Buiidaction")](files-images/xs-embeddedresource.png "paramètre EmbeddedResource génération")
+[![Fichier texte incorporé dans la bibliothèque PCL, configuration de ressource incorporée build action](files-images/xs-embeddedresource-sml.png "paramètre EmbeddedResource Buiidaction")](files-images/xs-embeddedresource.png#lightbox "paramètre EmbeddedResource génération")
 
 -----
 
 `GetManifestResourceStream` est utilisé pour accéder au fichier incorporé via son **ID de ressource**. Par défaut, l’ID de ressource est précédé de l’espace de noms par défaut pour le projet, il est incorporé dans - le nom de fichier dans ce cas l’assembly est **WorkingWithFiles** et le nom de fichier est **PCLTextResource.txt**, Par conséquent, l’ID de ressource est `WorkingWithFiles.PCLTextResource.txt`.
 
 ```csharp
-var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
 string text = "";
 using (var reader = new System.IO.StreamReader (stream)) {
@@ -61,12 +61,12 @@ using (var reader = new System.IO.StreamReader (stream)) {
 
 Le `text` peut ensuite être utilisée pour afficher le texte ou sinon l’utiliser dans le code. Cette capture d’écran de la [exemple d’application](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) affiche le texte affiché dans un `Label` contrôle.
 
- [ ![Fichier texte incorporé dans la bibliothèque de classes portables](files-images/pcltext-sml.png "fichier texte incorporé dans la bibliothèque de classes portables affichés dans l’application")](files-images/pcltext.png "fichier texte incorporé dans la bibliothèque de classes portables affichés dans l’application")
+ [![Fichier texte incorporé dans la bibliothèque de classes portables](files-images/pcltext-sml.png "fichier texte incorporé dans la bibliothèque de classes portables affichés dans l’application")](files-images/pcltext.png#lightbox "fichier texte incorporé dans la bibliothèque de classes portables affichés dans l’application")
 
 Le chargement et la désérialisation d’un document XML sont tout aussi simple. Le code suivant illustre un fichier XML qui est chargé et désérialisé à partir d’une ressource, puis lié à un `ListView` pour l’affichage. Le fichier XML contient un tableau de `Monkey` objets (la classe est définie dans l’exemple de code).
 
 ```csharp
-var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
 List<Monkey> monkeys;
 using (var reader = new System.IO.StreamReader (stream)) {
@@ -77,7 +77,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [ ![Fichier XML incorporé dans la bibliothèque PCL, affiché dans ListView](files-images/pclxml-sml.png "fichier XML incorporé dans la bibliothèque de classes portables affichés dans ListView")](files-images/pclxml.png "fichier XML incorporé dans la bibliothèque de classes portables affichés dans ListView")
+ [![Fichier XML incorporé dans la bibliothèque PCL, affiché dans ListView](files-images/pclxml-sml.png "fichier XML incorporé dans la bibliothèque de classes portables affichés dans ListView")](files-images/pclxml.png#lightbox "fichier XML incorporé dans la bibliothèque de classes portables affichés dans ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -106,7 +106,7 @@ var resourcePrefix = "WorkingWithFiles.WinPhone.";
 
 Debug.WriteLine("Using this resource prefix: " + resourcePrefix);
 // note that the prefix includes the trailing period '.' that is required
-var assembly = typeof(SharedPage).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SharedPage)).Assembly;
 Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
@@ -129,7 +129,7 @@ Comme il est parfois difficile à comprendre pourquoi une ressource particulièr
 using System.Reflection;
 // ...
 // use for debugging, not in released app code!
-var assembly = typeof(SharedPage).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SharedPage)).Assembly;
 foreach (var res in assembly.GetManifestResourceNames()) {
     System.Diagnostics.Debug.WriteLine("found resource: " + res);
 }
@@ -141,7 +141,7 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 Parce que Xamarin.Forms s’exécute sur plusieurs plateformes, chacun avec son propre système de fichiers, il n’existe aucune approche unique pour charger et enregistrer les fichiers créés par l’utilisateur. Pour illustrer comment enregistrer et charger des fichiers texte que l’exemple d’application inclut un écran qui enregistre et charge une entrée utilisateur - l’écran terminé est indiqué ci-dessous :
 
- [ ![Enregistrement et chargement de texte](files-images/saveandload-sml.png "l’enregistrement et chargement de fichiers dans l’application")](files-images/saveandload.png "l’enregistrement et chargement de fichiers dans l’application")
+ [![Enregistrement et chargement de texte](files-images/saveandload-sml.png "l’enregistrement et chargement de fichiers dans l’application")](files-images/saveandload.png#lightbox "l’enregistrement et chargement de fichiers dans l’application")
 
 Chaque plateforme possède une structure de répertoire légèrement différente et des fonctionnalités de système de fichiers différent, par exemple Xamarin.iOS et Xamarin.Android prennent en charge la plupart `System.IO` fonctionnalité, mais Windows Phone prend uniquement en charge `IsolatedStorage` et [ `Windows.Storage` ](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) API.
 

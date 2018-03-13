@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c78396ce55c776c615f3b3027a97b5a334c0b7f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf519cb964bf852c74249c874b9a934d4a6cf5c3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="callkit"></a>CallKit
 
@@ -52,11 +52,11 @@ Les sections suivantes couvrent les l’architecture CallKit, entrants et sortan
 
 IOS 10, Apple a arrêté CallKit dans tous les Services système tels que les appels effectués sur CarPlay, par exemple, sont connus à l’interface utilisateur de système via CallKit. Dans l’exemple ci-dessous, étant donné que MonkeyCall adopte CallKit, il est inconnu du système dans la même façon que les Services système intégré et tous les mêmes fonctionnalités :
 
-[ ![](callkit-images/callkit01.png "La pile de CallKit Service")](callkit-images/callkit01.png)
+[![](callkit-images/callkit01.png "La pile de CallKit Service")](callkit-images/callkit01.png#lightbox)
 
 Regardez plus près le MonkeyCall application dans le diagramme ci-dessus. L’application contient tout le code pour communiquer avec son propre réseau et contient ses propres Interfaces utilisateur. Il contient des liens dans CallKit pour communiquer avec le système :
 
-[ ![](callkit-images/callkit02.png "Architecture d’application MonkeyCall")](callkit-images/callkit02.png)
+[![](callkit-images/callkit02.png "Architecture d’application MonkeyCall")](callkit-images/callkit02.png#lightbox)
 
 Il existe deux interfaces principales dans CallKit utilisé par l’application :
 
@@ -75,7 +75,7 @@ Une application doit utiliser le `CXProvider` pour les éléments suivants :
 
 Lorsque l’application souhaite communiquer avec le système, il utilise le `CXCallUpdate` classe et lorsque le système doit communiquer avec l’application, il utilise le `CXAction` classe :
 
-[ ![](callkit-images/callkit03.png "Communication avec le système via une CXProvider")](callkit-images/callkit03.png)
+[![](callkit-images/callkit03.png "Communication avec le système via une CXProvider")](callkit-images/callkit03.png#lightbox)
 
 ### <a name="the-cxcallcontroller"></a>Le CXCallController
 
@@ -89,7 +89,7 @@ Une application doit utiliser le `CXCallController` pour les éléments suivants
 
 Lorsque l’application souhaite communiquer les actions utilisateur local pour le système, il utilise le `CXTransaction` classe :
 
-[ ![](callkit-images/callkit04.png "Création de rapports dans le système à l’aide d’un CXCallController")](callkit-images/callkit04.png)
+[![](callkit-images/callkit04.png "Création de rapports dans le système à l’aide d’un CXCallController")](callkit-images/callkit04.png#lightbox)
 
 ## <a name="implementing-callkit"></a>Implémentation de CallKit
 
@@ -748,7 +748,7 @@ Les sections suivantes prendra une présentation détaillée comment une applica
 
 Lorsqu’un utilisateur distant a démarré une conversation VOIP avec l’utilisateur local, les événements suivants se produisent :
 
-[ ![](callkit-images/callkit05.png "Un utilisateur distant a démarré une conversation VOIP")](callkit-images/callkit05.png)
+[![](callkit-images/callkit05.png "Un utilisateur distant a démarré une conversation VOIP")](callkit-images/callkit05.png#lightbox)
 
 1. L’application reçoit une notification à partir de son réseau de Communications qu’il existe un appel VOIP entrant.
 2. L’application utilise le `CXProvider` pour envoyer un `CXCallUpdate` au système informant de l’appel.
@@ -783,7 +783,7 @@ Ce code crée un nouveau `CXCallUpdate` de l’instance et attache un handle qui
 
 Si l’utilisateur souhaite recevoir l’appel VOIP entrant, les événements suivants se produisent :
 
-[ ![](callkit-images/callkit06.png "L’utilisateur répond à l’appel VOIP entrant")](callkit-images/callkit06.png)
+[![](callkit-images/callkit06.png "L’utilisateur répond à l’appel VOIP entrant")](callkit-images/callkit06.png#lightbox)
 
 1. L’interface utilisateur système informe le système que l’utilisateur souhaite répondre à l’appel VOIP.
 2. Le système envoie un `CXAnswerCallAction` à l’application `CXProvider` informant de l’intention de réponse.
@@ -824,7 +824,7 @@ Ce code recherche tout d’abord l’appel donné dans sa liste d’appels activ
 
 Si l’utilisateur souhaite mettre fin à l’appel à partir de l’interface utilisateur de l’application, les événements suivants se produisent :
 
-[ ![](callkit-images/callkit07.png "L’utilisateur met fin à l’appel à partir de l’interface utilisateur de l’application")](callkit-images/callkit07.png)
+[![](callkit-images/callkit07.png "L’utilisateur met fin à l’appel à partir de l’interface utilisateur de l’application")](callkit-images/callkit07.png#lightbox)
 
 1. L’application crée `CXEndCallAction` qui obtient regroupée dans un `CXTransaction` qui est envoyé au système pour lui indiquer que l’appel se termine.
 2. Le système vérifie l’intention d’appeler End et envoie le `CXEndCallAction` vers l’application via le `CXProvider`.
@@ -874,7 +874,7 @@ Dans le champ de cas ci-dessus, le système envoie un `CXTransaction` à l’app
 
 Si l’utilisateur appuie sur une entrée dans la liste récents (dans l’application de téléphone), par exemple, qui est d’un appel de l’application, il recevront un _intention de démarrer l’appeler_ par le système :
 
-[ ![](callkit-images/callkit08.png "Réception d’un mode d’appel de début")](callkit-images/callkit08.png)
+[![](callkit-images/callkit08.png "Réception d’un mode d’appel de début")](callkit-images/callkit08.png#lightbox)
 
 1. L’application crée un _Action de démarrage appeler_ en fonction de la démarrer appeler intention qu’il a reçu à partir du système. 
 2. L’application utilise le `CXCallController` pour demander l’Action appeler un démarrage à partir du système.
@@ -1119,7 +1119,7 @@ En outre, CallKit a accès à d’autres indicateurs de routage audio qui peut a
 
 Pendant le cycle de vie d’un type VOIP appeler à l’aide de CallKit, l’application doit configurer le flux de données Audio CallKit fournit. Examinons l’exemple suivant :
 
-[ ![](callkit-images/callkit09.png "La séquence d’Action de démarrage appel")](callkit-images/callkit09.png)
+[![](callkit-images/callkit09.png "La séquence d’Action de démarrage appel")](callkit-images/callkit09.png#lightbox)
 
 1. Une Action d’appel de démarrage est reçue par l’application pour répondre à un appel entrant.
 2. Avant que cette Action est remplie par l’application, il fournit la configuration a besoin pour son `AVAudioSession`.
@@ -1140,13 +1140,13 @@ Pour implémenter une Extension de répertoire appeler dans une application Xama
 2. Avec le bouton droit sur le nom de la Solution dans le **l’Explorateur de solutions** et sélectionnez **ajouter** > **ajouter un nouveau projet**.
 3. Sélectionnez **iOS** > **Extensions** > **Extensions d’annuaire appeler** et cliquez sur le **suivant** bouton : 
 
-    [ ![](callkit-images/calldir01.png "Création d’une nouvelle Extension de répertoire appeler")](callkit-images/calldir01.png)
+    [![](callkit-images/calldir01.png "Création d’une nouvelle Extension de répertoire appeler")](callkit-images/calldir01.png#lightbox)
 4. Entrez un **nom** pour l’extension et cliquez sur le **suivant** bouton : 
 
-    [ ![](callkit-images/calldir02.png "Entrez un nom pour l’extension")](callkit-images/calldir02.png)
+    [![](callkit-images/calldir02.png "Entrez un nom pour l’extension")](callkit-images/calldir02.png#lightbox)
 5. Ajuster la **nom du projet** et/ou **nom de la Solution** si nécessaire et cliquez sur le **créer** bouton : 
 
-    [ ![](callkit-images/calldir03.png "Création du projet")](callkit-images/calldir03.png) 
+    [![](callkit-images/calldir03.png "Création du projet")](callkit-images/calldir03.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -1154,7 +1154,7 @@ Pour implémenter une Extension de répertoire appeler dans une application Xama
 2. Avec le bouton droit sur le nom de la Solution dans le **l’Explorateur de solutions** et sélectionnez **ajouter** > **ajouter un nouveau projet**.
 3. Sélectionnez **iOS** > **Extensions** > **Extensions d’annuaire appeler** et cliquez sur le **suivant** bouton : 
 
-    [ ![](callkit-images/calldir01w.png "Création d’une nouvelle Extension de répertoire appeler")](callkit-images/calldir01.png)
+    [![](callkit-images/calldir01w.png "Création d’une nouvelle Extension de répertoire appeler")](callkit-images/calldir01.png#lightbox)
 4. Entrez un **nom** pour l’extension et cliquez sur le **OK** bouton
 
 -----

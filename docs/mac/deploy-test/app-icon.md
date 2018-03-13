@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 742780ad87672bd8a3e2bb3cb66ca582a680d44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28218bcbf6527c818fdf2988375d1c353e9f1d27
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icon"></a>Icône d'application
 
@@ -122,7 +122,7 @@ Effectuez ce qui suit :
     ![Modification de l’AppIcons.appiconset](app-icon-images/intro01.png "Modification de l’AppIcons.appiconset")
 2. Pour chaque taille d’icône exigée, cliquez sur l’icône, puis sélectionnez le fichier image correspondant créé ci-dessus : 
 
-    [![Sélection d’une image d’icône](app-icon-images/intro02.png "Sélection d’une image d’icône")](app-icon-images/intro02-large.png)
+    [![Sélection d’une image d’icône](app-icon-images/intro02.png "Sélection d’une image d’icône")](app-icon-images/intro02-large.png#lightbox)
 3. Enregistrez les modifications apportées.
 
 
@@ -135,7 +135,7 @@ Effectuez ce qui suit :
 1. Double-cliquez sur le fichier **Info.plist** dans le **Panneau Solutions** pour ouvrir les **Options du projet**.
 2. Dans la section **Cible d’application Mac OS X**, cliquez sur **Icônes d’application** pour sélectionner le fichier `AppIcons.appiconset` : 
 
-    [![Définition du jeu d’icônes](app-icon-images/icon01.png "Définition du jeu d’icônes")](app-icon-images/icon01-large.png)
+    [![Définition du jeu d’icônes](app-icon-images/icon01.png "Définition du jeu d’icônes")](app-icon-images/icon01-large.png#lightbox)
 3. Enregistrez les modifications.
 
 Quand l’application est exécutée, la nouvelle icône s’affiche dans la station d’accueil :

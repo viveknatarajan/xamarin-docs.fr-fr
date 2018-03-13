@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 2acaef5fd42b867e88fb9b81d401ea752480124a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 81d4aec3153a4cb7bbb0f3577c5a67acd430f279
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-performance"></a>Performances de ListView
 
@@ -45,7 +45,7 @@ public enum ListViewCachingStrategy
 ```
 
 > [!NOTE]
-> **Remarque**: le Universal Windows Platform (UWP) ignore le [ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) mise en cache de la stratégie, car elle utilise toujours la mise en cache pour améliorer les performances. Par conséquent, par défaut il se comporte comme si le [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) mise en cache de la stratégie est appliquée.
+> La plateforme Windows universelle (UWP) ignore le [ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) mise en cache de la stratégie, car elle utilise toujours la mise en cache pour améliorer les performances. Par conséquent, par défaut il se comporte comme si le [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) mise en cache de la stratégie est appliquée.
 
 ### <a name="retainelement"></a>RetainElement
 
@@ -101,14 +101,14 @@ Sur iOS et Android, si les cellules utilisent les convertisseurs personnalisés,
 Lorsqu’un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) utilise un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) pour sélectionner un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), le [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) mise en cache stratégie de ne pas mettre en cache `DataTemplate`s. Au lieu de cela, un `DataTemplate` est sélectionné pour chaque élément de données dans la liste.
 
 > [!NOTE]
-> **Remarque**: le [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) mise en cache de la stratégie a une condition préalable, introduite dans Xamarin.Forms 2.4, qui, lorsqu’un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) est invité à en sélectionner un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) que chaque `DataTemplate` doit retourner le même [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) type. Par exemple, prenons un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) avec un `DataTemplateSelector` qui peut retourner `MyDataTemplateA` (où `MyDataTemplateA` retourne un `ViewCell` de type `MyViewCellA`), ou `MyDataTemplateB` (où `MyDataTemplateB`retourne un `ViewCell` de type `MyViewCellB`), lorsque `MyDataTemplateA` est retourné doit retourner `MyViewCellA` ou une exception sera levée.
+> Le [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) mise en cache de la stratégie a une condition préalable, introduite dans Xamarin.Forms 2.4, qui, lorsqu’un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) est invité à en sélectionner un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)que chaque `DataTemplate` doit retourner le même [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) type. Par exemple, prenons un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) avec un `DataTemplateSelector` qui peut retourner `MyDataTemplateA` (où `MyDataTemplateA` retourne un `ViewCell` de type `MyViewCellA`), ou `MyDataTemplateB` (où `MyDataTemplateB`retourne un `ViewCell` de type `MyViewCellB`), lorsque `MyDataTemplateA` est retourné doit retourner `MyViewCellA` ou une exception sera levée.
 
 ### <a name="recycleelementanddatatemplate"></a>RecycleElementAndDataTemplate
 
 Le [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) mise en cache de la stratégie s’appuie sur le [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) mise en cache de la stratégie en plus de garantir que quand un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) utilise un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) pour sélectionner un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), `DataTemplate`s sont mises en cache par le type d’élément dans la liste. Par conséquent, `DataTemplate`s sont sélectionnées en une seule fois par type d’élément, au lieu d’une fois par instance d’élément.
 
 > [!NOTE]
-> **Remarque**: le [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) mise en cache de la stratégie est un composant requis qui le `DataTemplate`retournés par le [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) doit utiliser le [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) constructeur qui accepte un `Type`.
+> Le [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) mise en cache de la stratégie est un composant requis qui le `DataTemplate`retournés par le [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) doit utiliser le [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) constructeur qui accepte un `Type`.
 
 ### <a name="setting-the-caching-strategy"></a>Définition de la stratégie de mise en cache
 

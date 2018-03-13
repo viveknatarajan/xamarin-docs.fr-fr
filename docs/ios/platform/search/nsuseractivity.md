@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: de37fd1e014938edcacec187ceeed572e573b379
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8376ce2ccff6732fa0c89d6030b9af36d29c5085
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-nsuseractivity"></a>Recherche avec NSUserActivity
 
@@ -20,7 +20,7 @@ Permet de créer des activités dans des parties spécifiques de votre applicati
 
 Vous débutez avec iOS 9, `NSUserActivity` peut être indexé (publiques et privées) et recherche à partir de la recherche Spotlight et Safari. En marquant un `NSUserActivity` en tant que métadonnées indexables consultable et l’ajout, l’activité peut être répertoriée dans les résultats de recherche sur l’appareil iOS.
 
-[ ![](nsuseractivity-images/apphistory01.png "La vue d’ensemble de l’historique de l’application")](nsuseractivity-images/apphistory01.png)
+[![](nsuseractivity-images/apphistory01.png "La vue d’ensemble de l’historique de l’application")](nsuseractivity-images/apphistory01.png#lightbox)
 
 Si l’utilisateur sélectionne un résultat de recherche qui appartient à une activité à partir de votre application, l’application est lancée et l’activité décrite par la `NSUserActivity` sera redémarré et présentées à l’utilisateur.
 
@@ -58,7 +58,7 @@ L’identificateur de Type d’activité est utilisée lorsque vous créez un `N
 
 Pour créer les identificateurs de Type d’activité requis pour prendre en charge ce comportement, modifiez le **Info.plist** de fichiers et de basculer vers le **Source** vue. Ajouter un `NSUserActivityTypes` de clé et de créer des identificateurs dans le format suivant :
 
-[ ![](nsuseractivity-images/type01.png "Les identificateurs requis dans l’éditeur plist NSUserActivityTypes clé")](nsuseractivity-images/type01.png)
+[![](nsuseractivity-images/type01.png "Les identificateurs requis dans l’éditeur plist NSUserActivityTypes clé")](nsuseractivity-images/type01.png#lightbox)
 
 Dans l’exemple ci-dessus, nous avons créé un nouvel identificateur de Type d’activité pour l’activité de recherche (`com.xamarin.platform`). Lorsque vous créez vos propres applications, remplacez le contenu de la `NSUserActivityTypes` de tableau avec les identificateurs de Type d’activité spécifiques aux activités de votre application prend en charge.
 
@@ -87,7 +87,7 @@ activity.BecomeCurrent();
 
 Nous pouvons ajouter d’autres détails en définissant le `ContentAttributeSet` propriété de notre `NSUserActivity` comme suit :
 
-[ ![](nsuseractivity-images/apphistory02.png "Vue d’ensemble des détails sur la recherche Ajout")](nsuseractivity-images/apphistory02.png)
+[![](nsuseractivity-images/apphistory02.png "Vue d’ensemble des détails sur la recherche Ajout")](nsuseractivity-images/apphistory02.png#lightbox)
 
 En utilisant un `ContentAttributeSet` vous pouvez créer des résultats de recherche riches inciter les utilisateurs finaux d’interagir avec eux.
 
@@ -114,7 +114,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 Notez qu’il s’agit de la substitution de la même méthode utilisée pour répondre aux demandes de transfert. Maintenant si l’utilisateur clique sur un lien à partir de notre application dans les résultats de la recherche Spotlight, notre application sera mises au premier plan (ou démarrée se n'exécute pas déjà) et le contenu, la navigation ou la fonctionnalité représentée par ce lien s’affiche :
 
-[ ![](nsuseractivity-images/apphistory03.png "Restaurez l’état précédent de recherche")](nsuseractivity-images/apphistory03.png)
+[![](nsuseractivity-images/apphistory03.png "Restaurez l’état précédent de recherche")](nsuseractivity-images/apphistory03.png#lightbox)
 
 <a name="indexing" />
 

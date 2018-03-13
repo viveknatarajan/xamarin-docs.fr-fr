@@ -4,14 +4,15 @@ description: "Extensions de balisage XAML constituent une fonctionnalité import
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 7aea7b1536efc952378c6a1df63640af191f1ebe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Partie 3. Extensions de balisage XAML
 
@@ -298,7 +299,7 @@ Voici le fichier XAML complet final avec trois boutons six valeurs partagées de
 
 Les captures d’écran pour vérifier la cohérence du style et le style dépend de la plateforme :
 
-[ ![](xaml-markup-extensions-images/sharedresources.png "Contrôles de style")](xaml-markup-extensions-images/sharedresources-large.png "des contrôles de style")
+[![](xaml-markup-extensions-images/sharedresources.png "Contrôles de style")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "des contrôles de style")
 
 Même s’il est plus courant de définir la `Resources` collection en haut de la page, gardez à l’esprit que le `Resources` propriété est définie par `VisualElement`, et vous pouvez avoir `Resources` collections sur d’autres éléments sur la page. Par exemple, essayez d’ajouter à la `StackLayout` dans cet exemple :
 
@@ -436,7 +437,7 @@ Ces déclarations d’espace de noms sont incluses dans le **StaticConstantsPage
 
 La taille de la résultante `BoxView` par rapport à l’écran est dépendante de la plateforme :
 
- [ ![](xaml-markup-extensions-images/staticconstants.png "Contrôles à l’aide de x : Static, Extension de balisage")](xaml-markup-extensions-images/staticconstants-large.png "contrôles à l’aide de x : Static, Extension de balisage")
+ [![](xaml-markup-extensions-images/staticconstants.png "Contrôles à l’aide de x : Static, Extension de balisage")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "contrôles à l’aide de x : Static, Extension de balisage")
 
 ## <a name="other-standard-markup-extensions"></a>Autres Extensions de balisage Standard
 
@@ -552,7 +553,7 @@ La leçon plus importante à suivre à partir de cet exemple est sans doute la s
 
 Voici le programme en cours d’exécution :
 
-[ ![](xaml-markup-extensions-images/relativelayout.png "Disposition relative à l’aide des contraintes")](xaml-markup-extensions-images/relativelayout-large.png "disposition Relative à l’aide de contraintes")
+[![](xaml-markup-extensions-images/relativelayout.png "Disposition relative à l’aide des contraintes")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "disposition Relative à l’aide de contraintes")
 
 ## <a name="summary"></a>Récapitulatif
 

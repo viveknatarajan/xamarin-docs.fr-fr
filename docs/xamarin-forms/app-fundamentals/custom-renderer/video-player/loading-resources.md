@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 4556c053eec4b28ea863743720fe346a57da8997
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 08d07a82651887c9d87b908acd82296a3d80e43f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="loading-application-resource-videos"></a>Chargement de vidéos de ressources d’application
 
@@ -174,7 +174,7 @@ Si la ressource d’e/s est stockée dans le **ressources** dossier, et si la re
 
 Voici cette page en cours d’exécution sur les plateformes de trois :
 
-[![Lire les ressources vidéo](loading-resources-images/playvideoresource-small.png "lire la ressource vidéo")](loading-resources-images/playvideoresource-large.png "lire la ressource vidéo")
+[![Lire les ressources vidéo](loading-resources-images/playvideoresource-small.png "lire la ressource vidéo")](loading-resources-images/playvideoresource-large.png#lightbox "lire la ressource vidéo")
 
 Vous savez maintenant comment [charger des vidéos à partir d’un URI Web](web-videos.md) et comment lire les ressources incorporées. En outre, vous pouvez [charger des vidéos à partir de la vidéothèque du périphérique](accessing-library.md).
 

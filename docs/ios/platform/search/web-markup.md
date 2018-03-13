@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 63bc1f0ed13fe65b36e95978da9ccc2ea8d4481c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8812c6a234e05e4d651effbeb83a7bcad38dc683
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-web-markup"></a>Recherche par un balisage Web
 
@@ -20,12 +20,12 @@ Pour les applications qui fournissent l’accès à leur contenu via un site web
 
 Si votre application iOS prend déjà en charge la liaison complète mobile et votre site Web affiche des liens ciblés vers le contenu au sein de votre application, Apple _Applebot_ robot d’indexation de ce contenu et les ajouter automatiquement à leur Index Cloud :
 
-[ ![](web-markup-images/webmarkup01.png "Vue d’ensemble des Index de cloud")](web-markup-images/webmarkup01.png)
+[![](web-markup-images/webmarkup01.png "Vue d’ensemble des Index de cloud")](web-markup-images/webmarkup01.png#lightbox)
 
 Apple affichera ces résultats dans les résultats de recherche de la galerie et Safari.
 Si l’utilisateur appuie sur un de ces résultats (et qu’ils ont votre application est installée), puis à entreprendre pour le contenu de votre application :
 
-[ ![](web-markup-images/webmarkup02.png "Profondeur de la liaison à partir d’un site Web dans les résultats de la recherche")](web-markup-images/webmarkup02.png)
+[![](web-markup-images/webmarkup02.png "Profondeur de la liaison à partir d’un site Web dans les résultats de la recherche")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>L’activation de l’indexation de contenu Web
 
@@ -154,7 +154,7 @@ Les mêmes informations peuvent être représentées au format de JSON-LD de Sch
 
 Voici un exemple de métadonnées à partir de votre site Web fournit les résultats de recherche riches à l’utilisateur final :
 
-[ ![](web-markup-images/deeplink01.png "Résultats via le balisage de données structurées de recherche avancée")](web-markup-images/deeplink01.png)
+[![](web-markup-images/deeplink01.png "Résultats via le balisage de données structurées de recherche avancée")](web-markup-images/deeplink01.png#lightbox)
 
 Apple prend actuellement en charge les types suivants de schéma à partir de Schema.org :
 

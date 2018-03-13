@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: c276352bc0ef1478c5145089277183b774bd9bff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 55d13589e4241e9f4e29aea9a55346a8f514f208
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="text"></a>Texte
 
@@ -26,6 +26,8 @@ Xamarin.Forms propose trois vues principales pour travailler avec du texte :
 
 Apparence de texte peut être modifié à l’aide intégrée ou personnalisée [styles](#Styles) et certains contrôles prennent en charge personnalisée [polices](#Fonts).
 
+<a name="Label" />
+
 ## <a name="labellabelmd"></a>[Label](label.md)
 
 Le `Label` vue est utilisée pour afficher le texte. Il peut afficher plusieurs lignes de texte ou d’une seule ligne de texte. `Label` plusieurs options de mise en forme utilisées dans inline peut présenter texte. L’affichage de l’étiquette peut encapsuler ou texte tronqué lorsqu’il ne peut pas tenir sur une seule ligne.
@@ -35,6 +37,8 @@ Le `Label` vue est utilisée pour afficher le texte. Il peut afficher plusieurs 
 Consultez le [étiquette](label.md) article pour plus d’informations.
 
 Pour plus d’informations sur la personnalisation de la police utilisée dans une étiquette, consultez [polices](fonts.md).
+
+<a name="Entry" />
 
 ## <a name="entryentrymd"></a>[Entrée](entry.md)
 
@@ -46,6 +50,8 @@ Consultez le [entrée](entry.md) article pour plus d’informations.
 
 Notez que, contrairement à `Label`, `Entry` ne peut pas avoir de paramètres de police personnalisée.
 
+<a name="Editor" />
+
 ## <a name="editoreditormd"></a>[Éditeur](editor.md)
 
 `Editor` est utilisé pour accepter l’entrée de texte multiligne. `Editor` peut avoir une couleur d’arrière-plan personnalisée, mais la couleur du texte et de police ne peut pas être modifiée.
@@ -54,9 +60,13 @@ Notez que, contrairement à `Label`, `Entry` ne peut pas avoir de paramètres de
 
 Consultez le [éditeur](editor.md) article pour plus d’informations.
 
+<a name="Fonts" />
+
 ## <a name="fontsfontsmd"></a>[Polices](fonts.md)
 
 Le `Label` contrôle prend en charge les paramètres de police différente à l’aide de polices intégrés sur chaque plateforme ou des polices personnalisées inclus avec votre application. Consultez le [polices](fonts.md) article pour plus d’informations.
+
+<a name="Styles" />
 
 ## <a name="stylesstylesmd"></a>[Styles](styles.md)
 

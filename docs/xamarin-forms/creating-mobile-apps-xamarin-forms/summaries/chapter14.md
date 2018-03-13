@@ -3,14 +3,15 @@ title: "Résumé du chapitre 14. Disposition absolue"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: ac4c41ebd70b58e95a3fa4fa7a391a473361b1db
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 394e1722c79bac5f034e9ad88eb1fed7e5090f8c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Résumé du chapitre 14. Disposition absolue
 
@@ -91,7 +92,7 @@ Le [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 Le [ **DotMatrixClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/DotMatrixClock) exemple affiche l’heure actuelle avec un affichage simulé matricielle 5 x 7. Chaque point est un `BoxView` (il y a 228 d'entre eux) dimensionné et positionné sur le `AbsoluteLayout`.
 
-[![Capture d’écran de triple de matricielle horloge](images/ch14fg08-small.png "matricielle horloge")](images/ch14fg08-large.png "matricielle horloge")
+[![Capture d’écran de triple de matricielle horloge](images/ch14fg08-small.png "matricielle horloge")](images/ch14fg08-large.png#lightbox "matricielle horloge")
 
 Le [ **BouncingText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) programme anime deux `Label` objets rebondit horizontalement et verticalement sur l’écran.
 

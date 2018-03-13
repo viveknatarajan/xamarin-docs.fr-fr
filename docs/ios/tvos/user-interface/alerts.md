@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 593e17096d92d9a9764545149991817fa616e2fc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-alerts"></a>Utilisation des alertes
 
@@ -21,7 +21,7 @@ _Cet article traite de travailler avec UIAlertController pour afficher un messag
 
 Si vous avez besoin attirer l’attention de l’utilisateur tvOS ou demander l’autorisation d’effectuer une action destructrice (par exemple, la suppression d’un fichier), vous pouvez présenter un message d’alerte à l’aide de la `UIAlertViewController`:
 
-[ ![](alerts-images/alert01.png "Un exemple UIAlertViewController")](alerts-images/alert01.png)
+[![](alerts-images/alert01.png "Un exemple UIAlertViewController")](alerts-images/alert01.png#lightbox)
 
 Si plus de l’affichage d’un message, vous pouvez ajouter des boutons et des champs de texte à une alerte pour autoriser l’utilisateur à répondre aux actions et fournir des commentaires.
 
@@ -31,7 +31,7 @@ Si plus de l’affichage d’un message, vous pouvez ajouter des boutons et des 
 
 Comme indiqué ci-dessus, les alertes sont utilisées pour obtenir l’attention des utilisateurs et de les informer de l’état de vos commentaires de l’application ou de la demande. Alertes doivent présenter un titre, elles peuvent éventuellement avoir un message et un ou plusieurs boutons ou des champs de texte.
 
-[ ![](alerts-images/alert04.png "Une alerte de l’exemple")](alerts-images/alert04.png)
+[![](alerts-images/alert04.png "Une alerte de l’exemple")](alerts-images/alert04.png#lightbox)
 
 Apple a les suggestions suivantes pour l’utilisation des alertes :
 
@@ -118,11 +118,11 @@ Le `AddAction` méthode ajoute l’action donnée à la `UIAlertViewController` 
 
 Outre l’ajout des Actions (boutons) à l’alerte, vous pouvez ajouter des champs de texte pour autoriser l’utilisateur à saisir des informations telles que l’ID d’utilisateur et mots de passe de l’alerte :
 
-[ ![](alerts-images/alert02.png "Champ de texte dans une alerte")](alerts-images/alert02.png)
+[![](alerts-images/alert02.png "Champ de texte dans une alerte")](alerts-images/alert02.png#lightbox)
 
 Si l’utilisateur sélectionne le champ de texte, le clavier standard tvOS s’affiche ce qui leur permet d’entrer une valeur pour le champ :
 
-[ ![](alerts-images/alert03.png "Saisie de texte")](alerts-images/alert03.png)
+[![](alerts-images/alert03.png "Saisie de texte")](alerts-images/alert03.png#lightbox)
 
 Le code suivant affiche une alerte OK/Annuler avec un seul champ de texte pour entrer une valeur :
 

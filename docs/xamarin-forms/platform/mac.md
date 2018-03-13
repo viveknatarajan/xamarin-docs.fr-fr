@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: bda207796d1019f8188176acce055d782cb9e32d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e8487dc06b3512a0ec0bb1b30393faeab506df60
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-platform-setup"></a>Programme d’installation de Mac plateforme
 
@@ -20,6 +21,10 @@ ms.lasthandoff: 02/27/2018
 
 Avant de commencer, créez (ou utiliser un existant) Xamarin.Forms projet.
 Vous pouvez ajouter uniquement les applications Mac à l’aide de Visual Studio pour Mac.
+
+> [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
+
+**Ajout d’un projet macOS de Xamarin.Forms, par [Xamarin University](https://university.xamarin.com/)**
 
 ## <a name="adding-a-mac-app"></a>Ajout d’une application Mac
 
@@ -92,7 +97,7 @@ Suivez ces instructions pour ajouter une application Mac qui s’exécutera sur 
 
 9. Double-cliquez sur **Main.storyboard** à modifier dans Xcode. Sélectionnez le **fenêtre** et _Décochez_ le **est un contrôleur initiale** case à cocher (c’est parce que le code ci-dessus crée une fenêtre) :
 
-  [ ![Désactivez la case à cocher est un contrôleur Initial dans Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png)
+  [![Désactivez la case à cocher est un contrôleur Initial dans Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
   Vous pouvez modifier le système de menus dans la table de montage séquentiel pour supprimer les éléments indésirables.
 

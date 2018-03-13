@@ -3,14 +3,15 @@ title: "Résumé du chapitre 3. Plus de texte"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9d283a4136a7cdfe39ea0b2da65273332fd47b00
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7dbcc093bc467e633f9333bb129adc25372832f3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Résumé du chapitre 3. Plus de texte
 
@@ -129,7 +130,7 @@ Dans tous les exemples jusqu'à présent, l’intégralité du texte affiché pa
 
 Le [ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText) exemple montre comment utiliser le `FormattedText` propriété pour une ligne unique de texte, et [ **VariableFormattedParagraph** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara) illustre la technique d’un paragraphe entier, comme illustré ici :
 
-[![Capture d’écran de triple de la variable au format paragraphe](images/ch03fg06-small.png "Variable au format texte d’étiquette")](images/ch03fg06-large.png "Variable au format texte d’étiquette")
+[![Capture d’écran de triple de la variable au format paragraphe](images/ch03fg06-small.png "Variable au format texte d’étiquette")](images/ch03fg06-large.png#lightbox "Variable au format texte d’étiquette")
 
 Le [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) programme utilise une seule `Label` et un `FormattedString` objet pour afficher toutes les tailles de police nommées pour chaque plateforme.
 

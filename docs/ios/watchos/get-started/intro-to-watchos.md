@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 55d692fa92dd08dd9c0887ed10013589afc98ec6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2276b67fc29f2752e4b178168a12e6e980b788d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-watchos"></a>Introduction aux watchOS
 
@@ -29,11 +29,11 @@ Une solution d’application watchOS a 3 projets :
 
 Dans les applications watchOS 1, le code dans l’extension s’exécute sur l’iPhone : l’Apple Watch est effectivement un affichage externe. les applications watchOS 2 et 3 s’exécutent entièrement sur l’Apple Watch. Cette différence est indiquée dans le diagramme ci-dessous :
 
-[ ![](intro-to-watchos-images/arch-sml.png "La différence entre watchOS 1 et watchOS 2 (et supérieur) est représentée dans ce diagramme")](intro-to-watchos-images/arch.png)
+[ ![](intro-to-watchos-images/arch-sml.png "La différence entre watchOS 1 et watchOS 2 (et supérieur) est représentée dans ce diagramme")](intro-to-watchos-images/arch.png#lightbox)
 
 Quelle que soit la version de watchOS est ciblée, dans Visual Studio pour Solution remplissage Mac une solution complète ressemble à ceci :
 
-[ ![](intro-to-watchos-images/projectstructure-sml.png "Le remplissage de la Solution")](intro-to-watchos-images/projectstructure.png)
+[![](intro-to-watchos-images/projectstructure-sml.png "Le remplissage de la Solution")](intro-to-watchos-images/projectstructure.png#lightbox)
 
 Le *Parent application* dans un watchOS solution est une application iOS régulière. Il s’agit du seul projet dans la solution est visible **sur le téléphone**. En cas d’utilisation de cette application incluront des didacticiels, des écrans d’administration et le filtrage, mise en mémoire cache, etc. de couche intermédiaire. Toutefois, il est possible de l’utilisateur installer et exécuter l’application/extension watch sans **jamais** avoir ouvert l’application parente, par conséquent, si vous avez besoin de l’application parente à exécuter pour une initialisation unique ou l’administration, vous devez programmer votre montre / extension d’application pour indiquer à l’utilisateur qui.
 
