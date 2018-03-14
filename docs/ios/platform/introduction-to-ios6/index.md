@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0d08b2ff5131996984dbe41862ad1d6aac33b3d0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e1232c96f5ea978c8adc640160a1e9b7e42663d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-ios-6"></a>Introduction à iOS 6
 
 _iOS 6 inclut une variété de nouvelles technologies de développement d’applications, ce qui Xamarin.iOS 6 offre aux développeurs c#._
 
-[ ![](images/ios6-large.jpg "Le logo iOS 6")](images/ios6-large.jpg)
+[ ![](images/ios6-large.jpg "Le logo iOS 6")](images/ios6-large.jpg#lightbox)
 
 IOS 6 et 6 de Xamarin.iOS, les développeurs ont désormais une quantité de capacité à leur disposition pour créer des applications iOS, y compris celles qu’iPhone cible 5.
 Ce document répertorie quelques-unes des plus intéressant de nouvelles fonctionnalités qui sont disponibles et des liens vers des articles pour chaque rubrique. En outre, il touche sur quelques modifications seront importantes que les développeurs déplacent iOS 6 et la nouvelle résolution d’iPhone 5.
@@ -92,11 +92,11 @@ Dans le cas d’enregistrement de l’état, les applications peuvent effectuer 
 
 appareils iPhone 5 ont une résolution de 640 x 1136. Les applications ciblant les versions antérieures d’iOS apparaîtra letterboxed sur un iPhone 5, comme indiqué ci-dessous :
 
- [ ![](images/01-letterboxed.png "Les applications ciblant les versions antérieures d’iOS apparaîtra letterboxed lorsque vous exécutez sur un iPhone 5")](images/01-letterboxed.png)
+ [![](images/01-letterboxed.png "Les applications ciblant les versions antérieures d’iOS apparaîtra letterboxed lorsque vous exécutez sur un iPhone 5")](images/01-letterboxed.png#lightbox)
 
 Par ordre d’affichage de l’application plein écran sur iPhone 5, ajoutez simplement une image nommée `Default-568h@2x.png` ayant une résolution de 640 x 1136. La capture d’écran suivante montre l’application en cours d’exécution une fois cette image a été incluse :
 
- [ ![](images/02-fullscreen.png "Cette capture d’écran montre l’application en cours d’exécution une fois cette image a été incluse")](images/02-fullscreen.png)
+ [![](images/02-fullscreen.png "Cette capture d’écran montre l’application en cours d’exécution une fois cette image a été incluse")](images/02-fullscreen.png#lightbox)
 
 ### <a name="subclassing-uinavigationbar"></a>Sous-classement UINavigationBar
 
@@ -130,7 +130,7 @@ navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolb
 
 L’utilisation de cette `UINavigationBar` sous-classe entraîne l’affichage de l’image affichée comme indiqué dans la capture d’écran suivante :
 
- [ ![](images/03-navbar.png "L’utilisation de ce UINavigationBar sous-classe la vue de l’image affichée comme indiqué dans cette capture d’écran")](images/03-navbar.png)
+ [![](images/03-navbar.png "L’utilisation de ce UINavigationBar sous-classe la vue de l’image affichée comme indiqué dans cette capture d’écran")](images/03-navbar.png#lightbox)
 
 ### <a name="interface-orientation"></a>Orientation de l’interface
 
