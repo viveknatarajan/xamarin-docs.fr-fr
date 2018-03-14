@@ -8,10 +8,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
 ms.openlocfilehash: 21cd08ad2eb9c78ba1bcd6b31400a38266c65e51
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
-ms.translationtype: HT
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Partie 4 - vous traitez des plateformes multiples
 
@@ -145,8 +145,8 @@ Vous pouvez également étendre des applications multiplateformes de façon coh�
 Il existe un nombre 3e partie des bibliothèques de disponibles qui fournissent des fonctionnalités multiplateforme :
 
 -   **MvvmCross** -  [https://github.com/slodge/MvvmCross/](https://github.com/slodge/MvvmCross/)
--   **Couramment** (pour la localisation) - [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
--   **MonoGame** (pour les jeux XNA) - [http://monogame.codeplex.com/](http://monogame.codeplex.com/)
+-   **Couramment** (pour la localisation) -  [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
+-   **MonoGame** (pour les jeux XNA) -  [http://monogame.codeplex.com/](http://monogame.codeplex.com/)
 -   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics) et son précurseur [https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
 
 
