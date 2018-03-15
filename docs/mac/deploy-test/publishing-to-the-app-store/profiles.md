@@ -8,17 +8,17 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 4bb6f0c219fc973d3d2e458445c76fd7611681ec
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: dab923f6150bdf005e9468add6d26d4fdb691a93
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="provisioning-profiles"></a>Profils de provisionnement
 
 Les profils de provisionnement permettent aux développeurs d’incorporer plusieurs fonctionnalités spécifiques à macOS (anciennement Mac OS X) (comme iCloud et les notifications Push) dans leurs applications Xamarin.Mac. Ils doivent créer, télécharger et installer un profil de provisionnement Mac pour chaque application qu’ils développent et qui utilise ces fonctionnalités.
 
-[ ![](profiles-images/certif13.png "Le portail de provisionnement Apple")](profiles-images/certif13.png)
+[![](profiles-images/certif13.png "Portail de provisionnement Apple")](profiles-images/certif13.png#lightbox)
 
 <a name="Development_Provisioning_Profile" />
 
@@ -33,31 +33,31 @@ Effectuez les étapes suivantes :
 
 1. Sélectionnez le type de profil de provisionnement à créer, puis cliquez sur le bouton **Continue** : 
 
-     [ ![](profiles-images/certif14.png "Sélection du type de profil")](profiles-images/certif14.png)
+     [![](profiles-images/certif14.png "Sélection du type de profil")](profiles-images/certif14.png#lightbox)
 2. Sélectionnez l’ID de l’application pour laquelle créer le profil, puis cliquez sur le bouton **Continue** : 
 
-     [ ![](profiles-images/certif15.png "Sélection de l’ID d’application")](profiles-images/certif15.png)
+     [![](profiles-images/certif15.png "Sélection de l’ID d’application")](profiles-images/certif15.png#lightbox)
 3. Sélectionnez l’ID de développeur utilisé pour signer le profil, puis cliquez sur **Continue** : 
 
-     [ ![](profiles-images/certif16.png "Sélection de l’ID de développeur")](profiles-images/certif16.png)
+     [![](profiles-images/certif16.png "Sélection de l’ID de développeur")](profiles-images/certif16.png#lightbox)
 4. Sélectionnez les ordinateurs sur lesquels ce profil peut être utilisé, puis cliquez sur **Continue** : 
 
-     [ ![](profiles-images/certif17.png "Sélection des ordinateurs autorisés")](profiles-images/certif17.png)
+     [![](profiles-images/certif17.png "Sélection des ordinateurs autorisés")](profiles-images/certif17.png#lightbox)
 5. À présent, entrez une valeur **Profile Name**, puis cliquez sur le bouton **Generate** : 
 
-     [ ![](profiles-images/certif18.png "Génération du profil")](profiles-images/certif18.png)
+     [![](profiles-images/certif18.png "Génération du profil")](profiles-images/certif18.png#lightbox)
 6. Cliquez sur le bouton **Download** pour télécharger le nouveau profil : 
 
-     [ ![](profiles-images/certif19.png "Téléchargement du profil")](profiles-images/certif19.png)
+     [![](profiles-images/certif19.png "Téléchargement du profil")](profiles-images/certif19.png#lightbox)
 7. Les profils de provisionnement de développement sont installés dans le volet Profils de provisionnement de l’application **Préférences Système** du Mac : 
 
-     [ ![](profiles-images/certif20.png "Installation du profil")](profiles-images/certif20.png)
+     [![](profiles-images/certif20.png "Installation du profil")](profiles-images/certif20.png#lightbox)
 8. Le volet Profils de provisionnement affiche tous les profils installés : 
 
-     [ ![](profiles-images/image47.png "Affichage de tous les profils installés")](profiles-images/image47.png)
+     [![](profiles-images/image47.png "Affichage de tous les profils installés")](profiles-images/image47.png#lightbox)
 9. Le profil apparaît également dans l’utilitaire **Developer Certificate Utility** au cas où il devrait être à nouveau téléchargé : 
 
-     [ ![](profiles-images/image48.png "L’utilitaire Developer Certificate Utility")](profiles-images/image48.png)
+     [![](profiles-images/image48.png "Utilitaire Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
 Un nouveau profil de provisionnement de développement doit être créé pour chaque nouvelle application ou quand un nouvel ordinateur est ajouté en vue d’effectuer des tester dessus.
 
@@ -71,25 +71,25 @@ Effectuez les étapes suivantes :
 
 1. Sélectionnez le type de profil à créer, puis cliquez sur le bouton **Continue** : 
 
-    [ ![](profiles-images/certif21.png "Sélection du type de profil")](profiles-images/certif21.png)
+    [![](profiles-images/certif21.png "Sélection du type de profil")](profiles-images/certif21.png#lightbox)
 2. Sélectionnez l’ID de l’application pour laquelle créer le profil, puis cliquez sur le bouton **Continue** : 
 
-    [ ![](profiles-images/certif15.png "Sélection de l’ID d’application")](profiles-images/certif15.png)
+    [![](profiles-images/certif15.png "Sélection de l’ID d’application")](profiles-images/certif15.png#lightbox)
 3. Sélectionnez l’ID de société utilisé pour signer le profil, puis cliquez sur le bouton **Continue** : 
 
-    [ ![](profiles-images/certif23.png "Sélection de l’ID de société")](profiles-images/certif23.png)
+    [![](profiles-images/certif23.png "Sélection de l’ID d’entreprise")](profiles-images/certif23.png#lightbox)
 4. Entrez une valeur **Profile Name**, puis cliquez sur le bouton **Generate** : 
 
-    [ ![](profiles-images/certif24.png "Génération du profil")](profiles-images/certif24.png)
+    [![](profiles-images/certif24.png "Génération du profil")](profiles-images/certif24.png#lightbox)
 5. Cliquez sur **Download** pour obtenir le fichier de profil de provisionnement (extension `.provisionprofile`) : 
 
-    [ ![](profiles-images/certif25.png "Téléchargement du profil")](profiles-images/certif25.png)
+    [![](profiles-images/certif25.png "Téléchargement du profil")](profiles-images/certif25.png#lightbox)
 6. Faites-le glisser dans **Xcode Organizer** ou double-cliquez dessus pour l’installer. Le profil apparaît alors dans Xcode Organizer : 
 
-    [ ![](profiles-images/image51.png "Installation du profil")](profiles-images/image51.png)
+    [![](profiles-images/image51.png "Installation du profil")](profiles-images/image51.png#lightbox)
 7. Le profil de provisionnement apparaît également dans la liste : 
 
-    [ ![](profiles-images/certif26.png "Affichage des profils installés")](profiles-images/certif26.png)
+    [![](profiles-images/certif26.png "Affichage des profils installés")](profiles-images/certif26.png#lightbox)
 
 
 Si le développeur change les fonctionnalités utilisées par un ID d’application (par exemple, en activant iCloud ou les notifications Push), il doit recréer les profils de provisionnement pour cet ID d’application.

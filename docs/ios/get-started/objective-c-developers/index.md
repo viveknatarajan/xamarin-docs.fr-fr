@@ -7,11 +7,11 @@ ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7e26c11f71b446baf89ca11effe30bc1e041f951
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 275cce891801cd542d202960efc3da668fa8f07b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Xamarin pour les développeurs Objective-C
 
@@ -21,7 +21,7 @@ Xamarin offre aux développeurs s’intéressant à iOS un moyen de transformer 
 
 Par ailleurs, Xamarin permet de tirer parti des ressources Objective-C existantes au moyen d’une technologie appelée liaison. Il vous suffit de créer une bibliothèque statique dans Objective-C et de l’exposer à C# grâce à une liaison, comme dans le diagramme suivant :
 
- [ ![](images/01-bindings.png "Bibliothèque statique dans Objective-C exposée à C# via une liaison")](images/01-bindings.png)
+ [![](images/01-bindings.png "Bibliothèque statique dans Objective-C exposée à C# via une liaison")](images/01-bindings.png#lightbox)
 
 Cela ne se limite pas forcément au code sans interface utilisateur. Des liaisons peuvent également exposer du code d’interface utilisateur développé en Objective-C.
 

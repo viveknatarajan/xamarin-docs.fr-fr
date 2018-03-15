@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 84db17ede0019e1134b65edaca85ef2401fb3bc0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publication sur l’App Store
 
@@ -133,7 +133,7 @@ Effectuez ce qui suit :
 4. L’édition des liens réduit la taille globale du fichier distribuable de votre application via la suppression des méthodes, propriétés, classes, etc. inutilisées. Dans la plupart des cas, la valeur par défaut, **Lier les assemblys du SDK uniquement**, doit être conservée. Dans certaines situations, par exemple quand vous utilisez des bibliothèques tierces spécifiques, vous pouvez être obligé de sélectionner la valeur **Ne pas lier** pour empêcher la suppression des éléments nécessaires. Pour plus d’informations, consultez le guide sur les [mécanismes de build iOS](~/ios/deploy-test/ios-build-mechanics.md).
 5. Vous devez cocher la case **Optimiser les fichiers image PNG pour iOS** pour réduire davantage la taille du fichier livrable de votre application.
 6. Vous ne devez _pas_ activer le débogage, car cela rend la build inutilement volumineuse.
-8. Pour iOS 11, vous devez sélectionner l’une des architectures de périphérique qui prend en charge **ARM64**. Pour plus d’informations sur la génération d’applications pour des appareils iOS 64 bits, consultez la section **Activation de builds 64 bits d’applications Xamarin.iOS** dans la documentation traitant des [considérations relatives à la plateforme 32/64 bits](~/cross-platform/macios/32-and-64.md).
+8. Pour iOS 11, vous devez sélectionner l’une des architectures de périphérique qui prend en charge **ARM64**. Pour plus d’informations sur la génération d’applications pour des appareils iOS 64 bits, consultez la section **Activation de builds 64 bits d’applications Xamarin.iOS** dans la documentation traitant des [considérations relatives à la plateforme 32/64 bits](~/cross-platform/macios/32-and-64/index.md).
 9. Vous pouvez éventuellement utiliser le compilateur **LLVM**, qui crée du code plus petit et plus rapide, mais la compilation prend plus de temps.
 10. En fonction des besoins de votre application, vous pouvez également ajuster le type de **Garbage Collection** utilisé et configurer l’**internationalisation**.
 11. Enregistrez les changements apportés à la configuration de build.
@@ -157,7 +157,7 @@ Effectuez ce qui suit :
 
     ![](publishing-to-the-app-store-images/configurevs02.png "Onglet Avancé")
 
-8. Si votre application Xamarin.iOS cible iOS 8 et les appareils iOS 64 bits, vous devez sélectionner l’une des architectures d’appareils prenant en charge **ARM64**. Pour plus d’informations sur la génération d’applications pour des appareils iOS 64 bits, consultez la section **Activation de builds 64 bits d’applications Xamarin.iOS** dans la documentation traitant des [considérations relatives à la plateforme 32/64 bits](~/cross-platform/macios/32-and-64.md).
+8. Si votre application Xamarin.iOS cible iOS 8 et les appareils iOS 64 bits, vous devez sélectionner l’une des architectures d’appareils prenant en charge **ARM64**. Pour plus d’informations sur la génération d’applications pour des appareils iOS 64 bits, consultez la section **Activation de builds 64 bits d’applications Xamarin.iOS** dans la documentation traitant des [considérations relatives à la plateforme 32/64 bits](~/cross-platform/macios/32-and-64/index.md).
 9. Vous pouvez éventuellement utiliser le compilateur **LLVM**, qui crée du code plus petit et plus rapide, mais la compilation prend plus de temps.
 10. En fonction des besoins de votre application, vous pouvez également ajuster le type de **Garbage Collection** utilisé et configurer l’**internationalisation**.
 11. Enregistrez les changements apportés à la configuration de build.
@@ -351,16 +351,16 @@ Pour soumettre votre application à Apple afin qu’elle soit évaluée, vous de
 
 1. Sélectionnez *Deliver Your App (Livrer votre application)*, puis cliquez sur le bouton *Choose (Choisir)* :
 
-    [ ![](publishing-to-the-app-store-images/publishvs01.png "Sélectionner Livrer votre application")](publishing-to-the-app-store-images/publishvs01.png)
+    [![](publishing-to-the-app-store-images/publishvs01.png "Sélectionner Livrer votre application")](publishing-to-the-app-store-images/publishvs01.png#lightbox)
 
 2. Sélectionnez le fichier zip ou IPA créé ci-dessus, puis cliquez sur le bouton **OK**.
 
 3. Application Loader valide le fichier :
 
-    [ ![](publishing-to-the-app-store-images/publishvs02.png "Écran de validation")](publishing-to-the-app-store-images/publishvs02.png)
+    [![](publishing-to-the-app-store-images/publishvs02.png "Écran de validation")](publishing-to-the-app-store-images/publishvs02.png#lightbox)
 4. Cliquez sur le bouton *Suivant* pour permettre la validation de l’application par l’App Store :
 
-    [ ![](publishing-to-the-app-store-images/publishvs03.png "Validation par l’App Store")](publishing-to-the-app-store-images/publishvs03.png)
+    [![](publishing-to-the-app-store-images/publishvs03.png "Validation pour l’App Store")](publishing-to-the-app-store-images/publishvs03.png#lightbox)
 5. Cliquez sur le bouton **Envoyer** pour envoyer l’application à Apple pour évaluation.
 6. Application Loader vous informe une fois le chargement du fichier réussi.
 
@@ -368,7 +368,7 @@ Pour soumettre votre application à Apple afin qu’elle soit évaluée, vous de
 
 Si vous vous reconnectez à iTunes Connect et si vous sélectionnez votre application dans la liste des applications disponibles, l’état dans iTunes Connect doit être **Waiting for Review (En attente d’évaluation)** (il est parfois indiqué temporairement **Upload Received (Chargement reçu)** pendant le traitement) :
 
-[ ![](publishing-to-the-app-store-images/image21.png "L’état dans iTunes Connect doit indiquer que l’évaluation est en attente")](publishing-to-the-app-store-images/image21.png)
+[![](publishing-to-the-app-store-images/image21.png "L’état dans iTunes Connect doit maintenant indiquer que l’évaluation est en attente")](publishing-to-the-app-store-images/image21.png#lightbox)
 
 ## <a name="summary"></a>Récapitulatif
 

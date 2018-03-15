@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2995d9126617a767013ed1f5cb808f22ce0fd2da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89768d2562814091f0e5894c4af2edd67d68cb00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="running-the-android-sdk-emulator"></a>Exécution de l’émulateur du kit Android SDK
 
@@ -32,13 +32,13 @@ Visual Studio inclut des appareils virtuels préconfigurés qui s’affichent da
 
 -   **VisualStudio\_android-23\_x86\_tablet** 
 
-[ ![Appareils virtuels](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png)
+[![Appareils virtuels](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png#lightbox)
 
 En règle générale, vous sélectionnez l’appareil virtuel **VisualStudio\_android-23\_x86\_phone** pour tester et déboguer une application pour téléphone. Si l’un de ces appareils virtuels préconfigurés répond à vos besoins (autrement dit, correspond au niveau d’API cible de votre application), passez directement à la section [Lancement de l’émulateur](#launching) pour commencer à exécuter votre application dans l’émulateur. (Si vous n’êtes pas encore familiarisé avec les niveaux d’API Android, consultez [Présentation des niveaux d’API Android](~/android/app-fundamentals/android-api-levels.md).)
 
 Si votre projet Xamarin.Android utilise un niveau Framework cible qui n’est pas compatible avec les appareils virtuels disponibles, le menu déroulant répertorie les appareils virtuels inutilisables sous **Appareils non pris en charge**. Par exemple, dans le projet suivant, l’infrastructure cible est définie sur **Android 7.1 Nougat (API 25)**, laquelle n’est pas compatible avec les appareils virtuels **Android 6.0** qui sont fournis par défaut :
 
-[ ![Appareil virtuel incompatible](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png)
+[![Appareil virtuel incompatible](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png#lightbox)
 
 Vous pouvez cliquer sur **Modifier la cible Android minimale** pour modifier la version d’Android minimale du projet afin qu’elle corresponde au niveau d’API des appareils virtuels disponibles. Vous pouvez également utiliser le **Gestionnaire d’émulateur Android** pour créer de nouveaux appareils virtuels qui prennent en charge votre niveau d’API cible, comme expliqué plus loin dans [Configuration des appareils virtuels](#virtualdevice). Avant de pouvoir configurer les appareils virtuels pour un nouveau niveau d’API, vous devez commencer par installer les images système correspondantes pour ce niveau d’API. Cela est expliqué dans la section suivante.
 
@@ -50,7 +50,7 @@ Visual Studio pour Mac inclut des appareils virtuels préconfigurés qui s’aff
 
 -   **Android\_ARMv7a**
 
-[ ![Appareils virtuels](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png)
+[![Appareils virtuels](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png#lightbox)
 
 En règle générale, vous sélectionnez l’appareil virtuel **Android\_Accelerated\_x86** pour tester et déboguer une application pour téléphone. Si cet appareil virtuel préconfiguré répond à vos besoins (autrement dit, correspond au niveau d’API cible de votre application), passez directement à [Lancement de l’émulateur](#launching) pour commencer à exécuter votre application dans l’émulateur. (Si vous n’êtes pas encore familiarisé avec les niveaux d’API Android, consultez [Présentation des niveaux d’API Android](~/android/app-fundamentals/android-api-levels.md).)
 
@@ -73,11 +73,11 @@ Après avoir choisi un appareil virtuel dans le menu déroulant des appareils, s
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Modes Debug et Mise en production, bouton Lire](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png)
+[![Modes Debug et Mise en production, bouton Lire](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Modes Debug et Mise en production, bouton Lire](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png)
+[![Modes Debug et Mise en production, bouton Lire](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 

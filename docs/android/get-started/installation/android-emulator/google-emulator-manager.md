@@ -7,21 +7,20 @@ ms.assetid: 0C0BBEC0-C84A-4558-B905-4EF81FCD62F9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/22/2017
-ms.openlocfilehash: f275ff6c7d3e6eeec5eb3878cc39633d70238f66
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 1e90ebe55dbec9fdcc57b9eaab99e614fdc5cbbc
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="google-emulator-manager"></a>Gestionnaire d’émulateur Google
 
 Après avoir vérifié que l’accélération matérielle est activée (comme décrit dans [Accélération matérielle de l’émulateur Android](~/android/get-started/installation/android-emulator/hardware-acceleration.md)), l’étape suivante consiste à créer des appareils virtuels en vue de tester et de déboguer votre application. Vous pouvez utiliser le Gestionnaire d’émulateur Google hérité (également appelé *Gestionnaire d’appareils virtuels Android*) afin de créer des appareils virtuels qui seront utilisés par l’émulateur du kit Android SDK.
 
 > [!NOTE]
-> **Remarque :** si vous ciblez Android 8.0 Oreo, vous devez utiliser le [Gestionnaire d’appareils Android Xamarin](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) pour créer et configurer des appareils virtuels.
+> Si vous ciblez Android 8.0 Oreo, vous devez utiliser le [Gestionnaire d’appareils Android Xamarin](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) pour créer et configurer des appareils virtuels.
 
-<a name="sysimg" />
 
 ## <a name="installing-system-images"></a>Installation des images système
 
@@ -46,11 +45,11 @@ Dans la capture d’écran suivante, les images **Intel x86 Atom** seront instal
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Sélection des images système Android 6.0 x86 pour l’émulateur Android](google-emulator-manager-images/win/03-select-x86-images-sml.png)](google-emulator-manager-images/win/03-select-x86-images.png)
+[![Sélection des images système Android 6.0 x86 pour l’émulateur Android](google-emulator-manager-images/win/03-select-x86-images-sml.png)](google-emulator-manager-images/win/03-select-x86-images.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Sélection des images système Android 6.0 x86 pour l’émulateur Android](google-emulator-manager-images/mac/02-select-x86-images-sml.png)](google-emulator-manager-images/mac/02-select-x86-images.png)
+[![Sélection des images système Android 6.0 x86 pour l’émulateur Android](google-emulator-manager-images/mac/02-select-x86-images-sml.png)](google-emulator-manager-images/mac/02-select-x86-images.png#lightbox)
 
 -----
 
@@ -69,23 +68,21 @@ Si vous développez des applications pour Android Wear, installez les images sys
 Une fois ces images système installés, vous pouvez créer des appareils virtuels Android **x86** en sélectionnant le niveau d’API et le processeur/ABI appropriés lors de la configuration de l’appareil virtuel (comme décrit ci-dessous).
 
 
-<a name="virtualdevice" />
-
 ## <a name="configuring-virtual-devices"></a>Configuration d’appareils virtuels
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Les appareils virtuels sont configurés via le **Gestionnaire d’émulateur Android** (également appelé _Android Virtual Device Manager_ ou _AVD Manager_). Pour lancer le Gestionnaire d’émulateur Android à partir de Visual Studio, cliquez sur l’icône **Gestionnaire d’émulateur Android** dans la barre d’outils :
 
-[ ![Emplacement de l'icône AVD](google-emulator-manager-images/win/04-avd-icon-sml.png)](google-emulator-manager-images/win/04-avd-icon.png)
+[![Emplacement de l’icône AVD](google-emulator-manager-images/win/04-avd-icon-sml.png)](google-emulator-manager-images/win/04-avd-icon.png#lightbox)
 
 Vous pouvez également lancer le Gestionnaire d’émulateur Android à partir de la barre de menus en sélectionnant **Outils > Android >Gestionnaire d’émulateur Android** :
 
-[![Emplacement de l’élément de menu Gestionnaire d’émulateur Android](google-emulator-manager-images/win/05-avd-manager-menu-item-sml.png)](google-emulator-manager-images/win/05-avd-manager-menu-item.png)
+[![Emplacement de l’élément de menu Gestionnaire d’émulateur Android](google-emulator-manager-images/win/05-avd-manager-menu-item-sml.png)](google-emulator-manager-images/win/05-avd-manager-menu-item.png#lightbox)
 
 La boîte de dialogue **Android Virtual Device (AVD) Manager** affiche la liste des appareils virtuels Android existants :
 
-[![Android Virtual Device Manager](google-emulator-manager-images/win/06-virtual-device-manager-sml.png)](google-emulator-manager-images/win/06-virtual-device-manager.png)
+[![Android Virtual Device Manager](google-emulator-manager-images/win/06-virtual-device-manager-sml.png)](google-emulator-manager-images/win/06-virtual-device-manager.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -93,17 +90,16 @@ Les appareils virtuels sont configurés via le **Gestionnaire d’émulateur And
 
 Vous pouvez lancer le Gestionnaire d’émulateur Android à partir de la barre de menus en sélectionnant **Outils > Gestionnaire d’émulateur Android** :
 
-[![Emplacement de l’élément de menu Gestionnaire d’émulateur Android](google-emulator-manager-images/mac/03-avd-manager-menu-item-sml.png)](google-emulator-manager-images/mac/03-avd-manager-menu-item.png)
+[![Emplacement de l’élément de menu Gestionnaire d’émulateur Android](google-emulator-manager-images/mac/03-avd-manager-menu-item-sml.png)](google-emulator-manager-images/mac/03-avd-manager-menu-item.png#lightbox)
 
 La boîte de dialogue **Android Virtual Device (AVD) Manager** affiche la liste des appareils virtuels Android existants :
 
-[![Android Virtual Device Manager](google-emulator-manager-images/mac/05-virtual-device-manager-sml.png)](google-emulator-manager-images/mac/05-virtual-device-manager.png)
+[![Android Virtual Device Manager](google-emulator-manager-images/mac/05-virtual-device-manager-sml.png)](google-emulator-manager-images/mac/05-virtual-device-manager.png#lightbox)
 
 -----
 
 Vous pouvez créer de nouvelles images d’appareil virtuel avec des caractéristiques d’appareil et des niveaux d’API différents. La section suivante explique comment créer des définitions d’appareil et des appareils virtuels personnalisés.
 
-<a name="custom-def" />
 
 ### <a name="creating-a-custom-device-definition"></a>Création d’une définition d’appareil personnalisée
 
@@ -111,11 +107,11 @@ Pour créer une définition d’appareil personnalisée, cliquez sur **Create** 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Définition d’appareil personnalisée reposant sur Nexus 6](google-emulator-manager-images/win/07-custom-device-sml.png)](google-emulator-manager-images/win/07-custom-device.png)
+[![Définition d’appareil personnalisée reposant sur Nexus 6](google-emulator-manager-images/win/07-custom-device-sml.png)](google-emulator-manager-images/win/07-custom-device.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Définition d’appareil personnalisée reposant sur Nexus 6](google-emulator-manager-images/mac/06-custom-device-sml.png)](google-emulator-manager-images/mac/06-custom-device.png)
+[![Définition d’appareil personnalisée reposant sur Nexus 6](google-emulator-manager-images/mac/06-custom-device-sml.png)](google-emulator-manager-images/mac/06-custom-device.png#lightbox)
 
 -----
 
@@ -153,11 +149,11 @@ Après avoir cliqué sur **OK**, la nouvelle configuration d’appareil s’affi
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![MyNexus ajouté à la liste des appareils](google-emulator-manager-images/win/09-added-to-list-sml.png)](google-emulator-manager-images/win/09-added-to-list.png)
+[![MyNexus ajouté à la liste des appareils](google-emulator-manager-images/win/09-added-to-list-sml.png)](google-emulator-manager-images/win/09-added-to-list.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![MyNexus ajouté à la liste des appareils](google-emulator-manager-images/mac/08-added-to-list-sml.png)](google-emulator-manager-images/mac/08-added-to-list.png)
+[![MyNexus ajouté à la liste des appareils](google-emulator-manager-images/mac/08-added-to-list-sml.png)](google-emulator-manager-images/mac/08-added-to-list.png#lightbox)
 
 -----
 
@@ -165,16 +161,15 @@ Le nouvel appareil virtuel personnalisé est également ajouté au menu déroula
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![MyNexus ajouté au menu déroulant des appareils](google-emulator-manager-images/win/10-available-custom-device-sml.png)](google-emulator-manager-images/win/10-available-custom-device.png)
+[![MyNexus ajouté au menu déroulant des appareils](google-emulator-manager-images/win/10-available-custom-device-sml.png)](google-emulator-manager-images/win/10-available-custom-device.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![MyNexus ajouté au menu déroulant des appareils](google-emulator-manager-images/mac/09-available-custom-device-sml.png)](google-emulator-manager-images/mac/09-available-custom-device.png)
+[![MyNexus ajouté au menu déroulant des appareils](google-emulator-manager-images/mac/09-available-custom-device-sml.png)](google-emulator-manager-images/mac/09-available-custom-device.png#lightbox)
 
 -----
 
 
-<a name="cloning" />
 
 ### <a name="cloning-a-device-definition"></a>Clonage d’une définition d'appareil
 
@@ -182,11 +177,11 @@ Il est possible de sélectionner une définition d’appareil existante et de la
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Liste de définitions d’appareil disponibles](google-emulator-manager-images/win/11-device-definitions-sml.png)](google-emulator-manager-images/win/11-device-definitions.png)
+[![Liste de définitions d’appareil disponibles](google-emulator-manager-images/win/11-device-definitions-sml.png)](google-emulator-manager-images/win/11-device-definitions.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Liste de définitions d’appareil disponibles](google-emulator-manager-images/mac/10-device-definitions-sml.png)](google-emulator-manager-images/mac/10-device-definitions.png)
+[![Liste de définitions d’appareil disponibles](google-emulator-manager-images/mac/10-device-definitions-sml.png)](google-emulator-manager-images/mac/10-device-definitions.png#lightbox)
 
 -----
 
@@ -194,11 +189,11 @@ Les appareils préconfigurés dans cette liste ne peuvent pas être modifiés. S
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Boîte de dialogue Clone Device](google-emulator-manager-images/win/12-clone-device-sml.png)](google-emulator-manager-images/win/12-clone-device.png)
+[![Boîte de dialogue Clone Device](google-emulator-manager-images/win/12-clone-device-sml.png)](google-emulator-manager-images/win/12-clone-device.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Boîte de dialogue Clone Device](google-emulator-manager-images/mac/11-clone-device-sml.png)](google-emulator-manager-images/mac/11-clone-device.png)
+[![Boîte de dialogue Clone Device](google-emulator-manager-images/mac/11-clone-device-sml.png)](google-emulator-manager-images/mac/11-clone-device.png#lightbox)
 
 -----
 
@@ -210,7 +205,7 @@ Dans la capture d’écran suivante, le nom est remplacé par **Nexus 5 Custom**
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![AVD Nexus 5 personnalisé](google-emulator-manager-images/mac/12-custom-nexus-sml.png)](google-emulator-manager-images/mac/12-custom-nexus.png)
+[![AVD Nexus 5 personnalisé](google-emulator-manager-images/mac/12-custom-nexus-sml.png)](google-emulator-manager-images/mac/12-custom-nexus.png#lightbox)
 
 -----
 
@@ -218,11 +213,11 @@ Lorsque vous cliquez sur **Clone Device**, une nouvelle définition d’appareil
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Nexus 5 Custom apparaît comme nouvelle définition d’appareil par l’utilisateur](google-emulator-manager-images/win/14-new-definition-sml.png)](google-emulator-manager-images/win/14-new-definition.png)
+[![Nexus 5 Custom apparaît comme nouvelle définition d’appareil par l’utilisateur](google-emulator-manager-images/win/14-new-definition-sml.png)](google-emulator-manager-images/win/14-new-definition.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Nexus 5 Custom apparaît comme nouvelle définition d’appareil par l’utilisateur](google-emulator-manager-images/mac/13-new-definition-sml.png)](google-emulator-manager-images/mac/13-new-definition.png)
+[![Nexus 5 Custom apparaît comme nouvelle définition d’appareil par l’utilisateur](google-emulator-manager-images/mac/13-new-definition-sml.png)](google-emulator-manager-images/mac/13-new-definition.png#lightbox)
 
 -----
 
@@ -230,11 +225,11 @@ Notez que chaque définition d’appareil créée par l’utilisateur s’affich
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Créer un AVD à partir de la définition d’appareil Nexus 5 Custom User](google-emulator-manager-images/win/15-create-avd-sml.png)](google-emulator-manager-images/win/15-create-avd.png)
+[![Créer un AVD à partir de la définition d’appareil Nexus 5 Custom User](google-emulator-manager-images/win/15-create-avd-sml.png)](google-emulator-manager-images/win/15-create-avd.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Créer un AVD à partir de la définition d’appareil Nexus 5 Custom User](google-emulator-manager-images/mac/14-create-avd-sml.png)](google-emulator-manager-images/mac/14-create-avd.png)
+[![Créer un AVD à partir de la définition d’appareil Nexus 5 Custom User](google-emulator-manager-images/mac/14-create-avd-sml.png)](google-emulator-manager-images/mac/14-create-avd.png#lightbox)
 
 -----
 
@@ -242,11 +237,11 @@ Après avoir cliqué sur **OK**, la nouvelle configuration d’appareil personna
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Nouvel AVD personnalisé ajouté au menu déroulant des appareils](google-emulator-manager-images/win/16-new-avd-sml.png)](google-emulator-manager-images/win/16-new-avd.png)
+[![Nouvel AVD personnalisé ajouté au menu déroulant des appareils](google-emulator-manager-images/win/16-new-avd-sml.png)](google-emulator-manager-images/win/16-new-avd.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[![Nouvel AVD personnalisé ajouté au menu déroulant des appareils](google-emulator-manager-images/mac/15-new-avd-sml.png)](google-emulator-manager-images/mac/15-new-avd.png)
+[![Nouvel AVD personnalisé ajouté au menu déroulant des appareils](google-emulator-manager-images/mac/15-new-avd-sml.png)](google-emulator-manager-images/mac/15-new-avd.png#lightbox)
 
 -----
 

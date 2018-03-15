@@ -53,7 +53,7 @@
 #### [Procédure pas à pas : utilisation de WCF](data-cloud/web-services/walkthrough-working-with-wcf.md)
 
 ## [Déploiement et test](deploy-test/index.md)
-### [Configuration de l’éditeur de liens personnalisé](deploy-test/linker.md)
+### [Configuration personnalisée de l’éditeur de liens](deploy-test/linker.md)
 ### [Performances](deploy-test/memory-perf-best-practices.md)
 ### [Installation de NUnit 2.6.4 à l’aide de NuGet](deploy-test/installing-nunit-using-nuget.md)
 ### [Débogage de processus multiples](deploy-test/multi-process-debugging.md)
@@ -86,7 +86,8 @@
 #### [Résolution des problèmes](macios/binding/troubleshooting.md)
 ### [Références natives](macios/native-references.md)
 ### [Types natifs](macios/nativetypes.md)
-### [Considérations relatives aux plateformes 32 et 64 bits](macios/32-and-64.md)
+### [Considérations relatives aux plateformes 32 et 64 bits](macios/32-and-64/index.md)
+#### [Mise à jour des applications unifiées Xamarin.Mac vers 64 bits](macios/32-and-64/mac-64-bit.md)
 ### [Utilisation de types natifs dans des applications multiplateformes](macios/native-types-cross-platform.md)
 ### [Pile HttpClient et sélecteur d’implémentation de SSL/TLS](macios/http-stack.md)
 ## [Éléments internes](internals/index.md)

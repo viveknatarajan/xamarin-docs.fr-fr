@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 269621056f0db807d8aebc8400b20d902d710b2c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b1d56c62fe54d5b1e196e20e1a6989b542da1be
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS - Démarrage rapide
 
 Ce guide décrit comment créer une application qui convertit un numéro de téléphone alphanumérique (entré par l’utilisateur) en numéro de téléphone numérique, puis compose ce numéro. L’application finale ressemble à ceci :
 
- [ ![](hello-ios-quickstart-images/image1.png "Application Hello.iOS - Démarrage rapide")](hello-ios-quickstart-images/image1.png)
+ [![](hello-ios-quickstart-images/image1.png "Application de démarrage rapide Hello.iOS")](hello-ios-quickstart-images/image1.png#lightbox)
 
 
 <a name="Requirements" />
@@ -524,5 +524,5 @@ Maintenant, le moment est venu d’examiner de plus près les outils et compéte
 
 - [Icônes d’application et images de lancement Xamarin (exemple)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
 - [Hello, iOS (exemple)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [Bonnes pratiques pour l'IHM iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [Lignes directrices de l’interface utilisateur iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portail de provisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)

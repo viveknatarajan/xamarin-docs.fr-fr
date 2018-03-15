@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: baf1ae7d4cc533af0db482e8d7c31fc3c8b4edbf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4e93696f8eef44030ffacbdbaa8ebcd860a402f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="free-provisioning"></a>Provisionnement libre
 
@@ -43,29 +43,29 @@ Pour utiliser le provisionnement libre pour déployer une application sur un app
 2. Ouvrez Xcode et accédez à **Xcode > Préférences**.
 3. Sous **comptes**, utilisez le bouton **+** pour ajouter votre ID Apple existant. Celui-ci doit ressembler à la capture d’écran suivante :
 
-  [ ![](free-provisioning-images/launchapp1.png "Comptes de préférences Xcode")](free-provisioning-images/launchapp1.png)
+  [![](free-provisioning-images/launchapp1.png "Comptes de préférences Xcode")](free-provisioning-images/launchapp1.png#lightbox)
 
 4. Branchez l’appareil iOS sur lequel vous voulez effectuer le déploiement et créez un projet iOS vide avec affichage unique dans Xcode. Affectez à la liste déroulante **Équipe** la valeur de l’ID Apple que vous venez d’ajouter. Son format doit être similaire à `your name (Personal Team - your Apple ID)` :
 
-  [ ![](free-provisioning-images/launchapp2.png "Créer l’identité de signature")](free-provisioning-images/launchapp2.png)
+  [![](free-provisioning-images/launchapp2.png "Créer l’identité de signature")](free-provisioning-images/launchapp2.png#lightbox)
 
 5. Sous la section **Général > Identité**, assurez-vous que l’ID de bundle correspond _exactement_ à l’ID de bundle de votre application Xamarin.iOS et vérifiez que la cible de déploiement correspond ou est inférieure à votre appareil iOS connecté. Cette étape est extrêmement importante, car Xcode crée uniquement un profil de provisionnement avec un ID d’application explicite :
 
-  [![](free-provisioning-images/launchapp5.png "Créer un profil de provisionnement avec un ID d’application explicite")](free-provisioning-images/launchapp5.png)
+  [![](free-provisioning-images/launchapp5.png "Créer un profil de provisionnement avec un ID d’application explicite")](free-provisioning-images/launchapp5.png#lightbox)
 
 6. Dans la section Signature, sélectionnez **Gérer automatiquement la signature** et sélectionnez votre équipe dans la liste déroulante :
 
-  [![](free-provisioning-images/launchapp6.png "Sélectionner Gérer automatiquement la signature et sélectionner votre équipe dans la liste déroulante")](free-provisioning-images/launchapp6.png)
+  [![](free-provisioning-images/launchapp6.png "Sélectionner Gérer automatiquement la signature et sélectionner votre équipe dans la liste déroulante")](free-provisioning-images/launchapp6.png#lightbox)
 
 7. L’étape précédente génère automatiquement un profil de provisionnement et une identité de signature pour vous. Cliquez sur l’icône d’information située en regard du profil de provisionnement pour l’afficher :
 
-  [![](free-provisioning-images/launchapp7.png "Afficher le profil de provisionnement")](free-provisioning-images/launchapp7.png)
+  [![](free-provisioning-images/launchapp7.png "Afficher le profil de provisionnement")](free-provisioning-images/launchapp7.png#lightbox)
 
 8. Pour tester dans Xcode, déployez l’application vide sur votre appareil en cliquant sur le bouton d’exécution.
 
 9. Revenez à votre IDE, avec le même appareil branché, puis cliquez avec le bouton droit sur le nom de votre projet Xamarin.iOS pour ouvrir la boîte de dialogue **Options du projet**. Accédez à la section Signature du bundle iOS et définissez explicitement votre identité de signature et votre profil de provisionnement :
 
-  [![](free-provisioning-images/launchapp8.png "Sélectionner l’identité de signature et le profil de provisionnement")](free-provisioning-images/launchapp8.png)
+  [![](free-provisioning-images/launchapp8.png "Sélectionner l’identité de signature et le profil de provisionnement")](free-provisioning-images/launchapp8.png#lightbox)
 
 Si votre identité de signature ou le profil de provisionnement approprié n’apparaissent pas dans votre IDE, vous devrez peut-être le redémarrer.
 

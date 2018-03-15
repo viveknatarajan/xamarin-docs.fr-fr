@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 8e36548e0d9926a28c133f8f1dc688fcbfa9f78e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a7d4af1563cb5fe5166c289c4ee5dca6ad3ffb00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>Hello, iOS multi-écran - En profondeur
 
@@ -27,7 +27,7 @@ Ensuite, nous nous intéressons au contrôleur de navigation pour apprendre à l
 
 Dans le didacticiel [Hello, iOS](~/ios/get-started/hello-ios/index.md), nous avons appris que les applications iOS ont une seule *fenêtre* et que les contrôleurs d’affichage sont responsables du chargement de leurs *hiérarchies d’affichage de contenu* dans cette fenêtre. Dans la deuxième procédure pas à pas Phoneword, nous avons ajouté un deuxième écran à notre application et passé certaines données (une liste de numéros de téléphone) entre les deux écrans, comme l’illustre le diagramme ci-dessous :
 
- [ ![](hello-ios-multiscreen-deepdive-images/08.png "Ce diagramme illustre le passage de données entre deux écrans")](hello-ios-multiscreen-deepdive-images/08.png)
+ [![](hello-ios-multiscreen-deepdive-images/08.png "Ce diagramme illustre le passage de données entre deux écrans")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
 Dans notre exemple, les données étaient collectées dans le premier écran, passées du premier contrôleur d’affichage au deuxième, puis affichés par le deuxième écran. Cette séparation des écrans, contrôleurs d’affichage et données suit le modèle *, MVC (Model-View-Controller)*. Dans les sections suivantes, nous présentons les avantages de ce modèle, ses composants et la manière dont nous l’utilisons dans notre application Phoneword.
 
@@ -35,7 +35,7 @@ Dans notre exemple, les données étaient collectées dans le premier écran, pa
 
 Le modèle MVC (Model-View-Controller) est un *modèle de conception*, autrement dit une solution d’architecture réutilisable à un problème courant ou cas d’usage dans le code. Le modèle MVC est une architecture destinée aux applications dotées d’une *interface graphique utilisateur (GUI)*. Il attribue aux objets dans l’application un des trois rôles suivants : *modèle* (Model) (données ou logique d’application), *affichage* (View) (interface utilisateur) et *contrôleur* (Controller) (code-behind). Le diagramme ci-dessous illustre les relations entre les trois éléments du modèle MVC et l’utilisateur :
 
- [ ![](hello-ios-multiscreen-deepdive-images/00.png "Ce diagramme illustre les relations entre les trois éléments du modèle MVC et l’utilisateur")](hello-ios-multiscreen-deepdive-images/00.png)
+ [![](hello-ios-multiscreen-deepdive-images/00.png "Ce diagramme illustre les relations entre les trois éléments du modèle MVC et l’utilisateur")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
 Le modèle MVC s’avère utile car il fournit une séparation logique entre les différents composants d’une application GUI et facilite la réutilisation de code et d’affichages. Intéressons-nous maintenant de plus près à chacun des trois rôles.
 
@@ -71,23 +71,23 @@ Dans l’application Phoneword, nous avons utilisé un *contrôleur de navigatio
 
 Le contrôleur de navigation est commun dans les applications iOS et assure la navigation pour des applications iOS de base comme l’application **Réglages**, comme l’illustre la capture d’écran ci-dessous :
 
- [ ![](hello-ios-multiscreen-deepdive-images/01.png "Le contrôleur de navigation assure la navigation des applications iOS comme l’application Réglages illustrée ici")](hello-ios-multiscreen-deepdive-images/01.png)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "Le contrôleur de navigation assure la navigation des applications iOS comme l’application Réglages illustrée ici")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 Le contrôleur de navigation remplit trois fonctions principales :
 
 -  **Il fournit des hooks pour la navigation en avant** : Le contrôleur de navigation utilise une métaphore de navigation hiérarchique où les hiérarchies d’affichage de contenu sont *envoyées* dans une *pile de navigation* . Vous pouvez considérer qu’une pile de navigation est comme une pile de cartes à jouer, dans laquelle seule la carte du dessus est visible, comme l’illustre le diagramme ci-dessous :  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/02.png "Ce diagramme illustre la navigation avec une pile de cartes")](hello-ios-multiscreen-deepdive-images/02.png)
+    [![](hello-ios-multiscreen-deepdive-images/02.png "Ce diagramme illustre la navigation sous forme de pile de cartes")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
 -  **Il fournit éventuellement un bouton Précédent** : Quand nous envoyons un nouvel élément dans la pile de navigation, la barre de titre peut afficher automatiquement un *bouton Précédent* qui permet à l’utilisateur de revenir en arrière. En appuyant sur le bouton Précédent, le contrôleur d’affichage actif est *retiré* de la pile de navigation et la précédente hiérarchie d’affichage de contenu dans la fenêtre se charge :  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/03.png "Ce diagramme illustre le retrait d’une carte de la pile")](hello-ios-multiscreen-deepdive-images/03.png)
+    [![](hello-ios-multiscreen-deepdive-images/03.png "Ce diagramme illustre le retrait d’une carte de la pile")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
 -  **Il fournit une barre de titre** : La partie supérieure du **contrôleur de navigation** est appelé *barre de titre*. Celle-ci est chargée d’afficher le titre du contrôleur d’affichage, comme l’illustre le diagramme ci-dessous :  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/04.png "La barre de titre est chargée d’afficher le titre du contrôleur d’affichage")](hello-ios-multiscreen-deepdive-images/04.png)
+    [![](hello-ios-multiscreen-deepdive-images/04.png "La barre de titre est chargée d’afficher le titre du contrôleur de vue")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 
 
@@ -97,11 +97,11 @@ Le contrôleur de navigation remplit trois fonctions principales :
 Un **contrôleur de navigation** ne gère pas une hiérarchie d’affichage de contenu, il n’a donc rien à afficher tout seul.
 Un **contrôleur de navigation** est plutôt associé à un *contrôleur d’affichage racine* :
 
- [ ![](hello-ios-multiscreen-deepdive-images/05.png "Un contrôleur de navigation est associé à un contrôleur d’affichage racine")](hello-ios-multiscreen-deepdive-images/05.png)
+ [![](hello-ios-multiscreen-deepdive-images/05.png "Un contrôleur de navigation est associé à un contrôleur de vue racine")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 Le contrôleur d’affichage racine représente le premier contrôleur d’affichage dans la pile du **contrôleur de navigation** et la hiérarchie d’affichage de contenu du contrôleur d’affichage racine est la première hiérarchie d’affichage de contenu à charger dans la fenêtre. Si nous voulons placer toute notre application dans la pile du contrôleur de navigation, nous pouvons déplacer le Segue sans source dans le **contrôleur de navigation** et définir le contrôleur d’affichage de notre premier écran en tant que contrôleur d’affichage racine, comme nous l’avons fait dans l’application Phoneword :
 
- [ ![](hello-ios-multiscreen-deepdive-images/06.png "Le Segue sans source définit le contrôleur d’affichage du premier écran en tant que contrôleur d’affichage racine")](hello-ios-multiscreen-deepdive-images/06.png)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "Le segue sans source définit le contrôleur de vue des premiers écrans en tant que contrôleur de vue racine")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Options de navigation supplémentaires
 
@@ -115,7 +115,7 @@ Dans la procédure pas à pas Phoneword, nous avons traité la transition entre 
 
 Lorsque nous ajoutons un Segue avec une action **Afficher** au Storyboard, nous demandons à iOS d’envoyer le deuxième contrôleur d’affichage dans la pile du contrôleur de navigation :
 
- [ ![](hello-ios-multiscreen-deepdive-images/09.png "Définition du type de Segue à partir d’une liste déroulante")](hello-ios-multiscreen-deepdive-images/09.png)
+ [![](hello-ios-multiscreen-deepdive-images/09.png "Définition du type de segue à partir d’une liste déroulante")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
 L’ajout d’un Segue au Storyboard suffit à créer une transition simple entre les écrans. Si nous voulons passer des données entre les contrôleurs d’affichage, nous devons remplacer la méthode `PrepareForSegue` et gérer les données nous-mêmes :
 
@@ -213,6 +213,6 @@ Maintenant, apprenons à générer des applications multiplateforme avec Xamarin
 
 ## <a name="related-links"></a>Liens associés
 
-- [Bonjour, iOS (exemple)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (exemple)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
 - [Lignes directrices de l’interface utilisateur iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [Portail d’approvisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)
+- [Portail de provisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)

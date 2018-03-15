@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 71d13166bf047f6e645172a18cb5b24c3bc9f811
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2552538c4d586e9471c42aaf7d696955a0908d1b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuration d’une application dans iTunes Connect
 
@@ -32,13 +32,13 @@ iTunes Connect peut être utilisé pour :
 - Sélectionner un prix de vente ou indiquer que l’application est disponible gratuitement
 - Configurer les technologies facultatives de l’App Store, par exemple Game Center et l’achat dans l’application
 
-De plus, l’application doit également disposer d’illustrations attrayantes et d’images en haute résolution, au cas où Apple déciderait de les présenter dans l’App Store. Pour plus d’informations, consultez le [Guide du développeur iTunes Connect](#https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1) d’Apple.
+De plus, l’application doit également disposer d’illustrations attrayantes et d’images en haute résolution, au cas où Apple déciderait de les présenter dans l’App Store. Pour plus d’informations, consultez le [Guide du développeur iTunes Connect](https://developer.apple.com/support/itunes-connect/) d’Apple.
 
 ## <a name="managing-agreements-tax-and-banking"></a>Gestion des contrats, des taxes et des informations bancaires
 
 La section **Agreements, Tax, and Banking (Contrats, taxes et informations bancaires)** d’iTunes Connect permet de fournir les informations financières nécessaires au paiement des développeurs iTunes et des imputations fiscales. Elle permet également de suivre l’état des contrats en place avec Apple. Pour pouvoir publier une application iOS (gratuite ou payante) sur l’App Store, vous devez d’abord mettre en place les contrats appropriés et accepter les modifications apportées aux contrats existants.
 
-[ ![](itunesconnect-images/agreement01.png "Gestion des contrats, des taxes et des informations bancaires")](itunesconnect-images/agreement01.png)
+[![](itunesconnect-images/agreement01.png "Gestion des contrats, des taxes et des informations bancaires")](itunesconnect-images/agreement01.png#lightbox)
 
 À partir de cet emplacement, vous pouvez :
 
@@ -61,13 +61,13 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 
 1. Cliquez sur **My Apps (Mes applications)** :
 
-    [ ![](itunesconnect-images/add01.png "Cliquer sur My Apps (Mes applications)")](itunesconnect-images/add01.png)
+    [![](itunesconnect-images/add01.png "Cliquer sur My Apps (Mes applications)")](itunesconnect-images/add01.png#lightbox)
 2. Cliquez sur le signe **+** dans le coin supérieur gauche, puis sélectionnez **New iOS App (Nouvelle application iOS)** :
 
-    [ ![](itunesconnect-images/add02.png "Ajout d’une nouvelle application iOS")](itunesconnect-images/add02.png)
+    [![](itunesconnect-images/add02.png "Ajout d’une nouvelle application iOS")](itunesconnect-images/add02.png#lightbox)
 3. iTunes Connect affiche la boîte de dialogue **New iOS App (Nouvelle application iOS)** :
 
-    [ ![](itunesconnect-images/add03.png "Boîte de dialogue New iOS App (Nouvelle application iOS)")](itunesconnect-images/add03.png)
+    [![](itunesconnect-images/add03.png "Boîte de dialogue New iOS App")](itunesconnect-images/add03.png#lightbox)
 4. Entrez un **Name (Nom)** et un **Version Number (Numéro de version)** pour l’application, tels qu’ils doivent s’afficher dans l’App Store.
 5. Sélectionnez la **Primary Language (Langue principale)**.
 6. Entrez un numéro de **SKU (Référence)**. Il s’agit d’un identificateur unique et constant, qui permet de suivre l’application. Il n’est pas visible par l’utilisateur final et _ne peut pas être changé_ après la création de l’application.
@@ -76,7 +76,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 
 L’application est créée dans iTunes Connect. Vous pouvez ensuite spécifier les informations nécessaires correspondantes, par exemple la description, la tarification, les catégories, la classification, etc. :
 
-[ ![](itunesconnect-images/add04.png "L’application est créée dans iTunes Connect")](itunesconnect-images/add04.png)
+[![](itunesconnect-images/add04.png "La nouvelle application est créée dans iTunes Connect")](itunesconnect-images/add04.png#lightbox)
 
 <a name="managing" />
 
@@ -110,7 +110,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 4. Faites défiler l’affichage jusqu’à la section **Screenshots (Captures d’écran)**.
 5. Sélectionnez la **Image Size (Taille de l’image)**, puis faites glisser les images nécessaires (jusqu’à 5 par taille d’écran) :
 
-    [ ![](itunesconnect-images/screenshot01.png "Sélectionner la Image Size (Taille de l’image), puis faire glisser les images nécessaires")](itunesconnect-images/screenshot01.png)
+    [![](itunesconnect-images/screenshot01.png "Sélectionner la taille de l’image, puis faire glisser les images nécessaires")](itunesconnect-images/screenshot01.png#lightbox)
 6. Répétez l’opération pour toutes les tailles d’écran nécessaires.
 7. Cliquez sur le bouton **Save (Enregistrer)** en haut de l’écran pour enregistrer vos changements.
 
@@ -183,7 +183,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 4. Faites défiler l’affichage jusqu’à la section **Name (Nom)**.
 5. Indiquez toutes les informations obligatoires :
 
-    [ ![](itunesconnect-images/name01.png "Modification du nom, de la description, des nouveautés, des mots clés et des URL dans iTunes Connect")](itunesconnect-images/name01.png)
+    [![](itunesconnect-images/name01.png "Modification du nom, de la description, des nouveautés, des mots clés et des URL dans iTunes Connect")](itunesconnect-images/name01.png#lightbox)
 6. Cliquez sur le bouton **Save (Enregistrer)** en haut de l’écran pour enregistrer vos changements.
 
 > [!IMPORTANT]
@@ -248,10 +248,10 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 4. Faites défiler l’affichage jusqu’à la section **General App Information (Informations générales relatives à l’application)**.
 5. Indiquez toutes les informations obligatoires :
 
-    [ ![](itunesconnect-images/general01.png "Modification des informations générales de l’application dans iTunes Connect")](itunesconnect-images/general01.png)
+    [![](itunesconnect-images/general01.png "Modification des informations générales de l’application dans iTunes Connect")](itunesconnect-images/general01.png#lightbox)
 6. Cliquez sur le bouton **Edit (Modifier)** à côté de **Rating (Classification)** pour définir les informations de classification :
 
-    [ ![](itunesconnect-images/general02.png "Modification de la classification")](itunesconnect-images/general02.png)
+    [![](itunesconnect-images/general02.png "Modification de la classification")](itunesconnect-images/general02.png#lightbox)
 6. Cliquez sur le bouton **Save (Enregistrer)** en haut de l’écran pour enregistrer vos changements.
 
 > [!NOTE]
@@ -274,14 +274,14 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 5. Poussez le bouton de la section **Game Center** vers la position **On (Activé)**.
 5. Indiquez toutes les informations obligatoires :
 
-    [ ![](itunesconnect-images/gamecenter01.png "Modification des informations relatives à Game Center dans iTunes Connect")](itunesconnect-images/gamecenter01.png)
+    [![](itunesconnect-images/gamecenter01.png "Modification des informations relatives à Game Center dans iTunes Connect")](itunesconnect-images/gamecenter01.png#lightbox)
 6. Cliquez sur le bouton **Save (Enregistrer)** en haut de l’écran pour enregistrer vos changements.
 
 Utilisez l’onglet **Game Center** pour activer Game Center et gérer les **Leaderboards** ou **Achievements (Succès)** disponibles pour cette application :
 
-[ ![](itunesconnect-images/gamecenter02.png "Activer Game Center")](itunesconnect-images/gamecenter02.png)
+[![](itunesconnect-images/gamecenter02.png "Activer Game Center")](itunesconnect-images/gamecenter02.png#lightbox)
 
-[ ![](itunesconnect-images/gamecenter03.png "Gérer les leaderboards ou les succès disponibles pour cette application")](itunesconnect-images/gamecenter03.png)
+[![](itunesconnect-images/gamecenter03.png "Gérer les leaderboards ou les réalisations disponibles pour cette application")](itunesconnect-images/gamecenter03.png#lightbox)
 
 ## <a name="maintaining-app-review-information"></a>Gestion des informations relatives à l’évaluation de l’application
 
@@ -297,10 +297,10 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 4. Faites défiler l’affichage jusqu’à la section **App Review Information (Informations relatives à l’évaluation de l’application)**.
 5. Indiquez toutes les informations obligatoires :
 
-    [ ![](itunesconnect-images/review01.png "Modification des informations relatives à l’évaluation de l’application dans iTunes Connect")](itunesconnect-images/review01.png)
+    [![](itunesconnect-images/review01.png "Modification des informations relatives à l’évaluation de l’application dans iTunes Connect")](itunesconnect-images/review01.png#lightbox)
 6. Indiquez la façon dont vous souhaitez que l’application soit publiée sur l’App Store une fois son évaluation réussie :
 
-    [ ![](itunesconnect-images/review02.png "Modification des informations relatives à la publication dans iTunes Connect")](itunesconnect-images/review02.png)
+    [![](itunesconnect-images/review02.png "Modification des informations relatives à la publication dans iTunes Connect")](itunesconnect-images/review02.png#lightbox)
 6. Cliquez sur le bouton **Save (Enregistrer)** en haut de l’écran pour enregistrer vos changements.
 
 
@@ -308,7 +308,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 
 Si vous comptez publier une application payante, vous devez définir le prix de vente en sélectionnant l’un des niveaux tarifaires proposés par Apple, ainsi que sa date d’entrée en vigueur. Par exemple, au moment de la rédaction de ce document, la tarification **Tier 1 (Niveau 1)** ressemble à ce qui suit :
 
-[ ![](itunesconnect-images/price01.png "Gestion des informations relatives à la tarification")](itunesconnect-images/price01.png)
+[![](itunesconnect-images/price01.png "Gestion des informations relatives à la tarification")](itunesconnect-images/price01.png#lightbox)
 
 ### <a name="educational-discount"></a>Remise pour le secteur de l’éducation
 
@@ -328,7 +328,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 2. Cliquez sur l’**icône** de votre application.
 3. Sélectionnez l’onglet **Pricing (Tarification)** :
 
-    [ ![](itunesconnect-images/price02.png "Modification des informations relatives à la tarification dans iTunes Connect")](itunesconnect-images/price02.png)
+    [![](itunesconnect-images/price02.png "Modification des informations relatives à la tarification dans iTunes Connect")](itunesconnect-images/price02.png#lightbox)
 4. Sélectionnez une **Availability Date (Date de disponibilité)**.
 5. Sélectionnez le prix souhaité dans la liste déroulante **Price Tier (Niveau de prix)**.
 5. Activez éventuellement **Educational Discounts (Remise pour le secteur de l’éducation)**.
@@ -341,7 +341,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 
 Si vous comptez vendre des produits virtuels dans l’application, à partir de votre application (par exemple, de nouveaux niveaux de jeu ou des fonctionnalités d’application), utilisez cette section pour créer et gérer les éléments d’achat nécessaires.
 
-[ ![](itunesconnect-images/inapp01.png "Gestion des informations relatives aux achats dans l’application")](itunesconnect-images/inapp01.png)
+[![](itunesconnect-images/inapp01.png "Gestion des informations relatives aux achats dans l’application")](itunesconnect-images/inapp01.png#lightbox)
 
 Pour plus d’informations sur l’utilisation des achats dans l’application au sein d’une application Xamarin.iOS, consultez la documentation sur les [achats dans l’application](~/ios/platform/in-app-purchasing/index.md).
 
@@ -349,7 +349,7 @@ Pour plus d’informations sur l’utilisation des achats dans l’application a
 
 Une fois que votre application a été publiée sur l’App Store, les utilisateurs qui l’ont achetée ou téléchargée gratuitement peuvent rédiger des avis et laisser des évaluations (étoiles). Utilisez cette section pour consulter ces avis. Exemple :
 
-[ ![](itunesconnect-images/reviews01.png "Affichage des avis relatifs à l’application")](itunesconnect-images/reviews01.png)
+[![](itunesconnect-images/reviews01.png "Affichage des revues de l’application")](itunesconnect-images/reviews01.png#lightbox)
 
 ## <a name="summary"></a>Récapitulatif
 
@@ -358,7 +358,7 @@ Cet article explique comment utiliser iTunes Connect pour préparer une applicat
 ## <a name="related-links"></a>Liens associés
 
 - [Utilisation d’images](~/ios/app-fundamentals/images-icons/index.md)
-- [Guide du workflow de développement d’applications iOS : distribution d’applications](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
+- [Guide du workflow de développement d’applications iOS : distribution d’applications](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
 - [Conseils pour la soumission à l’App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Recommandations pour l’évaluation dans l’App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Guide du développeur iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1)

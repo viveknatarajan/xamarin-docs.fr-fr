@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 7ce674ea38bc847bc9064a5a61113900a45b991d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 434a12c26a5823b082751c95c2090b22c39cf081
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms - Démarrage rapide
 
 Cette procédure pas à pas illustre comment créer une application qui convertit un numéro de téléphone alphanumérique (entré par l’utilisateur) en numéro de téléphone numérique, puis compose le numéro. L’application finale est indiquée ci-dessous :
 
-[![](quickstart-images/intro-app-examples-sml.png "Application Phoneword")](quickstart-images/intro-app-examples.png "Application Phoneword")
+[![](quickstart-images/intro-app-examples-sml.png "Application Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Application Phoneword")
 
 Créez l’application Phoneword comme suit :
 
@@ -113,7 +113,7 @@ Créez l’application Phoneword comme suit :
         }
 
   > [!NOTE]
-> **Remarque** : Une tentative de génération de l’application à ce stade provoquera des erreurs qui seront corrigées plus tard.
+  > Une tentative de génération de l’application à ce stade provoque des erreurs qui seront corrigées plus tard.
 
   Enregistrez les modifications apportées à **MainPage.xaml.cs** en appuyant sur **Ctrl+S** et fermez le fichier.
 
@@ -565,7 +565,7 @@ Créez l’application Phoneword comme suit :
         }
 
   > [!NOTE]
-> **Remarque** : Une tentative de génération de l’application à ce stade provoquera des erreurs qui seront corrigées plus tard.
+  > Une tentative de génération de l’application à ce stade provoque des erreurs qui seront corrigées plus tard.
 
   Enregistrez les modifications apportées à **MainPage.xaml.cs** en choisissant **Fichier > Enregistrer** (ou en appuyant sur **&#8984;+S**) et fermez le fichier.
 

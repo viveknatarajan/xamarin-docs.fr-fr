@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a113a386f1312253fda8913cea3cb608a65e1061
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f7c743bab2a6acb3dcd57ebca207957f983e0c0f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="unit-testing"></a>Test unitaire
 
@@ -119,15 +119,15 @@ Pour exécuter ce projet dans votre solution, cliquez dessus avec le bouton droi
 
 Test Runner affiche les tests qui sont enregistrés et vous permet de sélectionner individuellement les tests à exécuter.
 
-[ ![](touch.unit-images/02.png "Liste des tests enregistrés")](touch.unit-images/02.png) 
+[![](touch.unit-images/02.png "Liste des tests inscrits")](touch.unit-images/02.png#lightbox) 
 
-[ ![](touch.unit-images/03.png "Test individuel")](touch.unit-images/03.png) 
+[![](touch.unit-images/03.png "Test individuel")](touch.unit-images/03.png#lightbox) 
 
-[ ![](touch.unit-images/04.png "Résultats de l’exécution")](touch.unit-images/04.png)
+[![](touch.unit-images/04.png "Résultats de l’exécution")](touch.unit-images/04.png#lightbox)
 
 Vous pouvez exécuter les fixtures de test de votre choix en les sélectionnant dans les vues imbriquées, ou exécuter tous les tests en sélectionnant le bouton « Exécuter tout ». Si vous exécutez le test par défaut, celui-ci est censé inclure un test réussi, un test échoué et un test ignoré. Voici à quoi ressemble le rapport. Vous pouvez accéder directement aux détails des tests ayant échoué pour déterminer la cause de l’échec :
 
-[ ![](touch.unit-images/05.png "Exemple de rapport")](touch.unit-images/05.png) [ ![](touch.unit-images/06.png "Exemple de rapport")](touch.unit-images/06.png) [ ![](touch.unit-images/07.png "Exemple de rapport")](touch.unit-images/07.png)
+[![](touch.unit-images/05.png "Exemple de rapport")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Exemple de rapport")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Exemple de rapport")](touch.unit-images/05.png#lightbox)
 
 Vous pouvez également examiner les tests en cours d’exécution et leur état actuel dans la fenêtre Sortie de l’application dans votre environnement IDE.
 

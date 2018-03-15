@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 6bb712da5becbe9c19dddf3deb393f0d50cd726b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4da96f3119fb46fbeb22ad3d6c68b3099f6d0698
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="in-house-distribution"></a>Distribution en interne
 
@@ -56,15 +56,15 @@ Il est important de noter que vous ne pouvez pas renouveler les certificats arri
 3. Cliquez sur le bouton **+** pour créer un certificat.
 4. Sous le titre *Production*, sélectionnez **In-House and Ad Hoc (Interne et ad hoc)** :
 
-   [ ![](in-house-distribution-images/createcertmanually01.png "Sélectionner In-House and Ad Hoc (Interne et ad hoc)")](in-house-distribution-images/createcertmanually01.png)
+   [![](in-house-distribution-images/createcertmanually01.png "Sélectionner In-House and Ad Hoc (Interne et ad hoc)")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Cliquez sur Continue, puis suivez les instructions permettant de créer une demande de signature de certificat via Trousseaux d’accès :
 
-   [ ![](in-house-distribution-images/createcertmanually02.png "Créer une demande de signature de certificat via Trousseaux d’accès")](in-house-distribution-images/createcertmanually02.png)
+   [![](in-house-distribution-images/createcertmanually02.png "Créer une demande de signature de certificat via l’accès au trousseau")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Une fois votre demande de signature de certificat créée, cliquez sur Continue, puis chargez-la sur le Member Center :
 
-   [ ![](in-house-distribution-images/createcertmanually03.png "Charger la demande de signature de certificat sur le Member Center")](in-house-distribution-images/createcertmanually03.png)
+   [![](in-house-distribution-images/createcertmanually03.png "Charger la demande de signature de certificat sur le Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Cliquez sur Generate pour créer votre certificat.
 8. Téléchargez le certificat rempli, puis double-cliquez sur le fichier pour l’installer.
@@ -74,15 +74,15 @@ Sinon, il est possible de demander un certificat via la boîte de dialogue Prefe
 
 1. Sélectionnez votre équipe, puis cliquez sur *Afficher les détails* :
 
-    [ ![](in-house-distribution-images/selectteam.png "Sélectionner votre équipe")](in-house-distribution-images/selectteam.png)
+    [![](in-house-distribution-images/selectteam.png "Sélectionner votre équipe")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Cliquez ensuite sur le bouton **Créer** à côté de **iOS Distribution Certificate (Certificat de distribution iOS)** :
 
-   [ ![](in-house-distribution-images/selectcert.png "Créer le certificat de distribution iOS")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Créer le certificat de distribution iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
 2.   Cliquez ensuite sur le bouton **plus (+)**, puis sélectionnez **iOS App Store (App Store iOS)** :
 
-   [ ![](in-house-distribution-images/selectcert.png "Sélectionner l’App Store iOS")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Sélectionner l’App Store iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -105,23 +105,23 @@ Une fois que vous avez les composants nécessaires pour créer un profil de dist
 
 1. Retournez au portail de provisionnement Apple, puis sélectionnez **Provisioning (Provisionnement)** > **Distribution** :
 
-   [![](in-house-distribution-images/distribute01.png "Sélectionner Provisioning (Provisionnement) > Distribution")](in-house-distribution-images/distribute01.png)
+   [![](in-house-distribution-images/distribute01.png "Sélectionner Provisioning (Provisionnement) > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Cliquez sur le bouton **+** et sélectionnez le type **Interne** en tant que profil de distribution à créer :
 
-   [![](in-house-distribution-images/distribute02.png "Créer un profil de distribution interne")](in-house-distribution-images/distribute02.png)
+   [![](in-house-distribution-images/distribute02.png "Créer un profil de distribution interne")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Cliquez sur le bouton **Continue**, puis dans la liste déroulante, sélectionnez l’ID d’application pour lequel vous souhaitez créer un profil de distribution :
 
-   [![](in-house-distribution-images/distribute03.png "Sélectionner l’ID d’application dans la liste déroulante")](in-house-distribution-images/distribute03.png)
+   [![](in-house-distribution-images/distribute03.png "Sélectionner l’ID d’application dans la liste déroulante")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Cliquez sur le bouton **Continue**, puis sélectionnez le certificat de distribution nécessaire pour signer l’application :
 
-   [![](in-house-distribution-images/distribute04.png "Sélectionner le certificat de distribution nécessaire pour signer l’application")](in-house-distribution-images/distribute04.png)
+   [![](in-house-distribution-images/distribute04.png "Sélectionner le certificat de distribution nécessaire pour signer l’application")](in-house-distribution-images/distribute04.png#lightbox)
 
 6. Cliquez sur le bouton **Continue**, puis entrez un **Name (Nom)** pour le nouveau profil de distribution :
 
-   [![](in-house-distribution-images/distribute06.png "Entrer un nom pour le nouveau profil de distribution")](in-house-distribution-images/distribute06.png)
+   [![](in-house-distribution-images/distribute06.png "Entrer un nom pour le nouveau profil de distribution")](in-house-distribution-images/distribute06.png#lightbox)
 
 7. Cliquez sur le bouton **Generate** pour créer le profil et finaliser le processus.
 

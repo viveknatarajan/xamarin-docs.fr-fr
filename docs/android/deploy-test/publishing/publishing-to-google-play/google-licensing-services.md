@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/20/2017
-ms.openlocfilehash: f1e7e36dfa1bfe122084f0525d83f06760ca1fe0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d4ed2df994ace7f6de5ade78577e759bb811565c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="google-licensing-services"></a>Services Google Licensing
 
@@ -26,7 +26,7 @@ Google Licensing est sécurisé dans le sens où chaque réponse est signée à 
 
 Une application ayant implémenté Google Licensing fait une demande à un service hébergé par l’application Google Play sur l’appareil. Google Play envoie ensuite cette demande sur le serveur Google Licensing, qui répond en indiquant l’état de la licence : 
 
-[ ![Diagramme du workflow du serveur de licences](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png)
+[![Diagramme du workflow du serveur de licences](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
 
 Le diagramme ci-dessus illustre ce workflow : 
 
@@ -36,7 +36,6 @@ Le diagramme ci-dessus illustre ce workflow :
 
 Le service Google Licensing est également un composant essentiel des fichiers d’extension d’APK (qui sont décrits plus loin dans ce document). Les fichiers d’extension d’APK utilisent les services Google Licensing pour obtenir l’URL des fichiers d’extension qui seront téléchargés.
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>Configuration requise
 

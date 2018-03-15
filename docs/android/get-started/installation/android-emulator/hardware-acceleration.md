@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/22/2017
-ms.openlocfilehash: 53dc85cab94bdf692e088d7c6eea6916d283ba84
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7560900ace62a737ac765bcfe93f759f8985aca2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Accélération matérielle de l’émulateur Android
 
 Dans la mesure où l’émulateur du kit Android SDK est extrêmement lent sans accélération matérielle, il est vivement recommandé d’utiliser le Gestionnaire d'exécution avec accélération matérielle (HAXML) d’Intel pour améliorer de façon significative les performances de l’émulateur du kit Android SDK.
 
-<a name="haxm-overview" />
 
 ## <a name="haxm-overview"></a>Vue d’ensemble d’HAXM
 
@@ -27,9 +26,8 @@ HAXM est un moteur d’assistance matérielle à la virtualisation (hyperviseur)
 L’émulateur du kit Android SDK utilise automatiquement HAXM lorsque celui-ci est disponible. Lorsque vous sélectionnez un appareil virtuel **x86** (comme décrit dans [Configuration et utilisation](~/android/deploy-test/debugging/android-sdk-emulator/index.md)), cet appareil utilise HAXM pour l’accélération matérielle. Avant d’utiliser l’émulateur du kit Android SDK pour la première fois, il est judicieux de vérifier qu’HAXM est installé et disponible pour l’émulateur.
 
 > [!NOTE]
-> **Remarque :** Vous ne pouvez pas exécuter HAXM sur une machine virtuelle.
+> Vous ne pouvez pas exécuter HAXM sur une machine virtuelle.
 
-<a name="verify-haxm" />
 
 ## <a name="verifying-haxm-installation"></a>Vérification de l'installation d’HAXM
 
@@ -39,7 +37,7 @@ Vous pouvez vérifier qu’HAXM est disponible dans la fenêtre **Démarrage de 
 
 1. Lancez le Gestionnaire d’émulateur Android en cliquant sur **Outils > Android > Gestionnaire d’émulateur Android** :
 
-    [![Emplacement de l’élément de menu Gestionnaire d’émulateur Android](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png)
+    [![Emplacement de l’élément de menu Gestionnaire d’émulateur Android](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png#lightbox)
 
 2. Si une boîte de dialogue **Avertissement de performance** similaire à la suivante s’affiche, HAXM n’est pas encore installé ou configuré correctement sur votre ordinateur :
 
@@ -65,7 +63,7 @@ Vous pouvez vérifier qu’HAXM est disponible dans la fenêtre **Démarrage de 
 
 1. Lancez le Gestionnaire d’émulateur Android en cliquant sur **Outils > Gestionnaire d’émulateur Google** :
 
-    [![Emplacement de l’élément de menu Gestionnaire d’émulateur Android](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png)
+    [![Emplacement de l’élément de menu Gestionnaire d’émulateur Android](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png#lightbox)
 
 2. Si une boîte de dialogue **Avertissement de performance** similaire à la suivante s’affiche, HAXM n’est pas encore installé ou configuré correctement sur votre ordinateur :
 
@@ -75,7 +73,7 @@ Vous pouvez vérifier qu’HAXM est disponible dans la fenêtre **Démarrage de 
 
 3. Sélectionnez l’image **x86** (par exemple, **Android\_Accelerated\_x86**), cliquez sur **Démarrer**, puis cliquez sur **Lancer** :
 
-    [![Démarrage de l’émulateur du kit SDK Android avec une image d’appareil virtuel par défaut](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png)
+    [![Démarrage de l’émulateur du kit SDK Android avec une image d’appareil virtuel par défaut](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
 
 3. Observez la boîte de dialogue **Démarrage de l’Émulateur Android** pendant le démarrage de l’émulateur. Si HAXM est installé, le message **HAX fonctionne et l’émulateur s’exécute en mode virtuel rapide** s’affiche, comme illustré dans cette capture d’écran :
 
@@ -147,7 +145,7 @@ Sur Windows 10, effectuez les étapes suivantes pour savoir si **Device Guard**
 
 2. Dans **Résumé système**, vérifiez si **Sécurité basée sur la virtualisation de Device Guard** est présent et **En cours d’exécution** :
 
-   [![Device Guard est présent et en cours d’exécution](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png)
+   [![Device Guard est présent et en cours d’exécution](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png#lightbox)
 
 Si Device Guard est activé, effectuez les étapes suivantes pour le désactiver :
 
@@ -157,7 +155,7 @@ Si Device Guard est activé, effectuez les étapes suivantes pour le désactiver
 
 3. Dans l’**Éditeur de stratégie de groupe locale**, accédez à **Configuration ordinateur > Modèles d’administration > Système > Device Guard** :
 
-   [![Device Guard dans l’Éditeur de stratégie de groupe locale](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png)
+   [![Device Guard dans l’Éditeur de stratégie de groupe locale](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png#lightbox)
 
 4. Modifiez **Activer la sécurité basée sur la virtualisation** en le passant à **Désactivé** (comme illustré ci-dessus) et quittez l’**Éditeur de stratégie de groupe locale**.
 
@@ -190,6 +188,6 @@ Si Hyper-V n’est toujours pas désactivé, les stratégies de votre ordinateur
 
 2. Exécutez le programme d’installation de HAXM. Acceptez les valeurs par défaut dans les boîtes de dialogue du programme d’installation :
 
-   [![Fenêtre Intel Hardware Accelerated Execution Manager Setup](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png)
+   [![Fenêtre Intel Hardware Accelerated Execution Manager Setup](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png#lightbox)
 
 -----

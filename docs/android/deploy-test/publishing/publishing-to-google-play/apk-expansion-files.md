@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d118eb5e9f875c5480105d1596ef1318112fb53e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3431791d51858df2013634e1594ee960a10728da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="apk-expansion-files"></a>Fichiers d’extension d’APK
 
@@ -33,7 +33,6 @@ Les fichiers d’extension sont traités comme des fichiers *obb (opaque binary 
 Les fichiers d’extension doivent être chargés en même temps que l’APK.
 Google Play n’autorise pas le chargement d’un fichier d’extension sur un APK existant ou pour des APK existants à mettre à jour. Si un fichier d’extension doit être mis à jour, un nouvel APK doit être chargé avec le `versionCode` mis à jour.
 
-<a name="Expansion_File_Storage" />
 
 ## <a name="expansion-file-storage"></a>Stockage des fichiers d’extension
 
@@ -51,7 +50,6 @@ Si un fichier d’extension doit être décompressé, les fichiers décompressé
 
 Plutôt que d’extraire les fichiers d’un fichier d’extension, vous avez également la possibilité de lire les composants ou les ressources directement à partir du fichier d’extension. Un fichier d’extension n’est rien de plus qu’un fichier zip qui peut être utilisé avec un `ContentProvider` approprié. [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) contient un assembly, [System.IO.Compression.Zip](https://github.com/mattleibow/Android.Play.ExpansionLibrary/tree/master/System.IO.Compression.Zip), qui inclut un `ContentProvider` qui autorise l’accès direct aux fichiers pour certains fichiers multimédias. Si les fichiers multimédias sont regroupés dans un fichier zip, les appels de lecture multimédias peuvent utiliser directement les fichiers du fichier zip sans avoir à le décompresser. Les fichiers multimédias ne doivent pas être compressés quand ils sont ajoutés dans le fichier zip. 
 
-<a name="FileName_Format" />
 
 ### <a name="filename-format"></a>Format de nom de fichier
 
@@ -68,13 +66,12 @@ Les trois composants de ce schéma sont :
 
 Par exemple, si la version de l’APK est 21 et le nom du paquet est `mono.samples.helloworld`, le fichier d’extension principale est nommé **main.21.mono.samples.helloworld**.
 
-<a name="Download_Process" />
 
 ## <a name="download-process"></a>Processus de téléchargement
 
 Lorsqu’une application est installée à partir de Google Play, les fichiers d’extension doivent être téléchargés et enregistrés avec l’APK. Dans certains cas, cela ne se produit pas ou les fichiers d’extension sont supprimés. Pour gérer cette situation, une application doit vérifier si les fichiers d’extension existent, puis les télécharger, si nécessaire. L’organigramme suivant présente le workflow recommandé de ce processus :
 
-[ ![Organigramme d’extension d’APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png)
+[![Organigramme d’extension d’APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
 Lorsqu’une application démarre, elle doit vérifier que les fichiers d’extension appropriés existent sur l’appareil. Si ce n’est pas le cas, l’application doit faire une demande auprès du service [Application Licensing](http://developer.android.com/google/play/licensing/index.html) de Google Play. Cette vérification est réalisée à l’aide de la *bibliothèque de vérification de licence (License Verification Library, LVL)* et doit être effectuée pour les applications gratuites et les applications sous licence. Cette bibliothèque est principalement utilisée par les applications payantes afin d’appliquer les restrictions de licence. Toutefois, Google a étendu son usage aux bibliothèques d’extension. Les applications gratuites doivent effectuer la vérification LVL, mais peuvent ignorer les restrictions de licence. La demande LVL doit fournir les informations suivantes relatives aux fichiers d’extension requis par l’application : 
 
@@ -92,7 +89,6 @@ Une fois la vérification LVL effectuée, l’application doit télécharger les
 -  Les erreurs qui se produisent pendant le téléchargement sont gérées et récupérées.
 
 
-<a name="Architectural_Overview" />
 
 ## <a name="architectural-overview"></a>Vue d'ensemble de l'architecture
 

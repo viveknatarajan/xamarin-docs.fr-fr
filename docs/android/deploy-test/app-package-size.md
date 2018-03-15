@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0fff4de7420bceda8c15ae33b03886eb6b332aeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 430b07918b13878e3561b55ff841a64855183fa7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-package-size"></a>Taille des packages d'application
 
@@ -28,13 +28,13 @@ Xamarin.Android utilise une variété de mécanismes pour réduire la taille des
 
 Pour expédier une application entièrement contenue, le package doit inclure l’application, les bibliothèques associées, le contenu, le runtime Mono et les assemblys de bibliothèque de classes de Base (BCL) requis. Par exemple, si nous prenons le modèle par défaut de « Hello World », le contenu d’une version de package complète ressemble à ceci :
 
-[ ![Taille du package avant de l’éditeur de liens](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png)
+[![Taille du package avant l’éditeur de liens](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
 15,8 Mo est une taille de téléchargement supérieure à celle souhaitée. Les bibliothèques BCL sont le problème. En effet, elles incluent mscorlib, System et Mono.Android, qui fournissent un grand nombre des composants nécessaires pour exécuter votre application. Toutefois, elles fournissent également des fonctionnalités que vous n’utilisez peut-être pas dans votre application. Il peut donc être préférable d’exclure ces composants.
 
 Lorsque nous générons une application pour la distribuer, nous exécutons un processus appelé liaison, qui examine l’application et supprime tout code qui n’est pas utilisé directement. Ce processus est similaire à la fonctionnalité fournie par le [nettoyage de la mémoire](~/android/internals/garbage-collection.md) pour la mémoire allouée par tas. Mais, au lieu d’agir sur des objets, la liaison agit sur votre code. Par exemple, il y a un espace de noms entier dans System.dll pour envoyer et recevoir du courrier électronique, mais si votre application n’utilise pas cette fonctionnalité, ce code occupe inutilement de l’espace. Après l’exécution de l’éditeur de liens sur l’application Hello World, notre package ressemble maintenant à ça :
 
-[ ![Taille du package après l’éditeur de liens](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png)
+[![Taille du package après l’éditeur de liens](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 Nous voyons que cette opération supprime une quantité non négligeable de la bibliothèque BCL qui n’était pas utilisée. Notez que la taille finale de la bibliothèque BCL dépend de ce que l’application utilise réellement. Par exemple, si nous examinons un exemple d’application plus importante appelée ApiDemo, nous pouvons voir que la taille du composant BCL a augmenté, car ApiDemo utilise plus de bibliothèque BCL que Hello World :
 
@@ -51,7 +51,7 @@ Android est relativement lent pour copier et installer un package. Nous voulons 
 
 La première fois que nous déboguons sur un appareil, nous copions deux packages volumineux appelés *Runtime partagé* et *Plateforme partagée*. Runtime partagé contient le Runtime Mono et la bibliothèque BCL, tandis que Plateforme partagée contient des assemblys spécifiques au niveau d’API Android :
 
-[ ![Taille de package de Runtime partagé](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png)
+[![Taille du package de runtime partagé](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 La copie de ces composants essentiels n’est effectuée qu’une fois, car elle prend un certain temps. Elle permet cependant à des applications ultérieures de s’exécuter en mode débogage pour les utiliser. Enfin, nous copions l’application réelle, ce qui est petite et rapide :
 

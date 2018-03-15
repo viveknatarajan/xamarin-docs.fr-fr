@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b752ebdd1a98d5258cc27b2221d33e07fa04aa46
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 44813ea6c1e795889444d949ca2706c0f50483c6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-build-mechanics"></a>Mécanismes de génération d’iOS
 
@@ -33,7 +33,7 @@ Pour activer la sortie MSBuild de diagnostic dans Visual Studio pour Mac :
 
 1. Cliquez sur **Visual Studio pour Mac > Préférences...**
 2. Dans l’arborescence à gauche, sélectionnez **Projets > Générer**
-3. Dans le panneau à droite, définissez la liste déroulante Niveau de détail du journal sur **Diagnostic** : [ ![](ios-build-mechanics-images/image2.png "Définition du niveau de détail du journal")](ios-build-mechanics-images/image2.png)
+3. Dans le volet droit, définissez la liste déroulante Niveau de détail du journal sur **Diagnostic** : [![](ios-build-mechanics-images/image2.png "Définition du niveau de détail du journal")](ios-build-mechanics-images/image2.png#lightbox)
 4. Cliquez sur **OK**.
 5. Redémarrer Visual Studio pour Mac
 6. Nettoyer et regénérer votre package
@@ -46,7 +46,7 @@ Pour activer la sortie MSBuild de diagnostic dans Visual Studio :
 
 1. Cliquez sur **Outils > Options...**
 2. Dans l’arborescence à gauche, sélectionnez **Projets et solutions > Générer et exécuter**
-3. Dans le panneau à droite, définissez la *liste déroulante Niveau de détail de la sortie de génération MSBuild* sur **Diagnostic** : [ ![](ios-build-mechanics-images/image2-vs.png "Définition du niveau de détail de la sortie de génération MSBuild")](ios-build-mechanics-images/image2-vs.png)
+3. Dans le volet droit, définissez la *liste déroulante Niveau de détail de la sortie de génération MSBuild* sur **Diagnostic** : [![](ios-build-mechanics-images/image2-vs.png "Définition du niveau de détail de la sortie de génération MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
 4. Cliquez sur **OK**.
 5. Nettoyez et regénérez votre package.
 6. La sortie de diagnostic est visible dans le panneau Sortie.
@@ -101,7 +101,7 @@ En tenant compte des informations ci-dessus, la liste ci-dessous donne des infor
 
 La capture d’écran ci-dessous illustre comment définir ces options pour le simulateur dans vos options iOS :
 
-[ ![](ios-build-mechanics-images/image3.png "Définition des options")](ios-build-mechanics-images/image3.png)
+[![](ios-build-mechanics-images/image3.png "Définition des options")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>Astuces relatives à l’appareil
 
@@ -155,7 +155,7 @@ Conseils supplémentaires
 
 La capture d’écran ci-dessous illustre comment définir ces options pour le simulateur dans vos options iOS :
 
-[ ![](ios-build-mechanics-images/image4.png "Définition des options")](ios-build-mechanics-images/image4.png)
+[![](ios-build-mechanics-images/image4.png "Définition des options")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>Utilisation de l’éditeur de liens
 

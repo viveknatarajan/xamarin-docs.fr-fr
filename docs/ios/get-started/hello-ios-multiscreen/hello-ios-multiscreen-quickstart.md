@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 6df2e2ad97e42c854b6377268086b80eef145e37
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d4b7439448d5c25aacf991c89a188086c95a44ac
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="helloios-multiscreen-quickstart"></a>Hello.iOS multi-écran - Démarrage rapide
 
 Cette partie de la procédure pas à pas permet d’ajouter un deuxième écran à l’application Phoneword pour afficher l’historique des numéros de téléphone appelés avec l’application. L’application finale propose un deuxième écran qui affiche l’historique des appels, comme l’illustre la capture d’écran suivante :
 
- [ ![](hello-ios-multiscreen-quickstart-images/00.png "L’application finale propose un deuxième écran qui affiche l’historique des appels, comme l’illustre cette capture d’écran")](hello-ios-multiscreen-quickstart-images/00.png)
+ [![](hello-ios-multiscreen-quickstart-images/00.png "L’application finale a un deuxième écran qui affiche l’historique des appels, comme l’illustre cette capture d’écran")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
 La partie [En profondeur](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md) complémentaire reprend l’application générée et aborde l’architecture, la navigation et d’autres nouveaux concepts iOS rencontrés en chemin.
 
@@ -553,5 +553,5 @@ L’application peut à présent gérer la navigation à l’aide de Segues de S
 ## <a name="related-links"></a>Liens associés
 
 - [Hello, iOS (exemple)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [Bonnes pratiques pour l'IHM iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [Lignes directrices de l’interface utilisateur iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portail de provisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)

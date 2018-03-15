@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 9fec6fca0bf7930a59a6927557786a3ed7a412da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9a5dc7839b1669e51e79efc0f02111eae8987b95
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Profilage d’applications Xamarin.iOS avec Instruments
 
@@ -38,13 +38,13 @@ Sélectionnez l’appareil et exécutez l’application Instruments :
 
 Instruments s’ouvre et affiche la boîte de dialogue suivante :
 
- [ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Choosing a profiling template")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png)
+ [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Choix d’un modèle de profilage")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 Cliquez pour sélectionner le modèle **Allocations**. Les autres modèles sont valides, mais cet article traite uniquement du modèle de profil **Allocations**.
 
 Ensuite, sélectionnez l’appareil et l’application dans le menu en haut de la fenêtre :
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Sélectionner l’appareil et l’application")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Sélectionner l’appareil et l’application")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 Sélectionnez l’appareil iOS dans le menu en haut de la fenêtre et sélectionnez l’application à profiler dans le sous-menu (**MemoryDemo** dans la capture d’écran ci-dessus).
 
@@ -52,13 +52,13 @@ Si l’appareil n’est pas listé sous le menu, vérifiez si la **Console** dan
 
 Cliquez sur le bouton **Choose**. L’écran suivant s’affiche :
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "Interface de profilage")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "Interface de profilage")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Cliquez sur le bouton d’enregistrement (bouton rouge en haut à gauche) pour démarrer le profilage.
 
 La capture d’écran suivante montre un exemple de profilage dans **Instruments** :
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Exemple de profilage dans Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Exemple de profilage avec Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## <a name="summary"></a>Récapitulatif
 

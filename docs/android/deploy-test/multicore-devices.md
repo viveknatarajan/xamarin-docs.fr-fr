@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 2a7b2a856d51447d6b7ab2032ebf7445d3f06ecb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac525805fce99f44ea1efb132fb99f6d3a01f2f3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Appareils multicœurs et Xamarin.Android
 
 _Android peut s’exécuter sur plusieurs architectures d’ordinateur différentes. Ce document décrit les différentes architectures d’UC qui peuvent être employées pour une application Xamarin.Android. Ce document explique également comment les applications Android sont empaquetées pour prendre en charge des architectures d’UC différentes. Nous présenterons l’interface binaire d’application (ABI), et fournirons des conseils concernant les ABI à utiliser dans une application de Xamarin.Android._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -47,16 +46,14 @@ L’interface binaire d’application sera abordée en détail ci-dessous, mais 
 En raison d’un bogue dans Android 4.0.0 4.0.1, 4.0.2 et 4.0.3, les bibliothèques natives sont récupérées à partir du répertoire `armeabi` même s’il existe un répertoire `armeabi-v7a` et que l’appareil est un appareil `armeabi-v7a`.
 
 > [!NOTE]
-> **Remarque** : Xamarin.Android s’assure que les `.so` sont ajoutés à l’APK dans l’ordre approprié. Ce bogue ne devrait pas poser problème pour les utilisateurs de Xamarin.Android.
+> Xamarin.Android vérifie que les fichiers `.so` sont ajoutés à l’APK dans l’ordre approprié. Ce bogue ne devrait pas poser problème pour les utilisateurs de Xamarin.Android.
 
-<a name="ABI_Descriptions" />
 
 ### <a name="abi-descriptions"></a>Descriptions des ABI
 
 Chaque ABI prise en charge par Android est identifiée par un nom unique.
 
 
-<a name="armeabi" />
 
 #### <a name="armeabi"></a>armeabi
 
@@ -65,7 +62,6 @@ Il s’agit du nom d’une EABI pour les UC ARM qui prennent en charge au moins 
 **Remarque** : Le code `armeabi` de Xamarin.Android n’est pas thread-safe et ne doit pas être utilisé sur des appareils `armeabi-v7a`multiprocesseur (décrits ci-dessous). L’utilisation de code `aremabi` sur les appareils `armeabi-v7a` à un seul cœur est sûre.
 
 
-<a name="armeabi-v7a" />
 
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
@@ -74,7 +70,6 @@ Il s’agit d’un autre jeu d’instructions d’UC ARM qui étend l’EABI `ar
 **Remarque :** Le code machine `armeabi-v7a` ne fonctionnera pas sur les appareils ARMv5.
 
 
-<a name="arm64-v8a" />
 
 #### <a name="arm64-v8a"></a>arm64-v8a
 
@@ -82,7 +77,6 @@ Il s’agit d’un jeu d’instructions de 64 bits basé sur l’architecture d�
 Xamarin.Android 5.1 fournit une prise en charge expérimentale pour cette architecture (pour plus d’informations, consultez [Fonctionnalités expérimentales](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)).
 
 
-<a name="x86" />
 
 #### <a name="x86"></a>x86
 
@@ -93,10 +87,9 @@ C’est le nom d’une ABI pour les processeurs qui prennent en charge le jeu d�
 -  Toute variante de SSE4.
 
 
-**Remarque :** Google TV, bien qu’elle s’exécute sur x86, n’est pas pris en charge par Android NDK ou Xamarin.Android. <a name="mips" />
+**Remarque :** Google TV, bien qu’il s’exécute sur x86, n’est pas pris en charge par Android NDK ou
 
 
-<a name="x86_64" />
 
 #### <a name="x8664"></a>x86_64
 
@@ -110,13 +103,12 @@ Il s’agit du nom d’une ABI pour les UC MIPS qui prennent en charge au moins 
 **Remarque :** Les appareils MIPS ne sont actuellement pas pris en charge par Xamarin.Android, mais le seront dans une version ultérieure.
 
 
-<a name="APK_File_Format" />
 
 #### <a name="apk-file-format"></a>Format de fichier APK
 
 Le format de fichier Package d’application Android contient tout le code, les ressources et les certificats nécessaires pour une application Android. Il s’agit d’un fichier `.zip`, mais il utilise l’extension de nom de fichier `.apk`. Quand il est développé, le contenu d’un `.apk` créé par Xamarin.Android peut être consulté comme dans la capture d’écran ci-dessous :
 
-[ ![Contenu du fichier .apk](multicore-devices-images/00.png)](multicore-devices-images/00.png)
+[![Contenu du fichier .apk](multicore-devices-images/00.png)](multicore-devices-images/00.png#lightbox)
 
 Une description rapide du contenu du fichier `.apk` :
 
@@ -133,10 +125,9 @@ Une description rapide du contenu du fichier `.apk` :
 -   **res** &ndash; Ce répertoire contient les ressources qui n’ont pas été compilées dans `resources.arsc` .
 
 > [!NOTE]
-> **Remarque** : Le fichier `libmonodroid.so` est la bibliothèque native requise par toutes les applications Xamarin.Android.
+> Le fichier `libmonodroid.so` est la bibliothèque native nécessaire pour toutes les applications Xamarin.Android.
 
 
-<a name="Android_Device_ABI_Support" />
 
 #### <a name="android-device-abi-support"></a>Prise en charge des ABI par les appareils Android
 
@@ -149,7 +140,6 @@ Chaque appareil Android prend en charge l’exécution de code natif dans jusqu'
 
 Par exemple, un appareil ARMv5TE typique n’a qu’une ABI principale de `armeabi`, tandis qu’un appareil ARMv7 spécifiera une ABI principale de `armeabi-v7a` et une secondaire de `armeabi`. Un appareil x86 typique spécifie uniquement une ABI principale de `x86`.
 
-<a name="Android_Native_Library_Installation" />
 
 ### <a name="android-native-library-installation"></a>Installation de la bibliothèque native Android
 
@@ -249,7 +239,6 @@ $APP/lib/libone.so # from armeabi
 $APP/lib/libtwo.so # from armeabi-v7a
 ```
 
-<a name="Xamarin.Android_and_ABIs" />
 
 ### <a name="xamarinandroid-and-abis"></a>Xamarin.Android et les ABI
 
@@ -270,7 +259,6 @@ Notez que les runtimes 64 bits ne sont *pas* requis pour exécuter votre applica
 Xamarin.Android ne fournit pas actuellement la prise en charge de `mips`.
 
 
-<a name="Declaring_Supported_ABIs" />
 
 ### <a name="declaring-supported-abis"></a>Déclaration des ABI prises en charge
 
@@ -281,7 +269,7 @@ Par défaut, Xamarin.Android utilise `armeabi-v7a` pour les versions de **Produc
 
 Dans Visual Studio pour Mac, les architectures prises en charge peuvent être sélectionnées dans la page **Build Android** des **Options du projet**, sous l’onglet **Avancé**, comme indiqué dans la capture d’écran suivante :
 
-[![ABI prises en charge par les builds Android](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png)
+[![ABI prises en charge par les builds Android](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png#lightbox)
 
 Il existe certaines situations où il peut être nécessaire de déclarer une prise en charge supplémentaire d’ABI, par exemple lorsque :
 

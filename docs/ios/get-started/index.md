@@ -3,16 +3,17 @@ title: "Bien démarrer avec iOS"
 description: "De Hello World à Hello App Store"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
+ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/23/2016
-ms.openlocfilehash: 1c59a67a87087a821339e98bcdcc004a342e311a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01e4d2e42f61145f220545c832bcbaf1d8a994f1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="getting-started-with-ios"></a>Bien démarrer avec iOS
 
@@ -45,3 +46,9 @@ Ce guide en deux parties décrit l’extension de l’application créée dans l
 ##  <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[Xamarin pour les développeurs Objective-C](objective-c-developers/index.md)
 
 Donne des informations aux développeurs Objective-C qui passent à la plateforme Xamarin.
+
+## <a name="xamarin-university-video"></a>Vidéo Xamarin University
+
+> [!VIDEO https://youtube.com/embed/1ilsDnYC-B8]
+
+**Création de votre première application iOS avec Xamarin pour Visual Studio, par [Xamarin University](https://university.xamarin.com)**

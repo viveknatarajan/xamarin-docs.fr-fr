@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 66992aabdb98c83e52ab555dafa65ae8ac7fb47b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e958b4e48767e0c2246b9f237c681fbc362f6b00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduction à Xamarin.iOS pour Visual Studio
 
@@ -53,15 +53,15 @@ Pour développer avec Xamarin dans Visual Studio, vous devez utiliser **au moins
 
 Vous pouvez vous connecter à votre hôte de build Mac par le biais de l’icône de la barre d’outils de Visual Studio (à condition qu’une application iOS soit ouverte) :
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Icône Se connecter au Mac")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Icône Se connecter au Mac")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
 
 ou en accédant à **Outils > Options** dans Visual Studio, puis en sélectionnant **Xamarin > Paramètres iOS** :
 
- [ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "Option iOS")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png)
+ [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "Option iOS")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
 
 Vous pouvez changer l’hôte de build Mac en cliquant sur le bouton **Rechercher Mac Agent Xamarin**. L’écran suivant s’affiche pour mettre à jour l’hôte de build Mac :
 
-  [ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Boîte de dialogue Mac Agent Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Boîte de dialogue Mac Agent Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## <a name="visual-studio-toolbar-overview"></a>Vue d’ensemble de la barre d’outils de Visual Studio
@@ -75,7 +75,7 @@ Les fonctions de ces barres d’outils sont décrites ci-dessous.
 
 Les contrôles qui concernent le développement Xamarin iOS sont entourés en rouge :
 
- [ ![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "Les contrôles qui concernent le développement Xamarin iOS sont entourés en rouge")](introduction-to-xamarin-ios-for-visual-studio-images/03.png "Les contrôles qui concernent le développement Xamarin iOS sont entourés en rouge")
+ [![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "Les contrôles qui concernent le développement Xamarin iOS sont entourés en rouge")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "Les contrôles qui concernent le développement Xamarin iOS sont entourés en rouge")
 
 -  **Démarrer** : démarre le débogage ou l’exécution de l’application sur la plateforme sélectionnée. Un Mac doit être connecté (voir l’indicateur d’état dans la barre d’outils iOS).
 -  **Configurations de solutions** : vous permet de sélectionner la configuration à utiliser (par exemple, Debug, Release).
@@ -86,7 +86,7 @@ Les contrôles qui concernent le développement Xamarin iOS sont entourés en ro
 
 La barre d’outils iOS dans Visual Studio est la même dans chaque version de Visual Studio. La voici :
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "Barre d’outils iOS")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "Barre d’outils iOS")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
 
 Chaque élément est décrit ci-dessous :
 
@@ -105,25 +105,25 @@ Le volet *Sortie* contient des options que vous pouvez examiner pour découvrir 
 
 La capture d’écran ci-dessous montre les fenêtres Sortie disponibles. Elles peuvent varier en fonction du type de votre projet :
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "Les fenêtres Sortie disponibles")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "Les fenêtres de sortie disponibles")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
 
 - **Xamarin** : cette fenêtre contient des informations concernant uniquement Xamarin, comme la connexion au Mac et l’état de l’activation.
 
-    [ ![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Informations concernant uniquement Xamarin, comme la connexion au Mac et l’état de l’activation")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png)
+    [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Informations concernant uniquement Xamarin, comme la connexion au Mac et l’état d’activation")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Diagnostics Xamarin** : cette fenêtre affiche des informations plus détaillées sur votre projet Xamarin, comme l’interaction avec et pour Android.
 
-    [ ![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Informations détaillées sur le projet Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png)
+    [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Informations détaillées sur le projet Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 D’autres volets de sortie de Visual Studio par défaut, comme les volets de débogage et de génération, sont toujours disponibles dans la vue Sortie. Ils sont utilisés pour la sortie de débogage et pour la sortie MSBuild :
 
 -  **Déboguer**
 
-    [ ![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Sortie de débogage")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png)
+    [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Sortie du débogage")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **Génération** & **Ordre de génération**
 
-    [ ![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Sortie MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png)
+    [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Sortie MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 
 ## <a name="ios-project-properties"></a>Propriétés de projet iOS

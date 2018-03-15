@@ -2,16 +2,16 @@
 title: "fastlane pour iOS : sigh"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d80a0ab5583231f95241fb8d4f6e339e44a84ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2c6ac298ca2040bb2d3619be080fb1387fbfd3a0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios--sigh"></a>fastlane pour iOS : sigh
 
@@ -61,7 +61,7 @@ Vous pouvez créer un ID d’application avec la commande suivante :
 
 `com.company.appname` correspond à l’ID de bundle de l’application, qui est indiqué dans le fichier Info.plist de votre application Xamarin.iOS, comme illustré ci-dessous :
 
-[ ![](sigh-images/fastlane-image5.png "Fichier Info.plist de l’application Xamarin.iOS")](sigh-images/fastlane-image5.png)
+[![](sigh-images/fastlane-image5.png "Fichier Info.plist de l’application Xamarin.iOS")](sigh-images/fastlane-image5.png#lightbox)
 
 L’ID d’application unique doit être une chaîne de style DNS inversé. Conservez bien ce nouvel ID, car vous en aurez besoin un plus tard pour utiliser sigh.
 
@@ -108,7 +108,7 @@ Entrez votre nom d’utilisateur (Apple ID username) quand vous y êtes invité 
 
 Si votre ID Apple est associé à plusieurs équipes, les équipes en question sont répertoriées ici. Sélectionnez le numéro correspondant à l’équipe appropriée :
 
-[ ![](sigh-images/fastlane-image2.png "Sélectionner le numéro correspondant à l’équipe appropriée")](sigh-images/fastlane-image2.png)
+[![](sigh-images/fastlane-image2.png "Sélectionner l’équipe que vous voulez utiliser")](sigh-images/fastlane-image2.png#lightbox)
 
 Vous pouvez également passer l’ID de l’équipe à l’interface CLI de la manière suivante :
 
@@ -124,7 +124,7 @@ fastlane crée, télécharge et installe votre profil de provisionnement à votr
 
 Vous pouvez accéder au developer center pour afficher le nouveau profil de provisionnement, comme illustré ci-dessous :
 
-[ ![](sigh-images/fastlane-image10.png "Afficher le nouveau profil de provisionnement")](sigh-images/fastlane-image10.png)
+[![](sigh-images/fastlane-image10.png "Afficher le nouveau profil de provisionnement")](sigh-images/fastlane-image10.png#lightbox)
 
 sigh stocke les profils de provisionnement dans le dossier actif, par défaut. Pour changer de répertoire de sortie, modifiez `output_path` ou utilisez la commande suivante :
 
@@ -140,19 +140,19 @@ Vous pouvez utiliser les options suivantes pour bénéficier d’une assistance 
 
 - Pour télécharger tous les profils de provisionnement, utilisez :
 
-    ````bash
+    ```bash
     fastlane sigh download_all
     ```
 
-- To use a specific signing identity for your provisioning profile use:
+- Pour utiliser une identité de signature spécifique pour votre utilisation du profil de provisionnement :
 
     ```bash
     fastlane sigh -c "Amy cert"
     ```
     
-    Where `Amy cert` is the Code Signing Identity name.
+    Où `Amy cert` est le nom de l’identité de signature de code.
 
 
-## Related Links
+## <a name="related-links"></a>Liens associés
 
 - [fastlane - sigh](https://github.com/fastlane/fastlane/tree/master/sigh#readme)

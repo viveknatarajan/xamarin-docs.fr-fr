@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
+ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/25/2017
-ms.openlocfilehash: 974388ad3ad125fb059a0c71252f53e140e056cf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c07ab37bc88b52bbff0ddc0fb7bf1faa4d97bb2a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-series"></a>Guides pour bien démarrer
 
@@ -35,3 +36,9 @@ Dans ce guide en deux parties, vous allez étendre l’application créée dans
 ##  <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[Xamarin pour les développeurs Java](~/android/get-started/java-developers.md)
 
 Cet article constitue une introduction à la programmation C# pour les développeurs Java, qui met principalement l’accent sur les fonctionnalités du langage C# qu’ils rencontreront en apprenant à développer des applications Xamarin.Android.
+
+## <a name="xamarin-university-video"></a>Vidéo Xamarin University
+
+> [!VIDEO https://youtube.com/embed/rkNikCa5D48]
+
+**Création de votre première application Android avec Xamarin pour Visual Studio, par [Xamarin University](https://university.xamarin.com)**

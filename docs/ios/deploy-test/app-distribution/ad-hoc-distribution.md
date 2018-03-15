@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 423240949daf45d8d179a3ca9f89677f490cc24d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d01130989336ada855e936a6597b517fab5ee69
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ad-hoc-distribution"></a>Distribution ad hoc
 
@@ -51,15 +51,15 @@ La section suivante décrit comment configurer un certificat de distribution et 
 3. Cliquez sur le bouton **+** pour créer un certificat.
 4. Sous le titre *Production*, sélectionnez **In-House and Ad Hoc (Interne et ad hoc)**, ou **App Store and Ad Hoc (App Store et ad hoc)**, en fonction de votre abonnement au programme :
 
-  [ ![](ad-hoc-distribution-images/cert-first-small.png "Sélectionner In-House and Ad Hoc (Interne et ad hoc) ou App Store and Ad Hoc (App Store et ad hoc)")](ad-hoc-distribution-images/cert-first-large.png)
+  [![](ad-hoc-distribution-images/cert-first-small.png "Sélectionner In-House and Ad Hoc (Interne et ad hoc) ou App Store and Ad Hoc (App Store et ad hoc)")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. Cliquez sur Continue, puis suivez les instructions permettant de créer une demande de signature de certificat via Trousseaux d’accès :
 
-  [ ![](ad-hoc-distribution-images/createcertmanually02.png "Créer une demande de signature de certificat via Trousseaux d’accès")](ad-hoc-distribution-images/createcertmanually02.png)
+  [![](ad-hoc-distribution-images/createcertmanually02.png "Créer une demande de signature de certificat via l’accès au trousseau")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. Une fois la demande de signature de certificat créée, cliquez sur Continue, puis chargez-la sur le Member Center :
 
-  [ ![](ad-hoc-distribution-images/createcertmanually03.png "Charger la demande de signature de certificat sur le Member Center")](ad-hoc-distribution-images/createcertmanually03.png)
+  [![](ad-hoc-distribution-images/createcertmanually03.png "Charger la demande de signature de certificat sur le Member Center")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. Cliquez sur Generate pour créer un certificat.
 8. Pour finir, téléchargez le certificat rempli, puis double-cliquez sur le fichier pour l’installer.
@@ -67,9 +67,9 @@ La section suivante décrit comment configurer un certificat de distribution et 
 
 Sinon, il est possible de demander un certificat via la boîte de dialogue Preferences de Xcode. Pour ce faire, suivez les étapes ci-dessous :
 
-1.   Sélectionnez votre équipe, puis cliquez sur **Gérer des certificats...**  : [ ![](ad-hoc-distribution-images/selectteam.png "Sélection de l’équipe")](ad-hoc-distribution-images/selectteam.png)
+1.   Sélectionnez votre équipe, puis cliquez sur **Gérer des certificats...** : [![](ad-hoc-distribution-images/selectteam.png "Sélection de l’équipe")](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2.   Cliquez ensuite sur le bouton **plus (+)** et sélectionnez **iOS App Store**: [ ![](ad-hoc-distribution-images/selectcert.png "Sélection de iOS App Store")](ad-hoc-distribution-images/selectcert.png)
+2.   Cliquez ensuite sur le bouton **Plus (+)** et sélectionnez **iOS App Store** : [![](ad-hoc-distribution-images/selectcert.png "Sélection d’iOS App Store")](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -91,23 +91,23 @@ Comme pour tout profil de provisionnement que vous créez, un ID d’application
 
 Une fois que vous avez les composants nécessaires pour créer un profil de distribution, suivez les étapes ci-dessous pour le créer :
 
-1. Retournez au portail d’approvisionnement Apple, puis sélectionnez **Approvisionnement > Distribution** :  [ ![](ad-hoc-distribution-images/distribute01.png "Sélectionnez Approvisionnement > Distribution")](ad-hoc-distribution-images/distribute01.png)
+1. Retournez au portail de provisionnement Apple, puis sélectionnez **Provisionnement > Distribution** :  [![](ad-hoc-distribution-images/distribute01.png "Sélectionnez Provisionnement > Distribution")](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. Cliquez sur le bouton **+** et sélectionnez le type **Ad hoc** en tant que profil de distribution à créer :
 
-    [ ![](ad-hoc-distribution-images/distribute02.png "Créer un type de distribution ad hoc")](ad-hoc-distribution-images/distribute02.png)
+    [![](ad-hoc-distribution-images/distribute02.png "Créer un type de distribution ad hoc")](ad-hoc-distribution-images/distribute02.png#lightbox)
 
 3. Cliquez sur le bouton **Continue**, puis dans la liste déroulante, sélectionnez l’ID d’application pour lequel vous souhaitez créer un profil de distribution :
 
-    [ ![](ad-hoc-distribution-images/distribute03.png "Sélectionner l’ID d’application dans la liste déroulante")](ad-hoc-distribution-images/distribute03.png)
+    [![](ad-hoc-distribution-images/distribute03.png "Sélectionner l’ID d’application dans la liste déroulante")](ad-hoc-distribution-images/distribute03.png#lightbox)
 
 4. Cliquez sur le bouton **Continue**, puis sélectionnez le certificat de distribution nécessaire pour signer l’application :
 
-    [ ![](ad-hoc-distribution-images/distribute04.png "Sélectionner le certificat de distribution nécessaire pour signer l’application")](ad-hoc-distribution-images/distribute04.png)
+    [![](ad-hoc-distribution-images/distribute04.png "Sélectionner le certificat de distribution nécessaire pour signer l’application")](ad-hoc-distribution-images/distribute04.png#lightbox)
 
 6. Cliquez sur le bouton **Continue**, puis entrez un **Name (Nom)** pour le nouveau profil de distribution :
 
-    [ ![](ad-hoc-distribution-images/distribute06.png "Entrer un nom pour le nouveau profil de distribution")](ad-hoc-distribution-images/distribute06.png)
+    [![](ad-hoc-distribution-images/distribute06.png "Entrer un nom pour le nouveau profil de distribution")](ad-hoc-distribution-images/distribute06.png#lightbox)
 
 7. Cliquez sur le bouton **Generate** pour créer le profil et finaliser le processus.
 

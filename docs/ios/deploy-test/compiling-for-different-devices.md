@@ -7,27 +7,26 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 13838215b32abe49a5fe07b04088bc4216250844
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 12b8f51156c2ed750c59ef79522121c6c5d2c03c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="compiling-for-different-devices"></a>Compilation pour différents appareils
 
 Les propriétés build de votre fichier exécutable peuvent être configurées à partir de la page de propriétés **Build iOS** du projet, qui se trouve en cliquant avec le bouton de droite sur le nom du projet et en navigant jusqu’à **Options > Build iOS** dans Visual Studio pour Mac, et **Propriétés** dans Visual Studio :
 
-[[ide name="xs"]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-[ ![](compiling-for-different-devices-images/image1.png "La page de propriétés Build iOS des projets")](compiling-for-different-devices-images/image1.png) 
 
-[[/ide]] 
+[![](compiling-for-different-devices-images/image1.png "Page de propriétés de génération iOS des projets")](compiling-for-different-devices-images/image1.png#lightbox) 
 
-[[ide name="vs"]]
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](compiling-for-different-devices-images/image1a.png "La page de propriétés Build iOS des projets")](compiling-for-different-devices-images/image1a.png)
+[![](compiling-for-different-devices-images/image1a.png "Page de propriétés de génération iOS des projets")](compiling-for-different-devices-images/image1a.png#lightbox)
 
-[[/ide]]
+-----
 
 Outre les options de configuration disponibles sur l’interface utilisateur, vous pouvez également transmettre votre propre ensemble d’options de lignes de commande à [l’outil Build Xamarin.iOS (mtouch)](~/ios/deploy-test/mtouch.md).
 
@@ -66,9 +65,9 @@ Le moteur du serveur principal d’optimisation LLVM génère un code plus rapid
 
 Vous pouvez activer ces moteurs à partir des options Build iOS dans Visual Studio pour Mac ou Visual Studio.
 
-[ ![](compiling-for-different-devices-images/image2.png "Activation LLVM")](compiling-for-different-devices-images/image2.png)
+[![](compiling-for-different-devices-images/image2.png "Activation de LLVM")](compiling-for-different-devices-images/image2.png#lightbox)
 
-[ ![](compiling-for-different-devices-images/image2a.png "Activation LLVM")](compiling-for-different-devices-images/image2a.png)
+[![](compiling-for-different-devices-images/image2a.png "Activation de LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
 
  <a name="ARMV7_and_ARMV7s_support" />
 
@@ -132,7 +131,7 @@ Pour ce faire, vous devez suivre les étapes suivantes :
 -  Ajoutez `'-gcc_flags "-weak_framework iAd"'` aux **Options supplémentaires** pour chaque configuration que vous souhaitez lier faiblement sur :
 
 
-[ ![](compiling-for-different-devices-images/image3.png "Options supplémentaires")](compiling-for-different-devices-images/image3.png)
+[![](compiling-for-different-devices-images/image3.png "Options supplémentaires")](compiling-for-different-devices-images/image3.png#lightbox)
 
 
 En plus, vous devez empêcher votre utilisation des types de s’exécuter sur des versions antérieures d’iOS où elles ne peuvent pas exister. Il existe plusieurs méthodes pour y parvenir, l’une d’elles est l’analyse `UIDevice.CurrentDevice.SystemVersion`.

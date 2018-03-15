@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bc89450a5c9a00ab9f088ca9fff345ebbf7b6c4c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS - En profondeur
 
@@ -102,7 +102,7 @@ Pour qu’une application iOS puisse charger une interface utilisateur, deux él
 
 Cette section étudie les relations illustrées dans le diagramme suivant :
 
-[ ![](hello-ios-deepdive-images/image32.png "Les relations des concepts fondamentaux d’une architecture et d’une application sont illustrées dans ce diagramme")](hello-ios-deepdive-images/image32.png)
+[![](hello-ios-deepdive-images/image32.png "Les relations des concepts fondamentaux d’une architecture et d’une application sont illustrées dans ce diagramme")](hello-ios-deepdive-images/image32.png#lightbox)
 
 Commençons par le commencement en examinant ce qui se passe au démarrage de l’application.
 
@@ -197,7 +197,7 @@ Vous pouvez sélectionner l’_affichage_ en cliquant dans la partie blanche de 
 
 À gauche de la scène se trouve une flèche grise avec une icône représentant un drapeau, comme l’illustre la capture d’écran ci-dessous :
 
- [ ![](hello-ios-deepdive-images/image37.png "Une flèche grise avec une icône de drapeau")](hello-ios-deepdive-images/image37.png)
+ [![](hello-ios-deepdive-images/image37.png "Flèche grise avec une icône de drapeau")](hello-ios-deepdive-images/image37.png#lightbox)
 
 La flèche grise représente une transition de Storyboard appelée *Segue* (prononcez « seg-way »). Puisque ce Segue n’a pas d’origine, il est appelé *Segue sans source*. Un Segue sans source pointe vers la première scène dont les affichages sont chargés dans la fenêtre de l’application au démarrage de cette dernière. La scène et les affichages qu’elle contient sont la première chose que l’utilisateur voit quand l’application se charge.
 
@@ -243,7 +243,7 @@ La section suivante détaille la hiérarchie d’affichage de contenu représent
 
 Une _hiérarchie d’affichage de contenu_ est une pile d’affichages et de sous-affichages gérée par un contrôleur d’affichage unique, comme l’illustre le diagramme ci-dessous :
 
- [ ![](hello-ios-deepdive-images/image41.png "Hiérarchie d’affichage de contenu")](hello-ios-deepdive-images/image41.png)
+ [![](hello-ios-deepdive-images/image41.png "Hiérarchie d’affichage de contenu")](hello-ios-deepdive-images/image41.png#lightbox)
 
 Nous pouvons rendre la hiérarchie d’affichage de contenu de notre `ViewController` plus facile à lire en remplaçant temporairement la couleur d’arrière-plan de l’affichage racine par du jaune dans la section Affichage du **Panneau Propriétés**, comme l’illustre la capture d’écran ci-dessous :
 
@@ -259,7 +259,7 @@ Nous pouvons rendre la hiérarchie d’affichage de contenu de notre `ViewContro
 
 Le diagramme ci-dessous illustre les relations entre la fenêtre, les affichages, les sous-affichages et le contrôleur d’affichage qui font apparaître l’interface utilisateur dans l’écran de l’appareil :
 
- [ ![](hello-ios-deepdive-images/image43.png "Relations entre la fenêtre, les affichages, les sous-affichages et le contrôleur d’affichage")](hello-ios-deepdive-images/image43.png)
+ [![](hello-ios-deepdive-images/image43.png "Relations entre la fenêtre, les vues, les sous-vus et le contrôleur de vue")](hello-ios-deepdive-images/image43.png#lightbox)
 
 La prochaine section explique comment utiliser des affichages dans le code et programmer les interactions de l’utilisateur à l’aide de contrôleurs d’affichage et du cycle de vie de l’affichage.
 
@@ -331,7 +331,7 @@ Le rôle le plus important du contrôleur d’affichage est de répondre aux int
 Maintenant que vous connaissez les affichages et les contrôleurs d’affichage, intéressons-nous au fonctionnement de cette application.
 Dans le projet `Phoneword_iOS`, un bouton appelé `TranslateButton` a été ajouté à la hiérarchie d’affichage de contenu :
 
- [ ![](hello-ios-deepdive-images/image1.png "Un bouton appelé TranslateButton a été ajouté à la hiérarchie d’affichage de contenu")](hello-ios-deepdive-images/image1.png)
+ [![](hello-ios-deepdive-images/image1.png "Un bouton appelé TranslateButton a été ajouté à la hiérarchie d’affichage de contenu")](hello-ios-deepdive-images/image1.png#lightbox)
 
 Quand un **Nom** est attribué au contrôle **Bouton** dans le **Panneau Propriétés**, le concepteur iOS le mappe automatiquement sur un contrôle dans le fichier **ViewController.designer.cs**, ce qui rend `TranslateButton` disponible à l’intérieur de la classe `ViewController`. Les contrôles deviennent disponibles au stade `ViewDidLoad` du cycle de vie de l’affichage, donc cette méthode de cycle de vie est utilisée pour répondre à l’interaction tactile de l’utilisateur :
 
@@ -432,7 +432,7 @@ Une fois que l’appareil est provisionné, vous pouvez y déployer des applicat
 
 L’application se déploie sur l’appareil iOS :
 
-[ ![](hello-ios-deepdive-images/image1.png "L’application se déploie sur l’appareil iOS et s’exécute")](hello-ios-deepdive-images/image1.png)
+[![](hello-ios-deepdive-images/image1.png "L’application se déploie sur l’appareil iOS et s’exécute")](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Générer des icônes et des images de lancement personnalisées
 
@@ -464,5 +464,5 @@ Dans le [didacticiel suivant de la série de mise en route](~/ios/get-started/he
 ## <a name="related-links"></a>Liens associés
 
 - [Hello, iOS (exemple)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [Bonnes pratiques pour l'IHM iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [Lignes directrices de l’interface utilisateur iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portail de provisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)

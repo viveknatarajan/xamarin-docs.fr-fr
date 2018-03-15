@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: fec57fbeb201d55e887969c5a50baf6a76c10e17
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e09bb1150c3cc53104b41b75a2c3d4d2db4e5ff
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="publishing-independently"></a>Publication indépendante
 
 Il est possible de publier une application sans utiliser l’une des marketplaces Android existantes. Cette section présente ces autres méthodes de publication et les niveaux de licences de Xamarin.Android.
 
-<a name="Xamarin_Licensing" />
 
 ## <a name="xamarin-licensing"></a>Gestion des licences Xamarin
 
@@ -31,36 +30,32 @@ Quatre licences sont disponibles pour le développement, le déploiement et la d
 
 Visitez le site [visualstudio.com](https://www.visualstudio.com/xamarin/) pour télécharger l’édition Community ou pour en savoir plus sur l’achat des éditions Professional et Enterprise.
 
-<a name="Allow_Installation_from_Unknown_Sources" />
 
 ## <a name="allow-installation-from-unknown-sources"></a>Autoriser l'installation pour les sources inconnues
 
 Par défaut, Android empêche les utilisateurs de télécharger et d’installer des applications à partir d’emplacements autres que Google Play. Pour autoriser l’installation à partir de sources autres que des places de marché, un utilisateur doit activer le paramètre *Sources inconnues* sur un appareil avant d’installer une application. Ce paramètre peut se trouver sous **Paramètres > Sécurité**, comme illustré dans la capture d’écran suivante :
 
-[ ![Écran Paramètres de sécurité](publishing-independently-images/settings.png)](publishing-independently-images/settings.png)
+[![Écran Paramètres de sécurité](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
 
 > [!IMPORTANT]
-> **Remarque :** Certains fournisseurs réseau peuvent empêcher l’installation d’applications à partir de sources inconnues, indépendamment de ce paramètre.
+> Certains fournisseurs réseau peuvent empêcher l’installation d’applications provenant de sources inconnues, indépendamment de ce paramètre.
 
 
-<a name="Publishing_by_E-Mail" />
 
 ## <a name="publishing-by-e-mail"></a>Publication par e-mail
 
 Joindre l’APK de mise en production à un e-mail est un moyen simple et rapide de distribuer une application aux utilisateurs. Lorsque l’utilisateur ouvre l’e-mail sur un appareil Android, celui-ci reconnaît la pièce jointe APK et affiche un bouton **Installer**, comme illustré dans l’image suivante :
 
-[ ![Bouton Installer pour la pièce jointe](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png)
+[![Bouton Installer pour la pièce jointe](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
 Certes simple, la distribution par e-mail n’offre qu’une faible protection contre le piratage ou la distribution non autorisée. Elle doit être réservée aux situations dans lesquelles les destinataires de l’application sont peu nombreux et dignes de confiance pour ne pas distribuer l’application.
 
-<a name="Publishing_by_Web" />
 
 ## <a name="publishing-by-web"></a>Publication par le web
 
 Il est possible de distribuer une application par un serveur web. L’application est chargée sur le serveur web, puis le lien de téléchargement est fourni aux utilisateurs. Quand un appareil Android accède à un lien, puis télécharge l’application, celle-ci est automatiquement installée une fois le téléchargement terminé.
 
-<a name="Manually_Installing_an_APK" />
 
 ## <a name="manually-installing-an-apk"></a>Installation manuelle d’un APK
 

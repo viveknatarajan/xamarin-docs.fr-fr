@@ -2,16 +2,16 @@
 title: "fastlane pour iOS : match"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 435ba4c3799288724625ca06016770b3ecad56a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d92f820e22277148b4de3ff87e3fdaca0f573f52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane pour iOS : match
 
@@ -56,15 +56,15 @@ Dans le terminal, basculez vers le répertoire du projet et exécutez :
 
 Lorsque vous y êtes invité, entrez l’URL du référentiel Git :
 
- [ ![](match-images/fastlane-image7.png "Entrer l’URL du référentiel Git")](match-images/fastlane-image7.png)
+ [![](match-images/fastlane-image7.png "Entrer l’URL du dépôt Git")](match-images/fastlane-image7.png#lightbox)
 
 Vous pouvez rechercher et copier l’URL en cliquant sur le bouton **Clone or download** sur github.com, comme illustré ci-dessous :
 
-[ ![](match-images/fastlane-image6.png "URL sous le bouton Clone or download sur github.com")](match-images/fastlane-image6.png)
+[![](match-images/fastlane-image6.png "URL sous le bouton Cloner ou Télécharger sur github.com")](match-images/fastlane-image6.png#lightbox)
 
 L’initialisation du projet crée un matchfile, qui est un fichier texte que vous pouvez modifier pour passer des variables d’environnement à l’outil match. Un exemple de matchfile est illustré ci-dessous :
 
-[ ![](match-images/fastlane-image8.png "Exemple de matchfile")](match-images/fastlane-image8.png)
+[![](match-images/fastlane-image8.png "Exemple de matchfile")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -88,7 +88,7 @@ Ces commandes, en plus de créer des certificats et profils, ajoutent les élém
 - Un fichier README contenant les instructions de base
 - Une version de match
 
-[ ![](match-images/fastlane-image9.png "Structure de projet dans le référentiel Git")](match-images/fastlane-image9.png)
+[![](match-images/fastlane-image9.png "Structure de projet dans le dépôt Git")](match-images/fastlane-image9.png#lightbox)
 
 Les profils de provisionnement sont créés dans `~/Library/MobileDevice/Provisioning Profiles`. Les certificats et les clés privées sont créés directement dans votre trousseau.
 
