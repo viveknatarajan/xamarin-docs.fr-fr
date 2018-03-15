@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/0201
-ms.openlocfilehash: c5f6e6ef61e3705920770d317e4d5f680d4c8fbe
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 95d4bfd78ee77f9afafce61f52b7874299df543d
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -207,7 +207,7 @@ Ce problème est très rare et très difficiles à reproduire - il généralemen
 
 
 
-Joignez les journaux XS, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP} .log**, et ** composants-{TIMESTAMP} .log ** (dans les versions antérieures de XS / MonoDevelop, envoi simplement **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
+Joignez les journaux XS, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP} .log**, et **composants-{TIMESTAMP} .log**(dans les versions antérieures de XS/MonoDevelop, envoyez **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
  **Remarque : Le problème ci-dessus a été résolu dans XS 2.2 finale**
 
@@ -225,7 +225,7 @@ Programmes d’installation Mono et Xamarin.iOS se bloquer si vous disposez de l
 
 Assurez-vous que vous quittez le simulateur iPhone et recommencez l’installation.
 
-<a name="trampolines"/>
+<a name="trampolines" />
 
 ## <a name="ran-out-of-trampolines-of-type-0"></a>A manqué d’espace trampolines de type 0
 

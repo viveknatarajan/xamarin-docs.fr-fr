@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2017
-ms.openlocfilehash: b0afba90dab5cba4bad385f8d6447d8b83c1de3d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55b83151e9c345096aeb0bfdd686d50c5fde62fd
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xaml-namespaces"></a>Espaces de noms XAML
 
@@ -38,40 +38,14 @@ XAML utilise des préfixes pour déclarer des espaces de noms par défaut, avec 
 
 Le tableau suivant décrit les `x` attributs d’espace de noms pris en charge par Xamarin.Forms :
 
-<table>
- <thead>
-   <tr>
-     <td><strong>Construct</strong></td>
-     <td><strong>Description</strong></td>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td><code>x:Arguments</code></td>
-     <td>Spécifie les arguments de constructeur pour un constructeur par défaut, ou pour une déclaration d’objet de fabrique (méthode).</td>
-   </tr>
-   <tr>
-     <td><code>x:Class</code></td>
-     <td>Spécifie l’espace de noms et le nom d’une classe définie en XAML. Le nom de classe doit correspondre au nom de classe du fichier code-behind. Notez que cette construction ne peut apparaître dans l’élément racine d’un fichier XAML.</td>
-   </tr>
-   <tr>
-     <td><code>x:FactoryMethod</code></td>
-     <td>Spécifie une méthode de fabrique qui peut être utilisée pour initialiser un objet.</td>
-   </tr>
-   <tr>
-     <td><code>x:Key</code></td>
-     <td>Spécifie une clé unique définie par l’utilisateur pour chaque ressource dans un <code>ResourceDictionary</code>. La valeur de clé est utilisée pour récupérer la ressource XAML et est généralement utilisée comme argument pour le <code>StaticResource</code> extension de balisage.</td>
-   </tr>
-   <tr>
-     <td><code>x:Name</code></td>
-     <td>Spécifie un nom d’objet de runtime pour l’élément XAML. Paramètre <code>x:Name</code> est similaire à la déclaration d’une variable dans le code.</td>
-   </tr>
-   <tr>
-     <td><code>x:TypeArguments</code></td>
-     <td>Spécifie les arguments de type générique au constructeur d’un type générique.</td>
-   </tr>
- </tbody>
-</table>
+|Construction|Description|
+|--- |--- |
+|`x:Arguments`|Spécifie les arguments de constructeur pour un constructeur par défaut, ou pour une déclaration d’objet de fabrique (méthode).|
+|`x:Class`|Spécifie l’espace de noms et le nom d’une classe définie en XAML. Le nom de classe doit correspondre au nom de classe du fichier code-behind. Notez que cette construction ne peut apparaître dans l’élément racine d’un fichier XAML.|
+|`x:FactoryMethod`|Spécifie une méthode de fabrique qui peut être utilisée pour initialiser un objet.|
+|`x:Key`|Spécifie une clé unique définie par l’utilisateur pour chaque ressource dans un `ResourceDictionary`. La valeur de clé est utilisée pour récupérer la ressource XAML et est généralement utilisée comme argument pour le `StaticResource` extension de balisage.|
+|`x:Name`|Spécifie un nom d’objet de runtime pour l’élément XAML. Paramètre `x:Name` est similaire à la déclaration d’une variable dans le code.|
+|`x:TypeArguments`|Spécifie les arguments de type générique au constructeur d’un type générique.|
 
 Pour plus d’informations sur la `x:Arguments`, `x:FactoryMethod`, et `x:TypeArguments` attributs, consultez [en passant les Arguments en XAML](~/xamarin-forms/xaml/passing-arguments.md).
 

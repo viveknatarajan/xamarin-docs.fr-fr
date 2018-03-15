@@ -7,12 +7,12 @@ ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ac83b74f39497333de7aa80079784adf61bf2e65
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: 5db4c735205753810466c26535ba9e2f525709a8
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -44,116 +44,25 @@ Explique comment déployer votre application d’usure Android sur un appareil A
 
 Vous trouverez un certain nombre de [exemples](https://developer.xamarin.com/samples/android/Android%20Wear/) à l’aide de l’usure Android (ou accédez directement au [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)). 
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-      <th>
-          <strong>Sample</strong>
-      </th>
-      <th>
-          <strong>Description</strong>
-      </th>
-      <th>
-          <strong>Screenshot</strong>
-      </th>
-  </thead>
-  <tbody>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/SkeletonWear/">SkeletonWear</a>
-      </td>
-      <td valign="top">
-Un exemple simple des notions de base des projets portable, y compris GridViewPager et notifications interactives.
-      </td>
-      <td>
-          <img src="Images/skeleton.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/WatchViewStub/">WatchViewStub</a>
-      </td>
-      <td valign="top">
-Une démonstration simple du contrôle WatchViewStub qui détecte la forme de l’écran et charge automatiquement la disposition correcte.
-Voir comment WatchViewStub fonctionne dans le <b>Resources/layout/main_actvity.xml</b> mise en page.
-      </td>
-      <td>
-          <img src="Images/watchview.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/RecipeAssistant/">RecipeAssistant</a>
-      </td>
-      <td valign="top">
-Démonstration de pages de notification d’usure, sous la forme d’étapes de la recette. Les notifications sont créées dans <b>RecipeService.cs</b>.
-      </td>
-      <td>
-          <img src="Images/recipeassist.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/ElizaChat/">ElizaChat</a>
-      </td>
-      <td valign="top">
-Exemple amusant de l’interaction avec un assistant « personnel » appelé Eliza, à l’aide de notifications d’usure interactives pour créer une conversation à l’aide de réponses toutes.
-      </td>
-      <td>
-          <img src="Images/eliza.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/GridViewPager/">GridViewPager</a>
-      </td>
-      <td valign="top">
-GridViewPager implémente le modèle de navigation 2D, où l’utilisateur fait glisser sa de verticalement puis horizontalement pour naviguer dans le contenu et les options.
-      </td>
-      <td>
-          <img src="Images/gridviewpager.png" class="tableimg">
-      </td>
-  </tr>
-  <tr>
-      <td valign="top">
-          <a href="https://developer.xamarin.com/samples/monodroid/wear/WatchFace">WatchFace</a>
-      </td>
-      <td valign="top">
-          <b>WatchFace</b> est un type personnalisé Espion avec analogique-style heure, minute et seconde mains. Cet exemple montre comment créer un service de face espion qui dessine l’heure actuelle et de visibilité et le mode ambiante gère les événements de modification. Il inclut un récepteur de diffusion qui écoute les modifications de fuseau horaire et met automatiquement à jour l’heure en conséquence.
-      </td>
-      <td>
-          <img src="Images/watchface.png" class="tableimg">
-      </td>
-  </tr>
-  </tbody>
-</table>
+|Exemple|Description|Capture d'écran|
+|--- |--- |--- |
+|[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|Un exemple simple des notions de base des projets portable, y compris GridViewPager et notifications interactives.|![Capture d’écran de Skeletonwear](images/skeleton.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Une démonstration simple du contrôle WatchViewStub qui détecte la forme de l’écran et charge automatiquement la disposition correcte.  Voir comment WatchViewStub fonctionne dans le **Resources/layout/main_actvity.xml** mise en page.|![Capture d’écran de WatchViewStub](images/watchview.png)|
+|[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|Démonstration de pages de notification d’usure, sous la forme d’étapes de la recette. Les notifications sont créées dans RecipeService.cs.|![Capture d’écran de RecipeAssistant](images/recipeassist.png)|
+|[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|Exemple amusant de l’interaction avec un assistant « personnel » appelé Eliza, à l’aide de notifications d’usure interactives pour créer une conversation à l’aide de réponses toutes.|![Capture d’écran de ElizaChat](images/eliza.png)|
+|[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager implémente le modèle de navigation 2D, où l’utilisateur fait glisser sa de verticalement puis horizontalement pour naviguer dans le contenu et les options.|![Capture d’écran de GridViewPager](images/gridviewpager.png)|
+|[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace est un type personnalisé Espion avec analogique-style heure, minute et seconde mains. Cet exemple montre comment créer un service de face espion qui dessine l’heure actuelle et de visibilité et le mode ambiante gère les événements de modification. Il inclut un récepteur de diffusion qui écoute les modifications de fuseau horaire et met automatiquement à jour l’heure en conséquence.|![Capture d’écran de WatchFace](images/gridviewpager.png)|
+
 
 ##  <a name="videos"></a>Vidéos
 
-Consultez ces vidéo liens qui traitent de Xamarin.Android avec usure prennent en charge.
+Consultez ces vidéo prend en charge les liens qui traitent de Xamarin.Android avec usure :
 
-<table align="center" border="0" cellpadding="1" cellspacing="1">
-    <tr>
-        <td>
-        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0" /></td>
-        <td><a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/">Android L et bien plus encore</a>
-        <br />
-Le Android Developer Preview L a introduit une multitude de nouvelles API permettant aux développeurs de tirer parti de, y compris les documents de conception, les notifications et les nouvelles animations pour citer que quelques.</td>
-    </tr>
-    <tr>
-        <td>
-        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" /></td>
-        <td><a href="https://www.youtube.com/watch?v=80H8tXByZQc">C# est enchante et mes yeux : Google Glass et usure Android</a>
-        <br />
-Informatique portable peut sembler quelque chose de demain (ou un épisode Inspecteur Gadget), mais de nombreuses personnes déjà adoptent le futur dès aujourd'hui ! Les développeurs c# cette information et aient déjà les outils et les compétences nécessaires pour exploiter la puissance de périphériques portable (à partir de Evolve 2014).</td>
-    </tr>
-    <tr>
-        <td>
-        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" /></td>
-        <td><a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU">Nouveautés de Xamarin.Android</a>
-        <br />
-        <i>Android L, usure Android, TV Android, Android automatique, conception de matériel et ART ; que cela signifie pour vous en tant que Xamarin développeur ? </i> de faire évoluer 2014.</td>
-    </tr>
-</table>
+|Description|Capture d'écran|
+|--- |--- |
+|[Android L et bien plus](http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android L Developer Preview introduit une multitude de nouvelles API permettant aux développeurs de tirer parti de, y compris les documents de conception, les notifications et les nouvelles animations citer que quelques-uns.|![Capture d’écran de vidéo de présentation](images/video-android-l.png)|
+|[C# est enchante et mes yeux : Google Glass et usure Android](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; informatique portable peut sembler quelque chose de demain (ou un épisode Inspecteur Gadget), mais de nombreuses personnes déjà adoptent le futur dès aujourd'hui ! Les développeurs c# cette information et aient déjà les outils et les compétences nécessaires pour exploiter la puissance de périphériques portable (à partir de Evolve 2014).|![Capture d’écran de vidéo de présentation](images/video-eyes-ears.png)|
+|[Nouveautés de Xamarin.Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; L Android, l’usure Android, TV Android, Android automatique, documents de conception et ART ; ce que fait cette moyenne pour vous en tant que développeur Xamarin ? de Evolve 2014.|![Capture d’écran de vidéo de présentation](Images/video-whats-new.png)|
 
 
 <!--

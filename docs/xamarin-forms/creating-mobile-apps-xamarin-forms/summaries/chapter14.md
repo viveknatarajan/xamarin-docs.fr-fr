@@ -7,11 +7,11 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 394e1722c79bac5f034e9ad88eb1fed7e5090f8c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a3980c63c31f4fdf0297fdc9b05da3590f0cac54
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Résumé du chapitre 14. Disposition absolue
 
@@ -25,7 +25,7 @@ Ce chapitre présente également la fonctionnalité importante de *jointe propri
 
 Vous pouvez ajouter un enfant à la `Children` collection d’un `AbsoluteLayout` à l’aide de la norme [ `Add` ](https://developer.xamarin.com/api/member/System.Collections.Generic.ICollection%3CT%3E.Add/p/T/) (méthode), mais `AbsoluteLayout` fournit également des étendues [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) méthode qui vous permet de spécifier un [ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/). Un autre [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) méthode nécessite uniquement un [ `Point` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Point/), auquel cas l’enfant n’est pas limitée et des tailles de lui-même.
 
-Vous pouvez créer un `Rectangle` valeur avec un [constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/System.Double/System.Double/System.Double/System.Double/) qui requiert quatre valeurs & #x 2014 ; les deux premières indiquant la position de l’angle supérieur gauche de l’enfant par rapport à son parent et les deux indiquant le taille de l’enfant. Vous pouvez également utiliser un [constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/Xamarin.Forms.Point/Xamarin.Forms.Size/) qui nécessite un `Point` et un [ `Size` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/) valeur.
+Vous pouvez créer un `Rectangle` valeur avec un [constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/System.Double/System.Double/System.Double/System.Double/) qui requiert quatre valeurs &mdash; les deux premières indiquant la position de l’angle supérieur gauche de l’enfant par rapport à son parent et les deux indiquant le taille de l’enfant. Vous pouvez également utiliser un [constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/Xamarin.Forms.Point/Xamarin.Forms.Size/) qui nécessite un `Point` et un [ `Size` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/) valeur.
 
 Ces `Add` méthodes sont illustrées dans [ **AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo), les positions `BoxView` à l’aide des éléments `Rectangle` valeurs et un `Label` élément à l’aide de simplement un `Point` valeur.
 

@@ -7,11 +7,11 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a40b4f00fd2a0dd3f61c4882a2ef25b8eb68a3a5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Résumé du chapitre 21. Transformations
 
@@ -19,9 +19,9 @@ Xamarin.Forms s’affiche sur l’écran dans un emplacement et une taille déte
 
 Xamarin.Forms prend en charge trois types de transformations :
 
-- *Traduction* & #x 2014 ; déplacer un élément horizontalement ou verticalement
-- *Échelle* & #x 2014 ; modification de la taille d’un élément
-- *Rotation* & #x 2014 ; activer un élément autour d’un point ou un axe
+- *Traduction* &mdash; déplacer un élément horizontalement ou verticalement
+- *Mise à l’échelle* &mdash; modifier la taille d’un élément
+- *Rotation* &mdash; activer un élément autour d’un point ou un axe
 
 Dans Xamarin.Forms, la mise à l’échelle est Isotrope ; elle affecte la largeur et la hauteur uniformément. Rotation est pris en charge à la fois sur la surface à deux dimensions de l’écran et dans l’espace 3D. Il y a aucune transformation d’inclinaison (ou amène) et aucune transformation de matrice généralisé.
 

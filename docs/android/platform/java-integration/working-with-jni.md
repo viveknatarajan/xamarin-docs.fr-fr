@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: e9a6f44637b77bf53c3cab00ac5051e6a2f27386
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f14d456cba66142c51e0755cdfd3c6795bd1cf73
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="working-with-jni"></a>Utilisation de JNI
 
@@ -154,7 +154,7 @@ Notez que la classe de base est conservée, et les déclarations de méthode nat
 
 En règle générale, Xamarin.Android génère automatiquement le code Java qui comprend le ACW ; Cette génération est basée sur les noms de classe et méthode lorsqu’une classe dérivée d’une classe Java et substitue les méthodes Java existants. Toutefois, dans certains scénarios, la génération de code n’est pas suffisante, comme indiqué ci-dessous :
 
--   Action d’Android prennent en charge les noms dans les attributs xml de mise en page, par exemple le [android : onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) attribut XML. Lorsqu’il est spécifié, l’instance de vue augmentée adoptent une apparence de la méthode Java.
+-   Android prend en charge les noms d’actions dans les attributs XML de mise en page, par exemple le [android : onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) attribut XML. Lorsqu’il est spécifié, l’instance de vue augmentée essaie de rechercher la méthode Java.
 
 -   Le [java.io.Serializable](http://developer.android.com/reference/java/io/Serializable.html) interface requiert `readObject` et `writeObject` méthodes. Dans la mesure où ils ne sont pas membres de cette interface, notre implémentation managée correspondante n’expose pas ces méthodes pour le code Java.
 

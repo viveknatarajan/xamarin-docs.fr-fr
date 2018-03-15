@@ -7,11 +7,11 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5559f9e6a4baf9d3f82701b5e3f341900ba83bae
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Résumé du chapitre 4. Défilement de la pile
 
@@ -67,9 +67,9 @@ Pour une verticale `StackLayout`, le `HorizontalOptions` détermine comment un e
 
 Pour une verticale `StackLayout`, chaque enfant est verticalement sans contrainte et obtient un vertical emplacement en fonction de la hauteur de l’enfant, auquel cas la `VerticalOptions` paramètre n’est pas pertinent.
 
-Si vertical `StackLayout` lui-même n’est pas limitée & #x 2014 ; c'est-à-dire si son `VerticalOptions` paramètre est `Start`, `Center`, ou `End`, puis la hauteur de la `StackLayout` correspond à la hauteur totale de ses enfants.
+Si vertical `StackLayout` lui-même n’est pas limitée&mdash;autrement dit si son `VerticalOptions` paramètre est `Start`, `Center`, ou `End`, puis la hauteur de la `StackLayout` correspond à la hauteur totale de ses enfants.
 
-Toutefois, si vertical `StackLayout` est contraint verticalement & #x 2014 ; si sa `VerticalOptions` paramètre est `Fill`& #x 2014 ; puis la hauteur de la `StackLayout` sera la hauteur de son conteneur, ce qui peut être supérieure à la hauteur totale de ses enfants. Si tel est le cas, et si au moins un enfant a un `VerticalOptions` avec un `Expands` indicateur de `true`, puis l’espace supplémentaire dans le `StackLayout` est réparti également de tous les enfants avec un `Expands` indicateur de `true`. La hauteur totale des enfants puis est égale à la hauteur de la `StackLayout`et le `Alignment` dans le cadre de la `VerticalOptions` détermine la façon dont l’enfant est positionné verticalement dans son emplacement.
+Toutefois, si la verticale `StackLayout` est contraint verticalement&mdash;si son `VerticalOptions` paramètre est `Fill` &mdash;puis la hauteur de la `StackLayout` sera la hauteur de son conteneur, ce qui peut être supérieure au total hauteur de ses enfants. Si tel est le cas, et si au moins un enfant a un `VerticalOptions` avec un `Expands` indicateur de `true`, puis l’espace supplémentaire dans le `StackLayout` est réparti également de tous les enfants avec un `Expands` indicateur de `true`. La hauteur totale des enfants puis est égale à la hauteur de la `StackLayout`et le `Alignment` dans le cadre de la `VerticalOptions` détermine la façon dont l’enfant est positionné verticalement dans son emplacement.
 
 Cela est illustré dans le [ **VerticalOptionsDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/VerticalOptionsDemo) exemple.
 

@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 230c26c2537987f7ca09e28e05ec96186e5f7882
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="alternate-resources"></a>Autres ressources
 
@@ -44,7 +44,7 @@ Les règles suivantes s’appliquent lorsque vous ajoutez des qualificateurs à 
 Pour référence, les qualificateurs possibles sont répertoriées ci-dessous :
 
 - **MMC et NMC** &ndash; le [régional mobile](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MMC) et éventuellement le [code de réseau mobile](http://en.wikipedia.org/wiki/Mobile_Network_Code) (NMC). La carte SIM fournira la MMC, tandis que l’appareil est connecté au réseau fournira le NMC. Bien qu’il soit possible de paramètres régionaux de cible à l’aide de l’indicatif du pays mobiles, l’approche recommandée consiste à utiliser le qualificateur de langue spécifié ci-dessous. Par exemple, pour les ressources cibles en Allemagne, le qualificateur serait `mcc262`. Pour les ressources cibles de T-Mobile aux États-Unis, le qualificateur est `mcc310-mnc026`.
-  Pour une liste complète des codes de pays mobile et réseau mobile consultez <http://mcclist.com/>.
+  Pour une liste complète des codes de pays mobile et réseau mobile consultez <http://mcc-mnc.com/>.
 
 - **Langage** &ndash; à deux lettres [code ISO 639-1 langue](http://en.wikipedia.org/wiki/ISO_639-1) et, éventuellement suivies de deux lettres [code de région ISO 3166-alpha 2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   Si les deux qualificateurs sont fournis, ils sont séparés par un `-r`. Par exemple, pour les paramètres régionaux de langue Français de cible, puis le qualificateur de `fr` est utilisé. Pour cibler des paramètres régionaux franco-canadiens, la `fr-rCA` serait utilisée. Pour obtenir une liste complète des codes de langue et région, consultez [Codes pour la représentation sous forme de noms de langues](http://www.loc.gov/standards/iso639-2/php/English_list.php) et [les éléments de code et les noms de pays](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).

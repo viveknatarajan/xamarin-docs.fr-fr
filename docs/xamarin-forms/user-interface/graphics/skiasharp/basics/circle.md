@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Dessin d’un cercle Simple
 
@@ -146,7 +146,7 @@ Lorsque vous exécutez le programme vous-même, vous pouvez activer le télépho
 
 Un `SKPaint` objet est qu’une collection de propriétés de dessin des graphiques. Ces objets sont très légères. Vous pouvez réutiliser `SKPaint` objets que ce programme, ou vous pouvez créer plusieurs `SKPaint` objets pour différentes combinaisons des propriétés de dessin. Vous pouvez créer et initialiser ces objets en dehors de la `PaintSurface` Gestionnaire d’événements et vous pouvez les enregistrer en tant que champs dans votre classe de page.
 
-Bien que la largeur du contour du cercle est spécifiée comme 25 pixels & #x 2014 ; ou un quart de rayon du cercle & #x 2014 ; Il semble plus étroit, et il existe une bonne raison de ce : moitié de la largeur de la ligne est masquée par le cercle bleu. Les arguments de la `DrawCircle` méthode définissent les coordonnées géométriques abstraites d’un cercle. L’intérieur de bleu est dimensionné à cette dimension pour le pixel le plus proche, mais le contour de 25 pixels de large chevauche le cercle géométrique & #x 2014 ; la moitié de l’intérieur et l’autre moitié à l’extérieur.
+Bien que la largeur du contour du cercle est spécifiée comme 25 pixels &mdash; ou un quart de rayon du cercle &mdash; il semble plus étroit, et il existe une bonne raison de ce : moitié de la largeur de la ligne est masquée par le cercle bleu. Les arguments de la `DrawCircle` méthode définissent les coordonnées géométriques abstraites d’un cercle. L’intérieur de bleu est dimensionné à cette dimension pour le pixel le plus proche, mais le contour de 25 pixels de large chevauche le cercle géométrique &mdash; moitié à l’intérieur et l’autre moitié à l’extérieur.
 
 L’exemple suivant dans le [intégrant Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) article montre visuellement.
 

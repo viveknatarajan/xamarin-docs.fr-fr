@@ -8,11 +8,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 39e2084bf9ca888d6e39fc5f02a455d3500e568c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-scale-transform"></a>La transformation d’échelle
 
@@ -44,7 +44,7 @@ Le `SKCanvas` classe définit quatre `Scale` méthodes. La première [ `Scale` ]
 public void Scale (Single s)
 ```
 
-Il s’agit en tant que *isotropes* mise à l’échelle & #x 2014 ; mise à l’échelle qui est le même dans les deux sens. Mise à l’échelle isotropes conserve les proportions de l’objet.
+Il s’agit en tant que *isotropes* mise à l’échelle &mdash; mise à l’échelle qui est le même dans les deux sens. Mise à l’échelle isotropes conserve les proportions de l’objet.
 
 La seconde [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) méthode vous permet de spécifier des valeurs différentes pour la mise à l’échelle horizontale et verticale :
 
@@ -168,7 +168,7 @@ L’angle supérieur gauche du rectangle arrondi est positionné `margin` pixels
 
 [![](scale-images/centeredscale-small.png "Capture d’écran de triple de la page de mise à l’échelle centré")](scale-images/centeredscale-large.png#lightbox "Triple capture d’écran de la page de mise à l’échelle centré")
 
-Le `Slider` les éléments de ce programme posséder un #x 2013 ; & de la plage de 10 à 10. Comme vous pouvez le voir, les valeurs négatives de mise à l’échelle (par exemple, sur le Android dans le centre de l’écran) à la verticale entraînent des objets faire pivoter autour de l’axe horizontal qui passe par le centre de mise à l’échelle. Les valeurs négatives de mise à l’échelle (par exemple, comme dans l’écran de Windows sur la droite) à l’horizontale entraînent des objets faire pivoter autour de l’axe vertical qui transitent dans le centre de mise à l’échelle.
+Le `Slider` les éléments de ce programme posséder une plage de &ndash;10 à 10. Comme vous pouvez le voir, les valeurs négatives de mise à l’échelle (par exemple, sur le Android dans le centre de l’écran) à la verticale entraînent des objets faire pivoter autour de l’axe horizontal qui passe par le centre de mise à l’échelle. Les valeurs négatives de mise à l’échelle (par exemple, comme dans l’écran de Windows sur la droite) à l’horizontale entraînent des objets faire pivoter autour de l’axe vertical qui transitent dans le centre de mise à l’échelle.
 
 Ce quatrième version de la `Scale` méthode est en fait un raccourci. Vous pouvez souhaiter voir comment cela fonctionne en remplaçant le `Scale` méthode dans ce code par le code suivant :
 

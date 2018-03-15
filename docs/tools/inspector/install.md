@@ -1,5 +1,6 @@
 ---
-title: Installation et configuration requise
+title: "Configuration requise et Installation de l’inspecteur"
+description: "Comment télécharger, installer et utiliser l’inspecteur de Xamarin."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
@@ -7,35 +8,28 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: a587935e35882ed1dc68817fbbe1ae3e91200f29
-ms.sourcegitcommit: 0bdcd00b64d581d4c5179bc39ded4018c9374229
+ms.openlocfilehash: a2e6f254c77ac099b5700543db5763b8bbb44fef
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="installation-and-requirements"></a>Installation et configuration requise
-
-<script> var inspectorOnLoad = fonction () {var primaryTextBase = « Les classeurs Xamarin & Inspecteur pour » ; var secondaryTextBase = « ou télécharger pour » ; var inspectorDownloadUrlMac = « https://dl.xamarin.com/interactive/XamarinInteractive.pkg » ; var inspectorDownloadUrlWin = « https://dl.xamarin.com/interactive/XamarinInteractive.msi » ;
-
-  var aPrimary = document.getElementById("inspector-download-primary"); var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary ; var aWin = aSecondary ; var macTextBase = primaryTextBase ; var winTextBase = secondaryTextBase ;
-
-  if (/win/i.test(navigator.platform.toLowerCase())) { aMac = aSecondary; aWin = aPrimary; macTextBase = secondaryTextBase; winTextBase = primaryTextBase; }
-
-  aMac.href = inspectorDownloadUrlMac ; aMac.text = macTextBase + « Mac » ; aWin.href = inspectorDownloadUrlWin ; aWin.text = winTextBase + « Windows » ; };
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# <a name="inspector-installation-and-requirements"></a>Configuration requise et Installation de l’inspecteur
 
 ## <a name="download-and-installation"></a>Téléchargement et Installation
 
-<ol>
-  <li>Téléchargez et installez <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin classeurs & Inspecteur pour Mac</a> (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">ou téléchargement pour Windows</a>).
-  </li>
-  <li><a href="~/tools/inspector/inspect.md"> Vérifiez que votre propre application !</a>
-    </li>
-</ol>
+
+# <a name="windowstabvswin"></a>[Fenêtres](#tab/vswin)
+
+1. Téléchargez et installez [Xamarin classeurs & fenêtres d’inspecteur pour](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+2. [Vérifiez que votre propre application !](~/tools/inspector/inspect.md)
+
+# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+
+1. Téléchargez et installez [Xamarin classeurs & Inspecteur pour Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+2. [Vérifiez que votre propre application !](~/tools/inspector/inspect.md)
+
+-----
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -57,43 +51,13 @@ Inspection de l’application en temps réel est disponible pour les clients d�
 
 ### <a name="supported-app-platforms"></a>Plateformes d’applications pris en charge
 
-<table>
-<thead>
-  <tr>
-    <th>Plateforme d’application</th>
-    <th>Prise en charge IDE</th>
-    <th>Notes</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac (unifié)</td>
-    <td>Prise en charge uniquement sur Mac</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS (unifié)</td>
-    <td>Prise en charge dans XS et Visual Studio</td>
-    <td>Inspection des applications iOS à partir de Windows requiert la même version de l’inspecteur de peuvent également être installés sur l’hôte de build Mac.</td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>Prise en charge dans XS et Visual Studio</td>
-    <td>
-      <ul>
-        <li>Doivent cibler Android > = 4.0.3</li>
-        <li>Doit avoir fastdev activé</li>
-        <li>Doit utiliser des émulateurs de Google, Visual Studio ou Xamarin Android. Les émulateurs Android 7 n’autorise pas de contrôle pour l’instant.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>Uniquement pris en charge dans Visual Studio sous Windows</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|Plateforme d’application|Prise en charge IDE|Notes|
+|--- |--- |--- |
+|Mac (unifié)|Prise en charge uniquement sur Mac|
+|iOS (unifié)|Prise en charge dans XS et Visual Studio|Inspection des applications iOS à partir de Windows requiert la même version de l’inspecteur de peuvent également être installés sur l’hôte de build Mac.|
+|Android|Prise en charge dans XS et Visual Studio|Doivent cibler Android > = 4.0.3, avec **fastdev** activé.<br />Doit utiliser des émulateurs de Google, Visual Studio ou Xamarin Android. Les émulateurs Android 7 n’autorise pas de contrôle pour l’instant.|
+|WPF|Uniquement pris en charge dans Visual Studio sous Windows|
+
 
 <a name="reporting-bugs" />
 
@@ -101,7 +65,7 @@ Inspection de l’application en temps réel est disponible pour les clients d�
 
 Bogues doivent être signalées directement via Visual Studio :
 
-- **Aide → envoyer des commentaires → signaler un problème**
+- **Aide > envoyer des commentaires > signaler un problème**
 
 Merci d’inclure toutes les informations suivantes :
 
@@ -111,12 +75,12 @@ Ces informations sont essentielles.
 
 Visual Studio pour Mac
 
-- **Visual Studio → sur les informations de copie de Visual Studio → Afficher détails →**
+- **Visual Studio > à propos de Visual Studio > Afficher les détails > Copier les informations**
 - Collez dans le rapport de bogue
 
 Xamarin Studio
 
-- **Xamarin Studio → sur Xamarin Studio → afficher des détails → copier les informations**
+- **Xamarin Studio > à propos de Xamarin Studio > Afficher les détails > Copier les informations**
 - Collez dans le rapport de bogue
 
 Visual Studio
@@ -135,7 +99,7 @@ Client de l’inspecteur
 
 1.4.x offre également la possibilité de sélectionner le fichier journal dans le Finder (macOS) ou de l’Explorateur (Windows) directement à partir du menu principal :
 
-- **Fichier d’aide → révéler journal**
+- **Aide > Afficher le fichier journal**
 
 Visual Studio pour Mac
 
@@ -148,11 +112,11 @@ Xamarin Studio
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- Le contenu de Visual Studio `Output` volet peut également être informatif.
+- Le contenu de Visual Studio **sortie** volet peut également être informatif.
 
 ### <a name="project-settings"></a>Paramètres du projet
 
-Si vous pouvez attacher le `.csproj` pour le projet que vous voulez inspecter, il serait très utile. Il est plus facile que posées par les paramètres individuels.
+Si vous pouvez attacher le **.csproj** pour le projet que vous voulez inspecter, il serait très utile. Il est plus facile que posées par les paramètres individuels.
 
 Veuillez également confirmer que vous êtes dans la configuration Debug.
 
@@ -177,13 +141,13 @@ Selon la façon dont vous avez acquis & Inspecteur de classeurs, vous devrez peu
 
 #### <a name="visual-studio-installer"></a>Programme d’installation de Visual Studio
 
-Si vous avez Visual Studio 2017, ouvrez « Programme d’installation de Visual Studio » et rechercher dans les « Composants individuels » pour « Les classeurs Xamarin ». Si elle est activée, désactivez-la et puis cliquez sur « Modifier » à désinstaller.
+Si vous avez Visual Studio 2017, ouvrez **le programme d’installation de Visual Studio**, puis en regardant dans **des composants individuels** pour **Xamarin classeurs**. Si elle est activée, désactivez-la et puis cliquez sur « Modifier » à désinstaller.
 
 #### <a name="system-uninstall"></a>Désinstallation du système
 
 Si vous avez installé les classeurs & Inspecteur vous-même avec un programme d’installation téléchargé, elle devra être désinstallées via les **applications & fonctionnalités** page des paramètres système sur Windows 10 ou via **ajouter/supprimer des programmes**dans le panneau de contrôle des versions plus anciennes de Windows.
 
-> **Démarrer → Paramètres → système → applications et fonctionnalités**
+> **Démarrer > Paramètres > système > applications et fonctionnalités**
 
 ![](install-images/windows-remove.png "Xamarin des classeurs et l’inspecteur comme indiqué dans « Applications et fonctionnalités »")
 

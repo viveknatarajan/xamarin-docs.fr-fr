@@ -8,11 +8,11 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 16e9423c84e591e15a703b4d5bb204a8b642bb40
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 90be80d42c20ca7509037b5f59b34cc1bddde6de
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="touch-manipulations"></a>Manipulations tactile
 
@@ -193,7 +193,7 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-Si le `HitTest` méthode retourne `true` & #x 2014 ; signification qu’un doigt a touché l’écran dans la zone occupée par l’image bitmap & #x 2014 ; puis l’ID tactile est ajouté à la `TouchIds` collection. Cet ID représente la séquence des événements tactiles pour ce doigt jusqu'à ce que le doigt lève à partir de l’écran. Si plusieurs doigts touchent l’image bitmap, puis le `touchIds` collection contient un ID tactile pour chaque doigt.
+Si le `HitTest` méthode retourne `true` &mdash; ce qui signifie que qu’un doigt a touché l’écran dans la zone occupée par l’image bitmap &mdash; , l’ID de contact est ajoutée à la `TouchIds` collection. Cet ID représente la séquence des événements tactiles pour ce doigt jusqu'à ce que le doigt lève à partir de l’écran. Si plusieurs doigts touchent l’image bitmap, puis le `touchIds` collection contient un ID tactile pour chaque doigt.
 
 Le `TouchAction` gestionnaire appelle également la `ProcessTouchEvent` classe dans `TouchManipulationBitmap`. Cette propriété est si certains (mais pas tous) des fonctions tactiles réel le traitement se produit.
 
@@ -404,7 +404,7 @@ class TouchManipulationManager
 
 Chaque fois que la rotation a été sélectionnée, les deux méthodes de manipulation d’un doigt et deux doigt le gérer tout d’abord la rotation. Si la rotation est détectée, le composant de rotation est alors effectivement supprimé. Ce qui reste est interprété comme le panoramique et de mise à l’échelle.
 
-Voici le `OneFingerManipulate` (méthode). Si un doigt rotation n’a pas été activée, puis la logique est simple & #x 2014 ; elle utilise simplement le point précédent et le point pour construire un vecteur nommé `delta` qui correspond exactement à la traduction. Rotation d’un doigt activé, la méthode utilise angles à partir du point pivot (le centre de l’image bitmap) pour le point précédent et le point pour construire une matrice de rotation :
+Voici le `OneFingerManipulate` (méthode). Si un doigt rotation n’a pas été activée, la logique est simple &mdash; qu’elle utilise simplement le point précédent et le point pour construire un vecteur nommé `delta` qui correspond exactement à la traduction. Rotation d’un doigt activé, la méthode utilise angles à partir du point pivot (le centre de l’image bitmap) pour le point précédent et le point pour construire une matrice de rotation :
 
 ```csharp
 class TouchManipulationManager

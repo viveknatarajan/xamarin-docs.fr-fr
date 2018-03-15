@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 341d850709ff27f4dc397cee3bb2fc5f73c0ec3c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Lignes et les extrémités de trait
 
@@ -30,7 +30,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 
 Par défaut, le `StrokeWidth` propriété nouvellement instancié `SKPaint` objet est 0, ce qui a le même effet que la valeur 1 dans le rendu d’une ligne d’un pixel d’épaisseur. Cela semble très fine sur les appareils haute résolution tels que les téléphones, donc vous voudrez probablement définir le `StrokeWidth` une valeur plus élevée. Mais une fois que vous commencez à tracer des lignes d’une épaisseur dimensionnable, qui déclenche un autre problème : comment doivent le démarre et les extrémités de ces lignes épaisses restituées ?
 
-L’apparence du démarrage et fin des lignes est appelée un *extrémité de la ligne* ou Skia, un *extrémité de trait*. Le mot « cap » dans ce contexte fait référence à un type de hat & #x 2014 ; quelque chose qui se situe à la fin de la ligne. Vous définissez la [ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) propriété de la `SKPaint` objet à un des membres suivants de la [ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) énumération :
+L’apparence du démarrage et fin des lignes est appelée un *extrémité de la ligne* ou Skia, un *extrémité de trait*. Le mot « cap » dans ce contexte fait référence à un type de hat &mdash; quelque chose qui se trouve à la fin de la ligne. Vous définissez la [ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) propriété de la `SKPaint` objet à un des membres suivants de la [ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) énumération :
 
 - [`Butt`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Butt/) (la valeur par défaut)
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)

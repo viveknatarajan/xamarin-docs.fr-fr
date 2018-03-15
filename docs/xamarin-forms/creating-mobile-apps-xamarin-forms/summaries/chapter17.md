@@ -7,11 +7,11 @@ ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 09f63dd418ea1fb523c028edb02c28c22bfdccd1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4f76b1060ee8a672319683525470aee00e3db001
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Résumé du chapitre 17. La maîtrise de la grille
 
@@ -29,16 +29,16 @@ La définition d’un `Grid` dans XAML en général commence avec remplissage la
 
 En XAML, le [ `GridLengthTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridLengthTypeConverter/) convertit les chaînes de texte simples dans `GridLength` valeurs. En arrière-plan, le [ `GridLength` constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.GridLength.GridLength/p/System.Double/Xamarin.Forms.GridUnitType/) crée le `GridLength` valeur basée sur un nombre et une valeur de type [ `GridUnitType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/), une énumération avec trois membres :
 
-- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) & #x 2014 ; la largeur ou la hauteur est spécifiée en unités d’indépendants du périphérique (il s’agit d’un nombre en XAML)
-- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) & #x 2014 ; la hauteur ou la largeur est redimensionné automatiquement en fonction de contenu de la cellule (« Auto » en XAML)
-- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) & #x 2014 ; restant hauteur ou la largeur est alloué proportionnellement (un nombre avec «\*», appelé *en étoile*, en XAML)
+- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) &mdash; la largeur ou la hauteur est spécifiée en unités d’indépendants du périphérique (il s’agit d’un nombre en XAML)
+- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) &mdash; la hauteur ou la largeur est redimensionné automatiquement en fonction de contenu de la cellule (« Auto » en XAML)
+- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) &mdash; restant hauteur ou la largeur est alloué proportionnellement (un nombre avec «\*», appelé *en étoile*, en XAML)
 
-Chaque enfant de le `Grid` doit également être affecté une ligne et colonne (explicitement ou implicitement). S’étend sur des lignes et des étendues de colonne sont facultatifs. Elles sont spécifiées pour tous l’utilisation de propriétés pouvant être liées & #x 2014 ; attachés propriétés qui sont définies par le `Grid` mais définies sur les enfants de le `Grid`. `Grid` définit les quatre propriétés pouvant être liées attachées statiques :
+Chaque enfant de le `Grid` doit également être affecté une ligne et colonne (explicitement ou implicitement). S’étend sur des lignes et des étendues de colonne sont facultatifs. Elles sont spécifiées pour tous à l’aide des propriétés pouvant être liées jointes &mdash; propriétés qui sont définies par le `Grid` mais définies sur les enfants de le `Grid`. `Grid` définit les quatre propriétés pouvant être liées attachées statiques :
 
-- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) & #x 2014 ; la ligne de base zéro. valeur par défaut est 0
-- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) & #x 2014 ; la colonne de base zéro. valeur par défaut est 0
-- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) & #x 2014 ; le nombre de lignes enfant s’étend sur ; valeur par défaut est 1
-- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) & #x 2014 ; le nombre de colonnes enfants s’étend sur ; valeur par défaut est 1
+- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) &mdash; la ligne de base zéro. valeur par défaut est 0
+- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) &mdash; la colonne de base zéro. valeur par défaut est 0
+- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) &mdash; le nombre de lignes enfant s’étend sur ; valeur par défaut est 1
+- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) &mdash; le nombre de colonnes enfants s’étend sur ; valeur par défaut est 1
 
 Dans le code, un programme peut utiliser huit méthodes statiques pour définir et obtenir des valeurs suivantes :
 

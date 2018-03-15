@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 7c38ebb6b482f4097a4977accecc4a230d3f3ed3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e8e56afbdf0b68ecc49a89b08b2e67a9715f2aef
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="android-speech"></a>Reconnaissance vocale Android
 
@@ -128,11 +128,11 @@ En grande partie, les appareils Android fournis avec la valeur par défaut servi
 
 ### <a name="step-1---instantiating-texttospeech"></a>Étape 1 : instanciation de texttospeech avec le
 
-`TextToSpeech` peut prendre jusqu'à 3 paramètres, les deux premiers sont requis et le troisième est facultatif (`AppContext`, `IOnInitListener`, `engine`). L’écouteur est utilisé pour lier vers le service et le test d’échec avec le moteur en cours de n’importe quel nombre de moteurs disponibles Android texte par synthèse vocale, au minimum, le périphérique aura le moteur de Google.
+`TextToSpeech` peut prendre jusqu'à 3 paramètres, les deux premiers sont requis et le troisième est facultatif (`AppContext`, `IOnInitListener`, `engine`). L’écouteur est utilisé pour lier vers le service et le test d’échec avec le moteur en cours de n’importe quel nombre de moteurs de disponible Android vocale. Au minimum, le périphérique aura moteur de Google.
 
 ### <a name="step-2---finding-the-languages-available"></a>Étape 2 : recherche les langues disponibles
 
-Le `Java.Util.Locale` espace de noms contient une méthode utile appelée `GetAvailableLocales()`. Cette liste de langues prises en charge par le moteur de reconnaissance vocale peut être testée sur les langues installées.
+Le `Java.Util.Locale` classe contient une méthode utile appelée `GetAvailableLocales()`. Cette liste de langues prises en charge par le moteur de reconnaissance vocale peut être testée sur les langues installées.
 
 Il est sans importance pour générer la liste des langues de « compris ». Il y aura toujours une langue par défaut (la langue défini de l’utilisateur lorsqu’ils tout d’abord configurent son appareil), c’est le cas dans cet exemple la `List<string>` a « Default » comme premier paramètre, le reste de la liste est rempli en fonction du résultat de la `textToSpeech.IsLanguageAvailable(locale)`.
 
@@ -186,7 +186,7 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 
 ### <a name="step-5---the-ioninitlistener"></a>Étape 5 - le IOnInitListener
 
-Une activité peut être en mesure de convertir le texte par synthèse vocale, la méthode d’interface `OnInit` doit être créé (Ceci est le deuxième paramètre spécifié pour l’instanciation de la `TextToSpeech` classe). Initialise l’écouteur et le résultat des tests.
+Une activité peut être en mesure de convertir le texte par synthèse vocale, la méthode d’interface `OnInit` doit être implémentée (Ceci est le deuxième paramètre spécifié pour l’instanciation de la `TextToSpeech` classe). Initialise l’écouteur et le résultat des tests.
 
 L’écouteur doit effectuer un test à la fois `OperationResult.Success` et `OperationResult.Failure` au minimum.
 L’exemple suivant montre que :

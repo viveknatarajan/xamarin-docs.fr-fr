@@ -7,11 +7,11 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9a53cddcf216efd2bb86c838e280d599ff26c191
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ddb76e00cfe1c19a9d31dc3e53b80a2be0697dbc
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Résumé du chapitre 23. Les déclencheurs et les comportements
 
@@ -131,7 +131,7 @@ Rien faire avec un déclencheur, vous pouvez également faire avec un comporteme
 
 L’argument est l’élément qui le comportement est attaché. En règle générale, les `OnAttachedTo` méthode attache des gestionnaires d’événements, et `OnDetachingFrom` détache les. Étant donné qu’une telle classe enregistre généralement un état, il généralement ne peut pas être partagé dans un `Style`.
 
-[**BehaviorEntryValidation** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) exemple est semblable à **TriggerEntryValidation** sauf qu’elle utilise un comportement de l’a & #x 2014 ; le [ `NumericValidationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) classe dans le [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) bibliothèque.
+[**BehaviorEntryValidation** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) exemple est semblable à **TriggerEntryValidation** sauf qu’elle utilise un comportement &mdash; le [ `NumericValidationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) classe dans le [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) bibliothèque.
 
 ### <a name="behaviors-with-properties"></a>Comportements avec des propriétés
 

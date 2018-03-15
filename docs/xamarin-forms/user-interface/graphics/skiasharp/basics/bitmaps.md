@@ -8,17 +8,17 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: facdcb6231b77714d6f5d0c7d496db12f75b1d08
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 921697657397662e92fb72c32e6efcc31745d7f1
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="bitmap-basics"></a>Bitmap des principes de base
 
 _Charger des bitmaps de différentes sources et les afficher._
 
-La prise en charge des images bitmap dans SkiaSharp est assez longue. Cet article traite uniquement les principes de base & #x 2014 ; comment charger des bitmaps et pour les afficher :
+La prise en charge des images bitmap dans SkiaSharp est assez longue. Cet article traite uniquement les notions de base &mdash; comment charger des bitmaps et pour les afficher :
 
 ![](bitmaps-images/bitmapssample.png "L’affichage de deux images")
 
@@ -207,7 +207,7 @@ La bitmap est étendue aux dimensions du rectangle, c’est pourquoi le singe es
 
 [![](bitmaps-images/basicbitmaps-small.png "Une capture d’écran triple de la page de base Bitmaps")](bitmaps-images/basicbitmaps-large.png#lightbox "une capture d’écran triple de la page de base Bitmaps")
 
-La troisième image & le même #x 2014 ; Vous pouvez obtenir uniquement si vous exécutez le programme et chargez une photo à partir de votre propre bibliothèque d’images & le #x 2014 ; s’affiche également dans un rectangle, mais du rectangle position et la taille sont ajustées pour conserver les proportions de l’image bitmap. Ce calcul est un peu plus complexe, car elle requiert le calcul une échelle en fonction de la taille de la bitmap et le rectangle de destination et centrage du rectangle dans la zone :
+La troisième image &mdash; que vous pouvez visualiser uniquement si vous exécutez le programme et chargez une photo à partir de votre propre bibliothèque d’images &mdash; s’affiche également dans un rectangle, mais du rectangle position et la taille sont ajustées pour conserver les proportions de l’image bitmap. Ce calcul est un peu plus complexe, car elle requiert le calcul une échelle en fonction de la taille de la bitmap et le rectangle de destination et centrage du rectangle dans la zone :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

@@ -7,11 +7,11 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d7a75ce0303030d53315b5e698fc604a910c969c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Résumé du chapitre 28. Emplacement et des mappages
 
@@ -29,7 +29,7 @@ Un angle, mesuré à l’Équateur à partir du centre de marques terre Nord ou 
 
 ### <a name="longitude-and-meridians"></a>Longitude et les méridiens
 
-Deux moitiés de cercles great depuis le pôle nord au Pôle Sud sont également appelés des lignes de longitude égale, *les méridiens*. Il s’agit par rapport à du premier méridien de Greenwich en Angleterre. Par convention, longitudes à l’est sont des valeurs positives de 0 degrés, 180 degrés et longitudes à l’ouest du premier méridien sont des valeurs négatives à partir de 0 degrés à & #x 2013 ; 180 degrés.
+Deux moitiés de cercles great depuis le pôle nord au Pôle Sud sont également appelés des lignes de longitude égale, *les méridiens*. Il s’agit par rapport à du premier méridien de Greenwich en Angleterre. Par convention, longitudes à l’est sont des valeurs positives de 0 degrés, 180 degrés et longitudes à l’ouest du premier méridien sont des valeurs négatives de 0 degrés à &ndash;180 degrés.
 
 ### <a name="the-equirectangular-projection"></a>La projection équirectangulaire
 

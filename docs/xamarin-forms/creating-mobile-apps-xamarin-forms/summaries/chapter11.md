@@ -7,11 +7,11 @@ ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ccae97021e86eb1375f948c5ad126253c6088037
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Résumé du chapitre 11. L’infrastructure pouvant être liée
 
@@ -47,9 +47,9 @@ En effet, le `Text` propriété CLR est implémentée entièrement à l’aide d
 
 Chaque fois qu’une propriété qui est soutenue par une propriété pouvant être liée est modifiée, `BindableObject` se déclenche un [ `PropertyChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.BindableObject.PropertyChanged/) événement qui identifie la propriété qui a changé. Cet événement n’est pas déclenché lorsque la propriété est définie sur la même valeur.
 
-Certaines propriétés ne sont pas soutenues par les propriétés pouvant être liées et que certaines classes de Xamarin.Forms & #x 2014 ; comme `Span` & #x 2014 ; ne dérivent pas de `BindableObject`. Une classe qui dérive de `BindableObject` peut prendre en charge les propriétés pouvant être liées, car `BindableObject` définit le `SetValue` et `GetValue` méthodes.
+Certaines propriétés ne sont pas soutenues par les propriétés pouvant être liées et certaines classes Xamarin.Forms &mdash; comme `Span` &mdash; ne dérivent pas de `BindableObject`. Une classe qui dérive de `BindableObject` peut prendre en charge les propriétés pouvant être liées, car `BindableObject` définit le `SetValue` et `GetValue` méthodes.
 
-Étant donné que `Span` ne dérive pas de `BindableObject`, aucun de ses propriétés et les #x 2014 ; par exemple `Text` & #x 2014 ; bénéficient d’une propriété pouvant être liée. C’est pourquoi un `DynamicResource` définition sur le `Text` propriété du `Span` lève une exception dans le [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) présenté dans le chapitre précédent. Le [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) exemple montre comment définir une ressource dynamique dans un code utilisant la [ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/p/Xamarin.Forms.BindableProperty/System.String/) méthode définie par `Element`. Le premier argument est un objet de type `BindableProperty`.
+Étant donné que `Span` ne dérive pas de `BindableObject`, aucune de ses propriétés &mdash; comme `Text` &mdash; bénéficient d’une propriété pouvant être liée. C’est pourquoi un `DynamicResource` définition sur le `Text` propriété du `Span` lève une exception dans le [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) présenté dans le chapitre précédent. Le [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) exemple montre comment définir une ressource dynamique dans un code utilisant la [ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/p/Xamarin.Forms.BindableProperty/System.String/) méthode définie par `Element`. Le premier argument est un objet de type `BindableProperty`.
 
 De même, la [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) méthode définie par `BindableObject` a un premier argument de type `BindableProperty`.
 

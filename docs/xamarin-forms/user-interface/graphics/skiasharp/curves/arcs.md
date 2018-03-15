@@ -8,11 +8,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 390c8f4634ea38ecb93e3f21175db00fef27b8e4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 739efa994f172a7a1de82ac02d1c10b0d80f4c30
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Trois méthodes pour dessiner un Arc
 
@@ -238,7 +238,7 @@ Ces trois points définissent deux lignes connectées :
 
 ![](arcs-images/tangentarcconnectinglines.png "Lignes reliant les trois points d’un arc tangent")
 
-Si les trois points sont colinéaires & #x 2014 ; Autrement dit, si elles se trouvent sur la même ligne droite & #x 2014 ; aucun arc n’est dessiné.
+Si les trois points sont colinéaires &mdash; , autrement dit, si elles se trouvent sur la même ligne droite &mdash; aucun arc ne sera dessiné.
 
 Le `ArcTo` inclut également un `radius` paramètre. Définit le rayon d’un cercle :
 

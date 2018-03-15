@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e81ecd10f4dfc101cf63ba9d052d15b51a367ee5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5dd77232dc992880b18393c740b54c7784e4d049
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introduction aux bibliothèques de classes portables
 
@@ -39,94 +39,13 @@ Toutefois, lorsque vous créez une bibliothèque de classes portables, vous pouv
 
 Le tableau ci-dessous répertorie certaines des fonctionnalités qui varient selon la plateforme .NET. Pour écrire un assembly de bibliothèque PCL est garanti pour s’exécuter sur les plateformes d’appareils spécifiques/vous choisissez simplement la prise en charge est requis lorsque vous créez le projet.
 
-<table border="1" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-Fonctionnalité </td>
-      <td>
-.NET Framework </td>
-      <td>
-Applications UWP </td>
-      <td>
-Silverlight </td>
-      <td>
-Windows Phone </td>
-      <td>
-Xamarin </td>
-    </tr>
-    <tr>
-      <td>
-Principal </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-LINQ </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-IQueryable </td>
-       <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-7.5 + </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-Sérialisation </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-Annotations de données </td>
-      <td>
-4.0.3 + </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-      </td>
-      <td>
-Y </td>
-    </tr>
-  </tbody>
-</table>
+|Fonctionnalité|.NET Framework|Applications UWP|Silverlight|Windows Phone|Xamarin|
+|---|---|---|---|---|---|
+|Principal|Y|Y|Y|Y|Y|
+|LINQ|Y|Y|Y|Y|Y|
+|IQueryable|Y|Y|Y|7.5 +|Y|
+|Sérialisation|Y|Y|Y|Y|Y|
+|Annotations de données|4.0.3 +|Y|Y||Y|
 
 La colonne Xamarin reflète le fait que Xamarin.iOS et Xamarin.Android prend en charge tous les profils fournis avec Visual Studio et la disponibilité des fonctionnalités dans toutes les bibliothèques que vous créez est uniquement limitée par d’autres plateformes que vous choisissez pour prendre en charge.
 

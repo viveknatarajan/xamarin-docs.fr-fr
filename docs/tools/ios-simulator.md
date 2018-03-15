@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 20e8d843b73fca5eb49da21a7f834ebbb52f4aa9
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Distance iOS Simulator (pour Windows)
 
@@ -52,7 +52,7 @@ La barre d’outils inclut un nombre de boutons permettant d’interagir avec le
 - **Verrou** – verrouille le simulateur (vous pouvez faites glisser pour déverrouiller).
 - **Capture d’écran de** – enregistre une capture d’écran du simulateur sur le disque.
 - [**Paramètres** ](#settings) – configurer le clavier et l’emplacement.
- - Autres [ **options** ](#options) – disponible telles que de faire pivoter, secouer une variété d’options de simulateur, ou appeler d’autres États dans le simulateur. Lorsque certaines options sont masquées, ils sont accessibles à partir de l’icône de points de suspension qui apparaît dans la barre d’outils, ou en cliquant sur la fenêtre.
+- Autres [ **options** ](#options) – disponible telles que de faire pivoter, secouer une variété d’options de simulateur, ou appeler d’autres États dans le simulateur. Lorsque certaines options sont masquées, ils sont accessibles à partir de l’icône de points de suspension qui apparaît dans la barre d’outils, ou en cliquant sur la fenêtre.
 
     [![](ios-simulator-images/maps-app-sml.png "Simulateur iOS mappe l’exemple")](ios-simulator-images/maps-app.png#lightbox)
 

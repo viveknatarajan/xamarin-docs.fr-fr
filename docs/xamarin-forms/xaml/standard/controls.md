@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 3f30a77975a9f42380ecf7efd73426763ec83ef0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b044cb849f9a8e591a8db5907211a55f77d6e45f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xaml-standard-preview-controls"></a>Contrôles XAML Standard (version préliminaire)
 
@@ -24,36 +24,34 @@ Il existe également une liste de contrôles qui ont des nouveaux noms de propri
 
 ## <a name="controls"></a>Contrôles
 
-<table style="width:300px">
-  <tr><th>Xamarin.Forms</th><th>XAML Standard</th></tr>
-  <tr><td>Frame</td><td>Bordure</td></tr>
-  <tr><td>Sélecteur</td><td>ComboBox</td></tr>
-  <tr><td>ActivityIndicator</td><td>Anneau de progression</td></tr>
-  <tr><td>StackLayout</td><td>StackPanel</td></tr>
-  <tr><td>Ajouter des contrôles</td><td>TextBlock</td></tr>
-  <tr><td>Entrée</td><td>TextBox</td></tr>
-  <tr><td>Basculer</td><td>Bouton bascule</td></tr>
-  <tr><td>ContentView</td><td>UserControl</td></tr>
-</table>
+|Xamarin.Forms|XAML Standard|
+|--- |--- |
+|Frame|Bordure|
+|Sélecteur|ComboBox|
+|ActivityIndicator|Anneau de progression|
+|StackLayout|StackPanel|
+|Ajouter des contrôles|TextBlock|
+|Entrée|TextBox|
+|Basculer|Bouton bascule|
+|ContentView|UserControl|
+
 
 ## <a name="properties-and-enumerations"></a>Propriétés et des énumérations
 
-<table>
-  <tr><th>Xamarin.Forms<br/>Contrôles avec les propriétés mises à jour</th><th>Xamarin.Forms<br/>Propriété ou Enum</th><th>XAML Standard<br/>Équivalent</th></tr>
-  <tr><td>Button, Entry, Label, DatePicker, Editor, SearchBar, TimePicker</td><td>TextColor</td><td>Foreground</td></tr>
-  <tr><td>VisualElement</td><td>BackgroundColor</td><td><i>Arrière-plan *</i></td></tr>
-  <tr><td>Sélecteur, bouton</td><td>BorderColor, OutlineColor</td><td>BorderBrush</td></tr>
-  <tr><td>Bouton</td><td>BorderWidth</td><td>BorderThickness</td></tr>
-  <tr><td>Barre de progression</td><td>Progression</td><td>Value</td></tr>
-  <tr><td>Button, Entry, Label, Editor, SearchBar, Span, Font</td><td>Attributs de la police<br/>Gras, italique, aucun</td><td>FontStyle<br/>Italique, Normal</td></tr>
-  <tr><td>Button, Entry, Label, Editor, SearchBar, Span, Font</td><td>Attributs de la police</td><td><i>FontWeights *</i><br/>Gras, Normal</td></tr>
-  <tr><td>InputView</td><td>Clavier<br/>Par défaut, les Url, nombre, téléphone, texte, la conversation, par courrier électronique</td><td><i>InputScopeNameValue *</i><br/>Default, Url, Number, TelephoneNumber, Text, Chat, EmailNameOrAddress</td></tr>
-  <tr><td>StackPanel</td><td>StackOrientation</td><td><i>Orientation *</i></td></tr>
-</table>
+|Xamarin.FormsControls avec les propriétés mises à jour|Xamarin.FormsProperty ou Enum|XAML StandardEquivalent|
+|--- |--- |--- |
+|Button, Entry, Label, DatePicker, Editor, SearchBar, TimePicker|TextColor|Foreground|
+|VisualElement|BackgroundColor|Arrière-plan *|
+|Sélecteur, bouton|BorderColor, OutlineColor|BorderBrush|
+|Bouton|BorderWidth|BorderThickness|
+|Barre de progression|Progression|Value|
+|Button, Entry, Label, Editor, SearchBar, Span, Font|FontAttributesBold, italique, aucun|FontStyleItalic, Normal|
+|Button, Entry, Label, Editor, SearchBar, Span, Font|Attributs de la police|FontWeights * gras, Normal|
+|InputView|Envoyer par courrier électronique KeyboardDefault, Url, nombre, téléphone, texte, conversation,|InputScopeNameValue *Default, Url, Number, TelephoneNumber, Text, Chat, EmailNameOrAddress|
+|StackPanel|StackOrientation|Orientation *|
 
 > [!IMPORTANT]
 > Éléments signalés par * ne sont pas complets dans la version préliminaire actuelle
-
 
 ## <a name="related-links"></a>Liens associés
 

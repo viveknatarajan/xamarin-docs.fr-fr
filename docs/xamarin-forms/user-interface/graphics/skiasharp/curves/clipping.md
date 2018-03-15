@@ -8,11 +8,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: bb99984f93f494cfb5ad3d37ccb25f0b91d0b489
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e84bce5d4280ded801ed58999a2570d3c6bd327e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>Découpage avec des chemins d’accès et les régions
 
@@ -267,7 +267,7 @@ Toutefois, les surcharges de `ClipPath` et `ClipRect` avec `SKRegionOperation` p
 
 Vous pouvez toujours utiliser le `SKRegionOperation` énumération mais requiert que vous définissez une zone de découpage en termes d’un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) objet.
 
-Nouvellement créé `SKRegion` objet décrit une zone vide. En règle générale le premier appel de l’objet est [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) afin que la région de décrire une zone rectangulaire. Le paramètre `SetRect` est un une `SKRectI` valeur & #x 2014 ; la valeur du rectangle avec les propriétés de l’entier. Vous pouvez ensuite appeler [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) avec un `SKPath` objet. Cette opération crée une région qui est identique à l’intérieur du chemin d’accès, mais attachée à la région rectangulaire initiale.
+Nouvellement créé `SKRegion` objet décrit une zone vide. En règle générale le premier appel de l’objet est [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) afin que la région de décrire une zone rectangulaire. Le paramètre `SetRect` est un une `SKRectI` valeur &mdash; la valeur du rectangle avec les propriétés de l’entier. Vous pouvez ensuite appeler [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) avec un `SKPath` objet. Cette opération crée une région qui est identique à l’intérieur du chemin d’accès, mais attachée à la région rectangulaire initiale.
 
 Le `SKRegionOperation` énumération uniquement intervient lorsque vous appelez une de la [ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/) des surcharges de méthode, telles que celle-ci :
 

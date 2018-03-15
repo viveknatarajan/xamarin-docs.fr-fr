@@ -7,11 +7,11 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e1d246ea65e88bde07c3d527c18b7850aa09e08b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Résumé du chapitre 1. Comment convient-elle Xamarin.Forms ?
 
@@ -21,7 +21,7 @@ Une des tâches de programmation plus mauvaises consiste à porter un code base 
 
 Ce problème est courant lorsque vous ciblez les plateformes mobiles. Actuellement, il existe deux principales plateformes mobiles, la famille Apple de l’iPhone et iPad exécutant le système d’exploitation iOS et le système d’exploitation Android qui s’exécute sur une gamme de téléphones et tablettes. Une autre plateforme significative est plateforme Windows universelle (UWP de Microsoft), ce qui permet à un programme unique cibler Windows 10 et Windows 10 Mobile.
 
-Un fournisseur de logiciels qui souhaite cibler ces trois plateformes doit faire face à des paradigmes de l’interface utilisateur différentes, les trois différents environnements de développement, les trois interfaces de programmation différents, et & #x 2014 ; peut-être la plupart arriver & #x 2014 ; trois langages de programmation différents : Objective-C pour l’iPhone et iPad, Java pour Android et c# pour Windows.
+Un fournisseur de logiciels qui souhaite cibler ces trois plateformes doit faire face à des paradigmes de l’interface utilisateur différentes, les trois différents environnements de développement, les trois interfaces de programmation différents, et&mdash;peut-être plus arriver&mdash; trois langages de programmation différents : Objective-C pour l’iPhone et iPad, Java pour Android et c# pour Windows.
 
 ## <a name="the-c-and-net-solution"></a>La solution c# et .NET
 

@@ -8,11 +8,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 7d50e5a33020de822f96a8bf2f713a8c5b9d3020
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="svg-path-data"></a>Données de chemin d’accès SVG
 
@@ -423,7 +423,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Quelque chose de spécial est effectuée avec l’aiguille, toutefois. Étant donné que l’horloge est mise à jour toutes les 16 millisecondes, le `Millisecond` propriété de la `DateTime` valeur peut potentiellement être utilisée pour animer un balayage ensuite manuellement au lieu d’un objet qui se déplace dans sauts discrets à partir de la seconde à la seconde. Mais ce code n’autorise pas le déplacement à être lisse. En revanche, il utilise le Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) et [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) accélération des fonctions pour un autre type de déplacement de l’animation. Ces fonctions d’accélération provoquent l’aiguille déplacer d’une manière plus rapide & les #x 2014 ; extraire un peu avant son déplacement, puis légèrement investissements sa destination, un effet qui malheureusement ne peut pas être reproduit dans ces captures d’écran statiques :
+Quelque chose de spécial est effectuée avec l’aiguille, toutefois. Étant donné que l’horloge est mise à jour toutes les 16 millisecondes, le `Millisecond` propriété de la `DateTime` valeur peut potentiellement être utilisée pour animer un balayage ensuite manuellement au lieu d’un objet qui se déplace dans sauts discrets à partir de la seconde à la seconde. Mais ce code n’autorise pas le déplacement à être lisse. En revanche, il utilise le Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) et [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) accélération des fonctions pour un autre type de déplacement de l’animation. Ces fonctions d’accélération provoquent l’aiguille déplacer de manière plus rapide &mdash; extraire un peu avant son déplacement, puis légèrement investissements sa destination, un effet qui malheureusement ne peut pas être reproduit dans ces captures d’écran statiques :
 
 [![](path-data-images/prettyanalogclock-small.png "Capture d’écran de triple de la page de l’horloge analogique assez")](path-data-images/prettyanalogclock-large.png#lightbox "Triple capture d’écran de la page de l’horloge analogique assez")
 

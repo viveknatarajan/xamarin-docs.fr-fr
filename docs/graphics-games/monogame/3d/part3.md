@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 861d47d001c10c14a0294536c6122cafb33a93ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e930004a91133f391f68221473f212b7caaf1b07
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="3d-coordinates-in-monogame"></a>Coordonnées 3D dans MonoGame
 
@@ -47,7 +47,7 @@ Cette procédure pas à pas se concentre sur le déplacement d’objets dans l�
 
 Avant de commencer le déplacement de notre robot autour, nous allons créer un `Robot` classe pour contenir la logique de déplacement et de dessin. Chez les développeurs de faire référence à cette encapsulation de logique et les données comme un *entité*.
 
-Ajouter un nouveau fichier de classe vide le **MonoGame3D** bibliothèque de classes portables (pas le ModelAndVerts.Android spécifique à la plateforme). Nom informatique ** Robot ** et cliquez sur **nouveau**:
+Ajouter un nouveau fichier de classe vide le **MonoGame3D** bibliothèque de classes portables (pas le ModelAndVerts.Android spécifique à la plateforme). Nommez-le **Robot** et cliquez sur **nouveau**:
 
 ![](part3-images/image3.png "Nommez-le Robot et cliquez sur Nouveau")
 

@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Trois Types de courbes Bézier
 
@@ -20,7 +20,7 @@ _Découvrir comment utiliser SkiaSharp pour restituer des courbes de Bézier cub
 
 La courbe de Bézier est nommée d’après la Pierre Bézier (1910 : 1999), un ingénieur Français de la société automobile Renault, ce qui a utilisé la courbe pour la conception assisté par ordinateur de corps de la voiture.
 
-Courbes Bézier sont connus pour être particulièrement bien adapté à la conception interactive : ils sont bien au comportement médiocre & #x 2014 ; en d’autres termes, il n’existe pas de singularités qui provoquent la courbe infinie ou lourde & #x 2014 ; et ils sont généralement esthétiquement. Contours de caractère des polices basées sur l’ordinateur sont généralement définies avec les courbes Bézier :
+Courbes Bézier sont connus pour être particulièrement bien adapté à la conception interactive : ils sont correct &mdash; en d’autres termes, il n’existe pas de singularités qui provoquent la courbe infinie ou lourde &mdash; et ils sont généralement esthétiquement . Contours de caractère des polices basées sur l’ordinateur sont généralement définies avec les courbes Bézier :
 
 ![](beziers-images/beziersample.png "Une courbe de Bézier exemple")
 
@@ -411,7 +411,7 @@ Toutefois, la forme d’une courbe de Bézier quadratique n’est pas elliptique
 
 ## <a name="the-conic-bzier-curve"></a>La courbe de Bézier conique
 
-La courbe de Bézier conique & #x 2014 ; également connu sous la courbe de Bézier quadratique rationnelle & #x 2014 ; est un ajout relativement récent de la famille des courbes Bézier. Comme la courbe de Bézier quadratique, la courbe de Bézier quadratique rationnelle implique un point de départ, un point de terminaison et un point de contrôle. Mais la courbe de Bézier quadratique rationnelle nécessite également un *poids* valeur. Il est appelé un *rationnelle* quadratique, car les formules paramétriques impliquent des rapports.
+La courbe de Bézier conique &mdash; également connu sous la courbe Bézier quadratique rationnelle &mdash; est un ajout relativement récent de la famille des courbes Bézier. Comme la courbe de Bézier quadratique, la courbe de Bézier quadratique rationnelle implique un point de départ, un point de terminaison et un point de contrôle. Mais la courbe de Bézier quadratique rationnelle nécessite également un *poids* valeur. Il est appelé un *rationnelle* quadratique, car les formules paramétriques impliquent des rapports.
 
 Les équations paramétriques pour X et Y sont des rapports qui partagent le même dénominateur. Voici l’équation pour le dénominateur de *t* allant de 0 à 1 et une valeur de poids de *w*:
 
@@ -425,7 +425,7 @@ x(t) = ((1 – t) ²x₀ + 2wt (1 – t) x₁ + t²x₂)) ÷ Ät
 
 y(t) = ((1 – t) ²y₀ + 2wt (1 – t) y₁ + t²y₂)) ÷ Ät
 
-Des courbes Bézier quadratiques rationnelles sont également appelées *conics* , car ils peuvent représenter exactement les segments de toute la section de conique & #x 2014 ; hyperboles, paraboles ou, ellipses et des cercles.
+Des courbes Bézier quadratiques rationnelles sont également appelées *conics* , car ils peuvent représenter exactement les segments de toute section conique &mdash; hyperboles, paraboles ou, ellipses et des cercles.
 
 Pour ajouter une courbe de Bézier rationnelle à un chemin d’accès, utilisez le [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) méthode ou la [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) surcharge avec distinct `x` et `y` coordonnées :
 

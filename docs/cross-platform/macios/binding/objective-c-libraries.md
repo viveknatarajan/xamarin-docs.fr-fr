@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: d1c4c46b62b95d70dd2832c96ffd2686163990a5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f0e8dabc47352213d18d079ee9f8abb3e557b868
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="binding-objective-c-libraries"></a>Bibliothèques de liaison Objective-C
 
@@ -1514,6 +1514,6 @@ class Demo {
 
 Nous nécessitaient copie le protocole pour chaque implémentation, mais dans ce cas maintenant nous pouvons ont le `MKShape` classe hérite de la `MKOverlay` protocole et il génère toutes les méthodes requises automatiquement.
 
-### <a name="related-links"></a>Liens connexes
+## <a name="related-links"></a>Liens connexes
 
 - [Exemple de liaison](https://developer.xamarin.com/samples/BindingSample/)

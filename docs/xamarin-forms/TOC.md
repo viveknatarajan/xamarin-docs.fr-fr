@@ -266,7 +266,7 @@
 #### [Pourquoi le concepteur Visual Studio XAML ne fonctionne-t-il pas pour les fichiers XAML de Xamarin.Forms ?](troubleshooting/questions/forms-xaml-designer.md)
 #### [Erreur de génération Android : échec inattendu de la tâche « LinkAssemblies »](troubleshooting/questions/android-linkassemblies-error.md)
 #### [Pourquoi mon projet Android Xamarin.Forms.Maps échoue-t-il avec COMPILETODALVIK : ERREUR INATTENDUE DE NIVEAU SUPÉRIEUR ?](troubleshooting/questions/maps-compiletodalvik-error.md)
-## [Notes de publication](https://developer.xamarin.com/releases/mac/)
+## [Notes de publication](https://developer.xamarin.com/releases/xamarin-forms/)
 ## [Exemples](samples/index.yml)
 ## [Création d’applications mobiles avec Xamarin.Forms](creating-mobile-apps-xamarin-forms/index.md)
 ## [Livre électronique des modèles d’application d’entreprise](enterprise-application-patterns/index.md)

@@ -6,12 +6,12 @@ ms.assetid: 762572F0-173A-D994-0510-8F36BEF3D487
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 3d9c747cdf8e43f33b9310ac1156550066b400eb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 5cf5bd38612f0f763e30456b0dd42198a3c0ff06
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="default-resources"></a>Ressources par défaut
 
@@ -31,7 +31,7 @@ Vous trouverez ci-dessous une liste complète des types de ressources :
 -  **chez** &ndash; fichiers XML qui décrivent *interpolation* animations. Interpolation animations sont une série d’instructions d’animation pour effectuer des transformations sur le contenu d’une rotation d’objet, ou par exemple, afficher une image ou augmenter la taille de texte. Interpolation animations sont limitées pour afficher uniquement les objets.
 
 -  **couleur** &ndash; fichiers XML qui décrivent une liste de couleurs d’état. Pour comprendre les listes d’état de couleur, envisagez un widget de l’interface utilisateur tel qu’un bouton.
-   Il peut être ont des états différents comme activé ou désactivé, et le bouton peut changer de couleur pour chaque modification de l’état. La liste est exprimée dans une liste d’état.
+   Elle peut avoir différents états comme activé ou désactivé, et le bouton peut changer de couleur pour chaque modification de l’état. La liste est exprimée dans une liste d’état.
 
 -  **drawable** &ndash; Drawable ressources sont un concept général pour les graphiques qui peuvent être compilés dans l’application et ensuite accessibles par les appels d’API ou référencés par d’autres ressources XML.
    Quelques exemples de drawables sont des fichiers bitmap (.png, .gif, .jpg), les bitmaps redimensionnables spéciales appelés [correctifs de neuf](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch), état énumère les formes génériques définis dans XML, etc.,.

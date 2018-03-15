@@ -7,11 +7,11 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 86ae56fc2baac3eab0fbf375c5f67f7b2327721a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0ac316bc2cef04a80958c047427845dbdcc4137f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Résumé du chapitre 20. E/s asynchrones et fichier
 
@@ -65,7 +65,7 @@ En règle générale, le .NET [ `System.IO` ](https://developer.xamarin.com/api/
 
 ### <a name="good-news-and-bad-news"></a>Une bonne et mauvaise nouvelle
 
-Toutes les plateformes prises en charge par le stockage local d’application prise en charge Xamarin.Forms & #x 2014 ; stockage qui est privé pour l’application.
+Toutes les plateformes prises en charge par le stockage local d’application prise en charge Xamarin.Forms &mdash; stockage qui est privé pour l’application.
 
 Les bibliothèques Xamarin.iOS et Xamarin.Android comprennent une version de .NET Xamarin a expressément adaptées à ces deux plateformes. Cela comprend les classes à partir de `System.IO` que vous pouvez utiliser pour effectuer d’e/s de fichier avec un stockage local d’application dans ces deux plateformes.
 
@@ -117,7 +117,7 @@ Le [ **TextFileAsync** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ### <a name="keeping-it-in-the-background"></a>Conserver en arrière-plan
 
-Méthodes dans les bibliothèques qui effectuent des appels à plusieurs méthodes asynchrones & #x 2014 ; comme le `WriteFileAsync` et `ReadFileASync` méthodes dans le Windows Runtime [ `FileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) classe & #x 2014 ; possible un peu plus efficace à l’aide de la [ `ConfigureAwait` ](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) méthode Évitez de basculer vers le thread d’interface utilisateur.
+Méthodes dans les bibliothèques qui effectuent des appels à plusieurs méthodes asynchrones &mdash; tels que le `WriteFileAsync` et `ReadFileASync` méthodes dans le Windows Runtime [ `FileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) classe &mdash; peut être effectuée quelque peu plus efficace à l’aide de la [ `ConfigureAwait` ](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) méthode afin d’éviter le basculement vers le thread d’interface utilisateur.
 
 ### <a name="dont-block-the-ui-thread"></a>Ne pas bloquer le thread d’interface utilisateur !
 

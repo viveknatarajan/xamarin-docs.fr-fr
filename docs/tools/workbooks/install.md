@@ -1,43 +1,37 @@
 ---
-title: Installation et configuration requise
+title: Configuration requise et Installation de classeurs
+description: "Comment télécharger, installer et utiliser les classeurs de Xamarin."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: abc9f9402b55a11e313b9938f07f37e5329b55b6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: abd6ac7d4bce5a180db087488b32c878ed0a416b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="installation-and-requirements"></a>Installation et configuration requise
-
-<script> var inspectorOnLoad = fonction () {var primaryTextBase = « Xamarin classeurs » ; var secondaryTextBase = « ou télécharger pour » ; var inspectorDownloadUrlMac = « https://dl.xamarin.com/interactive/XamarinInteractive.pkg » ; var inspectorDownloadUrlWin = » https://DL.xamarin.com/interactive/XamarinInteractive.msi » ;
-
-  var aPrimary = document.getElementById("inspector-download-primary"); var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary ; var aWin = aSecondary ; var macTextBase = primaryTextBase ; var winTextBase = secondaryTextBase ;
-
-  if (/win/i.test(navigator.platform.toLowerCase())) { aMac = aSecondary; aWin = aPrimary; macTextBase = secondaryTextBase; winTextBase = primaryTextBase; }
-
-  aMac.href = inspectorDownloadUrlMac ; aMac.text = macTextBase + « Mac » ; aWin.href = inspectorDownloadUrlWin ; aWin.text = winTextBase + « Windows » ; };
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# <a name="workbooks-installation-and-requirements"></a>Configuration requise et Installation de classeurs
 
 <a name="install" />
 
 ## <a name="download-and-install"></a>Téléchargez et installez
 
-<ol>
-  <li>Vérifiez le <a href="#Requirements"> exigences</a> ci-dessous.</li>
-  <li>Téléchargez et installez <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin des classeurs pour Mac</a> (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">ou téléchargement pour Windows</a>).
-  </li>
-  <li>Démarrer <a href="~/tools/workbooks/workbook.md"> manipulé</a> avec des classeurs ou essayer la <a href="https://developer.xamarin.com/workbooks/">exemples</a>.
-    </li>
-</ol>
+# <a name="windowstabvswin"></a>[Fenêtres](#tab/vswin)
+
+1. Vérifiez le [exigences](#requirements) ci-dessous.
+2. Téléchargez et installez [Xamarin classeurs pour Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+3. Démarrer [manipulé](~/tools/workbooks/workbook.md) avec des classeurs ou essayer la [exemples](https://developer.xamarin.com/workbooks)
+
+# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+
+1. Vérifiez le [exigences](#Requirements) ci-dessous.
+2. Téléchargez et installez [Xamarin des classeurs pour Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+3. Démarrer [manipulé](~/tools/workbooks/workbook.md) avec des classeurs ou essayer la [exemples](https://developer.xamarin.com/workbooks)
+
+-----
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -48,52 +42,15 @@ document.addEventListener("DOMContentLoaded", inspectorOnLoad);
 
 #### <a name="supported-app-platforms"></a>Plateformes d’applications pris en charge
 
-<table>
-<thead>
-  <tr>
-    <th>Plateforme d’application</th>
-    <th>Prise en charge du système d’exploitation</th>
-    <th>Notes</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac (unifié)</td>
-    <td>Prise en charge uniquement sur Mac</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS (unifié)</td>
-    <td>Prise en charge sur Mac et Windows</td>
-    <td>
-      <ul>
-        <li>Xamarin.iOS 11.0 et Xcode 9.0 ou version ultérieure doivent être installé sur le Mac.</li>
-        <li>IOS classeurs en cours d’exécution sur Windows requiert un hôte de build Mac exécutant tous les éléments ci-dessus et le <a href="~/tools/ios-simulator.md">exécutée à distance iOS Simulator</a> installé sur Windows.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>Prise en charge sur Mac et Windows</td>
-    <td>Doit utiliser émulateur Google, Visual Studio ou Xamarin Android, avec un appareil virtuel > = 5.0</td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>Prise en charge uniquement sur Windows</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>Console (.NET Framework)</td>
-    <td>Prise en charge sur Mac et Windows</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>Console (.NET Core)</td>
-    <td>Prise en charge sur Mac et Windows</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|Plateforme d’application|Prise en charge du système d’exploitation|Notes|
+|--- |--- |--- |
+|Mac (unifié)|Prise en charge uniquement sur Mac|
+|iOS (unifié)|Prise en charge sur Mac et Windows|Xamarin.iOS 11.0 et Xcode 9.0 ou version ultérieure doivent être installé sur le Mac. IOS classeurs en cours d’exécution sur Windows requiert un hôte de build Mac exécutant tous les éléments ci-dessus et le [exécutée à distance iOS Simulator](~/tools/ios-simulator.md) installé sur Windows.|
+|Android|Prise en charge sur Mac et Windows|Doit utiliser émulateur Google, Visual Studio ou Xamarin Android, avec un appareil virtuel > = 5.0|
+|WPF|Prise en charge uniquement sur Windows|
+|Console (.NET Framework)|Prise en charge sur Mac et Windows|
+|Console (.NET Core)|Prise en charge sur Mac et Windows|
+
 
 ## <a name="reporting-bugs"></a>Signalement des bogues
 
@@ -108,7 +65,7 @@ Attachez toujours les fichiers journaux du client classeurs :
 
 1.4.x offre également la possibilité de sélectionner le fichier journal dans le Finder (macOS) ou de l’Explorateur (Windows) directement à partir du menu principal :
 
-- **Fichier d’aide → révéler journal**
+- **Aide > Afficher le fichier journal**
 
 #### <a name="log-paths-for-workbooks-13-and-earlier"></a>Journal des chemins d’accès pour les classeurs 1.3 et versions antérieures :
 
@@ -121,23 +78,23 @@ Il est très utile de connaître les détails sur votre système d’exploitatio
 
 Dans le menu principal dans les classeurs :
 
-* **Les informations de Version copie →**
+* **Aide > Copier les informations de Version**
 
 #### <a name="instructions-for-workbooks-13-and-earlier"></a>Instructions pour les classeurs 1.3 et versions antérieures :
 
 Visual Studio pour Mac
 
-- **Visual Studio → sur les informations de copie de Visual Studio → Afficher détails →**
+- **Visual Studio > à propos de Visual Studio > Afficher les détails > Copier les informations**
 - Collez dans le rapport de bogue
 
 Visual Studio
 
-- **Aide → sur Visual Studio → copier les informations**
+- **Aide > à propos de Visual Studio > Copier les informations**
 - Faites-nous savoir votre version de système d’exploitation et que vous exécutez Windows 32 bits ou 64 bits.
 
 ### <a name="samples"></a>Exemples
 
-Si vous pouvez attacher ou un lien vers le `.workbooks` fichier que vous rencontrez des problèmes, et qui peut aider à résoudre le bogue plus rapidement.
+Si vous pouvez attacher ou un lien vers le **.workbooks** fichier que vous rencontrez des problèmes, et qui peut aider à résoudre le bogue plus rapidement.
 
 ### <a name="devices"></a>Appareils
 
@@ -148,7 +105,7 @@ Si vous rencontrez des problèmes de connexion de votre iOS ou un classeur Andro
 - Android : Vérifiez que vous utilisez x86 émulateur
 - Android : Quelle plate-forme émulateur utilisez-vous ? Émulateur Google ?
   Émulateur Android de Visual Studio ? Xamarin Android Player ?
-- iOS sur Windows : version du simulateur iOS à distance de Xamarin vous disposez (Vérifiez `Add/Remove Programs` dans `Control Panel`) ?
+- iOS sur Windows : version du simulateur iOS à distance de Xamarin vous disposez (Vérifiez **Ajout/Suppression de programmes** dans **le panneau de configuration**) ?
 - iOS sur Windows : Veuillez également fournir les informations de Version de plateforme pour votre hôte de build Mac
 - L’appareil a-t-il la connectivité de réseau (vérification via un navigateur web)
 
@@ -168,7 +125,7 @@ Si vous avez Visual Studio 2017, ouvrez **le programme d’installation de Visua
 
 Si vous avez installé les classeurs & Inspecteur vous-même avec un programme d’installation téléchargé, elle devra être désinstallées via les **applications & fonctionnalités** page des paramètres système sur Windows 10 ou via **ajouter/supprimer des programmes**dans le panneau de contrôle des versions plus anciennes de Windows.
 
-> **Démarrer → Paramètres → système → applications et fonctionnalités**
+> **Démarrer > Paramètres > système > applications et fonctionnalités**
 
 ![](install-images/windows-remove.png "Classeurs de Xamarin et comme indiqué dans l’inspecteur &quot;applications &amp; fonctionnalités&quot;")
 
@@ -197,7 +154,7 @@ Pour les versions antérieures, vous devez supprimer manuellement les éléments
 
 ## <a name="downgrading"></a>La rétrogradation
 
-L’identificateur de lot pour `/Applications/Xamarin Workbooks.app` a été remplacée par `com.xamarin.Inspector` à `com.xamarin.Workbooks` dans la version 1.4 pour faciliter une future fractionnement de programmes d’installation de Xamarin classeurs & Inspecteur.
+L’identificateur de lot pour **/Applications/Xamarin Workbooks.app** a été remplacée par `com.xamarin.Inspector` à `com.xamarin.Workbooks` dans la version 1.4 pour faciliter une future fractionnement de programmes d’installation de Xamarin classeurs & Inspecteur.
 
 En raison d’un bogue dans les programmes d’installation plus anciens, il n’est pas possible de rétrograder les versions 1.4 ou ultérieure à l’aide de la 1.3.2 ou programmes d’installation plus anciens.
 

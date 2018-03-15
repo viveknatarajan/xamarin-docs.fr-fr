@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a37773b666e015277d2fecc103066e82b6f7f108
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ec91a7c100f294437bb1498fcd56a35f5b19c399
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="navigation"></a>Navigation
 
@@ -51,36 +51,13 @@ public interface INavigationService
 
 Cette interface spécifie qu’une classe d’implémentation doit fournir les méthodes suivantes :
 
-<table>
-<thead>
-<tr class="header">
-<th>Méthode</th>
-<th>Objectif</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>InitializeAsync</code></td>
-<td>Effectue la navigation vers un des deux pages lorsque l’application est lancée.</td>
-</tr>
-<tr class="even">
-<td><code>NavigateToAsync<T></code></td>
-<td>Effectue la navigation hiérarchique à une page spécifiée.</td>
-</tr>
-<tr class="odd">
-<td><code>NavigateToAsync<T>(parameter)</code></td>
-<td>Effectue la navigation hiérarchique à une page spécifiée, en passant un paramètre.</td>
-</tr>
-<tr class="even">
-<td><code>RemoveLastFromBackStackAsync</code></td>
-<td>Supprime la page précédente de la pile de navigation.</td>
-</tr>
-<tr class="odd">
-<td><code>RemoveBackStackAsync</code></td>
-<td>Supprime toutes les pages précédentes de la pile de navigation.</td>
-</tr>
-</tbody>
-</table>
+|Méthode|Objectif|
+|--- |--- |
+|`InitializeAsync`|Effectue la navigation vers un des deux pages lorsque l’application est lancée.|
+|`NavigateToAsync`|Effectue la navigation hiérarchique à une page spécifiée.|
+|`NavigateToAsync(parameter)`|Effectue la navigation hiérarchique à une page spécifiée, en passant un paramètre.|
+|`RemoveLastFromBackStackAsync`|Supprime la page précédente de la pile de navigation.|
+|`RemoveBackStackAsync`|Supprime toutes les pages précédentes de la pile de navigation.|
 
 En outre, le `INavigationService` interface spécifie qu’une classe d’implémentation doit fournir un `PreviousPageViewModel` propriété. Cette propriété retourne le type de modèle d’affichage associé à la page précédente dans la pile de navigation.
 

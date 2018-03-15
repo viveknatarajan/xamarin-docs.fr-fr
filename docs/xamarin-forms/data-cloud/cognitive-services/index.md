@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 650f8dceebb088b3601c21c1f5373fc4ae8c76dc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c309fb6936296dc181e499c91770ab8891121e9c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Ajout de l’Intelligence avec les Services cognitifs
 
@@ -52,51 +52,20 @@ Le `RateAppPage` permet à l’utilisateur de prendre une photo de leur face, es
 
 Le projet de bibliothèque de classes Portable (PCL) pour l’exemple d’application se compose de cinq dossiers principaux :
 
-<table>
-    <thead>
-        <tr><td><strong>Folder</strong></td><td><strong>Purpose</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Modèles</strong></td>
-            <td>Contient les classes de modèle de données pour l’application. Cela inclut la <code>TodoItem</code> classe, qui modélise un seul élément de données utilisées par l’application. Le dossier comprend également des classes utilisées pour les réponses JSON de modèle retournées à partir de différentes API de Service cognitifs Microsoft.</td>
-        </tr>
-        <tr>
-            <td><strong>Repositories</strong></td>
-                        <td>Contient le <code>ITodoItemRepository</code> interface et <code>TodoItemRepository</code> classe qui sont utilisés pour effectuer des opérations de base de données.</td>
-        </tr>
-        <tr>
-            <td><strong>Services</strong></td>
-                        <td>Contient les interfaces et les classes qui permettent d’accéder aux différentes Microsoft cognitifs API de Service, ainsi que les interfaces qui sont utilisées par la <code>DependencyService</code> classe pour localiser les classes qui implémentent les interfaces dans les projets de plateforme.</td>
-        </tr>
-        <tr>
-            <td><strong>Utils</strong></td>
-            <td>Contient le <code>Timer</code> (classe), qui est utilisée par la <code>AuthenticationService</code> classe pour renouveler un jeton d’accès JWT toutes les minutes 9.</td>
-        </tr>
-        <tr>
-            <td><strong>Vues</strong></td>
-            <td>Contient les pages de l’application.</td>
-        </tr>
-    </tbody>
-</table>
+|Dossier|Objectif|
+|--- |--- |
+|Modèles|Contient les classes de modèle de données pour l’application. Cela inclut la `TodoItem` classe, qui modélise un seul élément de données utilisées par l’application. Le dossier comprend également des classes utilisées pour les réponses JSON de modèle retournées à partir de différentes API de Service cognitifs Microsoft.|
+|Référentiels|Contient le `ITodoItemRepository` interface et `TodoItemRepository` classe qui sont utilisés pour effectuer des opérations de base de données.|
+|Services|Contient les interfaces et les classes qui permettent d’accéder aux différentes Microsoft cognitifs API de Service, ainsi que les interfaces qui sont utilisées par la `DependencyService` classe pour localiser les classes qui implémentent les interfaces dans les projets de plateforme.|
+|Utils|Contient le `Timer` (classe), qui est utilisée par la `AuthenticationService` classe pour renouveler un jeton d’accès JWT toutes les minutes 9.|
+|Affichages|Contient les pages de l’application.|
 
 Projet de bibliothèque PCL contient également certains fichiers importants :
 
-<table>
-    <thead>
-      <tr><td><strong>Fichier</strong></td><td><strong>Purpose</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td>Le <code>Constants</code> (classe), qui spécifie les clés de l’API et les points de terminaison pour l’API Service cognitifs Microsoft qui sont appelées. Les constantes de clé API nécessitent la mise à jour pour accéder aux API de Service cognitifs différents.
-        </tr>
-        <tr>
-          <td><strong>App.xaml.cs</strong></td>
-          <td>Le <code>App</code> classe est responsable de l’instanciation à la fois la première page qui sera affichée par l’application sur chaque plateforme, et la <code>TodoManager</code> classe qui est utilisée pour appeler des opérations de base de données.</td>
-        </tr>
-    </tbody>
-</table>
+|Fichier|Objectif|
+|--- |--- |
+|Constants.cs|Le `Constants` (classe), qui spécifie les clés de l’API et les points de terminaison pour l’API Service cognitifs Microsoft qui sont appelées. Les constantes de clé API nécessitent la mise à jour pour accéder aux API de Service cognitifs différents.|
+|App.xaml.cs|Le `App` classe est responsable de l’instanciation à la fois la première page qui sera affichée par l’application sur chaque plateforme, et la `TodoManager` classe qui est utilisée pour appeler des opérations de base de données.|
 
 ### <a name="nuget-packages"></a>Packages NuGet
 
