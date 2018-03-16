@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: ee98e19ce59b8a61040941d9851b8fbf965c3b17
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 Xamarin.Android 4.10 a introduit la prise en charge partielle de l’utilisation de `gdb` à l’aide de la cible MSBuild `_Gdb`. 
 
 > [!NOTE]
-> **Remarque :** La prise en charge de `gdb` requiert l’installation du kit de développement natif (NDK) Android.
+> La prise en charge de `gdb` nécessite l’installation d’Android NDK.
 
 Il y a trois manières d’utiliser `gdb` :
 
@@ -59,7 +59,7 @@ La cible `_Gdb` créera un répertoire `gdb-symbols` où elle copiera le contenu
 
 
 > [!NOTE]
-> **Remarque :** le contenu du répertoire `gdb-symbols` est joint à la cible Android vers laquelle vous avez déployé et ne sera pas automatiquement remplacé si vous modifiez la cible. (Considérez qu’il s’agit d’un bogue.) Si vous modifiez les appareils Android cibles, vous devrez supprimer manuellement ce répertoire.
+> Le contenu du répertoire `gdb-symbols` est lié à la cible Android sur laquelle vous avez déployé et ne sera pas automatiquement remplacé si vous changez la cible. (Considérez qu’il s’agit d’un bogue.) Si vous modifiez les appareils Android cibles, vous devrez supprimer manuellement ce répertoire.
 
 Pour finir, copiez la commande `gdb` générée et exécutez-la dans votre interpréteur de commandes :
 
