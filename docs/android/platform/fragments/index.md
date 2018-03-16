@@ -7,12 +7,12 @@ ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="fragments"></a>Fragments
 
@@ -53,9 +53,9 @@ Fragments sont disponibles dans le SDK Android, en commençant par le niveau de 
 
 [![En sélectionnant le niveau de l’API dans le Gestionnaire de kit de développement logiciel Android.](images/02.png)](images/02.png#lightbox)
 
-Les fragments sont disponibles dans Xamarin.Android 4.0 et versions ultérieures. Une application de Xamarin.Android doit cibler au moins le niveau API 11 (Android 3.0) ou une version ultérieure pour pouvoir utiliser des Fragments. Le Framework cible peut être défini dans les Options de projet, comme indiqué ci-dessous :
+Les fragments sont disponibles dans Xamarin.Android 4.0 et versions ultérieures. Une application de Xamarin.Android doit cibler au moins le niveau API 11 (Android 3.0) ou une version ultérieure pour pouvoir utiliser des Fragments. Le Framework cible peut être défini dans le projet de propriétés comme indiqué ci-dessous :
 
-[![Définition du niveau de l’API de l’infrastructure cible dans les Options de projet](images/03.png)](images/03.png#lightbox)
+[![Définition du niveau de l’API de l’infrastructure cible dans les Options de projet](images/03-sml.png)](images/03.png#lightbox)
 
 Il est possible d’utiliser des Fragments dans les versions antérieures d’Android à l’aide du Package de prise en charge Android et Xamarin.Android 4.2 ou version ultérieure. Comment effectuer cette opération est couvert plus en détail dans les documents de cette section.
 

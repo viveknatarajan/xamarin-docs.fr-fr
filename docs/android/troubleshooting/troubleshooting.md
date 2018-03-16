@@ -6,12 +6,12 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 145c8507ca5ebea6197fa8827b93f58fbc9bb078
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 015fff63c612c3acf29681b90c1e945c5e460034
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="troubleshooting-tips"></a>Conseils de dépannage
 
@@ -333,7 +333,7 @@ Si votre application nécessite la performance acceptable à virgule flottante (
 Il n’y a 2 téléchargements disponibles à partir de Google pour le Kit de développement logiciel Android pour Windows.
 Si vous choisissez le programme d’installation .exe, il écrit des clés de Registre qui indiquent à Xamarin.Android où il a été installé. Si vous choisissez le fichier .zip et décompressez vous-même, Xamarin.Android ne sait pas où rechercher le Kit de développement. Vous savez Xamarin.Android où le Kit de développement dans Visual Studio en accédant à **Outils > Options > Xamarin > Paramètres Android**:
 
-[![Emplacement du SDK Android dans Xamarin Android paramètres](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
+[![Emplacement du SDK Android dans Xamarin Android paramètres](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
 
 
 
@@ -728,7 +728,7 @@ Pour utiliser les C\# dynamique dans votre application ou une bibliothèque, vou
 
     -   Gardez à l’esprit que le code dynamique toujours les coûts. Si vous avez besoin d’un code efficace, envisagez d’utiliser ne pas de code dynamique.
 
--   Dans la première version préliminaire, ces assemblys ont été exclus, sauf si les types dans chaque assembly sont explicitement utilisés par le code d’application. Consultez les rubriques suivantes pour une solution de contournement : [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
+-   Dans la première version préliminaire, ces assemblys ont été exclus, sauf si les types dans chaque assembly sont explicitement utilisés par le code d’application. Consultez la rubrique suivante pour une solution de contournement : [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 
 
 ## <a name="projects-built-with-aotllvm-crash-on-x86-devices"></a>Les projets générés avec les pannes AOA + LLVM sur x86 périphériques

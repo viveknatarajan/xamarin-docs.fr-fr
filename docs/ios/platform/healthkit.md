@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 4f85f208c12561b6db9800d963e2d7bf32c2a4d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -67,7 +67,7 @@ Pour plus d’informations sur la configuration d’une application iOS, le [vos
 
 La création d’une liste explicite **ID d’application** et appropriées **profil de préparation** est effectuée au sein d’Apple [iOS Dev Center](https://developer.apple.com/devcenter/ios/index.action). 
 
-Votre actuel **ID d’application** sont répertoriés dans le [certificats, les identificateurs et les profils](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) section du centre de développement. Souvent, cette liste affiche **ID** les valeurs de `*`, qui indique que le **ID d’application*- **nom** peut être utilisé avec n’importe quel nombre de suffixes. Ces *Wildcard application IDs* ne peut pas être utilisé avec le Kit de contrôle d’intégrité.
+Votre actuel **ID d’application** sont répertoriés dans le [certificats, les identificateurs et les profils](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) section du centre de développement. Souvent, cette liste affiche **ID** les valeurs de `*`, qui indique que le **ID d’application** - **nom** peut être utilisé avec n’importe quel nombre de suffixes. Ces *Wildcard application IDs* ne peut pas être utilisé avec le Kit de contrôle d’intégrité.
  
 Pour créer un texte explicite **ID d’application**, cliquez sur le  **+**  bouton dans l’angle supérieur droit pour accéder à la **inscrire iOS ID d’application** page :
 
@@ -87,7 +87,7 @@ Cliquez sur **continuer** et professionnels via les autres écrans, vous permet 
 
 Cliquez sur **générer** et attend la création de votre profil. Téléchargez le fichier et double-cliquez dessus pour l’installer dans Xcode. Vous pouvez vérifier son installation sous **Xcode > Préférences > comptes > Afficher les détails...** Vous devez voir votre profil de configuration installés juste, et elle doit avoir l’icône pour le Kit de contrôle d’intégrité et d’autres services spéciaux dans son **droits** ligne :
 
-[![](healthkit-images/image05.png "Afficher le profil dans Xcode")](healthkit-images/image05.png#lightbox)
+[![](healthkit-images/image05.png "Affichage du profil dans Xcode")](healthkit-images/image05.png#lightbox)
 
 <a name="associating-appid" />
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 9b801af77eceaf94b0ede98b6af51d55d6029fe6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ddc16dc1faaf623098aad5bca340c15f943223ba
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Programme d’installation de Xamarin Player en direct
 
@@ -68,7 +68,7 @@ Xamarin Live Player nécessite :
 
   Si aucun périphérique n’est associé, un code QR s’affiche avec des instructions sur la façon d’associer un périphérique :
 
-    ![Une fenêtre de dispositif de paire](install-images/manage-empty-windows.png)
+  ![Une fenêtre de dispositif de paire](install-images/manage-empty-windows.png)
 
   Si l’appareil ne peut pas être contacté pour le pairage, une erreur peut apparaître.
 
@@ -111,11 +111,11 @@ Xamarin Live Player nécessite :
 
   Si aucun périphérique n’a été couplée, un code QR s’affiche avec des instructions sur la façon d’associer un périphérique :
 
-    ![Une fenêtre de dispositif de paire](install-images/manage-empty.png)
+  ![Une fenêtre de dispositif de paire](install-images/manage-empty.png)
 
   Si l’appareil ne peut pas être contacté pour le pairage, une erreur s’affiche :
 
-    ![Impossible de se connecter à un message d’erreur de périphérique](install-images/error-cannot-connect.png)
+  ![Impossible de se connecter à un message d’erreur de périphérique](install-images/error-cannot-connect.png)
 
 
 -----

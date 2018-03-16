@@ -6,38 +6,33 @@ ms.assetid: DACD0C14-5DDF-7BDE-6844-80550D301307
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 242adc94f04b3bda40238370ca924c1807a0c787
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 109c1e0f16d3a288160b64ec6ff833e5b31c4efd
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="supporting-pre-honeycomb-android-using-support-packages"></a>Prise en charge Android nid préalable à l’aide de Packages de prise en charge
 
 Le *Package de prise en charge Android* se compose de bibliothèques ce nouveau port certains de la nouvelle API &ndash; tels que des fragments &ndash; aux anciennes versions d’Android. Par conséquent, en ajoutant le Package de prise en charge Android, nous pouvons exécuter notre application sur les appareils Android 2.3, comme indiqué dans les écrans suivants :
 
-![Capture d’écran procédure pas à pas de fragments](supporting-pre-honeycomb-images/00.png)
-
-![Capture d’écran de détails de l’activité](supporting-pre-honeycomb-images/01.png)
-
+[![Les fragments de captures d’écran procédure pas à pas et détails de l’activité](supporting-pre-honeycomb-images/01-sml.png)](supporting-pre-honeycomb-images/01.png#lightbox)
 
 ## <a name="adding-the-support-package"></a>Ajout du Package de prise en charge
 
 Le Package de prise en charge Android n’est pas automatiquement ajouté à une application Xamarin.Android. Xamarin fournit le [package de bibliothèque de prise en charge Android v4 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) pour simplifier l’ajout des prise en charge des bibliothèques à une application Xamarin.Android.
 Pour inclure les packages de prise en charge dans votre application inclure de Xamarin.Android le [bibliothèque de prise en charge Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) composant dans votre projet Xamarin.Android, comme illustré dans la capture d’écran suivante :
 
-![Ajout du package v4 de bibliothèque de prise en charge Android](supporting-pre-honeycomb-images/02.png)
+[![Ajout du package v4 de bibliothèque de prise en charge Android](supporting-pre-honeycomb-images/02-sml.png)](supporting-pre-honeycomb-images/02.png#lightbox)
 
 Une fois que le package a été ajouté, modifier le framework cible pour Android 2.2 ou version ultérieure :
 
-![Capture d’écran de modification du niveau de l’API du Framework cible](supporting-pre-honeycomb-images/03.png)
+[![Capture d’écran de modification du niveau de l’API du Framework cible](supporting-pre-honeycomb-images/03-sml.png)](supporting-pre-honeycomb-images/03.png#lightbox)
 
 En outre, assurez-vous que la version Android minimale cible le même niveau d’API :
 
-![Capture d’écran de définition de la version minimale Android](supporting-pre-honeycomb-images/04.png)
-
-
+[![Capture d’écran de définition de la version minimale Android](supporting-pre-honeycomb-images/04-sml.png)](supporting-pre-honeycomb-images/04.png#lightbox)
 
 ### <a name="change-mainactivity-to-derive-from-fragmentactivity"></a>Modifier MainActivity dériver FragmentActivity
 

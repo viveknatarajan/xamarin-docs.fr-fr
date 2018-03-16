@@ -8,20 +8,20 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c4b2a103821bb18da4878cd37335faa899e910be
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="working-with-user-defaults"></a>Utilisation des valeurs par défaut de l’utilisateur
 
-_Cet article traite de travailler avec NSUserDefault pour enregistrer les paramètres par défaut dans un Xamarin iOS application ou Extension._
+_Cet article décrit l’utilisation NSUserDefault pour enregistrer les paramètres par défaut dans une application Xamarin.iOS ou une Extension._
 
 
-La `NSUserDefaults` classe offre un moyen pour iOS, applications et des Extensions pour interagir avec le système par défaut à l’échelle du système. À l’aide du système par défaut, l’utilisateur peut configurer un comportement d’une application ou de styles pour répondre à leurs préférences (basés sur la conception de l’application). Par exemple, pour présenter des données dans Visual Studio métrique mesures impériales ou sélectionner un thème de l’interface utilisateur donné.
+La `NSUserDefaults` classe offre un moyen pour iOS, applications et des Extensions pour interagir avec le système de valeurs par défaut à l’échelle du système. À l’aide du système par défaut, l’utilisateur peut configurer un comportement d’une application ou de styles pour répondre à leurs préférences (basés sur la conception de l’application). Par exemple, pour présenter des données dans Visual Studio métrique mesures impériales ou sélectionner un thème de l’interface utilisateur donné.
 
-Quand utiliser des groupes d’applications, `NSUserDefaults` fournit également un moyen de communication entre des applications (ou Extensions) dans un groupe donné.
+Lorsqu’il est utilisé avec les groupes d’applications, `NSUserDefaults` fournit également un moyen de communication entre des applications (ou Extensions) dans un groupe donné.
 
 <a name="About-User-Defaults" />
 
@@ -32,7 +32,7 @@ Comme indiqué précédemment, les valeurs par défaut de l’utilisateur (`NSUs
 Lorsque votre application s’exécute tout d’abord, `NSUserDefaults` lit les clés et valeurs à partir de la base de données de la valeur par défaut est de l’utilisateur de l’application et les met en cache dans la mémoire pour éviter l’ouverture et la lecture de la base de données chaque fois qu’une valeur est requise. 
 
 > [!IMPORTANT]
-> **Remarque**: Apple suggérer n’est plus que le développeur appelle la `Synchronize` méthode pour synchroniser le cache en mémoire avec la base de données directement. Au lieu de cela, elle est appelée automatiquement à intervalles réguliers pour synchroniser le cache en mémoire avec la base de données des valeurs par défaut d’un utilisateur.
+> **Remarque**: Apple n’est plus recommande que l’appel de développeur la `Synchronize` méthode pour synchroniser le cache en mémoire avec la base de données directement. Au lieu de cela, elle est appelée automatiquement à intervalles réguliers pour synchroniser le cache en mémoire avec la base de données des valeurs par défaut d’un utilisateur.
 
 La `NSUserDefaults` classe contient plusieurs méthodes pratiques pour lire et écrire des valeurs de préférence pour les types de données courants tels que : chaîne, entier, float, boolean et les URL. Autres types de données peuvent être archivées à l’aide de `NSData`, puis lues ou écrites dans la base de données utilisateur par défaut. Pour plus d’informations, consultez le site d’Apple [préférences et Guide de programmation de paramètres](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -46,7 +46,7 @@ L’Instance par défaut d’utilisateur partagé fournit l’accès à l’util
 - Domaine d’identificateur de lot de l’application.
 - Un `NSGlobalDomain` comprenant les valeurs par défaut partagés par toutes les applications.
 - Un domaine distinct pour chacune des langues par défaut de l’utilisateur.
-- Un `NSRegistationDomain` avec un ensemble de valeurs par défaut temporaires qui peut être modifié par l’application pour garantir la recherche est toujours réussie.
+- Un `NSRegistrationDomain` avec un ensemble de valeurs par défaut temporaires qui peut être modifié par l’application pour garantir la recherche est toujours réussie.
 
 Pour accéder à l’Instance par défaut d’utilisateur partagé, utilisez le code suivant :
 
@@ -59,11 +59,11 @@ var plist = NSUserDefaults.StandardUserDefaults;
 
 ## <a name="accessing-an-app-group-nsuserdefaults-instance"></a>L’accès à une Instance de NSUserDefaults de groupe de l’application
 
-Comme indiqué précédemment, à l’aide de groupes d’applications, `NSUserDefaults` peut être utilisée pour communiquer entre applications (ou Extensions) dans un groupe donné. Tout d’abord, vous devrez vous assurer que le groupe d’application et les ID d’application requis ont été correctement configurés dans le **certificats, les identificateurs et les profils** section [iOS Dev Center](https://developer.apple.com/devcenter/ios/) et ont été installés sur dans l’environnement de développement.
+Comme indiqué précédemment, à l’aide de groupes d’applications, `NSUserDefaults` peut être utilisée pour communiquer entre applications (ou Extensions) dans un groupe donné. Tout d’abord, vous devrez vous assurer que le groupe d’application et les ID d’application requis ont été correctement configurés dans le **certificats, les identificateurs et les profils** section [iOS Dev Center](https://developer.apple.com/devcenter/ios/) et ont été installés dans l’environnement de développement.
 
-Ensuite, devez vos projets d’application et/ou une Extension peut être l’ID d’application valides créé ci-dessus, qui le `Entitlements.plist` fichier contient les groupes d’application activé et spécifié et qu’elle obtient d’inclus dans le lot d’applications.
+Ensuite, vos projets d’application et/ou une Extension doivent prendre les ID d’application valide créé ci-dessus et le `Entitlements.plist` fichier doit être inclus dans le lot d’applications avec les groupes d’application activé et spécifié.
 
-Avec tout ceci en place, le groupe d’application partagé utilisateur par défaut sont accessibles en utilisant le code suivant :
+Avec tout ceci en place, le partagé application groupe utilisateur par défaut sont accessibles en utilisant le code suivant :
 
 ```csharp
 // Get App Group User Defaults

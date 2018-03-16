@@ -6,12 +6,12 @@ ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 05443bb341b2355c9e7a72f46b70214fb169e598
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/15/2018
+ms.openlocfilehash: db277f20e63a59690ffaa8a8544ff9540578d3f5
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 
@@ -21,12 +21,12 @@ Xamarin.Android utilise de Mono [Simple générations garbage collector](http://
 -   Collections principales (collecte de génération 1 et les objets volumineux espacement segments). 
 
 > [!NOTE]
-> En l’absence d’une collection explicite via [GC. Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/) sont des collections *à la demande*, en fonction des allocations de tas. *Cela n’est pas un système de comptage de références*; objets *ne seront pas recueillies dès qu’il n’existe aucune référence en suspens*, ou lorsqu’une étendue s’est arrêté. Le garbage collector s’exécute lorsque le tas secondaire a suffisamment de mémoire pour les nouvelles allocations. S’il n’y a pas d’allocations, il ne fonctionnera pas.
+> En l’absence d’une collection explicite via [GC. Collect()](xref:System.GC.Collect) sont des collections *à la demande*, en fonction des allocations de tas. *Cela n’est pas un système de comptage de références*; objets *ne seront pas recueillies dès qu’il n’existe aucune référence en suspens*, ou lorsqu’une étendue s’est arrêté. Le garbage collector s’exécute lorsque le tas secondaire a suffisamment de mémoire pour les nouvelles allocations. S’il n’y a pas d’allocations, il ne fonctionnera pas.
 
 
-Collections secondaires sont bon marché et fréquentes et sont utilisées pour collecter les objets morts et récemment alloués. Collections secondaires sont exécutées après chaque Mo certains des objets alloués. Collections secondaires peuvent être effectuées manuellement en appelant [GC. Collecter (0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32/) 
+Collections secondaires sont bon marché et fréquentes et sont utilisées pour collecter les objets morts et récemment alloués. Collections secondaires sont exécutées après chaque Mo certains des objets alloués. Collections secondaires peuvent être effectuées manuellement en appelant [GC. Collecter (0)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 
 
-Principaux regroupements sont coûteux et moins fréquentes et sont utilisées pour récupérer tous les objets morts. Principaux regroupements sont effectuées une fois que la mémoire est épuisée pour la taille de segment de mémoire actuelle (avant le redimensionnement du tas). Collections principales peuvent être effectuées manuellement en appelant [GC. Collecter ()](https://developer.xamarin.com/api/member/System.GC.Collect/) ou en appelant [GC. Collecter (int)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32) avec l’argument [GC. MaxGeneration](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/). 
+Principaux regroupements sont coûteux et moins fréquentes et sont utilisées pour récupérer tous les objets morts. Principaux regroupements sont effectuées une fois que la mémoire est épuisée pour la taille de segment de mémoire actuelle (avant le redimensionnement du tas). Collections principales peuvent être effectuées manuellement en appelant [GC. Collecter ()](xref:System.GC.Collect) ou en appelant [GC. Collecter (int)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) avec l’argument [GC. MaxGeneration](xref:System.GC.MaxGeneration). 
 
 
 
@@ -34,7 +34,7 @@ Principaux regroupements sont coûteux et moins fréquentes et sont utilisées p
 
 Il existe trois catégories de types d’objets.
 
--   **Objets managés**: les types qui *pas* hériter [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) , par exemple [System.String](https://developer.xamarin.com/api/type/System.String/). 
+-   **Objets managés**: les types qui *pas* hériter [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) , par exemple [System.String](xref:System.String). 
     Ceux-ci sont collectés normalement par le garbage collector. 
 
 -   **Objets Java**: les types Java qui sont présents dans le runtime Android machine virtuelle, mais n’apparaissant pas à la machine virtuelle Mono. Ils sont ennuyeux et ne sont pas abordés plus en détail. Ceux-ci sont collectés normalement par le runtime Android machine virtuelle. 
@@ -71,7 +71,7 @@ Le résultat final est qu’une instance d’un objet homologue se trouvera tant
 
 Objets homologues sont logiquement présentes dans le runtime Android et la machine virtuelle Mono. Par exemple, un [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) instance homologue managé aura correspondante [android.app.Activity](http://developer.android.com/reference/android/app/Activity.html) instance Java de l’homologue framework. Tous les objets qui héritent de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) peut s’attendre à ont des représentations dans les deux machines virtuelles. 
 
-Tous les objets qui ont la représentation dans les deux ordinateurs virtuels aura des durées de vie qui sont étendues par rapport aux objets qui sont présents uniquement dans une seule machine virtuelle (comme un [ `System.Collections.Generic.List<int>` ](https://developer.xamarin.com/api/type/System.Collections.Generic.List%601/)). Appel de [GC. Collecter les](https://developer.xamarin.com/api/member/System.GC.Collect/) ne sont pas nécessairement collecter de ces objets, que le garbage collector Xamarin.Android a besoin pour s’assurer que l’objet n’est pas référencée par une machine virtuelle avant sa collecte. 
+Tous les objets qui ont la représentation dans les deux ordinateurs virtuels aura des durées de vie qui sont étendues par rapport aux objets qui sont présents uniquement dans une seule machine virtuelle (comme un [ `System.Collections.Generic.List<int>` ](xref:System.Collections.Generic.List%601)). Appel de [GC. Collecter les](xref:System.GC.Collect) ne sont pas nécessairement collecter de ces objets, que le garbage collector Xamarin.Android a besoin pour s’assurer que l’objet n’est pas référencée par une machine virtuelle avant sa collecte. 
 
 Pour réduire la durée de vie, [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/) doit être appelé. Cela manuellement « annulle « la connexion sur l’objet entre les deux machines virtuelles en libérant de la référence globale, ce qui permet les objets soient collectées plus rapidement. 
 
@@ -140,7 +140,7 @@ Le garbage collector a une vue complète des processus et peut ne pas exécuter 
 Par exemple, une instance d’un [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) type ou type dérivé est au moins de 20 octets (susceptibles de changer sans préavis, etc., etc..). 
 [Des Callable Wrappers managés](~/android/internals/architecture.md) n’ajoutez pas de membres d’instance supplémentaires, par conséquent, lorsque vous avez un [Android.Graphics.Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) instance qui fait référence à un objet blob de 10 Mo de mémoire, GC de Xamarin.Android ne sont pas informés qui &ndash; le catalogue global voient un objet de 20 octets et ne pourra pas déterminer qu’il est lié à Android objets alloués par le runtime qui reste à 10 Mo de mémoire actif. 
 
-Il est souvent nécessaire aider au garbage collector. Malheureusement, *GC. AddMemoryPressure()* et *dans le catalogue global. RemoveMemoryPressure()* ne sont pas pris en charge, par conséquent, si vous *savoir* vous vient de libérer un graphique de grand objet alloué par Java vous devrez appeler manuellement [GC. Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/) invite un catalogue global pour libérer la Java côté mémoire, ou vous pouvez supprimer de façon explicite *Java.Lang.Object* sous-classes, rompre le mappage entre le wrapper managé et l’instance Java. Par exemple, consultez [bogue 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
+Il est souvent nécessaire aider au garbage collector. Malheureusement, *GC. AddMemoryPressure()* et *dans le catalogue global. RemoveMemoryPressure()* ne sont pas pris en charge, par conséquent, si vous *savoir* vous vient de libérer un graphique de grand objet alloué par Java vous devrez appeler manuellement [GC. Collect()](xref:System.GC.Collect) invite un catalogue global pour libérer la Java côté mémoire, ou vous pouvez supprimer de façon explicite *Java.Lang.Object* sous-classes, rompre le mappage entre le wrapper managé et l’instance Java. Par exemple, consultez [bogue 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
 
 > [!NOTE]
@@ -314,7 +314,7 @@ class BetterActivity : Activity {
 
 ## <a name="minor-collections"></a>Collections secondaires
 
-Collections secondaires peuvent être effectuées manuellement en appelant [GC. Collect(0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32). Collections secondaires sont coûteuses (comparé aux collections principale), mais ont un coût fixe, donc vous ne souhaitez pas déclencher les trop souvent et doit avoir un temps de pause de quelques millisecondes. 
+Collections secondaires peuvent être effectuées manuellement en appelant [GC. Collect(0)](xref:System.GC.Collect). Collections secondaires sont coûteuses (comparé aux collections principale), mais ont un coût fixe, donc vous ne souhaitez pas déclencher les trop souvent et doit avoir un temps de pause de quelques millisecondes. 
 
 Si votre application dispose d’un « cycle d’utilisation » dans laquelle la même chose est effectuée plusieurs fois, il peut être recommandé d’effectuer manuellement une collection secondaire une fois le cycle de service terminée. Exemples de cycles de droit sont les suivantes : 
 
@@ -326,7 +326,7 @@ Si votre application dispose d’un « cycle d’utilisation » dans laquelle 
 
 ## <a name="major-collections"></a>Principales Collections
 
-Collections principales peuvent être effectuées manuellement en appelant [GC. Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/) ou `GC.Collect(GC.MaxGeneration)`. 
+Collections principales peuvent être effectuées manuellement en appelant [GC. Collect()](xref:System.GC.Collect) ou `GC.Collect(GC.MaxGeneration)`. 
 
 Ils doivent être effectuées rarement et peut-être un temps de pause d’une seconde sur un appareil Android-style lors de la collecte d’un segment de mémoire de 512 Mo. 
 

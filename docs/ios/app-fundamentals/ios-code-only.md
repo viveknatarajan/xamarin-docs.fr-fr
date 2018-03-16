@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Création d’Interfaces utilisateur d’iOS dans le Code
 
@@ -69,7 +69,7 @@ Le modèle de projet vide ajoute 4 fichiers au projet :
 ## <a name="ios-templates"></a>Modèles d’iOS
 
 
-Visual Studio pour Mac ne fournit pas d’un modèle vide. Tous les modèles sont fournis avec prise en charge de plan conceptuel, qui vous recommande d’Apple comme moyen principal pour créer une interface utilisateur. Toutefois, il est possible de créer votre interface utilisateur dans complètement dans le code. 
+Visual Studio pour Mac ne fournit pas d’un modèle vide. Tous les modèles sont fournis avec prise en charge de plan conceptuel, qui vous recommande d’Apple comme moyen principal pour créer une interface utilisateur. Toutefois, il est possible de créer votre interface utilisateur entièrement dans le code. 
 
 Les étapes ci-dessous vous guident lors de la suppression du plan conceptuel à partir d’une application : 
 
@@ -316,7 +316,7 @@ Dans l’exemple ci-dessus, nous avons commencé à créer une interface utilisa
 
 e/s des interfaces utilisateur sont constitués d’une hiérarchie de la vue. Affichages supplémentaires, telles que des étiquettes, des boutons, des curseurs, etc. sont ajoutés comme sous-vues d’une vue parent.
 
-Par exemple, nous allons modifier pour le `CustomViewController` pour créer un écran d’ouverture de session dans laquelle l’utilisateur peut entrer un nom d’utilisateur et un mot de passe. L’écran se compose de deux champs de texte et un bouton.
+Par exemple, nous allons modifier le `CustomViewController` pour créer un écran d’ouverture de session dans laquelle l’utilisateur peut entrer un nom d’utilisateur et un mot de passe. L’écran se compose de deux champs de texte et un bouton.
 
 ### <a name="adding-the-text-fields"></a>Ajouter les champs de texte
 
@@ -433,7 +433,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>Ajout de fonctionnalités de bouton
 
-Lorsqu’un clic est effectué, vos utilisateurs attendent une opération si cela par une alerte, ou en naviguant vers un autre écran. 
+Lorsqu’un clic est effectué, vos utilisateurs attendent une opération. Par exemple, une alerte est affichée ou navigation est effectuée vers un autre écran. 
 
 Vous allez ajouter du code pour transmettre un second contrôleur de vue dans la pile de navigation.
 
@@ -497,7 +497,7 @@ Outre l’utilisation de contrôles qui font partie de UIKit, des vues personnal
 
 ### <a name="inheriting-from-uiview"></a>Héritage de UIView
 
-La première chose que nous devons faire est de créer une classe pour la vue personnalisée. Nous verrons comment procéder à l’aide de la **classe** modèle dans Visual Studio pour ajouter une classe vide nommée `CircleView`. La classe de base doit être définie sur `UIView`, qui est de rappel dans le `UIKit` espace de noms. Nous devons également le `System.Drawing` espace de noms. Les différentes autres `System.*` espaces de noms ne pourra plus être utilisé dans cet exemple, par conséquent, n’hésitez pas à les supprimer.
+La première chose que nous devons faire est de créer une classe pour la vue personnalisée. Nous verrons comment procéder à l’aide de la **classe** modèle dans Visual Studio pour ajouter une classe vide nommée `CircleView`. La classe de base doit être définie sur `UIView`, qui nous rappeler se trouve dans le `UIKit` espace de noms. Nous devons également le `System.Drawing` espace de noms. Les différentes autres `System.*` espaces de noms ne pourra plus être utilisé dans cet exemple, par conséquent, n’hésitez pas à les supprimer.
 
 La classe doit ressembler à ceci :
 
