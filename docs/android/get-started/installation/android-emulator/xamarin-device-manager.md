@@ -7,12 +7,12 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 447657d6f8509623272f37c48c7aecbdfd4cbaad
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: c38a0a7f6897cd90f81c92348280539b33524b9c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Gestionnaire d’appareils Android Xamarin
 
@@ -458,7 +458,7 @@ Vous pouvez modifier les propriétés en suivant les instructions ci-dessous :
 
 Le tableau suivant présente en détail les propriétés répertoriées dans les écrans **Nouvel appareil** et **Éditeur d’appareil** :
 
-[!include[](~/android/includes/table.html)]
+[!include[](~/android/includes/emulator-properties.md)]
 
 Pour plus d’informations sur ces propriétés, consultez [Propriétés de profil matériel](https://developer.android.com/studio/run/managing-avds.html#hpproperties).
 
