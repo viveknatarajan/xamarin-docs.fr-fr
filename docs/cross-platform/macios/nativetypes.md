@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: b78ade19efed92ab3b2d8ba790f2d7334472bab4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 09858bd7902b44bbedd96f1be9c9c827131ee16f
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="native-types"></a>Types natifs
 
@@ -27,28 +27,11 @@ Avec ces nouveaux types de données, le même code source est compilé pour 32 b
 
 Le tableau suivant indique les modifications de nos types de données pour correspondre à ce nouveau monde 32/64 bits :
 
-<table>
-        <tr>
-            <th>Type natif</th>
-            <th>type de stockage de 32 bits</th> 
-            <th>type de stockage de 64 bits</th>
-        </tr>
-        <tr>
-            <td><code>System.nint</code></td>
-        <td><code>System.Int32</code> (<code>int</code>)</td>
-        <td><code>System.Int64</code> (<code>long</code>)</td>
-        </tr>
-        <tr>
-            <td><code>System.nuint</code></td>
-        <td><code>System.UInt32</code> (<code>uint</code>)</td>
-        <td><code>System.UInt64</code> (<code>ulong</code>)</td>
-        </tr>
-        <tr>
-            <td><code>System.nfloat</code></td>
-        <td><code>System.Single</code> (<code>float</code>)</td>
-        <td><code>System.Double</code> (<code>double</code>)</td>
-        </tr>
-    </table>
+|Type natif|type de stockage de 32 bits|type de stockage de 64 bits|
+|--- |--- |--- |
+|`System.nint`|`System.Int32` (`int`)|`System.Int64` (`long`)|
+|`System.nuint`|`System.UInt32` (`uint`)|`System.UInt64` (`ulong`)|
+|`System.nfloat`|`System.Single` (`float`)|`System.Double` (`double`)|
 
 Nous avons choisi de ces noms pour permettre à votre code c# rechercher plus ou moins de la même façon que le résultat doit ressembler aujourd'hui.
 
@@ -76,32 +59,15 @@ Les types de données de point, la taille et rectangle qui sont utilisés avec C
 
 Lorsque vous déplacez vers **unifié**, vous devez remplacer les instances de `System.Drawing` avec leurs `CoreGraphics` équivalents comme indiqué dans le tableau suivant :
 
-<table>
-        <tr>
-            <th>Ancien Type dans System.Drawing</th>
-            <th>Nouvelle CoreGraphics de Type de données</th> 
-            <th>Description</th>
-        </tr>
-        <tr>
-        <td><code>RectangleF</code></td>
-        <td><code>CGRect</code></td>
-        <td>Blocages flottante les informations de point de rectangle.  </td>
-        </tr>
-        <tr>
-        <td><code>SizeF</code></td>
-        <td><code>CGSize</code></td>
-        <td>Blocages flottante pointent les informations sur la taille (largeur, hauteur)</td>
-        </tr>
-        <tr>
-        <td><code>PointF</code></td>
-        <td><code>CGPoint</code></td>
-        <td>Contient une virgule flottante, des points (X, Y)</td>
-        </tr>
-    </table>
+|Ancien Type dans System.Drawing|Nouvelle CoreGraphics de Type de données|Description|
+|--- |--- |--- |
+|`RectangleF`|`CGRect`|Blocages flottante les informations de point de rectangle.|
+|`SizeF`|`CGSize`|Blocages flottante pointent les informations sur la taille (largeur, hauteur)|
+|`PointF`|`CGPoint`|Contient une virgule flottante, des points (X, Y)|
 
 Les anciennes données types utilisés valeurs en virgule flottante pour stocker les éléments des structures de données, alors qu’un utilise la nouvelle `System.nfloat`.
 
 ## <a name="related-links"></a>Liens associés
 
-- [Utilisation des Types natifs dans des applications multiplateformes](~/cross-platform/macios/native-types-cross-platform.md)
-- [Différences d’API unifiée de vs classiques](http://developer.xamarin.comhttps://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Utilisation de types natifs dans des applications multiplateformes](~/cross-platform/macios/native-types-cross-platform.md)
+- [Différences d’API unifiée de vs classiques](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

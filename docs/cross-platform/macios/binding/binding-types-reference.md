@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 6042ab9aa861a08da421140857459b02a78f7c70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 568650a850b9db1fa22deef55eebb6a437e7e0b7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="binding-types-reference-guide"></a>Guide de référence des types de liaison
 
@@ -1987,70 +1987,20 @@ interface MyColoringKeys {
 
 Types de données suivants sont pris en charge dans les `StrongDictionary` définition :
 
-<table border="1" cellpadding="1" cellspacing="1" width="80%">
-<tbody>
-  <tr>
-    <td>Type d’Interface c#</td>
-    <td>Type de stockage de NSDictionary</td>
-  </tr>
-  <tr>
-    <td>bool</td>
-    <td>Valeur booléenne stockée dans un NSNumber</td>
-  </tr>
-  <tr>
-    <td>Valeurs d’énumération</td>
-    <td>Entier stocké dans un NSNumber</td>
-  </tr>
-  <tr>
-    <td>int</td>
-    <td>entier 32 bits stockée dans un NSNumber</td>
-  </tr>
-  <tr>
-    <td>uint</td>
-    <td>entier non signé de 32 bits stockée dans un NSNumber</td>
-  </tr>
-  <tr>
-    <td>nint</td>
-    <td>NSInteger stockée dans un NSNumber</td>
-  </tr>
-  <tr>
-    <td>nuint</td>
-    <td>NSUInteger stockée dans un NSNumber</td>
-  </tr>
-  <tr>
-    <td>long</td>
-    <td>entier 64 bits stockée dans un NSNumber</td>
-  </tr>
-  <tr>
-    <td>float</td>
-    <td>entier 32 bits stockée sous la forme d’un NSNumber</td>
-  </tr>
-  <tr>
-    <td>double</td>
-    <td>entier 64 bits stockée sous la forme d’un NSNumber</td>
-  </tr>
-  <tr>
-    <td>NSObject et sous-classes</td>
-    <td>NSObject</td>
-  </tr>
-  <tr>
-    <td>NSDictionary</td>
-    <td>NSDictionary</td>
-  </tr>
-  <tr>
-    <td>chaîne</td>
-    <td>NSString</td>
-  </tr>
-  <tr>
-    <td>NSString</td>
-    <td>NSString</td>
-  </tr>
-  <tr>
-    <td>Tableau c# de NSObject</td>
-    <td>NSArray</td>
-  </tr>
-  <tr>
-    <td>Tableau C# des énumérations</td>
-    <td>NSArray contenant NSNumbers avec la valeur</td>
-  </tr>
-</tbody>
+|Type d’Interface c#|`NSDictionary` Type de stockage|
+|---|---|
+|`bool`|`Boolean` stockées dans un `NSNumber`|
+|Valeurs d’énumération|Entier stocké dans un `NSNumber`|
+|`int`|entier 32 bits stockée dans un `NSNumber`|
+|`uint`|entier non signé 32 bits est stocké dans un `NSNumber`|
+|`nint`|`NSInteger` stockées dans un `NSNumber`|
+|`nuint`|`NSUInteger` stockées dans un `NSNumber`|
+|`long`|entier 64 bits stockée dans un `NSNumber`|
+|`float`|entier 32 bits stocké en tant qu’un `NSNumber`|
+|`double`|entier 64 bits stocké en tant qu’un `NSNumber`|
+|`NSObject` et sous-classes|`NSObject`|
+|`NSDictionary`|`NSDictionary`|
+|`string`|`NSString`|
+|`NSString`|`NSString`|
+|C# `Array` de `NSObject`|`NSArray`|
+|C# `Array` d’énumérations|`NSArray` contenant `NSNumber` valeurs|

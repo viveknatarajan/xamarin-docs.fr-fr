@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 98cd780a29abdbeaab02483e4b6ed01a218f88e5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d80ef6bdac7f35b282f6347a0356453a413b39c
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons"></a>Utilisation des icônes
 
@@ -21,48 +21,12 @@ Solutions de l’Apple Watch nécessitent deux jeux d’icônes :
 
 ## <a name="apple-watch-icons"></a>Icônes d’Apple Watch
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-    <tr>
-      <td valign="top">
-        <b>Icône de l’application d’iOS</b>
-      </td>
-      <td valign="top">
-S’affiche sur l’iPhone et démarre l’application parente </td>
-      <td>
-        <img src="icons-images/icon-ios.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" rowspan="3">
-        <b>Regardez l’icône de l’application</b>
-      </td>
-      <td valign="top">
-S’affiche sur l’écran d’accueil de l’Apple Watch </td>
-      <td>
-        <img src="icons-images/icon-home.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-S’affiche sur les notifications de surveillance </td>
-      <td>
-        <img src="icons-images/notification-icon.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-S’affiche dans le <a href="~/ios/watchos/app-fundamentals/settings.md">Apple Watch application iOS</a>
-      </td>
-      <td>
-        <a href="icons-images/watch-app.png">
-          <img src="icons-images/watch-app-sml.png" class="tableimg">
-        </a>
-      </td>
-    </tr>
-    <tbody>
-</table>
-
-
+| | | |
+|-|-|-|
+|Icône de l’application d’iOS|S’affiche sur l’iPhone et démarre l’application parente|![](icons-images/icon-ios.png)|
+|Regardez l’icône de l’application|S’affiche sur l’écran d’accueil de l’Apple Watch|![](icons-images/icon-home.png)|
+||S’affiche sur les notifications de surveillance|![](icons-images/notification-icon.png)|
+||S’affiche dans le [Apple Watch application iOS](~/ios/watchos/app-fundamentals/settings.md)|![](icons-images/watch-app-sml.png)|
 
 ## <a name="configuring-your-solution"></a>Configuration de votre Solution
 

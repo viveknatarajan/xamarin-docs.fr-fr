@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 68b420f98461ee42862726a658d721b36326c203
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>Les options de support sont disponibles pour Xamarin ?
 
@@ -18,28 +18,13 @@ ms.lasthandoff: 03/09/2018
 
 Comme indiqué dans le [page de prise en charge de Xamarin](https://www.xamarin.com/support), plusieurs options sont disponibles.  Voici quelques recommandations initiales rapides [inspirés par Stack Overflow](http://stackoverflow.com/help/product-support) sur la façon de choisir la meilleure option :
 
-<table>
-    <tr>
-        <td>« Que cette erreur signifie ? » ou « Comment... ? »</td>
-        <td><a href="http://stackoverflow.com/questions/ask?tags=xamarin">Dépassement de capacité de la pile</a> sous le <em>xamarin</em> balise</td>
-    </tr>
-    <tr>
-        <td>Je pense que ce problème est dû à un défaut dans le code source de Xamarin.</td>
-        <td><a href="https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html">Xamarin Bugzilla</a></td>
-    </tr>
-    <tr>
-        <td>J’ai une idée, une demande de fonctionnalité ou une nouvelle demande de documentation.</td>
-        <td><a href="https://xamarin.uservoice.com">Page de Xamarin UserVoice</a></td>
-    </tr>
-    <tr>
-        <td>Les ressources, les infrastructures ou les outils les autres utilisateurs le recommandions pour... ? (et autres discussions ouvertes)</td>
-        <td><a href="https://forums.xamarin.com/">Forums de Xamarin</a></td>
-    </tr>
-    <tr>
-        <td>J’ai une question à propos des abonnements, Gestionnaire de licences ou la tarification.</td>
-        <td>Envoyer par courrier électronique ou appeler en utilisant les informations de contact sur le <a href="https://www.xamarin.com/faq">Forum aux questions</a></td>
-    </tr>
-</table>
+|   |   |
+|---|---|
+|« Que cette erreur signifie ? » ou « Comment... ? »|[Dépassement de capacité de la pile](http://stackoverflow.com/questions/ask?tags=xamarin) sous le *xamarin* balise|
+|Je pense que ce problème est dû à un défaut dans le code source de Xamarin.|[Xamarin Bugzilla](https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html)|
+|J’ai une idée, une demande de fonctionnalité ou une nouvelle demande de documentation.|[Page de Xamarin UserVoice](https://xamarin.uservoice.com)|
+|Les ressources, les infrastructures ou les outils les autres utilisateurs le recommandions pour... ? (et autres discussions ouvertes)|[Forums de Xamarin](https://forums.xamarin.com)|
+|J’ai une question à propos des abonnements, Gestionnaire de licences ou la tarification.|Envoyer par courrier électronique ou appeler en utilisant les informations de contact sur le [Forum aux questions](https://www.xamarin.com/faq)|
 
 L’équipe de support Xamarin permet de surveiller de chacune de ces options.  Nous encourageons tous les utilisateurs à contribuer leurs questions réfléchies et des rapports pour tirer parti d’et aider à la croissance de la Communauté de développeurs Xamarin bien informée.  Pour les erreurs de suspicion, veillez à envoyer des rapports de bogue lorsque cela est possible garantir que les problèmes sont officiellement suivies par l’équipe d’ingénierie Xamarin.
 

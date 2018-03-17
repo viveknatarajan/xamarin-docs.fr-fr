@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons-and-images"></a>Utilisation des icônes et des Images
 
@@ -40,17 +40,9 @@ L’Image de lancement s’affiche rapidement et donne l’impression que votre 
 
 Images de démarrage ne sont pas une opportunité d’annonces ou une expression artistique, ils existent uniquement pour donner l’impression que votre application lance rapidement et est prête à utiliser.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Lancer l’Image</b></td>
-</tr>
-<tr>
-    <td><b>Taille</b></td>
-    <td>1920px x 1080px
-
-    Non-layered `.png` files only</td>
-</tr>
-</table>
+|Lancez la taille de l’Image|Notes|
+|---|---|
+|1920x1080px|Uniquement les fichiers .png de couches non|
 
 Apple rend les suggestions suivantes pour la conception d’Image de lancement de votre application :
 
@@ -146,39 +138,15 @@ Votre application Xamarin.tvOS requiert non seulement une icône d’application
 
 Chaque application doit fournir un petit et une version de grande taille de son icône de l’application. La petite icône servira à l’écran d’accueil de Apple TV lorsque l’application est installée. La version de grande taille est utilisée par l’App Store. L’icône d’application volumineux doit reproduire l’apparence de la version de la petite icône.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Petite icône</b></td>
-    <td colspan="2"><b>Grandes icônes</b></td>
-</tr>
-<tr>
-    <td><b>Taille réelle</b></td>
-    <td>400px x 240px</td>
-    <td><b>Taille</b></td>
-    <td>1280px x 768px</td>
-</tr>
-<tr>
-    <td><b>Taille de la Zone de sécurité</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>Taille sans focus</b></td>
-    <td>300px x 180px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>Taille ayant le focus</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-</table>
+|Petite icône||Grandes icônes||
+|---|---|---|---|
+|Taille réelle|400x240px|Size|1280x768px|
+|Taille de la Zone de sécurité|370x222px|||
+|Taille sans focus|300x180px|||
+|Taille ayant le focus|370x222px|||
 
 > [!IMPORTANT]
-> **Remarque :** les icônes de votre application doit être fournis en tant que **en couche des Images**. Consultez le [en couche une Image](#Layered-Images) section ci-dessus pour plus d’informations.
+> Icônes de l’application doit être fourni en tant que **en couche des Images**. Consultez le [en couche une Image](#Layered-Images) section ci-dessus pour plus d’informations.
 
 
 
@@ -227,17 +195,9 @@ Si l’utilisateur a placé votre application Xamarin.tvOS sur la ligne en haut 
 
 L’Image de l’étagère Top peut être fourni en tant que statique unique `.png` ou `.lsr` fichier (voir [création d’Images en couche](#Creating-Layered-Images)) ou il peut être créé dynamiquement lors de l’exécution en tant qu’une seule ligne d’éléments peut être actif (consultez [ Le contenu dynamique haut de l’étagère](#Dynamic-Top-Shelf-Content) ci-dessous).
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Image du haut de l’étagère</b></td>
-</tr>
-<tr>
-    <td><b>Taille</b></td>
-    <td>1920px x 720px
-
-    Static `.png` or layered `.lsr` file</td>
-</tr>
-</table>
+|Taille de l’Image haut de l’étagère|Notes|
+|---|---|
+|1920x720px|.Png statique ou un fichier de .lsr en couche|
 
 Apple offre des suggestions suivantes pour la création d’Images de votre tablette haut :
 
@@ -279,38 +239,12 @@ Le contenu se présente comme une unique liste défilement horizontale du conten
 
 Les tailles de contenu suivant sera nécessaire :
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>Affiches (2:3)</b></td>
-    <td><b>Carré (1:1)</b></td>
-    <td><b>HDTV (16:9)</b></td>
-</tr>
-<tr>
-    <td><b>Taille réelle</b></td>
-    <td>404px x 608px</td>
-    <td>608px x 608px</td>
-    <td>908px x 512px</td>
-</tr>
-<tr>
-    <td><b>Taille de la Zone de sécurité</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-<tr>
-    <td><b>Taille sans focus</b></td>
-    <td>333px x 500px</td>
-    <td>500px x 500px</td>
-    <td>782px x 440px</td>
-</tr>
-<tr>
-    <td><b>Taille ayant le focus</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-</table>
+||Affiches (2:3)|Carré (1:1)|HDTV (16:9)|
+|---|---|---|---|
+|Taille réelle|404x608px|608x608px|908x512px|
+|Taille de la Zone de sécurité|380x570px|570x570px|852x479px|
+|Taille sans focus|333x500px|500x500px|782x440px|
+|Taille ayant le focus|380x570px|570x570px|852x479px|
 
 Apple offre des suggestions suivantes pour la ligne Sectioned contenu :
 
@@ -325,27 +259,14 @@ Si vous le souhaitez, votre application Xamarin.tvOS peut présenter son contenu
 
 En plus de la barre de défilement automatique, l’utilisateur peut prendre le contrôle des bannières et faites défiler dans les deux sens à l’aide de l’élément distant Siri. Effectue un petit, mouvement circulaire sur Siri distant lorsqu’une bannière est activé s’activent l’effet parallaxe pour que la bannière.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Image de bannière (très large)</b></td>
-</tr>
-<tr>
-    <td><b>Taille réelle</b></td>
-    <td>1940px x 624px</td>
-</tr>
-<tr>
-    <td><b>Taille de la Zone de sécurité</b></td>
-    <td>1740px x 620px</td>
-</tr>
-<tr>
-    <td><b>Taille sans focus</b></td>
-    <td>1740px x 560px</td>
-</tr>
-<tr>
-    <td><b>Taille ayant le focus</b></td>
-    <td>1740px x 620px</td>
-</tr>
-</table>
+**Image de bannière (très large)**
+
+|   |   |
+|---|---|
+|Taille réelle|1940x624px|
+|Taille de la Zone de sécurité|1740x620px|
+|Taille sans focus|1740x560px|
+|Taille ayant le focus|1740x620px|
 
 Le défilement incrustation bannières peut soit être fournie comme statique `.png` ou en couche `.lsr` fichier.
 
@@ -366,44 +287,13 @@ Si votre application Xamarin.tvOS est un jeu et que vous avez ajouté la prise e
 - **Illustration du tableau de bord** -image facultative peut être fournie qui apparaît en haut du tableau de bord de votre application dans le Game Center. Ces images sont non actif.
 - **Classement des illustrations** -vous devez fournir entre un (1) à trois (3) les images de proportions 16:9 pour chaque classement des qui prend en charge de votre application. Il peut s’agir soit statique `.png` ou en couche `.lsr` fichiers. La classement des illustrations sont peut être actif.
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>Icônes de réalisation</b></td>
-    <td><b>Illustration du tableau de bord</b></td>
-    <td><b>Classement des illustrations</b></td>
-</tr>
-<tr>
-    <td><b>Taille visible</b></td>
-    <td>200px x 200px</td>
-    <td>923px x 150px</td>
-    <td>N/A</td>
-</tr>
-<tr>
-    <td><b>Taille réelle</b></td>
-    <td>320px x 320px</td>
-    <td>N/A</td>
-    <td>659px x 371px</td>
-</tr>
-<tr>
-    <td><b>Taille de la Zone de sécurité</b></td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>618px x 348px</td>
-</tr>
-<tr>
-    <td><b>Taille sans focus</b></td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>548px x 309px</td>
-</tr>
-<tr>
-    <td><b>Taille ayant le focus</b></td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>618px x 348px</td>
-</tr>
-</table>
+||Icônes de réalisation|Illustration du tableau de bord|Classement des illustrations|
+|---|---|---|---|
+|Taille visible|200x200px|923x150px|N/A|
+|Taille réelle|320x320px|N/A|659x371px|
+|Taille de la Zone de sécurité|N/A|N/A|618x348px|
+|Taille sans focus|N/A|N/A|548x309px|
+|Taille ayant le focus|N/A|N/A|618x348px|
 
 Pour plus d’informations sur l’utilisation de Game Center, consultez le site d’Apple [Guide de programmation Game Center](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html).
 

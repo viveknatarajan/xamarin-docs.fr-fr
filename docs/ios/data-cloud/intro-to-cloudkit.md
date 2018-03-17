@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 2c48ae5386fda63aed43c24c09c10cfb87b93637
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -22,7 +22,7 @@ Le framework CloudKit simplifie le développement d’applications qui iCloud de
 
 Les développeurs peuvent se concentrer sur leurs applications côté client et laisser iCloud élimine la nécessité d’écrire une logique d’application côté serveur. CloudKit fournit l’authentification, les bases de données privés et publics et des données structurées et les services de stockage actif.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont nécessaire pour terminer les étapes présentées dans cet article :
 
@@ -147,40 +147,12 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 Voici les différences entre les types de base de données :
 
-<table cellpadding="1" cellspacing="1" border="1" width="100%">
-<thead>
-<tr>
-<td></td>
-<td>Base de données public</td>
-<td>Base de données privée</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type de données</td>
-<td>Données partagées</td>
-<td>Données de l’utilisateur actuel</td>
-</tr>
-
-<tr>
-<td>Quota</td>
-<td>Prise en compte dans le Quota de développeur</td>
-<td>Prise en compte dans le Quota de l’utilisateur</td>
-</tr>
-
-<tr>
-<td>Autorisations par défaut</td>
-<td>World lisible</td>
-<td>Utilisateur lisible</td>
-</tr>
-
-<tr>
-<td>Autorisations de modification</td>
-<td>iCloud rôles du tableau de bord via un niveau de la classe d’enregistrement</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
+||Base de données public|Base de données privée|
+|---|--- |--- |
+|**Type de données**|Données partagées|Données de l’utilisateur actuel|
+|**Quota**|Prise en compte dans le Quota de développeur|Prise en compte dans le Quota de l’utilisateur|
+|**Autorisations par défaut**|World lisible|Utilisateur lisible|
+|**Autorisations de modification**|iCloud rôles du tableau de bord via un niveau de la classe d’enregistrement|N/A|
 
 ### <a name="records"></a>Enregistrements
 

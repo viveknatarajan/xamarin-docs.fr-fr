@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f6d19f0f6573b17dfb3feb6bf131686413d4e68f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 047f7d7497a114bf4b7c94e50bdf09862b882794
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="objective-c-support"></a>Prise en charge objective-C
 
@@ -201,13 +201,11 @@ En raison `NSDate` référence date, toutes les conversions entre elle et `DateT
 
 Lors de la conversion à partir de `DateTime` à `NSDate` la date/heure `Kind` propriété est prise en compte.
 
-<table>
-<tr><th> Genre         </th><th> Résultats                                                                                            </th></tr>
-<!--tr><td> ------------ </td><td> -------------------------------------------------------------------------------------------------- </td></tr-->
-<tr><td> Utc          </td><td> Conversion est effectuée à l’aide de l’objet DateTime fourni tel quel.                                  </td></tr>
-<tr><td> Local        </td><td> Le résultat de l’appel de `ToUniversalTime ()` dans le DateTime fourni l’objet est utilisé pour la conversion. </td></tr>
-<tr><td> Non spécifié  </td><td> L’objet DateTime fourni est supposé pour être l’heure UTC, par conséquent, même comportement que le type == Utc.                </td></tr>
-</table>
+|Genre|Résultats                                                                                            |
+|---|---|
+|Utc|Conversion est effectuée à l’aide de le `DateTime` en l’état de l’objet.|
+|Local|Le résultat de l’appel de `ToUniversalTime()` dans les `DateTime` objet est utilisé pour la conversion.|
+|Non spécifié|Fourni `DateTime` objet est supposé pour être l’heure UTC, par conséquent, même comportement que le type == Utc.|
 
 La conversion s’effectue à l’aide de la formule suivante :
 

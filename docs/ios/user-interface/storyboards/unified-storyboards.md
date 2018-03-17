@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 30a952bf0df4db34c749de3d6198877b7a9766b9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="unified-storyboards"></a>Storyboards unifiées
 
@@ -116,63 +116,23 @@ Cette section décrit les types courants de collections de caractéristique trou
 
 Ceci est une Collection de Trait de type que le développeur peut voir sur un iPhone :
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Propriété</td>
-    <td>Value</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>Compact</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>Normale</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>Téléphone</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>2.0</td>
-</tr>
-</tbody>
-</table>
+|Propriété|Value|
+|--- |--- |
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Normale|
+|`UserInterfaceIdom`|Téléphone|
+|`DisplayScale`|2.0|
 
 Le jeu ci-dessus représente une Collection de caractéristique pleinement qualifié, car elle a des valeurs pour toutes ses propriétés de trait.
 
 Il est également possible d’avoir une Collection de caractéristique auquel il manque certaines de ses valeurs (c'est-à-dire, Apple en tant que *Unspecified*) :
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Propriété</td>
-    <td>Value</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>Compact</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>{n’est pas spécifié}</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>{n’est pas spécifié}</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>{n’est pas spécifié}</td>
-</tr>
-</tbody>
-</table>
+|Propriété|Value|
+|--- |--- |
+|`HorizontalSizeClass`|Compact|
+|`VerticalSizeClass`|Non spécifié|
+|`UserInterfaceIdom`|Non spécifié|
+|`DisplayScale`|Non spécifié|
 
 En règle générale, toutefois, lorsque le développeur vous invite à l’environnement de caractéristique pour sa Collection caractéristique, il retourne une collection complète comme indiqué dans l’exemple ci-dessus.
 
@@ -216,7 +176,6 @@ Une autre fonction qu’un développeur peut effectuer sur des Collections de ca
 
 Comme indiqué précédemment, si une des caractéristiques n’est pas spécifié dans une des Collections caractéristique et est spécifié dans une autre, la valeur est définie pour la version spécifiée. Toutefois, s’il existe plusieurs versions d’une valeur donnée spécifiée, la valeur de la dernière caractéristique Collection sera la valeur qui est utilisée.
 
-
 ## <a name="adaptive-view-controllers"></a>Affichage Adaptive des contrôleurs
 
 Cette section décrit les détails de la façon dont iOS vue et affichage des contrôleurs ont adopté les concepts des caractéristiques et des Classes de taille automatiquement être plus adaptable dans les applications de développeur.
@@ -259,58 +218,11 @@ Tout d’abord, iOS 8 effectue certaines le programme d’installation pour pré
 
 iOS 8 fournit plusieurs rappels que le développeur peut utiliser pour participer à la modification de la caractéristique comme indiqué dans le tableau suivant :
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Phase</td>
-    <td>Rappel</td>
-    <td>Description</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Installation</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        <li><code>TraitCollectionDidChange</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Cette méthode est appelée au début d’une modification de la caractéristique avant une Collection de la caractéristique est définie à sa nouvelle valeur.</li>
-        <li>La méthode est appelée lorsque la valeur de la Collection de caractéristiques a été modifiée, mais avant toute animation a lieu.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>Animation</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Le coordinateur de Transition qui est passé à cette méthode a une <code>AnimateAlongside</code> propriété qui permet au développeur d’ajouter des animations qui seront exécutées en même temps que les animations de la valeur par défaut.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>Nettoyage</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Fournit une méthode permettant aux développeurs d’inclure leur propre code de nettoyage après que la transition a lieu.</li>
-        </ul>
-    </td>
-</tr>
-</tbody>
-</table>
+|Phase|Rappel|Description|
+|--- |--- |--- |
+|Installation|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Cette méthode est appelée au début d’une modification de la caractéristique avant une Collection de la caractéristique est définie à sa nouvelle valeur.</li><li>La méthode est appelée lorsque la valeur de la Collection de caractéristiques a été modifiée, mais avant toute animation a lieu.</li></ul>|
+|Animation|`WillTransitionToTraitCollection`|Le coordinateur de Transition qui est passé à cette méthode a une `AnimateAlongside` propriété qui permet au développeur d’ajouter des animations qui seront exécutées en même temps que les animations de la valeur par défaut.|
+|Nettoyage|`WillTransitionToTraitCollection`|Fournit une méthode permettant aux développeurs d’inclure leur propre code de nettoyage après que la transition a lieu.|
 
 Le `WillTransitionToTraitCollection` méthode est idéale pour animer les contrôleurs de la vue, ainsi que les modifications de la Collection de caractéristique. Le `WillTransitionToTraitCollection` méthode est uniquement disponible sur les contrôleurs de vue ( `UIViewController`) et non sur les autres environnements caractéristique, comme `UIViews`.
 

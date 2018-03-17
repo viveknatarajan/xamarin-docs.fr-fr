@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 8d23211e28cb1b1dae13d67e32462888c66ff065
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>À l’aide de Jenkins avec Xamarin
 
@@ -34,7 +34,7 @@ Une fois Jenkins est configuré et des plug-ins nécessaires ont été installé
 
 Ce guide vous guide dans la configuration d’un serveur Jenkins couvrant chacun de ces points. À la fin de celle-ci, nous devrions obtenir une bonne compréhension des comment installer et configurer Jenkins pour créer des extensions IPA et de APK pour nos projets mobiles Xamarin.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Le serveur de builds idéale est un ordinateur autonome dédié pour le seul but de génération et de test éventuellement de l’application. Un ordinateur dédié garantit que les artefacts qui peuvent être requises pour d’autres rôles (telle que celle d’un serveur web) ne contaminent pas la build. Par exemple, si le serveur de builds agit également comme un serveur web, le serveur web peut nécessiter une version en conflit d’une bibliothèque commune. En raison de ce conflit le serveur web peut ne pas fonctionne correctement ou Jenkins peut créer des builds qui ne fonctionnent pas lors du déploiement pour les utilisateurs.
 
@@ -343,40 +343,14 @@ Signature et zipaligning APK sont techniquement deux tâches distinctes qui sont
 
 Ces deux commandes nécessitent des paramètres de ligne de commande qui peuvent varier d’un projet. En outre, certains de ces paramètres de ligne de commande sont des mots de passe ne doivent pas apparaître dans la sortie de console lors de la build est en cours d’exécution. Nous allons stocker certains de ces paramètres de ligne de commande dans les variables d’environnement. Les variables d’environnement requises pour la signature et/ou zip alignement sont décrites dans le tableau ci-dessous :
 
-<table>
-    <thead>
-        <tr>
-            <td>Variable d’environnement</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>KEYSTORE_FILE</td>
-            <td>Il s’agit du chemin d’accès pour le magasin de clés pour signer l’APK</td>
-        </tr>
-        <tr>
-            <td>KEYSTORE_ALIAS</td>
-            <td>La clé dans le magasin de clés qui permet de signer l’APK.</td>
-        </tr>
-        <tr>
-            <td>INPUT_APK</td>
-            <td>APK créé par `xbuild`.</td>
-        </tr>
-        <tr>
-            <td>SIGNED_APK</td>
-            <td>Signé APK généré par `jarsigner`.</td>
-        </tr>
-        <tr>
-            <td>FINAL_APK</td>
-            <td>Voici le fichier zip aligné APK généré par `zipalign`.</td>
-        </tr>
-        <tr>
-            <td>STORE_PASS</td>
-            <td>Il s’agit du mot de passe est utilisé pour accéder au contenu de la combinaison de touches pour passion le fichier.</td>
-        </tr>
-    </tbody>
-</table>
+|Variable d’environnement|Description|
+|--- |--- |
+|KEYSTORE_FILE|Il s’agit du chemin d’accès pour le magasin de clés pour signer l’APK|
+|KEYSTORE_ALIAS|La clé dans le magasin de clés qui permet de signer l’APK.|
+|INPUT_APK|APK créé par `xbuild`.|
+|SIGNED_APK|Signé APK généré par `jarsigner`.|
+|FINAL_APK|Voici le fichier zip aligné APK généré par `zipalign`.|
+|STORE_PASS|Il s’agit du mot de passe est utilisé pour accéder au contenu de la combinaison de touches pour passion le fichier.|
 
 Comme décrit dans la section Configuration requise, vous peuvent définir ces variables d’environnement lors de la build à l’aide du plug-in EnvInject. La tâche doit avoir une nouvelle build étape ajoutée basé sur les variables d’environnement insertion, comme indiqué dans la capture d’écran suivante :
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 36c793e7a9b7b30bcb0cdf2c7959fd2df36c8775
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fd6aa66a7e5e788babc0df3e94b8f3677a7625f0
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-the-file-system"></a>Utilisation avec le système de fichiers
 
@@ -238,78 +238,14 @@ Ces répertoires et leurs fonctions sont répertoriées ci-dessous :
 
 &nbsp;
 
-<table>
-  <tbody>
-    <tr>
-      <td>
-Répertoire </td>
-      <td>
-Description </td>
-    </tr>
-    <tr>
-      <td>
-        <p>[ApplicationName].app/</p>
-      </td>
-      <td>
-        <p><b>Dans iOS 7 et versions antérieures</b> il s’agit de la <code>ApplicationBundle</code> répertoire de stockage du fichier exécutable de votre application. La structure de répertoire que vous créez dans votre application existe dans ce répertoire (par exemple, les images et les autres types de fichiers que vous avez marqué en tant que ressources dans votre Visual Studio pour le projet de Mac).</p>
-        <p>Si vous avez besoin accéder aux fichiers de contenu à l’intérieur de votre offre groupée d’Application, le chemin d’accès à ce répertoire est disponible via le <code>NSBundle.MainBundle.BundlePath</code> propriété.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Documents/</p>
-      </td>
-      <td>
-        <p>Utiliser ce répertoire pour stocker les documents de l’utilisateur et les fichiers de données d’application.</p>
-        <p>Le contenu de ce répertoire peut être accessible à l’utilisateur via (bien que cela est désactivée par défaut) de partage de fichiers iTunes. Ajouter un <code>UIFileSharingEnabled</code> booléenne clé dans le fichier Info.plist pour permettre aux utilisateurs d’accéder à ces fichiers.</p>
-        <p>Même si une application ne permet pas immédiatement le partage de fichiers, vous devez éviter de placer des fichiers qui doivent être masquées à partir de vos utilisateurs dans ce répertoire (tels que les fichiers de base de données, sauf si vous souhaitez les partager). Tant que les fichiers sensibles restent masqués, ces fichiers ne seront pas exposées (et éventuellement déplacés, modifié ou supprimé par iTunes) si le partage de fichiers est activé dans une future version.</p>
-        <p>Vous pouvez utiliser la <code>Environment.GetFolderPath
-(Environment.SpecialFolder.MyDocuments)</code> méthode pour obtenir le chemin d’accès dans le répertoire Documents de votre application.</p>
-        <p>Le contenu de ce répertoire est sauvegardé par iTunes.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Bibliothèque /</p>
-      </td>
-      <td>
-        <p>Le répertoire de la bibliothèque est un bon emplacement pour stocker les fichiers qui ne sont pas créés directement par l’utilisateur, telles que les bases de données ou d’autres fichiers générés par l’application.
-Le contenu de ce répertoire n’est jamais exposé à l’utilisateur via iTunes.</p>
-        <p>Vous pouvez créer vos propres sous-répertoires dans la bibliothèque ; Toutefois, il existe déjà certains créé par le système répertoires ici que vous devez être conscient de, y compris les préférences et les Caches.</p>
-        <p>Le contenu de ce répertoire (à l’exception du sous-répertoire Caches) est sauvegardé par iTunes. Les répertoires personnalisés que vous créez dans la bibliothèque seront sauvegardés.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Bibliothèque/Préférences /</p>
-      </td>
-      <td>
-        <p>Les fichiers de préférence de spécifiques à l’application sont stockés dans ce répertoire. Ne créez pas directement ces fichiers. Utilisez plutôt la <code>NSUserDefaults</code> classe.</p>
-        <p>Le contenu de ce répertoire est sauvegardé par iTunes.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Les Caches/Library /</p>
-      </td>
-      <td>
-        <p>Le répertoire de Caches est un bon emplacement pour stocker les fichiers de données qui peuvent aider à votre application s’exécuter, mais qui peut être recréé facilement si nécessaire. L’application doit créer et supprimer ces fichiers en fonction des besoins et être en mesure de recréer ces fichiers si nécessaire. iOS 5 peut également supprimer ces fichiers (dans les situations de stockage extrêmement faible), mais il ne sera pas le faire pendant l’exécution de l’application.</p>
-        <p>Le contenu de ce répertoire n’est pas sauvegardé par iTunes, ce qui signifie qu’ils ne seront pas présents si l’utilisateur restaure un appareil, et ils ne sont peut-être pas présentes après avoir installé une version mise à jour de votre application.</p>
-        <p>Par exemple, dans le cas où votre application ne peut pas se connecter au réseau, vous pouvez utiliser le répertoire de cache pour stocker les fichiers de données ou pour fournir une bonne expérience hors connexion. L’application peut enregistrer et récupérer ces données rapidement lors de l’attente des réponses du réseau, mais il ne doit pas être sauvegardé et permettre facilement être restauré ou recréé après une restauration ou une version mise à jour.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>tmp/</p>
-      </td>
-      <td>
-        <p>Les applications peuvent stocker des fichiers temporaires qui sont nécessaires uniquement pour une courte période dans ce répertoire. Pour économiser l’espace, les fichiers doivent être supprimés lorsqu’ils ne sont plus nécessaires. Le système d’exploitation peut également supprimer des fichiers à partir de ce répertoire quand une application n’est pas en cours d’exécution.</p>
-        <p>Le contenu de ce répertoire n’est pas sauvegardé par iTunes.</p>
-        <p>Par exemple, le répertoire tmp peut servir à stocker les fichiers temporaires qui sont téléchargés à afficher pour l’utilisateur (tels que Twitter avatars ou les pièces jointes), mais qui peut être supprimé une fois qu’ils avez affichés (et téléchargées à nouveau si elles sont requises dans le futur ).</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Répertoire|Description|
+|---|---|
+|[ApplicationName].app/|**Dans iOS 7 et versions antérieures** il s’agit de la `ApplicationBundle` répertoire de stockage du fichier exécutable de votre application. La structure de répertoire que vous créez dans votre application existe dans ce répertoire (par exemple, les images et les autres types de fichiers que vous avez marqué en tant que ressources dans votre Visual Studio pour le projet de Mac).<br /><br />Si vous avez besoin accéder aux fichiers de contenu à l’intérieur de votre offre groupée d’Application, le chemin d’accès à ce répertoire est disponible via le `NSBundle.MainBundle.BundlePath` propriété.|
+|Documents/|Utiliser ce répertoire pour stocker les documents de l’utilisateur et les fichiers de données d’application.<br /><br />Le contenu de ce répertoire peut être accessible à l’utilisateur via (bien que cela est désactivée par défaut) de partage de fichiers iTunes. Ajouter un `UIFileSharingEnabled` booléenne clé dans le fichier Info.plist pour permettre aux utilisateurs d’accéder à ces fichiers.<br /><br />Même si une application ne permet pas immédiatement le partage de fichiers, vous devez éviter de placer des fichiers qui doivent être masquées à partir de vos utilisateurs dans ce répertoire (tels que les fichiers de base de données, sauf si vous souhaitez les partager). Tant que les fichiers sensibles restent masqués, ces fichiers ne seront pas exposées (et éventuellement déplacés, modifié ou supprimé par iTunes) si le partage de fichiers est activé dans une future version.<br /><br /> Vous pouvez utiliser la `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` méthode pour obtenir le chemin d’accès dans le répertoire Documents de votre application.<br /><br />Le contenu de ce répertoire est sauvegardé par iTunes.|
+|Bibliothèque /|Le répertoire de la bibliothèque est un bon emplacement pour stocker les fichiers qui ne sont pas créés directement par l’utilisateur, telles que les bases de données ou d’autres fichiers générés par l’application. Le contenu de ce répertoire n’est jamais exposé à l’utilisateur via iTunes.<br /><br />Vous pouvez créer vos propres sous-répertoires dans la bibliothèque ; Toutefois, il existe déjà certains créé par le système répertoires ici que vous devez être conscient de, y compris les préférences et les Caches.<br /><br />Le contenu de ce répertoire (à l’exception du sous-répertoire Caches) est sauvegardé par iTunes. Les répertoires personnalisés que vous créez dans la bibliothèque seront sauvegardés.|
+|Bibliothèque/Préférences /|Les fichiers de préférence de spécifiques à l’application sont stockés dans ce répertoire. Ne créez pas directement ces fichiers. Utilisez plutôt la `NSUserDefaults` classe.<br /><br />Le contenu de ce répertoire est sauvegardé par iTunes.|
+|Les Caches/Library /|Le répertoire de Caches est un bon emplacement pour stocker les fichiers de données qui peuvent aider à votre application s’exécuter, mais qui peut être recréé facilement si nécessaire. L’application doit créer et supprimer ces fichiers en fonction des besoins et être en mesure de recréer ces fichiers si nécessaire. iOS 5 peut également supprimer ces fichiers (dans les situations de stockage extrêmement faible), mais il ne sera pas le faire pendant l’exécution de l’application.<br /><br />Le contenu de ce répertoire n’est pas sauvegardé par iTunes, ce qui signifie qu’ils ne seront pas présents si l’utilisateur restaure un appareil, et ils ne sont peut-être pas présentes après avoir installé une version mise à jour de votre application.<br /><br />Par exemple, dans le cas où votre application ne peut pas se connecter au réseau, vous pouvez utiliser le répertoire de cache pour stocker les fichiers de données ou pour fournir une bonne expérience hors connexion. L’application peut enregistrer et récupérer ces données rapidement lors de l’attente des réponses du réseau, mais il ne doit pas être sauvegardé et permettre facilement être restauré ou recréé après une restauration ou une version mise à jour.|
+|tmp/|Les applications peuvent stocker des fichiers temporaires qui sont nécessaires uniquement pour une courte période dans ce répertoire. Pour économiser l’espace, les fichiers doivent être supprimés lorsqu’ils ne sont plus nécessaires. Le système d’exploitation peut également supprimer des fichiers à partir de ce répertoire quand une application n’est pas en cours d’exécution.<br /><br />Le contenu de ce répertoire n’est pas sauvegardé par iTunes.<br /><br />Par exemple, le répertoire tmp peut servir à stocker les fichiers temporaires qui sont téléchargés à afficher pour l’utilisateur (tels que Twitter avatars ou les pièces jointes), mais qui peut être supprimé une fois qu’ils avez affichés (et téléchargées à nouveau si elles sont requises dans le futur ).|
 
 Cette capture d’écran montre la structure de répertoire dans une fenêtre de recherche :
 

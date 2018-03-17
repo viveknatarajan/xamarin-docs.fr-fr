@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 017f3c1b5fc14bf22a5ad85d1017bc8125b04038
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6e0eebef2404ce3f117fe897d456f3ef78a8f585
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="ios-extensions"></a>Extensions d’iOS
 
@@ -44,63 +44,14 @@ Cet article couvre les rubriques suivantes :
 
 ## <a name="extension-points"></a>Points d’extension
 
-Il existe plusieurs types d’extensions qui peuvent être créés dans iOS 8 (et supérieur) :
-
-<table>
-<colgroup>
-<col />
-<col />
-<col />
-</colgroup>
-
-<thead>
-<tr>
-    <th >Type</th>
-    <th >Description</th>
-    <th >Point d’extension</th>
-    <th >Application de l’hôte</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-    <td >Action</td>
-    <td >Éditeur spécial ou la visionneuse pour un type de média spécifique</td>
-    <td ><code>com.apple.ui-services</code></td>
-    <td >Any</td>
-</tr>
-<tr>
-    <td >Fournisseur de document</td>
-    <td >Permet à l’application à utiliser un magasin de documents à distance</td>
-    <td ><code>com.apple.fileprovider-ui</code></td>
-    <td >Applications à l’aide un <a href="https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/">UIDocumentPickerViewController</a></td>
-</tr>
-<tr>
-    <td >Clavier</td>
-    <td >Autres claviers</td>
-    <td ><code>com.apple.keyboard-service</code></td>
-    <td >Any</td>
-</tr>
-<tr>
-    <td >Modification de la photo</td>
-    <td >Manipulation de photo et de modification</td>
-    <td ><code>com.apple.photo-editing</code></td>
-    <td >Éditeur de photos.app</td>
-</tr>
-<tr>
-    <td >Partager</td>
-    <td >Partage des informations avec des réseaux sociaux, services, etc., de messagerie.</td>
-    <td ><code>com.apple.share-services</code></td>
-    <td >Any</td>
-</tr>
-<tr>
-    <td >Aujourd'hui</td>
-    <td >« Widgets » qui apparaissent sur l’écran de la date du jour ou d’un centre de Notification</td>
-    <td ><code>com.apple.widget-extensions</code></td>
-    <td >Centre de notifications et aujourd'hui</td>
-</tr>
-</tbody>
-</table>
+|Type|Description|Point d’extension|Application de l’hôte|
+|--- |--- |--- |--- |
+|Action|Éditeur spécial ou la visionneuse pour un type de média spécifique|`com.apple.ui-services`|Any|
+|Fournisseur de document|Permet à l’application à utiliser un magasin de documents à distance|`com.apple.fileprovider-ui`|Applications à l’aide un [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|Clavier|Autres claviers|`com.apple.keyboard-service`|Any|
+|Modification de la photo|Manipulation de photo et de modification|`com.apple.photo-editing`|Éditeur de photos.app|
+|Partager|Partage des informations avec des réseaux sociaux, services, etc., de messagerie.|`com.apple.share-services`|Any|
+|Aujourd'hui|« Widgets » qui apparaissent sur l’écran de la date du jour ou d’un centre de Notification|`com.apple.widget-extensions`|Centre de notifications et aujourd'hui|
 
 [Points d’extension supplémentaires](~/ios/platform/introduction-to-ios10/index.md#app-extensions) ont été ajoutées dans iOS 10.
 

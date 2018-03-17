@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: a2378cb439ceed94751e61fd44b54aae3a65bebd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3564b4f7d41822fdd9ab167fb3e756f26678a17b
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="touch-id"></a>ID tactile
 
@@ -39,11 +39,8 @@ La chaîne de clé ne peut pas déchiffrer l’élément trousseau par lui-même
 
 Tout d’abord votre application doit rechercher dans la chaîne de clé pour voir s’il existe un mot de passe. S’il n’existe pas, vous devrez demander un mot de passe, l’utilisateur n’est pas continuellement invité. Si le mot de passe doit être mis à jour, inviter l’utilisateur à un nouveau mot de passe et passez la valeur mise à jour à la chaîne de clé.
 
-
-> ℹ️ **Remarque**: avec les clés secrètes, vous recevez à partir de la base de données, il n’est pas simplement de meilleure pratique, mais prévu qu’aucun secret n’est conservés dans la mémoire. Vous devez uniquement conserver un secret pour que la durée pendant laquelle il est nécessaire et absolument ne l’attribuez ne pas à une variable globale !
-
-
-
+> [!NOTE]
+> Une fois à l’aide d’une clé secrète récupérées à partir de la chaîne de clé, toutes les références aux données doivent être supprimés de la mémoire. Jamais l’affecter à une variable globale.
 
 ## <a name="keychain-acl-and-touch-id"></a>ID de trousseau ACL et tactile
 
@@ -53,32 +50,11 @@ Liste de contrôle d’accès est un nouvel attribut d’élément de trousseau 
 
 À partir d’iOS 8, il existe désormais une nouvelle stratégie de présence de l’utilisateur, `SecAccessControl`, qui est appliqué par l’enclave sécurisé sur un iPhone 5 s et versions ultérieures. Nous pouvons le voir dans le tableau ci-dessous, simplement comment la configuration de l’appareil peut influencer l’évaluation de stratégie :
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Configuration de l’appareil</td>
-    <td>Évaluation de la stratégie</td>
-    <td>Mécanisme de sauvegarde</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Appareil sans code secret</td>
-    <td>Aucun accès</td>
-    <td>Aucun.</td>
-</tr>
-<tr>
-    <td>Appareil avec code secret</td>
-    <td>Requiert du code d’accès</td>
-    <td>Aucun.</td>
-</tr>
-<tr>
-    <td>Appareil avec l’ID de contact</td>
-    <td>S’il préfère que Touch ID</td>
-    <td>Permet à code d’accès</td>
-</tr>
-</tbody>
-</table>
+|Configuration de l’appareil|Évaluation de la stratégie|Mécanisme de sauvegarde|
+|--- |--- |--- |
+|Appareil sans code secret|Aucun accès|Aucun|
+|Appareil avec code secret|Requiert du code d’accès|Aucun|
+|Appareil avec l’ID de contact|S’il préfère que Touch ID|Permet à code d’accès|
 
 Toutes les opérations à l’intérieur de l’Enclave sécurisé peuvent s’approuvent mutuellement. Cela signifie que nous pouvons utiliser le résultat de l’authentification Touch ID pour autoriser le déchiffrement d’élément de trousseau. L’Enclave Secure conserve également un compteur des correspondances infructueuses de Touch ID, auquel cas un utilisateur sera a revenir à l’aide du code secret.
 Une nouvelle infrastructure dans iOS 8, appelée _l’authentification locale_, prend en charge ce processus d’authentification au sein de l’appareil. Nous allons étudier cela dans la section suivante.

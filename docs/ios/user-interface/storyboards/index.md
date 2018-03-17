@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 342e8189d9dec6eaa60a999d56a7891da845d247
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a0b0ca9857e706a9a84f1c661f7f6ff294e112c1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introduction à des plans conceptuels
 
@@ -25,7 +25,7 @@ Avant que le format de fichier Storyboard a été introduit par Apple en une rep
 Un plan conceptuel peut être créé, ouverts et modifié avec Xamarin iOS concepteur. Ce guide effectue également une procédure pas à pas comment utiliser le concepteur pour créer vos plans conceptuels lors de l’utilisation de c# pour programmer le volet de navigation.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Storyboards utilisable avec le concepteur dans Visual Studio pour Mac iOS ou avec Visual Studio 2015 et 2017 avec les charges de travail Xamarin installés.
 
@@ -84,32 +84,12 @@ N’importe quelle application à l’aide des Classes de taille utiliseront la 
 
 [![](images/adaptivesegue.png "La liste déroulante est parfait pour adaptative")](images/adaptivesegue.png#lightbox)
 
-<table>
-    <thead>
-        <tr>
-            <th>Segue</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Afficher</td>
-            <td>Cela est très similaire à une notification Push segue, mais il prend le contenu de l’écran en compte. </td>
-        </tr>
-        <tr>
-            <td>Afficher les détails</td>
-            <td>Si l’application affiche une vue maître / détail (par exemple, dans un contrôleur de vue de division sur un iPAd), le contenu remplace la vue de détail. Si l’application affiche uniquement le maître <strong>ou</strong> plus de détails sur le contenu remplace le haut de la pile de contrôleur d’affichage.</td>
-        </tr>
-        <tr>
-            <td>La présentation</td>
-            <td>Cela est similaire à la segue modale et autorise la sélection de styles de présentation et de transition.</td>
-        </tr>
-        <tr>
-            <td>Présentation de popover</td>
-            <td>Cela présente le contenu sous la forme d’un popover</td>
-        </tr>
-    </tbody>
-</table>
+|Segue|Description|
+|--- |--- |
+|Afficher|Cela est très similaire à une notification Push segue, mais il prend le contenu de l’écran en compte.|
+|Afficher les détails|Si l’application affiche une vue maître / détail (par exemple, dans un contrôleur de vue de division sur un iPad), le contenu remplace la vue de détail. Si l’application affiche uniquement la principale ou détail, le contenu remplace le haut de la pile de contrôleur d’affichage.|
+|La présentation|Cela est similaire à la segue modale et autorise la sélection de styles de présentation et de transition.|
+|Présentation de popover|Cela présente le contenu sous la forme d’un popover|
 
 ### <a name="transferring-data-with-segues"></a>Transfert de données avec est parfait pour
 

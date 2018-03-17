@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7819201e76e268ea84bf2cc5d49a5a07b20a04e3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="programmatic-layout-constraints"></a>Contraintes de disposition par programmation
 
@@ -79,32 +79,15 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 Où les parties du code c# correspondent aux parties de l’équation données de la façon suivante :
 
-<table width="100%" border="1">
-<tr>
-<td width="50%"><b>Equation</b></td><td><b>Code</b></td>
-</tr>
-<tr>
-<td width="50%">Élément 1</td><td>PurpleView</td>
-</tr>
-<tr>
-<td width="50%">Attribut 1</td><td>LeadingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Relationship</td><td>ConstraintEqualTo</td>
-</tr>
-<tr>
-<td width="50%">Multiplicateur</td><td>Valeur par défaut est 1.0 donc ne pas spécifié</td>
-</tr>
-<tr>
-<td width="50%">Élément 2</td><td>OrangeView</td>
-</tr>
-<tr>
-<td width="50%">Attribut 2</td><td>TrailingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Constante</td><td>10.0</td>
-</tr>
-</table>
+|Équation|Code|
+|---|---|
+|Élément 1|PurpleView|
+|Attribut 1|LeadingAnchor|
+|Relationship|ConstraintEqualTo|
+|Multiplicateur|Valeur par défaut est 1.0 donc ne pas spécifié|
+|Élément 2|OrangeView|
+|Attribut 2|TrailingAnchor|
+|Constante|10.0|
 
 En plus de fournir uniquement les paramètres qui sont nécessaires pour résoudre une équation de contrainte de mise en page donnée, chacune des méthodes d’ancrage de mise en page appliquer la sécurité de type des paramètres passés à ceux-ci. Contrainte donc horizontal ancre comme `LeadingAnchor` ou `TrailingAnchor` ne peut être utilisé avec un autre point d’ancrage horizontal types et des multiplicateurs sont uniquement fournies aux contraintes de taille.
 

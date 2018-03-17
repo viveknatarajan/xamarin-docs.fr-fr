@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: b076c7a71d81a474ca80ac32771d5512c21c167c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b4705bc9c8fdb1a671c7de2453ea088bf2afe424
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>Procédure pas à pas : utilisation de WCF
 
@@ -27,7 +27,7 @@ Il s’agit d’une exigence courante pour les applications mobiles être en mes
 
 <a name="Requirements" />
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Cette procédure pas à pas suppose que vous disposez des connaissances sur la création et l’utilisation des services WCF.
 
@@ -394,37 +394,12 @@ Le proxy du service WCF peut être consommé par une application Xamarin.iOS, co
 1. Dans le `HelloWorld.iOS` de projet, ajoutez une référence à la `HelloWorldServiceProxy` projet et une référence à la `System.ServiceModel` espace de noms.
 1. Dans **l’Explorateur de solutions**, double-cliquez sur `Main.storyboard` pour ouvrir le fichier dans le concepteur iOS. Ensuite, ajoutez le code suivant `UIButton` et `UITextView` contrôles :
 
-    <table>
-        <thead>
-            <tr>
-                <td></td>
-                <td>Name</td>
-                <td>Titre</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>UIButton</code></td>
-                <td><code>sayHelloWorldButton</code></td>
-                <td>Par exemple « Hello, World »</td>
-            </tr>
-            <tr>
-                <td><code>UITextView</code></td>
-                <td><code>sayHelloWorldText</code></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><code>UIButton</code></td>
-                <td><code>getHelloWorldDataButton</code></td>
-                <td>Obtenir « Hello, World » données</td>
-            </tr>
-            <tr>
-                <td><code>UITextView</code></td>
-                <td><code>getHelloWorldDataText</code></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+    ||Name|Titre|
+    |--- |--- |--- |
+    |`UIButton`|`sayHelloWorldButton`|Par exemple « Hello, World »|
+    |`UITextView`|`sayHelloWorldText`||
+    |`UIButton`|`getHelloWorldDataButton`|Obtenir « Hello, World » données|
+    |`UITextView`|`getHelloWorldDataText`||
 
     Après avoir ajouté les contrôles, l’interface utilisateur doit ressembler à la capture d’écran suivante :
 

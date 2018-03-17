@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: d47499c1e309fbc67c85b55cacbbba3942188f54
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-datepicker"></a>À l’aide du sélecteur de dates
 
@@ -48,7 +48,7 @@ DatePicker datePicker = new DatePicker
 };
 ```
 
-Lorsqu’un `DateTime` valeur spécifiée en XAML, l’analyseur XAML utilise le `DateTime.Parse` méthode avec un `CultureInfo.InvariantCulture` argument à convertir la chaîne en un `DateTime` valeur. Les dates doivent être spécifiées dans un format précis : les mois à deux chiffres, les jours à deux chiffres et les années à quatre chiffres séparées par des barres obliques :
+Lorsqu’un `DateTime` valeur est spécifiée en XAML, l’analyseur XAML utilise le `DateTime.Parse` méthode avec un `CultureInfo.InvariantCulture` argument à convertir la chaîne en un `DateTime` valeur. Les dates doivent être spécifiées dans un format précis : les mois à deux chiffres, les jours à deux chiffres et les années à quatre chiffres séparées par des barres obliques :
 
 ```xaml
 <DatePicker MinimumDate="01/01/2018"
@@ -139,7 +139,7 @@ Voici le fichier XAML :
 </ContentPage>
 ```
 
-Chaque `DatePicker` est attribué un `Format` propriété de « D » pour un format de date longue. Notez également que la `endDatePicker` objet a une liaison qui cible son `MinimumDate` propriété. La source de liaison est sélectionné `Date` propriété de la `startDatePicker` objet. Cela garantit que la date de fin est toujours plus tard ou égale à la date de début. En plus de deux `DatePicker` objets, un `Switch` est étiqueté « Inclure les deux jours au total ». 
+Chaque `DatePicker` est attribué un `Format` propriété de « D » pour un format de date longue. Notez également que la `endDatePicker` objet a une liaison qui cible son `MinimumDate` propriété. La source de liaison est sélectionné `Date` propriété de la `startDatePicker` objet. Cela garantit que la date de fin est toujours plus tard ou égale à la date de début. En plus de deux `DatePicker` objets, un `Switch` est étiqueté « Include de deux jours au total ». 
 
 Les deux `DatePicker` vues ont des gestionnaires d’associés à la `DateSelected` événement et le `Switch` a un gestionnaire attaché à son `Toggled` événement. Ces gestionnaires d’événements dans le fichier code-behind et déclenchent un nouveau calcul des jours entre les deux dates :
 
@@ -184,7 +184,7 @@ Une fois que les deux dates sont sélectionnés, l’application affiche le nomb
 
 [![Jours entre les Dates résultat](datepicker-images/DaysBetweenDatesResult.png "jours entre les Dates résultat")](datepicker-images/DaysBetweenDatesResult-Large.png#lightbox "jours entre les Dates de résultats")
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Exemple de DaysBetweenDates](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
 - [DatePicker API](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)

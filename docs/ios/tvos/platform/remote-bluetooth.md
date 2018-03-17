@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ca3dd71c3da316e467d8c388efbbded3d9778bf0
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri distants et les contrôleurs Bluetooth
 
@@ -39,43 +39,14 @@ Votre défi en tant qu’un développeur d’application tvOS est la créer une 
 
 Siri distant a des utilisations attendues au sein de votre application tvOS et les fonctionnalités suivantes :
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>Fonctionnalité</b></td>
-    <td><b>Utilisation des applications général</b></td>
-    <td><b>L’utilisation des applications de jeu</b></td>
-</tr>
-<tr>
-    <td valign="top"><b>Touchez Surface</b><br/>Faites défiler pour accéder, appuyez sur pour sélectionner et à maintenir pour les menus contextuels.</td>
-    <td valign="top"><b>Drainage/balayez :</b><br/>L’interface utilisateur de la Navigation entre les éléments peut être actif.<br/><br/><b>Cliquez sur :</b><br/>Active (actif) sélectionnée.</td>
-    <td valign="top"><b>Drainage/balayez :</b><br/>Dépend de jeu et peut servir d’un boîtier en appuyant sur les bords.<br/><br/><b>Cliquez sur :</b><br/>Effectuer la fonction du bouton principal.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Menu</b><br/>Appuyez sur pour revenir à l’écran précédent ou du menu.</td>
-    <td valign="top">Retourne à l’écran précédent et se termine à l’écran Apple TV accueil à partir de l’écran principal de l’application.</td>
-    <td valign="top">Suspendre et reprendre le jeu, retourne à l’écran précédent et se termine à l’écran Apple TV accueil à partir de l’écran principal de l’application.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Siri/Search</b><br/>Dans les pays Siri, appuyez et maintenez pour le contrôle vocal, dans tous les autres pays, affiche d’écran de recherche.</td>
-    <td valign="top">N/A</td>
-    <td valign="top">N/A</td>
-</tr>
-<tr>
-    <td valign="top"><b>Play/Pause</b><br/>Lecture et Pause du média ou fournit une fonction secondaire dans les applications.</td>
-    <td valign="top">Démarre la lecture du média et la lecture de pause/reprise.</td>
-    <td valign="top">Exécute la fonction du bouton secondaire ou ignore la vidéo de présentation (s’il existe).</td>
-</tr>
-<tr>
-    <td valign="top"><b>Accueil</b><br/>Appuyez sur pour revenir à l’écran d’accueil, double-cliquez dessus pour afficher les applications en cours d’exécution, maintenez mise en veille du périphérique.</td>
-    <td valign="top">N/A</td>
-    <td valign="top">N/A</td>
-</tr>
-<tr>
-    <td valign="top"><b>Volume</b><br/>Les contrôles attachés volume d’équipement audio/vidéo.</td>
-    <td valign="top">N/A</td>
-    <td valign="top">N/A</td>
-</tr>
-</table>
+|Fonctionnalité|Utilisation des applications général|L’utilisation des applications de jeu|
+|---|---|---|
+|**Touchez Surface**<br />Faites défiler pour accéder, appuyez sur pour sélectionner et à maintenir pour les menus contextuels.|**Drainage/balayez**<br />L’interface utilisateur de la Navigation entre les éléments peut être actif.<br /><br />**Click**<br />Active (actif) sélectionnée.|**Drainage/balayez**<br />Dépend de jeu et peut servir d’un boîtier en appuyant sur les bords.<br /><br />**Click**<br />Effectuer la fonction du bouton principal.|
+|**Menu**<br />Appuyez sur pour revenir à l’écran précédent ou du menu.|Retourne à l’écran précédent et se termine à l’écran Apple TV accueil à partir de l’écran principal de l’application.|Suspendre et reprendre le jeu, retourne à l’écran précédent et se termine à l’écran Apple TV accueil à partir de l’écran principal de l’application.|
+|**Siri/Search**<br />Dans les pays Siri, appuyez et maintenez pour le contrôle vocal, dans tous les autres pays, affiche d’écran de recherche.|N/A|N/A|
+|**Play/Pause**<br />Lecture et Pause du média ou fournit une fonction secondaire dans les applications.|Démarre la lecture du média et la lecture de pause/reprise.|Exécute la fonction du bouton secondaire ou ignore la vidéo de présentation (s’il existe).|
+|**Accueil**<br />Appuyez sur pour revenir à l’écran d’accueil, double-cliquez dessus pour afficher les applications en cours d’exécution, maintenez mise en veille du périphérique.|N/A|N/A|
+|**Volume**<br />Les contrôles attachés volume d’équipement audio/vidéo.|N/A|N/A|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -83,18 +54,10 @@ Siri distant a des utilisations attendues au sein de votre application tvOS et l
 
 Surface de toucher de le Siri Remote est en mesure de détecter les mouvements seul doigt auquel vous pouvez répondre dans votre application Xamarin.tvOS diverses :
 
-<table width="100%">
-<tr>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture01.png"></td>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture02.png"></td>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture03.png"></td>
-</tr>
-<tr>
-    <td valign="top"><b>Effectuez un balayage :</b><br/>Déplace la sélection (focus) entre les éléments d’interface utilisateur à écran (haut, bas à gauche, droite). Le glissement peut être utilisé pour faire défiler de longues listes de contenu rapidement à l’aide de l’inertie.</td>
-    <td valign="top"><b>Cliquez sur :</b><br/>Active l’élément sélectionné (actif) ou agit comme le bouton principal dans un jeu. Cliquez et maintenez peuvent activer des menus contextuels ou les fonctions secondaires.</td>
-    <td valign="top"><b>Appuyez sur :</b><br/>Légèrement en appuyant sur la Surface tactile sur les bords agit comme des boutons de direction sur un boîtier, déplacer le focus, haut, bas, gauche ou droite en fonction de la zone tapées. En fonction de l’application, peut être utilisé pour faire apparaître les contrôles masqués.</td>
-</tr>
-</table>
+|Effectuez un balayage|Clic|Appuyez sur|
+|---|---|---|
+|![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
+|Déplace la sélection (focus) entre les éléments d’interface utilisateur à écran (haut, bas à gauche, droite). Le glissement peut être utilisé pour faire défiler de longues listes de contenu rapidement à l’aide de l’inertie.|Active l’élément sélectionné (actif) ou agit comme le bouton principal dans un jeu. Cliquez et maintenez peuvent activer des menus contextuels ou les fonctions secondaires.|Légèrement en appuyant sur la Surface tactile sur les bords agit comme des boutons de direction sur un boîtier, déplacer le focus, haut, bas, gauche ou droite en fonction de la zone tapées. En fonction de l’application, peut être utilisé pour faire apparaître les contrôles masqués.|
 
 Apple offre des suggestions suivantes pour travailler avec les mouvements tactiles la Surface :
 
@@ -112,7 +75,7 @@ En plus des gestes sur la Surface tactile, votre application peut répondre à l
 En outre, les pressions de bouton de menu peuvent être détectées à l’aide d’un module de reconnaissance de mouvement avec standard `UIKit` éléments. Si vous intercepter le comportement du bouton de Menu, vous être responsable de la fermeture de la vue et le contrôleur d’affichage actuel et revenir à la précédente.
 
 > [!IMPORTANT]
-> **Remarque :** vous devez **toujours** affecter une fonction sur le bouton de lecture/Pause sur l’instance distante. Avoir un bouton non fonctionnelles rendez votre application altérée à l’utilisateur final. Si vous n’avez pas une fonction valide pour ce bouton, attribuer la même fonction que le bouton principal (toucher la cliquez sur Surface).
+> Vous devez **toujours** affecter une fonction sur le bouton de lecture/Pause sur l’instance distante. Avoir un bouton non fonctionnelles rendez votre application altérée à l’utilisateur final. Si vous n’avez pas une fonction valide pour ce bouton, attribuer la même fonction que le bouton principal (toucher la cliquez sur Surface).
 
 
 
@@ -319,77 +282,24 @@ En plus de distant Siri standard fourni Apple TV, 3e partie, e/s effectuées pou
 Contrôleurs de jeu peuvent être utilisés pour améliorer le jeu et de fournir une idée d’immersion dans un jeu. Ils peuvent également servir à contrôler l’interface Apple TV standard afin de l’utilisation ne doit pas basculer entre le contrôleur et distant.
 
 > [!IMPORTANT]
-> **Remarque :** Bluetooth les contrôleurs de jeu sont un bon facultatif qui risque de rendre les utilisateurs finaux, votre application ne peut pas forcer l’utilisateur à acheter un. Si votre application prend en charge les contrôleurs de jeu il doit également prendre en charge Siri distant afin que le jeu est utilisable par tous les utilisateurs d’Apple TV.
-
+> Les contrôleurs de jeu Bluetooth sont un bon facultatif qui risque de rendre les utilisateurs finaux, votre application ne peut pas forcer l’utilisateur à acheter un. Si votre application prend en charge les contrôleurs de jeu il doit également prendre en charge Siri distant afin que le jeu est utilisable par tous les utilisateurs d’Apple TV.
 
 Un contrôleur de jeu a des utilisations attendues au sein de votre application tvOS et les fonctionnalités suivantes :
-<table width="100%" border="1px">
-<tr>
-    <td><b>Fonctionnalité</b></td>
-    <td><b>Utilisation des applications général</b></td>
-    <td><b>L’utilisation des applications de jeu</b></td>
-</tr>
-<tr>
-    <td valign="top"><b>D-Pad</b></td>
-    <td valign="top">Parcourt les éléments d’interface utilisateur (fait passer le focus).</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-<tr>
-    <td valign="top"><b>A</b></td>
-    <td valign="top">Active l’élément sélectionné (actif).</td>
-    <td valign="top">Interroge le bouton principal et confirme les actions de la boîte de dialogue.</td>
-</tr>
-<tr>
-    <td valign="top"><b>B</b></td>
-    <td valign="top">Retourne à l’écran précédent ou s’arrête à l’écran d’accueil si vous utilisez l’écran de l’application principale.</td>
-    <td valign="top">Exécute la fonction de bouton secondaire ou renvoie à l’écran précédent.</td>
-</tr>
-<tr>
-    <td valign="top"><b>X</b></td>
-    <td valign="top">Démarre la lecture du média ou pause/reprend la lecture.</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Y</b></td>
-    <td valign="top">N/A</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Menu</b></td>
-    <td valign="top">Retourne à l’écran précédent ou s’arrête à l’écran d’accueil si vous utilisez l’écran de l’application principale.</td>
-    <td valign="top">Pause/reprise jeu, retourne à l’écran précédent ou s’arrête à l’écran d’accueil si vous utilisez l’écran de l’application principale.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Bouton d’épaule gauche</b></td>
-    <td valign="top">Navigue de gauche.</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Déclencheur de gauche</b></td>
-    <td valign="top">Navigue de gauche.</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Bouton de privilège de droite</b></td>
-    <td valign="top">Accède à droite.</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Déclencheur de droite</b></td>
-    <td valign="top">Accède à droite</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Stick analogique gauche</b></td>
-    <td valign="top">Parcourt les éléments d’interface utilisateur (fait passer le focus).</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-<tr>
-    <td valign="top"><b>Stick analogique droit</b></td>
-    <td valign="top">N/A</td>
-    <td valign="top">Dépend de jeu.</td>
-</tr>
-</table>
+
+|Fonctionnalité|Utilisation des applications général|L’utilisation des applications de jeu|
+|---|---|---|
+|**D-Pad**|Parcourt les éléments d’interface utilisateur (fait passer le focus).|Dépend de jeu.|
+|**A**|Active l’élément sélectionné (actif).|Interroge le bouton principal et confirme les actions de la boîte de dialogue.|
+|**B**|Retourne à l’écran précédent ou s’arrête à l’écran d’accueil si vous utilisez l’écran de l’application principale.|Exécute la fonction de bouton secondaire ou renvoie à l’écran précédent.|
+|**X**|Démarre la lecture du média ou pause/reprend la lecture.|Dépend de jeu.|
+|**Y**|N/A|Dépend de jeu.|
+|**Menu**|Retourne à l’écran précédent ou s’arrête à l’écran d’accueil si vous utilisez l’écran de l’application principale.|Pause/reprise jeu, retourne à l’écran précédent ou s’arrête à l’écran d’accueil si vous utilisez l’écran de l’application principale.|
+|**Bouton d’épaule gauche**|Navigue de gauche.|Dépend de jeu.|
+|**Déclencheur de gauche**|Navigue de gauche.|Dépend de jeu.|
+|**Bouton de privilège de droite**|Accède à droite.|Dépend de jeu.|
+|**Déclencheur de droite**|Accède à droite|Dépend de jeu.|
+|**Stick analogique gauche**|Parcourt les éléments d’interface utilisateur (fait passer le focus).|Dépend de jeu.|
+|**Stick analogique droit**|N/A|Dépend de jeu.|
 
 Apple offre des suggestions suivantes pour travailler avec les contrôleurs de jeu :
 
