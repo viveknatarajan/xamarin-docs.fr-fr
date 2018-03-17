@@ -121,6 +121,7 @@
 ### [DataPages](user-interface/datapages/index.md)
 #### [Prise en main](user-interface/datapages/get-started.md)
 #### [Informations de référence sur les contrôles](user-interface/datapages/controls.md)
+### [DatePicker](user-interface/datepicker.md)
 ### [Graphiques](user-interface/graphics/index.md)
 #### [Utilisation de CocosSharp dans Xamarin.Forms](user-interface/graphics/cocossharp.md)
 #### [Utilisation de SkiaSharp dans Xamarin.Forms](user-interface/graphics/skiasharp/index.md)
