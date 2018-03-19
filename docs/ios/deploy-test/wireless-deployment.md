@@ -1,6 +1,6 @@
 ---
 title: "Déploiement sans fil"
-description: "Cette fonctionnalité en préversion permet le déploiement sur des appareils iOS ou Apple TV sur une connexion réseau"
+description: "Cette fonctionnalité permet le déploiement sur des appareils iOS ou Apple TV par connexion réseau."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
@@ -8,47 +8,40 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/09/2018
-ms.openlocfilehash: 11961a21a7c4188c505c822a35531036fd953405
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7566669fb7d607ca6616b88cb32b770537146c94
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="wireless-deployment"></a>Déploiement sans fil
 
-_Cette fonctionnalité en préversion permet le déploiement sur des appareils iOS ou Apple TV sur une connexion réseau_
-
-![Version préliminaire](~/media/shared/preview.png)
-
-Une part importante du workflow du développeur consiste au déploiement sur un appareil. Xcode 9 a introduit une option de déploiement sur un appareil iOS ou Apple TV via un réseau, ce qui évite d’avoir à raccorder les appareils à chaque fois que vous désirez déployer et déboguer votre application. Cette fonctionnalité a été introduite dans les versions Visual Studio pour Mac et Visual Studio 15.6, actuellement en préversion.
+Une part importante du workflow du développeur consiste au déploiement sur un appareil. Xcode 9 a introduit une option de déploiement sur un appareil iOS ou Apple TV via un réseau, ce qui évite d’avoir à raccorder les appareils à chaque fois que vous désirez déployer et déboguer votre application. Cette fonctionnalité a été introduite dans les versions Visual Studio pour Mac 7.4 et Visual Studio 15.6.
 
 Ce guide détaille comment coupler et déployer sur un appareil sur le réseau.
 
 ## <a name="requirements"></a>Configuration requise
 
-Le déploiement sans fil est disponible en tant que fonctionnalité de **préversion** à la fois dans Visual Studio pour Mac et Visual Studio.
-
+La fonctionnalité de déploiement sans fil est disponible à la fois dans Visual Studio pour Mac et dans Visual Studio.
 
 Pour utiliser le déploiement sans fil, vous devez disposer des éléments suivants :
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 - macOS 10.12.4
-- La dernière version préliminaire de Visual Studio pour Mac 
-    - Pour installer ce commutateur sur le [canal Alpha ou Beta](https://docs.microsoft.com/en-us/visualstudio/mac/update) dans Visual Studio pour Mac.
+- La dernière version de Visual Studio pour Mac
 - Xcode 9.0 ou version ultérieure
 - Un appareil avec iOS 11.0 ou tvOS 11.0 et version ultérieure
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-- La dernière [version préliminaire](https://www.visualstudio.com/vs/preview/) de Visual Studio
+- La dernière version de Visual Studio
 - Un appareil avec iOS 11.0 ou tvOS 11.0 et version ultérieure
 
 Sur votre hôte de build Mac, les composants suivants doivent être installés :
 
 - macOS 10.12.4
-- Préversion de Visual Studio pour Mac
-    - Pour installer le commutateur sur le [canal Alpha ou Beta](https://docs.microsoft.com/en-us/visualstudio/mac/update) dans Visual Studio pour Mac.
+- Visual Studio pour Mac
 - Xcode 9.0 ou version ultérieure
 
 -----

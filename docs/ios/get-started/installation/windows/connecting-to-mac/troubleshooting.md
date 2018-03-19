@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5263d32ace14eb803bfd65b6a9b2ea5992ee1413
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="connection-troubleshooting"></a>Résolution des problèmes de connexion
 
@@ -240,7 +240,6 @@ Si la fenêtre Sortie n’inclut pas suffisamment d’informations pour diagnost
 
 4. Quand vous ouvrez le fichier .zip, une liste de fichiers semblable à l’exemple ci-dessous s’affiche. Concernant les erreurs de connexion, les fichiers les plus importants sont les fichiers **\*Ide.log** et **\*Ide.svclog**. Ces fichiers contiennent les mêmes messages dans deux formats légèrement différents. Le fichier**.svclog** est au format XML. Il est utile si vous voulez parcourir les messages. Le fichier **.log** est du texte brut. Il est utile si vous voulez filtrer les messages à l’aide d’outils en ligne de commande.
 
-
     Pour parcourir tous les messages, sélectionnez et ouvrez le fichier **.svclog** :
 
     [![](troubleshooting-images/troubleshooting-image13.png "Sélectionner le fichier svclog")](troubleshooting-images/troubleshooting-image13.png#lightbox)
@@ -319,7 +318,7 @@ Causes signalées :
 
 Bogue pertinent : [n° 40781](https://bugzilla.xamarin.com/show_bug.cgi?id=40781).
 
-Ce problème peut se produire quand Visual Studio ne parvient pas à actualiser le cache du composant MEF. Si tel est le cas, l’installation de cette extension de Visual Studio peut résoudre le problème : [https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
+Ce problème peut se produire quand Visual Studio ne parvient pas à actualiser le cache du composant MEF. Si tel est le cas, il peut vous être utile d’installer cette extension de Visual Studio : [https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd).
 
 Cette opération efface le cache du composant MEF Visual Studio pour résoudre les problèmes liés à l’endommagement du cache.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 3871955f723d1b3aec6245bba0502ca4f955d64c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarinandroid-performance"></a>Performances des applications Xamarin.Android
 
@@ -37,7 +37,7 @@ De nombreuses techniques permettent d’accroître les performances des applicat
 
 
 > [!NOTE]
-> Avant de lire cet article, lisez d’abord [Niveau de performance multiplateforme](~/cross-platform/deploy-test/memory-perf-best-practices.md), qui décrit les techniques indépendantes des plateformes permettant améliorer l’utilisation de la mémoire et les performances des applications générées à l’aide de la plateforme Xamarin.
+> Avant de lire cet article, lisez d’abord [Niveau de performance multiplateforme](~/cross-platform/deploy-test/memory-perf-best-practices.md), qui décrit les techniques spécifiques indépendantes des plateformes qui permettent d’améliorer l’utilisation de la mémoire et le niveau de performance des applications générées à l’aide de la plateforme Xamarin.
 
 <a name="optimizelayout" />
 
@@ -156,7 +156,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 Lorsque l’utilisateur utilise le défilement, l’instance de [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) appelle la substitution `GetView` pour demander l’affichage de nouveaux affichages. Si des affichages sont disponibles, elle passe un affichage non utilisé dans le paramètre `convertView`. Si cette valeur est `null`, le code crée une nouvelle instance de [`View`](https://developer.xamarin.com/api/type/Android.Views.View/) ; sinon les propriétés `convertView` peuvent être réinitialisées et réutilisées.
 
-Pour plus d’informations, consultez [Réutilisation d’un affichage de ligne](~/android/user-interface/layouts/list-view/populating.md) dans [Remplissage d’un affichage de liste avec des données](~/android/user-interface/layouts/list-view/populating.md).
+Pour plus d’informations, consultez [Réutilisation d’un affichage de ligne](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) dans [Remplissage d’un affichage de liste avec des données](~/android/user-interface/layouts/list-view/populating.md).
 
 <a name="removeeventhandlers" />
 
@@ -225,7 +225,7 @@ Pour recevoir une notification lorsque l’utilisateur quitte l’interface util
 
 ## <a name="optimize-image-resources"></a>Optimiser les ressources d’images
 
-Les images font partie des ressources les plus coûteuses qui sont utilisées par les applications et sont souvent capturées en haute résolution. Par conséquent, affichez les images à la résolution requise pour l’écran de l’appareil. Si la résolution de l’image est supérieure à celle de l’écran, elle doit être réduite.
+Les images font partie des ressources les plus lourdes utilisées par les applications, et sont souvent capturées à des résolutions élevées. Par conséquent, affichez les images à la résolution requise pour l’écran de l’appareil. Si la résolution de l’image est supérieure à celle de l’écran, elle doit être réduite.
 
 Pour plus d’informations, consultez [Optimiser les ressources d’images](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) dans le guide [Performances entre plateformes](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 

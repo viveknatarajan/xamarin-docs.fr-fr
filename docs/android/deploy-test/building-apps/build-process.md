@@ -6,12 +6,12 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: 51caebb86cb72b11ced70522fc253e608f5ccab0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/14/2018
+ms.openlocfilehash: 1f3f9316aec4ebfa0bb0868dd341abbfaa613cbc
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="build-process"></a>Processus de génération
 
@@ -23,40 +23,37 @@ Le processus de génération de Xamarin.Android est chargé de tout rassembler :
 
 ## <a name="application-packages"></a>Packages d’application
 
-En gros, il existe deux types de packages d’application Android (les fichiers `.apk`) que le système de génération Xamarin.Android peut produire :
+En gros, il existe deux types de packages d’application Android (les fichiers `.apk`) que le système de génération Xamarin.Android peut produire : 
 
--   Des versions **Release**, qui sont entièrement autonomes et ne nécessitent pas de packages supplémentaires pour s’exécuter. Ce sont ces packages qui sont fournis à un App Store.
+-   Des versions **Release**, qui sont entièrement autonomes et ne nécessitent pas de packages supplémentaires pour s’exécuter. Ce sont ces packages qui sont fournis à un App Store. 
 
--   Des versions **Debug**, qui ne le sont pas.
+-   Des versions **Debug**, qui ne le sont pas. 
 
 Ce n’est pas par hasard qu’elles correspondent à la `Configuration` de MSBuild qui produit le package.
-
 
 ### <a name="shared-runtime"></a>Runtime partagé
 
 Le *runtime partagé* est une paire de packages Android supplémentaires qui fournissent la bibliothèque de classes de base (`mscorlib.dll`, etc.) et la bibliothèque de liaison Android (`Mono.Android.dll`, etc.). Les versions Debug s’appuient sur le runtime partagé au lieu d’inclure la bibliothèque de classes de base et les assemblys de liaison dans le package d’application Android, ce qui explique la taille plus petite du package Debug.
 
-Le runtime partagé peut être désactivé dans les versions Debug en définissant la propriété `$(AndroidUseSharedRuntime)` sur `False`.
+Le runtime partagé peut être désactivé dans les versions Debug en définissant la propriété `$(AndroidUseSharedRuntime)` sur `False`. 
 
 <a name="Fast_Deployment" />
 
 ### <a name="fast-deployment"></a>Déploiement rapide
 
-Le *déploiement rapide* fonctionne conjointement avec le runtime partagé pour réduire encore plus la taille du package d’application Android. Pour cela, les assemblys de l’application ne sont pas intégrés dans le package. Ils sont plutôt copiés sur la cible via `adb push`. Ce processus accélère le cycle de génération/déploiement/débogage, car si *seuls* des assemblys sont modifiés, le package n’est pas réinstallé. Au lieu de cela, seuls les assemblys mis à jour sont resynchronisées sur l’appareil cible.
+Le *déploiement rapide* fonctionne conjointement avec le runtime partagé pour réduire encore plus la taille du package d’application Android. Pour cela, les assemblys de l’application ne sont pas intégrés dans le package. Ils sont plutôt copiés sur la cible via `adb push`. Ce processus accélère le cycle de génération/déploiement/débogage, car si *seuls* des assemblys sont modifiés, le package n’est pas réinstallé. Au lieu de cela, seuls les assemblys mis à jour sont resynchronisées sur l’appareil cible. 
 
-Le déploiement rapide est connu pour échouer sur les appareils qui bloquent la synchronisation de `adb` pour le répertoire `/data/data/@PACKAGE_NAME@/files/.__override__`.
+Le déploiement rapide est connu pour échouer sur les appareils qui bloquent la synchronisation de `adb` pour le répertoire `/data/data/@PACKAGE_NAME@/files/.__override__`. 
 
 Le déploiement rapide est activé par défaut et peut être désactivé dans les versions Debug en définissant la propriété `$(EmbedAssembliesIntoApk)` sur `True`.
-
 
 
 ## <a name="msbuild-projects"></a>Projets MSBuild
 
 Le processus de génération de Xamarin.Android est basé sur MSBuild, qui est également le format de fichier projet utilisé par Visual Studio pour Mac et Visual Studio.
-En règle générale, les utilisateurs n’ont pas besoin de modifier les fichiers MSBuild manuellement, car l’IDE crée des projets entièrement fonctionnels et les met à jour avec toutes les modifications apportées, puis appelle automatiquement les cibles de génération en fonction des besoins.
+En règle générale, les utilisateurs n’ont pas besoin de modifier les fichiers MSBuild manuellement, car l’IDE crée des projets entièrement fonctionnels et les met à jour avec toutes les modifications apportées, puis appelle automatiquement les cibles de génération en fonction des besoins. 
 
-Les utilisateurs avancés peuvent néanmoins souhaiter effectuer des opérations non prises en charge par l’interface graphique utilisateur de l’IDE : le processus de génération est donc personnalisable en modifiant le fichier projet directement.
-Cette page décrit seulement les fonctionnalités et les personnalisations spécifiques à Xamarin.Android : bien d’autres choses sont possibles avec les éléments, les propriétés et les cibles normales de MSBuild.
+Les utilisateurs avancés peuvent néanmoins souhaiter effectuer des opérations non prises en charge par l’interface graphique utilisateur de l’IDE : le processus de génération est donc personnalisable en modifiant le fichier projet directement. Cette page décrit seulement les fonctionnalités et les personnalisations spécifiques à Xamarin.Android : bien d’autres choses sont possibles avec les éléments, les propriétés et les cibles normales de MSBuild. 
 
 <a name="Build_Targets" />
 
@@ -79,13 +76,13 @@ Les cibles de génération suivantes sont définies pour les projets Xamarin.And
 
 ## <a name="build-properties"></a>Propriétés de build
 
-Les propriétés MSBuild contrôlent le comportement des cibles. Elles sont spécifiées dans le fichier projet, par exemple **MyApp.csproj**, dans un [élément MSBuild PropertyGroup](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx).
+Les propriétés MSBuild contrôlent le comportement des cibles. Elles sont spécifiées dans le fichier projet, par exemple **MyApp.csproj**, dans un [élément MSBuild PropertyGroup](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx). 
 
 -   **Configuration** &ndash; spécifie la configuration de build à utiliser, comme « Debug » ou « Release ». La propriété Configuration est utilisée pour déterminer les valeurs par défaut pour d’autres propriétés qui déterminent le comportement de la cible. Vous pouvez créer des configurations supplémentaires dans votre IDE.
 
     *Par défaut*, la configuration `Debug` fait que les cibles `Install` et `SignAndroidPackage` créent un package Android plus petit qui nécessite la présence d’autres fichiers et packages pour fonctionner.
 
-    La configuration `Release` par défaut fait que les cibles `Install` et `SignAndroidPackage` créent un package Android qui est *autonome* et peut être utilisé sans installer d’autres packages ou fichiers.
+    Dans la configuration `Release` par défaut, les cibles `Install` et `SignAndroidPackage` créent un package Android *autonome* et utilisable sans installer d’autres packages ou fichiers.
 
 -   **DebugSymbols** &ndash; une valeur booléenne qui détermine si le package Android est *débogable*, en combinaison avec la propriété `$(DebugType)`. Un package débogable contient des symboles de débogage, définit l’attribut `//application/@android:debuggable` sur `true` et ajoute automatiquement l’autorisation `INTERNET` de façon à ce qu’un débogueur puisse s’attacher au processus. Une application est débogable si `DebugSymbols` est `True` *, et si* `DebugType` est une chaîne vide ou `Full`.
 
@@ -106,7 +103,7 @@ Les propriétés d’installation contrôlent le comportement des cibles `Instal
 
     ```bash
     # Install package onto emulator via -e
-    # Use `/Library/Frameworks/Mono.framework/Commands/xbuild` on OS X
+    # Use `/Library/Frameworks/Mono.framework/Commands/msbuild` on OS X
     MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
     ```
 
@@ -116,6 +113,12 @@ Les propriétés d’installation contrôlent le comportement des cibles `Instal
 Les propriétés de packaging contrôlent la création du package Android et sont utilisées par les cibles `Install` et `SignAndroidPackage`.
 Les [propriétés de signature](#Signing_Properties) sont également impliquées pour le packaging des applications en version Release.
 
+
+-   **AndroidApkSigningAlgorithm** &ndash; valeur de chaîne qui spécifie l’algorithme de signature à utiliser avec `jarsigner -sigalg`.
+
+    La valeur par défaut est `md5withRSA`.
+
+    Ajouté dans Xamarin.Android 8.2.
 
 -   **AndroidApplication** &ndash; valeur booléenne qui indique si le projet est pour une application Android (`True`) ou pour un projet de bibliothèque Android (`False` ou absente).
 
@@ -139,6 +142,27 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
     Cette propriété est définie par défaut sur `False`.
 
+-   **AndroidErrorOnCustomJavaObject** &ndash; propriété booléenne qui détermine si les types peuvent implémenter `Android.Runtime.IJavaObject`
+     *sans* hériter également de `Java.Lang.Object` ou de `Java.Lang.Throwable` :
+
+    ```csharp
+    class BadType : IJavaObject {
+        public IntPtr Handle {
+            get {return IntPtr.Zero;}
+        }
+
+        public void Dispose()
+        {
+        }
+    }
+    ```
+
+    Lorsque sa valeur est True, ces types génèrent une erreur XA4212 ; sinon, un avertissement XA4212 est généré.
+
+    Ajouté dans Xamarin.Android 8.1.
+
+    Cette propriété est définie par défaut sur `True`.
+
 -   **AndroidFastDeploymentType** &ndash; Liste de valeurs séparées par le signe deux-points (`:`) pour contrôler les types qui peuvent être déployés sur le [répertoire de déploiement rapide](#Fast_Deployment) de l’appareil cible quand la propriété MSBuild `$(EmbedAssembliesIntoApk)` est définie sur `False`. Si une ressource est déployée via le déploiement rapide, elle n’est *pas* incorporée dans le fichier `.apk` généré, ce qui peut accélérer les temps de déploiement. (Plus il y a d’éléments déployés via le déploiement rapide, moins le fichier `.apk` doit être regénéré et plus le processus d’installation peut être rapide.) Les valeurs valides sont les suivantes :
 
     - `Assemblies` : déployer les assemblys de l’application.
@@ -155,23 +179,37 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
     Ajouté dans Xamarin.Android 6.1.
 
--   **AndroidHttpClientHandlerType** &ndash; autorise la définition de la valeur de la variable d’environnement [`XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
-    Cette valeur ne remplace pas une valeur `XA_HTTP_CLIENT_HANDLER_TYPE` explicitement spécifiée. Une valeur de variable d’environnement `XA_HTTP_CLIENT_HANDLER_TYPE` spécifiée dans un fichier [`@(AndroidEnvironment)`](#AndroidEnvironment) est prioritaire.
+-   **AndroidHttpClientHandlerType** &ndash; contrôle l’implémentation `System.Net.Http.HttpMessageHandler` par défaut qui sera utilisée par le constructeur `System.Net.Http.HttpClient` par défaut. Sa valeur est un nom de type qualifié d’assembly d’une sous-classe `HttpMessageHandler`, utilisable avec [`System.Type.GetType(string)`](/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_).
+
+    La valeur par défaut est `System.Net.Http.HttpClientHandler, System.Net.Http`.
+
+    Elle peut être remplacée par `Xamarin.Android.Net.AndroidClientHandler`, qui utilise les API Java Android pour exécuter les demandes réseau. Cela permet d’accéder aux URL TLS 1.2 lorsque la version Android sous-jacente prend en charge TLS 1.2.  
+    Seuls Android 5.0 et les versions ultérieures gèrent TLS 1.2 de façon fiable avec Java.
+
+    *Remarque* : Si la prise en charge de TLS 1.2 est requise sur les versions d’Android antérieures à 5.0, *ou* qu’elle est nécessaire avec `System.Net.WebClient` et les API associées, il faut utiliser `$(AndroidTlsProvider)`.
+
+    *Remarque* : La prise en charge de cette propriété passe par la définition de la [variable d’environnement `XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
+    Une valeur `$XA_HTTP_CLIENT_HANDLER_TYPE` trouvée dans un fichier avec l’action de génération `@(AndroidEnvironment)` sera prioritaire.
 
     Ajouté dans Xamarin.Android 6.1.
 
--   **AndroidTlsProvider** &ndash; valeur de chaîne qui spécifie le fournisseur TLS qui doit être utilisé dans une application. Les valeurs valides sont :
+-   **AndroidTlsProvider** &ndash; valeur de chaîne qui spécifie le fournisseur TLS qui doit être utilisé dans une application. Les valeurs possibles sont :
 
     - `btls` : utilise [BoringSSL](https://boringssl.googlesource.com/boringssl) pour la communication TLS avec [HttpWebRequest](https://msdn.microsoft.com/en-us/library/system.net.httpwebrequest.aspx).
-      Ceci permet l’utilisation de TLS 1.2.
+      Cela permet d’utiliser TLS 1.2 sur toutes les versions d’Android.
 
     - `legacy` : utilise l’implémentation historique gérée de SSL pour l’interaction réseau. Ceci *ne prend pas* en charge TLS 1.2.
 
-    - `default`, ou une chaîne non définie ou vide : dans Xamarin.Android 7.1, ceci équivaut à `legacy`.
+    - `default` : autorise *Mono* à choisir le fournisseur TLS par défaut.
+      Cela équivaut à `legacy`, même dans Xamarin.Android 7.3.  
+      *Remarque* : Il est peu probable que cette valeur apparaisse dans les valeurs `.csproj`, dans la mesure où la valeur « Default » de l’IDE provoque la *suppression* de la propriété `$(AndroidTlsProvider)`.
+
+    - Non défini/chaîne vide : dans Xamarin.Android 7.1, équivaut à `legacy`.  
+      Dans Xamarin.Android 7.3, équivaut à `btls`.
 
     La valeur par défaut est la chaîne vide.
 
-    **Experimental**. Ajouté dans Xamarin.Android 7.1.
+    Ajouté dans Xamarin.Android 7.1.
 
 -   **AndroidLinkMode** &ndash; spécifie le type de [liaison](~/android/deploy-test/linker.md) à effectuer sur les assemblys contenus dans le package Android. Utilisé seulement dans les projets d’application Android. La valeur par défaut est *SdkOnly*. Les valeurs valides sont les suivantes :
 
@@ -199,7 +237,7 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
     Lors de la génération, toutes les autres valeurs nécessaires y sont fusionnées pour produire le fichier `AndroidManifest.xml` effectif.
     `$(AndroidManifest)` doit contenir le nom du package dans l’attribut `/manifest/@package`.
 
--   **AndroidSdkBuildToolsVersion** &ndash; le package d’outils de génération du SDK Android fournit entre autres les outils **aapt** et **zipalign**. Plusieurs versions différentes du package d’outils de génération peuvent être installées en parallèle. Le package d’outils de génération choisi pour le packaging est réalisé en recherchant et en utilisant une version « préférée » des outils de génération si elle est présente ; si la version « préférée » n’est *pas* présente, le package d’outils de génération ayant la version la plus récente est utilisé.
+-   **AndroidSdkBuildToolsVersion** &ndash; le package d’outils de génération du SDK Android fournit entre autres les outils **aapt** et **zipalign**. Plusieurs versions différentes du package d’outils de génération peuvent être installées en parallèle. Le package d’outils de génération choisi pour l’empaquetage est réalisé en recherchant et en utilisant, le cas échéant, une version « favorite » des outils de génération ; s’il n’en existe *pas*, le package d’outils de génération associé à la version la plus récente sera utilisé.
 
     La propriété MSBuild `$(AndroidSdkBuildToolsVersion)` contient la version préférée des outils de génération. Le système de génération de Xamarin.Android fournit une valeur par défaut dans `Xamarin.Android.Common.targets`, et vous pouvez remplacer la valeur par défaut dans votre fichier projet et choisir une autre version des outils de génération, si (par exemple) la version la plus récente de aapt se bloque, alors qu’une version antérieure de aapt est connue pour fonctionner.
 
@@ -272,6 +310,7 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
     -   **West** : inclure les encodages occidentaux, comme *Europe de l’Ouest (Mac)* \[macintosh, CP10000\], *Islandais (Mac)* \[x-mac-icelandic, CP10079\], *Europe centrale (Windows)* \[iso-8859-2, CP1250\], *Europe centrale (Windows)* \[iso-8859-1, CP1252\], *Grec (Windows)* \[iso-8859-7, CP1253\], *Europe centrale (ISO)* \[iso-8859-2, CP28592\], *Latin 3 (ISO)* \[iso-8859-3, CP28593\], *Grec (ISO)* \[iso-8859-7, CP28597\], *Latin 9 (ISO)* \[iso-8859-15, CP28605\], *OEM États-Unis* \[CP437\], *Europe de l’Ouest (DOS)* \[CP850\], *Portugais (DOS)* \[CP860\], *Islandais (DOS)* \[CP861\], *Français (Canada) (DOS)* \[CP863\] et *Nordique (DOS)* \[CP865\].
 
+
     ```xml
     <MandroidI18n>West</MandroidI18n>
     ```
@@ -284,14 +323,14 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
 -   **AndroidVersionCodePattern** &ndash; propriété de type chaîne qui permet au développeur de personnaliser `versionCode` dans le manifeste.
     Consultez [Création de code de version pour APK](~/android/deploy-test/building-apps/abi-specific-apks.md) pour plus d’informations sur le choix d’un `versionCode`.
-
+    
     Voici des exemples : si `abi` est `armeabi` et si `versionCode` dans le manifeste est `123`, `{abi}{versionCode}` produit un code de version `1123` quand `$(AndroidCreatePackagePerAbi)` a la valeur True ; sinon il produit la valeur 123.
     Si `abi` est `x86_64` et `versionCode` dans le manifeste est `44`. Ceci produit `544` quand `$(AndroidCreatePackagePerAbi)` est True ; sinon, il produit la valeur `44`.
 
     Si nous incluons une chaîne avec remplissage à gauche `{abi}{versionCode:0000}`, ceci produit `50044`, car nous remplissons le `versionCode` à gauche avec `0`. Vous pouvez aussi utiliser le remplissage décimal, comme `{abi}{versionCode:D4}`, qui fait la même chose que l’exemple précédent.
 
     Seules les chaînes avec le format de remplissage « 0 » et « Dx » sont prises en charge, car la valeur DOIT être un entier.
-
+    
     Éléments importants prédéfinis
 
     -   **abi**  &ndash; insère l’ABI ciblé pour l’application
@@ -303,9 +342,11 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
     -   **minSDK**  &ndash; insère la valeur minimale du SDK prise en charge à partir de `AndroidManifest.xml` ou `11` si aucune valeur n’est définie.
 
-    -   **versionCode** &ndash; utilise le code de version provenant directement de `Properties\AndroidManifest.xml`.
+    -   **versionCode** &ndash; utilise le code de version provenant directement de `Properties\AndroidManifest.xml`. 
 
-    Vous pouvez définir des éléments personnalisés en utilisant la propriété `AndroidVersionCodeProperties` (définie ensuite).
+    Vous pouvez définir des éléments personnalisés en utilisant la propriété `$(AndroidVersionCodeProperties)` (définie ensuite).
+
+    La valeur par défaut est `{abi}{versionCode:D6}`. Si un développeur souhaite conserver l’ancien comportement, vous pouvez la remplacer en définissant la propriété `$(AndroidUseLegacyVersionCode)` sur `true`.
 
     Ajouté dans Xamarin.Android 7.2.
 
@@ -313,6 +354,21 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
     Ajouté dans Xamarin.Android 7.2.
 
+-   **AndroidUseLegacyVersionCode** &ndash; propriété booléenne qui permet au développeur de rétablir le comportement du calcul versionCode d’avant Xamarin.Android 8.2. Elle est RÉSERVÉE aux développeurs possédant des applications dans Google Play Store. Il est fortement recommandé d’utiliser la nouvelle propriété `$(AndroidVersionCodePattern)`.
+
+    Ajouté dans Xamarin.Android 8.2.
+
+-  **AndroidUseManagedDesignTimeResourceGenerator** &ndash; propriété booléenne qui change la génération au moment de la conception pour utiliser l’analyseur de ressources managées plutôt que `aapt`.
+
+    Ajouté dans Xamarin.Android 8.1.
+
+-  **AndroidUseApkSigner** &ndash; propriété booléenne qui permet au développeur d’utiliser l’outil `apksigner` plutôt que `jarsigner`.
+
+    Ajouté dans Xamarin.Android 8.2.
+
+-  **AndroidApkSignerAdditionalArguments** &ndash; propriété de chaîne qui permet au développeur de transmettre des arguments supplémentaires à l’outil `apksigner`.
+
+    Ajouté dans Xamarin.Android 8.2.
 
 ### <a name="binding-project-build-properties"></a>Liaison des propriétés de build du projet
 
@@ -320,7 +376,7 @@ Les propriétés MSBuild suivantes sont utilisées avec les [projets de liaison]
 
 -   **AndroidClassParser** &ndash; propriété de type chaîne qui contrôle comment les fichiers `.jar` sont analysés. Les valeurs possibles sont les suivantes :
 
-    - **class-parse** : utilise `class-parse.exe` pour analyser le bytecode Java directement, sans l’aide d’une machine virtuelle Java. Cette valeur est expérimentale.
+    - **class-parse** : utilise `class-parse.exe` pour analyser le bytecode Java directement, sans l’aide d’une machine virtuelle Java. Cette valeur est expérimentale. 
 
 
     - **jar2xml** : utilisez `jar2xml.jar` pour utiliser la réflexion Java pour extraire des types et des membres de réflexion d’un fichier `.jar`.
@@ -356,10 +412,9 @@ Les propriétés MSBuild suivantes sont utilisées avec les [projets de liaison]
     La valeur par défaut changera dans une version ultérieure.
 
 
-
 ### <a name="resource-properties"></a>Propriétés des ressources
 
-Les propriétés des ressources contrôlent la génération du fichier `Resource.designer.cs`, qui permet d’accéder aux ressources Android.
+Les propriétés des ressources contrôlent la génération du fichier `Resource.designer.cs`, qui permet d’accéder aux ressources Android. 
 
 -   **AndroidResgenExtraArgs** &ndash; spécifie des options de ligne de commande supplémentaires à passer à la commande **aapt** lors du traitement des composants et des ressources Android.
 
@@ -384,13 +439,13 @@ Par défaut, la cible de signature génère si nécessaire une nouvelle clé de 
 
 -   **AndroidKeyStore** &ndash; une valeur booléenne qui indique si des informations de signature personnalisées doivent être utilisées. La valeur par défaut est `False`, qui signifie que la clé de signature de débogage par défaut est utilisée pour signer les packages.
 
--   **AndroidSigningKeyAlias** &ndash; spécifie l’alias de la clé dans le magasin de clés. Il s’agit de la valeur **keytool -alias** utilisée lors de la création du magasin de clés.
+-   **AndroidSigningKeyAlias** &ndash; spécifie l’alias de la clé dans le magasin de clés. Il s’agit de la valeur **keytool -alias** utilisée lors de la création du magasin de clés. 
 
 -   **AndroidSigningKeyPass** &ndash; spécifie le mot de passe de la clé dans le fichier du magasin de clés. C’est la valeur entrée quand `keytool` demande **Entrez le mot clé pour $(AndroidSigningKeyAlias)**.
 
 -   **AndroidSigningKeyStore** &ndash; spécifie le nom de fichier du fichier de magasin de clés créé par `keytool`. Ceci correspond à la valeur fournie pour l’option **keytool -keystore**.
 
--   **AndroidSigningStorePass** &ndash; spécifie le mot de passe pour `$(AndroidSigningKeyStore)`. C’est la valeur fournie à `keytool` lors de la création du fichier de magasin de clés et demandée avec **Entrez le mot de passe du magasin de clés :**.
+-   **AndroidSigningStorePass** &ndash; spécifie le mot de passe pour `$(AndroidSigningKeyStore)`. C’est la valeur fournie à `keytool` lors de la création du fichier de magasin de clés et demandée avec **Entrez le mot de passe du magasin de clés :**. 
 
 Par exemple, considérons l’appel de `keytool` suivant :
 
@@ -421,11 +476,15 @@ Pour utiliser le magasin de clés généré ci-dessus, utilisez le groupe de pro
 </PropertyGroup>
 ```
 
+-   **AndroidDebugKeyAlgorithm** &ndash; spécifie l’algorithme par défaut à utiliser pour le `debug.keystore`. Ce champ est défini sur `RSA` par défaut.
+
+-   **AndroidDebugKeyValidity** &ndash; spécifie la validité par défaut à utiliser pour le `debug.keystore`. Ce champ est défini sur `10950`, `30 * 365` ou `30 years` par défaut.
+
 <a name="Build_Actions" />
 
 ## <a name="build-actions"></a>Actions de génération
 
-Les *actions de génération* sont [appliquées aux fichiers](http://msdn.microsoft.com/en-us/library/bb629388.aspx) du projet et contrôlent la façon dont le fichier est traité.
+Les *actions de génération* sont [appliquées aux fichiers](http://msdn.microsoft.com/en-us/library/bb629388.aspx) du projet et contrôlent la façon dont le fichier est traité. 
 
 <a name="AndroidEnvironment" />
 
@@ -492,10 +551,10 @@ Notez que comme Android prend en charge plusieurs ABI (Application Binary Interf
 1.  « Détection » du chemin.
 2.  Avec l’attribut d’élément `Abi`.
 
-Avec la détection de chemin, le nom du répertoire parent de la bibliothèque native est utilisé pour spécifier l’ABI ciblée par la bibliothèque. Ainsi, si vous ajoutez `lib/armeabi/libfoo.so` à la build, l’ABI sera « détectée » en tant que `armeabi`.
+Avec la détection de chemin, le nom du répertoire parent de la bibliothèque native est utilisé pour spécifier l’ABI ciblée par la bibliothèque. Ainsi, si vous ajoutez `lib/armeabi/libfoo.so` à la build, l’ABI sera « détectée » en tant que `armeabi`. 
 
 
-### <a name="item-attribute-name"></a>Nom d’attribut d’élément
+#### <a name="item-attribute-name"></a>Nom d’attribut d’élément
 
 **Abi** &ndash; spécifie l’ABI de la bibliothèque native.
 
@@ -506,6 +565,13 @@ Avec la détection de chemin, le nom du répertoire parent de la bibliothèque n
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
+
+
+### <a name="androidaarlibrary"></a>AndroidAarLibrary
+
+Il est recommandé d’utiliser l’action de génération de `AndroidAarLibrary` pour référencer directement les fichiers .aar. Elle est le plus souvent utilisée par les composants Xamarin, notamment pour inclure des références à des fichiers .aar requis pour faire fonctionner Google Play et d’autres services.
+
+Les fichiers comportant cette action de génération seront traités de la même manière que les ressources des projets de la bibliothèque. Le .aar sera extrait dans le répertoire intermédiaire. Ensuite, les composants, les ressources et les fichiers .jar seront inclus dans les groupes d’articles correspondants.  
 
 ### <a name="content"></a>Contenu
 
@@ -527,7 +593,6 @@ Les fichiers avec une action de génération *ProguardConfiguration* contiennent
 Ces fichiers sont ignorés sauf si la propriété MSBuild `$(EnableProguard)` est définie sur `True`.
 
 
-
 ## <a name="target-definitions"></a>Définitions de cibles
 
 Les parties spécifiques à Xamarin.Android du processus de génération sont définies dans `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`, mais des cibles normales spécifiques au langage comme *Microsoft.CSharp.targets* sont également nécessaires pour générer l’assembly.
@@ -542,7 +607,7 @@ Les propriétés de génération suivantes doivent être définies avant l’imp
 </PropertyGroup>
 ```
 
-Toutes ces cibles et propriétés peuvent être incluses pour C# en important *Xamarin.Android.CSharp.targets* :
+Toutes ces cibles et propriétés peuvent être incluses pour C# en important *Xamarin.Android.CSharp.targets* : 
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

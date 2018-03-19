@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: d7532d052c57ad46caca0cd6d6ce26d0e77dc05f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="automatic-provisioning"></a>Provisionnement automatique
 
@@ -34,23 +34,15 @@ Pour signer automatiquement votre application pour un déploiement sur un appare
 
 1. Ouvrez votre projet iOS dans Visual Studio pour Mac.
 
-2. Ouvrez le fichier **Info.plist** :
+2. Ouvrez le fichier **Info.plist**.
 
-    ![Fichier Info.plist](automatic-provisioning-images/image1.png)
-
-3. Dans la section **Signature**, sélectionnez votre équipe dans la liste déroulante **Équipe** :
+3. Dans la section **Signature**, sélectionnez **Attribution automatique** :
 
     ![Liste déroulante de sélection de l’équipe](automatic-provisioning-images/image2.png)
 
-4. Cochez la case **Gérer automatiquement la signature**, comme illustré ci-dessous. Le processus de signature automatique démarre. Visual Studio pour Mac essaie de générer un ID d’application, un profil de provisionnement et une identité de signature, puis de définir ces artefacts à utiliser pour la signature. Quand la case est cochée, les contrôles manuels de sélection des identités de signatures sont désactivés.
+4. Sélectionnez votre équipe dans la liste déroulante **Équipe**.
 
-    ![option de gestion automatique des équipes](automatic-provisioning-images/image3.png)
-
-5. La boîte de dialogue suivante s’affiche, vous informant que le fichier projet va être modifié pour utiliser le certificat et le profil de provisionnement nouvellement générés :
-
-    ![boîte de dialogue qui avertit de la modification du fichier projet](automatic-provisioning-images/image4.png)
-
-6. Après quelques secondes, un profil de certificat de signature et de provisionnement est créé et affiché :
+6. Au bout de quelques secondes, un certificat de signature et un profil d’attribution seront créés :
 
     ![certificat et profil correctement créés](automatic-provisioning-images/image5.png)
 

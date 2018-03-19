@@ -6,12 +6,12 @@ ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: bfbd95d33e442d31e94bd8c6ed888741f88d1188
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: 971c663a93a837e40e82aa63e24ce4935c44c85a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="linking-on-android"></a>Liaison sur Android
 
@@ -19,37 +19,10 @@ Les applications Xamarin.Android utilisent un *éditeur de liens* pour réduire 
 
 Par exemple, [Hello, Android](https://developer.xamarin.com/samples/HelloM4A/) :
 
-<table border="0" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-        <strong>Configuration</strong>
-      </td>
-      <td>
-        <strong>1.2.0 Size</strong>
-      </td>
-      <td>
-        <strong>4.0.1 Size</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-Version sans liaison : </td>
-      <td>
-14,0 Mo </td>
-      <td>
-16,0 Mo </td>
-    </tr>
-    <tr>
-      <td>
-Version avec liaison : </td>
-      <td>
-4,2 Mo </td>
-      <td>
-2,9 Mo </td>
-    </tr>
-  </tbody>
-</table>
+|Configuration|1.2.0 Size|4.0.1 Size|
+|---|---|---|
+|Version sans liaison :|14,0 Mo|16,0 Mo|
+|Version avec liaison :|4,2 Mo|2,9 Mo|
 
 La liaison produit un package qui est de 30 % de la taille du package d’origine (non lié) dans 1.2.0 et de 18 % du package non lié dans 4.0.1.
 
