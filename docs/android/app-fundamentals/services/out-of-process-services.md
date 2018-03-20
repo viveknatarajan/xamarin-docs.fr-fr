@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 0f018aa666f08792a1693a79e22da150f82712f6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ebbb4b527b27b87bb6357723978e730304658720
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>Services en cours d’exécution Android dans les processus à distance
 
@@ -58,7 +58,7 @@ Ce guide traite des détails d’implémentation d’un service d’out-of-proce
 > [!IMPORTANT]
 > [Bugzilla 51940 - échouent de Services avec un processus isolé et de la classe d’Application personnalisée résoudre correctement des surcharges de](https://bugzilla.xamarin.com/show_bug.cgi?id=51940) rapports Xamarin.Android service ne démarre pas correctement lorsque le `IsolatedProcess` a la valeur `true`. Ce guide est fourni pour une référence. Une application de Xamarin.Android doit toujours être en mesure de communiquer avec un service d’out-of-process qui est écrit en langage Java.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide suppose que vous êtes familiarisé avec la création de services.
 
@@ -415,7 +415,7 @@ Un exemple simplifié de création personnalisé `normal` autorisation sera déc
 
 Pour utiliser une autorisation personnalisée, il est déclaré par le service pendant que le client demande explicitement cette autorisation.
 
-Pour créer une autorisation dans le service APK, un `permission` élément est ajouté à la `manifest` élément**AndroidManifest.xml**. Cette autorisation doit avoir le `name`, `protectionLevel`, et `label` jeu d’attributs. Le `name` attribut doit être défini sur une chaîne qui identifie de façon unique l’autorisation. Le nom s’affichera dans le **App Info** afficher de la **paramètres Android** (comme indiqué dans la section suivante).
+Pour créer une autorisation dans le service APK, un `permission` élément est ajouté à la `manifest` élément **AndroidManifest.xml**. Cette autorisation doit avoir le `name`, `protectionLevel`, et `label` jeu d’attributs. Le `name` attribut doit être défini sur une chaîne qui identifie de façon unique l’autorisation. Le nom s’affichera dans le **App Info** afficher de la **paramètres Android** (comme indiqué dans la section suivante).
 
 Le `protectionLevel` attribut doit être défini à une des valeurs de chaîne de quatre qui ont été décrites ci-dessus.  Le `label` et `description` doit faire référence à des ressources de type chaîne et sont utilisés pour fournir un nom convivial et une description pour l’utilisateur.
 

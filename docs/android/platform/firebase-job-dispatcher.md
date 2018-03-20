@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Répartiteur de travail firebase
 
@@ -27,7 +27,7 @@ Par exemple, une tâche en arrière-plan peut interroger un site Web à quelques
 Android fournit déjà plusieurs API pour aider à effectuer le travail en arrière-plan, mais aucun de ces éléments sont une solution complète :
 
 * **[Services intentionnels](~/android/app-fundamentals/services/creating-a-service/intent-services.md)**  &ndash; intention de Services sont très utiles pour effectuer le travail, mais elles n’offrent aucun moyen de planifier le travail.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager)**  &ndash; ces API permettent uniquement être planifiée, mais ne fournissent aucun moyen pour effectuer le travail le travail. Permet également de, le AlarmManager uniquement les contraintes de temps en fonction, ce qui signifie que de déclencher une alarme à un moment donné ou après qu’une certaine période de temps écoulé. 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; ces API permettent uniquement être planifiée, mais ne fournissent aucun moyen pour effectuer le travail le travail. Permet également de, le AlarmManager uniquement les contraintes de temps en fonction, ce qui signifie que de déclencher une alarme à un moment donné ou après qu’une certaine période de temps écoulé. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; JobSchedule l’est une excellente API qui fonctionne avec le système d’exploitation pour planifier des travaux. Toutefois, il est uniquement disponible pour les applications Android qui ciblent le niveau 21 d’API ou une version ultérieure. 
 * **[Récepteurs](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; Android une application peut configurer des récepteurs de diffusion pour effectuer un travail en réponse aux événements large système ou intentions. Toutefois, les récepteurs de diffusion ne fournissent pas quand la tâche doit s’exécuter n’importe quel contrôle. Également les modifications dans le système d’exploitation Android limitera lorsque les récepteurs de diffusion fonctionnent, ou les types de travail qu’ils puissent répondre aux. 
 * **Gestionnaire de réseau de Google Cloud Message** &ndash; pour un certain temps, il s’agit, sans doute, la meilleure façon intelligent en arrière-plan de planification de travail. Toutefois, le GCMNetworkManager est depuis déconseillée. 
@@ -56,7 +56,7 @@ Pour planifier un travail, l’application instancie un `JobDispatcher` objet. E
 
 Ce guide explique comment ajouter le répartiteur de travail Firebase à une application de Xamarin.Android et l’utiliser pour planifier le travail d’arrière-plan.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Le répartiteur de travail Firebase requiert un niveau d’API Android 9 ou version ultérieure. La bibliothèque de répartiteur du travail Firebase s’appuie sur certains composants fournis par les Services Google Play ; l’appareil doit avoir les Services Google Play installé.
 

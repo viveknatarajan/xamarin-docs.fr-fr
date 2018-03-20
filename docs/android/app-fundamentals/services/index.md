@@ -7,12 +7,12 @@ ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
-ms.openlocfilehash: 5dc1fb0fb02014e123b3a161394155bde725f288
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 08392872037783e0caaef4f2b19127adbe95151b
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="creating-android-services"></a>Création de Services Android
 
@@ -43,7 +43,7 @@ Travail d’arrière-plan peut être répartie en deux catégories générales 
 
 Il existe quatre différents types de services Android :
 
-* **Lié Service** &ndash; A _lié service_ est un service qui a un autre composant (généralement une activité), qui lui est associée. Un service lié fournit une interface qui permet au service d’interagir entre eux et le composant lié. Une fois qu’il n’y a plus aucun client lié au service, Android va arrêter le service.
+* **Lié Service** &ndash; A _lié service_ est un service qui a un autre composant (généralement une activité), qui lui est associée. Un service lié fournit une interface qui permet au service d’interagir entre eux et le composant lié. Une fois qu’il n’y a plus aucun client lié au service, Android va arrêter le service. 
 
 * **`IntentService`** &ndash; Un  _`IntentService`_  est une sous-classe spécialisée de la `Service` classe qui simplifie la création de services et d’utilisation. Un `IntentService` est destinée à traiter des appels autonomes individuels. Contrairement à un service, ce qui peut gérer simultanément plusieurs appels, un `IntentService` ressemble davantage un _processeur de la file d’attente de travail_ &ndash; travail est la file d’attente et un `IntentService` traite chaque travail d’un à la fois sur un thread de travail unique. En règle générale, une`IntentService` n’est pas lié à une activité ou un Fragment. 
 
@@ -57,4 +57,26 @@ La plupart des services s’exécutent en arrière-plan, mais il existe une sous
 
 Il est également possible d’exécuter un service dans son propre processus sur le même périphérique, il est parfois appelé un _service distant_ ou comme une _out-of-process service_. Cela nécessite davantage d’efforts pour créer, mais peut être utile pour lorsqu’une application doit partager des fonctionnalités avec d’autres applications et peut, dans certains cas, améliorer l’expérience utilisateur d’une application. 
 
-Chacun de ces services possède ses propres caractéristiques et les comportements et donc est abordée plus en détail dans les guides de leurs propres.
+### <a name="background-execution-limits-in-android-80"></a>Limites de l’exécution en arrière-plan dans Android 8.0
+
+Démarrage 8.0 Android (API niveau 26), d’une application Android n’est plus ont la possibilité d’exécuter librement en arrière-plan. En premier plan, une application peut démarrer et exécuter les services sans restriction. Lorsqu’une application se déplace dans l’arrière-plan, Android accorder à l’application un certain laps de temps pour démarrer et utiliser des services. Une fois ce délai écoulé, l’application peut ne plus démarrer tous les services et les services qui ont été démarrées va être interrompues. À ce point est n’est pas possible de l’application effectuer des tâches. Android considère qu’une application au premier plan si une des conditions suivantes est remplie :
+
+* Il existe une activité visible (démarré ou suspendu).
+* L’application a démarré un service de premier plan.
+* Une autre application est au premier plan et à l’aide de composants à partir d’une application qui serait sinon en arrière-plan. Est un exemple si une Application, qui est au premier plan, est liée à un service fourni par Application B. Application B puis serait également pris en compte dans le premier plan et ne pas arrêté par Android d’en cours en arrière-plan.
+
+Il existe certaines situations où, même si une application est en arrière-plan, Android vous mettre en éveil, l’application et assouplir ces restrictions pendant quelques minutes, ce qui permet l’application à exécuter des tâches :
+* Une priorité élevée Firebase Cloud Message est reçue par l’application.
+* L’application reçoit une diffusion, telles que 
+* L’application reçoit un exécute un `PendingIntent` en réponse à une Notification.
+
+Les applications existantes Xamarin.Android peut-être modifier la façon dont ils effectuent le travail d’arrière-plan pour éviter les problèmes susceptibles de survenir sur Android 8.0. Voici quelques pratiques alterantives à un service Android :
+
+* **Planifier le travail à exécuter en arrière-plan à l’aide du Planificateur de travaux Android ou [Firebase travail répartiteur](~/android/platform/firebase-job-dispatcher.md)**  &ndash; ces deux bibliothèques fournissent une infrastructure pour les applications répartir le travail en arrière-plan dans _travaux_, une petite unité de travail. Applications peuvent ensuite planifier le travail avec le système d’exploitation, ainsi que des critères sur lorsque le travail peut s’exécuter.
+* **Démarrer le service de premier plan** &ndash; un service de premier plan est utile pour lorsque l’application doit effectuer une tâche en arrière-plan et l’utilisateur devra peut-être régulièrement interagir avec cette tâche. Le service de premier plan affiche une notification persistante afin que l’utilisateur soit informé que l’application exécute une tâche en arrière-plan et fournit également un moyen d’analyser ou d’interagir avec la tâche. Un exemple de ce serait une application podcasting lire à l’utilisateur un podcast ou peut-être télécharger un épisode de podcast afin qu’il peut être apprécié plus tard. 
+* **Utilisez une priorité haute Firebase Cloud Message (FCM)** &ndash; Android lorsque reçoit une priorité élevée FCM pour une application, il autorise cette application exécuter les services en arrière-plan pendant une courte période de temps. Ce serait une bonne approche pour disposer d’un service en arrière-plan qui interroge une application en arrière-plan. 
+* **Différer le travail lorsque l’application est au premier plan** &ndash; si aucune des solutions précédentes sont viables, alors que les applications doivent développer leur propres permet de suspendre et reprendre le travail lorsque l’application s’affiche au premier plan.
+
+## <a name="related-links"></a>Liens associés
+
+* [Limites de l’exécution en arrière-plan Oreo Android](https://www.youtube.com/watch?v=Pumf_4yjTMc)

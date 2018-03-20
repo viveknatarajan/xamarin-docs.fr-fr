@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 50f99c48d0f53bd6a2dfaf42284137ce1e424b30
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 747c158460b23b91e4c2986d212802528cdd3979
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="an-introduction-to-skiasharp"></a>Introduction à SkiaSharp
 
@@ -20,7 +20,7 @@ _Cela fournit une brève introduction aux concepts derrière SkiaSharp_
 
 SkiaSharp fournit un graphique 2D riche et puissant API qui peut être utilisé pour effectuer le rendu dans des mémoires tampons 2D.  Vous pouvez utiliser ces pour implémenter les éléments d’interface utilisateur personnalisée et les graphiques 2D qui peuvent être incorporées dans votre application.  SkiaSharp est une liaison de .NET pour les [Skia](https://skia.org) bibliothèque et hérite les fonctionnalités et la puissance de cette bibliothèque.
 
-La bibliothèque est actuellement disponible en un inter-plateformes [NuGet Package](https://www.nuget.org/packages/SkiaSharp), vous pouvez à votre projet en ajoutant la référence de NuGet.
+La bibliothèque est actuellement disponible en un inter-plateformes [NuGet Package](https://www.nuget.org/packages/SkiaSharp), vous pouvez l’ajouter à votre projet en ajoutant la référence de NuGet.
 
 Pour dessiner, votre code crée un `SkCanvas` qui décrit la surface où les opérations de dessin aura lieu.
 
