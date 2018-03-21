@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/21/2016
-ms.openlocfilehash: c6fb404919621e1b22217b4461597ae07a5624c4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3ce0fd2b83599fca7f38c161bbd2137254b75bd5
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xaml-compilation"></a>Compilation du code XAML
 
@@ -56,7 +56,7 @@ public class HomePage : ContentPage
 Dans cet exemple, lors de la compilation du code XAML pour la vérification de la `HomePage` classe sera effectuée et les erreurs signalées en tant que partie du processus de compilation.
 
 > [!NOTE]
-> Le `XamlCompilation` attribut et la `XamlCompilationOptions` énumération se trouvent dans le `Xamarin.Forms.Xaml0` espace de noms qui doit être importé pour pouvoir les utiliser.
+> Le `XamlCompilation` attribut et la `XamlCompilationOptions` énumération se trouvent dans le `Xamarin.Forms.Xaml` espace de noms qui doit être importé pour pouvoir les utiliser.
 
 
 ## <a name="related-links"></a>Liens associés

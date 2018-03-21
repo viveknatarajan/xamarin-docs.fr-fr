@@ -6,12 +6,12 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 22ddf61d3636962273716d8d5c48857e0004bb42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 69a5c905367f9e6dbd38acb664ad21b9dbe63efc
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="frequently-asked-questions"></a>Questions fréquemment posées
 
@@ -68,6 +68,11 @@ La cause la plus courante de ce problème est que le **INTERNET** autorisation e
 ### <a name="smarter-xamarin-android-support-v4--v13-nuget-packagesandroid-support-v4v13-librariesmd"></a>[Packages NuGet v4 / v13 de prise en charge Xamarin Android plus intelligents](android-support-v4v13-libraries.md)
 
 `Support-v4` et `Support-v13` ne peuvent pas être utilisées ensemble dans la même application, autrement dit, ils s’excluent mutuellement. C’est parce que `Support-v13` réellement contient tous les types et l’implémentation de `Support-v4`. Si vous essayez font référence à la fois dans le même projet, vous rencontrerez des erreurs de type en double.
+
+### <a name="how-do-i-resolve-a-pathtoolongexception-errorpath-too-long-exceptionmd"></a>[Résolution d’une erreur PathTooLongException](path-too-long-exception.md)
+
+Cet article explique comment résoudre un **PathTooLongException** erreur pouvant se produire lors de la génération d’un projet Xamarin.Android.
+
 
 
 ## <a name="deprecated"></a>Déconseillé

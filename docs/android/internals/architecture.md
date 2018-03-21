@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9834da444032622cc3547e7c99ca3de0e41bb603
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="architecture"></a>Architecture
 
@@ -33,7 +33,7 @@ Pour plus d’informations sur la façon dont les classes Android communiquent a
 
 Packages d’application Android sont des conteneurs ZIP avec un *.apk* extension de fichier. Les packages d’applications Xamarin.Android ont la même structure et la disposition en tant que les packages Android normales, avec les ajouts suivants :
 
--   Les assemblys d’application (qui contient le langage intermédiaire) sont *stockées* non compressé dans le *assemblys* dossier. Au cours du processus de démarrage dans la version génère la *.apk* est *mmap()* ed dans le processus et les assemblys sont chargés à partir de la mémoire. Cela permet le démarrage accéléré des applications, en tant qu’assemblys n’ont ne pas à extraire avant l’exécution. - *Remarque :* les informations d’emplacement Assembly comme [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/) et [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
+-   Les assemblys d’application (qui contient le langage intermédiaire) sont *stockées* non compressé dans le *assemblys* dossier. Au cours du processus de démarrage dans la version génère la *.apk* est *mmap()* ed dans le processus et les assemblys sont chargés à partir de la mémoire. Cela permet le démarrage accéléré des applications, comme assemblys n’avez pas besoin être extrait avant l’exécution. - *Remarque :* les informations d’emplacement Assembly comme [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/) et [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
     *ne peut pas se reposer* de version builds. Ils n’existent pas sous forme d’entrées de système de fichiers distincts et n’avoir aucun emplacement utilisable.
 
 

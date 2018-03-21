@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: ffde89558495c4b9ccb9ec41761b5fc7ca53db38
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="localization"></a>Localisation
 
@@ -21,22 +21,6 @@ _Xamarin.Forms applications peuvent être localisées à l’aide de fichiers de
 ## <a name="overview"></a>Vue d'ensemble
 
 Le mécanisme intégré pour la localisation utilise des applications .NET [fichiers RESX](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) et les classes dans le `System.Resources` et `System.Globalization` espaces de noms. Fichiers RESX contenant les chaînes traduites sont incorporés dans l’assembly Xamarin.Forms, ainsi que d’une classe générée par le compilateur qui fournit un accès fortement typé pour les traductions. Le texte de traduction peut ensuite être récupéré dans le code.
-
-Ce document contient les sections suivantes :
-
-**Globalisation de Code de Xamarin.Forms**
-
-* L’ajout et à l’aide des ressources de chaîne dans une application de bibliothèque de classes portables Xamarin.Forms.
-* Activation de la détection de langage dans chacune des applications natives.
-
-**Localiser des éléments XAML**
-
-* Localisation de XAML à l’aide un `IMarkupExtension`.
-* L’activation de l’extension de balisage dans les applications natives.
-
-**Localisation des éléments spécifiques à la plateforme**
-
-* Localisation des images et le nom de l’application dans les applications natives.
 
 ### <a name="sample-code"></a>Exemple de code
 
@@ -651,15 +635,17 @@ using Xamarin.Forms.Xaml;
 
 namespace UsingResxLocalization
 {
-    // You exclude the 'Extension' suffix when using in Xaml markup
-    [ContentProperty ("Text")]
+    // You exclude the 'Extension' suffix when using in XAML
+    [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        readonly CultureInfo ci;
+        readonly CultureInfo ci = null;
         const string ResourceId = "UsingResxLocalization.Resx.AppResources";
 
-        private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(()=> new ResourceManager(ResourceId
-                                                                                                                  , typeof(TranslateExtension).GetTypeInfo().Assembly));
+        static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(
+            () => new ResourceManager(ResourceId, IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly));
+
+        public string Text { get; set; }
 
         public TranslateExtension()
         {
@@ -669,24 +655,21 @@ namespace UsingResxLocalization
             }
         }
 
-        public string Text { get; set; }
-
-        public object ProvideValue (IServiceProvider serviceProvider)
+        public object ProvideValue(IServiceProvider serviceProvider)
         {
             if (Text == null)
-                return "";
+                return string.Empty;
 
             var translation = ResMgr.Value.GetString(Text, ci);
-
             if (translation == null)
             {
-                #if DEBUG
+#if DEBUG
                 throw new ArgumentException(
-                    String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
+                    string.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
                     "Text");
-                #else
-                translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
-                #endif
+#else
+                translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
+#endif
             }
             return translation;
         }
@@ -699,7 +682,7 @@ Les puces suivantes expliquent les éléments importants dans le code ci-dessus�
 * La classe est nommée `TranslateExtension`, mais par convention, nous pouvons faire joue **traduire** dans notre balisage.
 * La classe implémente `IMarkupExtension`, ce qui est requis par Xamarin.Forms pour qu’il fonctionne.
 * `"UsingResxLocalization.Resx.AppResources"` est l’identificateur de ressource pour nos ressources RESX. Il est composé de notre espace de noms par défaut, le dossier dans lequel se trouvent les fichiers de ressources et le nom du fichier RESX par défaut.
-* Le `ResourceManager` classe est créée à l’aide de `typeof(TranslateExtension)` pour déterminer l’assembly actuel pour charger les ressources à partir de.
+* Le `ResourceManager` classe est créée à l’aide de `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` pour déterminer l’assembly actuel pour charger les ressources à partir et mis en cache dans la méthode statique `ResMgr` champ. Il est créé comme un `Lazy` type afin que sa création est différée jusqu'à ce qu’il est utilisé d’abord dans le `ProvideValue` (méthode).
 * `ci` utilise le service de dépendance pour obtenir le langage choisi de l’utilisateur du système d’exploitation natif.
 * `GetString` est la méthode qui Récupère la chaîne traduite réelle à partir des fichiers de ressources. Sur Windows Phone 8.1 et la plateforme Windows universelle, `ci` est null, car le `ILocalize` interface n’est pas implémentée sur ces plateformes. Cela revient à appeler la `GetString` méthode avec uniquement le premier paramètre. Au lieu de cela, l’infrastructure de ressources reconnaît automatiquement les paramètres régionaux et récupère la chaîne traduite dans le fichier RESX approprié.
 * Gestion des erreurs a été incluses pour vous aider à déboguer des ressources manquantes en levant une exception (dans `DEBUG` mode uniquement).

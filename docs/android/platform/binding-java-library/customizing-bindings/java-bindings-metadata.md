@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="java-bindings-metadata"></a>Métadonnées de liaisons de Java
 
@@ -275,7 +275,7 @@ Notez que les méthodes d’accesseur Get et Set seront toujours créées par le
 
 ### <a name="sender"></a>sender
 
-Spécifie le paramètre d’une méthode doit être le `sender` paramètre lorsque la méthode est mappée à un événement. La valeur peut être `true` ou `false`. Exemple :
+Spécifie le paramètre d’une méthode doit être le `sender` paramètre lorsque la méthode est mappée à un événement. La valeur peut être `true` ou `false`. Exemple :
 
 ```xml
 <attr path="/api/package[@name='android.app']/
@@ -313,7 +313,7 @@ Le **EnumFields.xml** fichier contient le mappage entre Java `int` constantes et
 </mapping>
 ```
 
-Ici, nous avons pris la classe Java `SKRealReachSettings` et défini un enum c# appelé `SKRealReachSettings` dans l’espace de noms `Skobbler.Ngx.Map.RealReach`. Le `field` entrées définit le nom de la constante de Java (exemple `UNIT\_SECOND`), le nom de l’entrée de l’enum (exemple `Second`) et la valeur entière représentée par les deux entités (exemple `0`). 
+Ici, nous avons pris la classe Java `SKRealReachSettings` et défini un enum c# appelé `SKMeasurementUnit` dans l’espace de noms `Skobbler.Ngx.Map.RealReach`. Le `field` entrées définit le nom de la constante de Java (exemple `UNIT_SECOND`), le nom de l’entrée de l’enum (exemple `Second`) et la valeur entière représentée par les deux entités (exemple `0`). 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Définition des méthodes d’accesseur Get/Set à l’aide de EnumMethods.xml
 
@@ -328,7 +328,7 @@ Le **EnumMethods.xml** fichier permet de changer les paramètres de méthode et 
 </mapping>
 ```
 
-La première `method` ligne mappe la valeur de retour de Java `getMeasurementUnit` méthode à la `SKRealReachSettings` enum. La seconde `method` ligne mappe le premier paramètre de la `setMeasurementUnit` à la même énumération.
+La première `method` ligne mappe la valeur de retour de Java `getMeasurementUnit` méthode à la `SKMeasurementUnit` enum. La seconde `method` ligne mappe le premier paramètre de la `setMeasurementUnit` à la même énumération.
 
 Toutes ces modifications en place, vous pouvez utiliser le code suivant dans Xamarin.Android pour définir le `MeasurementUnit`: 
 

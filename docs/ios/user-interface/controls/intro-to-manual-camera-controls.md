@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7111c1716ef3a8869f8b2401a7653d9e9941977b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5e44635c9dfbe9fa069272f50d035476bd1aa6b9
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="manual-camera-controls"></a>Contrôles de la caméra manuelle
 
@@ -47,7 +47,7 @@ La mise entre parenthèses de Capture est basée sur les paramètres de l’appa
 
 En termes simples, entre parenthèses de Capture est une rafale de toujours images prises avec une variété de paramètres d’image à l’image.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour terminer les étapes présentées dans cet article :
 
@@ -370,7 +370,7 @@ La vue contient les éléments principaux suivants :
 Procédez comme suit pour la transmission du contrôleur d’affichage pour le contrôle du Focus manuel :
 
 
- 1. Ajoutez le code suivant à l’aide des instructions :
+1. Ajoutez le code suivant à l’aide des instructions :
 
     ```csharp
     using System;
@@ -387,7 +387,7 @@ Procédez comme suit pour la transmission du contrôleur d’affichage pour le c
     using System.Timers;
     ```  
   
- 1. Ajoutez les variables privées suivantes :
+1. Ajoutez les variables privées suivantes :
 
     ```csharp
     #region Private Variables
