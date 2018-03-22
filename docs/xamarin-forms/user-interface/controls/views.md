@@ -1,6 +1,6 @@
 ---
 title: Vues de Xamarin.Forms
-description: "Xamarin.Forms vues sont les blocs de construction d’interfaces utilisateur de mobile multiplateforme."
+description: Xamarin.Forms vues sont les blocs de construction d’interfaces utilisateur de mobile multiplateforme.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
@@ -8,8 +8,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: f7d27c5226741ec2b105633206ebaa0ac73d9a7b
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 45dc110104d7bb064aff1c883f65d894cbe6402f
+ms.sourcegitcommit: c3abb91d1a944de07d1b2b0878b02752c768d722
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/22/2018
@@ -100,7 +100,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 
 |     |     |
 | --- | --- |
-| [`Switch`](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) prend la forme d’un commutateur marche/arrêt pour permettre à l’utilisateur de sélectionner une valeur booléenne. Le [ `IsToggled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Switch.IsToggled/) propriété est l’état du commutateur et le [ `Toggled` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Switch.Toggled/) événement est déclenché lorsque l’état change.<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) | [![Exemple de commutateur](views-images/Switch.png "basculer exemple")](views-images/Stepper-Large.png#lightbox "basculer l’exemple")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
+| [`Switch`](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) prend la forme d’un commutateur marche/arrêt pour permettre à l’utilisateur de sélectionner une valeur booléenne. Le [ `IsToggled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Switch.IsToggled/) propriété est l’état du commutateur et le [ `Toggled` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Switch.Toggled/) événement est déclenché lorsque l’état change.<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) | [![Exemple de commutateur](views-images/Switch.png "basculer exemple")](views-images/Switch-Large.png#lightbox "basculer l’exemple")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
 |     |     |
 
 ### <a name="datepicker"></a>Sélecteur de dates
