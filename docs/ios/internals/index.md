@@ -7,11 +7,11 @@ ms.assetid: 951713CD-D6AD-981C-A09E-4F2C98588D8B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: d6e9dc47f2610fbc1e84cc74880ced13d4c99dce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 00e5d84cd39312cdf6ac0107b4c7ffedcd82f3c0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-advanced-concepts-and-internals"></a>iOS Advanced Concepts et éléments internes
 
@@ -39,7 +39,7 @@ Répertorie les assemblys disponibles et les classes à partir de la bibliothèq
 Il explique également comment Visual Studio pour Mac et le Générateur de Xcode Interface vous permet d’utiliser le Générateur de Interface pour concevoir l’interface utilisateur.
 
 > [!IMPORTANT]
-> **Remarque**: ce document explique Visual Studio pour l’intégration avec le Générateur de Xcode Interface uniquement du Mac. Pour plus d’informations sur le concepteur iOS, passez en revue les [iOS concepteur](~/ios/user-interface/designer/index.md) document.
+> Ce document explique Visual Studio pour l’intégration avec le Générateur de Xcode Interface uniquement du Mac. Pour plus d’informations sur le concepteur iOS, passez en revue les [iOS concepteur](~/ios/user-interface/designer/index.md) document.
 
 
 

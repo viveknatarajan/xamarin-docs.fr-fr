@@ -7,11 +7,11 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 773df1eec7c8694143ad6c31044ce281c1265282
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5053d8d0cf9c1c3e6d3282ee8d6e42448e733c2c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifications des infrastructures supplémentaires iOS 9
 
@@ -53,7 +53,7 @@ Le framework CloudKit simplifie le développement d’applications qui iCloud de
 La nouvelle _CloudKit Web Services_ framework fournit une bibliothèque JavaScript (JS CloudKit) qui peut être incorporée dans votre site Web pour fournir l’accès aux données de CloudKit basé et le contenu en tant que votre application Xamarin.iOS même.
 
 > [!IMPORTANT]
-> **Remarque :** avant de pouvoir accéder, présenter ou mettre à jour le contenu à partir d’une base de données CloudKit à l’aide de CloudKit JS, vous devez d’abord définir les schémas de la base.
+> Avant de pouvoir accéder, présenter ou mettre à jour le contenu à partir d’une base de données CloudKit à l’aide de CloudKit JS, vous devez avoir préalablement défini schéma de cette base de données.
 
 
 
@@ -100,7 +100,7 @@ Pour plus d’informations, consultez le site d’Apple [NSProcessInfo référen
 
 ### <a name="reacting-to-low-power-mode"></a>Réagir à Mode alimentation basse
 
-Utilisez le `LowPowerModeEnabled` propriété de la [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) classe pour déterminer si le Mode alimentation basse a été activé sur l’appareil iOS qui l’application est en cours d’exécution. Exemple :
+Utilisez le `LowPowerModeEnabled` propriété de la [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) classe pour déterminer si le Mode alimentation basse a été activé sur l’appareil iOS qui l’application est en cours d’exécution. Exemple :
 
 ```csharp
 // Is the device in low power mode?

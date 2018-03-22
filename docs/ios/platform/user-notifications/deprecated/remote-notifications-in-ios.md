@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 8e90bc3974247066a714cb44b6648a83cdb58cf5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="push-notifications-in-ios"></a>Notifications push dans iOS
 
 _Cette section couvre des notifications push dans iOS. Il présente le Service de passerelle des Notifications Push Apple et son rôle dans les notifications de publication pour les applications iOS. Il explique comment créer les certificats de sécurité nécessaires pour activer les notifications push et de discuter. Pour finir cette section décrit certaines des tâches de maintenance que les serveurs d’applications doivent effectuer pour effectuer le suivi des périphériques mobiles clients._
 
 > [!IMPORTANT]
-> **Remarque :** les informations contenues dans cette section relative à iOS 9 et antérieures, il est resté ici pour prendre en charge les anciennes versions d’iOS. Pour iOS 10 et versions ultérieures, consultez le [guide utilisateur Notification Framework](~/ios/platform/user-notifications/index.md) pour prendre en charge à la fois Local et distant Notification sur un appareil iOS.
+> Les informations contenues dans cette section relative à iOS 9 et antérieure, il est resté ici pour prendre en charge les anciennes versions d’iOS. Pour iOS 10 et versions ultérieures, consultez le [guide utilisateur Notification Framework](~/ios/platform/user-notifications/index.md) pour prendre en charge à la fois Local et distant Notification sur un appareil iOS.
 
 Des notifications push doivent être conservées brèves et ne contient que les données nécessaires pour notifier l’application mobile qu’il doit contacter l’application serveur pour une mise à jour. Par exemple, lors de l’arrivent de nouveaux messages, l’application serveur serait notifier uniquement l’application mobile nouveaux messages sont arrivé. La notification ne contiendrait pas les nouveaux messages lui-même. L’application mobile serait puis récupérer les nouveaux messages à partir du serveur lorsqu’il était approprié
 
@@ -30,7 +30,7 @@ Les notifications à distance proprement dites sont conformes au format des cha�
 
 Apple gère deux environnements de APNS : un *Sandbox* et un *Production* environnement. L’environnement de bac à sable est conçu pour tester au cours de la phase de développement et peut être à `gateway.sandbox.push.apple.com` sur TCP port 2195. L’environnement de Production est destiné à être utilisé dans les applications qui ont été déployées et peuvent être à `gateway.push.apple.com` sur TCP port 2195.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Notifications push doivent observer les règles suivantes sont dictés par l’architecture de APNS :
 

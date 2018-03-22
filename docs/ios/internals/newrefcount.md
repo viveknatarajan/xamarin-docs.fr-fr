@@ -6,11 +6,11 @@ ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 43b357eecb0974884db645a0b2e5c8467ddf3b5d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 723a9c4a052f7f432ba0f32ec501af3221b2696f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-reference-counting-system"></a>Nouveau système de comptage de référence
 
@@ -46,7 +46,7 @@ Notez que ces options ont été supprimées dans les versions plus récentes de 
 
     
 > [!IMPORTANT]
-> **Remarque :** une version antérieure de cette fonctionnalité depuis autour MonoTouch 5.2 mais elle était uniquement disponible pour **sgen** comme un aperçu expérimentale. Cette nouvelle version améliorée est désormais également disponible pour le **Boehm** le garbage collector.
+> Une version antérieure de cette fonctionnalité depuis autour MonoTouch 5.2 mais elle était uniquement disponible pour **sgen** comme un aperçu expérimentale. Cette nouvelle version améliorée est désormais également disponible pour le **Boehm** le garbage collector.
 
 
 Il historiquement deux types d’objets gérés par Xamarin.iOS : celles qui ont été simplement un wrapper autour d’un objet natif (objets homologues) et ceux qui étendu ou incorporé de nouvelles fonctionnalités (objets dérivés) - généralement en conservant l’état de la mémoire supplémentaire. Auparavant, il était possible que nous avons augmenter un objet homologue avec état (par exemple en ajoutant un gestionnaire d’événement c#), mais que nous permettent de l’objet accédez non référencés et puis collectées. Cela peut entraîner un blocage ultérieurement (par exemple, si le runtime Objective-C rappelé dans l’objet managé).

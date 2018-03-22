@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="unified-storyboards"></a>Storyboards unifiées
 
@@ -266,7 +266,7 @@ Dans cette section, nous allons examiner comment ces méthodes sont réellement 
 
  [![](unified-storyboards-images/gettargetforaction.png "La nouvelle méthode GetTargetForAction")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
-Cette méthode parcourt la chaîne de la hiérarchie jusqu'à ce que le contrôleur de la vue conteneur correct est trouvé. Exemple :
+Cette méthode parcourt la chaîne de la hiérarchie jusqu'à ce que le contrôleur de la vue conteneur correct est trouvé. Exemple :
 
 1.  Si un `ShowViewController` est appelée, le premier contrôleur de vue dans la chaîne qui implémente cette méthode est le contrôleur de Navigation, il est utilisé en tant que le parent de la nouvelle vue.
 1.  Si un `ShowDetailViewController` méthode a été appelée à la place, le contrôleur d’affichage fractionné est le premier contrôleur de vue pour l’implémenter, afin qu’il est utilisé en tant que parent.
@@ -302,7 +302,7 @@ Lorsque vous exécutez l’application Photos adaptative sur un iPhone, lorsque 
 
  [![](unified-storyboards-images/rotation.png "Le contrôleur d’affichage fractionné affiche à la fois le masque et afficher les détails comme illustré ici")](unified-storyboards-images/rotation.png#lightbox)
 
-Cela est effectué en substituant le `UpdateConstraintsForTraitCollection` méthode de contrôleur de la vue et en ajustant les contraintes en se basant sur la valeur de la `VerticalSizeClass`. Exemple :
+Cela est effectué en substituant le `UpdateConstraintsForTraitCollection` méthode de contrôleur de la vue et en ajustant les contraintes en se basant sur la valeur de la `VerticalSizeClass`. Exemple :
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -358,7 +358,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>Ajout d’Animations de Transition
 
-Lorsque le contrôleur de vue de fractionnement dans les Photos Adaptive application passe à partir de réduit de développé, des animations sont ajoutées aux animations par défaut en remplaçant le `WillTransitionToTraitCollection` méthode du contrôleur d’affichage. Exemple :
+Lorsque le contrôleur de vue de fractionnement dans les Photos Adaptive application passe à partir de réduit de développé, des animations sont ajoutées aux animations par défaut en remplaçant le `WillTransitionToTraitCollection` méthode du contrôleur d’affichage. Exemple :
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)
@@ -581,7 +581,7 @@ Le concepteur iOS confirme que le développeur souhaite convertir le format de l
  [![](unified-storyboards-images/sizeclass02.png "L’alerte de Classes de taille de l’utilisation")](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
-> **Remarque**: mise en page automatique doit également être activée pour les Classes de taille fonctionner correctement.
+> Mise en page automatique doit également être activée pour les Classes de taille fonctionner correctement.
 
 ### <a name="generic-device-types"></a>Types de périphériques génériques
 
@@ -630,7 +630,7 @@ Consultez la section de la classe de taille de cet article pour plus d’informa
 Si le développeur a utilisé des plans conceptuels avant, ils seront familiarisés avec les types de segue existants de **Push**, **modale** et **Popover**. Lorsque les Classes de taille sont activées sur un fichier de table de montage séquentiel unifiée, Adaptive Segue suivants (qui correspondent à la nouvelle API de contrôleur vue décrits ci-dessus) sont accessibles : **afficher** et **afficher les détails** .
 
 > [!IMPORTANT]
-> **Remarque**: lorsque les Classes de taille sont activés, existant est parfait pour les va être converti pour les nouveaux types.
+> Lorsque les Classes de taille sont activées, existant est parfait pour va être converti pour les nouveaux types.
 
 Prenons l’exemple d’une e/s 8 Application qui utilise un Storyboard unifiée avec un contrôleur de vue de fractionnement qui dispose d’un menu de navigation du jeu simple dans la vue principale. Si l’utilisateur clique sur un bouton de menu, contrôleur de la vue de l’élément sélectionné doit figurer dans la section Détails du fractionnement vue contrôleur lors de l’exécution sur un iPad. Sur un iPhone contrôleur d’affichage de l’élément doit être placé sur la pile de Navigation.
 

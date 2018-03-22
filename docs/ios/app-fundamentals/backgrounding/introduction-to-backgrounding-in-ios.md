@@ -6,11 +6,11 @@ ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c4eed99533ba1aca1bd5ba23078866909330b542
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c0369fe52897a2557a92fd56ebcd816b8427faf7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introduction à Backgrounding dans iOS
 
@@ -67,7 +67,7 @@ Le sélecteur de l’application est une fonctionnalité de contrôle importante
 À l’aide du sélecteur de l’application, les utilisateurs peuvent faire défiler des captures instantanées de toutes les applications backgrounded ou suspendues. En appuyant sur une application, il démarre au premier plan. Le glissement de supprime l’application de l’arrière-plan, met fin à son processus. Nous allons étudier le sélecteur d’application dans le [iOS démonstration de cycle de vie d’Application](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) dans la section suivante.
 
 > [!IMPORTANT]
-> **Remarque**: le sélecteur de l’application n’affiche pas de différence entre les applications backgrounded ou suspendues.
+> Le sélecteur de l’application n’affiche pas de différence entre les applications backgrounded ou suspendues.
 
 
 

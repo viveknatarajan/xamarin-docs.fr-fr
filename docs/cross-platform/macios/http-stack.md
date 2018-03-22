@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 06/12/2017
-ms.openlocfilehash: eff096b1dca15b9b11038a599987f632bca2352f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 01b316e296f78ea2739e2f3ed1bd8d8ec112fca8
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>Pile de HttpClient et sélecteur d’implémentation de SSL/TLS pour iOS/macOS
 
@@ -110,6 +110,7 @@ Il est ainsi possible d’utiliser une autre `HttpMessageHandler` à partir de c
 SSL (Secure Socket Layer) et son successeur, TLS (Transport Layer Security), prennent en charge HTTP et d’autres connexions réseau via `System.Net.Security.SslStream`. Xamarin.iOS, Xamarin.tvOS ou de Xamarin.Mac `System.Net.Security.SslStream` implémentation appelle implémentation de SSL/TLS native d’Apple au lieu d’utiliser l’implémentation managée fournie par Mono. Implémentation de native d’Apple prend en charge TLS 1.2.
 
 <a name="Mono" />
+
 > [!WARNING]
 > Le **Mono/Managed** fournisseur TLS est limité à SSL v3 et TLS v1. Ce fournisseur TLS a été déconseillé et n’est plus disponible pour les applications de Xamarin.iOS. 
 

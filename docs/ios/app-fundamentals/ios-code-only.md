@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 24fc64d1bd04cb1ebefb9bf9a359efb395b45074
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Création d’Interfaces utilisateur d’iOS dans le Code
 
@@ -620,7 +620,7 @@ Pour plus d’informations sur la création d’un écran de lancement, reportez
 - [Gestion des écrans de démarrage avec les plans conceptuels](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]
-> **Remarque :** à partir d’iOS 9, Apple recommande que les animations doivent être utilisées comme principale méthode de création d’un écran de lancement.
+> À partir d’iOS 9, Apple recommande que les animations doivent être utilisées comme principale méthode de création d’un écran de lancement.
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>Création d’une Image de lancement pour iOS préalable des 8 applications
 
@@ -629,7 +629,7 @@ Une image statique peut être utilisée en plus un .xib ou un écran de lancemen
 Cette image statique peut être définie dans le fichier Info.plist, ou comme un catalogue (pour iOS 7) dans votre application. Vous devrez fournir des images distincts pour chaque taille de périphérique (320 x 480, 640 x 960, 640 x 1136) que votre application peut s’exécuter sur. Pour plus d’informations sur les tailles d’écran de lancement, affichez le [Images d’écran de lancement](~/ios/app-fundamentals/images-icons/launch-screens.md) guide.
 
 > [!IMPORTANT]
-> **Remarque :** si votre application n’a pas l’écran de lancement, vous pouvez remarquer qu’il ne tient pas complètement l’écran. Si c’est le cas, vous devez vous assurer d’inclure au moins une image de 640 x 1136 nommée `Default-568@2x.png` à votre fichier Info.plist. 
+> Si votre application n’a pas l’écran de lancement, vous pouvez remarquer qu’il ne tient pas complètement l’écran. Si c’est le cas, vous devez vous assurer d’inclure au moins une image de 640 x 1136 nommée `Default-568@2x.png` à votre fichier Info.plist. 
 
 
 

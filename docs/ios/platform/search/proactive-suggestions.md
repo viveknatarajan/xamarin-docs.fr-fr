@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e7252aa89e2514653fc730c7221d22cc053d2e24
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>Présentation des Suggestions Proactive
 
@@ -68,7 +68,7 @@ Si une application de partage de gestion utilise le [MKDirectionsRequest](https:
 Si l’application prend uniquement en charge le partage des cas, la suggestion système débuteriez avec *« D’obtenir une porté à... »*, si d’autres types de direction de routage (par exemple, cannes ou vélo) sont pris en charge, le système utilisera *« Obtenir des instructions pour... »*
 
 > [!IMPORTANT]
-> **Remarque :** le [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) objet qui reçoit de l’application ne peut pas inclure les informations de longitude et de latitude et nécessitera le géocodage.
+> Le [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) objet qui reçoit de l’application ne peut pas inclure les informations de longitude et de latitude et nécessitera le géocodage.
 
 ## <a name="implementing-proactive-suggestions"></a>Implémentation de Suggestions Proactive
 
@@ -166,7 +166,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>Restauration d’une activité
 
-Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour l’application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Exemple :
+Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour l’application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -503,7 +503,7 @@ Si l’application gère les adresses figurant dans les formats de texte en fonc
 - L’application peut obtenir des suggestions proactive dans l’application.
 - L’application peut bénéficier de la correction automatique améliorée.
 
-La nouvelle `TextContentType` propriété des contrôles de champ de texte dans iOS 10 permet aux développeurs de définir l’intention de la sémantique pour la valeur que l’utilisateur va entrer dans un champ donné. Exemple :
+La nouvelle `TextContentType` propriété des contrôles de champ de texte dans iOS 10 permet aux développeurs de définir l’intention de la sémantique pour la valeur que l’utilisateur va entrer dans un champ donné. Exemple :
 
 ```csharp
 var textField = new UITextField();
@@ -532,7 +532,7 @@ Cette section s’intéresser à consommer des Suggestions d’emplacement direc
 - Pour gérer le lancement de l’application avec un MapKit `MKDirectionsRequest` objet.
 - Afin de permettre iOS pour apprendre à proposer de l’application à l’utilisateur à des moments appropriés, selon l’intérêt des utilisateurs.
 
-Lorsque l’application est lancée avec un MapKit `MKDirectionsRequest` de l’objet, il doit automatiquement démarrer en donnant les instructions de l’utilisateur à l’emplacement demandé, ou présenter une interface utilisateur qui facilite la tâche à commencer à obtenir des instructions pour l’utilisateur. Exemple :
+Lorsque l’application est lancée avec un MapKit `MKDirectionsRequest` de l’objet, il doit automatiquement démarrer en donnant les instructions de l’utilisateur à l’emplacement demandé, ou présenter une interface utilisateur qui facilite la tâche à commencer à obtenir des instructions pour l’utilisateur. Exemple :
 
 
 ```csharp

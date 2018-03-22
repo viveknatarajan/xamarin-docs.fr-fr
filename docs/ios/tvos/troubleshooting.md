@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b6d0901f8b01668626fc3b6a70a091e99e2287e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c72d0dd89593002dbb6ea8ac9369666b811f3a73
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -79,7 +79,7 @@ Section
 
 Vous devez vous assurer que tout tiers statique (`.a`) bibliothèques que vous utilisez des bibliothèques de tvOS (pas les bibliothèques d’iOS) ont été créées et qu’il inclut également des informations de bitcode.
 
-Pour les applications ou les bibliothèques qui incluent bitcode valide le `size` sera supérieur à un. Il existe certaines situations où une bibliothèque peut ont le marqueur bitcode, mais ne contient pas bitcode valide. Exemple :
+Pour les applications ou les bibliothèques qui incluent bitcode valide le `size` sera supérieur à un. Il existe certaines situations où une bibliothèque peut ont le marqueur bitcode, mais ne contient pas bitcode valide. Exemple :
 
 **Bitcode non valide**
 
@@ -173,7 +173,7 @@ La solution consiste à ajouter la prise en charge pour l’instance distante de
 ```
 
 > [!IMPORTANT]
-> **Remarque :** Bluetooth les contrôleurs de jeu sont un bon facultatif qui risque de rendre les utilisateurs finaux, votre application ne peut pas forcer l’utilisateur à acheter un. Si votre application prend en charge les contrôleurs de jeu il doit également prendre en charge Siri distant afin que le jeu est utilisable par tous les utilisateurs d’Apple TV.
+> Les contrôleurs de jeu Bluetooth sont un bon facultatif qui risque de rendre les utilisateurs finaux, votre application ne peut pas forcer l’utilisateur à acheter un. Si votre application prend en charge les contrôleurs de jeu il doit également prendre en charge Siri distant afin que le jeu est utilisable par tous les utilisateurs d’Apple TV.
 
 Pour plus d’informations, consultez notre [utilisation de contrôleurs de jeu](~/ios/tvos/platform/remote-bluetooth.md#Working-with-Game-Controllers) section de notre [Siri distants et les contrôleurs Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentation.
 

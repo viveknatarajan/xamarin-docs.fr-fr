@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a5dbd65cc32ed63c0fa6f8abe3a13ffee4e9df63
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50553cb1dc5f7ea782c0f13e32f60d7b6ce3e181
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enhanced-user-notifications"></a>Notifications utilisateur améliorée
 
@@ -276,7 +276,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>La gestion des Notifications de l’application au premier plan
 
-Nouveau pour iOS 10, une application peut gérer les Notifications différemment lorsqu’il est au premier plan et une Notification est déclenchée. En fournissant un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode), l’application puisse prendre la responsabilité de l’affichage de la Notification. Exemple :
+Nouveau pour iOS 10, une application peut gérer les Notifications différemment lorsqu’il est au premier plan et une Notification est déclenchée. En fournissant un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode), l’application puisse prendre la responsabilité de l’affichage de la Notification. Exemple :
 
 ```csharp
 using System;
@@ -433,7 +433,7 @@ Enfin, toutes les catégories sont enregistrés avec le système à l’aide de 
 
 Une fois qu’un ensemble d’Actions personnalisées et les catégories qui ont été créés et enregistrés avec le système, ils peuvent être présentées de Local ou distant des Notifications.
 
-Pour recevoir une Notification à distance, vous devez définir un `category` dans la charge utile Notification à distance qui correspond à l’une des catégories créés ci-dessus. Exemple :
+Pour recevoir une Notification à distance, vous devez définir un `category` dans la charge utile Notification à distance qui correspond à l’une des catégories créés ci-dessus. Exemple :
 
 ```csharp
 {
@@ -444,7 +444,7 @@ Pour recevoir une Notification à distance, vous devez définir un `category` da
 }
 ```
 
-Pour les Notifications Local, définissez le `CategoryIdentifier` propriété de la `UNMutableNotificationContent` objet. Exemple :
+Pour les Notifications Local, définissez le `CategoryIdentifier` propriété de la `UNMutableNotificationContent` objet. Exemple :
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -460,7 +460,7 @@ Là encore, cet ID doit correspondre à une des catégories qui a été créé p
 
 ### <a name="handling-dismiss-actions"></a>Gestion des Actions de rejeter
 
-Comme indiqué ci-dessus, une Action de faire disparaître peuvent être envoyée à l’application lorsque l’utilisateur ferme une Notification. Comme il ne s’agit pas d’une Action standard, une option devrez être définie lors de la catégorie est créée. Exemple :
+Comme indiqué ci-dessus, une Action de faire disparaître peuvent être envoyée à l’application lorsque l’utilisateur ferme une Notification. Comme il ne s’agit pas d’une Action standard, une option devrez être définie lors de la catégorie est créée. Exemple :
 
 ```csharp
 var categoryID = "message";
@@ -473,7 +473,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>Gestion des réponses de l’Action
 
-Quand l’utilisateur interagit avec les Actions personnalisées et les catégories qui ont été créés ci-dessus, l’application a besoin pour répondre à la tâche demandée. Pour ce faire, vous devez fournir un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode). Exemple :
+Quand l’utilisateur interagit avec les Actions personnalisées et les catégories qui ont été créés ci-dessus, l’application a besoin pour répondre à la tâche demandée. Pour ce faire, vous devez fournir un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode). Exemple :
 
 ```csharp
 using System;
@@ -558,9 +558,9 @@ Pour implémenter une Extension de Service dans une application Xamarin.iOS, pro
 -----
 
 > [!IMPORTANT]
-> Remarque : L’identificateur de lot pour l’extension du service doit correspondre à l’identificateur de lot de l’application principale avec `.appnameserviceextension` ajouté à la fin. Par exemple, si l’application principale a un identificateur de lot de `com.xamarin.monkeynotify`, l’extension de service doit avoir un identificateur de lot de `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Elle doit être définie automatiquement lorsque l’extension est ajoutée à la solution. 
+> L’identificateur de lot pour l’extension du service doit correspondre à l’identificateur de lot de l’application principale avec `.appnameserviceextension` ajouté à la fin. Par exemple, si l’application principale a un identificateur de lot de `com.xamarin.monkeynotify`, l’extension de service doit avoir un identificateur de lot de `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Elle doit être définie automatiquement lorsque l’extension est ajoutée à la solution. 
 
-Il existe une classe principale dans l’Extension du Service de Notification qui devront être modifiées pour fournir les fonctionnalités requises. Exemple :
+Il existe une classe principale dans l’Extension du Service de Notification qui devront être modifiées pour fournir les fonctionnalités requises. Exemple :
 
 ```csharp
 using System;
@@ -615,7 +615,7 @@ La deuxième méthode, `TimeWillExpire`, sera appelée juste avant l’heure est
 
 ### <a name="triggering-a-service-extension"></a>Déclenchement d’une Extension de Service
 
-Avec une Extension de Service créé et remis à l’application, il peut être déclenché en modifiant la charge de Notification à distance envoyée à l’appareil. Exemple :
+Avec une Extension de Service créé et remis à l’application, il peut être déclenché en modifiant la charge de Notification à distance envoyée à l’appareil. Exemple :
 
 ```csharp
 {

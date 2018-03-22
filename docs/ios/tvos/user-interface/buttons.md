@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5da834e7e77fb8ab080c124bd09653bc840be3b0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-buttons"></a>Utilisation des boutons
 
@@ -130,7 +130,7 @@ namespace tvRemote
 Tant qu’un bouton de `Enabled` propriété est `true` et il n’est pas couverte par un autre contrôle ou une vue, elle peut être rendue de l’élément actif à l’aide de l’élément distant Siri. Si l’utilisateur sélectionne le bouton et clique sur la Surface tactile, la `ButtonPressed` action définie ci-dessus est exécutée.
 
 > [!IMPORTANT]
-> **Remarque :** alors qu’il est possible d’affecter des actions telles que `TouchUpInside` à un `UIButton` dans le concepteur lors de la création d’iOS un **Gestionnaire d’événements**, il ne sera jamais appelée car Apple TV n’a pas un écran tactile ou la prise en charge événements tactiles. Vous devez toujours utiliser la valeur par défaut **Type d’Action** lors de la création **Actions** tvOS éléments d’interface utilisateur.
+> Bien qu’il soit possible d’affecter des actions telles que `TouchUpInside` à un `UIButton` dans le concepteur lors de la création d’iOS un **Gestionnaire d’événements**, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser la valeur par défaut **Type d’Action** lors de la création **Actions** tvOS éléments d’interface utilisateur.
 
 
 
@@ -141,7 +141,7 @@ Pour plus d’informations sur l’utilisation des plans conceptuels, veuillez c
 
 ## <a name="buttons-and-code"></a>Boutons et Code
 
-Si vous le souhaitez, un `UIButton` peut être créée dans le code c# et ajoutées à la vue de l’application tvOS. Exemple :
+Si vous le souhaitez, un `UIButton` peut être créée dans le code c# et ajoutées à la vue de l’application tvOS. Exemple :
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -169,7 +169,7 @@ Ensuite, vous définissez la taille à l’écran et l’emplacement du bouton. 
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-Ensuite, définissez le titre du bouton. `UIButtons` est différent de celui de la plupart `UIKit` contrôles dans la mesure où ils ont un état, donc vous ne pouvez pas simplement modifier le titre, vous devez le modifier pour une donnée `UIControlState`. Exemple :
+Ensuite, définissez le titre du bouton. `UIButtons` est différent de celui de la plupart `UIKit` contrôles dans la mesure où ils ont un état, donc vous ne pouvez pas simplement modifier le titre, vous devez le modifier pour une donnée `UIControlState`. Exemple :
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
@@ -191,7 +191,7 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> **Remarque :** alors qu’il est possible d’affecter des actions telles que `TouchUpInside` à un `UIButton`, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser des événements tels que **AllEvents** ou **PrimaryActionTriggered**.
+> Bien qu’il soit possible d’affecter des actions telles que `TouchUpInside` à un `UIButton`, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser des événements tels que **AllEvents** ou **PrimaryActionTriggered**.
 
 
 
@@ -206,19 +206,19 @@ tvOS fournit plusieurs propriétés d’un `UIButton` qui peut être utilisé po
 
 ### <a name="button-titles"></a>Titres de bouton
 
-Comme nous l’avons vu, `UIButtons` diffèrent de la plupart `UIKit` contrôles dans la mesure où ils ont un état, donc vous ne pouvez pas simplement modifier le titre, vous devez la changer pour une donnée `UIControlState`. Exemple :
+Comme nous l’avons vu, `UIButtons` diffèrent de la plupart `UIKit` contrôles dans la mesure où ils ont un état, donc vous ne pouvez pas simplement modifier le titre, vous devez la changer pour une donnée `UIControlState`. Exemple :
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-Vous pouvez définir la couleur du titre du bouton à l’aide de la `SetTitleColor` (méthode). Exemple :
+Vous pouvez définir la couleur du titre du bouton à l’aide de la `SetTitleColor` (méthode). Exemple :
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-Et vous pouvez ajuster le titre de l’ombre à l’aide de la `SetTitleShadowColor`. Exemple :
+Et vous pouvez ajuster le titre de l’ombre à l’aide de la `SetTitleShadowColor`. Exemple :
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -230,7 +230,7 @@ Vous pouvez définir l’ombre du titre pour changer de *Engraved* à *relief* l
 button.ReverseTitleShadowWhenHighlighted = true;
 ```
 
-En outre, vous pouvez utiliser avec attributs de texte en tant que titre du bouton. Exemple :
+En outre, vous pouvez utiliser avec attributs de texte en tant que titre du bouton. Exemple :
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);

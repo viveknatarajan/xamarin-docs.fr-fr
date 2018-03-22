@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 83841e62d863bf4be4edef5c0b6b7d486f192f4d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8fd2b5069e175a68ff7609e75775db1929507582
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="background-tasks"></a>Tâches d’arrière-plan
 
@@ -56,7 +56,7 @@ Comme indiqué ci-dessus, le système watchOS sort de l’application à l’aid
 
 Apple suggérer tirer pleinement parti de cette tâche (car il est de ce type d’une ressource limitée à l’application) à maintenir jusqu'à ce que l’application a terminé le processus de mise à jour lui-même.
 
-Le système ces offre des tâches en appelant la nouvelle `HandleBackgroundTasks` méthode de la `WKExtensionDelegate` déléguer. Exemple :
+Le système ces offre des tâches en appelant la nouvelle `HandleBackgroundTasks` méthode de la `WKExtensionDelegate` déléguer. Exemple :
 
 ```csharp
 using System;
@@ -143,7 +143,7 @@ Là encore, le système émet un `WKSnapshotRefreshBackgroundTask` afin de pouvo
 Lorsque l’application marque le `WKSnapshotRefreshBackgroundTask` terminé, le système mettra automatiquement un instantané de l’interface utilisateur de l’application.
 
 > [!IMPORTANT]
-> **Remarque :** il est important de toujours planifier un ` WKSnapshotRefreshBackgroundTask` après l’application a reçu de nouvelles données et mis à jour son Interface utilisateur ou l’utilisateur ne voit pas les informations modifiées.
+> Il est important de toujours planifier un ` WKSnapshotRefreshBackgroundTask` après l’application a reçu de nouvelles données et mis à jour son Interface utilisateur ou l’utilisateur ne voit pas les informations modifiées.
 
 
 
@@ -630,7 +630,7 @@ Les applications qui ont été épinglées à la station d’accueil peuvent s�
 L’application de dernière exécution de l’utilisateur sera considéré comme le _des derniers fichiers utilisés_ application et occuperaient le dernier emplacement dans la station d’accueil. À partir de là, il peut choisir de faire épingler définitivement à la station d’accueil. Le plus récemment utilisé sera traité comme toute autre application favorite l’utilisateur a déjà épinglé à la station d’accueil.
 
 > [!IMPORTANT]
-> **Remarque :** les applications qui ont été ajoutées uniquement à l’écran d’accueil n’est attribuées à une planification régulière. Pour recevoir une planification régulière et en arrière-plan met à jour, une application _doit_ être ajouté à la station d’accueil.
+> Les applications qui ont été ajoutées uniquement à l’écran d’accueil pas reçoivent une planification régulière. Pour recevoir une planification régulière et en arrière-plan met à jour, une application _doit_ être ajouté à la station d’accueil.
 
 Comme indiqué plus haut dans ce document, les instantanés sont très importants watchOS 3 dans la mesure où ils fonctionnent comme des images de l’aperçu et le lancement de l’application. Si l’utilisateur se règle sur une application de la station d’accueil, il développer en plein écran, entrez le premier plan et commencer à exécuter, il est impératif que l’instantané soit à jour.
 

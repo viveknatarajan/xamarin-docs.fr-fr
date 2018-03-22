@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f77eac8179f9e368e767bb4b586ccaa3f93e40a3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b1b53fefdd72c36bdffd3c5ade0b8d86da225b14
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-page-control"></a>Utilisation de contrôle de Page
 
@@ -46,7 +46,7 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 
     [![](page-controls-images/page03.png "L’onglet du Widget")](page-controls-images/page03.png#lightbox)
 1. Ensuite, ajoutez les contrôles ou les mouvements à l’affichage pour les déplacer vers le haut et vers l’avant dans la collection de pages.
-1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
+1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
     [![](page-controls-images/page04.png "Nom du contrôle")](page-controls-images/page04.png#lightbox)
 1. Enregistrez les modifications apportées.
@@ -63,7 +63,7 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 
     [![](page-controls-images/page03-vs.png "L’onglet du Widget")](page-controls-images/page03-vs.png#lightbox)
 1. Ensuite, ajoutez les contrôles ou les mouvements à l’affichage pour les déplacer vers le haut et vers l’avant dans la collection de pages.
-1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
+1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
     [![](page-controls-images/page04-vs.png "Nom du contrôle")](page-controls-images/page04-vs.png#lightbox)
 1. Enregistrez les modifications apportées.
@@ -72,12 +72,12 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 -----
 
 > [!IMPORTANT]
-> **Remarque :** alors qu’il est possible d’attribuer des événements tels que `TouchUpInside` à un élément d’interface utilisateur (par exemple, un UIButton) dans le concepteur iOS, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser le `Primary Action` événement lors de la création de gestionnaires d’événements de tvOS éléments d’interface utilisateur.
+> Bien qu’il soit possible d’attribuer des événements tels que `TouchUpInside` à un élément d’interface utilisateur (par exemple, un UIButton) dans le concepteur iOS, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser le `Primary Action` événement lors de la création de gestionnaires d’événements de tvOS éléments d’interface utilisateur.
 
 
 
 
-Modifier votre vue contrôleur (exemple `ViewController.cs`) et ajoutez le code pour gérer les pages en cours de modification. Exemple :
+Modifier votre vue contrôleur (exemple `ViewController.cs`) et ajoutez le code pour gérer les pages en cours de modification. Exemple :
 
 ```csharp
 using System;

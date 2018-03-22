@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5cd2671bb66aa89117012fe394bb724f7e22e1a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-3d-touch"></a>Introduction à la 3D Touch
 
@@ -65,7 +65,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 Le `MaximumPossibleForce` propriété retourne la valeur la plus élevée possible pour le `Force` propriété de la [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) basé sur l’appareil iOS qui l’application est en cours d’exécution.
 
 > [!IMPORTANT]
-> **Remarque :** entraînent des modifications apportées à une sollicitation de la la `TouchesMoved` événement soit déclenché, même si X / Y coordonnées n’ont pas changé. En raison de ce changement de comportement, vos applications iOS doivent être préparées pour la `TouchesMoved` événements à appeler plus souvent et pour le X / coordonnées Y être le même que le dernier `TouchesMoved` appeler.
+> Entraînent des modifications apportées à une sollicitation de la la `TouchesMoved` événement soit déclenché, même si X / Y coordonnées n’ont pas changé. En raison de ce changement de comportement, vos applications iOS doivent être préparées pour la `TouchesMoved` événements à appeler plus souvent et pour le X / coordonnées Y être le même que le dernier `TouchesMoved` appeler.
 
 
 
@@ -281,7 +281,7 @@ Nous examinons ici définir deux éléments d’Action rapide statiques avec les
 * `UIApplicationShortcutItemType` -Est une valeur de chaîne que nous utiliserons pour identifier l’élément dans notre application. Pour plus d'informations, consultez la section suivante.
 
 > [!IMPORTANT]
-> **Remarque :** éléments contextuel Action rapide qui sont définies dans le `Info.plist` ne peut pas accéder au fichier avec le `Application.ShortcutItems` propriété. Ils sont transmis uniquement à la `HandleShortcutItem` Gestionnaire d’événements. 
+> Éléments contextuel Action rapides qui sont définies dans le `Info.plist` ne peut pas accéder au fichier avec le `Application.ShortcutItems` propriété. Ils sont transmis uniquement à la `HandleShortcutItem` Gestionnaire d’événements. 
 
 
 

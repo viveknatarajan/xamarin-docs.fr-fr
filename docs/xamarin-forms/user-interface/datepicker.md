@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: ad214b3986d039de40f8ed46b300e8d3cfd06328
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="using-datepicker"></a>À l’aide du sélecteur de dates
 
@@ -139,7 +139,7 @@ Voici le fichier XAML :
 </ContentPage>
 ```
 
-Chaque `DatePicker` est attribué un `Format` propriété de « D » pour un format de date longue. Notez également que la `endDatePicker` objet a une liaison qui cible son `MinimumDate` propriété. La source de liaison est sélectionné `Date` propriété de la `startDatePicker` objet. Cela garantit que la date de fin est toujours plus tard ou égale à la date de début. En plus de deux `DatePicker` objets, un `Switch` est étiqueté « Include de deux jours au total ». 
+Chaque `DatePicker` est attribué un `Format` propriété de « D » pour un format de date longue. Notez également que la `endDatePicker` objet a une liaison qui cible son `MinimumDate` propriété. La source de liaison est sélectionné `Date` propriété de la `startDatePicker` objet. Cela garantit que la date de fin est toujours plus tard ou égale à la date de début. En plus de deux `DatePicker` objets, un `Switch` est étiqueté « Inclure les deux jours au total ». 
 
 Les deux `DatePicker` vues ont des gestionnaires d’associés à la `DateSelected` événement et le `Switch` a un gestionnaire attaché à son `Toggled` événement. Ces gestionnaires d’événements dans le fichier code-behind et déclenchent un nouveau calcul des jours entre les deux dates :
 

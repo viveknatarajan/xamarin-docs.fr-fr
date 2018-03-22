@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 33e27043c3738c5213b17786e5a88fb30a7fc017
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e868c0ee71688e208c5217d9f5a89ea3acec988c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="speech-recognition"></a>Reconnaissance vocale
 
@@ -105,10 +105,10 @@ Pour fournir le texte requis `NSSpeechRecognitionUsageDescription` clé dans le 
 2. Basculez vers le **Source** vue : 
 
     [![](speech-images/speech02.png "La vue de Source")](speech-images/speech02.png#lightbox)
-3. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSSpeechRecognitionUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
+3. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSSpeechRecognitionUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
 
     [![](speech-images/speech03.png "Ajout de NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
-4. Si l’application doit gérer la transcription audio en direct, elle nécessite également une Description de l’utilisation du Microphone. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSMicrophoneUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
+4. Si l’application doit gérer la transcription audio en direct, elle nécessite également une Description de l’utilisation du Microphone. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSMicrophoneUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
 
     [![](speech-images/speech04.png "Ajout de NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 4. Enregistrez les modifications dans le fichier.
@@ -116,10 +116,10 @@ Pour fournir le texte requis `NSSpeechRecognitionUsageDescription` clé dans le 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Double-cliquez sur le `Info.plist` fichier à ouvrir pour le modifier.
-3. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSSpeechRecognitionUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
+3. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSSpeechRecognitionUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
 
     [![](speech-images/speech03w.png "Ajout de NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-4. Si l’application doit gérer la transcription audio en direct, elle nécessite également une Description de l’utilisation du Microphone. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSMicrophoneUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
+4. Si l’application doit gérer la transcription audio en direct, elle nécessite également une Description de l’utilisation du Microphone. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSMicrophoneUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
 
     [![](speech-images/speech04w.png "Ajout de NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Enregistrez les modifications dans le fichier.
@@ -127,7 +127,7 @@ Pour fournir le texte requis `NSSpeechRecognitionUsageDescription` clé dans le 
 -----
 
 > [!IMPORTANT]
-> **Remarque :** ne parvient pas à fournir un des éléments ci-dessus `Info.plist` clés (`NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription`) peut entraîner l’application échoue sans avertissement lors de la tentative d’accéder à la reconnaissance vocale ou sur le microphone audio en direct.
+> Échec d’un des éléments ci-dessus fournissent `Info.plist` clés (`NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription`) peut entraîner l’application échoue sans avertissement lors de la tentative d’accéder à la reconnaissance vocale ou sur le microphone audio en direct.
 
 
 
@@ -186,7 +186,7 @@ Le `RequestAuthorization` méthode de la `SFSpeechRecognizer` classe sera demand
 A `SFSpeechRecognizerAuthorizationStatus` résultat est retourné à le `RequestAuthorization` la routine de rappel de la méthode qui peut être utilisée pour prendre des mesures en fonction de l’autorisation de l’utilisateur. 
 
 > [!IMPORTANT]
-> **Remarque :** Apple suggère en attente jusqu'à ce que l’utilisateur a démarré une action dans l’application qui nécessite la reconnaissance vocale avant de demander cette autorisation.
+> Apple suggère en attente jusqu'à ce que l’utilisateur a démarré une action dans l’application qui nécessite la reconnaissance vocale avant de demander cette autorisation.
 
 ### <a name="recognizing-pre-recorded-speech"></a>Reconnaissance vocale pré-enregistré
 
@@ -243,7 +243,7 @@ Lorsque le rappel est appelé, si le `NSError` n’est pas `null` a eu une erreu
 
 ### <a name="recognizing-live-speech"></a>Reconnaissance vocale dynamique
 
-Si l’application souhaite voix en direct, le processus est très similaire à la reconnaissance vocale préenregistré. Exemple :
+Si l’application souhaite voix en direct, le processus est très similaire à la reconnaissance vocale préenregistré. Exemple :
 
 ```csharp
 using System;
@@ -373,7 +373,7 @@ RecognitionTask.Cancel ();
 Il est important d’appeler `RecognitionTask.Cancel` si l’utilisateur annule la traduction pour libérer de la mémoire et processeur de l’appareil.
 
 > [!IMPORTANT]
-> **Remarque :** ne parvient pas à fournir le `NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription` `Info.plist` clés peuvent entraîner l’application échoue sans avertissement lors de la tentative d’accéder à la reconnaissance vocale ou sur le microphone dynamique audio (`var node = AudioEngine.InputNode;`). Consultez le **fournir une Description de l’utilisation de** section ci-dessus pour plus d’informations.
+> Ne parvient pas à fournir le `NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription` `Info.plist` clés peuvent entraîner l’application échoue sans avertissement lors de la tentative d’accéder à la reconnaissance vocale ou sur le microphone dynamique audio (`var node = AudioEngine.InputNode;`). Consultez le **fournir une Description de l’utilisation de** section ci-dessus pour plus d’informations.
 
 ## <a name="speech-recognition-limits"></a>Limites de reconnaissance vocale
 

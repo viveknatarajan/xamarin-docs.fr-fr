@@ -8,68 +8,72 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8c336799a4d46359a78432837101dad43b572aea
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: c333fd18e306c50bbfd41377638470cb45954883
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="api-design"></a>Conception de l’API
 
 Outre le cœur des bibliothèques de classes de Base qui font partie de Mono, [Xamarin.iOS](http://www.xamarin.com/iOS) est fourni avec des liaisons pour iOS diverses API permettant aux développeurs de créer des applications iOS native avec Mono.
 
-Au cœur de Xamarin.iOS, il existe un interopérabilité moteur qui établit un pont entre le monde c# avec le monde Objective-C comme, ainsi que les liaisons pour iOS API C comme CoreGraphics et [OpenGLES](#OpenGLES).
+Au cœur de Xamarin.iOS, il existe un interopérabilité moteur qui établit un pont entre le monde c# avec Objective-C world, ainsi que les liaisons pour l’API C comme CoreGraphics iOS et [OpenGL ES](#OpenGLES).
 
-Le runtime de bas niveau pour communiquer avec le code Objective-C est dans le [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). Au-dessus de cette option, les liaisons pour [Foundation](#MonoTouch.Foundation), CoreFoundation et [UIKit](#MonoTouch.UIKit) sont fournies.
+Le runtime de bas niveau pour communiquer avec le code Objective-C est dans [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). Au-dessus de cette option, les liaisons pour [Foundation](#MonoTouch.Foundation), CoreFoundation, et [UIKit](#MonoTouch.UIKit) sont fournies.
 
 ## <a name="design-principles"></a>Principes de conception
 
-Voici certaines de nos principes de conception pour la liaison de Xamarin.iOS (ces également appliquent Xamarin.Mac, les liaisons Mono pour Objective-C sur OS X) :
+Voici certaines de nos principes de conception pour les liaisons Xamarin.iOS (ce qu’ils s’appliquent également aux Xamarin.Mac, les liaisons Mono pour Objective-C sur macOS) :
 
-- Suivez les instructions de conception d’infrastructure
+- Suivez les [règles de conception d’infrastructure](https://docs.microsoft.com/dotnet/standard/design-guidelines)
 - Permet aux développeurs de classes de sous-classe Objective-C :
 
   - Dériver une classe existante
   - Appelez le constructeur de base pour la chaîne
   - Méthodes de substitution doit être effectuée avec le système de remplacement de #
+  - Le sous-classement doit fonctionner avec des constructions non standard c#
 
-- Sous-classe doit fonctionner avec des constructions non standard c#
 - N’exposez pas aux développeurs de sélecteurs de Objective-C
 - Fournissent un mécanisme pour appeler des bibliothèques Objective-C arbitraires
 - Rendre les tâches courantes Objective-C facile et dur possible de tâches Objective-C
 - Exposer des propriétés de Objective-C en tant que propriétés c#
 - Exposent une API fortement typée :
-- Augmenter la sécurité de type
-- Réduire les erreurs d’exécution
-- Accès à intellisense de l’IDE sur les types de retour
-- Permet de documentation de fenêtre contextuelle IDE
+
+  - Augmenter la sécurité de type
+  - Réduire les erreurs d’exécution
+  - Accès à IntelliSense de l’IDE sur les types de retour
+  - Permet de documentation de fenêtre contextuelle IDE
+
 - Encourage l’exploration dans l’IDE de l’API :
+
+  - Par exemple, au lieu d’exposer un tableau faiblement typée comme suit :
+    
+    ```objc
+    NSArray *getViews
+    ```
+    Exposer un type fort, comme suit :
+    
+    ```csharp
+    NSView [] Views { get; set; }
+    ```
+    
+    Cela permet à Visual Studio pour Mac d’effectuer la saisie semi-automatique lors de l’exploration de l’API, rend toutes les le `System.Array` opérations disponibles sur la valeur retournée et permet à la valeur de retour devant être inclus dans LINQ.
+
 - Types c# natifs :
 
-    - Exemple : au lieu d’exposer le tableau faiblement typée comme suit :
-        ```
-        NSArray *getViews
-        ```
-        Nous les exposer des types forts, comme suit :
-    
-        ```
-        NSView [] Views { get; set; }
-        ```
-    
-    Cela permet à Visual Studio pour Mac d’effectuer la saisie semi-automatique lors de l’exploration de l’API et permet également à tous le `System.Array` opérations soient disponibles sur la valeur retournée et permet à la valeur de retour de participer à LINQ
+  - [`NSString` devient `string`](~/ios/internals/api-design/nsstring.md)
+  - Activer `int` et `uint` paramètres qui aurait dû être enums en c# énumérations et les énumérations c# avec `[Flags]` attributs
+  - Au lieu de type indépendant `NSArray` objets, exposent des tableaux en tant que tableaux fortement typés.
+  - Pour les événements et les notifications, permettre aux utilisateurs de choisir entre :
 
-- [NSString devient la chaîne](~/ios/internals/api-design/nsstring.md)
-- Activer les paramètres de type int et uint qui aurait dû être enums en tant qu’énumérations c# et énumérations c# avec des attributs [Flags]
-- Au lieu de type indépendant NSArray objets exposent des tableaux en tant que tableau fortement typé.
-- Événements et les notifications, vous pouvez donner aux utilisateurs un choix entre :
-
-    - Version fortement typée est la valeur par défaut
-    - Version faiblement typée de manière anticipée
+    - Une version fortement typée par défaut
+    - Une version faiblement typée de cas d’usage avancés
 
 - Prend en charge le modèle de délégué Objective-C :
 
     - Système d’événement c#
-    - Exposer des délégués c# (les expressions lambda, méthodes anonymes et System.Delegate) aux API de Objective-C en tant que « blocs »
+    - Exposer des délégués c# (les expressions lambda, méthodes anonymes, et `System.Delegate`) aux API Objective-C en tant que blocs
 
 ### <a name="assemblies"></a>Assemblys
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 9c6bbf27d4c8227d96e372e91e1ccf2c9e841ff8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0f59e8f5e732a45f7e6148a08de80fffc56dbb26
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-navigation-controllers"></a>Utilisation de contrôleurs de Navigation
 
@@ -25,7 +25,7 @@ Barres de navigation peuvent être ajoutés en haut des vues pour afficher le ti
 En outre, le titre (qui s’affiche dans le centre), les barres de Navigation peut contenir un ou plusieurs boutons de barre de Navigation (`UIBarButtonItem`) sur les côtés gauche et droit de la barre.
 
 > [!IMPORTANT]
-> **Remarque :** barres de Navigation sont totalement transparents par défaut. Soyez vigilant pour vérifier que le contenu de la barre de Navigation reste accessible en lecture sur le contenu qu’il contient. Par exemple, lorsque le contenu dans un tableau ou Collection défile en dessous.
+> Barres de navigation sont totalement transparents par défaut. Soyez vigilant pour vérifier que le contenu de la barre de Navigation reste accessible en lecture sur le contenu qu’il contient. Par exemple, lorsque le contenu dans un tableau ou Collection défile en dessous.
 
 
 
@@ -77,7 +77,7 @@ Pour travailler avec les barres de Navigation dans une application Xamarin.tvOS,
 -----
 
 > [!IMPORTANT]
-> **Remarque :** alors qu’il est possible d’attribuer des événements tels que `TouchUpInside` à un élément d’interface utilisateur (par exemple, un UIButton) dans le concepteur iOS, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser le `Primary Action` événement lors de la création de gestionnaires d’événements de tvOS éléments d’interface utilisateur.
+> Bien qu’il soit possible d’attribuer des événements tels que `TouchUpInside` à un élément d’interface utilisateur (par exemple, un UIButton) dans le concepteur iOS, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser le `Primary Action` événement lors de la création de gestionnaires d’événements de tvOS éléments d’interface utilisateur.
 
 
 

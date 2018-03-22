@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 73f3beb87fffcb37ef3e36d54f634c3bc62da538
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-user-defaults"></a>Utilisation des valeurs par défaut de l’utilisateur
 
@@ -32,7 +32,7 @@ Comme indiqué précédemment, les valeurs par défaut de l’utilisateur (`NSUs
 Lorsque votre application s’exécute tout d’abord, `NSUserDefaults` lit les clés et valeurs à partir de la base de données de la valeur par défaut est de l’utilisateur de l’application et les met en cache dans la mémoire pour éviter l’ouverture et la lecture de la base de données chaque fois qu’une valeur est requise. 
 
 > [!IMPORTANT]
-> **Remarque**: Apple n’est plus recommande que l’appel de développeur la `Synchronize` méthode pour synchroniser le cache en mémoire avec la base de données directement. Au lieu de cela, elle est appelée automatiquement à intervalles réguliers pour synchroniser le cache en mémoire avec la base de données des valeurs par défaut d’un utilisateur.
+> Apple ne sont plus recommande que l’appel de développeur la `Synchronize` méthode pour synchroniser le cache en mémoire avec la base de données directement. Au lieu de cela, elle est appelée automatiquement à intervalles réguliers pour synchroniser le cache en mémoire avec la base de données des valeurs par défaut d’un utilisateur.
 
 La `NSUserDefaults` classe contient plusieurs méthodes pratiques pour lire et écrire des valeurs de préférence pour les types de données courants tels que : chaîne, entier, float, boolean et les URL. Autres types de données peuvent être archivées à l’aide de `NSData`, puis lues ou écrites dans la base de données utilisateur par défaut. Pour plus d’informations, consultez le site d’Apple [préférences et Guide de programmation de paramètres](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -127,7 +127,7 @@ plist.SetBool(useHeader, "UseHeader");
 ```
 
 > [!IMPORTANT]
-> **Remarque :** lorsque votre application s’exécute tout d’abord, `NSUserDefaults` lit les clés et valeurs à partir de la base de données de la valeur par défaut est de l’utilisateur de l’application et les met en cache dans la mémoire pour éviter l’ouverture et la lecture de la base de données chaque fois qu’une valeur est requise.
+> Lorsque votre application s’exécute tout d’abord, `NSUserDefaults` lit les clés et valeurs à partir de la base de données de la valeur par défaut est de l’utilisateur de l’application et les met en cache dans la mémoire pour éviter l’ouverture et la lecture de la base de données chaque fois qu’une valeur est requise.
 
 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5e4bbc22403c6c0bfa5c8dc7ac4e3a39545051d4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>e/s de fonctionnalités de sécurité et confidentialité
 
@@ -44,7 +44,7 @@ Les modifications générales suivantes ont été apportées à la sécurité et
 Applications qui s’exécutent sur iOS 10 (ou version ultérieure) doivent déclarer statiquement intention d’accéder à des fonctionnalités spécifiques ou des informations utilisateur en entrant une ou plusieurs clés de confidentialité dans leurs `Info.plist` fichiers expliquent à l’utilisateur pour lesquelles l’application souhaite accéder.
 
 > [!IMPORTANT]
-> **Remarque** les applications qui ne parviennent pas à fournir les clés requises va être en mode silencieux interrompues par le système lorsqu’ils tentent d’accéder à l’une des fonctions restreintes ou les informations de l’utilisateur, _sans erreur_! Si une application démarre Échec inattendu sur iOS 10, assurez-vous que toutes les requis `Info.plist` ont été spécifiés.
+> Les applications qui ne parviennent pas à fournir les clés requises va être en mode silencieux interrompues par le système lorsqu’ils tentent d’accéder à l’une des fonctions restreintes ou les informations de l’utilisateur, _sans erreur_! Si une application démarre Échec inattendu sur iOS 10, assurez-vous que toutes les requis `Info.plist` ont été spécifiés.
 
 La confidentialité suivante liées au clés sont disponibles :
 
@@ -109,7 +109,7 @@ Pour définir toutes les clés de confidentialité, procédez comme suit :
 -----
 
 > [!IMPORTANT]
-> **Remarque :** dans l’exemple fourni ci-dessus, Échec de définition de la `NSHomeKitUsageDescription` clé dans le `Info.plist` fichier entraînerait l’application _en mode silencieux défaillant_ (qui est fermé par le système lors de l’exécution) sans erreur lorsque exécutez dans iOS 10 (ou supérieur).
+> Dans l’exemple fourni ci-dessus, Échec de définition de la `NSHomeKitUsageDescription` clé dans le `Info.plist` fichier entraînerait l’application _en mode silencieux défaillant_ (qui est fermé par le système lors de l’exécution) sans erreur lorsque exécutez dans iOS (ou supérieure à 10).
 
 <a name="Summary" />
 

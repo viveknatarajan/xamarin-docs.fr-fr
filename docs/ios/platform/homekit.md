@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: ea51dc2c7dadc5cc430df990c9ce79eac6e941da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 02116e8e11cb6ff050e2c885338777e1fd25c4cb
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="homekit"></a>HomeKit
 
@@ -77,7 +77,7 @@ Effectuez ce qui suit :
 Avec ces paramètres en place, l’application est maintenant prête à accéder aux API HomeKit Framework. Pour plus d’informations sur la configuration, consultez notre [vos appareils](~/ios/get-started/installation/device-provisioning/index.md) et [de configuration de votre application](~/ios/get-started/installation/device-provisioning/index.md) guides.
 
 > [!IMPORTANT]
-> **Remarque :** test d’une application HomeKit activé requiert un appareil iOS réel qui a été configuré correctement pour le développement. HomeKit ne peut pas être testée dans le simulateur iOS.
+> Tester une application HomeKit activé besoin d’un appareil iOS réel qui a été configuré correctement pour le développement. HomeKit ne peut pas être testée dans le simulateur iOS.
 
 ## <a name="the-homekit-accessory-simulator"></a>Le simulateur HomeKit accessoire
 
@@ -143,7 +143,7 @@ Pour définir cette clé, procédez comme suit :
 6. Enregistrez les modifications dans le fichier.
 
 > [!IMPORTANT]
-> **Remarque :** Échec de définition de la `NSHomeKitUsageDescription` clé dans le `Info.plist` fichier entraîne l’application _en mode silencieux défaillant_ (qui est fermé par le système lors de l’exécution) sans erreur lorsque exécutez dans iOS (ou supérieure à 10).
+> Échec de définition de la `NSHomeKitUsageDescription` clé dans le `Info.plist` fichier entraîne l’application _en mode silencieux défaillant_ (qui est fermé par le système lors de l’exécution) sans erreur lorsque exécutez dans iOS (ou supérieure à 10).
 
 ## <a name="connecting-to-homekit"></a>Connexion à HomeKit
 
@@ -265,7 +265,7 @@ Si la page d’accueil a été créé avec succès, vous devez appeler la `Updat
 Vous devez aussi surveiller l’accueil du Gestionnaire de `DidAddHome` et `DidRemoveHome` événements et la mise à jour de l’interface utilisateur de l’application en fonction des besoins.
 
 > [!IMPORTANT]
-> **Remarque :** le `AlertView.PresentOKAlert` méthode utilisée dans l’exemple de code ci-dessus est une classe d’assistance dans l’application HomeKitIntro qui permet de travailler avec iOS alertes plus facile.
+> Le `AlertView.PresentOKAlert` méthode utilisée dans l’exemple de code ci-dessus est une classe d’assistance dans l’application HomeKitIntro qui permet de travailler avec iOS alertes plus facile.
 
 
 ## <a name="finding-new-accessories"></a>Recherche de nouveaux accessoires
@@ -275,7 +275,7 @@ Une fois qu’une maison principal a été définie ou chargée à partir du Ges
 Appelez le `StartSearchingForNewAccessories` méthode pour commencer la recherche de nouveaux accessoires et les `StopSearchingForNewAccessories` méthode une fois.
 
 > [!IMPORTANT]
-> **Remarque :** `StartSearchingForNewAccessories` ne doit pas rester en cours d’exécution pendant de longues périodes de temps, car cela affectera négativement autonomie et performances de l’appareil iOS. Apple suggère appel `StopSearchingForNewAccessories` après une minute ou recherche uniquement lorsque l’interface de l’utilisateur de trouver d’accessoire est présentée à l’utilisateur.
+> `StartSearchingForNewAccessories` ne doit pas rester en cours d’exécution pendant de longues périodes de temps, car cela affectera négativement autonomie et performances de l’appareil iOS. Apple suggère appel `StopSearchingForNewAccessories` après une minute ou recherche uniquement lorsque l’interface de l’utilisateur de trouver d’accessoire est présentée à l’utilisateur.
 
 Le `DidFindNewAccessory` événement sera appelé lorsque de nouveaux accessoires sont découverts et ils seront ajoutés à la `DiscoveredAccessories` liste dans le navigateur accessoire.
 
@@ -285,7 +285,7 @@ Une fois que le nouvel accessoire a été trouvé, il doit être présenté à l
 
 [![](homekit-images/accessory01.png "Recherche d’un nouvel accessoire")](homekit-images/accessory01.png#lightbox)
 
-Appelez le `AddAccessory` méthode pour ajouter l’accesseur sélectionné à la collection de la page d’accueil. Exemple :
+Appelez le `AddAccessory` méthode pour ajouter l’accesseur sélectionné à la collection de la page d’accueil. Exemple :
 
 ```csharp
 // Add the requested accessory to the home
@@ -318,7 +318,7 @@ Le `HMRoom` objet contient toutes les informations concernant une salle donnée 
 
 Cet exemple, nous allons conserver choses simples et utiliser des accessoires d’une maison directement, au lieu de les organiser dans des locaux ou des zones.
 
-Le `HMHome` objet contient une liste d’accessoire attribué qui peut être présentée à l’utilisateur dans son `Accessories` propriété. Exemple :
+Le `HMHome` objet contient une liste d’accessoire attribué qui peut être présentée à l’utilisateur dans son `Accessories` propriété. Exemple :
 
 [![](homekit-images/accessory04.png "Un accessoire d’exemple")](homekit-images/accessory04.png#lightbox)
 

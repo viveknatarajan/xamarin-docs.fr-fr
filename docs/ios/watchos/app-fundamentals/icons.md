@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6d80ef6bdac7f35b282f6347a0356453a413b39c
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 2961eb4726b9f313d01f8bc075e5ca362d708e92
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons"></a>Utilisation des icônes
 
@@ -79,7 +79,7 @@ Une fois votre [application parente](~/ios/watchos/app-fundamentals/parent-app.m
 Vous pouvez vérifier les icônes sont configurés correct en vérifiant la [Apple Watch paramètres application](~/ios/watchos/app-fundamentals/settings.md) dans le simulateur, iPhone ou en générant un [notification](~/ios/watchos/platform/notifications.md) et confirmation de l’icône s’affiche sur la notification écran.
 
 > [!NOTE]
-> **Remarque**: icônes ne peut pas avoir un canal alpha (l’application est rejetée pendant l’envoi du magasin d’applications si un canal alpha est présent). Vous pouvez vérifier si un canal alpha existe et supprimez-le [à l’aide de l’application de la version d’évaluation sur Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
+> Icônes ne peut pas avoir un canal alpha (l’application est rejetée pendant l’envoi du magasin d’applications si un canal alpha est présent). Vous pouvez vérifier si un canal alpha existe et supprimez-le [à l’aide de l’application de la version d’évaluation sur Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
 
 
 ## <a name="related-links"></a>Liens associés

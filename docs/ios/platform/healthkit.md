@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -34,7 +34,7 @@ Dans cet article, nous allons créer un exemple d’application pour enregistrer
 
 [![](healthkit-images/image01.png "Un exemple d’application pour enregistrer le rythme cardiaque utilisateurs")](healthkit-images/image01.png#lightbox)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour terminer les étapes présentées dans cet article :
 
@@ -43,7 +43,7 @@ Les éléments suivants sont requis pour terminer les étapes présentées dans 
 - **iOS 8 (ou version ultérieure) périphérique** – un appareil iOS en cours d’exécution la dernière version d’iOS 8 ou supérieur pour le test.
 
 > [!IMPORTANT]
-> **Remarque :** Kit de contrôle d’intégrité a été introduite dans iOS 8. Actuellement, Kit de contrôle d’intégrité n’est pas disponible sur le simulateur iOS, et le débogage requiert la connexion à un appareil iOS physiques.
+> Kit de contrôle d’intégrité a été introduite dans iOS 8. Actuellement, Kit de contrôle d’intégrité n’est pas disponible sur le simulateur iOS, et le débogage requiert la connexion à un appareil iOS physiques.
 
 
 
@@ -216,7 +216,7 @@ Le travail de `ValidateAuthorization()` consiste à créer le jeu de `HKObjectTy
 Le `ReactToHealthCarePermissions()` rappel sera appelé une fois que l’utilisateur interagisse avec la boîte de dialogue Autorisations et est passé de deux types d’informations : un `bool` valeur qui sera `true` si l’utilisateur interagisse avec la boîte de dialogue Autorisations et un `NSError`qui, si non null, indique un type de l’erreur associée à la présentation de la boîte de dialogue autorisations.
 
 > [!IMPORTANT]
-> **Remarque :** d’identifier clairement les arguments de cette fonction : le _réussite_ et _erreur_ paramètres n’indiquent pas si l’utilisateur a obtenu l’autorisation d’accéder aux données de contrôle d’intégrité Kit ! Elles indiquent uniquement que l’utilisateur a été donné la possibilité d’autoriser l’accès aux données.
+> D’identifier clairement les arguments de cette fonction : le _réussite_ et _erreur_ paramètres n’indiquent pas si l’utilisateur a obtenu l’autorisation d’accéder aux données de contrôle d’intégrité Kit ! Elles indiquent uniquement que l’utilisateur a été donné la possibilité d’autoriser l’accès aux données.
 
 Pour vérifier si l’application a accès aux données, le `HKHealthStore.GetAuthorizationStatus()` est utilisée, transmettant `HKQuantityTypeIdentifierKey.HeartRate`. Selon l’état retourné, l’application active ou désactive la possibilité d’entrer des données. Il n’existe aucune expérience utilisateur standard pour traiter un refus d’accès et de nombreuses options sont disponibles. Dans l’exemple d’application, l’état est défini sur un `HeartRateModel` objet singleton qui, à son tour, déclenche les événements pertinents.
 
@@ -404,7 +404,7 @@ Le simulateur iOS ne prend pas en charge le Kit de contrôle d’intégrité. Le
 Attachez un appareil de développement correctement mis en service iOS 8 sur votre système. Sélectionnez en tant que la cible de déploiement dans Visual Studio pour Mac et dans le menu Choisissez **exécuter > débogage**.
 
 > [!IMPORTANT]
-> **Remarque :** erreurs relatives à la configuration affichera à ce stade. Pour résoudre les erreurs, vérifiez la création et la configuration d’une section de contrôle d’intégrité Kit App ci-dessus. Les composants sont : 
+> Les erreurs relatives à la configuration s’affichera à ce stade. Pour résoudre les erreurs, vérifiez la création et la configuration d’une section de contrôle d’intégrité Kit App ci-dessus. Les composants sont : 
 >
 > - **Centre de développement d’iOS** -ID d’application explicite & Kit de contrôle d’intégrité activé le profil de préparation. 
 > - **Options de projet** -identificateur de lot (ID d’application explicite) et le profil de préparation.

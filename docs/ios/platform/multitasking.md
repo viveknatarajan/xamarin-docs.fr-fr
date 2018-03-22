@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0783372cd36d5a4984d09ee055257d525e7becb1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="multitasking-for-ipad"></a>Multitâche pour iPad
 
@@ -33,7 +33,7 @@ Il existe un nombre d’éléments à prendre en compte lorsque [prenant en char
 - [Raccourcis clavier de matériel personnalisé](#Custom-Hardware-Keyboard-Shortcuts)
 - [Gestion des ressources](#Resource-Management-Considerations)
 
-En tant que développeur d’application que vous pouvez également [annulations de traitement multitâche](#Opting-Out-of-Multitasking), y compris [la désactivation de la lecture vidéo PIP](#Disabling-PIP-Video-Playback).
+En tant que développeur d’application que vous pouvez également [refuser multitâche](#Opting-Out-of-Multitasking), y compris [la désactivation de la lecture vidéo PIP](#Disabling-PIP-Video-Playback).
 
 Cet article décrit les étapes requises pour vous assurer que votre application Xamarin.iOS s’exécute correctement dans un environnement multitâche, ou comment refuser multitâche s’il n’est pas une bonne adapté à votre application.
 
@@ -205,7 +205,7 @@ Consultez l’exemple [multi-tâches application](http://developer.xamarin.com/s
 
 Même pour les applications qui utilisent déjà les guides de conception et les meilleures pratiques iOS 8, gestion efficace des ressources est peut-être toujours un problème. Dans iOS 9, les applications n’ont plus une utilisation exclusive de la mémoire, processeur ou autres ressources système.
 
-Par conséquent, vous devez affiner votre application Xamarin.iOS pour utiliser efficacement les ressources système, ou il fait face à l’arrêt dans les situations de mémoire insuffisante. Cela est également vrai pour les applications qui s’en désengager de multitâche, depuis une seconde application peut toujours être exécutée dans un panneau diapositive sur ou une image dans la fenêtre de l’image qui requièrent des ressources supplémentaires ou à l’origine de la fréquence d’actualisation se situent en dessous de 60 frames par seconde.
+Par conséquent, vous devez affiner votre application Xamarin.iOS pour utiliser efficacement les ressources système, ou il fait face à l’arrêt dans les situations de mémoire insuffisante. C’est également vrai pour les applications refuser multitâche, depuis une seconde application peut toujours être exécutée dans un panneau diapositive sur ou une image dans la fenêtre de l’image qui requièrent des ressources supplémentaires ou à l’origine de la fréquence d’actualisation se situent en dessous de 60 frames par seconde.
 
 Examinez les actions utilisateur suivantes et leurs implications :
 
@@ -223,19 +223,16 @@ Consultez d’Apple [Guide de l’efficacité énergétique pour des application
 
 <a name="Opting-Out-of-Multitasking" />
 
-## <a name="opting-out-of-multitasking"></a>Si vous activez à la sortie de traitement multitâche
+## <a name="opting-out-of-multitasking"></a>Refus du multitâche
 
 Lors de l’Apple indique que toutes les applications iOS 9 prennent en charge les travaux multitâches, il peut y avoir des raisons très spécifiques pour une application pas trop, tels que des jeux ou des applications d’appareil photo qui requièrent le mode plein écran pour fonctionner correctement.
 
-Pour votre application Xamarin.iOS pour s’en désengager d’en cours d’exécution dans soit une diapositive à panneau de configuration ou en mode d’affichage fractionné, modification du projet **Info.plist** de fichier et vérifiez **nécessite un plein écran**:
+Pour votre application Xamarin.iOS peuvent ne pas en cours d’exécution dans soit une diapositive à panneau de configuration ou en mode d’affichage fractionné, modification du projet **Info.plist** de fichier et vérifiez **nécessite un plein écran**:
 
-[![](multitasking-images/fullscreen01.png "Si vous activez à la sortie de traitement multitâche")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "Refus du multitâche")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
-> **Remarque :** tandis que hors-Opting multitâche empêche votre application dans la diapositive Out ou en mode fractionné, il effectue **pas** empêcher l’exécution dans la diapositive Out ou une image dans une vidéo de l’image à partir de l’affichage avec une autre application votre application.
-
-
-
+> Alors que les refus multitâche empêche votre application dans la diapositive Out ou en mode fractionné, il n’empêche pas une autre application de s’exécuter dans la diapositive Out ou une image dans l’image vidéo à partir de l’affichage, ainsi que votre application.
 
 <a name="Disabling-PIP-Video-Playback" />
 
@@ -243,7 +240,7 @@ Pour votre application Xamarin.iOS pour s’en désengager d’en cours d’exé
 
 Dans la plupart des cas, votre application doit autoriser l’utilisateur à jouer tout contenu vidéo, qu'il s’affiche dans une image dans la fenêtre flottante d’image. Toutefois, il peut arriver là où cela ne peut pas être souhaitée, tels que des vidéos de scène coupé jeu.
 
-Pour s’en désengager de lecture vidéo du PIP, procédez comme suit dans votre application :
+Pour désactiver la lecture vidéo du PIP, procédez comme suit dans votre application :
 
  - Si vous utilisez un `AVPlayerViewController` pour afficher la vidéo, définissez la `AllowsPictureInPicturePlayback` propriété `false`.
  - Si vous utilisez la `AVPlayerLayer` pour afficher la vidéo, ne pas instancier un `AVPictureInPictureController`.

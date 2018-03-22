@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 71f076bb0dc7d552a041d48a6ce531dcff444de6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Sandboxing une application Xamarin.Mac
 
@@ -174,7 +174,7 @@ Ensuite, nous devons sélectionner l’ID d’application et un profil de config
 6. Cliquez sur le **fait** bouton.
 
 > [!IMPORTANT]
-> **Remarque :** vous devrez peut-être quitter et redémarrer Visual Studio pour Mac pour qu’il reconnaît l’ID d’application et un profil de configuration qui a été installée par Xcode nouvelle.
+> Vous devrez peut-être quitter et redémarrer Visual Studio pour Mac pour qu’il reconnaît l’ID d’application et un profil de configuration qui a été installée par Xcode nouvelle.
 
 #### <a name="troubleshooting-provisioning-issues"></a>Résolution des problèmes de configuration
 
@@ -308,7 +308,7 @@ Répertoire de conteneur d’application d’une application Xamarin.Mac présen
 - Pour _bibliothèque d’images_ types d’applications (par exemple, application de photos d’Apple), le contenu de l’utilisateur passe dans le conteneur.
 
 > [!IMPORTANT]
-> **Remarque :** Malheureusement, Xamarin.Mac ne contient aucune couverture d’API de 100 % encore (contrairement à Xamarin.iOS), par conséquent la `NSHomeDirectory` API n’a pas été mappé dans la version actuelle de Xamarin.Mac.
+> Malheureusement, Xamarin.Mac ne contient aucune couverture d’API de 100 % encore (contrairement à Xamarin.iOS), par conséquent la `NSHomeDirectory` API n’a pas été mappé dans la version actuelle de Xamarin.Mac.
 
 En tant que solution de contournement temporaire, vous pouvez utiliser le code suivant :
 
@@ -413,7 +413,7 @@ Lorsque l’utilisateur importe un fichier de ressources dans le projet (via un 
 Un signet Document-Scoped peuvent être résolu par n’importe quelle application capable d’ouvrir les données de signet et le document lui-même. Il prend en charge la portabilité, ce qui permet d’envoyer les fichiers de projet à un autre utilisateur et avoir tous les signets fonctionnent aussi bien pour les.
 
 > [!IMPORTANT]
-> **Remarque :** un Bookman Document-Scoped pouvez _uniquement_ pointe vers un seul fichier et non un dossier et que ce fichier ne peut pas être dans un emplacement utilisé par le système (tel que `/private` ou `/Library`).
+> Un signet Document-Scoped pouvez _uniquement_ pointe vers un seul fichier et non un dossier et que ce fichier ne peut pas être dans un emplacement utilisé par le système (tel que `/private` ou `/Library`).
 
 #### <a name="using-security-scoped-bookmarks"></a>À l’aide de signets de portée à la sécurité
 
@@ -428,7 +428,7 @@ Un signet Document-Scoped peuvent être résolu par n’importe quelle applicati
 Une fois que vous avez annulé l’accès à une ressource, vous devez revenir à l’étape 4 pour rétablir l’accès. Si l’application Xamarin.Mac est redémarrée, vous devez revenir à l’étape 3 et de résoudre le signet.
 
 > [!IMPORTANT]
-> **Remarque :** libérer l’accès aux ressources Security-Scoped URL provoquera une application Xamarin.Mac une fuite des ressources du noyau. Par conséquent, l’application ne seront plus en mesure d’ajouter des emplacements de système de fichiers à son conteneur jusqu'à ce qu’il est redémarré.
+> Libérer l’accès aux ressources Security-Scoped URL provoquera une application Xamarin.Mac une fuite des ressources du noyau. Par conséquent, l’application ne seront plus en mesure d’ajouter des emplacements de système de fichiers à son conteneur jusqu'à ce qu’il est redémarré.
 
 ### <a name="the-app-sandbox-and-code-signing"></a>Le bac à sable d’application et la signature du code
 
@@ -493,7 +493,7 @@ Conception d’une application Xamarin.Mac pour le bac à sable application gén
 6. Implémenter une stratégie de migration.
 
 > [!IMPORTANT]
-> **Remarque :** vous devez non seulement le sandbox du fichier exécutable principal dans le lot d’applications pour vous, mais également toutes helper inclus application ou un outil dans ce groupe. Cela est requis pour toutes les applications distribuées à partir de l’ordinateur Mac App Store et, si possible, doit être effectuée pour toute autre forme de distribution d’applications.
+> Vous devez non seulement le sandbox du fichier exécutable principal dans le lot d’applications pour vous, mais également toutes helper inclus application ou un outil dans ce groupe. Cela est requis pour toutes les applications distribuées à partir de l’ordinateur Mac App Store et, si possible, doit être effectuée pour toute autre forme de distribution d’applications.
 
 Pour obtenir la liste de tous les fichiers binaires exécutables dans un Xamarin.Mac d’offre groupée, tapez la commande suivante dans le Terminal :
 

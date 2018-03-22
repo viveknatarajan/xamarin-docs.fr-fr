@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 35665731fb0b8b669a850c06929dd951589e6bf6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 46118b5879589c963898ab7f60c61bd8e38f3900
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-existing-mac-apps"></a>Mise à jour d’applications Mac existantes
 
@@ -32,7 +32,7 @@ Avant de mettre à jour de votre code existant à l’API unifiée, il est vivem
 
 ## <a name="automated-updating"></a>Automatisée de mise à jour
 
-Une fois que les avertissements ont été résolus, sélectionnez un projet Mac existant dans Visual Studio pour Mac ou Visual Studio et choisissez **migrer vers une API unifiée de Xamarin.Mac** à partir de la **projet** menu. Exemple :
+Une fois que les avertissements ont été résolus, sélectionnez un projet Mac existant dans Visual Studio pour Mac ou Visual Studio et choisissez **migrer vers une API unifiée de Xamarin.Mac** à partir de la **projet** menu. Exemple :
 
 ![](updating-mac-apps-images/beta-tool1.png "Choisir de migrer d’API unifiée de Xamarin.Mac dans le menu projet")
 
@@ -116,7 +116,7 @@ Pendant que nous avons contribué modifications NuGet pour travailler avec la pr
 En attendant, tout comme les composants, vous devez passer n’importe quel NuGet Package que vous avez inclus dans votre projet vers une version qui prend en charge les API unifiée et effectuer un nettoyage de build par la suite.
 
 > [!IMPORTANT]
-> **Remarque :** si vous avez une erreur dans le formulaire _« erreur 3 ne peut pas inclure 'monomac.dll' et 'Xamarin.Mac.dll' dans le même projet Xamarin.Mac - 'Xamarin.Mac.dll' est référencé explicitement, alors que 'monomac.dll' est référencé par ' xxx, Version = 0.0.000, Culture = neutral, PublicKeyToken = null' «_ après la conversion de votre application à l’API unifiée, il est généralement parce qu’un composant ou un NuGet Package dans le projet n’a pas été mis à jour à l’API unifiée. Vous devez supprimer le composant existant/NuGet, mettre à jour vers une version qui prend en charge les API unifiée, puis effectuez un nettoyage de build.
+> Si vous avez une erreur dans le formulaire _« erreur 3 ne peut pas inclure 'monomac.dll' et 'Xamarin.Mac.dll' dans le même projet Xamarin.Mac - 'Xamarin.Mac.dll' est référencé explicitement, alors que 'monomac.dll' est référencé par ' xxx, Version = 0.0.000, Culture = neutral, PublicKeyToken = null' «_ après la conversion de votre application à l’API unifiée, il est généralement parce qu’un composant ou un NuGet Package dans le projet n’a pas été mis à jour à l’API unifiée. Vous devez supprimer le composant existant/NuGet, mettre à jour vers une version qui prend en charge les API unifiée, puis effectuez un nettoyage de build.
 
 ## <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>L’activation de 64 bits génère des applications de Xamarin.Mac
 

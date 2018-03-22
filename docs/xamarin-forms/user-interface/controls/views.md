@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: ef4de2d544f3bcfb661b29dd90de738ae0442373
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: f7d27c5226741ec2b105633206ebaa0ac73d9a7b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarinforms-views"></a>Vues de Xamarin.Forms
 
@@ -86,7 +86,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 
 |     |     |
 | --- | --- |
-| [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) permet à l’utilisateur de sélectionner un `double` valeur d’une plage continue spécifiée avec la [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) et [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) propriétés.<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) | [![Exemple de curseur](views-images/Slider.png "curseur exemple")](views-images/Slider-Large.png#lightbox "exemple de curseur")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) |
+| [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) permet à l’utilisateur de sélectionner un `double` valeur d’une plage continue spécifiée avec la [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) et [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) propriétés.<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) / [Guide](~/xamarin-forms/user-interface/slider.md) / [exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) | [![Exemple de curseur](views-images/Slider.png "curseur exemple")](views-images/Slider-Large.png#lightbox "exemple de curseur")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) |
 |     |     |
 
 ### <a name="stepper"></a>Stepper

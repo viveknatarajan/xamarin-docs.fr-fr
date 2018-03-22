@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 67635b6a04579246467184cdff8d9f277b36ecc4
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0c1253391673e48f81c12b80719db485d276013d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>Présentation des Concepts de SiriKit
 
@@ -274,7 +274,7 @@ L’Extension de l’interface utilisateur intentions seront toujours affichée,
 Il existe quelques cas où l’application peut remplacer les informations qui Siri est affiché à l’utilisateur par défaut tels que la messagerie ou mappe où l’application peut remplacer l’expérience par défaut avec un adaptés à l’application.
 
 > [!IMPORTANT]
-> **Remarque :** alors qu’il est possible d’ajouter des éléments interactifs comme `UIButtons` ou `UITextFields` à l’Extension de l’interface utilisateur d’intention `UIViewController`, ceux-ci sont strictement interdites d’intention de l’interface utilisateur dans non interactive et l’utilisateur ne sera pas en mesure d’interagir avec eux.
+> Bien qu’il soit possible d’ajouter des éléments interactifs comme `UIButtons` ou `UITextFields` à l’Extension de l’interface utilisateur d’intention `UIViewController`, ceux-ci sont strictement interdites d’intention de l’interface utilisateur dans non interactive et l’utilisateur ne sera pas en mesure d’interagir avec eux.
 
 Il est totalement facultatif pour l’application de fournir une Extension de l’interface utilisateur intention comme Siri contient un ensemble par défaut de l’interface utilisateur pour chaque type d’intention. En outre, les interfaces de l’interface utilisateur des objectifs ne sont disponibles pour certains objectifs que Apple a jugé serait utiles de l’utilisateur.
 
@@ -320,7 +320,7 @@ L’application doit également mettre à jour rapidement Siri lorsque change de
 Plus important encore, l’application _doit_ supprimer rapidement des informations à partir du vocabulaire Siri dans la mesure où un utilisateur peut devenir perturber si elles supprimé un élément d’information mais Siri a été le reconnaître en heures ou jours plus tard.
 
 > [!IMPORTANT]
-> **Remarque :** l’application doit supprimer le vocabulaire spécifique utilisateur de Siri si l’utilisateur choisit de réinitialiser l’application ou si leur déconnexion.
+> L’application doit supprimer le vocabulaire spécifique utilisateur de Siri si l’utilisateur choisit de réinitialiser l’application ou si leur déconnexion.
 
 ## <a name="sirikit-permissions"></a>Autorisations SiriKit
 
@@ -403,7 +403,7 @@ Il existe plusieurs méthodes que l’application peut gérer cette situation :
 
 Lorsque l’application est présentée avec une valeur unique qui est en question, la meilleure façon de gérer cette situation consiste à avoir Siri à demander à l’utilisateur à confirmer l’opération. Par exemple, *« Vouliez-vous Bobo le grand ? »* , lequel ils peuvent répondre à une simple réponse Oui ou non.
 
-Lorsqu’il existe une situation dans laquelle plusieurs choix possibles peut être adaptés à une valeur unique, ambiguïté est la méthode de gestion par défaut. Dans ce cas les Siri peut inviter l’utilisateur avec jusqu'à dix possibles d’options. Exemple :
+Lorsqu’il existe une situation dans laquelle plusieurs choix possibles peut être adaptés à une valeur unique, ambiguïté est la méthode de gestion par défaut. Dans ce cas les Siri peut inviter l’utilisateur avec jusqu'à dix possibles d’options. Exemple :
 
 ```csharp
 Who do you want to send the message to?

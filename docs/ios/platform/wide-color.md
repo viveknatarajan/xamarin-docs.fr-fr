@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 34f2e249c5474997b2e2e179285f455c425739cf
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="wide-color"></a>Couleur large
 
@@ -191,7 +191,7 @@ Apple a les suggestions suivantes pour les formats de fichier et les profils de 
 - Exporter des ressources d’image en tant que fichiers PNG de 16 bits avec un profil « Affichage P3 » ICC incorporé.
 
 > [!IMPORTANT]
-> **Remarque :** à l’aide du **enregistrer pour le Web** ou **exporter les ressources** fonctionnalités se trouvent dans le logiciel d’édition d’image les plus populaires _ne seront pas_ fonctionnent pour les images du large couleur depuis Ces fonctionnalités n’ont pas été mis à jour pour prendre en charge les spécifications de format de fichier requis encore.
+> À l’aide de la **enregistrer pour le Web** ou **exporter les ressources** fonctionnalités se trouvent dans le logiciel d’édition d’image les plus populaires _ne seront pas_ fonctionnent pour les images du large couleur étant donné que ces fonctionnalités n’ont pas été mise à jour prend encore en charge les spécifications de format de fichier requis.
 
 ### <a name="supporting-wide-color-with-asset-catalogs"></a>Prise en charge de couleur large avec des catalogues d’actif
 
@@ -330,7 +330,7 @@ Le `CreateImage` méthode de la `UIGraphicsImageRenderer` classe est appelé pou
 
 ### <a name="drawing-wide-color-in-macos"></a>Couleur de dessin large dans macOS
 
-La `NSImage` classe a été développée dans macOS Sierra pour prendre en charge le dessin d’images du large couleur. Exemple :
+La `NSImage` classe a été développée dans macOS Sierra pour prendre en charge le dessin d’images du large couleur. Exemple :
 
 ```csharp
 var size = CGSize(250,250);
@@ -354,7 +354,7 @@ Pour restituer des images du large couleur à l’écran, le processus fonctionn
 
 ### <a name="rendering-on-screen-in-ios"></a>Rendu à l’écran dans iOS
 
-Lorsque l’application a besoin d’afficher une image en couleur large à l’écran dans iOS, substituer la `Draw` méthode de le `UIView` en question comme d’habitude. Exemple :
+Lorsque l’application a besoin d’afficher une image en couleur large à l’écran dans iOS, substituer la `Draw` méthode de le `UIView` en question comme d’habitude. Exemple :
 
 ```csharp
 using System;
@@ -396,7 +396,7 @@ Si l’application souhaite de contrôle qui espace colorimétrique est utilisé
 
 ### <a name="rendering-on-screen-in-macos"></a>Rendu à l’écran dans macOS
 
-Lorsque l’application a besoin d’afficher une image en couleur large à l’écran dans macOS, substituer la `DrawRect` méthode de le `NSView` en question comme d’habitude. Exemple :
+Lorsque l’application a besoin d’afficher une image en couleur large à l’écran dans macOS, substituer la `DrawRect` méthode de le `NSView` en question comme d’habitude. Exemple :
 
 ```csharp
 using System;

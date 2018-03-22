@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/13/2017
-ms.openlocfilehash: a4491f550369bbb8515635ecbb7c1c2b74de48cf
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 357528c559de36329ca4bf12ab2597247a17222d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="app-transport-security"></a>Sécurité de Transport de l’application
 
@@ -82,7 +82,7 @@ Le niveau TLS est contrôlé par le service web que vous utilisez et est donc en
 Selon le serveur que vous vous entretenez (en particulier s’il s’agit d’un service tiers 3e), vous devrez peut-être désactiver le secret de transfert, ou sélectionnez un niveau inférieur de TLS. Consultez le [configuration des Options ATS](#Configuring-ATS-Options) section ci-dessous pour plus de détails.
 
 > [!IMPORTANT]
-> **Remarque :** sécurité de Transport d’application ne s’applique pas pour les applications Xamarin à l’aide de **gérés de HTTPClient implémentations**. Il s’applique aux connexions à l’aide de CFNetwork **HTTPClient implémentations** ou **NSURLSession HTTPClient implémentations** uniquement.
+> Sécurité de Transport d’application ne s’applique pas pour les applications Xamarin à l’aide de **gérés de HTTPClient implémentations**. Il s’applique aux connexions à l’aide de CFNetwork **HTTPClient implémentations** ou **NSURLSession HTTPClient implémentations** uniquement.
 
 ### <a name="setting-the-httpclient-implementation"></a>Définition de l’implémentation du client HTTP
 
@@ -138,7 +138,7 @@ Inconvénient :
 
 Lorsque vous tentez de vous connecter à internet, directement ou à partir d’un affichage web dans iOS 9, vous pouvez obtenir une erreur dans le formulaire :
 
-> Sécurité de Transport de l’application a bloqué une charge de ressource HTTP (http://www.-the-blocked-domain.com) en texte clair dans la mesure où il n’est pas sécurisée. Exceptions temporaires peuvent être configurées via le fichier Info.plist de votre application.
+> Sécurité de Transport d’application a bloqué un texte en clair HTTP (http://www.-the-blocked-domain.com) chargement des ressources, car il n’est pas sécurisée. Exceptions temporaires peuvent être configurées via le fichier Info.plist de votre application.
 
 Sécurité de Transport d’application (ATS) iOS9, garantit des connexions sécurisées entre les ressources internet (par exemple, le serveur principal de l’application) et de votre application. En outre, ATS nécessite la communication à l’aide du `HTTPS` protocole et haut niveau communication API à l’aide du protocole TLS version 1.2 avec le secret de transfert.
 
@@ -243,7 +243,7 @@ Si vous le souhaitez, vous pouvez apporter les modifications de suivantes à vot
 [![](ats-images/ats02.png "La vue de Source du fichier Info.plist")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> **Remarque :** si votre application nécessite une connexion à un site Web non sécurisé, vous devez **toujours** entrer le domaine comme une exception à l’aide de `NSExceptionDomains` au lieu de la désactivation ATS complètement à l’aide de `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` doit uniquement être utilisé dans des situations extrêmes d’urgence.
+> Si votre application nécessite une connexion à un site Web non sécurisé, vous devez **toujours** entrer le domaine comme une exception à l’aide de `NSExceptionDomains` au lieu de la désactivation ATS complètement à l’aide de `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` doit uniquement être utilisé dans des situations extrêmes d’urgence.
 
 
 

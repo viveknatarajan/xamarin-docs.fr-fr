@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: dfbc976da109a3813b8d7abd85adafbc9bb94fa0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5b89570fdd3df80d39c6621fcd12a23babed9ee
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="deploying-to-the-app-store"></a>Déploiement à l’App Store
 
 > [!IMPORTANT]
->  Veillez à consulter [Guide de soumission d’Apple Watch](https://developer.apple.com/app-store/watch/)et consultez le [dépannage](#Troubleshooting) section pour tous les problèmes que vous avez peut-être.
+> Veillez à consulter [Guide de soumission d’Apple Watch](https://developer.apple.com/app-store/watch/)et consultez le [dépannage](#Troubleshooting) section pour tous les problèmes que vous avez peut-être.
 
 - Assurez-vous de qu'avoir :
   - [**Profils de mise en service de distribution** ](#provisioning) créé pour vos projets.
@@ -177,7 +177,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Assurez-vous d’avoir la version la plus récente de Visual Studio pour Mac et que votre **AppIcons.appiconset** contient un jeu complet d’images. Si vous voyez toujours cette erreur, affichez la source de la **Contents.json** pour confirmer qu’il contient une entrée pour toutes les images requises. Vous pouvez également, une fois que vous avez vérifié que vous utilisez la dernière version de Xamarin, supprimez et recréez le **AppIcons.appiconset**.
 
 > [!IMPORTANT]
-> Remarque : Il existe un bogue connu dans Visual Studio pour la prise en charge de Mac espion icône : il attend une image 88 x 88 pixels pour la  **29x29@3x**  image (qui doit être 87 x 87 pixels).
+> Il existe un bogue connu dans Visual Studio pour la prise en charge de Mac espion icône : il attend une image 88 x 88 pixels pour la  **29x29@3x**  image (qui doit être 87 x 87 pixels).
 
 
 Vous ne pouvez pas résoudre ce problème dans Visual Studio pour Mac - modifier le composant de l’image dans Xcode ou modifier manuellement le **Contents.json** fichier (pour correspondre à [cet exemple](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
@@ -196,7 +196,7 @@ Ce message peut apparaître au cours de validation et de la soumission, ou dans 
 Ensure you are using the latest version of Xcode and Xamarin's tools.
 -->
 > [!IMPORTANT]
-> Remarque : Vous devez **Archive** votre application dans Visual Studio pour Mac et basculez ensuite vers Xcode 6.2 + valider et télécharger dans iTunes Connect.
+> Vous devez **Archive** votre application dans Visual Studio pour Mac et basculez ensuite vers Xcode 6.2 + valider et télécharger dans iTunes Connect.
 
 
 Utiliser le canal de Xamarin Stable et Xcode 6.2 +.

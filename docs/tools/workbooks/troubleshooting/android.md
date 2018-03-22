@@ -6,11 +6,11 @@ ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: eb188abb3e757f6f66af7758ced311ae1236d3ce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 530abec733ec1d842559bf9c898217a8e45465aa
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Dépannage des classeurs Xamarin sur Android
 
@@ -25,7 +25,8 @@ Vous devez disposer d’un émulateur qui exécute Android 5.0 ou version ultér
 
 Veuillez lire [notre documentation sur la configuration des émulateurs Android] [ android-emu] si vous n’êtes pas familiarisé avec le processus.
 
-**Remarque :** 1.1 et les versions antérieures de classeurs seront essayez (et échouer !) pour utiliser les émulateurs ARM si elles sont disponibles. Pour contourner cette situation, émulateur le x86 de lancement de votre choix avant d’ouvrir ou de créer un classeur Android. Classeurs préfèreront toujours pour se connecter à un émulateur en cours d’exécution, tant qu’il est compatible.
+> [!NOTE]
+> 1.1 et les versions antérieures de classeurs seront essayez (et échouer !) pour utiliser les émulateurs ARM si elles sont disponibles. Pour contourner cette situation, émulateur le x86 de lancement de votre choix avant d’ouvrir ou de créer un classeur Android. Classeurs préfèreront toujours pour se connecter à un émulateur en cours d’exécution, tant qu’il est compatible.
 
 ## <a name="workbooks-wont-load"></a>Ne chargent pas les classeurs
 
@@ -33,7 +34,7 @@ Veuillez lire [notre documentation sur la configuration des émulateurs Android]
 
 Tout d’abord, vérifiez que votre émulateur a un accès réseau complet travail en testant un site Web dans le navigateur de l’émulateur.
 
-### <a name="visual-studio-android-emulator-cannot-connect-to-internet"></a>L’émulateur Android de Visual Studio ne peut pas se connecter à internet
+### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>L’émulateur Android de Visual Studio ne peut pas se connecter à internet
 
 Si votre émulateur n’a pas accès au réseau, vous devrez peut-être suivre ces étapes pour résoudre le commutateur de réseau Hyper-V. Si vous basculez entre les réseaux Wi-Fi fréquemment, vous devrez répéter ce régulièrement :
 

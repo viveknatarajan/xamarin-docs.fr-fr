@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: efc0da0b0f0a800069efb00a402361a8b0cd7f1d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-stacked-view"></a>Utilisation d’une vue empilée
 
@@ -76,7 +76,7 @@ Si le `BaselineRelativeArrangement` propriété `true`, les sous-vues seront dis
 * Une vue pile Horizontal utilisera sa plus grand sous-affichage pour à la fois la première et la dernière ligne de base. Si la vue la plus haute est également une vue de la pile, il utilisera sa plus grand sous-affichage en tant que la ligne de base.
 
 > [!IMPORTANT]
-> **Remarque :** alignement de la ligne de base ne fonctionne pas sur les tailles de sous-affichage élargi ou compressé comme la ligne de base correspond à une position incorrecte. Pour l’alignement de la ligne de base, vérifiez que le sous-affichage **hauteur** correspond à la vue contenu intrinsèque **hauteur**.
+> Alignement de la ligne de base ne fonctionne pas sur les tailles de sous-affichage élargi ou compressé, comme la ligne de base correspond à une position incorrecte. Pour l’alignement de la ligne de base, vérifiez que le sous-affichage **hauteur** correspond à la vue contenu intrinsèque **hauteur**.
 
 
 
@@ -149,11 +149,11 @@ Pour utiliser des vues de la pile dans une application Xamarin.tvOS, le plus sim
 -----
 
 > [!IMPORTANT]
-> **Remarque :** Remarque : bien qu’il soit possible d’affecter des actions telles que `TouchUpInside` à un élément d’interface utilisateur (comme un `UIButton`) dans le concepteur lors de la création d’un gestionnaire d’événements d’iOS, il ne sera jamais appelée car Apple TV n’a pas une touche de prise en charge ou écran tactile événements. Vous devez toujours utiliser la valeur par défaut `Action Type` lors de la création d’Actions de tvOS éléments d’interface utilisateur.
+> Bien qu’il soit possible d’affecter des actions telles que `TouchUpInside` à un élément d’interface utilisateur (comme un `UIButton`) dans le concepteur lors de la création d’un gestionnaire d’événements d’iOS, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser la valeur par défaut `Action Type` lors de la création d’Actions de tvOS éléments d’interface utilisateur.
 
 Pour plus d’informations sur l’utilisation des plans conceptuels, veuillez consulter notre [Hello, Guide de démarrage rapide de tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-Dans le cas de notre exemple, nous avons exposé un prise et l’Action pour le contrôle de Segment et une sortie pour chaque carte « lecteur ». Dans le code, nous masquer et afficher le lecteur basé sur le segment actuel. Exemple :
+Dans le cas de notre exemple, nous avons exposé un prise et l’Action pour le contrôle de Segment et une sortie pour chaque carte « lecteur ». Dans le code, nous masquer et afficher le lecteur basé sur le segment actuel. Exemple :
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {

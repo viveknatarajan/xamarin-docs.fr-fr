@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2016
-ms.openlocfilehash: be005f62c914fe5f59696c5ef9b608a73a45d269
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 348f84533974d1434dd0c7e5045c20e16b57057b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="deprecated-notification-technologies"></a>Technologies de Notification déconseillées
 
 Cette section montre comment implémenter local et des notifications push dans Xamarin.iOS. Elle explique les différents éléments d’interface utilisateur d’une notification d’e/s et traitent de l’API d’impliquée dans la création et affichage d’une notification.
 
 > [!IMPORTANT]
-> **Remarque :** les informations contenues dans cette section relative à iOS 9 et antérieures, il est resté ici pour prendre en charge les anciennes versions d’iOS. Pour iOS 10 et versions ultérieures, consultez le [guide utilisateur Notification Framework](~/ios/platform/user-notifications/index.md) pour prendre en charge à la fois Local et distant Notification sur un appareil iOS.
+> Les informations contenues dans cette section relative à iOS 9 et antérieure, il est resté ici pour prendre en charge les anciennes versions d’iOS. Pour iOS 10 et versions ultérieures, consultez le [guide utilisateur Notification Framework](~/ios/platform/user-notifications/index.md) pour prendre en charge à la fois Local et distant Notification sur un appareil iOS.
 
 
 
@@ -33,7 +33,7 @@ Cette section explique comment implémenter des notifications locales dans Xamar
 
 <a name="Local Notifications Walkthrough" />
 
-##  <a name="walkthrough---using-local-notifications-in-xamarinioslocal-notifications-in-ios-walkthroughmd"></a>[Procédure pas à pas - à l’aide de Notifications Local dans Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
+##  <a name="walkthrough---using-local-notifications-in-xamarinioslocal-notifications-in-ios-walkthroughmd"></a>[Procédure pas à pas : utilisation des notifications locales dans Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
 
 Dans cette section, nous examinerons l’utilisation de notifications locales dans une application Xamarin.iOS. Il va vous montrer les principes fondamentaux de la création et la publication d’une notification s’affiche une alerte lors de la réception par l’application.
 

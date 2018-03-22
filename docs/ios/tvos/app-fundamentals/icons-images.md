@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons-and-images"></a>Utilisation des icônes et des Images
 
@@ -28,7 +28,7 @@ Création captivantes icônes et les images sont un élément essentiel du déve
 - [Définir les Images de projet Xamarin.tvOS](#Setting-Xamarin.tvOS-Project-Images) -couvre les étapes nécessaires pour définir l’Image de lancement et l’icône de l’application pour votre application Xamarin.tvOS.
 
 > [!IMPORTANT]
-> **Remarque :** toutes les images sur l’Apple TV sont à la résolution de 1 x (`@1x`) et vous ne devez _uniquement_ utiliser des images de cette taille. Y compris le plus grand, graphiques d’une résolution plus élevée non seulement de temps télécharger et utiliser plus de mémoire et de stockage, mais ils doivent être mise dynamiquement à l’échelle lors de l’exécution et seront affecter négativement les performances de dessin.
+> Toutes les images sur l’Apple TV sont à la résolution de 1 x (`@1x`) et vous ne devez _uniquement_ utiliser des images de cette taille. Y compris le plus grand, graphiques d’une résolution plus élevée non seulement de temps télécharger et utiliser plus de mémoire et de stockage, mais ils doivent être mise dynamiquement à l’échelle lors de l’exécution et seront affecter négativement les performances de dessin.
 
 <a name="Launch-Image" />
 
@@ -79,7 +79,7 @@ Contiennent des Images en couches à partir de deux (2) à cinq (5) séparer les
 [![](icons-images-images/layered01.png "Diagramme d’Images Z ordonné superposé")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
-> **Remarque :** superposées Images sont requis pour les icônes de votre application et sont facultatives pour les autres [éléments peut être actif](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (par exemple, l’Image de l’étagère haut). Toutefois, Apple suggère l’utilisation d’Images de couches pour toute image qui peut obtenir le focus dans votre application.
+> Images en couches sont requis pour les icônes de votre application et sont facultatives pour les autres [éléments peut être actif](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (par exemple, l’Image de l’étagère haut). Toutefois, Apple suggère l’utilisation d’Images de couches pour toute image qui peut obtenir le focus dans votre application.
 
 
 

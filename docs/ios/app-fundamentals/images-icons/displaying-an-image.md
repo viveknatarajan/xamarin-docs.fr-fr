@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 1ca537ef47f48886483e99bb33b0d524d16593f8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 39da41b7fb5118a16f2b2953f8fcb0a5b72aa819
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="displaying-an-image"></a>Affichage d’une Image
 
@@ -95,7 +95,7 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> **Remarque**: si les images assignées à un ensemble d’images sont affichent pas correctement, vérifiez que le nom de fichier est utilisée avec la `FromBundle` (méthode) (le **Image définie** et non le parent **catalogue**  nom). Pour les images PNG, le `.png` extension peut être omise. Pour les autres formats d’image, l’extension est requise (par exemple). `PurpleMonkey.jpg`).
+> Si les images assignées à un ensemble d’images sont affichent pas correctement, vérifiez que le nom de fichier est utilisée avec la `FromBundle` (méthode) (le **Image définie** et non le parent **catalogue** nom). Pour les images PNG, le `.png` extension peut être omise. Pour les autres formats d’image, l’extension est requise (par exemple). `PurpleMonkey.jpg`).
 
 <a name="Using-Vector-Images-in-Asset-Catalogs" />
 
@@ -231,7 +231,7 @@ En supposant que `MyImage` est le nom d’une ressource Image ajoutée à un cat
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-Pour tout autre format d’image, incluez l’extension avec le nom. Exemple :
+Pour tout autre format d’image, incluez l’extension avec le nom. Exemple :
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");

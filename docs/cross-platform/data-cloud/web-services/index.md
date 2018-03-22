@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 48489ca7dc28dcc14a7810b15dc1ffa1fd4f7cf4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f619123fec036dfe919e977b4f218e8d235f0b82
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-web-services"></a>Introduction aux Services Web
 
@@ -29,8 +29,8 @@ Cet article traite des sujets suivants :
 Pour les clients à l’aide de Xamarin.Forms, il existe des exemples complets à l’aide de chacune de ces technologies dans les [Xamarin.Forms Web Services](~/xamarin-forms/data-cloud/index.md) documentation.
 
 > [!IMPORTANT]
-> **Remarque pour Xamarin.iOS :** dans iOS 9, sécurité de Transport d’application (ATS) applique des connexions sécurisées entre les ressources internet (par exemple, le serveur principal de l’application) et l’application, ce qui évite la divulgation accidentelle d’informations sensibles. Étant donné que les couches d’application est activée par défaut dans les applications générées pour iOS 9, toutes les connexions sont soumis aux exigences de sécurité de couches d’application. Si les connexions ne répondent pas à ces exigences, il échoue avec une exception.
-
+> Dans iOS 9, sécurité de Transport d’application (ATS) met en œuvre des connexions sécurisées entre les ressources internet (par exemple, le serveur principal de l’application) et l’application, ce qui évite la divulgation accidentelle d’informations sensibles.
+> Étant donné que les couches d’application est activée par défaut dans les applications générées pour iOS 9, toutes les connexions sont soumis aux exigences de sécurité de couches d’application. Si les connexions ne répondent pas à ces exigences, il échoue avec une exception.
 
 Vous pouvez annuler des couches d’application si elle n’est pas possible d’utiliser le `HTTPS` de protocole et de sécuriser les communications pour les ressources internet. Cela peut être obtenue en mettant à jour de l’application **Info.plist** fichier. Pour plus d’informations, consultez [sécurité du Transport application](~/ios/app-fundamentals/ats.md).
 
@@ -191,7 +191,7 @@ client.GetAsync<CustomersResponse>("",
 ```
 
 > [!IMPORTANT]
-> **Remarque :** tandis que les outils comme ServiceStack et RestSharp facilitent appeler et consommer REST des services, il est parfois non trivial pour consommer XML ou JSON qui n’est pas conforme à la norme _DataContract_ sérialisation conventions. Si nécessaire, la demande de code non managé et gérer la sérialisation appropriée explicitement à l’aide de la bibliothèque ServiceStack.Text décrite ci-dessous.
+> Alors que les outils comme ServiceStack et RestSharp facilitent appeler et consommer REST des services, il est parfois non trivial pour consommer XML ou JSON qui n’est pas conforme à la norme _DataContract_ conventions de sérialisation. Si nécessaire, la demande de code non managé et gérer la sérialisation appropriée explicitement à l’aide de la bibliothèque ServiceStack.Text décrite ci-dessous.
 
 
 <a name="Options_for_consuming_RESTful_data" />

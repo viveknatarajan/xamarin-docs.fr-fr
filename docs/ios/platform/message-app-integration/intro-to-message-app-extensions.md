@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 083920aba3c8dc83b157b591e194c43935dcc566
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="message-app-extension-basics"></a>Principes de base de message Extension d’application
 
@@ -37,7 +37,7 @@ Nouveau pour iOS 10, l’application Message inclut désormais son propre magasi
 
 Également nouveau dans iOS 10, Apple a ajouté les Attribution application Inline qui lui permet de découvrir facilement une application. Par exemple, si un utilisateur envoie le contenu vers un autre à partir d’une application que l’utilisateur 2 n’est installé (par exemple, une vignette par exemple), le nom de l’application émettrice est répertorié sous le contenu de l’historique des messages. Si l’utilisateur appuie sur l’application un nom, le Message App Store nous série ouvert et l’application sélectionnée dans le magasin.
 
-Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familiarisé avec la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Exemple :
+Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familiarisé avec la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Exemple :
 
 - Ils ont accès dans l’application fournisseur.
 - Ils ont accès à payer par Apple.
@@ -87,7 +87,7 @@ Pour une image à inclure dans un Pack d’étiquette, il doit remplir les condi
 - Les images ne peut pas être inférieure à 100 x 100 points ou plus qui pointe 206 x 206.
 
 > [!IMPORTANT]
-> **Remarque :** des images de vignette doivent toujours être fournis à la `@3x` résolution dans la plage de 300 x 300 à 618 x 618 pixels. Le système génère automatiquement le `@2x` et `@1x` versions lors de l’exécution en fonction des besoins.
+> Images de vignette doivent toujours être fournis à la `@3x` résolution dans la plage de 300 x 300 à 618 x 618 pixels. Le système génère automatiquement le `@2x` et `@1x` versions lors de l’exécution en fonction des besoins.
 
 Apple suggère les ressources d’Image de vignette par rapport à différents arrière-plans différents (par exemple, le blanc, noir, rouge, jaune et multiples en couleur) et photos plus, pour vous assurer qu’elles apparaîtront le meilleur dans tous les cas possibles de test.
 

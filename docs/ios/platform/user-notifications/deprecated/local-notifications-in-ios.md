@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a8ae55f9cc3e2dd4818dec96a35017c76cc9623
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1b36d3ba8601d125d0a17173efb12c249224e78
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="notifications-in-xamarinios"></a>Notifications de Xamarin.iOS
 
 _Cette section montre comment implémenter des notifications locales dans Xamarin.iOS. Elle explique les différents éléments d’interface utilisateur d’une notification d’e/s et traitent de l’API d’impliquée dans la création et affichage d’une notification._
 
 > [!IMPORTANT]
-> **Remarque :** les informations contenues dans cette section relative à iOS 9 et antérieures, il est resté ici pour prendre en charge les anciennes versions d’iOS. Pour iOS 10 et versions ultérieures, consultez le [guide utilisateur Notification Framework](~/ios/platform/user-notifications/index.md) pour prendre en charge à la fois Local et distant Notification sur un appareil iOS.
+> Les informations contenues dans cette section relative à iOS 9 et antérieure, il est resté ici pour prendre en charge les anciennes versions d’iOS. Pour iOS 10 et versions ultérieures, consultez le [guide utilisateur Notification Framework](~/ios/platform/user-notifications/index.md) pour prendre en charge à la fois Local et distant Notification sur un appareil iOS.
 
 iOS a trois méthodes pour indiquer à l’utilisateur qu’une notification a été reçue :
 
@@ -78,7 +78,7 @@ notification.SoundName = UILocalNotification.DefaultSoundName;
 Par les instructions d’Interface humaine Apple, si une notification joue un son, il doit également être accompagné d’un badge ou d’une alerte pour identifier l’application qui a déclenché l’alerte de l’utilisateur. En outre, si le son est plu de 30 secondes, iOS sera lu la valeur par défaut son à la place.
 
 > [!IMPORTANT]
-> **Remarque**: il existe un bogue dans le simulateur iOS qui déclenchera la notification du délégué à deux reprises. Ce problème ne doit pas se produire lors de l’exécution de l’application sur un appareil.
+> Il existe un bogue dans le simulateur iOS qui déclenchera la notification du délégué à deux reprises. Ce problème ne doit pas se produire lors de l’exécution de l’application sur un appareil.
 
 ## <a name="handling-notifications"></a>Gestion des Notifications
 

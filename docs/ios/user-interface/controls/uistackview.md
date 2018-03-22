@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b8d3fc920610b357520dfebddb79492c44d4781c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="stack-view"></a>Vue de la pile
 
@@ -62,7 +62,7 @@ Où :
 Lorsque vous travaillez avec une vue de la pile, vous pouvez considérer le **alignement** en tant que le **X** et **Y** emplacement de la fermeture du sous-affichage et **Distribution** comme le **Hauteur** et **largeur**.
 
 > [!IMPORTANT]
-> **Remarque :** `UIStackView` est conçu comme une vue non-rendu conteneur et par conséquent, il n’est pas dessiné à la zone de dessin, comme les autres sous-classes de `UIView`. Par conséquent, définissant les propriétés telles que `BackgroundColor` ou la substitution `DrawRect` n’a aucun effet visuel.
+> `UIStackView` est conçu comme une vue non-rendu conteneur et par conséquent, il n’est pas dessiné à la zone de dessin, comme les autres sous-classes de `UIView`. Par conséquent, définissant les propriétés telles que `BackgroundColor` ou la substitution `DrawRect` n’a aucun effet visuel.
 
 Continuer à disposition interface de l’application en ajoutant une étiquette, ImageView, deux boutons et une vue pile Horizontal afin qu’il ressemble à ceci :
 
@@ -209,7 +209,7 @@ Si le `BaselineRelativeArrangement` propriété `true`, les sous-vues seront dis
  - Une vue pile Horizontal utilisera sa plus grand sous-affichage pour à la fois la première et la dernière ligne de base. Si la vue la plus haute est également une vue de la pile, il utilisera sa plus grand sous-affichage en tant que la ligne de base.
 
 > [!IMPORTANT]
-> **Remarque :** alignement de la ligne de base ne fonctionne pas sur les tailles de sous-affichage élargi ou compressé comme la ligne de base correspond à une position incorrecte. Pour l’alignement de la ligne de base, vérifiez que le sous-affichage **hauteur** correspond à la vue contenu intrinsèque **hauteur**.
+> Alignement de la ligne de base ne fonctionne pas sur les tailles de sous-affichage élargi ou compressé, comme la ligne de base correspond à une position incorrecte. Pour l’alignement de la ligne de base, vérifiez que le sous-affichage **hauteur** correspond à la vue contenu intrinsèque **hauteur**.
 
 ### <a name="common-stack-view-uses"></a>Utilisations de la vue de pile
 

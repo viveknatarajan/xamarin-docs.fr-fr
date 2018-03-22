@@ -7,11 +7,11 @@ ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0ac2a19e9020113df273897a8ec2c86ee1763ec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af899bb1c5708e3fc0be88db6224d9127f5a5c6d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="apple-pay"></a>Apple Pay
 
@@ -21,7 +21,7 @@ _Ce guide présente la configuration de l’environnement Xamarin.iOS pour une u
 Apple Pay a été introduite avec iOS 8, permettant aux utilisateurs de payer pour les marchandises physiques tels que des produits alimentaires, les divertissements et les appartenances via leurs périphériques iOS. Il est disponible sur iPhone 6 et iPhone 6 Plus et peuvent également être associés à l’Apple Watch pour des achats dans le magasin. Lorsqu’il est utilisé sur un iPhone, il utilise Touch ID comme un moyen de confirmer et autoriser d’un utilisateur carte de crédit ou débit des transactions.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Apple Pay est uniquement disponible dans iOS 8 et versions ultérieures et par conséquent nécessite un minimum de Xcode 6.
 
@@ -118,7 +118,7 @@ Pour activer le nouvel environnement de test, procédez comme suit :
 4. Utilisez une des cartes de paiement de test à partir de la [Guide de payer Apple](https://developer.apple.com/apple-pay/) pour les paiements.
 
 > [!IMPORTANT]
->  **Remarque :** en basculant iCloud comptes, l’appareil bascule automatiquement vers le nouvel environnement de test. Toutefois, Apple est toujours **requiert** l’application doit être testée avec réel cartes dans un environnement de production avant de soumettre à l’iTunes App Store.
+> En basculant iCloud comptes, l’appareil bascule automatiquement vers le nouvel environnement de test. Toutefois, Apple est toujours **requiert** l’application doit être testée avec réel cartes dans un environnement de production avant de soumettre à l’iTunes App Store.
 
 ## <a name="summary"></a>Récapitulatif
 

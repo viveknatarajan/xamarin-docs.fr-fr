@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3d70aff4df91120402e2987598b8973172b46245
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 présentation de l’Interface utilisateur
 
@@ -173,7 +173,7 @@ Reportez-vous à la [afficheur d’images](https://developer.xamarin.com/samples
 La valeur de déplacement est générée dynamiquement une fois que la vue a été ajoutée à la hiérarchie, par conséquent, la tentative de lecture `TopLayoutGuide` et `BottomLayoutGuide` valeurs `ViewDidLoad` retourne 0. Calculer la valeur après l’affichage a chargé - par exemple, dans le `ViewDidLayoutSubviews`.
 
 > [!IMPORTANT]
-> **Remarque**: `TopLayoutGuide` et `BottomLayoutGuide` sont déconseillés dans iOS 11 en faveur de la nouvelle disposition de la zone de sécurité. Apple indiqué qu’à l’aide de la zone de sans échec est compatible avec la version d’iOS antérieure à iOS 11. Pour plus d’informations, consultez la [mise à jour de votre application pour iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) guide.
+> `TopLayoutGuide` et `BottomLayoutGuide` sont déconseillés dans iOS 11 en faveur de la nouvelle disposition de la zone de sécurité. Apple indiqué qu’à l’aide de la zone de sans échec est compatible avec la version d’iOS antérieure à iOS 11. Pour plus d’informations, consultez la [mise à jour de votre application pour iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) guide.
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
@@ -252,7 +252,7 @@ Par exemple, la capture d’écran suivante montre l’effet de la modification 
 La couleur de teinte permettre être appliquée aux images ainsi lorsque la `RenderingMode` a la valeur `UIImageRenderingMode.AlwaysTemplate`.
 
 > [!IMPORTANT]
-> Remarque : Couleur de teinte ne peut pas être définie à l’aide de `UIAppearance`.
+> Couleur de teinte ne peut pas être définie à l’aide de `UIAppearance`.
 
 
 ### <a name="dynamic-type"></a>Type dynamique

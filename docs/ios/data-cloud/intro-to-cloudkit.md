@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: c4ee5c0457dd1faea74cbbc30dd2d0f42087a8d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -43,7 +43,7 @@ CloudKit prend en charge les deux le concept de bases de données publiques et p
 CloudKit prend en charge les données structurées et en bloc. Il est capable de gérer les transferts de fichiers volumineux en toute transparence. CloudKit prend en charge du transfert efficacement des fichiers volumineux vers et depuis le serveurs iCloud en arrière-plan, le développeur pour vous concentrer sur d’autres tâches.
 
 > [!NOTE]
-> **Remarque :** il est important de noter que CloudKit est un _Transport technologie_. Il ne fournit pas les persistances ; Elle permet uniquement à une application envoyer et recevoir des informations à partir des serveurs efficacement.
+> Il est important de noter que CloudKit est un _Transport technologie_. Il ne fournit pas les persistances ; Elle permet uniquement à une application envoyer et recevoir des informations à partir des serveurs efficacement.
 
 À ce jour, Apple initialement fournit CloudKit gratuitement avec une limite supérieure sur la capacité de la bande passante et de stockage. Pour des projets ou des applications avec une base de l’utilisateur de grande taille plus grande, Apple a suggéré qu’une échelle de tarification abordable sera fournie.
 
@@ -239,7 +239,7 @@ Les références sont exposées dans le CloudKit Framework via la `CKReference` 
 Références fournissent le mécanisme derrière les suppressions en cascade. Si un enregistrement parent est supprimé de la base de données, tous les enregistrements enfants (comme spécifié dans une relation) sont automatiquement supprimés de la base de données.
 
 > [!NOTE]
-> **Remarque**: non résolu les pointeurs sont possibles lorsque vous utilisez CloudKit. Par exemple, au moment où l’application a extrait une liste de pointeurs d’enregistrement, sélectionné un enregistrement et demandé pour l’enregistrement, l’enregistrement n’existe plus dans la base de données. Une application doit être programmée pour gérer cette situation en douceur.
+> Pointeurs non résolues sont possibles lorsque vous utilisez CloudKit. Par exemple, au moment où l’application a extrait une liste de pointeurs d’enregistrement, sélectionné un enregistrement et demandé pour l’enregistrement, l’enregistrement n’existe plus dans la base de données. Une application doit être programmée pour gérer cette situation en douceur.
 
 Bien que non obligatoire, références arrière sont préférables lorsque vous travaillez avec l’infrastructure CloudKit. Apple a affiné le système pour rendre le type le plus efficace de référence.
 
@@ -395,7 +395,7 @@ Trois choses à noter concernant le code ci-dessus :
 
 
 > [!NOTE]
-> **Remarque**: en raison de la nature de communications réseau mobile, où les connexions sont abandonnées en permanence ou interrompue, une des considérations premier, le développeur doit faire lors de l’utilisation de CloudKit est la gestion des erreurs « perte ».
+> En raison de la nature de communications réseau mobile, où les connexions sont abandonnées en permanence ou interrompue, une des considérations premier, le développeur doit faire lors de l’utilisation de CloudKit est la gestion des erreurs « perte ».
 
 ### <a name="fetching-a-record"></a>Extraction d’un enregistrement
 
@@ -560,7 +560,7 @@ Enfin, une notification push doit être envoyée à tous les périphériques att
 Les abonnements sont exposées dans le CloudKit Framework via la `CKSubscription` classe. Ils combinent un Type d’enregistrement ( `RecordType`), un prédicat ( `NSPredicate`) et une Notification Push d’Apple ( `Push`).
 
 > [!NOTE]
-> **Remarque**: CloudKit push est augmentées légèrement car elles contiennent une charge utile contenant des informations spécifiques CloudKit ce qui a provoqué le push de se produire.
+> CloudKit push est légèrement augmentée car elles contiennent une charge utile contenant des informations spécifiques CloudKit ce qui a provoqué le push de se produire.
 
 #### <a name="how-subscriptions-work"></a>Fonctionnement des abonnements
 
@@ -665,7 +665,7 @@ CloudKit fournit les informations utilisateur suivantes au développeur :
 
 Ensuite, nous allons nous intéresser à ces rubriques en détail.
 
-#### <a name="identity"></a>identité
+#### <a name="identity"></a>Identité
 
 Comme indiqué ci-dessus, CloudKit fournit un moyen de l’application identifier de façon unique un utilisateur donné :
 
@@ -678,7 +678,7 @@ Car il provient d’iCloud, il existe une riche de stocker les informations d’
 Chaque conteneur en conteneur, un ID d’utilisateur unique, généré de manière aléatoire est créé et associé au compte iCloud de l’utilisateur (adresse de messagerie). Cet ID utilisateur est renvoyé à l’application et peut être utilisé dans le développeur convient.
 
 > [!NOTE]
-> **Remarque**: différentes applications en cours d’exécution sur le même périphérique pour le même utilisateur iCloud aura des ID utilisateur différents, car ils sont connectés à différents conteneurs CloudKit.
+> Différentes applications en cours d’exécution sur le même périphérique pour le même utilisateur iCloud aura des ID utilisateur différents, car ils sont connectés à différents conteneurs CloudKit.
 
 Le suivant code obtient l’ID d’utilisateur CloudKit pour actuellement connecté dans utilisateur iCloud sur l’appareil :
 
@@ -810,7 +810,7 @@ Le développeur peut utiliser cette fonctionnalité pour apporter des modificati
 Avant de déployer l’application, le développeur peut migrer leur schéma et les données dans l’environnement de production avec **CloudKit le tableau de bord**. Lors de l’exécution par rapport à l’environnement de Production, le serveur empêche une application à partir de la modification du schéma par programme. Le développeur peut toujours modifier avec **CloudKit le tableau de bord** mais tente d’ajouter des champs à un enregistrement dans le résultat de l’environnement de Production des erreurs.
 
 > [!NOTE]
-> **Remarque :** iOS Simulator fonctionne uniquement avec les **environnement de développement**. Lorsque le développeur est prêt à tester une application dans un **environnement de Production**, un appareil iOS physiques est nécessaire.
+> IOS Simulator fonctionne uniquement avec les **environnement de développement**. Lorsque le développeur est prêt à tester une application dans un **environnement de Production**, un appareil iOS physiques est nécessaire.
 
 
 ## <a name="shipping-a-cloudkit-enabled-app"></a>Copie un CloudKit activé l’application

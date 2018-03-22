@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 68ea5c700efaaf007718cae3ec8b8f7875385b07
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: c31b6e25350089874b5baf868dfe19e12ab4d531
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="unified-api"></a>API unifiée
 
@@ -94,7 +94,7 @@ Les packages NuGet qui prenait en charge Xamarin.iOS via l’API classique publi
 L’API unifiée introduit un nouvel identificateur de plateforme pour les packages compatibles - **Xamarin.iOS10**. Vous devez être mis à jour pour prendre en charge cette plateforme, par la construction par rapport à l’API unifiée les packages NuGet existants.
 
 > [!IMPORTANT]
-> **Remarque :** si vous avez une erreur dans le formulaire _« erreur 3 ne peut pas inclure 'monotouch.dll' et 'Xamarin.iOS.dll' dans le même projet Xamarin.iOS - 'Xamarin.iOS.dll' est référencé explicitement, alors que 'monotouch.dll' est référencé par ' xxx, Version = 0.0.000, Culture = neutral, PublicKeyToken = null' «_ après la conversion de votre application à l’API unifiée, il est généralement parce qu’un composant ou un NuGet Package dans le projet n’a pas été mis à jour à l’API unifiée. Vous devez supprimer le composant existant/NuGet, mettre à jour vers une version qui prend en charge les API unifiée, puis effectuez un nettoyage de build.
+> Si vous avez une erreur dans le formulaire _« erreur 3 ne peut pas inclure 'monotouch.dll' et 'Xamarin.iOS.dll' dans le même projet Xamarin.iOS - 'Xamarin.iOS.dll' est référencé explicitement, alors que 'monotouch.dll' est référencé par ' xxx, Version = 0.0.000, Culture = neutral, PublicKeyToken = null' «_ après la conversion de votre application à l’API unifiée, il est généralement parce qu’un composant ou un NuGet Package dans le projet n’a pas été mis à jour à l’API unifiée. Vous devez supprimer le composant existant/NuGet, mettre à jour vers une version qui prend en charge les API unifiée, puis effectuez un nettoyage de build.
 
 ### <a name="the-road-to-64-bits"></a>Déplacement à 64 Bits
 
@@ -130,7 +130,7 @@ if (IntPtr.Size == 4) {
 
 ### <a name="arrays-and-systemcollectionsgeneric"></a>Tableaux et System.Collections.Generic
 
-Étant donné que les indexeurs c# attendent un type de `int`, vous devrez effectuer un cast explicite `nint` valeurs `int` pour accéder aux éléments dans une collection ou un tableau. Exemple :
+Étant donné que les indexeurs c# attendent un type de `int`, vous devrez effectuer un cast explicite `nint` valeurs `int` pour accéder aux éléments dans une collection ou un tableau. Exemple :
 
 ```csharp
 public List<string> Names = new List<string>();

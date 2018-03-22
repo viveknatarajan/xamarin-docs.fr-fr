@@ -7,12 +7,12 @@ ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 2d5a83b9f6278406e9b643277357df253f5fd524
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/21/2018
+ms.openlocfilehash: 4225e45ecfe4a4a2cdb7e75b94823fc8fcd29fc4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="listview"></a>Affichage de liste
 
@@ -56,10 +56,10 @@ Créer un fichier XML nommé **list_item.xml** et enregistrez-le à l’intérie
 
 Ce fichier définit la disposition pour chaque élément qui sera placée dans le [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
 
-Ouvrez le `HelloListView.cs` et rendent la classe étendre [ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (au lieu de [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)) :
+Ouvrez `MainActivity.cs` et modifiez la classe pour étendre [ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (au lieu de [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)) :
 
 ```csharp
-public class HelloListView : ListActivity
+public class MainActivity : ListActivity
 {
 ```
 
@@ -74,9 +74,9 @@ protected override void OnCreate (Bundle bundle)
 
     ListView.TextFilterEnabled = true;
 
-    ListView.ItemClick += delegate (object sender, ItemEventArgs args) {
-        // When clicked, show a toast with the TextView text
-        Toast.MakeText (Application, ((TextView)args.View).Text, ToastLength.Short).Show ();
+    ListView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+    {
+        Toast.MakeText(Application, ((TextView)args.View).Text, ToastLength.Short).Show();
     };
 }
 ```
@@ -93,7 +93,12 @@ Le [ `ItemClick` ](https://developer.xamarin.com/api/event/Android.Widget.Adapte
 Vous pouvez utiliser des conceptions d’élément de liste fournies par la plate-forme au lieu de définir votre propre fichier de disposition pour le [ `ListAdapter` ](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/).
 Par exemple, essayez d’utiliser `Android.Resource.Layout.SimpleListItem1` au lieu de `Resource.Layout.list_item`.
 
-Après le [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) (méthode), ajouter le tableau de chaînes :
+Ajoutez le code suivant `using` instruction :
+
+```csharp
+using System;
+```
+Ensuite, ajoutez le tableau de chaînes suivantes en tant que membre de `MainActivity`:
 
 ```csharp
 static readonly string[] countries = new String[] {
@@ -145,22 +150,23 @@ Il s’agit du tableau de chaînes qui seront placés dans le [ `ListView` ](htt
 
 Exécutez l'application. Vous pouvez faire défiler la liste, ou tapez pour filtrer, puis cliquez sur un élément pour afficher un message. Vous devez voir quelque chose de similaire à :
 
-[![Capture d’écran de ListView avec des noms de pays](images/helloviews6.png)](images/helloviews6.png#lightbox)
+[![Capture d’écran de ListView avec des noms de pays](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
-Notez qu’en utilisant un tableau de chaîne codée en dur n’est pas la meilleure pratique de conception. Un est utilisé dans ce didacticiel, par souci de simplicité, pour illustrer le [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) widget. La meilleure pratique consiste à faire référence à un tableau de chaînes défini par une ressource externe, comme avec un `string-array` ressources dans votre projet **Resources/Values/Strings.xml** fichier. Exemple :
+Notez qu’en utilisant un tableau de chaîne codée en dur n’est pas la meilleure pratique de conception. Un est utilisé dans ce didacticiel, par souci de simplicité, pour illustrer le [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) widget. La meilleure pratique consiste à faire référence à un tableau de chaînes défini par une ressource externe, comme avec un `string-array` ressources dans votre projet **Resources/Values/Strings.xml** fichier. Exemple :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="countries_array">
-        <item>Bahrain</item>
-        <item>Bangladesh</item>
-        <item>Barbados</item>
-        <item>Belarus</item>
-        <item>Belgium</item>
-        <item>Belize</item>
-        <item>Benin</item>
-    </string-array>
+  <string name="app_name">HelloListView</string>
+  <string-array name="countries_array">
+    <item>Bahrain</item>
+    <item>Bangladesh</item>
+    <item>Barbados</item>
+    <item>Belarus</item>
+    <item>Belgium</item>
+    <item>Belize</item>
+    <item>Benin</item>
+  </string-array>
 </resources>
 ```
 
@@ -170,6 +176,9 @@ Pour utiliser les chaînes de ressources pour le [ `ArrayAdapter` ](https://deve
 string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
+Exécutez l'application. Vous devez voir quelque chose de similaire à :
+
+[![Capture d’écran de ListView avec la plus petite liste de noms](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
 
 
 ## <a name="going-further-with-listview"></a>Aller plus loin avec ListView

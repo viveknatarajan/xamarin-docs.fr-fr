@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 540a459be24296c8446c2136773ddde59f9d4dd7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3fecf17a4f70e44ca169c825bf0dd34a5127cec8
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="maps"></a>Maps
 
@@ -404,8 +404,8 @@ L’implémentation ci-dessus ajoute une annotation à la carte lorsqu’un él�
 
  ![](images/08-search-results.png "Une annotation ajoutée à la table lorsqu’un élément est sélectionné à partir des résultats")
  
- > [!IMPORTANT]
-> **Remarque** `UISearchController` a été implémenté dans iOS 8. Si vous souhaitez prendre en charge des appareils antérieure à cela, vous devez utiliser `UISearchDisplayController`.
+> [!IMPORTANT]
+> `UISearchController` a été implémentée dans iOS 8. Si vous souhaitez prendre en charge des appareils antérieure à cela, vous devez utiliser `UISearchDisplayController`.
 
 
 

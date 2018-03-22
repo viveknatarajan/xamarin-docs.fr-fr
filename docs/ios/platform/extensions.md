@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 6e0eebef2404ce3f117fe897d456f3ef78a8f585
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: ccd83f4b31da555aa9c8ec34501a8656ce0a5032
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-extensions"></a>Extensions d’iOS
 
@@ -131,7 +131,7 @@ En outre, les projets de l’Extension exige les éléments suivants :
 Les types spécifiques d’Extensions peuvent avoir des exigences supplémentaires. Par exemple, un **aujourd'hui** ou **centre de notifications** classe de principal de l’Extension doit implémenter [INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/).
 
 > [!IMPORTANT]
-> **Remarque :** si vous démarrez votre projet à l’aide d’une modèles Extensions fournis par Visual Studio pour Mac, la plupart des (si pas toutes) de ces exigences seront fournies et remplies pour vous automatiquement par le modèle.
+> Si vous démarrez votre projet à l’aide d’une modèles Extensions fournis par Visual Studio pour Mac, la plupart des (si pas toutes) de ces exigences seront fournis et remplies pour vous automatiquement par le modèle.
 
 <a name="Walkthrough" />
 

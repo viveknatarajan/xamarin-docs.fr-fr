@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff19048504ee76db614306adebb71b7237139091
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Disposition automatique avec le Concepteur de Xamarin pour iOS
 
@@ -22,7 +22,7 @@ Mise en page automatique (également appelé « disposition adaptive ») est u
 
 Dans ce guide, nous introduisons les contraintes et comment les utiliser dans le Concepteur de Xamarin iOS. Ce guide ne couvre pas l’utilisation de contraintes par programme. Pour plus d’informations sur l’utilisation par programme de mise en page automatique, reportez-vous à la la [documentation Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Le Concepteur de Xamarin pour iOS est disponible dans Visual Studio pour Mac dans Visual Studio 2015 et 2017 sur Windows.
 
@@ -88,7 +88,7 @@ Pour créer une contrainte, choisir une poignée et faites-la glisser quelque pa
 Notez les trois lignes vertes en pointillés entre les deux autres boutons. Les lignes vertes indiquent *zones de dépôt*, ou les attributs des autres éléments à laquelle nous pouvons limiter. Dans la capture d’écran ci-dessus, les deux autres boutons offrent les zones de dépôt vertical 3 ( *bas*, *centerY*, *haut*) pour contraindre notre bouton. La ligne en pointillés verte en haut de la vue signifie que le contrôleur de la vue offre une contrainte en haut de la vue, et la zone verte unie signifie que le contrôleur de la vue offre une contrainte ci-dessous le guide de présentation en haut.
 
 > [!IMPORTANT]
-> **Remarque**: guides de mise en page sont des types particuliers de cibles de contrainte qui nous permettent de créer des contraintes supérieure et inférieure qui tiennent compte de la présence des barres du système, telles que les barres d’état ou les barres d’outils. Une des principales utilisations consiste à avoir une application compatible entre iOS 6 et iOS 7 étant donné que la version la plus récente a la vue du conteneur qui s’étend au-dessous de la barre d’état. Pour plus d’informations sur le guide de présentation en haut, reportez-vous à la [documentation Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
+> Guides de mise en page sont des types spéciaux de cibles de contrainte qui nous permettent de créer en haut et les contraintes de bas qui tiennent compte de la présence des barres du système, telles que les barres d’état ou les barres d’outils. Une des principales utilisations consiste à avoir une application compatible entre iOS 6 et iOS 7 étant donné que la version la plus récente a la vue du conteneur qui s’étend au-dessous de la barre d’état. Pour plus d’informations sur le guide de présentation en haut, reportez-vous à la [documentation Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
 
 
 
@@ -203,7 +203,7 @@ La passe de disposition différé se compose de deux passes uniques dans la hié
 
 ### <a name="animating-constraint-changes"></a>Animer des modifications de contrainte
 
-Outre la modification des propriétés de contrainte, vous pouvez utiliser Core Animation pour animer les modifications apportées à des contraintes d’une vue. Exemple :
+Outre la modification des propriétés de contrainte, vous pouvez utiliser Core Animation pour animer les modifications apportées à des contraintes d’une vue. Exemple :
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");

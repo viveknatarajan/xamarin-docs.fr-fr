@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/25/2017
-ms.openlocfilehash: 7329e8ddb5b86adcf6e1efaa805149012be8853c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1dbff32b113bd1c3a6b2058a34c73977c59c9e5
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-xamarinmac-works"></a>Fonctionnement de Xamarin.Mac
 
@@ -104,12 +104,12 @@ Il existe deux principales zones où AOA peut aider à une application Xamarin.M
 
 ### <a name="enabling-aot-compilation"></a>L’activation de la compilation AOA
 
-AOA est activée dans Xamarin.Mac en double-cliquant sur le **nom du projet** dans les **l’Explorateur de solutions**, la navigation vers **Mac générer** et l’ajout de `--aot:[options]` à la  **Les arguments supplémentaires mmp :** champ (où `[options]` est une ou plusieurs options pour contrôler le type AOA, voir ci-dessous). Exemple :
+AOA est activée dans Xamarin.Mac en double-cliquant sur le **nom du projet** dans les **l’Explorateur de solutions**, la navigation vers **Mac générer** et l’ajout de `--aot:[options]` à la  **Les arguments supplémentaires mmp :** champ (où `[options]` est une ou plusieurs options pour contrôler le type AOA, voir ci-dessous). Exemple :
 
 ![Ajout d’AOA pour les arguments supplémentaires mmp](how-it-works-images/aot01.png "Ajout AOA aux arguments de mmp supplémentaires")
 
 > [!IMPORTANT]
-> AVERTISSEMENT ! L’activation d’AOA compilation augmente considérablement le temps de génération, parfois plusieurs minutes, mais elle peut améliorer les temps de lancement d’application de 20 % en moyenne. Par conséquent, la compilation AOA doit être activée sur **version** génère d’une application Xamarin.Mac.
+> L’activation d’AOA compilation augmente considérablement le temps de génération, parfois plusieurs minutes, mais elle peut améliorer les temps de lancement d’application de 20 % en moyenne. Par conséquent, la compilation AOA doit être activée sur **version** génère d’une application Xamarin.Mac.
 
 ### <a name="aot-compilation-options"></a>Options de compilation AOA
 
@@ -146,7 +146,7 @@ L’enregistrement statique partielle, introduite initialement dans Xamarin.iOS 
 
 ### <a name="enabling-the-partial-static-registrar"></a>Activer le bureau d’enregistrement statique partielle
 
-Le bureau d’enregistrement statique partielle est activée dans Xamarin.Mac en double-cliquant sur le **nom du projet** dans les **l’Explorateur de solutions**, la navigation vers **Mac générer** et l’ajout de `--registrar:static` à la **les arguments supplémentaires mmp :** champ. Exemple :
+Le bureau d’enregistrement statique partielle est activée dans Xamarin.Mac en double-cliquant sur le **nom du projet** dans les **l’Explorateur de solutions**, la navigation vers **Mac générer** et l’ajout de `--registrar:static` à la **les arguments supplémentaires mmp :** champ. Exemple :
 
 ![Ajout du bureau d’enregistrement statique partielle pour les arguments supplémentaires mmp](how-it-works-images/psr01.png "ajout le bureau d’enregistrement statique partielle pour les arguments supplémentaires mmp")
 
@@ -155,7 +155,7 @@ Le bureau d’enregistrement statique partielle est activée dans Xamarin.Mac en
 Voici certaines des explications plus détaillées du fonctionnement en interne :
 
 - [Sélecteurs objective-C](~/ios/internals/objective-c-selectors.md)
-- [Registrar](~/ios/internals/registrar.md)
+- [Inscription](~/ios/internals/registrar.md)
 - [API unifiée de Xamarin pour iOS et OS X](~/cross-platform/macios/unified/index.md)
 - [Notions de base Theading](~/ios/app-fundamentals/threading.md)
 - [Les délégués, les protocoles et les événements](~/ios/app-fundamentals/delegates-protocols-and-events.md)

@@ -7,11 +7,11 @@ ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4a8f1632076a12b1737ba8294ac8b2f28f19dc77
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25b9d6c0eebd51a7b47b31c35fb3d5b56e45c3b3
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="document-picker"></a>Sélecteur de document
 
@@ -21,7 +21,7 @@ Le sélecteur de Document permet aux documents être partagés entre les applica
 
 En raison de la difficulté de conserver les documents synchronisés entre les applications et le cloud, ils présentent une certaine complexité nécessaire.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont nécessaire pour terminer les étapes présentées dans cet article :
 
@@ -221,7 +221,7 @@ Dans iOS 8, `NSMetadataQuery` est plus facile à utiliser directement avec une n
 À l’aide d’assemblage l’application n’a plus à ouvrir une source de données à surveiller locaux et cloud en fonction des modifications de fichier. À présent l’application peut reposer sur `NSMetadataQuery` directement.
 
 > [!IMPORTANT]
-> **Remarque**: assemblage fonctionne uniquement si l’Application est à l’aide de Coordination de fichier s’affiche dans la section ci-dessus. Si le fichier de Coordination n’est pas utilisée, les API par défaut au comportement antérieur iOS 8.
+> L’assemblage fonctionne uniquement si l’Application est à l’aide de Coordination de fichier s’affiche dans la section ci-dessus. Si le fichier de Coordination n’est pas utilisée, les API par défaut au comportement antérieur iOS 8.
 
 
 
@@ -465,7 +465,7 @@ Effectuez ce qui suit :
 6.  Avec le bouton droit sur `Entitlements.plist` dans les **l’Explorateur de solutions** pour l’ouvrir dans l’éditeur.
 
     > [!IMPORTANT]
-> **Remarque**: dans Visual Studio, vous devrez peut-être ouvrir l’éditeur de droits en cliquant dessus, en sélectionnant **ouvrir avec...** et en sélectionnant l’éditeur de liste de propriétés
+    > Dans Visual Studio vous devrez peut-être ouvrir l’éditeur de droits en cliquant dessus, en sélectionnant **ouvrir avec...** et en sélectionnant l’éditeur de liste de propriétés
 
 7.  Vérifiez **activer iCloud** , **iCloud Documents** , **stockage de clé-valeur** et **CloudKit** .
 8.  Vérifiez le **conteneur** existe pour l’application (créé ci-dessus). Exemple : `iCloud.com.your-company.AppName`
@@ -793,7 +793,7 @@ namespace DocPicker
 ```
 
 > [!IMPORTANT]
-> **Remarque**: le code ci-dessus inclut le code à partir de la section de découverte et d’affichage de la liste des Documents ci-dessus. Elle est présentée ici dans son intégralité, elle apparaît dans une application réelle. Par souci de simplicité, cet exemple fonctionne avec un seul fichier codé en dur (`test.txt`) uniquement.
+> Le code ci-dessus inclut le code à partir de la section de découverte et d’affichage de la liste des Documents ci-dessus. Elle est présentée ici dans son intégralité, elle apparaît dans une application réelle. Par souci de simplicité, cet exemple fonctionne avec un seul fichier codé en dur (`test.txt`) uniquement.
 
 Le code ci-dessus expose plusieurs raccourcis de lecteur iCloud pour les rendre plus facile de travailler avec le reste de l’application.
 
@@ -902,7 +902,7 @@ if (presentationPopover!=null) {
 ```
 
 > [!IMPORTANT]
-> **Remarque**: le développeur doit appeler le `StartAccessingSecurityScopedResource` méthode le `NSUrl` avant un document externe sont accessibles. Le `StopAccessingSecurityScopedResource` méthode doit être appelée pour libérer le verrou de sécurité dès que le document a été chargé.
+> Le développeur doit appeler le `StartAccessingSecurityScopedResource` méthode le `NSUrl` avant un document externe sont accessibles. Le `StopAccessingSecurityScopedResource` méthode doit être appelée pour libérer le verrou de sécurité dès que le document a été chargé.
 
 ### <a name="sample-output"></a>Résultat de l'exemple
 
@@ -1134,7 +1134,7 @@ Sur Mac OS X Yosemite, Apple ne fournit pas la descendante compatibilité afin q
 Une fois un compte d’utilisateur a été migré vers iCloud lecteur, uniquement pour les appareils à l’aide d’iCloud lecteur sera capable de se propager les modifications apportées à des Documents sur ces appareils.
 
 > [!IMPORTANT]
-> **Remarque**: les développeurs doivent être conscient que les nouvelles fonctionnalités abordées dans cet article sont disponibles uniquement si le compte d’utilisateur a été migré vers iCloud lecteur. 
+> Les développeurs Sachez que les nouvelles fonctionnalités abordées dans cet article sont disponibles uniquement si le compte d’utilisateur a été migré vers iCloud lecteur. 
 
 ## <a name="summary"></a>Récapitulatif
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 302bb1225067ad401f97ee6bad88b4cd16c6dc95
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b622da2d6d9777fc200a091ccf003369b1c2e8d1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="in-app-purchase-basics-and-configuration"></a>Configuration et les concepts de base dans l’application fournisseur
 
@@ -84,7 +84,7 @@ Entrez un nom approprié pour le *Description*, afin de pouvoir identifier facil
 Vous pouvez utiliser n’importe quelle chaîne que vous le souhaitez pour votre **identificateur de lot** (tant qu’il est unique dans votre compte), mais recommande d’Apple vous suivez le format DNS inverse plutôt que d’utilisez n’importe quelle chaîne arbitraire. L’exemple d’application qui accompagne cet article utilise com.xamarin.storekit.testing pour l’identificateur de lot, mais il est également possible d’utiliser un identificateur comme my_store_example (même si Apple ne la recommandons).
 
 > [!IMPORTANT]
-> **Remarque**: Apple permet également l’astérisque comme caractère générique à ajouter à la fin d’un **identificateur de lot** afin qu’un ID d’application unique peut être utilisé pour plusieurs applications, toutefois _génériques App ID ne peut pas être utilisés pour Dans AppPurchase_. Un exemple d’identificateur de lot génériques peuvent être com.xamarin.*
+> Apple permet également l’astérisque comme caractère générique à ajouter à la fin d’un **identificateur de lot** afin qu’un ID d’application unique peut être utilisé pour plusieurs applications, toutefois _génériques App ID ne peut pas servir pour-AppPurchase_. Un exemple d’identificateur de lot génériques peuvent être com.xamarin.*
 
 #### <a name="enabling-app-services"></a>L’activation des Services d’application
 

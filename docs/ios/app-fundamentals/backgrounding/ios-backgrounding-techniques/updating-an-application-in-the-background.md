@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7f7cfcd320fcb38a9b08dfd8fe7e0fae7ff808ec
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>Mise à jour d’une Application en arrière-plan
 
@@ -79,7 +79,7 @@ Lorsque nous avons terminé la mise à jour de contenu, nous indiquer le systèm
 Applications à l’aide de Fetch d’arrière-plan peuvent adresser des appels pour mettre à jour l’interface utilisateur de l’arrière-plan. Lorsque l’utilisateur ouvre l’application, l’interface utilisateur sera jusqu'à la date et l’affichage du nouveau contenu. Cela met également à jour instantané du sélecteur de l’application de l’application, afin que l’utilisateur peut voir lorsque l’application a du contenu nouveau.
 
 > [!IMPORTANT]
-> **Remarque**: une fois `PerformFetch` est appelée, l’application a environ 30 secondes pour déclencher le téléchargement du contenu nouveau et appeler le bloc de gestionnaire d’achèvement. Si cela est trop longue, l’application va être interrompue. Envisagez d’utiliser l’extraction d’arrière-plan avec le _Service de transfert en arrière-plan_ lors du téléchargement du support ou autres fichiers volumineux.
+> Une fois `PerformFetch` est appelée, l’application a environ 30 secondes pour déclencher le téléchargement du contenu nouveau et appeler le bloc de gestionnaire d’achèvement. Si cela est trop longue, l’application va être interrompue. Envisagez d’utiliser l’extraction d’arrière-plan avec le _Service de transfert en arrière-plan_ lors du téléchargement du support ou autres fichiers volumineux.
 
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
@@ -132,7 +132,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 Notifications à distance doivent être utilisées pour peu fréquentes mises à jour avec du contenu qui est essentiel pour les fonctionnalités de l’application. Pour plus d’informations sur les notifications à distance, consultez le Xamarin [des Notifications Push dans iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) guide.
 
 > [!IMPORTANT]
-> **Remarque**: étant donné que le mécanisme de mise à jour dans les Notifications à distance est basé sur Extraire de l’arrière-plan, l’application doit déclencher le téléchargement du contenu nouveau et appeler le bloc de gestionnaire d’achèvement dans les 30 secondes de réception de la notification ou iOS sera arrêter l’application. Envisagez d’associer des Notifications à distance avec _Service de transfert en arrière-plan_ lors du téléchargement du support ou autres fichiers volumineux en arrière-plan.
+> Le mécanisme de mise à jour dans les Notifications à distance étant basé sur l’extraction de l’arrière-plan, l’application doit déclencher le téléchargement du contenu nouveau et appeler le bloc de gestionnaire d’achèvement dans les 30 secondes de réception de la notification, ou iOS mettra fin à l’application. Envisagez d’associer des Notifications à distance avec _Service de transfert en arrière-plan_ lors du téléchargement du support ou autres fichiers volumineux en arrière-plan.
 
 
 ### <a name="silent-remote-notifications"></a>Notifications à distance en mode silencieux
@@ -156,7 +156,7 @@ Toutefois, APNs permettra de notifications en mode silencieux « phagocytent �
  [![](updating-an-application-in-the-background-images/silent.png "Des notifications régulières peuvent être utilisées pour envoyer des notifications silencieuses stockées à partir de l’APNs sur l’appareil, comme illustré dans ce schéma.")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
-> **Remarque**: Apple encourage les développeurs pour envoyer des notifications push en mode silencieux, chaque fois que l’application requiert et que le certificat APNs permettent de planifier leur remise.
+> Apple encourage les développeurs à chaque fois que l’application requiert d’envoi des notifications push en mode silencieux et laissez le certificat APNs planifier leur remise.
 
 
 Dans cette section, nous avons couvert les différentes options d’actualisation du contenu en arrière-plan pour exécuter les tâches qui ne tiennent pas dans une catégorie nécessaire à l’arrière-plan. Maintenant, nous allons voir certaines de ces API en action.

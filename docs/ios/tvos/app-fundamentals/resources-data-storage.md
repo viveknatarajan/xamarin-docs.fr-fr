@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 768ee4a2f33475b5327bf9c0fd006f1da580d836
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e72c013516de5bcf97e2e9f58a7a4f5cd87c730b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="resources-and-data-storage"></a>Stockage des données et ressources
 
@@ -35,7 +35,7 @@ Chaque application tvOS est fournie à un répertoire de cache temporaire des se
 Par conséquent, votre application ne peut pas s’appuient sur le contenu précédemment téléchargé soient disponibles la prochaine fois qu’elle est lancée. Votre application Xamarin.tvOS doit toujours vérifier l’existence des ressources requises et les télécharger en fonction des besoins.
 
 > [!IMPORTANT]
-> **Remarque :** pendant que vous avez la possibilité de télécharger d’autres ressources et les ressources en fonction des besoins, Apple vous avertit par rapport à l’utilisation de tout l’espace dans le cache de votre application, car elle peut entraîner des résultats imprévisibles.
+> Pendant que vous avez la possibilité de télécharger d’autres ressources et les ressources en fonction des besoins, Apple vous avertit par rapport à l’utilisation de tout l’espace dans le cache de votre application, car elle peut entraîner des résultats imprévisibles.
 
 
 
@@ -70,7 +70,7 @@ Ces ressources peuvent continuer à être mis en cache sur l’Apple TV tout au 
 Xcode vous permet de créer des lots de contenu connexe (par exemple, tous les composants de niveau de jeu 2) associés à une balise de ressource donné. Votre application demande plus tard les ressources à la demande en spécifiant cette balise de ressource. Votre application doit présenter une interface utilisateur à l’utilisateur indiquant que le contenu est en cours de téléchargement. Pour plus d’informations, consultez le site d’Apple [Guide de ressources à la demande](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083).
 
 > [!IMPORTANT]
-> **Remarque :** doit veiller à trouver le juste équilibre entre le nombre de fois où l’application doit télécharger les ressources à la demande et la taille des téléchargements individuels. Utilisateur peut devenir déçu avec votre application si le jeu est interrompu en permanence pour télécharger le contenu nouveau ou si un seul téléchargement prend trop de temps.
+> Soyez vigilant pour parvenir au juste équilibre entre le nombre de fois où que l’application doit télécharger les ressources à la demande et de la taille des téléchargements individuels. Utilisateur peut devenir déçu avec votre application si le jeu est interrompu en permanence pour télécharger le contenu nouveau ou si un seul téléchargement prend trop de temps.
 
 
 
@@ -85,7 +85,7 @@ Cet article a couvert les limitations de stockage de taille, les ressources et l
 
 ## <a name="related-links"></a>Liens associés
 
-- [Exemples de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Exemples tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS les Guides Interface humaine](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guide de programmation d’application de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

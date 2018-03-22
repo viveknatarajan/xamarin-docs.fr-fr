@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 20e8d843b73fca5eb49da21a7f834ebbb52f4aa9
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 6d1401728c1063ce09c5848865e4c9b3fe7687d7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Distance iOS Simulator (pour Windows)
 
@@ -25,7 +25,7 @@ _Tester et déboguer des applications iOS entièrement dans Visual Studio sous W
 Téléchargez le [programme d’installation](https://dl.xamarin.com/xamarin-simulator/Xamarin.Simulator.Installer.msi) et l’installer sur votre ordinateur Windows. Visual Studio Tools pour Xamarin doit déjà être installés.
 
 > [!NOTE]
-> À l’aide d’un à distance iOS Simulator requiert Visual Studio, un Mac en réseau avec Xamarin est installé.
+> À l’aide d’un simulateur d’iOS à distance sur Visual Studio requiert un Mac en réseau avec Xamarin est installé.
 
 ## <a name="getting-started"></a>Prise en main
 

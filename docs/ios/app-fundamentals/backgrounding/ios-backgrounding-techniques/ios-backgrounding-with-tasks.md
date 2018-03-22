@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ad75dfac55add7e03ffbdb910e0e62ebd0fd6c18
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding avec des tâches
 
@@ -43,7 +43,7 @@ UIApplication.SharedApplication.EndBackgroundTask(taskID);
 Le processus d’inscription des paires une tâche avec un identificateur unique, `taskID`et il encapsule ensuite dans la correspondance `BeginBackgroundTask` et `EndBackgroundTask` appels. Pour générer l’identificateur, nous effectuer un appel à la `BeginBackgroundTask` méthode sur le `UIApplication` de l’objet, et recommencez la tâche d’exécution longue, généralement sur un nouveau thread. Lorsque la tâche est terminée, nous appelons `EndBackgroundTask` et passez le même identificateur. Ceci est important car iOS mettra fin à l’application si une `BeginBackgroundTask` appel n’a pas une correspondance `EndBackgroundTask`.
 
 > [!IMPORTANT]
-> **Remarque**: les tâches en arrière-plan-safe peuvent s’exécuter sur le thread principal ou sur un thread d’arrière-plan, en fonction des besoins de l’application.
+> Les tâches en arrière-plan-safe peuvent s’exécuter sur le thread principal ou sur un thread d’arrière-plan, en fonction des besoins de l’application.
 
 
 ## <a name="performing-tasks-during-didenterbackground"></a>Exécution de tâches au cours de DidEnterBackground
@@ -65,7 +65,7 @@ public override void DidEnterBackground (UIApplication application) {
 Commençons par substitution de la `DidEnterBackground` méthode dans le `AppDelegate`, où nous enregistrons notre tâche via `BeginBackgroundTask` comme dans l’exemple précédent. Ensuite, nous générer un nouveau thread et d’effectuer la tâche de longue. Notez que la `EndBackgroundTask` est maintenant appelé à partir d’à l’intérieur de la tâche d’exécution longue, depuis le `DidEnterBackground` méthode ont déjà retournés.
 
 > [!IMPORTANT]
-> **Remarque**: iOS utilise un [mécanisme d’horloge de surveillance](http://developer.apple.com/library/ios/qa/qa1693/_index.html) pour vous assurer que l’interface utilisateur d’une application reste réactive. Une application qui utilise trop de temps dans `DidEnterBackground` cesse de répondre dans l’interface utilisateur. Permet de lancer des tâches à exécuter en arrière-plan `DidEnterBackground` à retourner en temps voulu, que l’interface utilisateur reste réactive et empêche l’agent de surveillance de l’arrêt de l’application.
+> iOS utilise un [mécanisme d’horloge de surveillance](http://developer.apple.com/library/ios/qa/qa1693/_index.html) pour vous assurer que l’interface utilisateur d’une application reste réactive. Une application qui utilise trop de temps dans `DidEnterBackground` cesse de répondre dans l’interface utilisateur. Permet de lancer des tâches à exécuter en arrière-plan `DidEnterBackground` à retourner en temps voulu, que l’interface utilisateur reste réactive et empêche l’agent de surveillance de l’arrêt de l’application.
 
 
 ## <a name="handling-background-task-time-limits"></a>Délais de traitement en arrière-plan tâche
@@ -153,7 +153,7 @@ else {
 ```
 
 > [!IMPORTANT]
-> **Remarque**: éviter d’effectuer des appels de mettre à jour l’interface utilisateur de l’arrière-plan dans un code conforme 6 iOS, iOS 6 ne prend pas en charge les mises à jour de l’interface utilisateur en arrière-plan et mettra fin à l’application.
+> Éviter d’effectuer des appels de mettre à jour l’interface utilisateur de l’arrière-plan dans un code conforme 6 iOS, iOS 6 ne prend pas en charge les mises à jour de l’interface utilisateur en arrière-plan et mettra fin à l’application.
 
 
 Le `NSURLSession` API comprend un ensemble complet de fonctionnalités pour gérer l’authentification, de gérer les transferts ayant échouées et de signaler les erreurs du client-side - mais pas côté serveur -. Il permet de pont que l’interruption de la tâche exécution introduites dans iOS 7 et prend également en charge pour le transfert de fichiers volumineux rapidement et de façon fiable. La section suivante traite de ce deuxième fonctionnalité.

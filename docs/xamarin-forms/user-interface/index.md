@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: c5cca8e6fceb9aef82fc6543adc6dc5e7399d839
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: b2a5402b8d2ac127f6a5f75decbee8567decb905
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="user-interface"></a>Interface utilisateur
 
@@ -65,6 +65,10 @@ Ajout de cartes nécessite un téléchargement de package NuGet supplémentaire 
 ## <a name="pickerpickerindexmd"></a>[Picker](picker/index.md)
 
 Le [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) vue est un contrôle pour la sélection d’un élément de texte dans une liste de données.
+
+## <a name="sliderslidermd"></a>[Slider](slider.md)
+
+Le `Slider` permet à un utilisateur de sélectionner une valeur numérique à partir d’une plage continue.
 
 ## <a name="stylesstylesindexmd"></a>[Styles](styles/index.md)
 

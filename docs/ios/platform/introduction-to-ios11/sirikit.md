@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: 557521bc3bce41b9023acbf31a344a57cb63d2a1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6331912eedcd52df45c0d25d83a5b599c55ca7d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -146,12 +146,10 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 La classe doit hériter de `INExtension`, et parce que l’exemple va à la gestion des listes et notes intentions, il implémente également `IINNotebookDomainHandling`.
 
 > [!NOTE]
-> **Remarque à propos d’affectation de noms :** il existe une convention dans .NET pour les interfaces être précédées d’un investissement `I`, qui respecte Xamarin lors de la liaison des protocoles dans le Kit de développement logiciel iOS.
->
-> Xamarin conserve également les noms de types à partir d’iOS et Apple utilise les deux premiers caractères dans les noms de type afin de refléter le framework appartenant à un type.
->
-> Pour le `Intents` framework, les types sont préfixés avec `IN*` (par exemple). `INExtension`), mais il s’agit _pas_ interfaces.
-> Il suit également finissent protocoles (qui deviennent des interfaces en c#) avec deux `I`s, telles que `IINAddTasksIntentHandling`.
+> - Il existe une convention dans .NET pour les interfaces être précédées d’un investissement `I`, qui respecte Xamarin lors de la liaison des protocoles dans le Kit de développement logiciel iOS.
+> - Xamarin conserve également les noms de types à partir d’iOS et Apple utilise les deux premiers caractères dans les noms de type afin de refléter le framework appartenant à un type.
+> - Pour le `Intents` framework, les types sont préfixés avec `IN*` (par exemple). `INExtension`), mais il s’agit _pas_ interfaces.
+> - Il suit également finissent protocoles (qui deviennent des interfaces en c#) avec deux `I`s, telles que `IINAddTasksIntentHandling`.
 
 #### <a name="handling-intents"></a>Modes de gestion
 

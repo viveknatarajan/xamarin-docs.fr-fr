@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53494e61d702b83a28534c644f33fb5327b5958
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 128ec8d19dc25dc2231521756ee0f00690e0d134
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="core-graphics"></a>Graphique de base
 
@@ -228,7 +228,7 @@ L’image résultante est ensuite affiché verticalement :
  ![](core-graphics-images/04-upright-monkey.png "Le montant d’image affichée exemple")
 
 > [!IMPORTANT]
->  **Remarque :** modifications apportées au contexte graphique s’appliquent à toutes les opérations de dessin. Par conséquent, lorsque le CTM est transformé, il affecte un dessin supplémentaire. Par exemple, si vous avez dessiné le triangle après la transformation CTM, il apparaîtrait envers.
+> Modifications apportées au contexte graphique s’appliquent à toutes les opérations de dessin. Par conséquent, lorsque le CTM est transformé, il affecte un dessin supplémentaire. Par exemple, si vous avez dessiné le triangle après la transformation CTM, il apparaîtrait envers.
 
 ### <a name="adding-text-to-the-image"></a>Ajout de texte à l’Image
 

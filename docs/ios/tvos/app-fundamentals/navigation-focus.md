@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fe1358d330c2a0fd94016853cedeabe094c394da
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>Utilisation de Navigation et le Focus
 
@@ -81,7 +81,7 @@ Apple a les suggestions suivantes pour travailler avec la sélection :
 
 ### <a name="working-with-focus"></a>Utilisation avec Focus
 
-Il peut arriver que vous souhaitez créer un contrôle personnalisé qui peut devenir un élément peut être actif. Si donc remplacer le `CanBecomeFocused` propriété et retour `true`, sinon retour `false`. Exemple :
+Il peut arriver que vous souhaitez créer un contrôle personnalisé qui peut devenir un élément peut être actif. Si donc remplacer le `CanBecomeFocused` propriété et retour `true`, sinon retour `false`. Exemple :
 
 ```csharp
 public class myView : UIView
@@ -92,7 +92,7 @@ public class myView : UIView
 }
 ```
 
-À tout moment, vous pouvez utiliser la `Focused` propriété d’un `UIKit` contrôle pour voir si elle est l’élément actuel. Si `true` l’élément d’interface utilisateur a actuellement le focus, sinon il n’existe pas. Exemple :
+À tout moment, vous pouvez utiliser la `Focused` propriété d’un `UIKit` contrôle pour voir si elle est l’élément actuel. Si `true` l’élément d’interface utilisateur a actuellement le focus, sinon il n’existe pas. Exemple :
 
 ```csharp
 // Is my view in focus?
@@ -102,7 +102,7 @@ if (myView.Focused) {
 }
 ```
 
-Pendant que vous ne pouvez pas directement déplacer le focus vers un autre élément d’interface utilisateur via le code, vous pouvez spécifier l’élément d’interface obtient d’abord le focus lorsqu’un écran est chargé en définissant son `PreferredFocusedView` propriété `true`. Exemple :
+Pendant que vous ne pouvez pas directement déplacer le focus vers un autre élément d’interface utilisateur via le code, vous pouvez spécifier l’élément d’interface obtient d’abord le focus lorsqu’un écran est chargé en définissant son `PreferredFocusedView` propriété `true`. Exemple :
 
 ```csharp
 // Make the play button the starting focus item
@@ -123,7 +123,7 @@ Pour des éléments personnalisés qui héritent de `UIView` ou `UIViewControlle
 Pour demander que le moteur le Focus se déplace le focus jusqu'à la `PreferredFocusedView` élément d’interface utilisateur, appel de la `SetNeedsUpdateFocus` méthode du contrôleur d’affichage.
 
 > [!IMPORTANT]
-> **Remarque :** appel `SetNeedsUpdateFocus` n’a d’effet si le contrôleur de vue il est appelé sur contient la vue qui possède actuellement le focus.
+> Appel de `SetNeedsUpdateFocus` n’a d’effet si le contrôleur de vue il est appelé sur contient la vue qui possède actuellement le focus.
 
 
 
@@ -208,7 +208,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 Tout d’abord, cette get de code la `NextFocusedView` à partir de la `UIFocusUpdateContext` qui a été passé (`context`). Si cette vue est `null`, aucun traitement n’est nécessaire, puis la méthode s’est arrêté.
 
-Ensuite, le `nextFocusableItem` est évaluée. Si elle correspond à un le **informations** ou **acheter** boutons, le Focus est envoyé au bouton opposé à l’aide du Guide de Focus `PreferredFocusedView` propriété. Exemple :
+Ensuite, le `nextFocusableItem` est évaluée. Si elle correspond à un le **informations** ou **acheter** boutons, le Focus est envoyé au bouton opposé à l’aide du Guide de Focus `PreferredFocusedView` propriété. Exemple :
 
 ```csharp
 // Move from the More Info to Buy button
@@ -226,7 +226,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>Utilisation de Focus dans des Collections
 
-Lorsque vous décidez ou non un élément individuel peut être actif dans un `UICollectionView` ou un `UITableView`, vous devez substituer les méthodes de la `UICollectionViewDelegate` ou `UITableViewDelegate` respectivement. Exemple :
+Lorsque vous décidez ou non un élément individuel peut être actif dans un `UICollectionView` ou un `UITableView`, vous devez substituer les méthodes de la `UICollectionViewDelegate` ou `UITableViewDelegate` respectivement. Exemple :
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c806eb51be5f585f2c94b438f6ca31a70aaa7551
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 04c7a7235665e14fd128a3a70951168c1914c112
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough--using-touch-in-ios"></a>Procédure pas à pas : tactile à l’aide dans iOS
 
@@ -92,12 +92,12 @@ Dans cet exemple, nous illustrerons certaines des fonctions tactiles API. Suivez
         }
     }
     ```
+    
     Cette méthode fonctionne en recherchant un `UITouch` de l’objet et si elle existe effectuer une action selon où la fonction tactile s’est produite :
 
     * _À l’intérieur de TouchImage_ – afficher le texte `Touches Began` dans une étiquette et la modification de l’image.
     * _À l’intérieur de DoubleTouchImage_ : modifier l’image affichée si le mouvement a un double-clic.
     * _À l’intérieur de DragImage_ : définir un indicateur indiquant que les fonctions tactiles a démarré. La méthode `TouchesMoved` utilise cet indicateur pour déterminer si `DragImage` doit être déplacé sur l’écran ou non, comme nous le verrons dans l’étape suivante.
-
 
     Le code ci-dessus porte uniquement sur des touches finales, il n’est toujours aucun comportement si l’utilisateur déplace son doigt sur l’écran. Pour répondre à la circulation, implémentez `TouchesMoved` comme indiqué dans le code ci-dessous :
 
@@ -192,7 +192,7 @@ Suivez ces étapes pour implémenter les reconnaissances de mouvement :
 
 1. Modifiez le fichier **GestureViewController.cs** et ajoutez la variable d’instance suivante :
 
-    ```chsarp
+    ```csharp
     #region Private Variables
     private bool imageHighlighted = false;
     private RectangleF originalImageFrame = RectangleF.Empty;
@@ -204,7 +204,7 @@ Le module de reconnaissance de mouvement panoramique utilisera le `originalImage
 
 1. Ajoutez la méthode suivante au contrôleur :
 
-    ```chsarp
+    ```csharp
     private void WireUpDragGestureRecognizer()
     {
         // Create a new tap gesture
@@ -223,7 +223,7 @@ Notez que nous affectons une cible au mouvement sous la forme de la méthode `Ha
 
 1. Pour implémenter HandleDrag, ajoutez le code suivant pour le contrôleur :
 
-    ```chsarp
+    ```csharp
     private void HandleDrag(UIPanGestureRecognizer recognizer)
     {
         // If it's just began, cache the location of the image
@@ -250,7 +250,7 @@ Notez que nous affectons une cible au mouvement sous la forme de la méthode `Ha
 
 1. Ajouter un `UITapGestureRecognizer` qui modifie l’image qui est affichée dans DoubleTouchImage. Ajoutez la méthode suivante à la `GestureViewController` contrôleur :
 
-    ```chsarp
+    ```csharp
     private void WireUpTapGestureRecognizer()
     {
         // Create a new tap gesture
@@ -286,7 +286,7 @@ Notez que nous affectons une cible au mouvement sous la forme de la méthode `Ha
 
 1. La dernière chose que nous devons faire est de modifier `ViewDidLoad` afin qu’il appelle les méthodes que nous venons d’ajouter. Modifiez ViewDidLoad afin qu’il ressemble au code suivant :
 
-    ```chsarp
+    ```csharp
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
@@ -324,7 +324,7 @@ Suivez ces étapes pour créer un module de reconnaissance de mouvement personna
 
 1. Ajoutez une nouvelle classe au projet nommé `CheckmarkGestureRecognizer`et le rendre ressemble au code suivant :
 
-    ```chsarp
+    ```csharp
     using System;
     using CoreGraphics;
     using Foundation;
@@ -444,7 +444,7 @@ La classe peut maintenant démarrer prochaine fois que l’utilisateur interagit
 
 1. Maintenant que nous avons défini un module de reconnaissance de mouvement personnalisé (`CheckmarkGestureRecognizer`) modifier les **CustomGestureViewController.cs** et ajoutez les variables de deux instance suivantes :
 
-    ```chsarp
+    ```csharp
     #region Private Variables
     private bool isChecked = false;
     private CheckmarkGestureRecognizer checkmarkGesture;
@@ -453,7 +453,7 @@ La classe peut maintenant démarrer prochaine fois que l’utilisateur interagit
 
 1. Pour instancier et configurer la reconnaissance de mouvement, ajoutez la méthode suivante au contrôleur :
 
-    ```chsarp
+    ```csharp
     private void WireUpCheckmarkGestureRecognizer()
     {
         // Create the recognizer
@@ -482,7 +482,7 @@ La classe peut maintenant démarrer prochaine fois que l’utilisateur interagit
 
 1. Modifier `ViewDidLoad` afin qu’il appelle `WireUpCheckmarkGestureRecognizer`, comme illustré dans l’extrait de code suivant :
 
-    ```chsarp
+    ```csharp
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 996723db83a1f972cce26090d1253f97b6c818d3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0a9b9651a735ef4300e19f5ccb231a616850d970
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="contacts-and-contactsui"></a>Contacts et ContactsUI
 
@@ -30,7 +30,7 @@ Les deux infrastructures nouvelle contiennent les fonctionnalités suivantes :
 [![](contacts-images/add01.png "Un exemple de feuille de Contact sur un appareil iOS")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
-> **Remarque :** existants `AddressBook` et `AddressBookUI` utilisés par iOS 8 infrastructures (et versions antérieures) ont été déconseillés dans iOS 9 et doit être remplacés par la nouvelle `Contacts` et `ContactsUI` infrastructures dès que possible pour n’importe quel Xamarin.iOS existant application. Nouvelles applications doivent être écrits sur les infrastructures de nouveau.
+> Existants `AddressBook` et `AddressBookUI` utilisés par iOS 8 infrastructures (et versions antérieures) ont été déconseillés dans iOS 9 et doit être remplacés par la nouvelle `Contacts` et `ContactsUI` infrastructures dès que possible pour n’importe quelle application Xamarin.iOS existante. Nouvelles applications doivent être écrits sur les infrastructures de nouveau.
 
 
 
@@ -111,7 +111,7 @@ else
 }
 ```
 
-Si ce code est exécuté sur un appareil iOS 9, un nouveau contact sera ajouté à la collection de l’utilisateur. Exemple :
+Si ce code est exécuté sur un appareil iOS 9, un nouveau contact sera ajouté à la collection de l’utilisateur. Exemple :
 
 [![](contacts-images/add01.png "Un nouveau contact ajouté à la collection de l’utilisateur")](contacts-images/add01.png#lightbox)
 
@@ -124,7 +124,7 @@ Console.WriteLine(CNContactFormatter.GetStringFrom(contact, CNContactFormatterSt
 Console.WriteLine(CNPostalAddressFormatter.GetStringFrom(workAddress, CNPostalAddressFormatterStyle.MailingAddress));
 ```
 
-Pour les étiquettes de propriété que vous devez afficher dans l’interface utilisateur de votre application, l’infrastructure du Contact comporte des méthodes pour la localisation de ces chaînes ainsi. Là encore, cela dépend des paramètres régionaux actuels de l’appareil iOS qu'est en cours d’exécution sur l’application. Exemple :
+Pour les étiquettes de propriété que vous devez afficher dans l’interface utilisateur de votre application, l’infrastructure du Contact comporte des méthodes pour la localisation de ces chaînes ainsi. Là encore, cela dépend des paramètres régionaux actuels de l’appareil iOS qu'est en cours d’exécution sur l’application. Exemple :
 
 ```csharp
 // Localized properties
@@ -144,7 +144,7 @@ var predicate = CNContact.GetPredicateForContacts("Appleseed");
 ```
 
 > [!IMPORTANT]
-> **Remarque :** générique et prédicats composées ne sont pas pris en charge par l’infrastructure de Contacts.
+> Les prédicats composés et génériques ne sont pas pris en charge par l’infrastructure de Contacts.
 
 Par exemple, pour limiter l’extraction aux seuls le **GivenName** et **FamilyName** propriétés du contact, utilisez le code suivant :
 
@@ -176,7 +176,7 @@ Vous devez concevoir votre application afin qu’il gère correctement l’utili
 
 A _contactez partielle_ est uniquement certaines des propriétés disponibles qui ont été extraites du magasin de contacts pour un contact. Si vous essayez d’accéder à une propriété qui n’a pas été lue précédemment, il entraîne une exception.
 
-Vous pouvez facilement vérifier si un contact donné a la propriété souhaitée à l’aide du `IsKeyAvailable` ou `AreKeysAvailable` méthodes de la `CNContact` instance. Exemple :
+Vous pouvez facilement vérifier si un contact donné a la propriété souhaitée à l’aide du `IsKeyAvailable` ou `AreKeysAvailable` méthodes de la `CNContact` instance. Exemple :
 
 ```csharp
 // Does the contact contain the requested key?
@@ -190,7 +190,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 ```
 
 > [!IMPORTANT]
-> **Remarque :** le `GetUnifiedContact` et `GetUnifiedContacts` méthodes de la `CNContactStore` classe _uniquement_ renvoyer un Contact partielle limité pour les propriétés demandées à partir des clés de récupération fournis.
+> Le `GetUnifiedContact` et `GetUnifiedContacts` méthodes de la `CNContactStore` classe _uniquement_ renvoyer un Contact partielle limité pour les propriétés demandées à partir des clés de récupération fournis.
 
 ### <a name="unified-contacts"></a>Contacts unifiées
 
@@ -227,7 +227,7 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 A `CNSaveRequest` peut également servir à mettre en cache plusieurs modifications de contact et de groupe en une seule opération et le lot de ces modifications à la `CNContactStore`.
 
-Pour mettre à jour un contact non mutable obtenu à partir d’une opération d’extraction, vous devez d’abord demander une copie mutable qui vous modifiez et enregistrez dans le magasin de contacts. Exemple :
+Pour mettre à jour un contact non mutable obtenu à partir d’une opération d’extraction, vous devez d’abord demander une copie mutable qui vous modifiez et enregistrez dans le magasin de contacts. Exemple :
 
 ```csharp
 // Get mutable copy of contact
@@ -281,7 +281,7 @@ Le contrôleur de vue du sélecteur de Contact (`CNContactPickerViewController`)
 
 Avant d’appeler le `CNContactPickerViewController` (classe), vous définissez les propriétés de l’utilisateur peut sélectionner et définir des prédicats de façon à contrôler l’affichage et la sélection de propriétés de Contact.
 
-Utiliser une instance de la classe qui hérite de `CNContactPickerDelegate` pour répondre à une interaction de l’utilisateur avec le sélecteur. Exemple :
+Utiliser une instance de la classe qui hérite de `CNContactPickerDelegate` pour répondre à une interaction de l’utilisateur avec le sélecteur. Exemple :
 
 ```csharp
 using System;

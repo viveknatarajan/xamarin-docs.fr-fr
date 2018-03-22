@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0e271fb78cfd225f9ccdae9a515685e89bfd7ac2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 76787ecda1c2cd043b81482dcdbe3751d012ef74
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="implementing-sirikit"></a>Implémentation de SiriKit
 
@@ -211,7 +211,7 @@ En raison de la sécurité stricte Apple a placé autour du framework n’import
 
 Procédez comme suit sur votre Mac :
 
-1. Dans un navigateur web, accédez à [http://developer.apple.com](http://developer.apple.com) et connectez-vous à votre compte.
+1. Dans un navigateur web, accédez à [ http://developer.apple.com ](http://developer.apple.com) et connectez-vous à votre compte.
 2. Cliquez sur **certificats**, **identificateurs** et **profils**.
 3. Sélectionnez **profils de configuration** et sélectionnez **ID d’application**, puis cliquez sur le  **+**  bouton.
 4. Entrez un **nom** pour le nouveau profil.
@@ -246,7 +246,7 @@ Procédez comme suit sur votre Mac :
 22. Cliquez sur le bouton **OK** pour enregistrer les changements.
 
 > [!IMPORTANT]
-> **Remarque :** SiriKit de test ne fonctionne que sur un véritable iOS 10 périphérique matériel et non dans les 10 iOS Simulator. Si vous rencontrez des problèmes d’installation d’un SiriKit activé application Xamarin.iOS sur du vrai matériel, assurez-vous que les droits requis ID d’application, identificateur de signature et profil de préparation ont été correctement configurés dans Apple Developer Portal et Visual Studio pour Mac.
+> Test SiriKit fonctionne uniquement sur un véritable iOS 10 périphérique matériel et non dans les 10 iOS Simulator. Si vous rencontrez des problèmes d’installation d’un SiriKit activé application Xamarin.iOS sur du vrai matériel, assurez-vous que les droits requis ID d’application, identificateur de signature et profil de préparation ont été correctement configurés dans Apple Developer Portal et Visual Studio pour Mac.
 
 ### <a name="requesting-siri-authorization"></a>Demande d’autorisation de Siri
 
@@ -302,7 +302,7 @@ La première fois que cette méthode est appelée, une alerte s’affiche invita
 
 ### <a name="localization-and-siri"></a>Localisation et Siri
 
-Sur un appareil iOS, l’utilisateur peut sélectionner une langue pour Siri est différent, puis la valeur par défaut du système. Lorsque vous travaillez avec des données localisées, l’application doit utiliser le `SiriLanguageCode` méthode de la `INPreferences` classe pour obtenir le code de langue à partir de Siri. Exemple :
+Sur un appareil iOS, l’utilisateur peut sélectionner une langue pour Siri est différent, puis la valeur par défaut du système. Lorsque vous travaillez avec des données localisées, l’application doit utiliser le `SiriLanguageCode` méthode de la `INPreferences` classe pour obtenir le code de langue à partir de Siri. Exemple :
 
 ```csharp
 var language = INPreferences.SiriLanguageCode();
@@ -326,7 +326,7 @@ Vocabulaire spécifique d’utilisateur doit appartenir à une des catégories s
 
 Lorsque vous sélectionnez la terminologie à inscrire en tant que le vocabulaire personnalisé, uniquement choisir des termes qui serait erroné par une personne ne connaissent pas l’application. Jamais register termes courants tels que « Mes entraînement » ou « Mon Album ». Par exemple, l’application MonkeyChat inscrira les surnoms associés à chaque contact dans le carnet d’adresses de l’utilisateur.
 
-L’application fournit le vocabulaire spécifique utilisateur en appelant le `SetVocabularyStrings` méthode de la `INVocabulary` classe et en passant un `NSOrderedSet` collection à partir de l’application principale. L’application doit toujours appeler la `RemoveAllVocabularyStrings` méthode first, pour supprimer les termes du contrat existant avant d’ajouter de nouveaux. Exemple :
+L’application fournit le vocabulaire spécifique utilisateur en appelant le `SetVocabularyStrings` méthode de la `INVocabulary` classe et en passant un `NSOrderedSet` collection à partir de l’application principale. L’application doit toujours appeler la `RemoveAllVocabularyStrings` méthode first, pour supprimer les termes du contrat existant avant d’ajouter de nouveaux. Exemple :
 
 ```csharp
 using System;
@@ -432,7 +432,7 @@ namespace MonkeyChat
 ```
 
 > [!IMPORTANT]
-> **Remarque :** Siri traite le vocabulaire personnalisé en tant qu’indicateurs et incorporer à la plus grande partie de la terminologie que possible. Toutefois, l’espace vocabulaire personnalisé est limitée rendant important d’inscrire _uniquement_ la terminologie qui peut être déroutant, par conséquent en réduisant le nombre total de termes inscrits au minimum.
+> Siri traite le vocabulaire personnalisé en tant qu’indicateurs et incorporer à la plus grande partie de la terminologie que possible. Toutefois, l’espace vocabulaire personnalisé est limitée rendant important d’inscrire _uniquement_ la terminologie qui peut être déroutant, par conséquent en réduisant le nombre total de termes inscrits au minimum.
 
 Pour plus d’informations, consultez notre [référence vocabulaire spécifique de l’utilisateur](~/ios/platform/sirikit/understanding-sirikit.md) et d’Apple [en spécifiant une référence de vocabulaire personnalisé](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
@@ -587,7 +587,7 @@ Pour ajouter un `AppIntentVocabulary.plist` fichier au projet d’application, p
 -----
 
 > [!IMPORTANT]
-> **Remarque :** le `AppIntentVocabulary.plist` sera enregistrée avec Siri sur le test de périphériques pendant le développement et il peuvent prendre un certain temps pour Siri à intégrer le vocabulaire personnalisé. Par conséquent, le testeur devrez patienter quelques minutes avant de tester le vocabulaire spécifique d’application lorsqu’il a été mis à jour.
+> Le `AppIntentVocabulary.plist` sera enregistrée avec Siri sur le test de périphériques pendant le développement et il peuvent prendre un certain temps pour Siri à intégrer le vocabulaire personnalisé. Par conséquent, le testeur devrez patienter quelques minutes avant de tester le vocabulaire spécifique d’application lorsqu’il a été mis à jour.
 
 Pour plus d’informations, consultez notre [référence vocabulaire spécifique d’application](~/ios/platform/sirikit/understanding-sirikit.md) et d’Apple [en spécifiant une référence de vocabulaire personnalisé](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1).
 
@@ -690,7 +690,7 @@ Pour obtenir une liste complète des domaines intention disponibles, consultez l
 
 ### <a name="configuring-the-main-class"></a>Configuration de la classe principale
 
-Ensuite, le développeur doit configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’intention dans Siri. Il doit être une sous-classe de `INExtension` qui est conforme à la `IINIntentHandler` déléguer. Exemple :
+Ensuite, le développeur doit configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’intention dans Siri. Il doit être une sous-classe de `INExtension` qui est conforme à la `IINIntentHandler` déléguer. Exemple :
 
 ```csharp
 using System;
@@ -936,7 +936,7 @@ Pour obtenir une liste complète des domaines intention disponibles, consultez l
 
 ### <a name="configuring-the-main-class"></a>Configuration de la classe principale
 
-Configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’interface utilisateur intention dans Siri. Il doit être une sous-classe de `UIViewController` qui est conforme à la `IINUIHostedViewController` interface. Exemple :
+Configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’interface utilisateur intention dans Siri. Il doit être une sous-classe de `UIViewController` qui est conforme à la `IINUIHostedViewController` interface. Exemple :
 
 ```csharp
 using System;
@@ -1013,7 +1013,7 @@ Siri passez également un gestionnaire d’achèvement qui l’application doit 
 Mise en page dans le concepteur iOS de l’interface utilisateur de l’Extension l’interface utilisateur intentions. Double-cliquez sur l’extension `MainInterface.storyboard` de fichiers dans le **l’Explorateur de solutions** à ouvrir pour le modifier. Faites glisser dans tous les éléments d’interface utilisateur requis pour générer l’interface utilisateur et enregistrer les modifications.
 
 > [!IMPORTANT]
-> **Remarque :** alors qu’il est possible d’ajouter des éléments interactifs comme `UIButtons` ou `UITextFields` à l’Extension de l’interface utilisateur d’intention `UIViewController`, ceux-ci sont strictement interdites d’intention de l’interface utilisateur dans non interactive et l’utilisateur ne sera pas en mesure d’interagir avec eux.
+> Bien qu’il soit possible d’ajouter des éléments interactifs comme `UIButtons` ou `UITextFields` à l’Extension de l’interface utilisateur d’intention `UIViewController`, ceux-ci sont strictement interdites d’intention de l’interface utilisateur dans non interactive et l’utilisateur ne sera pas en mesure d’interagir avec eux.
 
 ### <a name="wire-up-the-user-interface"></a>L’Interface utilisateur d’accès réseau
 

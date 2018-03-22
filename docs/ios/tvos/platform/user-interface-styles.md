@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-user-interface-styles"></a>Nouveaux Styles de l’interface utilisateur
 
@@ -101,7 +101,7 @@ En outre, les regroupements de caractéristique présentent les fonctionnalités
 - Une application de tvOS peut gérer les modifications de la Collection de Trait en substituant le `TraitCollectionDidChange` méthode d’un `UIView` ou `UIViewController` classe.
 
 > [!IMPORTANT]
-> **Remarque :** ne prennent entièrement en charge la version préliminaire Xamarin.tvOS de tvOS 10 `UIUserInterfaceStyle` pour `UITraitCollection` encore. Prise en charge complète sera ajoutée dans une version ultérieure.
+> Ne prend entièrement en charge la version préliminaire Xamarin.tvOS de tvOS 10 `UIUserInterfaceStyle` pour `UITraitCollection` encore. Prise en charge complète sera ajoutée dans une version ultérieure.
 
 
 
@@ -124,7 +124,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> **Remarque :** Malheureusement, la version d’évaluation Xamarin.tvOS de tvOS 10 ne prend entièrement en charge `UIUserInterfaceStyle` pour `UITraitCollection`, de sorte que ce type de personnalisation n’est pas encore disponible. Prise en charge complète sera ajoutée dans une version ultérieure.
+> Malheureusement, la version d’évaluation Xamarin.tvOS de tvOS 10 ne prend entièrement en charge `UIUserInterfaceStyle` pour `UITraitCollection`, de sorte que ce type de personnalisation n’est pas encore disponible. Prise en charge complète sera ajoutée dans une version ultérieure.
 
 <a name="Responding-to-Theme-Changes-Directly" />
 
@@ -132,7 +132,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 
 Dans le développeur requiert un contrôle plus approfondie sur l’apparence d’un élément d’interface utilisateur en fonction du thème de l’interface utilisateur sélectionné, ils peuvent remplacer la `TraitCollectionDidChange` méthode d’un `UIView` ou `UIViewController` classe.
 
-Exemple :
+Exemple :
 
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
@@ -150,7 +150,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 En fonction de la conception d’une application de tvOS, il peut arriver lorsque le développeur doit substituer la Collection caractéristique d’un élément d’Interface utilisateur donné et de toujours utiliser un thème de l’interface utilisateur spécifique.
 
-Cela est possible à l’aide de la `SetOverrideTraitCollection` méthode sur la `UIViewController` classe. Exemple :
+Cela est possible à l’aide de la `SetOverrideTraitCollection` méthode sur la `UIViewController` classe. Exemple :
 
 ```csharp
 // Create new trait and configure it

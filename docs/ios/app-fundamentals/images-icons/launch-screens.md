@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/19/2018
-ms.openlocfilehash: 54ec41636f491708ea72585d3889fbbca85c8eb1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e07a6b72f2821e8cc65e0b0d690dbadf1a6713b6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="launch-screens"></a>Lancer des écrans
 
@@ -179,7 +179,7 @@ Dans iOS 8 (et versions ultérieures), le développeur peut créer un Storyboard
 -----
 
 > [!NOTE]
-> **Remarque**: une table de montage séquentiel utilisé comme un écran de lancement _doit_ incluent les éléments d’interface utilisateur uniquement simples et intégrés et **ne peut pas** effectuer des calculs ou dériver une classe personnalisée.
+> Une table de montage séquentiel utilisé comme un écran de lancement _doit_ incluent les éléments d’interface utilisateur uniquement simples et intégrés et **ne peut pas** effectuer des calculs ou dériver une classe personnalisée.
 
 Pour plus d’informations sur la création d’un écran de lancement avec un Storyboard unifiée, consultez le [dynamique écrans lancer](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) section de la [unifiée des animations](~/ios/user-interface/storyboards/unified-storyboards.md) guide.
 

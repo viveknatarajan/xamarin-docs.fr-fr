@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 774d6e6ecdb081650c6f008b1ac83c397f788d5b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="programmatic-layout-constraints"></a>Contraintes de disposition par programmation
 
@@ -43,7 +43,7 @@ Les sections suivantes passe en revue chaque option de détail.
 À l’aide de la `NSLayoutAnchor` (classe), vous avez une interface fluent pour la création de contraintes basés sur les propriétés d’ancrage des éléments de l’interface utilisateur en cours de la contrainte. Par exemple, d’un contrôleur d’affichage supérieure et inférieure repères expose le `TopAnchor`, `BottomAnchor` et `HeightAnchor` d’ancrage propriétés pendant une vue expose les propriétés de bord, centre, la taille et de ligne de base.
 
 > [!IMPORTANT]
-> **Remarque :** en plus de l’ensemble standard de propriétés d’ancrage, les vues iOS incluent également le `LayoutMarginsGuides` et `ReadableContentGuide` propriétés. Ces propriétés présentent des `UILayoutGuide` objets pour travailler avec des marges de la vue et lisibles content guides respectivement.
+> En plus de l’ensemble standard de propriétés d’ancrage, les vues iOS incluent également le `LayoutMarginsGuides` et `ReadableContentGuide` propriétés. Ces propriétés présentent des `UILayoutGuide` objets pour travailler avec des marges de la vue et lisibles content guides respectivement.
 
 Mise en page ancres fournissent plusieurs méthodes pour la création de contraintes dans un format compact facile à lire :
 
@@ -51,7 +51,7 @@ Mise en page ancres fournissent plusieurs méthodes pour la création de contrai
 - **ConstraintGreaterThanOrEqualTo** -définit une relation où `first attribute >= second attribute + [constant]` avec éventuellement fourni `constant` valeur de décalage.
 - **ConstraintLessThanOrEqualTo** -définit une relation où `first attribute <= second attribute + [constant]` avec éventuellement fourni `constant` valeur de décalage.
 
-Exemple :
+Exemple :
 
 ```csharp
 // Get the parent view's layout
@@ -95,7 +95,7 @@ En plus de fournir uniquement les paramètres qui sont nécessaires pour résoud
 
 ### <a name="layout-constraints"></a>Contraintes de disposition
 
-Vous pouvez ajouter manuellement des contraintes de mise en page automatique en créant directement un `NSLayoutConstraint` en code c#. Contrairement à l’utilisation de points d’ancrage de la mise en page, vous devez spécifier une valeur pour chaque paramètre, même si elle aura aucun effet sur la contrainte est définie. Par conséquent, vous obtiendrez produisant une quantité considérable de difficile à lire, un code réutilisable. Exemple :
+Vous pouvez ajouter manuellement des contraintes de mise en page automatique en créant directement un `NSLayoutConstraint` en code c#. Contrairement à l’utilisation de points d’ancrage de la mise en page, vous devez spécifier une valeur pour chaque paramètre, même si elle aura aucun effet sur la contrainte est définie. Par conséquent, vous obtiendrez produisant une quantité considérable de difficile à lire, un code réutilisable. Exemple :
 
 ```csharp
 //// Pin the leading edge of the view to the margin

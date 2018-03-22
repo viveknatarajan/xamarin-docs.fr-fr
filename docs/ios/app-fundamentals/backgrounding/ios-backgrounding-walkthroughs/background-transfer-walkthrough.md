@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4ab11239caf5986bba52f080945d90a91ea9453e
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Procédure pas à pas - à l’aide de NSURLSession et le Service de transfert en arrière-plan
 
@@ -97,7 +97,7 @@ Si vous souhaitez connaître la progression d’une tâche de téléchargement, 
 L’API de délégué de session fournit un large ensemble d’outils permettant d’interagir avec les tâches. Pour obtenir la liste complète de la session de déléguer des méthodes, reportez-vous à la `NSUrlSessionDelegate` documentation de l’API.
 
 > [!IMPORTANT]
-> **Remarque**: sessions de l’arrière-plan sont démarrées sur un thread d’arrière-plan, afin que tous les appels à mettre à jour l’interface utilisateur doivent être explicitement exécutés sur le thread d’interface utilisateur en appelant `InvokeOnMainThread` afin d’éviter les e/s de l’arrêt de l’application. 
+> Les sessions en arrière-plan sont démarrées sur un thread d’arrière-plan, afin que tous les appels à mettre à jour l’interface utilisateur doivent être explicitement exécutés sur le thread d’interface utilisateur en appelant `InvokeOnMainThread` afin d’éviter les e/s de l’arrêt de l’application. 
 
 
 ## <a name="handling-transfer-completion"></a>Fin du transfert de la gestion

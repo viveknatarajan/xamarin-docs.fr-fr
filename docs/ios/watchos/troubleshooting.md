@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a6b916f991b337d8a28764f1482ddd837bad460
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS résolution des problèmes
 
@@ -33,13 +33,6 @@ Cette page contient des informations supplémentaires et des solutions pour les 
 ### <a name="general"></a>Général
 
 <a name="deploy" />
-<!--
-* You cannot deploy to the App Store *from within Visual Studio for Mac or Visual Studio*
-    in the current release. You should create an **Archive** in Visual Studio for Mac
-    and then switch to Xcode to upload the archive to iTunes Connect. Visual Studio
-    is not currently supported (but will be a future release). Refer to the
-    [deployment guide](~/ios/watchos/deploy-test/appstore.md) for more information.
--->
 
 - Les versions antérieures de Visual Studio pour Mac incorrectement affichent l’une du le **AppleCompanionSettings** icônes comme étant pixels 88 x 88 ; ce qui entraîne un **erreur d’icône manquant** si vous essayez d’envoyer à l’application Magasin.
     Cette icône doit être 87 x 87 pixels (29 unités pour  **@3x**  les écrans rétine). Vous ne pouvez pas résoudre ce problème dans Visual Studio pour Mac - modifier le composant de l’image dans Xcode ou modifier manuellement le **Contents.json** fichier (pour correspondre à [cet exemple](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
@@ -47,14 +40,6 @@ Cette page contient des informations supplémentaires et des solutions pour les 
 - Si du projet Extension espion **Info.plist > ID d’offre groupée WKApp** n’est pas [définir correctement](~/ios/watchos/get-started/project-references.md) pour correspondre à l’application de surveillance **ID d’offre groupée**, le débogueur ne pourront pas se connecter et Visual Studio pour Mac devront attendre avec le message *« En attente pour le débogueur pour se connecter »*.
 
 - Le débogage est pris en charge dans **Notifications** mode mais peut ne pas être fiables. Une nouvelle tentative parfois fonctionne. Vérifiez que l’application de surveillance **Info.plist** `WKCompanionAppBundleIdentifier` est défini pour correspondre à l’identificateur de lot de l’application conteneur/parent (ie. celui qui s’exécute sur l’iPhone).
-
-<!--
-- **Can't launch application on Watch simulator.** This seems to
-    be an issue with the iOS Simulator hanging when trying to
-    install an app that has changed. Xcode release notes (beta 4)
-    includes a similar known issue:
-    If the issue persists, reset the Simulator (**iOS Simulator > Reset Content and Settings...**).
--->
 
 - iOS concepteur n’affiche pas les flèches vers le point d’entrée pour les contrôleurs d’interface aperçu ou de Notification.
 
@@ -69,15 +54,6 @@ Cette page contient des informations supplémentaires et des solutions pour les 
 ### <a name="visual-studio"></a>Visual Studio
 
 Le concepteur iOS prennent en charge pour le Kit d’espion *requiert* la solution doit être configuré correctement. Si les références de projet ne sont pas définies (voir [comment définir les références](~/ios/watchos/get-started/project-references.md)) l’aire de conception ne fonctionnera pas correctement.
-
-<!--
-* New Watch Kit apps created in Visual Studio might not allow
-    starting in Notifications mode.
-
-* You cannot deploy to the App Store from Visual Studio (see [notes above](#deploy)
-    and the [deployment guide](~/ios/watchos/deploy-test/appstore.md)). Use
-    Visual Studio for Mac and Xcode on your Mac Build Host.
-    -->
 
 <a name="noalpha" />
 
@@ -109,11 +85,10 @@ Il est facile de supprimer le canal alpha sur Mac OS X à l’aide de la **aper�
 ## <a name="manually-adding-interface-controller-files"></a>Ajoutez manuellement les fichiers de contrôleur d’Interface
 
 > [!IMPORTANT]
-> Prise en charge de Xamarin espion Kit inclut la conception d’animations espion dans le concepteur iOS (dans Visual Studio pour Mac et Visual Studio), qui ne nécessite pas les étapes décrites ci-dessous. Simplement permettre à un contrôleur d’interface un nom de classe dans Visual Studio pour Mac propriétés remplissage et les fichiers de code c# seront créés automatiquement.
+> Prise en charge de Xamarin WatchKit inclut la conception d’animations espion dans le concepteur iOS (dans Visual Studio pour Mac et Visual Studio), qui ne nécessite pas les étapes décrites ci-dessous. Simplement permettre à un contrôleur d’interface un nom de classe dans Visual Studio pour Mac propriétés remplissage et les fichiers de code c# seront créés automatiquement.
 
 
 *Si* à l’aide de Xcode Interface Builder, procédez comme suit pour créer de nouveaux contrôleurs d’interface pour votre application de surveillance et activer la synchronisation avec Xcode afin que les sorties et les actions sont disponibles en c# :
-
 
 1. Ouvrez l’application de surveillance **Interface.storyboard** dans **Xcode Interface Builder**.
     
@@ -256,7 +231,7 @@ Le paramètre que vous devez mettre à jour pour refléter votre application est
 Le chemin d’accès complet à l’offre groupée d’application principal *de l’application iOS qui contient l’application de surveillance et l’extension*.
 
 > [!NOTE]
-> *Remarque :* le chemin d’accès que vous deviez fournir concerne le *fichier .app de l’application iPhone*, c'est-à-dire celui qui sera déployé sur le simulateur iOS et qui contient l’extension de surveillance et l’application watch.
+> Le chemin d’accès que vous deviez fournir concerne le *fichier .app de l’application iPhone*, c'est-à-dire celui qui sera déployé sur le simulateur iOS et qui contient l’extension de surveillance et l’application watch.
 
 Exemple :
 

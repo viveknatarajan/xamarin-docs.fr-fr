@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c55ba4fb90181aaa1aa8ec52e2fcb3e2b2cc76d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="table-control"></a>Contrôle de table
 
@@ -51,7 +51,8 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 ```
 
 > [!IMPORTANT]
-> **Remarque**: lignes de la Table ne sont pas virtualisés comme dans iOS. Essayez de limiter le nombre de lignes (Apple recommande de moins de 20).
+> Lignes de la table ne sont pas virtualisés comme dans iOS. Essayez de limiter le nombre de lignes (Apple recommande de moins de 20).
+
 Une fois que les lignes ont été créées, vous devez remplir chaque cellule (comme `GetCell` dans iOS). Cet extrait de code à partir de la [WatchTables exemple](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) met à jour l’étiquette dans chaque ligne.
 
 ```csharp
@@ -62,7 +63,7 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> **Remarque :** Using `SetNumberOfRows` et puis boucle à l’aide de `GetRowController` , la table entière à envoyer à la surveillance. Sur les vues suivantes de la table, si vous avez besoin ajouter ou supprimer des lignes spécifiques utilisent `InsertRowsAt` et `RemoveRowsAt` pour de meilleures performances.
+> À l’aide de `SetNumberOfRows` et puis boucle à l’aide de `GetRowController` , la table entière à envoyer à la surveillance. Sur les vues suivantes de la table, si vous avez besoin ajouter ou supprimer des lignes spécifiques utilisent `InsertRowsAt` et `RemoveRowsAt` pour de meilleures performances.
 
 
 ## <a name="respond-to-taps"></a>Répondre aux clics
@@ -148,7 +149,7 @@ watchOS 3 a introduit une nouvelle fonctionnalité pour les tables : la possibi
 ![](table-images/table-scroll-sml.png "Exemple de pagination de détail vertical") ![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
-> **Avertissement :** cette fonctionnalité est actuellement disponible uniquement en modifiant le plan conceptuel dans Xcode Interface Builder.
+> Cette fonctionnalité est actuellement uniquement disponible en modifiant le plan conceptuel dans Xcode Interface Builder.
 
 Pour activer cette fonctionnalité, sélectionnez le `WKInterfaceTable` sur l’aire de conception et de graduations le **Vertical en détail la pagination** option :
 
