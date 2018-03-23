@@ -1,6 +1,6 @@
 ---
 title: Prise en charge de fichier IPA
-description: "Cet article explique comment créer un fichier IPA afin de déployer une application à l’aide de la distribution ad hoc, soit pour des tests, soit pour distribuer en interne des applications internes."
+description: Cet article explique comment créer un fichier IPA afin de déployer une application à l’aide de la distribution ad hoc, soit pour des tests, soit pour distribuer en interne des applications internes.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bee3480fc90c2eac5629e336c57daa90adf9c346
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fa0986141a44bbe7100268c629e606a5857e2699
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ipa-support"></a>Prise en charge de fichier IPA
 
@@ -151,7 +151,7 @@ Une fois que vous avez créé et sélectionné le profil de provisionnement, que
     ![](ipa-support-images/imagevs02.png "Sélectionner Ad hoc dans la liste déroulante Configuration")
 
     > [!NOTE]
-> Une configuration ad hoc n’est pas forcément disponible pour les nouveaux projets Xamarin.iOS. Si elle n’est pas disponible, sélectionnez la configuration **Mise en production**.
+    > Une configuration ad hoc n’est pas forcément disponible pour les nouveaux projets Xamarin.iOS. Si elle n’est pas disponible, sélectionnez la configuration **Mise en production**.
 
 3. Si vous incluez un fichier **iTunesMetadata.plist** facultatif, cliquez sur le bouton **...**, sélectionnez-le dans la liste, puis cliquez sur **Ouvrir** :
 

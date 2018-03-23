@@ -1,6 +1,6 @@
 ---
-title: "Résolution des problèmes de connexion"
-description: "Ce guide fournit des étapes de résolution des problèmes qui peuvent être rencontrés lors de l’utilisation du nouveau gestionnaire de connexions, notamment les problèmes de connectivité et SSH."
+title: Résolution des problèmes de connexion
+description: Ce guide fournit des étapes de résolution des problèmes qui peuvent être rencontrés lors de l’utilisation du nouveau gestionnaire de connexions, notamment les problèmes de connectivité et SSH.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d33f4ba5512985d62575885d44fdcebced8b61ed
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connection-troubleshooting"></a>Résolution des problèmes de connexion
 
@@ -72,26 +72,34 @@ L’hôte de build Xamarin des versions antérieures de Xamarin.iOS n’est plus
 
 7. Une fois que vous avez confirmé l’adresse IP du Mac, effectuez un test `ping` à cette adresse dans `cmd.exe` sur Windows :
 
-        ping 10.1.8.95
-
+    ```
+    ping 10.1.8.95
+    ```
+    
     Si le test ping échoue, le Mac n’est pas _routable_ à partir de l’ordinateur Windows. Ce problème doit être résolu au niveau de la configuration du réseau local entre les deux ordinateurs. Vérifiez que les deux ordinateurs se trouvent sur le même réseau local.
 
 8. Effectuez ensuite un test pour savoir si le client `ssh` d’OpenSSH peut se connecter au Mac à partir de Windows. Une façon d’installer ce programme consiste à installer [Git pour Windows](https://git-for-windows.github.io/). Vous pouvez ensuite démarrer une invite de commandes **Git Bash** et essayer une commande `ssh` sur le Mac avec votre nom d’utilisateur et votre adresse IP :
 
-        ssh amyb@10.1.8.95
-
+    ```bash
+    ssh amyb@10.1.8.95
+    ```
+    
 <a name="stepnine" />
 
 9. Si l’**étape 8 réussit**, vous pouvez essayer d’exécuter une commande simple comme `ls` via la connexion :
 
-        ssh amyb@10.1.8.95 'ls'
-
+    ```bash
+    ssh amyb@10.1.8.95 'ls'
+    ```
+    
     Cette opération permet de répertorier le contenu de votre répertoire de base sur le Mac. Si la commande `ls` fonctionne correctement, mais que la connexion Visual Studio échoue toujours, vous pouvez vérifier la section [Problèmes connus et limitations](#knownissues) relative aux complications spécifiques à Xamarin. Si aucune solution ne correspond à votre problème, [envoyez un nouveau rapport de bogue](https://bugzilla.xamarin.com/newbug) en joignant les journaux décrits sous [Vérifier les fichiers journaux détaillés](#verboselogs).
 
 10. Si l’**étape 8 échoue**, vous pouvez exécuter la commande suivante dans Terminal sur le Mac pour voir si le serveur SSH accepte _toutes_ les connexions :
 
-        ssh localhost
-
+    ```bash
+    ssh localhost
+    ```
+    
 11. Si l’étape 8 échoue mais que l’**étape 10 réussit**, le problème est probablement que le port 22 sur l’hôte de build Mac n’est pas accessible à partir de Windows en raison de la configuration du réseau. Les problèmes de configuration possibles sont les suivants :
 
     - Les paramètres de pare-feu OS X interdisent la connexion. Vérifier soigneusement l’étape 3.
@@ -161,8 +169,10 @@ Causes signalées :
 
     5. Ajoutez la ligne suivante au bas du fichier :
 
-            UseDNS no
-
+        ```
+        UseDNS no
+        ```
+        
     6. Supprimez toutes les lignes qui indiquent `UseDNS yes` pour garantir que le nouveau paramètre prend effet.
 
     7. Enregistrez le fichier.
@@ -179,16 +189,20 @@ Si vos fichiers journaux indiquent un problème lors des étapes « Installatio
 
 1. Exécutez la commande suivante dans Terminal sur le Mac :
 
-        open "$HOME/Library/Caches/Xamarin"
-
+    ```bash
+    open "$HOME/Library/Caches/Xamarin"
+    ```
+    
 2. Cliquez sur le dossier **XMA** en maintenant la touche Ctrl enfoncée, puis sélectionnez **Placer dans la Corbeille** :
 
     [![](troubleshooting-images/troubleshooting-image8.png "Placer le dossier XMA dans la Corbeille")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. Il existe également un cache sur Windows qu’il peut être efficace de désactiver. Ouvrez une invite de commandes en tant qu’administrateur sur Windows :
 
-        del %localappdata%\Temp\Xamarin\XMA
-
+    ```
+    del %localappdata%\Temp\Xamarin\XMA
+    ```
+    
 ## <a name="warning-messages"></a>Messages d’avertissement
 
 Cette section décrit quelques messages qui peuvent s’afficher dans les fenêtres et journaux de Sortie et que vous pouvez généralement ignorer.
@@ -230,7 +244,7 @@ Si la fenêtre Sortie n’inclut pas suffisamment d’informations pour diagnost
 1. Démarrez Visual Studio.
 
     > [!IMPORTANT]
->  Notez que les fichiers **.svclogs** ne sont pas activés par défaut. Pour y accéder, vous devez démarrer Visual Studio avec les journaux détaillés, comme expliqué dans le guide des [journaux des versions](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs). Pour plus d’informations, reportez-vous au blog [Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/).
+    > Notez que les fichiers **.svclogs** ne sont pas activés par défaut. Pour y accéder, vous devez démarrer Visual Studio avec les journaux détaillés, comme expliqué dans le guide des [journaux des versions](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs). Pour plus d’informations, reportez-vous au blog [Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/).
 
 2. Tentez de vous connecter à l’hôte de build.
 
@@ -272,7 +286,7 @@ Si les fichiers journaux normaux ne fournissent toujours pas suffisamment d’in
 
     ```bash
     grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
-    ```
+   ```
 
 Si ces fichiers journaux détaillés ne fournissent pas suffisamment d’indices pour résoudre le problème directement, [envoyez un nouveau rapport de bogue](https://bugzilla.xamarin.com/newbug) en joignant le fichier .zip de l’étape 5 et le fichier .log de l’étape 6.
 
