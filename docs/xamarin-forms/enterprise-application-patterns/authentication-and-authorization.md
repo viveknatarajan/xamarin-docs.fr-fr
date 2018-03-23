@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 5f27c1acefa63ee26184b8997594630e24cb0acc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 16cd5571a8c3b0e179046351e9996e55b040a9de
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authentication-and-authorization"></a>Authentification et autorisation
 
@@ -21,7 +21,7 @@ Il existe de nombreuses méthodes d’intégration d’authentification et autor
 
 ## <a name="authentication"></a>Authentification
 
-L’authentification est requise lorsqu’une application doit connaître l’identité de l’utilisateur actuel. Mécanisme principal d’ASP.NET Core identification des utilisateurs est le système d’appartenance ASP.NET Core Identity, qui stocke les informations utilisateur dans un magasin de données configuré par le développeur. En règle générale, cette banque de données sera un magasin EntityFramework, bien que les magasins personnalisés ou des packages tiers peuvent être utilisés pour stocker les informations d’identité dans le stockage Azure, DocumentDB ou d’autres emplacements.
+L’authentification est requise lorsqu’une application doit connaître l’identité de l’utilisateur actuel. Mécanisme principal d’ASP.NET Core identification des utilisateurs est le système d’appartenance ASP.NET Core Identity, qui stocke les informations utilisateur dans un magasin de données configuré par le développeur. En règle générale, cette banque de données sera un magasin EntityFramework, bien que les magasins personnalisés ou des packages tiers peuvent être utilisés pour stocker les informations d’identité dans le stockage Azure, base de données Azure Cosmos ou d’autres emplacements.
 
 Pour les scénarios d’authentification qui utilisent un magasin de données utilisateur local, et qui rendre persistantes les informations d’identité entre les demandes via les cookies (comme souvent dans les applications web ASP.NET MVC), ASP.NET Core Identity est une solution adaptée. Toutefois, les cookies ne sont pas toujours des moyens naturels de persistance et de transmission de données. Par exemple, une application web ASP.NET Core qui expose des points de terminaison RESTful qui sont accessibles à partir d’une application mobile devrez généralement utiliser l’authentification de jeton de porteur, étant donné que les cookies ne peuvent pas être utilisés dans ce scénario. Toutefois, les jetons de porteur peuvent facilement être récupérées et inclus dans l’en-tête d’autorisation de requêtes web à partir de l’application mobile.
 

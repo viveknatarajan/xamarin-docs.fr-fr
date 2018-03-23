@@ -1,6 +1,6 @@
 ---
-title: "Détails d’implémentation de temps de prise en charge totale"
-description: "Ce guide décrit les détails d’implémentation dans la partie heure de la prise en charge totale, y compris l’utilisation des mappages de vignette, créer des entités, animation sprites et l’implémentation de collision efficace."
+title: Détails d’implémentation de temps de prise en charge totale
+description: Ce guide décrit les détails d’implémentation dans la partie heure de la prise en charge totale, y compris l’utilisation des mappages de vignette, créer des entités, animation sprites et l’implémentation de collision efficace.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5D285684-0417-4E16-BD14-2D1F6DEFBB8B
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: b3827d05ae9e563ae04dd4ab1e303577f6c9d82a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="coin-time-implementation-details"></a>Détails d’implémentation de temps de prise en charge totale
 
@@ -61,10 +61,7 @@ Vignettes peuvent être placés en cliquant dans le **mastersheet** tileset et p
 1. Cliquez sur la vignette pour dessiner
 1. Cliquez sur ou push, faites glisser sur la carte pour peindre la vignette
 
-
     ![](cointime-images/image2.png "Cliquez sur la vignette pour dessiner 1")
-
- 
 
 Le coin supérieur gauche de la tileset contient tous les de terrain dans le temps de prise en charge totale. Terrain, qui est pleine, inclut la **SolidCollision** propriété, comme indiqué dans les propriétés de la vignette sur la gauche de l’écran :
 
@@ -97,15 +94,11 @@ Le processus d’ajout des niveaux au moment de la prise en charge totale néces
 1. Renommez le nouveau fichier .tmx afin qu’il continue de la séquence du numéro de niveau avec les niveaux existants, tels que **level8.tmx**
 1. Dans Visual Studio ou Visual Studio pour Mac, ajoutez le nouveau fichier .tmx dans le dossier de niveaux Android. Vérifiez que le fichier utilise le **AndroidAsset** action de génération.
 
-
     ![](cointime-images/image8.png "Vérifiez que le fichier utilise l’action de génération AndroidAsset")
-
 
 1. Ajouter le nouveau fichier .tmx dans le dossier de niveaux iOS. Veillez à lier le fichier à partir de son emplacement d’origine et vérifiez qu’il utilise le **BundleResource** action de génération.
 
-
     ![](cointime-images/image9.png "Veillez à lier le fichier à partir de son emplacement d’origine et vérifiez qu’il utilise l’action de génération BundleResource")
-
 
 Le nouveau niveau doit apparaître dans l’écran Sélectionnez niveau en tant que niveau 9 (au niveau des noms de fichiers commencent à 0, mais les boutons niveau commencent par le numéro 1) :
 

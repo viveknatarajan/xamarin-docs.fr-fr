@@ -1,6 +1,6 @@
 ---
 title: Images
-description: "Images peuvent être partagées entre les plateformes avec Xamarin.Forms, ils peuvent être chargés spécifiquement pour chaque plateforme, ou ils peuvent être téléchargés pour l’affichage."
+description: Images peuvent être partagées entre les plateformes avec Xamarin.Forms, ils peuvent être chargés spécifiquement pour chaque plateforme, ou ils peuvent être téléchargés pour l’affichage.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 440ee997b075b5c89504dcf20171fa3c8713e1ce
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b2cc302cf45527319bb22a4942290e0b0ac414d7
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="images"></a>Images
 
@@ -24,7 +24,7 @@ Les images spécifiques à la plateforme sont également requis pour les icônes
 
 Ce document traite des sujets suivants :
 
-- [ **Images locales** ](#Local_Images) -affichage des images fourni avec l’application, y compris les résolutions natives comme iOS rétine ou Android versions haute résolution d’une image de résolution.
+- [ **Images locales** ](#Local_Images) -affichage des images fourni avec l’application, y compris les résolutions natives comme iOS rétine, Android ou UWP versions haute résolution d’une image de résolution.
 - [ **Images incorporées** ](#Embedded_Images) -affichage des images incorporées en tant que ressource d’assembly.
 - [ **Télécharger des images** ](#Downloading_Images) - télécharger et afficher des images.
 - [ **Icônes et écrans de démarrage** ](#Icons_and_splashscreens) -les icônes spécifiques à la plateforme et les images de démarrage.
@@ -94,15 +94,17 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>Résolutions natives (rétine et haute résolution)
 
-IOS et Android plates-formes prennent en charge différentes résolutions, où le système d’exploitation choisit l’image appropriée lors de l’exécution selon les fonctions du périphérique. Xamarin.Forms utilisant API des plateformes natives pour le chargement des images locales, afin qu’il prend automatiquement en charge les résolutions autre si les fichiers sont correctement nommées et situés dans le projet.
+iOS, Android, Windows Phone et UWP incluent la prise en charge des résolutions différentes, où le système d’exploitation choisit l’image appropriée lors de l’exécution selon les fonctions du périphérique. Xamarin.Forms utilisant API des plateformes natives pour le chargement des images locales, afin qu’il prend automatiquement en charge les résolutions autre si les fichiers sont correctement nommées et situés dans le projet.
 
 La meilleure façon de gérer les images étant iOS 9 à faire glisser des images pour chaque résolution requise pour l’ensemble d’images de catalogue asset approprié. Pour plus d’informations, consultez [Ajout d’Images à une ressource catalogue Image défini](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Avant d’iOS 9, versions rétine de l’image peut être placées dans le **ressources** dossier - deux et trois fois la résolution avec un  **@2x**  ou  **@3x** suffixes sur le nom de fichier avant l’extension de fichier (par exemple). **myimage@2x.png**). Toutefois, cette méthode d’utilisation des images dans une application iOS a été déconseillée par Apple. Pour plus d’informations, consultez [tailles d’Image et les noms de fichiers](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
+Avant d’iOS 9, versions rétine de l’image peut être placées dans le **ressources** dossier - deux et trois fois la résolution avec un **@2x** ou **@3x**suffixes sur le nom de fichier avant l’extension de fichier (par exemple). **myimage@2x.png**). Toutefois, cette méthode d’utilisation des images dans une application iOS a été déconseillée par Apple. Pour plus d’informations, consultez [tailles d’Image et les noms de fichiers](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
 Les images de résolution autre Android doivent être placés dans [spécialement nommés de répertoires](http://developer.android.com/guide/practices/screens_support.html) dans le projet Android, comme illustré dans la capture d’écran suivante :
 
 [![Emplacement de l’Image de résolution de plusieurs Android](images-images/xs-highdpisolution-sml.png "emplacement de l’Image de résolution de plusieurs Android")](images-images/xs-highdpisolution.png#lightbox "emplacement de l’Image de résolution de plusieurs Android")
+
+Noms de fichiers d’image UWP et Windows Phone [peuvent être suivis du suffixe `.scale-xxx` avant l’extension de fichier](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), où `xxx` est le pourcentage de mise à l’échelle appliqué à l’élément multimédia, par exemple, **myimage.scale-200.png**. Les images peuvent ensuite faire référence dans le code ou XAML sans le modificateur de mise à l’échelle, par exemple, immédiatement **myimage.png**. La plateforme sélectionne l’échelle des ressources appropriées le plus proche basée sur la résolution actuelle de l’affichage.
 
 ### <a name="additional-controls-that-display-images"></a>Autres contrôles qui affichent des Images
 
@@ -168,7 +170,7 @@ Les captures d’écran suivantes affichent le résultat de l’affichage d’un
 Étant donné qu’aucun convertisseur de type intégré de `string` à `ResourceImageSource`, ces types d’images ne peut pas être chargés en mode natif par le code XAML. Au lieu de cela, une simple extension de balisage XAML personnalisée peut être écrites pour charger des images à l’aide un **ID de ressource** spécifié en XAML :
 
 ```csharp
-[ContentProperty ("Source")]
+[ContentProperty (nameof(Source))]
 public class ImageResourceExtension : IMarkupExtension
 {
  public string Source { get; set; }
@@ -179,6 +181,7 @@ public class ImageResourceExtension : IMarkupExtension
    {
      return null;
    }
+   
    // Do your translation lookup here, using whatever method you require
    var imageSource = ImageSource.FromResource(Source);
 

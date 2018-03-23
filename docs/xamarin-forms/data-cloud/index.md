@@ -1,18 +1,18 @@
 ---
-title: "Services de données et cloud"
-description: "Xamarin.Forms applications peuvent consommer des services web implémentés à l’aide d’un large éventail de technologies, et ce guide examine comment effectuer cette opération."
+title: Services de données et cloud
+description: Xamarin.Forms applications peuvent consommer des services web implémentés à l’aide d’un large éventail de technologies, et ce guide examine comment effectuer cette opération.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: "0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß"
+ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 28007ee702c66f3b819430b544465d3470d571d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 54313c3e8808ee9e563d6b55e3bf034c543a48e5
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data--cloud-services"></a>Services de données et cloud
 
@@ -50,7 +50,7 @@ Cet article explique comment utiliser la bibliothèque de recherche de Microsoft
 
 ## <a name="storing-data-in-a-document-databasecosmosdbindexmd"></a>[Stockage de données dans une base de données de documents](cosmosdb/index.md)
 
-Ce guide montre comment utiliser la bibliothèque cliente Microsoft Azure DocumentDB d’intégration d’une base de données du document de base de données Azure Cosmos à une application de Xamarin.Forms. Une base de données du document de base de données Azure Cosmos est une base de données NoSQL qui fournit l’accès à faible latence aux documents JSON, offrant un service de base de données rapide, hautement disponible et évolutive pour les applications qui nécessitent une réplication globale et une échelle transparente.
+Ce guide montre comment utiliser la bibliothèque cliente Azure Cosmos DB .NET Standard pour intégrer une base de données du document de base de données Azure Cosmos dans une application de Xamarin.Forms. Une base de données du document de base de données Azure Cosmos est une base de données NoSQL qui fournit l’accès à faible latence aux documents JSON, offrant un service de base de données rapide, hautement disponible et évolutive pour les applications qui nécessitent une réplication globale et une échelle transparente.
 
 ## <a name="adding-intelligence-with-cognitive-servicescognitive-servicesindexmd"></a>[Ajout d’intelligence avec Cognitive Services](cognitive-services/index.md)
 

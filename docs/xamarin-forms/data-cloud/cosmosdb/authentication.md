@@ -1,6 +1,6 @@
 ---
-title: "L’authentification des utilisateurs avec une base de données du Document Cosmos Azure DB"
-description: "Bases de données de document Cosmos DB Azure prend en charge les collections partitionnées, ce qui peuvent s’étendre sur plusieurs serveurs et des partitions, débit et stockage illimitée : la prise en charge. Cet article explique comment combiner le contrôle d’accès avec les collections partitionnées, afin qu’un utilisateur peut accéder uniquement leurs propres documents dans une application de Xamarin.Forms."
+title: L’authentification des utilisateurs avec une base de données du Document Cosmos Azure DB
+description: 'Bases de données de document Cosmos DB Azure prend en charge les collections partitionnées, ce qui peuvent s’étendre sur plusieurs serveurs et des partitions, débit et stockage illimitée : la prise en charge. Cet article explique comment combiner le contrôle d’accès avec les collections partitionnées, afin qu’un utilisateur peut accéder uniquement leurs propres documents dans une application de Xamarin.Forms.'
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 10c4a1e3355263722d170dff0a5e2707eb794818
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8de64d6489b4022e43bcf694f3b13d6f7eaaecbd
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>L’authentification des utilisateurs avec une base de données du Document Cosmos Azure DB
 
@@ -22,12 +22,12 @@ _Bases de données de document Cosmos DB Azure prend en charge les collections p
 
 Une clé de partition doit être spécifiée lors de la création d’une collection partitionnée, et les documents avec la même clé de partition sont stockés dans la même partition. Par conséquent, spécification de l’identité de l’utilisateur en tant que clé de partition entraîne une collection partitionnée qui stocke uniquement des documents pour cet utilisateur. Cela garantit également que la base de données du document de base de données Azure Cosmos mettra à l’échelle le nombre d’utilisateurs et que les éléments augmentent.
 
-Accès doit être accordé à une collection, et le modèle de contrôle d’accès API DocumentDB définit deux types de constructions d’accès :
+Accès doit être accordé à une collection, et le modèle de contrôle d’accès API SQL définit deux types de constructions d’accès :
 
 - **Les clés principales** activer un accès administratif complet à toutes les ressources au sein d’un compte de base de données Cosmos et sont créés lors de la création d’un compte de base de données Cosmos.
 - **Jetons de ressource** capturent la relation entre l’utilisateur de base de données et de l’autorisation de l’utilisateur dispose d’une ressource Cosmos DB spécifique, comme une collection ou un document.
 
-Exposition d’une clé principale ouvre un compte Cosmos DB la possibilité d’utiliser malveillant ou involontaire. Toutefois, les jetons de ressource de base de données Cosmos fournissent un mécanisme sécurisé pour autoriser les clients à lire, écrire et supprimer des ressources spécifiques dans un compte de base de données Cosmos en fonction des autorisations accordées.
+Exposition d’une clé principale ouvre un compte Cosmos DB la possibilité d’utiliser malveillant ou involontaire. Toutefois, les jetons de ressource de base de données Azure Cosmos fournissent un mécanisme sécurisé pour autoriser les clients à lire, écrire et supprimer des ressources spécifiques dans un compte de base de données Azure Cosmos en fonction des autorisations accordées.
 
 Une approche courante à la demande, générer et de livrer des jetons de ressource à une application mobile doit utiliser un courtier de jeton de ressource. Le diagramme suivant montre une vue d’ensemble de comment l’exemple d’application utilise un courtier de jeton de ressource pour gérer l’accès à la base de données de document :
 
@@ -44,7 +44,7 @@ Le courtier de jeton de ressource est un service d’API Web de couche interméd
 > [!NOTE]
 > Lorsque le jeton de ressource expire, les demandes de base de données de document suivants recevra une exception non autorisé 401. À ce stade, les applications Xamarin.Forms doivent rétablir l’identité et demander un nouveau jeton de ressource.
 
-Pour plus d’informations sur le partitionnement de base de données Cosmos, consultez [la partition et l’échelle dans la base de données Azure Cosmos](/azure/cosmos-db/partition-data/). Pour plus d’informations sur le contrôle d’accès de base de données Cosmos, consultez [sécurisation de l’accès aux données de la base de données Cosmos](/azure/cosmos-db/secure-access-to-data/) et [contrôle d’accès dans l’API DocumentDB](/rest/api/documentdb/access-control-on-documentdb-resources/).
+Pour plus d’informations sur le partitionnement de base de données Cosmos, consultez [la partition et l’échelle dans la base de données Azure Cosmos](/azure/cosmos-db/partition-data/). Pour plus d’informations sur le contrôle d’accès de base de données Cosmos, consultez [sécurisation de l’accès aux données de la base de données Cosmos](/azure/cosmos-db/secure-access-to-data/) et [contrôle d’accès dans l’API SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
 ## <a name="setup"></a>Installation
 
@@ -58,11 +58,11 @@ Le processus d’intégration du courtier de jeton de ressource dans une applica
 
 <a name="cosmosdb_configuration" />
 
-### <a name="cosmos-db-configuration"></a>Configuration de la base de données de COSMOS
+### <a name="azure-cosmos-db-configuration"></a>Configuration de la base de données de Cosmos Azure
 
 Le processus de création d’un compte de base de données Cosmos qui utilise le contrôle d’accès est la suivante :
 
-1. Créez un compte de base de données Cosmos. Pour plus d’informations, consultez [créer un compte de base de données Cosmos](/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account).
+1. Créez un compte de base de données Cosmos. Pour plus d’informations, consultez [créer un compte de base de données Azure Cosmos](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account).
 1. Dans le compte de base de données Cosmos, créez un regroupement nommé `UserItems`, en spécifiant une clé de partition de `/userid`.
 
 <a name="app_service_configuration" />
@@ -269,10 +269,10 @@ Cet article a expliqué comment combiner le contrôle d’accès avec les collec
 
 ## <a name="related-links"></a>Liens associés
 
-- [TodoDocumentDBAuth (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [Authentification de base de données Cosmos TODO Azure (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
 - [Consommation d’une base de données de documents Azure Cosmos DB](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
 - [Sécurisation de l’accès aux données de la base de données Azure Cosmos](/azure/cosmos-db/secure-access-to-data/)
-- [Contrôle d’accès dans l’API DocumentDB](/rest/api/documentdb/access-control-on-documentdb-resources/).
+- [Contrôle d’accès dans l’API SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 - [La partition et l’échelle dans la base de données Azure Cosmos](/azure/cosmos-db/partition-data/)
-- [Bibliothèque cliente de DocumentDB](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
+- [Bibliothèque cliente de Cosmos Azure DB](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [API de base de données de Cosmos Azure](https://msdn.microsoft.com/library/azure/dn948556.aspx)
