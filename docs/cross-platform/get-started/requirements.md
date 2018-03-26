@@ -1,6 +1,6 @@
 ---
-title: "Configuration système requise"
-description: "Prérequis à l’utilisation de Xamarin"
+title: Configuration système requise
+description: Prérequis à l’utilisation de Xamarin
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 08/28/2017
-ms.openlocfilehash: 2a2b5a1135a4d08c2a89caf0fbf4b2cdb1ac624c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 4a53053ebef88bf831b7749fa82f3444ecc26723
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="system-requirements"></a>Configuration système requise
 
@@ -47,7 +47,7 @@ L’utilisation d’un ordinateur Mac pour le développement Xamarin nécessite 
 [!include[](~/cross-platform/includes/macos-requirements.md)]
 
 > [!NOTE]
-> REMARQUE : Xcode peut être installé (et mis à jour) sur [developer.apple.com](https://developer.apple.com/xcode/download/) ou via le Mac App Store.
+> Xcode peut être installé (et mis à jour) sur [developer.apple.com](https://developer.apple.com/xcode/download/) ou via l’App Store Mac.
 
 ### <a name="testing--debugging-on-macos"></a>Test et débogage sur Mac OS
 

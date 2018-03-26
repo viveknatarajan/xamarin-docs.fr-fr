@@ -1,18 +1,18 @@
 ---
-title: "Gestionnaire d’appareils Android Xamarin"
-description: "Le Gestionnaire d’appareils Android Xamarin, actuellement en préversion, remplace le Gestionnaire d’appareils hérité de Google. Ce guide explique comment utiliser le Gestionnaire d’appareils Android Xamarin pour créer et configurer des appareils virtuels Android qui émulent des appareils Android. Vous pouvez utiliser ces appareils virtuels pour exécuter et tester votre application sans avoir à dépendre d’un appareil physique."
+title: Gestionnaire d’appareils Android Xamarin
+description: Le Gestionnaire d’appareils Android Xamarin, actuellement en préversion, remplace le Gestionnaire d’appareils hérité de Google. Ce guide explique comment utiliser le Gestionnaire d’appareils Android Xamarin pour créer et configurer des appareils virtuels Android qui émulent des appareils Android. Vous pouvez utiliser ces appareils virtuels pour exécuter et tester votre application sans avoir à dépendre d’un appareil physique.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
-ms.openlocfilehash: c38a0a7f6897cd90f81c92348280539b33524b9c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 03/20/2018
+ms.openlocfilehash: 01fb21729e919872935fd63af28a13642a11fa4b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Gestionnaire d’appareils Android Xamarin
 
@@ -308,7 +308,8 @@ Pour configurer un nouvel appareil dans l’écran **Nouvel appareil**, effectue
 
 
 <a name="device-edit" />
- 
+
+
 ### <a name="edit-device"></a>Modifier l’appareil
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -415,6 +416,7 @@ Le menu Options supplémentaires contient les éléments suivants :
 
 <a name="properties" />
  
+
 ## <a name="profile-properties"></a>Propriétés de profil
 
 Les écrans **Nouvel appareil** et **Modifier l’appareil** répertorient les propriétés de l’appareil virtuel dans la première colonne et les valeurs correspondantes de chaque propriété dans la seconde colonne. Lorsque vous sélectionnez une propriété, une description détaillée de cette propriété s’affiche à droite. Vous pouvez modifier ses *propriétés de profil matériel* et ses  *propriétés d’AVD*.
@@ -467,9 +469,9 @@ Pour plus d’informations sur ces propriétés, consultez [Propriétés de prof
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 La section suivante décrit les problèmes courants du Gestionnaire d’appareils Android Xamarin et les solutions de contournement :
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 ### <a name="android-sdk-in-non-standard-location"></a>Kit Android SDK dans un emplacement non standard
 
@@ -501,19 +503,64 @@ Pour contourner ce problème, effectuez les étapes suivantes :
 
 Après avoir apporté cette modification à **user.config**, vous devez être en mesure de lancer le Gestionnaire d’appareils Android Xamarin.
 
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>La capture instantanée désactive le Wi-Fi sur Android Oreo
+
+Si vous avez un AVD configuré pour Android Oreo avec un accès Wi-Fi simulé, le redémarrage de l’AVD après une capture instantanée peut désactiver l’accès Wi-Fi.
+
+Pour éviter ce problème,
+
+1. sélectionnez l’AVD dans le Gestionnaire de périphériques Xamarin.
+
+2. Dans le menu des options supplémentaires, cliquez sur **Révéler dans l’Explorateur**.
+
+3. Accédez à **capture instantanée > default_boot**.
+
+4. Supprimer le fichier **snapshot.pb** :
+
+    [![Emplacement du fichier snapshot.pb](xamarin-device-manager-images/win/36-delete-snapshot-sml.png)](xamarin-device-manager-images/win/36-delete-snapshot.png#lightbox)
+
+5. Redémarrez l'AVD. 
+
+Une fois ces modifications apportées, l’AVD sera redémarré dans un état qui permet au Wi-Fi de fonctionner à nouveau.
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>La capture instantanée désactive le Wi-Fi sur Android Oreo
+
+Si vous avez un AVD configuré pour Android Oreo avec un accès Wi-Fi simulé, le redémarrage de l’AVD après une capture instantanée peut désactiver l’accès Wi-Fi.
+
+Pour éviter ce problème,
+
+1. sélectionnez l’AVD dans le Gestionnaire de périphériques Xamarin.
+
+2. Dans le menu des options supplémentaires, cliquez sur **Révéler dans le Finder**.
+
+3. Accédez à **capture instantanée > default_boot**.
+
+4. Supprimer le fichier **snapshot.pb** :
+
+    [![Emplacement du fichier snapshot.pb](xamarin-device-manager-images/mac/36-delete-snapshot-sml.png)](xamarin-device-manager-images/mac/36-delete-snapshot.png#lightbox)
+
+5. Redémarrez l'AVD. 
+
+Une fois ces modifications apportées, l’AVD sera redémarré dans un état qui permet au Wi-Fi de fonctionner à nouveau.
+
+-----
+
+
 ### <a name="generating-a-bug-report"></a>Génération d’un rapport de bogues
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Si vous rencontrez un problème avec le Gestionnaire d’appareils Android Xamarin qui ne peut pas être résolu à l’aide des conseils de résolution des problèmes ci-dessus, veuillez soumettre un rapport de bogue en cliquant sur la barre de titre et en sélectionnant **Générer un rapport de bogue** :
 
 ![Emplacement de l’élément de menu pour soumettre un rapport de bogues](xamarin-device-manager-images/win/35-bug-report.png)
 
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-Actuellement, il n’existe aucun problème connu/solution de contournement pour le Gestionnaire d’appareils Android Xamarin dans Visual Studio pour Mac. 
-
-### <a name="generating-a-bug-report"></a>Génération d’un rapport de bogues
-
-Si vous identifiez un problème, veuillez soumettre un rapport de bogue en cliquant sur **Aide > Générer un rapport de bogue** :
+Si vous rencontrez un problème avec le Gestionnaire de périphériques Android Xamarin qui ne peut pas être résolu à l’aide des conseils de dépannage ci-dessus, veuillez remplir un rapport de bogues en cliquant sur **Aide > Générer un rapport de bogues** :
 
 ![Emplacement de l’élément de menu pour soumettre un rapport de bogues](xamarin-device-manager-images/mac/35-bug-report.png)
 

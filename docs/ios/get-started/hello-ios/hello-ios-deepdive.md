@@ -1,6 +1,6 @@
 ---
 title: Hello, iOS - En profondeur
-description: "Le présent guide en deux parties explique comment générer une application Xamarin.iOS simple à l’aide de Visual Studio pour Mac ou de Visual Studio, puis vous permet d’acquérir les fondamentaux du développement d’applications iOS avec Xamarin. Il permet de découvrir les outils, concepts et étapes nécessaires à la génération et au déploiement d’une application Xamarin.iOS."
+description: Le présent guide en deux parties explique comment générer une application Xamarin.iOS simple à l’aide de Visual Studio pour Mac ou de Visual Studio, puis vous permet d’acquérir les fondamentaux du développement d’applications iOS avec Xamarin. Il permet de découvrir les outils, concepts et étapes nécessaires à la génération et au déploiement d’une application Xamarin.iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 500c3d1c6f38427a921097a0c3104254ec5cb263
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS - En profondeur
 
@@ -306,7 +306,7 @@ public partial class ViewController : UIViewController
 `ViewController` pilote à présent les interactions de la hiérarchie d’affichage de contenu associée à ce contrôleur d’affichage dans le Storyboard. Vous allez ensuite apprendre le rôle du contrôleur d’affichage dans la gestion des affichages en découvrant un processus appelé cycle de vie de l’affichage.
 
 > [!NOTE]
-> **Remarque :** Pour les écrans uniquement visuels qui n’ont pas besoin d’interactions de l’utilisateur, la propriété **Classe** peut être laissée vide dans le **Panneau Propriétés**. Ainsi, la classe de stockage du contrôleur d’affichage est définie en tant qu’implémentation par défaut d’un `UIViewController`, ce qui convient parfaitement si vous ne prévoyez pas d’ajouter de code personnalisé.
+> Pour les écrans uniquement visuels qui n’exigent pas d’interaction de l’utilisateur, vous pouvez laisser la propriété **Classe** vide dans le **Panneau Propriétés**. Ainsi, la classe de stockage du contrôleur d’affichage est définie en tant qu’implémentation par défaut d’un `UIViewController`, ce qui convient parfaitement si vous ne prévoyez pas d’ajouter de code personnalisé.
 
 ### <a name="view-lifecycle"></a>Cycle de vie de l’affichage
 
@@ -416,7 +416,7 @@ Le simulateur IOS offre un moyen rapide de tester une application. Il propose de
 Un appareil a besoin de temps pour être provisionné et un compte de développeur Apple est nécessaire. Le guide de [provisionnement des appareils](~/ios/get-started/installation/device-provisioning/index.md) fournit des instructions précises sur la préparation d’un appareil au développement.
 
 > [!NOTE]
-> **Remarque :** Actuellement, en raison d’une exigence d’Apple, un certificat de développement ou une _identité de signature_ sont nécessaires pour générer votre code pour un appareil ou un simulateur. Suivez les étapes indiquées dans le [guide de provisionnement des appareils](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) pour les obtenir.
+> Actuellement, en raison d’une exigence d’Apple, un certificat de développement ou une _identité de signature_ sont nécessaires pour générer votre code pour un appareil ou un simulateur. Suivez les étapes indiquées dans le [guide de provisionnement des appareils](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) pour les obtenir.
 
 Une fois que l’appareil est provisionné, vous pouvez y déployer des applications en le branchant, en remplaçant la cible dans la barre d’outils de génération par l’appareil iOS et en appuyant sur **Démarrer** (**Lecture**), comme l’illustre la capture d’écran suivante :
 

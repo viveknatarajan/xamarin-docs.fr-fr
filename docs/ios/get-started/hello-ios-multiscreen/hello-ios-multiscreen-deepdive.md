@@ -1,6 +1,6 @@
 ---
 title: Hello, iOS Multiscreen
-description: "Dans ce guide en deux parties, nous étendons l’application Phoneword créée dans le guide Hello, iOS pour gérer un deuxième écran. Nous découvrirons progressivement le modèle de conception Model-View-Controller, implémenterons notre première navigation iOS et approfondirons notre connaissance de la structure et des fonctionnalités de l’application iOS."
+description: Dans ce guide en deux parties, nous étendons l’application Phoneword créée dans le guide Hello, iOS pour gérer un deuxième écran. Nous découvrirons progressivement le modèle de conception Model-View-Controller, implémenterons notre première navigation iOS et approfondirons notre connaissance de la structure et des fonctionnalités de l’application iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: a7d4af1563cb5fe5166c289c4ee5dca6ad3ffb00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0c21fbd86fc9069d52f5f5935f66500e9477ca02
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>Hello, iOS multi-écran - En profondeur
 
@@ -40,7 +40,7 @@ Le modèle MVC (Model-View-Controller) est un *modèle de conception*, autrement
 Le modèle MVC s’avère utile car il fournit une séparation logique entre les différents composants d’une application GUI et facilite la réutilisation de code et d’affichages. Intéressons-nous maintenant de plus près à chacun des trois rôles.
 
 > [!NOTE]
-> **Remarque** : le modèle MVC est vaguement analogue à la structure des pages ASP.NET ou des applications WPF. Dans ces exemples, l’affichage (View) est le composant réellement chargé de décrire l’interface utilisateur ; il correspond à la page ASPX (HTML) dans ASP.NET ou au XAML dans une application WPF. Le contrôleur (Controller) est le composant chargé de gérer l’affichage (View), qui correspond au code-behind dans ASP.NET ou WPF.
+> Le modèle MVC est vaguement analogue à la structure des pages ASP.NET ou des applications WPF. Dans ces exemples, l’affichage (View) est le composant réellement chargé de décrire l’interface utilisateur ; il correspond à la page ASPX (HTML) dans ASP.NET ou au XAML dans une application WPF. Le contrôleur (Controller) est le composant chargé de gérer l’affichage (View), qui correspond au code-behind dans ASP.NET ou WPF.
 
 
 ### <a name="model"></a>Modèle
@@ -52,7 +52,7 @@ Le modèle MVC ne tient absolument pas compte de la *persistance des données* n
 Dans certains cas, la partie Model du modèle MVC peut être vide. Par exemple, nous pourrions choisir d’ajouter certaines pages statiques à notre application pour expliquer le fonctionnement du convertisseur de numéros de téléphone, les raisons de sa création et la manière de nous contacter pour signaler des bogues. Ces écrans d’application seraient quand même créés à l’aide d’affichages et de contrôleurs, mais ils n’auraient pas de données Model réelles.
 
 > [!NOTE]
-> **Remarque** : dans certains documents, la partie Modèle du modèle MVC peut faire référence au backend de toute l’application, pas seulement aux données qui s’affichent dans l’interface utilisateur. Dans ce guide, nous utilisons une interprétation moderne de la partie Model, mais cette distinction n’est pas particulièrement importante.
+> Dans certains documents, la partie Modèle du modèle MVC peut faire référence au backend de toute l’application, pas seulement aux données qui s’affichent dans l’interface utilisateur. Dans ce guide, nous utilisons une interprétation moderne de la partie Model, mais cette distinction n’est pas particulièrement importante.
 
 
 ### <a name="view"></a>Vue

@@ -1,6 +1,6 @@
 ---
-title: "Désinstallation de Xamarin"
-description: "Désinstallation des produits Xamarin sur un ordinateur"
+title: Désinstallation de Xamarin
+description: Désinstallation des produits Xamarin sur un ordinateur
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 9b7738736995835ebb6da68d32bdfbec868e73cc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2c2ba84167924916c3bec27379d33c47e8dab360
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="uninstalling-xamarin"></a>Désinstallation de Xamarin
 
@@ -69,13 +69,14 @@ rm -rf ~/Library/XamarinStudio-*
 Mono est une implémentation open source de Microsoft .NET Framework. Il est utilisé par tous les produits Xamarin (Xamarin.iOS, Xamarin.Android et Xamarin.Mac) pour permettre le développement de ces plateformes en C#.
 
 > [!IMPORTANT]
-> Remarque : d’autres applications en dehors de Xamarin utilisent également Mono, par exemple, Unity. Vérifiez qu’il n’existe pas d’autres dépendances de Mono avant de le désinstaller.
+> D’autres applications en dehors de Xamarin utilisent également Mono, par exemple, Unity. Vérifiez qu’il n’existe pas d’autres dépendances de Mono avant de le désinstaller.
 
 Pour supprimer le framework Mono sur une machine, exécutez les commandes suivantes dans Terminal :
 
 ```bash
 sudo rm -rf /Library/Frameworks/Mono.framework
 sudo pkgutil --forget com.xamarin.mono-MDK.pkg
+sudo rm /etc/paths.d/mono-commands
 ```
 
 <a name="uninstallandroid" />
@@ -257,7 +258,7 @@ Pour désinstaller entièrement Visual Studio 2017, choisissez **Désinstaller*
 [![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Désinstaller entièrement Visual Studio")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
-> **AVERTISSEMENT :** si vous avez installé deux instances (ou plus) de Visual Studio côte à côte (SxS), par exemple une Version et une Préversion, la désinstallation d’une instance peut supprimer certaines fonctionnalités Xamarin des autres instances de Visual Studio, notamment :
+> Si vous avez installé deux instances (ou plus) de Visual Studio côte à côte (SxS), par exemple une Version et une Préversion, la désinstallation d’une instance peut supprimer certaines fonctionnalités Xamarin de la ou des autres instances de Visual Studio, notamment :
 >
 > - Xamarin Profiler
 > - Xamarin Workbooks/Inspector

@@ -1,6 +1,6 @@
 ---
-title: "Configuration d’une application dans iTunes Connect"
-description: "Cet article décrit les étapes nécessaires à l’installation et la gestion d’une application Xamarin.iOS dans iTunes Connect, pour qu’elle puisse être distribuée sur l’App Store."
+title: Configuration d’une application dans iTunes Connect
+description: Cet article décrit les étapes nécessaires à l’installation et la gestion d’une application Xamarin.iOS dans iTunes Connect, pour qu’elle puisse être distribuée sur l’App Store.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: dc21b21e28de155aa7a0e7b5cf9734e752cce9a2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 3d5c84aee12c374317a797aa41446630a441f6df
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuration d’une application dans iTunes Connect
 
@@ -198,7 +198,7 @@ Cette section de l’enregistrement d’application iTunes Connect fournit l’I
 ### <a name="app-icon"></a>Icône d’application
 
 > [!IMPORTANT]
->  **Remarque** : Les icônes d’application ne sont plus soumises via iTunes Connect. Vous devez les soumettre via l’image **AppIcon** définie dans le fichier **Assets.xcassets** de votre projet. Pour plus d’informations, consultez le guide [Icône de l’App Store](~/ios/app-fundamentals/images-icons/app-store-icon.md).
+>  Les icônes d’application ne sont plus envoyées via iTunes Connect. Vous devez les soumettre via l’image **AppIcon** définie dans le fichier **Assets.xcassets** de votre projet. Pour plus d’informations, consultez le guide [Icône de l’App Store](~/ios/app-fundamentals/images-icons/app-store-icon.md).
 
 L’icône d’application est le visage de votre application pour les utilisateurs, elle doit donc être mémorable et s’afficher correctement à une taille réduite. Les icônes mémorables sont nettes, simples et immédiatement reconnaissables.
 

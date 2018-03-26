@@ -1,6 +1,6 @@
 ---
-title: "Utilisation des fonctionnalités"
-description: "L’ajout de fonctionnalités à une application nécessite souvent une configuration supplémentaire du provisionnement. Ce guide explique la configuration requise pour l’ensemble des fonctionnalités."
+title: Utilisation des fonctionnalités
+description: L’ajout de fonctionnalités à une application nécessite souvent une configuration supplémentaire du provisionnement. Ce guide explique la configuration requise pour l’ensemble des fonctionnalités.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
@@ -8,15 +8,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c038aba3989046e6df062e97ae7f777ae6238ade
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ffc694e2f513d61cf32e94d8dc3bae17c887521b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-capabilities"></a>Utilisation des fonctionnalités
 
-_L’ajout de fonctionnalités à une application nécessite souvent une configuration plus poussée du provisionnement. Ce guide explique les paramètres requis par les différentes fonctionnalités._
+_L’ajout de fonctionnalités à une application nécessite souvent une configuration plus poussée de l’approvisionnement. Ce guide explique les paramètres requis par les différentes fonctionnalités._
 
 Apple fournit aux développeurs diverses _fonctionnalités_, souvent appelées _services d’application_, qui leur permettent de proposer des applications iOS plus complètes et dotées de capacités étendues. Les développeurs peuvent mieux intégrer les fonctionnalités de la plateforme à leurs applications, par exemple, des transactions monétaires lancées à partir de l’application, des services d’appareil supplémentaires comme Siri, et bien plus encore.
 Ces fonctionnalités sont compatibles avec les projets Xamarin.iOS. Voici la liste complète des services :
@@ -58,7 +58,7 @@ Cette section explique comment utiliser le provisionnement automatique de Visual
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **REMARQUE** : Certaines fonctionnalités ne peuvent pas être ajoutées et gérées dans Visual Studio pour Mac. La liste suivante répertorie les fonctionnalités prises en charge :
+> Toutes les fonctionnalités ne peuvent pas être ajoutées et gérées dans Visual Studio pour Mac. La liste suivante répertorie les fonctionnalités prises en charge :
 >
 >* HealthKit 
 >* HomeKit 
@@ -198,7 +198,7 @@ Maintenant, créez un profil de provisionnement qui contient cet ID d’applicat
     ![Options du projet dans Visual Studio pour Mac](images/image16.png)
 
 > [!IMPORTANT]
-> Remarque : Vous devrez peut-être aussi définir des clés de droits dans le fichier Entitlement.plist et des clés de confidentialité dans le fichier Info.plist. Pour plus d’informations sur ces droits, consultez le guide [Utilisation de droits](~/ios/deploy-test/provisioning/entitlements.md).
+> Vous devrez peut-être aussi définir des clés de droit dans le fichier Entitlement.plist et des clés de confidentialité dans le fichier Info.plist. Pour plus d’informations sur ces droits, consultez le guide [Utilisation de droits](~/ios/deploy-test/provisioning/entitlements.md).
 
 <a name="nextsteps" />
 
@@ -220,7 +220,7 @@ La liste ci-dessous décrit quelques-uns des problèmes les plus courants suscep
 -   Assurez-vous que les profils de provisionnement et les ID d’application ont été installés, et que le fichier d’application **Info.plist** (dans le projet Xamarin) utilise l’un des ID d’application configurés plus haut.
 -   Assurez-vous que le service approprié est activé dans le fichier d’application **Entitlements.plist** (dans le projet Xamarin).
 -   Assurez-vous que les clés de confidentialité appropriées sont définies dans le fichier Info.plist
--   Assurez-vous que, dans la section **Signature du bundle iOS** de l’application, le paramètre **Droits personnalisés** est défini sur **Entitlements.plist**. **Remarque** : Ce n’est _pas_ le paramètre par défaut pour les builds Debug et iOS Simulator.
+-   Assurez-vous que, dans la section **Signature du bundle iOS** de l’application, le paramètre **Droits personnalisés** est défini sur **Entitlements.plist**. Ce n’est _pas_ le paramètre par défaut pour les builds Debug et iOS Simulator.
 
 <a name="summary" />
 

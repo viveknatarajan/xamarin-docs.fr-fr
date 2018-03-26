@@ -1,6 +1,6 @@
 ---
 title: Distribution ad hoc
-description: "Ce document présente les techniques de distribution ad hoc principalement utilisées pour tester des applications Xamarin.iOS auprès d’un large groupe de personnes."
+description: Ce document présente les techniques de distribution ad hoc principalement utilisées pour tester des applications Xamarin.iOS auprès d’un large groupe de personnes.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d01130989336ada855e936a6597b517fab5ee69
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e0db9df11436cf1613ac5eacdf293245f99b8855
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ad-hoc-distribution"></a>Distribution ad hoc
 
@@ -39,7 +39,7 @@ Même si vous comptez publier une application Xamarin.iOS pour un déploiement i
 La section suivante décrit comment configurer un certificat de distribution et un profil de provisionnement de distribution.
 
 > [!NOTE]
->  Remarque : seuls les agents et les administrateurs d’équipe peuvent créer des certificats de distribution et des profils d’approvisionnement.
+> Seuls les agents et les administrateurs d’équipe peuvent créer des certificats de distribution et des profils d’approvisionnement.
 
 <a name="createcertificate" />
 

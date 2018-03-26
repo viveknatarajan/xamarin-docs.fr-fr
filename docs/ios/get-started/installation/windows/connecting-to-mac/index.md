@@ -1,6 +1,6 @@
 ---
 title: Connexion au Mac
-description: "Xamarin.iOS pour Visual Studio permet aux développeurs de créer, de générer et de déboguer des applications iOS sur un ordinateur Windows à l’aide de l’environnement IDE de Visual Studio. Ce guide décrit les fonctionnalités fournies par Xamarin.iOS pour Visual Studio et la façon dont la connexion à l’hôte de build Mac est établie."
+description: Xamarin.iOS pour Visual Studio permet aux développeurs de créer, de générer et de déboguer des applications iOS sur un ordinateur Windows à l’aide de l’environnement IDE de Visual Studio. Ce guide décrit les fonctionnalités fournies par Xamarin.iOS pour Visual Studio et la façon dont la connexion à l’hôte de build Mac est établie.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: c60927593f062c8ac9694d889ffbf581c09bab82
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e4f7b55fa859473e84298151bc08878bc2161192
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connecting-to-the-mac"></a>Connexion au Mac
 
@@ -39,7 +39,7 @@ Le diagramme ci-dessous présente une vue d’ensemble du workflow de développe
 [![Workflow de développement iOS](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  En fait, Visual Studio lance un processus MSBuild distinct pour générer les projets. Ce processus crée une autre connexion au Mac, ce qui signifie qu’il existe en fait deux connexions SSH de Windows vers Mac quand Visual Studio effectue la génération. La génération à partir de la [ligne de commande](#commandline) crée uniquement le processus MSBuild. Pour simplifier ce diagramme, toutes les connexions sont simplement représentées par une seule flèche.
+> En fait, Visual Studio lance un processus MSBuild distinct pour générer les projets. Ce processus crée une autre connexion au Mac, ce qui signifie qu’il existe en fait deux connexions SSH de Windows vers Mac quand Visual Studio effectue la génération. La génération à partir de la [ligne de commande](#commandline) crée uniquement le processus MSBuild. Pour simplifier ce diagramme, toutes les connexions sont simplement représentées par une seule flèche.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -53,7 +53,7 @@ Vous trouverez la configuration requise dans le guide [Installer Xamarin.iOS sou
 #### <a name="compatibility"></a>Compatibilité
 
 > [!IMPORTANT]
->  L’ordinateur Windows doit utiliser la même version de Xamarin.iOS que le Mac auquel il est connecté. Pour le vérifier :                                                    
+> L’ordinateur Windows doit utiliser la même version de Xamarin.iOS que le Mac auquel il est connecté. Pour le vérifier :                                                    
 >                                                                                                                 
 > - **Visual Studio 2015 et les versions antérieures** : vérifiez que vous êtes sur le même [canal de mise à jour](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/) que Visual Studio pour Mac.
 >                                                                                                                 
@@ -113,7 +113,7 @@ Sélectionnez un Mac en double-cliquant dessus pour vous y connecter. La premiè
 L’agent utilise ces informations d’identification pour créer une connexion SSH au Mac. En cas de réussite, une clé SSH est créée et est [inscrite](#commandline) dans le fichier `authorized_keys` sur ce Mac. Lors des connexions suivantes, l’agent utilise le nom d’utilisateur et le fichier de clé pour se connecter à l’hôte de build connu le plus récemment connecté.
 
 > [!NOTE]
->  **Remarque** : Vous devez utiliser le _nom d’utilisateur_, et non le _nom complet_, au moment d’entrer vos informations d’identification.  Pour le connaître, utilisez la commande `whoami` dans Terminal.  Par exemple, dans la capture d’écran ci-dessous, le nom du compte sera **amyb** et non **Amy Burns** :
+> Vous devez utiliser le _nom d’utilisateur_ et pas le _nom complet_ en entrant vos informations d’identification.  Pour le connaître, utilisez la commande `whoami` dans Terminal.  Par exemple, dans la capture d’écran ci-dessous, le nom du compte sera **amyb** et non **Amy Burns** :
 >
 > ![Recherche du nom d’utilisateur dans l’application Terminal](images/image5.png)
 

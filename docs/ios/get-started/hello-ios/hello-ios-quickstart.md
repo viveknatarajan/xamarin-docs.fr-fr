@@ -1,6 +1,6 @@
 ---
 title: Hello, iOS
-description: "Le présent guide en deux parties explique comment générer une application Xamarin.iOS simple à l’aide de Visual Studio pour Mac ou de Visual Studio, puis approfondit votre compréhension des principes fondamentaux du développement d’applications iOS avec Xamarin. Il permet de découvrir les outils, concepts et étapes nécessaires à la génération et au déploiement d’une application Xamarin.iOS."
+description: Le présent guide en deux parties explique comment générer une application Xamarin.iOS simple à l’aide de Visual Studio pour Mac ou de Visual Studio, puis approfondit votre compréhension des principes fondamentaux du développement d’applications iOS avec Xamarin. Il permet de découvrir les outils, concepts et étapes nécessaires à la génération et au déploiement d’une application Xamarin.iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 7b1d56c62fe54d5b1e196e20e1a6989b542da1be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a26bb42ee0abcec70d17633152dd12bd200a737
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS - Démarrage rapide
 
@@ -90,7 +90,7 @@ Dans l’écran de lancement, cliquez sur **Nouveau projet...** pour créer une 
   ![](hello-ios-quickstart-images/image8new.png "Faire glisser une étiquette dans l’aire de conception (zone centrale)")
 
   > [!NOTE]
-> **Remarque** : Vous pouvez faire apparaître le **Panneau Propriétés** ou la **boîte à outils** à tout moment en accédant à **Affichage > Blocs**.
+  > Vous pouvez afficher le **Panneau Propriétés** ou la **Boîte à outils** à tout moment en navigant vers **Afficher > Blocs**.
 
 9. Saisissez les poignées des *contrôles de déplacement* (cercles autour des contrôles) pour élargir l’étiquette :
 
@@ -268,9 +268,8 @@ Dans l’écran de lancement, cliquez sur **Nouveau projet...** pour créer une 
 
   ![](hello-ios-quickstart-images/image27new.png "Appuyer sur Démarrer")
 
-
   > [!NOTE]
-> **Remarque :** Actuellement, en raison d’une exigence d’Apple, un certificat de développement ou une *identité de signature* sont éventuellement nécessaires pour générer votre code pour un appareil ou un simulateur. Suivez les étapes indiquées dans le [guide de provisionnement des appareils](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) pour les obtenir.
+  > Actuellement, en raison d’une exigence d’Apple, un certificat de développement ou une *identité de signature* sont éventuellement nécessaires pour générer votre code pour un appareil ou un simulateur. Suivez les étapes indiquées dans le [guide de provisionnement des appareils](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) pour les obtenir.
 
 28. L’application est alors lancée dans le simulateur iOS :
 
@@ -289,7 +288,7 @@ Cette procédure pas à pas décrit comment créer une application nommée Phone
 **Remarque** : Cette procédure pas à pas utilise Visual Studio Enterprise 2017 sur une machine virtuelle Windows 10. Votre configuration peut être différente de celle-ci, tant qu’elle satisfait à la configuration requise ci-dessus. Ainsi, sachez que certaines captures d’écran peuvent aussi être différentes.
 
 > [!NOTE]
-> **Avant de poursuivre cette procédure pas à pas**, vous _devez_ être déjà connecté à votre Mac à partir de Visual Studio. En effet, Xamarin.iOS s’appuie sur des outils Apple pour générer et lancer le concepteur et les applications iOS. Suivez préalablement les étapes indiquées dans le guide de [connexion au Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+> Avant de poursuivre cette procédure pas à pas, vous devez être déjà connecté à votre Mac à partir de Visual Studio. En effet, Xamarin.iOS s’appuie sur des outils Apple pour générer et lancer le concepteur et les applications iOS. Suivez préalablement les étapes indiquées dans le guide de [connexion au Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Lancez Visual Studio à partir du menu **Démarrer** :
 
@@ -333,7 +332,7 @@ Cette procédure pas à pas décrit comment créer une application nommée Phone
   ![](hello-ios-quickstart-images/vs-image10.png "Remplacer la propriété Texte de l’étiquette par « Entrez un numéro Phoneword »")
 
   > [!NOTE]
-> **Remarque :** Vous pouvez faire apparaître les **propriétés** ou la **boîte à outils** à tout moment en accédant au menu **Affichage**.
+  > Vous pouvez afficher les **Propriétés** ou la **Boîte à outils** à tout moment en navigant vers le menu **Afficher**.
 
 
 9. Recherchez « champ de texte » dans la boîte à outils et faites glisser un **champ de texte** depuis la **boîte à outils** vers l’aire de conception pour le placer sous l’**étiquette**. Ajustez la largeur jusqu’à ce que le **champ de texte** ait la même largeur que l’**étiquette** :
@@ -377,7 +376,7 @@ Cette procédure pas à pas décrit comment créer une application nommée Phone
   ![](hello-ios-quickstart-images/vs-image19.png "Ajouter une nouvelle classe nommée PhoneTranslator")
 
   > [!IMPORTANT]
-> Assurez-vous de sélectionner le modèle de classe qui comporte un C# dans l’icône. Sinon, vous risquez de ne pas pouvoir faire référence à cette nouvelle classe.
+  > Assurez-vous de sélectionner le modèle de classe qui comporte un C# dans l’icône. Sinon, vous risquez de ne pas pouvoir faire référence à cette nouvelle classe.
 
 
 17. Une nouvelle classe C# est alors créée. Supprimez tout le code du modèle et remplacez-le par le code suivant :

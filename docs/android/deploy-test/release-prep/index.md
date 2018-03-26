@@ -1,17 +1,17 @@
 ---
-title: "Préparation d’une application pour la mise en production"
+title: Préparation d’une application pour la mise en production
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e440d5ab9f822277a8c0948a9795b9a030fa268c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/21/2018
+ms.openlocfilehash: baaa40bc89a1ca6728189563c8350f9c9f011762
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="preparing-an-application-for-release"></a>Préparation d’une application pour la mise en production
 
@@ -40,13 +40,7 @@ Chacune de ces étapes est décrite ci-dessous plus en détail.
 
 ## <a name="specify-the-application-icon"></a>Spécifier l’icône de l'application
 
-Il est fortement recommandé de spécifier une icône d’application pour chaque application Xamarin.Android. Certaines places de marché d’applications n’autorisent pas la publication d’une application Android qui n’en aurait pas.
-
-La propriété `Icon` de l’attribut `Application` est utilisée pour spécifier l’icône d’application d’un projet Xamarin.Android. Cet attribut peut être déclaré dans le fichier **Properties\AssemblyInfo.cs**, comme illustré dans cet exemple d’extrait de code :
-
-```csharp
-[assembly: Application(Icon = "@drawable/icon")]
-```
+Il est fortement recommandé de spécifier une icône d’application pour chaque application Xamarin.Android. Certaines places de marché d’applications n’autorisent pas la publication d’une application Android qui n’en aurait pas. La propriété `Icon` de l’attribut `Application` est utilisée pour spécifier l’icône d’application d’un projet Xamarin.Android.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -61,6 +55,15 @@ Dans Visual Studio pour Mac, il est également possible de spécifier l’icône
 [![Définir l’icône de l’application](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
+
+Dans ces exemples, `@drawable/icon` fait référence à un fichier d’icône qui se trouve dans **Resources/drawable/icon.png** (notez que l’extension **.png** n’est pas incluse dans le nom de ressource). Cet attribut peut être également déclaré dans le fichier **Properties\AssemblyInfo.cs**, comme illustré dans cet exemple d’extrait de code :
+
+```csharp
+[assembly: Application(Icon = "@drawable/icon")]
+```
+
+Normalement, `using Android.App` est déclaré au niveau de la partie supérieure de **AssemblyInfo.cs** (l’espace de noms de l’attribut `Application` est `Android.App`) ; toutefois, vous devrez peut-être ajouter cette instruction `using` si elle n’est pas déjà présente.
+
 
 <a name="Versioning" />
 

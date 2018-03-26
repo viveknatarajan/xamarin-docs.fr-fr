@@ -1,61 +1,136 @@
 ---
-title: "Journal de débogage Android"
+title: Journal de débogage Android
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 26ac42e4b7acbe19dee746130fc335fdf18ffc46
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/21/2018
+ms.openlocfilehash: 2e3225c0b0f984e52507ac472e26c4aee6a76909
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="android-debug-log"></a>Journal de débogage Android
 
+L’une des astuces couramment utilisées par les développeurs pour déboguer leurs applications consiste à utiliser `Console.WriteLine`. Toutefois, sur une plateforme mobile comme Android, il n’y a pas de console. Les appareils Android proposent un journal que vous pourrez utiliser pendant l’écriture d’applications. Il est parfois nommé _logcat_ en raison de la commande saisie pour le récupérer. Utilisez l’outil **Journal de débogage** pour afficher les données enregistrées.
+
 ## <a name="android-debug-log-overview"></a>Vue d’ensemble du journal de débogage Android
 
-L’une des astuces couramment utilisées par les développeurs pour déboguer leurs applications consiste à utiliser `Console.WriteLine`. Toutefois, sur une plateforme mobile comme Android, il n’y a pas de console. Les appareils Android proposent un journal que vous pourrez utiliser pendant l’écriture d’applications. On l’appelle parfois « logcat » en raison de la commande à taper pour le récupérer.
+L’outil **Journal de débogage** fournit un moyen d’afficher la sortie du journal pendant le débogage d’une application via Visual Studio. Le journal de débogage prend en charge les périphériques suivants :
 
-## <a name="accessing-from-visual-studio"></a>Accès depuis Visual Studio
+-   Les téléphones, tablettes et wearables Android physiques.
+-   Un appareil Android virtuel en cours d’exécution sur l’émulateur Android de Google. 
 
-Dans Visual Studio 2015 et ultérieur, les blocs de journaux iOS et Android sont unifiés.
+> [!NOTE]
+> L’outil **Journal de débogage** ne fonctionne pas avec Xamarin Live Player.
 
-### <a name="visual-studio-2015--2017"></a>Visual Studio 2015 et 2107
+Le **Journal de débogage** n’affiche pas de messages du journal générés pendant l’exécution de l’application en mode autonome sur l’appareil (par exemple, pendant qu’il est déconnecté de Visual Studio).
 
-La nouvelle fenêtre outil Journal de l’appareil pour Visual Studio affiche les journaux des appareils Android et iOS. Pour l’afficher, exécutez l’une des commandes suivantes : 
+
+## <a name="accessing-the-debug-log-from-visual-studio"></a>Accès au Journal de débogage à partir de Visual Studio
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Pour ouvrir l’outil **Journal de l’appareil**, cliquez sur l’icône **Journal de l’appareil (logcat)** dans la barre d’outils :
+
+[![Emplacement de l’outil Journal de l’appareil sur la barre d’outils](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
+
+Autrement, lancez l’outil **Journal de l’appareil** à partir d’une des sélections de menu suivantes :
 
 -   **Affichage > Autres fenêtres > Journal de l’appareil**
 -   **Outils > Android > Journal de l’appareil**
--   **Barre d’outils Android > Journal de l’appareil**
 
-Une fois la fenêtre outil affichée, l’appareil physique peut être sélectionné dans la zone de liste modifiable des appareils. Lorsque l’appareil est sélectionné, il commence automatiquement à ajouter des entrées de journal à la table depuis une application en cours d’exécution. Le passage d’un appareil à l’autre arrête et démarre la journalisation des appareils. Pour que les appareils figurent dans la zone de liste modifiable, un projet Android doit être chargé. Si l’appareil ne figure pas dans la zone de liste modifiable, commencez par vérifier qu’il est disponible dans la liste déroulante Démarrer le débogage. 
+La capture d’écran suivante illustre les différentes parties de la fenêtre **Outil de débogage** :
 
-Cette fenêtre outil fournit les éléments suivants : une table des entrées de journal, une zone de liste modifiable pour sélectionner l’appareil, un moyen d’effacer des entrées de journal, une zone de recherche et des boutons de lecture/d’arrêt/de pause. 
+[![Parties de la fenêtre Outils de débogage](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
+-   **Sélecteur d’appareils** &ndash; sélectionne l’appareil physique ou l’émulateur en cours d’exécution à analyser.
+
+-   **Entrées du journal** &ndash; une table de messages du journal à partir de logcat.
+
+-   **Effacer les entrées du journal** &ndash; efface toutes les entrées du journal actuelles de la table.
+
+-   **Lecture/Pause** &ndash; bascule entre la mise à jour ou la suspension de l’affichage des nouvelles entrées du journal.
+
+-   **Arrêter** &ndash; arrête l’affichage de nouvelles entrées du journal.
+
+-   **Zone de recherche** &ndash; entrez les chaînes de recherche dans cette zone pour filtrer un sous-ensemble d’entrées du journal.
+
+
+Lorsque la fenêtre de l’outil **Journal de débogage** s’affiche, utilisez le menu déroulant de l’appareil pour sélectionner l’appareil Android à analyser :
+
+[![Emplacement du Sélecteur d’appareils](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
+
+Une fois l’appareil sélectionné, l’outil **Journal de l’appareil** ajoute automatiquement des entrées du journal à partir d’une application en cours d’exécution &ndash; ces entrées du journal sont affichées dans la table des entrées du journal. Le basculement entre des appareils arrête et démarre la journalisation des appareils. Notez qu’un projet Android doit être chargé avant l’affichage des appareils dans le sélecteur d’appareils. Si l’appareil n’apparaît pas dans le sélecteur d’appareils, vérifiez qu’il est disponible dans le menu déroulant des appareils Visual Studio à côté du bouton **Démarrer**.
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+
+Pour ouvrir le **Journal de l’appareil**, cliquez sur **Afficher > Blocs > Journal de l’appareil** :
+
+[![Emplacement de l’élément de menu Journal de l’appareil](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
+
+La capture d’écran suivante illustre les différentes parties de la fenêtre **Outil de débogage** :
+
+[![composants de la fenêtre Outils de débogage](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
+
+-   **Sélecteur d’appareils** &ndash; sélectionne l’appareil physique ou l’émulateur en cours d’exécution à analyser.
+
+-   **Entrées du journal** &ndash; une table de messages du journal à partir de logcat.
+
+-   **Effacer les entrées du journal** &ndash; efface toutes les entrées du journal actuelles de la table.
+
+-   **Zone de recherche** &ndash; entrez les chaînes de recherche dans cette zone pour filtrer un sous-ensemble d’entrées du journal.
+
+-   **Afficher les Messages** &ndash; active ou désactive l’affichage des messages d’information.
+
+-   **Afficher les avertissements** &ndash; active ou désactive l’affichage des messages d’avertissement (les messages d’avertissement sont affichés en jaune).
+
+-   **Afficher les erreurs** &ndash; active ou désactive l’affichage des messages d’erreur (les messages d’erreur sont affichés en rouge).
+
+-   **Reconnecter** &ndash; se reconnecte à l’appareil et actualise l’affichage des entrées du journal.
+
+-   **Ajouter le marqueur** &ndash; insère un message de marqueur (tel que `--- Marker N ---`) après la dernière entrée du journal, où _N_ est un compteur qui démarre à partir de 1 et est incrémenté de 1 lors de l’ajout de nouveaux marqueurs.
+
+Lorsque la fenêtre de l’outil Journal de débogage s’affiche, utilisez le menu déroulant de l’appareil pour sélectionner l’appareil Android à analyser :
+
+[![Emplacement du Sélecteur d’appareils](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
+
+Une fois l’appareil sélectionné, l’outil **Journal de l’appareil** ajoute automatiquement des entrées du journal à partir d’une application en cours d’exécution &ndash; ces entrées du journal sont affichées dans la table des entrées du journal. Le basculement entre des appareils arrête et démarre la journalisation des appareils. Notez qu’un projet Android doit être chargé avant l’affichage des appareils dans le sélecteur d’appareils. Si l’appareil n’apparaît pas dans le sélecteur d’appareils, vérifiez qu’il est disponible dans le menu déroulant des appareils Visual Studio à côté du bouton **Démarrer**.
+
+-----
 
 
 ## <a name="accessing-from-the-command-line"></a>Accès à partir de la ligne de commande
 
-Le journal de débogage peut également être affiché via la ligne de commande. Ouvrez une fenêtre de console et accédez au dossier des outils de plateforme du kit Android SDK (comme **C:\android-sdk-windows\platform-tools**). 
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Si seul un appareil est connecté, le journal peut être consulté avec :
+Vous pouvez également afficher journal de débogage via la ligne de commande. Ouvrez une fenêtre d’invite de commandes et accédez au dossier des outils de plateforme du kit de développement logiciel (SDK) Android (en règle générale, le dossier des outils de plateforme du kit de développement logiciel (SDK) se trouve à l’adresse **C:\\Program Files (x86)\\Android\\android-sdk\\outils de plateforme**).
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+
+Vous pouvez également afficher journal de débogage via la ligne de commande. Ouvrez une fenêtre Terminal et accédez au dossier des outils de plateforme du kit de développement logiciel (SDK) Android (en règle générale, le dossier des outils de plateforme du kit de développement logiciel (SDK) se trouve à l’adresse **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
+
+-----
+
+Si un seul appareil (appareil physique ou émulateur) est joint, le journal peut être consulté en entrant la commande suivante :
 
 ```shell
 $ adb logcat
 ```
 
-Si plusieurs appareils sont connectés, l’appareil doit être identifié. Par exemple, `adb -d logcat` affiche le journal de l’unique appareil physique connecté, tandis que `adb -e logcat` affiche le journal de l’unique émulateur en cours d’exécution. 
+Si plusieurs appareils sont joints, l’appareil doit être identifié explicitement. Par exemple, **adb -d logcat** affiche le journal de l’unique appareil physique connecté, tandis que **adb -e logcat** affiche le journal de l’unique émulateur en cours d’exécution.
 
-D’autres commandes sont disponibles simplement en exécutant **adb**.
-
+Plusieurs commandes sont accessibles en entrant **adb** et en lisant les messages d’aide.
 
 
 ## <a name="writing-to-the-debug-log"></a>Écriture dans le journal de débogage
 
-Des messages peuvent être écrits dans le journal de débogage en utilisant les méthodes de la classe [Android.Util.Log](https://developer.xamarin.com/api/type/Android.Util.Log/) : 
+Des messages peuvent être écrits dans le **Journal de débogage** en utilisant les méthodes de la classe [Android.Util.Log](https://developer.xamarin.com/api/type/Android.Util.Log/).
+Exemple : 
 
 ```csharp
 string tag = "myapp";
@@ -65,7 +140,7 @@ Log.Warn (tag, "this is a warning message");
 Log.Error (tag, "this is an error message");
 ```
 
-Le résultat est le suivant :
+Ceci produit une sortie semblable à la suivante :
 
 ```shell
 I/myapp   (11103): this is an info message
@@ -73,27 +148,27 @@ W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
 ```
 
-
 ## <a name="interesting-messages"></a>Messages intéressants
 
-Lors de la lecture du journal, et en particulier si des extraits du journal sont fournis à d’autres personnes (sachant que fournir le fichier journal complet est (1) exagéré et (2) illisible), la ligne la *plus importante* par laquelle commencer doit être ressembler à celle-ci :
+Lorsque vous lisez le journal (et en particulier lorsque vous fournissez des extraits de journaux à d’autres utilisateurs), l’examen du fichier journal dans son intégralité est souvent trop lourd.
+Pour simplifier la navigation parmi les messages du journal, démarrerez en recherchant une entrée du journal qui ressemble à ceci :
 
 ```shell
 I/ActivityManager(12944): Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=GcTest.GcTest/gctest.Activity1 } from pid 24175
 ```
 
-Plus précisément, une ligne correspondant à l’expression régulière :
+Recherchez en particulier la ligne correspondant à l’expression régulière qui contient également le nom du package d’applications :
 
 ```shell
 ^I.*ActivityManager.*Starting: Intent
 ```
 
-et contenant le nom du paquet d’application. Cette ligne correspond au début d’une activité et *la plupart* des messages qui suivront sont normalement en rapport avec l’application. 
+Cette ligne correspond au début d’une activité et *la plupart* des messages qui suivront sont normalement en rapport avec l’application.
 
-En particulier, chaque message contient l’identificateur de processus (pid) du processus générant le message. Dans le message `ActivityManager` ci-dessus, le processus `12944` a généré le message. Pour déterminer quel processus est le processus de l’application en cours de débogage, recherchez le message mono. MonoRuntimeProvider : 
+Remarquez que chaque message contient l’identificateur de processus (pid) du processus générant le message. Dans le message `ActivityManager` ci-dessus, le processus `12944` a généré le message. Pour déterminer quel processus est le processus de l’application en cours de débogage, recherchez le message **mono.MonoRuntimeProvider** : 
 
 ```shell
 I/ActivityThread(  602): Pub TouchTest.TouchTest.__mono_init__: mono.MonoRuntimeProvider
 ```
 
-Ce message provient du processus qui a été démarré, et tous les messages suivants contenant ce même pid proviennent du même processus. 
+Ce message est fourni à partir du processus qui a été démarré. Tous les messages suivants qui contiennent ce pid proviennent du même processus.

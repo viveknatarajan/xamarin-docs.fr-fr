@@ -1,6 +1,6 @@
 ---
-title: "Présentation de fastlane pour iOS"
-description: "Ce guide présente les différents outils fastlane à votre disposition pour signer le code des applications iOS"
+title: Présentation de fastlane pour iOS
+description: Ce guide présente les différents outils fastlane à votre disposition pour signer le code des applications iOS
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 15ee039fbfa339a9246b2a4234f37caf685c80c6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4bba92180e77accaa42b70843fb5dbf12c94d632
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Présentation de fastlane pour iOS
 
@@ -32,7 +32,7 @@ fastlane peut s’utiliser de différentes façons : à l’aide de commandes d
 
 Ce guide traite spécifiquement de la configuration d’un appareil pour le développement d’applications iOS et, en particulier, des utilitaires **cert**, **sigh** et **match**. 
 
-Les informations qu’il contient peuvent vous aider à bien démarrer avec la distribution d’applications, y compris pour automatiser entièrement le processus sur un serveur d’intégration continue. Toutefois, il est important de noter que fastlane est un produit tiers qui crée des outils pour prendre en charge les projets Xcode. Par conséquent, certains outils ou commandes comme `fastlane init` peuvent ne pas fonctionner comme prévu avec les fichiers csproj. Pour plus d’informations sur l’utilisation de fastlane, des outils supplémentaires ou la mise en production d’applications Android à l’aide de fastlane, consultez [https://fastlane.tools/](https://fastlane.tools/)
+Les informations qu’il contient peuvent vous aider à bien démarrer avec la distribution d’applications, y compris pour automatiser entièrement le processus sur un serveur d’intégration continue. Toutefois, il est important de noter que fastlane est un produit tiers qui crée des outils pour prendre en charge les projets Xcode. Par conséquent, certains outils ou commandes comme `fastlane init` peuvent ne pas fonctionner comme prévu avec les fichiers csproj. Pour plus d’informations sur l’utilisation de Fastlane, des outils supplémentaires ou sur la libération pour Android à l’aide de Fastlane, reportez-vous à [https://fastlane.tools/](https://fastlane.tools/)
 
 <a name="Installation" />
 
@@ -44,10 +44,10 @@ Les informations qu’il contient peuvent vous aider à bien démarrer avec la d
     error: command line tools are already installed, use "Software Update" to install updates
     ```
 
-2. Téléchargez les outils fastlane à partir de [https://download.fastlane.tools](https://download.fastlane.tools). 
+2. Télécharger les outils Fastlane à partir de [https://download.fastlane.tools](https://download.fastlane.tools). 
 
     > [!NOTE]
-> Il est possible d’installer les outils fastlane sur Homebrew avec la commande `brew cask install fastlane` ou sur Rubygems (version 2.0 ou ultérieure) avec la commande `sudo gem install fastlane –NV`. Toutefois, l’utilisation du programme d’installation fourni garantit que les dépendances appropriées seront disponibles. 
+    > Il est possible d’installer les outils fastlane sur Homebrew avec la commande `brew cask install fastlane` ou sur Rubygems (version 2.0 ou ultérieure) avec la commande `sudo gem install fastlane –NV`. Toutefois, l’utilisation du programme d’installation fourni garantit que les dépendances appropriées seront disponibles. 
 
 3. Installez fastlane en décompressant le fichier et en double-cliquant sur l’exécutable `install`. Si vous obtenez une erreur indiquant que le fichier ne peut pas être ouvert, car il provient d’un développeur non identifié, appuyez sur OK et procédez comme suit :
     - Maintenez enfoncée la touche Ctrl en cliquant sur l’exécutable `install`. La boîte de dialogue ci-dessous s’affiche :

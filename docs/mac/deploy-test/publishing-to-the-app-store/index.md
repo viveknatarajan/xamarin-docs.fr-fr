@@ -1,6 +1,6 @@
 ---
-title: "Publication dans l’App Store"
-description: "Ce guide présente en détail le déploiement d’une application Xamarin.Mac à l’aide de Visual Studio pour Mac. Il explique comment configurer un compte de développeur Mac, décrit en détail le processus de création des certificats pour la signature de code et montre comment les utiliser pour créer des applications Mac distribuables directement ou par le biais du Mac App Store."
+title: Publication dans l’App Store
+description: Ce guide présente en détail le déploiement d’une application Xamarin.Mac à l’aide de Visual Studio pour Mac. Il explique comment configurer un compte de développeur Mac, décrit en détail le processus de création des certificats pour la signature de code et montre comment les utiliser pour créer des applications Mac distribuables directement ou par le biais du Mac App Store.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 86514dbd6b40e9d59ea9a598395cf6f0a3f4889a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e4c7b0913d43d9db3b5414c831864dae8d0b4d61
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publication sur l’App Store
 
@@ -37,7 +37,7 @@ Quand le développeur rejoint le [programme pour les développeurs Mac](https://
 Choisissez le type d’inscription adapté à votre situation.
 
 > [!NOTE]
-> **Remarque** : Les choix effectués ici affecteront certains écrans lors de la configuration d’un compte de développeur. Les descriptions et les captures d’écran présentées dans ce document sont effectuées du point de vue du compte de développeur d’individu (**Individual**). Dans une société (**Company**), certaines options sont disponibles seulement pour les utilisateurs **Team Admin** (Administrateur d’équipe).
+> Les choix effectués ici affecteront l’affichage de certains écrans lors de la configuration d’un compte de développeur. Les descriptions et les captures d’écran présentées dans ce document sont effectuées du point de vue du compte de développeur d’individu (**Individual**). Dans une société (**Company**), certaines options sont disponibles seulement pour les utilisateurs **Team Admin** (Administrateur d’équipe).
 
 
 ### <a name="certificates-and-identifiersmacdeploy-testpublishing-to-the-app-storecertificates-identifiersmd"></a>[Certificats et identificateurs](~/mac/deploy-test/publishing-to-the-app-store/certificates-identifiers.md)

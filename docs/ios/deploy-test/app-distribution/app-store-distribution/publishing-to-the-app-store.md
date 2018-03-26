@@ -1,6 +1,6 @@
 ---
-title: "Publication sur l’App Store"
-description: "Cet article explique comment configurer, générer et publier une application Xamarin.iOS pour la distribuer via l’App Store. Il comprend un guide pas à pas qui explique comment préparer la distribution de votre application, comment utiliser les outils d’Apple pour soumettre votre application à des fins d’évaluation, et enfin, comment publier votre application sur l’App Store."
+title: Publication sur l’App Store
+description: Cet article explique comment configurer, générer et publier une application Xamarin.iOS pour la distribuer via l’App Store. Il comprend un guide pas à pas qui explique comment préparer la distribution de votre application, comment utiliser les outils d’Apple pour soumettre votre application à des fins d’évaluation, et enfin, comment publier votre application sur l’App Store.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ef8fafb923dcad936ce0a049e715cdd163ea7222
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publication sur l’App Store
 
 _Cet article explique comment configurer, générer et publier une application Xamarin.iOS pour la distribuer via l’App Store. Il comprend un guide pas à pas qui explique comment préparer la distribution de votre application, comment utiliser les outils d’Apple pour soumettre votre application à des fins d’évaluation, et enfin, comment publier votre application sur l’App Store._
 
-Pour permettre la distribution des applications sur tous les appareils iOS, Apple impose la publication de ces applications via l’ *App Store* , le point d’achat unique des applications iOS. Avec plus de 500 000 applications dans l’App Store, les développeurs de nombreux types d’application ont capitalisé sur le succès massif de ce point de distribution unique. L’App Store est une solution clé en main, qui offre à la fois un système de distribution et un système de paiement aux développeurs d’applications.
+Pour permettre la distribution des applications sur tous les appareils iOS, Apple impose la publication de ces applications via l’*App Store*, le point d’achat unique des applications iOS. Avec plus de 500 000 applications dans l’App Store, les développeurs de nombreux types d’application ont capitalisé sur le succès massif de ce point de distribution unique. L’App Store est une solution clé en main, qui offre à la fois un système de distribution et un système de paiement aux développeurs d’applications.
 
 Le processus de soumission d’une application sur l’App Store implique les actions suivantes :
 
@@ -185,7 +185,7 @@ Une fois votre application Xamarin.iOS correctement configurée, vous pouvez mai
 
 
 > [!NOTE]
-> Remarque : Bien que les anciennes configurations _App Store_ et _Ad hoc_ aient été supprimées de tous les projets de modèle Visual Studio pour Mac, vous pouvez trouver d’anciens projets avec ces configurations. Si tel est le cas, vous pouvez continuer à utiliser la configuration **App Store | Appareil** indiquée à l’étape 1 de la liste ci-dessus.
+> Bien que les anciennes configurations _App Store_ et _Ad Hoc_ aient été supprimées de tous les projets de modèle Visual Studio pour Mac, ces anciens projets se trouvent encore dans ces configurations. Si tel est le cas, vous pouvez continuer à utiliser la configuration **App Store | Appareil** indiquée à l’étape 1 de la liste ci-dessus.
 
 ### <a name="sign-and-distribute-your-app"></a>Signer et distribuer votre application
 
@@ -309,7 +309,7 @@ Une fois votre build de distribution créée et archivée, vous êtes prêt à s
 ## <a name="submitting-your-app-to-apple"></a>Soumission de votre application à Apple
 
 > [!NOTE]
-> Remarque : Apple a changé récemment son processus de vérification des applications iOS, et peut rejeter les applications qui contiennent `iTunesMetadata.plist` dans le paquet IPA. Si vous rencontrez l’erreur `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"`, la solution de contournement décrite [ici](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1) permet en principe de résoudre le problème.
+> Apple a récemment modifié son processus de vérification des applications iOS et peut rejeter les applications qui contiennent `iTunesMetadata.plist` dans le paquet IPA. Si vous rencontrez l’erreur `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"`, la solution de contournement décrite [ici](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1) permet en principe de résoudre le problème.
 
 Une fois que vous avez effectué la build de distribution, vous êtes prêt à soumettre votre application iOS à Apple pour qu’elle soit évaluée et, le cas échéant, publiée sur l’App Store.
 

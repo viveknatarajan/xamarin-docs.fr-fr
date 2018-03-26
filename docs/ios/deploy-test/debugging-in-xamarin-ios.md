@@ -1,6 +1,6 @@
 ---
-title: "Débogage"
-description: "Vous pouvez déboguer les applications Xamarin.iOS à l’aide du débogueur intégré de Visual Studio pour Mac ou Visual Studio."
+title: Débogage
+description: Vous pouvez déboguer les applications Xamarin.iOS à l’aide du débogueur intégré de Visual Studio pour Mac ou Visual Studio.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 18f9814941c4cd7d2719f23b6102361f013ba8a9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a449d692a2761f59135930d40ad3708d6ef2e9b9
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="debugging"></a>Débogage
 
@@ -22,7 +22,7 @@ Utilisez la prise en charge du débogage natif de Visual Studio pour Mac afin de
 
 
 > [!NOTE]
-> **IMPORTANT :** Quand vous compilez des applications en mode débogage, Xamarin.iOS génère des applications plus lentes et beaucoup plus volumineuses, car chaque ligne de code doit être instrumentée. Avant la mise en production, veillez à effectuer une build de mise en production.
+> Lorsque vous compilez des applications en mode débogage, Xamarin.iOS génère des applications plus lentes et beaucoup plus volumineuses, car chaque ligne de code doit être instrumentée. Avant la mise en production, veillez à effectuer une build de mise en production.
 
 Le débogueur Xamarin.iOS est intégré à votre IDE. Il permet aux développeurs de déboguer les applications Xamarin.iOS générées à l’aide de l’un des langages managés pris en charge par Xamarin.iOS dans le simulateur et sur l’appareil.
 
