@@ -1,5 +1,5 @@
 ---
-title: "Bibliothèques de liaison Objective-C"
+title: Bibliothèques de liaison Objective-C
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
@@ -7,17 +7,17 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 29b846453396d37adc689fe49e80299e8f35bbe2
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 3b1894555c27e368fc80cc4ebaa1f6b40446e2aa
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="binding-objective-c-libraries"></a>Bibliothèques de liaison Objective-C
 
 Lorsque vous travaillez avec Xamarin.iOS ou Xamarin.Mac, vous pouvez rencontrer des cas où vous souhaitez consommer une bibliothèque de Objective-C tiers. Dans ces situations, vous pouvez utiliser des projets de liaison Xamarin pour créer une liaison C# aux bibliothèques natives Objective-C. Le projet utilise les mêmes outils que nous utilisons pour rétablir l’iOS et Mac API c#.
 
-Ce document décrit comment lier les API Objective-C, si vous liez simplement les API C, vous devez utiliser le mécanisme de .NET standard pour ce faire, [l’infrastructure de P/Invoke](http://mono-project.com/Dllimport).
+Ce document décrit comment lier les API Objective-C, si vous liez simplement les API C, vous devez utiliser le mécanisme de .NET standard pour ce faire, [l’infrastructure de P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/).
 Pour plus d’informations sur la façon de lier statiquement une bibliothèque C sont disponibles sur le [lier des bibliothèques natives](~/ios/platform/native-interop.md) page.
 
 Voir le Guide de notre [Guide de référence des Types de liaison](~/cross-platform/macios/binding/binding-types-reference.md).
@@ -464,7 +464,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>Liaison de listes d’arguments Objective-C
 
-Objective-C prend en charge les arguments de variadiques. Exemple :
+Objective-C prend en charge les arguments de variadiques. Par exemple :
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...
@@ -507,7 +507,7 @@ Parfois, vous devez accéder à des champs publics qui ont été déclarés dans
 
 Ces champs contiennent généralement des valeurs de chaînes ou des entiers qui doivent être référencées. Elles sont utilisées en tant que chaîne qui représente une notification spécifique et en tant que clés dans les dictionnaires.
 
-Pour lier un champ, ajouter une propriété à votre fichier de définition d’interface et décorer la propriété avec le [ `[Field]` ](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) attribut. Cet attribut prend un seul paramètre : le nom de C du symbole à la recherche. Exemple :
+Pour lier un champ, ajouter une propriété à votre fichier de définition d’interface et décorer la propriété avec le [ `[Field]` ](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) attribut. Cet attribut prend un seul paramètre : le nom de C du symbole à la recherche. Par exemple :
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -615,7 +615,7 @@ Le [ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#Bin
 
 Vous pouvez la décorer les méthodes (sur la valeur de retour), les paramètres et les propriétés avec [ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute). La seule restriction est que votre membre **ne doit pas** se trouve dans un [ `[Protocol]` ](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) ou [ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) interface.
 
-Exemple :
+Par exemple :
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -634,7 +634,7 @@ En interne, nous ferons le `bool?`  <->  `NSNumber` et `CGRect`  <->  `NSValue` 
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) prend également en charge les tableaux de `NSNumber` `NSValue` et `NSString`(enum).
 
-Exemple :
+Par exemple :
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -663,7 +663,7 @@ Le Générateur de liaison de Xamarin.iOS fournit la prise en charge pour les d�
 
 Cet attribut peut être utilisé sans arguments pour les notifications qui n’effectuer aucune charge utile ou vous pouvez spécifier un `System.Type` qui fait référence à une autre interface dans la définition d’API, généralement avec le nom se terminant par « EventArgs ». Le Générateur d’activer l’interface dans une classe qui sous-classe `EventArgs` et inclut toutes les propriétés proposées. Le [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) attribut doit être utilisé dans la classe EventArgs pour répertorier le nom de la clé utilisée pour rechercher le dictionnaire Objective-C pour extraire la valeur.
 
-Exemple :
+Par exemple :
 
 ```csharp
 interface MyClass {
@@ -1306,7 +1306,7 @@ Vous devez informer Xamarin.iOS comment lier vos bibliothèques, cela peut être
 L’exemple ci-dessus établit un lien `libMyLibrary.a`, `libSystemLibrary.dylib` et `CFNetwork` bibliothèque framework dans votre fichier exécutable final.
 
 Ou vous pouvez tirer parti de niveau de l’assembly [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), que vous pouvez incorporer dans vos fichiers de contrat (tel que `AssemblyInfo.cs`).
-Lorsque vous utilisez la [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), vous devez disposer de votre bibliothèque native au moment où vous apportez votre liaison, comme cette opération incorpore la bibliothèque native avec votre application. Exemple :
+Lorsque vous utilisez la [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), vous devez disposer de votre bibliothèque native au moment où vous apportez votre liaison, comme cette opération incorpore la bibliothèque native avec votre application. Par exemple :
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

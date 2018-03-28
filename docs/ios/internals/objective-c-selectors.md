@@ -1,22 +1,22 @@
 ---
-title: "Sélecteurs objective-C"
+title: Sélecteurs objective-C
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 3fa01d8f28dc1c86f9d4a8ee4d9fc0a9cdb8ee9c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b7f64288695ecc0f9f57ec670c4e9ff2e44804c
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="objective-c-selectors"></a>Sélecteurs objective-C
 
 Basé sur le langage Objective-C *sélecteurs*. Un sélecteur est un message qui peut être envoyé à un objet ou un *classe*. [Xamarin.iOS](~/ios/internals/api-design/index.md) cartes sélecteurs de méthodes d’instance de l’instance et les sélecteurs de méthodes statiques de classe.
 
-Contrairement aux fonctions C normales (et, comme les fonctions membres C++), vous ne pouvez pas appeler directement une à l’aide du sélecteur [P/Invoke](http://www.mono-project.com/Dllimport).
+Contrairement aux fonctions C normales (et, comme les fonctions membres C++), vous ne pouvez pas appeler directement une à l’aide du sélecteur [P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/).
 (*Mettre de côté*: en théorie, vous pouvez utiliser P/Invoke pour les fonctions de membre non virtuelle C++, mais vous devez à vous soucier de troncage per-du compilateur, qui est un monde de faibles mieux ignoré.) Au lieu de cela, les sélecteurs sont envoyés à une classe Objective-C ou à l’aide de l’instance du [ `objc_msgSend` fonction](http://developer.apple.com/mac/library/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_msgSend).
 
 Vous souhaiterez peut-être [ce guide sur la messagerie Objective-C](http://developer.apple.com/iphone/library/documentation/cocoa/conceptual/ObjCRuntimeGuide/Articles/ocrtHowMessagingWorks.html) utile.

@@ -1,6 +1,6 @@
 ---
-title: "Procédure pas à pas - à l’aide de contrôles personnalisés avec le Concepteur de Xamarin pour iOS"
-description: "Cet article fournit une procédure pas à pas montrant comment créer un contrôle personnalisé et l’utiliser dans le Concepteur de Xamarin pour iOS. Il montre comment créer un contrôle disponible dans la boîte à outils du concepteur afin qu’il peut être glisser/déposé sur une vue. En outre, il montre comment implémenter un contrôle afin qu’il restitue correctement au moment de la conception et d’exécution, ainsi que comment créer des propriétés qui peuvent être définies au moment du design."
+title: Procédure pas à pas - à l’aide de contrôles personnalisés avec le Concepteur de Xamarin pour iOS
+description: Cet article fournit une procédure pas à pas montrant comment créer un contrôle personnalisé et l’utiliser dans le Concepteur de Xamarin pour iOS. Il montre comment créer un contrôle disponible dans la boîte à outils du concepteur afin qu’il peut être glisser/déposé sur une vue. En outre, il montre comment implémenter un contrôle afin qu’il restitue correctement au moment de la conception et d’exécution, ainsi que comment créer des propriétés qui peuvent être définies au moment du design.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4138ba0da1dd2174c53e6e35105c3199ea941f7f
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>Procédure pas à pas - à l’aide de contrôles personnalisés avec le Concepteur de Xamarin pour iOS
 
 _Cet article fournit une procédure pas à pas montrant comment créer un contrôle personnalisé et l’utiliser dans le Concepteur de Xamarin pour iOS. Il montre comment créer un contrôle disponible dans la boîte à outils du concepteur afin qu’il peut être glisser/déposé sur une vue. En outre, il montre comment implémenter un contrôle afin qu’il restitue correctement au moment de la conception et d’exécution, ainsi que comment créer des propriétés qui peuvent être définies au moment du design._
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Le Concepteur de Xamarin pour iOS est disponible dans Visual Studio pour Mac et Visual Studio 2015 et 2017 sur Windows.
 
@@ -32,15 +32,11 @@ Ce guide suppose que vous connaissez le contenu traitées dans le [Getting Start
 
 1. Créez une solution à partir de la **iOS > application > Application vue unique > C#** modèle, nommez-le `ScratchTicket`et suivez les instructions de l’Assistant Nouveau projet :
 
-
     [![](ios-designable-controls-walkthrough-images/01new.png "Créer une nouvelle solution")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
-
 
 1. Créer un nouveau fichier de classe vide nommé `ScratchTicketView`:
 
-
     [![](ios-designable-controls-walkthrough-images/02new.png "Créez une classe ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
-
 
 1. Ajoutez le code suivant pour `ScratchTicketView` classe :
 

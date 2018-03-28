@@ -1,6 +1,6 @@
 ---
-title: "Modifications des outils du kit Android SDK"
-description: "Modifications apportées à la façon dont le Kit de développement logiciel Android gère les niveaux d’API et AVDs installés."
+title: Modifications des outils du kit Android SDK
+description: Modifications apportées à la façon dont le Kit de développement logiciel Android gère les niveaux d’API et AVDs installés.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 69e9f08870a01c056951700978d07277af5edfa8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a16aa3704d9e0a63cfabde4b620452e7e2a5bf57
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Modifications des outils du kit Android SDK
 
@@ -20,7 +20,7 @@ _Modifications apportées à la façon dont le Kit de développement logiciel An
 
 ## <a name="changes-to--android-sdk-tooling"></a>Modifications apportées aux outils du Kit de développement logiciel Android
 
-Dans les versions récentes des outils de kit de développement logiciel pour Android, Google a supprimé les gestionnaires AVD et Kit de développement logiciel existants en faveur de nouvelles _interface de ligne de commande_ les outils (CLI). Le premier **android** programme a été supprimé et les gestionnaires de l’interface graphique utilisateur (Interface utilisateur graphique) dans Visual Studio pour Mac et les versions antérieures de Xamarin pour Visual Studio ne fonctionnera plus après la version Android SDK Tools.
+Dans les versions récentes des outils de kit de développement logiciel pour Android, Google a supprimé les gestionnaires AVD et Kit de développement logiciel existants en faveur de nouveaux outils d’interface CLI (Interface de ligne de commande). Le premier **android** programme a été supprimé et les gestionnaires de l’interface graphique utilisateur (Interface utilisateur graphique) dans Visual Studio pour Mac et les versions antérieures de Xamarin pour Visual Studio ne fonctionnera plus après la version 25.2.5 des outils de kit de développement logiciel Android.
 
 
 ![Android menu IDE de Visual Studio](sdk-cli-tooling-changes-images/android-ide-menu.png)
@@ -50,7 +50,7 @@ Il existe un nouveau programme appelé **sdkmanager** dans les **outils/bin** do
 
 **Ajouté dans :** Outils kit de développement logiciel Android 25.3.0 (mars 2017) et versions ultérieures.
 
-Il existe un nouveau programme appelé **avdmanager** dans les **outils/bin** dossier de votre Kit de développement logiciel Android. Cet outil est utilisé pour mettre à jour de la AVD pour l’émulateur Android de Google. Pour plus d’informations sur l’utilisation de cet outil, consultez [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
+Il existe un nouveau programme appelé **avdmanager** dans les **outils/bin** dossier de votre Kit de développement logiciel Android. Cet outil est utilisé pour mettre à jour les AVDs pour l’émulateur Android de Google. Pour plus d’informations sur l’utilisation de cet outil, consultez [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 
 ### <a name="downgrading"></a>La rétrogradation
 
@@ -64,7 +64,7 @@ Vous pouvez toujours utiliser l’interface graphique utilisateur d’origine en
 ## <a name="related-links"></a>Liens associés
 
 - [Configuration du kit Android SDK](~/android/get-started/installation/android-sdk.md)
-- [Présentation des niveaux d’API Android](~/android/app-fundamentals/android-api-levels.md)
-- [Notes de publication (Google) des outils de kit de développement logiciel](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
+- [Présentation des niveaux d’API d’Android](~/android/app-fundamentals/android-api-levels.md)
+- [Notes de publication de SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
-- [avdmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+- [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)

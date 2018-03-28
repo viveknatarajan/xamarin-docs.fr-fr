@@ -1,18 +1,18 @@
 ---
 title: Partie 3. Extensions de balisage XAML
-description: "Extensions de balisage XAML constituent une fonctionnalité importante dans le code XAML qui permettent d’être définie sur des objets ou des valeurs qui sont référencés indirectement à partir d’autres sources. Extensions de balisage XAML sont particulièrement importantes pour le partage d’objets et en référençant les constantes utilisées dans une application, mais ils recherchent leur plus grande utilité dans les liaisons de données."
+description: Extensions de balisage XAML constituent une fonctionnalité importante dans le code XAML qui permettent d’être définie sur des objets ou des valeurs qui sont référencés indirectement à partir d’autres sources. Extensions de balisage XAML sont particulièrement importantes pour le partage d’objets et en référençant les constantes utilisées dans une application, mais ils recherchent leur plus grande utilité dans les liaisons de données.
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
-ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 3/27/2018
+ms.openlocfilehash: cd881b79945c2b9c10e9bb1bc85fce98acb71026
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Partie 3. Extensions de balisage XAML
 
@@ -45,7 +45,7 @@ Certaines pages XAML contient plusieurs vues avec les mêmes valeurs de proprié
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do that!"
                 HorizontalOptions="Center"
@@ -53,7 +53,7 @@ Certaines pages XAML contient plusieurs vues avec les mêmes valeurs de proprié
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do the other thing!"
                 HorizontalOptions="Center"
@@ -61,7 +61,7 @@ Certaines pages XAML contient plusieurs vues avec les mêmes valeurs de proprié
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
     </StackLayout>
 </ContentPage>
@@ -103,7 +103,7 @@ Il est également nécessaire d’inclure explicitement `ResourceDictionary` bal
 </ContentPage>
 ```
 
-Maintenant objets et des valeurs de différents types peuvent être ajoutés pour le dictionnaire de ressources. Ces types doivent être instanciables. Ils ne peut pas être des classes abstraites, par exemple. Ces types doivent avoir également un constructeur sans paramètre public. Chaque élément requiert une clé de dictionnaire spécifiée avec le `x:Key` attribut. Exemple :
+Maintenant objets et des valeurs de différents types peuvent être ajoutés pour le dictionnaire de ressources. Ces types doivent être instanciables. Ils ne peut pas être des classes abstraites, par exemple. Ces types doivent avoir également un constructeur sans paramètre public. Chaque élément requiert une clé de dictionnaire spécifiée avec le `x:Key` attribut. Par exemple :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -136,7 +136,7 @@ Il est nécessaire de définir la `HorizontalOptions` et `VerticalOptions` propr
         BorderWidth="3"
         Rotation="-15"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 Le `StaticResource` extension de balisage est toujours délimitées par des accolades et inclut la clé de dictionnaire.
@@ -192,7 +192,7 @@ Ces deux ressources peuvent être référencées dans la même façon que le `La
         BorderWidth="{StaticResource borderWidth}"
         Rotation="{StaticResource rotationAngle}"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 Pour les ressources de type `Color`, vous pouvez utiliser les même représentations sous forme de chaîne que vous utilisez lorsque assigner directement des attributs de ces types. Convertisseurs de type sont appelées lorsque la ressource est créée. Voici une ressource de type `Color`:
@@ -201,14 +201,10 @@ Pour les ressources de type `Color`, vous pouvez utiliser les même représentat
 <Color x:Key="textColor">Red</Color>
 ```
 
-Le `FontSize` propriété présente un petit problème. La propriété est définie pour être de type `double`. Lorsque vous définissez la propriété à un membre de la `NamedSize` énumération comme `Large`, le `FontSizeConverter` fonctionne en arrière-plan pour le convertir en une valeur de dépend de la plateforme à l’aide de la classe le `Device.GetNamedSized` (méthode).
-
-Toutefois, vous ne pouvez pas définir une ressource pour une taille de police en tant qu’un `double` et définissez la valeur de « Grande ». Dans le temps que l’analyseur XAML traite la ressource, il ne sait pas que la valeur sera utilisée comme une taille de police. 
-
-La solution consiste à définir la ressource en tant qu’un `string` à l’aide de la `x:String` type :
+Souvent, les programmes ensemble un `FontSize` propriété vers un membre de la `NamedSize` énumération comme `Large`. Le `FontSizeConverter` fonctionne en arrière-plan pour le convertir en une valeur de dépend de la plateforme à l’aide de la classe le `Device.GetNamedSized` (méthode). Toutefois, lorsque vous définissez une ressource de la taille de police, il est plus judicieux d’utiliser une valeur numérique, illustrée ici comme un `x:Double` type :
 
 ```xaml
-<x:String x:Key="fontSize">Large</x:String>
+<x:Double x:Key="fontSize">24</x:Double>
 ```
 
 Maintenant toutes les propriétés sauf `Text` sont définis par les paramètres de ressource :
@@ -275,7 +271,7 @@ Voici le fichier XAML complet final avec trois boutons six valeurs partagées de
                 BorderWidth="{StaticResource borderWidth}"
                 Rotation="{StaticResource rotationAngle}"
                 TextColor="{StaticResource textColor}"
-                FontSize"{StaticResource fontSize}" />
+                FontSize="{StaticResource fontSize}" />
 
         <Button Text="Do that!"
                 HorizontalOptions="{StaticResource horzOptions}"

@@ -1,20 +1,19 @@
 ---
-title: "Remplacement de la barre d’Action"
+title: Remplacement de la barre d’Action
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5341D28E-B203-478D-8464-6FAFDC3A4110
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: e71c6ea816b8b732d21148db32fd9395732dd4c0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/27/2018
+ms.openlocfilehash: f02f77eb45086d1d568b367b28163a4773dcd80d
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="replacing-the-action-bar"></a>Remplacement de la barre d’Action
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -38,7 +37,7 @@ Les sections suivantes expliquent ce processus en détail. Une application simpl
 
 ## <a name="start-an-app-project"></a>Démarrer un projet d’application
 
-Créez un projet Android appelé **ToolbarFun** (consultez [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) pour plus d’informations sur la création d’un projet Android). Une fois ce projet est créé, la valeur les niveaux d’API Android cible et minimum **Android 5.0 (API niveau 21 - Lollipop)**. Pour plus d’informations sur la définition des niveaux de version d’Android, consultez [niveaux d’API Android compréhension](~/android/app-fundamentals/android-api-levels.md). Lorsque l’application est générée et exécutée, il affiche la barre d’action par défaut comme indiqué dans cette capture d’écran : 
+Créez un projet Android appelé **ToolbarFun** (consultez [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) pour plus d’informations sur la création d’un projet Android). Une fois ce projet est créé, la valeur les niveaux d’API Android cible et minimum **Android 5.0 (API niveau 21 - Lollipop)** ou version ultérieure. Pour plus d’informations sur la définition des niveaux de version d’Android, consultez [niveaux d’API Android compréhension](~/android/app-fundamentals/android-api-levels.md). Lorsque l’application est générée et exécutée, il affiche la barre d’action par défaut comme indiqué dans cette capture d’écran :
 
 [![Capture d’écran de la barre d’action par défaut](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
@@ -76,6 +75,8 @@ Un vert olive `colorPrimary` paramètre est utilisé pour la couleur d’arrièr
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
+
+## <a name="apply-the-custom-theme"></a>Appliquer le thème personnalisé
 
 Modifier **Properties/AndroidManifest.xml** et ajoutez le code suivant `android:theme` d’attribut pour le `<application>` élément afin que l’application utilise le `MyTheme` thème personnalisé : 
 
@@ -136,12 +137,6 @@ Modifier le fichier de disposition **Resources/layout/Main.axml** et remplacez s
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <Button
-        android:id="@+id/MyButton"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World, Click Me!" />
 </RelativeLayout>
 ```
 
@@ -171,6 +166,7 @@ Ce code recherche le `Toolbar` et appelle `SetActionBar` afin que la `Toolbar` e
 
 Notez que la `Toolbar` style indépendamment de la `Theme.Material.Light.DarkActionBar` thème est appliqué à la suite de l’application. 
 
+Si une exception se produit pendant l’exécution de l’application, consultez la [dépannage](#troubleshooting) section ci-dessous.
 
  
 ## <a name="add-menu-items"></a>Ajouter des éléments de Menu 
@@ -193,7 +189,7 @@ Les sections suivantes illustrent ce processus en détail en ajoutant **modifier
 
 ### <a name="install-menu-icons"></a>Installer les icônes du Menu
 
-Poursuivre le `ToolbarFun` exemple d’application, ajoutez des icônes de menu au projet d’application. Télécharger [icons.zip de la barre d’outils](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true) et décompressez-le. Copiez le contenu de l’extrait *mipmap -* dossiers au projet *mipmap -* dossiers sous **ToolbarFun/ressources** et inclure chaque fichier d’icône ajouté dans le projet.
+Poursuivre le `ToolbarFun` exemple d’application, ajoutez des icônes de menu au projet d’application. Télécharger [des icônes de barre d’outils](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true), décompressez et copiez le contenu de l’extrait *mipmap -* dossiers au projet *mipmap -* dossiers sous **ToolbarFun / Ressources** et inclure chaque fichier d’icône ajouté dans le projet.
 
 
 ### <a name="define-a-menu-resource"></a>Définir une ressource de Menu
@@ -277,6 +273,19 @@ Quand un utilisateur appuie sur le menu de dépassement de capacité, le **préf
 Pour plus d’informations sur les menus Android, consultez le développeur Android [Menus](https://developer.android.com/guide/topics/ui/menus.html) rubrique. 
  
 
+## <a name="troubleshooting"></a>Résolution des problèmes
+
+Les conseils suivants peuvent aider à déboguer les problèmes qui peuvent se produire lors du remplacement de la barre d’action avec une barre d’outils.
+
+### <a name="activity-already-has-an-action-bar"></a>Activité possède déjà une barre d’Action
+
+Si l’application n’est pas correctement configurée pour utiliser un thème personnalisé, comme expliqué dans [appliquer le thème personnalisé](#apply-the-custom-theme), l’exception suivante peut se produire lors de l’exécution de l’application :
+
+![Erreur peut se produire lorsque le thème personnalisé n’est pas utilisé.](replacing-the-action-bar-images/03-theme-not-defined.png)
+
+En outre, un message d’erreur tels que les éléments suivants peuvent être produits : _Java.Lang.IllegalStateException : cette activité a déjà une barre d’action fournie à l’intérieur de la fenêtre._ 
+
+Pour corriger cette erreur, vérifiez que le `android:theme` d’attribut pour le thème personnalisé est ajouté à `<application>` (dans **Properties/AndroidManifest.xml**) comme décrit précédemment dans [appliquer le thème personnalisé](#apply-the-custom-theme). En outre, cette erreur peut être provoquée si le `Toolbar` mise en page ou un thème personnalisé n’est pas configuré correctement.
 
 
 ## <a name="related-links"></a>Liens associés

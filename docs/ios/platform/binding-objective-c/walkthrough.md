@@ -1,6 +1,6 @@
 ---
-title: "Procédure pas à pas : Liaison d’une bibliothèque de Objective-C iOS"
-description: "Cet article fournit une procédure pas à pas pratique de création d’une liaison Xamarin.iOS pour une bibliothèque existante Objective-C, InfColorPicker. Elle traite des sujets tels que la compilation d’une bibliothèque statique de Objective-C, liant et à l’aide de la liaison dans une application Xamarin.iOS."
+title: 'Procédure pas à pas : Liaison d’une bibliothèque de Objective-C iOS'
+description: Cet article fournit une procédure pas à pas pratique de création d’une liaison Xamarin.iOS pour une bibliothèque existante Objective-C, InfColorPicker. Elle traite des sujets tels que la compilation d’une bibliothèque statique de Objective-C, liant et à l’aide de la liaison dans une application Xamarin.iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e4619f5b1d3f888b2557cf894aaa83106504766f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 44ed651413d66866f131a294158525440278b291
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procédure pas à pas : Liaison d’une bibliothèque de Objective-C iOS
 
@@ -41,7 +41,7 @@ Nous aborderons toutes les étapes nécessaires pour utiliser cette API Objectiv
 
 L’exemple d’application va vous montrer comment utiliser un délégué fort pour la communication entre l’API InfColorPicker et notre code c#. Une fois que nous avons vu comment utiliser un délégué fort, nous aborderons l’utilisation des délégués faibles pour effectuer les mêmes tâches.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Cet article suppose que vous possédez des connaissances avec Xcode et le langage Objective-C et que vous avez lu nos [Objective-C de liaison](~/cross-platform/macios/binding/index.md) documentation. En outre, les éléments suivants sont nécessaire pour terminer les étapes suivantes :
 
@@ -94,7 +94,7 @@ Avec les outils de ligne de commande installé, nous sommes prêts à poursuivre
 Dans cette procédure pas à pas, nous aborderons les étapes suivantes :
 
 - **[Créer une bibliothèque statique](#Creating_A_Static_Library)**  -cette étape implique la création d’une bibliothèque statique de la **InfColorPicker** code Objective-C. La bibliothèque statique aura le `.a` extension de fichier et seront incorporées dans l’assembly .NET du projet de bibliothèque.
-- **[Créer un projet de liaison Xamarin.iOS](#Create_a_Xamarin.iOS_Binding_Project)**  -une fois que nous disposons d’une bibliothèque statique, nous l’utiliserons pour créer un projet de liaison Xamarin.iOS. Le projet de liaison se compose de la bibliothèque statique que nous venons de créer et de métadonnées sous la forme de code c# qui explique comment utiliser l’API Objective-C. Ces métadonnées sont communément appelé les définitions de l’API. Nous allons utiliser  **[objectif Sharpie](#Using_Objective_Sharpie)**  pour nous aider à créer les définitions de l’API.
+- **[Créer un projet de liaison Xamarin.iOS](#Create_a_Xamarin.iOS_Binding_Project)**  -une fois que nous disposons d’une bibliothèque statique, nous l’utiliserons pour créer un projet de liaison Xamarin.iOS. Le projet de liaison se compose de la bibliothèque statique que nous venons de créer et de métadonnées sous la forme de code c# qui explique comment utiliser l’API Objective-C. Ces métadonnées sont communément appelé les définitions de l’API. Nous allons utiliser **[objectif Sharpie](#Using_Objective_Sharpie)** pour nous aider à créer les définitions de l’API.
 - **[Normaliser les définitions de l’API](#Normalize_the_API_Definitions)**  - objectif Sharpie est un bon outil pour nous aider à, mais il ne peut pas effectuer toutes les opérations. Nous aborderons certaines modifications nécessaires pour modifier les définitions des API avant de pouvoir être utilisés.
 - **[Utilisez la bibliothèque de liaison](#Using_the_Binding)**  -Enfin, nous allons créer une application Xamarin.iOS pour montrer comment utiliser notre projet nouvellement créé de liaison.
 
@@ -159,7 +159,7 @@ La première étape est réservée ajouter le code source InfoColorPicker dans l
 
     [![](walkthrough-images/image16b.png "Développez la section binaire avec des bibliothèques de liens")](walkthrough-images/image16b.png#lightbox)
 
-13. Utilisez le  **+**  bouton pour ouvrir la boîte de dialogue qui vous permet d’ajouter les infrastructures de frames requises répertoriées ci-dessus :
+13. Utilisez le **+** bouton pour ouvrir la boîte de dialogue qui vous permet d’ajouter les infrastructures de frames requises répertoriées ci-dessus :
 
     [![](walkthrough-images/image16c.png "Ajoutez que les infrastructures de frames requis répertoriés ci-dessus")](walkthrough-images/image16c.png#lightbox)
 
@@ -183,7 +183,7 @@ Création d’un fat binaire est un processus en trois étapes :
 
 Alors que ces trois étapes sont plutôt simples, et il peut être nécessaire de les répéter dans le futur lorsque la bibliothèque Objective-C reçoit des mises à jour ou si nous avons besoin de correctifs de bogues. Si vous décidez d’automatiser ces étapes, elle simplifie la maintenance future et la prise en charge du projet de liaison iOS.
 
-Il existe de nombreux outils disponibles pour automatiser des tâches - un script shell, [inclinaison](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/Microsoft.Build), et [rendre](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Lorsque nous avons installé les outils de ligne de commande Xcode, nous avons installé également rendre, de sorte qu’il le système de génération qui sera utilisé pour cette procédure pas à pas. Voici un **Makefile** que vous pouvez utiliser pour créer une bibliothèque partagée architecture multiples qui fonctionne sur un appareil iOS et le simulateur pour toutes les bibliothèques :
+Il existe de nombreux outils disponibles pour automatiser des tâches - un script shell, [inclinaison](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), et [rendre](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Lorsque nous avons installé les outils de ligne de commande Xcode, nous avons installé également rendre, de sorte qu’il le système de génération qui sera utilisé pour cette procédure pas à pas. Voici un **Makefile** que vous pouvez utiliser pour créer une bibliothèque partagée architecture multiples qui fonctionne sur un appareil iOS et le simulateur pour toutes les bibliothèques :
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
