@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08d15095c8d1d08a65f18d5ad867efdd89d3b795
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="android-beam"></a>Faisceaux Android
 
-Faisceaux Android est une nouvelle technologie de Communication NFC (Near Field) dans Android 4 qui permet aux applications de partager des informations sur NFC lorsqu’à proximité.
+Faisceaux Android est une technologie de Communication NFC (Near Field) introduite dans Android 4.0 qui permet aux applications de partager des informations sur NFC lorsqu’à proximité.
 
 [![Diagramme illustrant les deux périphériques à proximité de partage d’informations](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 

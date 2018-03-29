@@ -1,6 +1,7 @@
 ---
-title: "XAML Live Aperçu avant impression"
-description: "Tester des modifications de code d’application en temps réel sur votre appareil iOS ou Android"
+redirect_url: /xamarin/tools/live-player/
+title: XAML Live Aperçu avant impression
+description: Tester des modifications de code d’application en temps réel sur votre appareil iOS ou Android
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
@@ -8,24 +9,24 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017
-ms.openlocfilehash: f5c1649d625f2094fb710066f79a4ae89a696266
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 96ce096a57e46b36ebe6516ba0aff2733883e400
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-live-previewing"></a>XAML Live Aperçu avant impression
 
 Un des avantages de Live Xamarin Player est la possibilité de live aperçu des pages XAML, apporter des modifications au code dans Visual Studio et voir les modifications apparaissent instantanément sur votre appareil. L’aperçu en direct est possible sur votre appareil iOS ou Android, ou sur un émulateur ou un simulateur. Ce guide montre comment utiliser la fonctionnalité d’aperçu dynamique pour afficher les écrans XAML individuels.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Un ordinateur exécutant Windows 7 ou version ultérieure.
 2. Visual Studio 2017 version 15.4 ou une version ultérieure avec le **développement pour appareils mobiles avec .NET** installé la charge de travail.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Un Mac avec OS X 10.11 macOS 10.12 ou supérieur.
 2. Visual Studio pour Mac 7.2 ou version ultérieure. Nous vous recommandons de la version la plus récente.
@@ -40,7 +41,7 @@ Un des avantages de Live Xamarin Player est la possibilité de live aperçu des 
 
 Avant de pouvoir utiliser Xamarin Player Live avec votre appareil iOS ou Android, vous devez télécharger l’application Xamarin Player de Live et coupler à Visual Studio, comme décrit dans la [installer](~/tools/live-player/install.md) guide. Une fois que vous avez connectée correctement votre appareil à Visual Studio, vous pouvez commencer l’aperçu instantané de votre page XAML. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Ouvrez la page XAML que vous souhaitez l’aperçu en direct dans l’éditeur Visual Studio 2017 :
 
@@ -54,7 +55,7 @@ Avant de pouvoir utiliser Xamarin Player Live avec votre appareil iOS ou Android
 
     ![](live-view-images/vs-image3.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Ouvrez la page XAML que vous souhaitez l’aperçu en direct dans Visual Studio pour l’éditeur Mac :
 

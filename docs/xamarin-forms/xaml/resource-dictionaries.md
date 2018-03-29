@@ -1,6 +1,6 @@
 ---
 title: Dictionnaires de ressources
-description: "Ressources XAML sont des définitions d’objets qui peuvent être utilisés plusieurs fois. Un ResourceDictionary permet aux ressources définies dans un emplacement unique et réutilisées dans une application de Xamarin.Forms. Cet article explique comment créer et consommer un ResourceDictionary et comment fusionner les dictionnaires de ressources."
+description: Ressources XAML sont des définitions d’objets qui peuvent être utilisés plusieurs fois. Un ResourceDictionary permet aux ressources définies dans un emplacement unique et réutilisées dans une application de Xamarin.Forms. Cet article explique comment créer et consommer un ResourceDictionary et comment fusionner les dictionnaires de ressources.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: 9602e4d99e8f5c004fe75ab724bb3746aca46003
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: aa3ae9fed67b6cd7521e5c59edcb54f05cc6b7c5
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="resource-dictionaries"></a>Dictionnaires de ressources
 

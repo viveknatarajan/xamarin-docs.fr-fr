@@ -1,6 +1,6 @@
 ---
-title: "Contrôles XAML Standard (version préliminaire)"
-description: "Comment commencer à Explorer l’aperçu Standard XAML dans Xamarin.Forms"
+title: Contrôles XAML Standard (version préliminaire)
+description: Comment commencer à Explorer l’aperçu Standard XAML dans Xamarin.Forms
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 287E6631-D1C5-46C5-8905-AB53D34E365D
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: b044cb849f9a8e591a8db5907211a55f77d6e45f
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 084da9cbb06c7ec9bbab6ea4dc6a1a7b15ffe692
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-standard-preview-controls"></a>Contrôles XAML Standard (version préliminaire)
 
@@ -38,7 +38,7 @@ Il existe également une liste de contrôles qui ont des nouveaux noms de propri
 
 ## <a name="properties-and-enumerations"></a>Propriétés et des énumérations
 
-|Xamarin.FormsControls avec les propriétés mises à jour|Xamarin.FormsProperty ou Enum|XAML StandardEquivalent|
+|Contrôles de Xamarin.Forms avec les propriétés mises à jour|Propriété de Xamarin.Forms ou enum|Équivalent XAML Standard|
 |--- |--- |--- |
 |Button, Entry, Label, DatePicker, Editor, SearchBar, TimePicker|TextColor|Foreground|
 |VisualElement|BackgroundColor|Arrière-plan *|

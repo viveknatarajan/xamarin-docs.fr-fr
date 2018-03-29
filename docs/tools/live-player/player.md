@@ -1,6 +1,6 @@
 ---
 title: Application Xamarin de lecteur en direct
-description: "Modifier et tester des applications en temps réel sur votre appareil iOS ou Android"
+description: Modifier et tester des applications en temps réel sur votre appareil iOS ou Android
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 6b0d62a9026c1248a66166e75ed41bb0148547a6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d666bb9a7749845265d50b86e46ef78e2036cb69
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-live-player-app"></a>Application Xamarin de lecteur en direct
 
@@ -20,17 +20,19 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="get-the-app"></a>Obtenir l’application
 
-### <a name="xamarin-live-player-for-android"></a>Lecteur de Live Xamarin Player pour Android
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
 Le lecteur Xamarin Live est disponible pour Android depuis Google Play :
 
 [ ![Disponible sur Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 Pour les appareils Android sans Google Play Live Xamarin Player est disponible via [HockeyApp](https://aka.ms/xlp-hockeyapp) distribution. En outre, la version préliminaire génère pour Android peut être installé directement à partir de Google Play en vous inscrivant à la [programme bêta ouvert](https://play.google.com/apps/testing/com.xamarin.live)
 
-### <a name="xamarin-live-player-for-ios"></a>Lecteur Xamarin Live pour iOS
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
 Nous vous encourageons à participer à la [Xamarin Live Player application _iOS aperçu_ ](https://aka.ms/liveplayeralpha) pour profiter d’un accès rapide aux dernières améliorations apportées via TestFlight.
 
-
+-----
 
 ## <a name="using-the-app"></a>À l’aide de l’application
 
@@ -44,7 +46,7 @@ Lorsque vous appuyez sur **paire à Visual Studio**, utilisez l’appareil photo
 
 ![Capture d’écran du scanneur de codes-barres iOS](player-images/scan-iphone-sml.png) ![Capture d’écran du scanneur de codes-barres Android](player-images/scan-android-sml.png)
 
-Si la connexion réussit, le code doit s’exécuter sur l’appareil presque immédiatement (par exemple, l’exemple de calculatrice) :
+Si la connexion réussit, le code doit s’exécuter sur l’appareil presque immédiatement (telles que la [exemple Calculator](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)) :
 
 ![Exemple d’application Calculatrice en cours d’exécution sur l’appareil](player-images/basic-calculator-iphone-sml.png)
 
@@ -52,7 +54,7 @@ Si la connexion réussit, le code doit s’exécuter sur l’appareil presque im
 
 Appuyez sur le bouton informations **(i)** au bas de l’application pour faire apparaître le **Options** menu :
 
-![Capture d’écran du menu options](player-images/options.png)
+[ ![Capture d’écran du menu options](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Journaux
 
@@ -64,13 +66,13 @@ Afficher les journaux pour diagnostiquer les problèmes.
 * Informations de version.
 * Envoyer des commentaires.
 
-![Capture d’écran des paramètres](player-images/settings.png)
+[ ![Capture d’écran des paramètres](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>La gestion des appareils
 
 Pour vous connecter à un appareil pour la première fois, suivez les instructions de [et le programme d’installation](~/tools/live-player/install.md). Vous pouvez associer plusieurs périphériques (par exemple un iOS et une Android) et les gérer via l’IDE.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Dans Visual Studio, choisissez **Outils > Xamarin Live Player > Gérer les appareils...**
 
@@ -84,7 +86,7 @@ Cette fenêtre vous permet d’effectuer les opérations suivantes :
 
 Vous pouvez également accéder à cette fenêtre à partir de la liste des appareils.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Dans Visual Studio pour Mac, choisissez **Outils > Gestion des appareils (Xamarin Player Live)...**
 

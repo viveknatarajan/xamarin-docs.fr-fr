@@ -1,6 +1,6 @@
 ---
 title: Passage des Arguments en XAML
-description: "Cet article décrit à l’aide d’attributs XAML qui peuvent être utilisés pour passer des arguments aux constructeurs par défaut, pour appeler des méthodes de fabrique et pour spécifier le type d’argument générique."
+description: Cet article décrit à l’aide d’attributs XAML qui peuvent être utilisés pour passer des arguments aux constructeurs par défaut, pour appeler des méthodes de fabrique et pour spécifier le type d’argument générique.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2016
-ms.openlocfilehash: a30dd9b33466ac6907322f8c6b586c012452a44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 232f60bb7afca7acf73e63bd7e11e1b6ec47fbd2
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="passing-arguments-in-xaml"></a>Passage des Arguments en XAML
 
@@ -135,7 +135,7 @@ Le [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) stru
 </BoxView>
 ```
 
-Le nombre d’éléments dans le `x:Arguments` balise et les types de ces éléments, doivent correspondre les arguments de la méthode de fabrique appelée. Le [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) méthode de fabrique requiert quatre [ `Int32` ](https://developer.xamarin.com/api/type/System.Int32/) paramètres, qui représentent les valeurs de rouges, verts, bleus et alphanumériques, compris entre 0 et 255. Le [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) méthode de fabrique requiert quatre [ `Double` ](https://developer.xamarin.com/api/type/System.Double/) paramètres, qui représentent les valeurs de teinte, saturation, luminosité et alphanumériques, entre 0 et 1 respectivement. Le [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) requiert de la méthode de fabrique un [ `String` ](https://developer.xamarin.com/api/type/System.String/) qui représente la valeur hexadécimale (A) couleur RVB.
+Le nombre d’éléments dans le `x:Arguments` balise et les types de ces éléments, doivent correspondre les arguments de la méthode de fabrique appelée. Le [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) méthode de fabrique requiert quatre [ `Int32` ](https://docs.microsoft.com/dotnet/api/system.int32) paramètres, qui représentent les valeurs de rouges, verts, bleus et alphanumériques, compris entre 0 et 255. Le [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) méthode de fabrique requiert quatre [ `Double` ](https://docs.microsoft.com/dotnet/api/system.double) paramètres, qui représentent les valeurs de teinte, saturation, luminosité et alphanumériques, entre 0 et 1 respectivement. Le [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) requiert de la méthode de fabrique un [ `String` ](https://docs.microsoft.com/dotnet/api/system.string) qui représente la valeur hexadécimale (A) couleur RVB.
 
 Les captures d’écran suivantes affichent le résultat de l’appel de chaque [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) méthode de fabrique avec les valeurs de l’argument spécifié :
 

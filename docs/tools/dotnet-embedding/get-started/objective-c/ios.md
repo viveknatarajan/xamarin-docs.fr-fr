@@ -1,5 +1,5 @@
 ---
-title: "Prise en main d’e/s"
+title: Prise en main d’e/s
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
@@ -7,20 +7,20 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: c1b21e36d314b79402702f29428f2c337ddc1069
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3921f57847bbe095f01ea9246ffe19f9bc5c5014
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="getting-started-with-ios"></a>Prise en main d’e/s
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Outre les exigences de nos [prise en main de Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guide, vous devez également :
 
-* [Xamarin.iOS 10.11 +](https://jenkins.mono-project.com/view/Xamarin.MaciOS/job/xamarin-macios-builds-master/) à partir de notre _master_ branche.
+* [Xamarin.iOS 10.11](https://www.visualstudio.com/xamarin/) ou version ultérieure
 
 ## <a name="hello-world"></a>Hello World
 
