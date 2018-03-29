@@ -2,7 +2,6 @@
 ## [Live Player](live-player/index.md)
 ### [Installation](live-player/install.md)
 ### [Application Xamarin Live Player](live-player/player.md)
-### [Préversion XAML Live](live-player/live-view.md)
 ### [Exemples](live-player/samples.md)
 ### [Limitations](live-player/limitations.md)
 ### [Résolution des problèmes](live-player/troubleshooting.md)
