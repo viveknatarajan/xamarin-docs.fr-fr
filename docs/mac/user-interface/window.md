@@ -1,6 +1,6 @@
 ---
 title: Windows
-description: "Cet article décrit l’utilisation des fenêtres et des panneaux dans une application Xamarin.Mac. Il décrit la création des fenêtres et des panneaux dans Xcode et Générateur de l’Interface, les charger à partir des plans conceptuels et les fichiers .xib et leur utilisation par programmation."
+description: Cet article décrit l’utilisation des fenêtres et des panneaux dans une application Xamarin.Mac. Il décrit la création des fenêtres et des panneaux dans Xcode et Générateur de l’Interface, les charger à partir des plans conceptuels et les fichiers .xib et leur utilisation par programmation.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4b8de30cecb738fecb13616a3b796c0b4fa5a51a
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows"></a>Windows
 
@@ -20,7 +20,7 @@ _Cet article décrit l’utilisation des fenêtres et des panneaux dans une appl
 
 Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès à la même Windows et panneaux de qui un développeur travaillant dans *Objective-C* et *Xcode* est. Xamarin.Mac s’intègre directement avec Xcode, vous pouvez utiliser de Xcode _Interface Générateur_ pour créer et maintenir les panneaux et Windows (ou éventuellement de les créer directement dans le code C#).
 
-En fonction de son objectif, une application Xamarin.Mac peut présenter une ou plusieurs fenêtres sur l’écran pour gérer et coordonner les informations qu’il s’affiche et fonctionne avec. Les principales fonctions de windows sont :
+En fonction de son objectif, une application Xamarin.Mac peut présenter une ou plusieurs fenêtres sur l’écran pour gérer et coordonner les informations qu’il s’affiche et fonctionne avec. Les principales fonctions d’une fenêtre sont :
 
 1. Pour fournir une zone dans laquelle les contrôles et les vues peuvent être placés et gérées.
 2. Pour accepter et répondre aux événements en réponse à une interaction utilisateur avec le clavier et la souris.
@@ -278,7 +278,7 @@ Appel de la `PerformClose` méthode d’un `NSWindow` simule l’utilisateur cli
 
 Si l’application implémente la `NSWindow`de `WillClose` événement sera déclenché avant la fermeture de la fenêtre. Si l’événement retourne `false`, puis la fenêtre ne sera pas fermée. Si la fenêtre n’a pas un **fermer** bouton ou ne peut pas être fermé pour une raison quelconque, le système d’exploitation émet le son d’alerte.
 
-Exemple :
+Par exemple :
 
 ```csharp
 MyWindow.PerformClose(this);
@@ -299,7 +299,7 @@ Le `Close` méthode diffère sur deux points importants à partir de la `Perform
 1. Il ne tente pas de déclencher la `WillClose` événement.
 2. Il ne simule pas l’utilisateur en cliquant sur le **fermer** bouton en momentanément mettant en surbrillance le bouton.
 
-Exemple :
+Par exemple :
 
 ```csharp
 MyWindow.Close();
@@ -337,7 +337,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>Enregistrer les modifications avant de fermer une fenêtre
 
-Pour surveiller l’utilisateur de fermeture d’une fenêtre et en leur permettant d’enregistrer le contenu modifié au préalable, vous devez créer une sous-classe de `NSWindowDelegate` et remplacez son `WindowShouldClose` (méthode). Exemple :
+Pour surveiller l’utilisateur de fermeture d’une fenêtre et en leur permettant d’enregistrer le contenu modifié au préalable, vous devez créer une sous-classe de `NSWindowDelegate` et remplacez son `WindowShouldClose` (méthode). Par exemple :
 
 ```csharp
 using System;
@@ -511,7 +511,7 @@ Il peut être appelée dans une classe ou une méthode qui doit accéder à la f
 
 Il peut arriver dans lequel vous avez besoin pour accéder à toutes les fenêtres que votre application Xamarin.Mac a d’ouvertes. Par exemple, pour voir si un fichier que l’utilisateur souhaite ouvrir est déjà ouvert dans une fenêtre de sortie.
 
-Le `NSApplication.SharedApplication` conserve un `Windows` propriété qui contient un tableau de toutes les fenêtres ouvertes dans votre application. Vous pouvez itérer sur ce tableau pour accéder à toutes les fenêtres de l’application. Exemple :
+Le `NSApplication.SharedApplication` conserve un `Windows` propriété qui contient un tableau de toutes les fenêtres ouvertes dans votre application. Vous pouvez itérer sur ce tableau pour accéder à toutes les fenêtres de l’application. Par exemple :
 
 ```csharp
 // Is the file already open?
@@ -561,7 +561,7 @@ Pour surveiller les modifications de taille, vous devez d’abord vérifier que 
 
 [![](window-images/resize01.png "L’inspecteur de l’identité")](window-images/resize01.png#lightbox)
 
-Modifiez ensuite la classe de contrôleur de fenêtre personnalisés et de moniteur le `DidResize` événement dans la fenêtre du contrôleur pour être averti des modifications de taille dynamique. Exemple :
+Modifiez ensuite la classe de contrôleur de fenêtre personnalisés et de moniteur le `DidResize` événement dans la fenêtre du contrôleur pour être averti des modifications de taille dynamique. Par exemple :
 
 ```csharp
 public override void WindowDidLoad ()

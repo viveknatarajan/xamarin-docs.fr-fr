@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 246dd135b8a6e8a60bca9ba38e91ca8fd2d43674
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -79,7 +79,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 ## <a name="debug-builds-without-fast-deployment"></a>Versions de débogage sans déploiement rapide
 
-Les versions de débogage  *avec déploiement rapide de*  fonctionnent en copiant le programme `gdbserver` du NDK d’Android dans le répertoire `.__override__` de déploiement rapide. Lorsque le déploiement rapide est désactivé, il est possible que ce répertoire n’existe pas.
+Les versions de débogage *avec déploiement rapide de* fonctionnent en copiant le programme `gdbserver` du NDK d’Android dans le répertoire `.__override__` de déploiement rapide. Lorsque le déploiement rapide est désactivé, il est possible que ce répertoire n’existe pas.
 
 Il y a deux manières d’y remédier :
 
@@ -163,7 +163,7 @@ Une ombre au tableau : la cible MSBuild `_Gdb` va tuer toutes les instances d�
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` ne fonctionne pas
 
-La fonction `mono_pmip` (utile pour que [obtienne des frames de pile managées ](http://www.mono-project.com/Debugging#Debugging_with_GDB)) est exportée à partir de `libmonosgen-2.0.so`, qui n’est actuellement pas déroulé par la cible `_Gdb`. (Ceci fera l’objet d’un correctif dans une version future.)
+La fonction `mono_pmip` (utile pour que [obtienne des frames de pile managées ](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) est exportée à partir de `libmonosgen-2.0.so`, qui n’est actuellement pas déroulé par la cible `_Gdb`. (Ceci fera l’objet d’un correctif dans une version future.)
 
 Pour activer des fonctions d’appel situées dans `libmonosgen-2.0.so`, copiez-les de l’appareil cible vers le répertoire `gdb-symbols` :
 
