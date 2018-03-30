@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
+hide_bc: true
 title: Documentation de Xamarin
-description: "Xamarin vous permet de créer des applications natives pour Android, iOS et macOS en utilisant du code .NET et des interfaces utilisateur spécifiques à la plateforme. Xamarin.Forms vous permet de créer des applications natives, avec du code d’interface utilisateur partagé écrit en C# ou XAML."
+description: Xamarin vous permet de créer des applications natives pour Android, iOS et macOS en utilisant du code .NET et des interfaces utilisateur spécifiques à la plateforme. Xamarin.Forms vous permet de créer des applications natives, avec du code d’interface utilisateur partagé écrit en C# ou XAML.
 featureFlags:
 - clicktale
 ms.openlocfilehash: d73b8165fc1a71fbfe3202f694c4653788ccfb28
