@@ -1,6 +1,6 @@
 ---
-title: "Introduction au développement de jeux avec CocosSharp"
-description: "Cette procédure pas à pas plusieurs parties montre comment créer un simple jeu 2D à l’aide de CocosSharp. Elle traite des concepts de programmation jeu courants tels que des graphiques, d’entrée et physique."
+title: Introduction au développement de jeux avec CocosSharp
+description: Cette procédure pas à pas plusieurs parties montre comment créer un simple jeu 2D à l’aide de CocosSharp. Elle traite des concepts de programmation jeu courants tels que des graphiques, d’entrée et physique.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: BCA99A61-A48D-4207-9A35-4C62F10C9AA5
@@ -9,10 +9,10 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
 ms.openlocfilehash: 5ab6f68aed791dd21516d663367ac5435e92d6cc
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="introduction-to-game-development-with-cocossharp"></a>Introduction au développement de jeux avec CocosSharp
 
