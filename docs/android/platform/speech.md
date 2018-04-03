@@ -1,18 +1,18 @@
 ---
 title: Reconnaissance vocale Android
-description: "Cet article décrit les principes fondamentaux de l’utilisation de l’espace de noms Android.Speech très puissante. Depuis sa création, Android a été en mesure de voix et le résultat sous forme de texte. Il est un processus relativement simple. Pour la synthèse vocale, toutefois, le processus est plus complexe que non seulement le moteur de reconnaissance vocale n’est à prendre en compte, mais également les langues disponibles et installés à partir du système de texte en parole (TTS)."
+description: Cet article décrit les principes fondamentaux de l’utilisation de l’espace de noms Android.Speech très puissante. Depuis sa création, Android a été en mesure de voix et le résultat sous forme de texte. Il est un processus relativement simple. Pour la synthèse vocale, toutefois, le processus est plus complexe que non seulement le moteur de reconnaissance vocale n’est à prendre en compte, mais également les langues disponibles et installés à partir du système de texte en parole (TTS).
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: e8e56afbdf0b68ecc49a89b08b2e67a9715f2aef
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 04/02/2018
+ms.openlocfilehash: acc64fee37e1a6046991355389a09a29e1889993
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="android-speech"></a>Reconnaissance vocale Android
 
@@ -28,7 +28,7 @@ Google fournit au développeur avec un ensemble rich d’API dans l’espace de 
 
 Alors que les installations sont en matière de reconnaissance vocale doit être compréhensible, il existe des limitations en fonction du matériel utilisé. Il est peu probable que l’appareil correctement interprète tout parlée lui dans toutes les langues disponibles.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Il n’existe aucune exigence particulière pour ce guide, autre que votre appareil ayant un microphone et des haut-parleurs.
 
@@ -158,15 +158,21 @@ foreach (var locale in localesAvailable)
 langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
+Ce code appelle [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) pour tester si le module linguistique pour les paramètres régionaux donnés est déjà présent sur l’appareil. Cette méthode retourne un [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), ce qui indique si la langue pour les paramètres régionaux passé est disponible. Si `LanguageAvailableResult` indique que la langue est `NotSupported`, alors il n’existe aucun package vocal (même pour le téléchargement) pour cette langue. Si `LanguageAvailableResult` a la valeur `MissingData`, il est possible de télécharger un nouveau package de langue, comme expliqué ci-dessous à l’étape 4.
+
 ### <a name="step-3---setting-the-speed-and-pitch"></a>Étape 3 : définition de la vitesse et le pas
 
 Android permet à l’utilisateur de modifier le son de la voix en modifiant le `SpeechRate` et `Pitch` (le taux de vitesse et de la tonalité de la voix). Cela va de 0 à 1, contenant des paroles « normal » à 1 pour les deux.
 
 ### <a name="step-4---testing-and-loading-new-languages"></a>Étape 4 : test et le chargement de nouvelles langues
 
-Cette opération est effectuée à l’aide un `Intent` avec le résultat soit interprété dans `OnActivityResult`. Contrairement à l’exemple de reconnaissance vocale de texte utilisé le `RecognizerIntent` comme un `PutExtra` paramètre à la `Intent`, l’installation intention utilise un `Action`.
+Téléchargement d’un nouveau langage est effectué en utilisant un `Intent`. Le résultat de cette intention entraîne la [OnActivityResult](https://developer.xamarin.com/api/member/Android.App.Activity.OnActivityResult/) méthode à appeler. Contrairement à l’exemple de reconnaissance vocale de texte (qui est utilisé le [RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/) comme un `PutExtra` paramètre à la `Intent`), le test et le chargement `Intent`sont `Action`-en fonction :
 
-Il est possible d’installer un nouveau langage à partir de Google en utilisant le code suivant. Le résultat de la `Activity` vérifie si la langue est obligatoire et s’il s’agit, installe le langage suite à une invite pour le téléchargement se produise.
+-   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/) &ndash; démarre une activité à partir de la plate-forme `TextToSpeech` moteur pour vérifier une installation correcte et la disponibilité des ressources de langue sur l’appareil.
+
+-   [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/) &ndash; démarre une activité qui invite l’utilisateur à télécharger les langues nécessaires.
+
+L’exemple de code suivant illustre l’utilisation de ces actions pour vérifier la présence de ressources de langue et de télécharger un nouveau langage de :
 
 ```csharp
 var checkTTSIntent = new Intent();
@@ -183,6 +189,19 @@ protected override void OnActivityResult(int req, Result res, Intent data)
     }
 }
 ```
+
+`TextToSpeech.Engine.ActionCheckTtsData` vérifie la disponibilité des ressources de langue. `OnActivityResult` est appelé lorsque ce test est terminé. Si les ressources de langue doivent être téléchargés, `OnActivityResult` déclenche le `TextToSpeech.Engine.ActionInstallTtsData` pour démarrer une activité qui permet à l’utilisateur à télécharger les langues nécessaires. Remarque que cette `OnActivityResult` implémentation ne vérifie pas la `Result` de code, car, dans cet exemple simplifié, la détermination a déjà été faite que le package de langue doit être téléchargé.
+
+Le `TextToSpeech.Engine.ActionInstallTtsData` action entraîne le **données vocales de Google TTS** activité à être présentés à l’utilisateur de choisir les langues à télécharger :
+
+![Activité des données Google synthèse vocale](speech-images/01-google-tts-voice-data.png)
+
+Par exemple, l’utilisateur peut choisir le Français et cliquez sur l’icône de téléchargement pour télécharger des données vocales Français :
+
+![Exemple de téléchargement de langue Français](speech-images/02-selecting-french.png)
+
+Installation de ces données s’effectue automatiquement une fois le téléchargement terminé.
+
 
 ### <a name="step-5---the-ioninitlistener"></a>Étape 5 - le IOnInitListener
 

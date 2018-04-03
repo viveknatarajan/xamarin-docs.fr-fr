@@ -1,5 +1,5 @@
 ---
-title: Détails d’implémentation de temps de prise en charge totale
+title: Jeu le détail des informations de monnaie
 description: Ce guide décrit les détails d’implémentation dans la partie heure de la prise en charge totale, y compris l’utilisation des mappages de vignette, créer des entités, animation sprites et l’implémentation de collision efficace.
 ms.topic: article
 ms.prod: xamarin
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: 8c33b74af80a14df1626ab39ba8c055a81259194
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="coin-time-implementation-details"></a>Détails d’implémentation de temps de prise en charge totale
+# <a name="coin-time-game-details"></a>Jeu le détail des informations de monnaie
 
 _Ce guide décrit les détails d’implémentation dans la partie heure de la prise en charge totale, y compris l’utilisation des mappages de vignette, créer des entités, animation sprites et l’implémentation de collision efficace._
 
@@ -24,27 +24,27 @@ Heure de la prise en charge totale est un Platforming complète jeu pour iOS et 
 
 Ce guide décrit les détails d’implémentation dans le temps de monnaie, couvre les rubriques suivantes :
 
-- [Utilisation des fichiers de TMX](#Working_with_TMX_Files)
-- [Niveau de chargement](#Level_Loading)
-- [Ajout de nouvelles entités](#Adding_New_Entities)
-- [Entités animées](#Animated_Entities)
+- [Utilisation des fichiers de tmx](#working-with-tmx-files)
+- [Niveau de chargement](#level-loading)
+- [Ajout de nouvelles entités](#adding-new-entities)
+- [Entités animées](#animated-entities)
 
 
-# <a name="content-in-coin-time"></a>Contenu dans le temps de prise en charge totale
+## <a name="content-in-coin-time"></a>Contenu dans le temps de prise en charge totale
 
 Heure de la prise en charge totale est un exemple de projet qui représente la façon dont un projet CocosSharp complet peut être organisé. L’heure de monnaie vise à simplifier l’ajout et la gestion de contenu de la structure. Il utilise **.tmx** fichiers créés par [mosaïque](http://www.mapeditor.org) pour les niveaux et les fichiers XML pour définir des animations. Modification ou ajout de nouveau contenu peut être obtenue avec un minimum d’effort. 
 
 Même si cette approche monnaie fois un projet efficace pour l’apprentissage automatique et d’expérimentation, il reflète également le professional jeux sont effectuées. Ce guide décrit certaines des approches adoptées pour simplifier l’ajout et modification de contenu.
 
 
-# <a name="working-with-tmx-files"></a>Utilisation des fichiers de TMX
+## <a name="working-with-tmx-files"></a>Utilisation des fichiers de tmx
 
 Niveaux de prise en charge totale de temps sont définies en utilisant le format de fichier .tmx, qui est généré par le [mosaïque](http://www.mapeditor.org) éditeur de carte de vignette. Pour obtenir une présentation détaillée de l’utilisation de la mosaïque, consultez la [à l’aide de mosaïque avec guide Cocos aigu](~/graphics-games/cocossharp/tiled.md). 
 
 Chaque niveau est défini dans son propre fichier .tmx contenu dans le **CoinTime/actifs/contenu/niveaux** dossier. Tous les niveaux de prise en charge totale temps partagent un fichier tileset, qui est défini dans le **mastersheet.tsx** fichier. Ce fichier définit les propriétés personnalisées pour chaque vignette, telles que si la vignette a collision solide ou si la vignette doit être remplacée par une instance d’entité. Le fichier mastersheet.tsx permet de propriétés défini une seule fois et l’utilisation sur tous les niveaux. 
 
 
-## <a name="editing-a-tile-map"></a>Modification d’un mappage de vignette
+### <a name="editing-a-tile-map"></a>Modification d’un mappage de vignette
 
 Pour modifier un mappage de vignette, ouvrez le fichier de .tmx dans la mosaïque en double-cliquant sur le fichier .tmx ou en ouvrant il via le menu fichier dans la mosaïque. Heure de la monnaie vignette niveau cartes contiennent trois couches : 
 
@@ -54,7 +54,8 @@ Pour modifier un mappage de vignette, ouvrez le fichier de .tmx dans la mosaïqu
 
 Comme nous allons examiner ultérieurement, le code de chargement de niveau attend que ces trois couches de tous les niveaux de prise en charge totale temps.
 
-### <a name="editing-terrain"></a>Modification de Terrain
+#### <a name="editing-terrain"></a>Modification de terrain
+
 Vignettes peuvent être placés en cliquant dans le **mastersheet** tileset et puis en cliquant sur la vignette mappent. Par exemple, pour peindre terrain nouveau dans un niveau :
 
 1. Sélectionnez la couche de Terrain
@@ -67,7 +68,8 @@ Le coin supérieur gauche de la tileset contient tous les de terrain dans le tem
 
 ![](cointime-images/image3.png "Terrain, qui est pleine, inclut la propriété SolidCollision, comme indiqué dans les propriétés de la vignette sur la gauche de l’écran")
 
-### <a name="editing-entities"></a>Modification des entités
+#### <a name="editing-entities"></a>Modification des entités
+
 Entités peuvent être ajoutées ou supprimées d’un niveau – comme terrain. Le **mastersheet** tileset a toutes les entités placées sur la moitié horizontalement, afin qu’ils ne sont pas forcément visibles sans défilement vers la droite :
 
 ![](cointime-images/image4.png "Le tileset mastersheet a toutes les entités placées sur la moitié horizontalement, afin qu’ils ne sont pas forcément visibles sans défilement vers la droite")
@@ -85,7 +87,7 @@ Une fois que le fichier a été modifié et enregistré, les modifications seron
 ![](cointime-images/image7.png "Une fois que le fichier a été modifié et enregistré, les modifications seront affichent automatiquement si le projet est généré et exécuté")
 
 
-## <a name="adding-new-levels"></a>Ajout de nouveaux niveaux
+### <a name="adding-new-levels"></a>Ajout de nouveaux niveaux
 
 Le processus d’ajout des niveaux au moment de la prise en charge totale nécessite aucune modification de code et seuls quelques petites modifications au projet. Pour ajouter un nouveau niveau :
 
@@ -105,7 +107,7 @@ Le nouveau niveau doit apparaître dans l’écran Sélectionnez niveau en tant 
 ![](cointime-images/image10.png "Le nouveau niveau doit apparaître dans l’écran de niveau sélectionnez comme début de noms de fichiers au niveau niveau 9 à 0, mais les boutons niveau commencent par le numéro 1")
 
 
-# <a name="level-loading"></a>Niveau de chargement
+## <a name="level-loading"></a>Niveau de chargement
 
 Comme indiqué précédemment, les nouveaux niveaux ne nécessitent aucune modification dans le code : le jeu détecte automatiquement les niveaux s’ils sont nommés correctement et ajoutés à la **niveaux** dossier avec l’action de génération correcte (**BundleResource**ou **AndroidAsset**).
 
@@ -201,7 +203,7 @@ private void GoToLevel(int levelNumber)
 Ensuite, nous allons examiner les méthodes appelées dans `GoToLevel`.
 
 
-## <a name="loadlevel"></a>LoadLevel
+### <a name="loadlevel"></a>LoadLevel
 
 Le `LoadLevel` méthode est responsable du chargement du fichier .tmx et en l’ajoutant à la `GameScene`. Cette méthode ne crée pas de tous les objets interactifs telles que la collision ou entités : il crée simplement les éléments visuels pour le niveau, également appelé le *environnement*.
 
@@ -227,7 +229,7 @@ Le `CCTileMap` constructeur accepte un nom de fichier est créé en utilisant le
 Actuellement, CocosSharp n’autorise pas la réorganisation des couches sans supprimer puis ajouter de nouveau à leur parent `CCScene` (qui est le `GameScene` dans ce cas), de sorte que les deux dernières lignes de la méthode sont requis pour réorganiser les couches.
 
 
-## <a name="createcollision"></a>CreateCollision
+### <a name="createcollision"></a>CreateCollision
 
 Le `CreateCollision` méthode constructions un `LevelCollision` instance qui est utilisée pour effectuer *collision solide* entre le lecteur et l’environnement.
 
@@ -245,7 +247,7 @@ Sans cette collision, le lecteur est comprises par le niveau et le jeu serait lu
 Collision dans le temps de prise en charge totale peut être ajoutée sans code supplémentaire : seules des modifications aux fichiers en mosaïque. 
 
 
-## <a name="processtileproperties"></a>ProcessTileProperties
+### <a name="processtileproperties"></a>ProcessTileProperties
 
 Une fois qu’un niveau est chargé et la collision est créée, `ProcessTileProperties` est appelée pour appliquer une logique basée sur les propriétés des mosaïques. Heure de la prise en charge totale inclut un `PropertyLocation` struct pour définir des propriétés et les coordonnées de la vignette avec ces propriétés :
 
@@ -343,7 +345,7 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 ```
 
 
-# <a name="adding-new-entities"></a>Ajout de nouvelles entités
+## <a name="adding-new-entities"></a>Ajout de nouvelles entités
 
 Heure de la prise en charge totale utilise le modèle d’entité pour les objets du jeu (qui est décrite dans le [guident des entités dans CocosSharp](~/graphics-games/cocossharp/entities.md)). Héritent de toutes les entités `CCNode`, ce qui signifie qu’ils peuvent être ajoutés en tant qu’enfants de le `gameplayLayer`.
 
@@ -352,19 +354,19 @@ Chaque type d’entité est également référencé directement par le biais d�
 Le code existant fournit plusieurs types d’entités en tant qu’exemples montrant comment créer des entités. Les étapes suivantes peuvent être utilisés pour créer une nouvelle entité :
 
 
-## <a name="1---define-a-new-class-using-the-entity-pattern"></a>1 - définir une nouvelle classe à l’aide du modèle d’entité
+### <a name="1---define-a-new-class-using-the-entity-pattern"></a>1 - définir une nouvelle classe à l’aide du modèle d’entité
 
 La seule condition requise pour la création d’une entité consiste à créer une classe qui hérite de `CCNode`. La plupart des entités ont certaines visuel, comme un `CCSprite`, qui doit être ajouté en tant qu’enfant de l’entité dans son constructeur.
 
-CoinTime fournit la `AnimatedSpriteEntity` classe qui simplifie la création d’entités animées. Animations seront abordées plus en détail dans les [section animées des entités](#Animated_Entities).
+CoinTime fournit la `AnimatedSpriteEntity` classe qui simplifie la création d’entités animées. Animations seront abordées plus en détail dans les [section animées des entités](#animated-entities).
 
 
-## <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2 – ajouter une nouvelle entrée à l’instruction switch TryCreateEntity
+### <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2 – ajouter une nouvelle entrée à l’instruction switch TryCreateEntity
 
 Les instances de la nouvelle entité doivent être instanciés dans le `TryCreateEntity`. Si l’entité exige une logique de chaque image comme collision, AI ou lit l’entrée, puis le `GameScene` doit conserver une référence à l’objet. Si plusieurs instances sont nécessaires (comme `Coin` ou `Enemy` instances), puis une nouvelle `List` doivent être ajoutés à la `GameScene` classe.
 
 
-## <a name="3--modify-tile-properties-for-the-new-entity"></a>3 : modifier les propriétés de vignette pour la nouvelle entité
+### <a name="3--modify-tile-properties-for-the-new-entity"></a>3 : modifier les propriétés de vignette pour la nouvelle entité
 
 Une fois que le code prend en charge la création de la nouvelle entité, la nouvelle entité doit être ajouté à la tileset. Le tileset peut être modifiée en ouvrant n’importe quel niveau `.tmx` fichier. 
 
@@ -389,7 +391,7 @@ Le tileset doit remplacer existants **mastersheet.tsx** tileset :
 ![](cointime-images/image15.png "HE tileset doit remplacer le tileset mastersheet.tsx existant")
 
 
-# <a name="entity-tile-removal"></a>Suppression de mosaïque d’entité
+## <a name="entity-tile-removal"></a>Suppression de mosaïque d’entité
 
 Lorsqu’une carte de la vignette est chargée dans un jeu, les vignettes individuels sont des objets statiques. Étant donné que les entités nécessitent un comportement personnalisé comme le déplacement des, code au moment de la prise en charge totale supprime les vignettes lorsque les entités sont créées.
 
@@ -453,7 +455,7 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="entity-offsets"></a>Décalages d’entité
+## <a name="entity-offsets"></a>Décalages d’entité
 
 Entités créées à partir de vignettes sont placées en alignant le centre de l’entité avec le centre de la vignette. Entités plus volumineuses, telles que `Door`, utilisez des propriétés supplémentaires et la logique doit être placé correctement. 
 
@@ -493,12 +495,12 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="animated-entities"></a>Entités animées
+## <a name="animated-entities"></a>Entités animées
 
 Heure de la prise en charge totale inclut plusieurs entités animées. Le `Player` et `Enemy` entités lire les animations de parcours et `Door` entité lit une animation d’ouverture, une fois que toutes les pièces ont été collectés.
 
 
-## <a name="achx-files"></a>fichiers .achx
+### <a name="achx-files"></a>fichiers .achx
 
 Prise en charge totale des animations heure sont définies dans les fichiers de .achx. Chaque animation est définie entre `AnimationChain` balises, comme indiqué dans l’animation suivante définie dans **propanimations.achx**:
 
@@ -533,7 +535,7 @@ Le `FrameLength` propriété définit le nombre de secondes pendant lesquelles u
 Toutes les autres propriétés dans le fichier .achx AnimationChain sont ignorées par heure de la prise en charge totale.
 
 
-## <a name="animatedspriteentity"></a>AnimatedSpriteEntity
+### <a name="animatedspriteentity"></a>AnimatedSpriteEntity
 
 Logique d’animation est contenue dans le `AnimatedSpriteEntity` (classe), qui sert de classe de base pour la plupart des entités utilisées dans le `GameScene`. Il fournit les fonctionnalités suivantes :
 
@@ -562,10 +564,10 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 ```
 
 
-# <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif
 
 Ce guide couvre les détails d’implémentation de l’heure de la prise en charge totale. Heure de la prise en charge totale est créée pour un jeu complet, mais est également un projet qui peut être modifié et développé. Lecteurs sont encouragés à consacrer du temps apporté des modifications à des niveaux, ajout de nouveaux niveaux et la création de nouvelles entités pour mieux comprendre comment l’heure de la prise en charge totale est implémentée.
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Projet de jeu (exemple)](https://developer.xamarin.com/samples/mobile/CoinTime/)

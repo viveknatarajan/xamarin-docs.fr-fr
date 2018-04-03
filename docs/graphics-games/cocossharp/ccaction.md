@@ -1,6 +1,6 @@
 ---
 title: Animation avec CCAction
-description: "La classe CCAction simplifie l’ajout d’animations aux jeux de CocosSharp. Ces animations peuvent être utilisées pour implémenter des fonctionnalités ou ajouter polonais."
+description: La classe CCAction simplifie l’ajout d’animations aux jeux de CocosSharp. Ces animations peuvent être utilisées pour implémenter des fonctionnalités ou ajouter polonais.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74DBD02A-6F10-4104-A61B-08CB49B733FB
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 2852cf0e141e8239cee8dbe580576f4571c919a3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e64789f4e86dbcd47fc760fd9d4d7fb61c76121
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="animating-with-ccaction"></a>Animation avec CCAction
 
@@ -23,7 +23,7 @@ _La classe CCAction simplifie l’ajout d’animations aux jeux de CocosSharp. C
 Ce guide utilise un projet appelé **ActionProject** qui [peut être téléchargé ici](https://developer.xamarin.com/samples/mobile/CCAction). Ce guide utilise les `CCDrawNode` (classe), qui est abordée dans le [Geometry de dessin avec CCDrawNode](~/graphics-games/cocossharp/ccdrawnode.md) guide.
 
 
-# <a name="running-the-actionproject"></a>Le ActionProject en cours d’exécution
+## <a name="running-the-actionproject"></a>Le ActionProject en cours d’exécution
 
 **ActionProject** est une solution CocosSharp qui peut être générée pour iOS et Android. Il sert à la fois comme un exemple de code pour savoir comment utiliser le `CCAction` classe et comme une démonstration en temps réel de commun `CCAction` implémentations.
 
@@ -39,8 +39,7 @@ En cliquant sur les étiquettes à gauche change le type de `CCAction` est effec
 
 ![](ccaction-images/image3.gif "En cliquant sur l’étiquette de la Position de passer en revue les différentes valeurs qui peuvent être modifiés.")
 
-
-# <a name="common-variable-changing-ccactions"></a>CCActions communes de modification de Variable 
+## <a name="common-variable-changing-ccaction-classes"></a>Classes de CCAction de modification de variable communes
 
 Le **ActionProject** utilise les éléments suivants `CCAction`-héritage de classes, qui font partie du CocosSharp :
 
@@ -94,13 +93,13 @@ Chacun des types répertoriés ci-dessus se termine par le mot *à* ce qui signi
 Chaque classe « To » possède également une version « En », qui ajoute la valeur d’argument à la valeur actuelle sur le `CCNode`. Par exemple, en créant un `CCMoveBy` avec une position x = 100 et Y = 200 entraîne la `CCNode` instance en cours de déplacement pour les unités de droite 100 et 200 unités à partir de la position qu’il était au démarrage de l’action.
 
 
-# <a name="easing-actions"></a>Accélération des Actions
+## <a name="easing-actions"></a>Accélération des actions
 
 Par défaut, effectue les actions de modification à la variable *utilisant une interpolation linéaire* : l’action se déplace vers la valeur souhaitée à un rythme constant. Si l’interpolation *position* linéairement, l’objet en déplacement immédiatement démarre et arrête le début et la fin de l’action, et sa vitesse reste constante pendant l’exécution de l’action. 
 
 Interpolation non linéaire est moins glacial et ajoute un élément du polonais, donc CocosSharp offre une variété d’accélération des actions qui peuvent être utilisées pour modifier les actions de modification de variable.
 
-Dans le **ActionProject** exemple, nous pouvons basculer entre ces types d’accélération d’actions en cliquant sur le deuxième contrôle label (qui utilise par défaut  **<None>** ) :
+Dans le **ActionProject** exemple, nous pouvons basculer entre ces types d’accélération d’actions en cliquant sur le deuxième contrôle label (qui utilise par défaut **<None>**) :
 
 ![](ccaction-images/image4.gif "L’utilisateur peut basculer entre ces types d’accélération d’actions en cliquant sur le deuxième contrôle label")
 
@@ -128,35 +127,35 @@ Comme indiqué par l’application, l’accélération même exact peut être ap
 ![](ccaction-images/image5.gif "L’accélération même exact peut être appliqué aux autres actions de paramètre de variable comme CCRotateTo")
 
 
-# <a name="easing-in-out-and-inout"></a>Accélération In, Out et InOut
+## <a name="easing-in-out-and-inout"></a>Accélération In, Out et InOut
 
 Toutes les actions d’accélération avoir `In`, `Out`, ou `InOut` ajouté pour le type d’accélération. Ces termes font référence à lorsque l’accélération est appliquée : `In` signifie accélération sera appliquée au début, `Out` signifie à la fin, et `InOut` signifie à la fois au début et fin.
 
 Un `In` accélération action aura un impact sur la façon d’une variable est appliquée dans l’ensemble de l’interpolation entier (à la fois au début et à la fin), mais en général les caractéristiques plus identifiables de l’action d’accélération sont lieu au début. De même, `Out` actions accélération sont caractérisent par leur comportement à la fin de l’interpolation. Par exemple, `CCEaseBounceOut` aboutit à un objet rebondissent pas à la fin de l’action.
 
 
-## <a name="out"></a>Out
+### <a name="out"></a>Out
 
 `Out` accélération généralement applique les modifications majeures à la fin de l’interpolation. Par exemple, `CCEaseExponentialOut` ralentit le taux de variation de la variable de modification en approchant de la valeur cible :
 
 ![](ccaction-images/image6.gif "CCEaseExponentialOut ralentit le taux de variation de la variable de modification en approchant de la valeur cible")
 
 
-## <a name="in"></a>Vers l'avant
+### <a name="in"></a>Vers l'avant
 
 `In` en règle générale d’accélération s’applique le changement le plus notable au début de l’interpolation. Par exemple, `CCEaseExponentialIn` déplacera plus lentement au début de l’action :
 
 ![](ccaction-images/image7.gif "CCEaseExponentialIn déplacera plus lentement au début de l’action")
 
 
-## <a name="inout"></a>InOut
+### <a name="inout"></a>InOut
 
 `InOut` s’applique généralement les modifications majeures à la fois au début et fin. `InOut` l’accélération est habituellement symétrique. Par exemple, `CCEaseExponentialInOut` déplacera lentement au début et à la fin de l’action :
 
 ![](ccaction-images/image8.gif "CCEaseExponentialInOut déplacera lentement au début et à la fin de l’action")
 
 
-# <a name="implementing-a-custom-ccaction"></a>Implémentation d’une CCAction personnalisée
+## <a name="implementing-a-custom-ccaction"></a>Implémentation d’une CCAction personnalisée
 
 Toutes les classes que nous avons présentés jusqu'à présent sont inclus dans CocosSharp pour fournir des fonctionnalités communes. Personnalisé `CCAction` implémentations peuvent fournir davantage de flexibilité. Par exemple, un `CCAction` qui contrôle le taux de remplie d’une barre de l’expérience peut être utilisé afin que la barre de l’expérience s’agrandit normalement chaque fois que l’utilisateur reçoit l’expérience.
 
@@ -226,7 +225,7 @@ La LineWidthAction peut être combinée avec une action d’accélération pour 
 ![](ccaction-images/image9.gif "La LineWidthAction peut être combinée avec une action d’accélération pour modifier la largeur de ligne de différentes manières, comme indiqué dans cette animation")
 
 
-## <a name="interpolation-and-the-update-method"></a>Interpolation et la méthode de mise à jour
+### <a name="interpolation-and-the-update-method"></a>Interpolation et la méthode de mise à jour
 
 La logique uniquement, à l’exception de stocker des valeurs dans les classes qui précède, se situe à la `LineWidthState.Update` (méthode). Le `startWidth` variable stocke la largeur de la cible de `LineNode` au début de l’action et le `deltaWidth` variable stocke la valeur de la quantité change au cours de l’action.
 
@@ -247,11 +246,11 @@ castedTarget.Width = startWidth + deltaWidth * 1;
 Le `time` valeur sera généralement comprise entre 0 et 1 - mais pas toujours - et `Update` implémentations ne considérez pas ces limites. Certaines méthodes d’accélération (tel que `CCEaseBackIn` et `CCEaseBackOut`) fournit une valeur d’heure en dehors de la plage de 0 à 1.
 
 
-# <a name="conclusion"></a>Conclusion
+## <a name="conclusion"></a>Conclusion
 
 Interpolation et accélération sont un élément essentiel de la création d’un jeu poli, particulièrement lors de la création d’interfaces utilisateur. Ce guide couvre l’utilisation de `CCActions` pour l’interpolation des valeurs standard telles que la rotation et de position, ainsi que des valeurs personnalisées. Le `LineWidthState` et `LineWidthAction` classes montrent comment implémenter une action personnalisée.
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [CCAction](https://developer.xamarin.com/api/type/CocosSharp.CCAction)
 - [CCMoveTo](https://developer.xamarin.com/api/type/CocosSharp.CCMoveTo)

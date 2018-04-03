@@ -1,6 +1,6 @@
 ---
 title: Affichage de liste
-description: "Présenter vos données dans les listes et attrayantes et interactives."
+description: Présenter vos données dans les listes et attrayantes et interactives.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 3c12ccd5dc77dd7dff9d4eab07eeaf04c6b2c161
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 494c69700ed0b12b4c9151b9a1b04ea091ebfa57
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="listview"></a>Affichage de liste
 
@@ -40,7 +40,7 @@ ListView a un nombre de composants disponibles pour tester les fonctionnalités 
 
 ![](images/grouping-depth.png "ListView avec des données regroupées")
 
-- **[Cellules](customizing-cell-appearance.md)**  &ndash; les données dans un ListView sont présentées dans les cellules. Chaque cellule correspond à une ligne de données. Il n’y des arebuilt dans les cellules à sélectionner, ou vous pouvez définir votre propre cellule personnalisé. Les cellules d’intégrés et personnalisés peuvent être utilisés/définis dans XAML ou du code.
+- **[Cellules](customizing-cell-appearance.md)**  &ndash; les données dans un ListView sont présentées dans les cellules. Chaque cellule correspond à une ligne de données. Intégrées cellules sélectionnables, ou vous pouvez définir votre propre cellule personnalisé. Les cellules d’intégrés et personnalisés peuvent être utilisés/définis dans XAML ou du code.
   - **[Intégrés](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; générés dans des cellules, en particulier TextCell et ImageCell, peut être très utile pour les performances, car ils correspondent à des contrôles natifs sur chaque plateforme.
     - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; affiche une chaîne de texte, éventuellement avec texte détaillé. Texte de détail est rendu en tant qu’une deuxième ligne dans une police plus petite avec une couleur accentuée.
     - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; affiche une image avec du texte. Apparaît sous la forme d’un TextCell avec une image sur la gauche.

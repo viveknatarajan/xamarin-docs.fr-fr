@@ -1,6 +1,6 @@
 ---
 title: La transformation de traduction
-description: "Découvrez comment utiliser la transformation de traduction décaler SkiaSharp graphics"
+description: Découvrez comment utiliser la transformation de traduction décaler SkiaSharp graphics
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: cac2479af2778af6043a85583f9d7b518748d7da
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 771fde301a8585f25d7d83c7bf0451cf6e0cf8e9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="the-translate-transform"></a>La transformation de traduction
 
@@ -36,7 +36,7 @@ Ces arguments peuvent être négatifs. Une seconde [ `Translate` ](https://devel
 public void Translate (SKPoint point)
 ```
 
-Le **accumulées traduire** page de la [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) exemple de programme montre que plusieurs appels de la `Translate` méthode sont cumulatifs. Le [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe affiche 20 versions du même rectangle, chacun d’eux décalage par rapport au rectangle précédent juste assez afin qu’ils étirement le long de la diagonale. Voici le `PaintSurface` Gestionnaire d’événements :
+Le **accumulées traduire** page de la [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemple de programme montre que plusieurs appels de la `Translate` méthode sont cumulatifs. Le [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe affiche 20 versions du même rectangle, chacun d’eux décalage par rapport au rectangle précédent juste assez afin qu’ils étirement le long de la diagonale. Voici le `PaintSurface` Gestionnaire d’événements :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -303,4 +303,4 @@ Notez que l’étoile conserve la même orientation comme il tourne autour du ce
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

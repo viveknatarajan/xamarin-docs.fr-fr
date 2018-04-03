@@ -1,6 +1,6 @@
 ---
 title: Animation de base
-description: "Découvrez comment animer vos graphiques SkiaSharp"
+description: Découvrez comment animer vos graphiques SkiaSharp
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 347ecf72356915714200835263e38519c1ad8a13
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d9eea30e1d9e55101975e59ba9d259fba909ca0f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="basic-animation"></a>Animation de base
 
@@ -22,7 +22,7 @@ Vous pouvez animer graphics SkiaSharp dans Xamarin.Forms en provoquant la `Paint
 
 ![](animation-images/animationexample.png "Plusieurs cercles concentriques apparemment développement à partir du centre")
 
-Le **impulsions une Ellipse** page dans le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programme anime deux axes d’une ellipse afin qu’elle semble être impulsions, et vous pouvez même contrôler les taux de cette pulsation :
+Le **impulsions une Ellipse** page dans le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme anime deux axes d’une ellipse afin qu’elle semble être impulsions, et vous pouvez même contrôler les taux de cette pulsation :
 
 
 Le [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) fichier instancie un Xamarin.Forms `Slider` et un `Label` pour afficher la valeur actuelle du curseur. Il s’agit d’une méthode courante pour intégrer un `SKCanvasView` avec d’autres vues Xamarin.Forms :
@@ -251,4 +251,4 @@ Le résultat est que l’image semble identiques lorsque `t` est égal à 0, com
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

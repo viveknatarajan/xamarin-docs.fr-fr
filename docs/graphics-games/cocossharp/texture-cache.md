@@ -1,6 +1,6 @@
 ---
-title: "Mise en cache de texture à l’aide de CCTextureCache"
-description: "Classe de CCTextureCache de CocosSharp fournit un moyen standard de les organiser, de cache et le déchargement de contenu. Il est particulièrement utile pour les jeux de grande taille qui peut ne pas correspondre entièrement en mémoire vive, ce qui simplifie le processus de regroupement et à la suppression des textures."
+title: Mise en cache de texture à l’aide de CCTextureCache
+description: Classe de CCTextureCache de CocosSharp fournit un moyen standard de les organiser, de cache et le déchargement de contenu. Il est particulièrement utile pour les jeux de grande taille qui peut ne pas correspondre entièrement en mémoire vive, ce qui simplifie le processus de regroupement et à la suppression des textures.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 365e343a55a208b63f4dc52999e8857b5f0ec1f4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 350a454bc94c796b34cfeeb319481919b18d334f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="texture-caching-using-cctexturecache"></a>Mise en cache de texture à l’aide de CCTextureCache
+# <a name="texture-caching-using-cctexturecache"></a>La mise en cache de texture à l’aide de CCTextureCache
 
 _Classe de CCTextureCache de CocosSharp fournit un moyen standard de les organiser, de cache et le déchargement de contenu. Il est particulièrement utile pour les jeux de grande taille qui peut ne pas correspondre entièrement en mémoire vive, ce qui simplifie le processus de regroupement et à la suppression des textures._
 
@@ -29,7 +29,7 @@ Ce guide couvre le `CCTextureCache` et pourquoi il est important pour le dévelo
  - Suppression des textures
 
 
-# <a name="why-texture-caching-matters"></a>Pourquoi questions mise en cache de Texture
+## <a name="why-texture-caching-matters"></a>Pourquoi questions mise en cache de texture
 
 La mise en cache de texture d’est un facteur important pour le développement de jeux lors du chargement de la texture est une opération chronophage et textures nécessitent une quantité importante de mémoire RAM lors de l’exécution.
 
@@ -38,7 +38,7 @@ Comme avec toute opération de fichier, le chargement des textures à partir du 
 Comme indiqué ci-dessus, les textures occupent également une grande quantité de mémoire d’exécution. Par exemple, une image d’arrière-plan à la résolution d’un iPhone 6 (1344 x 750) occuperait 4 mégaoctets de mémoire RAM – même si le fichier PNG est de taille uniquement quelques kilo-octets. La mise en cache de texture fournit un moyen de partager des références de texture dans une application et également un moyen simple de décharger tout le contenu lors de la transition entre les différents États de jeu.
 
 
-# <a name="texture-lifespan"></a>Durée de vie de texture
+## <a name="texture-lifespan"></a>Durée de vie de texture
 
 CocosSharp textures peuvent être conservées en mémoire pendant toute la durée d’exécution d’une application, ou ils peuvent être courte durées. Utilisation d’une application doit supprimer pour réduire la mémoire textures lorsque vous n’avez plus besoin. Bien entendu, cela signifie que les textures peuvent être supprimés et chargés à nouveau ultérieurement, ce qui peut augmenter le temps de chargement ou dégrader les performances pendant le chargement. 
 
@@ -58,7 +58,7 @@ Si le jeu est grand suffisamment il charge finalement suffisamment textures pour
 Le diagramme ci-dessus indique que l’utilisation de mémoire de texture peut être réduite en déchargeant, mais cette opération peut nécessiter le temps de chargement supplémentaires si un lecteur décide d’un niveau de la relecture. Il est également important de noter que les textures UITexture et MainCharacter sont chargés et déchargés jamais. Cela implique que ces textures sont nécessaires dans tous les niveaux, afin qu’ils sont toujours conservés en mémoire. 
 
 
-# <a name="using-sharedtexturecache"></a>À l’aide de SharedTextureCache
+## <a name="using-sharedtexturecache"></a>À l’aide de SharedTextureCache
 
 CocosSharp met automatiquement en cache les textures lors de leur chargement par le biais du `CCSprite` constructeur. Par exemple le code suivant crée uniquement une instance de la texture :
 
@@ -84,7 +84,7 @@ CCSprite starSprite = new CCSprite ();
 `AddImage` vérifie si le fichier d’argument (dans ce cas `star.png`) a déjà été chargé. Dans ce cas, l’instance mise en cache est retourné. Si pas puis il est chargé à partir du système de fichiers, et une référence à la texture est stockée en interne pour ultérieures `AddImage` appels. En d’autres termes la `star.png` image est chargée uniquement une seule fois, et les appels suivants ne nécessitent aucun accès au disque supplémentaires ou la mémoire de texture supplémentaires.
 
 
-# <a name="lazy-loading-vs-pre-loading-with-addimage"></a>Vs de chargement différées. Préchargement avec AddImage
+## <a name="lazy-loading-vs-pre-loading-with-addimage"></a>Chargement et précharge avec AddImage différé
 
 `AddImage` permet à du code à écrire la même que la texture demandée est déjà chargée ou non. Cela signifie que le contenu ne sera pas chargé tant qu’il est nécessaire ; Toutefois, cela peut également entraîner des problèmes de performances lors de l’exécution en raison du chargement de contenu imprévisible.
 
@@ -114,12 +114,12 @@ void PreLoadImages()
 Cette précharge peut en mémoire perdu et peut augmenter le temps de démarrage. Par exemple, le lecteur ne peut en réalité jamais obtenir une tension représentée par le `powerup3.png` de texture, afin qu’il sera chargé inutilement. Bien entendu, cela peut être un coût nécessaire pour payer pour éviter un pop potentiel dans le jeu, il est généralement préférable de préchargement contenu si elle tient dans la mémoire RAM.
 
 
-# <a name="disposing-textures"></a>Suppression des Textures
+## <a name="disposing-textures"></a>Suppression des textures
 
 Si un jeu ne requiert pas plus de mémoire de texture qu’est disponible sur l’appareil spec minimale textures n’avez pas besoin d’être supprimés. En revanche, jeux supérieure peut-être afin de libérer la mémoire de texture à libérer de l’espace pour le nouveau contenu. Par exemple, un jeu peut utiliser une grande quantité de mémoire de stockage des textures pour un environnement. Si l’environnement est utilisé uniquement dans un niveau spécifique, il doit avoir déchargé lorsque le niveau se termine.
 
 
-## <a name="disposing-a-single-texture"></a>Suppression d’une Texture unique
+### <a name="disposing-a-single-texture"></a>Suppression d’une texture unique
 
 La suppression d’une texture unique nécessite tout d’abord appeler la `Dispose` (méthode), puis la suppression manuelle de la `CCTextureCache`.
 
@@ -187,11 +187,11 @@ La méthode Dispose supprimera toutes les textures internes, en supprimant la m�
 
 
 
-# <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif
 
 Ce guide montre comment utiliser la `CCTextureCache` classe pour les performances d’utilisation et d’exécution de la mémoire de solde. `CCTexturCache.SharedTextureCache` Vous pouvez explicitement ou implicitement utilisée pour charger et mettre en cache les textures pour la durée de vie de l’application, alors que `CCTextureCache` instances peuvent être utilisées pour décharger les textures pour réduire l’utilisation de mémoire.
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [https://github.com/mono/CocosSharp](https://github.com/mono/CocosSharp)
 - [/api/type/CocosSharp.CCTextureCache/](https://developer.xamarin.com/api/type/CocosSharp.CCTextureCache/)

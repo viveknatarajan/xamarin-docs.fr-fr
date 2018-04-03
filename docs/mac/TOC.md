@@ -53,6 +53,7 @@
 #### [Charger dans le Mac App Store](deploy-test/publishing-to-the-app-store/uploading.md)
 ## [Concepts avancés et éléments internes](internals/index.md)
 ### [AOA](internals/aot.md)
+### [Assemblys disponibles](~/cross-platform/internals/available-assemblies.md?context=xamarin/mac)
 ### [Architecture Mac](internals/architecture.md)
 ### [Fonctionnement de Xamarin.Mac](internals/how-it-works.md)
 ### [Frameworks](internals/frameworks.md)

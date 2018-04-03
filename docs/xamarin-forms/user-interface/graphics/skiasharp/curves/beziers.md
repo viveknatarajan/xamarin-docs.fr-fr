@@ -1,6 +1,6 @@
 ---
-title: "Trois Types de courbes Bézier"
-description: "Découvrir comment utiliser SkiaSharp pour restituer des courbes de Bézier cubiques, quadratiques et coniques"
+title: Trois Types de courbes Bézier
+description: Découvrir comment utiliser SkiaSharp pour restituer des courbes de Bézier cubiques, quadratiques et coniques
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: cea9951f22fbcf0ff07a8e2244a9bc00819ada24
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Trois Types de courbes Bézier
 
@@ -553,4 +553,4 @@ Il est dans ce cas regrettable qui `ConicTo` ne prend pas en charge les pondéra
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

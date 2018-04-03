@@ -1,6 +1,6 @@
 ---
-title: "Gestion de plusieurs résolutions dans CocosSharp"
-description: "Ce guide montre comment travailler avec CocosSharp pour développer des jeux qui s’affiche correctement sur les appareils des résolutions différentes."
+title: Gestion de plusieurs résolutions dans CocosSharp
+description: Ce guide montre comment travailler avec CocosSharp pour développer des jeux qui s’affiche correctement sur les appareils des résolutions différentes.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 9b76376bdbcf10bf35768cfdb79b6823388e303c
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 772b0d6408a5ba438c5eb0be04a9b549e29b40f9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Gestion de plusieurs résolutions dans CocosSharp
 
@@ -32,7 +32,7 @@ Le comportement de résolution par défaut de CocosSharp est à faire correspond
 Ce document explique comment utiliser CocosSharp pour résoudre le problème indiqué dans le tableau ci-dessus. Autrement dit, nous aborderons comment rendre n’importe quel appareil comme indiqué dans la première ligne, quelle que soit la résolution d’écran de rendu.
 
 
-# <a name="working-with-setdesignresolutionsize"></a>Utilisation de SetDesignResolutionSize
+## <a name="working-with-setdesignresolutionsize"></a>Utilisation de SetDesignResolutionSize
 
 Le `CCScene` classe est généralement utilisée en tant que le conteneur racine pour tous les objets visuels, mais il fournit également une méthode statique nommée `SetDesignResolutionSize` pour spécifier la taille par défaut pour toutes les séquences. En d’autres termes `SetDesignResolutionSize` méthode permet aux développeurs de créer des jeux qui seront affichent correctement sur plusieurs résolutions de matériel. Les modèles de projet CocosSharp utilisent cette méthode pour définir la taille par défaut du projet à 1024 x 768, comme indiqué dans le code suivant :
 
@@ -77,7 +77,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-# <a name="ccsceneresolutionpolicy"></a>CCSceneResolutionPolicy
+## <a name="ccsceneresolutionpolicy"></a>CCSceneResolutionPolicy
 
 `SetDesignResolutionSize` permet de spécifier la manière dont la fenêtre de jeu ajuste la résolution souhaitée. Les sections suivantes expliquent comment une image de 500 x 500 est affichée avec différents `CCSceneResolutonPolicy` valeurs passées à la `SetDesignResolutionSize` (méthode). Les valeurs suivantes sont fournies par le `CCSceneResolutionPolicy` enum :
 
@@ -93,7 +93,7 @@ Captures d’écran de tous les produits résolutions iPhone 4 s (960 x 640) en 
 ![](resolutions-images/image4.png "Captures d’écran de tous les produits à résolution iPhone 4 s 960 x 640 en mode paysage et utilisent cette image")
 
 
-## <a name="ccsceneresolutionpolicyshowall"></a>CCSceneResolutionPolicy.ShowAll
+### <a name="ccsceneresolutionpolicyshowall"></a>CCSceneResolutionPolicy.ShowAll
 
 `ShowAll` Spécifie que la résolution du jeu entier sera visible à l’écran, mais peut afficher *cadre* (noires) pour ajuster les proportions différentes. Cette stratégie est généralement utilisée comme elle garantit que l’affichage de jeu entier sera affiché à l’écran sans aucune distorsion.
 
@@ -109,7 +109,7 @@ Cadre est visible à gauche et à droite de l’image pour prendre en compte les
 ![](resolutions-images/image5.png "Cadre est visible à gauche et à droite de l’image pour prendre en compte les proportions physique qui est plus large que la résolution de votre choix")
 
 
-## <a name="ccsceneresolutionpolicyexactfit"></a>CCSceneResolutionPolicy.ExactFit
+### <a name="ccsceneresolutionpolicyexactfit"></a>CCSceneResolutionPolicy.ExactFit
 
 `ExactFit` Spécifie que la résolution du jeu entier sera visible à l’écran avec aucun cadre. La zone affichable sont déformée (proportions ne peut pas être maintenue) en fonction des proportions de matériel.
 
@@ -125,7 +125,7 @@ Aucun cadre n’est visible, mais étant donné que la résolution de l’appare
 ![](resolutions-images/image6.png "Aucun cadre n’est visible, mais étant donné que la résolution de l’appareil est rectangulaire la vue de jeu est déformée")
 
 
-## <a name="ccsceneresolutionpolicyfixedwidth"></a>CCSceneResolutionPolicy.FixedWidth
+### <a name="ccsceneresolutionpolicyfixedwidth"></a>CCSceneResolutionPolicy.FixedWidth
 
 `FixedWidth` Spécifie que la largeur de la vue correspondra à la valeur de largeur passée à `SetDesignResolutionSize`, mais la hauteur visible est soumis aux proportions de l’unité physique. La valeur de hauteur passée à `SetDesignResolutionSize` est ignorée, car elle sera calculée lors de l’exécution selon les proportions de l’unité physique. Cela signifie que la hauteur calculée peut être plus petite que la hauteur souhaitée (ce qui entraîne des parties de la vue de jeu qui est en dehors de l’écran) ou la hauteur calculée peut être supérieure à la hauteur souhaitée (ce qui se traduit en plus de la vue de jeu affichée). Étant donné que cela peut entraîner plus de la partie affichée, puis il peut s’afficher comme si cadre s’est produite ; Toutefois, l’espace supplémentaire sera pas nécessairement noir s’il n’importe quel objet visuel. 
 
@@ -141,7 +141,7 @@ IPhone 4 s a des proportions de 3:2, par conséquent, la hauteur calculée est e
 ![](resolutions-images/image7.png "IPhone 4 s a des proportions de 3:2, par conséquent, la hauteur calculée est environ 333 unités")
 
 
-## <a name="ccsceneresolutionpolicyfixedheight"></a>CCSceneResolutionPolicy.FixedHeight
+### <a name="ccsceneresolutionpolicyfixedheight"></a>CCSceneResolutionPolicy.FixedHeight
 
 Point de vue conceptuel, `FixedHeight` se comporte de la même façon `FixedWidth` – le jeu tient compte de la valeur de hauteur passée à `SetDesignResolutionSize,` mais calcule la largeur lors de l’exécution sur la base de la résolution physique. Comme indiqué ci-dessus, cela signifie que la largeur affichée est inférieure ou supérieure à la largeur souhaitée, ce qui entraîne une partie du jeu en cours hors tension écran ou plus du jeu apparaissent, respectivement.
 
@@ -157,7 +157,7 @@ CCScene.SetDesignResolutionSize (500.0f, 500.0f, CCSceneResolutionPolicy.FixedHe
 ![](resolutions-images/image8.png "Cette stratégie conserve la valeur 0 X aligné à gauche, donc la résolution supplémentaire est visible sur le côté droit de l’écran")
 
 
-## <a name="ccsceneresolutionpolicynoborder"></a>CCSceneResolutionPolicy.NoBorder
+### <a name="ccsceneresolutionpolicynoborder"></a>CCSceneResolutionPolicy.NoBorder
 
 `NoBorder` tente d’afficher l’application avec aucun cadre tout en conservant les proportions d’origine (sans distorsion). Si les proportions de la résolution demandée correspond à des proportions de l’unité physique, aucun extrait ne se produit. Si les proportions ne correspondent pas, puis extrait se produit.
 
@@ -173,7 +173,7 @@ La capture d’écran suivante affiche les parties supérieure et inférieure de
 ![](resolutions-images/image9.png "Cette capture d’écran affiche les parties supérieure et inférieure de l’affichage détouré, tandis que toutes les 500 pixels de la largeur d’affichage sont affichés.")
 
 
-## <a name="ccsceneresolutionpolicycustom"></a>CCSceneResolutionPolicy.Custom
+### <a name="ccsceneresolutionpolicycustom"></a>CCSceneResolutionPolicy.Custom
 
 `Custom` permet à chaque `CCScene` pour spécifier sa propre fenêtre d’affichage personnalisé par rapport à la résolution spécifiée dans `SetDesignResolutionSize`.
 
@@ -207,7 +207,7 @@ Le code ci-dessus génère les éléments suivants :
 ![](resolutions-images/image10.png "Le code ci-dessus génère cette capture d’écran")
 
 
-# <a name="defaulttexeltocontentsizeratio"></a>DefaultTexelToContentSizeRatio
+## <a name="defaulttexeltocontentsizeratio"></a>DefaultTexelToContentSizeRatio
 
 Le `DefaultTexelToContentSizeRatio` simplifie l’utilisation de textures de résolution plus élevée sur les appareils avec des écrans haute résolution. Plus précisément, cette propriété permet de jeux pour utiliser des ressources de résolution plus élevée sans avoir besoin de modifier la taille ou le positionnement des éléments visuels. 
 
@@ -249,7 +249,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-## <a name="defaulttexeltocontentsizeratio-example"></a>Exemple de DefaultTexelToContentSizeRatio
+### <a name="defaulttexeltocontentsizeratio-example"></a>Exemple de DefaultTexelToContentSizeRatio
 
 Pour voir comment `DefaultTexelToContentSizeRatio` a un impact sur la taille d’élément visuel des éléments, considérez le code présenté ci-dessus :
 
@@ -278,7 +278,7 @@ Maintenant si nous exécutons la partie la texture 1000 x 1000 être complèteme
 ![](resolutions-images/image12.png "Si nous exécutons la partie la texture 1000 x 1000 sont désormais complètement visible")
 
 
-## <a name="defaulttexeltocontentsizeratio-details"></a>Détails de DefaultTexelToContentSizeRatio
+### <a name="defaulttexeltocontentsizeratio-details"></a>Détails de DefaultTexelToContentSizeRatio
 
 Le `DefaultTexelToContentSizeRatio` propriété `static,` ce qui signifie que les composants ensemble de l’application partagent la même valeur. L’approche habituelle pour les jeux de ressources pour différentes résolutions doit contenir un ensemble complet de composants pour chaque catégorie de résolution. CocosSharp Visual Studio pour les modèles de Mac par défaut fournissent **%ld** et **hd** dossiers pour les ressources qui pourraient être utiles pour les jeux de prise en charge deux jeux de textures. Un exemple de dossier contenu avec le contenu peut ressembler à :
 
@@ -313,11 +313,11 @@ backgroundSprite  = new CCSprite ("background");
 ```
 
 
-# <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif
 
 Cet article explique comment créer des jeux qui s’affiche correctement, quelle que soit la résolution de l’appareil. Il montre des exemples d’utilisation de différents `CCSceneResolutionPolicy` valeurs pour le redimensionnement du jeu en fonction de la résolution de l’appareil. Il fournit également un exemple de procédure `DefaultTexelToContentSizeRatio` peut être utilisé pour prendre en charge de plusieurs ensembles de contenu sans nécessiter d’éléments visuels doit être redimensionné individuellement.
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
-- [Présentation de CocosSharp](~/graphics-games/cocossharp/first-game/index.md)
+- [Présentation de CocosSharp](~/graphics-games/cocossharp/index.md)
 - [Documentation de l’API de CocosSharp](https://developer.xamarin.com/api/namespace/CocosSharp/)

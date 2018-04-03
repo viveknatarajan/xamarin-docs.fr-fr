@@ -1,6 +1,6 @@
 ---
-title: "À l’aide de CocosSharp dans Xamarin.Forms"
-description: "CocosSharp peut servir à ajouter une forme précise, l’image et le rendu de texte à une application de visualisation avancée"
+title: À l’aide de CocosSharp dans Xamarin.Forms
+description: CocosSharp peut servir à ajouter une forme précise, l’image et le rendu de texte à une application de visualisation avancée
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 395defa300da7b8f68746162d877a4fdb17ded9e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 83852b6b2d7324ae6aaf6b1dbf86a6ef7f9ac509
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>À l’aide de CocosSharp dans Xamarin.Forms
 
@@ -197,7 +197,7 @@ Le graphique suivant peut aider à visualiser une hiérarchie CocosSharp classiq
 
 ![](cocossharp-images/image4.png "Hiérarchie CocosSharp typique")
 
-Seul `CCScene` peut être active à la fois. La plupart des jeux utiliser plusieurs `CCLayer` instances pour trier le contenu, mais votre application utilise un seul. De même, la plupart des jeux utiliser plusieurs objets visuels, mais nous allons en avoir qu’une dans notre application. Plus détaillée la discussion à propos de la CocosSharp hiérarchie visuelle se trouvent dans le [procédure pas à pas de jeu de rebondir](~/graphics-games/cocossharp/first-game/index.md).
+Seul `CCScene` peut être active à la fois. La plupart des jeux utiliser plusieurs `CCLayer` instances pour trier le contenu, mais votre application utilise un seul. De même, la plupart des jeux utiliser plusieurs objets visuels, mais nous allons en avoir qu’une dans notre application. Plus détaillée la discussion à propos de la CocosSharp hiérarchie visuelle se trouvent dans le [BouncingGame procédure pas à pas](~/graphics-games/cocossharp/bouncing-game.md).
 
 Initialement le `GameScene` classe sera presque vide, nous allons créer simplement pour répondre à la référence dans `HomePage`. Ajoutez une nouvelle classe à votre bibliothèque PCL nommée `GameScene`. Il doit hériter de la `CCScene` classe comme suit :
 

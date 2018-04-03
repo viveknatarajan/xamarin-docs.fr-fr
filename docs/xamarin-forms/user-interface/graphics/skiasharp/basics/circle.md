@@ -1,5 +1,5 @@
 ---
-title: "Dessin d’un cercle Simple"
+title: Dessin d’un cercle Simple
 description: Apprenez les principes fondamentaux de dessin SkiaSharp, y compris le canevas et peinture
 ms.topic: article
 ms.prod: xamarin
@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 402470c3a27ba4327afa6e77336d60748abad436
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Dessin d’un cercle Simple
 
@@ -20,7 +20,7 @@ _Apprenez les principes fondamentaux de dessin SkiaSharp, y compris le canevas e
 
 Cet article présente les concepts de dessin des graphiques dans Xamarin.Forms à l’aide de SkiaSharp, y compris la création une `SKCanvasView` objet pour héberger les graphiques, la gestion de la `PaintSurface` et événements à l’aide un `SKPaint` pour spécifier la couleur et autres dessins attributs.
 
-Le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programme contient des exemples de code pour cette série d’articles de SkiaSharp. La première page est autorisée à utiliser **Simple cercle** et appelle la classe de page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Ce code montre comment tracer un cercle dans le centre de la page avec un rayon de 100 pixels. Le contour du cercle est rouge et l’intérieur du cercle est bleu.
+Le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme contient des exemples de code pour cette série d’articles de SkiaSharp. La première page est autorisée à utiliser **Simple cercle** et appelle la classe de page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Ce code montre comment tracer un cercle dans le centre de la page avec un rayon de 100 pixels. Le contour du cercle est rouge et l’intérieur du cercle est bleu.
 
 ![](circle-images/circleexample.png "Un cercle bleu indiqué en rouge")
 
@@ -154,4 +154,4 @@ L’exemple suivant dans le [intégrant Xamarin.Forms](~/xamarin-forms/user-inte
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

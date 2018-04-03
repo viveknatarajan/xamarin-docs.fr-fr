@@ -1,6 +1,6 @@
 ---
-title: "À l’aide de mosaïque avec CocosSharp"
-description: "Mosaïque est un outil puissant, flexible et une application déjà rodée pour la création de vignette orthogonal et isométrique est mappé pour les jeux. CocosSharp fournit une intégration intégrée pour le format de fichier natif de mosaïque."
+title: À l’aide de mosaïque avec CocosSharp
+description: Mosaïque est un outil puissant, flexible et une application déjà rodée pour la création de vignette orthogonal et isométrique est mappé pour les jeux. CocosSharp fournit une intégration intégrée pour le format de fichier natif de mosaïque.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 5a469a372a9299712be7aef46c51f3d644946535
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 68afa9d175140fd5104e83282a2f72c47625d882
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>À l’aide de mosaïque avec CocosSharp
 
@@ -30,7 +30,7 @@ Lors de la fin, il nous faudra la démonstration suivante :
 ![](tiled-images/image1.png "L’application de démonstration créée en suivant les étapes décrites dans ce guide")
 
 
-# <a name="the-purpose-of-tile-maps"></a>L’objectif de mappages de vignette
+## <a name="the-purpose-of-tile-maps"></a>L’objectif de mappages de vignette
 
 Mappages de vignette aurait dans le développement de jeux des dizaines d’années, mais sont toujours utilisés dans les jeux 2D de l’esthétique et l’efficacité. Mappages de vignette sont en mesure d’atteindre un niveau très élevé de l’efficacité grâce à l’utilisation de jeux de mosaïque : l’image source utilisée par vignette correspond. Un ensemble de la vignette est une collection d’images combinés en un seul fichier. Bien que les jeux de vignette font référence à des images utilisées dans les mappages de mosaïque, des fichiers qui contiennent plusieurs images plus petites sont également appelées des feuilles de sprite ou sprite est mappé dans le développement de jeux. Nous pouvons visualiser l’utilisation des jeux de vignette en ajoutant une grille à l’ensemble de la vignette que nous utilisons dans notre démonstration :
 
@@ -43,7 +43,7 @@ Mappages de vignette réorganiser les vignettes individuels à partir de jeux de
 ![](tiled-images/image4.png "Cette image montre des dispositions possibles, utilisant le même jeu de vignette")
 
 
-# <a name="working-with-tmx-files"></a>Utilisation des fichiers de .tmx
+## <a name="working-with-tmx-files"></a>Utilisation des fichiers de .tmx
 
 Le format de fichier .tmx est un fichier XML créé par l’application de mosaïque, ce qui peut être [téléchargé gratuitement sur le site Web de mosaïque](http://www.mapeditor.org/). Le format de fichier .tmx stocke les informations pour les mappages de vignette. Un jeu ont généralement un fichier .tmx pour chaque zone niveau ou distinct.
 
@@ -80,7 +80,7 @@ Si nous exécutons la partie que nous allons voir la vignette s’affiche dans l
 ![](tiled-images/image6.png "Si le jeu est exécuté, la vignette s’affiche dans le coin inférieur gauche de l’écran")
 
 
-# <a name="considerations-for-rendering-pixel-art"></a>Considérations pour le rendu des pixels Art
+## <a name="considerations-for-rendering-pixel-art"></a>Considérations relatives à la pointe de pixel de rendu
 
 Illustration du pixel, dans le cadre du développement de jeux vidéo, fait référence à 2D art visual qui est généralement créé par disponible et est souvent basse résolution. Illustration du pixel peut être de manière restrictive intensif création pixel art vignette jeux inclure souvent des vignettes basse résolution, par exemple 16 ou 32 largeur en pixels et la hauteur du temps. Si ne pas à l’échelle lors de l’exécution, art de pixel est souvent trop petite pour les tablettes et téléphones les plus récents.
 
@@ -161,7 +161,7 @@ Maintenant notre carte vignette s’affiche pas flou :
 ![](tiled-images/image8.png "Maintenant le mappage de la vignette n’apparaîtront pas flou")
 
 
-# <a name="using-tile-properties-at-runtime"></a>À l’aide des propriétés des mosaïques lors de l’exécution
+## <a name="using-tile-properties-at-runtime"></a>À l’aide des propriétés des mosaïques lors de l’exécution
 
 Jusqu'à présent, nous avons un `CCTileMap` chargement d’un fichier .tmx et de les afficher, mais nous ne pouvons pas interagir avec elle. Plus précisément, certaines vignettes (par exemple, notre coffre Trésor) doivent disposer d’une logique personnalisée. Nous allons parcourir comment détecter les propriétés de vignette personnalisée et les différentes façons de réagir à ces propriétés une fois identifiées lors de l’exécution.
 
@@ -175,7 +175,7 @@ Si les propriétés de coffres Trésor n’apparaissent pas, avec le bouton droi
 
 ![](tiled-images/image10.png "Si les propriétés de coffres Trésor n’apparaissent pas, avec le bouton droit sur le coffre Trésor et sélectionnez les propriétés des mosaïques")
 
-Les propriétés en mosaïque sont implémentées avec un nom et une valeur. Pour ajouter une propriété, cliquez sur le  **+**  bouton, entrez le nom **IsTreasure**, cliquez sur **OK**, puis entrez la valeur **true**: 
+Les propriétés en mosaïque sont implémentées avec un nom et une valeur. Pour ajouter une propriété, cliquez sur le **+** bouton, entrez le nom **IsTreasure**, cliquez sur **OK**, puis entrez la valeur **true**: 
 
 ![](tiled-images/image11.png "Pour ajouter une propriété, cliquez sur le bouton, entrez le nom IsTreasure, cliquez sur OK, puis entrez la valeur true")
 
@@ -273,11 +273,11 @@ La plupart du code est explicite, mais nous devons traitent de la gestion des vi
 En d’autres termes, le coffre Trésor bénéficieront en cours d’une entité plutôt qu’une vignette simple dans le `CCTileMap`. Pour plus d’informations sur les entités de jeu, consultez le [guident des entités dans CocosSharp](~/graphics-games/cocossharp/entities.md).
 
 
-# <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif
 
 Cette procédure pas à pas explique comment charger des fichiers de .tmx créés en mosaïque dans une application CocosSharp. Il montre comment modifier la résolution de l’application pour prendre en compte l’art de faible résolution pixels et comment rechercher des vignettes par leurs propriétés pour exécuter une logique personnalisée, comme la création d’instances d’entité.
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Site Web en mosaïque](http://www.mapeditor.org/)
 - [Contenu zip](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Tiled.zip?raw=true)

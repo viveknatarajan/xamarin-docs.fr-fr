@@ -1,6 +1,6 @@
 ---
 title: Points et des tirets
-description: "Maîtrisez les complexités de dessiner des lignes en pointillés et dans SkiaSharp"
+description: Maîtrisez les complexités de dessiner des lignes en pointillés et dans SkiaSharp
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 32326eb472b1bb8b4fbaf4066edc36255f5948ca
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d18afdf7c9d48a715a6a909105cee200ed116014
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="dots-and-dashes"></a>Points et des tirets
 
@@ -221,4 +221,4 @@ Vous savez maintenant pour dessiner des lignes et de définir des courbes à l�
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

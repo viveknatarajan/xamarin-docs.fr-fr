@@ -1,6 +1,6 @@
 ---
-title: "Unités indépendantes du périphérique et pixels"
-description: "Explorez les différences entre les coordonnées SkiaSharp et Xamarin.Forms"
+title: Unités indépendantes du périphérique et pixels
+description: Explorez les différences entre les coordonnées SkiaSharp et Xamarin.Forms
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e07377584996694aa8597af79317957c51050ec
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1698c18eafdce0585daa81c9462ee038c15586bd
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Unités indépendantes du périphérique et pixels
 
@@ -26,7 +26,7 @@ Si vous avez été programmation dans Xamarin.Forms pendant un certain temps, vo
 
 Ces cercles *sont* faible par rapport de tailles de Xamarin.Forms. Par défaut, SkiaSharp Dessine en unités de pixels alors que Xamarin.Forms base coordonnées et tailles sur une unité indépendante du périphérique établie par la plateforme sous-jacente. (Vous trouverez plus d’informations sur le système de coordonnées Xamarin.Forms dans [chapitre 5. Vous traitez des tailles](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) du livre *créer des applications mobiles avec Xamarin.Forms*.)
 
-La page dans le [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programme intitulée **taille de la Surface** utilise la sortie de texte SkiaSharp pour afficher la taille de la surface d’affichage à partir de trois sources différentes :
+La page dans le [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme intitulée **taille de la Surface** utilise la sortie de texte SkiaSharp pour afficher la taille de la surface d’affichage à partir de trois sources différentes :
 
 - Le Xamarin.Forms normal [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) et [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) propriétés de la `SKCanvasView` objet.
 - Le [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) propriété de la `SKCanvasView` objet.
@@ -165,4 +165,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
