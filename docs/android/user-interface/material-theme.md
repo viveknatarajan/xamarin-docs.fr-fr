@@ -1,18 +1,17 @@
 ---
-title: "Thème matière"
-description: "Comment le thème de votre application de Xamarin.Android avec le matériel de thème"
-ms.topic: article
+title: Thème matière
+description: Comment le thème de votre application de Xamarin.Android avec le matériel de thème
 ms.prod: xamarin
 ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 479abf7fef695be156d4447592bc59dceabe3f03
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a3b5f908330833a38aad9e329835a4a437fc29f0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="material-theme"></a>Thème matière
 
@@ -37,7 +36,7 @@ Vous pouvez utiliser un thème unique pour une application entière, ou vous pou
 Thème du matériel est pris en charge uniquement sur Android 5.0 et versions ultérieures, vous ne pouvez pas utiliser (ou un thème personnalisé dérivé de thème du matériel) au thème votre application pour l’exécution sur des versions antérieures d’Android. Toutefois, vous pouvez configurer votre application pour utiliser le thème de la documentation sur les appareils Android 5.0 et en douceur revient à un thème antérieur lorsqu’il s’exécute sur des versions antérieures d’Android (consultez la [compatibilité](#compatibility) section de cet article pour plus d’informations).
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités de thème de matériel Android 5.0 dans les applications Xamarin :
 
@@ -73,7 +72,7 @@ L’exemple suivant configure l’application *MyApp* pour utiliser le thème cl
 </application>
 ```
 
-Ou bien, vous pouvez définir l’application `Theme` attribut **AssemblyInfo.cs** (ou **Properties.cs**). Exemple :
+Ou bien, vous pouvez définir l’application `Theme` attribut **AssemblyInfo.cs** (ou **Properties.cs**). Par exemple :
 
 ```C#
 [assembly: Application(Theme="@android:style/Theme.Material.Light")]
@@ -204,7 +203,7 @@ Pour appliquer un style une vue individuelle, procédez comme suit :
 </style>
 ```
 
--   Dans la mise en page, définissez la `style` attribut pour cette vue pour correspondre au nom de style personnalisé que vous avez choisi à l’étape précédente. Exemple :
+-   Dans la mise en page, définissez la `style` attribut pour cette vue pour correspondre au nom de style personnalisé que vous avez choisi à l’étape précédente. Par exemple :
 
 ```xml
 <android.support.v7.widget.CardView
@@ -225,7 +224,7 @@ Dans cet exemple, personnalisé `CardView` s’affiche avec la couleur d’arri�
 
 Pour appliquer un style votre application afin qu’il utilise le thème du matériel sur Android 5.0 mais revient automatiquement à un style vers le bas compatible sur les anciennes versions d’Android, procédez comme suit :
 
--   Définir un thème personnalisé dans **Resources/values-v21/styles.xml** qui dérive d’un style de thème du matériel. Exemple :
+-   Définir un thème personnalisé dans **Resources/values-v21/styles.xml** qui dérive d’un style de thème du matériel. Par exemple :
 
 ```xml
 <resources>
@@ -235,7 +234,7 @@ Pour appliquer un style votre application afin qu’il utilise le thème du mat�
 </resources>
 ```
 
--   Définir un thème personnalisé dans **Resources/values/styles.xml** qui dérive d’un thème plus anciens, mais utilise le même nom de thème comme indiqué ci-dessus. Exemple :
+-   Définir un thème personnalisé dans **Resources/values/styles.xml** qui dérive d’un thème plus anciens, mais utilise le même nom de thème comme indiqué ci-dessus. Par exemple :
 
 ```xml
 <resources>
@@ -246,7 +245,7 @@ Pour appliquer un style votre application afin qu’il utilise le thème du mat�
 ```
 
 -   Dans **AndroidManifest.xml**, configurez votre application avec le nom du thème personnalisé. 
-    Exemple :
+    Par exemple :
 
 ```xml
 <application android:label="MyApp" 

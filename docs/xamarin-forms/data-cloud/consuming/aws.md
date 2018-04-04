@@ -1,18 +1,17 @@
 ---
-title: "Utilisation d’un Service de SimpleDB Amazon"
-description: "Amazon SimpleDB est un service web qui offre la possibilité de stocker et interroger des données dans un cloud d’Amazon. Cet article explique comment utiliser le AWS SDK pour .NET pour interroger, créer, remplacer et supprimer des données stockées dans un service SimpleDB."
-ms.topic: article
+title: Utilisation d’un Service de SimpleDB Amazon
+description: Amazon SimpleDB est un service web qui offre la possibilité de stocker et interroger des données dans un cloud d’Amazon. Cet article explique comment utiliser le AWS SDK pour .NET pour interroger, créer, remplacer et supprimer des données stockées dans un service SimpleDB.
 ms.prod: xamarin
 ms.assetid: 823819AA-15F9-4144-B355-78A10AD37513
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5604477ff182711a63ba2b0e6bbcbbcc082a76ed
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1602319dbf5a5d00ac5de75f2d438b9aea692699
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-amazon-simpledb-service"></a>Utilisation d’un Service de SimpleDB Amazon
 

@@ -1,17 +1,16 @@
 ---
 title: Graphiques et des animations dans iOS
-description: "Principaux Concepts d’applications"
-ms.topic: article
+description: Principaux Concepts d’applications
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ece988f2ba29ec4656631d993e4c4b99a276b199
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 99c05efa13027aca4935425d2a731613f250ec93
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="graphics-and-animation-in-ios"></a>Graphiques et des animations dans iOS
 
@@ -22,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 CoreImage est une nouvelle infrastructure introduite dans iOS 5 qui fournit un certain nombre de filtres intégrés et les effets à appliquer à des images et des vidéos, notamment la détection de visage.
 
-##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[Graphique de base](~/ios/platform/graphics-animation-ios/core-graphics.md)
+##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[Graphismes de base](~/ios/platform/graphics-animation-ios/core-graphics.md)
 
 Cet article décrit le framework iOS graphiques de base qui fournit la prise en charge de bas niveau dessin. Il montre comment utiliser des graphiques de base pour dessiner la géométrie, des images et PDF.
 

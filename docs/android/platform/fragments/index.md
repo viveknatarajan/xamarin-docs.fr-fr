@@ -1,18 +1,17 @@
 ---
 title: Fragments
-description: "Android 3.0 introduit des Fragments, en montrant comment prendre en charge des modèles plus flexibles pour les nombreux différentes tailles d’écran trouvés sur les téléphones et tablettes. Cet article couvre l’utilisation de Fragments de développer des applications de Xamarin.Android et également la prise en charge des Fragments sur Android des périphériques (API niveau 11) 3.0."
-ms.topic: article
+description: Android 3.0 introduit des Fragments, en montrant comment prendre en charge des modèles plus flexibles pour les nombreux différentes tailles d’écran trouvés sur les téléphones et tablettes. Cet article couvre l’utilisation de Fragments de développer des applications de Xamarin.Android et également la prise en charge des Fragments sur Android des périphériques (API niveau 11) 3.0.
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 08c2edb3acc15518c7d5a69f227fb9ef819887be
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fragments"></a>Fragments
 
@@ -47,7 +46,7 @@ Ce guide contient une couverture complète sur l’utilisation de Fragments, y c
 -   **Package de prise en charge Android** : comment faire pour utiliser les bibliothèques qui autorisent les Fragments à utiliser sur des versions antérieures d’Android.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Fragments sont disponibles dans le SDK Android, en commençant par le niveau de l’API 11 (Android version 3.0), comme indiqué dans la capture d’écran suivante :
 

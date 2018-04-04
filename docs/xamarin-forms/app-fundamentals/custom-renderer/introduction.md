@@ -1,18 +1,17 @@
 ---
-title: "Introduction aux convertisseurs personnalisés"
-description: "Les convertisseurs personnalisés fournissent une approche puissante pour personnaliser l’apparence et le comportement des contrôles de Xamarin.Forms. Ils peuvent être utilisés pour les modifications de conception de styles de petite ou sophistiquée spécifique à la plateforme disposition et personnalisation du comportement. Cet article fournit une introduction aux convertisseurs personnalisés et décrit le processus de création d’un convertisseur personnalisé."
-ms.topic: article
+title: Introduction aux convertisseurs personnalisés
+description: Les convertisseurs personnalisés fournissent une approche puissante pour personnaliser l’apparence et le comportement des contrôles de Xamarin.Forms. Ils peuvent être utilisés pour les modifications de conception de styles de petite ou sophistiquée spécifique à la plateforme disposition et personnalisation du comportement. Cet article fournit une introduction aux convertisseurs personnalisés et décrit le processus de création d’un convertisseur personnalisé.
 ms.prod: xamarin
 ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 837d75bd4ecde92d4c375c680a5f5e7ff231f825
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e555c038d66033d925da42e4c70b89d5caac8ad6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>Introduction aux convertisseurs personnalisés
 

@@ -1,18 +1,17 @@
 ---
-title: "Fonctions d'accélération"
-description: "Xamarin.Forms inclut une classe d’accélération qui vous permet de spécifier une fonction de transfert qui contrôle comment les animations accélérer ou ralentissent qu’ils s’exécutent. Cet article explique comment utiliser les fonctions d’accélération prédéfinies et comment créer des fonctions d’accélération personnalisées."
-ms.topic: article
+title: Fonctions d'accélération
+description: Xamarin.Forms inclut une classe d’accélération qui vous permet de spécifier une fonction de transfert qui contrôle comment les animations accélérer ou ralentissent qu’ils s’exécutent. Cet article explique comment utiliser les fonctions d’accélération prédéfinies et comment créer des fonctions d’accélération personnalisées.
 ms.prod: xamarin
 ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: a57fd6e45d744d0e527c811649ce5299ebcd34d5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9171b885bdf5958b6969719301a1d7dad51d95b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="easing-functions"></a>Fonctions d'accélération
 
@@ -109,7 +108,7 @@ Cet article a montré comment consommer des fonctions d’accélération prédé
 
 ## <a name="related-links"></a>Liens associés
 
-- [Présentation de la prise en charge asynchrone](~/cross-platform/platform/async.md)
+- [Vue d’ensemble de la prise en charge asynchrone](~/cross-platform/platform/async.md)
 - [Fonctions d’accélération (exemple)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/easing/)
 - [Accélération](https://developer.xamarin.com/api/type/Xamarin.Forms.Easing/)
 - [ViewExtensions](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/)

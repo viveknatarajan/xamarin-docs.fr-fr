@@ -1,18 +1,17 @@
 ---
-title: "Notifications à distance avec la messagerie Cloud Google"
-description: "Cette procédure pas à pas fournit une explication pas à pas montrant comment utiliser la messagerie Cloud Google pour implémenter des notifications à distance (également appelées des notifications push) dans une application Xamarin.Android. Il décrit les différentes classes que vous devez implémenter pour communiquer avec Google Cloud Messaging (GCM), elle explique comment définir des autorisations dans le manifeste Android pour l’accès aux GCM et il montre un exemple de programme de test de messagerie de bout en bout."
-ms.topic: article
+title: Notifications à distance avec la messagerie Cloud Google
+description: Cette procédure pas à pas fournit une explication pas à pas montrant comment utiliser la messagerie Cloud Google pour implémenter des notifications à distance (également appelées des notifications push) dans une application Xamarin.Android. Il décrit les différentes classes que vous devez implémenter pour communiquer avec Google Cloud Messaging (GCM), elle explique comment définir des autorisations dans le manifeste Android pour l’accès aux GCM et il montre un exemple de programme de test de messagerie de bout en bout.
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 823fad163e837adab5490446c23ab2f492679114
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 969b1b36659ac52782d30a1840ba352524e5e3c6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notifications à distance avec la messagerie Cloud Google
 
@@ -401,7 +400,7 @@ Le `OnTokenRefresh` méthode dans notre service démarre le `RegistrationIntentS
 
 #### <a name="test-registration-with-gcm"></a>Tester l’inscription avec GCM
 
-Nous allons reconstruire entièrement et exécuter l’application. Si vous recevez un jeton d’inscription à partir de GCM, le jeton d’inscription doit être affiché dans la fenêtre Sortie. Exemple : 
+Nous allons reconstruire entièrement et exécuter l’application. Si vous recevez un jeton d’inscription à partir de GCM, le jeton d’inscription doit être affiché dans la fenêtre Sortie. Par exemple : 
 
 ```shell
 D/Mono    ( 1934): Assembly Ref addref ClientApp[0xb4ac2400] -> Xamarin.GooglePlayServices.Gcm[0xb4ac2640]: 2

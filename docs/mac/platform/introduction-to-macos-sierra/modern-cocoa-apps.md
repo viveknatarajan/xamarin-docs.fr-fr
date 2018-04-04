@@ -1,18 +1,17 @@
 ---
-title: "Génération macOS moderne applications"
-description: "Cet article décrit plusieurs conseils, fonctionnalités et techniques qu'un développeur peut utiliser pour générer une application moderne macOS dans Xamarin.Mac."
-ms.topic: article
+title: Génération macOS moderne applications
+description: Cet article décrit plusieurs conseils, fonctionnalités et techniques qu'un développeur peut utiliser pour générer une application moderne macOS dans Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 446db5c04849ac6fa320f3fe3b7e22b3d10bf9cf
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4eb4ff4a9e4784d816e2cbe8734e0422573cad92
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="building-modern-macos-apps"></a>Génération macOS moderne applications
 
@@ -436,7 +435,7 @@ Couche de stockage peut être activée en définissant le `WantsLayer` d’un `N
 
 #### <a name="redrawing-views-with-layers"></a>Redessiner les vues avec des couches
 
-Une autre étape importante lors de la définition de l’utilisation des vues de soutenu de couche dans une application Xamarin.Mac la `LayerContentsRedrawPolicy` de la `NSView` à `OnSetNeedsDisplay` dans le `NSViewController`. Exemple :
+Une autre étape importante lors de la définition de l’utilisation des vues de soutenu de couche dans une application Xamarin.Mac la `LayerContentsRedrawPolicy` de la `NSView` à `OnSetNeedsDisplay` dans le `NSViewController`. Par exemple :
 
 ```csharp
 public override void ViewWillAppear ()
@@ -637,7 +636,7 @@ macOS Sierra fournit les nombreuses améliorations modernes pour les contrôles 
 
 ## <a name="table-view-enhancements"></a>Améliorations des vues de table
 
-Le développeur doit toujours utiliser le nouveau `NSView` en fonction de la version des contrôles d’affichage conteneur telles que `NSTableView`. Exemple :
+Le développeur doit toujours utiliser le nouveau `NSView` en fonction de la version des contrôles d’affichage conteneur telles que `NSTableView`. Par exemple :
 
 ```csharp
 using System;
@@ -836,7 +835,7 @@ public override void ViewDidLoad ()
 
 Où les `Alignment` et `ImagePosition` sont définies selon le `UserInterfaceLayoutDirection` du contrôle.
 
-macOS Sierra ajoute plusieurs nouveaux constructeurs commodité (via la méthode statique `CreateButton` méthode) qui prennent plusieurs paramètres (tels que le titre, l’Image et Action) et automatiquement reflète correctement. Exemple :
+macOS Sierra ajoute plusieurs nouveaux constructeurs commodité (via la méthode statique `CreateButton` méthode) qui prennent plusieurs paramètres (tels que le titre, l’Image et Action) et automatiquement reflète correctement. Par exemple :
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
@@ -853,7 +852,7 @@ Les applications modernes macOS peuvent adopter une nouvelle apparence Interface
 
 [![](modern-cocoa-apps-images/content11.png "Un exemple d’une interface utilisateur de fenêtre Mac foncé")](modern-cocoa-apps-images/content11.png#lightbox)
 
-Cela est possible en ajoutant une ligne de code avant que la fenêtre s’affiche. Exemple :
+Cela est possible en ajoutant une ligne de code avant que la fenêtre s’affiche. Par exemple :
 
 ```csharp
 using System;
@@ -908,7 +907,7 @@ Il existe de nombreux cas où une scène donnée définie dans un plan conceptue
 - Évitez les dépendances structurelles de coder en dur l’interface utilisateur, comme cela limite la flexibilité de l’interface utilisateur.
 - Utiliser les Interfaces c# pour fournir les dépendances de données génériques.
 
-Le contrôleur de vue qui agit en tant que source de la Segue, peuvent remplacer la `PrepareForSegue` méthode et effectuez toute initialisation requise (par exemple, le passage de données) avant le Segue est exécutée pour afficher le contrôleur de la vue de destination. Exemple :
+Le contrôleur de vue qui agit en tant que source de la Segue, peuvent remplacer la `PrepareForSegue` méthode et effectuez toute initialisation requise (par exemple, le passage de données) avant le Segue est exécutée pour afficher le contrôleur de la vue de destination. Par exemple :
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)

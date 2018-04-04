@@ -1,18 +1,17 @@
 ---
 title: Images
-description: "Cet article décrit l’utilisation des images et des icônes dans une application Xamarin.Mac. Il décrit la création et la maintenance des images nécessaires pour créer l’icône de votre application et l’utilisation d’images dans le code c# et Interface Builder de Xcode."
-ms.topic: article
+description: Cet article décrit l’utilisation des images et des icônes dans une application Xamarin.Mac. Il décrit la création et la maintenance des images nécessaires pour créer l’icône de votre application et l’utilisation d’images dans le code c# et Interface Builder de Xcode.
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: d8098afea87765166db8318b76adf250818a0a6f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dc33dc78c09c0b5b7cb7533afdd2f95b8ebd9c4e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="images"></a>Images
 
@@ -46,7 +45,7 @@ Lorsque vous ajoutez une image à utiliser dans une application Xamarin.Mac, il 
 - **Arborescence du projet principal [déconseillé]** -Images peuvent être ajoutés directement à l’arborescence de projets. Lorsque vous appelez des images stockées dans l’arborescence du projet principal à partir du code, aucun emplacement de dossier n’est spécifié. Par exemple : `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Dossier de ressources [déconseillé]** -spéciale **ressources** dossier est pour n’importe quel fichier qui feront partie de l’Application de l’offre groupée telles que l’icône, lancez l’écran ou général Images (ou un autre fichier ou image le développeur souhaite ajouter). Lors de l’appel des images stockées dans le **ressources** dossier à partir du code, stockées à l’instar des images dans l’arborescence du projet principal, aucun emplacement de dossier est spécifié. Par exemple : `NSImage.ImageNamed("tags.png")`.
 - **Personnalisé dossier ou sous-dossier [déconseillé]** -le développeur peut ajouter un dossier personnalisé dans l’arborescence source de projets et de stocker les images il. L’emplacement où le fichier est ajouté peut être imbriquée dans un sous-dossier supplémentaire pour aider à organiser le projet. Par exemple, si le développeur ajouté un `Card` au projet et un sous-dossier du dossier de `Hearts` à ce dossier, puis stocker une image **Jack.png** dans le `Hearts` dossier `NSImage.ImageNamed("Card/Hearts/Jack.png")` charge l’image à Runtime.
-- **Jeux d’Image de catalogue Asset [recommandé]** - ajouté dans OS X El Capitan **ensembles d’images catalogues Asset** contiennent toutes les versions ou les représentations sous forme d’une image qui sont nécessaires pour prendre en charge de différents appareils et à l’échelle de facteurs pour votre application. Au lieu d’utiliser le nom de fichier de ressources image (**@1x**,  **@2x** ).
+- **Jeux d’Image de catalogue Asset [recommandé]** - ajouté dans OS X El Capitan **ensembles d’images catalogues Asset** contiennent toutes les versions ou les représentations sous forme d’une image qui sont nécessaires pour prendre en charge de différents appareils et à l’échelle de facteurs pour votre application. Au lieu d’utiliser le nom de fichier de ressources image (**@1x**, **@2x**).
 
 <a name="asset-catalogs" />
 
@@ -68,7 +67,7 @@ Comme indiqué précédemment, un **ensembles d’images catalogues Asset** cont
 
     [![Modification de l’image de définir le nom](image-images/imageset04.png "modification de l’image de définir le nom")](image-images/imageset04-large.png#lightbox)
     
-Une spéciale **vecteur** classe qu’ajoutée au **ensembles d’images** qui nous permet d’inclure un _PDF_ au format image vectorielle dans le casset au lieu de cela, y compris des fichiers bitmap individuels à résolutions différentes. À l’aide de cette méthode, vous fournissez un fichier de vecteur unique pour le  **@1x**  résolution (au format de fichier PDF vecteur) et le  **@2x**  et  **@3x**  versions du fichier seront générées au moment de la compilation et incluses dans le groupe de l’application.
+Une spéciale **vecteur** classe qu’ajoutée au **ensembles d’images** qui nous permet d’inclure un _PDF_ au format image vectorielle dans le casset au lieu de cela, y compris des fichiers bitmap individuels à résolutions différentes. À l’aide de cette méthode, vous fournissez un fichier de vecteur unique pour le **@1x** résolution (au format de fichier PDF vecteur) et le **@2x** et **@3x** versions du fichier seront générées au moment de la compilation et incluses dans le groupe de l’application.
 
 [![L’image de définie l’interface de l’éditeur](image-images/imageset05.png "l’image de définie l’interface de l’éditeur")](image-images/imageset05-large.png#lightbox)
 
@@ -142,7 +141,7 @@ N’importe quel élément de graphique que vous ajoutez à une application Xama
 Lorsque vous créez les versions standard et haute résolution d’une image, suivent cette convention d’affectation de noms pour la paire d’images en les incluant dans votre projet Xamarin.Mac :
 
 - **Résolution standard**  - **ImageName.filename-extension** (exemple : **tags.png**)
-- **Haute résolution**   -   **ImageName@2x.filename-extension**  (exemple :  **tags@2x.png** )
+- **Haute résolution**   -  **ImageName@2x.filename-extension** (exemple : **tags@2x.png**)
 
 Lors de l’ajout à un projet, ils sont affiche comme suit :
 
@@ -150,7 +149,7 @@ Lors de l’ajout à un projet, ils sont affiche comme suit :
 
 Lorsqu’une image est assignée à un élément d’interface utilisateur dans le Générateur de Interface vous allez simplement choisir le fichier dans le _ImageName_**.** _extension de nom de fichier_ format (exemple : **tags.png**). Le même pour l’utilisation d’une image dans le code c#, vous allez choisir le fichier dans le _ImageName_**.** _extension de nom de fichier_ format.
 
-Lorsque vous Xamarin.Mac application êtes exécutée sur un Mac, le _ImageName_**.** _extension de nom de fichier_ image au format à utiliser dans les affichages de la résolution Standard, le  **ImageName@2x.filename-extension**  image sera automatiquement sélectionnée affichage Retina bases Mac.
+Lorsque vous Xamarin.Mac application êtes exécutée sur un Mac, le _ImageName_**.** _extension de nom de fichier_ image au format à utiliser dans les affichages de la résolution Standard, le **ImageName@2x.filename-extension** image sera automatiquement sélectionnée affichage Retina bases Mac.
 
 
 ## <a name="using-images-in-interface-builder"></a>L’utilisation d’images dans le constructeur d’Interface
@@ -176,7 +175,7 @@ Pour utiliser une image dans le Générateur d’interface, procédez comme suit
      ![L’image s’affiche dans l’éditeur de la barre d’outils](image-images/ib04.png "l’image qui est affichée dans l’éditeur de la barre d’outils")
 6. Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
 
-Les étapes ci-dessus fonctionnent pour n’importe quel élément d’interface utilisateur qui permet de leur propriété de l’image à définir dans le **inspecteur de l’attribut**. Là encore, si vous avez inclus un  **@2x**  version de votre fichier image, il est automatiquement utilisé sur Affichage Retina basé Mac.
+Les étapes ci-dessus fonctionnent pour n’importe quel élément d’interface utilisateur qui permet de leur propriété de l’image à définir dans le **inspecteur de l’attribut**. Là encore, si vous avez inclus un **@2x** version de votre fichier image, il est automatiquement utilisé sur Affichage Retina basé Mac.
 
 > [!IMPORTANT]
 > Si l’Image n’est pas disponible dans le **nom de l’Image** liste déroulante, fermez votre projet .storyboard dans Xcode et rouvrez-le à partir de Visual Studio pour Mac. Si l’image n’est toujours pas disponible, vérifiez que son **Action de génération** est `BundleResource` et que l’image a été ajoutée à la **ressources** dossier.
@@ -189,7 +188,7 @@ Lors du chargement d’une image en mémoire à l’aide de code c# dans votre a
 NSImage image = NSImage.ImageNamed("tags.png");
 ```
 
-Le code ci-dessus utilise la méthode statique `ImageNamed("...")` méthode de la `NSImage` classe pour charger l’image donnée en mémoire à partir de la **ressources** dossier, si l’image ne peut pas être trouvée, `null` sera retourné. Comme les Images assignées dans le constructeur d’Interface, si vous avez inclus un  **@2x**  version de votre fichier image, il est automatiquement utilisé sur Affichage Retina basé Mac.
+Le code ci-dessus utilise la méthode statique `ImageNamed("...")` méthode de la `NSImage` classe pour charger l’image donnée en mémoire à partir de la **ressources** dossier, si l’image ne peut pas être trouvée, `null` sera retourné. Comme les Images assignées dans le constructeur d’Interface, si vous avez inclus un **@2x** version de votre fichier image, il est automatiquement utilisé sur Affichage Retina basé Mac.
 
 Pour charger des images en dehors de l’offre groupée de l’application (à partir du système de fichier Mac), utilisez le code suivant :
 
@@ -247,7 +246,7 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 ## <a name="using-images-with-table-views"></a>L’utilisation d’images avec des vues de table
 
-Pour inclure une image dans le cadre de la cellule dans une `NSTableView`, vous devez modifier la façon dont les données sont retournées par la vue de Table `NSTableViewDelegate's` `GetViewForItem` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Exemple :
+Pour inclure une image dans le cadre de la cellule dans une `NSTableView`, vous devez modifier la façon dont les données sont retournées par la vue de Table `NSTableViewDelegate's` `GetViewForItem` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Par exemple :
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -345,7 +344,7 @@ Pour plus d’informations sur l’utilisation des vues de Table, consultez notr
 
 ## <a name="using-images-with-outline-views"></a>Utilisation d’images avec le mode plan
 
-Pour inclure une image dans le cadre de la cellule dans une `NSOutlineView`, vous devez modifier la façon dont les données sont retournées par la vue de structure du `NSTableViewDelegate's` `GetView` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Exemple :
+Pour inclure une image dans le cadre de la cellule dans une `NSOutlineView`, vous devez modifier la façon dont les données sont retournées par la vue de structure du `NSTableViewDelegate's` `GetView` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Par exemple :
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {

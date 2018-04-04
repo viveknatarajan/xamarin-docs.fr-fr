@@ -1,18 +1,17 @@
 ---
-title: "conception de l’interface utilisateur.Storyboard/.XIB-less"
-description: "Cet article décrit la création d’interface utilisateur d’une application Xamarin.Mac directement à partir de code c#, sans .storyboard fichiers, les fichiers .xib ou constructeur d’Interface."
-ms.topic: article
+title: conception de l’interface utilisateur.Storyboard/.XIB-less
+description: Cet article décrit la création d’interface utilisateur d’une application Xamarin.Mac directement à partir de code c#, sans .storyboard fichiers, les fichiers .xib ou constructeur d’Interface.
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 52d300ac583ec2313d3169c7b2adb73c15ebe4fb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 66725b02d3e351e74fa79ae5336a7db3a9f2b534
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="storyboardxib-less-user-interface-design"></a>conception de l’interface utilisateur.Storyboard/.XIB-less
 
@@ -300,7 +299,7 @@ Comme auparavant, nous allons supprimer le fichier de .storyboard ou .xib de val
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>Ajout d’un élément d’interface utilisateur dans une fenêtre de code
 
-Si une fenêtre a été créée dans le code ou chargée à partir d’un fichier .storyboard ou .xib, il peut arriver que nous voulons pour ajouter un élément d’interface utilisateur dans une fenêtre de code. Exemple :
+Si une fenêtre a été créée dans le code ou chargée à partir d’un fichier .storyboard ou .xib, il peut arriver que nous voulons pour ajouter un élément d’interface utilisateur dans une fenêtre de code. Par exemple :
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){

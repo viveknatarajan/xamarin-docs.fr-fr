@@ -1,18 +1,17 @@
 ---
-title: "Infrastructure de réseaux sociaux"
-description: "Le Framework Social fournit une API unifiée pour interagir avec les réseaux sociaux, y compris Twitter et Facebook, ainsi que SinaWeibo pour les utilisateurs en Chine."
-ms.topic: article
+title: Infrastructure de réseaux sociaux
+description: Le Framework Social fournit une API unifiée pour interagir avec les réseaux sociaux, y compris Twitter et Facebook, ainsi que SinaWeibo pour les utilisateurs en Chine.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7a190014abd3386a3a675d50ce6a89101d0588a7
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 334e05ad653d766b48f7f6028a1e98b0a0548c0c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="social-framework"></a>Infrastructure de réseaux sociaux
 
@@ -302,7 +301,7 @@ Une fois configuré, n’importe quelle application sur le périphérique qui ut
 
 Comme l’infrastructure sociale est une API unifiée conçue pour accéder à plusieurs réseaux sociaux, le code reste presque identique, quel que soit le réseau social utilisé.
 
-Par exemple, le `SLComposeViewController` peut être utilisé exactement comme dans l’exemple Twitter indiqué précédemment, les différents uniquement revient aux options et paramètres spécifiques à Facebook. Exemple :
+Par exemple, le `SLComposeViewController` peut être utilisé exactement comme dans l’exemple Twitter indiqué précédemment, les différents uniquement revient aux options et paramètres spécifiques à Facebook. Par exemple :
 
 ```csharp
 using System;

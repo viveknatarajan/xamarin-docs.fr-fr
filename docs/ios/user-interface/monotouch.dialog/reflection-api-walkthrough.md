@@ -1,17 +1,16 @@
 ---
-title: "Procédure pas à pas : Création d’une application à l’aide de l’API de réflexion"
-description: "En plus de l’API d’éléments, MonoTouch.Dialog (MT. D) également inclut une API basée sur les attributs de réflexion. L’API de réflexion permet de créer des écrans avec MT. D aussi simple que décorant des classes avec attributs. Cet article fournit une présentation montrant comment créer une application à l’aide de l’API de réflexion."
-ms.topic: article
+title: 'Procédure pas à pas : Création d’une application à l’aide de l’API de réflexion'
+description: En plus de l’API d’éléments, MonoTouch.Dialog (MT. D) également inclut une API basée sur les attributs de réflexion. L’API de réflexion permet de créer des écrans avec MT. D aussi simple que décorant des classes avec attributs. Cet article fournit une présentation montrant comment créer une application à l’aide de l’API de réflexion.
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ec5ca2883c6e109a67ee8a4ecb25fe938d0df4ec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e56eaeccb2e09d9f1ad84245bf41e2a4bf1b56f1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>Procédure pas à pas : Création d’une application à l’aide de l’API de réflexion
 

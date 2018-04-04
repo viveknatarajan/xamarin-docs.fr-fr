@@ -1,18 +1,17 @@
 ---
-title: "Modifications apportées à StoreKit"
-description: "iOS 6 présente deux modifications apportées à l’API du Kit de magasin : la capacité à afficher iTunes (et le magasin d’applications/iBookstore) option où Apple hébergera vos fichiers téléchargeables acheter des produits à partir de votre application et une nouveau dans l’application. Ce document explique comment implémenter ces fonctionnalités avec Xamarin.iOS."
-ms.topic: article
+title: Modifications apportées à StoreKit
+description: 'iOS 6 présente deux modifications apportées à l’API du Kit de magasin : la capacité à afficher iTunes (et le magasin d’applications/iBookstore) option où Apple hébergera vos fichiers téléchargeables acheter des produits à partir de votre application et une nouveau dans l’application. Ce document explique comment implémenter ces fonctionnalités avec Xamarin.iOS.'
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ec83bc0f62ee195884cef2f59ba701fcbf15c1da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8a7a70c3f84518141cf44d630fb4137051d0c866
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="changes-to-storekit"></a>Modifications apportées à StoreKit
 
@@ -26,7 +25,7 @@ Les principales modifications au magasin de Kit dans iOS6 sont ces deux nouvelle
 
 Il est recommandé que ce document être lue conjointement avec le Xamarin.iOS existant [In-App Purchase](~/ios/platform/in-app-purchasing/index.md) documentation.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les fonctions de magasin Kit abordées dans ce document requièrent iOS 6 et Xcode 4.5, ainsi que de Xamarin.iOS 6.0.
 
@@ -143,7 +142,7 @@ Les résultats inclut également les autres métadonnées notamment affichent de
 
 Voici quelques exemples :
 
--   **iBooks app*- [http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
+-   **application de l’iBooks*- [http://itunes.apple.com/search?term=ibooks&amp;entité = logiciel&amp;pays = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
 -   **Point et l’Ibooks kangourou*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entité = livre électronique&amp;pays = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
 
 

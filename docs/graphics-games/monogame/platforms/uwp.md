@@ -1,18 +1,17 @@
 ---
-title: "Création d’un projet MonoGame UWP"
-description: "MonoGame peut être utilisé pour créer des jeux et des applications pour la plateforme Windows universelle, ciblant que plusieurs appareils avec un code base et un ensemble de contenu."
-ms.topic: article
+title: Création d’un projet MonoGame UWP
+description: MonoGame peut être utilisé pour créer des jeux et des applications pour la plateforme Windows universelle, ciblant que plusieurs appareils avec un code base et un ensemble de contenu.
 ms.prod: xamarin
 ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: d8f805d8a3fcadd9c2a6758f1dc5592c03fe3ed4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: efee4847397db0e89a8d10211e13d61ce13824fb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Création d’un projet MonoGame UWP
 
@@ -23,7 +22,7 @@ Cette procédure pas à pas couvre la création du projet MonoGame Universal Win
 Cette procédure pas à pas crée un projet vide qui affiche un *bleu vif bleu* en arrière-plan (la couleur d’arrière-plan traditionnelle des applications XNA).
 
 
-# <a name="requirements"></a>Configuration requise
+# <a name="requirements"></a>Spécifications
 
 Développement d’applications MonoGame UWP nécessite :
 

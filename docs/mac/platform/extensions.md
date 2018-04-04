@@ -1,18 +1,17 @@
 ---
-title: "Prise en charge de l’Extension de Xamarin.Mac"
-description: "Cet article décrit la prise en charge de l’extension dans Xamarin.Mac version 2.10 (et supérieure)."
-ms.topic: article
+title: Prise en charge de l’Extension de Xamarin.Mac
+description: Cet article décrit la prise en charge de l’extension dans Xamarin.Mac version 2.10 (et supérieure).
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 530e53230e9f0dea165b083fa6795558025a293f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 03936c75d31bfd01e741ad2c09096c925dc9dbfc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinmac-extension-support"></a>Prise en charge de l’Extension de Xamarin.Mac
 

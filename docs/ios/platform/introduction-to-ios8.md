@@ -1,18 +1,17 @@
 ---
-title: "Introduction à iOS 8"
-description: "Avec iOS 8, Apple a fourni une multitude de nouvelles infrastructures et d’API excite et aux développeurs de concernée. Dans ce guide, nous introduire ces nouvelles API et voir comment iOS 8 peut bénéficier aux développeurs et aux utilisateurs."
-ms.topic: article
+title: Introduction à iOS 8
+description: Avec iOS 8, Apple a fourni une multitude de nouvelles infrastructures et d’API excite et aux développeurs de concernée. Dans ce guide, nous introduire ces nouvelles API et voir comment iOS 8 peut bénéficier aux développeurs et aux utilisateurs.
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 8a4fabd5cc63434950f4646336b06676f6eb915b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2f57547356adcbafd01851bc54e42a14454ccd6a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-8"></a>Introduction à iOS 8
 
@@ -26,7 +25,7 @@ Ce guide présente les nouvelles API pour les développeurs de Xamarin.iOS.
 
 Il existe également quelques API ont été déconseillées dans iOS 8, qui sont décrites en détail à la fin de ce document.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour créer des applications iOS 8 dans Visual Studio pour Mac :
 

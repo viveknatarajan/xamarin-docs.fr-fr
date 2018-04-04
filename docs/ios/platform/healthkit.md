@@ -1,18 +1,17 @@
 ---
 title: HealthKit
-description: "HealthKit est une infrastructure introduite dans iOS 8 qui fournit un magasin de données centralisé et coordonné sécurisé pour les informations relatives au contrôle d’intégrité. Le système d’exploitation garantit la confidentialité et la sécurité des informations d’intégrité et, avec l’application de contrôle d’intégrité, un tableau de bord pour l’utilisateur. Avec l’autorisation de l’utilisateur, les applications peuvent lire et écrire une grande variété d’informations d’intégrité."
-ms.topic: article
+description: HealthKit est une infrastructure introduite dans iOS 8 qui fournit un magasin de données centralisé et coordonné sécurisé pour les informations relatives au contrôle d’intégrité. Le système d’exploitation garantit la confidentialité et la sécurité des informations d’intégrité et, avec l’application de contrôle d’intégrité, un tableau de bord pour l’utilisateur. Avec l’autorisation de l’utilisateur, les applications peuvent lire et écrire une grande variété d’informations d’intégrité.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -69,14 +68,14 @@ La création d’une liste explicite **ID d’application** et appropriées **pr
 
 Votre actuel **ID d’application** sont répertoriés dans le [certificats, les identificateurs et les profils](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) section du centre de développement. Souvent, cette liste affiche **ID** les valeurs de `*`, qui indique que le **ID d’application** - **nom** peut être utilisé avec n’importe quel nombre de suffixes. Ces *Wildcard application IDs* ne peut pas être utilisé avec le Kit de contrôle d’intégrité.
  
-Pour créer un texte explicite **ID d’application**, cliquez sur le  **+**  bouton dans l’angle supérieur droit pour accéder à la **inscrire iOS ID d’application** page :
+Pour créer un texte explicite **ID d’application**, cliquez sur le **+** bouton dans l’angle supérieur droit pour accéder à la **inscrire iOS ID d’application** page :
 
 
 [![](healthkit-images/image02.png "L’inscription d’une application sur le portail des développeurs Apple")](healthkit-images/image02.png#lightbox)
 
 Comme indiqué dans l’image ci-dessus, après la création d’une description de l’application, utilisez le **ID d’application explicite** section pour créer un ID de votre application. Dans le **des Services d’application** section, vérifiez **Kit de contrôle d’intégrité** dans les **activer les Services** section.
 
-Lorsque vous avez terminé, appuyez sur la **continuer** bouton pour enregistrer le **ID d’application** dans votre compte. Vous s’affiche de nouveau la **profils, des identificateurs et des certificats** page. Cliquez sur **profils de configuration** pour accéder à la liste de vos profils de configuration en cours, puis cliquez sur le  **+**  situé dans l’angle supérieur droit pour accéder à la **ajouter iOS Profil de configuration** page. Sélectionnez le **iOS le développement d’applications** , puis cliquez sur **continuer** pour accéder à la **Sélectionnez ID d’application** page. Ici, sélectionnez explicites **ID d’application** que vous avez spécifié précédemment :
+Lorsque vous avez terminé, appuyez sur la **continuer** bouton pour enregistrer le **ID d’application** dans votre compte. Vous s’affiche de nouveau la **profils, des identificateurs et des certificats** page. Cliquez sur **profils de configuration** pour accéder à la liste de vos profils de configuration en cours, puis cliquez sur le **+** situé dans l’angle supérieur droit pour accéder à la **ajouter iOS Profil de configuration** page. Sélectionnez le **iOS le développement d’applications** , puis cliquez sur **continuer** pour accéder à la **Sélectionnez ID d’application** page. Ici, sélectionnez explicites **ID d’application** que vous avez spécifié précédemment :
 
 
 [![](healthkit-images/image03.png "Sélectionnez l’ID d’application explicite")](healthkit-images/image03.png#lightbox)

@@ -1,18 +1,17 @@
 ---
-title: "Liaison de données et la clé-valeur de codage"
-description: "Cet article couvre l’utilisation de la clé-valeur de codage et observer pour permettre la liaison de données pour les éléments d’interface utilisateur dans le Générateur de Xcode Interface clé-valeur."
-ms.topic: article
+title: Liaison de données et la clé-valeur de codage
+description: Cet article couvre l’utilisation de la clé-valeur de codage et observer pour permettre la liaison de données pour les éléments d’interface utilisateur dans le Générateur de Xcode Interface clé-valeur.
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: b7ffd069a8c99c2cdfd0ecb58fe7ef762e5a46f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 48ee5d4e4a0a53de49fbba46d79424e03af6fe5c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data-binding-and-key-value-coding"></a>Liaison de données et la clé-valeur de codage
 
@@ -70,7 +69,7 @@ namespace MacDatabinding
 
 Tout d’abord, le `[Register("PersonModel")]` attribut inscrit la classe et l’expose à objectif-C. Ensuite, la classe doit hériter de `NSObject` (ou une sous-classe hérite `NSObject`), cela ajoute plusieurs méthode qui permettent d’être KVM conforme à la classe de base. Ensuite, le `[Export("Name")]` attribut expose le `Name` propriété et définit la valeur de clé qui sera utilisée ultérieurement pour accéder à la propriété via KVM et KVO techniques. 
 
-Enfin, pour pouvoir être clé-valeur observée à la valeur de propriété, l’accesseur doit encapsuler les modifications apportées à sa valeur dans `WillChangeValue` et `DidChangeValue` les appels de méthode (en spécifiant la même clé que la `Export` attribut).  Exemple :
+Enfin, pour pouvoir être clé-valeur observée à la valeur de propriété, l’accesseur doit encapsuler les modifications apportées à sa valeur dans `WillChangeValue` et `DidChangeValue` les appels de méthode (en spécifiant la même clé que la `Export` attribut).  Par exemple :
 
 ```csharp
 set {
@@ -159,7 +158,7 @@ Modifierait la valeur de la `Name` propriété `Jane Doe`.
 
 ### <a name="observing-value-changes"></a>Observer des modifications de valeur
 
-À l’aide de clé-valeur en observant (KVO), vous pouvez attacher un observateur à une clé spécifique d’une classe conforme KVM et averti chaque fois que la valeur de cette clé est modifiée (à l’aide de techniques de KVM ou accéder directement à la propriété donnée dans le code C#). Exemple :
+À l’aide de clé-valeur en observant (KVO), vous pouvez attacher un observateur à une clé spécifique d’une classe conforme KVM et averti chaque fois que la valeur de cette clé est modifiée (à l’aide de techniques de KVM ou accéder directement à la propriété donnée dans le code C#). Par exemple :
 
 ```csharp
 // Watch for the name value changing

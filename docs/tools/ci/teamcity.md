@@ -1,18 +1,17 @@
 ---
-title: "À l’aide de la ville de l’équipe avec Xamarin"
-description: "Ce guide traite des étapes de l’utilisation de TeamCity pour compiler des applications mobiles et les envoyer au Xamarin Test Cloud."
-ms.topic: article
+title: À l’aide de la ville de l’équipe avec Xamarin
+description: Ce guide traite des étapes de l’utilisation de TeamCity pour compiler des applications mobiles et les envoyer au Xamarin Test Cloud.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: caff1fb834ade35e68eb19683e87788a4aa70740
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 643ae8f30dc6447b548448f77883b204d8dc76c2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>À l’aide de la ville de l’équipe avec Xamarin
 
@@ -40,7 +39,7 @@ Il existe plusieurs étapes impliquées dans la définition de TeamCity :
 
 - **Création d’un projet de TeamCity** – une fois que les trois étapes précédentes terminées, nous devons créer un projet de TeamCity qui contient toutes les métadonnées nécessaires pour récupérer le code source, les projets de compilation et envoyer les tests à Xamarin Test Cloud.
 
-# <a name="requirements"></a>Configuration requise
+# <a name="requirements"></a>Spécifications
 
 Expérience avec [Xamarin Test Cloud](https://developer.xamarin.com/guides/testcloud) est requis.
 

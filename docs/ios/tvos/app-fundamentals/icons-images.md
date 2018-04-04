@@ -1,18 +1,17 @@
 ---
-title: "Utilisation des icônes et des Images"
-description: "Cet article décrit la conception et l’utilisation des icônes et des images à l’intérieur d’une application Xamarin.tvOS."
-ms.topic: article
+title: Utilisation des icônes et des Images
+description: Cet article décrit la conception et l’utilisation des icônes et des images à l’intérieur d’une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-icons-and-images"></a>Utilisation des icônes et des Images
 
@@ -122,7 +121,7 @@ Apple créé le [parallaxe aperçu](http://itunespartner.apple.com/assets/downlo
 
 [![](icons-images-images/layered03.png "Le Générateur d’aperçu parallaxe")](icons-images-images/layered03.png#lightbox)
 
-Lors de l’aperçu d’une Image en couches, vous pouvez utiliser la souris pour faire pivoter l’image et afficher un aperçu de l’effet parallaxe. Utilisez le  **+**  (plus) et  **-**  (moins) de boutons permettant d’ajouter et supprimer des couches.
+Lors de l’aperçu d’une Image en couches, vous pouvez utiliser la souris pour faire pivoter l’image et afficher un aperçu de l’effet parallaxe. Utilisez le **+** (plus) et **-** (moins) de boutons permettant d’ajouter et supprimer des couches.
 
 Lorsque vous créez une nouvelle Image en couche, peuvent être exportée au format LSR et du groupe de votre application.
 

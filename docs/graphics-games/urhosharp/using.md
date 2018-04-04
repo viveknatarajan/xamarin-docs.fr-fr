@@ -1,17 +1,16 @@
 ---
-title: "À l’aide de UrhoSharp"
-description: "Vue d’ensemble du moteur UrhoSharp"
-ms.topic: article
+title: À l’aide de UrhoSharp
+description: Vue d’ensemble du moteur UrhoSharp
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: cd30f17d631216a3ea119a262aca6d294394a77f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cdb32c0fe9aa1a267bda5768b9026667723d694c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-urhosharp"></a>À l’aide de UrhoSharp
 
@@ -218,7 +217,7 @@ Il existe plusieurs modes d’accélération, le graphique suivant affiche les d
 Dans votre [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/) sous-classe, vous devez introduire une méthode asynchrone qui prépare le comportement de votre composant et les fonctionnalités des lecteurs pour celle-ci.
 Ensuite, vous devez appeler cette méthode à l’aide du langage c# `await` (mot clé) à partir d’une autre partie de votre programme, soit votre `Application.Start` méthode ou en réponse à un point d’utilisateur ou le récit dans votre application.
 
-Exemple :
+Par exemple :
 
 ```csharp
 class Robot : Component {
@@ -497,7 +496,7 @@ Budgets de mémoire peuvent être définies par le type de ressource : si resso
 
 Urho3D essaie d’utiliser des formats de fichier existants chaque fois que possible et définir des formats de fichiers personnalisés uniquement en cas d’absolue nécessité comme pour les modèles (*.mdl) et des animations (*.ani). Pour ces types d’éléments multimédias, Urho fournit un convertisseur - [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) qui peut consommer de nombreux formats 3D courants tels que fbx, dae, 3ds et obj, etc.
 
-Il existe également un complément utile pour Blender [https://github.com/reattiva/Urho3D-Blender](https://github.com/reattiva/Urho3D-Blender) qui peut exporter vos ressources Blender dans le format qui convient pour Urho3D.
+Il existe également un complément utile pour Blender [ https://github.com/reattiva/Urho3D-Blender ](https://github.com/reattiva/Urho3D-Blender) qui peut exporter vos ressources Blender dans le format qui convient pour Urho3D.
 
 ## <a name="background-loading-of-resources"></a>Chargement en arrière-plan des ressources
 
@@ -529,7 +528,7 @@ soundSource.AutoRemove = true;
 
 # <a name="particles"></a>Particules
 
-PARTICULES offrent un moyen simple d’ajouter certains effets simples et peu coûteuse pour votre application.  Vous pouvez utiliser les particules stockés au format PEX, à l’aide des outils tels que [http://onebyonedesign.com/flash/particleeditor/](http://onebyonedesign.com/flash/particleeditor/).
+PARTICULES offrent un moyen simple d’ajouter certains effets simples et peu coûteuse pour votre application.  Vous pouvez utiliser les particules stockés au format PEX, à l’aide des outils tels que [ http://onebyonedesign.com/flash/particleeditor/ ](http://onebyonedesign.com/flash/particleeditor/).
 
 Particules sont des composants qui peuvent être ajoutés à un nœud.  Vous avez besoin d’appeler du nœud `CreateComponent<ParticleEmitter2D>` méthode pour créer la particule, puis configurer la particule en définissant la propriété d’effet à un effet 2D qui est chargé à partir du cache de ressources.
 

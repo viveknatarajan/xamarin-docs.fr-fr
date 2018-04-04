@@ -1,18 +1,17 @@
 ---
-title: "Passage de paramètres effet en tant que propriétés d’exécution de langage commun"
-description: "Propriétés du Common Language Runtime (CLR) peuvent être utilisées pour définir les paramètres d’effet qui ne répondent pas aux modifications de propriétés d’exécution. Cet article montre comment utiliser des propriétés CLR pour passer des paramètres à un effet."
-ms.topic: article
+title: Passage de paramètres effet en tant que propriétés d’exécution de langage commun
+description: Propriétés du Common Language Runtime (CLR) peuvent être utilisées pour définir les paramètres d’effet qui ne répondent pas aux modifications de propriétés d’exécution. Cet article montre comment utiliser des propriétés CLR pour passer des paramètres à un effet.
 ms.prod: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: afe30ae87aa2e465013eb7fef3089cf701d98da6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78d14b9764ab0c7cafb9f09fa1c8acea3f45afde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passage de paramètres effet en tant que propriétés d’exécution de langage commun
 
@@ -239,7 +238,7 @@ Cet article a illustré à l’aide des propriétés CLR pour passer des paramè
 
 ## <a name="related-links"></a>Liens associés
 
-- [Convertisseurs personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Renderers personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
 - [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
 - [RoutingEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/)

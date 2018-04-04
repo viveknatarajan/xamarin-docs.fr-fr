@@ -1,18 +1,17 @@
 ---
-title: "Introduction à des plans conceptuels"
-description: "Cet article fournit une introduction à l’utilisation des animations dans une application Xamarin.Mac. Il aborde la création et la gestion de l’interface utilisateur de l’application à l’aide de storyboards et d’Interface Builder de Xcode."
-ms.topic: article
+title: Introduction à des plans conceptuels
+description: Cet article fournit une introduction à l’utilisation des animations dans une application Xamarin.Mac. Il aborde la création et la gestion de l’interface utilisateur de l’application à l’aide de storyboards et d’Interface Builder de Xcode.
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ccee60b5d953987e858ef592d005cec9803b8b96
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5d69e1d11fb59afe3cdcbe11391af7eced733b3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introduction à des plans conceptuels
 

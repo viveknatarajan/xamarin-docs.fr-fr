@@ -1,18 +1,17 @@
 ---
-title: "Utilisation de l’affichage des contrôleurs de fractionnement"
-description: "Cet article décrit la conception et l’utilisation de contrôleurs d’affichage fractionné à l’intérieur d’une application Xamarin.tvOS."
-ms.topic: article
+title: Utilisation de l’affichage des contrôleurs de fractionnement
+description: Cet article décrit la conception et l’utilisation de contrôleurs d’affichage fractionné à l’intérieur d’une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86a7690d4cf7291a4e44507a6250e3469c8f7ed2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25151eb2929e2bc61dba27a9937ffdf4ee224626
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-split-view-controllers"></a>Utilisation de l’affichage des contrôleurs de fractionnement
 
@@ -103,7 +102,7 @@ Comme indiqué ci-dessus, un contrôleur d’affichage fractionné est souvent u
 
 ### <a name="accessing-master-and-detail"></a>L’accès à la principale et détaillée
 
-Si vous avez besoin d’accéder par programme les Master et contrôleurs de la vue détail, utilisez le `ViewControllers ` propriété du contrôleur affichage fractionné. Exemple :
+Si vous avez besoin d’accéder par programme les Master et contrôleurs de la vue détail, utilisez le `ViewControllers ` propriété du contrôleur affichage fractionné. Par exemple :
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -125,7 +124,7 @@ Pour ce faire, le plus simple consiste à exposer une propriété dans votre cla
 public DetailViewController DetailController { get; set;}
 ```
 
-Dans le contrôleur d’affichage fractionné substituer le `ViewDidLoad` (méthode) et attache les deux vues d’ensemble. Exemple :
+Dans le contrôleur d’affichage fractionné substituer le `ViewDidLoad` (méthode) et attache les deux vues d’ensemble. Par exemple :
 
 ```csharp
 public override void ViewDidLoad ()
@@ -149,7 +148,7 @@ Vous pouvez exposer des propriétés et des méthodes sur votre contrôleur de v
 
 ### <a name="showing-and-hiding-master"></a>Affichage et masquage de Master
 
-Si vous le souhaitez, vous pouvez afficher ou masquer la vue du contrôleur à l’aide de la `PreferredDisplayMode` propriété du contrôleur affichage fractionné. Exemple :
+Si vous le souhaitez, vous pouvez afficher ou masquer la vue du contrôleur à l’aide de la `PreferredDisplayMode` propriété du contrôleur affichage fractionné. Par exemple :
 
 ```csharp
 // Show hide split view

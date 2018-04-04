@@ -1,18 +1,17 @@
 ---
 title: Apparence de la cellule
-description: "Explorer les options de présentation des données tout en tirant parti de la commodité de ListView."
-ms.topic: article
+description: Explorer les options de présentation des données tout en tirant parti de la commodité de ListView.
 ms.prod: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 551a0de8cd4965815c67a795fb5723d4261a173c
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: df0e113f0c76ea9bde58da7a7ceccd50edd5b227
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cell-appearance"></a>Apparence de la cellule
 

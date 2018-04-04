@@ -1,18 +1,17 @@
 ---
-title: "Création de contrôles personnalisés"
-description: "Cet article décrit comment créer des contrôles personnalisés et les utiliser dans le constructeur d’Interface."
-ms.topic: article
+title: Création de contrôles personnalisés
+description: Cet article décrit comment créer des contrôles personnalisés et les utiliser dans le constructeur d’Interface.
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3ea88810384dfe8b1a08080953db19caddf25d6a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e1ab3977df96e241fa2a5a80f6cabd74d7d775f8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-custom-controls"></a>Création de contrôles personnalisés
 
@@ -185,7 +184,7 @@ private void Initialize() {
 }
 ```
 
-Cette méthode est appelée à partir de chacun des constructeurs d' un contrôle pour s’assurer que le contrôle est configuré correctement. Exemple :
+Cette méthode est appelée à partir de chacun des constructeurs d' un contrôle pour s’assurer que le contrôle est configuré correctement. Par exemple :
 
 ```csharp
 public NSFlipSwitch (IntPtr handle) : base (handle)

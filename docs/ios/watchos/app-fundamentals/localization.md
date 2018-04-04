@@ -1,17 +1,16 @@
 ---
 title: Utilisation de la localisation
 description: Adaptation de vos applications watchOS pour plusieurs langues
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-localization"></a>Utilisation de la localisation
 
@@ -86,13 +85,13 @@ Lorsque le plan conceptuel est rendu sur la surveillance, les valeurs correctes 
 
 #### <a name="storyboard-images"></a>Images d’animation
 
-L’exemple de solution inclut également un  **gradient@2x.png**  image dans chaque dossier de langue. Cette image peut être différente pour chaque langue (par exemple). Il peut avoir incorporé texte nécessitant une conversion, ou utilisez localisée iconographie).
+L’exemple de solution inclut également un **gradient@2x.png** image dans chaque dossier de langue. Cette image peut être différente pour chaque langue (par exemple). Il peut avoir incorporé texte nécessitant une conversion, ou utilisez localisée iconographie).
 
 Définissez simplement l’image **Image** propriété dans la table de montage séquentiel et de l’image appropriée s’affichera sur la surveillance en fonction de la langue sélectionnée par l’utilisateur.
 
 ![](localization-images/storyboard-image.png "Définir les images de la propriété Image dans la table de montage séquentiel")
 
-Remarque : étant donné que toutes les observations Apple ont rétine, uniquement le  **@2x**  version de l’image est obligatoire. Vous n’avez pas besoin de spécifier  **@2x**  dans le plan conceptuel.
+Remarque : étant donné que toutes les observations Apple ont rétine, uniquement le **@2x** version de l’image est obligatoire. Vous n’avez pas besoin de spécifier **@2x** dans le plan conceptuel.
 
 ### <a name="watch-extension"></a>Extension de surveillance
 
@@ -130,7 +129,7 @@ Les images sont remplies par le code peuvent être définies de deux manières.
   displayImage.SetImage("gradient"); // image in Watch App (as shown above)
   ```
 
-2. Vous pouvez déplacer une image à partir de l’extension pour la surveillance à l’aide de `FromBundle` et l’application va choisir automatiquement l’image appropriée pour la sélection de la langue de l’utilisateur. Dans l’exemple de solution, il existe une image  **language@2x.png**  dans chaque langue de dossier et il est affiché sur `DetailController` utilisant le code suivant :
+2. Vous pouvez déplacer une image à partir de l’extension pour la surveillance à l’aide de `FromBundle` et l’application va choisir automatiquement l’image appropriée pour la sélection de la langue de l’utilisateur. Dans l’exemple de solution, il existe une image **language@2x.png** dans chaque langue de dossier et il est affiché sur `DetailController` utilisant le code suivant :
 
   ```csharp
   using (var image = UIImage.FromBundle ("language")) {
@@ -138,7 +137,7 @@ Les images sont remplies par le code peuvent être définies de deux manières.
   }
   ```
 
-  Notez que vous n’avez pas besoin de spécifier le  **@2x**  lorsque vous faites référence au nom de fichier de l’image.
+  Notez que vous n’avez pas besoin de spécifier le **@2x** lorsque vous faites référence au nom de fichier de l’image.
 
 La seconde méthode est également applicable si vous téléchargez une image à partir d’un serveur distant à restituer sur l’observation ; Toutefois dans ce cas vous devez vous assurer que l’image que vous téléchargez est correctement localisé en fonction des préférences de l’utilisateur.
 

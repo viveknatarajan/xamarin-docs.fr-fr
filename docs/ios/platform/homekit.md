@@ -1,18 +1,17 @@
 ---
 title: HomeKit
-description: "HomeKit est un framework d’Apple pour le contrôle des appareils de l’automation de base. Cet article présente HomeKit et couvre les accessoires de test de configuration dans le simulateur d’accessoire HomeKit et l’écriture d’une simple application Xamarin.iOS pour interagir avec ces Accessoires."
-ms.topic: article
+description: HomeKit est un framework d’Apple pour le contrôle des appareils de l’automation de base. Cet article présente HomeKit et couvre les accessoires de test de configuration dans le simulateur d’accessoire HomeKit et l’écriture d’une simple application Xamarin.iOS pour interagir avec ces Accessoires.
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 02116e8e11cb6ff050e2c885338777e1fd25c4cb
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5699465330a4d2a5b983ec7661f80c1ed4f14bde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="homekit"></a>HomeKit
 
@@ -104,7 +103,7 @@ Pour démarrer le simulateur d’accessoire HomeKit et créer quelques accessoir
 1. Dans le dossier Applications, démarrer le simulateur d’accessoire HomeKit : 
 
     [![](homekit-images/simulator02.png "Le simulateur HomeKit accessoire")](homekit-images/simulator02.png#lightbox)
-2. Cliquez sur le  **+**  sélectionnez **nouvel accessoire...** : 
+2. Cliquez sur le **+** sélectionnez **nouvel accessoire...** : 
 
     [![](homekit-images/simulator03.png "Ajouter un nouvel accessoire")](homekit-images/simulator03.png#lightbox)
 3. Entrez les informations sur le nouvel accessoire et cliquez sur le **Terminer** bouton : 
@@ -285,7 +284,7 @@ Une fois que le nouvel accessoire a été trouvé, il doit être présenté à l
 
 [![](homekit-images/accessory01.png "Recherche d’un nouvel accessoire")](homekit-images/accessory01.png#lightbox)
 
-Appelez le `AddAccessory` méthode pour ajouter l’accesseur sélectionné à la collection de la page d’accueil. Exemple :
+Appelez le `AddAccessory` méthode pour ajouter l’accesseur sélectionné à la collection de la page d’accueil. Par exemple :
 
 ```csharp
 // Add the requested accessory to the home
@@ -318,7 +317,7 @@ Le `HMRoom` objet contient toutes les informations concernant une salle donnée 
 
 Cet exemple, nous allons conserver choses simples et utiliser des accessoires d’une maison directement, au lieu de les organiser dans des locaux ou des zones.
 
-Le `HMHome` objet contient une liste d’accessoire attribué qui peut être présentée à l’utilisateur dans son `Accessories` propriété. Exemple :
+Le `HMHome` objet contient une liste d’accessoire attribué qui peut être présentée à l’utilisateur dans son `Accessories` propriété. Par exemple :
 
 [![](homekit-images/accessory04.png "Un accessoire d’exemple")](homekit-images/accessory04.png#lightbox)
 

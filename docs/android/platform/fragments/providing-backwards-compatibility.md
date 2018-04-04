@@ -1,17 +1,16 @@
 ---
-title: "Fournissant vers l’arrière de la compatibilité avec le Package de prise en charge Android"
-ms.topic: article
+title: Fournissant vers l’arrière de la compatibilité avec le Package de prise en charge Android
 ms.prod: xamarin
 ms.assetid: 7511D2F8-2B4F-4200-C74E-E967153B2E8D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: f09aae1445cfcf9f4225af3de37b65ebb5a1b6b2
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 07aec6f5fb66d4efcc114f92f0fb85d5b5b99c6f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Fournissant vers l’arrière de la compatibilité avec le Package de prise en charge Android
 
@@ -37,7 +36,7 @@ Après ont effectué ces étapes, il devient possible d’utiliser des Fragments
 
 -   **Mettre à jour des espaces de noms** &ndash; Classes qui héritent de `Android.App.Fragment` doit maintenant hériter `Android.Support.V4.App.Fragment` . Supprimer à l’aide de l’instruction « `using Android.App;` » en haut du code source de fichier et remplacez-le par « `using Android.Support.V4.App` ». 
 
--   **Utilisez SupportFragmentManager** &ndash; `Android.Support.V4.App.FragmentActivity` expose un `SupportingFragmentManager` propriété qui doit être utilisée pour obtenir une référence à la `FragmentManager` . Exemple : 
+-   **Utilisez SupportFragmentManager** &ndash; `Android.Support.V4.App.FragmentActivity` expose un `SupportingFragmentManager` propriété qui doit être utilisée pour obtenir une référence à la `FragmentManager` . Par exemple : 
 
 ```csharp
 FragmentTransaction fragmentTx = this.SupportingFragmentManager.BeginTransaction();

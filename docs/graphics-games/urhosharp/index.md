@@ -1,18 +1,17 @@
 ---
 title: UrhoSharp - 3D/2D moteur
-description: "UrhoSharp est un inter-plateformes principales 2D et 3D moteur peut être utilisé pour créer des scènes 3D et 2D animées pour vos applications à l’aide de géométries, matériaux, lumières et appareils photo."
-ms.topic: article
+description: UrhoSharp est un inter-plateformes principales 2D et 3D moteur peut être utilisé pour créer des scènes 3D et 2D animées pour vos applications à l’aide de géométries, matériaux, lumières et appareils photo.
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 747c38c4a279b740bf52645c00df85ea9357f4a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c8df53d90ab1245aecff3eab1393c009b7910aa5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp - 3D/2D moteur
 

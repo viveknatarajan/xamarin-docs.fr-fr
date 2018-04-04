@@ -1,17 +1,16 @@
 ---
-title: "Guide de référence des types de liaison"
-ms.topic: article
+title: Guide de référence des types de liaison
 ms.prod: xamarin
 ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 0d58a8ab15a7b2d598aa8fd45a9b4d0c3d9e440b
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 9364b4c56951ac9ebd3870e4afe41a40f9e1f455
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-types-reference-guide"></a>Guide de référence des types de liaison
 
@@ -114,7 +113,7 @@ Elle retourne un `bool` valeur, dans ce cas la syntaxe d’expression lambda nou
 
 Le Générateur de liaison prend en charge la génération des événements et des propriétés qui renvoient une classe telle que `UIScrollView` avec son `UIScrollViewDelegate` (également appelé ces la classe de modèle), pour ce faire, vous devez annoter votre [ `[BaseType]` ](#BaseTypeAttribute) définition avec le `Events` et `Delegates` paramètres (décrites ci-dessous). En plus d’annoter le [ `[BaseType]` ](#BaseTypeAttribute) avec ces paramètres, il est nécessaire informer le Générateur de quelques composants plus.
 
-Pour les événements qui durent plus d’un paramètre (dans Objective-C la convention est que le premier paramètre dans une classe déléguée est l’instance de l’objet expéditeur) vous devez fournir le nom que vous aimeriez pour généré `EventArgs` classe. Cette opération s’effectue avec la [ `[EventArgs]` ](#EventArgsAttribute) attribut sur la déclaration de méthode dans votre classe de modèle. Exemple :
+Pour les événements qui durent plus d’un paramètre (dans Objective-C la convention est que le premier paramètre dans une classe déléguée est l’instance de l’objet expéditeur) vous devez fournir le nom que vous aimeriez pour généré `EventArgs` classe. Cette opération s’effectue avec la [ `[EventArgs]` ](#EventArgsAttribute) attribut sur la déclaration de méthode dans votre classe de modèle. Par exemple :
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -327,7 +326,7 @@ Nous émet un avertissement (BI1117) chaque fois que nous avons trouvé un [ `[S
 
 Lorsque cet attribut est appliqué à une classe il génère simplement une classe statique, qui ne dérive pas de `NSObject`, donc le [ `[BaseType]` ](#BaseTypeAttribute) attribut est ignoré. Les classes statiques sont utilisés pour héberger les variables publiques C que vous souhaitez exposer.
 
-Exemple :
+Par exemple :
 
 ```csharp
 [Static]
@@ -503,7 +502,7 @@ public Func<NSAnimation, float, float> ComputeAnimationCurve { get; set; }
 
 Pour les événements qui durent plus d’un paramètre (dans Objective-C la convention est que le premier paramètre dans une classe déléguée est l’instance de l’objet expéditeur) vous devez fournir le nom que vous souhaitez que la classe EventArgs générée peut être. Cette opération s’effectue avec la `[EventArgs]` attribut sur la déclaration de méthode dans votre `Model` classe.
 
-Exemple :
+Par exemple :
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -795,7 +794,7 @@ Le `[BindAsAttribute]` autorise la liaison `NSNumber`, `NSValue` et `NSString`(e
 
 Vous pouvez la décorer les méthodes (sur la valeur de retour), les paramètres et les propriétés avec `BindAs`. La seule restriction est que votre membre **ne doit pas** se trouve dans un `[Protocol]` ou [ `[Model]` ](#ModelAttribute) interface.
 
-Exemple :
+Par exemple :
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -906,7 +905,7 @@ Le `[Bind]` attribut possède deux utilisations un quand il est appliqué à une
 
 Lorsqu’il est utilisé pour une méthode ou propriété, l’effet de la `[Bind]` attribut consiste à générer une méthode qui appelle le sélecteur spécifié. Mais la méthode générée qui en résulte n’est pas décorée avec le [ `[Export]` ](#ExportAttribute) attribut, ce qui signifie qu’il ne peut pas être utilisé lors de la substitution de méthode. Cela est généralement utilisé en association avec le `[Target]` attribut pour l’implémentation des méthodes d’extension Objective-C.
 
-Exemple :
+Par exemple :
 
 ```csharp
 public interface UIView {
@@ -918,7 +917,7 @@ public interface UIView {
 Lorsqu’il est utilisé dans une méthode getter ou l’accesseur Set, le `[Bind]` attribut est utilisé pour modifier les valeurs par défaut déduits par le Générateur de code lors de la génération des noms de sélecteur Objective-C getter et setter d’une propriété. Par défaut, lorsque vous marquez une propriété avec le nom `fooBar`, génère le générateur un `fooBar` exporter pour l’accesseur Get et `setFooBar:` pour l’accesseur Set. Dans certains cas, Objective-C ne respecte pas cette convention, généralement elles modifier le nom de l’accesseur Get peut être `isFooBar`.
 Vous utiliseriez cet attribut pour informer le Générateur de ce.
 
-Exemple :
+Par exemple :
 
 ```csharp
 // Default behavior
@@ -1017,7 +1016,7 @@ Lorsque vous appliquez le `[DisposeAttribute]` à une classe, vous fournissez un
 
 Étant donné que la `Dispose` méthode est automatiquement générée par le `bmac-native` et `btouch-native` outils, vous devez utiliser le `[Dispose]` attribut d’injecter du code dans le texte généré `Dispose` implémentation de méthode.
 
-Exemple :
+Par exemple :
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1106,7 +1105,7 @@ Le `[Internal]` attribut peut être appliqué aux méthodes ou propriétés, et 
 
 Lorsque vous concevez la liaison, vous généralement masquer la méthode ou propriété à l’aide de cet attribut et fournir un nom différent pour la méthode ou propriété, et sur votre fichier de prise en charge complémentaire c#, vous pouvez ensuite ajouter un wrapper fortement typé qui expose le fonctionnalité sous-jacente.
 
-Exemple :
+Par exemple :
 
 ```csharp
 [Internal]
@@ -1159,7 +1158,7 @@ Vous pouvez appliquer cet attribut à des champs pour que le produit générateu
 
 Cet attribut peut être utilisé sans arguments pour les notifications qui n’effectuer aucune charge utile ou vous pouvez spécifier un `System.Type` qui fait référence à une autre interface dans la définition d’API, généralement avec le nom se terminant par « EventArgs ». Le Générateur d’activer l’interface dans une classe qui sous-classe `EventArgs` et inclut toutes les propriétés proposées. Le [ `[Export]` ](#ExportAttribute) attribut doit être utilisé dans la `EventArgs` classe pour le nom de la clé utilisée pour rechercher le dictionnaire Objective-C pour extraire la valeur de la liste.
 
-Exemple :
+Par exemple :
 
 ```csharp
 interface MyClass {
@@ -1273,7 +1272,7 @@ Lorsqu’il est appliqué à un paramètre dans une signature de méthode il ind
 
 Si le type de référence n’a pas cet attribut, l’outil de liaison génère une vérification de la valeur assignée avant de le transmettre à Objective-C et génère une vérification lèvera une `ArgumentNullException` si la valeur assignée est `null`.
 
-Exemple :
+Par exemple :
 
 ```csharp
 // In properties
@@ -1456,7 +1455,7 @@ var strongDemo = new Demo ();
 demo.Delegate = new MyDelegate ();
 ```
 
-Une autre utilisation de la `[Wrap]` attribut consiste à prendre en charge de la version fortement typée de méthodes.  Exemple :
+Une autre utilisation de la `[Wrap]` attribut consiste à prendre en charge de la version fortement typée de méthodes.  Par exemple :
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1954,7 +1953,7 @@ Cela génère automatiquement une classe qui peut être instanciée à partir d�
 
 Cet attribut prend un paramètre, le nom de la classe contenant les clés utilisées pour accéder aux éléments dans le dictionnaire.   Par défaut de chaque propriété de l’interface avec l’attribut sera rechercher un membre dans le type spécifié pour un nom avec le suffixe « Clé ».
 
-Exemple :
+Par exemple :
 
 ```csharp
 [StrongDictionary ("MyOptionKeys")]

@@ -1,18 +1,17 @@
 ---
-title: "en effectuant un copier-coller ;"
-description: "Cet article décrit l’utilisation de la table de montage pour fournir de copie et de coller dans une application Xamarin.Mac. Il montre comment travailler avec les types de données standard qui peuvent être partagés entre plusieurs applications et la prise en charge des données personnalisées dans une application donnée."
-ms.topic: article
+title: en effectuant un copier-coller ;
+description: Cet article décrit l’utilisation de la table de montage pour fournir de copie et de coller dans une application Xamarin.Mac. Il montre comment travailler avec les types de données standard qui peuvent être partagés entre plusieurs applications et la prise en charge des données personnalisées dans une application donnée.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ba937a6eae7f0f74bcf044f1248d49a421e82de5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cf81666403f687ce997e20f6f5f097dc9fcf1421
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="copy-and-paste"></a>en effectuant un copier-coller ;
 
@@ -541,7 +540,7 @@ Pour chaque élément de menu, nous obtenir la fenêtre en cours, au premier pla
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-À partir de là, nous appelons le `ImageDocument` instance de la classe de cette fenêtre pour gérer la copie et collez les actions. Exemple : 
+À partir de là, nous appelons le `ImageDocument` instance de la classe de cette fenêtre pour gérer la copie et collez les actions. Par exemple : 
 
 ```csharp
 window.Document.CopyImage (sender);
@@ -703,7 +702,7 @@ Utilisez le `ChangeCount` et `ClearContents` méthodes de la `NSPasteboard` clas
 
 Vous effectuez une opération de copie en premier l’accès à une table de montage, effacer le contenu existant et l’écriture des représentations autant de données que vous êtes obligé de la table de montage.
 
-Exemple :
+Par exemple :
 
 ```csharp
 // Get the standard pasteboard
@@ -937,7 +936,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-La classe doit également être exposée pour Objective-C à l’aide de la `Register` directive et elle doivent exposer les propriétés requises ou les méthodes à l’aide de `Export`. Exemple :
+La classe doit également être exposée pour Objective-C à l’aide de la `Register` directive et elle doivent exposer les propriétés requises ou les méthodes à l’aide de `Export`. Par exemple :
 
 ```csharp
 [Export("name")]

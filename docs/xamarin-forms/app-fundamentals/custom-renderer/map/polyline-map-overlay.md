@@ -1,18 +1,17 @@
 ---
-title: "Un itinéraire sur une carte de mise en surbrillance"
-description: "Cet article explique comment ajouter un segment de recouvrement polyligne à une carte. Un segment de recouvrement polyligne est une série de segments de ligne connectés qui sont généralement utilisées pour afficher un itinéraire sur une carte ou de forme qui est requis."
-ms.topic: article
+title: Un itinéraire sur une carte de mise en surbrillance
+description: Cet article explique comment ajouter un segment de recouvrement polyligne à une carte. Un segment de recouvrement polyligne est une série de segments de ligne connectés qui sont généralement utilisées pour afficher un itinéraire sur une carte ou de forme qui est requis.
 ms.prod: xamarin
 ms.assetid: FBFDC715-1654-4188-82A0-FC522548BCFF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c7becef16009596148b4de28e4e8f6892cb44fe1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f781a472a63d97c8859aff36b28e0fd4fa0c7756
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-route-on-a-map"></a>Un itinéraire sur une carte de mise en surbrillance
 
@@ -31,7 +30,7 @@ Lorsqu’un [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.
 1. [Personnaliser](#Customizing_the_Map) le mappage en créant un convertisseur personnalisé pour le mappage sur chaque plateforme.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) doit être initialisé et configuré avant des utiliser. Pour plus d’informations, consultez [ `Maps Control` ](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) doit être initialisé et configuré avant des utiliser. Pour plus d’informations, consultez [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 Pour plus d’informations sur la personnalisation d’un mappage à l’aide d’un convertisseur personnalisé, consultez [personnalisation d’un code confidentiel de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
@@ -303,5 +302,5 @@ Cet article a expliqué comment ajouter un segment de recouvrement polyligne à 
 ## <a name="related-links"></a>Liens associés
 
 - [Mappage de type polyligne Ovlerlay (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
-- [Personnalisation d’un code confidentiel de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
+- [Personnalisation d’une épingle de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)

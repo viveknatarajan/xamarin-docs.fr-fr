@@ -1,18 +1,17 @@
 ---
 title: Affichage de liste
 description: Présenter vos données dans les listes et attrayantes et interactives.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 494c69700ed0b12b4c9151b9a1b04ea091ebfa57
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: a153791893f99a472c3fcf91a205bf91ed971e13
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="listview"></a>Affichage de liste
 

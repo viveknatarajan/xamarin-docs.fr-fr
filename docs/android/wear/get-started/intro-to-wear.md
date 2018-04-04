@@ -1,18 +1,17 @@
 ---
-title: "Introduction à usure Android"
-description: "Avec l’introduction de porter Android de Google, vous n’êtes plus limité aux simplement les téléphones portables et tablettes en matière de développement de superbes applications Android. Prise en charge de Xamarin.Android pour porter Android rend possible d’exécuter du code c# sur votre poignet ! Cette présentation fournit une vue d’ensemble d’usure Android, décrit ses principales fonctionnalités et offre une vue d’ensemble des fonctionnalités disponibles dans Android 2.0 porter. Il répertorie certaines des appareils Android d’usure plus populaires, et il fournit des liens vers la documentation de Google Android usure essentielle pour plus d’informations."
-ms.topic: article
+title: Introduction à usure Android
+description: Avec l’introduction de porter Android de Google, vous n’êtes plus limité aux simplement les téléphones portables et tablettes en matière de développement de superbes applications Android. Prise en charge de Xamarin.Android pour porter Android rend possible d’exécuter du code c# sur votre poignet ! Cette présentation fournit une vue d’ensemble d’usure Android, décrit ses principales fonctionnalités et offre une vue d’ensemble des fonctionnalités disponibles dans Android 2.0 porter. Il répertorie certaines des appareils Android d’usure plus populaires, et il fournit des liens vers la documentation de Google Android usure essentielle pour plus d’informations.
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f6cfe61b5f91fb6703fdcdd20513ce6bc2dc161
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ab166bb71c23d456cb70d35a2794717110642fd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-android-wear"></a>Introduction à usure Android
 

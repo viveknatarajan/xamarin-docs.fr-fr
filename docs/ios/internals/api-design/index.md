@@ -1,18 +1,17 @@
 ---
-title: "Conception de l’API"
-description: "Point de vue de la conception de l’API de Xamarin.iOS"
-ms.topic: article
+title: Conception de l’API
+description: Point de vue de la conception de l’API de Xamarin.iOS
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c333fd18e306c50bbfd41377638470cb45954883
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: b7604633a5dfad6134d7b549299194ab6707a865
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="api-design"></a>Conception de l’API
 
@@ -96,7 +95,7 @@ Le [Foundation](https://developer.xamarin.com/api/namespace/Foundation/) espace 
 
 Xamarin.iOS reflète en c#, la hiérarchie de classes à partir de l’objectif-C. Par exemple, la classe de base Objective-C [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) est utilisable à partir de c# via [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/).
 
-Bien que cet espace de noms fournit des liaisons pour les types Objective-C Foundation sous-jacent, dans certains cas, nous avons mappé les types sous-jacents aux types .NET. Exemple :
+Bien que cet espace de noms fournit des liaisons pour les types Objective-C Foundation sous-jacent, dans certains cas, nous avons mappé les types sous-jacents aux types .NET. Par exemple :
 
 - Au lieu de traitement de [NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) et [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), le runtime expose comme c# [chaîne](https://developer.xamarin.com/api/type/System.String/)s et fortement typées [tableau](https://developer.xamarin.com/api/type/System.Array/)s tout au long de l’API.
 
@@ -379,7 +378,7 @@ Le modèle est également utilisé pour fournir les données à la demande pour 
 En plus de la propriété fortement typée, il existe également un délégué typé faible qui permet au développeur de lier les choses différemment si vous le souhaitez.
 Everywhere fortement typé `Delegate` est exposée dans Xamarin.iOS liaison correspondante `WeakDelegate` propriété est également exposée.
 
-Lorsque vous utilisez la `WeakDelegate`, vous êtes responsable de la décoration correctement de votre classe à l’aide de la [exporter](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) attribut pour spécifier le sélecteur. Exemple :
+Lorsque vous utilisez la `WeakDelegate`, vous êtes responsable de la décoration correctement de votre classe à l’aide de la [exporter](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) attribut pour spécifier le sélecteur. Par exemple :
 
 ```csharp
 class Notifier : NSObject  {
@@ -624,13 +623,13 @@ Vous n’avez pas besoin en inquiéter lors de l’utilisation de Visual Studio 
 
 Un concept fondamental de la programmation de Objective-C est sélecteurs. Souvent, vous serez probablement sur les API qui vous obligent à passer un sélecteur ou attend votre code pour répondre à un sélecteur.
 
-Création de nouveaux sélecteurs en c# est très facile : vous créez simplement une nouvelle instance de la `ObjCRuntime.Selector` classe et d’utiliser le résultat dans n’importe où dans l’API qui le requiert. Exemple :
+Création de nouveaux sélecteurs en c# est très facile : vous créez simplement une nouvelle instance de la `ObjCRuntime.Selector` classe et d’utiliser le résultat dans n’importe où dans l’API qui le requiert. Par exemple :
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-Pour un c# méthode en réponse à un appel de sélecteur, il doit hériter de la `NSObject` type et la méthode c# doivent être décorées avec le nom de sélecteur avec la `[Export]` attribut. Exemple :
+Pour un c# méthode en réponse à un appel de sélecteur, il doit hériter de la `NSObject` type et la méthode c# doivent être décorées avec le nom de sélecteur avec la `[Export]` attribut. Par exemple :
 
 ```csharp
 public class MyMath : NSObject {

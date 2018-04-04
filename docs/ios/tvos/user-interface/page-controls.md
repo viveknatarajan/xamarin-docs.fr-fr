@@ -1,18 +1,17 @@
 ---
-title: "Utilisation de contrôle de Page"
-description: "Cet article décrit la conception et l’utilisation de contrôle de Page à l’intérieur d’une application Xamarin.tvOS."
-ms.topic: article
+title: Utilisation de contrôle de Page
+description: Cet article décrit la conception et l’utilisation de contrôle de Page à l’intérieur d’une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b1b53fefdd72c36bdffd3c5ade0b8d86da225b14
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 1cb07c050aeb2ee72e34048baab991df2d5775d0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-page-control"></a>Utilisation de contrôle de Page
 
@@ -46,7 +45,7 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 
     [![](page-controls-images/page03.png "L’onglet du Widget")](page-controls-images/page03.png#lightbox)
 1. Ensuite, ajoutez les contrôles ou les mouvements à l’affichage pour les déplacer vers le haut et vers l’avant dans la collection de pages.
-1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
+1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Par exemple : 
 
     [![](page-controls-images/page04.png "Nom du contrôle")](page-controls-images/page04.png#lightbox)
 1. Enregistrez les modifications apportées.
@@ -63,7 +62,7 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 
     [![](page-controls-images/page03-vs.png "L’onglet du Widget")](page-controls-images/page03-vs.png#lightbox)
 1. Ensuite, ajoutez les contrôles ou les mouvements à l’affichage pour les déplacer vers le haut et vers l’avant dans la collection de pages.
-1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
+1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Par exemple : 
 
     [![](page-controls-images/page04-vs.png "Nom du contrôle")](page-controls-images/page04-vs.png#lightbox)
 1. Enregistrez les modifications apportées.
@@ -77,7 +76,7 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 
 
 
-Modifier votre vue contrôleur (exemple `ViewController.cs`) et ajoutez le code pour gérer les pages en cours de modification. Exemple :
+Modifier votre vue contrôleur (exemple `ViewController.cs`) et ajoutez le code pour gérer les pages en cours de modification. Par exemple :
 
 ```csharp
 using System;

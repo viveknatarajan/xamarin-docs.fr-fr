@@ -1,18 +1,17 @@
 ---
 title: Comportements de Xamarin.Forms
-description: "Xamarin.Forms comportements sont créées en dérivant le comportement ou un comportement<T> classe. Cet article montre comment créer et utiliser les comportements de Xamarin.Forms."
-ms.topic: article
+description: Xamarin.Forms comportements sont créées en dérivant le comportement ou un comportement<T> classe. Cet article montre comment créer et utiliser les comportements de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 160dd4b2326529abbb456e77391f0f73ee374f50
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2848b554d2dbd6d3d69ae864846247b3612d64e6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-behaviors"></a>Comportements de Xamarin.Forms
 

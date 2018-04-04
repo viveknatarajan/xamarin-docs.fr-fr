@@ -1,17 +1,17 @@
 ---
-title: "Conseils de dépannage"
-ms.topic: article
+title: Conseils de dépannage
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 015fff63c612c3acf29681b90c1e945c5e460034
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 961f9f38687790343f225d95c74e00e98f594c28
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-tips"></a>Conseils de dépannage
 
@@ -200,7 +200,7 @@ Il existe quatre messages des conséquences :
 -  Faible global référence destruction : il s’agit des lignes qui commencent par *-w-* .
 
 
-Dans tous les messages, le *grefc* valeur est le nombre de références globales qui Xamarin.Android a créé, tandis que la *grefwc* valeur correspond au nombre de références faibles globales qui Xamarin.Android a créé. Le *gérer* ou *obj-handle* valeur est la valeur du handle JNI et le caractère situé après le '  */* » est le type de valeur du handle :   */l* pour référence locale, */G* pour les références globales, et *Wn* pour les références faibles globales.
+Dans tous les messages, le *grefc* valeur est le nombre de références globales qui Xamarin.Android a créé, tandis que la *grefwc* valeur correspond au nombre de références faibles globales qui Xamarin.Android a créé. Le *gérer* ou *obj-handle* valeur est la valeur du handle JNI et le caractère situé après le ' */*» est le type de valeur du handle :   */l* pour référence locale, */G* pour les références globales, et *Wn* pour les références faibles globales.
 
 Dans le cadre du processus de catalogue global, les références globales (+ g +) sont converties en références globaux faibles (à l’origine a + w + et - g-), un catalogue global Java côté est lancé, puis la référence globale faible est vérifiée pour voir si elles ont été collectées. Si elle est toujours actif, un nouveau gref est créée autour de la référence faible (+ g +, -w-), sinon la destruction de la référence faible (-w).
 
@@ -270,7 +270,7 @@ Cela doit disposer de haut et en cours d’exécution. Si vous continuez à renc
 
 ## <a name="receiving-activation-incomplete-error-message"></a>Réception de « Message d’erreur incomplet d’Activation
 
-Ce problème peut se produire lors de l’utilisation de Xamarin.Android pour Visual Studio. Pour résoudre ce problème, envoyez les journaux à partir de l’emplacement suivant pour  *contact@xamarin.com* .
+Ce problème peut se produire lors de l’utilisation de Xamarin.Android pour Visual Studio. Pour résoudre ce problème, envoyez les journaux à partir de l’emplacement suivant pour *contact@xamarin.com*.
 
 -  Emplacement du journal : **%LocalAppData%\\Xamarin\\journaux**
 
@@ -301,7 +301,7 @@ Pour ce faire, Veuillez trouver votre plateforme de choix ci-dessous et suivez l
 5. Entrez vos informations d’identification
 6. Vérification des mises à jour
 
-Si ce message d’erreur continue d’apparaître, envoyez un e-mail  **contact@xamarin.com** .
+Si ce message d’erreur continue d’apparaître, envoyez un e-mail **contact@xamarin.com**.
 
 
 

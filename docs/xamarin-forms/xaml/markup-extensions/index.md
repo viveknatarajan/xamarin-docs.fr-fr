@@ -1,18 +1,17 @@
 ---
 title: Extensions de balisage XAML
-description: "Étendre la gamme de sources à partir de XAML, les attributs sont définis"
-ms.topic: article
+description: Étendre la gamme de sources à partir de XAML, les attributs sont définis
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 11889115b65608c750690c33052a9c86f7081e25
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b81bc4b31edd1d8b8f5f43f97885c38e889dd32c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xaml-markup-extensions"></a>Extensions de balisage XAML
 
@@ -46,11 +45,11 @@ N’importe quel paramètre d’attribut entre accolades est *toujours* une exte
 
 Cet article est divisé en deux parties :
 
-## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Utilisation des Extensions de balisage XAML](consuming.md)  
+## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Consommation des extensions de balisage XAML](consuming.md)  
 
 Utilisez les extensions de balisage XAML définies dans Xamarin.Forms.
 
-## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Création d’Extensions de balisage XAML](creating.md) 
+## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Création d’extensions de balisage XAML](creating.md) 
 
 Écrire vos propres extensions de balisage XAML personnalisées.
 
@@ -61,5 +60,5 @@ Utilisez les extensions de balisage XAML définies dans Xamarin.Forms.
 - [Extensions de balisage (exemple)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 - [Chapitre d’extensions de balisage XAML à partir du carnet de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Dictionnaires de ressources](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Dynamic Styles](~/xamarin-forms/user-interface/styles/dynamic.md)
+- [Styles dynamiques](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Liaison de données](~/xamarin-forms/app-fundamentals/data-binding/index.md)

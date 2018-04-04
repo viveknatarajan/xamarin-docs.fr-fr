@@ -1,20 +1,19 @@
 ---
-title: "Fonctionnalités de plateforme"
-description: "Tirer parti des fonctionnalités spécifiques à une plateforme avec Xamarin.Forms"
-ms.topic: article
+title: Fonctionnalités de la plateforme
+description: Tirer parti des fonctionnalités spécifiques à une plateforme avec Xamarin.Forms
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 950cc4a8611b05c22825ef89a85827fa0d3e5f7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="platform-features"></a>Fonctionnalités de plateforme
+# <a name="platform-features"></a>Fonctionnalités de la plateforme
 
 Xamarin.Forms est extensible et vous permet d’incorporer des fonctionnalités spécifiques à une plateforme à l’aide de [effets](~/xamarin-forms/app-fundamentals/effects/index.md), [convertisseurs personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), le [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md), le [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md)et bien plus encore.
 
@@ -26,7 +25,7 @@ Ce guide décrit comment implémenter des documents de conception en mettant à 
 
 Indexation de l’application permet aux applications seraient autrement être oubliées après quelques utilise pour rester en apparaissant dans les résultats de la recherche. Lien profond permet à un résultat de recherche qui contient les données d’application, généralement en accédant à une page référencée à partir d’un lien vers des applications.
 
-## <a name="device-classdevicemd"></a>[Classe de périphérique](device.md)
+## <a name="device-classdevicemd"></a>[Classe d’appareil](device.md)
 
 Comment utiliser la `Device` classe pour créer un comportement spécifique à la plateforme dans le code partagé et l’interface utilisateur (y compris à l’aide de XAML). Couvre également `BeginInvokeOnMainThread` est essentielle lorsque vous modifiez des contrôles d’interface utilisateur à partir de threads d’arrière-plan.
 

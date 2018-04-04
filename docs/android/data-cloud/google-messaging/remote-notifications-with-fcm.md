@@ -1,18 +1,17 @@
 ---
-title: "Notifications à distance avec Firebase de cloud computing de messagerie"
-description: "Cette procédure pas à pas fournit une explication pas à pas montrant comment utiliser la messagerie de Cloud Firebase pour implémenter des notifications à distance (également appelées des notifications push) dans une application Xamarin.Android. Il montre comment implémenter les classes différentes qui sont nécessaires pour les communications avec la messagerie de Cloud Firebase (FCM) et fournit des exemples montrant comment configurer le manifeste Android pour l’accès à FCM montre en aval de la messagerie à l’aide de la Firebase Console."
-ms.topic: article
+title: Notifications à distance avec Firebase de cloud computing de messagerie
+description: Cette procédure pas à pas fournit une explication pas à pas montrant comment utiliser la messagerie de Cloud Firebase pour implémenter des notifications à distance (également appelées des notifications push) dans une application Xamarin.Android. Il montre comment implémenter les classes différentes qui sont nécessaires pour les communications avec la messagerie de Cloud Firebase (FCM) et fournit des exemples montrant comment configurer le manifeste Android pour l’accès à FCM montre en aval de la messagerie à l’aide de la Firebase Console.
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifications à distance avec Firebase de cloud computing de messagerie
 
@@ -34,7 +33,7 @@ Les sujets suivants seront présentées :
 
 Au cours de cette procédure pas à pas, vous ajouterez progressivement des fonctionnalités à **FCMClient** et l’exécuter sur un appareil ou un émulateur à comprendre comment il interagit avec FCM. Vous allez utiliser la journalisation afin de surveiller les transactions d’application en temps réel avec les serveurs FCM, et vous pourrez observer comment les notifications sont générées à partir des messages FCM que vous entrez dans l’interface utilisateur graphique de Notifications de la Console Firebase. 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Avant de poursuivre cette procédure pas à pas, vous devez obtenir les informations d’identification nécessaires pour utiliser des serveurs de Google FCM ; Ce processus est expliqué dans [Firebase de messagerie Cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md). En particulier, vous devez télécharger le **services.json de google** fichier à utiliser avec l’exemple de code présenté dans cette procédure pas à pas. Si vous n’avez pas encore créé un projet dans la Console Firebase (ou si vous n’avez pas encore téléchargé le **google-services.json** fichier), consultez [Firebase de messagerie Cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md). 
 

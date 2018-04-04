@@ -1,18 +1,17 @@
 ---
 title: fichiers .xib
-description: "Cet article traite de travail avec les fichiers .xib créés dans le Générateur de Xcode Interface pour créer et gérer des interfaces utilisateur pour une application Xamarin.Mac."
-ms.topic: article
+description: Cet article traite de travail avec les fichiers .xib créés dans le Générateur de Xcode Interface pour créer et gérer des interfaces utilisateur pour une application Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 92ca65409dd82806278885bb03efd7b04ab1827d
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c1f575f5d3d5f0fbe82d5e0d08103b9261944602
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xib-files"></a>fichiers .xib
 
@@ -575,7 +574,7 @@ Pour afficher une nouvelle vue, utilisez le code suivant :
 DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 ```
 
-Cela crée une instance du contrôleur d’affichage pour la nouvelle vue à afficher, définit son type (comme spécifié par l’énumération ajoutée au projet) et utilise le `DisplaySubview` méthode ajoutée à la classe de la fenêtre pour afficher la vue. Exemple :
+Cela crée une instance du contrôleur d’affichage pour la nouvelle vue à afficher, définit son type (comme spécifié par l’énumération ajoutée au projet) et utilise le `DisplaySubview` méthode ajoutée à la classe de la fenêtre pour afficher la vue. Par exemple :
 
 [![L’exemple d’application en cours d’exécution](xib-images/view04.png "l’exemple d’application en cours d’exécution")](xib-images/view04-large.png#lightbox)
 

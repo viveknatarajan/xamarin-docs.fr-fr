@@ -1,18 +1,17 @@
 ---
-title: "Fonctionnalités de l’interface Lollipop"
-description: "Cet article fournit une vue d’ensemble générale des nouvelles fonctionnalités introduites dans Android 5.0 (Lollipop). Ces fonctionnalités incluent un nouveau style d’interface utilisateur appelé thème de documents, ainsi que les nouvelles fonctionnalités de prise en charge tels que les animations, vue ombres et teintes drawable. Android 5.0 inclut également des notifications améliorées, deux nouveaux widgets d’interface utilisateur, un nouveau Planificateur de travaux et un certain nombre de nouvelles API pour améliorer le stockage, de mise en réseau, de connectivité et de fonctionnalités multimédias."
-ms.topic: article
+title: Fonctionnalités de l’interface Lollipop
+description: Cet article fournit une vue d’ensemble générale des nouvelles fonctionnalités introduites dans Android 5.0 (Lollipop). Ces fonctionnalités incluent un nouveau style d’interface utilisateur appelé thème de documents, ainsi que les nouvelles fonctionnalités de prise en charge tels que les animations, vue ombres et teintes drawable. Android 5.0 inclut également des notifications améliorées, deux nouveaux widgets d’interface utilisateur, un nouveau Planificateur de travaux et un certain nombre de nouvelles API pour améliorer le stockage, de mise en réseau, de connectivité et de fonctionnalités multimédias.
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: de6829a0a698133ad9002ead1cd7c534a30b1f6c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cdef611525abbe4f066959c0ac56380b1c617747
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lollipop-features"></a>Fonctionnalités de l’interface Lollipop
 
@@ -41,7 +40,7 @@ Outre les améliorations de l’interface utilisateur liées via le thème de ma
 -   **Nouvelles API** &ndash; Android 5.0 ajoute les nouvelles API pour la charge de plusieurs réseaux, amélioration connectivité Bluetooth, la gestion de stockage plus facile et un contrôle plus souple de lecteurs multimédias et les appareils photo. Un nouveau travail de fonctionnalité de planification est disponible pour exécuter des tâches de façon asynchrone à des heures planifiées. Cette fonctionnalité contribue à améliorer l’autonomie par, par exemple, planification des tâches d’avoir lieu lorsque l’appareil est connecté et chargement.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités Android 5.0 dans les applications Xamarin :
 

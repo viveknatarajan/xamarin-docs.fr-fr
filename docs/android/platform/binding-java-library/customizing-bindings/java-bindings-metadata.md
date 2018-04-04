@@ -1,18 +1,17 @@
 ---
-title: "Métadonnées de liaisons de Java"
-description: "Code c# dans Xamarin.Android appelle bibliothèques Java via des liaisons qui sont un mécanisme qui résume les détails de bas niveau qui sont spécifiés dans Interface JNI (Java Native). Xamarin.Android fournit un outil qui génère ces liaisons. Cet outils vous permet du contrôle du développeur comment une liaison est créée à l’aide de métadonnées, qui permet aux procédures telles que la modification des espaces de noms et la modification du nom des membres. Ce document explique le fonctionnement des métadonnées, récapitule les attributs que les métadonnées prend en charge et explique comment résoudre les problèmes de liaison en modifiant ces métadonnées."
-ms.topic: article
+title: Métadonnées de liaisons de Java
+description: Code c# dans Xamarin.Android appelle bibliothèques Java via des liaisons qui sont un mécanisme qui résume les détails de bas niveau qui sont spécifiés dans Interface JNI (Java Native). Xamarin.Android fournit un outil qui génère ces liaisons. Cet outils vous permet du contrôle du développeur comment une liaison est créée à l’aide de métadonnées, qui permet aux procédures telles que la modification des espaces de noms et la modification du nom des membres. Ce document explique le fonctionnement des métadonnées, récapitule les attributs que les métadonnées prend en charge et explique comment résoudre les problèmes de liaison en modifiant ces métadonnées.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 6dea13fcda43cad22b8bea9838bbcb23b97820c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-bindings-metadata"></a>Métadonnées de liaisons de Java
 
@@ -246,7 +245,7 @@ Modifie le type de retour d’une méthode. Cela ne modifie pas l’attribut de 
 
 ### <a name="obfuscated"></a>obscurcis
 
-Les outils qui masquent les bibliothèques Java peuvent interférer avec le Générateur de liaison de Xamarin.Android et sa capacité à générer des classes wrapper c#. Caractéristiques des classes obscurcis incluent : * le nom de classe inclut un  **$** , c'est-à-dire **un .class $** * le nom de classe est entièrement compromis de caractères minuscules, c'est-à-dire  **a.class**
+Les outils qui masquent les bibliothèques Java peuvent interférer avec le Générateur de liaison de Xamarin.Android et sa capacité à générer des classes wrapper c#. Caractéristiques des classes obscurcis incluent : * le nom de classe inclut un **$**, c'est-à-dire **un .class $** * le nom de classe est entièrement compromis de caractères minuscules, c'est-à-dire  **a.class**
 
 Cet extrait de code est un exemple montrant comment générer un type c# « non obscurci » :
 
@@ -275,7 +274,7 @@ Notez que les méthodes d’accesseur Get et Set seront toujours créées par le
 
 ### <a name="sender"></a>sender
 
-Spécifie le paramètre d’une méthode doit être le `sender` paramètre lorsque la méthode est mappée à un événement. La valeur peut être `true` ou `false`. Exemple :
+Spécifie le paramètre d’une méthode doit être le `sender` paramètre lorsque la méthode est mappée à un événement. La valeur peut être `true` ou `false`. Par exemple :
 
 ```xml
 <attr path="/api/package[@name='android.app']/

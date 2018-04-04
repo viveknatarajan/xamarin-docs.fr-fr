@@ -1,17 +1,16 @@
 ---
-title: "Structures incorporées"
-description: "Ce document décrit comment les développeurs d’applications peuvent incorporer des infrastructures d’utilisateur dans leurs applications."
-ms.topic: article
+title: Structures incorporées
+description: Ce document décrit comment les développeurs d’applications peuvent incorporer des infrastructures d’utilisateur dans leurs applications.
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 62ddf665431a14ce7f4fe8db52cc6ee7a2c4635a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f223d8ef6e89cc44822b8a831dbba3cf71d727c9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="embedded-frameworks"></a>Structures incorporées
 

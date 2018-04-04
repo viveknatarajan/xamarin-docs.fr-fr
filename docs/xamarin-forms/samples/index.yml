@@ -2,18 +2,18 @@
 documentType: LandingData
 title: Exemples Xamarin.Forms
 metadata:
-  description: "Exemples d’applications Xamarin.Forms et démonstrations de code pour les développeurs d’applications mobiles."
+  description: Exemples d’applications Xamarin.Forms et démonstrations de code pour les développeurs d’applications mobiles.
   author: conceptdev
   ms.author: crdun
   ms.date: 02/17/2018
-  ms.topic: article
-  ms.openlocfilehash: 2cd0a8019df09c8da0f19812b5217bcad5f0c2e9
-  ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+  ms.topic: sample
+  ms.openlocfilehash: 9a30de76dcdf1fc9c286f3511695e1468d6bfe0a
+  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/28/2018
+  ms.lasthandoff: 04/04/2018
 abstract:
-  description: "Exemples d’applications Xamarin.Forms et démonstrations de code pour vous aider à bien démarrer et à comprendre les concepts de Xamarin.Forms."
+  description: Exemples d’applications Xamarin.Forms et démonstrations de code pour vous aider à bien démarrer et à comprendre les concepts de Xamarin.Forms.
   menu:
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/all/
@@ -26,43 +26,43 @@ sections:
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: "Cet exemple illustre une application de liste Todo où les données sont accessibles et stockées dans une base de données SQLite locale."
+      html: Cet exemple illustre une application de liste Todo où les données sont accessibles et stockées dans une base de données SQLite locale.
       image:
         src: images/todo.png
         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
       title: Todo
     - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      html: "Il s’agit d’un jeu familier repensé. Dix bogues sont masqués dans une grille de mosaïques de 9 x 9. Pour gagner, vous devez trouver et marquer les dix bogues."
+      html: Il s’agit d’un jeu familier repensé. Dix bogues sont masqués dans une grille de mosaïques de 9 x 9. Pour gagner, vous devez trouver et marquer les dix bogues.
       image:
         src: images/bugsweeper.png
         href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
       title: BugSweeper
     - href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      html: "Une calculatrice en notation polonaise inverse (NPI) permet d’entrer des nombres et des opérations sans parenthèses et sans touche « égal »."
+      html: Une calculatrice en notation polonaise inverse (NPI) permet d’entrer des nombres et des opérations sans parenthèses et sans touche « égal ».
       image:
         src: images/rpncalc.png
         href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
       title: Calculatrice NPI
     - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      html: "Le programme simule un disque tournant sur lequel vous pouvez peindre par entrée tactile et en déplaçant vos doigts. SpinPaint répond aux entrées tactiles en peignant une ligne sous votre doigt et en dupliquant également celle-ci dans trois images miroir dans les trois autres quadrants du disque."
+      html: Le programme simule un disque tournant sur lequel vous pouvez peindre par entrée tactile et en déplaçant vos doigts. SpinPaint répond aux entrées tactiles en peignant une ligne sous votre doigt et en dupliquant également celle-ci dans trois images miroir dans les trois autres quadrants du disque.
       image:
         src: images/spinpaint.png
         href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
       title: SpinPaint
     - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      html: "XAML (eXtensible Application Markup Language) : permet aux développeurs de définir des interfaces utilisateur dans les applications Xamarin.Forms à l’aide d’un balisage au lieu de code."
+      html: 'XAML (eXtensible Application Markup Language) : permet aux développeurs de définir des interfaces utilisateur dans les applications Xamarin.Forms à l’aide d’un balisage au lieu de code.'
       image:
         src: images/xaml.png
         href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
       title: Exemples XAML
     - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      html: "XAML (eXtensible Application Markup Language) : permet aux développeurs de définir des interfaces utilisateur dans les applications Xamarin.Forms à l’aide d’un balisage au lieu de code."
+      html: 'XAML (eXtensible Application Markup Language) : permet aux développeurs de définir des interfaces utilisateur dans les applications Xamarin.Forms à l’aide d’un balisage au lieu de code.'
       image:
         src: images/xuzzle.png
         href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
       title: Xuzzle
     - href: https://developer.xamarin.com/samples/xamarin-forms/all/
-      html: "Ensemble complet d’exemples d’applications et de démonstrations de code Xamarin.Forms."
+      html: Ensemble complet d’exemples d’applications et de démonstrations de code Xamarin.Forms.
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/xamarin-forms/all/

@@ -1,18 +1,17 @@
 ---
 title: À l’aide de mosaïque avec CocosSharp
 description: Mosaïque est un outil puissant, flexible et une application déjà rodée pour la création de vignette orthogonal et isométrique est mappé pour les jeux. CocosSharp fournit une intégration intégrée pour le format de fichier natif de mosaïque.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 68afa9d175140fd5104e83282a2f72c47625d882
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: a356ddc0412eb1dce1b35e060e6c9127525de804
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>À l’aide de mosaïque avec CocosSharp
 

@@ -1,18 +1,17 @@
 ---
-title: "Recherche et les améliorations de Widget d’écran d’accueil"
-description: "Cet article décrit les améliorations Qu'apple a apportées au système de Widget dans iOS 10."
-ms.topic: article
+title: Recherche et les améliorations de Widget d’écran d’accueil
+description: Cet article décrit les améliorations Qu'apple a apportées au système de Widget dans iOS 10.
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 7ca863b92d8d7af46f4ce18f5d088347b9ca04ee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e7a64738f29ab2b5c62659d721beb50db7c9adb5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-and-home-screen-widget-enhancements"></a>Recherche et les améliorations de Widget d’écran d’accueil
 
@@ -51,14 +50,14 @@ Pour plus d’informations sur l’utilisation des widgets, veuillez consulter n
 
 ## <a name="working-with-vibrancy"></a>Utilisation de dynamisme de notre place
 
-Dynamisme de notre place garantit que le texte d’un Widget reste lisible lorsque présentés sur lumière du Widget, arrière-plan flou (fourni par le système). Avant d’iOS 10, le développeur utiliserait un [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) pour dynamisme de notre place du Widget. Exemple :
+Dynamisme de notre place garantit que le texte d’un Widget reste lisible lorsque présentés sur lumière du Widget, arrière-plan flou (fourni par le système). Avant d’iOS 10, le développeur utiliserait un [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) pour dynamisme de notre place du Widget. Par exemple :
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect
 var vibrancy = UIVibrancyEffect.CreateForNotificationCenter ();
 ```
 
-Cela a déconseillés dans iOS 10 et doit être remplacé par un [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) ou un [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect). Exemple :
+Cela a déconseillés dans iOS 10 et doit être remplacé par un [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) ou un [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect). Par exemple :
 
 ```csharp
 // Get Primary Widget Vibrancy Effect

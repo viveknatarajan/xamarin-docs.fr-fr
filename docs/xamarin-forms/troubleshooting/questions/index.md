@@ -1,25 +1,25 @@
 ---
-title: "Questions fréquemment posées"
-ms.topic: article
+title: Questions fréquemment posées
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 89364175-53BA-4A09-B3E2-44AC67DD971C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 95728bf6bf1009db1cc834bf1d9d0be6a8fc5ef5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c0c8a6f4736bdcbb028425296f2e05dd500294d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="frequently-asked-questions"></a>Questions fréquemment posées
 
 
-## <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-packageupdate-forms-templatemd"></a>[Puis-je mettre à jour le modèle par défaut de Xamarin.Forms à un package NuGet plus récente ?](update-forms-template.md)
+## <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-packageupdate-forms-templatemd"></a>[Puis-je mettre à jour le modèle par défaut Xamarin.Forms vers un package NuGet plus récent ?](update-forms-template.md)
 Ce guide utilise le modèle de bibliothèque de classes portables Xamarin.Forms par exemple, mais la même méthode générale fonctionne également pour le modèle de projet partagé de Xamarin.Forms. 
 
-## <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-filesforms-xaml-designermd"></a>[Pourquoi le concepteur Visual Studio XAML ne fonctionne pas pour les fichiers XAML de Xamarin.Forms ?](forms-xaml-designer.md)
+## <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-filesforms-xaml-designermd"></a>[Pourquoi le concepteur Visual Studio XAML ne fonctionne-t-il pas pour les fichiers XAML de Xamarin.Forms ?](forms-xaml-designer.md)
 Xamarin.Forms ne prend actuellement en charge les concepteurs visuels pour les fichiers XAML.
 
 ## <a name="android-build-error-the-linkassemblies-task-failed-unexpectedlyandroid-linkassemblies-errormd"></a>[Erreur de génération Android : échec inattendu de la tâche « LinkAssemblies »](android-linkassemblies-error.md)

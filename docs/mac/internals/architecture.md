@@ -1,18 +1,17 @@
 ---
 title: Architecture de Xamarin.Mac
-description: "Ce guide explore Xamarin.Mac et sa relation à Objective-C de bas niveau. Il explique les concepts tels que la compilation, sélecteurs, bureaux d’enregistrement, lancement des applications et le générateur."
-ms.topic: article
+description: Ce guide explore Xamarin.Mac et sa relation à Objective-C de bas niveau. Il explique les concepts tels que la compilation, sélecteurs, bureaux d’enregistrement, lancement des applications et le générateur.
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 5e32a06499d68c58bedbe88b24dc40b6c86ee8d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d6d7557fed5ea0ca0719dcbddbda316340645320
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinmac-architecture"></a>Architecture de Xamarin.Mac
 
@@ -32,7 +31,7 @@ Lors du développement de Xamarin, les termes du contrat *natif* et *gérés* co
 
 Le code natif est le code qui s’exécute en mode natif sur la plateforme spécifique (par exemple, Objective-C ou même du code AOA compilé, sur un processeur ARM). Ce guide explore la façon dont votre code managé est compilé en code natif et explique comment une application de Xamarin.Mac fonctionne, tirant pleinement parti des API de Mac d’Apple via l’utilisation de liaisons, tout en ayant accès à. BCL du NET et un langage sophistiqué tels que c#.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour développer une application macOS avec Xamarin.Mac :
 

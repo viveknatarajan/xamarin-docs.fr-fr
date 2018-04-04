@@ -1,18 +1,17 @@
 ---
-title: "Présentation des Concepts de SiriKit"
-description: "Cet article aborde les concepts clés qui seront nécessaires pour travailler avec SiriKit dans une application Xamarin.iOS."
-ms.topic: article
+title: Présentation des Concepts de SiriKit
+description: Cet article aborde les concepts clés qui seront nécessaires pour travailler avec SiriKit dans une application Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 0c1253391673e48f81c12b80719db485d276013d
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 7140747307c15b51fb330a41b496079dc680e5fa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>Présentation des Concepts de SiriKit
 
@@ -403,7 +402,7 @@ Il existe plusieurs méthodes que l’application peut gérer cette situation :
 
 Lorsque l’application est présentée avec une valeur unique qui est en question, la meilleure façon de gérer cette situation consiste à avoir Siri à demander à l’utilisateur à confirmer l’opération. Par exemple, *« Vouliez-vous Bobo le grand ? »* , lequel ils peuvent répondre à une simple réponse Oui ou non.
 
-Lorsqu’il existe une situation dans laquelle plusieurs choix possibles peut être adaptés à une valeur unique, ambiguïté est la méthode de gestion par défaut. Dans ce cas les Siri peut inviter l’utilisateur avec jusqu'à dix possibles d’options. Exemple :
+Lorsqu’il existe une situation dans laquelle plusieurs choix possibles peut être adaptés à une valeur unique, ambiguïté est la méthode de gestion par défaut. Dans ce cas les Siri peut inviter l’utilisateur avec jusqu'à dix possibles d’options. Par exemple :
 
 ```csharp
 Who do you want to send the message to?

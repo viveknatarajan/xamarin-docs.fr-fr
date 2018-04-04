@@ -1,18 +1,17 @@
 ---
-title: "Procédure pas à pas - à l’aide de Notifications Local dans Xamarin.iOS"
-description: "Dans cette section, nous examinerons l’utilisation de notifications locales dans une application Xamarin.iOS. Il va vous montrer les principes fondamentaux de la création et la publication d’une notification s’affiche une alerte lors de la réception par l’application."
-ms.topic: article
+title: Procédure pas à pas - à l’aide de Notifications Local dans Xamarin.iOS
+description: Dans cette section, nous examinerons l’utilisation de notifications locales dans une application Xamarin.iOS. Il va vous montrer les principes fondamentaux de la création et la publication d’une notification s’affiche une alerte lors de la réception par l’application.
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 846b292aed73a4980f4ce711ecefe4382fa7a321
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: bb133d16f12249cbd31e4fce2b227162b4b28333
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Procédure pas à pas - à l’aide de Notifications Local dans Xamarin.iOS
 

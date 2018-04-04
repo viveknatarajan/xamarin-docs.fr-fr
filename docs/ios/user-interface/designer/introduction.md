@@ -1,18 +1,17 @@
 ---
-title: "principes de base de concepteur d’iOS"
-description: "Ce guide présente le Concepteur de Xamarin pour iOS. Il montre comment utiliser le concepteur iOS à visuellement disposer les contrôles, comment accéder à ces contrôles dans le code et comment modifier les propriétés."
-ms.topic: article
+title: principes de base de concepteur d’iOS
+description: Ce guide présente le Concepteur de Xamarin pour iOS. Il montre comment utiliser le concepteur iOS à visuellement disposer les contrôles, comment accéder à ces contrôles dans le code et comment modifier les propriétés.
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/31/2018
-ms.openlocfilehash: a2445e49005175f62e4d7cd8aadccb5f596177bf
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7e36a402619813214e821f3060e053d76c99cfb7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-designer-basics"></a>principes de base de concepteur d’iOS
 
@@ -20,7 +19,7 @@ _Ce guide présente le Concepteur de Xamarin pour iOS. Il montre comment utilise
 
 Le Concepteur de Xamarin pour iOS est un concepteur d’interface visuelle semblable au constructeur d’Interface de Xcode et le concepteur Android. Certaines de ses nombreuses fonctionnalités incluent l’intégration transparente avec Visual Studio pour Mac et Visual Studio 2015 et 2017, glisser-déplacer, une interface pour le paramétrage des gestionnaires d’événements et la possibilité d’effectuer le rendu des contrôles personnalisés.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 IOS concepteur est disponible dans Visual Studio pour Mac et dans Visual Studio 2015 et 2017 sur Windows. Dans Visual Studio 2015 ou 2017, le concepteur iOS requiert une connexion à un hôte de build Mac correctement configuré, si Xcode n’a pas besoin d’exécuter.
 

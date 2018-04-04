@@ -1,18 +1,17 @@
 ---
-title: "Procédure pas à pas - à l’aide de NSURLSession et le Service de transfert en arrière-plan"
-description: "Dans cette procédure pas à pas, nous utilisons le Service de transfert en arrière-plan et l’API de NSURLSession pour déclencher le téléchargement d’une image de grande taille qui continue à télécharger lorsque l’application est en arrière-plan."
-ms.topic: article
+title: Procédure pas à pas - à l’aide de NSURLSession et le Service de transfert en arrière-plan
+description: Dans cette procédure pas à pas, nous utilisons le Service de transfert en arrière-plan et l’API de NSURLSession pour déclencher le téléchargement d’une image de grande taille qui continue à télécharger lorsque l’application est en arrière-plan.
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4ab11239caf5986bba52f080945d90a91ea9453e
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: bedfb6298e63ed06063707178af1ca48179d0dd7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Procédure pas à pas - à l’aide de NSURLSession et le Service de transfert en arrière-plan
 

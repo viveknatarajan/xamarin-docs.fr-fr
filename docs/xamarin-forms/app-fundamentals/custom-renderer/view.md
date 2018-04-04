@@ -1,18 +1,17 @@
 ---
-title: "Implémentation d’une vue"
-description: "Xamarin.Forms les contrôles d’interface utilisateur personnalisé doivent dériver de la classe de vue, qui est utilisée pour placer des mises en page et des contrôles sur l’écran. Cet article explique comment créer un convertisseur personnalisé pour un contrôle personnalisé Xamarin.Forms qui est utilisé pour afficher un flux vidéo de la version d’évaluation à partir photo de l’appareil."
-ms.topic: article
+title: Implémentation d’une vue
+description: Xamarin.Forms les contrôles d’interface utilisateur personnalisé doivent dériver de la classe de vue, qui est utilisée pour placer des mises en page et des contrôles sur l’écran. Cet article explique comment créer un convertisseur personnalisé pour un contrôle personnalisé Xamarin.Forms qui est utilisé pour afficher un flux vidéo de la version d’évaluation à partir photo de l’appareil.
 ms.prod: xamarin
 ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-a-view"></a>Implémentation d’une vue
 

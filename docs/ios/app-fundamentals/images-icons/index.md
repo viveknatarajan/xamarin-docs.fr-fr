@@ -1,18 +1,17 @@
 ---
-title: "Images et des icônes"
-description: "Cette section inclut une variété d’articles qui couvrent l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, de lancer des écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées."
-ms.topic: article
+title: Images et des icônes
+description: Cette section inclut une variété d’articles qui couvrent l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, de lancer des écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées.
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 904ba5db84101651d10605fadf8e8861db0ddc1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fd191c898d5bb015d2d394d42db1049bb0128fb7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="images-and-icons"></a>Images et des icônes
 

@@ -1,18 +1,17 @@
 ---
-title: "Utilisation des valeurs par défaut de l’utilisateur"
-description: "Cet article traite de travailler avec NSUserDefault pour enregistrer les paramètres par défaut dans un Xamarin iOS application ou Extension."
-ms.topic: article
+title: Utilisation des valeurs par défaut de l’utilisateur
+description: Cet article traite de travailler avec NSUserDefault pour enregistrer les paramètres par défaut dans un Xamarin iOS application ou Extension.
 ms.prod: xamarin
 ms.assetid: DAE7FFC4-B8C9-4D9E-886A-9B2388452EEB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 73f3beb87fffcb37ef3e36d54f634c3bc62da538
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: aa28e7d5636b06c8ab1e46457537431b5d1c7f1a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-user-defaults"></a>Utilisation des valeurs par défaut de l’utilisateur
 

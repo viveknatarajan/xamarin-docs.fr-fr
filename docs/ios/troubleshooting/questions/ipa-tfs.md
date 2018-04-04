@@ -1,17 +1,17 @@
 ---
-title: "Comment puis-je copier des fichiers de sortie IPA dans le dossier de dépôt TFS ?"
-ms.topic: article
+title: Comment puis-je copier des fichiers de sortie IPA dans le dossier de dépôt TFS ?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B0F1E09E-7315-45BA-B7FF-44D2063EE19C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c89d81434cac43505c4f0341a10aaf4fc99407fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2139be01b95a0a4287bba43b8a2ebad537ac7a4f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>Comment puis-je copier des fichiers de sortie IPA dans le dossier de dépôt TFS ?
 
@@ -41,7 +41,7 @@ Ouvrez le `.csproj` du fichier pour le projet d’application iOS dans un édite
 
 -   Ceci est la même technique générale sur [puis-je modifier le chemin de sortie du fichier IPA ?](~/ios/troubleshooting/questions/ipa-output-path.md). Les deux points importants sont à définir `$(TF_BUILD_BINARIESDIRECTORY)` comme dossier de destination et pour ajouter une condition supplémentaire donc `CopyIpa` s’exécutera uniquement pour les versions de TFS.
 
--   Pour obtenir une description de `TF_BUILD_BINARIESDIRECTORY` consultez [https://msdn.microsoft.com/en-us/library/hh850448.aspx](https://msdn.microsoft.com/en-us/library/hh850448.aspx).
+-   Pour obtenir une description de `TF_BUILD_BINARIESDIRECTORY` consultez [ https://msdn.microsoft.com/en-us/library/hh850448.aspx ](https://msdn.microsoft.com/en-us/library/hh850448.aspx).
 
 ## <a name="additional-references"></a>Références supplémentaires
 

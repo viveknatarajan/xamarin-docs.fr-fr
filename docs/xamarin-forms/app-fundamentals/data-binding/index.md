@@ -1,18 +1,17 @@
 ---
-title: "Liaison de données"
-description: "Liaison de données est la technique de liaison des propriétés de deux objets afin que les modifications apportées à une propriété sont automatiquement reflétées dans l’autre propriété. Liaison de données fait partie intégrante de l’architecture d’application Model-View-ViewModel (MVVM)."
-ms.topic: article
+title: Liaison de données
+description: Liaison de données est la technique de liaison des propriétés de deux objets afin que les modifications apportées à une propriété sont automatiquement reflétées dans l’autre propriété. Liaison de données fait partie intégrante de l’architecture d’application Model-View-ViewModel (MVVM).
 ms.prod: xamarin
 ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: eefff0ea23135c09d86284c0fddba9e80f50004a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee8481696b0ef85aec949c6def7767e57eb99e17
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data-binding"></a>Liaison de données
 

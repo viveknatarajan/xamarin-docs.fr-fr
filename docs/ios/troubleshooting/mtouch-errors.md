@@ -1,17 +1,17 @@
 ---
 title: Erreurs de Xamarin.iOS
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: aeca01fdc9044f7b83f71d7b4895370188000523
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0187b65e4c10e7cc03715a997a90fbddab9bd532
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinios-errors"></a>Erreurs de Xamarin.iOS
 
@@ -581,7 +581,7 @@ L’assembly mentionné dans le message d’erreur est spécifié plusieurs fois
 
 Les assemblys mentionnés dans le message d’erreur ont des cibles de génération en conflit.
 
-Exemple :
+Par exemple :
 
     --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
 
@@ -593,7 +593,7 @@ Cet exemple tente de créer une bibliothèque dynamique et une infrastructure av
 
 Les assemblys mentionnés dans le message d’erreur sont compilées à un seul objet statique. Cela n’est pas autorisé, tous les assemblys doivent être compilées à un autre objet statique.
 
-Exemple :
+Par exemple :
 
     --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
 
@@ -2308,7 +2308,7 @@ Cette erreur est signalée uniquement avec [MT5212](#MT5212). Consultez [MT5212]
 
 ### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214 : Liaison natif a échoué, symbole non défini : *. Ce symbole a été référencé le membre managé *. Vérifiez que toutes les infrastructures nécessaires ont été bibliothèques natives et référencés liés.
 
-Cette erreur est signalée lorsque le code managé contient un appel P/Invoke vers une méthode native qui n’existe pas. Exemple :
+Cette erreur est signalée lorsque le code managé contient un appel P/Invoke vers une méthode native qui n’existe pas. Par exemple :
 
 ```csharp
 using System.Runtime.InteropServices;

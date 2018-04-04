@@ -1,18 +1,17 @@
 ---
-title: "Partie 4. Principes fondamentaux de liaison de données"
-description: "Liaisons de données permettent de deux objets à lier afin qu’une modification dans une provoque une modification dans l’autre. Il s’agit d’un outil très utile, et pendant que les liaisons de données peuvent être définies entièrement dans le code, XAML fournit des raccourcis et convivialité. Par conséquent, une des extensions de balisage plus importantes dans Xamarin.Forms est obligatoire."
-ms.topic: article
+title: Partie 4. Principes fondamentaux de liaison de données
+description: Liaisons de données permettent de deux objets à lier afin qu’une modification dans une provoque une modification dans l’autre. Il s’agit d’un outil très utile, et pendant que les liaisons de données peuvent être définies entièrement dans le code, XAML fournit des raccourcis et convivialité. Par conséquent, une des extensions de balisage plus importantes dans Xamarin.Forms est obligatoire.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: dbbbe051aab065a5b71905459f577fcacefd8bc5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2aa6fd2f54c09921621a12af9401a6f84ae37ffa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-4-data-binding-basics"></a>Partie 4. Principes fondamentaux de liaison de données
 

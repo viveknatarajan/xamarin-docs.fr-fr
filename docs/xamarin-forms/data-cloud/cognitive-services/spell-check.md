@@ -1,18 +1,17 @@
 ---
 title: À l’aide de la vérification d’orthographe Bing API de vérification orthographique
 description: Vérifiez l’orthographe Bing effectue contextuelles de correction orthographique pour le texte, de suggestions d’inline pour les mots mal orthographiés. Cet article explique comment utiliser l’API REST de vérification de l’orthographe Bing pour corriger des fautes d’orthographe dans une application de Xamarin.Forms.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 420eea4622d9c90c3587899fb24e707524990b19
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 41bd79b22aa193dd5303847997bc07e8e8d12e58
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>À l’aide de la vérification d’orthographe Bing API de vérification orthographique
 

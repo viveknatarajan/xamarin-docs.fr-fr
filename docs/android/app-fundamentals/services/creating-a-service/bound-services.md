@@ -1,18 +1,17 @@
 ---
 title: Limite des Services dans Xamarin.Android
-description: "Services liés sont Android qui fournissent une interface client-serveur interagissant avec un client (par exemple, une activité Android). Ce guide explique les principaux composants impliqués dans la création d’un service lié et comment l’utiliser dans une application Xamarin.Android."
-ms.topic: article
+description: Services liés sont Android qui fournissent une interface client-serveur interagissant avec un client (par exemple, une activité Android). Ce guide explique les principaux composants impliqués dans la création d’un service lié et comment l’utiliser dans une application Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 04307eab1bc8dc28fa69315809e254c920fb6d56
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 18cfe6acae08efac85223c9c121a12f102f846cc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Limite des Services dans Xamarin.Android
 
@@ -34,7 +33,7 @@ Ce diagramme illustre comment l’activité, connexion de service, liant et serv
 
 ![Un diagramme montrant comment les composants de service sont liés entre eux](bound-services-images/bound-services-02.png "un diagramme montrant comment les composants de service sont liés entre eux.")
 
-Ce guide explique comment étendre le `Service` classe pour implémenter un service dépendant. Il explique également implémenter `IServiceConnection` et l’extension `Binder` pour permettre à un client communiquer avec le service. Un exemple d’application de ce guide, qui contiennent une solution avec un seul projet Xamarin.Android appelé  **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)**  . Il s’agit d’une application très simple qui montre comment implémenter un service et comment lier une activité. Le service lié a une API très simple avec une seule méthode, `GetFormattedTimestamp`, qui retourne une chaîne qui indique à l’utilisateur lorsque le service a démarré et la durée pendant laquelle il a été exécuté. L’application permet également à l’utilisateur d’annuler la liaison et la liaison au service manuellement.
+Ce guide explique comment étendre le `Service` classe pour implémenter un service dépendant. Il explique également implémenter `IServiceConnection` et l’extension `Binder` pour permettre à un client communiquer avec le service. Un exemple d’application de ce guide, qui contiennent une solution avec un seul projet Xamarin.Android appelé **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Il s’agit d’une application très simple qui montre comment implémenter un service et comment lier une activité. Le service lié a une API très simple avec une seule méthode, `GetFormattedTimestamp`, qui retourne une chaîne qui indique à l’utilisateur lorsque le service a démarré et la durée pendant laquelle il a été exécuté. L’application permet également à l’utilisateur d’annuler la liaison et la liaison au service manuellement.
 
 [![Capture d’écran de l’application en cours d’exécution sur un téléphone Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 

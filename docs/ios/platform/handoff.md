@@ -1,17 +1,16 @@
 ---
-title: "Procédure de transfert"
-description: "Cet article couvre utilisation de remise dans une application Xamarin.iOS à transférer des activités des utilisateurs entre les applications en cours d’exécution sur l’utilisateur d’autres dispositifs."
-ms.topic: article
+title: Procédure de transfert
+description: Cet article couvre utilisation de remise dans une application Xamarin.iOS à transférer des activités des utilisateurs entre les applications en cours d’exécution sur l’utilisateur d’autres dispositifs.
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bb665c7ffd4241fac14be13ebd8f113d11afd417
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="handoff"></a>Procédure de transfert
 
@@ -402,13 +401,13 @@ public void PerformHandoff(NSUserActivity activity) {
 }
 ```
 
-Le `ContinueUserActivity` méthode inclut un `UIApplicationRestorationHandler` que vous pouvez appeler pour le document ou le répondeur en fonction de la reprise d’activité. Vous devez passer un `NSArray` ou des objets qui peuvent être restaurés vers le Gestionnaire de restauration lorsqu’elle est appelée. Exemple :
+Le `ContinueUserActivity` méthode inclut un `UIApplicationRestorationHandler` que vous pouvez appeler pour le document ou le répondeur en fonction de la reprise d’activité. Vous devez passer un `NSArray` ou des objets qui peuvent être restaurés vers le Gestionnaire de restauration lorsqu’elle est appelée. Par exemple :
 
 ```csharp
 completionHandler (new NSObject[]{Tab4});
 ```
 
-Pour chaque objet passé, son `RestoreUserActivityState` méthode sera appelée. Chaque objet peut ensuite utiliser les données dans le `UserInfo` dictionnaire qui permet de restaurer son propre état. Exemple :
+Pour chaque objet passé, son `RestoreUserActivityState` méthode sera appelée. Chaque objet peut ensuite utiliser les données dans le `UserInfo` dictionnaire qui permet de restaurer son propre état. Par exemple :
 
 ```csharp
 public override void RestoreUserActivityState (NSUserActivity activity)
@@ -426,7 +425,7 @@ Pour les applications basées sur le document, si vous n’implémentez pas la `
 
 Procédure de transfert s’appuie sur la transmission des informations entre un collection faiblement connecté appareils iOS et OS X, le processus de transfert peut échouer. Vous devez concevoir votre application de gérer ces défaillances naturellement et informer l’utilisateur de toute situation qui surviennent.
 
-En cas de défaillance, le `DidFailToContinueUserActivitiy` méthode de la `AppDelegate` sera appelée. Exemple :
+En cas de défaillance, le `DidFailToContinueUserActivitiy` méthode de la `AppDelegate` sera appelée. Par exemple :
 
 ```csharp
 public override void DidFailToContinueUserActivitiy (UIApplication application, string userActivityType, NSError error)
@@ -452,7 +451,7 @@ Pour une application de participer à ce type de remise, elle doit demander le d
 
 Si le domaine spécifié correspond à un `WebpageURL` la valeur de la propriété, procédure de transfert télécharge la liste des applications approuvées ID depuis le site Web de ce domaine. Le site Web doit fournir une liste d’ID approuvées dans un fichier JSON signé nommé **apple-app-site-association** (par exemple, `https://company.com/apple-app-site-association`).
 
-Ce fichier JSON contient un dictionnaire qui spécifie une liste d’ID d’application sous la forme `<team identifier>.<bundle identifier>`. Exemple :
+Ce fichier JSON contient un dictionnaire qui spécifie une liste d’ID d’application sous la forme `<team identifier>.<bundle identifier>`. Par exemple :
 
 ```csharp
 {
@@ -463,7 +462,7 @@ Ce fichier JSON contient un dictionnaire qui spécifie une liste d’ID d’appl
 }
 ```
 
-Pour signer le fichier JSON (afin qu’il puisse le bon `Content-Type` de `application/pkcs7-mime`), utilisez la **Terminal** application et un `openssl` avec un certificat et la clé émis par une autorité de certification approuvée par iOS (consultez [ http://support.Apple.com/kb/ht5012](http://support.apple.com/kb/ht5012) pour obtenir la liste). Exemple :
+Pour signer le fichier JSON (afin qu’il puisse le bon `Content-Type` de `application/pkcs7-mime`), utilisez la **Terminal** application et un `openssl` avec un certificat et la clé émis par une autorité de certification approuvée par iOS (consultez [ http://support.apple.com/kb/ht5012 ](http://support.apple.com/kb/ht5012) pour obtenir la liste). Par exemple :
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",
@@ -476,7 +475,7 @@ cat json.txt | openssl smime -sign -inkey company.com.key
 -outform DER > apple-app-site-association
 ```
 
-Le `openssl` commande génère un fichier JSON signé que vous placez sur votre site Web à la **apple-app-site-association** URL. Exemple :
+Le `openssl` commande génère un fichier JSON signé que vous placez sur votre site Web à la **apple-app-site-association** URL. Par exemple :
 
 ```csharp
 https://example.com/apple-app-site-association.
@@ -486,7 +485,7 @@ L’application ne recevra pas les activités dont `WebpageURL` domaine est dans
 
 ## <a name="supporting-handoff-in-document-based-apps"></a>Prise en charge de la remise dans les applications basées sur le Document
 
-Comme indiqué précédemment, sur iOS et OS X, les applications basées sur le document prendra automatiquement en charge le transfert de documents basés sur iCloud si l’application **Info.plist** fichier contient un `CFBundleDocumentTypes` clé de `NSUbiquitousDocumentUserActivityType`. Exemple :
+Comme indiqué précédemment, sur iOS et OS X, les applications basées sur le document prendra automatiquement en charge le transfert de documents basés sur iCloud si l’application **Info.plist** fichier contient un `CFBundleDocumentTypes` clé de `NSUbiquitousDocumentUserActivityType`. Par exemple :
 
 ```xml
 <key>CFBundleDocumentTypes</key>
@@ -522,7 +521,7 @@ Vous pouvez associer des répondeurs (hérité de le `UIResponder` sur iOS ou `N
 
 Les situations où la quantité d’informations nécessaires pour continuer une activité ne peut pas être transférée efficacement par la charge utile de transfert initiale. Dans ces situations, l’application réceptrice peut établir un ou plusieurs flux de données entre lui-même et l’application d’origine pour transférer les données.
 
-Définit l’application d’origine le `SupportsContinuationStreams` propriété de la `NSUserActivity` instance `true`. Exemple :
+Définit l’application d’origine le `SupportsContinuationStreams` propriété de la `NSUserActivity` instance `true`. Par exemple :
 
 ```csharp
 // Create a new user Activity to support this tab
@@ -541,7 +540,7 @@ UserActivity.AddUserInfoEntries (userInfo);
 UserActivity.BecomeCurrent ();
 ```
 
-L’application réceptrice peut ensuite appeler la `GetContinuationStreams` méthode de la `NSUserActivity` dans son `AppDelegate` pour établir le flux de données. Exemple :
+L’application réceptrice peut ensuite appeler la `GetContinuationStreams` méthode de la `NSUserActivity` dans son `AppDelegate` pour établir le flux de données. Par exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)

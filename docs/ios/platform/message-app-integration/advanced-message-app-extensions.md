@@ -1,18 +1,17 @@
 ---
-title: "Extensions d’application Message avancés"
-description: "Cet article montre des techniques avancées pour travailler avec les Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application des Messages et présente les nouvelles fonctionnalités à l’utilisateur."
-ms.topic: article
+title: Extensions d’application Message avancés
+description: Cet article montre des techniques avancées pour travailler avec les Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application des Messages et présente les nouvelles fonctionnalités à l’utilisateur.
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fcfd1fd2ec9271bb5e8d9e09b43b7dc4cf3b3f12
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cd2cabf98c83bba7502e8533e482713a9c43f67a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-message-app-extensions"></a>Extensions d’application Message avancés
 
@@ -38,7 +37,7 @@ Nouveau pour iOS 10, l’application Message inclut désormais son propre magasi
 
 Également nouveau dans iOS 10, Apple a ajouté les Attribution application Inline qui lui permet de découvrir facilement une application. Par exemple, si un utilisateur envoie le contenu vers un autre à partir d’une application que l’utilisateur 2 n’est installé (par exemple, une vignette par exemple), le nom de l’application émettrice est répertorié sous le contenu de l’historique des messages. Si l’utilisateur appuie sur l’application un nom, le Message App Store nous série ouvert et l’application sélectionnée dans le magasin.
 
-Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familier à la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Exemple :
+Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familier à la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Par exemple :
 
 - Ils ont accès dans l’application fournisseur.
 - Ils ont accès à payer par Apple.
@@ -419,7 +418,7 @@ Là encore, lorsque le processus est terminé, l’Extension d’application de 
 
 Dans les deux cas, lorsque l’utilisateur appuie sur une bulle de Message appartenant à l’Extension d’application de Message, elle devra accéder à la `MSMessage` qui a été tapée à l’aide de la `SelectedMessage` propriété de la `MSConversation`.
 
-Exemple :
+Par exemple :
 
 ```csharp
 using System;
@@ -547,7 +546,7 @@ Les identificateurs de l’expéditeur peuvent être utilisés comme suit :
 - Lorsque l’extension reçoit un message à partir d’un utilisateur, il peut conserver le suivi de l’identificateur d’expéditeur. S’il reçoit un autre message avec le même identificateur de l’expéditeur, l’extension sait qu’il est dans le même utilisateur.
 - Ils peuvent être utilisés pour identifier un utilisateur spécifique dans la conversation.
 
-L’identificateur d’expéditeur peut être utilisé dans tous les champs de texte de la `MSMessageTemplateLayout` en lui attribuant un signe dollar (`$`). Exemple :
+L’identificateur d’expéditeur peut être utilisé dans tous les champs de texte de la `MSMessageTemplateLayout` en lui attribuant un signe dollar (`$`). Par exemple :
 
 ```csharp
 // Pass along the sender identifier

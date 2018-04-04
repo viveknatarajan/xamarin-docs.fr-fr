@@ -1,18 +1,17 @@
 ---
-title: "Contrôles personnalisés dans le Concepteur de Xamarin pour iOS"
-description: "Le Concepteur de Xamarin pour iOS prend en charge le rendu des contrôles personnalisés créés dans votre projet ou référencées à partir de sources externes telles que le magasin de composants Xamarin."
-ms.topic: article
+title: Contrôles personnalisés dans le Concepteur de Xamarin pour iOS
+description: Le Concepteur de Xamarin pour iOS prend en charge le rendu des contrôles personnalisés créés dans votre projet ou référencées à partir de sources externes telles que le magasin de composants Xamarin.
 ms.prod: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 83ec11ab6a17717dd9556122745afc8d87959186
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 113fab2fd0d1a055d566606885cefbafe3185529
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Contrôles personnalisés dans le Concepteur de Xamarin pour iOS
 
@@ -20,7 +19,7 @@ _Le Concepteur de Xamarin pour iOS prend en charge le rendu des contrôles perso
 
 Le Concepteur de Xamarin pour iOS est un outil puissant pour visualiser l’interface utilisateur d’une application et fournit WYSIWYG édition prise en charge pour la plupart des vues d’iOS et les contrôleurs de la vue. Votre application peut également contenir des contrôles personnalisés qui étendent ceux intégrés dans iOS. Si ces contrôles personnalisés sont écrits avec quelques recommandations à l’esprit, elles peuvent également être rendues par le concepteur, en fournissant une expérience d’édition enrichie iOS. Ce document aborde ces instructions.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Un contrôle qui répond à toutes les exigences suivantes est rendu sur l’aire de conception :
 

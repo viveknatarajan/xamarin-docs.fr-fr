@@ -1,18 +1,17 @@
 ---
 title: À l’aide de la MonoGame PipelineTool
 description: L’outil de Pipeline MonoGame est utilisé pour créer et gérer des projets de contenu MonoGame. Les fichiers dans les projets de contenu sont traités par l’outil Monogame Pipeline et envoyées sous forme de fichiers .xnb pour une utilisation dans les applications CocosSharp et MonoGame.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 37505b166488230be9d0e0690e415852506664f1
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 672c57aded149200b32501a6b48165ca88726ee1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>À l’aide de l’outil MonoGame Pipeline
 

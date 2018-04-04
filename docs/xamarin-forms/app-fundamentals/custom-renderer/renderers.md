@@ -1,18 +1,17 @@
 ---
-title: "Classes de Base de convertisseur et des contrôles natifs"
-description: "Chaque contrôle Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Cet article répertorie les classes de contrôle natif qui implémentent chaque page Xamarin.Forms, disposition, afficher et cellule et le convertisseur."
-ms.topic: article
+title: Classes de Base de convertisseur et des contrôles natifs
+description: Chaque contrôle Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Cet article répertorie les classes de contrôle natif qui implémentent chaque page Xamarin.Forms, disposition, afficher et cellule et le convertisseur.
 ms.prod: xamarin
 ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/15/2016
-ms.openlocfilehash: 06887e6c1a39dd695fdaddb2fade8a463d9d4580
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 9402bd53ab3bfb0b11182eb700aa560e8f962de3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Classes de Base de convertisseur et des contrôles natifs
 
@@ -48,7 +47,7 @@ Le tableau suivant répertorie les classes de contrôle natif qui implémentent 
 
 Le tableau suivant répertorie les classes de contrôle natif qui implémentent chaque Xamarin.Forms et le convertisseur [disposition](~/xamarin-forms/user-interface/controls/layouts.md) type :
 
-|Disposition|Convertisseur|iOS|Android|UWP|
+|Mise en page|Convertisseur|iOS|Android|UWP|
 |--- |--- |--- |--- |--- |
 |[`ContentPresenter`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPresenter/)|ViewRenderer|UIView|Vue|FrameworkElement|
 |[`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)|ViewRenderer|UIView|Vue|FrameworkElement|

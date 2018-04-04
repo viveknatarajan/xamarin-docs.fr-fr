@@ -1,18 +1,17 @@
 ---
 title: ViewPager avec des Fragments
-description: "ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation geste. Navigation geste permet à l’utilisateur pour le passage de gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter une interface utilisateur de swipeable avec ViewPager, comme les pages de données à l’aide de Fragments."
-ms.topic: article
+description: ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation geste. Navigation geste permet à l’utilisateur pour le passage de gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter une interface utilisateur de swipeable avec ViewPager, comme les pages de données à l’aide de Fragments.
 ms.prod: xamarin
 ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: cd71617cce209ef0127023f69c2b503fee031e43
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 83b9123b24b39e2d7bda392d05c6595f5fc3af0d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager-with-fragments"></a>ViewPager avec des Fragments
 

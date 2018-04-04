@@ -1,18 +1,17 @@
 ---
-title: "Tâches d’arrière-plan"
-description: "Utiliser les nouvelles tâches en arrière-plan watchOS 3 pour garantir qu'une application espion a toujours les dernières données et des captures instantanées de la station d’accueil."
-ms.topic: article
+title: Tâches d’arrière-plan
+description: Utiliser les nouvelles tâches en arrière-plan watchOS 3 pour garantir qu'une application espion a toujours les dernières données et des captures instantanées de la station d’accueil.
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 8fd2b5069e175a68ff7609e75775db1929507582
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 0279aed1e694e3b38dcb8189819d88740c37b6ad
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="background-tasks"></a>Tâches d’arrière-plan
 
@@ -56,7 +55,7 @@ Comme indiqué ci-dessus, le système watchOS sort de l’application à l’aid
 
 Apple suggérer tirer pleinement parti de cette tâche (car il est de ce type d’une ressource limitée à l’application) à maintenir jusqu'à ce que l’application a terminé le processus de mise à jour lui-même.
 
-Le système ces offre des tâches en appelant la nouvelle `HandleBackgroundTasks` méthode de la `WKExtensionDelegate` déléguer. Exemple :
+Le système ces offre des tâches en appelant la nouvelle `HandleBackgroundTasks` méthode de la `WKExtensionDelegate` déléguer. Par exemple :
 
 ```csharp
 using System;

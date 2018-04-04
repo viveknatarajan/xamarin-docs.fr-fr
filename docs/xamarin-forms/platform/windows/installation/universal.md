@@ -1,18 +1,17 @@
 ---
-title: "Ajout d’une application de plateforme universelle Windows universelle"
-description: "Cet article explique comment ajouter un projet d’application UWP pour une solution Xamarin.Forms qui a été créée dans Visual Studio pour Mac."
-ms.topic: article
+title: Ajout d’une application de plateforme universelle Windows universelle
+description: Cet article explique comment ajouter un projet d’application UWP pour une solution Xamarin.Forms qui a été créée dans Visual Studio pour Mac.
 ms.prod: xamarin
 ms.assetid: 34AAA045-64B8-4FDE-BB49-3FF0B4FFA17C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
-ms.openlocfilehash: 4a8d2934c4fbdc5b748014cb7dc9a121ade8c37e
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: f851c1ca241be9e3c94a70b1f63135a46575d471
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-a-universal-windows-platform-uwp-app"></a>Ajout d’une application de plateforme universelle Windows universelle
 

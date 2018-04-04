@@ -1,16 +1,16 @@
 ---
-title: "Une erreur IBTool : Impossible d’effectuer l’opération."
-ms.topic: article
+title: 'Une erreur IBTool : Impossible d’effectuer l’opération.'
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A804EBC4-2BBF-4A98-A4E8-A455DB2E8A17
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: dd668859428da1abfa3a8e46a0810b2de6645fe2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4647227ad208bfa968f8282a966220a09ab7f4a6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Une erreur IBTool : Impossible d’effectuer l’opération.
 
@@ -54,7 +54,7 @@ Vous pouvez modifier cet élément et ajouter un `LogicalName` afin que l’imag
 </BundleResource>
 ```
 
-Dans Visual Studio pour Mac le `LogicalName` peut également être définie à l’aide de la `Resource ID` champ pour l’image sous **vue > remplit > Propriétés**. (Voir aussi : [http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
+Dans Visual Studio pour Mac le `LogicalName` peut également être définie à l’aide de la `Resource ID` champ pour l’image sous **vue > remplit > Propriétés**. (Voir aussi : [ http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
 
 Après cette modification, vous devez mettre à jour le plan conceptuel et `.xib` fichiers à utiliser les nouveaux chemins de l’image de niveau supérieur. Visual Studio pour Mac met met automatiquement à jour la liste des saisies semi-automatiques pour le `Image` propriété dans le concepteur iOS. Dans Visual Studio, vous devez modifier le chemin d’accès à la main. Le concepteur iOS affichera alors cela comme une image manquante, mais le projet sera générer et exécuter correctement.
 

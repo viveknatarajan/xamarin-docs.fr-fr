@@ -1,18 +1,17 @@
 ---
 title: Utilisation des vues de Collection
-description: "Cet article décrit la conception et l’utilisation des vues de Collection à l’intérieur d’une application Xamarin.tvOS."
-ms.topic: article
+description: Cet article décrit la conception et l’utilisation des vues de Collection à l’intérieur d’une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f943d6b88d2fd7f38759fb32ecb612e102266657
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7fa38aa81e5929bdc88ceebd153d86cfcd92f20e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-collection-views"></a>Utilisation des vues de Collection
 
@@ -61,7 +60,7 @@ Source de données d’une vue de Collection n’est pas uniquement chargée de 
 - `DequeueReusableCell` -Crée ou retourne une cellule du type donné (comme spécifié dans la table de montage séquentiel de l’application).
 - `DequeueReusableSupplementaryView` -Crée ou retourne une vue supplémentaire du type donné (comme spécifié dans la table de montage séquentiel de l’application).
 
-Avant d’appeler une de ces méthodes, vous devez inscrire la classe de la table de montage séquentiel ou `.xib` fichier utilisé pour créer un affichage de la cellule avec la vue de Collection. Exemple :
+Avant d’appeler une de ces méthodes, vous devez inscrire la classe de la table de montage séquentiel ou `.xib` fichier utilisé pour créer un affichage de la cellule avec la vue de Collection. Par exemple :
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -104,7 +103,7 @@ Nous allons effectuer les opérations suivantes :
 1. Ajouter une vue de l’Image, une étiquette et un bouton à la vue existante et les configurer pour présenter l’aspect suivant : 
 
     [![](collection-views-images/collection02.png "Mise en page de l’exemple")](collection-views-images/collection02.png#lightbox)
-1. Affecter un **nom** à l’affichage de l’Image et de l’étiquette dans le **onglet Widget** de la **l’Explorateur de propriétés**. Exemple : 
+1. Affecter un **nom** à l’affichage de l’Image et de l’étiquette dans le **onglet Widget** de la **l’Explorateur de propriétés**. Par exemple : 
 
     [![](collection-views-images/collection03.png "Le nom du paramètre")](collection-views-images/collection03.png#lightbox)
 1. Ensuite, faites glisser un contrôleur de vue de Collection sur le plan conceptuel : 
@@ -144,7 +143,7 @@ Nous allons effectuer les opérations suivantes :
 1. Ajouter une vue de l’Image, une étiquette et un bouton à la vue existante et les configurer pour présenter l’aspect suivant : 
 
     [![](collection-views-images/collection02vs.png "Configurez la mise en page")](collection-views-images/collection02vs.png#lightbox)
-1. Affecter un **nom** à l’affichage de l’Image et de l’étiquette dans le **onglet Widget** de la **l’Explorateur de propriétés**. Exemple : 
+1. Affecter un **nom** à l’affichage de l’Image et de l’étiquette dans le **onglet Widget** de la **l’Explorateur de propriétés**. Par exemple : 
 
     [![](collection-views-images/collection03vs.png "L’Explorateur de propriétés")](collection-views-images/collection03vs.png#lightbox)
 1. Ensuite, faites glisser un contrôleur de vue de Collection sur le plan conceptuel : 

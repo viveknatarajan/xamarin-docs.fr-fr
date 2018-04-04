@@ -1,18 +1,17 @@
 ---
-title: "Caractéristiques de la plateforme de création"
-description: "Éditeurs peuvent créer leurs propres spécificités de plateforme avec des effets. Un effet fournit les fonctionnalités spécifiques, puis exposé via une plateforme spécifique. Le résultat est un effet qui peut être utilisé plus facilement via XAML et un code d’API fluent. Cet article montre comment exposer un effet via une plateforme spécifique."
-ms.topic: article
+title: Caractéristiques de la plateforme de création
+description: Éditeurs peuvent créer leurs propres spécificités de plateforme avec des effets. Un effet fournit les fonctionnalités spécifiques, puis exposé via une plateforme spécifique. Le résultat est un effet qui peut être utilisé plus facilement via XAML et un code d’API fluent. Cet article montre comment exposer un effet via une plateforme spécifique.
 ms.prod: xamarin
 ms.assetid: 0D0E6274-6EF2-4D40-BB77-3D8E53BCD24B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: 7cdc67f8ea1038226bb6ef8c8add8c03e9635e6a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6283e22d75d9e52ad3e2f300617818c98d887481
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-platform-specifics"></a>Caractéristiques de la plateforme de création
 

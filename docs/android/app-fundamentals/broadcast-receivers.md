@@ -1,18 +1,17 @@
 ---
-title: "Récepteurs de diffusion de Xamarin.Android"
-description: "Cette section explique comment utiliser un récepteur de diffusion."
-ms.topic: article
+title: Récepteurs de diffusion de Xamarin.Android
+description: Cette section explique comment utiliser un récepteur de diffusion.
 ms.prod: xamarin
 ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/19/2018
-ms.openlocfilehash: 67b150650c21c781b7081de4e1f3b095c0ea560f
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: 75d42da4ba01aaefded0081da02b8e1651695f46
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Récepteurs de diffusion de Xamarin.Android
 

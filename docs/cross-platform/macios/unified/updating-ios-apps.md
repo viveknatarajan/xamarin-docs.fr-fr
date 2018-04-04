@@ -1,18 +1,17 @@
 ---
-title: "Mise à jour des applications iOS existante"
-description: "Suivez ces étapes pour mettre à jour d’une application Xamarin.iOS existante pour utiliser l’API unifiée."
-ms.topic: article
+title: Mise à jour des applications iOS existante
+description: Suivez ces étapes pour mettre à jour d’une application Xamarin.iOS existante pour utiliser l’API unifiée.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 4eaa486fddc23ad18670bef4043a5adf30a1e9ac
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: ce7e269f76567f824c4cc65916bed32f0f6c08d1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="updating-existing-ios-apps"></a>Mise à jour des applications iOS existante
 
@@ -32,7 +31,7 @@ Avant de mettre à jour de votre code existant à l’API unifiée, il est vivem
 
 ## <a name="automated-updating"></a>Automatisée de mise à jour
 
-Une fois que les avertissements ont été résolus, sélectionnez un projet iOS dans Visual Studio pour Mac ou Visual Studio et choisissez **migrer vers une API unifiée de Xamarin.iOS** à partir de la **projet** menu. Exemple :
+Une fois que les avertissements ont été résolus, sélectionnez un projet iOS dans Visual Studio pour Mac ou Visual Studio et choisissez **migrer vers une API unifiée de Xamarin.iOS** à partir de la **projet** menu. Par exemple :
 
 ![](updating-ios-apps-images/beta-tool1.png "Choisir de migrer d’API unifiée de Xamarin.iOS dans le menu projet")
 

@@ -1,17 +1,16 @@
 ---
-title: "Procédure pas à pas"
-ms.topic: article
+title: Procédure pas à pas
 ms.prod: xamarin
 ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: e5c058f173f64efe4a5c777872e9ea67120115f0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cc5c05fce9b9c3dd974afe027cc7cbb60085c621
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough"></a>Procédure pas à pas
 

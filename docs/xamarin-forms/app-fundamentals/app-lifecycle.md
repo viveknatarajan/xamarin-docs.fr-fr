@@ -1,18 +1,17 @@
 ---
 title: Cycle de vie
-description: "Comment répondre à un cycle de vie des applications"
-ms.topic: article
+description: Comment répondre à un cycle de vie des applications
 ms.prod: xamarin
 ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: c374f261677a5bddc4ea9c73c066b69580ceedd5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 511591482a0e7512be34f6a210c6f44a1826be24
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-lifecycle"></a>Cycle de vie
 

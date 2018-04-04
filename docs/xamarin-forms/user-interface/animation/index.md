@@ -1,18 +1,17 @@
 ---
 title: Animation
-description: "Xamarin.Forms inclut sa propre infrastructure de l’animation est simple et facile pour créer des animations simples, tout en étant suffisamment flexibles pour créer des animations complexes."
-ms.topic: article
+description: Xamarin.Forms inclut sa propre infrastructure de l’animation est simple et facile pour créer des animations simples, tout en étant suffisamment flexibles pour créer des animations complexes.
 ms.prod: xamarin
 ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: e50419eaa6466e94fc5192a77ffd7cb89ca9d965
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7cff122e7ecc24f5ad93bd863ee422981871f857
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="animation"></a>Animation
 

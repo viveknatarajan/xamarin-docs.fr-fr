@@ -1,17 +1,16 @@
 ---
-title: "Contrôle de l’image"
-ms.topic: article
+title: Contrôle de l’image
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4184d7babc396a6b6179e6876dced34b773474b4
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 370b9f2a57716de876c7e883afdaf445186fb577
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="image-control"></a>Contrôle de l’image
 
@@ -21,7 +20,7 @@ watchOS fournit un [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 Images du catalogue asset permet d’ajouter des images pour les applications de surveillance Kit.
-Uniquement  **@2x**  versions sont requises, car toutes les observer les appareils ont rétine.
+Uniquement **@2x** versions sont requises, car toutes les observer les appareils ont rétine.
 
 ![](image-images/asset-universal-sml.png "Seulement 2 x sont requis, car toutes les observer les appareils ont rétine")
 

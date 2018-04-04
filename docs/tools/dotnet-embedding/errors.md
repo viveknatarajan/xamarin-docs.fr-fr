@@ -1,21 +1,20 @@
 ---
-title: "Erreurs de l’incorporation de .NET"
-ms.topic: article
+title: Erreurs de l’incorporation de .NET
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 90d30b92069bcd6a5c008fa8009c0392c4d26473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64caaf6610d9f9193a686d91b4731cd4d4953fa6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="em0xxx-binding-error-messages"></a>EM0xxx : messages d’erreur de liaison
 
-E.g. paramètres, environnement
+Par exemple, paramètres, environnement
 
 <!-- 0xxx: the generator itself, e.g. parameters, environment -->
 <h3><a name="EM0000"/>EM0000 : Une erreur inattendue - Veuillez remplir un rapport de bogue à https://github.com/mono/Embeddinator-4000/issues</h3>
@@ -68,7 +67,7 @@ Il s’agit d’un problème connu que nous avons l’intention de corriger dans
 
 L’outil Impossible de fusionner les infrastructures mentionnés dans le message d’erreur, car il existe un fichier commun entre eux.
 
-Cela peut indiquer un bogue dans le Embeddinator-4000 ; Veuillez archiver un rapport de bogue à [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) avec un cas de test.
+Cela peut indiquer un bogue dans le Embeddinator-4000 ; Veuillez archiver un rapport de bogue à [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) avec un cas de test.
 
 <h3><a name="EM0011"/>EM0011 : L’assembly `X` n’existe pas.</h3>
 
@@ -100,11 +99,11 @@ N’a pas pu créer le lien symbolique mentionné dans le message d’erreur.
 
 La syntaxe pour l’option de ligne de commande `A` n’a pas pu être analysée par l’outil. Il est probable incorrect, veuillez consulter la documentation ou l’aide de la syntaxe correcte.
 
-<h3><a name="EM0099"/>EM0099 : Erreur interne *. Veuillez soumettre un rapport de bogue à un cas de test (https://github.com/mono/Embeddinator-4000/issues).</h3>
+<h3><a name="EM0099"/>EM0099 : Erreur interne *. Veuillez archiver un rapport de bogue à un cas de test (https://github.com/mono/Embeddinator-4000/issues).</h3>
 
 Ce message d’erreur est signalé en cas d’échec d’une vérification de cohérence interne dans le Embeddinator-4000.
 
-Cela indique un bogue dans le Embeddinator-4000 ; Veuillez archiver un rapport de bogue à [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) avec un cas de test.
+Cela indique un bogue dans le Embeddinator-4000 ; Veuillez archiver un rapport de bogue à [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) avec un cas de test.
 
 
 <!-- 1xxx: code processing -->
@@ -141,7 +140,7 @@ Remarque : Les fonctionnalités prises en charge évoluera avec les nouvelles v
 
 <h3><a name="EM1021"/>Constructeur `C` a des valeurs par défaut pour laquelle aucun wrapper n’est généré.</h3>
 
-Il s’agit d’un **avertissement** que les paramètres par défaut du constructeur `C` n’établissent pas de code supplémentaire. La cause la plus courante est qu’une méthode existante a déjà la même signature. E.g. dans .net, il est possible d’avoir :
+Il s’agit d’un **avertissement** que les paramètres par défaut du constructeur `C` n’établissent pas de code supplémentaire. La cause la plus courante est qu’une méthode existante a déjà la même signature. Par exemple, dans .net, il est possible d’avoir :
 
 ```
 public class MyType {
@@ -173,7 +172,7 @@ Remarque : Les fonctionnalités prises en charge évoluera avec les nouvelles v
 
 <h3><a name="EM1032"/>Méthode `M` a des valeurs par défaut pour laquelle aucun wrapper n’est généré.</h3>
 
-Il s’agit d’un **avertissement** que les paramètres par défaut de la méthode `M` n’établissent pas de code supplémentaire. La cause la plus courante est qu’une méthode existante a déjà la même signature. E.g. dans .net, il est possible d’avoir :
+Il s’agit d’un **avertissement** que les paramètres par défaut de la méthode `M` n’établissent pas de code supplémentaire. La cause la plus courante est qu’une méthode existante a déjà la même signature. Par exemple, dans .net, il est possible d’avoir :
 
 ```
 public class MyType {

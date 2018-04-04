@@ -1,18 +1,17 @@
 ---
-title: "Hello, tvOS Guide de démarrage rapide"
-description: "Ce guide explique comment créer votre première application Xamarin.tvOS et sa chaîne d’outils de développement. Elle présente également le Concepteur de Xamarin, ce qui expose des contrôles d’interface utilisateur au code et montre comment créer, exécuter et tester une application Xamarin.tvOS."
-ms.topic: article
+title: Hello, tvOS Guide de démarrage rapide
+description: Ce guide explique comment créer votre première application Xamarin.tvOS et sa chaîne d’outils de développement. Elle présente également le Concepteur de Xamarin, ce qui expose des contrôles d’interface utilisateur au code et montre comment créer, exécuter et tester une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 5eccb36b3c6a437ddc1ec055e779d8f78460643e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0adf6e326dd29db15b6bd90626f424b803dc0bc9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS Guide de démarrage rapide
 
@@ -253,7 +252,7 @@ Vous n’êtes pas obligé d’utiliser le Concepteur de Xamarin pour iOS pour c
 
 Pour commencer à créer votre interface utilisateur, nous allons double-cliquez sur le `Main.storyboard` de fichiers dans le **l’Explorateur de solutions** à ouvrir pour le modifier dans le concepteur iOS :
 
-[![](hello-tvos-images/designer01.png "Le fichier Main.storyboard dans l’Explorateur de solutions")](hello-tvos-images/designer01.png#lightbox)
+[![](hello-tvos-images/designer01.png "Fichier Main.storyboard dans l’Explorateur de solutions")](hello-tvos-images/designer01.png#lightbox)
 
 Cela doit lancer le concepteur et l’aspect suivant :
 

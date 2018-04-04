@@ -1,18 +1,17 @@
 ---
-title: "Fonctionnalités de KitKat"
-description: "Android 4.4 (KitKat) est fournie avec une multitude de fonctionnalités pour les utilisateurs et les développeurs. Ce guide met en surbrillance plusieurs de ces fonctionnalités et fournit des exemples de code et les détails d’implémentation pour vous aider à tirer le meilleur parti KitKat."
-ms.topic: article
+title: Fonctionnalités de KitKat
+description: Android 4.4 (KitKat) est fournie avec une multitude de fonctionnalités pour les utilisateurs et les développeurs. Ce guide met en surbrillance plusieurs de ces fonctionnalités et fournit des exemples de code et les détails d’implémentation pour vous aider à tirer le meilleur parti KitKat.
 ms.prod: xamarin
 ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 8fbb3f73fdc09f953ad5f7134020c1555d000d28
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c3eafc8dc18113080dd6c906025556292c43e1c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="kitkat-features"></a>Fonctionnalités de KitKat
 
@@ -33,7 +32,7 @@ Android 4.4 (API niveau 19), également appelé « KitKat », a été publiée
 
 Ce guide fournit des conseils pour migrer une application existante de Xamarin.Android KitKat, ainsi que d’une vue d’ensemble de KitKat pour les développeurs de Xamarin.Android.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour développer des applications de Xamarin.Android à l’aide de KitKat, vous devez *Xamarin.Android 4.11.0* ou supérieur et Android 4.4 (API niveau 19) installé via le Gestionnaire de SDK Android, comme illustré par la capture d’écran suivante :
 

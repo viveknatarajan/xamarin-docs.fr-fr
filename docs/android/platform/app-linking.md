@@ -1,18 +1,17 @@
 ---
 title: La liaison App dans Android
-description: "Ce guide explique comment Android 6.0 prend en charge la liaison application, une technique qui permet de répondre aux URL sur les sites Web des applications mobiles. Il explique quelles applications liaison est l’implémentation de la liaison application dans une application Android 6.0 et comment configurer un site Web pour accorder des autorisations à l’application mobile pour un domaine."
-ms.topic: article
+description: Ce guide explique comment Android 6.0 prend en charge la liaison application, une technique qui permet de répondre aux URL sur les sites Web des applications mobiles. Il explique quelles applications liaison est l’implémentation de la liaison application dans une application Android 6.0 et comment configurer un site Web pour accorder des autorisations à l’application mobile pour un domaine.
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2ef6b8044387d759e26d05c1468caaad7efb9bdc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-linking-in-android"></a>La liaison App dans Android
 
@@ -36,7 +35,7 @@ Si l’utilisateur ne possède pas les applications installées qui prennent en 
 
 Ce guide explique comment configurer une application Android 6.0 et comment créer et publier le fichier de liens d’élément multimédia numérique pour prendre en charge la liaison d’application dans Android 6.0.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide nécessite Xamarin.Android 6.1 et une application ciblant Android 6.0 (API niveau 23) ou une version ultérieure.
 
@@ -56,7 +55,7 @@ Configuration des liaisons de l’application dans Android 6.0 comprend deux ét
 Il est nécessaire de configurer un filtre d’intention qui mappe un URI (ou possible un jeu d’URI) à partir d’un site Web à l’activité d’une application Android. Dans Xamarin.Android, cette relation est établie par ornementer une activité dont le [IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). Le filtre intention doit déclarer les informations suivantes :
 
 * **`Intent.ActionView`** &ndash; Enregistre le filtre intention pour répondre aux requêtes pour afficher des informations
-* **`Categories`** &ndash;  Le filtre intention doit enregistrer les deux  **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)**  et  **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)**  pour pouvoir correctement gérer l’URI du web.
+* **`Categories`** &ndash;  Le filtre intention doit enregistrer les deux **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)** et **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)** pour pouvoir correctement gérer l’URI du web.
 * **`DataScheme`** &ndash; Le filtre intention doit déclarer `http` et/ou `https`. Ces modèles sont les seuls deux valides.
 * **`DataHost`** &ndash; Il s’agit du domaine qui proviennent de l’URI.
 * **`DataPathPrefix`** &ndash; Il s’agit d’un chemin d’accès facultatif à des ressources sur le site Web.
@@ -177,7 +176,7 @@ Il existe deux tests qui peuvent être effectuées pour garantir que les filtres
     * **`Domain`** &ndash; Les domaines (séparés par des espaces) dont les liens web seront gérées par l’application
     * **`Status`** &ndash; Il s’agit de l’état actuel de la gestion des liens de l’application. La valeur **toujours** signifie que l’application a `android:autoVerify=true` déclaré et a passé de vérification du système. Il est suivi d’un nombre hexadécimal représentant l’enregistrement du système Android de la préférence.
 
-    Exemple :
+    Par exemple :
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps

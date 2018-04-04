@@ -1,18 +1,17 @@
 ---
-title: "Notifications utilisateur avancé"
-description: "Cet article est une présentation approfondie de la nouvelle infrastructure de Notifications à l’utilisateur et comment tirer pleinement parti de celui-ci dans une application Xamarin.iOS."
-ms.topic: article
+title: Notifications utilisateur avancé
+description: Cet article est une présentation approfondie de la nouvelle infrastructure de Notifications à l’utilisateur et comment tirer pleinement parti de celui-ci dans une application Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 46a0920efc8d80db7f3783654630f65086907f50
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 9958682ce9e356692f451900d7dca0e343b244da
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-user-notifications"></a>Notifications utilisateur avancé
 
@@ -67,7 +66,7 @@ L’un des éléments qui obtient partagés entre les utilisateurs plus courants
 
 Toutefois, en raison de la taille impliquée dans l’envoi, même une petite image, attachez à une charge utile de Notification à distance devient impossible. Pour gérer cette situation, le développeur peut utiliser la nouvelle Extension de Service dans iOS 10 pour télécharger l’image à partir d’une autre source (par exemple, une banque de données CloudKit) et l’attacher au contenu de la notification avant qu’il est affiché à l’utilisateur.
 
-Pour une Notification à distance doivent être modifiées par une Extension de Service, sa charge utile doit être marqué comme mutable. Exemple :
+Pour une Notification à distance doivent être modifiées par une Extension de Service, sa charge utile doit être marqué comme mutable. Par exemple :
 
 ```csharp
 {
@@ -268,7 +267,7 @@ Le système doit être informé sur la façon de trouver l’Extension de conten
 
 -----
 
-Notification des catégories de contenu Extension (`UNNotificationExtensionCategory`) utilisent les mêmes valeurs de catégorie sont utilisées pour enregistrer les Actions de Notification. Dans le cas où l’application utilise la même interface utilisateur pour plusieurs catégories, basculez le `UNNotificationExtensionCategory` au type **tableau** et fournir toutes les catégories que nécessaires. Exemple :
+Notification des catégories de contenu Extension (`UNNotificationExtensionCategory`) utilisent les mêmes valeurs de catégorie sont utilisées pour enregistrer les Actions de Notification. Dans le cas où l’application utilise la même interface utilisateur pour plusieurs catégories, basculez le `UNNotificationExtensionCategory` au type **tableau** et fournir toutes les catégories que nécessaires. Par exemple :
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -301,7 +300,7 @@ Pour concevoir l’interface utilisateur personnalisée de la Notification l’E
 > [!NOTE]
 > L’interface utilisateur de Notification est _pas_ prend en charge les contrôles interactifs tels que les champs de texte ou des boutons dans une Extension de contenu de Notification. Pendant qu’ils peuvent être ajoutés au plan conceptuel, l’utilisateur ne sera pas en mesure d’interagir avec eux. Pour ajouter une interaction utilisateur à une interface utilisateur de Notification personnalisée, utilisez à la place des actions personnalisées.
 
-Une fois que l’interface utilisateur a été mise en forme et les contrôles exposée au code c#, ouvrez le `NotificationViewController.cs` pour la modification et de modifier le `DidReceiveNotification` méthode pour remplir l’interface utilisateur lorsque l’utilisateur développe la notification. Exemple :
+Une fois que l’interface utilisateur a été mise en forme et les contrôles exposée au code c#, ouvrez le `NotificationViewController.cs` pour la modification et de modifier le `DidReceiveNotification` méthode pour remplir l’interface utilisateur lorsque l’utilisateur développe la notification. Par exemple :
 
 ```csharp
 using System;
@@ -363,7 +362,7 @@ Pour ajuster la taille de la zone de contenu affichée à l’utilisateur, le co
 
 Étant donné que la Notification système est déjà en cours d’exécution avant la Notification de l’Extension de contenu est appelée, la zone de contenu est initialement complète dimensionné et être animée à la taille demandée lorsque présentées à l’utilisateur.
 
-Pour éviter cet effet, vous devez modifier le `Info.plist` fichier pour l’Extension et le jeu le `UNNotificationExtensionInitialContentSizeRatio` clé de la `NSExtensionAttributes` clé en type **nombre** avec une valeur qui représente le rapport souhaité. Exemple :
+Pour éviter cet effet, vous devez modifier le `Info.plist` fichier pour l’Extension et le jeu le `UNNotificationExtensionInitialContentSizeRatio` clé de la `NSExtensionAttributes` clé en type **nombre** avec une valeur qui représente le rapport souhaité. Par exemple :
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -457,7 +456,7 @@ Outre les actions personnalisées, l’Extension de contenu de Notification peut
 
 Extensions de contenu de notification ont également la possibilité de mettre à jour leur interface utilisateur lorsque l’utilisateur appelle l’une des Actions personnalisées, telles qu’indiquant une date comme accepté lorsque l’utilisateur appuie sur le **accepter** bouton d’Action personnalisée. En outre, les Extensions de contenu de Notification peut indiquer le système de retarder le rejet de l’interface utilisateur de Notification pour l’utilisateur peut voir l’effet de leurs actions avant la fermeture de la Notification.
 
-Cela est fait en implémentant une deuxième version de la `DidReceiveNotification` méthode qui inclut un gestionnaire d’achèvement. Exemple :
+Cela est fait en implémentant une deuxième version de la `DidReceiveNotification` méthode qui inclut un gestionnaire d’achèvement. Par exemple :
 
 ```csharp
 using System;
@@ -531,7 +530,7 @@ namespace myApp {
 }
 ```
 
-En ajoutant le `Server.PostEventResponse` gestionnaire à la `DidReceiveNotification` (méthode) de l’Extension de contenu de Notification, l’Extension *doit* gérer toutes les actions personnalisées. L’extension peut également transmettre les actions personnalisées à l’application conteneur en modifiant le `UNNotificationContentExtensionResponseOption`. Exemple :
+En ajoutant le `Server.PostEventResponse` gestionnaire à la `DidReceiveNotification` (méthode) de l’Extension de contenu de Notification, l’Extension *doit* gérer toutes les actions personnalisées. L’extension peut également transmettre les actions personnalisées à l’application conteneur en modifiant le `UNNotificationContentExtensionResponseOption`. Par exemple :
 
 ```csharp
 // Close Notification
@@ -542,7 +541,7 @@ completionHandler (UNNotificationContentExtensionResponseOption.DismissAndForwar
 
 Selon la conception de l’application et la Notification, il peut arriver que l’utilisateur doit entrer du texte dans la Notification (par exemple, en réponse à un message). Une Extension de contenu de Notification a accès à l’action d’entrée de texte intégré exactement comme une notification standard.
 
-Exemple :
+Par exemple :
 
 ```csharp
 using System;

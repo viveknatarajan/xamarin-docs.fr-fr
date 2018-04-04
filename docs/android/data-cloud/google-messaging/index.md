@@ -1,18 +1,17 @@
 ---
 title: Messagerie Google
-description: "Cette section contient des directives qui décrivent comment implémenter des applications de Xamarin.Android à l’aide des services de messagerie de Google."
-ms.topic: article
+description: Cette section contient des directives qui décrivent comment implémenter des applications de Xamarin.Android à l’aide des services de messagerie de Google.
 ms.prod: xamarin
 ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 3e36eedf720b1905d708ffe4bd6e61c96fa38cf4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f68b4dc12586d482fd9d3f8901bf3fd09469b0bd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="google-messaging"></a>Messagerie Google
 

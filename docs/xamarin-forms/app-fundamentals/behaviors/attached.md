@@ -1,18 +1,17 @@
 ---
-title: "Comportements attachés"
-description: "Les comportements attachés sont des classes static avec un ou plusieurs des propriétés jointes. Cet article montre comment créer et consommer des comportements attachés."
-ms.topic: article
+title: Comportements attachés
+description: Les comportements attachés sont des classes static avec un ou plusieurs des propriétés jointes. Cet article montre comment créer et consommer des comportements attachés.
 ms.prod: xamarin
 ms.assetid: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 84e60e8ce698e3d87db3e1bdc61613325ad831c8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: af891ad1ff1389d5a48c6c47ba1914b8d4dfc20f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="attached-behaviors"></a>Comportements attachés
 

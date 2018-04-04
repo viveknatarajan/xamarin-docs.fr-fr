@@ -1,18 +1,17 @@
 ---
-title: "Présentation de l’exemple"
-description: "Cette rubrique fournit une procédure pas à pas de l’exemple d’application Xamarin.Forms qui montre comment communiquer avec les services web différents. Alors que chaque service web utilise une application d’exemple distincts, ils sont fonctionnellement similaires et partagent des classes courantes."
-ms.topic: article
+title: Présentation de l’exemple
+description: Cette rubrique fournit une procédure pas à pas de l’exemple d’application Xamarin.Forms qui montre comment communiquer avec les services web différents. Alors que chaque service web utilise une application d’exemple distincts, ils sont fonctionnellement similaires et partagent des classes courantes.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-the-sample"></a>Présentation de l’exemple
 
@@ -56,7 +55,7 @@ Le projet de bibliothèque de classes portables pour chaque application comprend
 
 La plupart des exemples d’applications contiennent au moins deux pages :
 
-- **TodoListPage** : cette page affiche une liste de `TodoItem` instances et une icône de coche si le `TodoItem.Done` propriété est `true`. En cliquant sur un élément pour atteindre la `TodoItemPage`. En outre, les nouveaux éléments peuvent être créés en cliquant sur le  *+*  symbole.
+- **TodoListPage** : cette page affiche une liste de `TodoItem` instances et une icône de coche si le `TodoItem.Done` propriété est `true`. En cliquant sur un élément pour atteindre la `TodoItemPage`. En outre, les nouveaux éléments peuvent être créés en cliquant sur le *+* symbole.
 - **TodoItemPage** : cette page affiche les détails pour le `TodoItem`et lui permet d’être modifié, enregistré, supprimés et parlée.
 
 En outre, certains exemples d’applications contiennent des pages supplémentaires qui sont utilisés pour gérer le processus d’authentification utilisateur.

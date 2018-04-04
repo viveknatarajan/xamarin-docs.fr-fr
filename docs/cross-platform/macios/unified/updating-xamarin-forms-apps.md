@@ -1,18 +1,17 @@
 ---
-title: "Mise à jour des applications existantes de Xamarin.Forms"
-description: "Procédez comme suit pour mettre à jour une application existante de Xamarin.Forms pour utiliser l’API unifiée et mettre à jour vers la version 1.3.1"
-ms.topic: article
+title: Mise à jour des applications existantes de Xamarin.Forms
+description: Procédez comme suit pour mettre à jour une application existante de Xamarin.Forms pour utiliser l’API unifiée et mettre à jour vers la version 1.3.1
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d2f14510e5968ebe24bd297365416fa8aa5a0c59
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 49614dddf05d692d94d28b29729e7b2038be31e7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Mise à jour des applications existantes de Xamarin.Forms
 

@@ -1,18 +1,17 @@
 ---
-title: "Utilisation d’une vue empilée"
-description: "Cet article décrit la conception et l’utilisation d’empilées une vue à l’intérieur d’une application Xamarin.tvOS."
-ms.topic: article
+title: Utilisation d’une vue empilée
+description: Cet article décrit la conception et l’utilisation d’empilées une vue à l’intérieur d’une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: efc0da0b0f0a800069efb00a402361a8b0cd7f1d
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a6300e4da47022199c0503e6be63b0c90f15654d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-stacked-view"></a>Utilisation d’une vue empilée
 
@@ -153,7 +152,7 @@ Pour utiliser des vues de la pile dans une application Xamarin.tvOS, le plus sim
 
 Pour plus d’informations sur l’utilisation des plans conceptuels, veuillez consulter notre [Hello, Guide de démarrage rapide de tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-Dans le cas de notre exemple, nous avons exposé un prise et l’Action pour le contrôle de Segment et une sortie pour chaque carte « lecteur ». Dans le code, nous masquer et afficher le lecteur basé sur le segment actuel. Exemple :
+Dans le cas de notre exemple, nous avons exposé un prise et l’Action pour le contrôle de Segment et une sortie pour chaque carte « lecteur ». Dans le code, nous masquer et afficher le lecteur basé sur le segment actuel. Par exemple :
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {

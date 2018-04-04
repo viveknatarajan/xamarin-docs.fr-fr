@@ -1,18 +1,17 @@
 ---
-title: "Mise en surbrillance d’une zone circulaire sur une carte"
-description: "Cet article explique comment ajouter un segment de recouvrement circulaire à une carte, pour mettre en surbrillance une zone circulaire de la carte."
-ms.topic: article
+title: Mise en surbrillance d’une zone circulaire sur une carte
+description: Cet article explique comment ajouter un segment de recouvrement circulaire à une carte, pour mettre en surbrillance une zone circulaire de la carte.
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0eef31c5b9a93154b1038ffa63ee560bd738fe6b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: a70c8fdca457e386a1490ca974e1a1ea5da2f6db
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Mise en surbrillance d’une zone circulaire sur une carte
 
@@ -311,5 +310,5 @@ Cet article a expliqué comment ajouter un segment de recouvrement circulaire à
 ## <a name="related-links"></a>Liens associés
 
 - [Ovlerlay carte circulaire (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
-- [Personnalisation d’un code confidentiel de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
+- [Personnalisation d’une épingle de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)

@@ -1,18 +1,17 @@
 ---
 title: CoreImage
-description: "CoreImage est une nouvelle infrastructure introduite avec iOS 5 pour fournir le traitement d’image et fonctionnalités d’amélioration de la vidéo en direct. Cet article présente ces fonctionnalités avec les exemples de Xamarin.iOS."
-ms.topic: article
+description: CoreImage est une nouvelle infrastructure introduite avec iOS 5 pour fournir le traitement d’image et fonctionnalités d’amélioration de la vidéo en direct. Cet article présente ces fonctionnalités avec les exemples de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: da9b9230a466c70cd584a00af848ffe87dacbc5b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0bb2c3b8b563da53e432ad16e6518ada67a4655e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="coreimage"></a>CoreImage
 
@@ -29,7 +28,7 @@ Ce document contient des exemples simples de :
 
 Ces exemples doivent vous aider à commencer incorporation des fonctionnalités de CoreImage dans vos applications Xamarin.iOS.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Vous devez utiliser la version la plus récente de Xcode.
 

@@ -1,18 +1,17 @@
 ---
 title: Manipulations tactile
 description: Matrice de l’utilisation des transformations pour implémenter en faisant glisser des fonctions tactiles, pincement et rotation
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
-ms.date: 04/12/2017
-ms.openlocfilehash: 1fbc9826b9edd3d4c8f7e4b47c3ea835d5625343
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.date: 04/03/2018
+ms.openlocfilehash: e8e5cc7b1a00f9822c4cbb4859a02b7546102ca0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="touch-manipulations"></a>Manipulations tactile
 
@@ -27,7 +26,7 @@ Dans les environnements tactiles telles que celles sur les appareils mobiles, le
 Le **Touch une Manipulation** page montre tactile de manipulations sur une seule bitmap.
 Cet exemple utilise l’effet de suivi des fonctions tactiles présentée dans l’article [appeler des événements à partir des effets](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
-Plusieurs autres fichiers fournissent la prise en charge pour le **Touch une Manipulation** page. La première est la [ `TouchManipulationMode` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TouchManipulationMode.cs) énumération qui indique les différents types de manipulation tactile implémentée par le code que vous allez voir :
+Plusieurs autres fichiers fournissent la prise en charge pour le **Touch une Manipulation** page. La première est la [ `TouchManipulationMode` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationMode.cs) énumération qui indique les différents types de manipulation tactile implémentée par le code que vous allez voir :
 
 ```csharp
 enum TouchManipulationMode
@@ -47,7 +46,7 @@ Le `ScaleRotate` option est destinée à un doigt deux échelle et de rotation. 
 
 Le `ScaleDualRotate` option ajoute la rotation d’un doigt. Quand un seul doigt fait glisser l’objet, l’objet pivote tout d’abord autour de son centre afin que le centre de l’objet est alignée avec le vecteur de déplacement.
 
-Le [ **TouchManipulationPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TouchManipulationPage.xaml) fichier inclut un `Picker` avec les membres de le `TouchManipulationMode` énumération :
+Le [ **TouchManipulationPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationPage.xaml) fichier inclut un `Picker` avec les membres de le `TouchManipulationMode` énumération :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -94,7 +93,7 @@ Le [ **TouchManipulationPage.xaml** ](https://github.com/xamarin/xamarin-forms-s
 
 Vers le bas est une `SKCanvasView` et un `TouchEffect` attaché à la cellule unique `Grid` qui l’englobe.
 
-Le [ **TouchManipulationPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TouchManipulationPage.xaml.cs) fichier code-behind a un `bitmap` champ, mais il n’est pas de type `SKBitmap`. Le type est `TouchManipulationBitmap` (une classe que vous le verrez) :
+Le [ **TouchManipulationPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationPage.xaml.cs) fichier code-behind a un `bitmap` champ, mais il n’est pas de type `SKBitmap`. Le type est `TouchManipulationBitmap` (une classe que vous le verrez) :
 
 ```csharp
 public partial class TouchManipulationPage : ContentPage
@@ -197,7 +196,7 @@ Si le `HitTest` méthode retourne `true` &mdash; ce qui signifie que qu’un doi
 
 Le `TouchAction` gestionnaire appelle également la `ProcessTouchEvent` classe dans `TouchManipulationBitmap`. Cette propriété est si certains (mais pas tous) des fonctions tactiles réel le traitement se produit.
 
-Le [ `TouchManipulationBitmap` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TouchManipulationBitmap.cs) classe est une classe wrapper pour `SKBitmap` contenant du code pour restituer l’image bitmap et de traiter les événements tactiles. Il fonctionne conjointement avec plusieurs généralisé de code dans un `TouchManipulationManager` classe (vous verrez bientôt).
+Le [ `TouchManipulationBitmap` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationBitmap.cs) classe est une classe wrapper pour `SKBitmap` contenant du code pour restituer l’image bitmap et de traiter les événements tactiles. Il fonctionne conjointement avec plusieurs généralisé de code dans un `TouchManipulationManager` classe (vous verrez bientôt).
 
 Le `TouchManipulationBitmap` constructeur enregistre le `SKBitmap` et instancie les deux propriétés, la `TouchManager` propriété de type `TouchManipulationManager` et `Matrix` propriété de type `SKMatrix`:
 
@@ -275,7 +274,7 @@ class TouchManipulationBitmap
 }
 ```
 
-La deuxième méthode publique de `TouchManipulationBitmap` est `ProcessTouchEvent`. Lorsque cette méthode est appelée, il a déjà été établi que l’événement tactile appartienne à cette image bitmap particulier. La méthode gère un dictionnaire de [ `TouchManipulationInfo` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TouchManipulationInfo.cs) objets, qui est simplement le point précédent et le nouveau point de chaque doigt :
+La deuxième méthode publique de `TouchManipulationBitmap` est `ProcessTouchEvent`. Lorsque cette méthode est appelée, il a déjà été établi que l’événement tactile appartienne à cette image bitmap particulier. La méthode gère un dictionnaire de [ `TouchManipulationInfo` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationInfo.cs) objets, qui est simplement le point précédent et le nouveau point de chaque doigt :
 
 ```csharp
 class TouchManipulationInfo
@@ -552,7 +551,7 @@ Le `PaintSurface` gestionnaire se termine en affichant un `MatrixDisplay` objet 
 
 Un des avantages de l’isolation du code de traitement de l’interaction tactile dans les classes telles que `TouchManipulationBitmap` et `TouchManipulationManager` est la possibilité de réutiliser ces classes dans un programme qui permet à l’utilisateur manipuler plusieurs images bitmap.
 
-Le **vue à nuages de points de Bitmap** page montre comment procéder. Au lieu de la définition d’un champ de type `TouchManipulationBitmap`, le [ `BitmapScatterPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BitmapScatterViewPage.xaml.cs) classe définit un `List` des objets de bitmap :
+Le **vue à nuages de points de Bitmap** page montre comment procéder. Au lieu de la définition d’un champ de type `TouchManipulationBitmap`, le [ `BitmapScatterPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BitmapScatterViewPage.xaml.cs) classe définit un `List` des objets de bitmap :
 
 ```csharp
 public partial class BitmapScatterViewPage : ContentPage
@@ -687,6 +686,217 @@ Le code parcourt la collection et affiche l’accumulation des images bitmap dep
 
 [![](touch-images/bitmapscatterview-small.png "Capture d’écran de triple de la page de vue à nuages de points de Bitmap")](touch-images/bitmapscatterview-large.png#lightbox "Triple capture d’écran de la page de vue de Bitmap à nuages de points")
 
+## <a name="single-finger-scaling"></a>Mise à l’échelle à un seul doigt
+
+Une opération de mise à l’échelle nécessite généralement un mouvement de pincement à l’aide de deux doigts. Toutefois, il est possible d’implémenter la mise à l’échelle avec un seul doigt en ayant le doigt déplacer les angles d’une image bitmap.
+
+Cela est illustré dans le **mise à l’échelle du coin seul doigt** page. Étant donné que cet exemple utilise un type légèrement différent de la mise à l’échelle que qui implémentées dans le `TouchManipulationManager` (classe), il n’utilise pas cette classe ou la `TouchManipulationBitmap` classe. Au lieu de cela, toute la logique d’interaction tactile est dans le fichier code-behind. Il s’agit d’une logique un peu plus simple que d’habitude, car il assure le suivi à la fois qu’un seul doigt et ignore simplement les doigts secondaire qui peuvent être toucher l’écran.
+
+Le [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml) page instancie le `SKCanvasView` classe et crée un `TouchEffect` objet pour le suivi des événements tactiles :
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking"
+             x:Class="SkiaSharpFormsDemos.Transforms.SingleFingerCornerScalePage"
+             Title="Single Finger Corner Scale">
+
+    <Grid BackgroundColor="White"
+          Grid.Row="1">
+
+        <skia:SKCanvasView x:Name="canvasView"
+                           PaintSurface="OnCanvasViewPaintSurface" />
+        <Grid.Effects>
+            <tt:TouchEffect Capture="True"
+                            TouchAction="OnTouchEffectAction"   />
+        </Grid.Effects>
+    </Grid>
+</ContentPage>
+```
+
+Le [ **SingleFingerCornerScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml.cs) fichier charge une ressource bitmap à partir de la **Media** active et l’affiche à l’aide un `SKMatrix` objet défini en tant qu’un champ :
+
+```csharp
+public partial class SingleFingerCornerScalePage : ContentPage
+{
+    SKBitmap bitmap;
+    SKMatrix currentMatrix = SKMatrix.MakeIdentity();
+    ···
+
+    public SingleFingerCornerScalePage()
+    {
+        InitializeComponent();
+
+        string resourceID = "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg";
+        Assembly assembly = GetType().GetTypeInfo().Assembly;
+
+        using (Stream stream = assembly.GetManifestResourceStream(resourceID))
+        using (SKManagedStream skStream = new SKManagedStream(stream))
+        {
+            bitmap = SKBitmap.Decode(skStream);
+        }
+    }
+
+    void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+    {
+        SKImageInfo info = args.Info;
+        SKSurface surface = args.Surface;
+        SKCanvas canvas = surface.Canvas;
+
+        canvas.Clear();
+
+        canvas.SetMatrix(currentMatrix);
+        canvas.DrawBitmap(bitmap, 0, 0);
+    }
+    ···
+}
+```
+
+Cela `SKMatrix` objet est modifié par la logique d’interaction tactile indiquée ci-dessous. 
+
+Le reste du fichier code-behind est le `TouchEffect` Gestionnaire d’événements. Elle commence par convertir l’emplacement actuel du doigt pour un `SKPoint` valeur. Pour le `Pressed` type d’action, le gestionnaire vérifie qu’aucune autre doigt ne touche l’écran, et qui se trouve dans les limites de la bitmap. 
+
+La partie essentielle du code est un `if` instruction impliquant deux appels à la `Math.Pow` (méthode). Cette mathématiques vérifie si l’emplacement du doigt est en dehors d’une ellipse qui remplit la bitmap. Dans ce cas, puis qui est une opération de mise à l’échelle. Le doigt est proche d’un des angles de l’image bitmap et un point pivot est déterminé qui est l’angle opposé. Si le doigt figure dans cette sélection, elle est une opération de panoramique régulière :
+
+```csharp
+public partial class SingleFingerCornerScalePage : ContentPage
+{
+    SKBitmap bitmap;
+    SKMatrix currentMatrix = SKMatrix.MakeIdentity();
+
+    // Information for translating and scaling
+    long? touchId = null;
+    SKPoint pressedLocation;
+    SKMatrix pressedMatrix;
+
+    // Information for scaling
+    bool isScaling;
+    SKPoint pivotPoint;
+    ···
+
+    void OnTouchEffectAction(object sender, TouchActionEventArgs args)
+    {
+        // Convert Xamarin.Forms point to pixels
+        Point pt = args.Location;
+        SKPoint point =
+            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+
+        switch (args.Type)
+        {
+            case TouchActionType.Pressed:
+                // Track only one finger
+                if (touchId.HasValue)
+                    return;
+
+                // Check if the finger is within the boundaries of the bitmap
+                SKRect rect = new SKRect(0, 0, bitmap.Width, bitmap.Height);
+                rect = currentMatrix.MapRect(rect);
+                if (!rect.Contains(point))
+                    return;
+
+                // First assume there will be no scaling
+                isScaling = false;
+
+                // If touch is outside interior ellipse, make this a scaling operation
+                if (Math.Pow((point.X - rect.MidX) / (rect.Width / 2), 2) +
+                    Math.Pow((point.Y - rect.MidY) / (rect.Height / 2), 2) > 1)
+                {
+                    isScaling = true;
+                    float xPivot = point.X < rect.MidX ? rect.Right : rect.Left;
+                    float yPivot = point.Y < rect.MidY ? rect.Bottom : rect.Top;
+                    pivotPoint = new SKPoint(xPivot, yPivot);
+                }
+
+                // Common for either pan or scale
+                touchId = args.Id;
+                pressedLocation = point;
+                pressedMatrix = currentMatrix;
+                break;
+
+            case TouchActionType.Moved:
+                if (!touchId.HasValue || args.Id != touchId.Value)
+                    return;
+
+                SKMatrix matrix = SKMatrix.MakeIdentity();
+
+                // Translating
+                if (!isScaling)
+                {
+                    SKPoint delta = point - pressedLocation;
+                    matrix = SKMatrix.MakeTranslation(delta.X, delta.Y);
+                }
+                // Scaling
+                else
+                {
+                    float scaleX = (point.X - pivotPoint.X) / (pressedLocation.X - pivotPoint.X);
+                    float scaleY = (point.Y - pivotPoint.Y) / (pressedLocation.Y - pivotPoint.Y);
+                    matrix = SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
+                }
+
+                // Concatenate the matrices
+                SKMatrix.PreConcat(ref matrix, pressedMatrix);
+                currentMatrix = matrix;
+                canvasView.InvalidateSurface();
+                break;
+
+            case TouchActionType.Released:
+            case TouchActionType.Cancelled:
+                touchId = null;
+                break;
+        }
+    }
+}
+```
+
+Le `Moved` type d’action calcule une matrice correspondant à l’activité tactile à partir de l’heure avec le doigt appuyé l’écran jusqu'à cette heure. Il concatène cette matrice avec la matrice en vigueur au moment où que le doigt appuyé tout d’abord l’image bitmap. L’opération de mise à l’échelle est toujours par rapport à l’angle au lieu de celui qui le doigt couvertes.
+
+Pour les bitmaps de petite taille ou allongées, une ellipse intérieure peut occuper la majeure partie de l’image bitmap et conserver très petites zones dans les angles de la mise à l’échelle de l’image bitmap. Vous pouvez préférer une approche un peu différente, auquel cas vous pouvez remplacer cet ensemble `if` bloc définit `isScaling` à `true` avec ce code :
+
+```csharp
+float halfHeight = rect.Height / 2;
+float halfWidth = rect.Width / 2;
+
+// Top half of bitmap
+if (point.Y < rect.MidY)
+{
+    float yRelative = (point.Y - rect.Top) / halfHeight;
+
+    // Upper-left corner
+    if (point.X < rect.MidX - yRelative * halfWidth)
+    {
+        isScaling = true;
+        pivotPoint = new SKPoint(rect.Right, rect.Bottom);
+    }
+    // Upper-right corner
+    else if (point.X > rect.MidX + yRelative * halfWidth)
+    {
+        isScaling = true;
+        pivotPoint = new SKPoint(rect.Left, rect.Bottom);
+    }
+}
+// Bottom half of bitmap
+else
+{
+    float yRelative = (point.Y - rect.MidY) / halfHeight;
+
+    // Lower-left corner
+    if (point.X < rect.Left + yRelative * halfWidth)
+    {
+        isScaling = true;
+        pivotPoint = new SKPoint(rect.Right, rect.Top);
+    }
+    // Lower-right corner
+    else if (point.X > rect.Right - yRelative * halfWidth)
+    {
+        isScaling = true;
+        pivotPoint = new SKPoint(rect.Left, rect.Top);
+    }
+}
+```
+
+Ce code divise efficacement la zone de l’image bitmap en forme de losange intérieurs et quatre triangles dans les angles. Cela permet de beaucoup plus grandes zones dans les angles pour saisir et mettre à l’échelle de l’image bitmap.
 
 ## <a name="related-links"></a>Liens associés
 

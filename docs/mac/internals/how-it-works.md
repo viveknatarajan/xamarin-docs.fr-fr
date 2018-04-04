@@ -1,18 +1,17 @@
 ---
 title: Fonctionnement de Xamarin.Mac
-description: "Ce document décrit le fonctionnement interne de Xamarin.Mac. En particulier, il examine les constructeurs, gestion de la mémoire, avant la compilation de temps et le bureau d’enregistrement."
-ms.topic: article
+description: Ce document décrit le fonctionnement interne de Xamarin.Mac. En particulier, il examine les constructeurs, gestion de la mémoire, avant la compilation de temps et le bureau d’enregistrement.
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/25/2017
-ms.openlocfilehash: a1dbff32b113bd1c3a6b2058a34c73977c59c9e5
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: baa60d177a7d7d070a218108b2f6779eeaf94f78
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-xamarinmac-works"></a>Fonctionnement de Xamarin.Mac
 
@@ -104,7 +103,7 @@ Il existe deux principales zones où AOA peut aider à une application Xamarin.M
 
 ### <a name="enabling-aot-compilation"></a>L’activation de la compilation AOA
 
-AOA est activée dans Xamarin.Mac en double-cliquant sur le **nom du projet** dans les **l’Explorateur de solutions**, la navigation vers **Mac générer** et l’ajout de `--aot:[options]` à la  **Les arguments supplémentaires mmp :** champ (où `[options]` est une ou plusieurs options pour contrôler le type AOA, voir ci-dessous). Exemple :
+AOA est activée dans Xamarin.Mac en double-cliquant sur le **nom du projet** dans les **l’Explorateur de solutions**, la navigation vers **Mac générer** et l’ajout de `--aot:[options]` à la  **Les arguments supplémentaires mmp :** champ (où `[options]` est une ou plusieurs options pour contrôler le type AOA, voir ci-dessous). Par exemple :
 
 ![Ajout d’AOA pour les arguments supplémentaires mmp](how-it-works-images/aot01.png "Ajout AOA aux arguments de mmp supplémentaires")
 
@@ -146,7 +145,7 @@ L’enregistrement statique partielle, introduite initialement dans Xamarin.iOS 
 
 ### <a name="enabling-the-partial-static-registrar"></a>Activer le bureau d’enregistrement statique partielle
 
-Le bureau d’enregistrement statique partielle est activée dans Xamarin.Mac en double-cliquant sur le **nom du projet** dans les **l’Explorateur de solutions**, la navigation vers **Mac générer** et l’ajout de `--registrar:static` à la **les arguments supplémentaires mmp :** champ. Exemple :
+Le bureau d’enregistrement statique partielle est activée dans Xamarin.Mac en double-cliquant sur le **nom du projet** dans les **l’Explorateur de solutions**, la navigation vers **Mac générer** et l’ajout de `--registrar:static` à la **les arguments supplémentaires mmp :** champ. Par exemple :
 
 ![Ajout du bureau d’enregistrement statique partielle pour les arguments supplémentaires mmp](how-it-works-images/psr01.png "ajout le bureau d’enregistrement statique partielle pour les arguments supplémentaires mmp")
 

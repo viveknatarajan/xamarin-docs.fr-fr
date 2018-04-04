@@ -1,20 +1,19 @@
 ---
-title: "Fonctionnalités de plateforme"
-description: "Concepts et fonctionnalités de l’application multi-plateforme."
-ms.topic: article
+title: Fonctionnalités de la plateforme
+description: Concepts et fonctionnalités de l’application multi-plateforme.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 26b33b1fbf546f734e6661380f63b574cccbcae5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1699c8bde336c040253a5560a2979de8b3fabf5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="platform-features"></a>Fonctionnalités de plateforme
+# <a name="platform-features"></a>Fonctionnalités de la plateforme
 
 Cette section contient des documents qui expliquent des fonctionnalités d’application multiplateforme plus avancées et les concepts.
 
@@ -22,7 +21,7 @@ Cette section contient des documents qui expliquent des fonctionnalités d’app
 
 La version 5 du langage c# a introduit deux nouveaux mots-clés pour exprimer des opérations asynchrones : async et await. Ces mots clés vous permettent d’écrire du code simple qui utilise la bibliothèque parallèle de tâches pour exécuter des opérations longues (par exemple, l’accès réseau) dans un autre thread et d’accéder facilement les résultats à la fin. Les dernières versions de Xamarin.iOS et Xamarin.Android prennent en charge async et await : ce document fournit des explications et un exemple d’utilisation de la nouvelle syntaxe avec Xamarin.
 
-## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Fonctionnalités de langage 6 c#](~/cross-platform/platform/csharp-six.md)
+## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Fonctionnalités du langage C# 6](~/cross-platform/platform/csharp-six.md)
 
 La dernière version du langage c# – version 6 – continue à faire évoluer la langue pour avoir moins de code réutilisable, améliorer la clarté et la cohérence plus. La syntaxe d’initialisation plus propre, la possibilité d’utiliser `await` dans `catch/finally` blocs et la valeur null-condition `?` opérateur sont particulièrement utiles.
 

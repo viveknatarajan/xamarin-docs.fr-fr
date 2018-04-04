@@ -1,18 +1,17 @@
 ---
-title: "Création d’une disposition personnalisée"
-description: "Xamarin.Forms définit quatre classes de mise en page – StackLayout, DispositionAbsolue, RelativeLayout et grille, et chacune réorganise ses enfants d’une manière différente. Toutefois, il est parfois nécessaire organiser le contenu de la page à l’aide d’une disposition non fournie par Xamarin.Forms. Cet article explique comment écrire une classe de disposition personnalisée et illustre une classe de WrapLayout orientation sensibles qui réorganise ses enfants horizontalement sur la page, puis encapsule l’affichage des enfants suivants pour les lignes supplémentaires."
-ms.topic: article
+title: Création d’une disposition personnalisée
+description: Xamarin.Forms définit quatre classes de mise en page – StackLayout, DispositionAbsolue, RelativeLayout et grille, et chacune réorganise ses enfants d’une manière différente. Toutefois, il est parfois nécessaire organiser le contenu de la page à l’aide d’une disposition non fournie par Xamarin.Forms. Cet article explique comment écrire une classe de disposition personnalisée et illustre une classe de WrapLayout orientation sensibles qui réorganise ses enfants horizontalement sur la page, puis encapsule l’affichage des enfants suivants pour les lignes supplémentaires.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 4c7bf5f2c867faef7d9baf8d511393dbe2d129a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f0728ac110fcf86f44a5ccb5ddd80b00af1b8d62
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-custom-layout"></a>Création d’une disposition personnalisée
 
@@ -26,7 +25,7 @@ Chaque élément visuel est chargé de déterminer sa taille par défaut, qui es
 
 Une bonne compréhension des cycles de mise en page et l’invalidation de Xamarin.Forms est nécessaire pour créer une disposition personnalisée. Ces cycles aborderons maintenant.
 
-## <a name="layout"></a>Disposition
+## <a name="layout"></a>Mise en page
 
 Mise en page commence en haut de l’arborescence d’éléments visuels avec une page, et il se poursuit dans toutes les branches de l’arborescence visuelle pour englober tous les éléments visuels sur une page. Éléments parents à d’autres éléments sont chargés de dimensionnement et de positionnement de leurs enfants par rapport à eux-mêmes.
 

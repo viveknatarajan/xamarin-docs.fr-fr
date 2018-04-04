@@ -1,18 +1,17 @@
 ---
 title: Maps
-description: "e/s inclut le MapKit framework, ce qui le rend faciles à ajouter est mappé à une application. À l’aide du Kit de la carte, les applications iOS peuvent ajouter des cartes interactifs qui prennent en charge des fonctionnalités telles que le panoramique et zoom, affichant l’emplacement de l’utilisateur et les graphiques enrichi de superposition sur une carte. Cet article examine plusieurs fonctionnalités du Kit de la carte, montrant comment tirer parti de ces pour générer des données géographiques dans une application"
-ms.topic: article
+description: e/s inclut le MapKit framework, ce qui le rend faciles à ajouter est mappé à une application. À l’aide du Kit de la carte, les applications iOS peuvent ajouter des cartes interactifs qui prennent en charge des fonctionnalités telles que le panoramique et zoom, affichant l’emplacement de l’utilisateur et les graphiques enrichi de superposition sur une carte. Cet article examine plusieurs fonctionnalités du Kit de la carte, montrant comment tirer parti de ces pour générer des données géographiques dans une application
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3fecf17a4f70e44ca169c825bf0dd34a5127cec8
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="maps"></a>Maps
 

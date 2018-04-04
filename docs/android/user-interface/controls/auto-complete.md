@@ -1,17 +1,16 @@
 ---
 title: Saisie semi-automatique
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: f4118881272bb605607d528007064ada561cf7fc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 333264e65e814ad73eabeb7be55abb320400a59a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="auto-complete"></a>Saisie semi-automatique
 
@@ -160,7 +159,7 @@ Exécutez l'application. Lorsque vous tapez, vous devez voir quelque chose comme
 
 ## <a name="more-information"></a>Informations complémentaires
 
-Notez qu’en utilisant un tableau de chaîne codée en dur n’est pas une pratique de conception recommandée, car le code de votre application doit se concentrer sur le comportement, pas de contenu. Contenu de l’application telles que des chaînes doit-elle être externalisé à partir du code pour faciliter les modifications apportées au contenu et faciliter la localisation du contenu. Les chaînes codées en dur sont utilisés dans ce didacticiel uniquement à simplifier et se concentrer sur la [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget. Au lieu de cela, votre application doit déclarer ces tableaux de chaînes dans un fichier XML. Cela peut être fait avec un `<string-array>` ressources dans votre projet `res/values/strings.xml` fichier. Exemple :
+Notez qu’en utilisant un tableau de chaîne codée en dur n’est pas une pratique de conception recommandée, car le code de votre application doit se concentrer sur le comportement, pas de contenu. Contenu de l’application telles que des chaînes doit-elle être externalisé à partir du code pour faciliter les modifications apportées au contenu et faciliter la localisation du contenu. Les chaînes codées en dur sont utilisés dans ce didacticiel uniquement à simplifier et se concentrer sur la [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget. Au lieu de cela, votre application doit déclarer ces tableaux de chaînes dans un fichier XML. Cela peut être fait avec un `<string-array>` ressources dans votre projet `res/values/strings.xml` fichier. Par exemple :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

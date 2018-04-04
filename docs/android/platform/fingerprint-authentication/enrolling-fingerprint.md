@@ -1,18 +1,17 @@
 ---
-title: "L’inscription d’une empreinte digitale"
-description: "Comment définir un verrouillage d’écran et de s’inscrire une empreinte digitale sur un émulateur ou un appareil Android."
-ms.topic: article
+title: L’inscription d’une empreinte digitale
+description: Comment définir un verrouillage d’écran et de s’inscrire une empreinte digitale sur un émulateur ou un appareil Android.
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 20e6d693f2a3eba54afaf1d3c7054ad75d7a7610
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4faee5decb102d17d9a270b96cef4a12fc9dbef4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enrolling-a-fingerprint"></a>L’inscription d’une empreinte digitale
 
@@ -20,7 +19,7 @@ ms.lasthandoff: 03/09/2018
 
 Il n’est possible pour une application Android tirer parti de l’authentification par empreinte digitale si l’appareil a déjà été configuré avec une authentification par empreinte digitale. Ce guide explique comment inscrire une empreinte digitale sur un émulateur ou un appareil Android. Émulateurs n’ont pas le matériel réel pour effectuer une analyse d’empreintes digitales, mais il est possible de simuler une analyse d’empreintes digitales, à l’aide de la Android Debug Bridge (décrites ci-dessous).  Ce guide explique comment activer le verrouillage d’écran sur un appareil Android et inscrire une empreinte digitale pour l’authentification.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour inscrire une empreinte digitale, vous devez disposer d’un appareil Android ou un émulateur en cours d’exécution API de niveau 23 (Android 6.0).
 

@@ -1,18 +1,17 @@
 ---
 title: Utilisation de Services Web
-description: "Ce guide montre comment communiquer avec les services web différents pour fournir créer, lire, mettre à jour et supprimer des fonctionnalités à une application de Xamarin.Forms (CRUD). Rubriques couvertes incluent la communication avec ASMX services WCF services, autres services, les applications mobiles Azure et Amazon Web Services."
-ms.topic: article
+description: Ce guide montre comment communiquer avec les services web différents pour fournir créer, lire, mettre à jour et supprimer des fonctionnalités à une application de Xamarin.Forms (CRUD). Rubriques couvertes incluent la communication avec ASMX services WCF services, autres services, les applications mobiles Azure et Amazon Web Services.
 ms.prod: xamarin
 ms.assetid: 8B360BDA-E4E3-4A3F-9004-0E35362F49F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 411ceaa372aef7aec51e3fa691996c2d7538c590
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 530b57c009a1f76d3756d7315856f74b6cda2f66
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-web-services"></a>Utilisation de Services Web
 
@@ -42,4 +41,4 @@ Amazon SimpleDB est un service web qui offre la possibilité de stocker et inter
 ## <a name="related-links"></a>Liens associés
 
 - [Introduction aux services web](~/cross-platform/data-cloud/web-services/index.md)
-- [Présentation de la prise en charge asynchrone](~/cross-platform/platform/async.md)
+- [Vue d’ensemble de la prise en charge asynchrone](~/cross-platform/platform/async.md)

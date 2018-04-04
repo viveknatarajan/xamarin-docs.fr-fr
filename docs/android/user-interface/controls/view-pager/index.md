@@ -1,18 +1,17 @@
 ---
 title: ViewPager
-description: "ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation geste. Navigation geste permet à l’utilisateur pour le passage de gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter la navigation geste avec ViewPager, avec et sans Fragments. Il décrit également comment ajouter des indicateurs de page à l’aide de PagerTitleStrip et PagerTabStrip."
-ms.topic: article
+description: ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation geste. Navigation geste permet à l’utilisateur pour le passage de gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter la navigation geste avec ViewPager, avec et sans Fragments. Il décrit également comment ajouter des indicateurs de page à l’aide de PagerTitleStrip et PagerTabStrip.
 ms.prod: xamarin
 ms.assetid: D42896C0-DE7C-4818-B171-CB2D5E5DD46A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 5e2f93eea970a15df03b00cc962ca7482624973d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bd687175048bb6a19dde21e66619667511a76796
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -37,7 +36,7 @@ Ce guide illustre les deux approches :
 -   Dans [Viewpager avec des Fragments](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), légèrement plus complexe [FlashCardPager](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager/) application est développée pour illustrer l’utilisation de `ViewPager` avec `Fragment`s pour générer une application qui présente des problèmes mathématiques en tant que cartes flash et répond aux entrées d’utilisateur. 
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour utiliser `ViewPager` dans votre projet d’application, vous devez installer le [bibliothèque de prise en charge Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) package. Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas :, y compris un NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 

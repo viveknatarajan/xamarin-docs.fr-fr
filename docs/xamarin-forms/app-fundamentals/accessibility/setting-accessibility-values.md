@@ -1,18 +1,17 @@
 ---
-title: "Définition des valeurs d’accessibilité sur les éléments d’Interface utilisateur"
-description: "Xamarin.Forms autorise les valeurs d’accessibilité à définir sur les éléments d’interface utilisateur à l’aide des propriétés jointes à partir de la classe AutomationProperties, qui à son tour valeurs accessibilité natif. Cet article explique comment utiliser la classe AutomationProperties, afin qu’un lecteur d’écran peut présenter sur les éléments sur la page."
-ms.topic: article
+title: Définition des valeurs d’accessibilité sur les éléments d’Interface utilisateur
+description: Xamarin.Forms autorise les valeurs d’accessibilité à définir sur les éléments d’interface utilisateur à l’aide des propriétés jointes à partir de la classe AutomationProperties, qui à son tour valeurs accessibilité natif. Cet article explique comment utiliser la classe AutomationProperties, afin qu’un lecteur d’écran peut présenter sur les éléments sur la page.
 ms.prod: xamarin
 ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 4aeeea7f946a121b12741d2da217daf531935849
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cf9071684061b584e1cb75cfd50b33212f42bf79
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setting-accessibility-values-on-user-interface-elements"></a>Définition des valeurs d’accessibilité sur les éléments d’Interface utilisateur
 

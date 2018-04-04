@@ -1,18 +1,17 @@
 ---
-title: "Résolution des problèmes de liaison"
-description: "Ce guide décrit comment procéder si vous avez des difficultés à la liaison d’une bibliothèque Objective-C."
-ms.topic: article
+title: Résolution des problèmes de liaison
+description: Ce guide décrit comment procéder si vous avez des difficultés à la liaison d’une bibliothèque Objective-C.
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: 2db7fe30f05224f6b74b4d2189606da59946bda0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7ea3e3802ec2e0baf0fe8355a41e806bacabc9ac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-troubleshooting"></a>Résolution des problèmes de liaison
 
@@ -45,15 +44,15 @@ Si vous rencontrez un cas où en passant `null` lève une `ArgumentNullException
 
 Vos commentaires nous sont précieux. Si vous constatez des problèmes avec Xamarin.Mac :
 
-- Vérifiez le [Xamarin.Mac Forums](https://forums.xamarin.com/categories/mac)
-- Recherche le [référentiel du problème](https://github.com/xamarin/xamarin-macios/issues) 
-- Avant de passer à des problèmes de GitHub, Xamarin problèmes ont été suivies sur [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Rechercher il pour la correspondance des problèmes.
-- Si vous ne trouvez pas un problème de correspondance, veuillez soumettre un nouveau problème dans le [référentiel de problème GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+- Consultez les [forums Xamarin.Mac](https://forums.xamarin.com/categories/mac)
+- Recherchez dans le [dépôt des problèmes](https://github.com/xamarin/xamarin-macios/issues) 
+- Avant de devenir des problèmes GitHub, les problèmes Xamarin étaient suivis sur [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Recherchez-y des problèmes correspondants.
+- Si vous ne trouvez pas de problème correspondant, ouvrez un nouveau problème dans le [dépôt de problèmes GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Problèmes de GitHub sont tous les publics. Il n’est pas possible de masquer des commentaires ou des pièces jointes. 
+Les problèmes GitHub sont tous publics. Il n’est pas possible de masquer des commentaires ou des pièces jointes. 
 
-Veuillez inclure autant de ces possible :
+Dans la mesure du possible, essayez d’inclure :
 
-- Un exemple simple de reproduire le problème. Il s’agit de **inestimable** lorsque cela est possible. 
-- La trace de pile complet de l’incident.
-- Le code c# se rapportant à l’incident. 
+- Un exemple simple reproduisant le problème. Si vous pouvez en fournir un, c’est **inestimable**. 
+- La trace de pile complète du plantage.
+- Le code C# se rapportant au plantage. 

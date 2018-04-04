@@ -1,17 +1,16 @@
 ---
-title: "Sous-classes génériques de NSObject"
-ms.topic: article
+title: Sous-classes génériques de NSObject
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 76c35cfb993bade324b25f86e75db7eb028a7399
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89df751d74b9b54ae8138d2e1b24c61d82c3cac8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="generic-subclasses-of-nsobject"></a>Sous-classes génériques de NSObject
 
@@ -118,7 +117,7 @@ Pendant la construction ci-dessus est bien, lors de l’exécution, cela lève u
 
 Il s’agit d’effet Objective-C n’a aucun concept de types génériques, et il ne peut pas spécifier le type générique exact à créer.
 
-Ce problème peut être contourné en créant une sous-classe spécialisée de type générique.   Exemple :
+Ce problème peut être contourné en créant une sous-classe spécialisée de type générique.   Par exemple :
     
 ```
 class Generic<T> : NSObject where T : NSObject

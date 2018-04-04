@@ -1,18 +1,17 @@
 ---
-title: "L’authentification des utilisateurs avec Azure Active Directory B2C"
-description: "Azure B2C Active Directory est une solution de gestion d’identité cloud pour les applications pour les consommateurs web et mobiles. Cet article explique comment utiliser la bibliothèque d’authentification de Microsoft et Azure Active Directory B2C pour intégrer la gestion des identités de consommateur dans une application mobile."
-ms.topic: article
+title: L’authentification des utilisateurs avec Azure Active Directory B2C
+description: Azure B2C Active Directory est une solution de gestion d’identité cloud pour les applications pour les consommateurs web et mobiles. Cet article explique comment utiliser la bibliothèque d’authentification de Microsoft et Azure Active Directory B2C pour intégrer la gestion des identités de consommateur dans une application mobile.
 ms.prod: xamarin
 ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 5d64c7c1dbc502acd3876c2442f9bae1c46eeb74
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f17a6ad012aff81674db943b7d65e65ba77dca52
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>L’authentification des utilisateurs avec Azure Active Directory B2C
 

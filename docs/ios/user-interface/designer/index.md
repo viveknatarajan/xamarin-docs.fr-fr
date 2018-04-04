@@ -1,18 +1,17 @@
 ---
 title: Concepteur iOS
-description: "Le Concepteur de Xamarin pour iOS est un concepteur visuel pour les formats d’animation et Interface générateur iOS qui est entièrement intégré à Visual Studio pour Mac et Visual Studio. Le concepteur iOS gère une compatibilité complète avec les formats de and.xib Storyboard, afin que les fichiers peuvent être modifiés dans Visual Studio pour Mac ou Visual Studio en plus Interface Builder de Xcode. En outre, le Concepteur de Xamarin pour iOS prend en charge les fonctionnalités avancées telles que les contrôles personnalisés qui restituent au moment du design dans l’éditeur."
-ms.topic: article
+description: Le Concepteur de Xamarin pour iOS est un concepteur visuel pour les formats d’animation et Interface générateur iOS qui est entièrement intégré à Visual Studio pour Mac et Visual Studio. Le concepteur iOS gère une compatibilité complète avec les formats de and.xib Storyboard, afin que les fichiers peuvent être modifiés dans Visual Studio pour Mac ou Visual Studio en plus Interface Builder de Xcode. En outre, le Concepteur de Xamarin pour iOS prend en charge les fonctionnalités avancées telles que les contrôles personnalisés qui restituent au moment du design dans l’éditeur.
 ms.prod: xamarin
 ms.assetid: E35EFB69-EBBA-40E3-ADBE-CB8016F17127
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 884811e4035aabd831f851015db098a0243a2388
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 98d11b54ace70d4c4a82b2caebbe97cff02e0544
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-designer"></a>Concepteur iOS
 

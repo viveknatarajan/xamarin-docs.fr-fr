@@ -1,18 +1,17 @@
 ---
-title: "Ajout de données à la Collection d’éléments d’un sélecteur"
-description: "L’affichage du sélecteur est un contrôle pour la sélection d’un élément de texte dans une liste de données. Cet article explique comment remplir un sélecteur de données en l’ajoutant à la collection d’éléments et répondre à la sélection d’éléments par l’utilisateur."
-ms.topic: article
+title: Ajout de données à la Collection d’éléments d’un sélecteur
+description: L’affichage du sélecteur est un contrôle pour la sélection d’un élément de texte dans une liste de données. Cet article explique comment remplir un sélecteur de données en l’ajoutant à la collection d’éléments et répondre à la sélection d’éléments par l’utilisateur.
 ms.prod: xamarin
 ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 3468e38d8ef46dfef870a05bf72d93c28195dae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 63a72861895f79d2d0154297f88610ddb8bb8beb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Ajout de données à la Collection d’éléments d’un sélecteur
 

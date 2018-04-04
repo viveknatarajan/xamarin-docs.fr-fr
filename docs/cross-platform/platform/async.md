@@ -1,18 +1,17 @@
 ---
-title: "Vue d’ensemble d’async"
-description: "La dernière version du langage c# – version 5 – introduit deux nouveaux mots-clés pour exprimer des opérations asynchrones : async et await. Ces mots clés vous permettent d’écrire du code simple qui utilise la bibliothèque parallèle de tâches pour exécuter des opérations longues (par exemple, l’accès réseau) dans un autre thread et d’accéder facilement les résultats à la fin. Les dernières versions de Xamarin.iOS et Xamarin.Android prennent en charge async et await : ce document fournit des explications et un exemple d’utilisation de la nouvelle syntaxe avec Xamarin."
-ms.topic: article
+title: Vue d’ensemble d’async
+description: 'La dernière version du langage c# – version 5 – introduit deux nouveaux mots-clés pour exprimer des opérations asynchrones : async et await. Ces mots clés vous permettent d’écrire du code simple qui utilise la bibliothèque parallèle de tâches pour exécuter des opérations longues (par exemple, l’accès réseau) dans un autre thread et d’accéder facilement les résultats à la fin. Les dernières versions de Xamarin.iOS et Xamarin.Android prennent en charge async et await : ce document fournit des explications et un exemple d’utilisation de la nouvelle syntaxe avec Xamarin.'
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4762612075a866581339b198552b8e26c9a1f6fa
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ecad6259cb0d472ac39afb0a6be980d4582812c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="async-support-overview"></a>Présentation de la prise en charge asynchrone
 
@@ -32,7 +31,7 @@ L’exemple d’application effectue une requête web asynchrone simple (sans bl
 
 Prise en charge de Xamarin async repose sur la Fondation Mono 3.0 et le profil de l’API de la mise à niveau à partir d’une version adaptés aux appareils mobiles de Silverlight pour être une version adaptés aux appareils mobiles de .NET 4.5 en cours.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les fonctionnalités de c# 5 requièrent 3.0 Mono qui est inclus dans 6.4 de Xamarin.iOS et Xamarin.Android 4.8. Vous devrez mettre à niveau votre Mono, Xamarin.iOS, Xamarin.Android et Xamarin.Mac pour tirer parti de celui-ci.
 

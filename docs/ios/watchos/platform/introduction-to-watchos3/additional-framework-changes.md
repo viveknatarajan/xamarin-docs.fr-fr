@@ -1,18 +1,17 @@
 ---
-title: "Modifications des infrastructures supplémentaires watchOS 3"
-description: "Cet article traite des modifications supplémentaires, secondaires ou des améliorations apportées aux infrastructures existantes pour watchOS 3."
-ms.topic: article
+title: Modifications des infrastructures supplémentaires watchOS 3
+description: Cet article traite des modifications supplémentaires, secondaires ou des améliorations apportées aux infrastructures existantes pour watchOS 3.
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e2d14bcedd6ff5570d77da8c9b54a74b5ce0752a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 572aaff9d010ec1ec1f48db2878859e445e2fb20
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Modifications des infrastructures supplémentaires watchOS 3
 

@@ -1,18 +1,17 @@
 ---
 title: Utilisation de JNI
-description: "Xamarin.Android autorise l’écriture d’applications Android en c#, au lieu de Java. Plusieurs assemblys sont fournis avec Xamarin.Android qui fournissent des liaisons pour les bibliothèques Java, y compris Mono.Android.dll et Mono.Android.GoogleMaps.dll. Toutefois, liaisons ne sont pas fournies pour chaque bibliothèque Java possible et les liaisons fournies ne peuvent pas lier chaque type Java et membre. Pour utiliser les types Java indépendant et les membres, l’Interface JNI (Java Native) peut être utilisé. Cet article explique comment utiliser JNI pour interagir avec les membres à partir d’applications de Xamarin.Android et les types Java."
-ms.topic: article
+description: Xamarin.Android autorise l’écriture d’applications Android en c#, au lieu de Java. Plusieurs assemblys sont fournis avec Xamarin.Android qui fournissent des liaisons pour les bibliothèques Java, y compris Mono.Android.dll et Mono.Android.GoogleMaps.dll. Toutefois, liaisons ne sont pas fournies pour chaque bibliothèque Java possible et les liaisons fournies ne peuvent pas lier chaque type Java et membre. Pour utiliser les types Java indépendant et les membres, l’Interface JNI (Java Native) peut être utilisé. Cet article explique comment utiliser JNI pour interagir avec les membres à partir d’applications de Xamarin.Android et les types Java.
 ms.prod: xamarin
 ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: f14d456cba66142c51e0755cdfd3c6795bd1cf73
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 4b5874a0f0e4289201f68299e2e37660cabc9ecf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-jni"></a>Utilisation de JNI
 
@@ -37,7 +36,7 @@ Ce document explique :
 
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 JNI, tel qu’exposé via la [espace de noms Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/), est disponible dans chaque version de Xamarin.Android.
 Pour lier des interfaces et des types Java, vous devez utiliser Xamarin.Android 4.0 ou version ultérieure.
@@ -72,7 +71,7 @@ Des wrappers RCW Android sont générés par le **monodroid.exe** programme pend
 Il se peut que lorsque vous devez implémenter une interface Android, (tels que [Android.Content.IComponentCallbacks](https://developer.xamarin.com/api/type/Android.Content.IComponentCallbacks/)).
 
 Toutes les interfaces et les classes Android étendent le [Android.Runtime.IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) interface ; par conséquent, tous les types Android doivent implémenter `IJavaObject`.
-Xamarin.Android tire parti de ce fait &ndash; il utilise `IJavaObject` pour fournir Android avec un proxy Java (Android callable wrapper) pour le type managé. Étant donné que **monodroid.exe** recherche uniquement `Java.Lang.Object` sous-classes (qui doit implémenter `IJavaObject`), sous-classement `Java.Lang.Object` nous offre un moyen d’implémenter des interfaces en code managé. Exemple :
+Xamarin.Android tire parti de ce fait &ndash; il utilise `IJavaObject` pour fournir Android avec un proxy Java (Android callable wrapper) pour le type managé. Étant donné que **monodroid.exe** recherche uniquement `Java.Lang.Object` sous-classes (qui doit implémenter `IJavaObject`), sous-classement `Java.Lang.Object` nous offre un moyen d’implémenter des interfaces en code managé. Par exemple :
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -1443,7 +1442,7 @@ Une référence de type est une référence de type intégré ou un type simplif
 Références de type sont utilisés avec des références de type tableau et avec des Signatures JNI.
 
 Une méthode supplémentaire pour obtenir une référence de type est en examinant la sortie de `'javap -s -classpath android.jar fully.qualified.Java.Name'`.
-Selon le type impliqués, vous pouvez utiliser une déclaration de constructeur ou de type pour déterminer le nom JNI de retour de méthode. Exemple :
+Selon le type impliqués, vous pouvez utiliser une déclaration de constructeur ou de type pour déterminer le nom JNI de retour de méthode. Par exemple :
 
 ```shell
 $ javap -classpath android.jar -s java.lang.Thread.State

@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.Mac avant la compilation à l'"
-description: "En vue de considérations et les compromis de compilation de temps (AOA)"
-ms.topic: article
+title: Xamarin.Mac avant la compilation à l'
+description: En vue de considérations et les compromis de compilation de temps (AOA)
 ms.prod: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: f9ace41380987472b6957c94719e6ae9b6f7995d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d6be1d6e4a3cccef827862fb1fd54b202b0ce5fd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinmac-ahead-of-time-compilation"></a>Xamarin.Mac avant la compilation à l'
 
@@ -32,7 +31,7 @@ Chaque option présente plusieurs avantages et compromis :
 - **JIT**
   - **Temps de démarrage** : compilation JIT doit être effectuée au démarrage. Pour la plupart des applications, il s’agit de l’ordre 100 ms, mais pour les grandes applications cette durée peut être beaucoup plus.
   - **L’exécution de** – code en tant que le JIT peut être optimisée pour le processeur spécifique utilisé, code légèrement meilleur peut être généré. Dans la plupart des applications Voici quelques points de pourcentage plus rapidement au maximum.
-- **AOT**
+- **AOA**
   - **Temps de démarrage** – le chargement des dylibs précompilées est nettement plus rapide que les assemblys JIT.
   - **Espace disque** – ces dylibs peut prendre une quantité importante d’espace disque toutefois. Selon les assemblys qui sont AOTed, il peut doubler ou plus la taille de la partie du code de votre application.
   - **Heure de création** – la compilation AOA est sensiblement plus lente que JIT et ralentit les builds à l’utiliser. Ce ralentissement peut varier de quelques secondes à une minute ou plus, selon la taille et le nombre des assemblys compilés.

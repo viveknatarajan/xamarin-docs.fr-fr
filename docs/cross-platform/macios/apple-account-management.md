@@ -1,17 +1,16 @@
 ---
 title: Gestion des comptes Apple
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: c0d328e784b0a12b0df1a6b2bf5b990ffa461da5
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 21af0ef09644f39f9be42788b3d8f4977a2143d3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="apple-account-management"></a>Gestion des comptes Apple
 
@@ -33,7 +32,7 @@ Vous pouvez également utiliser l’outils de signature d’offre groupée iOS p
 
 Pour plus d’informations sur l’utilisation de ces fonctionnalités, reportez-vous à la [vos appareils](~/ios/get-started/installation/device-provisioning/index.md) guide.
 ️
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Gestion des comptes Apple est disponible dans Visual Studio pour Mac. Il n’est pas disponible actuellement sur Visual Studio pour Windows.
 
@@ -50,7 +49,7 @@ Vous devez disposer d’un compte Apple Developer pour utiliser cette fonctionna
 
     ![Options de compte de développeur Apple](apple-account-management-images/image1.png)
 
-2. Appuyez sur la  **+**  bouton pour afficher le symbole dans la boîte de dialogue, comme illustré ci-dessous : 
+2. Appuyez sur la **+** bouton pour afficher le symbole dans la boîte de dialogue, comme illustré ci-dessous : 
 
     ![boîte de dialogue FastLane.](apple-account-management-images/image2.png)
 

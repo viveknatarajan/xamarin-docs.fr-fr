@@ -1,18 +1,17 @@
 ---
-title: "Mise à jour de votre application pour iOS 11"
-description: "Explorer les nouvelles fonctionnalités d’iOS 11"
-ms.topic: article
+title: Mise à jour de votre application pour iOS 11
+description: Explorer les nouvelles fonctionnalités d’iOS 11
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: cced7cc3d1b0579c36d598ef0d05da872478c8dc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2581f729d85787021763f50f005e84d6bbb5db01
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="updating-your-app-to-ios-11"></a>Mise à jour de votre application pour iOS 11
 
@@ -20,7 +19,7 @@ _Explorer les nouvelles fonctionnalités d’iOS 11_
 
 Dans iOS 11, Apple a introduit les mises à jour de l’architecture, des modifications visuelles nouvelle et un processus de connexion iTunes mis à jour. Ce guide explore de chacune de ces modifications, pour vous aider à obtenir votre application Xamarin.iOS mis à jour pour iOS 11.
 
-## <a name="architecture-changesarchitecture-changesmd"></a>[Modifications de l’architecture](architecture-changes.md)
+## <a name="architecture-changesarchitecture-changesmd"></a>[Changements dans l'architecture](architecture-changes.md)
 
 Un des changements plus importants que vous devez connaître avec iOS 11 est la désapprobation de prise en charge 32 bits pour les applications, comme détaillé dans [Apple](https://developer.apple.com/news/?id=06282017b) communiqué de presse.
 
@@ -30,7 +29,7 @@ Ce guide vous guide tout au long de la mise à jour de votre application 64 bits
 
 Dans iOS 11, Apple a introduit de nouvelles modifications visuelles, y compris les mises à jour de la barre de navigation, barre de recherche et les vues de table. En outre les améliorations ont été apportées pour permettre une plus grande flexibilité sur les marges et le contenu de l’écran complet. Ces modifications sont traitées dans ce guide.
 
-## <a name="app-store-changesapp-store-changesmd"></a>[Modifications du magasin d’applications](app-store-changes.md)
+## <a name="app-store-changesapp-store-changesmd"></a>[Changements dans la conception visuelle](app-store-changes.md)
 
 L’App Store iOS a eu une conception totalement nouvelle, non seulement permet aux utilisateurs de naviguer efficacement dans le magasin, mais vous permet également, en tant que développeur, à votre application aux utilisateurs de promouvoir. Promotions incluent les mises à jour des achats dans l’application et les mises à jour de la page du produit. iOS 11 ajoute également les mises à jour concernant la communication avec les utilisateurs, l’ajout de l’icône de l’application et comment déployer votre application au public.
 

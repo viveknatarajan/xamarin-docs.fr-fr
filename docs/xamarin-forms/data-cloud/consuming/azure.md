@@ -1,18 +1,17 @@
 ---
-title: "Utilisation d’une application Mobile Azure"
-description: "Azure Mobile Apps permettent de développer des applications avec les serveurs principaux évolutifs est hébergés dans Azure App Service, avec prise en charge pour l’authentification mobile, synchronisation hors connexion et des notifications push. Cet article, qui s’applique uniquement aux applications mobiles Azure qui utilisent un serveur principal Node.js, explique comment interroger, insérer, mettre à jour et supprimer des données stockées dans une table dans une instance Azure Mobile Apps."
-ms.topic: article
+title: Utilisation d’une application Mobile Azure
+description: Azure Mobile Apps permettent de développer des applications avec les serveurs principaux évolutifs est hébergés dans Azure App Service, avec prise en charge pour l’authentification mobile, synchronisation hors connexion et des notifications push. Cet article, qui s’applique uniquement aux applications mobiles Azure qui utilisent un serveur principal Node.js, explique comment interroger, insérer, mettre à jour et supprimer des données stockées dans une table dans une instance Azure Mobile Apps.
 ms.prod: xamarin
 ms.assetid: 2B3EFD0A-2922-437D-B151-4B4DE46E2095
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5b087700e3a5276e19454a8dafedb508758b7b71
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e2e9e2c05d3f6e467fd47b31af4f53049aab2709
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Utilisation d’une application Mobile Azure
 

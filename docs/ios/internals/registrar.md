@@ -1,16 +1,15 @@
 ---
-title: "Bureau d’enregistrement de type"
-ms.topic: article
+title: Bureau d’enregistrement de type
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 57ebffc2bd195a37240ab4fe3d397566a9a70bd0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2504ab36ed9d387cdfccd5ac4d01c85d9bec7cf3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="type-registrar"></a>Bureau d’enregistrement de type
 
@@ -221,7 +220,7 @@ Tous les sélecteurs doivent indiquer un nombre de paramètres correctement.  Au
 
 En bref, le nombre de signes deux-points doit correspondre au nombre de paramètres.
 
-Exemple :
+Par exemple :
 
 -  Aucun paramètre : « foo »
 -  Un seul paramètre : ' foo : »

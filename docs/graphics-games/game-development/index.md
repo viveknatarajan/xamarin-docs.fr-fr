@@ -1,18 +1,17 @@
 ---
-title: "Introduction au développement de jeux avec Xamarin"
-description: "La nature du développement de jeux peut varier considérablement le développement d’autres types d’applications. Cet article est une introduction au développement de jeux en intégrant des technologies qui peuvent être utilisées avec Xamarin.iOS et Xamarin.Android. Il fournit une présentation de haut niveau de la façon dont sont effectuées les jeux et un échantillonnage de technologies disponible pour une utilisation avec Xamarin.iOS et Xamarin.Android."
-ms.topic: article
+title: Introduction au développement de jeux avec Xamarin
+description: La nature du développement de jeux peut varier considérablement le développement d’autres types d’applications. Cet article est une introduction au développement de jeux en intégrant des technologies qui peuvent être utilisées avec Xamarin.iOS et Xamarin.Android. Il fournit une présentation de haut niveau de la façon dont sont effectuées les jeux et un échantillonnage de technologies disponible pour une utilisation avec Xamarin.iOS et Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 9d1ce2da87d6f169efb5431f734695f6876cf3f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b2df6d431004bbfa140b6cae1d069404af92c1df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introduction au développement de jeux avec Xamarin
 
@@ -97,8 +96,8 @@ Certains contenus pipelines peuvent être très rapide et ne requièrent aucun e
 Développement de jeux introduit de nouveaux rôles et les titres pour les personnes impliquées dans le processus. La plupart des développeurs jeu ne sont pas en mesure de satisfaire un large éventail de compétences nécessaires pour libérer un jeu complet, pour un nombre de disciplines existe. Gardez à l’esprit qu’il ne s’agit pas d’une liste complète des domaines de développement – quelques-unes des plus courants.
 
 - **Programmeur** : la plupart des personnes qui consultent cet article appartiennent à cette catégorie. Le rôle d’un programmeur dans le développement de jeux est similaire à un programmeur dans une application hors jeu. Comprend l’écriture de logique pour contrôler le flux d’un jeu de développement de systèmes pour les tâches courantes dans le contexte d’un projet donné, ajout et affichage du contenu et – naturellement : résolution des bogues.
-- **Artiste 2D** – artistes 2D sont chargées de créer *actifs 2D*. Notamment les fichiers image pour l’interface graphique utilisateur, les particules, les environnements et les caractères du jeu. Si le jeu que vous développez est 3D, les artistes 2D ne peuvent pas être chargés pour les environnements et des caractères. Vous pouvez trouver libre art pour votre jeu à [http://opengameart.org/](http://opengameart.org/) .
-- **Artistes 3D** – artistes 3D sont chargées de créer *actifs 3D*. Cela comprend les modèles 3D pour les environnements, les caractères et les propriétés (fournitures plantes et autres objets inanimés). Certaines équipes de différencier la 3D et des animations 3D en fonction de la taille de l’équipe. Vous pouvez trouver libre art 3D pour votre jeu à [http://opengameart.org/](http://opengameart.org/) .
+- **Artiste 2D** – artistes 2D sont chargées de créer *actifs 2D*. Notamment les fichiers image pour l’interface graphique utilisateur, les particules, les environnements et les caractères du jeu. Si le jeu que vous développez est 3D, les artistes 2D ne peuvent pas être chargés pour les environnements et des caractères. Vous pouvez trouver libre art pour votre jeu à [ http://opengameart.org/ ](http://opengameart.org/) .
+- **Artistes 3D** – artistes 3D sont chargées de créer *actifs 3D*. Cela comprend les modèles 3D pour les environnements, les caractères et les propriétés (fournitures plantes et autres objets inanimés). Certaines équipes de différencier la 3D et des animations 3D en fonction de la taille de l’équipe. Vous pouvez trouver libre art 3D pour votre jeu à [ http://opengameart.org/ ](http://opengameart.org/) .
 - **Concepteur de jeu** – jeu concepteurs sont responsables de la définition du mode de lecture du jeu. Cela peut inclure des décisions de haut niveau tels que le paramètre de la partie, l’objectif global du jeu, et la façon dont un lecteur passe par le biais du jeu. Les concepteurs de jeux peuvent également être impliqués dans les décisions très détaillées comme entrée de mappage à des actions, définition des coefficients de mouvement ou au niveau des sauvegardes et la conception de disposition de niveau. N’oubliez pas que le terme *concepteur* peut faire référence à un concepteur de jeu ou un concepteur visuel en fonction du contexte.
 - **Son concepteur** – son est chargés pour les éléments audio d’un jeu. Certaines équipes peuvent distinguer les personnes chargées de créer des effets sonores et les compositeurs, tandis que les plus petites équipes peuvent avoir une seule personne responsable de tous les fichiers audio.
 
@@ -171,9 +170,9 @@ Extraire le [UrhoSharp Guides](~/graphics-games/urhosharp/index.md) pour commenc
 
 Les technologies de mise en surbrillance ci-dessus est uniquement un échantillon des technologies disponibles. Autres technologies notables sont les suivantes :
 
-- **Kit de Sprite** – Xamarin prend en charge Sprite Kit jeu framework d’Apple, qui vous donne accès à toutes les fonctionnalités de l’API native. Sprite Kit étant une technologie créée par Apple, il fournit une intégration étroite avec le reste de l’écosystème d’iOS. Bien entendu, Sprite Kit n’est pas inter-plateformes afin qu’il ne peut pas être utilisé sur Android. Pour plus d’informations sur l’utilisation de Sprite Kit, consultez le billet : [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Kit de Sprite** – Xamarin prend en charge Sprite Kit jeu framework d’Apple, qui vous donne accès à toutes les fonctionnalités de l’API native. Sprite Kit étant une technologie créée par Apple, il fournit une intégration étroite avec le reste de l’écosystème d’iOS. Bien entendu, Sprite Kit n’est pas inter-plateformes afin qu’il ne peut pas être utilisé sur Android. Pour plus d’informations sur l’utilisation de Sprite Kit, consultez le billet :  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
 - **Kit de scène** – Xamarin prend également en charge pour le framework de scène Kit d’Apple, ce qui simplifie la mise en œuvre des graphiques 3D dans des applications iOS. Kit de scène est également technologie fournie par Apple, de sorte que l’intégration et les considérations spécifiques à une plateforme mentionnées ci-dessus pour Sprite Kit. Pour plus d’informations sur le Kit de la scène, consultez le billet : [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK (qui correspond à la boîte à outils ouverte) fournit des accès de bas niveau OpenGL pour iOS et Apple Mac matériel. Pour plus d’informations sur OpenTK, consultez la page principale à : [http://www.opentk.com/](http://www.opentk.com/)
+- **OpenTK –** OpenTK (qui correspond à la boîte à outils ouverte) fournit des accès de bas niveau OpenGL pour iOS et Apple Mac matériel. Pour plus d’informations sur OpenTK, consultez la page principale à :  [http://www.opentk.com/](http://www.opentk.com/)
 
 
 # <a name="summary"></a>Récapitulatif

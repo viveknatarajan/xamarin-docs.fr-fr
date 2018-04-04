@@ -1,18 +1,17 @@
 ---
-title: "Contrôles standard"
-description: "Cet article traite de l’utilisation avec les contrôles AppKit standards tels que les boutons, les étiquettes, les champs de texte, les cases à cocher et segmenté des contrôles dans une application Xamarin.Mac. Il décrit en les ajoutant à une interface avec le Générateur de l’Interface et interagir avec elles dans le code."
-ms.topic: article
+title: Contrôles standard
+description: Cet article traite de l’utilisation avec les contrôles AppKit standards tels que les boutons, les étiquettes, les champs de texte, les cases à cocher et segmenté des contrôles dans une application Xamarin.Mac. Il décrit en les ajoutant à une interface avec le Générateur de l’Interface et interagir avec elles dans le code.
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e887026b4f87d2e1bf8c7647a7845765ce8b886c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3fe155508b60cbe502c3beca58426528d6f49c9d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="standard-controls"></a>Contrôles standard
 
@@ -93,7 +92,7 @@ Une fois qu’un contrôle a été inclus dans l’Interface utilisateur, utilis
 
 [![](standard-controls-images/edit04.png "Définition de contraintes")](standard-controls-images/edit04.png#lightbox)
 
-Utilisez le **rouge I-FAISCEAUX** autour de l’extérieur de la **capable** zone _stick_ un contrôle à un emplacement donné (x, y). Exemple : 
+Utilisez le **rouge I-FAISCEAUX** autour de l’extérieur de la **capable** zone _stick_ un contrôle à un emplacement donné (x, y). Par exemple : 
 
 [![](standard-controls-images/edit05.png "Modification d’une contrainte")](standard-controls-images/edit05.png#lightbox)
 
@@ -280,7 +279,7 @@ ButtonOutlet.Activated += (sender, e) => {
 };
 ```
 
-Pour les boutons qui ont été exposées via **Actions**, un `public partial` méthode sera automatiquement créée pour vous avec le nom que vous avez choisi dans Xcode. Pour répondre à la **Action**, terminer la méthode partielle dans la classe qui le **Action** a été défini sur. Exemple :
+Pour les boutons qui ont été exposées via **Actions**, un `public partial` méthode sera automatiquement créée pour vous avec le nom que vous avez choisi dans Xcode. Pour répondre à la **Action**, terminer la méthode partielle dans la classe qui le **Action** a été défini sur. Par exemple :
 
 ```csharp
 partial void ButtonAction (Foundation.NSObject sender) {
@@ -289,7 +288,7 @@ partial void ButtonAction (Foundation.NSObject sender) {
 }
 ```
 
-Pour les boutons qui ont un état (telles que **sur** et **hors**), l’état peut être vérifié ou défini avec la `State` propriété par rapport à la `NSCellStateValue` enum. Exemple :
+Pour les boutons qui ont un état (telles que **sur** et **hors**), l’état peut être vérifié ou défini avec la `State` propriété par rapport à la `NSCellStateValue` enum. Par exemple :
 
 ```csharp
 DisclosureButton.Activated += (sender, e) => {
@@ -326,7 +325,7 @@ AppKit fournit plusieurs types de cases à cocher et les groupes de cases d’op
 [![](standard-controls-images/buttons02.png "Un exemple des types de case à cocher disponibles")](standard-controls-images/buttons02.png#lightbox)
 
 
-Cases à cocher et des cases d’option (exposée via **prises**) ont un état (comme **sur** et **hors**), l’état peut être vérifié ou défini avec la `State` propriété par rapport à la `NSCellStateValue` enum. Exemple :
+Cases à cocher et des cases d’option (exposée via **prises**) ont un état (comme **sur** et **hors**), l’état peut être vérifié ou défini avec la `State` propriété par rapport à la `NSCellStateValue` enum. Par exemple :
 
 ```csharp
 AdjustTime.Activated += (sender, e) => {
@@ -483,7 +482,7 @@ AppKit fournit plusieurs types de contrôles de sélection qui peut être utilis
 
 [![](standard-controls-images/select01.png "Exemples de contrôles de sélection")](standard-controls-images/select01.png#lightbox)
 
-Il existe deux façons pour savoir quand un contrôle de sélection ayant une interaction utilisateur, en les exposant en tant qu’un **Action**. Exemple :
+Il existe deux façons pour savoir quand un contrôle de sélection ayant une interaction utilisateur, en les exposant en tant qu’un **Action**. Par exemple :
 
 ```csharp
 partial void SegmentButtonPressed (Foundation.NSObject sender) {
@@ -491,7 +490,7 @@ partial void SegmentButtonPressed (Foundation.NSObject sender) {
 }
 ```
 
-Ou en attachant un **délégué** à la `Activated` événement. Exemple :
+Ou en attachant un **délégué** à la `Activated` événement. Par exemple :
 
 ```csharp
 TickedSlider.Activated += (sender, e) => {
@@ -499,7 +498,7 @@ TickedSlider.Activated += (sender, e) => {
 };
 ```
 
-Pour définir ou lire la valeur d’un contrôle de sélection, utilisez le `IntValue` propriété. Exemple :
+Pour définir ou lire la valeur d’un contrôle de sélection, utilisez le `IntValue` propriété. Par exemple :
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.IntValue);
@@ -528,7 +527,7 @@ AppKit fournit plusieurs types de contrôles d’indicateur qui peut être utili
 
 [![](standard-controls-images/level01.png "Exemples de contrôles indicateur")](standard-controls-images/level01.png#lightbox)
 
-Il existe deux façons pour savoir quand un contrôle de l’indicateur a l’intervention de l’utilisateur, soit en les exposant en tant qu’un **Action** ou un **prise** et l’attachement d’un **délégué** à la `Activated`événement. Exemple :
+Il existe deux façons pour savoir quand un contrôle de l’indicateur a l’intervention de l’utilisateur, soit en les exposant en tant qu’un **Action** ou un **prise** et l’attachement d’un **délégué** à la `Activated`événement. Par exemple :
 
 ```csharp
 LevelIndicator.Activated += (sender, e) => {
@@ -536,13 +535,13 @@ LevelIndicator.Activated += (sender, e) => {
 };
 ```
 
-Pour lire ou définir la valeur de l’indicateur de contrôle, utilisez le `DoubleValue` propriété. Exemple :
+Pour lire ou définir la valeur de l’indicateur de contrôle, utilisez le `DoubleValue` propriété. Par exemple :
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Rating: {0:###}",Rating.DoubleValue);
 ```
 
-Les indicateurs de progression asynchrone indéterminé doivent être animées lorsque affichée. Utilisez la `StartAnimation` méthode pour lancer l’animation lorsqu’ils sont affichés. Exemple :
+Les indicateurs de progression asynchrone indéterminé doivent être animées lorsque affichée. Utilisez la `StartAnimation` méthode pour lancer l’animation lorsqu’ils sont affichés. Par exemple :
 
 ```csharp
 Indeterminate.StartAnimation (this);
@@ -565,13 +564,13 @@ Pour les champs de texte (`NSTextField`), les événements suivants peuvent êtr
 - **EditingBegan** -est déclenché lorsque l’utilisateur sélectionne le champ pour la modification.
 - **EditingEnded** - lorsque l’utilisateur appuie sur la touche entrée dans le champ ou le quitte.
 
-Utilisez le `StringValue` propriété pour lire ou définir la valeur du champ. Exemple :
+Utilisez le `StringValue` propriété pour lire ou définir la valeur du champ. Par exemple :
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("User ID: {0}",UserField.StringValue);
 ```
 
-Pour les champs à afficheront ou modifier des valeurs numériques, vous pouvez utiliser le `IntValue` propriété. Exemple :
+Pour les champs à afficheront ou modifier des valeurs numériques, vous pouvez utiliser le `IntValue` propriété. Par exemple :
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);

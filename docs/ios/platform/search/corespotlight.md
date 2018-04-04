@@ -1,17 +1,16 @@
 ---
 title: Recherche avec Core Spotlight
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d38d90ce460c7a93f8412baf372778443eb9d9e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-with-core-spotlight"></a>Recherche avec Core Spotlight
 
@@ -50,7 +49,7 @@ Ces informations ressemble à ce qui suit dans un résultat de recherche :
 
 ## <a name="restoring-an-item"></a>Restauration d’un élément
 
-Lorsque l’utilisateur appuie sur un élément ajouté au résultat de recherche via Core Spotlight pour votre application, le `AppDelegate` méthode `ContinueUserActivity` est appelé (cette méthode est également utilisée pour `NSUserActivity`). Exemple :
+Lorsque l’utilisateur appuie sur un élément ajouté au résultat de recherche via Core Spotlight pour votre application, le `AppDelegate` méthode `ContinueUserActivity` est appelé (cette méthode est également utilisée pour `NSUserActivity`). Par exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -100,7 +99,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-Ensuite, vous pouvez supprimer un groupe d’éléments de l’index par leur nom de domaine. Exemple :
+Ensuite, vous pouvez supprimer un groupe d’éléments de l’index par leur nom de domaine. Par exemple :
 
 ```csharp
 // Delete by Domain Name

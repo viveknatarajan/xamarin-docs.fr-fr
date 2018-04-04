@@ -1,18 +1,17 @@
 ---
-title: "Résolution des problèmes de liaisons"
-description: "Cet article présente plusieurs erreurs courantes qui peuvent se produire lors de la génération des liaisons, ainsi que les causes et les solutions suggérées pour les résoudre."
-ms.topic: article
+title: Résolution des problèmes de liaisons
+description: Cet article présente plusieurs erreurs courantes qui peuvent se produire lors de la génération des liaisons, ainsi que les causes et les solutions suggérées pour les résoudre.
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: da6286eed091114c117c723f462bbb8cac77034b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-bindings"></a>Résolution des problèmes de liaisons
 
@@ -51,7 +50,7 @@ Une fois que vous avez décompilé la bibliothèque Android, examinez le code so
 
 - **Les classes qui ont des caractéristiques de brouillage** &ndash; caractéristiques des classes obscurcis incluent :
 
-    - Le nom de classe inclut un  **$** , c'est-à-dire **un .class $**
+    - Le nom de classe inclut un **$**, c'est-à-dire **un .class $**
     - Le nom de classe est entièrement compromis de caractères minuscules, c'est-à-dire **a.class**      
 
 - **`import` instructions pour les bibliothèques non référencés** &ndash; identifier la bibliothèque non référencée et ajouter ces dépendances pour le projet de liaison de Xamarin.Android avec un **Action de génération** de **ReferenceJar**  ou **EmbedddedReferenceJar**.
@@ -114,7 +113,7 @@ Cette erreur peut se produire en raison de plusieurs raisons répertoriées ci-d
 
 -   Java permet de dériver une classe publique de la classe non publique, mais cela non pris en charge dans .NET. Étant donné que le Générateur de liaison ne génère pas de liaisons pour les classes non publiques, les classes dérivées telles que celles-ci ne peut pas être générés correctement. Pour résoudre ce problème, supprimez l’entrée de métadonnées pour les classes dérivées à l’aide du nœud de suppression dans **Metadata.xml**, ou corrigez les métadonnées de la classe non publique public. Bien que la deuxième solution créez la liaison afin que la source c# générerez, il se peut que la classe non publics ne doit pas utilisée.
 
-    Exemple :
+    Par exemple :
 
     ```xml
     <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"

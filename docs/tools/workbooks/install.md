@@ -1,17 +1,16 @@
 ---
 title: Configuration requise et Installation de classeurs
-description: "Comment télécharger, installer et utiliser les classeurs de Xamarin."
-ms.topic: article
+description: Comment télécharger, installer et utiliser les classeurs de Xamarin.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: bf3d675224a1e1696d4ce526fa42260d2102aa7d
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 68cac91a9b430d2abd138c0bb8bd334b65986329
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="workbooks-installation-and-requirements"></a>Configuration requise et Installation de classeurs
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 
 -----
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 #### <a name="supported-operating-systems"></a>Supported Operating Systems
 
@@ -61,7 +60,7 @@ Veuillez [signaler des problèmes sur GitHub][bugs]et inclure toutes les informa
 Attachez toujours les fichiers journaux du client classeurs :
 
 - Mac : `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
-- Windows : `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
+- Windows : `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 1.4.x offre également la possibilité de sélectionner le fichier journal dans le Finder (macOS) ou de l’Explorateur (Windows) directement à partir du menu principal :
 
@@ -70,7 +69,7 @@ Attachez toujours les fichiers journaux du client classeurs :
 #### <a name="log-paths-for-workbooks-13-and-earlier"></a>Journal des chemins d’accès pour les classeurs 1.3 et versions antérieures :
 
 - Mac : `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows : `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Windows : `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
 ### <a name="platform-version-information"></a>Informations de Version de plateforme
 

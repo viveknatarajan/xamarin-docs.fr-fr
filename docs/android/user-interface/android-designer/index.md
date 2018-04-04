@@ -1,18 +1,17 @@
 ---
 title: Android Designer
-description: "Cet article couvre les fonctionnalités du Concepteur de Xamarin.Android. Elle couvre basics concepteur, montrant comment utiliser le concepteur pour disposer les widgets visuellement et comment modifier les propriétés. Il montre également comment utiliser le concepteur pour travailler avec des interfaces utilisateur et les ressources dans différentes configurations, telles que les thèmes, les langues et les configurations de périphérique, ainsi que la conception pour des vues comme paysage et portrait."
-ms.topic: article
+description: Cet article couvre les fonctionnalités du Concepteur de Xamarin.Android. Elle couvre basics concepteur, montrant comment utiliser le concepteur pour disposer les widgets visuellement et comment modifier les propriétés. Il montre également comment utiliser le concepteur pour travailler avec des interfaces utilisateur et les ressources dans différentes configurations, telles que les thèmes, les langues et les configurations de périphérique, ainsi que la conception pour des vues comme paysage et portrait.
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 20da09895bae759c77e96300d798267881a7cbfd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-designer"></a>Android Designer
 

@@ -1,18 +1,17 @@
 ---
-title: "Fonctionnalités de commande"
-description: "Comment commencer à développer des applications pour Android de commande à l’aide de Xamarin.Android."
-ms.topic: article
+title: Fonctionnalités de commande
+description: Comment commencer à développer des applications pour Android de commande à l’aide de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: c666b7d5b680eab3c990950569868eacdb6f30af
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: fe544f8ac677987f8921ccb1c11b8930811b9553
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="nougat-features"></a>Fonctionnalités de commande
 
@@ -43,7 +42,7 @@ En outre, la commande Android met de nombreuses autres améliorations d’intér
 Cet article explique comment commencer à créer des applications avec la commande Android pour essayer de nouvelles fonctionnalités et de planifier le travail de migration ou une fonctionnalité pour cibler la plateforme Android commande Nouveau.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités de commande Android dans les applications Xamarin :
 
@@ -150,7 +149,7 @@ Les utilisateurs peuvent faire glisser un séparateur entre les applications pou
 
 [![Exemples d’applications s’exécutant en mode fenêtre multiples dans le mode portrait et paysage](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
-Vous pouvez configurer comment les activités de votre application Xamarin.Android prennent en charge le mode fenêtre multiples. Par exemple, vous pouvez configurer les attributs que vous définissez la taille minimale et la hauteur par défaut et la largeur de votre application en mode fenêtre multi. Vous pouvez utiliser la nouvelle `Activity.IsInMultiWindowMode` propriété pour déterminer si votre activité est en mode fenêtre multiples. Exemple :
+Vous pouvez configurer comment les activités de votre application Xamarin.Android prennent en charge le mode fenêtre multiples. Par exemple, vous pouvez configurer les attributs que vous définissez la taille minimale et la hauteur par défaut et la largeur de votre application en mode fenêtre multi. Vous pouvez utiliser la nouvelle `Activity.IsInMultiWindowMode` propriété pour déterminer si votre activité est en mode fenêtre multiples. Par exemple :
 
 ```csharp
 if (!IsInMultiWindowMode) {

@@ -1,18 +1,17 @@
 ---
-title: "Liaison à partir d’un modèle de contrôle"
-description: "Liaisons de modèles permettent de lient des contrôles dans un modèle de contrôle aux données aux propriétés publiques, l’activation de valeurs de propriétés des contrôles dans le modèle de contrôle pour être facilement changée. Cet article montre comment utiliser des liaisons de modèles pour effectuer la liaison de données à partir d’un modèle de contrôle."
-ms.topic: article
+title: Liaison à partir d’un modèle de contrôle
+description: Liaisons de modèles permettent de lient des contrôles dans un modèle de contrôle aux données aux propriétés publiques, l’activation de valeurs de propriétés des contrôles dans le modèle de contrôle pour être facilement changée. Cet article montre comment utiliser des liaisons de modèles pour effectuer la liaison de données à partir d’un modèle de contrôle.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 5b330c448a135cbcf8fc2745debc48924e29c103
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3b306c79aea9bd2192aa73eddcf95790a9b24353
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-from-a-controltemplate"></a>Liaison à partir d’un modèle de contrôle
 
@@ -68,7 +67,7 @@ Cela provoque l’affichage indiqué dans les captures d’écran suivants :
 
 ![](template-binding-images/teal-theme.png "Bleu-modèle de contrôle à l’aide de liaisons de modèles")
 
-## <a name="creating-a-templatebinding-in-c35"></a>Création d’un TemplateBinding dans C &#35;
+## <a name="creating-a-templatebinding-in-c35"></a>Création d’un TemplateBinding en C&#35;
 
 En c#, un [ `TemplateBinding` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplateBinding/) est créé à l’aide de la `TemplateBinding` constructeur, comme illustré dans l’exemple de code suivant :
 

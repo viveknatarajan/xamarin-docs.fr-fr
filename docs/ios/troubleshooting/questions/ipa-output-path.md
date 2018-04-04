@@ -1,17 +1,17 @@
 ---
-title: "Puis-je modifier le chemin de sortie du fichier IPA ?"
-ms.topic: article
+title: Puis-je modifier le chemin de sortie du fichier IPA ?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5E5DCC6-F7CC-48E2-89E8-709E9C269502
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2cb5ef615bfd965ce3fbd4efbab7669fe12679a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 06074566b3d3a05e05a1646c70de211f908f3aa9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>Puis-je modifier le chemin de sortie du fichier IPA ?
 
@@ -44,7 +44,7 @@ Ces étapes fonctionne pour n’importe quel projet iOS qui utilise le moteur de
 2. Définir le DestinationFolder au dossier de sortie souhaité. Comme d’habitude, vous pouvez utiliser les propriétés MSBuild (comme $(OutputPath)) dans cet argument si vous le souhaitez.
 
 ## <a name="notes"></a>Notes
-- Le `CreateIpaDependsOn` propriété est définie dans le `Xamarin.iOS.Common.targets` fichier faisant partie de Xamarin.iOS. Il se comporte comme décrit sous *substitution 'DependsOn' propriétés* sur [https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
+- Le `CreateIpaDependsOn` propriété est définie dans le `Xamarin.iOS.Common.targets` fichier faisant partie de Xamarin.iOS. Il se comporte comme décrit sous *substitution 'DependsOn' propriétés* sur [ https://msdn.microsoft.com/en-us/library/ms366724.aspx ](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
 
 - Vous pouvez utiliser un **déplacer** tâches plutôt qu’un **copie** de tâches si votre par défaut. Si vous choisissez l’option et si vous travaillez sur Windows, vous devez utiliser le nom qualifié complet de tâches `<Microsoft.Build.Tasks.Move>` afin d’éviter une ambiguïté avec le XamarinVS tâches de génération.
 
@@ -78,6 +78,6 @@ Ces étapes fonctionne pour n’importe quel projet iOS qui utilise le moteur de
 2. Définir le `DestinationFolder` dans le dossier de sortie souhaité. Comme d’habitude, vous pouvez utiliser les propriétés MSBuild (comme `$(OutputPath)`) au sein de cet argument si vous le souhaitez.
 
 ## <a name="notes"></a>Notes
-- Le `CreateIpaDependsOn` propriété est définie dans le `Xamarin.iOS.Common.targets` fichier faisant partie de Xamarin.iOS. Il se comporte comme décrit sous *propriétés « DependsOn » de substitution* sur [https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
+- Le `CreateIpaDependsOn` propriété est définie dans le `Xamarin.iOS.Common.targets` fichier faisant partie de Xamarin.iOS. Il se comporte comme décrit sous *propriétés « DependsOn » de substitution* sur [ https://msdn.microsoft.com/en-us/library/ms366724.aspx ](https://msdn.microsoft.com/en-us/library/ms366724.aspx).
 
 - Vous pouvez utiliser un **déplacer** tâches plutôt qu’un **copie** de tâches si votre par défaut. Si vous choisissez l’option et si vous travaillez sur Windows, vous devez utiliser le nom qualifié complet de tâches `<Microsoft.Build.Tasks.Move>` afin d’éviter une ambiguïté avec le XamarinVS tâches de génération.

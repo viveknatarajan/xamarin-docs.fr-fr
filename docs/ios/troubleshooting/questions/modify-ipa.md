@@ -1,16 +1,16 @@
 ---
-title: "Puis-je ajouter des fichiers à ou supprimer des fichiers à partir d’un fichier IPA après l’avoir généré dans Visual Studio ?"
-ms.topic: article
+title: Puis-je ajouter des fichiers à ou supprimer des fichiers à partir d’un fichier IPA après l’avoir généré dans Visual Studio ?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be792c95de7aa66d64278e47b2ca6b354e611273
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8b61ba38491b2085233dd1b30a82bc57d2baaed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Puis-je ajouter des fichiers à ou supprimer des fichiers à partir d’un fichier IPA après l’avoir généré dans Visual Studio ?
 
@@ -86,4 +86,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 Et le processus de vérification du magasin d’applications signale un message d’erreur similaire :
 
-> ÉLÉMENTS de l’erreur-90035 : « Signature non valide. Une ressource sealed est manquant ou non valide. Le fichier binaire au chemin d’accès [iPhoneApp1.app/iPhoneApp1] contient une signature non valide. Assurez-vous que vous avez signé votre application avec un certificat de distribution, pas sur un certificat ad hoc ou un certificat de développement. Vérifiez que les paramètres de signature de code dans Xcode sont corrects au niveau de la cible (qui remplacent les valeurs au niveau du projet). En outre, assurez-vous que le groupe que vous téléchargez a été généré à l’aide d’une cible de la mise en production dans Xcode, pas une cible de simulateur. Si vous êtes certain que vos paramètres de signature de code sont corrects, choisissez « Nettoyer tous » dans Xcode, supprimez le répertoire « build » dans le Finder et régénérer votre cible de la mise en production. Pour plus d’informations, consultez [https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)»
+> ÉLÉMENTS de l’erreur-90035 : « Signature non valide. Une ressource sealed est manquant ou non valide. Le fichier binaire au chemin d’accès [iPhoneApp1.app/iPhoneApp1] contient une signature non valide. Assurez-vous que vous avez signé votre application avec un certificat de distribution, pas sur un certificat ad hoc ou un certificat de développement. Vérifiez que les paramètres de signature de code dans Xcode sont corrects au niveau de la cible (qui remplacent les valeurs au niveau du projet). En outre, assurez-vous que le groupe que vous téléchargez a été généré à l’aide d’une cible de la mise en production dans Xcode, pas une cible de simulateur. Si vous êtes certain que vos paramètres de signature de code sont corrects, choisissez « Nettoyer tous » dans Xcode, supprimez le répertoire « build » dans le Finder et régénérer votre cible de la mise en production. Pour plus d’informations, consultez [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)»

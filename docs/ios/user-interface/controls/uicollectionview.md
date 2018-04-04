@@ -1,18 +1,17 @@
 ---
 title: Vues de collection
-description: "Vues de collection autoriser le contenu à afficher à l’aide de dispositions arbitraires. Elles permettent créer aisément des mises en page de grille l’emploi, également la prise en charge des dispositions personnalisées."
-ms.topic: article
+description: Vues de collection autoriser le contenu à afficher à l’aide de dispositions arbitraires. Elles permettent créer aisément des mises en page de grille l’emploi, également la prise en charge des dispositions personnalisées.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7048eb9c478d7ae10787e158f18b764b258da171
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="collection-views"></a>Vues de collection
 
@@ -140,7 +139,7 @@ Décoration les affichages sont purement visuel qui peut être affiché dans un 
 
 ## <a name="data-source"></a>source de données
 
-Comme avec d’autres parties d’e/s, telles que `UITableView` et `MKMapView`, `UICollectionView` obtient ses données à partir d’un *source de données*, qui est exposée dans Xamarin.iOS via la  **`UICollectionViewDataSource`**  classe. Cette classe est chargée de fournir le contenu à la `UICollectionView` telles que :
+Comme avec d’autres parties d’e/s, telles que `UITableView` et `MKMapView`, `UICollectionView` obtient ses données à partir d’un *source de données*, qui est exposée dans Xamarin.iOS via la **`UICollectionViewDataSource`** classe. Cette classe est chargée de fournir le contenu à la `UICollectionView` telles que :
 
 -  **Cellules** – retourné à partir de `GetCell` (méthode).
 -  **Affichages supplémentaires** – retourné à partir de `GetViewForSupplementaryElement` (méthode).
@@ -262,7 +261,7 @@ La capture d’écran suivante affiche le menu lorsqu’une cellule est enfoncé
  <a name="Layout" />
 
 
-## <a name="layout"></a>Disposition
+## <a name="layout"></a>Mise en page
 
 `UICollectionView` prend en charge un système de disposition qui permet le positionnement de tous ses éléments, les cellules, supplémentaires de vues et décoration devant être gérés indépendamment de la `UICollectionView` lui-même.
 Vous utilisez le système de disposition, une application peut prendre en charge des dispositions tel que celui de grille, nous l’avez vu dans cet article, ainsi que fournir des dispositions personnalisées.
@@ -453,7 +452,7 @@ Comme indiqué ci-dessus, une des modifications plus importantes à la vue de co
 
 Dans iOS 9, le moyen le plus rapide pour ajouter la réorganisation à une vue de collection est d’utiliser un `UICollectionViewController`.
 Le contrôleur de vue de collection a maintenant un `InstallsStandardGestureForInteractiveMovement` propriété, qui ajoute une norme *reconnaissance de mouvement* qui prend en charge le glisser-déplacer pour réorganiser les éléments dans la collection.
-Étant donné que la valeur par défaut est `true`, il vous suffit de mettre en œuvre la `MoveItem` méthode de la `UICollectionViewDataSource` classe pour prendre en charge du glisser à réorganiser. Exemple :
+Étant donné que la valeur par défaut est `true`, il vous suffit de mettre en œuvre la `MoveItem` méthode de la `UICollectionViewDataSource` classe pour prendre en charge du glisser à réorganiser. Par exemple :
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -693,7 +692,7 @@ Modifier la **Main.storyboard** fichier et sélectionnez la vue de collection, p
 
 Enregistrer les modifications apportées à l’interface utilisateur et exécuter l’application.
 Si l’utilisateur sélectionne un élément dans la liste et la fait glisser vers un nouvel emplacement, les autres éléments seront anime automatiquement lors de leur déplacement à l’écart de l’élément.
-Lorsque l’utilisateur dépose l’élément dans un nouvel emplacement, il tiendrons à cet emplacement. Exemple :
+Lorsque l’utilisateur dépose l’élément dans un nouvel emplacement, il tiendrons à cet emplacement. Par exemple :
 
 [![](uicollectionview-images/intro01.png "Un exemple de faire glisser un élément vers un nouvel emplacement")](uicollectionview-images/intro01.png#lightbox)
 
@@ -701,7 +700,7 @@ Lorsque l’utilisateur dépose l’élément dans un nouvel emplacement, il tie
 
 ### <a name="using-a-custom-gesture-recognizer"></a>À l’aide d’un module de reconnaissance de mouvement personnalisée
 
-Dans les cas où vous ne pouvez pas utiliser un `UICollectionViewController` et vous devez utiliser une expression régulière `UIViewController`, ou si vous souhaitez prendre plus de contrôle sur les mouvements de glisser-déplacer, vous pouvez créer votre propre module de reconnaissance de mouvement personnalisé et l’ajouter à la vue de Collection lorsque la charge de la vue. Exemple :
+Dans les cas où vous ne pouvez pas utiliser un `UICollectionViewController` et vous devez utiliser une expression régulière `UIViewController`, ou si vous souhaitez prendre plus de contrôle sur les mouvements de glisser-déplacer, vous pouvez créer votre propre module de reconnaissance de mouvement personnalisé et l’ajouter à la vue de Collection lorsque la charge de la vue. Par exemple :
 
 ```csharp
 public override void ViewDidLoad ()

@@ -1,18 +1,17 @@
 ---
 title: RecyclerView
-description: "RecyclerView est un groupe d’affichage pour l’affichage de collections ; Il est conçu pour être un remplacement plus souple pour afficher les groupes plus anciens tels que ListView et GridView.  Ce guide explique comment utiliser et personnaliser RecyclerView dans les applications de Xamarin.Android."
-ms.topic: article
+description: RecyclerView est un groupe d’affichage pour l’affichage de collections ; Il est conçu pour être un remplacement plus souple pour afficher les groupes plus anciens tels que ListView et GridView.  Ce guide explique comment utiliser et personnaliser RecyclerView dans les applications de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/03/2018
-ms.openlocfilehash: 028520742a84e717e28147f2fa1fafacfef34028
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 187339244d53c154cc22672a3d2ceba7e0a75bcf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -34,7 +33,7 @@ De nombreuses applications doivent afficher les collections du même type (par e
 Ce guide explique comment utiliser `RecyclerView` dans les applications de Xamarin.Android ; elle explique comment ajouter la `RecyclerView` package pour votre projet Xamarin.Android et il décrit comment `RecyclerView` fonctions dans une application classique. Exemples de code réel sont fournis pour vous montrer comment intégrer `RecyclerView` dans votre application, l’implémentation de vue de l’élément, cliquez sur et comment actualiser `RecyclerView` lorsque ses données sous-jacentes changent. Ce guide suppose que vous êtes familiarisé avec le développement de Xamarin.Android.
 
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Bien que `RecyclerView` est souvent associée à l’interface Lollipop 5.0 Android, il est proposé comme une bibliothèque de prise en charge &ndash; `RecyclerView` fonctionne avec les applications de ce niveau de l’API cible 7 (Android 2.1) et versions ultérieures. Les éléments suivants sont requis pour utiliser `RecyclerView` dans les applications Xamarin :
 

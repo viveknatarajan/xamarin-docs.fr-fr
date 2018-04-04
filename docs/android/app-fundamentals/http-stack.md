@@ -1,18 +1,17 @@
 ---
-title: "Pile de HttpClient et sélecteur d’implémentation de SSL/TLS pour Android"
-description: "Les sélecteurs de pile du client HTTP et l’implémentation de SSL/TLS déterminent l’implémentation du client HTTP et SSL/TLS qui sera utilisée par vos applications Xamarin.Android."
-ms.topic: article
+title: Pile de HttpClient et sélecteur d’implémentation de SSL/TLS pour Android
+description: Les sélecteurs de pile du client HTTP et l’implémentation de SSL/TLS déterminent l’implémentation du client HTTP et SSL/TLS qui sera utilisée par vos applications Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/09/2018
-ms.openlocfilehash: 5c63bda11a57c0f27efa1db6f0455b25f7da531b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2bc9b2a454b306f0794ef3704daa7e0fe6d04ef8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pile de HttpClient et sélecteur d’implémentation de SSL/TLS pour Android
 
@@ -133,7 +132,7 @@ Cette option de projet contrôle sous-jacent bibliothèque TLS sera utilisé par
 
 -----
 
-Exemple :
+Par exemple :
 
 ```csharp
 var client = new HttpClient();
@@ -159,7 +158,7 @@ La troisième option &ndash; à l’aide de variables d’environnement &ndash; 
 
 Il existe deux variables d’environnement qui sont liés à l’utilisation de TLS dans Xamarin.Android :
 
--   `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; Cette variable d’environnement déclare la valeur par défaut `HttpMessageHandler` que l’application utilisera. Exemple :
+-   `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; Cette variable d’environnement déclare la valeur par défaut `HttpMessageHandler` que l’application utilisera. Par exemple :
 
     ```csharp
     XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler

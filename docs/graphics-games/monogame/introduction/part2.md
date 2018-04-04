@@ -1,18 +1,17 @@
 ---
-title: "Partie 2 : mise en œuvre de la WalkingGame"
-description: "Cette procédure pas à pas montre comment ajouter la logique de jeu et de contenu à un projet MonoGame vide pour créer une démonstration d’un sprite animée déplacement avec touch d’entrée."
-ms.topic: article
+title: 'Partie 2 : mise en œuvre de la WalkingGame'
+description: Cette procédure pas à pas montre comment ajouter la logique de jeu et de contenu à un projet MonoGame vide pour créer une démonstration d’un sprite animée déplacement avec touch d’entrée.
 ms.prod: xamarin
 ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 2bc8f5448e249a801edfc88726f3dfb5d24b158d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89f5148dacfb229750839e4554199f78c8d15126
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Partie 2 : mise en œuvre de la WalkingGame
 

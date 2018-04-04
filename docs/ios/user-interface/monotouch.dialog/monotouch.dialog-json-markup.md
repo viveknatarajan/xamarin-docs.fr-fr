@@ -1,16 +1,15 @@
 ---
 title: MonoTouch.Dialog Json Markup
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 843e66a7979fc1aaa86371a3406c89af3f9ba967
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 02c95f06571a3c242481769846d7cab51450f2ca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json Markup
 
@@ -295,7 +294,7 @@ Les deux `character-wrap` et `word-wrap` peut être utilisé avec le `"lines"` p
 
 ### <a name="ontap-and-onaccessorytap"></a>ONTAP et onaccessorytap
 
-Ces propriétés doivent pointer vers un nom de méthode statique qui prend un objet en tant que paramètre dans votre application. Lorsque vous créez votre hiérarchie à l’aide des méthodes JsonDialog.FromFile ou JsonDialog.FromJson, vous pouvez passer une valeur d’objet facultatif. Valeur de cet objet est ensuite passée à vos méthodes. Cela permet de passer un contexte à votre méthode statique. Exemple :
+Ces propriétés doivent pointer vers un nom de méthode statique qui prend un objet en tant que paramètre dans votre application. Lorsque vous créez votre hiérarchie à l’aide des méthodes JsonDialog.FromFile ou JsonDialog.FromJson, vous pouvez passer une valeur d’objet facultatif. Valeur de cet objet est ensuite passée à vos méthodes. Cela permet de passer un contexte à votre méthode statique. Par exemple :
 
 ```csharp
 class Foo {
@@ -360,7 +359,7 @@ La valeur secondaire à afficher sur l’élément de rendu. La disposition de c
 
 ## <a name="boolean-elements"></a>Éléments booléennes
 
-Éléments booléennes doivent définir le type sur `"bool"`, peut contenir un `"caption"` pour afficher et `"value"` est définie sur true ou false. Si le `"on"` et `"off"` propriétés sont définies, elles sont supposées être des images. Les images sont résolus par rapport au répertoire de travail actuel dans l’application. Si vous souhaitez référencer relatifs à un groupe de fichiers, vous pouvez utiliser la `"~"` comme raccourci pour représenter le répertoire de l’offre groupée d’application. Par exemple `"~/favorite.png"` sera le favorite.png se trouvant dans le fichier de regroupement. Exemple :
+Éléments booléennes doivent définir le type sur `"bool"`, peut contenir un `"caption"` pour afficher et `"value"` est définie sur true ou false. Si le `"on"` et `"off"` propriétés sont définies, elles sont supposées être des images. Les images sont résolus par rapport au répertoire de travail actuel dans l’application. Si vous souhaitez référencer relatifs à un groupe de fichiers, vous pouvez utiliser la `"~"` comme raccourci pour représenter le répertoire de l’offre groupée d’application. Par exemple `"~/favorite.png"` sera le favorite.png se trouvant dans le fichier de regroupement. Par exemple :
 
 ```csharp
 { 

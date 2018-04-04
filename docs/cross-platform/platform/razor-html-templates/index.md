@@ -1,18 +1,17 @@
 ---
-title: "Vues HTML de génération à l’aide de modèles Razor"
+title: Vues HTML de génération à l’aide de modèles Razor
 description: " À l’aide d’une page Web plein écran pour le rendu HTML peut être un moyen simple et efficace pour restituer la mise en forme complexe d’une manière inter-plateformes, surtout si vous disposez déjà HTML, Javascript et CSS à partir d’un projet de site Web."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 5c69b8e71cac5d9f0385728ca75a5f311cb24fc0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fa361e48f8f7e236a3295deda2d80a02ef06b34d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>Vues HTML de génération à l’aide de modèles Razor
 

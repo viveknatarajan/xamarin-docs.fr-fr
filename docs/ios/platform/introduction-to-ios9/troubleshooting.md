@@ -1,18 +1,17 @@
 ---
-title: "Résolution des problèmes"
-description: "Cet article fournit des conseils de dépannage plusieurs pour travailler avec iOS 9 dans les applications Xamarin.iOS."
-ms.topic: article
+title: Résolution des problèmes
+description: Cet article fournit des conseils de dépannage plusieurs pour travailler avec iOS 9 dans les applications Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: ca3697b355a45e06f941a6dfd610cd19f922ca75
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -137,7 +136,7 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 ## <a name="untrusted-enterprise-developer"></a>Développeur d’entreprise non approuvées
 
-Lorsque vous tentez d’exécuter la version d’iOS 9 de votre application Xamarin.iOS sur du matériel d’iOS réel, vous pouvez obtenir un message indiquant que votre compte de développeur n’a pas été approuvé sur l’appareil. Exemple :
+Lorsque vous tentez d’exécuter la version d’iOS 9 de votre application Xamarin.iOS sur du matériel d’iOS réel, vous pouvez obtenir un message indiquant que votre compte de développeur n’a pas été approuvé sur l’appareil. Par exemple :
 
 [![](troubleshooting-images/untrusted01.png "Alerte de développeur en entreprise non approuvée")](troubleshooting-images/untrusted01.png#lightbox)
 
@@ -150,7 +149,7 @@ Pour résoudre ce problème, procédez comme suit :
 3. Sous le **périphériques** côté du Panneau de configuration, sélectionnez votre appareil, avec le bouton droit, puis sélectionnez **afficher les profils de configuration...** : 
 
     [![](troubleshooting-images/untrusted03.png "Profils d’approvisionnement SShow")](troubleshooting-images/untrusted03.png#lightbox)
-4. Sélectionnez chaque profil de configuration actuellement sur le périphérique et cliquez sur le  **-**  bouton Supprimer : 
+4. Sélectionnez chaque profil de configuration actuellement sur le périphérique et cliquez sur le **-** bouton Supprimer : 
 
     [![](troubleshooting-images/untrusted04.png "Suppression d’un profil de configuration")](troubleshooting-images/untrusted04.png#lightbox)
 5. À partir de la **Xcode** menu, sélectionnez **préférences...**  et **comptes**: 

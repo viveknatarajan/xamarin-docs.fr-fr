@@ -1,7 +1,6 @@
 ---
-title: "6 nouvelles fonctionnalités c# vue d’ensemble"
-description: "La dernière version du langage c# – version 6 – continue à faire évoluer la langue pour avoir moins de code réutilisable, améliorer la clarté et la cohérence plus. Syntaxe d’initialisation du nettoyage, la possibilité d’utiliser await dans les blocs catch/finally et la valeur null-condition ? opérateur sont particulièrement utiles."
-ms.topic: article
+title: 6 nouvelles fonctionnalités c# vue d’ensemble
+description: La dernière version du langage c# – version 6 – continue à faire évoluer la langue pour avoir moins de code réutilisable, améliorer la clarté et la cohérence plus. Syntaxe d’initialisation du nettoyage, la possibilité d’utiliser await dans les blocs catch/finally et la valeur null-condition ? opérateur sont particulièrement utiles.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.technology: xamarin-cross-platform
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 80456287c92913b048b73f40d2db6dcb16cc270d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2a189a19280576876e5d5a6a4fa34d2d00cab330
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-6-new-features-overview"></a>6 nouvelles fonctionnalités c# vue d’ensemble
 
@@ -52,7 +51,7 @@ Visual Studio pour Mac met automatiquement à jour l’installation Mono sur vot
 
 Les utilisateurs de Windows doivent avoir [Visual Studio 2015 ou 2017 ^](https://www.visualstudio.com/) installé pour compiler le code c# 6 (même si vous choisissez Xamarin Studio pour Windows en tant que votre interface IDE).
 
-^ ou  *[Microsoft Build Tools 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)*  pour la commande de ligne compilation ou serveurs de builds, par exemple.
+^ ou *[Microsoft Build Tools 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)* pour la commande de ligne compilation ou serveurs de builds, par exemple.
 
 ## <a name="using-c-6"></a>À l’aide de C# 6
 

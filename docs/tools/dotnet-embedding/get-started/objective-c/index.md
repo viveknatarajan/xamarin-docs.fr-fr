@@ -1,24 +1,23 @@
 ---
 title: Prise en main de Objective-C
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 832ad2e6d462b39df7fa4a45739e97f7a7d6e5b5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 96afe6bbfd1d9c6f4fd5ca3b7358ef0b89da30bb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started-with-objective-c"></a>Prise en main de Objective-C
 
 Il s’agit de la page de démarrage pour Objective-C, qui couvre les principes de base pour toutes les plateformes prises en charge.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour utiliser .NET incorporation avec Objective-C, vous devez un Mac en cours d’exécution :
 

@@ -1,18 +1,17 @@
 ---
 title: Notions de base des applications
-description: "Principaux Concepts d’applications"
-ms.topic: article
+description: Principaux Concepts d’applications
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 4abb8c823c62bc62fd2e6f717cc1b5bde9057e4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfb31fa6cac7c4848054cd58a1e144c2ac944262
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Notions de base des applications
 
@@ -53,13 +52,13 @@ Ce guide explique comment créer et utiliser des récepteurs de diffusion, un co
 
 
 
-##  <a name="permissionsandroidapp-fundamentalspermissionsmd"></a>[Permissions](~/android/app-fundamentals/permissions.md)
+##  <a name="permissionsandroidapp-fundamentalspermissionsmd"></a>[Autorisations](~/android/app-fundamentals/permissions.md)
 
 Vous pouvez utiliser la prise en charge des outils intégré à Visual Studio pour Mac ou Visual Studio pour créer et ajouter des autorisations pour le manifeste Android. Ce document décrit comment ajouter des autorisations dans Visual Studio et Xamarin Studio.
 
 
 
-##  <a name="graphics-and-animationandroidapp-fundamentalsgraphics-and-animationmd"></a>[Graphiques et des animations](~/android/app-fundamentals/graphics-and-animation.md)
+##  <a name="graphics-and-animationandroidapp-fundamentalsgraphics-and-animationmd"></a>[Graphismes et animation](~/android/app-fundamentals/graphics-and-animation.md)
 
 Android fournit une infrastructure de très riche et diverses pour prendre en charge les animations et les graphiques 2D. Ce document présente ces infrastructures et explique comment créer des animations et des graphiques personnalisés et les utiliser dans une application Xamarin.Android.
 
@@ -90,13 +89,13 @@ Cette section explique comment implémenter des notifications locale et distante
 
 
 
-##  <a name="touchandroidapp-fundamentalstouchindexmd"></a>[Touch](~/android/app-fundamentals/touch/index.md)
+##  <a name="touchandroidapp-fundamentalstouchindexmd"></a>[Entrées tactiles](~/android/app-fundamentals/touch/index.md)
 
 Cette section explique les concepts et les détails de l’implémentation tactiles sur Android. Tactile API est introduites et expliqué suivi d’une exploration des modules de reconnaissance de mouvement.
 
 
 
-##  <a name="httpclient-stack-and-ssltlsandroidapp-fundamentalshttp-stackmd"></a>[Pile de client HTTP et SSL/TLS](~/android/app-fundamentals/http-stack.md)
+##  <a name="httpclient-stack-and-ssltlsandroidapp-fundamentalshttp-stackmd"></a>[Pile HttpClient et SSL/TLS](~/android/app-fundamentals/http-stack.md)
 
 Cette section explique les sélecteurs HttpClient pile et l’implémentation de SSL/TLS pour Android. Ces paramètres déterminent l’implémentation du client HTTP et SSL/TLS qui sera utilisée par vos applications Xamarin.Android.
 

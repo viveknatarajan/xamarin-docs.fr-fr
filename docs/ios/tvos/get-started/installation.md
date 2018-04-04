@@ -1,18 +1,17 @@
 ---
 title: Installer la prise en charge de tvOS
-description: "Cet article décrit les étapes requises pour installer la prise en charge de tvOS."
-ms.topic: article
+description: Cet article décrit les étapes requises pour installer la prise en charge de tvOS.
 ms.prod: xamarin
 ms.assetid: 0819DC93-A46B-49DC-A566-8E27CAE1B829
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: b9ffbbb5f082503c8b571ed0c6fa835e60d4c3f5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ed795217e93b51c94e6502f9996c16c36783c49f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="installing-tvos-support"></a>Installer la prise en charge de tvOS
 
@@ -41,7 +40,7 @@ Vous êtes maintenant prêt à créer des applications Xamarin.tvOS.
 
 ## <a name="related-links"></a>Liens associés
 
-- [Exemples de tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Exemples tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS les Guides Interface humaine](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guide de programmation d’application de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

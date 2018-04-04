@@ -1,18 +1,17 @@
 ---
 title: Introduction
-description: "Xamarin.Forms les modèles de contrôle permettent de facilement et re pages d’application lors de l’exécution. Cet article fournit une introduction aux modèles de contrôle."
-ms.topic: article
+description: Xamarin.Forms les modèles de contrôle permettent de facilement et re pages d’application lors de l’exécution. Cet article fournit une introduction aux modèles de contrôle.
 ms.prod: xamarin
 ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: c3973b94168706e047ee5c312a8823503c9b0fd8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 744419cbc457ffb6dab6b46d690151c08ca35d42
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction"></a>Introduction
 

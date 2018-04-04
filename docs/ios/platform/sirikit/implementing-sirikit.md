@@ -1,18 +1,17 @@
 ---
-title: "Implémentation de SiriKit"
-description: "Cet article décrit les étapes requises pour implémenter la prise en charge SiriKit dans un Xamarin.iOS les applications."
-ms.topic: article
+title: Implémentation de SiriKit
+description: Cet article décrit les étapes requises pour implémenter la prise en charge SiriKit dans un Xamarin.iOS les applications.
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 76787ecda1c2cd043b81482dcdbe3751d012ef74
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5fdc05de19799ce7b553428c23f860186909bcbb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-sirikit"></a>Implémentation de SiriKit
 
@@ -213,14 +212,14 @@ Procédez comme suit sur votre Mac :
 
 1. Dans un navigateur web, accédez à [ http://developer.apple.com ](http://developer.apple.com) et connectez-vous à votre compte.
 2. Cliquez sur **certificats**, **identificateurs** et **profils**.
-3. Sélectionnez **profils de configuration** et sélectionnez **ID d’application**, puis cliquez sur le  **+**  bouton.
+3. Sélectionnez **profils de configuration** et sélectionnez **ID d’application**, puis cliquez sur le **+** bouton.
 4. Entrez un **nom** pour le nouveau profil.
 5. Entrez un **ID d’offre groupée** suivant Apple d’attribution de noms recommandation.
 6. Faites défiler jusqu'à la **des Services d’application** section, sélectionnez **SiriKit** et cliquez sur le **continuer** bouton : 
 
     [![](implementing-sirikit-images/setup03.png "Sélectionnez SiriKit")](implementing-sirikit-images/setup03.png#lightbox)
 7. Vérifiez que tous les paramètres, puis **Submit** l’application ID.
-8. Sélectionnez **profils de configuration** > **développement**, cliquez sur le  **+**  bouton, sélectionnez le **ID Apple**, puis cliquez sur **continuer**.
+8. Sélectionnez **profils de configuration** > **développement**, cliquez sur le **+** bouton, sélectionnez le **ID Apple**, puis cliquez sur **continuer**.
 9. Cliquez sur Sélectionner **tous les**, puis cliquez sur **continuer**.
 10. Cliquez sur **sélectionner tout** , puis cliquez sur **continuer**.
 11. Entrez un **nom du profil** à l’aide d’Apple d’attribution de noms des suggestions, puis cliquez sur **continuer**.
@@ -302,7 +301,7 @@ La première fois que cette méthode est appelée, une alerte s’affiche invita
 
 ### <a name="localization-and-siri"></a>Localisation et Siri
 
-Sur un appareil iOS, l’utilisateur peut sélectionner une langue pour Siri est différent, puis la valeur par défaut du système. Lorsque vous travaillez avec des données localisées, l’application doit utiliser le `SiriLanguageCode` méthode de la `INPreferences` classe pour obtenir le code de langue à partir de Siri. Exemple :
+Sur un appareil iOS, l’utilisateur peut sélectionner une langue pour Siri est différent, puis la valeur par défaut du système. Lorsque vous travaillez avec des données localisées, l’application doit utiliser le `SiriLanguageCode` méthode de la `INPreferences` classe pour obtenir le code de langue à partir de Siri. Par exemple :
 
 ```csharp
 var language = INPreferences.SiriLanguageCode();
@@ -326,7 +325,7 @@ Vocabulaire spécifique d’utilisateur doit appartenir à une des catégories s
 
 Lorsque vous sélectionnez la terminologie à inscrire en tant que le vocabulaire personnalisé, uniquement choisir des termes qui serait erroné par une personne ne connaissent pas l’application. Jamais register termes courants tels que « Mes entraînement » ou « Mon Album ». Par exemple, l’application MonkeyChat inscrira les surnoms associés à chaque contact dans le carnet d’adresses de l’utilisateur.
 
-L’application fournit le vocabulaire spécifique utilisateur en appelant le `SetVocabularyStrings` méthode de la `INVocabulary` classe et en passant un `NSOrderedSet` collection à partir de l’application principale. L’application doit toujours appeler la `RemoveAllVocabularyStrings` méthode first, pour supprimer les termes du contrat existant avant d’ajouter de nouveaux. Exemple :
+L’application fournit le vocabulaire spécifique utilisateur en appelant le `SetVocabularyStrings` méthode de la `INVocabulary` classe et en passant un `NSOrderedSet` collection à partir de l’application principale. L’application doit toujours appeler la `RemoveAllVocabularyStrings` méthode first, pour supprimer les termes du contrat existant avant d’ajouter de nouveaux. Par exemple :
 
 ```csharp
 using System;
@@ -462,16 +461,16 @@ Pour ajouter un `AppIntentVocabulary.plist` fichier au projet d’application, p
 
     [![](implementing-sirikit-images/plist01.png "Ajouter une liste de propriétés")](implementing-sirikit-images/plist01.png#lightbox) 
 2. Double-cliquez sur le `AppIntentVocabulary.plist` de fichiers dans le **l’Explorateur de solutions** à ouvrir pour le modifier.
-3. Cliquez sur le  **+**  pour ajouter une clé, définissez la **nom** à `ParameterVocabularies` et **Type** à `Array`:
+3. Cliquez sur le **+** pour ajouter une clé, définissez la **nom** à `ParameterVocabularies` et **Type** à `Array`:
 
     [![](implementing-sirikit-images/plist02.png "Le nom de la valeur ParameterVocabularies et le Type de tableau")](implementing-sirikit-images/plist02.png#lightbox)
-4. Développez `ParameterVocabularies` et cliquez sur le  **+**  bouton et définissez la **Type** à `Dictionary`:
+4. Développez `ParameterVocabularies` et cliquez sur le **+** bouton et définissez la **Type** à `Dictionary`:
 
     [![](implementing-sirikit-images/plist03.png "Définir le Type de dictionnaire")](implementing-sirikit-images/plist03.png#lightbox)
-5. Cliquez sur le  **+**  pour ajouter une nouvelle clé, définissez la **nom** à `ParameterNames` et **Type** à `Array`:
+5. Cliquez sur le **+** pour ajouter une nouvelle clé, définissez la **nom** à `ParameterNames` et **Type** à `Array`:
 
     [![](implementing-sirikit-images/plist04.png "Le nom de la valeur ParameterNames et le Type de tableau")](implementing-sirikit-images/plist04.png#lightbox)
-6. Cliquez sur le  **+**  pour ajouter une nouvelle clé avec la **Type** de `String` et la valeur qu’un des noms de paramètres disponibles. Par exemple, `INStartWorkoutIntent.workoutName`:
+6. Cliquez sur le **+** pour ajouter une nouvelle clé avec la **Type** de `String` et la valeur qu’un des noms de paramètres disponibles. Par exemple, `INStartWorkoutIntent.workoutName`:
 
     [![](implementing-sirikit-images/plist05.png "La clé INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05.png#lightbox)
 7. Ajouter le `ParameterVocabulary` clé pour la `ParameterVocabularies` clé avec la **Type** de `Array`:
@@ -526,16 +525,16 @@ Pour ajouter un `AppIntentVocabulary.plist` fichier au projet d’application, p
 
     [![](implementing-sirikit-images/plist01w.png "Ajouter un nouveau fichier Info.plist.")](implementing-sirikit-images/plist01w.png#lightbox) 
 2. Double-cliquez sur le `AppIntentVocabulary.plist` de fichiers dans le **l’Explorateur de solutions** à ouvrir pour le modifier.
-3. Cliquez sur le  **+**  pour ajouter une clé, définissez la **nom** à `ParameterVocabularies` et **Type** à `Array`:
+3. Cliquez sur le **+** pour ajouter une clé, définissez la **nom** à `ParameterVocabularies` et **Type** à `Array`:
 
     [![](implementing-sirikit-images/plist02w.png "Le nom de la valeur ParameterVocabularies et le Type de tableau")](implementing-sirikit-images/plist02w.png#lightbox)
-4. Développez `ParameterVocabularies` et cliquez sur le  **+**  bouton et définissez la **Type** à `Dictionary`:
+4. Développez `ParameterVocabularies` et cliquez sur le **+** bouton et définissez la **Type** à `Dictionary`:
 
     [![](implementing-sirikit-images/plist03w.png "Définir le Type de dictionnaire")](implementing-sirikit-images/plist03w.png#lightbox)
-5. Cliquez sur le  **+**  pour ajouter une nouvelle clé, définissez la **nom** à `ParameterNames` et **Type** à `Array`:
+5. Cliquez sur le **+** pour ajouter une nouvelle clé, définissez la **nom** à `ParameterNames` et **Type** à `Array`:
 
     [![](implementing-sirikit-images/plist04w.png "Le nom de la valeur ParameterNames et le Type de tableau")](implementing-sirikit-images/plist04w.png#lightbox)
-6. Cliquez sur le  **+**  pour ajouter une nouvelle clé avec la **Type** de `String` et la valeur qu’un des noms de paramètres disponibles. Par exemple, `INStartWorkoutIntent.workoutName`:
+6. Cliquez sur le **+** pour ajouter une nouvelle clé avec la **Type** de `String` et la valeur qu’un des noms de paramètres disponibles. Par exemple, `INStartWorkoutIntent.workoutName`:
 
     [![](implementing-sirikit-images/plist05w.png "La clé INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05w.png#lightbox)
 7. Ajouter le `ParameterVocabulary` clé pour la `ParameterVocabularies` clé avec la **Type** de `Array`:
@@ -690,7 +689,7 @@ Pour obtenir une liste complète des domaines intention disponibles, consultez l
 
 ### <a name="configuring-the-main-class"></a>Configuration de la classe principale
 
-Ensuite, le développeur doit configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’intention dans Siri. Il doit être une sous-classe de `INExtension` qui est conforme à la `IINIntentHandler` déléguer. Exemple :
+Ensuite, le développeur doit configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’intention dans Siri. Il doit être une sous-classe de `INExtension` qui est conforme à la `IINIntentHandler` déléguer. Par exemple :
 
 ```csharp
 using System;
@@ -936,7 +935,7 @@ Pour obtenir une liste complète des domaines intention disponibles, consultez l
 
 ### <a name="configuring-the-main-class"></a>Configuration de la classe principale
 
-Configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’interface utilisateur intention dans Siri. Il doit être une sous-classe de `UIViewController` qui est conforme à la `IINUIHostedViewController` interface. Exemple :
+Configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’interface utilisateur intention dans Siri. Il doit être une sous-classe de `UIViewController` qui est conforme à la `IINUIHostedViewController` interface. Par exemple :
 
 ```csharp
 using System;

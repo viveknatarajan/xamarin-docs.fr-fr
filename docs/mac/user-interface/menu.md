@@ -1,18 +1,17 @@
 ---
 title: Menus
-description: "Cet article décrit l’utilisation de menus dans une application Xamarin.Mac. Il décrit la création et gestion des menus et des éléments de menu dans Xcode et Interface générateur et leur utilisation par programmation."
-ms.topic: article
+description: Cet article décrit l’utilisation de menus dans une application Xamarin.Mac. Il décrit la création et gestion des menus et des éléments de menu dans Xcode et Interface générateur et leur utilisation par programmation.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 52a9fc206a2c303d13d80be4de743d98056f7684
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="menus"></a>Menus
 
@@ -226,7 +225,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 Même si votre application n’utilise pas `NSDocuments`, toujours utiliser le `NSDocumentController` pour maintenir le **ouvrir récente** menu en envoyant un `NSUrl` avec l’emplacement du fichier à la `NoteNewRecentDocumentURL` méthode de la `SharedDocumentController`.
 
-Ensuite, vous devez remplacer le `OpenFile` méthode du délégué d’application pour ouvrir n’importe quel fichier que l’utilisateur sélectionne à partir de la **ouvrir récente** menu. Exemple :
+Ensuite, vous devez remplacer le `OpenFile` méthode du délégué d’application pour ouvrir n’importe quel fichier que l’utilisateur sélectionne à partir de la **ouvrir récente** menu. Par exemple :
 
 ```csharp
 public override bool OpenFile (NSApplication sender, string filename)
@@ -425,7 +424,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 Tout comme la fonction intégrée **premier répondeur** les actions qui sont d’aux éléments de menu standard, vous pouvez créer de nouvelles actions personnalisées et les associer aux éléments de menu dans le Générateur de l’Interface.
 
-Tout d’abord, définissez une action personnalisée sur l’un des contrôleurs de fenêtre de votre application. Exemple :
+Tout d’abord, définissez une action personnalisée sur l’un des contrôleurs de fenêtre de votre application. Par exemple :
 
 ```csharp
 [Action("defineKeyword:")]
@@ -439,7 +438,7 @@ Ensuite, double-cliquez sur le fichier de plan conceptuel de l’application dan
 
 ![L’inspecteur attributs](menu-images/action01.png "l’inspecteur d’attributs")
 
-Cliquez sur le  **+**  situé en bas de la **attributs inspecteur** pour ajouter une nouvelle action personnalisée :
+Cliquez sur le **+** situé en bas de la **attributs inspecteur** pour ajouter une nouvelle action personnalisée :
 
 ![Ajout d’une nouvelle action](menu-images/action02.png "Ajout d’une nouvelle action")
 

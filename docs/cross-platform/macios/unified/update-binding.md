@@ -1,18 +1,17 @@
 ---
-title: "Migration d’une liaison vers l’API unifiée"
-description: "Cet article décrit les étapes requises pour mettre à jour un projet de liaison de Xamarin existant pour prendre en charge les API unifiée pour les applications Xamarin.IOS et Xamarin.Mac."
-ms.topic: article
+title: Migration d’une liaison vers l’API unifiée
+description: Cet article décrit les étapes requises pour mettre à jour un projet de liaison de Xamarin existant pour prendre en charge les API unifiée pour les applications Xamarin.IOS et Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2a04dc047674b67b8f21571ed9e7890ddf773f64
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25641671992a125e97bf7feff84b754423527da6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migration d’une liaison vers l’API unifiée
 
@@ -24,7 +23,7 @@ En commençant le 1er février 2015 Apple exige que tous les envois de nouveau �
 
 En outre, un projet de liaison Xamarin doit prennent également en charge les nouvelles API unifiée à inclure dans un projet de Xamarin.Mac ou le Xamarin.iOS de 64 bits. Cet article décrit les étapes requises pour mettre à jour un projet existant de la liaison pour utiliser l’API unifiée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont nécessaire pour terminer les étapes présentées dans cet article :
 

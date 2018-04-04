@@ -1,18 +1,18 @@
 ---
-title: "Résolution des problèmes"
-description: "Cet article couvre connaître des problèmes que vous pouvez rencontrer lors de l’utilisation avec prise en charge de tvOS de Xamarin."
-ms.topic: article
+title: Résolution des problèmes
+description: Cet article couvre connaître des problèmes que vous pouvez rencontrer lors de l’utilisation avec prise en charge de tvOS de Xamarin.
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c72d0dd89593002dbb6ea8ac9369666b811f3a73
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 86106fa5ca53e93ccffb4dd141914c01ab65a506
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -79,7 +79,7 @@ Section
 
 Vous devez vous assurer que tout tiers statique (`.a`) bibliothèques que vous utilisez des bibliothèques de tvOS (pas les bibliothèques d’iOS) ont été créées et qu’il inclut également des informations de bitcode.
 
-Pour les applications ou les bibliothèques qui incluent bitcode valide le `size` sera supérieur à un. Il existe certaines situations où une bibliothèque peut ont le marqueur bitcode, mais ne contient pas bitcode valide. Exemple :
+Pour les applications ou les bibliothèques qui incluent bitcode valide le `size` sera supérieur à un. Il existe certaines situations où une bibliothèque peut ont le marqueur bitcode, mais ne contient pas bitcode valide. Par exemple :
 
 **Bitcode non valide**
 

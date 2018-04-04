@@ -1,18 +1,17 @@
 ---
 title: Liaison d’une bibliothèque de Java
 description: La Communauté Android a de nombreuses bibliothèques Java que vous pouvez utiliser dans votre application ; Ce guide explique comment incorporer des bibliothèques Java à votre application de Xamarin.Android en créant une bibliothèque de liaisons.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 47e32a68b7b10a2d02ee41a9abf234be6f002f7b
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 3c2ed92da07519516db94697bbeaac9f328baa22
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-a-java-library"></a>Liaison d’une bibliothèque de Java
 

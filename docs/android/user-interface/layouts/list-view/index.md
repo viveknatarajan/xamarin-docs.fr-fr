@@ -1,18 +1,17 @@
 ---
 title: Affichage de liste
-description: "ListView est un composant essentiel de l’interface utilisateur des applications Android ; Il est utilisé partout dans les listes de courte des options de menu à longues listes de contacts ou favoris internet. Il fournit un moyen simple pour présenter une liste déroulante de lignes qui peuvent être mis en forme avec un style prédéfini ou personnalisé de manière intensive."
-ms.topic: article
+description: ListView est un composant essentiel de l’interface utilisateur des applications Android ; Il est utilisé partout dans les listes de courte des options de menu à longues listes de contacts ou favoris internet. Il fournit un moyen simple pour présenter une liste déroulante de lignes qui peuvent être mis en forme avec un style prédéfini ou personnalisé de manière intensive.
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2018
-ms.openlocfilehash: 4225e45ecfe4a4a2cdb7e75b94823fc8fcd29fc4
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 8499b9f186c12df22518893b6677cab22f0a3568
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="listview"></a>Affichage de liste
 
@@ -152,7 +151,7 @@ Exécutez l'application. Vous pouvez faire défiler la liste, ou tapez pour filt
 
 [![Capture d’écran de ListView avec des noms de pays](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
-Notez qu’en utilisant un tableau de chaîne codée en dur n’est pas la meilleure pratique de conception. Un est utilisé dans ce didacticiel, par souci de simplicité, pour illustrer le [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) widget. La meilleure pratique consiste à faire référence à un tableau de chaînes défini par une ressource externe, comme avec un `string-array` ressources dans votre projet **Resources/Values/Strings.xml** fichier. Exemple :
+Notez qu’en utilisant un tableau de chaîne codée en dur n’est pas la meilleure pratique de conception. Un est utilisé dans ce didacticiel, par souci de simplicité, pour illustrer le [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) widget. La meilleure pratique consiste à faire référence à un tableau de chaînes défini par une ressource externe, comme avec un `string-array` ressources dans votre projet **Resources/Values/Strings.xml** fichier. Par exemple :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

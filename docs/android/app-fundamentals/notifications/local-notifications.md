@@ -1,18 +1,17 @@
 ---
 title: Notifications locales
-description: "Cette section montre comment implémenter des notifications locales dans Xamarin.Android. Il explique les différents éléments d’interface utilisateur d’une notification d’Android et traite des API d’impliquée dans la création et affichage d’une notification."
-ms.topic: article
+description: Cette section montre comment implémenter des notifications locales dans Xamarin.Android. Il explique les différents éléments d’interface utilisateur d’une notification d’Android et traite des API d’impliquée dans la création et affichage d’une notification.
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: f13515326bd75f2b2c15e2b6059e6f829814ea5c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 97c8372656f0cbfa5b8f7bb12d15b00feac4b5c3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="local-notifications"></a>Notifications locales
 
@@ -229,7 +228,7 @@ Cet exemple montre comment l’appareil à faire vibrer lorsque la notification 
 
 ### <a name="updating-a-notification"></a>Une Notification de mise à jour
 
-Si vous souhaitez mettre à jour le contenu d’une notification une fois qu’il a été publié, vous pouvez réutiliser existants `Notification.Builder` objet pour créer un nouvel objet de notification et de publier cette notification avec l’identificateur de la dernière notification. Exemple :
+Si vous souhaitez mettre à jour le contenu d’une notification une fois qu’il a été publié, vous pouvez réutiliser existants `Notification.Builder` objet pour créer un nouvel objet de notification et de publier cette notification avec l’identificateur de la dernière notification. Par exemple :
 
 ```csharp
 // Update the existing notification builder content:
@@ -446,7 +445,7 @@ Pour créer un canal de notification, procédez comme suit :
 
 Pour valider une notification à un canal de notification, procédez comme suit :
 
-1.  Configurer la notification à l’aide de la `Notification.Builder`, en passant l’ID de canal à le `SetChannelId` (méthode). Exemple :
+1.  Configurer la notification à l’aide de la `Notification.Builder`, en passant l’ID de canal à le `SetChannelId` (méthode). Par exemple :
 
     ```csharp
     Notification.Builder builder = new Notification.Builder (this)
@@ -490,7 +489,7 @@ Et Voici une capture d’écran de la notification après l’avoir modifié pou
 
 Notez que lorsqu’une notification est présentée dans le format grandes icônes, l’icône d’application petit est affichée comme un badge sur le coin inférieur droit d’une grande icône.
 
-Pour utiliser une image comme une grande icône dans une notification, vous appelez le Générateur de notification [SetLargeIcon](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetLargeIcon/) (méthode) et passez une image bitmap de l’image. Contrairement aux `SetSmallIcon`, `SetLargeIcon` accepte uniquement une image bitmap. Pour convertir un fichier image en bitmap, vous utilisez la [BitmapFactory](https://developer.xamarin.com/api/type/Android.Graphics.BitmapFactory/) classe. Exemple :
+Pour utiliser une image comme une grande icône dans une notification, vous appelez le Générateur de notification [SetLargeIcon](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetLargeIcon/) (méthode) et passez une image bitmap de l’image. Contrairement aux `SetSmallIcon`, `SetLargeIcon` accepte uniquement une image bitmap. Pour convertir un fichier image en bitmap, vous utilisez la [BitmapFactory](https://developer.xamarin.com/api/type/Android.Graphics.BitmapFactory/) classe. Par exemple :
 
 ```csharp
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
@@ -512,7 +511,7 @@ Dans ce format, seul un extrait du message est affiché, terminé par deux point
 
 Ce format développé de mise en page inclut également un texte en bas de la notification de la synthèse. La hauteur maximale de la *texte Big* notification est 256 point de distribution.
 
-Pour créer un *texte Big* notification, vous instanciez un `Notification.Builder` de l’objet, comme précédemment, puis instancier et d’ajouter un [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) de l’objet à le `Notification.Builder` objet. Exemple :
+Pour créer un *texte Big* notification, vous instanciez un `Notification.Builder` de l’objet, comme précédemment, puis instancier et d’ajouter un [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) de l’objet à le `Notification.Builder` objet. Par exemple :
 
 ```csharp
 // Instantiate the Big Text style:
@@ -550,7 +549,7 @@ Lorsque l’utilisateur fait glisser vers le bas la *Image* notification, il se 
 
 Notez que lorsque la notification est affichée dans un format compact, il affiche le texte de notification (le texte qui est passé au Générateur de notification `SetContentText` méthode, comme indiqué plus haut). Toutefois, lorsque la notification est développée pour afficher l’image, il affiche le texte du résumé au-dessus de l’image.
 
-Pour créer un *Image* notification, vous instanciez un `Notification.Builder` de l’objet qu’avant, puis créer et insérer un [BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/) de l’objet dans le `Notification.Builder` objet. Exemple :
+Pour créer un *Image* notification, vous instanciez un `Notification.Builder` de l’objet qu’avant, puis créer et insérer un [BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/) de l’objet dans le `Notification.Builder` objet. Par exemple :
 
 ```csharp
 // Instantiate the Image (Big Picture) style:
@@ -610,7 +609,7 @@ Lorsque l’utilisateur fait glisser vers le bas sur la notification, il se dév
 
 ![Notification de la boîte de réception exemple développée](local-notifications-images/21-inbox-expanded.png)
 
-Pour créer un *boîte de réception* notification, vous instanciez un `Notification.Builder` de l’objet, comme précédemment et ajoutez une [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) de l’objet à le `Notification.Builder`. Exemple :
+Pour créer un *boîte de réception* notification, vous instanciez un `Notification.Builder` de l’objet, comme précédemment et ajoutez une [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) de l’objet à le `Notification.Builder`. Par exemple :
 
 ```csharp
 // Instantiate the Inbox style:
@@ -661,7 +660,7 @@ Xamarin.Android définit les énumérations suivantes pour définir la priorité
 
 -   `NotificationPriority.Min` &ndash; Pour plus d’informations que l’utilisateur Remarque uniquement lorsque affichage des notifications (par exemple, les informations emplacement ou la météo).
 
-Pour définir la priorité d’une notification, appelez le [SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/) méthode de la `Notification.Builder` objet, en passant le niveau de priorité. Exemple :
+Pour définir la priorité d’une notification, appelez le [SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/) méthode de la `Notification.Builder` objet, en passant le niveau de priorité. Par exemple :
 
 ```csharp
 builder.SetPriority (NotificationPriority.High);
@@ -738,7 +737,7 @@ Compter Android 5.0, catégories prédéfinies sont disponibles pour le classeme
 
 -   `Notification.CategoryStatus` &ndash; Informations sur l’appareil.
 
-Lorsque les notifications sont triées, priorité de la notification est prioritaire sur son paramètre de catégorie. Par exemple, une notification de priorité élevée s’affichera en tant que frontal même s’il appartient à la `Promo` catégorie. Pour définir la catégorie d’une notification, vous appelez le `SetCategory` méthode de la `Notification.Builder` objet, en passant le paramètre de catégorie. Exemple :
+Lorsque les notifications sont triées, priorité de la notification est prioritaire sur son paramètre de catégorie. Par exemple, une notification de priorité élevée s’affichera en tant que frontal même s’il appartient à la `Promo` catégorie. Pour définir la catégorie d’une notification, vous appelez le `SetCategory` méthode de la `Notification.Builder` objet, en passant le paramètre de catégorie. Par exemple :
 
 ```csharp
 builder.SetCategory (Notification.CategoryCall);

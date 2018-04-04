@@ -1,18 +1,17 @@
 ---
-title: "Présentation de l’API unifiée"
-description: "Le nouveau style API rend plus facile que jamais à partager du code entre Mac et iOS, ainsi que ce qui permet de prendre en charge 32 et 64 bits des applications avec le même binaire."
-ms.topic: article
+title: Présentation de l’API unifiée
+description: Le nouveau style API rend plus facile que jamais à partager du code entre Mac et iOS, ainsi que ce qui permet de prendre en charge 32 et 64 bits des applications avec le même binaire.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 03364b3fd91ffdb4debb3d58f8040d8ade9100b8
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: c36682ba038c18dfb872e76f338ea1d9881cca10
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="unified-api-overview"></a>Présentation de l’API unifiée
 
@@ -111,7 +110,7 @@ L’API unifiée introduit un nouvel identificateur de plateforme pour les packa
 
 ## <a name="arrays-and-systemcollectionsgeneric"></a>Tableaux et System.Collections.Generic
 
-Étant donné que les indexeurs c# attendent un type de `int`, vous devrez effectuer un cast explicite `nint` valeurs `int` pour accéder aux éléments dans une collection ou un tableau. Exemple :
+Étant donné que les indexeurs c# attendent un type de `int`, vous devrez effectuer un cast explicite `nint` valeurs `int` pour accéder aux éléments dans une collection ou un tableau. Par exemple :
 
 ```csharp
 public List<string> Names = new List<string>();

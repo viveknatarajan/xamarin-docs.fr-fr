@@ -1,18 +1,17 @@
 ---
-title: "Mise en œuvre avec des Fragments"
-description: "Android 3.0 introduit des Fragments. Les fragments sont des composants autonomes et modulaires qui aident à gérer la complexité de l’écriture d’applications exécutées sur des écrans de différentes tailles. Cet article montre comment l’utilisation de fragments de développer des applications de Xamarin.Android et la prise en charge des fragments sur les appareils Android préalable 3.0."
-ms.topic: article
+title: Mise en œuvre avec des Fragments
+description: Android 3.0 introduit des Fragments. Les fragments sont des composants autonomes et modulaires qui aident à gérer la complexité de l’écriture d’applications exécutées sur des écrans de différentes tailles. Cet article montre comment l’utilisation de fragments de développer des applications de Xamarin.Android et la prise en charge des fragments sur les appareils Android préalable 3.0.
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 81f1f992de450ee62c4c1d2e80da858b024be594
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-with-fragments"></a>Mise en œuvre avec des Fragments
 
@@ -34,7 +33,7 @@ Cette section couvre les rubriques suivantes :
 - **L’utilisation du Package de prise en charge Android** &ndash; implémente le Package de prise en charge Android, puis effectue quelques changements mineurs aux activités dans l’application, ce qui permet de s’exécuter sur des versions antérieures d’Android.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Cette procédure pas à pas requiert Xamarin.Android 4.0 ou version ultérieure. Il sera également être nécessaire installer le Package de prise en charge Android, comme indiqué dans la documentation de Fragments.
 

@@ -1,18 +1,17 @@
 ---
 title: Vues natives en c#
-description: "Vues natives dans iOS, Android et UWP peuvent être référencées directement à partir des pages de Xamarin.Forms créés à l’aide de c#. Cet article explique comment ajouter des vues natives à une présentation de Xamarin.Forms créée à l’aide de c# et la substitution de la disposition des affichages personnalisés pour corriger leur utilisation de l’API de mesure."
-ms.topic: article
+description: Vues natives dans iOS, Android et UWP peuvent être référencées directement à partir des pages de Xamarin.Forms créés à l’aide de c#. Cet article explique comment ajouter des vues natives à une présentation de Xamarin.Forms créée à l’aide de c# et la substitution de la disposition des affichages personnalisés pour corriger leur utilisation de l’API de mesure.
 ms.prod: xamarin
 ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 0c4014ecda0501e9309a17901c439444e4b48e86
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7979e43cdde60b1b0248118e591c096295847acb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-views-in-c"></a>Vues natives en c#
 

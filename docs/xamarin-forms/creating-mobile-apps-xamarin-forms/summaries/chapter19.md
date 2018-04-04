@@ -1,17 +1,16 @@
 ---
-title: "Résumé du chapitre 19. Vues de collection"
-ms.topic: article
+title: Résumé du chapitre 19. Vues de collection
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: a085eb306ad81b3c9214df269f69558bc8fbfaa7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 8aabf469f877fdb3ec703c2e3fdab13fcb25975a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Résumé du chapitre 19. Vues de collection
 

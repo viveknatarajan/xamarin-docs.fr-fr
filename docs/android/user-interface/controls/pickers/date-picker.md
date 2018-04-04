@@ -1,18 +1,17 @@
 ---
-title: "Sélecteur de dates"
-description: "Sélection des Dates de calendrier à l’aide de la DatePickerDialog et DialogFragment"
-ms.topic: article
+title: Sélecteur de dates
+description: Sélection des Dates de calendrier à l’aide de la DatePickerDialog et DialogFragment
 ms.prod: xamarin
 ms.assetid: F2BCD8D4-8957-EA53-C5A8-6BB603ADB47B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: b62af404ce0d3f5dacc479682a3002af49e968d1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 916a9c74fa28b99e799eef80db822e86cfda617d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="date-picker"></a>Sélecteur de dates
 
@@ -26,7 +25,7 @@ Ce guide va vous montrer comment utiliser le `DatePickerDialog`, elle est encaps
 
 [![Bouton de capture d’écran de prélèvement Date suivie de boîte de dialogue Sélecteur de dates](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 L’exemple d’application pour ce guide cible Android 4.1 (API de niveau
 16) ou version ultérieure, mais s’applique à 3.0 Android (API niveau 11 ou version ultérieure). Il est possible de prendre en charge les versions antérieures d’Android avec l’ajout de la bibliothèque de prise en charge Android v4 au projet et certaines modifications du code.

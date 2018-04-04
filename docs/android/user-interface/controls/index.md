@@ -1,18 +1,17 @@
 ---
-title: "Contrôles"
-description: "Blocs de construction pour créer des Interfaces utilisateur de Xamarin.Android"
-ms.topic: article
+title: Contrôles
+description: Blocs de construction pour créer des Interfaces utilisateur de Xamarin.Android
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 25afd284fc88df4f23aaa3dfa1f47a3dc4fee551
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8994a8988c0e32e85aedcd9110e3583195843862
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="controls"></a>Contrôles
 
@@ -33,7 +32,7 @@ Xamarin.Android expose tous les contrôles d’interface utilisateur native (wid
 ![Exemple de saisie semi-automatique](images/auto-complete.png)
 
 
-## <a name="buttonsandroiduser-interfacecontrolsbuttonsindexmd"></a>[Buttons](~/android/user-interface/controls/buttons/index.md)
+## <a name="buttonsandroiduser-interfacecontrolsbuttonsindexmd"></a>[Boutons](~/android/user-interface/controls/buttons/index.md)
 
 Les boutons sont des éléments d’interface utilisateur que l’utilisateur appuie sur une action à effectuer.
 
@@ -97,7 +96,7 @@ Le *barre de Navigation* fournit des contrôles de navigation sur les appareils 
 ![Compteur de l’exemple](images/spinner.png)
 
 
-## <a name="switchandroiduser-interfacecontrolsswitchmd"></a>[Switch](~/android/user-interface/controls/switch.md)
+## <a name="switchandroiduser-interfacecontrolsswitchmd"></a>[Commutateur](~/android/user-interface/controls/switch.md)
 
 `Switch` est un élément d’interface utilisateur qui permet à un utilisateur de basculer entre les deux États, comme sous ou hors tension. Le `Switch` valeur par défaut est OFF.
 

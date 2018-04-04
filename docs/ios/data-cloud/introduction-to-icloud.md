@@ -1,18 +1,17 @@
 ---
 title: iCloud
-description: "Apple a introduit l’iCloud dans iOS 5 en tant que service pour permettre aux applications de stocker des données sur les serveurs Apple et l’avez synchronisées sur tous les périphériques utilisés par la même personne (via leurs ID Apple). Il possède également un composant de sauvegarde, où les données sur vos appareils sont sauvegardé à des serveurs Apple. Ce document décrit comment utiliser certains iCloud API fournies par Apple pour stocker et récupérer des données à partir de leurs serveurs, avec les exemples c# pour stocker les paires clé-valeur données et pour stocker des documents. Elle explique également comment iCloud sauvegarde peut influencer la conception de votre application."
-ms.topic: article
+description: Apple a introduit l’iCloud dans iOS 5 en tant que service pour permettre aux applications de stocker des données sur les serveurs Apple et l’avez synchronisées sur tous les périphériques utilisés par la même personne (via leurs ID Apple). Il possède également un composant de sauvegarde, où les données sur vos appareils sont sauvegardé à des serveurs Apple. Ce document décrit comment utiliser certains iCloud API fournies par Apple pour stocker et récupérer des données à partir de leurs serveurs, avec les exemples c# pour stocker les paires clé-valeur données et pour stocker des documents. Elle explique également comment iCloud sauvegarde peut influencer la conception de votre application.
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: ce2130985eb954abc4b4a1f4022eec97341eb902
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c9e7c920855d2002f52d05e28c5225f301cd62b1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -32,7 +31,7 @@ Il existe quatre types de stockage :
 
 Ce document décrit les deux premiers types - paires clé-valeur et les sous-classes UIDocument - et comment utiliser ces fonctionnalités dans Xamarin.iOS.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 - La dernière version stable de Xamarin.iOS
 - Xcode 8 ou version ultérieure

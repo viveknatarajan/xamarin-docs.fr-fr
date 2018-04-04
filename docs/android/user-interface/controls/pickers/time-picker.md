@@ -1,18 +1,17 @@
 ---
-title: "Sélecteur d’heure"
-description: "Sélection d’une heure en utilisant TimePickerDialog et DialogFragment"
-ms.topic: article
+title: Sélecteur d’heure
+description: Sélection d’une heure en utilisant TimePickerDialog et DialogFragment
 ms.prod: xamarin
 ms.assetid: EB4E8206-E8AD-9F04-AC1C-82AC9364A9DD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 93a2effd42432d13767dad05a47548aebc9a0b93
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c4261e3dccaccc4c88afe9c1033fb16b730fea6e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="time-picker"></a>Sélecteur d’heure
 
@@ -27,7 +26,7 @@ Affichent les applications Android modernes le `TimePickerDialog` dans un [Dialo
 
 Ce guide montre comment utiliser le `TimePickerDialog`, elle est encapsulée dans un `DialogFragment`. L’application d’exemple affiche la `TimePickerDialog` comme une boîte de dialogue modale lorsque l’utilisateur clique sur un bouton sur une activité. Lorsque l’heure est définie par l’utilisateur, la boîte de dialogue se ferme et un gestionnaire de mises à jour une `TextView` sur l’écran de l’activité avec l’heure à laquelle a été sélectionné.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 L’exemple d’application pour ce guide cible Android 4.1 (API de niveau
 16) ou version ultérieure, mais peut être utilisé avec Android 3.0 (API niveau 11 ou version ultérieure). Il est possible de prendre en charge les versions antérieures d’Android avec l’ajout de la bibliothèque de prise en charge Android v4 au projet et certaines modifications du code.

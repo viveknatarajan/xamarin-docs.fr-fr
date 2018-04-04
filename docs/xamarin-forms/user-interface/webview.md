@@ -1,18 +1,17 @@
 ---
 title: Affichage Web
-description: "Présente local ou de contenu web de réseau et de documents."
-ms.topic: article
+description: Présente local ou de contenu web de réseau et de documents.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 7a077a3dcc47de8416abb0c51b23dc07fc1f1f12
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 54c70fda22782dfa9b6617c0832f2c17f0169b57
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="webview"></a>Affichage Web
 
@@ -113,7 +112,7 @@ Dans le code ci-dessus, `@` est utilisé pour marquer le code HTML sous forme de
 
 ### <a name="local-html-content"></a>Contenu HTML local
 
-WebView peut afficher du contenu à partir de HTML, CSS et Javascript incorporé au sein de l’application. Exemple :
+WebView peut afficher du contenu à partir de HTML, CSS et Javascript incorporé au sein de l’application. Par exemple :
 
 ```html
 <html>
@@ -349,7 +348,7 @@ WebView déclenche deux événements pour vous aider à répondre aux modificati
 - **Navigation** &ndash; événement déclenché lorsque la WebView commence à se charger une nouvelle page.
 - **Navigation** &ndash; événement déclenché lorsque la page est chargée et la navigation s’est arrêté.
 
-Si vous prévoyez d’utiliser les pages Web qui prennent beaucoup de temps à charger, envisagez d’utiliser ces événements pour implémenter un indicateur d’état. Exemple :
+Si vous prévoyez d’utiliser les pages Web qui prennent beaucoup de temps à charger, envisagez d’utiliser ces événements pour implémenter un indicateur d’état. Par exemple :
 
 Notre XAML :
 
@@ -412,7 +411,7 @@ Dans l’ordre de `WebView` , de travail, vous devez vous assurer que les autori
 - **Android** &ndash; requiert `INTERNET` uniquement lorsque l’affichage du contenu à partir du réseau. Le contenu local nécessite des autorisations spéciales.
 - **iOS** &ndash; requiert des autorisations spéciales.
 
-## <a name="layout"></a>Disposition
+## <a name="layout"></a>Mise en page
 
 Contrairement à la plupart des autres vues de Xamarin.Forms, `WebView` requiert que `HeightRequest` et `WidthRequest` sont spécifiés lorsque contenue dans StackLayout ou RelativeLayout. Si vous ne pouvez pas spécifier ces propriétés, les `WebView` ne sont pas rendus.
 

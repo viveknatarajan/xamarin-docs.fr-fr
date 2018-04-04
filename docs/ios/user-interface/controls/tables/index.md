@@ -1,18 +1,17 @@
 ---
 title: Utilisation des Tables et des cellules
-description: "Affichage des données à l’aide de UITableView avec Xamarin.iOS"
-ms.topic: article
+description: Affichage des données à l’aide de UITableView avec Xamarin.iOS
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: f6abcaa3a771954785df83e80c7e46dd200e6986
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1cda3632a75c7e462e763a34fdb5b586237b670
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-and-cells"></a>Utilisation des Tables et des cellules
 
@@ -33,9 +32,9 @@ Ces articles prennent une vision détaillée de travailler avec les tables, y co
 
  [Table des parties &amp; fonctionnalités](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
 
- [Remplissage d’une Table avec des données](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
+ [Remplissage d’un tableau avec des données](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
 
- [Personnaliser l’apparence de la Table](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
+ [Personnalisation de l’apparence d’un tableau](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
  [Modification](~/ios/user-interface/controls/tables/editing.md)
  
@@ -43,14 +42,14 @@ Ces articles prennent une vision détaillée de travailler avec les tables, y co
 
  [Création de Tables dans une table de montage séquentiel](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
- [Hauteur de ligne de redimensionnement automatique](~/ios/user-interface/controls/tables/autosizing-row-height.md)
+ [Redimensionnement automatique de la hauteur de ligne](~/ios/user-interface/controls/tables/autosizing-row-height.md)
 
 
 ## <a name="related-links"></a>Liens associés
 
 - [WorkingWithTables (exemple)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables/)
 - [Tables dans les plans conceptuels (exemple)](https://developer.xamarin.com/samples/monotouch/StoryboardTable/)
-- [Introduction à des plans conceptuels](~/ios/user-interface/storyboards/index.md)
+- [Introduction aux storyboards](~/ios/user-interface/storyboards/index.md)
 - [Table de montage séquentiel recette TableView](https://developer.xamarin.com/recipes/ios/general/storyboard/storyboard_a_tableview)
 - [Introduction aux MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Exemple TableEditing sur Github](https://github.com/xamarin/monotouch-samples/tree/master/TableEditing)

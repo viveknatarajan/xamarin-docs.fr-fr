@@ -1,17 +1,16 @@
 ---
-title: "Contrôles de transport vidéo personnalisée"
-ms.topic: article
+title: Contrôles de transport vidéo personnalisée
 ms.prod: xamarin
 ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5463a91dba5840ebe655aa1509d9f98e73643d26
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-video-transport-controls"></a>Contrôles de transport vidéo personnalisée
 
@@ -521,19 +520,19 @@ namespace FormsVideoLibrary.UWP
 
 À l’aide de caractères Unicode pour symbolique **lire**, **Pause**, et **arrêter** images peut être problématique. Le [diverses techniques](https://unicode-table.com/en/blocks/miscellaneous-technical/) section de la norme Unicode définit trois caractères de symbole apparemment appropriées à cet effet. Ces équivalents sont :
 
-- 0x23F5 (moyenne pointant vers la droite triangle noir) ou & #x23F5 ; pour **lire**
-- 0x23F8 (barre verticale double) ou & #x23F8 ; pour **Pause**
-- 0x23F9 (carré noir) ou & #x23F9 ; pour **arrêter**
+- 0x23F5 (moyenne pointant vers la droite triangle noir) ou &#x23F5; pour **lire**
+- 0x23F8 (barre verticale double) ou &#x23F8; pour **Pause**
+- 0x23F9 (carré noir) ou &#x23F9; pour **arrêter**
 
 Peu importe comment ces symboles apparaissent dans votre navigateur (et différents navigateurs les gérer de différentes façons), ils ne figurent pas toujours sur les plateformes prises en charge par Xamarin.Forms. Sur les appareils iOS et UWP, le **Pause** et **arrêter** caractères ont une apparence de graphique, avec un arrière-plan 3D bleu et un premier plan blanc. Cela n’est pas le cas sur Android, où le symbole est simplement bleu. Toutefois, le code 0x23F5 **lire** n’a pas que même apparence sur la plateforme Windows universelle et il n’est pas encore pris en charge sur iOS et Android.
 
 Pour cette raison, le point de code 0x23F5 ne peut pas être utilisé pour **lire**. Un substitut correct est :
 
-- 0x25B6 (triangle noir pointant vers la droite) ou & #x25B6 ; pour **lire**
+- 0x25B6 (triangle noir pointant vers la droite) ou &#x25B6; pour **lire**
 
 Cela est pris en charge par les trois plateformes, sauf qu’il s’agit d’un triangle noir simple qui ne ressemble pas à l’apparence 3D de **Pause** et **arrêter**. Il se peut suivre le point de code 0x25B6 avec un code variante :
 
-- 0x25B6 suivie 0xFE0F (variant 16) ou & #x25B6 ; & #xFE0F ; pour **lire**
+- 0x25B6 suivie 0xFE0F (variant 16) ou &#x25B6; &#xFE0F; pour **lire**
 
 Voici ce qui est utilisé dans le balisage indiqué ci-dessous. Sur iOS, il donne le **lire** de symboles de la même apparence 3D en tant que le **Pause** et **arrêter** boutons, mais la variante ne fonctionne pas sur Android et la plateforme Windows universelle.
 

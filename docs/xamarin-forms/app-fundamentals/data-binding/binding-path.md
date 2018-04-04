@@ -1,18 +1,17 @@
 ---
 title: Chemin de liaison
-description: "Utiliser des liaisons de données pour les membres de collection et les sous-propriétés de l’accès"
-ms.topic: article
+description: Utiliser des liaisons de données pour les membres de collection et les sous-propriétés de l’accès
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: fb385a9c7d1dfd01d95691b77122cdbb84d814e5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f75cfcf4bfd5ffa71699f62b30145b732421d964
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-path"></a>Chemin de liaison
 

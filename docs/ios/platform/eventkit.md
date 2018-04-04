@@ -1,18 +1,17 @@
 ---
 title: EventKit
-description: "Ce guide fournit une vue d’ensemble sur la façon d’accéder et d’utiliser des calendriers, CalendarEvents et des rappels les données stockées dans la base de données de calendrier, tel qu’exposé via la EventKit. Elle couvre les principales classes et leur rôle dans la programmation de EventKit, ainsi que d’un nombre de tâches courantes associées à l’infrastructure EventKit."
-ms.topic: article
+description: Ce guide fournit une vue d’ensemble sur la façon d’accéder et d’utiliser des calendriers, CalendarEvents et des rappels les données stockées dans la base de données de calendrier, tel qu’exposé via la EventKit. Elle couvre les principales classes et leur rôle dans la programmation de EventKit, ainsi que d’un nombre de tâches courantes associées à l’infrastructure EventKit.
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a08bc67a9af653a9a646ad62071df0400ce58c12
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a8439586ac92f8139cf9341611125352c85706e5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="eventkit"></a>EventKit
 
@@ -32,7 +31,7 @@ Toutes les tâches dans ce guide sont disponibles dans l’exemple d’applicati
 
  [![](eventkit-images/01.png "Les écrans d’application Compagnon exemple")](eventkit-images/01.png#lightbox)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 EventKit a été introduit dans iOS 4.0, mais l’accès aux données de rappels a été introduit dans iOS 6.0. Par conséquent, pour faire un développement EventKit général, vous devez cibler au moins les versions 4.0 et 6.0 pour les rappels.
 

@@ -1,18 +1,17 @@
 ---
 title: CardView
-description: "Le widget Cardview est un composant de l’interface utilisateur qui présente le contenu de texte et image dans les affichages qui ressemblent à des cartes. Ce guide explique comment utiliser et personnaliser CardView dans les applications de Xamarin.Android, tout en conservant une compatibilité descendante avec les versions antérieures d’Android."
-ms.topic: article
+description: Le widget Cardview est un composant de l’interface utilisateur qui présente le contenu de texte et image dans les affichages qui ressemblent à des cartes. Ce guide explique comment utiliser et personnaliser CardView dans les applications de Xamarin.Android, tout en conservant une compatibilité descendante avec les versions antérieures d’Android.
 ms.prod: xamarin
 ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 46eec10bbabec74719affabce1e8033a083680be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 21e2a2e8ef04936664344cb4fb758bc2af3b4d05
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cardview"></a>CardView
 
@@ -29,7 +28,7 @@ Ce guide explique comment ajouter la `CardView` projet de package pour votre Xam
 
 <a name="requirements" />
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour utiliser les nouvelles Android 5.0 et les fonctionnalités de versions ultérieures (y compris `CardView`) dans les applications Xamarin :
 

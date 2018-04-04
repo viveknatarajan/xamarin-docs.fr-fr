@@ -1,18 +1,17 @@
 ---
 title: Hello, usure
-description: "Créer votre première application Android d’usure et l’exécuter sur un périphérique ou un émulateur d’usure. Cette procédure pas à pas fournit des instructions détaillées pour la création d’un petit projet usure Android qui gère les clics de bouton et affiche un compteur de clic sur le périphérique d’usure. Il explique comment déboguer l’application à l’aide d’un émulateur d’usure ou un périphérique d’usure est connecté via Bluetooth sur un téléphone Android. Il fournit également un ensemble de conseils de débogage pour porter Android."
-ms.topic: article
+description: Créer votre première application Android d’usure et l’exécuter sur un périphérique ou un émulateur d’usure. Cette procédure pas à pas fournit des instructions détaillées pour la création d’un petit projet usure Android qui gère les clics de bouton et affiche un compteur de clic sur le périphérique d’usure. Il explique comment déboguer l’application à l’aide d’un émulateur d’usure ou un périphérique d’usure est connecté via Bluetooth sur un téléphone Android. Il fournit également un ensemble de conseils de débogage pour porter Android.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 742a10ce0042d2bbf6d5690cb7a7a6eca529a57e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-wear"></a>Hello, usure
 

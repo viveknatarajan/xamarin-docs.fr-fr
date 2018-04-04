@@ -2,18 +2,18 @@
 documentType: LandingData
 title: Exemples Xamarin.Android
 metadata:
-  description: "Exemples d’applications Xamarin.Android pour les développeurs d’applications mobiles."
+  description: Exemples d’applications Xamarin.Android pour les développeurs d’applications mobiles.
   author: conceptdev
   ms.author: crdun
   ms.date: 02/20/2018
-  ms.topic: article
-  ms.openlocfilehash: df9b864542bbdbf57ed9096ce8e869a056b021c3
-  ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+  ms.topic: sample
+  ms.openlocfilehash: 58c8cf15dc196071268172980279cb19f269cc4a
+  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/28/2018
+  ms.lasthandoff: 04/04/2018
 abstract:
-  description: "Exemples d’applications Android et démonstrations de code Xamarin pour vous aider à créer des applications mobiles avec C# et Xamarin."
+  description: Exemples d’applications Android et démonstrations de code Xamarin pour vous aider à créer des applications mobiles avec C# et Xamarin.
   menu:
     items:
     - href: https://developer.xamarin.com/samples/android/all/
@@ -26,55 +26,55 @@ sections:
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/
-      html: "Cet exemple présente les nouvelles API Material Design introduites dans Android Lollipop."
+      html: Cet exemple présente les nouvelles API Material Design introduites dans Android Lollipop.
       image:
         src: images/material-design.png
         href: https://developer.xamarin.com/samples/monodroid/android5.0/GoogleIO2014Master/
       title: Material Design
     - href: https://developer.xamarin.com/samples/monodroid/GooglePlayServices/
-      html: "Cette solution utilise le package NuGet des services Google Play pour Xamarin pour montrer quelques utilisations de l’API de mappages."
+      html: Cette solution utilise le package NuGet des services Google Play pour Xamarin pour montrer quelques utilisations de l’API de mappages.
       image:
         src: images/gps.png
         href: https://developer.xamarin.com/samples/monodroid/GooglePlayServices/
       title: Services Google Play
     - href: https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/
-      html: "Cet exemple montre comment utiliser ensemble ViewPager et PagerTabStrip pour implémenter une application qui présente une série de problèmes mathématiques sur des cartes Flash."
+      html: Cet exemple montre comment utiliser ensemble ViewPager et PagerTabStrip pour implémenter une application qui présente une série de problèmes mathématiques sur des cartes Flash.
       image:
         src: images/flash.png
         href: https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/
       title: Flash Card Pager
     - href: https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/
-      html: "Les fragments sont des composants autonomes et modulaires qui aident à gérer la complexité de l’écriture d’applications exécutées sur des écrans de différentes tailles."
+      html: Les fragments sont des composants autonomes et modulaires qui aident à gérer la complexité de l’écriture d’applications exécutées sur des écrans de différentes tailles.
       image:
         src: images/fragments.png
         href: https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/
       title: Fragments
     - href: https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/
-      html: "Application de peinture au doigt en couleur à l’aide du suivi tactile multipoint sur Android."
+      html: Application de peinture au doigt en couleur à l’aide du suivi tactile multipoint sur Android.
       image:
         src: images/fingerpaint.png
         href: https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/
       title: Peinture au doigt
     - href: https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/
-      html: "Utilisez cet exemple pour apprendre à utiliser les nouveaux widgets CardView et RecyclerView introduits avec Android 5.0 Lollipop."
+      html: Utilisez cet exemple pour apprendre à utiliser les nouveaux widgets CardView et RecyclerView introduits avec Android 5.0 Lollipop.
       image:
         src: images/recycler.png
         href: https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/
       title: RecyclerViewer
     - href: https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/
-      html: "Exemple Android remplaçant la barre d’action par la nouvelle barre d’outils dans Android 5.0 Lollipop."
+      html: Exemple Android remplaçant la barre d’action par la nouvelle barre d’outils dans Android 5.0 Lollipop.
       image:
         src: images/toolbar.png
         href: https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/
       title: ToolBar
     - href: https://developer.xamarin.com/samples/monodroid/wear/WatchFace/
-      html: "Découvrez comment implémenter un thème de montre Android Wear personnalisé."
+      html: Découvrez comment implémenter un thème de montre Android Wear personnalisé.
       image:
         src: images/watchface.png
         href: https://developer.xamarin.com/samples/monodroid/wear/WatchFace/
       title: WatchFace
     - href: https://developer.xamarin.com/samples/android/all/
-      html: "Ensemble complet d’exemples d’applications et de démonstrations de code Xamarin.Android."
+      html: Ensemble complet d’exemples d’applications et de démonstrations de code Xamarin.Android.
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/android/all/

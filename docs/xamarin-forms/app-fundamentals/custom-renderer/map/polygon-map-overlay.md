@@ -1,18 +1,17 @@
 ---
-title: "Mise en surbrillance d’une région sur une carte"
-description: "Cet article a expliqué comment ajouter un segment de recouvrement de polygone à une carte, pour mettre en surbrillance une région sur la carte. Les polygones sont une forme fermée et leurs intérieurs renseigner."
-ms.topic: article
+title: Mise en surbrillance d’une région sur une carte
+description: Cet article a expliqué comment ajouter un segment de recouvrement de polygone à une carte, pour mettre en surbrillance une région sur la carte. Les polygones sont une forme fermée et leurs intérieurs renseigner.
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 6c116565842537f24d92a6d100ab1636f25c2e12
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d87237015b9e3d896766894d552c650047137146
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Mise en surbrillance d’une région sur une carte
 
@@ -31,7 +30,7 @@ Lorsqu’un [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.
 1. [Personnaliser](#Customizing_the_Map) le mappage en créant un convertisseur personnalisé pour le mappage sur chaque plateforme.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) doit être initialisé et configuré avant des utiliser. Pour plus d’informations, consultez [ `Maps Control` ](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) doit être initialisé et configuré avant des utiliser. Pour plus d’informations, consultez [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 Pour plus d’informations sur la personnalisation d’un mappage à l’aide d’un convertisseur personnalisé, consultez [personnalisation d’un code confidentiel de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 

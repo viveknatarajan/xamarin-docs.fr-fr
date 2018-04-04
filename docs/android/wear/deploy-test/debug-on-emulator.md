@@ -1,18 +1,17 @@
 ---
-title: "Déboguer Android usure sur un émulateur"
-description: "Ces articles expliquent comment déboguer une application de Xamarin.Android usure sur un émulateur."
-ms.topic: article
+title: Déboguer Android usure sur un émulateur
+description: Ces articles expliquent comment déboguer une application de Xamarin.Android usure sur un émulateur.
 ms.prod: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: dc6146670c4b5f7d29491335b4719e032487dcce
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cf1b586c8e30b2922251104461d9ca7100b8e74e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Déboguer Android usure sur un émulateur
 
@@ -33,7 +32,7 @@ Lorsque vous créez un périphérique virtuel usure, sélectionnez un profil d�
 
 ## <a name="launch-the-wear-virtual-device"></a>Lancez le périphérique virtuel usure 
 
-Après avoir créé un appareil virtuel Android d’usure, vous pouvez la choisir dans le menu déroulant de périphérique dans l’IDE avant de commencer le débogage. Si votre appareil virtuel n’est pas disponible dans le menu déroulant du périphérique, vérifiez que votre projet est un Android *usure* de niveau projet d’application (pas un projet d’application Android) et que son niveau de l’API de la cible est définie sur la même API que l’appareil virtuel. Exemple :
+Après avoir créé un appareil virtuel Android d’usure, vous pouvez la choisir dans le menu déroulant de périphérique dans l’IDE avant de commencer le débogage. Si votre appareil virtuel n’est pas disponible dans le menu déroulant du périphérique, vérifiez que votre projet est un Android *usure* de niveau projet d’application (pas un projet d’application Android) et que son niveau de l’API de la cible est définie sur la même API que l’appareil virtuel. Par exemple :
 
 [![En choisissant un AVD porter dans le menu de périphérique Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 

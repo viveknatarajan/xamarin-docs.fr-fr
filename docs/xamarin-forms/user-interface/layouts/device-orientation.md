@@ -1,18 +1,17 @@
 ---
-title: "Orientation du périphérique"
+title: Orientation du périphérique
 description: Comprendre la disposition des applications qui sont superbes dans orientations portrait et paysage.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: cb17c224fc6102d9e0dc25853c2222734299647a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 9d1b10925f1455c303950eff342764b1fbc9275d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="device-orientation"></a>Orientation du périphérique
 
@@ -88,9 +87,9 @@ Xamarin.Android prend en charge plusieurs options permettant de spécifier l’o
 - **ReversePortrait** &ndash; entraîne l’application à utiliser une orientation portrait, faisant face à la direction opposée de habituel, afin de s’affichent « envers. »
 - **FullSensor** &ndash; entraîne l’application s’appuient sur des données de capteur pour sélectionner le bon sens (hors du 4 possible).
 - **FullUser** &ndash; entraîne l’application à utiliser les préférences d’orientation de l’utilisateur. Si la rotation automatique est activée, toutes les 4 orientations peuvent servir.
-- **UserLandscape** &ndash;  _\[pas pris en charge\]_  entraîne l’application d’utiliser l’orientation paysage, sauf si l’utilisateur a rotation automatique activée, auquel cas il utilisera le capteur pour déterminer l’orientation. Cette option s’arrête la compilation.
-- **UserPortrait** &ndash;  _\[pas pris en charge\]_  entraîne l’application d’utiliser une orientation portrait, sauf si l’utilisateur a rotation automatique activée, auquel cas il utilisera le capteur pour déterminer l’orientation. Cette option s’arrête la compilation.
-- **Verrouillé** &ndash;  _\[pas pris en charge\]_  entraîne l’application à utiliser l’orientation de l’écran, quel qu’il soit au lancement, sans répondre aux modifications de l’appareil de physique orientation. Cette option s’arrête la compilation.
+- **UserLandscape** &ndash; _\[pas pris en charge\]_ entraîne l’application d’utiliser l’orientation paysage, sauf si l’utilisateur a rotation automatique activée, auquel cas il utilisera le capteur pour déterminer l’orientation. Cette option s’arrête la compilation.
+- **UserPortrait** &ndash; _\[pas pris en charge\]_ entraîne l’application d’utiliser une orientation portrait, sauf si l’utilisateur a rotation automatique activée, auquel cas il utilisera le capteur pour déterminer l’orientation. Cette option s’arrête la compilation.
+- **Verrouillé** &ndash; _\[pas pris en charge\]_ entraîne l’application à utiliser l’orientation de l’écran, quel qu’il soit au lancement, sans répondre aux modifications de l’appareil de physique orientation. Cette option s’arrête la compilation.
 
 Notez que l’API Android natives fournissent un contrôle important sur la gestion de l’orientation, y compris les options qui explicitement contredisent l’utilisateur exprimée préférences.
 

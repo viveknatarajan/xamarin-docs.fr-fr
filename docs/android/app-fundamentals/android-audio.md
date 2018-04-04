@@ -1,18 +1,17 @@
 ---
 title: Audio Android
-description: "Le système d’exploitation Android prend en charge étendue multimédia, qui comprennent des données audio et vidéo. Ce guide se concentre sur audio dans Android et couvre la lecture et l’enregistrement audio à l’aide du lecteur audio intégré et classes de l’enregistreur, ainsi que l’API de bas niveau audio. Elle traite également travailler avec les événements Audio diffusion par d’autres applications, afin que les développeurs peuvent créer des applications conformes."
-ms.topic: article
+description: Le système d’exploitation Android prend en charge étendue multimédia, qui comprennent des données audio et vidéo. Ce guide se concentre sur audio dans Android et couvre la lecture et l’enregistrement audio à l’aide du lecteur audio intégré et classes de l’enregistreur, ainsi que l’API de bas niveau audio. Elle traite également travailler avec les événements Audio diffusion par d’autres applications, afin que les développeurs peuvent créer des applications conformes.
 ms.prod: xamarin
 ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/28/2018
-ms.openlocfilehash: 91bd5ae83cd0d59872e11a6b1bdc7b84c751e64f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: aff0d67549707129bfc85246318c33c522e4f1f6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-audio"></a>Audio Android
 
@@ -34,7 +33,7 @@ Android fournit la prise en charge étendue pour multimédia. Cet article examin
 4.  **Utilisation de bas niveau Audio** &ndash; lecture audio à l’aide de la `AudioTrack` classe en écrivant directement dans les mémoires tampons. L’enregistrement audio à l’aide de la `AudioRecord` classe et de lire directement à partir de mémoires tampons.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide nécessite 2.0 Android (API niveau 5) ou une version ultérieure. Notez que le débogage audio sur Android doit être effectué sur un appareil.
 

@@ -1,20 +1,19 @@
 ---
-title: "Fonctionnalités de plateforme"
-description: "Documents de cette section couvrent les fonctionnalités spécifiques pour iOS."
-ms.topic: article
+title: Fonctionnalités de la plateforme
+description: Documents de cette section couvrent les fonctionnalités spécifiques pour iOS.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/15/2017
-ms.openlocfilehash: 88ddd7c74fd800c71e63c03f6a8492ecfcc28f9f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0a76ed52f52de144bb3da1e7be6e215ce0dfe0ab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="platform-features"></a>Fonctionnalités de plateforme
+# <a name="platform-features"></a>Fonctionnalités de la plateforme
 
 ##  <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[Introduction à iOS 11](~/ios/platform/introduction-to-ios11/index.md)
 
@@ -67,11 +66,11 @@ Le sélecteur de Document permet aux documents être partagés entre les applica
 
 iOS a deux applications dépendant de calendrier intégrées : l’Application de calendrier et l’Application des rappels. Il est assez simple à comprendre comment l’Application calendrier gère les données de calendrier, mais l’Application des rappels est moins évidente. Rappels peuvent avoir réellement les dates en termes d’associés lorsqu’ils sont à l’échéance, quand ils sont terminées, etc. Par conséquent, iOS stocke toutes les données de calendrier, qu’il s’agisse d’événements de calendrier ou de rappels, dans un seul emplacement, appelée la *base de données de calendrier*.
 
-##  <a name="ios-extensionsiosplatformextensionsmd"></a>[Extensions d’iOS](~/ios/platform/extensions.md)
+##  <a name="ios-extensionsiosplatformextensionsmd"></a>[Extensions iOS](~/ios/platform/extensions.md)
 
 Extensions, introduite dans iOS 8, sont spécialisées `UIViewControllers` qui sont présentés par iOS dans des contextes standards tels que dans les **centre de notifications**, comme demandés par l’utilisateur pour effectuer des types de clavier personnalisés spécialisé entrée ou autres contextes comme modifier une photo où l’Extension peut fournir des filtres d’effet spécial.
 
-##  <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[Graphiques et des animations dans iOS](~/ios/platform/graphics-animation-ios/index.md)
+##  <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[Graphismes et animation dans iOS](~/ios/platform/graphics-animation-ios/index.md)
 
 Graphiques et des animations dans iOS traite des concepts de graphics core dans iOS telles que CoreImage, graphiques élémentaires et l’Animation de base.
 
@@ -87,15 +86,15 @@ Kit de contrôle d’intégrité fournit une banque de données sécurisé pour 
 
 Apple a introduit le HomeKit dans iOS 8 pour fournir une infrastructure commune pour détecter et de communiquer avec les appareils automation de base dans l’accueil de l’utilisateur. HomeKit fournit une plate-forme commune pour la configuration des périphériques et de configurer des actions pour les contrôler.
 
-##  <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[Dans l’application d’achat](~/ios/platform/in-app-purchasing/index.md)
+##  <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[Achats dans l’application](~/ios/platform/in-app-purchasing/index.md)
 
 les applications iOS peuvent vendre des produits numériques ou des services à l’aide de StoreKit – un ensemble d’API fournies par iOS qui communiquent avec les serveurs Apple d’effectuer des transactions financières avec l’utilisateur via leur ID Apple. Les APIs StoreKit concernent principalement la récupération des informations de produit et la réalisation des transactions : il n’existe aucun composant de l’interface utilisateur. Les applications qui implémentent l’achat dans l’application doivent créer leur propre interface utilisateur et effectuer le suivi des articles achetés avec du code personnalisé pour fournir des produits requis ou des services à l’utilisateur.
 
-##  <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[API de jeux d’iOS](~/ios/platform/gaming/index.md)
+##  <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[API de jeux iOS](~/ios/platform/gaming/index.md)
 
 Apple a apporté plusieurs améliorations à l’API de jeux dans iOS 9 technologiques qui le rendent plus facile à implémenter des graphismes des jeux et audio dans une application Xamarin.iOS. Ceux-ci incluent les deux facilité de développement par le biais des infrastructures de haut niveau et la puissance de GPU de l’appareil iOS pour l’amélioration de la vitesse et des fonctionnalités de graphique.
 
-##  <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Intégration d’application de message](~/ios/platform/message-app-integration/index.md)
+##  <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Intégration de l’application Message](~/ios/platform/message-app-integration/index.md)
 
 Nouveau pour iOS 10, une Extension d’application Message intègre le **Messages** application et affiche le nombre de nouvelles fonctionnalités à l’utilisateur. L’extension peut envoyer des messages interactifs, texte, autocollants et fichiers multimédias.
 
@@ -113,7 +112,7 @@ Ce document présente le livret, à l’aide de l’API du Kit de transmettre av
 
 Kit de la photo est une nouvelle infrastructure qui permet aux applications de la bibliothèque d’images de système de requête et créer des interfaces utilisateur personnalisées pour afficher et modifier son contenu. Il comprend des classes qui représentent l’image et vidéos actifs, ainsi que les collections de ressources, comme des albums et des dossiers.
 
-##  <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Demande de révision de l’application](~/ios/platform/request-app-review.md)
+##  <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Demande de révision d’application](~/ios/platform/request-app-review.md)
 
 Vous débutez avec iOS 10.3, le `RequestReview()` méthode permet à une application iOS demander à l’utilisateur à évaluer ou réviser. Lorsque cette méthode est appelée dans une application de livraison que l’utilisateur a installé à partir de l’App Store, iOS 10 sera gérer l’évaluation entière et passez en revue le processus pour le développeur. Étant donné que ce processus est régi par la stratégie de l’App Store, une alerte peut ou ne peut pas s’afficher.
 
@@ -137,7 +136,7 @@ iOS 10 inclut une nouvelle API de reconnaissance vocale qui permet à l’applic
 
 Kit de texte est une nouvelle API qui offre des fonctionnalités de mise en page et le rendu de texte puissant. Il repose sur le framework du texte de la base de bas niveau, mais il est beaucoup plus facile à utiliser que le texte de base.
 
-##  <a name="touch-idiosplatformtouchidmd"></a>[ID tactile](~/ios/platform/touchid.md)
+##  <a name="touch-idiosplatformtouchidmd"></a>[Touch ID](~/ios/platform/touchid.md)
 
 ID de contact a été introduite dans iOS 7 comme un moyen d’authentifier l’utilisateur, semblable à un code secret. Toutefois, il a été limité à déverrouiller l’appareil, à l’aide de l’App Store, à l’aide d’iTunes et l’authentification de la chaîne de la clé iCloud uniquement.
 
@@ -145,7 +144,7 @@ ID de contact a été introduite dans iOS 7 comme un moyen d’authentifier l’
 
 Nouveau pour iOS 10, la Notification utilisateur framework permet la remise et le traitement des notifications locale et distantes. À l’aide de cette infrastructure, l’application ou une Extension d’application permettre planifier la remise de notifications locales en spécifiant un ensemble de conditions comme emplacement ou l’heure du jour.
 
-##  <a name="wide-coloriosplatformwide-colormd"></a>[Couleur large](~/ios/platform/wide-color.md)
+##  <a name="wide-coloriosplatformwide-colormd"></a>[Large couleur](~/ios/platform/wide-color.md)
 
 iOS 10 et macOS Sierra améliore la prise en charge pour les formats de pixel de plage étendue et les espaces d’une gamme de couleurs dans l’ensemble du système, y compris les infrastructures telles que les graphiques de base, l’Image de base, complète et AVFoundation. Prise en charge pour les appareils avec une couleur large affiche est facilité davantage en fournissant ce comportement dans toute la pile de graphique entière.
 
@@ -159,10 +158,10 @@ Lorsque vous travaillez sur iOS, vous pouvez rencontrer des cas où vous souhait
 
 Xamarin.iOS prend en charge la liaison avec les bibliothèques C natifs et les bibliothèques Objective-C. Ce document explique comment lier vos bibliothèques C natifs avec votre projet Xamarin.iOS. 
 
-## <a name="embedded-frameworksembedded-frameworksmd"></a>[Structures incorporées](embedded-frameworks.md)
+## <a name="embedded-frameworksembedded-frameworksmd"></a>[Frameworks incorporés](embedded-frameworks.md)
 
 Explique comment incorporer des infrastructures d’utilisateur Objective-C dans les applications Xamarin.iOS.
 
-## <a name="exception-marshalingexception-marshalingmd"></a>[Marshaling d’exception](exception-marshaling.md)
+## <a name="exception-marshalingexception-marshalingmd"></a>[Regroupement d’exceptions](exception-marshaling.md)
 
 Décrit comment Objective-C et les exceptions managées sont marshalées entre les frames natifs et managés.

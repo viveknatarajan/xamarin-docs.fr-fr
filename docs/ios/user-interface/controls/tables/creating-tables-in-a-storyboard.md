@@ -1,18 +1,17 @@
 ---
 title: Utilisation de Tables dans le concepteur iOS
-description: "Dans les sections précédentes, nous Explorer développement à l’aide de Tables. Dans ce cas, la cinquième et dernière section, nous ce que nous avons appris jusqu'à présent d’agrégation et créer une application de liste de base à l’aide d’un plan conceptuel."
-ms.topic: article
+description: Dans les sections précédentes, nous Explorer développement à l’aide de Tables. Dans ce cas, la cinquième et dernière section, nous ce que nous avons appris jusqu'à présent d’agrégation et créer une application de liste de base à l’aide d’un plan conceptuel.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 869719b1d3514fee4b45f61dcdb34a0bcf54f7b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilisation de Tables dans le concepteur iOS
 
@@ -115,7 +114,7 @@ Ensuite, vous devez créer un bouton qui ajoute de nouvelles tâches, comme illu
 Effectuez ce qui suit : 
 
 -  Faites glisser un **élément de bouton de barre de** à partir de la boîte à outils vers la _côté droit de la barre de navigation_.
--  Dans le **propriétés remplissage**, sous **élément de bouton de barre de** sélectionnez **identificateur : ajouter** (pour le rendre un  *+*  plus le bouton). 
+-  Dans le **propriétés remplissage**, sous **élément de bouton de barre de** sélectionnez **identificateur : ajouter** (pour le rendre un *+* plus le bouton). 
 -  Pour pouvoir être identifié dans le code à un stade ultérieur, attribuez-lui un nom. Notez que vous devez lui donner contrôleur racine de la vue un nom de classe (par exemple **ItemViewController**) pour vous permettre de définir le nom de l’élément de bouton de barre.
 
 

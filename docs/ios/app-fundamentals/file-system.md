@@ -1,18 +1,17 @@
 ---
-title: "Utilisation avec le système de fichiers"
-description: "Xamarin.iOS pouvez utiliser les mêmes classes System.IO pour travailler avec des fichiers et des répertoires dans iOS que vous utiliseriez dans n’importe quelle application .NET. Toutefois, malgré les classes familiers et les méthodes, iOS implémente certaines restrictions sur les fichiers qui peuvent être créés ou accessibles et fournit également des fonctionnalités spéciales pour certains répertoires. Cet article décrit ces restrictions et les fonctionnalités et illustre le fonctionnement de l’accès aux fichiers dans une application Xamarin.iOS."
-ms.topic: article
+title: Utilisation avec le système de fichiers
+description: Xamarin.iOS pouvez utiliser les mêmes classes System.IO pour travailler avec des fichiers et des répertoires dans iOS que vous utiliseriez dans n’importe quelle application .NET. Toutefois, malgré les classes familiers et les méthodes, iOS implémente certaines restrictions sur les fichiers qui peuvent être créés ou accessibles et fournit également des fonctionnalités spéciales pour certains répertoires. Cet article décrit ces restrictions et les fonctionnalités et illustre le fonctionnement de l’accès aux fichiers dans une application Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: a3337264bf04f5ad5495043c7e958276aba9eaee
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5c6a5233c9cdc043986f106712895439fa008b41
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-the-file-system"></a>Utilisation avec le système de fichiers
 

@@ -1,18 +1,17 @@
 ---
 title: Utilisation des alertes
-description: "Cet article traite de travailler avec UIAlertController pour afficher un message d’alerte à l’utilisateur dans Xamarin.tvOS."
-ms.topic: article
+description: Cet article traite de travailler avec UIAlertController pour afficher un message d’alerte à l’utilisateur dans Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: da4d2d952687c7e39276ca76af413b83c4519eea
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-alerts"></a>Utilisation des alertes
 
@@ -161,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-Le `AddTextField` méthode ajoute un nouveau champ de texte à l’alerte que vous pouvez ensuite configurer en définissant des propriétés telles que l’espace réservé du texte (le texte qui apparaît lorsque le champ est vide), la valeur de texte par défaut et le type de clavier. Exemple :
+Le `AddTextField` méthode ajoute un nouveau champ de texte à l’alerte que vous pouvez ensuite configurer en définissant des propriétés telles que l’espace réservé du texte (le texte qui apparaît lorsque le champ est vide), la valeur de texte par défaut et le type de clavier. Par exemple :
 
 ```csharp
 // Initialize field
@@ -193,7 +192,7 @@ Une fois que l’utilisateur a entré une valeur dans le champ de texte, nous po
 
 ## <a name="alert-view-controller-helper-class"></a>Classe d’assistance de contrôleur affichage des alertes
 
-Étant donné que l’affichage des types simples, courants d’alertes à l’aide de `UIAlertViewController` peut entraîner un peu de code en double, vous pouvez utiliser une classe d’assistance afin de réduire la quantité de code répétitif. Exemple :
+Étant donné que l’affichage des types simples, courants d’alertes à l’aide de `UIAlertViewController` peut entraîner un peu de code en double, vous pouvez utiliser une classe d’assistance afin de réduire la quantité de code répétitif. Par exemple :
 
 ```csharp
 using System;

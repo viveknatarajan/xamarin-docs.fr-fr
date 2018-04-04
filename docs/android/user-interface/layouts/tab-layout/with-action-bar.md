@@ -1,18 +1,17 @@
 ---
-title: "Mises en page à onglets avec le ActionBar"
-description: "Ce guide présente et explique comment utiliser les APIs ActionBar pour créer une interface utilisateur à onglets dans une application Xamarin.Android."
-ms.topic: article
+title: Mises en page à onglets avec le ActionBar
+description: Ce guide présente et explique comment utiliser les APIs ActionBar pour créer une interface utilisateur à onglets dans une application Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5956cd13708f4e7e73926fc01e6142d9cf4a8edb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Mises en page à onglets avec le ActionBar
 
@@ -27,7 +26,7 @@ Notez que `Toolbar` est un composant de barre d’action plus récent et plus g�
 
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Toute application Xamarin.Android qui cible le niveau de l’API 11 (Android 3.0) ou une version ultérieure a accès aux APIs ActionBar dans le cadre de l’API Android natives. 
 

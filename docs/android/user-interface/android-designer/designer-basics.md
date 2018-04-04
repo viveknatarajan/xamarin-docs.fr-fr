@@ -1,18 +1,17 @@
 ---
 title: Principes de base de concepteur
-description: "Cette rubrique présente les fonctionnalités du concepteur, explique comment lancer le concepteur, décrit l’aire de conception et explique comment utiliser le volet Propriétés pour modifier les propriétés de widget."
-ms.topic: article
+description: Cette rubrique présente les fonctionnalités du concepteur, explique comment lancer le concepteur, décrit l’aire de conception et explique comment utiliser le volet Propriétés pour modifier les propriétés de widget.
 ms.prod: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: d9342dc3a8d324f03cd31e1d03600449bfcf23f1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6bac16a8ce9859e819299689489d9aad982c1f7f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="designer-basics"></a>Principes de base de concepteur
 

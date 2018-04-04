@@ -1,18 +1,17 @@
 ---
-title: "Étude de cas : Tasky"
-description: "Ce document décrit comment les principes de création d’Applications inter-plateformes ont été appliquées dans l’exemple d’application Tasky Portable. Il aborde la conception des applications mobiles, l’écriture de code pour une réutilisation et l’implémentation des projets spécifiques à une plateforme qui ciblent l’iOS, Android et Windows Phone plateformes."
-ms.topic: article
+title: 'Étude de cas : Tasky'
+description: Ce document décrit comment les principes de création d’Applications inter-plateformes ont été appliquées dans l’exemple d’application Tasky Portable. Il aborde la conception des applications mobiles, l’écriture de code pour une réutilisation et l’implémentation des projets spécifiques à une plateforme qui ciblent l’iOS, Android et Windows Phone plateformes.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 5b16fe1d6dab776af31e0aff97a00065517550ec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="case-study-tasky"></a>Étude de cas : Tasky
 
@@ -28,7 +27,7 @@ Il est conseillé de créer un de route pour ce que vous souhaitez atteindre ava
 
  <a name="Requirements" />
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 La première étape de la conception d’une application consiste à identifier les fonctionnalités souhaitées. Il peut s’agir des objectifs de niveau supérieur ou détaillées des cas d’usage. Tasky a des exigences fonctionnelles simples :
 

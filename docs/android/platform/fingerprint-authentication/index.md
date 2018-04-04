@@ -1,18 +1,17 @@
 ---
 title: Authentification par empreinte digitale
-description: "Ce guide explique comment ajouter une authentification par empreinte digitale, introduite dans Android 6.0, à une application Xamarin.Android."
-ms.topic: article
+description: Ce guide explique comment ajouter une authentification par empreinte digitale, introduite dans Android 6.0, à une application Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 79f5f81e11f62359c3b951500d4ab5cbd63fb507
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b28b16dfd92ef3a31201ef2e86681a425a58ab8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fingerprint-authentication"></a>Authentification par empreinte digitale
 
@@ -46,7 +45,7 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
 
 Ce guide explique comment utiliser le `FingerprintManager` API pour améliorer une application Android d’empreintes digitales. Il explique comment instancier et créer un `CryptoObject` pour aider à sécuriser les résultats à partir du lecteur d’empreintes digitales. Nous allons examiner la façon dont une application doit sous-classe `FingerprintManager.AuthenticationCallback` et répondre aux commentaires dans le lecteur d’empreintes digitales. Enfin, nous verrons comment inscrire une empreinte digitale sur un émulateur ou un appareil Android et comment utiliser **adb** pour simuler une analyse d’empreintes digitales.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 L’authentification par empreinte digitale nécessite Android 6.0 (API niveau 23) ou supérieur et un appareil avec un lecteur d’empreintes digitales. 
 

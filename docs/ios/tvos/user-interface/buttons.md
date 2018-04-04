@@ -1,18 +1,17 @@
 ---
 title: Utilisation des boutons
-description: "Cet article décrit la conception et l’utilisation des boutons à l’intérieur d’une application Xamarin.tvOS."
-ms.topic: article
+description: Cet article décrit la conception et l’utilisation des boutons à l’intérieur d’une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 5da834e7e77fb8ab080c124bd09653bc840be3b0
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: e915e96690fe67f0e704ec558313427f01753438
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-buttons"></a>Utilisation des boutons
 
@@ -141,7 +140,7 @@ Pour plus d’informations sur l’utilisation des plans conceptuels, veuillez c
 
 ## <a name="buttons-and-code"></a>Boutons et Code
 
-Si vous le souhaitez, un `UIButton` peut être créée dans le code c# et ajoutées à la vue de l’application tvOS. Exemple :
+Si vous le souhaitez, un `UIButton` peut être créée dans le code c# et ajoutées à la vue de l’application tvOS. Par exemple :
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -169,7 +168,7 @@ Ensuite, vous définissez la taille à l’écran et l’emplacement du bouton. 
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-Ensuite, définissez le titre du bouton. `UIButtons` est différent de celui de la plupart `UIKit` contrôles dans la mesure où ils ont un état, donc vous ne pouvez pas simplement modifier le titre, vous devez le modifier pour une donnée `UIControlState`. Exemple :
+Ensuite, définissez le titre du bouton. `UIButtons` est différent de celui de la plupart `UIKit` contrôles dans la mesure où ils ont un état, donc vous ne pouvez pas simplement modifier le titre, vous devez le modifier pour une donnée `UIControlState`. Par exemple :
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
@@ -206,19 +205,19 @@ tvOS fournit plusieurs propriétés d’un `UIButton` qui peut être utilisé po
 
 ### <a name="button-titles"></a>Titres de bouton
 
-Comme nous l’avons vu, `UIButtons` diffèrent de la plupart `UIKit` contrôles dans la mesure où ils ont un état, donc vous ne pouvez pas simplement modifier le titre, vous devez la changer pour une donnée `UIControlState`. Exemple :
+Comme nous l’avons vu, `UIButtons` diffèrent de la plupart `UIKit` contrôles dans la mesure où ils ont un état, donc vous ne pouvez pas simplement modifier le titre, vous devez la changer pour une donnée `UIControlState`. Par exemple :
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-Vous pouvez définir la couleur du titre du bouton à l’aide de la `SetTitleColor` (méthode). Exemple :
+Vous pouvez définir la couleur du titre du bouton à l’aide de la `SetTitleColor` (méthode). Par exemple :
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-Et vous pouvez ajuster le titre de l’ombre à l’aide de la `SetTitleShadowColor`. Exemple :
+Et vous pouvez ajuster le titre de l’ombre à l’aide de la `SetTitleShadowColor`. Par exemple :
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -230,7 +229,7 @@ Vous pouvez définir l’ombre du titre pour changer de *Engraved* à *relief* l
 button.ReverseTitleShadowWhenHighlighted = true;
 ```
 
-En outre, vous pouvez utiliser avec attributs de texte en tant que titre du bouton. Exemple :
+En outre, vous pouvez utiliser avec attributs de texte en tant que titre du bouton. Par exemple :
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);

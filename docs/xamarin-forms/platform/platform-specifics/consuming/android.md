@@ -1,18 +1,17 @@
 ---
-title: "Caractéristiques de plate-forme Android"
-description: "Caractéristiques de la plateforme vous permettent de vous permet d’utiliser la fonctionnalité est disponible uniquement sur une plateforme spécifique, sans avoir à implémenter des convertisseurs personnalisés ou les effets. Cet article montre comment consommer les spécificités de plate-forme Android qui sont intégrées dans Xamarin.Forms."
-ms.topic: article
+title: Caractéristiques de plate-forme Android
+description: Caractéristiques de la plateforme vous permettent de vous permet d’utiliser la fonctionnalité est disponible uniquement sur une plateforme spécifique, sans avoir à implémenter des convertisseurs personnalisés ou les effets. Cet article montre comment consommer les spécificités de plate-forme Android qui sont intégrées dans Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: dfc46b5caa14c1c02d1c2afaffecc701fea59e2c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-platform-specifics"></a>Caractéristiques de plate-forme Android
 

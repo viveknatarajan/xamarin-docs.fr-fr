@@ -1,5 +1,5 @@
 #<a name="---"></a>---
-titre : « Partie 6 – test et App Store approbations » ms.topic : article ms.prod : xamarin ms.assetid : 46E0578A-7EB9-C105-ABB0-A043E501F36B ms.technology : xamarin-inter-plateformes auteur : asb3993 ms.author : amburns ms.date : 23/03/2017
+titre : « Partie 6 – test et App Store approbations » ms.prod : xamarin ms.assetid : 46E0578A-7EB9-C105-ABB0-A043E501F36B ms.technology : xamarin-inter-plateformes auteur : asb3993 ms.author : amburns ms.date : 23/03/2017
 ---
 
 # <a name="part-6---testing-and-app-store-approvals"></a>Partie 6 - test et les approbations de l’App Store

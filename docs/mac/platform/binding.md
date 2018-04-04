@@ -1,18 +1,17 @@
 ---
-title: "Bibliothèques de liaison Mac"
-description: "Liens de ce guide dans d’autres documents qui décrivent comment créer des liaisons pour Objective-C librariesl"
-ms.topic: article
+title: Bibliothèques de liaison Mac
+description: Liens de ce guide dans d’autres documents qui décrivent comment créer des liaisons pour Objective-C librariesl
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/13/2017
-ms.openlocfilehash: 918c02542ee861b44411c29b01510a92659dee42
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c70a34acbdac6339a96000a2f987d4ac4f3d6a45
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-mac-libraries"></a>Bibliothèques de liaison Mac
 
@@ -27,7 +26,7 @@ Suivez ces liens pour en savoir plus sur la liaison des bibliothèques Objective
   décrit tous les attributs disponibles pour les auteurs de la liaison pour piloter le processus de génération de liaison.
 
 
-<a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objectif Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
+<a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 -------------------
 
 Objectif Sharpie est un outil de ligne de commande permettant de démarrer le premier test d’une liaison.

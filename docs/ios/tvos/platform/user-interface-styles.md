@@ -1,18 +1,17 @@
 ---
-title: "Nouveaux Styles de l’interface utilisateur"
-description: "Cet article traite de la lumière et thèmes de l’interface utilisateur sombre que Apple a ajouté à tvOS 10 et comment les implémenter dans une application Xamarin.tvOS."
-ms.topic: article
+title: Nouveaux Styles de l’interface utilisateur
+description: Cet article traite de la lumière et thèmes de l’interface utilisateur sombre que Apple a ajouté à tvOS 10 et comment les implémenter dans une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: da75a99e842b13d42251cdd1c5195ec66ff4a513
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="new-user-interface-styles"></a>Nouveaux Styles de l’interface utilisateur
 
@@ -132,7 +131,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 
 Dans le développeur requiert un contrôle plus approfondie sur l’apparence d’un élément d’interface utilisateur en fonction du thème de l’interface utilisateur sélectionné, ils peuvent remplacer la `TraitCollectionDidChange` méthode d’un `UIView` ou `UIViewController` classe.
 
-Exemple :
+Par exemple :
 
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
@@ -150,7 +149,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 En fonction de la conception d’une application de tvOS, il peut arriver lorsque le développeur doit substituer la Collection caractéristique d’un élément d’Interface utilisateur donné et de toujours utiliser un thème de l’interface utilisateur spécifique.
 
-Cela est possible à l’aide de la `SetOverrideTraitCollection` méthode sur la `UIViewController` classe. Exemple :
+Cela est possible à l’aide de la `SetOverrideTraitCollection` méthode sur la `UIViewController` classe. Par exemple :
 
 ```csharp
 // Create new trait and configure it
@@ -186,7 +185,7 @@ Apple a ajouté les capacités suivantes lorsque vous modifiez des animations tv
 
 * Le développeur peut spécifier les types d’éléments d’Interface utilisateur basées sur le thème de l’interface utilisateur dans le **inspecteur de l’attribut**:
     
-    * Plusieurs propriétés ont désormais une  **+**  en regard de ce qui peut être sélectionné pour ajouter une version spécifique de thème de l’interface utilisateur : 
+    * Plusieurs propriétés ont désormais une **+** en regard de ce qui peut être sélectionné pour ajouter une version spécifique de thème de l’interface utilisateur : 
 
         [![](user-interface-styles-images/theme08.png "Ajouter une version spécifique de thème de l’interface utilisateur")](user-interface-styles-images/theme08.png#lightbox) 
     

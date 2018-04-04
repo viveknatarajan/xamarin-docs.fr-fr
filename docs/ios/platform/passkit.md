@@ -1,18 +1,17 @@
 ---
 title: PassKit
-description: "Portefeuille est une application iOS de système qui stocke et affiche les codes-barres et autres informations pour lier des transactions des clients sur leur téléphone avec « réels »."
-ms.topic: article
+description: Portefeuille est une application iOS de système qui stocke et affiche les codes-barres et autres informations pour lier des transactions des clients sur leur téléphone avec « réels ».
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 279b5bc1188c973fddc033f9b592e9acec703a59
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1c8ac92c5ff7eed5116587ed13755ddee74a877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passkit"></a>PassKit
 
@@ -25,7 +24,7 @@ Ce document présente le portefeuille, à l’aide de l’API du Kit de transmet
  [![](passkit-images/image1.png "Le portefeuille stocke et d’organise tous les tests sur un téléphone")](passkit-images/image1.png#lightbox)
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les fonctions de magasin Kit abordées dans ce document requièrent iOS 6 et Xcode 4.5, ainsi que de Xamarin.iOS 6.0.
 
@@ -238,7 +237,7 @@ Pour créer un faire passer un ID de Type suit.
 
 La première étape consiste à configurer un ID de Type passer pour chaque autre _type_ de passe d’être pris en charge. Le transmettre l’ID (ou l’identificateur de passer un Type) crée un identificateur unique pour le test. Nous allons utiliser cet ID pour lier la passe de votre compte de développeur à l’aide d’un certificat.
 
-1. Dans le [section certificats, les identificateurs et les profils du portail d’approvisionnement iOS](https://developer.apple.com/account/overview.action), accédez à **identificateurs** et sélectionnez **passer un ID de Type** . Puis sélectionnez le  **+**  bouton permettant de créer un nouveau type de test : [ ![ ] (passkit-images/passid.png "créer un nouveau type de test")](passkit-images/passid.png#lightbox)
+1. Dans le [section certificats, les identificateurs et les profils du portail d’approvisionnement iOS](https://developer.apple.com/account/overview.action), accédez à **identificateurs** et sélectionnez **passer un ID de Type** . Puis sélectionnez le **+** bouton permettant de créer un nouveau type de test : [ ![ ] (passkit-images/passid.png "créer un nouveau type de test")](passkit-images/passid.png#lightbox)
 
 2.   Fournir un **Description** (nom) et **identificateur** (chaîne unique) pour le test. Notez que tous les ID de Type passer doit commencer par la chaîne `pass.` dans cet exemple, nous utilisons `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "fournir une Description et un identificateur")](passkit-images/register.png#lightbox)
 

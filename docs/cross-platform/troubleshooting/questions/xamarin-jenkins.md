@@ -1,16 +1,16 @@
 ---
-title: "Pourquoi n’est pas Jenkins prend-il en charge Xamarin ?"
-ms.topic: article
+title: Pourquoi n’est pas Jenkins prend-il en charge Xamarin ?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 8129229a821edd2ef4f251679ee46bca7b74c8f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8112f9bfc8975b12e3c300c0c981d21749173f7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="why-isnt-jenkins-supported-by-xamarin"></a>Pourquoi n’est pas Jenkins prend-il en charge Xamarin ?
 
@@ -50,7 +50,7 @@ ou
 
 > Erreur : L’Édition Starter de Xamarin.iOS ne prend pas en charge la génération en dehors de Xamarin Studio 
 
-La cause la plus courante de ce scénario est l’utilisation de Jenkins en se connectant à un compte d’utilisateur non associé à votre licence Xamarin. La façon la plus simple de résoudre ce problème, consiste à installer de Jenkins en tant qu’application directement via le compte d’utilisateur. Que les processus et certaines considérations supplémentaires sont décrits ici : [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
+La cause la plus courante de ce scénario est l’utilisation de Jenkins en se connectant à un compte d’utilisateur non associé à votre licence Xamarin. La façon la plus simple de résoudre ce problème, consiste à installer de Jenkins en tant qu’application directement via le compte d’utilisateur. Ce processus et certaines considérations supplémentaires sont décrits ici : [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
 
 Une autre possibilité est que vos informations de licence Xamarin sont corrompues, vous pouvez utiliser la [guide de resynchronisation des licences Xamarin](~/cross-platform/troubleshooting/legacy-licenses/resync-licenses.md) pour résoudre les problèmes de ce scénario.
 

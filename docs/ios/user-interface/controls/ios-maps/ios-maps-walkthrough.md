@@ -1,18 +1,17 @@
 ---
 title: Les annotations et les superpositions
-description: "Cet article présente une procédure pas à pas montrant comment tirer parti des fonctionnalités d’annotation et superposition de Kit de la carte. Il montre comment ajouter un mappage à une application qui affiche un segment de recouvrement et d’annotation à l’emplacement de la conférence 2013 évoluer de Xamarin."
-ms.topic: article
+description: Cet article présente une procédure pas à pas montrant comment tirer parti des fonctionnalités d’annotation et superposition de Kit de la carte. Il montre comment ajouter un mappage à une application qui affiche un segment de recouvrement et d’annotation à l’emplacement de la conférence 2013 évoluer de Xamarin.
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 807ae6554d029120ad28f8fb8cc6c57ba3b58c8c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9defbade6fafefb26d87e88665c491b3a559c1ae
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="annotations-and-overlays--walkthrough"></a>Les annotations et les superpositions : procédure pas à pas
 

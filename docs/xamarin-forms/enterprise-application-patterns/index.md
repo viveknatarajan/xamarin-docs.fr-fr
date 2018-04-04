@@ -1,18 +1,17 @@
 ---
-title: "Modèles d’Application d’entreprise à l’aide de livre électronique de Xamarin.Forms"
-description: "Directives architecturales pour développer des applications d’entreprise Xamarin.Forms adaptables, testables et facile à gérer"
-ms.topic: article
+title: Modèles d’Application d’entreprise à l’aide de livre électronique de Xamarin.Forms
+description: Directives architecturales pour développer des applications d’entreprise Xamarin.Forms adaptables, testables et facile à gérer
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 7ed546ac975ce1956d94d509486e4cfb25d28100
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: b7f69e987eb4f628dfaf5422bc1ce52108d90634
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Modèles d’Application d’entreprise à l’aide de livre électronique de Xamarin.Forms
 

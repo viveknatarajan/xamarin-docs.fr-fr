@@ -1,18 +1,17 @@
 ---
-title: "Fonctionnalités de glace Sandwich"
-description: "Cet article décrit plusieurs des nouvelles fonctionnalités disponibles aux développeurs d’applications avec l’API Android de 4 - Sandwich de glace. Elle couvre plusieurs nouvelles technologies d’interface utilisateur et examine un éventail de fonctionnalités nouvelles qui Android 4 offre de partage des données entre les applications et entre les appareils."
-ms.topic: article
+title: Fonctionnalités de glace Sandwich
+description: Cet article décrit plusieurs des nouvelles fonctionnalités disponibles aux développeurs d’applications avec l’API Android de 4 - Sandwich de glace. Elle couvre plusieurs nouvelles technologies d’interface utilisateur et examine un éventail de fonctionnalités nouvelles qui Android 4 offre de partage des données entre les applications et entre les appareils.
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: c2e7f9fabd462faf813299021d5f84ef0a62f790
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c5412629f6dcd31fb0a82634ef530569eef459a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ice-cream-sandwich-features"></a>Fonctionnalités de glace Sandwich
 

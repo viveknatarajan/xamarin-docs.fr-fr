@@ -1,24 +1,23 @@
 ---
 title: Portable Visual Basic.NET
-description: "Ce guide explique comment Visual Basic peut être utilisé pour écrire des projets de bibliothèque de classes Portable (PCL) qui peuvent être utilisés dans les solutions ciblant Xamarin.iOS et Xamarin.Android."
-ms.topic: article
+description: Ce guide explique comment Visual Basic peut être utilisé pour écrire des projets de bibliothèque de classes Portable (PCL) qui peuvent être utilisés dans les solutions ciblant Xamarin.iOS et Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 978d9e569825e20b40e963f590049eaab1d4e752
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a4ecad0b28dc4b8ba4060966ccefb678c8e6794
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="portable-visual-basicnet"></a>Portable Visual Basic.NET
 
 Projets Xamarin iOS et Android ne pas en mode natif prennent en charge Visual Basic. Toutefois, les développeurs peuvent utiliser les bibliothèques de classes portables pour la migration de code Visual Basic existant pour iOS et Android, ou d’écrire une partie importante de leur logique d’application dans Visual Basic. Xamarin.Forms applications peuvent être créées uniquement dans Visual Basic (à l’exclusion des convertisseurs personnalisés et services de dépendance avec code-behind XAML).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Prise en charge de bibliothèque de classes portable a été ajoutée dans Xamarin.Android 4.10.1, Xamarin.iOS 7.0.4 et Xamarin Studio 4.2, ce qui signifie que tous les projets Xamarin créés avec ces outils peuvent incorporer des assemblys de bibliothèque de classes portables Visual Basic.
 

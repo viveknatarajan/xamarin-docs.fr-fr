@@ -1,28 +1,27 @@
 ---
 title: Interface utilisateur
-description: "Création d’Interfaces utilisateur pour les applications de Xamarin.Android"
-ms.topic: article
+description: Création d’Interfaces utilisateur pour les applications de Xamarin.Android
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 40d02def5c0aae3334ae59cec78f6d22a1d5d772
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 152f5551e2f539e8ab93121c35c2acca7eb7f2e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>Interface utilisateur
 
 Les sections suivantes expliquent les différents outils et des blocs de construction qui permettent de composer des interfaces utilisateur dans les applications Xamarin.Android.
 
-## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Concepteur Android](~/android/user-interface/android-designer/index.md)
+## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android Designer](~/android/user-interface/android-designer/index.md)
 
 Cette section explique comment utiliser le concepteur Android pour disposer les contrôles visuellement et de modifier les propriétés. Elle explique également comment utiliser le concepteur pour travailler avec des interfaces utilisateur et les ressources dans différentes configurations, telles que les thèmes, les langues et les configurations de périphérique, ainsi que la conception pour des vues comme paysage et portrait.
 
-## <a name="material-themeandroiduser-interfacematerial-thememd"></a>[Thème matière](~/android/user-interface/material-theme.md)
+## <a name="material-themeandroiduser-interfacematerial-thememd"></a>[Thème matériau](~/android/user-interface/material-theme.md)
 
 *Thème matière* est le style d’interface utilisateur qui détermine l’apparence des vues et des activités dans Android. Thème matière est intégré dans Android, afin qu’il est utilisé par le système de l’interface utilisateur, ainsi que par des applications. Ce guide présente les principes de conception de matériel et explique comment le thème une application à l’aide de thèmes intégrés de matériel ou d’un thème personnalisé.
 

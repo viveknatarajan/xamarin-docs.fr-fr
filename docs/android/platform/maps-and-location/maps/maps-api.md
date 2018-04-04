@@ -1,17 +1,16 @@
 ---
 title: API de mappages
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 48e8827895001d2b1887816a9368fcc5bbc50bbf
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: fc16178a4068b2dcf22fc19047e0ef403e83633f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="maps-api"></a>API de mappages
 
@@ -207,7 +206,7 @@ Similaire à d’autres classes de Fragment, il existe deux façons d’ajouter 
 Pour ajouter par programmation un `MapFragment`, votre activité doit implémenter la `IOnMapReadyCallback` interface. Étant donné que l’initialisation d’un `GoogleMap` objet peut prendre du temps comme l’API communique avec Google Play, vous devez fournir un rappel qui notifie votre application lorsque le `GoogleMap` est prêt.
 
 Tout d’abord, ajoutez `IOnMapReadyCallback` à la `Activity` déclaration de classe.
-Exemple :
+Par exemple :
 
 ```csharp
 public class MapWithMarkersActivity : Activity, IOnMapReadyCallback
@@ -232,7 +231,7 @@ if (_mapFragment == null)
 _mapFragment.GetMapAsync(this);
 ```
 
-A `GoogleMap` doit être acquis à l’aide de `GetMapAsync`, comme illustré à la fin de l’exemple de code précédent &ndash; ce code initialise automatiquement le système de mappages et de la vue. (Notez que cette méthode n’utilise pas `await` / `async` sémantique &ndash; le `Async` comportement est implémenté par Android.) Lorsque le `GoogleMap` objet est prêt, Android appelle de votre application `OnMapReady` (méthode) (que vous devez implémenter dans le cadre de la `IOnMapReadyCallback` interface). Exemple :
+A `GoogleMap` doit être acquis à l’aide de `GetMapAsync`, comme illustré à la fin de l’exemple de code précédent &ndash; ce code initialise automatiquement le système de mappages et de la vue. (Notez que cette méthode n’utilise pas `await` / `async` sémantique &ndash; le `Async` comportement est implémenté par Android.) Lorsque le `GoogleMap` objet est prêt, Android appelle de votre application `OnMapReady` (méthode) (que vous devez implémenter dans le cadre de la `IOnMapReadyCallback` interface). Par exemple :
 
 ```csharp
 public void OnMapReady (GoogleMap map)

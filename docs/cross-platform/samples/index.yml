@@ -2,43 +2,43 @@
 documentType: LandingData
 title: Exemples multiplateformes
 metadata:
-  description: "Exemples d’applications Xamarin multiplateformes pour les développeurs d’applications mobiles."
+  description: Exemples d’applications Xamarin multiplateformes pour les développeurs d’applications mobiles.
   author: conceptdev
   ms.author: crdun
   ms.date: 02/26/2018
-  ms.topic: article
-  ms.openlocfilehash: 24f32938930d7cf13374536f9513640ab8e834dc
-  ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+  ms.topic: sample
+  ms.openlocfilehash: e60722dbd99ab845c63eee2c585905f8d06e5279
+  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/12/2018
+  ms.lasthandoff: 04/04/2018
 abstract:
-  description: "Exemples d’applications multiplateformes et démonstrations de code Xamarin pour vous aider à créer des applications mobiles avec C# et Xamarin."
+  description: Exemples d’applications multiplateformes et démonstrations de code Xamarin pour vous aider à créer des applications mobiles avec C# et Xamarin.
   menu:
     items:
     - href: https://developer.xamarin.com/samples/
       text: Tous les exemples Xamarin
 sections:
-- title: "Bien démarrer"
+- title: Bien démarrer
   items:
   - type: list
     style: cards
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: "Cet exemple illustre une application de liste Todo où les données sont accessibles et stockées dans une base de données SQLite locale créée avec Xamarin.Forms."
+      html: Cet exemple illustre une application de liste Todo où les données sont accessibles et stockées dans une base de données SQLite locale créée avec Xamarin.Forms.
       image:
         src: images/todo.png
         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
       title: Todo
     - href: https://github.com/xamarinhq/app-myshoppe
-      html: "Application de démonstration qui permet aux vendeurs de suivre les performances de leurs ventes, gérer les prospects, voir leurs contacts, gérer les commandes et parcourir le catalogue de produits."
+      html: Application de démonstration qui permet aux vendeurs de suivre les performances de leurs ventes, gérer les prospects, voir leurs contacts, gérer les commandes et parcourir le catalogue de produits.
       image:
         src: images/myshoppe.png
         href: https://github.com/xamarinhq/app-myshoppe
       title: My Shoppe
     - href: https://github.com/xamarin/app-crm
-      html: "Application de démonstration qui permet aux vendeurs de suivre les performances de leurs ventes, gérer les prospects, voir leurs contacts, gérer les commandes et parcourir le catalogue de produits."
+      html: Application de démonstration qui permet aux vendeurs de suivre les performances de leurs ventes, gérer les prospects, voir leurs contacts, gérer les commandes et parcourir le catalogue de produits.
       image:
         src: images/crm.png
         href: https://github.com/xamarin/app-crm
@@ -50,25 +50,25 @@ sections:
     className: cardsW
     items:
     - href: https://github.com/xamarinhq/app-acquaint/
-      html: "Application de liste de contacts avec un écran pour les détails et la modification. Le code source est disponible dans les implémentations natives Xamarin.Forms et Xamarin."
+      html: Application de liste de contacts avec un écran pour les détails et la modification. Le code source est disponible dans les implémentations natives Xamarin.Forms et Xamarin.
       image:
         src: images/acquaint.jpg
         href: https://github.com/xamarinhq/app-acquaint
       title: Acquaint
     - href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
-      html: "Démonstration Connect 2017 de création d’une suite d’applications avec Xamarin et Azure."
+      html: Démonstration Connect 2017 de création d’une suite d’applications avec Xamarin et Azure.
       image:
         src: images/smarthotel360.png
         href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
       title: SmartHotel360
     - href: https://github.com/Microsoft/BikeSharing360_MobileApps
-      html: "Démonstration Connect 2016 de création d’une suite d’applications avec Xamarin et Azure."
+      html: Démonstration Connect 2016 de création d’une suite d’applications avec Xamarin et Azure.
       image:
         src: images/bikesharing360.png
         href: https://github.com/Microsoft/BikeSharing360_MobileApps
       title: BikeSharing360
     - href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
-      html: "Guide d’architecture d’entreprise pour créer des applications à l’aide de conteneurs dans Azure."
+      html: Guide d’architecture d’entreprise pour créer des applications à l’aide de conteneurs dans Azure.
       image:
         src: images/eshop.png
         href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
@@ -80,7 +80,7 @@ sections:
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/
-      html: "Ensemble complet d’exemples d’applications multiplateformes et de démonstrations de code Xamarin."
+      html: Ensemble complet d’exemples d’applications multiplateformes et de démonstrations de code Xamarin.
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/

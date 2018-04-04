@@ -1,17 +1,17 @@
 ---
-title: "Forum aux Questions de licence hérité"
-ms.topic: article
+title: Forum aux Questions de licence hérité
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: E7137ABE-9B34-4C36-BEE6-B2601183CD38
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 934c3cc2d5e506fc9f39137a9cee2d1f7d59f13e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 020c263a18f72e9837fcaa3dea2d54177245efb8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="legacy-license-frequently-asked-questions"></a>Forum aux Questions de licence hérité
 
@@ -22,14 +22,14 @@ ms.lasthandoff: 02/27/2018
 ### <a name="team-license-managementteam-managementmd"></a>[Gestion des licences](team-management.md)
 Si vous avez un siège de licence Xamarin vide, vous pouvez inviter un membre d’équipe pour qu’il occuper en suivant ces étapes.
 
-### <a name="how-do-i-change-my-accounts-email-addresschange-emailmd"></a>[Comment modifier les adresse e-mail de mon compte ?](change-email.md)
+### <a name="how-do-i-change-my-accounts-email-addresschange-emailmd"></a>[Comment modifier l'adresse e-mail de mon compte ?](change-email.md)
 Pour modifier l’adresse de messagerie associée à votre compte Xamarin, envoyez un message électronique [ hello@xamarin.com ](mailto:hello@xamarin.com) à partir de l’adresse associée à votre Xamarin compte et indiquer la nouvelle adresse que vous souhaitez utiliser. 
 
-### <a name="how-do-i-manually-resynchronize-xamarin-licensesresync-licensesmd"></a>[Comment resynchroniser manuellement les licences Xamarin ?](resync-licenses.md)
+### <a name="how-do-i-manually-resynchronize-xamarin-licensesresync-licensesmd"></a>[Comment resynchroniser manuellement les licences Xamarin ?](resync-licenses.md)
 Ce guide fournit les étapes de base et étendus pour resyncronizing vos licences de plateforme Xamarin pour résoudre les erreurs d’activation pour les titulaires de licence Xamarin hérités.
 
-### <a name="some-specific-licensing-errorslicensing-errorsmd"></a>[Des erreurs de licences spécifiques](licensing-errors.md)
+### <a name="some-specific-licensing-errorslicensing-errorsmd"></a>[Erreurs de licence spécifiques](licensing-errors.md)
 Ce guide couvre les messages d’erreur courants et les étapes de dépannage pour les licences de plateforme Xamarin hérités.
 
-### <a name="why-cant-i-log-into-xamarin-in-visual-studio-or-visual-studio-for-maclogin-troubleshootingmd"></a>[Pourquoi ne puis-je pas consigner dans Xamarin dans Visual Studio ou Visual Studio pour Mac ?](login-troubleshooting.md)
+### <a name="why-cant-i-log-into-xamarin-in-visual-studio-or-visual-studio-for-maclogin-troubleshootingmd"></a>[Pourquoi ne puis-je pas me connecter à Xamarin dans Visual Studio ou Visual Studio pour Mac ?](login-troubleshooting.md)
 Il existe quelques causes courantes qui peuvent vous empêcher de se connecter à votre compte Xamarin dans l’IDE. Correctifs et les problèmes connus sont décrits dans ce guide.

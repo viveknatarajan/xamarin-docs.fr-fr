@@ -1,17 +1,16 @@
 ---
 title: Autorisations de Xamarin.Android
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/09/2018
-ms.openlocfilehash: 39ee7f826d4c775ead679a09ce56a7c0f92b60ed
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: b8a8005c69c8aaee5d92bdabb3429bd52fc76b4a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="permissions-in-xamarinandroid"></a>Autorisations de Xamarin.Android
 
@@ -54,7 +53,7 @@ Ce document explique comment ajouter des autorisations à une application de Xam
 
 <a name="requirements" />
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Il est fortement recommandé que les projets Xamarin.Android incluent le [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) package NuGet. Cette autorisation de backport package sera API spécifiques à des versions antérieures d’Android, en fournissant un commun de l’interface sans devoir constamment vérifier la version d’Android l’application est en cours d’exécution.
 

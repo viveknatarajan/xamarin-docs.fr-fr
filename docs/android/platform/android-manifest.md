@@ -1,17 +1,16 @@
 ---
 title: Utilisation avec le manifeste Android
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CB7CCF60-FEF1-3B28-215F-159391E74347
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 18817063900437baa625d8572f0ae28fec77be1e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-the-android-manifest"></a>Utilisation avec le manifeste Android
 
@@ -84,7 +83,7 @@ Cet exemple génère le fragment xml suivant :
 ### <a name="activity-title-bar"></a>Barre de titre d’activité
 
 Par défaut, Android donne à votre application une barre de titre lorsqu’il est exécuté. La valeur utilisée pour ce est [ `/manifest/application/activity/@android:label` ](http://developer.android.com/guide/topics/manifest/activity-element.html#label). Dans la plupart des cas, cette valeur diffère du nom de votre classe. Pour spécifier l’étiquette de votre application sur la barre de titre, utilisez la [ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) propriété.
-Exemple : 
+Par exemple : 
 
 ```csharp
 [Activity (Label="Awesome Demo App")]
@@ -103,7 +102,7 @@ Cet exemple génère le fragment xml suivant :
 
 ### <a name="launchable-from-application-chooser"></a>Accessible à partir du sélecteur de l’Application
 
-Par défaut, votre activité s’afficheront pas dans l’écran de lancement de l’application d’Android. Il s’agit, car il y aura probablement de nombreuses activités dans votre application, et vous ne voulez pas une icône pour chacun. Pour spécifier l’application doit être accessible depuis le Lanceur d’applications, utilisez la [ `MainLauncher` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.MainLauncher/) propriété. Exemple : 
+Par défaut, votre activité s’afficheront pas dans l’écran de lancement de l’application d’Android. Il s’agit, car il y aura probablement de nombreuses activités dans votre application, et vous ne voulez pas une icône pour chacun. Pour spécifier l’application doit être accessible depuis le Lanceur d’applications, utilisez la [ `MainLauncher` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.MainLauncher/) propriété. Par exemple : 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true)] 
@@ -128,7 +127,7 @@ Cet exemple génère le fragment xml suivant :
 
 ### <a name="activity-icon"></a>Icône d’activité
 
-Par défaut, votre activité a l’icône de lancement par défaut fourni par le système. Pour utiliser une icône personnalisée, ajoutez d’abord votre **.png** à **drawable/ressources**, définissez son Action de génération **AndroidResource**, puis utilisez le [ `Icon` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/) propriété pour spécifier l’icône à utiliser. Exemple : 
+Par défaut, votre activité a l’icône de lancement par défaut fourni par le système. Pour utiliser une icône personnalisée, ajoutez d’abord votre **.png** à **drawable/ressources**, définissez son Action de génération **AndroidResource**, puis utilisez le [ `Icon` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/) propriété pour spécifier l’icône à utiliser. Par exemple : 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -177,7 +176,7 @@ Dans la version build version du manifeste (à **obj/Debug/android/AndroidManife
 
 ### <a name="intent-actions-and-features"></a>Fonctions et Actions intentionnels
 
-Le manifeste Android fournit un moyen de décrire les capacités de votre activité. Cette opération est effectuée [intentions](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) et [ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) attribut personnalisé. Vous pouvez spécifier quelles actions sont appropriées pour votre activité avec la [ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) constructeur, et les catégories sont appropriés avec les [ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) propriété. Au moins une activité doit être fournie (qui est la raison pour laquelle les activités sont fournies dans le constructeur). `[IntentFilter]` peut être fourni plusieurs fois, et chaque utilisation entraîne un distinct `<intent-filter/>` élément dans le `<activity/>`. Exemple :
+Le manifeste Android fournit un moyen de décrire les capacités de votre activité. Cette opération est effectuée [intentions](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) et [ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) attribut personnalisé. Vous pouvez spécifier quelles actions sont appropriées pour votre activité avec la [ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) constructeur, et les catégories sont appropriés avec les [ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) propriété. Au moins une activité doit être fournie (qui est la raison pour laquelle les activités sont fournies dans le constructeur). `[IntentFilter]` peut être fourni plusieurs fois, et chaque utilisation entraîne un distinct `<intent-filter/>` élément dans le `<activity/>`. Par exemple :
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

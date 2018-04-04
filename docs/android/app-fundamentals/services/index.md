@@ -1,18 +1,17 @@
 ---
-title: "Création de Services Android"
-description: "Ce guide décrit les services de Xamarin.Android, qui sont des composants Android qui permettent de travail à faire sans interface utilisateur actif. Les services sont fréquemment utilisées pour les tâches qui sont exécutées en arrière-plan, telles que des calculs beaucoup de temps, téléchargement de fichiers, audio et ainsi de suite. Il explique les différents scénarios de services sont adaptés à et montre comment les implémenter à la fois pour effectuer des tâches d’arrière-plan longues, ainsi que pour fournir une interface pour les appels de procédure distante."
-ms.topic: article
+title: Création de Services Android
+description: Ce guide décrit les services de Xamarin.Android, qui sont des composants Android qui permettent de travail à faire sans interface utilisateur actif. Les services sont fréquemment utilisées pour les tâches qui sont exécutées en arrière-plan, telles que des calculs beaucoup de temps, téléchargement de fichiers, audio et ainsi de suite. Il explique les différents scénarios de services sont adaptés à et montre comment les implémenter à la fois pour effectuer des tâches d’arrière-plan longues, ainsi que pour fournir une interface pour les appels de procédure distante.
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/19/2018
-ms.openlocfilehash: 08392872037783e0caaef4f2b19127adbe95151b
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: 2e942d1085822fee935ae0f23f2253f23d49a43d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-android-services"></a>Création de Services Android
 
@@ -45,7 +44,7 @@ Il existe quatre différents types de services Android :
 
 * **Lié Service** &ndash; A _lié service_ est un service qui a un autre composant (généralement une activité), qui lui est associée. Un service lié fournit une interface qui permet au service d’interagir entre eux et le composant lié. Une fois qu’il n’y a plus aucun client lié au service, Android va arrêter le service. 
 
-* **`IntentService`** &ndash; Un  _`IntentService`_  est une sous-classe spécialisée de la `Service` classe qui simplifie la création de services et d’utilisation. Un `IntentService` est destinée à traiter des appels autonomes individuels. Contrairement à un service, ce qui peut gérer simultanément plusieurs appels, un `IntentService` ressemble davantage un _processeur de la file d’attente de travail_ &ndash; travail est la file d’attente et un `IntentService` traite chaque travail d’un à la fois sur un thread de travail unique. En règle générale, une`IntentService` n’est pas lié à une activité ou un Fragment. 
+* **`IntentService`** &ndash; Un _`IntentService`_ est une sous-classe spécialisée de la `Service` classe qui simplifie la création de services et d’utilisation. Un `IntentService` est destinée à traiter des appels autonomes individuels. Contrairement à un service, ce qui peut gérer simultanément plusieurs appels, un `IntentService` ressemble davantage un _processeur de la file d’attente de travail_ &ndash; travail est la file d’attente et un `IntentService` traite chaque travail d’un à la fois sur un thread de travail unique. En règle générale, une`IntentService` n’est pas lié à une activité ou un Fragment. 
 
 * **Démarrage du Service de** &ndash; A _service démarré_ est un service qui a été démarré par un autre composant Android (par exemple, une activité) et l’exécution en continu en arrière-plan jusqu'à ce qu’un élément indique explicitement la arrêt du service. Contrairement à un service lié, un service démarré n’a pas de tous les clients directement liés à celui-ci. Pour cette raison, il est important de concevoir les services démarrés afin qu’ils peuvent être redémarrés normalement si nécessaire.
 

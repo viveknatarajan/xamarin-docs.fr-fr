@@ -1,18 +1,17 @@
 ---
-title: "Configuration requise et Installation de l’inspecteur"
-description: "Comment télécharger, installer et utiliser l’inspecteur de Xamarin."
-ms.topic: article
+title: Configuration requise et Installation de l’inspecteur
+description: Comment télécharger, installer et utiliser l’inspecteur de Xamarin.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: d93481a865be1ee9272c7ce7969bdb6ebd6b5536
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 93f42eef8d76074f6b672bc5a663e8f8f1d2ef80
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="inspector-installation-and-requirements"></a>Configuration requise et Installation de l’inspecteur
 
@@ -31,7 +30,7 @@ ms.lasthandoff: 03/16/2018
 
 -----
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 
@@ -95,7 +94,7 @@ Attachez toujours IDE et l’inspecteur de fichiers journaux du client.
 Client de l’inspecteur
 
 - Mac : `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows : `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Windows : `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
 1.4.x offre également la possibilité de sélectionner le fichier journal dans le Finder (macOS) ou de l’Explorateur (Windows) directement à partir du menu principal :
 

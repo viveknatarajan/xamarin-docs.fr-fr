@@ -1,18 +1,17 @@
 ---
-title: "Navigation hiérarchique"
-description: "La classe NavigationPage fournit une expérience de navigation hiérarchique où l’utilisateur est en mesure de parcourir les pages, vers l’avant et vers l’arrière, comme vous le souhaitez. La classe implémente la navigation en tant que dernier entré, premier sorti (LIFO) pile d’objets de la Page. Cet article explique comment utiliser la classe NavigationPage pour effectuer la navigation dans une pile de pages."
-ms.topic: article
+title: Navigation hiérarchique
+description: La classe NavigationPage fournit une expérience de navigation hiérarchique où l’utilisateur est en mesure de parcourir les pages, vers l’avant et vers l’arrière, comme vous le souhaitez. La classe implémente la navigation en tant que dernier entré, premier sorti (LIFO) pile d’objets de la Page. Cet article explique comment utiliser la classe NavigationPage pour effectuer la navigation dans une pile de pages.
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 95fc958beb71cba8f4d575eaa96d0612aa458966
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hierarchical-navigation"></a>Navigation hiérarchique
 

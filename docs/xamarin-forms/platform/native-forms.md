@@ -1,18 +1,17 @@
 ---
 title: Formulaires natifs
-description: "Formulaires natifs autorisent Xamarin.Forms ContentPage dérivé des pages à être consommés par les projets natifs Xamarin.iOS, Xamarin.Android et plateforme Windows universelle (UWP). Les projets natifs peuvent consommer des pages ContentPage dérivé directement ajoutés au projet, ou à partir d’une bibliothèque de classes Portable (PCL), la bibliothèque Standard de .NET ou le projet partagé. Cet article explique comment consommer des pages ContentPage dérivées qui sont ajoutés directement à des projets natifs et comment naviguer entre elles."
-ms.topic: article
+description: Formulaires natifs autorisent Xamarin.Forms ContentPage dérivé des pages à être consommés par les projets natifs Xamarin.iOS, Xamarin.Android et plateforme Windows universelle (UWP). Les projets natifs peuvent consommer des pages ContentPage dérivé directement ajoutés au projet, ou à partir d’une bibliothèque de classes Portable (PCL), la bibliothèque Standard de .NET ou le projet partagé. Cet article explique comment consommer des pages ContentPage dérivées qui sont ajoutés directement à des projets natifs et comment naviguer entre elles.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 5a7d4ab69ff3ccd1a50ea4fccb6e494f7c73fc72
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9d0d4e69228ce8a1d9944833bff80b22ea5f9ddd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-forms"></a>Formulaires natifs
 

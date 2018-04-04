@@ -1,7 +1,6 @@
 ---
-title: "Indexation de l’application et lien profond"
-description: "Indexation de l’application permet aux applications seraient autrement être oubliées après quelques utilise pour rester en apparaissant dans les résultats de la recherche. Lien profond permet à un résultat de recherche qui contient les données d’application, généralement en accédant à une page référencée à partir d’un lien vers des applications. Cet article explique comment utiliser l’indexation de l’application et lien profond pour rendre le contenu de l’application Xamarin.Forms recherche sur des appareils iOS et Android."
-ms.topic: article
+title: Indexation de l’application et lien profond
+description: Indexation de l’application permet aux applications seraient autrement être oubliées après quelques utilise pour rester en apparaissant dans les résultats de la recherche. Lien profond permet à un résultat de recherche qui contient les données d’application, généralement en accédant à une page référencée à partir d’un lien vers des applications. Cet article explique comment utiliser l’indexation de l’application et lien profond pour rendre le contenu de l’application Xamarin.Forms recherche sur des appareils iOS et Android.
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: 38d3b6da0dd33e038f2d50209280f2983faf6013
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d302e24ee74290eecd3dd9ad3f81921d6654cc10
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexation de l’application et lien profond
 

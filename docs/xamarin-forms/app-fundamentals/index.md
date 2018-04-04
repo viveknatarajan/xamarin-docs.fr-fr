@@ -1,18 +1,17 @@
 ---
 title: Notions de base des applications
-description: "Exploration des notions de base du développement de Xamarin.Forms"
-ms.topic: article
+description: Exploration des notions de base du développement de Xamarin.Forms
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: afa3bf25b1448d98c49c95a66bd0f4dc55bde39e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a53c15ebad6081dae2ebc4bd782bcc3644620fe
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Notions de base des applications
 
@@ -24,7 +23,7 @@ Conseils pour intégrer des fonctionnalités accessibles (tels que la prise en c
 
 Le `Application` classe est le point de départ pour Xamarin.Forms – chaque application doit implémenter une sous-classe `App` pour définir la page initiale. Il fournit également la `Properties` collection pour le stockage de données simple. Elle peut être définie en c# ou XAML.
 
-## <a name="app-lifecycleapp-lifecyclemd"></a>[Cycle de vie](app-lifecycle.md)
+## <a name="app-lifecycleapp-lifecyclemd"></a>[Cycle de vie d’application](app-lifecycle.md)
 
 Le `Application` classe `OnStart`, `OnSleep`, et `OnResume` méthodes, ainsi que les événements de navigation modale, vous permettent de gérer les événements de cycle de vie d’application avec du code personnalisé.
 
@@ -32,7 +31,7 @@ Le `Application` classe `OnStart`, `OnSleep`, et `OnResume` méthodes, ainsi que
 
 Contrôles d’interface utilisateur peuvent facilement être étendus sans le sous-classement en utilisant les comportements pour ajouter des fonctionnalités.
 
-## <a name="custom-rendererscustom-rendererindexmd"></a>[Convertisseurs personnalisés](custom-renderer/index.md)
+## <a name="custom-rendererscustom-rendererindexmd"></a>[Renderers personnalisés](custom-renderer/index.md)
 
 Les convertisseurs personnalisés permettent aux développeurs de 'override' le rendu par défaut des contrôles de Xamarin.Forms pour personnaliser leur apparence et leur comportement sur chaque plateforme (à l’aide de kits de développement logiciel natives si vous le souhaitez).
 
@@ -48,7 +47,7 @@ Le `DependencyService` fournit une recherche simple afin que vous pouvez aux int
 
 Autoriser les effets des contrôles natifs sur chaque plateforme pour être personnalisées et sont généralement utilisés pour le style de petites modifications.
 
-## <a name="gesturesgesturesindexmd"></a>[Gestures](gestures/index.md)
+## <a name="gesturesgesturesindexmd"></a>[Gestes](gestures/index.md)
 
 Le Xamarin.Forms [ `GestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) tap, pincement et des mouvements de panoramique prend en charge la classe sur les contrôles d’interface utilisateur.
 

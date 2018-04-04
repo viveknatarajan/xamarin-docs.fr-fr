@@ -1,18 +1,17 @@
 ---
 title: Partie 2. Syntaxe XAML essentiels
-description: "XAML est principalement conçu pour l’instanciation et initialisation d’objets. Souvent, mais propriétés doivent être définies pour les objets complexes ne peuvent pas facilement être représentées en tant que chaînes XML et parfois des propriétés définies par une classe doivent être définies sur une classe enfant. Ces deux besoins nécessitent les fonctionnalités de syntaxe XAML essentielles des éléments de propriété et les propriétés jointes."
-ms.topic: article
+description: XAML est principalement conçu pour l’instanciation et initialisation d’objets. Souvent, mais propriétés doivent être définies pour les objets complexes ne peuvent pas facilement être représentées en tant que chaînes XML et parfois des propriétés définies par une classe doivent être définies sur une classe enfant. Ces deux besoins nécessitent les fonctionnalités de syntaxe XAML essentielles des éléments de propriété et les propriétés jointes.
 ms.prod: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 77ed7c49a901a877d822c2274263bcb8dbe19ac6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 776b0d07de947c01761f8e8d8809b24cf7f3c3cb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Partie 2. Syntaxe XAML essentiels
 

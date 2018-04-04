@@ -1,18 +1,17 @@
 ---
-title: "Fonctionnalités de marshmallow"
-description: "Cet article vous aide à commencer à utiliser dans l’utilisation de Xamarin.Android pour développer des applications pour Android Marshmallow 6.0."
-ms.topic: article
+title: Fonctionnalités de marshmallow
+description: Cet article vous aide à commencer à utiliser dans l’utilisation de Xamarin.Android pour développer des applications pour Android Marshmallow 6.0.
 ms.prod: xamarin
 ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: c9ff9eb0b8d013485f0437d470ec49f1c1795d7a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d2150e18a377d61a2e79fabfc845f57cfab8a5c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="marshmallow-features"></a>Fonctionnalités de marshmallow
 
@@ -56,7 +55,7 @@ En outre, plusieurs mises à jour de bibliothèque Android principaux ont été 
 
 En outre, plusieurs mises à jour de bibliothèque Android principaux ont été publiées dans Android Marshmallow, et ces mises à jour fournissent de nouvelles fonctionnalités pour Android Marshmallow et les versions antérieures d’Android. Cet article explique comment commencer à créer des applications avec Android Marshmallow, et il fournit qu'une vue d’ensemble de la nouvelle fonctionnalité met en évidence dans Android 6.0. 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités d’Android Marshmallow dans les applications Xamarin : 
 

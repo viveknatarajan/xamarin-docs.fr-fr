@@ -1,18 +1,17 @@
 ---
-title: "Création d’un visage espion"
-description: "Ce guide explique comment implémenter un service de face espion personnalisé pour porter Android. Vous trouverez des instructions détaillées pour la création d’un élément supprimé service de face espion numérique, suivie de davantage de code pour créer un type de style analogique espion."
-ms.topic: article
+title: Création d’un visage espion
+description: Ce guide explique comment implémenter un service de face espion personnalisé pour porter Android. Vous trouverez des instructions détaillées pour la création d’un élément supprimé service de face espion numérique, suivie de davantage de code pour créer un type de style analogique espion.
 ms.prod: xamarin
 ms.assetid: 4D3F9A40-A820-458D-A12A-D784BB11F643
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c02755cc3ff5b46a5a97b6c14185794d8ad538d8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-watch-face"></a>Création d’un visage espion
 
@@ -30,7 +29,7 @@ Une fois cette face espion numérique est développée et testée, davantage de 
 
 Espion face services sont regroupés et installés dans le cadre d’une application d’usure. Dans les exemples suivants, `MainActivity` contient rien d’autre que le code à partir du modèle d’application usure afin que le service de face espion peut être empaqueté et déployé à la surveillance active dans le cadre de l’application. En effet, cette application servira exclusivement un véhicule pour obtenir le service de face espion chargé dans le périphérique d’usure (ou l’émulateur) pour le débogage et le test. 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour implémenter un service de face espion, les conditions suivantes sont requises :
 

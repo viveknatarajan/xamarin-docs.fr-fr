@@ -1,18 +1,17 @@
 ---
-title: "Afficher les fenêtres contextuelles"
-description: "Xamarin.Forms fournit deux éléments d’interface utilisateur de pop haut-like : une alerte et une feuille de l’action. Cet article décrit à l’aide de la feuille de l’alerte et l’action API pour demander aux utilisateurs des questions simples et guider les utilisateurs lors des tâches."
-ms.topic: article
+title: Afficher les fenêtres contextuelles
+description: 'Xamarin.Forms fournit deux éléments d’interface utilisateur de pop haut-like : une alerte et une feuille de l’action. Cet article décrit à l’aide de la feuille de l’alerte et l’action API pour demander aux utilisateurs des questions simples et guider les utilisateurs lors des tâches.'
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 87b20dfd8882bf7da58b1bd078930fb69c46a79d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2e0a5ff433de034da0170e3aa9a19ab50ddc3cb6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="displaying-pop-ups"></a>Afficher les fenêtres contextuelles
 

@@ -1,18 +1,17 @@
 ---
-title: "Déploiement à l’App Store"
-description: "Déploiement d’applications de surveillance sur l’App Store"
-ms.topic: article
+title: Déploiement à l’App Store
+description: Déploiement d’applications de surveillance sur l’App Store
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: c5b89570fdd3df80d39c6621fcd12a23babed9ee
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a3c68a0720fbe18f35731cf1a19248c00f748877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deploying-to-the-app-store"></a>Déploiement à l’App Store
 
@@ -38,8 +37,8 @@ ms.lasthandoff: 03/22/2018
 
   - Accédez à la **fenêtre > organisateur** et choisissez **Archives**.
   - Sélectionnez l’application et archivage dans la liste.
-  - (Facultatif) **Valider...**  l’archive.
-  - **Envoyer...**  archive et suivez les étapes permettant de télécharger dans iTunes se connectent pour vérification et approbation.
+  - (Facultatif) **Valider... ** l’archive.
+  - **Envoyer... ** archive et suivez les étapes permettant de télécharger dans iTunes se connectent pour vérification et approbation.
 
 Prenez connaissance des conseils spécifiques liées à ces éléments ci-dessous. Consultez le [dépannage](#Troubleshooting) section si vous rencontrez des problèmes.
 
@@ -99,7 +98,7 @@ Vous pouvez utiliser le simulateur d’espion 42mm pour prendre des captures d�
 
   ![](appstore-images/xs-archive.png "Le menu Générer")
 
-Vous pouvez également choisir la **vue > Archives...**  élément de menu pour afficher les archives qui ont été créés précédemment.
+Vous pouvez également choisir la **vue > Archives... ** élément de menu pour afficher les archives qui ont été créés précédemment.
 
   ![](appstore-images/xs-archives-sml.png "La vue des Archives")
 
@@ -117,7 +116,7 @@ Xcode affiche automatiquement les archives créées dans Visual Studio pour Mac.
 
   ![](appstore-images/xc-archives.png "L’onglet Archives")
 
-3. Si vous le souhaitez **valider...**  l’archive, puis choisissez **envoyer...**  à télécharger l’application à iTunes Connect.
+3. Si vous le souhaitez **valider... ** l’archive, puis choisissez **envoyer... ** à télécharger l’application à iTunes Connect.
 
 4. Choisissez l’équipe de développement (si vous appartenez à plusieurs), puis confirmez l’envoi :
 
@@ -177,7 +176,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Assurez-vous d’avoir la version la plus récente de Visual Studio pour Mac et que votre **AppIcons.appiconset** contient un jeu complet d’images. Si vous voyez toujours cette erreur, affichez la source de la **Contents.json** pour confirmer qu’il contient une entrée pour toutes les images requises. Vous pouvez également, une fois que vous avez vérifié que vous utilisez la dernière version de Xamarin, supprimez et recréez le **AppIcons.appiconset**.
 
 > [!IMPORTANT]
-> Il existe un bogue connu dans Visual Studio pour la prise en charge de Mac espion icône : il attend une image 88 x 88 pixels pour la  **29x29@3x**  image (qui doit être 87 x 87 pixels).
+> Il existe un bogue connu dans Visual Studio pour la prise en charge de Mac espion icône : il attend une image 88 x 88 pixels pour la ** 29x29@3x ** image (qui doit être 87 x 87 pixels).
 
 
 Vous ne pouvez pas résoudre ce problème dans Visual Studio pour Mac - modifier le composant de l’image dans Xcode ou modifier manuellement le **Contents.json** fichier (pour correspondre à [cet exemple](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).

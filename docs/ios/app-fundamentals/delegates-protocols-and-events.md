@@ -1,18 +1,17 @@
 ---
-title: "Les délégués, les protocoles et les événements"
-description: "Cet article présente les technologies de clé iOS utilisés pour recevoir des rappels et remplir les contrôles d’interface utilisateur avec des données. Ces technologies sont les événements, les protocoles et les délégués. Cet article explique ce que chacune d’elles est et comment chacune est utilisée à partir de c#. Il montre comment Xamarin.iOS utilise les contrôles d’iOS pour exposer des événements de .NET familiers, ainsi que la manière dont Xamarin.iOS prend en charge les concepts de Objective-C, tels que les protocoles et des délégués (délégués d’Objective-C ne doivent pas être confondues avec les délégués en c#). Cet article fournit également des exemples qui montrent comment les protocoles sont utilisés : à la fois comme base pour les délégués de Objective-C et dans les scénarios non délégué."
-ms.topic: article
+title: Les délégués, les protocoles et les événements
+description: 'Cet article présente les technologies de clé iOS utilisés pour recevoir des rappels et remplir les contrôles d’interface utilisateur avec des données. Ces technologies sont les événements, les protocoles et les délégués. Cet article explique ce que chacune d’elles est et comment chacune est utilisée à partir de c#. Il montre comment Xamarin.iOS utilise les contrôles d’iOS pour exposer des événements de .NET familiers, ainsi que la manière dont Xamarin.iOS prend en charge les concepts de Objective-C, tels que les protocoles et des délégués (délégués d’Objective-C ne doivent pas être confondues avec les délégués en c#). Cet article fournit également des exemples qui montrent comment les protocoles sont utilisés : à la fois comme base pour les délégués de Objective-C et dans les scénarios non délégué.'
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 69296992c503d536a4160f172022c7ce5578812f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="events-protocols-and-delegates"></a>Les délégués, les protocoles et les événements
 

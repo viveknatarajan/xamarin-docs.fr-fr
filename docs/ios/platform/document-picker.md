@@ -1,17 +1,16 @@
 ---
-title: "Sélecteur de document"
-description: "Le contrôleur de vue de Document sélecteur accorde aux utilisateurs d’accéder aux fichiers en dehors de bac à sable d’une application. Il s’agit d’un mécanisme simple pour le partage de documents entre les applications. Il permet également de workflows plus complexes, car les utilisateurs peuvent modifier un document unique avec plusieurs applications. Cet article fournit une introduction à l’aide du sélecteur de Document dans une application Xamarin.iOS et les modifications dans les Documents iCloud requis pour prendre en charge."
-ms.topic: article
+title: Sélecteur de document
+description: Le contrôleur de vue de Document sélecteur accorde aux utilisateurs d’accéder aux fichiers en dehors de bac à sable d’une application. Il s’agit d’un mécanisme simple pour le partage de documents entre les applications. Il permet également de workflows plus complexes, car les utilisateurs peuvent modifier un document unique avec plusieurs applications. Cet article fournit une introduction à l’aide du sélecteur de Document dans une application Xamarin.iOS et les modifications dans les Documents iCloud requis pour prendre en charge.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 25b9d6c0eebd51a7b47b31c35fb3d5b56e45c3b3
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 33a6dc7294db74c3c8ab451f147c941124db8982
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="document-picker"></a>Sélecteur de document
 

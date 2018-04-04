@@ -1,18 +1,17 @@
 ---
 title: Test sur les appareils espion
-description: "Déploiement d’applications à tester sur votre Apple Watch"
-ms.topic: article
+description: Déploiement d’applications à tester sur votre Apple Watch
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="testing-on-watch-devices"></a>Test sur les appareils espion
 
@@ -26,7 +25,7 @@ Une fois que vous avez suivi la [les étapes de déploiement](~/ios/watchos/depl
 
 ## <a name="devices"></a>Appareils
 
-Test des applications iOS sur un iPhone réel ou un iPad exige toujours le périphérique à enregistrer sur le centre de développement. La liste des appareils ressemble à ceci (cliquez sur le signe plus  **+**  pour ajouter un nouvel appareil) :
+Test des applications iOS sur un iPhone réel ou un iPad exige toujours le périphérique à enregistrer sur le centre de développement. La liste des appareils ressemble à ceci (cliquez sur le signe plus **+** pour ajouter un nouvel appareil) :
 
 ![](device-images/devices-sml.png "La liste des appareils ressemble à ceci")
 

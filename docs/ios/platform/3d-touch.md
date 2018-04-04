@@ -1,18 +1,17 @@
 ---
-title: "Introduction à la 3D Touch"
-description: "Cet article couvre l’utilisation de la nouvelle iPhone 6 s et iPhone 6 s Plus 3D Touch mouvements dans votre application."
-ms.topic: article
+title: Introduction à la 3D Touch
+description: Cet article couvre l’utilisation de la nouvelle iPhone 6 s et iPhone 6 s Plus 3D Touch mouvements dans votre application.
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: c5cd2671bb66aa89117012fe394bb724f7e22e1a
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a0d89315b82f4931538cdabe64aade7986b2a42e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-3d-touch"></a>Introduction à la 3D Touch
 

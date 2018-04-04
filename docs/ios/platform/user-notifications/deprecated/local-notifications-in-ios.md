@@ -1,18 +1,17 @@
 ---
 title: Notifications de Xamarin.iOS
-description: "Cette section montre comment implémenter des notifications locales dans Xamarin.iOS. Elle explique les différents éléments d’interface utilisateur d’une notification d’e/s et traitent de l’API d’impliquée dans la création et affichage d’une notification."
-ms.topic: article
+description: Cette section montre comment implémenter des notifications locales dans Xamarin.iOS. Elle explique les différents éléments d’interface utilisateur d’une notification d’e/s et traitent de l’API d’impliquée dans la création et affichage d’une notification.
 ms.prod: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f1b36d3ba8601d125d0a17173efb12c249224e78
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: d4dd759f52e52f417441f69e6417fab536daf6d3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="notifications-in-xamarinios"></a>Notifications de Xamarin.iOS
 

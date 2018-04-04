@@ -1,18 +1,17 @@
 ---
 title: Utilisation des Types natifs dans des applications multiplateformes
-description: "Cet article couvre l’utilisation de la nouvelle iOS types unifiée l’API Native (nint, nuint, nfloat) dans une application multiplateforme où le code est partagé avec des périphériques non-iOS Android ou des systèmes d’exploitation Windows Phone."
-ms.topic: article
+description: Cet article couvre l’utilisation de la nouvelle iOS types unifiée l’API Native (nint, nuint, nfloat) dans une application multiplateforme où le code est partagé avec des périphériques non-iOS Android ou des systèmes d’exploitation Windows Phone.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 2e177afa9124095f00edacbeb71512d5cd9bb219
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b32cb68174183fd094f72a7ab20f7ed52b278ee
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Utilisation des Types natifs dans des applications multiplateformes
 
@@ -59,7 +58,7 @@ En fonction de ces facteurs, les types suivants de solutions peuvent être impl�
 
 #### <a name="using-duplicate-methods"></a>À l’aide de méthodes en double
 
-Prenons l’exemple d’une bibliothèque qui effectue les transformations de données rectangulaires ci-dessus. Si la bibliothèque ne contient qu’une ou deux méthodes très simples, vous pouvez choisir de créer des versions en double de ces méthodes pour Xamarin.iOS et Xamarin.Android. Exemple :
+Prenons l’exemple d’une bibliothèque qui effectue les transformations de données rectangulaires ci-dessus. Si la bibliothèque ne contient qu’une ou deux méthodes très simples, vous pouvez choisir de créer des versions en double de ces méthodes pour Xamarin.iOS et Xamarin.Android. Par exemple :
 
 ```csharp
 using System;
@@ -104,7 +103,7 @@ Dans le code ci-dessus, dans la mesure où le `CalculateArea` routine est très 
 
 #### <a name="using-method-overloads"></a>À l’aide de la méthode de surcharge
 
-Dans ce cas, la solution peut consister à créer une version de surcharge des méthodes à l’aide des types de données 32 bits afin qu’ils prennent désormais `CGRect` en tant que paramètre ou valeur de retour, convertir cette valeur en un `RectangleF` (sachant que conversion à partir de `nfloat` à `float` est une conversion avec perte de données) et appeler la version d’origine de la routine pour exécuter le travail réel. Exemple :
+Dans ce cas, la solution peut consister à créer une version de surcharge des méthodes à l’aide des types de données 32 bits afin qu’ils prennent désormais `CGRect` en tant que paramètre ou valeur de retour, convertir cette valeur en un `RectangleF` (sachant que conversion à partir de `nfloat` à `float` est une conversion avec perte de données) et appeler la version d’origine de la routine pour exécuter le travail réel. Par exemple :
 
 ```csharp
 using System;

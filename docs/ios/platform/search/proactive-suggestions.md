@@ -1,18 +1,17 @@
 ---
-title: "Présentation des Suggestions Proactive"
-description: "Cet article explique comment utiliser des Suggestions Proactive dans l’application Xamarin.iOS à l’engagement de lecteur en permettant au système de façon proactive présenter automatiquement des informations utiles à l’utilisateur."
-ms.topic: article
+title: Présentation des Suggestions Proactive
+description: Cet article explique comment utiliser des Suggestions Proactive dans l’application Xamarin.iOS à l’engagement de lecteur en permettant au système de façon proactive présenter automatiquement des informations utiles à l’utilisateur.
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: e7252aa89e2514653fc730c7221d22cc053d2e24
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5b06dbf0e8e108616adb4f77910267aaa1ac71f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>Présentation des Suggestions Proactive
 
@@ -166,7 +165,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>Restauration d’une activité
 
-Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour l’application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Exemple :
+Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour l’application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Par exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -503,7 +502,7 @@ Si l’application gère les adresses figurant dans les formats de texte en fonc
 - L’application peut obtenir des suggestions proactive dans l’application.
 - L’application peut bénéficier de la correction automatique améliorée.
 
-La nouvelle `TextContentType` propriété des contrôles de champ de texte dans iOS 10 permet aux développeurs de définir l’intention de la sémantique pour la valeur que l’utilisateur va entrer dans un champ donné. Exemple :
+La nouvelle `TextContentType` propriété des contrôles de champ de texte dans iOS 10 permet aux développeurs de définir l’intention de la sémantique pour la valeur que l’utilisateur va entrer dans un champ donné. Par exemple :
 
 ```csharp
 var textField = new UITextField();
@@ -532,7 +531,7 @@ Cette section s’intéresser à consommer des Suggestions d’emplacement direc
 - Pour gérer le lancement de l’application avec un MapKit `MKDirectionsRequest` objet.
 - Afin de permettre iOS pour apprendre à proposer de l’application à l’utilisateur à des moments appropriés, selon l’intérêt des utilisateurs.
 
-Lorsque l’application est lancée avec un MapKit `MKDirectionsRequest` de l’objet, il doit automatiquement démarrer en donnant les instructions de l’utilisateur à l’emplacement demandé, ou présenter une interface utilisateur qui facilite la tâche à commencer à obtenir des instructions pour l’utilisateur. Exemple :
+Lorsque l’application est lancée avec un MapKit `MKDirectionsRequest` de l’objet, il doit automatiquement démarrer en donnant les instructions de l’utilisateur à l’emplacement demandé, ou présenter une interface utilisateur qui facilite la tâche à commencer à obtenir des instructions pour l’utilisateur. Par exemple :
 
 
 ```csharp

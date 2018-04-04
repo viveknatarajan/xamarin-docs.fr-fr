@@ -1,18 +1,17 @@
 ---
 title: ViewPager avec des vues
-description: "ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation geste. Navigation geste permet à l’utilisateur pour le passage de gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter une interface utilisateur de swipeable avec ViewPager et PagerTabStrip, comme les pages de données à l’aide de vues (ultérieur guide couvre l’utilisation de Fragments pour les pages)."
-ms.topic: article
+description: ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation geste. Navigation geste permet à l’utilisateur pour le passage de gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter une interface utilisateur de swipeable avec ViewPager et PagerTabStrip, comme les pages de données à l’aide de vues (ultérieur guide couvre l’utilisation de Fragments pour les pages).
 ms.prod: xamarin
 ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 9c30cf9d76498e95aba6f9a003bc40c7d14e21de
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 39251f7cf6bc287b76b7921278853158bdb14d66
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager-with-views"></a>ViewPager avec des vues
 

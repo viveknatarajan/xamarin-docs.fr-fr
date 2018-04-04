@@ -1,18 +1,17 @@
 ---
-title: "Utilisation d’un Service Web ASP.NET (ASMX)"
-description: "ASMX fournit la possibilité de créer des services web qui envoient des messages à l’aide de l’accès protocole SOAP (Simple Object). SOAP est un protocole indépendant de la plateforme et indépendant du langage pour la création et l’accès aux services web. Les consommateurs d’un service ASMX n’avez pas besoin de connaître quoi que ce soit sur la plateforme, modèle d’objet ou langage de programmation utilisé pour implémenter le service. Il leur suffit de comprendre comment envoyer et recevoir des messages SOAP. Cet article explique comment utiliser un service ASMX SOAP à partir d’une application de Xamarin.Forms."
-ms.topic: article
+title: Utilisation d’un Service Web ASP.NET (ASMX)
+description: ASMX fournit la possibilité de créer des services web qui envoient des messages à l’aide de l’accès protocole SOAP (Simple Object). SOAP est un protocole indépendant de la plateforme et indépendant du langage pour la création et l’accès aux services web. Les consommateurs d’un service ASMX n’avez pas besoin de connaître quoi que ce soit sur la plateforme, modèle d’objet ou langage de programmation utilisé pour implémenter le service. Il leur suffit de comprendre comment envoyer et recevoir des messages SOAP. Cet article explique comment utiliser un service ASMX SOAP à partir d’une application de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: a095dbbb78ad1517791356ae0b7cbeaa94d1336f
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c45f0de039abc3f98b7c269f183e2883a495910b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Utilisation d’un Service Web ASP.NET (ASMX)
 

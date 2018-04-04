@@ -1,17 +1,16 @@
 ---
-title: "Empaquetage d’applications usure"
-ms.topic: article
+title: Empaquetage d’applications usure
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: a3eb5cd5b4202db8c58870c2b2c679b47f79d4aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af96c0f8cf862b7a208beb5b91ecbb30598b09d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="packaging-wear-apps"></a>Empaquetage d’applications usure
 
@@ -48,7 +47,7 @@ Votre application d’usure à partir de Xamarin Android 5.0, est automatiquemen
 -----
 
 
-Notez que vous obtenez un **XA5211** erreur si le nom du package de l’application d’usure ne correspond pas le nom du package de l’application de poche. Exemple :
+Notez que vous obtenez un **XA5211** erreur si le nom du package de l’application d’usure ne correspond pas le nom du package de l’application de poche. Par exemple :
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -63,7 +62,7 @@ L’assembly que le projet d’application usure génère n’est pas utilisé c
 
 -   Vérifie que le package noms correspondent. 
 
--   Génère du code XML et l’ajoute au projet pour l’associer à l’application d’usure portable. Exemple : 
+-   Génère du code XML et l’ajoute au projet pour l’associer à l’application d’usure portable. Par exemple : 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->

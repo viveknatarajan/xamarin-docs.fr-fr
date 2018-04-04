@@ -1,18 +1,17 @@
 ---
 title: Partie 1. Prise en main de XAML
-description: "Dans une application de Xamarin.Forms, XAML est principalement utilisé pour définir le contenu visuel d’une page. Un fichier XAML est toujours associé à un fichier de code c# qui fournit la prise en charge du code pour le balisage. Ensemble, ces deux fichiers contribuent à une définition de classe qui inclut l’initialisation des propriétés et des vues enfants. Dans le fichier XAML, classes et propriétés sont référencées avec des attributs et éléments XML, et établir des liens entre le balisage et le code."
-ms.topic: article
+description: Dans une application de Xamarin.Forms, XAML est principalement utilisé pour définir le contenu visuel d’une page. Un fichier XAML est toujours associé à un fichier de code c# qui fournit la prise en charge du code pour le balisage. Ensemble, ces deux fichiers contribuent à une définition de classe qui inclut l’initialisation des propriétés et des vues enfants. Dans le fichier XAML, classes et propriétés sont référencées avec des attributs et éléments XML, et établir des liens entre le balisage et le code.
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 55c4fa73044b1c37e879ed7731161269bdbf8ba8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f1d347cc37ab065e09cb2627ee2122797280f3c1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Partie 1. Prise en main de XAML
 

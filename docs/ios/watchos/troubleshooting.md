@@ -1,18 +1,18 @@
 ---
-title: "watchOS résolution des problèmes"
-description: "Problèmes connus et solutions pour les problèmes de développement watchOS."
-ms.topic: article
+title: watchOS résolution des problèmes
+description: Problèmes connus et solutions pour les problèmes de développement watchOS.
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4a6b916f991b337d8a28764f1482ddd837bad460
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 6e7a7dd09d65b88831136662d8718886aaf483c5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS résolution des problèmes
 
@@ -35,7 +35,7 @@ Cette page contient des informations supplémentaires et des solutions pour les 
 <a name="deploy" />
 
 - Les versions antérieures de Visual Studio pour Mac incorrectement affichent l’une du le **AppleCompanionSettings** icônes comme étant pixels 88 x 88 ; ce qui entraîne un **erreur d’icône manquant** si vous essayez d’envoyer à l’application Magasin.
-    Cette icône doit être 87 x 87 pixels (29 unités pour  **@3x**  les écrans rétine). Vous ne pouvez pas résoudre ce problème dans Visual Studio pour Mac - modifier le composant de l’image dans Xcode ou modifier manuellement le **Contents.json** fichier (pour correspondre à [cet exemple](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    Cette icône doit être 87 x 87 pixels (29 unités pour **@3x** les écrans rétine). Vous ne pouvez pas résoudre ce problème dans Visual Studio pour Mac - modifier le composant de l’image dans Xcode ou modifier manuellement le **Contents.json** fichier (pour correspondre à [cet exemple](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
 - Si du projet Extension espion **Info.plist > ID d’offre groupée WKApp** n’est pas [définir correctement](~/ios/watchos/get-started/project-references.md) pour correspondre à l’application de surveillance **ID d’offre groupée**, le débogueur ne pourront pas se connecter et Visual Studio pour Mac devront attendre avec le message *« En attente pour le débogueur pour se connecter »*.
 

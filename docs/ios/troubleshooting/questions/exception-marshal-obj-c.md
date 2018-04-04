@@ -1,16 +1,16 @@
 ---
-title: "Pourquoi mon application iOS 9 n’échoue avec : System.Exception : Impossible de marshaler l’objet Objective-C ?"
-ms.topic: article
+title: 'Pourquoi mon application iOS 9 n’échoue avec : System.Exception : Impossible de marshaler l’objet Objective-C ?'
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: baba2526eefa1b69d47da47b73ea0bd417ecdc57
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f7382ac963249a3f3646a917d8700e3a12873ec9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>Pourquoi mon application iOS 9 n’échoue avec : System.Exception : Impossible de marshaler l’objet Objective-C ?
 

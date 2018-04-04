@@ -1,18 +1,17 @@
 ---
-title: "Personnalisation d’un contrôle ListView"
-description: "Un Xamarin.Forms ListView est une vue qui affiche une collection de données sous la forme d’une liste verticale. Cet article explique comment créer un convertisseur personnalisé qui encapsule des contrôles de liste de spécifique à la plateforme et des dispositions de cellule native, ce qui permet de mieux contrôler les performances du contrôle de liste natif."
-ms.topic: article
+title: Personnalisation d’un contrôle ListView
+description: Un Xamarin.Forms ListView est une vue qui affiche une collection de données sous la forme d’une liste verticale. Cet article explique comment créer un convertisseur personnalisé qui encapsule des contrôles de liste de spécifique à la plateforme et des dispositions de cellule native, ce qui permet de mieux contrôler les performances du contrôle de liste natif.
 ms.prod: xamarin
 ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: eb4cf0285585351db5c45dc34a382236e6805c99
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9d822444196479dabd19f43f45f289117f64c05e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-listview"></a>Personnalisation d’un contrôle ListView
 

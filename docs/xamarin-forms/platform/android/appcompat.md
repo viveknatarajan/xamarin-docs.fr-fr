@@ -1,18 +1,17 @@
 ---
-title: "Ajout de AppCompat et conception de matériel"
-description: "Suivez ces étapes pour convertir des applications Android de Xamarin.Forms existantes pour utiliser AppCompat et documents de conception"
-ms.topic: article
+title: Ajout de AppCompat et conception de matériel
+description: Suivez ces étapes pour convertir des applications Android de Xamarin.Forms existantes pour utiliser AppCompat et documents de conception
 ms.prod: xamarin
 ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: 3014db91ff87f0e73291595a17dd780b5e3cd3c2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8f9820b863274453cff7e4124df683fb8518a978
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-appcompat-and-material-design"></a>Ajout de AppCompat et conception de matériel
 

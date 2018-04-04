@@ -1,18 +1,17 @@
 ---
 title: Localisation
-description: "Xamarin.Forms applications peuvent être localisées à l’aide de fichiers de ressources .NET."
-ms.topic: article
+description: Xamarin.Forms applications peuvent être localisées à l’aide de fichiers de ressources .NET.
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 7cae53187c9bc35d55f34dca664e28280cdab062
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="localization"></a>Localisation
 
@@ -760,7 +759,7 @@ Cette capture d’écran montre l’exemple d’application iOS avec spécifique
 
 ![](localization-images/ios-resources.png "Répertoires de projet de localisation d’iOS")
 
-Chaque répertoire contient une copie de **flag.png**localisée pour cette langue. Si aucune image n’est fourni, le système d’exploitation utilise par défaut l’image dans le répertoire de la langue par défaut. Pour la prise en charge de rétine complète, vous devez fournir  **@2x**  et  **@3x**  copies de chaque image.
+Chaque répertoire contient une copie de **flag.png**localisée pour cette langue. Si aucune image n’est fourni, le système d’exploitation utilise par défaut l’image dans le répertoire de la langue par défaut. Pour la prise en charge de rétine complète, vous devez fournir **@2x** et **@3x** copies de chaque image.
 
 #### <a name="app-name"></a>Nom de l’application
 

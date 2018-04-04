@@ -1,18 +1,17 @@
 ---
-title: "Introduction à Renderscript"
-description: "Ce guide présente les Renderscript et explique comment utiliser l’intrinsèque Renderscript API dans une application de Xamarin.Android ce niveau cibles API 17 ou une version ultérieure."
-ms.topic: article
+title: Introduction à Renderscript
+description: Ce guide présente les Renderscript et explique comment utiliser l’intrinsèque Renderscript API dans une application de Xamarin.Android ce niveau cibles API 17 ou une version ultérieure.
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 552c1db347d9bc37724691247648fa0e938baa88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f9e21a51c409c5444f137a63eb2c6fadfef03cbe
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="an-introduction-to-renderscript"></a>Introduction à Renderscript
 
@@ -70,7 +69,7 @@ Tous les Renderscript noyaux seront encapsulés par un type qui est un descendan
 
 Ces deux types, le `StringIntrinsic` est pris en charge par Xamarin.Android. Ce guide explique comment utiliser des scripts intrinsèques dans une application de Xamarin.Android.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide a trait aux applications de Xamarin.Android ce niveau de l’API cible 17 ou une version ultérieure. L’utilisation de _scripts utilisateur_ n’est pas couverte dans ce guide.
 
