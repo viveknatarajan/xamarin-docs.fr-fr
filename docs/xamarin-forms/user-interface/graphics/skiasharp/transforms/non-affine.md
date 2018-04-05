@@ -7,11 +7,11 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 52bed94724d330b74a9604c54fcfebad1e562267
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c3d39038fbaf5ed6601102a0aa16860c7a5a7a6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="non-affine-transforms"></a>Transformations non affines
 
@@ -95,7 +95,7 @@ Quand x est 100, puis le z' dénominateur est 2, les coordonnées x et y sont r�
 
 La `Persp` partie de ces noms de cellule fait référence à « perspective », car la réduction suggère que la zone est maintenant inclinée avec le côté droit éloigne de la visionneuse.
 
-Le **Perspective Test** page vous permet de faire des essais avec des valeurs de `Persp0` et `Pers1` pour voir comment elles fonctionnent. Valeurs raisonnables de ces cellules de matrice sont qui le `Slider` dans la plateforme Windows universelle ne peut pas traiter correctement les. Pour prendre en compte le problème de la plateforme Windows universelle, les deux `Slider` éléments dans le [ **TestPerspective.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) doivent être initialisés à la plage de -1 à 1 :
+Le **Perspective Test** page vous permet de faire des essais avec des valeurs de `Persp0` et `Pers1` pour voir comment elles fonctionnent. Valeurs raisonnables de ces cellules de matrice sont qui le `Slider` dans la plateforme Windows universelle ne peut pas traiter correctement les. Pour prendre en compte le problème de la plateforme Windows universelle, les deux `Slider` éléments dans le [ **TestPerspective.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) doivent être initialisés à la plage de -1 à 1 :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -149,7 +149,7 @@ Le **Perspective Test** page vous permet de faire des essais avec des valeurs de
 </ContentPage>
 ```
 
-Les gestionnaires d’événements pour les curseurs dans les [ `TestPerspectivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) fichier code-behind diviser les valeurs par 100 afin qu’ils comprise entre 0,01 et les –0.01. En outre, le constructeur de charge dans une image bitmap :
+Les gestionnaires d’événements pour les curseurs dans les [ `TestPerspectivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) fichier code-behind diviser les valeurs par 100 afin qu’ils comprise entre 0,01 et les –0.01. En outre, le constructeur de charge dans une image bitmap :
 
 ```csharp
 public partial class TestPerspectivePage : ContentPage
@@ -240,7 +240,7 @@ Une telle transformation non affines est un *transformation conique*. Ce type de
 
 ![](non-affine-images/tapertransform.png "Une zone soumise à une transformation conique")
 
-Le [ `TaperTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) classe effectue un calcul généralisé d’une transformation non affines basé sur ces paramètres :
+Le [ `TaperTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) classe effectue un calcul généralisé d’une transformation non affines basé sur ces paramètres :
 
 - la taille rectangulaire de l’image en cours de transformation,
 - énumération qui indique le côté du rectangle qui EFFILE,
@@ -349,7 +349,7 @@ static class TaperTransform
 }
 ```
 
-Cette classe est utilisée dans les **transformer conique** page. Le fichier XAML instancie deux `Picker` éléments à sélectionner les valeurs d’énumération et un `Slider` pour le choix de la fraction conique. Le [ `PaintSurface` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) Gestionnaire combine la transformation conique avec deux traduire des transformations pour effectuer la transformation par rapport à l’angle supérieur gauche de l’image bitmap :
+Cette classe est utilisée dans les **transformer conique** page. Le fichier XAML instancie deux `Picker` éléments à sélectionner les valeurs d’énumération et un `Slider` pour le choix de la fraction conique. Le [ `PaintSurface` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) Gestionnaire combine la transformation conique avec deux traduire des transformations pour effectuer la transformation par rapport à l’angle supérieur gauche de l’image bitmap :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -398,7 +398,7 @@ La transformation non affines peut transformer un rectangle en n’importe quel 
 
 [![](non-affine-images/shownonaffinematrix-small.png "Capture d’écran de triple de la page Afficher la matrice Non affines")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple capture d’écran de la page Afficher la matrice Non affines")
 
-Tant que vous ne tentez pas apporter un angle de l’intérieur de l’un des angles de l’image bitmap supérieur à 180 degrés ou deux côtés coupent, le programme calcule correctement la transformation à l’aide de cette méthode à partir de la [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) classe :
+Tant que vous ne tentez pas apporter un angle de l’intérieur de l’un des angles de l’image bitmap supérieur à 180 degrés ou deux côtés coupent, le programme calcule correctement la transformation à l’aide de cette méthode à partir de la [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) classe :
 
 ```csharp
 static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint ptLL, SKPoint ptLR)
@@ -459,7 +459,7 @@ Pour faciliter le calcul, cette méthode obtient la transformation totale en tan
 
 Les coordonnées finales à droite sont les quatre points associés avec les points quatre tactiles. Voici les coordonnées finales des angles de l’image bitmap.
 
-L et H représentent la largeur et la hauteur de l’image bitmap. La première transformation (`S`) met simplement à l’échelle l’image bitmap à un carré 1 pixel. La deuxième transformation est la transformation non affines `N`, et le troisième est la transformation de transformation affine `A`. Cette transformation affine repose sur trois points, donc il a tout comme la version antérieure affine [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) (méthode) et n’implique pas la quatrième ligne avec le (a, b) point.
+L et H représentent la largeur et la hauteur de l’image bitmap. La première transformation (`S`) met simplement à l’échelle l’image bitmap à un carré 1 pixel. La deuxième transformation est la transformation non affines `N`, et le troisième est la transformation de transformation affine `A`. Cette transformation affine repose sur trois points, donc il a tout comme la version antérieure affine [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) (méthode) et n’implique pas la quatrième ligne avec le (a, b) point.
 
 Le `a` et `b` afin que la transformation de tiers est affine les valeurs sont calculées. Le code obtient l’inverse de la transformation affine et qui utilise ensuite pour mapper le coin inférieur droit. Qui est le point (a, b).
 

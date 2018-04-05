@@ -7,11 +7,11 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1e8ad47867fb1821df1e427aa777ead1a7da19a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4ef9f1b634d2ecfa73a94bfd562a68593dfdc575
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="integrating-text-and-graphics"></a>Intégration de texte et des graphiques
 
@@ -23,7 +23,7 @@ Cet article explique comment mesurer le texte, éventuellement mettre à l’éc
 
 Le SkiaSharp `Canvas` classe inclut également des méthodes pour dessiner un rectangle ([`DrawRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRect/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/)) et un rectangle à angles arrondis ([`DrawRoundRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRoundRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPaint/)). Ces méthodes requièrent le rectangle doit être défini comme un `SKRect` valeur.
 
-Le **accompagnées de texte** page centres d’une chaîne de texte courte de la page et les encadrements avec un frame composé d’une paire de rectangles arrondis. Le [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) classe montre comment procéder.
+Le **accompagnées de texte** page centres d’une chaîne de texte courte de la page et les encadrements avec un frame composé d’une paire de rectangles arrondis. Le [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) classe montre comment procéder.
 
 Dans SkiaSharp vous utilisez la `SKPaint` classe pour définir les attributs de texte et de la police, mais vous pouvez également l’utiliser pour obtenir la taille de rendu de texte. Début de la commande suivante `PaintSurface` Gestionnaire d’événements appelle deux différents `MeasureText` méthodes. La première [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/) appel a un simple `string` argument et retourne la largeur en pixels du texte basée sur les attributs de police actuelle. Le programme, puis calcule un nouveau `TextSize` propriété de la `SKPaint` objet basé sur cette largeur restituée, actuel `TextSize` propriété et la largeur de la zone d’affichage. Il est destiné à définir `TextSize` afin que la chaîne de texte pour être rendue à 90 % de la largeur de l’écran :
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 7f6885415e1b5e0c988d13fe331703213b9b8fb7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b317c4c82ec736c7f4c8306036e43cf04086a82
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>Procédure pas à pas : utilisation de WCF
 
@@ -167,7 +167,6 @@ Hébergement d’un service WCF localement ne convient lorsque les connexions so
 1. Commençons par la configuration d’IIS Express pour écouter les demandes externes. Vous pouvez le faire en modifiant le fichier de configuration pour IIS Express à `[solutiondirectory]\.vs\config\applicationhost.config`, comme illustré dans la capture d’écran suivante :
 
     [![](walkthrough-working-with-wcf-images/image05.png "Vous pouvez le faire en modifiant le fichier de configuration pour IIS Express à solutiondirectory.vsconfigapplicationhost.config, comme indiqué dans cette capture d’écran")](walkthrough-working-with-wcf-images/image05.png#lightbox)
-
 
     Recherchez le `site` élément portant le nom `HelloWorldWcfHost`. Il doit ressembler à l’extrait de code XML suivant :
 

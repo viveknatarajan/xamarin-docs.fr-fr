@@ -7,11 +7,11 @@ ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 177437ef016a25849e7c34d0a26270ce14173b7d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 354844f69c0b8755a15a3325c39e35b97d44f94d
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-rotate-transform"></a>La transformation de rotation
 
@@ -39,7 +39,7 @@ x' = x•cos(α) – y•sin(α)
 
 y` = x•sin(α) + y•cos(α)
 
-Le **pivoter base** page montre le `RotateDegrees` (méthode). Le [ `BasicRotate.xaml.cs` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) fichier affiche du texte avec sa ligne de base centrée sur la page et la faire pivoter selon un `Slider` avec une plage de – 360 et 360. Voici la partie appropriée de la `PaintSurface` gestionnaire :
+Le **pivoter base** page montre le `RotateDegrees` (méthode). Le [ `BasicRotate.xaml.cs` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) fichier affiche du texte avec sa ligne de base centrée sur la page et la faire pivoter selon un `Slider` avec une plage de – 360 et 360. Voici la partie appropriée de la `PaintSurface` gestionnaire :
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -141,7 +141,7 @@ Il existe généralement plusieurs façons de combiner la rotation et la transla
 
 [![](rotate-images/rotatedtext-small.png "Capture d’écran de triple de la page pivoter le texte")](rotate-images/rotatedtext-large.png#lightbox "Triple capture d’écran de la page de rotation de texte")
 
-Voici le `PaintSurface` Gestionnaire de la [ `RotatedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) classe :
+Voici le `PaintSurface` Gestionnaire de la [ `RotatedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) classe :
 
 ```csharp
 static readonly string text = "    ROTATE";

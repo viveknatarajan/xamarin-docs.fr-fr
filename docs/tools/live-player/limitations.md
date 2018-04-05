@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: 0068540ec385ab3be56865c7728eb3128154a2ea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43699e77bc8b7365c6d5f7fbf27e19a945e69e22
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="limitations"></a>Limitations
 
@@ -51,7 +51,7 @@ Il existe certaines restrictions sur les éléments que xamarin Live Player peuv
 - Prise en charge pour la réflexion limitée (actuellement affecte certains NuGets populaires, tels que SQLite et Json.NET). Autres NuGets peut toujours être pris en charge.
 - Certaines classes système ne peut pas être remplacées (par exemple, vous ne peut pas implémenter une sous-classe).
 - Certaines fonctionnalités de plateforme qui nécessitent la mise en service ne peut pas fonctionner dans l’application Xamarin Live Player (toutefois qu’il a été configuré pour les opérations courantes telles que l’accès de la galerie photo).
-- Cibles personnalisées et des étapes de génération sont ignorés. Par exemple, les outils tels que Fody, Retit, AutoFac, et AutoMapper ne peut pas être incorporé.
+- Cibles personnalisées et des étapes de génération sont ignorés. Par exemple, des outils tels que Fody, réajuster, AutoFac et AutoMapper ne peut pas être incorporées.
 - Projets F # ne sont pas pris en charge sur Android et la prise en charge sur iOS
 - Scénarios avancés avec des classes génériques personnalisés et les interfaces ne peuvent pas pris en charge.
 

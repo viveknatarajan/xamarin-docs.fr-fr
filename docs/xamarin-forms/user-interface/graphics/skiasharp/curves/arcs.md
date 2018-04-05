@@ -7,11 +7,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 668b1f437b78535bd4cdf3bb3f80154dbf281a02
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c6fd0f905aceb9dddc4047abc6ad2722adf2d8e9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Trois méthodes pour dessiner un Arc
 
@@ -73,7 +73,7 @@ path.ArcTo (oval, startAngle, sweepAngle, false);
 
 Cette version de `ArcTo` Dessine une ligne à partir de la position actuelle vers le début de l’arc. Cela signifie que l’arc peut être quelque part au milieu d’un profil de plus grand.
 
-Le **Angle Arc** page vous permet d’utiliser deux curseurs pour spécifier le début et l’angle de balayage. Le fichier XAML instancie deux `Slider` éléments et une `SKCanvasView`. Le `PaintCanvas` gestionnaire dans le [ **AngleArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs) fichier Dessine l’ellipse et l’arc en utilisant deux `SKPaint` objets définis en tant que champs :
+Le **Angle Arc** page vous permet d’utiliser deux curseurs pour spécifier le début et l’angle de balayage. Le fichier XAML instancie deux `Slider` éléments et une `SKCanvasView`. Le `PaintCanvas` gestionnaire dans le [ **AngleArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs) fichier Dessine l’ellipse et l’arc en utilisant deux `SKPaint` objets définis en tant que champs :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -110,7 +110,7 @@ y = oval. MidY + (oval. Hauteur / 2) * sin(angle)
 
 Le `angle` valeur est soit `startAngle` ou `startAngle + sweepAngle`.
 
-L’utilisation de deux angles pour définir un arc est idéal pour les cas où vous connaissez la longueur angulaire de l’arc souhaité à dessiner, par exemple, pour créer un graphique en secteurs. Le **éclaté un graphique à secteurs** page illustre cela. Le [ `ExplodedPieChartPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs) classe utilise une classe interne pour définir des couleurs et des données fabriquées :
+L’utilisation de deux angles pour définir un arc est idéal pour les cas où vous connaissez la longueur angulaire de l’arc souhaité à dessiner, par exemple, pour créer un graphique en secteurs. Le **éclaté un graphique à secteurs** page illustre cela. Le [ `ExplodedPieChartPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs) classe utilise une classe interne pour définir des couleurs et des données fabriquées :
 
 ```csharp
 class ChartData
@@ -259,7 +259,7 @@ Voici la dernière ligne droite et arc est ajouté pour le profil de :
 
 Le profil peut être poursuivi à partir du deuxième point tangent.
 
-Le **tangente Arc** page vous permet de faire des essais avec l’arc tangente. Voici la première de plusieurs pages qui dérivent de [ `InteractivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/InteractivePage.cs), qui définit certaines pratiques `SKPaint` des objets et effectue `TouchPoint` traitement :
+Le **tangente Arc** page vous permet de faire des essais avec l’arc tangente. Voici la première de plusieurs pages qui dérivent de [ `InteractivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/InteractivePage.cs), qui définit certaines pratiques `SKPaint` des objets et effectue `TouchPoint` traitement :
 
 ```csharp
 public class InteractivePage : ContentPage
@@ -309,7 +309,7 @@ public class InteractivePage : ContentPage
 }
 ```
 
-La classe `TangentArcPage` dérive de la classe `InteractivePage`. Le constructeur dans le [ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) fichier est responsable de l’instanciation et initialisation le `touchPoints` tableau et paramètre `baseCanvasView` (dans `InteractivePage`) à la `SKCanvasView` objet instancié dans le [ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) fichier :
+La classe `TangentArcPage` dérive de la classe `InteractivePage`. Le constructeur dans le [ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) fichier est responsable de l’instanciation et initialisation le `touchPoints` tableau et paramètre `baseCanvasView` (dans `InteractivePage`) à la `SKCanvasView` objet instancié dans le [ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) fichier :
 
 ```csharp
 public partial class TangentArcPage : InteractivePage
@@ -419,7 +419,7 @@ Sur l’appareil Windows Mobile, les trois points sont colinéaires presque, et 
 
 L’arc tangente est idéal pour la création des angles arrondis, par exemple un rectangle arrondi. Étant donné que `SKPath` inclut déjà une `AddRoundedRect` (méthode), la **arrondi de sur un heptagone** page montre comment utiliser `ArcTo` pour arrondir les angles d’un polygone sept recto verso. (Le code est généralisé pour tout polygone régulier).
 
-Le `PaintSurface` Gestionnaire de la [ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) classe contient un `for` boucle pour calculer les coordonnées des sommets de le sur un heptagone et l’autre pour calculer les points centraux des sept côtés de ces sept sommets. Ces points centraux est ensuite utilisées pour construire le chemin d’accès :
+Le `PaintSurface` Gestionnaire de la [ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) classe contient un `for` boucle pour calculer les coordonnées des sommets de le sur un heptagone et l’autre pour calculer les points centraux des sept côtés de ces sept sommets. Ces points centraux est ensuite utilisées pour construire le chemin d’accès :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -543,7 +543,7 @@ Si les points de suspension inclinée n’est pas assez grande pour tenir entre 
 
 Bien que cette approche de la définition d’un arc semble complexe sur la première rencontre, il est la seule approche qui permet de définir un arc avec une ellipse avec une rotation, et il est souvent plus simple lorsque vous avez besoin intégrer des arcs de cercle avec d’autres parties du contour.
 
-Le **Arc elliptique** page permet de définir de manière interactive les deux points et la taille et la rotation de l’ellipse. Le `EllipticalArcPage` dérive de la classe `InteractivePage`et le `PaintSurface` gestionnaire dans le [ **EllipticalArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs) fichier code-behind dessine les quatre façons :
+Le **Arc elliptique** page permet de définir de manière interactive les deux points et la taille et la rotation de l’ellipse. Le `EllipticalArcPage` dérive de la classe `InteractivePage`et le `PaintSurface` gestionnaire dans le [ **EllipticalArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs) fichier code-behind dessine les quatre façons :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -613,7 +613,7 @@ Les quatre points de tangentes sont tout ce qui est nécessaire d’établir une
 
 ![](arcs-images/infinitycoordinates.png "Deux cercles, avec les coordonnées et les lignes de tangente")
 
-Le `PaintSurface` gestionnaire dans le [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) classe positionne le signe de l’infini afin que le (0, 0) point se trouve dans le centre de la page et ajuste le chemin d’accès à la taille d’écran :
+Le `PaintSurface` gestionnaire dans le [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) classe positionne le signe de l’infini afin que le (0, 0) point se trouve dans le centre de la page et ajuste le chemin d’accès à la taille d’écran :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

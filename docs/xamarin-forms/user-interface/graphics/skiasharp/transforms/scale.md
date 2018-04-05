@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 4c2650d4586f210b121c4c72b79e92ce72d135fe
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-scale-transform"></a>La transformation d’échelle
 
@@ -60,7 +60,7 @@ public void Scale (SKPoint size)
 
 La quatrième `Scale` méthode sera décrite dans quelques instants.
 
-Le **base échelle** page montre le `Scale` (méthode). Le [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) fichier XAML contient deux `Slider` les éléments qui vous permettent de sélectionner les facteurs d’échelle horizontales et verticales comprise entre 0 et 10. Le [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) fichier code-behind utilise ces valeurs pour appeler `Scale` avant d’afficher un rectangle arrondi dessinés avec une ligne en pointillés et dimensionnée en fonction du texte dans l’angle supérieur gauche angle de la zone :
+Le **base échelle** page montre le `Scale` (méthode). Le [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) fichier XAML contient deux `Slider` les éléments qui vous permettent de sélectionner les facteurs d’échelle horizontales et verticales comprise entre 0 et 10. Le [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) fichier code-behind utilise ces valeurs pour appeler `Scale` avant d’afficher un rectangle arrondi dessinés avec une ligne en pointillés et dimensionnée en fonction du texte dans l’angle supérieur gauche angle de la zone :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -120,7 +120,7 @@ public void Scale (Single sx, Single sy, Single px, Single py)
 
 Le `px` et `py` paramètres définissent un point qui est parfois appelé le *centre de mise à l’échelle* , mais dans le SkiaSharp documentation est appelée un *point de tableau croisé dynamique*. Il s’agit d’un point par rapport à l’angle supérieur gauche de la zone de dessin qui n’est pas affectée par la mise à l’échelle. Mise à l’échelle tous les se produit par rapport à ce centre.
 
-Le [ **centré la montée en puissance** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs) page montre comment cela fonctionne. Le `PaintSurface` gestionnaire est similaire à la **base échelle** du programme, sauf que le `margin` la valeur est calculée pour centrer le texte horizontalement, ce qui implique que le programme fonctionne mieux en mode portrait :
+Le [ **centré la montée en puissance** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs) page montre comment cela fonctionne. Le `PaintSurface` gestionnaire est similaire à la **base échelle** du programme, sauf que le `margin` la valeur est calculée pour centrer le texte horizontalement, ce qui implique que le programme fonctionne mieux en mode portrait :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -216,7 +216,7 @@ Lorsque vous combinez `Translate` et `Scale` des appels, l’ordre est important
 
 Le `SKPath` classe définit en lecture seule [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) propriété qui retourne un `SKRect` à définir l’étendue des coordonnées dans le chemin d’accès. Par exemple, lorsque le `Bounds` propriété est obtenue à partir du chemin hendecagram créé précédemment, le `Left` et `Top` propriétés du rectangle sont environ -100, le `Right` et `Bottom` sont des propriétés environ 100 et le `Width` et `Height` propriétés sont environ 200. (La plupart des valeurs réelles est une peu moins, car les points des étoiles sont définis par un cercle avec un rayon de 100, mais seul le point supérieur est effectuée en parallèle avec les axes horizontales ou verticales).
 
-La disponibilité de ces informations implique qu’il doit être possible de dériver l’échelle et traduire les facteurs de mise à l’échelle d’un chemin d’accès à la taille de la zone de dessin. Le [ **mise à l’échelle ANISOTROPIQUE** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) page illustre cette méthode avec l’étoile pointes sur 11. Un *ANISOTROPIQUE* échelle signifie qu’il est différent dans le sens horizontal et vertical, ce qui signifie que l’étoile ne conserve ses proportions d’origine. Voici le code approprié le `PaintSurface` gestionnaire :
+La disponibilité de ces informations implique qu’il doit être possible de dériver l’échelle et traduire les facteurs de mise à l’échelle d’un chemin d’accès à la taille de la zone de dessin. Le [ **mise à l’échelle ANISOTROPIQUE** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) page illustre cette méthode avec l’étoile pointes sur 11. Un *ANISOTROPIQUE* échelle signifie qu’il est différent dans le sens horizontal et vertical, ce qui signifie que l’étoile ne conserve ses proportions d’origine. Voici le code approprié le `PaintSurface` gestionnaire :
 
 ```csharp
 SKPath path = HendecagramPage.HendecagramPath;
@@ -261,7 +261,7 @@ pathBounds.Inflate(strokePaint.StrokeWidth / 2,
 
 Cela augmente la `pathBounds` rectangle par 1,5 unités sur les quatre côtés. Il s’agit d’une solution raisonnable uniquement lorsque la jointure de trait est arrondie. Une jointure de pointe peut être plus longue et difficile à calculer.
 
-Vous pouvez également utiliser une technique similaire avec du texte, comme le **texte ANISOTROPIQUE** montre de page. Voici la partie pertinente du `PaintSurface` gestionnaire à partir de la [ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs) classe :
+Vous pouvez également utiliser une technique similaire avec du texte, comme le **texte ANISOTROPIQUE** montre de page. Voici la partie pertinente du `PaintSurface` gestionnaire à partir de la [ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs) classe :
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -297,7 +297,7 @@ Si vous avez besoin de conserver les proportions des objets graphiques, vous vou
 - Mettre à l’échelle de l’objet en fonction de la valeur minimale des dimensions de page horizontaux et verticaux divisée par les dimensions de l’objet graphique.
 - Traduit le centre de l’objet mis à l’échelle vers le centre de la page.
 
-Le [ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) exécute les étapes dans l’ordre inverse avant l’affichage de l’étoile :
+Le [ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) exécute les étapes dans l’ordre inverse avant l’affichage de l’étoile :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

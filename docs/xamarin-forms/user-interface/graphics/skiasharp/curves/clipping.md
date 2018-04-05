@@ -7,11 +7,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: 0451653b4ee5c85b9bcf884b6b5609a251cf577c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 051ceec148a569d00048a661e6ba8dc3ce96fc81
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>Découpage avec des chemins d’accès et les régions
 
@@ -23,7 +23,7 @@ Il est parfois nécessaire de limiter le rendu de graphiques pour une zone parti
 
 Le *zone de découpage* est la zone de l’écran dans lequel les graphiques sont rendus. Tout ce qui s’affiche en dehors de la zone de découpage n’est pas rendu. La zone de découpage est généralement définie par une [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) objet, mais vous pouvez également définir une zone de découpage à l’aide un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) objet. Ces deux types d’objets à priori connexes, car vous pouvez créer une région à partir d’un chemin d’accès. Toutefois, vous ne peut pas créer un chemin d’accès à partir d’une région, et qu’ils sont très différents en interne : un chemin d’accès compose d’une série de lignes et des courbes, alors qu’une région est définie par une série de lignes de balayage horizontales.
 
-L’image ci-dessus a été créé par le **singe via masque** page. Le [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) classe définit un chemin d’accès à l’aide de données SVG et utilise le constructeur pour charger une bitmap à partir des ressources du programme :
+L’image ci-dessus a été créé par le **singe via masque** page. Le [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) classe définit un chemin d’accès à l’aide de données SVG et utilise le constructeur pour charger une bitmap à partir des ressources du programme :
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -118,7 +118,7 @@ Il existe également un [ `ClipRect` ](https://developer.xamarin.com/api/member/
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-Par défaut, la zone de découpage résultant est l’intersection de la zone de découpage existant et le `SKPath` ou `SKRect` qui est spécifié dans le `ClipPath` ou `ClipRect` (méthode). Cela est illustré dans le **l’élément se croisent quatre cercles** page. Le `PaintSurface` gestionnaire dans le [ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) classe réutilise le même `SKPath` objet à créer quatre cercles qui se chevauchent, chacun d’eux permet de réduire la zone de découpage via des appels successifs à `ClipPath`:
+Par défaut, la zone de découpage résultant est l’intersection de la zone de découpage existant et le `SKPath` ou `SKRect` qui est spécifié dans le `ClipPath` ou `ClipRect` (méthode). Cela est illustré dans le **l’élément se croisent quatre cercles** page. Le `PaintSurface` gestionnaire dans le [ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) classe réutilise le même `SKPath` objet à créer quatre cercles qui se chevauchent, chacun d’eux permet de réduire la zone de découpage via des appels successifs à `ClipPath`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -183,7 +183,7 @@ Le **les opérations de découpage** page illustre la différence entre ces deux
 
 [![](clipping-images//clipoperations-small.png "Capture d’écran de triple de la page opérations de découpage")](clipping-images/clipoperations-large.png#lightbox "Triple capture d’écran de la page opérations de découpage")
 
-Le [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) classe définit deux `SKPaint` objets en tant que champs, puis divise l’écran deux zones rectangulaires. Ces zones sont différentes selon que le téléphone est en mode portrait ou paysage. Le `DisplayClipOp` classe affiche ensuite le texte et les appels `ClipPath` avec les chemins d’accès de deux cercle pour illustrer chaque opération de découpage :
+Le [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) classe définit deux `SKPaint` objets en tant que champs, puis divise l’écran deux zones rectangulaires. Ces zones sont différentes selon que le téléphone est en mode portrait ou paysage. Le `DisplayClipOp` classe affiche ensuite le texte et les appels `ClipPath` avec les chemins d’accès de deux cercle pour illustrer chaque opération de découpage :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -286,7 +286,7 @@ La capture d’écran suivante montre les zones de découpage basés sur les op�
 
 Sont ces toutes les possibilités de la combinaison de ces deux cercles ? Examinons l’image résultante sous la forme d’une combinaison de trois composants, qui eux-mêmes est visibles dans le `Difference`, `Intersect`, et `ReverseDifference` operations. Le nombre total de combinaisons est deux à la puissance 3, ou 8. Les deux sont manquants sont la région d’origine (qui résulte de l’appel ne pas `Op` du tout) et une région entièrement vide.
 
-Il est plus difficile à utiliser des régions pour le découpage, car vous devez d’abord créer un chemin d’accès, puis une région à partir de ce chemin d’accès et ensuite combiner plusieurs régions. La structure globale de la **opérations de région** page est très similaire à **les opérations de découpage** mais la [ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs) classe divise l’écran six domaines et Affiche le travail supplémentaire requis pour utiliser des régions pour cette tâche :
+Il est plus difficile à utiliser des régions pour le découpage, car vous devez d’abord créer un chemin d’accès, puis une région à partir de ce chemin d’accès et ensuite combiner plusieurs régions. La structure globale de la **opérations de région** page est très similaire à **les opérations de découpage** mais la [ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs) classe divise l’écran six domaines et Affiche le travail supplémentaire requis pour utiliser des régions pour cette tâche :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -370,7 +370,7 @@ Voici une région est : une série de lignes de balayage horizontales qui défi
 
 Toutefois, quand une zone est réduite à une série d’analyse les lignes, ces lignes sont basées sur une dimension de pixel particulier d’analyse. En principe, la région n’est pas un objet de graphique de vecteur. Il est plus proche de nature un bitmap monochrome compressé à un chemin d’accès. Par conséquent, régions ne peut pas être mis à l’échelle ou pivotées sans perte de fidélité et c’est pourquoi qu'ils ne sont pas transformés lorsqu’il est utilisé pour les zones de découpage.
 
-Toutefois, vous pouvez appliquer des transformations à des régions pour des raisons de peinture. Le **région peinture** programme montre bien la nature interne des régions. Le [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs) classe crée un `SKRegion` objet basé sur un `SKPath` d’un rayon de 10 unités. Une transformation puis développe de cercle pour remplir la page :
+Toutefois, vous pouvez appliquer des transformations à des régions pour des raisons de peinture. Le **région peinture** programme montre bien la nature interne des régions. Le [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs) classe crée un `SKRegion` objet basé sur un `SKPath` d’un rayon de 10 unités. Une transformation puis développe de cercle pour remplir la page :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -427,7 +427,7 @@ Le `DrawRegion` appel remplit la région en orange, tandis que le `DrawPath` app
 
 La région est clairement une série de coordonnées discrètes.
 
-Si vous n’avez pas besoin d’utiliser les transformations dans le cadre de vos zones de découpage, vous pouvez utiliser des régions pour le découpage, comme le **quatre – feuille trèfle** montre de page. Le [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs) classe construit une région composite à partir de quatre régions circulaires, définit cette région composite en tant que la zone de découpage et puis dessine une série de 360 droites émanant du centre de la page :
+Si vous n’avez pas besoin d’utiliser les transformations dans le cadre de vos zones de découpage, vous pouvez utiliser des régions pour le découpage, comme le **quatre – feuille trèfle** montre de page. Le [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs) classe construit une région composite à partir de quatre régions circulaires, définit cette région composite en tant que la zone de découpage et puis dessine une série de 360 droites émanant du centre de la page :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

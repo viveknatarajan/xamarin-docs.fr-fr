@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 998c804f02eed808c0a1493b054e754a7670aa70
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 82ac4ea49462c7520219e1a621ea3946297b1b45
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-information-and-enumeration"></a>Énumération et les informations de chemin d’accès
 
@@ -31,7 +31,7 @@ Dans l’article [ **chemins d’accès et le texte** ](~/xamarin-forms/user-int
 
 Le [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) classe peut aider. Le [constructeur](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) accepte un `SKPath` argument et le [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) propriété révèle sa longueur.
 
-Cela est illustré dans le **longueur de chemin d’accès** exemple, qui est basé sur le **courbe de Bézier** page. Le [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) fichier dérive `InteractivePage` et inclut une interface tactile :
+Cela est illustré dans le **longueur de chemin d’accès** exemple, qui est basé sur le **courbe de Bézier** page. Le [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) fichier dérive `InteractivePage` et inclut une interface tactile :
 
 ```xaml
 <local:InteractivePage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -52,7 +52,7 @@ Cela est illustré dans le **longueur de chemin d’accès** exemple, qui est ba
 </local:InteractivePage>
 ```
 
-Le [ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) fichier code-behind vous permet de déplacer des quatre points tactiles pour définir les points de terminaison et de points de contrôle de courbe de Bézier cubique. Trois champs définissent une chaîne de texte, un `SKPaint` objet et une largeur calculée du texte :
+Le [ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) fichier code-behind vous permet de déplacer des quatre points tactiles pour définir les points de terminaison et de points de contrôle de courbe de Bézier cubique. Trois champs définissent une chaîne de texte, un `SKPaint` objet et une largeur calculée du texte :
 
 ```csharp
 public partial class PathLengthPage : InteractivePage
@@ -242,7 +242,7 @@ Certaines informations dans le `SKPoint` tableau est redondant. Par exemple, si 
 
 Le verbe problématique, toutefois, est `Close`. Cette commande Dessine une ligne droite à partir de la position actuelle vers le début du contour établi par le `Move` commande. Dans l’idéal, le `Close` verbe doit fournir ces deux points au lieu qu’un seul point. Pire est que le point qui accompagne le `Close` verbe est toujours (0, 0). Cela signifie que lorsque vous énumérez via un chemin d’accès, vous allez probablement devoir conserver le `Move` point et la position actuelle.
 
-La méthode statique [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe contient plusieurs méthodes qui convertissent les trois types de courbes Bézier en une série de petits traits qui se rapprochent de la courbe. (Les formules paramétriques ont été présentées dans l’article [ **trois Types de Bézier des courbes**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Le `Interpolate` méthode divise une ligne droite dans nombreuses lignes courtes qu’une seule unité de longueur :
+La méthode statique [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe contient plusieurs méthodes qui convertissent les trois types de courbes Bézier en une série de petits traits qui se rapprochent de la courbe. (Les formules paramétriques ont été présentées dans l’article [ **trois Types de Bézier des courbes**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Le `Interpolate` méthode divise une ligne droite dans nombreuses lignes courtes qu’une seule unité de longueur :
 
 ```csharp
 static class PathExtensions
@@ -426,7 +426,7 @@ Le **GlobularText** utilise cette méthode d’extension pour apparemment habill
 
 [![](information-images/globulartext-small.png "Capture d’écran de triple de la page de texte globulaire")](information-images/globulartext-large.png#lightbox "Triple capture d’écran de la page de texte globulaire")
 
-Le [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) constructeur de classe effectue cette transformation. Il crée un `SKPaint` pour le texte de l’objet et obtient un `SKPath` de l’objet à partir de la `GetTextPath` (méthode). Il s’agit du chemin d’accès passé à la `CloneWithTransform` méthode d’extension avec une fonction de transformation : 
+Le [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) constructeur de classe effectue cette transformation. Il crée un `SKPaint` pour le texte de l’objet et obtient un `SKPath` de l’objet à partir de la `GetTextPath` (méthode). Il s’agit du chemin d’accès passé à la `CloneWithTransform` méthode d’extension avec une fonction de transformation : 
 
 ```csharp
 public class GlobularTextPage : ContentPage
