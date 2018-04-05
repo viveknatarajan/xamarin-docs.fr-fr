@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 3a828baccda83822237d2564d771bcd89c9099e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2881148631435c9082b42cad0e784100b010b46
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-basics"></a>Principes fondamentaux de chemin d’accès
 
@@ -50,7 +50,7 @@ Le `R` signifie *relatif*. Ils ont la même syntaxe que les méthodes correspond
 
 Un profil de charge se termine par un autre appel à `MoveTo` ou `RMoveTo`, qui commence un nouveau profil, ou un appel à `Close`, qui ferme le contour. Le `Close` méthode automatiquement ajoute une ligne droite à partir du point actuel et le premier point du contour et marque le chemin d’accès comme étant fermé, ce qui signifie qu’elle est restituée sans les extrémités de trait.
 
-La différence entre les contours ouvertes et fermées est illustrée dans le **deux profils de Triangle** page, qui utilise un `SKPath` objet avec les deux profils pour afficher deux triangles. Le premier contour est ouvert et le second est fermé. Voici le [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe :
+La différence entre les contours ouvertes et fermées est illustrée dans le **deux profils de Triangle** page, qui utilise un `SKPath` objet avec les deux profils pour afficher deux triangles. Le premier contour est ouvert et le second est fermé. Voici le [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) classe :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -122,7 +122,7 @@ Tout comme l’apparence de début et de fin d’une ligne est défini à une ex
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) pour une jointure arrondie
 - [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) pour une jointure coupées désactivé
 
-Le **trait jointures** page affiche ces trois tracer les jointures avec un code similaire à la **extrémités de trait** page. Il s’agit de la `PaintSurface` Gestionnaire d’événements dans le [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe :
+Le **trait jointures** page affiche ces trois tracer les jointures avec un code similaire à la **extrémités de trait** page. Il s’agit de la `PaintSurface` Gestionnaire d’événements dans le [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) classe :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

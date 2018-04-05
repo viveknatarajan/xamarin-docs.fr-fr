@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 32eefb0607bc06602098fdc5cfb11aa5e46c80d0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Lignes et les extrémités de trait
 
@@ -35,7 +35,7 @@ L’apparence du démarrage et fin des lignes est appelée un *extrémité de la
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 
-Ces méthodes sont illustrées mieux avec un exemple de programme. La deuxième partie de la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme commence par une page intitulée **extrémités de trait** selon la [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Cette page définit un `PaintSurface` Gestionnaire d’événements qui effectue une itération sur les trois membres de le `SKStrokeCap` énumération, afficher le nom de membre de l’énumération et le dessin d’une ligne à l’aide de cette extrémité de trait :
+Ces méthodes sont illustrées mieux avec un exemple de programme. La deuxième partie de la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme commence par une page intitulée **extrémités de trait** selon la [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) classe. Cette page définit un `PaintSurface` Gestionnaire d’événements qui effectue une itération sur les trois membres de le `SKStrokeCap` énumération, afficher le nom de membre de l’énumération et le dessin d’une ligne à l’aide de cette extrémité de trait :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -107,7 +107,7 @@ Le `points` paramètre est un tableau de `SKPoint` valeurs et `mode` est un memb
 - [`Lines`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Lines/) chaque paire de points de connexion
 - [`Polygon`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Polygon/) Pour vous connecter à tous les points consécutifs
 
-Le **plusieurs lignes** page illustre cette méthode. Le [ `MultipleLinesPage` fichier XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) instancie deux `Picker` vues qui vous permettent de sélectionner un membre de la `SKPointMode` énumération et un membre de la `SKStrokeCap` énumération :
+Le **plusieurs lignes** page illustre cette méthode. Le [ `MultipleLinesPage` fichier XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) instancie deux `Picker` vues qui vous permettent de sélectionner un membre de la `SKPointMode` énumération et un membre de la `SKStrokeCap` énumération :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

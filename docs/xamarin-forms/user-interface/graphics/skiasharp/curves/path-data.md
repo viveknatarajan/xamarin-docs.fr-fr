@@ -7,11 +7,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 7ea99612f85a853bcd045b773df0a01f33427a89
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="svg-path-data"></a>Données de chemin d’accès SVG
 
@@ -147,7 +147,7 @@ La méthode statique [ `SKPath.ParseSvgPathData` ](https://developer.xamarin.com
 
 Le [ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) méthode est utile pour obtenir des données de chemin d’accès SVG existant `SKPath` objet à transférer vers un autre programme ou à stocker dans un format de fichier texte tel que XML. (Le `ToSvgPathData` méthode n’est pas illustrée dans l’exemple de code dans cet article.) Faire *pas* attendent `ToSvgPathData` pour retourner une chaîne correspondant exactement aux appels de méthode qui a créé le chemin d’accès. En particulier, vous allez découvrir que les arcs sont convertis en plusieurs `QuadTo` commandes, et comment ils apparaissent dans les données de chemin d’accès retournées par `ToSvgPathData`.
 
-Le **chemin d’accès données Hello** page sorts le mot « HELLO » à l’aide des données de chemin d’accès SVG. À la fois le `SKPath` et `SKPaint` objets sont définis en tant que champs dans le [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) classe :
+Le **chemin d’accès données Hello** page sorts le mot « HELLO » à l’aide des données de chemin d’accès SVG. À la fois le `SKPath` et `SKPaint` objets sont définis en tant que champs dans le [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) classe :
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -218,7 +218,7 @@ Le chemin d’accès remplit la zone de dessin, qui se présente plus raisonnabl
 
 [![](path-data-images/pathdatahello-small.png "Capture d’écran de triple de la page de chemin d’accès données Hello")](path-data-images/pathdatahello-large.png#lightbox "Triple capture d’écran de la page Hello chemin d’accès données")
 
-Le **chemin d’accès données Cat** page est similaire. Les objets de chemin d’accès et peinture sont définis en tant que champs dans le [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe :
+Le **chemin d’accès données Cat** page est similaire. Les objets de chemin d’accès et peinture sont définis en tant que champs dans le [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe :
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -291,7 +291,7 @@ Voici le programme en cours d’exécution sur les trois plateformes :
 
 Normalement, quand un `SKPath` objet est défini comme un champ, les contours du chemin d’accès doivent être définis dans le constructeur ou une autre méthode. Toutefois, lorsque vous utilisez des données de chemin d’accès SVG, vous avez vu que le chemin d’accès peut être spécifiée entièrement dans la définition du champ.
 
-La plus antérieure **l’horloge analogique laid** présenté dans le [ **la transformation de rotation** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) article affiche les aiguilles de l’horloge en tant que lignes simples. Le **assez l’horloge analogique** programme ci-dessous remplace ces lignes avec `SKPath` objets définis en tant que champs dans le [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) classe avec `SKPaint` objets :
+La plus antérieure **l’horloge analogique laid** présenté dans le [ **la transformation de rotation** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) article affiche les aiguilles de l’horloge en tant que lignes simples. Le **assez l’horloge analogique** programme ci-dessous remplace ces lignes avec `SKPath` objets définis en tant que champs dans le [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) classe avec `SKPaint` objets :
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage

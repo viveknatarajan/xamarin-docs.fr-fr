@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 274c8e9a79fa3fadff14f1174d86aad04d902b05
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dots-and-dashes"></a>Points et des tirets
 
@@ -29,7 +29,7 @@ En règle générale, que vous souhaitez rendre les longueurs de tiret et espace
 
 Toutefois, le `StrokeCap` définition de la `SKPaint` objet affecte également ces points et tirets. Comme vous le verrez, qui a un impact sur les éléments de ce tableau.
 
-Séparée par des points et les lignes en pointillés sont illustrées dans le **points et des tirets** page. Le [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) fichier instancie deux `Picker` vues, une pour vous permettant de sélectionner une extrémité de trait et la seconde pour sélectionner un tableau de tiret :
+Séparée par des points et les lignes en pointillés sont illustrées dans le **points et des tirets** page. Le [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) fichier instancie deux `Picker` vues, une pour vous permettant de sélectionner une extrémité de trait et la seconde pour sélectionner un tableau de tiret :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -92,7 +92,7 @@ Séparée par des points et les lignes en pointillés sont illustrées dans le *
 
 Les trois premiers éléments dans le `dashArrayPicker` supposent que la largeur du trait est 10 pixels. Le {10, 10} tableau est pour une ligne en pointillés, {30, 10} est pour une ligne en pointillé et {10, 10, 30, 10} est pour une ligne de point-tiret. (Les trois autres aborderons sous peu.)
 
-Le [ `DotsAndDashesPage` fichier code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contient le `PaintSurface` Gestionnaire d’événements et deux des routines d’assistance pour l’accès à la `Picker` vues :
+Le [ `DotsAndDashesPage` fichier code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contient le `PaintSurface` Gestionnaire d’événements et deux des routines d’assistance pour l’accès à la `Picker` vues :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -168,7 +168,7 @@ L’écran affiche Windows pointillés et tirets de la ligne pour un trait impos
 
 Jusqu'à présent, aucune mention n’a été effectuée du deuxième paramètre à la `SKPathEffect.CreateDash` (méthode). Ce paramètre est nommé `phase` et il fait référence à un offset dans le modèle de point-tiret au début de la ligne. Par exemple, si le tableau de tiret est {10, 10} et le `phase` est 10, la ligne commence par un espace au lieu d’un point.
 
-Une application intéressante de la `phase` du paramètre est une animation. Le **animés de spirale** page est similaire à la **Archimède spirale** page, à ceci près que le [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) réalise une animation de la classe le `phase` paramètre. La page montre également une autre approche de l’animation. L’exemple précédent de la [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) utilisé le `Task.Delay` méthode pour contrôler l’animation. Cet exemple utilise à la place la Xamarin.Forms `Device.Timer` méthode :
+Une application intéressante de la `phase` du paramètre est une animation. Le **animés de spirale** page est similaire à la **Archimède spirale** page, à ceci près que le [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) réalise une animation de la classe le `phase` paramètre. La page montre également une autre approche de l’animation. L’exemple précédent de la [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) utilisé le `Task.Delay` méthode pour contrôler l’animation. Cet exemple utilise à la place la Xamarin.Forms `Device.Timer` méthode :
 
 
 ```csharp

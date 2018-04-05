@@ -7,11 +7,11 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 47daca2ab94f718aeb5ce474c87edce3c3bd77a4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="3d-rotations"></a>Rotations 3D
 
@@ -221,7 +221,7 @@ Lorsque les objets 2D pivotent avec un angle positif autour de l’axe Y, puis e
 
 Lorsque vous utilisez `SKMatrix44`, effectuer une rotation 3D les les opérations de point de vue en multipliant différents `SKMatrix44` valeurs. Ensuite, vous pouvez extraire une matrice 3 x 3 à deux dimensions de 4 x 4 à l’aide de la matrice le [ `Matrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/) propriété de la `SKMatrix44` classe. Cette propriété retourne un familier `SKMatrix` valeur.
 
-Le **Rotation 3D** page vous permet de vous faire des essais avec rotation 3D. Le [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) fichier instancie quatre curseurs pour définir la rotation autour des axes X, Y et Z et pour définir une valeur de profondeur :
+Le **Rotation 3D** page vous permet de vous faire des essais avec rotation 3D. Le [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) fichier instancie quatre curseurs pour définir la rotation autour des axes X, Y et Z et pour définir une valeur de profondeur :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -302,7 +302,7 @@ Le **Rotation 3D** page vous permet de vous faire des essais avec rotation 3D. L
 
 Notez que la `depthSlider` est initialisée avec un `Minimum` valeur de 250. Cela implique que l’objet 2D en rotation ici a des coordonnées X et Y, limitées à un cercle défini par un rayon de 250 pixels autour de l’origine. Rotation de cet objet dans l’espace 3D aura toujours pour résultat dans les valeurs de coordonnées inférieure à 250.
 
-Le [ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) fichier code-behind se charge dans une image bitmap de 300 pixels carrés :
+Le [ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) fichier code-behind se charge dans une image bitmap de 300 pixels carrés :
 
 ```csharp
 public partial class Rotation3DPage : ContentPage

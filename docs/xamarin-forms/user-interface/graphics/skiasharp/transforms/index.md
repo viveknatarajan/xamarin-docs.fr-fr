@@ -7,11 +7,11 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 836f404e25679f01e1bd330582cf469299c73243
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a94e1011557a5c7487315681e6e7c4d106ae4ba1
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-transforms"></a>Transformations SkiaSharp
 
@@ -48,7 +48,7 @@ Les transformations SkiaSharp sont par rapport au coin supérieur gauche de la `
 
 La très grande différence est que les transformations de SKiaSharp sont *méthodes* tandis que les transformations de Xamarin.Forms sont *propriétés*. Il s’agit d’une différence de sémantique au-delà de la différence de syntaxe : SkiaSharp transformations effectuent une opération alors que les transformations Xamarin.Forms de définir un état. SkiaSharp les transformations s’appliquent aux objets de graphiques dessinés par la suite, mais pas vers les objets graphiques dessinés avant la transformation est appliquée. En revanche, une transformation Xamarin.Forms s’applique à un élément précédemment rendu dès que la propriété est définie. Les transformations SkiaSharp sont cumulatifs que les méthodes sont appelées ; Transformations de Xamarin.Forms sont remplacées lorsque la propriété est définie avec une autre valeur.
 
-Tous les exemples de programmes dans cette section apparaissent sous l’en-tête **transforme** dans la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme, puis, dans le [ **Transforme** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms) dossier de la solution.
+Tous les exemples de programmes dans cette section apparaissent sous l’en-tête **transforme** dans la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme, puis, dans le [ **Transforme** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) dossier de la solution.
 
 ## <a name="the-translate-transformtranslatemd"></a>[La transformation de traduction](translate.md)
 

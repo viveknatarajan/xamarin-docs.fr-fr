@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f7c0fcc87253b1d5ae9d612c52ef3a32c5790c5e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2f9941305f165ec04e5fc80e3c41e3150a21a9b7
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-lines-and-paths"></a>Chemins d’accès et les lignes SkiaSharp
 
@@ -21,7 +21,7 @@ Le [section précédente](~/xamarin-forms/user-interface/graphics/skiasharp/basi
 
 Le chemin d’accès du graphique est l’approche la plus généralisée pour dessiner des lignes et des courbes dans SkiaSharp. Cette section couvre l’utilisation une `SKPath` objet pour dessiner des lignes droites et d’utiliser une collection de petites lignes droites (appelé un *polyligne*) pour dessiner des courbes que vous pouvez définir mathématiquement. Une section ultérieure sera présente les différents tris de courbes pris en charge par `SKPath`.
 
-Tous les exemples de programmes dans cette section apparaissent sous l’en-tête **lignes et des chemins d’accès** dans la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme, puis, dans le [ **Chemins d’accès** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Paths) dossier de la solution.
+Tous les exemples de programmes dans cette section apparaissent sous l’en-tête **lignes et des chemins d’accès** dans la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme, puis, dans le [ **Chemins d’accès** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) dossier de la solution.
 
 ## <a name="lines-and-stroke-capslinesmd"></a>[Lignes et embouts de trait](lines.md)
 

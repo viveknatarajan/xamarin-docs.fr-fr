@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: c9f5f9f20296b1c2443a8addeebd4d12ccaa1ab4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-skew-transform"></a>La transformation d’inclinaison
 
@@ -39,7 +39,7 @@ public void Skew (SKPoint skew)
 
 Toutefois, il est peu probable que vous allez utiliser une de ces deux méthodes de manière isolée.
 
-Le **d’inclinaison de faire des essais** page permet de vous faire des essais avec inclinaison les valeurs comprises entre -10 et 10. Une chaîne de texte est placée dans le coin supérieur gauche de la page, avec des valeurs de décalage obtenus à partir de deux `Slider` éléments. Voici le `PaintSurface` gestionnaire dans le [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) classe :
+Le **d’inclinaison de faire des essais** page permet de vous faire des essais avec inclinaison les valeurs comprises entre -10 et 10. Une chaîne de texte est placée dans le coin supérieur gauche de la page, avec des valeurs de décalage obtenus à partir de deux `Slider` éléments. Voici le `PaintSurface` gestionnaire dans le [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) classe :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -109,7 +109,7 @@ Vous vous sentirez plus à l’aise spécifiant le décalage à un angle d’inc
 
 Le rapport de l’équipe de 150 pixels à la verticale de 100 pixels est la tangente de cet angle, dans cet exemple et de 56,3 degrés.
 
-Le fichier XAML de la **expérience de Angle d’inclinaison** page est similaire à la **Angle d’inclinaison** page, sauf que le `Slider` éléments comprise entre -90 et 90 degrés. Le [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) Centre le texte dans la page de fichier code-behind et utilise `Translate` pour définir un centre de l’inclinaison au centre de la page. Short `SkewDegrees` méthode en bas du code convertit des angles pour incliner des valeurs :
+Le fichier XAML de la **expérience de Angle d’inclinaison** page est similaire à la **Angle d’inclinaison** page, sauf que le `Slider` éléments comprise entre -90 et 90 degrés. Le [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) Centre le texte dans la page de fichier code-behind et utilise `Translate` pour définir un centre de l’inclinaison au centre de la page. Short `SkewDegrees` méthode en bas du code convertit des angles pour incliner des valeurs :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -154,7 +154,7 @@ Un angle d’approche de 90 degrés positifs ou négatifs, la tangente est proch
 
 [![](skew-images/skewangleexperiment-small.png "Capture d’écran de triple de la page de l’expérience de Angle d’inclinaison")](skew-images/skewangleexperiment-large.png#lightbox "Triple capture d’écran de la page de l’expérience de Angle d’inclinaison")
 
-Une inclinaison horizontale négative petite peut simuler texte en italique ou oblique de, comme le **texte Oblique** montre de page. Le [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe montre comment procéder :
+Une inclinaison horizontale négative petite peut simuler texte en italique ou oblique de, comme le **texte Oblique** montre de page. Le [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) classe montre comment procéder :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
