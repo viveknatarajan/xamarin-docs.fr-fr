@@ -1,18 +1,17 @@
 ---
-title: "Débogage d’un plantage natif"
-description: "Ce guide décrit comment déboguer des exceptions qui proviennent du runtime Objective-C."
-ms.topic: article
+title: Débogage d’un plantage natif
+description: Ce guide décrit comment déboguer des exceptions qui proviennent du runtime Objective-C.
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: d8633a3f575b51d4eeac326cc5ea418fcbf5bd20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 211f85c32fae3ed947e01890916e0a646981a51b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debugging-a-native-crash"></a>Débogage d’un plantage natif
 
@@ -132,7 +131,7 @@ mainWindowController.Window.StandardWindowButton (NSWindowButton.CloseButton).Ac
 
 Le `NSButton` retourné par `StandardWindowButton()` était nettoyé même si un événement y était inscrit (c’est le bogue). Quand nous essayons d’appeler cet événement en cliquant, si le bouton a été nettoyé, il y a plantage.
 
-Même si ce n’était pas la cause racine de ce problème particulier, des traces de pile comme celle-ci peuvent également être provoquées par des signatures de méthode incorrectes dans les fonctions exportées vers Objective-C. Par exemple, si une méthode attend qu’un paramètre soit `out string` et que vous le tapez en `string`, un plantage peut se produire de la même façon.
+Même si ce n’était pas la cause racine de ce problème particulier, des traces de pile comme celle-ci peuvent également être provoquées par des signatures de méthode incorrectes dans les fonctions `[Export]` vers Objective-C. Par exemple, si une méthode attend qu’un paramètre soit `out string` et que vous le tapez en `string`, un plantage peut se produire de la même façon.
 
 ## <a name="example-3-callbacks-and-managed-objects"></a>Exemple 3 : Rappels et objets gérés
 

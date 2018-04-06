@@ -1,18 +1,17 @@
 ---
-title: "Déploiement et tests"
-description: "Ce document comporte des liens vers des guides qui abordent les icônes, les performances et la publication sur l’App Store."
-ms.topic: article
+title: Déploiement et tests
+description: Ce document comporte des liens vers des guides qui abordent les icônes, les performances et la publication sur l’App Store.
 ms.prod: xamarin
 ms.assetid: 2FF314C7-D926-9FEC-57A6-F421A0ED3A46
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/17/2018
-ms.openlocfilehash: 93d6396fff74ce82c4a171e567d864c6ca41da73
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e0af30b412a0a4c9d73009dad5d66d7762edbb9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>Déploiement et tests
 

@@ -1,18 +1,17 @@
 ---
 title: ProGuard
-description: "ProGuard est réducteur de fichier de classe Java, un optimiseur, un obfuscateur et un pré-vérificateur. Il détecte et supprime le code non utilisé, analyse et optimise le bytecode, puis obfusque les classes et les membres de classe. Ce guide explique le fonctionnement de ProGuard, comment l’activer dans votre projet et comment le configurer. Il fournit également plusieurs exemples de configuration de ProGuard."
-ms.topic: article
+description: ProGuard est réducteur de fichier de classe Java, un optimiseur, un obfuscateur et un pré-vérificateur. Il détecte et supprime le code non utilisé, analyse et optimise le bytecode, puis obfusque les classes et les membres de classe. Ce guide explique le fonctionnement de ProGuard, comment l’activer dans votre projet et comment le configurer. Il fournit également plusieurs exemples de configuration de ProGuard.
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 10744d7c4fbcc5a8935a1fe1e60b6c96ec828815
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e65c78633ae91318bd8e9cce949bac9cc12675c0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -170,7 +169,7 @@ Xamarin.Android prend en charge les options suivantes de ProGuard :
 
 -    [Filtres de fichiers](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filefilters)
 
--    [Filtres](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filters)
+-    [Les filtres](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filters)
 
 -    [Vue d’ensemble des options `Keep`](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoverview)
 

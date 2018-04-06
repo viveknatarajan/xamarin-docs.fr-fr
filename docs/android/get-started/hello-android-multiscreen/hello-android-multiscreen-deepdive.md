@@ -1,18 +1,18 @@
 ---
-title: "Hello, Android multi-écran - En profondeur"
-description: "Dans ce guide en deux parties, l’application Phoneword de base (créée dans le guide Hello, Android) est étendue de manière à gérer un second écran. Vous y découvrirez également les composants d’une application Android. Vous allez plonger au cœur de l’architecture Android afin de mieux comprendre la structure et les fonctionnalités des applications Android."
-ms.topic: article
+title: Hello, Android multi-écran - En profondeur
+description: Dans ce guide en deux parties, l’application Phoneword de base (créée dans le guide Hello, Android) est étendue de manière à gérer un second écran. Vous y découvrirez également les composants d’une application Android. Vous allez plonger au cœur de l’architecture Android afin de mieux comprendre la structure et les fonctionnalités des applications Android.
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f1c19d43aa1f9010307df3fb954ac1029221ccd4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android multi-écran - En profondeur
 

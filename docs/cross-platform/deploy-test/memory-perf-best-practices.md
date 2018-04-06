@@ -1,18 +1,17 @@
 ---
 title: Performances entre plateformes
 description: De nombreuses techniques permettent d’accroître les performances des applications conçues sur la plateforme Xamarin. Collectivement, ces techniques peuvent considérablement réduire la charge de travail d’un processeur, de même que la quantité de mémoire consommée par une application. Cet article décrit et explique ces techniques.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: e8b597221e806c2338d6f1965d3d151f998a3011
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: d434782e2586b1ed4f42984f2eeb72191b0dc171
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cross-platform-performance"></a>Niveau de performance multiplateforme
 

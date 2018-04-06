@@ -1,18 +1,17 @@
 ---
-title: "Déploiement et tests"
-description: "Cette section comporte des guides qui expliquent comment tester une application, optimiser ses performances, la préparer pour la mise en production, la signer avec un certificat et la publier sur un Store d'applications."
-ms.topic: article
+title: Déploiement et tests
+description: Cette section comporte des guides qui expliquent comment tester une application, optimiser ses performances, la préparer pour la mise en production, la signer avec un certificat et la publier sur un Store d'applications.
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 5ddc2a258ad09de2cdd8214dceb533441812ae54
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7453af3721cbdb6b93d884322cee1cd5115c317
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>Déploiement et tests
 

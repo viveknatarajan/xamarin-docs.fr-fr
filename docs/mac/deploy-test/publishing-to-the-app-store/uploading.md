@@ -1,18 +1,17 @@
 ---
 title: Charger sur le Mac App Store
-description: "Ce guide présente en détail le chargement d’une application Xamarin.Mac en vue de sa publication sur le Mac App Store."
-ms.topic: article
+description: Ce guide présente en détail le chargement d’une application Xamarin.Mac en vue de sa publication sur le Mac App Store.
 ms.prod: xamarin
 ms.assetid: 30cd0e47-1b2e-47ef-93f6-4bed20b15c03
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 30224db257af4de8dd13f362761ecd369b682dda
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4ddbbdc32ecb2de4f9dcb89162bc38803fa7159e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="upload-to-mac-app-store"></a>Charger sur le Mac App Store
 

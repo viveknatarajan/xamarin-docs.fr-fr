@@ -1,18 +1,17 @@
 ---
-title: "Introduction à Xamarin.Forms"
-description: "Xamarin.Forms est une abstraction du kit de ressources d’interface utilisateur sauvegardée en mode natif multiplateforme qui permet aux développeurs de créer facilement des interfaces utilisateur qui peuvent être partagées entre Android, iOS, Windows et Windows Phone. Les interfaces utilisateur sont rendues à l’aide des contrôles natifs de la plateforme cible, ce qui permet aux applications Xamarin.Forms de conserver l’apparence appropriée pour chaque plateforme. Cet article présente Xamarin.Forms et décrit comment l’utiliser pour l’écriture d’applications."
-ms.topic: article
+title: Introduction à Xamarin.Forms
+description: Xamarin.Forms est une abstraction du kit de ressources d’interface utilisateur sauvegardée en mode natif multiplateforme qui permet aux développeurs de créer facilement des interfaces utilisateur qui peuvent être partagées entre Android, iOS, Windows et Windows Phone. Les interfaces utilisateur sont rendues à l’aide des contrôles natifs de la plateforme cible, ce qui permet aux applications Xamarin.Forms de conserver l’apparence appropriée pour chaque plateforme. Cet article présente Xamarin.Forms et décrit comment l’utiliser pour l’écriture d’applications.
 ms.prod: xamarin
 ms.assetid: f619595f-3ee7-439b-a1bc-d13e5106e6e9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: be4b0c907774c33dfcd1818da167acb2dc3b04dd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6428f1658245ec5ecf47e474bc5ffd5d49663bf2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Introduction à Xamarin.Forms
 

@@ -1,17 +1,16 @@
 ---
-title: "Signature manuelle de l’APK"
-ms.topic: article
+title: Signature manuelle de l’APK
 ms.prod: xamarin
 ms.assetid: 08549E1C-7F04-4D20-9E7A-794B9D09FD12
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: f47fded9c09849f6d5f1329a4efd652df80816d5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9e1b168b7212f093b50a36c40550fba2e7d63e77
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="manually-signing-the-apk"></a>Signature manuelle de l’APK
 
@@ -137,7 +136,7 @@ Consultez la [documentation de Google](https://developer.android.com/studio/comm
 > [!WARNING]
 > Cette section s’applique uniquement s’il est nécessaire de signer l’APK avec l’utilitaire **jarsigner**. Les développeurs sont encouragés à utiliser **apksigner** pour signer l’APK.
 
-Cette technique implique la signature du fichier APK à l’aide de la commande  **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)**  du SDK Java.  L’outil **jarsigner** est fourni par le SDK Java. 
+Cette technique implique la signature du fichier APK à l’aide de la commande **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** du SDK Java.  L’outil **jarsigner** est fourni par le SDK Java. 
 
 L’extrait de code suivant montre comment signer un APK à l’aide de **jarsigner** et de la clé `publishingdoc` qui est contenue dans un fichier de magasin de clés nommé **xample.keystore** :
 

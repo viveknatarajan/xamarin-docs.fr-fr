@@ -1,18 +1,17 @@
 ---
 title: Gestionnaire d’appareils Android Xamarin
 description: Le Gestionnaire d’appareils Android Xamarin, actuellement en préversion, remplace le Gestionnaire d’appareils hérité de Google. Ce guide explique comment utiliser le Gestionnaire d’appareils Android Xamarin pour créer et configurer des appareils virtuels Android qui émulent des appareils Android. Vous pouvez utiliser ces appareils virtuels pour exécuter et tester votre application sans avoir à dépendre d’un appareil physique.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/20/2018
-ms.openlocfilehash: 01fb21729e919872935fd63af28a13642a11fa4b
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3dd67f25e389adda1af31f4a2b85abd4cfd751d0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Gestionnaire d’appareils Android Xamarin
 
