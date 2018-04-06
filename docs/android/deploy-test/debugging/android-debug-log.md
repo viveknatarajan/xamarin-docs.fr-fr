@@ -1,17 +1,16 @@
 ---
 title: Journal de débogage Android
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2018
-ms.openlocfilehash: 2e3225c0b0f984e52507ac472e26c4aee6a76909
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.date: 04/04/2018
+ms.openlocfilehash: e0e22fe35dc5042a7b3c895a250803e936611629
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="android-debug-log"></a>Journal de débogage Android
 
@@ -110,17 +109,24 @@ Une fois l’appareil sélectionné, l’outil **Journal de l’appareil** ajout
 
 Vous pouvez également afficher journal de débogage via la ligne de commande. Ouvrez une fenêtre d’invite de commandes et accédez au dossier des outils de plateforme du kit de développement logiciel (SDK) Android (en règle générale, le dossier des outils de plateforme du kit de développement logiciel (SDK) se trouve à l’adresse **C:\\Program Files (x86)\\Android\\android-sdk\\outils de plateforme**).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
-
-Vous pouvez également afficher journal de débogage via la ligne de commande. Ouvrez une fenêtre Terminal et accédez au dossier des outils de plateforme du kit de développement logiciel (SDK) Android (en règle générale, le dossier des outils de plateforme du kit de développement logiciel (SDK) se trouve à l’adresse **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
-
------
-
 Si un seul appareil (appareil physique ou émulateur) est joint, le journal peut être consulté en entrant la commande suivante :
 
 ```shell
 $ adb logcat
 ```
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+
+Vous pouvez également afficher journal de débogage via la ligne de commande. Ouvrez une fenêtre Terminal et accédez au dossier des outils de plateforme du kit de développement logiciel (SDK) Android (en règle générale, le dossier des outils de plateforme du kit de développement logiciel (SDK) se trouve à l’adresse **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
+
+Si un seul appareil (appareil physique ou émulateur) est joint, le journal peut être consulté en entrant la commande suivante :
+
+```shell
+$ ./adb logcat
+```
+
+-----
+
 
 Si plusieurs appareils sont joints, l’appareil doit être identifié explicitement. Par exemple, **adb -d logcat** affiche le journal de l’unique appareil physique connecté, tandis que **adb -e logcat** affiche le journal de l’unique émulateur en cours d’exécution.
 
@@ -146,6 +152,18 @@ Ceci produit une sortie semblable à la suivante :
 I/myapp   (11103): this is an info message
 W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
+```
+
+Il est également possible d’utiliser `Console.WriteLine` pour écrire dans le **journal de débogage** &ndash; ces messages apparaissent dans logcat avec un format de sortie légèrement différent (cette technique est particulièrement utile lors du débogage des applications Xamarin.Forms sur Android) :
+
+```csharp
+System.Console.WriteLine ("DEBUG - Button Clicked!");
+```
+
+Ceci produit une sortie semblable à la suivante dans logcat :
+
+```
+Info (19543) / mono-stdout: DEBUG - Button Clicked!
 ```
 
 ## <a name="interesting-messages"></a>Messages intéressants

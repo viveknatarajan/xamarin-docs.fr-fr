@@ -1,17 +1,16 @@
 ---
-title: "Compilation pour différents appareils"
-ms.topic: article
+title: Compilation pour différents appareils
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 12b8f51156c2ed750c59ef79522121c6c5d2c03c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 039e0a931613ec79ccd6f2b13bc18ae6b80f5195
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="compiling-for-different-devices"></a>Compilation pour différents appareils
 
@@ -30,7 +29,7 @@ Les propriétés build de votre fichier exécutable peuvent être configurées �
 
 Outre les options de configuration disponibles sur l’interface utilisateur, vous pouvez également transmettre votre propre ensemble d’options de lignes de commande à [l’outil Build Xamarin.iOS (mtouch)](~/ios/deploy-test/mtouch.md).
 
-[http://iossupportmatrix.com/](http://iossupportmatrix.com/) est une ressource utile qui peut être utilisée pour vous assurer que vous incluez tous les appareils, architectures et versions iOS requis.
+[http://iossupportmatrix.com/](http://iossupportmatrix.com/) est une ressource utile dont vous pouvez vous servir pour veiller à inclure tous les appareils, architectures et versions iOS requis.
 
  <a name="SDK_Options" />
 
