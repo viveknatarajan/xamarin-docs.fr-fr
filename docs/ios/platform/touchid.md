@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6ec46a5e098ba14925102211a27fcce8c27970e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="touch-id"></a>ID tactile
 
@@ -121,47 +121,46 @@ Dans les sections précédentes, nous avons étudié la théorie des accès et l
 
 Nous allons donc étudier d’ajouter certains authentification ID tactile à notre application. Dans cette procédure pas à pas nous allons utiliser la [Table de la table de montage séquentiel](https://developer.xamarin.com/samples/StoryboardTable/) exemple. Vous souhaitez vous assurer que seuls le propriétaire de l’appareil peut ajouter un élément à cette liste, nous ne voulons encombrer par toute personne permettant d’ajouter un élément !
 
-1.  Télécharger l’exemple et l’exécuter dans Visual Studio pour Mac.
-2.  Double-cliquez sur `MainStoryboard.Storyboard` pour ouvrir l’exemple dans le concepteur iOS. Avec cet exemple, nous souhaitons ajouter un nouvel écran à notre application, qui contrôle l’authentification. Cela passe précède la `MasterViewController`.
-3.  Faites glisser une nouvelle **View Controller** à partir de la **boîte à outils** à la **aire de conception**. Définir en tant que le **racine View Controller** par **Ctrl + glisser** à partir de la **Navigation contrôleur**:
+1. Télécharger l’exemple et l’exécuter dans Visual Studio pour Mac.
+2. Double-cliquez sur `MainStoryboard.Storyboard` pour ouvrir l’exemple dans le concepteur iOS. Avec cet exemple, nous souhaitons ajouter un nouvel écran à notre application, qui contrôle l’authentification. Cela passe précède la `MasterViewController`.
+3. Faites glisser une nouvelle **View Controller** à partir de la **boîte à outils** à la **aire de conception**. Définir en tant que le **racine View Controller** par **Ctrl + glisser** à partir de la **Navigation contrôleur**:
 
     [![](touchid-images/image4.png "Définissez le contrôleur d’affichage racine")](touchid-images/image4.png#lightbox)
 4.  Nommez le nouveau contrôleur de vue `AuthenticationViewController`.
-5.  Ensuite, faites glisser un bouton et placez-le sur le `AuthenticationViewController`. Appelez cela `AuthenticateButton`et lui donner le texte `Add a Chore`.
-6.  Créer un événement sur le `AuthenticateButton` appelée `AuthenticateMe`.
-7.  Créer un manuel segue à partir de `AuthenticationViewController` en cliquant sur la barre noire au bas et **Ctrl + glisser** dans la barre d’outils pour le `MasterViewController` et en choisissant **push** (ou **afficher** Si vous utilisez les classes de taille) :
+5. Ensuite, faites glisser un bouton et placez-le sur le `AuthenticationViewController`. Appelez cela `AuthenticateButton`et lui donner le texte `Add a Chore`.
+6. Créer un événement sur le `AuthenticateButton` appelée `AuthenticateMe`.
+7. Créer un manuel segue à partir de `AuthenticationViewController` en cliquant sur la barre noire au bas et **Ctrl + glisser** dans la barre d’outils pour le `MasterViewController` et en choisissant **push** (ou **afficher** Si vous utilisez les classes de taille) :
 
     [![](touchid-images/image5.png "Faites glisser la barre vers le MasterViewController et en choisissant push ou afficher")](touchid-images/image6.png#lightbox)
-8.  Cliquez sur les récents segue et lui donner l’identificateur `AuthenticationSegue`, comme illustré ci-dessous :
+8. Cliquez sur les récents segue et lui donner l’identificateur `AuthenticationSegue`, comme illustré ci-dessous :
 
     [![](touchid-images/image7.png "La valeur de l’identificateur segue AuthenticationSegue")](touchid-images/image7.png#lightbox)
-9.  Ajoutez le code suivant à `AuthenticationViewController` :
+9. Ajoutez le code suivant à `AuthenticationViewController` :
 
-    ```
+    ```csharp
     partial void AuthenticateMe (UIButton sender)
-        {
-            var context = new LAContext();
-            NSError AuthError;
-            var myReason = new NSString("To add a new chore");
+    {
+        var context = new LAContext();
+        NSError AuthError;
+        var myReason = new NSString("To add a new chore");
 
-
-            if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
-                var replyHandler = new LAContextReplyHandler((success, error) => {
-
-                    this.InvokeOnMainThread(()=>{
-                        if(success){
-                            Console.WriteLine("You logged in!");
-                            PerformSegue("AuthenticationSegue", this);
-                        }
-                        else{
-                            //Show fallback mechanism here
-                        }
-                    });
-
+        if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
+            var replyHandler = new LAContextReplyHandler((success, error) => {
+                this.InvokeOnMainThread(()=> {
+                    if(success)
+                    {
+                        Console.WriteLine("You logged in!");
+                        PerformSegue("AuthenticationSegue", this);
+                    }
+                    else
+                    {
+                        // Show fallback mechanism here
+                    }
                 });
-                context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
-            };
-        }
+            });
+            context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
+        };
+    }
     ```
 
 Il s’agit de tout le code que vous avez besoin pour implémenter l’authentification de Touch ID à l’aide de l’authentification locale. Les lignes en surbrillance dans l’image ci-dessous illustrent l’utilisation de l’authentification locale :

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: ff36deff996a92fca512158252c64e5c29046be9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="list-appearance"></a>Apparence de la liste
 
@@ -117,14 +117,12 @@ Notez que nous avons :
 - Modifié le `ListView`de `ItemsSource` à la liste groupée
 
 ### <a name="customizing-grouping"></a>Personnalisation du regroupement
-Maintenant que nous avons vu comment mettre en œuvre de la base de regroupement dans ListView, voyons comment personnaliser l’affichage des en-têtes de groupe.
 
-Semblable à la façon dont le `ListView` a un `ItemTemplate` pour définir le mode d’affichage des lignes `ListView` a un `GroupHeaderTemplate`. Il s’agit d’un exemple de ListView ci-dessus, avec un modèle d’en-tête de groupe personnalisé :
+Si le regroupement a été activé dans la liste, l’en-tête de groupe peut également être personnalisée.
 
-![](customizing-list-appearance-images/grouping-depth.png "ListView avec GroupHeaderTemplate personnalisé")
+Semblable à la façon dont le `ListView` a un `ItemTemplate` pour définir le mode d’affichage des lignes `ListView` a un `GroupHeaderTemplate`. 
 
-
-Voici comment accomplir cette conception en XAML :
+Voici un exemple de personnalisation de l’en-tête de groupe en XAML :
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
