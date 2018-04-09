@@ -6,12 +6,12 @@ ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/22/2017
-ms.openlocfilehash: f074bca7571188b14a36bd4e6c59a6fdf8df9339
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/04/2018
+ms.openlocfilehash: d5921c549c299197bdc442c9b883b49064655f76
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Accélération matérielle de l’émulateur Android
 
@@ -20,13 +20,14 @@ Dans la mesure où l’émulateur du kit Android SDK est extrêmement lent sans
 
 ## <a name="haxm-overview"></a>Vue d’ensemble d’HAXM
 
-HAXM est un moteur d’assistance matérielle à la virtualisation (hyperviseur) qui utilise la technologie de virtualisation (VT, Virtualization Technology) Intel pour accélérer l’émulation des applications Android sur un ordinateur hôte. Conjugué aux images de l’émulateur x86 Android fournies par Intel et au Gestionnaire Android SDK officiel, le Gestionnaire HAXM accélère l’émulation Android sur les systèmes Intel VT. Si vous développez sur un ordinateur équipé d’un processeur Intel prenant en charge VT, vous pouvez tirer parti du Gestionnaire HAXM pour accélérer considérablement l’émulateur du kit Android SDK (si vous ne savez pas si votre processeur prend en charge VT, consultez [Déterminer si votre processeur prend en charge la technologie de virtualisation Intel](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
+HAXM est un moteur d’assistance matérielle à la virtualisation (hyperviseur) qui utilise la technologie de virtualisation (VT, Virtualization Technology) Intel pour accélérer l’émulation des applications Android sur un ordinateur hôte. Conjugué aux images de l’émulateur x86 Android fournies par Intel et au Gestionnaire Android SDK officiel, le Gestionnaire HAXM accélère l’émulation Android sur les systèmes Intel VT. 
 
-L’émulateur du kit Android SDK utilise automatiquement HAXM lorsque celui-ci est disponible. Lorsque vous sélectionnez un appareil virtuel **x86** (comme décrit dans [Configuration et utilisation](~/android/deploy-test/debugging/android-sdk-emulator/index.md)), cet appareil utilise HAXM pour l’accélération matérielle. Avant d’utiliser l’émulateur du kit Android SDK pour la première fois, il est judicieux de vérifier qu’HAXM est installé et disponible pour l’émulateur.
+Si vous développez sur un ordinateur équipé d’un processeur Intel prenant en charge VT, vous pouvez tirer parti du Gestionnaire HAXM pour accélérer considérablement l’émulateur du kit Android SDK (si vous ne savez pas si votre processeur prend en charge VT, consultez [Déterminer si votre processeur prend en charge la technologie de virtualisation Intel](https://www.intel.com/content/www/us/en/support/processors/000005486.html)).
 
 > [!NOTE]
-> Vous ne pouvez pas exécuter HAXM sur une machine virtuelle.
+> Vous ne pouvez pas exécuter un émulateur accéléré par machine virtuelle dans une autre machine virtuelle telle qu’une machine virtuelle hébergée par VirtualBox, VMWare ou Docker. Vous devez exécuter l’émulateur Google Android [directement sur votre matériel système](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
+L’émulateur du kit Android SDK utilise automatiquement HAXM lorsque celui-ci est disponible. Lorsque vous sélectionnez un appareil virtuel **x86** (comme décrit dans [Configuration et utilisation](~/android/deploy-test/debugging/android-sdk-emulator/index.md)), cet appareil utilise HAXM pour l’accélération matérielle. Avant d’utiliser l’émulateur du kit Android SDK pour la première fois, il est judicieux de vérifier qu’HAXM est installé et disponible pour l’émulateur.
 
 ## <a name="verifying-haxm-installation"></a>Vérification de l'installation d’HAXM
 
@@ -180,6 +181,11 @@ Si Device Guard est activé, effectuez les étapes suivantes pour le désactiver
 8. Une fois que l’ordinateur a redémarré, vérifiez de nouveau qu’Hyper-V est désactivé (comme décrit dans les étapes précédentes).
 
 Si Hyper-V n’est toujours pas désactivé, les stratégies de votre ordinateur joint au domaine peuvent vous empêcher de désactiver Device Guard ou Credential Guard. Dans ce cas, vous pouvez demander une dérogation à votre administrateur de domaine afin que vous soyez autorisé à ne pas utiliser Credential Guard. Ou bien, vous pouvez utiliser un ordinateur qui n’est pas joint au domaine pour utiliser HAXM.
+
+## <a name="hardware-acceleration-and-amd-cpus"></a>Accélération matérielle et processeurs AMD
+
+Étant donné que l’émulateur Android de Google prend actuellement en charge l’accélération matérielle AMD [uniquement sur Linux](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies), l’accélération matérielle n’est pas disponible pour les ordinateurs AMD exécutant Windows.
+
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
