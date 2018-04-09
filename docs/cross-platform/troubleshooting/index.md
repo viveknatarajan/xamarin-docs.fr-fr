@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: e7776ed249307e7a6ba4401bfb409f749c4581e8
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: babdce968dc74117a19d64755790da57c32d26aa
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -28,21 +28,8 @@ Comment mettre à jour des solutions existantes de Xamarin pour modifier le comp
 
 Options de support pour les produits de Xamarin.
 
-### <a name="legacy-license-questionslegacy-licensesindexmd"></a>[Questions relatives à la licence héritée](legacy-licenses/index.md)
-
-Résolution des problèmes d’articles pour les utilisateurs de Xamarin dont les licences de plateforme hérité. (Titulaires de licence MSDN doivent faire référence à ce [guide des Options de licences](~/cross-platform/get-started/requirements.md) à la place.)
-
 ## <a name="product-specific-questions"></a>Questions spécifiques au produit
 
 - [Android](~/android/troubleshooting/questions/index.md)
 - [iOS](~/ios/troubleshooting/questions/index.md)
 - [Xamarin.Forms](~/xamarin-forms/troubleshooting/questions/index.md)
-
-
-
-## <a name="related-links"></a>Liens associés
-
-- [Forum aux questions sur Android](~/android/troubleshooting/questions/index.md)
-- [iOS Foire aux questions](~/ios/troubleshooting/questions/index.md)
-- [FAQ de Xamarin.Forms](~/xamarin-forms/troubleshooting/questions/index.md)
-- [Forum aux questions sur Xamarin.UITest](https://developer.xamarin.com~/testcloud/uitest/questions/)
