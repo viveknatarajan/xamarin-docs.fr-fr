@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
 ms.openlocfilehash: 592e957e0c64e7189d6f01f1ba0f23da074c4bec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/12/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>L’authentification des utilisateurs avec un Service de SimpleDB Amazon
 
@@ -69,7 +69,7 @@ Cet article a expliqué comment restreindre l’accès des utilisateurs à leurs
 
 ## <a name="related-links"></a>Liens associés
 
-- [TodoAWSAuth (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWSAuth/)
+- [TodoAWSAuth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWSAuth/)
 - [Utilisation d’un Service de SimpleDB Amazon](~/xamarin-forms/data-cloud/consuming/aws.md)
 - [L’authentification des utilisateurs avec un fournisseur d’identité](~/xamarin-forms/data-cloud/authentication/oauth.md)
 - [Identité de Cognito Amazon](http://docs.aws.amazon.com/cognito/devguide/identity/)

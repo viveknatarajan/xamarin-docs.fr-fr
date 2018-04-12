@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
 ms.openlocfilehash: 1602319dbf5a5d00ac5de75f2d438b9aea692699
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/12/2018
 ---
 # <a name="consuming-an-amazon-simpledb-service"></a>Utilisation d’un Service de SimpleDB Amazon
 
@@ -195,7 +195,7 @@ Cet article a expliqué comment le AWS SDK pour .NET permet d’interroger, de c
 
 ## <a name="related-links"></a>Liens associés
 
-- [TodoAWS (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWS/)
+- [TodoAWS (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWS/)
 - [Amazon Web Services SDK Guide de développement Xamarin](http://docs.aws.amazon.com/mobile/sdkforxamarin/developerguide/)
 - [Identité de Cognito Amazon](http://docs.aws.amazon.com/cognito/devguide/identity/)
 - [Documentation du développeur de SimpleDB Amazon](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html)
