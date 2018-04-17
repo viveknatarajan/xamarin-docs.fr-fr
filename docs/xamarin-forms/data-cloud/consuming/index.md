@@ -1,21 +1,21 @@
 ---
 title: Utilisation de Services Web
-description: Ce guide montre comment communiquer avec les services web différents pour fournir créer, lire, mettre à jour et supprimer des fonctionnalités à une application de Xamarin.Forms (CRUD). Rubriques couvertes incluent la communication avec ASMX services WCF services, autres services, les applications mobiles Azure et Amazon Web Services.
+description: Ce guide montre comment communiquer avec les services web différents pour fournir créer, lire, mettre à jour et supprimer des fonctionnalités à une application de Xamarin.Forms (CRUD). Rubriques couvertes incluent la communication avec les services ASMX, WCF services, services REST et les applications mobiles Azure.
 ms.prod: xamarin
 ms.assetid: 8B360BDA-E4E3-4A3F-9004-0E35362F49F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 530b57c009a1f76d3756d7315856f74b6cda2f66
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a4c842ea7fd37ade9be0a9cb3e3ff7e50a6d1491
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="consuming-web-services"></a>Utilisation de Services Web
 
-_Ce guide montre comment communiquer avec les services web différents pour fournir créer, lire, mettre à jour et supprimer des fonctionnalités à une application de Xamarin.Forms (CRUD). Rubriques couvertes incluent la communication avec ASMX services WCF services, autres services, les applications mobiles Azure et Amazon Web Services._
+Ce_t guide montre comment communiquer avec les services web différents pour fournir créer, lire, mettre à jour et supprimer des fonctionnalités à une application de Xamarin.Forms (CRUD). Rubriques couvertes incluent la communication avec les services ASMX, WCF services, services REST et les applications mobiles Azure.
 
 ## <a name="consuming-an-aspnet-web-service-asmxxamarin-formsdata-cloudconsumingasmxmd"></a>[Utilisation d’un Service Web ASP.NET (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md)
 
@@ -32,11 +32,6 @@ Transfert de REST (Representational State) est un style d’architecture pour la
 ## <a name="consuming-an-azure-mobile-appxamarin-formsdata-cloudconsumingazuremd"></a>[Utilisation d’une application Mobile Azure](~/xamarin-forms/data-cloud/consuming/azure.md)
 
 Azure Mobile Apps permettent de développer des applications avec les serveurs principaux évolutifs est hébergés dans Azure App Service, avec prise en charge pour l’authentification mobile, synchronisation hors connexion et des notifications push. Cet article, qui s’applique uniquement aux applications mobiles Azure qui utilisent un serveur principal Node.js, explique comment interroger, insérer, mettre à jour et supprimer des données stockées dans une table dans une instance Azure Mobile Apps.
-
-## <a name="consuming-an-amazon-simpledb-servicexamarin-formsdata-cloudconsumingawsmd"></a>[Utilisation d’un Service de SimpleDB Amazon](~/xamarin-forms/data-cloud/consuming/aws.md)
-
-Amazon SimpleDB est un service web qui offre la possibilité de stocker et interroger des données dans un cloud d’Amazon. Cet article explique comment utiliser le AWS SDK pour .NET pour interroger, de créer et de remplacer et supprimer des données stockées dans un service SimpleDB.
-
 
 ## <a name="related-links"></a>Liens associés
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: c9e7c920855d2002f52d05e28c5225f301cd62b1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a62d4621a8f3ace64401d64e35c806317a591c03
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -30,6 +30,9 @@ Il existe quatre types de stockage :
 - **Les fichiers et répertoires** - pour la gestion d’un grand nombre de fichiers différents directement dans le système de fichiers.
 
 Ce document décrit les deux premiers types - paires clé-valeur et les sous-classes UIDocument - et comment utiliser ces fonctionnalités dans Xamarin.iOS.
+
+> [!IMPORTANT]
+> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs de gérer correctement général données Protection règlement (PIBR l’Union européenne).
 
 ## <a name="requirements"></a>Spécifications
 

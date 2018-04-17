@@ -6,12 +6,12 @@ ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: f68b4dc12586d482fd9d3f8901bf3fd09469b0bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: cf1eaec3dfee7c3457a4614147c9b5564843b2a7
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="google-messaging"></a>Messagerie Google
 
@@ -28,6 +28,10 @@ Cette procédure pas à pas fournit une explication pas à pas montrant comment 
 ## <a name="google-cloud-messaginggoogle-cloud-messagingmd"></a>[Messagerie cloud Google](google-cloud-messaging.md)
 
 Cette section fournit une vue d’ensemble de la façon dont Google Cloud Messaging (GCM) achemine les messages entre votre application et un serveur d’applications, et il fournit une procédure pas à pas pour l’acquisition d’informations d’identification afin que votre application peut utiliser les services GCM. (Notez que GCM a été remplacé par FCM.)
+
+> [!NOTE]
+> GCM a été remplacé par [Firebase de messagerie Cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
+> GCM serveur et le client API [ont été déconseillées](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) et ne sera plus disponible dès que le 11 avril 2019.
 
 ## <a name="remote-notifications-with-google-cloud-messagingremote-notifications-with-gcmmd"></a>[Notifications à distance avec la messagerie Cloud Google](remote-notifications-with-gcm.md)
 

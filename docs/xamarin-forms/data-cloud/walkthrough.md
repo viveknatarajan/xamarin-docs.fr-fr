@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 703441e3fc58beeb33e519f3781387a59c1c1cef
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-sample"></a>Présentation de l’exemple
 
@@ -49,7 +49,7 @@ Le projet de bibliothèque de classes portables pour chaque application comprend
 |--- |--- |
 |Constants.cs|Le `Constants` (classe), qui spécifie les constantes utilisées par l’application pour communiquer avec le service web. Ces constantes nécessitent des mises à jour pour accéder à votre service principal personnel créé sur un fournisseur.|
 |ITextToSpeech.cs|Le `ITextToSpeech` interface, qui spécifie que le `Speak` (méthode) doit être fournie par les classes d’implémentation.|
-|Todo.cs|Le `App` classe qui est responsable de l’instanciation à la fois la première page qui sera affichée par l’application sur chaque plateforme, et la `TodoItemManager` classe qui est utilisée pour appeler des opérations de service web.|
+|TODO.cs|Le `App` classe qui est responsable de l’instanciation à la fois la première page qui sera affichée par l’application sur chaque plateforme, et la `TodoItemManager` classe qui est utilisée pour appeler des opérations de service web.|
 
 ### <a name="viewing-pages"></a>Affichage des Pages
 
@@ -86,7 +86,7 @@ Opérations de service Web sont accessibles via la `TodoItemManager` classe et u
 
 En outre, certains exemples d’applications contiennent des méthodes supplémentaires dans le `TodoItemManager` (classe), qui sont utilisés pour gérer le processus d’authentification utilisateur.
 
-Plutôt que d’appeler les opérations de service web directement, les `TodoItemManager` méthodes appellent des méthodes sur une classe dépendante qui est injecté dans le `TodoItemManager` constructeur. Par exemple, un exemple d’application injecte le `SimpleDBStorage` classe dans le `TodoItemManager` constructeur pour fournir l’implémentation qui appelle des opérations sur Amazon SimpleDB service.
+Plutôt que d’appeler les opérations de service web directement, les `TodoItemManager` méthodes appellent des méthodes sur une classe dépendante qui est injecté dans le `TodoItemManager` constructeur. Par exemple, un exemple d’application injecte le `RestService` classe dans le `TodoItemManager` constructeur pour fournir l’implémentation qui utilise l’API REST pour accéder aux données.
 
 ### <a name="translating-text-to-speech"></a>Conversion de texte par synthèse vocale
 
@@ -113,4 +113,3 @@ Cette rubrique fourni une procédure pas à pas de l’exemple d’application X
 - [Version WCF (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
 - [Version REST (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
 - [Version de Microsoft Azure (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure)
-- [Version d’Amazon Web Services (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWS)

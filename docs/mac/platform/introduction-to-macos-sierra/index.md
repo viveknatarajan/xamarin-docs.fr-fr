@@ -7,11 +7,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ab373d708d47ad7c3dbbf4507284be04a1f9934
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3b8211e4c38fd37040fab5b35be4709d4b926c91
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>Introduction à macOS Sierra
 
@@ -64,6 +64,9 @@ Le framework CloudKit a été développé dans macOS Sierra pour autoriser l’u
 CloudKit fournit une interface utilisateur complète pour l’envoi et de l’acceptation d’invitations enregistrements partagées et l’utilisateur dispose d’un contrôle complet en lecture/écriture sur les personnes qui ont accès aux enregistrements.
 
 Pour plus d’informations, consultez le site d’Apple [CloudKit Framework référence](https://developer.apple.com/reference/clockkit) et [CloudKit JS Framework référence](https://developer.apple.com/reference/cloudkitjs).
+
+> [!IMPORTANT]
+> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs de gérer correctement général données Protection règlement (PIBR l’Union européenne).
 
 <a name="Safari-App-Extensions-Support" />
 

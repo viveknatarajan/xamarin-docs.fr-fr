@@ -6,16 +6,20 @@ ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
-ms.openlocfilehash: 969b1b36659ac52782d30a1840ba352524e5e3c6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: f4a1451cb848f4da1f595c15d946f4e05292900d
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notifications à distance avec la messagerie Cloud Google
 
 _Cette procédure pas à pas fournit une explication pas à pas montrant comment utiliser la messagerie Cloud Google pour implémenter des notifications à distance (également appelées des notifications push) dans une application Xamarin.Android. Il décrit les différentes classes que vous devez implémenter pour communiquer avec Google Cloud Messaging (GCM), elle explique comment définir des autorisations dans le manifeste Android pour l’accès aux GCM et il montre un exemple de programme de test de messagerie de bout en bout._
+
+> [!NOTE]
+> GCM a été remplacé par [Firebase de messagerie Cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
+> GCM serveur et le client API [ont été déconseillées](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) et ne sera plus disponible dès que le 11 avril 2019.
 
 ## <a name="gcm-notifications-overview"></a>Vue d’ensemble des Notifications GCM
 

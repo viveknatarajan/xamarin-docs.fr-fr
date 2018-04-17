@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b4d96ef50498b454da583a955169b9d51c29dd01
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8103dcc1c2e1e8c2375a86d51580b1ea3fcce432
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resources-and-data-storage"></a>Stockage des données et ressources
 
@@ -55,6 +55,9 @@ Par conséquent, votre application Xamarin.tvOS doit stocker des données utilis
 
 - **iCloud stockage clé-valeur (KVS)** - pour les petits éléments d’informations (inférieur à 1 Mo) que votre application peut nécessiter (tels que les préférences de l’utilisateur), vous pouvez utiliser iCloud KVS stockage. iCloud KVS données sont automatiquement synchronisées avec le cloud et tous les périphériques de l’utilisateur exécutant la même application. Pour plus d’informations, veuillez consulter le [clé-valeur stockage](~/ios/data-cloud/introduction-to-icloud.md) section de notre [Introduction sur iCloud](~/ios/data-cloud/introduction-to-icloud.md) document ou Apple [conception pour les données de la valeur de clé dans iCloud](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/iCloudDesignGuide/Chapters/DesigningForKey-ValueDataIniCloud.html#//apple_ref/doc/uid/TP40012094-CH7) documentation.
 - **CloudKit** - pour le stockage de plus d’éléments d’informations (supérieures à 1 Mo), utilisez CloudKit Framework d’Apple. Contrairement aux iCloud KVS stockage, les données de CloudKit peuvent être partagées entre tous les utilisateurs de votre application (comme étant privé à un seul utilisateur). Plus d’informations, consultez notre [présentation CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) documentation ou Apple [CloudKit Quick Start](https://developer.apple.com/library/prerelease/tvos/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987).
+
+> [!IMPORTANT]
+> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs de gérer correctement général données Protection règlement (PIBR l’Union européenne).
 
 <a name="On-Demand-Resources" />
 

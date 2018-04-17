@@ -6,12 +6,12 @@ ms.assetid: DF8EF401-F63D-4BA0-B2C6-B22DF8FD60CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 73ff82f3bf36aa54422c1693c6bf07731480b7f7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: 29cccf414759a79a8ba74dfc35b7ba9f6a1cc5d6
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="google-cloud-messaging"></a>Messagerie Cloud Google
 
@@ -21,6 +21,9 @@ _Google Cloud Messaging (GCM) est un service qui simplifie la messagerie entre l
 
 Cette rubrique fournit une vue d’ensemble de la messagerie Cloud Google achemine les messages entre votre application et un serveur d’applications, et il fournit une procédure pas à pas pour l’acquisition d’informations d’identification afin que votre application peut utiliser les services GCM.
 
+> [!NOTE]
+> GCM a été remplacé par [Firebase de messagerie Cloud](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
+> GCM serveur et le client API [ont été déconseillées](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) et ne sera plus disponible dès que le 11 avril 2019.
 
 ## <a name="overview"></a>Vue d'ensemble
 

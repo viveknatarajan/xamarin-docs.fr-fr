@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: f20042b9599f7b4dde699a125e63c5ce435f6bc5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6e67820fa83ddea46f934b4eaedde2c6334f9cc6
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data--cloud-services"></a>Services de données et cloud
 
@@ -25,11 +25,11 @@ Cet article fournit une procédure pas à pas de l’exemple d’application Xam
 
 ## <a name="consuming-web-servicesxamarin-formsdata-cloudconsumingindexmd"></a>[Consommation de services web](~/xamarin-forms/data-cloud/consuming/index.md)
 
-Ce guide montre comment communiquer avec les services web différents pour fournir créer, lire, mettre à jour et supprimer des fonctionnalités à une application de Xamarin.Forms (CRUD). Rubriques couvertes incluent la communication avec [services ASMX](consuming/asmx.md), [services WCF](consuming/wcf.md), [services REST](consuming/rest.md), [Azure Mobile Apps](consuming/azure.md)et [ Amazon Web Services](consuming/aws.md).
+Ce guide montre comment communiquer avec les services web différents pour fournir créer, lire, mettre à jour et supprimer des fonctionnalités à une application de Xamarin.Forms (CRUD). Rubriques couvertes incluent la communication avec [services ASMX](consuming/asmx.md), [services WCF](consuming/wcf.md), [services REST](consuming/rest.md), et [Azure Mobile Apps](consuming/azure.md).
 
 ## <a name="authenticating-access-to-web-servicesxamarin-formsdata-cloudauthenticationindexmd"></a>[Authentification de l’accès aux services web](~/xamarin-forms/data-cloud/authentication/index.md)
 
-Ce guide explique comment intégrer des services d’authentification à une application de Xamarin.Forms pour permettre aux utilisateurs de partager un serveur principal lors de l’accès uniquement à leurs propres données. Les rubriques couvertes incluent [à l’aide de l’authentification de base avec un service REST](authentication/rest.md), [à l’aide du composant Xamarin.Auth pour s’authentifier auprès de fournisseurs d’identité OAuth](authentication/oauth.md)et à l’aide de l’authentification intégrée mécanismes de prestation [Azure Mobile Apps](authentication/azure.md), et [Amazon Web Services](authentication/aws.md).
+Ce guide explique comment intégrer des services d’authentification à une application de Xamarin.Forms pour permettre aux utilisateurs de partager un serveur principal lors de l’accès uniquement à leurs propres données. Les rubriques couvertes incluent [à l’aide de l’authentification de base avec un service REST](authentication/rest.md), [à l’aide du composant Xamarin.Auth pour s’authentifier auprès de fournisseurs d’identité OAuth](authentication/oauth.md)et à l’aide de l’authentification intégrée mécanismes de prestation [Azure Mobile Apps](authentication/azure.md).
 
 ## <a name="synchronizing-data-with-web-servicessyncindexmd"></a>[Synchronisation des données avec les services web](sync/index.md)
 

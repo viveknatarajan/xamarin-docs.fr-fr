@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="platform-features"></a>Fonctionnalités de la plateforme
 
@@ -33,9 +33,17 @@ Comment utiliser la `Device` classe pour créer un comportement spécifique à l
 
 Certains styles iOS peut être effectuée **Info.plist** et `UIAppearance` API. Ce guide comprend des exemples montrant comment ajouter des fonctionnalités d’iOS 9 à l’application iOS d’une solution Xamarin.Forms, y compris la recherche Spotlight de base.
 
+## <a name="gtkgtkmd"></a>[GTK](gtk.md)
+
+Xamarin.Forms prend désormais en charge préliminaire pour les applications GTK #.
+
 ## <a name="macmacmd"></a>[Mac](mac.md)
 
 Xamarin.Forms prend désormais en charge préliminaire pour les applications de macOS.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin.Forms prend désormais en charge préliminaire pour les applications Windows Presentation Foundation (WPF).
 
 ## <a name="native-formsnative-formsmd"></a>[Formulaires natifs](native-forms.md)
 
@@ -45,7 +53,7 @@ Formulaires natifs autorisent Xamarin.Forms [ `ContentPage` ](https://developer.
 
 Vues natives dans iOS, Android et la plateforme Windows universelle peuvent être référencées directement à partir de Xamarin.Forms. Propriétés et les gestionnaires d’événements peuvent être définies sur les vues natifs, et ils peuvent interagir avec les vues de Xamarin.Forms.
 
-## <a name="platform-specificsplatform-specificsindexmd"></a>[Platform-Specifics](platform-specifics/index.md)
+## <a name="platform-specificsplatform-specificsindexmd"></a>[Caractéristiques de la plateforme](platform-specifics/index.md)
 
 Caractéristiques de la plateforme vous permettent de vous permet d’utiliser la fonctionnalité est disponible uniquement sur une plateforme spécifique, sans nécessiter de convertisseurs personnalisés ou les effets.
 

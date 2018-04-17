@@ -6,12 +6,12 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: e2f25504b971a0332dc51dc9b017c9c83222ec57
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifications à distance avec Firebase de cloud computing de messagerie
 
@@ -427,7 +427,7 @@ Appuyez sur la **journal Jeton** bouton. Un message semblable à celui-ci doit �
 La chaîne longue étiqueté avec **jeton** est le jeton d’ID d’instance que vous allez coller dans la Console Firebase &ndash; sélectionner et copier cette chaîne dans le Presse-papiers. Si vous ne voyez pas un jeton d’ID instance, ajoutez la ligne suivante en haut de la `OnCreate` méthode pour vérifier que **services.json de google** a été analysée correctement :
 
 ```csharp
-Log.Debug(TAG, "google app id: " + Resource.String.google_app_id);
+Log.Debug(TAG, "google app id: " + GetString(Resource.String.google_app_id));
 ```
 
 Le `google_app_id` valeur enregistrée dans la fenêtre sortie doit correspondre à la `mobilesdk_app_id` valeur enregistrée dans **google-services.json**. 
@@ -683,6 +683,27 @@ Cette fois, le message a été enregistré dans la fenêtre sortie est égalemen
 Lorsque vous ouvrez la notification, vous devez voir le dernier message qui a été envoyé à partir de l’interface utilisateur graphique de Notifications de la Console Firebase : 
 
 [![Notification de premier plan indiquée avec une icône de premier plan](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
+
+
+## <a name="disconnecting-from-fcm"></a>Déconnecter les FCM
+
+Pour annuler l’abonnement à une rubrique, appelez le [UnsubscribeFromTopic](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging.html#unsubscribeFromTopic%28java.lang.String%29) méthode sur le [FirebaseMessaging](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging) classe. Par exemple, pour annuler l’abonnement à la _news_ rubrique abonné précédemment, à une **Unsubscribe** bouton peut être ajouté à la mise en page avec le code de gestionnaire suivant :
+
+```csharp
+var unSubscribeButton = FindViewById<Button>(Resource.Id.unsubscribeButton);
+unSubscribeButton.Click += delegate {
+    FirebaseMessaging.Instance.UnsubscribeFromTopic("news");
+    Log.Debug(TAG, "Unsubscribed from remote notifications");
+};
+```
+
+Pour annuler l’inscription de l’appareil à partir de purement et simplement FCM, supprimez l’ID d’instance en appelant le [DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) méthode sur le [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) classe. Par exemple :
+
+```csharp
+FirebaseInstanceId.Instance.DeleteInstanceId();
+```
+
+Cet appel de méthode supprime l’ID d’instance et les données associées. Par conséquent, l’envoi périodiques de données FCM à l’appareil est interrompue.
 
  
 ## <a name="troubleshooting"></a>Résolution des problèmes

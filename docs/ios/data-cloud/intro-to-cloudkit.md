@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 33ceff4549e4afbb1e5fecf3bd380fdb9a3df5f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4765b91bdc1f64be7e2ea67622db7af8634f1347
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -20,6 +20,9 @@ _iCloud API permettre aux applications iOS 8 stocker des données dans iCloud, a
 Le framework CloudKit simplifie le développement d’applications qui iCloud de l’accès. Cela inclut la récupération des données d’application et droits de l’élément multimédia ainsi que la possibilité de stocker en toute sécurité les informations de l’application. Ce kit fournit aux utilisateurs une couche d’anonymat en autorisant l’accès aux applications avec leur ID iCloud sans partager des informations personnelles.
 
 Les développeurs peuvent se concentrer sur leurs applications côté client et laisser iCloud élimine la nécessité d’écrire une logique d’application côté serveur. CloudKit fournit l’authentification, les bases de données privés et publics et des données structurées et les services de stockage actif.
+
+> [!IMPORTANT]
+> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs de gérer correctement général données Protection règlement (PIBR l’Union européenne).
 
 ## <a name="requirements"></a>Spécifications
 
