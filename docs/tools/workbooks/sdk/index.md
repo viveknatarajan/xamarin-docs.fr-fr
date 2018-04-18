@@ -5,17 +5,18 @@ ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: bc8ae0304e5b044cc1a898820d0ac33e33dfec0d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 03/30/2017
+ms.openlocfilehash: ad7341776c2f37d4eb6238a26d5b12ee9e340ff7
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>Mise en route avec les classeurs Xamarin SDK
 
 Ce document fournit un guide rapide pour la mise en route avec le développement d’intégration pour les classeurs Xamarin. Tout cela fonctionnera avec les classeurs Xamarin stable, mais **chargement intégrations via les packages NuGet est uniquement pris en charge dans les classeurs 1.3**, dans le canal alpha au moment de l’écriture.
 
-# <a name="general-overview"></a>Vue d’ensemble générale
+## <a name="general-overview"></a>Vue d’ensemble générale
 
 Les intégrations Xamarin classeurs sont petites bibliothèques qui utilisent la [ `Xamarin.Workbooks.Integrations` NuGet] [ nuget] SDK pour intégrer les classeurs de Xamarin et d’un inspecteur agents pour fournir une expérience améliorée.
 

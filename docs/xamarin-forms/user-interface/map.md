@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f78b16a99d8bc828e26bb6aecdb67d4ba07e18d4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7dcf3cba72a07b06236e29ddf2603745fd348596
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="map"></a>Carte
 
@@ -95,8 +95,9 @@ Suivez les instructions fournies dans la documentation de Xamarin [obtention d�
 Après avoir suivi ces instructions, collez la clé d’API dans le **Properties/AndroidManifest.xml** fichier (afficher la source et rechercher/mettre à jour l’élément suivant) :
 
 ```xml
-<meta-data android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AbCdEfGhIjKlMnOpQrStUvWValueGoesHere" />
+<meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="YOUR_API_KEY"/>
 ```
 
 Sans une clé d’API valide le contrôle maps affiche sous forme de zone grise sur Android.

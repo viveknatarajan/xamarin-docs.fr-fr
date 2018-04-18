@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 643ae8f30dc6447b548448f77883b204d8dc76c2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 34702fafdd0d767362b0ca32ab56e880ed7cb366
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>À l’aide de la ville de l’équipe avec Xamarin
 
@@ -39,7 +39,7 @@ Il existe plusieurs étapes impliquées dans la définition de TeamCity :
 
 - **Création d’un projet de TeamCity** – une fois que les trois étapes précédentes terminées, nous devons créer un projet de TeamCity qui contient toutes les métadonnées nécessaires pour récupérer le code source, les projets de compilation et envoyer les tests à Xamarin Test Cloud.
 
-# <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Spécifications
 
 Expérience avec [Xamarin Test Cloud](https://developer.xamarin.com/guides/testcloud) est requis.
 
@@ -88,7 +88,6 @@ Le script de compilation peut être aussi simple que d’un fichier de Powershel
 - [**FAUX** ](http://fsharp.github.io/FAKE/) – il s’agit d’une DSL basée en F #, ce qui rend possible d’utiliser les bibliothèques .NET existantes si nécessaire.
 
 Le langage de script est utilisé dépend de vos préférences et la configuration requise. Le [TaskyPro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) exemple contient un exemple d’utilisation d’inclinaison comme un [générer le script](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
-
 
 > [!NOTE]
 > Il est possible d’utiliser un système de génération basé sur XML tels que MSBuild ou NAnt, mais ces manque la simplicité et la facilité de maintenance du DSL dédié à la création de logiciels.
@@ -166,35 +165,35 @@ Une fois que TeamCity est installé et que Visual Studio pour Mac peuvent géné
 
 1. Démarré en vous connectant à TeamCity via le navigateur web. Accédez au projet racine :
 
-    ![](teamcity-images/image2.png "Accédez au projet racine") sous le projet racine, créez un projet secondaire :
+    ![Naviguez jusqu’au projet racine](teamcity-images/image2.png "naviguer vers le projet racine") sous le projet racine, créez un projet secondaire :
 
-    ![](teamcity-images/image3.png "Accédez au projet sous la racine de projet racine, créez un nouveau projet secondaire")
+    ![Accédez au projet sous la racine de projet racine, créez un nouveau sous-projet](teamcity-images/image3.png "naviguer au projet sous la racine de projet racine, créez un nouveau projet de sous-section")
 2. Une fois que le projet a été créé, ajoutez une nouvelle Configuration de Build :
 
-    ![](teamcity-images/image5.png "Une fois que le projet a été créé, ajoutez une nouvelle Configuration de Build")
+    ![Une fois que le projet a été créé, ajoutez une nouvelle Configuration de Build](teamcity-images/image5.png "une fois que le projet a été créé, ajoutez une nouvelle Configuration de Build")
 3. Association d’un projet VCS à la Configuration de Build. Cette opération s’effectue via l’écran de paramètre de contrôle de Version :
 
-    ![](teamcity-images/image6.png "Cette opération s’effectue via l’écran de paramètre de contrôle de Version")
+    ![Cette opération s’effectue via l’écran de paramètre de contrôle de Version](teamcity-images/image6.png "cette opération s’effectue via l’écran de paramètre de contrôle de Version")
 
     S’il n’existe aucun projet VCS créé, vous pouvez créer un à partir de la page nouvelle racine VCS indiquée ci-dessous :
 
-    ![](teamcity-images/image7.png "S’il n’existe aucun projet VCS créé, vous pouvez créer un à partir de la page nouvelle racine VCS")
+    ![S’il n’existe aucun projet VCS créé, vous pouvez créer un à partir de la page nouvelle racine VCS](teamcity-images/image7.png "s’il n’existe aucun projet VCS créé, vous pouvez créer un à partir de la page nouvelle racine VCS")
 
     Une fois que la racine VCS a été attachée, TeamCity va extraire le projet et réessayez automatiquement détectent les étapes de génération. Si vous êtes familiarisé avec TeamCity, vous pouvez sélectionner une des étapes de génération détectés. Il est possible d’ignorer les étapes de génération détecté pour l’instant.
 
 4. Ensuite, configurez un déclencheur de Build. Cette file d’attente d’une build lorsque certaines conditions sont remplies, par exemple quand un utilisateur valide le code dans le référentiel. La capture d’écran suivante montre comment ajouter un déclencheur de build :
 
-    ![](teamcity-images/image8.png "Cette capture d’écran montre comment ajouter un déclencheur de build") un exemple de configuration d’un déclencheur de génération peut être consulté dans la capture d’écran suivante :
+    ![Cette capture d’écran montre comment ajouter un déclencheur de build](teamcity-images/image8.png "cette capture d’écran montre comment ajouter un déclencheur de build") un exemple de configuration d’un déclencheur de génération peut être consulté dans la capture d’écran suivante :
 
-    ![](teamcity-images/image9.png "Un exemple de configuration d’un déclencheur de génération peut être consulté dans cette capture d’écran")
+    ![Un exemple de configuration d’un déclencheur de génération peut être consulté dans cette capture d’écran](teamcity-images/image9.png "un exemple de configuration d’un déclencheur de génération peut être consulté dans cette capture d’écran")
 
 5. La section précédente, le Script de génération, le paramétrage recommandé de stocker des valeurs en tant que variables d’environnement. Ces variables peuvent être ajoutées à la configuration de build via l’écran Paramètres. Ajoutez les variables pour la clé d’API de Test Cloud, l’ID de périphérique iOS et l’ID d’appareil Android comme indiqué dans la capture d’écran ci-dessous :
 
-    ![](teamcity-images/image11.png "Ajoutez les variables pour l’ID d’appareil Android, l’ID de périphérique iOS et la clé d’API de Test Cloud")
+    ![Ajoutez les variables pour l’ID d’appareil Android, l’ID de périphérique iOS et la clé d’API de Test Cloud](teamcity-images/image11.png "ajoutez les variables pour l’ID d’appareil Android, l’ID de périphérique iOS et la clé d’API de Test Cloud")
 
 6. L’étape finale consiste à ajouter une étape de génération qui appelle le script de compilation pour compiler l’application et la file d’attente l’application Test Cloud. La capture d’écran suivante est un exemple d’une étape de génération qui utilise un Rakefile pour générer une application :
 
-    ![](teamcity-images/image12.png "Cette capture d’écran est un exemple d’une étape de génération qui utilise un Rakefile pour générer une application")
+    ![Cette capture d’écran est un exemple d’une étape de génération qui utilise un Rakefile pour générer une application](teamcity-images/image12.png "cette capture d’écran est un exemple d’une étape de génération qui utilise un Rakefile pour générer une application")
 
 7. À ce stade, la configuration de build est terminée. Il est judicieux de déclencher une build pour vérifier que le projet est correctement configuré. Une bonne solution pour ce faire est de valider une modification de petite taille, non significatif dans le référentiel. TeamCity doit détecter la validation et démarrer une build.
 

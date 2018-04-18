@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 25a05bcd094011042b3dc33a1b837460d5893be0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4736bedd413663af098bbad522cc56f432e36ea0
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Dessin des graphiques 3D de sommets dans MonoGame
 
@@ -29,19 +29,18 @@ Comme indiqué ci-dessus, la sphère est clairement composée de plusieurs trian
 
 Cette procédure pas à pas couvre les rubriques suivantes :
 
- - Création d'un projet
- - Créer les sommets
- - Ajout de code de dessin
- - Rendu d’une texture
- - Modification des coordonnées de texture
- - Vertex avec les modèles
+- Création d'un projet
+- Créer les sommets
+- Ajout de code de dessin
+- Rendu d’une texture
+- Modification des coordonnées de texture
+- Vertex avec les modèles
 
 Le projet terminé contiendra un étage à damier qui sera dessiné à l’aide d’un tableau de vertex :
 
 ![](part2-images/image3.png "Le projet terminé contiendra un étage à damier qui sera dessiné à l’aide d’un tableau de sommets")
 
-
-# <a name="creating-a-project"></a>Création d'un projet
+## <a name="creating-a-project"></a>Création d'un projet
 
 Tout d’abord, nous allons télécharger un projet qui servira de point de départ. Nous allons utiliser le projet de modèle [qui se trouvent ici](https://developer.xamarin.com/samples/mobile/ModelRenderingMG/).
 
@@ -51,12 +50,11 @@ Une fois téléchargé et décompressé, ouvrez et exécutez le projet. Nous pr�
 
 À la fin de ce projet nous allons combinant notre propre rendu vertex personnalisée avec le robot `Model`, de sorte que nous n’allons pas supprimer le code de rendu de robot. Au lieu de cela, nous allons juste effacer la `Game1.Draw` appel à supprimer le dessin des 6 robots pour le moment. Pour ce faire, ouvrez le **Game1.cs** de fichiers et recherchez le `Draw` (méthode). Modifiez-le de sorte qu’il contienne le code suivant :
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
-    GraphicsDevice.Clear(Color.CornflowerBlue);
-    base.Draw(gameTime);
+  GraphicsDevice.Clear(Color.CornflowerBlue);
+  base.Draw(gameTime);
 }
 ```
 
@@ -64,36 +62,33 @@ Il en résulte dans notre jeu afficher un écran bleu vide :
 
 ![](part2-images/image5.png "Ainsi, le jeu d’afficher un écran bleu vide")
 
-
-# <a name="creating-the-vertices"></a>Créer les sommets
+## <a name="creating-the-vertices"></a>Créer les sommets
 
 Nous allons créer un tableau de vertex à définir la géométrie. Dans cette procédure pas à pas, nous allons créer un plan 3D (un carré dans un espace 3D, pas un avion). Bien que notre plan possède quatre côtés et les quatre coins, il est composé de deux triangles, chacun d’eux requiert trois sommets. Par conséquent, vous n’allez définir un total de six points.
 
 Jusqu'à présent nous avons parlé sommets dans un sens général, mais MonoGame fournit certaines structures standards qui peuvent être utilisés pour les sommets :
 
- - `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
 
 Nom de chaque type indique les composants qu’il contient. Par exemple, `VertexPositionColor` contient des valeurs de position et la couleur. Nous allons nous intéresser à chacun des composants :
 
- - Position – tous les types de sommets incluent un `Position` composant. Le `Position` valeurs définissent où le sommet se trouve dans un espace 3D (X, Y et Z).
- - Couleur – sommets peuvent éventuellement spécifier un `Color` valeur pour effectuer des teintes personnalisées.
- - Normal – normales définissent de quelle façon la surface de l’objet fait l’objet. Normales sont nécessaires que si le rendu d’un objet avec éclairage depuis la direction une surface fait l’objet d’impacts combien clair qu’il reçoit. Normales sont généralement spécifiées comme un *vecteur unitaire* – un vecteur 3D d’une longueur de 1.
- - Texture – Texture fait référence à des coordonnées de texture : autrement dit, la partie d’une texture doit apparaître à un sommet spécifique. Les valeurs de texture sont nécessaires si le rendu d’un objet 3D avec une texture. Les coordonnées de texture sont des coordonnées normalisées, ce qui signifie que les valeurs seront situent entre 0 et 1. Nous aborderons les coordonnées de texture plus en détail plus loin dans ce guide.
+- Position – tous les types de sommets incluent un `Position` composant. Le `Position` valeurs définissent où le sommet se trouve dans un espace 3D (X, Y et Z).
+- Couleur – sommets peuvent éventuellement spécifier un `Color` valeur pour effectuer des teintes personnalisées.
+- Normal – normales définissent de quelle façon la surface de l’objet fait l’objet. Normales sont nécessaires que si le rendu d’un objet avec éclairage depuis la direction une surface fait l’objet d’impacts combien clair qu’il reçoit. Normales sont généralement spécifiées comme un *vecteur unitaire* – un vecteur 3D d’une longueur de 1.
+- Texture – Texture fait référence à des coordonnées de texture : autrement dit, la partie d’une texture doit apparaître à un sommet spécifique. Les valeurs de texture sont nécessaires si le rendu d’un objet 3D avec une texture. Les coordonnées de texture sont des coordonnées normalisées, ce qui signifie que les valeurs seront situent entre 0 et 1. Nous aborderons les coordonnées de texture plus en détail plus loin dans ce guide.
 
 Notre plan servira d’un étage, et nous vous souhaitez appliquer une texture lors de l’exécution de notre rendu, et nous utiliserons le `VertexPositionTexture` type pour définir ses sommets.
 
 Tout d’abord, nous allons ajouter un membre à la classe Game1 :
-
 
 ```csharp
 VertexPositionTexture[] floorVerts; 
 ```
 
 Ensuite, définissez ses sommets dans `Game1.Initialize`. Notez que le modèle fourni plus haut dans cet article ne contient pas un `Game1.Initialize` méthode, nous devons ajouter la totalité de la méthode à `Game1`:
-
 
 ```csharp
 protected override void Initialize ()
@@ -116,8 +111,7 @@ Pour mieux visualiser l’aspect de notre sommets, considérez le diagramme suiv
 
 Nous devons s’appuient sur notre diagramme pour visualiser les sommets jusqu'à ce que nous aurons terminé la mise en œuvre de notre code de rendu.
 
-
-# <a name="adding-drawing-code"></a>Ajout de Code de dessin
+## <a name="adding-drawing-code"></a>Ajout de Code de dessin
 
 Maintenant que nous avons les positions pour notre geometry définie, nous pouvons écrire notre code de rendu.
 
@@ -128,11 +122,10 @@ Tout d’abord, nous aurons besoin afin de définir un `BasicEffect` instance qu
 ...
 VertexPositionTexture[] floorVerts;
 // new code:
-BasicEffect effect; 
+BasicEffect effect;
 ```
 
 Ensuite, modifiez le `Initialize` méthode pour définir l’effet :
-
 
 ```csharp
 protected override void Initialize ()
@@ -150,11 +143,10 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 Maintenant nous pouvons ajouter le code pour effectuer le dessin :
-
 
 ```csharp
 void DrawGround()
@@ -193,7 +185,7 @@ void DrawGround()
             // The number of triangles to draw
             2);
     }
-} 
+}
 ```
 
 Nous allons devoir appeler `DrawGround` dans notre `Game1.Draw`:
@@ -215,13 +207,11 @@ L’application affiche les éléments suivants lors de l’exécution :
 
 Examinons certains détails dans le code ci-dessus.
 
-
-## <a name="view-and-projection-properties"></a>Afficher et les propriétés de Projection
+### <a name="view-and-projection-properties"></a>Afficher et les propriétés de Projection
 
 Le `View` et `Projection` propriétés contrôlent la façon dont nous permet d’afficher la scène. Nous allons modifier ce code ultérieurement lorsque nous ajoutez de nouveau le code de rendu du modèle. Plus précisément, `View` contrôle l’emplacement et l’orientation de la caméra, et `Projection` contrôles le *champ de vue* (qui peut être utilisé pour effectuer un zoom de l’appareil photo).
 
-
-## <a name="techniques-and-passes"></a>Techniques et passe
+### <a name="techniques-and-passes"></a>Techniques et passe
 
 Une fois nous avons Propriétés attribuées sur notre effet, que nous pouvons effectuer le rendu réel. 
 
@@ -229,8 +219,7 @@ Nous ne modifierez la `CurrentTechnique` propriété dans cette procédure pas �
 
 La chose importante à garder à l’esprit est que le `foreach` boucle permet au même code c# afficher n’importe quel effet, quelle que soit la complexité de l’objet sous-jacent `BasicEffect`.
 
-
-## <a name="drawuserprimitives"></a>DrawUserPrimitives
+### <a name="drawuserprimitives"></a>DrawUserPrimitives
 
 `DrawUserPrimitives` est où les sommets sont rendus. Le premier paramètre indique à la méthode comment nous avons organisée notre sommets. Nous avons les structuré de sorte que chaque triangle est défini par trois sommets ordonnées, donc nous utilisons le `PrimitiveType.TriangleList` valeur.
 
@@ -240,15 +229,13 @@ Le troisième paramètre spécifie le premier index à dessiner. Étant donné q
 
 Enfin, nous spécifions le nombre de triangles à restituer. Notre tableau vertex contient deux triangles, par conséquent, passez la valeur 2.
 
-
-# <a name="rendering-with-a-texture"></a>Rendu d’une Texture
+## <a name="rendering-with-a-texture"></a>Rendu d’une Texture
 
 À ce stade, notre application restitue un plan blanc (dans la perspective). Nous allons ensuite ajouter une texture à notre projet à utiliser lors du rendu de notre plan. 
 
 Pour simplifier les choses, nous allons ajouter le .png directement à notre projet au lieu d’utiliser l’outil MonoGame Pipeline. Pour ce faire, téléchargez [ce fichier .png](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) sur votre ordinateur. Une fois téléchargé, avec le bouton droit sur le **contenu** dossier dans le remplissage de la Solution et sélectionnez **Ajouter > ajouter des fichiers...**  . Si vous travaillez sur Android, ce dossier sera créé sous le **actifs** dossier dans le projet Android spécifiques. Sur iOS, puis ce dossier sera à la racine du projet iOS. Accédez à l’emplacement où **checkerboard.png** est enregistré et sélectionnez ce fichier. Sélectionnez cette option pour copier le fichier dans le répertoire.
 
 Ensuite, nous allons ajouter le code pour créer notre `Texture2D` instance. Ajoutez d’abord le `Texture2D` en tant que membre de `Game1` sous le `BasicEffect` instance :
-
 
 ```csharp
 ...
@@ -274,11 +261,10 @@ protected override void LoadContent()
     {
         checkerboardTexture = Texture2D.FromStream (this.GraphicsDevice, stream);
     }
-} 
+}
 ```
 
 Ensuite, modifiez le `DrawGround` (méthode). La seule modification nécessaire est d’assigner `effect.TextureEnabled` à `true` et définir le `effect.Texture` à `checkerboardTexture`:
-
 
 ```csharp
 void DrawGround()
@@ -315,7 +301,7 @@ void DrawGround()
             0,
             2);
     }
-} 
+}
 ```
 
 Enfin, nous devons modifier le `Game1.Initialize` méthode pour attribuer une texture également coordonnées sur notre sommets :
@@ -353,8 +339,7 @@ Si nous exécutons le code, nous pouvons voir que notre plan affiche maintenant 
 
 ![](part2-images/image8.png "Le plan affiche maintenant un modèle de damier")
 
-
-# <a name="modifying-texture-coordinates"></a>Coordonnées de Texture de modification
+## <a name="modifying-texture-coordinates"></a>Coordonnées de Texture de modification
 
 MonoGame utilise de normaliser les coordonnées de texture, qui sont des coordonnées comprise entre 0 et 1, et non entre 0 et de largeur de la texture ou de hauteur. Le diagramme suivant peut aider à visualiser des coordonnées normalisées :
 
@@ -391,7 +376,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 Cela entraîne la texture extensible 20 fois :
@@ -399,10 +384,9 @@ Cela entraîne la texture extensible 20 fois :
 ![](part2-images/image10.png "Cela entraîne la répétition de 20 fois de texture")
 
 
-# <a name="rendering-vertices-with-models"></a>Vertex avec les modèles
+## <a name="rendering-vertices-with-models"></a>Vertex avec les modèles
 
 Maintenant que notre plan est rendu correctement, nous pouvons rajouter les modèles pour afficher tous les éléments ensemble. Tout d’abord, nous allons ajouter nouveau le code de modèle à notre `Game1.Draw` (méthode) (avec les positions modifiées) :
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -425,7 +409,6 @@ protected override void Draw(GameTime gameTime)
 
 Nous allons également créer un `Vector3` dans `Game1` pour représenter la position de la caméra. Nous allons ajouter un champ sous notre `checkerboardTexture` déclaration :
 
-
 ```csharp
 ...
 Texture2D checkerboardTexture;
@@ -434,7 +417,6 @@ Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 Ensuite, supprimez l’ordinateur local `cameraPosition` variable à partir de la `DrawModel` méthode :
-
 
 ```csharp
 void DrawModel(Vector3 modelPosition)
@@ -458,7 +440,6 @@ void DrawModel(Vector3 modelPosition)
 
 De même supprimer local `cameraPosition` variable à partir de la `DrawGround` méthode :
 
-
 ```csharp
 void DrawGround()
 {
@@ -478,7 +459,6 @@ Maintenant si nous exécutons le code nous pouvons voir les modèles et toutes p
 
 Si nous modifions la position de la caméra (comme en augmentant sa valeur X, qui dans ce cas déplace la caméra vers la gauche), nous pouvons voir que la valeur a un impact sur le sol et les modèles :
 
-
 ```csharp
 Vector3 cameraPosition = new Vector3(15, 10, 10);
 ```
@@ -487,8 +467,7 @@ Ce code génère les éléments suivants :
 
 ![](part2-images/image3.png "Ce code génère cette vue")
 
-
-# <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Récapitulatif
 
 Cette procédure pas à pas vous a montré comment utiliser un tableau de vertex pour effectuer le rendu personnalisé. Dans ce cas, nous avons créé un étage à damier en combinant notre rendu basés sur les sommets d’une texture et `BasicEffect`, mais le code présenté ici sert comme base pour un rendu 3D. Nous a également montré que le rendu en fonction des sommets pouvant être combiné des modèles dans la même séquence.
 

@@ -7,25 +7,25 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: c8df53d90ab1245aecff3eab1393c009b7910aa5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 564d106cc0192e818b87342ae0590e20afe507ae
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp - 3D/2D moteur
 
 _UrhoSharp est un inter-plateformes principales 2D et 3D moteur peut être utilisé pour créer des scènes 3D et 2D animées pour vos applications à l’aide de géométries, matériaux, lumières et appareils photo._
 
-![](images/video.gif "Exemple de jeu de UrhoSharp")
+![Exemple de jeu de UrhoSharp](images/video.gif)
 
 UrhoSharp est distribuée comme package NuGet qui peut être installé sur Visual Studio ou Visual Studio pour Mac et peut être utilisé pour cibler des plateformes suivantes : Android, Mac OS, iOS, tvOS et Windows.
 
-##  <a name="an-introduction-to-urhosharpgraphics-gamesurhosharpintroductionmd"></a>[Introduction à UrhoSharp](~/graphics-games/urhosharp/introduction.md)
+## <a name="an-introduction-to-urhosharpgraphics-gamesurhosharpintroductionmd"></a>[Introduction à UrhoSharp](~/graphics-games/urhosharp/introduction.md)
 
 Cet article fournit une vue d’ensemble de UrhoSharp et de ses fonctionnalités de visualisation 3D et pour une utilisation dans les jeux 3D simples.
 
-##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[Utilisation de UrhoSharp](~/graphics-games/urhosharp/using.md)
+## <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[Utilisation de UrhoSharp](~/graphics-games/urhosharp/using.md)
 
 Dans ce document, nous décrivons les concepts fondamentaux du UrhoSharp que vous utiliseriez pour créer un jeu, ou créer une visualisation 3D pour votre application.
 
@@ -54,7 +54,6 @@ Nous avons créé [exemples sur GitHub](http://github.com/xamarin/urho-samples) 
 Tous les exemples s’exécutent sur Android, iOS, Mac et Windows.
 Il existe également un certain nombre de UrhoSharp [classeurs](https://developer.xamarin.com/workbooks/) notamment [planète terre](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook) et [exploration coordonne](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook).
 
-
 ## <a name="copyright"></a>Copyright
 
 Cette documentation contient du contenu d’origine à partir de Xamarin, Inc, mais dessine largement à partir de la documentation open source pour le projet Urho3D et contient des captures d’écran à partir du projet Cocos2D.
@@ -62,8 +61,6 @@ Cette documentation contient du contenu d’origine à partir de Xamarin, Inc, m
 ## <a name="license"></a>Licence
 
 La licence UrhoSharp est disponible sur le [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
-
-
 
 ## <a name="related-links"></a>Liens associés
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 59aab811a51517d052902b40cb9e43a7cda6d654
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 603128db1df85e0dabb041d1eb79f250eb5d3872
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-3d-graphics-with-monogame"></a>Présentation des graphiques 3D avec MonoGame
 
@@ -24,7 +24,7 @@ MonoGame est presque identique à Microsoft de XNA, afin que les développeurs e
 La première section explique comment ajouter un modèle 3D à votre jeu à partir d’un fichier .fbx. La section suivante explique comment créer une caméra 3D qui inclut des contrôles communs, tels que le déplacement et la recherche. La dernière section prend approfondir la `VertexBuffer` classe ce qui permet de mieux contrôler le rendu 3D par rapport aux modèles de rendu est chargée à partir des fichiers de .fbx.
 
 
-# <a name="subsections"></a>Sous-sections
+## <a name="topics"></a>Rubriques
 
 - [À l’aide de la classe de modèle](~/graphics-games/monogame/3d/part1.md)
 - [Dessin de graphiques 3D de sommets](~/graphics-games/monogame/3d/part2.md)

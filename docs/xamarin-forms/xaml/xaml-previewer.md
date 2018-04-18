@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 77f9873259a2a44426007c50efbd7ff83c8a0ccb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Générateur d’aperçu XAML pour Xamarin.Forms
 
@@ -33,7 +33,7 @@ Utilisez le **vue > autres fenêtres > Aperçu de Xamarin.Forms** menu dans Visu
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-Le **aperçu** bouton peut être affiché sur l’éditeur en double-cliquant sur un fichier XAML et en sélectionnant **ouvrir avec > visionneuse XAML**. Le volet de visualisation peut ensuite être affiché ou masqué en appuyant sur la **aperçu** situé dans l’angle supérieur droit de n’importe quelle fenêtre de document XAML :
+Le **aperçu** bouton peut être affiché sur l’éditeur en double-cliquant sur un fichier XAML et en sélectionnant **ouvrir avec > Aperçu de formulaires**. Le volet de visualisation peut ensuite être affiché ou masqué en appuyant sur la **aperçu** situé dans l’angle supérieur droit de n’importe quelle fenêtre de document XAML :
 
 [![Aperçu du contrôle ListView dans Visual Studio pour Mac](xaml-previewer-images/xamlp-list-sml.png "aperçu des formulaires dans Visual Studio pour Mac")](xaml-previewer-images/xamlp-list.png#lightbox "aperçu des formulaires dans Visual Studio pour Mac")
 

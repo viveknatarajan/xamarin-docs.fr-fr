@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 9fb19b86ca303f8be3506d267dd75dc9db6cfca6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c94ed2e06ee57b67745b6a02692df2360aeb9754
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introduction au développement de jeux avec MonoGame
 
@@ -27,16 +27,16 @@ La première section de cette procédure pas à pas se concentre sur la configur
 
 Voici le résultat de cette procédure pas à pas :
 
-![](images/image1.gif "L’application qui sera générée dans la procédure pas à pas")
+![Animation de caractère de jeu d’exemple suivant de la souris](images/image1.gif)
 
-# <a name="monogame-and-xna"></a>Monogame et XNA
+## <a name="monogame-and-xna"></a>Monogame et XNA
 
 La bibliothèque MonoGame est destinée à simuler la bibliothèque de XNA de Microsoft dans la syntaxe et les fonctionnalités.  Tous les objets de MonoGame existent sous l’espace de noms Microsoft.Xna – autoriser la plupart du code XNA à utiliser dans MonoGame sans modification. 
 
 Les développeurs familiarisés avec XNA seront déjà familiarisés avec la syntaxe de MonoGame, et les développeurs qui souhaitent pour plus d’informations sur l’utilisation de MonoGame sera en mesure de référencer des procédures pas à pas XNA en ligne existant, la documentation de l’API et des discussions.
 
 
-# <a name="walkthrough-parts"></a>Parties de la procédure pas à pas
+## <a name="walkthrough-parts"></a>Parties de la procédure pas à pas
 
 - [Partie 1 : création d’un projet de MonoGame inter-plateformes](~/graphics-games/monogame/introduction/part1.md)
 - [Partie 2 : mise en œuvre de la WalkingGame](~/graphics-games/monogame/introduction/part2.md)
