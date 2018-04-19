@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 7dcf3cba72a07b06236e29ddf2603745fd348596
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 050e37d208c3ba5a330d7ecc6df9d106e14f8bb9
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="map"></a>Carte
 
@@ -72,15 +72,26 @@ Une fois que le package NuGet a été ajouté et la méthode d’initialisation 
 
 ### <a name="ios"></a>iOS
 
-Sur iOS 7 le mappage de contrôle « fonctionne, tout simplement », aussi longtemps en tant que le `FormsMaps.Init()` appel a été effectué.
+Pour accéder aux services d’emplacement sur iOS, vous devez définir les clés suivantes dans **Info.plist**:
 
-Pour iOS 8 deux clés doivent être ajoutés à la **Info.plist** fichier : [ `NSLocationAlwaysUsageDescription` ](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) et [ `NSLocationWhenInUseUsageDescription` ](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26). La représentation XML est illustrée ci-dessous, vous devez mettre à jour le `string` valeurs afin de refléter la manière dont votre application utilise les informations d’emplacement :
+- iOS 11
+    - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – pour l’utilisation de services d’emplacement lors de l’application est en cours d’utilisation
+    - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) – pour l’utilisation des services d’emplacement à tout moment
+- e/s, 10 et versions antérieures
+    - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – pour l’utilisation de services d’emplacement lors de l’application est en cours d’utilisation
+    - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – pour l’utilisation des services d’emplacement à tout moment    
+    
+Pour prendre en charge d’iOS 11 et versions antérieures, vous pouvez inclure toutes les clés de trois : `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, et `NSLocationAlwaysUsageDescription`.
+
+La représentation sous forme de XML pour ces clés dans **Info.plist** est indiqué ci-dessous. Vous devez mettre à jour le `string` valeurs afin de refléter la manière dont votre application utilise les informations d’emplacement :
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
-    <string>Can we use your location</string>
+<string>Can we use your location at all times?</string>
 <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We are using your location</string>
+<string>Can we use your location when your app is being used?</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Can we use your location at all times?</string>
 ```
 
 Le **Info.plist** entrées peuvent également être ajoutées dans **Source** affichage lors de la modification du **Info.plist** fichier :

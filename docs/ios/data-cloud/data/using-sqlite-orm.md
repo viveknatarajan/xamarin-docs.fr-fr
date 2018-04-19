@@ -1,16 +1,17 @@
 ---
-title: À l’aide de SQLite.NET
+title: À l’aide de SQLite.NET avec iOS
+description: La bibliothèque SQLite.NET PCL NuGet fournit un mécanisme d’accès de données simple pour les applications de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/18/2018
-ms.openlocfilehash: 8d68df2c29afe828482da7c5747b30dc5d30a5de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/18/2018
+ms.openlocfilehash: e7287a4f6b4e3f1203f6181c900c05565d9b5050
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="using-sqlitenet"></a>À l’aide de SQLite.NET
 
@@ -21,32 +22,47 @@ ORM signifie mappage objet relationnel – une API qui vous permet d’enregistr
 
 ## <a name="usage"></a>Utilisation
 
-Ajouter le [package NuGet de bibliothèque PCL SQLite.net](https://www.nuget.org/packages/sqlite-net-pcl/), à votre projet - il prend en charge un éventail de plateformes, y compris iOS, Android et Windows.
+Pour inclure la bibliothèque SQLite.NET dans une application Xamarin, ajoutez le package NuGet suivant à votre projet :
 
-  [![](using-sqlite-orm-images/image1a-sml.png "Package NuGet de SQLite.NET")](using-sqlite-orm-images/image1a.png#lightbox)
+- **Nom du package :** SQLite-net PCL
+- **Auteur :** Frank A. Krueger
+- **ID :** sqlite-net-pcl
+- **URL :** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+[![Package NuGet de SQLite.NET](using-sqlite-orm-images/image1a-sml.png "package NuGet de SQLite.NET")](using-sqlite-orm-images/image1a.png#lightbox)
+
+> [!TIP]
+> Il existe un nombre de packages de SQLite différents : veillez à choisir celle qui convient (il peut être le résultat supérieur dans la recherche).
 
 Une fois que vous avez la bibliothèque SQLite.NET disponible, suivez ces trois étapes pour l’utiliser pour accéder à une base de données :
 
-
 1. **Ajouter un à l’aide instruction** -ajouter l’instruction suivante pour les fichiers c# où l’accès aux données est requise :
 
-        using SQLite;
+    ```csharp
+    using SQLite;
+    ```
 
 1. **Créer une base de données vide** -une référence de base de données peut être créée en passant le chemin d’accès du constructeur de classe SQLiteConnection. Vous n’avez pas besoin de vérifier si le fichier existe déjà, il sera créé automatiquement si nécessaire, sinon le fichier existant de la base de données s’ouvre.
 
-        var db = new SQLiteConnection (dbPath);
+    ```csharp
+    var db = new SQLiteConnection (dbPath);
+    ```
 
     La variable dbPath doit être déterminée selon les règles décrites précédemment dans ce document.
 
 1. **Enregistrer les données** - une fois que vous avez créé un objet SQLiteConnection, de base de données, les commandes sont exécutées en appelant ses méthodes, telles que CREATE TABLE et insérer comme suit :
 
-        db.CreateTable<Stock> ();
-        db.Insert (newStock); // after creating the newStock object
+    ```csharp
+    db.CreateTable<Stock> ();
+    db.Insert (newStock); // after creating the newStock object
+    ```
 
 1. **Récupérer des données** - pour récupérer un objet (ou une liste d’objets) utilisez la syntaxe suivante :
 
-        var stock = db.Get<Stock>(5); // primary key id of 5
-        var stockList = db.Table<Stock>();
+    ```csharp
+    var stock = db.Get<Stock>(5); // primary key id of 5
+    var stockList = db.Table<Stock>();
+    ```
 
 ## <a name="basic-data-access-sample"></a>Exemple d’accès aux données de base
 
@@ -54,14 +70,13 @@ Le *DataAccess_Basic* exemple de code pour ce document ressemble à ceci lorsque
 
 **iOS**
 
- ![](using-sqlite-orm-images/image2.png "exemple de SQLite.NET iOS")
+ [![exemple de SQLite.NET iOS](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
 
 L’exemple de code suivant montre une interaction de base de données entière à l’aide de la bibliothèque SQLite.NET pour encapsuler l’accès de base de données sous-jacente. Il montre :
 
 1.  Création du fichier de base de données
 1.  Insertion des données en créant des objets et enregistrez-les
 1.  Interrogation des données
-
 
 Vous devez inclure ces espaces de noms :
 
@@ -187,7 +202,6 @@ Pour modifier le mode de thread, appelez `SqliteConnection.SetConfig`. Par exemp
 ```csharp
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
-
 
 ## <a name="related-links"></a>Liens associés
 
