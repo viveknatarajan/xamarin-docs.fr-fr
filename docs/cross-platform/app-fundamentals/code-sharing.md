@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7531a8a21b6895de6113f5edd85d09a5e150877e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ec3cb08b227b268c4c755545e8bc76b9e234d093
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sharing-code-options"></a>Options de partage de Code
 
@@ -136,7 +136,7 @@ Une bonne solution si vous envisagez de partager l’assembly résultant avec d�
 
 Le choix de la stratégie de partage de code sera déterminée par la plateforme ciblée. Choisissez une méthode qui convient le mieux à votre projet.
 
-Bibliothèque de classes portables ou .NET Standard sont de bons choix pour la création de bibliothèques de code partageable (notamment la publication sur NuGet). Les projets partagés fonctionnent bien pour les développeurs d’applications envisagez d’utiliser un grand nombre de fonctionnalités entre plates-formes spécifiques dans leurs applications cross-platforma.
+Bibliothèque de classes portables ou .NET Standard sont de bons choix pour la création de bibliothèques de code partageable (notamment la publication sur NuGet). Les projets partagés fonctionnent bien pour les développeurs d’applications envisagez d’utiliser un grand nombre de fonctionnalités entre plates-formes spécifiques dans leurs applications inter-plateformes.
 
 
 ## <a name="related-links"></a>Liens associés

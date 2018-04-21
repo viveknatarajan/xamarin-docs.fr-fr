@@ -1,18 +1,18 @@
 ---
-title: À l’aide des données dans une application
+title: À l’aide des données dans une application iOS
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 3366b78479712dffee74448dcc51e193cd07564d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eded0918c6994481cdc82fe7662a985ea243b24d
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="using-data-in-an-app"></a>À l’aide des données dans une application
+# <a name="using-data-in-an-ios-app"></a>À l’aide des données dans une application iOS
 
 Le **DataAccess_Adv** montre une application opérationnelle qui autorise les entrées d’utilisateur et *CRUD* les fonctionnalités de base de données (création, lecture, mise à jour et suppression). L’application se compose de deux écrans : une liste et un formulaire d’entrée de données. Tout le code d’accès aux données est réutilisable dans iOS et Android sans modification.
 
