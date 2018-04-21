@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 0a4bab44cfa260060c990949b45d3f5e6b103d0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6a848023febcb7fc65cf6616aeae3b43b39262
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Messages d’erreur Xamarin.Mac (mmp)
 
@@ -131,7 +131,7 @@ Cela indique généralement un bogue dans Xamarin.Mac ; Veuillez archiver un ra
 
 #### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091 : Cette version de Xamarin.Mac requiert la * Kit de développement logiciel (fourni avec Xcode *). Soit vous devez mettre à niveau Xcode pour obtenir les fichiers d’en-tête requis, utilisez le bureau d’enregistrement dynamique ou définir le comportement de l’éditeur de liens géré vers la plateforme de lien ou lien Framework kits de développement logiciel uniquement (pour tenter d’éviter les nouvelles API).
 
-Xamarin.Mac requiert les fichiers d’en-tête, à partir de la version du Kit de développement logiciel spécifié dans le message d’erreur pour générer votre application avec le bureau d’enregistrement statique... La méthode recommandée pour corriger cette erreur consiste à mettre à niveau Xcode pour obtenir le Kit de développement logiciel requis, cela inclut tous les fichiers d’en-tête requis. Si vous disposez de plusieurs versions de Xcode installé, ou que vous souhaitez utiliser un Xcode dans un emplacement non définis par défaut, veillez à définir l’emplacement de Xcode correct dans les préférences de l’IDE de.
+Xamarin.Mac requiert les fichiers d’en-tête, à partir de la version du Kit de développement logiciel spécifié dans le message d’erreur pour générer votre application avec le bureau d’enregistrement statique. La méthode recommandée pour corriger cette erreur consiste à mettre à niveau Xcode pour obtenir le Kit de développement logiciel requis, cela inclut tous les fichiers d’en-tête requis. Si vous disposez de plusieurs versions de Xcode installé, ou que vous souhaitez utiliser un Xcode dans un emplacement non définis par défaut, veillez à définir l’emplacement de Xcode correct dans les préférences de l’IDE de.
 
 Une solution de potentielle, d’autre, consiste à activer l’éditeur de liens managé. Cela supprimera inutilisé API, dans la plupart des cas, la nouvelle API où les fichiers d’en-tête sont manquants (ou incomplets). Cela ne fonctionne pas si votre projet utilise des API qui a été introduit dans un kit de développement logiciel plus récent que celui votre Xcode fournit toutefois.
 
