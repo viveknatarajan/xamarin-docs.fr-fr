@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: f94959062f01a363319494eb510f1a6e42fe36b6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 52f4c51258d1b635adcd697bccb7dd553acc0d5e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="localization"></a>Localisation
 
@@ -110,7 +110,7 @@ Si les données sont en cours d’entrée par l’utilisateur de l’application
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Consultez le [l’analyse de chaînes numériques](http://msdn.microsoft.com/en-us/library/xbtzcc4w(v=vs.110).aspx) et [l’analyse de chaînes de Date et heure](http://msdn.microsoft.com/en-us/library/2h3syy57(v=vs.110).aspx) articles MSDN pour plus d’informations.
+Consultez le [l’analyse de chaînes numériques](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) et [l’analyse de chaînes de Date et heure](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) articles MSDN pour plus d’informations.
 
 <a name="rtl" />
 
@@ -130,7 +130,7 @@ IOS et Android prennent en charge les dispositions de droite à gauche et le ren
 
 Différentes langues définissent l’ordre de tri de leur alphabet différemment, même lorsqu’ils utilisent le même jeu de caractères.
 
-Consultez le [détail de comparaison de chaînes](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) dans [meilleures pratiques pour l’utilisation de chaînes dans le .NET Framework](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx) pour obtenir un exemple où langue (CultureInfo) affecte l’ordre de tri.
+Consultez le [détail de comparaison de chaînes](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) dans [meilleures pratiques pour l’utilisation de chaînes dans le .NET Framework](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) pour obtenir un exemple où langue (CultureInfo) affecte l’ordre de tri.
 
 Il est improbable que les fonctionnalités de base de données intégrée sur les plateformes mobiles prendront en charge tri spécifiques au langage classement afin de vous devrez peut-être implémenter le code supplémentaire dans votre logique métier.
 
@@ -283,7 +283,7 @@ Pour générer des fonctions de traduction dans votre application, envisagez la 
 À des fins de test vous pouvez utiliser un des nombreux outils de traduction en ligne pour inclure du texte localisé dans votre application au cours du développement :
 
 - [Bing Translator](https://www.bing.com/translator/)
-- [Google Translate](http://translate.google.com/)
+- [Traduire de Google](http://translate.google.com/)
 
 Il existe de nombreux autres disponibles. La qualité de la traduction automatique n’est pas considérée comme suffisant pour libérer une application sans tout d’abord examiné et testé par les traducteurs professionnels ou leur langue maternelle.
 
@@ -312,4 +312,4 @@ Continuer à lire les détails techniques pour la plateforme qui que vous intér
 
 - [Vue d’ensemble de la localisation d’Apple](https://developer.apple.com/internationalization/)
 - [Liste de vérification de localisation d’Android](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [Meilleures pratiques pour développer des Applications mondialisables (MSDN)](http://msdn.microsoft.com/en-us/library/w7x1y988%28v=vs.90%29.aspx)
+- [Meilleures pratiques pour développer des Applications mondialisables (MSDN)](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

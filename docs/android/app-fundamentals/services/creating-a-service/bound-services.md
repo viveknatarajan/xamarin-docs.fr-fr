@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 18cfe6acae08efac85223c9c121a12f102f846cc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1cb151cc5c741a020fcbb398441ed4958ec5980b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Limite des Services dans Xamarin.Android
 
@@ -263,7 +263,7 @@ Certains puristes OOP peuvent désapprouver l’implémentation précédente de 
 Parler, il n’est pas nécessaire pour le client connaître le `TimestampService` et l’exposition de cette classe concrète pour les clients peut rendre une application plus fragile et plus difficile à gérer pendant sa durée de vie. Une autre approche consiste à utiliser une interface qui expose le `GetFormattedTimestamp()` (méthode) et les appels de proxy au service via la `Binder` (ou possible de la classe de connexion de service) :  
 
 ```csharp
-public class TimestampBinder : Binder, IGetTimesamp
+public class TimestampBinder : Binder, IGetTimestamp
 {
     TimestampService service;
     public TimestampBinder(TimestampService service)
@@ -294,4 +294,4 @@ string currentTimestamp = serviceConnection.Binder.GetFormattedTimestamp()
 - [Android.Content.IServiceConnection](https://developer.xamarin.com/api/type/Android.Content.IServiceConnection/)
 - [Android.OS.Binder](https://developer.xamarin.com/api/type/Android.OS.Binder/)
 - [Android.OS.IBinder](https://developer.xamarin.com/api/type/Android.OS.IBinder)
-- [BoundServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/BoundServiceDemo/)
+- [BoundServiceDemo (exemple)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/BoundServiceDemo/)

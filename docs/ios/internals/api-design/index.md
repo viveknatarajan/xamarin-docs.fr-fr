@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b7604633a5dfad6134d7b549299194ab6707a865
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da827c5bdd25bf841f5396b10d1eeb70e132dfeb
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="api-design"></a>Conception de l’API
 
@@ -693,7 +693,7 @@ Xamarin.iOS a un garbage collector qui s’occupe de libération des ressources 
 
 Exposer le `IDisposable` interface est un moyen pratique d’aider les développeurs dans la libération d’objets qui peuvent encapsuler les grands blocs de mémoire (par exemple, un `UIImage` peut se présenter comme un pointeur inoffensif, mais peut pointer vers une image de 2 mégaoctets ) et d’autres ressources importantes et limitées (par exemple, une mémoire tampon de décodage vidéo).
 
-NSObject implémente l’interface IDisposable et également le [modèle Dispose de .NET](http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx). Cela permet aux développeurs qui sous-classe NSObject pour substituer le comportement de suppression et de libérer leurs ressources à la demande. Par exemple, considérez ce contrôleur d’affichage qui conserve un ensemble d’images :
+NSObject implémente l’interface IDisposable et également le [modèle Dispose de .NET](http://msdn.microsoft.com/library/fs2xkftw.aspx). Cela permet aux développeurs qui sous-classe NSObject pour substituer le comportement de suppression et de libérer leurs ressources à la demande. Par exemple, considérez ce contrôleur d’affichage qui conserve un ensemble d’images :
 
 ```csharp
 class MenuViewController : UIViewController {

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 0187b65e4c10e7cc03715a997a90fbddab9bd532
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xamarinios-errors"></a>Erreurs de Xamarin.iOS
 
@@ -631,7 +631,7 @@ Par exemple, ces valeurs seront déclenche cette erreur :
 
 <a name="MT0109" />
 
-### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109 : L’assembly '{0}' a été chargé à partir d’un chemin différent du chemin d’accès fourni (fourni le chemin d’accès : {1}, chemin d’accès réel : {{2}).
+### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109 : L’assembly '{0}' a été chargé à partir d’un chemin différent du chemin d’accès fourni (fourni le chemin d’accès : {1}, chemin d’accès réel : {2}).
 
 Il s’agit d’un avertissement indiquant qu’un assembly référencé par l’application a été chargé à partir d’un emplacement autre que celle demandée.
 
@@ -1393,7 +1393,7 @@ Choses à essayer résoudre ce problème :
 
 <!--- 1407 used by mmp -->
 
-### <a name="mt16xx-macho"></a>MT16xx: MachO
+### <a name="mt16xx-macho"></a>MT16xx : Verve
 
 <!--
   MT16xx    MachO.cs
@@ -1653,11 +1653,11 @@ L’assembly à l’origine du problème est nommé dans le message d’erreur. 
 
 <a name="MT2104" />
 
-### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104 : Impossible de lier l’assembly '{0}', car il est en mode mixte.
+### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104 : Impossible de lier l’assembly '{0}' car il est en mode mixte.
 
 Les assemblys en mode mixte ne peuvent pas être traités par l’éditeur de liens.
 
-Consultez https://msdn.microsoft.com/en-us/library/x0w2664k.aspx pour plus d’informations sur les assemblys en mode mixte.
+Consultez https://msdn.microsoft.com/library/x0w2664k.aspx pour plus d’informations sur les assemblys en mode mixte.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx : Messages d’erreur AOA
 
@@ -2060,7 +2060,7 @@ Vérifiez que le `Register` attribut sur la classe managée mentionnée dans le 
 
 <a name="MT4161" />
 
-### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161 : Le bureau d’enregistrement trouvé une structure non pris en charge '\*' : tous les champs dans une structure doivent également être des structures (champ '\*' avec le type « {{2} » n’est pas une structure).
+### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161 : Le bureau d’enregistrement trouvé une structure non pris en charge '\*' : tous les champs dans une structure doivent également être des structures (champ '\*« avec le type'{2}' n’est pas une structure).
 
 Le bureau d’enregistrement trouvé une structure avec des champs non pris en charge.
 
@@ -2068,7 +2068,7 @@ Tous les champs dans une structure qui est exposé à Objective-C doivent égale
 
 <a name="MT4162" />
 
-### <a name="mt4162-the-type--used-as--2-is-not-available-in---it-was-introduced-in---please-build-with-a-newer--sdk-usually-done-by-using-the-most-recent-version-of-xcode"></a>MT4162 : Le type '\*' (utilisé en tant que * {{2}) n’est pas disponible dans ** (elle a été introduite dans * *)\* générez avec une version * Kit de développement logiciel (généralement effectuée à l’aide de la version la plus récente de Xcode.
+### <a name="mt4162-the-type--used-as--2-is-not-available-in---it-was-introduced-in---please-build-with-a-newer--sdk-usually-done-by-using-the-most-recent-version-of-xcode"></a>MT4162 : Le type '\*' (utilisé en tant que * {2}) n’est pas disponible dans ** (elle a été introduite dans * *)\* générez avec une version * Kit de développement logiciel (généralement effectuée à l’aide de la version la plus récente de Xcode.
 
 Le bureau d’enregistrement de trouver un type qui n’est pas inclus dans le Kit de développement actuel.
 
@@ -2945,7 +2945,7 @@ Cela indique généralement un bogue dans Xamarin.iOS ; Veuillez entrer un bogu
 
 <a name="MT8013" />
 
-### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013 : Les DelegateProxyAttribute non valide pour la valeur de retour de la méthode *.*: Type_délégué ({{2}) spécifie un type de champ 'Handler'. Veuillez entrer un bogue sur http://bugzilla.xamarin.com.
+### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013 : Les DelegateProxyAttribute non valide pour la valeur de retour de la méthode *.*: Type_délégué ({2}) spécifie un type de champ 'Handler'. Veuillez entrer un bogue sur http://bugzilla.xamarin.com.
 
 L’attribut DelegateProxy pour la méthode en question n’est pas valide.
 
@@ -2953,7 +2953,7 @@ Cela indique généralement un bogue dans Xamarin.iOS ; Veuillez entrer un bogu
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014 : Les DelegateProxyAttribute non valide pour la valeur de retour de la méthode *.*: Type_délégué le champ de 'Handler' ({{2}) est null. Veuillez entrer un bogue sur http://bugzilla.xamarin.com.
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014 : Les DelegateProxyAttribute non valide pour la valeur de retour de la méthode *.*: de la Type_délégué ({2}) 'Handler' champ est null. Veuillez entrer un bogue sur http://bugzilla.xamarin.com.
 
 L’attribut DelegateProxy pour la méthode en question n’est pas valide.
 
@@ -2961,7 +2961,7 @@ Cela indique généralement un bogue dans Xamarin.iOS ; Veuillez entrer un bogu
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015 : Les DelegateProxyAttribute non valide pour la valeur de retour de la méthode *.*: Type_délégué le champ de 'Handler' ({{2}) n’est pas un délégué, il s’agit d’un *. Veuillez entrer un bogue sur http://bugzilla.xamarin.com.
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015 : Les DelegateProxyAttribute non valide pour la valeur de retour de la méthode *.*: de la Type_délégué ({2}) champ de 'Handler' n’est pas un délégué, il est un *. Veuillez entrer un bogue sur http://bugzilla.xamarin.com.
 
 L’attribut DelegateProxy pour la méthode en question n’est pas valide.
 

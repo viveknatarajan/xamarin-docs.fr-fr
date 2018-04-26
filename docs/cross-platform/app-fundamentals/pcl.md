@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: feef0a4083d2455cc189ddab6ed22762c044d848
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 799ee198f776b963bb8779d71bacc322001e2882
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introduction aux bibliothèques de classes portables
 
@@ -55,7 +55,7 @@ Cela inclut les profils qui sont des combinaisons de :
 -  Windows Phone 8
 -  Applications UWP
 
-Vous pouvez en savoir plus sur les fonctionnalités sur les différents profils [du site Web Microsoft](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx) et consultez un autre membre de la Communauté [profil PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) qui inclut la prise en charge les informations de framework et d’autres remarques.
+Vous pouvez en savoir plus sur les fonctionnalités sur les différents profils [du site Web Microsoft](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) et consultez un autre membre de la Communauté [profil PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) qui inclut la prise en charge les informations de framework et d’autres remarques.
 
 
 
@@ -424,9 +424,9 @@ Cet article a brièvement décrit les avantages et les inconvénients des biblio
 
 ## <a name="related-links"></a>Liens associés
 
-- [TaskyPortable (sample)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
+- [TaskyPortable (exemple)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
 - [Création d’applications multiplateformes](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Portable Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [Projets partagés](~/cross-platform/app-fundamentals/shared-projects.md)
 - [Options de partage de Code](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Le développement multiplateforme avec le .NET Framework (Microsoft)](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+- [Le développement multiplateforme avec le .NET Framework (Microsoft)](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 67f61da09861fac6f45faf80efde40302c05bfed
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: efe0f20207f6e4ec990af736f1d8e930445e59b9
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Partie 6 - test et les approbations de l’App Store
 
@@ -75,7 +75,7 @@ Une fois votre compte a été approuvé, vous êtes prêt à envoyer une applica
 
 - [Publication sur l’App Store d’iOS d’Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Préparation d’une application pour Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)
-- Les développeurs Windows rendez-vous sur le [centre de développement Windows](https://developer.microsoft.com/en-us/windows/windows-apps) pour en savoir plus sur l’envoi de leurs applications.
+- Les développeurs Windows rendez-vous sur le [centre de développement Windows](https://developer.microsoft.com/windows/windows-apps) pour en savoir plus sur l’envoi de leurs applications.
 
 Le reste de cette section décrit les éléments à prendre en considération afin de garantir que l’approbation de votre application sans les interruptions.
 

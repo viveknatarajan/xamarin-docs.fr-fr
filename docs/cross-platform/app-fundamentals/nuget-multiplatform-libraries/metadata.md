@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: fa526d33758afb73965e315c8e471d960d84e781
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6d30f564d54b96d358d37059f9dababaf8f3314e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="editing-nuget-metadata"></a>Modification des métadonnées de NuGet
 
@@ -19,7 +19,7 @@ _Utilisez les options de projet pour modifier les métadonnées de NuGet pour le
 
 Types de projets de bibliothèque (par exemple, la bibliothèque PCL ou .NET Standard ou le nouveau type de projet de NuGet) ont une **NuGet Package** section dans le **Options du projet** fenêtre.
 
-Le **métadonnées** section configure les valeurs utilisées dans les [ **.nuspec** fichier manifeste du package NuGet](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file).
+Le **métadonnées** section configure les valeurs utilisées dans les [ **.nuspec** fichier manifeste du package NuGet](https://docs.microsoft.com/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file).
 
 ## <a name="required-information"></a>Informations requises
 
@@ -27,15 +27,15 @@ Le **général** onglet contient quatre champs qui doivent être entrés pour g�
 
 [![](metadata-images/metadata-general-sml.png "Fenêtre de métadonnées requises de package NuGet.")](metadata-images/metadata-general.png#lightbox)
 
-- **ID** : l’identificateur de package, qui doit être unique dans Nuget.org (ou, là où le package sera distribué). Suivez cette [conseils](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) et utiliser uniquement des caractères qui sont valides dans une URL (sans espaces et évitez les caractères spéciaux plus).
-- **Version** : choisissez un numéro de version cohérent avec [les règles de contrôle de version de NuGet](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions).
+- **ID** : l’identificateur de package, qui doit être unique dans Nuget.org (ou, là où le package sera distribué). Suivez cette [conseils](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) et utiliser uniquement des caractères qui sont valides dans une URL (sans espaces et évitez les caractères spéciaux plus).
+- **Version** : choisissez un numéro de version cohérent avec [les règles de contrôle de version de NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
 - **Les auteurs de** – séparées par des virgules de liste de noms.
 - **Description** : vue d’ensemble des fonctionnalités du package qui s’affiche lorsque les utilisateurs sont en sélectionnant le package.
 
 > [!NOTE]
 > N’oubliez pas d’incrémenter le numéro de version lors de la création de nouvelles versions pour la distribution de NuGet ou d’autres utilisateurs.
 
-Pour plus d’informations, consultez la [référence des éléments requis](https://docs.microsoft.com/en-us/nuget/schema/nuspec#required-metadata-elements) pour plus d’informations, ainsi que ces instructions détaillées sur [en choisissant un identificateur unique du package et en définissant le numéro de version](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) et [ Définition d’un type de package](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#setting-a-package-type).
+Pour plus d’informations, consultez la [référence des éléments requis](https://docs.microsoft.com/nuget/schema/nuspec#required-metadata-elements) pour plus d’informations, ainsi que ces instructions détaillées sur [en choisissant un identificateur unique du package et en définissant le numéro de version](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) et [ Définition d’un type de package](https://docs.microsoft.com/nuget/create-packages/creating-a-package#setting-a-package-type).
 
 > [!IMPORTANT]
 > Sous cet onglet doivent tous être entrés ; Sinon, un message d’erreur apparaît : _« le projet n’a pas les métadonnées de NuGet un package NuGet ne sera donc pas créé. Les métadonnées du package NuGet peuvent être spécifiée dans la section de métadonnées dans les Options du projet »_
@@ -46,7 +46,7 @@ Le **détails** onglet contient les champs facultatifs à inclure dans le fichie
 
 [![](metadata-images/metadata-detail-sml.png "Fenêtre de métadonnées optionnelles de package NuGet")](metadata-images/metadata-detail.png#lightbox)
 
-Reportez-vous à la [référence des éléments facultatifs](https://docs.microsoft.com/en-us/nuget/schema/nuspec#optional-metadata-elements) pour plus d’informations sur les champs obligatoires et facultatifs.
+Reportez-vous à la [référence des éléments facultatifs](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements) pour plus d’informations sur les champs obligatoires et facultatifs.
 
 > [!NOTE]
 > Si le package NuGet en cours de distribution sur [NuGet.org](https://www.nuget.org) il est recommandé de fournir autant d’informations que possible.
@@ -54,4 +54,4 @@ Reportez-vous à la [référence des éléments facultatifs](https://docs.micros
 
 ## <a name="related-links"></a>Liens associés
 
-- [Informations de référence sur le fichier nuspec](https://docs.microsoft.com/en-us/nuget/schema/nuspec#general-form-and-schema)
+- [Informations de référence sur le fichier nuspec](https://docs.microsoft.com/nuget/schema/nuspec#general-form-and-schema)

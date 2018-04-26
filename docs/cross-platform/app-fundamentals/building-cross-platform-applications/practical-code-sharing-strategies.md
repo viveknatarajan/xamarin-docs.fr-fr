@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: d5f639cffc8ff2d134731374bd72663fec81c6a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6f6b88bf29e94a221b2ef58b3299348eb08d33fa
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Partie 5 - stratégies de partage de Code pratique
 
@@ -200,7 +200,7 @@ Le stockage isolé est une API commune pour enregistrer et charger des fichiers 
 
 Il est le mécanisme par défaut pour l’accès de fichier dans Windows Phone (Silverlight) qui a été implémenté dans Xamarin.iOS et Xamarin.Android pour autoriser le code d’accès aux fichiers courants à écrire. Le `System.IO.IsolatedStorage` classe peut être référencé dans les trois plateformes dans une [projet partagé](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Reportez-vous à la [vue d’ensemble du stockage isolé pour Windows Phone](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402541(v=vs.105).aspx) pour plus d’informations.
+Reportez-vous à la [vue d’ensemble du stockage isolé pour Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) pour plus d’informations.
 
 Les API de stockage isolé ne sont pas disponibles dans [bibliothèques de classes portables](~/cross-platform/app-fundamentals/pcl.md). Une alternative pour la bibliothèque PCL est la [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
@@ -377,8 +377,8 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
 Pour le code qui n’utilise pas la bibliothèque parallèle de tâches, chaque plateforme possède sa propre syntaxe pour les opérations de marshaling vers le thread d’interface utilisateur :
 
--  **iOS** – `owner.BeginInvokeOnMainThread(new NSAction(action))`
--  **Android** – `owner.RunOnUiThread(action)`
+-  **iOS** : `owner.BeginInvokeOnMainThread(new NSAction(action))`
+-  **Android** : `owner.RunOnUiThread(action)`
 -  **Xamarin.Forms** : `Device.BeginInvokeOnMainThread(action)`
 -  **Windows** : `Deployment.Current.Dispatcher.BeginInvoke(action)`
 

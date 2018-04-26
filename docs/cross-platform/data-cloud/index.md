@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 13868864813a2f120857fb6347924197e374638c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ab449a58cc87699b97a1ade7721a08f771c4f55d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-azure"></a>Microsoft Azure
 
@@ -26,12 +26,12 @@ _Documentation et exemples de code télécharge pour Azure._
 La nouvelle [Services connectés](connected-services.md) fonctionnalité de Visual Studio pour Mac permet aux développeurs de rapidement et facilement ajouter la fonctionnalité d’Azure à des applications mobiles à partir de l’IDE. Actuellement disponible pour les tests dans le canal Alpha.
 
 
-## <a name="azure-app-services"></a>Azure App Services
+## <a name="azure-app-services"></a>Services d’application Azure
 
 Il existe une collection de [documentation des applications mobiles Azure](~/cross-platform/data-cloud/mobile-apps.md) qui vous guide tout au long du processus de mise en œuvre le [Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 Xamarin propose également des packages NuGet de messagerie un Azure pour [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) et [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) pour aider à implémenter des notifications push sur plusieurs plateformes.
 
-Configurer vos applications sur le [portail des Services d’application Azure](https://portal.azure.com/) pour accéder aux applications mobiles, API Web, de stockage et bien plus encore. En savoir plus sur [comment les services d’application sont différents](http://azure.microsoft.com/en-us/updates/whats-new-with-azure-app-service/) et Regarder dans [ces vidéos de Microsoft](http://azure.microsoft.com/en-us/campaigns/azure-march-announcement/).
+Configurer vos applications sur le [portail des Services d’application Azure](https://portal.azure.com/) pour accéder aux applications mobiles, API Web, de stockage et bien plus encore. En savoir plus sur [comment les services d’application sont différents](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) et Regarder dans [ces vidéos de Microsoft](http://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## <a name="active-directory-authentication"></a>Authentification Active Directory
 
@@ -58,7 +58,7 @@ Outre la [exemples de la documentation](https://github.com/xamarin/mobile-sample
 - [MyShoppe](https://github.com/jamesmontemagno/MyShoppe) -des applications mobiles Azure.
 
 - [Shopping](https://github.com/dotnet-architecture/eShopOnContainers) – exemple pour le [Architecture série](https://www.microsoft.com/net/learn/architecture) de livres électroniques.
-- [MyDriving](https://azure.microsoft.com/en-us/campaigns/mydriving/) – Azure + IoT un échantillonnage à partir de 2016 de Build.
+- [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT un échantillonnage à partir de 2016 de Build.
 
 
 ## <a name="related-links"></a>Liens associés

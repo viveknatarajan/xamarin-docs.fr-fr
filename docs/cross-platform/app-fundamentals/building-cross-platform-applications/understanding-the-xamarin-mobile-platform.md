@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 33551a924af1b7ca9c465514c704a0c1445fc2c4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76b0e9ea6e13ed053a53971b6dbe9f65bb436a4e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Partie 1 : présentation de la plateforme Mobile de Xamarin
 
@@ -173,7 +173,7 @@ Il est recommandé de lire les règles de conception pertinents pour les platefo
 
 -   **iOS** – [indications de l’Interface humaine Apple](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
 -   **Android** – [indications de l’Interface utilisateur de Google](http://developer.android.com/guide/practices/ui_guidelines/index.html)
--   **Windows** – [règles de conception d’expérience utilisateur pour Windows](https://developer.microsoft.com/en-us/windows/design)
+-   **Windows** – [règles de conception d’expérience utilisateur pour Windows](https://developer.microsoft.com/windows/design)
 
 
  <a name="Library_and_Code_Re-use" />

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: ae1300936a24ac1381496eaaf78aefb875bd5ed6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33573d14d77f0582caca7d1e71b839563a3dd110
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="2d-math-with-cocossharp"></a>Mathématiques 2D avec CocosSharp
 
@@ -264,7 +264,7 @@ Ce code entraîne le comportement suivant :
 
 `System.Math.Atan2` peut être utilisé pour convertir un décalage d’un angle. Le nom de fonction `Atan2` provient de l’arc tangente de fonctions trigonométriques. Le suffixe « 2 » différencie cette fonction à partir de la norme `Atan` fonction, ce qui est strictement correspond au comportement mathématique d’arc tangente. Arc tangente est une fonction qui retourne une valeur entre -90 et + 90 degrés (ou l’équivalent en radians). De nombreuses applications, y compris les jeux de l’ordinateur, nécessitent souvent 360 degrés de valeurs, afin que la `Math` classe inclut `Atan2` pour répondre à ce besoin.
 
-Notez que le code ci-dessus passe le paramètre Y tout d’abord, puis le paramètre X, lorsque vous appelez le `Atan2` (méthode). Il s’agit en arrière à partir de X, Y classement des coordonnées de position classiques. Pour plus d’informations [consultez les documents Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx).
+Notez que le code ci-dessus passe le paramètre Y tout d’abord, puis le paramètre X, lorsque vous appelez le `Atan2` (méthode). Il s’agit en arrière à partir de X, Y classement des coordonnées de position classiques. Pour plus d’informations [consultez les documents Atan2](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx).
 
 Il est également important de noter que la valeur de retour de `Atan2` est exprimé en radians, c'est-à-dire une autre unité utilisée pour mesurer les angles. Ce guide ne couvrent les détails de radians, mais n’oubliez pas que toutes les fonctions trigonométriques dans le `System.Math` espace de noms utilisation de radians, toutes les valeurs doivent être converti en degrés avant d’être utilisés sur des objets CocosSharp. Trouverez plus d’informations sur radians [dans la page de Wikipedia radian](http://en.wikipedia.org/wiki/Radian).
 

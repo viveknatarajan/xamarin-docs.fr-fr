@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 930b52e5b2a532e71594f26af79035db2cc5fb25
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 85dc675a9b18b974f21532298e4d3028bdecd0b7
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ios-architecture"></a>Architecture d’iOS
 
@@ -23,14 +23,14 @@ Le diagramme suivant montre une vue d’ensemble de cette architecture :
 
 ## <a name="native-and-managed-code-an-explanation"></a>Code natif et managé : une explication
 
-Lors du développement de Xamarin les termes du contrat *natif et managé* code sont souvent utilisés. [Le code managé](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) est un code qui a son exécution gérée par le [Common Language Runtime de .NET Framework](https://msdn.microsoft.com/en-us/library/8bs2ecf4(v=vs.110).aspx), ou dans les cas de Xamarin : le Runtime Mono. C’est ce que nous appelons un langage intermédiaire.
+Lors du développement de Xamarin les termes du contrat *natif et managé* code sont souvent utilisés. [Le code managé](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) est un code qui a son exécution gérée par le [Common Language Runtime de .NET Framework](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), ou dans les cas de Xamarin : le Runtime Mono. C’est ce que nous appelons un langage intermédiaire.
 
 Le code natif est le code qui s’exécute en mode natif sur la plateforme spécifique (par exemple, Objective-C ou même du code AOA compilé, sur un processeur ARM). Ce guide explore comment AOA compile votre code managé en code natif et explique comment une application de Xamarin.iOS fonctionne, rendre pleinement parti des e/s d’Apple API via l’utilisation de liaisons, tout en ayant accès à. BCL du NET et un langage sophistiqué tels que c#.
 
 
 ## <a name="aot"></a>AOT
 
-Lorsque vous compilez une application de plateforme de Xamarin, le compilateur c# Mono (ou) (F #) est exécutées et compilera votre code c# et F # en langage MSIL (Microsoft Intermediate). Si vous exécutez un Xamarin.Android, une application Xamarin.Mac ou même d’une application de Xamarin.iOS sur le simulateur, le [.NET Common Language Runtime (CLR)](https://msdn.microsoft.com/en-us/library/8bs2ecf4(v=vs.110).aspx) compile le MSIL à l’aide d’une juste dans le compilateur de temps (JIT). Lors de l’exécution de que cette est compilée en code natif, laquelle peut être exécutée sur l’architecture appropriée pour votre application.
+Lorsque vous compilez une application de plateforme de Xamarin, le compilateur c# Mono (ou) (F #) est exécutées et compilera votre code c# et F # en langage MSIL (Microsoft Intermediate). Si vous exécutez un Xamarin.Android, une application Xamarin.Mac ou même d’une application de Xamarin.iOS sur le simulateur, le [.NET Common Language Runtime (CLR)](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) compile le MSIL à l’aide d’une juste dans le compilateur de temps (JIT). Lors de l’exécution de que cette est compilée en code natif, laquelle peut être exécutée sur l’architecture appropriée pour votre application.
 
 Toutefois, il est une restriction de sécurité sur iOS, définie par Apple, qui n’autorise pas l’exécution du code généré dynamiquement sur un appareil.
 Pour vous assurer que vous nous communiquerez ces protocoles de sécurité, Xamarin.iOS utilise à la place un compilateur de manière anticipée de la durée (AOA) pour compiler le code managé. Cela produit un iOS natif binaire, éventuellement optimisé avec LLVM pour les appareils, ce qui peuvent être déployés sur le processeur ARM d’Apple. Un diagramme approximative de la façon dont il s’ajuste est illustré ci-dessous :
@@ -69,7 +69,7 @@ Le pseudo-code ci-dessous montre comment procéder :
  }
 ```
 
-**Objective-C:**
+**Objectif-c :**
 
 ```objectivec
 @interface MyViewController : UIViewController { }

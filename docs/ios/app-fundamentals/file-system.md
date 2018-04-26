@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c6a5233c9cdc043986f106712895439fa008b41
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-file-system"></a>Utilisation avec le système de fichiers
 
@@ -77,7 +77,7 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-Reportez-vous à la documentation MSDN pour le [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml.aspx) espace de noms pour plus d’informations sur [sérialisation](http://msdn.microsoft.com/en-us/library/system.xml.serialization.aspx). Vous devez également examiner la [Xamarin.iOS documentation](~/ios/deploy-test/linker.md) sur l’éditeur de liens généralement vous devez ajouter le `[Preserve]` vous prévoyez de sérialiser les classes d’attributs.
+Reportez-vous à la documentation MSDN pour le [System.Xml](http://msdn.microsoft.com/library/system.xml.aspx) espace de noms pour plus d’informations sur [sérialisation](http://msdn.microsoft.com/library/system.xml.serialization.aspx). Vous devez également examiner la [Xamarin.iOS documentation](~/ios/deploy-test/linker.md) sur l’éditeur de liens généralement vous devez ajouter le `[Preserve]` vous prévoyez de sérialiser les classes d’attributs.
 
  <a name="Creating_Files_and_Directories" />
 
@@ -102,7 +102,7 @@ var directoryname = Path.Combine (documents, "NewDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-Pour plus d’informations sur l’espace de noms System.IO, consultez le [Documentation MSDN](http://msdn.microsoft.com/en-us/library/system.io.aspx).
+Pour plus d’informations sur l’espace de noms System.IO, consultez le [Documentation MSDN](http://msdn.microsoft.com/library/system.io.aspx).
 
 
 ### <a name="serializing-json"></a>Sérialisation Json
@@ -244,7 +244,7 @@ Ces répertoires et leurs fonctions sont répertoriées ci-dessous :
 |Bibliothèque /|Le répertoire de la bibliothèque est un bon emplacement pour stocker les fichiers qui ne sont pas créés directement par l’utilisateur, telles que les bases de données ou d’autres fichiers générés par l’application. Le contenu de ce répertoire n’est jamais exposé à l’utilisateur via iTunes.<br /><br />Vous pouvez créer vos propres sous-répertoires dans la bibliothèque ; Toutefois, il existe déjà certains créé par le système répertoires ici que vous devez être conscient de, y compris les préférences et les Caches.<br /><br />Le contenu de ce répertoire (à l’exception du sous-répertoire Caches) est sauvegardé par iTunes. Les répertoires personnalisés que vous créez dans la bibliothèque seront sauvegardés.|
 |Bibliothèque/Préférences /|Les fichiers de préférence de spécifiques à l’application sont stockés dans ce répertoire. Ne créez pas directement ces fichiers. Utilisez plutôt la `NSUserDefaults` classe.<br /><br />Le contenu de ce répertoire est sauvegardé par iTunes.|
 |Les Caches/Library /|Le répertoire de Caches est un bon emplacement pour stocker les fichiers de données qui peuvent aider à votre application s’exécuter, mais qui peut être recréé facilement si nécessaire. L’application doit créer et supprimer ces fichiers en fonction des besoins et être en mesure de recréer ces fichiers si nécessaire. iOS 5 peut également supprimer ces fichiers (dans les situations de stockage extrêmement faible), mais il ne sera pas le faire pendant l’exécution de l’application.<br /><br />Le contenu de ce répertoire n’est pas sauvegardé par iTunes, ce qui signifie qu’ils ne seront pas présents si l’utilisateur restaure un appareil, et ils ne sont peut-être pas présentes après avoir installé une version mise à jour de votre application.<br /><br />Par exemple, dans le cas où votre application ne peut pas se connecter au réseau, vous pouvez utiliser le répertoire de cache pour stocker les fichiers de données ou pour fournir une bonne expérience hors connexion. L’application peut enregistrer et récupérer ces données rapidement lors de l’attente des réponses du réseau, mais il ne doit pas être sauvegardé et permettre facilement être restauré ou recréé après une restauration ou une version mise à jour.|
-|tmp/|Les applications peuvent stocker des fichiers temporaires qui sont nécessaires uniquement pour une courte période dans ce répertoire. Pour économiser l’espace, les fichiers doivent être supprimés lorsqu’ils ne sont plus nécessaires. Le système d’exploitation peut également supprimer des fichiers à partir de ce répertoire quand une application n’est pas en cours d’exécution.<br /><br />Le contenu de ce répertoire n’est pas sauvegardé par iTunes.<br /><br />Par exemple, le répertoire tmp peut servir à stocker les fichiers temporaires qui sont téléchargés à afficher pour l’utilisateur (tels que Twitter avatars ou les pièces jointes), mais qui peut être supprimé une fois qu’ils avez affichés (et téléchargées à nouveau si elles sont requises dans le futur ).|
+|TMP /|Les applications peuvent stocker des fichiers temporaires qui sont nécessaires uniquement pour une courte période dans ce répertoire. Pour économiser l’espace, les fichiers doivent être supprimés lorsqu’ils ne sont plus nécessaires. Le système d’exploitation peut également supprimer des fichiers à partir de ce répertoire quand une application n’est pas en cours d’exécution.<br /><br />Le contenu de ce répertoire n’est pas sauvegardé par iTunes.<br /><br />Par exemple, le répertoire tmp peut servir à stocker les fichiers temporaires qui sont téléchargés à afficher pour l’utilisateur (tels que Twitter avatars ou les pièces jointes), mais qui peut être supprimé une fois qu’ils avez affichés (et téléchargées à nouveau si elles sont requises dans le futur ).|
 
 Cette capture d’écran montre la structure de répertoire dans une fenêtre de recherche :
 
