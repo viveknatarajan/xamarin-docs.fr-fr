@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-an-entry"></a>Personnalisation d’une entrée
 
 _Le contrôle d’entrée de Xamarin.Forms permet une seule ligne de texte à modifier. Cet article explique comment créer un convertisseur personnalisé pour le contrôle d’entrée, en permettant aux développeurs de substituer le rendu natif par défaut avec leur propres personnalisation spécifiques à la plateforme._
 
-Chaque contrôle Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) contrôle est restitué par une application de Xamarin.Forms, dans iOS le `EntryRenderer` classe est instanciée, ce qui réduit instancie natif `UITextField` contrôle. Sur la plateforme Android, le `EntryRenderer` classe instancie un `EditText` contrôle. Sur Windows Phone et la plateforme Windows universelle (UWP), le `EntryRenderer` classe instancie un `TextBox` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Chaque contrôle Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) contrôle est restitué par une application de Xamarin.Forms, dans iOS le `EntryRenderer` classe est instanciée, ce qui réduit instancie natif `UITextField` contrôle. Sur la plateforme Android, le `EntryRenderer` classe instancie un `EditText` contrôle. Sur la plate-forme de Windows universelle (UWP), le `EntryRenderer` classe instancie un `TextBox` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Le diagramme suivant illustre la relation entre la [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) contrôle et les contrôles natives correspondantes qui l’implémentent :
 
@@ -178,13 +178,13 @@ namespace CustomRenderer.Android
 
 L’appel à la classe de base `OnElementChanged` méthode instancie un Android `EditText` contrôle, avec une référence au contrôle assignée au convertisseur `Control` propriété. La couleur d’arrière-plan est ensuite affectée à vert clair avec le `Control.SetBackgroundColor` (méthode).
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Création du convertisseur personnalisé sur Windows Phone et UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Création du convertisseur personnalisé sur la plateforme Windows universelle
 
-L’exemple de code suivant montre le convertisseur personnalisé pour Windows Phone et UWP :
+L’exemple de code suivant montre le convertisseur personnalisé pour la plateforme Windows universelle :
 
 ```csharp
 [assembly: ExportRenderer(typeof(MyEntry), typeof(MyEntryRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class MyEntryRenderer : EntryRenderer
     {

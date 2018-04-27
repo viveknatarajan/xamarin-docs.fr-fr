@@ -7,11 +7,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: c6fd0f905aceb9dddc4047abc6ad2722adf2d8e9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: aba193ca38d60db52298fdf239d936310a4ac193
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Trois méthodes pour dessiner un Arc
 
@@ -415,8 +415,6 @@ Voici le **tangente Arc** page en cours d’exécution sur les trois plateformes
 
 [![](arcs-images/tangentarc-small.png "Capture d’écran de triple de la page de la tangente d’arc de cercle")](arcs-images/tangentarc-large.png#lightbox "Triple capture d’écran de la page de la tangente d’arc de cercle")
 
-Sur l’appareil Windows Mobile, les trois points sont colinéaires presque, et l’arc est très faible.
-
 L’arc tangente est idéal pour la création des angles arrondis, par exemple un rectangle arrondi. Étant donné que `SKPath` inclut déjà une `AddRoundedRect` (méthode), la **arrondi de sur un heptagone** page montre comment utiliser `ArcTo` pour arrondir les angles d’un polygone sept recto verso. (Le code est généralisé pour tout polygone régulier).
 
 Le `PaintSurface` Gestionnaire de la [ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) classe contient un `for` boucle pour calculer les coordonnées des sommets de le sur un heptagone et l’autre pour calculer les points centraux des sept côtés de ces sept sommets. Ces points centraux est ensuite utilisées pour construire le chemin d’accès :
@@ -669,4 +667,4 @@ Bien que les connexions entre les lignes droites et d’arcs de cercle sont math
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

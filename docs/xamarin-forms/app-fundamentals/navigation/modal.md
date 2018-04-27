@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 909a04398043a3c2f0c30e4da82d174a6bfaf148
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00d52aa69372ab5ec3073e2355a43521b515ca8b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="modal-pages"></a>Pages modales
 
@@ -100,7 +100,7 @@ Toutefois, l’ordre précis que ces événements se produisent est dépendant d
 
 ### <a name="disabling-the-back-button"></a>La désactivation du bouton précédent
 
-Sur Android et Windows Phone, l’utilisateur peut toujours revenir à la page précédente en appuyant sur la norme *précédent* bouton sur l’appareil. Si la page modale oblige l’utilisateur terminer une tâche autonome avant de quitter la page, l’application doit désactiver le *précédent* bouton. Cela peut être accompli en substituant le [ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) méthode sur la page modale. Pour plus d’informations, consultez [chapitre 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) du livre de Xamarin.Forms de Petzold.
+Sur Android, l’utilisateur peut toujours revenir à la page précédente en appuyant sur la norme *précédent* bouton sur l’appareil. Si la page modale oblige l’utilisateur terminer une tâche autonome avant de quitter la page, l’application doit désactiver le *précédent* bouton. Cela peut être accompli en substituant le [ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) méthode sur la page modale. Pour plus d’informations, consultez [chapitre 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) du livre de Xamarin.Forms de Petzold.
 
 ### <a name="animating-page-transitions"></a>Animer des Transitions de Page
 

@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: c8913dcb5dbe9664f1186b1acf46f09cb8da74ed
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-skew-transform"></a>La transformation d’inclinaison
 
@@ -71,7 +71,7 @@ Les valeurs de la `xSkew` argument Décalage vers le bas du texte pour les valeu
 
 [![](skew-images/skewexperiment-small.png "Capture d’écran de triple de la page d’inclinaison de l’expérience")](skew-images/skewexperiment-large.png#lightbox "Triple capture d’écran de la page d’inclinaison de l’expérience")
 
-Si `xSkew` est la valeur négative de `ySkew`, le résultat est la rotation, mais également mis à l’échelle un peu comme les fenêtres d’affichage indique.
+Si `xSkew` est la valeur négative de `ySkew`, le résultat est la rotation, mais également à l’échelle un peu comme indiqué dans l’affichage de la plateforme Windows universelle.
 
 Les formules de transformation sont les suivantes :
 
@@ -251,4 +251,4 @@ Maintenant, l’ombre s’étend au bas de ces descendants :
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

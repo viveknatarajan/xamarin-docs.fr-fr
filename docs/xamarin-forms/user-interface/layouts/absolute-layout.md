@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: d07026fbcc43a43a9f26d85ad15d5a4e3165e2ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 110c608558059ba0f207b4cff343b428125e1784
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="absolutelayout"></a>DispositionAbsolue
 
@@ -282,11 +282,7 @@ Le code ci-dessus génère le schéma suivant :
 
 ![](absolute-layout-images/abs.png "DispositionAbsolue complexe")
 
-Notez que, en raison d’une différence dans la façon dont les boutons sont rendus par Windows Phone, certaines des cercles d’ont été remplacés par boxviews dans la capture d’écran de Windows Phone.
-
 Notez que `AbsoluteLayout`s sont imbriquées, car dans certains cas d’imbrication des dispositions peut être plus facile à présenter tous les éléments dans la même disposition.
-
-
 
 ## <a name="related-links"></a>Liens associés
 

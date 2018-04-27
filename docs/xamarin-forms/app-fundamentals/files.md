@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: 8315f1a0056c6a6f084ebfe2c29f0c0c2bb30330
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 02bea7e2ec927277a92c0732b25f590b5ae6704b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="files"></a>Fichiers
 
@@ -99,9 +99,6 @@ var resourcePrefix = "WorkingWithFiles.iOS.";
 #if __ANDROID__
 var resourcePrefix = "WorkingWithFiles.Droid.";
 #endif
-#if WINDOWS_PHONE
-var resourcePrefix = "WorkingWithFiles.WinPhone.";
-#endif
 
 Debug.WriteLine("Using this resource prefix: " + resourcePrefix);
 // note that the prefix includes the trailing period '.' that is required
@@ -142,7 +139,7 @@ Parce que Xamarin.Forms s’exécute sur plusieurs plateformes, chacun avec son 
 
  [![Enregistrement et chargement de texte](files-images/saveandload-sml.png "l’enregistrement et chargement de fichiers dans l’application")](files-images/saveandload.png#lightbox "l’enregistrement et chargement de fichiers dans l’application")
 
-Chaque plateforme possède une structure de répertoire légèrement différente et des fonctionnalités de système de fichiers différent, par exemple Xamarin.iOS et Xamarin.Android prennent en charge la plupart `System.IO` fonctionnalité, mais Windows Phone prend uniquement en charge `IsolatedStorage` et [ `Windows.Storage` ](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) API.
+Chaque plateforme possède une structure de répertoire légèrement différente et des fonctionnalités de système de fichiers différent, par exemple Xamarin.iOS et Xamarin.Android prennent en charge la plupart `System.IO` fonctionnalité, mais la plateforme Windows universelle prend uniquement en charge [ `Windows.Storage` ](/uwp/api/windows.storage/) API.
 
 Pour contourner ce problème, l’exemple d’application définit une Interface dans la bibliothèque PCL de Xamarin.Forms pour charger et enregistrer des fichiers. Il fournit une API simple pour charger et enregistrer des fichiers texte qui est stockée sur l’appareil.
 
@@ -190,9 +187,9 @@ namespace WorkingWithFiles {
 }
 ```
 
-### <a name="universal-windows-platform-uwp-windows-81-and-windows-phone-81"></a>Plateforme Windows universelle (UWP), Windows 8.1 et Windows Phone 8.1
+### <a name="universal-windows-platform-uwp"></a>Plateforme Windows universelle (UWP)
 
-Ces plates-formes ont un système de fichiers différentes API – [ `Windows.Storage` ](/windows/uwp/files/quickstart-reading-and-writing-files/) : qui est utilisé pour enregistrer et charger des fichiers.
+UWP a un système de fichiers différentes API – [ `Windows.Storage` ](/windows/uwp/files/quickstart-reading-and-writing-files/) : qui est utilisé pour enregistrer et charger des fichiers.
 Le `ISaveAndLoad` interface peut être implémentée comme indiqué ci-dessous :
 
 ```csharp
@@ -226,7 +223,6 @@ namespace WindowsApp
     }
 }
 ```
-
 
 <a name="Saving_and_Loading_in_Shared_Projects" />
 

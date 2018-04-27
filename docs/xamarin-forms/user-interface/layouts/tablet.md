@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: d75c5714e53961ff5704c72b5508514f8cd2e898
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bcd277145de13a95a0b19aa4945b02078af52978
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Mise en page pour les applications de bureau et les Tablet PC
 
@@ -18,7 +18,7 @@ Xamarin.Forms prend en charge tous les types de périphérique disponibles sur l
 
 * iPad,
 * Tablettes Android,
-* Tablettes Windows et les ordinateurs de bureau (exécutant Windows 8.1 ou Windows 10).
+* Tablettes Windows et les ordinateurs de bureau (exécutant Windows 10).
 
 Cette page décrit brièvement :
 
@@ -53,12 +53,7 @@ Examinez le [ressources Android](~/android/app-fundamentals/resources-in-android
 
 ### <a name="windows-tablets-and-desktops"></a>Ordinateurs de bureau et des tablettes Windows
 
-Pour prendre en charge les tablettes et ordinateurs de bureau Windows en cours d’exécution, vous devez utiliser un des deux types de projet pris en charge :
-
-* [Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md) -
-  génère des applications spécifiquement pour Windows 8.1 tablettes et ordinateurs de bureau.
-* [Prise en charge Windows UWP](~/xamarin-forms/platform/windows/installation/universal.md) -
-  génère des applications universelles qui s’exécutent sur les Windows 10 téléphones, tablettes et ordinateurs de bureau.
+Pour prendre en charge les tablettes et ordinateurs de bureau Windows en cours d’exécution, vous devez utiliser [prise en charge de la plateforme Windows universelle Windows](~/xamarin-forms/platform/windows/installation/index.md), ce qui génère des applications universelles qui s’exécutent sur Windows 10.
 
 Applications qui s’exécutent sur des ordinateurs de bureau et des tablettes Windows peuvent être redimensionnées en outre aux dimensions arbitraires en mode plein écran en cours d’exécution.
 
@@ -97,5 +92,5 @@ Révision [ce billet de blog Xamarin](https://blog.xamarin.com/bringing-xamarin-
 
 ## <a name="related-links"></a>Liens associés
 
-- [Xamarin Blog](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
+- [Blog de Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
 - [Exemple de MyShoppe](https://github.com/jamesmontemagno/myshoppe)

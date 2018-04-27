@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8ab35b3ec13c76e1e00da6e3265e3e337e37b7e
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-view"></a>Implémentation d’une vue
 
 _Xamarin.Forms les contrôles d’interface utilisateur personnalisé doivent dériver de la classe de vue, qui est utilisée pour placer des mises en page et des contrôles sur l’écran. Cet article explique comment créer un convertisseur personnalisé pour un contrôle personnalisé Xamarin.Forms qui est utilisé pour afficher un flux vidéo de la version d’évaluation à partir photo de l’appareil._
 
-Chaque vue Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) est restitué par une application Xamarin.Forms dans iOS, le `ViewRenderer` classe est instanciée, qui instancie ensuite natif `UIView` contrôle. Sur la plateforme Android, le `ViewRenderer` classe instancie natif `View` contrôle. Sur Windows Phone et la plateforme Windows universelle (UWP), le `ViewRenderer` classe instancie natif `FrameworkElement` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Chaque vue Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) est restitué par une application Xamarin.Forms dans iOS, le `ViewRenderer` classe est instanciée, qui instancie ensuite natif `UIView` contrôle. Sur la plateforme Android, le `ViewRenderer` classe instancie natif `View` contrôle. Sur la plate-forme de Windows universelle (UWP), le `ViewRenderer` classe instancie natif `FrameworkElement` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Le diagramme suivant illustre la relation entre la [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) et les contrôles natifs correspondants qui l’implémentent :
 
@@ -263,13 +263,13 @@ namespace CustomRenderer.Droid
 
 Autant que la `Control` propriété est `null`, le `SetNativeControl` méthode est appelée pour instancier un nouvel `CameraPreview` contrôler et d’affecter une référence à celui-ci à le `Control` propriété. Le `CameraPreview` contrôle est un contrôle personnalisé spécifique à la plateforme qui utilise le `Camera` API pour fournir le flux d’aperçu de l’appareil photo. Le `CameraPreview` contrôle est ensuite configuré correctement, à condition que le convertisseur personnalisé est attaché à un nouvel élément de Xamarin.Forms. Cette configuration implique la création d’un nouveau natif `Camera` de l’objet pour accéder à un appareil photo de matériel spécifique et l’inscription d’un gestionnaire d’événements pour traiter les `Click` événement. À son tour ce gestionnaire arrête et démarre l’aperçu vidéo lorsqu’il est activé par un clic. Le `Click` événement est désinscrit de si l’élément Xamarin.Forms le convertisseur est associé aux modifications.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Création du convertisseur personnalisé sur Windows Phone et UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Création du convertisseur personnalisé sur la plateforme Windows universelle
 
-L’exemple de code suivant montre le convertisseur personnalisé pour Windows Phone et UWP :
+L’exemple de code suivant montre le convertisseur personnalisé pour la plateforme Windows universelle :
 
 ```csharp
 [assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
@@ -317,7 +317,7 @@ namespace CustomRenderer.WinPhone81
 Autant que la `Control` propriété est `null`, un nouveau `CaptureElement` est instancié et `InitializeAsync` méthode est appelée, qui utilise le `MediaCapture` API pour fournir le flux d’aperçu de l’appareil photo. Le `SetNativeControl` méthode est alors appelée pour assigner une référence à la `CaptureElement` d’instance pour le `Control` propriété. Le `CaptureElement` contrôle expose un `Tapped` événement qui est géré par le `OnCameraPreviewTapped` méthode pour arrêter et démarrer l’aperçu vidéo lorsqu’il est activé par un clic. Le `Tapped` est être abonné à l’événement lorsque le convertisseur personnalisé est attaché à un nouvel élément Xamarin.Forms et désinscrit uniquement lorsque l’élément le convertisseur est attaché aux modifications.
 
 > [!NOTE]
-> Il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans un Windows Phone ou une application UWP. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez et [démarrage rapide : capture vidéo à l’aide de l’API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) pour les applications Windows Runtime, et [afficher l’aperçu de l’appareil photo](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) pour applications UWP.
+> Il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans une application UWP. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez [afficher l’aperçu de l’appareil photo](/windows/uwp/audio-video-camera/simple-camera-preview-access/).
 
 ## <a name="summary"></a>Récapitulatif
 

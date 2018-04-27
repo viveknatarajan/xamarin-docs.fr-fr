@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: d22ebf0e150c064835fa73765a65025f10ef4c2a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-path-fill-types"></a>Les Types de remplissage du chemin d’accès
 
@@ -165,7 +165,7 @@ Normalement, le type de remplissage du chemin d’accès doit affecter uniquemen
 
 [![](fill-types-images/fivepointedstar-small.png "Capture d’écran de triple de la page Five-Pointed étoile")](fill-types-images/fivepointedstar-large.png#lightbox "Triple capture d’écran de la page Five-Pointed étoile")
 
-Les captures d’écran mobiles Android et Windows montrant les effets de pair-impair et enroulement classiques, mais l’ordre de trait et de remplissage affecte également les résultats.
+Les captures d’écran Android et UWP montrant les effets de pair-impair et enroulement classiques, mais l’ordre de trait et de remplissage affecte également les résultats.
 
 L’algorithme enroulement dépend de la direction que les lignes sont dessinées. Généralement lorsque vous créez un chemin d’accès, vous pouvez contrôler cette direction que vous spécifiez que les lignes sont dessinées à partir d’un point à un autre. Toutefois, le `SKPath` classe définit également des méthodes, telles que `AddRect` et `AddCircle` que dessiner les contours entières. Pour contrôler la façon dont ces objets sont dessinés, les méthodes incluent un paramètre de type [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), qui a deux membres :
 
@@ -222,4 +222,4 @@ Il s’agit d’une image intéressante créée avec un minimum de code :
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 9bdad3e7d3e16dfe906f96bce2b92cdb9ee6260a
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 76192f48bedebb183c64c83e34c3908cc85d591c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="path-effects"></a>Effets de chemin d’accès
 
@@ -854,7 +854,7 @@ Dans le `PaintSurface` gestionnaire, la `SKPathEffect.Create2DPath` appels défi
 
 La mise à l’échelle à partir de la capture d’écran d’origine de provoque certains distorsion, en particulier sur l’écran Android.
 
-Notez que ces vignettes toujours apparaissent ensemble et ne sont jamais tronqués. À l’exception dans l’écran de Windows 10 Mobile, il n’est pas évident de même que la zone de remplissage est un rectangle arrondi. Si vous voulez tronquer ces vignettes à une zone particulière, utilisez un tracé de détourage.
+Notez que ces vignettes toujours apparaissent ensemble et ne sont jamais tronqués. Sur les deux premières captures d’écran, il n’est pas évident de même que la zone de remplissage est un rectangle arrondi. Si vous voulez tronquer ces vignettes à une zone particulière, utilisez un tracé de détourage.
 
 Essayez de définir la `Style` propriété de la `SKPaint` objet `Stroke`, et vous verrez les vignettes individuelles décrites et non remplie.
 
@@ -1414,4 +1414,4 @@ Maintenant que vous avez vu les effets de chemin d’accès entre simples points
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

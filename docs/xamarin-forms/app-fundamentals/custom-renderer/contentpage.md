@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 58f5a64f85dbe5a6889e6ff598c14fdfd9b0a5df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da3025f2616c91488ec70e25836351b08e957494
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-contentpage"></a>Personnalisation d’un ContentPage
 
 _Un ContentPage est un élément visuel qui affiche une vue unique et occupe la majeure partie de l’écran. Cet article explique comment créer un convertisseur personnalisé pour la page ContentPage, permettant aux développeurs de substituer le rendu natif par défaut avec leur propres personnalisation spécifiques à la plateforme._
 
-Chaque contrôle Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) est restitué par une application de Xamarin.Forms, dans iOS le `PageRenderer` classe est instanciée, qui instancie ensuite natif `UIViewController` contrôle. Sur la plateforme Android, le `PageRenderer` classe instancie un `ViewGroup` contrôle. Sur Windows Phone et la plateforme Windows universelle (UWP), le `PageRenderer` classe instancie un `FrameworkElement` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Chaque contrôle Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) est restitué par une application de Xamarin.Forms, dans iOS le `PageRenderer` classe est instanciée, qui instancie ensuite natif `UIViewController` contrôle. Sur la plateforme Android, le `PageRenderer` classe instancie un `ViewGroup` contrôle. Sur la plate-forme de Windows universelle (UWP), le `PageRenderer` classe instancie un `FrameworkElement` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Le diagramme suivant illustre la relation entre la [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) et les contrôles natifs correspondants qui l’implémentent :
 
@@ -198,57 +198,6 @@ L’appel à la classe de base `OnElementChanged` méthode instancie un Android 
 
 Personnalisé en appelant une série de méthodes qui utilisent la page de la `Camera` API pour fournir le flux live à partir de l’appareil photo et permet de capturer une photo, avant le `AddView` méthode est appelée pour ajouter la caméra en direct l’interface utilisateur pour diffuser en continu le `ViewGroup`.
 
-### <a name="creating-the-page-renderer-on-windows-phone"></a>Création du convertisseur de Page sur Windows Phone
-
-L’exemple de code suivant montre le convertisseur de page pour la plateforme Windows Phone :
-
-```csharp
-[assembly: ExportRenderer (typeof(CameraPage), typeof(CameraPageRenderer))]
-namespace CustomRenderer.WinPhone81
-{
-    public class CameraPageRenderer : PageRenderer
-    {
-        ...
-
-        protected override void OnElementChanged (VisualElementChangedEventArgs e)
-        {
-            base.OnElementChanged (e);
-
-            if (e.OldElement != null || Element == null) {
-                return;
-            }
-
-            try {
-                ...
-                var container = ContainerElement as Canvas;
-
-                SetupUserInterface ();
-                SetupEventHandlers ();
-                SetupLiveCameraStream ();
-                container.Children.Add (page);
-            }
-            ...
-        }
-
-        protected override Size ArrangeOverride(Size finalSize)
-        {
-            page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
-            return finalSize;
-        }
-        ...
-    }
-}
-```
-
-L’appel à la classe de base `OnElementChanged` méthode instancie un Windows Phone `Canvas` (contrôle), sur lequel la page est rendue. Le flux de la caméra en direct est uniquement affiché à condition que le convertisseur n’est pas déjà attaché à un élément existant de Xamarin.Forms et la condition qu’il existe une instance de la page qui est restitué par le convertisseur personnalisé.
-
-Sur la plateforme Windows Phone, une référence typée à la page natif utilisée sur la plateforme est accessible via la `ContainerElement` propriété, avec le `Canvas` contrôlent la référence typée à le `FrameworkElement`. La page personnalisée puis en appelant une série de méthodes qui utilisent la `MediaCapture` API pour fournir le flux live à partir de l’appareil photo et permet de capturer une photo avant que la page personnalisée est ajoutée à la `Canvas` pour l’affichage.
-
-Lorsque vous implémentez un convertisseur personnalisé qui dérive de `PageRenderer` sur le Windows Runtime, le `ArrangeOverride` méthode doit également être implémentée pour organiser les contrôles de la page, étant donné que le convertisseur de base ne sait pas comment procéder avec eux. Sinon, il en résulte une page vierge. Par conséquent, dans cet exemple la `ArrangeOverride` les appels de méthode le `Arrange` méthode sur le `Page` instance.
-
-> [!NOTE]
-> Il est important arrêter et supprimer les objets qui fournissent l’accès à l’appareil photo dans une application Windows Phone 8.1 WinRT. Cela peut interférer avec d’autres applications qui tentent d’accéder à photo l’appareil. Pour plus d’informations, consultez la `CleanUpCaptureResourcesAsync` méthode dans le projet Windows Phone dans l’exemple de solution, et [démarrage rapide : capture vidéo à l’aide de l’API MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
-
 ### <a name="creating-the-page-renderer-on-uwp"></a>Création du convertisseur de Page sur la plateforme Windows universelle
 
 L’exemple de code suivant montre le convertisseur de page pour la plateforme Windows universelle :
@@ -305,4 +254,4 @@ Cet article a montré comment créer un convertisseur personnalisé pour le [ `C
 
 ## <a name="related-links"></a>Liens associés
 
-- [CustomRendererContentPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)
+- [CustomRendererContentPage (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)

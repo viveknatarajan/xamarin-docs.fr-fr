@@ -7,11 +7,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: c5142a3abcc6d461bc277faeb02e3aacd9727bca
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 7b7bd83c474c7e0d32a693e06b5f12696ec5efa2
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Trois Types de courbes Bézier
 
@@ -92,7 +92,7 @@ Ici, il s’exécute sur toutes les plateformes de trois :
 
 Mathématiquement, la courbe est une représentation polynomiale cubique. La courbe entre en intersection avec une ligne droite à trois points au maximum. Au point de départ, la courbe est toujours tangent et dans la même direction que, une ligne droite à partir du début pointez le premier point de contrôle. Au point de terminaison, la courbe est toujours tangent et dans la même direction que, une ligne droite à partir du deuxième contrôle pointez le point de terminaison.
 
-La courbe de Bézier cubique est toujours limitée par un quadrilatère convexe reliant les quatre points. Cela s’appelle un *forme convexe*. Si les points de contrôle se trouvent sur la ligne droite entre le début et le point de terminaison, la courbe de Bézier est rendu sous la forme d’une ligne droite. Mais la courbe peut également se croiser lui-même, comme la capture d’écran de l’appareil Windows Mobile.
+La courbe de Bézier cubique est toujours limitée par un quadrilatère convexe reliant les quatre points. Cela s’appelle un *forme convexe*. Si les points de contrôle se trouvent sur la ligne droite entre le début et le point de terminaison, la courbe de Bézier est rendu sous la forme d’une ligne droite. Mais la courbe peut également se croiser lui-même, comme la capture d’écran tiers.
 
 Un profil de chemin d’accès peut contenir plusieurs courbes de Bézier cubiques connectées, mais la connexion entre deux courbes Bézier cubiques sera lisse uniquement si les trois points suivants sont colinéaires (autrement dit, se trouve sur une ligne droite) :
 
@@ -208,7 +208,7 @@ Voici le programme en cours d’exécution sur les trois plateformes avec trois 
 
 [![](beziers-images/beziercirculararc-small.png "Capture d’écran de triple de la page de Bézier en Arc de cercle")](beziers-images/beziercirculararc-large.png#lightbox "Triple capture d’écran de la page de Bézier en Arc de cercle")
 
-Examinez attentivement l’écran de Windows Mobile, et vous verrez que la courbe de Bézier diffère notamment un demi-cercle lors de l’angle est de 180 degrés, mais l’écran d’iOS indique qu’il semble s’ajuster un cercle trimestre tout à fait correctement lors de l’angle est de 90 degrés.
+Examinez attentivement la capture d’écran tiers, et vous verrez que la courbe de Bézier diffère notamment un demi-cercle lors de l’angle est de 180 degrés, mais l’écran d’iOS indique qu’il semble s’ajuster un cercle trimestre tout à fait correctement lors de l’angle est de 90 degrés.
 
 Il est facile de calculer les coordonnées de deux points de contrôle lorsque le quart de cercle est orienté comme suit :
 
@@ -552,4 +552,4 @@ Il est dans ce cas regrettable qui `ConicTo` ne prend pas en charge les pondéra
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

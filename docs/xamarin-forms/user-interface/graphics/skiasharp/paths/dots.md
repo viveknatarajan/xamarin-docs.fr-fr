@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 1e295ac424c311472ff175d4627c5fb12641d31f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dots-and-dashes"></a>Points et des tirets
 
@@ -164,7 +164,7 @@ Pour contourner ce problème lorsque vous utilisez une extrémité de trait de `
 - {30, 10} est {20, 20} pour une ligne en pointillés
 - {10, 10, 30, 10} est {0, 20, 20, 20} pour une ligne en pointillés et
 
-L’écran affiche Windows pointillés et tirets de la ligne pour un trait imposer de `Round`. Le `Round` extrémité de trait donne souvent la meilleure apparence des points et des tirets dans les lignes de type « définitif ».
+L’écran affiche UWP pointillés et tirets de la ligne pour un trait imposer de `Round`. Le `Round` extrémité de trait donne souvent la meilleure apparence des points et des tirets dans les lignes de type « définitif ».
 
 Jusqu'à présent, aucune mention n’a été effectuée du deuxième paramètre à la `SKPathEffect.CreateDash` (méthode). Ce paramètre est nommé `phase` et il fait référence à un offset dans le modèle de point-tiret au début de la ligne. Par exemple, si le tableau de tiret est {10, 10} et le `phase` est 10, la ligne commence par un espace au lieu d’un point.
 
@@ -220,4 +220,4 @@ Vous savez maintenant pour dessiner des lignes et de définir des courbes à l�
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

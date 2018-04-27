@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 11287d38ec0e01e068ca385c92e6a6efdc323aeb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4210f672cdc68acc45b1f547dcc2e6933298df93
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tabbed-page"></a>Page à onglets
 
@@ -39,7 +39,6 @@ La disposition d’un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xa
     > [!NOTE]
   > Notez que lorsque vous utilisez AppCompat sur Android, chaque onglet affiche également une icône. En outre, le `TabbedPageRenderer` pour Android AppCompat a un substituable `SetTabIcon` méthode qui peut être utilisé pour charger des icônes de l’onglet depuis une `Drawable`. Ce remplacement permet d’utiliser les images SVG sous forme d’icônes sur un `TabbedPage`.
 
-- Sur Windows Phone, la liste des onglets s’affiche en haut de l’écran, et la zone de détail est inférieur. L’onglet noms sont automatiquement convertis en minuscule et l’utilisateur peut faire défiler vers la collection des onglets si elles sont trop nombreuses pour s’ajuster à l’écran.
 - Sur une tablette Windows-formats, les onglets ne sont pas toujours visibles et les utilisateurs doivent faites défiler vers le bas (ou avec le bouton droit, s’ils ont une souris attachée) pour afficher les onglets dans un `TabbedPage` (comme indiqué ci-dessous).
 
 ![](tabbed-page-images/windows-tabs.png "Onglets TabbedPage sur Windows")
@@ -252,5 +251,5 @@ Cet article vous a montré comment utiliser un TabbedPage pour naviguer dans une
 
 - [Variétés de page](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [TabbedPageWithNavigationPage (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
-- [TabbedPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
+- [TabbedPage (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
 - [TabbedPage](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)

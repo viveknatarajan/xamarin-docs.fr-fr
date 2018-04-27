@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: ddbcb74d34f09c7bb60891148bd50b36bc5094c3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5e8ad5ba3bdfa61ae1b2f4404016f204a8c1747c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="images"></a>Images
 
@@ -58,7 +58,6 @@ Fichiers image peuvent être ajoutées à chaque projet d’application et réf�
 
 - **iOS** - le moyen de gérer et prendre en charge les images étant iOS 9 à utiliser de préférence **Asset catalogues Image**, qui doit contenir toutes les versions d’une image qui sont nécessaires pour prendre en charge de différents appareils et facteurs pour mettre à l’échelle un application. Pour plus d’informations, consultez [Ajout d’Images à une ressource catalogue Image défini](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 - **Android** -placer des images dans le **drawable/ressources** répertoire **Action de génération : AndroidResource**. Versions haute et basse résolution d’une image peuvent être fournies (dans correctement nommé **ressources** sous-répertoires comme **drawable-ldpi**, **drawable-hdpi**et **drawable-xhdpi**).
-- **Windows Phone** -placer des images dans le répertoire racine de l’application avec **Action de génération : contenu**.
 - **Plateforme Windows universelle (UWP)** -placer des images dans le répertoire racine de l’application avec **Action de génération : contenu**.
 
 > [!IMPORTANT]
@@ -93,7 +92,7 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>Résolutions natives (rétine et haute résolution)
 
-iOS, Android, Windows Phone et UWP incluent la prise en charge des résolutions différentes, où le système d’exploitation choisit l’image appropriée lors de l’exécution selon les fonctions du périphérique. Xamarin.Forms utilisant API des plateformes natives pour le chargement des images locales, afin qu’il prend automatiquement en charge les résolutions autre si les fichiers sont correctement nommées et situés dans le projet.
+iOS, Android et UWP incluent la prise en charge des résolutions différentes, où le système d’exploitation choisit l’image appropriée lors de l’exécution selon les fonctions du périphérique. Xamarin.Forms utilisant API des plateformes natives pour le chargement des images locales, afin qu’il prend automatiquement en charge les résolutions autre si les fichiers sont correctement nommées et situés dans le projet.
 
 La meilleure façon de gérer les images étant iOS 9 à faire glisser des images pour chaque résolution requise pour l’ensemble d’images de catalogue asset approprié. Pour plus d’informations, consultez [Ajout d’Images à une ressource catalogue Image défini](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
@@ -103,7 +102,7 @@ Les images de résolution autre Android doivent être placés dans [spécialemen
 
 [![Emplacement de l’Image de résolution de plusieurs Android](images-images/xs-highdpisolution-sml.png "emplacement de l’Image de résolution de plusieurs Android")](images-images/xs-highdpisolution.png#lightbox "emplacement de l’Image de résolution de plusieurs Android")
 
-Noms de fichiers d’image UWP et Windows Phone [peuvent être suivis du suffixe `.scale-xxx` avant l’extension de fichier](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), où `xxx` est le pourcentage de mise à l’échelle appliqué à l’élément multimédia, par exemple, **myimage.scale-200.png**. Les images peuvent ensuite faire référence dans le code ou XAML sans le modificateur de mise à l’échelle, par exemple, immédiatement **myimage.png**. La plateforme sélectionne l’échelle des ressources appropriées le plus proche basée sur la résolution actuelle de l’affichage.
+Noms des fichiers image UWP [peuvent être suivis du suffixe `.scale-xxx` avant l’extension de fichier](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), où `xxx` est le pourcentage de mise à l’échelle appliqué à l’élément multimédia, par exemple, **myimage.scale-200.png**. Les images peuvent ensuite faire référence dans le code ou XAML sans le modificateur de mise à l’échelle, par exemple, immédiatement **myimage.png**. La plateforme sélectionne l’échelle des ressources appropriées le plus proche basée sur la résolution actuelle de l’affichage.
 
 ### <a name="additional-controls-that-display-images"></a>Autres contrôles qui affichent des Images
 

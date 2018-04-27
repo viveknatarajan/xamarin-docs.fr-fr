@@ -7,12 +7,12 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: c5937cc86a8a1f8506b14774b0429bee3c8aa594
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 44c3e4b0f05526560ff4b32808ba476110ce5e8f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android - Démarrage rapide
 
@@ -84,7 +84,7 @@ Après avoir sélectionné le contrôle **Text (Large)** dans l’aire de concep
 
 [![Définition des propriétés du widget Text (Large)](hello-android-quickstart-images/vs/05-enter-a-phoneword-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword.png#lightbox)
 
-Faites glisser un widget **Plain Text** de la **boîte à outils** vers l’aire de conception, puis placez-le sous le widget **Text (Large)** :
+Faites glisser un widget **Plain Text** de la **boîte à outils** vers l’aire de conception, puis placez-le sous le widget **Text (Large)**  :
 
 [![Ajout du widget Plain Text](hello-android-quickstart-images/vs/06-plain-text-sml.png)](hello-android-quickstart-images/vs/06-plain-text.png#lightbox)
 
@@ -185,11 +185,10 @@ L’étape suivante consiste à ajouter du code pour structurer l’interface ut
 (Resource.Layout.Main)`. Tout d’abord, modifiez le code du modèle pour que la méthode `OnCreate` ressemble à ceci :
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
+using Core;
 
 namespace Phoneword
 {
@@ -343,7 +342,7 @@ Enregistrez votre travail en appuyant sur **&#8984; + S**.
 
 ### <a name="writing-translation-code"></a>Écriture de code de traduction
 
-À présent, ajoutez du code pour convertir des numéros de téléphone alphanumériques en numéros de téléphone numériques. Pour ajouter un fichier au projet, cliquez sur l’icône représentant une roue dentée en regard du projet **Phoneword** dans le **Panneau Solutions**, puis sélectionnez **Ajouter > Nouveau fichier...** :
+À présent, ajoutez du code pour convertir des numéros de téléphone alphanumériques en numéros de téléphone numériques. Pour ajouter un fichier au projet, cliquez sur l’icône représentant une roue dentée en regard du projet **Phoneword** dans le **Panneau Solutions**, puis sélectionnez **Ajouter > Nouveau fichier...**  :
 
 [![Ajouter un nouveau fichier au projet](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png#lightbox)
 
@@ -420,13 +419,10 @@ Dans le **Panneau Solutions**, double-cliquez sur **MainActivity.cs** pour l’o
 Commencez par ajouter un gestionnaire d’événements au bouton **Translate**. Dans la classe `MainActivity`, recherchez la méthode `OnCreate`. Ajoutez le code du bouton à l’intérieur de `OnCreate`, sous les appels `base.OnCreate(bundle)` et `SetContentView (Resource.Layout.Main)`. Supprimez le code de gestion du bouton du modèle pour que la méthode `OnCreate` ressemble à ceci :
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
+using Core;
 
 namespace Phoneword
 {

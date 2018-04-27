@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: c02929c49d9757f0814208d5f4fce7d258a689bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bca36189100942e21d1d750dd156dab0cf45fc4
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passage de paramètres effet en tant que propriétés jointes
 
@@ -345,14 +345,14 @@ public class LabelShadowEffect : PlatformEffect
 
 Le `OnElementPropertyChanged` méthode met à jour le rayon, la couleur ou le décalage de l’ombre, à condition qu’approprié `ShadowEffect` valeur de la propriété jointe a été modifiée. Une vérification de la propriété est modifiée doit toujours être rendue, comme ce remplacement peut être appelé plusieurs fois.
 
-### <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone et les projets de plateforme Windows universelle
+### <a name="universal-windows-platform-project"></a>Projet pour la plateforme Windows universelle
 
-Le code suivant exemple illustre le `LabelShadowEffect` implémentation pour les projets Windows Phone et de la plateforme Windows universelle (UWP) :
+Le code suivant exemple illustre le `LabelShadowEffect` implémentation pour le projet de plateforme Windows universelle (UWP) :
 
 ```csharp
 [assembly: ResolutionGroupName ("MyCompany")]
 [assembly: ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class LabelShadowEffect : PlatformEffect
     {
@@ -401,7 +401,7 @@ namespace EffectsDemo.WinPhone81
 }
 ```
 
-Le Windows Runtime et la plateforme Windows universelle ne fournissent pas un effet d’ombre et donc la `LabelShadowEffect` mise en œuvre sur les deux plateformes simule un en ajoutant un deuxième offset [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) derrière le réplica principal `Label`. Le `OnAttached` méthode crée le nouvel `Label` et définit certaines propriétés de disposition sur le `Label`. Il appelle ensuite les méthodes qui récupèrent les valeurs de propriété jointe à l’aide de la `ShadowEffect` accesseurs Get et crée le cliché instantané en définissant le [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)et [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) propriétés afin de contrôler la couleur et l’emplacement de la `Label`. Le `shadowLabel` est ensuite inséré décalage derrière le réplica principal `Label`. Cette fonctionnalité est encapsulée dans un `try` / `catch` bloquer au cas où le contrôle associé à l’effet n’a pas la `Control.Layer` propriétés. Aucune implémentation n’est fournie par le `OnDetached` (méthode), car aucun nettoyage n’est nécessaire.
+La plateforme Windows universelle ne fournit pas un effet d’ombre et donc la `LabelShadowEffect` mise en œuvre sur les deux plateformes simule un en ajoutant un deuxième offset [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) derrière le réplica principal `Label`. Le `OnAttached` méthode crée le nouvel `Label` et définit certaines propriétés de disposition sur le `Label`. Il appelle ensuite les méthodes qui récupèrent les valeurs de propriété jointe à l’aide de la `ShadowEffect` accesseurs Get et crée le cliché instantané en définissant le [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)et [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) propriétés afin de contrôler la couleur et l’emplacement de la `Label`. Le `shadowLabel` est ensuite inséré décalage derrière le réplica principal `Label`. Cette fonctionnalité est encapsulée dans un `try` / `catch` bloquer au cas où le contrôle associé à l’effet n’a pas la `Control.Layer` propriétés. Aucune implémentation n’est fournie par le `OnDetached` (méthode), car aucun nettoyage n’est nécessaire.
 
 #### <a name="responding-to-property-changes"></a>Répondre aux modifications de propriétés
 
@@ -434,7 +434,7 @@ Cet article a illustré à l’aide de propriétés jointes à passer des param�
 ## <a name="related-links"></a>Liens associés
 
 - [Renderers personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
+- [Effet](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
 - [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
 - [RoutingEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/)
 - [Effet d’ombre portée (exemple)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)

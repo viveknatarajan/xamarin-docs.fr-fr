@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc5b24474230fd2b2477f020ac24cd72996d7b1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hierarchical-navigation"></a>Navigation hiérarchique
 
@@ -47,7 +47,7 @@ La disposition d’un [ `NavigationPage` ](https://developer.xamarin.com/api/typ
 
 - Sur iOS, une barre de navigation est présente en haut de la page qui affiche un titre, et qui a un *précédent* bouton qui renvoie à la page précédente.
 - Sur Android, une barre de navigation est présente en haut de la page qui affiche un titre, une icône et un *précédent* bouton qui renvoie à la page précédente. L’icône est défini dans le `[Activity]` attribut décore la `MainActivity` classe dans le projet spécifique à la plateforme Android.
-- Sur Windows Phone, une barre de navigation est présente en haut de la page qui affiche un titre. Windows Phone n’a pas la *précédent* de bouton dans la barre de navigation, car un à l’écran *précédent* bouton est affiché en bas de l’écran.
+- Sur la plateforme Windows universelle, une barre de navigation est présente en haut de la page qui affiche un titre. 
 
 Sur les plateformes, la valeur de la [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) propriété s’affiche sous le titre de la page.
 

@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 95f782fd4670782217d8ce4bc055341747a71170
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Unités indépendantes du périphérique et pixels
 
@@ -102,7 +102,7 @@ Voici le programme en cours d’exécution sur les trois plateformes :
 
 Comme vous pouvez le voir, la `CanvasSize` propriété de la `SKCanvasView` et le `Size` propriété de la `SKImageInfo` valeur sont cohérentes dans les dimensions en pixels de création de rapports. Le `Height` et `Width` propriétés de la `SKCanvasView` sont des propriétés de Xamarin.Forms et la taille de la vue dans les unités indépendantes du périphérique définies par la plateforme de rapports.
 
-Le simulateur iOS 7 sur la gauche a 2 pixels par unité indépendante du périphérique, les 5 Nexus Android dans le centre a 3 pixels par unité et le 925 Lumia Nokia sur la droite a 2,25 pixels par unité. Que de pourquoi simple entourer une recherche antérieure indiquée sur la même taille sur l’iPhone et Windows phone, mais il sont plus petits sur le téléphone Android.
+Le simulateur iOS 7 sur la gauche a 2 pixels indépendants du périphérique unitaire et les 5 Nexus Android dans le centre a 3 pixels par unité. C’est pourquoi le cercle simple présenté précédemment a différentes tailles sur différentes plateformes.
 
 Si vous préférez travailler entièrement en unités indépendantes du périphérique, vous pouvez le faire en définissant le `IgnorePixelScaling` propriété de la `SKCanvasView` à `true`. Toutefois, vous n’aimez pas les résultats. SkiaSharp effectue le rendu du graphique sur une surface de périphérique plus petite, avec une taille de pixel égale à la taille de la vue en unités indépendantes du périphérique. (Par exemple, SkiaSharp utilisera une surface d’affichage de 360 x 512 pixels sur les 5 Nexus.) Il puis passe cette image dans la taille, ce qui en bitmap notable crénelage.
 
@@ -164,4 +164,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

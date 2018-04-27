@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 776b0d07de947c01761f8e8d8809b24cf7f3c3cb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0129ec9872d8e5270ed8f0072cff0035d4f5255
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Partie 2. Syntaxe XAML essentiels
 
@@ -484,7 +484,7 @@ Le `Platform` propriété du `On` est de type `IList<string>`, de sorte que vous
 </ContentPage>
 ```
 
-Étant donné que Android et Windows sont définies sur la valeur par défaut `Padding`, que les balises peuvent être supprimés :
+Étant donné que Android et UWP sont définies sur la valeur par défaut `Padding`, que les balises peuvent être supprimés :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

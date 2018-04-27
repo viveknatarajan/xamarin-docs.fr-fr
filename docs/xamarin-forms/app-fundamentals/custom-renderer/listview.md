@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 9d822444196479dabd19f43f45f289117f64c05e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964e2302c290930ec62752e51e7de388cb42ee32
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-listview"></a>Personnalisation d’un contrôle ListView
 
 _Un Xamarin.Forms ListView est une vue qui affiche une collection de données sous la forme d’une liste verticale. Cet article explique comment créer un convertisseur personnalisé qui encapsule des contrôles de liste de spécifique à la plateforme et des dispositions de cellule native, ce qui permet de mieux contrôler les performances du contrôle de liste natif._
 
-Chaque vue Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) est restitué par une application de Xamarin.Forms, dans iOS le `ListViewRenderer` classe est instanciée, qui instancie ensuite natif `UITableView` contrôle. Sur la plateforme Android, le `ListViewRenderer` classe instancie natif `ListView` contrôle. Sur Windows Phone et la plateforme Windows universelle (UWP), le `ListViewRenderer` classe instancie natif `ListView` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Chaque vue Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) est restitué par une application de Xamarin.Forms, dans iOS le `ListViewRenderer` classe est instanciée, qui instancie ensuite natif `UITableView` contrôle. Sur la plateforme Android, le `ListViewRenderer` classe instancie natif `ListView` contrôle. Sur la plate-forme de Windows universelle (UWP), le `ListViewRenderer` classe instancie natif `ListView` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Le diagramme suivant illustre la relation entre la [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) contrôle et les contrôles natives correspondantes qui l’implémentent :
 
@@ -467,15 +467,15 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 
 La méthode crée une nouvelle instance de la `NativeAndroidListViewAdapter` classe qui fournit des données à natif `ListView` contrôler, à condition que le peut être liée `NativeListView.Items` propriété a changé.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Création du convertisseur personnalisé sur Windows Phone et UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Création du convertisseur personnalisé sur la plateforme Windows universelle
 
-L’exemple de code suivant montre le convertisseur personnalisé pour Windows Phone et UWP :
+L’exemple de code suivant montre le convertisseur personnalisé pour la plateforme Windows universelle :
 
 ```csharp
-[assembly: ExportRenderer (typeof(NativeListView), typeof(NativeWinPhoneListViewRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeListView), typeof(NativeUWPListViewRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneListViewRenderer : ListViewRenderer
+    public class NativeUWPListViewRenderer : ListViewRenderer
     {
         ListView listView;
 

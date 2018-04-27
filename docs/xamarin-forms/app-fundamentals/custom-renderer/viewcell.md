@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 3e5f4f2d4c4025cce21026cc611af650616e69e2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-viewcell"></a>Personnalisation d’un ViewCell
 
 _Un Xamarin.Forms ViewCell est une cellule qui peut être ajoutée à ListView ou TableView, qui contient une vue définie par le développeur. Cet article explique comment créer un convertisseur personnalisé pour un ViewCell qui est hébergé dans un contrôle ListView de Xamarin.Forms. Cela arrête les calculs de disposition Xamarin.Forms d’être appelée à plusieurs reprises pendant le défilement de ListView._
 
-Chaque cellule Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) est restitué par une application de Xamarin.Forms, dans iOS le `ViewCellRenderer` classe est instanciée, qui instancie ensuite natif `UITableViewCell` contrôle. Sur la plateforme Android, le `ViewCellRenderer` classe instancie natif `View` contrôle. Sur Windows Phone et la plateforme Windows universelle (UWP), le `ViewCellRenderer` classe instancie natif `DataTemplate`. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Chaque cellule Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) est restitué par une application de Xamarin.Forms, dans iOS le `ViewCellRenderer` classe est instanciée, qui instancie ensuite natif `UITableViewCell` contrôle. Sur la plateforme Android, le `ViewCellRenderer` classe instancie natif `View` contrôle. Sur la plate-forme de Windows universelle (UWP), le `ViewCellRenderer` classe instancie natif `DataTemplate`. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Le diagramme suivant illustre la relation entre la [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) et les contrôles natifs correspondants qui l’implémentent :
 
@@ -169,7 +169,7 @@ Le `NativeCell` le rendu de cellule personnalisé par les classes de rendu spéc
 
 ![](viewcell-images/screenshots.png "NativeCell sur chaque plateforme")
 
-La `ViewCellRenderer` classe expose des méthodes spécifiques à la plateforme pour le rendu de la cellule personnalisée. Il s’agit de la `GetCell` méthode sur la plateforme iOS, le `GetCellCore` méthode sur la plateforme Android et le `GetTemplate` méthode sur la plateforme Windows Phone.
+La `ViewCellRenderer` classe expose des méthodes spécifiques à la plateforme pour le rendu de la cellule personnalisée. Il s’agit de la `GetCell` méthode sur la plateforme iOS, le `GetCellCore` méthode sur la plateforme Android et le `GetTemplate` méthode sur la plateforme Windows universelle.
 
 Chaque classe de convertisseur personnalisé est décorée avec un `ExportRenderer` attribut qui inscrit le convertisseur avec Xamarin.Forms. L’attribut accepte deux paramètres : le nom de type de la cellule Xamarin.Forms rendue et le nom de type du convertisseur personnalisé. Le `assembly` préfixe à l’attribut spécifie que l’attribut s’applique à la totalité de l’assembly.
 
@@ -519,15 +519,15 @@ L’exemple de code suivant montre la définition de disposition pour le `Native
 
 Cette disposition spécifie deux `TextView` contrôles et une `ImageView` contrôle sont utilisés pour afficher le contenu de la cellule. Les deux `TextView` les contrôles sont orientés verticalement dans une `LinearLayout` contrôle, tous les contrôles de contenu dans un `RelativeLayout`.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Création du convertisseur personnalisé sur Windows Phone et UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Création du convertisseur personnalisé sur la plateforme Windows universelle
 
-L’exemple de code suivant montre le convertisseur personnalisé pour Windows Phone et UWP :
+L’exemple de code suivant montre le convertisseur personnalisé pour la plateforme Windows universelle :
 
 ```csharp
-[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeWinPhoneCellRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeUWPCellRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneCellRenderer : ViewCellRenderer
+    public class NativeUWPCellRenderer : ViewCellRenderer
     {
         public override Windows.UI.Xaml.DataTemplate GetTemplate(Cell cell)
         {

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 24bf7bd7fb2aa51968a96bdbf808030604665c26
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Lignes et les extrémités de trait
 
@@ -235,7 +235,7 @@ IPhone à gauche montre comment la `SKPointMode.Points` entraîne de membre de l
 
 Lorsque vous utilisez à la place `SKPointMode.Lines`, comme indiqué dans l’écran Android dans le centre de la `DrawPoints` méthode dessine une ligne entre chaque paire de `SKPoint` valeurs, à l’aide de l’extrémité de la ligne spécifiée, dans ce cas `Round`.
 
-L’appareil mobile Windows affiche le résultat de la `SKPointMode.Polygon` valeur. Une ligne est dessinée entre les points successifs dans le tableau, mais si vous examinez très attentivement, vous verrez que ces lignes ne sont pas connectés. Chacune de ces lignes distincts commence et se termine par l’extrémité de fin de ligne spécifié. Si vous sélectionnez le `Round` Cap, les lignes peuvent sembler être connecté, mais ils sont connectés vraiment pas.
+La capture d’écran UWP indique le résultat de la `SKPointMode.Polygon` valeur. Une ligne est dessinée entre les points successifs dans le tableau, mais si vous examinez très attentivement, vous verrez que ces lignes ne sont pas connectés. Chacune de ces lignes distincts commence et se termine par l’extrémité de fin de ligne spécifié. Si vous sélectionnez le `Round` Cap, les lignes peuvent sembler être connecté, mais ils sont connectés vraiment pas.
 
 Si les lignes sont connectés ou non connectés sont un aspect essentiel de l’utilisation de chemins d’accès des graphiques.
 
@@ -243,4 +243,4 @@ Si les lignes sont connectés ou non connectés sont un aspect essentiel de l’
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

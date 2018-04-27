@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: b4a36e15bd5db72ef113748282175c6d31a95966
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-scale-transform"></a>La transformation d’échelle
 
@@ -167,7 +167,7 @@ L’angle supérieur gauche du rectangle arrondi est positionné `margin` pixels
 
 [![](scale-images/centeredscale-small.png "Capture d’écran de triple de la page de mise à l’échelle centré")](scale-images/centeredscale-large.png#lightbox "Triple capture d’écran de la page de mise à l’échelle centré")
 
-Le `Slider` les éléments de ce programme posséder une plage de &ndash;10 à 10. Comme vous pouvez le voir, les valeurs négatives de mise à l’échelle (par exemple, sur le Android dans le centre de l’écran) à la verticale entraînent des objets faire pivoter autour de l’axe horizontal qui passe par le centre de mise à l’échelle. Les valeurs négatives de mise à l’échelle (par exemple, comme dans l’écran de Windows sur la droite) à l’horizontale entraînent des objets faire pivoter autour de l’axe vertical qui transitent dans le centre de mise à l’échelle.
+Le `Slider` les éléments de ce programme posséder une plage de &ndash;10 à 10. Comme vous pouvez le voir, les valeurs négatives de mise à l’échelle (par exemple, sur le Android dans le centre de l’écran) à la verticale entraînent des objets faire pivoter autour de l’axe horizontal qui passe par le centre de mise à l’échelle. Les valeurs négatives de mise à l’échelle (par exemple, comme dans l’écran de la plateforme Windows universelle sur la droite) à l’horizontale entraînent des objets faire pivoter autour de l’axe vertical qui transitent dans le centre de mise à l’échelle.
 
 Ce quatrième version de la `Scale` méthode est en fait un raccourci. Vous pouvez souhaiter voir comment cela fonctionne en remplaçant le `Scale` méthode dans ce code par le code suivant :
 
@@ -344,4 +344,4 @@ Le code affiche également l’étoile dix fois de plus, chaque fois que la dimi
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

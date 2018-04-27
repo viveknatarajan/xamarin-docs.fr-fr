@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 24d9dd332275fd811c0ff60fc514ae0f84c6ee07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layouts"></a>Mises en page
 
@@ -180,7 +180,7 @@ Xamarin.Forms et ses mises en page intégrés sont capables de gérer les modifi
 
 ### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[Mise en page pour les applications de bureau et les Tablet PC](tablet.md)
 
-iOS, Android et Windows prennent toutes en charge les tailles d’écran supérieure sur des plateformes tablet périphériques (ainsi que les ordinateurs portables et de bureau pour Windows). Xamarin.Forms vous permet d’optimiser votre application pour les écrans plus grands en détectant le type de périphérique et l’ajustement de la mise en page, ou à l’aide d’une page totalement différente complètement pour les écrans plus grands.
+iOS, Android et plateforme Windows universelle prennent toutes en charge les tailles d’écran supérieure sur les appareils de tablettes (ainsi que les ordinateurs portables et de bureau pour Windows). Xamarin.Forms vous permet d’optimiser votre application pour les écrans plus grands en détectant le type de périphérique et l’ajustement de la mise en page, ou à l’aide d’une page totalement différente complètement pour les écrans plus grands.
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[Création d’une disposition personnalisée](custom.md)
 

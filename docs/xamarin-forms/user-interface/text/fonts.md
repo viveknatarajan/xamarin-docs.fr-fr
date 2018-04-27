@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 52c86c63c328729211c4fbd22bd10b5eb1e56615
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="fonts"></a>Polices
 
@@ -51,9 +51,9 @@ label.FontSize = 24;
 Vous pouvez également utiliser le `NamedSize` énumération qui possède quatre options intégrées ; Xamarin.Forms choisit la taille optimale pour chaque plateforme.
 
 -  **Micro**
--  **Small**
--  **Medium**
--  **Large**
+-  **Petit**
+-  **Taille moyenne**
+-  **Grand**
 
 
 Le `NamedSize` énumération ne peut être utilisé partout où un `FontSize` peut être spécifié à l’aide de la `Device.GetNamedSize` méthode pour convertir la valeur en un `double`:
@@ -70,7 +70,7 @@ Styles de police comme **gras** et *italique* peut être défini sur le `FontAtt
 
 -  **Aucun**
 -  **Gras**
--  **Italic**
+-  **italique**
 
 Le `FontAttribute` énumération peut être utilisée comme suit (vous pouvez spécifier un seul attribut ou `OR` ensemble) :
 
@@ -166,7 +166,7 @@ La `FormattedString` classe peut également être utilisée en XAML, comme indiq
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="MarkerFelt-Thin" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>
@@ -178,7 +178,7 @@ Lorsque vous spécifiez un type de police personnalisée, il est toujours judici
 
 ## <a name="using-a-custom-font"></a>À l’aide d’une police personnalisée
 
-À l’aide d’une police autre que les polices intégrés requiert certains codage spécifique à la plateforme. Cette capture d’écran montre la police personnalisée **correspondance** de [les polices open source de Google](https://www.google.com/fonts) rendus sur iOS, Android et Windows Phone à l’aide de Xamarin.Forms.
+À l’aide d’une police autre que les polices intégrés requiert certains codage spécifique à la plateforme. Cette capture d’écran montre la police personnalisée **correspondance** de [les polices open source de Google](https://www.google.com/fonts) restitué à l’aide de Xamarin.Forms.
 
  [![Une police personnalisée sur iOS et Android](fonts-images/custom-sml.png "exemple des polices personnalisées")](fonts-images/custom.png#lightbox "exemple des polices personnalisées")
 
@@ -240,7 +240,7 @@ Vous pouvez également utiliser [ `Device.RuntimePlatform` ](~/xamarin-forms/pla
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Lobster-Regular" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>

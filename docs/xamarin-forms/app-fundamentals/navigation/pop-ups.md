@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 2e0a5ff433de034da0170e3aa9a19ab50ddc3cb6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 97f0917e4e8670ab379aae1b2707ae08cb29bb70
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="displaying-pop-ups"></a>Afficher les fenêtres contextuelles
 
@@ -45,7 +45,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 ## <a name="guiding-users-through-tasks"></a>Guide pour les utilisateurs via des tâches
 
-Le [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) est un élément d’interface utilisateur commun dans iOS. Le Xamarin.Forms [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) méthode vous permet d’inclure ce contrôle dans les applications cross-plateformes, rendu natifs alternatives dans Android et Windows Phone.
+Le [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) est un élément d’interface utilisateur commun dans iOS. Le Xamarin.Forms [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) méthode vous permet d’inclure ce contrôle dans les applications cross-plateformes, rendu natifs alternatives dans Android et UWP.
 
 Pour afficher une feuille de l’action, `await` [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) dans les [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), en passant le message et le bouton étiquettes sous forme de chaînes. La méthode retourne l’étiquette de la chaîne du bouton sur lequel l’utilisateur a cliqué. Voici un exemple simple :
 

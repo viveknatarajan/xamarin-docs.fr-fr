@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 511a7052b07a853279f91211b3e3b1219f125c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d16c45b7f7cb7eef67a905b6fbcb9b8675b0b2ba
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview-interactivity"></a>Interactivité de ListView
 
@@ -53,12 +53,10 @@ La sélection activée :
 
 ![](interactivity-images/selection-default.png "ListView avec sélection activée")
 
-Notez que sur Windows Phone, certaines cellules, y compris `SwitchCell` ne mettez pas à jour leur état visuel en réponse à la sélection.
-
 <a name="Context_Actions" />
 
 ## <a name="context-actions"></a>Actions du contexte
-Souvent, les utilisateurs souhaitent effectuer une opération sur un élément dans un `ListView`. Par exemple, considérez une liste d’adresses de messagerie dans l’application de messagerie. Sur iOS, vous pouvez passez pour supprimer un message et sur Windows Phone, vous pouvez long, appuyez sur un message, puis supprimez-le :
+Souvent, les utilisateurs souhaitent effectuer une opération sur un élément dans un `ListView`. Par exemple, considérez une liste d’adresses de messagerie dans l’application de messagerie. Sur iOS, vous pouvez faites défiler pour supprimer un message ::
 
 ![](interactivity-images/context-default.png "ListView avec des Actions de contexte")
 
@@ -149,8 +147,6 @@ L’extraction de tirer pour actualiser en tant que l’utilisateur :
 ![](interactivity-images/refresh-start.png "Extraction de ListView à actualiser en cours")
 
 Tirer pour actualiser en tant que l’utilisateur a publié l’extraction. C’est ce que voit l’utilisateur lors de la mise à jour de liste : ![ ] (interactivity-images/refresh-in-progress.png "extraction ListView à actualiser terminée")
-
-Notez que, à compter de Xamarin.Forms 1.4.3, actualisation de l’extraction n’est pas pris en charge sur Windows Phone 8.1. Sur Windows phone 8, tirer pour actualiser n’est pas une fonctionnalité de plateforme natifs, donc une implémentation de l’actualisation de l’extraction est fournie par Xamarin.Forms. Enfin, gardez à l’esprit que par extraction à l’actualisation ne fonctionnera pas sur Windows Phone si tous les éléments dans la liste peuvent s’ajuster à l’écran (en d’autres termes, si le défilement vertical n’est pas obligatoire).
 
 ListView expose quelques événements qui vous permettent de répondre aux événements d’actualisation de l’extraction.
 

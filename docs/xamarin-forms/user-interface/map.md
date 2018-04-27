@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 050e37d208c3ba5a330d7ecc6df9d106e14f8bb9
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: e296ca79ee03e7fc61532758219b65946a8d4381
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="map"></a>Carte
 
@@ -50,7 +50,7 @@ Sur Android, vous devez passer les mêmes paramètres que `Forms.Init`:
 Xamarin.FormsMaps.Init(this, bundle);
 ```
 
-Pour le Windows Runtime (WinRT) et la plateforme Windows universelle (UWP), utilisez le code suivant :
+Pour la plateforme Windows universelle (UWP) utilisez le code suivant :
 
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
@@ -60,7 +60,7 @@ Ajoutez cet appel dans les fichiers suivants pour chaque plateforme :
 
 -  **iOS** -AppDelegate.cs de fichiers, dans le `FinishedLaunching` (méthode).
 -  **Android** -MainActivity.cs de fichiers, dans le `OnCreate` (méthode).
--  **WinRT et UWP** -fichier MainPage.xaml.cs, dans le `MainPage` constructeur.
+-  **UWP** -fichier MainPage.xaml.cs, dans le `MainPage` constructeur.
 
 Une fois que le package NuGet a été ajouté et la méthode d’initialisation appelée à l’intérieur de chaque d’applications, `Xamarin.Forms.Maps` API peuvent être utilisées dans le code de bibliothèque de classes portables ou de projet partagé commun.
 
@@ -132,9 +132,9 @@ Certains d'entre eux sont affichés dans la capture d’écran ci-dessous :
 
 Les deux derniers sont requis, car les applications nécessitent une connexion réseau pour télécharger les données de la carte. En savoir plus sur Android [autorisations](http://developer.android.com/reference/android/Manifest.permission.html) pour en savoir plus.
 
-### <a name="windows-runtime-and-universal-windows-platform"></a>Windows Runtime et la plateforme Windows universelle
+### <a name="universal-windows-platform"></a>Plateforme Windows universelle
 
-Pour utiliser des cartes sur le Windows Runtime et la plateforme Windows universelle, vous devez générer un jeton d’autorisation. Pour plus d’informations, consultez [demander une clé d’authentification maps](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) sur MSDN.
+Pour utiliser des cartes sur la plateforme Windows universelle, vous devez générer un jeton d’autorisation. Pour plus d’informations, consultez [demander une clé d’authentification maps](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) sur MSDN.
 
 Le jeton d’authentification doit ensuite être spécifié dans le `FormsMaps.Init("AUTHORIZATION_TOKEN")` appel de méthode, d’authentifier l’application avec Bing Maps.
 
@@ -255,7 +255,7 @@ MyMap.MoveToRegion(
 
 ## <a name="summary"></a>Récapitulatif
 
-Le Xamarin.Forms.Maps est un NuGet distinct qui doit être ajouté à chaque projet dans une solution Xamarin.Forms. Code d’initialisation supplémentaire est requis, bien que certaines étapes de configuration pour iOS, Android, WinRT et UWP.
+Le Xamarin.Forms.Maps est un NuGet distinct qui doit être ajouté à chaque projet dans une solution Xamarin.Forms. Code d’initialisation supplémentaire est requis, bien que certaines étapes de configuration pour iOS, Android et UWP.
 
 Une fois configurée, l’API mappe peut être utilisée pour restituer des mappages avec des marqueurs de code confidentiel en seulement quelques lignes de code. Mappages peuvent être améliorés avec un [convertisseur personnalisé](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 

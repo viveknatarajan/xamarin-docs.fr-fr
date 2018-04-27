@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 773636cf879439477a6f71e44f13ae66b8f10ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6138bd1f9211248b3a260795c2ef9d3db87580be
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="creating-an-effect"></a>Création d’un effet
 
@@ -150,17 +150,17 @@ Le `OnAttached` les appels de méthode le `SetBackgroundColor` pour définir la 
 
 Le `OnElementPropertyChanged` remplacement répond aux modifications de propriété pouvant être liée sur le contrôle de Xamarin.Forms. Lorsque le [ `IsFocused` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsFocused/) de propriété est modifiée, la couleur d’arrière-plan du contrôle est modifiée en blanc si le contrôle a le focus, sinon il est modifié en vert. Cette fonctionnalité est encapsulée dans un `try` / `catch` bloquer au cas où le contrôle de l’effet est attaché à n’a pas un `BackgroundColor` propriété.
 
-## <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone et les projets de plateforme Windows universelle
+## <a name="universal-windows-platform-projects"></a>Projets de plateforme Windows universelle
 
-Le code suivant exemple illustre le `FocusEffect` implémentation pour les projets Windows Phone et de la plateforme Windows universelle (UWP) :
+Le code suivant exemple illustre le `FocusEffect` implémentation pour les projets de plateforme Windows universelle (UWP) :
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinRT;
+using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
 [assembly: ExportEffect(typeof(FocusEffect), "FocusEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
     {
@@ -256,7 +256,7 @@ Cet article vous a montré comment créer un effet qui modifie la couleur d’ar
 ## <a name="related-links"></a>Liens associés
 
 - [Renderers personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
+- [Effet](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
 - [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
 - [Effet de couleur d’arrière-plan (exemple)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/)
 - [Effet de focus (exemple)](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4adff8a95f9981dbecc44bf177dcd98b7984a3a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implémentation d’un HybridWebView
 
 _Xamarin.Forms les contrôles d’interface utilisateur personnalisé doivent dériver de la classe de vue, qui est utilisée pour placer des mises en page et des contrôles sur l’écran. Cet article explique comment créer un convertisseur personnalisé pour un contrôle personnalisé HybridWebView, qui montre comment améliorer les contrôles spécifiques à une plateforme web pour autoriser le code c# pour être appelée à partir de JavaScript._
 
-Chaque vue Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) est restitué par une application Xamarin.Forms dans iOS, le `ViewRenderer` classe est instanciée, qui instancie ensuite natif `UIView` contrôle. Sur la plateforme Android, le `ViewRenderer` classe instancie un `View` contrôle. Sur Windows Phone et la plateforme Windows universelle (UWP), le `ViewRenderer` classe instancie natif `FrameworkElement` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Chaque vue Xamarin.Forms a un convertisseur qui l’accompagne pour chaque plateforme qui crée une instance d’un contrôle natif. Lorsqu’un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) est restitué par une application Xamarin.Forms dans iOS, le `ViewRenderer` classe est instanciée, qui instancie ensuite natif `UIView` contrôle. Sur la plateforme Android, le `ViewRenderer` classe instancie un `View` contrôle. Sur la plate-forme de Windows universelle (UWP), le `ViewRenderer` classe instancie natif `FrameworkElement` contrôle. Pour plus d’informations sur les classes de contrôle natif correspondant aux contrôles de Xamarin.Forms et le convertisseur, consultez [convertisseur des Classes de Base et des contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Le diagramme suivant illustre la relation entre la [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) et les contrôles natifs correspondants qui l’implémentent :
 
@@ -417,13 +417,13 @@ Notez que la `JSBridge` classe maintient une `WeakReference` à la `HybridWebVie
 > [!IMPORTANT]
 > Sur Android Oreo, assurez-vous que le manifeste Android définit le **cible Android version** à **automatique**. Sinon, exécuter ce code génère l’erreur message « invokeCSharpAction n’est pas définie ».
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Création du convertisseur personnalisé sur Windows Phone et UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Création du convertisseur personnalisé sur la plateforme Windows universelle
 
-L’exemple de code suivant montre le convertisseur personnalisé pour Windows Phone et UWP :
+L’exemple de code suivant montre le convertisseur personnalisé pour la plateforme Windows universelle :
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Windows.UI.Xaml.Controls.WebView>
     {
@@ -486,5 +486,5 @@ Cet article a montré comment créer un convertisseur personnalisé pour un `Hyb
 
 ## <a name="related-links"></a>Liens associés
 
-- [CustomRendererHybridWebView (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
+- [CustomRendererHybridWebView (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
 - [Appel c# à partir de JavaScript](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript/)

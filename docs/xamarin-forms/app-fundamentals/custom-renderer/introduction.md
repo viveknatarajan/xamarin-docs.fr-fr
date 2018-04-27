@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: e555c038d66033d925da42e4c70b89d5caac8ad6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43b021b158bbb815ab8d27c393f54e0775599940
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>Introduction aux convertisseurs personnalisés
 
@@ -19,7 +19,7 @@ _Les convertisseurs personnalisés fournissent une approche puissante pour perso
 
 Xamarin.Forms [contrôles, dispositions et les Pages](~/xamarin-forms/user-interface/controls/index.md) présenter une API commune pour décrire des interfaces utilisateur de mobile multiplateforme. Chaque page, la mise en page et le contrôle sont restitué différemment sur chaque plateforme, à l’aide un `Renderer` classe qui crée ensuite un contrôle natif (correspondant à la représentation sous forme de Xamarin.Forms), réorganise dans l’écran et ajoute le comportement spécifié dans le code partagé.
 
-Les développeurs peuvent implémenter leurs propres classes `Renderer` pour personnaliser l’apparence et/ou le comportement d’un contrôle. Les convertisseurs personnalisés pour un type donné peuvent être ajoutés au projet d’une application pour personnaliser le contrôle dans un seul emplacement tout en autorisant le comportement par défaut sur d’autres plateformes ; ou différents convertisseurs personnalisés peuvent être ajoutés à chaque projet d’application pour créer une apparence différente sur iOS, Android et Windows Phone. Toutefois, en implémentant une classe de convertisseur personnalisé pour effectuer une personnalisation de contrôle simple est souvent une réponse activable. Effets simplifient ce processus et sont généralement utilisés pour le style de petites modifications. Pour plus d’informations, consultez [Effets](~/xamarin-forms/app-fundamentals/effects/index.md).
+Les développeurs peuvent implémenter leurs propres classes `Renderer` pour personnaliser l’apparence et/ou le comportement d’un contrôle. Les convertisseurs personnalisés pour un type donné peuvent être ajoutés au projet d’une application pour personnaliser le contrôle dans un seul emplacement tout en autorisant le comportement par défaut sur d’autres plateformes ; ou différents convertisseurs personnalisés peuvent être ajoutés à chaque projet d’application pour créer une apparence différente sur iOS, Android et la plateforme Windows universelle (UWP). Toutefois, en implémentant une classe de convertisseur personnalisé pour effectuer une personnalisation de contrôle simple est souvent une réponse activable. Effets simplifient ce processus et sont généralement utilisés pour le style de petites modifications. Pour plus d’informations, consultez [Effets](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 ## <a name="examining-why-custom-renderers-are-necessary"></a>Examen pourquoi personnalisé convertisseurs sont nécessaires
 
@@ -51,7 +51,7 @@ Le `MyEntry` contrôle est un `Entry` contrôler l’utilisation de la `Backgrou
 Le `local` préfixe d’espace de noms peut être quoi que ce soit. Toutefois, le `namespace` et `assembly` valeurs doivent correspondre les détails du contrôle personnalisé. Une fois que l’espace de noms est déclaré, le préfixe est utilisé pour référencer le contrôle personnalisé.
 
 > [!NOTE]
-> Définir le `xmlns` est beaucoup plus simple dans PCLs que les projets partagés. Une bibliothèque PCL est compilée dans un assembly, il est facile de déterminer la `assembly=CustomRenderer` la valeur doit être. Lors de l’utilisation de projets partagés, tous les composants partagés (y compris le code XAML) sont compilés dans les projets de référence, ce qui signifie que si l’iOS, Android et Windows Phone projets ont leurs propres *les noms d’assemblys* il est impossible pour écrire le `xmlns` déclaration, car la valeur doit être différent pour chaque application. Contrôles personnalisés dans XAML pour les projets partagés nécessitera chaque projet d’application soit configuré avec le même nom d’assembly.
+> Définir le `xmlns` est beaucoup plus simple dans PCLs que les projets partagés. Une bibliothèque PCL est compilée dans un assembly, il est facile de déterminer la `assembly=CustomRenderer` la valeur doit être. Lors de l’utilisation de projets partagés, tous les composants partagés (y compris le code XAML) sont compilés dans les projets de référence, ce qui signifie que si l’iOS, Android et UWP projets ont leurs propres *les noms d’assemblys* il est impossible d’écrire le `xmlns` déclaration, car la valeur doit être différent pour chaque application. Contrôles personnalisés dans XAML pour les projets partagés nécessitera chaque projet d’application soit configuré avec le même nom d’assembly.
 
 Le `MyEntry` contrôle personnalisé est ensuite rendu sur chaque plateforme, avec un arrière-plan en gris, comme indiqué dans les captures d’écran suivants :
 

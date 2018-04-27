@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: a153791893f99a472c3fcf91a205bf91ed971e13
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview"></a>Affichage de liste
 
@@ -53,7 +53,7 @@ Pour en savoir plus sur la personnalisation des cellules dans un ListView, consu
 ListView prend en charge un nombre de styles d’interaction, notamment :
 
 - **[Tirer pour actualiser](interactivity.md#Pull_to_Refresh)**  &ndash; ListView prend en charge l’actualisation de l’extraction sur chaque plateforme.
-- **[Actions du contexte](interactivity.md#Context_Actions)**  &ndash; ListView prend en charge les mesures sur les éléments individuels dans une liste. Par exemple, vous pouvez implémenter le passage à l’action sur iOS ou longuement actions sur Android et Windows Phone.
+- **[Actions du contexte](interactivity.md#Context_Actions)**  &ndash; ListView prend en charge les mesures sur les éléments individuels dans une liste. Par exemple, vous pouvez implémenter le passage à l’action sur iOS ou longuement actions sur Android.
 - **[Sélection](interactivity.md#selectiontaps)**  &ndash; vous pouvez écouter les sélections et désélections non contiguës une action lorsque l’utilisateur clique sur une ligne.
 
 ![](images/context-default.png "ListView avec des Actions de contexte")
@@ -70,5 +70,5 @@ Pour en savoir plus sur les fonctionnalités d’interactivité de ListView, con
 - [Regroupement (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 - [Affichage de convertisseur personnalisé (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/WorkingWithListviewNative)
 - [Interactivité de ListView (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
-- [iOS Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-ios.workbook)
+- [iOS classeur](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-ios.workbook)
 - [Classeur Android](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-android.workbook)

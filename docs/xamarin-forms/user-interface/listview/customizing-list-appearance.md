@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: f1f0bb0ce282479a7b185257880244863bb67a60
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="list-appearance"></a>Apparence de la liste
 
@@ -35,7 +35,7 @@ Pour activer le regroupement :
 - Définir le `ListView`de `ItemsSource` à cette liste.
 - Définissez `IsGroupingEnabled` sur true.
 - Définissez [ `GroupDisplayBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) à lier à des groupes de la propriété qui est utilisée comme titre du groupe.
-- [Facultatif] Définissez [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) à lier à des groupes de la propriété qui est utilisée en tant que le nom court pour le groupe. Le nom court est utilisé pour les listes de saut (colonne rigt côté sur iOS, la grille sur Windows Phone).
+- [Facultatif] Définissez [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) à lier à des groupes de la propriété qui est utilisée en tant que le nom court pour le groupe. Le nom court est utilisé pour les listes de saut (colonne de droite sur iOS).
 
 Commencez par créer une classe pour les groupes :
 
@@ -120,7 +120,7 @@ Notez que nous avons :
 
 Si le regroupement a été activé dans la liste, l’en-tête de groupe peut également être personnalisée.
 
-Semblable à la façon dont le `ListView` a un `ItemTemplate` pour définir le mode d’affichage des lignes `ListView` a un `GroupHeaderTemplate`. 
+Semblable à la façon dont le `ListView` a un `ItemTemplate` pour définir le mode d’affichage des lignes `ListView` a un `GroupHeaderTemplate`.
 
 Voici un exemple de personnalisation de l’en-tête de groupe en XAML :
 
@@ -206,7 +206,7 @@ Pour créer un en-tête personnalisé et le pied de page, définissez les vues d
 <a name="Row_Separators" />
 
 ## <a name="row-separators"></a>Séparateurs de lignes
-Les lignes de séparation sont affichées entre `ListView` éléments par défaut sur iOS et Android. Windows Phone ne prend pas en charge les lignes du séparateur, par ce plateformes instructions d’expérience utilisateur. Si vous préférez masquer les lignes de séparation sur iOS et Android, définissez le `SeparatorVisibility` propriété sur votre contrôle ListView. Les options de `SeparatorVisibility` sont :
+Les lignes de séparation sont affichées entre `ListView` éléments par défaut sur iOS et Android. Si vous préférez masquer les lignes de séparation sur iOS et Android, définissez le `SeparatorVisibility` propriété sur votre contrôle ListView. Les options de `SeparatorVisibility` sont :
 
 * **Par défaut** -affiche une ligne de séparation sur iOS et Android.
 * **Aucun** -masque le séparateur sur toutes les plateformes.
