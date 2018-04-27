@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: d434782e2586b1ed4f42984f2eeb72191b0dc171
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 98b4b4a9e7bc28dd444cfdcb1afdfbe64cb1aee0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cross-platform-performance"></a>Niveau de performance multiplateforme
 
@@ -211,7 +211,7 @@ double Compute(double x)
 
 L’initialisation tardive se produit lors du premier accès à la propriété `Lazy<T>.Value`. Le type encapsulé est créé et retourné lors du premier accès, puis il est stocké en vue d’une utilisation ultérieure.
 
-Pour plus d’informations sur l’initialisation tardive, consultez [Initialisation tardive](https://msdn.microsoft.com/en-us/library/dd997286(v=vs.110).aspx).
+Pour plus d’informations sur l’initialisation tardive, consultez [Initialisation tardive](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
 
 <a name="async" />
 
