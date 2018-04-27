@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
 ms.openlocfilehash: f851c1ca241be9e3c94a70b1f63135a46575d471
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-a-universal-windows-platform-uwp-app"></a>Ajout d’une application de plateforme universelle Windows universelle
 
@@ -54,7 +54,7 @@ Xamarin.Forms.Forms.Init (e); // requires the `e` parameter
 
  7 . Dans le projet UWP, modifiez **MainPage.xaml** en supprimant la `Grid` contenus dans le `Page` élément.
 
- 8 . Dans **MainPage.xaml**, ajoutez un nouveau `xmlns` entrée pour `Xamarin.Forms.Platform.UWP`:
+ 8. Dans **MainPage.xaml**, ajoutez un nouveau `xmlns` entrée pour `Xamarin.Forms.Platform.UWP`:
 
 ```csharp
 xmlns:forms="using:Xamarin.Forms.Platform.UWP"
@@ -70,13 +70,13 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 </forms:WindowsPage>
 ```
 
- 10 . Dans le projet UWP, modifiez **MainPage.xaml.cs** pour supprimer la `: Page` spécificateur d’héritage pour le nom de classe (dans la mesure où elle héritera de `WindowsPage` en raison de la modification apportée à l’étape précédente) :
+ 10. Dans le projet UWP, modifiez **MainPage.xaml.cs** pour supprimer la `: Page` spécificateur d’héritage pour le nom de classe (dans la mesure où elle héritera de `WindowsPage` en raison de la modification apportée à l’étape précédente) :
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": Page"
 ```
 
- 11 . Dans **MainPage.xaml.cs**, ajoutez le `LoadApplication` appeler dans le `MainPage` constructeur pour démarrer l’application de Xamarin.Forms :
+ 11. Dans **MainPage.xaml.cs**, ajoutez le `LoadApplication` appeler dans le `MainPage` constructeur pour démarrer l’application de Xamarin.Forms :
 
 ```csharp
 // below this existing line
@@ -95,7 +95,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
   * Location
 -->
 
-12 . Ajouter des ressources locales (par exemple). fichiers image) à partir de projets plateforme existants qui sont requis.
+12. Ajouter des ressources locales (par exemple). fichiers image) à partir de projets plateforme existants qui sont requis.
 
 <a name="troubleshooting" />
 
