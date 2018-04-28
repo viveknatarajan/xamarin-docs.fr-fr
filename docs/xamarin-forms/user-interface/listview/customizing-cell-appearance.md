@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 37ecc76d9774b3f375af92f2a00c6c687358f065
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="cell-appearance"></a>Apparence de la cellule
 
@@ -70,7 +70,7 @@ TextCells sont rendus sous forme de contrôles natifs à l’exécution, donc le
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>Cellules personnalisées
-Lorsque les cellules intégrés ne fournissent pas la disposition requise, cellules personnalisés implémenté la disposition requise. Par exemple, vous souhaiterez présenter une cellule avec deux étiquettes qui ont le même poids. A `LabelCell` est insuffisante car la `LabelCell` a une étiquette qui est plus petite. La plupart des personnalisations de cellule ajouter des données en lecture seule supplémentaires (par exemple, des légendes supplémentaires, images ou d’autres informations d’affichage).
+Lorsque les cellules intégrés ne fournissent pas la disposition requise, cellules personnalisés implémenté la disposition requise. Par exemple, vous souhaiterez présenter une cellule avec deux étiquettes qui ont le même poids. A `TextCell` est insuffisante car la `TextCell` a une étiquette qui est plus petite. La plupart des personnalisations de cellule ajouter des données en lecture seule supplémentaires (par exemple, des légendes supplémentaires, images ou d’autres informations d’affichage).
 
 Toutes les cellules personnalisés doivent dériver de [ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), la même classe de base que tous les de la cellule intégrée types d’utilisation.
 
