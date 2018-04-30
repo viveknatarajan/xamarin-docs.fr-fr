@@ -5,12 +5,12 @@ ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: f4be88a1eabb3fa3cca733690a3f097a03516272
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 9ce1d790f5dea00ac47d5639ae8424793006445a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="architecture"></a>Architecture
 
@@ -70,7 +70,7 @@ Vous devez être prudent lors de la mettre à disposition gérés Callable Wrapp
 Les sous-classes de wrapper CCW managé sont où toute la logique spécifique à l’application « intéressante » peut résider. Ces services personnalisés [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) sous-classes (telles que la [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) type dans le modèle de projet par défaut). (Plus précisément, ce sont les *Java.Lang.Object* sous-classes qui *pas* contiennent un [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) attribut personnalisé ou [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) est *false*, qui est la valeur par défaut.)
 
 Comme gérés callable wrappers, gérés sous-classes du wrapper CCW contient également une référence globale, accessible via la [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propriété. Tout comme avec les wrappers CCW gérés références globales peuvent être libérées explicitement en appelant [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
-Contrairement aux wrappers CCW gérés *précaution* doit être prise avant la suppression d’instances de ce type, en tant que *Dispose()*effectue une opération de l’instance s’arrêtera le mappage entre l’instance Java (une instance d’un Android Callable Wrapper) et l’instance gérée.
+Contrairement aux wrappers CCW gérés *précaution* doit être prise avant la suppression d’instances de ce type, en tant que *Dispose()* effectue une opération de l’instance s’arrêtera le mappage entre l’instance Java (une instance d’un Android Callable Wrapper) et l’instance gérée.
 
 
 ### <a name="java-activation"></a>Activation de Java
@@ -115,11 +115,7 @@ Ordre des événements :
 
 11. Le *LogTextBox (contexte, IAttributeSet, int)* constructeur exécute *sur la même instance créée dans (7)* .
 
-12. ...
-
-
-Si (IntPtr, JniHandleOwnership) Impossible de trouver un constructeur, puis un [System.MissingMethodException](https://developer.xamarin.com/api/type/System.MissingMethodException/) sera levée.
-
+12. Si (IntPtr, JniHandleOwnership) constructeur ne peut pas être trouvé, puis un System.MissingMethodException] (https://developer.xamarin.com/api/type/System.MissingMethodException/) sera levée.
 
 <a name="Premature_Dispose_Calls" />
 
