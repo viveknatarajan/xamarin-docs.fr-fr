@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 04/23/2018
-ms.openlocfilehash: 11e876207285689b230bb2fada3a4c836443e360
-ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
+ms.openlocfilehash: bfb53af420b64fb9af994d3fb19293406d3acd7b
+ms.sourcegitcommit: 180a8411d912de40545f9624e2127a66ee89e7b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="xamarin-live-reload"></a>Rechargement dynamique de Xamarin
 
@@ -31,7 +31,7 @@ Rechargement dynamique est actuellement disponible uniquement dans Visual Studio
 * [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) ou version ultérieure.
 
 ## <a name="getting-started"></a>Prise en main
-### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Installer le rechargement dynamique de Xamarin à partir de Visual Studio Marketplace.
+### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Installer Xamarin les recharger en direct à partir de Visual Studio Marketplace
 
 Rechargement de Live Xamarin est distribué via Visual Studio Marketplace. Pour installer l’extension, visitez le [page de rechargement de Live Xamarin dans Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) site Web, puis cliquez sur **télécharger**.
 
@@ -39,9 +39,9 @@ Ouvrez le .vsix qui est téléchargé, puis cliquez sur **installer**.
 
 ![Programme d’installation de Visual Studio confirmation de rechargement de Live Xamarin](images/LiveReloadVSIXInstall.png)
 
-> Ou bien, vous pouvez le rechercher dans le **Online** onglet dans le **Extensions et mises à jour** boîte de dialogue à l’intérieur de Visual Studio.
+Ou bien, vous pouvez le rechercher dans le **Online** onglet dans le **Extensions et mises à jour** boîte de dialogue à l’intérieur de Visual Studio.
 
-### <a name="2-configure-your-app-to-use-live-reload"></a>2. Configurer votre application pour utiliser le rechargement de Live.
+### <a name="2-configure-your-app-to-use-live-reload"></a>2. Configurer votre application pour utiliser le rechargement de Live
 
 Ajout de rechargement de Live aux applications mobiles existantes peut être effectué en trois étapes :
 
@@ -66,7 +66,7 @@ public partial class App : Application
 }
 ```
 
-### <a name="3-start-live-reloading"></a>3. Démarrez le rechargement dynamique.
+### <a name="3-start-live-reloading"></a>3. Démarrer le rechargement dynamique
 
 Compilez et déployez votre application. Une fois que l’application est déployée, ouvrez un fichier XAML, apporter des modifications et enregistrez le fichier. Vos modifications sont redéployées à la cible de déploiement.
 
@@ -110,18 +110,13 @@ Non. En fait, vous pouvez même démarrer toutes les cibles votre application pr
 * Fonctionne uniquement avec les bibliothèques .NET Standard.
 * Feuilles de style CSS ne sont pas pris en charge.
 * État de l’interface utilisateur ne peut pas être maintenu entre redéploiements ultérieurs, sauf si, à l’aide de MVVM.
-
-## <a name="live-reload-server"></a>Serveur de rechargement dynamique
-
-Dans les scénarios où une connexion à partir de l’application en cours d’exécution sur votre ordinateur (comme indiqué à l’aide de `localhost` ou `127.0.0.1` dans **Outils > Options > Xamarin > recharger de Live**) n’est pas possible (pare-feux, réseaux différents), Vous pouvez configurer un serveur distant à la place, ce qui seront de l’IDE et l’application pour établir la connexion.
-
-Rechargement dynamique utilise la norme [protocole MQTT](http://mqtt.org/) pour échanger des messages et peut donc communiquer avec [des serveurs tiers](https://github.com/mqtt/mqtt.github.io/wiki/servers). Il existe même [serveurs publics](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (également appelé *courtiers*) que vous pouvez utiliser. Rechargement dynamique a été testée avec `broker.hivemq.com` et `iot.eclipse.org` les noms d’hôte, ainsi que les services fournis par [www.cloudmqtt.com](https://www.cloudmqtt.com) et [www.cloudamqp.com](https://www.cloudamqp.com). Vous pouvez également déployer votre propre serveur MQTT dans le cloud, tels que [HiveMQ sur Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) ou [MQ lapin sur AWS](http://www.rabbitmq.com/ec2.html). 
-
-Vous pouvez configurer n’importe quel port, mais il est courant d’utiliser le port 1883 par défaut pour les serveurs distants. Live recharger les messages utilisent bout en bout AES symétrique un chiffrement renforcé, par conséquent, il est prudent de se connecter aux serveurs distants. Par défaut, la clé de chiffrement et le vecteur d’initialisation (IV) sont régénérées sur chaque session de Visual Studio.
+* Recharger les ressources à l’échelle de l’application (par exemple, **App.xaml** ou partagé les dictionnaires de ressources), la réinitialisation de navigation de l’application.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-Lorsque l’application est générée, les informations de **Outils > Options > Xamarin > recharger de Live** (clés nom, port et le chiffrement d’hôte) sont incorporées dans l’application, ainsi que quand `LiveReload.Init();` s’exécute, aucune correspondance ou la configuration est nécessaire pour la connexion réussisse.
+### <a name="app-doesnt-connect"></a>Application ne connecte pas
+
+Lorsque l’application est générée, les informations de **Outils > Options > Xamarin > recharger de Live** (clés nom, port et le chiffrement d’hôte) sont incorporées dans l’application, ainsi que quand `LiveReload.Init()` s’exécute, aucune correspondance ou la configuration est nécessaire pour la connexion réussisse.
 
 Autres que des problèmes de mise en réseau normales (pare-feu, l’appareil sur un autre réseau), la principale raison de que l’application ne peut pas se connecter IDE est parce que sa configuration est différent de celui de Visual Studio. Cela peut se produire si :
 
@@ -131,6 +126,13 @@ Autres que des problèmes de mise en réseau normales (pare-feu, l’appareil su
 
 Ces cas sont résolus par la génération et le déploiement de l’application à nouveau.
 
+### <a name="uninstalling-preview-1"></a>Désinstaller la version préliminaire 1
+
+Si vous avez un aperçu plus anciens et que vous rencontrez des problèmes de désinstaller, procédez comme suit :
+
+1. Supprimez le dossier **C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Remarque : Remplacez « Enterprise » de votre édition installée et « Aperçu » avec « 2017 » if vous installé dans un stable VS)
+2. Ouvrir un **invite de commandes développeur** pour que Visual Studio et les exécuter `devenv /updateconfiguration`. 
+
 ## <a name="tips--tricks"></a>Conseils et astuces
 
 * Tant que vous ne modifiez pas les paramètres de rechargement de Live (y compris les clés de chiffrement, par exemple si vous désactivez **générer automatiquement des clés de chiffrement**) et que vous générez à partir de la même machine, vous n’avez pas besoin générer et déployer l’application après le premier déployer, sauf si vous modifiez le code ou les dépendances. Vous pouvez simplement lancer à nouveau une application déjà déployée, et il se connecte au dernier hôte utilisé.
@@ -138,3 +140,21 @@ Ces cas sont résolus par la génération et le déploiement de l’application 
 * Il n’existe aucune limitation sur le nombre de périphériques vous pouvez vous connecter à la même session de Visual Studio. Vous pouvez déployer et démarrer l’application dans les appareils/simulateurs autant que nécessaire pour afficher le travail de rechargement dynamique sur chacun d'entre eux en même temps.
 
 * Rechargement dynamique recharge uniquement la partie interface utilisateur de votre application, mais il ne *pas* recréer vos pages, ni n’il remplace votre modèle d’affichage (ou le contexte de liaison). Cela signifie que la *ensemble* état de l’application est toujours conservé au-delà des rechargements, y compris vos dépendances injectées.
+
+## <a name="live-reload-server"></a>Serveur de rechargement dynamique
+
+Dans les scénarios où une connexion à partir de l’application en cours d’exécution sur votre ordinateur (comme indiqué à l’aide de `localhost` ou `127.0.0.1` dans **Outils > Options > Xamarin > recharger de Live**) n’est pas possible (pare-feux, réseaux différents), Vous pouvez configurer un serveur distant à la place, ce qui seront de l’IDE et l’application pour établir la connexion.
+
+Rechargement dynamique utilise la norme [protocole MQTT](http://mqtt.org/) pour échanger des messages et peut donc communiquer avec [des serveurs tiers](https://github.com/mqtt/mqtt.github.io/wiki/servers). Il existe même [serveurs publics](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (également appelé *courtiers*) que vous pouvez utiliser. Rechargement dynamique a été testée avec `broker.hivemq.com` et `iot.eclipse.org` les noms d’hôte, ainsi que les services fournis par [www.cloudmqtt.com](https://www.cloudmqtt.com) et [www.cloudamqp.com](https://www.cloudamqp.com). Vous pouvez également déployer votre propre serveur MQTT dans le cloud, tels que [HiveMQ sur Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) ou [MQ lapin sur AWS](http://www.rabbitmq.com/ec2.html). 
+
+Vous pouvez configurer n’importe quel port, mais il est courant d’utiliser le port 1883 par défaut pour les serveurs distants. Live recharger les messages utilisent bout en bout AES symétrique un chiffrement renforcé, par conséquent, il est prudent de se connecter aux serveurs distants. Par défaut, la clé de chiffrement et le vecteur d’initialisation (IV) sont régénérées sur chaque session de Visual Studio.
+
+Probablement le plus simple consiste à installer le [mosquitto](https://mosquitto.org) serveur dans un VM Ubuntu vide dans Azure :
+
+1. Créer une nouvelle machine virtuelle Ubuntu Server dans le portail Azure
+2. Ajouter une nouvelle règle de port entrant pour 1883 (port MQTT par défaut) dans l’onglet mise en réseau
+3. Ouvrez le [Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview) (bash mode)
+4. Tapez `ssh [USERNAME]@[PUBLIC_IP]` à l’aide du nom d’utilisateur que vous avez choisi de 1) et l’adresse IP publique indiqué dans votre page de vue d’ensemble de machine virtuelle
+5. Exécutez `sudo apt-get install mosquitto`, entrez le mot de passe que vous avez choisi de 1)
+
+Maintenant, vous pouvez utiliser cette IP pour se connecter à votre propre serveur MQTT.
