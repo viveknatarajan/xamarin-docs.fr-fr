@@ -1,6 +1,6 @@
 ---
 title: Bien démarrer avec Xamarin.Forms
-description: Xamarin.Forms est un kit de ressources d’interface utilisateur multiplateforme qui permet aux développeurs de créer efficacement des dispositions d’interface utilisateur natives pouvant être partagées entre les applications iOS, Android, Windows Phone et de plateforme Windows universelle. Cette série présente les notions de base du développement Xamarin.Forms et couvre la création d’applications multiplateformes et multi-écrans.
+description: Xamarin.Forms est un kit de ressources d’interface utilisateur multiplateforme qui permet aux développeurs de créer efficacement des dispositions d’interfaces utilisateur natives pouvant être partagées entre des applications iOS, Android et UWP (plateforme Windows universelle). Cette série présente les notions de base du développement Xamarin.Forms et couvre la création d’applications multiplateformes et multi-écrans.
 ms.prod: xamarin
 ms.assetid: d87d7232-242c-4ec4-81e9-36103d7e8fcf
 ms.technology: xamarin-forms
@@ -8,15 +8,15 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 58c0fa2041c106f697166891c0e88a409283c17f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da5547de1f21b1f02462f47a4e6ffee43dd0d1bf
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="getting-started-with-xamarinforms"></a>Bien démarrer avec Xamarin.Forms
 
-_Xamarin.Forms est un kit de ressources d’interface utilisateur multiplateforme qui permet aux développeurs de créer efficacement des dispositions d’interfaces utilisateur natives partageables entre des applications iOS, Android, Windows Phone et UWP (plateforme Windows universelle). Cette série présente les notions de base du développement Xamarin.Forms et couvre la création d’applications multiplateformes et multi-écrans._
+_Xamarin.Forms est un kit de ressources d’interface utilisateur multiplateforme qui permet aux développeurs de créer efficacement des dispositions d’interfaces utilisateur natives pouvant être partagées entre des applications iOS, Android et UWP (plateforme Windows universelle). Cette série présente les notions de base du développement Xamarin.Forms et couvre la création d’applications multiplateformes et multi-écrans._
 
 Pour obtenir une vue d’ensemble des pratiques d’installation et de configuration qui s’appliquent au développement multiplateforme, consultez [Configuration requise pour Xamarin.Forms](installation.md) et [Installation](~/cross-platform/get-started/installation/index.md).
 

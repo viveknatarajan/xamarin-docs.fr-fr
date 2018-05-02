@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2018
-ms.openlocfilehash: 238e224a1dfbc17089c8b6d03e78043f77f3f383
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 18c49afdd08921b81573da94c23e66f1dd48a25f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="preparing-an-application-for-release"></a>Préparation d’une application pour la mise en production
 
@@ -192,7 +192,7 @@ Notez que les builds Debug définissent automatiquement certaines autorisations 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Même lorsque le [débogage est désactivé](#Disable_Debugging), les pirates peuvent recréer le package d’une application, en ajoutant ou supprimant des options de configuration ou des autorisations. Ils peuvent alors rétroconcevoir, déboguer ou falsifier l’application.
-[Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) peut être utilisé pour obfusquer le code managé et injecter du code de détection de l’état de sécurité à l’exécution dans une application Xamarin.Android au moment de la génération.
+[Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) peut être utilisé pour obfusquer le code managé et injecter du code de détection de l’état de sécurité à l’exécution dans une application Xamarin.Android au moment de la génération pour détecter et répondre si l’application s’exécute sur un appareil rooté.
 
 Dotfuscator CE est fourni avec Visual Studio. Toutefois, seul Visual Studio 2015 Update 3 (et versions ultérieures) contient la version correcte fonctionnant avec Xamarin.Android. Pour utiliser Dotfuscator, cliquez sur **Outils > PreEmptive Protection - Dotfuscator**.
 
@@ -202,7 +202,7 @@ Une fois configuré, Dotfuscator CE protégera automatiquement chaque build cré
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 Même lorsque le [débogage est désactivé](#Disable_Debugging), les pirates peuvent recréer le package d’une application, en ajoutant ou supprimant des options de configuration ou des autorisations. Ils peuvent alors rétroconcevoir, déboguer ou falsifier l’application.
-Même s’il ne prend pas en charge Visual Studio pour Mac, vous pouvez utiliser [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) avec Visual Studio pour obfusquer le code managé et injecter du code de détection de l’état de sécurité à l’exécution dans une application Xamarin.Android au moment de la génération.
+Même s’il ne prend pas en charge Visual Studio pour Mac, vous pouvez utiliser [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) avec Visual Studio pour obfusquer le code managé et injecter du code de détection de l’état de sécurité à l’exécution dans une application Xamarin.Android au moment de la génération pour détecter et répondre si l’application s’exécute sur un appareil rooté.
 
 Pour configurer Dotfuscator CE, consultez [Utilisation de Dotfuscator Community Edition avec Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator).
 Une fois configuré, Dotfuscator CE protégera automatiquement chaque build créée.

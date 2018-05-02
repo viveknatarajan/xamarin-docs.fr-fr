@@ -6,12 +6,12 @@ ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
-ms.openlocfilehash: e8d1064e76c2ccdeb14302d30428cd932444a0f5
-ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
+ms.date: 04/26/2018
+ms.openlocfilehash: f5c05ce308a10747ad3e18e4a1d141d29fd6c8a1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms - Démarrage rapide
 
@@ -35,7 +35,7 @@ Créez l’application Phoneword comme suit :
 
     ![](quickstart-images/vs/new-project.png "Modèles de projet multiplateforme")
 
-4. Dans la boîte de dialogue **Nouvelle application multiplateforme**, cliquez sur **Application vide**, sélectionnez **Xamarin.Forms** comme technologie d’interface utilisateur, sélectionnez **.NET Standard** comme stratégie de partage de code et cliquez sur le bouton **OK** :
+4. Dans la boîte de dialogue **Nouvelle application multiplateforme**, cliquez sur **Application vide**, sélectionnez **.NET Standard** comme stratégie de partage de code et cliquez sur le bouton **OK** :
 
     ![](quickstart-images/vs/new-app.png "Nouvelle application multiplateforme")
 
@@ -53,7 +53,7 @@ Créez l’application Phoneword comme suit :
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, WinPhone, Windows" Value="20" />
+                <On Platform="Android, UWP" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -162,7 +162,7 @@ Créez l’application Phoneword comme suit :
 
     Enregistrez les modifications apportées à **App.xaml.cs** en appuyant sur **Ctrl+S** et fermez le fichier.
 
-11. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword**, puis sélectionnez **Ajouter > Nouvel élément...** :
+11. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword**, puis sélectionnez **Ajouter > Nouvel élément...**  :
 
     ![](quickstart-images/vs/add-new-item.png "Ajouter un nouvel élément")
 
@@ -228,7 +228,7 @@ Créez l’application Phoneword comme suit :
 
     Enregistrez les modifications apportées à **PhoneTranslator.cs** en appuyant sur **Ctrl+S** et fermez le fichier.
 
-14. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword**, puis sélectionnez **Ajouter > Nouvel élément...** :
+14. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword**, puis sélectionnez **Ajouter > Nouvel élément...**  :
 
     ![](quickstart-images/vs/add-new-item.png "Ajouter un nouvel élément")
 
@@ -253,7 +253,7 @@ Créez l’application Phoneword comme suit :
     > [!NOTE]
     > Le code commun pour l’application est maintenant complet. Le code du numéroteur téléphonique spécifique à la plateforme sera désormais implémenté comme [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
-17. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword.iOS**, puis sélectionnez **Ajouter > Nouvel élément...** :
+17. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword.iOS**, puis sélectionnez **Ajouter > Nouvel élément...**  :
 
     ![](quickstart-images/vs/add-new-item-ios.png "Ajouter un nouvel élément")
 
@@ -285,7 +285,7 @@ Créez l’application Phoneword comme suit :
 
     Enregistrez les modifications apportées à **PhoneDialer.cs** en appuyant sur **Ctrl+S** et fermez le fichier.
 
-20. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword.Android**, puis sélectionnez **Ajouter > Nouvel élément...** :
+20. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword.Android**, puis sélectionnez **Ajouter > Nouvel élément...**  :
 
     ![](quickstart-images/vs/add-new-item-android.png "Ajouter un nouvel élément")
 
@@ -385,7 +385,7 @@ Créez l’application Phoneword comme suit :
 
     Enregistrez les modifications apportées au manifeste en appuyant sur **Ctrl+S** et fermez le fichier.
 
-26. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword.UWP**, puis sélectionnez **Ajouter > Nouvel élément...** :
+26. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword.UWP**, puis sélectionnez **Ajouter > Nouvel élément...**  :
 
     ![](quickstart-images/vs/add-new-item-uwp.png "Ajouter un nouvel élément")
 
@@ -444,7 +444,7 @@ Créez l’application Phoneword comme suit :
 
     Enregistrez les modifications apportées à **PhoneDialer.cs** en appuyant sur **Ctrl+S** et fermez le fichier.
 
-29. Dans l’**Explorateur de solutions**, dans le projet **Phoneword.UWP**, cliquez avec le bouton droit sur **Références**, puis sélectionnez **Ajouter une référence...** :
+29. Dans l’**Explorateur de solutions**, dans le projet **Phoneword.UWP**, cliquez avec le bouton droit sur **Références**, puis sélectionnez **Ajouter une référence...**  :
 
     ![](quickstart-images/vs/uwp-add-reference.png "Ajouter une référence")
 
@@ -501,7 +501,7 @@ Créez l’application Phoneword comme suit :
 
     ![](quickstart-images/xs/configure-project.png "Configurer le projet Formulaires")
 
-5. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...** :
+5. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...**  :
 
     ![](quickstart-images/xs/add-new-file.png "Ajouter un nouveau fichier")
 
@@ -523,7 +523,7 @@ Créez l’application Phoneword comme suit :
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, WinPhone, Windows" Value="20" />
+                <On Platform="Android, UWP" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -630,9 +630,9 @@ Créez l’application Phoneword comme suit :
     }
     ```
 
-    Enregistrez les modifications apportées à **Phoneword.cs** en choisissant **Fichier > Enregistrer** (ou en appuyant sur **&#8984;+S**) et fermez le fichier.
+    Enregistrez les modifications apportées à **App.xaml.cs** en choisissant **Fichier > Enregistrer** (ou en appuyant sur **&#8984;+S**) et fermez le fichier.
 
-13. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...** :
+13. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...**  :
 
     ![](quickstart-images/xs/add-new-translator-file.png "Ajouter un nouveau fichier")
 
@@ -698,7 +698,7 @@ Créez l’application Phoneword comme suit :
 
     Enregistrez les modifications apportées à **PhoneTranslator.cs** en choisissant **Fichier > Enregistrer** (ou en appuyant sur **&#8984;+S**) et fermez le fichier.
 
-16. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...** :
+16. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...**  :
 
     ![](quickstart-images/xs/add-new-interface.png "Ajouter un nouveau fichier")
 
@@ -722,7 +722,7 @@ Créez l’application Phoneword comme suit :
     > [!NOTE]
     > Le code commun pour l’application est maintenant complet. Le code du numéroteur téléphonique spécifique à la plateforme sera désormais implémenté comme [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
-19. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword.iOS**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...** :
+19. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword.iOS**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...**  :
 
     ![](quickstart-images/xs/add-new-file-ios.png "Ajouter un nouveau fichier")
 
@@ -754,7 +754,7 @@ Créez l’application Phoneword comme suit :
 
     Enregistrez les modifications apportées à **PhoneDialer.cs** en choisissant **Fichier > Enregistrer** (ou en appuyant sur **&#8984;+S**) et fermez le fichier.
 
-22. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword.Droid**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...** :
+22. Dans le **Panneau Solutions**, sélectionnez le projet **Phoneword.Droid**, cliquez avec le bouton droit et sélectionnez **Ajouter > Nouveau fichier...**  :
 
     ![](quickstart-images/xs/add-new-file-android.png "Ajouter un nouveau fichier")
 

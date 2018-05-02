@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 2833c645a07a3717d9baeeec11e5fa7f9087725a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="build-process"></a>Processus de génération
 
@@ -110,7 +110,7 @@ Les propriétés d’installation contrôlent le comportement des cibles `Instal
 ### <a name="packaging-properties"></a>Propriétés de packaging
 
 Les propriétés de packaging contrôlent la création du package Android et sont utilisées par les cibles `Install` et `SignAndroidPackage`.
-Les [propriétés de signature](#Signing_Properties) sont également impliquées pour le packaging des applications en version Release.
+Les [propriétés de signature](#Signing_Properties) sont également impliquées pour le packaging des applications d’une version.
 
 
 -   **AndroidApkSigningAlgorithm** &ndash; valeur de chaîne qui spécifie l’algorithme de signature à utiliser avec `jarsigner -sigalg`.
@@ -238,7 +238,7 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
 -   **AndroidSdkBuildToolsVersion** &ndash; le package d’outils de génération du SDK Android fournit entre autres les outils **aapt** et **zipalign**. Plusieurs versions différentes du package d’outils de génération peuvent être installées en parallèle. Le package d’outils de génération choisi pour l’empaquetage est réalisé en recherchant et en utilisant, le cas échéant, une version « favorite » des outils de génération ; s’il n’en existe *pas*, le package d’outils de génération associé à la version la plus récente sera utilisé.
 
-    La propriété MSBuild `$(AndroidSdkBuildToolsVersion)` contient la version préférée des outils de génération. Le système de génération de Xamarin.Android fournit une valeur par défaut dans `Xamarin.Android.Common.targets`, et vous pouvez remplacer la valeur par défaut dans votre fichier projet et choisir une autre version des outils de génération, si (par exemple) la version la plus récente de aapt se bloque, alors qu’une version antérieure de aapt est connue pour fonctionner.
+    La propriété MSBuild `$(AndroidSdkBuildToolsVersion)` contient la version préférée des outils de génération. Le système de génération de Xamarin.Android fournit une valeur par défaut dans `Xamarin.Android.Common.targets`, et vous pouvez remplacer la valeur par défaut dans votre fichier projet et choisir une autre version des outils de génération, si (par exemple) la version la plus récente de aapt plante, alors qu’une version antérieure de aapt est connue pour fonctionner.
 
 -   **AndroidSupportedAbis** &ndash; propriété de type chaîne qui contient une liste d’ABI (avec un point-virgule [`;`] comme séparateur) qui doivent être inclus dans le fichier `.apk`.
 
@@ -330,7 +330,7 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
     Seules les chaînes avec le format de remplissage « 0 » et « Dx » sont prises en charge, car la valeur DOIT être un entier.
     
-    Éléments importants prédéfinis
+    Éléments clés prédéfinis
 
     -   **abi**  &ndash; insère l’ABI ciblé pour l’application
         -   1 &ndash; `armeabi`
