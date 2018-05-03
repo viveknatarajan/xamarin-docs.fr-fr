@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduction à Xamarin.iOS pour Visual Studio
 
@@ -37,38 +37,24 @@ Il existe quelques exigences à respecter lors du développement pour iOS dans V
 Un certain nombre d’options de configuration sont disponibles pour vous permettre de déterminer laquelle fonctionne le mieux pour vos besoins de développement. Elles sont notamment les suivantes :
 
 -  Utilisez un Mac comme ordinateur de développement principal et exécutez une machine virtuelle Windows sur laquelle Visual Studio est installé. Nous recommandons d’utiliser un logiciel de machine virtuelle comme [Parallels](http://www.parallels.com/products/desktop/) ou [VMWare](http://www.vmware.com/products/fusion/).
--  Utilisez un Mac exactement comme un hôte de build. Dans ce scénario, il serait simplement connecté au même réseau qu’un ordinateur Windows sur lequel les outils [nécessaires](~/cross-platform/get-started/installation/windows.md#installation) sont installés.
+-  Utilisez un Mac exactement comme un hôte de build. Dans ce scénario, il serait connecté au même réseau qu’un ordinateur Windows sur lequel les outils [nécessaires](~/cross-platform/get-started/installation/windows.md#installation) sont installés.
 
 
 Dans les deux cas, vous devez effectuer les étapes suivantes :
 
-- [Installer les outils Xamarin.iOS sur votre hôte Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Configurer votre Mac](~/ios/get-started/installation/windows/index.md#configuring)
+- [Installer Visual Studio pour Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 - [Installer les outils Xamarin sur Windows](~/cross-platform/get-started/installation/windows.md)
-
-Pour développer avec Xamarin dans Visual Studio, vous devez utiliser **au moins** Visual Studio Professional 2015 ou une version ultérieure. Xamarin **ne fonctionne pas** avec les éditions Express de Visual Studio, car elles ne prennent pas en charge les compléments.
 
 ## <a name="connecting-to-the-mac"></a>Connexion au Mac
 
-Vous pouvez vous connecter à votre hôte de build Mac par le biais de l’icône de la barre d’outils de Visual Studio (à condition qu’une application iOS soit ouverte) :
+Pour connecter Visual Studio à votre hôte de build Mac, suivez les instructions du guide [Appairer avec un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Icône Se connecter au Mac")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
-
-ou en accédant à **Outils > Options** dans Visual Studio, puis en sélectionnant **Xamarin > Paramètres iOS** :
-
- [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "Option iOS")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
-
-Vous pouvez changer l’hôte de build Mac en cliquant sur le bouton **Rechercher Mac Agent Xamarin**. L’écran suivant s’affiche pour mettre à jour l’hôte de build Mac :
-
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Boîte de dialogue Mac Agent Xamarin")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## <a name="visual-studio-toolbar-overview"></a>Vue d’ensemble de la barre d’outils de Visual Studio
 
 Xamarin iOS pour Visual Studio ajoute des éléments à la barre d’outils standard et à la nouvelle barre d’outils iOS.
 Les fonctions de ces barres d’outils sont décrites ci-dessous.
-
-
 
 ### <a name="standard-toolbar"></a>Barre d’outils standard
 
@@ -174,7 +160,7 @@ Pour ajouter des objets à votre vue, utilisez le volet **Boîte à outils** pou
 
 ### <a name="device-logging"></a>Journalisation des appareils
 
-Dans Visual Studio 2015 et les versions ultérieures, les blocs de journaux iOS et Android sont unifiés.
+Dans Visual Studio 2017, les blocs de journaux iOS et Android sont unifiés.
 
 La nouvelle fenêtre Journal de l’appareil pour Visual Studio permet d’afficher les journaux des appareils Android et iOS. Pour l’afficher, exécutez l’une des commandes suivantes :
 

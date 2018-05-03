@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: bb551b548f241cacfc4cb700d247684c15f6fcf7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 212a190b56465a8401b17b7a379a1f083d8f8d87
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Instructions de configuration du pare-feu Xamarin
 
@@ -42,7 +42,7 @@ Les adresses suivantes doivent être ajoutées à la liste pour permettre l’ac
 
 -  components.xamarin.com (pour utiliser le magasin de composants Xamarin)
 -  xampubdl.blob.core.windows.net (héberge les téléchargements du magasin de composants)
--  www.nuget.org (pour accéder à NuGet)
+-  www\.nuget.org (pour accéder à NuGet)
 -  az320820.vo.msecnd.net (téléchargements NuGet)
 -  dl-ssl.google.com (composants Google)
 

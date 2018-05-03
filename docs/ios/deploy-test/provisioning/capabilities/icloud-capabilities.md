@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 7e18bff7f32303cb0c5016e4ade4b39723921534
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e426423854e7c569576c374ea1284c4de099a2d1
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="icloud-capabilities"></a>Fonctionnalités iCloud
 
@@ -21,14 +21,8 @@ iCloud offre aux utilisateurs d’appareil iOS un moyen simple et pratique de st
 
 L’ajout d’iCloud à une application est un peu plus difficile que d’autres services d’applications à cause des _conteneurs_. Les conteneurs utilisés dans iCloud servent à stocker les informations d’une application et permettent la séparation de toutes les informations contenues dans un compte iCloud unique, à l’image du sandboxing sur l’appareil iOS d’un utilisateur. Pour plus d’informations sur les conteneurs, consultez le guide [Présentation de CloudKit](~/ios/data-cloud/intro-to-cloudkit.md).
 
-<!--# Xcode
-
-The steps in section [Adding App Services ](~/ios/deploy-test/provisioning/capabilities/index.md) above can be used to toggle the required iCloud capability. Depending on which means of storage is being used in your app, you may need to do additional setup. The image below shows the iCloud capabilities pane:
-
- ![iCloud Capability section](icloud-capabilities-images/image21.png)
-
-First select the required service. If iCloud Documents or CloudKit have been selected, you must select a container. Selecting the default container will create a new container that is unique to the app. Alternatively, if you have created a container either via Xcode or the developer portal, select it here.
--->
+> [!IMPORTANT]
+> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs à gérer correctement le Règlement général sur la protection des données (RGPD) de l’Union européenne.
 
 <a name="icloud-developer-center" />
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f30e49122c343a967a2348c03ce4f06d9452dc76
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8aac58546e51525ae22c09218f90addef911669a
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-troubleshooting"></a>Résolution des problèmes de connexion
 
@@ -114,42 +114,42 @@ L’hôte de build Xamarin des versions antérieures de Xamarin.iOS n’est plus
 
 <a name="knownissues" />
 
-## <a name="known-issues-and-limitations"></a>Problèmes connus et limitations
+### <a name="known-issues-and-limitations"></a>Problèmes connus et limitations
 
 > [!NOTE]
 > Cette section s’applique uniquement si vous vous êtes déjà connecté avec succès à l’hôte de build Mac avec votre nom d’utilisateur et mot de passe Mac à l’aide du client SSH OpenSSH, comme indiqué aux étapes 8 et 9 ci-dessus.
 
-### <a name="invalid-credentials-please-try-again"></a>« Informations d’identification non valides. Réessayez. »
+#### <a name="invalid-credentials-please-try-again"></a>« Informations d’identification non valides. Réessayez. »
 
 Causes connues :
 
 - **Limitation** : Cette erreur peut survenir lors d’une tentative de connexion à l’hôte de build à l’aide du _nom complet_ du compte si ce nom comprend un caractère accentué. Il s’agit d’une limitation de la [bibliothèque SSH.NET](https://sshnet.codeplex.com/) que Xamarin utilise pour la connexion SSH. **Solution de contournement** : Voir l’étape 5 ci-dessus.
 
-### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>« Authentification impossible avec des clés SSH. Essayez d’abord de vous connecter avec des informations d’identification »
+#### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>« Authentification impossible avec des clés SSH. Essayez d’abord de vous connecter avec des informations d’identification »
 
 Cause connue :
 
 - **Restriction de sécurité SSH** : Ce message signifie généralement que l’un des fichiers ou répertoires dans le chemin d’accès complet **$HOME/.ssh/authorized\_keys** sur le Mac dispose d’autorisations d’écriture activées pour d’_autres_ membres ou des membres du _groupe_. **Correctif courant** : Exécutez `chmod og-w "$HOME"` dans une invite de commandes Terminal sur le Mac. Pour plus d’informations sur le fichier ou répertoire particulier à l’origine du problème, exécutez `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` dans Terminal, puis ouvrez le fichier **sshd.log** à partir de votre bureau et recherchez « Authentication refused: bad ownership or modes » (Authentification refusée : propriété ou modes incorrects).
 
-### <a name="trying-to-connect-never-completes"></a>« Tentative de connexion... » ne s’arrête jamais
+#### <a name="trying-to-connect-never-completes"></a>« Tentative de connexion... » ne s’arrête jamais
 
-- **Bogue [n° 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : Ce problème peut se produire sur Xamarin 4.1 si l’**environnement de démarrage** dans le menu contextuel **Options avancées** de l’utilisateur Mac dans **Préférences Système &gt; Utilisateurs et groupes** est défini sur une valeur autre que **/bin/bash**. (À compter de Xamarin 4.2, ce scénario entraîne le message d’erreur « Connexion impossible ».) **Solution de contournement** : Rétablissez la valeur par défaut d’origine **/bin/bash** pour l’**environnement de démarrage**.
+- **Bogue [n° 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  : Ce problème peut se produire sur Xamarin 4.1 si l’**environnement de démarrage** dans le menu contextuel **Options avancées** de l’utilisateur Mac dans **Préférences Système &gt; Utilisateurs et groupes** est défini sur une valeur autre que **/bin/bash**. (À compter de Xamarin 4.2, ce scénario entraîne le message d’erreur « Connexion impossible ».) **Solution de contournement** : Rétablissez la valeur par défaut d’origine **/bin/bash** pour l’**environnement de démarrage**.
 
 <a name="tryagain" />
 
-### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>« Connexion impossible à MacBuildHost.local. Réessayez. »
+#### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>« Connexion impossible à MacBuildHost.local. Réessayez. »
 
 Causes signalées :
 
 - **Bogue** : Certains utilisateurs ont vu, avec une erreur plus détaillée dans les fichiers journaux, le message d’erreur « Une erreur inattendue s’est produite pendant la configuration de SSH pour l’utilisateur... L’opération de session a expiré » lors d’une tentative de connexion à l’hôte de build à l’aide d’Active Directory ou d’un autre compte d’utilisateur de domaine de service d’annuaire. **Solution de contournement :** Connectez-vous à l’hôte de build à l’aide d’un compte d’utilisateur local à la place.
 
-- **Bogue** : Certains utilisateurs ont vu cette erreur lors d’une tentative de connexion à l’hôte de build en double-cliquant sur le nom du Mac dans la boîte de dialogue de connexion. **Solution de contournement possible** : [Ajoutez manuellement le Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add) à l’aide de l’adresse IP.
+- **Bogue** : Certains utilisateurs ont vu cette erreur lors d’une tentative de connexion à l’hôte de build en double-cliquant sur le nom du Mac dans la boîte de dialogue de connexion. **Solution de contournement possible** : [Ajoutez manuellement le Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) à l’aide de l’adresse IP.
 
-- **Bogue [n° 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** : Certains utilisateurs ont rencontré cette erreur lors de l’utilisation d’une connexion réseau sans fil entre l’hôte de build Mac et Windows. **Solution de contournement possible** : Déplacez les deux ordinateurs sur une connexion réseau câblée.
+- **Bogue [n° 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**  : Certains utilisateurs ont rencontré cette erreur lors de l’utilisation d’une connexion réseau sans fil entre l’hôte de build Mac et Windows. **Solution de contournement possible** : Déplacez les deux ordinateurs sur une connexion réseau câblée.
 
-- **Bogue [n° 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)** : Sur Xamarin 4.0, ce message s’affiche chaque fois que le fichier **$HOME/.bashrc** sur le Mac contient une erreur. (À compter de Xamarin 4.1, les erreurs contenues dans le fichier **.bashrc** n’affectent plus le processus de connexion.) **Solution de contournement** : Déplacez le fichier **.bashrc** vers un emplacement de sauvegarde (ou supprimez-le si vous savez que vous n’en avez pas besoin).
+- **Bogue [n° 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**  : Sur Xamarin 4.0, ce message s’affiche chaque fois que le fichier **$HOME/.bashrc** sur le Mac contient une erreur. (À compter de Xamarin 4.1, les erreurs contenues dans le fichier **.bashrc** n’affectent plus le processus de connexion.) **Solution de contournement** : Déplacez le fichier **.bashrc** vers un emplacement de sauvegarde (ou supprimez-le si vous savez que vous n’en avez pas besoin).
 
-- **Bogue [n° 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : Cette erreur peut survenir si l’**environnement de démarrage** dans le menu contextuel **Options avancées** de l’utilisateur Mac dans **Préférences Système > Utilisateurs et groupes** est défini sur une valeur autre que**/bin/bash**. **Solution de contournement** : Rétablissez la valeur par défaut d’origine **/bin/bash** pour l’**environnement de démarrage**.
+- **Bogue [n° 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  : Cette erreur peut survenir si l’**environnement de démarrage** dans le menu contextuel **Options avancées** de l’utilisateur Mac dans **Préférences Système > Utilisateurs et groupes** est défini sur une valeur autre que **/bin/bash**. **Solution de contournement** : Rétablissez la valeur par défaut d’origine **/bin/bash** pour l’**environnement de démarrage**.
 
 - **Limitation** : Cette erreur peut survenir si l’hôte de build Mac est connecté à un routeur qui n’a pas accès à Internet (ou si le Mac utilise un serveur DNS qui expire quand la recherche DNS inversée de l’ordinateur Windows est demandée). Visual Studio met environ 30 secondes pour récupérer l’empreinte digitale SSH et risque de ne pas parvenir à se connecter.
 
@@ -181,7 +181,7 @@ Causes signalées :
 
 <a name="clearing" />
 
-### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Désactivation des agents Broker, IDB, de build et Designer sur le Mac
+#### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Désactivation des agents Broker, IDB, de build et Designer sur le Mac
 
 Si vos fichiers journaux indiquent un problème lors des étapes « Installation », « Chargement » ou « Démarrage » pour n’importe lequel des agents de Mac, essayez de supprimer le dossier de cache **XMA** pour forcer Visual Studio à les charger à nouveau.
 
@@ -201,31 +201,31 @@ Si vos fichiers journaux indiquent un problème lors des étapes « Installatio
     del %localappdata%\Temp\Xamarin\XMA
     ```
     
-## <a name="warning-messages"></a>Messages d’avertissement
+### <a name="warning-messages"></a>Messages d’avertissement
 
 Cette section décrit quelques messages qui peuvent s’afficher dans les fenêtres et journaux de Sortie et que vous pouvez généralement ignorer.
 
-### <a name="there-is-a-mismatch-between-the-installed-xamarinios--and-the-local-xamarinios"></a>« Il existe une incompatibilité entre la version installée de Xamarin.iOS ... et la version locale de Xamarin.iOS »
+#### <a name="there-is-a-mismatch-between-the-installed-xamarinios--and-the-local-xamarinios"></a>« Il existe une incompatibilité entre la version installée de Xamarin.iOS ... et la version locale de Xamarin.iOS »
 
 À partir du moment où vous avez vérifié que Mac et Windows sont tous les deux mis à jour avec le même canal de distribution Xamarin, cet avertissement peut être ignoré.
 
-### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>« Échec de l’exécution de 'ls /usr/bin/mono' : ExitStatus=1 »
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>« Échec de l’exécution de 'ls /usr/bin/mono' : ExitStatus=1 »
 
 Ce message peut être ignoré tant que le Mac exécute OS X 10.11 (El Capitan) ou une version plus récente. Ce message n’est pas un problème sur OS X 10.11, car Xamarin vérifie également **/usr/local/bin/mono**, qui est l’emplacement attendu correct pour `mono` sur OS X 10.11.
 
-### <a name="bonjour-service-macbuildhost-did-not-respond-with-its-ip-address"></a>« Le service Bonjour 'MacBuildHost' n’a pas répondu avec son adresse IP. »
+#### <a name="bonjour-service-macbuildhost-did-not-respond-with-its-ip-address"></a>« Le service Bonjour 'MacBuildHost' n’a pas répondu avec son adresse IP. »
 
-Ce message peut être ignoré sauf si vous remarquez que la boîte de dialogue de connexion n’affiche pas l’adresse IP de l’hôte de build Mac. Si l’adresse IP ne figure _pas_ dans cette boîte de dialogue, vous pouvez toujours [ajouter le Mac manuellement](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add).
+Ce message peut être ignoré sauf si vous remarquez que la boîte de dialogue de connexion n’affiche pas l’adresse IP de l’hôte de build Mac. Si l’adresse IP ne figure _pas_ dans cette boîte de dialogue, vous pouvez toujours [ajouter le Mac manuellement](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac).
 
-### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>« Utilisateur a non valide à partir de 10.1.8.95 » et « input\_userauth\_request : utilisateur a non valide [autorisation préalable] »
+#### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>« Utilisateur a non valide à partir de 10.1.8.95 » et « input\_userauth\_request : utilisateur a non valide [autorisation préalable] »
 
 Vous pouvez remarquer ce message si vous consultez le fichier **sshd.log**. Ces messages font partie du processus de connexion normal. Ils s’affichent car Xamarin utilise temporairement le nom d’utilisateur **a** lors de la récupération de l’_empreinte digitale SSH_.
 
-## <a name="output-window-and-log-files"></a>Fenêtre Sortie et fichiers journaux
+### <a name="output-window-and-log-files"></a>Fenêtre Sortie et fichiers journaux
 
 Si Visual Studio rencontre une erreur lors de la connexion à l’hôte de build, il y a deux emplacements dans lesquels rechercher les messages supplémentaires : la fenêtre Sortie et les fichiers journaux.
 
-### <a name="output-window"></a>Fenêtre Sortie
+#### <a name="output-window"></a>Fenêtre Sortie
 
 La fenêtre Sortie est le meilleur endroit pour commencer. Elle affiche des messages relatifs aux principales étapes et erreurs de connexion. Pour afficher les messages Xamarin dans la fenêtre Sortie :
 
@@ -235,7 +235,7 @@ La fenêtre Sortie est le meilleur endroit pour commencer. Elle affiche des mess
 
 [![](troubleshooting-images/troubleshooting-image11.png "Sélectionner Xamarin sous l’onglet Sortie")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
-### <a name="log-files"></a>Fichiers journaux
+#### <a name="log-files"></a>Fichiers journaux
 
 Si la fenêtre Sortie n’inclut pas suffisamment d’informations pour diagnostiquer le problème, les fichiers journaux constituent l’emplacement suivant à consulter. Les fichiers journaux contiennent des messages de diagnostic supplémentaires qui n’apparaissent pas dans la fenêtre Sortie. Pour consulter les fichiers journaux :
 
@@ -250,25 +250,25 @@ Si la fenêtre Sortie n’inclut pas suffisamment d’informations pour diagnost
 
     [![](troubleshooting-images/troubleshooting-image12.png "Collecter les journaux à partir d’Aide > Xamarin > Journaux Zip")](troubleshooting-images/troubleshooting-image12.png#lightbox)
 
-4. Quand vous ouvrez le fichier .zip, une liste de fichiers semblable à l’exemple ci-dessous s’affiche. Concernant les erreurs de connexion, les fichiers les plus importants sont les fichiers **\*Ide.log** et **\*Ide.svclog**. Ces fichiers contiennent les mêmes messages dans deux formats légèrement différents. Le fichier**.svclog** est au format XML. Il est utile si vous voulez parcourir les messages. Le fichier **.log** est du texte brut. Il est utile si vous voulez filtrer les messages à l’aide d’outils en ligne de commande.
+4. Quand vous ouvrez le fichier .zip, une liste de fichiers semblable à l’exemple ci-dessous s’affiche. Concernant les erreurs de connexion, les fichiers les plus importants sont les fichiers **\*Ide.log** et **\*Ide.svclog**. Ces fichiers contiennent les mêmes messages dans deux formats légèrement différents. Le fichier **.svclog** est au format XML. Il est utile si vous voulez parcourir les messages. Le fichier **.log** est du texte brut. Il est utile si vous voulez filtrer les messages à l’aide d’outils en ligne de commande.
 
-    Pour parcourir tous les messages, sélectionnez et ouvrez le fichier **.svclog** :
+    Pour parcourir tous les messages, sélectionnez et ouvrez le fichier  **.svclog** :
 
     [![](troubleshooting-images/troubleshooting-image13.png "Sélectionner le fichier svclog")](troubleshooting-images/troubleshooting-image13.png#lightbox)
 
-5. Le fichier **.svclog** s’ouvre dans **Microsoft Service Trace Viewer**. Vous pouvez parcourir les messages par thread pour voir les groupes connexes de messages. Pour parcourir par thread, sélectionnez tout d’abord l’onglet **Graphe**, puis cliquez sur le menu déroulant **Mode disposition** et sélectionnez **Thread** :
+5. Le fichier  **.svclog** s’ouvre dans **Microsoft Service Trace Viewer**. Vous pouvez parcourir les messages par thread pour voir les groupes connexes de messages. Pour parcourir par thread, sélectionnez tout d’abord l’onglet **Graphe**, puis cliquez sur le menu déroulant **Mode disposition** et sélectionnez **Thread** :
 
     [![](troubleshooting-images/troubleshooting-image14.png "Cliquer sur le menu déroulant Mode disposition et sélectionner Thread")](troubleshooting-images/troubleshooting-image14.png#lightbox)
 
 <a name="verboselogs" />
 
-### <a name="verbose-log-files"></a>Fichiers journaux détaillés
+#### <a name="verbose-log-files"></a>Fichiers journaux détaillés
 
 Si les fichiers journaux normaux ne fournissent toujours pas suffisamment d’informations pour diagnostiquer le problème, une dernière technique à essayer consiste à activer la journalisation détaillée. Les journaux détaillés sont également privilégiés sur les rapports de bogue.
 
 1. Quittez Visual Studio.
 
-2. Démarrez une [**invite de commandes développeur**](https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx).
+2. Démarrez une [**invite de commandes développeur**](https://msdn.microsoft.com/library/ms229859(v=vs.110).aspx).
 
 3. Exécutez la commande suivante dans l’invite de commandes pour lancer Visual Studio avec la journalisation détaillée :
 
@@ -287,6 +287,12 @@ Si les fichiers journaux normaux ne fournissent toujours pas suffisamment d’in
    ```
 
 Si ces fichiers journaux détaillés ne fournissent pas suffisamment d’indices pour résoudre le problème directement, [envoyez un nouveau rapport de bogue](https://bugzilla.xamarin.com/newbug) en joignant le fichier .zip de l’étape 5 et le fichier .log de l’étape 6.
+
+## <a name="troubleshooting-automatic-mac-provisioning"></a>Résolution des problèmes de provisionnement Mac automatique
+
+### <a name="ide-log-files"></a>Fichiers journaux IDE
+
+Si vous rencontrez des problèmes d’utilisation du [provisionnement Mac automatique](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning), examinez les journaux IDE Visual Studio 2017, stockés dans **%LOCALAPPDATA%\Xamarin\Logs\15.0**.
 
 ## <a name="troubleshooting-build-and-deployment-errors"></a>Résolution des erreurs de build et de déploiement
 
@@ -324,7 +330,7 @@ Lancez Xcode sur le Mac, puis vérifiez que votre compte de développeur Apple e
 
 Causes signalées :
 
-- **Amélioration [n° 36118](https://bugzilla.xamarin.com/show_bug.cgi?id=36118)** : Cette erreur peut entraîner l’échec de builds quand Visual Studio utilise une adresse IPv6 pour se connecter à l’hôte de build. (La connexion de l’hôte de build ne prend pas encore en charge les adresses IPv6.)
+- **Amélioration [n° 36118](https://bugzilla.xamarin.com/show_bug.cgi?id=36118)**  : Cette erreur peut entraîner l’échec de builds quand Visual Studio utilise une adresse IPv6 pour se connecter à l’hôte de build. (La connexion de l’hôte de build ne prend pas encore en charge les adresses IPv6.)
 
 ### <a name="xamarinios-visual-studio-plugin-fails-to-load-after-reinstallation-of-betaalpha-channel"></a>Le chargement du plug-in Xamarin.iOS Visual Studio échoue après la réinstallation d’un canal bêta/alpha
 
@@ -369,5 +375,5 @@ Si vous résolvez un problème de génération et que vous voulez être certain 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Connexion au Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Connecter un Mac à un environnement Visual Studio avec XMA (vidéo)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)
+- [Appairer avec un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- [Agent de build Mac Xamarin - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
