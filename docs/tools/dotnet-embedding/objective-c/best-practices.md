@@ -1,18 +1,18 @@
 ---
-title: Méthodes conseillées pour ObjC Embeddinator-4000
+title: .NET incorporation des meilleures pratiques pour Objective-C
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: ca5face9865c60fabe8359c2bf356d5d5555f517
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 9f31190d54b187e1dc298fe1c2a8d443862f10de
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="embeddinator-4000-best-practices-for-objc"></a>Méthodes conseillées pour ObjC Embeddinator-4000
+# <a name="net-embedding-best-practices-for-objective-c"></a>Incorporation de .NET meilleures pratiques pour Objective-C
 
 Il s’agit d’un brouillon et ne peut pas être synchronisé avec les fonctionnalités actuellement prises en charge par l’outil. Nous espérons que ce document sera évoluer séparément et finalement correspond à l’outil final, par exemple, nous vous suggérons les meilleures approches à long terme - solutions de contournement pas immédiatement.
 
@@ -106,7 +106,7 @@ Cette règle d’affectation de noms a pas de correspondance dans le monde du ga
 
 ## <a name="exceptions"></a>Exceptions
 
-Il est tout à fait commont dans .NET pour utiliser des exceptions largement pour signaler des erreurs. Toutefois, ils sont lents et pas tout à fait identiques dans ObjC. Chaque fois que possible les doit masquer du développeur Objective-C.
+Il est assez courant dans .NET pour utiliser des exceptions largement pour signaler des erreurs. Toutefois, ils sont lents et pas tout à fait exactement le même objectif-C. Chaque fois que possible les doit masquer du développeur Objective-C.
 
 Par exemple, le .NET `Try` modèle sera beaucoup plus facile à utiliser à partir de code Objective-C :
 
@@ -138,6 +138,6 @@ Le Générateur de suivre le même `return nil` de modèle de générée `init*`
 
 Objective-C n’autorise pas les opérateurs pour être surchargés comme c#, ceux-ci sont convertis en les sélecteurs de classe.
 
-[« Convivial »](/dotnet/standard/design-guidelines/operator-overloads/) méthode nommée sont générés, plutôt que les surcharges d’opérateur lorsque trouvé et peuvent produire un plus faciles à consommer des API.
+[« Convivial »](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) méthodes nommées sont générés, plutôt que les surcharges d’opérateur lorsque trouvé et peuvent produire un plus faciles à consommer des API.
 
 Les classes qui substituent les opérateurs `==` et/ou `!=` doit substituer la méthode Equals (objet) standard ainsi.
