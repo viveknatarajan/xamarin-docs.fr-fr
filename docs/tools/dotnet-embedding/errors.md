@@ -1,16 +1,16 @@
 ---
-title: Incorporation des erreurs de .NET
+title: Erreurs d’incorporation de .NET
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
-ms.openlocfilehash: 0bc4451d8eb93b826fc673bc4e163c9b7b68c36e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 677242ea12f8fd87d82f337eafd96a1743ad806a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="net-embedding-errors"></a>Incorporation des erreurs de .NET
 
@@ -92,7 +92,7 @@ Il s’agit d’un problème connu que nous avons l’intention de corriger dans
 
 L’outil Impossible de fusionner les infrastructures mentionnés dans le message d’erreur, car il existe un fichier commun entre eux.
 
-Cela peut indiquer un bogue dans le Embeddinator-4000 ; Veuillez archiver un rapport de bogue à [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) avec un cas de test.
+Cela peut indiquer un bogue dans .NET incorporation ; Veuillez archiver un rapport de bogue à [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) avec un cas de test.
 
 <a name="EM0011" />
 
@@ -142,9 +142,9 @@ La syntaxe pour l’option de ligne de commande `A` n’a pas pu être analysée
 
 ### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099 : Erreur interne *. Veuillez archiver un rapport de bogue à un cas de test (https://github.com/mono/Embeddinator-4000/issues).
 
-Ce message d’erreur est signalé en cas d’échec d’une vérification de cohérence interne dans le Embeddinator-4000.
+Ce message d’erreur est signalé en cas d’échec d’une vérification de cohérence interne de l’incorporation de .NET.
 
-Cela indique un bogue dans le Embeddinator-4000 ; Veuillez archiver un rapport de bogue à [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) avec un cas de test.
+Cela indique un bogue dans .NET incorporation ; Veuillez archiver un rapport de bogue à [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) avec un cas de test.
 
 <!-- 1xxx: code processing -->
 
@@ -189,7 +189,7 @@ public class MyType {
 }
 ```
 
-Dans ce cas que deux généré `init` sélecteurs seront créées, un appel à la fois dans mono, mais aucun wrapper pour les versions ultérieures n’est conservées.
+Dans ce cas que deux généré `init` sélecteurs seront créées, un appel à la fois dans Mono, mais aucun wrapper pour les versions ultérieures n’est conservées.
 
 <a name="EM1030" />
 
@@ -224,7 +224,7 @@ public class MyType {
 }
 ```
 
-Dans ce cas que deux généré `increment` sélecteurs seront créées, un appel à la fois dans mono, mais aucun wrapper pour les versions ultérieures n’est conservées.
+Dans ce cas que deux généré `increment` sélecteurs seront créées, un appel à la fois dans Mono, mais aucun wrapper pour les versions ultérieures n’est conservées.
 
 <a name="EM1033" />
 
@@ -236,7 +236,7 @@ Il s’agit d’un **avertissement** que la méthode `M` n’est pas généré, 
 
 ### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034 : Méthode d’Extension `M` n’est pas généré à l’intérieur d’une catégorie, car ils ne peuvent pas être créés sur le type primitif `T`. Une méthode statique normale a été générée.
 
-Il s’agit d’un **avertissement** une méthode d’extension sur un primivite de type (par exemple, `System.Int32`) a été trouvé. Dans ObjC, il n’est pas possible de créer des catégories de type primitif. À la place le générateur être produira une méthode statique normale.
+Il s’agit d’un **avertissement** une méthode d’extension sur un primivite de type (par exemple, `System.Int32`) a été trouvé. Dans Objective-C, il n’est pas possible de créer des catégories de type primitif. À la place le générateur être produira une méthode statique normale.
 
 <a name="EM1040" />
 
@@ -286,7 +286,7 @@ Il s’agit d’un **avertissement** cet élément `E` n’est pas généré com
 
 Il s’agit d’un **avertissement** qui ciblent `E` est considéré comme non pris en charge pour les cas d’usage Xamarin.iOS et Xamarin.Mac. 
 
-La consommation des bibliothèques de Embeddinator statiques ou dynamiques peut nécessiter des étapes de travail supplémentaires ou des ajustements et doit être évitée dans la plupart des cas d’usage.
+La consommation des bibliothèques statiques ou dynamiques de l’incorporation de .NET peut nécessiter des étapes de travail supplémentaires ou des ajustements et doit être évitée dans la plupart des cas d’usage.
 
 Envisagez de supprimer votre `--target` paramètre ou passez `--target=framework` à la place.
 

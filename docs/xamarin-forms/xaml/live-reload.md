@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 04/23/2018
-ms.openlocfilehash: bfb53af420b64fb9af994d3fb19293406d3acd7b
-ms.sourcegitcommit: 180a8411d912de40545f9624e2127a66ee89e7b2
+ms.openlocfilehash: 627225fdeef781a8b24a79e9b46627a739fd15af
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xamarin-live-reload"></a>Rechargement dynamique de Xamarin
 
@@ -106,13 +106,33 @@ Non. En fait, vous pouvez même démarrer toutes les cibles votre application pr
 ## <a name="limitations"></a>Limitations
 
 * Rechargement uniquement du code XAML est pris en charge.
-* Prise en charge uniquement dans Visual Studio.
-* Fonctionne uniquement avec les bibliothèques .NET Standard.
-* Feuilles de style CSS ne sont pas pris en charge.
 * État de l’interface utilisateur ne peut pas être maintenu entre redéploiements ultérieurs, sauf si, à l’aide de MVVM.
-* Recharger les ressources à l’échelle de l’application (par exemple, **App.xaml** ou partagé les dictionnaires de ressources), la réinitialisation de navigation de l’application.
+
+## <a name="known-issues"></a>Problèmes connus
+
+* Prise en charge uniquement dans Visual Studio.
+* Fonctionne uniquement avec les bibliothèques .NET Standard. Cela sera résolu dans la prochaine version de la version préliminaire.
+* Feuilles de style CSS ne sont pas pris en charge. Cela sera résolu dans la prochaine version de la version préliminaire.
+* Recharger les ressources à l’échelle de l’application (par exemple, **App.xaml** ou partagé les dictionnaires de ressources), la réinitialisation de navigation de l’application. Cela sera résolu dans la prochaine version de la version préliminaire.
+* Modification du langage XAML pendant le débogage UWP peut provoquer une panne du runtime. Solution : Utilisez **exécuter sans débogage (Ctrl + F5)** au lieu de **démarrer le débogage (F5)**.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
+
+### <a name="error-codes"></a>Codes d’erreur
+
+* **XLR001**: *le projet actuel fait référence à la version du package NuGet de 'Xamarin.LiveReload' '[VERSION]', mais l’extension de rechargement de Live Xamarin requiert la version '[VERSION]'.*
+
+  Pour permettre une itération rapide et l’évolution de la fonctionnalité de rechargement de Live, le package nuget et l’extension Visual Studio doivent correspondre exactement. Mettre à jour le package nuget vers la même version de l’extension que vous avez installé.
+
+* **XLR002**: *Live de rechargement doit posséder au moins la propriété 'MqttHostname' lors de la génération à partir de la ligne de commande. Ou bien, la valeur 'EnableLiveReload' 'false' pour désactiver la fonctionnalité.*
+
+  Les propriétés requises par Live de rechargement ne sont pas disponibles quand générer à partir de la ligne de commande (ou dans l’intégration continue) et doit par conséquent être fourni explicitement. 
+
+* **XLR003**: *package nuget de rechargement de Live nécessite l’installation de l’extension Xamarin Live recharger Visual Studio.*
+
+  A tenté de générer un projet qui référence le package nuget de rechargement de Live, mais l’Extension Visual n’est pas installée.  
+
+
 
 ### <a name="app-doesnt-connect"></a>Application ne connecte pas
 
@@ -145,7 +165,7 @@ Si vous avez un aperçu plus anciens et que vous rencontrez des problèmes de d�
 
 Dans les scénarios où une connexion à partir de l’application en cours d’exécution sur votre ordinateur (comme indiqué à l’aide de `localhost` ou `127.0.0.1` dans **Outils > Options > Xamarin > recharger de Live**) n’est pas possible (pare-feux, réseaux différents), Vous pouvez configurer un serveur distant à la place, ce qui seront de l’IDE et l’application pour établir la connexion.
 
-Rechargement dynamique utilise la norme [protocole MQTT](http://mqtt.org/) pour échanger des messages et peut donc communiquer avec [des serveurs tiers](https://github.com/mqtt/mqtt.github.io/wiki/servers). Il existe même [serveurs publics](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (également appelé *courtiers*) que vous pouvez utiliser. Rechargement dynamique a été testée avec `broker.hivemq.com` et `iot.eclipse.org` les noms d’hôte, ainsi que les services fournis par [www.cloudmqtt.com](https://www.cloudmqtt.com) et [www.cloudamqp.com](https://www.cloudamqp.com). Vous pouvez également déployer votre propre serveur MQTT dans le cloud, tels que [HiveMQ sur Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) ou [MQ lapin sur AWS](http://www.rabbitmq.com/ec2.html). 
+Rechargement dynamique utilise la norme [protocole MQTT](http://mqtt.org/) pour échanger des messages et peut donc communiquer avec [des serveurs tiers](https://github.com/mqtt/mqtt.github.io/wiki/servers). Il existe même [serveurs publics](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (également appelé *courtiers*) que vous pouvez utiliser. Rechargement dynamique a été testée avec `broker.hivemq.com` et `iot.eclipse.org` les noms d’hôte, ainsi que les services fournis par [www.cloudmqtt.com](https://www.cloudmqtt.com) et [www.cloudamqp.com](https://www.cloudamqp.com). Vous pouvez également déployer votre propre serveur MQTT dans le cloud, tels que [HiveMQ sur Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 
 Vous pouvez configurer n’importe quel port, mais il est courant d’utiliser le port 1883 par défaut pour les serveurs distants. Live recharger les messages utilisent bout en bout AES symétrique un chiffrement renforcé, par conséquent, il est prudent de se connecter aux serveurs distants. Par défaut, la clé de chiffrement et le vecteur d’initialisation (IV) sont régénérées sur chaque session de Visual Studio.
 

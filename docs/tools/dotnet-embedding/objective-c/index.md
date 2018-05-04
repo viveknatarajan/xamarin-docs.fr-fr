@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 515185ca7be8b6e24c92c9f44eb6dadbaf6d9219
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 2a4a235dcb885364fdc5add5970e61f46b6e5d08
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objective-c-support"></a>Prise en charge objective-C
 
@@ -20,7 +20,7 @@ La génération de Objective-C a quelques fonctionnalités spéciales qui sont �
 
 ### <a name="automatic-reference-counting"></a>Comptage de références automatique
 
-L’utilisation de comptage de référence automatique (ARC) est **requis** pour appeler les liaisons générés. Projet à l’aide d’une bibliothèque d’embeddinator doit être compilé avec `-fobjc-arc`.
+L’utilisation de comptage de référence automatique (ARC) est **requis** pour appeler les liaisons générés. Projet à l’aide d’une bibliothèque basée sur l’incorporation de .NET doit être compilé avec `-fobjc-arc`.
 
 ### <a name="nsstring-support"></a>Prise en charge NSString
 

@@ -6,14 +6,13 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f75ced921cd240e280b5dd6f7366ccceefb5e40e
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 3620312ff3fbf9d7aa879ae6d318f0b39eec386a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-macos"></a>Prise en main de macOS
-
 
 ## <a name="what-you-will-need"></a>Vous devez
 
@@ -27,7 +26,7 @@ Tout d’abord, créer un exemple de world hello simple en c#.
 
 Ouvrez Visual Studio pour Mac, créez un nouveau projet de bibliothèque de classes Mac nommé **hello-de-csharp**et enregistrez-le **~/Projects/hello-from-csharp**.
 
-Remplacez le code dans le `MyClass.cs` fichier avec l’extrait de code suivant :
+Remplacez le code dans le **MyClass.cs** fichier avec l’extrait de code suivant :
 
 ```csharp
 using AppKit;
@@ -44,7 +43,9 @@ Générez le projet. L’assembly résultant sera enregistré sous **~/Projects/
 
 ### <a name="bind-the-managed-assembly"></a>Lier l’assembly managé
 
-Exécutez l’embeddinator pour créer une infrastructure native pour l’assembly managé :
+Une fois que vous avez un assembly managé, la lier en appelant l’incorporation de .NET.
+
+Comme décrit dans la [installation](~/tools/dotnet-embedding/get-started/install/install.md) guide, cela est possible en tant qu’étape post-build dans votre projet, avec une cible MSBuild personnalisée, ou manuellement :
 
 ```shell
 cd ~/Projects/hello-from-csharp
@@ -89,8 +90,8 @@ Ouvrez **ViewController.m**et remplacez le contenu avec :
 @end
 ```
 
-Enfin exécuter le projet Xcode et quelque chose comme ceci s’afficheront :
+Enfin, exécutez le projet Xcode et quelque chose comme ceci s’afficheront :
 
 ![Bonjour à partir de l’exemple de code c# en cours d’exécution dans le simulateur](macos-images/hello-from-csharp-mac.png)
 
-Vous trouverez un exemple plus complet et plus attrayants [ici](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).
+Un exemple plus complet et plus attrayants [sont disponibles ici](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

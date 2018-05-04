@@ -1,17 +1,17 @@
 ---
-title: Affichage de liste
+title: Utilisation du contrôle ListView dans Xamarin.Android
 description: ListView est un composant essentiel de l’interface utilisateur des applications Android ; Il est utilisé partout dans les listes de courte des options de menu à longues listes de contacts ou favoris internet. Il fournit un moyen simple pour présenter une liste déroulante de lignes qui peuvent être mis en forme avec un style prédéfini ou personnalisé de manière intensive.
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2018
-ms.openlocfilehash: 8499b9f186c12df22518893b6677cab22f0a3568
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: c5c8222df16b265f3b44f3ee3fcd9053d827cf6a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="listview"></a>Affichage de liste
 
@@ -218,8 +218,8 @@ Cet ensemble de rubriques introduites `ListView` et quelques exemples montrant c
 - [BasicTableAdapter (exemple)](https://developer.xamarin.com/samples/BasicTableAdapter/)
 - [BuiltInViews (exemple)](https://developer.xamarin.com/samples/BuiltInViews/)
 - [CustomRowView (exemple)](https://developer.xamarin.com/samples/CustomRowView/)
-- [FastScroll (sample)](https://developer.xamarin.com/samples/FastScroll/)
-- [SectionIndex (sample)](https://developer.xamarin.com/samples/SectionIndex/)
+- [FastScroll (exemple)](https://developer.xamarin.com/samples/FastScroll/)
+- [SectionIndex (exemple)](https://developer.xamarin.com/samples/SectionIndex/)
 - [SimpleCursorTableAdapter (exemple)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
 - [CursorTableAdapter (exemple)](https://developer.xamarin.com/samples/CursorTableAdapter/)
 - [Didacticiel de cycle de vie d’activité](~/android/app-fundamentals/activity-lifecycle/index.md)

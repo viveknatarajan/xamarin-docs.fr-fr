@@ -6,14 +6,13 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 34afdd9e91ebfbe7ad57c7eec6ba7f05fff1a2aa
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f3696ffa5bb3b3931bcea0f93343bb46d2f92ad5
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-ios"></a>Prise en main d’e/s
-
 
 ## <a name="requirements"></a>Spécifications
 
@@ -23,13 +22,13 @@ Outre les exigences de nos [prise en main de Objective-C](~/tools/dotnet-embeddi
 
 ## <a name="hello-world"></a>Hello World
 
-Première Commençons par créer un exemple de world hello simple en c#.
+Tout d’abord, créer un exemple de world hello simple en c#.
 
 ### <a name="create-c-sample"></a>Créer l’exemple c#
 
-Ouvrez Visual Studio pour Mac, créez un nouveau projet de bibliothèque de classes d’e/s, nommez-le `hello-from-csharp`et enregistrez-le à `~/Projects/hello-from-csharp`.
+Ouvrez Visual Studio pour Mac, créez un nouveau projet de bibliothèque de classes d’e/s, nommez-le **hello-de-csharp**et enregistrez-le **~/Projects/hello-from-csharp**.
 
-Remplacez le code dans le `MyClass.cs` fichier avec l’extrait de code suivant :
+Remplacez le code dans le **MyClass.cs** fichier avec l’extrait de code suivant :
 
 ```csharp
 using UIKit;
@@ -42,36 +41,38 @@ public class MyUIView : UITextView
 }
 ```
 
-Générez le projet, l’assembly résultant sera enregistré sous `~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll`.
+Générez le projet et l’assembly résultant sera enregistré sous **~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll**.
 
 ### <a name="bind-the-managed-assembly"></a>Lier l’assembly managé
 
-Exécutez l’embeddinator pour créer une infrastructure native pour l’assembly managé :
+Une fois que vous avez un assembly managé, la lier en appelant l’incorporation de .NET.
+
+Comme décrit dans la [installation](~/tools/dotnet-embedding/get-started/install/install.md) guide, cela est possible en tant qu’étape post-build dans votre projet, avec une cible MSBuild personnalisée, ou manuellement :
 
 ```shell
 cd ~/Projects/hello-from-csharp
 objcgen ~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll --target=framework --platform=iOS --outdir=output -c --debug
 ```
 
-Le framework sera placé dans `~/Projects/hello-from-csharp/output/hello-from-csharp.framework`.
+Le framework sera placé dans **~/Projects/hello-from-csharp/output/hello-from-csharp.framework**.
 
 ### <a name="use-the-generated-output-in-an-xcode-project"></a>Utilisez la sortie générée dans un projet Xcode
 
-Ouvrez Xcode et créer un nouveau iOS Application vue unique, nommez-le `hello-from-csharp` et sélectionnez le **Objective-C** language.
+Ouvrez Xcode, créer un nouveau iOS Application vue unique, nommez-le **hello-de-csharp**, puis sélectionnez le **Objective-C** language.
 
-Ouvrir le `~/Projects/hello-from-csharp/output` répertoire dans le Finder, sélectionnez `hello-from-csharp.framework`, faites-le glisser vers le projet Xcode et déposez-le juste au-dessus du `hello-from-csharp` dossier dans le projet.
+Ouvrir le **~/Projects/hello-from-csharp/output** répertoire dans le Finder, sélectionnez **hello-de-csharp.framework**, faites-le glisser vers le projet Xcode et déposez-le juste au-dessus du **hello-de-csharp**  dossier dans le projet.
 
 ! (Glisser- déposer framework) Images/Hello-from-CSharp-IOS-Drag-Drop-Framework.png)
 
-Assurez-vous que `Copy items if needed` est activée dans la boîte de dialogue qui s’affiche, puis cliquez sur `Finish`.
+Assurez-vous que **copier des éléments si nécessaire** est activée dans la boîte de dialogue qui s’affiche, puis cliquez sur **Terminer**.
 
 ![Copier des éléments si nécessaire](ios-images/hello-from-csharp-ios-copy-items-if-needed.png)
 
-Sélectionnez le `hello-from-csharp` de projet et accédez à la `hello-from-csharp` la cible **onglet Général**. Dans le **binaires incorporées** section, ajoutez `hello-from-csharp.framework`.
+Sélectionnez le **hello-de-csharp** de projet et accédez à la **hello-de-csharp** la cible **onglet Général**. Dans le **binaires incorporées** section, ajoutez **hello-de-csharp.framework**.
 
 ![Fichiers binaires incorporées](ios-images/hello-from-csharp-ios-embedded-binaries.png)
 
-Ouvrez ViewController.m et remplacez le contenu avec :
+Ouvrez **ViewController.m**et remplacez le contenu avec :
 
 ```objective-c
 #import "ViewController.h"
@@ -91,6 +92,12 @@ Ouvrez ViewController.m et remplacez le contenu avec :
 @end
 ```
 
-Enfin exécuter le projet Xcode et quelque chose comme ceci s’afficheront :
+Incorporation de .NET ne prend pas en charge bitcode sur iOS, qui est activée pour certains modèles de projet Xcode. 
+
+Désactiver dans les paramètres de votre projet :
+
+![Option de Bitcode](../../images/ios-bitcode-option.png)
+
+Enfin, exécutez le projet Xcode et quelque chose comme ceci s’afficheront :
 
 ![Bonjour à partir de l’exemple de code c# en cours d’exécution dans le simulateur](ios-images/hello-from-csharp-ios.png)

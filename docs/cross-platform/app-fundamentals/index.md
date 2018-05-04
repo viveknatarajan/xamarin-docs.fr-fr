@@ -1,5 +1,5 @@
 ---
-title: Notions de base des applications
+title: Partage de Code
 description: Principaux Concepts d’applications
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
@@ -7,33 +7,19 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: f5bd66cfcfb6ee06abac7bec9151e7325ebb32a2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 01116a35dca80cd92ea16232a2abb127f60d9f0a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="application-fundamentals"></a>Notions de base des applications
+# <a name="sharing-code"></a>Partage de Code
 
 Cette section fournit un guide sur certains des plus courants des tâches de choses ou concepts que les développeurs doivent connaître lors du développement d’applications mobiles.
 
-##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Création d’applications multiplateformes](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
-
-En choisissant de Xamarin et en conservant les quelques éléments à l’esprit lorsque vous concevez et développez vos applications mobiles, vous pouvez réaliser code considérable partage entre les plateformes mobiles, réduire le temps de commercialisation, tirer parti des compétences existantes, répondre à la demande du client pour l’accès mobile, et réduire la complexité d’inter-plateformes. &nbsp;Ce document présente des recommandations principales pour tirer parti de ces avantages pour les applications d’utilitaire et de productivité.
-
-## <a name="code-sharing-optionscode-sharingmd"></a>[Options de partage de code](code-sharing.md)
+## <a name="code-sharing-overviewcode-sharingmd"></a>[Vue d’ensemble du partage de code](code-sharing.md)
 
 En savoir plus sur le code de différentes options disponibles pour les projets de Xamarin, y compris les bibliothèques de classes portables (PCLs), les projets partagés et des bibliothèques Standard de .NET de partage.
-
-
-## <a name="accessibilityaccessibilitymd"></a>[Accessibilité](accessibility.md)
-
-Conseils pour la création d’applications accessibles.
-
-
-## <a name="localizationlocalizationmd"></a>[Localisation](localization.md)
-
-Instructions pour créer des applications prenant en charge les paramètres régionaux qui peuvent être traduites dans plusieurs langues.
 
 
 ##  <a name="portable-class-librariescross-platformapp-fundamentalspclmd"></a>[Bibliothèques de classes portables](~/cross-platform/app-fundamentals/pcl.md)
@@ -55,18 +41,3 @@ Les packages NuGet peuvent être générés automatiquement à partir de projets
 ##  <a name="manually-creating-nuget-packages-for-xamarincross-platformapp-fundamentalsnuget-manualmd"></a>[Créer manuellement les Packages NuGet pour Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)
 
 Conseils de création de packages NuGet qui fonctionnent avec la plateforme de Xamarin.
-
-##  <a name="cross-platform-data-accessxamarin-formsdata-cloudindexmd"></a>[Cross-Platform l’accès aux données](~/xamarin-forms/data-cloud/index.md)
-
-La plupart des applications ont une spécification pour enregistrer les données sur le périphérique local. Sauf si la quantité de données est petite plus simplement, ceci nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès à la base de données. iOS et Android ont le moteur de base de données SQLite « intégré » et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Le [accès aux données Android](~/android/data-cloud/data-access/index.md), [iOS l’accès aux données](~/ios/data-cloud/data/index.md), et [Xamarin.Forms l’accès aux données](~/xamarin-forms/data-cloud/index.md) guides fournissent des exemples d’accès aux SQLite sur chaque plateforme.
-
-
-##  <a name="transport-layer-securitytransport-layer-securitymd"></a>[Sécurité de la couche de transport](transport-layer-security.md)
-
-Informations sur l’implémentation de SSL/TLS correcte selectingthe pour sécuriser la connectivité de réseau de votre application.
-
-
-##  <a name="notificationsxamarin-formsdata-cloudpush-notificationsindexmd"></a>[Notifications](~/xamarin-forms/data-cloud/push-notifications/index.md)
-
-Applications mobiles utilisent des notifications discrètement d’informer l’utilisateur des événements d’application spécifique s’est produit. Les notifications sont généralement utilisées pour informer l’utilisateur de l’état d’un processus d’application qui s’exécute en arrière-plan. Un exemple peut télécharger un fichier volumineux. Ce fichier peut prendre beaucoup de temps de téléchargement, pour cette activité doit avoir lieu en arrière-plan. Lorsque le téléchargement est terminé, l’utilisateur est informé du fait par une notification.
-En outre, notification ares pas uniquement limité à des applications locales. Il est également possible pour les applications serveur publier des notifications à des applications mobiles. Cet article explique comment utiliser des notifications sur Android et iOS.

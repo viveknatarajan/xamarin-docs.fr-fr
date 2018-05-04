@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: ed37e723d4b1a7997890c41886df8d117425e270
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a1cba53223567e353194a4fcd52c8e22fa48ddf0
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="webview"></a>Affichage Web
 
@@ -329,41 +329,40 @@ WebView déclenche deux événements pour vous aider à répondre aux modificati
 - **Navigation** &ndash; événement déclenché lorsque la WebView commence à se charger une nouvelle page.
 - **Navigation** &ndash; événement déclenché lorsque la page est chargée et la navigation s’est arrêté.
 
-Si vous prévoyez d’utiliser les pages Web qui prennent beaucoup de temps à charger, envisagez d’utiliser ces événements pour implémenter un indicateur d’état. Par exemple :
-
-Notre XAML :
+Si vous prévoyez d’utiliser les pages Web qui prennent beaucoup de temps à charger, envisagez d’utiliser ces événements pour implémenter un indicateur d’état. Par exemple, le code XAML ressemble à ceci :
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="WebViewDemo.LoadingDemo" Title="Loading Demo">
-    <ContentPage.Content>
+  <ContentPage.Content>
     <StackLayout>
       <Label x:Name="LoadingLabel"
         Text="Loading..."
         HorizontalOptions="Center"
-        isVisible="false" />
+        IsVisible="false" />
       <WebView x:Name="Browser"
       HeightRequest="1000"
       WidthRequest="1000"
       Navigating="webOnNavigating"
       Navigated="webOnEndNavigating" />
     </StackLayout>
-    </ContentPage.Content>
+  </ContentPage.Content>
 </ContentPage>
 ```
-Nos deux gestionnaires d’événements :
+
+Les deux gestionnaires d’événements :
 
 ```csharp
 void webOnNavigating (object sender, WebNavigatingEventArgs e)
 {
-            LoadingLabel.IsVisible = true;
+    LoadingLabel.IsVisible = true;
 }
 
 void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
 {
-            LoadingLabel.IsVisible = false;
+    LoadingLabel.IsVisible = false;
 }
 ```
 

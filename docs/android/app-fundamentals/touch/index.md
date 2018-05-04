@@ -1,5 +1,5 @@
 ---
-title: Tactile
+title: Tactiles et mouvements dans Xamarin.Android
 description: Les écrans tactiles sur de nombreux périphériques actuels permettent aux utilisateurs rapidement et efficacement d’interagir avec les périphériques de façon naturelle et intuitive. Cette interaction n’est pas limitée uniquement à la détection tactile ; il est possible d’utiliser également des mouvements. Par exemple, le mouvement de pincement pour zoomer est un exemple courant de ce par pincement une partie de l’écran de l’utilisateur peut effectuer un zoom avant ou arrière de deux doigts. Ce guide examine tactile et mouvements dans Android.
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d6c6d7fd02511ede84b7cfa75575d755f11bab99
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3700f9c73fb58fefcdba7987c9931e385cd52d38
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="touch"></a>Tactile
+# <a name="touch-and-gestures-in-xamarinandroid"></a>Tactiles et mouvements dans Xamarin.Android
 
 _Les écrans tactiles sur de nombreux périphériques actuels permettent aux utilisateurs rapidement et efficacement d’interagir avec les périphériques de façon naturelle et intuitive. Cette interaction n’est pas limitée uniquement à la détection tactile ; il est possible d’utiliser également des mouvements. Par exemple, le mouvement de pincement pour zoomer est un exemple courant de ce par pincement une partie de l’écran de l’utilisateur peut effectuer un zoom avant ou arrière de deux doigts. Ce guide examine tactile et mouvements dans Android._
 

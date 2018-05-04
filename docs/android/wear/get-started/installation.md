@@ -1,17 +1,17 @@
 ---
-title: Installation et configuration
+title: 'Installation et configuration du système d’exploitation onXamarin.Android d’usure '
 description: Cet article assiste les étapes d’installation et les détails de configuration requises pour préparer votre ordinateur et les périphériques pour le développement d’usure Android. À la fin de cet article, vous devez posséder un Xamarin.Android usure installation intégrée dans Visual Studio pour Mac et/ou de Microsoft Visual Studio, et vous serez prêt à commencer à créer votre première application Xamarin.Android usure.
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 86ed62075f5c39eaf7b0e348020f4a9361764727
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 14162663c518fdd1324f2b0340592fbae491d112
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-and-installation"></a>Installation et configuration
 
