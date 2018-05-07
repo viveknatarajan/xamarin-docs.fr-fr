@@ -7,25 +7,20 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 4156d712b91ad069d482debdf0731be8b649287a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2018
+ms.openlocfilehash: b5de9d673a348ddd4b939ae387257f835b37117a
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Modifications des outils du kit Android SDK
 
 _Modifications apportées à la façon dont le Kit de développement logiciel Android gère les niveaux d’API et AVDs installés._
 
-## <a name="changes-to--android-sdk-tooling"></a>Modifications apportées aux outils du Kit de développement logiciel Android
+## <a name="changes-to-android-sdk-tooling"></a>Modifications apportées aux outils du Kit de développement logiciel Android
 
-Dans les versions récentes des outils de kit de développement logiciel pour Android, Google a supprimé les gestionnaires AVD et Kit de développement logiciel existants en faveur de nouveaux outils d’interface CLI (Interface de ligne de commande). Le premier **android** programme a été supprimé et les gestionnaires de l’interface graphique utilisateur (Interface utilisateur graphique) dans Visual Studio pour Mac et les versions antérieures de Xamarin pour Visual Studio ne fonctionnera plus après la version 25.2.5 des outils de kit de développement logiciel Android.
-
-
-![Android menu IDE de Visual Studio](sdk-cli-tooling-changes-images/android-ide-menu.png)
-
-Essayez d’utiliser le **android** programme via la ligne de commande génère un message d’erreur semblable à la suivante :
+Dans les versions récentes des outils SDK pour Android de Google a supprimé les gestionnaires AVD et Kit de développement logiciel existants en faveur de nouveaux outils d’interface CLI (Interface de ligne de commande). Le **android** programme a été supprimé et les gestionnaires de l’interface utilisateur graphique de Google (Interface utilisateur graphique) dans Visual Studio pour Mac et les versions antérieures de Xamarin pour Visual Studio ne fonctionnera plus après la version 25.2.5 des outils de kit de développement logiciel Android. Par exemple, essayez d’utiliser le **android** programme via la ligne de commande génère un message d’erreur semblable à la suivante :
 
 ```shell
 The "android" command is deprecated.
@@ -34,11 +29,21 @@ For command-line tools, use tools\bin\sdkmanager.bat
 and tools\bin\avdmanager.bat
 ```
 
-Par conséquent, vous devez utiliser les outils de l’interface CLI pour gérer et mettre à jour votre émulateurs et le Kit de développement logiciel Android.
+Les sections suivantes expliquent comment gérer le SDK Android et les appareils virtuels Android à l’aide du Kit de développement logiciel Android 25.3.0 et versions ultérieures.
+
+### <a name="ui-tools"></a>Outils d’interface utilisateur
+
+Visual Studio et Visual Studio pour Mac fournissent désormais des remplacements de Xamarin pour les gestionnaires d’interface utilisateur graphique de Google supprimées :
+
+-   Pour télécharger les outils du kit SDK Android, les plateformes et les autres composants dont vous avez besoin pour développer des applications de Xamarin.Android, utilisez le [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md) plutôt que le Gestionnaire du SDK de Google hérité.
+
+-   Pour créer et configurer des appareils virtuels Android, utilisez le [Xamarin le Gestionnaire de périphériques Android](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) au lieu du Gestionnaire d’émulateur Google hérité.
+
+Ces outils sont fonctionnellement équivalents à basée sur l’interface utilisateur graphique de Google gestionnaires elles remplacent.
 
 ### <a name="cli-tools"></a>Outils de l’interface CLI
 
-Les programmes suivants composent désormais l’interface de ligne de commande pour les outils du Kit de développement logiciel Android :
+Ou bien, vous pouvez utiliser les outils CLI pour gérer et mettre à jour votre émulateurs et le Kit de développement logiciel Android. Les programmes suivants composent désormais l’interface de ligne de commande pour les outils du Kit de développement logiciel Android :
 
 #### <a name="sdkmanager"></a>sdkmanager
 
@@ -64,6 +69,7 @@ Vous pouvez toujours utiliser l’interface graphique utilisateur d’origine en
 ## <a name="related-links"></a>Liens associés
 
 - [Configuration du kit Android SDK](~/android/get-started/installation/android-sdk.md)
+- [Gestionnaire de périphériques Android](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
 - [Présentation des niveaux d’API d’Android](~/android/app-fundamentals/android-api-levels.md)
 - [Notes de publication de SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)

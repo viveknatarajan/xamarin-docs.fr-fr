@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/19/2017
-ms.openlocfilehash: 5799d3bd40effcad4404532c47bdab73bc6cfc98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 77a7f50ab9d8f351dcefcbbdd50e88e18a13645d
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Les pilotes USB ai-je besoin pour déboguer Android sur Windows ?
 
@@ -25,7 +25,7 @@ Autres périphériques nécessitent des pilotes USB spécifiquement publiés par
 
 Selon le manfacturer, il peut être difficile à localiser le pilote USB exact nécessité. Autres possibilités pour le test des applications Android développement dans Windows, y compris à l’aide d’un émulateur Android ou à l’aide des services de tests externes. Certaines interfaces incluent :
 
-- [Xamarin Test Cloud](https://xamarin.com/test-cloud) - Cloud services s’exécutent sur des centaines d’appareils Android réel de test.
+- [Application Center Test](https://docs.microsoft.com/appcenter/test-cloud/) - Cloud services s’exécutent sur des centaines d’appareils Android réel de test.
 
 - [Émulateur Visual Studio pour Android](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx)
 

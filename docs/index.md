@@ -5,11 +5,11 @@ title: Documentation de Xamarin
 description: Xamarin vous permet de créer des applications natives pour Android, iOS et macOS en utilisant du code .NET et des interfaces utilisateur spécifiques à la plateforme. Xamarin.Forms vous permet de créer des applications natives, avec du code d’interface utilisateur partagé écrit en C# ou XAML.
 featureFlags:
 - clicktale
-ms.openlocfilehash: de03c1bd1b7874e6a837fbbb9e88a353f19afca5
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: ba47459859866c140dd12186035ed6916393a4f2
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -831,12 +831,12 @@ ms.lasthandoff: 04/03/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
+                                                        <img alt="Sharing Code" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Notions de base des applications</h3>
-                                                    <p>Découvrez les principes fondamentaux de l’écriture d’un code pouvant être partagé pour des tâches de base comme la gestion des fichiers, les images, etc.</p>
+                                                    <h3>Partage de code</h3>
+                                                    <p>En savoir plus sur les différentes options pour le partage de code et de bibliothèques entre Android, iOS et Windows.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -850,12 +850,31 @@ ms.lasthandoff: 04/03/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
+                                                        <img alt="Language Support" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Fonctionnalités de la plateforme</h3>
-                                                    <p>Utilisez des fonctionnalités spécifiques à la plateforme comme Face ID, ARKit et les derniers ajouts apportés à iOS.</p>
+                                                    <h3>Prise en charge linguistique</h3>
+                                                    <p>Les projets Xamarin peuvent être écrits en C# et en F# et consomment des bibliothèques écrites en Visual Basic. Les modèles Razor sont également pris en charge.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/cross-platform/deploy-test/performance.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Deployment and Testing" src="https://docs.microsoft.com/media/illustrations/team-services-agile-track.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Niveau de performance et sécurité</h3>
+                                                    <p>Lignes directrices pour la performance et la sécurité des applications.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -873,8 +892,27 @@ ms.lasthandoff: 04/03/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Déploiement et test</h3>
-                                                    <p>Génération et déploiement d’applications pour plusieurs plateformes.</p>
+                                                    <h3>Déploiement et débogage</h3>
+                                                    <p>Conseils pour le débogage et le déploiement.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/cross-platform/desktop/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Deployment and Testing" src="~/media/index/xamarin-cross-platform-desktop.svg" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Développeurs de bureau</h3>
+                                                    <p>Conseils pour les développeurs de bureau .NET intéressés par le développement d’applications mobiles.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1123,25 +1161,6 @@ ms.lasthandoff: 04/03/2018
                                                 <div class="cardText">
                                                     <h3>Intégration continue</h3>
                                                     <p>Guide pratique pour incorporer des projets Xamarin dans un pipeline de création et d’intégration continu.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://developer.xamarin.com/testcloud/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="https://docs.microsoft.com/en-us/media/illustrations/team-services-agile-track.svg" alt="Xamarin Test Cloud" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Xamarin Test Cloud</h3>
-                                                    <p>Testez votre application sur un appareil quelconque.</p>
                                                 </div>
                                             </div>
                                         </div>

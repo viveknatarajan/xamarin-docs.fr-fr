@@ -6,12 +6,12 @@ ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/30/2018
-ms.openlocfilehash: bcc88ba4c46aa9abe9038d6ea65bc9c17f337da6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/30/2018
+ms.openlocfilehash: 29e35d0dee614d28eed08fbe8799fc74c5ad1eba
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-studio-android-emulator"></a>Émulateur Android de Visual Studio
 
@@ -141,7 +141,7 @@ Pour cela, effectuez les étapes suivantes :
 
     [![Gestionnaire Hyper-V](visual-studio-android-emulator-images/15-launch-hyperv-manager.png)](visual-studio-android-emulator-images/15-launch-hyperv-manager.png#lightbox)
 
-2.  Dans le volet **Machines virtuelles** du Gestionnaire Hyper-V, cliquez avec le bouton droit sur l’émulateur à modifier, puis cliquez sur **Paramètres...** :
+2.  Dans le volet **Machines virtuelles** du Gestionnaire Hyper-V, cliquez avec le bouton droit sur l’émulateur à modifier, puis cliquez sur **Paramètres...**  :
 
     [![Élément de menu Paramètres des machines virtuelles](visual-studio-android-emulator-images/16-vm-settings.png)](visual-studio-android-emulator-images/16-vm-settings.png#lightbox)
 
@@ -167,7 +167,7 @@ Pour résoudre cette erreur, utilisez les étapes suivantes afin de désactiver 
 
 2.  Double-cliquez sur les **Propriétés** du projet.
 
-3.  Cliquez sur **Options Android** et désélectionnez **Utiliser Fast Deployment (mode débogage uniquement)** :
+3.  Cliquez sur **Options Android** et désélectionnez **Utiliser Fast Deployment (mode débogage uniquement)**  :
 
     [![Option Utiliser le déploiement rapide désactivée](visual-studio-android-emulator-images/18-fast-deployment-vs-sml.png)](visual-studio-android-emulator-images/18-fast-deployment-vs.png#lightbox)
 
@@ -191,5 +191,5 @@ Cet article vous a présenté l’*émulateur Visual Studio pour Android*. Vous 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Émulateur Visual Studio pour Android](https://www.visualstudio.com/en-us/explore/msft-android-emulator-vs.aspx)
+- [Émulateur Visual Studio pour Android](https://www.visualstudio.com/vs/msft-android-emulator/)
 - [Présentation de l’émulateur pour Android de Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2014/11/12/introducing-visual-studios-emulator-for-android/)

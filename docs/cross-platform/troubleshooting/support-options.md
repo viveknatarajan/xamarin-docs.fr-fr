@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 500b4c63131ab850b4b9d7c6a0aec49b313ec426
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 47480adfdff5ee3282c1c7fa422260184f91c071
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>Les options de support sont disponibles pour Xamarin ?
 
@@ -33,8 +33,6 @@ L’équipe de support Xamarin permet de surveiller de chacune de ces options.  
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Incidents de support par courrier électronique de Visual Studio pour les rubriques de Xamarin
 
 Les fonctionnalités IDE et Xamarin SDK sont éligibles pour les incidents de support technique dans le cadre de [avantages pour les abonnés Visual Studio](https://msdn.microsoft.com/subscriptions/bb266240) et [Premier Microsoft Support](https://www.microsoft.com/microsoftservices/support.aspx).  Cela correspond aux stratégies pour d’autres plateformes de développement dans Visual Studio, comme UWP et ASP.NET.  Xamarin incidents soumis qu'ainsi sera assigné à l’équipe de support de Xamarin.  Consultez le [FAQ sur la prise en charge Microsoft](https://support.microsoft.com/gp/offerprophone) pour plus d’informations sur les stratégies pour ces incidents.
-
-Pour Xamarin Test Cloud, les incidents de support peuvent être envoyées en accédant à la [page de connexion de Test Cloud](https://testcloud.xamarin.com/login) et en ouvrant le **prennent en charge** lien.
 
 ### <a name="information-for-users-migrating-from-expired-xamarin-subscriptions-to-visual-studio-subscriptions"></a>Informations pour les utilisateurs de la migration à partir d’abonnements expirés de Xamarin pour les abonnements de Visual Studio
 

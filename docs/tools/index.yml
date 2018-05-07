@@ -2,18 +2,18 @@
 documentType: LandingData
 title: Outils Xamarin
 metadata:
-  description: "Outils conçus pour améliorer votre expérience de développement Xamarin."
+  description: Outils conçus pour améliorer votre expérience de développement Xamarin.
   author: conceptdev
   ms.author: crdun
   ms.date: 02-17-2018
   ms.topic: landing-page
-  ms.openlocfilehash: 61fa7aa174a4c5681f36b11d808cd02fc3c5908b
-  ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+  ms.openlocfilehash: b1f47f67677c2618b89b52ab2c015a8a4da48f95
+  ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/15/2018
+  ms.lasthandoff: 05/04/2018
 abstract:
-  description: "Outils conçus pour améliorer votre expérience de développement Xamarin."
+  description: Outils conçus pour améliorer votre expérience de développement Xamarin.
   menu:
     items:
     - href: https://visualstudio.com/
@@ -28,47 +28,41 @@ sections:
     className: cardsC
     items:
     - href: ~/tools/live-player/index.md
-      html: "Prenez en main Xamarin en quelques minutes seulement à l’aide de l’application Live Player avec Visual Studio."
+      html: Prenez en main Xamarin en quelques minutes seulement à l’aide de l’application Live Player avec Visual Studio.
       image:
         src: ~/media/index/xamarin-tools-live-player.svg?branch=master
         href: ~/tools/live-player/index.md
       title: Xamarin Live Player
     - href: ~/tools/inspector/index.md
-      html: "Découvrez et déboguez votre interface utilisateur."
+      html: Découvrez et déboguez votre interface utilisateur.
       image:
         src: ~/media/index/xamarin-tools-inspector.svg?branch=master
         href: ~/tools/inspector/index.md
       title: Xamarin Inspector
     - href: ~/tools/workbooks/index.md
-      html: "Découvrez la plateforme Xamarin et C# de manière interactive."
+      html: Découvrez la plateforme Xamarin et C# de manière interactive.
       image:
         src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
         href: ~/tools/workbooks/index.md
       title: Xamarin Workbooks
     - href: ~/tools/ios-simulator.md
-      html: "Interagissez avec iOS Simulator sur Windows à l’aide de Visual Studio."
+      html: Interagissez avec iOS Simulator sur Windows à l’aide de Visual Studio.
       image:
         src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
         href: ~/tools/ios-simulator.md
       title: iOS Simulator pour Windows
     - href: ~/tools/profiler/index.md
-      html: "Identifiez et résolvez les problèmes de performances."
+      html: Identifiez et résolvez les problèmes de performances.
       image:
         src: ~/media/index/xamarin-tools-profiler.svg?branch=master
         href: ~/tools/profiler/index.md
       title: Xamarin Profiler
     - href: ~/tools/dotnet-embedding/index.md
-      html: "Permet à d’autres langages de programmation d’utiliser votre code .NET existant."
+      html: Permet à d’autres langages de programmation d’utiliser votre code .NET existant.
       image:
         src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
         href: ~/tools/dotnet-embedding/index.md
       title: Incorporation .NET
-    - href: https://developer.xamarin.com/testcloud/
-      html: Testez votre application sur un appareil quelconque.
-      image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/team-services-agile-track.svg
-        href: https://developer.xamarin.com/testcloud/
-      title: Xamarin Test Cloud
 - title: Plateformes
   items:
   - type: list
@@ -77,13 +71,13 @@ sections:
     items:
     - title: Xamarin.Forms
       href: ~/xamarin-forms/index.md
-      html: "<p><a href=\"~/xamarin-forms/get-started/index.md\">Bien démarrer</a><br /><a href=\"~/xamarin-forms/app-fundamentals/index.md\">Principes de base de l’application</a><br /><a href=\"~/xamarin-forms/user-interface/index.md\">Interface utilisateur</a><br /><a href=\"~/xamarin-forms/platform/index.md\">Fonctionnalités de la plateforme</a><br /><a href=\"~/xamarin-forms/deploy-test/index.md\">Déploiement et test</a><br /><a href=\"~/xamarin-forms/xaml/index.md\">XAML</a><br /><a href=\"~/xamarin-forms/data-cloud/index.md\">Services de données et cloud</a><br /><a href=\"~/xamarin-forms/internals/index.md\">Concepts avancés et éléments internes</a></p>"
+      html: <p><a href="~/xamarin-forms/get-started/index.md">Bien démarrer</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Principes de base de l’application</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interface utilisateur</a><br /><a href="~/xamarin-forms/platform/index.md">Fonctionnalités de la plateforme</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Déploiement et test</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Services de données et cloud</a><br /><a href="~/xamarin-forms/internals/index.md">Concepts avancés et éléments internes</a></p>
     - title: Android
       href: ~/android/index.md
-      html: "<p><a href=\"~/android/get-started/index.md\">Bien démarrer</a><br /><a href=\"~/android/app-fundamentals/index.md\">Principes de base de l’application</a><br /><a href=\"~/android/user-interface/index.md\">Interface utilisateur</a><br /><a href=\"~/android/platform/index.md\">Fonctionnalités de la plateforme</a><br /><a href=\"~/android/deploy-test/index.md\">Déploiement et test</a><br /><a href=\"~/android/data-cloud/index.md\">Services de données et cloud</a><br /><a href=\"~/android/internals/index.md\">Concepts avancés et éléments internes</a></p>"
+      html: <p><a href="~/android/get-started/index.md">Bien démarrer</a><br /><a href="~/android/app-fundamentals/index.md">Principes de base de l’application</a><br /><a href="~/android/user-interface/index.md">Interface utilisateur</a><br /><a href="~/android/platform/index.md">Fonctionnalités de la plateforme</a><br /><a href="~/android/deploy-test/index.md">Déploiement et test</a><br /><a href="~/android/data-cloud/index.md">Services de données et cloud</a><br /><a href="~/android/internals/index.md">Concepts avancés et éléments internes</a></p>
     - title: iOS
       href: ~/ios/index.md
-      html: "<p><a href=\"~/ios/get-started/index.md\">Bien démarrer</a><br /><a href=\"~/ios/app-fundamentals/index.md\">Principes de base de l’application</a><br /><a href=\"~/ios/user-interface/index.md\">Interface utilisateur</a><br /><a href=\"~/ios/platform/index.md\">Fonctionnalités de la plateforme</a><br /><a href=\"~/ios/deploy-test/index.md\">Déploiement et test</a><br /><a href=\"~/ios/data-cloud/index.md\">Services de données et cloud</a><br /><a href=\"~/ios/internals/index.md\">Concepts avancés et éléments internes</a></p>"
+      html: <p><a href="~/ios/get-started/index.md">Bien démarrer</a><br /><a href="~/ios/app-fundamentals/index.md">Principes de base de l’application</a><br /><a href="~/ios/user-interface/index.md">Interface utilisateur</a><br /><a href="~/ios/platform/index.md">Fonctionnalités de la plateforme</a><br /><a href="~/ios/deploy-test/index.md">Déploiement et test</a><br /><a href="~/ios/data-cloud/index.md">Services de données et cloud</a><br /><a href="~/ios/internals/index.md">Concepts avancés et éléments internes</a></p>
     - title: Mac
       href: ~/mac/index.md
-      html: "<p><a href=\"~/mac/get-started/index.md\">Bien démarrer</a><br /><a href=\"~/mac/app-fundamentals/index.md\">Principes de base de l’application</a><br /><a href=\"~/mac/user-interface/index.md\">Interface utilisateur</a><br /><a href=\"~/mac/platform/index.md\">Fonctionnalités de la plateforme</a><br /><a href=\"~/mac/deploy-test/index.md\">Déploiement et test</a><br /><a href=\"~/mac/internals/index.md\">Concepts avancés et éléments internes</a></p>"
+      html: <p><a href="~/mac/get-started/index.md">Bien démarrer</a><br /><a href="~/mac/app-fundamentals/index.md">Principes de base de l’application</a><br /><a href="~/mac/user-interface/index.md">Interface utilisateur</a><br /><a href="~/mac/platform/index.md">Fonctionnalités de la plateforme</a><br /><a href="~/mac/deploy-test/index.md">Déploiement et test</a><br /><a href="~/mac/internals/index.md">Concepts avancés et éléments internes</a></p>
