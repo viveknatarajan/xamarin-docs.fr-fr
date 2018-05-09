@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 2178d567f1ccfe803ebce8b7b623c31c290999bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fec14b0f7328bee1d0866ba02f28202e8d63e8cb
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started"></a>Prise en main
 
@@ -42,6 +42,10 @@ Ce document fournit une présentation générale du *fonctionnement de Xamarin*,
 ###  <a name="introduction-to-the-mobile-software-development-lifecyclecross-platformget-startedintroduction-to-mobile-sdlcmd"></a>[Introduction au cycle de vie de développement des logiciels mobiles](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
 
 Cet article décrit le cycle de vie du développement de logiciels pour les applications mobiles et présente certaines des considérations nécessaires lors de la création de projets pour mobiles. Les développeurs qui veulent passer directement à la création d’applications peuvent dans un premier temps ne pas lire ce guide, puis y revenir plus tard pour mieux comprendre le développement d’applications mobiles.
+
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Création d’applications multiplateformes](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+
+En choisissant Xamarin et en conservant à l’esprit quelques éléments quand vous concevez et développez vos applications mobiles, vous pouvez obtenir un partage de code considérable entre les plateformes mobiles, réduire le temps de commercialisation, tirer parti des compétences existantes, répondre à la demande des clients en matière d’accès mobile et réduire la complexité interplateforme. &nbsp;Ce document présente des recommandations de base afin de bénéficier de ces avantages pour les applications utilitaires et de productivité.
 
 ###  <a name="introducing-visual-studio-for-machttpsdocsmicrosoftcomvisualstudiomac"></a>[Présentation de Visual Studio pour Mac](https://docs.microsoft.com/visualstudio/mac/)
 

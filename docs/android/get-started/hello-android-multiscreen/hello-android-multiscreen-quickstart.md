@@ -7,12 +7,12 @@ ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 67644caedd268aac45a86c03a69ba017976fc103
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/30/2018
+ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android multi-écran - Démarrage rapide
 
@@ -74,7 +74,7 @@ Sélectionnez le bouton **Historique de traduction** sur l’aire de conception,
 
 ### <a name="creating-the-second-activity"></a>Création de la deuxième activité
 
-Créez une seconde activité pour activer le second écran. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword**, puis choisissez **Ajouter > Nouvel élément...** :
+Créez une seconde activité pour activer le second écran. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword**, puis choisissez **Ajouter > Nouvel élément...**  :
 
 [![Ajouter un nouveau fichier](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
@@ -108,10 +108,11 @@ Dans cette classe, vous créez un élément `ListActivity` et le remplissez par 
 
 ### <a name="adding-translation-history-code"></a>Ajout du code de l’historique de traduction
 
-Cette application collecte les numéros de téléphone (que l’utilisateur a traduits dans le premier écran) et les transmet au second écran. Les numéros de téléphone sont stockés sous forme de liste de chaînes. Pour prendre en charge les listes, ajoutez la directive `using` suivante en haut de la classe `MainActivity` :
+Cette application collecte les numéros de téléphone (que l’utilisateur a traduits dans le premier écran) et les transmet au second écran. Les numéros de téléphone sont stockés sous forme de liste de chaînes. Pour prendre en charge les listes (et intentions, qui sont utilisées ultérieurement), ajoutez les directives `using` suivantes en haut de **MainActivity.cs** :
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Ensuite, créez une liste vide qui peut être remplie avec des numéros de téléphone.
@@ -246,10 +247,11 @@ Dans cette classe, un élément `ListActivity` est créé et rempli par programm
 
 ### <a name="adding-translation-history-code"></a>Ajout du code de l’historique de traduction
 
-Cette application collecte les numéros de téléphone (que l’utilisateur a traduits dans le premier écran) et les transmet au second écran. Les numéros de téléphone sont stockés sous forme de liste de chaînes. Pour prendre en charge les listes, ajoutez la directive `using` suivante en haut de la classe `MainActivity` :
+Cette application collecte les numéros de téléphone (que l’utilisateur a traduits dans le premier écran) et les transmet au second écran. Les numéros de téléphone sont stockés sous forme de liste de chaînes. Pour prendre en charge les listes (et intentions, qui sont utilisées ultérieurement), ajoutez les directives `using` suivantes en haut de **MainActivity.cs** :
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Ensuite, créez une liste vide qui peut être remplie avec des numéros de téléphone. La classe `MainActivity` se présentera comme suit :

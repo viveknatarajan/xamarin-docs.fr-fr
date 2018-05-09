@@ -1,5 +1,5 @@
 ---
-title: Bien démarrer avec Android
+title: Commencer à développer des applications Android avec Xamarin.Android
 description: Xamarin.Android vous permet de créer des applications Android natives avec les mêmes contrôles d’interface utilisateur que ceux que vous utilisez pour Java, mais il vous fournit également la flexibilité et l’élégance d’un langage moderne (C#), la puissance de la bibliothèque de classes de base .NET et un IDE de première classe (Visual Studio). Cette série présente les principes fondamentaux du développement Xamarin.Android. Vous découvrirez notamment comment configurer et installer Xamarin.Android, et comment créer votre première application.
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/25/2017
-ms.openlocfilehash: 8a9abb7e9a5640994d67c1fb33d15d8405442b6c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: a60331a6c8cd1b65e51a63b221cbdb7182803bd1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-series"></a>Guides pour bien démarrer
 

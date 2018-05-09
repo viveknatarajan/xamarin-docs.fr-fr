@@ -4,14 +4,14 @@ description: Contrôle le flux d’informations entre source et cible
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: fdcba9b680bd548371883788af9e4eda755d91df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: charlespetzold
+ms.author: chape
+ms.date: 05/01/2018
+ms.openlocfilehash: 1aa612d8b855158f09bc0aeaad1520a44b3d9637
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-mode"></a>Mode de liaison
 
@@ -58,6 +58,7 @@ Le mode de liaison est spécifié avec un membre de la [ `BindingMode` ](https:/
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; données passent les deux sens entre source et cible
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; données passent à partir de la source à la cible
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; données passent à partir de la cible à la source
+- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; données passent à partir de la source à la cible, mais uniquement lorsque le `BindingContext` modifications (nouvelles avec Xamarin.Forms 3.0)
 
 Chaque propriété pouvant être liée a une liaison de mode qui est défini lors de la création de la propriété pouvant être liée par défaut, et qui est disponible à partir de la [ `DefaultBindingMode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/) propriété de la `BindableProperty` objet. Ce mode de liaison par défaut indique le mode en vigueur lorsque cette propriété est une cible de liaison de données.
 
@@ -94,6 +95,15 @@ Les propriétés pouvant être liées en lecture seule ont un mode de liaison pa
 - `SelectedItem` propriété de `ListView`
 
 Le raisonnement qui est une liaison sur le `SelectedItem` propriété doit avoir pour résultat lors de la définition de la source de liaison. Un exemple plus loin dans cet article, ce comportement.
+
+### <a name="one-time-bindings"></a>Liaisons à usage unique
+
+Plusieurs propriétés ont un mode de liaison par défaut de `OneTime`. Ces équivalents sont :
+
+- `IsTextPredictionEnabled` propriété de `Entry`
+- `Text`, `BackgroundColor`, et `Style` propriétés de `Span`.
+
+Cibler les propriétés ayant le mode de liaison `OneTime` sont mis à jour uniquement lorsque le contexte de liaison change. Pour les liaisons sur ces propriétés cibles, cela simplifie l’infrastructure de liaison, car il n’est pas nécessaire de surveiller les modifications dans les propriétés de la source.
 
 ## <a name="viewmodels-and-property-change-notifications"></a>ViewModel et les Notifications de modification de propriété
 
@@ -198,6 +208,8 @@ public class HslColorViewModel : INotifyPropertyChanged
 Lorsque le `Color` de propriété est modifiée, la méthode statique `GetNearestColorName` méthode dans le `NamedColor` classe (également inclus dans le **DataBindingDemos** solution) Obtient la couleur nommée le plus proche et définit le `Name` propriété. Cela `Name` propriété est privée `set` accesseur, donc il ne peut pas être défini en dehors de la classe de.
 
 Quand un ViewModel est défini en tant que source de liaison, l’infrastructure de liaison attache un gestionnaire à la `PropertyChanged` événement. De cette façon, la liaison peut être avertie des modifications apportées aux propriétés et peut alors définir les propriétés cibles à partir de valeurs modifiées.
+
+Toutefois, lorsqu’une propriété cible (ou le `Binding` définition sur une propriété cible) a une `BindingMode` de `OneTime`, il n’est pas nécessaire pour l’infrastructure de liaison joindre un gestionnaire dans le `PropertyChanged` événement. La propriété cible est mis à jour uniquement lorsque la `BindingContext` modifications et pas lorsque la propriété de la source est modifié. 
 
 Le **Simple sélecteur de couleurs** fichier XAML instancie le `HslColorViewModel` dans le dictionnaire de ressources de la page et l’initialise le `Color` propriété. Le `BindingContext` propriété de la `Grid` est définie sur une `StaticResource` extension fassent référence à cette ressource de liaison :
 

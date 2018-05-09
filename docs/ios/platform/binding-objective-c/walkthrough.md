@@ -6,12 +6,12 @@ ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 6a43b9ad3c9af0a4118c40fb128f8890ac0ffe40
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.date: 05/02/2017
+ms.openlocfilehash: 5954d705e403a3c8230c3125efcf836c3930c459
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procédure pas à pas : Liaison d’une bibliothèque de Objective-C iOS
 
@@ -128,6 +128,7 @@ La première étape est réservée ajouter le code source InfoColorPicker dans l
 3. Sélectionnez **Framework & bibliothèque**, le **/Cocoa toucher une bibliothèque statique** modèle et cliquez sur le **suivant** bouton :
 
     [![](walkthrough-images/image05.png "Sélectionnez le modèle/Cocoa toucher une bibliothèque statique")](walkthrough-images/image05.png#lightbox)
+
 4. Entrez `InfColorPicker` pour le **nom du projet** et cliquez sur le **suivant** bouton :
 
     [![](walkthrough-images/image06.png "Entrez InfColorPicker pour le nom du projet")](walkthrough-images/image06.png#lightbox)
@@ -276,11 +277,11 @@ La solution va être créée et deux fichiers par défaut sera inclus :
 
 1. À partir de la **fichier** menu, sélectionnez **nouveau** > **projet...** :
 
-    ![](walkthrough-images/bind01vs.png "Démarrage d’un nouveau projet")
+    ![Démarrage d’un nouveau projet](walkthrough-images/bind01vs.png "démarrage d’un nouveau projet")
 
-1. Dans la boîte de dialogue Nouveau projet, sélectionnez **iOS** > **bibliothèque de liaisons**:
+1. Dans la boîte de dialogue Nouveau projet, sélectionnez **Visual c# > iPhone & iPad > bibliothèque de liaisons (Xamarin) iOS**:
 
-    ![](walkthrough-images/bind02vs.png "Sélectionnez la bibliothèque de liaisons iOS")
+    [![Sélectionnez la bibliothèque de liaisons iOS](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
 1. Entrez « InfColorPickerBinding » en tant que le **nom** et cliquez sur le **OK** bouton permettant de créer la solution.
 
@@ -289,8 +290,6 @@ La solution va être créée et deux fichiers par défaut sera inclus :
 ![](walkthrough-images/bind03vs.png "La structure de la solution dans l’Explorateur de solutions")
 
 -----
-
-
 
 - **ApiDefinition.cs** -ce fichier contient les contrats qui définissent la façon dont l’API Objective-C à encapsuler dans c#.
 - **Structs.cs** : ce fichier contiendra toutes les structures ou les valeurs d’énumération qui sont requis par les interfaces et les délégués.
@@ -332,8 +331,7 @@ Suivez ces étapes pour ajouter la bibliothèque :
 
 -----
 
-
-Lorsque le fichier .a est ajouté au projet, Xamarin.iOS définir automatiquement le **Action de génération** du fichier à **ObjcBindingNativeLibrary**et créer un fichier spécial appelé `libInfColorPickerSDK.linkwith.cs`.
+Lorsque le **.a** fichier est ajouté au projet, Xamarin.iOS définira automatiquement le **Action de génération** du fichier à **ObjcBindingNativeLibrary**et créer un fichier spécial appelé `libInfColorPickerSDK.linkwith.cs`.
 
 
 Ce fichier contient le `LinkWith` attribut qui indique Xamarin.iOS comment la bibliothèque statique que vous venez de handle ajouté. Le contenu de ce fichier est affiché dans l’extrait de code suivant :
@@ -536,6 +534,7 @@ Suivez ces étapes pour créer un exemple d’application iPhone à utiliser iOS
 1. **Créer l’Interface utilisateur de l’iPhone** -cliquez deux fois sur le **MainStoryboard.storyboard** de fichiers dans le **InfColorPickerSample** projet pour le modifier dans le concepteur iOS. Ajouter un **bouton** à l’affichage et l’appeler `ChangeColorButton`, comme illustré dans l’exemple suivant :
 
     ![](walkthrough-images/use03.png "Ajout d’un bouton à la vue")
+
 1. **Ajouter le InfColorPickerView.xib** -l’InfColorPicker Objective-C bibliothèque inclut un **.xib** fichier. Xamarin.iOS n’inclura pas ce **.xib** dans le projet de liaison, ce qui entraîne des erreurs d’exécution dans notre exemple d’application. La solution consiste à ajouter la **.xib** fichier à notre projet Xamarin.iOS. Sélectionnez Xamarin.iOS projet, avec le bouton droit et sélectionnez **Ajouter > ajouter des fichiers**et ajouter la **.xib** fichier comme indiqué dans la capture d’écran suivante :
 
     ![](walkthrough-images/use04.png "Ajouter le InfColorPickerView.xib")
@@ -544,10 +543,11 @@ Suivez ces étapes pour créer un exemple d’application iPhone à utiliser iOS
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
+1. **Créer le projet de Xamarin.iOS** -ajouter un nouveau projet Xamarin.iOS nommé **InfColorPickerSample** à l’aide de la **application vue unique** modèle :
 
-1. **Créer le projet de Xamarin.iOS** -ajouter un nouveau projet Xamarin.iOS appelé **InfColorPickerSample** à la solution, comme illustré dans la capture d’écran suivante :
+    [![projet d’application (Xamarin) iOS](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
 
-    ![](walkthrough-images/use01vs.png "Créer le projet de Xamarin.iOS")
+    [![Sélectionnez le modèle](walkthrough-images/use01-2.w157-sml.png)](walkthrough-images/use01-2.w157.png#lightbox)
 
 1. **Ajouter une référence au projet de liaison** -mise à jour la **InfColorPickerSample** projet afin qu’il comporte une référence à la **InfColorPickerBinding** projet :
 
@@ -559,10 +559,7 @@ Suivez ces étapes pour créer un exemple d’application iPhone à utiliser iOS
 
 1. **Ajouter le InfColorPickerView.xib** -l’InfColorPicker Objective-C bibliothèque inclut un **.xib** fichier. Xamarin.iOS n’inclura pas ce **.xib** dans le projet de liaison, ce qui entraîne des erreurs d’exécution dans notre exemple d’application. La solution consiste à ajouter la **.xib** fichier à notre projet Xamarin.iOS à partir de notre **hôte de Build Mac**. Sélectionnez Xamarin.iOS projet, avec le bouton droit et sélectionnez **ajouter** > **élément existant...** et ajouter la **.xib** fichier.
 
-
 -----
-
-
 
 Ensuite, jetons un œil rapide à des protocoles dans Objective-C et comment les gérer de la liaison et le code c#.
 

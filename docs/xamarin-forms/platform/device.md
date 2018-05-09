@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 471616dffc700cf93a9f6435565222d7628bf165
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="device-class"></a>Classe de périphérique
 
@@ -86,6 +86,28 @@ if (Device.Idiom == TargetIdiom.Phone) {
     // layout views horizontally for a larger display (tablet or desktop)
 }
 ```
+
+## <a name="deviceflowdirection"></a>Device.FlowDirection
+
+Le [ `Device.FlowDirection` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) valeur récupère un [ `FlowDirection` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlowDirection/) valeur d’énumération qui représente la direction du flux actuel utilisée par le périphérique. Sens du flux est la direction dans laquelle les éléments d’interface utilisateur sur la page sont analysés par le œil. Ces valeurs sont les suivantes :
+
+- [`LeftToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.LeftToRight/)
+- [`RightToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.RightToLeft/)
+- [`MatchParent`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.MatchParent/)
+
+En XAML, le [ `Device.FlowDirection` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) valeur peut être récupérée à l’aide de la `x:Static` extension de balisage :
+
+```xaml
+<ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
+```
+
+Le code équivalent en c# est la suivante :
+
+```csharp
+this.FlowDirection = Device.FlowDirection;
+```
+
+Pour plus d’informations sur la direction du flux, consultez [localisation de droite à gauche](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
 <a name="Device_Styles" />
 

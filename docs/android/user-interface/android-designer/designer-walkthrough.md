@@ -6,12 +6,12 @@ ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/29/2018
-ms.openlocfilehash: ea3d4a7f848847d6a9f7341faec47294a4cab3f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/10/2018
+ms.openlocfilehash: 8d1dc410d5336d9c2505a18720cc7f734e838c39
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-android-designer"></a>À l’aide du concepteur Android
 
@@ -36,9 +36,9 @@ La première étape consiste à créer un nouveau projet Xamarin.Android.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Lancez Visual Studio et cliquez sur **nouveau projet...**  puis choisissez le **Visual C\# > Android > application vide (Android)** modèle :
+Lancez Visual Studio et cliquez sur **nouveau projet...**  puis choisissez le **Visual C\# > Android > application Android (Xamarin)** modèle :
 
-[![Application vide Android](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
+[![Application vide Android](designer-walkthrough-images/vs/01-android-app-sml.w157.png)](designer-walkthrough-images/vs/01-android-app.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -74,7 +74,7 @@ Nous allons créer un **LinearLayout** que nous allons utiliser pour contenir de
 
 Dans Visual Studio, cliquez sur **ressources/disposition** dans les **l’Explorateur de solutions** et sélectionnez **Ajouter > nouvel élément...** . Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **disposition Android**. Nommez le fichier **ListItem.axml** et cliquez sur **ajouter**:
 
-[![Nouvelle disposition](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
+[![Nouvelle disposition](designer-walkthrough-images/vs/03-new-layout-sml.w157.png)](designer-walkthrough-images/vs/03-new-layout.w157.png#lightbox)
 
 La nouvelle **ListItem** disposition s’affiche dans le concepteur :
 

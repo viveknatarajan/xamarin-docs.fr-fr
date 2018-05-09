@@ -5,12 +5,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 04/05/2017
-ms.openlocfilehash: 21af0ef09644f39f9be42788b3d8f4977a2143d3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/06/2018
+ms.openlocfilehash: a4ca803085f31ff0db5dd4f194b705d765447c9d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="apple-account-management"></a>Gestion des comptes Apple
 
@@ -18,23 +18,20 @@ L’interface de gestion de compte Apple fournit un moyen d’afficher toutes le
 
 L’authentification de votre ID Apple est effectuée sur la ligne de commande avec [fastlane](https://fastlane.tools/). FastLane doit être installé sur votre ordinateur pour pouvoir être authentifié avec succès. Plus d’informations sur fastlane et comment l’installer est détaillée dans le [fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) guides.
 
-La boîte de dialogue compte Apple dans Visual Studio pour Mac permet d’effectuer les opérations suivantes :
+La boîte de dialogue compte Apple vous permet de procéder comme suit :
 
 * **Créer et gérer des certificats** 
 * **Créer et gérer des profils de configuration** 
 
 Pour plus d’informations sur la façon de procéder est décrite dans ce guide.
 
-Vous pouvez également utiliser l’outils de signature d’offre groupée iOS pour effectuer les opérations suivantes :
-
-* **Ajouter une nouvelle identité de signature à un profil existant** 
-* **Configurer de nouveaux périphériques** 
+Vous pouvez également utiliser l’outils de mise en service automatique iOS pour créer et gérer vos identités de signature, les ID d’application et les profils de configuration automatiquement.
 
 Pour plus d’informations sur l’utilisation de ces fonctionnalités, reportez-vous à la [vos appareils](~/ios/get-started/installation/device-provisioning/index.md) guide.
 ️
 ## <a name="requirements"></a>Spécifications
 
-Gestion des comptes Apple est disponible dans Visual Studio pour Mac. Il n’est pas disponible actuellement sur Visual Studio pour Windows.
+Gestion des comptes Apple est disponible dans Visual Studio pour Mac et Visual Studio 2017 (Version 15,7 et versions ultérieures)
 
 Vous devez disposer d’un compte Apple Developer pour utiliser cette fonctionnalité. Plus d’informations sur les comptes de développeur Apple est disponible dans le [vos appareils](~/ios/get-started/installation/device-provisioning/index.md) guide.
 
@@ -44,6 +41,8 @@ Vous devez disposer d’un compte Apple Developer pour utiliser cette fonctionna
 - Avant de commencer, assurez-vous d’accepter des contrats de licence utilisateur dans le [portail des développeurs](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Ajout d’un compte de développeur Apple
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 1. Pour ouvrir la boîte de dialogue de gestion de compte atteindre **Visual Studio > Préférences > compte de développeur Apple**:
 
@@ -57,18 +56,35 @@ Vous devez disposer d’un compte Apple Developer pour utiliser cette fonctionna
  
 5. Sélectionnez **toujours autoriser** dans la boîte de dialogue alerte pour autoriser Visual Studio à utiliser vos informations d’identification :
 
-    ![](apple-account-management-images/image4.png)
+    ![Toujours autoriser la boîte de dialogue alerte](apple-account-management-images/image4.png)
 
 6. Une fois que votre compte a été ajouté avec succès, vous verrez votre ID Apple et aux éventuelles équipes faisant partie de votre ID Apple.
 
-    ![](apple-account-management-images/image5.png)
+    ![Boîte de dialogue compte de développeur Apple avec les comptes ajoutés](apple-account-management-images/image5.png)
 
 7. Sélectionnez n’importe quel équipe et l’appuyez sur la **afficher les détails...** disproportionnée. Cela affiche une liste de toutes les identités de signature et les profils de configuration qui sont installés sur votre ordinateur :
 
-    ![](apple-account-management-images/image6.png)
+    ![Détails de l’écran affichant des identités de signature et configuration des profils sur votre ordinateur](apple-account-management-images/image6.png)
 
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-<a name="managing" />
+1. Avant d’ajouter votre ID Apple pour Visual Studio 2017, assurez-vous que votre environnement de développement est [associés à un hôte de build Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+
+1. Pour ouvrir la fenêtre de gestion de compte, accédez à **Outils > Options > Xamarin > Apple comptes**:
+
+    ![Écran des options de comptes d’Apple](apple-account-management-images/prov1.png)
+
+1. Sélectionnez le **ajouter** bouton et entrer votre ID Apple et le mot de passe :
+
+    ![boîte de dialogue Nom d’utilisateur et mot de passe](apple-account-management-images/prov1a.png)
+
+1. Une fois que votre compte a été ajouté avec succès, vous verrez votre ID Apple et aux éventuelles équipes faisant partie de votre ID Apple.
+ 
+1. Sélectionnez n’importe quel équipe et l’appuyez sur la **afficher les détails...** disproportionnée. Cela affiche une liste de toutes les identités de signature et les profils de configuration qui sont installés sur votre ordinateur :
+
+    ![boîte de dialogue Nom d’utilisateur et mot de passe](apple-account-management-images/prov2.png)
+
+-----
 
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>La gestion des identités de signature et profils de configuration
@@ -83,21 +99,37 @@ La boîte de dialogue Détails de l’équipe affiche une liste des identités d
 
 * **Expiré** – le certificat a expiré. Vous devez le supprimer à partir de votre chaîne de clé.
 
-  ![](apple-account-management-images/image7.png)
+  ![informations de boîte de dialogue Détails de l’équipe](apple-account-management-images/image7.png)
 
 ## <a name="create-a-signing-identities"></a>Créer une identité de signature
 
-Pour créer une nouvelle identité de signature, sélectionnez le **créer un nouveau certificat** bouton de liste déroulante et sélectionnez le type dont vous avez besoin. Si vous avez les autorisations appropriées pour une signature nouvelle identité s’affiche après quelques secondes.
+Pour créer une nouvelle identité de signature, sélectionnez le **Create Certificate** bouton de liste déroulante et sélectionnez le type dont vous avez besoin. Si vous avez les autorisations appropriées pour une signature nouvelle identité s’affiche après quelques secondes.
 
-Si une option dans la liste déroulante est grisée et désactivée, comme illustré ci-dessous, cela signifie que vous n’avez pas de l’équipe correcte des autorisations pour créer ce type de certificat.
+Si une option dans la liste déroulante est grisée et désactivée, cela signifie que vous n’avez pas de l’équipe correcte des autorisations pour créer ce type de certificat.
 
-![](apple-account-management-images/image8.png)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+
+![Créez des options de certificat](apple-account-management-images/image8.png)
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+![Créez des options de certificat](apple-account-management-images/prov3.png)
+
+-----
 
 ## <a name="download-provisioning-profiles"></a>Télécharger des profils de configuration
 
 La boîte de dialogue Détails de l’équipe affiche également une liste de tous les profils de configuration connecté à votre compte de développeur. Vous pouvez télécharger tous les profils de configuration sur votre ordinateur local en appuyant sur la **télécharger tous les profils** bouton
 
-![](apple-account-management-images/image9.png)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+
+![Télécharger la section de profils de configuration](apple-account-management-images/image9.png)
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+![Télécharger la section de profils de configuration](apple-account-management-images/prov4.png)
+
+-----
 
 ## <a name="ios-bundle-signing"></a>Signature d’offre groupée iOS
 
@@ -120,13 +152,10 @@ Il s’agit, car l’authentification à 2 facteurs est activée sur votre compt
 ### <a name="failed-to-create-new-certificate"></a>Impossible de créer un nouveau certificat
 « Vous avez atteint la limite pour les certificats de ce type »
 
-![](apple-account-management-images/image10.png)
+![boîte de dialogue certificat limite](apple-account-management-images/image10.png)
 
 Le nombre maximal de certificats autorisés a été généré. Pour résoudre ce problème, accédez à la [Apple Developer Center](https://developer.apple.com/account/ios/certificate/distribution) et révoquer le certificat de Production.
 
 ## <a name="known-issues"></a>Problèmes connus
 
-* Parfois, la boîte de dialogue Détails de l’affichage peut prendre énormément de temps pour extraire les profils et les identités de signature.
-* Le focus ne peut pas retournent souvent à Visual Studio pour Mac après avoir entré vos informations, à l’origine de votre compte, ne pas à ajouter. Si c’est le cas, essayez à nouveau le processus.
-* Les profils d’approvisionnement créés dans Visual Studio pour Mac ne prennent pas en compte les droits sélectionnés dans vos projets (Entitlements.plist). Cette fonctionnalité sera ajoutée dans les futures versions de l’IDE.
 * Par défaut, les profils d’approvisionnement de distribution ciblent l’App Store. Vous devez créer les profils internes ou ad hoc manuellement.

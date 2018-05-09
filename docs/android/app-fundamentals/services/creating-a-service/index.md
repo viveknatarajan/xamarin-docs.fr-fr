@@ -5,12 +5,12 @@ ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/01/2018
-ms.openlocfilehash: d1e0fdb1c4b159b6db283d7b9b3be673b73a0ee0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: 00785ad161f5f05fd70b059bb0a3f1c8d6c31f97
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-service"></a>Création d'un service
 
@@ -82,8 +82,8 @@ La façon la plus simple pour démarrer un service dans Android consiste à dist
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **Intention implicite** &ndash; faiblement identifie de ce type de l’intention de l’action qui doit être effectuée, mais le service exact pour effectuer cette action est inconnu. Une intention implicite peut être considérée comme une lettre est traité « Problème de mai à Whom informatique... ».
-    Android examine le contenu de l’intention et déterminer s’il existe un service existant, ce qui correspond à l’intention.
+-   **Intention implicite** &ndash; faiblement identifie de ce type de l’intention de l’action que l’utilisateur souhaite exécuter, mais le service exact pour effectuer cette action est inconnu. Une intention implicite peut être considérée comme une lettre est traité « Problème de mai à Whom informatique... ».
+    Android est examiner le contenu de l’objectif et déterminer s’il existe un service existant, ce qui correspond à l’intention.
 
     Un _filtre intention_ est utilisée pour correspondre à l’intention implicite avec un service inscrit. Un filtre d’intention est un élément XML qui est ajouté à **AndroidManifest.xml** qui contient les métadonnées nécessaires pour mieux répondre à un Service avec l’intention implicite.
 

@@ -1,17 +1,17 @@
 ---
-title: Lancer des écrans
+title: Lancer des écrans pour les applications de Xamarin.iOS
 description: Cet article explique comment créer une écran de lancement d’application pour tous les appareils iOS, à la résolution et l’orientation, à l’aide d’un Storyboard unifié unique.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/19/2018
-ms.openlocfilehash: 991c2f30bcca1969e336f7269ad2a22ce6245b95
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2018
+ms.openlocfilehash: d5a267bfa8655a9b9c6d4dba9d8cf9d16624ba9b
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="launch-screens"></a>Lancer des écrans
 
@@ -96,17 +96,19 @@ Dans iOS 8 (et versions ultérieures), le développeur peut créer un Storyboard
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Créer un nouveau projet. Dans Visual Studio, sélectionnez **fichier > Nouveau > projet**, puis choisissez **unique afficher l’application (iPhone)**:
-    
-    ![La fenêtre Nouveau projet, avec une seule application de vue (iPhone) sélectionnée](launch-screens-images/launch01-vs.png)
+1. Créer un nouveau projet. Dans Visual Studio, sélectionnez **fichier > Nouveau > projet > c# > iPhone & iPad > iOS application (Xamarin)**:
 
-    - Nommez le projet, choisissez un emplacement, puis sélectionnez **OK**.
+    ![La fenêtre Nouveau projet, avec iOS (Xamarin) d’application sélectionnée](launch-screens-images/launch01.w157.png)
+
+    Sélectionnez le **application vue unique** modèle, puis cliquez sur **OK**:
+
+    ![Modèle d’application de la vue unique](launch-screens-images/launch01-2.w157.png)
 
 2. Si **ressources > LaunchScreen.xib** existe dans le **l’Explorateur de solutions**, supprimez-le en cliquant sur le fichier et en choisissant **supprimer**. Ce fichier est remplacé par un plan conceptuel à l’étape suivante.
 
 3. Créer un plan conceptuel à utiliser comme écran de lancement. Dans le **l’Explorateur de solutions**, avec le bouton droit sur le projet et choisissez **Ajouter > nouvel élément...**  suivie **Storyboard vide**. Nom de ce plan conceptuel **LaunchScreen.storyboard** et cliquez sur **ajouter**:
 
-    ![La fenêtre Ajouter un nouvel élément, avec Storyboard vide sélectionné](launch-screens-images/launch03-vs.png)
+    ![La fenêtre Ajouter un nouvel élément, avec Storyboard vide sélectionné](launch-screens-images/launch03.w157.png)
 
 4. Configurer le projet à utiliser **LaunchScreen.storyboard** en tant que son Storyboard d’écran de lancement :
 
@@ -119,7 +121,7 @@ Dans iOS 8 (et versions ultérieures), le développeur peut créer un Storyboard
 
     - Dans le **l’Explorateur de solutions**, avec le bouton droit sur **Asset catalogues** et sélectionnez **ajouter le catalogue Asset**. Nom de ce nouveau catalogue **actifs**:
 
-    ![La fenêtre Ajouter un nouvel élément, avec le catalogue sélectionné](launch-screens-images/launch05-vs.png)
+    ![La fenêtre Ajouter un nouvel élément, avec le catalogue sélectionné](launch-screens-images/launch05.w157.png)
 
     - Ajouter un nouvel ensemble d’images le **actifs** catalogue, comme décrit dans la [Ajout d’Images à une ressource catalogue Image défini](~/ios/app-fundamentals/images-icons/displaying-an-image.md) section de la [afficher une Image](~/ios/app-fundamentals/images-icons/displaying-an-image.md) guide.
 

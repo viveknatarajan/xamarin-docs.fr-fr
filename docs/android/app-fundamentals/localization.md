@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6924cc9989c8ab1ca66472b628cdab677e546a3e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 076cadd16c3953ee4e06193190b59035ad57f2c1
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="android-localization"></a>Localisation Android
 
@@ -184,7 +184,7 @@ Valide `quantity` commutateurs sont :
 
 * zéro
 * one
-* two
+* deux
 * quelques
 * many
 * other
@@ -265,5 +265,5 @@ Cet article décrit les principes fondamentaux de la localisation d’applicatio
 - [Tasky (localisé dans le code) (exemple)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 - [Localisation des ressources de Android](http://developer.android.com/guide/topics/resources/localization.html)
 - [Vue d’ensemble de la localisation d’inter-plateformes](~/cross-platform/app-fundamentals/localization.md)
-- [Localisation de Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization.md)
+- [Localisation de Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localisation d’iOS](~/ios/app-fundamentals/localization/index.md)

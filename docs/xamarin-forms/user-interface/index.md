@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 83fb7a03b3426631fcf772bcb3605fea44fd4f2b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="user-interface"></a>Interface utilisateur
 
@@ -51,7 +51,7 @@ Images peuvent être partagées entre les plateformes avec Xamarin.Forms, ils pe
 
 ## <a name="layoutslayoutsindexmd"></a>[Dispositions](layouts/index.md)
 
-Xamarin.Forms a plusieurs présentations pour l’organisation de contenu à l’écran. `StackLayout`, `Grid`, `AbsoluteLayout`, `ScrollView`, et `RelativeLayout` peuvent être utilisés pour créer des interfaces utilisateur et attrayantes et réactives.
+Xamarin.Forms a plusieurs présentations pour l’organisation de contenu à l’écran. `StackLayout`, `Grid`, `FlexLayout`, `AbsoluteLayout`, `ScrollView`, et `RelativeLayout` peuvent être utilisés pour créer des interfaces utilisateur et attrayantes et réactives.
 
 ## <a name="listviewlistviewindexmd"></a>[ListView](listview/index.md)
 
@@ -84,6 +84,10 @@ Xamarin.Forms a plusieurs affichages de présentation et de recevoir du texte. A
 ## <a name="themesthemesindexmd"></a>[Thèmes](themes/index.md)
 
 Les thèmes de Xamarin.Forms définissent une apparence visuelle spécifique pour les contrôles standards. Après avoir ajouté un thème au dictionnaire de ressources de l’application, l’apparence des contrôles standard change.
+
+## <a name="visual-state-managervisual-state-managermd"></a>[Gestionnaire d’état visuel](visual-state-manager.md)
+
+Le Gestionnaire d’état visuel fournit une méthode structurée déclenchent des modifications dans l’interface utilisateur à partir du code, y compris la disposition qui s’adapte aux modifications de la taille ou l’orientation de l’appareil.
 
 ## <a name="webviewwebviewmd"></a>[WebView](webview.md)
 

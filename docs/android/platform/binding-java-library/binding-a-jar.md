@@ -6,12 +6,12 @@ ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 2d9f2198dbb88e7614944ac73729a4e6eca42647
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-a-jar"></a>Liaison d’un. JAR
 
@@ -81,7 +81,7 @@ Avant de commencer les étapes ci-dessous, téléchargez [picasso-2.x.x.jar](htt
 
 Commencez par créer un nouveau projet de bibliothèque de liaisons. Dans Visual Studio pour Mac ou Visual Studio, créez une Solution et sélectionnez le *bibliothèque de liaisons Android* modèle. (Les captures d’écran dans cette procédure pas à pas utilisent Visual Studio, mais Visual Studio pour Mac est très similaire). Nommez la Solution **JarBinding**: 
 
-[![Créer le projet de bibliothèque JarBinding](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
+[![Créer le projet de bibliothèque JarBinding](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
 Le modèle inclut un **fichiers JAR** dossier dans lequel vous ajoutez votre. JAR(s) pour le projet de bibliothèque de liaisons. Avec le bouton droit le **fichiers JAR** et sélectionnez **Ajouter > élément existant**: 
 
@@ -130,7 +130,7 @@ Dans les étapes suivantes, nous allons créer une application minimale qui util
 
 Tout d’abord, créez une nouvelle application Xamarin.Android qui utilise la bibliothèque de liaisons. Avec le bouton droit de la Solution et sélectionnez **ajouter un nouveau projet**; nommez le nouveau projet **BindingTest**. Nous créons cette application dans la même Solution que la bibliothèque de liaisons afin de simplifier cette procédure pas à pas ; Toutefois, l’application qui utilise la bibliothèque de liaisons pourrait se trouver au lieu de cela, dans une autre Solution : 
 
-[![Ajouter un nouveau projet BindingTest](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
+[![Ajouter un nouveau projet BindingTest](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
 Avec le bouton droit le **références** nœud de la **BindingTest** de projet et sélectionnez **ajouter une référence...** :
 

@@ -4,14 +4,15 @@ description: Xamarin.Forms prend désormais en charge d’aperçu pour la platef
 ms.prod: xamarin
 ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2018
-ms.openlocfilehash: 2e2bbf12cd7b4abab4609349b549fde1bcea09e8
-ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
+ms.openlocfilehash: 416e33f131c6e1ef144608f98964fd8372f454f8
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wpf-platform-setup"></a>Programme d’installation WPF plateforme
 
@@ -20,6 +21,12 @@ ms.lasthandoff: 04/28/2018
 Xamarin.Forms prend désormais en charge de l’aperçu de Windows Presentation Foundation (WPF). Cet article explique comment ajouter un projet WPF pour une solution Xamarin.Forms.
 
 Avant de commencer, créez une solution Xamarin.Forms dans Visual Studio 2017 ou utiliser une solution Xamarin.Forms existante, par exemple, [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/). Vous pouvez uniquement ajouter des applications WPF à une solution Xamarin.Forms dans Windows.
+
+## <a name="add-a-wpf-project-to-a-xamarinforms-app-with-xamarinuniversity"></a>Ajouter un projet WPF pour une application Xamarin.Forms avec Xamarin.University
+
+> [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
+
+**Xamarin.Forms 3.0 WPF prend en charge, par [Xamarin University](https://university.xamarin.com/)**
 
 ## <a name="adding-a-wpf-app"></a>Ajout d’une application WPF
 

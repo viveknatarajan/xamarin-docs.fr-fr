@@ -6,12 +6,12 @@ ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
-ms.openlocfilehash: 1cb151cc5c741a020fcbb398441ed4958ec5980b
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.date: 05/04/2018
+ms.openlocfilehash: f4fe1bd753260f05dedb452655572d290c0781d0
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Limite des Services dans Xamarin.Android
 
@@ -42,8 +42,8 @@ Ce guide explique comment étendre le `Service` classe pour implémenter un serv
 Il existe trois composants qui doivent être implémentées dans les applications Android consommer un service lié :
 
 1. **Étendre la `Service` classe et implémenter les méthodes de rappel du cycle de vie** &ndash; cette classe contiendra le code qui effectue le travail qui vous est demandé du service. Ce point sera abordé plus en détail ci-dessous.
-2. **Créez une classe qui implémente `IServiceConnection`**  &ndash; cet objet contient des méthodes de rappel qu’avertir le client est connecté à (ou a perdu la connexion) à partir du service. La connexion au service fournit également une référence à un objet que le client peut utiliser pour interagir directement avec le service. Cette référence est appelée le _binder_.
-3. **Créez une classe qui implémente `IBinder`**  &ndash; A _Binder_ implémentation fournit l’API qu’un client utilise pour communiquer avec le service. Le classeur peut fournir une référence à un service lié, autorisant des méthodes à appeler directement ou le classeur peut fournir une API qui encapsule et masque le service lié à partir de l’application cliente. Un `IBinder` doit fournir le code nécessaire pour les appels de procédure distante. Il n’est pas nécessaire (ou recommandé) pour implémenter le `IBinder` interface directement. Un `IBinder` Instead applications doivent étendre la `Binder` qui fournit la plupart des fonctionnalités de base requises par une `IBinder`.
+2. **Créez une classe qui implémente `IServiceConnection`**  &ndash; cette interface fournit des méthodes de rappel seront appelée par Android pour informer le client lors de la connexion au service a changé, autrement dit, le client connecté ou déconnecté à la service. La connexion au service fournit également une référence à un objet que le client peut utiliser pour interagir directement avec le service. Cette référence est appelée le _binder_.
+3. **Créez une classe qui implémente `IBinder`**  &ndash; A _Binder_ implémentation fournit l’API qu’un client utilise pour communiquer avec le service. Le classeur peut fournir une référence à un service lié, autorisant des méthodes à appeler directement ou le classeur peut fournir une API qui encapsule et masque le service lié à partir de l’application cliente. Un `IBinder` doit fournir le code nécessaire pour les appels de procédure distante. Il n’est pas nécessaire (ou recommandé) pour implémenter le `IBinder` interface directement. À la place des applications doivent étendre la `Binder` type qui fournit la plupart des fonctionnalités de base requises par une `IBinder`.
 4. **Démarrage et la lier à un Service** &ndash; une fois la connexion au service, le classeur et le service créés l’application Android est chargée de démarrage du service et de lui.
 
 Chacune de ces étapes sera abordée dans les sections suivantes plus en détail.

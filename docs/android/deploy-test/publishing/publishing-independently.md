@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6d278f3ae046a31be6e4335119572fb509672a66
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f7ba0620a4639ff62e2d75d7cf8f02fcc01faac5
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publishing-independently"></a>Publication indépendante
 
@@ -25,7 +25,7 @@ Quatre licences sont disponibles pour le développement, le déploiement et la d
 
 -   **Visual Studio Professional** &ndash; Pour les développeurs indépendants ou les petites équipes (Windows uniquement). Cette licence propose un abonnement standard ou cloud, un accès au contenu Xamarin University et n’applique aucune restriction d’utilisation.
 
--   **Visual Studio Enterprise** &ndash; Pour les équipes de toute taille (Windows uniquement). Cette licence inclut des fonctionnalités d’entreprise, un abonnement standard ou cloud et une remise de 25 % sur Xamarin Test Cloud.
+-   **Visual Studio Enterprise** &ndash; Pour les équipes de toute taille (Windows uniquement). Cette licence comprend des fonctionnalités d’entreprise, un abonnement standard ou cloud.
 
 Visitez le site [visualstudio.com](https://www.visualstudio.com/xamarin/) pour télécharger l’édition Community ou pour en savoir plus sur l’achat des éditions Professional et Enterprise.
 

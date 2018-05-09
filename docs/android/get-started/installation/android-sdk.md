@@ -1,5 +1,5 @@
 ---
-title: Configuration du kit Android SDK
+title: Configuration du kit Android SDK pour Xamarin.Android
 description: Visual Studio inclut un Gestionnaire Android SDK, qui remplace le Gestionnaire du kit SDK autonome de Google. Ce guide explique comment utiliser le Gestionnaire Android SDK pour télécharger les outils, les plateformes et autres composants du kit Android SDK dont vous avez besoin pour développer des applications Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 45ab1930300ac704da0a1fee25c08d40aa35ac5c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5c2259ad32f341094f6cdc440edb2053987374b1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="android-sdk-setup"></a>Configuration du kit Android SDK
+# <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configuration du kit Android SDK pour Xamarin.Android
 
 _Visual Studio inclut un Gestionnaire Android SDK, qui remplace le Gestionnaire SDK autonome de Google. Ce guide explique comment utiliser le Gestionnaire SDK pour télécharger les outils, les plateformes et d’autres composants d’Android SDK dont vous avez besoin pour développer des applications Xamarin.Android._
 

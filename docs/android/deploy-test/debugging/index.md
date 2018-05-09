@@ -1,23 +1,24 @@
 ---
-title: Débogage
+title: Débogage de Xamarin.Android sur des appareils et émulateurs
 description: Guide pratique pour tester et déboguer votre application Xamarin.Android
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/16/2018
-ms.openlocfilehash: 429a369ddcd11829920f9fb932a737d1a53cec10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 4b51b10965f3f6e77420d657bc0f7f7d25fc6569
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging"></a>Débogage
 
+Cette section explique comment déboguer une application Xamarin.Android sur des appareils ou émulateurs.
 ## <a name="debugging-overview"></a>Vue d'ensemble du débogage
 
-Le développement d’applications Android nécessite l’exécution de l’application, que ce soit sur du matériel physique ou en utilisant un émulateur ou simulateur. L’utilisation de matériel est la meilleure approche, mais elle n’est pas toujours la plus pratique. Il est souvent plus simple et plus rentable de simuler/émuler le matériel Android à l’aide de l’un des émulateurs décrits ci-dessous.
+Le développement d’applications Android nécessite l’exécution de l’application, que ce soit sur du matériel physique ou un émulateur. L’utilisation de matériel est la meilleure approche, mais elle n’est pas toujours la plus pratique. Il est souvent plus simple et plus rentable de simuler/émuler le matériel Android à l’aide de l’un des émulateurs décrits ci-dessous.
 
 
 ### <a name="android-sdk-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Émulateur SDK Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md)

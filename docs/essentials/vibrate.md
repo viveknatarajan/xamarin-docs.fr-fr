@@ -1,0 +1,112 @@
+---
+title: Xamarin.Essentials Vibration
+description: La classe Vibration vous permet de démarrer et arrêter la fonctionnalité a Vibreur pendant une durée souhaitée.
+ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
+ms.technology: xamarin-crossplatform
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/04/2018
+ms.openlocfilehash: e0358b95dbed5dc2bc6cb087a458034845cb8487
+ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/07/2018
+---
+# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials Vibration
+
+![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+
+Le **Vibration** classe vous permet de démarrer et arrêter la fonctionnalité a Vibreur pendant une durée souhaitée.
+
+## <a name="getting-started"></a>Prise en main
+
+Pour accéder à la **Vibration** fonctionnalité de la configuration spécifique plate-forme suivante est requise.
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+L’autorisation a Vibreur est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
+
+Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajouter :
+
+```csharp
+[assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
+```
+
+OU mettre à jour le manifeste Android :
+
+Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+
+```xml
+<uses-permission android:name="android.permission.VIBRATE" />
+```
+
+Ou cliquez avec le bouton droit sur le projet Anroid et ouvrez les propriétés du projet. Sous **manifeste Android** de trouver la **les autorisations requises :** zone et vérifiez la **a Vibreur** autorisation. Met automatiquement à jour la **AndroidManifest.xml** fichier.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+Aucune configuration supplémentaire n’est requise.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Aucune configuration supplémentaire n’est requise.
+
+-----
+
+## <a name="using-vibration"></a>À l’aide de Vibration
+
+Ajoutez une référence à Xamarin.Essentials dans votre classe :
+
+```csharp
+using Xamarin.Essentials;
+```
+
+La fonctionnalité de Vibration peut être demandée pour un certain temps ou la valeur par défaut de 500 millisecondes.
+
+```csharp
+try
+{
+    // Use default vibration length
+    Vibration.Vibrate();
+
+    // Or use specified time
+    var duration = TimeSpan.FromSeconds(1);
+    Vibration.Vibrate(duration);
+}
+catch (FeatureNotSupportedException ex)
+{
+    // Feature not supported on device
+}
+catch (Exception ex)
+{
+    // Other error has occurred.
+}
+```
+
+L’annulation de vibration de périphérique peut être demandée avec le `Cancel` méthode :
+
+```csharp
+try
+{
+    Vibration.Cancel();
+}
+catch (FeatureNotSupportedException ex)
+{
+    // Feature not supported on device
+}
+catch (Exception ex)
+{
+    // Other error has occurred.
+}
+```
+
+## <a name="platform-differences"></a>Différences de plateformes
+
+| Plateforme | Différence |
+| --- | --- |
+| iOS | Terme toujours pour 500 millisecondes. |
+| iOS | N’est pas possible d’annuler les vibrations. |
+
+## <a name="api"></a>API
+
+- [Code source de vibration](https://github.com/xamarin/Essentials/tree/master/Essentials/Vibration)
+- [Documentation de l’API de vibration](xref:Xamarin.Essentials.Vibration)
