@@ -220,7 +220,7 @@
 #### [Création d’APK propres à une interface ABI](deploy-test/building-apps/abi-specific-apks.md)
 ### [Émulateur en ligne de commande](deploy-test/command-line-emulator.md)
 ### [Débogage](deploy-test/debugging/index.md)
-#### [Émulateur SDK Android](deploy-test/debugging/android-sdk-emulator/index.md)
+#### [Émulateur Google Android](deploy-test/debugging/android-sdk-emulator/index.md)
 ##### [Exécution dans l'émulateur](deploy-test/debugging/android-sdk-emulator/running-the-emulator.md)
 ##### [Résolution des problèmes](deploy-test/debugging/android-sdk-emulator/troubleshooting.md)
 #### [Émulateur Android Visual Studio](deploy-test/debugging/visual-studio-android-emulator.md)

@@ -2,15 +2,14 @@
 title: Par courrier électronique Xamarin.Essentials
 description: La classe de messagerie permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris l’objet, le corps et les destinataires (à, CC, Cci).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a23d849131372820a73057b752908886f64b4210
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 80503c5e887538bca40a19c7b26b981850d2bd92
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-email"></a>Par courrier électronique Xamarin.Essentials
 

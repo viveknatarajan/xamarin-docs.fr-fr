@@ -6,16 +6,18 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/20/2018
-ms.openlocfilehash: 124823238968ab21c1e55818ba5b99d2bb0c0bf8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/08/2018
+ms.openlocfilehash: a714ac55c3a49b91cb21e3ba1793b9bccd7d1be2
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Répartiteur de travail firebase
 
 _Ce guide explique comment planifier le travail en arrière-plan à l’aide de la bibliothèque Firebase travail répartiteur à partir de Google._
+
+![Répartiteur de travail firebase en version préliminaire](~/media/shared/preview.png)
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -60,9 +62,13 @@ Le répartiteur de travail Firebase requiert un niveau d’API Android 9 ou vers
 
 ## <a name="using-the-firebase-job-dispatcher-library-in-xamarinandroid"></a>À l’aide de la bibliothèque de répartiteur du travail Firebase dans Xamarin.Android
 
-Pour commencer le répartiteur de travail Firebase, ajoutez d’abord le [package NuGet de Xamarin.Firebase.JobDispatcher](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher/0.6.0-beta1) pour le projet Xamarin.Android. Rechercher le Gestionnaire de Package NuGet pour la **Xamarin.Firebase.Jobdispatcher** package.  
+Pour commencer le répartiteur de travail Firebase, ajoutez d’abord le [package NuGet de Xamarin.Firebase.JobDispatcher](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) pour le projet Xamarin.Android. Rechercher le Gestionnaire de Package NuGet pour la **Xamarin.Firebase.JobDispatcher** package (qui est toujours en version préliminaire).
 
 Après avoir ajouté la bibliothèque Firebase travail répartiteur, créer un `JobService` classe et ensuite planifier son exécution avec une instance de la `FirebaseJobDispatcher`.
+
+> [!NOTE]
+> La liaison en cours pour le répartiteur de travail Firebase cible une ancienne version de la bibliothèque. L’est une [bogue connu [(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] ce qui empêche la liaison à partir de la mise à jour pour cibler une version plus récente du répartiteur de travail Firebase.
+
 
 ### <a name="creating-a-jobservice"></a>Création d’un JobService
 
@@ -287,8 +293,9 @@ Ce guide décrit comment utiliser le répartiteur de travail Firebase pour effec
 
 ## <a name="related-links"></a>Liens associés
 
-- [Xamarin.Firebase.JobDispatcher sur NuGet](https://www.nuget.org/packages/Xamarin.FirebaseJobDispatcher)
-- [firebase-job-dispatcher on GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
-- [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
+- [Générateur de liaisons échoue avec l’erreur fatale non gérée : System.ArgumentNullException : ne peut pas être null.](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
+- [Xamarin.Firebase.JobDispatcher sur NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
+- [firebase-travail-répartiteur sur GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
+- [Liaison de Xamarin.Firebase.JobDispatcher](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
 - [Planification de travaux intelligente](https://developer.android.com/topic/performance/scheduling.html)
 - [Android batterie et les optimisations de la mémoire - Google d’e/s 2016 (vidéo)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)

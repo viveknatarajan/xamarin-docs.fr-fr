@@ -3,15 +3,14 @@ title: Classeurs interactifs
 description: Utiliser des classeurs pour créer des documents en direct avec le code c# pour tester, d’apprentissage, de formation ou l’exploration.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 7577380ff78b9b94b88f5a4190df32400d2c573f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: de88bbc9bc45b8a6326924d964bdd9385acb82aa
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="interactive-workbooks"></a>Classeurs interactifs
 
@@ -133,7 +132,7 @@ Si un texte brut `.workbook` ouverture du fichier qui fait référence à des re
 > [!NOTE]
 > Les utilisateurs de Windows seront ouvre le `package.workbook\index.workbook` fichier directement, mais sinon, le package se comportera comme sur Mac.
 
-### <a name="archives"></a>Archives
+### <a name="archives"></a>archives
 
 Packages de classeur, les répertoires, peuvent être difficiles de distribuer facilement via internet. La solution est archives de classeur. Une archive de classeur est un package de fichiers compressés zip de classeur, nommé avec le `.workbook` extension.
 

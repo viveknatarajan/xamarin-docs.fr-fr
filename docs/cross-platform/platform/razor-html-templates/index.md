@@ -3,15 +3,14 @@ title: Vues HTML de génération à l’aide de modèles Razor
 description: " À l’aide d’une page Web plein écran pour le rendu HTML peut être un moyen simple et efficace pour restituer la mise en forme complexe d’une manière inter-plateformes, surtout si vous disposez déjà HTML, Javascript et CSS à partir d’un projet de site Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: fa361e48f8f7e236a3295deda2d80a02ef06b34d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 48d7778bf3225401f2819909ae6be320cfa881e3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>Vues HTML de génération à l’aide de modèles Razor
 
@@ -290,7 +289,7 @@ var page = template.GenerateString ();
 
 La sortie finale est illustrée ici dans un affichage web sur iOS Simulator et l’émulateur Android :
 
- ![Rupert](images/image8_516x160.png)
+ ![RUPERT](images/image8_516x160.png)
 
 #### <a name="c-statements"></a>Instructions c#
 
@@ -519,6 +518,6 @@ Enfin, il introduit les exemples RazorTodo qui montrent comment combiner des vue
 
 ### <a name="related-links"></a>Liens associés
 
-- [RazorTodo Sample](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
+- [Exemple de RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
 - [MVC 3 : le moteur d’affichage Razor (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
 - [Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)

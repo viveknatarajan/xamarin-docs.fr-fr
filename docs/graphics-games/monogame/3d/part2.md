@@ -3,15 +3,14 @@ title: Dessin des graphiques 3D de sommets dans MonoGame
 description: MonoGame prend en charge l’utilisation des tableaux de sommets pour définir la façon dont un objet 3D est rendu sur une base par point. Les utilisateurs peuvent tirer parti des tableaux de sommets pour créer une géométrie dynamique, implémenter des effets spéciaux et améliorer l’efficacité de leur rendu à l’élimination.
 ms.prod: xamarin
 ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 4736bedd413663af098bbad522cc56f432e36ea0
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 4fa6929a8de19608c06690e4cf24514f6749480a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Dessin des graphiques 3D de sommets dans MonoGame
 

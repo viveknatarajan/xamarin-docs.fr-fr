@@ -3,14 +3,13 @@ title: Unification de Google Play Services de composants et NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: e0ba5ee9417917b834ab060a94f72d1f071b4912
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cfd417f4fc01b07b4334259c45472eb24b73abd8
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="unifying-google-play-services-components-and-nuget"></a>Unification de Google Play Services de composants et NuGet
 
@@ -21,7 +20,7 @@ Il permet d’être plusieurs composants des Services Google Play et les package
 -   Services de Google Play (Froyo)
 -   Services de Google Play (personnage en pain)
 -   Google Play Services (ICS)
--   Google Play Services (JellyBean)
+-   Services de Google Play (JellyBean)
 -   Services de Google Play (KitKat)
 
 Google en réalité est fourni avec deux .jar fichiers pour les Services Google Play :
@@ -55,7 +54,7 @@ Personnage en pain n’a pas de prise en charge par défaut de Fragment, et par 
 Dans la mesure où ils ne sont plus nécessaires, nous avons désactivé/Delisted les composants/NuGets suivantes :
 
 -   Services de Google Play (personnage en pain)
--   Google Play Services (JellyBean)
+-   Services de Google Play (JellyBean)
 -   Services de Google Play (KitKat)
 
 Existants _Google Play Services (ICS)_ composant/Nuget a été renommé en _Services Google Play_ et restent à jour à l’avenir. Tous les projets faisant référence à un des packages désactivé/Delisted doivent être mis à jour pour utiliser celle-ci.

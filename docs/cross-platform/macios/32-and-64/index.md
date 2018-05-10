@@ -3,15 +3,14 @@ title: Considérations relatives à la plateforme 32/64 bits
 description: Considérations lors du ciblage des architectures 32 bits et 64 bits pour votre application
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
-ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 06e65b8a639345af65c6e5d3bbe57d8bb3feffa1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 223da6b490e09b2fa27ab3bbf8fa123b5fa8070c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="3264-bit-platform-considerations"></a>Considérations relatives à la plateforme 32/64 bits
 

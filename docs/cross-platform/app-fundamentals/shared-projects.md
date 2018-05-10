@@ -3,15 +3,14 @@ title: Projets partagés
 description: Projets partagés vous permettent d’écrire du code commun qui est référencé par un nombre de projets d’application différent. Le code est compilé dans le cadre de chaque projet de référence et peut inclure des directives de compilateur pour aider à intégrer les fonctionnalités spécifiques à la plateforme dans la base de code partagé.
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: a7d5a25c3c6f2889bde0ff4aeaf85053bcc796fb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2910ada16aad2d8cb19cf0ee3a059c7df22b630e
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="shared-projects"></a>Projets partagés
 

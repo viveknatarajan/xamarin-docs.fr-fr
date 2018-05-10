@@ -3,15 +3,14 @@ title: Introduction aux bibliothèques de classes portables
 description: Cet article présente les projets de bibliothèque de classes Portable (PCL) et Guide de création et utilisation des projets de bibliothèque de classes portables dans Visual Studio pour Mac et Visual Studio.
 ms.prod: xamarin
 ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 799ee198f776b963bb8779d71bacc322001e2882
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: d80a4125d7447b19f001c349aff006dc4744f4a6
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introduction aux bibliothèques de classes portables
 

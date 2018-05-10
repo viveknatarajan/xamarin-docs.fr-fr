@@ -3,15 +3,14 @@ title: Comment effectuer une bonne désinstaller pour Xamarin pour Visual Studio
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: 49577961026d9895912d2848975e71a9f7eebbd8
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 99fde9330498ee62d3cf6b5910c2cbfae39cfdeb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>Comment effectuer une bonne désinstaller pour Xamarin pour Visual Studio ?
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 04/06/2018
 
 3.  Suppression MEF composant répertoire de cache de Visual Studio ainsi :
 
-    _%LOCALAPPDATA%\\Microsoft\\VisualStudio\\1\*.0\\ComponentModelCache_
+    _%LocalAppData%\\Microsoft\\VisualStudio\\1\*.0\\ComponentModelCache_
 
     En fait, cette étape en soi suffit souvent à résoudre les erreurs, par exemple :
 
@@ -38,7 +37,7 @@ ms.lasthandoff: 04/06/2018
 
     -   « Le fichier projet... ne peut pas être ouvert. Il est un sous-type de projet manquant »
 
-    -   Référence d’objet » non définie sur une instance d’un objet.  at Xamarin.VisualStudio.IOS.XamarinIOSPackage.Initialize()"
+    -   Référence d’objet » non définie sur une instance d’un objet.  à Xamarin.VisualStudio.IOS.XamarinIOSPackage.Initialize() »
 
     -   « Échec de SetSite package » (dans Visual Studio _ActivityLog.xml_)
 
@@ -48,7 +47,7 @@ ms.lasthandoff: 04/06/2018
 
 4.  Vérifiez aussi dans le _VirtualStore_ répertoire afin de savoir si Windows peut avoir stocké une superposition des fichiers pour le _Extensions\\Xamarin_ ou _ComponentModelCache_répertoires il :
 
-    _%LOCALAPPDATA%\\VirtualStore_
+    _%LocalAppData%\\VirtualStore_
 
 5.  Ouvrez l’Éditeur du Registre (`regedit`).
 
@@ -62,13 +61,13 @@ ms.lasthandoff: 04/06/2018
 
 8.  Recherchez cette clé :
 
-    _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0\\ExtensionManager\\PendingDeletions_
+    _Clé HKEY\_actuel\_utilisateur\\logiciel\\Microsoft\\VisualStudio\\1\*.0\\ExtensionManager\\PendingDeletions_
 
-9.  Supprimez les entrées qui ressemblent à elles peuvent être liés aux Xamarin.  Par exemple, c' est ici qu’exécutée à provoquer des problèmes dans les versions antérieures de Xamarin :
+9.  Supprimez les entrées qui semblent éventuellement liées à Xamarin.  Par exemple, c' est ici qu’exécutée à provoquer des problèmes dans les versions antérieures de Xamarin :
 
     _Mono.VisualStudio.Shell,1.0_
 
-10. Ouvrez administrateur `cmd.exe` invite de commandes, puis exécutez le `devenv /setup` et `devenv /updateconfiguration` commandes pour chaque version installée de Visual Studio.  Par exemple, pour Visual Studio 2015 :
+10. Ouvrez administrateur `cmd.exe` invite de commandes, puis exécutez le `devenv /setup` et `devenv /updateconfiguration` commandes pour chaque version installée de Visual Studio.  Par exemple, pour Visual Studio 2015 :
 
     ```
     "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" /setup

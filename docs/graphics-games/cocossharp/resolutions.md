@@ -3,15 +3,14 @@ title: Gestion de plusieurs résolutions dans CocosSharp
 description: Ce guide montre comment travailler avec CocosSharp pour développer des jeux qui s’affiche correctement sur les appareils des résolutions différentes.
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 4077af2351b8ab3ef718a71cc672add54b6ef05a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 577a3edbd106b6fba298b3ee5999265ef955f9dd
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Gestion de plusieurs résolutions dans CocosSharp
 
@@ -22,10 +21,10 @@ CocosSharp fournit des méthodes pour standardiser les dimensions de l’objet d
 Le comportement de résolution par défaut de CocosSharp est à faire correspondre des pixels physiques avec les coordonnées dans le jeu. Le tableau suivant montre comment différents appareils sont d’entraîner un composant d’environnement en arrière-plan avec la largeur et la hauteur de 368 x 240. La première ligne est techniquement pas un appareil réel, mais au lieu de cela, le rendu attendu du sprite, quelle que soit la résolution de l’appareil :
 
 
-| **Device** | **Résolution d’affichage** | **Capture d’écran** |
+| **Périphérique** | **Résolution d’affichage** | **Capture d’écran** |
 |--- | --- |--- |
 |Mise en forme|368 x 240 (avec noires pour proportions)| ![368 x 240 (avec noires pour proportions)](resolutions-images/image1.png) |
-|iPhone 4 s|960x640| ![iPhone 4 s 960 x 640](resolutions-images/image2.png) |
+|iPhone 4 s|960 x 640| ![iPhone 4 s 960 x 640](resolutions-images/image2.png) |
 |iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080 pixels](resolutions-images/image3.png) |
 
 Ce document explique comment utiliser CocosSharp pour résoudre le problème indiqué dans le tableau ci-dessus. Autrement dit, nous aborderons comment rendre n’importe quel appareil comme indiqué dans la première ligne, quelle que soit la résolution d’écran de rendu.

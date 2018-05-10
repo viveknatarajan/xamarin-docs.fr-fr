@@ -3,15 +3,14 @@ title: Introduction à l’intégration continue avec Xamarin
 description: Intégration continue est une pratique de l’ingénierie logicielle dans laquelle une génération automatique compile et teste éventuellement une application lorsque le code est ajouté ou modifié par les développeurs dans le référentiel de contrôle de version du projet. Cet article présente les concepts généraux de l’intégration continue et certaines des options disponibles pour l’intégration continue avec les projets de Xamarin.
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/04/2017
-ms.openlocfilehash: 54f3d3c475e506e7d451af5125e90a0f51aa7374
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: 34838a1527cb3661e8e5ed51b5950f26026e9433
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduction à l’intégration continue avec Xamarin
 

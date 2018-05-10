@@ -2,15 +2,14 @@
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
 title: Conseils de portage d’applications de bureau
 description: Une explication simple comment dissocier existant Windows Forms ou les applications WPF pour créer des applications multiplateformes pour s’exécuter sur Mac OS, iOS, Android, ainsi que UWP et Windows 10.
-ms.technology: xamarin-crossplatform
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 35ffb9c92b5d3faf48f3e76a6702c2518ca80538
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: cdf70065893a4da268f628369fa94336291ead1f
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="desktop-app-porting-guidance"></a>Conseils de portage d’applications de bureau
 

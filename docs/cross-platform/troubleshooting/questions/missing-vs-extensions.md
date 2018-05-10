@@ -3,15 +3,14 @@ title: Extensions Visual Studio manquantes après l’installation
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2017
-ms.openlocfilehash: 72870b9bf6ff6c3068ee037e6405e4ec03546cd6
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: e47cfc4de77a6310a81867eefb07c3c1e5cc7060
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Extensions Visual Studio manquantes après l’installation
 
@@ -91,7 +90,7 @@ Dans certains cas, le programme d’installation de Xamarin peut automatiquement
 
     `HKEY\_CURRENT\_USER\Software\Microsoft\VisualStudio\1\*.0\ExtensionManager\PendingDeletions`
 
-8.  Supprimez les entrées qui ressemblent à elles peuvent être liés aux Xamarin. Par exemple, c' est ici qu’exécutée à provoquer des problèmes dans les versions antérieures de Xamarin :
+8.  Supprimez les entrées qui semblent éventuellement liées à Xamarin. Par exemple, c' est ici qu’exécutée à provoquer des problèmes dans les versions antérieures de Xamarin :
 
     _Mono.VisualStudio.Shell,1.0_
 
