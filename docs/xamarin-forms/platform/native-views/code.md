@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 46284fd1b0863f904e9f24f125aef75fe3eb8caa
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c3a79947b02e0f877fd4ea1b0ddb72486c222719
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-c"></a>Vues natives en c#
 
@@ -19,7 +19,7 @@ _Vues natives dans iOS, Android et UWP peuvent être référencées directement 
 
 ## <a name="overview"></a>Vue d'ensemble
 
-N’importe quel contrôle Xamarin.Forms qui permet de `Content` pour être définie, ou qui a un `Children` collection, peut ajouter des affichages spécifiques à la plateforme. Par exemple, un iOS `UILabel` peuvent être ajoutés directement à la [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) propriété, ou à la [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) collection. Toutefois, notez que cette fonctionnalité requiert l’utilisation de `#if` définit dans les solutions de projet partagé de Xamarin.Forms et n’est pas disponible à partir des solutions de Xamarin.Forms Portable classe bibliothèque (PCL).
+N’importe quel contrôle Xamarin.Forms qui permet de `Content` pour être définie, ou qui a un `Children` collection, peut ajouter des affichages spécifiques à la plateforme. Par exemple, un iOS `UILabel` peuvent être ajoutés directement à la [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) propriété, ou à la [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) collection. Toutefois, notez que cette fonctionnalité requiert l’utilisation de `#if` définit dans les solutions de projet partagé de Xamarin.Forms et n’est pas disponible à partir des solutions de bibliothèque Xamarin.Forms .NET Standard.
 
 Les captures d’écran suivantes illustrent spécifique à la plateforme vues ayant été ajouté à un Xamarin.Forms [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 

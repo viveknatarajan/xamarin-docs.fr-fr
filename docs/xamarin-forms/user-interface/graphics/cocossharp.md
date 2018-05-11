@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 5fcc3405780e0c5e8a0e8d32caf35abf59808c8e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7ce541134e6db9a26699f96ab3114ced2ad22244
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>À l’aide de CocosSharp dans Xamarin.Forms
 
@@ -53,13 +53,13 @@ Vous trouverez des informations plus détaillées dans le [CocosSharp section](~
 ## <a name="adding-the-cocossharp-nuget-packages"></a>Ajouter les packages Nuget de CocosSharp
 
 Avant d’utiliser CocosSharp, les développeurs doivent effectuer quelques ajouts à leur projet Xamarin.Forms.
-Ce guide suppose un projet de Xamarin.Forms avec un iOS, Android et PCL projet.
-Tout le code sera écrit dans le projet de bibliothèque de classes portables. Toutefois, les bibliothèques doivent être ajoutés pour les projets iOS et Android.
+Ce guide suppose un projet de Xamarin.Forms avec un iOS, Android et .NET Standard projet de bibliothèque.
+Tout le code sera écrit dans le projet de bibliothèque .NET Standard. Toutefois, les bibliothèques doivent être ajoutés pour les projets iOS et Android.
 
 Le package Nuget de CocosSharp contient tous les objets nécessaires pour créer des objets de CocosSharp.
 Le package nuget CocosSharp.Forms inclut la `CocosSharpView` classe, qui est utilisé pour héberger le CocosSharp dans Xamarin.Forms.
 Ajouter le **CocosSharp.Forms** NuGet et **CocosSharp** sont automatiquement ajoutés également.
-Pour ce faire, cliquez sur la bibliothèque de classes portables <span class="UIItem">Packages</span> et sélectionnez <span class="UIItem">ajouter des Packages en cours... </span>. Entrez le terme de recherche <span class="UIItem">CocosSharp.Forms</span>, sélectionnez <span class="UIItem">CocosSharp pour Xamarin.Forms</span>, puis cliquez sur <span class="UIItem">ajouter un Package</span>.
+Pour ce faire, cliquez sur le <span class="UIItem">Packages</span> dossier dans le projet de bibliothèque .NET Standard et sélectionnez <span class="UIItem">ajouter des Packages en cours... </span>. Entrez le terme de recherche <span class="UIItem">CocosSharp.Forms</span>, sélectionnez <span class="UIItem">CocosSharp pour Xamarin.Forms</span>, puis cliquez sur <span class="UIItem">ajouter un Package</span>.
 
 ![](cocossharp-images/image1.png "Ajouter des Packages de boîte de dialogue")
 
@@ -198,7 +198,7 @@ Le graphique suivant peut aider à visualiser une hiérarchie CocosSharp classiq
 
 Seul `CCScene` peut être active à la fois. La plupart des jeux utiliser plusieurs `CCLayer` instances pour trier le contenu, mais votre application utilise un seul. De même, la plupart des jeux utiliser plusieurs objets visuels, mais nous allons en avoir qu’une dans notre application. Plus détaillée la discussion à propos de la CocosSharp hiérarchie visuelle se trouvent dans le [BouncingGame procédure pas à pas](~/graphics-games/cocossharp/bouncing-game.md).
 
-Initialement le `GameScene` classe sera presque vide, nous allons créer simplement pour répondre à la référence dans `HomePage`. Ajoutez une nouvelle classe à votre bibliothèque PCL nommée `GameScene`. Il doit hériter de la `CCScene` classe comme suit :
+Initialement le `GameScene` classe sera presque vide, nous allons créer simplement pour répondre à la référence dans `HomePage`. Ajoutez une nouvelle classe à votre projet de bibliothèque .NET Standard nommé `GameScene`. Il doit hériter de la `CCScene` classe comme suit :
 
 
 ```csharp
@@ -222,7 +222,7 @@ GameScene gameScene;
 
 Nous pouvons maintenant compiler notre projet et exécutez-le pour voir CocosSharp en cours d’exécution. Nous n’avons pas ajouté à notre `GameScene,` afin que la moitié supérieure de notre page soit noir – la couleur par défaut d’une scène CocosSharp :
 
-![](cocossharp-images/image5.png "Blank GameScene")
+![](cocossharp-images/image5.png "GameScene vide")
 
 <a name="4" />
 
@@ -351,4 +351,4 @@ Le moteur de jeu CocosSharp offre un grand nombre de fonctionnalités et de prof
 ## <a name="related-links"></a>Liens associés
 
 - [API de CocosSharp](https://developer.xamarin.com/api/root/CocosSharp/)
-- [CocosSharpForms (sample)](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+- [CocosSharpForms (exemple)](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)

@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8326c142207e90f9b7d4bced7effd88ec88d8fa8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 322ae03fc813d180a6678f63b04488a17705523d
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="playing-a-web-video"></a>Lecture d’une vidéo du Web
 
@@ -120,7 +120,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-La gestion des objets de type `ResourceVideoSource` est décrite dans l’article [le chargement de vidéos de ressource Application](loading-resources.md). La `VideoPlayer` classe dispose d’aucune fonctionnalité pour charger un fichier vidéo est stocké en tant que ressource dans la bibliothèque de classes portable.
+La gestion des objets de type `ResourceVideoSource` est décrite dans l’article [le chargement de vidéos de ressource Application](loading-resources.md). La `VideoPlayer` classe dispose d’aucune fonctionnalité pour charger un fichier vidéo est stocké en tant que ressource dans la bibliothèque .NET Standard.
 
 La `FileVideoSource` classe est utilisée pour accéder à des fichiers vidéo à partir de la vidéothèque du périphérique. La propriété unique est également de type `string`:
 

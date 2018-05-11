@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d06c3f95f55edb4870279bfc7d5326be4af4b3bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5774d91dad7b733a03219dcce1434798f70d4564
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="getting-started-with-datapages"></a>Prise en main de pages de données
 
@@ -26,7 +26,7 @@ Pour commencer la création d’une page de lecteur de données simple à l’ai
 
 ## <a name="1-add-nuget-packages"></a>1. Ajouter des Packages NuGet
 
-Ajoutez ces packages Nuget pour vos projets d’application et de Xamarin.Forms PCL :
+Ajoutez ces packages Nuget pour vos projets de bibliothèque et d’application Xamarin.Forms .NET Standard :
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
@@ -135,7 +135,7 @@ Les étapes ci-dessus doivent entraîner une page de données de travail :
 
 [![](get-started-images/demo-sml.png "Exemple de pages de données d’Application")](get-started-images/demo.png#lightbox "exemple des pages de données d’Application")
 
-Cela fonctionne parce que le style avant génération **« Événements »** existe dans le package Nuget de thème clair et a les styles définis qui correspondent à la source de données (par exemple). "title", "image", "presenter").
+Cela fonctionne parce que le style avant génération **« Événements »** existe dans le package Nuget de thème clair et a les styles définis qui correspondent à la source de données (par exemple). « title », « image », « présentateur »).
 
 Les « événements » `StyleClass` est conçu pour afficher le `ListDataPage` contrôle personnalisé `CardView` contrôle qui est défini dans Xamarin.Forms.Pages. Le `CardView` contrôle possède trois propriétés : `ImageSource`, `Text`, et `Detail`. Le thème est codé en dur pour lier trois champs la source de données (à partir du fichier JSON) à ces propriétés pour l’affichage.
 

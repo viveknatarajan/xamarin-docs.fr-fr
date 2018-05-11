@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: cf1b586c8e30b2922251104461d9ca7100b8e74e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Déboguer Android usure sur un émulateur
 
@@ -21,9 +21,9 @@ _Ces articles expliquent comment déboguer une application de Xamarin.Android us
 
 Développement d’applications d’usure Android nécessite l’exécution de l’application, soit sur du matériel physique ou à l’aide d’un émulateur ou un simulateur. L’utilisation de matériel est la meilleure approche, mais elle n’est pas toujours la plus pratique. Dans de nombreux cas, il peut être plus simple et plus efficace pour simuler/émuler le matériel d’usure Android à l’aide d’un émulateur comme décrit ci-dessous. Si vous n’êtes pas encore familiarisé avec le processus de déploiement et l’exécution d’usure Android les applications, voir [usure Bonjour,](~/android/wear/get-started/hello-wear.md).
 
-## <a name="configure-the-android-sdk-emulator"></a>Configurer l’émulateur Android SDK
+## <a name="configure-the-google-android-emulator"></a>Configurer l’émulateur Android de Google
 
-Pour exécuter votre application usure sur un émulateur, vous devez installer l’émulateur Android du Kit de développement logiciel Android et configurez-le pour porter Android. Pour l’émulateur Kit de développement logiciel Android installation et la configuration des informations générales, consultez [émulateur Kit de développement logiciel Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Pour exécuter votre application usure sur un émulateur, vous devez installer l’émulateur Android du Kit de développement logiciel Android et configurez-le pour porter Android. Pour l’émulateur Kit de développement logiciel Android installation et la configuration des informations générales, consultez [émulateur Android de Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 Lorsque vous créez un périphérique virtuel usure, sélectionnez un profil d’appareil Android d’usure (tel que **Android usure carré**). Pour améliorer les performances, utilisez l’usure **x86** CPU/ABI comme dans cet exemple :
 
@@ -47,4 +47,4 @@ Il est possible de laisser l’émulateur s’exécuter ; il n’est pas néces
  
 ## <a name="summary"></a>Récapitulatif
  
-Ce guide explique comment configurer l’émulateur Kit de développement logiciel Android pour le développement d’usure et de lancer un périphérique virtuel d’usure pour le débogage.
+Ce guide explique comment configurer l’émulateur Android de Google pour le développement d’usure et de lancer un périphérique virtuel d’usure pour le débogage.

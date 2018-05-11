@@ -3,15 +3,14 @@ title: Introduction au cycle de vie de développement des logiciels mobiles
 description: Cet article décrit le cycle de vie du développement de logiciels pour les applications mobiles et présente certaines des considérations nécessaires lors de la création de projets pour mobiles. Les développeurs qui veulent passer directement à la création d’applications peuvent dans un premier temps ne pas lire ce guide, puis y revenir plus tard pour mieux comprendre le développement d’applications mobiles.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: c49723038870b7b222bdada7823f1571c5d89d9e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c93a063c9c933e1b9f397d172115471473cf8f35
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduction au cycle de vie de développement des logiciels mobiles
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c93681c3bfd8de8d813cbe98a7ac28b3ee8b74fc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-an-entry"></a>Personnalisation d’une entrée
 
@@ -43,13 +43,13 @@ public class MyEntry : Entry
 }
 ```
 
-Le `MyEntry` contrôle est créé dans le projet de bibliothèque (PCL) de classes portable et est simplement un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) contrôle. Personnalisation du contrôle est effectuée dans le convertisseur personnalisé, aucune implémentation supplémentaire est requis dans le `MyEntry` contrôle.
+Le `MyEntry` contrôle est créé dans le projet de bibliothèque .NET Standard et est simplement un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) contrôle. Personnalisation du contrôle est effectuée dans le convertisseur personnalisé, aucune implémentation supplémentaire est requis dans le `MyEntry` contrôle.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Utilisation du contrôle personnalisé
 
-Le `MyEntry` contrôle qui peut être référencée dans XAML dans le projet de bibliothèque de classes portables par déclarer un espace de noms pour son emplacement et à l’aide du préfixe d’espace de noms sur l’élément de contrôle. Le code suivant exemple montre comment la `MyEntry` contrôle peut être consommée par une page XAML :
+Le `MyEntry` contrôle qui peut être référencée en XAML dans le projet de bibliothèque .NET Standard en déclarant un espace de noms pour son emplacement et en utilisant le préfixe d’espace de noms sur l’élément de contrôle. Le code suivant exemple montre comment la `MyEntry` contrôle peut être consommée par une page XAML :
 
 ```xaml
 <ContentPage ...

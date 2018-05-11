@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 6dbad7352a089f482fa3a396505507da58771cef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 24e7f29e42607d4a2c957cf85dad15f659d3618e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-xaml"></a>Vues natives en XAML
 
@@ -74,7 +74,7 @@ Propriétés pouvant être liées et joint des propriétés pouvant être liées
 Constructeurs de widget Android requièrent généralement l’Android `Context` de l’objet comme argument et cela peuvent être accessible via une propriété statique dans la `MainActivity` classe. Par conséquent, lorsque vous créez un widget Android en XAML, le `Context` objet doit généralement être passé à constructeur son à l’aide de la `x:Arguments` d’attribut avec un `x:Static` extension de balisage. Pour plus d’informations, consultez [en passant les Arguments à des vues natif](#passing_arguments).
 
 > [!NOTE]
-> Notez que d’affectation de noms une vue native avec `x:Name` n’est pas possible dans un projet de bibliothèque de classes Portable (PCL) ou un projet de ressource partagé (SAP). Cette opération génère une variable du type natif, ce qui provoque une erreur de compilation. Toutefois, les vues natives peuvent être encapsulés dans `ContentView` instances et récupérées dans le fichier code-behind, sous réserve qu’un SAP est utilisé. Pour plus d’informations, consultez [faisant référence à une vue natif à partir de Code](#native_view_code).
+> Notez que d’affectation de noms une vue native avec `x:Name` n’est pas possible dans un projet de bibliothèque .NET Standard ou d’un projet de ressource partagé (SAP). Cette opération génère une variable du type natif, ce qui provoque une erreur de compilation. Toutefois, les vues natives peuvent être encapsulés dans `ContentView` instances et récupérées dans le fichier code-behind, sous réserve qu’un SAP est utilisé. Pour plus d’informations, consultez [faisant référence à une vue natif à partir de Code](#native_view_code).
 
 <a name="native_bindings" />
 
@@ -285,7 +285,7 @@ IOS et Android boutons natifs partagent le même `OnButtonTap` Gestionnaire d’
 
 ## <a name="subclassing-native-views"></a>Sous-classement vues natives
 
-Nombreux iOS et Android vues natives ne conviennent pas pour l’instanciation en XAML, car ils utilisent des méthodes, plutôt que des propriétés, pour configurer le contrôle. La solution à ce problème consiste à des vues de native de sous-classe de wrappers qui définissent une API XAML conviviale plus qui utilise des propriétés pour le contrôle d’installation, et qui utilise les événements indépendant de la plateforme. Les vues natives encapsulées pouvant être placées dans un projet de ressource partagé (SAP) et entourés de directives de compilation conditionnelle, ou placés dans des projets spécifiques à la plateforme et référencées à partir de XAML dans un projet de bibliothèque de classes Portable (PCL).
+Nombreux iOS et Android vues natives ne conviennent pas pour l’instanciation en XAML, car ils utilisent des méthodes, plutôt que des propriétés, pour configurer le contrôle. La solution à ce problème consiste à des vues de native de sous-classe de wrappers qui définissent une API XAML conviviale plus qui utilise des propriétés pour le contrôle d’installation, et qui utilise les événements indépendant de la plateforme. Les vues natives encapsulées pouvant être placées dans un projet de ressource partagé (SAP) et entourés de directives de compilation conditionnelle, ou placés dans des projets spécifiques à la plateforme et référencées à partir de XAML dans un projet de bibliothèque .NET Standard.
 
 L’exemple de code suivant montre une page Xamarin.Forms qui consomme sous-classé vues natifs :
 
@@ -487,7 +487,7 @@ Cet article vous a montré comment consommer des vues natives à partir des fich
 
 ## <a name="related-links"></a>Liens associés
 
-- [NativeSwitch (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
+- [NativeSwitch (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
 - [Forms2Native (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Forms2Native/)
 - [NativeViewInsideContentView (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeViewInsideContentView/)
 - [SubclassedNativeControls (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/SubclassedNativeControls/)

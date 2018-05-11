@@ -7,11 +7,11 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: 95c023d702d165b7a8a0ba392b2f87af58bfae07
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 6180eb61e7850b7739c5514461796fb0aacbc4ff
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="finger-painting"></a>Peinture de doigt
 
@@ -23,7 +23,7 @@ Un `SKPath` objet peut être mis à jour et affiché en permanence. Cette foncti
 
 La prise en charge tactile dans Xamarin.Forms n’autorise pas le suivi des doigts sur l’écran, donc un effet de suivi des fonctions tactiles Xamarin.Forms a été développé pour prendre en charge les fonctions tactiles supplémentaires. Cela est décrit dans l’article [ **appeler des événements à partir des effets**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). L’exemple de programme [ **tactile suivi effet démonstrations** ](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) inclut deux pages qui utilisent SkiaSharp, y compris un programme finger-painting.
 
-Le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solution inclut cet événement de suivi des fonctions tactiles. Le projet de bibliothèque de classes portables inclut le `TouchEffect` (classe), le `TouchActionType` énumération, le `TouchActionEventHandler` déléguer et la `TouchActionEventArgs` classe. Les projets de plateforme incluent un `TouchEffect` de classe pour cette plateforme ; le projet iOS contient également un `TouchRecognizer` classe.
+Le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solution inclut cet événement de suivi des fonctions tactiles. Le projet de bibliothèque Standard .NET inclut le `TouchEffect` (classe), le `TouchActionType` énumération, le `TouchActionEventHandler` déléguer et la `TouchActionEventArgs` classe. Les projets de plateforme incluent un `TouchEffect` de classe pour cette plateforme ; le projet iOS contient également un `TouchRecognizer` classe.
 
 Le **doigt peinture** page **SkiaSharpFormsDemos** est une implémentation simplifiée de peinture au doigt. Il ne pas permettre de sélectionner la couleur ou largeur de trait, il n’a aucun moyen pour effacer la zone de dessin et bien sûr, vous ne pouvez enregistrer votre illustration.
 
@@ -168,6 +168,6 @@ Votre doigt de peintures sont limitées uniquement par vos collaborateurs :
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Suivi des fonctions tactiles effet démonstrations (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [Appel des événements à partir des effets](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

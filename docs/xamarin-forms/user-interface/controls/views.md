@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: b690b4aed315a78d95d9e0e7444257f0fc2c4a78
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b370c27a212f876231764851c894bf683ae460c3
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinforms-views"></a>Vues de Xamarin.Forms
 
@@ -53,7 +53,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 
 |     |     |
 | --- | --- |
-| [`OpenGLView`](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/) Affiche le graphique OpenGL dans les projets iOS et Android. Il n’existe aucune prise en charge pour la plateforme Windows universelle. Les projets iOS et Android requièrent une référence à la **OpenTK-1.0** assembly ou le **OpenTK** assembly de la version 1.0.0.0. `OpenGLView` Il est plus facile à utiliser dans un projet partagé. Si utilisé dans une bibliothèque PCL ou .NET Standard, puis un Service de dépendance sera également requis (comme indiqué dans l’exemple de code).<br /><br />Il s’agit de la fonctionnalité qu’aux graphiques intégrée dans Xamarin.Forms, mais une application Xamarin.Forms peut également rendre à l’aide de graphiques [ `CocosSharp` ](~/xamarin-forms/user-interface/graphics/cocossharp.md), [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), ou [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/)<br /><br /> | [![Exemple de OpenGLView](views-images/OpenGLView.png "OpenGLView exemple")](views-images/OpenGLView-Large.png#lightbox "OpenGLView exemple")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) avec [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+| [`OpenGLView`](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/) Affiche le graphique OpenGL dans les projets iOS et Android. Il n’existe aucune prise en charge pour la plateforme Windows universelle. Les projets iOS et Android requièrent une référence à la **OpenTK-1.0** assembly ou le **OpenTK** assembly de la version 1.0.0.0. `OpenGLView` Il est plus facile à utiliser dans un projet partagé. Si utilisé dans une bibliothèque .NET Standard, puis un Service de dépendance sera également requis (comme indiqué dans l’exemple de code).<br /><br />Il s’agit de la fonctionnalité qu’aux graphiques intégrée dans Xamarin.Forms, mais une application Xamarin.Forms peut également rendre à l’aide de graphiques [ `CocosSharp` ](~/xamarin-forms/user-interface/graphics/cocossharp.md), [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), ou [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/)<br /><br /> | [![Exemple de OpenGLView](views-images/OpenGLView.png "OpenGLView exemple")](views-images/OpenGLView-Large.png#lightbox "OpenGLView exemple")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) avec [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="map"></a>Carte
@@ -88,7 +88,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 | [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) permet à l’utilisateur de sélectionner un `double` valeur d’une plage continue spécifiée avec la [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) et [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) propriétés.<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) / [Guide](~/xamarin-forms/user-interface/slider.md) / [exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) | [![Exemple de curseur](views-images/Slider.png "curseur exemple")](views-images/Slider-Large.png#lightbox "exemple de curseur")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) |
 |     |     |
 
-### <a name="stepper"></a>Stepper
+### <a name="stepper"></a>Exécution pas à pas
 
 |     |     |
 | --- | --- |

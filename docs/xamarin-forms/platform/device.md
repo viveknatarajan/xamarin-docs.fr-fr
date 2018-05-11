@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="device-class"></a>Classe de périphérique
 
@@ -155,7 +155,7 @@ Le [exemple Maps](https://github.com/xamarin/xamarin-forms-samples/blob/master/W
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
-Le `Device` classe a également un `StartTimer` méthode qui fournit un moyen simple pour déclencher les tâches dépendant du temps qui fonctionne dans le code commune de Xamarin.Forms (y compris les PCLs). Passez un `TimeSpan` pour définir l’intervalle et retourner `true` pour conserver le minuteur en cours d’exécution ou `false` pour l’arrêter, après l’appel en cours.
+Le `Device` classe a également un `StartTimer` méthode qui fournit un moyen simple pour déclencher les tâches dépendant du temps qui fonctionne dans le code commun de Xamarin.Forms, y compris une bibliothèque .NET Standard. Passez un `TimeSpan` pour définir l’intervalle et retourner `true` pour conserver le minuteur en cours d’exécution ou `false` pour l’arrêter, après l’appel en cours.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () => {
@@ -184,7 +184,7 @@ Notez que les méthodes à l’aide de `async/await` n’avez pas besoin d’uti
 
 ## <a name="summary"></a>Récapitulatif
 
-Le Xamarin.Forms `Device` classe permet de contrôler les mises en page et les fonctionnalités sur une base de chaque plateforme - même le code (bibliothèque de classes portables ou les projets partagés) en commun.
+Le Xamarin.Forms `Device` classe permet de contrôler les mises en page et les fonctionnalités sur une base de chaque plateforme - même le code (projets de bibliothèque .NET Standard ou les projets partagés) en commun.
 
 
 ## <a name="related-links"></a>Liens associés

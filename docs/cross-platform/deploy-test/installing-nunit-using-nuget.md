@@ -3,15 +3,14 @@ title: Installation de NUnit 2.6.4 à l’aide de NuGet
 description: Ce guide explique comment repasser de la version 3.0 à la version 2.6.4 de NUnit à l’aide de NuGet.
 ms.prod: xamarin
 ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 98704c195c0e8d1fffc9a53e5b5ebf9b8c1455ae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e74975864dc7f3f00c6b04fe48139589c1f52ad5
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="installing-nunit-264-using-nuget"></a>Installation de NUnit 2.6.4 à l’aide de NuGet
 
@@ -44,7 +43,7 @@ Les étapes qui suivent expliquent comment installer NUnit 2.6.4.
 
     [![](installing-nunit-using-nuget-images/add-packages-xs.png "Cliquez avec le bouton droit sur Packages, puis sélectionnez Ajouter des packages dans le menu contextuel")](installing-nunit-using-nuget-images/add-packages-xs.png#lightbox)
     
-1. **Recherchez `NUnit version:2.6.4`** : Visual Studio pour Mac désinstalle NUnit 3.0 (si nécessaire), puis télécharge et installe NUnit 2.6.4. Dans la boîte de dialogue **Ajouter des packages**, entrez le texte `nunit version:2.6.4` dans le champ de **recherche** situé dans le coin supérieur droit. Sélectionnez **NUnit** dans les résultats de la recherche, puis cliquez sur le bouton **Ajouter un package** :
+1. **Recherchez `NUnit version:2.6.4`**  : Visual Studio pour Mac désinstalle NUnit 3.0 (si nécessaire), puis télécharge et installe NUnit 2.6.4. Dans la boîte de dialogue **Ajouter des packages**, entrez le texte `nunit version:2.6.4` dans le champ de **recherche** situé dans le coin supérieur droit. Sélectionnez **NUnit** dans les résultats de la recherche, puis cliquez sur le bouton **Ajouter un package** :
 
     [![](installing-nunit-using-nuget-images/nunit-search-xs.png "Sélectionnez NUnit dans les résultats de la recherche, puis cliquez sur le bouton Ajouter un package")](installing-nunit-using-nuget-images/nunit-search-xs.png#lightbox)
 

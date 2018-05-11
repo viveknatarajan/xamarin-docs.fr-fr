@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 7b859dd58551675c121c5600ba9c691e4280a03b
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 805b27139d644d0fac4a7c5a9e9b2c2c331d7130
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="introduction-to-effects"></a>Introduction aux effets
 
@@ -21,7 +21,7 @@ Xamarin.Forms [contrôles, dispositions et les Pages](~/xamarin-forms/user-inter
 
 Les développeurs peuvent implémenter leurs propres classes `Renderer` pour personnaliser l’apparence et/ou le comportement d’un contrôle. Toutefois, en implémentant une classe de convertisseur personnalisé pour effectuer une personnalisation de contrôle simple est souvent une réponse activable. Effets de simplifient ce processus, ce qui permet des contrôles natifs sur chaque plateforme à personnaliser plus facilement.
 
-Effets sont créés dans des projets spécifiques à la plateforme en sous-classant le `PlatformEffect` contrôle, puis les effets sont consommés par les joindre à un contrôle approprié dans un projet bibliothèque de classes Portable Xamarin.Forms (PCL) ou de la bibliothèque partagée.
+Effets sont créés dans des projets spécifiques à la plateforme en sous-classant le `PlatformEffect` contrôle, puis les effets sont consommés par les joindre à un contrôle approprié dans une bibliothèque Xamarin.Forms .NET Standard ou d’un projet de bibliothèque partagée.
 
 ## <a name="why-use-an-effect-over-a-custom-renderer"></a>Pourquoi utiliser un effet sur un convertisseur personnalisé ?
 

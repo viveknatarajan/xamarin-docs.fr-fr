@@ -5,12 +5,12 @@ ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/02/2018
-ms.openlocfilehash: ae4d5b0b8cd384a11d130bc9258894e1cf4cfa36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/09/2018
+ms.openlocfilehash: 625ba800ce498f80c0344c67e26bd79360de4002
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Procédure pas à pas - à l’aide des fonctions tactiles dans Android
 
@@ -38,7 +38,7 @@ La première activité, exemple Touch, affiche l’utilisation des gestionnaires
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
     {
         string message;
-        switch (touchEventArgs.Event.Action & MotionEventArgs.Mask)
+        switch (touchEventArgs.Event.Action & MotionEventActions.Mask)
         {
             case MotionEventActions.Down:
             case MotionEventActions.Move:
@@ -344,13 +344,11 @@ Dans le cadre de cette procédure pas à pas, la bibliothèque de mouvements dé
 
     Maintenant dessiner une coche sur l’écran et la bitmap affichée doit ressembler à celui illustré dans les captures d’écran suivante :
 
-    [![Dessiné coche](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
-    [![reconnues coche](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
+    [![Coche dessinée, coche est reconnu.](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
 
     Enfin, dessinez un dessin à main levée sur l’écran. La case à cocher doit modifier à son image d’origine, comme indiqué dans les captures d’écran :
 
-    [![Dessin à main levée dans l’écran](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
-    [![image d’origine s’affiche.](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
+    [![Dessin à main levée dans l’écran, l’image d’origine s’affiche.](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 Vous avez maintenant comprendre comment intégrer des fonctions tactiles et des mouvements dans une application Android à l’aide de Xamarin.Android.
 

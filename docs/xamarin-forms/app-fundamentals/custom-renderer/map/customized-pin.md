@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 353575bad91c9bade0207a0aa271d9de7ec50240
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 04d3d99a5d85dd77c93e9b926e8952cc3d8a771e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-map-pin"></a>Personnalisation d’un code confidentiel de carte
 
@@ -47,7 +47,7 @@ public class CustomMap : Map
 }
 ```
 
-Le `CustomMap` contrôle est créé dans le projet de bibliothèque (PCL) de classes portable et définit l’API pour la carte personnalisée. La carte personnalisée expose le `CustomPins` propriété qui représente la collection de `CustomPin` les objets qui seront affichés par le contrôle de carte natif sur chaque plateforme. La `CustomPin` classe est illustrée dans l’exemple de code suivant :
+Le `CustomMap` contrôle est créé dans le projet de bibliothèque .NET Standard et définit l’API pour la carte personnalisée. La carte personnalisée expose le `CustomPins` propriété qui représente la collection de `CustomPin` les objets qui seront affichés par le contrôle de carte natif sur chaque plateforme. La `CustomPin` classe est illustrée dans l’exemple de code suivant :
 
 ```csharp
 public class CustomPin : Pin
@@ -62,7 +62,7 @@ Cette classe définit un `CustomPin` comme héritant des propriétés de la [ `P
 
 ## <a name="consuming-the-custom-map"></a>Utilisation de la carte personnalisée
 
-Le `CustomMap` contrôle qui peut être référencée dans XAML dans le projet de bibliothèque de classes portables par déclarer un espace de noms pour son emplacement et à l’aide du préfixe d’espace de noms sur le contrôle de carte personnalisée. Le code suivant exemple montre comment la `CustomMap` contrôle peut être consommée par une page XAML :
+Le `CustomMap` contrôle qui peut être référencée en XAML dans le projet de bibliothèque .NET Standard en déclarant un espace de noms pour son emplacement et en utilisant le préfixe d’espace de noms sur le contrôle de carte personnalisée. Le code suivant exemple montre comment la `CustomMap` contrôle peut être consommée par une page XAML :
 
 ```xaml
 <ContentPage ...
@@ -322,7 +322,7 @@ void OnCalloutAccessoryControlTapped (object sender, MKMapViewAccessoryTappedEve
 }
 ```
 
-Cette méthode ouvre un navigateur web et accède à l’adresse stockée dans le `CustomMKAnnotationView.Url` propriété. Notez que l’adresse a été défini lors de la création du `CustomPin` collection dans le projet de bibliothèque de classes portables.
+Cette méthode ouvre un navigateur web et accède à l’adresse stockée dans le `CustomMKAnnotationView.Url` propriété. Notez que l’adresse a été défini lors de la création du `CustomPin` collection dans le projet de bibliothèque .NET Standard.
 
 <a name="Deselecting_the_Annotation" />
 
@@ -499,7 +499,7 @@ void OnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEventArgs e)
 }
 ```
 
-Cette méthode ouvre un navigateur web et accède à l’adresse stockée dans le `Url` propriété extraites `CustomPin` d’instance pour le `Marker`. Notez que l’adresse a été défini lors de la création du `CustomPin` collection dans le projet de bibliothèque de classes portables.
+Cette méthode ouvre un navigateur web et accède à l’adresse stockée dans le `Url` propriété extraites `CustomPin` d’instance pour le `Marker`. Notez que l’adresse a été défini lors de la création du `CustomPin` collection dans le projet de bibliothèque .NET Standard.
 
 Pour plus d’informations sur la personnalisation d’un `MapView` une instance, consultez [API Maps](~/android/platform/maps-and-location/maps/maps-api.md).
 
@@ -645,7 +645,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 }
 ```
 
-Cette méthode ouvre un navigateur web et accède à l’adresse stockée dans le `Url` propriété de la `CustomPin` instance. Notez que l’adresse a été défini lors de la création du `CustomPin` collection dans le projet de bibliothèque de classes portables.
+Cette méthode ouvre un navigateur web et accède à l’adresse stockée dans le `Url` propriété de la `CustomPin` instance. Notez que l’adresse a été défini lors de la création du `CustomPin` collection dans le projet de bibliothèque .NET Standard.
 
 Pour plus d’informations sur la personnalisation d’un `MapControl` instance, consultez [cartes et vue d’ensemble de l’emplacement](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) sur MSDN.
 

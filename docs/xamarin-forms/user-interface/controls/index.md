@@ -7,24 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: a9fb90794ec74c46019fd2b4f41d90a2635909cd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fb6620e160af4c2c844fa694649c95abdac123f9
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="controls-reference"></a>Informations de référence sur les contrôles
 
 _Description de tous les éléments visuels utilisés pour construire une application de Xamarin.Forms._
 
-L’interface visuelle d’une application de Xamarin.Forms est construit des objets qui mappent aux contrôles natifs de chaque plateforme cible. Cela permet aux applications spécifiques à la plateforme pour iOS, Android et la plateforme Windows universelle à utiliser le code de Xamarin.Forms contenu dans un [bibliothèque de classes portables](~/cross-platform/app-fundamentals/pcl.md), un [bibliothèque Standard de .NET](~/cross-platform/app-fundamentals/net-standard.md), ou un [ Projet partagés](~/cross-platform/app-fundamentals/shared-projects.md).
+L’interface visuelle d’une application de Xamarin.Forms est construit des objets qui mappent aux contrôles natifs de chaque plateforme cible. Cela permet aux applications spécifiques à la plateforme pour iOS, Android et la plateforme Windows universelle à utiliser le code de Xamarin.Forms contenu dans un [bibliothèque Standard de .NET](~/cross-platform/app-fundamentals/net-standard.md) ou un [projet partagé](~/cross-platform/app-fundamentals/shared-projects.md).
 
 Les quatre groupes de contrôle principal permet de créer l’interface utilisateur d’une application Xamarin.Forms sont répertoriées dans les articles suivants de quatre :
 
 - [**Pages**](pages.md)
 - [**Mises en page**](layouts.md)
-- [**Views**](views.md)
-- [**Cells**](cells.md)
+- [**Affichage**](views.md)
+- [**Cellules**](cells.md)
 
 En règle générale, une page Xamarin.Forms occupe tout l’écran. La page contient généralement une mise en page, qui contient les vues et éventuellement d’autres dispositions. Les cellules sont des composants spécialisés utilisés par [ `TableView` ](views.md#tableView) et [ `ListView` ](views.md#listView).
 

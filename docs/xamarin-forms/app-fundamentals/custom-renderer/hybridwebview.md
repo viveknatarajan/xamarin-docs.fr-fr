@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: af0dbef84d8ceb178fe5c1ac6fc7194c178141dc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implémentation d’un HybridWebView
 
@@ -74,7 +74,7 @@ public class HybridWebView : View
 }
 ```
 
-Le `HybridWebView` contrôle personnalisé est créé dans le projet de bibliothèque (PCL) de classes portable et définit l’API suivante pour le contrôle :
+Le `HybridWebView` contrôle personnalisé est créé dans le projet de bibliothèque .NET Standard et définit l’API suivante pour le contrôle :
 
 - A `Uri` propriété qui spécifie l’adresse de la page web à charger.
 - A `RegisterAction` méthode inscrit un `Action` avec le contrôle. L’action inscrite doit être appelée à partir de JavaScript contenue dans le fichier HTML référencé par le biais du `Uri` propriété.
@@ -85,7 +85,7 @@ Le `HybridWebView` contrôle personnalisé est créé dans le projet de biblioth
 
 ## <a name="consuming-the-hybridwebview"></a>Utilisation de la HybridWebView
 
-Le `HybridWebView` contrôle personnalisé qui peut être référencé dans XAML dans le projet de bibliothèque de classes portables par déclarer un espace de noms pour son emplacement et à l’aide du préfixe d’espace de noms sur le contrôle personnalisé. Le code suivant montre d’exemple comment la `HybridWebView` contrôle personnalisé peut être consommé par une page XAML :
+Le `HybridWebView` contrôle personnalisé qui peut être référencé en XAML dans le projet de bibliothèque .NET Standard en déclarant un espace de noms pour son emplacement et en utilisant le préfixe d’espace de noms sur le contrôle personnalisé. Le code suivant montre d’exemple comment la `HybridWebView` contrôle personnalisé peut être consommé par une page XAML :
 
 ```xaml
 <ContentPage ...

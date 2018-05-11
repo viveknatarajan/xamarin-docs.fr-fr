@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: b760f5e1d37f4bc8cc6af063552b974afa435d56
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: c9bc532902e9cfcc080220a05e41401e893783e4
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-a-custom-theme"></a>Création d’un thème personnalisé
 
@@ -68,7 +68,7 @@ Le code de cet effet est donné ci-dessous - référencer correctement personnal
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-pcl-or-shared-project"></a>Code c# dans la bibliothèque de classes portables ou d’un projet partagé
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Code c# dans le projet de bibliothèque .NET Standard ou d’un projet partagé
 
 Le code pour la création d’un angle arrondi `BoxView` utilise [effets](~/xamarin-forms/app-fundamentals/effects/index.md).
 Rayon de l’angle est appliqué à l’aide un `BindableProperty` et est implémenté en appliquant un [effet](~/xamarin-forms/app-fundamentals/effects/index.md). L’effet requiert un code spécifique à la plateforme dans le [iOS](#ios) et [Android](#android) projets (voir ci-dessous).

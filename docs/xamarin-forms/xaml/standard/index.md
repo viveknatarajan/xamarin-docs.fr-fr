@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 7cb2a79fffda40f09ee75a12d6287b162566741d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b16d146c5ad1097f38c41763a3ae111e7439256f
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xaml-standard-preview"></a>XAML Standard (version préliminaire)
 
@@ -22,7 +22,7 @@ Suivez ces étapes pour faire des essais avec XAML Standard dans Xamarin.Forms 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Téléchargez le [afficher un aperçu du package NuGet ici](https://aka.ms/xf-xamlstandard-nuget).
-2. Ajouter le **Xamarin.Forms.Alias** package NuGet pour vos projets de bibliothèque de classes portables Xamarin.Forms, .NET Standard et de plateforme.
+2. Ajouter le **Xamarin.Forms.Alias** package NuGet pour vos projets de plateforme et de Xamarin.Forms .NET Standard.
 3. Initialiser le package avec `Alias.Init()`
 4. Ajouter un `xmlns:a` référence `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. Utiliser les types dans XAML, voir la [contrôle référence](controls.md) pour plus d’informations.
@@ -30,7 +30,7 @@ Suivez ces étapes pour faire des essais avec XAML Standard dans Xamarin.Forms 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
 1. Téléchargez le [afficher un aperçu du package NuGet ici](https://aka.ms/xf-xamlstandard-nuget).
-2. Ajouter le **Xamarin.Forms.Alias** package NuGet pour vos projets de bibliothèque de classes portables Xamarin.Forms, .NET Standard et de plateforme.
+2. Ajouter le **Xamarin.Forms.Alias** package NuGet pour vos projets de plateforme et de Xamarin.Forms .NET Standard.
 3. Initialiser le package avec `Alias.Init()`
 4. Ajouter un `xmlns:a` référence `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. Utiliser les types dans XAML, voir la [contrôle référence](controls.md) pour plus d’informations.

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fd96770caf92eb30e669133f592f5d780146be59
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-viewcell"></a>Personnalisation d’un ViewCell
 
@@ -65,13 +65,13 @@ public class NativeCell : ViewCell
   }
 }
 ```
-La `NativeCell` classe est créée dans le projet de bibliothèque (PCL) de classes portable et définit l’API pour la cellule personnalisée. La cellule personnalisée expose `Name`, `Category`, et `ImageFilename` les propriétés qui peuvent être affichées par le biais des liaisons de données. Pour plus d’informations sur la liaison de données, consultez [Notions de base de la liaison de données](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+La `NativeCell` classe est créée dans le projet de bibliothèque .NET Standard et définit l’API pour la cellule personnalisée. La cellule personnalisée expose `Name`, `Category`, et `ImageFilename` les propriétés qui peuvent être affichées par le biais des liaisons de données. Pour plus d’informations sur la liaison de données, consultez [Notions de base de la liaison de données](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 <a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>Utilisation de la cellule personnalisée
 
-Le `NativeCell` cellule personnalisé qui peut être référencée dans Xaml dans le projet de bibliothèque de classes portables par déclarer un espace de noms pour son emplacement et à l’aide du préfixe d’espace de noms sur l’élément de cellule personnalisé. Le code suivant montre d’exemple comment la `NativeCell` cellule personnalisé peut être consommée par une page XAML :
+Le `NativeCell` cellule personnalisé qui peut être référencée dans Xaml dans le projet de bibliothèque .NET Standard en déclarant un espace de noms pour son emplacement et en utilisant le préfixe d’espace de noms sur l’élément de cellule personnalisé. Le code suivant montre d’exemple comment la `NativeCell` cellule personnalisé peut être consommée par une page XAML :
 
 ```xaml
 <ContentPage ...

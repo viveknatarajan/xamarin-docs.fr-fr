@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: 95c5f482e1bf3e55fa4c6fef18b1dbe6274f33e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="local-databases"></a>Bases de données locales
 
@@ -19,7 +19,7 @@ _Xamarin.Forms prend en charge les applications pilotées par des base de donné
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Xamarin.Forms les applications peuvent utiliser le [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) package à intégrer les opérations de base de données dans le code partagé en référençant le `SQLite` classes fournies dans NuGet. Opérations de base de données peuvent être définies dans le projet de bibliothèque de classes Portable (PCL) de la solution Xamarin.Forms, avec des projets spécifiques à une plateforme retournant un chemin d’accès à la base de données où est stocké.
+Xamarin.Forms les applications peuvent utiliser le [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) package à intégrer les opérations de base de données dans le code partagé en référençant le `SQLite` classes fournies dans NuGet. Opérations de base de données peuvent être définies dans le projet de bibliothèque .NET Standard de la solution Xamarin.Forms, avec des projets spécifiques à une plateforme retournant un chemin d’accès à la base de données où est stocké.
 
 Les accompagnant [exemple d’application](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) est une application simple de la liste de tâches. Les captures d’écran suivantes illustrent comment l’exemple s’affiche sur chaque plateforme :
 

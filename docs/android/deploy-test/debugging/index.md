@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 4b51b10965f3f6e77420d657bc0f7f7d25fc6569
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: a4ce36e28bd5b6dcf78d248b1f2ba951cad9b286
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="debugging"></a>Débogage
 
@@ -21,7 +21,7 @@ Cette section explique comment déboguer une application Xamarin.Android sur des
 Le développement d’applications Android nécessite l’exécution de l’application, que ce soit sur du matériel physique ou un émulateur. L’utilisation de matériel est la meilleure approche, mais elle n’est pas toujours la plus pratique. Il est souvent plus simple et plus rentable de simuler/émuler le matériel Android à l’aide de l’un des émulateurs décrits ci-dessous.
 
 
-### <a name="android-sdk-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Émulateur SDK Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+### <a name="google-android-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Émulateur Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
 
 Ces articles expliquent comment utiliser l’émulateur par défaut qui est fourni avec le kit Android SDK. Cet émulateur est disponible pour Visual Studio pour Windows et Visual Studio pour Mac.
 

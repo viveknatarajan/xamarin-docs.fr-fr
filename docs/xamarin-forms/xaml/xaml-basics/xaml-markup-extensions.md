@@ -7,11 +7,11 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: 104a3adb5d59bc7feafa3c993290247b749ce312
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Partie 3. Extensions de balisage XAML
 
@@ -386,13 +386,13 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-Vous aurez besoin des déclarations d’espace de noms XML supplémentaires pour accéder aux autres classes. Chaque déclaration d’espace de noms XML supplémentaire définit un nouveau préfixe. Pour accéder aux classes locales de l’application partagée PCL, tel que `AppConstants`, les programmeurs XAML utilisent souvent le préfixe `local`. La déclaration d’espace de noms doit indiquer le nom d’espace de noms CLR (Common Language Runtime), également connu sous l’espace de noms nom .NET, qui est le nom qui apparaît dans le langage c# `namespace` définition ou dans un `using` la directive :
+Vous aurez besoin des déclarations d’espace de noms XML supplémentaires pour accéder aux autres classes. Chaque déclaration d’espace de noms XML supplémentaire définit un nouveau préfixe. Pour accéder aux classes locales à la bibliothèque Standard de .NET application partagée, tel que `AppConstants`, les programmeurs XAML utilisent souvent le préfixe `local`. La déclaration d’espace de noms doit indiquer le nom d’espace de noms CLR (Common Language Runtime), également connu sous l’espace de noms nom .NET, qui est le nom qui apparaît dans le langage c# `namespace` définition ou dans un `using` la directive :
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-Vous pouvez également définir des déclarations d’espace de noms XML pour les espaces de noms .NET dans n’importe quel assembly fait référence à la bibliothèque PCL. Par exemple, voici une `sys` préfixe pour le .NET standard `System` espace de noms, qui se trouve dans le **mscorlib** assembly, ce qui signifiait qu’une seule fois pour « Common Runtime bibliothèque d’objets Microsoft », mais maintenant signifie « multilingue Standard Objet Runtime bibliothèque commune. » Comme il s’agit d’un autre assembly, vous devez également spécifier le nom de l’assembly, dans ce cas **mscorlib**:
+Vous pouvez également définir des déclarations d’espace de noms XML pour les espaces de noms .NET dans un assembly qui fait référence à la bibliothèque .NET Standard. Par exemple, voici une `sys` préfixe pour le .NET standard `System` espace de noms, qui se trouve dans le **mscorlib** assembly, ce qui signifiait qu’une seule fois pour « Common Runtime bibliothèque d’objets Microsoft », mais maintenant signifie « multilingue Standard Objet Runtime bibliothèque commune. » Comme il s’agit d’un autre assembly, vous devez également spécifier le nom de l’assembly, dans ce cas **mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"

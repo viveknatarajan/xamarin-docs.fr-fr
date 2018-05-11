@@ -3,15 +3,14 @@ title: Désinstallation de Xamarin
 description: Désinstallation des produits Xamarin sur un ordinateur
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: ae01fdcefa06dbfe3412eeac427477d898fd6ea5
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: d1b88ad97a1cecaadd84226bca61c7f2b262438d
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="uninstalling-xamarin"></a>Désinstallation de Xamarin
 
@@ -94,7 +93,7 @@ sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 
 #### <a name="uninstall-android-sdk-and-java-sdk"></a>Désinstaller Android SDK et le Java SDK
 
-Android SDK est nécessaire pour le développement d’applications Android. Pour supprimer complètement toutes les composants du kit Android SDK, recherchez le fichier **~/Library/Developer/Xamarin/** et placez-le dans la **Corbeille**.
+Android SDK est nécessaire pour le développement d’applications Android. Pour supprimer complètement toutes les composants d’Android SDK, recherchez le fichier **~/Library/Developer/Xamarin/** et placez-le dans la **Corbeille**.
 
 Il n’est pas nécessaire de désinstaller le SDK Java (JDK), car il est déjà préempaqueté dans Mac OS X.
 
