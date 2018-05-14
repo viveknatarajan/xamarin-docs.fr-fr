@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: cf0e7cab0c879f8fb286c87b2aaadab2dc1453f8
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: eaa57e90ef71f13a53737aa6540e5b5bd9126ad2
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="localization"></a>Localisation
 
@@ -32,7 +32,7 @@ Il existe deux exemples associés à ce document :
 
 L’exemple TodoLocalized inclut un [démonstration du projet partagé](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/) mais en raison des limitations du système de génération les fichiers de ressources n’obtiennent pas une **. designer.cs** fichier généré, ce qui interrompt la possibilité d’accéder à chaînes traduites fortement typée dans le code.
 
-Le reste de ce document est lié à des projets à l’aide du modèle de bibliothèque de classes portables Xamarin.Forms.
+Le reste de ce document est lié à des projets à l’aide du modèle de bibliothèque Xamarin.Forms .NET Standard.
 
 ## <a name="globalizing-xamarinforms-code"></a>Globalisation de Code de Xamarin.Forms
 
@@ -46,7 +46,7 @@ Les exemples de ciblent les langues anglais, Français, espagnol, allemand, chin
 
 ### <a name="adding-resources"></a>Ajout de ressources
 
-La première étape de globalisation d’une application de bibliothèque de classes portables Xamarin.Forms ajoute les fichiers de ressources RESX qui permet de stocker tout le texte utilisé dans l’application. Nous devons ajouter un fichier RESX qui contient le texte par défaut, puis ajoutez les fichiers RESX supplémentaires pour chaque langue que nous souhaitons pour prendre en charge.
+La première étape de globalisation d’une application de bibliothèque Standard de .NET Xamarin.Forms ajoute les fichiers de ressources RESX qui permet de stocker tout le texte utilisé dans l’application. Nous devons ajouter un fichier RESX qui contient le texte par défaut, puis ajoutez les fichiers RESX supplémentaires pour chaque langue que nous souhaitons pour prendre en charge.
 
 #### <a name="base-language-resource"></a>Ressource de langue de base
 
@@ -98,7 +98,7 @@ Pour rendre les propriétés de chaîne de fortement typée `public`, vous devez
 
 -----
 
-Cette modification est facultative et est uniquement nécessaire si vous souhaitez faire référence à des chaînes localisées dans des assemblys différents (par exemple, si vous placez les fichiers RESX dans un autre assembly à votre code). L’exemple de cette rubrique laisse les chaînes `internal` car ils sont définis dans le même assembly Xamarin.Forms PCL où ils sont utilisés.
+Cette modification est facultative et est uniquement nécessaire si vous souhaitez faire référence à des chaînes localisées dans des assemblys différents (par exemple, si vous placez les fichiers RESX dans un autre assembly à votre code). L’exemple de cette rubrique laisse les chaînes `internal` car ils sont définis dans le même assembly de bibliothèque Standard de .NET Xamarin.Forms où ils sont utilisés.
 
 Vous ne devez définir l’outil personnalisé sur le fichier RESX base, comme indiqué ci-dessus. vous n’avez pas besoin de définir *des* outil de génération sur les fichiers RESX spécifiques présentées dans les sections suivantes.
 
@@ -559,7 +559,7 @@ Les projets Universal Windows Platform (UWP) ne nécessitent pas le service de d
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 
-Développez le nœud Propriétés dans le projet de bibliothèque de classes Portable (PCL) et double-cliquez sur le **AssemblyInfo.cs** fichier. Ajoutez la ligne suivante au fichier pour définir le langage d’assembly de ressources neutres anglais :
+Développez le nœud Propriétés dans le projet de bibliothèque .NET Standard et double-cliquez sur le **AssemblyInfo.cs** fichier. Ajoutez la ligne suivante au fichier pour définir le langage d’assembly de ressources neutres anglais :
 
 ```csharp
 [assembly: NeutralResourcesLanguage("en")]
