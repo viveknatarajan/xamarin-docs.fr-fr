@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 3f321366b3afc814aef1c586af2707b1caeef4c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f604d41990a7a592a3d5207e7a12075c35ae661f
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="manual-provisioning"></a>Provisionnement manuel
 
@@ -118,7 +118,7 @@ Lorsque vous créez un profil de provisionnement pour le développement, vous de
 
   [![](manual-provisioning-images/add04.png "Cliquer sur le lien Appareils")](manual-provisioning-images/add04.png#lightbox)
 
-8. Cliquez sur le bouton **+** :
+8. Cliquez sur le bouton **+**  :
 
   [![](manual-provisioning-images/add05.png "Cliquer sur le bouton +")](manual-provisioning-images/add05.png#lightbox)
 
@@ -254,7 +254,10 @@ Si la valeur est **Automatique**, Visual Studio pour Mac sélectionne l’identi
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Connectez l’appareil à un Mac.
+> [!IMPORTANT]
+> Avant de commencer, sélectionnez **Provisionnement manuel** dans **Projet > Propriétés de provisionnement...**.
+
+1. Connectez l’appareil à l’hôte de build Mac.
 2. Dans le fichier **Info.plist** du projet, vérifiez que l’identificateur de bundle correspond à l’ID d’application :
 
   ![](manual-provisioning-images/servicevs01.png "Entrée d’un identificateur")

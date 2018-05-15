@@ -5,11 +5,11 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 399dcd54d574875bcb5e491e87731b817e840e54
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ead498113f432e766fbd77ae2f01bc67c2273b60
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-geocoding"></a>Géocodage de Xamarin.Essentials
 
@@ -177,5 +177,5 @@ Le tableau suivant présente la précision par plate-forme
 
 ## <a name="api"></a>API
 
-- [Code source de géolocalisation](https://github.com/xamarin/Essentials/tree/master/Essentials/Geolocation)
+- [Code source de géolocalisation](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
 - [Documentation de l’API de géolocalisation](xref:Xamarin.Essentials.Geolocation)

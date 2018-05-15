@@ -1,21 +1,21 @@
 ---
-title: Émulateur du kit Android SDK
-description: Ce guide explique comment utiliser l’émulateur du kit Android SDK de Google avec Visual Studio.
+title: Émulateur Google Android
+description: Ce guide décrit comment utiliser l’émulateur Google Android avec Visual Studio.
 ms.prod: xamarin
 ms.assetid: 8913bb90-1340-409d-b7bb-71a06914923a
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: bdae9f2189f91a6768419fd930a4ad5ce4b6e0ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aca71284c7d51936ce2addf143edb9980d9536fc
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="android-sdk-emulator"></a>Émulateur du kit Android SDK
+# <a name="google-android-emulator"></a>Émulateur Google Android
 
-_Ce guide explique comment utiliser l’émulateur du kit Android SDK de Google avec Visual Studio._
+_Ce guide décrit comment utiliser l’émulateur Google Android avec Visual Studio._
 
 
 ## <a name="overview"></a>Vue d'ensemble
@@ -27,13 +27,13 @@ L’émulateur du kit Android SDK peut être exécuté dans diverses configurati
 
 ### <a name="running-the-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorrunning-the-emulatormd"></a>[Exécution dans l'émulateur](~/android/deploy-test/debugging/android-sdk-emulator/running-the-emulator.md)
 
-Comment lancer l’émulateur du kit Android SDK à partir de Visual Studio.
+Comment lancer l’émulateur Google Android à partir de Visual Studio.
 
 ### <a name="troubleshootingandroiddeploy-testdebuggingandroid-sdk-emulatortroubleshootingmd"></a>[Résolution des problèmes](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md)
 
-Comment identifier et résoudre les problèmes courants de l’émulateur du kit Android SDK.
+Comment identifier et résoudre les problèmes courants de l’émulateur Google Android.
 
-Pour plus d’informations sur la configuration de l’émulateur du kit Android SDK et la création de nouveaux appareils virtuels, consultez [Configuration de l’émulateur Android](~/android/get-started/installation/android-emulator/index.md).
+Pour plus d’informations sur la configuration de l’émulateur Google Android et la création d’appareils virtuels, consultez [Configuration de l’émulateur Android](~/android/get-started/installation/android-emulator/index.md).
 
 
 

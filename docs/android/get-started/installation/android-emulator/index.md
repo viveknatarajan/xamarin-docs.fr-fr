@@ -1,21 +1,21 @@
 ---
 title: Configuration de l’émulateur Android
-description: Cette section décrit comment préparer l’émulateur du kit Android SDK pour tester votre application. Elle explique comment accélérer l’émulateur pour optimiser les performances et vous montre comment utiliser un gestionnaire d’émulateur pour créer et personnaliser des appareils virtuels.
+description: Cette section décrit comment préparer l’émulateur Google Android pour tester une application. Elle explique comment accélérer l’émulateur pour optimiser les performances et vous montre comment utiliser un gestionnaire d’émulateur pour créer et personnaliser des appareils virtuels.
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/25/2018
-ms.openlocfilehash: 3c29d6b6c94abe7cc8a59486c338c0c634870d3e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 215e298068b7a3a23b2e469e923f172c8303bbcb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="android-emulator-setup"></a>Configuration de l’émulateur Android
 
-_Cette section explique comment préparer l’émulateur du kit Android SDK pour tester une application. Elle montre comment accélérer l’émulateur pour optimiser les performances, et comment utiliser un gestionnaire d’émulateur pour créer et personnaliser des appareils virtuels._
+_Cette section décrit comment préparer l’émulateur Google Android pour tester une application. Elle montre comment accélérer l’émulateur pour optimiser les performances, et comment utiliser un gestionnaire d’émulateur pour créer et personnaliser des appareils virtuels._
 
 
 ## <a name="overview"></a>Vue d'ensemble
@@ -31,14 +31,14 @@ L’émulateur du kit Android SDK Google peut être exécuté dans diverses conf
 
 ### <a name="hardware-accelerationandroidget-startedinstallationandroid-emulatorhardware-accelerationmd"></a>[Accélération matérielle](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
 
-Comment préparer votre ordinateur pour optimiser les performances de l’émulateur du kit Android SDK. L’émulateur du kit Android SDK pouvant être extrêmement lent sans accélération matérielle, nous vous recommandons d’activer l’accélération matérielle sur votre ordinateur avant d’utiliser l’émulateur du kit Android SDK.
+Comment préparer votre ordinateur pour optimiser les performances de l’émulateur Google Android. Comme l’émulateur Google Android peut être extrêmement lent sans accélération matérielle, nous vous recommandons d’activer l’accélération matérielle sur votre ordinateur avant d’utiliser l’émulateur.
 
 ### <a name="xamarin-android-device-managerandroidget-startedinstallationandroid-emulatorxamarin-device-managermd"></a>[Gestionnaire d’appareils Android Xamarin](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
 
-Comment utiliser le Gestionnaire d’appareils Android Xamarin pour créer et personnaliser des appareils virtuels pour l’émulateur du kit Android SDK. Le **Gestionnaire d’appareils Android Xamarin**, actuellement en préversion, est destiné à remplacer le Gestionnaire d’émulateur Google hérité. Si vous ciblez Android Oreo 8.0 ou ultérieur, vous devez utiliser le Gestionnaire d’appareils Android Xamarin à la place du Gestionnaire d’émulateur Google.
+Comment utiliser Xamarin Android Device Manager pour créer et personnaliser les appareils virtuels de l’émulateur Google Android. Le **Gestionnaire d’appareils Android Xamarin**, actuellement en préversion, est destiné à remplacer le Gestionnaire d’émulateur Google hérité. Si vous ciblez Android Oreo 8.0 ou ultérieur, vous devez utiliser le Gestionnaire d’appareils Android Xamarin à la place du Gestionnaire d’émulateur Google.
 
 ### <a name="google-emulator-managerandroidget-startedinstallationandroid-emulatorgoogle-emulator-managermd"></a>[Gestionnaire d’émulateur Google](~/android/get-started/installation/android-emulator/google-emulator-manager.md)
 
-Comment utiliser le Gestionnaire d’émulateur Google hérité pour créer et personnaliser des appareils virtuels pour l’émulateur du kit Android SDK. Vous pouvez continuer d’exécuter l’émulateur Android Google avec le Gestionnaire d’émulateur Google d’origine en continuant d’utiliser Android Tools 25.2.5 ou inférieur.
+Comment utiliser le gestionnaire d’émulateur Google hérité pour créer et personnaliser les appareils virtuels de l’émulateur Google Android. Vous pouvez continuer d’exécuter l’émulateur Android Google avec le Gestionnaire d’émulateur Google d’origine en continuant d’utiliser Android Tools 25.2.5 ou inférieur.
 
-Après avoir configuré l’émulateur du kit Android SDK, consultez [Émulateur du kit Android SDK](~/android/deploy-test/debugging/android-sdk-emulator/index.md) pour plus d’informations sur la façon de lancer l’émulateur et de l’utiliser pour tester et déboguer votre application.
+Après avoir configuré l’émulateur du kit Android SDK, consultez [Émulateur Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md) pour plus d’informations sur le lancement de l’émulateur et son utilisation afin de tester et déboguer votre application.

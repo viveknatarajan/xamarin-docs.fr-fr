@@ -1,21 +1,21 @@
 ---
-title: Exécution de l’émulateur du kit Android SDK
-description: Guide pratique pour déboguer votre application avec l’émulateur du kit Android SDK
+title: Exécution de l’émulateur Google Android
+description: Comment déboguer votre application avec l’émulateur Google Android
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 630520f88dd23d3860b5f42fbb9bc4eb35ca2c4b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e290b24c0d7a98b1abaf647fe76e56867042645
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="running-the-android-sdk-emulator"></a>Exécution de l’émulateur du kit Android SDK
+# <a name="running-the-google-android-emulator"></a>Exécution de l’émulateur Google Android
 
-Dans ce guide, vous allez apprendre comment lancer un appareil virtuel dans l’émulateur du kit Android SDK pour déboguer et tester votre application.
+Dans ce guide, vous apprenez à lancer un appareil virtuel dans l’émulateur Google Android pour déboguer et tester votre application.
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Utilisation d’un appareil virtuel préconfiguré
 
@@ -80,13 +80,13 @@ Après avoir choisi un appareil virtuel dans le menu déroulant des appareils, s
 
 -----
 
-Après le démarrage de l’émulateur Android, Xamarin.Android déploiera l’application sur l’émulateur. L’émulateur exécute l’application avec l’image d’appareil virtuel configurée. Une capture d’écran de l’émulateur du kit Android SDK est affichée ci-dessous (l’émulateur exécute une application vide appelée **MyApp**) :
+Après le démarrage de l’émulateur Android, Xamarin.Android déploiera l’application sur l’émulateur. L’émulateur exécute l’application avec l’image d’appareil virtuel configurée. Une capture d’écran de l’émulateur Google Android est affichée ci-dessous (l’émulateur exécute une application vide appelée **MyApp**) :
 
 ![Émulateur exécutant une application vide](running-the-emulator-images/emulator-running.png)
 
 Il est possible de laisser l’émulateur s’exécuter ; il n’est pas nécessaire de le fermer et de le redémarrer chaque fois que l’application est exécutée. Lors de la première exécution d’une application Xamarin.Android dans l’émulateur, le runtime partagé Xamarin.Android pour le niveau d’API ciblé est installé, suivi de l’application. L’installation du runtime peut prendre un certain temps, soyez donc patient. L’installation du runtime est réalisée uniquement lors du premier déploiement de l’application Xamarin.Android sur l’émulateur . Les déploiements suivants sont plus rapides, car seule l’application est copiée sur l’émulateur.
 
-Pour plus d’informations sur l’utilisation de l’émulateur du kit Android SDK, consultez les rubriques suivantes relatives au développement Android :
+Pour plus d’informations sur l’utilisation de l’émulateur Google Android, consultez les rubriques suivantes relatives au développement Android :
 
 -   [Navigation dans l’écran](https://developer.android.com/studio/run/emulator.html#navigate)
 

@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/11/2018
+ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="splash-screen"></a>Écran de démarrage
 
@@ -153,6 +153,74 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
+## <a name="landscape-mode"></a>Mode Paysage
+
+L’écran de démarrage implémentée dans les étapes précédentes ne s’affichent correctement en mode portrait et paysage. Toutefois, dans certains cas, il est nécessaire d’avoir des écrans de démarrage distinct pour les modes portrait et paysage (par exemple, si l’image de démarrage est plein écran).
+
+Pour ajouter un écran de démarrage pour le mode paysage, procédez comme suit :
+
+1. Dans le **drawable/ressources** dossier, ajouter la version de paysage de l’image d’écran de démarrage à utiliser. Dans cet exemple, **splash_logo_land.png** est la version paysage du logo qui a été utilisée dans les exemples ci-dessus (il utilise les caractères noir au lieu de bleu).
+
+2. Dans le **drawable/ressources** dossier, créer une version paysage de le `layer-list` drawable qui a été défini précédemment (par exemple, **splash_screen_land.xml**). Dans ce fichier, définissez le chemin d’accès de l’image bitmap à la version de paysage de l’image d’écran de démarrage. Dans l’exemple suivant, **splash_screen_land.xml** utilise **splash_logo_land.png**:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+      <item>
+        <color android:color="@color/splash_background"/>
+      </item>
+      <item>
+        <bitmap
+            android:src="@drawable/splash_logo_land"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+      </item>
+    </layer-list>
+
+    ```
+
+3.  Créer le **valeurs/ressources-terrestres** dossier s’il n’existe pas.
+
+4.  Ajouter les fichiers **colors.xml** et **style.xml** à **terrestres de valeurs** (il peuvent être copiés et modifiés existante **values/colors.xml**et **values/style.xml** fichiers).
+
+5.  Modifier **valeurs-terrestres/style.xml** afin qu’il utilise la version de paysage de le drawable pour `windowBackground`. Dans cet exemple, **splash_screen_land.xml** est utilisé :
+
+    ```xml
+    <resources>
+      <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+      </style>
+        <style name="MyTheme" parent="MyTheme.Base">
+      </style>
+      <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_land</item>
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:windowFullscreen">true</item>  
+        <item name="android:windowContentOverlay">@null</item>  
+        <item name="android:windowActionBar">true</item>  
+      </style>
+    </resources>
+    ```
+
+6.  Modifier **valeurs-terrestres/colors.xml** pour configurer les couleurs que vous souhaitez utiliser pour la version de paysage de l’écran de démarrage. Dans cet exemple, la couleur d’arrière-plan de démarrage devient jaune pour le mode paysage :
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+      <color name="primary">#2196F3</color>
+      <color name="primaryDark">#1976D2</color>
+      <color name="accent">#FFC107</color>
+      <color name="window_background">#F5F5F5</color>
+      <color name="splash_background">#FFFF00</color>
+    </resources>
+    ```
+
+7.  Générez et exécutez de nouveau l’application. Faire pivoter le périphérique pour le mode paysage alors que l’écran de démarrage est toujours affichée. Modifications de l’écran de démarrage à la version paysage :
+
+    [![Rotation d’écran de démarrage en mode paysage](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+
+
+Notez que l’utilisation d’un écran de démarrage en mode paysage ne fournit pas toujours une expérience transparente. Par défaut, Android lance l’application en mode portrait et passe en mode paysage même si l’appareil est déjà en mode paysage. Par conséquent, si l’application est lancée alors que l’appareil est en mode paysage, l’appareil brièvement présente l’écran de démarrage portrait et puis réalise une animation de rotation à partir du portrait à l’écran de démarrage paysage. Malheureusement, cette transition portrait à paysage initiale se produit même lorsque `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` est spécifié dans les indicateurs de l’activité de démarrage. Il est le meilleur moyen de contourner cette limitation permet de créer une capture d’écran de démarrage unique qui s’affiche correctement en mode portrait et paysage.
+
 
 ## <a name="summary"></a>Récapitulatif
 
@@ -161,6 +229,6 @@ Ce guide décrit une façon d’implémenter un écran de démarrage dans une ap
 
 ## <a name="related-links"></a>Liens associés
 
-- [SplashScreen (sample)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
+- [Écran de démarrage (exemple)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
 - [liste de couche Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [ Modèles de conception de matériel - écrans de démarrage](https://www.google.com/design/spec/patterns/launch-screens.html)

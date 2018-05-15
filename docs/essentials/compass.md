@@ -5,11 +5,11 @@ ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2f720b4d4861c4969ad9726c7eef876c53217c2b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 39f141424ddd247458b9c8b35ae02ab29e2c2206
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials boussole
 
@@ -88,5 +88,5 @@ Sachez qui exécutent plusieurs capteurs à partir de votre application en même
 
 ## <a name="api"></a>API
 
-- [Code source boussole](https://github.com/xamarin/Essentials/tree/master/Essentials/Compass)
+- [Code source boussole](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
 - [Documentation de l’API boussole](xref:Xamarin.Essentials.Compass)

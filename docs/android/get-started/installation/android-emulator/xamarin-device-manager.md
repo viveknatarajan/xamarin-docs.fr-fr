@@ -1,41 +1,36 @@
 ---
 title: Gestion des émulateurs Android avec le Gestionnaire d’appareils Android Xamarin
-description: Le Gestionnaire d’appareils Android Xamarin, actuellement en préversion, remplace le Gestionnaire d’appareils hérité de Google. Ce guide explique comment utiliser le Gestionnaire d’appareils Android Xamarin pour créer et configurer des appareils virtuels Android qui émulent des appareils Android. Vous pouvez utiliser ces appareils virtuels pour exécuter et tester votre application sans avoir à dépendre d’un appareil physique.
+description: Ce guide explique comment utiliser le Gestionnaire d’appareils Android Xamarin pour créer et configurer des appareils virtuels Android qui émulent des appareils Android. Vous pouvez utiliser ces appareils virtuels pour exécuter et tester votre application sans avoir à dépendre d’un appareil physique.
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/26/2018
-ms.openlocfilehash: 2b41c23bb880ca6150fa5f3f487eb00d8a7a19d8
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.date: 05/03/2018
+ms.openlocfilehash: 420ffc905659c6fd6245dc8cc3bdae4cb9401a63
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Gestionnaire d’appareils Android Xamarin
 
-_Le Gestionnaire d’appareils Android Xamarin, actuellement en préversion, remplace le Gestionnaire d’appareils hérité de Google. Ce guide explique comment utiliser le Gestionnaire d’appareils Android Xamarin pour créer et configurer des appareils virtuels Android qui émulent des appareils Android. Vous pouvez utiliser ces appareils virtuels pour exécuter et tester votre application sans avoir à dépendre d’un appareil physique._
+_Ce guide décrit comment utiliser Xamarin Android Device Manager pour créer et configurer des appareils virtuels Android (AVD) qui émulent des appareils Android. Vous pouvez utiliser ces appareils virtuels pour exécuter et tester votre application sans avoir à dépendre d’un appareil physique._
 
-![Actuellement en préversion](~/media/shared/preview.png)
- 
 ## <a name="overview"></a>Vue d'ensemble
 
-Après avoir vérifié que l’accélération matérielle est activée (comme décrit dans [Accélération matérielle](~/android/get-started/installation/android-emulator/hardware-acceleration.md)), l’étape suivante consiste à créer des appareils virtuels en vue de tester et de déboguer votre application. Vous pouvez utiliser le Gestionnaire d’appareils Android Xamarin pour créer des appareils virtuels qui seront utilisés par l’émulateur du kit Android SDK.
-
-Pourquoi voudriez-vous utiliser le Gestionnaire d’appareils Android Xamarin à la place du [Gestionnaire d’appareils Google](~/android/get-started/installation/android-emulator/google-emulator-manager.md) ?
-À compter de la version 26.0.1 d’Android SDK Tools, Google ne prend plus en charge le Gestionnaire d’AVD et le Gestionnaire du kit SDK basés sur l’interface utilisateur au profit de ses nouveaux outils d’interface de ligne de commande. En raison de ce changement, vous devez utiliser le [Gestionnaire Xamarin SDK](~/android/get-started/installation/android-sdk.md) et le Gestionnaire d’appareils Android Xamarin lorsque vous effectuez la mise à niveau vers Android SDK Tools 26.0.1 et version ultérieure (requis pour le développement Android 8.0 Oreo).
+Après avoir vérifié que l’accélération matérielle est activée (comme décrit dans [Accélération matérielle](~/android/get-started/installation/android-emulator/hardware-acceleration.md)), l’étape suivante est d’utiliser Xamarin Android Device Manager pour créer des appareils virtuels afin de tester et déboguer votre application.
 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Ce guide explique comment installer et utiliser le Gestionnaire d’appareils Android Xamarin pour Visual Studio sur Windows (ou [pour Mac](?tabs=vsmac)) :
+Ce guide décrit comment utiliser Xamarin Android Device Manager pour Visual Studio sur Windows (ou [pour Mac](?tabs=vsmac)) :
 
 [![Capture d’écran du Gestionnaire d’appareils Android Xamarin sous l’onglet Appareils](xamarin-device-manager-images/win/01-devices-dialog-sml.png)](xamarin-device-manager-images/win/01-devices-dialog.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-Ce guide explique comment installer et utiliser le Gestionnaire d’appareils Android Xamarin pour Visual Studio pour Mac (ou [sur Windows](?tabs=vswin)) :
+Ce guide décrit comment utiliser Xamarin Android Device Manager pour Visual Studio pour Mac (ou [pour Windows](?tabs=vswin)) :
 
 [![Capture d’écran du Gestionnaire d’appareils Android Xamarin sous l’onglet Appareils](xamarin-device-manager-images/mac/01-devices-dialog-sml.png)](xamarin-device-manager-images/mac/01-devices-dialog.png#lightbox)
 
@@ -48,7 +43,7 @@ Xamarin Studio n’est pas compatible avec le Gestionnaire d’appareils Android
 Vous utilisez le Gestionnaire d’appareils Android Xamarin pour créer et configurer des *appareils virtuels Android* (AVD) que vous exécutez dans l’[émulateur du kit Android SDK](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 Chaque AVD est une configuration d’émulateur qui simule un appareil Android physique. Vous pouvez ainsi exécuter et tester votre application dans diverses configurations qui simulent différents appareils Android physiques. Le Gestionnaire d’appareils Android Xamarin remplace le Gestionnaire d’appareils virtuels Android autonome de Google (qui a été déprécié).
 
-Dans ce guide, vous allez apprendre à installer et démarrer le Gestionnaire d’appareils Android. Vous allez apprendre à créer, dupliquer, personnaliser et lancer des appareils virtuels. Ce guide explique également comment configurer les propriétés de chaque appareil virtuel (comme le niveau d’API, le processeur, la mémoire et la résolution), activer ou désactiver les capteurs simulés (comme l’accéléromètre, le GPS, le capteur d’orientation et le capteur de lumière) et configurer le type d’accélération matérielle utilisé par cet appareil virtuel.
+Dans ce guide, vous apprenez à utiliser Android Device Manager pour créer, dupliquer, personnaliser et lancer des appareils virtuels. Ce guide explique également comment configurer les propriétés de chaque appareil virtuel (comme le niveau d’API, le processeur, la mémoire et la résolution), activer ou désactiver les capteurs simulés (comme l’accéléromètre, le GPS, le capteur d’orientation et le capteur de lumière) et configurer le type d’accélération matérielle utilisé par cet appareil virtuel.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -56,74 +51,37 @@ Dans ce guide, vous allez apprendre à installer et démarrer le Gestionnaire d�
 
 Pour utiliser le Gestionnaire d’appareils Android Xamarin, vous avez besoin des éléments suivants :
 
-- Visual Studio 2017 version 15.5 ou version ultérieure est requis. Visual Studio Community Edition et versions supérieures sont pris en charge.
+- Visual Studio 2017 version 15.7 ou version ultérieure est nécessaire. Visual Studio Community Edition et versions supérieures sont pris en charge.
 
-- Xamarin pour Visual Studio version 4.8 ou version ultérieure. Pour plus d’informations sur la mise à jour de Xamarin, consultez [Modifier le canal de mise à jour](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/).
+- Xamarin pour Visual Studio version 4.9 ou version ultérieure. Pour plus d’informations sur la mise à jour de Xamarin, consultez [Modifier le canal de mise à jour](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/).
 
-- La dernière version du [programme d’installation du Gestionnaire d’appareils Xamarin](https://go.microsoft.com/fwlink/?linkid=865528) pour Windows.
-
-- **Kit Android SDK** &ndash; Le kit Android SDK doit être installé (voir [Installation du kit Android SDK](~/android/get-started/installation/android-sdk.md)) et SDK Tools version 26.0 doit être installé comme expliqué dans la section suivante. Veillez à installer le kit Android SDK à l’emplacement suivant (s’il n’est pas déjà installé) : **C:\\Program Files (x86)\\Android\\android-sdk**.
+- **Android SDK** &ndash; Le kit Android SDK doit être installé (voir [Installation du kit Android SDK](~/android/get-started/installation/android-sdk.md)) et SDK Tools version 26.0 doit être installé comme expliqué dans la section suivante. Veillez à installer le kit Android SDK à l’emplacement suivant (s’il n’est pas déjà installé) : **C:\\Program Files (x86)\\Android\\android-sdk**.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-- Visual Studio pour Mac 7.4 ou version ultérieure.
-
-- La dernière version du [programme d’installation du Gestionnaire d’appareils Xamarin](https://go.microsoft.com/fwlink/?linkid=865527) pour macOS.
+- Visual Studio pour Mac 7.5 ou version ultérieure.
 
 - **Kit Android SDK** &ndash; Android SDK 8.0 (API 26) ou ultérieur doit être installé via le Gestionnaire du kit SDK.
 
 -----
 
-## <a name="installing-the-device-manager"></a>Installation du Gestionnaire d’appareils
-
-Effectuez les étapes suivantes pour installer le Gestionnaire d’appareils Android Xamarin :
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-1. Téléchargez le [programme d’installation du Gestionnaire d’appareils Xamarin](https://go.microsoft.com/fwlink/?linkid=865528) pour Windows.
-
-2. Double-cliquez sur **Xamarin.DeviceManager.msi** et suivez les instructions d’installation : 
-
-    ![Assistant Installation du Gestionnaire d’appareils Android Xamarin](xamarin-device-manager-images/win/30-installer.png)
-
-
-> [!NOTE]
-> À compter de [Visual Studio 2017 Preview 5](https://www.visualstudio.com/vs/preview/), le Gestionnaire d’appareils Android sera distribué avec le programme d’installation de VS2017. Il n’est pas nécessaire de télécharger un autre programme d’installation pour obtenir le Gestionnaire d’appareils Android Xamarin avec Visual Studio 2017 Preview 5.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
-
-1. Téléchargez le [programme d’installation du Gestionnaire d’appareils Xamarin](https://go.microsoft.com/fwlink/?linkid=865527) pour macOS.
-
-2. Double-cliquez sur **AndroidDevices.pkg** et suivez les instructions d’installation : 
-
-    [![Assistant Installation du Gestionnaire d’appareils Android Xamarin](xamarin-device-manager-images/mac/30-installer-sml.png)](xamarin-device-manager-images/mac/30-installer.png#lightbox)
-
------
 ## <a name="launching-the-device-manager"></a>Lancement du Gestionnaire d’appareils
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Dans Visual Studio 15.6 Preview 3 et versions ultérieures, vous pouvez lancer le Gestionnaire d’appareils Android Xamarin à partir du menu **Outils**. Si vous utilisez Visual Studio 15.6 Preview 3 ou version ultérieure, démarrez le Gestionnaire d’appareils en cliquant sur **Outils > Gestionnaire d’émulateur Android** :
+Lancez Xamarin Android Device Manager à partir du menu **Outils** en cliquant sur **Outils > Gestionnaire d’émulateur Android** :
 
 [![Lancement à partir du menu Outils](xamarin-device-manager-images/win/04-tools-menu-sml.png)](xamarin-device-manager-images/win/04-tools-menu.png#lightbox)
 
-Si vous utilisez une version antérieure de Visual Studio, le Gestionnaire d’appareils Android Xamarin doit être lancé à partir du menu **Démarrer** de Windows.
-
-![Gestionnaire d’appareils Android Xamarin dans le menu Démarrer](xamarin-device-manager-images/win/31-start-menu.png)
-
-Cliquez avec le bouton droit sur **Gestionnaire d’appareils Android Xamarin** et sélectionnez **Plus > Exécuter en tant qu’administrateur**. Si la boîte de dialogue d’erreur suivante s’affiche au lancement, consultez la section [Résolution des problèmes](#troubleshooting) afin d’obtenir des instructions de contournement :
+Si la boîte de dialogue d’erreur suivante s’affiche au lancement, consultez la section [Résolution des problèmes](#troubleshooting) afin d’obtenir des instructions de contournement :
 
 ![Erreur d’instance du kit Android SDK](xamarin-device-manager-images/win/32-sdk-error.png)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-Dans Visual Studio pour Mac 7.6 Preview 3 (actuellement dans le canal alpha) ou version ultérieure, vous pouvez lancer le Gestionnaire d’appareils Android Xamarin en sélectionnant **Outils > Gestionnaire d’émulateur** :
+Dans Visual Studio pour Mac, lancez Xamarin Android Device Manager en sélectionnant **Outils > Gestionnaire d’émulateur** :
 
 [![Lancement à partir du menu Outils](xamarin-device-manager-images/mac/16-tools-menu-sml.png)](xamarin-device-manager-images/mac/16-tools-menu.png#lightbox)
-
-Si vous utilisez une version antérieure de Visual Studio pour Mac, le Gestionnaire d’appareils Android Xamarin doit être lancé indépendamment. Recherchez **Appareils Android** dans le dossier **Applications** et double-cliquez dessus pour le lancer :
-
-[![Emplacement du Gestionnaire d’appareils Android Xamarin dans le Finder](xamarin-device-manager-images/mac/31-location-in-finder-sml.png)](xamarin-device-manager-images/mac/31-location-in-finder.png#lightbox)
 
 -----
 

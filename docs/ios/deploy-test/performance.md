@@ -1,40 +1,26 @@
 ---
-title: Niveau de performance de Xamarin.iOS
-description: Il existe plusieurs techniques permettant d’accroître le niveau de performance des applications générées avec Xamarin.iOS. Utilisées conjointement, ces techniques peuvent considérablement réduire la charge de travail d’une UC, ainsi que la quantité de mémoire consommée par une application. Cet article aborde ces techniques.
+title: Performances des applications Xamarin.iOS
+description: Ce document décrit les techniques permettant d’améliorer les performances et l’utilisation de la mémoire dans les applications Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/29/2016
-ms.openlocfilehash: 3fc6263aa99edb94ae69f1ce8f87835043477392
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: afff9d3924c673edc363292efa1a9b7df43a9218
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="xamarinios-performance"></a>Niveau de performance de Xamarin.iOS
+# <a name="xamarinios-performance"></a>Performances des applications Xamarin.iOS
 
-_Il existe plusieurs techniques permettant d’accroître le niveau de performance des applications générées avec Xamarin.iOS. Ensemble, ces techniques peuvent considérablement réduire la charge de travail d’un processeur, de même que la quantité de mémoire consommée par une application. Cet article décrit et explique ces techniques._
+Le mauvais niveau de performance d’une application se présente de plusieurs façons. L’application semble ne pas répondre, le défilement de l’affichage est ralenti et la durée de vie de la batterie de l’appareil réduite. Toutefois, l’optimisation des performances implique davantage de choses que l’implémentation d’un code efficace. L’expérience utilisateur liée au niveau de performance de l’application doit également être prise en compte. Par exemple, pour contribuer à améliorer l’expérience utilisateur, vous devez vérifier que les opérations s’exécutent sans empêcher l’utilisateur d’effectuer d’autres activités. 
 
-Le mauvais niveau de performance d’une application se présente de plusieurs façons. L’application semble ne pas répondre, le défilement de l’affichage est ralenti et la durée de vie de la batterie de l’appareil réduite. Toutefois, l’optimisation des performances implique davantage de choses que l’implémentation d’un code efficace. L’expérience utilisateur liée au niveau de performance de l’application doit également être prise en compte. Par exemple, pour contribuer à améliorer l’expérience utilisateur, vous devez vérifier que les opérations s’exécutent sans empêcher l’utilisateur d’effectuer d’autres activités.
-
-Il existe un certain nombre de techniques permettant d’accroître le niveau de performance, ainsi que le niveau de performance perçu, des applications générées avec Xamarin.iOS. Elles comprennent :
-
-- [Éviter les cycles de références fortes](#avoidcircularreferences)
-- [Optimiser les affichages de tableaux](#optimizetableviews)
-- [Utiliser les affichages opaques](#opaqueviews)
-- [Éviter les XIB volumineux](#avoidfatxibs)
-- [Optimiser les ressources d’images](#optimizeimages)
-- [Tester sur les appareils](#testondevices)
-- [Synchroniser les animations avec l’actualisation de l’affichage](#synchronizeanimations)
-- [Évitez la transparence Core Animation](#avoidtransparency)
-- [Éviter la génération de code](#avoidcodegeneration)
+Ce document décrit les techniques permettant d’améliorer les performances et l’utilisation de la mémoire dans les applications Xamarin.iOS.
 
 > [!NOTE]
 > Avant de lire cet article, lisez d’abord [Niveau de performance multiplateforme](~/cross-platform/deploy-test/memory-perf-best-practices.md), qui décrit les techniques spécifiques indépendantes des plateformes qui permettent d’améliorer l’utilisation de la mémoire et le niveau de performance des applications générées à l’aide de la plateforme Xamarin.
-
-<a name="avoidcircularreferences" />
 
 ## <a name="avoid-strong-circular-references"></a>Éviter les références circulaires fortes
 
@@ -82,14 +68,14 @@ Dans les cas où un objet contenu conserve un lien vers son conteneur, plusieurs
 
 ### <a name="using-weakreferences"></a>Utilisation de WeakReferences
 
-Pour empêcher un cycle, vous pouvez utiliser une référence faible de l’enfant au parent. Par exemple, vous pouvez écrire le code ci-dessus comme ceci :
+Pour empêcher un cycle, vous pouvez, entre autres, utiliser une référence faible de l’enfant au parent. Par exemple, le code ci-dessus peut s’écrire de la façon suivante :
 
 ```csharp
 class Container : UIView
 {
     public void Poke ()
     {
-    // Call this method to poke this object
+        // Call this method to poke this object
     }
 }
 
@@ -112,11 +98,76 @@ var container = new Container ();
 container.AddSubview (new MyView (container));
 ```
 
-Cela signifie que l’objet contenu ne garde pas le parent actif. Seul le parent garde l’enfant actif grâce à l’appel de `container.AddSubView`.
+Ici, l’objet contenu ne maintient pas le parent actif. Toutefois, le parent maintient l’enfant actif via l’appel effectué à `container.AddSubView`.
 
-Cela se produit également dans les API iOS qui utilisent le modèle de délégué ou de source de données, où une classe homologue contient l’implémentation, par exemple quand vous définissez la propriété [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) ou [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) dans la classe [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
+Cela se produit également dans les API iOS qui utilisent le modèle de délégué ou de source de données, où une classe homologue contient l’implémentation, par exemple, quand vous définissez la propriété [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) ou [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) dans la classe [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
 
 Dans le cas de classes créées uniquement pour l’implémentation d’un protocole, par exemple [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), au lieu de créer une sous-classe, vous pouvez implémenter simplement l’interface dans la classe et remplacer la méthode, puis affecter à la propriété `DataSource` la valeur `this`.
+
+#### <a name="weak-attribute"></a>Attribut faible
+
+[Xamarin.iOS 11.10](https://developer.xamarin.com/releases/ios/xamarin.ios_11/xamarin.ios_11.10/#WeakAttribute) a introduit l’attribut `[Weak]`. Comme `WeakReference <T>`, `[Weak]` peut être utilisé pour rompre les [références circulaires fortes](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/performance#avoid-strong-circular-references), mais avec encore moins de code.
+
+Prenez le code suivant, qui utilise `WeakReference <T>` :
+
+```csharp
+public class MyFooDelegate : FooDelegate {
+    WeakReference<MyViewController> controller;
+    public MyFooDelegate (MyViewController ctrl) => controller = new WeakReference<MyViewController> (ctrl);
+    public void CallDoSomething ()
+    {
+        MyViewController ctrl;
+        if (controller.TryGetTarget (out ctrl)) {
+            ctrl.DoSomething ();
+        }
+    }
+}
+```
+
+Le code équivalent qui utilise `[Weak]` est beaucoup plus concis :
+
+```csharp
+public class MyFooDelegate : FooDelegate {
+    [Weak] MyViewController controller;
+    public MyFooDelegate (MyViewController ctrl) => controller = ctrl;
+    public void CallDoSomething () => controller.DoSomething ();
+}
+```
+
+Voici un autre exemple d’utilisation de `[Weak]` dans le contexte du modèle de [délégation](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html) :
+
+```csharp
+public class MyViewController : UIViewController 
+{
+    WKWebView webView;
+
+    protected MyViewController (IntPtr handle) : base (handle) { }
+
+    public override void ViewDidLoad ()
+    {
+        base.ViewDidLoad ();
+        webView = new WKWebView (View.Bounds, new WKWebViewConfiguration ());
+        webView.UIDelegate = new UIDelegate (this);
+        View.AddSubview (webView);
+    }
+}
+
+public class UIDelegate : WKUIDelegate 
+{
+    [Weak] MyViewController controller;
+
+    public UIDelegate (MyViewController ctrl) => controller = ctrl;
+
+    public override void RunJavaScriptAlertPanel (WKWebView webView, string message, WKFrameInfo frame, Action completionHandler)
+    {
+        var msg = $"Hello from: {controller.Title}";
+        var alertController = UIAlertController.Create (null, msg, UIAlertControllerStyle.Alert);
+        alertController.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
+        controller.PresentViewController (alertController, true, null);
+        completionHandler ();
+    }
+}
+```
 
 ### <a name="disposing-of-objects-with-strong-references"></a>Suppression d’objets avec des références fortes
 
@@ -142,7 +193,8 @@ class MyContainer : UIView
 Pour un objet enfant qui conserve une référence forte à son parent, effacez la référence au parent dans l’implémentation de `Dispose` :
 
 ```csharp
-    class MyChild : UIView {
+class MyChild : UIView 
+{
     MyContainer container;
     public MyChild (MyContainer container)
     {
@@ -158,14 +210,11 @@ Pour un objet enfant qui conserve une référence forte à son parent, effacez l
 Pour plus d’informations sur la libération de références fortes, consultez [Libérer des ressources IDisposable](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
 Il existe également des informations intéressantes dans ce billet de blog : [Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/).
 
-### <a name="more-information"></a>Informations complémentaires
+### <a name="more-information"></a>Complément d'information
 
 Pour plus d’informations, consultez [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) sur Cocoa With Love, [Is this a bug in MonoTouch GC](http://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) sur StackOverflow, et [Why can’t MonoTouch GC kill managed objects with refcount > 1?](http://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) sur StackOverflow.
 
-
-<a name="optimizetableviews" />
-
-## <a name="optimize-table-views"></a>Optimiser les affichages de tableaux
+## <a name="optimize-table-views"></a>Optimiser les vues de tableaux
 
 Les utilisateurs attendent un défilement fluide et des temps de chargement rapides pour les instances de [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/). Toutefois, le niveau de performance du défilement peut se dégrader quand les cellules contiennent des hiérarchies d’affichages profondément imbriquées, ou quand elles contiennent des dispositions complexes. Toutefois, vous pouvez utiliser certaines techniques pour éviter une dégradation du niveau de performance de `UITableView` :
 
@@ -177,8 +226,6 @@ Les utilisateurs attendent un défilement fluide et des temps de chargement rapi
 - Évitez la mise à l’échelle et les dégradés d’images.
 
 Utilisées conjointement, ces techniques peuvent vous aider à conserver la fluidité du défilement des instances de [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
-
-<a name="reusecells" />
 
 ### <a name="reuse-cells"></a>Réutiliser les cellules
 
@@ -204,19 +251,13 @@ Quand l’utilisateur fait défiler ce qu’il voit, [`UITableView`](https://dev
 
 Pour plus d’informations, consultez [Réutilisation des cellules](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) dans [Remplissage d’un tableau avec des données](~/ios/user-interface/controls/tables/populating-a-table-with-data.md).
 
-<a name="opaqueviews" />
-
-## <a name="use-opaque-views"></a>Utiliser les affichages opaques
+## <a name="use-opaque-views"></a>Utiliser les vues opaques
 
 Vérifiez que la propriété [`Opaque`](https://developer.xamarin.com/api/property/UIKit.UIView.Opaque/) est définie pour les affichages qui n’ont pas de transparence. Cela permet de garantir le rendu optimal des affichages par le système de dessin. Cet aspect est particulièrement important quand un affichage est incorporé dans [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/) ou fait partie d’une animation complexe. Sinon, le système de dessin effectue une composition des affichages avec d’autres contenus, ce qui peut impacter le niveau de performance de manière importante.
-
-<a name="avoidfatxibs" />
 
 ## <a name="avoid-fat-xibs"></a>Éviter les XIB volumineux
 
 Bien que les XIB aient été largement remplacés par les storyboards, il existe certaines situations où vous pouvez encore utiliser des XIB. Quand un XIB est chargé en mémoire, tout son contenu est chargé en mémoire, notamment les images. Si le XIB contient un affichage qui n’est pas immédiatement utilisé, la mémoire est gaspillée. Ainsi, quand vous utilisez un XIB, vérifiez qu’il n’existe qu’un seul XIB par contrôleur d’affichage et, si possible, séparez la hiérarchie d’affichages du contrôleur d’affichage dans des XIB distincts.
-
-<a name="optimizeimages" />
 
 ## <a name="optimize-image-resources"></a>Optimiser les ressources d’images
 
@@ -224,15 +265,11 @@ Les images font partie des ressources les plus lourdes utilisées par les applic
 
 Pour plus d’informations, consultez [Optimiser les ressources d’images](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) dans le guide [Niveau de performance multiplateforme](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
-<a name="testondevices" />
-
-## <a name="test-on-devices"></a>Tester sur les appareils
+## <a name="test-on-devices"></a>Tester sur des appareils
 
 Commencez à déployer et à tester votre application sur un appareil physique le plus tôt possible. Les simulateurs ne reproduisent pas parfaitement les comportements et les limitations des appareils. Il est donc important d’effectuer des tests sur des appareils réels, dès que possible.
 
 En particulier, le simulateur ne peut pas simuler les restrictions de mémoire ou les limitations de l’UC d’un appareil physique.
-
-<a name="synchronizeanimations" />
 
 ## <a name="synchronize-animations-with-the-display-refresh"></a>Synchroniser les animations avec l’actualisation de l’affichage
 
@@ -240,13 +277,9 @@ Les jeux ont tendance à avoir des boucles étroites pour l’exécution de la l
 
 Toutefois, le serveur d’affichage effectue des mises à jour de l’écran soixante fois par seconde, ce qui correspond à la limite maximale. Ainsi, toute tentative d’actualisation de l’écran qui dépasse cette limite peut entraîner des interruptions et des micro-saccades. Il est préférable de structurer le code pour que les actualisations de l’écran soient synchronisées avec l’actualisation de l’affichage. Pour ce faire, utilisez la classe [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/), qui représente un minuteur approprié aux tâches de visualisation et aux jeux s’exécutant à soixante images par seconde.
 
-<a name="avoidtransparency" />
-
 ## <a name="avoid-core-animation-transparency"></a>Évitez la transparence Core Animation
 
 Le fait d’éviter la transparence Core Animation permet d’améliorer le niveau de performance de la composition bitmap. En règle générale, évitez les calques transparents et les bordures floues, si possible.
-
-<a name="avoidcodegeneration" />
 
 ## <a name="avoid-code-generation"></a>Éviter la génération de code
 
@@ -256,6 +289,6 @@ Vous devez éviter de générer du code de manière dynamique avec `System.Refle
 
 Cet article a décrit et expliqué les techniques permettant d’accroître le niveau de performance des applications générées avec Xamarin.iOS. Ensemble, ces techniques peuvent considérablement réduire la charge de travail d’un processeur, de même que la quantité de mémoire consommée par une application.
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Performances entre plateformes](~/cross-platform/deploy-test/memory-perf-best-practices.md)

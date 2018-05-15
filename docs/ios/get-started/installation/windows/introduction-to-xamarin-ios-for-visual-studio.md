@@ -6,12 +6,12 @@ ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/19/2017
-ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.date: 05/02/2018
+ms.openlocfilehash: fbd48deb0b18dcd3ac0d40e379e21d5967f81e0d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduction à Xamarin.iOS pour Visual Studio
 
@@ -48,8 +48,6 @@ Dans les deux cas, vous devez effectuer les étapes suivantes :
 ## <a name="connecting-to-the-mac"></a>Connexion au Mac
 
 Pour connecter Visual Studio à votre hôte de build Mac, suivez les instructions du guide [Appairer avec un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-
 
 ## <a name="visual-studio-toolbar-overview"></a>Vue d’ensemble de la barre d’outils de Visual Studio
 
@@ -136,14 +134,17 @@ Pour accéder aux propriétés de projet de Visual Studio, cliquez avec le bouto
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>Création d’un projet pour des applications iOS
 
-Pour créer un projet iOS dans Visual Studio, procédez exactement comme pour n’importe quel autre type de projet. La sélection de **Fichier > Nouveau projet** ouvre la boîte de dialogue affichée ci-dessous, qui illustre certains des modèles disponibles pour la création d’un projet iOS :
+Pour créer un projet iOS dans Visual Studio, procédez exactement comme pour n’importe quel autre type de projet. Quand vous sélectionnez **Fichier > Nouveau projet**, la boîte de dialogue affichée ci-dessous s’ouvre, avec des types de projet disponibles pour créer un projet iOS :
 
+![Création d'un projet](introduction-to-xamarin-ios-for-visual-studio-images/newproject.w157.png)
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/newproject.png "Création d’un projet")
+Sélectionnez **Application iOS (Xamarin)** pour afficher les modèles suivants à partir desquels vous pouvez créer une application Xamarin.iOS :
+
+![Sélection du modèle pour une application iOS](introduction-to-xamarin-ios-for-visual-studio-images/newproject-2.w157.png)
 
 Les fichiers de plan conceptuel et .xib peuvent être modifiés dans Visual Studio à l’aide du Concepteur iOS. Pour créer un plan conceptuel, choisissez l’un des modèles de plan conceptuel. Cette opération génère un fichier **Main.storyboard** dans l’**Explorateur de solutions**, comme l’illustre la capture d’écran ci-dessous :
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.png "Fichier Main.storyboard dans l’Explorateur de solutions")
+![Fichier Main.storyboard dans l’Explorateur de solutions](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.w157.png)
 
 Pour commencer à créer ou à modifier votre plan conceptuel, double-cliquez sur `Main.storyboard` pour l’ouvrir dans le Concepteur iOS :
 

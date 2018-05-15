@@ -81,8 +81,6 @@
 #### [GridLayout](user-interface/layouts/grid-layout.md)
 #### [Dispositions à onglets](user-interface/layouts/tab-layout/index.md)
 ##### [Onglets de navigation avec ActionBar](user-interface/layouts/tab-layout/with-action-bar.md)
-##### [Vue d’ensemble de TabHost](user-interface/layouts/tab-layout/tab-host.md)
-##### [Création d’une interface utilisateur à onglets avec TabHost](user-interface/layouts/tab-layout/creating-a-tabbed-ui.md)
 ### [Contrôles](user-interface/controls/index.md)
 #### [ActionBar](user-interface/controls/action-bar.md)
 #### [Saisie semi-automatique](user-interface/controls/auto-complete.md)

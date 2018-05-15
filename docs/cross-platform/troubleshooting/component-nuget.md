@@ -7,22 +7,26 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 020a5a2182458e759626b9bdbf45b62b6e13d71a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 31660ff1255878dbae15bda601da8e628aabd459
+ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>Mise à jour des références de composants à NuGet
 
-> [!NOTE]
+> [!IMPORTANT]
+> Le magasin de composants a été supprimé depuis le 15 mai 2018 (cette fermeture a été initialement [annoncé](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) en novembre 2017).
+>
 > Composants Xamarin ne sont plus prises en charge dans Visual Studio et doit être remplacés par les packages NuGet. Suivez les instructions ci-dessous pour supprimer manuellement les références de composants à partir de vos projets.
 
 Faire référence à ces instructions pour ajouter des packages NuGet dans [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) ou [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
+Une liste de Xamarin populaires [plug-ins et les bibliothèques](https://github.com/xamarin/XamarinComponents/blob/master/README.md) est disponible pour aider à trouver des alternatives aux composants qui ne sont pas disponibles en tant que package de NuGet.
+
 ## <a name="manually-removing-component-references"></a>Suppression manuelle des références de composants
 
-En novembre 2017, il a été [annoncé](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) qui serait arrêté le magasin de composants Xamarin. Dans le but de faire avancer le sunsetting des composants, la version 15.6 de Visual Studio et la version 7.4 de Visual Studio pour Mac n’est plus prend en charge les composants de votre projet. 
+La version 15.6 de Visual Studio et la version 7.4 de Visual Studio pour Mac n’est plus prend en charge les composants de votre projet. 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -199,6 +203,6 @@ De nombreux fournisseurs de composants fonctionnent toujours sur la migration ve
 
 
 ## <a name="related-links"></a>Liens associés
-
+- [Liste de populaires Xamarin Plugins et de bibliothèques](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Installer et utiliser un package NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [Y compris un package NuGet (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

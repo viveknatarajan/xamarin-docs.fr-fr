@@ -5,17 +5,17 @@ ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2fcb97eafda15a73e2b7e5441f1d6c94f75af0ce
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b2c9ed50c48aee6343a20ddb28c49e1bd05d2153
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials vocale
 
 ![Version préliminaire de NuGet](~/media/shared/pre-release.png)
 
-Le **texttospeech avec le** classe permet une application utilisent intégrée dans les moteurs de parler de texte précédent de l’appareil et également pour les langues disponibles de requête prises en charge par le moteur de synthèse vocale.
+Le **texttospeech avec le** classe permet à une application d’utiliser intégrée dans les moteurs de parler de texte précédent de l’appareil et également pour les langues disponibles de requête prises en charge par le moteur de synthèse vocale.
 
 ## <a name="using-text-to-speech"></a>À l’aide de la synthèse vocale
 
@@ -45,7 +45,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Cette méthode prend dans un CancellationToken facultatif pour arrêter l’énoncé une qu'au démarrage. 
+Cette méthode prend dans un CancellationToken facultatif pour arrêter l’énoncé une fois qu’il démarre. 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -115,7 +115,7 @@ Les valeurs prises en charge pour ces paramètres sont les suivantes :
 
 ### <a name="speech-locales"></a>Paramètres régionaux de reconnaissance vocale
 
-Chaque plate-forme offre des paramètres régionaux pour parler de texte précédent dans plusieurs langues et les accents. Chaque plateforme possède une autre codes et les méthodes de spécification, c’est pourquoi Essentials fournit un inter-plateformes `Locale` classe et un moyen de les interroger avec `GetLocalesAsync`.
+Chaque plate-forme offre des paramètres régionaux pour parler de texte précédent dans plusieurs langues et les accents. Chaque plateforme possède différents codes et les méthodes de spécification, c’est pourquoi Essentials fournit un inter-plateformes `Locale` classe et un moyen de les interroger avec `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -143,5 +143,5 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [Code source de texttospeech avec le](https://github.com/xamarin/Essentials/tree/master/Essentials/TextToSpeech)
+- [Code source de texttospeech avec le](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
 - [Documentation de l’API de texttospeech avec le](xref:Xamarin.Essentials.TextToSpeech)
