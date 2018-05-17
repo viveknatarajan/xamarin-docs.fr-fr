@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/11/2018
-ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
-ms.translationtype: HT
+ms.date: 05/14/2018
+ms.openlocfilehash: 6200a04bb4d82174d36a48beab7c63709ac39187
+ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="splash-screen"></a>Écran de démarrage
 
@@ -159,7 +159,7 @@ L’écran de démarrage implémentée dans les étapes précédentes ne s’aff
 
 Pour ajouter un écran de démarrage pour le mode paysage, procédez comme suit :
 
-1. Dans le **drawable/ressources** dossier, ajouter la version de paysage de l’image d’écran de démarrage à utiliser. Dans cet exemple, **splash_logo_land.png** est la version paysage du logo qui a été utilisée dans les exemples ci-dessus (il utilise les caractères noir au lieu de bleu).
+1. Dans le **drawable/ressources** dossier, ajouter la version de paysage de l’image d’écran de démarrage à utiliser. Dans cet exemple, **splash_logo_land.png** est la version paysage du logo qui a été utilisée dans les exemples ci-dessus (il utilise les caractères blancs au lieu de bleu).
 
 2. Dans le **drawable/ressources** dossier, créer une version paysage de le `layer-list` drawable qui a été défini précédemment (par exemple, **splash_screen_land.xml**). Dans ce fichier, définissez le chemin d’accès de l’image bitmap à la version de paysage de l’image d’écran de démarrage. Dans l’exemple suivant, **splash_screen_land.xml** utilise **splash_logo_land.png**:
 
@@ -176,7 +176,6 @@ Pour ajouter un écran de démarrage pour le mode paysage, procédez comme suit�
             android:gravity="center"/>
       </item>
     </layer-list>
-
     ```
 
 3.  Créer le **valeurs/ressources-terrestres** dossier s’il n’existe pas.
@@ -201,7 +200,7 @@ Pour ajouter un écran de démarrage pour le mode paysage, procédez comme suit�
     </resources>
     ```
 
-6.  Modifier **valeurs-terrestres/colors.xml** pour configurer les couleurs que vous souhaitez utiliser pour la version de paysage de l’écran de démarrage. Dans cet exemple, la couleur d’arrière-plan de démarrage devient jaune pour le mode paysage :
+6.  Modifier **valeurs-terrestres/colors.xml** pour configurer les couleurs que vous souhaitez utiliser pour la version de paysage de l’écran de démarrage. Dans cet exemple, la couleur d’arrière-plan de démarrage est modifiée pour le bleu pour le mode paysage :
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -210,7 +209,7 @@ Pour ajouter un écran de démarrage pour le mode paysage, procédez comme suit�
       <color name="primaryDark">#1976D2</color>
       <color name="accent">#FFC107</color>
       <color name="window_background">#F5F5F5</color>
-      <color name="splash_background">#FFFF00</color>
+      <color name="splash_background">#3498DB</color>
     </resources>
     ```
 
