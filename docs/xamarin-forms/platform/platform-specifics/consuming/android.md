@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: dfc46b5caa14c1c02d1c2afaffecc701fea59e2c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8aa17c868ce1d0343eab6758c03aaf042c27130e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="android-platform-specifics"></a>Caractéristiques de plate-forme Android
 
@@ -135,7 +135,7 @@ Le résultat est que la pagination de balayage via les pages affichées par un [
 
 ## <a name="controlling-the-elevation-of-visual-elements"></a>Contrôle de l’élévation d’éléments visuels
 
-Cette plateforme spécifique est utilisé pour contrôler l’élévation, ou ordre de plan, des éléments visuels sur les applications qui ciblent API 21 ou version ultérieure. L’élévation d’un élément visuel détermine son ordre de dessin, avec des éléments visuels avec des valeurs Z supérieures OCCLUSION des éléments visuels avec des valeurs Z inférieure. Elle est consommée en XAML en définissant le `Elevation.Elevation` propriété attachée un `boolean` valeur :
+Cette plateforme spécifique est utilisé pour contrôler l’élévation, ou ordre de plan, des éléments visuels sur les applications qui ciblent API 21 ou version ultérieure. L’élévation d’un élément visuel détermine son ordre de dessin, avec des éléments visuels avec des valeurs Z supérieures OCCLUSION des éléments visuels avec des valeurs Z inférieure. Elle est consommée en XAML en définissant le `VisualElement.Elevation` propriété attachée un `boolean` valeur :
 
 ```xaml
 <ContentPage ...
@@ -147,7 +147,7 @@ Cette plateforme spécifique est utilisé pour contrôler l’élévation, ou or
             <BoxView Color="Red" Opacity="0.2" HeightRequest="50" />
         </Grid>        
         <Grid Margin="0,20,0,0">
-            <Button Text="Button Above BoxView - Click Me" android:Elevation.Elevation="10"/>
+            <Button Text="Button Above BoxView - Click Me" android:VisualElement.Elevation="10"/>
             <BoxView Color="Red" Opacity="0.2" HeightRequest="50" />
         </Grid>
     </StackLayout>
@@ -196,7 +196,7 @@ public class AndroidElevationPageCS : ContentPage
 }
 ```
 
-Le `Button.On<Android>` méthode spécifie que cette plate-forme spécifique sera exécuté uniquement sur Android. Le `Elevation.SetElevation` (méthode), dans le [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/) espace de noms est utilisée pour définir l’élévation de l’élément visuel autorisant des valeurs null `float`. En outre, le `Elevation.GetElevation` méthode peut être utilisée pour récupérer la valeur de l’élévation d’un élément visuel.
+Le `Button.On<Android>` méthode spécifie que cette plate-forme spécifique sera exécuté uniquement sur Android. Le `VisualElement.SetElevation` (méthode), dans le [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/) espace de noms est utilisée pour définir l’élévation de l’élément visuel autorisant des valeurs null `float`. En outre, le `VisualElement.GetElevation` méthode peut être utilisée pour récupérer la valeur de l’élévation d’un élément visuel.
 
 Le résultat est que l’élévation des éléments visuels peut être contrôlée afin que les éléments visuels avec des valeurs Z supérieures occlude des éléments visuels avec des valeurs Z inférieure. Par conséquent, dans cet exemple la seconde [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) est rendu au-dessus de la [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) , car il possède une valeur plus élevée de l’élévation :
 

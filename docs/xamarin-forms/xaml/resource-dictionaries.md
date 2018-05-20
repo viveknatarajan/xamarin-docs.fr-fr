@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: bfdfeda5821b020d7948e583a63bf9ec7e8ee324
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: 47cca2f726b0af396ea1eb287cfa4e1f1bf19724
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="resource-dictionaries"></a>Dictionnaires de ressources
 
@@ -35,7 +35,7 @@ Les ressources sont définies dans un [ `ResourceDictionary` ](xref:Xamarin.Form
 Un programme Xamarin.Forms contient uniquement une classe qui dérive de `Application` mais souvent utilisent de nombreuses classes qui dérivent de `VisualElement`, y compris les contrôles, dispositions et pages. Ces objets peuvent avoir son `Resources` propriété définie sur un `ResourceDictionary`. Choix de l’emplacement placer un particulier `ResourceDictionary` impacts où les ressources peuvent être utilisés :
 
 - Ressources dans un `ResourceDictionary` qui est attaché à une vue comme `Button` ou `Label` applicable seulement à cet objet particulier, cela n’est pas très utile.
-- Ressources dans un `ResourceDictionary` attaché à une disposition, tel que `StackLayout` ou `Grid` peuvent être appliquées à la mise en page et de tous les enfants de cette mise en page. 
+- Ressources dans un `ResourceDictionary` attaché à une disposition, tel que `StackLayout` ou `Grid` peuvent être appliquées à la mise en page et de tous les enfants de cette mise en page.
 - Ressources dans un `ResourceDictionary` défini sur la page de niveau peut être appliqué à la page et à tous ses enfants.
 - Ressources dans un `ResourceDictionary` défini par l’application de niveau peut être appliqué dans l’ensemble de l’application.
 
@@ -187,7 +187,7 @@ Vous pouvez instancier `MyResourceDictionary` en le plaçant entre une paire de 
         <local:MyResourceDictionary />
     </ContentPage.Resources>
     ...
-</ContentPage>  
+</ContentPage>
 ```
 
 Une instance de `MyResourceDictionary` est défini sur le `Resources` propriété de la `ContentPage` objet.
@@ -258,7 +258,7 @@ Lors de la fusion [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary
 
 ## <a name="merging-dictionaries-in-xamarinforms-30"></a>La fusion des dictionnaires dans Xamarin.Forms 3.0
 
-Depuis la version 3.0 Xamarin.Forms, le processus de fusion `ResourceDictionaries` est plus facile et plus souple. Le `MergedDictionaries` balises d’élément de propriété ne sont plus nécessaires. Au lieu de cela, vous ajoutez au dictionnaire de ressources un autre `ResourceDictionary` balise avec le nouveau [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) propriété définie sur le nom de fichier du fichier XAML avec les ressources :
+Depuis la version 3.0 Xamarin.Forms, le processus de fusion [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) instances est plus facile et plus souple. Le `MergedDictionaries` balises d’élément de propriété ne sont plus nécessaires. Au lieu de cela, vous ajoutez au dictionnaire de ressources un autre `ResourceDictionary` balise avec le nouveau [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) propriété définie sur le nom de fichier du fichier XAML avec les ressources :
 
 ```xaml
 <ContentPage ...>
@@ -294,7 +294,7 @@ Parce que Xamarin.Forms 3.0 instancie automatiquement le `ResourceDictionary`, c
 </ContentPage>
 ```
 
-Cette nouvelle syntaxe est _pas_ instancier la `MyResourceDictionary` classe. Au lieu de cela, il fait référence au fichier XAML. C’est pourquoi le fichier code-behind (**MyResourceDictionary.xaml.cs**) n’est plus nécessaire. Vous pouvez également supprimer la `x:Class` attribut à partir de la balise racine de la **MyResourceDictionary.xaml** fichier. 
+Cette nouvelle syntaxe est _pas_ instancier la `MyResourceDictionary` classe. Au lieu de cela, il fait référence au fichier XAML. C’est pourquoi le fichier code-behind (**MyResourceDictionary.xaml.cs**) n’est plus nécessaire. Vous pouvez également supprimer la `x:Class` attribut à partir de la balise racine de la **MyResourceDictionary.xaml** fichier.
 
 ## <a name="summary"></a>Récapitulatif
 

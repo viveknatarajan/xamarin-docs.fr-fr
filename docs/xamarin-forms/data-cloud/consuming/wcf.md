@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: c626008012ccdab2f8ed2c719b34a45471598d47
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 23cdc1871511fa75ba2686213d135822ca0fb971
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Utiliser un Service Web de Windows Communication Foundation (WCF)
 
@@ -42,17 +42,17 @@ Le service WCF fournit les opérations suivantes :
 
 |Opération|Description|Paramètres|
 |--- |--- |--- |
-|GetTodoItems|Obtenir la liste des tâches|
+|GetTodoItems|Obtenir une liste de tâches|
 |CreateTodoItem|Créer un nouvel élément d’action|Un code XML sérialisé TodoItem|
-|EditTodoItem|Mettre à jour un élément action|Un code XML sérialisé TodoItem|
-|DeleteTodoItem|Supprimer un élément d’action|Un code XML sérialisé TodoItem|
+|EditTodoItem|Mettre à jour une tâche|Un code XML sérialisé TodoItem|
+|DeleteTodoItem|Supprimer une tâche|Un code XML sérialisé TodoItem|
 
 Pour plus d’informations sur le modèle de données utilisé dans l’application, consultez [modélisation de données](~/xamarin-forms/data-cloud/walkthrough.md).
 
 > [!NOTE]
 > L’exemple d’application utilise le service WCF hébergé par Xamarin qui fournit l’accès en lecture seule au service web. Par conséquent, les opérations créent, mettre à jour et supprimer des données ne modifiera pas les données utilisées dans l’application. Toutefois, une version principale du service ASMX est disponible dans le **TodoWCFService** dossier dans l’exemple d’application qui l’accompagne. Cette version principale d’autorisés par le service WCF complètes créer, mettre à jour, lire et supprimer l’accès aux données.
 
-A *proxy* doit être généré pour utiliser un service WCF, ce qui permet de se connecter au service. Le proxy est construit par la consommation des métadonnées de service qui définissent les méthodes et la configuration de service associé. Ces métadonnées sont exposées sous la forme d’un document Web Services Description Language (WSDL) généré par le service web. Le proxy peut être généré à l’aide du fournisseur Microsoft WCF Web Service référence dans Visual Studio 2017 pour ajouter une référence de service pour le service web dans une bibliothèque Standard de .NET. Une alternative à la création du proxy à l’aide du fournisseur Microsoft WCF Web Service référence dans Visual Studio 2017 est d’utiliser le service Model Metadata Utility Tool (svcutil.exe). Pour plus d’informations, consultez [ServiceModel Metadata Utility Tool (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
+A *proxy* doit être généré pour utiliser un service WCF, ce qui permet de se connecter au service. Le proxy est construit par la consommation des métadonnées de service qui définissent les méthodes et la configuration de service associé. Ces métadonnées sont exposées sous la forme d’un document Web Services Description Language (WSDL) généré par le service web. Le proxy peut être généré à l’aide du fournisseur Microsoft WCF Web Service référence dans Visual Studio 2017 pour ajouter une référence de service pour le service web dans une bibliothèque .NET Standard. Une alternative à la création du proxy à l’aide du fournisseur Microsoft WCF Web Service référence dans Visual Studio 2017 est d’utiliser le service Model Metadata Utility Tool (svcutil.exe). Pour plus d’informations, consultez [ServiceModel Metadata Utility Tool (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
 
 Les classes proxy généré fournissent des méthodes pour utiliser les services web qui utilisent le modèle de conception de modèle de programmation asynchrone (APM). Dans ce modèle, une opération asynchrone est implémentée comme deux méthodes nommées *BeginOperationName* et *EndOperationName*, qui commencent et terminent l’opération asynchrone.
 
@@ -224,5 +224,5 @@ Cet article vous a montré comment consommer un service WCF SOAP à partir d’u
 
 ## <a name="related-links"></a>Liens associés
 
-- [TodoWCF (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+- [TodoWCF (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
 - [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult(v=vs.110).aspx)

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: dea5aaa16891893f649d5ec56f3e6b1ee9a18683
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: abfe22683de024f056d7798dc3ac2de13ebd953e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cpu-architectures"></a>Architectures de processeur
 
@@ -29,7 +29,7 @@ Pour plus d’informations sur le fonctionnement, consultez [multicœur appareil
 
 En règle générale, vous sélectionnez explicitement une architecture (ou architectures) lorsque votre application est configurée pour **version**. Lorsque votre application est configurée pour **déboguer**, le **utiliser le Runtime partagé** et **utiliser le déploiement rapide** options sont activées, lequel désactiver la sélection de l’architecture explicite.
 
-Dans Visual Studio, double-cliquez sur **propriétés** sous votre projet dans **l’Explorateur de solutions** et sélectionnez le **Options Android** page. Cliquez sur le **empaquetage** onglet et vérifiez que **utiliser le Runtime partagé** est désactivée (désactivation de cette option vous permet de sélectionner explicitement les ABIs pour prendre en charge). Cliquez sur le **avancé** onglet et, sous **propriétés avancées**, vérifiez les architectures que vous souhaitez prendre en charge :
+Dans Visual Studio, cliquez sur votre projet sous le **l’Explorateur de solutions** et sélectionnez **propriétés**. Sous le **Options Android** page Vérification de la **propriétés de l’empaquetage** section et vérifiez que **utiliser le Runtime partagé** est désactivée (désactivation de cette option vous permet de manière explicite Cochez les ABIs pour prendre en charge.) Cliquez sur le **avancé** bouton et, sous **prise en charge des architectures**, vérifiez les architectures que vous souhaitez prendre en charge :
 
 [![Sélection armeabi et armeabi-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
