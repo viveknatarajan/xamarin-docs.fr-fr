@@ -4,11 +4,11 @@ title: 'Vs WPF. Xamarin.Forms : Similitudes et différences'
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 21ffca65ee72308d1340a1db43471228b2adbe91
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ac30a29a2b4982b2f995c9f717cf1893ca5d8b8a
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>Vs WPF. Xamarin.Forms : Similitudes et différences
 
@@ -33,7 +33,7 @@ XAML est utilisé comme langage de balisage déclaratif pour WPF et Xamarin.Form
 
 - Xamarin.Forms prend en charge la [spécification de XAML 2009](/dotnet/framework/xaml-services/xaml-2009-language-features/); cela le rend plus facile de définir des données telles que `string`s, `int`s, etc. des types génériques, ainsi que la définition et passage d’arguments aux constructeurs.
 
-- Il n’existe actuellement aucun moyen de dyanmically charge XAML telles que WPF possible avec `XamlReader`. Vous pouvez obtenir les mêmes fonctionnalités de base avec un [package NuGet](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) si.
+- Il n’existe actuellement aucun moyen de charger dynamiquement XAML telles que WPF possible avec `XamlReader`. Vous pouvez obtenir les mêmes fonctionnalités de base avec un [package NuGet](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) si.
 
 ### <a name="markup-extensions"></a>Extensions de balisage
 

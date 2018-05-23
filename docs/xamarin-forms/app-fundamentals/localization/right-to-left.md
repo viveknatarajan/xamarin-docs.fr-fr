@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: ff9814291d5a28ec9e0bbb3c2a6fc6cce5d8ee25
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 92ca58374292c829df4098274abae870b355a7b0
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="right-to-left-localization"></a>Localisation de droite à gauche
 
@@ -24,7 +24,7 @@ _Localisation de droite à gauche ajoute la prise en charge de la direction du f
 Sens du flux est la direction dans laquelle les éléments d’interface utilisateur sur la page sont analysés par le œil. Certains langages, tels que l’arabe et hébreu, requièrent que les éléments d’interface utilisateur sont disposés dans un sens de flux de droite à gauche. Cela peut être obtenue en définissant le [ `VisualElement.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété. Cette propriété obtient ou définit le sens dans le flux d’éléments de l’interface utilisateur dans tout élément parent qui contrôle leur disposition et doit être défini à un de la [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valeurs d’énumération :
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 Définition de la [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété [ `RightToLeft` ](xref:Xamarin.Forms.FlowDirection.RightToLeft) sur un élément généralement définit l’alignement à droite, l’ordre de lecture de droite à gauche et la disposition du contrôle de flux à partir de droite à gauche :

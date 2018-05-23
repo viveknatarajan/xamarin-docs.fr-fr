@@ -6,11 +6,11 @@ ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: b5301e499a3b85087f19449f8a25b107b8ec1e4b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Lecteur dynamique de Xamarin pour Xamarin.Forms
 
@@ -22,7 +22,7 @@ Live Xamarin Player est conçu comme un bac à sable aux développeurs d’utili
 
 [![Xamarin Player en direct : Code, analyse, de Test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. Téléchargez l’application en circulation le [le programme d’installation de Xamarin Live Player](install.md) obtenir des instructions.
+1. Télécharger l’application en suivant le [le programme d’installation de Xamarin Live Player](install.md) obtenir des instructions.
 2. Activer la *Xamarin Live Player* dans **préférences**, puis sélectionnez votre appareil à partir de la **périphériques** liste.
 2. Gérer les appareils Live de lecteur pour analyser un code QR pour coupler Visual Studio de votre périphérique.
 3. L’application s’exécute directement sur votre téléphone ou tablette.

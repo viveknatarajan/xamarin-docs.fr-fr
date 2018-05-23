@@ -6,12 +6,12 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 05/07/2018
-ms.openlocfilehash: 47cca2f726b0af396ea1eb287cfa4e1f1bf19724
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.date: 05/21/2018
+ms.openlocfilehash: b9c15357895bae64176ef34a848b968917035f3d
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="resource-dictionaries"></a>Dictionnaires de ressources
 
@@ -30,7 +30,7 @@ En XAML, les ressources qui sont stockées dans un `ResourceDictionary` peuvent 
 Les ressources sont définies dans un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) c'est-à-dire puis défini sur une de ces `Resources` propriétés :
 
 - Le [ `Resources` ](xref:Xamarin.Forms.Application.Resources) propriété de toute classe qui dérive de [`Application`](xref:Xamarin.Forms.Application)
-- Le [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) propriété de toute classe qui dérive de ['VisualElement'](xref:Xamarin.Forms.Application)
+- Le [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) propriété de toute classe qui dérive de [`VisualElement`](xref:Xamarin.Forms.Application)
 
 Un programme Xamarin.Forms contient uniquement une classe qui dérive de `Application` mais souvent utilisent de nombreuses classes qui dérivent de `VisualElement`, y compris les contrôles, dispositions et pages. Ces objets peuvent avoir son `Resources` propriété définie sur un `ResourceDictionary`. Choix de l’emplacement placer un particulier `ResourceDictionary` impacts où les ressources peuvent être utilisés :
 
