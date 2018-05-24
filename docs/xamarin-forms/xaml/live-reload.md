@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ca359e5ea700ef09249a2d8a299b6604f91e9149
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: d2aee2d6421b06f9147c656debdd58bdfe21be72
+ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-reload"></a>Rechargement dynamique de Xamarin
 
@@ -63,8 +63,10 @@ public partial class App : Application
     public App ()
     {
         // Initialize Live Reload.
+        #if DEBUG
         LiveReload.Init();
-    
+        #endif
+        
         InitializeComponent();
         MainPage = new MainPage();
     }
@@ -134,6 +136,10 @@ Non. En fait, vous pouvez même démarrer toutes les cibles votre application pr
 * **XLR003**: *package nuget de rechargement de Live nécessite l’installation de l’extension Xamarin Live recharger Visual Studio.*
 
   A tenté de générer un projet qui référence le package nuget de rechargement de Live, mais l’Extension Visual n’est pas installée.  
+
+* *Exception lors du chargement des assemblys : System.IO.FileNotFoundException : Impossible de charger l’assembly ' Xamarin.Live.Reload, Version = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
+
+  Le projet d’hôte doit être à l’aide de `PackageReference` à la place de `packages.config`
 
 ### <a name="app-doesnt-connect"></a>Application ne connecte pas
 
