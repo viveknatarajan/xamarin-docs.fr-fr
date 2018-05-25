@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/10/2018
-ms.openlocfilehash: b5c20eb9f40bb4c4981d6b60b9fd4bc75fd29336
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 2f0bb6f1371b9ce1b925b876851d58f3c4d01419
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Accélération matérielle de l’émulateur Android
 
@@ -46,9 +46,9 @@ Pour commencer à utiliser Hyper-V et l’émulateur Google Android :
 
     Vous devez peut-être redémarrer Windows après l’activation d’Hyper-V et de la plateforme de l’hyperviseur Windows.
 
-3. **Installer [Visual Studio 15.8 Preview 1](https://aka.ms/hyperv-emulator-dl)**  : Cette version de Visual Studio prend en charge l’IDE pour démarrer l’émulateur Google Android avec la prise en charge Hyper-V.
+3. **Installer [Visual Studio 15.8 Preview 1 ou version ultérieure](https://www.visualstudio.com/vs/preview/)** &ndash; : cette version de Visual Studio prend en charge l’IDE pour démarrer l’émulateur Google Android avec la prise en charge Hyper-V.
 
-4. **Installer le package de l’émulateur Google Android 27.2.7 ou version ultérieure** : Pour installer ce package, accédez à **Outils > Android > Android SDK Manager** dans Visual Studio. Sélectionnez l’onglet **Outils** et vérifiez que la version du composant de l’émulateur Android est au moins égale à 27.2.7.
+4. **Installer le package de l’émulateur Google Android 27.2.7 ou version ultérieure** &ndash; : pour installer ce package, accédez à **Outils > Android > Android SDK Manager** dans Visual Studio. Sélectionnez l’onglet **Outils** et vérifiez que la version du composant de l’émulateur Android est au moins égale à 27.2.7.
 
     [![Boîte de dialogue des kits Android SDK et outils](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
 

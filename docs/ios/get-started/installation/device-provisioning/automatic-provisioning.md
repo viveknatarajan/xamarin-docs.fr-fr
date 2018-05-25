@@ -6,12 +6,12 @@ ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 05/06/2018
-ms.openlocfilehash: 0e2ce758da2951efa0508e76cdf4eaac5384fa6b
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.date: 05/22/2018
+ms.openlocfilehash: d324e469ba392b14c635990d607bf04c949ad5db
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="automatic-provisioning"></a>Provisionnement automatique
 
@@ -37,6 +37,14 @@ Vous devez également avoir un appairage avec un hôte de build Mac qui a les é
 ## <a name="enabling-automatic-signing"></a>Activation de la signature automatique
 
 Avant de commencer le processus de signature automatique, vous devez vérifier qu’un ID Apple est ajouté dans Visual Studio, comme décrit dans le guide de [gestion des comptes Apple](~/cross-platform/macios/apple-account-management.md). Une fois que vous avez ajouté un ID Apple, vous pouvez utiliser toute _équipe_ associée. Ainsi, des certificats, des profils et d’autres ID peuvent être créés par rapport à l’équipe. L’ID d’équipe est également utilisé pour créer un préfixe pour un ID d’application à inclure dans le profil de provisionnement. Apple peut ainsi vérifier que vous êtes bien qui vous prétendez être.
+
+> [!IMPORTANT]
+> Avant de commencer, veillez à vous connecter à [iTunes Connect](https://itunesconnect.apple.com/) ou à [appleid.apple.com](https://appleid.apple.com) pour vérifier que vous avez accepté les dernières stratégies de compte Apple. Si vous y êtes invité, effectuez les étapes requises pour accepter tout nouveau contrat du compte provenant d’Apple. Si vous n’acceptez pas l’accord sur la confidentialité datant de mai 2018, vous obtiendrez l’alerte suivante lorsque vous essayerez de provisionner votre appareil :
+> ```
+> Unexpected authentication failure. Reason: {
+> "authType" : "sa"
+>}
+>```
 
 Pour signer automatiquement votre application pour un déploiement sur un appareil iOS, effectuez les opérations suivantes :
 
