@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/16/2018
-ms.openlocfilehash: ac3df50a67dcf6ad813d549479db42856acc2ce1
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: e2f9b23bb298b0bb01f7e5491963daed4521ac9c
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="pair-to-mac"></a>Appairer avec un Mac
 
@@ -244,3 +244,5 @@ Cet article a décrit comment utiliser Appairer avec un Mac pour connecter Visua
 - [Agent de build Mac Xamarin - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introduction à Xamarin.iOS pour Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Remoted iOS Simulator pour Windows](~/tools/ios-simulator.md)
+- [Déploiement sans fil](~/ios/deploy-test/wireless-deployment.md)
+
