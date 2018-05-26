@@ -6,12 +6,12 @@ ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/22/2018
+ms.openlocfilehash: b509f6892b27afa053a6ee913826d913d7ad54a8
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="location-services"></a>Services d’emplacement
 
@@ -83,9 +83,15 @@ Le fournisseur de localisation fusionnés est le meilleur moyen pour les applica
  
 Le fournisseur de localisation fusionnés API fournit un éventail d’autres outils pour permettre aux applications sensibles à l’emplacement, notamment des géorepérage et surveillance de l’activité. Dans cette section, nous allons se concentrer sur les principes de base de configuration de la `LocationClient`, l’établissement des fournisseurs et l’obtention de l’utilisateur.
 
-Le fournisseur de localisation fusionnés fait partie de [Services Google Play](http://developer.android.com/google/play-services/index.html). Le package de Services Google Play doit être installé et configuré correctement dans l’application pour l’API du fournisseur emplacement fusionnés pour travailler, et l’appareil doit avoir l’APK Google Play Services installé.
+Le fournisseur de localisation fusionnés fait partie de [Services Google Play](http://developer.android.com/google/play-services/index.html).
+Le package de Services Google Play doit être installé et configuré correctement dans l’application pour l’API du fournisseur emplacement fusionnés pour travailler, et l’appareil doit avoir l’APK Google Play Services installé.
 
-Avant une Xamarin.Android application peut utiliser le fournisseur d’emplacement fusionnés, il doit ajouter la **Xamarin.GooglePlayServices.Maps** au projet.
+Avant une Xamarin.Android application peut utiliser le fournisseur d’emplacement fusionnés, il doit ajouter la **Xamarin.GooglePlayServices.Maps** package au projet. En outre, les éléments suivants `using` instructions doivent être ajoutées à des fichiers sources qui font référence les classes décrites ci-dessous :
+
+```csharp
+using Android.Gms.Common;
+using Android.Gms.Location;
+```
 
 ### <a name="checking-if-google-play-services-is-installed"></a>Vérifie si les Services Google Play sont installés
 
