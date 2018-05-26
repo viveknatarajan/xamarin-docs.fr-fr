@@ -232,6 +232,7 @@
 ### [Paramètres personnalisés de l’éditeur de liens](deploy-test/linker.md)
 ### [Appareils multicœurs](deploy-test/multicore-devices.md)
 ### [Performances](deploy-test/performance.md)
+### [Profilage](deploy-test/profiling.md)
 ### [Préparation à la mise en production](deploy-test/release-prep/index.md)
 #### [ProGuard](deploy-test/release-prep/proguard.md)
 ### [Signature de l’APK](deploy-test/signing/index.md)
