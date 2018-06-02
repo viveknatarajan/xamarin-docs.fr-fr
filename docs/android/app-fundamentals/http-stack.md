@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: bedcf0603fffc9886155881f91972203104ba155
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 765c51346ac63a00838fec52bde87b38091e2dd9
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689472"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pile de HttpClient et sélecteur d’implémentation de SSL/TLS pour Android
 
@@ -89,9 +90,9 @@ Le choix entre `AndroidClientHandler` et `HttpClientHandler` dépend des besoins
 
 À partir de Xamarin.Android 8.3, `HttpClientHandler` valeur par défaut est ennuyeuse de SSL (`btls`) en tant que le fournisseur sous-jacent de TLS. Le fournisseur ennuyeuse SSL, TLS offre les avantages suivants :
 
--   Il prend en charge TLS 1.2.
+-   Il prend en charge TLS 1.2 +.
 -   Il prend en charge toutes les versions d’Android.
--   Il prend en charge de TLS 1.2 pour les deux `HttpClient` et `WebClient`.
+-   Il fournit la prise en charge de TLS 1.2 + pour les deux `HttpClient` et `WebClient`.
 
 L’inconvénient de l’utilisation de SSL d’ennuyeuse comme fournisseur de TLS sous-jacent n’est que cela peut augmenter la taille de APK résultant (elle ajoute environ 1 Mo de taille APK supplémentaire par ABI pris en charge).
 
@@ -128,7 +129,7 @@ Cette option de projet contrôle sous-jacent bibliothèque TLS sera utilisé par
 
 -----
 
-Par exemple :
+Exemple :
 
 ```csharp
 var client = new HttpClient();
@@ -154,7 +155,7 @@ La troisième option &ndash; à l’aide de variables d’environnement &ndash; 
 
 Il existe deux variables d’environnement qui sont liés à l’utilisation de TLS dans Xamarin.Android :
 
-- `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; Cette variable d’environnement déclare la valeur par défaut `HttpMessageHandler` que l’application utilisera. Par exemple :
+- `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; Cette variable d’environnement déclare la valeur par défaut `HttpMessageHandler` que l’application utilisera. Exemple :
 
     ```csharp
     XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
