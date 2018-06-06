@@ -1,20 +1,20 @@
 ---
-title: À l’aide de SQLite.NET avec iOS
-description: La bibliothèque SQLite.NET PCL NuGet fournit un mécanisme d’accès de données simple pour les applications de Xamarin.iOS.
+title: À l’aide de SQLite.NET avec Xamarin.iOS
+description: La bibliothèque SQLite.NET PCL NuGet fournit un mécanisme d’accès de données simple pour les applications de Xamarin.iOS. Ce document fournit une vue d’ensemble de l’utilisation de cette bibliothèque.
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/18/2018
-ms.openlocfilehash: 861b024a7ff5dd07752662cc45306b6533cd38bd
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: 2a96a7c3f9bf02110bc5e2b21e26e71fe9d84d83
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34689499"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784983"
 ---
-# <a name="using-sqlitenet-with-ios"></a>À l’aide de SQLite.NET avec iOS
+# <a name="using-sqlitenet-with-xamarinios"></a>À l’aide de SQLite.NET avec Xamarin.iOS
 
 La bibliothèque SQLite.NET qui vous recommande de Xamarin est une base ORM qui vous permet de stocker et récupérer des objets dans la base de données SQLite local sur un appareil iOS.
 ORM signifie mappage objet relationnel – une API qui vous permet d’enregistrer et de récupérer les « objets » à partir d’une base de données sans avoir à écrire des instructions SQL.

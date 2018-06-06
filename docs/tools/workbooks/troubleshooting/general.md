@@ -1,14 +1,16 @@
 ---
 title: Les problèmes connus et les solutions de contournement
+description: Ce document décrit les problèmes connus et solutions de contournement pour les classeurs Xamarin. Elle décrit les problèmes de CultureInfo, des problèmes JSON et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 186faf3fc4f93d1c9a4af9e3e9f72afd569fed8b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b6dc3b119d3e85369a71638f2519b2ef0c85446c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794031"
 ---
 # <a name="known-issues--workarounds"></a>Les problèmes connus et les solutions de contournement
 
@@ -56,7 +58,7 @@ Il existe un [bogue dans l’éditeur Monaco] [ monaco-bug] dans Safari/WebKit, 
 
 ## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Convertisseurs de SkiaSharp sont manquants dans les classeurs 1.3
 
-À partir de classeurs 1.3, nous avons supprimé les convertisseurs SkiaSharp que nous avons livrée dans les classeurs 0.99.0, en faveur de SkiaSharp fournissant les convertisseurs lui-même, à l’aide de notre [SDK] [/ guides/cross-plateforme/classeurs/sdk /].
+À partir de classeurs 1.3, nous avons supprimé les convertisseurs SkiaSharp que nous avons livrée dans les classeurs 0.99.0, en faveur de SkiaSharp fournissant les convertisseurs lui-même, à l’aide de notre [SDK](~/tools/workbooks/sdk/index.md).
 
 ### <a name="workaround"></a>Solution de contournement
 

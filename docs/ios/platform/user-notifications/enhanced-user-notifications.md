@@ -1,21 +1,20 @@
 ---
-title: Notifications utilisateur améliorée
-description: Cet article couvre toutes les méthodes que la Notification des utilisateurs ont été améliorée par iOS 10 et comment les utiliser dans une application Xamarin.iOS.
+title: Notifications utilisateur améliorée dans Xamarin.iOS
+description: Cet article décrit l’infrastructure de Notifications à l’utilisateur introduite dans iOS 10. Il traite les notifications locales, des notifications à distance, gestion de la notification, les actions de notification et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: b27d415240f3b8cd25c4bc54f6d176c50e42a250
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 29c529d57d35b0ab2b7bf2e80f8d295a8d059c5e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788652"
 ---
-# <a name="enhanced-user-notifications"></a>Notifications utilisateur améliorée
-
-_Cet article couvre toutes les méthodes que la Notification des utilisateurs ont été améliorée par iOS 10 et comment les utiliser dans une application Xamarin.iOS._
+# <a name="enhanced-user-notifications-in-xamarinios"></a>Notifications utilisateur améliorée dans Xamarin.iOS
 
 Nouveau pour iOS 10, la Notification utilisateur framework permet la remise et le traitement des notifications locale et distantes. À l’aide de cette infrastructure, une application ou une Extension d’application permettre planifier la remise de notifications locales en spécifiant un ensemble de conditions comme emplacement ou l’heure du jour.
 
@@ -275,7 +274,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>La gestion des Notifications de l’application au premier plan
 
-Nouveau pour iOS 10, une application peut gérer les Notifications différemment lorsqu’il est au premier plan et une Notification est déclenchée. En fournissant un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode), l’application puisse prendre la responsabilité de l’affichage de la Notification. Par exemple :
+Nouveau pour iOS 10, une application peut gérer les Notifications différemment lorsqu’il est au premier plan et une Notification est déclenchée. En fournissant un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode), l’application puisse prendre la responsabilité de l’affichage de la Notification. Exemple :
 
 ```csharp
 using System;
@@ -432,7 +431,7 @@ Enfin, toutes les catégories sont enregistrés avec le système à l’aide de 
 
 Une fois qu’un ensemble d’Actions personnalisées et les catégories qui ont été créés et enregistrés avec le système, ils peuvent être présentées de Local ou distant des Notifications.
 
-Pour recevoir une Notification à distance, vous devez définir un `category` dans la charge utile Notification à distance qui correspond à l’une des catégories créés ci-dessus. Par exemple :
+Pour recevoir une Notification à distance, vous devez définir un `category` dans la charge utile Notification à distance qui correspond à l’une des catégories créés ci-dessus. Exemple :
 
 ```csharp
 {
@@ -443,7 +442,7 @@ Pour recevoir une Notification à distance, vous devez définir un `category` da
 }
 ```
 
-Pour les Notifications Local, définissez le `CategoryIdentifier` propriété de la `UNMutableNotificationContent` objet. Par exemple :
+Pour les Notifications Local, définissez le `CategoryIdentifier` propriété de la `UNMutableNotificationContent` objet. Exemple :
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -459,7 +458,7 @@ Là encore, cet ID doit correspondre à une des catégories qui a été créé p
 
 ### <a name="handling-dismiss-actions"></a>Gestion des Actions de rejeter
 
-Comme indiqué ci-dessus, une Action de faire disparaître peuvent être envoyée à l’application lorsque l’utilisateur ferme une Notification. Comme il ne s’agit pas d’une Action standard, une option devrez être définie lors de la catégorie est créée. Par exemple :
+Comme indiqué ci-dessus, une Action de faire disparaître peuvent être envoyée à l’application lorsque l’utilisateur ferme une Notification. Comme il ne s’agit pas d’une Action standard, une option devrez être définie lors de la catégorie est créée. Exemple :
 
 ```csharp
 var categoryID = "message";
@@ -472,7 +471,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>Gestion des réponses de l’Action
 
-Quand l’utilisateur interagit avec les Actions personnalisées et les catégories qui ont été créés ci-dessus, l’application a besoin pour répondre à la tâche demandée. Pour ce faire, vous devez fournir un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode). Par exemple :
+Quand l’utilisateur interagit avec les Actions personnalisées et les catégories qui ont été créés ci-dessus, l’application a besoin pour répondre à la tâche demandée. Pour ce faire, vous devez fournir un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode). Exemple :
 
 ```csharp
 using System;
@@ -559,7 +558,7 @@ Pour implémenter une Extension de Service dans une application Xamarin.iOS, pro
 > [!IMPORTANT]
 > L’identificateur de lot pour l’extension du service doit correspondre à l’identificateur de lot de l’application principale avec `.appnameserviceextension` ajouté à la fin. Par exemple, si l’application principale a un identificateur de lot de `com.xamarin.monkeynotify`, l’extension de service doit avoir un identificateur de lot de `com.xamarin.monkeynotify.monkeynotifyserviceextension`. Elle doit être définie automatiquement lorsque l’extension est ajoutée à la solution. 
 
-Il existe une classe principale dans l’Extension du Service de Notification qui devront être modifiées pour fournir les fonctionnalités requises. Par exemple :
+Il existe une classe principale dans l’Extension du Service de Notification qui devront être modifiées pour fournir les fonctionnalités requises. Exemple :
 
 ```csharp
 using System;
@@ -614,7 +613,7 @@ La deuxième méthode, `TimeWillExpire`, sera appelée juste avant l’heure est
 
 ### <a name="triggering-a-service-extension"></a>Déclenchement d’une Extension de Service
 
-Avec une Extension de Service créé et remis à l’application, il peut être déclenché en modifiant la charge de Notification à distance envoyée à l’appareil. Par exemple :
+Avec une Extension de Service créé et remis à l’application, il peut être déclenché en modifiant la charge de Notification à distance envoyée à l’appareil. Exemple :
 
 ```csharp
 {

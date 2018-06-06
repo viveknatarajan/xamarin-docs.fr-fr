@@ -1,21 +1,21 @@
 ---
-title: 'Procédure pas à pas : Utilisation d’un élément de JSON pour créer une Interface utilisateur'
+title: L’utilisation de JSON pour créer une Interface utilisateur dans Xamarin.iOS
 description: MonoTouch.Dialog (MT. D) inclut la prise en charge pour la génération dynamique de l’interface utilisateur via les données JSON. Dans ce didacticiel, nous examinerons comment utiliser un JSONElement pour créer une interface utilisateur à partir de JSON qui est inclus dans une application, soit chargé à partir d’une Url distante.
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 322857295383d17da03507bdd5ac78753f8c0619
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f9ba2cce1650260aa889e8282c091012ef8bbddc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790651"
 ---
-# <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>Procédure pas à pas : Utilisation d’un élément de JSON pour créer une Interface utilisateur
+# <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>L’utilisation de JSON pour créer une Interface utilisateur dans Xamarin.iOS
 
 _MonoTouch.Dialog (MT. D) inclut la prise en charge pour la génération dynamique de l’interface utilisateur via les données JSON. Dans ce didacticiel, nous examinerons comment utiliser un JSONElement pour créer une interface utilisateur à partir de JSON qui est inclus dans une application, soit chargé à partir d’une Url distante._
-
 
 MT. D prend en charge la création d’interfaces utilisateur déclaré dans JSON. Lorsque les éléments sont déclarés à l’aide de JSON, MT. D crée les éléments associés pour vous automatiquement. Le JSON peut être chargé à partir d’un fichier local, un analysé `JsonObject` instance, ou même une Url distante.
 
@@ -177,7 +177,7 @@ Cet article a montré comment créer un à l’aide de l’interface avec MT. D 
 
 ## <a name="related-links"></a>Liens associés
 
-- [MTDJsonDemo (sample)](https://developer.xamarin.com/samples/MTDJsonDemo/)
+- [MTDJsonDemo (exemple)](https://developer.xamarin.com/samples/MTDJsonDemo/)
 - [Capture - Miguel de Icaza crée un écran de connexion iOS avec MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
 - [Capture - créer facilement des interfaces utilisateur iOS avec MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [Introduction aux MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)

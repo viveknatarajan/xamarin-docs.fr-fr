@@ -1,21 +1,20 @@
 ---
-title: Frameworks
-description: Ce document répertorie les infrastructures prises en charge par Xamarin.Mac.
+title: Infrastructures Xamarin.Mac
+description: Ce document répertorie les différentes infrastructures macOS disponibles pour une utilisation lors du développement d’applications Mac avec Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 7e3ccfd9f23fa5c9c158ff49f0961b5140084d06
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8b4dc591d9fd606e9ee3ef6e34d9d29f44263392
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792288"
 ---
-# <a name="frameworks"></a>Frameworks
-
-&nbsp;
+# <a name="xamarinmac-frameworks"></a>Infrastructures Xamarin.Mac
 
 Les infrastructures macOS suivantes sont prises en charge par Xamarin.Mac :
 
@@ -23,7 +22,7 @@ Les infrastructures macOS suivantes sont prises en charge par Xamarin.Mac :
 -  Accélérer
 -  Comptes
 -  AVKit
--  AddressBook 
+-  Carnet d’adresses 
 -  AppKit 
 -  AudioToolbox 
 -  AudioUnit 

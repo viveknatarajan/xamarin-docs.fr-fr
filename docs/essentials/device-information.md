@@ -1,17 +1,18 @@
 ---
-title: Informations sur l’appareil de Xamarin.Essentials
-description: La classe DeviceInfo fournit plus d’informations sur l’appareil de l’application est en cours d’exécution.
+title: 'Xamarin.Essentials : Informations sur le périphérique'
+description: Ce document décrit la classe DeviceInfo dans Xamarin.Essentials, qui fournit des informations sur l’appareil, l’application est en cours d’exécution.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a398f2697b03cec26f2c786b11e7a3c332cb5f63
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: b7246afca19607ef2f70288d4643696f4ac35d52
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782396"
 ---
-# <a name="xamarinessentials-device-information"></a>Informations sur l’appareil de Xamarin.Essentials
+# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials : Informations sur le périphérique
 
 ![Version préliminaire de NuGet](~/media/shared/pre-release.png)
 

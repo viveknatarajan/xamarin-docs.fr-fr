@@ -1,17 +1,18 @@
 ---
 title: e/s de fonctionnalités de sécurité et confidentialité
-description: Cet article décrit le travail avec la sécurité et confidentialité dans iOS et comment ils affectent une application Xamarin.iOS.
+description: Ce document décrit les fonctionnalités de sécurité et confidentialité d’e/s et explique comment les utiliser avec Xamarin.iOS. Il examine les mises à jour effectuées dans iOS 10 et comment accéder aux données utilisateur privées.
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2ce6dadf2236c326fcbc2021509795182329010e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd50e42536aabe16de3e44146d28950970dd801d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784414"
 ---
 # <a name="ios-security-and-privacy-features"></a>e/s de fonctionnalités de sécurité et confidentialité
 

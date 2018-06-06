@@ -1,5 +1,5 @@
 ---
-title: Améliorations de la recherche de l’application
+title: Améliorations de la recherche de l’application dans Xamarin.iOS
 description: Cet article décrit les améliorations Apple a apportées à la recherche de l’application dans iOS 10 et comment les implémenter dans Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 0df51429ea9655b0a72d9f4c1e413fa7e37410ac
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 06c405a15c26e02908d609bc27cac2c0509e5028
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787882"
 ---
-# <a name="app-search-enhancements"></a>Améliorations de la recherche de l’application
+# <a name="app-search-enhancements-in-xamarinios"></a>Améliorations de la recherche de l’application dans Xamarin.iOS
 
 _Cet article décrit les améliorations Apple a apportées à la recherche de l’application dans iOS 10 et comment les implémenter dans Xamarin.iOS._
 
@@ -63,7 +64,7 @@ Pour implémenter cette fonctionnalité, modifiez l’application `Info.plist` ,
 
 -----
 
-Pour répondre à l’utilisateur poursuivre un résultat de recherche (`NSUserActivity`), modifier le `AppDelegate.cs` de fichier et remplacez le `ContinueUserActivity` (méthode). Par exemple :
+Pour répondre à l’utilisateur poursuivre un résultat de recherche (`NSUserActivity`), modifier le `AppDelegate.cs` de fichier et remplacez le `ContinueUserActivity` (méthode). Exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)

@@ -1,18 +1,19 @@
 ---
-title: Utilisation de la localisation
-description: Adaptation de vos applications watchOS pour plusieurs langues
+title: Utilisation de watchOS localisation dans Xamarin
+description: Ce document décrit comment localiser watchOS les applications développées avec Xamarin. Il traite des applications espion, Espion extensions, storyboard de chaînes dans le code, texte, le test et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4f158f1c8699ad5090eb7fade8af8918c8881d95
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790777"
 ---
-# <a name="working-with-localization"></a>Utilisation de la localisation
+# <a name="working-with-watchos-localization-in-xamarin"></a>Utilisation de watchOS localisation dans Xamarin
 
 _Adaptation de vos applications watchOS pour plusieurs langues_
 

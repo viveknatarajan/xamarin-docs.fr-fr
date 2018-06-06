@@ -1,21 +1,20 @@
 ---
-title: Fonctionne avec le contrôleur de la barre d’onglet
-description: Cet article décrit la conception et fonctionne avec le contrôleur de barre d’onglet à l’intérieur d’une application Xamarin.tvOS.
+title: Utilisation de tvOS contrôleurs de barre d’onglet dans Xamarin
+description: Ce document décrit comment utiliser des contrôleurs de barre d’onglet dans une application de tvOS générée avec Xamarin. Il fournit un niveau élevé sur l’affichage des barres de l’onglet et décrit les éléments de barre d’onglet, l’intégration de la table de montage séquentiel et éléments de barre d’onglet.
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1536e37830f3b2a1e2a83c7bf5039909062d092b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea782fc8d6a2ccef2cdd687ec467be6d49793fc0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789318"
 ---
-# <a name="working-with-tab-bar-controller"></a>Fonctionne avec le contrôleur de la barre d’onglet
-
-_Cet article décrit la conception et fonctionne avec le contrôleur de barre d’onglet à l’intérieur d’une application Xamarin.tvOS._
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Utilisation de tvOS contrôleurs de barre d’onglet dans Xamarin
 
 Pour de nombreux types d’applications de tvOS, navigation principale est présentée comme une barre d’onglets dans la partie supérieure de l’écran. L’utilisateur fait glisser sa gauche et droite sur la liste des catégories possibles et la zone de contenu ci-dessous les modifications pour refléter la sélection de l’utilisateur.
 

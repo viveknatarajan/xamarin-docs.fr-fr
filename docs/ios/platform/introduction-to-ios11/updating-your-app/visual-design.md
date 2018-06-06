@@ -1,21 +1,20 @@
 ---
-title: Mises à jour de la conception visuelle
-description: Explorer les nouvelles fonctionnalités d’iOS 11
+title: Mises à jour de conception visuelles dans iOS 11
+description: Ce document décrit la conception visuelle des mises à jour introduites dans iOS 11. Il traite des modifications apportées aux barres de navigation, recherche contrôleurs, les marges, plein écran contenu et les vues de table.
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 50858592ec6246fe825e80a3039f3640ebf708a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bc29e021e30910c7fcc4c3b451d0a4dfe187d05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787849"
 ---
-# <a name="visual-design-updates"></a>Mises à jour de la conception visuelle
-
-_Explorer les nouvelles fonctionnalités d’iOS 11_
+# <a name="visual-design-updates-in-ios-11"></a>Mises à jour de conception visuelles dans iOS 11
 
 Dans iOS 11, Apple a introduit de nouvelles modifications visuelles, y compris les mises à jour de la barre de navigation, barre de recherche et les vues de table. En outre les améliorations ont été apportées pour permettre une plus grande flexibilité sur les marges et le contenu de l’écran complet. Ces modifications sont traitées dans ce guide.
 

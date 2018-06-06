@@ -1,5 +1,5 @@
 ---
-title: Introduction aux OpenTK
+title: Introduction à OpenTK dans Xamarin.Mac
 description: Cet article fournit une introduction à l’utilisation dans une application Xamarin.Mac OpenTK. Elle couvre la création et gestion d’une fenêtre de jeu, rendu d’un objet simple et l’affichage de l’objet à l’utilisateur.
 ms.prod: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: d5f19dac8dc362e1ac4a36cbe5cf5db3e31ae363
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 448b8bdba8ccedbb732a73a265d0ce76bb589190
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792604"
 ---
-# <a name="introduction-to-opentk"></a>Introduction aux OpenTK
+# <a name="introduction-to-opentk-in-xamarinmac"></a>Introduction à OpenTK dans Xamarin.Mac
 
 OpenTK (ouvrir le Toolkit) est une avancée de bas niveau c# bibliothèque qui facilite l’utilisation de OpenGL et OpenCL de OpenAL. OpenTK peut être utilisé pour les jeux, les applications scientifiques ou autres projets qui nécessitent des graphiques 3D, les fonctionnalités audio ou calcul. Cet article fournit une brève introduction à l’aide de OpenTK dans une application Xamarin.Mac.
 

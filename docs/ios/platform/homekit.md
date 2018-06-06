@@ -1,5 +1,5 @@
 ---
-title: HomeKit
+title: HomeKit dans Xamarin.iOS
 description: HomeKit est un framework d’Apple pour le contrôle des appareils de l’automation de base. Cet article présente HomeKit et couvre les accessoires de test de configuration dans le simulateur d’accessoire HomeKit et l’écriture d’une simple application Xamarin.iOS pour interagir avec ces Accessoires.
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 5699465330a4d2a5b983ec7661f80c1ed4f14bde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0dfc6e9ba5098df66a72292d6c8b89ea1bbd1f97
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787459"
 ---
-# <a name="homekit"></a>HomeKit
+# <a name="homekit-in-xamarinios"></a>HomeKit dans Xamarin.iOS
 
 _HomeKit est un framework d’Apple pour le contrôle des appareils de l’automation de base. Cet article présente HomeKit et couvre les accessoires de test de configuration dans le simulateur d’accessoire HomeKit et l’écriture d’une simple application Xamarin.iOS pour interagir avec ces Accessoires._
 
@@ -284,7 +285,7 @@ Une fois que le nouvel accessoire a été trouvé, il doit être présenté à l
 
 [![](homekit-images/accessory01.png "Recherche d’un nouvel accessoire")](homekit-images/accessory01.png#lightbox)
 
-Appelez le `AddAccessory` méthode pour ajouter l’accesseur sélectionné à la collection de la page d’accueil. Par exemple :
+Appelez le `AddAccessory` méthode pour ajouter l’accesseur sélectionné à la collection de la page d’accueil. Exemple :
 
 ```csharp
 // Add the requested accessory to the home
@@ -317,7 +318,7 @@ Le `HMRoom` objet contient toutes les informations concernant une salle donnée 
 
 Cet exemple, nous allons conserver choses simples et utiliser des accessoires d’une maison directement, au lieu de les organiser dans des locaux ou des zones.
 
-Le `HMHome` objet contient une liste d’accessoire attribué qui peut être présentée à l’utilisateur dans son `Accessories` propriété. Par exemple :
+Le `HMHome` objet contient une liste d’accessoire attribué qui peut être présentée à l’utilisateur dans son `Accessories` propriété. Exemple :
 
 [![](homekit-images/accessory04.png "Un accessoire d’exemple")](homekit-images/accessory04.png#lightbox)
 
@@ -404,7 +405,7 @@ Le `HMCharacteristicType` enum fournit un ensemble de valeurs de métadonnées d
  - CurrentHorizontalTilt
  - CurrentLightLevel
  - CurrentLockMechanismState
- - CurrentPosition
+ - Position actuelle
  - CurrentRelativeHumidity
  - CurrentSecuritySystemState
  - CurrentTemperature

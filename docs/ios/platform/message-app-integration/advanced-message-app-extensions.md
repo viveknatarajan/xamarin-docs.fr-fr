@@ -1,5 +1,5 @@
 ---
-title: Extensions d’application Message avancés
+title: Extensions d’application Message avancés dans Xamarin.iOS
 description: Cet article montre des techniques avancées pour travailler avec les Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application des Messages et présente les nouvelles fonctionnalités à l’utilisateur.
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cd2cabf98c83bba7502e8533e482713a9c43f67a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eca3dcc19714251184092fbe136d0078f1ca8d54
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788017"
 ---
-# <a name="advanced-message-app-extensions"></a>Extensions d’application Message avancés
+# <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensions d’application Message avancés dans Xamarin.iOS
 
 _Cet article montre des techniques avancées pour travailler avec les Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application des Messages et présente les nouvelles fonctionnalités à l’utilisateur._
 
@@ -37,7 +38,7 @@ Nouveau pour iOS 10, l’application Message inclut désormais son propre magasi
 
 Également nouveau dans iOS 10, Apple a ajouté les Attribution application Inline qui lui permet de découvrir facilement une application. Par exemple, si un utilisateur envoie le contenu vers un autre à partir d’une application que l’utilisateur 2 n’est installé (par exemple, une vignette par exemple), le nom de l’application émettrice est répertorié sous le contenu de l’historique des messages. Si l’utilisateur appuie sur l’application un nom, le Message App Store nous série ouvert et l’application sélectionnée dans le magasin.
 
-Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familier à la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Par exemple :
+Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familier à la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Exemple :
 
 - Ils ont accès dans l’application fournisseur.
 - Ils ont accès à payer par Apple.
@@ -170,8 +171,8 @@ Appelez le `InsertMessage` de la `MSConversation` pour inclure le message dans l
 
 En outre, l’extension peut envoyer des différents types de données à la conversation telles que :
 
-- **Text** - `ActiveConversation.InsertText ("Message", (error) => {...});`
-- **Attachments** - `ActiveConversation.InsertAttachment (new NSUrl ("path"), "filename", (error) => {...});`
+- **texte** - `ActiveConversation.InsertText ("Message", (error) => {...});`
+- **Pièces jointes** - `ActiveConversation.InsertAttachment (new NSUrl ("path"), "filename", (error) => {...});`
 - **Autocollants**  -  `ActiveConversation.InsertSticker (sticker, (obj) => {...});` où `sticker` est un `MSSticker`.
 
 Une fois le nouveau contenu dans le champ d’entrée, l’utilisateur est en mesure d’envoyer le message en cliquant sur le bleu **envoyer** bouton (comme n’importe quel message classique). Il n’existe aucun moyen pour l’Extension d’application de Message envoyer automatiquement le contenu, ce processus est totalement sous le contrôle de l’utilisateur.
@@ -418,7 +419,7 @@ Là encore, lorsque le processus est terminé, l’Extension d’application de 
 
 Dans les deux cas, lorsque l’utilisateur appuie sur une bulle de Message appartenant à l’Extension d’application de Message, elle devra accéder à la `MSMessage` qui a été tapée à l’aide de la `SelectedMessage` propriété de la `MSConversation`.
 
-Par exemple :
+Exemple :
 
 ```csharp
 using System;
@@ -546,7 +547,7 @@ Les identificateurs de l’expéditeur peuvent être utilisés comme suit :
 - Lorsque l’extension reçoit un message à partir d’un utilisateur, il peut conserver le suivi de l’identificateur d’expéditeur. S’il reçoit un autre message avec le même identificateur de l’expéditeur, l’extension sait qu’il est dans le même utilisateur.
 - Ils peuvent être utilisés pour identifier un utilisateur spécifique dans la conversation.
 
-L’identificateur d’expéditeur peut être utilisé dans tous les champs de texte de la `MSMessageTemplateLayout` en lui attribuant un signe dollar (`$`). Par exemple :
+L’identificateur d’expéditeur peut être utilisé dans tous les champs de texte de la `MSMessageTemplateLayout` en lui attribuant un signe dollar (`$`). Exemple :
 
 ```csharp
 // Pass along the sender identifier

@@ -1,23 +1,24 @@
 ---
 title: Mise à jour des applications existantes à l’API unifiée
+description: Ce document liens vers des guides pas à pas qui décrivent comment mettre à jour des applications Xamarin à l’API unifiée. Il traite des applications Xamarin.iOS, Xamarin.Mac. Applications de Xamarin.Forms, les types natifs dans des applications multiplateformes et les projets de la liaison.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 588c01ef9f9ee014592c9d8dc72f2b8be20dfee3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2d09be7b85980e5c5a8eb209dc1b4ff3136c34b3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781629"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Mise à jour des applications existantes à l’API unifiée
 
 > [!IMPORTANT]
-> **Désapprobation de profil classique :** que de nouvelles plateformes sont ajoutés dans Xamarin.iOS nous avons commencé à déconseiller progressivement des fonctionnalités à partir du profil classique (monotouch.dll). Par exemple, l’option non-NRC (nouvelle-ref-count) a été supprimée. NRC a toujours été activé pour unifiée de toutes les applications (c'est-à-dire non NRC n’a jamais été une option) et ne présente aucun problème connu. Les versions futures supprime la possibilité d’utiliser Boehm en tant que le garbage collector. Cela était également une option jamais disponible pour les applications unifiées. La suppression complète de la prise en charge classique est planifiée pour automne suivant avec la version de Xamarin.iOS 10.0.
-
-
-
+> L’API classique Xamarin, ce qui a précédé l’API unifiée, a été déconseillée. 
+> - La dernière version de Xamarin.iOS pour prendre en charge l’API classique (monotouch.dll) a été Xamarin.iOS 9.10.
+> - Xamarin.Mac prend toujours en charge l’API classique, mais il n’est plus mis à jour. Dans la mesure où il est déconseillé, les développeurs doivent déplacer leurs applications à l’API unifiée.
 
 ## <a name="how-to-update-your-apps"></a>Comment mettre à jour vos applications
 
@@ -31,7 +32,7 @@ Il existe trois étapes pour mettre à jour vos applications :
 
 2. Pour mettre à jour vos fichiers projet et les espaces de noms, utilisez l’outil de Migration intégrée à Visual Studio pour Mac.
 
-3. Corrigez les erreurs du compilateur relatives au nouveau restantes [64-types](~/cross-platform/macios/nativetypes.md) et [autres API](~/cross-platform/macios/unified/index.md#deprecated-typos) qui ont été modifiés. Extraire [ces conseils](~/cross-platform/macios/unified/updating-tips.md) pour plus d’informations sur les mises à jour manuelles qui peuvent être requises.
+3. Corrigez les erreurs du compilateur relatives au nouveau restantes [64-types](~/cross-platform/macios/nativetypes.md) et [autres API](~/cross-platform/macios/unified/overview.md#deprecated-typos) qui ont été modifiés. Extraire [ces conseils](~/cross-platform/macios/unified/updating-tips.md) pour plus d’informations sur les mises à jour manuelles qui peuvent être requises.
 
 Repères spécifiques sont disponibles pour chaque produit pour vous aider à mettre à jour vos applications aux API unifiée et prise en charge 64 bits :
 
@@ -55,9 +56,6 @@ Cet article couvre l’utilisation de la nouvelle iOS types unifiée l’API Nat
 
 Les clients qui ont créé des liaisons à des bibliothèques de Objective-C devez mettre à jour le projet de liaison pour refléter les modifications dans l’API sous-jacente (où certains types sont maintenant être 64 bits).
 Suivez ces instructions pour [mettre à jour un projet existant de la liaison pour prendre en charge l’API unifiée](~/cross-platform/macios/unified/update-binding.md).
-
-
-
 
 ## <a name="related-links"></a>Liens associés
 

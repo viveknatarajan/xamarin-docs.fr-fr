@@ -1,18 +1,20 @@
 ---
-title: Utilisation de la mise en page
+title: Utilisation de watchOS disposition dans Xamarin
+description: Ce document décrit comment créer une disposition de watchOS à l’aide de Xamarin. Il traite les contrôleurs d’interface, les groupes, les séparateurs et les contrôles de contenu.
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 38e26544a907ffcafdec38e3e2758d9bdac7b977
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 11ff5ec2fc8fe99a780a3d728d3d84af59794cea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790612"
 ---
-# <a name="working-with-layout"></a>Utilisation de la mise en page
+# <a name="working-with-watchos-layout-in-xamarin"></a>Utilisation de watchOS disposition dans Xamarin
 
 La mise en page de l’Apple Watch [tailles d’écran](~/ios/watchos/app-fundamentals/screen-sizes.md) présente des défis uniques.
 

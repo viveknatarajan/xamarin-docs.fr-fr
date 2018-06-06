@@ -1,21 +1,20 @@
 ---
-title: Création de contrôles personnalisés
-description: Cet article décrit comment créer des contrôles personnalisés et les utiliser dans le constructeur d’Interface.
+title: Création de contrôles personnalisés dans Xamarin.Mac
+description: Ce document décrit comment créer des contrôles personnalisés dans Xamarin.Mac. Il montre comment générer le contrôle personnalisé, effectuer le suivi de son état, dessiner son interface, répondre à l’entrée d’utilisateur et utiliser le contrôle dans une application.
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e1ab3977df96e241fa2a5a80f6cabd74d7d775f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e4c2b2c9ee7bae3d6489fec6b22881653ec53043
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792676"
 ---
-# <a name="creating-custom-controls"></a>Création de contrôles personnalisés
-
-_Cet article décrit comment créer des contrôles personnalisés et les utiliser dans le constructeur d’Interface._
+# <a name="creating-custom-controls-in-xamarinmac"></a>Création de contrôles personnalisés dans Xamarin.Mac
 
 Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès au même utilisateur qui contrôle un développeur travaillant dans *Objective-C*, *Swift* et *Xcode* est . Xamarin.Mac s’intègre directement avec Xcode, vous pouvez utiliser de Xcode _Interface Générateur_ pour créer et gérer vos contrôles utilisateur (ou éventuellement de les créer directement dans le code C#).
 
@@ -184,7 +183,7 @@ private void Initialize() {
 }
 ```
 
-Cette méthode est appelée à partir de chacun des constructeurs d' un contrôle pour s’assurer que le contrôle est configuré correctement. Par exemple :
+Cette méthode est appelée à partir de chacun des constructeurs d' un contrôle pour s’assurer que le contrôle est configuré correctement. Exemple :
 
 ```csharp
 public NSFlipSwitch (IntPtr handle) : base (handle)

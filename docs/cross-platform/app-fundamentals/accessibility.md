@@ -1,18 +1,19 @@
 ---
-title: Accessibilité
-description: Assurez-vous que vos applications sont utilisables par l’audience la plus large possible
+title: Accessibilité dans les applications Xamarin
+description: Ce document fournit des conseils différentes pour la création d’applications accessibles. Par exemple, il inclut des recommandations sur les polices de grande taille, contraste élevé, les interfaces autodescriptifs et bien plus encore.
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 48e9d760362e47d7046528c819959bfb14f71f91
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 97cd3655ac47a017d9590e1890b93d74f10a9c34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780302"
 ---
-# <a name="accessibility"></a>Accessibilité
+# <a name="accessibility-in-xamarin-apps"></a>Accessibilité dans les applications Xamarin
 
 _Assurez-vous que vos applications sont utilisables par l’audience la plus large possible_
 

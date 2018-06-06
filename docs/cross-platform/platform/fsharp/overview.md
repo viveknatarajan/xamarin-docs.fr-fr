@@ -1,20 +1,21 @@
 ---
 title: 'Mise en route avec F #'
-description: 'F # est fortement typée fonctionnel langage de programmation conçu pour s’exécuter sur .NET'
+description: 'Ce document explique comment en savoir plus) (F # et l’utiliser pour générer des applications Xamarin avec Visual Studio 2017 et Visual Studio pour Mac.'
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 07082ed68e1257679b6296470d276b61a9f39f00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fb11feb2d3af537e1b21470a4cc10ec16f49bf77
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781775"
 ---
 # <a name="getting-started-with-f35"></a>Mise en route avec F&#35;
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 F # est inclus par défaut dans Visual Studio pour Mac.
 

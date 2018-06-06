@@ -1,21 +1,20 @@
 ---
-title: Résolution des problèmes
-description: Cet article fournit des conseils de dépannage plusieurs pour travailler avec iOS 11 dans les applications Xamarin.iOS.
+title: Résolution des problèmes d’e/s 11 applications générées avec Xamarin.iOS
+description: Cet article décrit les ressources qui peuvent être utilisées pour la résolution des problèmes lors du développement d’applications de Xamarin.iOS. Il décrit le suivi des bogues, notes de publication, le blog de versions de Xamarin et options de support.
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: 181f0a1c66d05e0adf2b682f2df971f5d7d67dfb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ace24cae139c97a8735558c82e22143adbc9c064
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787544"
 ---
-# <a name="troubleshooting"></a>Résolution des problèmes
-
-_Cet article fournit des conseils de dépannage plusieurs pour travailler avec iOS 11 dans les applications Xamarin.iOS._
+# <a name="troubleshooting-ios-11-apps-built-with-xamarinios"></a>Résolution des problèmes d’e/s 11 applications générées avec Xamarin.iOS
 
 Les sections suivantes répertorient certains problèmes connus qui peuvent se produire lors de l’utilisation des e/s 11 avec Xamarin.iOS et, le cas échéant, la solution à ces problèmes :
 

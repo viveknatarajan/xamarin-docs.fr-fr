@@ -1,19 +1,21 @@
 ---
 title: Prise en main d’e/s
+description: Ce document décrit comment démarrer à l’aide de l’incorporation de .NET avec iOS. Il décrit la configuration requise et présente un exemple d’application pour illustrer comment lier un assembly managé et utiliser la sortie dans un projet Xcode.
 ms.prod: xamarin
 ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: ab841c461356bd435db0c68e82c5e30d398d806a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3da76e650281cbf7320b88fa9c76948865d7a2fb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793559"
 ---
 # <a name="getting-started-with-ios"></a>Prise en main d’e/s
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Outre les exigences de nos [prise en main de Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guide, vous devez également :
 

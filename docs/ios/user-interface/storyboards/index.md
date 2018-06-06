@@ -1,21 +1,20 @@
 ---
-title: Introduction à des plans conceptuels
-description: Un Storyboard est une représentation visuelle de l’apparence et les flux de votre application. Xamarin propose un concepteur pour permettre aux applications de Xamarin.iOS tirer parti des plans conceptuels, afin de pouvoir concevoir visuellement de l’écran de votre application et accéder aux vues, contrôleurs et est parfait pour avec c# pour plus de contrôle.
+title: Introduction à des plans conceptuels dans Xamarin.iOS
+description: Ce document fournit une introduction à des plans conceptuels dans Xamarin.iOS. Il décrit l’utilisation d’une table de montage séquentiel pour définir une interface utilisateur, est parfait pour et comment utiliser le concepteur iOS pour modifier des fichiers de la table de montage séquentiel.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 647bd7d339dc56978752f7ab29de30cf8acb7e07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3366da2f5dc869c7b075bf32be238a1ebd3145d7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790966"
 ---
-# <a name="introduction-to-storyboards"></a>Introduction à des plans conceptuels
-
-_Un Storyboard est une représentation visuelle de l’apparence et les flux de votre application. Xamarin propose un concepteur pour permettre aux applications de Xamarin.iOS tirer parti des plans conceptuels, afin de pouvoir concevoir visuellement de l’écran de votre application et accéder aux vues, contrôleurs et est parfait pour avec c# pour plus de contrôle._
+# <a name="introduction-to-storyboards-in-xamarinios"></a>Introduction à des plans conceptuels dans Xamarin.iOS
 
 Dans ce guide, nous allons expliquer l’un Storyboard est et examiner certains des principaux composants, tels que Segues. Nous allons examiner comment les plans conceptuels peuvent être créés et utilisés, et quels sont les avantages dont ils disposent d’un développeur.
 
@@ -24,7 +23,7 @@ Avant que le format de fichier Storyboard a été introduit par Apple en une rep
 Un plan conceptuel peut être créé, ouverts et modifié avec Xamarin iOS concepteur. Ce guide effectue également une procédure pas à pas comment utiliser le concepteur pour créer vos plans conceptuels lors de l’utilisation de c# pour programmer le volet de navigation.
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Storyboards utilisable avec le concepteur dans Visual Studio pour Mac iOS ou avec Visual Studio 2015 et 2017 avec les charges de travail Xamarin installés.
 

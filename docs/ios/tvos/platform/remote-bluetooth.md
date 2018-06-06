@@ -1,22 +1,20 @@
 ---
-title: Siri distants et les contrôleurs Bluetooth
-description: Cet article décrit la prise en charge les contrôleurs de jeu Siri distant et Bluetooth nouvelle dans vos applications Xamarin.tvOS.
+title: Siri distants et les contrôleurs Bluetooth tvOS dans Xamarin
+description: Cet article décrit comment travailler avec les Siri distants et les contrôleurs de jeu Bluetooth dans les applications de tvOS écrites avec Xamarin.
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b5893278acad999efd94c89f1ca923100f5cf7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc2abed202f8b2e6993890ca4e6b3c6875522e5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789188"
 ---
-# <a name="siri-remote-and-bluetooth-controllers"></a>Siri distants et les contrôleurs Bluetooth
-
-_Cet article décrit la prise en charge les contrôleurs de jeu Siri distant et Bluetooth nouvelle dans vos applications Xamarin.tvOS._
-
+# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri distants et les contrôleurs Bluetooth tvOS dans Xamarin
 
 Les utilisateurs de votre application Xamarin.tvOS pas interagir avec son interface directement en tant qu’iOS où ils appuyer sur les images sur l’écran du périphérique, mais indirectement à partir de sur l’espace à l’aide du [Siri distant](#The-Siri-Remote).
 
@@ -40,10 +38,10 @@ Siri distant a des utilisations attendues au sein de votre application tvOS et l
 
 |Fonctionnalité|Utilisation des applications général|L’utilisation des applications de jeu|
 |---|---|---|
-|**Touchez Surface**<br />Faites défiler pour accéder, appuyez sur pour sélectionner et à maintenir pour les menus contextuels.|**Drainage/balayez**<br />L’interface utilisateur de la Navigation entre les éléments peut être actif.<br /><br />**Click**<br />Active (actif) sélectionnée.|**Drainage/balayez**<br />Dépend de jeu et peut servir d’un boîtier en appuyant sur les bords.<br /><br />**Click**<br />Effectuer la fonction du bouton principal.|
+|**Touchez Surface**<br />Faites défiler pour accéder, appuyez sur pour sélectionner et à maintenir pour les menus contextuels.|**Drainage/balayez**<br />L’interface utilisateur de la Navigation entre les éléments peut être actif.<br /><br />**Cliquez sur**<br />Active (actif) sélectionnée.|**Drainage/balayez**<br />Dépend de jeu et peut servir d’un boîtier en appuyant sur les bords.<br /><br />**Cliquez sur**<br />Effectuer la fonction du bouton principal.|
 |**Menu**<br />Appuyez sur pour revenir à l’écran précédent ou du menu.|Retourne à l’écran précédent et se termine à l’écran Apple TV accueil à partir de l’écran principal de l’application.|Suspendre et reprendre le jeu, retourne à l’écran précédent et se termine à l’écran Apple TV accueil à partir de l’écran principal de l’application.|
-|**Siri/Search**<br />Dans les pays Siri, appuyez et maintenez pour le contrôle vocal, dans tous les autres pays, affiche d’écran de recherche.|N/A|N/A|
-|**Play/Pause**<br />Lecture et Pause du média ou fournit une fonction secondaire dans les applications.|Démarre la lecture du média et la lecture de pause/reprise.|Exécute la fonction du bouton secondaire ou ignore la vidéo de présentation (s’il existe).|
+|**Siri/de recherche**<br />Dans les pays Siri, appuyez et maintenez pour le contrôle vocal, dans tous les autres pays, affiche d’écran de recherche.|N/A|N/A|
+|**Lecture/Pause**<br />Lecture et Pause du média ou fournit une fonction secondaire dans les applications.|Démarre la lecture du média et la lecture de pause/reprise.|Exécute la fonction du bouton secondaire ou ignore la vidéo de présentation (s’il existe).|
 |**Accueil**<br />Appuyez sur pour revenir à l’écran d’accueil, double-cliquez dessus pour afficher les applications en cours d’exécution, maintenez mise en veille du périphérique.|N/A|N/A|
 |**Volume**<br />Les contrôles attachés volume d’équipement audio/vidéo.|N/A|N/A|
 
@@ -75,9 +73,6 @@ En outre, les pressions de bouton de menu peuvent être détectées à l’aide 
 
 > [!IMPORTANT]
 > Vous devez **toujours** affecter une fonction sur le bouton de lecture/Pause sur l’instance distante. Avoir un bouton non fonctionnelles rendez votre application altérée à l’utilisateur final. Si vous n’avez pas une fonction valide pour ce bouton, attribuer la même fonction que le bouton principal (toucher la cliquez sur Surface).
-
-
-
 
 <a name="Gestures-and-Storyboards" />
 

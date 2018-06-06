@@ -1,19 +1,20 @@
 ---
-title: Des modèles et des idiomes courants
-description: Ce document décrit le modèle model-view-controller, les modèles de données source et le délégué et les protocoles.
+title: Communes et idiomes dans Xamarin.Mac
+description: Ce document décrit les modèles de conception courants utilisés lors de la création d’applications de Xamarin.Mac. Elle décrit le modèle model-view-controller, les modèles de données source et le délégué et les protocoles.
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/17/2016
-ms.openlocfilehash: cf499c555ddbefbdb5a7fae3ae8929a17e0d0cd7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f6bba5575edf2dcbddbd354b590e03f9fed06291
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791535"
 ---
-# <a name="common-patterns-and-idioms"></a>Des modèles et des idiomes courants
+# <a name="common-patterns-and-idioms-in-xamarinmac"></a>Communes et idiomes dans Xamarin.Mac
 
 Dans les API Apple exposés via c#, certains langages et les modèles de démarrage indéfiniment. Si vous avez aucune expérience en programmation avec Xamarin.iOS, il peuvent sembler familières. Documentation fait souvent référence à ces et idiomes à plusieurs reprises, afin d’avoir une connaissance approfondie des vous permettra de sens de la documentation que vous trouverez.
 

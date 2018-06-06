@@ -1,16 +1,17 @@
 ---
 title: Programme d’installation de Xamarin Player en direct
-description: Modifier et tester des applications en temps réel sur votre appareil iOS ou Android
+description: Ce document décrit comment configurer Live Xamarin Player et l’utiliser pour effectuer des modifications en direct dans une application en cours d’exécution.
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: topgenorth
 ms.author: toopge
 ms.date: 05/14/2018
-ms.openlocfilehash: bbc935c2770fab1a853bb12fba2b7eb0283bb258
-ms.sourcegitcommit: b706fbe05344f7201fbe8f82d9dbbceb66060637
+ms.openlocfilehash: 40c03e978cd9ce4666089f1b2a1e2ee8f47dbd81
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793780"
 ---
 # <a name="xamarin-live-player-setup"></a>Programme d’installation de Xamarin Player en direct
 

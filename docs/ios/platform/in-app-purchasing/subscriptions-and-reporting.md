@@ -1,26 +1,26 @@
 ---
-title: Rapports et abonnements
+title: Abonnements et les rapports dans Xamarin.iOS
+description: Ce document décrit non renouvellement des abonnements, abonnements gratuits, abonnements renouvelables automatiquement et à l’aide d’iTunes Connect pour créer des rapports sur ces éléments.
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7ba47e8f0ec114845c14269e81bb7f078a5d4936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e0873107a60b48e5ebfd8e159f3bf3b85d02867
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787027"
 ---
-# <a name="subscriptions-and-reporting"></a>Rapports et abonnements
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>Abonnements et les rapports dans Xamarin.iOS
 
 ## <a name="about-non-renewing-subscriptions"></a>Sur les abonnements Non renouvellement
 
 Renouvellement de non des abonnements sont conçus pour les produits qui représentent la vente d’un service avec une restriction de temps, telles que (d’une semaine pour une application de navigation) ou limitée dans le temps accès à une archive de données.   
    
-   
-   
- Principales différences entre les abonnements non renouvellement et d’autres types de produit :
+Principales différences entre les abonnements non renouvellement et d’autres types de produit :
 
 -  La définition de produit dans iTunes Connect n’inclut pas le terme. Le code d’application doit être en mesure de déduire la période de validité de l’ID de produit. 
 -  Ils peuvent être achetés plusieurs fois (comme un produit consommable). Les applications sont requis pour gérer le terme expiration et le renouvellement et empêcher l’utilisateur d’acheter des abonnements qui se chevauchent. 

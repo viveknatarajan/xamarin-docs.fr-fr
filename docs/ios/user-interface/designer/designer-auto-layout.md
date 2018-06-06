@@ -1,27 +1,26 @@
 ---
 title: Disposition automatique avec le Concepteur de Xamarin pour iOS
-description: Ce guide présente iOS disposition automatique et le nouveau workflow contraintes disponible dans le Concepteur de Xamarin pour iOS.
+description: Ce guide présente les e/s mise en forme automatique et explique comment utiliser le Concepteur de Xamarin pour iOS pour créer et modifier la disposition à l’aide des contraintes. Il traite également des contraintes de modification dans le code, l’animation et les modifications de la contrainte.
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2023483f817c365d2cfad6945b281d630317693b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 876bf3de19d2bcce7d951facc92d5b05a928cd38
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790199"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Disposition automatique avec le Concepteur de Xamarin pour iOS
-
-_Ce guide présente iOS disposition automatique et le nouveau workflow contraintes disponible dans le Concepteur de Xamarin pour iOS._
 
 Mise en page automatique (également appelé « disposition adaptive ») est une approche de conception réactive. Contrairement au système de disposition transitoire, où les emplacement de chaque élément sont codé en dur à un point sur l’écran, la mise en page automatique est sur *relations* -la position des éléments par rapport aux autres éléments sur l’aire de conception. Au cœur de la mise en page automatique est l’idée des contraintes ou des règles qui définissent le placement d’un élément ou un ensemble d’éléments dans le contexte des autres éléments sur l’écran. Étant donné que les éléments ne sont pas liés à un emplacement spécifique sur l’écran, les contraintes permettent de créer une disposition adaptive convenable sur différentes tailles d’écran et les orientations de l’appareil.
 
 Dans ce guide, nous introduisons les contraintes et comment les utiliser dans le Concepteur de Xamarin iOS. Ce guide ne couvre pas l’utilisation de contraintes par programme. Pour plus d’informations sur l’utilisation par programme de mise en page automatique, reportez-vous à la la [documentation Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Le Concepteur de Xamarin pour iOS est disponible dans Visual Studio pour Mac dans Visual Studio 2015 et 2017 sur Windows.
 
@@ -202,7 +201,7 @@ La passe de disposition différé se compose de deux passes uniques dans la hié
 
 ### <a name="animating-constraint-changes"></a>Animer des modifications de contrainte
 
-Outre la modification des propriétés de contrainte, vous pouvez utiliser Core Animation pour animer les modifications apportées à des contraintes d’une vue. Par exemple :
+Outre la modification des propriétés de contrainte, vous pouvez utiliser Core Animation pour animer les modifications apportées à des contraintes d’une vue. Exemple :
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");

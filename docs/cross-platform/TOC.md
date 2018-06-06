@@ -11,7 +11,7 @@
 ### [Introduction au développement mobile](get-started/introduction-to-mobile-development.md)
 ### [Introduction au service SDLC mobile](get-started/introduction-to-mobile-sdlc.md)
 
-### [Création d’applications multiplateformes](app-fundamentals/building-cross-platform-applications/index.md)
+### [Génération d’Applications inter-plateformes](app-fundamentals/building-cross-platform-applications/index.md)
 #### [Vue d’ensemble](app-fundamentals/building-cross-platform-applications/overview.md)
 #### [Partie 1 : Présentation de la plateforme mobile Xamarin](app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 #### [Partie 2 : Architecture](app-fundamentals/building-cross-platform-applications/architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: Reconnaissance vocale
+title: Reconnaissance vocale dans Xamarin.iOS
 description: Cet article présente la nouvelle API de reconnaissance vocale et montre comment l’implémenter dans une application Xamarin.iOS pour prendre en charge la reconnaissance vocale continue et transcription de la reconnaissance vocale (direct ou enregistrés flux audio) dans le texte.
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fa010f57d163cabe544176608cff2eb6efe872ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00841a73f9da3c4c434419cdb37726b17c08cf31
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788359"
 ---
-# <a name="speech-recognition"></a>Reconnaissance vocale
+# <a name="speech-recognition-in-xamarinios"></a>Reconnaissance vocale dans Xamarin.iOS
 
 _Cet article présente la nouvelle API de reconnaissance vocale et montre comment l’implémenter dans une application Xamarin.iOS pour prendre en charge la reconnaissance vocale continue et transcription de la reconnaissance vocale (direct ou enregistrés flux audio) dans le texte._
 
@@ -104,10 +105,10 @@ Pour fournir le texte requis `NSSpeechRecognitionUsageDescription` clé dans le 
 2. Basculez vers le **Source** vue : 
 
     [![](speech-images/speech02.png "La vue de Source")](speech-images/speech02.png#lightbox)
-3. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSSpeechRecognitionUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Par exemple : 
+3. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSSpeechRecognitionUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
 
     [![](speech-images/speech03.png "Ajout de NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
-4. Si l’application doit gérer la transcription audio en direct, elle nécessite également une Description de l’utilisation du Microphone. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSMicrophoneUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Par exemple : 
+4. Si l’application doit gérer la transcription audio en direct, elle nécessite également une Description de l’utilisation du Microphone. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSMicrophoneUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
 
     [![](speech-images/speech04.png "Ajout de NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 4. Enregistrez les modifications dans le fichier.
@@ -115,10 +116,10 @@ Pour fournir le texte requis `NSSpeechRecognitionUsageDescription` clé dans le 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Double-cliquez sur le `Info.plist` fichier à ouvrir pour le modifier.
-3. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSSpeechRecognitionUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Par exemple : 
+3. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSSpeechRecognitionUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
 
     [![](speech-images/speech03w.png "Ajout de NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-4. Si l’application doit gérer la transcription audio en direct, elle nécessite également une Description de l’utilisation du Microphone. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSMicrophoneUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Par exemple : 
+4. Si l’application doit gérer la transcription audio en direct, elle nécessite également une Description de l’utilisation du Microphone. Cliquez sur **ajouter une nouvelle entrée**, entrez `NSMicrophoneUsageDescription` pour le **propriété**, `String` pour le **Type** et un **Description d’utilisation** comme le **valeur**. Exemple : 
 
     [![](speech-images/speech04w.png "Ajout de NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Enregistrez les modifications dans le fichier.
@@ -242,7 +243,7 @@ Lorsque le rappel est appelé, si le `NSError` n’est pas `null` a eu une erreu
 
 ### <a name="recognizing-live-speech"></a>Reconnaissance vocale dynamique
 
-Si l’application souhaite voix en direct, le processus est très similaire à la reconnaissance vocale préenregistré. Par exemple :
+Si l’application souhaite voix en direct, le processus est très similaire à la reconnaissance vocale préenregistré. Exemple :
 
 ```csharp
 using System;
@@ -402,4 +403,4 @@ Cet article a présenté la nouvelle API de reconnaissance vocale et a montré c
 
 ## <a name="related-links"></a>Liens associés
 
-- [SpeakToMe (sample)](https://developer.xamarin.com/samples/monotouch/ios10/SpeakToMe/)
+- [SpeakToMe (exemple)](https://developer.xamarin.com/samples/monotouch/ios10/SpeakToMe/)

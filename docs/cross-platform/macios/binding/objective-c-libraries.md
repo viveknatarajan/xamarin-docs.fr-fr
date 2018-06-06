@@ -1,15 +1,17 @@
 ---
 title: Bibliothèques de liaison Objective-C
+description: Ce document fournit une vue d’ensemble de la création de C# liaisons au code Objective-C, qui décrit comment lier des événements, des méthodes, des contrôles personnalisés et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: fddde9dbef0e4dfb03707a970d4263983d4cf85d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f7c4be4254ce3e3301c0c1e98d37134f5524c23b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782318"
 ---
 # <a name="binding-objective-c-libraries"></a>Bibliothèques de liaison Objective-C
 
@@ -462,7 +464,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>Liaison de listes d’arguments Objective-C
 
-Objective-C prend en charge les arguments de variadiques. Par exemple :
+Objective-C prend en charge les arguments de variadiques. Exemple :
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...
@@ -505,7 +507,7 @@ Parfois, vous devez accéder à des champs publics qui ont été déclarés dans
 
 Ces champs contiennent généralement des valeurs de chaînes ou des entiers qui doivent être référencées. Elles sont utilisées en tant que chaîne qui représente une notification spécifique et en tant que clés dans les dictionnaires.
 
-Pour lier un champ, ajouter une propriété à votre fichier de définition d’interface et décorer la propriété avec le [ `[Field]` ](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) attribut. Cet attribut prend un seul paramètre : le nom de C du symbole à la recherche. Par exemple :
+Pour lier un champ, ajouter une propriété à votre fichier de définition d’interface et décorer la propriété avec le [ `[Field]` ](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) attribut. Cet attribut prend un seul paramètre : le nom de C du symbole à la recherche. Exemple :
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -613,7 +615,7 @@ Le [ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#Bin
 
 Vous pouvez la décorer les méthodes (sur la valeur de retour), les paramètres et les propriétés avec [ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute). La seule restriction est que votre membre **ne doit pas** se trouve dans un [ `[Protocol]` ](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) ou [ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) interface.
 
-Par exemple :
+Exemple :
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -632,7 +634,7 @@ En interne, nous ferons le `bool?`  <->  `NSNumber` et `CGRect`  <->  `NSValue` 
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) prend également en charge les tableaux de `NSNumber` `NSValue` et `NSString`(enum).
 
-Par exemple :
+Exemple :
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -661,7 +663,7 @@ Le Générateur de liaison de Xamarin.iOS fournit la prise en charge pour les d�
 
 Cet attribut peut être utilisé sans arguments pour les notifications qui n’effectuer aucune charge utile ou vous pouvez spécifier un `System.Type` qui fait référence à une autre interface dans la définition d’API, généralement avec le nom se terminant par « EventArgs ». Le Générateur d’activer l’interface dans une classe qui sous-classe `EventArgs` et inclut toutes les propriétés proposées. Le [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) attribut doit être utilisé dans la classe EventArgs pour répertorier le nom de la clé utilisée pour rechercher le dictionnaire Objective-C pour extraire la valeur.
 
-Par exemple :
+Exemple :
 
 ```csharp
 interface MyClass {
@@ -1304,7 +1306,7 @@ Vous devez informer Xamarin.iOS comment lier vos bibliothèques, cela peut être
 L’exemple ci-dessus établit un lien `libMyLibrary.a`, `libSystemLibrary.dylib` et `CFNetwork` bibliothèque framework dans votre fichier exécutable final.
 
 Ou vous pouvez tirer parti de niveau de l’assembly [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), que vous pouvez incorporer dans vos fichiers de contrat (tel que `AssemblyInfo.cs`).
-Lorsque vous utilisez la [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), vous devez disposer de votre bibliothèque native au moment où vous apportez votre liaison, comme cette opération incorpore la bibliothèque native avec votre application. Par exemple :
+Lorsque vous utilisez la [ `[LinkWithAttribute]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute), vous devez disposer de votre bibliothèque native au moment où vous apportez votre liaison, comme cette opération incorpore la bibliothèque native avec votre application. Exemple :
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

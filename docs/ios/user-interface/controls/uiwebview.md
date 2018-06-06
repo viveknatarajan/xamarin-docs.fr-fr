@@ -1,19 +1,20 @@
 ---
-title: Affichages Web
-description: Options d’affichage web iOS désambiguïser
+title: Affichages Web du Xamarin.iOS
+description: Ce document décrit les différentes méthodes qu’une application Xamarin.iOS peut afficher le contenu web. Elle explique UIWebView, WKWebView, SFSafariViewController, Safari et la sécurité de transport d’application.
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 787b5594476b3a1b5b3f6a0e8151a98c97443d00
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f720eae68415ab9efe021e53c9da4875209cd221
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790494"
 ---
-# <a name="web-views"></a>Affichages Web
+# <a name="web-views-in-xamarinios"></a>Affichages Web du Xamarin.iOS
 
 La durée de vie d’e/s, Apple a publié de plusieurs façons pour les développeurs d’applications d’incorporer la fonctionnalité d’affichage web dans leurs applications. La plupart des utilisateurs utilisent le navigateur web Safari intégré sur son appareil iOS et donc vous attendre que la fonctionnalité web-view à partir d’autres applications est cohérente avec cette expérience. Ils attendent les mouvements mêmes fonctionne, les performances soit de par et des fonctionnalités identiques.
 

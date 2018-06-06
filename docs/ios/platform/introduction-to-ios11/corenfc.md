@@ -1,19 +1,20 @@
 ---
-title: Core NFC
-description: Balises de lecture Communication NFC (Near Field) à l’aide d’iOS 11
+title: Core NFC dans Xamarin.iOS
+description: Ce document décrit comment lire près de balises de communication de champ dans Xamarin.iOS à l’aide de l’API introduites dans iOS 11.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2016
-ms.openlocfilehash: db0c417c1c79a988821a93b1cf20d94161f5c47a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c42048f9c00238fb73e354ea86322c3d19bae601
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787375"
 ---
-# <a name="core-nfc"></a>Core NFC
+# <a name="core-nfc-in-xamarinios"></a>Core NFC dans Xamarin.iOS
 
 _Balises de lecture Communication NFC (Near Field) à l’aide d’iOS 11_
 
@@ -162,5 +163,5 @@ CoreNFC permet à votre application lire des données à partir de balises NFC. 
 
 ## <a name="related-links"></a>Liens associés
 
-- [NFCTagReader (sample)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
+- [NFCTagReader (exemple)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
 - [Présentation des principaux NFC (WWDC) (vidéo)](https://developer.apple.com/videos/play/wwdc2017/718/)

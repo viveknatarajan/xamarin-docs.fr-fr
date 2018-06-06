@@ -1,22 +1,22 @@
 ---
-title: Prise en charge linguistique
-description: Concepts et fonctionnalités de l’application multi-plateforme.
+title: Programmation de prise en charge linguistique dans Xamarin
+description: 'Ce document décrit les différents langages de programmation pris en charge par Xamarin. Elle explique c#, F #, portable Visual Basic.NET et modèles Razor.'
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 18d7e93d686f369dec4a98b5b5f6c77679119091
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 715f63a0be54ba3342bd63c1c76d89656313359a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781674"
 ---
-# <a name="language-support"></a>Prise en charge linguistique
-
-Cette section contient des documents qui expliquent des fonctionnalités d’application multiplateforme plus avancées et les concepts.
+# <a name="programming-language-support-in-xamarin"></a>Programmation de prise en charge linguistique dans Xamarin
 
 ## <a name="c"></a>C# 
+
 ###  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Vue d’ensemble de la prise en charge asynchrone](~/cross-platform/platform/async.md)
 
 La version 5 du langage c# a introduit deux nouveaux mots-clés pour exprimer des opérations asynchrones : async et await. Ces mots clés vous permettent d’écrire du code simple qui utilise la bibliothèque parallèle de tâches pour exécuter des opérations longues (par exemple, l’accès réseau) dans un autre thread et d’accéder facilement les résultats à la fin. Les dernières versions de Xamarin.iOS et Xamarin.Android prennent en charge async et await : ce document fournit des explications et un exemple d’utilisation de la nouvelle syntaxe avec Xamarin.

@@ -1,5 +1,5 @@
 ---
-title: Contraintes de disposition par programmation
+title: Contraintes de disposition par programmation dans Xamarin.iOS
 description: Ce guide présente les contraintes de disposition automatique de travailler avec iOS dans le code c# au lieu de les créer dans le concepteur iOS.
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 093101d09f5ffff637b034b3b4794aa6e785a0df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a40a3c66369902d2d6f8dbee5a6a7e9bad8a9e05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790599"
 ---
-# <a name="programmatic-layout-constraints"></a>Contraintes de disposition par programmation
+# <a name="programmatic-layout-constraints-in-xamarinios"></a>Contraintes de disposition par programmation dans Xamarin.iOS
 
 _Ce guide présente les contraintes de disposition automatique de travailler avec iOS dans le code c# au lieu de les créer dans le concepteur iOS._
 
@@ -50,7 +51,7 @@ Mise en page ancres fournissent plusieurs méthodes pour la création de contrai
 - **ConstraintGreaterThanOrEqualTo** -définit une relation où `first attribute >= second attribute + [constant]` avec éventuellement fourni `constant` valeur de décalage.
 - **ConstraintLessThanOrEqualTo** -définit une relation où `first attribute <= second attribute + [constant]` avec éventuellement fourni `constant` valeur de décalage.
 
-Par exemple :
+Exemple :
 
 ```csharp
 // Get the parent view's layout
@@ -94,7 +95,7 @@ En plus de fournir uniquement les paramètres qui sont nécessaires pour résoud
 
 ### <a name="layout-constraints"></a>Contraintes de disposition
 
-Vous pouvez ajouter manuellement des contraintes de mise en page automatique en créant directement un `NSLayoutConstraint` en code c#. Contrairement à l’utilisation de points d’ancrage de la mise en page, vous devez spécifier une valeur pour chaque paramètre, même si elle aura aucun effet sur la contrainte est définie. Par conséquent, vous obtiendrez produisant une quantité considérable de difficile à lire, un code réutilisable. Par exemple :
+Vous pouvez ajouter manuellement des contraintes de mise en page automatique en créant directement un `NSLayoutConstraint` en code c#. Contrairement à l’utilisation de points d’ancrage de la mise en page, vous devez spécifier une valeur pour chaque paramètre, même si elle aura aucun effet sur la contrainte est définie. Par conséquent, vous obtiendrez produisant une quantité considérable de difficile à lire, un code réutilisable. Exemple :
 
 ```csharp
 //// Pin the leading edge of the view to the margin

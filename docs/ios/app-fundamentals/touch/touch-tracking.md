@@ -1,19 +1,20 @@
 ---
-title: Suivi de tactiles doigt
-description: Ce document montre comment effectuer le suivi des événements tactiles à partir de plusieurs doigts
+title: Doigt tactile suivi des modifications dans Xamarin.iOS
+description: Ce document décrit comment effectuer le suivi des doigts individuels dans les entrées tactiles multipoints dans une application Xamarin.iOS. Il repose sur un exemple d’application finger-painting.
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 178bd0a68166f033293b2d807fea449355c1c584
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 85dbd3c158408026f4ecef5fb2b01c265747140e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784401"
 ---
-# <a name="multi-touch-finger-tracking"></a>Suivi de tactiles doigt
+# <a name="multi-touch-finger-tracking-in-xamarinios"></a>Doigt tactile suivi des modifications dans Xamarin.iOS
 
 _Ce document montre comment effectuer le suivi des événements tactiles à partir de plusieurs doigts_
 

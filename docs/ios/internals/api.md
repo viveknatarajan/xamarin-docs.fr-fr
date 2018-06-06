@@ -1,17 +1,19 @@
 ---
-title: API
+title: Présentation de l’API Xamarin.iOS
+description: Ce document est lié à la documentation de référence des API de Xamarin, un guide qui décrit la conception de l’API de Xamarin.iOS et une liste d’assemblys qui sont disponibles pour une utilisation dans le développement de Xamarin.
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2ce97ecc75dd59c0851db22431529ef819f37ea7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 81c30af4d7c95960344015ed6dcfd868deda06af
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786133"
 ---
-# <a name="api"></a>API
+# <a name="xamarinios-api-overview"></a>Présentation de l’API Xamarin.iOS
 
 Xamarin.iOS expose C# / CIL de liaison à l’API CocoaTouch et donne également accès à l’API de fichier CIL ECMA et diverses autres API .NET.
 

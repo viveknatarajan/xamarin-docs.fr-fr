@@ -1,5 +1,5 @@
 ---
-title: Apparence API
+title: Apparence API dans Xamarin.iOS
 description: iOS vous permet d’appliquer des paramètres de propriété visuelle à un niveau de la classe statique plutôt que sur des objets spécifiques afin que la modification s’applique à toutes les instances de ce contrôle dans l’application.
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7c7e4909cc12f49411c527af12fc0e4855979804
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 02b33550451506ef4756f0f7d4400b4f98cef368
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790251"
 ---
-# <a name="appearance-api"></a>Apparence API
+# <a name="appearance-api-in-xamarinios"></a>Apparence API dans Xamarin.iOS
 
 _iOS vous permet d’appliquer des paramètres de propriété visuelle à un niveau de la classe statique plutôt que sur des objets spécifiques afin que la modification s’applique à toutes les instances de ce contrôle dans l’application._
 

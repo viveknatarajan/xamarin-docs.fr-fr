@@ -1,15 +1,17 @@
 ---
 title: Exemple du monde réel à l’aide d’un projet Xcode
+description: Ce document décrit comment utiliser un projet Xcode comme une entrée directe à un objectif Sharpie, ce qui simplifie le processus de création de liaisons c# pour le code Objective-C.
 ms.prod: xamarin
 ms.assetid: 168AA64C-E181-4937-A1F2-AD095B9A36F2
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: 4e30b07c10de439df8e1ec1706845150e8c54a41
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 850c351f91c9a09a6654c876167e035f751e9504
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781115"
 ---
 # <a name="real-world-example-using-an-xcode-project"></a>Exemple du monde réel à l’aide d’un projet Xcode
 

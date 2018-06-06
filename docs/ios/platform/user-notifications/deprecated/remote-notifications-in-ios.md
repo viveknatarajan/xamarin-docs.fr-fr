@@ -1,21 +1,20 @@
 ---
 title: Notifications push dans iOS
-description: Cette section couvre des notifications push dans iOS. Il présente le Service de passerelle des Notifications Push Apple et son rôle dans les notifications de publication pour les applications iOS. Il explique comment créer les certificats de sécurité nécessaires pour activer les notifications push et de discuter. Pour finir cette section décrit certaines des tâches de maintenance que les serveurs d’applications doivent effectuer pour effectuer le suivi des périphériques mobiles clients.
+description: Ce document décrit comment utiliser des notifications push dans iOS 9 et versions antérieures. Il présente les certificats, l’inscription auprès de l’Apple Push Notifications passerelle de Service (APNS) et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7bb2a250b9d3cc0c8df02f432330f9fe1dc58f94
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788665"
 ---
 # <a name="push-notifications-in-ios"></a>Notifications push dans iOS
-
-_Cette section couvre des notifications push dans iOS. Il présente le Service de passerelle des Notifications Push Apple et son rôle dans les notifications de publication pour les applications iOS. Il explique comment créer les certificats de sécurité nécessaires pour activer les notifications push et de discuter. Pour finir cette section décrit certaines des tâches de maintenance que les serveurs d’applications doivent effectuer pour effectuer le suivi des périphériques mobiles clients._
 
 > [!IMPORTANT]
 > Les informations contenues dans cette section relative à iOS 9 et antérieure, il est resté ici pour prendre en charge les anciennes versions d’iOS. Pour iOS 10 et versions ultérieures, consultez le [guide utilisateur Notification Framework](~/ios/platform/user-notifications/index.md) pour prendre en charge à la fois Local et distant Notification sur un appareil iOS.
@@ -29,7 +28,7 @@ Les notifications à distance proprement dites sont conformes au format des cha�
 
 Apple gère deux environnements de APNS : un *Sandbox* et un *Production* environnement. L’environnement de bac à sable est conçu pour tester au cours de la phase de développement et peut être à `gateway.sandbox.push.apple.com` sur TCP port 2195. L’environnement de Production est destiné à être utilisé dans les applications qui ont été déployées et peuvent être à `gateway.push.apple.com` sur TCP port 2195.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Notifications push doivent observer les règles suivantes sont dictés par l’architecture de APNS :
 

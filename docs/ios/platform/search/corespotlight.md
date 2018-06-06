@@ -1,18 +1,20 @@
 ---
-title: Recherche avec Core Spotlight
+title: Recherche avec Spotlight Core dans Xamarin.iOS
+description: Ce document décrit comment utiliser Core Spotlight dans une application Xamarin.iOS pour fournir des liens vers le contenu dans l’application. Elle explique comment créer, restaurer, mettre à jour et supprimer des éléments de recherche.
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0074cfcdc4a80f66f64d12f8e5c0a5e81ab2b8a1
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: a8bc3aaa43d7830b0a3baa0768d495458b1ecfad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788037"
 ---
-# <a name="search-with-core-spotlight"></a>Recherche avec Core Spotlight
+# <a name="search-with-core-spotlight-in-xamarinios"></a>Recherche avec Spotlight Core dans Xamarin.iOS
 
 La galerie de Core est une nouvelle infrastructure pour iOS 9 qui présente une API de base de données de type pour ajouter, modifier ou supprimer des liens vers du contenu dans votre application. Les éléments qui ont été ajoutés à l’aide de la galerie de base sera disponibles dans la recherche Spotlight sur l’appareil iOS.
 
@@ -49,7 +51,7 @@ Ces informations ressemble à ce qui suit dans un résultat de recherche :
 
 ## <a name="restoring-an-item"></a>Restauration d’un élément
 
-Lorsque l’utilisateur appuie sur un élément ajouté au résultat de recherche via Core Spotlight pour votre application, le `AppDelegate` méthode `ContinueUserActivity` est appelé (cette méthode est également utilisée pour `NSUserActivity`). Par exemple :
+Lorsque l’utilisateur appuie sur un élément ajouté au résultat de recherche via Core Spotlight pour votre application, le `AppDelegate` méthode `ContinueUserActivity` est appelé (cette méthode est également utilisée pour `NSUserActivity`). Exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -99,7 +101,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-Ensuite, vous pouvez supprimer un groupe d’éléments de l’index par leur nom de domaine. Par exemple :
+Ensuite, vous pouvez supprimer un groupe d’éléments de l’index par leur nom de domaine. Exemple :
 
 ```csharp
 // Delete by Domain Name

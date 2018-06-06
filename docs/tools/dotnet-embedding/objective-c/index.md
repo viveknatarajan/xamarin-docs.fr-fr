@@ -1,15 +1,17 @@
 ---
 title: Prise en charge objective-C
+description: Ce document fournit une description de la prise en charge pour Objective-C dans l’incorporation de .NET. Il présente un comptage de références automatique, NSString, protocoles, NSObject protocole, exceptions et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 3367A4A4-EC88-4B75-96D0-51B1FCBCE614
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 1c0d4ac79bba0846b62c4ca74c42cd86610caa1b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 95604133293f0fb2fe9b651fd7cb6b18f3994c84
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793853"
 ---
 # <a name="objective-c-support"></a>Prise en charge objective-C
 
@@ -43,7 +45,7 @@ Passage `--nativeexception` en tant qu’argument à `objcgen` convertit les exc
 
 ### <a name="comparison"></a>Comparaison
 
-Des types qui implémentent gérés `IComparable` (ou sa version générique `IComparable<T>`) produira Objective-C conviviales méthodes qui retournent un `NSComparisonResult` et accepter un `nil` argument. Cela rend l’API générée plus conviviale pour les développeurs de Objective-C. Par exemple :
+Des types qui implémentent gérés `IComparable` (ou sa version générique `IComparable<T>`) produira Objective-C conviviales méthodes qui retournent un `NSComparisonResult` et accepter un `nil` argument. Cela rend l’API générée plus conviviale pour les développeurs de Objective-C. Exemple :
 
 ```objc
 - (NSComparisonResult)compare:(XAMComparableType * _Nullable)other;
@@ -75,7 +77,7 @@ Lorsqu’un seul type managé s’étend à plusieurs types, plusieurs catégori
 
 ### <a name="subscripting"></a>Indices
 
-Les propriétés indexées gérées sont converties en mise en indice de l’objet. Par exemple :
+Les propriétés indexées gérées sont converties en mise en indice de l’objet. Exemple :
 
 ```csharp
 public bool this[int index] {

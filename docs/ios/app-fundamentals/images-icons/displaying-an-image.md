@@ -1,5 +1,5 @@
 ---
-title: Affichage d’une Image
+title: Affichage d’une Image dans Xamarin.iOS
 description: Cet article couvre notamment une ressource d’image dans une application Xamarin.iOS et affichage de cette image à l’aide de code c# ou en l’assignant à un contrôle dans le concepteur iOS.
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/24/2018
-ms.openlocfilehash: f1f733fa91be7bf76e19896e78809d18494891d3
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 3ae63bb30c7759a1915939a2199d5ffc7dc75d15
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784271"
 ---
-# <a name="displaying-an-image"></a>Affichage d’une Image
+# <a name="displaying-an-image-in-xamarinios"></a>Affichage d’une Image dans Xamarin.iOS
 
 _Cet article couvre notamment une ressource d’image dans une application Xamarin.iOS et affichage de cette image à l’aide de code c# ou en l’assignant à un contrôle dans le concepteur iOS._
 
@@ -231,7 +232,7 @@ En supposant que `MyImage` est le nom d’une ressource Image ajoutée à un cat
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-Pour tout autre format d’image, incluez l’extension avec le nom. Par exemple :
+Pour tout autre format d’image, incluez l’extension avec le nom. Exemple :
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");

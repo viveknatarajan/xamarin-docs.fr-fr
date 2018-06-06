@@ -1,21 +1,20 @@
 ---
-title: Notifications utilisateur avancé
-description: Cet article est une présentation approfondie de la nouvelle infrastructure de Notifications à l’utilisateur et comment tirer pleinement parti de celui-ci dans une application Xamarin.iOS.
+title: Notifications d’utilisateur avancé dans Xamarin.iOS
+description: Cet article présente une vue plus approfondie à l’infrastructure de Notifications à l’utilisateur, introduit dans iOS 10. Il traite les notifications à l’utilisateur, l’interface utilisateur de notification, les pièces jointes de support, des interfaces utilisateur personnalisées et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: bd8a95afc5bdd5aed958913d63f9b6cfe853677e
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 09a73ebc3dab90e6342a45c0f1fb5a40184d18a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788528"
 ---
-# <a name="advanced-user-notifications"></a>Notifications utilisateur avancé
-
-_Cet article est une présentation approfondie de la nouvelle infrastructure de Notifications à l’utilisateur et comment tirer pleinement parti de celui-ci dans une application Xamarin.iOS._
+# <a name="advanced-user-notifications-in-xamarinios"></a>Notifications d’utilisateur avancé dans Xamarin.iOS
 
 Nouveau pour iOS 10, la Notification utilisateur framework permet la remise et le traitement des notifications locale et distantes. À l’aide de cette infrastructure, une application ou une extension d’application permettre planifier la remise de notifications locales en spécifiant un ensemble de conditions comme emplacement ou l’heure du jour.
 
@@ -66,7 +65,7 @@ L’un des éléments qui obtient partagés entre les utilisateurs plus courants
 
 Toutefois, en raison de la taille impliquée dans l’envoi, même une petite image, attachez à une charge utile de Notification à distance devient impossible. Pour gérer cette situation, le développeur peut utiliser la nouvelle Extension de Service dans iOS 10 pour télécharger l’image à partir d’une autre source (par exemple, une banque de données CloudKit) et l’attacher au contenu de la notification avant qu’il est affiché à l’utilisateur.
 
-Pour une Notification à distance doivent être modifiées par une Extension de Service, sa charge utile doit être marqué comme mutable. Par exemple :
+Pour une Notification à distance doivent être modifiées par une Extension de Service, sa charge utile doit être marqué comme mutable. Exemple :
 
 ```csharp
 {
@@ -267,7 +266,7 @@ Le système doit être informé sur la façon de trouver l’Extension de conten
 
 -----
 
-Notification des catégories de contenu Extension (`UNNotificationExtensionCategory`) utilisent les mêmes valeurs de catégorie sont utilisées pour enregistrer les Actions de Notification. Dans le cas où l’application utilise la même interface utilisateur pour plusieurs catégories, basculez le `UNNotificationExtensionCategory` au type **tableau** et fournir toutes les catégories que nécessaires. Par exemple :
+Notification des catégories de contenu Extension (`UNNotificationExtensionCategory`) utilisent les mêmes valeurs de catégorie sont utilisées pour enregistrer les Actions de Notification. Dans le cas où l’application utilise la même interface utilisateur pour plusieurs catégories, basculez le `UNNotificationExtensionCategory` au type **tableau** et fournir toutes les catégories que nécessaires. Exemple :
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -300,7 +299,7 @@ Pour concevoir l’interface utilisateur personnalisée de la Notification l’E
 > [!NOTE]
 > L’interface utilisateur de Notification est _pas_ prend en charge les contrôles interactifs tels que les champs de texte ou des boutons dans une Extension de contenu de Notification. Pendant qu’ils peuvent être ajoutés au plan conceptuel, l’utilisateur ne sera pas en mesure d’interagir avec eux. Pour ajouter une interaction utilisateur à une interface utilisateur de Notification personnalisée, utilisez à la place des actions personnalisées.
 
-Une fois que l’interface utilisateur a été mise en forme et les contrôles exposée au code c#, ouvrez le `NotificationViewController.cs` pour la modification et de modifier le `DidReceiveNotification` méthode pour remplir l’interface utilisateur lorsque l’utilisateur développe la notification. Par exemple :
+Une fois que l’interface utilisateur a été mise en forme et les contrôles exposée au code c#, ouvrez le `NotificationViewController.cs` pour la modification et de modifier le `DidReceiveNotification` méthode pour remplir l’interface utilisateur lorsque l’utilisateur développe la notification. Exemple :
 
 ```csharp
 using System;
@@ -362,7 +361,7 @@ Pour ajuster la taille de la zone de contenu affichée à l’utilisateur, le co
 
 Étant donné que la Notification système est déjà en cours d’exécution avant la Notification de l’Extension de contenu est appelée, la zone de contenu est initialement complète dimensionné et être animée à la taille demandée lorsque présentées à l’utilisateur.
 
-Pour éviter cet effet, vous devez modifier le `Info.plist` fichier pour l’Extension et le jeu le `UNNotificationExtensionInitialContentSizeRatio` clé de la `NSExtensionAttributes` clé en type **nombre** avec une valeur qui représente le rapport souhaité. Par exemple :
+Pour éviter cet effet, vous devez modifier le `Info.plist` fichier pour l’Extension et le jeu le `UNNotificationExtensionInitialContentSizeRatio` clé de la `NSExtensionAttributes` clé en type **nombre** avec une valeur qui représente le rapport souhaité. Exemple :
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -456,7 +455,7 @@ Outre les actions personnalisées, l’Extension de contenu de Notification peut
 
 Extensions de contenu de notification ont également la possibilité de mettre à jour leur interface utilisateur lorsque l’utilisateur appelle l’une des Actions personnalisées, telles qu’indiquant une date comme accepté lorsque l’utilisateur appuie sur le **accepter** bouton d’Action personnalisée. En outre, les Extensions de contenu de Notification peut indiquer le système de retarder le rejet de l’interface utilisateur de Notification pour l’utilisateur peut voir l’effet de leurs actions avant la fermeture de la Notification.
 
-Cela est fait en implémentant une deuxième version de la `DidReceiveNotification` méthode qui inclut un gestionnaire d’achèvement. Par exemple :
+Cela est fait en implémentant une deuxième version de la `DidReceiveNotification` méthode qui inclut un gestionnaire d’achèvement. Exemple :
 
 ```csharp
 using System;
@@ -530,7 +529,7 @@ namespace myApp {
 }
 ```
 
-En ajoutant le `Server.PostEventResponse` gestionnaire à la `DidReceiveNotification` (méthode) de l’Extension de contenu de Notification, l’Extension *doit* gérer toutes les actions personnalisées. L’extension peut également transmettre les actions personnalisées à l’application conteneur en modifiant le `UNNotificationContentExtensionResponseOption`. Par exemple :
+En ajoutant le `Server.PostEventResponse` gestionnaire à la `DidReceiveNotification` (méthode) de l’Extension de contenu de Notification, l’Extension *doit* gérer toutes les actions personnalisées. L’extension peut également transmettre les actions personnalisées à l’application conteneur en modifiant le `UNNotificationContentExtensionResponseOption`. Exemple :
 
 ```csharp
 // Close Notification
@@ -541,7 +540,7 @@ completionHandler (UNNotificationContentExtensionResponseOption.DismissAndForwar
 
 Selon la conception de l’application et la Notification, il peut arriver que l’utilisateur doit entrer du texte dans la Notification (par exemple, en réponse à un message). Une Extension de contenu de Notification a accès à l’action d’entrée de texte intégré exactement comme une notification standard.
 
-Par exemple :
+Exemple :
 
 ```csharp
 using System;

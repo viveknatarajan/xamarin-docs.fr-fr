@@ -1,5 +1,5 @@
 ---
-title: Alertes
+title: Alertes dans Xamarin.Mac
 description: Cet article décrit l’utilisation des alertes dans une application Xamarin.Mac. Il décrit la création et affichage des alertes à partir de code c# et répondre aux interactions de l’utilisateur.
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a451d0a5535915d9e52f687ae07ea028c0ccd5ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1eb781fe02213de6a994f56e321316b93a128b60
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792640"
 ---
-# <a name="alerts"></a>Alertes
+# <a name="alerts-in-xamarinmac"></a>Alertes dans Xamarin.Mac
 
 _Cet article décrit l’utilisation des alertes dans une application Xamarin.Mac. Il décrit la création et affichage des alertes à partir de code c# et répondre aux interactions de l’utilisateur._
 
@@ -269,7 +270,7 @@ Cet article a pris une présentation détaillée sur l’utilisation des alertes
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (exemple)](https://developer.xamarin.com/samples/mac/MacWindows/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilisation des fenêtres](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

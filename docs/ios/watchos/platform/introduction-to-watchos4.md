@@ -1,21 +1,20 @@
 ---
 title: Introduction à watchOS 4
-description: Nouvelles fonctionnalités disponibles pour les développeurs à l’aide de Xamarin pour watchOS 4.
+description: Ce document fournit une présentation générale watchOS 4, qui décrit les nouvelles fonctionnalités qui sont maintenant disponibles pour les développeurs Xamarin.
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2017
-ms.openlocfilehash: d3377b503273dc84cfe07227c4b007c8e073f1a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 550cf57f6b89a8fd5726ae55cb5eaaa54d6d2692
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791265"
 ---
 # <a name="introduction-to-watchos-4"></a>Introduction à watchOS 4
-
-_Nouvelles fonctionnalités disponibles pour les développeurs à l’aide de Xamarin pour watchOS 4._
 
 Accéder aux nouvelles fonctionnalités de watchOS 4 dans vos applications :
 
@@ -29,7 +28,6 @@ Modifications depuis watchOS 3 :
 
 * Code d’application et de l’interface utilisateur s’exécutent dans un processus unique.
 * Autorisation de l’emplacement peut être accordée sur la surveillance (aucun besoin de demander à l’utilisateur pour accepter de leur numéro de téléphone).
-
 
 ## <a name="related-links"></a>Liens associés
 

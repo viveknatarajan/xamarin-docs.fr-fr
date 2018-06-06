@@ -6,12 +6,13 @@ ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: fe544f8ac677987f8921ccb1c11b8930811b9553
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/02/2018
+ms.openlocfilehash: 15698767ae71b68a26138169771f7f397bddd95a
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732516"
 ---
 # <a name="nougat-features"></a>Fonctionnalités de commande
 
@@ -42,11 +43,11 @@ En outre, la commande Android met de nombreuses autres améliorations d’intér
 Cet article explique comment commencer à créer des applications avec la commande Android pour essayer de nouvelles fonctionnalités et de planifier le travail de migration ou une fonctionnalité pour cibler la plateforme Android commande Nouveau.
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités de commande Android dans les applications Xamarin :
 
--   **Visual Studio ou Visual Studio pour Mac** &ndash; si vous utilisez Visual Studio, version 4.2.0.628 ou version ultérieure de Xamarin pour Visual Studio. Si vous utilisez Visual Studio pour Mac, version 6.1.0 ou ultérieure de Visual Studio pour Mac n’est requis.
+-   **Visual Studio ou Visual Studio pour Mac** &ndash; si vous utilisez Visual Studio, version 4.2.0.628 ou version ultérieure de Visual Studio Tools pour Xamarin. Si vous utilisez Visual Studio pour Mac, version 6.1.0 ou ultérieure de Visual Studio pour Mac n’est requis.
 
 -   **Xamarin.Android** &ndash; Xamarin.Android 7.0 ou version ultérieure doit être installé et configuré avec Visual Studio ou Visual Studio pour Mac.
 
@@ -149,7 +150,7 @@ Les utilisateurs peuvent faire glisser un séparateur entre les applications pou
 
 [![Exemples d’applications s’exécutant en mode fenêtre multiples dans le mode portrait et paysage](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
-Vous pouvez configurer comment les activités de votre application Xamarin.Android prennent en charge le mode fenêtre multiples. Par exemple, vous pouvez configurer les attributs que vous définissez la taille minimale et la hauteur par défaut et la largeur de votre application en mode fenêtre multi. Vous pouvez utiliser la nouvelle `Activity.IsInMultiWindowMode` propriété pour déterminer si votre activité est en mode fenêtre multiples. Par exemple :
+Vous pouvez configurer comment les activités de votre application Xamarin.Android prennent en charge le mode fenêtre multiples. Par exemple, vous pouvez configurer les attributs que vous définissez la taille minimale et la hauteur par défaut et la largeur de votre application en mode fenêtre multi. Vous pouvez utiliser la nouvelle `Activity.IsInMultiWindowMode` propriété pour déterminer si votre activité est en mode fenêtre multiples. Exemple :
 
 ```csharp
 if (!IsInMultiWindowMode) {

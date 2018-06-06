@@ -1,21 +1,20 @@
 ---
-title: Modifications du magasin d’applications
-description: Explorer les nouvelles fonctionnalités d’iOS 11
+title: Modifications du magasin d’applications dans iOS 11
+description: Ce document explore les modifications apportées à l’App Store dans iOS 11. Elle explique icône du magasin d’une application, promues achats dans l’application, page du produit repensé, communication du client et les versions en plusieurs phases.
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 9c9355c047d2e7083ca787f473515163d8e6f5f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59f5d2c0c05ec2950ae7cc74e4f5aaa2565020f0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787388"
 ---
-# <a name="app-store-changes"></a>Modifications du magasin d’applications
-
-_Explorer les nouvelles fonctionnalités d’iOS 11_
+# <a name="app-store-changes-in-ios-11"></a>Modifications du magasin d’applications dans iOS 11
 
 L’App Store iOS a eu une conception totalement nouvelle, non seulement permet aux utilisateurs de naviguer efficacement dans le magasin, mais vous permet également, en tant que développeur, à votre application aux utilisateurs de promouvoir. Promotions incluent les mises à jour des achats dans l’application et les mises à jour de la page du produit. iOS 11 ajoute également les mises à jour concernant la communication avec les utilisateurs, l’ajout de l’icône de l’application et comment déployer votre application au public.
 

@@ -1,15 +1,16 @@
 ---
 title: Configuration requise et Installation de classeurs
-description: Comment télécharger, installer et utiliser les classeurs de Xamarin.
+description: Ce document décrit comment télécharger et installer les classeurs Xamarin, décrivant la configuration requise et plates-formes prises en charge.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 4d3217140605be8567d70e6dcf63d60a02e6b2fb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b5e94a9b0bc3b9e9f141ad9fd262d29e01eb8a10
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793819"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Configuration requise et Installation de classeurs
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/09/2018
 
 -----
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 #### <a name="supported-operating-systems"></a>Supported Operating Systems
 

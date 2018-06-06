@@ -1,17 +1,18 @@
 ---
-title: Types de système de fichiers de Xamarin.Essentials
-description: La classe de système de fichiers contient une série de programmes d’assistance pour trouver le cache de l’application et les répertoires de données et ouvrir des fichiers dans le package d’application.
+title: 'Xamarin.Essentials : Types de système de fichiers'
+description: La classe de système de fichiers dans Xamarin.Essentials contient une série de programmes d’assistance pour trouver le cache de l’application et les répertoires de données et ouvrir des fichiers dans le package d’application.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 14aabc319fefdbad86f29a9d27ce39b59da35e3e
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 13293ec05261cbdc1e70fd278002d1af18654851
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782583"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Types de système de fichiers de Xamarin.Essentials
+# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials : Types de système de fichiers
 
 ![Version préliminaire de NuGet](~/media/shared/pre-release.png)
 

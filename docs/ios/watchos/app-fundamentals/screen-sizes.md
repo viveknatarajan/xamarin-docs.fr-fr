@@ -1,18 +1,20 @@
 ---
-title: Utilisation de tailles d’écran
+title: Utilisation de watchOS tailles d’écran de Xamarin
+description: Ce document décrit l’utilisation des différentes tailles d’écran watchOS. Il présente le Concepteur d’Interface, le simulateur, watchOS watchOS et ressources d’image.
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 600b3de6cbf31bd4c3221eb1bf81eda7b4678c09
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 30866c70879950acd8f43fd5880b1b24ba127fa4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790709"
 ---
-# <a name="working-with-screen-sizes"></a>Utilisation de tailles d’écran
+# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Utilisation de watchOS tailles d’écran de Xamarin
 
 Apple Watch est disponible dans les deux tailles d’écran :
 

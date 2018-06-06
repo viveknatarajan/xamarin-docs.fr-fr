@@ -1,18 +1,19 @@
 ---
-title: 'Procédure pas à pas : création d’une application à l’aide de l’API d’éléments'
+title: Création d’une application Xamarin.iOS à l’aide de l’API d’éléments
 description: Cet article s’appuie sur les informations présentées dans l’Introduction de l’article de la boîte de dialogue MonoTouch. Il présente une procédure pas à pas qui montre comment utiliser le MonoTouch.Dialog (MT. D) éléments API pour commencer rapidement à créer une application avec MT. D.
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e4fbf744c6f967d09e0033212024c2e2398fb768
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 64f407288da72dbf51fb3388ddf36caea377f09c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790430"
 ---
-# <a name="walkthrough---creating-an-application-using-the-elements-api"></a>Procédure pas à pas : création d’une application à l’aide de l’API d’éléments
+# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Création d’une application Xamarin.iOS à l’aide de l’API d’éléments
 
 _Cet article s’appuie sur les informations présentées dans l’Introduction de l’article de la boîte de dialogue MonoTouch. Il présente une procédure pas à pas qui montre comment utiliser le MonoTouch.Dialog (MT. D) éléments API pour commencer rapidement à créer une application avec MT. D._
 

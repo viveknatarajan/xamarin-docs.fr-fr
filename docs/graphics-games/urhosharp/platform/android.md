@@ -1,16 +1,17 @@
 ---
 title: Prise en charge UrhoSharp Android
-description: Le programme d’installation spécifique Android et fonctionnalités UrhoSharp.
+description: Ce document décrit le programme d’installation Android spécifiques et les informations liées à la fonctionnalité pour UrhoSharp. En particulier, il traite les architectures prises en charge, la création d’un projet, la configuration et de lancement Urho et l’incorporation personnalisé de Urho.
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 008afb060729b6d1badf47db7eafedbe631326df
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6e489f52712989b5f94fa52d5ec6f22a13ce6252
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783779"
 ---
 # <a name="urhosharp-android-support"></a>Prise en charge UrhoSharp Android
 

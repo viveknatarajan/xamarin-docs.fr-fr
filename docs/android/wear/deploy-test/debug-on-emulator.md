@@ -6,12 +6,13 @@ ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 9be9b91a0ed7e7607469bf8d74087b6f93677559
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732981"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Déboguer Android usure sur un émulateur
 
@@ -23,7 +24,7 @@ Développement d’applications d’usure Android nécessite l’exécution de l
 
 ## <a name="configure-the-google-android-emulator"></a>Configurer l’émulateur Android de Google
 
-Pour exécuter votre application usure sur un émulateur, vous devez installer l’émulateur Android du Kit de développement logiciel Android et configurez-le pour porter Android. Pour l’émulateur Kit de développement logiciel Android installation et la configuration des informations générales, consultez [émulateur Android de Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Pour exécuter votre application usure sur un émulateur, vous devez installer l’émulateur Android du Kit de développement logiciel Android et configurez-le pour porter Android. Pour l’émulateur Kit de développement logiciel Android installation et la configuration des informations générales, consultez [le programme d’installation d’émulateur Android](~/android/get-started/installation/android-emulator/index.md).
 
 Lorsque vous créez un périphérique virtuel usure, sélectionnez un profil d’appareil Android d’usure (tel que **Android usure carré**). Pour améliorer les performances, utilisez l’usure **x86** CPU/ABI comme dans cet exemple :
 
@@ -32,7 +33,7 @@ Lorsque vous créez un périphérique virtuel usure, sélectionnez un profil d�
 
 ## <a name="launch-the-wear-virtual-device"></a>Lancez le périphérique virtuel usure 
 
-Après avoir créé un appareil virtuel Android d’usure, vous pouvez la choisir dans le menu déroulant de périphérique dans l’IDE avant de commencer le débogage. Si votre appareil virtuel n’est pas disponible dans le menu déroulant du périphérique, vérifiez que votre projet est un Android *usure* de niveau projet d’application (pas un projet d’application Android) et que son niveau de l’API de la cible est définie sur la même API que l’appareil virtuel. Par exemple :
+Après avoir créé un appareil virtuel Android d’usure, vous pouvez la choisir dans le menu déroulant de périphérique dans l’IDE avant de commencer le débogage. Si votre appareil virtuel n’est pas disponible dans le menu déroulant du périphérique, vérifiez que votre projet est un Android *usure* de niveau projet d’application (pas un projet d’application Android) et que son niveau de l’API de la cible est définie sur la même API que l’appareil virtuel. Exemple :
 
 [![En choisissant un AVD porter dans le menu de périphérique Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 

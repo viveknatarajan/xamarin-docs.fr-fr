@@ -1,21 +1,20 @@
 ---
-title: Contrôles
-description: Xamarin.iOS expose tous les objets d’interface utilisateur native fournies par Apple. Ils sont facilement ajoutés à des applications de Xamarin.iOS à l’aide de l’iOS, le concepteur Interface Builder de Xcode ou par programme. Quelle que soit la méthode choisie, Xamarin.iOS expose toutes les propriétés de l’objet interface utilisateur et les méthodes en c#.
+title: Contrôles d’Interface utilisateur dans Xamarin.iOS
+description: Ce document liens vers des guides qui décrivent les différentes iOS contrôles d’interface utilisateur disponibles pour les développeurs de Xamarin.iOS. Contenu lié présente les alertes, boutons, vues de collection, images, les réglages manuels, cartes, étiquettes, sélecteurs, sélecteurs de date et bien plus encore.
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 82b2998319d4e78ee4f58a6d024032a509724537
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 477cb4e479224b9e795f3460e0f59e0aa2038630
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790040"
 ---
-# <a name="controls"></a>Contrôles
-
-_Xamarin.iOS expose tous les objets d’interface utilisateur native fournies par Apple. Ils sont facilement ajoutés à des applications de Xamarin.iOS à l’aide de l’iOS, le concepteur Interface Builder de Xcode ou par programme. Quelle que soit la méthode choisie, Xamarin.iOS expose toutes les propriétés de l’objet interface utilisateur et les méthodes en c#._
+# <a name="user-interface-controls-in-xamarinios"></a>Contrôles d’Interface utilisateur dans Xamarin.iOS
 
 Ce document présente certains des contrôles d’interface utilisateur iOS courants et comment les utiliser.
 

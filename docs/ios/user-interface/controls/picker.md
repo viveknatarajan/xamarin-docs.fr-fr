@@ -1,19 +1,20 @@
 ---
-title: Sélecteur
-description: Ce guide couvre la conception et l’utilisation des sélecteurs dans une application Xamarin.iOS.
+title: Contrôle de sélecteur de Xamarin.iOS
+description: Ce document décrit comment concevoir et manipuler les contrôles de sélecteur dans une application Xamarin.iOS. Elle explique comment implémenter un sélecteur dans du code et dans le concepteur iOS.
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: e213124e870f1cca96a6078fd26bc7eeb1af55a1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7f46d354af86027d1e2656171c6595562d3555a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789910"
 ---
-# <a name="picker"></a>Sélecteur
+# <a name="picker-control-in-xamarinios"></a>Contrôle de sélecteur de Xamarin.iOS
 
 Le contrôle de sélecteur affiche 'roue-like' contrôle qui contient une liste déroulante de valeurs avec la valeur sélectionnée est en cours de mise en surbrillance. Les utilisateurs tournez la molette pour sélectionner l’option de que leur choix.
 
@@ -187,7 +188,7 @@ datePickerView.MinimumDate = minDate;
 datePickerView.MaximumDate = NSDate.Now;
 ```
 
-Vous pouvez également utiliser les contrôles .NET pour définir la plage de dates minimales et maximales. Par exemple :
+Vous pouvez également utiliser les contrôles .NET pour définir la plage de dates minimales et maximales. Exemple :
 
 ```csharp
 DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
@@ -204,7 +205,7 @@ Il existe quatre modes le sélecteur de dates peut être défini l’aide de la 
 
 #### <a name="time"></a>réflexion
 
-Le mode de temps affiche l’heure avec un sélecteur d’heure et une désignation AM ou PM facultatif. Il est défini avec la `UIDatePickerMode.Time` propriété. Par exemple :
+Le mode de temps affiche l’heure avec un sélecteur d’heure et une désignation AM ou PM facultatif. Il est défini avec la `UIDatePickerMode.Time` propriété. Exemple :
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Time;
@@ -218,7 +219,7 @@ L’image suivante illustre un exemple de ce mode de sélecteur de dates :
 
 #### <a name="date"></a>Date
 
-Le mode de date affiche la date avec un mois, le jour et la sélection de l’année. Il est défini avec la `UIDatePickerMode.Date` propriété. Par exemple :
+Le mode de date affiche la date avec un mois, le jour et la sélection de l’année. Il est défini avec la `UIDatePickerMode.Date` propriété. Exemple :
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Date;
@@ -239,7 +240,7 @@ datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 
 #### <a name="date-and-time"></a>Date et heure
 
-Le mode de date et d’heure affiche une vue de shortend de la date, l’heure en heures et minutes et un dependings de désignation AM ou PM facultatif sur si une horloge de 12 ou 24 heures est utilisé. Il est défini avec la `UIDatePickerMode.DateAndTime` propriété. Par exemple :
+Le mode de date et d’heure affiche une vue de shortend de la date, l’heure en heures et minutes et un dependings de désignation AM ou PM facultatif sur si une horloge de 12 ou 24 heures est utilisé. Il est défini avec la `UIDatePickerMode.DateAndTime` propriété. Exemple :
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
@@ -253,7 +254,7 @@ Comme avec [Date](#Date), l’ordre des sélecteurs et l’utilisation de l’ho
 
 #### <a name="countdown-timer"></a>Compte à rebours
 
-Le mode de minuteur du compte à rebours affiche l’heure et la valeur des minutes. Il est défini avec la `UIDatePickerMode.CountDownTimer` propriété. Par exemple :
+Le mode de minuteur du compte à rebours affiche l’heure et la valeur des minutes. Il est défini avec la `UIDatePickerMode.CountDownTimer` propriété. Exemple :
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.CountDownTimer;

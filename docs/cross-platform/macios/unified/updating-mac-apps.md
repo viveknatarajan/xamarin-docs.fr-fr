@@ -1,20 +1,19 @@
 ---
 title: Mise à jour d’applications Mac existantes
-description: Suivez ces étapes pour mettre à jour d’une application Xamarin.Mac existante pour utiliser l’API unifiée.
+description: Ce document décrit les étapes à suivre pour mettre à jour d’une application Xamarin.Mac à partir de l’API classique à l’API unifiée.
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a2e3df4db13ccbf8001b762bf29a3eb53cacd35a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 5e6034b079bba5e884872e4f2096d677fd3641d0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782409"
 ---
 # <a name="updating-existing-mac-apps"></a>Mise à jour d’applications Mac existantes
-
-_Suivez ces étapes pour mettre à jour d’une application Xamarin.Mac existante pour utiliser l’API unifiée._
 
 Mise à jour d’une application existante pour utiliser l’API unifiée nécessite des modifications au fichier projet lui-même, ainsi que pour les espaces de noms et les API utilisées dans le code d’application.
 
@@ -30,7 +29,7 @@ Avant de mettre à jour de votre code existant à l’API unifiée, il est vivem
 
 ## <a name="automated-updating"></a>Automatisée de mise à jour
 
-Une fois que les avertissements ont été résolus, sélectionnez un projet Mac existant dans Visual Studio pour Mac ou Visual Studio et choisissez **migrer vers une API unifiée de Xamarin.Mac** à partir de la **projet** menu. Par exemple :
+Une fois que les avertissements ont été résolus, sélectionnez un projet Mac existant dans Visual Studio pour Mac ou Visual Studio et choisissez **migrer vers une API unifiée de Xamarin.Mac** à partir de la **projet** menu. Exemple :
 
 ![](updating-mac-apps-images/beta-tool1.png "Choisir de migrer d’API unifiée de Xamarin.Mac dans le menu projet")
 

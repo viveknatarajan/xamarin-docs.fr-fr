@@ -1,18 +1,20 @@
 ---
-title: Procédure pas à pas - à l’aide d’emplacement de l’arrière-plan
+title: Procédure pas à pas - emplacement d’arrière-plan dans Xamarin.iOS
+description: Ce document fournit une procédure pas à pas montrant comment utiliser les informations d’emplacement dans une application Xamarin.iOS backgrounded. Elle décrit les États de l’application d’installation nécessaires et l’interface utilisateur.
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e6c74d9ffba4f63682a905d6ebc06d02be81abf4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aef39ef435bbbad6f643b2376832d8f8132d6a4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784092"
 ---
-# <a name="walkthrough---using-background-location"></a>Procédure pas à pas - à l’aide d’emplacement de l’arrière-plan
+# <a name="walkthrough---background-location-in-xamarinios"></a>Procédure pas à pas - emplacement d’arrière-plan dans Xamarin.iOS
 
 Dans cet exemple, nous allons créer un iOS application emplacement qui imprime des informations sur votre emplacement actuel : latitude et longitude autres paramètres de l’écran. Cette application va vous montrer comment effectuer correctement les mises à jour de l’emplacement pendant que l’application est actif ou Backgrounded.
 

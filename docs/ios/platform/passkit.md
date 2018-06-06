@@ -1,5 +1,5 @@
 ---
-title: PassKit
+title: PassKit dans Xamarin.iOS
 description: Portefeuille est une application iOS de système qui stocke et affiche les codes-barres et autres informations pour lier des transactions des clients sur leur téléphone avec « réels ».
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: f1c8ac92c5ff7eed5116587ed13755ddee74a877
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0a4fd39e312cf96ac59eae97b1212f001c4ef799
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788346"
 ---
-# <a name="passkit"></a>PassKit
+# <a name="passkit-in-xamarinios"></a>PassKit dans Xamarin.iOS
 
 _Portefeuille est une application iOS de système qui stocke et affiche les codes-barres et autres informations pour lier des transactions des clients sur leur téléphone avec « réels »._
 
@@ -24,7 +25,7 @@ Ce document présente le portefeuille, à l’aide de l’API du Kit de transmet
  [![](passkit-images/image1.png "Le portefeuille stocke et d’organise tous les tests sur un téléphone")](passkit-images/image1.png#lightbox)
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les fonctions de magasin Kit abordées dans ce document requièrent iOS 6 et Xcode 4.5, ainsi que de Xamarin.iOS 6.0.
 
@@ -104,7 +105,7 @@ Structure de répertoires d’un fichier de test est indiqué ci-dessous (c’es
 
  [![](passkit-images/image4.png "Structure de répertoires d’un fichier de test est illustrée ici")](passkit-images/image4.png#lightbox)
 
-### <a name="passjson"></a>pass.json
+### <a name="passjson"></a>pass.JSON
 
 JSON est le format, car les passes sont généralement créés sur un serveur, cela signifie que le code de génération est indépendant de la plateforme sur le serveur. Les trois composantes clés des informations dans chaque étape sont :
 

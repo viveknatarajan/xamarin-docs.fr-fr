@@ -1,21 +1,21 @@
 ---
 title: Configuration requise et Installation de l’inspecteur
-description: Comment télécharger, installer et utiliser l’inspecteur de Xamarin.
+description: Ce document décrit comment installer l’inspecteur de Xamarin et traite le système d’exploitation pris en charge IDE et plateformes d’applications.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 5bbd5c64f53e191d5ac629e20df87c2b7ca4ec00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 80bf3cb4e8e27355ccf6213dbfd07a17e992961b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793806"
 ---
 # <a name="inspector-installation-and-requirements"></a>Configuration requise et Installation de l’inspecteur
 
 ## <a name="download-and-installation"></a>Téléchargement et Installation
-
 
 # <a name="windowstabwindows"></a>[Fenêtres](#tab/windows)
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/09/2018
 
 -----
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 
@@ -55,7 +55,6 @@ Inspection de l’application en temps réel est disponible pour les clients d�
 |iOS (unifié)|Prise en charge dans XS et Visual Studio|Inspection des applications iOS à partir de Windows requiert la même version de l’inspecteur de peuvent également être installés sur l’hôte de build Mac.|
 |Android|Prise en charge dans XS et Visual Studio|Doivent cibler Android > = 4.0.3, avec **fastdev** activé.<br />Doit utiliser des émulateurs de Google, Visual Studio ou Xamarin Android. Les émulateurs Android 7 n’autorise pas de contrôle pour l’instant.|
 |WPF|Uniquement pris en charge dans Visual Studio sous Windows|
-
 
 <a name="reporting-bugs" />
 
@@ -167,6 +166,5 @@ Pour les versions antérieures, vous devez supprimer manuellement les éléments
 
 1. Supprimez l’application Workbooks dans`"/Applications/Xamarin Workbooks.app"`
 2. Supprimez l’application Inspector dans`"Applications/Xamarin Inspector.app"`
-2. Supprimez les compléments : `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` et `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-3. Supprimez Inspector et les fichiers de prise en charge ici : `/Library/Frameworks/Xamarin.Interactive.framework` et `/Library/Frameworks/Xamarin.Inspector.framework`
-
+3. Supprimez les compléments : `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` et `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+4. Supprimez Inspector et les fichiers de prise en charge ici : `/Library/Frameworks/Xamarin.Interactive.framework` et `/Library/Frameworks/Xamarin.Inspector.framework`

@@ -7,11 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 4e3e090d826aa46d503f8c612250fd5122bc703e
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733033"
 ---
 # <a name="part-4-data-binding-basics"></a>Partie 4. Principes fondamentaux de liaison de données
 
@@ -388,7 +389,7 @@ Voici le résultat :
 
 [![](data-binding-basics-images/listview3.png "Liaison à une Collection avec un DataTemplate et convertisseurs")](data-binding-basics-images/listview3-large.png#lightbox "liaison à une Collection avec un DataTemplate et convertisseurs")
 
-Le `ListView` est sophistiquée dans la gestion des modifications qui peuvent se produire dynamiquement dans sous-jacent données, mais uniquement si prend certaines mesures. Si la collection d’éléments attribués à la `ItemsSource` propriété de la `ListView` modifications pendant l’exécution, qui est, si les éléments peuvent être ajoutés à ou supprimés de la collection : utiliser une `ObservableCollection` classe pour ces éléments. `ObservableCollection` implémente le `INotifyCollectionChanged` interface, et `ListView` installe un gestionnaire pour le `CollectionChanged` événement.
+Le `ListView` est sophistiquée dans la gestion des modifications qui peuvent se produire dynamiquement dans les données sous-jacentes, mais uniquement si vous effectuer certaines opérations. Si la collection d’éléments attribués à la `ItemsSource` propriété de la `ListView` modifications pendant l’exécution, qui est, si les éléments peuvent être ajoutés à ou supprimés de la collection : utiliser une `ObservableCollection` classe pour ces éléments. `ObservableCollection` implémente le `INotifyCollectionChanged` interface, et `ListView` installe un gestionnaire pour le `CollectionChanged` événement.
 
 Si les propriétés des éléments eux-mêmes changent pendant l’exécution, puis les éléments de la collection doivent implémenter le `INotifyPropertyChanged` interface et signal des modifications aux valeurs de propriété à l’aide de la `PropertyChanged` événement. Cela est illustré dans la partie suivante de cette série, [partie 5. À partir de la liaison de données à MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 

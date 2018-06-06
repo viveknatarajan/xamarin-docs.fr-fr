@@ -1,15 +1,17 @@
 ---
 title: Mise en route avec les classeurs Xamarin SDK
+description: Ce document décrit comment démarrer avec le SDK de classeurs de Xamarin, ce qui peut être utilisé pour développer des intégrations pour les classeurs Xamarin.
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 2951075f5917d26d19b05eee3d4908a33799352e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7a077923741cb93a1277a55e6657f688b130e810
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793929"
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>Mise en route avec les classeurs Xamarin SDK
 

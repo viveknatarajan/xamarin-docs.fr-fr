@@ -1,22 +1,20 @@
 ---
-title: Tactile
-description: 'Les écrans tactiles sur de nombreux périphériques actuels permettent aux utilisateurs rapidement et efficacement d’interagir avec les périphériques de façon naturelle et intuitive. Cette interaction n’est pas limitée uniquement à la détection tactile : il est possible d’utiliser des gestes également. Par exemple, le mouvement de pincement pour zoomer est un exemple courant de cette solution par pincement une partie de l’écran de l’utilisateur peut effectuer un zoom avant ou arrière de deux doigts. Ce guide examine tactiles et mouvements dans iOS.'
+title: La gestion des tactile dans les applications Xamarin.iOS
+description: Ce document liens vers des guides qui décrivent comment utiliser des fonctions tactiles, tactiles, mouvements et 3D Touch dans une application Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: f34b502e3c0d67f33d41bc489f7ec1d93356af99
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb8dce8b13345c13a6f95ae7784bd135e7d1f1f5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784160"
 ---
-# <a name="touch"></a>Tactile
-
-_Les écrans tactiles sur de nombreux périphériques actuels permettent aux utilisateurs rapidement et efficacement d’interagir avec les périphériques de façon naturelle et intuitive. Cette interaction n’est pas limitée uniquement à la détection tactile : il est possible d’utiliser des gestes également. Par exemple, le mouvement de pincement pour zoomer est un exemple courant de cette solution par pincement une partie de l’écran de l’utilisateur peut effectuer un zoom avant ou arrière de deux doigts. Ce guide examine tactiles et mouvements dans iOS._
-
+# <a name="handling-touch-in-xamarinios-apps"></a>La gestion des tactile dans les applications Xamarin.iOS
 
 Comme d’autres plateformes mobiles, iOS a un nombre de façons de gérer l’interaction tactile. Il peut prendre en charge tactiles : nombre de points de contact sur l’écran et des mouvements complexes. Ce guide présente certains des concepts, ainsi que les particularités de l’implémentation tactiles et des mouvements sur iOS.
 
@@ -38,8 +36,6 @@ Ce guide sert d’introduction à l’interaction tactile dans iOS. Pour plus d�
 
 * [3D Touch](~/ios/platform/3d-touch.md)
 * [Activation du retour haptique](~/ios/user-interface/ios-ui/haptic-feedback.md)
-
-
 
 ## <a name="related-links"></a>Liens associés
 

@@ -1,15 +1,17 @@
 ---
 title: Création de projets de bibliothèque spécifique à la plateforme pour NuGet
+description: Ce document décrit comment créer un package NuGet unique qui contient le code spécifique à la plateforme pour plusieurs plateformes.
 ms.prod: xamarin
 ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 901dbe032d62047668f265e8c7f79593b3fbfcce
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 00a02973d6016ad63e4317279515acc2b4e2e81b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780641"
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>Création de projets de bibliothèque spécifique à la plateforme pour NuGet
 
@@ -17,7 +19,7 @@ Les projets de bibliothèque multiplateformes qui ciblent des plateformes spéci
 
 NuGet peut contenir de code iOS et Android-spécifique, ainsi que de code .NET commun aux deux.
 
-Plusieurs assemblys sont créés et intégrées à un seul package NuGet. Les normes de NuGet Assurez-vous que le package peut être ajouté à tous les types de projet pris en charge, tels que des projets Xamarin iOS et Android.
+Plusieurs assemblys sont créés et intégrées à un seul package NuGet. Les normes de NuGet Assurez-vous que le package peut être ajouté à tous les types de projet pris en charge, tels que les projets Xamarin.iOS et Android.
 
 ## <a name="steps-to-create-a-cross-platform-library-nuget"></a>Étapes de création d’une bibliothèque multiplateforme de NuGet
 

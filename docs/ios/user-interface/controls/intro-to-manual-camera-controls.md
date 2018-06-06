@@ -1,21 +1,20 @@
 ---
-title: Contrôles de la caméra manuelle
-description: Le AVFoundation Framework plus facilement les utilisateurs peuvent prendre des photos excellentes en permettant aux contrôles de la caméra manuel. À l’aide de cette infrastructure, une application peut prendre un contrôle direct sur le focus de l’appareil photo, équilibre et paramètres d’exposition. Une application peut également utiliser des captures d’exposition entre crochets capture d’images avec des paramètres différents d’exposition. Cet article prendra un coup de œil rapide à l’utilisation des contrôles caméra manuel d’une application mobile iOS simple 8.
+title: Réglages manuels dans Xamarin.iOS
+description: Ce document décrit comment le framework AVFoundation iOS peut être utilisée avec Xamarin.iOS pour activer les réglages manuels. Contrôles de la caméra manuelle autorisent un utilisateur à focus du contrôle, l’équilibre des blancs et paramètres d’exposition.
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 8545dce1b9232e396c4c9e71ad5f20649eef2417
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a0f605a38117df87a03801c3b9d86b0b7361c232
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790823"
 ---
-# <a name="manual-camera-controls"></a>Contrôles de la caméra manuelle
-
-_Le AVFoundation Framework plus facilement les utilisateurs peuvent prendre des photos excellentes en permettant aux contrôles de la caméra manuel. À l’aide de cette infrastructure, une application peut prendre un contrôle direct sur le focus de l’appareil photo, équilibre et paramètres d’exposition. Une application peut également utiliser des captures d’exposition entre crochets capture d’images avec des paramètres différents d’exposition. Cet article prendra un coup de œil rapide à l’utilisation des contrôles caméra manuel d’une application mobile iOS simple 8._
+# <a name="manual-camera-controls-in-xamarinios"></a>Réglages manuels dans Xamarin.iOS
 
 Les contrôles de caméra manuel, fournis par le `AVFoundation Framework` dans iOS 8, autoriser une application mobile afin de prendre le contrôle total sur la caméra d’un appareil iOS. Ce niveau de granularité fin de contrôle peut être utilisé pour créer des applications professionnelles et de fournir des compositions d’artiste en modifiant les paramètres de la caméra tout en tirant toujours une image ou une vidéo.
 
@@ -46,7 +45,7 @@ La mise entre parenthèses de Capture est basée sur les paramètres de l’appa
 
 En termes simples, entre parenthèses de Capture est une rafale de toujours images prises avec une variété de paramètres d’image à l’image.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour terminer les étapes présentées dans cet article :
 

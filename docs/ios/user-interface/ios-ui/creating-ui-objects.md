@@ -1,18 +1,20 @@
 ---
-title: Création d’objets d’Interface utilisateur
+title: Création d’objets d’Interface utilisateur dans Xamarin.iOS
+description: Ce document fournit une vue d’ensemble de la création d’une interface utilisateur dans Xamarin.iOS. Il traite iOS concepteur, Xcode Interface Builder, c# et plans conceptuels.
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 5229beb7a882049daf58d3a3e62da6fed25a1f48
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c688dcdf7498b0a2860d1878d893beae4f5cf8fc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790150"
 ---
-# <a name="creating-user-interface-objects"></a>Création d’objets d’Interface utilisateur
+# <a name="creating-user-interface-objects-in-xamarinios"></a>Création d’objets d’Interface utilisateur dans Xamarin.iOS
 
 Apple regroupe connexes de fonctionnalités dans « infrastructures », qui sont équivalentes aux espaces de noms Xamarin.iOS. `UIKit` est l’espace de noms qui contient tous les contrôles d’interface utilisateur pour iOS.
 
@@ -21,7 +23,6 @@ Chaque fois que votre code doit faire référence à un contrôle d’interface 
 ```csharp
 using UIKit;
 ```
-
 
 Tous les contrôles décrits dans ce chapitre sont dans l’espace de noms UIKit, et chaque nom de classe du contrôle utilisateur a le `UI` préfixe.
 

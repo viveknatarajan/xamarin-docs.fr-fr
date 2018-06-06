@@ -1,18 +1,19 @@
 ---
-title: Backgrounding
+title: Backgrounding dans Xamarin.iOS
 description: Arrière-plan de traitement ou backgrounding est le processus de laisser les applications à effectuer des tâches en arrière-plan pendant une autre application s’exécute dans le premier plan. Ce guide constitue une introduction aux e/s de traitement en arrière-plan.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ae3e732008c6503f511dc4be9cad874ecfe1272d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b22f3ef3276129f7f46c23cc1d06666f151f5ac4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783540"
 ---
-# <a name="backgrounding"></a>Backgrounding
+# <a name="backgrounding-in-xamarinios"></a>Backgrounding dans Xamarin.iOS
 
 _Arrière-plan de traitement ou backgrounding est le processus de laisser les applications à effectuer des tâches en arrière-plan pendant une autre application s’exécute dans le premier plan. Ce guide constitue une introduction aux e/s de traitement en arrière-plan._
 
@@ -39,7 +40,7 @@ Dans ce guide, nous avons présenté les différentes façons d’effectuer un t
 ## <a name="related-links"></a>Liens associés
 
 - [Backgrounding sur Android](~/android/app-fundamentals/services/index.md)
-- [LifecycleDemo (sample)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
+- [LifecycleDemo (exemple)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
 - [Emplacement (exemple)](https://developer.xamarin.com/samples/monotouch/Location/)
 - [Simple transfert en arrière-plan (exemple)](https://developer.xamarin.com/samples/monotouch/SimpleBackgroundTransfer/)
 - [Exécution de l’arrière-plan d’iOS](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

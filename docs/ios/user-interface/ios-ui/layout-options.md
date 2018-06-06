@@ -1,24 +1,25 @@
 ---
-title: Option de disposition
+title: Options de mise en page de Xamarin.iOS
+description: Ce document décrit les différentes façons d’organiser des interfaces dans Xamarin.iOS. Elle décrit le redimensionnement automatique et mise en page automatique.
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8f197bbffeabb708769c48f0130aa27a86b14386
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bad29eae308c8ca9f7228a1cbdfd69940894cf34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790114"
 ---
-# <a name="layout-options"></a>Option de disposition
+# <a name="layout-options-in-xamarinios"></a>Options de mise en page de Xamarin.iOS
 
 Il existe deux mécanismes différents pour contrôler la disposition lorsqu’une vue est redimensionnée ou pivotée :
 
 -  **Redimensionnement automatique** – inspecteur le redimensionnement automatique dans le concepteur permet de définir la `AutoresizingMask` propriétés. Cela permet un contrôle ancrées sur les bords de leur conteneur et/ou corriger leur taille. Redimensionnement automatique fonctionne dans toutes les versions d’iOS. Cet exemple est décrit plus en détail ci-dessous
--  **Mise en forme automatique** – une fonctionnalité introduite dans iOS6 qui permet un contrôle affiné sur les relations entre les contrôles d’interface utilisateur. Cela permet de contrôle de la position des éléments par rapport aux autres éléments sur l’aire de conception. Cette rubrique est traitée plus en détail dans les [disposition automatique avec Xamarin iOS concepteur](~/ios/user-interface/designer/designer-auto-layout.md) guide.
-
+-  **Structurer automatiquement** – une fonctionnalité introduite dans iOS 6 qui permet un contrôle affiné sur les relations entre les contrôles d’interface utilisateur. Cela permet de contrôle de la position des éléments par rapport aux autres éléments sur l’aire de conception. Cette rubrique est traitée plus en détail dans les [disposition automatique avec Xamarin iOS concepteur](~/ios/user-interface/designer/designer-auto-layout.md) guide.
 
 ## <a name="autosizing"></a>Redimensionnement automatique
 

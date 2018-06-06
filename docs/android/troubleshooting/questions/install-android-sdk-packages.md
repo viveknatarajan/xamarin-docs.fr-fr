@@ -6,12 +6,13 @@ ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/02/2018
-ms.openlocfilehash: d1fc8a1c511e86615108d1df841c28256f23191f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/30/2018
+ms.openlocfilehash: df359fae545079c7ac1d7106ec86e9297f183f90
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732773"
 ---
 # <a name="which-android-sdk-packages-should-i-install"></a>Les packages du SDK Android dois-je installer ?
 
@@ -42,11 +43,8 @@ Vous devez uniquement installer le Kit de développement logiciel Platform pour 
 Devez installer le SDK plateformes pour API 15 et 23. Notez que vous n’avez pas besoin installer les niveaux d’API entre les valeurs minimale et la cible (même si vous êtes backporting à ces niveaux d’API).
 
 ## <a name="system-images"></a>Images du système
-Il s’agit uniquement requis si vous souhaitez utiliser les émulateurs Android out of box à partir de Google. 
 
-- [Comment configurer l’émulateur par défaut](~/android/get-started/installation/android-emulator/index.md)
-
-- [Comment accélérer l’émulateur par défaut](~/android/get-started/installation/android-emulator/index.md)
+Il s’agit uniquement requis si vous souhaitez utiliser les émulateurs Android out of box à partir de Google. Pour plus d’informations, consultez [le programme d’installation d’émulateur Android](~/android/get-started/installation/android-emulator/index.md)
 
 ## <a name="extras"></a>Suppléments
 Les fonctionnalités supplémentaires de kit de développement logiciel Android n’est généralement pas obligatoire ; mais il est utile d’être informé, car elles peuvent être requises en fonction de votre cas d’usage.

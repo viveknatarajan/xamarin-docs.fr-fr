@@ -7,12 +7,13 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 3eb3bdd7b060b661d5202c63a879f1c88d2ccdcb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 3776a0554e5ae496f9e39612ec9bab971c6f1f88
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732760"
 ---
 # <a name="oreo-features"></a>Fonctionnalités de Oreo
 
@@ -25,7 +26,7 @@ _Comment démarrer à l’aide de Xamarin.Android à développer des application
 Cet article est conçu pour vous aider à démarrer dans le développement d’applications de Xamarin.Android pour Android 8.0 Oreo. Il explique comment installer les mises à jour nécessaires, configurer le Kit de développement et créer un émulateur (ou périphérique) pour le test. Il fournit également une description des nouvelles fonctionnalités dans Android 8.0 Oreo, avec des liens vers des exemples d’applications qui illustrent l’utilisation des fonctionnalités de Oreo Android dans les applications Xamarin.Android.
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour utiliser les fonctionnalités Oreo Android dans les applications Xamarin :
 
@@ -133,8 +134,8 @@ Si vous essayez de lancer la valeur par défaut du gestionnaire AVD basé sur un
 
 Ce message s’affiche car Google ne fournit plus d’une dotée du gestionnaire AVD de l’interface graphique utilisateur qui prend en charge les API 26.0 et versions ultérieur. Pour Android 8.0 Oreo, vous devez utiliser le Gestionnaire d’émulateur Android Xamarin ou la ligne de commande `avdmanager` outil pour créer des périphériques virtuels pour Oreo Android.
 
-Pour utiliser le Gestionnaire de périphériques Android Xamarin pour créer et gérer des appareils virtuels, consultez [Xamarin le Gestionnaire de périphériques Android](~/android/get-started/installation/android-emulator/xamarin-device-manager.md).
-Pour créer des périphériques virtuels sans le Gestionnaire d’émulateur Android de Xamarin, suivez les étapes décrites dans la section suivante.
+Pour utiliser le Gestionnaire de périphériques Android pour créer et gérer des appareils virtuels, consultez [la gestion de périphériques virtuels avec le Gestionnaire de périphériques Android](~/android/get-started/installation/android-emulator/device-manager.md).
+Pour créer des périphériques virtuels sans le Gestionnaire de périphériques Android, suivez les étapes décrites dans la section suivante.
 
 
 #### <a name="creating-virtual-devices-using-avdmanager"></a>Création d’avdmanager à l’aide de périphériques virtuels
@@ -190,7 +191,7 @@ Une fois que vous utilisez **avdmanager** pour créer votre appareil virtuel, el
 
 -----
 
-Pour plus d’informations sur la configuration d’un émulateur Android pour tester et déboguer, consultez [émulateur Android de Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Pour plus d’informations sur la configuration d’un émulateur Android pour tester et déboguer, consultez [débogage avec l’émulateur Android de Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 Si vous utilisez un périphérique physique comme un canal ou un Pixel, vous pouvez mettre à jour votre appareil via automatique sur les mises à jour de l’air (OTA) ou télécharger une image système et flash directement de votre appareil. Pour plus d’informations sur la mise à jour manuelle de votre appareil à Oreo Android, consultez [Images fabrique pour les appareils de Pixel et de Nexus](https://developers.google.com/android/images).
 

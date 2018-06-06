@@ -1,19 +1,20 @@
 ---
-title: ID tactile
-description: Touch ID est une technologie d’authentification d’empreintes digitales d’Apple.
+title: ID de Xamarin.iOS tactile
+description: Ce document décrit comment utiliser Touch ID, la technologie d’authentification d’empreintes digitales d’Apple, dans les applications Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: b5db80d280d7ad3c43a438d5caae57fbd1928896
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788581"
 ---
-# <a name="touch-id"></a>ID tactile
+# <a name="touch-id-in-xamarinios"></a>ID de Xamarin.iOS tactile
 
 ID de contact a été introduite dans iOS 7 comme un moyen d’authentifier l’utilisateur, semblable à un code secret. Toutefois, il a été limité à déverrouiller l’appareil, à l’aide de l’App Store, à l’aide d’iTunes et l’authentification de la chaîne de la clé iCloud uniquement.
 
@@ -51,8 +52,8 @@ Liste de contrôle d’accès est un nouvel attribut d’élément de trousseau 
 
 |Configuration de l’appareil|Évaluation de la stratégie|Mécanisme de sauvegarde|
 |--- |--- |--- |
-|Appareil sans code secret|Aucun accès|Aucun|
-|Appareil avec code secret|Requiert du code d’accès|Aucun|
+|Appareil sans code secret|Aucun accès|Aucun.|
+|Appareil avec code secret|Requiert du code d’accès|Aucun.|
 |Appareil avec l’ID de contact|S’il préfère que Touch ID|Permet à code d’accès|
 
 Toutes les opérations à l’intérieur de l’Enclave sécurisé peuvent s’approuvent mutuellement. Cela signifie que nous pouvons utiliser le résultat de l’authentification Touch ID pour autoriser le déchiffrement d’élément de trousseau. L’Enclave Secure conserve également un compteur des correspondances infructueuses de Touch ID, auquel cas un utilisateur sera a revenir à l’aide du code secret.
@@ -186,4 +187,4 @@ Dans ce guide, nous avons étudié trousseau et comment cela fonctionne dans iOS
 
 - [Exemple d’ID tactile](https://developer.xamarin.com/samples/StoryboardTable_LocalAuthentication)
 - [Exemple de trousseau WWDC](https://developer.xamarin.com/samples/KeychainTouchID/)
-- [Keychain (sample)](https://developer.xamarin.com/samples/Keychain/)
+- [Trousseau (exemple)](https://developer.xamarin.com/samples/Keychain/)

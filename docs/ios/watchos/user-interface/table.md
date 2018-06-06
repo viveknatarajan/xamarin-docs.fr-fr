@@ -1,18 +1,20 @@
 ---
-title: Contrôle de table
+title: watchOS contrôles de Table dans Xamarin
+description: Ce document décrit comment utiliser les contrôles de table watchOS dans Xamarin. Elle décrit l’ajout d’une table, d’ajout d’un contrôleur de ligne, de création et de remplissage des lignes, en réponse aux clics et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 3f596b424292dd0f4db08429bc7c5d4a885d3954
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: afb8f9a96fa14877cbd0352869e23972719a4480
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791356"
 ---
-# <a name="table-control"></a>Contrôle de table
+# <a name="watchos-table-controls-in-xamarin"></a>watchOS contrôles de Table dans Xamarin
 
 Le watchOS `WKInterfaceTable` contrôle est beaucoup plus simple que son équivalent iOS, mais effectue un rôle similaire. Il crée une liste déroulante de lignes qui peut avoir des dispositions personnalisées, et qui répondent aux événements tactiles.
 

@@ -1,19 +1,20 @@
 ---
-title: Couleur large
-description: Cet article traite des couleurs large et comment il peut être utilisé dans une application Xamarin.iOS ou Xamarin.Mac.
+title: Couleur large dans Xamarin.iOS
+description: Ce document traite de couleur large et comment il peut être utilisé dans une application Xamarin.iOS ou Xamarin.Mac. Il fournit également une vue d’ensemble de nombreux concepts liés à la couleur importantes telles que les espaces de couleurs, des canaux et des couleurs primaires.
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 5f56b396715159cbc1539ae9a7f30cc7ad2236bf
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 173919e0d5feda6ab7d34895cc834c5f36d737a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788779"
 ---
-# <a name="wide-color"></a>Couleur large
+# <a name="wide-color-in-xamarinios"></a>Couleur large dans Xamarin.iOS
 
 _Cet article traite des couleurs large et comment il peut être utilisé dans une application Xamarin.iOS ou Xamarin.Mac._
 
@@ -329,7 +330,7 @@ Le `CreateImage` méthode de la `UIGraphicsImageRenderer` classe est appelé pou
 
 ### <a name="drawing-wide-color-in-macos"></a>Couleur de dessin large dans macOS
 
-La `NSImage` classe a été développée dans macOS Sierra pour prendre en charge le dessin d’images du large couleur. Par exemple :
+La `NSImage` classe a été développée dans macOS Sierra pour prendre en charge le dessin d’images du large couleur. Exemple :
 
 ```csharp
 var size = CGSize(250,250);
@@ -353,7 +354,7 @@ Pour restituer des images du large couleur à l’écran, le processus fonctionn
 
 ### <a name="rendering-on-screen-in-ios"></a>Rendu à l’écran dans iOS
 
-Lorsque l’application a besoin d’afficher une image en couleur large à l’écran dans iOS, substituer la `Draw` méthode de le `UIView` en question comme d’habitude. Par exemple :
+Lorsque l’application a besoin d’afficher une image en couleur large à l’écran dans iOS, substituer la `Draw` méthode de le `UIView` en question comme d’habitude. Exemple :
 
 ```csharp
 using System;
@@ -395,7 +396,7 @@ Si l’application souhaite de contrôle qui espace colorimétrique est utilisé
 
 ### <a name="rendering-on-screen-in-macos"></a>Rendu à l’écran dans macOS
 
-Lorsque l’application a besoin d’afficher une image en couleur large à l’écran dans macOS, substituer la `DrawRect` méthode de le `NSView` en question comme d’habitude. Par exemple :
+Lorsque l’application a besoin d’afficher une image en couleur large à l’écran dans macOS, substituer la `DrawRect` méthode de le `NSView` en question comme d’habitude. Exemple :
 
 ```csharp
 using System;

@@ -1,19 +1,20 @@
 ---
-title: Résolution des problèmes
-description: Cet article fournit des conseils de dépannage plusieurs pour travailler avec iOS 9 dans les applications Xamarin.iOS.
+title: 'Xamarin.iOS 9 : résolution des problèmes'
+description: Cet article fournit des conseils de dépannage différents pour travailler avec iOS 9 dans Xamarin.iOS. Conseils couvrent l’analyse XML, simulateurs, contraintes de disposition, les problèmes de réseau et beaucoup d’autres rubriques.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44d737efcf5092eb4b27d5311271005de65318b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787661"
 ---
-# <a name="troubleshooting"></a>Résolution des problèmes
+# <a name="xamarinios-9--troubleshooting"></a>Xamarin.iOS 9 : résolution des problèmes
 
 _Cet article fournit des conseils de dépannage plusieurs pour travailler avec iOS 9 dans les applications Xamarin.iOS._
 
@@ -136,7 +137,7 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 ## <a name="untrusted-enterprise-developer"></a>Développeur d’entreprise non approuvées
 
-Lorsque vous tentez d’exécuter la version d’iOS 9 de votre application Xamarin.iOS sur du matériel d’iOS réel, vous pouvez obtenir un message indiquant que votre compte de développeur n’a pas été approuvé sur l’appareil. Par exemple :
+Lorsque vous tentez d’exécuter la version d’iOS 9 de votre application Xamarin.iOS sur du matériel d’iOS réel, vous pouvez obtenir un message indiquant que votre compte de développeur n’a pas été approuvé sur l’appareil. Exemple :
 
 [![](troubleshooting-images/untrusted01.png "Alerte de développeur en entreprise non approuvée")](troubleshooting-images/untrusted01.png#lightbox)
 
@@ -190,8 +191,6 @@ Il existe au moins deux solutions de contournement possibles pour résoudre ce p
 Avec Xamarin.iOS, il est possible d’effectuer l’initialisation de vue ou de vue contrôleur à l’intérieur des constructeurs qui sont appelées lorsque quelque chose est exposée dans le code managé, mais interrompt le design d’iOS.
 
 En général vous devez initialiser pas tout ce qui peut rappeler code Objective-C à partir du constructeur, car vous ne pouvez pas être sûr quand elle sera appelée. Cela signifie également qu’il existe un meilleures ressources (autres .ctor) ou des appels à remplacer (comme Objective-C a pas d’événements) où cette initialisation doit être effectuée.
-
-
 
 ## <a name="related-links"></a>Liens associés
 

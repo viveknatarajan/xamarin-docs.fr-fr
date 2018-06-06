@@ -1,5 +1,5 @@
 ---
-title: Menus
+title: Menus dans Xamarin.Mac
 description: Cet article décrit l’utilisation de menus dans une application Xamarin.Mac. Il décrit la création et gestion des menus et des éléments de menu dans Xcode et Interface générateur et leur utilisation par programmation.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cb89d1df60bafe14dcc989666f0eeb5d757e4017
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792919"
 ---
-# <a name="menus"></a>Menus
+# <a name="menus-in-xamarinmac"></a>Menus dans Xamarin.Mac
 
 _Cet article décrit l’utilisation de menus dans une application Xamarin.Mac. Il décrit la création et gestion des menus et des éléments de menu dans Xcode et Interface générateur et leur utilisation par programmation._
 
@@ -225,7 +226,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 Même si votre application n’utilise pas `NSDocuments`, toujours utiliser le `NSDocumentController` pour maintenir le **ouvrir récente** menu en envoyant un `NSUrl` avec l’emplacement du fichier à la `NoteNewRecentDocumentURL` méthode de la `SharedDocumentController`.
 
-Ensuite, vous devez remplacer le `OpenFile` méthode du délégué d’application pour ouvrir n’importe quel fichier que l’utilisateur sélectionne à partir de la **ouvrir récente** menu. Par exemple :
+Ensuite, vous devez remplacer le `OpenFile` méthode du délégué d’application pour ouvrir n’importe quel fichier que l’utilisateur sélectionne à partir de la **ouvrir récente** menu. Exemple :
 
 ```csharp
 public override bool OpenFile (NSApplication sender, string filename)
@@ -424,7 +425,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 Tout comme la fonction intégrée **premier répondeur** les actions qui sont d’aux éléments de menu standard, vous pouvez créer de nouvelles actions personnalisées et les associer aux éléments de menu dans le Générateur de l’Interface.
 
-Tout d’abord, définissez une action personnalisée sur l’un des contrôleurs de fenêtre de votre application. Par exemple :
+Tout d’abord, définissez une action personnalisée sur l’un des contrôleurs de fenêtre de votre application. Exemple :
 
 ```csharp
 [Action("defineKeyword:")]

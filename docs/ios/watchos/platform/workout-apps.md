@@ -1,5 +1,5 @@
 ---
-title: Applications d’entraînement
+title: watchOS applications entraînement dans Xamarin
 description: Cet article décrit les améliorations Apple a apportées aux applications d’entraînement dans watchOS 3 et comment les implémenter dans Xamarin.
 ms.prod: xamarin
 ms.assetid: F1D19635-A738-43E5-9873-1FC1BA44EEDF
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 96eb2eaca15ed0bccbb4c5cdb6a855fc7e0e3bb1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a9e1ed8c0808ad42d96ac84d79721a5c706a27ea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791704"
 ---
-# <a name="workout-apps"></a>Applications d’entraînement
+# <a name="watchos-workout-apps-in-xamarin"></a>watchOS applications entraînement dans Xamarin
 
 _Cet article décrit les améliorations Apple a apportées aux applications d’entraînement dans watchOS 3 et comment les implémenter dans Xamarin._
 
@@ -83,10 +84,10 @@ Il existe trois étapes principales pour démarrer une Session d’entraînement
 Une application peut accéder aux données HealthKit de l’utilisateur, il doit demander et recevoir l’autorisation de l’utilisateur. Selon la nature de l’application d’entraînement il risque de rendre les types de requêtes suivants :
 
 - Autorisation d’écrire des données :
-    - Workouts
+    - Sommeil
 - Autorisation de lire des données :
     - Énergie consommée
-    - Distance
+    - distance
     - Rythme cardiaque  
 
 Avant d’une application peut demander l’autorisation, il doit être configuré pour accéder à HealthKit.

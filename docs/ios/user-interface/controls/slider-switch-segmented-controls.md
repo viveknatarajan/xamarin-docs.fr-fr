@@ -1,27 +1,28 @@
 ---
-title: Curseurs, les commutateurs et les contrôles segmentés
+title: Curseurs, les commutateurs et les contrôles segmentés dans Xamarin.iOS
+description: Ce document présente les diapositives, les commutateurs et les contrôles segmentés dans Xamarin.iOS, décrivant la façon de les manipuler par programme et dans le concepteur iOS.
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3c98ea19b3f925e71f72b09d5356286d676a9f71
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a5d9e76c41eba4e16cab041daa67d3a5d8a584
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790027"
 ---
-# <a name="sliders-switches-and-segmented-controls"></a>Curseurs, les commutateurs et les contrôles segmentés
+# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Curseurs, les commutateurs et les contrôles segmentés dans Xamarin.iOS
 
 <a name="Sliders" />
-
 
 ## <a name="sliders"></a>Contrôles Slider
 
 Le contrôle slider permet la sélection simple d’une valeur numérique dans une plage. Par défaut, le contrôle à une valeur comprise entre 0 et 1, mais ces limites peuvent être personnalisés.
 
- [![](slider-switch-segmented-controls-images/image25a.png "Slider")](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image25a.png "Curseur")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 La capture d’écran suivante montre les propriétés qui sont modifiables dans le concepteur :
 
@@ -49,7 +50,7 @@ Le curseur personnalisé ressemble à ceci :
  [![](slider-switch-segmented-controls-images/image27a.png "Curseur personnalisé")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Il y a actuellement un [bogue](http://stackoverflow.com/a/19496179) à l’origine de la `ThumbTint` pour ne pas afficher au moment de l’exécution comme prévu. Vous pouvez ajouter la ligne suivante de code **avant** le code ci-dessus comme solution de contournement. [[Source](http://stackoverflow.com/a/21396794)]:
+> Il y a actuellement un [bogue](http://stackoverflow.com/a/19496179) à l’origine de la `ThumbTint` pour ne pas afficher au moment de l’exécution comme prévu. Vous pouvez ajouter la ligne suivante de code **avant** le code ci-dessus comme solution de contournement. [[Source](http://stackoverflow.com/a/21396794)] :
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 

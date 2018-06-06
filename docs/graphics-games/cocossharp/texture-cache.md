@@ -1,16 +1,17 @@
 ---
-title: Mise en cache de texture à l’aide de CCTextureCache
+title: La mise en cache de texture à l’aide de CCTextureCache
 description: Classe de CCTextureCache de CocosSharp fournit un moyen standard de les organiser, de cache et le déchargement de contenu. Il est particulièrement utile pour les jeux de grande taille qui peut ne pas correspondre entièrement en mémoire vive, ce qui simplifie le processus de regroupement et à la suppression des textures.
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: bb75efea0914827f1d59a8e0943584597f91803a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c217d8a935ae971aab472b05968c0251366362b2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783686"
 ---
 # <a name="texture-caching-using-cctexturecache"></a>La mise en cache de texture à l’aide de CCTextureCache
 

@@ -1,15 +1,17 @@
 ---
 title: Pourquoi n’est pas Jenkins prend-il en charge Xamarin ?
+description: Ce document décrit un haut niveau, l’interaction de Xamarin avec le système de Jenkins CI. Elle explique également quelques problèmes courants qui apparaissent lorsque vous travaillez avec Jenkins.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 37fc134f7e97af74f5bb019f3262972273f0c4cf
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: cf1a59d3084f178187209fdf3999af10efe6203a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782448"
 ---
 # <a name="why-isnt-jenkins-supported-by-xamarin"></a>Pourquoi n’est pas Jenkins prend-il en charge Xamarin ?
 
@@ -24,6 +26,7 @@ L’exception à cette règle concerne les problèmes qui peuvent être isolées
 Comme indiqué ci-dessus Jenkins problèmes ne sont pas pris en charge directement par notre équipe ; le [à l’aide de Jenkins avec Xamarin](~/tools/ci/jenkins-walkthrough.md) guide peut être utilisé pour configurer un serveur Jenkins CI intégré avec Xamarin. 
 
 ## <a name="fixes-for-common-issues"></a>Résout les problèmes courants
+
 ### <a name="jenkins-is-unable-to-find-the-android-sdk"></a>Jenkins est impossible de trouver le SDK Android
 
 Le message d’erreur pour résoudre ce problème est quelque chose comme ceci :

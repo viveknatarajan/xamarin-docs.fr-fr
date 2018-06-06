@@ -1,23 +1,20 @@
 ---
-title: Utilisation de texte et les champs de recherche
-description: Cet article décrit la conception et l’utilisation de texte et les champs de recherche à l’intérieur d’une application Xamarin.tvOS.
+title: Utilisation de tvOS, texte et les champs de recherche dans Xamarin
+description: Ce document décrit l’utilisation des champs de recherche et de texte dans une application de tvOS générée avec Xamarin. Il fournit une vue d’ensemble de champs de recherche et de texte et explique les claviers, intégration de la table de montage séquentiel, recherche des modèles de données et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 220c6e3d1c6f358c67a2f596c977f4d2132298a8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4bf71df62bd6ffd88f42d31809444cd7b3350b66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789720"
 ---
-# <a name="working-with-text-and-search-fields"></a>Utilisation de texte et les champs de recherche
-
-_Cet article décrit la conception et l’utilisation de texte et les champs de recherche à l’intérieur d’une application Xamarin.tvOS._
-
-
+# <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Utilisation de tvOS, texte et les champs de recherche dans Xamarin
 
 À la demande, votre application Xamarin.tvOS peut demander des petits éléments de texte à partir de l’utilisateur (par exemple, l’ID utilisateur et mots de passe) à l’aide d’un champ de texte et le clavier visuel :
 

@@ -6,12 +6,13 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 8f284fefd260764c6f09d78d2518bfd115782cd2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/01/2018
+ms.openlocfilehash: b942bb1be3441b1fb1a8bd65016914b3ecddbb26
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732318"
 ---
 # <a name="understanding-android-api-levels"></a>Présentation des niveaux d’API Android
 
@@ -29,6 +30,10 @@ Xamarin.Android expose trois paramètres de projet au niveau d’API Android :
 -   [Cibler la Version Android](#target) &ndash; spécifie la version d’Android que votre application est destinée à s’exécuter. Ce niveau de l’API est utilisé au *exécuter* temps par Android.
 
 Avant de pouvoir configurer un niveau de l’API pour votre projet, vous devez installer les composants de plateforme de kit de développement logiciel pour le niveau d’API. Pour plus d’informations sur le téléchargement et installation des composants du SDK Android, consultez [le programme d’installation du Kit de développement logiciel Android](~/android/get-started/installation/android-sdk.md).
+
+> [!NOTE]
+> À compter d’août 2018, la Console de lecture de Google nécessite que de nouvelles applications ciblent de niveau de l’API 26 (8.0 Android) ou une version ultérieure.
+Les applications existantes seront requis pour cibler le niveau de l’API 26 ou supérieur à compter de novembre 2018. Pour plus d’informations, consultez [amélioration des performances sur Google Play pour les années à venir et sécurité de l’application](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -174,10 +179,6 @@ Le Framework cible identifie les versions de bibliothèque que votre application
 
 Nous vous conseillons de toujours compiler avec la *dernière* version cible de .NET Framework disponible. Cela vous offre des messages d’avertissement utiles pour toutes les API déconseillées qui peuvent être appelés par votre code. À l’aide de la dernière version du Framework cible est particulièrement important lorsque vous utilisez les dernières versions de bibliothèque de prise en charge &ndash; chaque bibliothèque attend votre application doit être compilée au niveau d’API minimal de cette bibliothèque de prise en charge ou supérieur. 
 
-> [!NOTE]
-> À compter d’août 2018, la Console de lecture de Google nécessite que de nouvelles applications ciblent de niveau de l’API 26 (8.0 Android) ou une version ultérieure.
-Les applications existantes seront requis pour cibler le niveau de l’API 26 ou supérieur à compter de novembre 2018. Pour plus d’informations, consultez [amélioration des performances sur Google Play pour les années à venir et sécurité de l’application](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
-
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -281,7 +282,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
 
 Dans cet exemple, cible Framework de notre application a la valeur **Android 5.0 (API niveau 21)** et sa version minimale Android est définie sur **Android 4.1 (API niveau 16)**. Étant donné que `SetCategory` est disponible dans le niveau de l’API `Android.OS.BuildVersionCodes.Lollipop` et versions ultérieures, cet exemple de code appelle `SetCategory` uniquement lorsqu’il est réellement disponible &ndash; il sera *pas* essaie d’appeler `SetCategory` lors de l’API niveau est 16, 17, 18, 19 ou 20. La fonctionnalité est réduite sur ces versions d’Android antérieures uniquement dans la mesure où les notifications ne sont pas triées correctement (car ils ne sont pas classés par type), mais les notifications sont toujours publiées pour avertir l’utilisateur. Notre application fonctionne toujours, mais ses fonctionnalités sont moindre légèrement.
 
-En général, la vérification de version de build permet à votre code de décider lors de l’exécution entre la nouvelle méthode par rapport à l’ancienne méthode de faire quelque chose. Par exemple :
+En général, la vérification de version de build permet à votre code de décider lors de l’exécution entre la nouvelle méthode par rapport à l’ancienne méthode de faire quelque chose. Exemple :
 
 ```csharp
 if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)

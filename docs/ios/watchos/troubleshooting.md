@@ -1,6 +1,6 @@
 ---
 title: watchOS résolution des problèmes
-description: Problèmes connus et solutions pour les problèmes de développement watchOS.
+description: Ce document traite des problèmes connus et solutions de contournement pour le développement watchOS avec Xamarin. Elle décrit les images avec des problèmes, ajoutez manuellement les fichiers de contrôleur d’interface, lancer une application de surveillance à partir de la ligne de commande et bien plus encore.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
@@ -8,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6e7a7dd09d65b88831136662d8718886aaf483c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4e84028336669738c40da9e37cd22f32ba11dfc1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791763"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS résolution des problèmes
 
@@ -96,7 +97,7 @@ Il est facile de supprimer le canal alpha sur Mac OS X à l’aide de la **aper�
 
 2. Faites glisser une nouvelle `InterfaceController` sur le plan conceptuel :
 
-    ![](troubleshooting-images/add-1.png "A InterfaceController")
+    ![](troubleshooting-images/add-1.png "Un InterfaceController")
 
 3. Vous pouvez maintenant faire glisser des contrôles sur le contrôleur d’interface (par exemple). les étiquettes et les boutons) mais vous ne peut pas créer prises ou actions encore, étant donné qu’aucun **.h** fichier d’en-tête. Les étapes suivantes provoquera requis **.h** fichier d’en-tête doit être créé.
 
@@ -175,7 +176,7 @@ Si tout a fonctionné correctement, il doit apparaître automatiquement dans le 
 
     Lorsque le focus est dans le volet du code, assurez-vous que vous êtes examiner le **.h** fichier d’en-tête et pas avec le bouton droit dans la barre de navigation et sélectionnez le fichier approprié (**MyInterfaceController.h**)
 
-    ![](troubleshooting-images/add-8.png "Select MyInterfaceController")
+    ![](troubleshooting-images/add-8.png "Sélectionnez MyInterfaceController")
 
 10. Vous pouvez désormais créer des points de vente et les actions par **Ctrl + glisser** à partir de la table de montage séquentiel dans le **.h** fichier d’en-tête.
 

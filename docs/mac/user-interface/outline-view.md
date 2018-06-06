@@ -1,5 +1,5 @@
 ---
-title: Mode plan
+title: Mode plan dans Xamarin.Mac
 description: Cet article décrit l’utilisation des vues hiérarchiques dans une application Xamarin.Mac. Il décrit la création et gérez les vues hiérarchiques dans Xcode et Interface générateur et leur utilisation par programmation.
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 82cb3afadf7615fdd92476371e9ab80cd1228b02
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a12eee5f473ffdc6a235faeb55c0a3d6754f4629
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792825"
 ---
-# <a name="outline-views"></a>Mode plan
+# <a name="outline-views-in-xamarinmac"></a>Mode plan dans Xamarin.Mac
 
 _Cet article décrit l’utilisation des vues hiérarchiques dans une application Xamarin.Mac. Il décrit la création et gérez les vues hiérarchiques dans Xcode et Interface générateur et leur utilisation par programmation._
 
@@ -603,7 +604,7 @@ Maintenant si nous exécutons l’application, l’utilisateur peut modifier les
 
 ## <a name="using-images-in-outline-views"></a>L’utilisation d’Images dans les vues de plan
 
-Pour inclure une image dans le cadre de la cellule dans une `NSOutlineView`, vous devez modifier la façon dont les données sont retournées par la vue de structure du `NSTableViewDelegate's` `GetView` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Par exemple :
+Pour inclure une image dans le cadre de la cellule dans une `NSOutlineView`, vous devez modifier la façon dont les données sont retournées par la vue de structure du `NSTableViewDelegate's` `GetView` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Exemple :
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -687,7 +688,7 @@ Cet article a pris une présentation détaillée sur l’utilisation des vues de
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacOutlines (sample)](https://developer.xamarin.com/samples/mac/MacOutlines/)
+- [MacOutlines (exemple)](https://developer.xamarin.com/samples/mac/MacOutlines/)
 - [MacImages (exemple)](https://developer.xamarin.com/samples/mac/MacImages/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Vues Table](~/mac/user-interface/table-view.md)

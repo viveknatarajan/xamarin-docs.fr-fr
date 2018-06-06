@@ -1,32 +1,32 @@
 ---
-title: TextKit
-description: L’API du Kit de texte offre des fonctionnalités de mise en page et le rendu de Xamarin.iOS de texte puissant.
+title: TextKit dans Xamarin.iOS
+description: Ce document décrit comment utiliser TextKit dans Xamarin.iOS. TextKit fournit des fonctionnalités de mise en page et le rendu de texte puissant.
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 78ca0d9505c9f56dc6476bd04dab560a70b2c4b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac80d1d07f5649d377dd6fdefcb4911ba9ec2dcb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788333"
 ---
-# <a name="text-kit"></a>Kit de texte
+# <a name="textkit-in-xamarinios"></a>TextKit dans Xamarin.iOS
 
-Kit de texte est une nouvelle API qui offre des fonctionnalités de mise en page et le rendu de texte puissant. Il repose sur le framework du texte de la base de bas niveau, mais il est beaucoup plus facile à utiliser que le texte de base.
+TextKit est une nouvelle API qui offre des fonctionnalités de mise en page et le rendu de texte puissant. Il s’appuie sur l’infrastructure de texte de la base de bas niveau, mais il est beaucoup plus facile à utiliser que le texte de base.
 
-Pour rendre les fonctionnalités du Kit de texte disponibles pour les contrôles standard, plusieurs contrôles de texte iOS ont été réimplémentées à utiliser le Kit de texte, y compris :
+Pour rendre les fonctionnalités de TextKit disponible pour les contrôles standard, plusieurs contrôles de texte iOS ont été réimplémentées à utiliser TextKit, y compris :
 
 -  UITextView
 -  UITextField
 -  UILabel
 
-
 ## <a name="architecture"></a>Architecture
 
-Kit de texte fournit une architecture multiniveau qui sépare le stockage de texte à partir de la disposition et l’affichage, y compris les classes suivantes :
+TextKit fournit une architecture multiniveau qui sépare le stockage de texte à partir de la disposition et l’affichage, y compris les classes suivantes :
 
 -  `NSTextContainer` : Fournit le système de coordonnées et de la géométrie qui est utilisé pour la mise en page texte.
 -  `NSLayoutManager` – Est disposé texte en activant le texte dans les glyphes. 
@@ -37,7 +37,7 @@ Ces trois classes sont appliquées à une vue qui restitue le texte. Le texte in
 
 La figure suivante illustre cette architecture :
 
- ![](textkit-images/textkitarch.png "La figure suivante illustre l’architecture du Kit de texte")
+ ![](textkit-images/textkitarch.png "La figure suivante illustre l’architecture TextKit")
 
 ## <a name="text-storage-and-attributes"></a>Attributs et stockage de texte
 
@@ -56,7 +56,7 @@ Après avoir `EndEditing` est appelée, les modifications sont envoyées au Gest
 
 ## <a name="layout-with-exclusion-path"></a>Mise en page avec le chemin d’Exclusion
 
-Kit de texte également prend en charge la mise en page et permet des scénarios complexes telles que le texte de plusieurs colonnes et placer du texte autour des chemins d’accès spécifiés appelé *chemins d’accès d’exclusion*. Chemins d’accès d’exclusion sont appliquées pour le conteneur de texte, ce qui modifie la géométrie de la disposition du texte, ce qui entraîne le texte autour les chemins d’accès spécifiés.
+TextKit également prend en charge la mise en page et permet des scénarios complexes telles que le texte de plusieurs colonnes et placer du texte autour des chemins d’accès spécifiés appelé *chemins d’accès d’exclusion*. Chemins d’accès d’exclusion sont appliquées pour le conteneur de texte, ce qui modifie la géométrie de la disposition du texte, ce qui entraîne le texte autour les chemins d’accès spécifiés.
 
 Ajout d’un chemin d’exclusion exige la définition du `ExclusionPaths` propriété sur le Gestionnaire de disposition. Cette propriété, le Gestionnaire de disposition invalider la mise en page de texte et de placer le texte autour du chemin d’exclusion.
 
@@ -139,10 +139,10 @@ public class ExclusionPathView : UITextView
 }
 ```
 
-Ce code ajoute la prise en charge pour le dessin de l’affichage de texte à l’aide de graphiques de base. Étant donné que la `UITextView` classe est désormais intégré pour utiliser le Kit de texte pour son rendu de texte et la mise en page, il peut utiliser toutes les fonctionnalités du Kit de texte, telles que la définition des chemins d’accès d’exclusion.
+Ce code ajoute la prise en charge pour le dessin de l’affichage de texte à l’aide de graphiques de base. Étant donné que la `UITextView` classe est désormais intégré pour utiliser TextKit pour son rendu de texte et la mise en page, il peut utiliser toutes les fonctionnalités de TextKit, telles que la définition des chemins d’accès d’exclusion.
 
 > [!IMPORTANT]
-> Sous-classes de cet exemple `UITextView` pour ajouter une touche de prise en charge de dessin. Sous-classement `UITextView` n’est pas nécessaire pour obtenir les fonctionnalités du Kit de texte.
+> Sous-classes de cet exemple `UITextView` pour ajouter une touche de prise en charge de dessin. Sous-classement `UITextView` n’est pas nécessaire pour obtenir les fonctionnalités de TextKit.
 
 
 

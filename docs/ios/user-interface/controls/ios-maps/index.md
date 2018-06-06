@@ -1,21 +1,20 @@
 ---
-title: Maps
-description: e/s inclut le MapKit framework, ce qui le rend faciles à ajouter est mappé à une application. À l’aide du Kit de la carte, les applications iOS peuvent ajouter des cartes interactifs qui prennent en charge des fonctionnalités telles que le panoramique et zoom, affichant l’emplacement de l’utilisateur et les graphiques enrichi de superposition sur une carte. Cet article examine plusieurs fonctionnalités du Kit de la carte, montrant comment tirer parti de ces pour générer des données géographiques dans une application
+title: Mappages de Xamarin.iOS
+description: Ce document décrit le framework MapKit iOS et comment il est utilisé avec Xamarin.iOS. Elle explique comment ajouter un mappage, le style, panoramique et zoom, travailler avec l’emplacement de l’utilisateur, ajouter des annotations, travailler avec des légendes et les superpositions et effectuer la recherche locale.
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3649c8eb9c8c1a82940b8e2eece7d2bfd005d024
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790228"
 ---
-# <a name="maps"></a>Maps
-
-_e/s inclut le MapKit framework, ce qui le rend faciles à ajouter est mappé à une application. À l’aide du Kit de la carte, les applications iOS peuvent ajouter des cartes interactifs qui prennent en charge des fonctionnalités telles que le panoramique et zoom, affichant l’emplacement de l’utilisateur et les graphiques enrichi de superposition sur une carte. Cet article examine plusieurs fonctionnalités du Kit de la carte, montrant comment tirer parti de ces pour générer des données géographiques dans une application_
+# <a name="maps-in-xamarinios"></a>Mappages de Xamarin.iOS
 
 Les cartes sont une fonctionnalité courante dans tous les systèmes d’exploitation mobiles modernes. iOS offre la prise en charge du mappage en mode natif par le biais du Kit de la carte. Kit de la carte, les applications peuvent facilement ajouter des mappages riches et interactives. Ces mappages peuvent être personnalisés dans une variété de différentes manières, comme l’ajout d’annotations pour marquer des emplacements sur une carte, recouvrir des graphiques des formes arbitraires. Kit de carte possède même prise en charge intégrée pour afficher l’emplacement actuel d’un périphérique.
 
@@ -415,4 +414,4 @@ Cet article examiné le *carte* *Kit* framework pour iOS. Tout d’abord, il exa
 ## <a name="related-links"></a>Liens associés
 
 - [SearchController](https://developer.xamarin.com/recipes/ios/content_controls/search-controller/)
-- [MapDemo (sample)](https://developer.xamarin.com/samples/monotouch/MapDemo)
+- [MapDemo (exemple)](https://developer.xamarin.com/samples/monotouch/MapDemo)

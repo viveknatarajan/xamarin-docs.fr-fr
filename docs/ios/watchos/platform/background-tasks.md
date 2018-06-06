@@ -1,21 +1,20 @@
 ---
-title: Tâches d’arrière-plan
-description: Utiliser les nouvelles tâches en arrière-plan watchOS 3 pour garantir qu'une application espion a toujours les dernières données et des captures instantanées de la station d’accueil.
+title: watchOS les tâches en arrière-plan dans Xamarin
+description: Ce document décrit comment utiliser des tâches en arrière-plan avec watchOS dans Xamarin, étudier les types de tâches en arrière-plan, l’utilisation des ressources, implémentation des tâches en arrière-plan, planification, meilleures pratiques et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 0279aed1e694e3b38dcb8189819d88740c37b6ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ab53d4aea32cf41c492e286c18cbe85a619889a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792045"
 ---
-# <a name="background-tasks"></a>Tâches d’arrière-plan
-
-_Utiliser les nouvelles tâches en arrière-plan watchOS 3 pour garantir qu'une application espion a toujours les dernières données et des captures instantanées de la station d’accueil._
+# <a name="watchos-background-tasks-in-xamarin"></a>watchOS les tâches en arrière-plan dans Xamarin
 
 Avec watchOS 3, il existe trois manières principales qu’une application espion peut maintenir ses informations à jour : 
 
@@ -55,7 +54,7 @@ Comme indiqué ci-dessus, le système watchOS sort de l’application à l’aid
 
 Apple suggérer tirer pleinement parti de cette tâche (car il est de ce type d’une ressource limitée à l’application) à maintenir jusqu'à ce que l’application a terminé le processus de mise à jour lui-même.
 
-Le système ces offre des tâches en appelant la nouvelle `HandleBackgroundTasks` méthode de la `WKExtensionDelegate` déléguer. Par exemple :
+Le système ces offre des tâches en appelant la nouvelle `HandleBackgroundTasks` méthode de la `WKExtensionDelegate` déléguer. Exemple :
 
 ```csharp
 using System;
@@ -544,8 +543,8 @@ Lorsqu’une application est en arrière-plan, le système impose des limites pl
 
 - Il ne reçoit que quelques secondes pour terminer une tâche donnée. Le système prend en considération non seulement la quantité de temps passé, mais également la quantité d’énergie du processeur l’application consomme pour dériver de cette limite.
 - N’importe quelle application qui dépasse la limite est supprimée avec les codes d’erreur suivants :
-    - **CPU** - 0xc51bad01
-    - **Time** - 0xc51bad02
+    - **Processeur** -0xc51bad01
+    - **Heure** -0xc51bad02
 - Le système sera imposent des limites différentes en fonction du type de tâche en arrière-plan a demandé à l’application à exécuter. Par exemple, `WKApplicationRefreshBackgroundTask` et `WKURLSessionRefreshBackgroundTask` tâches figurent les runtimes légèrement plus sur les autres types de tâches en arrière-plan.
 
 <a name="Complications-and-App-Updates" />

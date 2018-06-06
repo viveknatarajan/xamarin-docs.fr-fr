@@ -1,17 +1,19 @@
 ---
-title: MonoTouch.Dialog Json Markup
+title: Balisage de Json MonoTouch.Dialog
+description: Ce document décrit la syntaxe JSON qui peut être utilisée pour créer une interface utilisateur de Xamarin.iOS à l’aide de MonoTouch.Dialog.
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 02c95f06571a3c242481769846d7cab51450f2ca
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc3f4ea87bbd381a4a1767fb9179fb1bcf0c56d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790755"
 ---
-# <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json Markup
+# <a name="monotouchdialog-json-markup"></a>Balisage de Json MonoTouch.Dialog
 
 Cette page décrit le balisage Json accepté par MonoTouch.Dialog [JsonElement](https://developer.xamarin.com/api/type/MonoTouch.Dialog.JsonElement/)
 
@@ -249,7 +251,7 @@ La propriété d’arrière-plan définit la couleur d’arrière-plan de la cel
  <a name="caption" />
 
 
-### <a name="caption"></a>caption
+### <a name="caption"></a>Légende
 
 La chaîne principale à afficher sur l’élément de rendu. La police et couleur peuvent être personnalisés en définissant le `"textcolor"` et `"font"` propriétés. Le style de rendu est déterminé par le `"style"` propriété.
 
@@ -268,14 +270,14 @@ La couleur à utiliser pour le texte principal ou le texte détaillé.
 La police à utiliser pour la légende ou le texte détaillé. Le format d’une spécification de police est le nom de police suivi éventuellement d’un tiret et de la taille du point.
 Spécifications de police valides sont les suivants :
 
--  "Helvetica"
--  "Helvetica-14"
+-  « Helvetica »
+-  « Helvetica-14 »
 
 
  <a name="linebreak" />
 
 
-### <a name="linebreak"></a>linebreak
+### <a name="linebreak"></a>saut de ligne
 
 Détermine la façon dont les lignes sont décomposées. Les valeurs possibles sont :
 
@@ -294,7 +296,7 @@ Les deux `character-wrap` et `word-wrap` peut être utilisé avec le `"lines"` p
 
 ### <a name="ontap-and-onaccessorytap"></a>ONTAP et onaccessorytap
 
-Ces propriétés doivent pointer vers un nom de méthode statique qui prend un objet en tant que paramètre dans votre application. Lorsque vous créez votre hiérarchie à l’aide des méthodes JsonDialog.FromFile ou JsonDialog.FromJson, vous pouvez passer une valeur d’objet facultatif. Valeur de cet objet est ensuite passée à vos méthodes. Cela permet de passer un contexte à votre méthode statique. Par exemple :
+Ces propriétés doivent pointer vers un nom de méthode statique qui prend un objet en tant que paramètre dans votre application. Lorsque vous créez votre hiérarchie à l’aide des méthodes JsonDialog.FromFile ou JsonDialog.FromJson, vous pouvez passer une valeur d’objet facultatif. Valeur de cet objet est ensuite passée à vos méthodes. Cela permet de passer un contexte à votre méthode statique. Exemple :
 
 ```csharp
 class Foo {
@@ -359,7 +361,7 @@ La valeur secondaire à afficher sur l’élément de rendu. La disposition de c
 
 ## <a name="boolean-elements"></a>Éléments booléennes
 
-Éléments booléennes doivent définir le type sur `"bool"`, peut contenir un `"caption"` pour afficher et `"value"` est définie sur true ou false. Si le `"on"` et `"off"` propriétés sont définies, elles sont supposées être des images. Les images sont résolus par rapport au répertoire de travail actuel dans l’application. Si vous souhaitez référencer relatifs à un groupe de fichiers, vous pouvez utiliser la `"~"` comme raccourci pour représenter le répertoire de l’offre groupée d’application. Par exemple `"~/favorite.png"` sera le favorite.png se trouvant dans le fichier de regroupement. Par exemple :
+Éléments booléennes doivent définir le type sur `"bool"`, peut contenir un `"caption"` pour afficher et `"value"` est définie sur true ou false. Si le `"on"` et `"off"` propriétés sont définies, elles sont supposées être des images. Les images sont résolus par rapport au répertoire de travail actuel dans l’application. Si vous souhaitez référencer relatifs à un groupe de fichiers, vous pouvez utiliser la `"~"` comme raccourci pour représenter le répertoire de l’offre groupée d’application. Par exemple `"~/favorite.png"` sera le favorite.png se trouvant dans le fichier de regroupement. Exemple :
 
 ```csharp
 { 
@@ -421,7 +423,7 @@ Vous utilisez des éléments d’entrée pour autoriser l’utilisateur à entre
  <a name="autocorrect" />
 
 
-### <a name="autocorrect"></a>autocorrect
+### <a name="autocorrect"></a>correction automatique
 
 Détermine le style de correction automatique à utiliser pour l’entrée. Les valeurs possibles sont true ou false (ou les chaînes `"yes"` et `"no"`).
 
@@ -441,7 +443,7 @@ Le style de mise en majuscules à utiliser pour l’entrée. Les valeurs possibl
  <a name="caption" />
 
 
-### <a name="caption"></a>caption
+### <a name="caption"></a>Légende
 
 La légende à utiliser pour l’entrée
 

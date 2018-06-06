@@ -1,21 +1,20 @@
 ---
-title: Icônes d’application
-description: Cet article explique comment y compris et la gestion d’un composant de l’image dans une application Xamarin.iOS à utiliser comme icône de l’application.
+title: Icônes d’application Xamarin.iOS
+description: 'Ce document décrit comment utiliser des icônes d’application différents dans Xamarin.iOS : l’icône de l’application, les icônes de la galerie, les icônes des paramètres et iTunes illustration.'
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 3bf9286fe641d836f0877bfe2e17263bf9d7356e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c07f2573aa8ac6e28b2cd6bff56a773e6206aea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783995"
 ---
-# <a name="application-icons"></a>Icônes d’application
-
-_Cet article explique comment y compris et la gestion d’un composant de l’image dans une application Xamarin.iOS à utiliser comme icône de l’application._
+# <a name="application-icons-in-xamarinios"></a>Icônes d’application Xamarin.iOS
 
 Les rubriques suivantes sont traitées en détail :
 
@@ -45,26 +44,26 @@ Les tailles d’image de ressource et les résolutions suivant seront nécessair
 
 - **iPhone : iOS 9 et 10 (iPhone 6 et 7 Plus)**
 
-    ||3x|
+    ||x 3|
     |---|---|
-    |Icône d’application|180x180|
-    |Spotlight|120x120|
-    |Paramètres|87x87|
+    |Icône d’application|180 x 180|
+    |Actualités|120x120|
+    |Paramètres|87 x 87|
 
 - **iPhone : iOS 7 et 8**
 
-    ||1x|x 2|
+    ||1 x|x 2|
     |---|---|---|
     |Icône d’application|60x60<sup>1</sup>|120x120|
-    |Spotlight|40x40<sup>2</sup>|80x80|
+    |Actualités|40x40<sup>2</sup>|80 x 80|
     |Paramètres|-|-|
 
 - **iPhone : iOS 5 et 6**
 
-    ||1x|x 2|
+    ||1 x|x 2|
     |---|---|---|
     |Icône d’application|57 x 57|114x114|
-    |Spotlight|29 x 29|58x58|
+    |Actualités|29 x 29|58x58|
     |Paramètres|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>iPad tailles d’icônes
@@ -74,23 +73,23 @@ Les tailles d’image de ressource et les résolutions suivant seront nécessair
     ||2 x (iPad Pro)|
     |---|---|
     |Icône d’application|167x167<sup>6</sup>|
-    |Spotlight|120x120<sup>6</sup>|
+    |Actualités|120x120<sup>6</sup>|
     |Paramètres|58x58<sup>5</sup>|
 
 - **iPad : iOS 7 et 8**
 
-    ||1x|x 2|
+    ||1 x|x 2|
     |---|---|---|
-    |Icône d’application|76 x 76|152x152|
-    |Spotlight|40 x 40|80x80|
+    |Icône d’application|76 x 76|152 x 152|
+    |Actualités|40 x 40|80 x 80|
     |Paramètres|-|-|
 
 - **iPad : iOS 5 et 6**
 
-    ||1x|x 2|
+    ||1 x|x 2|
     |---|---|---|
     |Icône d’application|72 x 72|144x144|
-    |Spotlight|50 x 50|100x100|
+    |Actualités|50 x 50|100x100|
     |Paramètres|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
  1. Les deux Visual Studio pour Mac et Xcode plus en charge la définition de 1 image x pour iOS 7.
@@ -114,7 +113,7 @@ Pour utiliser un catalogue, procédez comme suit :
 
 1. Double-cliquez sur le `Info.plist` de fichiers dans le **l’Explorateur de solutions** à ouvrir pour le modifier.
 2. Faites défiler jusqu'à la **icônes de l’application** section.
-3. À partir de la **Source** déroulante liste, vérifiez que **AppIcons** est sélectionnée : 
+3. À partir de la **Source** déroulante liste, vérifiez que **AppIcon** est sélectionnée : 
 
     ![](app-icons-images/migrate01.png "Vérifiez que AppIcons est sélectionné.")
 4. À partir de la **l’Explorateur de solutions**, double-cliquez sur le `Assets.xcassets` fichier à ouvrir pour le modifier : 
@@ -131,7 +130,7 @@ Pour utiliser un catalogue, procédez comme suit :
 
 1. Double-cliquez sur le **Info.plist** de fichiers dans le **l’Explorateur de solutions**:
 
-    ![](app-icons-images/icon01w.png "Select Info.plist")
+    ![](app-icons-images/icon01w.png "Sélectionnez le fichier Info.plist.")
 2. Cliquez sur le **visuelles** onglet, puis cliquez sur le **utilisez catalogue** sous **icônes de l’application**: 
 
     ![](app-icons-images/icon02w.png "Sélectionnez l’onglet composants visuels")

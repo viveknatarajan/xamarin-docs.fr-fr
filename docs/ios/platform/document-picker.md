@@ -1,26 +1,25 @@
 ---
-title: Sélecteur de document
-description: Le contrôleur de vue de Document sélecteur accorde aux utilisateurs d’accéder aux fichiers en dehors de bac à sable d’une application. Il s’agit d’un mécanisme simple pour le partage de documents entre les applications. Il permet également de workflows plus complexes, car les utilisateurs peuvent modifier un document unique avec plusieurs applications. Cet article fournit une introduction à l’aide du sélecteur de Document dans une application Xamarin.iOS et les modifications dans les Documents iCloud requis pour prendre en charge.
+title: Sélecteur de document Xamarin.iOS
+description: Ce document décrit le sélecteur de Document iOS et explique comment l’utiliser dans Xamarin.iOS. Il examine les iCloud, documents, code de programme d’installation commun, les extensions de fournisseur de document et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: d9b98611c7d269e590ce6fe2ce0270ef71dacf1e
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: efa1b589ad4afe26d8b87c3db1777660b3e27be6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786884"
 ---
-# <a name="document-picker"></a>Sélecteur de document
-
-_Le contrôleur de vue de Document sélecteur accorde aux utilisateurs d’accéder aux fichiers en dehors de bac à sable d’une application. Il s’agit d’un mécanisme simple pour le partage de documents entre les applications. Il permet également de workflows plus complexes, car les utilisateurs peuvent modifier un document unique avec plusieurs applications. Cet article fournit une introduction à l’aide du sélecteur de Document dans une application Xamarin.iOS et les modifications dans les Documents iCloud requis pour prendre en charge._
+# <a name="document-picker-in-xamarinios"></a>Sélecteur de document Xamarin.iOS
 
 Le sélecteur de Document permet aux documents être partagés entre les applications. Ces documents peuvent être stockés dans iCloud ou d’une autre application. Les documents sont partagés via l’ensemble de [Extensions de fournisseur de Document](~/ios/platform/extensions.md) l’utilisateur a installé sur leur appareil. 
 
 En raison de la difficulté de conserver les documents synchronisés entre les applications et le cloud, ils présentent une certaine complexité nécessaire.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont nécessaire pour terminer les étapes présentées dans cet article :
 
@@ -39,7 +38,7 @@ Pour implémenter les nouvelles fonctionnalités du sélecteur de Document, les 
 -  les appareils iOS peuvent accéder au contenu du dossier du système d’exploitation Mac iCloud.
 
 > [!IMPORTANT]
-> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs de gérer correctement général données Protection règlement (PIBR l’Union européenne).
+> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs à gérer correctement le Règlement général sur la protection des données (RGPD) de l’Union européenne.
 
 ## <a name="what-is-a-document"></a>Description d’un Document ?
 

@@ -1,5 +1,5 @@
 ---
-title: Présentation des Suggestions Proactive
+title: Présentation de Suggestions Proactive dans Xamarin.iOS
 description: Cet article explique comment utiliser des Suggestions Proactive dans l’application Xamarin.iOS à l’engagement de lecteur en permettant au système de façon proactive présenter automatiquement des informations utiles à l’utilisateur.
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b06dbf0e8e108616adb4f77910267aaa1ac71f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f736e9dda00546ddef7cf03457813c7e3d10882b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788014"
 ---
-# <a name="introduction-to-proactive-suggestions"></a>Présentation des Suggestions Proactive
+# <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Présentation de Suggestions Proactive dans Xamarin.iOS
 
 _Cet article explique comment utiliser des Suggestions Proactive dans l’application Xamarin.iOS à l’engagement de lecteur en permettant au système de façon proactive présenter automatiquement des informations utiles à l’utilisateur._
 
@@ -165,7 +166,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>Restauration d’une activité
 
-Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour l’application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Par exemple :
+Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour l’application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -479,7 +480,7 @@ Si l’utilisateur a visité cette page dans Safari et ensuite basculer vers une
 
 Safari extraira quoi que ce soit sur une page web qui est conforme à une des propriétés de schéma suivantes :
 
-- **PostalAddress**
+- **Omettre**
 - **GeoCoordinates**
 - Une propriété de téléphone.
 
@@ -502,7 +503,7 @@ Si l’application gère les adresses figurant dans les formats de texte en fonc
 - L’application peut obtenir des suggestions proactive dans l’application.
 - L’application peut bénéficier de la correction automatique améliorée.
 
-La nouvelle `TextContentType` propriété des contrôles de champ de texte dans iOS 10 permet aux développeurs de définir l’intention de la sémantique pour la valeur que l’utilisateur va entrer dans un champ donné. Par exemple :
+La nouvelle `TextContentType` propriété des contrôles de champ de texte dans iOS 10 permet aux développeurs de définir l’intention de la sémantique pour la valeur que l’utilisateur va entrer dans un champ donné. Exemple :
 
 ```csharp
 var textField = new UITextField();
@@ -531,7 +532,7 @@ Cette section s’intéresser à consommer des Suggestions d’emplacement direc
 - Pour gérer le lancement de l’application avec un MapKit `MKDirectionsRequest` objet.
 - Afin de permettre iOS pour apprendre à proposer de l’application à l’utilisateur à des moments appropriés, selon l’intérêt des utilisateurs.
 
-Lorsque l’application est lancée avec un MapKit `MKDirectionsRequest` de l’objet, il doit automatiquement démarrer en donnant les instructions de l’utilisateur à l’emplacement demandé, ou présenter une interface utilisateur qui facilite la tâche à commencer à obtenir des instructions pour l’utilisateur. Par exemple :
+Lorsque l’application est lancée avec un MapKit `MKDirectionsRequest` de l’objet, il doit automatiquement démarrer en donnant les instructions de l’utilisateur à l’emplacement demandé, ou présenter une interface utilisateur qui facilite la tâche à commencer à obtenir des instructions pour l’utilisateur. Exemple :
 
 
 ```csharp

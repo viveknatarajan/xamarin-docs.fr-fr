@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 84106cf8f699616fae772a6f149681840abca0e5
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733046"
 ---
 # <a name="user-interface"></a>Interface utilisateur
 
@@ -24,6 +25,10 @@ Xamarin.Forms inclut sa propre infrastructure de l’animation est simple et fac
 ## <a name="boxviewboxviewmd"></a>[BoxView](boxview.md)
 
 Le `BoxView` est simplement un rectangle de couleur simple, mais il peut être utilisé pour les éléments décoratifs, rudimentaire graphiques et d’obtention d’entrée tactile interactif interactivité.
+
+## <a name="buttonbuttonmd"></a>[Button](button.md)
+
+Le `Button` répond à un drainage ou d’un clic qui dirige une application pour effectuer une tâche particulière.
 
 ## <a name="colorscolorsmd"></a>[Couleurs](colors.md)
 

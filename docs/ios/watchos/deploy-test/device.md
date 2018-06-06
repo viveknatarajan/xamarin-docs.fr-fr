@@ -1,19 +1,20 @@
 ---
-title: Test sur les appareils espion
-description: Déploiement d’applications à tester sur votre Apple Watch
+title: Test sur les appareils Apple Watch
+description: Ce document décrit comment déployer une application de watchOS générée avec Xamarin pour le test sur une Apple Watch réel. Il traite des profils, de test, de configuration des appareils et fournit des conseils de dépannage.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a960d81d41ff127fa3316e6190dfbf4881305c02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790859"
 ---
-# <a name="testing-on-watch-devices"></a>Test sur les appareils espion
+# <a name="testing-on-apple-watch-devices"></a>Test sur les appareils Apple Watch
 
 Une fois que vous avez suivi la [les étapes de déploiement](~/ios/watchos/deploy-test/index.md) pour créer des ID d’application et des groupes d’applications (si nécessaire), suivez les instructions de cette page pour :
 

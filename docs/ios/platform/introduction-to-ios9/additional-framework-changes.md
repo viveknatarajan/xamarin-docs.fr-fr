@@ -1,16 +1,17 @@
 ---
 title: Modifications des infrastructures supplémentaires iOS 9
-description: Cet article traite des modifications supplémentaires, secondaires ou des améliorations apportées aux infrastructures existantes pour iOS 9.
+description: Ce document décrit les modifications de framework supplémentaires introduites dans iOS 9. Il traite des AVFoundation, AVKit et CloudKit.
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0ae286ddbc61f48cbdd257dc453a2d9680bba703
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 15c9364cf3bdcb8c797882cc9ac76219959de439
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787706"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifications des infrastructures supplémentaires iOS 9
 
@@ -20,9 +21,9 @@ _Cet article traite des modifications supplémentaires, secondaires ou des amél
 
 En plus des principales modifications apportées à iOS, Apple a apporté des modifications et améliorations apportées à plusieurs infrastructures existantes dans iOS 9.
 
-## <a name="av-foundation-framework-additions"></a>Ajouts de Framework AV Foundation
+## <a name="avfoundation-framework-additions"></a>Ajouts de AVFoundation Framework
 
-Dans le framework AV Foundation, le [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) classe maintenant vous permet de spécifier une voix par identificateur en plus de la langue.
+Dans le framework AVFoundation, le [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) classe maintenant vous permet de spécifier une voix par identificateur en plus de la langue.
 
 Par exemple, le code suivant obtient une liste de tous les voix disponibles :
 
@@ -66,7 +67,7 @@ Pour plus d’informations, consultez les documents suivants :
 - [Catalogue de CloudKit : Présentation de CloudKit (/ Cocoa et JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) -exemple d’application d’Apple à l’aide de CloudKit et CloudKit JS.
 
 > [!IMPORTANT]
-> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs de gérer correctement général données Protection règlement (PIBR l’Union européenne).
+> Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs à gérer correctement le Règlement général sur la protection des données (RGPD) de l’Union européenne.
 
 ## <a name="foundation-framework-additions"></a>Ajouts de Framework Foundation
 
@@ -102,7 +103,7 @@ Pour plus d’informations, consultez le site d’Apple [NSProcessInfo référen
 
 ### <a name="reacting-to-low-power-mode"></a>Réagir à Mode alimentation basse
 
-Utilisez le `LowPowerModeEnabled` propriété de la [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) classe pour déterminer si le Mode alimentation basse a été activé sur l’appareil iOS qui l’application est en cours d’exécution. Par exemple :
+Utilisez le `LowPowerModeEnabled` propriété de la [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) classe pour déterminer si le Mode alimentation basse a été activé sur l’appareil iOS qui l’application est en cours d’exécution. Exemple :
 
 ```csharp
 // Is the device in low power mode?

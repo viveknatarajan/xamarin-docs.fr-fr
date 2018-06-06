@@ -1,21 +1,20 @@
 ---
-title: Création d’Interfaces utilisateur d’iOS dans le Code
-description: Xamarin.iOS fournit deux méthodes de création d’une Interface utilisateur pour votre application, avec le Concepteur de Xamarin pour iOS ou dans le code. Cet article explique comment créer des interfaces utilisateur iOS entièrement dans le code. Il montre comment démarrer à partir d’un modèle de projet pour créer un écran de l’application dans un contrôleur en créant une hiérarchie des vues à partir de UIKit. Ensuite, il explique comment créer des vues personnalisées qui peuvent être chargées dans un contrôleur.
+title: Création d’Interfaces utilisateur d’iOS dans le Code dans Xamarin.iOS
+description: Ce document décrit comment utiliser le code pour générer une interface utilisateur pour une application Xamarin.iOS. Il traite des contrôleurs d’affichage, création d’une hiérarchie de la vue, gère une rotation et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: e2f377b11cfb1ff5027cc704de694184d2208c97
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 5e8abc2cea2e2ca8abfada8bc85379d93d183768
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784632"
 ---
-# <a name="creating-ios-user-interfaces-in-code"></a>Création d’Interfaces utilisateur d’iOS dans le Code
-
-_Xamarin.iOS fournit deux méthodes de création d’une Interface utilisateur pour votre application, avec le Concepteur de Xamarin pour iOS ou dans le code. Cet article explique comment créer des interfaces utilisateur iOS entièrement dans le code. Il montre comment démarrer à partir d’un modèle de projet pour créer un écran de l’application dans un contrôleur en créant une hiérarchie des vues à partir de UIKit. Ensuite, il explique comment créer des vues personnalisées qui peuvent être chargées dans un contrôleur._
+# <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Création d’Interfaces utilisateur d’iOS dans le Code dans Xamarin.iOS
 
 L’interface utilisateur d’une application iOS est comme une vitrine – l’application obtient généralement une fenêtre, mais il peut remplir la fenêtre avec comme de nombreux objets il a besoin, et les objets et peut être modifié en fonction de ce que l’application souhaite afficher. Les objets dans ce scénario, les éléments que l’utilisateur voit, sont appelés des affichages. Pour générer un seul écran dans une application, les vues sont empilées les unes sur les autres dans une hiérarchie de vue de contenu, et la hiérarchie est gérée par un seul contrôleur de la vue. Les applications à plusieurs écrans ont plusieurs hiérarchies d’affichage de contenu, chacune avec son propre contrôleur d’affichage. L’application place les affichages dans la fenêtre pour créer une hiérarchie d’affichage de contenu différente selon l’écran sur lequel se trouve l’utilisateur.
 

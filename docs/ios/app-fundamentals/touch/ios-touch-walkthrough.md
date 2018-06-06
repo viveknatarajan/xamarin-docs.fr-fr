@@ -1,18 +1,20 @@
 ---
-title: 'Procédure pas à pas : tactile à l’aide dans iOS'
+title: 'Procédure pas à pas : Utilisation tactile dans Xamarin.iOS'
+description: Ce document décrit comment gérer tactile dans les applications Xamarin.iOS, traitant des interactions tactiles d’exemple reconnaissances de mouvement et modules de reconnaissance de mouvement personnalisée.
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 58066ef0071c8105658f0d766e8f038b2bd3ddf2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fff49599d3843bb09d407316d6964ca54b6a1004
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784788"
 ---
-# <a name="walkthrough--using-touch-in-ios"></a>Procédure pas à pas : tactile à l’aide dans iOS
+# <a name="walkthrough-using-touch-in-xamarinios"></a>Procédure pas à pas : Utilisation tactile dans Xamarin.iOS
 
 Cette procédure pas à pas montre comment écrire du code qui répond à différents types d’événements tactiles. Chaque exemple est contenue dans une autre fenêtre :
 

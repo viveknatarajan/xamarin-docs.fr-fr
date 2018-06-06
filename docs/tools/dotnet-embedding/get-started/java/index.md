@@ -1,21 +1,23 @@
 ---
 title: Mise en route avec Java
+description: Ce document décrit comment démarrer à l’aide de l’incorporation de .NET avec Java. Il traite la configuration système requise, installation et plateformes prises en charge.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: e88e3c8d2dbabebcfff22687d8ea341233a776b5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 84ef5d047b3f70635d74ef5bee7741a7447db677
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793215"
 ---
 # <a name="getting-started-with-java"></a>Mise en route avec Java
 
 Il s’agit de la page de démarrage pour Java, qui couvre les principes de base pour toutes les plateformes prises en charge.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Pour utiliser .NET incorporation avec Java, vous devez :
 

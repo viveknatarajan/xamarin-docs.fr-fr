@@ -1,18 +1,20 @@
 ---
-title: Configuration et les concepts de base dans l’application fournisseur
+title: Principes de base dans l’application achat et la Configuration dans Xamarin.iOS
+description: Ce document décrit les achats dans l’application dans Xamarin.iOS, traitant des informations pertinentes sur les règles, la configuration et iTunes Connect.
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c08d27ce2f5d41b7de1d08ea73232e92f9fa8144
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ded160ad4b31346c400e63d739a3dc21f6304d3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787241"
 ---
-# <a name="in-app-purchase-basics-and-configuration"></a>Configuration et les concepts de base dans l’application fournisseur
+# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Principes de base dans l’application achat et la Configuration dans Xamarin.iOS
 
 Implémentation des achats dans l’application nécessite que l’application d’utiliser l’API StoreKit sur l’appareil. StoreKit gère toutes les communications avec les serveurs d’iTunes d’Apple pour obtenir des informations sur les produits et effectuer des transactions. Le profil de configuration doit être configuré pour l’achat dans l’application et les informations de produit doivent être entrées dans iTunes Connect.
 

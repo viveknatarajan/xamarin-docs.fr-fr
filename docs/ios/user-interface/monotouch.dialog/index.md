@@ -1,21 +1,19 @@
 ---
-title: Introduction aux MonoTouch.Dialog
-description: Le MonoTouch.Dialog (MT. D) Outils d’analyse est une infrastructure indispensable pour le développement de l’interface utilisateur dans Xamarin.iOS rapide d’application. MT. D vous permet de rapidement et facilement définir l’interface utilisateur à l’aide d’une approche déclarative, au lieu de contrôleurs de navigation, les tables, etc. fastidieuses d’application complexe. En outre, MT. D a un ensemble flexible d’API qui permettent aux développeurs avec un contrôle complet ou remet approche, ainsi que des fonctionnalités supplémentaires telles que l’image d’arrière-plan tirer pour actualiser le chargement, rechercher la prise en charge et la génération dynamique de l’interface utilisateur via les données JSON. Ce guide présente les différentes façons de travailler avec MT. D et puis explore profondeur d’usage avancés.
+title: Présentation de MonoTouch.Dialog pour Xamarin.iOS
+description: Ce document décrit MonoTouch.Dialog (MT. D), une infrastructure pour le développement de l’interface utilisateur rapide et déclarative avec Xamarin.iOS. Elle explique comment utiliser les APIs MonoTouch.Dialog pour créer une interface dans du code ou JSON et utiliser des fonctionnalités telles que l’actualisation de l’extraction, recherche, chargement de l’image d’arrière-plan et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6511d8deed1800a8ae655f749feccd249bf4a8c0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790836"
 ---
-# <a name="introduction-to-monotouchdialog"></a>Introduction aux MonoTouch.Dialog
-
-_Le MonoTouch.Dialog (MT. D) Outils d’analyse est une infrastructure indispensable pour le développement de l’interface utilisateur dans Xamarin.iOS rapide d’application. MT. D vous permet de rapidement et facilement définir l’interface utilisateur à l’aide d’une approche déclarative, au lieu de contrôleurs de navigation, les tables, etc. fastidieuses d’application complexe. En outre, MT. D a un ensemble flexible d’API qui permettent aux développeurs avec un contrôle complet ou remet approche, ainsi que des fonctionnalités supplémentaires telles que l’image d’arrière-plan tirer pour actualiser le chargement, rechercher la prise en charge et la génération dynamique de l’interface utilisateur via les données JSON. Ce guide présente les différentes façons de travailler avec MT. D et puis explore profondeur d’usage avancés._
-
+# <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Présentation de MonoTouch.Dialog pour Xamarin.iOS
 
 MonoTouch.Dialog, appelé MT. D pour faire court, est un kit de développement de l’interface utilisateur rapid qui permet aux développeurs de créer des écrans de l’application et de navigation à l’aide des informations plutôt que de créer des contrôleurs de la vue, les tables, etc. fastidieuses. Par conséquent, il fournit une simplification significative de réduction de développement et le code de l’interface utilisateur. Par exemple, considérez la capture d’écran suivante :
 
@@ -113,7 +111,7 @@ Si un RootElement est initialisé avec une valeur de l’élément de la section
 
  [![](images/image4.png "Cette capture d’écran montre une table sur la gauche avec une cellule qui contient le titre de l’écran de détails sur la droite, Dessert, ainsi que la valeur de la desert sélectionné") ](images/image4.png#lightbox) [ ![ ] (images/image5.png "cela capture d’écran ci-dessous illustre une table de gauche avec une cellule qui contient le titre de l’écran de détails sur la droite, Dessert, ainsi que la valeur de la desert sélectionné")](images/image5.png#lightbox)
 
-Éléments racine peuvent également servir à l’intérieur des Sections pour déclencher le chargement d’une nouvelle page de configuration imbriqués, comme indiqué ci-dessus. Lorsqu’il est utilisé dans ce mode la légende fournie est utilisée pendant le rendu à l’intérieur d’une section et est également utilisée comme titre pour la sous-page. Par exemple :
+Éléments racine peuvent également servir à l’intérieur des Sections pour déclencher le chargement d’une nouvelle page de configuration imbriqués, comme indiqué ci-dessus. Lorsqu’il est utilisé dans ce mode la légende fournie est utilisée pendant le rendu à l’intérieur d’une section et est également utilisée comme titre pour la sous-page. Exemple :
 
 ```csharp
 var root = new RootElement ("Meals") {

@@ -1,5 +1,5 @@
 ---
-title: Styles des applications de Xamarin.Forms à l’aide de feuilles de Style en cascade
+title: Styles des applications de Xamarin.Forms à l’aide de feuilles de Style en cascade (CSS)
 description: Xamarin.Forms prend en charge les éléments visuels de style à l’aide de feuilles de Style en cascade (CSS).
 ms.prod: xamarin
 ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 811abacff330bf7b6e6240691cb6a15ebbd9d242
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: 76ca67f7ac8a8e27e5f502455d48874c775fc172
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794083"
 ---
-# <a name="styling-xamarinforms-apps-using-cascading-style-sheets"></a>Styles des applications de Xamarin.Forms à l’aide de feuilles de Style en cascade
+# <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Styles des applications de Xamarin.Forms à l’aide de feuilles de Style en cascade (CSS)
 
 _Xamarin.Forms prend en charge les éléments visuels de style à l’aide de feuilles de Style en cascade (CSS)._
 
@@ -372,7 +373,7 @@ Les propriétés CSS suivantes sont prises en charge par Xamarin.Forms (dans le 
 |`color`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`|_Couleur_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_Chaîne_ \| `initial` |`font-family: Consolas;`|
-|`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_Double_ \| _namedsize_  \| `initial` |`font-size: 12;`|
+|`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_Double_ \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_Double_ \| `initial` |`min-height: 250;`|
 |`margin`|`View`|_Épaisseur_ \| `initial` |`margin: 6 12;`|
@@ -447,4 +448,4 @@ La signification exacte de chaque `namedsize` valeur est dépendante de la plate
 ## <a name="related-links"></a>Liens associés
 
 - [MonkeyAppCSS (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
-- [Styles des applications de Xamarin.Forms à l’aide de Styles de XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [Styler des applications Xamarin.Forms avec des styles XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

@@ -1,23 +1,22 @@
 ---
-title: Implémentation de SiriKit
-description: Cet article décrit les étapes requises pour implémenter la prise en charge SiriKit dans un Xamarin.iOS les applications.
+title: Implémentation de SiriKit dans Xamarin.iOS
+description: Ce document décrit les étapes requises pour implémenter la prise en charge SiriKit dans un Xamarin.iOS les applications. Il traite les intentions extensions et l’interface utilisateur des intentions.
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: a4f38e93cae3c9577a0b1e32067da2cfd2e4796d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: f0e5e05828305bd3656d70105b6e2ad06f9fdc81
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788847"
 ---
-# <a name="implementing-sirikit"></a>Implémentation de SiriKit
+# <a name="implementing-sirikit-in-xamarinios"></a>Implémentation de SiriKit dans Xamarin.iOS
 
 _Cet article décrit les étapes requises pour implémenter la prise en charge SiriKit dans un Xamarin.iOS les applications._
-
-
 
 Nouveau pour iOS 10, SiriKit permet à une application Xamarin.iOS fournir des services qui sont accessibles à l’utilisateur à l’aide de Siri et l’application de cartes sur un appareil iOS. Cet article décrit les étapes requises pour implémenter la prise en charge SiriKit dans les applications Xamarin.iOS en ajoutant les Extensions intentions requises, les Extensions de l’interface utilisateur intentions et le vocabulaire.
 
@@ -301,7 +300,7 @@ La première fois que cette méthode est appelée, une alerte s’affiche invita
 
 ### <a name="localization-and-siri"></a>Localisation et Siri
 
-Sur un appareil iOS, l’utilisateur peut sélectionner une langue pour Siri est différent, puis la valeur par défaut du système. Lorsque vous travaillez avec des données localisées, l’application doit utiliser le `SiriLanguageCode` méthode de la `INPreferences` classe pour obtenir le code de langue à partir de Siri. Par exemple :
+Sur un appareil iOS, l’utilisateur peut sélectionner une langue pour Siri est différent, puis la valeur par défaut du système. Lorsque vous travaillez avec des données localisées, l’application doit utiliser le `SiriLanguageCode` méthode de la `INPreferences` classe pour obtenir le code de langue à partir de Siri. Exemple :
 
 ```csharp
 var language = INPreferences.SiriLanguageCode();
@@ -325,7 +324,7 @@ Vocabulaire spécifique d’utilisateur doit appartenir à une des catégories s
 
 Lorsque vous sélectionnez la terminologie à inscrire en tant que le vocabulaire personnalisé, uniquement choisir des termes qui serait erroné par une personne ne connaissent pas l’application. Jamais register termes courants tels que « Mes entraînement » ou « Mon Album ». Par exemple, l’application MonkeyChat inscrira les surnoms associés à chaque contact dans le carnet d’adresses de l’utilisateur.
 
-L’application fournit le vocabulaire spécifique utilisateur en appelant le `SetVocabularyStrings` méthode de la `INVocabulary` classe et en passant un `NSOrderedSet` collection à partir de l’application principale. L’application doit toujours appeler la `RemoveAllVocabularyStrings` méthode first, pour supprimer les termes du contrat existant avant d’ajouter de nouveaux. Par exemple :
+L’application fournit le vocabulaire spécifique utilisateur en appelant le `SetVocabularyStrings` méthode de la `INVocabulary` classe et en passant un `NSOrderedSet` collection à partir de l’application principale. L’application doit toujours appeler la `RemoveAllVocabularyStrings` méthode first, pour supprimer les termes du contrat existant avant d’ajouter de nouveaux. Exemple :
 
 ```csharp
 using System;
@@ -690,7 +689,7 @@ Pour obtenir une liste complète des domaines intention disponibles, consultez l
 
 ### <a name="configuring-the-main-class"></a>Configuration de la classe principale
 
-Ensuite, le développeur doit configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’intention dans Siri. Il doit être une sous-classe de `INExtension` qui est conforme à la `IINIntentHandler` déléguer. Par exemple :
+Ensuite, le développeur doit configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’intention dans Siri. Il doit être une sous-classe de `INExtension` qui est conforme à la `IINIntentHandler` déléguer. Exemple :
 
 ```csharp
 using System;
@@ -936,7 +935,7 @@ Pour obtenir une liste complète des domaines intention disponibles, consultez l
 
 ### <a name="configuring-the-main-class"></a>Configuration de la classe principale
 
-Configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’interface utilisateur intention dans Siri. Il doit être une sous-classe de `UIViewController` qui est conforme à la `IINUIHostedViewController` interface. Par exemple :
+Configurer la classe principale qui agit en tant que point d’entrée principal pour l’Extension de l’interface utilisateur intention dans Siri. Il doit être une sous-classe de `UIViewController` qui est conforme à la `IINUIHostedViewController` interface. Exemple :
 
 ```csharp
 using System;

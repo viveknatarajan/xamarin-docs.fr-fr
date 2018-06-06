@@ -1,18 +1,20 @@
 ---
-title: Limitations
+title: Limitations de Xamarin.iOS
+description: Ce document décrit les limitations de Xamarin.iOS, traitant des génériques, génériques sous-classes de NSObjects, P/Invoke dans les objets génériques et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/09/2018
-ms.openlocfilehash: 8bd4ce464adf316517e2e1f2299006913bc68736
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 8eb2cd5a749beab6f089479f5992fe3fbc16dd0a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786227"
 ---
-# <a name="limitations"></a>Limitations
+# <a name="limitations-of-xamarinios"></a>Limitations de Xamarin.iOS
 
 Étant donné que les applications sur l’iPhone à l’aide de Xamarin.iOS sont compilées en code statique, il n’est pas possible d’utiliser toutes les installations qui nécessitent la génération de code lors de l’exécution.
 

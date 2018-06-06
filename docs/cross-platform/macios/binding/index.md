@@ -1,15 +1,17 @@
 ---
 title: Liaison Objective-C
+description: Ce document fournit des liens vers les guides pas à pas qui décrivent comment créer c# des liaisons avec code Objective-C, permettant aux développeurs d’utiliser des bibliothèques standard dans les applications Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 721036993061d08dadf8b279e13981caaa51f91f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 55c28387424dd7397280ffa255d94a950618d5ab
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781005"
 ---
 # <a name="binding-objective-c"></a>Liaison Objective-C
 

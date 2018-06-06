@@ -1,21 +1,20 @@
 ---
-title: Onglet Barres et les contrôleurs de la barre d’onglet
-description: les applications iOS à l’aide d’une interface utilisateur de navigation de l’onglet sont générées à l’aide de la classe UITabBarController. Dans cet article, nous examinerons comment configurer une application à onglets qui contient plusieurs contrôleurs et vues. Nous examinerons ensuite comment charger un UITabBarController quand il n’est pas le contrôleur de la racine, par exemple après un écran de connexion.
+title: Onglet Barres et les contrôleurs de barre d’onglet dans Xamarin.iOS
+description: Ce document décrit comment les utiliser avec Xamarin.iOS et contrôleurs de barre d’onglet iOS. Il montre comment configurer un UITabBarController, travailler avec des images, définir des valeurs de badge, travail avec des événements et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d8b096774e60ec0e0b69e109fa5da53c25e66d25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789756"
 ---
-# <a name="tab-bars-and-tab-bar-controllers"></a>Onglet Barres et les contrôleurs de la barre d’onglet
-
-_les applications iOS à l’aide d’une interface utilisateur de navigation de l’onglet sont générées à l’aide de la classe UITabBarController. Dans cet article, nous examinerons comment configurer une application à onglets qui contient plusieurs contrôleurs et vues. Nous examinerons ensuite comment charger un UITabBarController quand il n’est pas le contrôleur de la racine, par exemple après un écran de connexion._
+# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Onglet Barres et les contrôleurs de barre d’onglet dans Xamarin.iOS
 
 Applications avec onglets sont utilisées dans iOS pour prendre en charge des interfaces utilisateur où plusieurs écrans peuvent être consultées dans aucun ordre particulier. Via le `UITabBarController` (classe), les applications peuvent inclure facilement prise en charge de tels scénarios écrans multiples. `UITabBarController` prend en charge de la gestion des écran multiples, ce qui permet au développeur de se concentrer sur les détails de chaque écran.
 

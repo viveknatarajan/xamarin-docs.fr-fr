@@ -1,23 +1,24 @@
 ---
 redirect_url: /xamarin/tools/live-player/
 title: XAML Live Aperçu avant impression
-description: Tester des modifications de code d’application en temps réel sur votre appareil iOS ou Android
+description: Ce document explique comment utiliser Live Xamarin Player pour live aperçu des pages XAML, apporter des modifications au code XAML et voir les modifications apparaissent immédiatement sur l’appareil.
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
 author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017
-ms.openlocfilehash: e485ea596d9c6c7aee378d50ae41d13faa7c0a80
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: cc68044342fca84e62e3b17770170e1d7a23f677
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793700"
 ---
 # <a name="xaml-live-previewing"></a>XAML Live Aperçu avant impression
 
 Un des avantages de Live Xamarin Player est la possibilité de live aperçu des pages XAML, apporter des modifications au code dans Visual Studio et voir les modifications apparaissent instantanément sur votre appareil. L’aperçu en direct est possible sur votre appareil iOS ou Android, ou sur un émulateur ou un simulateur. Ce guide montre comment utiliser la fonctionnalité d’aperçu dynamique pour afficher les écrans XAML individuels.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -30,8 +31,6 @@ Un des avantages de Live Xamarin Player est la possibilité de live aperçu des 
 2. Visual Studio pour Mac 7.2 ou version ultérieure. Nous vous recommandons de la version la plus récente.
 
 -----
-
-
 
 <a name="deploydevice" />
 
@@ -69,13 +68,6 @@ Avant de pouvoir utiliser Xamarin Player Live avec votre appareil iOS ou Android
 
 -----
 
-
-
-
-
-
-
-
 ## <a name="deploying-to-android-emulator"></a>Déploiement sur l’émulateur Android
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -108,10 +100,6 @@ Avant de pouvoir utiliser Xamarin Player Live avec votre appareil iOS ou Android
 
 -----
 
-
-
-
-
 ## <a name="deploying-to-ios-simulator"></a>Déploiement sur iOS Simulator
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -137,13 +125,6 @@ Il n’existe actuellement aucune prise en charge pour l’utilisation de l’ap
     ![](live-view-images/image5.png)  
 
 -----
-
-
-
-
-
-
-
 
 ## <a name="related-links"></a>Liens associés
 

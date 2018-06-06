@@ -1,5 +1,5 @@
 ---
-title: Suggestions proactive
+title: watchOS Proactive des Suggestions dans Xamarin
 description: Cet article explique comment utiliser des Suggestions Proactive dans une application watchOS 3 à l’engagement de lecteur en permettant au système de façon proactive présenter automatiquement des informations utiles à l’utilisateur.
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f22be43f814865c3c14e12aa2aec3a8dbce09b7a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33dccd00e07062e040c2707826ef62b764e11a0e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791279"
 ---
-# <a name="proactive-suggestions"></a>Suggestions proactive
+# <a name="watchos-proactive-suggestions-in-xamarin"></a>watchOS Proactive des Suggestions dans Xamarin
 
 _Cet article explique comment utiliser des Suggestions Proactive dans une application watchOS 3 à l’engagement de lecteur en permettant au système de façon proactive présenter automatiquement des informations utiles à l’utilisateur._
 
 
-Nouvelles watchOS 3, Suggestions Proactive présentes news aux utilisateurs des moyens de s’engager avec application Xamarin.iOS par des informations utiles présentes de manière proactive automatiquement à l’utilisateur au moment opportun.
+Nouvelles watchOS 3, Suggestions Proactive présentes news aux utilisateurs des moyens de s’engager avec une application Xamarin.iOS par des informations utiles présentes de manière proactive automatiquement à l’utilisateur au moment opportun.
 
 
 ## <a name="about-proactive-suggestions"></a>À propos des Suggestions Proactive
@@ -131,7 +132,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>Restauration d’une activité
 
-Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour l’application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Par exemple :
+Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour l’application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -296,7 +297,7 @@ Cette section s’intéresser à consommer des Suggestions d’emplacement direc
 - Pour gérer le lancement de l’application avec un MapKit `MKDirectionsRequest` objet.
 - Permettent de watchOS pour en savoir plus suggérer l’application en fonction de l’intérêt des utilisateurs.
 
-Lorsque l’application est lancée avec un MapKit `MKDirectionsRequest` de l’objet, il doit automatiquement démarrer en donnant les instructions de l’utilisateur à l’emplacement demandé, ou présenter une interface utilisateur qui facilite la tâche à commencer à obtenir des instructions pour l’utilisateur. Par exemple :
+Lorsque l’application est lancée avec un MapKit `MKDirectionsRequest` de l’objet, il doit automatiquement démarrer en donnant les instructions de l’utilisateur à l’emplacement demandé, ou présenter une interface utilisateur qui facilite la tâche à commencer à obtenir des instructions pour l’utilisateur. Exemple :
 
 
 ```csharp

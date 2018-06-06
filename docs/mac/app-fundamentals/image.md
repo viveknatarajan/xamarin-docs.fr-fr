@@ -1,5 +1,5 @@
 ---
-title: Images
+title: Images dans Xamarin.Mac
 description: Cet article décrit l’utilisation des images et des icônes dans une application Xamarin.Mac. Il décrit la création et la maintenance des images nécessaires pour créer l’icône de votre application et l’utilisation d’images dans le code c# et Interface Builder de Xcode.
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: dc33dc78c09c0b5b7cb7533afdd2f95b8ebd9c4e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ae0a42051d56eb8bf002c61dfbc60c99924ff301
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792094"
 ---
-# <a name="images"></a>Images
+# <a name="images-in-xamarinmac"></a>Images dans Xamarin.Mac
 
 _Cet article décrit l’utilisation des images et des icônes dans une application Xamarin.Mac. Il décrit la création et la maintenance des images nécessaires pour créer l’icône de votre application et l’utilisation d’images dans le code c# et Interface Builder de Xcode._
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -246,7 +246,7 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 ## <a name="using-images-with-table-views"></a>L’utilisation d’images avec des vues de table
 
-Pour inclure une image dans le cadre de la cellule dans une `NSTableView`, vous devez modifier la façon dont les données sont retournées par la vue de Table `NSTableViewDelegate's` `GetViewForItem` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Par exemple :
+Pour inclure une image dans le cadre de la cellule dans une `NSTableView`, vous devez modifier la façon dont les données sont retournées par la vue de Table `NSTableViewDelegate's` `GetViewForItem` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Exemple :
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -344,7 +344,7 @@ Pour plus d’informations sur l’utilisation des vues de Table, consultez notr
 
 ## <a name="using-images-with-outline-views"></a>Utilisation d’images avec le mode plan
 
-Pour inclure une image dans le cadre de la cellule dans une `NSOutlineView`, vous devez modifier la façon dont les données sont retournées par la vue de structure du `NSTableViewDelegate's` `GetView` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Par exemple :
+Pour inclure une image dans le cadre de la cellule dans une `NSOutlineView`, vous devez modifier la façon dont les données sont retournées par la vue de structure du `NSTableViewDelegate's` `GetView` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Exemple :
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {

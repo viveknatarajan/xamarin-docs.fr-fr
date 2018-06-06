@@ -1,5 +1,5 @@
 ---
-title: Vues de collection
+title: Vues de collection dans Xamarin.iOS
 description: Vues de collection autoriser le contenu à afficher à l’aide de dispositions arbitraires. Elles permettent créer aisément des mises en page de grille l’emploi, également la prise en charge des dispositions personnalisées.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b9ba2f885364084d6bee67c460b4831c00c7ae55
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790625"
 ---
-# <a name="collection-views"></a>Vues de collection
+# <a name="collection-views-in-xamarinios"></a>Vues de collection dans Xamarin.iOS
 
 _Vues de collection autoriser le contenu à afficher à l’aide de dispositions arbitraires. Elles permettent créer aisément des mises en page de grille l’emploi, également la prise en charge des dispositions personnalisées._
 
@@ -452,7 +453,7 @@ Comme indiqué ci-dessus, une des modifications plus importantes à la vue de co
 
 Dans iOS 9, le moyen le plus rapide pour ajouter la réorganisation à une vue de collection est d’utiliser un `UICollectionViewController`.
 Le contrôleur de vue de collection a maintenant un `InstallsStandardGestureForInteractiveMovement` propriété, qui ajoute une norme *reconnaissance de mouvement* qui prend en charge le glisser-déplacer pour réorganiser les éléments dans la collection.
-Étant donné que la valeur par défaut est `true`, il vous suffit de mettre en œuvre la `MoveItem` méthode de la `UICollectionViewDataSource` classe pour prendre en charge du glisser à réorganiser. Par exemple :
+Étant donné que la valeur par défaut est `true`, il vous suffit de mettre en œuvre la `MoveItem` méthode de la `UICollectionViewDataSource` classe pour prendre en charge du glisser à réorganiser. Exemple :
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -692,7 +693,7 @@ Modifier la **Main.storyboard** fichier et sélectionnez la vue de collection, p
 
 Enregistrer les modifications apportées à l’interface utilisateur et exécuter l’application.
 Si l’utilisateur sélectionne un élément dans la liste et la fait glisser vers un nouvel emplacement, les autres éléments seront anime automatiquement lors de leur déplacement à l’écart de l’élément.
-Lorsque l’utilisateur dépose l’élément dans un nouvel emplacement, il tiendrons à cet emplacement. Par exemple :
+Lorsque l’utilisateur dépose l’élément dans un nouvel emplacement, il tiendrons à cet emplacement. Exemple :
 
 [![](uicollectionview-images/intro01.png "Un exemple de faire glisser un élément vers un nouvel emplacement")](uicollectionview-images/intro01.png#lightbox)
 
@@ -700,7 +701,7 @@ Lorsque l’utilisateur dépose l’élément dans un nouvel emplacement, il tie
 
 ### <a name="using-a-custom-gesture-recognizer"></a>À l’aide d’un module de reconnaissance de mouvement personnalisée
 
-Dans les cas où vous ne pouvez pas utiliser un `UICollectionViewController` et vous devez utiliser une expression régulière `UIViewController`, ou si vous souhaitez prendre plus de contrôle sur les mouvements de glisser-déplacer, vous pouvez créer votre propre module de reconnaissance de mouvement personnalisé et l’ajouter à la vue de Collection lorsque la charge de la vue. Par exemple :
+Dans les cas où vous ne pouvez pas utiliser un `UICollectionViewController` et vous devez utiliser une expression régulière `UIViewController`, ou si vous souhaitez prendre plus de contrôle sur les mouvements de glisser-déplacer, vous pouvez créer votre propre module de reconnaissance de mouvement personnalisé et l’ajouter à la vue de Collection lorsque la charge de la vue. Exemple :
 
 ```csharp
 public override void ViewDidLoad ()

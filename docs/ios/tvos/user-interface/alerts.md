@@ -1,22 +1,22 @@
 ---
-title: Utilisation des alertes
-description: Cet article traite de travailler avec UIAlertController pour afficher un message d’alerte à l’utilisateur dans Xamarin.tvOS.
+title: Utilisation des alertes de tvOS dans Xamarin
+description: Ce document décrit l’utilisation des alertes de tvOS dans Xamarin. Elle explique affiche une alerte, l’ajout de champs de texte et une classe d’assistance.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: da4d2d952687c7e39276ca76af413b83c4519eea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b5125f150a4d57ed27041da2944f4c161434cf93
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789081"
 ---
-# <a name="working-with-alerts"></a>Utilisation des alertes
+# <a name="working-with-tvos-alerts-in-xamarin"></a>Utilisation des alertes de tvOS dans Xamarin
 
 _Cet article traite de travailler avec UIAlertController pour afficher un message d’alerte à l’utilisateur dans Xamarin.tvOS._
-
 
 Si vous avez besoin attirer l’attention de l’utilisateur tvOS ou demander l’autorisation d’effectuer une action destructrice (par exemple, la suppression d’un fichier), vous pouvez présenter un message d’alerte à l’aide de la `UIAlertViewController`:
 
@@ -160,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-Le `AddTextField` méthode ajoute un nouveau champ de texte à l’alerte que vous pouvez ensuite configurer en définissant des propriétés telles que l’espace réservé du texte (le texte qui apparaît lorsque le champ est vide), la valeur de texte par défaut et le type de clavier. Par exemple :
+Le `AddTextField` méthode ajoute un nouveau champ de texte à l’alerte que vous pouvez ensuite configurer en définissant des propriétés telles que l’espace réservé du texte (le texte qui apparaît lorsque le champ est vide), la valeur de texte par défaut et le type de clavier. Exemple :
 
 ```csharp
 // Initialize field
@@ -192,7 +192,7 @@ Une fois que l’utilisateur a entré une valeur dans le champ de texte, nous po
 
 ## <a name="alert-view-controller-helper-class"></a>Classe d’assistance de contrôleur affichage des alertes
 
-Étant donné que l’affichage des types simples, courants d’alertes à l’aide de `UIAlertViewController` peut entraîner un peu de code en double, vous pouvez utiliser une classe d’assistance afin de réduire la quantité de code répétitif. Par exemple :
+Étant donné que l’affichage des types simples, courants d’alertes à l’aide de `UIAlertViewController` peut entraîner un peu de code en double, vous pouvez utiliser une classe d’assistance afin de réduire la quantité de code répétitif. Exemple :
 
 ```csharp
 using System;

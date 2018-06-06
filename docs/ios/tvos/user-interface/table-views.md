@@ -1,5 +1,5 @@
 ---
-title: Utilisation des vues de Table
+title: Utilisation de tvOS des affichages de tableau dans Xamarin
 description: Cet article décrit la conception et l’utilisation des vues de Table et affichage des contrôleurs de Table à l’intérieur d’une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8864e85e4d657fc242f6c06b21c815f62055c9f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c74c2cc7598f50e57a6a450823e2b0ebca4b537
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789565"
 ---
-# <a name="working-with-table-views"></a>Utilisation des vues de Table
+# <a name="working-with-tvos-table-views-in-xamarin"></a>Utilisation de tvOS des affichages de tableau dans Xamarin
 
 _Cet article décrit la conception et l’utilisation des vues de Table et affichage des contrôleurs de Table à l’intérieur d’une application Xamarin.tvOS._
 
@@ -730,7 +731,7 @@ Pour plus d’informations sur l’utilisation d’un `UITableViewController`, c
 
 ## <a name="pulling-it-all-together"></a>Extraction de tous les éléments
 
-Comme indiqué au début de ce document, les vues de Table sont généralement affichées dans un des côtés d’un [mode fractionné](~/ios/tvos/user-interface/split-views.md) en tant que le volet de navigation, avec les détails de l’élément sélectionné est affiché dans le côté opposé. Par exemple : 
+Comme indiqué au début de ce document, les vues de Table sont généralement affichées dans un des côtés d’un [mode fractionné](~/ios/tvos/user-interface/split-views.md) en tant que le volet de navigation, avec les détails de l’élément sélectionné est affiché dans le côté opposé. Exemple : 
 
 [![](table-views-images/intro01.png "Exemple d’application de s’exécuter")](table-views-images/intro01.png#lightbox)
 

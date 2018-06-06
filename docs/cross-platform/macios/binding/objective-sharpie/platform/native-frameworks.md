@@ -1,15 +1,17 @@
 ---
 title: Liaison des infrastructures natif
+description: Ce document décrit comment utiliser l’objectif Sharpie - option d’infrastructure pour créer une liaison à une bibliothèque distribué en tant qu’infrastructure.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: 219295ad9299b36a763289c4aef8e52cd859ceea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 02ee21ce58ecf945893f7e4f94763731abe92018
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781443"
 ---
 # <a name="binding-native-frameworks"></a>Liaison des infrastructures natif
 

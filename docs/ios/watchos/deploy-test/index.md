@@ -1,19 +1,20 @@
 ---
-title: Déploiement et tests
-description: Test sur les appareils et le téléchargement sur l’App Store
+title: Déployer et tester des applications watchOS avec Xamarin
+description: Ce document décrit comment déployer et tester des applications watchOS développées avec Xamarin. Il fournit une liste de vérification de déploiement, explique explicite et l’application générique ID et examine les groupes d’applications.
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 47c63a01d435626fd1637b6ed5f5bb1755c717af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 778583456e74bb7ed3a85dce96bcdbc487aef57a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790940"
 ---
-# <a name="deployment-and-testing"></a>Déploiement et tests
+# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Déployer et tester des applications watchOS avec Xamarin
 
 ## <a name="deployment-checklist"></a>Liste de vérification de déploiement
 

@@ -1,17 +1,19 @@
 ---
-title: Thread
+title: Modèle de thread dans Xamarin.iOS
+description: Ce document décrit comment utiliser les APIs System.Threading dans une application Xamarin.iOS. Il présente la bibliothèque parallèle de tâches création de réponse des applications et garbage collection.
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 05d015d8d255ccc8c6230b1a89e098e187b22b37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784915"
 ---
-# <a name="threading"></a>Thread
+# <a name="threading-in-xamarinios"></a>Modèle de thread dans Xamarin.iOS
 
 Le runtime Xamarin.iOS permet aux développeurs .NET API, les deux explicitement lors de l’utilisation de threads de threading (`System.Threading.Thread, System.Threading.ThreadPool`) et implicitement lorsque vous utilisez les modèles de délégué asynchrone ou les méthodes BeginXXX ainsi que de la gamme complète d’API qui prennent en charge le Bibliothèque parallèle de tâches.
 

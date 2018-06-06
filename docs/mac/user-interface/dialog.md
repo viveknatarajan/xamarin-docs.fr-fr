@@ -1,5 +1,5 @@
 ---
-title: Boîtes de dialogue
+title: Boîtes de dialogue Xamarin.Mac
 description: Cet article décrit l’utilisation des boîtes de dialogue et fenêtres modales dans une application Xamarin.Mac. Il décrit la création de fenêtres modales dans le générateur Xcode et d’Interface, utilisation des boîtes de dialogue standard et d’interagir avec ces contrôles dans le code c#.
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cd0b57cc40d3f7cffd4d5711ec04a7225be870e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7d9a93c8503d7e25f098e871378a22455b597e90
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792692"
 ---
-# <a name="dialogs"></a>Boîtes de dialogue
+# <a name="dialogs-in-xamarinmac"></a>Boîtes de dialogue Xamarin.Mac
 
 Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès aux boîtes de dialogue et fenêtres modales même qui un développeur travaillant dans *Objective-C* et *Xcode* est. Xamarin.Mac s’intègre directement avec Xcode, vous pouvez utiliser de Xcode _Interface Générateur_ pour créer et gérer vos fenêtres modales (ou éventuellement de les créer directement dans le code C#).
 
@@ -1099,7 +1100,7 @@ Cet article a pris une présentation détaillée sur l’utilisation des fenêtr
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (exemple)](https://developer.xamarin.com/samples/mac/MacWindows/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Menus](~/mac/user-interface/menu.md)
 - [Fenêtres](~/mac/user-interface/window.md)

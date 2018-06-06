@@ -1,22 +1,22 @@
 ---
-title: Fonctionnalités de la plateforme
-description: Composants clés de la plate-forme macOS
+title: macOS fonctionnalités de plateforme
+description: 'Ce document des liens vers des guides qui décrivent macOS importantes et les fonctionnalités de plateforme Xamarin.Mac : OpenTK, plans conceptuels, extensions et bien plus encore.'
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 2bebc42cd3b5db7dba20066e90f294e621b1e4ac
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792217"
 ---
-# <a name="platform-features"></a>Fonctionnalités de la plateforme
+# <a name="macos-platform-features"></a>macOS fonctionnalités de plateforme
 
 Documents dans cette section couvrent l’utilisation des fonctionnalités clées, spécifique à la plateforme de macOS dans une application Xamarin.Mac.
-
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introduction à macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 

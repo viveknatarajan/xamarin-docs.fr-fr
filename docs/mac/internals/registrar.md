@@ -1,19 +1,20 @@
 ---
-title: Xamarin.Mac registrar
-description: Ce document décrit l’objectif du bureau d’enregistrement Xamarin.Mac et ses configurations d’utilisation différentes.
+title: Bureau d’enregistrement Xamarin.Mac
+description: Ce document décrit l’objectif du bureau d’enregistrement Xamarin.Mac et son statique partiel, dynamique et statique (hybride) les configurations d’utilisation.
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: 4b70ac2271b23b54e7942fdc870e0f49548e6154
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b6e971e608c8b9228523222cebc4d6dac9395def
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792417"
 ---
-# <a name="xamarinmac-registrar"></a>Xamarin.Mac registrar
+# <a name="xamarinmac-registrar"></a>Bureau d’enregistrement Xamarin.Mac
 
 _Ce document décrit l’objectif du bureau d’enregistrement Xamarin.Mac et ses configurations d’utilisation différentes._
 

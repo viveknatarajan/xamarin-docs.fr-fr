@@ -1,19 +1,20 @@
 ---
-title: Architecture d’iOS
-description: Exploration Xamarin.iOS de bas niveau
+title: Architecture de l’application d’iOS
+description: Ce document décrit Xamarin.iOS à un code de mode natif et managé bas niveau, discuter interagir, la compilation AOA, sélecteurs, bureaux d’enregistrement, lancement de l’application et le générateur.
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 85dc675a9b18b974f21532298e4d3028bdecd0b7
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 89b4e8bde43b34c50c1cba54a4c7d8d4ff183c66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786120"
 ---
-# <a name="ios-architecture"></a>Architecture d’iOS
+# <a name="ios-app-architecture"></a>Architecture de l’application d’iOS
 
 Xamarin.iOS applications s’exécutent dans l’environnement d’exécution Mono et utilisent la compilation en avance de la durée (AOA) complet pour compiler le code c# pour le langage d’assembly ARM. Il s’exécute côte à côte avec les [Objective-C Runtime](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). Les deux environnements d’exécution s’exécuter sur un noyau de type UNIX, en particulier [XNU](https://en.wikipedia.org/wiki/XNU)et d’exposer les diverses API au code utilisateur, ce qui permet aux développeurs d’accéder au système natif ou managé sous-jacent.
 
@@ -26,7 +27,6 @@ Le diagramme suivant montre une vue d’ensemble de cette architecture :
 Lors du développement de Xamarin les termes du contrat *natif et managé* code sont souvent utilisés. [Le code managé](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) est un code qui a son exécution gérée par le [Common Language Runtime de .NET Framework](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), ou dans les cas de Xamarin : le Runtime Mono. C’est ce que nous appelons un langage intermédiaire.
 
 Le code natif est le code qui s’exécute en mode natif sur la plateforme spécifique (par exemple, Objective-C ou même du code AOA compilé, sur un processeur ARM). Ce guide explore comment AOA compile votre code managé en code natif et explique comment une application de Xamarin.iOS fonctionne, rendre pleinement parti des e/s d’Apple API via l’utilisation de liaisons, tout en ayant accès à. BCL du NET et un langage sophistiqué tels que c#.
-
 
 ## <a name="aot"></a>AOT
 
@@ -62,10 +62,10 @@ Le pseudo-code ci-dessous montre comment procéder :
 
 ```csharp
  class MyViewController : UIViewController{
-    [Export ("myFunc")]
-    public void MyFunc ()
-    {
-    }
+     [Export ("myFunc")]
+     public void MyFunc ()
+     {
+     }
  }
 ```
 

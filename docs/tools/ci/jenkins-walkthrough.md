@@ -1,16 +1,17 @@
 ---
 title: À l’aide de Jenkins avec Xamarin
-description: Ce guide illustre comment configurer Jenkins comme un serveur d’intégration continue et automatiser la compilation des applications mobiles créées avec Xamarin. Il décrit comment installer Jenkins sur OS X, configurez-le et paramétrer des tâches pour compiler des applications de Xamarin.iOS et Xamarin.Android lorsque des modifications sont validées dans le système de gestion de code source.
+description: Ce document décrit comment utiliser Jenkins pour l’intégration continue avec les applications Xamarin. Elle explique comment installer, configurer et utiliser Jenkins.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 1052507bfbf06e264f9e9da89be1e0f35fa70ce1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7e9069c698f82e9ec9c5009286c2a36b6722b7a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793944"
 ---
 # <a name="using-jenkins-with-xamarin"></a>À l’aide de Jenkins avec Xamarin
 
@@ -32,7 +33,7 @@ Une fois Jenkins est configuré et des plug-ins nécessaires ont été installé
 
 Ce guide vous guide dans la configuration d’un serveur Jenkins couvrant chacun de ces points. À la fin de celle-ci, nous devrions obtenir une bonne compréhension des comment installer et configurer Jenkins pour créer des extensions IPA et de APK pour nos projets mobiles Xamarin.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Le serveur de builds idéale est un ordinateur autonome dédié pour le seul but de génération et de test éventuellement de l’application. Un ordinateur dédié garantit que les artefacts qui peuvent être requises pour d’autres rôles (telle que celle d’un serveur web) ne contaminent pas la build. Par exemple, si le serveur de builds agit également comme un serveur web, le serveur web peut nécessiter une version en conflit d’une bibliothèque commune. En raison de ce conflit le serveur web peut ne pas fonctionne correctement ou Jenkins peut créer des builds qui ne fonctionnent pas lors du déploiement pour les utilisateurs.
 

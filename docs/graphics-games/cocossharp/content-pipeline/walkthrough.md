@@ -1,20 +1,21 @@
 ---
-title: À l’aide de la MonoGame PipelineTool
-description: L’outil de Pipeline MonoGame est utilisé pour créer et gérer des projets de contenu MonoGame. Les fichiers dans les projets de contenu sont traités par l’outil Monogame Pipeline et envoyées sous forme de fichiers .xnb pour une utilisation dans les applications CocosSharp et MonoGame.
+title: À l’aide de l’outil MonoGame Pipeline
+description: L’outil de Pipeline MonoGame est utilisé pour créer et gérer des projets de contenu MonoGame. Les fichiers dans les projets de contenu sont traités par l’outil MonoGame Pipeline et envoyées sous forme de fichiers .xnb pour une utilisation dans les applications CocosSharp et MonoGame.
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 50e6c611e285cde9184eed242353ad08b2a941ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 347cb7e9d417f97cb6e8d78e67b1c76a378cd188
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783289"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>À l’aide de l’outil MonoGame Pipeline
 
-_L’outil de Pipeline MonoGame est utilisé pour créer et gérer des projets de contenu MonoGame. Les fichiers dans les projets de contenu sont traités par l’outil Monogame Pipeline et envoyées sous forme de fichiers .xnb pour une utilisation dans les applications CocosSharp et MonoGame._
+_L’outil de Pipeline MonoGame est utilisé pour créer et gérer des projets de contenu MonoGame. Les fichiers dans les projets de contenu sont traités par l’outil MonoGame Pipeline et envoyées sous forme de fichiers .xnb pour une utilisation dans les applications CocosSharp et MonoGame._
 
 L’outil de Pipeline MonoGame fournit un environnement facile à utiliser pour la conversion des fichiers de contenu dans **.xnb** fichiers à utiliser dans les applications CocosSharp et MonoGame. Pour plus d’informations sur le contenu des pipelines et pourquoi ils sont utiles dans le développement de jeux, consultez [cette introduction sur les pipelines de contenu](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 

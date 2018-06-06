@@ -1,20 +1,19 @@
 ---
 title: Introduction au développement de jeux avec Xamarin
-description: La nature du développement de jeux peut varier considérablement le développement d’autres types d’applications. Cet article est une introduction au développement de jeux en intégrant des technologies qui peuvent être utilisées avec Xamarin.iOS et Xamarin.Android. Il fournit une présentation de haut niveau de la façon dont sont effectuées les jeux et un échantillonnage de technologies disponible pour une utilisation avec Xamarin.iOS et Xamarin.Android.
+description: Ce document fournit une vue d’ensemble du développement de jeux avec Xamarin, qui décrit comment les jeux sont effectuées et un échantillonnage de technologies disponible pour une utilisation avec Xamarin.iOS et Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 543d3e2d4e53d1b88213ac82689073a9fb925820
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b1bd6d011cdc10352ce3b9258da7e16c2899d2d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783914"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introduction au développement de jeux avec Xamarin
-
-_La nature du développement de jeux peut varier considérablement le développement d’autres types d’applications. Cet article est une introduction au développement de jeux en intégrant des technologies qui peuvent être utilisées avec Xamarin.iOS et Xamarin.Android. Il fournit une présentation de haut niveau de la façon dont sont effectuées les jeux et un échantillonnage de technologies disponible pour une utilisation avec Xamarin.iOS et Xamarin.Android._
 
 Développement de jeux peut être très intéressant, particulièrement donné comment il peut être facile à publier votre travail sur des plates-formes mobiles. Cet article traite des concepts et technologies de développement de jeux qui vous aideront à créer des jeux, si votre objectif consiste à créer un AAA de haute qualité jeu ou simplement au programme pour vous amuser.
 

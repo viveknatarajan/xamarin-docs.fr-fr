@@ -1,16 +1,17 @@
 ---
 title: Créer manuellement les Packages NuGet pour Xamarin
-description: Cette page contient des conseils pour aider à générer des packages NuGet qui ciblent la plateforme de Xamarin.
+description: Ce document contient des conseils pour aider à générer des packages NuGet qui ciblent la plateforme de Xamarin. Il décrit les profils de Xamarin de package NuGet, NuGets PCL avec des dépendances de plateforme et des liens vers divers exemples open source.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 510c27cb54b91c837ca6f6b7a93f944f13097f0c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: cc39ade2ccc1192461bcfa19c98b7f9925b667a0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781417"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Créer manuellement les Packages NuGet pour Xamarin
 
@@ -58,7 +59,6 @@ Pour préciser :
 - **Xamarin.iOS10** correspond à Xamarin.iOS 1.0 et ultérieure
 - **Xamarin.iOS1.0** correspond également à Xamarin.iOS 1.0 et ultérieure
 
-
 ## <a name="pcl-nugets-with-platform-dependencies"></a>NuGets PCL avec des dépendances de plateforme
 
 PCL profils sont limitées dans le .NET framework API, ils peuvent accéder, et ils certainement ne peut pas accéder au code spécifique à la plateforme. Ces liens 3 rd-party traitent des différentes approches de création de packages NuGet qui utilisent la bibliothèque de classes portables et des API natives pour assurer la compatibilité de Xamarin et d’autres plates-formes :
@@ -76,7 +76,6 @@ Certains exemples open source que vous pouvez faire référence à :
 - [**ModernHttpClient** ](https://www.nuget.org/packages/modernhttpclient/) : écrire votre application à l’aide de System.Net.Http, mais supprimer cette bibliothèque dans passera considérablement plus rapide (vue [source](https://github.com/paulcbetts/ModernHttpClient)).
 - [**Splat** ](https://www.nuget.org/packages/Splat/) – une bibliothèque pour rendre les choses inter-plateformes qui doit être (vue [source](https://github.com/paulcbetts/Splat)).
 - [**NGraphics** ](https://www.nuget.org/packages/NGraphics/) -bibliothèque multiplateforme pour le rendu des graphiques vectoriels sur .NET (vue [source](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec)).
-
 
 ## <a name="related-links"></a>Liens associés
 

@@ -1,5 +1,5 @@
 ---
-title: Boutons
+title: Boutons de Xamarin.iOS
 description: La classe UIButton est utilisée pour représenter différents différents styles de bouton dans les écrans d’iOS. Cette section présente les différentes options pour l’utilisation des boutons dans iOS.
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c2c33103c005a5ed567b1c4703846f887d824ac4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bf9a36c63e0c153ed950f4c3531e99e6baf77687
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789477"
 ---
-# <a name="buttons"></a>Boutons
+# <a name="buttons-in-xamarinios"></a>Boutons de Xamarin.iOS
 
 _La classe UIButton est utilisée pour représenter différents différents styles de bouton dans les écrans d’iOS. Cette section présente les différentes options pour l’utilisation des boutons dans iOS._
 
@@ -51,7 +52,7 @@ Ensuite, définissez la taille à l’écran et l’emplacement du bouton. Exemp
 myButton.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-Pour modifier le texte dans un bouton, utilisez le `SetTitle` propriété sur le bouton, ce qui vous oblige à définir une chaîne de texte et un `UIControlStyle`. Par exemple :
+Pour modifier le texte dans un bouton, utilisez le `SetTitle` propriété sur le bouton, ce qui vous oblige à définir une chaîne de texte et un `UIControlStyle`. Exemple :
 
 ```csharp
 myButton.SetTitle("Hello, World!", UIControlState.Normal);
@@ -90,7 +91,7 @@ button.SetTitleColor (UIColor.White, UIControlState.Normal);
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
-En outre, vous pouvez utiliser avec attributs de texte en tant que titre du bouton. Par exemple :
+En outre, vous pouvez utiliser avec attributs de texte en tant que titre du bouton. Exemple :
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);

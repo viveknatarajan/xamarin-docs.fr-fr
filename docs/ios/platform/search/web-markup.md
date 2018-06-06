@@ -1,19 +1,20 @@
 ---
-title: Recherche par un balisage Web
-description: Ajout des résultats de la recherche basée sur le web que vous peuvent lier à votre application.
+title: Recherche avec des balises Web Xamarin.iOS
+description: Ce document décrit comment créer des résultats de la recherche basée sur le web, un lien vers une application Xamarin.iOS. Elle explique comment activer le contenu web indexation, de fabrication du site Web de votre application détectable, à l’aide de bannières de l’application active, les liens universels et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: bc3446419ef0e469f7184d60fe8876cd2e5da520
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 438a65de3eb78f849493e3478bce5522a325d0cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787992"
 ---
-# <a name="search-with-web-markup"></a>Recherche par un balisage Web
+# <a name="search-with-web-markup-in-xamarinios"></a>Recherche avec des balises Web Xamarin.iOS
 
 Pour les applications qui fournissent l’accès à leur contenu via un site web (non seulement à partir de l’application), contenu web peut être marqué avec liens spéciaux qui seront analysés par Apple et fournissent un lien profond à votre application sur son appareil iOS 9.
 
@@ -62,7 +63,7 @@ Nouveau sur iOS 9, universel fournissent une meilleure alternative à intelligen
 
 ## <a name="using-twitter-cards"></a>L’utilisation des cartes de Twitter
 
-Vous pouvez fournir des liens ciblés vers le contenu de votre application à l’aide d’une carte Twitter. Par exemple :
+Vous pouvez fournir des liens ciblés vers le contenu de votre application à l’aide d’une carte Twitter. Exemple :
 
 ```xml
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -74,7 +75,7 @@ Pour plus d’informations, consultez le site de Twitter [protocole de carte Twi
 
 ## <a name="using-facebook-app-links"></a>À l’aide de liens d’application Facebook
 
-Vous pouvez fournir des liens ciblés vers le contenu de votre application à l’aide d’un Facebook application Link. Par exemple :
+Vous pouvez fournir des liens ciblés vers le contenu de votre application à l’aide d’un Facebook application Link. Exemple :
 
 ```xml
 <meta property="al:ios:app_name" content="AppName">
@@ -86,7 +87,7 @@ Pour plus d’informations, consultez le site de Facebook [application liens](ht
 
 ## <a name="opening-deep-links"></a>Lors de l’ouverture des liens profonds
 
-Vous devez ajouter la prise en charge de l’ouverture et l’affichage des liens profonds dans votre application Xamarin.iOS. Modifier la **AppDelegate.cs** de fichier et remplacez le `OpenURL` méthode pour gérer le format d’URL personnalisé. Par exemple :
+Vous devez ajouter la prise en charge de l’ouverture et l’affichage des liens profonds dans votre application Xamarin.iOS. Modifier la **AppDelegate.cs** de fichier et remplacez le `OpenURL` méthode pour gérer le format d’URL personnalisé. Exemple :
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -120,7 +121,7 @@ En incluant le balisage de données structurées, vous pouvez fournir des résul
 
 Riches résultats sont plus intéressantes et peuvent aider à améliorer votre classement dans le Cloud en fonction des Index de recherche par offerte davantage d’utilisateurs d’interagir avec eux.
 
-Une option permettant de balisage de données structurées consiste à l’aide de Open Graph. Par exemple :
+Une option permettant de balisage de données structurées consiste à l’aide de Open Graph. Exemple :
 
 ```xml
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -130,7 +131,7 @@ Une option permettant de balisage de données structurées consiste à l’aide 
 
 Pour plus d’informations, consultez la [Open Graph](http://ogp.me) site Web.
 
-Un autre format commun pour le balisage de données structurées est format de microdonnées de Schema.org. Par exemple :
+Un autre format commun pour le balisage de données structurées est format de microdonnées de Schema.org. Exemple :
 
 ```xml
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">

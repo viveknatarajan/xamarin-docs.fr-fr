@@ -1,18 +1,20 @@
 ---
-title: Fonctionnalités et les parties de la table
+title: Parties de la table et la fonctionnalité de Xamarin.iOS
+description: Ce document décrit les différents éléments d’un UITableView dans iOS. Elle décrit les en-têtes de section, des cellules, pieds de page de section, les index et le mode d’édition.
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: be8ad21847aed3d8ad9bda7ac45b070e5ad868bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c7c9f810798c3d02078b48e17a2ab951cb36aa12
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789874"
 ---
-# <a name="table-parts-and-functionality"></a>Fonctionnalités et les parties de la table
+# <a name="table-parts-and-functionality-in-xamarinios"></a>Parties de la table et la fonctionnalité de Xamarin.iOS
 
 Un UITableView peut avoir un style « groupé » ou « simple » et se compose des éléments suivants :
 

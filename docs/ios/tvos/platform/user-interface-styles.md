@@ -1,5 +1,5 @@
 ---
-title: Nouveaux Styles de l’interface utilisateur
+title: tvOS Styles de l’interface utilisateur dans Xamarin
 description: Cet article traite de la lumière et thèmes de l’interface utilisateur sombre que Apple a ajouté à tvOS 10 et comment les implémenter dans une application Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: da75a99e842b13d42251cdd1c5195ec66ff4a513
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43bfac29acb8b465fd1f3cdfd53c7664adeae18f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789169"
 ---
-# <a name="new-user-interface-styles"></a>Nouveaux Styles de l’interface utilisateur
+# <a name="tvos-user-interface-styles-in-xamarin"></a>tvOS Styles de l’interface utilisateur dans Xamarin
 
 _Cet article traite de la lumière et thèmes de l’interface utilisateur sombre que Apple a ajouté à tvOS 10 et comment les implémenter dans une application Xamarin.tvOS._
 
 tvOS 10 maintenant prend en charge un thème sombre et l’Interface utilisateur de lumière thème que tous le UIKit build dans les contrôles seront automatiquement adapter, en fonction des préférences de l’utilisateur. En outre, le développeur peut ajuster manuellement les éléments d’interface utilisateur en fonction du thème de l’utilisateur a sélectionné et peut substituer un thème donné.
-
 
 <a name="About-the-New-User-Interface-Styles" />
 
@@ -131,7 +131,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 
 Dans le développeur requiert un contrôle plus approfondie sur l’apparence d’un élément d’interface utilisateur en fonction du thème de l’interface utilisateur sélectionné, ils peuvent remplacer la `TraitCollectionDidChange` méthode d’un `UIView` ou `UIViewController` classe.
 
-Par exemple :
+Exemple :
 
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
@@ -149,7 +149,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 En fonction de la conception d’une application de tvOS, il peut arriver lorsque le développeur doit substituer la Collection caractéristique d’un élément d’Interface utilisateur donné et de toujours utiliser un thème de l’interface utilisateur spécifique.
 
-Cela est possible à l’aide de la `SetOverrideTraitCollection` méthode sur la `UIViewController` classe. Par exemple :
+Cela est possible à l’aide de la `SetOverrideTraitCollection` méthode sur la `UIViewController` classe. Exemple :
 
 ```csharp
 // Create new trait and configure it

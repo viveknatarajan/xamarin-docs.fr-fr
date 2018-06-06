@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 32a7a7dd50edcc3eefe76429ddb1e5581447993e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793948"
 ---
 # <a name="mvvm"></a>MVVM
 
@@ -175,7 +176,7 @@ Cette approche présente l’avantage qu’une application possède une seule cl
 
 Tous les afficher le modèle et les classes de modèle qui sont accessibles à une vue doivent implémenter le `INotifyPropertyChanged` interface. Implémentation de cette interface dans une classe de modèle ou un modèle d’affichage permet à la classe fournir des notifications de modification à tous les contrôles liés aux données dans la vue lorsque la valeur de propriété sous-jacente change.
 
-L’application doit être mise en œuvre pour l’utilisation correcte de la notification de modification de propriété, en respectant les conditions suivantes :
+Applications doivent être mise en œuvre pour l’utilisation correcte de la notification de modification de propriété, en respectant les conditions suivantes :
 
 -   Toujours le déclenchement d’un `PropertyChanged` événement si la valeur d’une propriété publique change. Ne supposez pas que le déclenchement du `PropertyChanged` événement peut être ignoré en raison de la base de connaissances de la liaison XAML se produit.
 -   Toujours le déclenchement d’un `PropertyChanged` événement pour tout calculé propriétés dont les valeurs sont utilisées par d’autres propriétés dans la vue de modèle ou modèle.
@@ -366,4 +367,4 @@ Le modèle Model-View-ViewModel (MVVM) permet de séparer clairement la logique 
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)

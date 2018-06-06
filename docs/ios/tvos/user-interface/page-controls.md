@@ -1,21 +1,20 @@
 ---
-title: Utilisation de contrôle de Page
-description: Cet article décrit la conception et l’utilisation de contrôle de Page à l’intérieur d’une application Xamarin.tvOS.
+title: Utilisation de tvOS des contrôles de Page dans Xamarin
+description: Ce document décrit comment utiliser les contrôles de page tvOS dans une application générée avec Xamarin. Il fournit une description détaillée des contrôles de page, explique comment les définir dans les plans conceptuels et examine comment répondre aux événements de changement de page.
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1cb07c050aeb2ee72e34048baab991df2d5775d0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bf020f230afc2eb2a09d863424bd4eb56ea1bde6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789156"
 ---
-# <a name="working-with-page-control"></a>Utilisation de contrôle de Page
-
-_Cet article décrit la conception et l’utilisation de contrôle de Page à l’intérieur d’une application Xamarin.tvOS._
+# <a name="working-with-tvos-page-controls-in-xamarin"></a>Utilisation de tvOS des contrôles de Page dans Xamarin
 
 Vous devrez parfois afficher une série de pages ou des images dans votre application Xamarin.tvOS. Un contrôle de Page a été conçu pour montrer clairement quelle page à un utilisateur manque sur le nombre maximal de pages. Un contrôle de Page affiche une série de points par rapport à un thème sombre, oval en arrière-plan. La page en cours affiche un point plein, toutes les autres pages affichent sous forme de points vides. Le contrôle de Page fait correspondre les points de la plupart des externes si elles sont trop nombreuses pour tenir dans la zone d’arrière-plan.
 
@@ -45,7 +44,7 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 
     [![](page-controls-images/page03.png "L’onglet du Widget")](page-controls-images/page03.png#lightbox)
 1. Ensuite, ajoutez les contrôles ou les mouvements à l’affichage pour les déplacer vers le haut et vers l’avant dans la collection de pages.
-1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Par exemple : 
+1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
     [![](page-controls-images/page04.png "Nom du contrôle")](page-controls-images/page04.png#lightbox)
 1. Enregistrez les modifications apportées.
@@ -62,7 +61,7 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 
     [![](page-controls-images/page03-vs.png "L’onglet du Widget")](page-controls-images/page03-vs.png#lightbox)
 1. Ensuite, ajoutez les contrôles ou les mouvements à l’affichage pour les déplacer vers le haut et vers l’avant dans la collection de pages.
-1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Par exemple : 
+1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
     [![](page-controls-images/page04-vs.png "Nom du contrôle")](page-controls-images/page04-vs.png#lightbox)
 1. Enregistrez les modifications apportées.
@@ -73,10 +72,7 @@ Utilisation des contrôles de Page dans une application Xamarin.tvOS, le plus si
 > [!IMPORTANT]
 > Bien qu’il soit possible d’attribuer des événements tels que `TouchUpInside` à un élément d’interface utilisateur (par exemple, un UIButton) dans le concepteur iOS, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser le `Primary Action` événement lors de la création de gestionnaires d’événements de tvOS éléments d’interface utilisateur.
 
-
-
-
-Modifier votre vue contrôleur (exemple `ViewController.cs`) et ajoutez le code pour gérer les pages en cours de modification. Par exemple :
+Modifier votre vue contrôleur (exemple `ViewController.cs`) et ajoutez le code pour gérer les pages en cours de modification. Exemple :
 
 ```csharp
 using System;

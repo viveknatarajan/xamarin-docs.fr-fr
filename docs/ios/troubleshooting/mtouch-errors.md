@@ -1,5 +1,6 @@
 ---
 title: Erreurs de Xamarin.iOS
+description: Ce document décrit les différents messages d’erreur générés par mtouch, l’outil utilisé pour regrouper des applications de Xamarin.iOS. Les erreurs sont répertoriées par le code et une description complète.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
@@ -7,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e9332ba34f113f56859065c74c24c116a331eceb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789445"
 ---
 # <a name="xamarinios-errors"></a>Erreurs de Xamarin.iOS
 
@@ -581,7 +583,7 @@ L’assembly mentionné dans le message d’erreur est spécifié plusieurs fois
 
 Les assemblys mentionnés dans le message d’erreur ont des cibles de génération en conflit.
 
-Par exemple :
+Exemple :
 
     --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
 
@@ -593,7 +595,7 @@ Cet exemple tente de créer une bibliothèque dynamique et une infrastructure av
 
 Les assemblys mentionnés dans le message d’erreur sont compilées à un seul objet statique. Cela n’est pas autorisé, tous les assemblys doivent être compilées à un autre objet statique.
 
-Par exemple :
+Exemple :
 
     --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
 
@@ -2308,7 +2310,7 @@ Cette erreur est signalée uniquement avec [MT5212](#MT5212). Consultez [MT5212]
 
 ### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214 : Liaison natif a échoué, symbole non défini : *. Ce symbole a été référencé le membre managé *. Vérifiez que toutes les infrastructures nécessaires ont été bibliothèques natives et référencés liés.
 
-Cette erreur est signalée lorsque le code managé contient un appel P/Invoke vers une méthode native qui n’existe pas. Par exemple :
+Cette erreur est signalée lorsque le code managé contient un appel P/Invoke vers une méthode native qui n’existe pas. Exemple :
 
 ```csharp
 using System.Runtime.InteropServices;

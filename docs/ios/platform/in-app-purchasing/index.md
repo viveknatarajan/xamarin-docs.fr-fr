@@ -1,21 +1,19 @@
 ---
-title: Achats dans l’application
-description: les applications iOS peuvent vendre des produits numériques et des services à l’aide de l’API de Kit de magasin. Les produits sont créés et gérés dans le portail de se connecter iTunes. Apple gère le traitement des transactions et approuve tous les produits avant qu’ils peuvent être vendus et des frais pour chaque transaction (actuellement 30 %). Apple requiert que vous utilisez les achats dans l’application pour toutes les ventes numériques dans votre application, mais vous ne pouvez pas l’utiliser pour la vente de biens ou les services non numériques. Les applications qui offrent des options de paiement pour les services et produits numériques sont susceptibles d’être rejetées. Ce document explique comment configurer votre application pour utiliser le Kit de magasin et fournit des exemples de Xamarin.iOS de scénarios d’achat dans l’application courants.
+title: Achats dans Xamarin.iOS dans l’application
+description: Ce document décrit comment vendre des produits numériques et des services à l’aide de la APIs StoreKit. Il lie aux guides qui traitent de configuration, consommables, non-consommable produits, transactions, abonnements et bien plus encore.
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7a8dec6051caeba55c45df29c085ecfcddd160d2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8a41ed44a331c91a333b95c1d62136244a6945dd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787339"
 ---
-# <a name="in-app-purchasing"></a>Achats dans l’application
-
-_les applications iOS peuvent vendre des produits numériques et des services à l’aide de l’API de Kit de magasin. Les produits sont créés et gérés dans le portail de se connecter iTunes. Apple gère le traitement des transactions et approuve tous les produits avant qu’ils peuvent être vendus et des frais pour chaque transaction (actuellement 30 %). Apple requiert que vous utilisez les achats dans l’application pour toutes les ventes numériques dans votre application, mais vous ne pouvez pas l’utiliser pour la vente de biens ou les services non numériques. Les applications qui offrent des options de paiement pour les services et produits numériques sont susceptibles d’être rejetées. Ce document explique comment configurer votre application pour utiliser le Kit de magasin et fournit des exemples de Xamarin.iOS de scénarios d’achat dans l’application courants._
-
+# <a name="in-app-purchasing-in-xamarinios"></a>Achats dans Xamarin.iOS dans l’application
 
 les applications iOS peuvent vendre des produits numériques ou des services à l’aide de StoreKit – un ensemble d’API fournies par iOS qui communiquent avec les serveurs Apple d’effectuer des transactions financières avec l’utilisateur via leur ID Apple. Les APIs StoreKit concernent principalement la récupération des informations de produit et la réalisation des transactions : il n’existe aucun composant de l’interface utilisateur. Les applications qui implémentent l’achat dans l’application doivent créer leur propre interface utilisateur et effectuer le suivi des articles achetés avec du code personnalisé pour fournir des produits requis ou des services à l’utilisateur.
 
@@ -27,11 +25,9 @@ Fournir des fonctionnalités de l’achat de dans l’application nécessite plu
 -  **Création de l’interface utilisateur et les produits eux-mêmes** – les produits doivent être appliquées, y compris des mécanismes pour effectuer le suivi de chaque fournisseur et sauvegarde/restauration les si nécessaire.
 -  **Analyse des ventes et la réception de fonds** – utilisez les informations fournies par iTunes Connect pour surveiller les tendances des ventes et de suivre vos revenus.
 
-
 Ce document explique comment effectuer toutes ces étapes pour fournir des achats dans l’application à l’aide de Xamarin.iOS.
 
-
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Pour prendre en charge de l’achat dans l’application, vous devez utiliser Xamarin.iOS 5.0 ou version ultérieure avec Xcode 7 et versions ultérieures.
 
@@ -39,7 +35,7 @@ Pour prendre en charge de l’achat dans l’application, vous devez utiliser Xa
 
  * [Principes de base et configuration de l’achat dans l’application](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [Vue d’ensemble du Store Kit et récupération des informations sur le produit](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+ * [Vue d’ensemble de StoreKit et la récupération des informations de produit](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
  * [Achat de produits consommables](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
@@ -48,7 +44,6 @@ Pour prendre en charge de l’achat dans l’application, vous devez utiliser Xa
  * [Transactions et vérification](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
  * [Abonnements et création de rapports](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
-
 
 ## <a name="summary"></a>Récapitulatif
 

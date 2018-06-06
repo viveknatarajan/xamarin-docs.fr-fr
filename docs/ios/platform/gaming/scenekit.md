@@ -1,24 +1,26 @@
 ---
-title: SceneKit
+title: SceneKit dans Xamarin.iOS
+description: Ce document décrit SceneKit, un graphique de scène 3D API qui simplifie l’utilisation de graphiques 3D en faisant abstraction de la complexité d’OpenGL.
 ms.prod: xamarin
 ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 7c00a3f6aed442eec402f34a5cea4b1895bb3685
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fb72e194e14f903061e1bd2dc6d04ef88ab429d4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786783"
 ---
-# <a name="scenekit"></a>SceneKit
+# <a name="scenekit-in-xamarinios"></a>SceneKit dans Xamarin.iOS
 
-Kit de la scène est un API qui simplifie l’utilisation de graphiques 3D du graphique de scène 3D. Il a été introduite dans OS X 10.8 et est venu iOS 8. Kit de scène la création de visualisations 3D réalistes et jeux 3D informels ne nécessite pas expérimenté dans OpenGL. S’appuyant sur les concepts de graphique de scène communs, Kit de scène élimine les complexités des OpenGL et OpenGL ES, rendant très facile d’ajouter 3D contenu à une application. Toutefois, si vous êtes un expert OpenGL, Kit de scène a réunissant directement avec OpenGL également très bien en charge. Il comprend de nombreuses fonctionnalités qui complètent les graphiques 3D, tels que physique et s’intègre parfaitement avec plusieurs autres infrastructures de Apple, telles que l’Animation de base, l’Image de base et Sprite Kit.
+SceneKit est un graphique de scène 3D API qui simplifie l’utilisation de graphiques 3D. Il a été introduite dans OS X 10.8 et est venu iOS 8. Avec SceneKit la création de visualisations 3D réalistes et jeux 3D informels ne nécessite pas savoir OpenGL. S’appuyant sur les concepts de graphique de scène communs, SceneKit élimine les complexités des OpenGL et OpenGL ES, rendant très facile d’ajouter 3D contenu à une application. Toutefois, si vous êtes un expert OpenGL, SceneKit a réunissant directement avec OpenGL également très bien en charge. Il comprend de nombreuses fonctionnalités qui complètent les graphiques 3D, tels que physique et s’intègre parfaitement avec plusieurs autres infrastructures de Apple, telles que l’Animation de base, l’Image de base et Sprite Kit.
 
-Kit de scène est très facile à utiliser. Il s’agit d’une API déclarative qui prend en charge du rendu. Simplement, vous configurez une scène, ajouter des propriétés et les descripteurs de scène Kit le rendu de la scène.
+SceneKit est très facile à utiliser. Il s’agit d’une API déclarative qui prend en charge du rendu. Simplement, vous configurez une scène, ajouter des propriétés et les descripteurs de SceneKit le rendu de la scène.
 
-Pour travailler avec le Kit de la scène, vous créez un graphique de scène à l’aide de la `SCNScene` classe. Une séquence contient une hiérarchie de nœuds, représentés par des instances de `SCNNode`, définition des emplacements dans l’espace 3D. Chaque nœud possède des propriétés telles que la géométrie, d’éclairage et les documents qui affectent son apparence, comme illustré dans la figure ci-dessous :
+Pour travailler avec SceneKit, vous créez un graphique de scène à l’aide de la `SCNScene` classe. Une séquence contient une hiérarchie de nœuds, représentés par des instances de `SCNNode`, définition des emplacements dans l’espace 3D. Chaque nœud possède des propriétés telles que la géométrie, d’éclairage et les documents qui affectent son apparence, comme illustré dans la figure ci-dessous :
 
 ![](scenekit-images/image7.png "La hiérarchie SceneKit") 
 
@@ -43,7 +45,7 @@ scene.RootNode.AddChildNode (sphereNode);
 
 ## <a name="adding-light"></a>Ajout de lumière
 
-À ce stade la sphère n’affichera rien, car il n’existe aucune lumière dans la scène. Attachement `SCNLight` instances aux nœuds crée des lumières dans le Kit de la scène. Il existe plusieurs types de lumières allant de différentes formes d’éclairage directionnel à éclairage ambiant. Par exemple, le code suivant crée une lumière omnidirectionnelle sur le côté de la sphère :
+À ce stade la sphère n’affichera rien, car il n’existe aucune lumière dans la scène. Attachement `SCNLight` instances aux nœuds crée les témoins lumineux dans SceneKit. Il existe plusieurs types de lumières allant de différentes formes d’éclairage directionnel à éclairage ambiant. Par exemple, le code suivant crée une lumière omnidirectionnelle sur le côté de la sphère :
 
 ```csharp
 // omnidirectional light
@@ -89,7 +91,7 @@ cameraNode = new SCNNode {
 scene.RootNode.AddChildNode (cameraNode);
 ```
 
-Comme vous pouvez voir dans le code ci-dessus, Kit de scène objets peuvent être créés à l’aide de constructeurs ou à partir de la méthode de fabrique de créer. La première permet à l’aide de la syntaxe d’initialiseur de c#, mais celui que vous souhaitez utiliser est essentiellement une question de préférence.
+Comme vous pouvez voir dans le code ci-dessus, SceneKit objets peuvent être créés à l’aide de constructeurs ou à partir de la méthode de fabrique de créer. La première permet à l’aide de la syntaxe d’initialiseur de c#, mais celui que vous souhaitez utiliser est essentiellement une question de préférence.
 
 Avec l’appareil photo sur place, la totalité de la sphère est visible par l’utilisateur :
 
@@ -129,7 +131,7 @@ Le singe apparaît désormais dans cet état visuellement au sein de la sphère,
 
 ### <a name="animation"></a>Animation
 
-Kit de scène est conçu pour fonctionner avec l’animation. Vous pouvez créer des animations implicites ou explicites et même de rendre une scène à partir d’une arborescence de couche d’Animation de la base. Lorsque vous créez une animation implicite, scène Kit fournit sa propre classe de transition, `SCNTransaction`.
+SceneKit est conçu pour fonctionner avec l’animation. Vous pouvez créer des animations implicites ou explicites et même de rendre une scène à partir d’une arborescence de couche d’Animation de la base. Lorsque vous créez une animation implicite, SceneKit fournit sa propre classe de transition, `SCNTransaction`.
 
 Voici un exemple qui fait pivoter la sphère :
 
@@ -140,7 +142,7 @@ sphereNode.Rotation = new SCNVector4 (0, 1, 0, (float)Math.PI * 4);
 SCNTransaction.Commit ();
 ```
 
-Vous pouvez animer beaucoup plus de rotation cependant. De nombreuses propriétés de la scène Kit peuvent être animées. Par exemple, le code suivant réalise une animation de la matière `Shininess` pour augmenter la réflexion spéculaire.
+Vous pouvez animer beaucoup plus de rotation cependant. De nombreuses propriétés de SceneKit peuvent être animées. Par exemple, le code suivant réalise une animation de la matière `Shininess` pour augmenter la réflexion spéculaire.
 
 ```csharp
 SCNTransaction.Begin ();
@@ -149,4 +151,4 @@ material.Shininess = 0.1f;
 SCNTransaction.Commit ();
 ```
 
-Kit de scène est très simple à utiliser. Il offre de nombreuses fonctionnalités supplémentaires, notamment les contraintes physique, actions déclaratives, texte 3D, la profondeur de la prise en charge de champ, l’intégration de Sprite Kit et intégration d’Image Core citer que quelques.
+SceneKit est très simple à utiliser. Il offre de nombreuses fonctionnalités supplémentaires, notamment les contraintes physique, actions déclaratives, texte 3D, la profondeur de la prise en charge de champ, l’intégration de Sprite Kit et intégration d’Image Core citer que quelques.

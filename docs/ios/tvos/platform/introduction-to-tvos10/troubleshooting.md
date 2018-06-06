@@ -1,29 +1,28 @@
 ---
-title: Résolution des problèmes
-description: Cet article fournit des conseils de dépannage plusieurs pour travailler avec tvOS 10 dans les applications Xamarin.tvOS.
+title: Résolution des problèmes de tvOS 10 applications développées avec Xamarin
+description: Cet article fournit des conseils de dépannage plusieurs pour travailler avec tvOS 10 dans des applications Xamarin. Il décrit les problèmes liés à l’App Store, la compatibilité binaire, CFNetwork HttpProtocol, CloudKit, Image Core, NSUserActivity et UIKit.
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8875e658ead17820655a2401079627875c14958b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4332caca2804da52bb565fe382932af691c39dab
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788808"
 ---
-# <a name="troubleshooting"></a>Résolution des problèmes
+# <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Résolution des problèmes de tvOS 10 applications développées avec Xamarin
 
-_Cet article fournit des conseils de dépannage plusieurs pour travailler avec tvOS 10 dans les applications Xamarin.tvOS._
-
-Les sections suivantes répertorient certains problèmes connus qui peuvent se produire lors de l’utilisation de tvOS 10 avec Xamarin.tvOS et la solution à ces problèmes :
+Les sections suivantes répertorient certains problèmes connus qui peuvent se produire lors de l’utilisation de tvOS 10 avec Xamarin et la solution à ces problèmes :
 
 - [App Store](#App-Store)
 - [Compatibilité binaire](#Binary-Compatibility)
 - [Protocole HTTP CFNetwork](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [CoreImage](#CoreImage)
+- [Image de base](#CoreImage)
 - [NSUserActivity](#NSUserActivity)
 - [UIKit](#UIKit)
 
@@ -62,7 +61,7 @@ Opérations longues retournera un _« Vous n’êtes pas autorisé à enregistr
 
 <a name="CoreImage" />
 
-## <a name="coreimage"></a>CoreImage
+## <a name="core-image"></a>Image de base
 
 Le `CIImageProcessor` API prend désormais en charge un nombre arbitraire image d’entrée. `CIImageProcessor` API qui a été inclus dans la version bêta 1 de tvOS 10 sera supprimé.
 
@@ -84,10 +83,6 @@ Problèmes connus :
  - tvOS 10 requiert le développeur à appeler `base.AwakeFromNib` lors du sous-classement `UIViewController` et en remplaçant le `AwakeFromNib` (méthode).
  - Applications avec personnalisé `UIView` sous-classes qui substituent `LayoutSubviews` et incorrectes de la mise en page avant d’appeler `base.LayoutSubviews` peuvent déclencher une boucle infinie de disposition dans tvOS 10.
  - Les ressources spécifiques à la direction ou PLIABLE images ne sont aucun retournement lorsque affectés à `UIButton` objets.
-
-
-
-
 
 ## <a name="related-links"></a>Liens associés
 

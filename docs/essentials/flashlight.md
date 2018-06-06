@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials Flash
-description: La classe Flash a la possibilité d’activer ou désactiver photo l’appareil flash à transformer en un Flash.
+title: 'Xamarin.Essentials : Flash'
+description: Ce document décrit la classe flash dans Xamarin.Essentials, qui a la possibilité d’activer ou désactiver photo l’appareil pour qu’il devienne un flash flash.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0fe07f60502b27322db9486f3382b8f67d50945b
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: a5c559653bff38c692f0b1d881d5d8f4cac3d383
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782422"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials Flash
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials : Flash
 
 ![Version préliminaire de NuGet](~/media/shared/pre-release.png)
 

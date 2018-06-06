@@ -1,18 +1,19 @@
 ---
-title: Vérifiez les attributs
+title: Objectif Sharpie vérifier les attributs
+description: Ce document décrit l’attribut [Verify] généré par un objectif Sharpie. L’attribut [Verify] met en surbrillance pour les développeurs dans lequel ils doivent vérifier manuellement les sortie d’objectif Sharpie.
 ms.prod: xamarin
 ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: b9409b4351ed9233db0edf8e2dd9f516b9727fe0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 96e5bafc14c2d3aba03ccc137151a83ee8afeef9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780709"
 ---
-# <a name="verify-attributes"></a>Vérifiez les attributs
-
+# <a name="objective-sharpie-verify-attributes"></a>Objectif Sharpie vérifier les attributs
 
 Vous constaterez souvent que les liaisons produits par objectif Sharpie seront annotés avec le `[Verify]` attribut. Ces attributs indiquent que vous devez _vérifier_ qu’objectif Sharpie a le mieux en comparant la liaison avec la déclaration de C/Objective-C d’origine (qui sera fournie dans un commentaire au-dessus de la déclaration lié).
 
@@ -27,7 +28,7 @@ Une fois que vous avez vérifié que la liaison est corriger ou avez fixe pour �
 
 L’argument de l’indicateur fourni à l’attribut peut faire l’objet référencé avec la documentation ci-dessous. Documentation pour les produits `[Verify]` attributs seront fournies sur la console ainsi la fin de la liaison.
 
-|Vérifiez l’indicateur|Description|
+|`[Verify]` Indicateur|Description|
 |---|---|
 |InferredFromPreceedingTypedef|Le nom de cette déclaration a été inféré par convention commune à partir de la précédant immédiatement `typedef` dans le code natif source d’origine. Vérifiez que le nom déduit est correct de cette convention est AMBIGUE.|
 |ConstantsInterfaceAssociation|Il n’existe aucun moyen de très sûr pour déterminer quelle interface Objective-C une déclaration de variable externe peut être associée. Les instances de ces sont liées en tant que `[Field]` propriétés dans une interface partielle dans une interface concrète près par pour produire une API intuitive, éventuellement en éliminant les constantes' ' interface complètement.|

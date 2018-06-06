@@ -1,18 +1,20 @@
 ---
-title: Modification
+title: Modification des Tables avec Xamarin.iOS
+description: Ce document décrit comment modifier des tables dans Xamarin.iOS. Elle explique balayez à supprimer, modifier le mode et l’insertion de ligne.
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 161de0209217dde671b976afad90eaad18d8c7b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28ebf1157a1bfc9f7bd910fd11365b29cecb9529
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789988"
 ---
-# <a name="editing"></a>Modification
+# <a name="editing-tables-with-xamarinios"></a>Modification des Tables avec Xamarin.iOS
 
 Les fonctionnalités de modification de table sont activées par substitution de méthodes dans un `UITableViewSource` sous-classe. Le comportement d’édition la plus simple est le mouvement de balayage à supprimer peut être implémenté avec une seule méthode de remplacement.
 Modification des plus complexes (y compris les lignes mobiles) peut faire avec la table en mode édition.

@@ -1,5 +1,5 @@
 ---
-title: Infrastructure de réseaux sociaux
+title: Framework sociaux dans Xamarin.iOS
 description: Le Framework Social fournit une API unifiée pour interagir avec les réseaux sociaux, y compris Twitter et Facebook, ainsi que SinaWeibo pour les utilisateurs en Chine.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 334e05ad653d766b48f7f6028a1e98b0a0548c0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b7269282b18adc46f53b708a0af4934a1621d23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788193"
 ---
-# <a name="social-framework"></a>Infrastructure de réseaux sociaux
+# <a name="social-framework-in-xamarinios"></a>Framework sociaux dans Xamarin.iOS
 
 _Le Framework Social fournit une API unifiée pour interagir avec les réseaux sociaux, y compris Twitter et Facebook, ainsi que SinaWeibo pour les utilisateurs en Chine._
-
 
 À l’aide de l’infrastructure sociale permet aux applications d’interagir avec les réseaux sociaux à partir d’une seule API sans avoir à gérer l’authentification. Il inclut un système fourni contrôleur d’affichage pour composer des publications ainsi que d’une abstraction qui permet de consommer des API de chaque réseau social sur HTTP.
 
@@ -301,7 +301,7 @@ Une fois configuré, n’importe quelle application sur le périphérique qui ut
 
 Comme l’infrastructure sociale est une API unifiée conçue pour accéder à plusieurs réseaux sociaux, le code reste presque identique, quel que soit le réseau social utilisé.
 
-Par exemple, le `SLComposeViewController` peut être utilisé exactement comme dans l’exemple Twitter indiqué précédemment, les différents uniquement revient aux options et paramètres spécifiques à Facebook. Par exemple :
+Par exemple, le `SLComposeViewController` peut être utilisé exactement comme dans l’exemple Twitter indiqué précédemment, les différents uniquement revient aux options et paramètres spécifiques à Facebook. Exemple :
 
 ```csharp
 using System;
@@ -476,5 +476,5 @@ Cet article a montré comment utiliser l’infrastructure de réseaux sociaux po
 
 ## <a name="related-links"></a>Liens associés
 
-- [SocialFrameworkDemo (sample)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
+- [SocialFrameworkDemo (exemple)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
 - [Introduction aux services web](~/cross-platform/data-cloud/web-services/index.md)

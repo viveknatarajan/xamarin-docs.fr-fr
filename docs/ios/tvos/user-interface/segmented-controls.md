@@ -1,22 +1,20 @@
 ---
-title: Utilisation des contrôles segmentés
-description: Cet article décrit la conception et l’utilisation de contrôles segmentés à l’intérieur d’une application Xamarin.tvOS.
+title: Utilisation des contrôles de segmenté tvOS dans Xamarin
+description: Ce document décrit comment utiliser des contrôles segmentés dans une application générée avec Xamarin tvOS. Elle décrit les icônes de segment et du texte, des événements, modification de l’apparence du contrôle et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d4eac932c7fad628a0a65127bceb641f34ea5d79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8980f9fbf6996217dbcaec869e4c81598ac36552
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789237"
 ---
-# <a name="working-with-segmented-controls"></a>Utilisation des contrôles segmentés
-
-_Cet article décrit la conception et l’utilisation de contrôles segmentés à l’intérieur d’une application Xamarin.tvOS._
-
+# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Utilisation des contrôles de segmenté tvOS dans Xamarin
 
 Un contrôle segmenté fournit un ensemble d’éléments linéaires, chacun d’eux peut contenir un texte ou une icône et est utilisée pour fournir un ensemble de choix associée à l’utilisateur.
 
@@ -67,7 +65,7 @@ Utilisation des contrôles de Segment dans une application Xamarin.tvOS, le plus
     [![](segmented-controls-images/segment03.png "L’onglet du Widget")](segmented-controls-images/segment03.png#lightbox)
 1. Utilisez le **Segments** champ pour contrôler le nombre de Segments dans le contrôleur.
 1. Sélectionner un Segment donné à partir de la **Segment déroulante** ajuster ses propriétés individuelles telles que **titre** ou **Image** et de contrôler si un Segment donné est  **Activé** ou **sélectionnés** lorsque le contrôle est affiché.
-1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Par exemple : 
+1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
     [![](segmented-controls-images/segment04.png "Attribuez un nom")](segmented-controls-images/segment04.png#lightbox)
 1. Enregistrez les modifications apportées.
@@ -83,7 +81,7 @@ Utilisation des contrôles de Segment dans une application Xamarin.tvOS, le plus
     [![](segmented-controls-images/segment03-vs.png "L’onglet du Widget")](segmented-controls-images/segment03-vs.png#lightbox)
 1. Utilisez le **Segments** champ pour contrôler le nombre de Segments dans le contrôleur.
 1. Sélectionner un Segment donné à partir de la **Segment déroulante** ajuster ses propriétés individuelles telles que **titre** ou **Image** et de contrôler si un Segment donné est  **Activé** ou **sélectionnés** lorsque le contrôle est affiché.
-1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Par exemple : 
+1. Enfin, affectez **noms** aux contrôles afin que vous pouvez répondre à leur en code c#. Exemple : 
 
     [![](segmented-controls-images/segment04-vs.png "Attribuez un nom")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Enregistrez les modifications apportées.

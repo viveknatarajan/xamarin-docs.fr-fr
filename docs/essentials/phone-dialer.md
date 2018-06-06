@@ -1,17 +1,18 @@
 ---
-title: Numéroteur Xamarin.Essentials
-description: La classe PhoneDialer permet à une application ouvrir un lien web dans le navigateur par défaut système optimisé ou un navigateur externe.
+title: 'Xamarin.Essentials : Le Numéroteur téléphonique'
+description: La classe PhoneDialer dans Xamarin.Essentials permet à une application ouvrir un lien web dans le navigateur par défaut système optimisé ou un navigateur externe.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 112cc305457413ad057e390d46c5a765ea29514f
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782844"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Numéroteur Xamarin.Essentials
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials : Le Numéroteur téléphonique
 
 ![Version préliminaire de NuGet](~/media/shared/pre-release.png)
 

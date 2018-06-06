@@ -1,22 +1,20 @@
 ---
-title: Utilisation d’une vue empilée
-description: Cet article décrit la conception et l’utilisation d’empilées une vue à l’intérieur d’une application Xamarin.tvOS.
+title: Utilisation des vues d’empilées tvOS dans Xamarin
+description: Ce document décrit comment travaillé avec tvOS vues empilées dans une application générée avec Xamarin. Il fournit une vue d’ensemble de vues empilées et décrit la disposition automatique, le positionnement et le redimensionnement d’une vue empilée, commune utilise, intégration avec les plans conceptuels et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a6300e4da47022199c0503e6be63b0c90f15654d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e718e525c23e78fbf846209602a07bf0f3f386e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789370"
 ---
-# <a name="working-with-stacked-view"></a>Utilisation d’une vue empilée
-
-_Cet article décrit la conception et l’utilisation d’empilées une vue à l’intérieur d’une application Xamarin.tvOS._
-
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Utilisation des vues d’empilées tvOS dans Xamarin
 
 Le contrôle de la vue de la pile (`UIStackView`) tire parti de la puissance de disposition automatique et les Classes de taille pour gérer une pile de sous-vues, horizontalement ou verticalement, qui dynamiquement répond aux modifications de contenu et la taille de l’écran de l’appareil Apple TV.
 
@@ -152,7 +150,7 @@ Pour utiliser des vues de la pile dans une application Xamarin.tvOS, le plus sim
 
 Pour plus d’informations sur l’utilisation des plans conceptuels, veuillez consulter notre [Hello, Guide de démarrage rapide de tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-Dans le cas de notre exemple, nous avons exposé un prise et l’Action pour le contrôle de Segment et une sortie pour chaque carte « lecteur ». Dans le code, nous masquer et afficher le lecteur basé sur le segment actuel. Par exemple :
+Dans le cas de notre exemple, nous avons exposé un prise et l’Action pour le contrôle de Segment et une sortie pour chaque carte « lecteur ». Dans le code, nous masquer et afficher le lecteur basé sur le segment actuel. Exemple :
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {

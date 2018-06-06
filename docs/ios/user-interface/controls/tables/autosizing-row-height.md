@@ -1,18 +1,20 @@
 ---
-title: Hauteur de ligne de redimensionnement automatique
+title: Hauteur de ligne de redimensionnement automatique dans Xamarin.iOS
+description: Ce document décrit comment ajouter des lignes de la vue table dont hauteurs varient en fonction du contenu pour les applications Xamarin.iOS. Il décrit la disposition des cellules dans le concepteur iOS et la hauteur de redimensionnement automatique de l’activation.
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 73e16c3381b639645463e3e8aaeed35224b67861
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c6beb112947f5423de200fd5c8957ef28dd48f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789965"
 ---
-# <a name="auto-sizing-row-height"></a>Hauteur de ligne de redimensionnement automatique
+# <a name="auto-sizing-row-height-in-xamarinios"></a>Hauteur de ligne de redimensionnement automatique dans Xamarin.iOS
 
 Depuis iOS 8, Apple ajouté la possibilité de créer une vue de Table (`UITableView`) qui peut augmenter et réduire la hauteur d’une ligne donnée, selon la taille de son contenu à l’aide de la disposition automatique, les Classes de taille et les contraintes automatiquement.
 
@@ -20,7 +22,7 @@ iOS 11 a ajouté la possibilité pour les lignes développer automatiquement. Ce
 
 ## <a name="cell-layout-in-the-ios-designer"></a>Disposition de la cellule dans le concepteur iOS
 
-Ouvrez le plan conceptuel pour l’affichage de la Table que vous souhaitez disposer de redimensionnement automatique de la ligne pour dans le concepteur, iOS sélectionnez la cellule *Prototype* et concevoir la disposition de la cellule. Par exemple :
+Ouvrez le plan conceptuel pour l’affichage de la Table que vous souhaitez disposer de redimensionnement automatique de la ligne pour dans le concepteur, iOS sélectionnez la cellule *Prototype* et concevoir la disposition de la cellule. Exemple :
 
 [![](autosizing-row-height-images/table01.png "Création du Prototype de la cellule")](autosizing-row-height-images/table01.png#lightbox)
 
@@ -47,11 +49,11 @@ Dans le cas de notre exemple, `GrowCell`. Nous allons utiliser cette valeur ult�
 > [!IMPORTANT]
 > Si votre table contient plus d’un type de cellule (**Prototype**), vous devez vous assurer de chaque type possède son propre `Identifier` pour le redimensionnement de ligne automatique fonctionne.
 
-Pour chaque élément de notre Prototype de la cellule, vous devez affecter un **nom** pour l’exposer au code c#. Par exemple :
+Pour chaque élément de notre Prototype de la cellule, vous devez affecter un **nom** pour l’exposer au code c#. Exemple :
 
 [![](autosizing-row-height-images/table05.png "Attribuez un nom pour l’exposer au code c#")](autosizing-row-height-images/table05.png#lightbox)
 
-Ensuite, ajoutez une classe personnalisée pour le `UITableViewController`, le `UITableView` et `UITableCell` (Prototype). Par exemple : 
+Ensuite, ajoutez une classe personnalisée pour le `UITableViewController`, le `UITableView` et `UITableCell` (Prototype). Exemple : 
 
 [![](autosizing-row-height-images/table06.png "Ajout d’une classe personnalisée pour le UITableViewController, le UITableView et le UITableCell")](autosizing-row-height-images/table06.png#lightbox)
 
@@ -63,7 +65,7 @@ Avec l’interface utilisateur définie, vous allez ajouter le code pour activer
 
 ## <a name="enabling-auto-resizing-height"></a>L’activation de hauteur de redimensionnement automatique
 
-Dans le de source de données notre Table de vue (`UITableViewDatasource`) ou la Source (`UITableViewSource`), lorsque nous dequeue une cellule que nous devons utiliser la `Identifier` que nous avons défini dans le concepteur. Par exemple :
+Dans le de source de données notre Table de vue (`UITableViewDatasource`) ou la Source (`UITableViewSource`), lorsque nous dequeue une cellule que nous devons utiliser la `Identifier` que nous avons défini dans le concepteur. Exemple :
 
 ```csharp
 public string CellID {
@@ -85,7 +87,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 }
 ```
 
-Par défaut, la vue de la Table seront définie pour la hauteur de ligne de redimensionnement automatique. Pour garantir cela, le `RowHeight` propriété doit être définie sur `UITableView.AutomaticDimension`. Nous devons également définir le `EstimatedRowHeight` propriété dans notre `UITableViewController`. Par exemple :
+Par défaut, la vue de la Table seront définie pour la hauteur de ligne de redimensionnement automatique. Pour garantir cela, le `RowHeight` propriété doit être définie sur `UITableView.AutomaticDimension`. Nous devons également définir le `EstimatedRowHeight` propriété dans notre `UITableViewController`. Exemple :
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -103,11 +105,11 @@ public override void ViewWillAppear (bool animated)
 
 Cette estimation ne doit pas nécessairement être exacte, une estimation de la hauteur moyenne de chaque ligne dans la vue de la Table.
 
-Avec ce code en place, lorsque l’application est exécutée, chaque ligne sera réduire et augmenter en fonction de la hauteur de la dernière étiquette dans le Prototype de la cellule. Par exemple :
+Avec ce code en place, lorsque l’application est exécutée, chaque ligne sera réduire et augmenter en fonction de la hauteur de la dernière étiquette dans le Prototype de la cellule. Exemple :
 
 [![](autosizing-row-height-images/table07.png "Un exemple de table exécuter")](autosizing-row-height-images/table07.png#lightbox)
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [GrowRowTable (sample)](https://developer.xamarin.com/samples/monotouch/GrowRowTable/)
+- [GrowRowTable (exemple)](https://developer.xamarin.com/samples/monotouch/GrowRowTable/)

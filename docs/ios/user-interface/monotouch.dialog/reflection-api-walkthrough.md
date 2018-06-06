@@ -1,21 +1,19 @@
 ---
-title: 'Procédure pas à pas : Création d’une application à l’aide de l’API de réflexion'
-description: En plus de l’API d’éléments, MonoTouch.Dialog (MT. D) également inclut une API basée sur les attributs de réflexion. L’API de réflexion permet de créer des écrans avec MT. D aussi simple que décorant des classes avec attributs. Cet article fournit une présentation montrant comment créer une application à l’aide de l’API de réflexion.
+title: Création d’une application Xamarin.iOS à l’aide de l’API de réflexion
+description: Ce document décrit le MonoTouch.Dialog basée sur l’attribut API de réflexion, ce qui crée l’interface utilisateur basée sur les classes décorés avec des attributs.
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e56eaeccb2e09d9f1ad84245bf41e2a4bf1b56f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c60d2a8ca58fe807dc340125d0db21b6f9ddff9f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790507"
 ---
-# <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>Procédure pas à pas : Création d’une application à l’aide de l’API de réflexion
-
-_En plus de l’API d’éléments, MonoTouch.Dialog (MT. D) également inclut une API basée sur les attributs de réflexion. L’API de réflexion permet de créer des écrans avec MT. D aussi simple que décorant des classes avec attributs. Cet article fournit une présentation montrant comment créer une application à l’aide de l’API de réflexion._
-
+# <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Création d’une application Xamarin.iOS à l’aide de l’API de réflexion
 
 Le MT. API de réflexion D permet aux classes être décoré avec des attributs que MT. D utilise pour créer des écrans automatiquement. L’API de réflexion fournit une liaison entre ces classes et ce qui est affiché sur l’écran. Cette API ne fournit pas le contrôle précis que les API d’éléments, il réduit la complexité en générant automatiquement à la hiérarchie des éléments en fonction de la décoration de la classe.
 
@@ -36,7 +34,6 @@ Examinons un exemple pour illustrer l’utilisation de l’API de réflexion. Da
  [![](reflection-api-walkthrough-images/01-expense-entry.png "Dans cet exemple, nous allons construire un écran d’entrée de données simple comme indiqué ici")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
-
 
 ## <a name="creating-a-class-with-mtd-attributes"></a>Création d’une classe avec MT. Attributs de D
 

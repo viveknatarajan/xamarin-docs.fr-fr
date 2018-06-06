@@ -1,18 +1,20 @@
 ---
-title: Affichage des alertes
+title: Affichage des alertes dans Xamarin.iOS
+description: Ce document décrit comment afficher les alertes dans Xamarin.iOS à l’aide de l’API introduites dans iOS 8 UIAlertController.
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b15afa55f170ce86fd66e17209c6db172b1db740
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 88233cb1ac31b2669fdc38bbc9b0835a45c6b0ce
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789592"
 ---
-# <a name="displaying-alerts"></a>Affichage des alertes
+# <a name="displaying-alerts-in-xamarinios"></a>Affichage des alertes dans Xamarin.iOS
 
 À compter d’iOS 8, UIAlertController a terminé UIActionSheet remplacé et UIAlertView qui sont désormais déconseillées.
 

@@ -1,23 +1,24 @@
 ---
-title: CoreImage
-description: CoreImage est une nouvelle infrastructure introduite avec iOS 5 pour fournir le traitement d’image et fonctionnalités d’amélioration de la vidéo en direct. Cet article présente ces fonctionnalités avec les exemples de Xamarin.iOS.
+title: Image de base dans Xamarin.iOS
+description: Image Core est une nouvelle infrastructure introduite avec iOS 5 pour fournir le traitement d’image et fonctionnalités d’amélioration de la vidéo en direct. Cet article présente ces fonctionnalités avec les exemples de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bb2c3b8b563da53e432ad16e6518ada67a4655e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6032554a0ddbda26ff5de94f6035bc4f8c15a22a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786630"
 ---
-# <a name="coreimage"></a>CoreImage
+# <a name="core-image-in-xamarinios"></a>Image de base dans Xamarin.iOS
 
-_CoreImage est une nouvelle infrastructure introduite avec iOS 5 pour fournir le traitement d’image et fonctionnalités d’amélioration de la vidéo en direct. Cet article présente ces fonctionnalités avec les exemples de Xamarin.iOS._
+_Image Core est une nouvelle infrastructure introduite avec iOS 5 pour fournir le traitement d’image et fonctionnalités d’amélioration de la vidéo en direct. Cet article présente ces fonctionnalités avec les exemples de Xamarin.iOS._
 
-CoreImage est une nouvelle infrastructure introduite dans iOS 5 qui fournit un certain nombre de filtres intégrés et les effets à appliquer à des images et des vidéos, notamment la détection de visage.
+Image Core est une nouvelle infrastructure introduite dans iOS 5 qui fournit un certain nombre de filtres intégrés et les effets à appliquer à des images et des vidéos, notamment la détection de visage.
 
 Ce document contient des exemples simples de :
 
@@ -26,15 +27,15 @@ Ce document contient des exemples simples de :
 -  Répertorier les filtres disponibles.
 
 
-Ces exemples doivent vous aider à commencer incorporation des fonctionnalités de CoreImage dans vos applications Xamarin.iOS.
+Ces exemples doivent vous aider à commencer incorporation des fonctionnalités de l’Image mémoire dans vos applications Xamarin.iOS.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Vous devez utiliser la version la plus récente de Xcode.
 
 ## <a name="face-detection"></a>Détection de visage
 
-La fonctionnalité de détection de visage CoreImage est simplement ne pas confondre : il tente d’identifier une photo de face et retourne les coordonnées de n’importe quel faces qu’il reconnaît. Ces informations peuvent être utilisées pour compter le nombre de personnes dans une image, dessiner des indicateurs sur l’image (par exemple). pour « marquage' personnes dans une photographie), ou tout autre élément que vous pouvez considérer de.
+La fonctionnalité de détection de visage dans une Image principale est qu’il affiche seulement, il tente d’identifier une photo de face et retourne les coordonnées de n’importe quel faces qu’il reconnaît. Ces informations peuvent être utilisées pour compter le nombre de personnes dans une image, dessiner des indicateurs sur l’image (par exemple). pour « marquage' personnes dans une photographie), ou tout autre élément que vous pouvez considérer de.
 
 Ce code à partir de CoreImage\SampleCode.cs montre comment créer et utiliser la détection de visage dans une image incorporée :
 
@@ -219,11 +220,11 @@ Chaque filtre répertorié a été exposé en tant que classe dans Xamarin.iOS, 
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a montré comment utiliser certaines des nouvelles fonctionnalités de framework iOS 5 CoreImage telles que la détection de visage et application des filtres à une image. Des dizaines de filtres d’image différents sont disponibles dans le framework à utiliser.
+Cet article a montré comment utiliser certaines des nouvelles fonctionnalités de framework iOS 5 Image Core telles que la détection de visage et application des filtres à une image. Des dizaines de filtres d’image différents sont disponibles dans le framework à utiliser.
 
 ## <a name="related-links"></a>Liens associés
 
 - [Image de base (exemple)](https://developer.xamarin.com/samples/CoreImage/)
 - [Ajuster le contrat et luminosité d’une Image de recette](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
-- [L’utilisation de filtres de CoreImage](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
+- [À l’aide de filtres d’Image de base](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [Référence de classe de CIFilter](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

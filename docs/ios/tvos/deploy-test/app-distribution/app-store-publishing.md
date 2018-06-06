@@ -1,21 +1,20 @@
 ---
 title: Publication sur l’App Store d’Apple TV
-description: Cet article explique comment configurer, générer et publier une application Xamarin.tvOS pour la distribution via l’App Store d’Apple TV. Il inclut un guide pas à pas qui décrit comment préparer votre application pour la distribution, comment utiliser les outils d’Apple soumettre votre application pour vérifier et, enfin, comment publier votre application sur l’App Store d’Apple TV.
+description: Ce document décrit comment publier une application à l’App Store d’Apple TV. Elle explique comment configurer, configurer, générer et envoyer une application tvOS développée avec Xamarin.
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c72b161845f6d8492a47d95e51a80cf0b4f30271
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac905caaf0bdefe7f0c5502be0bd63102ca5a813
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789302"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Publication sur l’App Store d’Apple TV
-
-_Cet article explique comment configurer, générer et publier une application Xamarin.tvOS pour la distribution via l’App Store d’Apple TV. Il inclut un guide pas à pas qui décrit comment préparer votre application pour la distribution, comment utiliser les outils d’Apple soumettre votre application pour vérifier et, enfin, comment publier votre application sur l’App Store d’Apple TV._
 
 Dans l’ordre de distribuer des applications à tous les appareils d’Apple TV, Apple nécessite que les applications à publier via le *App Store d’Apple TV*, qui effectue l’App Store de l’emplacement d’achat unique pour les applications de tvOS. Les développeurs de nombreux types d’applications peuvent en majuscules sur la réussite de gros volumes de ce point de distribution unique. L’App Store d’Apple TV est une solution clé en main, les développeurs d’applications des systèmes de distribution et de paiement.
 
@@ -193,7 +192,7 @@ Une fois que vous avez effectué la build de distribution, vous êtes prêt à s
 
 Le flux de travail archive dans Visual Studio pour Mac s’ouvre automatiquement, chargeur d’Application une fois que vous avez enregistré le `.ipa`:
 
-2. Sélectionnez *Deliver Your App (Livrer votre application)*, puis cliquez sur le bouton *Choose (Choisir)* :
+2. Sélectionnez *Deliver Your App (Livrer votre application)*, puis cliquez sur le bouton *Choose (Choisir)*  :
 
     [![](app-store-publishing-images/publishvs01.png "Sélectionner Livrer votre application")](app-store-publishing-images/publishvs01.png#lightbox)
 

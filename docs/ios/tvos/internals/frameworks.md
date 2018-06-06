@@ -1,18 +1,20 @@
 ---
-title: Infrastructures prises en charge et non pris en charge
+title: Infrastructures prises en charge et non pris en charge de tvOS
+description: 'Afin d’aider à clarifier les fonctionnalités disponibles pour les applications de tvOS, ce document fournit deux listes d’infrastructures d’Apple : ceux pris en charge par tvOS et ceux non pris en charge par tvOS.'
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 4b368a8e4d449d8fa8d0d29dab19d227bb6eee4c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8ba33d028263385eca50f8174124bbe629e3f951
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789120"
 ---
-# <a name="supported-and-unsupported-frameworks"></a>Infrastructures prises en charge et non pris en charge
+# <a name="supported-and-unsupported-frameworks-in-tvos"></a>Infrastructures prises en charge et non pris en charge de tvOS
 
 <a name="Supported-Frameworks" />
 
@@ -44,7 +46,7 @@ Il s’agit d’une liste des infrastructures fournies par Apple pour une utilis
 * Jeu
 * GLKit
 * ImageIO
-* MachO
+* Verve
 * MediaAccessibility
 * MediaPlayer
 * MediaToolbox
@@ -71,7 +73,7 @@ Il s’agit d’une liste des infrastructures fournies par Apple pour une utilis
 Voici une liste des infrastructures qui sont pris en charge par iOS 9, mais ont été supprimées de prise en charge de tvOS 9 par Apple et par conséquent, ne peut pas être utilisé dans vos applications Xamarin.tvOS :
 
 * Comptes
-* AddressBook
+* Carnet d’adresses
 * AddressBookUI
 * AssetsLibrary
 * Contacts

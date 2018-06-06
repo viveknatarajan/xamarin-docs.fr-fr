@@ -1,5 +1,5 @@
 ---
-title: Procédure pas à pas - à l’aide de CoreGraphics et CoreAnimation
+title: À l’aide de graphiques de base et l’Animation de la base de Xamarin.iOS
 description: Cet article explique étape par étape comment créer une application qui utilise des graphiques de base et l’Animation de base. Il montre comment dessiner sur l’écran en réponse à une touche de l’utilisateur, ainsi que comment animer une image à parcourir le long d’un chemin d’accès.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f857accfcdec4cb60e781936d1d0836dbf8d6ffb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7a4399a5d62e2000c2a15a65da8e0e427dc039e0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787053"
 ---
-# <a name="drawing-and-animating-along-a-path"></a>Dessin et l’animation sur un tracé
+# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>À l’aide de graphiques de base et l’Animation de la base de Xamarin.iOS
 
 Pour cette procédure pas à pas, nous allons dessiner un tracé à l’aide de graphiques de base en réponse à l’entrée tactile. Ensuite, nous allons ajouter un `CALayer` contenant une image qui nous s’anime le long du tracé.
 

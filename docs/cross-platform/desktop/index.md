@@ -1,19 +1,20 @@
 ---
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
 title: Inter-plateformes pour les développeurs de bureau
-description: Xamarin vous permet de créer des applications pour Windows, Android, iOS et Mac à l’aide de vos compétences en matière de Windows Forms ou WPF.
+description: Ce document liens vers des guides pas à pas qui décrivent les Xamarin.Forms pour les développeurs WPF et Windows Forms. Le contenu lié explore l’application du cycle de vie, les contrôles d’interface utilisateur, des conseils et des exemples de portage.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 0794d931dd57971efcbd0ea5b42159e3524ea6b0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 21c74b8c0ccaffb2b3b8205a3bdda9101b99f072
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779952"
 ---
 # <a name="cross-platform-for-desktop-developers"></a>Inter-plateformes pour les développeurs de bureau
 
-Cette section contient des informations pour aider les développeurs WPF et Windows.Forms d’apprendre le développement d’applications mobiles avec Xamarin, par leurs connaissances existantes de références croisées et d’expérience aux idiomes mobiles et en fournissant des exemples de portage d’applications de bureau pour mobile.
+Cette section contient des informations pour aider les développeurs à apprendre le développement d’applications mobiles avec Xamarin, par leurs connaissances existantes de références croisées de WPF et Windows Forms et idiomes mobiles, et en fournissant des exemples de portage d’applications de bureau pour mobiles.
 
 ## <a name="app-lifecycle-comparisonlifecyclemd"></a>[Comparaison de cycle de vie d’application](lifecycle.md)
 

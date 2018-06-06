@@ -1,21 +1,23 @@
 ---
 title: Prise en main de Objective-C
+description: Ce document décrit comment commencer à utiliser .NET incorporation avec objectif-C. Il décrit la configuration requise, l’installation de l’incorporation de .NET à partir de NuGet et plateformes prises en charge.
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 0c2d92f52000bbc6d9d4ea3b07112795aa98bd0a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c5db0a55cc1d2597837ae5feb2c5167a0a21b494
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792978"
 ---
 # <a name="getting-started-with-objective-c"></a>Prise en main de Objective-C
 
 Il s’agit de la page de démarrage pour Objective-C, qui couvre les principes de base pour toutes les plateformes prises en charge.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Pour utiliser .NET incorporation avec Objective-C, vous devez un Mac en cours d’exécution :
 

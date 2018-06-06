@@ -1,15 +1,17 @@
 ---
 title: watchOS Application notions de base
+description: Ce document fournit des liens vers différents documents qui décrivent les concepts fondamentaux watchOS développement d’applications à l’aide de Xamarin.
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a21f45a954ffe937ebfb785aa6b0fbc6b468309f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 379b86c46f1d3ba8653c9f41750bce78bae945b5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790576"
 ---
 # <a name="watchos-application-fundamentals"></a>watchOS Application notions de base
 

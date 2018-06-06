@@ -1,5 +1,5 @@
 ---
-title: Techniques d’Interaction rapide pour watchOS 3
+title: Techniques d’Interaction rapide pour watchOS 3 dans Xamarin
 description: Cet article décrit les techniques d’interaction rapide Apple a ajouté dans watchOS 3 et comment les implémenter dans Xamarin.iOS pour Apple Watch.
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: d3c7c6d80a6f23cdadda04d787e28e13b054a9e6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a62f6f153508dbd03bda569000357f3093d3e214
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791473"
 ---
-# <a name="quick-interaction-techniques-for-watchos-3"></a>Techniques d’Interaction rapide pour watchOS 3
+# <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Techniques d’Interaction rapide pour watchOS 3 dans Xamarin
 
 _Cet article décrit les techniques d’interaction rapide Apple a ajouté dans watchOS 3 et comment les implémenter dans Xamarin.iOS pour Apple Watch._
 
@@ -119,7 +120,7 @@ Accès couronne numérique est fourni par les éléments suivants :
 
 #### <a name="rotations-per-second"></a>Rotations par seconde
 
-L’accès à des Rotations par seconde à partir de la couronne numérique est utile lors de l’utilisation de physique en fonction des animations. Pour accéder à des Rotations par seconde, utilisez le `CrownSequencer` propriété de la `WKInterfaceController` de l’Extension de surveillance. Par exemple :
+L’accès à des Rotations par seconde à partir de la couronne numérique est utile lors de l’utilisation de physique en fonction des animations. Pour accéder à des Rotations par seconde, utilisez le `CrownSequencer` propriété de la `WKInterfaceController` de l’Extension de surveillance. Exemple :
 
 ```csharp
 var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
@@ -127,7 +128,7 @@ var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
 
 #### <a name="rotational-deltas"></a>Rotation Deltas
 
-Les Deltas de rotation à partir de la couronne numérique permet de compter le nombre de rotations. Utilisez le `CrownDidRotate` substituer la méthode de le `WKCrownDelegate` pour accéder aux Deltas de rotation. Par exemple :
+Les Deltas de rotation à partir de la couronne numérique permet de compter le nombre de rotations. Utilisez le `CrownDidRotate` substituer la méthode de le `WKCrownDelegate` pour accéder aux Deltas de rotation. Exemple :
 
 ```csharp
 using System;

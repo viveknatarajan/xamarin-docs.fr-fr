@@ -1,5 +1,5 @@
 ---
-title: Principes de base de message Extension d’application
+title: Principes fondamentaux de Extension d’application de message dans Xamarin.iOS
 description: Cet article montre comment inclure une Extension d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application des Messages et présente les nouvelles fonctionnalités à l’utilisateur.
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 73ca0974a42bf661a89327148b68341114297084
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: bc06d73543b9e0bd1e8715fc722b0a95af7d9f07
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787908"
 ---
-# <a name="message-app-extension-basics"></a>Principes de base de message Extension d’application
+# <a name="message-app-extension-basics-in-xamarinios"></a>Principes fondamentaux de Extension d’application de message dans Xamarin.iOS
 
 _Cet article montre comment inclure une Extension d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application des Messages et présente les nouvelles fonctionnalités à l’utilisateur._
 
@@ -36,7 +37,7 @@ Nouveau pour iOS 10, l’application Message inclut désormais son propre magasi
 
 Également nouveau dans iOS 10, Apple a ajouté les Attribution application Inline qui lui permet de découvrir facilement une application. Par exemple, si un utilisateur envoie le contenu vers un autre à partir d’une application que l’utilisateur 2 n’est installé (par exemple, une vignette par exemple), le nom de l’application émettrice est répertorié sous le contenu de l’historique des messages. Si l’utilisateur appuie sur l’application un nom, le Message App Store nous série ouvert et l’application sélectionnée dans le magasin.
 
-Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familiarisé avec la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Par exemple :
+Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familiarisé avec la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Exemple :
 
 - Ils ont accès dans l’application fournisseur.
 - Ils ont accès à payer par Apple.

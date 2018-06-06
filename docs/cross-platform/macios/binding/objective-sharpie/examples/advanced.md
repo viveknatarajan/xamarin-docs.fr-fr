@@ -1,21 +1,21 @@
 ---
 title: Advanced concrète (manuel)
+description: Ce document décrit comment utiliser la sortie de xcodebuild comme entrée à l’objectif Sharpie, ce qui permet de connaître quoi objectif Sharpie sous le capot.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 82bca525433e5c8fea3a29250afb83962f2e64fc
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7af9700a9b661280c2ee32a1f65cdc01234cbe37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781254"
 ---
 # <a name="advanced-manual-real-world-example"></a>Advanced concrète (manuel)
 
-
 **Cet exemple utilise le [bibliothèque POP à partir de Facebook](https://github.com/facebook/pop).**
-
 
 Cette section décrit une approche plus avancée pour la liaison, où nous utiliserons d’Apple `xcodebuild` outil pour tout d’abord créer le projet POP, puis puis déduire manuellement une entrée pour l’objectif Sharpie. Il s’agit essentiellement ce que fait objectif Sharpie sous le capot de la section précédente.
 

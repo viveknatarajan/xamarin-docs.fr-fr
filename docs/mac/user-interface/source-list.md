@@ -1,5 +1,5 @@
 ---
-title: Listes sources
+title: Listes sources dans Xamarin.Mac
 description: Cet article traite de l’utilisation de listes de sources dans une application Xamarin.Mac. Il décrit la création et gestion des listes de sources dans Xcode et Générateur de l’Interface et interagir avec elles dans le code c#.
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a8d3a67768b9e47833d1819c3bf44774a52d2438
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c93d4b0855fb96897da2018596766b16e5385ab4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792770"
 ---
-# <a name="source-lists"></a>Listes sources
+# <a name="source-lists-in-xamarinmac"></a>Listes sources dans Xamarin.Mac
 
 _Cet article traite de l’utilisation de listes de sources dans une application Xamarin.Mac. Il décrit la création et gestion des listes de sources dans Xcode et Générateur de l’Interface et interagir avec elles dans le code c#._
 
@@ -623,7 +624,7 @@ Cet article a pris une présentation détaillée sur l’utilisation de listes d
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacOutlines (sample)](https://developer.xamarin.com/samples/mac/MacOutlines/)
+- [MacOutlines (exemple)](https://developer.xamarin.com/samples/mac/MacOutlines/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Vues Table](~/mac/user-interface/table-view.md)
 - [Modes Plan](~/mac/user-interface/outline-view.md)

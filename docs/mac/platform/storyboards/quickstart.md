@@ -1,19 +1,20 @@
 ---
-title: Démarrage rapide de plans conceptuels
-description: Mise en route de génération démarrée macOS des interfaces utilisateur avec des plans conceptuels.
+title: Storyboards dans Xamarin.Mac – démarrage rapide
+description: Ce document fournit une présentation du démarrage rapide pour créer des interfaces utilisateur avec des plans conceptuels dans Xamarin.Mac macOS. Il décrit comment créer un segue et créer une fenêtre de préférences.
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 0c366de844b119736763f7d419d6bc9bb3fbfc0a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2bf91a51a55583e2ba8ca1fc09eb3dcd0d9986cf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792569"
 ---
-# <a name="starting-a-new-storyboard-based-project"></a>À partir d’une table de montage séquentiel en fonction de projet
+# <a name="storyboards-in-xamarinmac--quick-start"></a>Storyboards dans Xamarin.Mac – démarrage rapide
 
 Comme une présentation rapide à l’aide de tables de montage séquentiel pour définir l’Interface utilisateur d’une application Xamarin.Mac, nous pouvons commencer un nouveau projet Xamarin.Mac. Sélectionnez **Mac** > **Application** > **Application Cocoa** et cliquez sur le bouton **Suivant** :
 
@@ -107,7 +108,7 @@ Là encore, cela se fera automatiquement avec deux enfant attachés des contrôl
 
 [![](quickstart-images/qs19.png "Définition de contraintes")](quickstart-images/qs19.png#lightbox)
 
-Ensuite, nous souhaitons afficher la fenêtre de préférences lorsque l’utilisateur sélectionne le **préférences... ** élément de menu. Dans la barre de menus, sélectionnez l’élément de menu Préférences **contrôle** clé cliquez et faites glisser une ligne à notre onglet View Controller :
+Ensuite, nous souhaitons afficher la fenêtre de préférences lorsque l’utilisateur sélectionne le **préférences...**  élément de menu. Dans la barre de menus, sélectionnez l’élément de menu Préférences **contrôle** clé cliquez et faites glisser une ligne à notre onglet View Controller :
 
 [![](quickstart-images/qs20.png "Glisser-déplacer pour créer un segue")](quickstart-images/qs20.png#lightbox)
 
@@ -115,7 +116,7 @@ Dans le menu contextuel, sélectionnez **modale** pour afficher cette fenêtre c
 
 [![](quickstart-images/qs21.png "Sélection du type segue")](quickstart-images/qs21.png#lightbox)
 
-Si nous enregistrer nos modifications, revenez à Visual Studio pour Mac, exécutez l’application et sélectionnez le **préférences... ** élément de menu, vos préférences nouvelle boîte de dialogue s’affiche :
+Si nous enregistrer nos modifications, revenez à Visual Studio pour Mac, exécutez l’application et sélectionnez le **préférences...**  élément de menu, vos préférences nouvelle boîte de dialogue s’affiche :
 
 [![](quickstart-images/qs22.png "Un exemple de la segue en cours d’exécution")](quickstart-images/qs22.png#lightbox)
 
@@ -129,7 +130,7 @@ Sélectionnez chaque onglet et lui donner un **étiquette** et sélectionnez une
 
 [![](quickstart-images/qs24.png "Configuration de chaque onglet dans Xcode")](quickstart-images/qs24.png#lightbox)
 
-Si nous enregistrer nos modifications, revenez à Visual Studio pour Mac, exécutez l’application et sélectionnez le **préférences... ** élément de menu, la boîte de dialogue s’affiche désormais comme une application macOS standard :
+Si nous enregistrer nos modifications, revenez à Visual Studio pour Mac, exécutez l’application et sélectionnez le **préférences...**  élément de menu, la boîte de dialogue s’affiche désormais comme une application macOS standard :
 
 [![](quickstart-images/qs25.png "Un exemple de la fenêtre de préférences en cours d’exécution")](quickstart-images/qs25.png#lightbox)
 

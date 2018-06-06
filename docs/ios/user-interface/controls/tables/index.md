@@ -1,20 +1,20 @@
 ---
-title: Utilisation des Tables et des cellules
-description: Affichage des données à l’aide de UITableView avec Xamarin.iOS
+title: Utilisation des Tables et des cellules de Xamarin.iOS
+description: Ce document liens vers des guides pas à pas qui décrivent comment afficher des données avec le contrôle UITableView dans une application Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: a1cda3632a75c7e462e763a34fdb5b586237b670
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ebdad2cc8e3083bee5acc127660b5641f42c731f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790014"
 ---
-# <a name="working-with-tables-and-cells"></a>Utilisation des Tables et des cellules
-
+# <a name="working-with-tables-and-cells-in-xamarinios"></a>Utilisation des Tables et des cellules de Xamarin.iOS
 
 Cette section présente les classes utilisées pour créer et afficher les tables, puis fournit des exemples de leur utilisation dans Xamarin.iOS. Elle couvre l’utilisation de l’apparence par défaut pour les tables, personnalisation de la disposition, la mise en œuvre de la modification et à l’aide de Xamarin iOS concepteur pour concevoir une table visuellement. Parfois, l’affichage est à l’évidence une liste de lignes (par exemple, l’application de la musique) et d’autres moments, qu'il est difficile d’identifier le contrôle de table (par exemple la modification dans l’application Contacts ou une conversation dans l’application Messages).
 
@@ -26,7 +26,6 @@ Ces articles prennent une vision détaillée de travailler avec les tables, y co
 -   **Affichage des données dans les tables** – montrant comment créer et remplir une table, utilisez différents styles de tableau et de cellule et éviter les problèmes de mémoire par le recyclage des objets de la cellule. 
 -   **L’utilisation avancée** : création de cellules personnalisés et à l’aide des fonctionnalités de modification de la classe UITableView. 
 -   **Création d’une table visuellement** – à l’aide du Concepteur de Xamarin pour iOS pour créer une interface pilotée par table avec une table de montage séquentiel. 
-
 
 ## <a name="contents"></a>Sommaire
 
@@ -43,7 +42,6 @@ Ces articles prennent une vision détaillée de travailler avec les tables, y co
  [Création de Tables dans une table de montage séquentiel](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
  [Redimensionnement automatique de la hauteur de ligne](~/ios/user-interface/controls/tables/autosizing-row-height.md)
-
 
 ## <a name="related-links"></a>Liens associés
 

@@ -1,15 +1,16 @@
 ---
 title: Xamarin.Essentials
-description: Xamarin.Essentials fournit aux développeurs des API d’inter-plateformes pour leurs applications mobiles.
+description: Ce document liens vers des guides pas à pas qui décrivent Xamarin.Essentials, qui fournit aux développeurs pour leurs applications mobiles multiplateforme API.
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a13017cbfe6039e623a95e147f563518f4c86c3e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 5fec06fd6f0c13a75040d940a11811ef97c3bcc3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782737"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 

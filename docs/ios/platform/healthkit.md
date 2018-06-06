@@ -1,21 +1,20 @@
 ---
-title: HealthKit
-description: HealthKit est une infrastructure introduite dans iOS 8 qui fournit un magasin de données centralisé et coordonné sécurisé pour les informations relatives au contrôle d’intégrité. Le système d’exploitation garantit la confidentialité et la sécurité des informations d’intégrité et, avec l’application de contrôle d’intégrité, un tableau de bord pour l’utilisateur. Avec l’autorisation de l’utilisateur, les applications peuvent lire et écrire une grande variété d’informations d’intégrité.
+title: HealthKit dans Xamarin.iOS
+description: Ce document décrit HealthKit, une structure introduite dans iOS 8 qui fournit un magasin de données centralisé et coordonné sécurisé pour les informations relatives au contrôle d’intégrité. Il explique comment configurer une application de HealthKit et écrire du code qui utilise l’infrastructure HealthKit.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06c0231bbb9aa7b82b92e0a8c2157b8be9c8b05b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787531"
 ---
-# <a name="healthkit"></a>HealthKit
-
-_HealthKit est une infrastructure introduite dans iOS 8 qui fournit un magasin de données centralisé et coordonné sécurisé pour les informations relatives au contrôle d’intégrité. Le système d’exploitation garantit la confidentialité et la sécurité des informations d’intégrité et, avec l’application de contrôle d’intégrité, un tableau de bord pour l’utilisateur. Avec l’autorisation de l’utilisateur, les applications peuvent lire et écrire une grande variété d’informations d’intégrité._
+# <a name="healthkit-in-xamarinios"></a>HealthKit dans Xamarin.iOS
 
 Kit de contrôle d’intégrité fournit une banque de données sécurisé pour les informations relatives à la santé de l’utilisateur. Contrôle d’intégrité Kit applications peuvent, avec l’autorisation explicite de l’utilisateur, lire et écrire cette banque de données et recevoir des notifications lorsque les données pertinentes sont ajoutées. Les applications peuvent présenter les données, ou l’utilisateur peut utiliser application de contrôle d’intégrité de l’Apple fournie pour afficher un tableau de bord de toutes leurs données.
 
@@ -33,7 +32,7 @@ Dans cet article, nous allons créer un exemple d’application pour enregistrer
 
 [![](healthkit-images/image01.png "Un exemple d’application pour enregistrer le rythme cardiaque utilisateurs")](healthkit-images/image01.png#lightbox)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour terminer les étapes présentées dans cet article :
 
@@ -445,5 +444,5 @@ Enfin, nous avons aborder une implémentation simple du Kit de contrôle d’int
 
 ## <a name="related-links"></a>Liens associés
 
-- [HKWork (sample)](https://developer.xamarin.com/samples/monotouch/ios8/IntroToHealthKit/)
+- [HKWork (exemple)](https://developer.xamarin.com/samples/monotouch/ios8/IntroToHealthKit/)
 - [Introduction à iOS 8](~/ios/platform/introduction-to-ios8.md)

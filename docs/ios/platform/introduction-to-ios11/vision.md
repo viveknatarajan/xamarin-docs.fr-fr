@@ -1,18 +1,20 @@
 ---
-title: Vision Framework
+title: Infrastructure de vision dans Xamarin.iOS
+description: Ce document décrit comment utiliser le 11 iOS Framework Vision dans Xamarin.iOS. En particulier, il traite la détection du rectangle et sont confrontés à la détection.
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2016
-ms.openlocfilehash: 698bf829128cff1263e98b49d29a77b75ec32ad9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44c4b3ab12c1ba448f1befb6f831f5ad9119f18
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787417"
 ---
-# <a name="vision-framework"></a>Vision Framework
+# <a name="vision-framework-in-xamarinios"></a>Infrastructure de vision dans Xamarin.iOS
 
 L’infrastructure de Vision ajoute un numéro de la nouvelle image de traitement des fonctionnalités à iOS 11, y compris :
 

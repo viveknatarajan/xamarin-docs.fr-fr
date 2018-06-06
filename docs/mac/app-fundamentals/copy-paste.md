@@ -1,5 +1,5 @@
 ---
-title: en effectuant un copier-coller ;
+title: Copier et coller dans Xamarin.Mac
 description: Cet article décrit l’utilisation de la table de montage pour fournir de copie et de coller dans une application Xamarin.Mac. Il montre comment travailler avec les types de données standard qui peuvent être partagés entre plusieurs applications et la prise en charge des données personnalisées dans une application donnée.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cf81666403f687ce997e20f6f5f097dc9fcf1421
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: becdec771949584919595c84b13ae9e05bfd377b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791895"
 ---
-# <a name="copy-and-paste"></a>en effectuant un copier-coller ;
+# <a name="copy-and-paste-in-xamarinmac"></a>Copier et coller dans Xamarin.Mac
 
 _Cet article décrit l’utilisation de la table de montage pour fournir de copie et de coller dans une application Xamarin.Mac. Il montre comment travailler avec les types de données standard qui peuvent être partagés entre plusieurs applications et la prise en charge des données personnalisées dans une application donnée._
 
@@ -540,7 +541,7 @@ Pour chaque élément de menu, nous obtenir la fenêtre en cours, au premier pla
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-À partir de là, nous appelons le `ImageDocument` instance de la classe de cette fenêtre pour gérer la copie et collez les actions. Par exemple : 
+À partir de là, nous appelons le `ImageDocument` instance de la classe de cette fenêtre pour gérer la copie et collez les actions. Exemple : 
 
 ```csharp
 window.Document.CopyImage (sender);
@@ -702,7 +703,7 @@ Utilisez le `ChangeCount` et `ClearContents` méthodes de la `NSPasteboard` clas
 
 Vous effectuez une opération de copie en premier l’accès à une table de montage, effacer le contenu existant et l’écriture des représentations autant de données que vous êtes obligé de la table de montage.
 
-Par exemple :
+Exemple :
 
 ```csharp
 // Get the standard pasteboard
@@ -936,7 +937,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-La classe doit également être exposée pour Objective-C à l’aide de la `Register` directive et elle doivent exposer les propriétés requises ou les méthodes à l’aide de `Export`. Par exemple :
+La classe doit également être exposée pour Objective-C à l’aide de la `Register` directive et elle doivent exposer les propriétés requises ou les méthodes à l’aide de `Export`. Exemple :
 
 ```csharp
 [Export("name")]
@@ -1279,7 +1280,7 @@ Cet article a pris une présentation détaillée sur l’utilisation de la table
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacCopyPaste (sample)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
+- [MacCopyPaste (exemple)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Table de montage Guide de programmation](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [macOS indications de l’Interface humaine](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

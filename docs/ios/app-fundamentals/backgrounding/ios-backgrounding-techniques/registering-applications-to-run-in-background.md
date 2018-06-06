@@ -1,18 +1,20 @@
 ---
-title: L’inscription des Applications à s’exécuter en arrière-plan
+title: L’inscription d’applications Xamarin.iOS à exécuter en arrière-plan
+description: Ce document décrit comment inscrire une application Xamarin.iOS s’exécuter en arrière-plan. Il explique Audio applications, VoIP applications, Accessoires externes et bluetooth et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 58ee68f765372094d68c3cf30ed6a631a67fe313
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f4774f6b4f5412c44dc985bd40129a178b1e813c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783673"
 ---
-# <a name="registering-applications-to-run-in-the-background"></a>L’inscription des Applications à s’exécuter en arrière-plan
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>L’inscription d’applications Xamarin.iOS à exécuter en arrière-plan
 
 L’inscription des tâches individuelles pour les travaux de privilèges en arrière-plan pour certaines applications, mais que se passe-t-il si une application est appelée en permanence pour effectuer des tâches importantes, longs, tels que l’obtention des instructions pour l’utilisateur via le système GPS ? Applications telles que celles-ci doivent plutôt être enregistrées comme des applications nécessaires à l’arrière-plan connues.
 

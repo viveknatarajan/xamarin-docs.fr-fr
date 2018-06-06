@@ -1,5 +1,5 @@
 ---
-title: Vues de table
+title: Vues de table dans Xamarin.Mac
 description: Cet article décrit l’utilisation des vues de table dans une application Xamarin.Mac. Il décrit la création de vues de table dans Xcode Interface Builder et interagir avec elles dans le code.
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c274405613f079cb61ad9c96497a9effdc7173f5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da26810869f23b8861ffb4409248c56bff12a521
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793228"
 ---
-# <a name="table-views"></a>Vues de table
+# <a name="table-views-in-xamarinmac"></a>Vues de table dans Xamarin.Mac
 
 _Cet article décrit l’utilisation des vues de table dans une application Xamarin.Mac. Il décrit la création de vues de table dans Xcode Interface Builder et interagir avec elles dans le code._
 
@@ -580,7 +581,7 @@ Maintenant si nous exécutons l’application, l’utilisateur peut modifier les
 
 ## <a name="using-images-in-table-views"></a>L’utilisation d’Images dans les vues de Table
 
-Pour inclure une image dans le cadre de la cellule dans une `NSTableView`, vous devez modifier la façon dont les données sont retournées par la vue de Table `NSTableViewDelegate's` `GetViewForItem` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Par exemple :
+Pour inclure une image dans le cadre de la cellule dans une `NSTableView`, vous devez modifier la façon dont les données sont retournées par la vue de Table `NSTableViewDelegate's` `GetViewForItem` méthode à utiliser un `NSTableCellView` au lieu du type `NSTextField`. Exemple :
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)

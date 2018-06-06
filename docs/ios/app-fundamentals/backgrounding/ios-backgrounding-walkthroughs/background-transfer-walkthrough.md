@@ -1,21 +1,20 @@
 ---
-title: Procédure pas à pas - à l’aide de NSURLSession et le Service de transfert en arrière-plan
-description: Dans cette procédure pas à pas, nous utilisons le Service de transfert en arrière-plan et l’API de NSURLSession pour déclencher le téléchargement d’une image de grande taille qui continue à télécharger lorsque l’application est en arrière-plan.
+title: NSURLSession dans Xamarin.iOS et transfert en arrière-plan
+description: Ce document fournit une procédure pas à pas qui montre comment utiliser le transfert en arrière-plan et NSUrlSession pour lancer le téléchargement d’une image de grande taille et continuer à ce téléchargement lorsque l’application est placée en arrière-plan.
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 51e1ae0a4314d0b23ec9e3236656321bd3dcb4e4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 08a0ba1337c0d28d1f0d60d04394ccaf4a9ccfc7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783737"
 ---
-# <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Procédure pas à pas - à l’aide de NSURLSession et le Service de transfert en arrière-plan
-
-_Dans cette procédure pas à pas, nous utilisons le Service de transfert en arrière-plan et l’API de NSURLSession pour déclencher le téléchargement d’une image de grande taille qui continue à télécharger lorsque l’application est en arrière-plan._
+# <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>NSURLSession dans Xamarin.iOS et transfert en arrière-plan
 
 Un transfert en arrière-plan est lancé en configurant un arrière-plan `NSURLSession` et file d’attente charger ou télécharger des tâches. Si les tâches se termine lors de l’application est backgrounded, suspendue ou arrêtée, iOS informe l’application en appelant le Gestionnaire d’achèvement de l’application *AppDelegate*. Le diagramme suivant illustre cela en action :
 

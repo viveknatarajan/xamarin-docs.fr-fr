@@ -1,20 +1,19 @@
 ---
 title: Plateforme Apple (iOS et Mac)
-description: Dans cette section nous présente les stratégies pour partager du code entre vos projets Xamarin.iOS et Xamarin.Mac.
+description: 'Ce document décrit les différentes rubriques relatives au développement de Xamarin.iOS et Xamarin.Mac : code de partage, l’API unifiée, liaison Objective-C bibliothèques, références natives, les types natifs et bien plus encore.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 3c01ff4af699dd0374729b638470d1ef34aa7022
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b40758fa562e57415cd3c0818763ef0a7ce5dcca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781531"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Plateforme Apple (iOS et Mac)
-
-_Dans cette section nous présente les stratégies pour partager du code entre vos projets Xamarin.iOS et Xamarin.Mac._
 
 ## <a name="code-sharing"></a>Partage de code
 
@@ -48,8 +47,6 @@ Xamarin vous permet de placer des bibliothèques natives dans vos applications a
 
 ## <a name="native-referencesnative-referencesmd"></a>[Références natives](native-references.md)
 
-
-
 ##  <a name="macios-native-typesnativetypesmd"></a>[Types natifs Mac/iOS](nativetypes.md)
 
 Pour prendre en charge de 32 et code 64 bits en toute transparence à partir de c# et F #, nous vous présentons les nouveaux types de données.   En savoir plus sur les ici.
@@ -62,7 +59,6 @@ Ce que vous devez savoir pour prendre en charge pour les applications 32 et 64 b
 
 Cet article couvre l’utilisation de la nouvelle iOS types natifs des API unifiée (`nint`, `nuint`, `nfloat`) dans une application multiplateforme où le code est partagé avec des périphériques non-iOS Android ou des systèmes d’exploitation Windows Phone.
 Il permet de comprendre quand les types natifs doivent être utilisées et offre plusieurs solutions possibles pour les cas où le nouveau type doit être utilisé avec code multiplateforme.
-
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Pile HttpClient et sélecteur d’implémentation de SSL/TLS](http-stack.md)
 

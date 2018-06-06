@@ -1,21 +1,20 @@
 ---
-title: Utilisation de contrôleurs de Navigation
-description: Cet article décrit la conception et l’utilisation des barres de Navigation à l’intérieur d’une application Xamarin.tvOS.
+title: Utilisation de tvOS, barres de Navigation dans Xamarin
+description: Ce document décrit comment utiliser des barres de navigation dans une application de tvOS générée avec Xamarin. Elle explique la configuration de barres de navigation dans un plan conceptuel et répondre aux événements à partir de ces boutons.
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8a9a1c852137a2bcc0d46615e69eef0a245a9768
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b6c8ff8551c91578b9399b88e90e94c6af12ac68
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789289"
 ---
-# <a name="working-with-navigation-controllers"></a>Utilisation de contrôleurs de Navigation
-
-_Cet article décrit la conception et l’utilisation des barres de Navigation à l’intérieur d’une application Xamarin.tvOS._
+# <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Utilisation de tvOS, barres de Navigation dans Xamarin
 
 Barres de navigation peuvent être ajoutés en haut des vues pour afficher le titre et des boutons de barre de Navigation facultatifs. En règle générale, ils sont utilisés lorsque l’utilisateur a accédé à partir d’une page principale, comme une Table de vue, la Collection ou le Menu pour un sous-affichage présentant les détails de l’élément sélectionné.
 
@@ -26,9 +25,6 @@ En outre, le titre (qui s’affiche dans le centre), les barres de Navigation pe
 > [!IMPORTANT]
 > Barres de navigation sont totalement transparents par défaut. Soyez vigilant pour vérifier que le contenu de la barre de Navigation reste accessible en lecture sur le contenu qu’il contient. Par exemple, lorsque le contenu dans un tableau ou Collection défile en dessous.
 
-
-
-
 <a name="Navigation-Bars-and-Storyboards" />
 
 ## <a name="navigation-bars-and-storyboards"></a>Barres de navigation et les animations
@@ -36,7 +32,6 @@ En outre, le titre (qui s’affiche dans le centre), les barres de Navigation pe
 Pour travailler avec les barres de Navigation dans une application Xamarin.tvOS, le plus simple consiste à ajouter à l’interface utilisateur de l’application d’utiliser le concepteur iOS.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
-
 
 1. Dans le **Solution remplissage**, double-cliquez sur `Main.storyboard` de fichier et l’ouvre pour modification.
 1. Faites glisser un **barre de Navigation** à partir de la **boîte à outils** et déposez-la sur la vue en haut de l’écran : 
@@ -77,9 +72,6 @@ Pour travailler avec les barres de Navigation dans une application Xamarin.tvOS,
 
 > [!IMPORTANT]
 > Bien qu’il soit possible d’attribuer des événements tels que `TouchUpInside` à un élément d’interface utilisateur (par exemple, un UIButton) dans le concepteur iOS, il ne sera jamais appelée car Apple TV n’a pas une fonction tactile d’écran ou de prendre en charge les événements tactiles. Vous devez toujours utiliser le `Primary Action` événement lors de la création de gestionnaires d’événements de tvOS éléments d’interface utilisateur.
-
-
-
 
 Le code suivant donne un exemple de gestionnaires d’événements sur trois BarButtonItems différents : `ShowFirstHotel`, `ShowSecondHotel`, et `ShowThirdHotel`. Lorsque vous cliquez sur chaque élément, l’image d’arrière-plan `HotelImage` est modifiée. Il est modifié dans le contrôleur de la vue (exemple `ViewController.cs`) fichier :
 

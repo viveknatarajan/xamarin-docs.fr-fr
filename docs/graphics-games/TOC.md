@@ -2,7 +2,7 @@
 ## [Développement de jeux](game-development/index.md)
 ## [SkiaSharp](skiasharp/index.md)
 ### [Introduction](skiasharp/introduction.md)
-### [Remarques spécifiques de la plateforme](skiasharp/platform.md)
+### [Notes spécifiques à la plateforme](skiasharp/platform.md)
 
 
 

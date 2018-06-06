@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
-ms.date: 10/27/2017
-ms.openlocfilehash: 81c6a5682fc91b49a0f7495f06e7f7b6d3f76330
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 06/03/2018
+ms.openlocfilehash: 42a8a2e3751d111f6ba8ccbea32e0446460f9a29
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793873"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -289,13 +290,15 @@ Le graphique, comme illustré dans la capture d’écran ci-dessous, affiche le 
 
 ### <a name="cycles"></a>Cycles
 
-Grâce à l’utilisation de code c# et F # gérés, il peut être assez courant et malheureusement relativement facile de créer des références aux objets qui ne sont jamais supprimés. Cette intrument permet d’identifier ces objets et à afficher les cycles référencés dans votre application.
+Grâce à l’utilisation de code c# et F # gérés, il peut être assez courant et malheureusement relativement facile de créer des références aux objets qui ne sont jamais supprimés. Cet instrument vous permet de repérer les objets et d’afficher les cycles référencés dans votre application.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
+[![Les cycles de pré-instrumentation](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
+
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Les cycles de pré-instrumentation](images/cycles-vs.png)](images/time1-vs.png#lightbox) 
+[![Les cycles de pré-instrumentation](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
 -----
 

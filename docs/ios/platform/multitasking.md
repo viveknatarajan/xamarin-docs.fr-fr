@@ -1,5 +1,5 @@
 ---
-title: Multitâche pour iPad
+title: Multitâche pour iPad en Xamarin.iOS
 description: iOS 9 prend en charge les deux applications qui s’exécutent en même temps, à l’aide de la diapositive sur ou mode fractionné. Il prend également en charge la lecture d’image vidéo.
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 553fd6e45df897037d6ad90ef9211eef0bf27aae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7eacd9ece067d2ddf6363c0551055daa3df4433a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787953"
 ---
-# <a name="multitasking-for-ipad"></a>Multitâche pour iPad
+# <a name="multitasking-for-ipad-in-xamarinios"></a>Multitâche pour iPad en Xamarin.iOS
 
 _iOS 9 prend en charge les deux applications qui s’exécutent en même temps, à l’aide de la diapositive sur ou mode fractionné. Il prend également en charge la lecture d’image vidéo._
 

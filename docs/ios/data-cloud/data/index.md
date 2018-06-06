@@ -1,21 +1,20 @@
 ---
-title: accès aux données d’iOS
-description: La plupart des applications ont une spécification pour enregistrer les données sur le périphérique local. Sauf si la quantité de données est petite plus simplement, ceci nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès à la base de données. iOS a le moteur de base de données SQLite « intégré » et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Ce document montre comment accéder à une base de données SQLite.
+title: Accès aux données de Xamarin.iOS
+description: Ce document liens vers des guides qui décrivent comment travailler avec des bases de données locales dans une application Xamarin.iOS. Contenu lié traite SQLite.NET, ADO.NET et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 47f2567d81f61568aad639330dc5133856e31936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a986ea9931f62497e5a6863c84bd4041983d66d9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784574"
 ---
-# <a name="ios-data-access"></a>accès aux données d’iOS
-
-_La plupart des applications ont une spécification pour enregistrer les données sur le périphérique local. Sauf si la quantité de données est petite plus simplement, ceci nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès à la base de données. iOS a le moteur de base de données SQLite « intégré » et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Ce document montre comment accéder à une base de données SQLite._
+# <a name="xamarinios-data-access"></a>Accès aux données de Xamarin.iOS
 
 Xamarin.iOS prend en charge les API d’accès de base de données tels que :
 
@@ -40,7 +39,6 @@ Pour les applications de Xamarin.Forms, vous devez lire [des bases de données](
 -  [Utilisation de SQLite.NET ORM](using-sqlite-orm.md)
 -  [Utilisation d'ADO.NET](using-adonet.md)
 -  [Utilisation de données dans une application](using-data-in-an-app.md)
-
 
 ## <a name="summary"></a>Récapitulatif
 

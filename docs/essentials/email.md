@@ -1,17 +1,18 @@
 ---
-title: Par courrier électronique Xamarin.Essentials
-description: La classe de messagerie permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris l’objet, le corps et les destinataires (à, CC, Cci).
+title: 'Xamarin.Essentials : courrier électronique'
+description: La classe de courrier électronique dans Xamarin.Essentials permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris le sujet, corps et les destinataires (à, CC, Cci).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3fee30e31dc18665d59f944462959fd3f8166968
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: aea2f429126180ae3d98bc665bed5574f416ea53
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782435"
 ---
-# <a name="xamarinessentials-email"></a>Par courrier électronique Xamarin.Essentials
+# <a name="xamarinessentials-email"></a>Xamarin.Essentials : courrier électronique
 
 ![Version préliminaire de NuGet](~/media/shared/pre-release.png)
 
@@ -41,12 +42,13 @@ public class EmailTest
                 To = recipients,
                 //Cc = ccRecipients,
                 //Bcc = bccRecipients
-            }
+            };
+            
             await Email.ComposeAsync(message);
         }
         catch (FeatureNotSupportedException fbsEx)
         {
-            // Sms is not supported on this device
+            // Email is not supported on this device
         }
         catch (Exception ex)
         {

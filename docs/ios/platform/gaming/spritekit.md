@@ -1,33 +1,35 @@
 ---
-title: SpriteKit
+title: SpriteKit dans Xamarin.iOS
+description: Ce document décrit SpriteKit, infrastructure de graphiques 2D d’Apple qui s’intègre à SceneKit, incorpore physique et l’animation, inclut la prise en charge de l’éclairage et l’ombrage et bien plus encore. SpriteKit peut être utilisé pour créer des jeux 2D.
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 967fd5b25213478c89d1ab849b6c0b7ac66d0e20
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b74b5a722aab240b55ed96bea2a33b162d7817eb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786767"
 ---
-# <a name="spritekit"></a>SpriteKit
+# <a name="spritekit-in-xamarinios"></a>SpriteKit dans Xamarin.iOS
 
-Kit Sprite, l’infrastructure de jeux 2D auprès d’Apple, a certaines nouvelles fonctionnalités intéressantes dans iOS 8 et OS X Yosemite. Ceux-ci incluent l’intégration avec la scène Kit, prise en charge du nuanceur, d’éclairage, ombres, contraintes, génération d’une carte de normale et améliorations de physique. En particulier, les nouvelles fonctionnalités physique rendent très facile d’ajouter des effets réalistes à un jeu.
+SpriteKit, l’infrastructure de graphiques 2D auprès d’Apple, a certaines nouvelles fonctionnalités intéressantes dans iOS 8 et OS X Yosemite. Ceux-ci incluent l’intégration avec SceneKit, prise en charge du nuanceur, d’éclairage, ombres, contraintes, génération d’une carte de normale et améliorations de physique. En particulier, les nouvelles fonctionnalités physique rendent très facile d’ajouter des effets réalistes à un jeu.
 
 ## <a name="physics-bodies"></a>Corps de physique
 
-Sprite Kit inclut un 2D, physique de corps rigide API. Chaque sprite a un corps physique associée (`SKPhysicsBody`) qui définit les propriétés de physique notamment masse et friction, ainsi que la géométrie du corps dans le monde physique.
+SpriteKit inclut un 2D, physique de corps rigide API. Chaque sprite a un corps physique associée (`SKPhysicsBody`) qui définit les propriétés de physique notamment masse et friction, ainsi que la géométrie du corps dans le monde physique.
 
 ## <a name="creating-a-physics-body-from-a-texture"></a>Création d’un corps de physique à partir d’une Texture
-Sprite Kit prend désormais en charge le corps de physique d’un composant qui dérivent de la texture. Cela rend facile à implémenter des collisions aspect plus naturelles.
+SpriteKit prend désormais en charge le corps de physique d’un composant qui dérivent de la texture. Cela rend facile à implémenter des collisions aspect plus naturelles.
 
 Par exemple, notez dans la collision suivante comment le banana et singe entrent en conflit quasiment à la surface de chaque image :
  
 ![](spritekit-images/image13.png "Entrer en conflit les banane singe quasiment à la surface de chaque image")
 
-Sprite Kit facilite la création d’un tel organisme physique possible avec une seule ligne de code. Il vous suffit d’appeler `SKPhysicsBody.Create` avec la taille et la texture : sprite. PhysicsBody = SKPhysicsBody.Create (composant. Texture, sprite. Taille) ;
+SpriteKit facilite la création d’un tel organisme physique possible avec une seule ligne de code. Il vous suffit d’appeler `SKPhysicsBody.Create` avec la taille et la texture : sprite. PhysicsBody = SKPhysicsBody.Create (composant. Texture, sprite. Taille) ;
 
 ## <a name="alpha-threshold"></a>Seuil alpha
 
@@ -45,7 +47,7 @@ L’effet de modifier le seuil alpha à ceci règle précisément la collision p
  
 ## <a name="physics-fields"></a>Champs physique
 
-Une autre nouveauté Sprite Kit est le nouveau champ physique prend en charge. Pour ajouter des éléments tels que les champs de vortex, qui vous permettent de champs de gravité radial et ressort pour nommer quelques.
+Une autre nouveauté à SpriteKit est le nouveau champ physique prend en charge. Pour ajouter des éléments tels que les champs de vortex, qui vous permettent de champs de gravité radial et ressort pour nommer quelques.
 
 Les champs physique sont créés à l’aide de la classe SKFieldNode, qui est ajoutée à une scène comme toute autre `SKNode`. Il existe diverses méthodes de fabrique sur `SKFieldNode` pour créer des champs physique différent. Vous pouvez créer un champ ressort en appelant `SKFieldNode.CreateSpringField()`, un champ de gravité radial en appelant `SKFieldNode.CreateRadialGravityField()`, et ainsi de suite.
 

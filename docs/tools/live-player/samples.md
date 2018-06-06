@@ -1,16 +1,17 @@
 ---
 title: Xamarin Player dynamique exemples
-description: Voici quelques exemples pour essayer avec Xamarin Live Player.
+description: Ce document liens vers des exemples d’applications à utiliser lors du test des Live Xamarin Player. Des exemples liés incluent une calculatrice de base et un jeu de nettoyeur de bogue.
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
 ms.date: 06/20/2017
-ms.openlocfilehash: 67c734a76e78973aa1acf8eb2b5dec720701d3d7
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 090b52f4ebf9ec6f46426b4364f8b57b67a79324
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793727"
 ---
 # <a name="xamarin-live-player-samples"></a>Xamarin Player dynamique exemples
 
@@ -31,8 +32,6 @@ Cette application Xamarin.Forms fournit une calculatrice simple, que vous pouvez
 Il s’agit d’un jeu familier repensé. Dix bogues sont masqués dans une grille de mosaïques de 9 x 9. Pour gagner, vous devez trouver et marquer les dix bogues.
 
 ![Application BugSweeper sur Android](samples-images/bugsweeper-sml.png)
-
-
 
 ## <a name="related-links"></a>Liens associés
 

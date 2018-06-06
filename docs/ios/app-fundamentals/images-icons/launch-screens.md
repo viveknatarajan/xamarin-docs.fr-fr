@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2018
-ms.openlocfilehash: d5a267bfa8655a9b9c6d4dba9d8cf9d16624ba9b
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 0fbd38b643e7806932ba262becc72be2bae6ba4b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784612"
 ---
-# <a name="launch-screens"></a>Lancer des écrans
+# <a name="launch-screens-for-xamarinios-apps"></a>Lancer des écrans pour les applications de Xamarin.iOS
 
 _Cet article explique comment créer une écran de lancement d’application pour tous les appareils iOS, à la résolution et l’orientation, à l’aide d’un Storyboard unifié unique._
 

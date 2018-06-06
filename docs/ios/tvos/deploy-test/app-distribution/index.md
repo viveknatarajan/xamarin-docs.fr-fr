@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble de la distribution d’applications
+title: Présentation de Distribution de l’application de tvOS
 description: Ce document donne une vue d’ensemble des techniques de distribution qui sont disponibles pour l’application de Xamarin.tvOS et sert de pointeur vers des documents plus détaillées sur la rubrique.
 ms.prod: xamarin
 ms.assetid: D5E0F446-C083-4E21-9788-FC84D32D00C4
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: e5be0bef158c87fe06516d9a58e34c741e6e14b1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 440d980c39434165ba9a59ccf67850977c8f75c3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788743"
 ---
-# <a name="app-distribution-overview"></a>Vue d’ensemble de la distribution d’applications
+# <a name="tvos-app-distribution-overview"></a>Présentation de Distribution de l’application de tvOS
 
 _Ce document donne une vue d’ensemble des techniques de distribution qui sont disponibles pour l’application de Xamarin.tvOS et sert de pointeur vers des documents plus détaillées sur la rubrique._
 

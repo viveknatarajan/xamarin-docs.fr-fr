@@ -1,20 +1,21 @@
 ---
-title: Nouvelles API de recherche
+title: API de recherche dans Xamarin.iOS
 description: Cet article couvre l’utilisation de nouvelles API de recherche application fournies par iOS 9 pour permettre aux utilisateurs de rechercher des informations et des fonctionnalités à l’intérieur de vos applications Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5dcd3d9665befaa82fd0f5677a4a662f633ed45b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc62ad34af0b9b98f0475599a08946122badd21e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788174"
 ---
-# <a name="new-search-apis"></a>Nouvelles API de recherche
+# <a name="search-apis-in-xamarinios"></a>API de recherche dans Xamarin.iOS
 
-_Cet article couvre l’utilisation de nouvelles API de recherche application fournies par iOS 9 pour permettre aux utilisateurs de rechercher des informations et des fonctionnalités à l’intérieur de vos applications Xamarin.iOS._
+_Cet article couvre l’utilisation de l’API de recherche d’application fournies par iOS 9 pour permettre aux utilisateurs de rechercher des informations et des fonctionnalités à l’intérieur de vos applications Xamarin.iOS._
 
 Recherche a été développée dans iOS 9 pour fournir de nouvelles façons d’accéder aux informations et des fonctionnalités à l’intérieur d’une application Xamarin.iOS. Contenu de l’application à l’aide de la nouvelle API de recherche application, est effectué recherche Spotlight et Safari résultats de recherche, remise et les rappels de Siri et les Suggestions. Cela permet aux utilisateurs d’accéder rapidement aux activités et informations approfondies dans votre application.
 

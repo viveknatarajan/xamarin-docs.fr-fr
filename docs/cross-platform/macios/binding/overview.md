@@ -1,17 +1,18 @@
 ---
-title: Vue d'ensemble
-description: Détails du fonctionnement du processus de liaison
+title: Vue d’ensemble des liaisons de Objective-C
+description: Ce document fournit une vue d’ensemble des différentes façons de créer des liaisons c# pour le code Objective-C, y compris les liaisons de ligne de commande, les projets de la liaison et objectif Sharpie. Elle explique également le fonctionne de la liaison.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce2e45a1985c64b5c479bd41140d7270fae97aee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f9f981a9024ad9b1f780efbadeeb7e1f1636a8ae
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781742"
 ---
-# <a name="overview"></a>Vue d'ensemble
+# <a name="overview-of-objective-c-bindings"></a>Vue d’ensemble des liaisons de Objective-C
 
 _Détails du fonctionnement du processus de liaison_
 

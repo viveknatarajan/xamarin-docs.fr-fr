@@ -1,18 +1,20 @@
 ---
-title: Recherche avec NSUserActivity
+title: Recherche avec NSUserActivity dans Xamarin.iOS
+description: Ce document décrit comment un NSUserActivity, rendant recherche dans la galerie et Safari d’index. Elle explique comment répondre à la sélection d’un NSUserActivity dans les résultats de la recherche.
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 803fcce359bbe27ea19901afa766f5b7f4692e0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4b053f66e9b6b7715cbe52c4e43d9db32db48f4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788206"
 ---
-# <a name="search-with-nsuseractivity"></a>Recherche avec NSUserActivity
+# <a name="search-with-nsuseractivity-in-xamarinios"></a>Recherche avec NSUserActivity dans Xamarin.iOS
 
 `NSUserActivity` a été introduit dans iOS 8 et est utilisé pour fournir les données pour la transférer.
 Permet de créer des activités dans des parties spécifiques de votre application peut ensuite être passée hors tension à une autre instance de votre application en cours d’exécution sur un appareil iOS différents. Le périphérique de réception peut ensuite continuer l’activité a démarré sur l’appareil précédente, en haut à droite de prélèvement où l’utilisateur s’est arrêté. Pour plus d’informations sur l’utilisation de remise, consultez notre [Introduction à la procédure de transfert](~/ios/platform/handoff.md) documentation.
@@ -94,7 +96,7 @@ En utilisant un `ContentAttributeSet` vous pouvez créer des résultats de reche
 
 ## <a name="responding-to-an-activity"></a>Répondre à une activité
 
-Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour notre application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Par exemple :
+Pour répondre à l’utilisateur en appuyant sur un résultat de recherche (`NSUserActivity`) pour notre application, vous devez modifier le **AppDelegate.cs** de fichier et remplacez le `ContinueUserActivity` (méthode). Exemple :
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)

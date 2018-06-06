@@ -1,30 +1,31 @@
 ---
-title: PhotoKit
-description: Kit de photos permet aux applications interroger la bibliothèque d’images système et de créer l’interface utilisateur personnalisée pour afficher et modifier son contenu.
+title: PhotoKit dans Xamarin.iOS
+description: Ce document décrit PhotoKit, traitant de ses objets de modèle, comment les données de modèle de requête et l’enregistrement des modifications à la bibliothèque de photos.
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: c721064f62f8e2255de2b4ea2d0438e3ed630d39
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4aeeec5b96e24c654407ad672930c0cb78592450
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787895"
 ---
-# <a name="photokit"></a>PhotoKit
+# <a name="photokit-in-xamarinios"></a>PhotoKit dans Xamarin.iOS
 
-_Kit de photos permet aux applications interroger la bibliothèque d’images système et de créer l’interface utilisateur personnalisée pour afficher et modifier son contenu._
-
-Kit de la photo est une nouvelle infrastructure qui permet aux applications de la bibliothèque d’images de système de requête et créer des interfaces utilisateur personnalisées pour afficher et modifier son contenu. Il comprend des classes qui représentent l’image et vidéos actifs, ainsi que les collections de ressources, comme des albums et des dossiers.
+PhotoKit est une nouvelle infrastructure qui permet aux applications de la bibliothèque d’images de système de requête et créer des interfaces utilisateur personnalisées pour afficher et modifier son contenu. Il comprend des classes qui représentent l’image et vidéos actifs, ainsi que les collections de ressources, comme des albums et des dossiers.
 
 ## <a name="model-objects"></a>Objets de modèle
-Kit de photo représente ces ressources qu’il appelle des objets de modèle. Les objets de modèle qui représentent les photos et vidéos eux-mêmes sont de type `PHAsset`. A `PHAsset` contient des métadonnées telles que le type de média de la ressource et sa date de création.
+
+PhotoKit représente ces ressources qu’il appelle des objets de modèle. Les objets de modèle qui représentent les photos et vidéos eux-mêmes sont de type `PHAsset`. A `PHAsset` contient des métadonnées telles que le type de média de la ressource et sa date de création.
 De même, la `PHAssetCollection` et `PHCollectionList` classes contiennent respectivement les métadonnées sur les collections de ressources et les listes de collection. Collections de ressources sont des groupes de ressources, telles que tous les photos et vidéos pour une année donnée. De même, les listes de collection sont des groupes de collections actif, telles que les photos et vidéos regroupés par année.
 
 ## <a name="querying-model-data"></a>Interrogation des données de modèle
-Kit de photo facilite pour interroger des données de modèle via une variété de méthodes d’extraction. Par exemple, pour récupérer toutes les images, vous appelez `PFAsset.Fetch`, en passant le `PHAssetMediaType.Image` le type de média.
+
+PhotoKit facilite pour interroger des données de modèle via une variété de méthodes d’extraction. Par exemple, pour récupérer toutes les images, vous appelez `PFAsset.Fetch`, en passant le `PHAssetMediaType.Image` le type de média.
 
     PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 

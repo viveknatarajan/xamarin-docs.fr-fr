@@ -1,17 +1,19 @@
 ---
-title: Nouveau système de comptage de référence
+title: Nouvelle référence système dans Xamarin.iOS de comptage
+description: Ce document décrit améliorée décompte Xamarin de références système, activée par défaut dans toutes les applications Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 00a792fb6ee55d5937046ebb321ffcb3aa8bdbd5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f2e40ca1fdd4a02d62e45004b75f3abefda781a5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786250"
 ---
-# <a name="new-reference-counting-system"></a>Nouveau système de comptage de référence
+# <a name="new-reference-counting-system-in-xamarinios"></a>Nouvelle référence système dans Xamarin.iOS de comptage
 
 Xamarin.iOS 9.2.1 a introduit une meilleure décompte de références système à toutes les applications par défaut. Il peut être utilisé pour éliminer de nombreux problèmes de mémoire qui étaient difficiles à détecter et corriger les versions antérieures de Xamarin.iOS.
 

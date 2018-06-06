@@ -1,20 +1,19 @@
 ---
-title: 'Étude de cas : Tasky'
-description: Ce document décrit comment les principes de création d’Applications inter-plateformes ont été appliquées dans l’exemple d’application Tasky Portable. Il aborde la conception des applications mobiles, l’écriture de code pour une réutilisation et l’implémentation des projets spécifiques à une plateforme qui ciblent l’iOS, Android et Windows Phone plateformes.
+title: 'Application multiplateforme Case Study : Tasky'
+description: Ce document décrit comment l’exemple d’application Tasky Portable a été conçu et généré sous la forme d’une application mobile multiplateforme. Elle décrit l’application Configuration requise, interface, modèle de données, les fonctionnalités principales, implémentation et bien plus encore.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f8325bbc6b3f8aa40a08ca2c57605544ab0bc85
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 48650445d06ad3bc7ca6d4da84c9b8837f8a0f88
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782233"
 ---
-# <a name="case-study-tasky"></a>Étude de cas : Tasky
-
-_Ce document décrit comment les principes de création d’Applications inter-plateformes ont été appliquées dans l’exemple d’application Tasky Portable. Il aborde la conception des applications mobiles, l’écriture de code pour une réutilisation et l’implémentation des projets spécifiques à une plateforme qui ciblent l’iOS, Android et Windows Phone plateformes._
+# <a name="cross-platform-app-case-study-tasky"></a>Application multiplateforme Case Study : Tasky
 
 *Tasky* *Portable* est une application de la liste des tâches simples. Ce document décrit la façon dont il a été conçu et créé, en suivant les instructions de la [génération d’Applications inter-plateformes](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) document. La discussion couvre les domaines suivants :
 
@@ -26,7 +25,7 @@ Il est conseillé de créer un de route pour ce que vous souhaitez atteindre ava
 
  <a name="Requirements" />
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 La première étape de la conception d’une application consiste à identifier les fonctionnalités souhaitées. Il peut s’agir des objectifs de niveau supérieur ou détaillées des cas d’usage. Tasky a des exigences fonctionnelles simples :
 

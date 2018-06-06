@@ -1,19 +1,20 @@
 ---
-title: Marshaling d’exception
-description: Xamarin.iOS contient de nouveaux événements pour aider à répondre aux exceptions, en particulier dans le code natif.
+title: Marshaling dans Xamarin.iOS (exception)
+description: Ce document décrit comment travailler avec les exceptions natives et managées dans une application Xamarin.iOS. Il décrit les problèmes qui peuvent se produire et une solution pour ces problèmes.
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/05/2017
-ms.openlocfilehash: bb9c16985d958772193093434350435ce477956a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dcf1074aacb6d139d107dac01fa86f459831d5f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786741"
 ---
-# <a name="exception-marshaling"></a>Marshaling d’exception
+# <a name="exception-marshaling-in-xamarinios"></a>Marshaling dans Xamarin.iOS (exception)
 
 _Xamarin.iOS contient de nouveaux événements pour aider à répondre aux exceptions, en particulier dans le code natif._
 
@@ -108,7 +109,7 @@ Ici, les frames managés uniquement sont des images 8-10, mais l’exception man
 
 Exemple de code :
 
-``` objective-c
+```objc
 -(id) setObject: (id) object forKey: (id) key
 {
     @try {
@@ -124,7 +125,7 @@ Et le `@finally` clause ne sera pas exécutée, car le runtime Mono qui se déro
 
 Une variante consiste à lever une exception gérée dans le code managé et le déroulement de puis par le biais des frames natifs pour obtenir la première managé `catch` clause :
 
-``` csharp
+```csharp
 class AppDelegate : UIApplicationDelegate {
     public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
     {

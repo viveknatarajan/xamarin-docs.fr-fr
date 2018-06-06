@@ -1,21 +1,20 @@
 ---
-title: Utilisation de l’Application parente
-description: Partage des données entre l’application iOS et espion dans watchOS 1
+title: Utilisation de l’Application parente dans Xamarin watchOS
+description: Ce document décrit comment travailler avec une application de parent watchOS dans Xamarin. Elle décrit les extensions d’application WatchKit, des applications iOS, stockage partagé et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 769847cccb3e21fea4d8f45d8e5d0c0fb59bdd43
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3af2cce0d84e3934eeb89917990f111d29aadef1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790690"
 ---
-# <a name="working-with-the-parent-application"></a>Utilisation de l’Application parente
-
-_Partage des données entre l’application iOS et espion dans watchOS 1_
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Utilisation de l’Application parente dans Xamarin watchOS
 
 > [!IMPORTANT]
 > L’accès à l’application parente uniquement à l’aide des exemples ci-dessous fonctionne sur les applications de surveillance watchOS 1.
@@ -148,7 +147,7 @@ Télécharger la version c# [WormHoleSharp](https://github.com/Clancey/WormHoleS
 
 ## <a name="related-links"></a>Liens associés
 
-- [GpsWatch (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
-- [WormHoleSharp (sample)](https://github.com/Clancey/WormHoleSharp)
+- [GpsWatch (exemple)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [WormHoleSharp (exemple)](https://github.com/Clancey/WormHoleSharp)
 - [Référence de WKInterfaceController d’Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Partage de données avec votre application conteneur Apple](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

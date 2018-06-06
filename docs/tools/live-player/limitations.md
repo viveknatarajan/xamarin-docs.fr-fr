@@ -1,18 +1,19 @@
 ---
-title: Limitations
-description: Certaines limitations de Live Xamarin Player
+title: Limitations de Xamarin Live Player
+description: Ce document décrit les limitations de Live Xamarin Player. Elle traite des exigences de dispositif, les fonctionnalités qu’il fonctionne avec les types de projets et d’autres rubriques divers.
 ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: a3aea31f32e3bf6227cce2e3340e3d04828472a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ea71391382f9e1ecb80cbf5f2d5bf127e0d6d1be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793673"
 ---
-# <a name="limitations"></a>Limitations
+# <a name="limitations-of-xamarin-live-player"></a>Limitations de Xamarin Live Player
 
 ![Fonctionnalité d’aperçu](~/media/shared/preview.png)
 
@@ -36,6 +37,7 @@ L’application Xamarin Live Player prend en charge les périphériques suivants
 Il existe certaines restrictions sur les éléments que xamarin Live Player peuvent s’exécuter, y compris les éléments ci-dessous :
 
 ### <a name="xamarinforms"></a>Xamarin.Forms
+
 - Les convertisseurs personnalisés ne sont pas pris en charge.
 - Effets ne sont pas pris en charge.
 - Contrôles personnalisés avec des propriétés personnalisées pouvant être liés ne sont pas pris en charge.
@@ -44,9 +46,11 @@ Il existe certaines restrictions sur les éléments que xamarin Live Player peuv
 - Catalogues Asset sur iOS ne sont pas pris en charge.
 
 ### <a name="other-project-types"></a>Autres types de projet
+
 - Le lecteur en direct n’est pas destiné pour Android natif ou les projets iOS (qui utilisent XML Android ou Storyboards pour l’interface utilisateur).
 
 ### <a name="misc"></a>Divers
+
 - Prise en charge pour la réflexion limitée (actuellement affecte certains NuGets populaires, tels que SQLite et Json.NET). Autres NuGets peut toujours être pris en charge.
 - Certaines classes système ne peut pas être remplacées (par exemple, vous ne peut pas implémenter une sous-classe).
 - Certaines fonctionnalités de plateforme qui nécessitent la mise en service ne peut pas fonctionner dans l’application Xamarin Live Player (toutefois qu’il a été configuré pour les opérations courantes telles que l’accès de la galerie photo).
@@ -55,7 +59,6 @@ Il existe certaines restrictions sur les éléments que xamarin Live Player peuv
 - Scénarios avancés avec des classes génériques personnalisés et les interfaces ne peuvent pas pris en charge.
 
 Veuillez signaler d’autres problèmes sur [bugzilla](https://aka.ms/live-player-report-issue).
-
 
 ## <a name="related-links"></a>Liens associés
 

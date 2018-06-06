@@ -1,21 +1,20 @@
 ---
-title: Lecture du son avec AVAudioPlayer
-description: Cet article explique comment utiliser une classe d’assistance pour contrôler la lecture de son à l’aide d’un AVAudioPlayer.
+title: Lecture du son avec AVAudioPlayer dans Xamarin.Mac
+description: Ce document décrit comment lire un son avec AVAudioPlayer dans une application Xamarin.Mac. Elle explique AVAudioPlayer à un niveau élevé et des liens vers d’autres documentations qui explore de plus en détail.
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 25e3285a1da1b6a112629001d5412fdd0788c705
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e5b9ec43189999f8a0aee29eb50221b494e2133
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791853"
 ---
-# <a name="playing-sound-with-avaudioplayer"></a>Lecture du son avec AVAudioPlayer
-
-_Cet article explique comment utiliser une classe d’assistance pour contrôler la lecture de son à l’aide d’un AVAudioPlayer._
+# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Lecture du son avec AVAudioPlayer dans Xamarin.Mac
 
 ## <a name="about-the-avaudioplayer"></a>Sur le AVAudioPlayer
 
@@ -34,8 +33,6 @@ Vous pouvez utiliser la `AVAudioPlayer` classe pour effectuer les opérations su
 ## <a name="playing-sounds-in-macos"></a>Lire des sons dans macOS
 
 MacOS prenant en charge les mêmes classes de boîte à outils Audio comme iOS, consultez notre iOS [son jouer avec AVAudioPlayer](https://developer.xamarin.com/recipes/ios/media/sound/avaudioplayer/) documentation pour plus d’informations de lecture audio dans une application Xamarin.Mac.
-
-
 
 ## <a name="related-links"></a>Liens associés
 

@@ -1,5 +1,5 @@
 ---
-title: L’utilisation d’Actions de ligne
+title: L’utilisation d’Actions de ligne dans Xamarin.iOS
 description: Ce guide montre comment créer des actions de balayage personnalisée pour les lignes de la table avec UISwipeActionsConfiguration ou UITableViewRowAction
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: c257406f3ad81e8144b47e099c9a00f3fdae30cb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4be8b6dc66c9c047e6662067e7e3ecf81ab22893
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789939"
 ---
-# <a name="working-with-row-actions"></a>L’utilisation d’Actions de ligne
+# <a name="working-with-row-actions-in-xamarinios"></a>L’utilisation d’Actions de ligne dans Xamarin.iOS
 
 _Ce guide montre comment créer des actions de balayage personnalisée pour les lignes de la table avec UISwipeActionsConfiguration ou UITableViewRowAction_
 
@@ -118,7 +119,7 @@ Une fois que les actions contextuelles ont été créées, ils peuvent utiliser 
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-Pour définir une ou plusieurs actions de ligne personnalisée pour un `UITableView`, vous devez créer une instance de la `UITableViewDelegate` classe et substituer la `EditActionsForRow` (méthode). Par exemple :
+Pour définir une ou plusieurs actions de ligne personnalisée pour un `UITableView`, vous devez créer une instance de la `UITableViewDelegate` classe et substituer la `EditActionsForRow` (méthode). Exemple :
 
 ```csharp
 using System;
@@ -162,7 +163,7 @@ namespace BasicTable
 }
 ```
 
-Statiques `UITableViewRowAction.Create` méthode est utilisée pour créer un nouveau `UITableViewRowAction` qui affiche un **Hi** bouton lors de l’Assistant numérique avec leur utilisateur restant horizontalement sur une ligne dans la table. Plus tard une nouvelle instance de la `TableDelegate` est créé et attaché à la `UITableView`. Par exemple :
+Statiques `UITableViewRowAction.Create` méthode est utilisée pour créer un nouveau `UITableViewRowAction` qui affiche un **Hi** bouton lors de l’Assistant numérique avec leur utilisateur restant horizontalement sur une ligne dans la table. Plus tard une nouvelle instance de la `TableDelegate` est créé et attaché à la `UITableView`. Exemple :
 
 ```csharp
 TableDelegate tableDelegate;

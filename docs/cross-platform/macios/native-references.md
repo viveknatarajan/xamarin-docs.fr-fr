@@ -1,29 +1,26 @@
 ---
-title: Références natives
-description: Références natives vous donne la possibilité d’incorporer un Framework natif dans un projet de Xamarin.iOS ou Xamarin.Mac ou d’un projet de liaison.
+title: Native iOS, Mac et les projets de liaisons de références
+description: Références natives vous donne la possibilité d’incorporer une infrastructure native dans un Xamarin.iOS, Xamarin.Mac ou au projet de liaison.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c56e392420debb21998363cfffa288aec51691ea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3a497d0bb4674014b8063cb1fbc91eec6e7ae5ea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781716"
 ---
-# <a name="native-references"></a>Références natives
+# <a name="native-references-in-ios-mac-and-bindings-projects"></a>Références natives iOS, Mac et les projets de liaisons
 
-_Références natives vous donne la possibilité d’incorporer un Framework natif dans un projet de Xamarin.iOS ou Xamarin.Mac ou d’un projet de liaison._
-
+_Références natives vous donne la possibilité d’incorporer un framework natif dans un projet de Xamarin.iOS ou Xamarin.Mac ou d’un projet de liaison._
 
 Depuis iOS 8.0, il a été possible de créer une structure incorporée pour partager du code entre les extensions d’application et de l’application principale dans Xcode. À l’aide de la fonctionnalité de référence Native il sera possible d’utiliser ces infrastructures incorporés (créées avec Xcode) dans Xamarin.iOS.
  
 > [!IMPORTANT]
 > Il ne sera pas possible de créer des structures incorporées à partir de n’importe quel type de Xamarin.iOS ou Xamarin.Mac projets, références natives ne permettent la consommation des encadrements natifs (Objective-C).
-
-
-
 
 <a name="Terminology" />
 

@@ -1,17 +1,19 @@
 ---
-title: Bureau d’enregistrement de type
+title: Bureau d’enregistrement de type pour Xamarin.iOS
+description: Ce document décrit le Registre de type Xamarin.iOS, ce qui rend les classes c# disponible pour le runtime Objective-C.
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9d4d2e5f3e1c2dc1233b466c00dd60340552fed0
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: e818d6a2092f408823e4a635a70c4f6666e3a7a9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786172"
 ---
-# <a name="type-registrar"></a>Bureau d’enregistrement de type
+# <a name="type-registrar-for-xamarinios"></a>Bureau d’enregistrement de type pour Xamarin.iOS
 
 Ce document décrit le système d’enregistrement de type utilisé par Xamarin.iOS.
 
@@ -220,7 +222,7 @@ Tous les sélecteurs doivent indiquer un nombre de paramètres correctement.  Au
 
 En bref, le nombre de signes deux-points doit correspondre au nombre de paramètres.
 
-Par exemple :
+Exemple :
 
 -  Aucun paramètre : « foo »
 -  Un seul paramètre : ' foo : »

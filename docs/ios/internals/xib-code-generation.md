@@ -1,18 +1,20 @@
 ---
-title: Génération de code .xib
+title: Génération de code .xib dans Xamarin.iOS
+description: Ce document décrit comment Xamarin.iOS génère du code pour mapper les fichiers de .xib à c#, rendre les contrôles visuels accessibles par programme.
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b887dbf09693452f62f744669ad9713927020cea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 064e17393747a36cd761cb2464e3239cfc17141c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786146"
 ---
-# <a name="xib-code-generation"></a>Génération de code .xib
+# <a name="xib-code-generation-in-xamarinios"></a>Génération de code .xib dans Xamarin.iOS
 
 > [!IMPORTANT]
 >  Ce document explique Visual Studio pour l’intégration du Mac avec le Générateur de Xcode Interface uniquement, comme les Actions et les sorties ne sont pas utilisées dans le Concepteur de Xamarin pour iOS. Pour plus d’informations sur le concepteur iOS, passez en revue les [iOS concepteur](~/ios/user-interface/designer/index.md) document.
@@ -31,7 +33,7 @@ Les classes personnalisées peuvent être définies dans un **.xib** à l’aide
 
 ## <a name="generating-code"></a>Génération du code
 
-Pour toute **{0} .xib** fichier avec une action de génération *Page*, si un **.xib.designer.cs {0}** fichier existe également dans le projet, Visual Studio pour Mac génère des classes partielles dans le fichier de concepteur pour toutes les classes d’utilisateur trouvé à la **.xib** fichier, avec les méthodes partielles pour toutes les actions et les propriétés pour les sorties. Génération de code est activée simplement par la présence de ce fichier.
+Pour toute  **{0}.xib** fichier avec une action de génération *Page*, si un  **{0}. xib.designer.cs** fichier existe également dans le projet, Visual Studio pour Mac génère des classes partielles dans le fichier de concepteur pour toutes les classes d’utilisateur qu’il se trouve dans le **.xib** fichier, avec les méthodes partielles pour toutes les actions et les propriétés pour les sorties. Génération de code est activée simplement par la présence de ce fichier.
 
 Le fichier de concepteur est automatiquement mis à jour lorsque le **.xib** fichier pour Mac reprend les modifications et Visual Studio. Le fichier du concepteur ne doit pas être modifié manuellement, comme les modifications seront remplacée prochaine Visual Studio pour les mises à jour Mac le fichier.
 
@@ -49,7 +51,7 @@ Classes partielles concepteur ne sont pas destinées à être utilisée en tant 
 
 La raison à cela est nécessaire pour une grande souplesse. Par exemple, plusieurs classes de code-behind a pu sous-classe que commune gérés classe abstraite, les sous-classes de la classe pour être sous-classé par IB.
 
-Il est classique placer un **.xib.cs {0}** en regard du fichier le **{0}.xib.designer.cs** fichier de concepteur.
+Il est classique placer un  **{0}. xib.cs** de fichiers en regard de la  **{0}. xib.designer.cs** fichier de concepteur.
 
 <a name="generated" />
 

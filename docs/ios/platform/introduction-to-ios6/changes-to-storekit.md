@@ -1,5 +1,5 @@
 ---
-title: Modifications apportées à StoreKit
+title: Modifications apportées à StoreKit dans iOS 6
 description: 'iOS 6 présente deux modifications apportées à l’API du Kit de magasin : la capacité à afficher iTunes (et le magasin d’applications/iBookstore) option où Apple hébergera vos fichiers téléchargeables acheter des produits à partir de votre application et une nouveau dans l’application. Ce document explique comment implémenter ces fonctionnalités avec Xamarin.iOS.'
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a7a70c3f84518141cf44d630fb4137051d0c866
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ff717d1e4ea7da947d5534f1ce790b58d84fdfd4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787690"
 ---
-# <a name="changes-to-storekit"></a>Modifications apportées à StoreKit
+# <a name="changes-to-storekit-in-ios-6"></a>Modifications apportées à StoreKit dans iOS 6
 
 _iOS 6 présente deux modifications apportées à l’API du Kit de magasin : la capacité à afficher iTunes (et le magasin d’applications/iBookstore) option où Apple hébergera vos fichiers téléchargeables acheter des produits à partir de votre application et une nouveau dans l’application. Ce document explique comment implémenter ces fonctionnalités avec Xamarin.iOS._
 
@@ -25,7 +26,7 @@ Les principales modifications au magasin de Kit dans iOS6 sont ces deux nouvelle
 
 Il est recommandé que ce document être lue conjointement avec le Xamarin.iOS existant [In-App Purchase](~/ios/platform/in-app-purchasing/index.md) documentation.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les fonctions de magasin Kit abordées dans ce document requièrent iOS 6 et Xcode 4.5, ainsi que de Xamarin.iOS 6.0.
 
@@ -142,8 +143,8 @@ Les résultats inclut également les autres métadonnées notamment affichent de
 
 Voici quelques exemples :
 
--   **application de l’iBooks*- [http://itunes.apple.com/search?term=ibooks&amp;entité = logiciel&amp;pays = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
--   **Point et l’Ibooks kangourou*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entité = livre électronique&amp;pays = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
+-   **application de l’iBooks*- [http://itunes.apple.com/search?term=ibooks&amp; entité = logiciel&amp;pays = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
+-   **Point et l’Ibooks kangourou*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entité = livre électronique&amp;pays = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
 
 
 ### <a name="enterprise-partner-feed"></a>Flux de partenaire d’entreprise
@@ -537,7 +538,7 @@ Cet article a introduit deux nouvelles fonctionnalités du Kit de magasin dans i
 
 ## <a name="related-links"></a>Liens associés
 
-- [StoreKit (sample)](https://developer.xamarin.com/samples/StoreKit/)
+- [StoreKit (exemple)](https://developer.xamarin.com/samples/StoreKit/)
 - [Achats dans l’application](~/ios/platform/in-app-purchasing/index.md)
 - [Référence StoreKit Framework](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Référence de classe de SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)

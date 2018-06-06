@@ -1,15 +1,16 @@
 ---
-title: Xamarin.Essentials
+title: Prise en main Xamarin.Essentials
 description: Xamarin.Essentials fournit une API multi-plateforme unique qui fonctionne avec n’importe quel iOS, Android ou UWP application qui sont accessibles à partir de partagée code quelle que soit la façon dont l’interface utilisateur est créé.
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2e0abff4d0408d3db11ab95f1debc6621f609d86
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.openlocfilehash: f0f6eebbd12041a7be2d8e2dc00a9146b40d675f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783072"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Prise en main Xamarin.Essentials
 

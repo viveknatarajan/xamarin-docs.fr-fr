@@ -1,21 +1,20 @@
 ---
-title: Les délégués, les protocoles et les événements
-description: 'Cet article présente les technologies de clé iOS utilisés pour recevoir des rappels et remplir les contrôles d’interface utilisateur avec des données. Ces technologies sont les événements, les protocoles et les délégués. Cet article explique ce que chacune d’elles est et comment chacune est utilisée à partir de c#. Il montre comment Xamarin.iOS utilise les contrôles d’iOS pour exposer des événements de .NET familiers, ainsi que la manière dont Xamarin.iOS prend en charge les concepts de Objective-C, tels que les protocoles et des délégués (délégués d’Objective-C ne doivent pas être confondues avec les délégués en c#). Cet article fournit également des exemples qui montrent comment les protocoles sont utilisés : à la fois comme base pour les délégués de Objective-C et dans les scénarios non délégué.'
+title: Les événements, les protocoles et les délégués dans Xamarin.iOS
+description: Ce document décrit comment utiliser des événements, les protocoles et des délégués dans Xamarin.iOS. Ces concepts fondamentaux sont très répandues dans le développement de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0e4c23bffe689c9218da2f43b97d98f348513ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784008"
 ---
-# <a name="events-protocols-and-delegates"></a>Les délégués, les protocoles et les événements
-
-_Cet article présente les technologies de clé iOS utilisés pour recevoir des rappels et remplir les contrôles d’interface utilisateur avec des données. Ces technologies sont les événements, les protocoles et les délégués. Cet article explique ce que chacune d’elles est et comment chacune est utilisée à partir de c#. Il montre comment Xamarin.iOS utilise les contrôles d’iOS pour exposer des événements de .NET familiers, ainsi que la manière dont Xamarin.iOS prend en charge les concepts de Objective-C, tels que les protocoles et des délégués (délégués d’Objective-C ne doivent pas être confondues avec les délégués en c#). Cet article fournit également des exemples qui montrent comment les protocoles sont utilisés : à la fois comme base pour les délégués de Objective-C et dans les scénarios non délégué._
+# <a name="events-protocols-and-delegates-in-xamarinios"></a>Les événements, les protocoles et les délégués dans Xamarin.iOS
 
 Xamarin.iOS utilise des contrôles pour exposer des événements pour la plupart des interactions de l’utilisateur.
 Xamarin.iOS applications consomment ces événements de la même façon, comme des applications .NET traditionnelles. Par exemple, la classe Xamarin.iOS UIButton dispose d’un événement appelé TouchUpInside et utilise cet événement, comme si cette classe et les événements ont été dans une application .NET.
@@ -28,15 +27,13 @@ Dans cet article, vous allez en savoir plus sur tous ces aspects, ce qui vous do
 -  **Protocoles** : apprentissage que les protocoles sont et comment elles sont utilisées, et créer un exemple qui fournit des données pour une annotation de la carte.
 -  **Délégués** – apprentissage sur les délégués Objective-C en étendant l’exemple de mappage pour gérer l’interaction utilisateur qui inclut une annotation, puis la différence entre les délégués de nom forts et faibles et quand utiliser chacun de ces d’apprentissage.
 
-
 Pour illustrer les protocoles et les délégués, nous allons construire une application de mappage simple qui ajoute une annotation à un mappage, comme illustré ici :
 
  [![](delegates-protocols-and-events-images/01-map.png "Un exemple d’une application de mappage simple qui ajoute une annotation à un mappage") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "une annotation exemple ajoutée à une carte")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Avant d’aborder cette application, nous allons commencer en examinant les événements .NET sous la UIKit.
 
- <a name=".NET_Events_with_UIKit" />
-
+<a name=".NET_Events_with_UIKit" />
 
 ## <a name="net-events-with-uikit"></a>Événements .NET avec UIKit
 
@@ -47,7 +44,6 @@ aButton.TouchUpInside += (o,s) => {
     Console.WriteLine("button touched");
 };
 ```
-
 Vous pouvez également implémenter cela avec une style 2.0 méthode anonyme c# comme celle-ci :
 
 ```csharp

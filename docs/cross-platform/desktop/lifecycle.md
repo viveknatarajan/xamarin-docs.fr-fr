@@ -1,15 +1,16 @@
 ---
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
 title: Vs WPF. Cycle de vie de Xamarin.Forms
-description: Comprendre le processus de démarrage d’application et que vous traitez des États de l’arrière-plan
+description: Ce document compare les similitudes et différences entre le cycle de vie de l’application pour les applications WPF et de Xamarin.Forms. Il examine également l’arborescence d’éléments visuels, les graphiques, les ressources et les styles.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: b4f9aebbbcab48290d37c5732c69267897238272
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: abb7773873fa181085464b5985cc8233715cc4be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781580"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Vs WPF. Cycle de vie de Xamarin.Forms
 

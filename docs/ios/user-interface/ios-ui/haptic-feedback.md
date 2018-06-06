@@ -1,21 +1,20 @@
 ---
-title: Envoi de commentaires tactile
-description: Cet article couvre les nouveaux types de commentaires tactiles disponibles dans iOS 10 et comment les implémenter dans Xamarin.iOS.
+title: Envoi de commentaires tactile dans Xamarin.iOS
+description: Ce document décrit comment fournir des commentaires tactile dans une application Xamarin.iOS. Il traite des UIImpactFeedbackGenerator, UINotificationFeedbackGenerator et UISelectionFeedbackGenerator.
 ms.prod: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f2d1bd73ea764cd5bf56775abd7c7357b039bc79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0dae6d6f50423474fbfebad5d630000e2160f6a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790186"
 ---
-# <a name="providing-haptic-feedback"></a>Envoi de commentaires tactile
-
-_Cet article couvre les nouveaux types de commentaires tactiles disponibles dans iOS 10 et comment les implémenter dans Xamarin.iOS._
+# <a name="providing-haptic-feedback-in-xamarinios"></a>Envoi de commentaires tactile dans Xamarin.iOS
 
 <a name="Overview" />
 

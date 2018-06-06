@@ -1,6 +1,6 @@
 ---
-title: Résolution des problèmes
-description: Cet article couvre connaître des problèmes que vous pouvez rencontrer lors de l’utilisation avec prise en charge de tvOS de Xamarin.
+title: Résolution des problèmes de tvOS les applications développées avec Xamarin
+description: Cet article fournit différents conseils pour aider à résoudre les problèmes au cours du développement d’une application tvOS développée avec Xamarin. Elle décrit les problèmes rencontrés et les erreurs spécifiques.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86106fa5ca53e93ccffb4dd141914c01ab65a506
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e69157cf9c8a9b9405e31edb2906754328653ccb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789201"
 ---
-# <a name="troubleshooting"></a>Résolution des problèmes
+# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Résolution des problèmes de tvOS les applications développées avec Xamarin
 
 _Cet article couvre connaître des problèmes que vous pouvez rencontrer lors de l’utilisation avec prise en charge de tvOS de Xamarin._
 
@@ -79,7 +80,7 @@ Section
 
 Vous devez vous assurer que tout tiers statique (`.a`) bibliothèques que vous utilisez des bibliothèques de tvOS (pas les bibliothèques d’iOS) ont été créées et qu’il inclut également des informations de bitcode.
 
-Pour les applications ou les bibliothèques qui incluent bitcode valide le `size` sera supérieur à un. Il existe certaines situations où une bibliothèque peut ont le marqueur bitcode, mais ne contient pas bitcode valide. Par exemple :
+Pour les applications ou les bibliothèques qui incluent bitcode valide le `size` sera supérieur à un. Il existe certaines situations où une bibliothèque peut ont le marqueur bitcode, mais ne contient pas bitcode valide. Exemple :
 
 **Bitcode non valide**
 

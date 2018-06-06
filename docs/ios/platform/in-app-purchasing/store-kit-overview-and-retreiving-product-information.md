@@ -1,18 +1,20 @@
 ---
-title: Stocker les informations de produit lors de la récupération et de vue d’ensemble du Kit
+title: Vue d’ensemble de StoreKit et la récupération des informations sur les produits dans Xamarin.iOS
+description: Ce document fournit une vue d’ensemble de StoreKit. Elle décrit les classes utilisées avec StoreKit, test StoreKit interactions, affichage des produits pour la vente, la gestion des produits non valides et l’affichage des prix localisées.
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4ecd2942a99f80854fd340be454f9d8fefa5a36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964b97e82db8e79cb32598d0c955fac3ab122314
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787222"
 ---
-# <a name="store-kit-overview-and-retrieving-product-information"></a>Stocker les informations de produit lors de la récupération et de vue d’ensemble du Kit
+# <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Vue d’ensemble de StoreKit et la récupération des informations sur les produits dans Xamarin.iOS
 
 L’interface utilisateur pour un achat dans l’application est indiqué dans les captures d’écran ci-dessous.
 Avant toute transaction se produit, l’application doit récupérer des prix du produit et une description pour l’affichage. Lorsque l’utilisateur appuie sur **acheter**, l’application effectue une demande à StoreKit qui gère la connexion d’ID Apple et la boîte de dialogue de confirmation. La transaction puis réussit, StoreKit notifie le code d’application, qui doit stocker le résultat de la transaction et fournir à l’utilisateur d’accéder à leur achat.   

@@ -1,18 +1,20 @@
 ---
-title: Démonstration de cycle de vie d’application
+title: Démonstration de cycle de vie d’application pour Xamarin.iOS
+description: Ce document examine les différents événements de cycle de vie gérées par le délégué de l’application dans une application iOS, démontrant quand et comment ces événements sont gérés.
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f03cd7d74d09fc40b88cfbf44bf54c6da5f4c149
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 64c695065012e4bf796c219c260324d9b6278ca5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783582"
 ---
-# <a name="application-lifecycle-demo"></a>Démonstration de cycle de vie d’application
+# <a name="application-lifecycle-demo-for-xamarinios"></a>Démonstration de cycle de vie d’application pour Xamarin.iOS
 
 Dans cette section, nous allons examiner une application qui montre les quatre états d’Application et le rôle de la `AppDelegate` méthodes de notification de l’application de modification lorsque les États. L’application imprime sur la console des mises à jour chaque fois que l’application change d’état :
 
@@ -80,4 +82,4 @@ Maintenant que nous comprenons les États d’application iOS et les transitions
 
 ## <a name="related-links"></a>Liens associés
 
-- [LifecycleDemo(Part2) (sample)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
+- [LifecycleDemo(Part2) (exemple)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)

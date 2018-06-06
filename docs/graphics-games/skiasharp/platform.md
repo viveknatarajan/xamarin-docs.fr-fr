@@ -1,18 +1,19 @@
 ---
-title: Plateforme de SkiaSharp des détails spécifiques
-description: Détails sur la façon de rendre votre contenu SKSurface votre application native.
+title: Notes de SkiaSharp spécifique à la plateforme
+description: Ce document décrit en détail à SkiaSharp spécifique à la plateforme. Il fournit des exemples de code pour iOS, Android, macOS, Windows et Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 3f40c7ea0b118816b7be373617795db9158c1450
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: bcec8f2c850396f45cba795555b924d3cbc4ef22
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783527"
 ---
-# <a name="platform-specific-integration"></a>Plateforme d’intégration spécifique
+# <a name="skiasharp-platform-specific-notes"></a>Notes de SkiaSharp spécifique à la plateforme
 
 Les exemples ci-dessous allouer manuellement les mémoires tampons de l’image, ceci afin d’illustrer un modèle commun de plateforme qui consiste à dessiner dans un tampon RBGA existant fourni par la plateforme.
 

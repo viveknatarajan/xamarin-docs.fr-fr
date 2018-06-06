@@ -1,17 +1,18 @@
 ---
 title: Présentation des Concepts de SiriKit
-description: Cet article aborde les concepts clés qui seront nécessaires pour travailler avec SiriKit dans une application Xamarin.iOS.
+description: Ce document décrit les concepts clés nécessaires pour travailler avec SiriKit dans une application Xamarin.iOS. Par exemple, il traite les intentions et extensions de l’interface utilisateur intentions, SiriKit autorisations, conception d’une expérience optimale et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 56325345204cd2017d688375d9d51c5c83f15e26
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 62b612f2e2725e5856a39e1d4d3fc1288282167a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788928"
 ---
 # <a name="understanding-sirikit-concepts"></a>Présentation des Concepts de SiriKit
 
@@ -402,7 +403,7 @@ Il existe plusieurs méthodes que l’application peut gérer cette situation :
 
 Lorsque l’application est présentée avec une valeur unique qui est en question, la meilleure façon de gérer cette situation consiste à avoir Siri à demander à l’utilisateur à confirmer l’opération. Par exemple, *« Vouliez-vous Bobo le grand ? »* , lequel ils peuvent répondre à une simple réponse Oui ou non.
 
-Lorsqu’il existe une situation dans laquelle plusieurs choix possibles peut être adaptés à une valeur unique, ambiguïté est la méthode de gestion par défaut. Dans ce cas les Siri peut inviter l’utilisateur avec jusqu'à dix possibles d’options. Par exemple :
+Lorsqu’il existe une situation dans laquelle plusieurs choix possibles peut être adaptés à une valeur unique, ambiguïté est la méthode de gestion par défaut. Dans ce cas les Siri peut inviter l’utilisateur avec jusqu'à dix possibles d’options. Exemple :
 
 ```csharp
 Who do you want to send the message to?
