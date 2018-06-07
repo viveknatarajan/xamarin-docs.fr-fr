@@ -1,21 +1,20 @@
 ---
-title: EventKit
-description: Ce guide fournit une vue d’ensemble sur la façon d’accéder et d’utiliser des calendriers, CalendarEvents et des rappels les données stockées dans la base de données de calendrier, tel qu’exposé via la EventKit. Elle couvre les principales classes et leur rôle dans la programmation de EventKit, ainsi que d’un nombre de tâches courantes associées à l’infrastructure EventKit.
+title: EventKit dans Xamarin.iOS
+description: Ce document décrit EventKit et comment l’utiliser dans Xamarin.iOS. Il traite des calendriers, des événements de calendrier et des rappels, examine classes couramment utilisées lors de la programmation avec EventKit et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8439586ac92f8139cf9341611125352c85706e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3522870d3e063d1e12660094a311e9850bcefa13
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786712"
 ---
-# <a name="eventkit"></a>EventKit
-
-_Ce guide fournit une vue d’ensemble sur la façon d’accéder et d’utiliser des calendriers, CalendarEvents et des rappels les données stockées dans la base de données de calendrier, tel qu’exposé via la EventKit. Elle couvre les principales classes et leur rôle dans la programmation de EventKit, ainsi que d’un nombre de tâches courantes associées à l’infrastructure EventKit._
+# <a name="eventkit-in-xamarinios"></a>EventKit dans Xamarin.iOS
 
 iOS a deux applications dépendant de calendrier intégrées : l’Application de calendrier et l’Application des rappels. Il est assez simple à comprendre comment l’Application calendrier gère les données de calendrier, mais l’Application des rappels est moins évidente. Rappels peuvent avoir réellement les dates en termes d’associés lorsqu’ils sont à l’échéance, quand ils sont terminées, etc. Par conséquent, iOS stocke toutes les données de calendrier, qu’il s’agisse d’événements de calendrier ou de rappels, dans un seul emplacement, appelée la *base de données de calendrier*.
 
@@ -31,7 +30,7 @@ Toutes les tâches dans ce guide sont disponibles dans l’exemple d’applicati
 
  [![](eventkit-images/01.png "Les écrans d’application Compagnon exemple")](eventkit-images/01.png#lightbox)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 EventKit a été introduit dans iOS 4.0, mais l’accès aux données de rappels a été introduit dans iOS 6.0. Par conséquent, pour faire un développement EventKit général, vous devez cibler au moins les versions 4.0 et 6.0 pour les rappels.
 

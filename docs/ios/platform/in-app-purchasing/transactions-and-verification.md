@@ -1,18 +1,20 @@
 ---
-title: Vérification et transactions
+title: Vérification de Xamarin.iOS et de transactions
+description: Ce document décrit la procédure permettre la restauration de leurs achats passés dans une application Xamarin.iOS. Elle explique également comment sécuriser des achats et les produits de remise de serveur.
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c8d86d0ce3119b3e104a65a170ab141484af44a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2cb38df4bbabc3534f5c90c7695569d68349ccc3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786923"
 ---
-# <a name="transactions-and-verification"></a>Vérification et transactions
+# <a name="transactions-and-verification-in-xamarinios"></a>Vérification de Xamarin.iOS et de transactions
 
 ## <a name="restoring-past-transactions"></a>Restaurer les Transactions passées
 
@@ -195,7 +197,7 @@ Une autre implémentation des fichiers de contenu produit très volumineux peut 
 
 ### <a name="writing-server-side-receipt-verification-code"></a>L’écriture de Code de vérification d’accusé de réception côté serveur
 
-Validation d’un accusé de réception dans le code côté serveur peut faire avec une simple requête HTTP POST demande/réponse qui comprend les étapes #5 à &#8; dans le diagramme de flux de travail.   
+Validation d’un accusé de réception dans le code côté serveur peut faire avec une simple requête HTTP POST demande/réponse qui comprend les étapes #5 à 8 # dans le diagramme de flux de travail.   
    
    
    

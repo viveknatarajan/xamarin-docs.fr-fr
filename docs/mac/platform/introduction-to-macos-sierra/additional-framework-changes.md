@@ -1,21 +1,20 @@
 ---
 title: Modifications du Framework Sierra de macOS supplémentaires
-description: Cet article traite des modifications supplémentaires, secondaires ou des améliorations apportées aux infrastructures existantes pour macOS Sierra.
+description: Ce document décrit les changements mineurs et améliorations introduites dans macOS Sierra les infrastructures existantes. Il examine les modifications apportées à l’infrastructure d’accélération, AppKit, AVFoundation, données de base, Image Core, Foundation et bien plus encore.
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a1bc12629a84e9a06cc80882d141bf6a0c2f0c52
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3cfa2e9bcb0be4d65462914215045c9c7f01da5b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792591"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Modifications du Framework Sierra de macOS supplémentaires
-
-_Cet article traite des modifications supplémentaires, secondaires ou des améliorations apportées aux infrastructures existantes pour macOS Sierra._
 
 <a name="Accelerate-Framework-Enhancements" />
 
@@ -29,7 +28,7 @@ Les améliorations suivantes ont été apportées à l’infrastructure accélé
 
 <a name="AppKit-Framework-Enhancements" />
 
-## <a name="appkit-framework-enhancements"></a>Améliorations Appkit Framework
+## <a name="appkit-framework-enhancements"></a>Améliorations AppKit Framework
 
 Les améliorations suivantes ont été apportées à l’infrastructure AppKit pour macOS Sierra :
 

@@ -1,19 +1,20 @@
 ---
-title: Utilisation des animations
-description: Création d’interfaces utilisateur macOS avec animations à l’aide de Xcode.
+title: Utilisation des animations dans Xamarin.Mac
+description: Ce document décrit comment utiliser des animations dans Xamarin.Mac, examiner comment les charger à partir de code, le cycle de vie de contrôleur de vue, la chaîne de répondeur, est parfait pour les contrôleurs de fenêtre, les reconnaissances de mouvement et bien plus encore.
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b72affd9b101b0a139301fec9f2bed343310507
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 72986ed4247c3b6f66f6f1813d74bf0a95d0de53
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792838"
 ---
-# <a name="storyboards"></a>Animations
+# <a name="working-with-storyboards-in-xamarinmac"></a>Utilisation des animations dans Xamarin.Mac
 
 Un plan conceptuel définit l’ensemble de l’interface utilisateur pour une application donnée est divisée en une vue d’ensemble fonctionnelle de ses contrôleurs de la vue. Dans le Générateur de Xcode Interface, chacune de ces contrôleurs réside dans son propre scène.
 

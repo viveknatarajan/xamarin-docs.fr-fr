@@ -1,21 +1,20 @@
 ---
-title: Storyboards unifiées
-description: Storyboards unifiées autoriser iOS développeur de créer l’interface utilisateur avec un seul storyboard, plutôt que plusieurs tables de montage séquentiel, pour couvrir la plage d’expansion de tailles d’écran de périphérique. Cet article est conçu pour donner une vue d’ensemble plus approfondie du fonctionnement de la table de montage séquentiel unifiée dans Xamarin.iOS.
+title: Storyboards unifiées dans Xamarin.iOS
+description: Ce document décrit les animations unifiées dans Xamarin.iOS. Storyboards unifiés permettent aux développeurs prennent en charge plusieurs tailles d’écran avec une définition d’interface unique.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6d3324a6485f2d240ec339f6ce7f03aafe51c80c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792019"
 ---
-# <a name="unified-storyboards"></a>Storyboards unifiées
-
-_Storyboards unifiées autoriser iOS développeur de créer l’interface utilisateur avec un seul storyboard, plutôt que plusieurs tables de montage séquentiel, pour couvrir la plage d’expansion de tailles d’écran de périphérique. Cet article est conçu pour donner une vue d’ensemble plus approfondie du fonctionnement de la table de montage séquentiel unifiée dans Xamarin.iOS._
+# <a name="unified-storyboards-in-xamarinios"></a>Storyboards unifiées dans Xamarin.iOS
 
 iOS 8 inclut un mécanisme de nouvelle et plus simple à utiliser pour la création de l’interface utilisateur, le plan conceptuel unifié. Avec un seul plan conceptuel pour couvrir toutes les tailles d’écran de matériel différents, rapides et réactives vues peuvent être créés dans un « conception-une fois, utilisez plusieurs « style.
 
@@ -265,7 +264,7 @@ Dans cette section, nous allons examiner comment ces méthodes sont réellement 
 
  [![](unified-storyboards-images/gettargetforaction.png "La nouvelle méthode GetTargetForAction")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
-Cette méthode parcourt la chaîne de la hiérarchie jusqu'à ce que le contrôleur de la vue conteneur correct est trouvé. Par exemple :
+Cette méthode parcourt la chaîne de la hiérarchie jusqu'à ce que le contrôleur de la vue conteneur correct est trouvé. Exemple :
 
 1.  Si un `ShowViewController` est appelée, le premier contrôleur de vue dans la chaîne qui implémente cette méthode est le contrôleur de Navigation, il est utilisé en tant que le parent de la nouvelle vue.
 1.  Si un `ShowDetailViewController` méthode a été appelée à la place, le contrôleur d’affichage fractionné est le premier contrôleur de vue pour l’implémenter, afin qu’il est utilisé en tant que parent.
@@ -301,7 +300,7 @@ Lorsque vous exécutez l’application Photos adaptative sur un iPhone, lorsque 
 
  [![](unified-storyboards-images/rotation.png "Le contrôleur d’affichage fractionné affiche à la fois le masque et afficher les détails comme illustré ici")](unified-storyboards-images/rotation.png#lightbox)
 
-Cela est effectué en substituant le `UpdateConstraintsForTraitCollection` méthode de contrôleur de la vue et en ajustant les contraintes en se basant sur la valeur de la `VerticalSizeClass`. Par exemple :
+Cela est effectué en substituant le `UpdateConstraintsForTraitCollection` méthode de contrôleur de la vue et en ajustant les contraintes en se basant sur la valeur de la `VerticalSizeClass`. Exemple :
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -357,7 +356,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>Ajout d’Animations de Transition
 
-Lorsque le contrôleur de vue de fractionnement dans les Photos Adaptive application passe à partir de réduit de développé, des animations sont ajoutées aux animations par défaut en remplaçant le `WillTransitionToTraitCollection` méthode du contrôleur d’affichage. Par exemple :
+Lorsque le contrôleur de vue de fractionnement dans les Photos Adaptive application passe à partir de réduit de développé, des animations sont ajoutées aux animations par défaut en remplaçant le `WillTransitionToTraitCollection` méthode du contrôleur d’affichage. Exemple :
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)
@@ -679,7 +678,7 @@ Et lorsque l’application est exécutée sur le simulateur iPhone, l’élémen
 
  [![](unified-storyboards-images/exclude05.png "L’élément manquant quand l’application en cours d’exécution dans le simulateur iPhone")](unified-storyboards-images/exclude05.png#lightbox)
 
-Pour supprimer un cas d’Exclusion d’un élément, il suffit de sélectionner l’élément dans le **aire de conception**, faites défiler vers le bas de la **Explorateur de propriétés** et cliquez sur le **-**bouton en regard de l’incident à supprimer.
+Pour supprimer un cas d’Exclusion d’un élément, il suffit de sélectionner l’élément dans le **aire de conception**, faites défiler vers le bas de la **Explorateur de propriétés** et cliquez sur le **-** bouton en regard de l’incident à supprimer.
 
 Pour voir une implémentation d’unifiée des animations, examinez le `UnifiedStoryboard` exemple d’application d’iOS 8 Xamarin jointe à ce document.
 

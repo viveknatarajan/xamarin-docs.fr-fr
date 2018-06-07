@@ -1,20 +1,19 @@
 ---
 title: Classeurs interactifs
-description: Utiliser des classeurs pour créer des documents en direct avec le code c# pour tester, d’apprentissage, de formation ou l’exploration.
+description: Ce document décrit comment utiliser les classeurs de Xamarin pour créer des documents dynamiques contenant du code c# pour tester, apprentissage, apprentissage ou Explorer.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: de88bbc9bc45b8a6326924d964bdd9385acb82aa
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fa79aae9af2cd90741a54a5b3abc17910fcb181d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794174"
 ---
 # <a name="interactive-workbooks"></a>Classeurs interactifs
-
-_Utiliser des classeurs pour créer des documents en direct avec le code c# pour tester, d’apprentissage, de formation ou l’exploration._
 
 Vous pouvez utiliser les classeurs comme une application autonome, distincte de votre interface IDE.
 

@@ -1,20 +1,19 @@
 ---
-title: À l’aide de UrhoSharp
-description: Vue d’ensemble du moteur UrhoSharp
+title: À l’aide de UrhoSharp pour générer un jeu 3D
+description: Ce document fournit une vue d’ensemble de UrhoSharp, décrivant les scènes, composants, formes, appareils photo, actions, l’entrée d’utilisateur, son et bien plus encore.
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 8eed81817620b3f68510ab2e043c3aeaafb6e78a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: eb1e93e47528e801da08f402f452e0e8ce5014d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784037"
 ---
-# <a name="using-urhosharp"></a>À l’aide de UrhoSharp
-
-_Vue d’ensemble du moteur UrhoSharp_
+# <a name="using-urhosharp-to-build-a-3d-game"></a>À l’aide de UrhoSharp pour générer un jeu 3D
 
 Avant de créer votre premier jeu, vous souhaitez obtenir être familiarisé avec les concepts de base : comment le programme d’installation de votre scène charger les ressources (il contient une illustration) et comment créer des interactions simples pour votre jeu.
 
@@ -217,7 +216,7 @@ Il existe plusieurs modes d’accélération, le graphique suivant affiche les d
 Dans votre [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/) sous-classe, vous devez introduire une méthode asynchrone qui prépare le comportement de votre composant et les fonctionnalités des lecteurs pour celle-ci.
 Ensuite, vous devez appeler cette méthode à l’aide du langage c# `await` (mot clé) à partir d’une autre partie de votre programme, soit votre `Application.Start` méthode ou en réponse à un point d’utilisateur ou le récit dans votre application.
 
-Par exemple :
+Exemple :
 
 ```csharp
 class Robot : Component {

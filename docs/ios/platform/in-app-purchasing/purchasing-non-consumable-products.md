@@ -1,18 +1,20 @@
 ---
-title: Les produits Non-consommable d’achat
+title: Achat de produits Non-consommable dans Xamarin.iOS
+description: Ce document décrit les produits non-consommable dans Xamarin.iOS, qui sont des fonctions achetées par un utilisateur qui restent disponibles indéfiniment, quel appareil.
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0a581dc222e43f8d4742bd52dc56dc691449a8f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: db193493ea11a7963fe5fc57f0c45978c26a7a74
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786949"
 ---
-# <a name="purchasing-non-consumable-products"></a>Les produits Non-consommable d’achat
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Achat de produits Non-consommable dans Xamarin.iOS
 
 Les produits non consommable 'appartiennent » par le client. Il est courant qu’ils seront ont toujours accès à ceux-ci, même si leur appareil est perdu/volé ou acheter un nouveau. Ils sont utiles pour la documentation, des problèmes magazines, niveaux de jeu, filtres photo, « fonctionnalités pro », etc. Une fois qu’un utilisateur a acheté un produit non-consommable, ils n’ont jamais à payer à nouveau. Si votre code accidentellement leur permet d’essayer, StoreKit affiche un message qui a déjà été acheté.
 
