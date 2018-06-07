@@ -6,18 +6,18 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 05/08/2018
-ms.openlocfilehash: a714ac55c3a49b91cb21e3ba1793b9bccd7d1be2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/05/2018
+ms.openlocfilehash: 0d512342f1c978c84341d20c298a9fa750800d84
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806801"
 ---
 # <a name="firebase-job-dispatcher"></a>Répartiteur de travail firebase
 
 _Ce guide explique comment planifier le travail en arrière-plan à l’aide de la bibliothèque Firebase travail répartiteur à partir de Google._
 
-![Répartiteur de travail firebase en version préliminaire](~/media/shared/preview.png)
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -56,7 +56,7 @@ Pour planifier un travail, l’application instancie un `JobDispatcher` objet. E
 
 Ce guide explique comment ajouter le répartiteur de travail Firebase à une application de Xamarin.Android et l’utiliser pour planifier le travail d’arrière-plan.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Le répartiteur de travail Firebase requiert un niveau d’API Android 9 ou version ultérieure. La bibliothèque de répartiteur du travail Firebase s’appuie sur certains composants fournis par les Services Google Play ; l’appareil doit avoir les Services Google Play installé.
 
@@ -65,9 +65,6 @@ Le répartiteur de travail Firebase requiert un niveau d’API Android 9 ou vers
 Pour commencer le répartiteur de travail Firebase, ajoutez d’abord le [package NuGet de Xamarin.Firebase.JobDispatcher](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) pour le projet Xamarin.Android. Rechercher le Gestionnaire de Package NuGet pour la **Xamarin.Firebase.JobDispatcher** package (qui est toujours en version préliminaire).
 
 Après avoir ajouté la bibliothèque Firebase travail répartiteur, créer un `JobService` classe et ensuite planifier son exécution avec une instance de la `FirebaseJobDispatcher`.
-
-> [!NOTE]
-> La liaison en cours pour le répartiteur de travail Firebase cible une ancienne version de la bibliothèque. L’est une [bogue connu [(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] ce qui empêche la liaison à partir de la mise à jour pour cibler une version plus récente du répartiteur de travail Firebase.
 
 
 ### <a name="creating-a-jobservice"></a>Création d’un JobService
@@ -293,7 +290,6 @@ Ce guide décrit comment utiliser le répartiteur de travail Firebase pour effec
 
 ## <a name="related-links"></a>Liens associés
 
-- [Générateur de liaisons échoue avec l’erreur fatale non gérée : System.ArgumentNullException : ne peut pas être null.](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
 - [Xamarin.Firebase.JobDispatcher sur NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [firebase-travail-répartiteur sur GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
 - [Liaison de Xamarin.Firebase.JobDispatcher](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)

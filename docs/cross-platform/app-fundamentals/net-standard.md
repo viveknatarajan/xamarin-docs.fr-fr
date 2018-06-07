@@ -6,12 +6,12 @@ ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 82a89309e6462462471f42c3504d109ff0722917
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781031"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806788"
 ---
 # <a name="using-net-standard-libraries-to-share-code"></a>À l’aide des bibliothèques Standard .NET à partager du Code
 
@@ -37,7 +37,7 @@ Ajout d’une bibliothèque Standard .NET à votre solution est assez simple.
 
   **Remarque :** ce modèle sera renommé `.NET Standard` dans une future version de Visual Studio pour Mac.
 
-  ![Créer une bibliothèque de classes .NET Core](net-standard-images/vsm01.png)
+  ![Créer une bibliothèque de classes .NET Core](net-standard-images/vsm01.png "création d’une nouvelle bibliothèque de classes .NET Core")
 
 2. Le projet de bibliothèque Standard de .NET apparaîtra comme indiqué dans l’Explorateur de solutions. Le nœud dépendances indique que la bibliothèque utilise la [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
@@ -47,7 +47,7 @@ Ajout d’une bibliothèque Standard .NET à votre solution est assez simple.
 
 Les paramètres de la bibliothèque Standard de .NET peuvent être affichées et modifiées en cliquant sur le projet et en sélectionnant `Options` comme indiqué dans cette capture d’écran :
 
-![Modifier le Standard .NET framework cible dans les Options du projet](net-standard-images/vsm03.png)
+![Modifier le Standard .NET framework cible dans les Options de projet](net-standard-images/vsm03.png "modifier la version du Framework cible Standard .NET dans les Options du projet")
 
 Dans, vous pouvez modifier votre version de `netstandard` en modifiant le `Target Framework` valeur de liste déroulante.
 
@@ -67,17 +67,17 @@ Ajout d’une bibliothèque Standard .NET à votre solution est assez simple.
 
 1. Dans la boîte de dialogue Ajouter un nouveau projet, sélectionnez le `.NET Standard` catégorie, puis sélectionnez `Class Library(.NET Standard)`.
 
-  ![](net-standard-images/vs01.png "Créer la nouvelle bibliothèque de classes .NET Standard")
+  ![Création d’une bibliothèque de classes Standard .NET](net-standard-images/vs01.png "créer une bibliothèque de classe .NET Standard")
 
 2. Le projet de bibliothèque Standard de .NET apparaîtra comme indiqué dans l’Explorateur de solutions. Le nœud dépendances indique que la bibliothèque utilise la [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
-  ![](net-standard-images/vs02.png "Projet .NET standard dans la solution")
+  ![NETStandard.Library dans le dossier du projet](net-standard-images/vs02.png "projet .NET Standard dans la solution")
 
 #### <a name="editing-net-standard-library-settings"></a>Modification des paramètres de la bibliothèque Standard .NET
 
 Les paramètres de la bibliothèque Standard de .NET peuvent être affichées et modifiées en cliquant sur le projet et en sélectionnant `Properties` comme indiqué dans cette capture d’écran :
 
-![](net-standard-images/vs03.png "Référencer une bibliothèque .NET Standard la même façon que les autres projets.")
+![Modifier le .NET Framework de cible standard dans les propriétés du projet](net-standard-images/vs03.png "font référence à une bibliothèque .NET Standard la même façon que les autres projets")
 
 Dans, vous pouvez modifier votre version de `netstandard` en modifiant le `Target Framework` valeur de liste déroulante.
 
@@ -87,7 +87,7 @@ Dans, vous pouvez modifier votre version de `netstandard` en modifiant le `Targe
 
 Une fois qu’une bibliothèque Standard .NET a été créée, vous pouvez ajouter une référence à celui-ci à partir d’un projet d’Application ou une bibliothèque compatible de la même façon que vous ajoutez des références normalement. Dans Visual Studio, avec le bouton droit sur le nœud Références et choisissez `Add Reference...` vous basculez ensuite vers le `Solution : Projects` onglet comme indiqué :
 
-![](net-standard-images/vs04.png "Dans Visual Studio, avec le bouton droit sur le nœud Références et sélectionnez Ajouter une référence... puis basculez vers l’onglet de projets de la Solution, comme indiqué")
+![Référencement d’une bibliothèque Standard .NET](net-standard-images/vs04.png "dans Visual Studio, avec le bouton droit sur le nœud Références et sélectionnez Ajouter une référence... puis basculez vers l’onglet de projets de la Solution, comme indiqué")
 
 -----
 
