@@ -1,17 +1,18 @@
 ---
 title: Introduction à iOS 6
-description: iOS 6 inclut une variété de nouvelles technologies de développement d’applications, ce qui Xamarin.iOS 6 offre aux développeurs c#.
+description: Ce document liens vers des guides qui décrivent les fonctionnalités introduites dans iOS 6. Vues de collection, PassKit, l’infrastructure de réseaux sociaux, et les modifications apportées aux StoreKit sont présentées.
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8f3be80ffb8156c24c96b03fda8eac3907ca88bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cf623c7788137106ddbb2c23c69465f205a5a400
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787612"
 ---
 # <a name="introduction-to-ios-6"></a>Introduction à iOS 6
 
@@ -28,12 +29,12 @@ Ce document répertorie quelques-unes des plus intéressant de nouvelles fonctio
 Vues de collection autoriser le contenu à afficher à l’aide de dispositions arbitraires. Elles permettent de créer aisément des mises en page de grille l’emploi, la prise en charge des dispositions personnalisées. Pour plus d’informations, le [Introduction aux vues de Collection](~/ios/user-interface/controls/uicollectionview.md) [ ](~/ios/user-interface/controls/uicollectionview.md)guide.
 
 
-## <a name="introduction-to-pass-kitiosplatformpasskitmd"></a>[Introduction à passer Kit](~/ios/platform/passkit.md)
+## <a name="introduction-to-passkitiosplatformpasskitmd"></a>[Présentation de PassKit](~/ios/platform/passkit.md)
 
-L’infrastructure de passer un Kit permet aux applications d’interagir avec des passes numériques qui sont gérés dans l’application de livret. Pour plus d’informations, le [Introduction au guide du Kit de passer](~/ios/platform/passkit.md).
+Le framework PassKit permet aux applications d’interagir avec des passes numériques qui sont gérés dans l’application de livret. Pour plus d’informations, le [Introduction au guide du Kit de passer](~/ios/platform/passkit.md).
 
 
-##  <a name="introduction-to-event-kitiosplatformeventkitmd"></a>[Introduction au Kit d’événement](~/ios/platform/eventkit.md)
+##  <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[Introduction aux EventKit](~/ios/platform/eventkit.md)
 
 Le framework EventKit permet d’accéder aux calendriers, calendrier et les données des rappels qui stocke de la base de données de calendrier. Accès aux calendriers et calendrier événements est disponible depuis iOS 4, mais iOS 6 expose désormais accès aux données de rappels. Pour plus d’informations, consultez la [I](~/ios/platform/eventkit.md) [rit à EventKit](~/ios/platform/eventkit.md) guide.
 
@@ -43,7 +44,7 @@ Le framework EventKit permet d’accéder aux calendriers, calendrier et les don
 Le Framework Social fournit une API unifiée pour interagir avec les réseaux sociaux, y compris Twitter et Facebook, ainsi que SinaWeibo pour les utilisateurs en Chine. Pour plus d’informations, le [Introduction à l’infrastructure de réseaux sociaux](~/ios/platform/social-framework.md) guide.
 
 
-##  <a name="changes-to-store-kitchanges-to-storekitmd"></a>[Modifications apportées à stocker Kit](changes-to-storekit.md)
+##  <a name="changes-to-storekitchanges-to-storekitmd"></a>[Modifications apportées à StoreKit](changes-to-storekit.md)
 
 Apple a introduit deux nouvelles fonctionnalités dans le magasin de Kit : achat et téléchargement iTunes ou contenu de magasin d’applications à partir de votre application et qui héberge vos fichiers de contenu pour les achats dans l’application !. Pour plus d’informations, le [change au Kit de magasin](changes-to-storekit.md) guide.
 
