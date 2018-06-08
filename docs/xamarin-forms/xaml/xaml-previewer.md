@@ -6,18 +6,19 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 02/24/2017
-ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.date: 05/31/2018
+ms.openlocfilehash: 9b87145773bf16b15c391c5c5d6d136b7aa76e39
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848354"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Générateur d’aperçu XAML pour Xamarin.Forms
 
 _Consultez vos dispositions Xamarin.Forms rendues telle que vous tapez !_
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les projets requièrent le dernier package Xamarin.Forms NuGet pour l’aperçu de XAML travailler. Aperçu des applications Android nécessite [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
@@ -55,6 +56,17 @@ Les options en haut du volet d’aperçu sont :
 Certaines configurations peuvent être difficiles à visualiser exemptes de données liées à des contrôles d’interface utilisateur. Pour que la version préliminaire plus utile, affecter des données statiques pour les contrôles en coder en dur un contexte de liaison (soit dans le code-behind ou à l’aide de XAML).
 
 Faire de James Montemagno [billet de blog sur l’ajout de données au moment du design](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) pour apprendre à lier à un ViewModel statique en XAML.
+
+## <a name="detecting-design-mode"></a>Détection du Mode de conception
+
+La méthode statique [ `DesignMode.IsDesignModeEnabled` ](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) propriété peut être examinée pour déterminer si l’application s’exécute dans le Générateur d’aperçu. Cela vous permet de spécifier le code qui s’exécute uniquement lorsque l’application s’exécute dans le Générateur d’aperçu :
+
+```csharp
+if (DesignMode.IsDesignModeEnabled)
+{
+  // Previewer only code  
+}
+```
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 

@@ -6,12 +6,13 @@ ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/20/2017
-ms.openlocfilehash: be131bdbfeceabd72494708cdfe9a263da9bbbd8
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/06/2018
+ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847629"
 ---
 # <a name="platform-features"></a>Fonctionnalités de la plateforme
 
@@ -41,10 +42,6 @@ Xamarin.Forms prend désormais en charge préliminaire pour les applications GTK
 
 Xamarin.Forms prend désormais en charge préliminaire pour les applications de macOS.
 
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
-
-Xamarin.Forms prend désormais en charge préliminaire pour les applications Windows Presentation Foundation (WPF).
-
 ## <a name="native-formsnative-formsmd"></a>[Formulaires natifs](native-forms.md)
 
 Formulaires natifs autorisent Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-dérivées des pages à être consommés par les projets natifs Xamarin.iOS, Xamarin.Android et plateforme Windows universelle (UWP).
@@ -61,6 +58,14 @@ Caractéristiques de la plateforme vous permettent de vous permet d’utiliser l
 
 Il existe une grande variété de plug-ins d’open source sur Github, Nuget et le magasin de composants Xamarin afin de prolonger les applications de Xamarin.Forms.
 
+## <a name="tizentizenmd"></a>[tizen](tizen.md)
+
+Tizen .NET vous permet de créer des applications .NET avec Xamarin.Forms et Tizen .NET framework.
+
 ## <a name="windowswindowsindexmd"></a>[Fenêtres](windows/index.md)
 
 Xamarin.Forms est prise en charge pour la plateforme Windows universelle (UWP) sur Windows 10. Cet article décrit comment ajouter un un projet UWP pour une solution Xamarin.Forms existante.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin.Forms prend désormais en charge préliminaire pour les applications Windows Presentation Foundation (WPF).

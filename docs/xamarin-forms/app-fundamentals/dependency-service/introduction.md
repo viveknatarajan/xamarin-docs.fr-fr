@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 6a0544a58245efed696b92c543fbaf5e7e1b8365
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 1cf84203d78b0f41e506a3d9505da94b676184fe
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732825"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34846878"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introduction aux DependencyService
 
