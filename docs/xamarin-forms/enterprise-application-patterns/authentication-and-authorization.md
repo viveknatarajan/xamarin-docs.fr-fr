@@ -1,16 +1,18 @@
 ---
 title: Authentification et autorisation
+description: Ce chapitre explique comment l’application mobile eShopOnContainers effectue l’authentification et l’autorisation par rapport à la microservices en conteneur.
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 9c6f3ae19b3e1b89220cbdf0985f4bdf789f2209
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e6cfa566ab455841b3f11e4a857dcf678083417
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242425"
 ---
 # <a name="authentication-and-authorization"></a>Authentification et autorisation
 
@@ -478,4 +480,4 @@ L’application mobile demande des jetons de sécurité IdentityServer, pour aut
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)

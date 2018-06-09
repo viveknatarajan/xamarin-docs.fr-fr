@@ -1,19 +1,20 @@
 ---
-title: Formulaires natifs
-description: Formulaires natifs autorisent Xamarin.Forms ContentPage dérivé des pages à être consommés par les projets natifs Xamarin.iOS, Xamarin.Android et plateforme Windows universelle (UWP). Les projets natifs peuvent consommer des pages ContentPage dérivé directement ajoutés au projet, ou à partir d’une bibliothèque .NET Standard, la bibliothèque .NET Standard ou le projet partagé. Cet article explique comment consommer des pages ContentPage dérivées qui sont ajoutés directement à des projets natifs et comment naviguer entre elles.
+title: Xamarin.Forms dans les projets Xamarin Native
+description: Cet article explique comment consommer des pages ContentPage dérivées qui sont ajoutées directement au Xamarin les projets natifs et comment naviguer entre elles.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: a103d360221650ee4f679ee285dbedd65e62f947
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: ca62b9fec3223e8da62d8e4cc6e1f69a58f335a0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243273"
 ---
-# <a name="native-forms"></a>Formulaires natifs
+# <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms dans les projets Xamarin Native
 
 _Formulaires natifs autorisent Xamarin.Forms ContentPage dérivé des pages à être consommés par les projets natifs Xamarin.iOS, Xamarin.Android et plateforme Windows universelle (UWP). Les projets natifs peuvent consommer des pages ContentPage dérivé directement ajoutés au projet, ou à partir d’une bibliothèque .NET Standard, la bibliothèque .NET Standard ou le projet partagé. Cet article explique comment consommer des pages ContentPage dérivées qui sont ajoutés directement à des projets natifs et comment naviguer entre elles._
 

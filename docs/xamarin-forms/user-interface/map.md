@@ -1,19 +1,20 @@
 ---
-title: Carte
-description: Xamarin.Forms utilisant l’API de mappage natif sur chaque plateforme.
+title: Mappage de Xamarin.Forms
+description: Cet article explique comment utiliser la classe Map de Xamarin.Forms à utiliser l’API de mappage natif sur chaque plateforme pour fournir qu'un familier mappe l’expérience des utilisateurs.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6063732e08680974b8d4a2358bfd85b176b36aec
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 9bd4c810db0397d84803be7c38f625b9b047c3da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245473"
 ---
-# <a name="map"></a>Carte
+# <a name="xamarinforms-map"></a>Mappage de Xamarin.Forms
 
 _Xamarin.Forms utilisant l’API de mappage natif sur chaque plateforme._
 
@@ -80,7 +81,7 @@ Pour accéder aux services d’emplacement sur iOS, vous devez définir les clé
 - e/s, 10 et versions antérieures
     - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – pour l’utilisation de services d’emplacement lors de l’application est en cours d’utilisation
     - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – pour l’utilisation des services d’emplacement à tout moment    
-    
+
 Pour prendre en charge d’iOS 11 et versions antérieures, vous pouvez inclure toutes les clés de trois : `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, et `NSLocationAlwaysUsageDescription`.
 
 La représentation sous forme de XML pour ces clés dans **Info.plist** est indiqué ci-dessous. Vous devez mettre à jour le `string` valeurs afin de refléter la manière dont votre application utilise les informations d’emplacement :

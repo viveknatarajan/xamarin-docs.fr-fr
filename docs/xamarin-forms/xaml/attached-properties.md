@@ -1,17 +1,18 @@
 ---
 title: Propriétés jointes
-description: Une propriété jointe est un type spécial de propriété pouvant être liée, définie dans une classe mais est associé à d’autres objets et reconnaissable dans XAML en tant qu’attribut qui contient une classe et un nom de propriété séparés par un point. Cet article fournit une introduction aux propriétés jointes et montre comment créer et les utiliser.
+description: Cet article fournit une introduction aux propriétés jointes et montre comment créer et les utiliser.
 ms.prod: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: 5c903a39e5569c7ffedfff8eb8e6b0bd4071be9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e0ecff37eaf615321c7fcdce35e334db89ae631a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245896"
 ---
 # <a name="attached-properties"></a>Propriétés jointes
 

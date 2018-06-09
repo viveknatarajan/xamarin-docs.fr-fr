@@ -1,22 +1,22 @@
 ---
 title: Création d’Extensions de balisage XAML
-description: Définir vos propres extensions de balisage XAML personnalisées
+description: Cet article explique comment définir vos propres extensions de balisage XAML de Xamarin.Forms personnalisées. Une extension de balisage XAML est une classe qui implémente l’interface IMarkupExtension IMarkupExtension.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 1a484aa4a19473c5a4f60b3d7bab78af7a20eecd
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b185ea3b7260ff2be8a4dec5dc713f24dc6e6095
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848250"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245701"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Création d’Extensions de balisage XAML
 
-Sur le niveau par programme, une extension de balisage XAML est une classe qui implémente le [ `IMarkupExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) ou [ `IMarkupExtension<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interface. Vous pouvez explorer le code source des extensions de balisage standard décrit ci-dessous dans le [ **MarkupExtensions** active](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) du référentiel GitHub de Xamarin.Forms. 
+Sur le niveau par programme, une extension de balisage XAML est une classe qui implémente le [ `IMarkupExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) ou [ `IMarkupExtension<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interface. Vous pouvez explorer le code source des extensions de balisage standard décrit ci-dessous dans le [ **MarkupExtensions** active](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) du référentiel GitHub de Xamarin.Forms.
 
 Il est également possible de définir vos propres extensions de balisage XAML personnalisées en dérivant de `IMarkupExtension` ou `IMarkupExtension<T>`. Utilisez le formulaire générique si l’extension de balisage obtienne une valeur d’un type particulier. C’est le cas avec plusieurs des extensions de balisage Xamarin.Forms :
 
@@ -26,7 +26,7 @@ Il est également possible de définir vos propres extensions de balisage XAML p
 - `BindingExtension` dérive de `IMarkupExtension<BindingBase>`
 - `ConstraintExpression` dérive de `IMarkupExtension<Constraint>`
 
-Les deux `IMarkupExtension` interfaces ne définissent qu’une méthode nommée `ProvideValue`: 
+Les deux `IMarkupExtension` interfaces ne définissent qu’une méthode nommée `ProvideValue`:
 
 ```csharp
 public interface IMarkupExtension
@@ -92,7 +92,7 @@ Le **démonstration de couleur TSL** page affiche de différentes façons que `H
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout>
         <BoxView>
             <BoxView.Color>
@@ -121,7 +121,7 @@ Notez que lorsque `HslColorExtension` est une balise XML, les quatre propriété
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>Une Extension de balisage pour l’accès aux Bitmaps
 
-L’argument `ProvideValue` est un objet qui implémente le [ `IServiceProvider` ](https://developer.xamarin.com/api/type/System.IServiceProvider/) interface, qui est définie dans le .NET `System` espace de noms. Cette interface a un seul membre, une méthode nommée `GetService` avec un `Type` argument. 
+L’argument `ProvideValue` est un objet qui implémente le [ `IServiceProvider` ](https://developer.xamarin.com/api/type/System.IServiceProvider/) interface, qui est définie dans le .NET `System` espace de noms. Cette interface a un seul membre, une méthode nommée `GetService` avec un `Type` argument.
 
 Le `ImageResourceExtension` classe ci-dessous illustre une utilisation possible de `IServiceProvider` et `GetService` pour obtenir un `IXmlLineInfoProvider` objet qui peut fournir des informations de ligne et le caractère qui indique où une erreur particulière a été détectée. Dans ce cas, une exception est levée lorsque le `Source` propriété n’a pas été définie :
 
@@ -152,7 +152,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` est utile lorsqu’un fichier XAML doit accéder à un fichier image stocké en tant que ressource incorporée dans le projet de bibliothèque .NET Standard. Elle utilise le `Source` propriété à appeler la méthode statique `ImageSource.FromResource` (méthode). Cette méthode requiert un nom qualifié complet des ressources, qui se compose du nom de l’assembly, le nom du dossier et le nom de fichier séparés par des points. Le `ImageResourceExtension` ne doivent l’assembly de nom de la partie, car il obtient le nom de l’assembly à l’aide de la réflexion et ajoute à la `Source` propriété. Peu importe, `ImageSource.FromResource` doit être appelé à partir de l’assembly qui contient l’image bitmap, ce qui signifie que cette extension de ressource XAML ne peut pas être fait partie d’une bibliothèque externe, sauf si les images sont également dans cette bibliothèque. (Consultez la [ **des Images incorporées** ](~/xamarin-forms/user-interface/images.md#embedded_images) article pour plus d’informations sur l’accès à des images stockées en tant que ressources incorporées.) 
+`ImageResourceExtension` est utile lorsqu’un fichier XAML doit accéder à un fichier image stocké en tant que ressource incorporée dans le projet de bibliothèque .NET Standard. Elle utilise le `Source` propriété à appeler la méthode statique `ImageSource.FromResource` (méthode). Cette méthode requiert un nom qualifié complet des ressources, qui se compose du nom de l’assembly, le nom du dossier et le nom de fichier séparés par des points. Le `ImageResourceExtension` ne doivent l’assembly de nom de la partie, car il obtient le nom de l’assembly à l’aide de la réflexion et ajoute à la `Source` propriété. Peu importe, `ImageSource.FromResource` doit être appelé à partir de l’assembly qui contient l’image bitmap, ce qui signifie que cette extension de ressource XAML ne peut pas être fait partie d’une bibliothèque externe, sauf si les images sont également dans cette bibliothèque. (Consultez la [ **des Images incorporées** ](~/xamarin-forms/user-interface/images.md#embedded_images) article pour plus d’informations sur l’accès à des images stockées en tant que ressources incorporées.)
 
 Bien que `ImageResourceExtension` requiert le `Source` propriété à définir, le `Source` propriété est indiquée dans un attribut en tant que la propriété de contenu de la classe. Cela signifie que la `Source=` partie de l’expression entre accolades peut être omis. Dans le **démonstration de ressource d’Image** page, le `Image` éléments extraire deux images en utilisant le nom du dossier et le nom de fichier séparés par des points :
 
@@ -167,7 +167,7 @@ Bien que `ImageResourceExtension` requiert le `Source` propriété à définir, 
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <Image Source="{local:ImageResource Images.SeatedMonkey.jpg}"
                Grid.Row="0" />
 
@@ -198,7 +198,7 @@ Le `GetService` appel avec un argument de `typeof(IProvideValueTarget)` retourne
 
 ## <a name="conclusion"></a>Conclusion
 
-Extensions de balisage XAML jouent un rôle essentiel dans XAML en étendant la possibilité de définir les attributs à partir de diverses sources. En outre, si les extensions de balisage XAML existantes ne fournissent pas exactement ce dont vous avez besoin, vous pouvez également écrire votre propre. 
+Extensions de balisage XAML jouent un rôle essentiel dans XAML en étendant la possibilité de définir les attributs à partir de diverses sources. En outre, si les extensions de balisage XAML existantes ne fournissent pas exactement ce dont vous avez besoin, vous pouvez également écrire votre propre.
 
 
 ## <a name="related-links"></a>Liens associés

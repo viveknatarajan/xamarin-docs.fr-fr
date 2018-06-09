@@ -1,17 +1,18 @@
 ---
 title: Partie 3. Extensions de balisage XAML
-description: Extensions de balisage XAML constituent une fonctionnalité importante dans le code XAML qui permettent d’être définie sur des objets ou des valeurs qui sont référencés indirectement à partir d’autres sources. Extensions de balisage XAML sont particulièrement importantes pour le partage d’objets et en référençant les constantes utilisées dans une application, mais ils recherchent leur plus grande utilité dans les liaisons de données.
+description: Extensions de balisage XAML constituent une fonctionnalité importante dans le code XAML qui permettent d’être définie sur des objets ou des valeurs qui sont référencés indirectement à partir d’autres sources.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245909"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Partie 3. Extensions de balisage XAML
 
@@ -102,7 +103,7 @@ Il est également nécessaire d’inclure explicitement `ResourceDictionary` bal
 </ContentPage>
 ```
 
-Maintenant objets et des valeurs de différents types peuvent être ajoutés pour le dictionnaire de ressources. Ces types doivent être instanciables. Ils ne peut pas être des classes abstraites, par exemple. Ces types doivent avoir également un constructeur sans paramètre public. Chaque élément requiert une clé de dictionnaire spécifiée avec le `x:Key` attribut. Par exemple :
+Maintenant objets et des valeurs de différents types peuvent être ajoutés pour le dictionnaire de ressources. Ces types doivent être instanciables. Ils ne peut pas être des classes abstraites, par exemple. Ces types doivent avoir également un constructeur sans paramètre public. Chaque élément requiert une clé de dictionnaire spécifiée avec le `x:Key` attribut. Exemple :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -321,8 +322,8 @@ En dépit des similarités de leurs noms, `x:Static` et `StaticResource` sont tr
 
 - un champ statique public
 - une propriété statique publique
-- un champ constant public 
-- un membre d’énumération. 
+- un champ constant public
+- un membre d’énumération.
 
 Le `StaticResource` extension de balisage est prise en charge par les implémentations XAML qui définissent un dictionnaire de ressources, tandis que `x:Static` fait partie intégrante du code XAML, comme le `x` révèle de préfixe.
 
@@ -366,7 +367,7 @@ namespace XamlSamples
                     PagePadding = new Thickness(5, 0, 5, 0);
                     TitleFont = Font.SystemFontOfSize(40, FontAttributes.Bold);
                     break;
-                    
+
                 case Device.UWP:
                     PagePadding = new Thickness(5, 0, 5, 0);
                     TitleFont = Font.SystemFontOfSize(50, FontAttributes.Bold);

@@ -1,17 +1,18 @@
 ---
 title: La transformation d’inclinaison
-description: Découvrez comment la transformation d’inclinaison peut créer des objets graphiques inclinées dans SkiaSharp
+description: Cet article explique comment la transformation d’inclinaison peut créer des objets graphiques inclinées dans SkiaSharp et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: c8913dcb5dbe9664f1186b1acf46f09cb8da74ed
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 8a0d17f5cdc790aed2bd8fd671563378d5d523b1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244079"
 ---
 # <a name="the-skew-transform"></a>La transformation d’inclinaison
 

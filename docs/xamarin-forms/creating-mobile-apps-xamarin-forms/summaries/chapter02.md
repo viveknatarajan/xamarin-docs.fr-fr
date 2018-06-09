@@ -1,16 +1,18 @@
 ---
 title: Résumé du chapitre 2. Anatomie d’une application
+description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 2. Anatomie d’une application'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 81bcc8e2f8627264820a859123e1be1a9f960a92
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 208cf28341ceaa43d1c56b4f5086dc98febee6be
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242745"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Résumé du chapitre 2. Anatomie d’une application
 
@@ -142,11 +144,11 @@ Le `Device.OnPlatform` méthodes sont utilisées pour exécuter du code spécifi
 
 Le `Device.OnPlatform` méthodes, le `Device.OS` propriété et le `TargetPlatform` énumération sont maintenant déconseillées. Au lieu de cela, utilisez le [ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) propriété et comparer le `string` retourner la valeur avec les champs statiques suivantes :
 
-- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), la chaîne « iOS » 
+- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), la chaîne « iOS »
 - [`Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/), la chaîne « Android »
 - [`UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/), la chaîne « UWP », qui fait référence à la plateforme d’exécution de Windows
 - [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Windows/), la chaîne « Windows » pour le Windows Runtime (Windows 8.1 et Windows Phone 8.1)
-- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), la chaîne « WinPhone » pour Windows Phone 8.0 
+- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), la chaîne « WinPhone » pour Windows Phone 8.0
 
 Le [ `Device.Idiom` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.Idiom/) les propriété en lecture seule statique est associée. Cela retourne un membre de la [ `TargetIdiom` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetIdiom/), qui a ces membres :
 

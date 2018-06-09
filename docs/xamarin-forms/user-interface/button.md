@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/01/2018
-ms.openlocfilehash: 1fed439ecb4bd79bd84974ea1397ca0ed1336b62
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d74e0b2aa5be6e8eee2ce5cb54572dd4113d4d7d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847951"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244914"
 ---
 # <a name="xamarinforms-button"></a>Bouton de Xamarin.Forms
 
-_Le bouton répond à un drainage ou d’un clic qui dirige une application pour effectuer une tâche particulière._ 
+_Le bouton répond à un drainage ou d’un clic qui dirige une application pour effectuer une tâche particulière._
 
 Le [ `Button` ](xref:Xamarin.Forms.Button) est le plus fondamental contrôle interactif dans tous les Xamarin.Forms. Le `Button` généralement affiche une chaîne de texte courte qui indique une commande, mais il peut également afficher une image bitmap, ou une combinaison de texte et une image. L’utilisateur appuie sur le `Button` avec un doigt ou clique dessus avec la souris pour exécuter cette commande.
 
@@ -24,7 +24,7 @@ La plupart des rubriques ci-dessous correspondre aux pages dans le [ **ButtonDem
 
 ## <a name="handling-button-clicks"></a>Gestion bouton clique sur
 
-`Button` définit un [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) événement est déclenché lorsque l’utilisateur clique sur le `Button` avec un pointeur de souris ou du doigt. L’événement est déclenché lorsque le bouton doigt ou de la souris est relâché à partir de la surface de la `Button`. Le `Button` doit avoir son [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) propriété `true` pour pouvoir répondre aux clics. 
+`Button` définit un [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) événement est déclenché lorsque l’utilisateur clique sur le `Button` avec un pointeur de souris ou du doigt. L’événement est déclenché lorsque le bouton doigt ou de la souris est relâché à partir de la surface de la `Button`. Le `Button` doit avoir son [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) propriété `true` pour pouvoir répondre aux clics.
 
 Le **base Click du bouton** page dans le [ **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) exemple montre comment instancier un `Button` dans XAML et de gérer ses `Clicked` événement. Le **BasicButtonClickPage.xaml** fichier contient un `StackLayout` à la fois avec un `Label` et un `Button`:
 
@@ -34,18 +34,18 @@ Le **base Click du bouton** page dans le [ **ButtonDemos** ](https://developer.x
              x:Class="ButtonDemos.BasicButtonClickPage"
              Title="Basic Button Click">
     <StackLayout>
-        
+
         <Label x:Name="label"
                Text="Click the Button below"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Click to Rotate Text!"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
                 Clicked="OnButtonClicked" />
-     
+
     </StackLayout>
 </ContentPage>
 ```
@@ -136,7 +136,8 @@ button.Clicked += OnButtonClicked;
 
 ## <a name="disabling-the-button"></a>Désactivation du bouton
 
-Parfois, une application est dans un état particulier où un particulier `Button` cliquez sur n’est pas une opération valide. Dans ce cas, le `Button` doit être désactivé en définissant son `IsEnabled` propriété `false`. L’exemple classique est une `Entry` contrôle pour un nom de fichier accompagné d’une ouverture de fichier `Button`: le `Button` doit être activée uniquement si du texte a été tapé dans le `Entry`. Vous pouvez utiliser un `DataTrigger` pour cette tâche, comme indiqué dans le [ **déclencheurs Data** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) l’article.
+Parfois, une application est dans un état particulier où un particulier `Button` cliquez sur n’est pas une opération valide. Dans ce cas, le `Button` doit être désactivé en définissant son `IsEnabled` propriété `false`. L’exemple classique est une `Entry` contrôle pour un nom de fichier accompagné d’une ouverture de fichier `Button`: le `Button` doit être activée uniquement si du texte a été tapé dans le `Entry`.
+Vous pouvez utiliser un `DataTrigger` pour cette tâche, comme indiqué dans le [ **déclencheurs Data** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) l’article.
 
 ## <a name="using-the-command-interface"></a>À l’aide de l’interface de commande
 
@@ -199,15 +200,15 @@ Le **BasicButtonCommand.xaml** fichier définit son `BindingContext` à une inst
              xmlns:local="clr-namespace:ButtonDemos"
              x:Class="ButtonDemos.BasicButtonCommandPage"
              Title="Basic Button Command">
-    
+
     <ContentPage.BindingContext>
         <local:CommandDemoViewModel />
     </ContentPage.BindingContext>
-    
+
     <StackLayout>
         <Label Text="{Binding Number, StringFormat='Value is now {0}'}"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Multiply by 2"
@@ -355,7 +356,7 @@ Le `Pressed` et `Released` événements ne sont pas souvent utilisés, mais ils 
         <Label x:Name="label"
                Text="Press and hold the Button below"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Press to Rotate Text!"
@@ -406,7 +407,7 @@ Le résultat est que le `Label` uniquement utilise un doigt en contact avec la `
 
 [![Appuyez sur et relâchez le bouton](button-images/PressAndReleaseButton.png "appuyez et relâchez le bouton")](button-images/PressAndReleaseButton-Large.png)
 
-Ce type de comportement a des applications pour les jeux : un doigt maintenu sur une `Button` risque de rendre un objet d’écran à déplacer dans une direction particulière. 
+Ce type de comportement a des applications pour les jeux : un doigt maintenu sur une `Button` risque de rendre un objet d’écran à déplacer dans une direction particulière.
 
 <a name="button-appearance" />
 
@@ -420,7 +421,7 @@ Le `Button` hérite ou définit plusieurs propriétés qui affectent son apparen
 - [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily) la famille de polices est utilisée pour le texte
 - [`FontSize`](xref:Xamarin.Forms.Button.FontSize) la taille du texte
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) Indique si le texte est en italique ou en gras
-- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) la largeur de la bordure 
+- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) la largeur de la bordure
 - [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) Arrondit les angles
 
 Les effets de six de ces propriétés (à l’exclusion des `FontFamily` et `FontAttributes`) sont illustrées dans le **apparence du bouton** page. Une autre propriété, [ `Image` ](xref:Xamarin.Forms.Button.Image), est décrite dans la section [ **à l’aide de bitmaps avec le bouton**](#image-button).
@@ -447,7 +448,7 @@ Toutes les liaisons de données et les vues dans le **apparence du bouton** page
 
         <StackLayout BindingContext="{x:Reference button}"
                      Padding="10">
-            
+
             <Slider x:Name="fontSizeSlider"
                     Maximum="48"
                     Minimum="1"
@@ -462,8 +463,8 @@ Toutes les liaisons de données et les vues dans le **apparence du bouton** page
                     Minimum="-1"
                     Maximum="12"
                     Value="{Binding BorderWidth}" />
-            
-            <Label Text="{Binding Source={x:Reference borderWidthSlider}, 
+
+            <Label Text="{Binding Source={x:Reference borderWidthSlider},
                                   Path=Value,
                                   StringFormat='BorderWidth = {0:F0}'}"
                    HorizontalTextAlignment="Center" />
@@ -473,7 +474,7 @@ Toutes les liaisons de données et les vues dans le **apparence du bouton** page
                     Maximum="24"
                     Value="{Binding CornerRadius}" />
 
-            <Label Text="{Binding Source={x:Reference cornerRadiusSlider}, 
+            <Label Text="{Binding Source={x:Reference cornerRadiusSlider},
                                   Path=Value,
                                   StringFormat='CornerRadius = {0:F0}'}"
                    HorizontalTextAlignment="Center" />
@@ -484,7 +485,7 @@ Toutes les liaisons de données et les vues dans le **apparence du bouton** page
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -586,13 +587,13 @@ class ToggleButton : Button
 }
 ```
 
-Le `ToggleButton` constructeur attache un gestionnaire à la `Clicked` événement afin qu’elle peut modifier la valeur de la `IsToggled` propriété. Le `OnIsToggledChanged` se déclenche la méthode le `Toggled` événement. 
+Le `ToggleButton` constructeur attache un gestionnaire à la `Clicked` événement afin qu’elle peut modifier la valeur de la `IsToggled` propriété. Le `OnIsToggledChanged` se déclenche la méthode le `Toggled` événement.
 
-La dernière ligne de la `OnIsToggledChanged` méthode appelle la méthode statique `VisualStateManager.GoToState` méthode avec le texte de deux chaînes « ToggledOn » et « ToggledOff ». Vous pouvez lire sur cette méthode et la façon dont votre application peut répondre à des états visuels dans l’article [ **le Gestionnaire d’état visuel Xamarin.Forms**](~/xamarin-forms/user-interface/visual-state-manager.md). 
+La dernière ligne de la `OnIsToggledChanged` méthode appelle la méthode statique `VisualStateManager.GoToState` méthode avec le texte de deux chaînes « ToggledOn » et « ToggledOff ». Vous pouvez lire sur cette méthode et la façon dont votre application peut répondre à des états visuels dans l’article [ **le Gestionnaire d’état visuel Xamarin.Forms**](~/xamarin-forms/user-interface/visual-state-manager.md).
 
-Étant donné que `ToggleButton` effectue l’appel à `VisualStateManager.GoToState`, la classe elle-même n’a pas besoin d’inclure des fonctionnalités supplémentaires pour modifier l’apparence du bouton en fonction de son `IsToggled` état. Qui est la responsabilité du code XAML qui héberge le `ToggleButton`. 
+Étant donné que `ToggleButton` effectue l’appel à `VisualStateManager.GoToState`, la classe elle-même n’a pas besoin d’inclure des fonctionnalités supplémentaires pour modifier l’apparence du bouton en fonction de son `IsToggled` état. Qui est la responsabilité du code XAML qui héberge le `ToggleButton`.
 
-Le **démonstration de bouton bascule** page contient deux instances de `ToggleButton`, y compris le balisage de gestionnaire d’état visuel qui définit les `Text`, `BackgroundColor`, et `TextColor` du bouton en fonction de l’état visuel : 
+Le **démonstration de bouton bascule** page contient deux instances de `ToggleButton`, y compris le balisage de gestionnaire d’état visuel qui définit les `Text`, `BackgroundColor`, et `TextColor` du bouton en fonction de l’état visuel :
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -601,7 +602,7 @@ Le **démonstration de bouton bascule** page contient deux instances de `ToggleB
              xmlns:local="clr-namespace:ButtonDemos"
              x:Class="ButtonDemos.ToggleButtonDemoPage"
              Title="Toggle Button Demo">
-    
+
     <ContentPage.Resources>
         <Style TargetType="local:ToggleButton">
             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
@@ -620,7 +621,7 @@ Le **démonstration de bouton bascule** page contient deux instances de `ToggleB
                             <Setter Property="TextColor" Value="Black" />
                         </VisualState.Setters>
                     </VisualState>
-                    
+
                     <VisualState Name="ToggledOn">
                         <VisualState.Setters>
                             <Setter Property="Text" Value=" Italic On " />
@@ -642,7 +643,7 @@ Le **démonstration de bouton bascule** page contient deux instances de `ToggleB
                             <Setter Property="TextColor" Value="Black" />
                         </VisualState.Setters>
                     </VisualState>
-                    
+
                     <VisualState Name="ToggledOn">
                         <VisualState.Setters>
                             <Setter Property="Text" Value=" Bold On " />
@@ -710,9 +711,9 @@ Voici le programme en cours d’exécution sur iOS, Android et la plateforme Win
 
 Le `Button` classe définit un [ `Image` ](xref:Xamarin.Forms.Button.Image) propriété qui vous permet d’afficher une image bitmap sur le `Button`, seul ou en combinaison avec du texte. Vous pouvez également spécifier la façon dont le texte et image sont réorganisés.
 
-Le `Image` propriété est de type [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource), ce qui signifie que les bitmaps doivent être stockés en tant que ressources dans les projets de plateforme individuels et non dans le projet de bibliothèque .NET Standard. 
+Le `Image` propriété est de type [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource), ce qui signifie que les bitmaps doivent être stockés en tant que ressources dans les projets de plateforme individuels et non dans le projet de bibliothèque .NET Standard.
 
-Chaque plateforme prise en charge par Xamarin.Forms permet d’être stockées dans plusieurs tailles pour les résolutions de pixels différente des périphériques différents de l’application peut s’exécuter sur les images. Ces bitmaps plusieurs sont nommés ou stockés de manière à ce que le système d’exploitation peut choisir la meilleure correspondance pour le périphérique vidéo résolution d’affichage. 
+Chaque plateforme prise en charge par Xamarin.Forms permet d’être stockées dans plusieurs tailles pour les résolutions de pixels différente des périphériques différents de l’application peut s’exécuter sur les images. Ces bitmaps plusieurs sont nommés ou stockés de manière à ce que le système d’exploitation peut choisir la meilleure correspondance pour le périphérique vidéo résolution d’affichage.
 
 Pour une image bitmap sur un `Button`, la taille optimale est généralement entre 32 et 64 unités d’indépendant du périphérique, selon la taille que vous souhaitez qu’il le soit. Les images utilisées dans cet exemple sont basées sur une taille de 48 unités indépendantes du périphérique.
 
@@ -801,7 +802,7 @@ Pour éviter un grand nombre de répétitions balisage dans le **ImageButtonDemo
     <FlexLayout Direction="Column"
                 JustifyContent="SpaceEvenly"
                 AlignItems="Center">
-        
+
         <FlexLayout.Resources>
             <Style TargetType="Button">
                 <Setter Property="Image">
@@ -833,7 +834,7 @@ Pour éviter un grand nombre de répétitions balisage dans le **ImageButtonDemo
         <Button Text="Right - 20"
                 ContentLayout="Right, 20" />
 
-        <Button Text="Bottom - 20" 
+        <Button Text="Bottom - 20"
                 ContentLayout="Bottom, 20" />
     </FlexLayout>
 </ContentPage>

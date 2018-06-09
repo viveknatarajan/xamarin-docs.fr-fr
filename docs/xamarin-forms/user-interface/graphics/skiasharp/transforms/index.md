@@ -1,17 +1,18 @@
 ---
 title: Transformations SkiaSharp
-description: En savoir plus sur les transformations pour afficher les graphiques de SkiaSharp
+description: Cet article explore les transformations pour afficher les graphiques de SkiaSharp dans les applications de Xamarin.Forms et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: a94e1011557a5c7487315681e6e7c4d106ae4ba1
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: d8e9c26df9286cec94562b5d3d7b7721cc3f3f3d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244946"
 ---
 # <a name="skiasharp-transforms"></a>Transformations SkiaSharp
 
@@ -86,4 +87,4 @@ Transformations non affines permet de faire pivoter des objets 2D dans un espace
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,5 +1,5 @@
 ---
-title: Espaces de noms XAML
+title: Espaces de noms XAML dans Xamarin.Forms
 description: XAML utilise l’attribut XML xmlns pour les déclarations d’espace de noms. Cet article présente la syntaxe d’espace de noms XAML et montre comment déclarer un espace de noms XAML pour un type d’accès.
 ms.prod: xamarin
 ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2017
-ms.openlocfilehash: ecf255d2fc6937e93258eaa021f79152cb7b1c7f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: faa4998869b918caaf5bc4252dc81a5745199c93
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245831"
 ---
-# <a name="xaml-namespaces"></a>Espaces de noms XAML
+# <a name="xaml-namespaces-in-xamarinforms"></a>Espaces de noms XAML dans Xamarin.Forms
 
 _XAML utilise l’attribut XML xmlns pour les déclarations d’espace de noms. Cet article présente la syntaxe d’espace de noms XAML et montre comment déclarer un espace de noms XAML pour un type d’accès._
 

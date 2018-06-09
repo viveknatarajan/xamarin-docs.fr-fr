@@ -1,25 +1,26 @@
 ---
-title: Chemins d’accès et le texte
-description: Explorer l’intersection des chemins d’accès et le texte
+title: Chemins d’accès et le texte dans SkiaSharp
+description: Cet article explore l’intersection des chemins d’accès SkiaSharp et le texte et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: 9b3f906a23ed0d51237a244f3944104acc76e259
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 305ee2946d3a291e6237d5a2860eda7331193b23
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243903"
 ---
-# <a name="paths-and-text"></a>Chemins d’accès et le texte
+# <a name="paths-and-text-in-skiasharp"></a>Chemins d’accès et le texte dans SkiaSharp
 
 _Explorer l’intersection des chemins d’accès et le texte_
 
-Dans les systèmes de graphique moderne, les polices de texte sont des collections de contours de caractère, généralement définies par les courbes Bézier quadratiques. Par conséquent, de nombreux systèmes graphique moderne incluent une fonction pour convertir les caractères de texte dans un chemin d’accès des graphiques. 
+Dans les systèmes de graphique moderne, les polices de texte sont des collections de contours de caractère, généralement définies par les courbes Bézier quadratiques. Par conséquent, de nombreux systèmes graphique moderne incluent une fonction pour convertir les caractères de texte dans un chemin d’accès des graphiques.
 
-Vous avez déjà vu que vous pouvez tracer des contours des caractères de texte ainsi que les remplir. Cela vous permet d’afficher ces contours de caractère avec une épaisseur de trait particulier et même un effet de chemin d’accès comme décrit dans la [ **les effets de chemin d’accès** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) l’article. Mais il est également possible de convertir une chaîne de caractères dans un `SKPath` objet. Cela signifie que les contours du texte peuvent être utilisés pour le découpage avec les techniques décrites dans le [ **consiste à faire coïncider avec des chemins d’accès et les régions** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) l’article. 
+Vous avez déjà vu que vous pouvez tracer des contours des caractères de texte ainsi que les remplir. Cela vous permet d’afficher ces contours de caractère avec une épaisseur de trait particulier et même un effet de chemin d’accès comme décrit dans la [ **les effets de chemin d’accès** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) l’article. Mais il est également possible de convertir une chaîne de caractères dans un `SKPath` objet. Cela signifie que les contours du texte peuvent être utilisés pour le découpage avec les techniques décrites dans le [ **consiste à faire coïncider avec des chemins d’accès et les régions** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) l’article.
 
 Outre l’utilisation d’un effet de chemin d’accès pour tracer un contour du caractère, vous pouvez également créer des effets qui reposent sur un chemins d’accès sont dérivés de chaînes de caractères de chemin, et vous pouvez même combiner les deux effets :
 
@@ -37,7 +38,7 @@ Le [ `GetTextPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.
 public SKPath GetTextPath (String text, Single x, Single y)
 ```
 
-Le `x` et `y` arguments indiquent le point de départ de la ligne de base du côté gauche du texte. Ils jouent le même rôle ici comme dans le `DrawText` méthode `SKCanvas`. Dans le chemin d’accès, la ligne de base du côté gauche du texte aura les coordonnées (x, y). 
+Le `x` et `y` arguments indiquent le point de départ de la ligne de base du côté gauche du texte. Ils jouent le même rôle ici comme dans le `DrawText` méthode `SKCanvas`. Dans le chemin d’accès, la ligne de base du côté gauche du texte aura les coordonnées (x, y).
 
 Le `GetTextPath` méthode est excessif si vous souhaitez simplement remplir ou entourer le chemin d’accès résultant. Vecteur normal `DrawText` méthode vous permet de faire. Le `GetTextPath` méthode est plus utile pour d’autres tâches qui impliquent des chemins d’accès.
 
@@ -114,7 +115,7 @@ public class ClippingTextPage : ContentPage
 
         // Display bitmap to fill window but maintain aspect ratio
         SKRect rect = new SKRect(0, 0, info.Width, info.Height);
-        canvas.DrawBitmap(bitmap, 
+        canvas.DrawBitmap(bitmap,
             rect.AspectFill(new SKSize(bitmap.Width, bitmap.Height)));
     }
 }
@@ -141,7 +142,7 @@ public class TextPathEffectPage : ContentPage
         TextSize = littleSize
     };
 
-    SKPaint textPaint = new SKPaint 
+    SKPaint textPaint = new SKPaint
     {
         Style = SKPaintStyle.Stroke,
         Color = SKColors.Black
@@ -160,7 +161,7 @@ public class TextPathEffectPage : ContentPage
         textPathPaint.MeasureText(character, ref textPathPaintBounds);
 
         // Create textPath centered around (0, 0)
-        SKPath textPath = textPathPaint.GetTextPath(character, 
+        SKPath textPath = textPathPaint.GetTextPath(character,
                                                     -textPathPaintBounds.MidX,
                                                     -textPathPaintBounds.MidY);
         // Create the path effect
@@ -324,9 +325,9 @@ Le `TextSize` propriété du `textPaint` est alors ajusté afin que la largeur d
 
 [![](text-paths-images/circulartext-small.png "Capture d’écran de triple de la page de texte circulaire")](text-paths-images/circulartext-large.png#lightbox "Triple capture d’écran de la page de texte circulaire")
 
-Le texte proprement dit a été choisi pour être quelque peu circulaires ainsi : le mot « circle » représente le sujet de la phrase et l’objet d’une expression préposition. 
+Le texte proprement dit a été choisi pour être quelque peu circulaires ainsi : le mot « circle » représente le sujet de la phrase et l’objet d’une expression préposition.
 
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,20 +1,20 @@
 ---
-title: À l’aide du sélecteur de dates
-description: Une vue Xamarin.Forms qui permet à l’utilisateur de sélectionner une date
+title: Xamarin.Forms DatePicker
+description: Le sélecteur de dates est vue Xamarin.Forms qui permet à l’utilisateur de sélectionner une date. Cet article explique comment utiliser un sélecteur de dates dans une application de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 09b0bd788d9ac436e0270b447556ad2b0a848f99
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 9cbc87637df088a4989d3602a7d1d126adf86385
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848562"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243643"
 ---
-# <a name="using-datepicker"></a>À l’aide du sélecteur de dates
+# <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
 _Une vue Xamarin.Forms qui permet à l’utilisateur de sélectionner une date_
 

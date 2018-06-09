@@ -1,17 +1,18 @@
 ---
 title: Notions de base Xamarin.Forms XAML
-description: Prise en main de balisage multiplateforme pour appareils mobiles
+description: Ce guide explique comment démarrer avec XAML multiplateforme pour appareils mobiles. XAML permet aux développeurs de définir les interfaces utilisateur dans les applications de Xamarin.Forms à l’aide de balisage plutôt que du code.
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 991d928c2c58f05098a41c84aba295a31636ab96
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 627267b95bb2d810a60f84c51e38bf5387fe1f99
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245961"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Notions de base Xamarin.Forms XAML
 
@@ -96,7 +97,7 @@ XAML est fondamentalement XML, mais certaines fonctionnalités de syntaxe unique
 
 Ces fonctionnalités sont *pas* extensions XML. XAML est entièrement conforme XML. Mais ces fonctionnalités de syntaxe XAML utilisent XML de façon unique. Elles sont présentées en détail dans les articles ci-dessous, qui se terminer par une introduction à l’utilisation de XAML pour l’implémentation de MVVM.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Cet article suppose une connaissance pratique de Xamarin.Forms. Lors de la lecture [présentation de Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) est fortement recommandé.
 

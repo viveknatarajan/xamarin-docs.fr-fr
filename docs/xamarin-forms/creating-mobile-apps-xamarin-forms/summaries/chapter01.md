@@ -1,22 +1,24 @@
 ---
 title: Résumé du chapitre 1. Comment convient-elle Xamarin.Forms ?
+description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 1. Comment convient-elle Xamarin.Forms ?'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 534c36a16acdc10ffb6f6b6703296a672875286e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2897229b0749b1a6ead805d6ad063603a77f8f0d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240458"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Résumé du chapitre 1. Comment convient-elle Xamarin.Forms ?
 
 Une des tâches de programmation plus mauvaises consiste à porter un code base d’une plateforme à l’autre, en particulier si cette plateforme implique un autre langage de programmation. Il est tentant lors du portage du code pour refactoriser ainsi, mais si les deux plateformes doivent être conservées en parallèle, puis les différences entre les deux bases de code seront futures maintenance devient plus difficile.
 
-## <a name="cross-platform-mobile-development"></a>Développement multiplateforme pour appareils mobiles
+## <a name="cross-platform-mobile-development"></a>Développement mobile multiplateforme
 
 Ce problème est courant lorsque vous ciblez les plateformes mobiles. Actuellement, il existe deux principales plateformes mobiles, la famille Apple de l’iPhone et iPad exécutant le système d’exploitation iOS et le système d’exploitation Android qui s’exécute sur une gamme de téléphones et tablettes. Une autre plateforme significative est plateforme Windows universelle (UWP de Microsoft), ce qui permet à un programme unique cibler Windows 10 et Windows 10 Mobile.
 
@@ -74,7 +76,7 @@ Les sites web de Xamarin et Microsoft contiennent des informations sur la procé
 
 - [Prise en main d’e/s](~/ios/get-started/index.md)
 - [Mise en route avec Android](~/android/get-started/index.md)
-- [Windows Dev Center](http://dev.windows.com)
+- [Centre de développement Windows](http://dev.windows.com)
 
 Une fois que vous pouvez créer et n’exécuter des projets pour ces plateformes individuels, vous devez avoir aucun problème de création et exécution d’une application de Xamarin.Forms.
 

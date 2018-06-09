@@ -1,19 +1,20 @@
 ---
-title: Chaîne mise en forme
-description: Utiliser des liaisons de données à mettre en forme et afficher les objets sous forme de chaînes
+title: Mise en forme de chaîne de Xamarin.Forms
+description: Cet article explique comment utiliser des liaisons de données Xamarin.FOrms pour formater et afficher les objets sous forme de chaînes. Cela est possible en définissant le StringFormat de la liaison à une chaîne de mise en forme .NET standard avec un espace réservé.
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 4e143f650c3cde7577def1a95e53b207608a088a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bdac74e4ec14797ec373f86b8a94c7af4d480951
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240299"
 ---
-# <a name="string-formatting"></a>Chaîne mise en forme
+# <a name="xamarinforms-string-formatting"></a>Mise en forme de chaîne de Xamarin.Forms
 
 Il est parfois commode d’utiliser des liaisons de données pour afficher la représentation sous forme de chaîne d’un objet ou une valeur. Par exemple, vous souhaiterez peut-être utiliser un `Label` pour afficher la valeur actuelle d’un `Slider`. Dans cette liaison de données, le `Slider` est la source et la cible est la `Text` propriété de la `Label`.
 

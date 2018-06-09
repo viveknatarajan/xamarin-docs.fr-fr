@@ -1,19 +1,20 @@
 ---
-title: Transformations de matrice
-description: Plonger dans les transformations SkiaSharp avec la matrice de transformation polyvalente
+title: Transformations de matrice dans SkiaSharp
+description: Cet article explore plus approfondis pour les transformations SkiaSharp avec la matrice de transformation polyvalente et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 90fadf0081f86e7739d75c0710caeaf1775c423e
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 816a5f47a4a4f5c01a1fb20b5c8e7a2fc83a64b0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244875"
 ---
-# <a name="matrix-transforms"></a>Transformations de matrice
+# <a name="matrix-transforms-in-skiasharp"></a>Transformations de matrice dans SkiaSharp
 
 _Plonger dans les transformations SkiaSharp avec la matrice de transformation polyvalente_
 
@@ -145,7 +146,7 @@ Une rotation de 180 degrés est équivalente à retourner un objet horizontaleme
 
 Tous ces types de transformations sont classés comme *affine* transforme. Transformations affines impliquent jamais la troisième colonne de la matrice, qui reste à la valeur par défaut de 0, 0 et 1. L’article [transformations affines Non](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md) traite des transformations non affines.
 
-## <a name="matrix-multiplication"></a>Matrix Multiplication
+## <a name="matrix-multiplication"></a>Multiplication des matrices
 
 Un des avantages majeurs à l’aide de la matrice de transformation sont que les transformations composites peuvent être obtenues en multiplication des matrices, qui est souvent appelée dans la documentation SkiaSharp *concaténation*. Les méthodes de transformation de nombreux `SKCanvas` fait référence à « concaténation préliminaire » ou « pre-concat. » Cela fait référence à l’ordre de multiplication, ce qui est importante, car la multiplication de matrice n’est pas commutative.
 
@@ -652,4 +653,4 @@ Valeurs non nul de `Persp0` et `Persp1` résultat dans transformations qui dépl
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

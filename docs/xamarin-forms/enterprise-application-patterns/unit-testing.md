@@ -1,18 +1,20 @@
 ---
-title: Test unitaire
+title: Applications d’entreprise de tests unitaires
+description: Ce chapitre explique comment le test unitaire est effectuée dans l’application mobile eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 57201a32f5ffc0ae962f6db851a25a737e1cb17d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06cd89e0b0871eac723e8580340173f77821e4ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242529"
 ---
-# <a name="unit-testing"></a>Test unitaire
+# <a name="unit-testing-enterprise-apps"></a>Applications d’entreprise de tests unitaires
 
 Les applications mobiles ont des problèmes spécifiques qui bureau et des applications basées sur le web n’ont pas à vous soucier. Les utilisateurs mobiles diffèrent par les appareils qu’ils utilisent, par une connectivité réseau, à la disponibilité des services et une plage d’autres facteurs. Par conséquent, les applications mobiles doivent être testées car ils seront utilisés dans le monde réel pour améliorer leur qualité, la fiabilité et les performances. Il existe de nombreux types de tests qui doivent être effectuées sur une application, y compris les tests unitaires, tests d’intégration et l’interface utilisateur de test, avec les tests en cours de la forme la plus commune de tests unitaires.
 
@@ -227,4 +229,4 @@ Test de modèles et afficher les modèles à partir d’applications de MVVM est
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)

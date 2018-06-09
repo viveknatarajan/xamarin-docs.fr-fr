@@ -1,19 +1,20 @@
 ---
-title: Points et des tirets
-description: Maîtrisez les complexités de dessiner des lignes en pointillés et dans SkiaSharp
+title: Points et des tirets dans SkiaSharp
+description: Cet article explique comment maîtriser les complexités de dessiner des lignes en pointillés et dans SkiaSharp et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1e295ac424c311472ff175d4627c5fb12641d31f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 5571f2d1824cef72e192a19d15f9af03276f7523
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243871"
 ---
-# <a name="dots-and-dashes"></a>Points et des tirets
+# <a name="dots-and-dashes-in-skiasharp"></a>Points et des tirets dans SkiaSharp
 
 _Maîtrisez les complexités de dessiner des lignes en pointillés et dans SkiaSharp_
 

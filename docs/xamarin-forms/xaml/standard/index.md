@@ -1,17 +1,18 @@
 ---
 title: XAML Standard (version préliminaire)
-description: Comment commencer à Explorer l’aperçu Standard XAML dans Xamarin.Forms
+description: Cet article explique comment commencer à Explorer l’aperçu Standard XAML dans Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 24382DF1-BE70-4608-B86F-B79FB23E4A78
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: b16d146c5ad1097f38c41763a3ae111e7439256f
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 61e0fa2587ce9a8794dbd32ff9de1f13da857342
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245792"
 ---
 # <a name="xaml-standard-preview"></a>XAML Standard (version préliminaire)
 

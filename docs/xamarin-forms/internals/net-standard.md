@@ -1,17 +1,18 @@
 ---
 title: .NET 2.0 prise en charge standard dans Xamarin.Forms
-description: Cet article explique comment convertir une application Xamarin.Forms Standard de .NET 2.0.
+description: Cet article explique comment convertir une application Xamarin.Forms Standard de .NET 2.0. .NET standard est une spécification de l’API .NET qui sont destinés à être disponible sur toutes les implémentations de .NET.
 ms.prod: xamarin
 ms.assetid: 95805355-63a7-44e7-a3c6-6487a6276ab2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 8685f1e10b5094e6f58e8efea51e6dd216dfa000
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc90155c79d1d2850281744c4c9aac70cbd7ecc3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242353"
 ---
 # <a name="net-standard-20-support-in-xamarinforms"></a>.NET 2.0 prise en charge standard dans Xamarin.Forms
 

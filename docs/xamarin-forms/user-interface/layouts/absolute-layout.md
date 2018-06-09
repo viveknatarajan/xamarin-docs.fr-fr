@@ -1,20 +1,20 @@
 ---
-title: DispositionAbsolue
-description: DispositionAbsolue permet de créer des interfaces utilisateur de pixel parfaite.
+title: Xamarin.Forms DispositionAbsolue
+description: Cet article explique comment utiliser la classe DispositionAbsolue de Xamarin.Forms pour créer des interfaces utilisateur de pixel parfaite. Cette classe positionne et une taille proportionnelle à son propre taille et la position ou en valeurs absolues des éléments enfants.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 506a9a4916cf2cf9105d59f56648e339d664a3d2
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f36334bca9e7401f35d4b6181b47c0f64923f652
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848385"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244455"
 ---
-# <a name="absolutelayout"></a>DispositionAbsolue
+# <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms DispositionAbsolue
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) Positionne et d’une taille proportionnelle à son propre taille et la position ou en valeurs absolues des éléments enfants. Vues enfants peuvent être positionnées et taille à l’aide de valeurs proportionnelles ou statiques et proportionnel et des valeurs statiques peuvent être mélangés.
 

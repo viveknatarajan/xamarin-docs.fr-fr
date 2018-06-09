@@ -1,19 +1,20 @@
 ---
-title: Bitmap des principes de base
-description: Charger des bitmaps de différentes sources et les afficher.
+title: Principes fondamentaux de la bitmap dans SkiaSharp
+description: Cet article explique comment charger des images bitmap dans SkiaSharp provenant de différentes sources et les afficher dans les applications de Xamarin.Forms et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 688c6218f9ac66e3dfd6cd157e43f9b639e124c6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 291f08afb95c70e9f9fccc02e1fd7353cf107213
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244384"
 ---
-# <a name="bitmap-basics"></a>Bitmap des principes de base
+# <a name="bitmap-basics-in-skiasharp"></a>Principes fondamentaux de la bitmap dans SkiaSharp
 
 _Charger des bitmaps de différentes sources et les afficher._
 
@@ -247,5 +248,5 @@ Si aucune bitmap n’a encore été chargé à partir de la bibliothèque d’im
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Sélection d’une Photo dans la bibliothèque d’images](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

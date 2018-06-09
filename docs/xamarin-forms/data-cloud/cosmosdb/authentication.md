@@ -1,17 +1,18 @@
 ---
 title: L’authentification des utilisateurs avec une base de données du Document Cosmos Azure DB
-description: 'Bases de données de document Cosmos DB Azure prend en charge les collections partitionnées, ce qui peuvent s’étendre sur plusieurs serveurs et des partitions, débit et stockage illimitée : la prise en charge. Cet article explique comment combiner le contrôle d’accès avec les collections partitionnées, afin qu’un utilisateur peut accéder uniquement leurs propres documents dans une application de Xamarin.Forms.'
+description: Cet article explique comment combiner le contrôle d’accès avec des collections de base de données Azure Cosmos partitionné, afin qu’un utilisateur peut accéder uniquement leurs propres documents dans une application de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0132f849a066976896295da8b8b67ed8bf3c3e8d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 031a48e5e10100b2c57ac067a0dda916c93d20da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241609"
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>L’authentification des utilisateurs avec une base de données du Document Cosmos Azure DB
 
@@ -145,7 +146,7 @@ var auth = new Xamarin.Auth.WebRedirectAuthenticator(
 
 Cela provoque un flux d’authentification OAuth être initiée entre Azure App Service et Facebook, qui affiche la page de connexion Facebook :
 
-![](authentication-images/login.png "Facebook Login")
+![](authentication-images/login.png "Connexion Facebook")
 
 La connexion peut être annulée en appuyant sur la **Annuler** bouton sur iOS, ou en appuyant sur la **précédent** bouton sur Android, auquel cas l’utilisateur reste non authentifiée et l’interface utilisateur du fournisseur identité est supprimé de l’écran.
 

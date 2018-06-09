@@ -1,18 +1,20 @@
 ---
-title: Navigation
+title: Navigation d’application d’entreprise
+description: Ce chapitre explique comment l’application mobile eShopOnContainers effectue le modèle d’abord la navigation à partir de modèles d’affichage.
 ms.prod: xamarin
 ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: aa2e2858e3bb8e435ec3f38bb3d5b249eaa6cba4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ac9f3200440001752c07ad45fdaaf2b1d9ba6a5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243679"
 ---
-# <a name="navigation"></a>Navigation
+# <a name="enterprise-app-navigation"></a>Navigation d’application d’entreprise
 
 Xamarin.Forms inclut la prise en charge de la navigation entre les pages, ce qui se produit généralement à partir de l’interaction utilisateur avec l’interface utilisateur ou de l’application elle-même à la suite de modifications de l’état interne de piloté par la logique. Toutefois, la navigation peut être complexe à implémenter dans les applications qui utilisent le modèle Model-View-ViewModel (MVVM), comme les problèmes suivants doivent être remplies :
 
@@ -308,4 +310,4 @@ Ce chapitre présenté un `NavigationService` (classe), qui est utilisé pour ex
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)

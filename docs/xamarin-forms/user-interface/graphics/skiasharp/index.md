@@ -1,17 +1,18 @@
 ---
 title: À l’aide de SkiaSharp dans Xamarin.Forms
-description: Utilisez SkiaSharp pour les graphiques 2D dans vos applications de Xamarin.Forms
+description: SkiaSharp est un système de graphiques 2D pour .NET et le moteur de graphiques Skia open source qui est largement utilisé dans les produits Google pour c#. Ce guide explique comment utiliser SkiaSharp pour les graphiques 2D dans vos applications Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/11/2017
-ms.openlocfilehash: e3444411c80ecaee105cce7c10f7bec7583dc2a5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 272e70af83c8946d0c3eacadac9726487121ac0f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243936"
 ---
 # <a name="using-skiasharp-in-xamarinforms"></a>À l’aide de SkiaSharp dans Xamarin.Forms
 
@@ -56,5 +57,5 @@ L’exploration des chemins d’accès se poursuit avec l’ajout des courbes à
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [SkiaSharp avec Xamarin.Forms webinaire (vidéo)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

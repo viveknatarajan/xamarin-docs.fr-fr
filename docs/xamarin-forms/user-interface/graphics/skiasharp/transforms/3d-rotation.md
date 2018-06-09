@@ -1,19 +1,20 @@
 ---
-title: Rotations 3D
-description: Transformations non affines permet de faire pivoter des objets 2D dans un espace 3D.
+title: Rotations 3D dans SkiaSharp
+description: Cet article explique comment utiliser des transformations non affines pour faire pivoter les objets 2D dans un espace 3D et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: ad4bce6eff7df65185fc3bd754c747fd0db0c9f1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244297"
 ---
-# <a name="3d-rotations"></a>Rotations 3D
+# <a name="3d-rotations-in-skiasharp"></a>Rotations 3D dans SkiaSharp
 
 _Transformations non affines permet de faire pivoter des objets 2D dans un espace 3D._
 
@@ -213,7 +214,7 @@ z' = (sin (α) / profondeur) ·x + 1
 
 À présent diviser tout en z » :
 
-x" = cos(α)·x / ((sin(α)/depth)·x + 1)
+x » = cos (α) ·x / ((sin (α) / profondeur) ·x + 1)
 
 y » = y / ((sin (α) / profondeur) ·x + 1)
 
@@ -538,4 +539,4 @@ Cette rotation 3D est entourée de plusieurs transformations 2D pour atteindre l
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

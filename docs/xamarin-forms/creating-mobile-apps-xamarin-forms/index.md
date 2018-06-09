@@ -1,17 +1,18 @@
 ---
 title: Création d’applications mobiles avec l’édition du premier livre de Xamarin.Forms
-description: En savoir plus Xamarin.Forms avec la version électronique de l’annuaire de créer des applications mobiles de Charles Petzold.
+description: Découvrez le développement d’applications Xamarin.Forms avec la version électronique de l’annuaire de créer des applications mobiles de Charles Petzold.
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
-ms.openlocfilehash: 6e98adc4cc9dbf1ef6483d552d859b4925d51fe9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 84ed08419c49617ee0fcde57682e512ecb9ee6d7
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241700"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Création d’applications mobiles avec l’édition du premier livre de Xamarin.Forms
 
@@ -24,9 +25,9 @@ Chapitre 28 est désormais disponible en ligne entre les chapitres individuels r
 
 Téléchargez votre format de livre électronique par défaut de Microsoft Virtual Academy :
 
-*    [**PDF (56Mb)**](https://aka.ms/xamebook)
+*    [**PDF (56 Mo)**](https://aka.ms/xamebook)
 
-*    [**ePub (151Mb)**](https://aka.ms/xamebook/epub)
+*    [**ePub (151 Mo)**](https://aka.ms/xamebook/epub)
 
 *    [**Kindle Édition (325 Mo)**](https://aka.ms/xamebook/mobi)
 

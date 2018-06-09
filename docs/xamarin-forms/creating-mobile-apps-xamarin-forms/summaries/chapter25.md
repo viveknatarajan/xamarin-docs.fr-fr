@@ -1,16 +1,18 @@
 ---
 title: Résumé du chapitre 25. Variétés de page
+description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 25. Variétés de page'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 951ae41763d8338d5adf73fb46ebc6defa64f8f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ecee7866f4bf9ac1a4f706853434dce2b9cef7f6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241153"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Résumé du chapitre 25. Variétés de page
 
@@ -58,7 +60,7 @@ Que le fichier XAML définit également la [ `IsPresented` ](https://developer.x
 
 ### <a name="your-own-user-interface"></a>Votre propre interface utilisateur
 
-Bien que Xamarin.Forms fournit une interface utilisateur de basculer entre les vues maître / détail, vous pouvez fournir vos propres. Pour cela :
+Bien que Xamarin.Forms fournit une interface utilisateur de basculer entre les vues maître / détail, vous pouvez fournir vos propres. Pour ce faire :
 
 - Définir le [ `IsGestureEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsGestureEnabled/) propriété `false` pour désactiver le glissement
 - Remplacer la [ `ShouldShowToolbarButton` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton()/) méthode et retournez `false` pour masquer les boutons de barre d’outils sur Windows 8.1 et Windows Phone 8.1.

@@ -1,19 +1,20 @@
 ---
-title: Polices
-description: Définition des polices dans Xamarin.Forms
+title: Polices dans Xamarin.Forms
+description: Cet article explique comment spécifier des informations sur la police sur des contrôles qui affichent du texte dans les applications de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 52c86c63c328729211c4fbd22bd10b5eb1e56615
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fd45528446c9d3d4bdfa1b8f9f4010babb2ad044
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245629"
 ---
-# <a name="fonts"></a>Polices
+# <a name="fonts-in-xamarinforms"></a>Polices dans Xamarin.Forms
 
 Cet article décrit comment Xamarin.Forms vous permet de spécifier les attributs de police (y compris la taille et la pondération) sur des contrôles qui affichent du texte. Informations sur la police peuvent être [spécifiées dans le code](#Setting_Font_in_Code) ou [spécifié en Xaml](#Setting_Font_in_Xaml).
 Il est également possible d’utiliser un [police personnalisée](#Using_a_Custom_Font).

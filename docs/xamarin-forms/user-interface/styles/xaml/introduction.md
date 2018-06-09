@@ -1,5 +1,5 @@
 ---
-title: Introduction aux Styles
+title: Introduction aux Styles de Xamarin.Forms
 description: Les styles permettent l’apparence des éléments visuels à personnaliser. Les styles sont définis pour un type spécifique et contient des valeurs pour les propriétés disponibles sur ce type.
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f878641f9266da74d61eda8a85d4e16de193be0e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 071cfa2ba145775c179bc85dce4fac29ba0bd8fa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847964"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245818"
 ---
-# <a name="introduction-to-styles"></a>Introduction aux Styles
+# <a name="introduction-to-xamarinforms-styles"></a>Introduction aux Styles de Xamarin.Forms
 
 _Les styles permettent l’apparence des éléments visuels à personnaliser. Les styles sont définis pour un type spécifique et contient des valeurs pour les propriétés disponibles sur ce type._
 

@@ -1,19 +1,20 @@
 ---
-title: Données de chemin d’accès SVG
-description: Définir les chemins d’accès à l’aide de chaînes de texte dans le format Scalable Vector Graphics
+title: Données de chemin d’accès SVG dans SkiaSharp
+description: Cet article explique comment définir des chemins d’accès SkiaSharp à l’aide de chaînes de texte dans le format Scalable Vector Graphics et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 0453374c59c3b12842b7fb1524cc150329d84b7f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243972"
 ---
-# <a name="svg-path-data"></a>Données de chemin d’accès SVG
+# <a name="svg-path-data-in-skiasharp"></a>Données de chemin d’accès SVG dans SkiaSharp
 
 _Définir les chemins d’accès à l’aide de chaînes de texte dans le format Scalable Vector Graphics_
 
@@ -430,4 +431,4 @@ Quelque chose de spécial est effectuée avec l’aiguille, toutefois. Étant do
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

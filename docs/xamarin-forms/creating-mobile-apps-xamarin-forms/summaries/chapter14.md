@@ -1,16 +1,18 @@
 ---
 title: Résumé du chapitre 14. Disposition absolue
+description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 14. Disposition absolue'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 87feb17f79dadb0eb8da271f7c072e4a9753381c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8fe8f8bb0ba3204a312f3d91bc59b8fa3f7c03a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241401"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Résumé du chapitre 14. Disposition absolue
 
@@ -83,7 +85,7 @@ Un attribut en XAML qui se compose d’un nom de classe, un point et un nom de p
 
 ## <a name="overlays"></a>Superpositions
 
-Vous pouvez utiliser `AbsoluteLayout` pour construire un *segment de recouvrement*, qui couvre la page avec d’autres contrôles, peut-être pour protéger l’utilisateur d’interagir avec les contrôles normales sur la page. 
+Vous pouvez utiliser `AbsoluteLayout` pour construire un *segment de recouvrement*, qui couvre la page avec d’autres contrôles, peut-être pour protéger l’utilisateur d’interagir avec les contrôles normales sur la page.
 
 Le [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) exemple illustre cette technique et montre également la [ `ProgressBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/), qui affiche l’étendue à laquelle un programme a terminé une tâche.
 

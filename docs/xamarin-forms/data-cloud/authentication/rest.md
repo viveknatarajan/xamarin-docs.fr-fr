@@ -1,17 +1,18 @@
 ---
 title: L’authentification d’un Service Web RESTful
-description: HTTP prend en charge l’utilisation de plusieurs mécanismes d’authentification pour contrôler l’accès aux ressources. L’authentification de base permet d’accéder aux ressources pour seulement les clients ayant les informations d’identification correctes. Cet article explique comment utiliser l’authentification de base pour protéger l’accès aux ressources du service web RESTful.
+description: L’authentification de base permet d’accéder aux ressources pour seulement les clients ayant les informations d’identification correctes. Cet article explique comment utiliser l’authentification de base pour protéger l’accès aux ressources du service web RESTful.
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 3160fcced190f74fcfb44c6259451e00995de0fa
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42680ed8b79560f6f4f9f12892f7da5637a7af16
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240959"
 ---
 # <a name="authenticating-a-restful-web-service"></a>L’authentification d’un Service Web RESTful
 

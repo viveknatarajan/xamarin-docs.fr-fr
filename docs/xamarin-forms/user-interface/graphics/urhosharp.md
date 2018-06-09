@@ -1,18 +1,18 @@
 ---
 title: À l’aide de UrhoSharp dans Xamarin.Forms
-description: UrhoSharp peut être utilisé pour ajouter des graphiques 3D à une application de visualisation avancée
+description: Cet article explique comment UrhoSharp peuvent servir à ajouter des graphiques 3D à une application de Xamarin.Forms pour la visualisation avancée.
 ms.prod: xamarin
 ms.assetid: 0646B98E-CC04-4537-9715-9F82338FD7FF
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/11/2016
-ms.openlocfilehash: fbe07b81c8818378c3f6c12e09ae74bca2d89543
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 3ada1f45532797d77d52968343a7d7b3ab8f7948
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847483"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244517"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>À l’aide de UrhoSharp dans Xamarin.Forms
 

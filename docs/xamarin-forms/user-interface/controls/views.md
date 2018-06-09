@@ -1,18 +1,18 @@
 ---
 title: Vues de Xamarin.Forms
-description: Xamarin.Forms vues sont les blocs de construction d’interfaces utilisateur de mobile multiplateforme.
+description: Xamarin.Forms vues sont les blocs de construction d’interfaces utilisateur de mobile multiplateforme. Cet article répertorie les vues qui sont inclus dans Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: aafad29a30130c9ec088121e03a986034f002e1c
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 414df933716c7ce5d9422e8a2b9be89ba7eff3a9
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733085"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243516"
 ---
 # <a name="xamarinforms-views"></a>Vues de Xamarin.Forms
 
@@ -80,7 +80,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 | [`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) affiche une zone pour l’utilisateur à saisir une chaîne de texte et un bouton (ou une touche du clavier) qui signale l’application pour effectuer une recherche. Le [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.Text/) propriété permet d’accéder au texte et le [ `SearchButtonPressed` ](https://developer.xamarin.com/api/event/Xamarin.Forms.SearchBar.SearchButtonPressed/) événement indique que le bouton a été enfoncé.<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) | [![Exemple de SearchBar](views-images/SearchBar.png "SearchBar exemple")](views-images/SearchBar-Large.png#lightbox "SearchBar exemple")<br /> [Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) avec [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) |
 |     |     |
 
-## <a name="views-for-setting-values"></a>Pour définir les valeurs des vues 
+## <a name="views-for-setting-values"></a>Pour définir les valeurs des vues
 
 ### <a name="slider"></a>Curseur
 
@@ -96,7 +96,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 | [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) permet à l’utilisateur de sélectionner un `double` valeur d’une plage de valeurs incrémentielles spécifié avec la [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Minimum/), [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Maximum/), et [ `Increment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) propriétés.<br /><br />[Documentation de l’API](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) | [![Exemple d’exécution pas à pas](views-images/Stepper.png "exemple d’exécution pas à pas")](views-images/Stepper-Large.png#lightbox "exemple d’exécution pas à pas")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
-### <a name="switch"></a>Basculer 
+### <a name="switch"></a>Basculer
 
 |     |     |
 | --- | --- |

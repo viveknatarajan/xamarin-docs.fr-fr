@@ -1,16 +1,18 @@
 ---
 title: Microservices en conteneur
+description: Ce chapitre explique comment utiliser des microservices et des conteneurs pour générer agile, évolutive et les applications cloud modernes fiable.
 ms.prod: xamarin
 ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 461a1310ff430c16e49fa0ed6037a77b1302f769
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33be84bc17f72c8b70d117a0742b001f1f763d3d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242259"
 ---
 # <a name="containerized-microservices"></a>Microservices en conteneur
 
@@ -152,4 +154,4 @@ Un conteneur est un isolé, ressources, portable et contrôlé par environnement
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)

@@ -1,19 +1,20 @@
 ---
-title: Convertisseurs personnalisés
-description: Interfaces utilisateur de Xamarin.Forms sont rendus à l’aide des contrôles natifs de la plateforme cible, qui permet aux applications de Xamarin.Forms conserver l’apparence appropriée pour chaque plateforme. Les convertisseurs personnalisés permettent aux développeurs de substituer ce processus pour personnaliser l’apparence et le comportement des contrôles de Xamarin.Forms sur chaque plateforme.
+title: Convertisseurs personnalisés de Xamarin.Forms
+description: Les convertisseurs personnalisés permettent aux développeurs de substituer le rendu des contrôles natifs sur chaque plateforme, pour personnaliser l’apparence et le comportement des contrôles de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 6a2ee4b09426e6b4ff6dac7e1fd5221fc5b6d750
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a88462052906e68fd85a07161e8b5bb63a61e69d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239888"
 ---
-# <a name="custom-renderers"></a>Convertisseurs personnalisés
+# <a name="xamarinforms-custom-renderers"></a>Convertisseurs personnalisés de Xamarin.Forms
 
 _Interfaces utilisateur de Xamarin.Forms sont rendus à l’aide des contrôles natifs de la plateforme cible, qui permet aux applications de Xamarin.Forms conserver l’apparence appropriée pour chaque plateforme. Les convertisseurs personnalisés permettent aux développeurs de substituer ce processus pour personnaliser l’apparence et le comportement des contrôles de Xamarin.Forms sur chaque plateforme._
 
@@ -55,7 +56,7 @@ Cet article explique comment créer un convertisseur personnalisé pour un `Hybr
 
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[Implémentation d’un lecteur vidéo](video-player/index.md)
 
-Cet article explique comment écrire des convertisseurs pour implémenter un `VideoPlayer` contrôle qui peut lire des vidéos à partir du web, les vidéos incorporées en tant que ressources de l’application ou vidéos stockées dans la bibliothèque de vidéo sur l’appareil de l’utilisateur. Plusieurs techniques sont présentées, y compris la mise en œuvre des méthodes et des propriétés pouvant être liées en lecture seule. 
+Cet article explique comment écrire des convertisseurs pour implémenter un `VideoPlayer` contrôle qui peut lire des vidéos à partir du web, les vidéos incorporées en tant que ressources de l’application ou vidéos stockées dans la bibliothèque de vidéo sur l’appareil de l’utilisateur. Plusieurs techniques sont présentées, y compris la mise en œuvre des méthodes et des propriétés pouvant être liées en lecture seule.
 
 
 ## <a name="related-links"></a>Liens associés

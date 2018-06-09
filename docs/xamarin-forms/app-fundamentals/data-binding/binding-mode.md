@@ -1,19 +1,20 @@
 ---
-title: Mode de liaison
-description: Contrôle le flux d’informations entre source et cible
+title: Mode de liaison de Xamarin.Forms
+description: Cet article explique comment contrôler le flux d’informations entre source et cible à l’aide d’un mode de liaison, qui est spécifié avec un membre de l’énumération BindingMode. Chaque propriété pouvant être liée a un mode de liaison par défaut, ce qui indique le mode en vigueur lorsque cette propriété est une cible de liaison de données.
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/01/2018
-ms.openlocfilehash: 1aa612d8b855158f09bc0aeaad1520a44b3d9637
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 12e6416eee989b0d36a7b9fe0ca4dcd9b18b0ade
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241814"
 ---
-# <a name="binding-mode"></a>Mode de liaison
+# <a name="xamarinforms-binding-mode"></a>Mode de liaison de Xamarin.Forms
 
 Dans le [article précédent](basic-bindings.md), le **Alternative la liaison du Code** et **Alternative à une liaison XAML** pages proposées un `Label` avec son `Scale` propriété lié à la `Value` propriété d’un `Slider`. Car le `Slider` valeur initiale est 0, cela a provoqué la `Scale` propriété de la `Label` soit définie sur 0, plutôt que 1 et le `Label` a disparu.
 
@@ -26,7 +27,7 @@ Dans le [ **DataBindingDemos** ](https://developer.xamarin.com/samples/xamarin-f
              Title="Reverse Binding">
     <StackLayout Padding="10, 0">
 
-        <Label x:Name="label" 
+        <Label x:Name="label"
                Text="TEXT"
                FontSize="80"
                HorizontalOptions="Center"
@@ -52,9 +53,9 @@ La différence entre la **inverser la liaison** exemple et les exemples précéd
 
 ## <a name="the-default-binding-mode"></a>Le Mode de liaison par défaut
 
-Le mode de liaison est spécifié avec un membre de la [ `BindingMode` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) énumération : 
+Le mode de liaison est spécifié avec un membre de la [ `BindingMode` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) énumération :
 
-- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/) 
+- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/)
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; données passent les deux sens entre source et cible
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; données passent à partir de la source à la cible
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; données passent à partir de la cible à la source
@@ -78,11 +79,11 @@ Propriétés pouvant être liées plus ont un mode de liaison par défaut de `On
 - `SelectedItem` propriété de `MultiPage`
 - `SelectedIndex` et `SelectedItem` propriétés de `Picker`
 - `Value` propriété de `Slider` et `Stepper`
-- `IsToggled` propriété de `Switch` 
+- `IsToggled` propriété de `Switch`
 - `On` propriété de `SwitchCell`
 - `Time` propriété de `TimePicker`
 
-Ces propriétés sont définies comme `TwoWay` pour une très bonne raison : 
+Ces propriétés sont définies comme `TwoWay` pour une très bonne raison :
 
 Lorsque des liaisons de données sont utilisés avec l’architecture d’application Model-View-ViewModel (MVVM), la classe ViewModel est la source de liaison de données et la vue, qui se compose des vues telles que `Slider`, sont des cibles de liaison de données. Les liaisons MVVM ressembler à la **inverser la liaison** exemple plus que les liaisons dans les exemples précédents. Il est très probable que vous souhaitez que chaque affichage sur la page pour être initialisé avec la valeur de la propriété correspondante dans le modèle de vues, mais les modifications dans la vue doivent également affecter la propriété ViewModel.
 
@@ -117,7 +118,7 @@ Le `HslColorViewModel` classe définit cinq propriétés : le `Hue`, `Saturatio
 public class HslColorViewModel : INotifyPropertyChanged
 {
     Color color;
-    string name; 
+    string name;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -130,7 +131,7 @@ public class HslColorViewModel : INotifyPropertyChanged
                 Color = Color.FromHsla(value, color.Saturation, color.Luminosity);
             }
         }
-        get 
+        get
         {
             return color.Hue;
         }
@@ -209,7 +210,7 @@ Lorsque le `Color` de propriété est modifiée, la méthode statique `GetNeares
 
 Quand un ViewModel est défini en tant que source de liaison, l’infrastructure de liaison attache un gestionnaire à la `PropertyChanged` événement. De cette façon, la liaison peut être avertie des modifications apportées aux propriétés et peut alors définir les propriétés cibles à partir de valeurs modifiées.
 
-Toutefois, lorsqu’une propriété cible (ou le `Binding` définition sur une propriété cible) a une `BindingMode` de `OneTime`, il n’est pas nécessaire pour l’infrastructure de liaison joindre un gestionnaire dans le `PropertyChanged` événement. La propriété cible est mis à jour uniquement lorsque la `BindingContext` modifications et pas lorsque la propriété de la source est modifié. 
+Toutefois, lorsqu’une propriété cible (ou le `Binding` définition sur une propriété cible) a une `BindingMode` de `OneTime`, il n’est pas nécessaire pour l’infrastructure de liaison joindre un gestionnaire dans le `PropertyChanged` événement. La propriété cible est mis à jour uniquement lorsque la `BindingContext` modifications et pas lorsque la propriété de la source est modifié.
 
 Le **Simple sélecteur de couleurs** fichier XAML instancie le `HslColorViewModel` dans le dictionnaire de ressources de la page et l’initialise le `Color` propriété. Le `BindingContext` propriété de la `Grid` est définie sur une `StaticResource` extension fassent référence à cette ressource de liaison :
 
@@ -221,7 +222,7 @@ Le **Simple sélecteur de couleurs** fichier XAML instancie le `HslColorViewMode
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:HslColorViewModel x:Key="viewModel" 
+            <local:HslColorViewModel x:Key="viewModel"
                                      Color="MediumTurquoise" />
 
             <Style TargetType="Slider">
@@ -229,7 +230,7 @@ Le **Simple sélecteur de couleurs** fichier XAML instancie le `HslColorViewMode
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-        
+
     <Grid BindingContext="{StaticResource viewModel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -246,7 +247,7 @@ Le **Simple sélecteur de couleurs** fichier XAML instancie le `HslColorViewMode
                    HorizontalTextAlignment="Center" />
 
             <Slider Value="{Binding Hue}" />
-    
+
             <Slider Value="{Binding Saturation}" />
 
             <Slider Value="{Binding Luminosity}" />
@@ -257,7 +258,7 @@ Le **Simple sélecteur de couleurs** fichier XAML instancie le `HslColorViewMode
 
 Le `BoxView`, `Label`et trois `Slider` vues héritent du contexte de liaison à partir de la `Grid`. Ces vues sont toutes les cibles de liaison qui font référence les propriétés de la source dans le modèle de vues. Pour le `Color` propriété de la `BoxView`et le `Text` propriété de la `Label`, les liaisons de données sont `OneWay`: les propriétés dans la vue sont définies à partir des propriétés dans le modèle de vues.
 
-Le `Value` propriété de la `Slider`, toutefois, est `TwoWay`. Cela permet à chaque `Slider` à définir le ViewModel, ainsi que pour le ViewModel à définir à partir de chaque `Slider`. 
+Le `Value` propriété de la `Slider`, toutefois, est `TwoWay`. Cela permet à chaque `Slider` à définir le ViewModel, ainsi que pour le ViewModel à définir à partir de chaque `Slider`.
 
 Lors de l’exécution du programme tout d’abord, le `BoxView`, `Label`et trois `Slider` éléments sont définis à partir de ViewModel en fonction de la première `Color` propriété est définie lorsque ce dernier a été instancié. Ceci est illustré dans la capture d’écran d’iOS situé à gauche :
 
@@ -272,7 +273,7 @@ L’instanciation ViewModel dans le dictionnaire de ressources est une approche 
     <Grid.BindingContext>
         <local:HslColorViewModel Color="MediumTurquoise" />
     </Grid.BindingContext>
-        
+
     ···
 
 </Grid>
@@ -408,9 +409,9 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 }
 ```
 
-Chaque paramètre d’application est une propriété qui est enregistrée dans le dictionnaire de propriétés Xamarin.Forms dans une méthode nommée `SaveState` et chargées à partir de ce dictionnaire dans le constructeur. Au bas de la classe sont deux méthodes qui permettent de rationaliser ViewModel et de les rendre moins sujet aux erreurs. Le `OnPropertyChanged` méthode en bas possède un paramètre optionnel qui est défini à la propriété d’appel. Cela évite les fautes d’orthographe lorsque vous spécifiez le nom de la propriété sous forme de chaîne. 
+Chaque paramètre d’application est une propriété qui est enregistrée dans le dictionnaire de propriétés Xamarin.Forms dans une méthode nommée `SaveState` et chargées à partir de ce dictionnaire dans le constructeur. Au bas de la classe sont deux méthodes qui permettent de rationaliser ViewModel et de les rendre moins sujet aux erreurs. Le `OnPropertyChanged` méthode en bas possède un paramètre optionnel qui est défini à la propriété d’appel. Cela évite les fautes d’orthographe lorsque vous spécifiez le nom de la propriété sous forme de chaîne.
 
-Le `SetProperty` méthode dans la classe est encore plus : il compare la valeur est définie avec la valeur stockée en tant que champ à la propriété et appelle uniquement `OnPropertyChanged` lorsque les deux valeurs ne sont pas égales. 
+Le `SetProperty` méthode dans la classe est encore plus : il compare la valeur est définie avec la valeur stockée en tant que champ à la propriété et appelle uniquement `OnPropertyChanged` lorsque les deux valeurs ne sont pas égales.
 
 Le `SampleSettingsViewModel` classe définit deux propriétés pour la couleur d’arrière-plan : le `BackgroundNamedColor` propriété est de type `NamedColor`, qui est une classe également incluse dans le **DataBindingDemos** solution. Le `BackgroundColor` propriété est de type `Color`et sont obtenues à partir de la `Color` propriété de la `NamedColor` objet.
 
@@ -649,7 +650,7 @@ Le `SelectedItem` propriété de la `ListView` est de type `NamedColor`et est li
 SelectedItem="{Binding BackgroundNamedColor, Mode=TwoWay}"
 ```
 
-Le mode de liaison par défaut pour `SelectedItem` est `OneWayToSource`, qui définit la propriété ViewModel à partir de l’élément sélectionné. Le `TwoWay` mode permet le `SelectedItem` pour être initialisées à partir de ce dernier. 
+Le mode de liaison par défaut pour `SelectedItem` est `OneWayToSource`, qui définit la propriété ViewModel à partir de l’élément sélectionné. Le `TwoWay` mode permet le `SelectedItem` pour être initialisées à partir de ce dernier.
 
 Toutefois, lorsque le `SelectedItem` a la valeur de cette façon, le `ListView` ne défile pas automatiquement pour afficher l’élément sélectionné. Un peu de code dans le fichier code-behind est nécessaire :
 
@@ -662,13 +663,13 @@ public partial class SampleSettingsPage : ContentPage
 
         if (colorListView.SelectedItem != null)
         {
-            colorListView.ScrollTo(colorListView.SelectedItem, 
-                                   ScrollToPosition.MakeVisible, 
+            colorListView.ScrollTo(colorListView.SelectedItem,
+                                   ScrollToPosition.MakeVisible,
                                    false);
         }
     }
 }
-``` 
+```
 
 La capture d’écran d’iOS situé à gauche montre le programme lors de son exécution. Le constructeur de `SampleSettingsViewModel` initialise la couleur d’arrière-plan blanc, et c’est ce qui est sélectionné dans le `ListView`:
 

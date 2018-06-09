@@ -1,17 +1,18 @@
 ---
 title: Prise en main de pages de données
+description: Cet article explique comment commencer à créer une page simple piloté par les données à l’aide des pages de données de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d5e73839f889234c816bfff08f3e46dade8dffc9
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 1fb8a06111271d453c578cd3d2db97ec8689c995
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846839"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243075"
 ---
 # <a name="getting-started-with-datapages"></a>Prise en main de pages de données
 
@@ -21,7 +22,7 @@ ms.locfileid: "34846839"
 > Pages de données requiert un [Xamarin.Forms thème](~/xamarin-forms/user-interface/themes/index.md) référence à restituer.
 
 
-Pour commencer la création d’une page de lecteur de données simple à l’aide de l’aperçu de pages de données, suivez les étapes ci-dessous. Ce utilise démonstration un style codé en dur (« événements ») dans l’aperçu de builds qui fonctionne uniquement avec le format JSON spécifique dans le code.
+Pour commencer la création d’une page simple piloté par les données à l’aide de l’aperçu de pages de données, suivez les étapes ci-dessous. Ce utilise démonstration un style codé en dur (« événements ») dans l’aperçu de builds qui fonctionne uniquement avec le format JSON spécifique dans le code.
 
 [![](get-started-images/demo-sml.png "Exemple de pages de données d’Application")](get-started-images/demo.png#lightbox "exemple des pages de données d’Application")
 

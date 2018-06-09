@@ -1,5 +1,5 @@
 ---
-title: Page à onglets
+title: Page à onglets de Xamarin.Forms
 description: Le Xamarin.Forms TabbedPage se compose d’une liste des onglets et une plus grande zone de détails, avec chaque onglet du chargement du contenu dans la zone de détails. Cet article explique comment utiliser un TabbedPage pour naviguer dans une collection de pages.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 7af9248e706e615ea3e693a58a5f7664e8dc4daa
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b7e3eb8539704fccd713af45490c35a6196b072f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847810"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240377"
 ---
-# <a name="tabbed-page"></a>Page à onglets
+# <a name="xamarinforms-tabbed-page"></a>Page à onglets de Xamarin.Forms
 
 _Le Xamarin.Forms TabbedPage se compose d’une liste des onglets et une plus grande zone de détails, avec chaque onglet du chargement du contenu dans la zone de détails. Cet article explique comment utiliser un TabbedPage pour naviguer dans une collection de pages._
 

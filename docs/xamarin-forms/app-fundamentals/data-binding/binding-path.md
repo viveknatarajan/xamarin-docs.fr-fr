@@ -1,19 +1,20 @@
 ---
-title: Chemin de liaison
-description: Utiliser des liaisons de données pour les membres de collection et les sous-propriétés de l’accès
+title: Chemin de liaison de Xamarin.Forms
+description: Cet article explique comment utiliser des liaisons de données Xamarin.Forms pour accéder aux sous-propriétés et les membres de la collection avec la propriété de chemin d’accès de la classe de liaison.
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: f75cfcf4bfd5ffa71699f62b30145b732421d964
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d7c3b1ba991380451b4a82c389c4d46e950bc914
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240471"
 ---
-# <a name="binding-path"></a>Chemin de liaison
+# <a name="xamarinforms-binding-path"></a>Chemin de liaison de Xamarin.Forms
 
 Dans tous les exemples liaison de données précédentes, la [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) propriété de la `Binding` classe (ou le [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) propriété de la `Binding` extension de balisage) a été défini pour une seule propriété. Il est en fait possible de définir `Path` à un *sous-propriété* (une propriété d’une propriété) ou à un membre d’une collection.
 
@@ -29,7 +30,7 @@ Le `Time` propriété du `TimePicker` est de type `TimeSpan`, mais vous pouvez c
 {Binding Source={x:Reference timePicker},
          Path=Time.TotalSeconds}
 ```
-         
+
 Le `Time` propriété est de type `TimeSpan`, qui a un `TotalSeconds` propriété. Le `Time` et `TotalSeconds` propriétés sont simplement reliées par un point. Les éléments dans le `Path` chaîne font toujours référence aux propriétés et pas pour les types de ces propriétés.
 
 Exemple et plusieurs autres figurent dans le **Variations de chemin d’accès** page :
@@ -50,7 +51,7 @@ Exemple et plusieurs autres figurent dans le **Variations de chemin d’accès**
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Margin="10, 0">
         <TimePicker x:Name="timePicker" />
 
@@ -61,7 +62,7 @@ Exemple et plusieurs autres figurent dans le **Variations de chemin d’accès**
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children.Count,
                               StringFormat='There are {0} children in this StackLayout'}" />
-        
+
         <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
                               Path=DateTimeFormat.DayNames[3],
                               StringFormat='The middle day of the week is {0}'}" />
@@ -156,7 +157,7 @@ Qui affiche le type de la source de liaison, ou `DataBindingDemos.PathVariations
 
 Le type de la `Content` propriété est désormais révélée à être `Xamarin.Forms.StackLayout`. Ajouter le `Children` propriété le `Path` et le type est `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, qui est une classe interne à Xamarin.Forms, mais évidemment d’un type de collection. Ajouter un index à qui et le type est `Xamarin.Forms.Label`. La suite de cette façon.
 
-Xamarin.Forms traite le chemin de liaison, il installe un `PropertyChanged` gestionnaire sur n’importe quel objet dans le chemin d’accès qui implémente le `INotifyPropertyChanged` interface. Par exemple, la liaison finale réagit à une modification de la première `Label` , car le `Text` de propriété est modifiée. 
+Xamarin.Forms traite le chemin de liaison, il installe un `PropertyChanged` gestionnaire sur n’importe quel objet dans le chemin d’accès qui implémente le `INotifyPropertyChanged` interface. Par exemple, la liaison finale réagit à une modification de la première `Label` , car le `Text` de propriété est modifiée.
 
 Si une propriété dans le chemin de liaison n’implémente pas `INotifyPropertyChanged`, toute modification apportée à cette propriété sera ignorée. Certaines modifications rendrait entièrement le chemin de liaison, vous devez utiliser cette technique uniquement lorsque la chaîne de propriétés et les sous-propriétés jamais deviennent non valides.
 

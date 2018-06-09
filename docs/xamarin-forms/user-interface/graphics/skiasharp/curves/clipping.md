@@ -1,17 +1,18 @@
 ---
 title: Découpage avec des chemins d’accès et les régions
-description: Utilisez les chemins d’accès à des images à des zones spécifiques et pour créer des zones
+description: Cet article explique comment utiliser des chemins d’accès de SkiaSharp aux images à des zones spécifiques et pour créer des zones et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: 051ceec148a569d00048a661e6ba8dc3ce96fc81
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 0d246dc4a5304b56560deb1095149e52c1f82335
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243887"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Découpage avec des chemins d’accès et les régions
 
@@ -515,4 +516,4 @@ Il ne ressemble pas vraiment à un trèfle de feuille – quatre, mais il s’ag
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

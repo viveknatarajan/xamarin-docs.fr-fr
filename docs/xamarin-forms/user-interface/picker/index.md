@@ -1,20 +1,20 @@
 ---
-title: Sélecteur
-description: L’affichage du sélecteur est un contrôle pour la sélection d’un élément de texte dans une liste de données.
+title: Sélecteur de Xamarin.Forms
+description: Le sélecteur de Xamarin.Forms affiche une liste courte d’éléments, à partir de laquelle l’utilisateur peut sélectionner un élément. Cet article explique comment utiliser la classe de sélecteur pour sélectionner un élément de texte dans une liste de données.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 7f0050351ca28d7f8afeb82a85e82e51d399824b
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 82ae36a7be139e2a93d0e5c43c4bad355c49f217
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847496"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245037"
 ---
-# <a name="picker"></a>Sélecteur
+# <a name="xamarinforms-picker"></a>Sélecteur de Xamarin.Forms
 
 _L’affichage du sélecteur est un contrôle pour la sélection d’un élément de texte dans une liste de données._
 

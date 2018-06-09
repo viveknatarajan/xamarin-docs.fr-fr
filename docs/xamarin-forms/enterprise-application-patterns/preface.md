@@ -1,18 +1,20 @@
 ---
-title: Préface
+title: Introduction au développement d’applications Enterprise
+description: Ce chapitre fournit une préface aux modèles d’Application d’entreprise à l’aide de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: e9dd5f663fc98ac1e869721517e9a3d0fb2033bb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242366"
 ---
-# <a name="preface"></a>Préface
+# <a name="preface-to-enterprise-app-development"></a>Introduction au développement d’applications Enterprise
 
 Ce livre électronique fournit des conseils sur la création d’applications inter-plateformes enterprise à l’aide de Xamarin.Forms. Xamarin.Forms est un kit de ressources de l’interface utilisateur multiplateforme qui permet aux développeurs de créer facilement des dispositions d’interface qui peuvent être partagées entre les plateformes, notamment iOS, Android et la plateforme Windows universelle (UWP) utilisateur natives. Il fournit une solution complète pour Business à employé (B2E), interentreprises (B2B) et d’entreprise pour les applications consommateur (B2C), en offrant la possibilité de partager du code sur toutes les plateformes cibles et de contribuer à réduire le coût total de possession (TCO).
 
@@ -42,4 +44,4 @@ N’hésitez pas à transférer de ce guide pour les membres de l’équipe pour
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)

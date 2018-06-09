@@ -1,16 +1,18 @@
 ---
 title: Communication entre faiblement couplés de composants
+description: 'Ce chapitre explique comment l’application mobile eShopOnContainers implémente la publication-modèle, autorisant basée sur message la communication entre les composants qui n’est pas pratique lier par objet et références de type abonnement '
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 01669573f215c5a13bb918c9f9ba80aa5ca528c9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 797032d17babe986de1357c6ac3291a4960d87ff
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245079"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Communication entre faiblement couplés de composants
 
@@ -126,4 +128,4 @@ Le Xamarin.Forms [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xa
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)

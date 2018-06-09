@@ -1,19 +1,20 @@
 ---
-title: Dessin d’un cercle Simple
-description: Apprenez les principes fondamentaux de dessin SkiaSharp, y compris le canevas et peinture
+title: Dessin d’un cercle Simple dans SkiaSharp
+description: Cet article explique les principes fondamentaux de dessin SkiaSharp, y compris le canevas et paint, dans les applications de Xamarin.Forms et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9e5b18bd6a565639e2ca22f4637a67c4f48717f6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 68085894e0e4783a3a16428d331b6993ab967c5a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243582"
 ---
-# <a name="drawing-a-simple-circle"></a>Dessin d’un cercle Simple
+# <a name="drawing-a-simple-circle-in-skiasharp"></a>Dessin d’un cercle Simple dans SkiaSharp
 
 _Apprenez les principes fondamentaux de dessin SkiaSharp, y compris le canevas et peinture_
 
@@ -153,4 +154,4 @@ L’exemple suivant dans le [intégrant Xamarin.Forms](~/xamarin-forms/user-inte
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

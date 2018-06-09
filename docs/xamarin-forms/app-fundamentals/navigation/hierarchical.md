@@ -1,18 +1,18 @@
 ---
 title: Navigation hiérarchique
-description: La classe NavigationPage fournit une expérience de navigation hiérarchique où l’utilisateur est en mesure de parcourir les pages, vers l’avant et vers l’arrière, comme vous le souhaitez. La classe implémente la navigation en tant que dernier entré, premier sorti (LIFO) pile d’objets de la Page. Cet article explique comment utiliser la classe NavigationPage pour effectuer la navigation dans une pile de pages.
+description: Cet article explique comment utiliser la classe NavigationPage pour effectuer la navigation dans une pile de dernier entré, premier sorti (LIFO) pages.
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 49be5b812c5ef66907e7ebf74906c25bfbb076b6
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 20dfb6e935d08c35da73a81fb401a613aa6c9bac
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847161"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242454"
 ---
 # <a name="hierarchical-navigation"></a>Navigation hiérarchique
 
@@ -48,7 +48,7 @@ La disposition d’un [ `NavigationPage` ](https://developer.xamarin.com/api/typ
 
 - Sur iOS, une barre de navigation est présente en haut de la page qui affiche un titre, et qui a un *précédent* bouton qui renvoie à la page précédente.
 - Sur Android, une barre de navigation est présente en haut de la page qui affiche un titre, une icône et un *précédent* bouton qui renvoie à la page précédente. L’icône est défini dans le `[Activity]` attribut décore la `MainActivity` classe dans le projet spécifique à la plateforme Android.
-- Sur la plateforme Windows universelle, une barre de navigation est présente en haut de la page qui affiche un titre. 
+- Sur la plateforme Windows universelle, une barre de navigation est présente en haut de la page qui affiche un titre.
 
 Sur les plateformes, la valeur de la [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) propriété s’affiche sous le titre de la page.
 

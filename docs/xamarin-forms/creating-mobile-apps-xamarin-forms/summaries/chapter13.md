@@ -1,16 +1,18 @@
 ---
 title: Résumé du chapitre 13. Bitmaps
+description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 13. Bitmaps'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 76551057abc1abdd150591c0a1be39e9f68c4278
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d95e801f6a239e894c1f6baa68015659af9eba35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241553"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Résumé du chapitre 13. Bitmaps
 
@@ -156,7 +158,7 @@ Les projets Windows Runtime prend en charge une image bitmap d’affectation de 
 
 - MyImage.scale-200.jpg à 320 pixels carrés
 
-Seuls certains pourcentages sont valides. Les exemples de programmes de ce livre d’incluent uniquement les images avec **200 à l’échelle** suffixes, mais les modèles de solution Xamarin.Forms actuels incluent **échelle-100**, **125 à l’échelle**, **échelle-150**, et **400 à l’échelle**. 
+Seuls certains pourcentages sont valides. Les exemples de programmes de ce livre d’incluent uniquement les images avec **200 à l’échelle** suffixes, mais les modèles de solution Xamarin.Forms actuels incluent **échelle-100**, **125 à l’échelle**, **échelle-150**, et **400 à l’échelle**.
 
 Lors de l’ajout de bitmaps pour les projets de plateforme, le **Action de génération** doit être :
 

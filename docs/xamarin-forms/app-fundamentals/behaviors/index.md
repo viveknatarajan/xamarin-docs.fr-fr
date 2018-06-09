@@ -1,5 +1,5 @@
 ---
-title: comportements
+title: Comportements de Xamarin.Forms
 description: Les comportements vous permet d’ajouter des fonctionnalités aux contrôles d’interface utilisateur sans devoir sous-classe les. Comportements sont écrites dans le code et ajoutés aux contrôles en XAML ou de code.
 ms.prod: xamarin
 ms.assetid: 42E32AD7-8E3B-48B3-B402-E75B758DA913
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: e5eef459c340764d9d373b42ac594f78c042a4de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: edb8929a4e5ffcff74714f65154cd78795bb9568
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239808"
 ---
-# <a name="behaviors"></a>comportements
+# <a name="xamarinforms-behaviors"></a>Comportements de Xamarin.Forms
 
 _Les comportements vous permet d’ajouter des fonctionnalités aux contrôles d’interface utilisateur sans devoir sous-classe les. Comportements sont écrites dans le code et ajoutés aux contrôles en XAML ou de code._
 
@@ -32,4 +33,3 @@ Xamarin.Forms comportements sont créées en dérivant de la [ `Behavior` ](http
 ## <a name="reusable-behaviorsreusableindexmd"></a>[Comportements réutilisables](reusable/index.md)
 
 Les comportements sont réutilisables entre plusieurs applications. Ces articles expliquent comment créer des comportements utiles pour exécuter les fonctionnalités couramment utilisées.
-

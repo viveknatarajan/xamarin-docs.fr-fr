@@ -1,18 +1,18 @@
 ---
 title: Implémentation d’un HybridWebView
-description: Xamarin.Forms les contrôles d’interface utilisateur personnalisé doivent dériver de la classe de vue, qui est utilisée pour placer des mises en page et des contrôles sur l’écran. Cet article explique comment créer un convertisseur personnalisé pour un contrôle personnalisé HybridWebView, qui montre comment améliorer les contrôles spécifiques à une plateforme web pour autoriser le code c# pour être appelée à partir de JavaScript.
+description: Cet article explique comment créer un convertisseur personnalisé pour un contrôle personnalisé HybridWebView, qui montre comment améliorer les contrôles spécifiques à une plateforme web pour autoriser le code c# pour être appelée à partir de JavaScript.
 ms.prod: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 3926fd5c19ad187deef16c4beb0812b3947e9544
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d2cce7598fde4cf59a91940161e605860847623e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847239"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241297"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implémentation d’un HybridWebView
 

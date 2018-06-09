@@ -1,20 +1,20 @@
 ---
-title: Animations personnalisées
-description: La classe de l’Animation est le bloc de construction de toutes les animations de Xamarin.Forms, avec les méthodes d’extension dans la classe ViewExtensions création d’un ou plusieurs objets d’Animation. Cet article montre comment utiliser la classe de l’Animation pour créer et d’annuler des animations, de synchroniser plusieurs animations et créer des animations personnalisées animer des propriétés qui ne sont pas animées par les méthodes d’animation existante.
+title: Animations personnalisées de Xamarin.Forms
+description: Cet article montre comment utiliser la classe d’Animation de Xamarin.FOrms pour créer et d’annuler des animations, de synchroniser plusieurs animations et créer des animations personnalisées animer des propriétés qui ne sont pas animées par les méthodes d’animation existante.
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 238268a3ad2b82494f1d096d0cbeba97edb90366
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 74430f6c158e74569f1b2cbfa0b6a85e8d40fbcf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847782"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242974"
 ---
-# <a name="custom-animations"></a>Animations personnalisées
+# <a name="custom-animations-in-xamarinforms"></a>Animations personnalisées de Xamarin.Forms
 
 _La classe de l’Animation est le bloc de construction de toutes les animations de Xamarin.Forms, avec les méthodes d’extension dans la classe ViewExtensions création d’un ou plusieurs objets d’Animation. Cet article montre comment utiliser la classe de l’Animation pour créer et d’annuler des animations, de synchroniser plusieurs animations et créer des animations personnalisées animer des propriétés qui ne sont pas animées par les méthodes d’animation existante._
 

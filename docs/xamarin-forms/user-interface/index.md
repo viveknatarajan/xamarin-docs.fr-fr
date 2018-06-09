@@ -1,20 +1,20 @@
 ---
-title: Interface utilisateur
-description: Comment utiliser les vues fournies par Xamarin.Forms
+title: Vues de l’Interface utilisateur de Xamarin.Forms
+description: Cet article présente les contrôles et les concepts qui peuvent être utilisés lors de la création d’une interface utilisateur dans une application de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 84106cf8f699616fae772a6f149681840abca0e5
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 55c461a7dee26462e0b9daebeb10e47afa4e5f6f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733046"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244368"
 ---
-# <a name="user-interface"></a>Interface utilisateur
+# <a name="xamarinforms-user-interface-views"></a>Vues de l’Interface utilisateur de Xamarin.Forms
 
 _Comment utiliser les vues fournies par Xamarin.Forms_
 

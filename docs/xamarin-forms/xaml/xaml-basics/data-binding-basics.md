@@ -1,18 +1,18 @@
 ---
 title: Partie 4. Principes fondamentaux de liaison de données
-description: Liaisons de données permettent de deux objets à lier afin qu’une modification dans une provoque une modification dans l’autre. Il s’agit d’un outil très utile, et pendant que les liaisons de données peuvent être définies entièrement dans le code, XAML fournit des raccourcis et convivialité. Par conséquent, une des extensions de balisage plus importantes dans Xamarin.Forms est obligatoire.
+description: Liaisons de données permettent de deux objets à lier afin qu’une modification dans une provoque une modification dans l’autre.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 117ddd033faedda871c33ba10c246739309e2e86
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733033"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245948"
 ---
 # <a name="part-4-data-binding-basics"></a>Partie 4. Principes fondamentaux de liaison de données
 
@@ -86,7 +86,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 Les propriétés peuvent être sur une seule ligne ou divisées en plusieurs lignes :
 
 ```csharp
-Text="{Binding Value, 
+Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -102,13 +102,13 @@ Voici le programme en cours d’exécution :
 
 [![](data-binding-basics-images/sliderbinding.png "Pour consulter les liaisons")](data-binding-basics-images/sliderbinding-large.png#lightbox "pour consulter les liaisons ")
 
-## <a name="the-binding-mode"></a>Le Mode de liaison 
+## <a name="the-binding-mode"></a>Le Mode de liaison
 
 Une vue unique peut avoir des liaisons de données sur plusieurs de ses propriétés. Toutefois, chaque vue peut avoir qu’un seul `BindingContext`, de sorte que plusieurs liaisons de données sur cette vue doivent toutes référencer des propriétés du même objet.
 
 La solution à ces informations et autres problèmes implique le `Mode` propriété, qui est définie à un membre de la `BindingMode` énumération :
 
-- `Default` 
+- `Default`
 - `OneWay` — les valeurs sont transférées de la source à la cible
 - `OneWayToSource` — les valeurs sont transférés de la cible à la source
 - `TwoWay` — les valeurs sont transférés les deux sens entre source et cible
@@ -324,7 +324,7 @@ Beaucoup mieux. Maintenant, tout ce dont a besoin consiste à améliorer le mod�
 </ContentPage>
 ```
 
-Notez l’utilisation de `OnPlatform` pour définir la taille d’un `BoxView` et la hauteur de la `ListView` lignes. Bien que les valeurs pour les trois plateformes sont identiques, le balisage peut facilement être adapté pour d’autres valeurs ajuster l’affichage. 
+Notez l’utilisation de `OnPlatform` pour définir la taille d’un `BoxView` et la hauteur de la `ListView` lignes. Bien que les valeurs pour les trois plateformes sont identiques, le balisage peut facilement être adapté pour d’autres valeurs ajuster l’affichage.
 
 ## <a name="binding-value-converters"></a>Convertisseurs de valeurs de liaison
 
@@ -366,7 +366,7 @@ namespace XamlSamples
 }
 ```
 
-Le `ConvertBack` méthode pas ne joue un rôle dans ce programme, car les liaisons sont uniquement un moyens à partir de la source à la cible. 
+Le `ConvertBack` méthode pas ne joue un rôle dans ce programme, car les liaisons sont uniquement un moyens à partir de la source à la cible.
 
 Une liaison fait référence à un convertisseur de liaison avec le `Converter` propriété. Un convertisseur de liaison peut également accepter un paramètre spécifié avec le `ConverterParameter` propriété. Pour des raisons de souplesse, voici comment le multiplicateur est spécifié. Le convertisseur de liaison vérifie le paramètre de convertisseur pour valide `double` valeur.
 

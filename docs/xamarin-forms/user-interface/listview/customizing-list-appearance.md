@@ -1,20 +1,20 @@
 ---
-title: Apparence de la liste
-description: Personnaliser les ListViews à l’aide d’en-têtes, les pieds de page, les groupes et les cellules de hauteur variable.
+title: Personnaliser l’apparence de ListView
+description: Cet article explique comment personnaliser les ListViews dans les applications de Xamarin.Forms à l’aide des en-têtes, des pieds de page, des groupes et des cellules de hauteur variable.
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b460e25aa5b97953069caa5456003b6cab2c8a8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: febf712848b81c09a4e25c824acc097e8b65e409
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848384"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245138"
 ---
-# <a name="list-appearance"></a>Apparence de la liste
+# <a name="customizing-listview-appearance"></a>Personnaliser l’apparence de ListView
 
 `ListView` a des options pour contrôler la présentation de la liste globale, en plus de sous-jacent `ViewCell`s. Les options sont les suivantes :
 

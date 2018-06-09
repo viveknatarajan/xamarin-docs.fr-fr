@@ -1,17 +1,18 @@
 ---
 title: Propriétés pouvant être liées
-description: Dans Xamarin.Forms, les fonctionnalités des common language runtime (CLR) sont étendue par les propriétés pouvant être liées. Une propriété est un type spécial de propriété, où la valeur de propriété est suivie par le système de propriétés de Xamarin.Forms. Cet article présente les propriétés pouvant être liées et montre comment créer et les utiliser.
+description: Cet article présente les propriétés pouvant être liées et montre comment créer et les utiliser.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: 7e1d3c82036ef703014ae548a6719937e89d22f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5e39e8eb3d7ffb3ed33ea2a585d8d367302e9baa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245974"
 ---
 # <a name="bindable-properties"></a>Propriétés pouvant être liées
 

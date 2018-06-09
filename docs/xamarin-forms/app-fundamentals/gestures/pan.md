@@ -1,18 +1,18 @@
 ---
 title: Ajout d’un module de reconnaissance de mouvement panoramique
-description: Le mouvement panoramique est utilisé pour détecter les faisant glisser et est implémenté avec la classe PanGestureRecognizer. Un scénario courant pour le mouvement panoramique est horizontalement et verticalement, faites glisser une image, afin que tout le contenu de l’image peuvent être affichés lorsqu’il est affiché dans une fenêtre d’affichage plus petite que les dimensions de l’image. Cela s’effectue en déplaçant l’image dans la fenêtre d’affichage et est illustré dans cet article.
+description: Cet article explique comment utiliser un mouvement panoramique pour horizontalement et verticalement faites glisser une image, afin que tout le contenu de l’image peuvent être affichés lorsqu’il est affiché dans une fenêtre d’affichage plus petite que les dimensions de l’image.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 1f564fe14be0bcda08722bad11c9c5bd8152687a
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d3e4dfc57678ff75fb8f9761360748d94aeefcc2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846329"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239982"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Ajout d’un module de reconnaissance de mouvement panoramique
 

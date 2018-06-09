@@ -1,19 +1,20 @@
 ---
-title: Notions de base des applications
-description: Exploration des notions de base du développement de Xamarin.Forms
+title: Notions de base Xamarin.Forms Application
+description: Exploration des notions de base du développement d’applications Xamarin.Forms, y compris tous les concepts de base requis par le biais pour apporter des touches finales telles que l’accessibilité et la localisation.
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 2bd050e6eba33b543c52a80bb42b184200164c14
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: f843f4b1c20daba2a504bd0e70ae51f4d0405c06
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240244"
 ---
-# <a name="application-fundamentals"></a>Notions de base des applications
+# <a name="xamarinforms-application-fundamentals"></a>Notions de base Xamarin.Forms Application
 
 ## <a name="accessibilityaccessibilityindexmd"></a>[Accessibilité](accessibility/index.md)
 

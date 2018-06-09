@@ -1,20 +1,20 @@
 ---
-title: Fonctionnalités de la plateforme
-description: Tirer parti des fonctionnalités spécifiques à une plateforme avec Xamarin.Forms
+title: Fonctionnalités de la plateforme de Xamarin.Forms
+description: Ce guide explique comment tirer parti des fonctionnalités spécifiques à la plateforme dans les applications de Xamarin.Forms à l’aide de diverses techniques.
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2018
-ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 2e8eb19411799e7723be338e9e3f6df35058eb8c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847629"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242798"
 ---
-# <a name="platform-features"></a>Fonctionnalités de la plateforme
+# <a name="xamarinforms-platform-features"></a>Fonctionnalités de la plateforme de Xamarin.Forms
 
 Xamarin.Forms est extensible et vous permet d’incorporer des fonctionnalités spécifiques à une plateforme à l’aide de [effets](~/xamarin-forms/app-fundamentals/effects/index.md), [convertisseurs personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), le [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md), le [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md)et bien plus encore.
 

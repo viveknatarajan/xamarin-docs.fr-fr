@@ -1,28 +1,22 @@
 ---
 title: Orientation du périphérique
-description: Comprendre la disposition des applications qui sont superbes dans orientations portrait et paysage.
+description: Cet article explique comment les applications de Xamarin.Forms mise en page qui sont superbes dans orientations portrait et paysage.
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 95049e2d44b369bfa879226e17d2bad20b7b5408
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 9245a17423d97887d2032856b10427685b25c29b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848133"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244349"
 ---
 # <a name="device-orientation"></a>Orientation du périphérique
 
 Il est important de considérer l’utilisation de votre application et comment l’orientation paysage peut être incorporée pour améliorer l’expérience utilisateur. Dispositions individuelles peuvent être conçues pour prendre en charge plusieurs orientations et mieux utiliser l’espace disponible. Au niveau de l’application, rotation peut être désactivée ou activée.
-
-Cet article vous guide dans la création d’applications qui tirent parti des fonctionnalités de l’orientation de périphérique et comporte les sections suivantes :
-
-- **[Contrôle de l’Orientation](#Controlling_Orientation)**  &ndash; comprendre comment contrôler l’orientation au niveau de l’application sur chaque plateforme.
-- **[Réagir aux modifications de l’Orientation](#Reacting_to_Changes_in_Orientation)**  &ndash; apprendre à recevoir les notifications d’et réagir à, les modifications apportées dans l’orientation.
-- **[Présentation interactive](#Responsive_Layout)**  &ndash; apprendre à créer des dispositions qui fonctionnent automatiquement sur les orientations paysage et portrait.
 
 <a name="Controlling_Orientation" />
 

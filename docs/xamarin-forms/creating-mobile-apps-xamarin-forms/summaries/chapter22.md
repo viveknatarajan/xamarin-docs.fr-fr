@@ -1,16 +1,18 @@
 ---
 title: Résumé du chapitre 22. Animation
+description: 'Création d’applications mobiles avec Xamarin.Forms : résumé chapitre 22. Animation'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: d18b563c0fc47db8c6d7f8cebb3ec85989064d20
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b25fed9a86b82e56cb3b2bf5e3276c8ff63f4e35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241967"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Résumé du chapitre 22. Animation
 

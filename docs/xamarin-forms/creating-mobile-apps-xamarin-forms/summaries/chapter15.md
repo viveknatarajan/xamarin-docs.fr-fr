@@ -1,16 +1,18 @@
 ---
 title: Résumé du chapitre 15. L’interface interactive
+description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 15. L’interface interactive'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c5b2bc00c4337969322193966f26ce0e151f426e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aac49c9e74dd22642396ea8daf5ee3abd85de7bf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241895"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Résumé du chapitre 15. L’interface interactive
 
@@ -25,7 +27,7 @@ Xamarin.Forms contient 20 instanciables classes dérivées de `View` mais pas `L
 - `Button`: [ **Chapitre 6. Clics de bouton**](chapter06.md)
 - `Image`: [ **Chapitre 13. Bitmaps**](chapter13.md)
 - `ActivityIndicator`: [ **Chapitre 13. Bitmaps**](chapter13.md)
-- `ProgressBar`: [ **Chapitre 14. AbsoluteLayout**](chapter14.md)
+- `ProgressBar`: [ **Chapitre 14. DispositionAbsolue**](chapter14.md)
 
 Les vues de huit dans ce chapitre efficacement permettent à l’utilisateur d’interagir avec les types de données de base .NET :
 

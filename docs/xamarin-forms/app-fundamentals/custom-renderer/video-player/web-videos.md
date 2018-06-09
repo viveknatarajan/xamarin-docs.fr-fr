@@ -1,17 +1,18 @@
 ---
 title: Lecture d’une vidéo du Web
+description: Cet article explique comment lire des vidéos web dans une application de lecteur vidéo à l’aide de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 1d00861a9b6d7066212189aa4a59e786cb545f12
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f9b52398efbd189153ca74ce80433863b25bd578
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846745"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240975"
 ---
 # <a name="playing-a-web-video"></a>Lecture d’une vidéo du Web
 
@@ -36,7 +37,7 @@ namespace FormsVideoLibrary
             set { SetValue(SourceProperty, value); }
             get { return (VideoSource)GetValue(SourceProperty); }
         }
-        
+
         // AutoPlay property
         public static readonly BindableProperty AutoPlayProperty =
             BindableProperty.Create(nameof(AutoPlay), typeof(bool), typeof(VideoPlayer), true);
@@ -169,7 +170,7 @@ namespace FormsVideoLibrary
             if (!String.IsNullOrWhiteSpace(value))
             {
                 Uri uri;
-                return Uri.TryCreate(value, UriKind.Absolute, out uri) && uri.Scheme != "file" ? 
+                return Uri.TryCreate(value, UriKind.Absolute, out uri) && uri.Scheme != "file" ?
                                 VideoSource.FromUri(value) : VideoSource.FromResource(value);
             }
 
@@ -482,7 +483,7 @@ De même, vous pouvez supprimer l’affichage des contrôles de transport en dé
                    AreTransportControlsEnabled="False" />
 ```
 
-Si vous définissez les deux propriétés `false`, la vidéo ne sont pas commencer la lecture, puis il n’y a aucun moyen de le démarrer ! Vous devez appeler `Play` à partir du fichier code-behind, ou pour créer vos propres contrôles de transport, comme décrit dans l’article [implémentation de contrôles personnalisés de vidéo Transport](custom-transport.md). 
+Si vous définissez les deux propriétés `false`, la vidéo ne sont pas commencer la lecture, puis il n’y a aucun moyen de le démarrer ! Vous devez appeler `Play` à partir du fichier code-behind, ou pour créer vos propres contrôles de transport, comme décrit dans l’article [implémentation de contrôles personnalisés de vidéo Transport](custom-transport.md).
 
 Le **App.xaml** fichier inclut des ressources pour les deux autres vidéos :
 
@@ -502,7 +503,7 @@ Le **App.xaml** fichier inclut des ressources pour les deux autres vidéos :
 
             <video:UriVideoSource x:Key="Sintel"
                                   Uri="https://archive.org/download/Sintel/sintel-2048-stereo_512kb.mp4" />
-            
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

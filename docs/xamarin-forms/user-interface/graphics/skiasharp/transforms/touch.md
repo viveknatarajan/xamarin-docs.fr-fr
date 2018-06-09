@@ -1,17 +1,18 @@
 ---
 title: Manipulations tactile
-description: Matrice de l’utilisation des transformations pour implémenter en faisant glisser des fonctions tactiles, pincement et rotation
+description: Cet article explique comment utiliser les transformations de matrice pour implémenter en faisant glisser des fonctions tactiles, pincement et rotation et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: e8e5cc7b1a00f9822c4cbb4859a02b7546102ca0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a53fe287e74070adb22c2a7c67d4b7cc10b35d3e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244284"
 ---
 # <a name="touch-manipulations"></a>Manipulations tactile
 
@@ -753,9 +754,9 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-Cela `SKMatrix` objet est modifié par la logique d’interaction tactile indiquée ci-dessous. 
+Cela `SKMatrix` objet est modifié par la logique d’interaction tactile indiquée ci-dessous.
 
-Le reste du fichier code-behind est le `TouchEffect` Gestionnaire d’événements. Elle commence par convertir l’emplacement actuel du doigt pour un `SKPoint` valeur. Pour le `Pressed` type d’action, le gestionnaire vérifie qu’aucune autre doigt ne touche l’écran, et qui se trouve dans les limites de la bitmap. 
+Le reste du fichier code-behind est le `TouchEffect` Gestionnaire d’événements. Elle commence par convertir l’emplacement actuel du doigt pour un `SKPoint` valeur. Pour le `Pressed` type d’action, le gestionnaire vérifie qu’aucune autre doigt ne touche l’écran, et qui se trouve dans les limites de la bitmap.
 
 La partie essentielle du code est un `if` instruction impliquant deux appels à la `Math.Pow` (méthode). Cette mathématiques vérifie si l’emplacement du doigt est en dehors d’une ellipse qui remplit la bitmap. Dans ce cas, puis qui est une opération de mise à l’échelle. Le doigt est proche d’un des angles de l’image bitmap et un point pivot est déterminé qui est l’angle opposé. Si le doigt figure dans cette sélection, elle est une opération de panoramique régulière :
 
@@ -901,5 +902,5 @@ Ce code divise efficacement la zone de l’image bitmap en forme de losange int�
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Appel des événements à partir des effets](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

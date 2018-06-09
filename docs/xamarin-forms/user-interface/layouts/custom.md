@@ -1,18 +1,18 @@
 ---
 title: Création d’une disposition personnalisée
-description: Xamarin.Forms définit quatre classes de mise en page – StackLayout, DispositionAbsolue, RelativeLayout et grille, et chacune réorganise ses enfants d’une manière différente. Toutefois, il est parfois nécessaire organiser le contenu de la page à l’aide d’une disposition non fournie par Xamarin.Forms. Cet article explique comment écrire une classe de disposition personnalisée et illustre une classe de WrapLayout orientation sensibles qui réorganise ses enfants horizontalement sur la page, puis encapsule l’affichage des enfants suivants pour les lignes supplémentaires.
+description: Cet article explique comment écrire une classe de disposition personnalisée et illustre une classe de WrapLayout orientation sensibles qui réorganise ses enfants horizontalement sur la page, puis encapsule l’affichage des enfants suivants pour les lignes supplémentaires.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f2a443ded0d6b41db237e9842cd80e016bb5251
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f225a80a1c386668b71d1cdd47409eb017f19033
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847744"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244933"
 ---
 # <a name="creating-a-custom-layout"></a>Création d’une disposition personnalisée
 

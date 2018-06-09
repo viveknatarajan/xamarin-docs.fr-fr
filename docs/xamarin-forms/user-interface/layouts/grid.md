@@ -1,20 +1,20 @@
 ---
-title: Grille
-description: Affichages présents dans les grilles.
+title: Grille de Xamarin.Forms
+description: Cet article explique comment utiliser la classe de la grille de Xamarin.Forms pour présenter des vues dans les grilles, posséder des lignes et des colonnes.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 6ff36f511c5194017afd34601fc9ea2f89b1e2d4
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848107"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245151"
 ---
-# <a name="grid"></a>Grille
+# <a name="xamarinforms-grid"></a>Grille de Xamarin.Forms
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) prend en charge la réorganisation des vues en lignes et colonnes. Lignes et colonnes peuvent être définies à avoir une taille proportionnelle ou tailles absolues. Le `Grid` ne doivent pas être confondue avec les tables traditionnelles de mise en page et n’est pas destinée à présenter les données tabulaires. `Grid` n’a pas le concept de ligne, de colonne ou de mise en forme de cellule. Contrairement aux tableaux HTML, `Grid` est destiné exclusivement pour la disposition du contenu.
 

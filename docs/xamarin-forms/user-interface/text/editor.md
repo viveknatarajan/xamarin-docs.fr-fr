@@ -1,20 +1,20 @@
 ---
-title: Éditeur
-description: Entrée de texte multiligne
+title: Éditeur de Xamarin.Forms
+description: Cet article explique comment utiliser le contrôle de l’éditeur de Xamarin.Forms pour accepter l’entrée de texte multiligne dans une application.
 ms.prod: xamarin
 ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: 317d4f140daeccc525c4267fca43e6164a8f7827
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 7ad8c8aa77e23c5a8fb7649736ecb271f835d1a7
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848315"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245522"
 ---
-# <a name="editor"></a>Éditeur
+# <a name="xamarinforms-editor"></a>Éditeur de Xamarin.Forms
 
 _Entrée de texte multiligne_
 

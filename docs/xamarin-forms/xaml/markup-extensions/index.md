@@ -1,17 +1,18 @@
 ---
 title: Extensions de balisage XAML
-description: Étendre la gamme de sources à partir de XAML, les attributs sont définis
+description: Cet article explique comment utiliser des extensions de balisage XAML de Xamarin.Forms pour étendre la puissance et la flexibilité du code XAML en permettant aux attributs de l’élément à définir à partir de sources autres que des chaînes de texte littéral.
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: b81bc4b31edd1d8b8f5f43f97885c38e889dd32c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c6f1853c5864eed8484e7746755c6fa80a28a49b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245883"
 ---
 # <a name="xaml-markup-extensions"></a>Extensions de balisage XAML
 
@@ -33,7 +34,7 @@ Dans les deux cas, la chaîne de texte définie le `Color` attribut est converti
 
 Vous préférerez peut-être à la place définir la `Color` attribut à partir d’une valeur stockée dans un dictionnaire de ressources, la valeur d’une propriété statique d’une classe que vous avez créée ou d’une propriété de type `Color` d’un autre élément dans la page, ou il est construit à partir de Séparez les valeurs de teinte, saturation et de luminosité.
 
-Toutes ces options sont possibles à l’aide des extensions de balisage XAML. Mais ne vous laissez la phrase « extensions de balisage » vous font peur : sont des extensions de balisage XAML *pas* extensions XML. Même avec les extensions de balisage XAML, XAML est toujours conforme XML. 
+Toutes ces options sont possibles à l’aide des extensions de balisage XAML. Mais ne vous laissez la phrase « extensions de balisage » vous font peur : sont des extensions de balisage XAML *pas* extensions XML. Même avec les extensions de balisage XAML, XAML est toujours conforme XML.
 
 Une extension de balisage est simplement une manière différente pour exprimer un attribut d’un élément. Extensions de balisage XAML sont généralement identifiables par un paramètre d’attribut qui est placé entre accolades :
 
@@ -49,7 +50,7 @@ Cet article est divisé en deux parties :
 
 Utilisez les extensions de balisage XAML définies dans Xamarin.Forms.
 
-## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Création d’extensions de balisage XAML](creating.md) 
+## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Création d’extensions de balisage XAML](creating.md)
 
 Écrire vos propres extensions de balisage XAML personnalisées.
 

@@ -1,19 +1,20 @@
 ---
-title: Animation de base
-description: Découvrez comment animer vos graphiques SkiaSharp
+title: Animation de base dans SkiaSharp
+description: Cet article explique comment animer vos graphiques SkiaSharp dans les applications de Xamarin.Forms et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 859677a3dcfcddd0b333c9ddf60c01e2093b6a5b
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 08583a62719927b900c6aeede1b3b4398ed803de
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243341"
 ---
-# <a name="basic-animation"></a>Animation de base
+# <a name="basic-animation-in-skiasharp"></a>Animation de base dans SkiaSharp
 
 _Découvrez comment animer vos graphiques SkiaSharp_
 
@@ -250,4 +251,4 @@ Le résultat est que l’image semble identiques lorsque `t` est égal à 0, com
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

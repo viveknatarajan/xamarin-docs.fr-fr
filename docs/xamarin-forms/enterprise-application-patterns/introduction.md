@@ -1,18 +1,20 @@
 ---
-title: Introduction
+title: Introduction au développement d’applications Enterprise
+description: Ce chapitre fournit une introduction au développement d’applications enterprise et présente l’application mobile eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: cbce0659-fa03-447a-86ec-140438143230
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a4f1f6ba820221be7553405f570911d3dc66a657
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9deb685c92092ceb0e1c775a1e53ac1bce5a4a57
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242958"
 ---
-# <a name="introduction"></a>Introduction
+# <a name="introduction-to-enterprise-app-development"></a>Introduction au développement d’applications Enterprise
 
 Quelle que soit la plateforme, les développeurs d’applications d’entreprise sont confrontés à plusieurs problèmes :
 
@@ -130,7 +132,7 @@ La solution d’application mobile eShopOnContainers organise le code source et 
 
 Les classes de l’application mobile eShopOnContainers peuvent être réutilisées dans n’importe quelle application Xamarin.Forms avec peu ou aucune modification.
 
-##### <a name="eshoponcontainerscore-project"></a>eShopOnContainers.Core Project
+##### <a name="eshoponcontainerscore-project"></a>eShopOnContainers.Core projet
 
 Le projet de bibliothèque de classes portables eShopOnContainers.Core contient les dossiers suivants :
 
@@ -166,4 +168,4 @@ Les développeurs d’applications d’entreprise sont confrontés à plusieurs 
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)

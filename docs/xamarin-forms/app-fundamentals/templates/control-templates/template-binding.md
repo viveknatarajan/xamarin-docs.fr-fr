@@ -1,5 +1,5 @@
 ---
-title: Liaison à partir d’un modèle de contrôle
+title: Liaison à partir d’un modèle de contrôle de Xamarin.Forms
 description: Liaisons de modèles permettent de lient des contrôles dans un modèle de contrôle aux données aux propriétés publiques, l’activation de valeurs de propriétés des contrôles dans le modèle de contrôle pour être facilement changée. Cet article montre comment utiliser des liaisons de modèles pour effectuer la liaison de données à partir d’un modèle de contrôle.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b2904d06d0982fb30e9a989f03f22b726b9772e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 99d798ce2c74da0cf7fa0d497128db628a12ead5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847174"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241579"
 ---
-# <a name="binding-from-a-controltemplate"></a>Liaison à partir d’un modèle de contrôle
+# <a name="binding-from-a-xamarinforms-controltemplate"></a>Liaison à partir d’un modèle de contrôle de Xamarin.Forms
 
 _Liaisons de modèles permettent de lient des contrôles dans un modèle de contrôle aux données aux propriétés publiques, l’activation de valeurs de propriétés des contrôles dans le modèle de contrôle pour être facilement changée. Cet article montre comment utiliser des liaisons de modèles pour effectuer la liaison de données à partir d’un modèle de contrôle._
 

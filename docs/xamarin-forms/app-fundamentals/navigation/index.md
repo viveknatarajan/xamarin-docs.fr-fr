@@ -1,19 +1,20 @@
 ---
-title: Navigation
-description: Xamarin.Forms contient un nombre d’expériences de navigation de page différente, selon le type de Page utilisé.
+title: Navigation de Xamarin.Forms
+description: Ce guide explique comment effectuer la navigation dans les applications de Xamarin.Forms. Xamarin.Forms contient un nombre d’expériences de navigation de page différente, selon le type de Page utilisé.
 ms.prod: xamarin
 ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1a184e1ebfd9d87ba82642ebdfc30a8d3f92cce1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 90aedee42af7ed1788110e832fb3b435d870ee77
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241954"
 ---
-# <a name="navigation"></a>Navigation
+# <a name="xamarinforms-navigation"></a>Navigation de Xamarin.Forms
 
 _Xamarin.Forms contient un nombre d’expériences de navigation de page différente, selon le type de Page utilisé._
 
@@ -42,4 +43,3 @@ Xamarin.Forms fournit également la prise en charge pour les pages modales. Une 
 ## <a name="displaying-pop-upspop-upsmd"></a>[Affichage des fenêtres contextuelles](pop-ups.md)
 
 Xamarin.Forms fournit deux éléments d’interface utilisateur de pop haut-type : une alerte et une feuille de l’action. Ces éléments d’interface peuvent être utilisés pour demander aux utilisateurs des questions simples et guider les utilisateurs lors des tâches.
-

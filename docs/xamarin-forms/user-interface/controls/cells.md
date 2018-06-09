@@ -1,23 +1,24 @@
 ---
 title: Cellules de Xamarin.Forms
-description: Xamarin.Forms cellules peuvent être ajoutés à ListViews et TableViews.
+description: Xamarin.Forms cellules peuvent être ajoutés à ListViews et TableViews. Cet article répertorie les cellules incluses dans Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: dbc28f3d58b43bb53db39da2dcdf1ba722169264
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0947027b43eacd0bac269ebf7a779746e0d22866
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243354"
 ---
 # <a name="xamarinforms-cells"></a>Cellules de Xamarin.Forms
 
 _Xamarin.Forms cellules peuvent être ajoutés à ListViews et TableViews._
 
-A *cellule* est un élément spécialisé utilisé pour les éléments dans une table et décrit la façon dont chaque élément d’une liste doit être restitué. Le [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) dérive de la classe [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/), à partir de laquelle [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) dérive également. Une cellule n’est pas lui-même un élément visuel ; Il est à la place d’un modèle pour la création d’un élément visuel. 
+A *cellule* est un élément spécialisé utilisé pour les éléments dans une table et décrit la façon dont chaque élément d’une liste doit être restitué. Le [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) dérive de la classe [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/), à partir de laquelle [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) dérive également. Une cellule n’est pas lui-même un élément visuel ; Il est à la place d’un modèle pour la création d’un élément visuel.
 
 `Cell` est utilisé exclusivement avec [ `ListView` ](views.md#listView) et [ `TableView` ](views.md#tableView) contrôles. Pour apprendre à utiliser et personnaliser des cellules, reportez-vous à la [ `ListView` ](~/xamarin-forms/user-interface/listview/index.md) et [ `TableView` ](~/xamarin-forms/user-interface/tableview.md) documentation.
 

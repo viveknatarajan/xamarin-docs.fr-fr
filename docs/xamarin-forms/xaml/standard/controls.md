@@ -1,17 +1,18 @@
 ---
 title: Contrôles XAML Standard (version préliminaire)
-description: Comment commencer à Explorer l’aperçu Standard XAML dans Xamarin.Forms
+description: Cet article explore les contrôles XAML standard disponibles dans Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 287E6631-D1C5-46C5-8905-AB53D34E365D
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 2fc7fb9581f344e0d54bd9f690d334eda78cc97a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b01d0773f0c2150db575875b770957eb6452f41
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245565"
 ---
 # <a name="xaml-standard-preview-controls"></a>Contrôles XAML Standard (version préliminaire)
 
@@ -39,14 +40,14 @@ Il existe également une liste de contrôles qui ont des nouveaux noms de propri
 
 |Contrôles de Xamarin.Forms avec les propriétés mises à jour|Propriété de Xamarin.Forms ou enum|Équivalent XAML Standard|
 |--- |--- |--- |
-|Button, Entry, Label, DatePicker, Editor, SearchBar, TimePicker|TextColor|Foreground|
+|Bouton, entrée, étiquette, DatePicker, éditeur, SearchBar, TimePicker|textColor|Foreground|
 |VisualElement|BackgroundColor|Arrière-plan *|
-|Sélecteur, bouton|BorderColor, OutlineColor|BorderBrush|
+|Sélecteur, bouton|BorderColor OutlineColor|BorderBrush|
 |Bouton|BorderWidth|BorderThickness|
 |Barre de progression|Progression|Value|
-|Button, Entry, Label, Editor, SearchBar, Span, Font|FontAttributesBold, italique, aucun|FontStyleItalic, Normal|
-|Button, Entry, Label, Editor, SearchBar, Span, Font|Attributs de la police|FontWeights * gras, Normal|
-|InputView|Envoyer par courrier électronique KeyboardDefault, Url, nombre, téléphone, texte, conversation,|InputScopeNameValue *Default, Url, Number, TelephoneNumber, Text, Chat, EmailNameOrAddress|
+|Bouton, entrée, étiquette, éditeur, SearchBar, étendue, police|FontAttributesBold, italique, aucun|FontStyleItalic, Normal|
+|Bouton, entrée, étiquette, éditeur, SearchBar, étendue, police|Attributs de la police|FontWeights * gras, Normal|
+|InputView|Envoyer par courrier électronique KeyboardDefault, Url, nombre, téléphone, texte, conversation,|InputScopeNameValue * par défaut, Url, nombre, numéro de téléphone, texte, la conversation, EmailNameOrAddress|
 |StackPanel|StackOrientation|Orientation *|
 
 > [!IMPORTANT]

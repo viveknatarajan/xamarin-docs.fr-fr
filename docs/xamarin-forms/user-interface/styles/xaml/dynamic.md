@@ -1,20 +1,20 @@
 ---
-title: Styles dynamiques
-description: Styles de ne pas répondre aux modifications apportées aux propriétés et restent inchangées pendant la durée d’une application. Par exemple, après avoir attribué un Style à un élément visuel, si une des instances de l’accesseur Set est modifiée, supprimé, ou une nouvelle instance de méthode Setter ajouté, les modifications ne seront pas appliquées à l’élément visuel. Toutefois, les applications peuvent répondre aux modifications de style dynamiquement au moment de l’exécution à l’aide de ressources dynamiques.
+title: Styles dynamiques dans Xamarin.Forms
+description: Cet article explique comment une application Xamarin.Forms peut répondre aux modifications de style dynamiquement au moment de l’exécution à l’aide de ressources dynamiques.
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: e0cfcbaef70f58622a21315637279740f568ada8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 0f82e0cfde29921ea768000f17b93d04f8ad307e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848068"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245219"
 ---
-# <a name="dynamic-styles"></a>Styles dynamiques
+# <a name="dynamic-styles-in-xamarinforms"></a>Styles dynamiques dans Xamarin.Forms
 
 _Styles de ne pas répondre aux modifications apportées aux propriétés et restent inchangées pendant la durée d’une application. Par exemple, après avoir attribué un Style à un élément visuel, si une des instances de l’accesseur Set est modifiée, supprimé, ou une nouvelle instance de méthode Setter ajouté, les modifications ne seront pas appliquées à l’élément visuel. Toutefois, les applications peuvent répondre aux modifications de style dynamiquement au moment de l’exécution à l’aide de ressources dynamiques._
 

@@ -1,33 +1,25 @@
 ---
-title: Styles
-description: Style du texte dans Xamarin.Forms
+title: Styles de texte de Xamarin.Forms
+description: Cet article explique comment le texte de style dans les applications de Xamarin.Forms. Styles peuvent être définis qu’une seule fois et utilisés par de nombreuses vues, mais un style est utilisable uniquement avec les vues d’un type.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 42d5da5c4171347de8c4befc773e498803fd9f36
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b8cc6493c3574180e7938050075c5a70ecebeebf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848445"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245320"
 ---
-# <a name="styles"></a>Styles
+# <a name="xamarinforms-text-styles"></a>Styles de texte de Xamarin.Forms
 
-_Style du texte dans Xamarin.Forms_
-
+_Texte de style dans Xamarin.Forms_
 
 Styles peuvent être utilisés pour ajuster l’apparence des étiquettes, des entrées et des éditeurs. Styles peuvent être définis qu’une seule fois et utilisés par de nombreuses vues, mais un style est utilisable uniquement avec les vues d’un type.
 Styles peuvent être accordées à un `Key` et appliquées de manière sélective à l’aide d’un contrôle spécifique `Style` propriété.
-
-Cet article couvre les rubriques suivantes :
-
-- **[Styles intégrés](#Built-In_Styles)**  &ndash; utiliser des styles intégrés aux vues de texte de style dans l’ensemble de votre application.
-- **[Styles personnalisés](#Custom_Styles)**  &ndash; définir des styles personnalisés lorsque les options intégrées ne suffisent pas.
-- **[Appliquer des Styles](#Applying_Styles)**  &ndash; appliquer des styles personnalisés et intégrés à vos vues.
-- **[Accessibilité](#Accessibility)**  &ndash; vous assurer que le texte respecte les paramètres d’accessibilité.
 
 <a name="Built-In_Styles" />
 

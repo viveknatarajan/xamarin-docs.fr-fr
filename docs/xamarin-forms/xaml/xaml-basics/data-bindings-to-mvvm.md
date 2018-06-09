@@ -1,17 +1,18 @@
 ---
 title: Partie 5. À partir des liaisons de données à MVVM
-description: Le modèle d’architecture Model-View-ViewModel (MVVM) a été inventé avec XAML à l’esprit. Le modèle applique une séparation entre les trois couches de logiciels, l’interface utilisateur XAML, appelée la vue ; les données sous-jacentes, appelées le modèle ; et intermédiaire entre la vue et le modèle, appelé le ViewModel. La vue et le ViewModel sont souvent connectés via des liaisons de données définis dans le fichier XAML. BindingContext pour l’affichage est généralement une instance de ce dernier.
+description: Le modèle MVVM applique une séparation entre les trois couches de logiciels, l’interface utilisateur XAML, appelée la vue ; les données sous-jacentes, appelées le modèle ; et intermédiaire entre la vue et le modèle, appelé le ViewModel.
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 95cd79a4bd6da47757cfeb12a2862ccb5a66fee2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9f38377299e8094162dd2d2d73174e6f2b40369
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245769"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Partie 5. À partir des liaisons de données à MVVM
 
@@ -649,7 +650,7 @@ public class PageDataViewModel
         };
     }
 
-    public static IList<PageDataViewModel> All { private set; get; } 
+    public static IList<PageDataViewModel> All { private set; get; }
 }
 ```
 

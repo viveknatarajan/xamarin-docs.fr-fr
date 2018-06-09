@@ -1,22 +1,24 @@
 ---
 title: Chargement de vidéos de ressources d’application
+description: Cet article explique comment charger des vidéos stockées en tant que ressources d’application dans une application de lecteur vidéo à l’aide de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 89c424ee80a4ebf6363a836e752b72ee9bc5cd5a
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: f28b0dc8e25cb2e498f4101175005f05a5c5a6ef
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241030"
 ---
 # <a name="loading-application-resource-videos"></a>Chargement de vidéos de ressources d’application
 
 Les convertisseurs personnalisés pour le `VideoPlayer` compatibles avec le mode de lecture des fichiers vidéo qui ont été incorporés dans les projets de plateforme individuels en tant que ressources de l’application. Toutefois, la version actuelle de `VideoPlayer` ne peut pas accéder à des ressources incorporées dans une bibliothèque .NET Standard.
 
-Pour charger ces ressources, créez une instance de `ResourceVideoSource` en définissant le `Path` propriété le nom de fichier (ou le dossier et le nom) de la ressource. Vous pouvez également appeler la méthode statique `VideoSource.FromResource` méthode fassent référence à la ressource. Ensuite, définissez la `ResourceVideoSource` de l’objet à la `Source` propriété du `VideoPlayer`. 
+Pour charger ces ressources, créez une instance de `ResourceVideoSource` en définissant le `Path` propriété le nom de fichier (ou le dossier et le nom) de la ressource. Vous pouvez également appeler la méthode statique `VideoSource.FromResource` méthode fassent référence à la ressource. Ensuite, définissez la `ResourceVideoSource` de l’objet à la `Source` propriété du `VideoPlayer`.
 
 ## <a name="storing-the-video-files"></a>Stocker les fichiers vidéos
 
@@ -30,13 +32,13 @@ Dans le **VideoPlayerDemos** solution, le **VideoPlayerDemos.iOS** projet contie
 
 ### <a name="android-video-resources"></a>Ressources vidéo Android
 
-Dans un projet Android, des vidéos doivent être stockées dans un sous-dossier du **ressources** nommé **brutes**. Le **brutes** dossier ne peut pas contenir de sous-dossiers. Donnez au fichier vidéo un `Build Action` de `AndroidResource`. Définir le `Path` propriété du `ResourceVideoSource` au nom de fichier, par exemple, **MyFile.mp4**. 
+Dans un projet Android, des vidéos doivent être stockées dans un sous-dossier du **ressources** nommé **brutes**. Le **brutes** dossier ne peut pas contenir de sous-dossiers. Donnez au fichier vidéo un `Build Action` de `AndroidResource`. Définir le `Path` propriété du `ResourceVideoSource` au nom de fichier, par exemple, **MyFile.mp4**.
 
-Le **VideoPlayerDemos.Android** projet contient un sous-dossier de **ressources** nommé **brutes**, qui contient un fichier nommé **AndroidApiVideo.mp4**. 
+Le **VideoPlayerDemos.Android** projet contient un sous-dossier de **ressources** nommé **brutes**, qui contient un fichier nommé **AndroidApiVideo.mp4**.
 
 ### <a name="uwp-video-resources"></a>Ressources vidéo UWP
 
-Dans un projet de plateforme Windows universelle, vous pouvez stocker des vidéos dans n’importe quel dossier dans le projet. Donnez au fichier un `Build Action` de `Content`. Définir le `Path` propriété du `ResourceVideoSource` dans le dossier et le nom de fichier, par exemple, **MyFolder/MyVideo.mp4**. 
+Dans un projet de plateforme Windows universelle, vous pouvez stocker des vidéos dans n’importe quel dossier dans le projet. Donnez au fichier un `Build Action` de `Content`. Définir le `Path` propriété du `ResourceVideoSource` dans le dossier et le nom de fichier, par exemple, **MyFolder/MyVideo.mp4**.
 
 Le **VideoPlayerDemos.UWP** projet contient un dossier nommé **vidéos** avec le fichier **UWPApiVideo.mp4**.
 
@@ -169,7 +171,7 @@ Le **lire la ressource vidéo** page dans le **VideoPlayerDemos** solution utili
 </ContentPage>
 ```
 
-Si la ressource d’e/s est stockée dans le **ressources** dossier, et si la ressource de la plateforme Windows universelle est stockée dans le dossier racine du projet, vous pouvez utiliser le même nom de fichier pour les trois plateformes. Si tel est le cas, vous pouvez définir ce nom directement à la `Source` propriété du `VideoPlayer`. 
+Si la ressource d’e/s est stockée dans le **ressources** dossier, et si la ressource de la plateforme Windows universelle est stockée dans le dossier racine du projet, vous pouvez utiliser le même nom de fichier pour les trois plateformes. Si tel est le cas, vous pouvez définir ce nom directement à la `Source` propriété du `VideoPlayer`.
 
 Voici cette page en cours d’exécution sur les plateformes de trois :
 

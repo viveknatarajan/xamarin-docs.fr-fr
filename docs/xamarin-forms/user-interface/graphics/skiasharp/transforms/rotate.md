@@ -1,17 +1,18 @@
 ---
 title: La transformation de rotation
-description: Explorer les effets et les animations possibles avec la transformation de rotation SkiaSharp
+description: Cet article explore les effets et les animations possibles avec la transformation de rotation SkiaSharp et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 354844f69c0b8755a15a3325c39e35b97d44f94d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 514ecd16fedd7d3fda39fe20641cf0ee9ecb119e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244618"
 ---
 # <a name="the-rotate-transform"></a>La transformation de rotation
 
@@ -37,7 +38,7 @@ Les formules de la transformation de rotation sont plus complexes que celles pou
 
 x' = x•cos(α) – y•sin(α)   
 
-y` = x•sin(α) + y•cos(α)
+y' = x•sin(α) + y•cos(α)
 
 Le **pivoter base** page montre le `RotateDegrees` (méthode). Le [ `BasicRotate.xaml.cs` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) fichier affiche du texte avec sa ligne de base centrée sur la page et la faire pivoter selon un `Slider` avec une plage de – 360 et 360. Voici la partie appropriée de la `PaintSurface` gestionnaire :
 
@@ -369,4 +370,4 @@ L’horloge est certainement fonctionnelle même si les mains sont plutôt brute
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

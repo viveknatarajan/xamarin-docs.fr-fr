@@ -1,20 +1,20 @@
 ---
-title: RelativeLayout
-description: RelativeLayout permet de créer des interfaces utilisateur que n’importe quelle taille d’écran à l’échelle.
+title: Xamarin.Forms RelativeLayout
+description: Cet article explique comment utiliser la classe RelativeLayout de Xamarin.Forms pour créer des interfaces utilisateur que n’importe quelle taille d’écran à l’échelle.
 ms.prod: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: f23c00fb40ba661cbc1633b61a898a9437fdee98
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 712092e58a7a7358ba1fa808614822c7988e6105
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847018"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245053"
 ---
-# <a name="relativelayout"></a>RelativeLayout
+# <a name="xamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
 `RelativeLayout` est utilisé pour la position et les vues de taille par rapport aux propriétés des vues frères ou de mise en page. Contrairement aux `AbsoluteLayout`, `RelativeLayout` n’a pas le concept de l’ancre de déplacement et ne dispose pas des fonctions de positionnement des éléments par rapport à bas ou les bords droit de la disposition. `RelativeLayout` prend en charge de positionnement des éléments en dehors de ses propres limites.
 

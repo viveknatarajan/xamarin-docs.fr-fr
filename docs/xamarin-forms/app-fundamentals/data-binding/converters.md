@@ -1,19 +1,20 @@
 ---
-title: Convertisseurs de valeurs de liaison
-description: Convertir des valeurs dans la liaison de données
+title: Convertisseurs de valeurs de liaison de Xamarin.Forms
+description: Cet article explique comment convertir des valeurs dans une liaison de données de Xamarin.Forms par l’implémentation d’un convertisseur de valeur (qui est également appelé un convertisseur de liaison ou un convertisseur de valeurs de liaison).
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 260db2372977202df3d73e32645a358066146b40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5bd52d43ef93013537f30c7d5e0c31cbf336d07
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241827"
 ---
-# <a name="binding-value-converters"></a>Convertisseurs de valeurs de liaison
+# <a name="xamarinforms-binding-value-converters"></a>Convertisseurs de valeurs de liaison de Xamarin.Forms
 
 Liaisons de données généralement transférer des données à partir d’une propriété de la source à une propriété cible et dans certains cas à partir de la propriété cible à la propriété source. Ce transfert est simple lorsque les propriétés source et cible sont du même type, ou lorsqu’un type peut être converti à l’autre type via une conversion implicite. Lorsque qui n’est pas le cas, une conversion de type doit avoir lieu.
 

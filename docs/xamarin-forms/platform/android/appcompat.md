@@ -1,17 +1,18 @@
 ---
 title: Ajout de AppCompat et conception de matériel
-description: Suivez ces étapes pour convertir des applications Android de Xamarin.Forms existantes pour utiliser AppCompat et documents de conception
+description: Cet article explique comment convertir des applications Android de Xamarin.Forms existantes pour utiliser AppCompat et documents de conception.
 ms.prod: xamarin
 ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: 8f9820b863274453cff7e4124df683fb8518a978
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c2eed44a7c684b91ceed4493a83ff3b4e1578b5f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242919"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Ajout de AppCompat et conception de matériel
 
@@ -38,7 +39,7 @@ Vérifiez que le Android framework du projet cible est Android 6.0 (Marshmallow)
 
 Créez les trois fichiers suivants dans votre projet Android et collez le contenu ci-dessous. Google fournit un [guide de style](http://www.google.com/design/spec/style/color.html#color-color-palette) et un [Générateur de palette de couleurs](http://www.materialpalette.com/) pour vous aider à choisir un jeu de couleurs de remplacement pour l’élément spécifié.
 
-**Resources/values/colors.xml**
+**Resources/Values/Colors.Xml**
 
 ```xml
 <resources>

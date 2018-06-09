@@ -1,17 +1,18 @@
 ---
 title: Utilisation des Extensions de balisage XAML
-description: Utiliser les Extensions de balisage XAML disponibles dans Xamarin.Forms
+description: Cet article explique comment utiliser les extensions de balisage XAML de Xamarin.Forms pour améliorer la puissance et la flexibilité du code XAML en permettant aux attributs de l’élément à définir à partir de diverses sources.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 25eada483e8bd2ce95cb3101dfe873ea38b283ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 278677d45f997ac446c2a20967dc3501179bf8da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245935"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilisation des Extensions de balisage XAML
 

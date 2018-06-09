@@ -1,18 +1,20 @@
 ---
-title: Classe de périphérique
+title: Classe de dispositifs de Xamarin.Forms
+description: Cet article explique comment utiliser la classe de dispositifs de Xamarin.Forms, pour un contrôle précis sur les fonctionnalités et mises en page sur une base de chaque plateforme.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: cdcd4bb08b9dac84d264f7c0c41e16d68380e1d0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242542"
 ---
-# <a name="device-class"></a>Classe de périphérique
+# <a name="xamarinforms-device-class"></a>Classe de dispositifs de Xamarin.Forms
 
 Le [ `Device` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) classe contient un nombre de propriétés et méthodes pour aider les développeurs de personnaliser la disposition et fonctionnalités sur une base de chaque plateforme.
 

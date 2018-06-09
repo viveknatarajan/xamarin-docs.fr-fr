@@ -1,28 +1,24 @@
 ---
 title: Performances de ListView
-description: Assurez-vous d’excellentes performances avec votre application basée sur un ListView.
+description: Bien que ListView est un puissant pour afficher les données, il présente certaines limitations. Cet article explique comment s’assurer de hautes performances avec une liste de Xamarin.Forms dans une application.
 ms.prod: xamarin
 ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: dcd4881e2ad7f1bb4af5455805da1dd2cade3605
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4803a612e2b06e458f2859dbbbd30b970f0fc8ea
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244901"
 ---
 # <a name="listview-performance"></a>Performances de ListView
 
 Lorsque vous écrivez des applications mobiles, des performances est importante. Les utilisateurs ont en droit d’attendre le défilement régulier et le temps de chargement rapide. Ne pas répondre aux attentes de vos utilisateurs coût de contrôle d’accès dans le magasin d’applications ou dans le cas d’une application métier-, coût votre temps à l’entreprise et l’argent.
 
 Bien que [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) est une vue puissante pour afficher les données, il présente certaines limitations. Performances de défilement peut être impactées lors de l’utilisation de cellules personnalisés, en particulier lorsque qu’ils contiennent des hiérarchies imbriquées ou utilisent certaines dispositions qui nécessitent beaucoup de mesure. Heureusement, il existe des techniques que vous pouvez utiliser afin d’éviter des performances médiocres.
-
-Les rubriques suivantes sont présentées dans cet article :
-
-- **[Stratégie de mise en cache](#cachingstrategy)**
-- **[Amélioration des performances de ListView](#improving-performance)**
 
 <a name="cachingstrategy" />
 

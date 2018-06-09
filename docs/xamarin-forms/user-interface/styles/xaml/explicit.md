@@ -1,20 +1,20 @@
 ---
-title: Styles explicites
-description: Un style explicite est celle qui est appliquées de façon sélective aux contrôles en définissant leurs propriétés de Style.
+title: Styles explicites dans Xamarin.Forms
+description: Un style explicite est celle qui est appliquées de façon sélective aux contrôles en définissant leurs propriétés de Style. Cet article explique comment utiliser les styles explicites dans une application de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 9f9e87ae0fd9d609cef56123e9052d85941bda51
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: fd42eae9f70b1a44ee1c844264d1c0cda1fdb734
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848185"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245196"
 ---
-# <a name="explicit-styles"></a>Styles explicites
+# <a name="explicit-styles-in-xamarinforms"></a>Styles explicites dans Xamarin.Forms
 
 _Un style explicite est celle qui est appliquées de façon sélective aux contrôles en définissant leurs propriétés de Style._
 

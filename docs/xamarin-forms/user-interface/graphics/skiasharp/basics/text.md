@@ -1,17 +1,18 @@
 ---
 title: Intégration de texte et des graphiques
-description: Voir la rubrique déterminer la taille de la chaîne de texte rendue pour intégrer le texte avec des graphiques SkiaSharp
+description: Cet article explique comment déterminer la taille de la chaîne de texte rendue pour intégrer des applications de Xamarin.Forms de texte avec des graphiques SkiaSharp et cela est illustré par l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: dec1997d16afa1cb8235c47b125b113d7ff80a4d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: eb3724c3520153a83e37932f8be0735337e27a4f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243656"
 ---
 # <a name="integrating-text-and-graphics"></a>Intégration de texte et des graphiques
 
@@ -62,7 +63,7 @@ Le `Left` et `Top` propriétés de la `SKRect` structure indiquent les coordonn�
 - `Left` = 6
 - `Top` = &ndash;68
 - `Width` = 664.8214
-- `Height` = 88;
+- `Height` = 88 ;
 
 N’oubliez pas que les coordonnées X et Y vous passez à la `DrawText` méthode spécifier le côté gauche du texte à la ligne de base. Le `Top` valeur indique que le texte s’étend 68 pixels au-dessus de cette ligne de base (soustraction 68 informatique 88) 20 pixels sous la ligne de base. Le `Left` la valeur 6 indique que le texte commence à 6 pixels à droite de la valeur de X dans le `DrawText` appeler. Ainsi, pour l’espacement entre les caractère normaux. Si vous souhaitez afficher le texte correctement dans le coin supérieur gauche de l’affichage, passer les valeurs négatives de ces `Left` et `Top` valeurs comme les coordonnées X et Y de `DrawText`, dans cet exemple, &ndash;6 et 68.
 
@@ -168,4 +169,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>Liens associés
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
