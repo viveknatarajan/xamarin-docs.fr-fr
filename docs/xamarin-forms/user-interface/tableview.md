@@ -1,20 +1,20 @@
 ---
-title: TableView
-description: Présente les menus déroulants, des paramètres et des formulaires de saisie.
+title: Xamarin.Forms TableView
+description: Cet article explique comment utiliser la classe Xamarin.Forms TableView pour présenter les menus déroulants, des paramètres et des formulaires de saisie dans les applications.
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 312472fdfae65bc62b76f4295a13760236dededc
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 5ad1db6a073b5a6d0199aa586230cb55a9d4a925
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847655"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244856"
 ---
-# <a name="tableview"></a>TableView
+# <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
 [TableView](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) est un affichage pour l’affichage des listes permettant le défilement des données ou des choix lorsqu’il existe des lignes qui ne partagent pas le même modèle. Contrairement aux [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView n’a pas le concept d’un `ItemsSource`, de sorte que les éléments doivent être ajoutés manuellement en tant qu’enfants.
 
