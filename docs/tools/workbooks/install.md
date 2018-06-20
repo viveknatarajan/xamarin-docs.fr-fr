@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: b5e94a9b0bc3b9e9f141ad9fd262d29e01eb8a10
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: a35038a948a89889bbf067a453b7465c1a6a7b49
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793819"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268990"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Configuration requise et Installation de classeurs
 
@@ -43,8 +44,8 @@ ms.locfileid: "34793819"
 
 |Plateforme d’application|Prise en charge du système d’exploitation|Notes|
 |--- |--- |--- |
-|Mac (unifié)|Prise en charge uniquement sur Mac|
-|iOS (unifié)|Prise en charge sur Mac et Windows|Xamarin.iOS 11.0 et Xcode 9.0 ou version ultérieure doivent être installé sur le Mac. IOS classeurs en cours d’exécution sur Windows requiert un hôte de build Mac exécutant tous les éléments ci-dessus et le [exécutée à distance iOS Simulator](~/tools/ios-simulator.md) installé sur Windows.|
+|Mac|Prise en charge uniquement sur Mac|
+|iOS|Prise en charge sur Mac et Windows|Xamarin.iOS 11.0 et Xcode 9.0 ou version ultérieure doivent être installé sur le Mac. IOS classeurs en cours d’exécution sur Windows requiert un hôte de build Mac exécutant tous les éléments ci-dessus et le [exécutée à distance iOS Simulator](~/tools/ios-simulator.md) installé sur Windows.|
 |Android|Prise en charge sur Mac et Windows|Doit utiliser émulateur Google, Visual Studio ou Xamarin Android, avec un appareil virtuel > = 5.0|
 |WPF|Prise en charge uniquement sur Windows|
 |Console (.NET Framework)|Prise en charge sur Mac et Windows|
@@ -114,7 +115,7 @@ Si vous rencontrez des problèmes de connexion de votre iOS ou un classeur Andro
 
 ### <a name="windows"></a>Windows
 
-Selon la façon dont vous avez acquis & Inspecteur de classeurs, vous devrez peut-être exécuter deux procédures de désinstallation. Veuillez vérifier ces deux éléments pour complètement désinstaller le logiciel.
+Selon la façon dont vous avez acquis les classeurs, vous devrez exécuter deux procédures de désinstallation. Veuillez vérifier ces deux éléments pour complètement désinstaller le logiciel.
 
 #### <a name="visual-studio-installer"></a>Programme d’installation de Visual Studio
 
@@ -122,19 +123,19 @@ Si vous avez Visual Studio 2017, ouvrez **le programme d’installation de Visua
 
 #### <a name="system-uninstall"></a>Désinstallation du système
 
-Si vous avez installé les classeurs & Inspecteur vous-même avec un programme d’installation téléchargé, elle devra être désinstallées via les **applications & fonctionnalités** page des paramètres système sur Windows 10 ou via **ajouter/supprimer des programmes**dans le panneau de contrôle des versions plus anciennes de Windows.
+Si vous avez installé les classeurs vous-même avec un programme d’installation téléchargé, elle devra être désinstallées via les **applications & fonctionnalités** page des paramètres système sur Windows 10 ou via **Ajout/Suppression de programmes** dans le contrôle Panneau de configuration sur les versions antérieures de Windows.
 
 > **Démarrer > Paramètres > système > applications et fonctionnalités**
 
-![](install-images/windows-remove.png "Classeurs de Xamarin et comme indiqué dans l’inspecteur &quot;applications &amp; fonctionnalités&quot;")
+![](install-images/windows-remove.png "Comme indiqué dans les classeurs Xamarin &quot;applications &amp; fonctionnalités&quot;")
 
-**Vous devez néanmoins suivre la procédure pour Installer Visual Studio pour les classeurs que & Inspecteur de ne pas réinstallé sans votre connaissance.**
+**Vous devez toujours suivre la procédure pour Installer Visual Studio pour vous assurer de ne pas réinstallé classeurs sans votre connaissance.**
 
 <a name="uninstall-macos" />
 
 ### <a name="macos"></a>macOS
 
-En commençant par [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), les classeurs Xamarin & Inspecteur peuvent être désinstallé à partir d’un terminal en exécutant :
+En commençant par [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin classeurs peuvent être désinstallés d’un terminal en exécutant :
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -153,7 +154,7 @@ Pour les versions antérieures, vous devez supprimer manuellement les éléments
 
 ## <a name="downgrading"></a>La rétrogradation
 
-L’identificateur de lot pour **/Applications/Xamarin Workbooks.app** a été remplacée par `com.xamarin.Inspector` à `com.xamarin.Workbooks` dans la version 1.4 pour faciliter une future fractionnement de programmes d’installation de Xamarin classeurs & Inspecteur.
+L’identificateur de lot pour **/Applications/Xamarin Workbooks.app** a été remplacée par `com.xamarin.Inspector` à `com.xamarin.Workbooks` dans la version 1.4, en tant que classeurs et l’inspecteur sont maintenant entièrement fractionnées.
 
 En raison d’un bogue dans les programmes d’installation plus anciens, il n’est pas possible de rétrograder les versions 1.4 ou ultérieure à l’aide de la 1.3.2 ou programmes d’installation plus anciens.
 

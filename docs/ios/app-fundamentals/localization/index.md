@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 06758fd8fac62a63c309b173738a8ee889716143
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7f05243196a9b916ac5c7b73df957262604ccb11
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785264"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268808"
 ---
 # <a name="localization-in-xamarinios"></a>Localisation dans Xamarin.iOS
 
@@ -55,6 +55,16 @@ Les paramètres régionaux actuels peuvent être interrogé à l’aide de deux 
 - `NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier`
 
 La première valeur peut être mis en cache par le système d’exploitation et par conséquent, ne peut pas toujours refléter actuellement sélectionné aux paramètres régionaux de l’utilisateur. La deuxième valeur permet d’obtenir les paramètres régionaux actuellement sélectionnés.
+
+> [!NOTE]
+> Mono (le runtime .NET sur lequel repose Xamarin.iOS) et iOS d’Apple API ne prennent pas en charge ensembles identiques de combinaisons de langue/région.
+> Pour cette raison, il est possible de sélectionner une combinaison de langue/région dans iOS **paramètres** application qui ne correspond pas à une valeur valide dans Mono. Définition de langage d’un iPhone anglais et sa région sur Espagne entraîne par exemple, les API suivantes générer des valeurs différentes :
+> 
+> - `CurrentThead.CurrentCulture`: en-US (Mono API)
+> - `CurrentThread.CurrentUICulture`: en-US (Mono API)
+> - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (API Apple)
+>
+> Étant donné que Mono utilise `CurrentThread.CurrentUICulture` pour sélectionner des ressources et `CurrentThread.CurrentCulture` pour formater les dates et les devises, localisation Mono (par exemple, avec les fichiers .resx) ne peut pas générer les résultats attendus pour ces combinaisons langue/région. Dans ces situations, s’appuient sur les API d’Apple pour localiser en fonction des besoins.
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 

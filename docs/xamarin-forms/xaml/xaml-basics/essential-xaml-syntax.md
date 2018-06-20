@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 62223a4c56198271513b0b15587bb588e71b28cc
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ea448708403478cdaf565bc7abbed2af28c7a9bf
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245844"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268847"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Partie 2. Syntaxe XAML essentiels
 
@@ -430,7 +430,7 @@ Dans ces balises, vous devez inclure une `OnPlatform` balise. `OnPlatform` est u
 </ContentPage>
 ```
 
-Ajoutez maintenant `On` éléments. Pour chaque onem définir le `Platform` propriété et la `Value` propriété balisage pour le `Thickness` propriété :
+Ajoutez maintenant `On` éléments. Pour chacun d’eux, définissez la `Platform` propriété et la `Value` propriété balisage pour le `Thickness` propriété :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

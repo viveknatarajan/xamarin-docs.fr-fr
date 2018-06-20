@@ -7,22 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/31/2018
-ms.openlocfilehash: eadc2147a44d6077436e394a4757d367ce42e5fa
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a931373a6abba3084af3c7aefcdddc903ad1b577
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790001"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209230"
 ---
 # <a name="building-user-interfaces-with-the-ios-designer"></a>Création des Interfaces utilisateur avec le concepteur iOS
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
-
-=======
-# <a name="ios-designer"></a>Concepteur iOS
-
 _Le Concepteur de Xamarin pour iOS est un concepteur visuel pour les formats d’animation et Interface générateur iOS qui est entièrement intégré à Visual Studio pour Mac et Visual Studio. Le concepteur iOS gère une compatibilité complète avec les formats de plan conceptuel et .xib, afin que les fichiers peuvent être modifiés dans Visual Studio pour Mac ou Visual Studio en plus Interface Builder de Xcode. En outre, le Concepteur de Xamarin pour iOS prend en charge les fonctionnalités avancées telles que les contrôles personnalisés qui restituent au moment du design dans l’éditeur._
->>>>>>> maître
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 

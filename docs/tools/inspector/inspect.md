@@ -5,19 +5,18 @@ ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
-ms.openlocfilehash: 16a0474c7fc9a496409e2133714b6d4374691dbc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 67cc6b42901521226322d964514f19b4b639148b
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793477"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268821"
 ---
 # <a name="inspecting-live-applications"></a>L’inspection des Applications en direct
 
 Inspection de l’application en temps réel est disponible pour les clients d’entreprise.
 
-1. [Installer Xamarin classeurs & Inspecteur.](~/tools/inspector/install.md)
 1. Ouvrir une [prise en charge du projet d’application](~/tools/inspector/install.md#supported-platforms) dans Visual Studio pour Mac ou Visual Studio.
 1. Exécutez votre application en mode débogage.
 1. Cliquez sur le **inspecter** bouton dans la barre d’outils de l’IDE (dans Visual Studio, le **inspecter les applications en cours...**  élément de menu est également disponible dans le **outils** ou **déboguer** menu).

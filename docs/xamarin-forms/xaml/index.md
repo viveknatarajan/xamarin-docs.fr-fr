@@ -6,12 +6,13 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/24/2016
-ms.openlocfilehash: bb3b4c4f80171f676e8b5f9a7464f4da890a4643
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/18/2018
+ms.openlocfilehash: c040c12829708418d0a705b8e9f930989900c678
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209425"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Application XAML eXtensible Markup Language)
 
@@ -45,6 +46,10 @@ XAML utilise le `xmlns` attribut XML pour les déclarations d’espace de noms. 
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Extensions de balisage XAML](markup-extensions/index.md)
 
 Le code XAML inclut des extensions de balisage pour la définition des attributs à des valeurs ou objets au-delà de ce qui peut être exprimé avec des chaînes simples. Ceux-ci incluent le référencement de constantes, les propriétés statiques et les champs, les dictionnaires de ressources et des liaisons de données.
+
+## <a name="field-modifiersfield-modifiersmd"></a>[Modificateurs de champ](field-modifiers.md)
+
+Le `x:FieldModifier` attribut namespace Spécifie le niveau d’accès pour les champs générés pour les éléments XAML nommés.
 
 ## <a name="passing-argumentspassing-argumentsmd"></a>[Passage d’arguments](passing-arguments.md)
 

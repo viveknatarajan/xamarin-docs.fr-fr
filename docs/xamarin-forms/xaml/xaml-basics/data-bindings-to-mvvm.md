@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: e9f38377299e8094162dd2d2d73174e6f2b40369
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e83f8a585c4badc31bffaea53bb2f183e7b11fc9
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245769"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268860"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Partie 5. À partir des liaisons de données à MVVM
 
@@ -290,7 +290,7 @@ Le fichier XAML suivant contient un `BoxView` dont `Color` propriété est liée
 </ContentPage>
 ```
 
-La liaison sur chacune `Label` est la valeur par défaut `OneWay`. Il ne doit afficher la valeur. Toutefois, la liaison sur chaque `Slider` est `TwoWay`. Cela permet le `Slider` à être initialisées à partir de ce dernier. Notez que la `Color` est définie sur `Blue` lorsque ce dernier est instancié. Mais une modification dans le `Slider` doit également définir une nouvelle valeur pour la propriété dans le ViewModel, qui calcule une nouvelle couleur.
+La liaison sur chacune `Label` est la valeur par défaut `OneWay`. Il ne doit afficher la valeur. Toutefois, la liaison sur chaque `Slider` est `TwoWay`. Cela permet le `Slider` à être initialisées à partir de ce dernier. Notez que la `Color` est définie sur `Aqua` lorsque ce dernier est instancié. Mais une modification dans le `Slider` doit également définir une nouvelle valeur pour la propriété dans le ViewModel, qui calcule une nouvelle couleur.
 
 [![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM à l’aide de liaisons de données bidirectionnel")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM à l’aide de liaisons de données bidirectionnel")
 

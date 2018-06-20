@@ -7,12 +7,13 @@ ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: dcfc5e406e60ac72fb1ca1e9cfb0395d17074b2c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/18/2018
+ms.openlocfilehash: 979bf4572e0e0865c2254c3e1c2f707c8eecae8d
+ms.sourcegitcommit: 57f9a9ba2f199697cb75e7be67f1a372c35a861b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36269658"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Comment mettre à jour la version du Kit de développement Java (JDK) ?
 
@@ -38,7 +39,7 @@ Xamarin.Android utilise le Kit de développement Java (JDK) pour intégrer le SD
 
 4.  Ouvrez Visual Studio et mise à jour la **l’emplacement du Kit de développement Java** pour pointer vers le nouveau JDK sous **Outils > Options > Xamarin > Paramètres Android > emplacement du Kit de développement Java > modification**:
 
-    ![Paramètre de chemin d’accès pour le JDK dans la page de l’IDE, paramètres Android](update-jdk-images/image4.png)
+    [![Paramètre de chemin d’accès pour le JDK dans la page de l’IDE, paramètres Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Veillez à redémarrer Visual Studio après la mise à jour de l’emplacement.
 

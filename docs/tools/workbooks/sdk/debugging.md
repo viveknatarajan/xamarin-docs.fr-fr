@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: fa8806345a364a70535a91b2ba99e3bfee8d47bc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 6e37b1ac3d0fb78b5737ebe97b5a28ab40adb648
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794018"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269055"
 ---
 # <a name="debugging-integrations"></a>Débogage des intégrations
 
@@ -23,8 +23,8 @@ Sur macOS, des messages de journal apparaissent dans les deux le visualiseur du 
 
 Le journal du client est aux emplacements suivants sur macOS et Windows :
 
-- Mac : `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows : `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Mac : `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Windows : `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 Une chose à savoir est que lors du chargement des intégrations via classiques `#r` mécanisme pendant le développement, l’assembly d’intégration est récupéré comme un _dépendance_ du classeur et empaqueté avec elle, si un chemin d’accès absolu est non utilisé. Cela peut entraîner des modifications s’affichent ne pas propager, comme si la reconstruction de l’intégration n’avait aucun effet.
 
@@ -39,7 +39,7 @@ Les deux ensembles d’outils permettent d’afficher la source de JavaScript/Ty
 Pour activer les outils de développement pour les classeurs Xamarin sur Mac, exécutez la commande suivante dans votre terminal :
 
 ```shell
-defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
+defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
 puis redémarrez les classeurs de Xamarin. Une fois que vous procédez ainsi, vous devez voir **Inspecter un élément** s’affichent dans le menu contextuel et un nouveau **développeur** volet seront disponible dans les préférences de classeurs. Cette option vous permet de choisir si vous souhaitez que les outils de développement ouverts au démarrage :
