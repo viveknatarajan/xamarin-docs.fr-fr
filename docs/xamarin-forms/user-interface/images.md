@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 6d3e5e61069723b0910b092da6631d5dc4ad8629
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: b0fd644f1f3b49a949a3a9ba9aca4c0770f17013
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244543"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291349"
 ---
 # <a name="images-in-xamarinforms"></a>Images de Xamarin.Forms
 
@@ -153,8 +153,11 @@ Si vous placez des images incorporées dans des dossiers au sein de votre projet
 Le code pour charger une image incorporée transmet simplement le **ID de ressource** à la [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) méthode comme indiqué ci-dessous :
 
 ```csharp
-var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg") };
+var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg", typeof(EmbeddedImages).GetTypeInfo().Assembly) };
 ```
+
+> [!NOTE]
+> Pour prendre en charge d’affichage des images incorporées dans le mode de mise en production sur la plateforme Windows universelle, il est nécessaire d’utiliser la surcharge de `ImageSource.FromResource` qui spécifie l’assembly source dans laquelle effectuer la recherche de l’image.
 
 Actuellement, il n’existe aucune conversion implicite pour les identificateurs de ressources. Au lieu de cela, vous devez utiliser [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) ou `new ResourceImageSource()` pour charger des images incorporées.
 
@@ -182,12 +185,15 @@ public class ImageResourceExtension : IMarkupExtension
    }
 
    // Do your translation lookup here, using whatever method you require
-   var imageSource = ImageSource.FromResource(Source);
+   var imageSource = ImageSource.FromResource(Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
 
    return imageSource;
  }
 }
 ```
+
+> [!NOTE]
+> Pour prendre en charge d’affichage des images incorporées dans le mode de mise en production sur la plateforme Windows universelle, il est nécessaire d’utiliser la surcharge de `ImageSource.FromResource` qui spécifie l’assembly source dans laquelle effectuer la recherche de l’image.
 
 Pour utiliser cette extension, ajoutez une personnalisée `xmlns` vers le code XAML, en utilisant les valeurs correctes de l’espace de noms et d’assembly pour le projet. La source de l’image peut être définie à l’aide de cette syntaxe : `{local:ImageResource WorkingWithImages.beach.jpg}`. Un exemple de code XAML complet est indiqué ci-dessous :
 
@@ -224,9 +230,15 @@ foreach (var res in assembly.GetManifestResourceNames())
 }
 ```
 
-#### <a name="images-embedded-in-other-projects-dont-appear"></a>Images incorporées dans d’autres projets n’apparaissent pas.
+#### <a name="images-embedded-in-other-projects"></a>Images incorporées dans d’autres projets
 
-`Image.FromResource` recherche uniquement pour les images dans le même assembly que le code appelant `FromResource`. En utilisant le code de débogage ci-dessus, vous pouvez déterminer les assemblys qui contiennent une ressource spécifique en modifiant le `typeof()` instruction à un `Type` connu dans chaque assembly.
+Par défaut, le `ImageSource.FromResource` méthode recherche uniquement pour les images dans le même assembly que le code appelant le `ImageSource.FromResource` (méthode). En utilisant le code de débogage ci-dessus, vous pouvez déterminer les assemblys qui contiennent une ressource spécifique en modifiant le `typeof()` instruction à un `Type` connu dans chaque assembly.
+
+Toutefois, l’assembly source en cours de recherche une image incorporée peut être spécifié en tant qu’argument à la `ImageSource.FromResource` méthode :
+
+```csharp
+var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
+```
 
 <a name="Downloading_Images" />
 
@@ -316,7 +328,6 @@ Reportez-vous à la documentation pour [iOS utilisation des Images](~/ios/app-fu
 Xamarin.Forms offre plusieurs façons d’inclure des images dans une application multiplateforme, ce qui permet de la même image à utiliser sur plusieurs plateformes ou pour les images spécifiques à une plateforme de spécifier. Images téléchargées sont également automatiquement mis en cache, automatisation un scénario courant de codage.
 
 Images d’icône et écran de démarrage d’application sont configurés et configuré que pour les applications non-Xamarin.Forms - suivent les mêmes recommandations que celui utilisée pour des applications spécifiques à la plateforme.
-
 
 ## <a name="related-links"></a>Liens associés
 
