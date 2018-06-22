@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30774406"
 ---
 # <a name="apk-expansion-files"></a>Fichiers d’extension d’APK
 
@@ -99,7 +100,7 @@ Pour faciliter l’intégration des fichiers d’extension dans une application,
 
 -   **Bibliothèque du téléchargeur** &ndash; il s’agit d’une bibliothèque qui facilite l’intégration des fichiers d’extension dans une application. Cette bibliothèque télécharge les fichiers d’extension dans un service en arrière-plan, affiche les notifications utilisateur, gère les problèmes de connectivité réseau, reprend les téléchargements, etc.
 -   **Bibliothèque de vérification de licence** &ndash; bibliothèque utilisée pour passer les appels aux services Application Licensing et les traiter. Elle peut également être utilisée pour vérifier les licences afin de savoir si l’utilisation de l’application est autorisée sur l’appareil.
--   **Bibliothèque de fichiers zip d’extension d’APK (facultatif)** &ndash; si les fichiers d’extension sont regroupés dans un fichier zip, cette bibliothèque joue le rôle de fournisseur de contenu en permettant à une application de lire les ressources et les composants directement à partir de l’archive zip sans avoir à la décompresser.
+-   **Bibliothèque de fichiers zip d’extension d’APK (facultatif)**  &ndash; si les fichiers d’extension sont regroupés dans un fichier zip, cette bibliothèque joue le rôle de fournisseur de contenu en permettant à une application de lire les ressources et les composants directement à partir de l’archive zip sans avoir à la décompresser.
 
 
 Ces bibliothèques ont été portées vers C# et sont disponibles dans le cadre de la licence Apache 2.0. Pour intégrer rapidement les fichiers d’extension dans une application existante, ces bibliothèques peuvent être ajoutées à une application Xamarin.Android existante. Le code est disponible sur la page [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) de GitHub.

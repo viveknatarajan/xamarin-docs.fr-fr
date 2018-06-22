@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33919538"
 ---
 # <a name="how-can-i-view-what-libraries-are-supported-in-a-pcl"></a>Comment puis-je afficher les bibliothèques sont prises en charge dans une bibliothèque de classes portables ?
 

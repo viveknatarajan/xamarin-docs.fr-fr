@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30763499"
 ---
 # <a name="writing-responsive-applications"></a>L’écriture d’Applications réactives
 
