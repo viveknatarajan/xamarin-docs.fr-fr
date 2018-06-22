@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33920817"
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Gestion de plusieurs résolutions dans CocosSharp
 

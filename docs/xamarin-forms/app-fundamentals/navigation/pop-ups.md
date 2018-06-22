@@ -12,6 +12,7 @@ ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32018877"
 ---
 # <a name="displaying-pop-ups"></a>Afficher les fenêtres contextuelles
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33918154"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Utilisation des Types natifs dans des applications multiplateformes
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34050557"
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Procédure pas à pas - à l’aide des fonctions tactiles dans Android
 

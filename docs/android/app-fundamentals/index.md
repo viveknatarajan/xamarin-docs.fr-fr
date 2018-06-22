@@ -12,6 +12,7 @@ ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32436428"
 ---
 # <a name="xamarinandroid-application-fundamentals"></a>Notions de base Xamarin.Android Application
 

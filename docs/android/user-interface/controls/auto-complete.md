@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30764448"
 ---
 # <a name="auto-complete"></a>Saisie semi-automatique
 
@@ -192,4 +193,4 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 *Des parties de cette page sont des modifications en fonction de travail créés et partagés par projet Android Open Source utilisés en fonction des conditions décrites dans le* 
  [ *Creative Commons 2.5 Attribution de licence* ](http://creativecommons.org/licenses/by/2.5/) *. Ce didacticiel est basé sur le* 
  [ *didacticiel Android semi-automatique*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
-*.*
+ *.*

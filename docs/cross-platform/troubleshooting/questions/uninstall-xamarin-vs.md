@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917666"
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>Comment effectuer une bonne désinstaller pour Xamarin pour Visual Studio ?
 

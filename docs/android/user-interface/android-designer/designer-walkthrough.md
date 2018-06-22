@@ -12,6 +12,7 @@ ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33798630"
 ---
 # <a name="using-the-android-designer"></a>À l’aide du concepteur Android
 

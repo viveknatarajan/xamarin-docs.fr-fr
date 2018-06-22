@@ -13,6 +13,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30774380"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android - En profondeur
 
@@ -335,7 +336,7 @@ Les appareils Android peuvent avoir différentes tailles d’écran et différen
 
 [![Icône floue](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
-Pour éviter cela, il est recommandé d’ajouter des icônes de différentes résolutions dans le dossier **Ressources**. Android fournit plusieurs versions du dossier **mipmap** pour gérer les icônes de lanceur de densité différente : *mdpi* pour une densité moyenne, *hdpi* pour une densité élevée, et  *xhdpi*, *xxhdpi* et *xxxhdpi* pour les écrans de très haute densité. Les icônes de tailles différentes sont stockées dans les dossiers **mipmap-** :
+Pour éviter cela, il est recommandé d’ajouter des icônes de différentes résolutions dans le dossier **Ressources**. Android fournit plusieurs versions du dossier **mipmap** pour gérer les icônes de lanceur de densité différente : *mdpi* pour une densité moyenne, *hdpi* pour une densité élevée, et  *xhdpi*, *xxhdpi* et *xxxhdpi* pour les écrans de très haute densité. Les icônes de tailles différentes sont stockées dans les dossiers **mipmap-**  :
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -390,7 +391,7 @@ Pour plus d’informations sur les tailles d’icônes, reportez-vous au guide [
 _Google Play Services_ est un ensemble de bibliothèques de modules complémentaires qui permet aux développeurs Android de tirer parti des fonctionnalités les plus récentes de Google, telles que Google Maps, Google Cloud Messaging et la facturation dans l’application.
 Auparavant, les liaisons vers toutes les bibliothèques Google Play Services étaient fournies par Xamarin sous la forme d’un package unique. Désormais, avec Visual Studio pour Mac, une boîte de dialogue Nouveau projet vous permet de sélectionner les packages Google Play Services à inclure dans votre application.
 
-Pour ajouter une ou plusieurs bibliothèques Google Play Services, cliquez sur le nœud **Packages** dans votre arborescence de projets, puis cliquez sur **Ajouter un service Google Play…** :
+Pour ajouter une ou plusieurs bibliothèques Google Play Services, cliquez sur le nœud **Packages** dans votre arborescence de projets, puis cliquez sur **Ajouter un service Google Play…**  :
 
 [![Ajout d’un service Google Play](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 

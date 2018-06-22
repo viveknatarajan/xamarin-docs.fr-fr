@@ -11,6 +11,7 @@ ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850832"
 ---
 # <a name="creating-a-service"></a>Création d'un service
 
