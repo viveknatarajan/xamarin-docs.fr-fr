@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 3776a0554e5ae496f9e39612ec9bab971c6f1f88
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: a23072427a74119bfa339fea8a695cd13b775685
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732760"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935101"
 ---
 # <a name="oreo-features"></a>Fonctionnalités de Oreo
 
@@ -191,7 +191,7 @@ Une fois que vous utilisez **avdmanager** pour créer votre appareil virtuel, el
 
 -----
 
-Pour plus d’informations sur la configuration d’un émulateur Android pour tester et déboguer, consultez [débogage avec l’émulateur Android de Google](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Pour plus d’informations sur la configuration d’un émulateur Android pour tester et déboguer, consultez [débogage sur l’émulateur Android](~/android/deploy-test/debugging/debug-on-emulator.md).
 
 Si vous utilisez un périphérique physique comme un canal ou un Pixel, vous pouvez mettre à jour votre appareil via automatique sur les mises à jour de l’air (OTA) ou télécharger une image système et flash directement de votre appareil. Pour plus d’informations sur la mise à jour manuelle de votre appareil à Oreo Android, consultez [Images fabrique pour les appareils de Pixel et de Nexus](https://developers.google.com/android/images).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: 9c17641312384634983c2cbb34fa923a9416c9f7
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 6b2e316eaf67e51801be4fcd670e80ec81c8ff08
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31646701"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935397"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Récepteurs de diffusion de Xamarin.Android
 
@@ -25,7 +25,7 @@ A _récepteur de diffusion_ est un composant Android qui permet à une applicati
 Android identifie deux types de diffusions :
 
 * **Diffusion explicite** &ndash; ces types de diffusions ciblent une application spécifique. L’utilisation la plus courante d’une diffusion explicite est une activité de démarrage. Un exemple d’une diffusion explicite lorsqu’une application a besoin pour composer un numéro de téléphone ; Il distribue une intention qui cible l’application téléphonique sur Android et passe le long du numéro de téléphone à composer. Android puis achemine l’intention de l’application téléphonique.
-* **Implicite pendant** &ndash; ces diffusions sont distribuées à toutes les applications sur l’appareil. Est un exemple d’une diffusion implicite le `ACTION_POWER_CONNECTED` intention. Ce mode est publié chaque fois Qu'android détecte que la batterie sur l’appareil est en cours de chargement. Android achemine cette intention à toutes les applications qui ont inscrit pour cet événement.
+* **Diffusion implicite** &ndash; ces diffusions sont distribuées à toutes les applications sur l’appareil. Est un exemple d’une diffusion implicite le `ACTION_POWER_CONNECTED` intention. Ce mode est publié chaque fois Qu'android détecte que la batterie sur l’appareil est en cours de chargement. Android achemine cette intention à toutes les applications qui ont inscrit pour cet événement.
 
 Le récepteur de diffusion est une sous-classe de la `BroadcastReceiver` type et il doivent remplacer le [ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/) (méthode). Android exécutera `OnReceive` sur le thread principal, par conséquent, cette méthode doit être conçue pour s’exécuter rapidement. Soyez vigilant lors de la génération dynamique de threads dans `OnReceive` car Android peut terminer le processus lors de la méthode se termine. Si un récepteur de diffusion doit effectuer un travail en cours d’exécution longue, il est recommandé de planifier un _travail_ à l’aide de la `JobScheduler` ou _Firebase travail répartiteur_. Planification de travail avec un travail est abordée dans un repère distinct.
 

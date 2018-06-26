@@ -1,20 +1,20 @@
 ---
-title: Maps
+title: Comment utiliser des cartes Google et l’emplacement avec Xamarin.Android
 description: Cet article explique comment utiliser des cartes et un emplacement avec Xamarin.Android. Elle traite tous les éléments de tirer parti de l’application de cartes intégrées à directement à l’aide de la V2 mappe des API Android de Google.
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e57dc07aefbd1c80a53f4225f5f44fe72a9ddb9a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: a861e43152870933ba684bf693a1bd3d3ac5bd0b
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763327"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935371"
 ---
-# <a name="maps"></a>Maps
+# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Comment utiliser des cartes Google et l’emplacement avec Xamarin.Android
 
 _Cet article explique comment utiliser des cartes et un emplacement avec Xamarin.Android. Elle traite tous les éléments de tirer parti de l’application de cartes intégrées à directement à l’aide de la V2 mappe des API Android de Google._
 
@@ -32,9 +32,8 @@ Tout d’abord, elles expliquent comment tirer parti des applications de cartes 
 
 ## <a name="related-links"></a>Liens associés
 
-- [MapsAndLocationDemo_v3 (sample)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
+- [MapsAndLocationDemo_v3 (exemple)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [Cycle de vie des activités](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obtention d’une clé API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Module complémentaire des API Google](http://code.google.com/android/add-ons/google-apis/reference/index.html?com/google/android/maps/package-summary.html)
 - [Liste des modes : Appel des Applications de Google sur les appareils Android](http://developer.android.com/guide/appendix/g-app-intents.html)
 - [Emplacement et des mappages](http://developer.android.com/guide/topics/location/index.html)

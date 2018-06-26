@@ -6,17 +6,17 @@ ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 4afe2b9fab8eeebb3f0451379b8e3937cc8d8f55
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.date: 06/21/2018
+ms.openlocfilehash: f94c0966dd67940fc201df84a311db422d77b542
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "30823062"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935199"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Il est possible de se connecter à des émulateurs Android fonctionne sur un Mac à partir d’une machine virtuelle Windows ?
 
-Pour vous connecter à un émulateur Android de Google en cours d’exécution sur un Mac à partir d’une machine virtuelle Windows, procédez comme suit :
+Pour vous connecter à l’émulateur Android en cours d’exécution sur un Mac à partir d’une machine virtuelle Windows, procédez comme suit :
 
 1.  Démarrer l’émulateur sur le Mac.
 

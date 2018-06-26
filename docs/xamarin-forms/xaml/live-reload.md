@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 756f0570ce792450cfcaf6b1c5161a95a6cb80c8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848302"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935426"
 ---
 # <a name="xamarin-live-reload"></a>Rechargement dynamique de Xamarin
 
@@ -119,6 +119,7 @@ Non. En fait, vous pouvez même démarrer toutes les cibles votre application pr
 ## <a name="known-issues"></a>Problèmes connus
 
 * Prise en charge uniquement dans Visual Studio.
+* Liaison doit être définie sur **ne le lien** ou **lien Framework kits de développement logiciel uniquement** 
 * Recharger les ressources à l’échelle de l’application (par exemple, **App.xaml** ou partagé les dictionnaires de ressources), la réinitialisation de navigation de l’application. Cela sera résolu dans la prochaine version de la version préliminaire.
 * Modification du langage XAML pendant le débogage UWP peut provoquer une panne du runtime. Solution : Utilisez **exécuter sans débogage (Ctrl + F5)** au lieu de **démarrer le débogage (F5)**.
 

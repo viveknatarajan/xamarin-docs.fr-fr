@@ -6,13 +6,13 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/19/2018
-ms.openlocfilehash: 2deeb4309be44c1c5f8d78980707336ac8301761
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/21/2018
+ms.openlocfilehash: bbb1e92596fe69246a608eb0758e789f5b99e954
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774354"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935462"
 ---
 # <a name="frequently-asked-questions"></a>Questions fréquemment posées
 
@@ -50,7 +50,7 @@ Autres périphériques nécessitent des pilotes USB spécifiquement publiés par
 
 ### <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vmconnect-android-emulator-mac-windowsmd"></a>[Est-il possible de se connecter à des émulateurs Android exécutés sur un Mac à partir d’une machine virtuelle Windows ?](connect-android-emulator-mac-windows.md)
 
-Ce guide couvre les méthodes lors de l’utilisation d’un émulateur Android de Google.
+Ce guide couvre les méthodes lors de l’utilisation de l’émulateur Android.
 
 ## <a name="general-questions"></a>Questions générales
 

@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 32338bc89df2ef7ee4426482b1967861f0c0e058
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: e7279c03c730e95f211b555e5b832942c19ea8aa
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33921948"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935413"
 ---
 # <a name="using-team-city-with-xamarin"></a>À l’aide de la ville de l’équipe avec Xamarin
 
@@ -39,7 +39,7 @@ Il existe plusieurs étapes impliquées dans la définition de TeamCity :
 
 - **Création d’un projet de TeamCity** – une fois que les trois étapes précédentes terminées, nous devons créer un projet de TeamCity qui contient toutes les métadonnées nécessaires pour récupérer le code source, les projets de compilation et envoyer les tests à Xamarin Test Cloud.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Expérience avec [Xamarin Test Cloud](https://developer.xamarin.com/guides/testcloud) est requis.
 
@@ -142,7 +142,7 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 Lorsque le test est exécuté, les résultats des tests seront affichera sous la forme d’un fichier XML de style NUnit appelé **report.xml**. TeamCity affiche les informations dans le journal de génération.
 
-Pour plus d’informations sur comment soumettre UITests au Cloud de Test, consultez le guide de Xamarin sur [soumettant des Tests Test Cloud](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/).
+Pour plus d’informations sur comment soumettre UITests au Cloud de Test, consultez ce guide sur [Xamarin.UITests de préparation pour le téléchargement](/appcenter/test-cloud/preparing-for-upload/uitest/).
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Envoi de Tests Calabash pour tester le Cloud
 
@@ -207,6 +207,5 @@ Ensuite, nous avons abordé la création d’un projet dans TeamCity file d’at
 
 ## <a name="related-links"></a>Liens associés
 
-- [Envoi de Tests à Xamarin Test Cloud (UITest)](https://developer.xamarin.com~/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)
-- [Envoi de Tests à Xamarin Test Cloud (Calabash)](https://developer.xamarin.com~/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)
+- [Préparation Xamarin.UITests pieds téléchargement](/appcenter/test-cloud/preparing-for-upload/uitest/)
 - [Installation et configuration TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)
