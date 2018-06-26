@@ -49,7 +49,7 @@ Ces captures d’écran affichent ces contrôles avec :
 * Thème clair (uniquement des différences subtiles à ne disposer d’aucun thème)
 * Thème foncé
 
-![](images/standard-none-sml.png "Les contrôles sans thème") ![ ] (images/standard-light-sml.png "contrôles avec le thème clair") ![ ] (images/standard-dark-sml.png "contrôles avec le thème sombre")
+![](images/standard-none-sml.png "Les contrôles sans thème") ![](images/standard-light-sml.png "contrôles avec le thème clair") ![](images/standard-dark-sml.png "contrôles avec le thème sombre")
 
 <a name="styleclass" />
 
@@ -69,7 +69,7 @@ Le [Light](light.md) et [foncé](dark.md) thèmes à la fois définissent trois 
 
 Cela restitue avec clair et foncé comme suit :
 
-![](images/boxview-light-sml.png "BoxView avec un StyleClass le thème clair") ![ ] (images/boxview-dark-sml.png "BoxView avec un StyleClass le thème sombre")
+![](images/boxview-light-sml.png "BoxView avec un StyleClass le thème clair") ![](images/boxview-dark-sml.png "BoxView avec un StyleClass le thème sombre")
 
 <a name="builtin" />
 
