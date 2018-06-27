@@ -6,12 +6,13 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/17/2018
-ms.openlocfilehash: ca88159e8bcbcd4665e29b4ad8df9ffe00cfec67
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.date: 05/30/2018
+ms.openlocfilehash: 545636bc38240bc17837a661416702ec259caf45
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732604"
 ---
 # <a name="windows-installation"></a>Installation sur un système Windows
 
@@ -82,7 +83,7 @@ Vous pouvez considérablement améliorer les performances en cas de développeme
 1. Microsoft Hyper-V : Disponible sur les ordinateurs exécutant la mise à jour d’avril de Windows 10.
 2. Intel HAXM (Hardware Accelerated Execution Manager) : Disponible sur les ordinateurs x86 exécutant OS X, macOS ou une version antérieure de Windows.
 
-Pour plus d’informations sur l’émulateur Google Android, Hyper-V et HAXM, consultez le guide sur [l’accélération matérielle de l’émulateur Android](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
+Pour plus d’informations sur l’émulateur Google Android, Hyper-V et HAXM, consultez le guide [Accélération matérielle de l’émulateur Android](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
 > [!NOTE]
 > Sur les versions antérieures de Windows, HAXM n’est pas compatible avec Hyper-V. Dans ce scénario, vous devez [désactiver Hyper-V](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v) ou utiliser des images d’émulateur plus lentes qui n’ont pas les optimisations x86.
@@ -121,6 +122,6 @@ Dans la prochaine étape, vous allez étudier les didacticiels [Hello, Android](
 - [Installation de Visual Studio Tools pour Xamarin](~/cross-platform/get-started/installation/windows.md)
 - [Configuration système requise](~/cross-platform/get-started/requirements.md)
 - [Configuration du kit Android SDK](~/android/get-started/installation/android-sdk.md)
-- [Émulateur Google Android](~/android/get-started/installation/android-emulator/index.md)
+- [Configuration de l’émulateur Android](~/android/get-started/installation/android-emulator/index.md)
 - [Configurer un appareil pour le développement](~/android/get-started/installation/set-up-device-for-development.md)
 - [Exécuter des applications sur l’émulateur Android](https://developer.android.com/studio/run/emulator#Requirements)

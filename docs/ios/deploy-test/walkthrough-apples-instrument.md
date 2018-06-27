@@ -1,17 +1,18 @@
 ---
 title: 'Procédure pas à pas : Utilisation de l’outil Instruments d’Apple'
-description: Cet article explique pas à pas comment utiliser l’outil Instruments d’Apple pour diagnostiquer les problèmes de mémoire dans une application iOS conçue avec Xamarin. Il montre comment lancer Instruments, prendre des instantanés du tas et analyser la croissance de la mémoire. Il explique également comment utiliser Instruments pour afficher et identifier les lignes de code précises qui sont à l’origine du problème de mémoire.
+description: Cet article décrit comment utiliser l’outil Instruments d’Apple pour diagnostiquer les problèmes de mémoire dans une application iOS conçue avec Xamarin. Il montre comment lancer Instruments, prendre des instantanés du tas, analyser la croissance de la mémoire et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0142cf90fbe7eff5beacf58897d5b3672f6ff55b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4241fe9fed260091de98ba47d68b0ad5d97ed626
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785773"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Procédure pas à pas : Utilisation de l’outil Instruments d’Apple
 
