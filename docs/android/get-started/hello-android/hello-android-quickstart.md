@@ -7,12 +7,13 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/25/2018
-ms.openlocfilehash: 7faf4ef090815ea799209e76816113f06889bd21
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.date: 05/30/2018
+ms.openlocfilehash: 9e4349b807c98e6f5cfbc55fa57153f99054d474
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732464"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android - Démarrage rapide
 
@@ -48,7 +49,7 @@ Avant de commencer, téléchargez et décompressez le fichier contenant les [ic�
 
 ## <a name="configuring-emulators"></a>Configuration des émulateurs
 
-Si vous utilisez l’émulateur du SDK Android de Google, nous vous recommandons de le configurer de manière à utiliser l’accélération matérielle. Pour obtenir des instructions concernant la configuration de l’accélération matérielle, consultez [Accélération matérielle](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
+Si vous utilisez l’émulateur du SDK Android de Google, nous vous recommandons de le configurer de manière à utiliser l’accélération matérielle. Pour obtenir des instructions concernant la configuration de l’accélération matérielle, consultez [Accélération matérielle de l’émulateur Android](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

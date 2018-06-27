@@ -1,21 +1,20 @@
 ---
-title: Provisionnement des appareils
-description: Après l’installation de Xamarin.iOS, l’étape suivante dans le développement iOS consiste à provisionner votre appareil iOS. Ce guide explique comment demander des profils et certificats de développement, utiliser des services d’application et déployer une application sur un appareil.
+title: Provisionnement d’appareil pour Xamarin.iOS
+description: Ce document décrit comment provisionner un appareil afin de pouvoir l’utiliser pour tester une application. Il explique également comment configurer une application pour qu’elle puisse utiliser des fonctionnalités telles que les notifications Push.
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785786"
 ---
-# <a name="device-provisioning"></a>Provisionnement des appareils
-
-_Une fois Xamarin.iOS installé avec succès, l’étape suivante du développement iOS consiste à configurer l’appareil iOS. Ce guide explique comment demander des profils et des certificats de développement, comment utiliser des services d’application et comment déployer une application sur un appareil._
+# <a name="device-provisioning-for-xamarinios"></a>Provisionnement d’appareil pour Xamarin.iOS
 
 Pendant le développement d’une application Xamarin.iOS, il est essentiel de la tester en la déployant sur un appareil physique, en plus du simulateur. Des bogues propres aux appareils et des problèmes de performance peuvent surgir lors de l’exécution sur un appareil, en raison des limites matérielles comme la mémoire ou la connectivité réseau. Pour effectuer des tests sur un appareil physique, celui-ci doit être *provisionné* et Apple doit être informé que l’appareil va servir à des tests.
 

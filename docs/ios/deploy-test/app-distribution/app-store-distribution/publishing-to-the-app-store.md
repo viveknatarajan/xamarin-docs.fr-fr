@@ -1,21 +1,20 @@
 ---
-title: Publication sur l’App Store
-description: Cet article explique comment configurer, générer et publier une application Xamarin.iOS pour la distribuer via l’App Store. Il comprend un guide pas à pas qui explique comment préparer la distribution de votre application, comment utiliser les outils d’Apple pour soumettre votre application à des fins d’évaluation, et enfin, comment publier votre application sur l’App Store.
+title: Publication d’applications Xamarin.iOS sur l’App Store
+description: Ce document explique comment configurer, générer et publier une application Xamarin.iOS pour la distribuer dans l’App Store.
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 5d78cb81f27ce7478719ff9f11f4eb38fddc3981
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785698"
 ---
-# <a name="publishing-to-the-app-store"></a>Publication sur l’App Store
-
-_Cet article explique comment configurer, générer et publier une application Xamarin.iOS pour la distribuer via l’App Store. Il comprend un guide pas à pas qui explique comment préparer la distribution de votre application, comment utiliser les outils d’Apple pour soumettre votre application à des fins d’évaluation, et enfin, comment publier votre application sur l’App Store._
+# <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publication d’applications Xamarin.iOS sur l’App Store
 
 Pour permettre la distribution des applications sur tous les appareils iOS, Apple impose la publication de ces applications via l’*App Store*, le point d’achat unique des applications iOS. Avec plus de 500 000 applications dans l’App Store, les développeurs de nombreux types d’application ont capitalisé sur le succès massif de ce point de distribution unique. L’App Store est une solution clé en main, qui offre à la fois un système de distribution et un système de paiement aux développeurs d’applications.
 
@@ -322,19 +321,19 @@ Une fois que vous avez effectué la build de distribution, vous êtes prêt à s
 
     ![](publishing-to-the-app-store-images/publishxs01.png "Sélectionner l’archive à soumettre")
 4. Cliquez sur le bouton **Validate (Valider)**.
-5. Sélectionnez le compte à vérifier, puis cliquez sur le bouton **Choose (Choisir)** :
+5. Sélectionnez le compte à vérifier, puis cliquez sur le bouton **Choose (Choisir)**  :
 
     ![](publishing-to-the-app-store-images/publishxs02.png "Sélectionner le compte à vérifier")
-6. Cliquez sur le bouton **Validate (Valider)** :
+6. Cliquez sur le bouton **Validate (Valider)**  :
 
     ![](publishing-to-the-app-store-images/publishxs03.png "Boîte de dialogue de récapitulatif du fichier")
 7. S’il existe des problèmes liés au bundle, ils sont affichés.
 8. Corrigez les problèmes et regénérez l’archive dans Visual Studio pour Mac.
 9. Cliquez sur le bouton **Submit (Soumettre)**.
-10. Sélectionnez le compte à vérifier, puis cliquez sur le bouton **Choose (Choisir)** :
+10. Sélectionnez le compte à vérifier, puis cliquez sur le bouton **Choose (Choisir)**  :
 
     ![](publishing-to-the-app-store-images/publishxs04.png "Sélectionner le compte à vérifier")
-11. Cliquez sur le bouton **Submit (Soumettre)** :
+11. Cliquez sur le bouton **Submit (Soumettre)**  :
 
     ![](publishing-to-the-app-store-images/publishxs05.png "Boîte de dialogue de récapitulatif du fichier")
 12. Xcode vous informe à la fin du chargement du fichier sur iTunes Connect.
@@ -348,7 +347,7 @@ Pour soumettre votre application à Apple afin qu’elle soit évaluée, vous de
 
 -----
 
-1. Sélectionnez *Deliver Your App (Livrer votre application)*, puis cliquez sur le bouton *Choose (Choisir)* :
+1. Sélectionnez *Deliver Your App (Livrer votre application)*, puis cliquez sur le bouton *Choose (Choisir)*  :
 
     [![](publishing-to-the-app-store-images/publishvs01.png "Sélectionner Livrer votre application")](publishing-to-the-app-store-images/publishvs01.png#lightbox)
 

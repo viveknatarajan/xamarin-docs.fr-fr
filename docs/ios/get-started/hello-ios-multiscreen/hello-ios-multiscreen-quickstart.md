@@ -1,6 +1,6 @@
 ---
-title: Hello, iOS Multiscreen
-description: Dans ce guide en deux parties, nous étendons l’application Phoneword créée dans le guide Hello, iOS pour gérer un deuxième écran. Nous découvrirons progressivement le modèle de conception Model-View-Controller, implémenterons notre première navigation iOS et approfondirons notre connaissance de la structure et des fonctionnalités de l’application iOS.
+title: Hello.iOS multi-écran - Démarrage rapide
+description: Ce document montre comment étendre l’exemple d’application Phoneword pour ajouter un deuxième écran. Il décrit model-view-controller, la navigation iOS et d’autres concepts clés du développement iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 3b59b942b3c256418d60436a1c4ba8b4aea14aa4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 469032dc7caa46c6a89b350dc37bc9a93366066a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785669"
 ---
-# <a name="helloios-multiscreen-quickstart"></a>Hello.iOS multi-écran - Démarrage rapide
+# <a name="hello-ios-multiscreen--quickstart"></a>Hello.iOS multi-écran - Démarrage rapide
 
 Cette partie de la procédure pas à pas permet d’ajouter un deuxième écran à l’application Phoneword pour afficher l’historique des numéros de téléphone appelés avec l’application. L’application finale propose un deuxième écran qui affiche l’historique des appels, comme l’illustre la capture d’écran suivante :
 

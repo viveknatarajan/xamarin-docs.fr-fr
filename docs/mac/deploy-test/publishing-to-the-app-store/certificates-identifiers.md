@@ -1,5 +1,5 @@
 ---
-title: Certificats et identificateurs
+title: Certificats et identificateurs dans Xamarin.Mac
 description: Ce guide présente en détail la création des certificats et des identificateurs nécessaires qui seront exigés pour publier une application Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 393d0066-7f6f-4ac3-a48d-4b5db65bc4cd
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: d94819be2c014aec5edfae19959ce949ee8dcd4b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b86f731009380db7e9e8980114272ddd38d2f0da
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792873"
 ---
-# <a name="certificates-and-identifiers"></a>Certificats et identificateurs
+# <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificats et identificateurs dans Xamarin.Mac
 
 _Ce guide présente en détail la création des certificats et des identificateurs nécessaires exigés pour publier une application Xamarin.Mac._
 
@@ -31,7 +32,7 @@ Cliquez ensuite sur le **lien Certificates** sous la section **Mac Apps** :
 
 [![Sélection du lien des certificats](certificates-identifiers-images/devcenter03.png "Sélection du lien des certificats")](certificates-identifiers-images/devcenter03-large.png#lightbox)
 
-Cliquez sur le lien **All**, puis sur le bouton  **+** :
+Cliquez sur le lien **All**, puis sur le bouton  **+**  :
 
 [![Sélection de tout et ajout d’un nouvel élément](certificates-identifiers-images/certif01.png "Sélection de tout et ajout d’un nouvel élément")](certificates-identifiers-images/certif01-large.png#lightbox)
 
@@ -76,7 +77,7 @@ Pour configurer les services iCloud, cliquez sur le bouton **Modify** :
 
 Pour créer un profil de provisionnement à des fins de test, les ordinateurs Mac des développeurs doivent être inscrits. Ils peuvent inscrire au maximum 100 ordinateurs pour tester leurs applications Mac.
 
-Dans le Mac Developer Center, sélectionnez **All** dans la section **Devices**, puis cliquez sur le bouton **+** :
+Dans le Mac Developer Center, sélectionnez **All** dans la section **Devices**, puis cliquez sur le bouton **+**  :
 
 [![Ajout d’un nouvel ordinateur](certificates-identifiers-images/devcenter10.png "Ajout d’un nouvel ordinateur")](certificates-identifiers-images/devcenter10-large.png#lightbox)
 

@@ -1,6 +1,6 @@
 ---
 title: Hello.iOS - Démarrage rapide
-description: Le présent guide en deux parties explique comment générer une application Xamarin.iOS simple à l’aide de Visual Studio pour Mac ou de Visual Studio, puis approfondit votre compréhension des principes fondamentaux du développement d’applications iOS avec Xamarin. Il permet de découvrir les outils, concepts et étapes nécessaires à la génération et au déploiement d’une application Xamarin.iOS.
+description: Cette procédure pas à pas montre comment générer une application Xamarin.iOS simple appelée Hello, iOS. Ce faisant, elle présente les outils et concepts fondamentaux que vous devez comprendre pour créer des applications Xamarin.iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: d9f5894f03bbfaa2145aec462dbd0ede7774354a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785984"
 ---
-# <a name="helloios-quickstart"></a>Hello.iOS - Démarrage rapide
+# <a name="hello-ios--quickstart"></a>Hello.iOS - Démarrage rapide
 
 Ce guide décrit comment créer une application qui convertit un numéro de téléphone alphanumérique (entré par l’utilisateur) en numéro de téléphone numérique, puis compose ce numéro. L’application finale ressemble à ceci :
 

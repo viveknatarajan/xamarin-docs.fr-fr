@@ -1,16 +1,18 @@
 ---
 title: Xamarin.Forms multi-écran - Démarrage rapide
+description: Cet article montre comment étendre l’application Phoneword en ajoutant un second écran de manière à suivre l’historique des appels pour l’application.
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 066f084187a486ca2f88882890b5e9ad277b8cff
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c931b4f74fbfbbb7396e492cb7ad7ae5d0097bad
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242389"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms multi-écran - Démarrage rapide
 
@@ -57,7 +59,7 @@ Ce guide de démarrage rapide montre comment étendre l’application Phoneword 
 
     Enregistrez les modifications apportées à **CallHistoryPage.xaml** en appuyant sur **Ctrl+S** et fermez le fichier.
 
-5. Dans l’**Explorateur de solutions**, double-cliquez sur **App.xaml.cs** pour l’ouvrir :
+5. Dans l’**Explorateur de solutions**, double-cliquez sur le fichier **App.xaml.cs** dans le projet **Phoneword** partagé pour l’ouvrir :
 
     ![](quickstart-images/vs/open-app-class.png "Ouvrir App.xaml.cs")
 
@@ -88,7 +90,7 @@ Ce guide de démarrage rapide montre comment étendre l’application Phoneword 
 
     Enregistrez les modifications apportées à **App.xaml.cs** en appuyant sur **Ctrl+S** et fermez le fichier.
 
-7. Dans l’**Explorateur de solutions**, double-cliquez sur **MainPage.xaml** pour l’ouvrir :
+7. Dans l’**Explorateur de solutions**, double-cliquez sur le fichier **MainPage.xaml** dans le projet **Phoneword** partagé pour l’ouvrir :
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "Ouvrir MainPage.xaml")
 

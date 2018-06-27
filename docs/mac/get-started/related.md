@@ -1,19 +1,20 @@
 ---
-title: Documentations associées
-description: Liens vers la documentation supplémentaire pour les développeurs macOS.
+title: Xamarin.Mac – Documentation connexe
+description: 'Ce document fournit des liens vers de la documentation pertinente pour les développeurs Xamarin.Mac : documentation Xamarin.iOS, Centre de développement Mac d’Apple et divers guides pas à pas qui décrivent comment générer des interfaces utilisateur avec Xamarin.Mac.'
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: ff26747a395b48163dbabf0b058f28427182d41a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1bef756d89a92d082bd5ee29e18047bc4bed2498
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792526"
 ---
-# <a name="related-documentation"></a>Documentations associées
+# <a name="xamarinmac--related-documentation"></a>Xamarin.Mac – Documentation connexe
 
 En plus de la section Mac de [developer.xamarin.com](~/mac/get-started/index.md) il existe trois sources de documentation intéressantes qui peuvent également s’avérer utiles sur les questions liées à Xamarin.Mac :
 

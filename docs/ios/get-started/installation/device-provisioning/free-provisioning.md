@@ -1,21 +1,22 @@
 ---
-title: Provisionnement libre
-description: 'Avec la version d’Apple Xcode 7, un important changement a eu lieu pour tous les développeurs iOS et Mac : le provisionnement libre.'
+title: Provisionnement gratuit pour les applications Xamarin.iOS
+description: Ce document décrit comment les développeurs Xamarin.iOS peuvent tester leur application sur un appareil physique sans avoir besoin de s’inscrire au programme de développement payant d’Apple.
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 03/19/2017
-ms.openlocfilehash: 09244ebaefedb991289e5a1f67b59491ee84ed28
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 623f79f482170c6b1d8ecdb642afb2fc7acf061d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786020"
 ---
-# <a name="free-provisioning"></a>Provisionnement libre
+# <a name="free-provisioning-for-xamarinios-apps"></a>Provisionnement gratuit pour les applications Xamarin.iOS
 
-_Avec la version d’Apple Xcode 7, un important changement a eu lieu pour tous les développeurs iOS et Mac : l’approvisionnement gratuit._
+_Avec la version d’Apple Xcode 7, un important changement a eu lieu pour tous les développeurs iOS et Mac : le provisionnement gratuit._
 
 Le provisionnement libre permet aux développeurs de déployer leur application Xamarin.iOS sur leur appareil iOS **sans** faire partie d’un **programme pour développeurs Apple**. Cet avantage est énorme pour les développeurs, car des tests sur un appareil offrent de nombreux atouts par rapport à des tests sur un simulateur, notamment, mais sans s’y limiter, en termes de mémoire, stockage et connectivité réseau.
 

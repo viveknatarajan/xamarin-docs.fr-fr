@@ -1,5 +1,5 @@
 ---
-title: Distribution en interne
+title: Distribution interne pour les applications Xamarin.iOS
 description: Ce document fournit une brève présentation de la distribution d’applications en interne, en tant que membre du programme Developer Enterprise d’Apple.
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: c11148928ab0fa028f9cc4a9cb50b27a0e195847
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 657370705233e923b482b67fc5afed12631c8187
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785026"
 ---
-# <a name="in-house-distribution"></a>Distribution en interne
+# <a name="in-house-distribution-for-xamarinios-apps"></a>Distribution interne pour les applications Xamarin.iOS
 
 _Ce document fournit une brève présentation de la distribution d’applications en interne, en tant que membre du programme Developer Enterprise d’Apple._
 
@@ -53,7 +54,7 @@ Il est important de noter que vous ne pouvez pas renouveler les certificats arri
 1. Accédez à la section *Certificates, Identifiers & Profiles* (Certificats, identificateurs et profils) du Member Center du programme Developer d’Apple.
 2. Sous *Certificates*, sélectionnez **Production**.
 3. Cliquez sur le bouton **+** pour créer un certificat.
-4. Sous le titre *Production*, sélectionnez **In-House and Ad Hoc (Interne et ad hoc)** :
+4. Sous le titre *Production*, sélectionnez **In-House and Ad Hoc (Interne et ad hoc)**  :
 
    [![](in-house-distribution-images/createcertmanually01.png "Sélectionner In-House and Ad Hoc (Interne et ad hoc)")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
@@ -75,11 +76,11 @@ Sinon, il est possible de demander un certificat via la boîte de dialogue Prefe
 
     [![](in-house-distribution-images/selectteam.png "Sélectionner votre équipe")](in-house-distribution-images/selectteam.png#lightbox)
 
-2. Cliquez ensuite sur le bouton **Créer** à côté de **iOS Distribution Certificate (Certificat de distribution iOS)** :
+2. Cliquez ensuite sur le bouton **Créer** à côté de **iOS Distribution Certificate (Certificat de distribution iOS)**  :
 
    [![](in-house-distribution-images/selectcert.png "Créer le certificat de distribution iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
-2.   Cliquez ensuite sur le bouton **plus (+)**, puis sélectionnez **iOS App Store (App Store iOS)** :
+2.   Cliquez ensuite sur le bouton **plus (+)**, puis sélectionnez **iOS App Store (App Store iOS)**  :
 
    [![](in-house-distribution-images/selectcert.png "Sélectionner l’App Store iOS")](in-house-distribution-images/selectcert.png#lightbox)
 

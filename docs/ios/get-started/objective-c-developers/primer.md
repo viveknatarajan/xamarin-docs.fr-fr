@@ -1,16 +1,17 @@
 ---
 title: Abécédaire du langage C# pour les développeurs Objective-C
-description: Xamarin.iOS permet de partager entre les plateformes du code écrit en C# indépendant de la plateforme. Toutefois, vous souhaitez peut-être que les applications iOS existantes tirent parti du code Objective-C qui a déjà été créé. Cet article est un court manuel de démarrage pour les développeurs Objective-C qui souhaitent passer à Xamarin et au langage C#.
+description: Ce document décrit C# pour les développeurs Objective-C. Il compare et contraste les deux langages en examinant les protocoles et les interfaces, les catégories et les méthodes d’extension, les frameworks et les assemblys, les sélecteurs et les paramètres nommés, et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c4c8e7246b4414fb4153f0dd9eb812ddff1e7b07
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 514841bb18ebed72c07377ff95127dff247f0d71
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786211"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Abécédaire du langage C# pour les développeurs Objective-C
 

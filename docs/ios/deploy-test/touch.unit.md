@@ -1,18 +1,20 @@
 ---
-title: Test unitaire
+title: Tests unitaires d’applications Xamarin.iOS
+description: Ce document fournit une vue d’ensemble des tests unitaires d’une application Xamarin.iOS. Il décrit comment créer un projet de tests unitaires et comment écrire et exécuter des tests.
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3129302cbb2fbe9e2757986317da0ec30601b492
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ce2b452d50222ac3561dab5b76915b7ae634934b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785461"
 ---
-# <a name="unit-testing"></a>Test unitaire
+# <a name="unit-testing-xamarinios-apps"></a>Tests unitaires d’applications Xamarin.iOS
 
 Ce document décrit comment créer des tests unitaires pour vos projets Xamarin.iOS.
 Les tests unitaires avec Xamarin.iOS s’effectuent à l’aide du framework Touch.Unit. Ce framework contient un outil Test Runner iOS, ainsi qu’une version modifiée de NUnit, appelée [Touch.Unit](https://github.com/xamarin/Touch.Unit), qui fournit un ensemble d’API couramment utilisées pour l’écriture de tests unitaires.

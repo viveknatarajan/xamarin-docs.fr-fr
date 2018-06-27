@@ -1,20 +1,19 @@
 ---
 title: Introduction au cycle de vie de développement des logiciels mobiles
-description: Cet article décrit le cycle de vie du développement de logiciels pour les applications mobiles et présente certaines des considérations nécessaires lors de la création de projets pour mobiles. Les développeurs qui veulent passer directement à la création d’applications peuvent dans un premier temps ne pas lire ce guide, puis y revenir plus tard pour mieux comprendre le développement d’applications mobiles.
+description: Ce document décrit le cycle de vie de développement des logiciels mobiles. Il aborde la conception d’expérience utilisateur, la conception d’interface utilisateur, le développement, la stabilisation, la distribution et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: c93a063c9c933e1b9f397d172115471473cf8f35
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 8a95f89ad41ab793d8c26631f1a967180b4c1779
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782331"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduction au cycle de vie de développement des logiciels mobiles
-
-_Cet article décrit le cycle de vie du développement de logiciels pour les applications mobiles et présente certaines des considérations nécessaires lors de la génération de projets mobiles. Les développeurs qui veulent passer directement à la génération d’applications peuvent dans un premier temps ne pas lire ce guide, puis y revenir plus tard pour mieux comprendre le développement mobile._
 
 La création d’applications mobiles peut être aussi simple qu’ouvrir l’IDE, assembler quelques petites choses, faire quelques tests rapides et soumettre le résultat à un App Store, le tout en une seule après-midi. Cela peut aussi consister en un processus extrêmement complexe impliquant une conception préalable rigoureuse, des tests d’utilisabilité, des tests d’assurance qualité sur des milliers d’appareils, un cycle de vie complet avec des versions bêta, puis un déploiement effectué de plusieurs façons différentes.
 

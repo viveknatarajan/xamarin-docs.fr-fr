@@ -1,23 +1,21 @@
 ---
-title: Performances entre plateformes
-description: De nombreuses techniques permettent d’accroître les performances des applications conçues sur la plateforme Xamarin. Collectivement, ces techniques peuvent considérablement réduire la charge de travail d’un processeur, de même que la quantité de mémoire consommée par une application. Cet article décrit et explique ces techniques.
+title: Niveau de performance multiplateforme
+description: Ce document décrit différentes techniques que vous pouvez utiliser pour améliorer les performances d’une application mobile. Il traite du profileur, de la ressource IDisposable, des références faibles, du récupérateur de mémoire SGen, des techniques de réduction de taille et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: f011a92b4789da7328827f184449fd957abdf3ba
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 66234bb44bb0cae9580c119c6029603a528f882e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781980"
 ---
 # <a name="cross-platform-performance"></a>Niveau de performance multiplateforme
 
-_De nombreuses techniques permettent d’accroître le niveau de performance des applications générées sur la plateforme Xamarin. Ensemble, ces techniques peuvent considérablement réduire la charge de travail d’un processeur, de même que la quantité de mémoire consommée par une application. Cet article décrit et explique ces techniques._
-
 Le mauvais niveau de performance d’une application se présente de plusieurs façons. L’application semble ne pas répondre, le défilement de l’affichage est ralenti et la durée de vie de la batterie de l’appareil réduite. Toutefois, l’optimisation des performances implique davantage de choses que l’implémentation d’un code efficace. L’expérience utilisateur liée au niveau de performance de l’application doit également être prise en compte. Par exemple, pour contribuer à améliorer l’expérience utilisateur, vous devez vérifier que les opérations s’exécutent sans empêcher l’utilisateur d’effectuer d’autres activités.
-
 
 <a name="profiler" />
 
@@ -264,7 +262,7 @@ Les langages managés tels que C# utilisent le nettoyage de mémoire pour libé
 
 SGen utilise l’un des trois segments de mémoire pour allouer de l’espace aux objets :
 
--  **La « nursery »** : Là où sont alloués les nouveaux petits objets. Lorsque la nursery manque d’espace, un nettoyage mineur de la mémoire est effectué. Tous les objets actifs seront déplacés vers le segment de mémoire principal.
+-  **La « nursery »**  : Là où sont alloués les nouveaux petits objets. Lorsque la nursery manque d’espace, un nettoyage mineur de la mémoire est effectué. Tous les objets actifs seront déplacés vers le segment de mémoire principal.
 -  **Le segment de mémoire principal** : Là où sont conservés les objets de longue durée. Si le segment de mémoire principal manque d’espace, un nettoyage majeur de la mémoire est effectué. Si un nettoyage de la mémoire ne parvient pas à libérer suffisamment de mémoire, SGen demande davantage de mémoire au système.
 -  **L’espace des objets volumineux** : Là où sont conservés les objets qui nécessitent plus de 8 000 octets. Les objets volumineux ne passeront pas par la nursery et iront directement dans ce segment.
 

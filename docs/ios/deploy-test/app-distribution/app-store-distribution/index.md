@@ -1,21 +1,20 @@
 ---
 title: Distribution dans l’App Store
-description: Ce document traite des exigences relatives à la distribution d’applications sur l’App Store d’Apple.
+description: Ce document décrit comment distribuer une application Xamarin.iOS sur l’App Store. Il explique comment créer un certificat de distribution, comment créer un profil de provisionnement de distribution, et comment configurer iTunes Connect et soumettre l’application.
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 7a38c77dde7a66f2db194cd8888a2c32a3529a9a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42d287285fc9b8842dfb0c86b627d1d5c84189e1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784814"
 ---
 # <a name="app-store-distribution"></a>Distribution dans l’App Store
-
-_Ce document traite des exigences relatives à la distribution d’applications sur l’App Store d’Apple._
 
 Une fois l’application Xamarin.iOS développée, la prochaine étape du cycle de vie du développement du logiciel consiste à la distribuer aux utilisateurs à l’aide de l’App Store d’iTunes. Il s’agit de la manière la plus courante de distribuer des applications. En publiant une application sur l’App Store d’Apple, vous la mettez à la disposition des consommateurs du monde entier.
 
@@ -45,7 +44,7 @@ Vous pouvez sélectionner le même **ID d’application** et les mêmes **appare
 1. Accédez à la section *Certificates, Identifiers & Profiles* (Certificats, identificateurs et profils) du Member Center du programme Developer d’Apple.
 2. Sous *Certificates*, sélectionnez **Production**.
 3. Cliquez sur le bouton **+** pour créer un certificat.
-4. Sous le titre *Production*, sélectionnez **App Store and Ad Hoc (App Store et ad hoc)** :
+4. Sous le titre *Production*, sélectionnez **App Store and Ad Hoc (App Store et ad hoc)**  :
 
     [![](images/createcertmanually01.png "Sélectionner App Store et Ad Hoc")](images/createcertmanually01.png#lightbox)
 5. Cliquez sur **Continue**, puis suivez les instructions permettant de créer une demande de signature de certificat via Trousseaux d’accès :

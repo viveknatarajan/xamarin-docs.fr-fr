@@ -1,17 +1,18 @@
 ---
 title: Options de l’éditeur de liens Xamarin.Mac
-description: La liaison est un puissant outil d’optimisation qui réduit la taille de votre application en supprimant le code inutilisé.
+description: Ce document décrit la liaison dans Xamarin.Mac. La liaison est un puissant outil d’optimisation qui réduit la taille de votre application en supprimant le code inutilisé.
 ms.prod: xamarin
 ms.assetid: F03176C3-F8D4-4DE8-870C-7F27D8CE525A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: f98953574f33612395500787a09351d2ba451802
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e565511d96ac85d89ec51be01934695def3e20bb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791866"
 ---
 # <a name="xamarinmac-linker-options"></a>Options de l’éditeur de liens Xamarin.Mac
 

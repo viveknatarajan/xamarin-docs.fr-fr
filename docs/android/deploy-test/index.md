@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 5b3061f30f6f120cf8edb41ccf5e70ae853aeb9e
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: ce86590b2d05f3b9141d1a5ba42df9274544f9ae
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34549234"
 ---
 # <a name="deployment-and-testing"></a>Déploiement et tests
 
@@ -57,6 +58,11 @@ Cet article aborde le processus de liaison utilisé par Xamarin.Android pour ré
 ## <a name="xamarinandroid-performanceandroiddeploy-testperformancemd"></a>[Performances de Xamarin.Android](~/android/deploy-test/performance.md)
 
 De nombreuses techniques permettent d’accroître les performances des applications générées avec Xamarin.Android. Ensemble, ces techniques peuvent considérablement réduire la charge de travail d’un processeur, de même que la quantité de mémoire consommée par une application.
+
+## <a name="profiling-android-appsandroiddeploy-testprofilingmd"></a>[Profilage des applications Android](~/android/deploy-test/profiling.md)
+
+Ce guide explique comment utiliser les outils de profilage pour examiner les performances et l’utilisation de la mémoire d’une application Android.
+
 
 ## <a name="preparing-an-application-for-releaseandroiddeploy-testrelease-prepindexmd"></a>[Préparation d’une application pour la mise en production](~/android/deploy-test/release-prep/index.md)
 

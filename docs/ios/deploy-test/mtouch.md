@@ -1,23 +1,23 @@
 ---
-title: mtouch
+title: Utilisation de mtouch pour grouper des applications Xamarin.iOS
+description: Ce document décrit mtouch, un outil qui facilite la plupart des étapes nécessaires pour convertir une application Xamarin.iOS en bundle, pour la lancer dans le simulateur et la déployer sur un appareil physique.
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 933ad24a8778ffbee3a1b6089c6ebcf33d26bf84
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9aaa79f929898f6765b97ab0a0c4a30a271d945a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784951"
 ---
-# <a name="mtouch"></a>mtouch
-
+# <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Utilisation de mtouch pour grouper des applications Xamarin.iOS
 
 Les applications iPhone sont livrées en tant qu’offres groupées d’applications. Il s’agit de répertoires avec l’extension `.app` qui contiennent votre code, données, fichiers de configuration et un manifeste utilisé par l’iPhone pour en savoir plus sur votre application.
 
 Le processus de transformation d’un fichier exécutable .NET dans une application est principalement piloté par la commande `mtouch`, un outil qui intègre plusieurs étapes requises pour activer l’application dans une offre groupée. Cet outil est également utilisé pour lancer votre application dans le simulateur et déployer le logiciel sur un appareil de tactiles iPhone ou iPod Touch réel.
-
 
 ## <a name="detailed-instructions"></a>Instructions détaillées
 

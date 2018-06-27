@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de fichier IPA
+title: Prise en charge d’IPA dans Xamarin.iOS
 description: Cet article explique comment créer un fichier IPA afin de déployer une application à l’aide de la distribution ad hoc, soit pour des tests, soit pour distribuer en interne des applications internes.
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d63624ed486079f44e9756ee84612863e6176d7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 288ac813f23f281a1bbed375cadf5faa9d4ff9d0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784874"
 ---
-# <a name="ipa-support"></a>Prise en charge de fichier IPA
+# <a name="ipa-support-in-xamarinios"></a>Prise en charge d’IPA dans Xamarin.iOS
 
 _Cet article explique comment créer un fichier IPA afin de déployer une application à l’aide de la distribution ad hoc, soit pour des tests, soit pour distribuer en interne des applications internes._
 
@@ -163,7 +164,7 @@ Une fois que vous avez créé et sélectionné le profil de provisionnement, que
     ![](ipa-support-images/imagevs05.png "Sélectionner Ad hoc dans la liste déroulante Configuration de build")
 
 7. Générez le projet pour créer le paquet IPA.
-8. Le fichier IPA est généré dans le dossier **Bin > Appareil iOS > Ad hoc (ou Mise en production)** :
+8. Le fichier IPA est généré dans le dossier **Bin > Appareil iOS > Ad hoc (ou Mise en production)**  :
 
     ![](ipa-support-images/imagevs06.png "Paquet IPA dans l’Explorateur de fichiers")
 

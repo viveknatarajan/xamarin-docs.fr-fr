@@ -1,6 +1,6 @@
 ---
-title: Hello, iOS Multiscreen
-description: Dans ce guide en deux parties, nous étendons l’application Phoneword créée dans le guide Hello, iOS pour gérer un deuxième écran. Nous découvrirons progressivement le modèle de conception Model-View-Controller, implémenterons notre première navigation iOS et approfondirons notre connaissance de la structure et des fonctionnalités de l’application iOS.
+title: Hello, iOS multi-écran - Immersion
+description: Ce document examine de manière détaillée l’application Phoneword développée, en particulier model-view-controller, la navigation iOS et d’autres concepts du développement iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 6f3c02bf3e5def0ad4acdb82e4c8a2606159846a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785656"
 ---
-# <a name="hello-ios-multiscreen-deep-dive"></a>Hello, iOS multi-écran - En profondeur
+# <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS multi-écran - Immersion
 
 Au cours de la procédure pas à pas de démarrage rapide, nous avons généré et exécuté notre première application Xamarin.iOS multi-écran. Il est maintenant temps d’approfondir les notions de navigation et d’architecture iOS.
 

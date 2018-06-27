@@ -1,5 +1,5 @@
 ---
-title: Automatiser les tests Xamarin.Forms avec Xamarin.UITest et App Center
+title: Automatisation des tests Xamarin.Forms avec App Center
 description: Le composant UITest de Xamarin peut être utilisé avec Xamarin.Forms pour écrire des tests d’interface utilisateur à exécuter dans le cloud sur des centaines d’appareils.
 ms.prod: xamarin
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/31/2016
-ms.openlocfilehash: 71084aaaaf335473a425bc988c2bb17437cfbb70
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: dc43d8b5623b83be16d437e30290bc8b059be4bb
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847353"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242945"
 ---
-# <a name="automate-xamarinforms-testing-with-xamarinuitest-and-app-center"></a>Automatiser les tests Xamarin.Forms avec Xamarin.UITest et App Center
+# <a name="automate-xamarinforms-testing-with-app-center"></a>Automatiser les tests Xamarin.Forms avec App Center
 
 _Le composant UITest de Xamarin peut être utilisé avec Xamarin.Forms pour écrire des tests d’interface utilisateur à exécuter dans le cloud sur des centaines d’appareils._
 
