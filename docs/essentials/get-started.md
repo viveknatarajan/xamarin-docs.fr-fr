@@ -5,12 +5,12 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f0f6eebbd12041a7be2d8e2dc00a9146b40d675f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a42086f70eb81a761358655b3effb9f8f934c8d4
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783072"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37067286"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Prise en main Xamarin.Essentials
 
@@ -63,6 +63,10 @@ Xamarin.Essentials est disponible sous forme de package NuGet qui peut être ajo
 5. Xamarin.Essentials requiert le programme d’installation spécifique à la plateforme :
 
     # <a name="androidtabandroid"></a>[Android](#tab/android)
+
+    Xamarin.Essentials prend en charge une version minimale Android 4.4, correspondant au niveau de l’API 19, mais la version Android cible pour la compilation doit être 8.1, correspondant au niveau de l’API 27. (Dans Visual Studio, ces deux versions sont définies dans la boîte de dialogue Propriétés du projet pour le projet Android, dans l’onglet manifeste Android. Dans Visual Studio pour Mac, elles sont définies dans la boîte de dialogue Options du projet pour le projet Android, dans l’onglet Application Android.) 
+    
+    Xamarin.Essentials installe la version 27.0.2 des bibliothèques Xamarin.Android.Support dont il a besoin. Toutes les autres bibliothèques Xamarin.Android.Support nécessaires à votre application doivent également être mis à jour vers la version 27.0.2 à l’aide du Gestionnaire de package NuGet. Toutes les bibliothèques Xamarin.Android.Support utilisés par votre application doivent être identiques et doit être au moins la version 27.0.2. Reportez-vous à la [page Résolution des problèmes](troubleshooting.md) si vous rencontrez des problèmes d’ajout de Xamarin.Essentials NuGet ou la mise à jour NuGets dans votre solution.
 
     Dans le projet Android `MainLauncher` ou n’importe quel `Activity` qui est lancé Xamarin.Essentials doivent être initialisés dans le `OnCreate` méthode :
 

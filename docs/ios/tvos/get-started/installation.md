@@ -7,18 +7,21 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: a278a4715ffbcd4b1457f846be6bdf8394143cb4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9168b84b169d2f7919acaf88597919a48cd6710c
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788980"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066843"
 ---
 # <a name="installing-tvos-support-in-xamarin"></a>L’installation de la prise en charge de tvOS dans Xamarin
 
+> [!TIP]
+> Pour commencer à expérimenter avec prise en charge de la version d’évaluation de Xamarin pour iOS 12 et tvOS 12, lire la [guide de mise en route iOS 12](~/ios/platform/introduction-to-ios12/get-started.md).
+
 Apple a publié l’Apple TV 4K et tvOS 11. La plateforme Apple TV est ouverte pour les développeurs, en les autorisant à créer des applications riches et réalistes et de les libérer par le biais du magasin d’applications Apple téléviseurs intégrés.
 
-Xamarin.iOS 11 et versions ultérieures prennent en charge le tvOS 11 Kit de développement logiciel est fourni avec Apple Xcode 9. 
+Xamarin.iOS 11 et versions ultérieures prennent en charge le tvOS 11 Kit de développement logiciel est fourni avec Apple Xcode 9.
 
 - [Notes de publication pour Xamarin.iOS](https://developer.xamarin.com/releases/ios/)
 - [Notes de publication pour Xcode](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876)

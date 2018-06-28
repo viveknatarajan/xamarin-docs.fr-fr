@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: e120b917a106d01067e073219bbe2688c2811448
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fffb78d6f2599c231617ed025d41282beffd319b
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33918758"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066453"
 ---
 # <a name="c-6-new-features-overview"></a>6 nouvelles fonctionnalités c# vue d’ensemble
 
@@ -49,7 +49,7 @@ L’exemple d’application est un programme de ligne de commande qui s’exécu
 Le compilateur Mono C# 6 est inclus dans Mono 4.0 et versions ultérieur, qui est [disponible gratuitement en téléchargement](http://www.mono-project.com/download/).
 Visual Studio pour Mac met automatiquement à jour l’installation Mono sur votre système.
 
-Les utilisateurs de Windows doivent avoir [Visual Studio 2015 ou 2017 ^](https://www.visualstudio.com/) installé pour compiler le code c# 6 (même si vous choisissez Xamarin Studio pour Windows en tant que votre interface IDE).
+Les utilisateurs de Windows doivent avoir [Visual Studio 2015 ou 2017 ^](https://visualstudio.microsoft.com/) installé pour compiler le code c# 6 (même si vous choisissez Xamarin Studio pour Windows en tant que votre interface IDE).
 
 ^ ou *[Microsoft Build Tools 2015](http://www.microsoft.com/download/details.aspx?id=48159)* pour la commande de ligne compilation ou serveurs de builds, par exemple.
 

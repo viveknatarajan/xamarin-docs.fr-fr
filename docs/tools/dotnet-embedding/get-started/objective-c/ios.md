@@ -6,12 +6,12 @@ ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 3da76e650281cbf7320b88fa9c76948865d7a2fb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 683f448c3e0cdba1bbe3ba68f0db3225675f5830
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793559"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066895"
 ---
 # <a name="getting-started-with-ios"></a>Prise en main d’e/s
 
@@ -19,7 +19,7 @@ ms.locfileid: "34793559"
 
 Outre les exigences de nos [prise en main de Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guide, vous devez également :
 
-* [Xamarin.iOS 10.11](https://www.visualstudio.com/xamarin/) ou version ultérieure
+* [Xamarin.iOS 10.11](https://visualstudio.microsoft.com/xamarin/) ou version ultérieure
 
 ## <a name="hello-world"></a>Hello World
 

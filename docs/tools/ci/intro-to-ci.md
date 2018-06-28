@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: topgenorth
 ms.author: toopge
 ms.date: 07/19/2017
-ms.openlocfilehash: 333e672b054c38370847338e9a4ffad94c90bb5d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 67fc32fc9f79d54274642fbab2d0c2f8afd14d8c
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793660"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066505"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduction à l’intégration continue avec Xamarin
 
@@ -48,14 +48,14 @@ Il existe un écosystème complet d’outils commerciaux et open source conçu p
 
 ### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services et Team Foundation Server
 
-[Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs) (VSTS) et [Team Foundation Server](http://msdn.microsoft.com/vstudio/ff637362.aspx) (TFS) sont des outils de collaboration de Microsoft pour l’intégration continue build services, suivi de tâches, de planification agile et création de rapports outils et version contrôle. Avec le contrôle de version, VSTS et TFS peut fonctionner avec son propre système (Team Foundation Version Control ou TFVC) ou avec des projets hébergés sur GitHub.
+[Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/) (VSTS) et [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) sont des outils de collaboration de Microsoft pour l’intégration continue build services, suivi de tâches, de planification agile et création de rapports outils et version contrôle. Avec le contrôle de version, VSTS et TFS peut fonctionner avec son propre système (Team Foundation Version Control ou TFVC) ou avec des projets hébergés sur GitHub.
 
  - Visual Studio Team Services fournit des services via le cloud. Son principal avantage est qu’il ne nécessite pas un matériel dédié ou une infrastructure et est accessible à partir de n’importe où via les navigateurs web et des outils de développement courants tels que Visual Studio, rendant attrayante pour les équipes qui sont géographiquement distribué. Il est disponible pour les équipes de cinq développeurs ou moins, une fois les licences supplémentaires peuvent être achetées pour prendre en charge d’une équipe croissante.
  - TFS est conçu pour les serveurs Windows locaux et accessibles via un réseau local ou une connexion VPN au réseau. L’avantage principal est entièrement contrôler la configuration des serveurs de build et peut installer les logiciels supplémentaires ou des services sont nécessaires. TFS a une édition Express libre pour des petites équipes.
 
 TFS et VSTS sont intégrés à Visual Studio et permettent aux développeurs d’effectuer de contrôle de version et les tâches de l’élément de configuration à partir d’un IDE unique sans quitter. Le plug-in Team Explorer Everywhere pour Eclipse (voir ci-dessous) est également disponible. Visual Studio pour Mac n’offre pas une prise en charge de TFS ou VSTS.
 
-Système de génération du Service Visual Studio Team a une prise en charge directe pour les projets de Xamarin, dans lequel vous créez une définition de build pour chaque plateforme que vous souhaitez cible (Android, iOS et Windows). La licence Xamarin appropriée est nécessaire pour chaque définition de build. Il est également possible de se connecter à une variable locale, prenant en charge de Xamarin TFS build server pour Visual Studio Team Services à cet effet. Avec cette configuration, les builds sont en attente pour VSTS seront déléguées pour le serveur local. Pour plus d’informations, reportez-vous à [déployer et configurer un serveur de builds](https://msdn.microsoft.com/library/ms181712.aspx). Vous pouvez également utiliser un autre outil de génération telle que Jenkins ou une équipe.
+Système de génération du Service Visual Studio Team a une prise en charge directe pour les projets de Xamarin, dans lequel vous créez une définition de build pour chaque plateforme que vous souhaitez cible (Android, iOS et Windows). La licence Xamarin appropriée est nécessaire pour chaque définition de build. Il est également possible de se connecter à une variable locale, prenant en charge de Xamarin TFS build server pour Visual Studio Team Services à cet effet. Avec cette configuration, les builds sont en attente pour VSTS seront déléguées pour le serveur local. Pour plus d’informations, reportez-vous à [déployer et configurer un serveur de builds](https://docs.microsoft.com/vsts/pipelines/agents/agents?view=vsts). Vous pouvez également utiliser un autre outil de génération telle que Jenkins ou une équipe.
 
 Un résumé complet de toutes les fonctionnalités d’Application Lifecycle Management (ALM) de Visual Studio, Visual Studio Team Services et Team Foundation Server, consultez [gestion du cycle de vie des applications avec les applications Xamarin](https://msdn.microsoft.com/library/mt162217(v=vs.140).aspx) sur MSDN.
 
@@ -107,7 +107,7 @@ Il est également possible de lier un serveur TFS local à un projet Visual Stud
 
 ### <a name="visual-studio-team-services-and-jenkins"></a>Jenkins et visual Studio Team Services
 
-Si vous utilisez Jenkins créer des applications, vous pouvez stocker votre code dans Visual Studio Team Services ou Team Foundation Server et continuer à utiliser Jenkins pour vos builds de l’élément de configuration. Vous pouvez déclencher une build Jenkins lorsque vous effectuez un push au référentiel Git de votre projet d’équipe ou lorsque vous archivez code dans TFVC code. Pour plus d’informations, consultez [Jenkins avec Visual Studio Team Services](https://www.visualstudio.com/docs/marketplace/integrate/service-hooks/services/jenkins).
+Si vous utilisez Jenkins créer des applications, vous pouvez stocker votre code dans Visual Studio Team Services ou Team Foundation Server et continuer à utiliser Jenkins pour vos builds de l’élément de configuration. Vous pouvez déclencher une build Jenkins lorsque vous effectuez un push au référentiel Git de votre projet d’équipe ou lorsque vous archivez code dans TFVC code. Pour plus d’informations, consultez [Jenkins avec Visual Studio Team Services](https://docs.microsoft.com/en-us/vsts/service-hooks/services/jenkins?view=vsts).
 
 [![](intro-to-ci-images/intro04-small.png "Si vous utilisez Jenkins créer des applications, vous pouvez stocker votre code dans Visual Studio Team Services ou Team Foundation Server et continuer à utiliser Jenkins pour vos builds de l’élément de configuration")](intro-to-ci-images/intro04.png#lightbox)
 
