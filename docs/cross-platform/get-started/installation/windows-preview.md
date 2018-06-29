@@ -6,12 +6,12 @@ ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
-ms.openlocfilehash: 17deacf115042a2fcd6bad9e22a630eadb432d44
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 12a661a7cb0e92046e56c5c2ece6e8504252ca10
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36269016"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066856"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Installation de la préversion Xamarin sur W
 
@@ -21,7 +21,7 @@ Visual Studio 2017 ne prend pas en charge les canaux stables, alpha et bêta de 
 - **Préversion** : équivalent aux canaux _Alpha_ et _Bêta_ dans Visual Studio pour Mac
 
 > [!TIP] 
-> Pour tester les fonctionnalités en version préliminaire, vous devez [télécharger le programme d’installation de Visual Studio 2017 Preview](https://www.visualstudio.com/vs/preview/), qui offre la possibilité d’installer des **Préversions** de Visual Studio côte à côte avec la version stable (Mise en production). Vous trouverez plus d’informations sur les nouveautés de Visual Studio 2017 dans les [notes de mise en production](/visualstudio/releasenotes/vs2017-preview-relnotes).
+> Pour tester les fonctionnalités en version préliminaire, vous devez [télécharger le programme d’installation de Visual Studio 2017 Preview](https://visualstudio.microsoft.com/vs/preview/), qui offre la possibilité d’installer des **Préversions** de Visual Studio côte à côte avec la version stable (Mise en production). Vous trouverez plus d’informations sur les nouveautés de Visual Studio 2017 dans les [notes de mise en production](/visualstudio/releasenotes/vs2017-preview-relnotes).
 
 La Préversion de Visual Studio peut inclure Des Préversions correspondantes de la fonctionnalité Xamarin, y compris :
 

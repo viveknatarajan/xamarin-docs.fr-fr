@@ -1,5 +1,5 @@
 ---
-title: Introduction à macOS Sierra
+title: Introduction à macOS Mojave
 description: Ce document fournit un haut niveau de la vue d’ensemble des fonctionnalités nouvelles et mises à jour de Mojave macOS pour l’aperçu de quels Xamarin version fournit actuellement des liaisons c#.
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: b711cc92680e94734f0077f2aa03c1d32944af09
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 810614bc5877b0bfa6e5295fac507da76af0b797
+ms.sourcegitcommit: 4939748d537cbb1934a3b5b22add39ef3d9aa64d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/28/2018
-ms.locfileid: "37067297"
+ms.locfileid: "37091530"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introduction à macOS Mojave
 
