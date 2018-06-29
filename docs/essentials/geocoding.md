@@ -5,12 +5,12 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 001cca2524e495d64c6781d8a2fc5cb58e771e6e
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 063adba82d96e7fcc64d7ec49a0c0133e1cef8ef
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321442"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080324"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials : le géocodage
 
@@ -61,7 +61,7 @@ try
     var location = locations?.FirstOrDefault();
     if (location != null)
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}");
+        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
     }
 }
 catch (FeatureNotSupportedException fnsEx)
@@ -73,6 +73,8 @@ catch (Exception ex)
     // Handle exception that may have occured in geocoding
 }
 ```
+
+L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus altitude. 
 
 Mise en route [placemarks](xref:Xamarin.Essentials.Placemark) pour un ensemble existant de coordonnées :
 
@@ -111,6 +113,10 @@ catch (Exception ex)
     // Handle exception that may have occurred in geocoding
 }
 ```
+
+## <a name="distance-between-two-locations"></a>Distance entre deux emplacements
+
+Le [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) classes définissent des méthodes pour calculer la distance entre deux emplacements. Consultez l’article [ **Xamarin.Essentials : géolocalisation** ](geolocation.md#calculate-distance) pour obtenir un exemple.
 
 ## <a name="api"></a>API
 

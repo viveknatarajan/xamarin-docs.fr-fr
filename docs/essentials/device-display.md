@@ -5,12 +5,12 @@ ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 830b96bcc21397047cb5aaacb5c568bc2ee863c4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 3060d56e14fb0d3801a96ec0fe6e24c9efda4dac
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782370"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080311"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials : Informations d’affichage périphérique
 
@@ -50,7 +50,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-Le **DeviceDisplay** classe également expose et événements qui peuvent s’abonner qui déclenche un événement chaque fois que les modifications de métrique d’écran :
+Le **DeviceDisplay** classe expose également un événement qui peut s’abonner à qui est déclenché chaque fois que les modifications de métrique d’écran :
 
 ```csharp
 public class ScreenMetricsTest
@@ -61,7 +61,7 @@ public class ScreenMetricsTest
         DeviceDisplay.ScreenMetricsChanaged += OnScreenMetricsChanged;
     }
 
-    void OnScreenMetricsChanged(ScreenMetricsChanagedEventArgs  e)
+    void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)
     {
         // Process changes
         var metrics = e.Metrics;

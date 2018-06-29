@@ -5,12 +5,12 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 99529f08348254dff7577b7e82da739fabd63a14
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8229a372659e7918457a9d2f358b871e1a3f5978
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781863"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080455"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials : accéléromètre
 
@@ -89,6 +89,8 @@ Exemples :
 - **Jeu** – taux approprié pour les jeux (ne pas retourne toujours sur le thread d’interface utilisateur).
 - **Normal** – taux par défaut approprié pour les modifications d’orientation de l’écran.
 - **L’interface utilisateur** – taux approprié pour l’interface utilisateur générale.
+
+Si votre gestionnaire d’événements n’est pas garanti pour s’exécuter sur le thread d’interface utilisateur et si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, utilisez la [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) méthode à exécuter ce code sur le thread d’interface utilisateur.
 
 ## <a name="api"></a>API
 
