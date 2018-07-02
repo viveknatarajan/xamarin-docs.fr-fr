@@ -1,17 +1,18 @@
 ---
 title: Journal de débogage Android
+description: Comment utiliser le journal de débogage pour déboguer des applications Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/04/2018
-ms.openlocfilehash: e0e22fe35dc5042a7b3c895a250803e936611629
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.date: 06/22/2018
+ms.openlocfilehash: 442606f456e6f42ee178cd93253883a1d9de52c4
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "30822880"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935215"
 ---
 # <a name="android-debug-log"></a>Journal de débogage Android
 
@@ -22,7 +23,7 @@ L’une des astuces couramment utilisées par les développeurs pour déboguer l
 L’outil **Journal de débogage** fournit un moyen d’afficher la sortie du journal pendant le débogage d’une application via Visual Studio. Le journal de débogage prend en charge les périphériques suivants :
 
 -   Les téléphones, tablettes et wearables Android physiques.
--   Un appareil Android virtuel en cours d’exécution sur l’émulateur Android de Google. 
+-   Un appareil Android virtuel en cours d’exécution sur l’émulateur Android. 
 
 > [!NOTE]
 > L’outil **Journal de débogage** ne fonctionne pas avec Xamarin Live Player.

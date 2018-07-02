@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 288ac813f23f281a1bbed375cadf5faa9d4ff9d0
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4fd64a1ebf05dd149304f49d8282ee1b38bfcf03
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784874"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321361"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Prise en charge d’IPA dans Xamarin.iOS
 
@@ -132,10 +132,10 @@ Dans certains cas, par exemple dans un environnement d’intégration continue (
 
      ![](ipa-support-images/imagexs03.png "Sélectionner iTunesMetadata.plist dans la liste")
 
-1. Appelez directement **xbuild** (ou **mdtool** pour l’API classique) et passez cette propriété sur la ligne de commande :
+1. Appelez **msbuild** directement et passez cette propriété sur la ligne de commande :
 
     ```bash
-    /Library/Frameworks/Mono.framework/Commands/xbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
+    /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -178,7 +178,7 @@ Une nouvelle propriété **MSBuild** `IpaPackageDir` a été ajoutée pour facil
 
 Il existe plusieurs façons d’utiliser la nouvelle propriété :
 
-Par exemple, pour envoyer le fichier **.ipa** vers l’ancien répertoire par défaut (comme dans Xamarin.iOS 9.6 et les versions antérieures), vous pouvez affecter à la propriété `IpaPackageDir` la valeur `$(OutputPath)` en adoptant l’une des approches suivantes. Les deux approches sont compatibles avec toutes les builds d’API unifiée Xamarin.iOS, notamment les builds d’IDE et les builds de ligne de commande qui utilisent **xbuild**, **msbuild** ou **mdtool** :
+Par exemple, pour envoyer le fichier **.ipa** vers l’ancien répertoire par défaut (comme dans Xamarin.iOS 9.6 et les versions antérieures), vous pouvez affecter à la propriété `IpaPackageDir` la valeur `$(OutputPath)` en adoptant l’une des approches suivantes. Les deux approches sont compatibles avec toutes les builds d’API unifiée Xamarin.iOS, notamment les builds d’IDE et les builds de ligne de commande qui utilisent **msbuild**, **xbuild** ou **mdtool** :
 
 - La première option consiste à définir la propriété `IpaPackageDir` dans un élément `<PropertyGroup>` d’un fichier **MSBuild**. Par exemple, vous pouvez ajouter le `<PropertyGroup>` suivant au bas du fichier **.csproj** du projet d’application iOS (juste avant la balise de fermeture `</Project>`) :
 
@@ -212,19 +212,17 @@ Par exemple, pour envoyer le fichier **.ipa** vers l’ancien répertoire par d�
     </PropertyGroup>
     ```
 
-Il existe une autre technique pour les builds de ligne de commande **msbuild** ou **xbuild**. Elle consiste à ajouter un argument de ligne de commande `/p:` pour définir la propriété `IpaPackageDir`. Dans ce cas, notez que **msbuild** ne développe pas les expressions `$()` passées sur la ligne de commande, il est donc impossible d’utiliser la syntaxe `$(OutputPath)`. À la place, vous devez fournir un chemin complet. La commande Mono **xbuild** développe les expressions `$()`, mais il est tout de même préférable d’utiliser un chemin complet, car **xbuild** risque d’être déprécié au profit de la [version multiplateforme de **msbuild**](http://www.mono-project.com/docs/about-mono/releases/4.4.0/#msbuild-preview-for-os-x) dans les versions futures.
+Il existe une autre technique pour les builds de ligne de commande **msbuild** ou **xbuild**. Elle consiste à ajouter un argument `/p:` pour définir la propriété `IpaPackageDir`. Dans ce cas, notez que **msbuild** ne développe pas les expressions `$()` passées sur la ligne de commande, il est donc impossible d’utiliser la syntaxe `$(OutputPath)`. À la place, vous devez fournir un chemin complet. La commande Mono **xbuild** développe les expressions `$()`, mais il est tout de même préférable d’utiliser un nom de chemin complet, car **xbuild** a été déprécié au profit de la [version multiplateforme de **msbuild**](https://www.mono-project.com/docs/about-mono/releases/5.0.0/#msbuild).
 
 Voici à quoi peut ressembler un exemple complet de cette approche sur Windows :
-
 
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build SingleViewIphone1.sln
 ```
-
 Ou sur Mac :
 
 ```bash
-xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
+msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
 <a name="installipa" />
