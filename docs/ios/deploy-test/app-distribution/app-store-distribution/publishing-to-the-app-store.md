@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 489d9fa569b083f5cb655dc503ab4fa551810b6d
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785698"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209472"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publication d’applications Xamarin.iOS sur l’App Store
+
+> [!IMPORTANT]
+> Apple [a indiqué](https://developer.apple.com/news/?id=05072018a) qu’à partir de juillet 2018 toutes les applications et mises à jour envoyées à l’App Store doivent avoir été créées avec le Kit de développement logiciel (SDK) d’iOS 11 et [prendre en charge l’écran de l’iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
 
 Pour permettre la distribution des applications sur tous les appareils iOS, Apple impose la publication de ces applications via l’*App Store*, le point d’achat unique des applications iOS. Avec plus de 500 000 applications dans l’App Store, les développeurs de nombreux types d’application ont capitalisé sur le succès massif de ce point de distribution unique. L’App Store est une solution clé en main, qui offre à la fois un système de distribution et un système de paiement aux développeurs d’applications.
 
@@ -231,7 +234,7 @@ Le plug-in Xamarin pour Visual Studio ne prend pas en charge le workflow d’arc
 1. Sélectionnez **Signature du bundle iOS**, puis remplacez le profil de provisionnement existant par le profil de provisionnement App Store :
 
     ![](publishing-to-the-app-store-images/ipa01.png "Sélectionner Signature du bundle iOS, puis remplacer le profil de provisionnement existant par le profil de provisionnement App Store")
-1. Sélectionnez **Options IPA iOS**, puis **Ad hoc** dans la liste déroulante **Configuration** (si Ad hoc n’apparaît pas, sélectionnez **Mise en production** à la place) :
+1. Sélectionnez **Options IPA iOS > Configuration > Ad hoc** (si **Ad hoc** n’est pas proposé, sélectionnez **Version** à la place) et cochez la case correspondant à la création d’un fichier IPA :
 
     ![](publishing-to-the-app-store-images/imagevs02.png "Sélectionner Ad hoc dans la liste déroulante Configuration")
 

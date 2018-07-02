@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: d5cf15b8ecd225fb75a3cfa0017cb84bc13cce1b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782019"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066466"
 ---
 # <a name="uninstalling-xamarin"></a>Désinstallation de Xamarin
 
@@ -27,7 +27,7 @@ Ce guide peut être utilisé pour désinstaller chaque produit individuellement 
 - [Xamarin.Android](#uninstallandroid)
 - [Xamarin.iOS](#uninstallios)
 - [Xamarin.Mac](#uninstallmac)
-- [Inspector et Workbooks](#uninstallworkbooks)
+- [Workbooks](#uninstallworkbooks)
 - [Xamarin Profiler](#uninstallprofiler)
 - [Installer](#uninstallinstaller)
 
@@ -146,9 +146,9 @@ rm -rf ~/Library/Xamarin.Mac
 
 <a name="uninstallworkbooks" />
 
-### <a name="uninstall-workbooks-and-inspector"></a>Désinstaller Workbooks et Inspector
+### <a name="uninstall-workbooks"></a>Désinstaller Workbooks
 
-Pour supprimer Xamarin Inspector and Workbooks version 1.2.2 et ultérieur, utilisez les commandes suivantes dans Terminal :
+Pour supprimer Xamarin Workbooks 1.2.2 (ou une version ultérieure), utilisez les commandes suivantes dans le terminal :
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -269,7 +269,7 @@ Pour désinstaller entièrement Visual Studio 2017, choisissez **Désinstaller*
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 et versions antérieures
 
-Pour désinstaller intégralement Visual Studio 2015, utilisez [la réponse du support sur visualstudio.com](https://www.visualstudio.com/vs/support/vs2015/uninstall-visual-studio-2015/).
+Pour désinstaller intégralement Visual Studio 2015, utilisez [la réponse du support sur visualstudio.com](https://visualstudio.microsoft.com/vs/support/vs2015/uninstall-visual-studio-2015/).
 
 Sur les ordinateurs Windows, Xamarin peut être désinstallé via le **Panneau de configuration**. Accédez à **Programmes et fonctionnalités** ou à **Programmes > Désinstaller un programme**, comme illustré ci-dessous :
 
