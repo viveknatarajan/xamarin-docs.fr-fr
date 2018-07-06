@@ -1,59 +1,61 @@
 ---
 title: Liaison Objective-C
-description: Ce document fournit des liens vers les guides pas à pas qui décrivent comment créer c# des liaisons avec code Objective-C, permettant aux développeurs d’utiliser des bibliothèques standard dans les applications Xamarin.
+description: Ce document fournit des liens vers les différents guides qui expliquent comment créer des liaisons c# en code Objective-C, permettant aux développeurs de consommer des bibliothèques prêts à l’emploi dans les applications Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 55c28387424dd7397280ffa255d94a950618d5ab
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 3f1e1ce324e849c0c939d936eb6ee1470cf24a3b
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781005"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855154"
 ---
 # <a name="binding-objective-c"></a>Liaison Objective-C
 
-Cette section comprend un grand nombre de documents qui couvrent la création de liaisons aux bibliothèques de Objective-C peuvent donc être appelés à partir de c# des applications créées avec Xamarin.iOS ou Xamarin.Mac.
+Cette section comprend un grand nombre de documents qui couvrent la création de liaisons aux bibliothèques Objective-C, peuvent donc être appelés à partir d’applications c# créées avec Xamarin.iOS ou Xamarin.Mac.
 
 ##  <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Vue d’ensemble](~/cross-platform/macios/binding/overview.md)
 
-Ce document contient certains éléments internes de la façon dont une liaison s’effectue. Il s’agit d’un document avancé avec des informations techniques.
+Ce document contient certains éléments internes de la façon dont une liaison a lieu. Il est un document avec des informations techniques avancées.
 
 ##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Liaison de bibliothèques Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
-Ce document décrit le processus utilisé pour créer des liaisons c# de l’API de Objective-C et comment les idiomes dans Objective-C sont mappées aux idiomes utilisées dans .NET.
+Ce document décrit le processus utilisé pour créer des liaisons c# de l’API de Objective-C et comment les idiomes en Objective-C sont mappées aux idiomes utilisés dans .NET.
 Si vous liez simplement les API C, vous devez utiliser le mécanisme de .NET standard pour ce faire, l’infrastructure de P/Invoke.
 
 ##  <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guide de référence de définition de liaison](~/cross-platform/macios/binding/binding-types-reference.md)
 
-Il s’agit du guide de référence qui décrit tous les attributs disponibles pour les auteurs de la liaison pour piloter le processus de génération de liaison.
+Il s’agit du guide de référence qui décrit tous les attributs disponibles pour les auteurs de liaison pour piloter le processus de génération de liaison.
 
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 
-Objectif Sharpie est un outil de ligne de commande permettant de démarrer le premier test d’une liaison. Il fonctionne en analysant les fichiers d’en-tête d’une bibliothèque native pour mapper l’API publique dans le [définition de liaison](~/cross-platform/macios/binding/objective-c-libraries.md) (processus qui peut également être effectué manuellement).
+Objectif Sharpie est un outil de ligne de commande pour aider à démarrer la première passe d’une liaison. Il fonctionne en analysant les fichiers d’en-tête d’une bibliothèque native pour mapper l’API publique dans le [définition de liaison](~/cross-platform/macios/binding/objective-c-libraries.md) (un processus qui peut également être effectué manuellement).
 
 ## <a name="ios"></a>iOS
 
-Le [page de liaison iOS](~/ios/platform/binding-objective-c/index.md) revient à ces ressources communes de liaison, en outre les exemples ci-dessous.
+Le [page de liaison iOS](~/ios/platform/binding-objective-c/index.md) revient à ces ressources communes de la liaison, en outre les exemples ci-dessous.
 
 ### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Procédure pas à pas : Liaison d’une bibliothèque Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 
-Cet article fournit une procédure pas à pas détaillées de création d’un projet de liaison à l’aide de la source ouverte [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) projet Objective-C comme exemple. La bibliothèque InfColorPicker fournit un contrôleur de vue réutilisables qui permettent à l’utilisateur de sélectionner une couleur en fonction de sa représentation sous forme de TSL, effectuer une sélection de couleur plus conviviaux. Objectif Sharpie permet de faciliter le processus de liaison.
+Cet article fournit une procédure de création d’un projet de liaison à l’aide de l’open source [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) projet Objective-C comme exemple. La bibliothèque InfColorPicker fournit un contrôleur d’affichage réutilisable permettant aux utilisateurs de sélectionner une couleur en fonction de sa représentation sous forme de TSL, effectuer une sélection de couleur plus conviviales. Objectif Sharpie permet de faciliter le processus de liaison.
 
-### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[Exemples de liaison](https://github.com/mono/monotouch-bindings)
+### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[Exemples de liaisons](https://github.com/mono/monotouch-bindings)
 
-Une collection de liaisons de tiers qui peuvent être utilisées une référence lors de la création de nouveaux projets de liaison.
+Une collection de liaisons de fournisseurs tiers qui peuvent être utilisés une référence lors de la création de nouveaux projets de liaison.
 
 ## <a name="mac"></a>Mac
 
-Historiquement [liaison de Mac](~/mac/platform/binding.md) a été largement des processus manuels. Il y a actuellement un [aperçu téléchargeable](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) de prise en charge du projet de liaison Mac pour une future version de Visual Studio pour Mac.
+Historiquement [liaison de Mac](~/mac/platform/binding.md) a été un processus très manuel. Il existe actuellement un [aperçu téléchargeable](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) de prise en charge du projet de liaison Mac pour une future version de Visual Studio pour Mac.
 
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [e/s de liaison](~/ios/platform/binding-objective-c/index.md)
-- [Liaison de Mac](~/mac/platform/binding.md)
+- [iOS de liaison](~/ios/platform/binding-objective-c/index.md)
+- [Liaison du Mac](~/mac/platform/binding.md)
+- [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials : batterie'
-description: Ce document décrit la classe de la batterie dans Xamarin.Essentials, ce qui vous permet de vérifier les informations sur la pile de l’appareil et surveillez les modifications apportées.
+description: Ce document décrit la classe de la batterie dans Xamarin.Essentials, ce qui vous permet de vérifier les informations de batterie de l’appareil et surveillez les modifications apportées.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 35764b4c2270359a7c010e1186f882e236e17fd5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1ed0ef5e013967545e739733c887702325f60c3f
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782084"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855053"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials : batterie
 
-![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **batterie** classe vous permet de contrôler l’appareil les informations de batterie et surveillez les modifications apportées.
+Le **batterie** classe vous permet de vérifier les informations sur la pile et surveillez les modifications apportées de l’appareil.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **batterie** fonctionnalité de la configuration spécifique plate-forme suivante est requise.
+Pour accéder à la **batterie** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Le `Battery` autorisation est requise et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
+Le `Battery` autorisation est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajouter :
+Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Battery)]
@@ -40,15 +40,15 @@ Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et aj
 <uses-permission android:name="android.permission.BATTERY" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Anroid et ouvrez les propriétés du projet. Sous **manifeste Android** de trouver la **les autorisations requises :** zone et vérifiez la **batterie** autorisation. Met automatiquement à jour la **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Anroid et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **batterie** autorisation. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requise.
+Aucune configuration supplémentaire n’est requis.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Aucune configuration supplémentaire n’est requise.
+Aucune configuration supplémentaire n’est requis.
 
 -----
 
@@ -108,7 +108,7 @@ switch (source)
 }
 ```
 
-Chaque fois qu’une des propriétés de la batterie modifier un événement est déclenché :
+Chaque fois qu’une propriétés de la batterie de modifier un événement est déclenché :
 
 ```csharp
 public class BatteryTest
@@ -129,13 +129,23 @@ public class BatteryTest
 }
 ```
 
-## <a name="platform-differences"></a>Différences de plateformes
+## <a name="platform-differences"></a>Différences de plateforme
 
-| Plateforme | Différence |
-| --- | --- |
-| iOS | Appareil doit être utilisé pour tester l’API. |
-| iOS | Seulement retournera CA ou la batterie pour PowerSource. |
-| UWP | Seulement retournera CA ou la batterie pour PowerSource. |
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Aucune différence de la plateforme.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+* Appareil doit être utilisé pour tester les API. 
+* Retourne uniquement des `Ac` ou `Battery` pour `PowerSource`. 
+* Pas possible d’annuler la vibration.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+* Retourne uniquement des `Ac` ou `Battery` pour `PowerSource`. 
+
+-----
 
 ## <a name="api"></a>API
 
