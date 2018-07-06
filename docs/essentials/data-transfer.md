@@ -5,16 +5,16 @@ ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 69d429b1cdbbbd6dbb53e3cefa89695666494ba7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c1ed298e1317d0a3f78f4dbd9fc89a2b01c6958c
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782383"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855108"
 ---
 # <a name="xamarinessentials-data-transfer"></a>Xamarin.Essentials : Transfert de données
 
-![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
 Le **DataTransfer** classe permet à une application de partager des données telles que des liens web et de texte pour d’autres applications sur l’appareil.
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité transfert de données fonctionne en appelant le `RequestAsync` méthode avec une charge de demande de données qui inclut des informations à partager avec d’autres applications. Texte et les Uri peuvent être mélangés et chaque plate-forme gère un filtrage basé sur le contenu.
+La fonctionnalité transfert de données fonctionne en appelant le `RequestAsync` méthode avec une charge de requête de données qui inclut des informations à partager avec d’autres applications. Texte et les Uri peuvent être mélangés, et chaque plateforme gérera un filtrage basé sur le contenu.
 
 ```csharp
 
@@ -56,17 +56,25 @@ Interface utilisateur à partager dans une application externe qui s’affiche l
 
 ![Transfert de données](data-transfer-images/data-transfer.png)
 
-## <a name="platform-differences"></a>Différences de plateformes
+## <a name="platform-differences"></a>Différences de plateforme
 
-| Plateforme | Différence |
-| --- | --- |
-| Android | Propriété de l’objet est utilisée pour l’objet souhaité d’un message. |
-| iOS | Objet ne pas utilisé. |
-| iOS | Titre non utilisé. |
-| UWP | Titre sera par défaut pour le nom de l’Application s’il n’est pas définie. |
-| UWP | Objet ne pas utilisé. |
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+* `Subject` propriété est utilisée pour l’objet souhaité d’un message.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+* `Subject` non utilisé.
+* `Title` non utilisé. 
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+* `Title` seront par défaut pour le nom de l’Application n’est pas défini.
+* `Subject` non utilisé.
+
+-----
 
 ## <a name="api"></a>API
 
-- [Code source de transfert de données](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
+- [Code de source de transfert de données](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
 - [Documentation de l’API de transfert de données](xref:Xamarin.Essentials.DataTransfer)
