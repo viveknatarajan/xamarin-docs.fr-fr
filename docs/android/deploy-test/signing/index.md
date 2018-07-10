@@ -1,32 +1,30 @@
 ---
 title: Signature du paquet d’application Android
+description: Comment signer le paquet d’application Android (APK) pour la publication
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/21/2018
-ms.openlocfilehash: 6a4164ea4a56ee7c1b3c1abd05f7b1bb95aede4f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 07/02/2018
+ms.openlocfilehash: 4afcf42750cd9366bfd9fa5855fe1e7c0f114162
+ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458799"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403310"
 ---
 # <a name="signing-the-android-application-package"></a>Signature du paquet d’application Android
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Dans [Préparation d’une application pour sa mise en production](~/android/deploy-test/release-prep/index.md), le **Gestionnaire d’archives** a été utilisé pour générer l’application et la placer dans une archive en vue de sa signature et de sa publication. Cette section explique comment créer une identité de signature Android et un nouveau certificat de signature pour les applications Android et comment publier l’application archivée *ad hoc* sur disque. Le fichier APK ainsi créé peut être chargé de façon indépendante (sideloaded) sur les appareils Android sans passer par un App Store.
 
-Cette section décrit le workflow de publication intégré pour la signature de l’APK fourni par Visual Studio. Dans [Préparation d’une application pour sa mise en production](~/android/deploy-test/release-prep/index.md), le **Gestionnaire d’archives** a été utilisé pour générer l’application et la placer dans une archive en vue de sa signature et de sa publication. Cette section explique comment créer une identité de signature Android et un nouveau certificat de signature pour les applications Android et comment publier l’application archivée *ad hoc* sur disque.
-Le fichier APK ainsi créé peut être chargé de façon indépendante (sideloaded) sur les appareils Android sans passer par un App Store.
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Dans [Archiver pour publication](~/android/deploy-test/release-prep/index.md#archive), la boîte de dialogue **Canal de distribution** proposait deux options pour la distribution. Sélectionnez **Ad-Hoc** :
 
 [![Boîte de dialogue Canal de distribution](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
-
-Dans cette section, nous allons utiliser le workflow de publication intégré de Visual Studio pour Mac afin de signer l’APK. Dans [Préparation d’une application pour sa mise en production](~/android/deploy-test/release-prep/index.md), nous avons utilisé le **Gestionnaire d’archives** pour générer l’application et la placer dans une archive en vue de sa signature et de sa publication. Dans cette section, nous allons apprendre à créer une identité de signature Android, à créer un nouveau certificat de signature pour les applications Android et à publier l’application archivée *ad hoc* sur disque. Le fichier APK ainsi créé peut être chargé de façon indépendante (sideloaded) sur les appareils Android sans passer par un App Store.
 
 Dans [Archiver pour publication](~/android/deploy-test/release-prep/index.md#archive), la boîte de dialogue **Signer et distribuer...** proposait deux options pour la distribution. Sélectionnez **Ad-Hoc** et cliquez sur **Suivant** :
 
@@ -58,14 +56,14 @@ L’exemple suivant illustre le type d’informations qui doivent être fournies
 
 Le magasin de clés ainsi créé se trouve à l’emplacement suivant :
 
-**C:\\Utilisateurs\\*NOM_UTILISATEUR*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+**C:\\Utilisateurs\\*NOM_UTILISATEUR*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*ALIAS*\\*ALIAS*.keystore**
 
-Par exemple, la procédure ci-dessus crée une nouvelle clé de signature à l’emplacement suivant :
+Par exemple, en utilisant **chimp** comme alias, la procédure ci-dessus créerait une nouvelle clé de signature à l’emplacement suivant :
 
-**C:\\Utilisateurs\\*NOM_UTILISATEUR*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+**C:\\Utilisateurs\\*NOM_UTILISATEUR*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 > [!NOTE]
-> Veillez à sauvegarder le fichier du magasin de clés créé dans un endroit sûr : il n’est pas inclus dans la solution. Si vous perdez votre fichier de magasin de clés (par exemple, suite à un changement d’ordinateur ou à la réinstallation de Windows), vous ne pourrez pas signer votre application avec le même certificat que les versions précédentes.
+> Veillez à sauvegarder le fichier du magasin de clés résultant et le mot de passe en lieu sûr, car ils ne sont pas inclus dans la solution. Si vous perdez votre fichier de magasin de clés (par exemple, suite à un changement d’ordinateur ou à la réinstallation de Windows), vous ne pourrez pas signer votre application avec le même certificat que les versions précédentes.
 
 Pour plus d’informations sur le magasin de clés, consultez [Recherche de la signature MD5 ou SHA1 de votre magasin de clés](~/android/deploy-test/signing/keystore-signature.md).
 
@@ -89,7 +87,7 @@ Par exemple, la procédure ci-dessus crée une nouvelle clé de signature à l�
 
 
 > [!NOTE]
-> Veillez à sauvegarder le fichier du magasin de clés créé dans un endroit sûr : il n’est pas inclus dans la solution. Si vous perdez votre fichier de magasin de clés (par exemple, suite à un changement d’ordinateur ou à la réinstallation de Windows), vous ne pourrez pas signer votre application avec le même certificat que les versions précédentes.
+> Veillez à sauvegarder le fichier du magasin de clés résultant et le mot de passe en lieu sûr, car ils ne sont pas inclus dans la solution. Si vous perdez votre fichier de magasin de clés (par exemple, suite à un changement d’ordinateur ou à la réinstallation de macOS), vous ne pourrez pas signer votre application avec le même certificat que les versions précédentes.
 
 Pour plus d’informations sur le magasin de clés, consultez [Recherche de la signature MD5 ou SHA1 de votre magasin de clés](~/android/deploy-test/signing/keystore-signature.md).
 
