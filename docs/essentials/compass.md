@@ -1,24 +1,24 @@
 ---
-title: 'Xamarin.Essentials : boussole'
-description: Ce document décrit la classe Compass dans Xamarin.Essentials, ce qui vous permet d’analyser le titre du Nord magnétique.
+title: 'Xamarin.Essentials : Compass'
+description: Ce document décrit la classe Compass dans Xamarin.Essentials, ce qui vous permet d’analyser l’en-tête de l’appareil le nord magnétique.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 63818014a9b3bdbef479055cbbcfbf8d348080fc
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.openlocfilehash: cf41948c55c742140896bfb48d9bb4abf25c8d68
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080459"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947411"
 ---
-# <a name="xamarinessentials-compass"></a>Xamarin.Essentials : boussole
+# <a name="xamarinessentials-compass"></a>Xamarin.Essentials : Compass
 
-![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **boussole** classe vous permet d’analyser le titre du Nord magnétique.
+Le **boussole** classe vous permet de surveiller l’en-tête de l’appareil le nord magnétique.
 
-## <a name="using-compass"></a>À l’aide de boussole
+## <a name="using-compass"></a>À l’aide de la boussole
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de boussole fonctionne en appelant le `Start` et `Stop` méthodes pour écouter les modifications apportées à la boussole. Toutes les modifications sont envoyées par le biais de la `ReadingChanged` événement. Voici un exemple :
+La fonctionnalité de boussole fonctionne en appelant le `Start` et `Stop` méthodes pour écouter les modifications apportées à la boussole. Toutes les modifications sont renvoyées via la `ReadingChanged` événement. Voici un exemple :
 
 ```csharp
 public class CompassTest
@@ -68,24 +68,17 @@ public class CompassTest
 }
 ```
 
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[Vitesse de capteur.](xref:Xamarin.Essentials.SensorSpeed)
+[!include[](~/essentials/includes/sensor-speed.md)]
 
-- **Plus rapide** : obtenir les données de capteur aussi rapidement que possible (ne pas retourne toujours sur le thread d’interface utilisateur).
-- **Jeu** – taux approprié pour les jeux (ne pas retourne toujours sur le thread d’interface utilisateur).
-- **Normal** – taux par défaut approprié pour les modifications d’orientation de l’écran.
-- **L’interface utilisateur** – taux approprié pour l’interface utilisateur générale.
-
-Si votre gestionnaire d’événements n’est pas garanti pour s’exécuter sur le thread d’interface utilisateur et si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, utilisez la [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) méthode à exécuter ce code sur le thread d’interface utilisateur.
-
-## <a name="platform-implementation-specifics"></a>Caractéristiques d’implémentation de plate-forme
+## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android ne fournit pas d’une API pour la récupération de l’en-tête boussole. Nous allons utiliser l’accéléromètre et magnétomètre pour calculer l’en-tête Nord magnétique, ce qui est recommandé par Google. 
+Android ne fournit pas d’une API pour la récupération de la boussole. Nous allons utiliser l’accéléromètre et magnétomètre pour calculer le titre le nord magnétique, ce qui est recommandé par Google. 
 
-Dans de rares cas, vous peut-être voir des résultats incohérents, car les capteurs besoin d’être étalonné, ce qui implique le déplacement de votre appareil dans un mouvement figure-8. La meilleure façon de faire cela doit ouvrir des cartes de Google, cliquez sur le point de votre emplacement, puis sélectionnez **étalonner boussole**.
+Dans de rares cas, vous peut-être voir des résultats incohérents, car les capteurs besoin d’être étalonné, ce qui implique le déplacement de votre appareil dans un mouvement de la figure 8. La meilleure façon de faire cela doit ouvrir Google Maps, appuyez sur le point de votre emplacement et sélectionnez **Calibrate boussole**.
 
-Sachez qui exécutent plusieurs capteurs à partir de votre application en même temps peut ajuster la vitesse de capteur.
+Sachez qui exécute plusieurs capteurs à partir de votre application en même temps peut régler la vitesse du capteur.
 
 --------------
 

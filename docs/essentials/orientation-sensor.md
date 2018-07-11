@@ -1,25 +1,25 @@
 ---
 title: 'Xamarin.Essentials : OrientationSensor'
-description: La classe OrientationSensor permet de contrôler l’orientation d’un périphérique dans un espace à trois dimensions.
+description: La classe OrientationSensor vous permet de surveiller l’orientation d’un appareil dans l’espace à trois dimensions.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: charlespetzold
 ms.author: chape
 ms.date: 05/21/2018
-ms.openlocfilehash: c7bbc849e5fa0b901f5b54e77d548b28bc2a72c6
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.openlocfilehash: c01fa28e495eb3eceec62885060dce8f096c4086
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080460"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947388"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials : OrientationSensor
 
-![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **OrientationSensor** classe vous permet de surveiller l’orientation d’un périphérique dans un espace tridimensionnel.
+Le **OrientationSensor** classe vous permet de surveiller l’orientation d’un appareil dans un espace tridimensionnel.
 
 > [!NOTE]
-> Cette classe est pour déterminer l’orientation d’un périphérique dans un espace 3D. Si vous avez besoin déterminer si du vidéo périphérique affichage est en mode portrait ou paysage, utilisez le `Orientation` propriété de la `ScreenMetrics` objet disponible à partir de la [ `DeviceDisplay` ](device-display.md) classe.
+> Cette classe est pour déterminer l’orientation d’un appareil dans l’espace 3D. Si vous avez besoin déterminer si le périphérique vidéo d’affichage est en mode portrait ou paysage, utilisez le `Orientation` propriété de la `ScreenMetrics` objet disponible à partir de la [ `DeviceDisplay` ](device-display.md) classe.
 
 ## <a name="using-orientationsensor"></a>À l’aide de OrientationSensor
 
@@ -29,7 +29,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Le `OrientationSensor` est activé en appelant le `Start` méthode pour surveiller les modifications apportées à l’orientation du périphérique et désactivée en appelant le `Stop` (méthode). Toutes les modifications sont envoyées par le biais de la `ReadingChanged` événement. Voici un exemple d’utilisation :
+Le `OrientationSensor` est activé en appelant le `Start` (méthode) pour surveiller les modifications apportées à l’orientation de l’appareil et désactivé en appelant le `Stop` (méthode). Toutes les modifications sont renvoyées via la `ReadingChanged` événement. Voici un exemple d’utilisation :
 
 ```csharp
 
@@ -72,46 +72,39 @@ public class OrientationSensorTest
 }
 ```
 
-`OrientationSensor` lectures sont retournés sous la forme d’un [ `Quaternion` ](xref:System.Numerics.Quaternion) qui décrit l’orientation de l’appareil selon les deux systèmes de coordonnées 3D :
+`OrientationSensor` lectures sont retournés sous la forme d’un [ `Quaternion` ](xref:System.Numerics.Quaternion) qui décrit l’orientation de l’appareil en fonction des deux systèmes de coordonnées 3D :
 
-Le périphérique (généralement un téléphone ou tablette) possède un système de coordonnées 3D avec les axes suivants :
+L’appareil (généralement un téléphone ou tablette) dispose d’un système de coordonnées 3D avec les axes suivants :
 
-- Le nombre positif X des points d’axe à droite de l’affichage en mode portrait.
+- La valeur positive à droite de l’affichage en mode portrait, les points de l’axe X.
 - L’axe Y positif pointe vers le haut de l’appareil en mode portrait.
 - L’axe Z positif pointe en dehors de l’écran.
 
-Le système de coordonnées 3D du monde a les axes suivants :
+Le système de coordonnées 3D de la terre a les axes suivants :
 
-- Le nombre positif axe X est la tangente à la surface de la terre et pointe east.
-- L’axe Y positif est également tangente à la surface de la terre et points Nord.
+- La valeur positive axe des X est la tangente à la surface de la terre et pointe east.
+- L’axe Y positif est également tangent à la surface de la terre et nord de points.
 - L’axe Z positif est perpendiculaire à la surface de la terre et pointe vers le haut.
 
-Le `Quaternion` décrit la rotation du périphérique système de coordonnées par rapport à système de coordonnées de la terre.
+Le `Quaternion` décrit la rotation du système de coordonnées de l’appareil par rapport à système de coordonnées de la terre.
 
-A `Quaternion` valeur est étroitement liée à la rotation autour d’un axe. Si un axe de rotation est le vecteur normalisé (un<sub>x</sub>, un<sub>y</sub>, un<sub>z</sub>), et l’angle de rotation est Θ, puis (X, Y, Z, W) sont des composants du quaternion :
+Un `Quaternion` valeur est très étroitement liée à la rotation autour d’un axe. Si un axe de rotation est le vecteur normalisé (un<sub>x</sub>, un<sub>y</sub>, un<sub>z</sub>), et l’angle de rotation est Θ, puis (X, Y, Z, W) sont des composants du quaternion :
 
 (un<sub>x</sub>·sin(Θ/2), un<sub>y</sub>·sin(Θ/2), un<sub>z</sub>·sin(Θ/2), cos(Θ/2))
 
-Il s’agit des systèmes de coordonnées droite, donc avec le curseur de la partie droite désigné dans la direction positive de l’axe de rotation, la courbe des doigts indiquer la direction de rotation pour les valeurs positives.
+Il s’agit des systèmes de coordonnées droite, donc avec le curseur de la main droite référencée dans le sens positif de l’axe de rotation, la courbe des doigts indiquent la direction de rotation d’angle positif.
 
 Exemples :
 
-* Lorsque l’appareil se trouve à plat sur une table avec l’écran vers le haut, le haut de l’appareil (en mode portrait) pointant vers le nord, les deux systèmes de coordonnées sont alignées. Le `Quaternion` valeur représente le quaternion identité (0, 0, 0, 1). Tous les rotations peuvent être analysées par rapport à cette position.
+* Lorsque l’appareil se trouve à plat sur une table avec son écran vers le haut, avec le bord supérieur de l’appareil (en mode portrait) pointant vers le nord, les deux systèmes de coordonnées sont alignées. Le `Quaternion` valeur représente le quaternion identité (0, 0, 0, 1). Tous les rotations peuvent être analysées par rapport à cette position.
 
-* Lorsque l’appareil se trouve à plat sur une table avec l’écran vers l’et le haut de l’appareil (en mode portrait) pointant vers l’ouest, la `Quaternion` valeur est (0, 0, 0,707, 0,707). L’appareil a été pivote de 90 degrés autour de l’axe Z du monde.
+* Lorsque l’appareil se trouve à plat sur une table avec son écran vers le haut et le haut de l’appareil (en mode portrait) pointant vers l’ouest, le `Quaternion` valeur est (0, 0, 0,707, 0,707). L’appareil a été pivotée de 90 degrés autour de l’axe Z de la terre.
 
-* Lorsque l’appareil est maintenu exclusivement afin que la partie supérieure (en mode portrait) pointe vers le ciel et l’arrière de l’appareil fait face Nord, l’appareil a été pivotée de 90 degrés autour de l’axe X. Le `Quaternion` est de valeur (0,707, 0, 0, 0,707).
+* Lorsque l’appareil est maintenu verticalement afin que le haut (en mode portrait) pointe vers le ciel et l’arrière de l’appareil est confrontée Nord, l’appareil a été pivotée de 90 degrés autour de l’axe X. Le `Quaternion` valeur est (0,707, 0, 0, 0,707).
 
-* Si l’appareil est placé à son bord gauche est donc sur une table et haut pointe nord, l’appareil a été pivoté &ndash;90 degrés autour de l’axe des Y (ou 90 degrés autour de l’axe Y négatif). Le `Quaternion` valeur est (0,-0.707, 0, 0,707).
+* Si l’appareil est positionné à son bord gauche est donc sur une table, et points de la partie supérieure du Nord, l’appareil a été pivotée &ndash;90 degrés autour de l’axe Y (ou 90 degrés autour de l’axe Y négatif). Le `Quaternion` valeur est (0,-0.707, 0, 0,707).
 
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[Vitesse de capteur.](xref:Xamarin.Essentials.SensorSpeed)
-
-- **Plus rapide** : obtenir les données de capteur aussi rapidement que possible (ne pas retourne toujours sur le thread d’interface utilisateur).
-- **Jeu** – taux approprié pour les jeux (ne pas retourne toujours sur le thread d’interface utilisateur).
-- **Normal** – taux par défaut approprié pour les modifications d’orientation de l’écran.
-- **L’interface utilisateur** – taux approprié pour l’interface utilisateur générale.
-
-Si votre gestionnaire d’événements n’est pas garanti pour s’exécuter sur le thread d’interface utilisateur et si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, utilisez la [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) méthode à exécuter ce code sur le thread d’interface utilisateur.
+[!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
