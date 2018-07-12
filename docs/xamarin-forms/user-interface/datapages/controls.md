@@ -8,23 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: c907d55f09d334e167c831a19f9d0edc4c97732f
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38866520"
 ---
 # <a name="datapages-controls-reference"></a>Référence des contrôles de pages de données
 
-![](~/media/shared/preview.png "Cette API méthode est actuellement en version préliminaire")
+![](~/media/shared/preview.png "Cette API est actuellement en version préliminaire")
 
 > [!IMPORTANT]
-> Pages de données requiert un [Xamarin.Forms thème](~/xamarin-forms/user-interface/themes/index.md) référence à restituer.
+> Pages de données nécessite un [Xamarin.Forms thème](~/xamarin-forms/user-interface/themes/index.md) référence à restituer.
 
 
-Nuget Xamarin.Forms pages de données inclut un nombre de contrôles qui peuvent tirer parti de la liaison de source de données.
+Le package Nuget Xamarin.Forms pages de données inclut un certain nombre de contrôles qui peuvent tirer parti de la liaison de source de données.
 
-Pour utiliser ces contrôles en XAML, vérifiez l’espace de noms a été inclus, par exemple le `xmlns:pages` déclaration ci-dessous :
+Pour utiliser ces contrôles dans XAML, vérifiez l’espace de noms a été inclus, consultez par exemple la `xmlns:pages` déclaration ci-dessous :
 
 ```xaml
 <ContentPage
@@ -34,7 +34,7 @@ Pour utiliser ces contrôles en XAML, vérifiez l’espace de noms a été inclu
     x:Class="DataPagesDemo.Detail">
 ```
 
-Les exemples ci-dessous incluent `DynamicResource` références qui doivent exister dans le dictionnaire de ressources du projet à utiliser. Il existe également un exemple de la création d’un [contrôle personnalisé](#custom)
+Les exemples ci-dessous incluent `DynamicResource` références qui doivent exister dans le dictionnaire de ressources du projet fonctionne. Il existe également un exemple montrant comment créer un [contrôle personnalisé](#custom)
 
 ## <a name="built-in-controls"></a>Contrôles intégrés
 
@@ -73,7 +73,7 @@ Le `HeroImage` contrôle possède quatre propriétés :
 
 ### <a name="listitem"></a>ListItem
 
-Le `ListItem` mise en page du contrôle est semblable à natives iOS et Android liste ou un tableau lignes, toutefois il peut également être utilisé comme une vue standard. Dans l’exemple de code en dessous figure hébergé à l’intérieur d’un `StackLayout`, mais il peut également être utilisé dans les contrôles de liste lié aux données scolling.
+Le `ListItem` disposition du contrôle est semblable à natives iOS et Android liste ou un tableau de lignes, cependant il peut également servir comme une vue classique. Dans l’exemple de code en dessous est indiqué hébergé à l’intérieur d’un `StackLayout`, mais il peut également être utilisé dans les contrôles de liste lié aux données scolling.
 
 Il existe cinq propriétés :
 
@@ -93,7 +93,7 @@ Il existe cinq propriétés :
     />
 ```
 
-Ces captures d’écran affichent les `ListItem` sur iOS et Android plateformes à l’aide à la fois les thèmes clairs et foncés :
+Ces captures d’écran montrent la `ListItem` sur les plateformes iOS et Android à l’aide de thèmes à la fois le clairs et foncés :
 
 **Android**
 
@@ -106,7 +106,7 @@ Ces captures d’écran affichent les `ListItem` sur iOS et Android plateformes 
 
 ## <a name="custom-control-example"></a>Exemple de contrôle personnalisé
 
-L’objectif de cette personnalisation `CardView` contrôle doit ressembler à la CardView Android natif.
+L’objectif de cette valeur personnalisée `CardView` contrôle doit ressembler à la CardView Android natif.
 
 Il contient trois propriétés :
 
@@ -114,7 +114,7 @@ Il contient trois propriétés :
 * Détail
 * ImageSource
 
-L’objectif est d’un contrôle personnalisé qui se présenter comme le code ci-dessous (Notez que personnalisé `xmlns:local` est obligatoire qui fait référence à l’assembly actuel) :
+L’objectif est d’un contrôle personnalisé qui ressemble le code ci-dessous (Notez que personnalisé `xmlns:local` est obligatoire qui fait référence à l’assembly actuel) :
 
 ```xaml
 <local:CardView
@@ -124,7 +124,7 @@ L’objectif est d’un contrôle personnalisé qui se présenter comme le code 
 />
 ```
 
-Il doit ressembler aux captures d’écran ci-dessous à l’aide de couleurs correspondant aux thèmes clairs et foncés intégrés :
+Il doit ressembler les captures d’écran ci-dessous à l’aide de couleurs correspondant à ces thèmes clairs et foncés :
 
 **Android**
 
@@ -141,9 +141,9 @@ Il doit ressembler aux captures d’écran ci-dessous à l’aide de couleurs co
 1. [Sous-classe de DataView](#1)
 2. [Définir la police, la disposition et les marges](#2)
 3. [Créer des Styles pour les enfants du contrôle](#3)
-4. [Créer le modèle de contrôle de disposition](#4)
-5. [Ajoutez les ressources spécifiques au thème](#5)
-6. [Définir le modèle ControlTemplate pour la classe CardView](#6)
+4. [Créer le modèle de disposition du contrôle](#4)
+5. [Ajouter des ressources de thème spécifiques](#5)
+6. [Définir le ControlTemplate pour la classe CardView](#6)
 7. [Ajouter le contrôle à une Page](#7)
 
 <a name="1" />
@@ -192,7 +192,7 @@ public class CardView : DataView
 
 #### <a name="2-define-font-layout-and-margins"></a>2. Définir la police, la disposition et les marges
 
-Le Concepteur de contrôles est identifier ces valeurs en tant que partie de la conception de l’interface utilisateur pour le contrôle personnalisé. Lorsque les spécifications de plateforme spécifique sont requises, le `OnPlatform` élément est utilisé.
+Le Concepteur de contrôles serait comprendre ces valeurs dans le cadre de la conception d’interface utilisateur pour le contrôle personnalisé. Lorsque les spécifications propres à la plateforme sont requises, le `OnPlatform` élément est utilisé.
 
 Notez que certaines valeurs font référence aux `StaticResource`s : elles sont définies dans [étape 5](#5).
 
@@ -250,7 +250,7 @@ Notez que certaines valeurs font référence aux `StaticResource`s : elles sont
 
 #### <a name="3-create-styles-for-the-controls-children"></a>3. Créer des Styles pour les enfants du contrôle
 
-Faire référence à tous les éléments définis sur le point de créer les enfants qui seront utilisés dans le contrôle personnalisé :
+Référencer tous les éléments définis sur le point de créer les enfants qui seront utilisés dans le contrôle personnalisé :
 
 ```xml
 <!-- EXPLICIT STYLES (will be Classes) -->
@@ -280,9 +280,9 @@ Faire référence à tous les éléments définis sur le point de créer les enf
 
 <a name="4" />
 
-#### <a name="4-create-the-control-layout-template"></a>4. Créer le modèle de contrôle de disposition
+#### <a name="4-create-the-control-layout-template"></a>4. Créer le modèle de disposition du contrôle
 
-La conception visuelle du contrôle personnalisé est déclarée explicitement dans le modèle de contrôle, à l’aide de la ressource définie ci-dessus :
+La conception visuelle du contrôle personnalisé est déclarée explicitement dans le modèle de contrôle, en utilisant les ressources définies ci-dessus :
 
 ```xml
 <!--- CARDVIEW -->
@@ -324,7 +324,7 @@ La conception visuelle du contrôle personnalisé est déclarée explicitement d
 
 <a name="5" />
 
-#### <a name="5-add-the-theme-specific-resources"></a>5. Ajoutez les ressources spécifiques au thème
+#### <a name="5-add-the-theme-specific-resources"></a>5. Ajouter des ressources de thème spécifiques
 
 Comme il s’agit d’un contrôle personnalisé, ajoutez les ressources qui correspondent au thème que vous utilisez le dictionnaire de ressources :
 
@@ -341,7 +341,7 @@ Comme il s’agit d’un contrôle personnalisé, ajoutez les ressources qui cor
 <Color x:Key="iOSCardViewDetailTextColor">#8F8E94</Color>
 ```
 
-##### <a name="dark-theme-colors"></a>Couleurs du thème sombre
+##### <a name="dark-theme-colors"></a>Couleurs du thème foncé
 
 ```xaml
 <!-- CARD VIEW COLORS -->
@@ -357,9 +357,9 @@ Comme il s’agit d’un contrôle personnalisé, ajoutez les ressources qui cor
 
 <a name="6" />
 
-#### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. Définir le modèle ControlTemplate pour la classe CardView
+#### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. Définir le ControlTemplate pour la classe CardView
 
-Enfin, assurez-vous de la classe c# créée dans [étape 1](#1) utilise le modèle de contrôle défini dans [étape 4](#4) à l’aide un `Style` `Setter` élément
+Enfin, vérifiez la classe c# créée dans [étape 1](#1) utilise le modèle de contrôle défini dans [étape 4](#4) à l’aide un `Style` `Setter` élément
 
 ```xml
 <Style TargetType="local:CardView">

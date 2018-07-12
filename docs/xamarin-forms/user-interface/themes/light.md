@@ -1,6 +1,6 @@
 ---
 title: Thème de lumière de Xamarin.Forms
-description: Cet article explique comment utiliser le thème de lumière Xamarin.Forms dans une application.
+description: Cet article explique comment utiliser le thème de lumière de Xamarin.Forms dans une application.
 ms.prod: xamarin
 ms.assetid: D5D16AE3-F51F-4359-B37A-E1087ECE512B
 ms.technology: xamarin-forms
@@ -8,29 +8,29 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 7f40e375d653acec60f8848627234ab46fcce8de
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245245"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38842750"
 ---
 # <a name="xamarinforms-light-theme"></a>Thème de lumière de Xamarin.Forms
 
-![](~/media/shared/preview.png "Cette API méthode est actuellement en version préliminaire")
+![](~/media/shared/preview.png "Cette API est actuellement en version préliminaire")
 
 > [!NOTE]
-> Thèmes requièrent la version préliminaire de Xamarin.Forms 2.3. Vérifiez le [des conseils de dépannage](~/xamarin-forms/user-interface/themes/index.md) si des erreurs se produisent.
+> Thèmes nécessitent la version 2.3 de Xamarin.Forms. Vérifier le [des conseils de dépannage](~/xamarin-forms/user-interface/themes/index.md) si des erreurs se produisent.
 
 Pour utiliser le thème clair :
 
-## <a name="1-add-nuget-packages"></a>1. Ajouter des packages Nuget
+## <a name="1-add-nuget-packages"></a>1. Ajout de packages Nuget
 
 * Xamarin.Forms.Theme.Base
 * Xamarin.Forms.Theme.Light
 
 ## <a name="2-add-to-the-resource-dictionary"></a>2. Ajouter au dictionnaire de ressources
 
-Dans le **App.xaml** fichier ajouter une nouvelle personnalisée `xmlns` pour le thème, puis vérifiez que les ressources du thème sont fusionnés avec le dictionnaire de ressources de l’application.
+Dans le **App.xaml** fichier ajouter un nouveau personnalisé `xmlns` pour le thème, puis vérifiez les ressources du thème sont fusionnées avec le dictionnaire de ressources de l’application.
 Vous trouverez ci-dessous un exemple de fichier XAML :
 
 ```xaml
@@ -45,13 +45,13 @@ Vous trouverez ci-dessous un exemple de fichier XAML :
 
 ## <a name="3-load-theme-classes"></a>3. Charger des classes de thème
 
-Suivez cette [dépannage étape](~/xamarin-forms/user-interface/themes/index.md) et ajoutez le code requis dans les projets d’application Android iOS.
+Suivez ce [étape du dépannage](~/xamarin-forms/user-interface/themes/index.md) et ajoutez le code requis dans les projets d’application Android et iOS.
 
-## <a name="4-use-styleclass"></a>4. Utilisez StyleClass
+## <a name="4-use-styleclass"></a>4. Utiliser StyleClass
 
-Voici un exemple des boutons et des étiquettes dans le thème clair, ainsi que le balisage qui produit les.
+Voici un exemple de boutons et des étiquettes dans le thème clair, ainsi que le balisage qui leur produit.
 
-[![](light-images/light-theme-sml.png "Boutons et des étiquettes dans le thème clair")](light-images/light-theme.png#lightbox "des boutons et des étiquettes dans le thème clair")
+[![](light-images/light-theme-sml.png "Boutons et des étiquettes dans le thème clair")](light-images/light-theme.png#lightbox "boutons et des étiquettes dans le thème clair")
 
 ```xaml
 <StackLayout Padding="20">
@@ -68,4 +68,4 @@ Voici un exemple des boutons et des étiquettes dans le thème clair, ainsi que 
 </StackLayout>
 ```
 
-Le [la liste complète des classes intégrées](~/xamarin-forms/user-interface/themes/index.md) affiche les styles disponibles pour les contrôles communs.
+Le [la liste complète des classes intégrées](~/xamarin-forms/user-interface/themes/index.md) montre quels styles sont disponibles pour les contrôles communs.

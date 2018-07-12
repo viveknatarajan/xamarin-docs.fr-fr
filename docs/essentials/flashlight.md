@@ -1,32 +1,32 @@
 ---
-title: 'Xamarin.Essentials : Flash'
-description: Ce document décrit la classe flash dans Xamarin.Essentials, qui a la possibilité d’activer ou désactiver photo l’appareil pour qu’il devienne un flash flash.
+title: 'Xamarin.Essentials : torche'
+description: Ce document décrit la classe torche dans Xamarin.Essentials, ce qui permet d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: a5c559653bff38c692f0b1d881d5d8f4cac3d383
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782422"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831409"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials : Flash
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials : torche
 
-![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **Flash** classe a la possibilité d’activer ou désactiver photo l’appareil pour qu’il devienne un flash flash.
+Le **torche** classe a la possibilité d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **Flash** fonctionnalité de la configuration spécifique plate-forme suivante est requise.
+Pour accéder à la **torche** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Les autorisations photo et Flash sont requises et doivent être configurées dans le projet Android. Il peut être ajouté comme suit :
+Les autorisations torche et caméra sont requises et doivent être configurées dans le projet Android. Il peut être ajouté comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajouter :
+Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
@@ -42,7 +42,7 @@ Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et aj
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Anroid et ouvrez les propriétés du projet. Sous **manifeste Android** de trouver la **les autorisations requises :** zone et vérifiez la **Flash** et **caméra** autorisations. Met automatiquement à jour la **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Anroid et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **torche** et **caméra** autorisations. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
 
 En ajoutant ces autorisations [Google Play filtrent automatiquement les périphériques](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sans matériel spécifique. Vous pouvez obtenir contourner ce problème en ajoutant le code suivant à votre fichier AssemblyInfo.cs dans votre projet Android :
 
@@ -53,15 +53,15 @@ En ajoutant ces autorisations [Google Play filtrent automatiquement les périph�
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requise.
+Aucune configuration supplémentaire n’est requis.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Aucune configuration supplémentaire n’est requise.
+Aucune configuration supplémentaire n’est requis.
 
 -----
 
-## <a name="using-flashlight"></a>À l’aide de Flash
+## <a name="using-flashlight"></a>À l’aide de torche
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -69,7 +69,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Le Flash permettre être activée et désactivées via la `TurnOnAsync` et `TurnOffAsync` méthodes :
+Le torche peut être activée et désactivée via la `TurnOnAsync` et `TurnOffAsync` méthodes :
 
 ```csharp
 try
@@ -94,31 +94,31 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques d’implémentation de plate-forme
+## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
 
 ### <a name="androidtabandroid-specifics"></a>[Android](#tab/android-specifics)
 
-La classe Flash a été optmized basé sur le système d’exploitation de l’appareil.
+La classe torche a été optmized selon le système d’exploitation de l’appareil.
 
-#### <a name="api-level-23-and-higher"></a>Niveau de l’API 23 et versions ultérieures
+#### <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
 
-Sur les niveaux d’API plus récente, [CHALUMEAU Mode](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) servira à activer ou désactiver l’unité de disque mémoire flash de l’appareil.
+Sur les niveaux d’API plus récente, [Torch Mode](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) sera utilisé pour activer ou désactiver l’unité flash de l’appareil.
 
-#### <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieure
+#### <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
 
-Une texture de surface de la caméra est créée pour activer ou désactiver la `FlashMode` de la caméra. 
+Une texture de surface d’exposition de caméra est créée pour activer ou désactiver le `FlashMode` de l’unité de l’appareil photo. 
 
 ### <a name="iostabios-specifics"></a>[iOS](#tab/ios-specifics)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) est utilisé pour activer et désactiver la torche et mode Flash de l’appareil.
+[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) sert à activer et désactiver le Torch et le mode Flash de l’appareil.
 
 ### <a name="uwptabuwp-specifics"></a>[UWP](#tab/uwp-specifics)
 
-[Feu](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) est utilisé pour détecter le premier feu à l’arrière de l’appareil pour activer ou désactiver.
+[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) est utilisé pour détecter la première lamp à l’arrière de l’appareil pour activer ou désactiver.
 
 -----
 
 ## <a name="api"></a>API
 
-- [Code source de Flash](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
-- [Documentation de l’API de Flash](xref:Xamarin.Essentials.Flashlight)
+- [Code source de torche](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Documentation de torche API](xref:Xamarin.Essentials.Flashlight)

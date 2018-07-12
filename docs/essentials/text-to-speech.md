@@ -1,22 +1,22 @@
 ---
 title: 'Xamarin.Essentials : synthèse vocale'
-description: La classe texttospeech avec le dans Xamarin.Essentials permet à une application utiliser intégrée dans les moteurs de parler de texte précédent de l’appareil et également pour les langues disponibles de requête prises en charge par le moteur de synthèse vocale.
+description: La classe texttospeech avec le dans permet de Xamarin.Essentials une application utiliser intégrée dans les moteurs de synthèse vocale à énoncer le texte précédent de l’appareil et également pour les langues disponibles requête prenant en charge le moteur.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 9383411074bc43af1034138aadbb6ac5494c2c01
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782799"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38815659"
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials : synthèse vocale
 
-![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **texttospeech avec le** classe permet à une application d’utiliser intégrée dans les moteurs de parler de texte précédent de l’appareil et également pour les langues disponibles de requête prises en charge par le moteur de synthèse vocale.
+Le **texttospeech avec le** classe permet à une application d’utiliser intégrée dans les moteurs de synthèse vocale à énoncer le texte précédent de l’appareil et également pour les langues disponibles requête prenant en charge le moteur.
 
 ## <a name="using-text-to-speech"></a>À l’aide de la synthèse vocale
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de synthèse vocale fonctionne en appelant le `SpeakAsync` méthode avec le texte et les paramètres facultatifs et retourne la fin de l’énoncé. 
+La fonctionnalité de conversion texte-voix fonctionne en appelant le `SpeakAsync` méthode avec le texte et les paramètres facultatifs et retourne la fin de l’énoncé. 
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -46,7 +46,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Cette méthode prend dans un CancellationToken facultatif pour arrêter l’énoncé une fois qu’il démarre. 
+Cette méthode prend un CancellationToken facultatif pour arrêter l’énoncé lors de son démarrage. 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -66,7 +66,7 @@ public void CancelSpeech()
 }
 ```
 
-Synthèse vocale file d’attente automatiquement les demandes de reconnaissance vocale à partir du même thread. 
+Synthèse vocale sera mettre automatiquement la file d’attente de demandes de reconnaissance vocale à partir du même thread. 
 
 ```csharp
 bool isBusy = false;
@@ -92,7 +92,7 @@ public void SpeakMultiple()
 
 ### <a name="speech-settings"></a>Paramètres de reconnaissance vocale
 
-Pour mieux contrôler la façon dont le son est lu sauvegarder avec `SpeakSettings` qui permet de définir le Volume, hauteur et paramètres régionaux.
+Pour mieux contrôler la façon dont l’audio est prononcé sauvegarder avec `SpeakSettings` qui permet de définir le Volume, Pitch et paramètres régionaux.
 
 ```csharp
 public async Task SpeakNow()
@@ -116,7 +116,7 @@ Les valeurs prises en charge pour ces paramètres sont les suivantes :
 
 ### <a name="speech-locales"></a>Paramètres régionaux de reconnaissance vocale
 
-Chaque plate-forme offre des paramètres régionaux pour parler de texte précédent dans plusieurs langues et les accents. Chaque plateforme possède différents codes et les méthodes de spécification, c’est pourquoi Essentials fournit un inter-plateformes `Locale` classe et un moyen de les interroger avec `GetLocalesAsync`.
+Chaque plateforme propose des paramètres régionaux pour parler de texte précédent dans plusieurs langues et les accents. Chaque plateforme a différents codes et les méthodes de spécification, c’est pourquoi Essentials propose un multiplateforme `Locale` classe et un moyen de les interroger avec `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -140,7 +140,7 @@ public async Task SpeakNow()
 ## <a name="limitations"></a>Limitations
 
 - File d’attente de l’énoncé n’est pas garantie si elle est appelée sur plusieurs threads.
-- Arrière-plan de lecture audio n’est pas officiellement pris en charge.
+- Lecture audio d’arrière-plan n’est pas officiellement pris en charge.
 
 ## <a name="api"></a>API
 

@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials : géolocalisation'
-description: Ce document décrit la classe de géolocalisation dans Xamarin.Essentials, qui fournit des API pour récupérer les coordonnées de géolocalisation du périphérique en cours.
+description: Ce document décrit la classe de géolocalisation dans Xamarin.Essentials, qui fournit des API pour récupérer les coordonnées de géolocalisation actuelle de l’appareil.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 11749107403fc99e1d49b63ee3b50ff105abaa57
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080285"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38848749"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials : géolocalisation
 
-![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **géolocalisation** classe fournit des API pour récupérer les coordonnées de géolocalisation du périphérique en cours.
+Le **géolocalisation** classe fournit des API pour récupérer les coordonnées de géolocalisation actuelle de l’appareil.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **géolocalisation** fonctionnalités, le programme d’installation spécifique à la plateforme suivante est requise :
+Pour accéder à la **géolocalisation** fonctionnalité, la configuration spécifique à la plateforme suivante est requise :
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Autorisations épais et l’emplacement de fin sont requises et doivent être configurées dans le projet Android. En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer que votre application utilise les fonctionnalités du matériel dans le fichier manifeste. Il peut être ajouté comme suit :
+Épais et l’emplacement précis des autorisations sont nécessaires et doivent être configurées dans le projet Android. En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer que votre application utilise les fonctionnalités matérielles dans le fichier manifeste. Il peut être ajouté comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajouter :
+Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]
@@ -48,15 +48,15 @@ Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et aj
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-Ou avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** de trouver la **les autorisations requises :** zone et vérifiez la **ACCESS_COARSE_LOCATION** et **ACCESS_FINE_LOCATION**autorisations. Met automatiquement à jour la **AndroidManifest.xml** fichier.
+Ou avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **ACCESS_COARSE_LOCATION** et **ACCESS_FINE_LOCATION**autorisations. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 De votre application **Info.plist** doit contenir le `NSLocationWhenInUseUsageDescription` clé afin d’accéder à l’emplacement de l’appareil.
 
-Ouvrez l’éditeur plist et ajoutez le **confidentialité - emplacement lors de la Description de l’utilisation d’utilisation** propriété et fournissez une valeur pour afficher l’utilisateur.
+Ouvrez l’éditeur plist et ajoutez le **confidentialité - emplacement lors de la Description de l’utilisation utilisation** propriété et renseignez une valeur pour afficher l’utilisateur.
 
-Ou modifier manuellement le fichier et ajoutez le code suivant :
+Ou modifier manuellement le fichier et ajoutez ce qui suit :
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -65,7 +65,7 @@ Ou modifier manuellement le fichier et ajoutez le code suivant :
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Vous devez définir le `Location` l’autorisation de l’application. Cela est possible en ouvrant le **Package.appxmanifest** et sélectionnant le **fonctionnalités** onglet et la vérification de **emplacement**.
+Vous devez définir le `Location` autorisation pour l’application. Cela est possible en ouvrant le **Package.appxmanifest** et sélectionnant les **fonctionnalités** onglet et en vérifiant **emplacement**.
 
 -----
 
@@ -105,9 +105,9 @@ catch (Exception ex)
 }
 ```
 
-L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus altitude. 
+L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus de plus haut niveau de la mer. 
 
-Pour interroger le périphérique actuel [emplacement](xref:Xamarin.Essentials.Location) coordonnées, la `GetLocationAsync` peut être utilisé. Il est préférable de passer un complet `GeolocationRequest` et `CancellationToken` , car il peut prendre un certain temps pour obtenir l’emplacement de l’appareil.
+Pour interroger l’appareil actuel [emplacement](xref:Xamarin.Essentials.Location) coordonnées, la `GetLocationAsync` peut être utilisé. Il est préférable de transmettre un intégral `GeolocationRequest` et `CancellationToken` dans la mesure où il peut prendre un certain temps pour obtenir l’emplacement de l’appareil.
 
 ```csharp
 try
@@ -154,7 +154,7 @@ Le tableau suivant présente la précision par plateforme :
 | iOS | 1000 |
 | UWP | 300 - 3000 |
 
-### <a name="medium-default"></a>Moyenne (par défaut)
+### <a name="medium-default"></a>Moyenne (valeur par défaut)
 
 | Plateforme | Distance (en mètres) |
 | --- | --- |
@@ -170,7 +170,7 @@ Le tableau suivant présente la précision par plateforme :
 | iOS | 10 |
 | UWP | < = 10 |
 
-### <a name="best"></a>Mieux
+### <a name="best"></a>Meilleur
 
 | Plateforme | Distance (en mètres) |
 | --- | --- |
@@ -182,7 +182,7 @@ Le tableau suivant présente la précision par plateforme :
 
 ## <a name="distance-between-two-locations"></a>Distance entre deux emplacements
 
-Le [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) définissent des classes `CalculateDistance` méthodes qui vous permettent de calculer la distance entre deux emplacements géographiques. Cette valeur calculée distance ne tient pas des routes ou autres voies de compte et est simplement la distance la plus courte entre les deux points le long de la surface de la terre, également connue sous le _great-cercle distance_ ou de manière simplifiée, la distance « vol d’oiseau. »
+Le [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) classes définissent `CalculateDistance` méthodes qui vous permettent de calculer la distance entre deux emplacements géographiques. Cette valeur calculée distance ne tient pas routes ou autres voies de compte et est simplement la distance la plus courte entre les deux points le long de la surface de la terre, également connu sous le _distance orthodromique_ ou quand, le distance « vol d’oiseau. »
 
 Voici un exemple :
 
@@ -192,7 +192,7 @@ Location sanFrancisco = new Location(37.783333, -122.416667);
 double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
 ```
 
-Le `Location` constructeur a des arguments de latitude et longitude dans cet ordre. Les valeurs de latitude positif sont au nord de l’Équateur, et les valeurs de longitude positif à l’est. Utilisez l’argument final `CalculateDistance` pour spécifier les miles ou kilomètres. Le `Location` classe définit également `KilometersToMiles` et `MilesToKilometers` méthodes pour la conversion entre les deux unités.
+Le `Location` constructeur a des arguments de latitude et longitude dans cet ordre. Positif sont des valeurs de latitude au nord de l’Équateur et sont des valeurs de longitude positive à l’est. Utilisez l’argument final de `CalculateDistance` pour spécifier les miles ou kilomètres. Le `Location` classe définit également `KilometersToMiles` et `MilesToKilometers` méthodes pour la conversion entre les deux unités.
 
 ## <a name="api"></a>API
 

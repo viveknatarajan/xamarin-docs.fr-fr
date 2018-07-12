@@ -6,15 +6,15 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 7e79b3003f41b8de22950624e44e8c9e0e7e7e31
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080272"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831505"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials : Informations sur l’application
 
-![Version préliminaire de NuGet](~/media/shared/pre-release.png)
+![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
 Le **AppInfo** classe fournit des informations sur votre application.
 
@@ -46,14 +46,14 @@ var build = AppInfo.BuildString;
 
 ## <a name="displaying-application-settings"></a>Affichage des paramètres d’Application
 
-Le **AppInfo** classe peut également afficher une page de paramètres gérés par le système d’exploitation de l’application :
+Le **AppInfo** classe peut également afficher une page de paramètres gérés par le système d’exploitation pour l’application :
 
 ```csharp
 // Display settings page
 AppInfo.OpenSettings();
 ```
 
-Cette page de paramètres permet à l’utilisateur de modifier les autorisations d’application et effectuer d’autres tâches spécifiques à la plateforme.
+Cette page de paramètres permet à l’utilisateur à modifier les autorisations d’application et effectuer d’autres tâches spécifiques à la plateforme.
 
 ## <a name="api"></a>API
 

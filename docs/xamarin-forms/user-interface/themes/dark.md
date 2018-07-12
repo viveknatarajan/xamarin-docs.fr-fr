@@ -8,29 +8,29 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 1fc329f506afde04b0dc59dc637d999865aafbe1
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245922"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38853243"
 ---
 # <a name="xamarinforms-dark-theme"></a>Thème sombre de Xamarin.Forms
 
-![](~/media/shared/preview.png "Cette API méthode est actuellement en version préliminaire")
+![](~/media/shared/preview.png "Cette API est actuellement en version préliminaire")
 
 > [!NOTE]
-> Thèmes requièrent la version préliminaire de Xamarin.Forms 2.3. Vérifiez le [des conseils de dépannage](~/xamarin-forms/user-interface/themes/index.md) si des erreurs se produisent.
+> Thèmes nécessitent la version 2.3 de Xamarin.Forms. Vérifier le [des conseils de dépannage](~/xamarin-forms/user-interface/themes/index.md) si des erreurs se produisent.
 
 Pour utiliser le thème foncé :
 
-## <a name="1-add-nuget-packages"></a>1. Ajouter des packages Nuget
+## <a name="1-add-nuget-packages"></a>1. Ajout de packages Nuget
 
 * Xamarin.Forms.Theme.Base
 * Xamarin.Forms.Theme.Dark
 
 ## <a name="2-add-to-the-resource-dictionary"></a>2. Ajouter au dictionnaire de ressources
 
-Dans le **App.xaml** fichier ajouter une nouvelle personnalisée `xmlns` pour le thème, puis vérifiez que les ressources du thème sont fusionnés avec le dictionnaire de ressources de l’application.
+Dans le **App.xaml** fichier ajouter un nouveau personnalisé `xmlns` pour le thème, puis vérifiez les ressources du thème sont fusionnées avec le dictionnaire de ressources de l’application.
 Vous trouverez ci-dessous un exemple de fichier XAML :
 
 ```xaml
@@ -45,13 +45,13 @@ Vous trouverez ci-dessous un exemple de fichier XAML :
 
 ## <a name="3-load-theme-classes"></a>3. Charger des classes de thème
 
-Suivez cette [dépannage étape](~/xamarin-forms/user-interface/themes/index.md) et ajoutez le code requis dans les projets d’application Android iOS.
+Suivez ce [étape du dépannage](~/xamarin-forms/user-interface/themes/index.md) et ajoutez le code requis dans les projets d’application Android et iOS.
 
-## <a name="4-use-styleclass"></a>4. Utilisez StyleClass
+## <a name="4-use-styleclass"></a>4. Utiliser StyleClass
 
-Voici un exemple des boutons et des étiquettes dans le thème sombre, ainsi que le balisage qui produit les.
+Voici un exemple de boutons et des étiquettes dans le thème foncé, ainsi que le balisage qui produit les.
 
-[![](dark-images/dark-theme-sml.png "Boutons et des étiquettes dans le thème sombre")](dark-images/dark-theme.png#lightbox "des boutons et des étiquettes dans le thème sombre")
+[![](dark-images/dark-theme-sml.png "Boutons et des étiquettes dans le thème sombre")](dark-images/dark-theme.png#lightbox "boutons et des étiquettes dans le thème sombre")
 
 ```xaml
 <StackLayout Padding="20">
@@ -69,4 +69,4 @@ Voici un exemple des boutons et des étiquettes dans le thème sombre, ainsi que
 </StackLayout>
 ```
 
-Le [la liste complète des classes intégrées](~/xamarin-forms/user-interface/themes/index.md) affiche les styles disponibles pour les contrôles communs.
+Le [la liste complète des classes intégrées](~/xamarin-forms/user-interface/themes/index.md) montre quels styles sont disponibles pour les contrôles communs.

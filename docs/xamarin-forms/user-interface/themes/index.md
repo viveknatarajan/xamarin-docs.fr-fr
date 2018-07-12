@@ -1,6 +1,6 @@
 ---
 title: Thèmes de Xamarin.Forms
-description: Cet article présente les thèmes de Xamarin.Forms, qui définissent des apparences visuelles spécifiques pour les vues standards.
+description: Cet article présente Xamarin.Forms thèmes, qui définissent des apparences visuelles différentes pour les vues standards.
 ms.prod: xamarin
 ms.assetid: 3DFB7C55-69F6-4980-A501-588719143482
 ms.technology: xamarin-forms
@@ -8,30 +8,30 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 0f49eeba072d6aeb7ead40d5d56d4af9e9bf5e27
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245730"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38814705"
 ---
 # <a name="xamarinforms-themes"></a>Thèmes de Xamarin.Forms
 
-![](~/media/shared/preview.png "Cette API méthode est actuellement en version préliminaire")
+![](~/media/shared/preview.png "Cette API est actuellement en version préliminaire")
 
-Xamarin.Forms thèmes ont été annoncées lors Evolve 2016 et sont disponibles en version préliminaire pour les clients de tenter d’envoyer des commentaires.
+Xamarin.Forms thèmes ont été annoncées lors de l’évolution 2016 et sont disponibles en version préliminaire pour les clients à tester et de fournir des commentaires.
 
-Un thème est ajouté à une application de Xamarin.Forms par le **Xamarin.Forms.Theme.Base** du package Nuget, ainsi que d’un package supplémentaire qui définit un thème spécifique (par exemple). Xamarin.Forms.Theme.Light) ou sans quoi un thème local peut être défini pour l’application.
+Un thème est ajouté à une application Xamarin.Forms en incluant le **Xamarin.Forms.Theme.Base** de package Nuget, ainsi que d’un autre package qui définit un thème spécifique (par exemple). Xamarin.Forms.Theme.Light) ou autre un thème local peut être défini pour l’application.
 
-Reportez-vous à la [le thème clair](light.md) et [le thème sombre](dark.md) pages pour obtenir des instructions sur la façon de les ajouter à une application, ou extraire les [exemple de thème personnalisé](custom.md).
+Reportez-vous à la [le thème clair](light.md) et [le thème sombre](dark.md) pages pour obtenir des instructions sur la façon de les ajouter à une application, ou découvrir les [thème personnalisé exemple](custom.md).
 
-**IMPORTANT :** vous devez également suivre les étapes permettant de [charger des assemblys du thème (ci-dessous)](#loadtheme) en ajoutant du code réutilisable pour les e/s `AppDelegate` et Android `MainActivity`. Cela améliorera en version préliminaire de futures.
+**IMPORTANT :** vous devez également suivre les étapes à [charger des assemblys de thème (ci-dessous)](#loadtheme) en ajoutant du code réutilisable à iOS `AppDelegate` et Android `MainActivity`. Cela sera améliorée dans une version de la prochaine version d’évaluation.
 
 
-## <a name="control-appearance"></a>Contrôler l’apparence
+## <a name="control-appearance"></a>Apparence de contrôle
 
-Le [Light](light.md) et [foncé](dark.md) thèmes à la fois définissent une apparence visuelle spécifique pour les contrôles standards. Après avoir ajouté un thème au dictionnaire de ressources de l’application, l’apparence des contrôles standard change.
+Le [Light](light.md) et [foncé](dark.md) les thèmes les deux définissent une apparence visuelle spécifique pour les contrôles standards. Une fois que vous ajoutez un thème pour le dictionnaire de ressources de l’application, l’apparence des contrôles standard changera.
 
-Le balisage XAML suivant montre les contrôles communs :
+Le balisage XAML suivant montre quelques contrôles communs :
 
 ```xaml
 <StackLayout Padding="40">
@@ -43,10 +43,10 @@ Le balisage XAML suivant montre les contrôles communs :
 </StackLayout>
 ```
 
-Ces captures d’écran affichent ces contrôles avec :
+Ces captures d’écran montrent ces contrôles avec :
 
 * Aucun thème appliqué
-* Thème clair (uniquement des différences subtiles à ne disposer d’aucun thème)
+* Thème clair (uniquement des différences subtiles pour n’avoir aucun thème)
 * Thème foncé
 
 ![](images/standard-none-sml.png "Les contrôles sans thème") ![](images/standard-light-sml.png "contrôles avec le thème clair") ![](images/standard-dark-sml.png "contrôles avec le thème sombre")
@@ -57,7 +57,7 @@ Ces captures d’écran affichent ces contrôles avec :
 
 Le `StyleClass` propriété permet l’apparence d’une vue à modifier en fonction d’une définition fournie par un thème.
 
-Le [Light](light.md) et [foncé](dark.md) thèmes à la fois définissent trois différentes apparences pour un `BoxView`: `HorizontalRule`, `Circle`, et `Rounded`. Ce balisage illustre trois différents `BoxView`s avec les classes de style différent appliqué :
+Le [Light](light.md) et [foncé](dark.md) les thèmes les deux définissent trois différentes apparences pour un `BoxView`: `HorizontalRule`, `Circle`, et `Rounded`. Ce balisage illustre trois différents `BoxView`s avec les classes de style différent appliqué :
 
 ```xaml
 <StackLayout Padding="40">
@@ -67,7 +67,7 @@ Le [Light](light.md) et [foncé](dark.md) thèmes à la fois définissent trois 
 </StackLayout>
 ```
 
-Cela restitue avec clair et foncé comme suit :
+Cela génère le rendu avec clair et foncé comme suit :
 
 ![](images/boxview-light-sml.png "BoxView avec un StyleClass le thème clair") ![](images/boxview-dark-sml.png "BoxView avec un StyleClass le thème sombre")
 
@@ -75,7 +75,7 @@ Cela restitue avec clair et foncé comme suit :
 
 ## <a name="built-in-classes"></a>Classes intégrées
 
-En plus des styles automatiquement les contrôles communs la lumière et thèmes foncés prend actuellement en charge les classes suivantes qui peuvent être appliquées en définissant le `StyleClass` sur ces contrôles :
+En plus de styles automatiquement les contrôles communs la lumière et thèmes foncées prend actuellement en charge les classes suivantes qui peuvent être appliquées en définissant le `StyleClass` sur ces contrôles :
 
 **BoxView**
 
@@ -114,9 +114,9 @@ En plus des styles automatiquement les contrôles communs la lumière et thèmes
 
 <a name="loadtheme" />
 
-### <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>Impossible de charger fichier ou l’assembly 'Xamarin.Forms.Theme.Light' ou une de ses dépendances
+### <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>Impossible de charger le fichier ou l’assembly 'Xamarin.Forms.Theme.Light' ou une de ses dépendances
 
-Dans la version préliminaire, thèmes n’est peut-être pas en mesure de charger lors de l’exécution. Ajoutez le code indiqué ci-dessous dans les projets pour corriger cette erreur.
+Dans la version préliminaire, thèmes n’est peut-être pas en mesure de charger lors de l’exécution. Ajoutez le code ci-dessous dans les projets appropriés pour corriger cette erreur.
 
 **iOS**
 

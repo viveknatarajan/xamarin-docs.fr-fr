@@ -1,47 +1,47 @@
 ---
-title: Résolution des problèmes de lecteur en direct de Xamarin
-description: Ce document décrit les problèmes connus avec le lecteur de Live Xamarin et les corrections éventuelles. Il traite des problèmes de connexion, les problèmes de configuration et bien plus encore.
+title: Résolution des problèmes de Xamarin Live Player
+description: Ce document décrit les problèmes connus avec le Xamarin Live Player et les corrections éventuelles. Il aborde les problèmes de connexion, les problèmes de configuration et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
 ms.openlocfilehash: 3db14db2c64e024ef1c04275661f610f9407dfb7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793753"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831330"
 ---
-# <a name="troubleshooting-xamarin-live-player"></a>Résolution des problèmes de lecteur en direct de Xamarin
+# <a name="troubleshooting-xamarin-live-player"></a>Résolution des problèmes de Xamarin Live Player
 
-![Fonctionnalité d’aperçu](~/media/shared/preview.png)
+![Fonctionnalité en version préliminaire](~/media/shared/preview.png)
 
-Cet article décrit certains problèmes courants et fournit les étapes pour les corriger.
+Cet article décrit certains problèmes courants et fournit des étapes pour les corriger.
 
-## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>Appareil mobile ne se connecte pas après analyse code-barres (ou une entrée de code)
+## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>Appareil mobile ne se connecte pas après analyse code-barres (ou l’entrée de code)
 
-Se produit lorsque l’appareil mobile en cours d’exécution Xamarin Live Player n’est pas sur le même réseau que l’ordinateur qui exécute l’IDE. Passez en revue les éléments suivants :
+Se produit lorsque le périphérique mobile Xamarin Live Player en cours d’exécution n’est pas sur le même réseau que l’ordinateur qui exécute l’IDE. Découvrez les éléments suivants :
 
 - Vérifiez que l’appareil et l’ordinateur sont sur le même réseau Wi-Fi.
   - Si l’ordinateur est également connecté à un réseau câblé, essayez de le débrancher la connexion câblée.
-- Le réseau peut être correctement sécurisé (par exemple, certains réseaux d’entreprise), bloquant les ports requis par le lecteur Xamarin Live.
-- Fermez l’application Xamarin Player de Live et redémarrez-le.
+- Le réseau peut être étroitement sécurisé (par exemple, certains réseaux d’entreprise), bloquant les ports requis par Xamarin Live Player.
+- Fermez l’application Xamarin Live Player et redémarrez-le.
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Message « Erreur lors de la tentative de déploiement » dans l’IDE
 
-**« IOException : Impossible de lire les données à partir de la connexion de transport : susceptibles de bloquer l’opération sur un socket non bloquant »**
+**« Exception IOException : Impossible de lire les données à partir de la connexion de transport : susceptibles de bloquer l’opération sur un socket non bloquant »**
 
-Cette erreur se produite souvent lorsque le périphérique mobile en cours d’exécution Xamarin Live Player ne se trouve pas sur le même réseau que l’ordinateur exécutant Visual Studio ; Cela se produit souvent lorsque vous vous connectez à un appareil qui a été associé précédemment avec succès.
+Cette erreur se produite souvent lorsque le périphérique mobile Xamarin Live Player en cours d’exécution n’est pas sur le même réseau que l’ordinateur qui exécute Visual Studio. Cela se produit souvent lors de la connexion à un périphérique qui a été précédemment associé avec succès.
 
 * Vérifiez que l’appareil et l’ordinateur sont sur le même réseau Wi-Fi.
-* Le réseau peut être correctement sécurisé (par exemple, certains réseaux d’entreprise), bloquant les ports requis par le lecteur Xamarin Live. Les ports suivants sont requis pour le lecteur de Live Xamarin :
-  * 37847 – accès réseau interne 
-  * 8090 – accès au réseau externe
+* Le réseau peut être étroitement sécurisé (par exemple, certains réseaux d’entreprise), bloquant les ports requis par Xamarin Live Player. Les ports suivants sont requis pour Xamarin Live Player :
+  * 37847 – accès au réseau interne 
+  * 8090 – accès réseau externe
 
-## <a name="manually-configure-device"></a>Configurer manuellement le périphérique
+## <a name="manually-configure-device"></a>Configurer manuellement des appareils
 
-Si vous ne pouvez pas connecter à votre appareil via le Wi-Fi. vous pouvez tenter de configurer manuellement votre appareil via le fichier de configuration, en procédant comme suit :
+Si vous ne pouvez pas connecter à votre appareil via le Wi-Fi vous pouvez tenter de configurer manuellement votre appareil via le fichier de configuration, procédez comme suit :
 
 **Étape 1 : Ouvrez le fichier de configuration**
 
@@ -50,7 +50,7 @@ Accédez à votre dossier de données d’application :
 * Windows : **%userprofile%\AppData\Roaming**
 * macOS : **~/Users/$USER/.config**
 
-Dans ce dossier, vous trouverez **PlayerDeviceList.xml** s’il n’existe pas, vous devrez créer un.
+Vous trouverez dans ce dossier **PlayerDeviceList.xml** si elle n’existe pas, vous devrez créer un.
 
 **Étape 2 : Obtenir l’adresse IP**
 
@@ -60,13 +60,13 @@ Prenez note de l’adresse IP, vous devez l’adresse IP répertoriée quand vou
 
 **Étape 3 : Obtenir le code de jumelage**
 
-À l’intérieur du drainage Xamarin Live Player **paire** ou **paire nouveau**, puis appuyez sur **entrez manuellement**. Un code numérique s’affichera, que vous devez mettre à jour le fichier de configuration.
+À l’intérieur du drainage de Xamarin Live Player **paire** ou **paire à nouveau**, puis appuyez sur **saisir manuellement**. Un code numérique s’affichera, que vous devez mettre à jour le fichier de configuration.
 
 **Étape 4 : Générer des GUID**
 
-Accédez à : https://www.guidgenerator.com/online-guid-generator.aspx et générer un nouveau guid et assurez-vous majuscules sur.
+Accédez à : https://www.guidgenerator.com/online-guid-generator.aspx et générer un nouveau guid et assurez-vous qu’Upper Case est activée.
 
-**Étape 5 : Configurer le périphérique**
+**Étape 5 : Configurer l’appareil**
 
 Ouvrez le **PlayerDeviceList.xml** vers le haut dans un éditeur tel que Visual Studio ou Visual Studio Code. Vous devez configurer votre appareil manuellement dans ce fichier. Par défaut, le fichier doit contenir le vide suivant `Devices` élément XML :
 
@@ -96,7 +96,7 @@ Ouvrez le **PlayerDeviceList.xml** vers le haut dans un éditeur tel que Visual 
 </PlayerDevice>
 ```
 
-**Ajoutez un appareil Android :**
+**Ajouter un appareil Android :**
 
 ```xml
 <PlayerDevice>
@@ -116,11 +116,11 @@ Ouvrez le **PlayerDeviceList.xml** vers le haut dans un éditeur tel que Visual 
 
 **Fermez et rouvrez Visual Studio.** Votre appareil doit s’afficher dans la liste.
 
-## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>Message de « espace de noms ou le type est introuvable » dans l’IDE
+## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>Message de « type ou espace de noms est introuvable » dans l’IDE
 
-Vérifiez que vous avez sélectionné un **projet de démarrage** qui correspond à votre type d’appareil (iOS ou Android) et que la configuration correspond à ce type de périphérique (par exemple). **Déboguer | iPhone simulateur** pour iOS).
+Vérifiez que vous avez sélectionné un **projet de démarrage** qui correspond à votre type d’appareil (iOS ou Android) et que la configuration correspond à ce type d’appareil (par exemple). **Déboguer | iPhone simulateur** pour iOS).
 
-## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>Message « Constructeur sur le type 'InterpretedXamarin.Forms.Button' non trouvé » dans le lecteur
+## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>Message « Constructeur sur le type 'InterpretedXamarin.Forms.Button' introuvable » dans le lecteur
 
 Certaines classes système ne peut pas être substituées, par exemple :
 
@@ -130,14 +130,14 @@ public class SomeCustomButton : Xamarin.Forms.Button { ... }
 
 ## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>« MainActivity.cs : 'Resource.Layout' ne contient pas de définition pour 'Main' »
 
-Cette erreur se produit pour les projets Android avec des interfaces utilisateur définis dans les fichiers AXML.
-Les fichiers AXML ne sont pas pris en charge actuellement dans le lecteur Xamarin Live.
+Cette erreur se produit pour les projets Android avec les interfaces utilisateur définies dans les fichiers AXML.
+Les fichiers AXML ne sont pas actuellement pris en charge dans Xamarin Live Player.
 
-### <a name="android-toolbar-and-tabs-render-incorrectly-using-xamarinforms"></a>Barre d’outils et des onglets Android restituent correctement à l’aide de Xamarin.Forms
+### <a name="android-toolbar-and-tabs-render-incorrectly-using-xamarinforms"></a>Les onglets et barre d’outils Android restituent correctement à l’aide de Xamarin.Forms
 
-Projets de Xamarin.Forms Android doivent utiliser « Toolbar.axml » et « Tabbar.axml » pour les noms des fichiers de mise en page pertinentes. Le modèle par défaut utilise ces noms ; renommant entraîne des problèmes de rendu.
+Les projets Android de Xamarin.Forms doivent utiliser « Toolbar.axml » et « Tabbar.axml » pour les noms des fichiers de disposition pertinentes. Le modèle par défaut utilise ces noms ; en les renommant entraîne des problèmes de rendu.
 
-Veuillez signaler d’autres problèmes sur [bugzilla](https://aka.ms/live-player-report-issue).
+Signalez les problèmes supplémentaires sur [bugzilla](https://aka.ms/live-player-report-issue).
 
 ## <a name="related-links"></a>Liens associés
 
