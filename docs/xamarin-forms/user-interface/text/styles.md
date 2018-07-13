@@ -1,31 +1,31 @@
 ---
 title: Styles de texte de Xamarin.Forms
-description: Cet article explique comment le texte de style dans les applications de Xamarin.Forms. Styles peuvent être définis qu’une seule fois et utilisés par de nombreuses vues, mais un style est utilisable uniquement avec les vues d’un type.
+description: Cet article explique comment le style du texte dans les applications Xamarin.Forms. Styles peuvent être définies une seule fois et utilisés par plusieurs vues, mais un style peut uniquement être utilisé avec vues d’un type.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: b8cc6493c3574180e7938050075c5a70ecebeebf
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 73aa3115e92d1e3954f5ae3eb8dcb84abf9d9efb
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245320"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998766"
 ---
 # <a name="xamarinforms-text-styles"></a>Styles de texte de Xamarin.Forms
 
-_Texte de style dans Xamarin.Forms_
+_Style du texte dans Xamarin.Forms_
 
-Styles peuvent être utilisés pour ajuster l’apparence des étiquettes, des entrées et des éditeurs. Styles peuvent être définis qu’une seule fois et utilisés par de nombreuses vues, mais un style est utilisable uniquement avec les vues d’un type.
-Styles peuvent être accordées à un `Key` et appliquées de manière sélective à l’aide d’un contrôle spécifique `Style` propriété.
+Styles peuvent être utilisés pour ajuster l’apparence des étiquettes, des entrées et des éditeurs. Styles peuvent être définies une seule fois et utilisés par plusieurs vues, mais un style peut uniquement être utilisé avec vues d’un type.
+Styles peuvent recevoir un `Key` et appliqués de manière sélective à l’aide d’un contrôle spécifique `Style` propriété.
 
 <a name="Built-In_Styles" />
 
 ## <a name="built-in-styles"></a>Styles intégrés
 
-Xamarin.Forms comprend plusieurs [intégrés](http://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) styles pour les scénarios courants :
+Xamarin.Forms inclut plusieurs [intégrés](xref:Xamarin.Forms.Device.Styles) styles pour les scénarios courants :
 
 - `BodyStyle`
 - `CaptionStyle`
@@ -52,9 +52,9 @@ label.Style = Device.Styles.TitleStyle;
 
 ## <a name="custom-styles"></a>Styles personnalisés
 
-Styles se composent de méthodes setter et méthodes setter se comprendre des propriétés et les valeurs de propriétés seront fixés à.
+Styles se composent des accesseurs Set et accesseurs Set se composent des propriétés et les propriétés les valeurs seront définies.
 
-Dans c#, un style personnalisé pour une étiquette avec le texte rouge de taille 30 serait défini comme suit :
+Dans c#, un style personnalisé pour une étiquette avec un texte rouge de taille 30 serait défini comme suit :
 
 ```csharp
 var LabelStyle = new Style (typeof(Label)) {
@@ -67,7 +67,7 @@ var LabelStyle = new Style (typeof(Label)) {
 var label = new Label { Text = "Check out my style.", Style = LabelStyle };
 ```
 
-En XAML :
+Dans XAML :
 
 ```xaml
 <ContentPage.Resources>
@@ -86,17 +86,17 @@ En XAML :
 </ContentPage.Content>
 ```
 
-Notez que les ressources (y compris tous les styles) sont définies dans `ContentPage.Resources`, qui est un frère de plus familiers `ContentPage.Content` élément.
+Notez que les ressources (y compris tous les styles) sont définis dans `ContentPage.Resources`, qui est un frère de plus familiers `ContentPage.Content` élément.
 
 ![](styles-images/customstyle.png "Exemple de Styles personnalisés")
 
 <a name="Applying_Styles" />
 
-## <a name="applying-styles"></a>Appliquer des Styles
+## <a name="applying-styles"></a>Application de Styles
 
-Une fois un style a été créé, il peut être appliqué à toute correspondance de vue son `TargetType`.
+Une fois qu’un style a été créé, il peut être appliqué à toute correspondance de vue ses `TargetType`.
 
-En XAML, les styles personnalisés sont appliqués aux vues en fournissant leurs `Style` propriété avec un `StaticResource` extension de balisage en référençant le style souhaité :
+Dans XAML, les styles personnalisés sont appliqués aux vues en fournissant leurs `Style` propriété avec un `StaticResource` extension de balisage référençant le style souhaité :
 
 ```xaml
 <Label Text="Check out my style." Style="{StaticResource LabelStyle}" />
@@ -115,7 +115,7 @@ this.Resources.Add ("LabelStyle", LabelStyle);
 label.Style = (Style)Resources["LabelStyle"];
 ```
 
-Styles intégrés sont appliquées différemment, car ils ont besoin répondre à des paramètres d’accessibilité. Pour appliquer des styles intégrés en XAML, le `DynamicResource` extension de balisage est utilisée :
+Styles intégrés sont appliqués de manière différente, car ils doivent pouvoir répondre aux paramètres d’accessibilité. Pour appliquer des styles intégrés dans XAML, le `DynamicResource` extension de balisage est utilisée :
 
 ```xaml
 <Label Text="I'm a Title" Style="{DynamicResource TitleStyle}"/>
@@ -129,19 +129,19 @@ label.Style = Device.Styles.TitleStyle;
 
 ## <a name="accessibility"></a>Accessibilité
 
-Les styles intégrés existent pour le rendre plus facile de respecter les préférences d’accessibilité. Lorsque vous utilisez un des styles intégrés, les tailles de police augmentera automatiquement si un utilisateur définit les préférences de leur accessibilité en conséquence.
+Les styles intégrés existent pour le rendre plus facile de respecter les préférences d’accessibilité. Lorsque vous utilisez un des styles intégrés, les tailles de police augmentera automatiquement si un utilisateur configure leurs préférences d’accessibilité en conséquence.
 
-Prenons l’exemple suivant de la même page de style avec les styles intégrés avec les paramètres d’accessibilité activé et désactivé des vues :
+Prenons l’exemple suivant de la même page de vues mis en forme avec les styles intégrés avec les paramètres d’accessibilité activés et désactivés :
 
 Désactivé :
 
-![](styles-images/pre-access.png "Styles de périphérique avec accessibilité désactivé")
+![](styles-images/pre-access.png "Styles d’appareils avec accessibilité désactivé")
 
 Activé :
 
-![](styles-images/post-access.png "Styles de périphérique avec l’accessibilité activé")
+![](styles-images/post-access.png "Styles d’appareils avec l’accessibilité est activée")
 
-Pour garantir l’accessibilité, assurez-vous que les styles intégrés sont utilisés comme base pour tous les styles de texte dans votre application, et que vous utilisez les styles de manière cohérente. Consultez [Styles](~/xamarin-forms/user-interface/styles/index.md) pour plus d’informations sur l’extension et travailler avec des styles en général.
+Pour garantir l’accessibilité, assurez-vous que les styles intégrés sont utilisés comme base pour tous les styles de texte au sein de votre application, et que vous utilisez les styles de manière cohérente. Consultez [Styles](~/xamarin-forms/user-interface/styles/index.md) pour plus d’informations sur l’extension et l’utilisation des styles en général.
 
 
 ## <a name="related-links"></a>Liens associés
@@ -149,4 +149,4 @@ Pour garantir l’accessibilité, assurez-vous que les styles intégrés sont ut
 - [Création d’applications mobiles avec Xamarin.Forms, chapitre 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
 - [Texte (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Style](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
+- [Style](xref:Xamarin.Forms.Style)

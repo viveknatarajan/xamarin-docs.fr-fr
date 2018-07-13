@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 906fd60954b18064467e665295dba8bb75ed5a45
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: c6a6ed38ec64c681075ffa3e42f3ffaf58c576ec
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935587"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997215"
 ---
 # <a name="listview-performance"></a>Performances de ListView
 
 Lorsque vous écrivez des applications mobiles, des performances est importante. Les utilisateurs s’attendent défilement fluide et temps de chargement rapide. Ne pas répondre aux attentes de vos utilisateurs vous coûter des évaluations dans le magasin de l’application ou dans le cas d’une application line of business, coût votre temps à l’entreprise et l’argent.
 
-Bien que [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) est une vue puissante pour afficher les données, il présente certaines limitations. Performances de défilement peuvent se dégrader lors de l’utilisation de cellules personnalisés, en particulier lorsqu’ils contiennent des hiérarchies d’affichage profondément imbriquées ou utilisent certaines dispositions qui nécessitent beaucoup de mesure. Heureusement, il existe des techniques que vous pouvez utiliser pour éviter des performances médiocres.
+Bien que [ `ListView` ](xref:Xamarin.Forms.ListView) est une vue puissante pour afficher les données, il présente certaines limitations. Performances de défilement peuvent se dégrader lors de l’utilisation de cellules personnalisés, en particulier lorsqu’ils contiennent des hiérarchies d’affichage profondément imbriquées ou utilisent certaines dispositions qui nécessitent beaucoup de mesure. Heureusement, il existe des techniques que vous pouvez utiliser pour éviter des performances médiocres.
 
 <a name="cachingstrategy" />
 
@@ -26,9 +26,9 @@ Bien que [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Lis
 
 ListView est souvent utilisés pour afficher des données beaucoup plus que vous pouvez ajuster à l’écran. Considérez une application de la musique, par exemple. Une bibliothèque de chansons peut avoir des milliers d’entrées. L’approche simple, qui serait de créer une ligne pour chaque chanson, aurait des performances médiocres. Cette approche gaspille de la mémoire précieuse et peut ralentir le défilement pour une analyse. Une autre approche consiste à créer et détruire des lignes comme données défile dans la vue. Cela nécessite l’instanciation constante et nettoyage d’objets de vue, qui peut être très lent.
 
-Pour économiser la mémoire, natif [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) équivalents pour chaque plateforme ont des fonctionnalités intégrées pour réutiliser des lignes. Seules les cellules visibles sur l’écran sont chargées en mémoire et le **contenu** est chargé dans les cellules existantes. Cela empêche l’application d’avoir à instancier des milliers d’objets, en économisant du temps et mémoire.
+Pour économiser la mémoire, natif [ `ListView` ](xref:Xamarin.Forms.ListView) équivalents pour chaque plateforme ont des fonctionnalités intégrées pour réutiliser des lignes. Seules les cellules visibles sur l’écran sont chargées en mémoire et le **contenu** est chargé dans les cellules existantes. Cela empêche l’application d’avoir à instancier des milliers d’objets, en économisant du temps et mémoire.
 
-Permet de Xamarin.Forms [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) cellule réutilisation via la [ `ListViewCachingStrategy` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListViewCachingStrategy/) énumération, qui a les valeurs suivantes :
+Permet de Xamarin.Forms [ `ListView` ](xref:Xamarin.Forms.ListView) cellule réutilisation via la [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) énumération, qui a les valeurs suivantes :
 
 ```csharp
 public enum ListViewCachingStrategy
@@ -44,22 +44,22 @@ public enum ListViewCachingStrategy
 
 ### <a name="retainelement"></a>RetainElement
 
-Le [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) mise en cache de stratégie spécifie que le [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) générera une cellule pour chaque élément dans la liste, et est la valeur par défaut `ListView` comportement. Il doit généralement être utilisée dans les circonstances suivantes :
+Le [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) mise en cache de stratégie spécifie que le [ `ListView` ](xref:Xamarin.Forms.ListView) générera une cellule pour chaque élément dans la liste, et est la valeur par défaut `ListView` comportement. Il doit généralement être utilisée dans les circonstances suivantes :
 
 - Lorsque chaque cellule comporte un grand nombre de liaisons (20-30 +).
 - Lorsque le modèle de cellule change fréquemment.
 - Lorsque test révèle que le `RecycleElement` la mise en cache des résultats de stratégie dans une vitesse d’exécution réduites.
 
-Il est important de reconnaître les conséquences de la [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) stratégie de mise en cache lorsque vous travaillez avec des cellules personnalisés. Code d’initialisation de cellule devez exécuter pour la création de chaque cellule, qui peut être plusieurs fois par seconde. Dans ce cas, des techniques de mise en page ont été correctement sur une page, telles que l’utilisation de plusieurs imbriqués [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) instances, deviennent des goulots d’étranglement de performances lorsqu’ils sont le programme d’installation et destruction en temps réel en tant que l’utilisateur fait défiler.
+Il est important de reconnaître les conséquences de la [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement) stratégie de mise en cache lorsque vous travaillez avec des cellules personnalisés. Code d’initialisation de cellule devez exécuter pour la création de chaque cellule, qui peut être plusieurs fois par seconde. Dans ce cas, des techniques de mise en page ont été correctement sur une page, telles que l’utilisation de plusieurs imbriqués [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) instances, deviennent des goulots d’étranglement de performances lorsqu’ils sont le programme d’installation et destruction en temps réel en tant que l’utilisateur fait défiler.
 
 <a name="recycleelement" />
 
 ### <a name="recycleelement"></a>RecycleElement
 
-Le [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) mise en cache de stratégie spécifie que le [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) va tenter de réduire sa vitesse d’encombrement et l’exécution de mémoire par recyclage des cellules de la liste. Ce mode n’offre pas toujours une amélioration des performances et de test doit être effectué pour déterminer les améliorations. Toutefois, il est généralement le choix privilégié et doit être utilisé dans les circonstances suivantes :
+Le [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) mise en cache de stratégie spécifie que le [ `ListView` ](xref:Xamarin.Forms.ListView) va tenter de réduire sa vitesse d’encombrement et l’exécution de mémoire par recyclage des cellules de la liste. Ce mode n’offre pas toujours une amélioration des performances et de test doit être effectué pour déterminer les améliorations. Toutefois, il est généralement le choix privilégié et doit être utilisé dans les circonstances suivantes :
 
 - Lorsque chaque cellule comporte un petit nombre modéré de liaisons.
-- Lors de chaque cellule [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) définit toutes les données de cellule.
+- Lors de chaque cellule [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) définit toutes les données de cellule.
 - Lorsque chaque cellule est en grande partie similaire, avec le modèle de cellule qui ne changent pas.
 
 Lors de la virtualisation, la cellule aura son contexte de liaison mis à jour, et par conséquent, si une application utilise ce mode elle doit s’assurer que les mises à jour du contexte de liaison sont gérés de façon appropriée. Toutes les données relatives à la cellule doivent provenir du contexte de liaison ou les erreurs de cohérence peuvent se produire. Pour cela, à l’aide de la liaison de données pour afficher des données de cellule. Vous pouvez également les données des cellules doivent être définies dans le `OnBindingContextChanged` remplacer, plutôt que dans le constructeur de la cellule personnalisée, comme illustré dans l’exemple de code suivant :
@@ -93,17 +93,17 @@ Sur iOS et Android, si les cellules utilisent des convertisseurs personnalisés,
 
 #### <a name="recycleelement-with-a-datatemplateselector"></a>RecycleElement avec un DataTemplateSelector
 
-Quand un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) utilise un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) pour sélectionner un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), le [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) la mise en cache stratégie de ne pas mettre en cache `DataTemplate`s. Au lieu de cela, un `DataTemplate` est sélectionné pour chaque élément de données dans la liste.
+Quand un [ `ListView` ](xref:Xamarin.Forms.ListView) utilise un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) pour sélectionner un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), le [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) la mise en cache stratégie de ne pas mettre en cache `DataTemplate`s. Au lieu de cela, un `DataTemplate` est sélectionné pour chaque élément de données dans la liste.
 
 > [!NOTE]
-> Le [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) mise en cache de la stratégie a une condition préalable, introduite dans Xamarin.Forms 2.4, qui, lorsqu’un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) est invité à sélectionner un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)que chaque `DataTemplate` doit retourner le même [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) type. Par exemple, étant donné un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) avec un `DataTemplateSelector` qui peut retourner `MyDataTemplateA` (où `MyDataTemplateA` retourne un `ViewCell` de type `MyViewCellA`), ou `MyDataTemplateB` (où `MyDataTemplateB`retourne un `ViewCell` de type `MyViewCellB`), lorsque `MyDataTemplateA` est retourné doit retourner `MyViewCellA` ou une exception sera levée.
+> Le [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) mise en cache de la stratégie a une condition préalable, introduite dans Xamarin.Forms 2.4, qui, lorsqu’un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) est invité à sélectionner un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)que chaque `DataTemplate` doit retourner le même [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) type. Par exemple, étant donné un [ `ListView` ](xref:Xamarin.Forms.ListView) avec un `DataTemplateSelector` qui peut retourner `MyDataTemplateA` (où `MyDataTemplateA` retourne un `ViewCell` de type `MyViewCellA`), ou `MyDataTemplateB` (où `MyDataTemplateB`retourne un `ViewCell` de type `MyViewCellB`), lorsque `MyDataTemplateA` est retourné doit retourner `MyViewCellA` ou une exception sera levée.
 
 ### <a name="recycleelementanddatatemplate"></a>RecycleElementAndDataTemplate
 
-Le [ `RecycleElementAndDataTemplate` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate) mise en cache de la stratégie s’appuie sur le [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) mise en cache de la stratégie en veillant en outre à ce que, lorsqu’un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) utilise un [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) pour sélectionner un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), `DataTemplate`s sont mis en cache par le type d’élément dans la liste. Par conséquent, `DataTemplate`s sont sélectionnées en une seule fois par type d’élément, au lieu d’une fois par instance d’élément.
+Le [ `RecycleElementAndDataTemplate` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate) mise en cache de la stratégie s’appuie sur le [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) mise en cache de la stratégie en veillant en outre à ce que, lorsqu’un [ `ListView` ](xref:Xamarin.Forms.ListView) utilise un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) pour sélectionner un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), `DataTemplate`s sont mis en cache par le type d’élément dans la liste. Par conséquent, `DataTemplate`s sont sélectionnées en une seule fois par type d’élément, au lieu d’une fois par instance d’élément.
 
 > [!NOTE]
-> Le [ `RecycleElementAndDataTemplate` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate) mise en cache de la stratégie a un composant requis qui le `DataTemplate`s retourné par la [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) doit utiliser le [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) constructeur qui accepte un `Type`.
+> Le [ `RecycleElementAndDataTemplate` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate) mise en cache de la stratégie a un composant requis qui le `DataTemplate`s retourné par la [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) doit utiliser le [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate.%23ctor(System.Type)) constructeur qui accepte un `Type`.
 
 ### <a name="setting-the-caching-strategy"></a>Définir la stratégie de mise en cache
 
@@ -131,9 +131,9 @@ Cela a le même effet que la définition de l’argument de stratégie de mise e
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>Définir la stratégie de mise en cache dans un ListView sous-classé
 
-Définissant le `CachingStrategy` attribut à partir de XAML sur un sous-classé [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) ne produira pas le comportement souhaité, car il n’est pas `CachingStrategy` propriété sur `ListView`. En outre, si [XAMLC](~/xamarin-forms/xaml/xamlc.md) est activé, le message d’erreur suivant est généré : **aucune propriété, une propriété pouvant être liée ou un événement trouvé pour « CachingStrategy »**
+Définissant le `CachingStrategy` attribut à partir de XAML sur un sous-classé [ `ListView` ](xref:Xamarin.Forms.ListView) ne produira pas le comportement souhaité, car il n’est pas `CachingStrategy` propriété sur `ListView`. En outre, si [XAMLC](~/xamarin-forms/xaml/xamlc.md) est activé, le message d’erreur suivant est généré : **aucune propriété, une propriété pouvant être liée ou un événement trouvé pour « CachingStrategy »**
 
-La solution à ce problème consiste à spécifier un constructeur sur sous-classé [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) qui accepte un [ `ListViewCachingStrategy` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListViewCachingStrategy/) paramètre et le transmet à la classe de base :
+La solution à ce problème consiste à spécifier un constructeur sur sous-classé [ `ListView` ](xref:Xamarin.Forms.ListView) qui accepte un [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) paramètre et le transmet à la classe de base :
 
 ```csharp
 public class CustomListView : ListView
@@ -145,7 +145,7 @@ public class CustomListView : ListView
 }
 ```
 
-Le [ `ListViewCachingStrategy` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListViewCachingStrategy/) valeur d’énumération peut être spécifiée à partir de XAML en utilisant le `x:Arguments` syntaxe :
+Le [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) valeur d’énumération peut être spécifiée à partir de XAML en utilisant le `x:Arguments` syntaxe :
 
 ```xaml
 <local:CustomListView>
@@ -165,9 +165,9 @@ Il existe plusieurs techniques permettant d’améliorer les performances d’un
 -  Utilisez les cellules intégrés (tels que `TextCell`  /  `SwitchCell` ) au lieu de `ViewCell` chaque fois que vous pouvez.
 -  Utiliser moins d’éléments. Par exemple envisagez d’utiliser un seul `FormattedString` étiquette au lieu de plusieurs étiquettes.
 -  Remplacez le `ListView` avec un `TableView` lors de l’affichage des données non homogènes : autrement dit, les données de types différents.
--  Limiter l’utilisation de la [ `Cell.ForceUpdateSize` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Cell.ForceUpdateSize()/) (méthode). Si l’utilisation excessive, il sera dégrader les performances.
+-  Limiter l’utilisation de la [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) (méthode). Si l’utilisation excessive, il sera dégrader les performances.
 -  Sur Android, évitez de définir un `ListView`de visibilité de séparateur de ligne ou de couleur après qu’il a été instancié, comme il en résulte une baisse des performances de grande taille.
--  Évitez de modifier la disposition des cellules selon la [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/). Cela entraîne des coûts importants de mise en page et de l’initialisation.
+-  Évitez de modifier la disposition des cellules selon la [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext). Cela entraîne des coûts importants de mise en page et de l’initialisation.
 -  Évitez les hiérarchies de dispositions profondément imbriquées. Utilisez `AbsoluteLayout` ou `Grid` afin de réduire l’imbrication.
 -  Éviter spécifique `LayoutOptions` autre que `Fill` (remplissage est le cher pour calculer).
 -  Éviter de placer un `ListView` à l’intérieur d’un `ScrollView` pour les raisons suivantes :
@@ -176,13 +176,13 @@ Il existe plusieurs techniques permettant d’améliorer les performances d’un
     - Le `ListView` peut présenter un en-tête personnalisé et le pied de page qui fait défiler les éléments de la liste, potentiellement offre les fonctionnalités qui le `ScrollView` a été utilisé pour. Pour plus d’informations, consultez [en-têtes et pieds de page](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
 -  Envisagez un convertisseur personnalisé si vous avez besoin d’une conception très spécifique, complexe présentée dans vos cellules.
 
-`AbsoluteLayout` a la possibilité d’effectuer des mises en page sans un appel de la mesure unique. Cela rend très puissante pour les performances. Si `AbsoluteLayout` ne peut pas être utilisée, envisagez [ `RelativeLayout` ](http://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/). Si vous utilisez `RelativeLayout`, en passant directement des contraintes sera beaucoup plus rapide que l’utilisation de l’API de l’expression. C’est parce que l’API de l’expression utilise JIT et sur iOS l’arborescence doit être interprétée, qui est plus lente. L’expression API convient aux mises en page où il requis uniquement sur la disposition initiale et la rotation, mais en `ListView`, où elle est exécutée en permanence pendant le défilement, elle nuit aux performances.
+`AbsoluteLayout` a la possibilité d’effectuer des mises en page sans un appel de la mesure unique. Cela rend très puissante pour les performances. Si `AbsoluteLayout` ne peut pas être utilisée, envisagez [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout). Si vous utilisez `RelativeLayout`, en passant directement des contraintes sera beaucoup plus rapide que l’utilisation de l’API de l’expression. C’est parce que l’API de l’expression utilise JIT et sur iOS l’arborescence doit être interprétée, qui est plus lente. L’expression API convient aux mises en page où il requis uniquement sur la disposition initiale et la rotation, mais en `ListView`, où elle est exécutée en permanence pendant le défilement, elle nuit aux performances.
 
-Création d’un convertisseur personnalisé pour un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) ou ses cellules est une approche à réduire l’effet des calculs de disposition sur les performances de défilement. Pour plus d’informations, consultez [personnalisation d’un ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) et [personnalisation d’une ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
+Création d’un convertisseur personnalisé pour un [ `ListView` ](xref:Xamarin.Forms.ListView) ou ses cellules est une approche à réduire l’effet des calculs de disposition sur les performances de défilement. Pour plus d’informations, consultez [personnalisation d’un ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) et [personnalisation d’une ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
 
 
 ## <a name="related-links"></a>Liens associés
 
 - [Affichage de convertisseur personnalisé (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
 - [ViewCell convertisseur personnalisé (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
-- [ListViewCachingStrategy](https://developer.xamarin.com/api/type/Xamarin.Forms.ListViewCachingStrategy/)
+- [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

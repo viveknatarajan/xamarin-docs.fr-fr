@@ -7,12 +7,12 @@ ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 92cf7f0163c4f074c718e86b06cf4830ff857c58
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: c4ad067778203759a54ed8141db0b82602e40f6c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935600"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997450"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Résumé du chapitre 16. Liaison de données
 
@@ -24,27 +24,27 @@ Très souvent, ces liaisons de données connecter des objets d’interface utili
 
 Plusieurs propriétés, méthodes et classes sont impliqués dans la liaison de données :
 
-- Le [ `Binding` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Binding/) dérive de la classe [ `BindingBase` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingBase/) et encapsule de nombreuses caractéristiques d’une liaison de données
-- Le [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) propriété est définie par le [ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/) classe
-- Le [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) méthode est également définie par le [ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/) classe
-- Le [ `BindableObjectExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObjectExtensions/) classe définit trois supplémentaires `SetBinding` méthodes
+- Le [ `Binding` ](xref:Xamarin.Forms.Binding) dérive de la classe [ `BindingBase` ](xref:Xamarin.Forms.BindingBase) et encapsule de nombreuses caractéristiques d’une liaison de données
+- Le [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) propriété est définie par le [ `BindableObject` ](xref:Xamarin.Forms.BindableObject) classe
+- Le [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) méthode est également définie par le [ `BindableObject` ](xref:Xamarin.Forms.BindableObject) classe
+- Le [ `BindableObjectExtensions` ](xref:Xamarin.Forms.BindableObjectExtensions) classe définit trois supplémentaires `SetBinding` méthodes
 
 Les deux classes suivantes prennent en charge les extensions de balisage XAML pour les liaisons :
 
-- [`BindingExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) prend en charge le `Binding` extension de balisage
-- [`ReferenceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/) prend en charge le `x:Reference` extension de balisage
+- [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) prend en charge le `Binding` extension de balisage
+- [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) prend en charge le `x:Reference` extension de balisage
 
 Deux interfaces sont impliqués dans la liaison de données :
 
-- [`INotifyPropertyChanged`](https://developer.xamarin.com/api/type/System.ComponentModel.INotifyPropertyChanged/) dans le `System.ComponentModel` espace de noms est pour l’implémentation de notification lorsqu’une propriété change
-- [`IValueConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.IValueConverter/) permet de définir de petites classes qui convertissent les valeurs d’un type vers un autre dans les liaisons de données
+- [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) dans le `System.ComponentModel` espace de noms est pour l’implémentation de notification lorsqu’une propriété change
+- [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) permet de définir de petites classes qui convertissent les valeurs d’un type vers un autre dans les liaisons de données
 
 Une liaison de données connecte à deux propriétés de l’objet de même, ou deux objets différents (le plus souvent). Ces deux propriétés sont appelées les *source* et *cible*. En règle générale, une modification dans la propriété source provoque une modification se produise dans la propriété cible, mais parfois, la direction est inversée. Quel que soit :
 
-- le *cible* propriété doit être stockée par un [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/)
-- le *source* propriété est généralement un membre d’une classe qui implémente [`INotifyPropertyChanged`](https://developer.xamarin.com/api/type/System.ComponentModel.INotifyPropertyChanged/)
+- le *cible* propriété doit être stockée par un [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)
+- le *source* propriété est généralement un membre d’une classe qui implémente [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged)
 
-Une classe qui implémente `INotifyPropertyChanged` se déclenche un [ `PropertyChanged` ](https://developer.xamarin.com/api/event/System.ComponentModel.INotifyPropertyChanged.PropertyChanged/) événement lorsqu’une propriété change de valeur. `BindableObject` implémente `INotifyPropertyChanged` et déclenche automatiquement un `PropertyChanged` événement lorsqu’une propriété stockée par un `BindableProperty` modifie les valeurs, mais vous pouvez écrire vos propres classes qui implémentent `INotifyPropertyChanged` sans dériver `BindableObject`.
+Une classe qui implémente `INotifyPropertyChanged` se déclenche un [ `PropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged) événement lorsqu’une propriété change de valeur. `BindableObject` implémente `INotifyPropertyChanged` et déclenche automatiquement un `PropertyChanged` événement lorsqu’une propriété stockée par un `BindableProperty` modifie les valeurs, mais vous pouvez écrire vos propres classes qui implémentent `INotifyPropertyChanged` sans dériver `BindableObject`.
 
 ## <a name="code-and-xaml"></a>Code et XAML
 
@@ -53,19 +53,19 @@ Le [ **OpacityBindingCode** ](https://github.com/xamarin/xamarin-forms-book-samp
 - La source est le `Value` propriété d’un `Slider`
 - La cible est le `Opacity` propriété d’un `Label`
 
-Les deux objets sont connectés en définissant le `BindingContext` de la `Label` de l’objet à le `Slider` objet. Les deux propriétés sont connectées en appelant un [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObjectExtensions.SetBinding/p/Xamarin.Forms.BindableObject/Xamarin.Forms.BindableProperty/System.String/) méthode d’extension sur le `Label` faisant référence à la `OpacityProperty` propriété pouvant être liée et le `Value` propriété de la `Slider` exprimée sous la forme un chaîne.
+Les deux objets sont connectés en définissant le `BindingContext` de la `Label` de l’objet à le `Slider` objet. Les deux propriétés sont connectées en appelant un [ `SetBinding` ](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*) méthode d’extension sur le `Label` faisant référence à la `OpacityProperty` propriété pouvant être liée et le `Value` propriété de la `Slider` exprimée sous la forme un chaîne.
 
 Manipulation de la `Slider` provoque ensuite la `Label` à apparaître et disparaître.
 
-Le [ **OpacityBindingXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/OpacityBindingXaml) est le même programme avec la liaison de données définie dans XAML. Le `BindingContext` du `Label` est définie sur une `x:Reference` extension de balisage faisant référence à la `Slider`et le `Opacity` propriété de la `Label` est défini sur le `Binding` extension de balisage avec son [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) propriété faisant référence à la `Value` propriété de la `Slider`.
+Le [ **OpacityBindingXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/OpacityBindingXaml) est le même programme avec la liaison de données définie dans XAML. Le `BindingContext` du `Label` est définie sur une `x:Reference` extension de balisage faisant référence à la `Slider`et le `Opacity` propriété de la `Label` est défini sur le `Binding` extension de balisage avec son [ `Path` ](xref:Xamarin.Forms.Binding.Path) propriété faisant référence à la `Value` propriété de la `Slider`.
 
 ## <a name="source-and-bindingcontext"></a>Source et BindingContext
 
-Le [ **BindingSourceCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceCode) exemple montre une autre approche dans le code. Un `Binding` objet est créé en définissant le [ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Source/) propriété le `Slider` objet et le [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) la propriété « Valeur ». Le [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) méthode de `BindableObject` est ensuite appelée sur le `Label` objet.
+Le [ **BindingSourceCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceCode) exemple montre une autre approche dans le code. Un `Binding` objet est créé en définissant le [ `Source` ](xref:Xamarin.Forms.Binding.Source) propriété le `Slider` objet et le [ `Path` ](xref:Xamarin.Forms.Binding.Path) la propriété « Valeur ». Le [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) méthode de `BindableObject` est ensuite appelée sur le `Label` objet.
 
-Le [ `Binding` constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Binding.Binding/p/System.String/Xamarin.Forms.BindingMode/Xamarin.Forms.IValueConverter/System.Object/System.String/System.Object/) pourrait également avoir été utilisé pour définir le `Binding` objet.
+Le [ `Binding` constructeur](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) pourrait également avoir été utilisé pour définir le `Binding` objet.
 
-Le [ **BindingSourceXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceXaml) exemple illustre la technique comparable dans XAML. Le `Opacity` propriété de la `Label` est définie sur une `Binding` extension de balisage avec [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) défini sur le `Value` propriété et [ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Source/) définie sur une Embedded `x:Reference` extension de balisage.
+Le [ **BindingSourceXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceXaml) exemple illustre la technique comparable dans XAML. Le `Opacity` propriété de la `Label` est définie sur une `Binding` extension de balisage avec [ `Path` ](xref:Xamarin.Forms.Binding.Path) défini sur le `Value` propriété et [ `Source` ](xref:Xamarin.Forms.Binding.Source) définie sur une Embedded `x:Reference` extension de balisage.
 
 En résumé, il existe deux façons de référencer l’objet de source de liaison :
 
@@ -74,11 +74,11 @@ En résumé, il existe deux façons de référencer l’objet de source de liais
 
 Si les deux sont spécifiés, la seconde est prioritaire. L’avantage de la `BindingContext` est qu’elle est propagée à travers l’arborescence visuelle. Il s’agit de *très* pratique si plusieurs propriétés de la cible sont liées au même objet source.
 
-Le [ **WebViewDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/WebViewDemo) programme illustre cette technique avec le [ `WebView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) élément. Deux `Button` héritent des éléments de navigation et en amont un `BindingContext` à partir de leur parent qui fait référence à la `WebView`. Le `IsEnabled` propriétés des deux boutons ont puis simple `Binding` des extensions de balisage qui ciblent le bouton `IsEnabled` propriétés basées sur les paramètres de la [ `CanGoBack` ](https://developer.xamarin.com/api/property/Xamarin.Forms.WebView.CanGoBack/) et [ `CanGoForward` ](https://developer.xamarin.com/api/property/Xamarin.Forms.WebView.CanGoForward/) propriétés en lecture seule de la `WebView`.
+Le [ **WebViewDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/WebViewDemo) programme illustre cette technique avec le [ `WebView` ](xref:Xamarin.Forms.WebView) élément. Deux `Button` héritent des éléments de navigation et en amont un `BindingContext` à partir de leur parent qui fait référence à la `WebView`. Le `IsEnabled` propriétés des deux boutons ont puis simple `Binding` des extensions de balisage qui ciblent le bouton `IsEnabled` propriétés basées sur les paramètres de la [ `CanGoBack` ](xref:Xamarin.Forms.WebView.CanGoBack) et [ `CanGoForward` ](xref:Xamarin.Forms.WebView.CanGoForward) propriétés en lecture seule de la `WebView`.
 
 ## <a name="the-binding-mode"></a>Le mode de liaison
 
-Définir le [ `Mode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.Mode/) propriété du `Binding` à un membre de la [ `BindingMode` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) énumération :
+Définir le [ `Mode` ](xref:Xamarin.Forms.BindingBase.Mode) propriété du `Binding` à un membre de la [ `BindingMode` ](xref:Xamarin.Forms.BindingMode) énumération :
 
 - [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) afin que les modifications dans la propriété source affectent la cible
 - [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) afin que les modifications dans la propriété cible affecte la source
@@ -103,7 +103,7 @@ Ce comportement est analogue à la façon dont les liaisons sont définies dans 
 
 ## <a name="string-formatting"></a>Chaîne mise en forme
 
-Lorsque la propriété cible est de type `string`, vous pouvez utiliser la [ `StringFormat` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.StringFormat/) propriété définie par `BindingBase` pour convertir la source en un `string`. Définir le `StringFormat` propriété à une mise en forme de chaîne que vous utiliseriez avec la méthode statique de .NET [ `String.Format` ](https://developer.xamarin.com/api/member/System.String.Format/p/System.String/System.Object/) format pour afficher l’objet. Lorsque vous utilisez cette chaîne de mise en forme dans une extension de balisage, placez-la entre guillemets simples afin des accolades ne sont pas être confondue avec une extension de balisage incorporé.
+Lorsque la propriété cible est de type `string`, vous pouvez utiliser la [ `StringFormat` ](xref:Xamarin.Forms.BindingBase.StringFormat) propriété définie par `BindingBase` pour convertir la source en un `string`. Définir le `StringFormat` propriété à une mise en forme de chaîne que vous utiliseriez avec la méthode statique de .NET [ `String.Format` ](xref:System.String.Format(System.String,System.Object)) format pour afficher l’objet. Lorsque vous utilisez cette chaîne de mise en forme dans une extension de balisage, placez-la entre guillemets simples afin des accolades ne sont pas être confondue avec une extension de balisage incorporé.
 
 Le [ **ShowViewValues** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ShowViewValues) exemple montre comment utiliser `StringFormat` dans XAML.
 
@@ -111,11 +111,11 @@ Le [ **WhatSizeBindings** ](https://github.com/xamarin/xamarin-forms-book-sample
 
 ## <a name="why-is-it-called-path"></a>Pourquoi elle est appelée « Path » ?
 
-Le [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) propriété du `Binding` est ce qu’on appelle, car elle peut être une série de propriétés et indexeurs séparés par des points. Le [ **BindingPathDemos** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingPathDemos) montre plusieurs exemples.
+Le [ `Path` ](xref:Xamarin.Forms.Binding.Path) propriété du `Binding` est ce qu’on appelle, car elle peut être une série de propriétés et indexeurs séparés par des points. Le [ **BindingPathDemos** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingPathDemos) montre plusieurs exemples.
 
 ## <a name="binding-value-converters"></a>Convertisseurs de valeur de liaison
 
-Lorsque les propriétés source et cible d’une liaison de types différents, vous pouvez convertir entre les types à l’aide d’un convertisseur de liaison. Il s’agit d’une classe qui implémente le [ `IValueConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.IValueConverter/) interface et contient deux méthodes : [ `Convert` ](https://developer.xamarin.com/api/member/Xamarin.Forms.IValueConverter.Convert/p/System.Object/System.Type/System.Object/System.Globalization.CultureInfo/) pour convertir la source à la cible, et [ `ConvertBack` ](https://developer.xamarin.com/api/member/Xamarin.Forms.IValueConverter.ConvertBack/p/System.Object/System.Type/System.Object/System.Globalization.CultureInfo/) Pour convertir la cible à la source.
+Lorsque les propriétés source et cible d’une liaison de types différents, vous pouvez convertir entre les types à l’aide d’un convertisseur de liaison. Il s’agit d’une classe qui implémente le [ `IValueConverter` ](xref:Xamarin.Forms.IValueConverter) interface et contient deux méthodes : [ `Convert` ](xref:Xamarin.Forms.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)) pour convertir la source à la cible, et [ `ConvertBack` ](xref:Xamarin.Forms.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)) Pour convertir la cible à la source.
 
 Le [ `IntToBoolConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IntToBoolConverter.cs) classe dans le [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) bibliothèque est un exemple de conversion d’un `int` à un `bool`. Est illustrée par la [ **ButtonEnabler** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ButtonEnabler) exemple, ce qui permet uniquement la `Button` si au moins un caractère a été tapé dans un `Entry`.
 

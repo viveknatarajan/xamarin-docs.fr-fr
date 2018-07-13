@@ -7,16 +7,16 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 2dd94d5fb8eecc5cf4a3e376bc67c2cb6afb153b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 54238b46b759497bc6c6738673b98db833399752
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935437"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998359"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Résumé du chapitre 14. Disposition absolue
 
-Comme `StackLayout`, [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) dérive `Layout<View>` et hérite d’un `Children` propriété. `AbsoluteLayout` implémente un système de disposition qui exige que le programmeur spécifier les positions de ses enfants et, éventuellement, de leur taille. La position est spécifiée par le coin supérieur gauche de l’enfant par rapport à l’angle supérieur gauche de la `AbsoluteLayout` en unités indépendantes du périphérique. `AbsoluteLayout` implémente également une fonctionnalité de dimensionnement et de positionnement proportionnel.
+Comme `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) dérive `Layout<View>` et hérite d’un `Children` propriété. `AbsoluteLayout` implémente un système de disposition qui exige que le programmeur spécifier les positions de ses enfants et, éventuellement, de leur taille. La position est spécifiée par le coin supérieur gauche de l’enfant par rapport à l’angle supérieur gauche de la `AbsoluteLayout` en unités indépendantes du périphérique. `AbsoluteLayout` implémente également une fonctionnalité de dimensionnement et de positionnement proportionnel.
 
 `AbsoluteLayout` doit être considérée comme un système de disposition de spécial à être utilisé uniquement quand le programmeur peut imposer une taille sur les enfants (par exemple, `BoxView` éléments) ou lorsque la taille de l’élément n’affecte pas le positionnement d’autres enfants. Le `HorizontalOptions` et `VerticalOptions` propriétés n’ont aucun effet sur les enfants d’un `AbsoluteLayout`.
 
@@ -24,9 +24,9 @@ Ce chapitre présente également la fonctionnalité importante de *attaché prop
 
 ## <a name="absolutelayout-in-code"></a>DispositionAbsolue dans le code
 
-Vous pouvez ajouter un enfant à la `Children` collection d’un `AbsoluteLayout` à l’aide de la norme [ `Add` ](https://developer.xamarin.com/api/member/System.Collections.Generic.ICollection%3CT%3E.Add/p/T/) (méthode), mais `AbsoluteLayout` fournit également une étendue [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) méthode qui vous permet de spécifier un [ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/). Un autre [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) méthode nécessite uniquement un [ `Point` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Point/), auquel cas l’enfant n’est pas limitée et se redimensionne.
+Vous pouvez ajouter un enfant à la `Children` collection d’un `AbsoluteLayout` à l’aide de la norme [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) (méthode), mais `AbsoluteLayout` fournit également une étendue [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) méthode qui vous permet de spécifier un [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Un autre [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) méthode nécessite uniquement un [ `Point` ](xref:Xamarin.Forms.Point), auquel cas l’enfant n’est pas limitée et se redimensionne.
 
-Vous pouvez créer un `Rectangle` valeur avec un [constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/System.Double/System.Double/System.Double/System.Double/) qui requiert quatre valeurs &mdash; les deux premiers indiquant la position du coin supérieur gauche de l’enfant par rapport à son parent et les deux indiquant le taille de l’enfant. Vous pouvez également utiliser un [constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/Xamarin.Forms.Point/Xamarin.Forms.Size/) qui nécessite un `Point` et un [ `Size` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/) valeur.
+Vous pouvez créer un `Rectangle` valeur avec un [constructeur](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)) qui requiert quatre valeurs &mdash; les deux premiers indiquant la position du coin supérieur gauche de l’enfant par rapport à son parent et les deux indiquant le taille de l’enfant. Vous pouvez également utiliser un [constructeur](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)) qui nécessite un `Point` et un [ `Size` ](xref:Xamarin.Forms.Size) valeur.
 
 Ces `Add` méthodes sont illustrées dans [ **AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo), les positions `BoxView` à l’aide des éléments `Rectangle` valeurs et un `Label` élément à l’aide de simplement un `Point` valeur.
 
@@ -34,15 +34,15 @@ Le [ **ChessboardFixed** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 ## <a name="attached-bindable-properties"></a>Joint des propriétés pouvant être liées
 
-Il est également possible de définir la position et, éventuellement, la taille d’un enfant d’un `AbsoluteLayout` après qu’il a été ajouté à la `Children` collection à l’aide de la méthode statique [ `AbsoluteLayout.SetLayoutBounds` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.SetLayoutBounds/p/Xamarin.Forms.BindableObject/Xamarin.Forms.Rectangle/). Le premier argument est l’enfant ; le second est un `Rectangle` objet. Vous pouvez spécifier que l’enfant se redimensionne horizontalement et verticalement en définissant les valeurs de largeur et hauteur le [ `AbsoluteLayout.AutoSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.AbsoluteLayout.AutoSize/) constante.
+Il est également possible de définir la position et, éventuellement, la taille d’un enfant d’un `AbsoluteLayout` après qu’il a été ajouté à la `Children` collection à l’aide de la méthode statique [ `AbsoluteLayout.SetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutBounds(Xamarin.Forms.BindableObject,Xamarin.Forms.Rectangle)). Le premier argument est l’enfant ; le second est un `Rectangle` objet. Vous pouvez spécifier que l’enfant se redimensionne horizontalement et verticalement en définissant les valeurs de largeur et hauteur le [ `AbsoluteLayout.AutoSize` ](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) constante.
 
 Le [ **ChessboardDynamic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardDynamic) exemple met le `AbsoluteLayout` dans un `ContentView` avec un `SizeChanged` gestionnaire à appeler `AbsoluteLayout.SetLayoutBounds` sur tous les enfants pour les rendre aussi grand que possible.  
 
-La propriété jointe peut être liée qui `AbsoluteLayout` définit le champ statique en lecture seule de type n’est `BindableProperty` nommé [ `AbsoluteLayout.LayoutBoundsProperty` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty/). La méthode statique `AbsoluteLayout.SetLayoutBounds` méthode est implémentée en appelant `SetValue` sur l’enfant ayant le `AbsoluteLayout.LayoutBoundsProperty`. L’enfant contienne un dictionnaire dans lequel la propriété jointe peut être liée et sa valeur sont stockées. Pendant la disposition, le `AbsoluteLayout` pouvez obtenir cette valeur en appelant [ `AbsoluteLayout.GetLayoutBounds` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.GetLayoutBounds/p/Xamarin.Forms.BindableObject/), qui est implémentée avec un `GetValue` appeler.
+La propriété jointe peut être liée qui `AbsoluteLayout` définit le champ statique en lecture seule de type n’est `BindableProperty` nommé [ `AbsoluteLayout.LayoutBoundsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty). La méthode statique `AbsoluteLayout.SetLayoutBounds` méthode est implémentée en appelant `SetValue` sur l’enfant ayant le `AbsoluteLayout.LayoutBoundsProperty`. L’enfant contienne un dictionnaire dans lequel la propriété jointe peut être liée et sa valeur sont stockées. Pendant la disposition, le `AbsoluteLayout` pouvez obtenir cette valeur en appelant [ `AbsoluteLayout.GetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutBounds(Xamarin.Forms.BindableObject)), qui est implémentée avec un `GetValue` appeler.
 
 ## <a name="proportional-sizing-and-positioning"></a>Redimensionnement proportionnel et positionnement
 
-`AbsoluteLayout` implémente un redimensionnement proportionnel et la fonctionnalité de positionnement. La classe définit une deuxième propriété jointe peut être liée, [ `LayoutFlagsProperty` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty/), avec les méthodes statiques associées [ `AbsoluteLayout.SetLayoutFlags` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.SetLayoutFlags/p/Xamarin.Forms.BindableObject/Xamarin.Forms.AbsoluteLayoutFlags/) et [ `AbsoluteLayout.GetLayoutFlags` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.GetLayoutFlags/p/Xamarin.Forms.BindableObject/).
+`AbsoluteLayout` implémente un redimensionnement proportionnel et la fonctionnalité de positionnement. La classe définit une deuxième propriété jointe peut être liée, [ `LayoutFlagsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty), avec les méthodes statiques associées [ `AbsoluteLayout.SetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutFlags(Xamarin.Forms.BindableObject,Xamarin.Forms.AbsoluteLayoutFlags)) et [ `AbsoluteLayout.GetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutFlags(Xamarin.Forms.BindableObject)).
 
 L’argument `AbsoluteLayout.SetLayoutFlags` et la valeur de retour de `AbsoluteLayout.GetLayoutFlags` est une valeur de type [ `AbsoluteLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayoutFlags), une énumération avec les membres suivants :
 
@@ -87,7 +87,7 @@ Est un attribut dans XAML se compose d’un nom de classe, un point et un nom de
 
 Vous pouvez utiliser `AbsoluteLayout` pour construire un *superposition*, qui couvre la page avec d’autres contrôles, peut-être pour protéger l’utilisateur d’interagir avec les contrôles normales sur la page.
 
-Le [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) exemple illustre cette technique et montre la [ `ProgressBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/), qui affiche l’étendue à laquelle un programme a terminé une tâche.
+Le [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) exemple illustre cette technique et montre la [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar), qui affiche l’étendue à laquelle un programme a terminé une tâche.
 
 ## <a name="some-fun"></a>Un peu de fantaisie
 

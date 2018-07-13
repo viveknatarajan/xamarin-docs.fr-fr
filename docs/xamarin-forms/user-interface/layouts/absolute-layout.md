@@ -1,41 +1,41 @@
 ---
 title: Xamarin.Forms DispositionAbsolue
-description: Cet article explique comment utiliser la classe DispositionAbsolue de Xamarin.Forms pour créer des interfaces utilisateur de pixel parfaite. Cette classe positionne et une taille proportionnelle à son propre taille et la position ou en valeurs absolues des éléments enfants.
+description: Cet article explique comment utiliser la classe DispositionAbsolue de Xamarin.Forms pour créer des interfaces utilisateur pixel-perfect. Cette classe positionne et redimensionne les éléments enfants proportionnelles à sa propre taille et la position ou en valeurs absolues.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: f36334bca9e7401f35d4b6181b47c0f64923f652
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 0d49b8c50db08ad07952425492591ee246de4f8b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244455"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998346"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms DispositionAbsolue
 
-[`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) Positionne et d’une taille proportionnelle à son propre taille et la position ou en valeurs absolues des éléments enfants. Vues enfants peuvent être positionnées et taille à l’aide de valeurs proportionnelles ou statiques et proportionnel et des valeurs statiques peuvent être mélangés.
+[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) Positionne et redimensionne les éléments enfants proportionnelles à sa propre taille et la position ou en valeurs absolues. Vues enfants peuvent être positionnées et taille à l’aide de valeurs proportionnelles ou des valeurs statiques et proportionnelle et des valeurs statiques peuvent être mélangés.
 
-[![](absolute-layout-images/layouts-sml.png "Les dispositions de Xamarin.Forms")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms dispositions")
+[![](absolute-layout-images/layouts-sml.png "Dispositions Xamarin.Forms")](absolute-layout-images/layouts.png#lightbox "dispositions Xamarin.Forms")
 
 Cet article couvre :
 
 - **[Objectif](#Purpose)**  &ndash; utilisations courantes pour `AbsoluteLayout`.
-- **[L’utilisation de](#Usage)**  &ndash; comment utiliser `AbsoluteLayout` pour atteindre votre conception de votre choix.
-  - **[Dispositions proportionnelles](#Proportional_Layouts)**  &ndash; comprendre comment proportionnels valeurs fonctionnent dans un `AbsoluteLayout`.
-  - **[Spécification de valeurs](#Specifying_Values)**  &ndash; comprendre comment proportionnel et les valeurs absolues sont spécifiées.
-  - **[Valeurs proportionnels](#Proportional_Values)**  &ndash; comprendre comment proportionnels valeurs de travail.
-    - **[Valeurs absolues](#Absolute_Values)**  &ndash; comprendre comment fonctionnent les valeurs absolues.
+- **[Utilisation](#Usage)**  &ndash; comment utiliser `AbsoluteLayout` pour atteindre votre conception de votre choix.
+  - **[Dispositions proportionnelles](#Proportional_Layouts)**  &ndash; comprendre comment proportionnelles valeurs fonctionnent dans un `AbsoluteLayout`.
+  - **[Spécification de valeurs](#Specifying_Values)**  &ndash; comprendre comment proportionnel des valeurs absolues sont spécifiées.
+  - **[Valeurs proportionnelles](#Proportional_Values)**  &ndash; comprendre comment proportionnelles valeurs fonctionne.
+    - **[Valeurs absolues](#Absolute_Values)**  &ndash; comprendre le fonctionnement des valeurs absolues.
 
 <a name="Purpose" />
 
 ## <a name="purpose"></a>Objectif
 
-En raison du modèle de positionnement de `AbsoluteLayout`, la mise en page rend relativement simple de placer des éléments pour qu’ils soient vidage avec n’importe quel côté de la disposition ou centré. Des tailles proportionnels et positions des éléments dans un `AbsoluteLayout` peuvent s’adapter automatiquement à n’importe quelle taille d’affichage. Pour les éléments où uniquement la position, mais pas la taille doit mettre à l’échelle, les valeurs absolues et proportionnelles peuvent être mélangés.
+En raison du modèle de positionnement de `AbsoluteLayout`, la mise en page rend relativement simple positionner des éléments afin qu’ils soient vidage avec n’importe quel côté de la disposition ou centré. Avec proportionnelles tailles et positions, les éléments dans un `AbsoluteLayout` peut s’adapter automatiquement à n’importe quelle taille de la vue. Pour les éléments où seule la position, mais pas la taille doit mettre à l’échelle, les valeurs absolues et proportionnels peuvent être mélangés.
 
-`AbsoluteLayout` peut être utilisé en tout lieu éléments doivent être positionnés dans une vue et s’avère particulièrement utile lors de l’alignement des éléments à bords.
+`AbsoluteLayout` peut être utilisée partout où éléments doivent être positionnés dans une vue et est particulièrement utile lors de l’alignement des éléments à bords.
 
 <a name="Usage" />
 
@@ -45,48 +45,48 @@ En raison du modèle de positionnement de `AbsoluteLayout`, la mise en page rend
 
 ### <a name="proportional-layouts"></a>Dispositions proportionnelles
 
-`AbsoluteLayout` possède un modèle d’ancrage unique par laquelle le point d’ancrage de l’élément est positionné par rapport à son élément que l’élément est positionné par rapport à la mise en page lorsque le positionnement proportionnelle est utilisé. Lorsque le positionnement absolu est utilisé, le point d’ancrage est à (0,0) dans la vue. Cela a deux conséquences importantes :
+`AbsoluteLayout` a un modèle d’ancrage unique par lequel le point d’ancrage de l’élément est positionné par rapport à son élément comme l’élément est positionné par rapport à la mise en page lorsque le positionnement proportionnelle est utilisé. Lorsque le positionnement absolu est utilisé, le point d’ancrage est à (0,0) dans la vue. Cela a deux conséquences importantes :
 
-- Impossible de positionner les éléments hors de l’écran à l’aide de valeurs proportionnels.
-- Éléments peuvent être positionnées de manière fiable sur n’importe quel côté de la mise en page ou dans le centre, quelle que soit la taille de la mise en page ou du périphérique.
+- Impossible de positionner des éléments hors écran à l’aide de valeurs proportionnels.
+- Éléments peuvent être positionnés de manière fiable le long de n’importe quel côté de la mise en page ou dans le centre, quelle que soit la taille de la mise en page ou du périphérique.
 
-`AbsoluteLayout`, comme `RelativeLayout`, est en mesure de placer des éléments de sorte qu’elles se chevauchent.
+`AbsoluteLayout`, tels que `RelativeLayout`, est en mesure de positionner des éléments afin qu’ils se chevauchent.
 
-Notez dans la capture d’écran suivante, le point d’ancrage de la zone est un point blanc. Notez la relation entre le point d’ancrage et la zone en parcourant la disposition :
+Remarque dans la capture d’écran suivante, le point d’ancrage de la zone est un point blanc. Notez que la relation entre le point d’ancrage et de la zone lorsqu’elles circulent dans la disposition :
 
 ![](absolute-layout-images/anchor-start.png "Point d’ancrage au début")
 ![](absolute-layout-images/anchor-center.png "ancre au centre")
-![](absolute-layout-images/anchor-end.png "ancre à fin")
+![](absolute-layout-images/anchor-end.png "ancre en bas")
 
 <a name="Specifying_Values" />
 
 ### <a name="specifying-values"></a>Spécification de valeurs
 
-Vues dans une `AbsoluteLayout` sont positionnées à l’aide de quatre valeurs :
+Vues contenues dans un `AbsoluteLayout` sont positionnés à l’aide de quatre valeurs :
 
-- **X** &ndash; la position (horizontale) de x du point d’ancrage de la vue
-- **Y** &ndash; la position y (verticale) d’ancrage de la vue
+- **X** &ndash; la position x (horizontale) du point d’ancrage de la vue
+- **Y** &ndash; la position y (verticale) du point d’ancrage de la vue
 - **Largeur** &ndash; la largeur de la vue
 - **Hauteur** &ndash; la hauteur de la vue
 
-Chacune de ces valeurs peut être défini comme un [proportionnel](#Proportional_Values) valeur ou une [absolu](#Absolute_Values) valeur.
+Chacune de ces valeurs peut être défini comme un [proportionnelle](#Proportional_Values) valeur ou un [absolu](#Absolute_Values) valeur.
 
-Les valeurs sont spécifiées comme une combinaison de limites et d’un indicateur. `LayoutBounds` est un [ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/) composé de quatre valeurs : `x`, `y`, `width`, `height`.
+Les valeurs sont spécifiés comme une combinaison de limites et un indicateur. `LayoutBounds` est un [ `Rectangle` ](xref:Xamarin.Forms.Rectangle) composé de quatre valeurs : `x`, `y`, `width`, `height`.
 
 ### <a name="absolutelayoutflags"></a>AbsoluteLayoutFlags
 
-[`AbsoluteLayoutFlags`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayoutFlags/) Spécifie la façon dont les valeurs seront interprétées et comprend les options prédéfinies suivantes :
+[`AbsoluteLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayoutFlags) Spécifie la façon dont les valeurs sont considérées et comprend les options prédéfinies suivantes :
 
-- **Aucun** &ndash; interprète toutes les valeurs en tant qu’absolue. Ceci est la valeur par défaut si aucun indicateur de mise en page n’est spécifiés.
-- **Tous les** &ndash; interprète toutes les valeurs en tant que proportionnel.
-- **WidthProportional** &ndash; interprète la `Width` valeur proportionnelle, ainsi que toutes les autres valeurs en tant qu’absolue.
-- **HeightProportional** &ndash; interprète uniquement la valeur de hauteur comme proportionnel avec toutes les valeurs absolues.
-- **XProportional** &ndash; interprète la `X` valeur proportionnelle, tout en traitant tous les autres valeurs en tant qu’absolue.
-- **YProportional** &ndash; interprète la `Y` valeur proportionnelle, tout en traitant tous les autres valeurs en tant qu’absolue.
-- **PositionProportional** &ndash; interprète le `X` et `Y` valeurs sous la forme proportionnelle, tandis que les valeurs de taille sont interprétés comme absolue.
-- **SizeProportional** &ndash; interprète le `Width` et `Height` valeurs sous la forme proportionnelle alors que les valeurs de position sont absolus.
+- **Aucun** &ndash; interprète toutes les valeurs comme absolue. Il s’agit de la valeur par défaut si aucun indicateur de mise en page n’est spécifiés.
+- **Tous les** &ndash; interprète toutes les valeurs comme proportionnel.
+- **WidthProportional** &ndash; interprète le `Width` valeur proportionnelle, ainsi que toutes les autres valeurs comme absolue.
+- **HeightProportional** &ndash; interprète uniquement la valeur de hauteur comme proportionnel avec toutes les autres valeurs absolues.
+- **XProportional** &ndash; interprète le `X` valeur sous la forme proportionnelle, tout en traitant tous les autres valeurs comme absolue.
+- **YProportional** &ndash; interprète le `Y` valeur sous la forme proportionnelle, tout en traitant tous les autres valeurs comme absolue.
+- **PositionProportional** &ndash; interprète le `X` et `Y` valeurs sous la forme proportionnelle, tandis que les valeurs de taille sont interprétées comme absolue.
+- **SizeProportional** &ndash; interprète le `Width` et `Height` valeurs sous la forme proportionnelle, tandis que les valeurs de position sont absolues.
 
-En XAML, les limites et les indicateurs sont définies en tant que partie de la définition de vues au sein de la mise en page, à l’aide de la `AbsoluteLayout.LayoutBounds` propriété. Limites sont définies sous forme de liste séparée par des virgules des valeurs, `X`, `Y`, `Width`, et `Height`, dans cet ordre. Les indicateurs sont également spécifiées dans la déclaration de vues dans la disposition à l’aide de la `AbsoluteLayout.LayoutFlags` propriété. Notez que les indicateurs peuvent être combinées en XAML à l’aide d’une liste séparée par des virgules. Prenons l'exemple suivant :
+Dans XAML, les limites et les indicateurs sont définies en tant que partie de la définition de vues au sein de la disposition, à l’aide de la `AbsoluteLayout.LayoutBounds` propriété. Limites sont définies comme une liste séparée par des virgules de valeurs, `X`, `Y`, `Width`, et `Height`, dans cet ordre. Les indicateurs sont également spécifiés dans la déclaration de vues dans la mise en page à l’aide de la `AbsoluteLayout.LayoutFlags` propriété. Notez que les indicateurs peuvent être combinés dans XAML à l’aide d’une liste séparée par des virgules. Prenons l'exemple suivant :
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -116,9 +116,9 @@ Title="Absolute Layout Exploration">
 
 Notez les points suivants :
 
-- L’étiquette dans le centre est positionnée à l’aide des valeurs de taille et la position absolues. Par conséquent, il apparaît centré sur 4 s les iPhone et inférieure, mais pas centré sur les appareils plus grandes.
-- Le texte en bas de la disposition est positionné à l’aide des valeurs de taille et position proportionnels. Il apparaît toujours au centre en bas de la mise en page, mais sa taille augmentera avec une taille de page supérieure.
-- Trois couleurs `BoxView`s sont positionnés sur les bords supérieur, gauche et droit de l’écran à l’aide de sa position et taille absolue.
+- L’étiquette dans le centre est positionnée à l’aide des valeurs de taille et la position absolues. Pour cette raison, il apparaît centrée sur 4 s iPhone et inférieure, mais pas centrée sur les appareils plus volumineux.
+- Le texte en bas de la disposition est positionné à l’aide des valeurs de taille et position proportionnels. Elle s’affiche toujours en bas au centre de la disposition, mais sa taille augmente avec la taille de disposition.
+- Trois en couleur `BoxView`s sont positionnés sur les bords supérieure, gauche et droite de l’écran à l’aide de la position proportionnelle et la taille absolue.
 
 La commande suivante permet d’obtenir la même disposition en c# :
 
@@ -167,13 +167,13 @@ public class AbsoluteLayoutExplorationCode : ContentPage
 
 ### <a name="proportional-values"></a>Valeurs proportionnels
 
-Valeurs proportionnels définissent une relation entre une mise en page et une vue. Cette relation définit la position ou valeur d’échelle d’une vue enfant sous forme de proportion de la valeur correspondante de la disposition du parent. Ces valeurs sont exprimées en tant que `double`s avec des valeurs comprises entre 0 et 1.
+Valeurs proportionnelles définissent une relation entre une disposition et une vue. Cette relation définit la position ou la valeur d’échelle d’une vue enfant sous forme de proportion de la valeur correspondante de la disposition du parent. Ces valeurs sont exprimées sous forme `double`s avec des valeurs comprises entre 0 et 1.
 
-Valeurs proportionnels sont utilisées à la position et des affichages de taille de la mise en page. Par conséquent, lors de la largeur d’une vue est définie comme une proportion, la valeur de largeur résultant est la proportion multipliée par le `AbsoluteLayout`de largeur. Par exemple, avec un `AbsoluteLayout` de largeur `500` et un affichage défini pour une largeur proportionnelle de.5, la largeur de la vue rendue sera 250 (500 x.5.
+Valeurs proportionnelles sont utilisées à la position et des affichages de taille de la mise en page. Par conséquent, lorsque la largeur de l’affichage est définie comme une proportion, la valeur résultant de la largeur est la proportion multipliée par le `AbsoluteLayout`de la largeur. Par exemple, avec un `AbsoluteLayout` de largeur `500` et une vue définie sur une largeur proportionnelle.5, la largeur restituée de la vue sera 250 (500 x.5.
 
-Pour utiliser des valeurs proportionnelles, définissez `LayoutBounds` à l’aide de (x, y) proportions et tailles proportionnels, puis définissez `LayoutFlags` à `All`.
+Pour utiliser les valeurs proportionnelles, définissez `LayoutBounds` à l’aide de (x, y) proportions et tailles proportionnelles, puis définissez `LayoutFlags` à `All`.
 
-En XAML :
+Dans XAML :
 
 ```xaml
 <Label Text="I'm bottom center on every device."
@@ -192,13 +192,13 @@ AbsoluteLayout.SetLayoutFlags(label, AbsoluteLayoutFlags.All);
 
 ### <a name="absolute-values"></a>Valeurs absolues
 
-Valeurs absolues définir explicitement la position de vues dans la disposition. Contrairement aux valeurs proportionnels, les valeurs absolues sont capables de positionnement et le redimensionnement d’une vue qui ne tient pas dans les limites de la mise en page.
+Valeurs absolues définir explicitement la position de vues au sein de la mise en page. Contrairement aux valeurs proportionnelles, les valeurs absolues sont capables de positionnement et dimensionnement d’une vue qui ne tient pas dans les limites de la disposition.
 
-À l’aide des valeurs absolues de positionnement peut s’avérer dangereux si la taille de la disposition n’est pas connue. Lors de l’utilisation de positions absolues, un élément dans le centre de l’écran à une seule taille pourrait être décalée à n’importe quelle autre taille. Il est important de tester votre application sur les différentes tailles d’écran de vos appareils pris en charge.
+À l’aide des valeurs absolues de positionnement peut être dangereux lorsque la taille de la disposition n’est pas connue. Lorsque vous utilisez des positions absolues, un élément dans le centre de l’écran à une seule taille pourrait être décalée pour toute autre taille. Il est important de tester votre application sur les différentes tailles d’écran de vos appareils pris en charge.
 
-Pour utiliser les valeurs de disposition absolue, définissez `LayoutBounds` à l’aide de (x, y) coordonnées et tailles, puis définissez `LayoutFlags` à `None`.
+Pour utiliser les valeurs de disposition absolue, définissez `LayoutBounds` à l’aide de (x, y) coordonnées et tailles explicites, puis définissez `LayoutFlags` à `None`.
 
-En XAML :
+Dans XAML :
 
 ```xaml
 <Label Text="I'm centered on iPhone 4 but no other device."
@@ -214,9 +214,9 @@ AbsoluteLayout.SetLayoutBounds(label, new Rectangle(115,150,100,100));
 
 ## <a name="exploring-a-complex-layout"></a>Exploration d’une disposition complexe
 
-Forces et faiblesses pour créer des dispositions particuliers ont chacun des dispositions. Tout au long de cette série d’articles de la mise en page, un exemple d’application a été créé avec la même disposition implémentée à l’aide de trois dispositions différentes.
+Chacune des mises en page ont des forces et faiblesses pour créer des dispositions particuliers. Tout au long de cette série d’articles de la mise en page, un exemple d’application a été créé avec la même disposition de page implémentée à l’aide de trois dispositions différentes.
 
-Considérez le code XAML suivant :
+Prenez en compte le XAML suivant :
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -279,15 +279,15 @@ Title="AbsoluteLayout">
 </ContentPage>
 ```
 
-Le code ci-dessus génère le schéma suivant :
+Le code ci-dessus génère la disposition suivante :
 
 ![](absolute-layout-images/abs.png "DispositionAbsolue complexe")
 
-Notez que `AbsoluteLayout`s sont imbriquées, car dans certains cas d’imbrication des dispositions peut être plus facile à présenter tous les éléments dans la même disposition.
+Notez que `AbsoluteLayout`s sont imbriquées, car dans certains cas des dispositions d’imbrication peut être plus facile que de présenter tous les éléments dans la même disposition.
 
 ## <a name="related-links"></a>Liens associés
 
 - [Création d’applications mobiles avec Xamarin.Forms, chapitre 14](https://developer.xamarin.com/r/xamarin-forms/book/chapter14.pdf)
-- [AbsoluteLayout](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/)
+- [AbsoluteLayout](xref:Xamarin.Forms.AbsoluteLayout)
 - [Disposition (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [Exemple BusinessTumble (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
