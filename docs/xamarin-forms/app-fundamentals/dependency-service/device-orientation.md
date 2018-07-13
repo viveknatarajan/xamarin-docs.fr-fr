@@ -1,41 +1,41 @@
 ---
-title: La vérification de l’Orientation de périphérique
-description: Cet article explique comment utiliser la classe de Xamarin.Forms DependencyService pour accéder à l’orientation de périphérique à partir de code partagé.
+title: La vérification d’orientation de l’appareil
+description: Cet article explique comment utiliser la classe de Xamarin.Forms DependencyService pour accéder à l’orientation de périphérique à partir du code partagé.
 ms.prod: xamarin
 ms.assetid: 5F60975F-47DB-4361-B97C-2290D6F77D2F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: e21531b7f39d3876d91eea8fa6cb9e409a9deffa
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240054"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995639"
 ---
-# <a name="checking-device-orientation"></a>La vérification de l’Orientation de périphérique
+# <a name="checking-device-orientation"></a>La vérification d’orientation de l’appareil
 
-Cet article vous aidera à utiliser [ `DependencyService` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) pour vérifier l’orientation du périphérique à partir du code partagé à l’aide des API natives sur chaque plateforme. Cette procédure pas à pas est basée sur le serveur existant `DeviceOrientation` plug-in par Ali Özgür. Consultez le [référentiel GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) pour plus d’informations.
+Cet article vous aidera à utiliser [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) pour vérifier l’orientation du périphérique à partir du code partagé à l’aide des API natives sur chaque plateforme. Cette procédure pas à pas est basée sur le serveur existant `DeviceOrientation` plug-in par Ali Özgür. Consultez le [référentiel GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) pour plus d’informations.
 
 - **[Création de l’Interface](#Creating_the_Interface)**  &ndash; comprendre comment l’interface est créée dans le code partagé.
-- **[iOS implémentation](#iOS_Implementation)**  &ndash; apprendre à implémenter l’interface en code natif pour iOS.
-- **[Implémentation Android](#Android_Implementation)**  &ndash; apprendre à implémenter l’interface en code natif pour Android.
-- **[Implémentation de la plateforme Windows universelle](#WindowsImplementation)**  &ndash; apprendre à implémenter l’interface en code natif pour la plateforme Windows universelle (UWP).
-- **[Mise en œuvre dans le Code partagé](#Implementing_in_Shared_Code)**  &ndash; apprendre à utiliser `DependencyService` pour appeler l’implémentation native à partir de code partagé.
+- **[iOS implémentation](#iOS_Implementation)**  &ndash; Apprenez à implémenter l’interface en code natif pour iOS.
+- **[Implémentation Android](#Android_Implementation)**  &ndash; Apprenez à implémenter l’interface en code natif pour Android.
+- **[Implémentation de UWP](#WindowsImplementation)**  &ndash; Apprenez à implémenter l’interface en code natif pour la plateforme Windows universelle (UWP).
+- **[Mise en œuvre dans le Code partagé](#Implementing_in_Shared_Code)**  &ndash; Apprenez à utiliser `DependencyService` pour appeler l’implémentation native à partir de code partagé.
 
 L’application à l’aide `DependencyService` aura la structure suivante :
 
 ![](device-orientation-images/orientation-diagram.png "Structure de l’Application DependencyService")
 
 > [!NOTE]
-> Il est possible de détecter si l’appareil est en orientation portrait ou paysage dans le code partagé, comme illustré dans [appareil Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). La méthode décrite dans cet article utilise des fonctionnalités natives pour obtenir plus d’informations, notamment si l’appareil est inversé.
+> Il est possible de détecter si l’appareil est en mode portrait ou paysage dans le code partagé, comme illustré dans [appareil Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). La méthode décrite dans cet article utilise des fonctionnalités natives pour obtenir plus d’informations, notamment si l’appareil est à l’envers.
 
 <a name="Creating_the_Interface" />
 
 ## <a name="creating-the-interface"></a>Création de l'interface utilisateur
 
-Tout d’abord, créez une interface dans le code partagé qui exprime la fonctionnalité que vous souhaitez mettre en œuvre. Pour cet exemple, l’interface contient une méthode unique :
+Tout d’abord, créez une interface dans le code partagé qui exprime la fonctionnalité que vous envisagez d’implémenter. Pour cet exemple, l’interface contient une méthode unique :
 
 ```csharp
 namespace DependencyServiceSample.Abstractions
@@ -54,16 +54,16 @@ namespace DependencyServiceSample.Abstractions
 }
 ```
 
-Codage de cette interface dans le code partagé permettent à l’application de Xamarin.Forms accéder à l’orientation du périphérique API sur chaque plateforme.
+Codage par rapport à cette interface dans le code partagé permettent à l’application de Xamarin.Forms accéder à l’orientation du périphérique API sur chaque plateforme.
 
 > [!NOTE]
-> Classes implémentant l’interface doivent avoir un constructeur sans paramètre pour travailler avec les `DependencyService`.
+> Classes implémentant l’interface doivent avoir un constructeur sans paramètre pour travailler avec le `DependencyService`.
 
 <a name="iOS_Implementation" />
 
 ## <a name="ios-implementation"></a>Implémentation d’iOS
 
-L’Interface doit être implémentée dans chaque projet d’application de plateforme spécifique. Notez que la classe a un constructeur sans paramètre afin que la `DependencyService` peut créer des instances :
+L’Interface doit être implémentée dans chaque projet d’application de plateforme spécifique. Notez que la classe a un constructeur sans paramètre afin que le `DependencyService` peut créer des instances :
 
 ```csharp
 using UIKit;
@@ -87,7 +87,7 @@ namespace DependencyServiceSample.iOS
 }
 ```
 
-Enfin, ajoutez ceci `[assembly]` attribut au-dessus de la classe (et en dehors des espaces de noms qui ont été définies), y compris tout `using` instructions :
+Enfin, ajoutez ce `[assembly]` attribut au-dessus de la classe (et en dehors des espaces de noms qui ont été définies), y compris tout `using` instructions :
 
 ```csharp
 using UIKit;
@@ -99,7 +99,7 @@ namespace DependencyServiceSample.iOS {
     ...
 ```
 
-Cet attribut enregistre la classe en tant qu’implémentation de la `IDeviceOrientation` Interface, ce qui signifie que `DependencyService.Get<IDeviceOrientation>` peut être utilisé dans le code partagé pour créer une instance de celui-ci.
+Cet attribut inscrit la classe en tant qu’implémentation de la `IDeviceOrientation` Interface, ce qui signifie que `DependencyService.Get<IDeviceOrientation>` peut être utilisé dans le code partagé pour créer une instance de celui-ci.
 
 <a name="Android_Implementation" />
 
@@ -131,7 +131,7 @@ namespace DependencyServiceSample.Droid
 }
 ```
 
-Ajoutez ceci `[assembly]` attribut au-dessus de la classe (et en dehors des espaces de noms qui ont été définies), y compris tout `using` instructions :
+Ajoutez ce `[assembly]` attribut au-dessus de la classe (et en dehors des espaces de noms qui ont été définies), y compris tout `using` instructions :
 
 ```csharp
 using DependencyServiceSample.Droid; //enables registration outside of namespace
@@ -142,11 +142,11 @@ namespace DependencyServiceSample.Droid {
     ...
 ```
 
-Cet attribut enregistre la classe en tant qu’implémentation de la `IDeviceOrientaiton` Interface, ce qui signifie que `DependencyService.Get<IDeviceOrientation>` peut être utilisé dans le code partagé peut créer une instance de celui-ci.
+Cet attribut inscrit la classe en tant qu’implémentation de la `IDeviceOrientaiton` Interface, ce qui signifie que `DependencyService.Get<IDeviceOrientation>` peut être utilisé dans le code partagé peut créer une instance de celle-ci.
 
 <a name="WindowsImplementation" />
 
-## <a name="universal-windows-platform-implementation"></a>Mise en œuvre de la plateforme Windows universelle
+## <a name="universal-windows-platform-implementation"></a>Implémentation de plateforme Windows universelle
 
 Le code suivant implémente la `IDeviceOrientation` interface sur la plateforme Windows universelle :
 
@@ -181,13 +181,13 @@ namespace DependencyServiceSample.WindowsPhone {
     ...
 ```
 
-Cet attribut enregistre la classe en tant qu’implémentation de la `DeviceOrientationImplementation` Interface, ce qui signifie que `DependencyService.Get<IDeviceOrientation>` peut être utilisé dans le code partagé peut créer une instance de celui-ci.
+Cet attribut inscrit la classe en tant qu’implémentation de la `DeviceOrientationImplementation` Interface, ce qui signifie que `DependencyService.Get<IDeviceOrientation>` peut être utilisé dans le code partagé peut créer une instance de celle-ci.
 
 <a name="Implementing_in_Shared_Code" />
 
 ## <a name="implementing-in-shared-code"></a>Mise en œuvre dans le Code partagé
 
-Maintenant nous pouvons écrire et tester le code partagé qui accède à la `IDeviceOrientation` interface. Cette page simple inclut un bouton qui met à jour son propre texte selon l’orientation du périphérique. Elle utilise le `DependencyService` pour obtenir une instance de la `IDeviceOrientation` interface &ndash; lors de l’exécution, cette instance correspond à l’implémentation spécifique à la plateforme qui a un accès complet pour le Kit de développement natif :
+Maintenant nous pouvons écrire et tester le code partagé qui accède à la `IDeviceOrientation` interface. Cette page simple inclut un bouton qui met à jour son propre texte selon l’orientation du périphérique. Il utilise le `DependencyService` pour obtenir une instance de la `IDeviceOrientation` interface &ndash; lors de l’exécution, cette instance sera l’implémentation spécifique à la plateforme qui a un accès complet pour le Kit de développement natif :
 
 ```csharp
 public MainPage ()
@@ -215,9 +215,9 @@ public MainPage ()
 }
 ```
 
-Cette application en cours d’exécution sur les plateformes Windows, Android ou iOS et en appuyant sur le bouton entraînera le texte du bouton mise à jour avec l’orientation du périphérique.
+Exécutez cette application sur iOS, Android ou les plateformes Windows et en appuyant sur le bouton entraîne le texte du bouton mise à jour avec l’orientation du périphérique.
 
-![](device-orientation-images/orientation.png "Exemple de l’Orientation de périphérique")
+![](device-orientation-images/orientation.png "Exemple d’orientation de l’appareil")
 
 
 ## <a name="related-links"></a>Liens associés

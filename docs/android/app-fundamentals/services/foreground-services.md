@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/19/2018
-ms.openlocfilehash: 3088fa4b5cfa21ac57533ef331ffcc15414e14b4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 47e1eda2f701b654f81f664050847677fba8bcc5
+ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763746"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38986032"
 ---
 # <a name="foreground-services"></a>Services de premier plan
 
-Un service de premier plan est un type spécial d’un service lié ou d’un service démarré. Occasionnellement services effectue les tâches que les utilisateurs doivent connaître activement, ces services sont appelés _des services de premier plan_. Un exemple d’un service de premier plan est une application qui fournit l’utilisateur avec des instructions lors de la commande ou à pied. Même si l’application est en arrière-plan, il est important que le service dispose de suffisamment de ressources pour fonctionner correctement et que l’utilisateur dispose d’un moyen rapide et pratique pour accéder à l’application. Pour une application Android, cela signifie qu’un service de premier plan doit recevoir la priorité supérieure à celle d’un service « standard » et un service de premier plan doit fournir un `Notification` qui Android s’affichera en tant que le service est en cours d’exécution.
+Un service de premier plan est un type spécial d’un service lié ou d’un service démarré. Occasionnellement services effectue les tâches que les utilisateurs doivent connaître activement, ces services sont appelés _des services de premier plan_. Un exemple d’un service de premier plan est une application qui fournit l’utilisateur directions lors de la voiture ou à pied. Même si l’application est en arrière-plan, il est toujours important que le service a suffisamment de ressources pour fonctionner correctement et que l’utilisateur dispose d’un moyen rapide et pratique pour accéder à l’application. Pour une application Android, cela signifie qu’un service de premier plan ne doit recevoir une priorité plus élevée qu’un service « standard » et un service de premier plan doit fournir un `Notification` que Android affichera tant que le service est en cours d’exécution.
  
-Pour démarrer un service de premier plan, l’application doit envoyer une intention indiquant Android pour démarrer le service. Puis le service doit s’enregistrer comme un service de premier plan avec Android. Applications qui s’exécutent sur Android 8.0 (ou version ultérieure) doivent utiliser le `Context.StartForegroundService` pour démarrer le service, tandis que les applications qui sont exécutent sur des appareils avec une ancienne version d’Android doivent utiliser (méthode) `Context.StartService`
+Pour démarrer un service de premier plan, l’application doit distribuer une intention qui indique à Android pour démarrer le service. Le service doit ensuite s’auto-enregistrer comme un service de premier plan avec Android. Applications qui s’exécutent sur Android 8.0 (ou version ultérieure) doivent utiliser le `Context.StartForegroundService` pour démarrer le service, tandis que les applications qui s’exécutent sur des appareils avec une version antérieure d’Android doivent utiliser (méthode) `Context.StartService`
 
 Cette méthode d’extension c# est un exemple montrant comment démarrer un service de premier plan. Sur Android 8.0 et versions ultérieures, il utilise le `StartForegroundService` (méthode), sinon l’ancien `StartService` méthode sera utilisée.  
 
@@ -43,16 +43,16 @@ public static void StartForegroundServiceComapt<T>(this Context context, Bundle 
 
 ## <a name="registering-as-a-foreground-service"></a>L’inscription d’un Service de premier plan
 
-Une fois qu’un service de premier plan a démarré, il doit s’inscrire avec Android en appelant le [ `StartForeground` ](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/). Si le service est démarré avec le `Service.StartForegroundService` méthode mais n’inscrit pas lui-même, puis Android arrête le service et marquer l’application comme non réactif.
+Une fois un service de premier plan a démarré, il doit s’inscrire auprès d’Android en appelant le [ `StartForeground` ](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/). Si le service est démarré avec le `Service.StartForegroundService` méthode mais ne pas s’inscrire, puis Android arrête le service et marquer l’application comme non réactif.
 
 `StartForeground` accepte deux paramètres, qui sont tous deux obligatoires :
  
 * Valeur entière qui est unique au sein de l’application pour identifier le service.
-* A `Notification` objet qui affiche dans la barre d’état pour Android tant que le service est en cours d’exécution.
+* Un `Notification` objet affiche dans la barre d’état pour Android, que le service est en cours d’exécution.
 
-Android la notification s’affiche dans la barre d’état pour que le service est en cours d’exécution. La notification, au minimum, fournit une aide visuelle à l’utilisateur qui exécute le service. Dans l’idéal, la notification doit fournir l’utilisateur avec un raccourci vers l’application ou éventuellement des boutons d’action pour contrôler l’application. Ceci est un lecteur de musique &ndash; la notification s’affiche peut-être comporter des boutons à suspendre/lire la musique, de rembobiner la chanson précédente, ou ignorer le morceau suivant. 
+Android la notification s’affiche dans la barre d’état pour tant que le service est en cours d’exécution. La notification, au minimum, fournira une aide visuelle à l’utilisateur que le service est en cours d’exécution. Dans l’idéal, la notification doit fournir à l’utilisateur d’un raccourci vers l’application ou éventuellement des boutons d’action pour contrôler l’application. Un exemple de ceci est un lecteur de musique &ndash; la notification affichée peut-être comporter des boutons à pause/lecture de musique, de rembobiner la chanson précédente, ou ignorer le morceau suivant. 
 
-Cet extrait de code est un exemple d’enregistrement d’un service en tant qu’un service de premier plan :   
+Cet extrait de code est un exemple de l’inscription d’un service comme un service de premier plan :   
 
 ```csharp
 // This is any integer value unique to the application.
@@ -80,17 +80,17 @@ public override StartCommandResult OnStartCommand(Intent intent, StartCommandFla
 
 La notification précédente affiche une notification de barre d’état qui ressemble à ce qui suit :
 
-![Image montrant la notification dans la barre d’état](foreground-services-images/foreground-services-01.png "Image illustrant la notification dans la barre d’état")
+![Image montrant la notification dans la barre d’état](foreground-services-images/foreground-services-01.png "Image montrant la notification dans la barre d’état")
 
-Cette capture d’écran montre la notification de développé dans la barre d’état de notification avec deux actions permettant aux utilisateurs de contrôler le service :
+Cette capture d’écran montrant la notification développée dans la barre d’état de notification avec deux actions qui lui permet de contrôler le service :
 
-![Image montrant la notification de développé](foreground-services-images/foreground-services-02.png "Image illustrant la notification de développé.")
+![Image montrant la notification développée](foreground-services-images/foreground-services-02.png "Image montrant la notification développée.")
 
-Plus d’informations sur les notifications sont disponibles dans le [Notifications Local](~/android/app-fundamentals/notifications/local-notifications.md) section de la [aux Notifications Android](~/android/app-fundamentals/notifications/index.md) guide.
+Plus d’informations sur les notifications sont disponibles dans le [Notifications locales](~/android/app-fundamentals/notifications/local-notifications.md) section de la [Notifications Android](~/android/app-fundamentals/notifications/index.md) guide.
 
 ## <a name="unregistering-as-a-foreground-service"></a>Annulation de l’inscription en tant qu’un Service de premier plan
 
-Un service peut annuler répertorié comme un service de premier plan en appelant la méthode `StopForeground`. `StopForeground` ne sera pas arrêter le service, mais elle supprime l’icône de notification et des signaux Android ce service peut être arrêtée si nécessaire.
+Un service peut retirer répertorié comme un service de premier plan en appelant la méthode `StopForeground`. `StopForeground` n’arrêtera pas le service, mais il supprime l’icône de notification et des signaux Android ce service peut être arrêtée si nécessaire.
 
 La notification de barre d’état qui s’affiche peut également être supprimée en passant `true` à la méthode : 
 
@@ -98,11 +98,11 @@ La notification de barre d’état qui s’affiche peut également être supprim
 StopForeground(true);
 ```
 
-Si le service est interrompu par un appel à `StopSelf` ou `StopService`, la notification de barre d’état est supprimée.
+Si le service est interrompu par un appel à `StopSelf` ou `StopService`, la notification de barre d’état va être supprimée.
 
 ## <a name="related-links"></a>Liens associés
 
 - [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
-- [Android.App.Service.StartForegrond](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)
+- [Android.App.Service.StartForeground](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)
 - [Notifications locales](~/android/app-fundamentals/notifications/local-notifications.md)
-- [ForegroundServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)
+- [ForegroundServiceDemo (exemple)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)

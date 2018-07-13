@@ -1,35 +1,35 @@
 ---
-title: Styles de périphérique dans Xamarin.Forms
-description: Xamarin.Forms inclut six styles dynamiques, connus comme des styles de périphérique, dans la classe Device.Styles. Cet article explique comment utiliser les styles de périphérique dans une application de Xamarin.Forms.
+title: Styles d’appareils dans Xamarin.Forms
+description: Xamarin.Forms inclut six styles dynamiques, connus comme des styles de périphérique, dans la classe Device.Styles. Cet article explique comment utiliser les styles de périphérique dans une application Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 6b5d4623bb331f4bf52faa096afeacb21d6d7489
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: bba42c966c6a606790655751db8b294d9ca7b6f9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245593"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994375"
 ---
-# <a name="device-styles-in-xamarinforms"></a>Styles de périphérique dans Xamarin.Forms
+# <a name="device-styles-in-xamarinforms"></a>Styles d’appareils dans Xamarin.Forms
 
 _Xamarin.Forms inclut six styles dynamiques, connus comme des styles de périphérique, dans la classe Device.Styles._
 
-Le *périphérique* styles sont :
+Le *appareil* styles sont :
 
-- [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/)
-- [`CaptionStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.CaptionStyle/)
-- [`ListItemDetailTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemDetailTextStyle/)
-- [`ListItemTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemTextStyle/)
-- [`SubtitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.SubtitleStyle/)
-- [`TitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.TitleStyle/)
+- [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle)
+- [`CaptionStyle`](xref:Xamarin.Forms.Device.Styles.CaptionStyle)
+- [`ListItemDetailTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyle)
+- [`ListItemTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyle)
+- [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
+- [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-Tous les styles de six applicable uniquement aux [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances. Par exemple, un `Label` qui affiche le corps d’un paragraphe peut définir ses [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) propriété [ `BodyStyle` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/).
+Tous les six styles applicable uniquement aux [ `Label` ](xref:Xamarin.Forms.Label) instances. Par exemple, un `Label` qui affiche le corps d’un paragraphe peut définir son [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriété [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle).
 
-L’exemple de code suivant montre comment utiliser le *périphérique* styles dans une page XAML :
+L’exemple de code suivant montre comment utiliser le *appareil* styles dans une page XAML :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" Icon="xaml.png">
@@ -63,13 +63,13 @@ L’exemple de code suivant montre comment utiliser le *périphérique* styles d
 </ContentPage>
 ```
 
-Les styles de périphérique sont liés à l’utilisation de la `DynamicResource` extension de balisage. La nature dynamique des styles peut être consultée dans iOS en modifiant le **accessibilité** paramètres pour la taille du texte. L’apparence de la *périphérique* styles est différent sur chaque plateforme, comme indiqué dans les captures d’écran suivantes :
+Les styles de l’appareil sont liés à l’utilisation de la `DynamicResource` extension de balisage. La nature dynamique des styles peut être consultée dans iOS en modifiant le **accessibilité** paramètres pour la taille du texte. L’apparence de la *appareil* styles est différente sur chaque plateforme, comme indiqué dans les captures d’écran suivante :
 
-![](device-images/device-styles.png "Styles de périphérique sur chaque plateforme")
+![](device-images/device-styles.png "Styles d’appareils sur chaque plateforme")
 
-*APPAREIL* styles peuvent également être dérivés en définissant le [ `BaseResourceKey` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/) propriété le nom de clé pour le style de l’appareil. Dans l’exemple de code ci-dessus, `myBodyStyle` hérite [ `BodyStyle` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/) et définit une couleur de texte accentuées. Pour plus d’informations sur l’héritage de style dynamique, consultez [dynamique l’héritage de Style](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
+*APPAREIL* styles peuvent également être dérivés en définissant le [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) propriété le nom de clé pour le style de l’appareil. Dans l’exemple de code ci-dessus, `myBodyStyle` hérite [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle) et définit une couleur de texte accentuées. Pour plus d’informations sur l’héritage de style dynamique, consultez [l’héritage de Style dynamique](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
 
-L’exemple de code suivant illustre la page équivalente dans c# :
+L’exemple de code suivant montre la page équivalente dans c# :
 
 ```csharp
 public class DeviceStylesPageCS : ContentPage
@@ -107,23 +107,23 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-Le [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) propriété de chaque [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instance est affectée à la propriété appropriée à partir de la [ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) classe.
+Le [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriété de chaque [ `Label` ](xref:Xamarin.Forms.Label) instance est définie sur la propriété appropriée à partir de la [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe.
 
 ## <a name="accessibility"></a>Accessibilité
 
-Le *périphérique* styles respectent les préférences d’accessibilité, afin de tailles de police change que les préférences d’accessibilité sont modifiées sur chaque plateforme. Par conséquent, pour prendre en charge le texte accessible, vérifiez que le *périphérique* styles sont utilisés comme base pour les styles de texte dans votre application.
+Le *appareil* styles respectent les préférences d’accessibilité, afin de tailles de police change les préférences d’accessibilité sont modifiés sur chaque plateforme. Par conséquent, pour prendre en charge de texte accessible, vérifiez que le *appareil* styles sont utilisés comme base pour les styles de texte au sein de votre application.
 
-Les captures d’écran suivantes illustrent les styles de périphérique sur chaque plateforme, avec la plus petite taille de police accessible :
+Les captures d’écran suivantes montrent les styles de périphérique sur chaque plateforme, avec la plus petite taille de police accessible :
 
-[![](device-images/minimum-size.png "Styles de périphérique de petite taille accessible sur chaque plateforme")](device-images/minimum-size-large.png#lightbox "Styles de périphérique de petite taille Accessible sur chaque plateforme")
+[![](device-images/minimum-size.png "Styles de périphérique de petite taille accessible sur chaque plateforme")](device-images/minimum-size-large.png#lightbox "Styles petit appareil Accessible sur chaque plateforme")
 
-Les captures d’écran suivantes illustrent les styles de périphérique sur chaque plateforme, avec la plus grande taille accessible :
+Les captures d’écran suivantes montrent les styles de périphérique sur chaque plateforme, avec la plus grande taille de police accessible :
 
-![](device-images/maximum-size.png "Styles de périphérique grand accessible sur chaque plateforme")
+![](device-images/maximum-size.png "Styles d’unité volumineuse accessible sur chaque plateforme")
 
 ## <a name="summary"></a>Récapitulatif
 
-Xamarin.Forms inclut six *dynamique* styles, appelés *périphérique* styles, dans le [ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) classe. Tous les styles de six applicable uniquement aux [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instances.
+Xamarin.Forms inclut six *dynamique* styles, connu sous le nom *appareil* définit le style, dans le [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe. Tous les six styles applicable uniquement aux [ `Label` ](xref:Xamarin.Forms.Label) instances.
 
 
 ## <a name="related-links"></a>Liens associés
@@ -131,8 +131,8 @@ Xamarin.Forms inclut six *dynamique* styles, appelés *périphérique* styles, d
 - [Styles de texte](~/xamarin-forms/user-interface/text/styles.md)
 - [Extensions de balisage XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Styles dynamiques (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
-- [Utilisation de Styles (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [Device.Styles](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [Style](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [Utilisation des Styles (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Device.Styles](xref:Xamarin.Forms.Device.Styles)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Style](xref:Xamarin.Forms.Style)
+- [Setter](xref:Xamarin.Forms.Setter)

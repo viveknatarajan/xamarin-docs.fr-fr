@@ -7,16 +7,16 @@ ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0f9b9e27afd5dbbf52f3653995470136e794f17b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: b27df7f63ac83206c50858175dc2945937142f78
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935197"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995467"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Résumé du chapitre 13. Bitmaps
 
-Xamarin.Forms [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) élément affiche une bitmap. Toutes les plateformes de Xamarin.Forms prend en charge les formats de fichier JPEG, PNG, GIF et BMP.
+Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) élément affiche une bitmap. Toutes les plateformes de Xamarin.Forms prend en charge les formats de fichier JPEG, PNG, GIF et BMP.
 
 Bitmaps dans Xamarin.Forms proviennent de quatre endroits :
 
@@ -27,30 +27,30 @@ Bitmaps dans Xamarin.Forms proviennent de quatre endroits :
 
 Ressources bitmap dans la bibliothèque PCL sont indépendant de la plateforme, tandis que les ressources de bitmap dans les projets de plateforme sont spécifiques à la plateforme.
 
-La bitmap est spécifiée en définissant le [ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Source/) propriété du `Image` à un objet de type [ `ImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSource/), une classe abstraite avec trois dérivés :
+La bitmap est spécifiée en définissant le [ `Source` ](xref:Xamarin.Forms.Image.Source) propriété du `Image` à un objet de type [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), une classe abstraite avec trois dérivés :
 
-- [`UriImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.UriImageSource/) Pour accéder à une image bitmap sur le web basé sur un `Uri` objet défini sa [ `Uri` ](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.Uri/) propriété
-- [`FileImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/) Pour accéder à une image bitmap stockée dans un projet d’application de plateforme basée sur un chemin d’accès de dossier et le fichier défini sur sa [ `File` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FileImageSource.File/) propriété
-- [`StreamImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.StreamImageSource/) pour charger une bitmap à l’aide de .NET `Stream` objet spécifié en retournant un `Stream` à partir d’un `Func` définie sur sa [ `Stream` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StreamImageSource.Stream/) propriété
+- [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) Pour accéder à une image bitmap sur le web basé sur un `Uri` objet défini sa [ `Uri` ](xref:Xamarin.Forms.UriImageSource.Uri) propriété
+- [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) Pour accéder à une image bitmap stockée dans un projet d’application de plateforme basée sur un chemin d’accès de dossier et le fichier défini sur sa [ `File` ](xref:Xamarin.Forms.FileImageSource.File) propriété
+- [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) pour charger une bitmap à l’aide de .NET `Stream` objet spécifié en retournant un `Stream` à partir d’un `Func` définie sur sa [ `Stream` ](xref:Xamarin.Forms.StreamImageSource.Stream) propriété
 
 Vous pouvez également (et plus fréquemment), vous pouvez utiliser les méthodes statiques suivantes de la `ImageSource` de classe, qui retournent toutes `ImageSource` objets :
 
-- [`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) Pour accéder à une image bitmap sur le web basé sur un `Uri` objet
-- [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) Pour accéder à une image bitmap stockée en tant que ressource incorporée dans l’application de bibliothèque de classes portable, ou [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Type/) ou [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Reflection.Assembly/) pour accéder à une image bitmap dans un autre assembly source
-- [`ImageSource.FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) Pour accéder à une image bitmap à partir d’un projet d’application de plateforme
-- [`ImageSource.FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) pour charger une image bitmap selon un `Stream` objet
+- [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) Pour accéder à une image bitmap sur le web basé sur un `Uri` objet
+- [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) Pour accéder à une image bitmap stockée en tant que ressource incorporée dans l’application de bibliothèque de classes portable ; [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Type)) ou [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Reflection.Assembly)) pour accéder à une image bitmap dans un autre assembly source
+- [`ImageSource.FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) Pour accéder à une image bitmap à partir d’un projet d’application de plateforme
+- [`ImageSource.FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) pour charger une image bitmap selon un `Stream` objet
 
 Il n’existe aucun équivalent de la classe de la `Image.FromResource` méthodes. Le `UriImageSource` classe est utile si vous avez besoin de contrôler la mise en cache. Le `FileImageSource` classe est utile dans XAML. `StreamImageSource` est utile pour le chargement asynchrone de `Stream` objets, tandis que `ImageSource.FromStream` est synchrone.
 
 ## <a name="platform-independent-bitmaps"></a>Bitmaps indépendantes de la plate-forme
 
-Le [ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) projet charge une image bitmap sur le web à l’aide `ImageSource.FromUri`. Le `Image` élément est défini sur le `Content` propriété de la `ContentPage`, donc il est limité à la taille de la page. Quelle que soit la taille de la bitmap, une contrainte `Image` élément est étiré pour la taille de son conteneur et le bitmap s’affiche dans sa taille maximale dans le `Image` élément tout en conservant les proportions de la bitmap. Zones de la `Image` au-delà de l’image bitmap peut être en couleur avec [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/).
+Le [ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) projet charge une image bitmap sur le web à l’aide `ImageSource.FromUri`. Le `Image` élément est défini sur le `Content` propriété de la `ContentPage`, donc il est limité à la taille de la page. Quelle que soit la taille de la bitmap, une contrainte `Image` élément est étiré pour la taille de son conteneur et le bitmap s’affiche dans sa taille maximale dans le `Image` élément tout en conservant les proportions de la bitmap. Zones de la `Image` au-delà de l’image bitmap peut être en couleur avec [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor).
 
-Le [ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) exemple est similaire, mais se contente de définir le `Source` URL à la propriété. La conversion est contrôlée par le [ `ImageSourceConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSourceConverter/) classe.
+Le [ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) exemple est similaire, mais se contente de définir le `Source` URL à la propriété. La conversion est contrôlée par le [ `ImageSourceConverter` ](xref:Xamarin.Forms.ImageSourceConverter) classe.
 
 ### <a name="fit-and-fill"></a>Ajuster et remplissage
 
-Vous pouvez contrôler la manière dont l’image bitmap est étirée en définissant le [ `Aspect` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) propriété de la `Image` à un des membres suivants de la [ `Aspect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Aspect/) énumération :
+Vous pouvez contrôler la manière dont l’image bitmap est étirée en définissant le [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) propriété de la `Image` à un des membres suivants de la [ `Aspect` ](xref:Xamarin.Forms.Aspect) énumération :
 
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): respecte les proportions (valeur par défaut)
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill): remplit la zone, ne respecte pas les proportions
@@ -84,7 +84,7 @@ Le [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 Le [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) exemple permet à l’utilisateur de parcourir les images stockées sur le site web de Xamarin. Il utilise le .NET `WebRequest` classe pour télécharger un fichier JSON avec la liste des images bitmap.
 
-Le programme utilise une [ `ActivityIndicator` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/) pour indiquer que quelque chose se passe. Comme chaque bitmap est le chargement, en lecture seule [ `IsLoading` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.IsLoading/) propriété du `Image` est `true`. Le `IsLoading` propriété repose sur une propriété pouvant être liée, par conséquent, un `PropertyChanged` événement est déclenché lorsque cette propriété est modifiée. Le programme attache un gestionnaire à cet événement et utilise le paramètre actuel de `IsLoaded` pour définir le [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) propriété de la `ActivityIndicator`.
+Le programme utilise une [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) pour indiquer que quelque chose se passe. Comme chaque bitmap est le chargement, en lecture seule [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) propriété du `Image` est `true`. Le `IsLoading` propriété repose sur une propriété pouvant être liée, par conséquent, un `PropertyChanged` événement est déclenché lorsque cette propriété est modifiée. Le programme attache un gestionnaire à cet événement et utilise le paramètre actuel de `IsLoaded` pour définir le [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) propriété de la `ActivityIndicator`.
 
 ## <a name="streaming-bitmaps"></a>Diffusion en continu de bitmaps
 
@@ -102,11 +102,11 @@ Toutes les plateformes de Xamarin.Forms prend en charge le format de fichier non
 
 ## <a name="platform-specific-bitmaps"></a>Bitmaps spécifiques à la plateforme
 
-Toutes les plateformes de Xamarin.Forms permettent de stocker des images bitmap dans les assemblys d’application de plateforme. Lorsque extrait par une application Xamarin.Forms, ces bitmaps de plateforme sont de type [ `FileImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/). Vous les utilisez pour :
+Toutes les plateformes de Xamarin.Forms permettent de stocker des images bitmap dans les assemblys d’application de plateforme. Lorsque extrait par une application Xamarin.Forms, ces bitmaps de plateforme sont de type [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource). Vous les utilisez pour :
 
-- le [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Icon/) propriété de [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/)
-- le [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) propriété de [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/)
-- le [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) propriété de `Button`
+- le [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) propriété de [`MenuItem`](xref:Xamarin.Forms.MenuItem)
+- le [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) propriété de [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
+- le [ `Image` ](xref:Xamarin.Forms.Button) propriété de `Button`
 
 Les assemblys de plateforme contiennent déjà des bitmaps pour les icônes et écrans de démarrage :
 
@@ -170,23 +170,23 @@ Le [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/m
 
 ### <a name="toolbars-and-their-icons"></a>Barres d’outils et leurs icônes
 
-Une des principales utilisations des bitmaps de spécifique à la plateforme est la barre d’outils de Xamarin.Forms, qui est construite en ajoutant [ `ToolbarItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/) des objets sur le [ `ToolbarItems` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.ToolbarItems/) collection définie par `Page`. `ToobarItem` dérive de [ `MenuItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/) dont elle hérite des propriétés.
+Une des principales utilisations des bitmaps de spécifique à la plateforme est la barre d’outils de Xamarin.Forms, qui est construite en ajoutant [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem) des objets sur le [ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) collection définie par `Page`. `ToobarItem` dérive de [ `MenuItem` ](xref:Xamarin.Forms.MenuItem) dont elle hérite des propriétés.
 
 Le plus important `ToolbarItem` sont des propriétés :
 
-- [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Text/) pour le texte qui peut s’afficher en fonction de la plateforme et `Order`
-- [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) de type `FileImageSource` pour l’image qui peut s’afficher en fonction de la plateforme et `Order`
+- [`Text`](xref:Xamarin.Forms.MenuItem.Text) pour le texte qui peut s’afficher en fonction de la plateforme et `Order`
+- [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) de type `FileImageSource` pour l’image qui peut s’afficher en fonction de la plateforme et `Order`
 - [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) de type [ `ToolbarItemOrder` ](xref:Xamarin.Forms.ToolbarItemOrder), une énumération avec trois membres, [ `Default` ](xref:Xamarin.Forms.ToolbarItemOrder.Default), [ `Primary` ](xref:Xamarin.Forms.ToolbarItemOrder.Primary), et [ `Secondary` ](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
 
 Le nombre de `Primary` éléments doivent être limités à trois ou quatre. Vous devez inclure un `Text` définissant pour tous les éléments. Pour la plupart des plateformes, uniquement le `Primary` éléments nécessitent une `Icon` mais nécessite Windows 8.1 une `Icon` pour tous les éléments. Les icônes doivent être des unités indépendantes du périphérique 32 carrées. Le `FileImageSource` type indique qu’ils sont spécifiques à la plateforme.
 
-Le `ToolbarItem` se déclenche un [ `Clicked` ](https://developer.xamarin.com/api/event/Xamarin.Forms.MenuItem.Clicked/) événement lorsque l’utilisateur appuie dessus, comme un `Button`. `ToolbarItem` prend également en charge [ `Command` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Command/) et [ `CommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.CommandParameter/) propriétés souvent utilisées dans le cadre de MVVM. (Consultez [chapitre 18, MVVM](chapter18.md)).
+Le `ToolbarItem` se déclenche un [ `Clicked` ](xref:Xamarin.Forms.MenuItem.Clicked) événement lorsque l’utilisateur appuie dessus, comme un `Button`. `ToolbarItem` prend également en charge [ `Command` ](xref:Xamarin.Forms.MenuItem.Command) et [ `CommandParameter` ](xref:Xamarin.Forms.MenuItem.CommandParameter) propriétés souvent utilisées dans le cadre de MVVM. (Consultez [chapitre 18, MVVM](chapter18.md)).
 
-IOS et Android exigent qu’une page qui affiche une barre d’outils un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) ou une page faite par un `NavigationPage`. Le [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) jeux du programme le `MainPage` propriété de son `App` classe à la [ `NavigationPage` constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.NavigationPage.NavigationPage/p/Xamarin.Forms.Page/) avec un `ContentPage` argument et montre le Gestionnaire d’événements et de la construction d’une barre d’outils.
+IOS et Android exigent qu’une page qui affiche une barre d’outils un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) ou une page faite par un `NavigationPage`. Le [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) jeux du programme le `MainPage` propriété de son `App` classe à la [ `NavigationPage` constructeur](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page)) avec un `ContentPage` argument et montre le Gestionnaire d’événements et de la construction d’une barre d’outils.
 
 ### <a name="button-images"></a>Images de bouton
 
-Vous pouvez également utiliser des images bitmap spécifiques à la plateforme pour définir le [ `Image` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Image/) propriété de `Button` à une image bitmap du carré 32 unités indépendantes du périphérique, tel qu’indiqué par le [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) exemple.
+Vous pouvez également utiliser des images bitmap spécifiques à la plateforme pour définir le [ `Image` ](xref:Xamarin.Forms.Button.Image) propriété de `Button` à une image bitmap du carré 32 unités indépendantes du périphérique, tel qu’indiqué par le [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) exemple.
 
 
 

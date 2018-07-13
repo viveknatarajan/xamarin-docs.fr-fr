@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: b185ea3b7260ff2be8a4dec5dc713f24dc6e6095
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: d4b3d5c65ddf8be433d1f8e182774aa839f60357
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245701"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995594"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Création d’Extensions de balisage XAML
 
-Sur le niveau par programme, une extension de balisage XAML est une classe qui implémente le [ `IMarkupExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) ou [ `IMarkupExtension<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interface. Vous pouvez explorer le code source des extensions de balisage standard décrit ci-dessous dans le [ **MarkupExtensions** active](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) du référentiel GitHub de Xamarin.Forms.
+Sur le niveau par programmation, une extension de balisage XAML est une classe qui implémente le [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) ou [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface. Vous pouvez explorer le code source des extensions de balisage standard décrit ci-dessous dans le [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) du référentiel GitHub de Xamarin.Forms.
 
-Il est également possible de définir vos propres extensions de balisage XAML personnalisées en dérivant de `IMarkupExtension` ou `IMarkupExtension<T>`. Utilisez le formulaire générique si l’extension de balisage obtienne une valeur d’un type particulier. C’est le cas avec plusieurs des extensions de balisage Xamarin.Forms :
+Il est également possible de définir vos propres extensions de balisage XAML personnalisées en dérivant de `IMarkupExtension` ou `IMarkupExtension<T>`. Utilisez le formulaire générique si l’extension de balisage Obtient une valeur d’un type particulier. C’est le cas avec plusieurs Xamarin.Forms extensions de balisage :
 
 - `TypeExtension` dérive de `IMarkupExtension<Type>`
 - `ArrayExtension` dérive de `IMarkupExtension<Array>`
@@ -26,7 +26,7 @@ Il est également possible de définir vos propres extensions de balisage XAML p
 - `BindingExtension` dérive de `IMarkupExtension<BindingBase>`
 - `ConstraintExpression` dérive de `IMarkupExtension<Constraint>`
 
-Les deux `IMarkupExtension` interfaces ne définissent qu’une méthode nommée `ProvideValue`:
+Les deux `IMarkupExtension` interfaces ne définissent qu’une seule méthode nommé `ProvideValue`:
 
 ```csharp
 public interface IMarkupExtension
@@ -40,13 +40,13 @@ public interface IMarkupExtension<out T> : IMarkupExtension
 }
 ```
 
-Étant donné que `IMarkupExtension<T>` dérive `IMarkupExtension` et inclut la `new` mot clé sur `ProvideValue`, il contient à la fois `ProvideValue` méthodes.
+Dans la mesure où `IMarkupExtension<T>` dérive `IMarkupExtension` et inclut le `new` mot clé sur `ProvideValue`, il contient à la fois `ProvideValue` méthodes.
 
-Très souvent, les extensions de balisage XAML définissant des propriétés qui contribuent à la valeur de retour. (L’exception évidente est `NullExtension`, dans lequel `ProvideValue` retourne simplement `null`.) Le `ProvideValue` méthode possède un seul argument de type `IServiceProvider` qui seront abordés plus loin dans cet article.
+Très souvent, les extensions de balisage XAML définissant des propriétés qui contribuent à la valeur de retour. (L’exception évidente est `NullExtension`, dans lequel `ProvideValue` renvoie simplement `null`.) Le `ProvideValue` méthode possède un argument unique de type `IServiceProvider` qui seront abordées plus loin dans cet article.
 
 ## <a name="a-markup-extension-for-specifying-color"></a>Une Extension de balisage pour la spécification de couleur
 
-L’extension de balisage XAML suivante vous permet de construire un `Color` valeur à l’aide de composants de teinte, saturation et de luminosité. Il définit quatre propriétés pour les quatre composants de la couleur, y compris un composant alpha est initialisé à 1. Dérive de la classe `IMarkupExtension<Color>` pour indiquer un `Color` valeur de retour :
+L’extension de balisage XAML suivante vous permet de construire un `Color` valeur à l’aide de composants de teinte, saturation et de luminosité. Il définit quatre propriétés pour les quatre composants de la couleur, y compris un composant alpha est initialisé à 1. La classe dérive `IMarkupExtension<Color>` pour indiquer un `Color` valeur de retour :
 
 ```csharp
 public class HslColorExtension : IMarkupExtension<Color>
@@ -71,9 +71,9 @@ public class HslColorExtension : IMarkupExtension<Color>
 }
 ```
 
-Étant donné que `IMarkupExtension<T>` dérive `IMarkupExtension`, la classe doit contenir deux `ProvideValue` méthodes, celui qui retourne `Color` et l’autre qui retourne `object`, mais la seconde méthode peut simplement appeler la première méthode.
+Étant donné que `IMarkupExtension<T>` dérive `IMarkupExtension`, la classe doit contenir deux `ProvideValue` méthodes, celui qui retourne `Color` et une autre qui retourne `object`, mais la seconde méthode peut simplement appeler la première méthode.
 
-Le **démonstration de couleur TSL** page affiche de différentes façons que `HslColorExtension` peut apparaître dans un fichier XAML pour spécifier la couleur pour une `BoxView`:
+Le **démonstration de couleurs TSL** page montre plusieurs façons qui `HslColorExtension` peut apparaître dans un fichier XAML pour spécifier la couleur pour une `BoxView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -115,15 +115,15 @@ Le **démonstration de couleur TSL** page affiche de différentes façons que `H
 </ContentPage>
 ```
 
-Notez que lorsque `HslColorExtension` est une balise XML, les quatre propriétés sont définies en tant qu’attributs, mais lorsqu’il apparaît entre accolades, les quatre propriétés sont séparées par des points-virgules sans guillemets. Les valeurs par défaut pour `H`, `S`, et `L` sont 0 et la valeur par défaut de `A` est 1, ces propriétés peuvent être omises si vous souhaitez que les valeurs par défaut. Le dernier exemple montre un exemple où la luminosité est 0, ce qui entraîne normalement noir, mais le canal alpha est de 0,5, il est donc moitié transparent et s’affiche en gris par rapport à l’arrière-plan blanc, de la page :
+Notez que lorsque `HslColorExtension` est une balise XML, les quatre propriétés sont définies en tant qu’attributs, mais lorsqu’il apparaît entre accolades, les quatre propriétés sont séparées par des points-virgules sans guillemets. Les valeurs par défaut pour `H`, `S`, et `L` sont 0 et la valeur par défaut de `A` est 1, ces propriétés peuvent être omises si vous souhaitez que les valeurs par défaut. Le dernier exemple montre un exemple où la luminosité est 0, ce qui aboutit généralement à noir, mais le canal alpha est de 0,5, il est donc six transparent et s’affiche en gris par rapport à l’arrière-plan blanc de la page :
 
-[![Démo sur les couleurs TSL](creating-images/hslcolordemo-small.png "démonstration de couleur TSL")](creating-images/hslcolordemo-large.png#lightbox "démonstration de couleur TSL")
+[![Démonstration de couleurs TSL](creating-images/hslcolordemo-small.png "démonstration de couleurs TSL")](creating-images/hslcolordemo-large.png#lightbox "démonstration de couleur TSL")
 
-## <a name="a-markup-extension-for-accessing-bitmaps"></a>Une Extension de balisage pour l’accès aux Bitmaps
+## <a name="a-markup-extension-for-accessing-bitmaps"></a>Une Extension de balisage pour l’accès à des Bitmaps
 
-L’argument `ProvideValue` est un objet qui implémente le [ `IServiceProvider` ](https://developer.xamarin.com/api/type/System.IServiceProvider/) interface, qui est définie dans le .NET `System` espace de noms. Cette interface a un seul membre, une méthode nommée `GetService` avec un `Type` argument.
+L’argument `ProvideValue` est un objet qui implémente le [ `IServiceProvider` ](xref:System.IServiceProvider) interface, ce qui est défini dans le .NET `System` espace de noms. Cette interface a un seul membre, une méthode nommée `GetService` avec un `Type` argument.
 
-Le `ImageResourceExtension` classe ci-dessous illustre une utilisation possible de `IServiceProvider` et `GetService` pour obtenir un `IXmlLineInfoProvider` objet qui peut fournir des informations de ligne et le caractère qui indique où une erreur particulière a été détectée. Dans ce cas, une exception est levée lorsque le `Source` propriété n’a pas été définie :
+Le `ImageResourceExtension` classe ci-dessous illustre une utilisation possible de `IServiceProvider` et `GetService` pour obtenir un `IXmlLineInfoProvider` objet qui peut fournir des informations de ligne et le caractère indiquant où une erreur particulière a été détectée. Dans ce cas, une exception est levée lorsque le `Source` propriété n’a pas été définie :
 
 ```csharp
 [ContentProperty("Source")]
@@ -152,9 +152,9 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` est utile lorsqu’un fichier XAML doit accéder à un fichier image stocké en tant que ressource incorporée dans le projet de bibliothèque .NET Standard. Elle utilise le `Source` propriété à appeler la méthode statique `ImageSource.FromResource` (méthode). Cette méthode requiert un nom qualifié complet des ressources, qui se compose du nom de l’assembly, le nom du dossier et le nom de fichier séparés par des points. Le `ImageResourceExtension` ne doivent l’assembly de nom de la partie, car il obtient le nom de l’assembly à l’aide de la réflexion et ajoute à la `Source` propriété. Peu importe, `ImageSource.FromResource` doit être appelé à partir de l’assembly qui contient l’image bitmap, ce qui signifie que cette extension de ressource XAML ne peut pas être fait partie d’une bibliothèque externe, sauf si les images sont également dans cette bibliothèque. (Consultez la [ **des Images incorporées** ](~/xamarin-forms/user-interface/images.md#embedded_images) article pour plus d’informations sur l’accès à des images stockées en tant que ressources incorporées.)
+`ImageResourceExtension` est utile lorsqu’un fichier XAML doit accéder à un fichier image stocké comme une ressource incorporée dans le projet de bibliothèque .NET Standard. Il utilise le `Source` propriété pour appeler la méthode statique `ImageSource.FromResource` (méthode). Cette méthode requiert un nom de ressource complet, qui comprend le nom de l’assembly, le nom du dossier et le nom de fichier séparées par des points. Le `ImageResourceExtension` n’avez besoin de nom de l’assembly partie parce qu’il obtient le nom de l’assembly à l’aide de la réflexion et ajoute à la `Source` propriété. Malgré tout, `ImageSource.FromResource` doit être appelé à partir de l’assembly qui contient l’image bitmap, ce qui signifie que cette extension de ressource XAML ne peut pas faire partie d’une bibliothèque externe, sauf si les images sont également dans cette bibliothèque. (Consultez le [ **Images incorporées** ](~/xamarin-forms/user-interface/images.md#embedded_images) article pour plus d’informations sur l’accès aux bitmaps stockés en tant que ressources incorporées.)
 
-Bien que `ImageResourceExtension` requiert le `Source` propriété à définir, le `Source` propriété est indiquée dans un attribut en tant que la propriété de contenu de la classe. Cela signifie que la `Source=` partie de l’expression entre accolades peut être omis. Dans le **démonstration de ressource d’Image** page, le `Image` éléments extraire deux images en utilisant le nom du dossier et le nom de fichier séparés par des points :
+Bien que `ImageResourceExtension` nécessite le `Source` propriété à définir, le `Source` propriété est indiquée dans un attribut en tant que la propriété de contenu de la classe. Cela signifie que la `Source=` partie de l’expression entre accolades peut être omis. Dans le **démonstration de ressource d’Image** page, le `Image` éléments extraire en utilisant le nom du dossier et le nom de fichier séparées par des points de deux images :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -180,11 +180,11 @@ Bien que `ImageResourceExtension` requiert le `Source` propriété à définir, 
 
 Voici le programme en cours d’exécution sur les trois plateformes :
 
-[![Démo sur les ressources de l’image](creating-images/imageresourcedemo-small.png "démo sur les ressources de l’Image")](creating-images/imageresourcedemo-large.png#lightbox "démo sur les ressources de l’Image")
+[![Démonstration de la ressource d’image](creating-images/imageresourcedemo-small.png "démonstration de la ressource d’Image")](creating-images/imageresourcedemo-large.png#lightbox "démonstration de la ressource d’Image")
 
 ## <a name="service-providers"></a>Fournisseurs de services
 
-À l’aide de la `IServiceProvider` argument `ProvideValue`, les extensions de balisage XAML peuvent accéder à des informations utiles sur le fichier XAML dans lequel ils sont utilisés. Mais pour utiliser le `IServiceProvider` argument avec succès, vous devez connaître les types de services sont disponibles dans les contextes particuliers. La meilleure façon de comprendre le fonctionnement de cette fonctionnalité consiste à étudier le code source des extensions de balisage XAML existants dans le [ **MarkupExtensions** dossier](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) dans le référentiel Xamarin.Forms sur GitHub. N’oubliez pas que certains types de services sont internes à Xamarin.Forms.
+À l’aide de la `IServiceProvider` l’argument de `ProvideValue`, les extensions de balisage XAML peuvent accéder aux informations utiles sur le fichier XAML dans lequel ils sont utilisés. Mais à utiliser le `IServiceProvider` argument avec succès, vous devez savoir quelles sont les services sont disponibles dans des contextes particuliers. La meilleure façon de comprendre cette fonctionnalité consiste à étudier le code source des extensions de balisage XAML existants dans le [ **MarkupExtensions** dossier](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) dans le référentiel de Xamarin.Forms sur GitHub. N’oubliez pas que certains types de services sont internes à Xamarin.Forms.
 
 Dans certaines extensions de balisage XAML, ce service peut être utile :
 
@@ -194,7 +194,7 @@ Dans certaines extensions de balisage XAML, ce service peut être utile :
 
 Le `IProvideValueTarget` interface définit deux propriétés, `TargetObject` et `TargetProperty`. Lorsque ces informations sont obtenues dans le `ImageResourceExtension` (classe), `TargetObject` est la `Image` et `TargetProperty` est un `BindableProperty` de l’objet pour le `Source` propriété de `Image`. Il s’agit de la propriété sur laquelle l’extension de balisage XAML a été définie.
 
-Le `GetService` appel avec un argument de `typeof(IProvideValueTarget)` retourne un objet de type `SimpleValueTargetProvider`, qui est défini dans le `Xamarin.Forms.Xaml.Internals` espace de noms. Si vous effectuez un cast de la valeur de retour de `GetService` pour ce type, vous pouvez également accéder à un `ParentObjects` propriété, qui est un tableau qui contient le `Image` élément, le `Grid` parent et le `ImageResourceDemoPage` parent de la `Grid`.
+Le `GetService` appel avec un argument de `typeof(IProvideValueTarget)` renvoie en fait un objet de type `SimpleValueTargetProvider`, qui est défini dans le `Xamarin.Forms.Xaml.Internals` espace de noms. Si vous effectuez un cast de la valeur de retour de `GetService` à ce type, vous pouvez également accéder à un `ParentObjects` propriété, qui est un tableau qui contient le `Image` élément, le `Grid` parent et le `ImageResourceDemoPage` parent de la `Grid`.
 
 ## <a name="conclusion"></a>Conclusion
 
@@ -204,4 +204,4 @@ Extensions de balisage XAML jouent un rôle essentiel dans XAML en étendant la 
 ## <a name="related-links"></a>Liens associés
 
 - [Extensions de balisage (exemple)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
-- [Chapitre d’extensions de balisage XAML à partir du carnet de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Chapitre d’extensions de balisage XAML de Xamarin.Forms livre](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
