@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32019709"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998239"
 ---
 # <a name="build-process"></a>Processus de génération
 
@@ -76,7 +76,7 @@ Les cibles de génération suivantes sont définies pour les projets Xamarin.And
 
 ## <a name="build-properties"></a>Propriétés de build
 
-Les propriétés MSBuild contrôlent le comportement des cibles. Elles sont spécifiées dans le fichier projet, par exemple **MyApp.csproj**, dans un [élément MSBuild PropertyGroup](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx). 
+Les propriétés MSBuild contrôlent le comportement des cibles. Elles sont spécifiées dans le fichier projet, par exemple **MyApp.csproj**, dans un [élément MSBuild PropertyGroup](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
 
 -   **Configuration** &ndash; spécifie la configuration de build à utiliser, comme « Debug » ou « Release ». La propriété Configuration est utilisée pour déterminer les valeurs par défaut pour d’autres propriétés qui déterminent le comportement de la cible. Vous pouvez créer des configurations supplémentaires dans votre IDE.
 
@@ -86,7 +86,7 @@ Les propriétés MSBuild contrôlent le comportement des cibles. Elles sont spé
 
 -   **DebugSymbols** &ndash; une valeur booléenne qui détermine si le package Android est *débogable*, en combinaison avec la propriété `$(DebugType)`. Un package débogable contient des symboles de débogage, définit l’attribut `//application/@android:debuggable` sur `true` et ajoute automatiquement l’autorisation `INTERNET` de façon à ce qu’un débogueur puisse s’attacher au processus. Une application est débogable si `DebugSymbols` est `True` *, et si* `DebugType` est une chaîne vide ou `Full`.
 
--   **DebugType** &ndash; spécifie le [type de symboles de débogage](http://msdn.microsoft.com/en-us/library/s5c8athz.aspx) à générer dans le cadre de la build, ce qui détermine si l’application est débogable. Les valeurs possibles sont les suivantes :
+-   **DebugType** &ndash; spécifie le [type de symboles de débogage](https://docs.microsoft.com/visualstudio/msbuild/csc-task) à générer dans le cadre de la build, ce qui détermine si l’application est débogable. Les valeurs possibles sont les suivantes :
 
     - **Full** : des symboles complets sont générés. Si la propriété MSBuild `DebugSymbols` est également définie sur `True`, le package d’application est débogable.
 
@@ -484,7 +484,7 @@ Pour utiliser le magasin de clés généré ci-dessus, utilisez le groupe de pro
 
 ## <a name="build-actions"></a>Actions de génération
 
-Les *actions de génération* sont [appliquées aux fichiers](http://msdn.microsoft.com/en-us/library/bb629388.aspx) du projet et contrôlent la façon dont le fichier est traité. 
+Les *actions de génération* sont [appliquées aux fichiers](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) du projet et contrôlent la façon dont le fichier est traité. 
 
 <a name="AndroidEnvironment" />
 

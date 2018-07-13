@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: da6dabed58bedcbcaf1191c16a790e055184c95a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 188d4b89354f97341c22036d90b55924650203ce
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762797"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996627"
 ---
 # <a name="hello-android"></a>Hello, Android
 
@@ -31,5 +31,5 @@ Dans la deuxième partie de ce document, vous allez examiner ce qui a été cré
 ## <a name="related-links"></a>Liens associés
 
 - [Bien démarrer avec Android](http://developer.android.com/training/index.html)
-- [Débogage dans Visual Studio](http://msdn.microsoft.com/en-us/library/k0k771bt%28v=vs.90%29.aspx)
+- [Débogage dans Visual Studio](https://docs.microsoft.com/visualstudio/debugger/)
 - [Recettes Visual Studio pour Mac – Débogage](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
