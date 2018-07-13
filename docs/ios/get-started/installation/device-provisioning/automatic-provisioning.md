@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/22/2018
-ms.openlocfilehash: 323174b4a37a12828a32acb398fef63cd9b849e3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a0c3179dc8e349c23d5521230e0957d1be9384ec
+ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785815"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38986185"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionnement automatique pour Xamarin.iOS
 
@@ -71,7 +71,7 @@ Pour signer automatiquement votre application pour un déploiement sur un appare
 
 1. Appairez Visual Studio 2017 avec un Mac comme décrit dans le guide [Appairer avec un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-2. Ouvrez les options de provisionnement en sélectionnant **Projet > Propriétés de provisionnement...**
+2. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nom du projet et sélectionnez **Propriétés**. Ensuite, accédez à l’onglet **Signature du bundle iOS**.
 
 3. Sélectionnez le schéma **Provisionnement automatique** :
 
