@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: 03841306ba54e511dbf2f2b86a7c17e9f4669bcd
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: e45d9944a2f4fc392b5a78efb4a7751d19641c73
+ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38847559"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39030663"
 ---
 # <a name="introduction-to-tvos-12"></a>Introduction à tvOS 12
 
@@ -23,7 +23,7 @@ ms.locfileid: "38847559"
 
 > [!NOTE]
 > - Examinez le [mise en route](~/ios/platform/introduction-to-ios12/get-started.md) guide pour obtenir des instructions sur la façon de commencer à créer 12 applications iOS et tvOS 12 avec Xamarin.
-> - Pour plus d’informations, consultez le [notes de publication](https://releases.xamarin.com/preview-release-xcode-10-beta/) pour Xamarin la version préliminaire.
+> - Pour plus d’informations, consultez la préversion Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
 
 Ce document propose une vue d’ensemble de nouveaux et mis à jour tvOS 12 pour la version préliminaire de quels Xamarin version fournit actuellement des liaisons c#.
 
@@ -41,4 +41,4 @@ tvOS 12 permet à toutes les applications, quel que soit la façon dont ils sont
 - [tvOS – développeur Apple (Apple)](https://developer.apple.com/tvos/)
 - [Quelles sont les nouveautés dans tvOS 12 (Apple) (vidéo)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Aperçu de Xamarin [notes de publication](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Aperçu de Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)

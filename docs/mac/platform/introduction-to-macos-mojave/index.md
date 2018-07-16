@@ -6,13 +6,13 @@ ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: 810614bc5877b0bfa6e5295fac507da76af0b797
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 07/08/2018
+ms.openlocfilehash: 73f7e0abad7ab3365c842c865855e2527a7a1725
+ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831705"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39030612"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introduction à macOS Mojave
 
@@ -23,16 +23,24 @@ ms.locfileid: "38831705"
 
 > [!NOTE]
 > - Examinez le [mise en route](~/mac/platform/introduction-to-macos-mojave/get-started.md) guide pour obtenir des instructions sur la façon de commencer à créer des applications Mojave avec Xamarin de macOS.
-> - Pour plus d’informations, consultez le [notes de publication](https://releases.xamarin.com/preview-release-xcode-10-beta/) pour Xamarin la version préliminaire.
+> - Pour plus d’informations, consultez la préversion Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
 
 Ce document fournit un haut niveau de la vue d’ensemble des fonctionnalités nouvelles et mises à jour de Mojave macOS pour l’aperçu avant des Xamarin version fournit actuellement des liaisons c#.
 
-## <a name="core-ml-2-natural-language-framework"></a>Core ML 2 : framework de langage naturel
+## <a name="dark-mode"></a>Mode foncé
 
-Cette infrastructure de langage naturel, partie Core ML 2, permet aux applications d’effectuer différents types d’analyse linguistique. Par exemple, il peut être utilisé pour identifier les parties du discours et de déterminer la langue représentée par un bloc de texte.
+Mode foncé est un thème sombre de l’échelle du système dans macOS Mojave qui utilise un modèle de couleurs gris foncé, dynamique pour afficher les éléments d’interface utilisateur. Il présente également les nouvelles couleurs d’accentuation, les effets de couleur et les couleurs de teinte de contenu pour aider à des applications tierces d’aspect, quel que soit les paramètres de couleur de l’utilisateur.
+
+## <a name="natural-language-framework"></a>Framework de langage naturel
+
+L’infrastructure de langage naturel permet aux applications d’effectuer différents types d’analyse linguistique. Par exemple, il peut être utilisé pour identifier les parties du discours et de déterminer la langue représentée par un bloc de texte.
+
+## <a name="user-notifications-framework"></a>Infrastructure de Notifications utilisateur
+
+L’infrastructure de Notifications à l’utilisateur est inclus dans macOS Mojave, modification de l’API qui utilisent des applications Mac pour travailler avec des notifications à l’utilisateur.
 
 ## <a name="related-links"></a>Liens connexes
 
 - [Exemples Xamarin.Mac](https://developer.xamarin.com/samples/mac/)
 - [macOS : développeur Apple](https://developer.apple.com/macos/)
-- Aperçu de Xamarin [notes de publication](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Aperçu de Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)

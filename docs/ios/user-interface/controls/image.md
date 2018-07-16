@@ -1,90 +1,87 @@
 ---
-title: Afficher des Images avec Xamarin.iOS
-description: Ce document décrit comment afficher des images dans Xamarin.iOS. Elle couvre l’ajout d’images à une application par programme ou via le concepteur iOS.
+title: Affichage des images avec Xamarin.iOS
+description: Ce document décrit comment afficher des images dans Xamarin.iOS. Il couvre l’ajout d’images à une application par programmation ou via le concepteur iOS.
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/21/2017
-ms.openlocfilehash: f42cc5e4ab26c4c53d96e96420cbbba8036d6b5d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 07/13/2018
+ms.openlocfilehash: 9777b4abf6e7f370178bcff2cb40666612888a9f
+ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789828"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038376"
 ---
-# <a name="displaying-images-with-xamarinios"></a>Afficher des Images avec Xamarin.iOS
+# <a name="displaying-images-with-xamarinios"></a>Affichage des images avec Xamarin.iOS
 
-Ajout d’images à votre application passe en deux étapes : tout d’abord, ajoutez les images à votre projet ; Ensuite, ajoutez des contrôles et du code pour les afficher sur un écran. Reportez-vous à la [utilisation des Images](~/ios/app-fundamentals/images-icons/index.md) article pour plus de couverture d’image de la gestion dans Xamarin.iOS.
+Ajout d’images à votre application requiert deux étapes : tout d’abord, ajoutez les images à votre projet ; Ensuite, ajoutez des contrôles et du code pour les afficher sur un écran. Reportez-vous à la [utilisation des images](~/ios/app-fundamentals/images-icons/index.md) article pour plus d’une couverture d’image gère dans Xamarin.iOS.
 
-## <a name="adding-images-to-your-app"></a>Ajout d’Images à votre application
+## <a name="adding-images-to-your-app"></a>Ajout d’images à votre application
 
-Images peuvent être ajoutées à n’importe quel dossier dans votre Visual Studio pour la solution de Mac et si le **Action de génération** a la valeur **contenu** puis le fichier sera inclus dans votre application et peut être affiché.
+Les images peuvent être ajoutés à n’importe quel dossier dans Visual Studio pour la solution de Mac et si le **Action de génération** a la valeur **contenu** ensuite le fichier sera inclus dans votre application et peuvent être affiché.
 
-Visual Studio pour Mac prend également en charge un répertoire spécial appelé des ressources qui peuvent également contenir des fichiers image. Les fichiers dans le dossier de ressources doivent avoir le **Action de génération** la valeur **BundleResource**.
+Visual Studio pour Mac prend également en charge un répertoire spécial appelé **ressources** qui peut également contenir des fichiers image. Les fichiers dans le dossier de ressources doivent avoir le **Action de génération** définie sur **BundleResource**.
 
-Cette capture d’écran montre le **Action de génération** s’affichent quand les options qui s’affichent lorsqu’un fichier :
+Cette capture d’écran montre le **Action de génération** options qui s’affichent quand un fichier est clic :
 
  [![](image-images/image30a.png "Menu Action de génération")](image-images/image30a.png#lightbox)
 
-Visual Studio pour Mac allez généralement choisir la bonne **Action de génération** automatiquement, mais vous devez être conscient de ces paramètres, en particulier si vous déplacez des fichiers dans votre projet.
+Visual Studio pour Mac choisit généralement la bonne **Action de génération** automatiquement mais vous devez être conscient de ces paramètres, en particulier si vous déplacer des fichiers dans votre projet.
 
-### <a name="adding-an-image-file"></a>Ajout d’un fichier Image
+### <a name="adding-an-image-file"></a>Ajout d’un fichier image
 
-Pour ajouter un fichier image à votre projet, tout d’abord droit sur le projet et choisissez **ajouter des fichiers...**
+Pour ajouter un fichier image à votre projet, tout d’abord cliquez sur le projet et choisissez **ajouter des fichiers...**
 
  [![](image-images/image31a.png "Ajouter des fichiers... menu")](image-images/image31a.png#lightbox)
 
-Sélectionnez l’image (ou images) à inclure dans la boîte de dialogue standard. Action de génération par défaut pour les images seront **BundleResource** – ne pas remplacer cette valeur sauf si vous avez une raison spécifique.
+Sélectionnez l’image (ou images) à inclure dans la boîte de dialogue de fichier standard. Action de génération de la valeur par défaut pour les images seront **BundleResource** – ne pas remplacer cette valeur, sauf si vous avez une raison spécifique.
 
- [![](image-images/image32a.png "Fichiers de boîte de dialogue Ajouter")](image-images/image32a.png#lightbox)
+ [![](image-images/image32a.png "Ajouter la boîte de dialogue de fichiers")](image-images/image32a.png#lightbox)
 
-L’image sera ajoutée à votre projet et disponibles pour être chargés et affichés dans le code. Cette capture d’écran montre une image ajoutée à un projet d’application iOS :
+L’image sera ajoutée à votre projet et disponibles pour être chargés et affichés dans le code. Cette capture d’écran montre l’image ajoutée à un projet d’application iOS :
 
- [![](image-images/image33a.png "Image dans un projet")](image-images/image33a.png#lightbox)
+ [![](image-images/image33a.png "Image dans le projet")](image-images/image33a.png#lightbox)
 
 ### <a name="what-is-the-resources-directory"></a>Qu’est le répertoire des ressources ?
 
-Fichiers placés dans le répertoire des ressources sont traités différemment à partir de fichiers régulières : le contenu du dossier de ressources est copié à la racine de l’application et peut être référencé à partir de là, dans votre code. Cela peut être utile pour de nombreuses raisons :
+Les fichiers placés dans le **ressources** répertoire sont traitées différemment à partir de fichiers régulières : le contenu de la **ressources** dossier sont copiés à la racine de l’application et peuvent être référencées à partir de là dans votre code. Cela peut être utile pour de nombreuses raisons :
 
--  Stocker les images configurés dans les propriétés de l’application, tels que les images de démarrage par défaut et les icônes de l’application.
--  Stockage autres images et des fichiers séparément à partir du code, par conséquent, ils sont plus faciles à gérer (les sous-répertoires sont conservés lorsque le contenu du répertoire ressources est copié).
-
-
-Le répertoire des ressources est particulièrement utile dans un projet de bibliothèque, étant donné que le code peut supposer que les images sont copiées dans la racine de l’application consommatrice, rendant ainsi plus facile d’écrire des bibliothèques de code partagé qui nécessitent une image, audio, vidéo, XML ou autre fichiers.
+-  Stockage des images configurés dans les propriétés de l’application, telles que les images de démarrage par défaut et les icônes d’application.
+-  Stockage autres images et des fichiers séparément à partir du code, par conséquent, elles sont plus faciles à gérer (les sous-répertoires sont conservées lorsque le contenu du répertoire ressources est copié).
 
 
+Le **ressources** directory est particulièrement utile dans un projet de bibliothèque dans la mesure où le code peut supposer que ces images sont copiés dans la racine de l’application consommateur, ce qui facilite les bibliothèques de code partagé en écriture qui nécessitent vidéo, audio, image, XML ou d’autres fichiers.
 
-Le répertoire des ressources doit être nommé, et tous les fichiers doivent avoir l’Action de génération la valeur **BundleResource**
+Le **ressources** répertoire doit être nommé par conséquent, et tous les fichiers doivent avoir la valeur est l’action de génération **BundleResource**.
 
-## <a name="displaying-the-image"></a>Affichage de l’Image
+## <a name="displaying-the-image"></a>Affichage de l’image
 
-Pour afficher une image à l’aide du concepteur, une vue de l’Image doit être utilisée comme un conteneur et peuvent afficher une image ou une animation d’images. Le **affichage Image** icône à partir de la boîte à outils est indiqué ci-dessous :
+Dans le concepteur iOS, utilisez un **affichage de l’Image** pour afficher une image ou une série animée d’images. Le **affichage de l’Image** icône à partir de la boîte à outils est indiqué ci-dessous :
 
  [![](image-images/image35a.png "ImageView dans la boîte à outils")](image-images/image35.png#lightbox)
 
-Faites glisser le **affichage de l’Image** à partir de la **Toobox** sur le contrôleur de la vue. Ensuite, sous ** vue de l’Image > Image ** la liste déroulante fournit une liste de tous les fichiers image disponible dans votre projet. Sélectionnez une de ces pour l’ajouter à votre vue de l’image.
+Faites glisser le **affichage de l’Image** à partir de la **boîte à outils** sur le contrôleur d’affichage. Ensuite, sous **affichage de l’Image > Image** la liste déroulante fournira une liste de tous les fichiers d’image disponibles dans votre projet. Sélectionnez un d'entre eux pour l’ajouter à votre affichage de l’image.
 
  [![](image-images/image36a.png "ImageView dans la boîte à outils")](image-images/image36.png#lightbox)
 
-### <a name="displaying-the-image-programmatically"></a>Affichage de l’image par programmation
+### <a name="displaying-the-image-programmatically"></a>Affichage de l’image par programme
 
-Étant donné que blocks.jpg se trouve dans la racine du répertoire de ressources, il sera disponible lors de l’exécution dans la racine de l’application application. Pour afficher cette image dans un ImageView contrôle utiliser le code suivant :
-
-```csharp
-imageview1.Image = UIImage.FromBundle ("SF Monkey.png");
-```
-
-Si nous avions placé l’image dans `/Resources/Pics/blocks.jpg` puis le code inclut le dossier Pics dans le chemin d’accès :
+Étant donné que **SF Monkey.jpg** se trouve dans la racine de la **ressources** directory il sera disponible lors de l’exécution dans la racine de l’offre application. Pour afficher cette image dans un contrôle image, utilisez le code suivant :
 
 ```csharp
-imageview1.Image = UIImage.FromBundle ("Pics/SF Monkey.png");
+imageview1.Image = UIImage.FromBundle("SF Monkey.png");
 ```
 
-Fichier de ressources fait référence à jamais besoin d’inclure le `Resources` dossier.
+Si nous avions placé l’image dans **Pics/ressources/SF Monkey.jpg**, puis le code inclut le **Pics** dossier dans le chemin d’accès :
 
+```csharp
+imageview1.Image = UIImage.FromBundle("Pics/SF Monkey.png");
+```
 
-## <a name="related-links"></a>Liens associés
+Fichier de ressources fait référence à jamais nécessaire d’inclure le **ressources** dossier.
+
+## <a name="related-links"></a>Liens connexes
 
 - [Contrôles (exemple)](https://developer.xamarin.com/samples/Controls/)
