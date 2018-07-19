@@ -1,69 +1,71 @@
 ---
-title: Notions de base Xamarin.iOS Application
-description: Ce document liens vers des guides qui décrivent les concepts fondamentaux de développement de Xamarin.iOS, telles que la sécurité de transport d’application, backgrounding, événements et le threading.
+title: Principes de base application Xamarin.iOS
+description: Ce document contient des liens aux guides qui décrivent les concepts fondamentaux du développement Xamarin.iOS, telles que la sécurité de transport d’application, backgrounding, événements et le threading.
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: cdace50d851b2c99f9241b869f248e58d5b93377
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: de337291554e81a2434dcc30c163f4789fc832eb
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784495"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111210"
 ---
-# <a name="xamarinios-application-fundamentals"></a>Notions de base Xamarin.iOS Application
+# <a name="xamarinios-application-fundamentals"></a>Principes de base application Xamarin.iOS
 
-Cette section fournit un guide sur certaines des tâches de choses ou concepts que les développeurs doivent connaître lors du développement d’applications de Xamarin.iOS (anciennement MonoTouch) plus courant.
+Cette section fournit un guide sur certains des plus courants des tâches de choses ou concepts que les développeurs doivent connaître lors du développement d’applications Xamarin.iOS (anciennement MonoTouch).
+
+## <a name="accessibilityiosapp-fundamentalsaccessibilitymd"></a>[Accessibilité](~/ios/app-fundamentals/accessibility.md)
+
+Ce document décrit les différentes API et outils qui peuvent être utilisés pour aider à créer des applications qui sont accessibles aux utilisateurs autant que possible.
 
 ## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[Sécurité de transport de l’application](~/ios/app-fundamentals/ats.md)
 
-Cet article vous présente les modifications de sécurité qui applique la sécurité de Transport d’application sur une application iOS 9 et ce que cela signifie pour vos projets Xamarin.iOS, qui couvre les options de configuration de couches d’application et elle explique comment annuler des couches d’application, si nécessaire. Étant donné que les couches d’application est activé par défaut, toutes les connexions internet non sécurisées lève une exception dans les applications iOS 9 (sauf si vous avez explicitement autorisé).
-
+Cet article vous présente les modifications de sécurité qui applique la sécurité de Transport d’application sur une application iOS 9 et ce que cela signifie pour vos projets Xamarin.iOS, il traitera les options de configuration ATS et il nous allons étudier comment adhérer de ATS, si nécessaire. ATS étant activé par défaut, toutes les connexions internet non sécurisée lèvent une exception dans les applications iOS 9 (sauf si vous avez explicitement autorisé).
 
 ## <a name="backgroundingiosapp-fundamentalsbackgroundingindexmd"></a>[Backgrounding](~/ios/app-fundamentals/backgrounding/index.md)
 
-Arrière-plan de traitement ou backgrounding est le processus de laisser les applications à effectuer des tâches en arrière-plan pendant une autre application s’exécute dans le premier plan. Ce guide constitue une introduction aux e/s de traitement en arrière-plan.
+Arrière-plan de traitement ou backgrounding consiste à laisser les applications à effectuer des tâches en arrière-plan pendant qu’une autre application est en cours d’exécution au premier plan. Ce guide constitue une introduction à iOS de traitement en arrière-plan.
 
+## <a name="creating-ios-applications-in-codeiosapp-fundamentalsios-code-onlymd"></a>[Création d’applications iOS dans le code](~/ios/app-fundamentals/ios-code-only.md)
 
-## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[Les délégués, les protocoles et les événements](~/ios/app-fundamentals/delegates-protocols-and-events.md)
+Cet article examine comment créer des applications iOS entièrement dans le code à l’aide de Visual Studio et Visual Studio pour Mac. Il montre comment démarrer à partir d’un modèle de projet vide pour créer un écran de l’application dans un contrôleur en créant une hiérarchie d’affichages à partir de UIKit. Ensuite, il explique comment créer des vues personnalisées qui peuvent être chargées dans un contrôleur.
 
-Cet article présente les technologies de clé iOS utilisés pour recevoir des rappels et remplir les contrôles d’interface utilisateur avec des données. Ces technologies sont des événements, des protocoles et des délégués ; Cet article explique ce que chacune d’elles est et comment chacune est utilisée à partir de c#. Il montre comment Xamarin.iOS utilise les contrôles d’iOS pour exposer des événements de .NET familiers, ainsi que la manière dont Xamarin.iOS prend en charge les concepts de Objective-C, tels que les protocoles et des délégués (délégués d’Objective-C ne doivent pas être confondues avec les délégués en c#). Cet article fournit également des exemples qui montrent comment protocoles sont utilisés à la fois comme base pour les délégués de Objective-C et dans les scénarios non délégué.
+## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[Événements, protocoles et délégués](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 
-## <a name="threadingiosapp-fundamentalsthreadingmd"></a>[Thread](~/ios/app-fundamentals/threading.md)
+Cet article présente les technologies clés iOS utilisées pour recevoir des rappels et pour remplir des contrôles d’interface utilisateur avec des données. Ces technologies sont les événements, protocoles et délégués. Cet article explique ce que chacune d’elles est et comment chacun est utilisé à partir de c#. Il montre comment Xamarin.iOS utilise les contrôles d’iOS pour exposer des événements de .NET familières, ainsi que la manière dont Xamarin.iOS prend en charge les concepts de Objective-C, tels que les protocoles et les délégués (délégués d’Objective-C ne devraient pas être confondus avec les délégués c#). Cet article fournit également des exemples qui indiquent comment protocoles sont utilisés à la fois comme base pour les délégués d’Objective-C et dans les scénarios non délégué.
 
-Cet article traite des threads dans une application Xamarin.iOS et parle un peu le pool de threads .NET, la réponse des applications et de garbage collection.&nbsp;
+## <a name="working-with-the-file-systemiosapp-fundamentalsfile-systemmd"></a>[Utilisation avec le système de fichiers](~/ios/app-fundamentals/file-system.md)
+
+Xamarin.iOS peut utiliser les mêmes classes System.IO pour travailler avec des fichiers et des répertoires dans iOS que vous utiliseriez dans n’importe quelle application .NET. Toutefois, malgré les classes familiers et les méthodes, iOS implémente certaines restrictions sur les fichiers qui peuvent être créées ou accédées et fournit des fonctionnalités spéciales pour certains répertoires. Cet article décrit ces restrictions et les fonctionnalités et illustre le fonctionnement de l’accès aux fichiers dans une application Xamarin.iOS.
 
 ## <a name="working-with-imagesiosapp-fundamentalsimages-iconsindexmd"></a>[Utilisation d’images](~/ios/app-fundamentals/images-icons/index.md)
 
-Cet article examine comment utiliser des images dans Xamarin.iOS, les images de prise en charge d’application (tels que des icônes, le chargement des images, etc.) et images dans les applications (tels que des images de contrôles). Il explique également comment utiliser Visual Studio pour Mac pour incorporer des images, ainsi que comment interagir avec les images à partir du code.
+Cet article examine comment utiliser des images dans Xamarin.iOS, des images de prise en charge des applications (telles que des icônes, le chargement des images, etc.) et images dans les applications (telles que des images appliqués aux contrôles). Il couvre également l’utilisation de Visual Studio pour Mac pour incorporer des images, ainsi que comment interagir avec des images à partir du code.
+
+## <a name="localizationiosapp-fundamentalslocalizationindexmd"></a>[Localisation](~/ios/app-fundamentals/localization/index.md)
+
+Ce guide couvre le l’ajout des encodages à une application Xamarin.iOS pour prendre en charge de l’internationalisation.
 
 ## <a name="working-with-property-listsiosapp-fundamentalsindexmd"></a>[Utilisation des listes de propriétés](~/ios/app-fundamentals/index.md)
 
-Ce document présente Visual Studio pour l’éditeur de liste (.plist) de Mac propriété graphique et avancées pour travailler avec Info.plist et Entitlements.plist. Il illustre la définition d’icônes et les images pour application iOS de démarrage et illustre les fonctionnalités des applications en spécifiant (droits) à partir de Visual Studio pour Mac.
+Ce document présente Visual Studio pour l’éditeur de liste (.plist) Mac propriété graphique et avancées pour travailler avec Info.plist et Entitlements.plist. Il illustre la définition d’icônes et le lancement d’images pour application iOS et montre les fonctionnalités d’application en spécifiant (droits) à partir de Visual Studio pour Mac.
 
-## <a name="working-with-the-file-systemiosapp-fundamentalsfile-systemmd"></a>[Utilisation du système de fichiers](~/ios/app-fundamentals/file-system.md)
+## <a name="working-with-security-and-privacyiosapp-fundamentalssecurity-privacymd"></a>[Utilisation de la sécurité et confidentialité](~/ios/app-fundamentals/security-privacy.md)
 
-Xamarin.iOS pouvez utiliser les mêmes classes System.IO pour travailler avec des fichiers et des répertoires dans iOS que vous utiliseriez dans n’importe quelle application .NET. Toutefois, malgré les classes familiers et les méthodes, iOS implémente certaines restrictions sur les fichiers qui peuvent être créés ou accessibles et fournit également des fonctionnalités spéciales pour certains répertoires. Cet article décrit ces restrictions et les fonctionnalités et illustre le fonctionnement de l’accès aux fichiers dans une application Xamarin.iOS.
+Apple a apporté plusieurs améliorations à la sécurité et confidentialité dans iOS 10 (et supérieur) qui aideront les développeurs à améliorer la sécurité de leurs applications et garantir la confidentialité de l’utilisateur final. Cet article décrit l’implémentation de ces fonctionnalités dans une application Xamarin.iOS.
 
-## <a name="creating-ios-applications-in-codeiosapp-fundamentalsios-code-onlymd"></a>[Création des Applications iOS dans le Code](~/ios/app-fundamentals/ios-code-only.md)
+## <a name="threadingiosapp-fundamentalsthreadingmd"></a>[Thread](~/ios/app-fundamentals/threading.md)
 
-Cet article explique comment créer des applications iOS entièrement dans le code à l’aide de Visual Studio et Visual Studio pour Mac. Il montre comment démarrer à partir d’un modèle de projet vide pour créer un écran de l’application dans un contrôleur en créant une hiérarchie des vues à partir de UIKit. Ensuite, il explique comment créer des vues personnalisées qui peuvent être chargées dans un contrôleur.
-
-## <a name="working-with-user-defaultsiosapp-fundamentalsuser-defaultsmd"></a>[Utilisation des valeurs par défaut de l’utilisateur](~/ios/app-fundamentals/user-defaults.md)
-
-La `NSUserDefaults` classe offre un moyen pour iOS, applications et des Extensions pour interagir avec le système par défaut à l’échelle du système. À l’aide du système par défaut, l’utilisateur peut configurer un comportement d’une application ou de styles pour répondre à leurs préférences (basés sur la conception de l’application). Par exemple, pour présenter des données dans Visual Studio métrique mesures impériales ou sélectionner un thème de l’interface utilisateur donné.
+Cet article présente le threading dans une application Xamarin.iOS et parle un peu le le pool de threads .NET, des applications réactives et le garbage collection.
 
 ## <a name="touchiosapp-fundamentalstouchindexmd"></a>[Entrées tactiles](~/ios/app-fundamentals/touch/index.md)
 
-Les écrans tactiles sur de nombreux périphériques actuels permettent aux utilisateurs rapidement et efficacement d’interagir avec les périphériques de façon naturelle et intuitive. Cette interaction n’est pas limitée uniquement à la détection tactile : il est possible d’utiliser des gestes également. Par exemple, le mouvement de pincement pour zoomer est un exemple courant de cette solution par pincement une partie de l’écran de l’utilisateur peut effectuer un zoom avant ou arrière de deux doigts. Ce guide examine tactiles et mouvements dans iOS.
+Les écrans tactiles sur la plupart des appareils d’aujourd'hui permettent aux utilisateurs rapidement et efficacement interagir avec les appareils de façon naturelle et intuitive. Cette interaction n’est pas limitée uniquement à la détection de tactile : il est possible d’utiliser des gestes également. Par exemple, le geste de zoom par pincement est un exemple très courant de cette solution par pincement une partie de l’écran avec deux doigts, que l’utilisateur peut effectuer un zoom avant ou arrière. Ce guide examine touchers et gestes dans iOS.
 
-## <a name="working-with-security-and-privacyiosapp-fundamentalssecurity-privacymd"></a>[Sécurité et confidentialité](~/ios/app-fundamentals/security-privacy.md)
+## <a name="working-with-user-defaultsiosapp-fundamentalsuser-defaultsmd"></a>[Utilisation des valeurs par défaut de l’utilisateur](~/ios/app-fundamentals/user-defaults.md)
 
-Apple a apporté plusieurs améliorations qui aideront le développeur d’améliorer la sécurité de leurs applications et de garantir la confidentialité de l’utilisateur final pour la sécurité et confidentialité dans iOS 10 (et supérieur). Cet article décrit l’implémentation de ces fonctionnalités dans une application Xamarin.iOS.
-
-##  <a name="localizationiosapp-fundamentalslocalizationindexmd"></a>[Localisation](~/ios/app-fundamentals/localization/index.md)
-
-Ce guide couvre le l’ajout de codages à une application Xamarin.iOS pour prendre en charge d’internationalisation.
+Le `NSUserDefaults` classe offre un moyen pour iOS, applications et des Extensions pour interagir par programmation avec le système par défaut de l’échelle du système. En utilisant le système par défaut, l’utilisateur peut configurer de comportement d’une application ou appliquer un style pour répondre à leurs préférences (basés sur la conception de l’application). Par exemple, pour présenter les données de métrique vs Imperial mesures ou sélectionnez un thème de l’interface utilisateur donné.
