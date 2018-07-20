@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 36d208f2326c7584bc03c351b4a5b05a3f3928c9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: c82e222fd47f3a3f13043c076c488b4769659352
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995451"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156494"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Résumé du chapitre 5. Gestion des tailles
+
+> [!NOTE] 
+> Notes sur cette page indiquent des zones où Xamarin.Forms est différente de la matière présentée dans le livre.
 
 Plusieurs tailles de Xamarin.Forms ont été rencontrées jusqu'à présent :
 
@@ -36,7 +39,10 @@ Les programmeurs ciblant les appareils iPhone et iPad d’Apple continuent de fo
 
 Android est similaire. Les programmeurs traitent en unités de *pixels indépendants de densité* (dps), et la relation entre les points de distribution et de pixels est basée sur 160 DP par pouce.
 
-Le Runtime Windows a également créé des facteurs d’échelle qui impliquent quelque chose proche de 160 unités indépendantes du périphérique par pouce.
+Les téléphones Windows et les appareils mobiles ont également établi des facteurs d’échelle qui impliquent quelque chose proche de 160 unités indépendantes du périphérique par pouce.
+
+> [!NOTE]
+> Xamarin.Forms ne gère plus n’importe quel téléphone basée sur Windows ou un appareil mobile.
 
 En résumé, un programmeur Xamarin.Forms ciblant les téléphones et tablettes peut supposer que toutes les unités de mesure sont basées sur le critère suivant :
 
@@ -82,7 +88,7 @@ Pour un `Label`, le premier argument doit être de la largeur du conteneur (pour
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 5 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf)
 - [Exemples de chapitre 5](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)

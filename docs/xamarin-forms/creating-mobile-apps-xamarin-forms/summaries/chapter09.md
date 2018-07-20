@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 8a035da3dec468df291a19849ca89964c6707589
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: e7b2eea22758155db7d79fa26f3376e16cf16a45
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994755"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39157014"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Résumé du chapitre 9. Appels d’API spécifiques à la plateforme
+
+> [!NOTE] 
+> Notes sur cette page indiquent des zones où Xamarin.Forms est différente de la matière présentée dans le livre.
 
 Il est parfois nécessaire d’exécuter du code qui varie par plateforme. Ce chapitre explore les techniques.
 
@@ -32,11 +35,14 @@ Une approche plus structurée à l’exécution de code spécifique à la platef
 
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService et la bibliothèque de classes Portable
 
-Une bibliothèque ne peut pas accéder normalement les classes dans les projets d’application. Cette restriction semble pour empêcher la technique démontrée dans **PlatInfoSap2** d’être utilisé dans une bibliothèque de classes portable. Toutefois, Xamarin.Forms contient une classe nommée [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) qui utilise la réflexion .NET pour accéder à des classes publiques dans le projet d’application à partir de la bibliothèque PCL.
+> [!NOTE] 
+> Bibliothèques de classes portables ont été remplacés par des bibliothèques .NET Standard. Exemples de code à partir de l’ouvrage a été converti pour utiliser les bibliothèques .NET standard.
 
-La bibliothèque PCL doit définir un `interface` avec les membres qu’il a besoin pour chaque plateforme. Ensuite, chacune des plateformes contient une implémentation de cette interface. La classe qui implémente l’interface doit être identifiée avec un [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) sur le niveau de l’assembly.
+Une bibliothèque ne peut pas accéder normalement les classes dans les projets d’application. Cette restriction semble pour empêcher la technique démontrée dans **PlatInfoSap2** d’être utilisé dans une bibliothèque. Toutefois, Xamarin.Forms contient une classe nommée [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) qui utilise la réflexion .NET pour accéder à des classes publiques dans le projet d’application à partir de la bibliothèque.
 
-La bibliothèque PCL utilise ensuite le générique [ `Get` ](xref:Xamarin.Forms.DependencyService.Get*) méthode de `DependencyService` pour obtenir une instance de la classe de plateforme qui implémente l’interface.
+La bibliothèque doit définir un `interface` avec les membres qu’il a besoin pour chaque plateforme. Ensuite, chacune des plateformes contient une implémentation de cette interface. La classe qui implémente l’interface doit être identifiée avec un [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) sur le niveau de l’assembly.
+
+La bibliothèque utilise ensuite le générique [ `Get` ](xref:Xamarin.Forms.DependencyService.Get*) méthode de `DependencyService` pour obtenir une instance de la classe de plateforme qui implémente l’interface.
 
 Cela est illustré dans le [ **DisplayPlatformInfo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) exemple.
 
@@ -44,9 +50,7 @@ Cela est illustré dans le [ **DisplayPlatformInfo** ](https://github.com/xamari
 
 Le [ **MonkeyTapWithSound** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) exemple ajoute des sonneries à la **MonkeyTap** programme en accédant à des installations de sons dans chaque plateforme.
 
-
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 9 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
 - [Exemples du chapitre 9](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)

@@ -7,12 +7,12 @@ ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1fc42207d26f2e2154c7bd6634cc90fead4b0b17
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bdd86595c3c0805d50241eac3a131a50656a9985
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998932"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156585"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Résumé du chapitre 26. Dispositions personnalisées
 
@@ -190,7 +190,7 @@ Un `Layout<T>` dérivé peut appeler `LayoutTo` plutôt que `Layout` pour animer
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 26 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf)
 - [Exemples de chapitre 26](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)

@@ -7,12 +7,12 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 885a281d57a8ec83a949eba199667ea95679c5eb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 16fcdb345fd9aeb9201a00a0bb98d143e6468f01
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998286"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156767"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Résumé du chapitre 21. Transformations
 
@@ -123,7 +123,7 @@ En outre, pour tous les trois axes, si vous pointez votre curseur gauche dans la
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 21 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf)
 - [Exemples de chapitre 21](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)

@@ -6,19 +6,22 @@ ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3571774ddec4182f35cac6f13d4582235e2ff31a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: 49f2d96fb7f95ab880d5cfafa420afbbe933c1ad
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997424"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156715"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Résumé du chapitre 4. Défilement de la pile
 
 Ce chapitre est principalement consacré au introduisant le concept de *disposition*, qui est le terme général pour les classes et les techniques de Xamarin.Forms utilise pour organiser l’affichage visuel de plusieurs vues sur la page.
 
 Disposition implique plusieurs classes qui dérivent de [ `Layout` ](xref:Xamarin.Forms.Layout) et [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1). Ce chapitre se concentre sur [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
+
+> [!NOTE]
+> Le [ `FlexLayout` ](~/xamarin-forms/user-interface/layouts/flex-layout.md) introduite dans Xamarin.Forms 3.0 peut être utilisé de manière similaire à `StackLayout` , mais avec plus de souplesse.
 
 A également introduit dans ce chapitre sont les [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), [ `Frame` ](xref:Xamarin.Forms.Frame), et [ `BoxView` ](xref:Xamarin.Forms.BoxView) classes.
 
@@ -104,14 +107,15 @@ Placer un `StackLayout` dans un `ScrollView` est commun, mais en ajoutant un `Sc
 
 L’astuce consiste à donner le `ScrollView` enfant de la `StackLayout` un `VerticalOptions` paramètre `FillAndExpand`. Cela est illustré dans le [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) exemple.
 
-Le **BlackCat** exemple montre également comment définir et accéder aux ressources de programme qui sont incorporés dans la bibliothèque de classes Portable (PCL). Cela est également possible avec les projets de ressource partagé (SAP) mais le processus est un peu plus compliqué, comme le [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) montre des exemples.
+Le **BlackCat** exemple montre également comment définir et accéder aux ressources de programme qui sont incorporés dans la bibliothèque partagée. Cela est également possible avec les projets de ressource partagé (SAP) mais le processus est un peu plus compliqué, comme le [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) montre des exemples.
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 4 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf)
 - [Exemples de chapitre 4](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 - [Exemples de chapitre 4 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
 - [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)
 - [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
+- [BoxView](~/xamarin-forms/user-interface/boxview.md)

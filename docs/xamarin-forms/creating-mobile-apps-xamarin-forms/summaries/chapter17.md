@@ -7,12 +7,12 @@ ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5f5b934b5f828bf6f5e8d4a0f0738c7db633aefb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4ce734f629c13b1419611c0a8fea1dfe4bbaa4ef
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995838"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156741"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Résumé du chapitre 17. Maîtrise de la grille
 
@@ -102,7 +102,7 @@ Initialise le programme `Slider` éléments à une plage de 0 à 255 et utilise 
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 17 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [Exemples de chapitre 17](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)

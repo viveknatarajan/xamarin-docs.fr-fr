@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: c4ad067778203759a54ed8141db0b82602e40f6c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: 083cb4ed57df989a55a26394cbf8440d53a9e769
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997450"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156658"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Résumé du chapitre 16. Liaison de données
+
+> [!NOTE] 
+> Notes sur cette page indiquent des zones où Xamarin.Forms est différente de la matière présentée dans le livre.
 
 Les programmeurs souvent se retrouvent écrire des gestionnaires d’événements qui détectent lorsqu’une propriété d’un objet a changé et l’utilisent pour modifier la valeur d’une propriété dans un autre objet. Ce processus peut être automatisé avec la technique de *liaison de données*. Liaisons de données sont généralement définis dans XAML et font partie de la définition de l’interface utilisateur.
 
@@ -85,6 +88,9 @@ Définir le [ `Mode` ](xref:Xamarin.Forms.BindingBase.Mode) propriété du `Bind
 - [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) afin que les modifications dans la source et la cible affecte les uns des autres
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default) Pour utiliser le [ `DefaultBindingMode` ](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) spécifié lorsque la cible `BindableProperty` a été créé. Si aucun n’a été spécifié, la valeur par défaut est `OneWay` pour les propriétés pouvant être liées normales, et `OneWayToSource` pour les propriétés pouvant être liées en lecture seule.
 
+> [!NOTE]
+> Le `BindingMode` énumération maintenant inclut également `OnTime` pour appliquer une liaison uniquement lorsque le contexte de liaison change et non lorsque la propriété source change.
+
 Les propriétés qui sont susceptibles d’être des cibles de liaisons de données dans les scénarios MVVM en général ont un `DefaultBindingMode` de `TwoWay`. Ces équivalents sont :
 
 - `Value` propriété de `Slider` et `Stepper`
@@ -133,7 +139,8 @@ Le [ **NewCheckBoxDemo** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 16 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf)
 - [Exemples de chapitre 16](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
+- [Liaison de données](~/xamarin-forms/app-fundamentals/data-binding/index.md)

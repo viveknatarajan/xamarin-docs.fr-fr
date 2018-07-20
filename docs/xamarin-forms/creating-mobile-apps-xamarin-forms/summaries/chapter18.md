@@ -7,12 +7,12 @@ ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b512b15ea40d963cd35379cf3162856d132e38dc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 30fa06364e49294a71d37c29d4b9f1e95deac12f
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995260"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156923"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Résumé du chapitre 18. MVVM
 
@@ -93,7 +93,8 @@ Le `AdderViewModel` utilisé dans le **AddingMachine** exemple définit égaleme
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 18 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf)
 - [Exemples de chapitre 18](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+- [Modèles d’Application d’entreprise à l’aide de livre électronique Xamarin.Forms](~/xamarin-forms/enterprise-application-patterns/index.md)
