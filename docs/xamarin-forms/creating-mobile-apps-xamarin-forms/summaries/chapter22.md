@@ -7,12 +7,12 @@ ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 58a49b92b654e673eddd63da29cdb1866a217fca
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: c4d92784654db8e566b41c8270dbe2095bd28b94
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996397"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156598"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Résumé du chapitre 22. Animation
 
@@ -198,7 +198,7 @@ Il est parfois utile exprimer des animations dans XAML et les utiliser conjointe
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 22 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)
 - [Exemples de chapitre 22](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)

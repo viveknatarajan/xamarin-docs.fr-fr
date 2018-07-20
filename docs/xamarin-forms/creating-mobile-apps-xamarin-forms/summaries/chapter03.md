@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3ef8f14bd60cf612408bb9e3885ef319d3efc8c5
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998333"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156572"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Résumé du chapitre 3. Détails du texte
 
@@ -100,8 +100,6 @@ Enfin, deux propriétés statiques en lecture seule définissent la valeur de co
 - iOS : texte sombre sur un arrière-plan clair
 - Android : Clair sur un arrière-plan foncé (dans le livre) foncé texte ou sur un arrière-plan clair (pour la conception de matériau via AppCompat dans le **master** branche de l’exemple de référentiel de code)
 - UWP : Texte de foncé sur un arrière-plan clair
-- Windows 8.1 : Le texte clair sur un arrière-plan foncé
-- Windows Phone 8.1 : Texte en clair sur un arrière-plan sombre
 
 Le `Color.Accent` valeur les résultats dans une couleur spécifique à la plateforme (et parfois sélectionnables par l’utilisateur) qui est visible sur un arrière-plan sombre ou clair.
 
@@ -137,7 +135,7 @@ Le [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 3 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
 - [Exemples de chapitre 3](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)

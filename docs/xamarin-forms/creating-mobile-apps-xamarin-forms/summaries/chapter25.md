@@ -7,12 +7,12 @@ ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 148388b80137bd335bbb977ea230726da1f4a32d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3496504ed6326992aabfceb1d4d3476223c9e4e0
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995883"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156546"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Résumé du chapitre 25. Types de page
 
@@ -112,7 +112,7 @@ Toutefois, cela peut être problématique sur iOS. Quelques-uns des éléments p
 
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 25 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf)
 - [Exemples du chapitre 25](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)

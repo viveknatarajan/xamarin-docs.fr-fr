@@ -6,26 +6,32 @@ ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: b27df7f63ac83206c50858175dc2945937142f78
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: d863ce1c6195ddaef164c3a15817a4ff87a3c332
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995467"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156624"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Résumé du chapitre 13. Bitmaps
+
+> [!NOTE] 
+> Notes sur cette page indiquent des zones où Xamarin.Forms est différente de la matière présentée dans le livre.
 
 Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) élément affiche une bitmap. Toutes les plateformes de Xamarin.Forms prend en charge les formats de fichier JPEG, PNG, GIF et BMP.
 
 Bitmaps dans Xamarin.Forms proviennent de quatre endroits :
 
 - Sur le web tel que spécifié par une URL
-- Incorporé comme ressource dans la bibliothèque de classes Portable courantes
+- Incorporé comme ressource dans la bibliothèque partagée
 - Incorporé comme ressource dans les projets d’application de plateforme
 - À partir de n’importe quel endroit qui peuvent être référencées par un .NET `Stream` de l’objet, y compris `MemoryStream`
 
-Ressources bitmap dans la bibliothèque PCL sont indépendant de la plateforme, tandis que les ressources de bitmap dans les projets de plateforme sont spécifiques à la plateforme.
+Ressources bitmap dans la bibliothèque partagée sont indépendant de la plateforme, tandis que les ressources de bitmap dans les projets de plateforme sont spécifiques à la plateforme.
+
+> [!NOTE] 
+> Le texte du livre fait référence aux bibliothèques de classes portables, qui ont été remplacés par des bibliothèques .NET Standard. Exemples de code à partir de l’ouvrage a été converti pour utiliser les bibliothèques .NET standard.
 
 La bitmap est spécifiée en définissant le [ `Source` ](xref:Xamarin.Forms.Image.Source) propriété du `Image` à un objet de type [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), une classe abstraite avec trois dérivés :
 
@@ -63,7 +69,7 @@ Vous pouvez ajouter un fichier bitmap pour une bibliothèque de classes portable
 Les jeux de programme le `VerticalOptions` et `HorizontalOptions` propriétés de la `Image` à `LayoutOptions.Center`, ce qui rend le `Image` élément sans contrainte. Le `Image` et l’image bitmap ont la même taille :
 
 - Sur iOS et Android, le `Image` est la taille en pixels de la bitmap. Il existe une correspondance biunivoque entre les pixels du bitmap et de pixels de l’écran.
-- Sur les plateformes Windows Runtime, le `Image` est la taille en pixels de l’image bitmap en unités indépendantes du périphérique. Sur la plupart des périphériques, chaque pixel de bitmap occupe plusieurs pixels de l’écran.
+- Sur la plateforme Windows universelle, le `Image` est la taille en pixels de l’image bitmap en unités indépendantes du périphérique. Sur la plupart des périphériques, chaque pixel de bitmap occupe plusieurs pixels de l’écran.
 
 Le [ **StackedBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap) exemple met un `Image` dans un vertical `StackLayout` dans XAML. Une extension de balisage nommée [ `ImageResourceExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs) permet de référencer la ressource incorporée dans XAML. Cette classe charge uniquement des ressources à partir de l’assembly dans lequel il se trouve, donc il ne peut pas être placé dans une bibliothèque.
 
@@ -82,7 +88,10 @@ Le [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 ### <a name="browsing-and-waiting"></a>Navigation et en attente
 
-Le [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) exemple permet à l’utilisateur de parcourir les images stockées sur le site web de Xamarin. Il utilise le .NET `WebRequest` classe pour télécharger un fichier JSON avec la liste des images bitmap.
+Le [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) exemple permet à l’utilisateur de parcourir les images stockées sur le site web de Xamarin. Il utilise le .NET [ `WebRequest` ](xref:System.Net.WebRequest) classe pour télécharger un fichier JSON avec la liste des images bitmap.
+
+> [!NOTE]
+> Xamarin.Forms les programmes doivent utiliser [ `HttpClient` ](xref:System.Net.Http.HttpClient) plutôt que [ `WebRequest` ](xref:System.Net.WebRequest) pour accéder aux fichiers via internet. 
 
 Le programme utilise une [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) pour indiquer que quelque chose se passe. Comme chaque bitmap est le chargement, en lecture seule [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) propriété du `Image` est `true`. Le `IsLoading` propriété repose sur une propriété pouvant être liée, par conséquent, un `PropertyChanged` événement est déclenché lorsque cette propriété est modifiée. Le programme attache un gestionnaire à cet événement et utilise le paramètre actuel de `IsLoaded` pour définir le [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) propriété de la `ActivityIndicator`.
 
@@ -154,7 +163,7 @@ Pour une image bitmap destinée à être rendu à un pouce carré, les différen
 
 La bitmap est toujours le rendu à 160 unités indépendantes du périphérique. (Le modèle de solution Xamarin.Forms standard inclut uniquement le hdpi, xhdpi et les dossiers xxhdpi.)
 
-Les projets Windows Runtime prennent en charge une bitmap dénomination comprenant un facteur d’échelle en pixels indépendants du périphérique unitaire sous forme de pourcentage, par exemple :
+Le projet UWP prend en charge un schéma d’affectation de noms bitmap comprenant un facteur d’échelle en pixels indépendants du périphérique unitaire sous forme de pourcentage, par exemple :
 
 - MyImage.scale-200.jpg à 320 pixels carrés
 
@@ -164,7 +173,7 @@ Lors de l’ajout de bitmaps pour les projets de plateforme, le **Action de gén
 
 - iOS : **BundleResource**
 - Android : **AndroidResource**
-- Windows Runtime : **contenu**
+- UWP : **contenu**
 
 Le [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) exemple crée deux objets de type bouton consistant en `Image` éléments avec un `TapGestureRecognizer` installé. Il est prévu que les objets soient carré d’un pouce. Le `Source` propriété du `Image` est définie à l’aide de `OnPlatform` et `On` objets à référencer les noms de fichiers potentiellement différents sur les plateformes. Les images bitmap incluent les numéros d’indiquant leur taille en pixels, pour voir quelle bitmap de taille est récupéré et affiché.
 
@@ -188,10 +197,12 @@ IOS et Android exigent qu’une page qui affiche une barre d’outils un [ `Navi
 
 Vous pouvez également utiliser des images bitmap spécifiques à la plateforme pour définir le [ `Image` ](xref:Xamarin.Forms.Button.Image) propriété de `Button` à une image bitmap du carré 32 unités indépendantes du périphérique, tel qu’indiqué par le [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) exemple.
 
+> [!NOTE]
+> L’utilisation d’images sur les boutons a été améliorée. Consultez [à l’aide de bitmaps avec des boutons](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons).
 
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Chapitre 13, texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
 - [Exemples de chapitre 13](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 - [Utilisation d’images](~/xamarin-forms/user-interface/images.md)
+- [À l’aide de bitmaps avec des boutons](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)
