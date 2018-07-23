@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 68a38fc43cd744e0382f35baa83643a9f0f7e53d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: ab810a2fdfc659e2f5f24d2646c044e9c8638258
+ms.sourcegitcommit: 3697c2aa4208fe2ac954a8c0297394d3bcb53ede
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998984"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175188"
 ---
-# <a name="ios-platform-specifics"></a>Caractéristiques de la plateforme d’iOS
+# <a name="ios-platform-specifics"></a>Caractéristiques de la plateforme d’iOS 
 
 _Caractéristiques de la plateforme vous autorisons à utiliser les fonctionnalités qui est disponible uniquement sur une plateforme spécifique, sans avoir à implémenter des convertisseurs personnalisés ou des effets. Cet article montre comment consommer iOS-spécificités de la plateforme qui sont intégrés dans Xamarin.Forms._
 
@@ -620,7 +620,7 @@ Le résultat est qu’une ombre portée peut être activée sur un [ `VisualElem
 
 Quand un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) est attachée à une vue à l’intérieur d’une vue de défilement, toutes le panoramique mouvements sont capturées par le `PanGestureRecognizer` et ne sont pas passées à la vue de défilement. Par conséquent, la vue de défilement n’est plus défile.
 
-Spécifiques à cette plateforme permet un `PanGestureRecognizer` dans une vue de défilement pour capturer et partager le mouvement panoramique avec la vue de défilement. Elle est consommée dans XAML en définissant le [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.pangesturerecognizershouldrecognizesimultaneouslyproperty?view=xamarin-forms) propriété jointe `true`:
+Spécifiques à cette plateforme permet un `PanGestureRecognizer` dans une vue de défilement pour capturer et partager le mouvement panoramique avec la vue de défilement. Elle est consommée dans XAML en définissant le [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) propriété jointe `true`:
 
 ```xaml
 <Application ...
@@ -640,7 +640,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 Xamarin.Forms.Application.Current.On<iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
 ```
 
-Le `Application.On<iOS>` méthode spécifie que cette plateforme spécifique s’exécute uniquement sur iOS. Le [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.setpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) (méthode), dans le [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espace de noms, est utilisé pour contrôler si un module de reconnaissance de mouvement panoramique dans une vue de défilement capturer le mouvement panoramique, ou capturer et partager le panoramique mouvements avec la vue de défilement. En outre, le [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.getpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) méthode peut être utilisée pour retourner si le mouvement panoramique est partagé avec la vue de défilement qui contient le [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer).
+Le `Application.On<iOS>` méthode spécifie que cette plateforme spécifique s’exécute uniquement sur iOS. Le [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.SetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application},System.Boolean)) (méthode), dans le [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espace de noms, est utilisé pour contrôler si un module de reconnaissance de mouvement panoramique dans une vue de défilement capturer le mouvement panoramique, ou capturer et partager le panoramique mouvements avec la vue de défilement. En outre, le [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.GetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application})) méthode peut être utilisée pour retourner si le mouvement panoramique est partagé avec la vue de défilement qui contient le [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer).
 
 Par conséquent, avec cette spécifiques à la plateforme est activée, lorsque un [ `ListView` ](xref:Xamarin.Forms.ListView) contient un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer), à la fois le `ListView` et `PanGestureRecognizer` recevront le mouvement panoramique et le traiter. Toutefois, avec cette spécifiques à la plateforme désactivée quand un `ListView` contient un `PanGestureRecognizer`, le `PanGestureRecognizer` capturer le mouvement panoramique et le traiter et le `ListView` ne reçoivent pas le mouvement panoramique.
 
