@@ -8,14 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785656"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111223"
 ---
-# <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS multi-écran - Immersion
+# <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS multiécran - Immersion
 
 Au cours de la procédure pas à pas de démarrage rapide, nous avons généré et exécuté notre première application Xamarin.iOS multi-écran. Il est maintenant temps d’approfondir les notions de navigation et d’architecture iOS.
 
@@ -24,7 +24,7 @@ Ensuite, nous nous intéressons au contrôleur de navigation pour apprendre à l
 
 <a name="Model_View_Controller" />
 
-## <a name="model-view-controller-mvc"></a>MVC (Model-View-Controller)
+## <a name="model-view-controller-mvc"></a>Modèle MVC (Model-View-Controller)
 
 Dans le didacticiel [Hello, iOS](~/ios/get-started/hello-ios/index.md), nous avons appris que les applications iOS ont une seule *fenêtre* et que les contrôleurs d’affichage sont responsables du chargement de leurs *hiérarchies d’affichage de contenu* dans cette fenêtre. Dans la deuxième procédure pas à pas Phoneword, nous avons ajouté un deuxième écran à notre application et passé certaines données (une liste de numéros de téléphone) entre les deux écrans, comme l’illustre le diagramme ci-dessous :
 
@@ -43,7 +43,6 @@ Le modèle MVC s’avère utile car il fournit une séparation logique entre les
 > [!NOTE]
 > Le modèle MVC est vaguement analogue à la structure des pages ASP.NET ou des applications WPF. Dans ces exemples, l’affichage (View) est le composant réellement chargé de décrire l’interface utilisateur ; il correspond à la page ASPX (HTML) dans ASP.NET ou au XAML dans une application WPF. Le contrôleur (Controller) est le composant chargé de gérer l’affichage (View), qui correspond au code-behind dans ASP.NET ou WPF.
 
-
 ### <a name="model"></a>Modèle
 
 L’objet Model est généralement une représentation propre à l’application des données à afficher ou à entrer dans l’affichage (View). Il est souvent peu défini : par exemple, dans notre application **Phoneword_iOS**, la liste des numéros de téléphone (représentés sous la forme d’une liste de chaînes) est le modèle. Si nous voulions générer une application multiplateforme, nous pourrions choisir de partager le code **PhonewordTranslator** entre nos applications iOS et Android. Nous pourrions considérer ce code partagé comme le modèle également.
@@ -54,7 +53,6 @@ Dans certains cas, la partie Model du modèle MVC peut être vide. Par exemple, 
 
 > [!NOTE]
 > Dans certains documents, la partie Modèle du modèle MVC peut faire référence au backend de toute l’application, pas seulement aux données qui s’affichent dans l’interface utilisateur. Dans ce guide, nous utilisons une interprétation moderne de la partie Model, mais cette distinction n’est pas particulièrement importante.
-
 
 ### <a name="view"></a>Vue
 
@@ -68,7 +66,7 @@ Les contrôleurs peuvent également gérer d’autres contrôleurs. Par exemple,
 
 ## <a name="navigation-controller"></a>Contrôleur de navigation
 
-Dans l’application Phoneword, nous avons utilisé un *contrôleur de navigation* pour mieux gérer la navigation entre les multiples écrans. Le contrôleur de navigation est un `UIViewController` spécialisé représenté par la classe `UINavigationController`. Au lieu de gérer une seule hiérarchie d’affichage de contenu, le contrôleur de navigation gère d’autres contrôleurs d’affichage, ainsi que sa propre hiérarchie d’affichage de contenu spéciale sous la forme d’une barre d’outils de navigation qui inclut un titre, un bouton Précédent et d’autres fonctionnalités facultatives.
+Dans l’application Phoneword, nous avons utilisé un contrôleur de navigation pour mieux gérer la navigation entre plusieurs écrans. Le contrôleur de navigation est un `UIViewController` spécialisé représenté par la classe `UINavigationController`. Au lieu de gérer une seule hiérarchie d’affichage de contenu, le contrôleur de navigation gère d’autres contrôleurs d’affichage, ainsi que sa propre hiérarchie d’affichage de contenu spéciale sous la forme d’une barre d’outils de navigation qui inclut un titre, un bouton Précédent et d’autres fonctionnalités facultatives.
 
 Le contrôleur de navigation est commun dans les applications iOS et assure la navigation pour des applications iOS de base comme l’application **Réglages**, comme l’illustre la capture d’écran ci-dessous :
 
@@ -86,27 +84,24 @@ Le contrôleur de navigation remplit trois fonctions principales :
     [![](hello-ios-multiscreen-deepdive-images/03.png "Ce diagramme illustre le retrait d’une carte de la pile")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Il fournit une barre de titre** : La partie supérieure du **contrôleur de navigation** est appelé *barre de titre*. Celle-ci est chargée d’afficher le titre du contrôleur d’affichage, comme l’illustre le diagramme ci-dessous :  
+-  **Il fournit une barre de titre** : la partie supérieure du contrôleur de navigation est appelée *barre de titre*. Celle-ci est chargée d’afficher le titre du contrôleur d’affichage, comme l’illustre le diagramme ci-dessous :  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "La barre de titre est chargée d’afficher le titre du contrôleur de vue")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
+### <a name="root-view-controller"></a>Contrôleur de vue racine
 
-
-
-### <a name="root-view-controller"></a>Contrôleur d’affichage racine
-
-Un **contrôleur de navigation** ne gère pas une hiérarchie d’affichage de contenu, il n’a donc rien à afficher tout seul.
-Un **contrôleur de navigation** est plutôt associé à un *contrôleur d’affichage racine* :
+Un contrôleur de navigation ne gère pas une hiérarchie de vue de contenu, il n’a donc rien à afficher de lui-même.
+Un contrôleur de navigation est plutôt couplé à un *contrôleur de vue racine* :
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "Un contrôleur de navigation est associé à un contrôleur de vue racine")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-Le contrôleur d’affichage racine représente le premier contrôleur d’affichage dans la pile du **contrôleur de navigation** et la hiérarchie d’affichage de contenu du contrôleur d’affichage racine est la première hiérarchie d’affichage de contenu à charger dans la fenêtre. Si nous voulons placer toute notre application dans la pile du contrôleur de navigation, nous pouvons déplacer le Segue sans source dans le **contrôleur de navigation** et définir le contrôleur d’affichage de notre premier écran en tant que contrôleur d’affichage racine, comme nous l’avons fait dans l’application Phoneword :
+Le contrôleur de vue racine représente le premier contrôleur de vue dans la pile du contrôleur de navigation. La hiérarchie de vue de contenu du contrôleur de vue racine est la première hiérarchie de vue de contenu à être chargée dans la fenêtre. Si nous souhaitons mettre toute notre application dans la pile du contrôleur de navigation, nous pouvons déplacer le Segue sans source dans le contrôleur de navigation, et définir le contrôleur de vue de notre premier écran en tant que contrôleur de vue racine, comme nous l’avons fait dans l’application Phoneword :
 
  [![](hello-ios-multiscreen-deepdive-images/06.png "Le segue sans source définit le contrôleur de vue des premiers écrans en tant que contrôleur de vue racine")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Options de navigation supplémentaires
 
-Le **contrôleur de navigation** est un moyen courant de gérer la navigation dans iOS, mais il n’est pas la seule option. Un [contôleur de barre d’onglets](~/ios/user-interface/controls/creating-tabbed-applications.md) peut diviser une application en différentes zones fonctionnelles. Un [contrôleur d’affichage fractionné](https://developer.xamarin.com/recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) peut créer des affichages maître/détail et un [contrôleur de navigation par menu volant](http://components.xamarin.com/view/flyoutnavigation) crée une navigation que l’utilisateur peut balayer depuis le côté. Tous ces éléments peuvent être combinés avec un **contrôleur de navigation** pour présenter du contenu de manière intuitive.
+Le contrôleur de navigation est couramment utilisé pour prendre en charge la navigation dans iOS. Toutefois, il ne représente pas la seule option. Un [contrôleur de barre d’onglets](~/ios/user-interface/controls/creating-tabbed-applications.md) peut scinder une application en différentes zones fonctionnelles. Un [contrôleur de vue fractionné](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) permet de créer des vues maître/détail. La combinaison des contrôleurs de navigation à ces autres paradigmes de navigation fournit de nombreuses manières flexibles de présenter du contenu iOS, et de naviguer dans celui-ci.
 
 ## <a name="handling-transitions"></a>Gestion des transitions
 
@@ -202,7 +197,6 @@ L’application Phoneword a introduit plusieurs concepts qui ne sont pas traité
 -  **Contrôleur d’affichage Table** : `CallHistoryController` est un contrôleur d’affichage Table. Un contrôleur d’affichage Table contient un affichage Table, l’outil de disposition et d’affichage de données le plus courant dans iOS. Les tables dépassent le cadre du présent guide. Pour plus d’informations sur les contrôleurs d’affichage Table, reportez-vous au guide d’[utilisation des tables et cellules](~/ios/user-interface/controls/tables/index.md).
 -   **ID de Storyboard** : La définition de l’ID de Storyboard crée une classe de contrôleur d’affichage en Objective-C, qui contient le code-behind du contrôleur d’affichage dans le Storyboard. Nous utilisons l’ID de Storyboard pour trouver la classe Objective-C et instancier le contrôleur d’affichage dans le Storyboard. Pour plus d’informations sur les ID de Storyboard, reportez-vous au guide de [présentation des Storyboards](~/ios/user-interface/storyboards/index.md).
 
-
 ## <a name="summary"></a>Récapitulatif
 
 Félicitations ! Vous avez terminé votre première application iOS multi-écran.
@@ -211,8 +205,7 @@ Dans ce guide, nous avons présenté le modèle MVC et nous l’avons utilisé p
 
 Maintenant, apprenons à générer des applications multiplateforme avec Xamarin à l’aide des guides de [présentation du développement mobile](~/cross-platform/get-started/introduction-to-mobile-development.md) et de [génération d’applications multiplateforme](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
 
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Hello, iOS (exemple)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
 - [Lignes directrices de l’interface utilisateur iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)

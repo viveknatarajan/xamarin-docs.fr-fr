@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/22/2018
-ms.openlocfilehash: 241f38cbfe013776b2e36b8102ae4b90cf610d80
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 1d13a3dae509fea4a2e955c4ad206a81a57e75ed
+ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935280"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39067332"
 ---
 # <a name="android-emulator-troubleshooting"></a>Résolution des problèmes de l’émulateur Android
 
@@ -87,7 +87,7 @@ Si vous préférez ne pas afficher les avertissements liés aux performances, vo
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-À compter de Visual Studio pour Mac build 7.2 (build 559), une boîte de dialogue d’avertissement sur les performances peut s’afficher lorsque vous déployez votre application pour la première fois sur l’émulateur Android. Ces boîtes de dialogue d’avertissement sont expliquées ci-dessous.
+À partir de Visual Studio pour Mac version 7.2 (build 559), une boîte de dialogue d’avertissement concernant le niveau de performance peut s’afficher quand vous déployez votre application pour la première fois sur l’Émulateur Android. Ces boîtes de dialogue d’avertissement sont expliquées ci-dessous.
 
 ### <a name="haxm-is-not-installed"></a>Le Gestionnaire HAXM n'est pas installé
 

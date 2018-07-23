@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: c0404a1fd8f7e878638b9483c65c637f6b4faa66
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd0afe03adbd021717a88cd4409e3e1351ba9b50
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786101"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111184"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionnement manuel pour Xamarin.iOS
 
 _Une fois Xamarin.iOS installé avec succès, l’étape suivante du développement iOS consiste à configurer l’appareil iOS. Ce guide décrit comment configurer des profils et des certificats de développement par le biais du provisionnement manuel._
 
-<a name="signingidentity" />
+> [!NOTE]
+> Les instructions de cette page s’adressent aux développeurs qui ont payé l’accès au programme Developer d’Apple. Si vous disposez d’un compte gratuit, consultez le guide [Provisionnement gratuit](~/ios/get-started/installation/device-provisioning/free-provisioning.md) pour plus d’informations sur le test des appareils.
 
 ## <a name="creating-a-signing-identity"></a>Création d’une identité de signature
 
@@ -27,9 +28,9 @@ La première étape dans la configuration d’un appareil de développement cons
 - Un certificat de développement
 - Une clé privée
 
-Les certificats de développement et leurs [clés](#keypairs) associées sont primordiales pour un développeur iOS : ensemble, ils établissent votre identité auprès d’Apple et vous associent à un appareil et à un profil donnés pour le développement, ce qui revient à placer votre signature numérique sur vos applications. Apple vérifie les certificats pour contrôler l’accès aux appareils que vous êtes autorisé à déployer.
+Les certificats de développement et leurs [clés](#understanding-certificate-key-pairs) associées sont primordiales pour un développeur iOS : ensemble, ils établissent votre identité auprès d’Apple et vous associent à un appareil et à un profil donnés pour le développement, ce qui revient à placer votre signature numérique sur vos applications. Apple vérifie les certificats pour contrôler l’accès aux appareils que vous êtes autorisé à déployer.
 
-Les équipes de développement, les certificats et les profils peuvent être gérés en accédant à la section [Certificats, identificateurs et profils](https://developer.apple.com/account/overview.action) du centre des membres Apple. Apple exige que vous ayez une identité de signature pour générer votre code pour un simulateur ou appareil.  
+Vous pouvez gérer les équipes de développement, les certificats et les profils en accédant à la section [Certificats, identificateurs et profils](https://developer.apple.com/account/overview.action) (connexion obligatoire) du centre des membres Apple. Apple exige que vous ayez une identité de signature pour générer votre code pour un simulateur ou appareil.  
 
 > [!IMPORTANT]
 > Il est important de noter que vous ne pouvez avoir que deux certificats de développement iOS en même temps. Si vous avez besoin d’en créer un autre, vous devez révoquer un existant. Tout ordinateur qui utilise un certificat révoqué n’est pas en mesure de signer son application.
@@ -69,8 +70,6 @@ Pour générer une identité de signature, effectuez les étapes suivantes :
 8. Double-cliquez sur le certificat téléchargé pour lancer Keychain Access et ouvrir le panneau **Mes certificats**, qui présente les nouveaux certificats et la clé privée associée :
 
     [![](manual-provisioning-images/keychain.png "Certificat dans l’accès au trousseau")](manual-provisioning-images/keychain.png#lightbox)
-
-<a name="keypairs" />
 
 ### <a name="understanding-certificate-key-pairs"></a>Présentation des paires clé/certificat
 
@@ -136,7 +135,6 @@ Répétez les étapes ci-dessus pour tous les appareils iOS utilisés pour teste
 
 Après avoir ajouté l’appareil au portail des développeurs, il est nécessaire de créer un profil de provisionnement et d’y ajouter l’appareil.
 
-
 <a name="provisioningprofile" />
 
 ## <a name="creating-a-development-provisioning-profile"></a>Création d’un profil de provisionnement de développement
@@ -191,7 +189,7 @@ Une fois le profil de provisionnement correctement créé, il peut être nécess
 
 <a name="download" />
 
-## <a name="downloading-profiles-and-certificates-in-xcode"></a>Téléchargement des profils et des certificats dans Xcode
+## <a name="downloading-profiles-and-certificates-in-xcode"></a>Téléchargement de profils et de certificats dans Xcode
 
 Les certificats et les profils de provisionnement qui ont été créés dans le portail des développeurs Apple peuvent ne pas apparaître automatiquement dans Xcode. Par conséquent, il peut être nécessaire de les télécharger pour qu’ils soient accessibles par Visual Studio pour Mac et Visual Studio. Pour mettre à jour et télécharger des certificats créés dans le portail des développeurs Apple, effectuez les étapes suivantes :
 
@@ -227,8 +225,6 @@ Apple propose une sélection de services d’application spéciaux, également a
 * Créez un ID d’application avec les services d’application requis.
 * Créez un [profil de provisionnement](#provisioningprofile) qui contient cet ID d’application.
 * Définir des droits dans le projet Xamarin.iOS
-
-<a name="deploy" />
 
 ## <a name="deploying-to-a-device"></a>Déploiement sur un appareil
 
@@ -277,8 +273,7 @@ Si la valeur est **Automatique**, Visual Studio pour Mac sélectionne l’identi
 
 Ce guide a décrit les étapes requises pour configurer l’environnement de développement nécessaire à Xamarin.iOS. Il a expliqué la façon dont le code d’une application est signé à l’aide d’informations sur le développeur, son équipe, les appareils sur lesquels l’application peut s’exécuter et son ID d’application individuel.
 
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Provisionnement libre](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
 - [Distribution d’une application](~/ios/deploy-test/app-distribution/index.md)
