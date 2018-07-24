@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4fee67f08e86c40709aa226c40c0f7721dc26800
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998300"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203083"
 ---
 # <a name="customizing-a-map-pin"></a>Personnalisation d’un code confidentiel de carte
 
@@ -240,7 +240,7 @@ Le `GetViewForAnnotation` méthode est appelée lorsque l’emplacement de l’a
 Le `GetViewForAnnotation` méthode accepte un `IMKAnnotation` qui contient les données d’annotation et retourne un `MKAnnotationView` pour l’affichage sur la carte et est illustré dans l’exemple de code suivant :
 
 ```csharp
-MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 {
     MKAnnotationView annotationView = null;
 
@@ -273,12 +273,12 @@ Cette méthode garantit que l’annotation s’affichera sous la forme d’une i
 1. Le `GetCustomPin` méthode est appelée pour retourner les données personnalisées de code confidentiel pour l’annotation.
 1. Pour économiser la mémoire, la vue de l’annotation est regroupée à réutiliser avec l’appel à [ `DequeueReusableAnnotation` ](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
 1. Le `CustomMKAnnotationView` classe étend la `MKAnnotationView` classe avec `Id` et `Url` propriétés qui correspondent aux propriétés identiques dans le `CustomPin` instance. Une nouvelle instance de la `CustomMKAnnotationView` est créé, à condition que l’annotation est `null`:
-  - Le `CustomMKAnnotationView.Image` propriété est définie sur l’image qui représentera l’annotation sur la carte.
-  - Le `CustomMKAnnotationView.CalloutOffset` propriété est définie sur une `CGPoint` qui spécifie que la légende est centrée au-dessus de l’annotation.
-  - Le `CustomMKAnnotationView.LeftCalloutAccessoryView` propriété est définie sur une image d’un monkey qui apparaît à gauche du titre de l’annotation et de l’adresse.
-  - Le `CustomMKAnnotationView.RightCalloutAccessoryView` propriété est définie sur une *informations* bouton qui apparaît à droite du titre de l’annotation et de l’adresse.
-  - Le `CustomMKAnnotationView.Id` propriété est définie sur le `CustomPin.Id` propriété retournée par la `GetCustomPin` (méthode). Ainsi, l’annotation être identifié afin qu’il dispose [légende peut être personnalisé](#Selecting_the_Annotation), si vous le souhaitez.
-  - Le `CustomMKAnnotationView.Url` propriété est définie sur le `CustomPin.Url` propriété retournée par la `GetCustomPin` (méthode). L’URL sera utilisée lorsque l’utilisateur [appuie sur le bouton affiché dans la vue accessoire légende droit](#Tapping_on_the_Right_Callout_Accessory_View).
+    - Le `CustomMKAnnotationView.Image` propriété est définie sur l’image qui représentera l’annotation sur la carte.
+    - Le `CustomMKAnnotationView.CalloutOffset` propriété est définie sur une `CGPoint` qui spécifie que la légende est centrée au-dessus de l’annotation.
+    - Le `CustomMKAnnotationView.LeftCalloutAccessoryView` propriété est définie sur une image d’un monkey qui apparaît à gauche du titre de l’annotation et de l’adresse.
+    - Le `CustomMKAnnotationView.RightCalloutAccessoryView` propriété est définie sur une *informations* bouton qui apparaît à droite du titre de l’annotation et de l’adresse.
+    - Le `CustomMKAnnotationView.Id` propriété est définie sur le `CustomPin.Id` propriété retournée par la `GetCustomPin` (méthode). Ainsi, l’annotation être identifié afin qu’il dispose [légende peut être personnalisé](#Selecting_the_Annotation), si vous le souhaitez.
+    - Le `CustomMKAnnotationView.Url` propriété est définie sur le `CustomPin.Url` propriété retournée par la `GetCustomPin` (méthode). L’URL sera utilisée lorsque l’utilisateur [appuie sur le bouton affiché dans la vue accessoire légende droit](#Tapping_on_the_Right_Callout_Accessory_View).
 1. Le [ `MKAnnotationView.CanShowCallout` ](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) propriété est définie sur `true` afin que la légende s’affiche lorsque l’utilisateur appuie sur l’annotation.
 1. L’annotation est retournée pour l’affichage sur la carte.
 

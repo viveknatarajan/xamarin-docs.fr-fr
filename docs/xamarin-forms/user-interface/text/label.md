@@ -6,34 +6,25 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: ce602a84ea1024dc22298a3ec1567a9a34ad4a82
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/16/2018
+ms.openlocfilehash: b5069381126db0859508480df5596ed5ec85686f
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995964"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203034"
 ---
 # <a name="xamarinforms-label"></a>Étiquette de Xamarin.Forms
 
 _Texte affiché dans Xamarin.Forms_
 
-Le `Label` vue est utilisée pour afficher du texte, à la fois unique et plusieurs lignes. Étiquettes peuvent avoir des polices personnalisées (familles de tailles et options) et le texte en couleur. Cet article aborde les rubriques suivantes :
-
-- **[Troncation et habillage](#Truncation_and_Wrapping)**  &ndash; troncation et options de gestion des situations où le texte ne peut pas tenir sur une seule ligne d’habillage.
-- **[Police](#Font)**  &ndash; options de police.
-- **[Couleur](#Color)**  &ndash; étiqueter des options de couleur de texte.
-- **[Texte mis en forme](#Formatted_Text)**  &ndash; options d’affichage de texte avec plusieurs formats/styles inline.
-
-## <a name="styling-label"></a>Étiquette de style
-
-Les sections suivantes abordent les propriétés des paramètres de `Label` manuellement sur chaque instance. Notez que définit des propriétés peut être regroupée dans un style qui est appliqué uniformément à une ou plusieurs vues. Cela peut augmenter la lisibilité du code et apporter des modifications de conception plus facile à implémenter. Consultez [Styles](~/xamarin-forms/user-interface/text/styles.md) pour plus d’informations.
+Le [ `Label` ](xref:Xamarin.Forms.Label) vue est utilisée pour afficher du texte, à la fois unique et plusieurs lignes. Étiquettes peuvent avoir des polices personnalisées (familles de tailles et options) et le texte en couleur.
 
 <a name="Truncation_and_Wrapping" />
 
 ## <a name="truncation-and-wrapping"></a>Troncation et habillage
 
-Étiquettes peuvent être définies pour gérer le texte qui ne rentrent pas sur une seule ligne de plusieurs manières, exposées par le `LineBreakMode` propriété. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) est une énumération des options suivantes :
+Étiquettes peuvent être définies pour gérer le texte qui ne rentrent pas sur une seule ligne de plusieurs manières, exposées par le `LineBreakMode` propriété. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) est une énumération avec les valeurs suivantes :
 
 - **HeadTruncation** &ndash; tronque la tête du texte, indiquant la fin.
 - **CharacterWrap** &ndash; encapsule le texte sur une nouvelle ligne à une limite de caractère.
@@ -42,19 +33,30 @@ Les sections suivantes abordent les propriétés des paramètres de `Label` manu
 - **TailTruncation** &ndash; illustre le début du texte, la troncation de la fin.
 - **WordWrap** &ndash; encapsule le texte à la limite de mot.
 
-## <a name="font"></a>Police
+## <a name="fonts"></a>Polices
 
-Consultez [utilisation des polices](~/xamarin-forms/user-interface/text/fonts.md) pour plus d’informations.
+Pour plus d’informations sur la spécification des polices dans une `Label`, consultez [polices](~/xamarin-forms/user-interface/text/fonts.md).
 
-## <a name="color"></a>Color
+## <a name="colors"></a>Couleurs
 
-`Label`s peut être définie pour utiliser une couleur de texte personnalisé via la peut être liée `TextColor` propriété.
+`Label`s peut être définie pour utiliser une couleur de texte personnalisé via la peut être liée [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) propriété.
 
 Une attention particulière est nécessaire pour garantir que les couleurs seront utilisables sur chaque plateforme. Étant donné que chaque plateforme a des valeurs par défaut différentes pour les couleurs de texte et d’arrière-plan, vous devrez veiller à choisir une valeur par défaut qui fonctionne sur chacun.
 
-Utilisez le code suivant pour définir la couleur du texte d’une étiquette :
+Utilisez le XAML suivant pour définir la couleur du texte d’une étiquette :
 
-En code :
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextSample.LabelPage"
+             Title="Label Demo">
+    <StackLayout Padding="5,10">
+      <Label TextColor="#77d065" FontSize = "20" Text="This is a label." />
+    </StackLayout>
+</ContentPage>
+```
+
+Le code c# équivalent est :
 
 ```csharp
 public partial class LabelPage : ContentPage
@@ -62,94 +64,91 @@ public partial class LabelPage : ContentPage
     public LabelPage ()
     {
         InitializeComponent ();
+
         var layout = new StackLayout { Padding = new Thickness(5,10) };
-        this.Content = layout;
         var label = new Label { Text="This is a label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
         layout.Children.Add(label);
+        this.Content = layout;
     }
 }
 ```
 
-Dans XAML :
-
-```xaml
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="TextSample.LabelPage"
-Title="Label Demo">
-    <ContentPage.Content>
-        <StackLayout Padding="5,10">
-      <Label TextColor="#77d065" FontSize = "20" Text="This is a label." />
-    </StackLayout>
-  </ContentPage.Content>
-</ContentPage>
-```
+Les captures d’écran suivantes affichent le résultat du paramètre de la `TextColor` propriété :
 
 ![](label-images/textcolor.png "Exemple d’étiquette TextColor")
+
+Pour plus d’informations sur les couleurs, consultez [couleurs](~/xamarin-forms/user-interface/colors.md).
 
 <a name="Formatted_Text" />
 
 ## <a name="formatted-text"></a>Texte mis en forme
 
-Étiquettes exposent un `FormattedText` propriété qui vous permet de présenter du texte avec plusieurs polices et couleurs dans la même vue.
+Étiquettes exposent un [ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText) propriété qui permet à la présentation du texte avec plusieurs polices et couleurs dans la même vue.
 
-Le `FormattedText` propriété est de type [ `FormattedString` ](xref:Xamarin.Forms.FormattedString). Chaînes mises en forme sont composées d’un ou plusieurs `Span`s, chacun d’eux avec les propriétés suivantes :
+Le `FormattedText` propriété est de type [ `FormattedString` ](xref:Xamarin.Forms.FormattedString), qui comprend un ou plusieurs [ `Span` ](xref:Xamarin.Forms.Span) instances, définis par le biais du [ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans) propriété . Chaque `Span` possède les propriétés suivantes :
 
-- **BackgroundColor** &ndash; peut être utilisée pour définir une couleur d’arrière-plan, par exemple pour obtenir un effet de surligneur.
-- **Attributs de la police** &ndash; peut être défini sur gras, italique ou aucun.
-- **FontFamily** &ndash; définit la police à utiliser.
-- **FontSize** &ndash; définit la taille du texte.
-- **ForegroundColor** &ndash; définit la couleur du texte.
-- **Texte** &ndash; le texte qui sera présenté.
+- [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) – la couleur d’arrière-plan span.
+- [`Font`](xref:Xamarin.Forms.Span.Font) – la police du texte dans l’étendue.
+- [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) – les attributs de police du texte dans l’étendue.
+- [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – la famille de polices à laquelle appartient la police du texte dans l’étendue.
+- [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – la taille de la police du texte dans l’étendue.
+- [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – la couleur du texte dans l’étendue. Cette propriété est obsolète et a été remplacée par le `TextColor` propriété.
+- [`Style`](xref:Xamarin.Forms.Span.Style) – le style à appliquer à l’étendue.
+- [`Text`](xref:Xamarin.Forms.Span.Text) – le texte de l’étendue.
+- [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – la couleur du texte dans l’étendue.
 
-Le code c# suivant illustre une étiquette où le premier mot est en gras et le dernier mot est en rouge :
+L’exemple XAML suivant montre un `FormattedText` propriété se compose de trois `Span` instances :
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextSample.LabelPage"
+             Title="Label Demo - XAML">
+    <StackLayout Padding="5,10">
+        ...
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" />
+                    <Span Text="default, " Style="{DynamicResource BodyStyle}" />
+                    <Span Text="italic small." FontAttributes="Italic" FontSize="Small" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>
+```
+
+Le code c# équivalent est :
 
 ```csharp
-public partial class LabelPage : ContentPage
+public class LabelPageCode : ContentPage
 {
-    public LabelPage ()
+    public LabelPageCode ()
     {
-        InitializeComponent ();
-        var layout = new StackLayout { Padding = new Thickness(5,10) };
+        var layout = new StackLayout{ Padding = new Thickness (5, 10) };
+        ...
+        var formattedString = new FormattedString ();
+        formattedString.Spans.Add (new Span{ Text = "Red bold, ", ForegroundColor = Color.Red, FontAttributes = FontAttributes.Bold });
+        formattedString.Spans.Add (new Span { Text = "default, ", Style = Device.Styles.BodyStyle });
+        formattedString.Spans.Add (new Span { Text = "italic small.", FontAttributes = FontAttributes.Italic, FontSize =  Device.GetNamedSize(NamedSize.Small, typeof(Label)) });
+
+        layout.Children.Add (new Label { FormattedText = formattedString });
         this.Content = layout;
-    var label = new Label { FontSize = 20 };
-    var s = new FormattedString ();
-    s.Spans.Add (new Span{ Text = "Red Bold", FontAttributes = FontAttributes.Bold });
-    s.Spans.Add (new Span{ Text = "Default" });
-    s.Spans.Add (new Span{ Text = "italic small", FontSize =  Device.GetNamedSize(NamedSize.Small, typeof(Label)), FontAttributes = FontAttributes.Italic});
-    label.FormattedText = s;
-        layout.Children.Add(label);
     }
 }
 ```
 
-Dans XAML :
+> [!NOTE]
+> Le [ `Text` ](xref:Xamarin.Forms.Span.Text) propriété d’un `Span` peut être définie via la liaison de données. Pour plus d’informations, consultez [une liaison de données](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-```xaml
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="TextSample.LabelPage"
-Title="Label Demo">
-    <ContentPage.Content>
-        <StackLayout Padding="5,10">
-      <Label FontSize=20>
-        <Label.FormattedText>
-          <FormattedString>
-            <Span Text="Red Bold" ForegroundColor="Red" FontAttributes="Bold" />
-            <Span Text="Default" />
-            <Span Text="italic small" FontAttributes="Italic" FontSize="Small" />
-          </FormattedString>
-        </Label.FormattedText>
-      </Label>
-    </StackLayout>
-  </ContentPage.Content>
-</ContentPage>
-```
+Les captures d’écran suivantes affichent le résultat du paramètre de la `FormattedString` propriété à trois `Span` instances :
 
 ![](label-images/formattedtext.png "Exemple d’étiquette FormattedText")
 
+## <a name="styling-a-label"></a>Appliquer un style d’une étiquette
+
+Les sections précédentes couverts paramètre [ `Label` ](xref:Xamarin.Forms.Label) propriétés sur chaque instance. Toutefois, les ensembles de propriétés peuvent être regroupées dans un style qui est appliqué uniformément à une ou plusieurs vues. Cela peut augmenter la lisibilité du code et apporter des modifications de conception plus facile à implémenter. Pour plus d’informations, consultez [Styles](~/xamarin-forms/user-interface/text/styles.md).
 
 ## <a name="related-links"></a>Liens associés
 
