@@ -1,22 +1,22 @@
 ---
 title: Résolution des dépendances dans Xamarin.Forms
-description: Cet article explique comment injecter une méthode de résolution de dépendance dans Xamarin.Forms, afin que le conteneur d’injection de dépendance d’une application peut contrôler la construction et la durée de vie des convertisseurs personnalisés, des effets et des implémentations de DependencyService .
+description: Cet article explique comment injecter une méthode de résolution de dépendance dans Xamarin.Forms afin que le conteneur d’injection de dépendance d’une application peut contrôler la construction et la durée de vie des convertisseurs personnalisés, des effets et des implémentations de DependencyService.
 ms.prod: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/23/2018
-ms.openlocfilehash: b9e49d32dd4b0b02c742cd829eafabd1c55230f0
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: 8235b6fb5fda2a414cf192dd66007d1d02f232aa
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203182"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242379"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Résolution des dépendances dans Xamarin.Forms
 
-_Cet article explique comment injecter une méthode de résolution de dépendance dans Xamarin.Forms, afin que le conteneur d’injection de dépendance d’une application peut contrôler la construction et la durée de vie des convertisseurs personnalisés, des effets et des implémentations de DependencyService . Les exemples de code sont tirés du [résolution des dépendances](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) exemple._
+_Cet article explique comment injecter une méthode de résolution de dépendance dans Xamarin.Forms afin que le conteneur d’injection de dépendance d’une application peut contrôler la construction et la durée de vie des convertisseurs personnalisés, des effets et des implémentations de DependencyService. Les exemples de code sont tirés du [résolution des dépendances](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) exemple._
 
 Dans le contexte d’une application Xamarin.Forms qui utilise le modèle Model-View-ViewModel (MVVM), un conteneur d’injection de dépendance peut être utilisé pour l’inscription et la résolution des modèles de vue et de l’inscription des services et de les injecter dans les modèles de vue. Lors de la création du modèle de vue, le conteneur injecte toutes les dépendances requises. Si ces dépendances n’ont pas été créés, le conteneur crée et résout d’abord les dépendances. Pour plus d’informations sur l’injection de dépendances, ainsi que des exemples d’injection de dépendances dans les modèles de vue, consultez [l’Injection de dépendances](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 
@@ -55,7 +55,7 @@ public partial class App : Application
 Dans cet exemple, la méthode de résolution de dépendance est définie à une expression lambda qui utilise le conteneur d’injection de dépendance Autofac pour résoudre tous les types qui ont été inscrits auprès du conteneur. Sinon, `null` s’affichera, ce qui entraînera Xamarin.Forms tente de résoudre le type.
 
 > [!NOTE]
-> L’API utilisée par un conteneur d’injection de dépendance est spécifique au conteneur. Les exemples de code dans cet article utilisent Autofac comme un conteneur d’injection de dépendance, qui fournit le `IContainer` et `ContainerBuilder` types. Conteneurs d’injection de dépendance de remplacement peut également être utilisés, mais seraient qu’ils recourent différentes API présentées ici.
+> L’API utilisée par un conteneur d’injection de dépendance est spécifique au conteneur. Les exemples de code dans cet article utilisent Autofac comme un conteneur d’injection de dépendance, qui fournit le `IContainer` et `ContainerBuilder` types. Conteneurs d’injection de dépendance de remplacement peut également être utilisés, mais seraient qu’ils recourent différentes API sont présentées ici.
 
 Notez qu’il n’existe aucune exigence pour définir la méthode de résolution de dépendance au cours du démarrage de l’application. Elle peut être définie à tout moment. La seule contrainte est que Xamarin.Forms doit savoir sur la méthode de résolution de dépendance au moment où l’application tente d’utiliser des types stockés dans le conteneur d’injection de dépendance. Par conséquent, s’il existe des services dans le conteneur d’injection de dépendance qui nécessite l’application lors du démarrage, la méthode de résolution de dépendance aura à définir au début de cycle de vie de l’application. De même, si le conteneur d’injection de dépendance gère la création et la durée de vie d’un particulier [ `Effect` ](xref:Xamarin.Forms.Effect), Xamarin.Forms devez connaître à propos de la méthode de résolution de dépendance avant d’essayer de créer une vue qui qui utilise `Effect`.
 
@@ -170,7 +170,7 @@ void RegisterTypes()
 }
 ```
 
-Dans cet exemple, le `App.RegisterTypeWithParameters` méthode registres le `VideoPlayerRenderer` avec le conteneur d’injection de dépendance, la méthode d’inscription tout en garantissant que le `MainActivity` instance est injectée comme le `Context` argument et qui le `Logger`type est injecté comme le `ILogger` argument.
+Dans cet exemple, le `App.RegisterTypeWithParameters` méthode inscrit le `VideoPlayerRenderer` avec le conteneur d’injection de dépendance. La méthode d’inscription garantit que le `MainActivity` instance est injectée comme le `Context` argument et que le `Logger` type est injecté comme le `ILogger` argument.
 
 ### <a name="registering-effects"></a>L’inscription d’effets
 

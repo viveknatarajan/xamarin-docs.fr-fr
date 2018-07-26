@@ -1,52 +1,52 @@
 ---
 title: Accès aux données de Xamarin.Android
-description: La plupart des applications ont une spécification pour enregistrer les données sur le périphérique local. Sauf si la quantité de données est petite plus simplement, ceci nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès à la base de données.  Android est le moteur de base de données SQLite 'intégré' et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Ce document montre comment accéder à une base de données SQLite d’une manière inter-plateformes.
+description: La plupart des applications a une exigence pour enregistrer les données sur l’appareil localement. À moins que la quantité de données est très petite, cela nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès de base de données.  Android a le moteur de base de données SQLite 'intégré' et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Ce document montre comment accéder à une base de données SQLite de manière inter-plateformes.
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 508a8f54723bfdd30b1c8ea8d4b6c1d422ae24e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0ee89728395134f26972ebefa28ca96925b98c84
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763248"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241092"
 ---
 # <a name="xamarinandroid-data-access"></a>Accès aux données de Xamarin.Android
 
-_La plupart des applications ont une spécification pour enregistrer les données sur le périphérique local. Sauf si la quantité de données est petite plus simplement, ceci nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès à la base de données.  Android est le moteur de base de données SQLite 'intégré' et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Ce document montre comment accéder à une base de données SQLite d’une manière inter-plateformes._
+_La plupart des applications a une exigence pour enregistrer les données sur l’appareil localement. À moins que la quantité de données est très petite, cela nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès de base de données.  Android a le moteur de base de données SQLite 'intégré' et accès pour stocker et récupérer des données est simplifié par la plateforme de Xamarin. Ce document montre comment accéder à une base de données SQLite de manière inter-plateformes._
 
 ## <a name="data-access-overview"></a>Vue d’ensemble de données Access
 
-La plupart des applications ont une spécification pour enregistrer les données sur le périphérique local. Sauf si la quantité de données est petite plus simplement, ceci nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès à la base de données. Android à la fois possède le moteur de base de données Sqlite « intégré » et l’accès aux données est simplifié par la plateforme de Xamarin qui est livré avec le fournisseur de données SQLite.
+La plupart des applications a une exigence pour enregistrer les données sur l’appareil localement. À moins que la quantité de données est très petite, cela nécessite généralement une base de données et une couche de données dans l’application pour gérer l’accès de base de données. Android à la fois possède le moteur de base de données Sqlite « intégré » et accès aux données est simplifié par la plateforme de Xamarin qui est fourni avec le fournisseur de données SQLite.
 
-Xamarin.Android prend en charge les API d’accès de base de données tels que :
+Xamarin.Android prend en charge API d’accès de base de données telles que :
 
 -  Framework d’ADO.NET.
--  SQLite-NET 3e partie bibliothèque.
+-  SQLite-NET 3e de bibliothèque tierce.
 
-La plupart du code dans cette section est complètement inter-plateformes et s’exécutera sur iOS ou Android sans modification. Il existe deux exemples d’applications indiqués :
+La majorité du code dans cette section est complètement inter-plateformes et s’exécuteront sur iOS ou Android sans modification. Il existe deux exemples d’applications abordées :
 
--  [**DataAccess_Basic** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; des opérations de données Simple écrit les résultats dans un fichier texte affichent le contrôle ;
+-  [**DataAccess_Basic** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; des opérations de données Simple écrit les résultats dans un texte affichent le contrôle ;
 
 -  [**DataAccess_Advanced** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; intègre les opérations de données en une petite application qui répertorie et modifie une structure de données simple.
 
-Les deux exemples de solutions contiennent iOS et Android application des exemples.
+Les deux exemples de solutions contiennent des projets iOS et Android exemple application.
 
-Pour les applications de Xamarin.Forms, vous devez lire [des bases de données](~/xamarin-forms/app-fundamentals/databases.md) qui explique comment travailler avec SQLite dans une bibliothèque PCL avec Xamarin.Forms.
+Pour les applications Xamarin.Forms, consultez [des bases de données](~/xamarin-forms/app-fundamentals/databases.md) qui explique comment utiliser SQLite dans une bibliothèque PCL avec Xamarin.Forms.
 
-Les rubriques de cette section traitent des accès aux données dans Xamarin.Android à l’aide de SQLite comme moteur de base de données. La base de données est accessible « directement » à l’aide de syntaxe ADO.NET ou vous pouvez inclure les ORM SQLite.NET et effectuer des opérations de données en c#.
+Les rubriques de cette section traitent des accès aux données dans Xamarin.Android à l’aide de SQLite en tant que le moteur de base de données. La base de données sont accessibles « directement » à l’aide de syntaxe ADO.NET ou vous pouvez inclure le SQLite.NET ORM et effectuer des opérations de données en c#.
 
-Deux échantillons sont examinés : une qui contient le code d’accès aux données très simple qui sorties pour un champ de texte et une application simple qui inclut créer, lire, mettre à jour et supprimer des fonctionnalités. Thread et comment votre application avec une base de données SQLite prédéfinie de valeur initiale est également présenté.
+Deux exemples sont examinés : une qui contient le code d’accès aux données très simple qui créent des sorties pour un champ de texte et une application simple qui inclut, lire, mettre à jour et supprimer des fonctionnalités. Threading et comment amorcer votre application avec une base de données SQLite préremplie sont également abordés.
 
-Pour des exemples supplémentaires de l’accès aux données d’inter-plateformes, consultez notre [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) étude de cas.
+Pour obtenir des exemples supplémentaires d’accès aux données d’inter-plateformes, consultez notre [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) étude de cas.
 
 
 ## <a name="related-links"></a>Liens associés
 
 - [DataAccess Basic (exemple)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avancé (exemple)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Recettes de données Android](https://developer.xamarin.com/recipes/android/data/)
+- [Recettes de données Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
 - [Accès aux données de Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md)

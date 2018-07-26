@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: f6ca8f0900c8bc325cc49a7484dabe5bf2534257
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7f0e1c27f7d6a62dc43ac447c4f796d685a6cd91
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999068"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241209"
 ---
 # <a name="device-orientation"></a>Orientation de l’appareil
 
@@ -91,7 +91,7 @@ Sur la plateforme de Windows universelle (UWP), les orientations prises en charg
 
 ## <a name="reacting-to-changes-in-orientation"></a>Réagir aux modifications dans l’Orientation
 
-Xamarin.Forms ne propose pas de tous les événements natifs pour avertir votre application de changements d’orientation dans le code partagé. Toutefois, le `SizeChanged` événements de la `Page` est déclenchée lorsque la largeur ou la hauteur de la `Page` modifications. Lors de la largeur de la `Page` est supérieure à la hauteur, l’appareil est en mode paysage. Pour plus d’informations, consultez [afficher une Image basée sur l’orientation de l’écran](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/).
+Xamarin.Forms ne propose pas de tous les événements natifs pour avertir votre application de changements d’orientation dans le code partagé. Toutefois, le `SizeChanged` événements de la `Page` est déclenchée lorsque la largeur ou la hauteur de la `Page` modifications. Lors de la largeur de la `Page` est supérieure à la hauteur, l’appareil est en mode paysage. Pour plus d’informations, consultez [afficher une Image basée sur l’orientation de l’écran](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
 
 > [!NOTE]
 > Il existe un package NuGet existant et gratuit pour recevoir des notifications de changements d’orientation dans le code partagé. Consultez le [référentiel GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) pour plus d’informations.
@@ -475,4 +475,4 @@ Notez les points suivants :
 - [Disposition (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [Exemple BusinessTumble (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
 - [Disposition dynamique (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
-- [Afficher une Image basée sur l’orientation de l’écran](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)
+- [Afficher une Image basée sur l’orientation de l’écran](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)
