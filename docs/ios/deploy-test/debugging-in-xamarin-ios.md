@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 494dfad0ba3d26147604ce1bca1de49fac318811
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4b21a69e49c8c7fd79de8edac9858c4714657f1c
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785432"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242314"
 ---
 # <a name="debugging-xamarinios-apps"></a>Débogage des applications Xamarin.iOS
 
@@ -30,7 +30,7 @@ Le débogueur Xamarin.iOS utilise le [débogueur Mono Soft](http://www.mono-proj
 
 ## <a name="setting-breakpoints"></a>Définition de points d’arrêt
 
-Quand vous êtes prêt à déboguer votre application, la première étape consiste à [définir des points d’arrêt pour votre application](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). Pour ce faire, cliquez dans la zone de marge de l’éditeur, à côté du numéro de ligne de code où vous souhaitez marquer un arrêt :
+Quand vous êtes prêt à déboguer votre application, la première étape consiste à [définir des points d’arrêt pour votre application](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Pour ce faire, cliquez dans la zone de marge de l’éditeur, à côté du numéro de ligne de code où vous souhaitez marquer un arrêt :
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -121,7 +121,7 @@ Vous pouvez ensuite entrer la condition de déclenchement du point d’arrêt :
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Pour définir un point d’arrêt conditionnel dans Visual Studio 2015, commencez par [définir un point d’arrêt classique](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/). Cliquez avec le bouton droit sur le point d’arrêt pour afficher son menu contextuel :
+Pour définir un point d’arrêt conditionnel dans Visual Studio 2015, commencez par [définir un point d’arrêt classique](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Cliquez avec le bouton droit sur le point d’arrêt pour afficher son menu contextuel :
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "Menu contextuel du point d’arrêt")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
@@ -241,6 +241,6 @@ Ensuite, vous pouvez démarrer votre application et effectuer un pas à pas dét
 
 - [Débogage avec Xamarin](/visualstudio/mac/debugging/)
 - [Visualisations des données](/visualstudio/mac/data-visualizations/)
-- [Définir un point d’arrêt](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)
-- [Exécuter le code pas à pas](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/)
-- [Envoyer les informations de sortie dans la fenêtre de journal](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)
+- [Définir un point d’arrêt](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
+- [Exécuter le code pas à pas](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)
+- [Envoyer les informations de sortie dans la fenêtre de journal](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)

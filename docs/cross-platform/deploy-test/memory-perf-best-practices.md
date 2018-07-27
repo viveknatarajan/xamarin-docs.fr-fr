@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c529d1d42d582cb49a906ad6fc39a191a7389f58
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bd08e1f83f7b1752a2830bda1390ffae4f86b360
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997437"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242405"
 ---
 # <a name="cross-platform-performance"></a>Niveau de performance multiplateforme
 
@@ -340,7 +340,7 @@ Pour en savoir plus, lisez ce billet de blog : [How To Keep Your Android App Si
 
 ## <a name="optimize-image-resources"></a>Optimiser les ressources d’images
 
-Les images font partie des ressources les plus coûteuses qui sont utilisées par les applications, et sont souvent capturées en haute résolution. Même si cela permet d’avoir des images nettes et riches en détails, les applications qui affichent ce type d’images nécessitent généralement une plus grande utilisation du processeur pour décoder les images, et davantage de mémoire pour stocker les images décodées. Le décodage d’une image haute résolution dans la mémoire peut être vu comme un gaspillage de ressources lorsque l’on sait que l’image va être réduite pour son affichage dans l’application. Au lieu de cela, vous pouvez réduire l’utilisation du processeur et l’encombrement de la mémoire en créant plusieurs résolutions pour les images stockées qui s’approchent des tailles d’affichage prévues. Par exemple, une image qui doit s’afficher dans une liste aura probablement besoin d’une résolution inférieure à celle d’une image devant s’afficher en plein écran. En outre, les versions réduites des images haute résolution peuvent être chargées afin d’être affichées de manière efficace, avec une incidence minimale sur la mémoire. Pour plus d’informations, consultez [Charger des bitmaps volumineux de manière efficace](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently/).
+Les images font partie des ressources les plus coûteuses qui sont utilisées par les applications, et sont souvent capturées en haute résolution. Même si cela permet d’avoir des images nettes et riches en détails, les applications qui affichent ce type d’images nécessitent généralement une plus grande utilisation du processeur pour décoder les images, et davantage de mémoire pour stocker les images décodées. Le décodage d’une image haute résolution dans la mémoire peut être vu comme un gaspillage de ressources lorsque l’on sait que l’image va être réduite pour son affichage dans l’application. Au lieu de cela, vous pouvez réduire l’utilisation du processeur et l’encombrement de la mémoire en créant plusieurs résolutions pour les images stockées qui s’approchent des tailles d’affichage prévues. Par exemple, une image qui doit s’afficher dans une liste aura probablement besoin d’une résolution inférieure à celle d’une image devant s’afficher en plein écran. En outre, les versions réduites des images haute résolution peuvent être chargées afin d’être affichées de manière efficace, avec une incidence minimale sur la mémoire. Pour plus d’informations, consultez [Charger des bitmaps volumineux de manière efficace](https://github.com/xamarin/recipes/tree/master/Recipes/android/resources/general/load_large_bitmaps_efficiently).
 
 Quelle que soit la résolution des images, l’affichage de ressources d’images peut augmenter considérablement l’encombrement mémoire de l’application. Par conséquent, elles ne doivent être créées que si elles sont nécessaires, et doivent être libérées dès que l’application n’en a plus besoin.
 
