@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/23/2018
-ms.openlocfilehash: 8235b6fb5fda2a414cf192dd66007d1d02f232aa
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2379c8ddc4bea6dd97bc4febd055dd8dfef39beb
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242379"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270486"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Résolution des dépendances dans Xamarin.Forms
 
@@ -111,7 +111,7 @@ Lorsqu’une application utilise une méthode de résolution de dépendance pour
 
 Après l’enregistrement du type à partir d’un projet de plateforme, le `IContainer` objet doit être généré, ce qui s’effectue en appelant le `BuildContainer` (méthode). Cette méthode appelle de Autofac `Build` méthode sur le `ContainerBuilder` instance, ce qui génère un nouveau conteneur d’injection de dépendance qui contient les enregistrements qui ont été apportées.
 
-Dans les sections qui suivent, un `Logger` (classe), qui implémente le `ILogger` l’interface, est injecté dans les constructeurs de classe. Le `Logger` à l’aide des fonctionnalités de journalisation simple implémente classe le `Debug.WriteLine` (méthode) et est utilisé pour illustrer la façon dont les services peuvent être injectées dans renderers personnalisés, des effets, et [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) implémentations.
+Dans les sections qui suivent, un `Logger` classe qui implémente le `ILogger` interface est injectée dans les constructeurs de classe. Le `Logger` à l’aide des fonctionnalités de journalisation simple implémente classe le `Debug.WriteLine` (méthode) et est utilisé pour illustrer la façon dont les services peuvent être injectées dans renderers personnalisés, des effets, et [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) implémentations.
 
 ### <a name="registering-custom-renderers"></a>L’inscription des convertisseurs personnalisés
 

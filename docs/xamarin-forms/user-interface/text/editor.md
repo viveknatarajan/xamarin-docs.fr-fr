@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/13/2018
-ms.openlocfilehash: 9774dcad14c2e2fc7e1203ef887a19f4b96218ba
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 6e3cf12431440823b1d32d91927bc634f60fd5e2
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241473"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270454"
 ---
 # <a name="xamarinforms-editor"></a>Éditeur de Xamarin.Forms
 
@@ -108,7 +108,7 @@ var editor = new Editor { Keyboard = Keyboard.Chat };
 
 Vous trouverez des exemples de chaque touche du clavier dans notre [recettes](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) référentiel.
 
-Le [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe a également un [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) méthode de fabrique qui peut être utilisé pour personnaliser un clavier en spécifiant le comportement de mise en majuscules, de vérification orthographique et de suggestion. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) valeurs d’énumération comme indiqué en tant qu’arguments à la méthode, avec un texte personnalisé `Keyboard` retournés. Le `KeyboardFlags` énumération contient les valeurs suivantes :
+Le [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) classe a également un [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) méthode de fabrique qui peut être utilisé pour personnaliser un clavier en spécifiant le comportement de mise en majuscules, de vérification orthographique et de suggestion. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) valeurs d’énumération sont spécifiés en tant qu’arguments à la méthode, avec un texte personnalisé `Keyboard` retournés. Le `KeyboardFlags` énumération contient les valeurs suivantes :
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – Aucuns fonctionnalités ne sont ajoutés à l’aide du clavier.
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – Indique que la première lettre du premier mot de chaque phrase entré sera être automatiquement mis en majuscules.

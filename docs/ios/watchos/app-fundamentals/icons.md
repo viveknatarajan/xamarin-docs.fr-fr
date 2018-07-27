@@ -6,28 +6,29 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 150cca754de26edffcf97bb5d39b26166662c75b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 07/26/2018
+ms.openlocfilehash: e46ecc9d78ccc5dcfbe571c9ec5350fe6c391b7e
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790664"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39275922"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Utilisation de watchOS icônes dans Xamarin
 
-Solutions de l’Apple Watch nécessitent deux jeux d’icônes :
+Solutions d’Apple Watch nécessitent deux jeux d’icônes :
 
-* Les icônes d’application iOS qui apparaîtront sur l’iPhone.
-* Icônes de l’Apple Watch qui seront affichés dans un cercle dans le menu espion et dans les écrans de notification. L’icône d’application espion apparaît également dans le [Apple Watch](~/ios/watchos/app-fundamentals/settings.md) application iOS.
+* Les icônes d’application iOS qui seront affiche sur l’iPhone.
+* Icônes d’Apple Watch seront affichera dans un cercle sur le menu espion et dans les écrans de notification. L’icône d’application watch apparaît également dans le [Apple Watch](~/ios/watchos/app-fundamentals/settings.md) application iOS.
 
 ## <a name="apple-watch-icons"></a>Icônes d’Apple Watch
 
 | | | |
 |-|-|-|
-|Icône de l’application d’iOS|S’affiche sur l’iPhone et démarre l’application parente|![](icons-images/icon-ios.png)|
-|Regardez l’icône de l’application|S’affiche sur l’écran d’accueil de l’Apple Watch|![](icons-images/icon-home.png)|
-||S’affiche sur les notifications de surveillance|![](icons-images/notification-icon.png)|
-||S’affiche dans le [Apple Watch application iOS](~/ios/watchos/app-fundamentals/settings.md)|![](icons-images/watch-app-sml.png)|
+|Icône d’application iOS|S’affiche sur l’iPhone et démarre l’application Parent|![icône de l’application iOS](icons-images/icon-ios.png)|
+|Regardez l’icône de l’application|S’affiche sur l’écran d’accueil de l’Apple Watch|![icône de l’application watchOS](icons-images/icon-home.png)|
+||S’affiche sur les notifications de surveillance|![icône de notification watchOS](icons-images/notification-icon.png)|
+||S’affiche dans le [Apple Watch application iOS](~/ios/watchos/app-fundamentals/settings.md)|![icône d’application Watch iOS](icons-images/watch-app-sml.png)|
 
 ## <a name="configuring-your-solution"></a>Configuration de votre Solution
 
@@ -35,13 +36,13 @@ Pour garantir que votre application iOS et application watch affichent l’icôn
 
 ### <a name="ios-app"></a>Application iOS
 
-Reportez-vous à la [guide des icônes d’Application iOS](~/ios/app-fundamentals/images-icons/app-icons.md) pour vérifier les icônes de votre application iOS sont correctement configurées.
+Reportez-vous à la [guide des icônes d’Application iOS](~/ios/app-fundamentals/images-icons/app-icons.md) afin de garantir les icônes de votre application iOS sont correctement configurés.
 
 #### <a name="infoplist"></a>Info.plist
 
-La chaîne qui apparaît en regard de votre application de surveillance dans le [Apple Watch paramètres application](~/ios/watchos/app-fundamentals/settings.md) est configuré dans le **Info.plist de l’application iOS**.
+La chaîne qui apparaît en regard de votre application watch dans le [Apple Watch paramètres application](~/ios/watchos/app-fundamentals/settings.md) est configuré dans le **Info.plist de l’application iOS**.
 
-Vérifiez que votre **Info.plist** a un `CFBundleName` clé et la valeur (Remarque : cela est différent du `CFBundleDisplayName`, peut avoir les deux) :
+Vérifiez que votre **Info.plist** a un `CFBundleName` clé et la valeur (Remarque : cela est différent pour le `CFBundleDisplayName`, vous pouvez avoir les deux) :
 
 ```xml
 <key>CFBundleName</key>
@@ -50,39 +51,39 @@ Vérifiez que votre **Info.plist** a un `CFBundleName` clé et la valeur (Remarq
 
 ### <a name="apple-watch-app"></a>Application d’Apple Watch
 
-Une fois votre [application parente](~/ios/watchos/app-fundamentals/parent-app.md) ses icônes a configuré, vous devez ajouter un catalogue icône application à l’application de surveillance.
+Une fois votre [application parente](~/ios/watchos/app-fundamentals/parent-app.md) ses icônes a configuré, vous devez ajouter un catalogue de ressources d’icône application à l’application watch.
 
-1. Avec le bouton droit sur le projet d’application espion et sélectionnez **fichier > Ajouter > nouveau fichier... > iOS > catalogue** pour ajouter un catalogue pour le projet.
+1. Avec le bouton droit sur le projet d’application Watch et sélectionnez **fichier > Ajouter > nouveau fichier... > iOS > catalogue de composants** pour ajouter un catalogue de ressources au projet.
 
- ![](icons-images/newasset.png "Ajouter un catalogue pour le projet")
+ ![](icons-images/newasset.png "Ajouter un catalogue de ressources au projet")
 
-2. Double-cliquez sur le **AppIcons.appiconset/Contents.json** fichier
+2. Double-cliquez sur le **AppIcon.appiconset/Contents.json** fichier
 
-  ![](icons-images/xcassets-iconset-sml.png "Le contenu de AppIcons")
+  ![](icons-images/xcassets-iconset-sml.png "Le contenu AppIcon")
 
 3. Ajoutez toutes les images watchOS, comme indiqué dans cette capture d’écran :
 
   [![](icons-images/appicons-sml.png "Ajoutez toutes les images watchOS, comme indiqué dans cette capture d’écran")](icons-images/appicons.png#lightbox)
 
-  Reportez-vous à [les instructions d’Apple icône](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html) pour les tailles requises (les dimensions sont également affichées sur l’écran). N’oubliez pas que ces icônes seront automatiquement découpés pour effectuer le rendu d’un cercle.
+  Reportez-vous à [instructions d’Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) pour les tailles requises (les dimensions sont également indiquées sur l’écran). N’oubliez pas que ces icônes seront automatiquement découpés à restituer dans un cercle.
 
   Votre liste d’icône doit ressembler à ceci :
 
   ![](icons-images/xcassets-complete-sml.png "La liste d’icône dans l’Explorateur de solutions")
 
-4. Pour garantir le catalogue est inclus dans l’application, ajoutez la clé suivante et que la valeur pour le **Info.plist de l’application espion**:
+4. Pour garantir le catalogue de composants est inclus dans l’application, ajoutez la clé suivante et que la valeur pour le **Info.plist de l’application Watch**:
 
 ```xml
 <key>XSAppIconAssets</key>
-<string>Images.xcassets/AppIcons.appiconset</string>
+<string>Images.xcassets/AppIcon.appiconset</string>
 ```
 
 Vous pouvez vérifier les icônes sont configurés correct en vérifiant la [Apple Watch paramètres application](~/ios/watchos/app-fundamentals/settings.md) dans le simulateur, iPhone ou en générant un [notification](~/ios/watchos/platform/notifications.md) et confirmation de l’icône s’affiche sur la notification écran.
 
 > [!NOTE]
-> Icônes ne peut pas avoir un canal alpha (l’application est rejetée pendant l’envoi du magasin d’applications si un canal alpha est présent). Vous pouvez vérifier si un canal alpha existe et supprimez-le [à l’aide de l’application de la version d’évaluation sur Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
+> Icônes ne peut pas avoir un canal alpha (l’application est rejetée lors de l’envoi de l’App Store si un canal alpha est présent). Vous pouvez vérifier si un canal alpha existe et supprimez-le [à l’aide de l’application de la version préliminaire sur Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Guident de l’icône d’Apple et les Images](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html)
+- [Guide d’icône & images watchOS d’Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)
