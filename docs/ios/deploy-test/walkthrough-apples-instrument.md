@@ -1,18 +1,18 @@
 ---
 title: 'Procédure pas à pas : Utilisation de l’outil Instruments d’Apple'
-description: Cet article décrit comment utiliser l’outil Instruments d’Apple pour diagnostiquer les problèmes de mémoire dans une application iOS conçue avec Xamarin. Il montre comment lancer Instruments, prendre des instantanés du tas, analyser la croissance de la mémoire et bien plus encore.
+description: Cet article explique comment utiliser l’outil Instruments d’Apple pour diagnostiquer les problèmes de mémoire dans une application iOS conçue avec Xamarin. Il montre comment lancer Instruments, prendre des instantanés du tas, analyser la croissance de la mémoire et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 4241fe9fed260091de98ba47d68b0ad5d97ed626
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a751488b4063a594904393faa605d36c3414d2ec
+ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785773"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182180"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Procédure pas à pas : Utilisation de l’outil Instruments d’Apple
 
@@ -23,40 +23,40 @@ Commencez par télécharger l’[exemple MemoryDemo](https://developer.xamarin.c
 
 ## <a name="diagnosing-the-memory-issues"></a>Diagnostiquer les problèmes de mémoire
 
-1.  Dans Visual Studio pour Mac, lancez **Instruments** à partir de l’élément de menu **Outils > Lancer Instruments**.
-2.  Chargez l’application sur l’appareil en choisissant l’élément de menu **Exécuter > Charger sur l’appareil**.
-3.  Choisissez le modèle **Allocations** (icône orange avec une boîte blanche)
+1. Dans Visual Studio pour Mac, lancez **Instruments** à partir de l’élément de menu **Outils > Lancer Instruments**.
+2. Chargez l’application sur l’appareil en choisissant l’élément de menu **Exécuter > Charger sur l’appareil**.
+3. Choisissez le modèle **Allocations** (icône orange avec une boîte blanche)
 
     ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Choisir le modèle Allocations")
 
-4.  Sélectionnez l’application **MemoryDemo** dans la liste **Choose a profiling template for:** en haut de la fenêtre. Cliquez sur l’appareil iOS pour développer le menu qui affiche les applications installées.
+4. Sélectionnez l’application **MemoryDemo** dans la liste **Choose a profiling template for:** en haut de la fenêtre. Cliquez sur l’appareil iOS pour développer le menu qui affiche les applications installées.
 
     ![](walkthrough-apples-instrument-images/01-mem-demo.png "Sélectionner l’application MemoryDemo")
 
-5.  Appuyez sur le bouton **Choose** (en bas à droite de la fenêtre) pour démarrer **Instruments**. Ce modèle affiche deux éléments dans le volet supérieur : Allocations et VM Tracker.
+5. Appuyez sur le bouton **Choose** (en bas à droite de la fenêtre) pour démarrer **Instruments**. Ce modèle affiche deux éléments dans le volet supérieur : Allocations et VM Tracker.
 
-6.  Appuyez sur le bouton d’**enregistrement** (bouton rouge en haut à gauche) dans Instruments pour lancer l’application.
+6. Appuyez sur le bouton d’**enregistrement** (bouton rouge en haut à gauche) dans Instruments pour lancer l’application.
 
-7.  Sélectionnez la ligne **VM Tracker** dans le volet supérieur (comme l’application est maintenant démarrée, le volet contient deux sections : Dirty et Resident Size). Dans le volet **Inspector**, choisissez l’option **Show Display Settings** (l’icône d’engrenage), puis cochez la case **Automatic Snapshotting** figurant en bas à droite dans cette capture d’écran :
+7. Sélectionnez la ligne **VM Tracker** dans le volet supérieur (comme l’application est maintenant démarrée, le volet contient deux sections : Dirty et Resident Size). Dans le volet **Inspector**, choisissez l’option **Show Display Settings** (l’icône d’engrenage), puis cochez la case **Automatic Snapshotting** figurant en bas à droite dans cette capture d’écran :
 
     ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Choisir l’option Show Display Settings (icône d’engrenage) et cocher la case Automatic Snapshotting")
 
-8.  Sélectionnez la ligne **Allocations** dans le volet supérieur (comme l’application est maintenant démarrée, le volet affiche *All Heap and Anonymous VM*)
-9.  Dans le volet **Inspector**, choisissez l’option **Show Display Settings** (l’icône d’engrenage), puis appuyez sur le bouton **Mark Generation** pour établir une base de référence. Un petit drapeau rouge apparaît dans la chronologie en haut de la fenêtre
-10.  Faites défiler l’application, puis resélectionnez **Mark Generation** (répétez l’opération plusieurs fois)
-11.  Cliquez sur le bouton d’**arrêt**.
-12.  Développez le nœud **Generation** avec la plus grande valeur **Growth** et triez les valeurs **Growth** par ordre décroissant.
-13.  Dans le volet **Inspector**, passez à la vue **Extended Detail** (la « E ») pour afficher la trace de pile sous **Stack Trace**.
+8. Sélectionnez la ligne **Allocations** dans le volet supérieur (comme l’application est maintenant démarrée, le volet affiche *All Heap and Anonymous VM*)
+9. Dans le volet **Inspector**, choisissez l’option **Show Display Settings** (l’icône d’engrenage), puis appuyez sur le bouton **Mark Generation** pour établir une base de référence. Un petit drapeau rouge apparaît dans la chronologie en haut de la fenêtre
+10. Faites défiler l’application, puis resélectionnez **Mark Generation** (répétez l’opération plusieurs fois)
+11. Cliquez sur le bouton d’**arrêt**.
+12. Développez le nœud **Generation** avec la plus grande valeur **Growth** et triez les valeurs **Growth** par ordre décroissant.
+13. Dans le volet **Inspector**, passez à la vue **Extended Detail** (la « E ») pour afficher la trace de pile sous **Stack Trace**.
 
-14.  Notez que le nœud **<non-object>** affiche une croissance excessive de la mémoire. Cliquez sur la flèche à côté de ce nœud pour afficher plus de détails. Cliquez avec le bouton droit dans la trace de pile pour ajouter l’**emplacement source** dans le volet :
+14. Notez que le nœud **&lt;non-object>** affiche une croissance excessive de la mémoire. Cliquez sur la flèche à côté de ce nœud pour afficher plus de détails. Cliquez avec le bouton droit dans la trace de pile pour ajouter l’**emplacement source** dans le volet :
 
     ![](walkthrough-apples-instrument-images/03-mem-growth.png "Ajouter l’emplacement source dans le volet")
 
-15.  Triez par **taille** et affichez la vue détaillée **Extended Detail** :
+15. Triez par **taille** et affichez la vue détaillée **Extended Detail** :
 
     ![](walkthrough-apples-instrument-images/04-extended-detail.png "Trier par taille et afficher la vue Extended Detail")
 
-16.  Cliquez sur l’entrée souhaitée dans la pile des appels pour afficher le code connexe :
+16. Cliquez sur l’entrée souhaitée dans la pile des appels pour afficher le code connexe :
 
     ![](walkthrough-apples-instrument-images/05-related-code.png "Afficher le code connexe")
 
@@ -87,8 +87,7 @@ Maintenant, la quantité de mémoire utilisée pendant l’exécution de l’app
 
 Le code amélioré est disponible dans l’[exemple MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/), dans la solution **after** dans Visual Studio pour Mac.
 
-Ce blog de communauté sur le [garbage collection Xamarin.iOS](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/) est une source de référence utile pour gérer les problèmes de mémoire avec Xamarin.iOS.
-
+Ce blog de communauté sur le [garbage collection Xamarin.iOS](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) est une source de référence utile pour gérer les problèmes de mémoire avec Xamarin.iOS.
 
 ## <a name="summary"></a>Récapitulatif
 
@@ -96,8 +95,7 @@ Cet article vous a montré comment utiliser Instruments pour diagnostiquer les p
 Il vous a expliqué comment lancer Instruments à partir de Visual Studio pour Mac, charger le modèle d’allocation de mémoire et identifier les problèmes de mémoire.
 Enfin, l’application a été réexaminée pour vérifier que le problème a bien été corrigé.
 
-
 ## <a name="related-links"></a>Liens associés
 
 - [Échantillon MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/)
-- [Garbage Collection Xamarin.iOS](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Garbage collection Xamarin.iOS (billet de blog)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

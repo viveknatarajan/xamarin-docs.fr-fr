@@ -1,5 +1,5 @@
 ---
-title: Hello, iOS - Immersion
+title: Hello, iOS – Exploration approfondie
 description: Ce document examine l’exemple d’application Hello, iOS de manière approfondie, notamment son architecture, son interface utilisateur, sa hiérarchie d’affichage du contenu, les tests et le déploiement.
 ms.topic: quickstart
 ms.prod: xamarin
@@ -8,38 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f7869f572bfd6f6c8a0bc710c6e28671c22ad7eb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 16920f27a1830dc6a3ab1a3cb0a267eb3b1d90ea
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786398"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203021"
 ---
-# <a name="hello-ios--deep-dive"></a>Hello, iOS - Immersion
+# <a name="hello-ios--deep-dive"></a>Hello, iOS – Exploration approfondie
 
 La procédure de démarrage rapide a montré comment créer et exécuter une application Xamarin.iOS de base. Maintenant, vous allez approfondir votre connaissance du fonctionnement des applications iOS, en vue de créer des programmes plus complexes. Ce guide passe en revue les étapes décrites dans la procédure pas à pas Hello, iOS pour vous permettre de mieux comprendre les concepts fondamentaux du développement d’applications iOS.
-
-Cet article aborde les sujets suivants :
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
-
-- **Introduction à Visual Studio pour Mac :** introduction à Visual Studio pour Mac et à la création d’une application.
-- **Anatomie d’une application Xamarin.iOS :** tour d’horizon des principaux composants d’une application Xamarin.iOS.
-- **Concepts fondamentaux d’une architecture et d’une application :** examen des composants d’une application iOS et des relations entre eux.
-- **Interface utilisateur (IU) :** création d’interfaces utilisateur avec le concepteur iOS.
-- **Contrôleurs d’affichage et cycle de vie de l’affichage :** présentation du cycle de vie de l’affichage et de la gestion des hiérarchies d’affichage de contenu avec le contrôleur d’affichage.
-- **Test, déploiement et finitions :** finalisez votre application à l’aide de conseils sur les tests, le déploiement, la conception de graphiques, etc.
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-- **Introduction à Visual Studio :** introduction à Visual Studio et à la création d’une application.
-- **Anatomie d’une application Xamarin.iOS :** tour d’horizon des principaux composants d’une application Xamarin.iOS.
-- **Concepts fondamentaux d’une architecture et d’une application :** examen des composants d’une application iOS et des relations entre eux.
-- **Interface utilisateur (IU) :** création d’interfaces utilisateur avec le concepteur iOS.
-- **Contrôleurs d’affichage et cycle de vie de l’affichage :** présentation du cycle de vie de l’affichage et de la gestion des hiérarchies d’affichage de contenu avec le contrôleur d’affichage.
-- **Test, déploiement et finitions :** finalisez votre application à l’aide de conseils sur les tests, le déploiement, la conception de graphiques, etc.
-
------
 
 Ce guide a pour but de vous aider à développer les compétences et les connaissances nécessaires à la génération d’une application iOS à écran unique. À la fin de ce guide, vous connaîtrez les différents composants d’une application Xamarin.iOS et comprendrez la logique de leur organisation.
 
@@ -64,8 +42,6 @@ Visual Studio organise le code en _solutions_ et en *projets*. Une solution est 
 ![](hello-ios-deepdive-images/vs-image30.png "Capture d’écran de la solution initiale")
 
 -----
-
-<a name="anatomy" />
 
 ## <a name="anatomy-of-a-xamarinios-application"></a>Anatomie d’une application Xamarin.iOS
 
@@ -96,7 +72,7 @@ Pendant la procédure pas à pas [Hello, iOS](~/ios/get-started/hello-ios/hello-
 -  **Info.plist** : Le fichier `Info.plist` définit les propriétés d’application comme le nom de l’application, ses icônes, ses images de lancement, etc. Ce fichier est très important. Il est présenté de façon détaillée dans le guide d’[utilisation des listes de propriétés](~/ios/app-fundamentals/property-lists.md).
 -  **Entitlements.plist** : La liste des propriétés des droits permet de spécifier les *fonctionnalités* de l’application (également appelées App Store Technologies) comme iCloud, PassKit, etc. Pour plus d’informations sur `Entitlements.plist`, consultez le guide d’[utilisation des listes de propriétés](~/ios/app-fundamentals/property-lists.md). Pour obtenir une présentation générale des droits, reportez-vous au guide de [provisionnement des appareils](~/ios/get-started/installation/device-provisioning/index.md).
 
-## <a name="architecture-and-app-fundamentals"></a>Concepts fondamentaux d’une architecture et d’une application
+## <a name="architecture-and-app-fundamentals"></a>Concepts fondamentaux de l’architecture et des applications
 
 Pour qu’une application iOS puisse charger une interface utilisateur, deux éléments doivent préalablement être en place. Tout d’abord, l’application doit définir un *point d’entrée* : le premier code qui s’exécute lorsque le processus de l’application est chargé en mémoire. Ensuite, elle doit définir une classe pour gérer les événements à l’échelle de l’application et interagir avec le système d’exploitation.
 
@@ -322,7 +298,7 @@ Voici les méthodes de cycle de vie de base et leur fonction :
 
 Quand du code personnalisé est ajouté à un stade du cycle de vie, l’*implémentation de base* de cette méthode de cycle de vie doit être *substituée*. Pour cela, accédez à la méthode de cycle de vie existante, à laquelle est déjà attaché du code, puis étendez-la à l’aide de code supplémentaire. L’implémentation de base est appelée à partir de la méthode pour veiller à ce que le code d’origine s’exécute avant le nouveau code. Un exemple de ce type d’appel est présenté dans la section suivante.
 
-Pour plus d’informations sur l’utilisation des contrôleurs d’affichage, reportez-vous au [guide de programmation des contrôleurs d’affichage pour iOS](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ViewLoadingandUnloading/ViewLoadingandUnloading.html) d’Apple et aux [informations de référence sur UIViewController](https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html).
+Pour plus d’informations sur l’utilisation des contrôleurs d’affichage, reportez-vous au [guide de programmation des contrôleurs d’affichage pour iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) d’Apple et aux [informations de référence sur UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc).
 
 ### <a name="responding-to-user-interaction"></a>Réponse aux interactions de l’utilisateur
 
@@ -379,7 +355,7 @@ L’application Phoneword a introduit plusieurs concepts qui ne sont pas traité
     CallButton.SetTitle ("Call", UIControlState.Normal);
     ```
 - **Activer et désactiver des boutons** : les **boutons** peuvent être dans un état `Enabled` ou `Disabled`. Un **bouton** désactivé ne répond pas aux entrées d’utilisateur. Par exemple, le code suivant désactive le bouton `CallButton` : CallButton.Enabled = false ; pour plus d’informations sur les boutons, reportez-vous au guide sur les [boutons](~/ios/user-interface/controls/buttons.md).
-- **Faire disparaître le clavier** : lorsque l’utilisateur appuie sur le champ de texte, iOS affiche le clavier pour lui permettre d’entrer du texte. Malheureusement, il n’existe aucune fonctionnalité intégrée pour faire disparaître le clavier. Le code suivant est ajouté au `TranslateButton` pour faire disparaître le clavier quand l’utilisateur appuie sur `TranslateButton` : PhoneNumberText.ResignFirstResponder () ; pour obtenir un autre exemple de disparition du clavier, reportez-vous à la procédure [Faire disparaître le clavier](https://developer.xamarin.com/recipes/ios/input/keyboards/dismiss_the_keyboard).
+- **Faire disparaître le clavier** : lorsque l’utilisateur appuie sur le champ de texte, iOS affiche le clavier pour lui permettre d’entrer du texte. Malheureusement, il n’existe aucune fonctionnalité intégrée pour faire disparaître le clavier. Le code suivant est ajouté au `TranslateButton` pour faire disparaître le clavier quand l’utilisateur appuie sur `TranslateButton` : PhoneNumberText.ResignFirstResponder () ; pour obtenir un autre exemple de disparition du clavier, reportez-vous à la procédure [Faire disparaître le clavier](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard).
 - **Passer l’appel téléphonique avec une URL** : dans l’application Phoneword, un modèle d’URL Apple est utilisé pour lancer l’application téléphonique du système. Le modèle d’URL personnalisé comprend un préfixe « tel: » suivi du numéro de téléphone converti, comme l’illustre le code ci-dessous :
 
     ```csharp
@@ -399,7 +375,7 @@ L’application Phoneword a introduit plusieurs concepts qui ne sont pas traité
                 }
     ```
 
-Pour plus d’informations sur les affichages d’alerte iOS, reportez-vous à la [procédure du contrôleur d’alerte](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/).
+Pour plus d’informations sur les affichages d’alerte iOS, reportez-vous à la [procédure du contrôleur d’alerte](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller).
 
 ## <a name="testing-deployment-and-finishing-touches"></a>Test, déploiement et finitions
 
@@ -407,11 +383,11 @@ Visual Studio pour Mac et Visual Studio proposent de nombreuses options pour tes
 
 ### <a name="debugging-tools"></a>Outils de débogage
 
-Il est parfois difficile de détecter les problèmes dans le code d’une application. Pour mieux diagnostiquer les problèmes complexes qui se trouvent dans votre code, vous pouvez [définir un point d’arrêt](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/), [exécuter pas à pas votre code](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/) ou [enregistrer des informations dans la fenêtre Journal](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/).
+Il est parfois difficile de détecter les problèmes dans le code d’une application. Pour mieux diagnostiquer les problèmes complexes qui se trouvent dans votre code, vous pouvez [définir un point d’arrêt](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [exécuter pas à pas votre code](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) ou [enregistrer des informations dans la fenêtre Journal](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
 ### <a name="deploy-to-a-device"></a>Déployer l’application sur un appareil
 
-Le simulateur IOS offre un moyen rapide de tester une application. Il propose de nombreuses optimisations utiles pour les tests, notamment un emplacement fictif, une [simulation du mouvement](https://developer.xamarin.com/recipes/ios/multitasking/test_location_changes_in_simulator/), etc. En revanche, les utilisateurs ne consomment pas l’application finale dans un simulateur. Toutes les applications doivent être testées sur des appareils réels le plus tôt et le plus souvent possible.
+Le simulateur IOS offre un moyen rapide de tester une application. Il propose de nombreuses optimisations utiles pour les tests, notamment un emplacement fictif, une [simulation du mouvement](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator), etc. En revanche, les utilisateurs ne consomment pas l’application finale dans un simulateur. Toutes les applications doivent être testées sur des appareils réels le plus tôt et le plus souvent possible.
 
 Un appareil a besoin de temps pour être provisionné et un compte de développeur Apple est nécessaire. Le guide de [provisionnement des appareils](~/ios/get-started/installation/device-provisioning/index.md) fournit des instructions précises sur la préparation d’un appareil au développement.
 
@@ -461,8 +437,8 @@ Félicitations ! Vous avez maintenant une connaissance approfondie des composan
 Dans le [didacticiel suivant de la série de mise en route](~/ios/get-started/hello-ios-multiscreen/index.md), vous allez étendre notre application pour gérer plusieurs écrans. Vous allez au fur et à mesure implémenter un contrôleur de navigation, découvrir les enchaînements de Storyboard et faire connaissance avec le modèle MVC (Model-View-Controller) quand vous étendrez notre application pour gérer plusieurs écrans.
 
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Hello, iOS (exemple)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [Lignes directrices de l’interface utilisateur iOS](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [Portail de provisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)
+- [Lignes directrices de l’interface utilisateur iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
+- [Portail de provisionnement iOS](http://developer.apple.com/account/#/overview)

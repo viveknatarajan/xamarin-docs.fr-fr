@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/22/2018
-ms.openlocfilehash: 5991c907b85188581db105a8db9d17460954f56f
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 776e2b52d6b8860c5fb5fa16253c2e1d42aa962a
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935488"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241413"
 ---
 # <a name="setup-and-installation"></a>Installation et configuration
 
@@ -38,3 +38,7 @@ Ces articles expliquent comment configurer l’émulateur Android pour tester et
 ## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Configuration des appareils Android](~/android/get-started/installation/set-up-device-for-development.md)
 
 Cet article explique comment configurer un appareil Android physique et le connecter à un ordinateur de développement en vue de l’utiliser pour exécuter et déboguer des applications Xamarin.Android.
+
+## <a name="microsoft-openjdk-previewandroidget-startedinstallationopenjdkmd"></a>[Préversion de Microsoft OpenJDK](~/android/get-started/installation/openjdk.md)
+
+Ce guide décrit les étapes permettant de passer à la préversion de la distribution OpenJDK de Microsoft.

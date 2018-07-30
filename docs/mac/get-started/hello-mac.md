@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 438bb8141818ccdb1aaf2fa604707d2fb7601cd5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f06bf6736b427a4d77ac34957d75cd321f3dae3a
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792783"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39275935"
 ---
 # <a name="hello-mac--walkthrough"></a>Hello, Mac – Procédure pas à pas
 
@@ -249,7 +249,7 @@ Le fichier `Info.plist` contient des informations sur l’application Xamarin.Ma
 
 [![](hello-mac-images/infoplist01.png "Éditeur plist de Visual Studio pour Mac")](hello-mac-images/infoplist01.png#lightbox)
 
-Il définit aussi le _storyboard_ qui sera utilisé pour afficher l’interface utilisateur de l’application Xamarin.Mac sous la liste déroulante **Interface principale**. Dans le cas de l’exemple ci-dessus, la valeur `Main` dans la liste déroulante est liée à `Main.storyboard` dans l’arborescence source du projet dans l’**Explorateur de solutions**. Il définit également les icônes de l’application en spécifiant le *Catalogue de ressources* qui les contient (AppIcons ici).
+Il définit aussi le _storyboard_ qui sera utilisé pour afficher l’interface utilisateur de l’application Xamarin.Mac sous la liste déroulante **Interface principale**. Dans le cas de l’exemple ci-dessus, `Main` dans la liste déroulante fait référence à `Main.storyboard` dans l’arborescence source du projet dans **l’Explorateur de solutions**. Il définit également les icônes de l’application en spécifiant le *Catalogue de ressources* qui les contient (**AppIcon** ici).
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 25129d532af0b146afedf28865649ffc9e38ee17
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9b6168eba91a87af88891b9e07e3dd395301cc48
+ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785610"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182206"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Profilage d’applications Xamarin.iOS avec Instruments
 
@@ -27,11 +27,11 @@ L’outil Instruments dans Xcode s’exécute uniquement sur un Mac.
 
 Sélectionnez l’appareil et exécutez l’application Instruments :
 
-1.  Ouvrez le projet Xamarin.iOS dans Visual Studio pour Mac.
-2.  Sélectionnez la configuration **Debug|iPhone**.
-3.  Connectez un appareil iOS à l’ordinateur.
-4.  Dans le menu **Exécuter**, sélectionnez **Charger sur l’appareil**. L’application est ensuite générée et chargée sur l’appareil.
-5.  Dans le menu **Outils**, sélectionnez **Lancer Instruments**.
+1. Ouvrez le projet Xamarin.iOS dans Visual Studio pour Mac.
+2. Sélectionnez la configuration **Debug|iPhone**.
+3. Connectez un appareil iOS à l’ordinateur.
+4. Dans le menu **Exécuter**, sélectionnez **Charger sur l’appareil**. L’application est ensuite générée et chargée sur l’appareil.
+5. Dans le menu **Outils**, sélectionnez **Lancer Instruments**.
 
 
 Instruments s’ouvre et affiche la boîte de dialogue suivante :
@@ -65,4 +65,4 @@ Ce guide vous a montré comment démarrer Instruments dans Xcode pour surveiller
 ## <a name="related-links"></a>Liens associés
 
 - [Procédure pas à pas pour utiliser Instruments](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Garbage Collection Xamarin.iOS](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Garbage collection Xamarin.iOS (billet de blog)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
