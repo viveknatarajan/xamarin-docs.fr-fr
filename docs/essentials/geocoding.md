@@ -5,18 +5,18 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 063adba82d96e7fcc64d7ec49a0c0133e1cef8ef
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: a4d6e4d9b32e665893d82693a3c858630b63d372
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831446"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353673"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials : géocodage
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **géocodage** classe fournit des API aux Géocode un placemark un coordonnées positionnels et inverser Géocode coordincates vers un placemark.
+Le **géocodage** classe fournit des API aux Géocode un placemark un coordonnées positionnels et inverser des coordonnées de Géocode vers un placemark.
 
 ## <a name="getting-started"></a>Prise en main
 
@@ -32,7 +32,7 @@ Aucune configuration supplémentaire n’est requis.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Une clé d’API Bing maps est nécessaire pour utiliser funcationality de géocodage. Inscrivez-vous pour bénéficier d’un [Bing Maps](https://www.bingmapsportal.com/) compte. Sous **mon compte > Mes clés** créer une nouvelle clé et le remplissage des informations en fonction de votre type d’application (qui doit être **publique application Windows (UWP, 8.x et les versions antérieures)** pour les applications UWP).
+Une clé API Bing Maps est requise pour utiliser la fonctionnalité de géocodage. Inscrivez-vous pour bénéficier d’un [Bing Maps](https://www.bingmapsportal.com/) compte. Sous **mon compte > Mes clés** créer une nouvelle clé et le remplissage des informations en fonction de votre type d’application (qui doit être **publique application Windows (UWP, 8.x et les versions antérieures)** pour les applications UWP).
 
 Très tôt dans la vie de votre application avant d’appeler une **géocodage** méthodes définissent la clé d’API :
 
@@ -70,11 +70,11 @@ catch (FeatureNotSupportedException fnsEx)
 }
 catch (Exception ex)
 {
-    // Handle exception that may have occured in geocoding
+    // Handle exception that may have occurred in geocoding
 }
 ```
 
-L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus de plus haut niveau de la mer. 
+L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus de plus haut niveau de la mer.
 
 Obtention de [placemarks](xref:Xamarin.Essentials.Placemark) pour un ensemble existant de coordonnées :
 

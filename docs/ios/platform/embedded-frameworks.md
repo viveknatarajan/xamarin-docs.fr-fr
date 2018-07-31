@@ -1,29 +1,30 @@
 ---
-title: Structures incorporées dans Xamarin.iOS
-description: Ce document décrit comment partager du code avec des infrastructures incorporés dans une application Xamarin.iOS. Cela est possible avec l’outil de mtouch ou de références natives.
+title: Frameworks incorporés dans Xamarin.iOS
+description: Ce document décrit comment partager du code avec des frameworks incorporés dans une application Xamarin.iOS. Cela est possible avec l’outil mtouch ou des références natives.
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e42f0940fe3fc132c9d381907aad5afbe474c4ad
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/05/2018
+ms.openlocfilehash: cce5356fd1d3d9a5cf16370a4843c3541b00a7c0
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787290"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351432"
 ---
-# <a name="embedded-frameworks-in-xamarinios"></a>Structures incorporées dans Xamarin.iOS
+# <a name="embedded-frameworks-in-xamarinios"></a>Frameworks incorporés dans Xamarin.iOS
 
 _Ce document décrit comment les développeurs d’applications peuvent incorporer des infrastructures d’utilisateur dans leurs applications._
 
-Avec iOS 8.0 Apple rend possible de créer une structure incorporée pour partager du code entre les extensions d’application et de l’application principale dans Xcode.
+Avec iOS Apple 8.0 permettait de créer une structure incorporée afin de partager du code entre les extensions d’application et de l’application principale dans Xcode.
 
-Xamarin.iOS 9.0 ajoute la prise en charge pour l’utilisation de ces infrastructures incorporés (créées avec Xcode) dans les applications Xamarin.iOS. *Il sera **pas** être possible de créer des structures incorporées à partir de n’importe quel type de Xamarin.iOS projets uniquement utiliser les infrastructures (Objective-C) natifs existantes.*
+Xamarin.iOS 9.0 prend en charge pour la consommation de ces frameworks incorporés (créées avec Xcode) dans les applications Xamarin.iOS. *Il sera **pas** possible de créer des frameworks incorporés à partir de n’importe quel type de projets Xamarin.iOS, uniquement consommer des infrastructures (Objective-C) natifs existantes.*
 
-Il existe deux façons de consommer les infrastructures dans Xamarin.iOS :
+Il existe deux manières de consommer des infrastructures dans Xamarin.iOS :
 
-- Passer de l’infrastructure à l’outil mtouch, en ajoutant le code suivant pour les arguments mtouch supplémentaires dans le fichier **Build iOS** options :
+- Passer de l’infrastructure à l’outil mtouch, en ajoutant le code suivant aux arguments mtouch supplémentaires dans le projet **Build iOS** options :
 
   ```csharp
   --framework:/Path/To/My.Framework
@@ -49,28 +50,28 @@ Avec le bouton droit sur le projet et Parcourir pour ajouter des références na
 
   Cela fonctionne pour toutes les configurations.
 
-Dans les futures versions de Visual Studio pour Mac et des outils Xamarin pour Visual Studio, il sera possible de consommer des infrastructures à partir de l’IDE (sans avoir à modifier manuellement les fichiers de projet).
+Dans les versions futures de Visual Studio pour Mac et les outils Xamarin pour Visual Studio, il sera possible consommer des infrastructures à partir de l’IDE (sans avoir à modifier manuellement les fichiers projet).
 
-Quelques exemples de projets se trouvent sur [github](https://github.com/rolfbjarne/embedded-frameworks)
+Vous trouverez quelques exemples de projets sur [github](https://github.com/rolfbjarne/embedded-frameworks)
 
 ## <a name="limitations"></a>Limitations
 
-- Structures incorporées sont uniquement pris en charge dans [unifié](~/cross-platform/macios/unified/index.md) projets.
-- Structures incorporées sont uniquement pris en charge dans les projets avec une cible de déploiement d’au moins iOS 8.0.
-- Si une extension nécessite une infrastructure incorporée, l’application conteneur doit également avoir une référence à l’infrastructure, sinon que l’infrastructure de ne pas être inclus dans le lot d’applications.
+- Frameworks incorporés sont uniquement pris en charge dans [unifiés](~/cross-platform/macios/unified/index.md) projets.
+- Frameworks incorporés sont uniquement pris en charge dans les projets avec une cible de déploiement d’au moins iOS 8.0.
+- Si une extension nécessite une infrastructure incorporée, l’application de conteneur doit également avoir une référence à l’infrastructure, sinon que le framework ne sera pas inclus dans le bundle d’applications.
 
 ## <a name="the-mono-runtime"></a>Le runtime Mono
 
-En interne, Xamarin.iOS tire parti de cette fonctionnalité pour lier avec le runtime Mono en tant qu’infrastructure, au lieu de la liaison statique de l’exécution Mono dans chaque extension et l’application conteneur.
+En interne, Xamarin.iOS tire parti de cette fonctionnalité pour lier avec le runtime Mono en tant qu’infrastructure, au lieu de lier le runtime Mono statiquement dans chaque extension et l’application de conteneur.
 
-Cela est fait automatiquement si l’application conteneur est une application unifiée, il contient des extensions et le déploiement de la cible est iOS 8.0 ou version ultérieure.
+Cela est fait automatiquement si l’application de conteneur est une application unifiée, il contient des extensions et le déploiement cible est iOS 8.0 ou version ultérieure.
 
-Applications sans extensions seront toujours lier avec le runtime Mono statiquement, car une baisse de taille pour l’utilisation d’une infrastructure s’il en existe qu’une seule application y faire référence.
+Applications sans extensions de liens seront toujours avec le runtime Mono statiquement, car il existe une altération de taille pour l’utilisation d’une infrastructure s’il en existe qu’une seule application qui la référencent.
 
-Ce comportement peut être substitué par le développeur de l’application, en ajoutant le code suivant comme argument mtouch supplémentaires dans les e/s du projet options de Build :
+Ce comportement peut être remplacé par le développeur d’application, en ajoutant le code suivant en tant qu’argument mtouch supplémentaires dans des options Build iOS du projet :
 
 - `--mono:static`: Lie statiquement avec le runtime Mono.
-- `--mono:framework`: Les liens avec le runtime Mono en tant qu’infrastructure.
+- `--mono:framework`: Liens avec le runtime Mono en tant qu’infrastructure.
 
-Un scénario de liaison avec le runtime Mono en tant qu’infrastructure même pour les applications sans extensions est de réduire la taille exécutable, pour contourner les restrictions de taille Qu'apple applique sur le fichier exécutable. Pour référence, le runtime Mono ajoute environ 1,7 Mo par architecture (comme de Xamarin.iOS 8.12, cependant son varie entre les versions et même entre des applications). L’infrastructure Mono ajoute environ 2,3 Mo par architecture, ce qui signifie que pour une application de l’architecture unique sans les extensions, qui effectue la liaison de l’application avec le runtime Mono résultant comme une infrastructure sera réduire l’exécutable par ~1.7MB, mais ajouter une infrastructure de ~2.3MB, dans un alltogether ~0.6MB plus grande application.
+Un scénario pour la liaison avec le runtime Mono en tant qu’infrastructure même pour les applications sans extensions consiste à réduire la taille de l’exécutable, pour surmonter les restrictions de taille Qu'apple impose sur le fichier exécutable. Pour référence, le runtime Mono ajoute environ 1,7 Mo par architecture (comme de Xamarin.iOS 8.12, cependant son varie entre les versions et même entre les applications). Le framework Mono ajoute environ 2,3 Mo par architecture, ce qui signifie que pour une application unique-architecture sans extensions, la liaison de l’application est jugée avec le runtime Mono résultant comme une infrastructure sera réduire le fichier exécutable par ~1.7MB, mais ajouter une infrastructure ~2.3MB, dans un alltogether ~0.6MB plus grande application.
 

@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 6a49f16f935f058b002d260825cfb005df0c6eef
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831551"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353761"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -44,7 +44,8 @@ Suivez les guides pour intégrer ces fonctionnalités Xamarin.Essentials dans vo
 * [GÉOLOCALISATION](geolocation.md?context=xamarin/xamarin-forms) – récupérer d’emplacement du périphérique GPS.
 * [Gyroscope](gyroscope.md?context=xamarin/xamarin-forms) : effectuer le suivi de la rotation autour des trois axes du principal de l’appareil.
 * [Magnétomètre](magnetometer.md?context=xamarin/xamarin-forms) – détecter l’orientation de l’appareil par rapport à champ magnétique de la terre.
-* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – exécuter du code sur le thread principal de l’application. 
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – exécuter du code sur le thread principal de l’application.
+* [Mappe](maps.md?content=xamarin/xamarin-forms) : Ouvrez l’application de mappages à un emplacement spécifique.
 * [Ouvrez le navigateur](open-browser.md?context=xamarin/xamarin-forms) – rapidement et facilement ouvrir un navigateur à un site Web spécifique.
 * [Capteur d’orientation](orientation-sensor.md?context=xamarin/xamarin-forms) – récupérer l’orientation de l’appareil dans un espace tridimensionnel.
 * [Numéroteur téléphonique](phone-dialer.md?context=xamarin/xamarin-forms) – ouvrir le Numéroteur téléphonique.

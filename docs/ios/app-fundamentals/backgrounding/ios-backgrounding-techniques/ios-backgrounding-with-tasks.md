@@ -1,34 +1,35 @@
 ---
 title: iOS Backgrounding avec des tâches
-description: Ce document décrit comment utiliser des tâches en arrière-plan pour effectuer des tâches longues une fois qu’une application est placée en arrière-plan.
+description: Ce document décrit comment utiliser des tâches en arrière-plan pour effectuer des tâches longues après qu’une application est placée en arrière-plan.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a95ca128bc6de7b2adc75511a581f5d2779d9c06
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 03/18/2017
+ms.openlocfilehash: 9d304ee64e7716413febc475e721f5eb39043109
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784353"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351536"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding avec des tâches
 
-Pour effectuer la backgrounding sur iOS, le plus simple consiste à décomposer vos exigences backgrounding en tâches et exécuter les tâches en arrière-plan. Tâches sont une limite de temps stricte et obtiennent généralement environ 600 secondes (10 minutes) du temps de traitement une fois une application a été déplacé à l’arrière-plan sur iOS 6 et moins de 10 minutes sur iOS 7 +.
+La façon la plus simple pour effectuer backgrounding dans iOS consiste à diviser vos exigences backgrounding en tâches et exécuter les tâches en arrière-plan. Les tâches sont sous une limite de temps stricte et obtiennent généralement environ 600 secondes (10 minutes) de temps de traitement après qu’une application a déplacé à l’arrière-plan sur iOS 6 et moins de 10 minutes sur iOS 7 +.
 
 Tâches en arrière-plan peuvent être divisés en trois catégories :
 
-1.  **Les tâches en arrière-plan-Safe** : appelée n’importe où dans le l’application où vous avez une tâche vous ne souhaitez pas interrompu l’application, entrez le l’arrière-plan.
-1.  **DidEnterBackground tâches** - appelée pendant la `DidEnterBackground` méthode de cycle de vie d’application pour faciliter le nettoyage et l’enregistrement d’état.
-1.  **En arrière-plan transferts (iOS 7 +)** -un type spécial de la tâche d’arrière-plan utilisé pour effectuer les transferts de réseau sur iOS 7. Contrairement aux tâches régulières, les transferts en arrière-plan n’ont pas une limite de temps prédéfinie.
+1.  **Les tâches en arrière-plan-Safe** : appelée n’importe où dans le l’application où vous avez une tâche vous ne souhaitez pas interrompue doit l’application, entrez l’arrière-plan.
+1.  **Les tâches DidEnterBackground** : appelée pendant la `DidEnterBackground` méthode de cycle de vie d’application pour faciliter le nettoyage et l’enregistrement d’état.
+1.  **En arrière-plan transferts (iOS 7 +)** -un type spécial de tâche en arrière-plan utilisé pour effectuer les transferts de réseau sur iOS 7. Contrairement aux tâches récurrentes, transferts en arrière-plan ont une limite de temps prédéterminée.
 
 
-Arrière-plan-safe et `DidEnterBackground` tâches sont sécurisés à utiliser sur iOS 6 et iOS 7, avec quelques différences mineures. Nous allons étudier ces deux types de tâches plus en détail.
+Arrière-plan-safe et `DidEnterBackground` tâches sont sécurisés à utiliser sur iOS 6 et iOS 7, avec quelques différences mineures. Nous allons examiner ces deux types de tâches de façon plus détaillée.
 
-## <a name="creating-background-safe-tasks"></a>Créer des tâches d’arrière-plan-Safe
+## <a name="creating-background-safe-tasks"></a>Création de tâches d’arrière-plan-Safe
 
-Certaines applications contiennent des tâches qui ne doivent pas être interrompues par iOS doit état de modifier l’application. Un pour protéger ces tâches ne seront pas interrompus consiste à les enregistrer avec iOS en tant que tâches longues. Vous pouvez utiliser ce modèle de n’importe où dans votre application où vous souhaitez une tâche en cours d’interruption doit la placer utilisateur l’application en arrière-plan. Un candidat idéal pour ce modèle serait des tâches telles que de transmettre les informations d’inscription d’un nouvel utilisateur à votre serveur, ou de la vérification des informations de connexion.
+Certaines applications contiennent des tâches qui ne doit pas être interrompues par iOS doit état de modifier l’application. Un pour protéger ces tâches ne seront pas interrompus consiste à les enregistrer avec iOS en tant que tâches longues. Vous pouvez utiliser ce modèle n’importe où dans votre application où vous voulez une tâche interrompue doit le put utilisateur l’application en arrière-plan. Un excellent candidat pour ce modèle serait des tâches telles que l’envoi d’informations d’inscription d’un nouvel utilisateur à votre serveur ou de vérification des informations de connexion.
 
 L’extrait de code suivant illustre l’inscription d’une tâche à exécuter en arrière-plan :
 
@@ -41,17 +42,17 @@ FinishLongRunningTask(taskID);
 UIApplication.SharedApplication.EndBackgroundTask(taskID);
 ```
 
-Le processus d’inscription des paires une tâche avec un identificateur unique, `taskID`et il encapsule ensuite dans la correspondance `BeginBackgroundTask` et `EndBackgroundTask` appels. Pour générer l’identificateur, nous effectuer un appel à la `BeginBackgroundTask` méthode sur le `UIApplication` de l’objet, et recommencez la tâche d’exécution longue, généralement sur un nouveau thread. Lorsque la tâche est terminée, nous appelons `EndBackgroundTask` et passez le même identificateur. Ceci est important car iOS mettra fin à l’application si une `BeginBackgroundTask` appel n’a pas une correspondance `EndBackgroundTask`.
+Le processus d’inscription paires une tâche avec un identificateur unique, `taskID`et il encapsule ensuite mise en correspondance `BeginBackgroundTask` et `EndBackgroundTask` appels. Pour générer l’identificateur, nous effectuer un appel à la `BeginBackgroundTask` méthode sur le `UIApplication` de l’objet, puis démarrez la tâche à long terme, généralement sur un nouveau thread. Lorsque la tâche est terminée, nous appelons `EndBackgroundTask` et passez le même identificateur. Ceci est important car iOS pour fermer l’application si un `BeginBackgroundTask` appel n’a pas une mise en correspondance `EndBackgroundTask`.
 
 > [!IMPORTANT]
 > Les tâches en arrière-plan-safe peuvent s’exécuter sur le thread principal ou sur un thread d’arrière-plan, en fonction des besoins de l’application.
 
 
-## <a name="performing-tasks-during-didenterbackground"></a>Exécution de tâches au cours de DidEnterBackground
+## <a name="performing-tasks-during-didenterbackground"></a>Effectuer des tâches pendant DidEnterBackground
 
-En plus d’une tâche de longue sécurisée en arrière-plan, l’inscription peut servir à déclencher des tâches comme une application est mises en arrière-plan. e/s fournit une méthode d’événement dans le *AppDelegate* classe appelée `DidEnterBackground` qui peut être utilisé pour enregistrer l’état de l’application, enregistrer les données utilisateur et chiffrer le contenu sensible avant une application passe à l’arrière-plan. Une application a environ cinq secondes à retourner à partir de cette méthode, ou il est interrompu. Par conséquent, les tâches de nettoyage peuvent prendre plus de cinq secondes peuvent être appelées à partir d’à l’intérieur de la `DidEnterBackground` (méthode). Ces tâches doivent être appelés sur un thread distinct.
+En plus de rendre une tâche longue en arrière-plan-safe, l’inscription peut servir à lancer des tâches comme une application est mises en arrière-plan. iOS fournit une méthode d’événement dans le *AppDelegate* classe appelée `DidEnterBackground` qui peut être utilisé pour enregistrer l’état de l’application, enregistrez les données utilisateur et chiffrer le contenu sensible avant une application entre dans l’arrière-plan. Une application a environ cinq secondes à retourner à partir de cette méthode, ou elle est arrêtée. Par conséquent, les tâches de nettoyage peuvent prendre plus de cinq secondes peuvent être appelées à partir d’à l’intérieur de la `DidEnterBackground` (méthode). Ces tâches doivent être appelés sur un thread distinct.
 
-Le processus est presque identique à celui de l’inscription d’une tâche d’exécution longue. L’extrait de code suivant illustre ce comportement en action :
+Le processus est presque identique à celui de l’inscription d’une tâche à long terme. L’extrait de code suivant illustre cela en action :
 
 ```csharp
 public override void DidEnterBackground (UIApplication application) {
@@ -63,19 +64,19 @@ public override void DidEnterBackground (UIApplication application) {
 }
 ```
 
-Commençons par substitution de la `DidEnterBackground` méthode dans le `AppDelegate`, où nous enregistrons notre tâche via `BeginBackgroundTask` comme dans l’exemple précédent. Ensuite, nous générer un nouveau thread et d’effectuer la tâche de longue. Notez que la `EndBackgroundTask` est maintenant appelé à partir d’à l’intérieur de la tâche d’exécution longue, depuis le `DidEnterBackground` méthode ont déjà retournés.
+Nous commençons en substituant le `DidEnterBackground` méthode dans le `AppDelegate`, où nous enregistrons notre tâche via `BeginBackgroundTask` comme nous l’avons fait dans l’exemple précédent. Ensuite, nous générer un nouveau thread et d’effectuer de notre tâche à long terme. Notez que le `EndBackgroundTask` est maintenant appelé à partir d’à l’intérieur de la tâche à long terme, étant donné que le `DidEnterBackground` méthode ont déjà renvoyé.
 
 > [!IMPORTANT]
-> iOS utilise un [mécanisme d’horloge de surveillance](http://developer.apple.com/library/ios/qa/qa1693/_index.html) pour vous assurer que l’interface utilisateur d’une application reste réactive. Une application qui utilise trop de temps dans `DidEnterBackground` cesse de répondre dans l’interface utilisateur. Permet de lancer des tâches à exécuter en arrière-plan `DidEnterBackground` à retourner en temps voulu, que l’interface utilisateur reste réactive et empêche l’agent de surveillance de l’arrêt de l’application.
+> iOS utilise un [mécanisme de surveillance](http://developer.apple.com/library/ios/qa/qa1693/_index.html) pour vous assurer que l’interface utilisateur d’une application reste réactive. Une application qui se consacre beaucoup trop de temps dans `DidEnterBackground` cesse de répondre dans l’interface utilisateur. Permet de lancer des tâches à exécuter en arrière-plan `DidEnterBackground` à retourner dans un délai raisonnable, que l’interface utilisateur reste réactive et empêche l’arrêt de l’application de l’agent de surveillance.
 
 
-## <a name="handling-background-task-time-limits"></a>Délais de traitement en arrière-plan tâche
+## <a name="handling-background-task-time-limits"></a>Limitation de durée de tâche en arrière-plan gestion
 
-iOS place limite stricte sur une tâche en arrière-plan de longue durée peut s’exécuter et, si le `EndBackgroundTask` appel n’est pas effectué dans le délai imparti, l’application va être interrompue. En conservant les backgrounding temps restant et l’utilisation des gestionnaires d’expiration si nécessaire, nous pouvons éviter iOS arrêt de l’application.
+iOS place des limites strictes sur une tâche en arrière-plan de longue durée peut s’exécuter et, si le `EndBackgroundTask` appel n’est pas effectué dans le temps imparti, l’application va être interrompue. En conservant la backgrounding le temps restant et l’utilisation des gestionnaires d’expiration lorsque cela est nécessaire, nous pouvons éviter iOS arrêter l’application.
 
 ### <a name="accessing-background-time-remaining"></a>L’accès à des temps d’arrière-plan restant
 
-Si une application avec des tâches est déplacée à l’arrière-plan, les tâches enregistrées obtenez environ 600 secondes à s’exécuter. Nous pouvons vérifier combien de temps la tâche doit s’effectuer à l’aide de la méthode statique `BackgroundTimeRemaining` propriété de la `UIApplication` classe. Le code suivant donne la durée, en secondes, pendant laquelle la tâche en arrière-plan a quitté :
+Si une application avec des tâches est déplacée à l’arrière-plan, les tâches enregistrées obtenez environ 600 secondes à s’exécuter. Nous pouvons vérifier combien de temps la tâche doit s’effectuer à l’aide de la méthode statique `BackgroundTimeRemaining` propriété de la `UIApplication` classe. Le code suivant, nous donneront la durée, en secondes, pendant laquelle notre tâche en arrière-plan a quitté :
 
 ```csharp
 double timeRemaining = UIApplication.SharedApplication.BackgroundTimeRemaining;
@@ -83,7 +84,7 @@ double timeRemaining = UIApplication.SharedApplication.BackgroundTimeRemaining;
 
 ### <a name="avoiding-app-termination-with-expiration-handlers"></a>Éviter l’arrêt de l’application avec les gestionnaires d’Expiration
 
-En plus de ce qui donne accès à la `BackgroundTimeRemaining` propriété, iOS offre un moyen approprié pour gérer l’expiration du temps en arrière-plan à travers une **expiration du gestionnaire**. Il s’agit d’un bloc facultatif du code qui sera exécuté lorsque le temps alloué à une tâche est sur le point d’expirer. Appelle du code dans le Gestionnaire d’Expiration `EndBackgroundTask` et transmet l’ID de tâche, ce qui indique que l’application se comporte correctement et iOS empêche l’arrêt de l’application même si la tâche s’exécute en dehors de l’heure. `EndBackgroundTask` doit être appelé dans le Gestionnaire d’expiration, ainsi que dans le cours normal de l’exécution. 
+En plus de donner accès à la `BackgroundTimeRemaining` propriété, iOS offre un moyen approprié pour gérer l’expiration de l’heure d’arrière-plan via un **Gestionnaire d’Expiration**. Il s’agit d’un bloc de code qui sera exécutée lorsque le temps alloué à une tâche est sur le point d’expirer facultatif. Appelle du code dans le Gestionnaire d’Expiration `EndBackgroundTask` et passe l’ID de tâche, ce qui indique que l’application se comporte correctement et iOS empêche l’arrêt de l’application même si la tâche s’exécute plus assez de temps. `EndBackgroundTask` doit être appelée dans le Gestionnaire d’expiration, ainsi que dans le cadre normal de l’exécution. 
 
 Le Gestionnaire d’expiration est exprimé comme une fonction anonyme à l’aide d’une expression lambda, comme illustré ci-dessous :
 
@@ -109,39 +110,39 @@ Alors que les gestionnaires d’expiration ne sont pas requis pour l’exécutio
 
  <a name="background_tasks_in_iOS_7" />
 
-## <a name="background-tasks-in-ios-7"></a>Tâches en arrière-plan dans iOS 7 +
+## <a name="background-tasks-in-ios-7"></a>Tâches en arrière-plan sur iOS 7 +
 
-Un changement majeur dans iOS 7 en ce qui concerne les tâches en arrière-plan est pas comment les tâches sont implémentés, mais lorsqu’ils exécutent.
+La principale modification apportée dans iOS 7 en ce qui concerne les tâches en arrière-plan est pas comment les tâches sont implémentés, mais lorsqu’ils exécutent.
 
-Rappelez-vous que préliminaire iOS 7, une tâche qui s’exécute en arrière-plan est 600 secondes pour terminer. L’une des raisons pour cette limite sont qu’une tâche en cours d’exécution en arrière-plan conservez l’appareil allumé pendant la durée de la tâche :
+Rappelez-vous que préliminaire iOS 7, une tâche en cours d’exécution en arrière-plan avait 600 secondes pour terminer. L’une des raisons pour cette limite sont qu’une tâche en arrière-plan, conservez l’appareil éveillés pendant la durée de la tâche :
 
  [![](ios-backgrounding-with-tasks-images/ios6.png "Graphique de la tâche en conservant l’application iOS préliminaire éveillés 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
 
-le traitement en arrière-plan iOS 7 est optimisé pour une plus grande autonomie. Dans iOS 7, backgrounding devient opportuniste : au lieu de garder l’appareil allumé, tâches respectent lors de l’appareil accède à la mise en veille et à la place effectuer leur traitement en segments lorsque l’appareil sort de veille pour gérer les appels téléphoniques, notifications, entrant des messages électroniques et autres interruptions courantes. Le diagramme suivant fournit un aperçu de la façon dont une tâche peut être rompue des :
+le traitement en arrière-plan iOS 7 est optimisé pour la durée de vie de la batterie. Dans iOS 7, backgrounding devient opportuniste : au lieu de garder l’appareil en éveil, les tâches respectent lorsque l’appareil est en veille et procéder à leur traitement dans des segments lors de l’appareil sort de veille pour gérer les appels téléphoniques, notifications, entrant des messages électroniques et autres interruptions courantes. Le diagramme suivant fournit un aperçu de comment une tâche peut être rompue haut :
 
- [![](ios-backgrounding-with-tasks-images/ios7.png "Graphique de la tâche divisée en blocs postérieur à iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
+ [![](ios-backgrounding-with-tasks-images/ios7.png "Graphique de la tâche en cours divisée en segmente postérieur à iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
 
-Étant donné que la tâche d’exécution n’est pas continue de plus, les tâches qui effectuent des transferts réseau doivent être gérés différemment dans iOS 7. Les développeurs sont encouragés à utiliser le `NSURlSession` API pour gérer les transferts de réseau. La section suivante est une vue d’ensemble des transferts en arrière-plan.
+Étant donné que la tâche d’exécution n’est pas continue de plus, les tâches qui effectuent des transferts réseau doivent être gérés différemment dans iOS 7. Les développeurs sont encouragés à utiliser le `NSURlSession` API pour gérer les transferts réseau. La section suivante est une vue d’ensemble des transferts en arrière-plan.
 
  <a name="background-transfers" />
 
 ## <a name="background-transfers"></a>Transferts en arrière-plan
 
-Le principal des transferts en arrière-plan dans iOS 7 est la nouvelle `NSURLSession` API. `NSURLSession` permet de créer des tâches :
+La colonne vertébrale de transferts en arrière-plan dans iOS 7 est la nouvelle `NSURLSession` API. `NSURLSession` permet de créer des tâches pour :
 
-1.  Transfert de contenu via les interruptions réseau et de périphériques.
-1.  Télécharger des fichiers volumineux ( *Service de transfert en arrière-plan* ).
+1.  Transférer du contenu via les interruptions réseau et de périphériques.
+1.  Charger et télécharger des fichiers volumineux ( *Service de transfert en arrière-plan* ).
 
 
-Jetons un œil plus près comment cela fonctionne.
+Examinons plus en détail comment cela fonctionne.
 
-### <a name="nsurlsession-api"></a>NSURLSession API
+### <a name="nsurlsession-api"></a>API de NSURLSession
 
- `NSURLSession` est une API puissante pour le transfert de contenu sur le réseau. Il fournit un ensemble d’outils pour gérer le transfert de données par les interruptions réseau et les modifications d’états d’application.
+ `NSURLSession` est une API puissante pour le transfert de contenu sur le réseau. Il fournit un ensemble d’outils pour gérer le transfert de données par le biais d’interruptions et les modifications dans les États de l’application.
 
-Le `NSURLSession` API crée une ou plusieurs sessions, qui à son tour générer tâches pour navette des blocs de données associées sur le réseau. Tâches exécuter de façon asynchrone pour transférer des données rapide et fiable. Étant donné que `NSURLSession` est asynchrone, chaque session requiert un bloc de gestionnaire d’achèvement pour laisser le système et l’application de savoir quand un transfert est terminé.
+Le `NSURLSession` API crée une ou plusieurs sessions, qui à son tour générer dynamiquement des tâches pour la navette des blocs de données associées sur le réseau. Tâches exécutées de façon asynchrone pour transférer des données rapide et fiable. Étant donné que `NSURLSession` est asynchrone, chaque session requiert un bloc de gestionnaire d’achèvement à laisser le système et l’application de savoir quand un transfert est terminé.
 
-Pour effectuer un transfert réseau est valide sur préliminaire iOS 7 et post-iOS 7, vérifiez si un `NSURLSession` est disponible pour les transferts de file d’attente et une tâche en arrière-plan standard permet d’effectuer le transfert si elle n’est pas :
+Pour effectuer un transfert réseau qui est valide sur préliminaire iOS 7 et post-iOS 7, vérifiez si un `NSURLSession` est disponible pour les transferts de file d’attente et une tâche en arrière-plan régulière permet d’effectuer le transfert si elle n’est pas :
 
 ```csharp
 if ([NSURLSession class]) {
@@ -154,16 +155,16 @@ else {
 ```
 
 > [!IMPORTANT]
-> Éviter d’effectuer des appels de mettre à jour l’interface utilisateur de l’arrière-plan dans un code conforme 6 iOS, iOS 6 ne prend pas en charge les mises à jour de l’interface utilisateur en arrière-plan et mettra fin à l’application.
+> Évitez d’effectuer des appels à mettre à jour l’interface utilisateur à partir de l’arrière-plan dans iOS 6 d’un code conforme, comme iOS 6 ne prend pas en charge les mises à jour de l’interface utilisateur en arrière-plan et mettent fin à l’application.
 
 
-Le `NSURLSession` API comprend un ensemble complet de fonctionnalités pour gérer l’authentification, de gérer les transferts ayant échouées et de signaler les erreurs du client-side - mais pas côté serveur -. Il permet de pont que l’interruption de la tâche exécution introduites dans iOS 7 et prend également en charge pour le transfert de fichiers volumineux rapidement et de façon fiable. La section suivante traite de ce deuxième fonctionnalité.
+Le `NSURLSession` API inclut un ensemble complet de fonctionnalités pour gérer l’authentification, gérer les transferts ayant échoués et signaler les erreurs côté client - mais pas côté serveur -. Il permet de pont que les interruptions de la tâche exécution introduit dans iOS 7 et prend également en charge pour le transfert de fichiers volumineux rapidement et de manière fiable. La section suivante explique cette deuxième fonctionnalité.
 
 ### <a name="background-transfer-service"></a>Service de transfert en arrière-plan
 
-Avant d’iOS 7, téléchargement de fichiers en arrière-plan n’étaient pas fiables. Tâches en arrière-plan obtenir une durée limitée à exécuter, mais le temps que nécessaire pour transférer un fichier varie avec le réseau et la taille du fichier. Dans iOS 7, nous pouvons utiliser un `NSURLSession` pour charger et télécharger des fichiers volumineux avec succès. Particulier `NSURLSession` type de session qui gère les transferts de fichiers volumineux en arrière-plan réseau est connu comme le *Service de transfert en arrière-plan*.
+Avant d’iOS 7, téléchargement de fichiers en arrière-plan n’étaient pas fiables. Tâches en arrière-plan obtenir une durée limitée à exécuter, mais le temps que nécessaire pour transférer un fichier varie avec le réseau et la taille du fichier. Dans iOS 7, nous pouvons utiliser un `NSURLSession` pour charger et télécharger des fichiers volumineux avec succès. Le particulier `NSURLSession` type de session qui gère les transferts de fichiers volumineux en arrière-plan réseau est connu comme le *Service de transfert en arrière-plan*.
 
-Transferts initiées à l’aide du Service de transfert en arrière-plan sont gérés par le système d’exploitation et fournissent des API pour gérer les erreurs et l’authentification. Étant donné que les transferts ne sont pas liés par une limite de temps arbitraire, ils peuvent être utilisés pour charger ou télécharger des fichiers volumineux, contenu dans l’arrière-plan et bien plus encore mise à jour automatique. Reportez-vous à la [procédure pas à pas transfert en arrière-plan](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) pour plus d’informations sur la façon d’implémenter le Service.
+Les transferts lancées à l’aide du Service de transfert en arrière-plan sont gérés par le système d’exploitation et fournissent des API pour gérer l’authentification et les erreurs. Étant donné que les transferts ne sont pas liés par une limite de temps arbitraire, elles peuvent servir à charger ou télécharger des fichiers volumineux, contenu dans l’arrière-plan et bien plus encore mise à jour automatique. Reportez-vous à la [procédure pas à pas de transfert en arrière-plan](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) pour plus d’informations sur la façon d’implémenter le Service.
 
-Le Service de transfert en arrière-plan est souvent associé à extraire de l’arrière-plan ou de Notifications à distance permettent aux applications d’actualiser le contenu en arrière-plan. Dans les deux sections suivantes, nous introduisons le concept de l’inscription des applications entières à exécuter en arrière-plan sur iOS 6 et iOS 7.
+Le Service de transfert en arrière-plan est souvent associé à des Notifications à distance pour aider les applications à actualiser le contenu en arrière-plan ou de récupération en arrière-plan. Dans les deux sections suivantes, nous introduisons le concept de l’inscription des applications entières pour exécuter en arrière-plan sur iOS 6 et iOS 7.
 

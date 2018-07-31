@@ -1,63 +1,64 @@
 ---
-title: Unification de Google Play Services de composants et NuGet
+title: Unification de Google Play Services composants et NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: cfd417f4fc01b07b4334259c45472eb24b73abd8
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/08/2018
+ms.openlocfilehash: 3f5c5f75ae1c7a44537afa59ff4a15d54b1df50b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33919870"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351481"
 ---
-# <a name="unifying-google-play-services-components-and-nuget"></a>Unification de Google Play Services de composants et NuGet
+# <a name="unifying-google-play-services-components-and-nuget"></a>Unification de Google Play Services composants et NuGet
 
-### <a name="history"></a>Historique
+## <a name="history"></a>Historique
 
 Il permet d’être plusieurs composants des Services Google Play et les packages NuGet :
 
--   Services de Google Play (Froyo)
--   Services de Google Play (personnage en pain)
+-   Services Google Play (Froyo)
+-   Services Google Play (Gingerbread)
 -   Google Play Services (ICS)
--   Services de Google Play (JellyBean)
--   Services de Google Play (KitKat)
+-   Services Google Play (JellyBean)
+-   Services Google Play (KitKat)
 
-Google en réalité est fourni avec deux .jar fichiers pour les Services Google Play :
+Les fichiers .jar est fourni deux réellement uniquement de Google pour Google Play Services :
 
 -   `google-play-services-froyo.jar`
 -   `google-play-services.jar`
 
-L’écart existait parce que nos outils n’a pas été correctement savoir `aapt.exe` ce que le niveau d’API maximal des ressources a été à utiliser pour une application donnée. Cela signifiait, nous avons reçu des erreurs de compilation si nous avons essayé de bas niveau API comme personnage en pain à l’aide de la liaison de Services Google Play (KitKat).
+L’écart existait, car nos outils DIS correctement `aapt.exe` quel était le niveau d’API maximal des ressources à utiliser pour une application donnée. Cela signifiait, nous avons reçu des erreurs de compilation si nous avons essayé de bas niveau API comme Gingerbread à l’aide de la liaison de Services Google Play (KitKat).
 
-### <a name="unifying-google-play-services"></a>Unifier les Services Google Play
+## <a name="unifying-google-play-services"></a>Unification des Services Google Play
 
-Dans les versions plus récentes de Xamarin.Android, nous demander `aapt.exe` version maximale de ressources à utiliser, donc ce problème disparaît pour nous.
+Dans les versions plus récentes de Xamarin.Android, nous indiquons désormais `aapt.exe` quelle version de ressources maximum à utiliser, donc ce problème disparaît pour nous.
 
-Cela ne signifie, il existe aucune raison réelle de disposer de packages distincts pour personnage en pain/ICS/JellyBean/KitKat (toutefois nous toujours doivent-elles une liaison distincte pour Froyo, car il est un fichier .jar différents entièrement).
+Cela signifie, il est inutile réel pour avoir des packages distincts pour Gingerbread/ICS/JellyBean/KitKat (toutefois nous toujours doivent-ils une liaison distincte pour Froyo puisqu’il s’agit de complètement un fichier .jar différents).
 
-Pour simplifier les choses pour les développeurs, nous avons maintenant nos composants et unifiés NuGet packages en deux :
+Pour faciliter les choses pour les développeurs, nous avons maintenant nos composants et unifiées NuGet packages en deux :
 
--   (Froyo) des Services Google Play (lie `google-play-services-froyo.jar`)
--   Les Services Google Play (lie `google-play-services.jar`)
+-   Google Play Services (Froyo) (lie `google-play-services-froyo.jar`)
+-   Services Google Play (lie `google-play-services.jar`)
 
-### <a name="which-one-should-be-used"></a>L’application doit être utilisée ?
+### <a name="which-one-should-be-used"></a>Celle qui doit être utilisé ?
 
-Dans presque tous les cas, les Services Google Play doit être utilisés. La seule raison pour laquelle utiliser le package (Froyo) est que si vous ciblez activement Froyo. La seule raison pour laquelle que ce fichier .jar distinct existe à partir de Google est étant Froyo sur un petit pourcentage de périphériques, ils eux-mêmes ont décidé d’arrêter la prise en charge, par conséquent, ce fichier .jar est un instantané figé, non pris en charge des Services Google Play.
+Dans presque tous les cas, Google Play Services doit être utilisés. La seule raison pour laquelle utiliser le package (Froyo) est si vous ciblez activement Froyo. La seule raison pour laquelle que ce fichier .jar distinct existe à partir de Google est dans la mesure où Froyo se trouve sur un petit pourcentage d’appareils, ils eux-mêmes ont décidé d’arrêter la prise en charge, par conséquent, ce fichier .jar est un instantané figé, non pris en charge des Services Google Play.
 
-### <a name="note-about-gingerbread"></a>Remarque sur personnage en pain
+### <a name="note-about-gingerbread"></a>Remarque sur Gingerbread
 
-Personnage en pain n’a pas de prise en charge par défaut de Fragment, et par conséquent, certaines des classes dans la liaison ne seront pas utilisable dans une application en cours d’exécution sur un appareil personnage en pain. Les classes comme `MapFragment` ne fonctionnera pas sur personnage en pain et leur variante de prise en charge doit être utilisé à la place `SupportMapFragment`. Il incombe au développeur de connaître à utiliser. Cette incompatibilité est indiquée par Google dans leur documentation Services Google Play.
+Gingerbread n’a pas de prise en charge par défaut de Fragment, et pour cette raison, certaines des classes dans la liaison ne pourront être utilisées dans une application lors de l’exécution sur un appareil Gingerbread. Les classes comme `MapFragment` ne fonctionnera pas sur Gingerbread et leur variante de la prise en charge doit être utilisé à la place `SupportMapFragment`. Il incombe au développeur de savoir lequel utiliser. Cette incompatibilité est indiquée par Google dans leur documentation de Google Play Services.
 
-### <a name="what-happens-to-the-old-componentsnugets"></a>Que se passe-t-il pour l’ancien composants/de NuGet ?
+### <a name="what-happens-to-the-old-componentsnugets"></a>Que se passe-t-il pour l’anciens composants/de NuGet ?
 
-Dans la mesure où ils ne sont plus nécessaires, nous avons désactivé/Delisted les composants/NuGets suivantes :
+Dans la mesure où ils ne sont plus nécessaires, nous avons désactivé/Delisted les composants/packages NuGet suivants :
 
--   Services de Google Play (personnage en pain)
--   Services de Google Play (JellyBean)
--   Services de Google Play (KitKat)
+-   Services Google Play (Gingerbread)
+-   Services Google Play (JellyBean)
+-   Services Google Play (KitKat)
 
-Existants _Google Play Services (ICS)_ composant/Nuget a été renommé en _Services Google Play_ et restent à jour à l’avenir. Tous les projets faisant référence à un des packages désactivé/Delisted doivent être mis à jour pour utiliser celle-ci.
+Existant _Google Play Services (ICS)_ composant/Nuget a été renommé en _Google Play Services_ et restent à jour à l’avenir. Tous les projets faisant référence à un des packages désactivé/Delisted doivent être mis à jour pour utiliser celle-ci.
 
 Les composants désactivés existent encore et doivent être restaurées pour les projets, qu'ils sont toujours référencés dans, pour éviter de rompre les. De même les packages NuGet delisted existent encore et peuvent être restaurées. Ils ne seront pas être mis à jour à l’avenir.

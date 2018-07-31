@@ -5,18 +5,18 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: aea2f429126180ae3d98bc665bed5574f416ea53
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: f113cebfebf4238fd4b75ad8ab248e2abf61efea
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38848544"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353904"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials : E-mail
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **E-mail** classe permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris le sujet, le corps et les destinataires (à, CC, Cci).
+Le **E-mail** classe permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris le sujet, les corps et les destinataires (à, CC, Cci).
 
 ## <a name="using-email"></a>À l’aide de la messagerie
 
@@ -43,7 +43,6 @@ public class EmailTest
                 //Cc = ccRecipients,
                 //Bcc = bccRecipients
             };
-            
             await Email.ComposeAsync(message);
         }
         catch (FeatureNotSupportedException fbsEx)
@@ -52,7 +51,7 @@ public class EmailTest
         }
         catch (Exception ex)
         {
-            // Some other exception occured
+            // Some other exception occurred
         }
     }
 }

@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 07/16/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: fc4f851d25837690cd3412ca142a52b1312a08b3
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270200"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351741"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Certification des partenaires de Conseil pour fournir des solutions mobiles
 
@@ -112,6 +112,7 @@ _Répertoriés par emplacement principal, de nombreux partenaires proposent des 
 |[Interknowlogy](http://www.interknowlogy.com/)|San Diego, CA, États-Unis|Un leader mondial en développement d’applications personnalisées, InterKnowlogy s’appuie sur les technologies actuelles et émergentes pour fournir des expériences connectées à l’aide de touch, gestuelle et vocale|
 |[Solutions InTouch](http://www.intouchsol.com )|Overland Park, KS, aux États-Unis ; Londres, Royaume-Uni ; Chicago, IL, aux États-Unis ; New York, NY, États-Unis|Nous sommes une agence numérique de début au sein de la Pharma et l’espace de soins de santé|
 |[iTexico](http://www.itexico.com)|Austin, Texas, États-Unis|iTexico est une société de technologie de logiciels internationalisés qui se concentre sur les entreprises avec le développement mobile tout au long d’un projet « cycle de vie de Äôs via nearshore sous-traitance.|
+|[JBS](https://www.jbssolutions.com)|Pennsylvanie, États-Unis|JBS est un fournisseur de solutions logicielles personnalisées.|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto, CA, États-Unis ; Chicago, IL, aux États-Unis ; Toledo, OHIO, États-Unis ; Seongnam-incident de service, Gyeonggi-ne, Corée du Sud|Kaonsoft est une société de logiciels innovants qui fournit des solutions de bout en bout complètes pour créer des applications de la mobilité pour entre plateformes.|
 |[Katalyst Technologies Inc. ](http://www.katalysttech.com )|Evanston, langage intermédiaire, aux États-Unis ; Atlanta, GA, aux États-Unis ; Mumbai, Inde, Maharashtra ; Hyderabad, Telangana, l’Inde ; Pune, Maharashtra, Inde|À Katalyst, nous pensons que la technologie peut être véritablement un code d’activation. Qui a pourquoi les sociétés faites-nous confient à non seulement fournissent des produits et services, mais également de modifier le fonctionnement de leurs activités principales grâce à des solutions personnalisées et percutantes qui s’étendent sur l’entreprise.|
 |[Technologie Kleio LLC](http://kleiotechnology.com)|Royal Palm Beach, FL|En règle générale, nous avons travaillé sur une formation, marque et les identités. Nous étudier le problème d’entreprise d’un client remédier dans la conception, l’expérience utilisateur et stratégie de contenu. Nous aider l’entreprise à atteindre les besoins des clients et améliorer la rentabilité|

@@ -6,13 +6,13 @@ ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/23/2018
-ms.openlocfilehash: 762df7322607588344d570830dafc745a89ea165
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.date: 07/27/2018
+ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212002"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351562"
 ---
 # <a name="platform-features"></a>Fonctionnalités de la plateforme
 
@@ -45,6 +45,10 @@ Android 3.0 a introduit des Fragments, en montrant comment prendre en charge des
 
 Ce guide explique comment Android 6.0 prend en charge _la liaison application_, une technique qui permet aux applications mobiles répondre aux URL sur les sites Web. Il étudie la façon d’implémenter la liaison application dans une application Android 6.0 et comment configurer un site Web pour accorder des autorisations à l’application mobile pour gérer les liens d’application pour le domaine.
 
+
+##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Aperçu de P Android](~/android/platform/android-p.md)
+
+Cet article fournit un aperçu des nouvelles fonctionnalités de la version préliminaire de P Android, explique comment préparer Xamarin.Android pour le développement de P Android et fournit des exemples de code qui illustre l’utilisation des fonctionnalités Android P clés dans les applications Xamarin.Android.
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)

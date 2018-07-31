@@ -1,33 +1,33 @@
 ---
 title: Core NFC dans Xamarin.iOS
-description: Ce document décrit comment lire près de balises de communication de champ dans Xamarin.iOS à l’aide de l’API introduites dans iOS 11.
+description: Ce document décrit comment lire près de balises de communication de champ dans Xamarin.iOS à l’aide de l’API introduits dans iOS 11.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/25/2016
-ms.openlocfilehash: c42048f9c00238fb73e354ea86322c3d19bae601
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 09/25/2017
+ms.openlocfilehash: 1381a4564f93fd091f181949454df3f06b31ae6b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787375"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350831"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Core NFC dans Xamarin.iOS
 
 _Balises de lecture Communication NFC (Near Field) à l’aide d’iOS 11_
 
-CoreNFC est une nouvelle infrastructure dans iOS 11 qui fournit l’accès à la _Communication en champ proche_ radio (NFC) pour lire les balises à partir d’applications. Elle fonctionne sur iPhone 7, Plus de 7, 8, 8 Plus et X.
+CoreNFC est une nouvelle infrastructure dans iOS 11 qui fournit l’accès à la _Communication en champ proche_ radio (NFC) pour lire des balises à partir d’applications. Elle fonctionne sur iPhone 7, Plus de 7, 8, 8 Plus et X.
 
-Le lecteur de balise NFC dans les appareils iOS prend en charge tous les types de balises NFC 1 et 5 qui contiennent des _Format d’échange de données NFC_ plus d’informations (NDEF).
+Le lecteur de balise NFC sur les appareils iOS prend en charge tous les types de balises NFC 1 à 5 qui contiennent _Format d’échange de données NFC_ plus d’informations (NDEF).
 
 Il existe certaines restrictions à connaître :
 
-- CoreNFC prend en charge uniquement (pas l’écriture ou de mise en forme) de lecture d’étiquette.
-- Analyses de balise doivent être initiée par l’utilisateur et le délai d’attente après 60 secondes.
+- CoreNFC prend uniquement en charge (pas l’écriture ou la mise en forme) de lecture d’étiquette.
+- Analyses de balise doivent être initiée par l’utilisateur et le délai d’expiration après 60 secondes.
 - Les applications doivent être visibles au premier plan pour l’analyse.
-- CoreNFC peut uniquement être testé sur des appareils réels (et non sur le simulateur).
+- CoreNFC peut uniquement être testée sur des appareils réels (et non sur le simulateur).
 
 Cette page décrit la configuration requise pour utiliser CoreNFC et montre comment utiliser l’API en utilisant le [« TFCTagReader » exemple de code](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/).
 
@@ -35,13 +35,13 @@ Cette page décrit la configuration requise pour utiliser CoreNFC et montre comm
 
 Pour activer CoreNFC, vous devez configurer trois éléments dans votre projet :
 
-- Un **Info.plist** la clé de confidentialité.
+- Un **Info.plist** clé de confidentialité.
 - Un **Entitlements.plist** entrée.
-- Un profil de configuration avec **la lecture des balises NFC** fonctionnalité.
+- Un profil de provisionnement avec **la lecture des balises NFC** fonctionnalité.
 
 ### <a name="infoplist"></a>Info.plist
 
-Ajouter le **NFCReaderUsageDescription** la clé de confidentialité et de texte, qui est affiché à l’utilisateur pendant l’analyse. Utiliser un message approprié pour votre application (par exemple, expliquer l’objectif de l’analyse) :
+Ajouter le **NFCReaderUsageDescription** clé de confidentialité et du texte, ce qui est affiché pour l’utilisateur pendant que l’analyse est en cours. Utiliser un message approprié pour votre application (par exemple, expliquer l’objectif de l’analyse) :
 
 ```xml
 <key>NFCReaderUsageDescription</key>
@@ -50,7 +50,7 @@ Ajouter le **NFCReaderUsageDescription** la clé de confidentialité et de texte
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-Votre application doit demander le **près de lecture de balise Communications champ** paires de fonctionnalité à l’aide de la clé/valeur suivante dans votre **Entitlements.plist**:
+Votre application doit demander le **près de champ Communications la lecture des balises** coupler de fonctionnalité à l’aide de la clé/valeur suivante dans votre **Entitlements.plist**:
 
 ```xml
 <key>com.apple.developer.nfc.readersession.formats</key>
@@ -61,22 +61,22 @@ Votre application doit demander le **près de lecture de balise Communications c
 
 ### <a name="provisioning-profile"></a>Profil de provisionnement
 
-Créer un nouveau **ID d’application** et vérifiez que le **la lecture des balises NFC** service est activée :
+Créer un nouveau **ID d’application** et vérifiez que le **la lecture des balises NFC** service est coché :
 
 [![Page de portail nouvel ID d’application de développeur avec la lecture des balises NFC sélectionné](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
-Puis créer un profil de configuration pour ce code d’application, puis téléchargez et installez-la sur le développement de votre Mac.
+Vous devez ensuite créer un nouveau profil de provisionnement pour cet ID d’application, puis téléchargez et installez-le sur votre développement Mac.
 
 ## <a name="reading-a-tag"></a>Lecture d’une balise
 
-Une fois que votre projet est configuré, ajoutez `using CoreNFC;` vers le haut du fichier et suivez ces trois étapes pour implémenter NFC les fonctionnalités de lecture de balise :
+Une fois que votre projet est configuré, ajoutez `using CoreNFC;` vers le haut du fichier et suivez ces trois étapes pour implémenter NFC baliser les fonctionnalités de lecture :
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. Mettre en œuvre `INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. Implémentez `INFCNdefReaderSessionDelegate`
 
-L’interface possède deux méthodes à implémenter :
+L’interface comporte deux méthodes à implémenter :
 
 - `DidDetect` – Appelée lorsqu’une balise est lu avec succès.
-- `DidInvalidate` – Appelée lorsqu’une erreur se produit ou le délai d’attente deuxième 60 est inaccessible.
+- `DidInvalidate` : Appelée quand une erreur se produit ou le délai d’attente deuxième 60 est atteinte.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -96,7 +96,7 @@ public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
 }
 ```
 
-Cette méthode peut être appelée plusieurs fois (et un tableau de messages peut-être être transmis dans) si la session autorise plusieurs lectures d’étiquettes. Ce paramètre est défini à l’aide de la troisième paramètre de la `Start` (méthode) (expliquées dans [étape 2](#step2)).
+Cette méthode peut être appelée plusieurs fois (et vous pouvez transmettre un tableau de messages) si la session autorise plusieurs lectures de balise. Ce paramètre est défini à l’aide de la troisième paramètre de la `Start` (méthode) (expliqué dans [étape 2](#step2)).
 
 #### <a name="didinvalidate"></a>DidInvalidate
 
@@ -127,7 +127,7 @@ Une fois qu’une session a été invalidée, un nouvel objet session doit être
 
 ### <a name="2-start-an-nfcndefreadersession"></a>2. Démarrer un `NFCNdefReaderSession`
 
-L’analyse doit commencer par une demande de l’utilisateur, comme un appui sur le bouton.
+L’analyse doit commencer par une demande de l’utilisateur, comme un sur le bouton.
 Le code suivant crée et démarre une session d’analyse :
 
 ```csharp
@@ -137,9 +137,9 @@ Session?.BeginSession();
 
 Les paramètres pour le `NFCNdefReaderSession` constructeur sont les suivantes :
 
-- `delegate` – Une implémentation de `INFCNdefReaderSessionDelegate`. Dans l’exemple de code, le délégué est implémenté dans le contrôleur de la vue table, par conséquent `this` est utilisé en tant que le paramètre de délégué.
-- `queue` – La file d’attente rappels sont gérés. Il peut être `null`, auquel cas vous devez utiliser le `DispatchQueue.MainQueue` lors de la mise à jour des contrôles d’interface utilisateur (comme indiqué dans l’exemple).
-- `invalidateAfterFirstRead` – Lorsque `true`, l’analyse s’arrête après la première analyse réussie ; lorsque `false` analyse continue et plusieurs résultats retournés jusqu'à ce que l’analyse a été annulée ou que le délai d’attente deuxième 60 est atteinte.
+- `delegate` – Une implémentation de `INFCNdefReaderSessionDelegate`. Dans l’exemple de code, le délégué est implémenté dans le contrôleur d’affichage table, par conséquent `this` est utilisé comme paramètre délégué.
+- `queue` – La file d’attente que les rappels sont gérés sur. Il peut être `null`, auquel cas vous devez utiliser le `DispatchQueue.MainQueue` lors de la mise à jour des contrôles d’interface utilisateur (comme indiqué dans l’exemple).
+- `invalidateAfterFirstRead` – Lorsque `true`, l’analyse s’arrête après la première analyse réussie ; lorsque `false` analyse continue et plusieurs résultats retournés jusqu'à ce que l’analyse est annulée ou que le délai d’attente deuxième 60 soit atteint.
 
 
 ### <a name="3-cancel-the-scanning-session"></a>3. Annuler la session d’analyse
@@ -164,4 +164,4 @@ CoreNFC permet à votre application lire des données à partir de balises NFC. 
 ## <a name="related-links"></a>Liens associés
 
 - [NFCTagReader (exemple)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
-- [Présentation des principaux NFC (WWDC) (vidéo)](https://developer.apple.com/videos/play/wwdc2017/718/)
+- [Présentation de Core NFC (WWDC) (vidéo)](https://developer.apple.com/videos/play/wwdc2017/718/)

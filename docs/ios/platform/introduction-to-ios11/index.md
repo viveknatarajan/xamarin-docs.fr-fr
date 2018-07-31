@@ -1,97 +1,97 @@
 ---
 title: Introduction à iOS 11
-description: Ce document liens vers des guides pas à pas qui décrivent les fonctionnalités d’e/s 11, y compris ARKit, CoreML, MapKit, PDFKit, SiriKit, l’infrastructure de la Vision et bien plus encore.
+description: Ce document contient des liens vers des guides différents qui décrivent les fonctionnalités d’iOS 11, y compris ARKit, CoreML, MapKit, PDFKit, SiriKit, le framework de Vision et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 22C38EA6-6DA9-4B92-B41B-814E589033F6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/19/2016
-ms.openlocfilehash: dca4d9889d90f10626840dfc722e439fd60c5756
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 09/19/2017
+ms.openlocfilehash: e4e544679dbed2701c50d5596d4907451653090e
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787505"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351055"
 ---
 # <a name="introduction-to-ios-11"></a>Introduction à iOS 11
 
 _Essayez de nouveau iOS 11 API avec Xamarin._
 
 > [!NOTE]
-> Avant de commencer, passez en revue les [mise en route](get-started.md) page pour obtenir des instructions sur la façon d’installer Xcode 9.
+> Avant de commencer, passez en revue la [mise en route](get-started.md) page pour obtenir des instructions sur l’installation de Xcode 9.
 
-![Exemple de ARKit](images/arkit.png) ![Objets de placement AR](images/arkit2.png) ![Exemple de CoreML](images/coreml.png) ![Exemple de MapKit](images/mapkit.png) ![Exemple de Rectangles de vision](images/vision1.png) ![Exemple de Faces de vision](images/vision2.png) ![Glisser- déposer, exemple](images/drag-drop.png) ![Glisser- déposer, exemple](images/drag-drop2.png) ![Exemple de SiriKit](images/sirikit.png)
+![Exemple de ARKit](images/arkit.png) ![AR placer des objets](images/arkit2.png) ![Exemple de CoreML](images/coreml.png) ![Exemple de MapKit](images/mapkit.png) ![Exemple de Rectangles de vision](images/vision1.png) ![Exemple de visages de vision](images/vision2.png) ![Glisser- déposer, exemple](images/drag-drop.png) ![Glisser- déposer, exemple](images/drag-drop2.png) ![Exemple de SiriKit](images/sirikit.png)
 
-iOS 11 inclut de nombreuses nouvelles fonctionnalités et améliorations dans une gamme d’infrastructures :
+iOS 11 inclut de nombreuses nouvelles fonctionnalités et améliorations sur une large gamme de frameworks :
 
 ## <a name="preparing-your-app-for-ios-11updating-your-appindexmd"></a>[Préparation de votre application pour iOS 11](updating-your-app/index.md)
 
-Apple a introduit les mises à jour de l’architecture, des modifications visuelles nouvelle et un processus de connexion iTunes mis à jour pour iOS 11. Utilisez ce guide pour vous assurer que votre application Xamarin.iOS est préparée pour la nouvelle version.
+Apple a introduit les mises à jour de l’architecture, de nouvelles modifications visual et d’un processus de Connect de mise à jour iTunes pour iOS 11. Utilisez ce guide pour vous assurer que votre application Xamarin.iOS est préparée pour la nouvelle version.
 
 ## <a name="arkitarkitindexmd"></a>[ARKit](arkit/index.md)
 
-ARKit met augmentée une réalité pour iOS, ce qui permet aux utilisateurs d’interagir avec le monde entier par le biais photo de l’appareil.
-Avec Xamarin, vous pouvez également utiliser [ARKit avec UrhoSharp](arkit/urhosharp.md).
+ARKit apporte une réalité augmentée pour iOS, ce qui permet aux utilisateurs d’interagir avec le monde entier par le biais photo de l’appareil.
+Grâce à Xamarin, vous pouvez également utiliser [ARKit avec UrhoSharp](arkit/urhosharp.md).
 
 ## <a name="coremlcoremlmd"></a>[CoreML](coreml.md)
 
-Modèles d’apprentissage automatique peuvent être intégrés dans les applications iOS 11 avec CoreML. Le framework CoreML fournit une API simple pour incorporer des modèles existants dans les projets d’application pour autoriser des problèmes à analyser directement dans l’application.
+Modèles d’apprentissage automatique peuvent être intégrés dans des applications iOS 11 avec CoreML. Le framework CoreML fournit une API simple pour intégrer des modèles existants dans les projets d’application pour autoriser des problèmes à analyser directement dans l’application.
 
 ## <a name="corenfccorenfcmd"></a>[CoreNFC](corenfc.md)
 
-iPhone 7 et les périphériques plus récents peuvent lire les balises de Communication NFC (Near Field), l’activation des applications détecter des produits ou des éléments dans le monde.
+iPhone 7 et des appareils récents peuvent lire des balises de Communication NFC (Near Field), l’activation d’applications détecter des produits avec balises ou des éléments dans le monde.
 
 ## <a name="drag-and-dropdrag-and-dropmd"></a>[Glisser-déposer](drag-and-drop.md)
 
-L’infrastructure de glisser -déplacer prend en charge d’iOS à l’échelle du déplacement des données par tactile. Sur un iPad, vous pouvez faire glisser dans et entre les différentes applications ; tandis que sur l’iPhone, vous pouvez faire glisser uniquement au sein de la même application. Il est prise en charge de nombreux types de personnalisation, y compris les types de données enrichis, des animations et des mouvements tactiles multipoint de gestion.
+Le framework de glisser -déplacer prend en charge d’iOS à l’échelle du déplacement des données par touch. Sur iPad, vous pouvez faire glisser dans et entre les différentes applications ; tandis que sur les iPhone, vous pouvez faire glisser uniquement au sein de la même application. Il est prise en charge de nombreux types de personnalisation, y compris les types de données enrichis, des animations et des mouvements multitouch de gestion.
 
 ## <a name="mapkitmapkitmd"></a>[MapKit](mapkit.md)
 
-MapKit a un nombre d’améliorations, notamment la prise en charge de marqueur automatique de regroupement et l’ajout d’une boussole à la vue.
+MapKit a un certain nombre d’améliorations, notamment la prise en charge de marqueur automatique de regroupement et l’ajout d’une boussole à la vue.
 
 ## <a name="pdfkit"></a>PDFKit
 
-PDFKit est désormais disponible sur iOS 11, apportent de la création de PDF et de fonctionnalités à vos applications d’édition.
+PDFKit est désormais disponible sur iOS 11, placer la création de PDF et modification des fonctionnalités à vos applications.
 
 ## <a name="sirikitsirikitmd"></a>[SiriKit](sirikit.md)
 
-Siri prend désormais en charge les interactions davantage, y compris les listes et notes et autres améliorations telles que les noms de l’autre application.
+Siri prend désormais en charge les interactions davantage, y compris les listes et notes de publication et d’autres améliorations telles que les noms de l’autre application.
 
 ## <a name="visionvisionmd"></a>[Vision](vision.md)
 
-Apporte des fonctionnalités de traitement et l’analyse de diverses image sur iOS, y compris la détection de visage reconnaissance, CoreML modèles, détection de code-barres nouvelles API, texte et horizon de détection et détection d’objets plus générale et de suivi.
+Apporte des fonctionnalités de traitement et l’analyse une variété d’image pour iOS, y compris la détection de visage et reconnaissance CoreML modèles, nouvelle API de détection de code-barres, détection de texte et l’horizon et détection d’objets plus générale et de suivi.
 
 ## <a name="samples"></a>Exemples
 
-Nous avons un certain nombre de C# [exemples](https://developer.xamarin.com/samples/ios/iOS11/) pour vous aider à démarrer :
+Nous disposons d’un nombre de C# [exemples](https://developer.xamarin.com/samples/ios/iOS11/) pour vous aider à démarrer :
 
 * [Exemple de ARKit](https://developer.xamarin.com/samples/monotouch/ios11/ARKitSample/)
 * [Objets de placement ARKit](https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/)
 * [ARKit et UrhoSharp](arkit/urhosharp.md)
 * [Exemple de CoreML](https://developer.xamarin.com/samples/monotouch/ios11/CoreML)
 * [Exemple de reconnaissance d’Image de CoreML](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition)
-* [CoreML avec un modèle personnalisé Azure](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel)
-* [Exemple de lecture de balise de CoreNFC](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
-* [Glisser -déplacer la Table de vue](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView)
-* [Glisser -déplacer la vue de Collection](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropCollectionView)
+* [CoreML avec des modèles personnalisés Azure](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel)
+* [Exemple de lecteur CoreNFC balise](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
+* [Glisser -déplacer de vue de Table](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropTableView)
+* [Glisser -déplacer de vue de Collection](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropCollectionView)
 * [Glisser -déplacer d’une vue personnalisée](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropCustomView)
-* [DragBoard glisser -déplacer exemple](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropDragBoard)
+* [Faites glisser DragBoard & exemple de dépôt](https://developer.xamarin.com/samples/monotouch/ios11/DragAndDropDragBoard)
 * [Exemple de MapKit](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample)
 * [Exemple de SiriKit](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)
 * [Exemple de structure de Photos mis à jour](https://developer.xamarin.com/samples/monotouch/ios11/SamplePhotoApp/)
-* [Vision & CoreML exemple](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision)
+* [Vision et CoreML exemple](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision)
 * [Exemple de détection de Rectangles de vision](https://developer.xamarin.com/samples/monotouch/ios11/VisionRects)
-* [Exemple de détection des visages vision](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces)
+* [Exemple de détection de visages de vision](https://developer.xamarin.com/samples/monotouch/ios11/VisionFaces)
 * [Exemple de Widgets PDKFit](https://developer.xamarin.com/samples/monotouch/ios11/PDFAnnotationWidgetsAdvanced)
 * [Exemple de PDFKit filigrane](https://developer.xamarin.com/samples/monotouch/ios11/PDFDocumentWatermark)
 
 ## <a name="more-information"></a>Informations complémentaires
 
-Pour plus d’informations sur iOS 11, visitez d’Apple [Nouveautés dans iOS 11](https://developer.apple.com/ios/) documentation.
+Pour plus d’informations sur iOS 11, visitez d’Apple [quelles sont les nouveautés dans iOS 11](https://developer.apple.com/ios/) documentation.
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Nouveautés dans iOS 11 (Apple)](https://developer.apple.com/ios/)
-- [Exemples d’iOS 11 Xamarin](https://developer.xamarin.com/samples/ios/iOS11/)
+- [Quelles sont les nouveautés dans iOS 11 (Apple)](https://developer.apple.com/ios/)
+- [Exemples de Xamarin iOS 11](https://developer.xamarin.com/samples/ios/iOS11/)

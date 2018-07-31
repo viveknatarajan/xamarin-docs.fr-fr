@@ -6,44 +6,45 @@ ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b8b61ba38491b2085233dd1b30a82bc57d2baaed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/03/2018
+ms.openlocfilehash: 366308774a7302e54b0d47753256638e89d97b82
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30777929"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350980"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Puis-je ajouter des fichiers à ou supprimer des fichiers à partir d’un fichier IPA après l’avoir généré dans Visual Studio ?
 
-Oui, il est possible, mais elle nécessite généralement que vous signer à nouveau le `.app` regroupement après avoir apporté la modification.
+Oui, il est possible, mais elle nécessitera généralement que vous signer à nouveau le `.app` bundle après avoir apporté la modification.
 
-Notez que la modification du `.ipa` fichier n’est pas nécessaire dans une utilisation normale. Cet article est fourni uniquement à titre d’information.
+Notez que la modification de la `.ipa` fichier n’est pas nécessaire dans une utilisation normale. Cet article est fourni uniquement à titre d’information.
 
 ## <a name="example-removing-a-file-from-a-ipa-archive"></a>Exemple : suppression d’un fichier à partir d’un `.ipa` archive
 
-Pour cet exemple, supposons que le nom du projet Xamarin.iOS est `iPhoneApp1` et `generated session id` est `cc530d20d6b19da63f6f1c6f67a0a254`
+Pour cet exemple, supposez que le nom du projet Xamarin.iOS est `iPhoneApp1` et `generated session id` est `cc530d20d6b19da63f6f1c6f67a0a254`
 
-1.  Générer le `.ipa` fichier normalement à partir de Visual Studio.
+1.  Générer le `.ipa` fichier comme d’habitude à partir de Visual Studio.
 
 2.  Basculer vers l’hôte de build Mac.
 
-3.  Trouver la build dans le `~/Library/Caches/Xamarin/mtbs/builds` dossier. Vous pouvez coller ce chemin d’accès dans **Finder > accédez > accédez au dossier** pour parcourir le dossier de recherche. Recherchez le dossier qui correspond au nom du projet. Dans ce dossier, recherchez le dossier qui correspond à la `generated session id` de la build. Ce sera très probablement le sous-dossier contenant la dernière heure de modification.
+3.  Recherchez la build dans le `~/Library/Caches/Xamarin/mtbs/builds` dossier. Vous pouvez coller ce chemin d’accès dans **Finder > Atteindre > accédez au dossier** pour parcourir le dossier dans le Finder. Recherchez le dossier qui correspond au nom de projet. Dans ce dossier, recherchez le dossier qui correspond à la `generated session id` de la build. Il s’agit très probablement le sous-dossier contenant la dernière heure de modification.
 
 4.  Ouvrez une nouvelle `Terminal.app` fenêtre.
 
-5.  Type `cd ` dans la fenêtre de Terminal.app, puis glisser-déplacer le `generated session id` dossier dans le `Terminal.app` fenêtre :
+5.  Type `cd ` dans la fenêtre Terminal.app et puis glisser -déplacer le `generated session id` dossier vers le `Terminal.app` fenêtre :
 
     ![](modify-ipa-images/session-id-folder.png "Localiser le dossier d’id de session généré dans le Finder")
 
-6.  Tapez la touche Retour pour changer de répertoire dans le `generated session id` dossier.
+6.  Tapez la touche Retour pour modifier le répertoire dans le `generated session id` dossier.
 
-7.  Décompressez le `.ipa` fichier dans une variable temporaire `old/` dossier à l’aide de la commande suivante. Ajuster la `Ad-Hoc` et `iPhoneApp1` des noms en fonction des besoins de votre projet particulier.
+7.  Décompressez le `.ipa` fichier dans une table temporaire `old/` dossier à l’aide de la commande suivante. Ajuster la `Ad-Hoc` et `iPhoneApp1` nomme en fonction des besoins de votre projet spécifique.
 
-    > bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa - élément ancien de répétition /
+    > répétition bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa - élément ancien /
 
 8.  Conserver la `Terminal.app` fenêtre ouverte.
 
-9.  Supprimer les fichiers souhaités à partir de la `.ipa`. Vous pouvez les déplacer vers la Corbeille à l’aide de la recherche, ou les supprimer sur la ligne de commande à l’aide de `Terminal.app`. Pour afficher le contenu de la `Payload/iPhone` fichier Finder, CTRL + clic sur le fichier et sélectionnez **afficher le contenu du Package**.
+9.  Supprimer les fichiers souhaités à partir de la `.ipa`. Vous pouvez les déplacer vers la Corbeille à l’aide de la recherche, ou supprimez-les sur la ligne de commande à l’aide `Terminal.app`. Pour afficher le contenu de la `Payload/iPhone` dans le Finder, cliquez sur le fichier et sélectionnez **afficher le contenu du Package**.
 
 10.  À l’aide de la même approche générale comme à l’étape 3, recherchez le fichier journal sous `~/Library/Logs/Xamarin/MonoTouchVS/` qui a le nom du projet et le `generated session id` dans le nom : ![ ] (modify-ipa-images/build-log.png "localiser le journal de génération de projet dans le Finder")
 
@@ -51,17 +52,17 @@ Pour cet exemple, supposons que le nom du projet Xamarin.iOS est `iPhoneApp1` et
 
 12.  Recherchez la ligne qui inclut `tool /usr/bin/codesign execution started with arguments: -v --force --sign`.
 
-13.  Type `/usr/bin/codesign ` dans la fenêtre de Terminal.app à l’étape 8.
+13.  Type `/usr/bin/codesign ` dans la fenêtre Terminal.app à l’étape 8.
 
-14.  Copier tous les arguments commençant par `-v` à partir de la ligne dans l’étape 12, puis collez-les dans la fenêtre Terminal.app.
+14.  Copiez tous les arguments en commençant par `-v` à la ligne dans l’étape 12, puis collez-les dans la fenêtre Terminal.app.
 
-15.  Modifier le dernier argument pour être le `.app` groupe qui se trouve dans le `old/Payload/` dossier, puis exécutez la commande.
+15.  Modifier le dernier argument pour être le `.app` bundle situés au sein de la `old/Payload/` dossier, puis exécutez la commande.
 
 ```bash
 /usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
 ```
 
-16.  Transformer le `old/` répertoire Terminal Server :
+16.  Modifier dans le `old/` répertoire dans un Terminal :
 
 ```bash
 cd old
@@ -75,9 +76,9 @@ zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
 
 ## <a name="common-error-messages"></a>Messages d’erreur courants
 
-Si vous voyez `Invalid Signature. A sealed resource is missing or invalid.`, cela signifie généralement que quelque chose a été modifiée dans le `.app` regroupement et que le `.app` offre groupée a été pas correctement signée à nouveau par la suite. Notez également que si vous souhaitez créer un `.ipa` avec un profil de distribution, vous _doit_ générer d’origine `.ipa` avec un profil de distribution. Dans le cas contraire le `Entitlements.xcent` seront incorrectes.
+Si vous voyez `Invalid Signature. A sealed resource is missing or invalid.`, cela signifie généralement que quelque chose a été modifiée dans le `.app` bundle et qui le `.app` bundle n’était pas correctement RE-signé par la suite. Notez également que si vous souhaitez créer un `.ipa` avec un profil de distribution, vous _doit_ générer l’original `.ipa` avec un profil de distribution. Sinon le `Entitlements.xcent` seront incorrectes.
 
-Pour donner un exemple concret de la manière dont cette erreur peut se produire, si vous exécutez la commande suivante `codesign --verify` commande dans la fenêtre de Terminal Server après l’étape 9, vous verrez l’erreur ainsi que la cause précise de l’erreur :
+Pour donner un exemple concret de la manière dont cette erreur peut se produire, si vous exécutez la commande suivante `codesign --verify` commande dans la fenêtre de Terminal après l’étape 9, vous verrez l’erreur, ainsi que la cause précise de l’erreur :
 
 ```bash
 $ codesign -dvvv --no-strict --verify old/Payload/iPhoneApp1.app
@@ -85,6 +86,6 @@ old/Payload/iPhoneApp1.app: a sealed resource is missing or invalid
 file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530d20d6b19da63f6f1c6f67a0a254/old/Payload/iPhoneApp1.app/MyFile.png
 ```
 
-Et le processus de vérification du magasin d’applications signale un message d’erreur similaire :
+Et le processus de vérification App Store signalera un message d’erreur similaire :
 
-> ÉLÉMENTS de l’erreur-90035 : « Signature non valide. Une ressource sealed est manquant ou non valide. Le fichier binaire au chemin d’accès [iPhoneApp1.app/iPhoneApp1] contient une signature non valide. Assurez-vous que vous avez signé votre application avec un certificat de distribution, pas sur un certificat ad hoc ou un certificat de développement. Vérifiez que les paramètres de signature de code dans Xcode sont corrects au niveau de la cible (qui remplacent les valeurs au niveau du projet). En outre, assurez-vous que le groupe que vous téléchargez a été généré à l’aide d’une cible de la mise en production dans Xcode, pas une cible de simulateur. Si vous êtes certain que vos paramètres de signature de code sont corrects, choisissez « Nettoyer tous » dans Xcode, supprimez le répertoire « build » dans le Finder et régénérer votre cible de la mise en production. Pour plus d’informations, consultez [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)»
+> ERREUR ITMS-90035 : « Signature non valide. Une ressource sealed est manquant ou non valide. Le fichier binaire au chemin d’accès [iPhoneApp1.app/iPhoneApp1] contient une signature non valide. Vérifiez que vous avez connecté votre application avec un certificat de distribution, pas un certificat ad hoc ou un certificat de développement. Vérifiez que les paramètres de signature de code dans Xcode sont corrects au niveau cible (qui remplace les valeurs au niveau du projet). En outre, assurez-vous que le groupe que vous téléchargez a été créé à l’aide d’une cible de la mise en production dans Xcode, pas une cible du simulateur. Si vous êtes certain que vos paramètres de signature de code sont corrects, choisissez « Nettoyer tout » dans Xcode, supprimez le répertoire « build » dans le Finder et regénérer votre cible de la mise en production. Pour plus d’informations, consultez [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)»
