@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: f2bccc9140c4c1c9d5d543a4240178f9301852bb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 54fdec74a6e1d0aee71ec0ca6809a5b40680de9f
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997359"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360810"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
@@ -22,11 +22,11 @@ ms.locfileid: "38997359"
 
 Cet article couvre les sujets suivants :
 
-- **[Objectif](#Purpose)**  &ndash; l’objectif de `ScrollView` et lorsqu’il est utilisé.
-- **[Utilisation](#Usage)**  &ndash; comment utiliser `ScrollView` dans la pratique.
-- **[Propriétés](#Properties)**  &ndash; des propriétés publiques qui peuvent être lue et modifiées.
-- **[Méthodes](#Methods)**  &ndash; des méthodes publiques qui peuvent être appelés pour faire défiler la vue.
-- **[Événements](#Events)**  &ndash; événements qui peuvent être utilisées pour écouter les modifications dans les États de la vue.
+- **[Objectif](#purpose)**  &ndash; l’objectif de `ScrollView` et lorsqu’il est utilisé.
+- **[Utilisation](#usage)**  &ndash; comment utiliser `ScrollView` dans la pratique.
+- **[Propriétés](#properties)**  &ndash; des propriétés publiques qui peuvent être lue et modifiées.
+- **[Méthodes](#methods)**  &ndash; des méthodes publiques qui peuvent être appelés pour faire défiler la vue.
+- **[Événements](#events)**  &ndash; événements qui peuvent être utilisées pour écouter les modifications dans les États de la vue.
 
 ## <a name="purpose"></a>Objectif
 

@@ -6,13 +6,13 @@ ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/13/2018
-ms.openlocfilehash: abc21c3830126346ffb877639657c973da474812
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+ms.date: 07/30/2018
+ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038389"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360836"
 ---
 # <a name="a-basic-recyclerview-example"></a>Un exemple de RecyclerView base
 
@@ -368,7 +368,15 @@ Lorsque ce code est compilé et exécuté, il crée la base photo affichage appl
 
 [![Deux captures d’écran de l’application avec les cartes photo à défilement vertical d’affichage de photos](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
+Si les ombres ne sont pas dessinés (comme indiqué dans la capture d’écran ci-dessus), modifiez **Properties/Androidmanifest.XML** et ajoutez le paramètre d’attribut suivant à la `<application>` élément :
+
+```xml
+android:hardwareAccelerated="true"
+```
+
 Cette application de base prend uniquement en charge la navigation de l’album photo. Il ne répond pas aux événements tactiles élément, ni gère-t-il les modifications dans les données sous-jacentes. Cette fonctionnalité est ajoutée dans [étend l’exemple de RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
+
+
 
 
 ### <a name="changing-the-layoutmanager"></a>Modification de la LayoutManager
