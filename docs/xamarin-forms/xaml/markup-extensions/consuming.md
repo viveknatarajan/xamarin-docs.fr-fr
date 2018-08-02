@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 6f0c15976871129362fb3d6d3287215d1fba2cb9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a630d7c2acb95b7551c9f5f870078a0efcfc075c
+ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995980"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39393670"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilisation des Extensions de balisage XAML
 
@@ -24,12 +24,12 @@ Extensions de balisage XAML vous aider à améliorer la puissance et la flexibil
 - [`x:Array`](#array) &ndash; construire un tableau d’objets d’un type particulier.
 - [`x:Null`](#null) &ndash; Définissez un attribut sur un `null` valeur.
 
-Trois autres extensions de balisage XAML ont toujours été pris en charge par d’autres implémentations XAML et sont également prises en charge par Xamarin.Forms. Ceux-ci sont décrits plus en détail dans d’autres articles :
+Les extensions de balisage XAML supplémentaires ont toujours été pris en charge par d’autres implémentations XAML et sont également prises en charge par Xamarin.Forms. Ceux-ci sont décrits plus en détail dans d’autres articles :
 
 - `StaticResource` &ndash; référencer des objets à partir d’un dictionnaire de ressources, comme décrit dans l’article [ **dictionnaires de ressources**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` &ndash; répondre aux modifications des objets dans un dictionnaire de ressources, comme décrit dans l’article [ **Styles dynamiques**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` &ndash; établir un lien entre les propriétés de deux objets, comme décrit dans l’article [ **une liaison de données**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; effectue la liaison de données à partir d’un modèle de contrôle, comme indiqué dans l’article [**à partir d’un modèle de contrôle de liaison**] / guides/xamarin-forms/application-notions de base/modèles/contrôle-modèles/liaison de modèle /)
+- `TemplateBinding` &ndash; effectue la liaison de données à partir d’un modèle de contrôle, comme indiqué dans l’article [ **à partir d’un modèle de contrôle de liaison**](/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/).
 
 Le [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) mise en page utilise l’extension de balisage personnalisée [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Cette extension de balisage est décrite dans l’article [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
