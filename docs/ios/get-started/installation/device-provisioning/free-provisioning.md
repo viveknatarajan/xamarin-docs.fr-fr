@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 22ac17e211562eccbc49cc213e06079e77dd08c0
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 0f2418994e02c9e83506071f14901d22af4b8a66
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111155"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353319"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Provisionnement gratuit pour les applications Xamarin.iOS
 
@@ -35,7 +35,7 @@ Pour déployer vos applications Xamarin.iOS sur un appareil à l’aide du provi
 - Votre application Xamarin.iOS doit utiliser un ID d’application explicite, et non un ID d’application générique.
 - L’identificateur de bundle utilisé dans votre application Xamarin.iOS doit être unique. Il ne doit pas avoir été utilisé dans une autre application. Vous ne **pouvez** pas réutiliser un identificateur de bundle avec le provisionnement gratuit.
 - Si vous avez déjà distribué une application, vous ne pouvez pas la déployer à l’aide du provisionnement gratuit.
-- Si votre application utilise App Services, vous devez créer un profil de provisionnement comme indiqué dans le guide de [provisionnement des appareils](~/ios/get-started/installation/device-provisioning/index.md#appservices). 
+- Si votre application utilise App Services, vous devez créer un profil de provisionnement comme indiqué dans le guide de [provisionnement des appareils](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services). 
 
 Pour plus d’informations sur les limitations associées au provisionnement gratuit, consultez la section [Limitations](#limitations) de ce document. Consultez également les [guides de distribution d’applications](~/ios/deploy-test/app-distribution/index.md) pour plus d’informations sur la distribution d’applications iOS.
 
@@ -144,4 +144,4 @@ Ce guide a exploré les avantages et les limites de l’utilisation du provision
 ## <a name="related-links"></a>Liens connexes
 
 - [Provisionnement des appareils](~/ios/get-started/installation/device-provisioning/index.md)
-- [Provisionnement des services d’application](~/ios/get-started/installation/device-provisioning/index.md#appservices)
+- [Provisionnement des services d’application](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)

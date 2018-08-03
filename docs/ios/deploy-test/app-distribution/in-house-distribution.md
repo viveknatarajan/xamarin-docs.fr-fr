@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 657370705233e923b482b67fc5afed12631c8187
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1dff0e614943805930cf7d838110c4a42eee6f48
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785026"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353202"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribution interne pour les applications Xamarin.iOS
 
@@ -98,7 +98,7 @@ Comme pour tout profil de provisionnement que vous créez, un ID d’application
 1. Dans [Apple Developer Center](https://developer.apple.com/account/overview.action), accédez à la section *Certificates, Identifiers & Profiles* (Certificats, identificateurs et profils). Sélectionnez **App IDs** sous **Identifiers**.
 2. Cliquez sur le bouton **+**, puis indiquez un **Name (Nom)** qui identifie l’application sur le portail.
 3. Le préfixe d’application doit déjà être défini à l’aide de votre ID d’équipe. Il est impossible de le changer. Sélectionnez un ID d’application explicite ou avec des caractères génériques, puis entrez un ID de bundle au format DNS inversé : **Explicite** : com.[DomainName].[AppName] **Avec des caractères génériques** : com.[DomainName].*
-4. Sélectionnez les [services d’application](~/ios/get-started/installation/device-provisioning/index.md#appservices) nécessaires à votre application.
+4. Sélectionnez les [services d’application](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) nécessaires à votre application.
 5. Cliquez sur le bouton **Continue** et suivez les instructions affichées à l’écran pour créer l’ID d’application.
 
 Une fois que vous avez les composants nécessaires pour créer un profil de distribution, suivez les étapes ci-dessous pour le créer :
