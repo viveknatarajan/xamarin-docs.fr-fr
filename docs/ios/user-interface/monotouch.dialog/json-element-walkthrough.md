@@ -21,7 +21,7 @@ SERVEUR CIBLE MAÎTRE. D prend en charge la création d’interfaces utilisateur
 
 SERVEUR CIBLE MAÎTRE. D prend en charge la gamme complète des fonctionnalités qui sont disponibles dans l’API d’éléments lors de l’utilisation de JSON. Par exemple, l’application dans la capture d’écran suivante est déclarée complètement à l’aide de JSON :
 
-[![](json-element-walkthrough-images/01-load-from-file.png "Par exemple, l’application dans cette capture d’écran est complètement déclarée à l’aide de JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png ", par exemple, l’application dans cette capture d’écran est complètement déclarée à l’aide de JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
+[![](json-element-walkthrough-images/01-load-from-file.png "Par exemple, l’application dans cette capture d’écran est complètement déclarée à l’aide de JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png ", par exemple, l’application dans cette capture d’écran est complètement déclarée à l’aide de JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Nous allons revisiter l’exemple de la [API de procédure pas à pas les éléments](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) didacticiel, montrant comment ajouter un écran de détails des tâches à l’aide de JSON.
 

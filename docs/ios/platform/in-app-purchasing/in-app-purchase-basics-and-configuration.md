@@ -109,8 +109,8 @@ Cliquez sur **achats dans l’application** pour créer ou modifier vos produits
 
 Le processus d’ajout de nouveaux produits comporte deux étapes :
 
-1.   Choisissez le type de produit : [ ![ ] (in-app-purchase-basics-and-configuration-images/image8.png "choisir le type de produit")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Entrez les attributs du produit, y compris l’Id de produit, le niveau tarifaire et descriptions localisées : [ ![ ] (in-app-purchase-basics-and-configuration-images/image9.png "entrer les attributs de produits")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1.   Choisissez le type de produit : [![](in-app-purchase-basics-and-configuration-images/image8.png "choisir le type de produit")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2.   Entrez les attributs du produit, y compris l’Id de produit, le niveau tarifaire et descriptions localisées : [![](in-app-purchase-basics-and-configuration-images/image9.png "entrer les attributs de produits")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 Les champs requis pour chaque produit dans l’application achat sont décrites ci-dessous :
 

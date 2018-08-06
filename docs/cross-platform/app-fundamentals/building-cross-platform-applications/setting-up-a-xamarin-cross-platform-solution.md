@@ -121,7 +121,7 @@ Les projets d’application de plateforme spécifique référencent le code part
 
 Les projets d’application chaque référencent de projet partagé et contiennent le code de l’interface utilisateur nécessaire aux fonctionnalités présente à l’utilisateur, comme indiqué dans les captures d’écran :
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "Les projets de l’application de chaque référence de projet partagé") ![ ] (setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "l’application projette chaque référence de projet partagé")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "Les projets de l’application de chaque référence de projet partagé") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "l’application projette chaque référence de projet partagé")
 
 
 Des exemples spécifiques de structuration des projets sont donnés dans les études de cas.

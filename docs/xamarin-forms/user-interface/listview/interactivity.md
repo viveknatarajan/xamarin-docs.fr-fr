@@ -157,7 +157,7 @@ Extraire pour actualiser en tant que l’utilisateur extrait :
 
 ![](interactivity-images/refresh-start.png "Extraction de ListView pour actualiser en cours d’exécution")
 
-Extraire pour actualiser en tant que l’utilisateur a publié l’extraction. C’est ce que l’utilisateur voit alors que vous mettez à jour de liste : ![ ] (interactivity-images/refresh-in-progress.png "par extraction de ListView pour l’actualisation terminée")
+Extraire pour actualiser en tant que l’utilisateur a publié l’extraction. C’est ce que l’utilisateur voit alors que vous mettez à jour de liste : ![](interactivity-images/refresh-in-progress.png "par extraction de ListView pour l’actualisation terminée")
 
 ListView expose quelques événements qui vous permettent de répondre aux événements d’extraction pour actualiser.
 

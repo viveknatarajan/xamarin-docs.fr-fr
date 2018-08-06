@@ -62,11 +62,11 @@ Le `HeroImage` contrôle possède quatre propriétés :
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "Contrôle HeroImage sur Android") ![ ] (controls-images/heroimage-dark-android.png "contrôle HeroImage sur Android")
+![](controls-images/heroimage-light-android.png "Contrôle HeroImage sur Android") ![](controls-images/heroimage-dark-android.png "contrôle HeroImage sur Android")
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "Contrôle HeroImage sur iOS") ![ ] (controls-images/heroimage-dark-ios.png "contrôle HeroImage sur iOS")
+![](controls-images/heroimage-light-ios.png "Contrôle HeroImage sur iOS") ![](controls-images/heroimage-dark-ios.png "contrôle HeroImage sur iOS")
 
 
 <a name="listitem" />
@@ -97,11 +97,11 @@ Ces captures d’écran montrent la `ListItem` sur les plateformes iOS et Androi
 
 **Android**
 
-![](controls-images/listitem-light-android.png "Contrôle ListItem sur Android") ![ ] (controls-images/listitem-dark-android.png "contrôle ListItem sur Android")
+![](controls-images/listitem-light-android.png "Contrôle ListItem sur Android") ![](controls-images/listitem-dark-android.png "contrôle ListItem sur Android")
 
 **iOS**
 
-![](controls-images/listitem-light-ios.png "Contrôle ListItem sur iOS") ![ ] (controls-images/listitem-dark-ios.png "contrôle ListItem sur iOS")
+![](controls-images/listitem-light-ios.png "Contrôle ListItem sur iOS") ![](controls-images/listitem-dark-ios.png "contrôle ListItem sur iOS")
 
 
 ## <a name="custom-control-example"></a>Exemple de contrôle personnalisé
@@ -128,11 +128,11 @@ Il doit ressembler les captures d’écran ci-dessous à l’aide de couleurs co
 
 **Android**
 
-![](controls-images/cardview-light-android.png "Un contrôle personnalisé de CardView sur Android") ![ ] (controls-images/cardview-dark-android.png "un contrôle personnalisé de CardView sur Android")
+![](controls-images/cardview-light-android.png "Un contrôle personnalisé de CardView sur Android") ![](controls-images/cardview-dark-android.png "un contrôle personnalisé de CardView sur Android")
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "Un contrôle personnalisé CardView sur iOS") ![ ] (controls-images/cardview-dark-ios.png "CardView un contrôle personnalisé sur iOS")
+![](controls-images/cardview-light-ios.png "Un contrôle personnalisé CardView sur iOS") ![](controls-images/cardview-dark-ios.png "CardView un contrôle personnalisé sur iOS")
 
 <a name="custom" />
 

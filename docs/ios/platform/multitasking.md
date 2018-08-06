@@ -19,7 +19,7 @@ ms.locfileid: "34787953"
 
 _iOS 9 prend en charge les deux applications qui s’exécutent en même temps, à l’aide de la diapositive sur ou mode fractionné. Il prend également en charge la lecture d’image vidéo._
 
-![](multitasking-images/about02-sml.png "Exemple d’écran de fractionner") ![ ] (multitasking-images/about03-sml.png "d’image exemple")
+![](multitasking-images/about02-sml.png "Exemple d’écran de fractionner") ![](multitasking-images/about03-sml.png "d’image exemple")
 
 iOS 9 prend en charge multitâche exécutant deux applications en même temps sur un iPad spécifique matériel. Multitâche pour iPad est pris en charge via les fonctionnalités suivantes :
 

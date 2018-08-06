@@ -29,7 +29,7 @@ Dans cet article, vous allez en savoir plus sur tous ces aspects, ce qui vous do
 
 Pour illustrer les protocoles et les délégués, nous allons construire une application de mappage simple qui ajoute une annotation à un mappage, comme illustré ici :
 
- [![](delegates-protocols-and-events-images/01-map.png "Un exemple d’une application de mappage simple qui ajoute une annotation à un mappage") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "une annotation exemple ajoutée à une carte")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![](delegates-protocols-and-events-images/01-map.png "Un exemple d’une application de mappage simple qui ajoute une annotation à un mappage")](delegates-protocols-and-events-images/01-map.png#lightbox) [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "une annotation exemple ajoutée à une carte")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Avant d’aborder cette application, nous allons commencer en examinant les événements .NET sous la UIKit.
 

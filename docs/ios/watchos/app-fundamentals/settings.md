@@ -63,7 +63,7 @@ var userName = shared.StringForKey ("name_preference");
 
 Les utilisateurs interagissent avec les paramètres via la nouvelle **Apple Watch** application sur leur iPhone. Cette application permet à l’utilisateur permettant d’afficher/masquer les applications sur la surveillance, ainsi que modifier les paramètres exposées à l’aide du **Watch.bundle de paramètres**.
 
-![](settings-images/applewatch-1.png "Exemple de paramètres d’application") ![ ] (settings-images/applewatch-2.png "exemple de paramètres d’application")
+![](settings-images/applewatch-1.png "Exemple de paramètres d’application") ![](settings-images/applewatch-2.png "exemple de paramètres d’application")
 
 
 

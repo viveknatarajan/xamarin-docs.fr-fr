@@ -49,7 +49,7 @@ DismissController();
 
 Présente les scènes comme une pile qui peut être navigué via, similaire à la façon dont `UINavigationController` fonctionne sur iOS. En arrière-plan peut être placé sur la pile de navigation et dépilés (par programmation ou par la sélection de l’utilisateur).
 
-![](navigation-images/hierarchy-1.png "En arrière-plan peut être placé sur la pile de navigation") ![ ] (navigation-images/hierarchy-2.png "en arrière-plan peut être dépilée navigation")
+![](navigation-images/hierarchy-1.png "En arrière-plan peut être placé sur la pile de navigation") ![](navigation-images/hierarchy-2.png "en arrière-plan peut être dépilée navigation")
 
 Comme avec iOS, un passage de bord gauche navigue vers le contrôleur parent dans une pile de navigation hiérarchique.
 
@@ -94,7 +94,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 Interfaces basées sur la page balayez vers la gauche à droite, similaire à la façon dont `UIPageViewController` fonctionne sur iOS. Points de l’indicateur sont affichent au bas de l’écran pour afficher la page actuellement affichée.
 
-![](navigation-images/paged-1.png "Exemple de première page") ![ ] (navigation-images/paged-2.png "deuxième exemple de page") ![ ] (navigation-images/paged-5.png "cinquième page d’exemples")
+![](navigation-images/paged-1.png "Exemple de première page") ![](navigation-images/paged-2.png "deuxième exemple de page") ![](navigation-images/paged-5.png "cinquième page d’exemples")
 
 
 Pour définir une interface basée sur la page de l’interface utilisateur principale pour votre application de surveillance, utilisez `ReloadRootControllers` avec un tableau des contextes et des contrôleurs d’interface :

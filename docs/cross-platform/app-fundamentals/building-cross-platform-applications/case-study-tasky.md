@@ -479,7 +479,7 @@ Les applications qui en résulte se présenter comme suit sur chaque plateforme�
 
 L’application utilise la conception de l’interface utilisateur d’e/s standard, telles que le bouton « Ajouter » est placé dans la barre de navigation et à l’aide de la fonction intégrée **plus (+)** icône. Il utilise également la valeur par défaut `UINavigationController` bouton « arrière » le comportement et prend en charge 'balayez à supprimer' dans la table.
 
- [![](case-study-tasky-images/ios-taskylist.png "Il utilise le comportement du bouton précédent de UINavigationController par défaut et prend en charge le balayage à supprimer dans la table d’également") ](case-study-tasky-images/ios-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/ios-taskylist.png "il utilise également la valeur par défaut UINavigationController sauvegarder le comportement du bouton et prend en charge le balayage à supprimer dans la table")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![](case-study-tasky-images/ios-taskylist.png "Il utilise le comportement du bouton précédent de UINavigationController par défaut et prend en charge le balayage à supprimer dans la table d’également")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "il utilise également la valeur par défaut UINavigationController sauvegarder le comportement du bouton et prend en charge le balayage à supprimer dans la table")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
  <a name="Android" />
 
@@ -495,7 +495,7 @@ L’application Android utilise les contrôles intégrés, y compris la mise en 
 
 L’application Windows Phone utilise la mise en page standard, remplissage de la barre des applications au bas de l’écran au lieu d’une barre de navigation en haut.
 
- [![](case-study-tasky-images/wp-taskylist.png "L’application Windows Phone utilise la mise en page standard, remplissage de la barre des applications au bas de l’écran au lieu d’une barre de navigation en haut") ](case-study-tasky-images/wp-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/wp-taskylist.png "de Windows Phone l’application utilise le standard mise en page, remplissage de la barre des applications au bas de l’écran au lieu d’une barre de navigation en haut")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [![](case-study-tasky-images/wp-taskylist.png "L’application Windows Phone utilise la mise en page standard, remplissage de la barre des applications au bas de l’écran au lieu d’une barre de navigation en haut")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "de Windows Phone l’application utilise le standard mise en page, remplissage de la barre des applications au bas de l’écran au lieu d’une barre de navigation en haut")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary" />
 
