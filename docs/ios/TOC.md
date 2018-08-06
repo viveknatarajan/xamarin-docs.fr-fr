@@ -329,6 +329,7 @@
 ### [Règles d’analyse Xamarin.iOS](troubleshooting/xamarin-ios-analysis.md)
 ### [Messages d’erreur (mtouch)](troubleshooting/mtouch-errors.md)
 ### [Forum Aux Questions](troubleshooting/questions/index.md)
+#### [Débogage avec Xcode](troubleshooting/questions/debugging-with-xcode.md)
 #### [Puis-je utiliser une machine virtuelle Mac avec Xamarin ?](troubleshooting/questions/mac-vm.md)
 #### [Téléchargement d’une version précédente de Xcode](troubleshooting/questions/previous-xcode.md)
 #### [Où puis-je définir l’emplacement de mon Kit SDK iOS ?](troubleshooting/questions/ios-sdk.md)

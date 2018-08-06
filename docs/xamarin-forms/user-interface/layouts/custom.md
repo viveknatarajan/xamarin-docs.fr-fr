@@ -409,8 +409,8 @@ Lorsque la page contenant le `WrapLayout` s’affiche, de façon asynchrone, l�
 L’émission des captures d’écran suivante le `WrapLayout` après tourne orientation paysage :
 
 ![](custom-images/landscape-ios.png "Exemples iOS Application capture d’écran paysage")
-![](custom-images/landscape-android.png "exemple Android Application paysage capture d’écran de") 
- ![ ] (custom-images/landscape-uwp.png " Capture d’écran du paysage Application exemple UWP")
+![](custom-images/landscape-android.png "exemple Android Application paysage capture d’écran de")
+![](custom-images/landscape-uwp.png " Capture d’écran du paysage Application exemple UWP")
 
 Le nombre de colonnes dans chaque ligne dépend de la taille de la photo, la largeur d’écran et le nombre de pixels par unité indépendante du périphérique. Le [ `Image` ](xref:Xamarin.Forms.Image) éléments chargement de façon asynchrone les photos et par conséquent le `WrapLayout` classe recevront des appels fréquents à son [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) chacun la méthode `Image` élément reçoit une nouvelle taille en fonction de la photo chargée.
 
