@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
-ms.date: 07/18/2018
-ms.openlocfilehash: 82a73619e4c0507e8857cc91d88ababa870013de
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 08/06/2018
+ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
+ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270470"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39520283"
 ---
 # <a name="sharing-code-overview"></a>Présentation du partage de code
 
@@ -19,7 +19,7 @@ _Ce document compare les différentes méthodes de partage de code entre les pro
 
 Il existe trois méthodes pour partager du code entre des applications multiplateformes :
 
-- [**Bibliothèques .NET standard** ](#Net_Standard) – projets .NET Standard peut implémenter le code pour être partagés entre plusieurs plateformes et peut accéder à un grand nombre d’API .NET (selon la version). Implémentez de standard 1.0 à 1.6 .NET enrichit progressivement ensembles d’API, tandis que .NET Standard 2.0 fournit la meilleure couverture des.
+- [**Bibliothèques .NET standard** ](#Net_Standard) – projets .NET Standard peut implémenter le code pour être partagés entre plusieurs plateformes et peut accéder à un grand nombre d’API .NET (selon la version). .NET standard 1.0 à 1.6 implémenter progressivement plus importants ensembles d’API, tandis que .NET Standard 2.0 fournit la meilleure couverture de la BCL .NET (y compris les API .NET disponibles dans les applications Xamarin).
 - [**Projets partagés** ](#Shared_Projects) : utiliser le type de projet de ressources partagées pour organiser votre code source et utiliser `#if` directives de compilateur comme requis pour gérer la configuration requise spécifique à la plateforme.
 - [**Bibliothèques de classes portables** ](#Portable_Class_Libraries) (déconseillé) : les bibliothèques de classes portables (PCL) peut cibler plusieurs plateformes avec une surface d’API commune et utiliser des Interfaces pour fournir des fonctionnalités spécifiques à la plateforme. Bibliothèques de classes portables sont déconseillés dans les dernières versions de Visual Studio &ndash; utilisez .NET Standard à la place.
 
