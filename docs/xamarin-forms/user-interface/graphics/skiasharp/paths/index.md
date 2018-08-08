@@ -1,40 +1,40 @@
 ---
-title: Chemins d’accès et les lignes SkiaSharp
-description: Cet article explique comment utiliser SkiaSharp pour dessiner des lignes et des tracés graphiques dans les applications de Xamarin.Forms et cela est illustré par l’exemple de code.
+title: Chemins d’accès et des lignes de SkiaSharp
+description: Cet article explique comment utiliser SkiaSharp pour dessiner des lignes et des tracés graphiques dans les applications Xamarin.Forms et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: a922f7ec91624e20a9afedb8063328bdb7a4d42d
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 9febfabb7b44b1ec09abda4b352691b37565cb48
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243751"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615133"
 ---
-# <a name="skiasharp-lines-and-paths"></a>Chemins d’accès et les lignes SkiaSharp
+# <a name="skiasharp-lines-and-paths"></a>Chemins d’accès et des lignes de SkiaSharp
 
-_Utilisez SkiaSharp pour dessiner des chemins d’accès des lignes et des graphiques_
+_Permet de dessiner des lignes et des graphismes chemins d’accès SkiaSharp_
 
 Le [section précédente](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md) a démontré que le SkiaSharp `SKCanvas` classe inclut plusieurs méthodes pour dessiner des rectangles, des ellipses et rectangles arrondis. Cette section et les sections suivantes couvrent les différentes classes liées à la création et le rendu *tracés graphiques*.
 
-Le chemin d’accès du graphique est l’approche la plus généralisée pour dessiner des lignes et des courbes dans SkiaSharp. Cette section couvre l’utilisation une `SKPath` objet pour dessiner des lignes droites et d’utiliser une collection de petites lignes droites (appelé un *polyligne*) pour dessiner des courbes que vous pouvez définir mathématiquement. Une section ultérieure sera présente les différents tris de courbes pris en charge par `SKPath`.
+Le chemin d’accès de graphiques est l’approche la plus généralisée pour dessiner des lignes et des courbes dans SkiaSharp. Cette section traite de l’utilisation un `SKPath` objet pour dessiner des lignes droites et d’utiliser une collection de lignes droites minuscules (appelé un *polyligne*) pour dessiner des courbes que vous pouvez définir de point de vue mathématique. Une section ultérieure traite des différentes sortes de courbes pris en charge par `SKPath`.
 
-Tous les exemples de programmes dans cette section apparaissent sous l’en-tête **lignes et des chemins d’accès** dans la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme, puis, dans le [ **Chemins d’accès** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) dossier de la solution.
+Tous les exemples de programmes dans cette section apparaissent sous l’en-tête **lignes et chemins d’accès** dans la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme, puis, dans le [ **Chemins** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) dossier de la solution.
 
 ## <a name="lines-and-stroke-capslinesmd"></a>[Lignes et embouts de trait](lines.md)
 
-Découvrez comment utiliser SkiaSharp pour dessiner des lignes avec des embouts de trait différent.
+Découvrez comment utiliser SkiaSharp pour dessiner des lignes avec des embouts de trait différentes.
 
 ## <a name="path-basicspathsmd"></a>[Principes de base du chemin d’accès](paths.md)
 
-Explorer l’objet SkiaSharp SKPath pour combiner des lignes et des courbes.
+Explorez l’objet SkiaSharp SKPath pour la combinaison de lignes et des courbes.
 
 ## <a name="the-path-fill-typesfill-typesmd"></a>[Les types de remplissage de chemin d’accès](fill-types.md)
 
-Découvrez les différents effets possibles avec les types de remplissage SkiaSharp chemin d’accès.
+Découvrez les différents effets possibles avec les types de remplissage de chemin d’accès SkiaSharp.
 
 ## <a name="polylines-and-parametric-equationspolylinesmd"></a>[Polylignes et équations paramétriques](polylines.md)
 

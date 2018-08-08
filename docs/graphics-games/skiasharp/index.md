@@ -2,16 +2,17 @@
 title: Dessin 2D avec SkiaSharp
 description: Ce document fournit une vue d’ensemble d’inter-plateformes 2D dessiner avec SkiaSharp. Il est lié à des guides pas à pas qui décrivent SkiaSharp et ses diverses API.
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: 0c8cbc14308c8c4131e5aaa2bcc0ddfa798af610
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 7207f33e56f566a5528d93f9957e2ff780a22a65
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130918"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615520"
 ---
 # <a name="2d-drawing-with-skiasharp"></a>Dessin 2D avec SkiaSharp
 
@@ -61,13 +62,13 @@ Découvrez comment travailler avec cross platform graphiques qui s’affichent d
   * [Chemins et texte](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
   * [Informations de chemin et énumération](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
 - [Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
-  * [Afficher des Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
-  * [Création et le dessin de Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
-  * [Rognage d’images bitmap](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
-  * [Affichage segmenté de Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
-  * [Enregistrement de Bitmaps dans des fichiers](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
-  * [L’accès aux Bits de Pixel de Bitmap](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
-  * [Animer des Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
+  * [Affichage de bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
+  * [Création et dessin sur des bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
+  * [Rognage de bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
+  * [Affichage segmenté de bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
+  * [Enregistrement de bitmaps dans des fichiers](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
+  * [Accès aux bits de pixel de bitmap](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
+  * [Animation de bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
 
 ## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[Remarques spécifiques de la plateforme](~/graphics-games/skiasharp/platform.md)
 

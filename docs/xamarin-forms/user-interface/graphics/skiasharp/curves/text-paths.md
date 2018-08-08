@@ -3,16 +3,16 @@ title: Chemins d’accès et du texte dans SkiaSharp
 description: Cet article explore l’intersection des chemins d’accès SkiaSharp et du texte et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: e7ce6994541ae947fa714d3c67acbc5d5d816975
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 3576af56d48eec58f3fe5fee42aef143e2edea70
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130778"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615455"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Chemins d’accès et du texte dans SkiaSharp
 

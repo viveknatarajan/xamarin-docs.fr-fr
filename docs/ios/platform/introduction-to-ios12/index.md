@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/08/2018
-ms.openlocfilehash: 865a06e9fa430e195ce4ea3c6088785d9513dbf6
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+ms.openlocfilehash: 4e1249b7a9c1e9797cbc758c3bd1b83f87d47431
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39030702"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615146"
 ---
 # <a name="introduction-to-ios-12"></a>Introduction à iOS 12
 
@@ -21,11 +21,12 @@ ms.locfileid: "39030702"
 > [!WARNING]
 > Prise en charge 12 de Xamarin iOS est actuellement en version préliminaire, ce qui signifie qu’il peut contenir des bogues, n’est pas complet, et peut changer. Utilisez-le pour l’expérimentation uniquement.
 
-> [!NOTE]
-> - Examinez le [mise en route](get-started.md) guide pour obtenir des instructions sur la façon de créer des applications iOS 12 avec Xamarin.
-> - Pour plus d’informations, consultez la préversion Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
 Ce document fournit une description générale de certaines API iOS 12 pour la version préliminaire de quels Xamarin version fournit des liaisons c#.
+
+Pour commencer à créer des applications iOS 12 avec Xamarin, jeter un œil :
+
+- Le [guide Mise en route](get-started.md)
+- La préversion Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
 
 ## <a name="arkit-2"></a>ARKit 2
 
@@ -69,8 +70,12 @@ iOS 11.3 introduit [médicaux](https://www.apple.com/healthcare/health-records/)
 
 Dans iOS 12, iMessage applications prennent en charge les contextes de présentation, qui autorise les applications à exécuter comme application iMessage normal ou dans le contexte d’une photo ou d’effet vidéo.
 
+## <a name="vision-framework"></a>Framework de vision
+
+L’infrastructure de Vision inclut un détecteur de visage améliorée qui peut détecter les visages dans différentes orientations. En outre, demander une révision est désormais utilisable pour sélectionner une révision d’algorithme de framework Vision spécifique.
+
 ## <a name="related-links"></a>Liens connexes
 
 - [Préparez-vous pour iOS 12 (Apple)](https://developer.apple.com/ios/)
 - [iOS 12 Preview (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Aperçu de Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Aperçu de Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

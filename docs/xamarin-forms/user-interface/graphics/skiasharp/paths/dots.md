@@ -1,20 +1,20 @@
 ---
-title: Points et des tirets dans SkiaSharp
-description: Cet article explique comment maîtriser les complexités de dessiner des lignes en pointillés et dans SkiaSharp et cela est illustré par l’exemple de code.
+title: Points et tirets dans SkiaSharp
+description: Cet article explique en détail comment maîtriser les complexités de dessin des lignes en pointillés et dans SkiaSharp et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5571f2d1824cef72e192a19d15f9af03276f7523
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 7c336e6b5224f61ff84eb39652788b23f52b806e
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243871"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615416"
 ---
-# <a name="dots-and-dashes-in-skiasharp"></a>Points et des tirets dans SkiaSharp
+# <a name="dots-and-dashes-in-skiasharp"></a>Points et tirets dans SkiaSharp
 
 _Maîtrisez les complexités de dessiner des lignes en pointillés et dans SkiaSharp_
 
@@ -22,15 +22,15 @@ SkiaSharp vous permet de dessiner des lignes qui ne sont pas correctes, mais au 
 
 ![](dots-images/dottedlinesample.png "Ligne en pointillés")
 
-Cela avec un *effet*, qui est une instance de la [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) classe que vous définissez pour le [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) propriété de `SKPaint`. Vous pouvez créer un chemin d’accès (ou les combiner chemin effets) à l’aide de la méthode statique `Create` méthodes définies par `SKPathEffect`.
+Cela avec une *effet*, qui est une instance de la [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) classe que vous définissez pour le [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) propriété de `SKPaint`. Vous pouvez créer un chemin d’accès (ou les combiner chemin effets) à l’aide de la méthode statique `Create` méthodes définies par `SKPathEffect`.
 
-Pour dessiner des lignes en pointillés ou en pointillé, vous utilisez la [ `SKPathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) méthode statique. Il y a deux arguments : il s’agit d’un tableau d’abord `float` valeurs qui indiquent la longueur de la taille en points et des tirets et la longueur des espaces entre eux. Ce tableau doit avoir un nombre pair d’éléments, et il doit y avoir au moins deux éléments. (Il peut être zéro élément dans le tableau, mais qui se traduit par un trait plein.) S’il existe deux éléments, la première est la longueur d’un point ou un tiret, et la seconde la longueur de l’espace avant le point ou un tiret suivant. Si plus de deux éléments sont, ils sont dans cet ordre : tiret-longueur, longueur de l’intervalle, longueur de tiret, longueur de l’intervalle et ainsi de suite.
+Pour dessiner des lignes en pointillés ou en pointillés, utilisez le [ `SKPathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) méthode statique. Il existe deux arguments : il s’agit tout d’abord un tableau de `float` valeurs qui indiquent les longueurs des points et des tirets et la longueur des espaces entre eux. Ce tableau doit avoir un nombre pair d’éléments, et il doit y avoir au moins deux éléments. (Il peut être zéro élément dans le tableau mais qui se traduit par un trait plein.) S’il existe deux éléments, la première est la longueur d’un point ou un tiret et le second est la longueur de l’espacement avant le prochain point ou tiret. S’il existe plus de deux éléments, ils se trouvent dans cet ordre : tiret de longueur, longueur de l’intervalle, longueur du tiret, longueur de l’intervalle et ainsi de suite.
 
-En règle générale, que vous souhaitez rendre les longueurs de tiret et espace un multiple de la largeur du trait. Si la largeur du trait est 10 pixels, par exemple, puis le tableau {10, 10} Dessine une ligne en pointillés où les points et les espaces sont de même longueur que l’épaisseur du trait.
+En règle générale, vous souhaitez rendre les longueurs de dash et gap un multiple de la largeur du trait. Si la largeur du trait est 10 pixels, par exemple, puis le tableau {10, 10} Dessine une ligne en pointillés où les points et les espaces sont la même longueur que l’épaisseur du trait.
 
-Toutefois, le `StrokeCap` définition de la `SKPaint` objet affecte également ces points et tirets. Comme vous le verrez, qui a un impact sur les éléments de ce tableau.
+Toutefois, le `StrokeCap` définition de la `SKPaint` objet affecte également ces points et tirets. Comme vous le verrez bientôt, qui a un impact sur les éléments de ce tableau.
 
-Séparée par des points et les lignes en pointillés sont illustrées dans le **points et des tirets** page. Le [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) fichier instancie deux `Picker` vues, une pour vous permettant de sélectionner une extrémité de trait et la seconde pour sélectionner un tableau de tiret :
+Séparée par des points et de lignes en pointillés sont décrites sur le **points et tirets** page. Le [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) fichier instancie deux `Picker` vues, une pour ce qui vous permet de sélectionner une extrémité de trait et le second pour sélectionner un tableau de tiret :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -91,9 +91,9 @@ Séparée par des points et les lignes en pointillés sont illustrées dans le *
 </ContentPage>
 ```
 
-Les trois premiers éléments dans le `dashArrayPicker` supposent que la largeur du trait est 10 pixels. Le {10, 10} tableau est pour une ligne en pointillés, {30, 10} est pour une ligne en pointillé et {10, 10, 30, 10} est pour une ligne de point-tiret. (Les trois autres aborderons sous peu.)
+Les trois premiers éléments dans le `dashArrayPicker` supposent que la largeur du trait est de 10 pixels. Le {10, 10} tableau est pour une ligne en pointillés, {30, 10} est pour une ligne en pointillés et {10, 10, 30, 10} est pour une ligne de point-tiret. (Les trois autres seront abordées sous peu.)
 
-Le [ `DotsAndDashesPage` fichier code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contient le `PaintSurface` Gestionnaire d’événements et deux des routines d’assistance pour l’accès à la `Picker` vues :
+Le [ `DotsAndDashesPage` fichier code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) contient le `PaintSurface` Gestionnaire d’événements et deux routines d’assistance pour accéder à la `Picker` vues :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -153,23 +153,23 @@ float[] GetPickerArray(Picker picker)
 }
 ```
 
-Dans les captures d’écran ci-dessous, l’écran iOS à l’extrême gauche affiche une ligne en pointillés :
+Dans les captures d’écran suivante, l’écran iOS à l’extrême gauche montre une ligne en pointillés :
 
-[![](dots-images/dotsanddashes-small.png "Capture d’écran de triple de la page points et de tirets")](dots-images/dotsanddashes-large.png#lightbox "Triple capture d’écran de la page points et des tirets")
+[![](dots-images/dotsanddashes-small.png "Capture d’écran triple de la page de points et de tirets")](dots-images/dotsanddashes-large.png#lightbox "Triple capture d’écran de la page de points et de tirets")
 
-Toutefois, l’écran Android est également prévu pour afficher une ligne en pointillés à l’aide du tableau {10, 10}, mais au lieu de cela, la ligne est pleine. Que s'est-il passé ? Le problème est que l’écran Android a également un paramètre de majuscules de trait de `Square`. Cela permet d’étendre tous les tirets par moitié la largeur du trait, d'où leur combler les vides.
+Toutefois, l’écran Android est également supposé pour faire une ligne en pointillés à l’aide du tableau {10, 10}, mais au lieu de cela, la ligne est pleine. Que s'est-il passé ? Le problème est que l’écran Android a également un paramètre d’embouts de trait de `Square`. Cela permet d’étendre tous les tirets par le trait demi-chasse, provoquant la remplir les écarts.
 
-Pour contourner ce problème lorsque vous utilisez une extrémité de trait de `Square` ou `Round`, vous devez les longueurs de tiret dans le tableau par la longueur du trait (parfois entraînant une longueur de tiret de 0) et d’augmenter les longueurs d’écart par la longueur du trait. C’est la façon dont les trois derniers tiret-tableaux dans les `Picker` dans le fichier XAML ont été calculées :
+Pour contourner ce problème lors de l’utilisation d’une extrémité de trait de `Square` ou `Round`, vous devez les longueurs de tiret dans le tableau par la longueur du trait (parfois, ce qui entraîne une longueur de tiret de 0) et d’augmenter les longueurs d’écart par la longueur du trait. Voici comment les trois derniers tirets tableaux dans les `Picker` dans le fichier XAML ont été calculés :
 
 - {10, 10} est {0, 20} pour une ligne en pointillés
-- {30, 10} est {20, 20} pour une ligne en pointillés
+- {30, 10} devient {20, 20} pour une ligne en pointillés
 - {10, 10, 30, 10} est {0, 20, 20, 20} pour une ligne en pointillés et
 
-L’écran affiche UWP pointillés et tirets de la ligne pour un trait imposer de `Round`. Le `Round` extrémité de trait donne souvent la meilleure apparence des points et des tirets dans les lignes de type « définitif ».
+Limite de l’écran affiche UWP qui séparée par des points et tirets de ligne pour un trait de `Round`. Le `Round` extrémité de trait permet souvent la meilleure apparence des points et des tirets dans les lignes épaisses.
 
-Jusqu'à présent, aucune mention n’a été effectuée du deuxième paramètre à la `SKPathEffect.CreateDash` (méthode). Ce paramètre est nommé `phase` et il fait référence à un offset dans le modèle de point-tiret au début de la ligne. Par exemple, si le tableau de tiret est {10, 10} et le `phase` est 10, la ligne commence par un espace au lieu d’un point.
+Jusqu'à présent, aucune mention n’a été effectuée du deuxième paramètre à la `SKPathEffect.CreateDash` (méthode). Ce paramètre est nommé `phase` et il fait référence à un offset dans le modèle de point-tiret au début de la ligne. Par exemple, si le tableau dash est {10, 10} et le `phase` est 10, la ligne commence par un écart plutôt que d’un point.
 
-Une application intéressante de la `phase` du paramètre est une animation. Le **animés de spirale** page est similaire à la **Archimède spirale** page, à ceci près que le [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) réalise une animation de la classe le `phase` paramètre. La page montre également une autre approche de l’animation. L’exemple précédent de la [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) utilisé le `Task.Delay` méthode pour contrôler l’animation. Cet exemple utilise à la place la Xamarin.Forms `Device.Timer` méthode :
+Une application intéressante de la `phase` paramètre figure dans une animation. Le **spirale animée** page est similaire à la **Archimède spirale** page, à ceci près que le [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) classe anime le `phase` paramètre. La page montre également une autre approche pour l’animation. L’exemple précédent de la [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) utilisé le `Task.Delay` méthode pour contrôler l’animation. Cet exemple utilise à la place le Xamarin.Forms `Device.Timer` méthode :
 
 
 ```csharp
@@ -211,11 +211,11 @@ protected override void OnAppearing()
 }
 ```
 
-Bien entendu, vous devrez qui exécutent ce programme pour voir l’animation :
+Bien sûr, vous devrez exécuter le programme pour voir l’animation :
 
-[![](dots-images/animatedspiral-small.png "Triple capture d’écran de la page animé de spirale")](dots-images/animatedspiral-large.png#lightbox "Triple capture d’écran de la page spirale d’animation")
+[![](dots-images/animatedspiral-small.png "Triple capture d’écran de la page de spirale animée")](dots-images/animatedspiral-large.png#lightbox "Triple capture d’écran de la page de spirale animée")
 
-Vous savez maintenant pour dessiner des lignes et de définir des courbes à l’aide des équations paramétriques. Une section pour être publiées ultérieurement décrit les différents types de courbes qui `SKPath` prend en charge.
+Vous avez désormais appris à dessiner des lignes et de définir des courbes à l’aide des équations paramétriques. Une section pour être publiées ultérieurement couvre les différents types de courbes qui `SKPath` prend en charge.
 
 
 ## <a name="related-links"></a>Liens associés

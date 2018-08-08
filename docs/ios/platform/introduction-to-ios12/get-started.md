@@ -1,53 +1,47 @@
 ---
 title: Bien démarrer avec iOS 12, 12 de tvOS et watchOS 5
-description: Ce document décrit comment préparer le jusqu'à build 12 applications iOS et tvOS 12 avec Xamarin. Il explique comment télécharger Xcode 10 et mettre à jour de Visual Studio pour Mac et Visual Studio 2017.
+description: Ce document décrit comment préparer le jusqu'à build iOS 12, 12 de tvOS et watchOS 5 des applications avec Xamarin. Il explique comment télécharger Xcode 10 et mettre à jour de Visual Studio pour Mac et Visual Studio 2017.
 ms.prod: xamarin
 ms.assetid: 6C0F0133-1A5F-408B-8BCA-BDCA313A55C2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: 70f67f934c2503e6f6fa0d3bae1f37bcc1f6f0a4
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+ms.date: 08/07/2018
+ms.openlocfilehash: cb84ddc646933d253ca72fe8f9f581364aab698b
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39030650"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615172"
 ---
 # <a name="getting-started-with-ios-12-tvos-12-and-watchos-5"></a>Bien démarrer avec iOS 12, 12 de tvOS et watchOS 5
 
 ![Preview](~/media/shared/preview.png)
 
 > [!WARNING]
-> 12, tvOS de Xamarin iOS 12, et prise en charge watchOS 5 est actuellement en version préliminaire, ce qui signifie qu’il peut contenir des bogues, n’est pas complet, et peut changer. Utilisez-le pour l’expérimentation uniquement.
+> Prise en charge de Xamarin pour iOS 12, tvOS 12 et kits de développement logiciel watchOS 5 distribués avec Xcode 10 est actuellement en version préliminaire, ce qui signifie qu’il peut contenir des bogues, n’est pas fonctionnalité termine et peut changer. Utilisez-le pour l’expérimentation uniquement.
 
-> [!NOTE]
-> Pour plus d’informations, consultez la préversion Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
-Ce document décrit comment préparer le jusqu'à build iOS 12, 12 de tvOS et watchOS 5 des applications avec Xamarin. Il explique comment télécharger Xcode 10 et mettre à jour de Visual Studio pour Mac et Visual Studio 2017.
+Ce document décrit comment configurer pour créer des applications Xamarin qui appellent les API publiées avec Xcode 10. Il explique comment télécharger Xcode 10 et mettre à jour de Visual Studio pour Mac et Visual Studio 2017.
 
 ## <a name="download-and-install"></a>Téléchargez et installez
 
 1. **Installer la dernière version bêta de Xcode 10** – les développeurs d’Apple inscrits peuvent télécharger et installer la dernière version du 10 Xcode à partir de la [portail des développeurs Apple](https://developer.apple.com/download/).
 
-   > [!NOTE]
-   > Le 12 d’iOS, tvOS 12 et kits SDK watchOS 5 est distribués avec Xcode 10.
+2. **Exécuter Xcode 10** – nécessite d’exécuter Xcode 10 avant la mise à jour et en cours d’exécution Visual Studio pour Mac ou Visual Studio 2017, car elle installe certains des outils que Xamarin.
 
-2. **Exécuter Xcode 10** – 10 de Xcode exécuter avant la mise à jour et d’exécuter Visual Studio pour Mac ou Visual Studio 2017 ; il installe des outils qui nécessite de Xamarin.
+3. **Mettre à jour de Visual Studio pour Mac et Visual Studio 2017** : suivez les instructions de la [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/) pour installer la version préliminaire de Xamarin.
 
-3. **Mettre à jour de Visual Studio pour Mac et Visual Studio 2017** : suivez les instructions de la [release blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/) pour installer la version préliminaire de Xamarin.
-
-4. _(facultatif)_  **Installer la dernière version de bêta iOS sur vos appareils iOS** : appareil de test d’applications qu’utilisation nouvellement introduites iOS 12, tvOS 12 ou watchOS 5 API, les développeurs Apple inscrits peuvent [télécharger](https://developer.apple.com/download) et installer la dernière iOS 12, tvOS 12 ou versions bêta de développeur watchOS 5 sur leurs appareils.
+4. _(facultatif)_  **Installer la dernière version de bêta iOS sur vos appareils iOS** : appareil de test d’applications qui utilisent les API introduites avec les 10 Xcode, inscrit peut de développeurs Apple [télécharger](https://developer.apple.com/download) et installez la dernière version versions bêta de développeur sur leurs appareils.
 
    > [!TIP]
-   > Même si votre application n’utilise pas de n’importe quel nouveau iOS 12, tvOS 12 ou watchOS 5 API, veillez à le générer avec le 12 d’iOS, tvOS 12 ou watchOS 5 Kit de développement logiciel (installé avec Xcode 10) et de test pour vous assurer que tout fonctionne comme prévu. Si une application n’appelle pas les nouvelles API, vous pouvez le recompiler avec le 12 d’iOS, tvOS 12 ou watchOS 5 SDK et le tester sur les appareils qui n’ont pas encore été mis à niveau vers les nouveaux systèmes d’exploitation.
-
-   > [!IMPORTANT]
-   > Avant la mise à niveau de vos appareils iOS 12, tvOS 12 ou watchOS 5 pour tester des applications Xamarin qui appellent 12 de la nouvelle iOS, tvOS 12 ou watchOS 5 API :
-   > - Lecture [notes de publication d’Apple](https://developer.apple.com/download/) pour la mise à jour du système d’exploitation.
-   > - Lire l’aperçu Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
+   > Même si votre application n’utilise pas les nouvelles API, veillez à le générer avec les kits de développement logiciel plus récent Xcode 10 et testez-le pour vous assurer que tout fonctionne comme prévu. Si une application n’appelle pas les nouvelles API, vous pouvez le recompiler avec ces nouveaux kits de développement logiciel et le tester sur les appareils qui n’ont pas encore été mis à niveau vers le nouveau système d’exploitation.
+   >
+   > Avant la mise à niveau de vos appareils vers le dernier système d’exploitation à partir d’Apple pour tester vos applications Xamarin, veillez à :
+   >
+   > - Lecture [notes de publication d’Apple](https://developer.apple.com/download/) pour les mises à jour du système d’exploitation.
+   > - Lire l’aperçu Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/).
 
 ## <a name="related-links"></a>Liens connexes
 
 - [Télécharger Xcode 10](https://developer.apple.com/download/)
-- Aperçu de Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Aperçu de Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

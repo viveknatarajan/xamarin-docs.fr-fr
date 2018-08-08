@@ -1,57 +1,57 @@
 ---
 title: Effets de chemin d’accès dans SkiaSharp
-description: Cet article explique les différents effets de chemin d’accès de SkiaSharp qui autorise les chemins d’accès à utiliser pour le contour et en le remplissant et cela est illustré par l’exemple de code.
+description: Cet article explique les effets de chemin d’accès SkiaSharp différents chemins d’accès à utiliser pour le contour et en remplissant et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 2071a2fb140d0e9c78d4c86d6aa70d3606dc1f98
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 28f628fb4e8ab77e9c36e6e1972d7269ad0dad4d
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244108"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615676"
 ---
 # <a name="path-effects-in-skiasharp"></a>Effets de chemin d’accès dans SkiaSharp
 
-_Découvrez les différents effets de chemin d’accès qui autorisent des chemins d’accès à utiliser pour le contour et en le remplissant_
+_Découvrir les divers effets de chemin d’accès qui autorise des chemins d’accès à utiliser pour le contour et en remplissant_
 
-A *effet* est une instance de la [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) classe qui est créé avec l’une des huit statique `Create` méthodes. Le `SKPathEffect` objet est ensuite affecté à la [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) propriété d’une `SKPaint` objet pour une variété d’effets intéressants, par exemple, traçant une ligne avec un chemin d’accès répliquée small :
+Un *effet* est une instance de la [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) classe qui est créé avec l’un des huit statique `Create` méthodes. Le `SKPathEffect` objet est ensuite défini sur le [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) propriété d’un `SKPaint` objet pour une variété d’effets intéressants, par exemple, traçant une ligne avec un chemin d’accès répliquée petit :
 
 ![](effects-images/patheffectsample.png "L’exemple de chaîne liée")
 
 Effets de chemin d’accès vous permettent de :
 
-- Tracer une ligne avec des points et des tirets
-- Tracer une ligne avec n’importe quel chemin remplie
+- Tracer une ligne avec les points et tirets
+- Tracer une ligne avec n’importe quel chemin d’accès rempli
 - Remplir une zone de lignes de hachurage
 - Remplir une zone avec un chemin d’accès en mosaïque
-- Rendre sharp angles arrondis
-- Ajouter aléatoire « instabilité » pour les lignes et des courbes
+- Rendre précise des angles arrondis
+- Ajouter aléatoire « instabilité » aux lignes et courbes
 
 En outre, vous pouvez combiner deux ou plusieurs effets de chemin d’accès.
 
-Cet article montre également comment utiliser le `GetFillPath` méthode `SKPaint` pour convertir un chemin d’accès dans un autre chemin en appliquant des propriétés de `SKPaint`, y compris `StrokeWidth` et `PathEffect`. Cela entraîne quelques techniques intéressantes, telles que l’obtention d’un chemin d’accès qui correspond à un plan d’un autre chemin. `GetFillPath` est également utile dans le cadre des effets de chemin d’accès.
+Cet article montre également comment utiliser le `GetFillPath` méthode de `SKPaint` pour convertir un chemin d’accès dans un autre chemin d’accès en appliquant des propriétés de `SKPaint`, y compris `StrokeWidth` et `PathEffect`. Cela entraîne quelques techniques intéressantes, telles que l’obtention d’un chemin d’accès qui est un plan d’un autre chemin d’accès. `GetFillPath` est également utile dans le cadre des effets de chemin d’accès.
 
-## <a name="dots-and-dashes"></a>Points et des tirets
+## <a name="dots-and-dashes"></a>Points et tirets
 
-L’utilisation de la [ `PathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) méthode a été décrite dans l’article [ **points et des tirets**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md). Le premier argument de la méthode est un tableau contenant un nombre pair de deux ou plusieurs valeurs, en alternant entre les longueurs des tirets et des longueurs des écarts entre les tirets :
+L’utilisation de la [ `PathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) méthode a été décrite dans l’article [ **points et tirets**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md). Le premier argument de la méthode est un tableau contenant un nombre pair de deux ou plusieurs valeurs, alternant entre les longueurs des tirets et des longueurs des écarts entre les tirets :
 
 ```csharp
 public static SKPathEffect CreateDash (Single[] intervals, Single phase)
 ```
 
-Ces valeurs sont *pas* par rapport à la largeur du trait. Par exemple, si l’épaisseur du trait est 10 et que vous souhaitez une ligne composée de tirets carrés et les écarts de carrés, définir le `intervals` tableau {10, 10}. Le `phase` argument indique où la ligne commence dans le modèle de tirets. Dans cet exemple, si vous souhaitez que la ligne commencent par l’écart carré, définissez `phase` à 10.
+Ces valeurs sont *pas* par rapport à la largeur du trait. Par exemple, si la largeur du trait est 10 et que vous souhaitez une ligne composée de tirets carrés et des espacements carrés, définissez le `intervals` tableau {10, 10}. Le `phase` argument indique où la ligne commence dans le motif des tirets. Dans cet exemple, si vous souhaitez que la ligne pour démarrer avec l’écart carré, définissez `phase` à 10.
 
-La fin des tirets est affectée par la `StrokeCap` propriété du `SKPaint`. Large largeurs de tracé, il est très courant pour définir cette propriété sur `SKStrokeCap.Round` pour arrondir les extrémités des tirets. Dans ce cas, les valeurs dans le `intervals` tableau *pas* inclut la longueur supplémentaire qui résulte de l’arrondi, ce qui signifie qu’un point circulaire, vous devez spécifier une largeur égale à zéro. Pour une épaisseur de trait de 10, pour créer une ligne avec les points circulaires et les écarts entre les points de la même diamètre, utilisez un `intervals` tableau de {0, 20}.
+Les extrémités des tirets sont affectées par la `StrokeCap` propriété du `SKPaint`. Large largeurs de tracé, il est très courant pour définir cette propriété sur `SKStrokeCap.Round` pour arrondir les extrémités des tirets. Dans ce cas, les valeurs dans le `intervals` tableau *pas* inclut la longueur supplémentaire résultant de l’arrondi, ce qui signifie qu’un point circulaire nécessite de spécifier une largeur égale à zéro. Pour une largeur de trait de 10, pour créer une ligne avec points circulaires et les écarts entre les points de la même diamètre, utilisez un `intervals` tableau de {0, 20}.
 
-Le **animés de texte séparée par des points** page est similaire à la **décrites de texte** page décrite dans l’article [ **intégration de texte et des graphiques** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) dans qu’il affiche décrit les caractères de texte en définissant le `Style` propriété de la `SKPaint` objet `SKPaintStyle.Stroke`. En outre, **animés de texte séparée par des points** utilise `SKPathEffect.CreateDash` pour permettre à ce plan une apparence en pointillé, et le programme anime également la `phase` argument de la `SKPathEffect.CreateDash` méthode pour rendre les points semblent voyager autour du texte caractères. Voici la page en mode paysage :
+Le **animée de texte séparée par des points** page est similaire à la **du texte avec contour** page décrite dans l’article [ **l’intégration de texte et les graphiques** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) dans qu’il affiche décrit les caractères de texte en définissant le `Style` propriété de la `SKPaint` objet `SKPaintStyle.Stroke`. En outre, **animée de texte séparée par des points** utilise `SKPathEffect.CreateDash` afin de donner Ceci décrit une apparence en pointillés, et le programme anime également la `phase` argument de la `SKPathEffect.CreateDash` méthode pour rendre les points semblent voyager autour du texte caractères. Voici la page en mode paysage :
 
-[![](effects-images/animateddottedtext-small.png "Capture d’écran de triple de la page de texte de pointillés animée")](effects-images/animateddottedtext-large.png#lightbox "Triple capture d’écran de la page de texte de pointillés animée")
+[![](effects-images/animateddottedtext-small.png "Capture d’écran triple de la page animée de texte séparée par des points")](effects-images/animateddottedtext-large.png#lightbox "Triple capture d’écran de la page animée de texte séparée par des points")
 
-Le [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) classe commence par définir certaines constantes et substitue le `OnAppearing` et `OnDisappearing` les méthodes de l’animation :
+Le [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) classe commence en définissant certaines constantes et substitue le `OnAppearing` et `OnDisappearing` méthodes pour l’animation :
 
 ```csharp
 public class AnimatedDottedTextPage : ContentPage
@@ -147,19 +147,19 @@ public class AnimatedDottedTextPage : ContentPage
 }
 ```
 
-Vers la fin de la méthode, le `SKPathEffect.CreateDash` méthode est appelée à l’aide de la `dashArray` qui est défini comme un champ et l’animé `phase` valeur. Le `SKPathEffect` instance est définie sur le `PathEffect` propriété de la `SKPaint` objet pour afficher le texte.
+Vers la fin de la méthode, le `SKPathEffect.CreateDash` méthode est appelée à l’aide de la `dashArray` qui est défini comme un champ et animée `phase` valeur. Le `SKPathEffect` instance est définie sur le `PathEffect` propriété de la `SKPaint` objet pour afficher le texte.
 
-Vous pouvez également définir le `SKPathEffect` de l’objet à le `SKPaint` objet avant le texte de la mesure et il centrage sur la page. Dans ce cas, toutefois, animées points et des tirets provoquent une variation de la taille du texte rendu, et le texte a tendance à faire vibrer un peu. (Essayez !)
+Vous pouvez également définir le `SKPathEffect` de l’objet à le `SKPaint` objet avant le texte de la mesure et centrant sur la page. Dans ce cas, toutefois, animées points et tirets provoquent une variation de la taille du texte restitué, et le texte a tendance à vibrer un peu. (Essayez-le !)
 
-Vous remarquerez également que comme le cercle points animés les caractères de texte, il est un certain point dans chaque courbe fermée où les points semblent pop ou existence. Il s’agit où le chemin d’accès qui définit la structure du caractère commence et se termine. Si la longueur de chemin d’accès n’est pas un multiple entier de la longueur du modèle de tiret (dans ce cas 20 pixels) qu’une partie de ce modèle peut s’ajuster à la fin du chemin d’accès.
+Vous remarquerez également qu’en tant que le cercle points animés les caractères de texte, il existe un certain point dans chaque courbe fermée où les points semblent pop entrant et sortant d’existence. Il s’agit où le chemin d’accès qui définit le contour de caractère commence et se termine. Si la longueur de chemin d’accès n’est pas un multiple entier de la longueur du motif des tirets (dans ce cas 20 pixels) qu’une partie de ce modèle peut contenir à la fin du chemin d’accès.
 
-Il est possible d’ajuster la longueur du modèle de tiret pour s’ajuster à la longueur du chemin d’accès, mais elle nécessite la détermination de la longueur du chemin, une technique d’être traitées dans un prochain article.
+Il est possible d’ajuster la longueur du motif tiret pour ajuster la longueur du chemin d’accès, mais qui nécessite une détermination de la longueur du chemin d’accès, une technique d’être traitées dans un prochain article.
 
-Le **point / tiret Morph** programme anime le motif de pointillés lui-même afin que les tirets semblent diviser en points, qui combinent les tirets de formulaire à nouveau :
+Le **point / Dash Morph** programme anime le motif des tirets lui-même afin que les tirets semblent diviser en points, qui combinent à nouveau en tirets du formulaire :
 
-[![](effects-images/dotdashmorph-small.png "Capture d’écran de triple de la page point tiret Morph")](effects-images/dotdashmorph-large.png#lightbox "Triple capture d’écran de la page point tiret Morph")
+[![](effects-images/dotdashmorph-small.png "Capture d’écran triple de la page point Dash Morph")](effects-images/dotdashmorph-large.png#lightbox "Triple capture d’écran de la page point Dash Morph")
 
-Le [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) substitue le `OnAppearing` et `OnDisappearing` tout comme le fait du programme précédent, mais la classe définit des méthodes le `SKPaint` objet en tant que champ :
+Le [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) substitue le `OnAppearing` et `OnDisappearing` méthodes tout comme la précédente d’un programme, mais la classe définit la `SKPaint` objet en tant que champ :
 
 ```csharp
 public class DotDashMorphPage : ContentPage
@@ -241,11 +241,11 @@ public class DotDashMorphPage : ContentPage
 }
 ```
 
-Le `PaintSurface` gestionnaire crée un chemin d’accès elliptique basée sur la taille de la page et exécute une longue section de code qui définit les `dashArray` et `phase` variables. En tant que la variable animée `t` est comprise entre 0 et 1, le `if` blocs décomposent à ce moment-là dans quatre trimestres et chacune de ces trimestres, `tsub` également comprise entre 0 et 1. À la fin, le programme crée la `SKPathEffect` et lui affecte le `SKPaint` objet pour le dessin.
+Le `PaintSurface` gestionnaire crée un chemin d’accès elliptique selon la taille de la page et exécute une longue section de code qui définit le `dashArray` et `phase` variables. En tant que la variable animée `t` comprise entre 0 et 1, le `if` blocs décomposer à ce moment-là dans quatre trimestres et chacun de ces trimestres, `tsub` également comprise entre 0 et 1. À la fin, le programme crée le `SKPathEffect` et lui affecte le `SKPaint` objet pour le dessin.
 
 ## <a name="from-path-to-path"></a>À partir du chemin d’accès au chemin d’accès
 
-Le [ `GetFillPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/System.Single/) méthode de `SKPaint` Active un chemin d’accès à une autre en fonction des paramètres dans le `SKPaint` objet. Pour voir comment cela fonctionne, remplacez le `canvas.DrawPath` appeler dans le programme précédent par le code suivant :
+Le [ `GetFillPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/System.Single/) méthode de `SKPaint` transforme un chemin d’accès en un autre en fonction des paramètres de la `SKPaint` objet. Pour voir comment cela fonctionne, remplacez le `canvas.DrawPath` appeler dans le programme précédent par le code suivant :
 
 ```csharp
 SKPath newPath = new SKPath();
@@ -258,15 +258,15 @@ canvas.DrawPath(newPath, newPaint);
 
 ```
 
-Dans ce nouveau code, le `GetFillPath` appeler convertit le `ellipsePath` (qui est simplement une ellipse) dans `newPath`, qui est ensuite affiché avec `newPaint`. Le `newPaint` objet est créé avec tous les paramètres de propriété par défaut, sauf que la `Style` propriété est définie selon sur la valeur booléenne retournent la valeur de `GetFillPath`.
+Dans ce nouveau code, le `GetFillPath` appeler convertit le `ellipsePath` (qui est simplement un ovale) dans `newPath`, qui est ensuite affiché avec `newPaint`. Le `newPaint` objet est créé avec tous les paramètres de propriété par défaut, à ceci près que le `Style` propriété est définie selon sur la valeur booléenne retournent la valeur à partir de `GetFillPath`.
 
-Les éléments visuels sont identiques à l’exception de la couleur, qui est définie dans `ellipsePaint` mais pas `newPaint`. Au lieu de l’ellipse simple défini dans `ellipsePath`, `newPath` contient de nombreux profils de chemin d’accès qui définissent la série de points et de tirets. Voici le résultat de l’application de diverses propriétés de `ellipsePaint` : `StrokeWidth`, `StrokeCap`, et `PathEffect` — à `ellipsePath` et en plaçant le chemin d’accès résultant dans `newPath`. Le `GetFillPath` méthode retourne une valeur booléenne indiquant si le chemin d’accès de destination est à remplir ou non ; dans cet exemple, la valeur de retour est `true` pour remplir le chemin d’accès.
+Les visuels sont identiques à l’exception de la couleur, qui est définie dans `ellipsePaint` mais pas `newPaint`. Au lieu de l’ellipse simple défini dans `ellipsePath`, `newPath` contient de nombreux profils de chemin d’accès qui définissent la série de points et de tirets. Il s’agit du résultat de l’application de diverses propriétés de `ellipsePaint` — `StrokeWidth`, `StrokeCap`, et `PathEffect` — à `ellipsePath` et en plaçant le chemin d’accès résultant dans `newPath`. Le `GetFillPath` méthode retourne une valeur booléenne indiquant si le chemin d’accès de destination doit être complété ; dans cet exemple, la valeur de retour est `true` pour remplir le chemin d’accès.
 
-Essayez de modifier le `Style` définissant dans `newPaint` à `SKPaintStyle.Stroke` et vous verrez les contours du chemin d’accès individuels délimitées par une ligne celle--largeur en pixels.
+Essayez de modifier le `Style` définissant dans `newPaint` à `SKPaintStyle.Stroke` et vous verrez les contours chemin d’accès individuels délimitées par une ligne celui--largeur en pixels.
 
 ## <a name="stroking-with-a-path"></a>Contour avec un chemin d’accès
 
-Le [ `SKPathEffect.Create1DPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create1DPath/p/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPath1DPathEffectStyle/) méthode est conceptuellement semblable à `SKPathEffect.CreateDash` , sauf que vous spécifiez un chemin d’accès, plutôt qu’un modèle de tirets et des espaces. Ce chemin d’accès est répliquée plusieurs fois à la ligne de tracé ou courbe.
+Le [ `SKPathEffect.Create1DPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create1DPath/p/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPath1DPathEffectStyle/) méthode est conceptuellement semblable à `SKPathEffect.CreateDash` , à ceci près que vous spécifiez un chemin d’accès, plutôt qu’un modèle de tirets et d’espaces. Ce chemin d’accès est répliquée plusieurs fois à la ligne de contour ou courbe.
 
 La syntaxe est :
 
@@ -276,9 +276,9 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
 ```
 
 > [!IMPORTANT]
-> Attention : il existe une surcharge de `Create1DPath` qui est défini avec un argument de l’énumération de type `SkPath1DPathEffect` avec un caractère minuscule « k ». Ce nom est une erreur, et par conséquent qu’énumération et la méthode sont déconseillées, mais il est très facile pour la méthode déconseillée fasse partie de votre code, et il est difficile de voir exactement ce qui sont incorrect.
+> Attention : il existe une surcharge de `Create1DPath` qui est défini avec un argument de l’énumération de type `SkPath1DPathEffect` avec une minuscule « k ». Ce nom est une erreur, et par conséquent qu’énumération et la méthode sont déconseillées, mais il est très facile pour la méthode déconseillée fasse partie de votre code, et il est difficile de voir exactement ce qui sont incorrect.
 
-En général, le chemin d’accès que vous passez à `Create1DPath` seront centrés sur le point (0, 0) et de petite taille. Le `advance` paramètre indique la distance entre les centres de chemin d’accès que le chemin d’accès est répliquée sur la ligne. Vous définissez généralement cet argument pour la largeur approximative de chemin d’accès. Le `phase` lecture de l’argument ici le même rôle tel qu’il le fait dans le `CreateDash` (méthode).
+En général, le chemin d’accès que vous passez à `Create1DPath` sera petite et centrée autour du point (0, 0). Le `advance` paramètre indique la distance entre les centres de chemin d’accès que le chemin d’accès est répliquée sur la ligne. Vous définissez généralement cet argument pour la largeur approximative de chemin d’accès. Le `phase` joue argument ici le même rôle tel qu’il le fait dans le `CreateDash` (méthode).
 
 Le [ `SKPath1DPathEffectStyle` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath1DPathEffectStyle/) a trois membres :
 
@@ -286,9 +286,9 @@ Le [ `SKPath1DPathEffectStyle` ](https://developer.xamarin.com/api/type/SkiaShar
 - [`Rotate`](https://developer.xamarin.com/api/field/SkiaSharp.SKPath1DPathEffectStyle.Rotate/)
 - [`Morph`](https://developer.xamarin.com/api/field/SkiaSharp.SKPath1DPathEffectStyle.Morph/)
 
-Le `Translate` membre, le chemin d’accès restent dans le même sens qu’elle est répliquée sur une ligne ou de la courbe. Pour `Rotate`, le chemin d’accès est pivoté selon une tangente à la courbe. Le chemin d’accès a son orientation normale des lignes horizontales. `Morph` est semblable à `Rotate` , sauf que le chemin d’accès lui-même est également courbe pour faire correspondre la courbure de la ligne en cours dessinée.
+Le `Translate` membre provoque le chemin d’accès à rester dans la même orientation comme elle est répliquée sur une ligne ou de la courbe. Pour `Rotate`, le chemin d’accès est pivoté selon une tangente à la courbe. Le chemin d’accès a son orientation normale des lignes horizontales. `Morph` est similaire à `Rotate` , à ceci près que le chemin d’accès lui-même est également courbe pour faire correspondre la courbure de la ligne en cours rayée.
 
-Le **effet D 1** page illustre ces trois options. Le [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) fichier définit un sélecteur contenant trois éléments correspondant aux trois membres de l’énumération :
+Le **effet D 1** page illustre ces trois options. Le [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) fichier définit un sélecteur qui contient trois éléments correspondant aux trois membres de l’énumération :
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -324,7 +324,7 @@ Le **effet D 1** page illustre ces trois options. Le [ **OneDimensionalPathEffec
 </ContentPage>
 ```
 
-Le [ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) fichier code-behind définit trois `SKPathEffect` objets sous forme de champs. Ils sont tous créés à l’aide de `SKPathEffect.Create1DPath` avec `SKPath` les objets créés à l’aide de `SKPath.ParseSvgPathData`. La première est une simple zone, le deuxième est une forme de losange et le troisième est un rectangle. Ceux-ci sont utilisés pour illustrer les styles de l’effet de trois :
+Le [ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) fichier code-behind définit trois `SKPathEffect` objets en tant que champs. Ceux-ci sont tous créés à l’aide de `SKPathEffect.Create1DPath` avec `SKPath` objets créés à l’aide de `SKPath.ParseSvgPathData`. La première est une simple zone, le second est une forme de losange et le troisième est un rectangle. Ceux-ci sont utilisés pour illustrer les styles de l’effet de trois :
 
 ```csharp
 public partial class OneDimensionalPathEffectPage : ContentPage
@@ -395,35 +395,35 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 }
 ```
 
-Le `PaintSurface` gestionnaire crée une courbe de Bézier qui boucle elle-même et accède au sélecteur pour déterminer quelle `PathEffect` doit être utilisé pour le contour. Les trois options : `Translate`, `Rotate`, et `Morph` , sont affichées de gauche à droite :
+Le `PaintSurface` gestionnaire crée une courbe de Bézier qui effectue une itération sur lui-même et y accède le sélecteur pour déterminer lequel `PathEffect` doit être utilisé pour rayer il. Les trois options : `Translate`, `Rotate`, et `Morph` , sont affichées de gauche à droite :
 
-[![](effects-images/1dpatheffect-small.png "Capture d’écran de triple de la page d’effet 1D")](effects-images/1dpatheffect-large.png#lightbox "Triple capture d’écran de la page d’effet 1D")
+[![](effects-images/1dpatheffect-small.png "Capture d’écran triple de la page de chemin d’accès effet 1D")](effects-images/1dpatheffect-large.png#lightbox "Triple capture d’écran de la page de chemin d’accès effet 1D")
 
-Le chemin d’accès spécifié dans le `SKPathEffect.Create1DPath` (méthode) est toujours remplie. Le chemin d’accès spécifié dans le `DrawPath` méthode est rayée toujours si le `SKPaint` objet possède ses `PathEffect` un effet 1D la valeur de propriété. Notez que la `pathPaint` objet n’a aucun `Style` paramètre, qui est normalement par défaut `Fill`, mais le chemin d’accès est rayé quel que soit.
+Le chemin d’accès spécifié dans le `SKPathEffect.Create1DPath` méthode est toujours remplie. Le chemin d’accès spécifié dans le `DrawPath` méthode est rayée toujours si le `SKPaint` objet possède son `PathEffect` un effet D 1 la valeur de propriété. Notez que le `pathPaint` objet n’a aucun `Style` paramètre, qui est normalement par défaut `Fill`, mais le chemin d’accès est rayé quel que soit.
 
-Utilisé dans la zone de la `Translate` exemple est de 20 pixels carrés et le `advance` argument a la valeur 24. Cette différence provoque une rupture entre les zones lorsque la ligne est à peu près horizontal ou vertical, mais les zones se chevauchent quelque peu lorsque la ligne est en diagonale, car la diagonale de la zone est 28.3 produits pixels.
+Utilisé dans la zone de la `Translate` exemple est 20 pixels carrés et le `advance` argument est défini sur 24. Cette différence provoque un écart entre les zones lorsque la ligne est à peu près horizontal ou vertical, mais les zones de se chevauchent un peu quand la ligne est en diagonale, car la diagonale de la zone est 28.3 produits pixels.
 
-La forme de losange dans la `Rotate` exemple est également 20 pixels de large. Le `advance` est défini sur 20 afin que les points de continuent à toucher le losange pivote avec la courbure de la ligne.
+La forme de losange dans le `Rotate` s’avère également 20 pixels de large. Le `advance` est définie sur 20 afin que les points de continuent à toucher le losange est pivoté, ainsi que la courbure de la ligne.
 
-La forme de rectangle dans le `Morph` exemple est 50 pixels en largeur avec un `advance` paramètre 55 pour rendre un petit intervalle entre les rectangles comme ils sont tordues autour de la courbe de Bézier.
+La forme de rectangle dans le `Morph` exemple est de 50 pixels de large avec un `advance` définissant de 55 pour rendre un petit intervalle entre les rectangles comme ils sont tordues autour de la courbe de Bézier.
 
-Si le `advance` argument est inférieure à la taille du chemin d’accès, puis les chemins d’accès répliquées peuvent se chevaucher. Cela peut entraîner des effets intéressants. Le **chaîne liée** page affiche une série de cercles qui semblent se présenter comme une chaîne liée, qui se bloque dans la forme distinctif d’un caténaire superposés :
+Si le `advance` argument est inférieure à la taille du chemin d’accès, puis les chemins d’accès répliquées peuvent se chevaucher. Cela peut entraîner des effets intéressants. Le **chaîne lié** page affiche une série de cercles qui semblent se présenter comme une chaîne liée, qui se bloque dans la forme distinctive d’un caténaire superposés :
 
-[![](effects-images/linkedchain-small.png "Capture d’écran de triple de la page de la chaîne liée")](effects-images/linkedchain-large.png#lightbox "Triple capture d’écran de la page de la chaîne liée")
+[![](effects-images/linkedchain-small.png "Capture d’écran triple de la page chaîne liée")](effects-images/linkedchain-large.png#lightbox "Triple capture d’écran de la page chaîne liée")
 
-Recherchez très proches et vous verrez que ce ne sont pas réellement des cercles. Chaque lien de la chaîne est deux arcs, dimensionné et positionné afin qu’ils semblent se connecter avec des liens adjacentes.
+Recherchez très proches et vous verrez que ce ne sont pas réellement des cercles. Chaque lien de la chaîne est deux arcs, dimensionné et positionné afin qu’elles semblent se connecter avec des liens adjacentes.
 
-Une chaîne ou un câble de répartition uniforme se bloque sous la forme d’une caténaire. Une architecture généré sous la forme d’une caténaire inversé bénéficie d’une distribution égale de sollicitation de la pondération d’une architecture de. La caténaire a description mathématique apparemment simple :
+Une chaîne ou un câble de répartition uniforme se bloque sous la forme d’une caténaire. Un arch généré sous la forme d’une caténaire inversé bénéficie d’une distribution égale de la pression dans le poids d’un arc. La caténaire comporte une description de mathématique apparemment simple :
 
-y = un · COSH(x / a)
+y = une mise en COSH(x / a)
 
-Le *cosh* est la fonction cosinus hyperbolique. Pour *x* égal à 0, *cosh* est égal à zéro et *y* est égal à *un*. C’est au centre de la caténaire. Comme le *cosinus* (fonction), *cosh* est dite *même*, ce qui signifie que *cosh(–x)* est égal à *cosh(x)*, et les valeurs augmentent permettant d’accroître les arguments positifs ou négatifs. Ces valeurs décrivent les courbes qui forment les côtés de la caténaire.
+Le *cosh* est la fonction cosinus hyperbolique. Pour *x* égal à 0, *cosh* est égal à zéro et *y* est égal à *un*. C’est le centre de la caténaire. Comme le *cosinus* (fonction), *cosh* est dite *même*, ce qui signifie que *cosh(–x)* est égal à *cosh(x)*, et les valeurs augmentent permettant d’accroître les arguments positifs ou négatifs. Ces valeurs décrivent les courbes qui forment les côtés de la caténaire.
 
-Recherche la valeur correcte de *un* en fonction de la caténaire aux dimensions de la page du téléphone n’est pas un calcul direct. Si *w* et *h* sont la largeur et la hauteur d’un rectangle, la valeur optimale de *un* satisfait l’équation suivante :
+Recherche la valeur appropriée de *un* en fonction de la caténaire aux dimensions de la page du téléphone n’est pas un calcul direct. Si *w* et *h* sont la largeur et la hauteur d’un rectangle, la valeur optimale de *un* satisfait l’équation suivante :
 
 COSH (w/2/a) = 1 + h / a
 
-La méthode suivante dans le [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpore que l’égalité en faisant référence à deux expressions à gauche et à droite du signe égal en tant que `left` et `right`. Pour de petites valeurs de *un*, `left` est supérieur à `right`; pour des valeurs élevées de *un*, `left` est inférieure à `right`. Le `while` boucle passe dans sur une valeur optimale de *un*:
+La méthode suivante dans le [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpore que l’égalité en faisant référence à deux expressions de gauche et droite du signe égal en tant que `left` et `right`. Pour de petites valeurs de *un*, `left` est supérieur à `right`; pour des valeurs élevées de *un*, `left` est inférieure à `right`. Le `while` boucle réduit dans sur une valeur optimale de *un*:
 
 ```csharp
 float FindOptimumA(float width, float height)
@@ -452,7 +452,7 @@ float FindOptimumA(float width, float height)
 }
 ```
 
-Le `SKPath` pour les liens sont créé dans le constructeur de classe et résultant de l’objet `SKPathEffect` objet est ensuite affecté à la `PathEffect` propriété de la `SKPaint` objet qui est stocké en tant que champ :
+Le `SKPath` pour les liens sont créé dans le constructeur de la classe et le résultant de l’objet `SKPathEffect` objet est ensuite défini sur le `PathEffect` propriété de la `SKPaint` objet qui est stocké en tant que champ :
 
 ```csharp
 public class LinkedChainPage : ContentPage
@@ -500,7 +500,7 @@ public class LinkedChainPage : ContentPage
 }
 ```
 
-La tâche principale de la `PaintSurface` gestionnaire consiste à créer un chemin d’accès pour la caténaire lui-même. Après avoir déterminé l’optimale *un* et son stockage dans le `optA` variable, il doit également calculer un offset à partir du haut de la fenêtre. Ensuite, il peut accumuler une collection de `SKPoint` les valeurs pour la caténaire, qui transformer en un chemin d’accès et tracer le chemin d’accès avec précédemment créé `SKPaint` objet :
+La tâche principale de la `PaintSurface` gestionnaire consiste à créer un chemin d’accès pour la caténaire lui-même. Après avoir déterminé l’optimale *un* et en le stockant dans le `optA` variable, il doit également calculer un offset à partir du haut de la fenêtre. Ensuite, il peut accumuler une collection de `SKPoint` les valeurs pour la caténaire, qui transformer en un chemin d’accès et dessiner le chemin d’accès avec l’élément précédemment créé `SKPaint` objet :
 
 ```csharp
 public class LinkedChainPage : ContentPage
@@ -544,15 +544,15 @@ public class LinkedChainPage : ContentPage
 }
 ```
 
-Ce programme définit le chemin d’accès utilisé dans `Create1DPath` pour que son (0, 0) point au centre. Cela peut paraître raisonnable, car le (0, 0) point du chemin d’accès est aligné avec la ligne ou courbe possédant l’ornement. Toutefois, vous pouvez utiliser non-centré (0, 0) point pour certains effets spéciaux.
+Ce programme définit le chemin d’accès utilisé dans `Create1DPath` d’avoir son (0, 0) point dans le centre. Cela semble raisonnable, car la (0, 0) point du chemin d’accès est aligné avec la ligne ou courbe possédant l’ornement. Toutefois, vous pouvez utiliser un non-centré (0, 0) point pour certains effets spéciaux.
 
-Le **tapis roulant** page crée un chemin d’accès qui ressemble à un tapis roulant allongées avec une courbe haut et le bas valeur dimensionnée pour les dimensions de la fenêtre. Ce chemin d’accès est tracée à l’aide `SKPaint` objet 20 pixels de largeur et de couleur grise, puis dessinés à nouveau avec un autre `SKPaint` de l’objet avec un `SKPathEffect` objet faisant référence à un chemin d’accès qui ressemble à un compartiment peu :
+Le **tapis roulant** page crée un chemin d’accès qui ressemble à un tapis roulant allongées avec un courbé haut et le bas, il est dimensionné selon les dimensions de la fenêtre. Ce chemin d’accès est rayée avec un simple `SKPaint` objet 20 pixels de large et de couleur grise et puis rayé à nouveau avec un autre `SKPaint` de l’objet avec un `SKPathEffect` objet faisant référence à un chemin d’accès qui ressemble à un compartiment peu :
 
-[![](effects-images/conveyorbelt-small.png "Capture d’écran de triple de la page tapis roulant")](effects-images/conveyorbelt-large.png#lightbox "Triple capture d’écran de la page de tapis roulant")
+[![](effects-images/conveyorbelt-small.png "Capture d’écran triple de la page tapis roulant")](effects-images/conveyorbelt-large.png#lightbox "Triple capture d’écran de la page tapis roulant")
 
-Le (0, 0) point du chemin d’accès de compartiment est le handle, par conséquent, lorsque le `phase` argument est animé, les compartiments semblent concernent le tapis roulant, peut-être la limitation d’étendue de l’eau en bas et le vidage de son évolution horizontale en haut.
+Le (0, 0) point du chemin d’accès de compartiment est le handle, par conséquent, lorsque le `phase` argument est animé, les compartiments semblent sont axés sur le tapis roulant, peut-être l’eau en bas de ramassage et le vidage de son évolution horizontale en haut.
 
-Le [ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) classe implémente l’animation avec les substitutions de la `OnAppearing` et `OnDisappearing` méthodes. Le chemin d’accès pour le compartiment est définie dans le constructeur de la page :
+Le [ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) classe implémente l’animation avec les remplacements de la `OnAppearing` et `OnDisappearing` méthodes. Le chemin d’accès pour le compartiment est définie dans le constructeur de la page :
 
 ```csharp
 public class ConveyorBeltPage : ContentPage
@@ -620,9 +620,9 @@ public class ConveyorBeltPage : ContentPage
     ...
 ```
 
-Le code de création de compartiments se termine avec deux transformations qui facilitent le compartiment un peu plus grand et de l’activer sur le côté. Application de ces transformations était plus facile que d’ajuster toutes les coordonnées dans le code précédent.
+Le code de création de compartiments est remplie avec les deux transformations qui rendent le compartiment un peu plus grand, pour l’activer sur le côté. Application de ces transformations était plus facile que d’ajuster toutes les coordonnées dans le code précédent.
 
-Le `PaintSurface` gestionnaire commence en définissant un chemin d’accès pour le tapis roulant lui-même. Il s’agit simplement d’une paire de lignes et une paire de point-virgule cercles sont dessinés avec une ligne gris foncé de 20 pixels de large :
+Le `PaintSurface` gestionnaire commence par définir un chemin d’accès pour le tapis roulant lui-même. Il s’agit simplement d’une paire de lignes et une paire de cercles point-virgule qui est dessinée avec une ligne gris foncé au niveau de 20 pixels de large :
 
 ```csharp
 public class ConveyorBeltPage : ContentPage
@@ -681,13 +681,13 @@ public class ConveyorBeltPage : ContentPage
 
 La logique pour dessiner le tapis roulant ne fonctionne pas en mode paysage.
 
-Les compartiments doivent être régulièrement espacées sur 200 pixels sur le tapis roulant. Toutefois, le tapis roulant n’est probablement pas un multiple de 200 pixels de longs, ce qui signifie qu’en tant que le `phase` argument de `SKPathEffect.Create1DPath` est animée, compartiments seront affiche dans et hors d’existence.
+Les compartiments doivent être espacées sur les uns des autres sur le tapis roulant de 200 pixels. Toutefois, le tapis roulant n’est probablement pas un multiple de 200 pixels de longs, ce qui signifie qu’en tant que le `phase` argument de `SKPathEffect.Create1DPath` est animée, compartiments seront affiche dans et hors d’existence.
 
-Pour cette raison, le programme calcule d’abord une valeur nommée `length` qui est la longueur de la tapis roulant. Étant donné que le tapis roulant se compose de lignes droites et des cercles, il s’agit d’un calcul simple. Ensuite, le nombre de compartiments est calculé en divisant `length` par 200. Cela est arrondi à l’entier le plus proche, et que le nombre est alors divisé en `length`. Le résultat est un espace pour un nombre intégral de compartiments. Le `phase` argument est simplement une fraction de qui.
+Pour cette raison, le programme calcule d’abord une valeur nommée `length` qui est la longueur du tapis roulant. Étant donné que le tapis roulant se compose de lignes droites et des cercles, il s’agit d’un calcul simple. Ensuite, le nombre de compartiments est calculé en divisant `length` par 200. Cela est arrondi à l’entier le plus proche, et que le nombre est alors divisé en `length`. Le résultat est un espacement pour un nombre entier de compartiments. Le `phase` argument est simplement une fraction de qui.
 
 ## <a name="from-path-to-path-again"></a>À partir du chemin d’accès au nouveau chemin d’accès
 
-Au bas de la `DrawSurface` gestionnaire dans **tapis roulant**, commentez le `canvas.DrawPath` appeler et remplacez-le par le code suivant :
+En bas de la `DrawSurface` gestionnaire dans **tapis roulant**, commentez la `canvas.DrawPath` appeler et remplacez-le par le code suivant :
 
 ```csharp
 SKPath newPath = new SKPath();
@@ -699,21 +699,21 @@ SKPaint newPaint = new SKPaint
 canvas.DrawPath(newPath, newPaint);
 ```
 
-Comme avec l’exemple précédent de `GetFillPath`, vous verrez que les résultats sont identiques à l’exception de la couleur. Après l’exécution de `GetFillPath`, le `newPath` objet contient plusieurs copies du chemin d’accès de compartiments, chacun positionné au même endroit que l’animation placés au moment de l’appel.
+Comme avec l’exemple précédent de `GetFillPath`, vous verrez que les résultats sont identiques à l’exception de la couleur. Après l’exécution de `GetFillPath`, le `newPath` objet contient plusieurs copies du chemin d’accès de compartiment, chacun positionné au même endroit que l’animation les positionné au moment de l’appel.
 
 ## <a name="hatching-an-area"></a>Une zone de hachurage
 
-Le [ `SKPathEffect.Create2DLines` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create2DLine/p/System.Single/SkiaSharp.SKMatrix/) méthode remplit une zone avec des lignes parallèles, souvent appelé *le hachurage lignes*. La méthode a la syntaxe suivante :
+Le [ `SKPathEffect.Create2DLines` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create2DLine/p/System.Single/SkiaSharp.SKMatrix/) méthode remplit une zone avec des lignes parallèles, souvent appelé *lignes de hachurage*. La méthode a la syntaxe suivante :
 
 ```csharp
 public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)
 ```
 
-Le `width` argument spécifie l’épaisseur du trait des lignes de hachurage. Le `matrix` paramètre est une combinaison de rotation de mise à l’échelle et facultatif. Le facteur d’échelle indique l’incrément de pixel Skia utilise pour les lignes de hachurage de l’espace. La séparation entre les lignes est le facteur d’échelle moins le `width` argument. Si le facteur d’échelle est inférieure ou égale à la `width` valeur, il n’y a aucun espace entre les lignes de hachurage et apparaîtra la zone à remplir. Spécifiez la même valeur pour la mise à l’échelle horizontale et verticale.
+Le `width` argument spécifie la largeur de trait des lignes de hachurage. Le `matrix` paramètre est une combinaison de rotation de mise à l’échelle et facultatif. Le facteur d’échelle indique l’incrément de pixels Skia utilise pour les lignes de hachurage de l’espace. La séparation entre les lignes est le facteur d’échelle moins le `width` argument. Si le facteur d’échelle est inférieure ou égale à la `width` valeur, il n’y aura aucun espace entre les lignes de hachurage et apparaîtra la zone à remplir. Spécifiez la même valeur pour la mise à l’échelle horizontale et verticale.
 
 Par défaut, les lignes de hachurage sont horizontaux. Si le `matrix` paramètre contient la rotation, les lignes de hachurage pivotent dans le sens horaire.
 
-Le **hachurage de remplissage** page montre l’effet de ce chemin d’accès. Le [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) classe définit trois effets de chemin d’accès en tant que champs, la première pour les lignes de hachurage horizontal avec une largeur de 3 pixels avec un facteur de mise à l’échelle indiquant qu’ils sont espacés de 6 pixels éloignés. La séparation entre les lignes est par conséquent de 3 pixels. L’effet de la deuxième concerne les lignes de hachurage vertical avec une largeur de 6 pixels espacées 24 pixels éloignés (par conséquent, la séparation est 18 pixels), et le troisième est de 12 pixels large espacés 36 pixels séparées par des lignes de hachurage diagonal.
+Le **hachurage de remplissage** page montre l’effet de ce chemin d’accès. Le [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) classe définit trois effets de chemin d’accès en tant que champs, le premier pour les lignes de hachurage horizontal avec une largeur de 3 pixels avec un facteur de mise à l’échelle indiquant qu’ils sont espacées de 6 pixels uns des autres. La séparation entre les lignes est par conséquent de 3 pixels. L’effet de la deuxième est pour les lignes de hachurage vertical avec une largeur de 6 pixels espacement de 24 pixels uns des autres (par conséquent, la séparation est 18 pixels), et le troisième est de 12 pixels larges espacés 36 pixels distinguer les lignes de hachurage diagonal.
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -744,9 +744,9 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-Notez la matrice `Multiply` (méthode). Étant donné que les facteurs d’échelle horizontales et verticales sont les mêmes, peu importe l’ordre dans lequel les matrices de mise à l’échelle et la rotation sont multipliés.
+Notez que la matrice `Multiply` (méthode). Étant donné que les facteurs d’échelle horizontales et verticales sont les mêmes, peu importe l’ordre dans lequel les matrices de mise à l’échelle et rotation sont multipliés.
 
-Le `PaintSurface` Gestionnaire utilise les effets de ces trois avec trois couleurs différentes en association avec `fillPaint` pour remplir un rectangle arrondi dimensionné en fonction de la page. Le `Style` propriété définie sur `fillPaint` est ignorée ; lorsque le `SKPaint` objet comprend un effet de chemin d’accès créé à partir de `SKPathEffect.Create2DLine`, la zone est remplie, qu’elle :
+Le `PaintSurface` Gestionnaire utilise ces effets de chemin d’accès de trois avec trois couleurs différentes en association avec `fillPaint` pour remplir un rectangle à coins arrondis dimensionné en fonction de la page. Le `Style` propriété définie sur `fillPaint` est ignorée ; lorsque la `SKPaint` objet inclut un effet de chemin d’accès créé à partir de `SKPathEffect.Create2DLine`, la zone est remplie quel que soit :
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -793,27 +793,27 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-Si vous examinez attentivement les résultats, vous verrez que les lignes de hachurage rouges et bleues ne sont pas limités précisément à un rectangle arrondi. (Cela est apparemment une caractéristique du code sous-jacent Skia.) Si ce n’est pas satisfaisant, une autre approche est indiquée pour les lignes de hachurage diagonal en vert : le rectangle arrondi est utilisé comme un tracé de détourage et les hachures sont dessinées sur la page entière.
+Si vous examinez attentivement les résultats, vous verrez que les lignes de hachurage rouge et bleu ne sont pas limités précisément le rectangle à coins arrondis. (Cela est apparemment une caractéristique du code sous-jacent Skia.) Si ce n’est pas satisfaisant, une autre approche est indiquée pour les lignes de hachurage diagonales en vert : le rectangle à coins arrondis est utilisé comme un tracé de détourage et les lignes de hachurage sont dessinées sur la page entière.
 
-Le `PaintSurface` gestionnaire se termine par un appel à tracer simplement le rectangle arrondi, afin de voir la différence avec les lignes de hachurage rouges et bleues :
+Le `PaintSurface` gestionnaire se termine par un appel à simplement rayer le rectangle à coins arrondis, afin de voir la différence avec les lignes de hachurage rouge et bleu :
 
-[![](effects-images/hatchfill-small.png "Capture d’écran de triple de la page de hachurage de remplissage")](effects-images/hatchfill-large.png#lightbox "Triple capture d’écran de la page de hachurage de remplissage")
+[![](effects-images/hatchfill-small.png "Capture d’écran triple de la page de hachurage de remplissage")](effects-images/hatchfill-large.png#lightbox "Triple capture d’écran de la page de hachurage de remplissage")
 
-L’écran Android ne ressemble pas vraiment que : la mise à l’échelle de la capture d’écran a provoqué la fins et des lignes rouges léger pour consolider dans les lignes rouges apparemment plus large et les espaces plus larges.
+L’écran Android ne ressemble pas vraiment comme celle-ci : la mise à l’échelle de la capture d’écran a provoqué le fines lignes rouges et la dynamique pour consolider en lignes rouges apparemment plus larges et les espaces plus large.
 
 ## <a name="filling-with-a-path"></a>Remplir avec un chemin d’accès
 
-Le [ `SKPathEffect.Create2DPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create2DPath/p/SkiaSharp.SKMatrix/SkiaSharp.SKPath/) vous permet de remplir une zone avec un chemin d’accès qui est répliquée horizontalement et verticalement, de la zone Mosaïque en vigueur :
+Le [ `SKPathEffect.Create2DPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create2DPath/p/SkiaSharp.SKMatrix/SkiaSharp.SKPath/) vous permet de remplir une zone avec un chemin d’accès qui est répliquée horizontalement et verticalement, mosaïque en vigueur de la zone :
 
 ```csharp
 public static SKPathEffect Create2DPath (SKMatrix matrix, SKPath path)
 ```
 
-Le `SKMatrix` les facteurs d’échelle indiquent l’espacement horizontal et vertical du chemin d’accès répliquée. Mais vous ne pouvez pas faire pivoter le chemin d’accès à l’aide de ce `matrix` argument ; si vous le chemin d’accès pivoté, faire pivoter le chemin d’accès lui-même à l’aide de la `Transform` méthode définie par `SKPath`.
+Le `SKMatrix` facteurs d’échelle indiquent l’espacement horizontal et vertical du chemin d’accès répliquée. Mais vous ne pouvez pas faire pivoter le chemin d’accès à l’aide de ce `matrix` argument ; si vous le chemin d’accès de faire pivoter, faire pivoter le chemin d’accès lui-même à l’aide de la `Transform` méthode définie par `SKPath`.
 
-Le chemin d’accès répliquée est normalement aligné sur les bords gauche et supérieure de l’écran, au lieu de la zone à remplir. Vous pouvez substituer ce comportement en fournissant des facteurs de traduction comprise entre 0 et les facteurs d’échelle pour spécifier les décalages horizontaux et verticaux les côtés gauche et supérieure.
+Le chemin d’accès répliquée est normalement aligné avec les bords gauche et supérieure de l’écran, plutôt que la zone à remplir. Vous pouvez remplacer ce comportement en fournissant des facteurs de translation comprise entre 0 et les facteurs d’échelle pour spécifier les décalages horizontaux et verticaux des bords gauche et supérieure.
 
-Le **chemin d’accès Mosaïque remplit** page montre l’effet de ce chemin d’accès. Le chemin d’accès utilisé pour la zone de la mosaïque est défini en tant que champ dans le [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) classe. Le coordonnées horizontales et verticales comprise entre -40 et 40, ce qui signifie que ce chemin d’accès est 80 pixels carrés :
+Le **chemin Mosaïque remplit** page montre l’effet de ce chemin d’accès. Le chemin d’accès utilisé pour la zone de la mosaïque est défini en tant que champ dans le [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) classe. Les coordonnées horizontales et verticales vont de -40 à 40, ce qui signifie que ce chemin d’accès est 80 pixels carrés :
 
 ```csharp
 public class PathTileFillPage : ContentPage
@@ -849,25 +849,25 @@ public class PathTileFillPage : ContentPage
 }
 ```
 
-Dans le `PaintSurface` gestionnaire, la `SKPathEffect.Create2DPath` appels définit l’espacement horizontal et vertical à 64 pour provoquer les vignettes carrés 80 pixels se chevaucher. Heureusement, le chemin d’accès ressemble à une pièce, maillage bien avec voisines de vignettes :
+Dans le `PaintSurface` gestionnaire, la `SKPathEffect.Create2DPath` appels définit l’espacement horizontal et vertical à 64 pour provoquer les mosaïques carrées 80-pixel se chevaucher. Heureusement, le chemin d’accès ressemble à une partie du puzzle, maillage bien avec contiguë de vignettes :
 
-[![](effects-images/pathtilefill-small.png "Capture d’écran de triple de la page de mosaïque remplit de chemin d’accès")](effects-images/pathtilefill-large.png#lightbox "Triple capture d’écran de la page de mosaïque remplit de chemin d’accès")
+[![](effects-images/pathtilefill-small.png "Capture d’écran triple de la page de mosaïque du chemin d’accès remplit")](effects-images/pathtilefill-large.png#lightbox "Triple capture d’écran de la page de mosaïque remplit de chemin d’accès")
 
-La mise à l’échelle à partir de la capture d’écran d’origine de provoque certains distorsion, en particulier sur l’écran Android.
+La mise à l’échelle à partir de la capture d’écran d’origine entraîne des déformations, en particulier sur l’écran Android.
 
-Notez que ces vignettes toujours apparaissent ensemble et ne sont jamais tronqués. Sur les deux premières captures d’écran, il n’est pas évident de même que la zone de remplissage est un rectangle arrondi. Si vous voulez tronquer ces vignettes à une zone particulière, utilisez un tracé de détourage.
+Notez que ces vignettes toujours apparaissent ensemble et ne sont jamais tronqués. Sur les deux premières captures d’écran, il n’est pas encore évidente que la zone à remplir est un rectangle arrondi. Si vous souhaitez tronquer ces vignettes pour une zone particulière, utilisez un tracé de détourage.
 
-Essayez de définir la `Style` propriété de la `SKPaint` objet `Stroke`, et vous verrez les vignettes individuelles décrites et non remplie.
+Essayez de définir la `Style` propriété de la `SKPaint` objet `Stroke`, et vous verrez les vignettes individuelles décrites au lieu de rempli.
 
 ## <a name="rounding-sharp-corners"></a>Arrondi des angles aigus
 
-Le **arrondi de sur un heptagone** programme présentées dans les [ **trois comment dessiner un Arc** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) article utilisé une tangente d’arc de cercle pour les points d’une figure sept recto verso de la courbe. Le **un autre sur un heptagone arrondi** page présente une approche beaucoup plus facile qui utilise un effet de chemin d’accès créé à partir de la [ `SKPathEffect.CreateCorner` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateCorner/p/System.Single/) (méthode) :
+Le **arrondi de sur un heptagone** programme présenté dans le [ **trois moyens pour dessiner un Arc** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) article utilisé un arc tangent pour les points d’une figure sept recto verso de la courbe. Le **un autre sur un heptagone arrondi** page montre une approche beaucoup plus facile qui utilise un effet de chemin d’accès créé à partir de la [ `SKPathEffect.CreateCorner` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateCorner/p/System.Single/) (méthode) :
 
 ```csharp
 public static SKPathEffect CreateCorner (Single radius)
 ```
 
-Bien que l’argument unique est nommé `radius` vous devez la définir à la moitié du rayon de l’angle souhaité. (C’est une caractéristique du code sous-jacent Skia.)
+Bien que l’argument unique est nommé `radius` vous devez la définir sur la moitié du rayon de l’angle souhaité. (C’est une caractéristique du code Skia sous-jacent).
 
 Voici le `PaintSurface` gestionnaire dans le [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) classe :
 
@@ -922,30 +922,30 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Vous pouvez utiliser cet effet avec contour ou remplissage basé sur le `Style` propriété de la `SKPaint` objet. Ici, il est sur les trois plateformes :
+Vous pouvez utiliser cet effet avec contour ou remplissage selon le `Style` propriété de la `SKPaint` objet. Il est ici sur les trois plateformes :
 
-[![](effects-images/anotherroundedheptagon-small.png "Capture d’écran de triple de la page d’un autre sur un heptagone arrondi")](effects-images/anotherroundedheptagon-large.png#lightbox "Triple capture d’écran de la page d’un autre sur un heptagone arrondi")
+[![](effects-images/anotherroundedheptagon-small.png "Capture d’écran triple de la page d’un autre sur un heptagone arrondi")](effects-images/anotherroundedheptagon-large.png#lightbox "Triple capture d’écran de la page d’un autre sur un heptagone arrondi")
 
-Vous verrez que cet sur un heptagone arrondi est identique au programme précédent. Si vous avez besoin de plus de convaincre que le rayon d’angle est véritablement 100 plutôt que les 50 spécifié dans le `SKPathEffect.CreateCorner` appel, vous pouvez ne pas commenter la dernière instruction dans le programme et voir un rayon de 100 superposées dans l’angle.
+Vous verrez que cet sur un heptagone arrondi est identique au programme précédent. Si vous avez besoin de convaincre plus que le rayon de l’angle est véritablement 100 plutôt que les 50 spécifié dans le `SKPathEffect.CreateCorner` appel, vous pouvez ne pas commenter la dernière instruction dans le programme et voir un cercle de rayon de 100 superposées dans l’angle.
 
-## <a name="random-jitter"></a>Variation aléatoire
+## <a name="random-jitter"></a>Instabilité aléatoire
 
-Parfois, les lignes droites parfaites de graphiques de l’ordinateur ne sont pas tout à fait ce que vous souhaitez et quelque peu aléatoire est souhaitée. Dans ce cas, vous devez éventuellement essayer le [ `SKPathEffect.CreateDiscrete` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDiscrete/p/System.Single/System.Single/System.UInt32/) méthode :
+Parfois, les lignes droites exempt de failles de graphiques de l’ordinateur ne sont pas tout à fait ce que vous voulez, et un peu aléatoire est souhaité. Dans ce cas, vous souhaitez essayer le [ `SKPathEffect.CreateDiscrete` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDiscrete/p/System.Single/System.Single/System.UInt32/) méthode :
 
 ```csharp
 public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, UInt32 seedAssist)
 ```
 
-Vous pouvez utiliser cet effet de contour ou de remplissage. Lignes sont divisées en segments connectés, dont la longueur approximative est spécifiée par `segLength` et l’étendre dans différentes directions. L’étendue de l’écart par rapport à la ligne d’origine est spécifié par `deviation`.
+Vous pouvez utiliser cet effet de chemin d’accès pour le contour ou remplir. Lignes sont divisées en segments connectés, dont la longueur approximative est spécifiée par `segLength` — et étendre dans différentes directions. L’étendue de l’écart par rapport à la ligne d’origine est spécifié par `deviation`.
 
-L’argument final est une valeur de départ utilisée pour générer la séquence pseudo-aléatoire utilisée pour l’effet. L’effet d’instabilité aura un aspect un peu différent pour différentes valeurs de départ. L’argument a une valeur par défaut de zéro, ce qui signifie que l’effet est le même chaque fois que vous exécutez le programme. Si vous souhaitez instabilité différents chaque fois que l’écran est mis à jour, vous pouvez définir la valeur de départ le `Millisecond` propriété d’un `DataTime.Now` valeur (par exemple).
+Le dernier argument est une valeur initiale utilisée pour générer la séquence pseudo-aléatoire utilisée pour l’effet. L’effet d’instabilité aura un aspect un peu différent pour différentes valeurs de départ. L’argument a une valeur par défaut de zéro, ce qui signifie que l’effet est identique à chaque fois que vous exécutez le programme. Si vous souhaitez instabilité différents chaque fois que l’écran est redessiné, vous pouvez définir la valeur de départ le `Millisecond` propriété d’un `DataTime.Now` valeur (par exemple).
 
 
-Le **instabilité expérimenter** page vous permet de faire des essais avec différentes valeurs de contour d’un rectangle :
+Le **instabilité faire des essais** page vous permet de faire des essais avec différentes valeurs dans le contour d’un rectangle :
 
-[![](effects-images/jitterexperiment-small.png "Capture d’écran de triple de la page de l’expérience d’instabilité")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
+[![](effects-images/jitterexperiment-small.png "Le triple de la capture d’écran de la page d’expérience d’instabilité")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
 
-Le programme est suffirait. Le [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) fichier instancie deux `Slider` éléments et une `SKCanvasView`:
+Le programme est difficile. Le [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) fichier instancie deux `Slider` éléments et un `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -1001,7 +1001,7 @@ Le programme est suffirait. Le [ **JitterExperimentPage.xaml** ](https://github.
 </ContentPage>
 ```
 
-Le `PaintSurface` gestionnaire dans le [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) fichier code-behind est appelée chaque fois qu’un `Slider` valeur est modifiée. Il appelle `SKPathEffect.CreateDiscrete` à l’aide de deux `Slider` les valeurs et utilise ces informations pour tracer un rectangle :
+Le `PaintSurface` gestionnaire dans le [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) fichier code-behind est appelée chaque fois qu’un `Slider` valeur est modifiée. Il appelle `SKPathEffect.CreateDiscrete` à l’aide de deux `Slider` valeurs et utilise ces informations pour tracer un rectangle :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1032,7 +1032,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Vous pouvez utiliser cet effet de remplissage, auquel cas le contour de la zone est soumis à ces écarts aléatoires. Le **instabilité de texte** page illustre l’utilisation de cet effet de chemin d’accès pour afficher le texte. La plupart du code dans le `PaintSurface` Gestionnaire de la [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) classe est consacrée au dimensionnement et de centrage du texte :
+Vous pouvez utiliser cet effet de remplissage, auquel cas le contour de la zone remplie est soumis à ces écarts aléatoire. Le **texte instabilité** page illustre l’utilisation de cet effet de chemin d’accès pour afficher le texte. La plupart du code dans le `PaintSurface` Gestionnaire de la [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) classe est consacrée au dimensionnement et de centrage du texte :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1069,11 +1069,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ici, il s’exécute en mode paysage sur les trois plateformes :
 
-[![](effects-images/jittertext-small.png "Capture d’écran de triple de la page de l’instabilité de texte")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
+[![](effects-images/jittertext-small.png "Le triple de la capture d’écran de la page de texte instabilité")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 
 ## <a name="path-outlining"></a>Chemin d’accès du mode plan
 
-Vous avez déjà vu deux exemples peu de la [ `GetFillPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/System.Single/) méthode de `SKPaint`, où se trouve également dans une [surcharge](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/SkiaSharp.SKRect/System.Single/):
+Vous avez déjà vu deux exemples peu de la [ `GetFillPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/System.Single/) méthode de `SKPaint`, qui existe également dans un [surcharger](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/SkiaSharp.SKRect/System.Single/):
 
 ```csharp
 public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale)
@@ -1081,13 +1081,13 @@ public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale)
 public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resScale)
 ```
 
-Seuls les deux premiers arguments sont nécessaires. La méthode accède au chemin d’accès référencé par le `src` argument, modifie les données de chemin d’accès basées sur les propriétés de trait dans le `SKPaint` objet (y compris le `PathEffect` propriété), puis écrit les résultats dans le `dst` chemin d’accès. Le `resScale` paramètre permet de réduire la précision pour créer un chemin d’accès de destination plus petit et le `cullRect` argument peut éliminer les contours en dehors d’un rectangle.
+Seuls les deux premiers arguments sont requis. La méthode accède au chemin d’accès référencé par le `src` argument, modifie les données de chemin d’accès basées sur les propriétés de trait dans le `SKPaint` objet (y compris le `PathEffect` propriété), puis écrit les résultats dans le `dst` chemin d’accès. Le `resScale` paramètre permet de réduire la précision pour créer un chemin d’accès de destination plus petits et le `cullRect` argument peut éliminer les contours en dehors d’un rectangle.
 
-Une utilisation de base de cette méthode n’implique pas les effets de chemin d’accès. Si le `SKPaint` objet a son `Style` propriété la valeur `SKPaintStyle.Stroke`et *pas* ont son `PathEffect` définie, puis `GetFillPath` crée un chemin d’accès qui représente un *plan*du chemin d’accès source comme s’il avait été dessiné par les propriétés de peinture.
+Une utilisation de base de cette méthode n’implique pas les effets de chemin d’accès. Si le `SKPaint` objet possède ses `Style` propriété définie sur `SKPaintStyle.Stroke`et effectue *pas* ont son `PathEffect` définie, alors `GetFillPath` crée un chemin d’accès qui représente un *contour*du chemin d’accès source comme s’il avait été dessiné par les propriétés de peinture.
 
-Par exemple, si le `src` chemin d’accès est un cercle simple de rayon 500 et le `SKPaint` objet spécifie une épaisseur de trait de 100, puis le `dst` chemin d’accès devient deux cercles concentriques, l’autre avec un rayon de 450 et l’autre avec un rayon de 550. La méthode est appelée `GetFillPath` , car ce remplissage `dst` chemin d’accès est le même que le contour du `src` chemin d’accès. Mais vous pouvez également tracer les `dst` chemin d’accès pour afficher les contours du chemin d’accès.
+Par exemple, si le `src` chemin d’accès est un cercle de rayon 500, simple et le `SKPaint` objet spécifie une épaisseur de contour de 100, puis le `dst` chemin d’accès devient deux cercles concentriques, l’autre avec un rayon de 450 et l’autre avec un rayon de 550. La méthode est appelée `GetFillPath` car remplissant ce `dst` chemin d’accès est le même que le contour du `src` chemin d’accès. Mais vous pouvez également tracer le `dst` chemin d’accès pour afficher les contours du chemin d’accès.
 
-Le **appuyez sur contour le chemin d’accès** illustre cela. Le `SKCanvasView` et `TapGestureRecognizer` sont instanciés dans le [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) fichier. Le [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) fichier code-behind définit trois `SKPaint` objets en tant que champs, deux pour le contour avec contour largeurs de 100 et 20 et la troisième de remplissage :
+Le **appuyez sur contour, le chemin d’accès** illustre cela. Le `SKCanvasView` et `TapGestureRecognizer` sont instanciés dans le [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) fichier. Le [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) fichier code-behind définit trois `SKPaint` objets en tant que champs, deux pour le contour avec rayer les largeurs de 100 et 20 et le troisième de remplissage :
 
 ```csharp
 public partial class TapToOutlineThePathPage : ContentPage
@@ -1128,7 +1128,7 @@ public partial class TapToOutlineThePathPage : ContentPage
 }
 ```
 
-Si l’écran n’a pas été appuyé sur, la `PaintSurface` Gestionnaire utilise la `blueFill` et `redThickStroke` peindre des objets à restituer un chemin circulaire :
+Si l’écran n’a pas été appuyé, le `PaintSurface` Gestionnaire utilise la `blueFill` et `redThickStroke` peindre des objets à restituer un chemin circulaire :
 
 ```csharp
 public partial class TapToOutlineThePathPage : ContentPage
@@ -1168,28 +1168,28 @@ public partial class TapToOutlineThePathPage : ContentPage
 }
 ```
 
-Le cercle rempli et dessiné comme prévu :
+Le cercle rempli et rayé comme prévu :
 
-[![](effects-images/taptooutlinethepathnormal-small.png "Capture d’écran de triple de la page appuyez sur plan le chemin normale")](effects-images/taptooutlinethepathnormal-large.png#lightbox "Triple capture d’écran de la page appuyez sur plan le chemin normale")
+[![](effects-images/taptooutlinethepathnormal-small.png "Capture d’écran triple de la page appuyez pour le tracé de contour normale")](effects-images/taptooutlinethepathnormal-large.png#lightbox "Triple capture d’écran de la page appuyez pour le tracé de contour normale")
 
-Lorsque vous cliquez sur l’écran, `outlineThePath` a la valeur `true`et le `PaintSurface` gestionnaire crée une nouvelle `SKPath` de l’objet et l’utilise comme le chemin d’accès de destination dans un appel à `GetFillPath` sur la `redThickStroke` objet paint. Ce chemin d’accès de destination est ensuite remplie et dessiné avec `redThinStroke`, se traduisant par les éléments suivants :
+Lorsque vous appuyez sur l’écran, `outlineThePath` a la valeur `true`et le `PaintSurface` gestionnaire crée une nouvelle `SKPath` de l’objet et l’utilise comme le chemin d’accès de destination dans un appel à `GetFillPath` sur la `redThickStroke` objet paint. Ce chemin d’accès de destination est ensuite rempli et rayée avec `redThinStroke`, se traduisant par les éléments suivants :
 
-[![](effects-images/taptooutlinethepathoutlined-small.png "Capture d’écran de triple de la page appuyez sur pour le tracé de contour encadrée")](effects-images/taptooutlinethepathoutlined-large.png#lightbox "Triple capture d’écran de la page appuyez sur pour le tracé de contour avec contour")
+[![](effects-images/taptooutlinethepathoutlined-small.png "Capture d’écran triple de la page appuyez pour le tracé de contour avec contour")](effects-images/taptooutlinethepathoutlined-large.png#lightbox "Triple capture d’écran de la page appuyez pour le tracé de contour avec contour")
 
-Les deux cercles rouges indiquent clairement que le chemin d’accès circulaire d’origine a été converti en deux profils circulaires.
+Les deux cercles rouges indiquent clairement que le chemin d’origine circulaire a été converti en deux profils circulaires.
 
-Cette méthode peut être très utile pour développer des chemins d’accès à utiliser pour le `SKPathEffect.Create1DPath` (méthode). Les chemins d’accès que vous spécifiez dans ces méthodes sont toujours remplies lorsque les chemins d’accès sont répliquées. Si vous ne souhaitez pas le chemin d’accès complet doit être remplie, vous devez définir attentivement les contours.
+Cette méthode peut être très utile dans le développement de chemins d’accès à utiliser pour le `SKPathEffect.Create1DPath` (méthode). Les chemins d’accès que vous spécifiez dans ces méthodes sont toujours remplis lorsque les chemins d’accès sont répliquées. Si vous ne souhaitez pas le chemin d’accès complet à remplir, vous devez définir attentivement les contours.
 
-Par exemple, dans le **chaîne liée** exemple, les liens ont été définies avec une série de quatre arcs, chaque paire de qui étaient basées sur les deux rayons de montrer la zone du chemin d’accès doit être remplie. Il est possible de remplacer le code dans la `LinkedChainPage` classe faire un peu différemment.
+Par exemple, dans le **chaîne lié** exemple, les liens ont été définies avec une série de quatre façons, chaque paire qui étaient basés sur deux rayons décrit la zone du tracé à remplir. Il est possible de remplacer le code dans la `LinkedChainPage` classe faire un peu différemment.
 
-Tout d’abord, que vous souhaitez redéfinir la `linkRadius` constante :
+Tout d’abord, vous souhaitez redéfinir le `linkRadius` constante :
 
 ```csharp
 const float linkRadius = 27.5f;
 const float linkThickness = 5;
 ```
 
-Le `linkPath` est désormais deux arcs de cercle en fonction de ce rayon unique, avec les angles de démarrer et l’angle de balayage :
+Le `linkPath` est désormais simplement deux arcs selon ce rayon unique, avec le texte souhaité démarrer angles et balayage angles :
 
 ```csharp
 using (SKPath linkPath = new SKPath())
@@ -1218,13 +1218,13 @@ using (SKPath linkPath = new SKPath())
 }
 ```
 
-Le `outlinePath` objet est ensuite le destinataire du contour de `linkPath` lorsqu’il est rayé avec les propriétés spécifiées dans `strokePaint`.
+Le `outlinePath` objet est ensuite le destinataire du contour de `linkPath` quand elle est rayée avec les propriétés spécifiées dans `strokePaint`.
 
 Un autre exemple à l’aide de cette technique est proche du chemin d’accès utilisé dans un `SKPathEffect.Create2DPath` méthodes.
 
-## <a name="combining-path-effects"></a>Combine les effets de chemin d’accès
+## <a name="combining-path-effects"></a>Combinaison des effets de tracé
 
-Les deux méthodes de création statiques final de `SKPathEffect` sont [ `SKPathEffect.CreateSum` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateSum/p/SkiaSharp.SKPathEffect/SkiaSharp.SKPathEffect/) et [ `SKPathEffect.CreateCompose` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateCompose/p/SkiaSharp.SKPathEffect/SkiaSharp.SKPathEffect/):
+Les deux méthodes de création statiques finale de `SKPathEffect` sont [ `SKPathEffect.CreateSum` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateSum/p/SkiaSharp.SKPathEffect/SkiaSharp.SKPathEffect/) et [ `SKPathEffect.CreateCompose` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateCompose/p/SkiaSharp.SKPathEffect/SkiaSharp.SKPathEffect/):
 
 ```csharp
 public static SKPathEffect CreateSum (SKPathEffect first, SKPathEffect second)
@@ -1232,15 +1232,15 @@ public static SKPathEffect CreateSum (SKPathEffect first, SKPathEffect second)
 public static SKPathEffect CreateCompose (SKPathEffect outer, SKPathEffect inner)
 ```
 
-Ces deux méthodes combinent deux effets de chemin d’accès pour créer un effet de chemin d’accès composite. Le `CreateSum` méthode crée un effet similaire aux effets de deux chemins appliquées séparément, tandis que `CreateCompose` applique un effet de chemin d’accès (la `inner`), puis applique le `outer` à qui.
+Ces deux méthodes combinent deux effets de chemin d’accès pour créer un effet de chemin d’accès composite. Le `CreateSum` méthode crée un effet de chemin d’accès qui est similaire aux effets de chemin de deux accès appliquées séparément, tandis que `CreateCompose` applique un effet de chemin d’accès (la `inner`), puis applique le `outer` à qui.
 
-Vous avez déjà vu comment la `GetFillPath` méthode de `SKPaint` peut convertir un chemin d’accès à un autre chemin d’accès basé sur `SKPaint` propriétés (y compris `PathEffect`) pour qu’il ne doit pas être *trop* mystérieux comment un `SKPaint`objet peut effectuer cette opération à deux reprises avec les effets de deux de chemin d’accès spécifiés dans le `CreateSum` ou `CreateCompose` méthodes.
+Vous avez déjà vu comment le `GetFillPath` méthode de `SKPaint` peut convertir un chemin d’accès à un autre chemin d’accès basé sur `SKPaint` propriétés (y compris `PathEffect`) pour qu’il ne doit pas être *trop* mystérieux comment un `SKPaint`objet peut effectuer cette opération à deux reprises avec les effets de deux de chemin d’accès spécifiés dans le `CreateSum` ou `CreateCompose` méthodes.
 
-Une utilisation évidente de `CreateSum` consiste à définir un `SKPaint` objet qui remplit un chemin d’accès avec un effet un chemin d’accès et le chemin d’accès avec un autre effet de chemin d’accès des traits. Cela est illustré dans le **chats dans le cadre de** exemple, qui affiche un tableau de chats au sein d’un frame avec bords festonnées :
+Une utilisation évidente de `CreateSum` consiste à définir un `SKPaint` objet qui remplit un chemin d’accès avec un effet un chemin d’accès et le chemin d’accès avec un autre effet de chemin d’accès des traits. Cela est illustré dans le **chats dans Frame** exemple, qui affiche un tableau de chats au sein d’un frame avec bords festonnées :
 
-[![](effects-images/catsinframe-small.png "Capture d’écran de triple de la page chats dans le cadre")](effects-images/catsinframe-large.png#lightbox "Triple capture d’écran de la page chats dans le Frame")
+[![](effects-images/catsinframe-small.png "Capture d’écran triple de la page de chats dans le cadre")](effects-images/catsinframe-large.png#lightbox "Triple capture d’écran de la page de chats dans le Frame")
 
-Le [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) classe commence en définissant plusieurs champs. Vous pourriez rencontrer le premier champ de la [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe à partir de la [ **SVG chemin d’accès de données** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) article. Le deuxième chemin d’accès est basée sur une ligne et un arc pour le modèle de crête de l’image :
+Le [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) classe commence par définir plusieurs champs. Vous pouvez reconnaître le premier champ à partir de la [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe à partir de la [ **les données de chemin SVG** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) article. Le deuxième chemin d’accès est basée sur une ligne et d’arc de cercle pour le modèle de crête du cadre :
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1282,9 +1282,9 @@ public class CatsInFramePage : ContentPage
 }
 ```
 
-Le `catPath` peuvent être utilisés dans le `SKPathEffect.Create2DPath` méthode si le `SKPaint` objet `Style` est définie sur `Stroke`. Toutefois, si le `catPath` est utilisé directement dans ce programme, puis la tête entière de la cat sera remplie, et valeurs même ne seront pas visibles. (Essayez !) Il est nécessaire d’obtenir le contour de ce chemin d’accès et utiliser ce plan dans le `SKPathEffect.Create2DPath` (méthode).
+Le `catPath` pourraient être utilisées dans le `SKPathEffect.Create2DPath` méthode si le `SKPaint` objet `Style` propriété est définie sur `Stroke`. Toutefois, si le `catPath` est utilisé directement dans ce programme, puis la tête de la cat entière sera remplie, et valeurs même ne seront pas visibles. (Essayez-le !) Il est nécessaire d’obtenir le contour de ce chemin d’accès et utiliser ce plan dans le `SKPathEffect.Create2DPath` (méthode).
 
-Le constructeur effectue cette tâche. Il applique d’abord deux transformations à `catPath` pour déplacer le (0, 0) pointe vers le centre et de réduire la taille. `GetFillPath` Obtient tous les plans des profils dans `outlinedCatPath`, et cet objet est utilisé dans le `SKPathEffect.Create2DPath` appeler. La mise à l’échelle facteurs la `SKMatrix` valeur sont légèrement supérieur à l’horizontale et la taille verticale de la cat pour fournir un tampon peu entre les mosaïques, tandis que les facteurs de traduction ont été dérivées quelque peu empirique afin qu’un chat complète soit visible dans le coin supérieur gauche de l’image :
+Le constructeur effectue cette tâche. Il applique d’abord deux transformations à `catPath` pour déplacer le (0, 0) pointer vers le centre et à l’échelle la taille. `GetFillPath` Obtient tous les plans des contours de `outlinedCatPath`, et cet objet est utilisé dans le `SKPathEffect.Create2DPath` appeler. La mise à l’échelle en compte la `SKMatrix` valeur sont légèrement supérieur à l’horizontale et la taille verticale de la cat pour fournir un mémoire tampon peu entre les vignettes, tandis que les facteurs de translation ont été dérivées quelque peu empirique afin qu’un chat complète soit visible dans le coin supérieur gauche du cadre :
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1327,9 +1327,9 @@ public class CatsInFramePage : ContentPage
 }
 ```
 
-Le constructeur appelle ensuite `SKPathEffect.Create1DPath` pour le frame festonnée. Notez que la largeur du chemin d’accès est 100 pixels, mais l’avance est 75 pixels de sorte que le chemin d’accès répliquée est recouverte autour du cadre. L’instruction finale des appels de constructeur `SKPathEffect.CreateSum` pour combiner les effets de deux chemins et définir le résultat de la `SKPaint` objet.
+Le constructeur appelle ensuite `SKPathEffect.Create1DPath` pour le frame festonnée. Notez que la largeur du chemin d’accès est 100 pixels, mais l’avance est 75 pixels afin que le chemin d’accès répliquée est superposée autour du cadre. L’instruction finale des appels de constructeur `SKPathEffect.CreateSum` pour combiner les effets de deux chemins et de définir le résultat la `SKPaint` objet.
 
-Tout ce travail permet le `PaintSurface` gestionnaire sont assez simples. Il suffit de définir un rectangle et dessinez à l’aide de `framePaint`:
+Tout ce travail permet le `PaintSurface` gestionnaire sont assez simples. Il doit uniquement définir un rectangle et dessiner à l’aide de `framePaint`:
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1350,11 +1350,11 @@ public class CatsInFramePage : ContentPage
 }
 ```
 
-Les algorithmes derrière les effets de chemin d’accès provoquent toujours le chemin d’accès complet permettant de remplissage ou de contour soient affichés, ce qui peut entraîner certains éléments visuels à apparaître à l’extérieur du rectangle. Le `ClipRect` appeler avant le `DrawRect` appel permet aux éléments visuels être considérablement plus claire. (Essayez sans découpage !)
+Les algorithmes derrière les effets de chemin d’accès provoquent toujours le chemin d’accès complet utilisé pour le remplissage ou de contour soient affichés, ce qui peut entraîner certains éléments visuels apparaissent en dehors du rectangle. Le `ClipRect` appeler avant la `DrawRect` appel permet les visuels soit beaucoup plus propre. (Essayez sans découpage !)
 
-Il est courant d’utiliser `SKPathEffect.CreateCompose` pour ajouter une instabilité vers un autre effet de chemin d’accès. Vous pouvez certainement essayer vous-même, mais voici un exemple de quelque peu différent :
+Il est courant d’utiliser `SKPathEffect.CreateCompose` pour ajouter une instabilité à un autre effet de chemin d’accès. Vous pouvez certainement essayer vous-même, mais voici un exemple quelque peu différent :
 
-Le **pointillés hachurage** remplit une ellipse avec des lignes de hachurage qui sont en pointillés. La plupart du travail de le [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) classe est effectuée directement dans les définitions de champ. Ces champs définissent un effet de tiret et un effet de hachurage. Ils sont définis en tant que `static` , car ils sont ensuite référencés dans un `SKPathEffect.CreateCompose` appeler dans le `SKPaint` définition :
+Le **des lignes de hachurage en pointillés** remplit une ellipse avec les lignes de hachurage qui sont en pointillés. La plupart du travail dans le [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) classe est effectuée directement dans les définitions de champ. Ces champs définissent un effet de dash et un effet de hachurage. Ils sont définis comme `static` , car ils sont ensuite référencés dans un `SKPathEffect.CreateCompose` appeler dans le `SKPaint` définition :
 
 ```csharp
 public class DashedHatchLinesPage : ContentPage
@@ -1382,7 +1382,7 @@ public class DashedHatchLinesPage : ContentPage
 }
 ```
 
-Le `PaintSurface` Gestionnaire devoir contenir uniquement la surcharge standard plus un seul appel à `DrawOval`:
+Le `PaintSurface` Gestionnaire devoir contient uniquement la surcharge standard additionné d’un seul appel à `DrawOval`:
 
 ```csharp
 public class DashedHatchLinesPage : ContentPage
@@ -1404,11 +1404,11 @@ public class DashedHatchLinesPage : ContentPage
 }
 ```
 
-En tant que vous avez déjà détectée, les lignes de hachurage ne sont pas précisément restreints à l’intérieur de la zone, et dans cet exemple, ils commencent toujours à gauche avec un tiret entier :
+Comme vous l’avez déjà découverts, les lignes de hachurage ne sont pas précisément limités à l’intérieur de la zone, et dans cet exemple, ils commencent toujours à gauche avec un tiret entière :
 
-[![](effects-images/dashedhatchlines-small.png "Capture d’écran de triple de la page de lignes en pointillés hachurage")](effects-images/dashedhatchlines-large.png#lightbox "Triple capture d’écran de la page de hachurage de lignes en pointillés")
+[![](effects-images/dashedhatchlines-small.png "Capture d’écran triple de la page de hachurage de lignes en pointillés")](effects-images/dashedhatchlines-large.png#lightbox "Triple capture d’écran de la page de hachurage de lignes en pointillés")
 
-Maintenant que vous avez vu les effets de chemin d’accès entre simples points et des tirets et des combinaisons étranges, utilisez votre et voir ce que vous pouvez créer.
+Maintenant que vous avez vu les effets de chemin d’accès allant de simples points et tirets à des combinaisons étranges, utilisez votre imagination et voir ce que vous pouvez créer.
 
 
 

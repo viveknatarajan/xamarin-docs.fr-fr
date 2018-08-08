@@ -1,23 +1,24 @@
 ---
-title: Notes de SkiaSharp spécifique à la plateforme
+title: Notes de publication spécifiques à la plateforme SkiaSharp
 description: Ce document décrit en détail à SkiaSharp spécifique à la plateforme. Il fournit des exemples de code pour iOS, Android, macOS, Windows et Xamarin.Forms.
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: bcec8f2c850396f45cba795555b924d3cbc4ef22
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 05c6ae6553a2e869b9eb7e038abd7b1c34350551
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783527"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615806"
 ---
-# <a name="skiasharp-platform-specific-notes"></a>Notes de SkiaSharp spécifique à la plateforme
+# <a name="skiasharp-platform-specific-notes"></a>Notes de publication spécifiques à la plateforme SkiaSharp
 
-Les exemples ci-dessous allouer manuellement les mémoires tampons de l’image, ceci afin d’illustrer un modèle commun de plateforme qui consiste à dessiner dans un tampon RBGA existant fourni par la plateforme.
+Les exemples ci-dessous allouer manuellement les mémoires tampons de l’image, cela permet d’illustrer la plateforme courant qui consiste à dessiner dans un tampon RBGA existant fourni par la plateforme.
 
-Vous n’avez pas besoin d’utiliser cet idiome si vous ne souhaitez pas.  Il existe une surcharge qui crée et gère le stockage de sauvegarde de votre image pour vous.
+Vous n’avez pas besoin d’utiliser cet idiome si vous ne souhaitez pas.  Il existe une surcharge qui crée et gère le stockage de sauvegarde pour votre image pour vous.
 
 ## <a name="ios"></a>iOS
 
@@ -99,7 +100,7 @@ try {
 }
 ```
 
-## <a name="windows-desktop--mac-desktop"></a>Bureau Windows / bureau Mac
+## <a name="windows-desktop--mac-desktop"></a>Windows Desktop / bureau Mac
 
 ```csharp
 var width = Width;
@@ -118,8 +119,8 @@ using (var bitmap = new Bitmap(width, height, PixelFormat.Format32bppPArgb)) {
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Pour inclure SkiaSharp dans votre Xamarin.Forms applications Voir le guide de [à l’aide de SkiaSharp dans Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
+Pour inclure SkiaSharp dans votre Xamarin.Forms applications Voir le guide [à l’aide de SkiaSharp dans Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
 
 ## <a name="related-links"></a>Liens associés
 
-- [SkiaSharp iOS classeur](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)
+- [Classeur iOS de SkiaSharp](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)
