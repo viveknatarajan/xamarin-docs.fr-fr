@@ -46,7 +46,7 @@ Pour cet exemple, supposez que le nom du projet Xamarin.iOS est `iPhoneApp1` et 
 
 9.  Supprimer les fichiers souhaités à partir de la `.ipa`. Vous pouvez les déplacer vers la Corbeille à l’aide de la recherche, ou supprimez-les sur la ligne de commande à l’aide `Terminal.app`. Pour afficher le contenu de la `Payload/iPhone` dans le Finder, cliquez sur le fichier et sélectionnez **afficher le contenu du Package**.
 
-10.  À l’aide de la même approche générale comme à l’étape 3, recherchez le fichier journal sous `~/Library/Logs/Xamarin/MonoTouchVS/` qui a le nom du projet et le `generated session id` dans le nom : ![ ] (modify-ipa-images/build-log.png "localiser le journal de génération de projet dans le Finder")
+10.  À l’aide de la même approche générale comme à l’étape 3, recherchez le fichier journal sous `~/Library/Logs/Xamarin/MonoTouchVS/` qui a le nom du projet et le `generated session id` dans le nom : ![](modify-ipa-images/build-log.png "localiser le journal de génération de projet dans le Finder")
 
 11.  Ouvrez le journal de génération de l’étape 10, par exemple en double-cliquant dessus.
 
