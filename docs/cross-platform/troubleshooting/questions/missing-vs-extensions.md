@@ -6,12 +6,12 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2017
-ms.openlocfilehash: e47cfc4de77a6310a81867eefb07c3c1e5cc7060
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7b1f96807d77d9db0a892c5e78124eb3a9890edc
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33917887"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251269"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Extensions Visual Studio manquantes après l’installation
 
@@ -19,16 +19,16 @@ ms.locfileid: "33917887"
 
 Vérifiez qu'une version compatible de Visual Studio est installée :
 
--   Visual Studio 2017, (Community, Professional ou Enterprise)
+-   Visual Studio 2017 (Community, Professional ou Enterprise)
 -   Visual Studio 2015 (Community, Professional ou Enterprise)
 
-Voir aussi la [configuration requise pour Windows](~/cross-platform/get-started/requirements.md#windows).
+Voir aussi le [configuration requise de Windows](~/cross-platform/get-started/requirements.md#windows-requirements).
 
-## <a name="possible-fix-1-change-the-installation-to-make-sure-the-visual-studio-extensions-are-installed"></a>Correctif 1 : Modifier l’installation pour vous assurer que les extensions Visual Studio sont installées.
+## <a name="possible-fix-1-change-the-installation-to-make-sure-the-visual-studio-extensions-are-installed"></a>Correction possible 1 : Modifier l’installation de s’assurer que les extensions Visual Studio sont installées.
 
-Dans certains cas, le programme d’installation de Xamarin peut automatiquement désactiver les options d’installation des extensions Visual Studio. Si c’est la cause du problème, installez les extensions Visual Studio manquantes à l’aide du programme d’installation **modification** commande. Par exemple, pour installer les extensions pour Visual Studio 2013 :
+Dans certaines situations, le programme d’installation de Xamarin peut automatiquement désactiver les options d’installation pour les extensions de Visual Studio. Si c’est la cause du problème, installez les extensions de Visual Studio manquantes à l’aide du programme d’installation **modification** commande. Par exemple, pour installer les extensions pour Visual Studio 2013 :
 
-1. Ouvrir les fenêtres **programmes et fonctionnalités** Panneau de configuration.
+1. Ouvrez le Windows **programmes et fonctionnalités** Control Panel.
 
 2. Bouton droit sur le **Xamarin** entrée, puis sélectionnez **modification**.
 
@@ -40,24 +40,24 @@ Dans certains cas, le programme d’installation de Xamarin peut automatiquement
 
 5. Parcourez le reste de l’Assistant installation.
 
-## <a name="possible-fix-2-ask-visual-studio-to-set-up-the-extensions-again"></a>Correctif 2 : Demander à Visual Studio pour configurer les extensions de nouveau
+## <a name="possible-fix-2-ask-visual-studio-to-set-up-the-extensions-again"></a>Correction possible 2 : Demander à Visual Studio pour configurer les extensions à nouveau
 
 1. Vérifiez si les extensions de Xamarin ont été copiées dans le dossier d’extensions Visual Studio :
 
     `C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Xamarin\Xamarin\3.1.228.0`
 
-    Si les extensions sont installées correctement (pour la version 3.1.228), il sera 60 articles dans le dossier :
+    Si les extensions sont installées correctement (pour la version 3.1.228), il y aura 60 éléments dans le dossier :
 
 
-    ![](missing-vs-extensions-images/folder.png "Liste du contenu du dossier 'Xamarin\3.1.228.0' dans l’Explorateur")
+    ![](missing-vs-extensions-images/folder.png "Liste de contenu du dossier 'Xamarin\3.1.228.0' dans l’Explorateur")
 
-2. Après avoir confirmé que ce dossier est correct, indiquer à Visual Studio pour essayer de configurer les extensions à nouveau :
+2. Une fois que vous avez confirmé que ce dossier sont correctes, indiquer à Visual Studio pour essayer de configurer les extensions à nouveau :
 
     `"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" /setup`
 
-## <a name="possible-fix-3-try-a-fresh-reinstall-of-xamarin"></a>Correctif 3 : Essayez de réinstaller les frais de Xamarin
+## <a name="possible-fix-3-try-a-fresh-reinstall-of-xamarin"></a>Correction possible 3 : Essayez de réinstaller fraîche de Xamarin
 
-1.  À partir du Panneau de configuration de Windows, désinstallez une des opérations suivantes qui sont présents :
+1.  À partir du Panneau de configuration de Windows, désinstallez les éléments suivants qui sont présents :
 
     *   Xamarin
 
@@ -69,11 +69,11 @@ Dans certains cas, le programme d’installation de Xamarin peut automatiquement
 
     *   Xamarin pour Visual Studio
 
-2.  Dans l’Explorateur, supprimez tous les fichiers restants à partir des dossiers d’extension Xamarin Visual Studio (toutes les versions, y compris les deux **Program Files** et **Program Files (x86)**) :
+2.  Dans l’Explorateur, supprimez tous les fichiers restants à partir des dossiers d’extension Xamarin Visual Studio (toutes les versions, y compris les **Program Files** et **Program Files (x86)**) :
 
     `C:\Program Files*\Microsoft Visual Studio 1*.0\Common7\IDE\Extensions\Xamarin`
 
-3.  Vérifiez aussi dans le répertoire « VirtualStore » pour voir si toutes les copies de tous les répertoires de l’extension de « superposition » peut être :
+3.  Vérifiez également dans le répertoire « VirtualStore » pour voir si toutes les copies de tous les répertoires de l’extension de « superposition » peut être :
 
     `%LOCALAPPDATA%\VirtualStore`
 
@@ -91,7 +91,7 @@ Dans certains cas, le programme d’installation de Xamarin peut automatiquement
 
     `HKEY\_CURRENT\_USER\Software\Microsoft\VisualStudio\1\*.0\ExtensionManager\PendingDeletions`
 
-8.  Supprimez les entrées qui semblent éventuellement liées à Xamarin. Par exemple, c' est ici qu’exécutée à provoquer des problèmes dans les versions antérieures de Xamarin :
+8.  Supprimez les entrées qui semblent éventuellement liées à Xamarin. Par exemple, celui de Voici qui permet de poser des problèmes dans les versions antérieures de Xamarin :
 
     _Mono.VisualStudio.Shell,1.0_
 
@@ -99,10 +99,10 @@ Dans certains cas, le programme d’installation de Xamarin peut automatiquement
 
 10.  Réinstallez la version stable actuelle de Xamarin à partir de [visualstudio.com](https://visualstudio.com/xamarin).
 
-## <a name="possible-fix-4-repair-visual-studio-installation"></a>Correctif 4 : Installation de réparation de Visual Studio
+## <a name="possible-fix-4-repair-visual-studio-installation"></a>Correction possible 4 : Installation de réparer Visual Studio
 
-1.  Ouvrir les fenêtres **programmes et fonctionnalités** Panneau de configuration.
+1.  Ouvrez le Windows **programmes et fonctionnalités** Control Panel.
 
 2.  Cliquez avec le bouton droit sur l’entrée de Microsoft Visual Studio pertinentes, puis sélectionnez **modification**
 
-3.  Cliquez sur le **réparation** bouton dans la boîte de dialogue Visual Studio s’ouvre.
+3.  Cliquez sur le **réparation** bouton dans la boîte de dialogue Visual Studio qui s’ouvre.

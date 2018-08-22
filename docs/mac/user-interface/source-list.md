@@ -1,58 +1,58 @@
 ---
-title: Listes sources dans Xamarin.Mac
-description: Cet article traite de l’utilisation de listes de sources dans une application Xamarin.Mac. Il décrit la création et gestion des listes de sources dans Xcode et Générateur de l’Interface et interagir avec elles dans le code c#.
+title: Listes de sources dans Xamarin.Mac
+description: Cet article aborde l’utilisation des listes de sources dans une application Xamarin.Mac. Il décrit la création et gestion des listes de sources dans Xcode et Interface Builder et interagir avec elles dans le code c#.
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c93d4b0855fb96897da2018596766b16e5385ab4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: de51395192ab009f5c7fa338a4414ba553610b8c
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792770"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251034"
 ---
-# <a name="source-lists-in-xamarinmac"></a>Listes sources dans Xamarin.Mac
+# <a name="source-lists-in-xamarinmac"></a>Listes de sources dans Xamarin.Mac
 
-_Cet article traite de l’utilisation de listes de sources dans une application Xamarin.Mac. Il décrit la création et gestion des listes de sources dans Xcode et Générateur de l’Interface et interagir avec elles dans le code c#._
+_Cet article aborde l’utilisation des listes de sources dans une application Xamarin.Mac. Il décrit la création et gestion des listes de sources dans Xcode et Interface Builder et interagir avec elles dans le code c#._
 
-Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès à la même Source qui répertorie un développeur travaillant dans *Objective-C* et *Xcode* est. Xamarin.Mac s’intègre directement avec Xcode, vous pouvez utiliser de Xcode _Interface Générateur_ pour créer et gérer votre Source de listes (ou éventuellement de les créer directement dans le code C#).
+Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès à la même Source qui répertorie un développeur travaillant dans *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et gérer vos listes de sources (ou éventuellement pour les créer directement en code c#).
 
-Une liste de Source est un type spécial de mode plan utilisé pour afficher la source d’une action, telles que la barre de recherche ou iTunes.
+Une liste de Source est un type spécial de mode plan permet d’afficher la source d’une action, telles que la barre latérale dans Finder ou iTunes.
 
 [![](source-list-images/source05.png "Un exemple de liste source")](source-list-images/source05.png#lightbox)
 
-Dans cet article, nous aborderons les principes fondamentaux de l’utilisation de listes de code Source dans une application Xamarin.Mac. Il est fortement recommandé que vous parcourez le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Générateur](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) et [prises et Actions](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sections, telle qu’elle couvre les principaux concepts et techniques que nous utiliserons dans cet article.
+Dans cet article, nous traiterons les notions de base de l’utilisation de listes de sources dans une application Xamarin.Mac. Il est fortement recommandé que vous travaillez via le [Hello, Mac](~/mac/get-started/hello-mac.md) article tout d’abord, en particulier le [Introduction à Xcode et Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) et [Outlets et Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, tel qu’il couvre les principaux concepts et techniques que nous utilisons dans cet article.
 
-Vous souhaiterez peut-être examiner la [classes exposition c# / méthodes pour Objective-C](~/mac/internals/how-it-works.md) section de la [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) de document, elle explique la `Register` et `Export` commandes permet de câble des vos classes c# pour les objets Objective-C et les éléments d’interface utilisateur.
+Vous pouvez souhaiter de jeter un coup de œil à la [C# exposition de classes / méthodes vers Objective-C](~/mac/internals/how-it-works.md) section de la [éléments internes de Xamarin.Mac](~/mac/internals/how-it-works.md) de document, il explique le `Register` et `Export` commandes utilisé pour AutoEventWireup vos classes c# pour les objets Objective-C et les éléments d’interface utilisateur.
 
 <a name="Introduction_to_Outline_Views" />
 
-## <a name="introduction-to-source-lists"></a>Introduction aux listes sources
+## <a name="introduction-to-source-lists"></a>Présentation des listes de Source
 
-Comme indiqué ci-dessus, une liste de Source est qu'un type spécial de mode plan utilisé pour afficher la source d’une action, telles que la barre de recherche ou iTunes. Une liste de Source est un type de Table qui permet à l’utilisateur de développer ou réduire des lignes de données hiérarchiques. Contrairement à une vue de Table, des éléments dans une liste des sources ne sont pas dans une liste plate, ils sont organisés dans une hiérarchie, tels que les fichiers et dossiers sur un disque dur. Si un élément dans une liste Source contient d’autres éléments, peuvent être développé ou réduit par l’utilisateur.
+Comme indiqué ci-dessus, une liste de Source est qu'un type spécial de mode plan utilisé pour afficher la source d’une action, telles que la barre latérale dans Finder ou iTunes. Une liste de Source est un type de Table qui permet à l’utilisateur développer ou réduire des lignes de données hiérarchiques. Contrairement à une vue de Table, les éléments dans une liste des sources ne sont pas dans une liste plate, ils sont organisés dans une hiérarchie, comme les fichiers et dossiers sur un disque dur. Si un élément dans une liste de Source contient d’autres éléments, il peut être développée ou réduite par l’utilisateur.
 
-La liste Source est une vue hiérarchique spécialement style (`NSOutlineView`), qui est lui-même une sous-classe de la vue de Table (`NSTableView`) et par conséquent, beaucoup de son comportement hérite de sa classe parente. Par conséquent, de nombreuses opérations prises en charge par une vue hiérarchique, sont également pris en charge une liste Source. Une application Xamarin.Mac possède le contrôle de ces fonctionnalités et pouvez configurer les paramètres de la liste Source (soit dans le code ou le constructeur d’Interface) pour autoriser ou interdire certaines opérations.
+La liste de Source est une vue hiérarchique spécialement style (`NSOutlineView`), qui est lui-même une sous-classe de la vue de Table (`NSTableView`) et par conséquent, une grande partie de son comportement hérite sa classe parente. Par conséquent, de nombreuses opérations prises en charge par une vue hiérarchique, sont également pris en charge par une liste Source. Une application Xamarin.Mac possède le contrôle de ces fonctionnalités et pouvez configurer les paramètres de la liste Source (soit dans le code ou d’Interface Builder) pour autoriser ou interdire certaines opérations.
 
-Une liste de sources ne stocke pas ses propres données, au lieu de cela, elle s’appuie sur une Source de données (`NSOutlineViewDataSource`) pour fournir les lignes et colonnes nécessaires sur un en fonction des besoins.
+Une liste de Source ne stocke pas ses propres données, au lieu de cela, elle s’appuie sur une Source de données (`NSOutlineViewDataSource`) pour fournir les lignes et les colonnes requises sur une en fonction des besoins.
 
-Comportement d’une liste Source peut être personnalisé en fournissant une sous-classe du délégué vue hiérarchique (`NSOutlineViewDelegate`) pour prendre en charge du type de plan pour sélectionner des fonctionnalités, élément de sélection et de modification, de suivi personnalisé et des vues personnalisées pour des éléments individuels.
+Comportement d’une liste Source peut être personnalisé en fournissant une sous-classe du délégué de mode plan (`NSOutlineViewDelegate`) pour prendre en charge du type de contour pour sélectionner des fonctionnalités, élément de sélection et de modification, de suivi personnalisé et de vues personnalisées pour des éléments individuels.
 
-Dans la mesure où une liste de sources de son comportement et les fonctionnalités partage avec une vue de Table et une vue hiérarchique, vous pouvez souhaiter passer par notre [tableaux](~/mac/user-interface/table-view.md) et [mode plan](~/mac/user-interface/outline-view.md) documentation avant de continuer Dans cet article.
+Dans la mesure où une liste de Source de partage une grande partie de son comportement et les fonctionnalités avec une vue de Table et un mode plan, vous pouvez souhaiter passer par notre [affichages tableau](~/mac/user-interface/table-view.md) et [modes plan](~/mac/user-interface/outline-view.md) documentation avant de continuer avec cet article.
 
 <a name="Working_with_Source_Lists" />
 
-## <a name="working-with-source-lists"></a>Utilisation des listes de code Source
+## <a name="working-with-source-lists"></a>Utilisation des listes de Source
 
-Une liste de Source est un type spécial de mode plan utilisé pour afficher la source d’une action, telles que la barre de recherche ou iTunes. Contrairement aux vues de plan, avant que nous définissons notre liste Source dans le Générateur de Interface, nous allons créer les classes de stockage dans Xamarin.Mac.
+Une liste de Source est un type spécial de mode plan permet d’afficher la source d’une action, telles que la barre latérale dans Finder ou iTunes. Contrairement aux modes de plan, avant de nous définissons notre liste de Source dans l’Interface Builder, nous allons créer les classes de stockage dans Xamarin.Mac.
 
-Tout d’abord, nous allons créer un nouveau `SourceListItem` classe pour contenir les données de notre liste Source. Dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListItem` pour le **nom** et cliquez sur le **nouveau** bouton :
+Tout d’abord, nous allons créer un nouveau `SourceListItem` classe pour contenir les données de notre liste Source. Dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListItem` pour le **nom** et cliquez sur le **New** bouton :
 
 [![](source-list-images/source01.png "Ajout d’une classe vide")](source-list-images/source01.png#lightbox)
 
-Rendre le `SourceListItem.cs` fichier ressemble les éléments suivants : 
+Rendre le `SourceListItem.cs` fichier ressemble ce qui suit : 
 
 ```csharp
 using System;
@@ -270,7 +270,7 @@ namespace MacOutlines
 }
 ```
 
-Dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListDataSource` pour le **nom** et cliquez sur le **nouveau** bouton. Rendre le `SourceListDataSource.cs` fichier ressemble les éléments suivants :
+Dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListDataSource` pour le **nom** et cliquez sur le **New** bouton. Rendre le `SourceListDataSource.cs` fichier ressemble ce qui suit :
 
 ```csharp
 using System;
@@ -352,9 +352,9 @@ namespace MacOutlines
 }
 ```
 
-Cela fournit les données de notre liste Source.
+Cela fournit les données pour notre liste Source.
 
-Dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListDelegate` pour le **nom** et cliquez sur le **nouveau** bouton. Rendre le `SourceListDelegate.cs` fichier ressemble les éléments suivants :
+Dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListDelegate` pour le **nom** et cliquez sur le **New** bouton. Rendre le `SourceListDelegate.cs` fichier ressemble ce qui suit :
 
 ```csharp
 using System;
@@ -444,9 +444,9 @@ namespace MacOutlines
 }
 ```
 
-Cela fournit le comportement de notre liste Source.
+Ceci fournira le comportement de notre liste Source.
 
-Enfin, dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListView` pour le **nom** et cliquez sur le **nouveau** bouton. Rendre le `SourceListView.cs` fichier ressemble les éléments suivants :
+Enfin, dans le **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **nouveau fichier...** Sélectionnez **général** > **classe vide**, entrez `SourceListView` pour le **nom** et cliquez sur le **New** bouton. Rendre le `SourceListView.cs` fichier ressemble ce qui suit :
 
 ```csharp
 using System;
@@ -528,31 +528,31 @@ Cette opération crée une sous-classe personnalisée et réutilisable de `NSOut
 
 <a name="Creating_and_Maintaining_Source_Lists_in_Xcode" />
 
-## <a name="creating-and-maintaining-source-lists-in-xcode"></a>Créer et maintenir les listes sources dans Xcode
+## <a name="creating-and-maintaining-source-lists-in-xcode"></a>Création et la gestion des listes de sources dans Xcode
 
-Maintenant, nous allons créer notre liste Source dans le Générateur de l’Interface. Double-cliquez sur le `Main.storyboard` fichier à ouvrir pour le modifier dans le Générateur de Interface et faites glisser à partir de fractionnement la **bibliothèque inspecteur**, ajoutez-le au contrôleur de vue et la définir à redimensionner avec la vue dans le **éditeur de contraintes** :
+Maintenant, nous allons concevoir notre liste de Source dans l’Interface Builder. Double-cliquez sur le `Main.storyboard` fichier à ouvrir pour modification dans l’Interface Builder et faites glisser un mode fractionné à partir de la **inspecteur de bibliothèque**, ajoutez-le pour le contrôleur d’affichage et définissez-la à redimensionner avec la vue dans le **éditeur de contraintes** :
 
 [![](source-list-images/source00.png "Modification des contraintes")](source-list-images/source00.png#lightbox)
 
-Ensuite, faites glisser une liste de sources de la **bibliothèque inspecteur**, ajoutez-le au côté gauche de la vue de fractionnement et la définir à redimensionner avec la vue dans le **éditeur de contraintes**:
+Ensuite, faites glisser une liste de sources à partir de la **inspecteur de bibliothèque**, ajoutez-le vers le côté gauche de la vue de fractionnement et définissez-la à redimensionner avec la vue dans le **éditeur de contraintes**:
 
 [![](source-list-images/source02.png "Modification des contraintes")](source-list-images/source02.png#lightbox)
 
-Ensuite, basculez vers le **identité vue**, sélectionnez la liste des sources et le modifier de **classe** à `SourceListView`:
+Ensuite, basculez vers le **identité vue**, sélectionnez la liste Source et modifiez-le de **classe** à `SourceListView`:
 
 [![](source-list-images/source03.png "Définition du nom de classe")](source-list-images/source03.png#lightbox)
 
-Enfin, créez un **prise** pour notre liste Source appelé `SourceList` dans le `ViewController.h` fichier :
+Enfin, créez un **Outlet** pour notre liste Source appelé `SourceList` dans le `ViewController.h` fichier :
 
-[![](source-list-images/source04.png "Configuration d’une prise de courant")](source-list-images/source04.png#lightbox)
+[![](source-list-images/source04.png "Configuration d’un Outlet")](source-list-images/source04.png#lightbox)
 
-Enregistrez vos modifications et revenir à Visual Studio pour Mac pour la synchronisation avec Xcode.
+Enregistrez vos modifications et revenir à Visual Studio pour Mac se synchroniser avec Xcode.
 
 <a name="Populating the Source List" />
 
 ## <a name="populating-the-source-list"></a>Remplissage de la liste Source
 
-Permet de modifier le `RotationWindow.cs` de fichiers dans Visual Studio pour Mac et le rendre de `AwakeFromNib` détaillée de la méthode comme suit :
+Permet de modifier le `RotationWindow.cs` de fichiers dans Visual Studio pour Mac et le rendre de `AwakeFromNib` méthode ressemble ce qui suit :
 
 ```csharp
 public override void AwakeFromNib ()
@@ -591,7 +591,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-Le `Initialize ()` méthode doit être appelée par rapport à notre liste de Source **prise** _avant_ tous les éléments sont ajoutés à ce dernier. Pour chaque groupe d’articles, nous créer un élément parent et puis ajoutez les éléments de sub à cet élément de groupe. Chaque groupe est ensuite ajoutée à la collection de la liste des sources `SourceList.AddItem (...)`. Les deux dernières lignes de charger les données pour la liste des sources et développe tous les groupes :
+Le `Initialize ()` méthode doivent être appelés par rapport à notre liste de Source **Outlet** _avant_ tous les éléments sont ajoutés à ce dernier. Pour chaque groupe d’éléments, nous créer un élément parent, puis ajoutez les éléments sub à cet élément de groupe. Chaque groupe est ensuite ajoutée à collection de la liste des sources `SourceList.AddItem (...)`. Les deux dernières lignes charger les données pour la liste des sources et développe tous les groupes :
 
 ```csharp
 // Display side list
@@ -599,7 +599,7 @@ SourceList.ReloadData ();
 SourceList.ExpandItem (null, true);
 ```
 
-Enfin, modifiez le `AppDelegate.cs` et effectuez le `DidFinishLaunching` détaillée de la méthode comme suit :
+Enfin, modifiez le `AppDelegate.cs` et effectuez le `DidFinishLaunching` méthode ressemble ce qui suit :
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -612,15 +612,15 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-Si nous exécutons notre application, les informations suivantes s’affichent :
+Si nous exécutons notre application, ce qui suit s’affiche :
 
-[![](source-list-images/source05.png "Un exemple d’application exécuter")](source-list-images/source05.png#lightbox)
+[![](source-list-images/source05.png "Exécution d’une application exemple")](source-list-images/source05.png#lightbox)
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a pris une présentation détaillée sur l’utilisation de listes de code Source dans une application Xamarin.Mac. Nous avons vu comment créer et tenir à jour la Source de listes dans le Générateur de Xcode Interface et utiliser des listes de code Source en code c#.
+Cet article a examiné en détail à l’utilisation des listes de sources dans une application Xamarin.Mac. Nous avons vu comment créer et gérer des listes de sources dans Interface Builder de Xcode et comment utiliser des listes de sources en code c#.
 
 ## <a name="related-links"></a>Liens associés
 
@@ -629,7 +629,7 @@ Cet article a pris une présentation détaillée sur l’utilisation de listes d
 - [Vues Table](~/mac/user-interface/table-view.md)
 - [Modes Plan](~/mac/user-interface/outline-view.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
-- [Présentation de montrer les vues](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
+- [Introduction aux modes plan](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)
 - [NSOutlineViewDelegate](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSOutlineViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40008609)

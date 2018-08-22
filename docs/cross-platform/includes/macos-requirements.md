@@ -1,7 +1,7 @@
 ||Recommandé|Notes|
 |---|---|---|
-|**Système d'exploitation**|macOS Sierra|La version minimale requise est macOS Sierra (10.12)|
-|**Xamarin.iOS**|Kit de développement logiciel (SDK) iOS 11|L’e/s qui est fourni avec Xcode 9|
+|**Système d'exploitation**|macOS High Sierra|[Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876) nécessite macOS High Sierra ou une version ultérieure.|
+|**Xamarin.iOS**|Kit de développement logiciel (SDK) iOS 11|IOS 11 SDK est livré avec [Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876)|
 |**Xamarin.Android**|Android 6.0 / API niveau 23|Vous pouvez toujours cibler des versions antérieures d’Android lors de l’utilisation de la dernière version du Kit de développement logiciel (SDK) ou vous pouvez générer à partir de versions antérieures du Kit de développement logiciel (SDK), si nécessaire.|
 |**Xamarin.Forms**||<ul><li>Les applications de Xamarin.Forms générées sur macOS peuvent inclure des projets iOS, Android et macOS, soumis aux exigences du kit de développement logiciel ci-dessus.</li><li>Les projets Xamarin.Forms pour Windows/Plateforme Windows universelle ne peuvent pas être générés sur macOS.</li></ul>|
-|**Xamarin.Mac**|Kit de développement logiciel du système d’exploitation X El Capitan (10.11)|Le Kit de développement logiciel du système d’exploitation X El Capitan est livré avec Xcode 7.2 ; les kits de développement logiciel mocOS sont livrés avec Xcode 8.|
+|**Xamarin.Mac**|macOS High Sierra (10.13) SDK|MacOS High Sierra (10.13) SDK est livré avec [Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876) et est requis pour générer des applications qui utilisent l’API macOS la plus récente.|

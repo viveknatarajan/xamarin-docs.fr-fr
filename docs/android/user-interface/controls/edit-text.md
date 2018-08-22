@@ -1,50 +1,70 @@
 ---
 title: Modifier le texte
+description: Comment utiliser le widget EditText d’accepter l’entrée d’utilisateur.
 ms.prod: xamarin
 ms.assetid: E513BCBC-438E-15E8-B83A-4B768A8E8B32
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: d6be8ae1587742a8c2a37b22b2da3701187dde2a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 08/09/2018
+ms.openlocfilehash: bb2cb13472e7e17eb1b0438ed67033f2b04defe2
+ms.sourcegitcommit: b6f3e55d4f3dcdc505abc8dc9241cff0bb5bd154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774601"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40250944"
 ---
 # <a name="edit-text"></a>Modifier le texte
 
-Dans cette section, vous allez créer un champ de texte pour l’entrée utilisateur, à l’aide de la [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) widget. Une fois que le texte a été entré dans le champ, la touche « Entrée » affiche le texte dans un message de toast.
+Dans cette section, vous allez utiliser le [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) widget pour créer un champ de texte pour l’entrée utilisateur. Une fois que le texte a été entré dans le champ, le **entrée** clé affichera le texte dans un message toast.
 
-Ouvrir le <code>Resources\layout\main.xml</code> et ajoutez le [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) élément (à l’intérieur de la [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)) :
+Ouvrez **Resources/layout/activity_main.axml** et ajoutez le [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) élément à une disposition contenante. L’exemple suivant **activity_main.axml** a un `EditText` qui a été ajouté à un `LinearLayout`:
 
 ```xml
-<pre><code class=" syntax brush-C#">&lt;EditText
-    android:id="@+id/edittext"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"/&gt;</code></pre>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:imeOptions="actionGo"
+        android:inputType="text"
+        android:layout_height="wrap_content" />
+</LinearLayout>
 ```
 
-Effectuer une opération avec le texte que l’utilisateur tape, ajoutez le code suivant à la fin de la [OnCreate](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/) méthode :
+Dans cet exemple de code, le `EditText` attribut `android:imeOptions` est défini sur `actionGo`. Ce paramètre modifie la valeur par défaut [fait](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) action à la [accédez](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) action afin qu’en appuyant sur la **entrée** clé déclencheurs le `KeyPress` Gestionnaire d’entrée.
+(En règle générale, `actionGo` est utilisé afin que le **entrée** clé dirige l’utilisateur vers la cible d’une URL qui est tapée dans.)
+
+Pour gérer l’entrée de texte utilisateur, ajoutez le code suivant à la fin de la [OnCreate](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/) méthode dans **MainActivity.cs**:
 
 ```csharp
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);
 edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
- e.Handled = false;
- if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter) {
-  Toast.MakeText (this, edittext.Text, ToastLength.Short).Show ();
-  e.Handled = true;
-         }
+    e.Handled = false;
+    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter) 
+    {
+        Toast.MakeText(this, edittext.Text, ToastLength.Short).Show();
+        e.Handled = true;
+    }
 };
 ```
 
-Capture la [ `EditText` ](https://developer.xamarin.com/api/type/Android.Widget.EditText/) élément à partir de la mise en page et le définit un [ `KeyPress` ](https://developer.xamarin.com/api/event/Android.Views.View.KeyPress/) gestionnaire, qui définit l’action à effectuer lorsqu’une touche est enfoncée alors que le widget a le focus. Dans ce cas, la méthode est définie pour écouter la touche entrée (lorsqu’il est enfoncé), puis affiche un [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) message avec le texte qui a été entré. Le [ `Handled` ](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/) propriété doit toujours être `true` si l’événement a été géré, afin que l’événement ne bulles à distance (ce qui entraînerait un retour chariot dans le champ de texte).
+En outre, ajoutez le code suivant `using` instruction au début du **MainActivity.cs** si elle n’est pas déjà présent :
 
-Exécutez l'application.
+```csharp
+using Android.Views;
+```
 
-*Des parties de cette page sont des modifications en fonction de travail créé et* [ *partagé par le projet Source ouvert Android* ](http://code.google.com/policies.html) *et utilisé en fonction des conditions décrites dans le* [ *2.5 de creative Commons Attribution licence* ](http://creativecommons.org/licenses/by/2.5/) *. Ce didacticiel est basé sur le* [ *didacticiel de sélections de formulaire Android* ](http://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+Cet exemple de code augmente le [EditText](https://developer.xamarin.com/api/type/Android.Widget.EditText/) élément à partir de la mise en page et ajoute un [KeyPress](https://developer.xamarin.com/api/event/Android.Views.View.KeyPress/) gestionnaire qui définit l’action à effectuer lorsqu’une touche est enfoncée alors que le widget a le focus. Dans ce cas, la méthode est définie pour écouter le **entrée** (lors de l’appui sur) la clé et afficher un [Toast](https://developer.xamarin.com/api/type/Android.Widget.Toast/) message avec le texte qui a été entré. Notez que le [Handled](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/) propriété doit toujours être `true` si l’événement a été géré. Cela est nécessaire pour empêcher l’événement de propagation haut (ce qui entraînerait un retour chariot dans le champ de texte).
 
+Exécutez l’application et entrez du texte dans le champ de texte. Quand vous appuyez sur la **entrée** clé, le toast s’affiche comme indiqué sur la droite :
+
+[![Exemples de saisie de texte dans EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
+
+*Certaines parties de cette page sont des modifications basées sur le travail créé et* [ *partagé par Android Open Source Project* ](http://code.google.com/policies.html) *et utilisé conformément aux conditions décrites dans le* [ *Licence creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/) *. Ce didacticiel est basé sur le* [ *didacticiel d’Android formulaire Stuff* ](http://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 
 ## <a name="related-links"></a>Liens associés

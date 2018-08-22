@@ -1,31 +1,31 @@
 ---
-title: Xamarin Player dynamique exemples
-description: Ce document liens vers des exemples d’applications à utiliser lors du test des Live Xamarin Player. Des exemples liés incluent une calculatrice de base et un jeu de nettoyeur de bogue.
+title: Exemples de Xamarin Live Player
+description: Ce document contient des liens vers des exemples d’applications à utiliser lors du test de Xamarin Live Player. Exemples liés incluent une calculatrice de base et un jeu de nettoyeur de bogue.
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
-ms.date: 06/20/2017
-ms.openlocfilehash: 090b52f4ebf9ec6f46426b4364f8b57b67a79324
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/08/2017
+ms.openlocfilehash: 6f9f2ed97e03862fc7e77e4a7ff67f456dfde277
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793727"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40250981"
 ---
-# <a name="xamarin-live-player-samples"></a>Xamarin Player dynamique exemples
+# <a name="xamarin-live-player-samples"></a>Exemples de Xamarin Live Player
 
-## <a name="get-started-with-xamarinforms"></a>Prise en main Xamarin.Forms
+## <a name="get-started-with-xamarinforms"></a>Bien démarrer avec Xamarin.Forms
 
-Visitez le [Galerie d’exemples](https://developer.xamarin.com/samples/xamarin-live-player/all/) pour Xamarin.Forms des exemples qui fonctionnent avec Xamarin Live Player.
+Visitez le [Galerie d’exemples](https://developer.xamarin.com/samples/xamarin-live-player/all/) pour Xamarin.Forms exemples qui fonctionnent avec Xamarin Live Player.
 
 ## <a name="featured-samples"></a>Exemples proposés
 
 ### <a name="basic-calculatorhttpsdeveloperxamarincomsamplesmobileliveplayerbasiccalculator"></a>[Calculatrice de base](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/)
 
-Cette application Xamarin.Forms fournit une calculatrice simple, que vous pouvez utiliser sur votre appareil Android ou iOS.
+Cette application Xamarin.Forms fournit une calculatrice simple, que vous pouvez utiliser sur votre appareil Android.
 
-![Capture d’écran de base calculatrice exemple](samples-images/basic-calculator-sml.png)
+![Capture d’écran exemple de calculatrice base](samples-images/basic-calculator-sml.png)
 
 ### <a name="bugsweeperhttpsdeveloperxamarincomsamplesmobileliveplayerbugsweeperlp"></a>[BugSweeper](https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/)
 
@@ -35,4 +35,4 @@ Il s’agit d’un jeu familier repensé. Dix bogues sont masqués dans une gril
 
 ## <a name="related-links"></a>Liens associés
 
-- [Exemples de lecteur dynamique Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+- [Exemples de Live Player Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-live-player/all/)

@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
 ms.author: toopge
-ms.date: 05/17/2017
-ms.openlocfilehash: 3db14db2c64e024ef1c04275661f610f9407dfb7
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 08/08/2018
+ms.openlocfilehash: ceb8964ac378957dcf5883bbbfff9e984b079294
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831330"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251255"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Résolution des problèmes de Xamarin Live Player
 
@@ -78,24 +78,6 @@ Ouvrez le **PlayerDeviceList.xml** vers le haut dans un éditeur tel que Visual 
 </DeviceList>
 ```
 
-**Ajouter un appareil iOS :**
-
-```xml
-<PlayerDevice>
-<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
-<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
-<Name>iPhone Player</Name>
-<Platform>iOS</Platform>
-<AndroidApiLevel>0</AndroidApiLevel>
-<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
-<HostEndPoint />
-<NeedsAppInstall>false</NeedsAppInstall>
-<IsSimulator>false</IsSimulator>
-<SimulatorIdentifier />
-<LastConnectTimeUtc>2018-01-08T20:36:03.9492291Z</LastConnectTimeUtc>
-</PlayerDevice>
-```
-
 **Ajouter un appareil Android :**
 
 ```xml
@@ -118,7 +100,7 @@ Ouvrez le **PlayerDeviceList.xml** vers le haut dans un éditeur tel que Visual 
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>Message de « type ou espace de noms est introuvable » dans l’IDE
 
-Vérifiez que vous avez sélectionné un **projet de démarrage** qui correspond à votre type d’appareil (iOS ou Android) et que la configuration correspond à ce type d’appareil (par exemple). **Déboguer | iPhone simulateur** pour iOS).
+Vérifiez que vous avez sélectionné un **projet de démarrage** qui correspond à votre type d’appareil (par exemple). Android) et que la configuration correspond à ce type d’appareil (par exemple). **Déboguer** pour Android).
 
 ## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>Message « Constructeur sur le type 'InterpretedXamarin.Forms.Button' introuvable » dans le lecteur
 
