@@ -76,7 +76,7 @@ try {
 
 C’est parce que le dérouleur de pile Objective-C ne connaît pas managé `catch` clause et ni est le `finally` clause être exécutée.
 
-Lorsque l’exemple de code ci-dessus _est_ effective, que c’est parce que Objective-C possède une méthode de la notification de l’exception non Objective-C, [ `NSSetUncaughtExceptionHandler` ] [ 2], qui Xamarin.iOS et Xamarin.Mac d’utilisation et à ce stade essaie de convertir toutes les exceptions Objective-C sur les exceptions gérées.
+Lorsque l’exemple de code ci-dessus _est_ effective, que c’est parce que Objective-C possède une méthode de la notification de l’exception non Objective-C, [`NSSetUncaughtExceptionHandler`][2], qui Xamarin.iOS et Xamarin.Mac d’utilisation et à ce stade essaie de convertir toutes les exceptions Objective-C sur les exceptions gérées.
 
 ## <a name="scenarios"></a>Scénarios
 
