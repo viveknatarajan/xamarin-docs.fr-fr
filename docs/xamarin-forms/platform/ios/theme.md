@@ -112,7 +112,7 @@ UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 
 Ces captures d’écran de deux affichent la valeur par défaut `UISwitch` contrôle sur la gauche et la version personnalisée (paramètre `Appearance`) sur la droite dans le [exemple Todo](https://developer.xamarin.com/samples/xamarin-forms/Todo/):
 
-![](theme-images/switch-default.png "UISwitch couleur par défaut") ![ ] (theme-images/switch-custom.png "personnalisé UISwitch couleur")
+![](theme-images/switch-default.png "UISwitch couleur par défaut") ![](theme-images/switch-custom.png "personnalisé UISwitch couleur")
 
 ### <a name="other-controls"></a>Autres contrôles
 

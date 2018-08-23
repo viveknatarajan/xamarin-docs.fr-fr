@@ -111,7 +111,7 @@ public partial class HelloBitmapPage : ContentPage
 
 Le `PaintSurface` Gestionnaire restitue l’image bitmap plusieurs fois en lignes et colonnes de l’affichage. Notez que le `Clear` méthode dans le `PaintSurface` gestionnaire a un argument de `SKColors.Aqua`, quelles couleurs d’arrière-plan de la surface d’affichage :
 
-[![Hello, Bitmap ! ] (drawing-images/HelloBitmap.png "Hello, Bitmap !")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![Hello, Bitmap ! ](drawing-images/HelloBitmap.png "Hello, Bitmap !")](drawing-images/HelloBitmap-Large.png#lightbox)
 
 L’apparence de l’arrière-plan cyan révèle que la bitmap est transparente à l’exception du texte.
 
