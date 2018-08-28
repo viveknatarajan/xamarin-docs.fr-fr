@@ -762,7 +762,7 @@ Pour ajouter un nouveau panneau, procédez comme suit :
 5. Supprimer la fenêtre existante et faites glisser un panneau à partir de la **inspecteur de bibliothèque** dans le le **Éditeur d’Interface**: 
 
     [![](window-images/panels01.png "Suppression de la fenêtre existante")](window-images/panels01.png#lightbox)
-6. Le panneau de raccordement jusqu'à la **le propriétaire du fichier*-**fenêtre*- **Outlet**: 
+6. Le panneau de raccordement jusqu'à la **le propriétaire du fichier*- **fenêtre*- **Outlet**: 
 
     [![](window-images/panels02.png "En faisant glisser vers le panneau associer")](window-images/panels02.png#lightbox)
 7. Basculez vers le **inspecteur d’identité** et la valeur de la classe du panneau par `DocumentPanel`: 
