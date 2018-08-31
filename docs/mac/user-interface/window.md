@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: b60b8a6a7c56347d6abf71f8c5149ddd556d3da8
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "40251279"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows dans Xamarin.Mac
@@ -762,7 +762,7 @@ Pour ajouter un nouveau panneau, procédez comme suit :
 5. Supprimer la fenêtre existante et faites glisser un panneau à partir de la **inspecteur de bibliothèque** dans le le **Éditeur d’Interface**: 
 
     [![](window-images/panels01.png "Suppression de la fenêtre existante")](window-images/panels01.png#lightbox)
-6. Le panneau de raccordement jusqu'à la **le propriétaire du fichier*- **fenêtre*- **Outlet**: 
+6. Le panneau de raccordement jusqu'à la **le propriétaire du fichier** - **fenêtre** - **Outlet**: 
 
     [![](window-images/panels02.png "En faisant glisser vers le panneau associer")](window-images/panels02.png#lightbox)
 7. Basculez vers le **inspecteur d’identité** et la valeur de la classe du panneau par `DocumentPanel`: 
