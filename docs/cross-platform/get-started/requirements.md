@@ -6,24 +6,18 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 6d16f01965b6b3bcba35cf14d4000f53a4400653
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 422eb24b86ba14ff4e5362db8aeec5775fab5833
+ms.sourcegitcommit: aa16f267c59725cc88bd84b049544ecfbec297ac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241976"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43263514"
 ---
-# <a name="system-requirements"></a>Configuration système requise
+# <a name="system-requirements"></a>Configuration requise
 
 Les produits Xamarin s’appuient sur les SDK de plateforme Apple et Google pour cibler iOS ou Android, dans le but de s’aligner sur leurs exigences système. Cette page concerne la compatibilité des systèmes avec la plateforme Xamarin. Elle indique quels environnements de développement et versions de SDK utiliser selon le système.
 
-- [Environnements de développement](#devenv)
-- [Configuration requise pour Mac OS](#mac)
-- [Configuration requise pour Windows](#windows)
-
-Pour plus d’informations sur l’obtention des logiciels et des SDK nécessaires, consultez les [instructions d’installation](#install).
-
-<a name="devenv" />
+Pour plus d’informations sur l’obtention des logiciels et des SDK nécessaires, passez en revue les [instructions d’installation](#installation-instructions).
 
 ## <a name="development-environments"></a>Environnements de développement
 
@@ -31,28 +25,28 @@ Ce tableau liste les combinaisons d’outils de développement et de systèmes d
 
 [!include[](~/cross-platform/includes/development-environment.md)]
 
-
 > [!NOTE]
 > Pour développer des applications iOS sur des ordinateurs Windows, vous devez disposer d’un [ordinateur Mac accessible sur le réseau](~/ios/get-started/installation/windows/connecting-to-mac/index.md), pour une compilation et un débogage distants. Cela fonctionne également si Visual Studio est exécuté sur une machine virtuelle Windows installée sur un ordinateur Mac.
 
-<a name="mac" />
+## <a name="macos-requirements"></a>Configuration requise pour macOS
 
-## <a name="macos-requirements"></a>Configuration requise pour Mac OS
-
-L’utilisation d’un ordinateur Mac pour le développement Xamarin nécessite les logiciels et SDK suivants. Vérifiez la version de votre système d’exploitation et suivez les instructions relatives au [programme d’installation de Xamarin](#install).
+L’utilisation d’un ordinateur Mac pour le développement Xamarin nécessite les logiciels et SDK suivants. Vérifiez la version de votre système d’exploitation et suivez les instructions relatives au [programme d’installation de Xamarin](#installation-instructions).
 
 [!include[](~/cross-platform/includes/macos-requirements.md)]
 
 > [!NOTE]
 > Xcode peut être installé (et mis à jour) sur [developer.apple.com](https://developer.apple.com/xcode/download/) ou via l’App Store Mac.
 
-### <a name="testing--debugging-on-macos"></a>Test et débogage sur Mac OS
+### <a name="testing--debugging-on-macos"></a>Test et débogage sur macOS
 
-Les applications mobiles Xamarin peuvent être déployées sur des appareils physiques via une connexion USB à des fins de test et de débogage (les applications Xamarin.Mac peuvent être testées directement sur l’ordinateur de développement ; les applications Apple Watch doivent être d’abord déployées sur l’iPhone apparié).
+- Les applications mobiles Xamarin peuvent être déployées sur des appareils physiques par le biais d’une connexion USB à des fins de test et de débogage (les applications Apple Watch doivent être d’abord déployées sur l’iPhone apparié).
+- Les applications Xamarin.Mac peuvent être testées directement sur l’ordinateur de développement.
 
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
-<a name="windows" />
+> [!WARNING]
+> La prochaine version de Xamarin.Mac (4.8) prendra uniquement en charge macOS 10.9 ou ultérieur.
+> Les versions précédentes de Xamarin.Mac prenaient en charge macOS 10.7 ou ultérieur, mais l’infrastructure TLS des anciennes versions de macOS n’était pas suffisante pour prendre en charge TLS 1.2. Pour cibler macOS 10.7 ou macOS 10.8, utilisez Xamarin.Mac 4.6 ou antérieur.
 
 ## <a name="windows-requirements"></a>Configuration requise pour Windows
 
@@ -63,20 +57,16 @@ Le programme d’installation de Visual Studio 2017 comporte une option permetta
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
 > [!NOTE]
->
->- Xamarin pour Visual Studio prend en charge toutes les éditions de Visual Studio 2017 (Community, Professional et Enterprise).
->
->- Si vous souhaitez développer des applications Xamarin.Forms pour la plateforme Windows universelle (UWP), vous devez utiliser Windows 10 avec Visual Studio 2017.
+> - Xamarin pour Visual Studio prend en charge toutes les éditions de Visual Studio 2017 (Community, Professional et Enterprise).
+> - Si vous souhaitez développer des applications Xamarin.Forms pour la plateforme Windows universelle (UWP), vous devez utiliser Windows 10 avec Visual Studio 2017.
 
 ### <a name="testing--debugging-on-windows"></a>Test et débogage sur Windows
 
-Les applications mobiles Xamarin peuvent être déployées sur des appareils physiques via une connexion USB à des fins de test et de débogage (les appareils iOS doivent être connectés à l’ordinateur Mac, et non à l’ordinateur qui exécute Visual Studio).
+Les applications mobiles Xamarin peuvent être déployées sur des appareils physiques par le biais d’une connexion USB ou sans fil à des fins de test et de débogage (les appareils iOS doivent être connectés à l’ordinateur Mac, et non à l’ordinateur qui exécute Visual Studio).
 
 [!include[](~/cross-platform/includes/windows-testing.md)]
 
-<a name="install" />
-
-## <a name="installation-instructions"></a>Instructions d'installation
+## <a name="installation-instructions"></a>Instructions d’installation
 
 Vous pouvez télécharger la dernière version de Xamarin pour Mac OS sur [xamarin.com/download](http://xamarin.com/download). Pour Windows, suivez les instructions d’installation de [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
@@ -90,7 +80,7 @@ Les instructions d’[installation](~/cross-platform/get-started/installation/in
 
 Vous pouvez également consulter des informations supplémentaires concernant les [exigences Xamarin.Forms et les plateformes prises en charge](~/xamarin-forms/get-started/installation.md).
 
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Télécharger Xamarin](https://visualstudio.microsoft.com/xamarin/)
 - [Versions actuelles](https://developer.xamarin.com/releases/current/)
