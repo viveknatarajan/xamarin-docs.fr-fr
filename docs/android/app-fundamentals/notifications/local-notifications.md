@@ -6,21 +6,21 @@ ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
+ms.date: 08/16/2018
 ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.sourcegitcommit: 7ffbecf4a44c204a3fce2a7fb6a3f815ac6ffa21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "39514529"
 ---
+<a name="compatibility"></a>
+
 # <a name="local-notifications"></a>Notifications locales
 
 _Cette section montre comment implémenter des notifications locales dans Xamarin.Android. Il explique les différents éléments d’interface utilisateur d’une notification d’Android et traite des API d’impliquée dans la création et affichage d’une notification._
 
-## <a name="local-notifications-overview"></a>Vue d’ensemble des Notifications locales
-
-Cette rubrique explique comment implémenter des notifications locales dans une application Xamarin.Android. Il aborde les différentes parties d’une notification d’Android, elle explique les styles de notification différents sont disponibles pour les développeurs d’applications, et il présente quelques-unes des API qui sont utilisés pour créer et publier des notifications.
+## <a name="local-notifications-overview"></a>Vue d’ensemble des notifications locales
 
 Android fournit deux zones système contrôlé pour afficher les icônes de notification et des informations de notification à l’utilisateur. Lorsqu’une notification est tout d’abord publiée, son icône s’affiche dans le *zone de notification*, comme illustré dans la capture d’écran suivante :
 
@@ -37,6 +37,9 @@ Notifications Android utilisent deux types de disposition :
 -   ***Disposition développée*** &ndash; un format de présentation qui peut se développer pour une plus grande taille pour afficher plus d’informations.
 
 Chacun de ces types de disposition (et comment les créer) sont expliquées dans les sections suivantes.
+
+> [!NOTE]
+> Ce guide se concentre sur la [NotificationCompat APIs](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.html) à partir de la [bibliothèque de prise en charge Android](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). Ces API est assurer la valeur maximale compatibilité descendante pour Android 4.0 (API niveau 14).
 
 
 ### <a name="base-layout"></a>Disposition de base
@@ -104,17 +107,50 @@ Android prend en charge trois styles de mise en page développé pour les notifi
 
 [Au-delà de la Notification de base](#beyond-the-basic-notification) (plus loin dans cet article) explique comment créer *Big Text*, *boîte de réception*, et *Image* notifications.
 
+<a name="notif-chan"></a>
+<a name="notification-channels"></a>
+## <a name="notification-channels"></a>Canaux de notification
+
+À compter d’Android 8.0 (Oreo), vous pouvez utiliser la *canaux de notification* fonctionnalité pour créer un canal personnalisables par l’utilisateur pour chaque type de notification que vous souhaitez afficher. Canaux de notification permettent à votre place aux notifications de groupe afin que toutes les notifications publié dans une pièce de canal, le même comportement. Par exemple, vous pouvez avoir un canal de notification qui est conçu pour les notifications qui requièrent une attention immédiate et un canal « silencieux » distinct qui est utilisé pour les messages d’information.
+
+Le **YouTube** application est installée avec Android Oreo répertorie deux catégories de notification : **notifications de téléchargement** et **notifications générales**:
+
+[![Écrans de notification pour YouTube dans Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
+
+Chacun de ces catégories correspondant à un canal de notification. L’application YouTube implémente un **notifications de téléchargement** canal et un **Notifications générales** canal. L’utilisateur peut appuyer **notifications de téléchargement**, qui affiche l’écran des paramètres pour le canal de notifications de téléchargement de l’application :
+
+[![Télécharger l’écran de notifications pour l’application YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
+
+Dans cet écran, l’utilisateur peut modifier le comportement de la **télécharger** notifications de canal en procédant comme suit :
+
+-   Définir l’Importance au niveau **Urgent**, **haute**, **support**, ou **faible**, qui configure le niveau de l’interruption audio et visuel.
+
+-   Activer le point de notification ou désactiver.
+
+-   Activer le voyant clignote ou désactiver.
+
+-   Afficher ou masquer les notifications sur l’écran de verrouillage.
+
+-   Remplacer le **ne pas déranger** paramètre.
+
+Le **Notifications générales** canal a des paramètres similaires :
+
+[![Écran de notifications générales pour l’application YouTube](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
+
+Notez que vous n’avez pas de contrôle absolu sur la façon dont vos canaux de notification interagissent avec l’utilisateur &ndash; l’utilisateur peut modifier les paramètres pour n’importe quel canal de notification sur l’appareil comme indiqué dans les captures d’écran ci-dessus. Toutefois, vous pouvez configurer les valeurs par défaut (comme sera décrite ci-dessous). Comme ces exemples illustrent, la nouvelle fonctionnalité de canaux de notification permet aux utilisateurs un contrôle affiné sur les différents types de notifications.
+
 
 ## <a name="notification-creation"></a>Création de notification
 
-Pour créer une notification dans Android, vous utilisez le [Notification.Builder](https://developer.xamarin.com/api/type/Android.App.Notification+Builder/) classe. `Notification.Builder` a été introduit dans Android 3.0 pour simplifier la création d’objets de notification. Pour créer des notifications qui sont compatibles avec les versions antérieures d’Android, vous pouvez utiliser la [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html) classe au lieu de `Notification.Builder` (consultez [compatibilité](#compatibility) plus loin dans cette rubrique pour plus d’informations sur l’utilisation de `NotificationCompat.Builder`).
-`Notification.Builder` Fournit des méthodes permettant de définir les différentes options dans une notification, tels que :
+Pour créer une notification dans Android, vous utilisez le [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder) classe à partir de la [Xamarin.Android.Support.v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) package NuGet. Cette classe permet de créer et publier des notifications sur les versions antérieures d’Android. Pour plus d’informations sur l’utilisation de `NotificationCompat.Builder`, consultez [compatibilité](#compatibility) plus loin dans cette rubrique.
+
+`NotificationCompat.Builder` Fournit des méthodes permettant de définir les différentes options dans une notification, tels que :
 
 -   Le contenu, y compris le titre, le texte du message et l’icône de notification.
 
 -   Le style de la notification, tel que *Big Text*, *boîte de réception*, ou *Image* style.
 
--   La priorité de la notification : minimum, faible, par défaut, élevée ou maximale.
+-   La priorité de la notification : minimum, faible, par défaut, élevée ou maximale. Sur Android 8.0 et versions ultérieures, la priorité est définie via un [ _canal de notification_](#notification-channels).
 
 -   La visibilité de la notification sur l’écran de verrouillage : public, privé ou secret.
 
@@ -122,18 +158,56 @@ Pour créer une notification dans Android, vous utilisez le [Notification.Builde
 
 -   Une intention facultative qui indique une activité à lancer lorsque l’appui sur la notification.
 
+-   L’ID du canal de notification que la notification sera publiée (Android 8.0 et versions ultérieures).
+
 Après avoir défini ces options dans le Générateur de rapports, vous générez un objet de notification qui contient les paramètres. Pour publier la notification, vous passez cet objet de notification pour le *Gestionnaire de notifications*. Android fournit le [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/) (classe), qui est chargé pour la publication des notifications et les afficher à l’utilisateur. Une référence à cette classe peut être obtenue à partir de n’importe quel contexte, tel qu’une activité ou un service.
 
 
-### <a name="how-to-generate-a-notification"></a>Comment générer une Notification
+### <a name="creating-a-notification-channel"></a>Création d’un canal de notification
+
+Les applications qui sont exécutent sur Android 8.0 doivent créer un canal de notification pour les notifications. Un canal de notification requiert les trois éléments d’information suivants :
+
+* Une chaîne d’ID qui est unique pour le package qui identifiera le canal.
+* Le nom du canal qui sera affiché à l’utilisateur.  Le nom doit être compris entre 1 et 40 caractères.
+* L’importance du canal.
+
+Applications devez vérifier la version d’Android qu’ils sont en cours d’exécution.
+Appareils exécutant des versions antérieures à Android 8.0 ne doivent pas créer un canal de notification. La méthode suivante est un exemple montrant comment créer un canal de notification dans une activité :
+
+```csharp
+void CreateNotificationChannel()
+{
+    if (Build.VERSION.SdkInt < BuildVersionCodes.O)
+    {
+        // Notification channels are new in API 26 (and not a part of the
+        // support library). There is no need to create a notification
+        // channel on older versions of Android.
+        return;
+    }
+
+    var channelName = Resources.GetString(Resource.String.channel_name);
+    var channelDescription = GetString(Resource.String.channel_description);
+    var channel = new NotificationChannel(CHANNEL_ID, channelName, NotificationImportance.Default)
+                  {
+                      Description = channelDescription
+                  };
+
+    var notificationManager = (NotificationManager) GetSystemService(NotificationService);
+    notificationManager.CreateNotificationChannel(channel);
+}
+```
+
+Le canal de notification doit être créé à chaque fois que l’activité est créée. Pour le `CreateNotificationChannel` (méthode), elle doit être appelée le `OnCreate` méthode d’une activité.
+
+### <a name="creating-and-publishing-a-notification"></a>Création et publication d’une notification
 
 Pour générer une notification dans Android, procédez comme suit :
 
-1.  Instancier un `Notification.Builder` objet.
+1.  Instancier un `NotificationCompat.Builder` objet.
 
-2.  Appeler des méthodes différentes sur le `Notification.Builder` objet pour définir les options de notification.
+2.  Appeler des méthodes différentes sur le `NotificationCompat.Builder` objet pour définir les options de notification.
 
-3.  Appelez le [Build](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.Build/) méthode de la `Notification.Builder` objet pour instancier un objet de notification.
+3.  Appelez le [Build](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.Build/) méthode de la `NotificationCompat.Builder` objet pour instancier un objet de notification.
 
 4.  Appelez le [Notify](https://developer.xamarin.com/api/member/Android.App.NotificationManager.Notify/(System.Int32%2cAndroid.App.Notification)) méthode du Gestionnaire de notification pour la notification de publication.
 
@@ -145,11 +219,11 @@ Vous devez fournir au moins les informations suivantes pour chaque notification�
 
 -   Le texte de la notification
 
-L’exemple de code suivant illustre comment utiliser `Notification.Builder` pour générer une notification de base. Notez que `Notification.Builder` méthodes prennent en charge [enchaînement](http://en.wikipedia.org/wiki/Method_chaining); autrement dit, chaque méthode retourne l’objet de générateur de rapports afin de pouvoir utiliser le résultat du dernier appel de méthode à appeler l’appel de méthode suivant :
+L’exemple de code suivant illustre comment utiliser `NotificationCompat.Builder` pour générer une notification de base. Notez que `NotificationCompat.Builder` méthodes prennent en charge [enchaînement](http://en.wikipedia.org/wiki/Method_chaining); autrement dit, chaque méthode retourne l’objet de générateur de rapports afin de pouvoir utiliser le résultat du dernier appel de méthode à appeler l’appel de méthode suivant :
 
 ```csharp
 // Instantiate the builder and set notification elements:
-Notification.Builder builder = new Notification.Builder (this)
+NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
     .SetContentTitle ("Sample Notification")
     .SetContentText ("Hello World! This is my first notification!")
     .SetSmallIcon (Resource.Drawable.ic_notification);
@@ -166,7 +240,7 @@ const int notificationId = 0;
 notificationManager.Notify (notificationId, notification);
 ```
 
-Dans cet exemple, un nouveau `Notification.Builder` objet appelé `builder` est instancié, le titre et le texte de la notification sont définies, et l’icône de notification est chargé à partir de **Resources/drawable/ic_notification.png**. L’appel au générateur notification `Build` méthode crée un objet de notification avec ces paramètres. L’étape suivante consiste à appeler le `Notify` méthode du Gestionnaire de notification. Pour obtenir le Gestionnaire de notifications, vous appelez `GetSystemService`, comme indiqué ci-dessus.
+Dans cet exemple, un nouveau `NotificationCompat.Builder` objet appelé `builder` est instancié, ainsi que l’ID du canal de notification à utiliser. Le titre et le texte de la notification sont définies, et l’icône de notification est chargé à partir de **Resources/drawable/ic_notification.png**. L’appel au générateur notification `Build` méthode crée un objet de notification avec ces paramètres. L’étape suivante consiste à appeler le `Notify` méthode du Gestionnaire de notification. Pour obtenir le Gestionnaire de notifications, vous appelez `GetSystemService`, comme indiqué ci-dessus.
 
 Le `Notify` méthode accepte deux paramètres : l’identificateur de notification et l’objet de notification. L’identificateur de notification est un entier unique qui identifie la notification à votre application. Dans cet exemple, l’identificateur de notification a la valeur zéro (0) ; Toutefois, dans une application de production, vous pouvez donner à chaque notification un identificateur unique. Réutilisation de la valeur d’identificateur précédent dans un appel à `Notify` provoque la dernière notification doivent être remplacées.
 
@@ -188,7 +262,7 @@ Si vous souhaitez que votre notification également un signal sonore, vous pouve
 
 ```csharp
 // Instantiate the notification builder and enable sound:
-Notification.Builder builder = new Notification.Builder (this)
+NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
     .SetContentTitle ("Sample Notification")
     .SetContentText ("Hello World! This is my first notification!")
     .SetDefaults (NotificationDefaults.Sound)
@@ -213,7 +287,7 @@ Vous pouvez également utiliser la sonnerie par défaut système audio pour votr
 builder.SetSound (RingtoneManager.GetDefaultUri(RingtoneType.Ringtone));
 ```
 
-Après avoir créé un objet de notification, il est possible de définir des propriétés de notification sur l’objet de notification (au lieu de les configurer à l’avance via `Notification.Builder` méthodes). Par exemple, au lieu d’appeler le `SetDefaults` méthode permettant de vibration sur une notification, vous pouvez modifier directement l’indicateur de bit de la notification [par défaut est](https://developer.xamarin.com/api/property/Android.App.Notification.Defaults/) propriété :
+Après avoir créé un objet de notification, il est possible de définir des propriétés de notification sur l’objet de notification (au lieu de les configurer à l’avance via `NotificationCompat.Builder` méthodes). Par exemple, au lieu d’appeler le `SetDefaults` méthode permettant de vibration sur une notification, vous pouvez modifier directement l’indicateur de bit de la notification [par défaut est](https://developer.xamarin.com/api/property/Android.App.Notification.Defaults/) propriété :
 
 ```csharp
 // Build the notification:
@@ -227,9 +301,9 @@ L’exemple suivant génère l’appareil faire vibrer lorsque la notification e
 
 <a name="updating-a-notification" />
 
-### <a name="updating-a-notification"></a>Une Notification de la mise à jour
+### <a name="updating-a-notification"></a>Une notification de la mise à jour
 
-Si vous souhaitez mettre à jour le contenu d’une notification une fois qu’il a été publié, vous pouvez réutiliser existant `Notification.Builder` objet pour créer un nouvel objet de notification et de publier cette notification avec l’identificateur de la dernière notification. Exemple :
+Si vous souhaitez mettre à jour le contenu d’une notification une fois qu’il a été publié, vous pouvez réutiliser existant `NotificationCompat.Builder` objet pour créer un nouvel objet de notification et de publier cette notification avec l’identificateur de la dernière notification. Exemple :
 
 ```csharp
 // Update the existing notification builder content:
@@ -243,7 +317,7 @@ notification = builder.Build();
 notificationManager.Notify (notificationId, notification);
 ```
 
-Dans cet exemple, existant `Notification.Builder` objet est utilisé pour créer un nouvel objet de notification avec un autre titre et un message.
+Dans cet exemple, existant `NotificationCompat.Builder` objet est utilisé pour créer un nouvel objet de notification avec un autre titre et un message.
 Le nouvel objet de notification est publié à l’aide de l’identificateur de la notification précédente, et cela met à jour le contenu de la notification publiée précédemment :
 
 ![Notification de mise à jour](local-notifications-images/12-updated-notification.png)
@@ -261,7 +335,7 @@ Une notification reste visible jusqu'à ce que l’une des trois situations suiv
 Pour plus d’informations sur la mise à jour de notifications Android, consultez [modifier une Notification](http://developer.android.com/training/notify-user/managing.html#Updating).
 
 
-### <a name="starting-an-activity-from-a-notification"></a>À partir d’une activité à partir d’une Notification
+### <a name="starting-an-activity-from-a-notification"></a>À partir d’une activité à partir d’une notification
 
 Dans Android, il est courant pour une notification à associer à un *action* &ndash; une activité qui s’affiche lorsque l’utilisateur appuie sur la notification. Cette activité peut résider dans une autre application ou même dans une autre tâche. Pour ajouter une action à une notification, vous créez un [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/) de l’objet et associer le `PendingIntent` avec la notification. Un `PendingIntent` est un type spécial d’intention qui permet à l’application destinataire exécuter une partie prédéfinie de code avec les autorisations de l’application émettrice. Lorsque l’utilisateur appuie sur la notification, Android démarre l’activité spécifiée par le `PendingIntent`.
 
@@ -277,7 +351,7 @@ PendingIntent pendingIntent =
     PendingIntent.GetActivity (this, pendingIntentId, intent, PendingIntentFlags.OneShot);
 
 // Instantiate the builder and set notification elements, including pending intent:
-Notification.Builder builder = new Notification.Builder(this)
+NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
     .SetContentIntent (pendingIntent)
     .SetContentTitle ("Sample Notification")
     .SetContentText ("Hello World! This is my first action notification!")
@@ -332,7 +406,7 @@ PendingIntent pendingIntent =
 
 // Instantiate the builder and set notification elements, including
 // the pending intent:
-Notification.Builder builder = new Notification.Builder (this)
+NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
     .SetContentIntent (pendingIntent)
     .SetContentTitle ("Sample Notification")
     .SetContentText ("Hello World! This is my second action notification!")
@@ -366,113 +440,11 @@ Ce message récupéré, « Message d’accueil à partir de MainActivity ! »
 Pour plus d’informations sur la création en attente d’intentions, consultez [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/).
 
 
-<a name="notif-chan"></a>
-<a name="notification-channels"></a>
-## <a name="notification-channels"></a>Canaux de notification
-
-À compter d’Android 8.0 (Oreo), vous pouvez utiliser la *canaux de notification* fonctionnalité pour créer un canal personnalisables par l’utilisateur pour chaque type de notification que vous souhaitez afficher. Canaux de notification permettent à votre place aux notifications de groupe afin que toutes les notifications publié dans une pièce de canal, le même comportement. Par exemple, vous pouvez avoir un canal de notification qui est conçu pour les notifications qui requièrent une attention immédiate et un canal « silencieux » distinct qui est utilisé pour les messages d’information.
-
-Le **YouTube** application est installée avec Android Oreo répertorie deux catégories de notification : **notifications de téléchargement** et **notifications générales**:
-
-[![Écrans de notification pour YouTube dans Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
-
-Chacun de ces catégories correspondant à un canal de notification. L’application YouTube implémente un **notifications de téléchargement** canal et un **Notifications générales** canal. L’utilisateur peut appuyer **notifications de téléchargement**, qui affiche l’écran des paramètres pour le canal de notifications de téléchargement de l’application :
-
-[![Télécharger l’écran de notifications pour l’application YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
-
-Dans cet écran, l’utilisateur peut modifier le comportement de la **télécharger** notifications de canal en procédant comme suit :
-
--   Définir l’Importance au niveau **Urgent**, **haute**, **support**, ou **faible**, qui configure le niveau de l’interruption audio et visuel.
-
--   Activer le point de notification ou désactiver.
-
--   Activer le voyant clignote ou désactiver.
-
--   Afficher ou masquer les notifications sur l’écran de verrouillage.
-
--   Remplacer le **ne pas déranger** paramètre.
-
-Le **Notifications générales** canal a des paramètres similaires :
-
-[![Écran de notifications générales pour l’application YouTube](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
-
-Notez que vous n’avez pas de contrôle absolu sur la façon dont vos canaux de notification interagissent avec l’utilisateur &ndash; l’utilisateur peut modifier les paramètres pour n’importe quel canal de notification sur l’appareil comme indiqué dans les captures d’écran ci-dessus. Toutefois, vous pouvez configurer les valeurs par défaut (comme sera décrite ci-dessous). Comme ces exemples illustrent, la nouvelle fonctionnalité de canaux de notification permet aux utilisateurs un contrôle affiné sur les différents types de notifications.
-
-Devez vous ajouter la prise en charge pour les canaux de notification à votre application ? Si vous ciblez Android 8.0, votre application *doit* implémenter des canaux de notification.
-Une application ciblée pour Oreo qui tente d’envoyer une notification locale à l’utilisateur sans utiliser un canal de notification ne peut pas afficher la notification sur des appareils Oreo. Si vous ne ciblez Android 8.0, votre application s’exécutera sur Android 8.0, mais avec le même comportement de notification comme il exposerait lors de l’exécution sur Android 7.1 ou version antérieure.
-
-
-### <a name="creating-a-notification-channel"></a>Création d’un canal de Notification
-
-Pour créer un canal de notification, procédez comme suit :
-
-1. Construire un [NotificationChannel](https://developer.android.com/reference/android/app/NotificationChannel.html) objet par le code suivant :
-
-    - Une chaîne d’ID qui est unique au sein de votre package. Dans l’exemple suivant, la chaîne `com.xamarin.myapp.urgent` est utilisé.
-
-    - Le nom visible par l’utilisateur du canal (moins de 40 caractères). Dans l’exemple suivant, le nom **Urgent** est utilisé.
-
-    - L’importance du canal, qui contrôle comment sans interruption notifications sont publiées dans le `NotificationChannel`. L’importance peut être `Default`, `High`, `Low`, `Max`, `Min`, `None`, ou `Unspecified`.
-
-    Passer ces valeurs à la [constructeur](https://developer.android.com/reference/android/app/NotificationChannel.html#NotificationChannel%28java.lang.String,%20java.lang.CharSequence,%20int%29) (dans cet exemple, `Resource.String.noti_chan_urgent` a la valeur **Urgent**) :
-
-    ```csharp
-    public const string URGENT_CHANNEL = "com.xamarin.myapp.urgent";
-    . . .
-    string chanName = GetString (Resource.String.noti_chan_urgent);
-    var importance = NotificationImportance.High;
-    NotificationChannel chan =
-       new NotificationChannel (URGENT_CHANNEL, chanName, importance);
-    ```
-
-2.  Configurer le `NotificationChannel` objet avec les paramètres initiaux.
-    Par exemple, le code suivant configure le `NotificationChannel` afin que les notifications publiées sur ce canal seront vibrer l’appareil et s’affichent sur l’écran de verrouillage par défaut de l’objet :
-
-    ```csharp
-    chan.EnableVibration (true);
-    chan.LockscreenVisibility = NotificationVisibility.Public;
-    ```
-
-3.  Envoyer l’objet de canal de notification dans le Gestionnaire de notifications :
-
-    ```csharp
-    NotificationManager notificationManager =
-        (NotificationManager) GetSystemService (NotificationService);
-    notificationManager.CreateNotificationChannel (chan);
-    ```
-
-
-### <a name="posting-to-a-notifications-channel"></a>Publication sur un canal de Notifications
-
-Pour valider une notification à un canal de notification, procédez comme suit :
-
-1.  Configurer la notification à l’aide de la `Notification.Builder`, en passant l’ID de canal à le `SetChannelId` (méthode). Exemple :
-
-    ```csharp
-    Notification.Builder builder = new Notification.Builder (this)
-        .SetContentTitle ("Attention!")
-        .SetContentText ("This is an urgent notification message!")
-        .SetChannelId (URGENT_CHANNEL);
-    ```
-
-2.  Créer et émettre la notification à l’aide du Gestionnaire de Notification [Notify](https://developer.xamarin.com/api/member/Android.App.NotificationManager.Notify/p/System.Int32/Android.App.Notification/) méthode :
-
-    ```csharp
-    const int notificationId = 0;
-    notificationManager.Notify (notificationId, builder.Build());
-    ```
-
-Vous pouvez répéter les étapes ci-dessus pour créer un autre canal de notification pour les messages d’information. Cet deuxième canal impossible, par défaut, désactiver les vibrations, la visibilité d’écran de verrouillage par défaut la valeur `Private`et la valeur est l’importance de la notification `Default`.
-
-Pour obtenir un exemple de code complet Android Oreo des canaux de Notification en action, consultez le [canaux de notification](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) exemple ; cet exemple d’application gère deux canaux et définit les options de notification supplémentaire.
-
-
-
 <a name="beyond-the-basic-notification" />
 
-## <a name="beyond-the-basic-notification"></a>Au-delà de la Notification de base
+## <a name="beyond-the-basic-notification"></a>Au-delà de la notification de base
 
-Notifications par défaut dans un format de disposition de base clics dans Android, mais vous pouvez améliorer ce format de base en rendant supplémentaires `Notification.Builder` appels de méthode. Dans cette section, vous allez apprendre à ajouter une icône de grande photo à votre notification, et vous verrez des exemples montrant comment créer des notifications de mise en page développée.
+Notifications par défaut dans un format de disposition de base simple dans Android, mais vous pouvez améliorer ce format de base en rendant supplémentaires `NotificationCompat.Builder` appels de méthode. Dans cette section, vous allez apprendre à ajouter une icône de grande photo à votre notification, et vous verrez des exemples montrant comment créer des notifications de mise en page développée.
 
 <a name="large-icon-format" />
 
@@ -496,8 +468,7 @@ Pour utiliser une image comme une grande icône dans une notification, vous appe
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
 ```
 
-Cet exemple de code ouvre le fichier image à **Resources/drawable/monkey_icon.png**, le convertit en une image bitmap et transmet la bitmap résultante à `Notification.Builder`. En règle générale, la résolution de l’image source est supérieure à la petite icône &ndash; mais pas beaucoup plus volumineux. Une image qui est trop volumineux peut entraîner des opérations de redimensionnement inutiles qui pourrait retarder la validation de la notification.
-Pour plus d’informations sur les tailles d’icônes de notification dans Android, consultez [icônes de Notification](http://developer.android.com/design/style/iconography.html#notification).
+Cet exemple de code ouvre le fichier image à **Resources/drawable/monkey_icon.png**, le convertit en une image bitmap et transmet la bitmap résultante à `NotificationCompat.Builder`. En règle générale, la résolution de l’image source est supérieure à la petite icône &ndash; mais pas beaucoup plus volumineux. Une image qui est trop volumineux peut entraîner des opérations de redimensionnement inutiles qui pourrait retarder la validation de la notification.
 
 
 ### <a name="big-text-style"></a>Style de texte volumineux
@@ -512,7 +483,7 @@ Dans ce format, seul un extrait du message s’affiche, terminé par deux points
 
 Ce format de disposition développé comprend également texte du résumé en bas de la notification. La hauteur maximale de la *Big Text* notification est 256 dp.
 
-Pour créer un *Big Text* notification, vous instanciez un `Notification.Builder` de l’objet, comme précédemment, puis d’instancier et d’ajouter un [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) de l’objet à le `Notification.Builder` objet. Exemple :
+Pour créer un *Big Text* notification, vous instanciez un `NotificationCompat.Builder` de l’objet, comme précédemment, puis d’instancier et d’ajouter un [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) de l’objet à le `NotificationCompat.Builder` objet. Voici un exemple :
 
 ```csharp
 // Instantiate the Big Text style:
@@ -533,7 +504,7 @@ builder.SetStyle (textStyle);
 // Create the notification and publish it ...
 ```
 
-Dans cet exemple, le texte du message et le texte de résumé sont stockés dans le `BigTextStyle` objet (`textStyle`) avant d’être passé à `Notification.Builder.`
+Dans cet exemple, le texte du message et le texte de résumé sont stockés dans le `BigTextStyle` objet (`textStyle`) avant d’être passé à `NotificationCompat.Builder.`
 
 
 ### <a name="image-style"></a>Style de l’image
@@ -550,7 +521,7 @@ Lorsque l’utilisateur fait glisser vers le bas le *Image* notification, celle-
 
 Notez que lorsque la notification est affichée dans un format compact, il affiche le texte de notification (le texte qui est passé au générateur notification `SetContentText` méthode, comme indiqué précédemment). Toutefois, lorsque la notification est développée pour afficher l’image, il affiche le texte du résumé au-dessus de l’image.
 
-Pour créer un *Image* notification, vous instanciez un `Notification.Builder` objet comme auparavant, puis créer et insérer un [BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/) de l’objet dans le `Notification.Builder` objet. Exemple :
+Pour créer un *Image* notification, vous instanciez un `NotificationCompat.Builder` objet comme auparavant, puis créer et insérer un [BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/) de l’objet dans le `NotificationCompat.Builder` objet. Exemple :
 
 ```csharp
 // Instantiate the Image (Big Picture) style:
@@ -568,7 +539,7 @@ builder.SetStyle (picStyle);
 // Create the notification and publish it ...
 ```
 
-Comme le `SetLargeIcon` méthode de `Notification.Builder`, le [BigPicture](https://developer.xamarin.com/api/member/Android.App.Notification+BigPictureStyle.BigPicture/) méthode de `BigPictureStyle` requiert une image bitmap de l’image que vous souhaitez afficher dans le corps de la notification. Dans cet exemple, le [DecodeResource](https://developer.xamarin.com/api/member/Android.Graphics.BitmapFactory.DecodeResource/(Android.Content.Res.Resources%2cSystem.Int32)) méthode de `BitmapFactory` lit le fichier image situé **Resources/drawable/x_bldg.png** et le convertit en une image bitmap.
+Comme le `SetLargeIcon` méthode de `NotificationCompat.Builder`, le [BigPicture](https://developer.xamarin.com/api/member/Android.App.Notification+BigPictureStyle.BigPicture/) méthode de `BigPictureStyle` requiert une image bitmap de l’image que vous souhaitez afficher dans le corps de la notification. Dans cet exemple, le [DecodeResource](https://developer.xamarin.com/api/member/Android.Graphics.BitmapFactory.DecodeResource/(Android.Content.Res.Resources%2cSystem.Int32)) méthode de `BitmapFactory` lit le fichier image situé **Resources/drawable/x_bldg.png** et le convertit en une image bitmap.
 
 Vous pouvez également afficher des images qui ne sont pas empaquetés en tant que ressource. Par exemple, l’exemple de code suivant charge une image à partir de la carte SD locale et l’affiche dans un *Image* notification :
 
@@ -610,7 +581,7 @@ Lorsque l’utilisateur fait glisser vers le bas sur la notification, il se dév
 
 ![Exemple de notification de boîte de réception développé](local-notifications-images/21-inbox-expanded.png)
 
-Pour créer un *boîte de réception* notification, vous instanciez un `Notification.Builder` de l’objet, comme avant et ajoutez un [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) de l’objet à le `Notification.Builder`. Exemple :
+Pour créer un *boîte de réception* notification, vous instanciez un `NotificationCompat.Builder` de l’objet, comme avant et ajoutez un [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) de l’objet à le `NotificationCompat.Builder`. Voici un exemple :
 
 ```csharp
 // Instantiate the Inbox style:
@@ -632,17 +603,17 @@ builder.SetStyle (inboxStyle);
 
 Pour ajouter de nouvelles lignes de texte pour le corps de la notification, appelez le [Addline](https://developer.xamarin.com/api/member/Android.App.Notification+InboxStyle.AddLine/p/System.String/) méthode de la `InboxStyle` objet (la hauteur maximale de la *boîte de réception* notification est 256 dp). Notez que, contrairement à *Big Text* style, le *boîte de réception* style prend en charge des lignes de texte dans le corps de la notification.
 
-Vous pouvez également utiliser le *boîte de réception* style pour les notifications qui devant afficher des lignes de texte dans un format développé. Par exemple, le *boîte de réception* style de notification peut être utilisé pour combiner plusieurs notifications en attente en une synthèse &ndash; vous pouvez mettre à jour un seul *boîte de réception* style notification avec new lignes de contenu de la notification (voir [une Notification de la mise à jour](#updating-a-notification) ci-dessus), plutôt que de générer un flux continu de notifications principalement similaire. Pour plus d’informations sur cette approche, consultez [résumer vos notifications](http://developer.android.com/design/patterns/notifications.html#summarize_your_notifications).
+Vous pouvez également utiliser le *boîte de réception* style pour les notifications qui devant afficher des lignes de texte dans un format développé. Par exemple, le *boîte de réception* style de notification peut être utilisé pour combiner plusieurs notifications en attente en une synthèse &ndash; vous pouvez mettre à jour un seul *boîte de réception* style notification avec new lignes de contenu de la notification (voir [une Notification de la mise à jour](#updating-a-notification) ci-dessus), plutôt que de générer un flux continu de notifications principalement similaire.
 
 
 ## <a name="configuring-metadata"></a>Configuration des métadonnées
 
-`Notification.Builder` inclut des méthodes que vous pouvez appeler pour définir les métadonnées sur votre notification, telles que la priorité, de visibilité et de catégorie. Android utilise ces informations &mdash; , ainsi que les paramètres de préférence utilisateur &mdash; pour déterminer quand et comment afficher les notifications.
+`NotificationCompat.Builder` inclut des méthodes que vous pouvez appeler pour définir les métadonnées sur votre notification, telles que la priorité, de visibilité et de catégorie. Android utilise ces informations &mdash; , ainsi que les paramètres de préférence utilisateur &mdash; pour déterminer quand et comment afficher les notifications.
 
 
 ### <a name="priority-settings"></a>Paramètres de priorité
 
-Le paramètre de priorité d’une notification détermine deux résultats lors de la publication de la notification :
+Applications qui s’exécutent sur Android 7.1 et inférieure besoin définir la priorité directement sur la notification elle-même. Le paramètre de priorité d’une notification détermine deux résultats lors de la publication de la notification :
 
 -   Où la notification s’affiche par rapport à d’autres notifications.
     Par exemple, notifications de priorité élevée sont présentées ci-dessus des notifications de priorité inférieure dans le tiroir de notifications, indépendamment du lorsque chaque notification a été publiée.
@@ -661,7 +632,7 @@ Xamarin.Android définit les énumérations suivantes pour définir la priorité
 
 -   `NotificationPriority.Min` &ndash; Pour plus d’informations que l’utilisateur Remarque uniquement lorsque affichage des notifications (par exemple, les informations emplacement ou la météo).
 
-Pour définir la priorité d’une notification, appelez le [SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/) méthode de la `Notification.Builder` objet, en passant le niveau de priorité. Exemple :
+Pour définir la priorité d’une notification, appelez le [SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/) méthode de la `NotificationCompat.Builder` objet, en passant le niveau de priorité. Exemple :
 
 ```csharp
 builder.SetPriority (NotificationPriority.High);
@@ -681,6 +652,8 @@ Dans l’exemple suivant, la notification de « Pensé pour la journée » de 
 
 Étant donné que la notification de « Pensée pour la journée » est une notification de faible priorité, Android affichera pas au format profondes.
 
+> [!NOTE]
+> Sur Android 8.0 et versions ultérieures, la priorité du canal et l’utilisateur des paramètres de notification détermine la priorité de la notification.
 
 ### <a name="visibility-settings"></a>Paramètres de visibilité
 
@@ -693,7 +666,7 @@ Xamarin.Android définit les énumérations suivantes pour la définition de la 
 
 -   `NotificationVisibility.Secret` &ndash; Rien ne s’affiche sur la sécurité l’écran de verrouillage, même pas l’icône de notification. Le contenu de notification est disponible uniquement après que l’utilisateur déverrouille l’appareil.
 
-Pour définir la visibilité d’une notification, applications appel la `SetVisibility` méthode de la `Notification.Builder` objet, en passant le paramètre de visibilité. Par exemple, cet appel à `SetVisibility` rend la notification `Private`:
+Pour définir la visibilité d’une notification, applications appel la `SetVisibility` méthode de la `NotificationCompat.Builder` objet, en passant le paramètre de visibilité. Par exemple, cet appel à `SetVisibility` rend la notification `Private`:
 
 ```csharp
 builder.SetVisibility (NotificationVisibility.Private);
@@ -738,7 +711,7 @@ Depuis Android 5.0, catégories prédéfinies sont disponibles pour le classemen
 
 -   `Notification.CategoryStatus` &ndash; Informations sur l’appareil.
 
-Quand les notifications sont triées, priorité de la notification est prioritaire sur son paramètre de catégorie. Par exemple, une notification de priorité élevée s’affichera en tant que tête haute même s’il appartient à la `Promo` catégorie. Pour définir la catégorie d’une notification, vous appelez le `SetCategory` méthode de la `Notification.Builder` objet, en passant le paramètre de catégorie. Exemple :
+Quand les notifications sont triées, priorité de la notification est prioritaire sur son paramètre de catégorie. Par exemple, une notification de priorité élevée s’affichera en tant que tête haute même s’il appartient à la `Promo` catégorie. Pour définir la catégorie d’une notification, vous appelez le `SetCategory` méthode de la `NotificationCompat.Builder` objet, en passant le paramètre de catégorie. Exemple :
 
 ```csharp
 builder.SetCategory (Notification.CategoryCall);
@@ -749,30 +722,6 @@ Le *ne pas déranger* (nouveau dans Android 5.0) de la fonctionnalité filtre de
 ![Ne pas déranger les commutateurs de l’écran](local-notifications-images/26-do-not-disturb.png)
 
 Lorsque l’utilisateur configure *ne pas déranger* pour bloquer toutes les interruptions, à l’exception des appels téléphoniques (comme illustré dans la capture d’écran ci-dessus), Android permet de notifications avec un paramètre de catégorie de `Notification.CategoryCall` qui sera présenté lors de l’appareil est dans *ne pas déranger* mode. Notez que `Notification.CategoryAlarm` notifications ne sont jamais bloquées dans *ne pas déranger* mode.
-
-
-<a name="compatibility" />
-
-## <a name="compatibility"></a>Compatibilité
-
-Si vous créez une application qui serez également s’exécuter sur les versions antérieures d’Android (dès que le niveau API 4), vous utilisez le [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html) classe au lieu de `Notification.Builder`. Lorsque vous créez des notifications avec `NotificationCompat.Builder`, Android permet de s’assurer que le contenu de la notification de base est correctement affiché sur des appareils plus anciens. Toutefois, étant donné que certaines fonctionnalités avancées de notification ne sont pas disponibles dans les versions antérieures d’Android, votre code doit gérer explicitement les problèmes de compatibilité pour les styles de notification développée, les catégories et les niveaux de visibilité comme expliqué ci-dessous.
-
-Pour utiliser `NotificationCompat.Builder` dans votre application, vous devez inclure le [v4 de la bibliothèque de prise en charge Android](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) NuGet dans votre projet.
-
-L’exemple de code suivant illustre comment créer une notification de base à l’aide de `NotificationCompat.Builder`:
-
-```csharp
-// Instantiate the builder and set notification elements:
-NotificationCompat.Builder builder = new NotificationCompat.Builder (this)
-    .SetContentTitle ("Sample Notification")
-    .SetContentText ("Hello World! This is my first notification!")
-    .SetSmallIcon (Resource.Drawable.ic_notification);
-
-// Build the notification:
-Notification notification = builder.Build();
-```
-
-Comme l’illustre cet exemple, les appels de méthode pour les options de notification essentielles sont identiques à ceux de `Notification.Builder`. Toutefois, votre code doit gérer les problèmes de compatibilité descendante pour les notifications plus complexes (décrites dans la section suivante).
 
 Le [LocalNotifications](https://developer.xamarin.com/samples/monodroid/LocalNotifications) exemple montre comment utiliser `NotificationCompat.Builder` pour lancer une deuxième activité à partir d’une notification. Cet exemple de code est expliquée dans le [à l’aide des Notifications locales dans Xamarin.Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) procédure pas à pas.
 
@@ -798,13 +747,12 @@ De même, votre application peut utiliser `NotificationCompat.InboxStyle` et `No
 Pour prendre en charge les versions antérieures de l’emplacement où Android, `SetCategory` est non disponible, votre code peut vérifier le niveau d’API pendant l’exécution pour appeler de manière conditionnelle `SetCategory` lorsque le niveau d’API est égal à ou supérieur à Android 5.0 (niveau 21 d’API) :
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= 21) {
+if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
     builder.SetCategory (Notification.CategoryEmail);
 }
 ```
 
-Dans de cet exemple, l’application **Framework cible** est défini sur Android 5.0 et les **Version Android minimale** a la valeur **Android 4.1 (niveau API 16)**. Étant donné que `SetCategory` est disponible dans le niveau d’API 21 et versions ultérieur, cet exemple de code appellera `SetCategory` uniquement lorsqu’il est disponible &ndash; elle n’appelle pas `SetCategory` lorsque le niveau de l’API est inférieur à
-21.
+Dans de cet exemple, l’application **Framework cible** est défini sur Android 5.0 et les **Version Android minimale** a la valeur **Android 4.1 (niveau API 16)**. Étant donné que `SetCategory` est disponible dans le niveau d’API 21 et versions ultérieur, cet exemple de code appellera `SetCategory` uniquement lorsqu’il est disponible &ndash; elle n’appelle pas `SetCategory` lorsque le niveau d’API est inférieur à 21.
 
 
 ### <a name="lockscreen-visibility"></a>Visibilité de l’écran de verrouillage
@@ -820,9 +768,9 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a expliqué comment créer des notifications locales dans Android. Il décrit l’anatomie d’une notification, vous avez appris comment utiliser `Notification.Builder` pour créer des notifications, les notifications de style dans les grandes icônes, *Big Text*, *Image* et *boîte de réception*  formats, comment définir des paramètres de métadonnées telles que la priorité, de visibilité et de catégorie de notification et comment lancer une activité à partir d’une notification. Cet article décrit également le fonctionnement de ces paramètres de notification avec la nouvelle frontal, l’écran de verrouillage, et *ne pas déranger* fonctionnalités introduites dans Android 5.0. Enfin, vous avez appris à utiliser `NotificationCompat.Builder` pour assurer la compatibilité avec les versions antérieures d’Android notification.
+Cet article a expliqué comment créer des notifications locales dans Android. Il décrit l’anatomie d’une notification, vous avez appris comment utiliser `NotificationCompat.Builder` pour créer des notifications, les notifications de style dans les grandes icônes, *Big Text*, *Image* et *boîte de réception*  formats, comment définir des paramètres de métadonnées telles que la priorité, de visibilité et de catégorie de notification et comment lancer une activité à partir d’une notification. Cet article décrit également le fonctionnement de ces paramètres de notification avec la nouvelle frontal, l’écran de verrouillage, et *ne pas déranger* fonctionnalités introduites dans Android 5.0. Enfin, vous avez appris à utiliser `NotificationCompat.Builder` pour assurer la compatibilité avec les versions antérieures d’Android notification.
 
-Pour obtenir des instructions sur la conception des notifications pour Android, consultez [Notifications](http://developer.android.com/preview/notifications.html).
+Pour obtenir des instructions sur la conception des notifications pour Android, consultez [Notifications](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 
 ## <a name="related-links"></a>Liens associés
@@ -830,7 +778,6 @@ Pour obtenir des instructions sur la conception des notifications pour Android, 
 - [NotificationsLab (exemple)](https://developer.xamarin.com/samples/monodroid/android5.0/NotificationsLab/)
 - [LocalNotifications (exemple)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
 - [Notifications locales dans la procédure pas à pas Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
-- [Notifications](http://developer.android.com/design/patterns/notifications.html)
 - [Avertir l’utilisateur](http://developer.android.com/training/notify-user/index.html)
 - [Notification](https://developer.xamarin.com/api/type/Android.App.Notification/)
 - [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
