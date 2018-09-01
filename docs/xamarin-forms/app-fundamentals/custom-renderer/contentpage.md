@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "38995740"
 ---
 # <a name="customizing-a-contentpage"></a>Personnalisation d’une ContentPage
@@ -197,7 +197,7 @@ namespace CustomRenderer.Droid
 
 L’appel à la classe de base `OnElementChanged` méthode instancie un Android `ViewGroup` contrôle, qui est un groupe de vues. Le flux de la caméra en direct est rendu uniquement à condition que le convertisseur n’est pas déjà attaché à un élément existant de Xamarin.Forms et la condition qu’il existe une instance de la page qui est restitué par le convertisseur personnalisé.
 
-La page est ensuite personnalisée en appelant une série de méthodes qui utilisent la `Camera` API afin de fournir le flux live à partir de l’appareil photo et de la capacité à capturer une photo, avant le `AddView` méthode est appelée pour ajouter l’appareil photo en direct l’interface utilisateur pour diffuser en continu le `ViewGroup`.
+La page est ensuite personnalisée en appelant une série de méthodes qui utilisent la `Camera` API afin de fournir le flux live à partir de l’appareil photo et de la capacité à capturer une photo, avant le `AddView` méthode est appelée pour ajouter l’appareil photo en direct l’interface utilisateur pour diffuser en continu le `ViewGroup`. Notez que sur Android il est également nécessaire de remplacer le `OnLayout` méthode pour effectuer des opérations de mesure et la disposition sur la vue. Pour plus d’informations, consultez le [ContentPage convertisseur exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Création du convertisseur de Page sur UWP
 
