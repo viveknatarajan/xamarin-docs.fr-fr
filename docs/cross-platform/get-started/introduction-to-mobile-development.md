@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: c6f0233d736c51142d6d83996361558709fd2070
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f3b1f5c11a02710de8d0ffd09741acb3017f5cb6
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781918"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43780492"
 ---
 # <a name="introduction-to-mobile-development"></a>Introduction au développement mobile
 
@@ -19,7 +19,7 @@ La création d’applications mobiles peut être aussi simple qu’ouvrir l’ID
 
 Ce document a pour but de présenter la plateforme Xamarin. Pour plus d’informations sur le *processus* de création d’applications mobiles, de la conception à la phase de tests, reportez-vous au document [Introduction au cycle de vie de développement des logiciels mobiles](~/cross-platform/get-started/introduction-to-mobile-sdlc.md).
 
-Consultez la [configuration requise](~/cross-platform/get-started/requirements.md#mac) pour vérifier que vous pouvez installer Xamarin.
+Consultez la [configuration requise](~/cross-platform/get-started/requirements.md#macos-requirements) pour vérifier que vous pouvez installer Xamarin.
 
 ## <a name="introduction-to-xamarin"></a>Introduction à Xamarin
 

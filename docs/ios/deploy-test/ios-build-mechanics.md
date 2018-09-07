@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: df84e78709b0ff16087c4bb9816c5d45f6ec33ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
+ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772355"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780529"
 ---
 # <a name="ios-build-mechanics"></a>Mécanismes de génération d’iOS
 
@@ -97,7 +97,7 @@ En tenant compte des informations ci-dessus, la liste ci-dessous donne des infor
 - Conseils supplémentaires
   - Favorisez la génération (Build) par rapport à la régénération (Rebuild), car cette dernière exécute un nettoyage avant la génération. Le nettoyage peut prendre un certain temps car il supprime les références qui pourraient être utilisées.
   - Tirez parti du fait que le simulateur n’applique pas le bac à sable (sandbox). La présence de ressources volumineuses comme des vidéos ou d’autres éléments dans votre projet peut créer des opérations de copie de fichiers coûteuses à chaque fois que l’application est lancée dans le simulateur. Évitez de ces opérations coûteuses en plaçant ces fichiers dans le répertoire de base et les référençant dans votre application avec le chemin d’accès complet au fichier.  
-  - En cas de doute, utilisez l’indicateur `–time –time` pour mesurer la modification
+  - En cas de doute, utilisez l’indicateur `--time --time` pour mesurer la modification
 
 La capture d’écran ci-dessous illustre comment définir ces options pour le simulateur dans vos options iOS :
 
@@ -137,7 +137,7 @@ La réduction de la taille de l’application peut aussi réduire la durée de l
 Voici certaines choses à éviter :
 
 - Fichiers binaires FAT (déboguer) 
-- Désactiver l’éditeur de liens `–nolink` 
+- Désactiver l’éditeur de liens `--nolink` 
 - Désactiver la suppression 
   - Symboles `--nosymbolstrip` 
   - IL (mise en production) `--nostrip`.  
@@ -151,7 +151,7 @@ Conseils supplémentaires
 - Évitez de déployer des fichiers statiques volumineux avec chaque build (débogage) 
   - Utilisez UIFileSharingEnabled (info.plist) 
     - Les ressources peuvent être chargées une seule fois 
-- En cas de doute, utilisez l’indicateur `–time –time` pour mesurer la modification
+- En cas de doute, utilisez l’indicateur `--time --time` pour mesurer la modification
 
 La capture d’écran ci-dessous illustre comment définir ces options pour le simulateur dans vos options iOS :
 
