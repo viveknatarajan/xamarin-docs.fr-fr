@@ -6,13 +6,13 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/03/2018
-ms.openlocfilehash: 92b2eec32aed27e630ac68f3522aa3b40cfc940a
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.date: 08/09/2018
+ms.openlocfilehash: 55b6c10a9014b89534c37faeac2faf84f02339cd
+ms.sourcegitcommit: b6f3e55d4f3dcdc505abc8dc9241cff0bb5bd154
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514488"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780509"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configuration du kit Android SDK pour Xamarin.Android
 
@@ -36,7 +36,7 @@ Pour utiliser le Gestionnaire Xamarin Android SDK, vous avez besoin des éléme
 
 - Visual Studio 2017 (édition Community, Professional ou Enterprise). Visual Studio 2017 version 15.7 ou version ultérieure est nécessaire.
 
-- Visual Studio Tools pour Xamarin version 4.10.0 ou ultérieure. 
+- Visual Studio Tools pour Xamarin version 4.10.0 ou version ultérieure (installé dans le cadre de la charge de travail **Développement mobile avec .NET**). 
 
 Le Gestionnaire Xamarin Android SDK n’est pas compatible avec Visual Studio 2015. Les utilisateurs de Visual Studio 2015 doivent utiliser les outils du Gestionnaire du kit SDK fournis par Google dans le kit Android SDK.
 
