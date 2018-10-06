@@ -49,7 +49,7 @@ Le profilage est utile dans tous les types de développement, mais il est partic
 
 ## <a name="xamarin-profiler"></a>Xamarin Profiler
 
-Le profileur Xamarin fournit aux développeurs un moyen pour profiler des applications à partir de Visual Studio pour Mac ou Visual Studio. Le profileur collecte et affiche des informations sur l’application, qui peut ensuite être utilisée par le développeur pour analyser le comportement d’une application. Il existe plusieurs façons pour profiler une application avec le profileur Xamarin, à savoir le profilage de mémoire et échantillonnage statistique. Elles sont effectuées via les Allocations et le Générateur de profils de temps instrumente respectivement.
+Le profileur Xamarin fournit aux développeurs un moyen pour profiler des applications à partir de Visual Studio pour Mac ou Visual Studio. Le profileur collecte et affiche des informations sur l’application, qui peut ensuite être utilisée par le développeur pour analyser le comportement d’une application. Il existe plusieurs façons pour profiler une application avec le profileur Xamarin, à savoir le profilage de mémoire et échantillonnage statistique. Elles sont effectuées par les Allocations et le Générateur de profils de temps instrumente respectivement.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -88,11 +88,11 @@ Notez que vous pouvez **uniquement** profil **déboguer** configurations.
 
 ## <a name="profiler-basics"></a>Principes de base du profileur
 
-Cette section présente les différentes parties du profileur Xamarin et voyages ses fonctionnalités.
+Cette section présente les différentes parties du profileur Xamarin et celui de ses fonctionnalités.
 
 ### <a name="allow-profiling-in-your-app"></a>Autoriser le profilage dans votre application
 
-Avant que vous pouvez profiler avec succès de votre application, vous devez autoriser le profilage dans les Options de l’application du projet.
+Avant que vous puissiez profiler avec succès de votre application, vous devez autoriser le profilage dans les Options de l’application du projet.
 
  - iOS :
 
@@ -128,7 +128,7 @@ Avant que vous pouvez profiler avec succès de votre application, vous devez aut
 
 ### <a name="launching-the-profiler"></a>Lancement du profileur
 
-Le profileur Xamarin peut être lancé à partir de votre IDE lorsque vous profilez votre application Android ou e/s, ou comme une application autonome.
+Le profileur Xamarin peut être lancé à partir de votre IDE quand vous profilez votre application Android ou iOS. Le profileur peut aussi être lancé comme une application indépendante.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
