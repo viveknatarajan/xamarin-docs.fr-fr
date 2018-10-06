@@ -158,7 +158,7 @@ Le profileur peut servir à mesurer les performances et la mémoire. Pour cela, 
 
 #### <a name="saving-and-loading-profiler-sessions"></a>Enregistrement et chargement de Sessions du profileur
 
-Pour enregistrer une session de profilage à tout moment, choisissez **fichier > Enregistrer sous...**  à partir de la barre de menus du profileur. Ceci permet d’enregistrer le fichier dans _mlpd_ format, un format fortement compressé spéciale pour le profilage des données.
+Pour enregistrer une session de profilage à tout moment, choisissez **fichier > Enregistrer sous...**  à partir de la barre de menus du profileur. Ceci permet d’enregistrer le fichier dans _mlpd_ format, un format fortement compressé spécialement pour le profilage des données.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -196,13 +196,13 @@ Xamarin Profiler est composé de cinq sections, comme illustré ci-dessous :
 - **Instrumenter liste** – répertorie tous les instruments chargés pour la session de profilage.
 - **Tracer le graphique** – ces graphiques concernent horizontalement les instruments dans la liste d’instrumentation. Un curseur (affiché sous le Générateur de profils de temps) peut servir à modifier l’échelle.
 - **Instrumenter zone détails** -contient les données affichées par la vue sélectionnée de l’appareil en cours. Nous allons nous intéresser à ces vues plus en détail dans la section ci-dessous.
-- **Affichage de l’inspecteur** – contient les sections qui peuvent être sélectionnées par le contrôle segmenté. Les sections sont dépendantes de l’appareil sélectionné et inclut : paramètres de Configuration, les statistiques, les informations de Trace de la pile et chemin d’accès à la racine.
+- **Affichage de l’inspecteur** – contiens les sections qui peuvent être sélectionnées par le contrôle segmenté. Les sections sont dépendantes de l’appareil sélectionné et inclut : paramètres de Configuration, les statistiques, les informations de Trace de la pile et chemin d’accès à la racine.
 
 ### <a name="allocations"></a>Allocations
 
-Les informations relatives aux allocations fournit des informations détaillées sur les objets dans l’application comme ils sont en cours de création et le garbage collector.
+Les informations relatives aux allocations fournissent des informations détaillées sur les objets dans l’application comme ils sont en cours de création et le garbage collector.
 
-En haut du profileur est les allocations qui affiche la quantité de mémoire allouée à intervalles réguliers pendant le profilage. Actuellement, le graphique d’allocations est le nombre total d’allocations et non la taille du segment de mémoire à ce stade dans le temps. Dans un sens, il s’arrêtera jamais, seulement jamais augmentera. Cela inclut les objets alloués sur la pile. Selon la version du runtime utilisée, le graphique peut être différent, même pour la même application.
+En haut du profileur sont les allocations qui affichent la quantité de mémoire allouée à intervalles réguliers pendant le profilage. Actuellement, le graphique d’allocations est le nombre total d’allocations et non la taille du segment de mémoire à ce stade dans le temps. Dans un sens, il ne s’arrêtera jamais, seulement jamais augmentera. Cela inclut les objets alloués sur la pile. Selon la version du runtime utilisée, le graphique peut être différent, même pour la même application.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -216,7 +216,7 @@ En haut du profileur est les allocations qui affiche la quantité de mémoire al
 
 Il existe différentes vues de données dans l’acte d’Allocations, qui permettent aux développeurs d’analyser la manière dont leur application est à l’aide et la libération de mémoire. Ces vues sont décrites ci-dessous :
 
- -   **Allocations** – Cela affiche une liste de toutes les allocations et les regroupe par nom de classe. Cela fournit une excellente présentation des classes et méthodes utilisés, la fréquence à laquelle ils sont utilisés et la taille collective des classes utilisées. Double-clic sur une classe affiche le la mémoire allouée : 
+ -   **Allocations** – Cela affiche une liste de toutes les allocations et les regroupe par nom de classe. Cela fournit une excellente présentation des classes et méthodes utilisées, la fréquence à laquelle ils sont utilisés et la taille collective des classes utilisées. Double-clic sur une classe affiche le la mémoire allouée : 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -228,10 +228,10 @@ Il existe différentes vues de données dans l’acte d’Allocations, qui perme
 
 -----
 
-La vue de l’inspecteur pour les Allocations fournit les options de filtrage et regroupement d’objets, en fournissant des statistiques sur la mémoire allouée, ainsi que les allocations supérieure, ainsi que les vues pour la Trace de la pile et le chemin d’accès à la racine.
+La vue de l’inspecteur pour les Allocations fournit les options de filtrage et regroupement d’objets, en fournissant des statistiques sur la mémoire allouée, ainsi que les allocations supérieures, ainsi que les vues pour la Trace de la pile et le chemin d’accès à la racine.
 
  -   **Arborescence des appels** – Cela affiche l’arborescence des appels entière de tous les threads dans l’application et inclut des informations sur la mémoire allouée sur chaque nœud. Lorsqu’un élément est sélectionné dans la liste, tous les nœuds frères apparaîtront gris. Vous pouvez développer l’arborescence ou double-cliquez sur l’élément à descendre dans celui-ci. Lors de l’affichage de cette vue de données, l’inspecteur de paramètres d’affichage permet de modifier la façon dont elles sont présentées. Il existe actuellement deux options :
-    1.  **Arborescence des appels d’inversé** – il considère que la trace de pile de haut en bas. C’est une option de vue pratique qu’elle indique les méthodes le plus profond où le processeur a consacré sa durée.
+    1.  **Arborescence des appels d’inversé** – Il considère la trace de pile de haut en bas. C’est une option de vue pratique qui indique les méthodes les plus profondes où le processeur a consacré sa durée.
     2.  **Séparé par thread** – cette option organise l’arborescence des appels par thread.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
@@ -244,7 +244,7 @@ La vue de l’inspecteur pour les Allocations fournit les options de filtrage et
 
 -----
 
- -   **Instantanés** – ce volet affiche des informations sur les instantanés de la mémoire. Pour générer ces lorsque le profilage d’une application en temps réel, cliquez sur le _caméra_ bouton dans la barre d’outils à chaque point que vous aimeriez voir quelle mémoire est conservée et publié. Vous pouvez ensuite cliquer sur chaque capture instantanée pour découvrir ce qui se passe sous le capot. Notez que les instantanés ne peuvent être réalisées qu’en direct de profilage d’une application. 
+ -   **Instantanés** – ce volet affiche des informations sur les instantanés de la mémoire. Pour générer ces lorsque le profilage d’une application en temps réel, cliquez sur la _caméra_ bouton dans la barre d’outils à chaque point que vous aimeriez voir quelle mémoire est conservée et publié. Vous pouvez ensuite cliquer sur chaque capture instantanée pour découvrir ce qui se passe sous le capot. Notez que les instantanés ne peuvent être réalisés qu’en direct de profilage d’une application. 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
