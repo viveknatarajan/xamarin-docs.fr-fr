@@ -15,13 +15,13 @@ ms.locfileid: "37066674"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
-_Ce guide présente les principales fonctionnalités du profileur Xamarin. Il consulter les profileurs, profilage et lorsqu’elles doivent être utilisées et à un flux de travail standard pour le profilage d’applications de Xamarin._
+_Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin._
 
-Réussite de l’application dépend de l’expérience utilisateur. En tant que développeur vous avez peut-être implémenté certaines fonctionnalités vraiment impressionnant dans votre application, mais si l’application est lente ou complète de pannes, l’utilisateur sera probablement la supprimer.
+La réussite d'une application dépend de l'expérience utilisateur. Vous avez peut-être implémenté en tant que développeur certaines fonctionnalités vraiment impressionnantes dans votre application. Mais si votre application est lente ou comporte énormément de bugs, il y a de fortes chances que l’utilisateur la supprimera.
 
-Historiquement, Mono a proposé à un profileur de ligne de commande puissant pour collecter des informations sur les programmes s’exécutant dans le runtime Mono appelé le [profiler de journal Mono](http://www.mono-project.com/docs/debug+profile/profile/profiler/). Xamarin Profiler une interface graphique pour le Générateur de profils de journal Mono et prend en charge le profilage Android, iOS, tvOS et les applications Mac sur Mac et Android, iOS et tvOS des applications sur Windows.
+Historiquement, Mono a proposé à un profileur en ligne de commande puissant pour collecter des informations sur les programmes s’exécutant dans le runtime Mono appelé le [profiler de journal Mono](http://www.mono-project.com/docs/debug+profile/profile/profiler/). Xamarin Profiler une interface graphique pour le Générateur de profils de journal Mono et prend en charge le profilage Android, iOS, tvOS et les applications Mac sur Mac et Android, iOS et tvOS des applications sur Windows.
 
-Le profileur Xamarin comportant des instruments disponibles pour le profilage, Allocations, les Cycles et Générateur de profils de temps. Ce guide explore que ces instruments mesurent et comment ils analysent votre application et clarifie la signification des données présentées à l’écran.
+Le profileur Xamarin comportant des instruments disponibles pour le profilage, Allocations, les Cycles et Générateur de profils de temps. Ce guide explore seulement ces instruments de mesure, expliquant comment ils analysent votre application en clarifiant la signification des données présentées à l’écran.
 
 Ce guide examine les scénarios courants de profilage et présente le profileur en tant qu’outil pour analyser et optimiser des applications iOS et Android.
 
