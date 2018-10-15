@@ -18,7 +18,7 @@ ms.locfileid: "39353280"
 
 La classe **navigateur** permet à une application ouvrir un lien web dans le navigateur par défaut du système optimisé ou un navigateur externe.
 
-## <a name="using-browser"></a>À l’aide du navigateur
+## <a name="using-browser"></a>Utiliser navigateur
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

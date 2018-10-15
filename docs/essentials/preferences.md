@@ -18,7 +18,7 @@ ms.locfileid: "39353748"
 
 La classe **préférences** permet de stocker les préférences de l’application dans un magasin de clé/valeur.
 
-## <a name="using-preferences"></a>À l’aide des préférences
+## <a name="using-preferences"></a>Utiliser les préférences
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

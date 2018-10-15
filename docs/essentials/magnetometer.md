@@ -18,7 +18,7 @@ ms.locfileid: "39353787"
 
 La classe **magnétomètre** vous permet de surveiller le capteur de magnétomètre du périphérique qui indique l’orientation du périphérique par rapport à champ magnétique de la terre.
 
-## <a name="using-magnetometer"></a>À l’aide du magnétomètre
+## <a name="using-magnetometer"></a>Utiliser magnétomètre
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

@@ -16,9 +16,9 @@ ms.locfileid: "38842613"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Presse-papiers** permet de copier et coller du texte dans le Presse-papiers système entre les applications.
+La classe **Clipboard** permet de copier et coller du texte dans le Presse-papiers système, partagé entre les applications.
 
-## <a name="using-clipboard"></a>À l’aide du Presse-papiers
+## <a name="using-clipboard"></a>Utiliser Clipboard
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

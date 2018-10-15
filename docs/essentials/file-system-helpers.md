@@ -18,7 +18,7 @@ ms.locfileid: "38815616"
 
 La classe **FileSystem** contient une série de programmes d’assistance pour trouver les répertoires de cache et les données de l’application et ouvrir des fichiers à l’intérieur du package d’application.
 
-## <a name="using-file-system-helpers"></a>À l’aide des types de système de fichiers
+## <a name="using-file-system-helpers"></a>Utiliser le système de fichiers
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
