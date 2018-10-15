@@ -16,9 +16,9 @@ ms.locfileid: "39353611"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **texttospeech avec le** classe permet à une application d’utiliser intégrée dans les moteurs de synthèse vocale à énoncer le texte précédent de l’appareil et également pour les langues disponibles requête prenant en charge le moteur.
+La classe **texttospeech avec le** permet à une application d’utiliser intégrée dans les moteurs de synthèse vocale à énoncer le texte précédent de l’appareil et également pour les langues disponibles requête prenant en charge le moteur.
 
-## <a name="using-text-to-speech"></a>À l’aide de la synthèse vocale
+## <a name="using-text-to-speech"></a>Utilisation de la synthèse vocale
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de conversion texte-voix fonctionne en appelant le `SpeakAsync` méthode avec le texte et les paramètres facultatifs et retourne la fin de l’énoncé. 
+La fonctionnalité de conversion texte-voix fonctionne en appelant le `SpeakAsync` méthode avec le texte et les paramètres facultatifs et retourne la fin de l’énoncé.
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -110,10 +110,10 @@ public async Task SpeakNow()
 
 Les valeurs prises en charge pour ces paramètres sont les suivantes :
 
-| Paramètre | Minimum | Maximum |
-| --- | :---: | :---: |
-| Espacement | 0 | 2.0 |
-| Volume | 0 | 1.0 |
+| Paramètre  | Minimum | Maximum |
+| ---------- | :-----: | :-----: |
+| Espacement | 0       | 2.0     |
+| Volume     | 0       | 1.0     |
 
 ### <a name="speech-locales"></a>Paramètres régionaux de reconnaissance vocale
 

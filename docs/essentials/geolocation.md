@@ -16,17 +16,17 @@ ms.locfileid: "39353852"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **géolocalisation** classe fournit des API pour récupérer les coordonnées de géolocalisation actuelle de l’appareil.
+La classe **géolocalisation** fournit des API pour récupérer les coordonnées de géolocalisation actuelle de l’appareil.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **géolocalisation** fonctionnalité, la configuration spécifique à la plateforme suivante est requise :
+Pour accéder aux fonctionnalités de l'API **géolocalisation** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Épais et l’emplacement précis des autorisations sont nécessaires et doivent être configurées dans le projet Android. En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer que votre application utilise les fonctionnalités matérielles dans le fichier manifeste. Il peut être ajouté comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
+Ouvrez le dossier **AssemblyInfo.cs** de fichiers sous le **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]
@@ -38,7 +38,7 @@ Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et aj
 
 Ou mettre à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud :
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur de la **manifeste** nœud :
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -48,7 +48,7 @@ Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et aj
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-Ou avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **ACCESS_COARSE_LOCATION** et **ACCESS_FINE_LOCATION**autorisations. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+Ou avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **ACCESS_COARSE_LOCATION** et **ACCESS_FINE_LOCATION**autorisations. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -69,7 +69,7 @@ Vous devez définir le `Location` autorisation pour l’application. Cela est po
 
 -----
 
-## <a name="using-geolocation"></a>À l’aide de géolocalisation
+## <a name="using-geolocation"></a>Utilisation de géolocalisation
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -105,7 +105,7 @@ catch (Exception ex)
 }
 ```
 
-L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus de plus haut niveau de la mer. 
+L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus de plus haut niveau de la mer.
 
 Pour interroger l’appareil actuel [emplacement](xref:Xamarin.Essentials.Location) coordonnées, la `GetLocationAsync` peut être utilisé. Il est préférable de transmettre un intégral `GeolocationRequest` et `CancellationToken` dans la mesure où il peut prendre un certain temps pour obtenir l’emplacement de l’appareil.
 
@@ -141,42 +141,42 @@ Le tableau suivant présente la précision par plateforme :
 ### <a name="lowest"></a>Minimale
 
 | Plateforme | Distance (en mètres) |
-| --- | --- |
-| Android | 500 |
-| iOS | 3 000 |
-| UWP | 1000 - 5000 |
+| ---------- | -------------------- |
+| Android    | 500                  |
+| iOS        | 3 000                |
+| UWP        | 1000 - 5000          |
 
 ### <a name="low"></a>Faible
 
 | Plateforme | Distance (en mètres) |
-| --- | --- |
-| Android | 500 |
-| iOS | 1000 |
-| UWP | 300 - 3000 |
+| ---------- | -------------------- |
+| Android    | 500                  |
+| iOS        | 1000                 |
+| UWP        | 300 - 3000           |
 
 ### <a name="medium-default"></a>Moyenne (valeur par défaut)
 
 | Plateforme | Distance (en mètres) |
-| --- | --- |
-| Android | 100 - 500 |
-| iOS | 100 |
-| UWP | 30-500 |
+| ---------- | -------------------- |
+| Android    | 100 - 500            |
+| iOS        | 100                  |
+| UWP        | 30-500               |
 
 ### <a name="high"></a>Haute
 
 | Plateforme | Distance (en mètres) |
-| --- | --- |
-| Android | 0 - 100 |
-| iOS | 10 |
-| UWP | < = 10 |
+| ---------- | -------------------- |
+| Android    | 0 - 100              |
+| iOS        | 10                   |
+| UWP        | < = 10               |
 
 ### <a name="best"></a>Meilleur
 
 | Plateforme | Distance (en mètres) |
-| --- | --- |
-| Android | 0 - 100 |
-| iOS | ~0 |
-| UWP | < = 10 |
+| ---------- | -------------------- |
+| Android    | 0 - 100              |
+| iOS        | ~0                   |
+| UWP        | < = 10               |
 
 <a name="calculate-distance" />
 

@@ -16,9 +16,9 @@ ms.locfileid: "39353800"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **DeviceInfo** classe fournit des informations sur l’appareil que l’application est en cours d’exécution.
+La classe **DeviceInfo** fournit des informations sur l’appareil que l’application est en cours d’exécution.
 
-## <a name="using-deviceinfo"></a>À l’aide de DeviceInfo
+## <a name="using-deviceinfo"></a>Utilisation de DeviceInfo
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

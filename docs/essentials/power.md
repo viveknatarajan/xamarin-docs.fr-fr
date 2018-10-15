@@ -16,7 +16,7 @@ ms.locfileid: "39353488"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **Power** classe fournit des informations sur l’état du périphérique économiseur d’énergie, ce qui indique si l’appareil est en cours d’exécution dans un mode de faible puissance. Applications doivent éviter le traitement en arrière-plan si l’état d’économiseur d’énergie de l’appareil est activé.
+La classe **Power** fournit des informations sur l’état du périphérique économiseur d’énergie, ce qui indique si l’appareil est en cours d’exécution dans un mode de faible puissance. Applications doivent éviter le traitement en arrière-plan si l’état d’économiseur d’énergie de l’appareil est activé.
 
 ## <a name="background"></a>Présentation
 
@@ -24,7 +24,7 @@ Les appareils qui s’exécutent sur les batteries peuvent être définis dans u
 
 Pour les appareils Android, le **Power** classe retourne des informations significatives uniquement pour la version d’Android 5.0 (Lollipop) et versions ultérieures.
 
-## <a name="using-the-power-class"></a>À l’aide de la classe de l’alimentation
+## <a name="using-the-power-class"></a>Utilisation de la classe de l’alimentation
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -41,7 +41,7 @@ var status = Power.EnergySaverStatus;
 
 Cette propriété retourne un membre de la `EnergySaverStatus` énumération, qui est soit `On`, `Off`, ou `Unknown`. Si la propriété retourne `On`, l’application doit éviter de traitement en arrière-plan ou autres activités susceptibles de consommer beaucoup de puissance.
 
-L’application doit également installer un gestionnaire d’événements. Le **Power** classe expose un événement est déclenché lorsque l’état de l’économiseur d’énergie change :
+L’application doit également installer un gestionnaire d’événements. La classe **Power** expose un événement est déclenché lorsque l’état de l’économiseur d’énergie change :
 
 ```csharp
 public class EnergySaverTest

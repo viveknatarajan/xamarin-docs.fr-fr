@@ -16,12 +16,12 @@ ms.locfileid: "39353813"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **OrientationSensor** classe vous permet de surveiller l’orientation d’un appareil dans un espace tridimensionnel.
+La classe **OrientationSensor** vous permet de surveiller l’orientation d’un appareil dans un espace tridimensionnel.
 
 > [!NOTE]
 > Cette classe est pour déterminer l’orientation d’un appareil dans l’espace 3D. Si vous avez besoin déterminer si le périphérique vidéo d’affichage est en mode portrait ou paysage, utilisez le `Orientation` propriété de la `ScreenMetrics` objet disponible à partir de la [ `DeviceDisplay` ](device-display.md) classe.
 
-## <a name="using-orientationsensor"></a>À l’aide de OrientationSensor
+## <a name="using-orientationsensor"></a>Utilisation de OrientationSensor
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

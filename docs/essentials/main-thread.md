@@ -16,13 +16,13 @@ ms.locfileid: "38831423"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **MainThread** classe permet aux applications d’exécuter du code sur le thread principal de l’exécution, et pour déterminer si un bloc de code particulier est en cours d’exécution sur le thread principal.
+La classe **MainThread** permet aux applications d’exécuter du code sur le thread principal de l’exécution, et pour déterminer si un bloc de code particulier est en cours d’exécution sur le thread principal.
 
 ## <a name="background"></a>Présentation
 
-La plupart des systèmes d’exploitation, y compris iOS, Android et la plateforme Windows universelle, utilisent un modèle de thread unique pour le code de l’interface utilisateur. Ce modèle est nécessaire pour sérialiser les événements d’interface utilisateur, y compris les séquences de touches et entrée tactile. Ce thread est souvent appelé le _thread principal_ ou _thread d’interface utilisateur_ ou _thread d’interface utilisateur_. L’inconvénient de ce modèle est que tout le code qui accède aux éléments d’interface utilisateur doit s’exécuter sur le thread principal de l’application. 
+La plupart des systèmes d’exploitation, y compris iOS, Android et la plateforme Windows universelle, utilisent un modèle de thread unique pour le code de l’interface utilisateur. Ce modèle est nécessaire pour sérialiser les événements d’interface utilisateur, y compris les séquences de touches et entrée tactile. Ce thread est souvent appelé le _thread principal_ ou _thread d’interface utilisateur_ ou _thread d’interface utilisateur_. L’inconvénient de ce modèle est que tout le code qui accède aux éléments d’interface utilisateur doit s’exécuter sur le thread principal de l’application.
 
-Les applications doivent parfois d’utiliser des événements qui appellent le Gestionnaire d’événements sur un thread secondaire de l’exécution. (Les classes Xamarin.Essentials [ `Accelerometer` ](accelerometer.md), [ `Compass` ](compass.md), [ `Gyroscope` ](gyroscope.md), [ `Magnetometer` ](magnetometer.md), et [ `OrientationSensor` ](orientation-sensor.md) tous peuvent retourner des informations sur un thread secondaire lorsqu’il est utilisé avec des débits plus importants.) Si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, il doit exécuter ce code sur le thread principal. Le **MainThread** classe permet à l’application d’exécuter ce code sur le thread principal.
+Les applications doivent parfois d’utiliser des événements qui appellent le Gestionnaire d’événements sur un thread secondaire de l’exécution. (Les classes Xamarin.Essentials [ `Accelerometer` ](accelerometer.md), [ `Compass` ](compass.md), [ `Gyroscope` ](gyroscope.md), [ `Magnetometer` ](magnetometer.md), et [ `OrientationSensor` ](orientation-sensor.md) tous peuvent retourner des informations sur un thread secondaire lorsqu’il est utilisé avec des débits plus importants.) Si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, il doit exécuter ce code sur le thread principal. La classe **MainThread** permet à l’application d’exécuter ce code sur le thread principal.
 
 ## <a name="running-code-on-the-main-thread"></a>Code en cours d’exécution sur le Thread principal
 

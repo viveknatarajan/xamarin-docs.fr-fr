@@ -16,7 +16,7 @@ ms.locfileid: "39353280"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **navigateur** classe permet à une application ouvrir un lien web dans le navigateur par défaut du système optimisé ou un navigateur externe.
+La classe **navigateur** permet à une application ouvrir un lien web dans le navigateur par défaut du système optimisé ou un navigateur externe.
 
 ## <a name="using-browser"></a>À l’aide du navigateur
 

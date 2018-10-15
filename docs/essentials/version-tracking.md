@@ -16,7 +16,7 @@ ms.locfileid: "39353657"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **VersionTracking** classe vous permet de vérifier la version des applications et des numéros de build, ainsi que de voir des informations supplémentaires telles que si c’est la première fois l’application lancée jamais ou pour la version actuelle, obtenez le précédent informations de build et bien plus encore.
+La classe **VersionTracking** vous permet de vérifier la version des applications et des numéros de build, ainsi que de voir des informations supplémentaires telles que si c’est la première fois l’application lancée jamais ou pour la version actuelle, obtenez le précédent informations de build et bien plus encore.
 
 ## <a name="using-version-tracking"></a>Utilisation du suivi de Version
 

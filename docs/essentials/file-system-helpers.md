@@ -16,7 +16,7 @@ ms.locfileid: "38815616"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **FileSystem** classe contient une série de programmes d’assistance pour trouver les répertoires de cache et les données de l’application et ouvrir des fichiers à l’intérieur du package d’application.
+La classe **FileSystem** contient une série de programmes d’assistance pour trouver les répertoires de cache et les données de l’application et ouvrir des fichiers à l’intérieur du package d’application.
 
 ## <a name="using-file-system-helpers"></a>À l’aide des types de système de fichiers
 
@@ -57,14 +57,14 @@ Pour ouvrir un fichier qui est fourni dans le package d’application :
 - **CacheDirectory** – retourne le [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir) du contexte actuel.
 - **AppDataDirectory** – retourne le [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) du contexte actuel et sont sauvegardées à l’aide [sauvegarde automatique](https://developer.android.com/guide/topics/data/autobackup.html) démarrage sur les API 23 et versions ultérieures.
 
-Ajouter n’importe quel fichier dans le **actifs** dossier Android du projet et marquer l’Action de génération comme **AndroidAsset** à utiliser avec `OpenAppPackageFileAsync`.
+Ajouter n’importe quel fichier dans le dossier **actifs** Android du projet et marquer l’Action de génération comme **AndroidAsset** à utiliser avec `OpenAppPackageFileAsync`.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 - **CacheDirectory** – retourne le [bibliothèque/Caches](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) directory.
 - **AppDataDirectory** – retourne le [bibliothèque](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) directory est sauvegardée par iTunes et iCloud.
 
-Ajouter n’importe quel fichier dans le **ressources** dossier sur le site iOS de projet et marquer l’Action de génération comme **BundledResource** à utiliser avec `OpenAppPackageFileAsync`.
+Ajouter n’importe quel fichier dans le dossier **ressources** sur le site iOS de projet et marquer l’Action de génération comme **BundledResource** à utiliser avec `OpenAppPackageFileAsync`.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

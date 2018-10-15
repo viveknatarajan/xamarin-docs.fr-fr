@@ -16,17 +16,17 @@ ms.locfileid: "39353358"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **torche** classe a la possibilité d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
+La classe **torche** a la possibilité d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **torche** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **torche** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Les autorisations torche et caméra sont requises et doivent être configurées dans le projet Android. Il peut être ajouté comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
+Ouvrez le dossier **AssemblyInfo.cs** de fichiers sous le **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
@@ -35,14 +35,14 @@ Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et aj
 
 OU mettre à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **torche** et **caméra** autorisations. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **torche** et **caméra** autorisations. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 En ajoutant ces autorisations [Google Play filtrent automatiquement les périphériques](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sans matériel spécifique. Vous pouvez obtenir contourner ce problème en ajoutant le code suivant à votre fichier AssemblyInfo.cs dans votre projet Android :
 
@@ -61,7 +61,7 @@ Aucune configuration supplémentaire n’est requis.
 
 -----
 
-## <a name="using-flashlight"></a>À l’aide de torche
+## <a name="using-flashlight"></a>Utilisation de torche
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -106,7 +106,7 @@ Sur les niveaux d’API plus récente, [Torch Mode](https://developer.android.co
 
 #### <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
 
-Une texture de surface d’exposition de caméra est créée pour activer ou désactiver le `FlashMode` de l’unité de l’appareil photo. 
+Une texture de surface d’exposition de caméra est créée pour activer ou désactiver le `FlashMode` de l’unité de l’appareil photo.
 
 ### <a name="iostabios"></a>[iOS](#tab/ios)
 

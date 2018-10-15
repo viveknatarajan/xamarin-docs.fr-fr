@@ -16,11 +16,11 @@ ms.locfileid: "39353673"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **géocodage** classe fournit des API aux Géocode un placemark un coordonnées positionnels et inverser des coordonnées de Géocode vers un placemark.
+La classe **géocodage** fournit des API aux Géocode un placemark un coordonnées positionnels et inverser des coordonnées de Géocode vers un placemark.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **géocodage** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **géocodage** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -42,7 +42,7 @@ Geocoding.MapKey = "YOUR-KEY-HERE";
 
 -----
 
-## <a name="using-geocoding"></a>À l’aide de géocodage
+## <a name="using-geocoding"></a>Utilisation de géocodage
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

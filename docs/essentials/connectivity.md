@@ -16,17 +16,17 @@ ms.locfileid: "39353696"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **connectivité** classe vous permet de surveiller les modifications dans les conditions du réseau de l’appareil, vérifiez l’accès réseau actuelle, et comment il est actuellement connecté.
+La classe **connectivité** vous permet de surveiller les modifications dans les conditions du réseau de l’appareil, vérifiez l’accès réseau actuelle, et comment il est actuellement connecté.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **connectivité** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **connectivité** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Le `AccessNetworkState` autorisation est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
+L'autorisation `AccessNetworkState` est obligatoire et doit être configurée dans le projet Android. Elle peut être ajoutée comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
@@ -34,13 +34,13 @@ Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et aj
 
 OU mettre à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **état d’accès réseau** autorisation. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **état d’accès réseau** autorisation. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -52,7 +52,7 @@ Aucune configuration supplémentaire n’est requis.
 
 -----
 
-## <a name="using-connectivity"></a>À l’aide de la connectivité
+## <a name="using-connectivity"></a>Utilisation de la connectivité
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

@@ -16,17 +16,17 @@ ms.locfileid: "39353865"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **Vibration** classe vous permet de démarrer et arrêter la fonctionnalité vibrer pour une quantité de temps souhaitée.
+La classe **Vibration** vous permet de démarrer et arrêter la fonctionnalité vibrer pour une quantité de temps souhaitée.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **Vibration** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **Vibration** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-L’autorisation vibrer est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
+L'autorisation `Vibrate` est obligatoire et doit être configurée dans le projet Android. Elle peut être ajoutée comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
@@ -34,13 +34,13 @@ Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et aj
 
 OU mettre à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **vibrer** autorisation. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **vibrer** autorisation. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -52,7 +52,7 @@ Aucune différence de la plateforme.
 
 -----
 
-## <a name="using-vibration"></a>À l’aide de Vibration
+## <a name="using-vibration"></a>Utilisation de Vibration
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

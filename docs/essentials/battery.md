@@ -16,31 +16,31 @@ ms.locfileid: "39514308"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **batterie** classe vous permet de vérifier les informations sur la pile et surveillez les modifications apportées de l’appareil.
+La classe **batterie** vous permet d'obternir et de surveiller les informations sur la batterie de l’appareil.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **batterie** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **batterie** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Le `Battery` autorisation est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
+L'autorisation `Battery` est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.BatteryStats)]
 ```
 
-OU mettre à jour le manifeste Android :
+OU mettez à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **batterie** autorisation. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **batterie** autorisation. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -52,7 +52,7 @@ Aucune configuration supplémentaire n’est requis.
 
 -----
 
-## <a name="using-battery"></a>À l’aide de la batterie
+## <a name="using-battery"></a>Utilisation de la batterie
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -137,7 +137,7 @@ Aucune différence de la plateforme.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* Appareil doit être utilisé pour tester les API. 
+* Appareil doit être utilisé pour tester les API.
 * Retourne uniquement des `AC` ou `Battery` pour `PowerSource`.
 * Pas possible d’annuler la vibration.
 

@@ -16,9 +16,9 @@ ms.locfileid: "39353624"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **Gyroscope** classe vous permet de surveiller le capteur de gyroscope du périphérique qui est la rotation autour des trois axes du principal de l’appareil.
+La classe **Gyroscope** vous permet de surveiller le capteur de gyroscope du périphérique qui est la rotation autour des trois axes du principal de l’appareil.
 
-## <a name="using-gyroscope"></a>À l’aide de Gyroscope
+## <a name="using-gyroscope"></a>Utilisation de Gyroscope
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

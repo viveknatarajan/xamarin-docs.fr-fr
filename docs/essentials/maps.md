@@ -16,9 +16,9 @@ ms.locfileid: "39353933"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **mappe** classe permet à une application ouvrir l’application de cartes installées à un emplacement spécifique ou à placemark.
+La classe **mappe** permet à une application ouvrir l’application de cartes installées à un emplacement spécifique ou à placemark.
 
-## <a name="using-maps"></a>À l’aide de cartes
+## <a name="using-maps"></a>Utilisation de cartes
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

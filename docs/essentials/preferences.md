@@ -16,7 +16,7 @@ ms.locfileid: "39353748"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **préférences** classe permet de stocker les préférences de l’application dans un magasin de clé/valeur.
+La classe **préférences** permet de stocker les préférences de l’application dans un magasin de clé/valeur.
 
 ## <a name="using-preferences"></a>À l’aide des préférences
 

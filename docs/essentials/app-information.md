@@ -12,13 +12,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38831505"
 ---
-# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials : Informations sur l’application
+# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials : informations sur l’application
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **AppInfo** classe fournit des informations sur votre application.
+La classe **AppInfo** fournit des informations générales sur votre application.
 
-## <a name="using-appinfo"></a>À l’aide de AppInfo
+## <a name="using-appinfo"></a>Utiliser AppInfo
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-## <a name="obtaining-application-information"></a>Obtention d’informations sur l’Application :
+## <a name="obtaining-application-information"></a>Obtenir des informations sur l’application
 
 Les informations suivantes sont exposées via l’API :
 
@@ -44,16 +44,16 @@ var version = AppInfo.VersionString;
 var build = AppInfo.BuildString;
 ```
 
-## <a name="displaying-application-settings"></a>Affichage des paramètres d’Application
+## <a name="displaying-application-settings"></a>Afficher les paramètres de l'application
 
-Le **AppInfo** classe peut également afficher une page de paramètres gérés par le système d’exploitation pour l’application :
+La classe **AppInfo** peut également afficher la page des paramètres systèmes gérés par le système d’exploitation spécifiquement pour l’application :
 
 ```csharp
 // Display settings page
 AppInfo.OpenSettings();
 ```
 
-Cette page de paramètres permet à l’utilisateur à modifier les autorisations d’application et effectuer d’autres tâches spécifiques à la plateforme.
+Cette page de paramètres permet à l’utilisateur de modifier les autorisations d’application et effectuer d’autres tâches spécifiques à la plateforme.
 
 ## <a name="api"></a>API
 

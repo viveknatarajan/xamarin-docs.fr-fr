@@ -16,7 +16,7 @@ ms.locfileid: "39353787"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **magnétomètre** classe vous permet de surveiller le capteur de magnétomètre du périphérique qui indique l’orientation du périphérique par rapport à champ magnétique de la terre.
+La classe **magnétomètre** vous permet de surveiller le capteur de magnétomètre du périphérique qui indique l’orientation du périphérique par rapport à champ magnétique de la terre.
 
 ## <a name="using-magnetometer"></a>À l’aide du magnétomètre
 

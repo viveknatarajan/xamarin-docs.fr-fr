@@ -16,11 +16,11 @@ ms.locfileid: "39353293"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **SecureStorage** classe permet de stocker en toute sécurité des paires clé/valeur simple.
+La classe **SecureStorage** permet de stocker en toute sécurité des paires clé/valeur simple.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **SecureStorage** fonctionnalité, la configuration spécifique à la plateforme suivante est requise :
+Pour accéder aux fonctionnalités de l'API **SecureStorage** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

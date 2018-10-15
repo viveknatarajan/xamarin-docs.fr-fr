@@ -16,9 +16,9 @@ ms.locfileid: "39353881"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **boussole** classe vous permet de surveiller l’en-tête de l’appareil le nord magnétique.
+La classe **boussole** vous permet de surveiller l’en-tête de l’appareil le nord magnétique.
 
-## <a name="using-compass"></a>À l’aide de la boussole
+## <a name="using-compass"></a>Utilisation de la boussole
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

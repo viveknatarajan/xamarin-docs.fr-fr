@@ -16,7 +16,7 @@ ms.locfileid: "38842613"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **Presse-papiers** classe permet de copier et coller du texte dans le Presse-papiers système entre les applications.
+La classe **Presse-papiers** permet de copier et coller du texte dans le Presse-papiers système entre les applications.
 
 ## <a name="using-clipboard"></a>À l’aide du Presse-papiers
 
