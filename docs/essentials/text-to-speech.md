@@ -18,7 +18,7 @@ ms.locfileid: "39353611"
 
 La classe **texttospeech avec le** permet à une application d’utiliser intégrée dans les moteurs de synthèse vocale à énoncer le texte précédent de l’appareil et également pour les langues disponibles requête prenant en charge le moteur.
 
-## <a name="using-text-to-speech"></a>Utilisation de la synthèse vocale
+## <a name="using-text-to-speech"></a>Utilisation de **TextToSpeech**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

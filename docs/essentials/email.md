@@ -16,9 +16,9 @@ ms.locfileid: "39353904"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **E-mail** permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris le sujet, les corps et les destinataires (à, CC, Cci).
+La classe **Email** permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris le sujet, les corps et les destinataires (à, CC, Cci).
 
-## <a name="using-email"></a>Utilisation de la messagerie
+## <a name="using-email"></a>Utilisation de **Email**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

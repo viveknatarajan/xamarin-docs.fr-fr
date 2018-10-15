@@ -18,7 +18,7 @@ ms.locfileid: "39353748"
 
 La classe **préférences** permet de stocker les préférences de l’application dans un magasin de clé/valeur.
 
-## <a name="using-preferences"></a>Utiliser les préférences
+## <a name="using-preferences"></a>Utilisation de **Preferences**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -68,7 +68,7 @@ Les types de données suivants sont pris en charge dans **préférences**:
 
 Valeurs de `DateTime` sont stockées dans un format de fichier binaire de 64 bits (entier long) à l’aide de deux méthodes définies par le `DateTime` classe : le [ `ToBinary` ](xref:System.DateTime.ToBinary) méthode est utilisée pour encoder le `DateTime` valeur et le [ `FromBinary` ](xref:System.DateTime.FromBinary(System.Int64)) méthode décode la valeur. Consultez la documentation de ces méthodes pour les ajustements apportés à décodé valeurs lorsque un `DateTime` est stocké qui est pas une valeur de temps universel coordonné (UTC).
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

@@ -18,7 +18,7 @@ ms.locfileid: "39353800"
 
 La classe **DeviceInfo** fournit des informations sur l’appareil que l’application est en cours d’exécution.
 
-## <a name="using-deviceinfo"></a>Utilisation de DeviceInfo
+## <a name="using-deviceinfo"></a>Utilisation de **DeviceInfo**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -74,7 +74,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 `DeviceInfo.DeviceType` met en corrélation une énumération pour déterminer si l’application s’exécute sur un appareil physique ou virtuel. Un appareil virtuel est un simulateur ou un émulateur.
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 

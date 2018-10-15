@@ -16,11 +16,11 @@ ms.locfileid: "39353358"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **torche** a la possibilité d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
+La classe **Flashlight** a la possibilité d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **torche** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Flashlight** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -61,7 +61,7 @@ Aucune configuration supplémentaire n’est requis.
 
 -----
 
-## <a name="using-flashlight"></a>Utilisation de torche
+## <a name="using-flashlight"></a>Utilisation de **Flashlight**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -94,7 +94,7 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 ### <a name="androidtabandroid"></a>[Android](#tab/android)
 

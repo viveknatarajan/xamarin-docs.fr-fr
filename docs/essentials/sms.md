@@ -18,7 +18,7 @@ ms.locfileid: "38815595"
 
 La classe **Sms** permet à une application ouvrir l’application de SMS par défaut avec un message à envoyer à un destinataire spécifié.
 
-## <a name="using-sms"></a>Utilisation de Sms
+## <a name="using-sms"></a>Utilisation de **Sms**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

@@ -52,7 +52,7 @@ Aucune configuration supplémentaire n’est requis.
 
 -----
 
-## <a name="using-connectivity"></a>Utilisation de la connectivité
+## <a name="using-connectivity"></a>Utilisation de **Connectivity**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

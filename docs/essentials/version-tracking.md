@@ -18,7 +18,7 @@ ms.locfileid: "39353657"
 
 La classe **VersionTracking** vous permet de vérifier la version des applications et des numéros de build, ainsi que de voir des informations supplémentaires telles que si c’est la première fois l’application lancée jamais ou pour la version actuelle, obtenez le précédent informations de build et bien plus encore.
 
-## <a name="using-version-tracking"></a>Utilisation du suivi de Version
+## <a name="using-version-tracking"></a>Utilisation de **VersionTracking**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -70,7 +70,7 @@ var versionHistory = VersionTracking.VersionHistory;
 var buildHistory = VersionTracking.BuildHistory;
 ```
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 Toutes les informations de version sont stockées à l’aide de la [préférences](preferences.md) API dans Xamarin.Essentials et est stocké avec un nom de fichier de **[votre-application-PACKAGE-ID].xamarinessentials.versiontracking** et suit le même persistance des données décrites dans le [préférences](preferences.md#persistence) documentation.
 

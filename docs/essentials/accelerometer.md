@@ -18,7 +18,7 @@ ms.locfileid: "40184426"
 
 La classe **Accelerometer** vous permet de surveiller le capteur de l’accéléromètre de l’appareil, qui indique l’accélération de l’appareil dans un espace tridimensionnel.
 
-## <a name="using-accelerometer"></a>Utilisation de l’accéléromètre
+## <a name="using-accelerometer"></a>Utilisation de **Accelerometer**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

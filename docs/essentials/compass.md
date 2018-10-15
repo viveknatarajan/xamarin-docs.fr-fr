@@ -16,9 +16,9 @@ ms.locfileid: "39353881"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **boussole** vous permet de surveiller l’en-tête de l’appareil le nord magnétique.
+La classe **Compass** vous permet de surveiller l’en-tête de l’appareil le nord magnétique.
 
-## <a name="using-compass"></a>Utilisation de la boussole
+## <a name="using-compass"></a>Utilisation de **Compass**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -70,7 +70,7 @@ public class CompassTest
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

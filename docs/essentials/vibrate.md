@@ -52,7 +52,7 @@ Aucune différence de la plateforme.
 
 -----
 
-## <a name="using-vibration"></a>Utilisation de Vibration
+## <a name="using-vibration"></a>Utilisation de **Vibration**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

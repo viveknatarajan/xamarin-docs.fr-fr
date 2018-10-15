@@ -18,7 +18,7 @@ ms.locfileid: "38831505"
 
 La classe **AppInfo** fournit des informations générales sur votre application.
 
-## <a name="using-appinfo"></a>Utiliser AppInfo
+## <a name="using-appinfo"></a>Utilisation de **AppInfo**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

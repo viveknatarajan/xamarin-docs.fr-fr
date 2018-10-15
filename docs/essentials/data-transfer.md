@@ -18,7 +18,7 @@ ms.locfileid: "39353517"
 
 La classe **DataTransfer** permet à une application de partager des données telles que des liens web et de texte pour d’autres applications sur l’appareil.
 
-## <a name="using-data-transfer"></a>Utilisation de transfert de données
+## <a name="using-data-transfer"></a>Utilisation de **DataTransfer**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

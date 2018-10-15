@@ -18,7 +18,7 @@ ms.locfileid: "39353826"
 
 La classe **DeviceDisplay** fournit des informations à propos des métriques d’écran de l’appareil, l’application est en cours d’exécution.
 
-## <a name="using-devicedisplay"></a>Utilisation de DeviceDisplay
+## <a name="using-devicedisplay"></a>Utilisation de **DeviceDisplay**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

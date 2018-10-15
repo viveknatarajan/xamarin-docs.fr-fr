@@ -69,7 +69,7 @@ Vous devez définir le `Location` autorisation pour l’application. Cela est po
 
 -----
 
-## <a name="using-geolocation"></a>Utilisation de géolocalisation
+## <a name="using-geolocation"></a>Utilisation de **Geolocation**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

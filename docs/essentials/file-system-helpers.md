@@ -18,7 +18,7 @@ ms.locfileid: "38815616"
 
 La classe **FileSystem** contient une série de programmes d’assistance pour trouver les répertoires de cache et les données de l’application et ouvrir des fichiers à l’intérieur du package d’application.
 
-## <a name="using-file-system-helpers"></a>Utiliser le système de fichiers
+## <a name="using-file-system-helpers"></a>Utilisation de **FileSystem**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -32,7 +32,7 @@ Pour obtenir le répertoire de l’application pour stocker les **mettre en cach
 var cacheDir = FileSystem.CacheDirectory;
 ```
 
-Pour obtenir le répertoire de niveau supérieur de l’application pour tous les fichiers qui ne sont pas des fichiers de données utilisateur. Ces fichiers sont sauvegardés avec le système d’exploitation que la synchronisation de framework. Consultez les caractéristiques de mise en œuvre la plateforme ci-dessous.
+Pour obtenir le répertoire de niveau supérieur de l’application pour tous les fichiers qui ne sont pas des fichiers de données utilisateur. Ces fichiers sont sauvegardés avec le système d’exploitation que la synchronisation de framework. Consultez les Implémentations spécifiques par plateforme ci-dessous.
 
 ```csharp
 var mainDir = FileSystem.AppDataDirectory;
@@ -50,7 +50,7 @@ Pour ouvrir un fichier qui est fourni dans le package d’application :
  }
 ```
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

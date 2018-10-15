@@ -18,7 +18,7 @@ ms.locfileid: "39130791"
 
 La classe **PhoneDialer** permet à une application ouvrir un numéro de téléphone dans le numéroteur.
 
-## <a name="using-phone-dialer"></a>Utiliser Numéroteur téléphonique
+## <a name="using-phone-dialer"></a>Utilisation de **PhoneDialer**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Stockage sécurisé'
-description: Ce document décrit la classe SecureStorage dans Xamarin.Essentials, ce qui permet de stocker en toute sécurité des paires clé/valeur simple. Elle explique comment utiliser la classe, les caractéristiques de mise en œuvre la plateforme et les limitations.
+description: Ce document décrit la classe SecureStorage dans Xamarin.Essentials, ce qui permet de stocker en toute sécurité des paires clé/valeur simple. Elle explique comment utiliser la classe, les Implémentations spécifiques par plateforme et les limitations.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
@@ -40,7 +40,7 @@ Aucune configuration supplémentaire n’est requis.
 
 -----
 
-## <a name="using-secure-storage"></a>L’utilisation du stockage sécurisé
+## <a name="using-secure-storage"></a>Utilisation de **SecureStorage**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -90,7 +90,7 @@ SecureStorage.RemoveAll();
 ```
 
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

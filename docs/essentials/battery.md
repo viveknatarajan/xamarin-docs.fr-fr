@@ -52,7 +52,7 @@ Aucune configuration supplémentaire n’est requis.
 
 -----
 
-## <a name="using-battery"></a>Utilisation de la batterie
+## <a name="using-battery"></a>Utilisation de **Battery**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

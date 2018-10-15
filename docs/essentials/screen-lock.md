@@ -18,7 +18,7 @@ ms.locfileid: "38848568"
 
 La classe **ScreenLock** peut demander à conserver l’écran de tomber en veille quand l’application est en cours d’exécution.
 
-## <a name="using-screenlock"></a>Utilisation de ScreenLock
+## <a name="using-screenlock"></a>Utilisation de **ScreenLock**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

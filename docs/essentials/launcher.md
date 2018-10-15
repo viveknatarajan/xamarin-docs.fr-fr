@@ -16,9 +16,9 @@ ms.locfileid: "39573631"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Lanceur** permet à une application ouvrir un URI par le système. Cela est souvent utilisé lors de la profondeur de liaison dans les schémas d’URI personnalisés d’une autre application. Si vous souhaitez pour ouvrir le navigateur sur un site Web, reportez-vous à la **[navigateur](open-browser.md)** API.
+La classe **Launcher** permet à une application ouvrir un URI par le système. Cela est souvent utilisé lors de la profondeur de liaison dans les schémas d’URI personnalisés d’une autre application. Si vous souhaitez pour ouvrir le navigateur sur un site Web, reportez-vous à la **[navigateur](open-browser.md)** API.
 
-## <a name="using-launcher"></a>Utiliser Lanceur
+## <a name="using-launcher"></a>Utilisation de **Launcher**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

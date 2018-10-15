@@ -18,7 +18,7 @@ ms.locfileid: "39353933"
 
 La classe **mappe** permet à une application ouvrir l’application de cartes installées à un emplacement spécifique ou à placemark.
 
-## <a name="using-maps"></a>Utilisation de cartes
+## <a name="using-maps"></a>Utilisation de **Maps**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -97,7 +97,7 @@ public class MapsTest
 
 --------------
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

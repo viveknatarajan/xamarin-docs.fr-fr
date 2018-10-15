@@ -24,7 +24,7 @@ Les appareils qui s’exécutent sur les batteries peuvent être définis dans u
 
 Pour les appareils Android, le **Power** classe retourne des informations significatives uniquement pour la version d’Android 5.0 (Lollipop) et versions ultérieures.
 
-## <a name="using-the-power-class"></a>Utilisation de la classe de l’alimentation
+## <a name="using-the-power-class"></a>Utilisation de **Power**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

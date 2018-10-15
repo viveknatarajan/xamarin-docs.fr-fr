@@ -42,7 +42,7 @@ Geocoding.MapKey = "YOUR-KEY-HERE";
 
 -----
 
-## <a name="using-geocoding"></a>Utilisation de géocodage
+## <a name="using-geocoding"></a>Utilisation de **Geocoding**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

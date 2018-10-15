@@ -18,7 +18,7 @@ ms.locfileid: "38842613"
 
 La classe **Clipboard** permet de copier et coller du texte dans le Presse-papiers système, partagé entre les applications.
 
-## <a name="using-clipboard"></a>Utiliser Clipboard
+## <a name="using-clipboard"></a>Utilisation de **Clipboard**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
