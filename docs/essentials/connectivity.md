@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : connectivité'
+title: 'Xamarin.Essentials : Connectivité'
 description: La classe de connectivité dans Xamarin.Essentials vous permet de surveiller les modifications des conditions de réseau de l’appareil, vérifiez l’accès réseau actuelle, et comment il est actuellement connecté.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353696"
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials : connectivité
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials : Connectivité
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

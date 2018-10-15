@@ -1,5 +1,5 @@
 ---
-title: Navigateur de Xamarin.Essentials Open
+title: 'Xamarin.Essentials : Navigateur internet'
 description: La classe de navigateur dans Xamarin.Essentials permet à une application ouvrir un lien web dans le navigateur par défaut du système optimisé ou un navigateur externe.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353280"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials : navigateur
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials : Navigateur internet
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

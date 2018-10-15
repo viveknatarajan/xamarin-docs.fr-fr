@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : OrientationSensor'
+title: 'Xamarin.Essentials : Capteur d’orientation'
 description: La classe OrientationSensor vous permet de surveiller l’orientation d’un appareil dans l’espace à trois dimensions.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: charlespetzold
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353813"
 ---
-# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials : OrientationSensor
+# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials : Capteur d’orientation
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : géolocalisation'
+title: 'Xamarin.Essentials : Géolocalisation'
 description: Ce document décrit la classe de géolocalisation dans Xamarin.Essentials, qui fournit des API pour récupérer les coordonnées de géolocalisation actuelle de l’appareil.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353852"
 ---
-# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials : géolocalisation
+# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials : Géolocalisation
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

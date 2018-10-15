@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Compass'
+title: 'Xamarin.Essentials : Boussole'
 description: Ce document décrit la classe Compass dans Xamarin.Essentials, ce qui vous permet d’analyser l’en-tête de l’appareil le nord magnétique.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353881"
 ---
-# <a name="xamarinessentials-compass"></a>Xamarin.Essentials : Compass
+# <a name="xamarinessentials-compass"></a>Xamarin.Essentials : Boussole
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

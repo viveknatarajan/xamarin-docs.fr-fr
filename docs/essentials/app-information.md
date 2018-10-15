@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38831505"
 ---
-# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials : informations sur l’application
+# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials : Informations sur l’application
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : géocodage'
+title: 'Xamarin.Essentials : Géocodage'
 description: La classe de géocodage dans Xamarin.Essentials fournit des API pour les deux Géocode un placemark un coordonnées positionnels et inverser des coordonnées de Géocode vers un placemark.
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353673"
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials : géocodage
+# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials : Géocodage
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

@@ -1,5 +1,5 @@
 ---
-title: Lanceur de Xamarin.Essentials
+title: 'Xamarin.Essentials : Lanceur Inter-app'
 description: La classe Lanceur dans Xamarin.Essentials permet à une application ouvrir un URI par le système.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 08/06/2018
 ms.locfileid: "39573631"
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials : Lanceur
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials : Lanceur Inter-app
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

@@ -35,10 +35,10 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [Boussole](compass.md?context=xamarin/xamarin-forms) : obtenir l'orientation de la boussole de l’appareil.
 * [Connectivité](connectivity.md?context=xamarin/xamarin-forms) : obtenir l’état de la connectivité et détecter les modifications.
 * [Transfert de données](data-transfer.md?context=xamarin/xamarin-forms) : partager des données comme du texte ou un URL par le biais d’autres applications.
-* [Informations d’affichage de périphérique](device-display.md?context=xamarin/xamarin-forms) : obtenir des dimensions de l’écran et l’orientation de l’appareil.
+* [Informations sur l'écran de l'appareil](device-display.md?context=xamarin/xamarin-forms) : obtenir des dimensions de l’écran et l’orientation de l’appareil.
 * [Informations sur l’appareil](device-information.md?context=xamarin/xamarin-forms) : obtenir des informations générales sur l’appareil.
 * [E-mail](email.md?context=xamarin/xamarin-forms) : envoyer des messages électroniques.
-* [Assistances de système de fichiers](file-system-helpers.md?context=xamarin/xamarin-forms) : lire et écrire des fichiers dans le système de fichiers de l'appareil.
+* [Système de fichiers](file-system-helpers.md?context=xamarin/xamarin-forms) : lire et écrire des fichiers dans le système de fichiers de l'appareil.
 * [Torche](flashlight.md?context=xamarin/xamarin-forms) : activer/désactiver la torche.
 * [Géocodage](geocoding.md?context=xamarin/xamarin-forms) : transformer des adresses en coordonnées géographiques et vice versa.
 * [Géolocalisation](geolocation.md?context=xamarin/xamarin-forms) : obtenir les coordonnées GPS de l'appareil.
@@ -52,7 +52,7 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [Téléphone](phone-dialer.md?context=xamarin/xamarin-forms) : démarrer un appel.
 * [Économiseur d'énergie](power.md?context=xamarin/xamarin-forms) : obtenir l’état de l'économiseur d’énergie.
 * [Préférences](preferences.md?context=xamarin/xamarin-forms) : obternir et éditer les préférences de l'application.
-* [Écran de verrouillage](screen-lock.md?context=xamarin/xamarin-forms) : maintenir l’écran de l’appareil éveillé.
+* [Verrouillage d’écran](screen-lock.md?context=xamarin/xamarin-forms) : maintenir l’écran de l’appareil éveillé.
 * [Stockage sécurisé](secure-storage.md?context=xamarin/xamarin-forms) : stocker et sécuriser des données.
 * [SMS](sms.md?context=xamarin/xamarin-forms) : envoyer un message SMS.
 * [Synthèse vocale](text-to-speech.md?context=xamarin/xamarin-forms) : vocaliser du texte dans votre application.

@@ -1,5 +1,5 @@
 ---
-title: Mappages de Xamarin.Essentials
+title: 'Xamarin.Essentials : Carte'
 description: La classe de mappages dans Xamarin.Essentials permet à une application ouvrir l’application de cartes installées à un emplacement spécifique ou à placemark.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353933"
 ---
-# <a name="xamarinessentials-maps"></a>Xamarin.Essentials : mappages
+# <a name="xamarinessentials-maps"></a>Xamarin.Essentials : Carte
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

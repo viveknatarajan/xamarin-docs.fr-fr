@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : État de l’économiseur d’énergie'
+title: 'Xamarin.Essentials : Économiseur d'énergie'
 description: La classe Power permet à un programme obtenir l’état de l’économiseur d’énergie pour déterminer si l’appareil fonctionne dans un mode de faible puissance.
 ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
 author: charlespetzold
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353488"
 ---
-# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials : État de l’économiseur d’énergie
+# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials : Économiseur d'énergie
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

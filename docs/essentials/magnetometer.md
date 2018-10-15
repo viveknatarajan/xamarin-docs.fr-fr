@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : magnétomètre'
+title: 'Xamarin.Essentials : Magnétomètre'
 description: La classe magnétomètre dans Xamarin.Essentials vous permet de surveiller le capteur magnétomètre de l’appareil, ce qui indique l’orientation du périphérique par rapport à champ magnétique de la terre.
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353787"
 ---
-# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials : magnétomètre
+# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials : Magnétomètre
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

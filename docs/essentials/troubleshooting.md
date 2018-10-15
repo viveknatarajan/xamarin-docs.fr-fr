@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : résolution des problèmes'
+title: 'Xamarin.Essentials : Résolution des problèmes'
 description: Ce document décrit comment résoudre les problèmes rencontrés lors du développement avec la bibliothèque Xamarin.Essentials.
 ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/10/2018
 ms.locfileid: "37947372"
 ---
-# <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials : résolution des problèmes
+# <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials : Résolution des problèmes
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 

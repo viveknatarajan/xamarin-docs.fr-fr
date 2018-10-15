@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : batterie'
+title: 'Xamarin.Essentials : Batterie'
 description: Ce document décrit la classe de la batterie dans Xamarin.Essentials, ce qui vous permet de vérifier les informations de batterie de l’appareil et surveillez les modifications apportées.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 08/04/2018
 ms.locfileid: "39514308"
 ---
-# <a name="xamarinessentials-battery"></a>Xamarin.Essentials : batterie
+# <a name="xamarinessentials-battery"></a>Xamarin.Essentials : Batterie
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
