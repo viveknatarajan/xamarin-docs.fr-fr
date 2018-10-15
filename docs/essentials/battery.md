@@ -24,7 +24,7 @@ Pour accéder aux fonctionnalités de l'API **batterie** quelques étapes de con
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-L'autorisation `Battery` est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
+L'autorisation `Battery` est obligatoire et doit être configurée dans le projet Android. Elle peut être ajoutée comme suit :
 
 Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 

@@ -26,7 +26,7 @@ Pour accéder aux fonctionnalités de l'API **géolocalisation** quelques étape
 
 Épais et l’emplacement précis des autorisations sont nécessaires et doivent être configurées dans le projet Android. En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer que votre application utilise les fonctionnalités matérielles dans le fichier manifeste. Il peut être ajouté comme suit :
 
-Ouvrez le dossier **AssemblyInfo.cs** de fichiers sous le **propriétés** et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]

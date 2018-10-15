@@ -24,9 +24,9 @@ Pour accéder aux fonctionnalités de l'API **torche** quelques étapes de confi
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Les autorisations torche et caméra sont requises et doivent être configurées dans le projet Android. Il peut être ajouté comme suit :
+Les autorisations `Flashlight` et `Camera` sont obligatoires et doivent être configurées dans le projet Android. Elles peuvent être ajoutées comme suit :
 
-Ouvrez le dossier **AssemblyInfo.cs** de fichiers sous le **propriétés** et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
