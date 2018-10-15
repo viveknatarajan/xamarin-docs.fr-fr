@@ -81,7 +81,7 @@ public class MapsTest
 }
 ```
 
-## <a name="platform-differences"></a>Différences de plateforme
+## <a name="platform-differences"></a>Différences entre les plateformes
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

@@ -56,7 +56,7 @@ Interface utilisateur à partager dans une application externe qui s’affiche l
 
 ![Transfert de données](data-transfer-images/data-transfer.png)
 
-## <a name="platform-differences"></a>Différences de plateforme
+## <a name="platform-differences"></a>Différences entre les plateformes
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
