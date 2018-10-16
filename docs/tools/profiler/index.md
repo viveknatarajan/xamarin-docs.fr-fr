@@ -1,6 +1,6 @@
 ---
 title: Xamarin Profiler
-description: Ce guide présente les principales fonctionnalités du profileur Xamarin. Il consulter les profileurs, profilage et lorsqu’elles doivent être utilisées et à un flux de travail standard pour le profilage d’applications de Xamarin.
+description: Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, et de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
@@ -15,7 +15,7 @@ ms.locfileid: "37066674"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
-_Ce guide présente les principales fonctionnalités du profileur Xamarin. Il consulter les profileurs, profilage et lorsqu’elles doivent être utilisées et à un flux de travail standard pour le profilage d’applications de Xamarin._
+_Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, et de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin._
 
 Réussite de l’application dépend de l’expérience utilisateur. En tant que développeur vous avez peut-être implémenté certaines fonctionnalités vraiment impressionnant dans votre application, mais si l’application est lente ou complète de pannes, l’utilisateur sera probablement la supprimer.
 
@@ -128,7 +128,7 @@ Avant que vous pouvez profiler avec succès de votre application, vous devez aut
 
 ### <a name="launching-the-profiler"></a>Lancement du profileur
 
-Le profileur Xamarin peut être lancé à partir de votre IDE lorsque vous profilez votre application Android ou e/s, ou comme une application autonome.
+Le profileur Xamarin peut être lancé à partir de votre IDE quand vous profilez votre application Android ou iOS. Le profileur peut aussi être lancé comme une application indépendante.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
