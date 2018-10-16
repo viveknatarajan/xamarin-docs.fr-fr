@@ -15,8 +15,7 @@ ms.locfileid: "39353696"
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials : Connectivité
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
-
-La classe **connectivité** vous permet de surveiller les modifications dans les conditions du réseau de l’appareil, vérifiez l’accès réseau actuelle, et comment il est actuellement connecté.
+La classe **Connectivity** vous permet d'obtenir des informations sur la connexion de l'appareil au réseau.
 
 ## <a name="getting-started"></a>Prise en main
 
@@ -32,15 +31,15 @@ Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoute
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
 ```
 
-OU mettre à jour le manifeste Android :
+OU mettez à jour le manifeste Android :
 
-Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **état d’accès réseau** autorisation. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez l'autorisation **état d’accès réseau**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
