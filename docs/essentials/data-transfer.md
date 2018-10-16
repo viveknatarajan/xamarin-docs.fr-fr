@@ -16,7 +16,7 @@ ms.locfileid: "39353517"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **DataTransfer** permet à une application de partager des données telles que des liens web et de texte pour d’autres applications sur l’appareil.
+La classe **DataTransfer** permet à votre application de partager des données, telles que des URL et du texte, avec d’autres applications (préalablement installées sur l'appareil).
 
 ## <a name="using-data-transfer"></a>Utilisation de **DataTransfer**
 
@@ -26,10 +26,9 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité transfert de données fonctionne en appelant le `RequestAsync` méthode avec une charge de requête de données qui inclut des informations à partager avec d’autres applications. Texte et les Uri peuvent être mélangés, et chaque plateforme gérera un filtrage basé sur le contenu.
+La fonctionnalité transfert de données fonctionne en appelant la méthode `RequestAsync` avec en paramètre un `ShareTextRequest` qui contient les informations à partager avec l'application destinatrice. Le texte et les Uri peuvent être mélangés, et chaque plateforme filtrera en fonction du contenu.
 
 ```csharp
-
 public class DataTransferTest
 {
     public async Task ShareText(string text)
@@ -52,7 +51,7 @@ public class DataTransferTest
 }
 ```
 
-Interface utilisateur à partager dans une application externe qui s’affiche lorsque la demande est effectuée :
+Interface utilisateur de partage qui s'affichera alors ressemblera à ceci :
 
 ![Transfert de données](data-transfer-images/data-transfer.png)
 
@@ -60,17 +59,17 @@ Interface utilisateur à partager dans une application externe qui s’affiche l
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* `Subject` propriété est utilisée pour l’objet souhaité d’un message.
+* La propriété `Subject` sera utilisée pour l’objet d’un message.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* `Subject` Non utilisé.
-* `Title` Non utilisé.
+* `Subject` ne sera pas utilisé.
+* `Title` ne sera pas utilisé.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` seront par défaut pour le nom de l’Application n’est pas défini.
-* `Subject` Non utilisé.
+* Si `Title` n'est pas défini il prendra pour valeur par défaut le nom de l'application.
+* `Subject` ne sera pas utilisé.
 
 -----
 
