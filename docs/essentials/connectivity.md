@@ -59,7 +59,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Vérifier l’accès réseau actuel :
+Vérifier si l'appareil peut accèder au réseau :
 
 ```csharp
 var current = Connectivity.NetworkAccess;
@@ -70,15 +70,15 @@ if (current == NetworkAccess.Internet)
 }
 ```
 
-[Accès réseau](xref:Xamarin.Essentials.NetworkAccess) se situe dans les catégories suivantes :
+[Accès réseau](xref:Xamarin.Essentials.NetworkAccess) possède les valeurs possibles suivantes :
 
-* **Internet** – accès Local et internet.
-* **ConstrainedInternet** – limité l’accès à internet. Indique la connectivité au portail captive, où un accès local à un portail web est fourni, mais l’accès à Internet nécessite que les informations d’identification spécifiques sont fournies via un portail.
-* **Local** : Local uniquement les accès réseau.
-* **Aucun** – aucune connectivité n’est disponible.
-* **Inconnu** : Impossible de déterminer la connectivité internet.
+* **Internet** : accès local et internet.
+* **ConstrainedInternet** : l’accès à internet limité. Indique la connectivité via un portail captif, l’accès à Internet nécessite que les informations d’identification spécifiques soient fournies via un portail.
+* **Local** : accès local uniquement.
+* **None** : aucune connectivité n’est disponible.
+* **Unknown** : impossible de déterminer la connectivité internet.
 
-Vous pouvez vérifier quel type de [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) l’appareil est activement à l’aide de :
+Vous pouvez vérifier quel [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) actuellement actif à l’aide de :
 
 ```csharp
 var profiles = Connectivity.Profiles;
@@ -88,7 +88,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-Chaque fois que le profil de connexion ou un réseau accéder aux modifications, vous pouvez recevoir un événement de déclenchement :
+L'événement `ConnectivityChanged` est mis à disposition pour surveiller l'évolution du profil de connexion :
 
 ```csharp
 public class ConnectivityTest
@@ -109,7 +109,7 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>Limitations
 
-Il est important de noter qu’il est possible que `Internet` est signalée par `NetworkAccess` mais un accès complet sur le web n’est pas disponible. En raison du fonctionne de la connectivité sur chaque plateforme qu’il ne peut garantir qu’une connexion est disponible. Par exemple, l’appareil peut être connecté à un réseau Wi-Fi, mais le routeur est déconnecté d’internet. Dans cette instance d’Internet peut-être être signalé, mais une connexion active n’est pas disponible.
+Il est important de noter que ce n'est pas parceque `NetworkAccess` indique `Internet` que l'appareil peut accèder a tout internet. En raison des différences entre les plateformes concernant la connectivité impossible de garantir l'accès à une certaine URL à 100%. Par exemple, l'appareil peut être connecté à un routeur qui n'est pas connecté à internet. Dans ce cas `NetworkAccess` indiquera `Internet` alors qu'une connexion active ne sera pas disponible.
 
 ## <a name="api"></a>API
 
