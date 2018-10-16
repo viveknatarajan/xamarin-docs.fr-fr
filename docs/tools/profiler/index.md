@@ -15,7 +15,7 @@ ms.locfileid: "37066674"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
-_Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, et de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin._
+_Ce guide présente les principales fonctionnalités du profileur Xamarin. Il consulter les profileurs, profilage et lorsqu’elles doivent être utilisées et à un flux de travail standard pour le profilage d’applications de Xamarin._
 
 Réussite de l’application dépend de l’expérience utilisateur. En tant que développeur vous avez peut-être implémenté certaines fonctionnalités vraiment impressionnant dans votre application, mais si l’application est lente ou complète de pannes, l’utilisateur sera probablement la supprimer.
 
@@ -43,7 +43,7 @@ Une fois téléchargé, lancez le programme d’installation pour ajouter le pro
 
 Le profilage est une étape importante et souvent négligée en matière de développement d’applications. Le profilage est une forme d'**analyse dynamique de programme** - il analyse le programme alors qu’il est en cours d’exécution et en cours d’utilisation. Un profileur est un outil d’exploration de données qui collecte des informations sur la complexité temporelle, l’utilisation de méthodes particulières et la mémoire allouée. Un profileur permet d’explorer en profondeur et d'analyser ces mesures pour identifier les zones à problème dans le code.
 
-Lors de la conception et développement d’une application, il est important de ne pas optimiser prématurément ; Autrement dit, passer du temps à développer votre code dans des zones qui est rarement accessible. Il s’agit de la puissance de profilage. Un profileur fournit l’éclairage les plus couramment utilisées les parties de votre base de code, et vous aide à localiser les zones où vous devez prendre les améliorations d’heure. Les développeurs doivent veiller à comprendre où la plupart du temps est consacré à votre application, et l’utilisation de la mémoire par votre application.
+Lors de la conception et développement d’une application, il est important de ne pas optimiser prématurément ; Autrement dit, passer du temps à développer votre code dans des zones qui est rarement accessible. Il s’agit de la puissance de profilage. Un profileur fournit l’éclairage les plus couramment utilisées les parties de votre base de code, et vous aide à localiser les zones où vous devez prendre les améliorations d’heure. Les développeurs doivent veiller à comprendre où la plupart du temps est consacré à votre application, et l’utilisation de la mémoire par votre application.
 
 Le profilage est utile dans tous les types de développement, mais il est particulièrement important dans le développement mobile. Code non optimisé est beaucoup plus notable sur des plates-formes mobiles que sur les ordinateurs de bureau, et la réussite de votre application dépend de code et attrayantes et optimisé qui s’exécute de manière efficace.
 
@@ -128,7 +128,7 @@ Avant que vous pouvez profiler avec succès de votre application, vous devez aut
 
 ### <a name="launching-the-profiler"></a>Lancement du profileur
 
-Le profileur Xamarin peut être lancé à partir de votre IDE quand vous profilez votre application Android ou iOS. Le profileur peut aussi être lancé comme une application indépendante.
+Le profileur Xamarin peut être lancé à partir de votre IDE lorsque vous profilez votre application Android ou e/s, ou comme une application autonome.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -158,7 +158,7 @@ Le profileur peut servir à mesurer les performances et la mémoire. Pour cela, 
 
 #### <a name="saving-and-loading-profiler-sessions"></a>Enregistrement et chargement de Sessions du profileur
 
-Pour enregistrer une session de profilage à tout moment, choisissez **fichier > Enregistrer sous...** à partir de la barre de menus du profileur. Ceci permet d’enregistrer le fichier dans _mlpd_ format, un format fortement compressé spéciale pour le profilage des données.
+Pour enregistrer une session de profilage à tout moment, choisissez **fichier > Enregistrer sous...**  à partir de la barre de menus du profileur. Ceci permet d’enregistrer le fichier dans _mlpd_ format, un format fortement compressé spéciale pour le profilage des données.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -196,7 +196,7 @@ Xamarin Profiler est composé de cinq sections, comme illustré ci-dessous :
 - **Instrumenter liste** – répertorie tous les instruments chargés pour la session de profilage.
 - **Tracer le graphique** – ces graphiques concernent horizontalement les instruments dans la liste d’instrumentation. Un curseur (affiché sous le Générateur de profils de temps) peut servir à modifier l’échelle.
 - **Instrumenter zone détails** -contient les données affichées par la vue sélectionnée de l’appareil en cours. Nous allons nous intéresser à ces vues plus en détail dans la section ci-dessous.
-- **Affichage de l’inspecteur** – contient les sections qui peuvent être sélectionnées par le contrôle segmenté. Les sections sont dépendantes de l’appareil sélectionné et inclut : paramètres de Configuration, les statistiques, les informations de Trace de la pile et chemin d’accès à la racine.
+- **Affichage de l’inspecteur** – contient les sections qui peuvent être sélectionnées par le contrôle segmenté. Les sections sont dépendantes de l’appareil sélectionné et inclut : paramètres de Configuration, les statistiques, les informations de Trace de la pile et chemin d’accès à la racine.
 
 ### <a name="allocations"></a>Allocations
 
@@ -216,7 +216,7 @@ En haut du profileur est les allocations qui affiche la quantité de mémoire al
 
 Il existe différentes vues de données dans l’acte d’Allocations, qui permettent aux développeurs d’analyser la manière dont leur application est à l’aide et la libération de mémoire. Ces vues sont décrites ci-dessous :
 
- -   **Allocations** – Cela affiche une liste de toutes les allocations et les regroupe par nom de classe. Cela fournit une excellente présentation des classes et méthodes utilisés, la fréquence à laquelle ils sont utilisés et la taille collective des classes utilisées. Double-clic sur une classe affiche le la mémoire allouée : 
+ -   **Allocations** – Cela affiche une liste de toutes les allocations et les regroupe par nom de classe. Cela fournit une excellente présentation des classes et méthodes utilisés, la fréquence à laquelle ils sont utilisés et la taille collective des classes utilisées. Double-clic sur une classe affiche le la mémoire allouée : 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
