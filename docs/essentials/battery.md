@@ -20,7 +20,7 @@ La classe **batterie** vous permet d'obternir et de surveiller les informations 
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **batterie** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **batterie** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -108,7 +108,7 @@ switch (source)
 }
 ```
 
-Un événement est mis à disposition pour surveiller l'évolution de l'état de la batterie :
+L'événement `BatteryChanged` est mis à disposition pour surveiller l'évolution de l'état de la batterie :
 
 ```csharp
 public class BatteryTest

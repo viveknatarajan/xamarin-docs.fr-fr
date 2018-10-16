@@ -20,7 +20,7 @@ La classe **SecureStorage** permet de stocker en toute sécurité des paires cl�
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **SecureStorage** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **SecureStorage** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

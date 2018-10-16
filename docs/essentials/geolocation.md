@@ -20,7 +20,7 @@ La classe **géolocalisation** fournit des API pour récupérer les coordonnées
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **géolocalisation** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **géolocalisation** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

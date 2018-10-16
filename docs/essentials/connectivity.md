@@ -20,7 +20,7 @@ La classe **connectivité** vous permet de surveiller les modifications dans les
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **connectivité** quelques étapes de configuration spécifiques à la plate-forme sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **connectivité** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

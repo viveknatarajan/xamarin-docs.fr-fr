@@ -16,7 +16,7 @@ ms.locfileid: "38842613"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Clipboard** permet de copier et coller du texte dans le Presse-papiers système, partagé entre les applications.
+La classe **Clipboard** permet de copier et coller du texte dans le presse-papiers système, partagé entre les applications.
 
 ## <a name="using-clipboard"></a>Utilisation de **Clipboard**
 
@@ -32,13 +32,13 @@ Pour vérifier si le **Presse-papiers** a actuellement prêt à coller du texte�
 var hasText = Clipboard.HasText;
 ```
 
-Pour définir le texte la **Presse-papiers**:
+Pour définir le texte du **Presse-papiers**:
 
 ```csharp
 Clipboard.SetText("Hello World");
 ```
 
-Pour lire le texte à partir de la **Presse-papiers**:
+Pour lire le texte à partir du **Presse-papiers**:
 
 ```csharp
 var text = await Clipboard.GetTextAsync();
