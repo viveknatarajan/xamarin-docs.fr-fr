@@ -16,7 +16,7 @@ ms.locfileid: "39353624"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Gyroscope** vous permet de surveiller le capteur de gyroscope du périphérique qui est la rotation autour des trois axes du principal de l’appareil.
+La classe **Gyroscope** vous permet d'obtenir des informations sur la rotation de l’appareil sur les trois axes principaux.
 
 ## <a name="using-gyroscope"></a>Utilisation de **Gyroscope**
 
@@ -26,7 +26,8 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de Gyroscope fonctionne en appelant le `Start` et `Stop` méthodes pour écouter les modifications apportées à la gyroscope. Toutes les modifications sont renvoyées via la `ReadingChanged` événement. Voici un exemple d’utilisation :
+La fonctionnalité de **gyroscope** fonctionne en appelant les méthodes `Start` et `Stop` pour démarrer et arrêter l'écoute.
+L'événement `ReadingChanged` est mis à votre disposition pour surveiller l'évolution de la rotation de l'appareil :
 
 ```csharp
 
