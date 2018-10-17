@@ -33,7 +33,7 @@ Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoute
 [assembly: UsesPermission(Android.Manifest.Permission.Camera)]
 ```
 
-OU mettre à jour le manifeste Android :
+Ou mettez à jour le manifeste Android :
 
 Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
 

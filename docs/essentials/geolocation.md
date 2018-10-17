@@ -16,15 +16,17 @@ ms.locfileid: "39353852"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **géolocalisation** fournit des API pour récupérer les coordonnées de géolocalisation actuelle de l’appareil.
+La classe **Geolocation** fournit des API permettant de récupérer les coordonnées géographiques actuelles de l’appareil.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **géolocalisation** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Geolocation** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Épais et l’emplacement précis des autorisations sont nécessaires et doivent être configurées dans le projet Android. En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer que votre application utilise les fonctionnalités matérielles dans le fichier manifeste. Il peut être ajouté comme suit :
+Les autorisations `AccessCoarseLocation` et `AccessFineLocation` sont obligatoires et doivent être configurées dans le projet Android.
+En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer également que votre application utilise les fonctionnalités matérielles.
+Elles peuvent être ajoutées comme suit :
 
 Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
@@ -36,7 +38,7 @@ Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoute
 [assembly: UsesFeature("android.hardware.location.network", Required = false)]
 ```
 
-Ou mettre à jour le manifeste Android :
+Ou mettez à jour le manifeste Android :
 
 Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest** :
 
@@ -52,11 +54,11 @@ Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-De votre application **Info.plist** doit contenir le `NSLocationWhenInUseUsageDescription` clé afin d’accéder à l’emplacement de l’appareil.
+Le fichier **Info.plist** doit contenir la clé `NSLocationWhenInUseUsageDescription` afin d’accéder à l’emplacement de l’appareil.
 
-Ouvrez l’éditeur plist et ajoutez le **confidentialité - emplacement lors de la Description de l’utilisation utilisation** propriété et renseignez une valeur pour afficher l’utilisateur.
+Ouvrez l’éditeur de plist et ajoutez la propriété **Privacy - Location When In Use Usage Description** et renseignez un texte à afficher à l’utilisateur.
 
-Ou modifier manuellement le fichier et ajoutez ce qui suit :
+Ou modifier manuellement le fichier **Info.plist** et ajoutez :
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -65,7 +67,7 @@ Ou modifier manuellement le fichier et ajoutez ce qui suit :
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Vous devez définir le `Location` autorisation pour l’application. Cela est possible en ouvrant le **Package.appxmanifest** et en sélectionnant le **fonctionnalités** onglet et en vérifiant **emplacement**.
+Vous devez définir l'autorisation `Location` pour l’application. Ouvrez le **Package.appxmanifest**, sélectionnez l'onglet **fonctionnalités** et cochez **Location**.
 
 -----
 
@@ -77,9 +79,9 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-L’API Geoloation également invitera l’utilisateur pour les autorisations lorsque cela est nécessaire.
+L’API Geolocation demandera automatiquement de consentement de l'utilisateur lorsque cela sera nécessaire.
 
-Vous pouvez obtenir la dernière valeur connue [emplacement](xref:Xamarin.Essentials.Location) de l’appareil en appelant le `GetLastKnownLocationAsync` (méthode). Cela est souvent plus rapide puis en effectuant une requête complète, mais peut être moins précis.
+Vous pouvez obtenir la dernière [position](xref:Xamarin.Essentials.Location) connue de l’appareil, appelez la méthode `GetLastKnownLocationAsync`. Cela est souvent plus rapide que de demander une nouvelle lecture, mais cela peut être moins précis.
 
 ```csharp
 try
@@ -105,9 +107,9 @@ catch (Exception ex)
 }
 ```
 
-L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus de plus haut niveau de la mer.
+L’altitude n’est pas toujours disponible. Si elle n’est pas disponible, la propriété `Altitude` pourra être soit `null`, soit zéro. Si l’altitude est disponible, la valeur sera exprimée en mètres par rapport au plus haut niveau de la mer.
 
-Pour interroger l’appareil actuel [emplacement](xref:Xamarin.Essentials.Location) coordonnées, la `GetLocationAsync` peut être utilisé. Il est préférable de transmettre un intégral `GeolocationRequest` et `CancellationToken` dans la mesure où il peut prendre un certain temps pour obtenir l’emplacement de l’appareil.
+La fonction `GetLocationAsync` permet de récupérer les [coordonnées](xref:Xamarin.Essentials.Location) actuelles de l'appareil. Il est préférable de passer en paramètres un objet `GeolocationRequest` et un `CancellationToken` dans la mesure où la lecture des coordonnées actuelles de l'appareil peut prendre un certain temps.
 
 ```csharp
 try
@@ -182,7 +184,7 @@ Le tableau suivant présente la précision par plateforme :
 
 ## <a name="distance-between-two-locations"></a>Distance entre deux emplacements
 
-Le [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) classes définissent `CalculateDistance` méthodes qui vous permettent de calculer la distance entre deux emplacements géographiques. Cette valeur calculée distance ne tient pas routes ou autres voies de compte et est simplement la distance la plus courte entre les deux points le long de la surface de la terre, également connu sous le _distance orthodromique_ ou quand, le distance « vol d’oiseau. »
+Les classes [`Location`](xref:Xamarin.Essentials.Location) et [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) définissent les méthodes `CalculateDistance` permettant de calculer la distance entre deux emplacements géographiques. Cette valeur calculée ne tient pas en compte les routes ou autres voies, il s'agit simplement de la distance la plus courte entre les deux points le long de la surface de la terre, également connu sous le nom de _distance orthodromique_ ou encore le distance « à vol d’oiseau. »
 
 Voici un exemple :
 
@@ -192,7 +194,9 @@ Location sanFrancisco = new Location(37.783333, -122.416667);
 double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
 ```
 
-Le `Location` constructeur a des arguments de latitude et longitude dans cet ordre. Positif sont des valeurs de latitude au nord de l’Équateur et sont des valeurs de longitude positive à l’est. Utilisez l’argument final de `CalculateDistance` pour spécifier les miles ou kilomètres. Le `Location` classe définit également `KilometersToMiles` et `MilesToKilometers` méthodes pour la conversion entre les deux unités.
+Le constructeur de la classe `Location` prend des arguments de latitude et longitude, dans cet ordre. Une latitude positive décrit une position située au Nord de l'équateur et une longitude positive décrit une position à l'Est du Prime Meridian (Greenwich).
+
+Utilisez l’argument final de `CalculateDistance` pour préciser si vous voulez un résultat en miles ou kilomètres. La classe `Location` définit également les convertisseurs `KilometersToMiles` et `MilesToKilometers` pour la conversion entre les deux unités.
 
 ## <a name="api"></a>API
 

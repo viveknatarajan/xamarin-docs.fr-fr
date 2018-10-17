@@ -16,11 +16,11 @@ ms.locfileid: "39353673"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **géocodage** fournit des API aux Géocode un placemark un coordonnées positionnels et inverser des coordonnées de Géocode vers un placemark.
+La classe **Geocoding** fournit les API permettant de transformer des adresses physiques de lieux _(placemark)_ en coordonnées géographiques et vice versa.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **géocodage** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Geocoding** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -32,9 +32,9 @@ Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Une clé API Bing Maps est requise pour utiliser la fonctionnalité de géocodage. Inscrivez-vous pour bénéficier d’un [Bing Maps](https://www.bingmapsportal.com/) compte. Sous **mon compte > Mes clés** créer une nouvelle clé et le remplissage des informations en fonction de votre type d’application (qui doit être **publique application Windows (UWP, 8.x et les versions antérieures)** pour les applications UWP).
+Une clé d'API Bing Maps est requise pour utiliser la fonctionnalité de géocodage. Inscrivez-vous sur [Bing Maps](https://www.bingmapsportal.com/) et créez un compte. Sous **mon compte > Mes clés** vous pouvez créer une nouvelle clé en renseignant des informations sur votre application (qui doit être une **application publique Windows (UWP, 8.x et les versions antérieures)**).
 
-Très tôt dans la vie de votre application avant d’appeler une **géocodage** méthodes définissent la clé d’API :
+Aussi tôt que possible dans l'execution de votre application, avant d'appler une autre fonction de `Geocoding` renseignez votre clé d'API comme ceci :
 
 ```csharp
 Geocoding.MapKey = "YOUR-KEY-HERE";
@@ -50,7 +50,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Obtention de [emplacement](xref:Xamarin.Essentials.Location) coordonnées d’une adresse :
+Obtenir les [coordonnées géographiques](xref:Xamarin.Essentials.Location) d’une adresse :
 
 ```csharp
 try
@@ -74,9 +74,9 @@ catch (Exception ex)
 }
 ```
 
-L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus de plus haut niveau de la mer.
+L’altitude n’est pas toujours disponible. Si elle n’est pas disponible, la propriété `Altitude` pourra être soit `null`, soit zéro. Si l’altitude est disponible, la valeur sera exprimée en mètres par rapport au plus haut niveau de la mer.
 
-Obtention de [placemarks](xref:Xamarin.Essentials.Placemark) pour un ensemble existant de coordonnées :
+Obtenir l'adresse ([placemark](xref:Xamarin.Essentials.Placemark)) à partir de coordonnées :
 
 ```csharp
 try
@@ -116,7 +116,7 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>Distance entre deux emplacements
 
-Le [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) classes définissent les méthodes pour calculer la distance entre deux emplacements. Consultez l’article [ **Xamarin.Essentials : géolocalisation** ](geolocation.md#calculate-distance) pour obtenir un exemple.
+Les classes [`Location`](xref:Xamarin.Essentials.Location) et [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) définissent les méthodes permettant de calculer la distance entre deux emplacements géographiques. Consultez l’article [**Xamarin.Essentials : Géolocalisation**](geolocation.md#distance-between-two-locations) pour obtenir un exemple.
 
 ## <a name="api"></a>API
 

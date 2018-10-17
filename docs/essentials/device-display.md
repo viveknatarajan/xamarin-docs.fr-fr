@@ -28,7 +28,7 @@ using Xamarin.Essentials;
 
 ## <a name="screen-metrics"></a>Informations sur l’écran
 
-En plus des **[informations générales sur l’appareil](xref:Xamarin.Essentials.DeviceInfo)** , la classe **DeviceDisplay** contient des informations sur l’écran et l’orientation de l’appareil.
+En plus des **[informations générales sur l’appareil](device-information.md)**, la classe **DeviceDisplay** contient des informations sur l’écran et l’orientation de l’appareil.
 
 ```csharp
 // Get Metrics
