@@ -30,7 +30,6 @@ La fonctionnalité de **gyroscope** fonctionne en appelant les méthodes `Start`
 L'événement `ReadingChanged` est mis à votre disposition pour surveiller l'évolution de la rotation de l'appareil :
 
 ```csharp
-
 public class GyroscopeTest
 {
     // Set speed delay for monitoring changes.

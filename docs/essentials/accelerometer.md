@@ -29,7 +29,6 @@ using Xamarin.Essentials;
 Pour écouter les changements d’accélération il suffit d'appeler les méthodes `Start` et `Stop`. Toutes les variations peuvent être écoutés via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
 
 ```csharp
-
 public class AccelerometerTest
 {
     // Set speed delay for monitoring changes.

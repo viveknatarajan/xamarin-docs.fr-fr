@@ -16,7 +16,7 @@ ms.locfileid: "39353787"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **magnétomètre** vous permet de surveiller le capteur de magnétomètre du périphérique qui indique l’orientation du périphérique par rapport à champ magnétique de la terre.
+La classe **Magnetometer** vous permet de surveiller le capteur de magnétomètre du périphérique qui indique l’orientation du périphérique par rapport à champ magnétique de la terre.
 
 ## <a name="using-magnetometer"></a>Utilisation de **Magnetometer**
 
@@ -29,7 +29,6 @@ using Xamarin.Essentials;
 La fonctionnalité magnétomètre fonctionne en appelant le `Start` et `Stop` méthodes pour écouter les modifications apportées à la magnétomètre. Toutes les modifications sont renvoyées via la `ReadingChanged` événement. Voici un exemple d’utilisation :
 
 ```csharp
-
 public class MagnetometerTest
 {
     // Set speed delay for monitoring changes.
