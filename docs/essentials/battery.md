@@ -108,7 +108,7 @@ switch (source)
 }
 ```
 
-L'événement `BatteryChanged` est mis à disposition pour surveiller l'évolution de l'état de la batterie :
+L'événement `BatteryChanged` est mis à votre disposition pour surveiller l'évolution de l'état de la batterie :
 
 ```csharp
 public class BatteryTest

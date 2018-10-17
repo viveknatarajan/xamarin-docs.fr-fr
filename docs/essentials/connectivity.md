@@ -88,7 +88,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-L'événement `ConnectivityChanged` est mis à disposition pour surveiller l'évolution du profil de connexion :
+L'événement `ConnectivityChanged` est mis à votre disposition pour surveiller l'évolution du profil de connexion :
 
 ```csharp
 public class ConnectivityTest

@@ -27,7 +27,7 @@ using Xamarin.Essentials;
 ```
 
 La fonctionnalité de **boussole** fonctionne en appelant les méthodes `Start` et `Stop` pour démarrer et arrêter l'écoute.
-L'événement `ReadingChanged` est mis à disposition pour surveiller l'évolution de l'état de la batterie :
+L'événement `ReadingChanged` est mis à votre disposition pour surveiller l'évolution de l'état de la batterie :
 
 ```csharp
 public class CompassTest
