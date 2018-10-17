@@ -44,7 +44,7 @@ Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

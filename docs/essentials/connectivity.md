@@ -43,11 +43,11 @@ Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 -----
 
@@ -70,7 +70,7 @@ if (current == NetworkAccess.Internet)
 }
 ```
 
-[Accès réseau](xref:Xamarin.Essentials.NetworkAccess) possède les valeurs possibles suivantes :
+L'énumérateur **[NetworkAccess](xref:Xamarin.Essentials.NetworkAccess)** possède les valeurs possibles suivantes :
 
 * **Internet** : accès local et internet.
 * **ConstrainedInternet** : l’accès à internet limité. Indique la connectivité via un portail captif, l’accès à Internet nécessite que les informations d’identification spécifiques soient fournies via un portail.

@@ -24,11 +24,11 @@ Pour accéder aux fonctionnalités de l'API **géocodage** quelques étapes de c
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

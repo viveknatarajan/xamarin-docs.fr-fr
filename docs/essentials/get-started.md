@@ -87,11 +87,11 @@ Xamarin.Essentials est disponible sous forme de package NuGet qui peut être ajo
 
     # <a name="iostabios"></a>[iOS](#tab/ios)
 
-    Aucune configuration supplémentaire n’est requis.
+    Aucune configuration supplémentaire n’est requise.
 
     # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-    Aucune configuration supplémentaire n’est requis.
+    Aucune configuration supplémentaire n’est requise.
 
     -----
 

@@ -24,7 +24,7 @@ Pour accéder aux fonctionnalités de l'API **SecureStorage** quelques étapes d
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -36,7 +36,7 @@ Dans les propriétés du projet, sous **signature du Bundle iOS** définir le **
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 -----
 
