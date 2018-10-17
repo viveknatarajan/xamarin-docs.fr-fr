@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Batterie'
-description: Ce document décrit la classe de la batterie dans Xamarin.Essentials, ce qui vous permet de vérifier les informations de batterie de l’appareil et surveillez les modifications apportées.
+description: La classe batterie vous permet d'obternir et de surveiller les informations sur la batterie de l’appareil.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
@@ -16,11 +16,11 @@ ms.locfileid: "39514308"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **batterie** vous permet d'obternir et de surveiller les informations sur la batterie de l’appareil.
+La classe **Battery** vous permet d'obternir et de surveiller les informations sur la batterie de l’appareil.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **batterie** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Battery** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

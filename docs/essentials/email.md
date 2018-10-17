@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : E-mail'
-description: La classe de courrier électronique dans Xamarin.Essentials permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris le sujet, les corps et les destinataires (à, CC, Cci).
+description: La classe Email permet à une application d'ouvrir l’application de messagerie par défaut en lui transmettant des informations sur le message pré-composé, tel que le sujet, le corps et les destinataires (à, CC, Cci).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont

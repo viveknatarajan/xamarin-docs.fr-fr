@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Accéléromètre'
-description: La classe Accelerometer dans Xamarin.Essentials vous permet de surveiller le capteur de l’accéléromètre de l’appareil, qui indique l’accélération de l’appareil dans un espace tridimensionnel.
+description: La classe Accelerometer vous permet de surveiller le capteur de l’accéléromètre de l’appareil, qui indique l’accélération de l’appareil dans un espace tridimensionnel.
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont

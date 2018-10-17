@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Boussole'
-description: Ce document décrit la classe Compass dans Xamarin.Essentials, ce qui vous permet d’analyser l’en-tête de l’appareil le nord magnétique.
+description: La classe Compass vous permet d'obtenir des informations sur l'orientation de l’appareil par rapport au nord magnétique.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont

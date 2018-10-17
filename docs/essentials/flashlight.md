@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Torche'
-description: Ce document décrit la classe torche dans Xamarin.Essentials, ce qui permet d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
+description: La classe Flashlight a la possibilité d’activer ou de désactiver le flash de l’appareil photo afin de l'utiliser comme lampe torche.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont

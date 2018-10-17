@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Informations sur l'écran de l'appareil'
-description: Ce document décrit la classe DeviceDisplay dans Xamarin.Essentials, qui fournit des métriques de l’écran de l’appareil sur lequel l’application est en cours d’exécution.
+description: La classe DeviceDisplay fournit des informations à propos de l’écran de l’appareil.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont

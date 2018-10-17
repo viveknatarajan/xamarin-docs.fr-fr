@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Système de fichiers'
-description: La classe FileSystem dans Xamarin.Essentials contient une série de programmes d’assistance pour rechercher le cache d’application et des répertoires de données et ouvrir des fichiers à l’intérieur du package d’application.
+description: La classe FileSystem contient un ensemble de fonctions facilitant l'accès et l'édition des répertoires de cache et de données de l'application ainsi que l'ouverture de fichiers embarqués dans du package d'application.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
