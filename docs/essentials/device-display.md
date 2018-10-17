@@ -16,7 +16,7 @@ ms.locfileid: "39353826"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **DeviceDisplay** fournit des informations à propos des métriques d’écran de l’appareil, l’application est en cours d’exécution.
+La classe **DeviceDisplay** fournit des informations à propos de l’écran de l’appareil.
 
 ## <a name="using-devicedisplay"></a>Utilisation de **DeviceDisplay**
 
@@ -26,9 +26,9 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-## <a name="screen-metrics"></a>Métriques de l’écran
+## <a name="screen-metrics"></a>Informations sur l’écran
 
-En plus des informations de base de l’appareil le **DeviceDisplay** classe contient des informations sur l’écran et l’orientation de l’appareil.
+En plus des informations de base sur l’appareil, le **DeviceDisplay** classe contient des informations sur l’écran et l’orientation de l’appareil.
 
 ```csharp
 // Get Metrics
@@ -50,7 +50,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-La classe **DeviceDisplay** expose également un événement est déclenché chaque fois qu’un écran de modifications des métriques qui peut être abonné à :
+L'événement `ScreenMetricsChanged` est mis à disposition pour surveiller l'évolution des informations sur l'écran :
 
 ```csharp
 public class ScreenMetricsTest
