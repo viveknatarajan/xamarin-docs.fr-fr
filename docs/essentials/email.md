@@ -16,7 +16,7 @@ ms.locfileid: "39353904"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Email** permet à une application ouvrir l’application de messagerie par défaut avec une informations spécifiées, y compris le sujet, les corps et les destinataires (à, CC, Cci).
+La classe **Email** permet à une application d'ouvrir l’application de messagerie par défaut en lui transmettant des informations sur le message pré-composé, tel que le sujet, le corps et les destinataires (à, CC, Cci).
 
 ## <a name="using-email"></a>Utilisation de **Email**
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de courrier électronique fonctionne en appelant le `ComposeAsync` méthode un `EmailMessage` qui contient des informations sur le courrier électronique :
+La fonctionnalité de courrier électronique fonctionne en appelant la méthode `ComposeAsync` avec en paramètre un `EmailMessage` qui contient les informations à envoyer avec l'application destinatrice.
 
 ```csharp
 public class EmailTest
