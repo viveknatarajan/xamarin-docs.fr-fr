@@ -65,8 +65,8 @@ La propriété **[DeviceInfo.Platform](xref:Xamarin.Essentials.DeviceInfo.Platfo
 La propriété **[DeviceInfo.Idiom](xref:Xamarin.Essentials.DeviceInfo.Idiom)** indique le type d'appareil actuellement utilisé, elle possède les constantes suivantes :
 
 * **DeviceInfo.Idioms.Phone** – téléphone
-* **DeviceInfo.Idioms.Tablet** – Tablet PC
-* **DeviceInfo.Idioms.Desktop** : bureau
+* **DeviceInfo.Idioms.Tablet** – tablette PC
+* **DeviceInfo.Idioms.Desktop** : ordinateur de bureau
 * **DeviceInfo.Idioms.TV** – TV
 * **DeviceInfo.Idioms.Unsupported** : non pris en charge
 

@@ -16,10 +16,10 @@ ms.locfileid: "39353813"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **OrientationSensor** vous permet de surveiller l’orientation d’un appareil dans un espace tridimensionnel.
+La classe **OrientationSensor** vous permet d'obtenir des informations sur l'orientation de l’appareil dans un espace tridimensionnel.
 
 > [!NOTE]
-> Cette classe est pour déterminer l’orientation d’un appareil dans l’espace 3D. Si vous avez besoin déterminer si le périphérique vidéo d’affichage est en mode portrait ou paysage, utilisez le `Orientation` propriété de la `ScreenMetrics` objet disponible à partir de la [`DeviceDisplay`](device-display.md) classe.
+> Cette classe sert à déterminer l’orientation d’un appareil dans l’espace 3D. Si vous avez besoin déterminer si le périphérique d’affichage est en mode portrait ou paysage, utilisez la propriété `Orientation` de l'objet `ScreenMetrics` disponible dans l'API [`DeviceDisplay`](device-display.md).
 
 ## <a name="using-orientationsensor"></a>Utilisation de **OrientationSensor**
 
@@ -29,7 +29,8 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Le `OrientationSensor` est activé en appelant le `Start` (méthode) pour surveiller les modifications apportées à l’orientation de l’appareil et désactivé en appelant le `Stop` (méthode). Toutes les modifications sont renvoyées via la `ReadingChanged` événement. Voici un exemple d’utilisation :
+La fonctionnalité de **capteur d'orientation** fonctionne en appelant les méthodes `Start` et `Stop` pour démarrer et arrêter l'écoute.
+L'événement `ReadingChanged` est mis à votre disposition pour surveiller l'évolution de l'orientation de l'appareil :
 
 ```csharp
 
@@ -72,27 +73,27 @@ public class OrientationSensorTest
 }
 ```
 
-`OrientationSensor` lectures sont retournés sous la forme d’un [`Quaternion`](xref:System.Numerics.Quaternion) qui décrit l’orientation de l’appareil en fonction des deux systèmes de coordonnées 3D :
+Les lectures de l'`OrientationSensor` sont retournés sous la forme d’un [`Quaternion`](xref:System.Numerics.Quaternion) qui décrit l’orientation de l’appareil en fonction des deux systèmes de coordonnées 3D :
 
 L’appareil (généralement un téléphone ou tablette) dispose d’un système de coordonnées 3D avec les axes suivants :
 
-- La valeur positive à droite de l’affichage en mode portrait, les points de l’axe X.
-- L’axe Y positif pointe vers le haut de l’appareil en mode portrait.
+- L'axe X positif pointe vers la droite de l'écran en mode portrait.
+- L’axe Y positif pointe vers le haut de écran en mode portrait.
 - L’axe Z positif pointe en dehors de l’écran.
 
 Le système de coordonnées 3D de la terre a les axes suivants :
 
-- La valeur positive axe des X est la tangente à la surface de la terre et pointe east.
-- L’axe Y positif est également tangent à la surface de la terre et nord de points.
-- L’axe Z positif est perpendiculaire à la surface de la terre et pointe vers le haut.
+- L'axe X correspond à la tangente par rapport à la surface de la terre et pointe l'Est (Longitude).
+- L’axe Y positif est également la tangente par rapport à la surface de la terre et pointe le Nord (Latitude).
+- L’axe Z positif est perpendiculaire à la surface de la terre et pointe vers la direction opposée au centre de la terre.
 
 Le `Quaternion` décrit la rotation du système de coordonnées de l’appareil par rapport à système de coordonnées de la terre.
 
-Un `Quaternion` valeur est très étroitement liée à la rotation autour d’un axe. Si un axe de rotation est le vecteur normalisé (un<sub>x</sub>, un<sub>y</sub>, un<sub>z</sub>), et l’angle de rotation est Θ, puis (X, Y, Z, W) sont des composants du quaternion :
+La valeur d'un `Quaternion` est très étroitement liée à la rotation autour d’un axe. Si un axe de rotation est le vecteur normalisé (un<sub>x</sub>, un<sub>y</sub>, un<sub>z</sub>), et l’angle de rotation est Θ, puis (X, Y, Z, W) sont des composants du quaternion :
 
 (un<sub>x</sub>·sin(Θ/2), un<sub>y</sub>·sin(Θ/2), un<sub>z</sub>·sin(Θ/2), cos(Θ/2))
 
-Il s’agit des systèmes de coordonnées droite, donc avec le curseur de la main droite référencée dans le sens positif de l’axe de rotation, la courbe des doigts indiquent la direction de rotation d’angle positif.
+Il s’agit des systèmes de coordonnées droites, donc avec le curseur de la main droite référencée dans le sens positif de l’axe de rotation, la courbe des doigts indiquent la direction de rotation d’angle positif.
 
 Exemples :
 
