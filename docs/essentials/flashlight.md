@@ -96,23 +96,23 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
-### <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 La classe torche a été optimisée en fonction du système d’exploitation de l’appareil.
 
-#### <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
+## <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
 
 Sur les niveaux d’API plus récents, [Torch Mode](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) sera utilisé pour activer ou désactiver le flash de l’appareil.
 
-#### <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
+## <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
 
 Un élément d'interface utilisateur de type caméta est créé afin d'activer et de désactiver le flash de l'appareil.
 
-### <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 [AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/)  sera utilisé pour activer ou désactiver le flash de l’appareil.
 
-### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 [Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp)  sera utilisé pour détecter la première lampe à l’arrière de l’appareil et pour l'activer ou la désactiver.
 
