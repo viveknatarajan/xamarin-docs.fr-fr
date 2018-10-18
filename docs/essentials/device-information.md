@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 18fe081372cc190e5ead2045f36d63652f8702c3
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353800"
@@ -55,9 +55,9 @@ var deviceType = DeviceInfo.DeviceType;
 
 `DeviceInfo.Platform` correspond à une chaîne constante qui mappe au système d’exploitation. Les valeurs peuvent être vérifiées avec la `Platforms` classe :
 
-- **DeviceInfo.Platforms.iOS** – iOS
+- **DeviceInfo.Platforms.iOS** : iOS
 - **DeviceInfo.Platforms.Android** : Android
-- **DeviceInfo.Platforms.UWP** – UWP
+- **DeviceInfo.Platforms.UWP** : UWP
 - **DeviceInfo.Platforms.Unsupported** : non pris en charge
 
 ## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idiomes](xref:Xamarin.Essentials.DeviceInfo.Idioms)
