@@ -14,4 +14,4 @@ ms.locfileid: "39353267"
 - **Normal** – taux par défaut approprié pour les modifications de l’orientation d’écran.
 - **L’interface utilisateur** – taux approprié pour l’interface utilisateur général.
 
-Si votre gestionnaire d’événements n’est pas garanti à exécuter sur le thread d’interface utilisateur et si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, utilisez la [ `MainThread.BeginInvokeOnMainThread` ](~/essentials/main-thread.md) méthode à exécuter ce code sur le thread d’interface utilisateur.
+Si votre gestionnaire d’événements n’est pas garanti à exécuter sur le thread d’interface utilisateur et si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, utilisez la [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) méthode à exécuter ce code sur le thread d’interface utilisateur.

@@ -19,7 +19,7 @@ ms.locfileid: "39353813"
 La classe **OrientationSensor** vous permet de surveiller l’orientation d’un appareil dans un espace tridimensionnel.
 
 > [!NOTE]
-> Cette classe est pour déterminer l’orientation d’un appareil dans l’espace 3D. Si vous avez besoin déterminer si le périphérique vidéo d’affichage est en mode portrait ou paysage, utilisez le `Orientation` propriété de la `ScreenMetrics` objet disponible à partir de la [ `DeviceDisplay` ](device-display.md) classe.
+> Cette classe est pour déterminer l’orientation d’un appareil dans l’espace 3D. Si vous avez besoin déterminer si le périphérique vidéo d’affichage est en mode portrait ou paysage, utilisez le `Orientation` propriété de la `ScreenMetrics` objet disponible à partir de la [`DeviceDisplay`](device-display.md) classe.
 
 ## <a name="using-orientationsensor"></a>Utilisation de **OrientationSensor**
 
@@ -72,7 +72,7 @@ public class OrientationSensorTest
 }
 ```
 
-`OrientationSensor` lectures sont retournés sous la forme d’un [ `Quaternion` ](xref:System.Numerics.Quaternion) qui décrit l’orientation de l’appareil en fonction des deux systèmes de coordonnées 3D :
+`OrientationSensor` lectures sont retournés sous la forme d’un [`Quaternion`](xref:System.Numerics.Quaternion) qui décrit l’orientation de l’appareil en fonction des deux systèmes de coordonnées 3D :
 
 L’appareil (généralement un téléphone ou tablette) dispose d’un système de coordonnées 3D avec les axes suivants :
 

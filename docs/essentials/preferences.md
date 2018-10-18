@@ -66,7 +66,7 @@ Les types de données suivants sont pris en charge dans **préférences**:
 
 ## <a name="implementation-details"></a>Détails d’implémentation
 
-Valeurs de `DateTime` sont stockées dans un format de fichier binaire de 64 bits (entier long) à l’aide de deux méthodes définies par le `DateTime` classe : le [ `ToBinary` ](xref:System.DateTime.ToBinary) méthode est utilisée pour encoder le `DateTime` valeur et le [ `FromBinary` ](xref:System.DateTime.FromBinary(System.Int64)) méthode décode la valeur. Consultez la documentation de ces méthodes pour les ajustements apportés à décodé valeurs lorsque un `DateTime` est stocké qui est pas une valeur de temps universel coordonné (UTC).
+Valeurs de `DateTime` sont stockées dans un format de fichier binaire de 64 bits (entier long) à l’aide de deux méthodes définies par le `DateTime` classe : le [`ToBinary`](xref:System.DateTime.ToBinary) méthode est utilisée pour encoder le `DateTime` valeur et le [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) méthode décode la valeur. Consultez la documentation de ces méthodes pour les ajustements apportés à décodé valeurs lorsque un `DateTime` est stocké qui est pas une valeur de temps universel coordonné (UTC).
 
 ## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
