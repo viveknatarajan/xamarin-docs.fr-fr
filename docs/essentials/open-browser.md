@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Navigateur internet'
-description: La classe de navigateur dans Xamarin.Essentials permet à une application ouvrir un lien web dans le navigateur par défaut du système optimisé ou un navigateur externe.
+description: La classe Browser permet à une application d'ouvrir un lien web dans un navigateur installé sur le téléphone.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353280"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **navigateur** permet à une application ouvrir un lien web dans le navigateur par défaut du système optimisé ou un navigateur externe.
+La classe **Browser** permet à une application d'ouvrir un lien web dans un navigateur installé sur le téléphone.
 
 ## <a name="using-browser"></a>Utilisation de **Browser**
 
@@ -26,10 +26,9 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de navigateur fonctionne en appelant le `OpenAsync` méthode avec le `Uri` et `BrowserLaunchMode`.
+Pour ouvrir le navigateur, passez un objet de type `Uri` et un `BrowserLaunchMode` à la méthode `OpenAsync`.
 
 ```csharp
-
 public class BrowserTest
 {
     public async Task OpenBrowser(Uri uri)
@@ -45,27 +44,27 @@ public class BrowserTest
 
 Le Mode de lancement détermine la façon dont le navigateur est lancé :
 
-## <a name="system-preferred"></a>Système par défaut
+## <a name="system-preferred"></a>SystemPreferred
 
-[Chrome des onglets personnalisés](https://developer.chrome.com/multidevice/android/customtabs) sera tentée à utiliser l’Uri de charger et conserver la sensibilisation à la navigation.
+[Un onglet personnalisé Chrome](https://developer.chrome.com/multidevice/android/customtabs) sera utilisé pour charger l'Url.
 
-## <a name="external"></a>Ressource externe
+## <a name="external"></a>External
 
-Un `Intent` permet de demander l’Uri d’ouvrir via le navigateur normal de systèmes.
+Un `Intent` demandant quel navigateur, parmi les navigateurs présents sur le système, utiliser.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-## <a name="system-preferred"></a>Système par défaut
+## <a name="system-preferred"></a>SystemPreferred
 
-[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) permet de charger l’Uri et de conserver la sensibilisation à la navigation.
+[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) sera utilisé pour charger l'Url.
 
-## <a name="external"></a>Ressource externe
+## <a name="external"></a>External
 
-La norme `OpenUrl` sur l’application principale est utilisé pour lancer le navigateur par défaut en dehors de l’application.
+La norme `OpenUrl` sera utilisé pour lancer le navigateur par défaut en dehors de l’application.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Navigateur par défaut de l’utilisateur sera toujours exécuté, quel que soit le `BrowserLaunchMode`.
+Le navigateur par défaut de l’utilisateur sera toujours exécuté, quel que soit le `BrowserLaunchMode`.
 
 --------------
 

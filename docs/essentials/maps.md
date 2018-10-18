@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Carte'
-description: La classe de mappages dans Xamarin.Essentials permet à une application ouvrir l’application de cartes installées à un emplacement spécifique ou à placemark.
+description: La classe Maps permet à une application d'ouvrir une application cartes installée sur le téléphone à un emplacement spécifique ou sur un placemark.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353933"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **mappe** permet à une application ouvrir l’application de cartes installées à un emplacement spécifique ou à placemark.
+La classe **Maps** permet à une application d'ouvrir une application cartes installée sur le téléphone à un emplacement spécifique ou sur un placemark.
 
 ## <a name="using-maps"></a>Utilisation de **Maps**
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de mappages fonctionne en appelant le `OpenAsync` méthode avec le `Location` ou `Placemark` ouvrir avec facultatif `MapsLaunchOptions`.
+Pour ouvrir la carte, passez un objet `Location` ou `Placemark` à la méthode `OpenAsync`. Le paramètre facultatif `MapsLaunchOptions` permet d'ajouter des précisions à la requête.
 
 ```csharp
 public class MapsTest
@@ -67,9 +67,9 @@ public class MapsTest
 }
 ```
 
-## <a name="extension-methods"></a>méthodes d’extension.
+## <a name="extension-methods"></a>Méthode d’extension
 
-Si vous avez déjà une référence à un `Location` ou `Placemark` vous pouvez utiliser la méthode d’extension intégrés `OpenMapsAsync` avec facultatif `MapsLaunchOptions`:
+Si vous avez déjà une référence à un `Location` ou `Placemark` vous pouvez utiliser la méthode d’extension intégrée `OpenMapsAsync` avec le paramètre facultatif `MapsLaunchOptions`:
 
 ```csharp
 public class MapsTest
@@ -101,7 +101,7 @@ public class MapsTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android utilise le `geo:` schéma d’Uri pour lancer l’application maps sur l’appareil. Cela peut inviter l’utilisateur à sélectionner à partir d’une application existante qui prend en charge de ce schéma d’Uri.  Xamarin.Essentials est testé avec Google Maps, qui prend en charge de ce schéma.
+Android utilise le schéma d’Uri `geo:` pour lancer l’application maps sur l’appareil. Cela peut inviter l’utilisateur à sélectionner une application parmis les applications de carte qui prend en charge ce schéma d’Uri. Xamarin.Essentials est testé avec Google Maps, qui prend en charge de ce schéma.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
