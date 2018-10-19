@@ -4,14 +4,14 @@ description: Cet article explique comment utiliser des transformations de matric
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
-author: charlespetzold
-ms.author: chape
-ms.date: 04/03/2018
-ms.openlocfilehash: e2c1529980681ed1013c53343c2d077297352b95
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/14/2018
+ms.openlocfilehash: 6f7236a3650c04098edbef92f3d6ed620be501c3
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615390"
 ---
 # <a name="touch-manipulations"></a>Manipulations tactiles
@@ -22,12 +22,385 @@ Dans les environnements de l’interaction tactile multipoint, telles que celles
 
 ![](touch-images/touchmanipulationsexample.png "Une image bitmap soumise à translation, de mise à l’échelle et rotation")
 
-## <a name="manipulating-one-bitmap"></a>Manipulation de l’image Bitmap
+Tous les exemples ci-après utilisent l’effet de suivi de tactile Xamarin.Forms présentée dans l’article [ **appel des événements à partir des effets**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
-Le **Manipulation tactile** page montre les manipulations tactiles sur une seule bitmap.
-Cet exemple utilise l’effet de suivi de tactile présentée dans l’article [appel des événements à partir des effets](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
+## <a name="dragging-and-translation"></a>Déplacement et la traduction
 
-Plusieurs autres fichiers prennent en charge pour le **Manipulation tactile** page. La première est la [ `TouchManipulationMode` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationMode.cs) énumération, qui indique les différents types de manipulation tactile implémentée par le code que vous verrez :
+Une des applications plus importants des transformations de matrice est le traitement de tactile. Un seul [ `SKMatrix` ](xref:SkiaSharp.SKMatrix) valeur permettre consolider une série d’opérations de contact. 
+
+Pour faire glisser un seul doigt, le `SKMatrix` valeur effectue la traduction. Cela est illustré dans le **Bitmap en faisant glisser** page. Le fichier XAML instancie un `SKCanvasView` dans un Xamarin.Forms `Grid`. Un `TouchEffect` objet a été ajouté à la `Effects` collection de qui `Grid`:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking"
+             x:Class="SkiaSharpFormsDemos.Transforms.BitmapDraggingPage"
+             Title="Bitmap Dragging">
+    
+    <Grid BackgroundColor="White">
+        <skia:SKCanvasView x:Name="canvasView"
+                           PaintSurface="OnCanvasViewPaintSurface" />
+        <Grid.Effects>
+            <tt:TouchEffect Capture="True"
+                            TouchAction="OnTouchEffectAction" />
+        </Grid.Effects>
+    </Grid>
+</ContentPage>
+```
+
+En théorie, le `TouchEffect` objet peut être ajouté directement à la `Effects` collection de la `SKCanvasView`, mais qui ne fonctionne pas sur toutes les plateformes. Étant donné que le `SKCanvasView` est la même taille que le `Grid` dans cette configuration, attachement à la `Grid` fonctionne aussi bien.
+
+Le fichier code-behind se charge dans une ressource bitmap dans son constructeur et l’affiche dans le `PaintSurface` gestionnaire :
+
+```csharp
+public partial class BitmapDraggingPage : ContentPage
+{
+    // Bitmap and matrix for display
+    SKBitmap bitmap;
+    SKMatrix matrix = SKMatrix.MakeIdentity();
+    ···
+
+    public BitmapDraggingPage()
+    {
+        InitializeComponent();
+
+        string resourceID = "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg";
+        Assembly assembly = GetType().GetTypeInfo().Assembly;
+
+        using (Stream stream = assembly.GetManifestResourceStream(resourceID))
+        {
+            bitmap = SKBitmap.Decode(stream);
+        }
+    }
+    ···
+    void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+    {
+        SKImageInfo info = args.Info;
+        SKSurface surface = args.Surface;
+        SKCanvas canvas = surface.Canvas;
+
+        canvas.Clear();
+
+        // Display the bitmap
+        canvas.SetMatrix(matrix);
+        canvas.DrawBitmap(bitmap, new SKPoint());
+    }
+}
+```
+
+Sans aucun code supplémentaire, le `SKMatrix` valeur est toujours la matrice d’identité, et il n’a aucun effet sur l’affichage de l’image bitmap. L’objectif de la `OnTouchEffectAction` gestionnaire défini dans le fichier XAML est de modifier la valeur de la matrice afin de refléter les manipulations tactiles.
+
+Le `OnTouchEffectAction` gestionnaire commence par convertir la Xamarin.Forms `Point` valeur dans un SkiaSharp `SKPoint` valeur. Il s’agit simplement de mise à l’échelle selon la `Width` et `Height` propriétés de `SKCanvasView` (qui sont des unités indépendantes du périphérique) et le `CanvasSize` propriété, qui est exprimé en unités de pixels :
+
+```csharp
+public partial class BitmapDraggingPage : ContentPage
+{
+    ···
+    // Touch information
+    long touchId = -1;
+    SKPoint previousPoint;
+    ···
+    void OnTouchEffectAction(object sender, TouchActionEventArgs args)
+    {
+        // Convert Xamarin.Forms point to pixels
+        Point pt = args.Location;
+        SKPoint point = 
+            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+
+        switch (args.Type)
+        {
+            case TouchActionType.Pressed:
+                // Find transformed bitmap rectangle
+                SKRect rect = new SKRect(0, 0, bitmap.Width, bitmap.Height);
+                rect = matrix.MapRect(rect);
+
+                // Determine if the touch was within that rectangle
+                if (rect.Contains(point))
+                {
+                    touchId = args.Id;
+                    previousPoint = point;
+                }
+                break;
+
+            case TouchActionType.Moved:
+                if (touchId == args.Id)
+                {
+                    // Adjust the matrix for the new position
+                    matrix.TransX += point.X - previousPoint.X;
+                    matrix.TransY += point.Y - previousPoint.Y;
+                    previousPoint = point;
+                    canvasView.InvalidateSurface();
+                }
+                break;
+
+            case TouchActionType.Released:
+            case TouchActionType.Cancelled:
+                touchId = -1;
+                break;
+        }
+    }
+    ···
+}
+```
+
+Lorsqu’un doigt touche en premier l’écran, un événement de type `TouchActionType.Pressed` est déclenché. La première tâche consiste à déterminer si le doigt touche l’image bitmap. Cette tâche est souvent appelée _le test de positionnement_. Dans ce cas, le test de positionnement est possible en créant un `SKRect` valeur correspondant à l’image bitmap, en appliquant la transformation de matrice à l’aide de `MapRect`et puis de déterminer si le point tactile est à l’intérieur du rectangle transformé.
+
+Si tel est le cas, le `touchId` champ est défini sur l’ID tactile et la position du doigt est enregistrée.
+
+Pour le `TouchActionType.Moved` événement, les facteurs de translation de la `SKMatrix` valeur sont ajustées en fonction de la position actuelle du doigt et la nouvelle position du doigt. Que la nouvelle position est enregistrée pour la prochaine fois et le `SKCanvasView` est invalidée.
+
+Comme vous faire des essais avec ce programme, notez que vous pouvez uniquement faire glisser l’image bitmap lorsque votre doigt touche une zone où l’image bitmap est affichée. Bien que cette restriction n’est pas très importante pour ce programme, il devient essentiel lors de la manipulation des bitmaps plusieurs.
+
+## <a name="pinching-and-scaling"></a>Pincement et mise à l’échelle
+
+Que voulez-vous se produire lorsque deux doigts touch la bitmap ? Si les deux doigts déplacent en parallèle, vous souhaitez probablement la bitmap à déplacer, ainsi que les doigts. Si les deux doigts effectuer un pincement ou étirement l’opération, vous souhaiterez la bitmap à rotation (abordée dans la section suivante) ou la mise à l’échelle. Lors de la mise à l’échelle une image bitmap, plus pratique pour deux doigts rester dans les mêmes positions par rapport à l’image bitmap et pour la bitmap à mettre à l’échelle en conséquence.
+
+Gestion à la fois des deux doigts semble compliquée, mais n’oubliez pas que le `TouchAction` gestionnaire reçoit uniquement les informations sur un doigt à la fois. Si deux doigts manipulent l’image bitmap, puis un doigt a changé de position pour chaque événement, mais l’autre n’a pas changé. Dans le **mise à l’échelle d’une Bitmap** page le code ci-dessous, le doigt qui n’a pas changé position est appelé le _pivot_ point étant la transformation par rapport à ce point.
+
+Une différence entre ce programme et le programme précédent est que plusieurs ID doivent être enregistrés. Un dictionnaire est utilisé à cet effet, où l’ID tactile est la clé de dictionnaire et la valeur de dictionnaire est la position actuelle de ce doigt :
+
+```csharp
+public partial class BitmapScalingPage : ContentPage
+{
+    ···
+    // Touch information
+    Dictionary<long, SKPoint> touchDictionary = new Dictionary<long, SKPoint>();
+    ···
+    void OnTouchEffectAction(object sender, TouchActionEventArgs args)
+    {
+        // Convert Xamarin.Forms point to pixels
+        Point pt = args.Location;
+        SKPoint point =
+            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+
+        switch (args.Type)
+        {
+            case TouchActionType.Pressed:
+                // Find transformed bitmap rectangle
+                SKRect rect = new SKRect(0, 0, bitmap.Width, bitmap.Height);
+                rect = matrix.MapRect(rect);
+
+                // Determine if the touch was within that rectangle
+                if (rect.Contains(point) && !touchDictionary.ContainsKey(args.Id))
+                {
+                    touchDictionary.Add(args.Id, point);
+                }
+                break;
+
+            case TouchActionType.Moved:
+                if (touchDictionary.ContainsKey(args.Id))
+                {
+                    // Single-finger drag
+                    if (touchDictionary.Count == 1)
+                    {
+                        SKPoint prevPoint = touchDictionary[args.Id];
+
+                        // Adjust the matrix for the new position
+                        matrix.TransX += point.X - prevPoint.X;
+                        matrix.TransY += point.Y - prevPoint.Y;
+                        canvasView.InvalidateSurface();
+                    }
+                    // Double-finger scale and drag
+                    else if (touchDictionary.Count >= 2)
+                    {
+                        // Copy two dictionary keys into array
+                        long[] keys = new long[touchDictionary.Count];
+                        touchDictionary.Keys.CopyTo(keys, 0);
+
+                        // Find index of non-moving (pivot) finger
+                        int pivotIndex = (keys[0] == args.Id) ? 1 : 0;
+
+                        // Get the three points involved in the transform
+                        SKPoint pivotPoint = touchDictionary[keys[pivotIndex]];
+                        SKPoint prevPoint = touchDictionary[args.Id];
+                        SKPoint newPoint = point;
+
+                        // Calculate two vectors
+                        SKPoint oldVector = prevPoint - pivotPoint;
+                        SKPoint newVector = newPoint - pivotPoint;
+
+                        // Scaling factors are ratios of those
+                        float scaleX = newVector.X / oldVector.X;
+                        float scaleY = newVector.Y / oldVector.Y;
+
+                        if (!float.IsNaN(scaleX) && !float.IsInfinity(scaleX) &&
+                            !float.IsNaN(scaleY) && !float.IsInfinity(scaleY))
+                        {
+                            // If smething bad hasn't happened, calculate a scale and translation matrix
+                            SKMatrix scaleMatrix = 
+                                SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
+
+                            SKMatrix.PostConcat(ref matrix, scaleMatrix);
+                            canvasView.InvalidateSurface();
+                        }
+                    }
+
+                    // Store the new point in the dictionary
+                    touchDictionary[args.Id] = point;
+                }
+
+                break;
+
+            case TouchActionType.Released:
+            case TouchActionType.Cancelled:
+                if (touchDictionary.ContainsKey(args.Id))
+                {
+                    touchDictionary.Remove(args.Id);
+                }
+                break;
+        }
+    }
+    ···
+}
+```
+
+La gestion de la `Pressed` action est presque identique à celui de l’ID de programme, sauf que le précédent et le point de contact sont ajoutées au dictionnaire. Le `Released` et `Cancelled` actions supprimer l’entrée de dictionnaire.
+
+La gestion de la `Moved` action est plus complexe, toutefois. S’il existe un seul doigt impliquées, le traitement est très semblable à celle du programme précédent. Pour deux ou plusieurs doigts, le programme doit également obtenir des informations à partir du dictionnaire impliquant le doigt ne bouge pas. Pour ce faire copier les clés de dictionnaire dans un tableau, puis en comparant la première clé avec l’ID du doigt en cours de déplacement. Qui permet au programme obtenir le point pivot correspondant au doigt qui ne bouge pas.
+
+Ensuite, le programme calcule deux vecteurs de la nouvelle position du doigt par rapport au point pivot et l’ancienne position du doigt par rapport au point pivot. Les proportions des ces vecteurs sont des facteurs de mise à l’échelle. Étant donné que la division par zéro est possible, ceux-ci doivent vérifier les valeurs infinies ou NaN (pas un nombre). Si tout va bien, une transformation de mise à l’échelle est concaténée avec la `SKMatrix` enregistré sous la forme d’un champ de valeur.
+
+Lorsque vous testez cette page, vous remarquerez que vous pouvez faire glisser l’image bitmap avec un ou deux doigts, ou mettre à l’échelle avec deux doigts. La mise à l’échelle est _ANISOTROPIQUE_, ce qui signifie que la mise à l’échelle peut être différent dans le sens horizontal et vertical. Cela déforme le rapport hauteur / largeur, mais vous permet également de faire pivoter la bitmap pour rendre une image miroir. Vous pouvez également découvrir que vous pouvez réduire la bitmap à une dimension de zéro, et il disparaît. Dans le code de production, vous souhaitez protéger contre cela.
+
+## <a name="two-finger-rotation"></a>Rotation de deux doigts
+
+Le **pivoter Bitmap** page vous permet d’utiliser deux doigts pour la rotation ou de mise à l’échelle isotropes. L’image bitmap conserve toujours ses proportions correcte. À l’aide de deux doigts pour la rotation et la mise à l’échelle ANISOTROPIQUE ne fonctionne pas très bien, car le mouvement des doigts est très similaire pour les deux tâches.
+
+La première grande différence dans ce programme est la logique de test d’atteinte. Les programmes précédentes utilisés le `Contains` méthode de `SKRect` pour déterminer si le point tactile est dans le rectangle transformé qui correspond à l’image bitmap. Mais comme l’utilisateur manipule la bitmap, l’image bitmap peut être pivoté, et `SKRect` ne peut pas représenter correctement un rectangle pivoté. Vous pouvez la peur que la logique de test de positionnement doit implémenter plutôt complexe géométrie analytique dans ce cas.
+
+Toutefois, un raccourci est disponible : déterminer si un point se trouve dans les limites d’un rectangle transformé est identique à la façon de déterminer si un point transformé inverse se trouve dans les limites du rectangle de transformation. C’est un calcul plus facile de quantité et la logique peut continuer à utiliser le pratique `Contains` méthode :
+
+```csharp
+public partial class BitmapRotationPage : ContentPage
+{
+    ···
+    // Touch information
+    Dictionary<long, SKPoint> touchDictionary = new Dictionary<long, SKPoint>();
+    ···
+    void OnTouchEffectAction(object sender, TouchActionEventArgs args)
+    {
+        // Convert Xamarin.Forms point to pixels
+        Point pt = args.Location;
+        SKPoint point =
+            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+
+        switch (args.Type)
+        {
+            case TouchActionType.Pressed:
+                if (!touchDictionary.ContainsKey(args.Id))
+                {
+                    // Invert the matrix
+                    if (matrix.TryInvert(out SKMatrix inverseMatrix))
+                    {
+                        // Transform the point using the inverted matrix
+                        SKPoint transformedPoint = inverseMatrix.MapPoint(point);
+
+                        // Check if it's in the untransformed bitmap rectangle
+                        SKRect rect = new SKRect(0, 0, bitmap.Width, bitmap.Height);
+
+                        if (rect.Contains(transformedPoint))
+                        {
+                            touchDictionary.Add(args.Id, point);
+                        }
+                    }
+                }
+                break;
+
+            case TouchActionType.Moved:
+                if (touchDictionary.ContainsKey(args.Id))
+                {
+                    // Single-finger drag
+                    if (touchDictionary.Count == 1)
+                    {
+                        SKPoint prevPoint = touchDictionary[args.Id];
+
+                        // Adjust the matrix for the new position
+                        matrix.TransX += point.X - prevPoint.X;
+                        matrix.TransY += point.Y - prevPoint.Y;
+                        canvasView.InvalidateSurface();
+                    }
+                    // Double-finger rotate, scale, and drag
+                    else if (touchDictionary.Count >= 2)
+                    {
+                        // Copy two dictionary keys into array
+                        long[] keys = new long[touchDictionary.Count];
+                        touchDictionary.Keys.CopyTo(keys, 0);
+
+                        // Find index non-moving (pivot) finger
+                        int pivotIndex = (keys[0] == args.Id) ? 1 : 0;
+
+                        // Get the three points in the transform
+                        SKPoint pivotPoint = touchDictionary[keys[pivotIndex]];
+                        SKPoint prevPoint = touchDictionary[args.Id];
+                        SKPoint newPoint = point;
+
+                        // Calculate two vectors
+                        SKPoint oldVector = prevPoint - pivotPoint;
+                        SKPoint newVector = newPoint - pivotPoint;
+
+                        // Find angles from pivot point to touch points
+                        float oldAngle = (float)Math.Atan2(oldVector.Y, oldVector.X);
+                        float newAngle = (float)Math.Atan2(newVector.Y, newVector.X);
+
+                        // Calculate rotation matrix
+                        float angle = newAngle - oldAngle;
+                        SKMatrix touchMatrix = SKMatrix.MakeRotation(angle, pivotPoint.X, pivotPoint.Y);
+
+                        // Effectively rotate the old vector
+                        float magnitudeRatio = Magnitude(oldVector) / Magnitude(newVector);
+                        oldVector.X = magnitudeRatio * newVector.X;
+                        oldVector.Y = magnitudeRatio * newVector.Y;
+
+                        // Isotropic scaling!
+                        float scale = Magnitude(newVector) / Magnitude(oldVector);
+
+                        if (!float.IsNaN(scale) && !float.IsInfinity(scale))
+                        {
+                            SKMatrix.PostConcat(ref touchMatrix,
+                                SKMatrix.MakeScale(scale, scale, pivotPoint.X, pivotPoint.Y));
+
+                            SKMatrix.PostConcat(ref matrix, touchMatrix);
+                            canvasView.InvalidateSurface();
+                        }
+                    }
+
+                    // Store the new point in the dictionary
+                    touchDictionary[args.Id] = point;
+                }
+
+                break;
+
+            case TouchActionType.Released:
+            case TouchActionType.Cancelled:
+                if (touchDictionary.ContainsKey(args.Id))
+                {
+                    touchDictionary.Remove(args.Id);
+                }
+                break;
+        }
+    }
+
+    float Magnitude(SKPoint point)
+    {
+        return (float)Math.Sqrt(Math.Pow(point.X, 2) + Math.Pow(point.Y, 2));
+    }
+    ···
+}
+```
+
+La logique pour le `Moved` événement démarre comme le programme précédent. Deux vecteurs nommés `oldVector` et `newVector` sont calculés en fonction du précédent et le point actuel du doigt en mouvement et le point pivot du doigt statique. Mais ensuite les angles de ces vecteurs sont déterminées, et la différence est l’angle de rotation.
+
+Mise à l’échelle peut-être également être impliqué, donc le vecteur ancien est pivoté en fonction de l’angle de rotation. L’importance relative de deux vecteurs est désormais le facteur d’échelle. Notez que le même `scale` valeur est utilisée pour horizontal et la mise à l’échelle verticale afin que la mise à l’échelle est Isotrope. Le `matrix` champ est ajusté par la matrice de rotation et une matrice de mise à l’échelle.
+
+Si votre application doit implémenter tactile de traitement pour une seule bitmap (ou d’un autre objet), vous pouvez adapter le code à partir de ces trois exemples pour votre propre application. Mais si vous devez implémenter tactile de traitement pour les bitmaps plusieurs, vous souhaiterez probablement encapsuler ces touch des opérations dans d’autres classes.
+
+## <a name="encapsulating-the-touch-operations"></a>Qui encapsule les opérations tactile
+
+Le **Manipulation tactile** page montre la manipulation tactile d’une seule bitmap, mais à l’aide de plusieurs autres fichiers qui encapsulent une grande partie de la logique ci-dessus. Le premier de ces fichiers est le [ `TouchManipulationMode` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationMode.cs) énumération, qui indique les différents types de manipulation tactile implémentée par le code que vous verrez :
 
 ```csharp
 enum TouchManipulationMode
@@ -43,17 +416,19 @@ enum TouchManipulationMode
 
 `PanOnly` est une opération de glissement d’un doigt qui est implémentée avec la traduction. Toutes les options suivantes également inclure le panoramique, mais impliquent deux doigts : `IsotropicScale` est une opération de pincement qui résulte dans l’objet de mise à l’échelle de manière égale dans le sens horizontal et vertical. `AnisotropicScale` permet la mise à l’échelle inégaux.
 
-Le `ScaleRotate` option est de mise à l’échelle des deux doigts et de rotation. Mise à l’échelle est Isotrope. Implémentation de rotation de deux doigts avec mise à l’échelle ANISOTROPIQUE est problématique, car les doigt mouvements sont essentiellement les mêmes.
+Le `ScaleRotate` option est de mise à l’échelle des deux doigts et de rotation. Mise à l’échelle est Isotrope. Comme mentionné précédemment, la mise en œuvre de rotation de deux doigts avec mise à l’échelle ANISOTROPIQUE est problématique, car les doigt mouvements sont essentiellement les mêmes.
 
 Le `ScaleDualRotate` option ajoute la rotation d’un doigt. Quand un seul doigt fait glisser l’objet, l’objet glissé est tout d’abord pivoter autour de son centre afin que le centre de l’objet est alignée avec le vecteur de déplacement.
 
 Le [ **TouchManipulationPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationPage.xaml) fichier inclut un `Picker` avec les membres de la `TouchManipulationMode` énumération :
 
 ```xaml
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              xmlns:tt="clr-namespace:TouchTracking"
+             xmlns:local="clr-namespace:SkiaSharpFormsDemos.Transforms"
              x:Class="SkiaSharpFormsDemos.Transforms.TouchManipulationPage"
              Title="Touch Manipulation">
     <Grid>
@@ -65,22 +440,24 @@ Le [ **TouchManipulationPage.xaml** ](https://github.com/xamarin/xamarin-forms-s
         <Picker Title="Touch Mode"
                 Grid.Row="0"
                 SelectedIndexChanged="OnTouchModePickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>None</x:String>
-                <x:String>PanOnly</x:String>
-                <x:String>IsotropicScale</x:String>
-                <x:String>AnisotropicScale</x:String>
-                <x:String>ScaleRotate</x:String>
-                <x:String>ScaleDualRotate</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type local:TouchManipulationMode}">
+                    <x:Static Member="local:TouchManipulationMode.None" />
+                    <x:Static Member="local:TouchManipulationMode.PanOnly" />
+                    <x:Static Member="local:TouchManipulationMode.IsotropicScale" />
+                    <x:Static Member="local:TouchManipulationMode.AnisotropicScale" />
+                    <x:Static Member="local:TouchManipulationMode.ScaleRotate" />
+                    <x:Static Member="local:TouchManipulationMode.ScaleDualRotate" />
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 4
             </Picker.SelectedIndex>
         </Picker>
-
+        
         <Grid BackgroundColor="White"
               Grid.Row="1">
-
+            
             <skia:SKCanvasView x:Name="canvasView"
                                PaintSurface="OnCanvasViewPaintSurface" />
             <Grid.Effects>
@@ -133,9 +510,7 @@ public partial class TouchManipulationPage : ContentPage
         if (bitmap != null)
         {
             Picker picker = (Picker)sender;
-            TouchManipulationMode mode;
-            Enum.TryParse(picker.Items[picker.SelectedIndex], out mode);
-            bitmap.TouchManager.Mode = mode;
+            bitmap.TouchManager.Mode = (TouchManipulationMode)picker.SelectedItem;
         }
     }
     ...
@@ -244,11 +619,7 @@ class TouchManipulationBitmap
 }
 ```
 
-Le `HitTest` retourne de la méthode `true` si l’utilisateur touche l’écran à un point dans les limites de la bitmap. Comme l’utilisateur manipule la bitmap, l’image bitmap peut être pivoté, ou même (via une combinaison de rotation et de mise à l’échelle ANISOTROPIQUE) dans la forme d’un parallélogramme. Vous pouvez la peur que le `HitTest` méthode doit implémenter plutôt complexe géométrie analytique dans ce cas.
-
-Toutefois, un raccourci est disponible :
-
-Déterminer si un point se trouve dans les limites d’un rectangle transformé est identique à la façon de déterminer si un point transformé inverse se trouve dans les limites du rectangle de transformation. C’est un quantité calcul plus facile et il peut utiliser le pratique `Contains` méthode définie par `SKRect`:
+Le `HitTest` retourne de la méthode `true` si l’utilisateur touche l’écran à un point dans les limites de la bitmap. Cet exemple utilise la logique indiquée précédemment dans le **Bitmap Rotation** page :
 
 ```csharp
 class TouchManipulationBitmap
@@ -850,7 +1221,7 @@ public partial class SingleFingerCornerScalePage : ContentPage
 
 Le `Moved` type d’action calcule une matrice correspondant à l’activité tactile à partir du moment que le doigt utilisateur appuie sur l’écran jusqu'à cette heure. Il concatène cette matrice avec la matrice en vigueur au moment où que le doigt enfoncé tout d’abord l’image bitmap. L’opération de mise à l’échelle est toujours relatif au coin opposé à celui qui le doigt couvertes.
 
-Pour les bitmaps de petite taille ou allongées, une ellipse intérieure peut occupent la majeure partie de l’image bitmap et laissez les zones très petits dans les angles à l’échelle de l’image bitmap. Vous préférerez peut-être une approche un peu différente, auquel cas vous pouvez remplacer cet ensemble `if` bloc définit `isScaling` à `true` avec ce code :
+Pour les bitmaps de petite taille ou allongées, une ellipse intérieure peut occupent la majeure partie de l’image bitmap et laissez les zones minuscules dans les angles à l’échelle de l’image bitmap. Vous préférerez peut-être une approche un peu différente, auquel cas vous pouvez remplacer cet ensemble `if` bloc définit `isScaling` à `true` avec ce code :
 
 ```csharp
 float halfHeight = rect.Height / 2;
@@ -898,6 +1269,6 @@ Ce code divise efficacement la zone de l’image bitmap en forme de losange int�
 
 ## <a name="related-links"></a>Liens associés
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Appel d’événements à partir d’effets](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

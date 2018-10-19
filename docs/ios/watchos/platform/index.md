@@ -4,23 +4,19 @@ description: Ce document contient des liens vers des guides différents qui déc
 ms.prod: xamarin
 ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: e915ec38ed29b6ef2a0710c9dad10cf339c3a3ab
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 09200ba5968838edf829b30a50a8ad0f4a3ab3aa
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39030676"
 ---
 # <a name="watchos-platform-features"></a>fonctionnalités de la plateforme watchOS
 
 ## <a name="introduction-to-watchos-5introduction-to-watchos5indexmd"></a>[Introduction à watchOS 5](introduction-to-watchos5/index.md)
-
-> [!WARNING]
-> Prise en charge de Xamarin watchOS 5 est actuellement en version préliminaire, ce qui signifie qu’il peut contenir des bogues, n’est pas complet, et peut changer.
-> Utilisez-le pour l’expérimentation uniquement.
 
 Ce document fournit une vue d’ensemble des fonctionnalités nouvelles et mises à jour de watchOS 5 qui sont disponibles pour une utilisation lors de la création d’applications watchOS avec Xamarin.
 

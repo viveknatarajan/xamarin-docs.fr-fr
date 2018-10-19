@@ -1,67 +1,66 @@
 ---
-title: Contrôle de sélecteur de Xamarin.iOS
-description: Ce document décrit comment concevoir et manipuler les contrôles de sélecteur dans une application Xamarin.iOS. Elle explique comment implémenter un sélecteur dans du code et dans le concepteur iOS.
+title: Contrôle de sélecteur dans Xamarin.iOS
+description: Ce document décrit comment concevoir et utiliser des contrôles de sélecteur dans une application Xamarin.iOS. Il explique comment implémenter un sélecteur dans le code et dans le concepteur iOS.
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 08/02/2017
-ms.openlocfilehash: 7f46d354af86027d1e2656171c6595562d3555a6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 08/14/2018
+ms.openlocfilehash: 0ef33c2036b1ff2d5a7e2035ca5fa8af58672867
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "34789910"
 ---
-# <a name="picker-control-in-xamarinios"></a>Contrôle de sélecteur de Xamarin.iOS
+# <a name="picker-control-in-xamarinios"></a>Contrôle de sélecteur dans Xamarin.iOS
 
-Le contrôle de sélecteur affiche 'roue-like' contrôle qui contient une liste déroulante de valeurs avec la valeur sélectionnée est en cours de mise en surbrillance. Les utilisateurs tournez la molette pour sélectionner l’option de que leur choix.
+Un [ `UIPickerView` ](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) rend possible de choisir une valeur dans une liste par des composants individuels d’une interface semblable à la roulette de défilement.
 
-Un utilisateur spécifique de cas pour les sélecteurs pour définir la date et / ou l’heure. Prévoir cette Apple a créé une sous-classe personnalisée de la classe UIPickerView appelée UIDatePicker.
+Sélecteurs sont fréquemment utilisés pour sélectionner une date et heure ; Apple fournit le [`UIDatePicker`](https://developer.xamarin.com/api/type/UIKit.UIDatePicker/)
+classe à cet effet.
 
-L’article couvre la mise en œuvre et à l’aide de la [sélecteur](#picker) et [sélecteur de dates](#datepicker) contrôles.
+L’article explique comment implémenter et utiliser le `UIPickerView` et `UIDatePicker` contrôles.
 
-<a name="picker" />
-
-## <a name="picker"></a>Sélecteur
+## <a name="uipickerview"></a>UIPickerView
 
 ### <a name="implementing-a-picker"></a>Implémentation d’un sélecteur
 
-Un sélecteur est implémenté en instanciant une nouvelle [`UIPickerView`](https://developer.xamarin.com/api/type/UIKit.UIPickerView/):
+Implémenter un sélecteur par instanciation d’un nouvel `UIPickerView`:
 
 ```csharp
 UIPickerView pickerView = new UIPickerView(
-                            new CGRect(
-                                UIScreen.MainScreen.Bounds.X-UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height -230, 
-                                UIScreen.MainScreen.Bounds.Width, 
-                                180));
+    new CGRect(
+        UIScreen.MainScreen.Bounds.X - UIScreen.MainScreen.Bounds.Width, 
+        UIScreen.MainScreen.Bounds.Height - 230,
+        UIScreen.MainScreen.Bounds.Width,
+        180
+    )
+);
 ```
 
+### <a name="pickers-and-storyboards"></a>Sélecteurs et les tables de montage séquentiel
 
-### <a name="pickers-and-storyboards"></a>Les sélecteurs et les animations
+Pour créer un sélecteur dans la **concepteur iOS**, faites glisser un **sélecteur de vue** à partir de la **boîte à outils** à l’aire de conception.
 
-Si vous utilisez le concepteur iOS pour créer votre interface utilisateur, le sélecteur peut être ajouté à votre disposition à partir de la boîte à outils :
+![Faites glisser un sélecteur de vue à l’aire de conception](picker-images/image1.png "faites glisser un sélecteur de vue à l’aire de conception")
 
-![](picker-images/image1.png)
+### <a name="working-with-a-picker-control"></a>Utilisation d’un contrôle de sélecteur
 
-
-### <a name="working-with-picker"></a>Utilisation de sélecteur
-
-Une fois que vous avez créé un sélecteur, que ce soit dans le code ou via des plans conceptuels, vous devrez attribuer une _modèle_ lui afin que vous pouvez passer et interagir avec les données ;
+Un sélecteur utilise un _modèle_ pour interagir avec les données :
 
 ```csharp
 public override void ViewDidLoad()
 {
     base.ViewDidLoad();
-
     var pickerModel = new PeopleModel(personLabel);
-
     personPicker.Model = pickerModel;
 }
 ```
 
-Le code suivant montre un exemple de modèle :
+Le [ `UIPickerViewModel` ](https://developer.xamarin.com/api/type/UIKit.UIPickerViewModel/) classe de base implémente deux interfaces, [`IUIPickerDataSource`](https://developer.xamarin.com/api/type/UIKit.IUIPickerViewDataSource/)
+et [ `IUIPickerViewDelegate` ](https://developer.xamarin.com/api/type/UIKit.IUIPickerViewDelegate/), déclarer des diverses méthodes qui spécifient les données d’un sélecteur et comment il gère l’interaction :
 
 ```csharp
 public class PeopleModel : UIPickerViewModel
@@ -105,7 +104,7 @@ public class PeopleModel : UIPickerViewModel
     }
 
     public override void Selected(UIPickerView pickerView, nint row, nint component)
-    {   
+    {
         personLabel.Text = $"This person is: {names[pickerView.SelectedRowInComponent(0)]},\n they are number {pickerView.SelectedRowInComponent(1)}";
     }
 
@@ -123,148 +122,130 @@ public class PeopleModel : UIPickerViewModel
     }
 ```
 
-Tout d’abord, vous devez passer des données pour fournir des options différentes pour un utilisateur à sélectionner. Lorsque possible d’utiliser cette liste autant que possible, ou si vous essayez d’utiliser plusieurs 'appeler' nécessaire (appelé *composants*) :
+Un sélecteur peut avoir plusieurs colonnes, ou _composants_. Composants partitionnement un sélecteur de plusieurs sections, ce qui permet la sélection de données plus facile et plus spécifique :
 
-![Sélecteur de deux composants](picker-images/image3.png)
+![Sélecteur de deux composants](picker-images/image3.png "sélecteur avec deux composants")
 
-Pour définir le nombre de composants, vous devez substituer la `GetComponentCount` méthode : 
+Pour spécifier le nombre de composants dans un sélecteur, utilisez le [`GetComponentCount`](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetComponentCount/p/UIKit.UIPickerView/) 
+.
 
-```csharp
-public override nint GetComponentCount(UIPickerView pickerView)
-{
-    return 2;
-}
-```
+### <a name="customizing-a-pickers-appearance"></a>Personnalisation de l’apparence d’un sélecteur
 
-La valeur de retour indique le nombre de compose que votre sélecteur aura.
+Pour personnaliser l’apparence d’un sélecteur, utilisez le [`UIPickerView.UIPickerViewAppearance`](https://developer.xamarin.com/api/type/UIKit.UIPickerView+UIPickerViewAppearance/)
+classe ou de remplacer le [ `GetView` ](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetView/p/UIKit.UIPickerView/System.nint/System.nint/UIKit.UIView/) et [ `GetRowHeight` ](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetRowHeight/p/UIKit.UIPickerView/System.nint/) méthodes dans le `UIPickerViewModel`.
 
-### <a name="customizing-appearance"></a>Personnaliser l’apparence
- 
-L’apparence de la `UIPickerView` peuvent être personnalisés à l’aide de la `UIPickerView.UIPickerViewAppearance` classe ou en remplaçant le `UIPickerViewModel.GetView` et `UIPickerViewModel.GetRowHeight` méthodes dans le `UIPickerViewModel`.
-
-
-<a name="datepicker" />
-
-## <a name="date-picker"></a>Sélecteur de dates
+## <a name="uidatepicker"></a>UIDatePicker
 
 ### <a name="implementing-a-date-picker"></a>Implémentation d’un sélecteur de dates
 
-Un sélecteur de dates est implémenté en instanciant une nouvelle [ `UIDatePickerView` ](https://developer.xamarin.com/api/type/UIKit.UIDatePicker/):
+Implémenter un sélecteur de dates en instanciant un `UIDatePicker`:
 
 ```csharp
 UIPickerView pickerView = new UIPickerView(
-                            new CGRect(
-                                UIScreen.MainScreen.Bounds.X-UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height -230, 
-                                UIScreen.MainScreen.Bounds.Width, 
-                                180));
+    new CGRect(
+        UIScreen.MainScreen.Bounds.X - UIScreen.MainScreen.Bounds.Width,
+        UIScreen.MainScreen.Bounds.Height - 230,
+        UIScreen.MainScreen.Bounds.Width,
+        180
+     )
+);
 ```
 
+### <a name="date-pickers-and-storyboards"></a>Sélecteurs de dates et des storyboards
 
-### <a name="date-pickers-and-storyboards"></a>Sélecteurs de date et d’animations
+Pour créer un sélecteur de dates dans le **concepteur iOS**, faites glisser un **sélecteur de dates** à partir de la **boîte à outils** à l’aire de conception.
 
-Si vous utilisez le concepteur iOS pour créer votre interface utilisateur, le **sélecteur de dates** peuvent être ajoutés à votre disposition à partir de la boîte à outils. Les propriétés suivantes peuvent être ajustées à partir de la zone de propriétés :
+![Faites glisser un sélecteur de dates à l’aire de conception](picker-images/image2.png "faites glisser un sélecteur de dates à l’aire de conception")
 
-![](picker-images/image2.png)
+### <a name="date-picker-properties"></a>Propriétés du sélecteur de date
 
-* **Mode** : mode de la Date et l’heure. Cela peut être date, heure, date et heure ou un compte à rebours. 
-* **Paramètres régionaux** : les paramètres régionaux du sélecteur de date. Choisissez **par défaut** pour définir la valeur par défaut du système ou à des paramètres régionaux spécifique.
-* **Intervalle** – affiche l’incrément dans lequel les options de l’horloge seront affichera.
-* **Date, Date de Minimum, Date maximale** – définit la première date affiche le sélecteur et les contraintes pour les dates sélectionnables.
+#### <a name="minimum-and-maximum-date"></a>Au minimum et la date maximale
 
-### <a name="configuring-the-datepicker"></a>Configuration du sélecteur
-
-Vous pouvez limiter la plage de dates que l’utilisateur peut sélectionner à partir d’à l’aide de la `MinimumDate` et `MaximumDate` propriétés. L’extrait de code suivant montre un exemple de définition de la plage comprise entre 60 ans et aujourd'hui :
+[`MinimumDate`](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MinimumDate/) et [ `MaximumDate` ](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MaximumDate/) limiter la plage de dates disponibles dans le sélecteur de dates. Par exemple, le code suivant contraint un sélecteur de dates pour les années soixante mènent au moment présent :
 
 ```csharp
 var calendar = new NSCalendar(NSCalendarType.Gregorian);
 var currentDate = NSDate.Now;
 var components = new NSDateComponents();
-
 components.Year = -60;
-
 NSDate minDate = calendar.DateByAddingComponents(components, NSDate.Now, NSCalendarOptions.None);
-
 datePickerView.MinimumDate = minDate;
 datePickerView.MaximumDate = NSDate.Now;
 ```
 
-Vous pouvez également utiliser les contrôles .NET pour définir la plage de dates minimales et maximales. Exemple :
+> [!TIP]
+> Il est possible d’effectuer un cast explicite un `DateTime` à un `NSDate`:
+> ```csharp
+> DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
+> DatePicker.MaximumDate = (NSDate)DateTime.Today.AddDays (7);
+> ```
 
-```csharp
-DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
-DatePicker.MaximumDate = (NSDate)DateTime.Today.AddDays (7);
-```
+#### <a name="minute-interval"></a>Intervalle de minutes
 
-Vous pouvez également définir le `MinuteInterval` propriété pour définir l’intervalle auquel le sélecteur affiche les minutes. L’extrait de code suivant peut être utilisé pour définir le sélecteur de minutes à définir à des intervalles de 10.
+Le [ `MinuteInterval` ](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MinuteInterval/) propriété définit l’intervalle auquel le sélecteur affiche les minutes :
 
 ```csharp
 datePickerView.MinuteInterval = 10;
 ```
 
-Il existe quatre modes le sélecteur de dates peut être défini l’aide de la [ `UIDatePicker.Mode` ](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.Mode/) propriété. La liste ci-dessous présente un exemple de chacune d’elles et comment l’implémenter :
+#### <a name="mode"></a>Mode
 
-#### <a name="time"></a>réflexion
+Sélecteurs de dates prend en charge quatre [modes](https://developer.xamarin.com/api/type/UIKit.UIDatePickerMode/), décrit ci-dessous :
 
-Le mode de temps affiche l’heure avec un sélecteur d’heure et une désignation AM ou PM facultatif. Il est défini avec la `UIDatePickerMode.Time` propriété. Exemple :
+##### <a name="uidatepickermodetime"></a>UIDatePickerMode.Time
+
+`UIDatePickerMode.Time` Affiche l’heure avec un sélecteur d’heure et minute et une désignation AM ou PM facultative :
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Time;
 ```
 
-L’image suivante illustre un exemple de ce mode de sélecteur de dates :
+![UIDatePickerMode.Time](picker-images/image8.png "UIDatePickerMode.Time")
 
-![](picker-images/image8.png)
+##### <a name="uidatepickermodedate"></a>UIDatePickerMode.Date
 
-
-
-#### <a name="date"></a>Date
-
-Le mode de date affiche la date avec un mois, le jour et la sélection de l’année. Il est défini avec la `UIDatePickerMode.Date` propriété. Exemple :
+`UIDatePickerMode.Date` Affiche la date avec un mois, jour et sélecteur d’année :
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Date;
 ```
 
-L’image suivante illustre un exemple de ce sélecteur de dates :
+![UIDatePickerMode.Date](picker-images/image7.png "UIDatePickerMode.Date")
 
-![](picker-images/image7.png)
-
-L’ordre des sélecteurs varie selon les paramètres régionaux de la la `UIDatePicker`. Par défaut, il est défini par défaut du système. L’image ci-dessus illustre la disposition des sélecteurs dans le `en_US` paramètres régionaux, mais pour modifier un jour | Mois | Mise en page de l’année, vous pouvez utiliser le code suivant pour définir les paramètres régionaux :
+L’ordre des sélecteurs dépend des paramètres régionaux du sélecteur de dates, ce qui utilise les paramètres régionaux système par défaut. L’image ci-dessus montre la disposition des sélecteurs dans le `en_US` paramètres régionaux, mais ce qui suit modifie l’ordre à jour | Mois | Année :
 
 ```csharp
 datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 ```
 
-![](picker-images/image9.png)
+![Jour | Mois | Année](picker-images/image9.png "jour | Mois | Année")
 
+##### <a name="uidatepickermodedateandtime"></a>UIDatePickerMode.DateAndTime
 
-#### <a name="date-and-time"></a>Date et heure
-
-Le mode de date et d’heure affiche une vue de shortend de la date, l’heure en heures et minutes et un dependings de désignation AM ou PM facultatif sur si une horloge de 12 ou 24 heures est utilisé. Il est défini avec la `UIDatePickerMode.DateAndTime` propriété. Exemple :
+`UIDatePickerMode.DateAndTime` affiche une vue abrégée de la date, l’heure en heures et minutes et une désignation AM ou PM facultative (en fonction de l’utilisation d’une horloge de 12 ou 24 heures) :
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
 ```
 
-L’image suivante illustre un exemple de ce sélecteur de dates :
+![UIDatePickerMode.DateAndTime](picker-images/image6.png "UIDatePickerMode.DateAndTime")
 
-![](picker-images/image6.png)
+Comme avec [ `UIDatePickerMode.Date` ](#uidatepickermodedate), l’ordre des sélecteurs et l’utilisation d’une horloge de 12 ou 24 heures dépendent des paramètres régionaux du sélecteur de date.
 
-Comme avec [Date](#Date), l’ordre des sélecteurs et l’utilisation de l’horloge au format 12 ou 24 heures varient selon les paramètres régionaux de la la `UIDatePicker`.
+> [!TIP]
+> Utilisez le `Date` propriété pour capturer la valeur d’un sélecteur de dates en mode `UIDatePickerMode.Time`, `UIDatePickerMode.Date`, ou `UIDatePickerMode.DateAndTime`. Cette valeur est stockée comme un `NSDate`.
 
-#### <a name="countdown-timer"></a>Compte à rebours
+##### <a name="uidatepickermodecountdowntimer"></a>UIDatePickerMode.CountDownTimer
 
-Le mode de minuteur du compte à rebours affiche l’heure et la valeur des minutes. Il est défini avec la `UIDatePickerMode.CountDownTimer` propriété. Exemple :
+`UIDatePickerMode.CountDownTimer` Affiche les valeurs d’heure et minute :
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.CountDownTimer;
 ```
 
-L’image suivante illustre un exemple de ce sélecteur de dates :
+![« UIDatePickerMode.CountDownTimer »](picker-images/image5.png "UIDatePickerMode.CountDownTimer")
 
-![](picker-images/image5.png)
-
-Vous pouvez utiliser le `CountDownDuration` propriété pour capturer la valeur dispayed par le sélecteur de dates du compte à rebours. Par exemple, pour ajouter la valeur du compte à rebours à la date actuelle, vous pouvez utiliser le code suivant :
+Le `CountDownDuration` propriété capture la valeur d’un sélecteur de dates dans `UIDatePickerMode.CountDownTimer` mode. Par exemple, pour ajouter la valeur de compte à rebours à la date actuelle :
 
 ```csharp
 var currentTime = NSDate.Now;
@@ -274,45 +255,65 @@ var finishCountdown = currentTime.AddSeconds(countDownTimerTime);
 dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown);
 ```
 
-#### <a name="formatting"></a>Mise en forme 
+#### <a name="nsdateformatter"></a>NSDateFormatter
 
-Les valeurs des modes DateAndTime, Date et l’heure peuvent être capturés à l’aide de la `Date` propriété sur le UIDatePicker (par exemple : `datePickerView.Date`), qui est de type NSDate. Pour mettre en forme cette date en quelque chose plus lisible, utilisez [ `NSDateFormatter` ](https://developer.xamarin.com/api/type/Foundation.NSDateFormatter/). Les exemples ci-dessous montrent comment utiliser certaines des propriétés disponibles sur cette classe.
+Pour mettre en forme un `NSDate`, utilisez un [ `NSDateFormatter` ](https://developer.xamarin.com/api/type/Foundation.NSDateFormatter/).
 
-Le `DateFormat` a la valeur sous forme de chaîne pour représenter le mode d’affichage de la date :
+Pour utiliser un `NSDateFormatter`, appelez sa [ `ToString` ](https://developer.xamarin.com/api/member/Foundation.NSDateFormatter.ToString/p/Foundation.NSDate/) (méthode). Exemple :
+
+```csharp
+var date = NSDate.Now;
+var formatter = new NSDateFormatter();
+formatter.DateStyle = NSDateFormatterStyle.Full;
+formatter.TimeStyle = NSDateFormatterStyle.Full;
+var formattedDate = formatter.ToString(d);
+// Tuesday, August 14, 2018 at 11:20:42 PM Mountain Daylight Time
+```
+
+##### <a name="dateformat"></a>DateFormat
+
+Le [ `DateFormat` ](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.DateFormat/) propriété (une chaîne) d’un `NSDateFormatter` autorise une spécification de format de date personnalisable :
 
 ```csharp
 NSDateFormatter dateFormat = new NSDateFormatter();
 dateFormat.DateFormat = "yyyy-MM-dd";
 ```
 
-Le `TimeStyle` jeux de propriétés un `NSDateFormatterStyle`:
+##### <a name="timestyle"></a>TimeStyle
+
+Le [ `TimeStyle` ](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.TimeStyle/) propriété (une [ `NSDateFormatterStyle` ](https://developer.xamarin.com/api/type/Foundation.NSDateFormatterStyle/)) d’un `NSDateFormatter` spécifie la mise en forme de temps basé sur les styles prédéterminés :
 
 ```csharp
 NSDateFormatter timeFormat = new NSDateFormatter();
 timeFormat.TimeStyle = NSDateFormatterStyle.Short;
 ```
 
-Les champs de `NSDateFormatterStyle` afficher comme suit :
+Divers `NSDateFormatterStyle` valeurs heures s’affichent comme suit :
 
-![](picker-images/timestyle.png)
+- `NSDateFormatterStyle.Full`: 7:46:00 PM est) (heure
+- `NSDateFormatterStyle.Long`: 7:47:00 PM EDT
+- `NSDateFormatterStyle.Medium`: 7:47:00 PM
+- `NSDateFormatterSytle.Short`: 7:47 PM
 
-Le `DateStyle` jeux de propriétés un `NSDateFormatterStyle`:
+##### <a name="datestyle"></a>DateStyle
+
+Le [ `DateStyle` ](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.DateStyle/) propriété (une `NSDateFormatterStyle`) d’un `NSDateFormatter` spécifie la date mise en forme basée sur les styles prédéterminés :
 
 ```csharp
 NSDateFormatter dateTimeformat = new NSDateFormatter();
 dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
 ```
 
-Les champs de `NSDateFormatterStyle` afficher comme suit :
+Divers `NSDateFormatterStyle` valeurs affichent des dates comme suit :
 
-![](picker-images/datestyle.png)
+- `NSDateFormatterStyle.Full`: Mercredi août 2, 2017 à 7:48 PM
+- `NSDateFormatterStyle.Long`: 2 août 2017 à 7 h 49
+- `NSDateFormatterStyle.Medium`: 2 août 2017, 7 h 49
+- `NSDateFormatterStyle.Short`: 8/2/17, 7 H 50
 
-Puis de sortie le NSDate mis en forme en une chaîne en utilisant le code suivant :
+> [!NOTE]
+> `DateFormat` et `DateStyle` / `TimeStyle` fournissent différentes façons de spécifier le format de date et heure. Le plus récemment définir les propriétés de déterminent que le formateur de date de sortie.
 
-```csharp
-dateLabel.Text = dateTimeformat.ToString(datePickerView.Date);
-```
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [PickerControl (exemple)](https://developer.xamarin.com/samples/monotouch/PickerControl/)

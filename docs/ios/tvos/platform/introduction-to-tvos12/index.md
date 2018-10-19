@@ -4,29 +4,21 @@ description: Ce document fournit un haut niveau de la vue d’ensemble des fonct
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: 5cbec23aa81a4637a18f83d9955a78183dadaa21
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: f7fb8cc379a070b848c5154c9c1d4fbfc8186266
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615197"
 ---
 # <a name="introduction-to-tvos-12"></a>Introduction à tvOS 12
 
-![Preview](~/media/shared/preview.png)
+Ce document fournit une vue d’ensemble de nouveaux et mis à jour tvOS 12.
 
-> [!WARNING]
-> Support de 12 tvOS de Xamarin est actuellement en version préliminaire, ce qui signifie qu’il peut contenir des bogues, n’est pas complet, et peut changer. Utilisez-le pour l’expérimentation uniquement.
-
-Ce document propose une vue d’ensemble de nouveaux et mis à jour tvOS 12 pour la version préliminaire de quels Xamarin version fournit actuellement des liaisons c#.
-
-Pour commencer la création d’applications tvOS 12 avec Xamarin, jeter un œil :
-
-- Le [guide Mise en route](~/ios/platform/introduction-to-ios12/get-started.md)
-- La préversion Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+Pour commencer la création d’applications tvOS 12 avec Xamarin, examinons le [guide Mise en route](~/ios/platform/introduction-to-ios12/get-started.md).
 
 ## <a name="tvuikit"></a>TVUIKit
 
@@ -48,10 +40,13 @@ L’infrastructure de Vision inclut un détecteur de visage améliorée qui peut
 
 L’infrastructure de langage naturel permet aux applications d’effectuer différents types d’analyse linguistique. Par exemple, il peut être utilisé pour identifier les parties du discours et de déterminer la langue représentée par un bloc de texte.
 
+## <a name="deprecations"></a>Dépréciations
+
+Avec tvOS 12, Apple a déconseillé OpenGL ES, [encouragent les développeurs](https://developer.apple.com/tvos/whats-new/) à adopter complète.
+
 ## <a name="related-links"></a>Liens connexes
 
 - [Exemples tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS – développeur Apple (Apple)](https://developer.apple.com/tvos/)
 - [Quelles sont les nouveautés dans tvOS 12 (Apple) (vidéo)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Aperçu de Xamarin [mise en production de billet de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
