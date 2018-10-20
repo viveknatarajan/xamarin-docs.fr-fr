@@ -16,7 +16,7 @@ ms.locfileid: "39353293"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **SecureStorage** permet de stocker en toute sécurité des paires clé/valeur simple.
+La classe **SecureStorage** permet de stocker en sécurité des paires clé/valeur simples.
 
 ## <a name="getting-started"></a>Prise en main
 
@@ -28,11 +28,30 @@ Aucune configuration supplémentaire n’est requise.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Lorsque vous développez sur le simulateur iOS, activer la **trousseau** droit et ajouter un groupe d’accès au trousseau pour l’identificateur de bundle de l’application.
+Lorsque vous déployez sur le simulateur iOS, activez les permissions d'accès au **trousseau** et ajoutez un groupe d’accès au trousseau pour l’identificateur de bundle de l’application.
 
-Ouvrez le **Entitlements.plist** dans le projet iOS et trouver le **trousseau** droit et activez-la. Cela ajoutera automatiquement l’identificateur de l’application en tant que groupe.
+Dans Visual Studio, ouvrez le fichier **Entitlements.plist** dans le projet iOS et trouvez la permission d'accès au **trousseau** et activez-la. Cela ajoutera automatiquement l’identificateur de l’application en tant que groupe.
 
-Dans les propriétés du projet, sous **signature du Bundle iOS** définir le **droits personnalisés** à **Entitlements.plist**.
+Dans les propriétés du projet, sous **signature du Bundle iOS** définir le champ **droits personnalisés** à **Entitlements.plist**.
+
+Alternativement vous pouvez dupliquer le fichier **Entitlements.plist** existant en **Entitlements.Simulator.plist** et ajouter ces lignes dans le nœud `dict` du fichier **Entitlements.Simulator.plist** :
+
+ ```xml
+  <key>keychain-access-groups</key>
+  <array>
+    <string>com.[company].[app]</string>
+  </array>
+```
+
+Vous pouvez ensuite ajouter le PropertyGroup suivant dans le fichier .csproj de votre application iOS :
+
+```xml
+  <PropertyGroup Condition=" '$(Platform)' == 'iPhoneSimulator' ">
+    <CodesignEntitlements>Entitlements.Simulator.plist</CodesignEntitlements>
+  </PropertyGroup>
+```
+
+Ceci activera automatiquement la configuration de l'accès au trousseau lors de l'execution de l'application sur un simulateur.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
@@ -48,7 +67,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Pour enregistrer une valeur pour une donnée _clé_ dans le stockage sécurisé :
+Pour enregistrer une valeur sous une certaine _clé_ dans le stockage sécurisé :
 
 ```csharp
 try
@@ -61,7 +80,7 @@ catch (Exception ex)
 }
 ```
 
-Pour récupérer une valeur à partir du stockage sécurisé :
+Pour récupérer une valeur sous une certaine _clé_ à partir du stockage sécurisé :
 
 ```csharp
 try
@@ -77,54 +96,55 @@ catch (Exception ex)
 > [!NOTE]
 > Si aucune valeur n’est associé à la clé demandée, `GetAsync` retournera `null`.
 
-Pour supprimer une clé spécifique, appelez :
+Pour supprimer une valeur sous une certaine _clé_ :
 
 ```csharp
 SecureStorage.Remove("oauth_token");
 ```
 
-Pour supprimer toutes les clés, appelez :
+Pour supprimer tous les ensembles clé-valeur du stockage sécurisé :
 
 ```csharp
 SecureStorage.RemoveAll();
 ```
 
-
 ## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Le [Android KeyStore](https://developer.android.com/training/articles/keystore.html) est utilisé pour stocker la clé de chiffrement utilisée pour chiffrer la valeur avant de l’enregistrer dans un [préférences partagées](https://developer.android.com/training/data-storage/shared-preferences.html) avec un nom de fichier de **[votre-application-PACKAGE-ID] .xamarinessentials** .  La clé utilisée dans le fichier de préférences partagées est un _hachage MD5_ de la clé passée dans le `SecureStorage` API.
+Le [KeyStore Android](https://developer.android.com/training/articles/keystore.html) est utilisé pour stocker la clé de chiffrement utilisée pour chiffrer la valeur avant de l’enregistrer dans les [préférences partagées](https://developer.android.com/training/data-storage/shared-preferences.html) avec comme nom de fichier "**[YOUR APP-PACKAGE-ID].xamarinessentials**".  La clé utilisée dans le fichier de préférences partagées est un _hachage MD5_ de la clé passée à l'API `SecureStorage`.
 
 ## <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
 
-Sur les niveaux d’API plus récente, une **AES** clé est obtenue à partir du magasin de clés Android et utilisée avec un **AES/GCM/NoPadding** chiffrement pour chiffrer la valeur avant d’être stockée dans le fichier de préférences partagées.
+Sur les niveaux d’API plus récents, une clé de type **AES** est obtenue à partir du magasin de clés Android et est utilisée avec un chiffrement **AES/GCM/NoPadding** pour chiffrer la valeur avant d’être stockée dans le fichier de préférences partagées.
 
 ## <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
 
-Sur les niveaux d’API plus anciennes, le magasin de clés Android prend uniquement en charge stockage **RSA** clés, qui est utilisé avec un **ECB/RSA/PKCS1Padding** chiffrement pour chiffrer un **AES** clé (au hasard généré lors de l’exécution) et stockées dans le fichier de préférences partagées sous la clé _SecureStorageKey_, s’il n’a pas déjà été généré.
+Sur les niveaux d’API plus anciens, le magasin de clés Android prend uniquement en charge les clés de type **RSA**, qui sont ensuite utilisés avec un chiffrement **ECB/RSA/PKCS1Padding** pour chiffrer une clé **AES** (généré au hasard lors de l’exécution) et stockées dans le fichier de préférences partagées sous la clé _SecureStorageKey_, si elle n’a pas déjà été générée.
 
-**SecureStorage** utilise le [préférences](preferences.md) API et elle suit la persistance des données même décrites dans le [préférences](preferences.md#persistence) documentation. Si un appareil est mis à niveau à partir du niveau d’API 22 inférieur ou égal au niveau d’API 23 et versions ultérieures, ce type de chiffrement continuera à être utilisée, sauf si l’application est désinstallée ou **RemoveAll** est appelée.
+Si un appareil est mis à niveau à partir du niveau d’API 22 ou inférieur vers un niveau d’API 23 ou supérieur, le type de chiffrement continuera à être utilisée, sauf si l’application est désinstallée ou que la fonction **RemoveAll** est appelée.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[Trousseau](https://developer.xamarin.com/api/type/Security.SecKeyChain/) est utilisé pour stocker les valeurs en toute sécurité sur les appareils iOS.  Le `SecRecord` utilisé pour stocker la valeur a un `Service` la valeur **[YOUR APP-BUNDLE-ID] .xamarinessentials**.
+Le [Trousseau](https://developer.xamarin.com/api/type/Security.SecKeyChain/) est utilisé pour stocker les valeurs en toute sécurité sur les appareils iOS.
 
-Dans certains cas, les données de trousseau sont synchronisées avec iCloud et désinstallation de l’application ne peut retirer les valeurs sécurisés d’iCloud et autres périphériques de l’utilisateur.
+Dans certains cas, les données de trousseau sont synchronisées avec iCloud et la désinstallation de l’application ne suffit pas pour supprimer les valeurs sécurisés sur iCloud et sur les autres périphériques de l’utilisateur. Il faudra que l'utilisateur les supprime manuellement ou que l'application les écrase.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) est utilisé pour les valeurs chiffrées en toute sécurité sur les appareils UWP.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) est utilisé pour sécuriser les valeurs sur les appareils UWP.
 
-Valeurs chiffrées sont stockées dans `ApplicationData.Current.LocalSettings`, à l’intérieur d’un conteneur avec un nom de **[votre-application-ID] .xamarinessentials**.
-
-**SecureStorage** utilise le [préférences](preferences.md) API et elle suit la persistance des données même décrites dans le [préférences](preferences.md#persistence) documentation.
+Les valeurs chiffrées sont stockées dans les `ApplicationData.Current.LocalSettings`, à l’intérieur d’un conteneur avec comme nom **[votre-application-ID] .xamarinessentials**.
 
 -----
 
+## <a name="persistence"></a>Persistance
+
+**SecureStorage** utilise l'API [préférences](preferences.md) et elle suit les mêmes spécificités de persistance des données décrites dans la documentation des [préférences](preferences.md#persistence).
+
 ## <a name="limitations"></a>Limitations
 
-Cette API est destinée à stocker de petites quantités de texte.  Performances peuvent être lentes si vous essayez d’utiliser pour stocker de grandes quantités de texte.
+Lorsque vous stockez une chaîne de caractères, cette API est destinée à stocker de petites quantités de texte. Les performances peuvent être réduites si vous essayez d’utiliser cette API pour stocker de grandes quantités de texte.
 
 ## <a name="api"></a>API
 

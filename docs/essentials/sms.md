@@ -16,7 +16,7 @@ ms.locfileid: "38815595"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Sms** permet à une application ouvrir l’application de SMS par défaut avec un message à envoyer à un destinataire spécifié.
+La classe **Email** permet à une application d'ouvrir l’application de SMS par défaut en lui transmettant des informations sur le message pré-composé, tel que le message et le destinataire.
 
 ## <a name="using-sms"></a>Utilisation de **Sms**
 
@@ -26,7 +26,9 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité SMS fonctionne en appelant le `ComposeAsync` méthode un `SmsMessage` qui contient le destinataire et le corps du message, qui sont tous deux facultatifs.
+La fonctionnalité de SMS fonctionne en appelant la méthode `ComposeAsync` avec en paramètre un `SmsMessage` qui contient les informations à envoyer avec l'application destinatrice.
+
+Le corps du message et le destinataires sont deux champs facultatifs, si ils ne sont pas renseignés par votre applications ils devront alors être renseignés par l'utilisateur dans l'application de SMS.
 
 ```csharp
 public class SmsTest

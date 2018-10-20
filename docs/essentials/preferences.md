@@ -44,7 +44,7 @@ Pour supprimer une valeur sous une certaine _clé_ :
 Preferences.Remove("my_key");
 ```
 
-Pour supprimer tous les ensembles clé-valeur des Préférences :
+Pour supprimer tous les ensembles clé-valeur des préférences :
 
 ```csharp
 Preferences.Clear();
