@@ -1,26 +1,24 @@
 ---
 title: Ajout d’un module de reconnaissance de mouvement panoramique
-description: Cet article explique comment utiliser un mouvement panoramique à horizontalement et verticalement faites glisser une image, afin que tout le contenu d’image puissent être affichées quand il est affiché dans une fenêtre d’affichage plus petite que les dimensions de l’image.
+description: Cet article explique comment utiliser un mouvement panoramique à horizontalement et verticalement panoramique une image, afin que tout le contenu d’image puissent être affichées quand il est affiché dans une fenêtre d’affichage plus petite que les dimensions de l’image.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 45c0a1452916f193236e5ba741f8e8e19b6691aa
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 59e9f4c61bda86faa5a55d70ef91411adb14da6d
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38996804"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Ajout d’un module de reconnaissance de mouvement panoramique
 
-_Le mouvement panoramique est utilisé pour la détection en faisant glisser et est implémenté avec la classe PanGestureRecognizer. Un scénario courant pour le mouvement panoramique consiste à horizontalement et verticalement, faites glisser une image, afin que tout le contenu d’image puissent être affichées quand il est affiché dans une fenêtre d’affichage plus petite que les dimensions de l’image. Cela est accompli en déplaçant l’image dans la fenêtre d’affichage et est illustrée dans cet article._
+_Le mouvement panoramique est utilisé pour détecter le mouvement des doigts sur l’écran et en appliquant ces déplacements au contenu et est implémenté avec les `PanGestureRecognizer` classe. Un scénario courant pour le mouvement panoramique est horizontalement et verticalement panoramique une image, afin que tout le contenu d’image puissent être affichées quand il est affiché dans une fenêtre d’affichage plus petite que les dimensions de l’image. Cela est accompli en déplaçant l’image dans la fenêtre d’affichage et est illustrée dans cet article._
 
-## <a name="overview"></a>Vue d'ensemble
-
-Pour rendre un élément d’interface utilisateur peut être déplacé avec le mouvement panoramique, créer un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) d’une instance, de gérer le [ `PanUpdated` ](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) événement, et ajoutez la reconnaissance de mouvement de nouveau à la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) collection sur l’élément d’interface utilisateur. Le code suivant montre l’exemple un `PanGestureRecognizer` attaché à un [ `Image` ](xref:Xamarin.Forms.Image) élément :
+Pour rendre un élément d’interface utilisateur pouvant être déplacé avec le mouvement panoramique, créer un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) d’une instance, de gérer le [ `PanUpdated` ](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) événement, et ajoutez la reconnaissance de mouvement de nouveau à la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) collection sur l’élément d’interface utilisateur. Le code suivant montre l’exemple un `PanGestureRecognizer` attaché à un [ `Image` ](xref:Xamarin.Forms.Image) élément :
 
 ```csharp
 var panGesture = new PanGestureRecognizer();
@@ -54,7 +52,7 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 
 ## <a name="creating-a-pan-container"></a>Création d’un conteneur de panoramique
 
-Cette section contient une classe généralisée d’assistance qui effectue un panoramique forme libre, qui est généralement adaptée à la navigation dans les images ou des mappages. Gérer le mouvement panoramique pour effectuer une opération glisser nécessite quelques formules mathématiques pour transformer l’interface utilisateur. Cette mathématique est utilisé pour faire glisser uniquement dans les limites de l’élément d’interface utilisateur encapsulé. L’exemple de code suivant illustre la classe `PanContainer` :
+Cette section contient une classe généralisée d’assistance qui effectue un panoramique forme libre, qui est généralement adaptée à la navigation dans les images ou des mappages. Gérer le mouvement panoramique pour effectuer cette opération nécessite quelques formules mathématiques pour transformer l’interface utilisateur. Cette mathématique est utilisé pour effectuer un panoramique uniquement dans les limites de l’élément d’interface utilisateur encapsulé. L’exemple de code suivant illustre la classe `PanContainer` :
 
 ```csharp
 public class PanContainer : ContentView
@@ -77,7 +75,7 @@ public class PanContainer : ContentView
 }
 ```
 
-Cette classe peut être encapsulée autour d’un élément d’interface utilisateur afin que le mouvement panoramique fais glisser l’élément d’interface utilisateur encapsulé. L’exemple de code XAML suivant montre le `PanContainer` encapsulant une [ `Image` ](xref:Xamarin.Forms.Image) élément :
+Cette classe peut être encapsulée autour d’un élément d’interface utilisateur afin que le mouvement s’effectuer un panoramique de l’élément d’interface utilisateur encapsulé. L’exemple de code XAML suivant montre le `PanContainer` encapsulant une [ `Image` ](xref:Xamarin.Forms.Image) élément :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -119,7 +117,7 @@ public class HomePageCS : ContentPage
 
 Dans les deux exemples, le [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) et [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriétés sont définies sur les valeurs de largeur et la hauteur de l’image qui est affichée.
 
-Lorsque le [ `Image` ](xref:Xamarin.Forms.Image) élément reçoit un mouvement panoramique, l’image affichée sera être déplacé. Le glisser-déplacer est effectué par le `PanContainer.OnPanUpdated` (méthode), ce qui est illustré dans l’exemple de code suivant :
+Lorsque le [ `Image` ](xref:Xamarin.Forms.Image) élément reçoit un mouvement panoramique, l’image affichée sera être panoramique. Le défilement est réalisé par le `PanContainer.OnPanUpdated` (méthode), ce qui est illustré dans l’exemple de code suivant :
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -142,18 +140,12 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 }
 ```
 
-Cette méthode met à jour le contenu visible de l’élément d’interface utilisateur encapsulé, selon le mouvement panoramique de l’utilisateur. Pour cela, en utilisant les valeurs de la [ `TotalX` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalX) et [ `TotalY` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalY) propriétés de la [ `PanUpdatedEventArgs` ](xref:Xamarin.Forms.PanUpdatedEventArgs) instance pour laquelle calculer la direction et distance du pan. Le `App.ScreenWidth` et `App.ScreenHeight` propriétés fournissent la hauteur et la largeur de la fenêtre d’affichage et sont définies à la largeur d’écran et les valeurs de hauteur d’écran de l’appareil par les projets spécifiques à la plateforme respectifs. L’élément de l’utilisateur encapsulé est ensuite déplacé en définissant son [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX) et [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) propriétés pour les valeurs calculées.
+Cette méthode met à jour le contenu visible de l’élément d’interface utilisateur encapsulé, selon le mouvement panoramique de l’utilisateur. Pour cela, en utilisant les valeurs de la [ `TotalX` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalX) et [ `TotalY` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalY) propriétés de la [ `PanUpdatedEventArgs` ](xref:Xamarin.Forms.PanUpdatedEventArgs) instance pour laquelle calculer la direction et distance du pan. Le `App.ScreenWidth` et `App.ScreenHeight` propriétés fournissent la hauteur et la largeur de la fenêtre d’affichage et sont définies à la largeur d’écran et les valeurs de hauteur d’écran de l’appareil par les projets spécifiques à la plateforme respectifs. L’élément de l’utilisateur encapsulé est panoramique puis en définissant son [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX) et [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) propriétés pour les valeurs calculées.
 
 Lors de l’affichage panoramique contenu dans un élément qui n’occupe pas de mode plein écran, la hauteur et la largeur de la fenêtre d’affichage peuvent être obtenus à partir de l’élément [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) et [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) propriétés.
 
 > [!NOTE]
 > Affichage des images haute résolution permettre augmenter considérablement l’encombrement de mémoire de l’application. Par conséquent, ils doivent uniquement être créés si nécessaire et doivent être libérées dès que l’application n’exige plus leur intervention. Pour plus d’informations, consultez [Optimiser les ressources d’images](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
-
-## <a name="summary"></a>Récapitulatif
-
-Le mouvement panoramique est utilisé pour la détection en faisant glisser et est implémenté avec les [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) classe.
-
-
 
 ## <a name="related-links"></a>Liens associés
 

@@ -1,5 +1,5 @@
 ---
-title: Ajout d’une reconnaissance de mouvement du mouvement Tap
+title: Ajout d’un module de reconnaissance de mouvement tap
 description: Cet article explique comment utiliser l’action d’appuyer pour la détection de drainage dans une application Xamarin.Forms. Détection de drainage est implémentée avec la classe TapGestureRecognizer.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: e602ae1f140640d9a895b65d78feab3d0a3b7861
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a28afb30770f15861aef06643e7f51070199ea9b
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38994852"
 ---
-# <a name="adding-a-tap-gesture-gesture-recognizer"></a>Ajout d’une reconnaissance de mouvement du mouvement Tap
+# <a name="adding-a-tap-gesture-recognizer"></a>Ajout d’un module de reconnaissance de mouvement tap
 
 _Le geste d’appui est utilisé pour la détection tap et est implémenté avec la classe TapGestureRecognizer._
-
-## <a name="overview"></a>Vue d'ensemble
 
 Pour rendre un élément d’interface utilisateur interactif avec le geste d’appui, créer un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) d’une instance, de gérer le [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) événement et ajoutez la reconnaissance de mouvement de nouveau à la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) collection sur l’élément d’interface utilisateur. Le code suivant montre l’exemple un `TapGestureRecognizer` attaché à un [ `Image` ](xref:Xamarin.Forms.Image) élément :
 
@@ -72,7 +70,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>À l’aide de ICommand
 
-Applications qui utilisent le modèle Mvvm en général utiliser `ICommand` plutôt que directement le câblage des gestionnaires d’événements. Le [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) peut facilement prendre en charge `ICommand` soit en définissant la liaison dans le code :
+Applications qui utilisent le modèle Model-View-ViewModel (MVVM) généralement utiliser `ICommand` plutôt que directement le câblage des gestionnaires d’événements. Le [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) peut facilement prendre en charge `ICommand` soit en définissant la liaison dans le code :
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -113,10 +111,6 @@ public class TapViewModel : INotifyPropertyChanged
     //region INotifyPropertyChanged code omitted
 }
 ```
-
-## <a name="summary"></a>Récapitulatif
-
-Le geste d’appui est utilisé pour la détection tap et est implémenté avec les [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) classe. Le nombre de coefficients peut être spécifié pour reconnaître le double-clic (ou triple-clic, ou plusieurs appuie) comportement.
 
 
 ## <a name="related-links"></a>Liens associés

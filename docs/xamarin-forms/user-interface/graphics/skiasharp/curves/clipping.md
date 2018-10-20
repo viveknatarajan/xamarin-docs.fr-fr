@@ -4,14 +4,14 @@ description: Cet article explique comment utiliser des chemins d’accès SkiaSh
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0c07d68535349004eeefeaa18daa9c59b889a6a7
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 87f1ad3956bdb43c82a7ab57ea9171e9a28dd558
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615286"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Détourage avec chemins d’accès et régions
@@ -22,7 +22,7 @@ Il est parfois nécessaire de limiter le rendu des graphiques pour une zone part
 
 ![](clipping-images/clippingsample.png "Monkey via un masque")
 
-Le *zone de découpage* correspond à la zone de l’écran dans lequel les graphiques sont rendus. Tout ce qui s’affiche en dehors de la zone de découpage n’est pas rendu. La zone de découpage est généralement définie par une [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) objet, mais vous pouvez également définir une zone de découpage à l’aide un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) objet. Ces deux types d’objets à paraître connexes, car vous pouvez créer une zone à partir d’un chemin d’accès. Toutefois, Impossible de créer un chemin d’accès à partir d’une région, et ils sont très différents en interne : un chemin d’accès comprend une série de lignes et des courbes, alors qu’une région est définie par une série de lignes de numérisation horizontal.
+Le *zone de découpage* correspond à la zone de l’écran dans lequel les graphiques sont rendus. Tout ce qui s’affiche en dehors de la zone de découpage n’est pas rendu. La zone de découpage est généralement définie par un rectangle ou un [ `SKPath` ](xref:SkiaSharp.SKPath) objet, mais vous pouvez également définir une zone de découpage à l’aide un [ `SKRegion` ](xref:SkiaSharp.SKRegion) objet. Ces deux types d’objets à paraître connexes, car vous pouvez créer une zone à partir d’un chemin d’accès. Toutefois, Impossible de créer un chemin d’accès à partir d’une région, et ils sont très différents en interne : un chemin d’accès comprend une série de lignes et des courbes, alors qu’une région est définie par une série de lignes de numérisation horizontal.
 
 L’image ci-dessus a été créé par le **Monkey via masque** page. Le [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) classe définit un chemin d’accès à l’aide des données SVG et utilise le constructeur pour charger une bitmap à partir des ressources du programme :
 
@@ -104,15 +104,15 @@ Le tracé de détourage est soumis aux transformations en vigueur lorsque le `Cl
 
 ## <a name="combining-clipping-paths"></a>Combiner des tracés de détourage
 
-À proprement parler, la zone de découpage n'est pas « set » le `ClipPath` (méthode). Au lieu de cela, il est combiné avec le tracé de détourage existant, qui commence par un rectangle de taille égal à l’écran. Vous pouvez obtenir les limites rectangulaires de la zone de découpage à l’aide de la [ `ClipBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipBounds/) propriété ou le [ `ClipDeviceBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipDeviceBounds/) propriété. Le `ClipBounds` propriété retourne un `SKRect` valeur qui reflète les transformations qui peut-être être appliqués. Le `ClipDeviceBounds` propriété retourne un `RectI` valeur. Ceci est un rectangle avec les dimensions entier et décrit la zone de découpage dans les dimensions de pixel.
+À proprement parler, la zone de découpage n'est pas « set » le `ClipPath` (méthode). Au lieu de cela, il est combiné avec le tracé de détourage existant, qui est un rectangle de taille égal à la zone de dessin. Vous pouvez obtenir les limites rectangulaires de la zone de découpage à l’aide de la [ `ClipBounds` ](xref:SkiaSharp.SKCanvas.ClipBounds) propriété ou le [ `ClipDeviceBounds` ](xref:SkiaSharp.SKCanvas.ClipDeviceBounds) propriété. Le `ClipBounds` propriété retourne un `SKRect` valeur qui reflète les transformations qui peut-être être appliqués. Le `ClipDeviceBounds` propriété retourne un `RectI` valeur. Ceci est un rectangle avec les dimensions entier et décrit la zone de découpage dans les dimensions de pixel.
 
-Tout appel à `ClipPath` réduit la zone de découpage en associant la zone de découpage avec une nouvelle zone. La syntaxe complète de la [ `ClipPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipPath/p/SkiaSharp.SKPath/SkiaSharp.SKClipOperation/System.Boolean/) méthode est :
+Tout appel à `ClipPath` réduit la zone de découpage en associant la zone de découpage avec une nouvelle zone. La syntaxe complète de la [ `ClipPath` ](xref:SkiaSharp.SKCanvas.ClipPath(SkiaSharp.SKPath,SkiaSharp.SKClipOperation,System.Boolean)) méthode est :
 
 ```csharp
 public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-Il existe également un [ `ClipRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRect/p/SkiaSharp.SKRect/SkiaSharp.SKClipOperation/System.Boolean/) (méthode) qui associe la zone de découpage d’un rectangle :
+Il existe également un [ `ClipRect` ](xref:SkiaSharp.SKCanvas.ClipRect(SkiaSharp.SKRect,SkiaSharp.SKClipOperation,System.Boolean)) (méthode) qui associe la zone de découpage d’un rectangle :
 
 ```csharp
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
@@ -167,11 +167,11 @@ Ce qui reste est l’intersection de ces quatre cercles :
 
 [![](clipping-images//fourcircleintersectclip-small.png "Capture d’écran triple de la page de l’élément se croisent quatre cercle")](clipping-images/fourcircleintersectclip-large.png#lightbox "Triple capture d’écran de la page de l’élément se croisent quatre cercle")
 
-Le [ `SKClipOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKClipOperation/) énumération possède uniquement deux membres :
+Le [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) énumération possède uniquement deux membres :
 
-- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Difference/) Supprime le chemin d’accès spécifié ou le rectangle de la zone de découpage existant
+- `Difference` Supprime le chemin d’accès spécifié ou le rectangle de la zone de découpage existant
 
-- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Intersect/) entre en intersection avec le chemin d’accès spécifié ou le rectangle avec la zone de découpage existant
+- `Intersect` entre en intersection avec le chemin d’accès spécifié ou le rectangle avec la zone de découpage existant
 
 Si vous remplacez les quatre `SKClipOperation.Intersect` arguments dans le `FourCircleIntersectClipPage` classe avec `SKClipOperation.Difference`, vous verrez les éléments suivants :
 
@@ -248,33 +248,31 @@ Appel `DrawPaint` normalement provoque la totalité du canevas à remplir avec q
 
 ## <a name="exploring-regions"></a>Exploration des régions
 
-Si vous avez exploré la documentation API pour `SKCanvas`, vous avez peut-être remarqué des surcharges de la `ClipPath` et `ClipRect` méthodes qui sont similaires aux méthodes décrites ci-dessus, mais au lieu de cela, ont un paramètre nommé [ `SKRegionOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegionOperation/) plutôt que `SKClipOperation`. `SKRegionOperation` a six membres, fournissant un peu plus de souplesse dans la combinaison de chemins d’accès aux zones de découpage de formulaire :
+Vous pouvez également définir une zone de découpage en termes d’un [ `SKRegion` ](xref:SkiaSharp.SKRegion) objet.
 
-- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Difference/)
+Nouvellement créée `SKRegion` objet décrit une zone vide. Le premier appel sur l’objet est généralement [ `SetRect` ](xref:SkiaSharp.SKRegion.SetRect(SkiaSharp.SKRectI)) afin que la région décrit une zone rectangulaire. Le paramètre `SetRect` est un `SKRectI` valeur &mdash; un rectangle avec entier coordonne car elle spécifie le rectangle en termes de pixels. Vous pouvez ensuite appeler [ `SetPath` ](xref:SkiaSharp.SKRegion.SetPath(SkiaSharp.SKPath,SkiaSharp.SKRegion)) avec un `SKPath` objet. Cette opération crée une région qui est identique à l’intérieur du chemin d’accès, mais découpé à la région rectangulaire initiale.
 
-- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Intersect/)
-
-- [`Union`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Union/)
-
-- [`XOR`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.XOR/)
-
-- [`ReverseDifference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.ReverseDifference/)
-
-- [`Replace`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Replace/)
-
-Toutefois, les surcharges de `ClipPath` et `ClipRect` avec `SKRegionOperation` paramètres sont obsolètes et ils ne peuvent pas être utilisés.
-
-Vous pouvez toujours utiliser le `SKRegionOperation` énumération, mais elle nécessite que vous définissez une zone de découpage en termes d’un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) objet.
-
-Nouvellement créée `SKRegion` objet décrit une zone vide. Le premier appel sur l’objet est généralement [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) afin que la région décrivent une zone rectangulaire. Le paramètre `SetRect` est un un `SKRectI` valeur &mdash; la valeur du rectangle avec les propriétés entières. Vous pouvez ensuite appeler [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) avec un `SKPath` objet. Cette opération crée une région qui est identique à l’intérieur du chemin d’accès, mais découpé à la région rectangulaire initiale.
-
-Le `SKRegionOperation` énumération uniquement intervient lorsque vous appelez une de la [ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/) des surcharges de méthode, telle que celle-ci :
+La région peut également être modifiée en appelant une de la [ `Op` ](xref:SkiaSharp.SKRegion.Op*) des surcharges de méthode, telle que celle-ci :
 
 ```csharp
 public Boolean Op(SKRegion region, SKRegionOperation op)
 ```
 
-La région que vous émettiez la `Op` appel sur est associé à la région spécifiée en tant que paramètre selon le `SKRegionOperation` membre. Lorsque vous obtenez finalement une région appropriée pour le découpage, vous pouvez le définir en tant que la zone de découpage de la zone de dessin à l’aide de la [ `ClipRegion` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRegion/p/SkiaSharp.SKRegion/SkiaSharp.SKClipOperation/) méthode de `SKCanvas`:
+Le [ `SKRegionOperation` ](xref:SkiaSharp.SKRegionOperation) énumération est similaire à `SKClipOperation` mais elle n’a plus de membres :
+
+- `Difference`
+
+- `Intersect`
+
+- `Union`
+
+- `XOR`
+
+- `ReverseDifference`
+
+- `Replace`
+
+La région que vous émettiez la `Op` appel sur est associé à la région spécifiée en tant que paramètre selon le `SKRegionOperation` membre. Lorsque vous obtenez finalement une région appropriée pour le découpage, vous pouvez le définir en tant que la zone de découpage de la zone de dessin à l’aide de la [ `ClipRegion` ](xref:SkiaSharp.SKCanvas.ClipRegion(SkiaSharp.SKRegion,SkiaSharp.SKClipOperation)) méthode de `SKCanvas`:
 
 ```csharp
 public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperation.Intersect)
@@ -364,9 +362,9 @@ Voici une grande différence entre le `ClipPath` (méthode) et le `ClipRegion` m
 
 Pour comprendre les fondements de cette différence, il est utile de comprendre quelles une région est. Si vous avez réfléchi sur la façon dont les opérations de découpage ou les opérations de région peuvent être implémentées en interne, il semble probablement très compliqué. Plusieurs chemins d’accès potentiellement très complexes sont combinées, et le contour du chemin d’accès résultant est probablement un cauchemar algorithmique.
 
-Mais ce travail est considérablement simplifié si chaque chemin d’accès est réduite à une série de lignes de balayage horizontales, telles que celles de l’ancienne tube à vide téléviseurs. Chaque ligne de numérisation est simplement une ligne horizontale avec un point de départ et un point de terminaison. Par exemple, un cercle avec un rayon de 10 peut être décomposé en 20 lignes de balayage horizontal, chacun d’eux commence à la partie gauche du cercle et se termine à la partie droite. Combinaison de deux cercles à toute opération de région devient très simple car il s’agit simplement d’examiner les coordonnées de début et de fin de chaque paire correspondante de lignes de numérisation.
+Ce travail est considérablement simplifié si chaque chemin d’accès est réduite à une série de lignes de balayage horizontales, telles que celles de l’ancienne tube à vide téléviseurs. Chaque ligne de numérisation est simplement une ligne horizontale avec un point de départ et un point de terminaison. Par exemple, un cercle avec un rayon de 10 pixels peut être décomposé en 20 lignes de balayage horizontal, chacun d’eux commence à la partie gauche du cercle et se termine à la partie droite. Combinaison de deux cercles à toute opération de région devient très simple car il s’agit simplement d’examiner les coordonnées de début et de fin de chaque paire correspondante de lignes de numérisation.
 
-Voici à quoi est une région : une série de lignes de balayage horizontales qui définit une zone.
+Voici à quoi est une région : une série de lignes de balayage horizontales qui définissent une zone.
 
 Toutefois, quand une zone est réduite à une série d’analyse les lignes, ces lignes sont basées sur une dimension de pixel particulier d’analyse. À proprement parler, la région n’est pas un objet de graphique vectoriel. Il est plus en détail dans la nature d’une bitmap monochrome compressée à un chemin d’accès. Par conséquent, les régions ne peut pas être mis à l’échelle ou pivotées sans perdre la fidélité et c’est pourquoi qu'ils ne sont pas transformés lorsqu’il est utilisé pour les zones de découpage.
 
@@ -514,5 +512,5 @@ Il ne ressemble pas vraiment à un sommes très heureux quatre –, mais il est 
 
 ## <a name="related-links"></a>Liens associés
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

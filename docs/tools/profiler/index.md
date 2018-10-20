@@ -1,6 +1,6 @@
 ---
 title: Xamarin Profiler
-description: Ce guide présente les principales fonctionnalités du profileur Xamarin. Il consulter les profileurs, profilage et lorsqu’elles doivent être utilisées et à un flux de travail standard pour le profilage d’applications de Xamarin.
+description: Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, et de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
@@ -15,7 +15,7 @@ ms.locfileid: "37066674"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
-_Ce guide présente les principales fonctionnalités du profileur Xamarin. Il consulter les profileurs, profilage et lorsqu’elles doivent être utilisées et à un flux de travail standard pour le profilage d’applications de Xamarin._
+_Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, et de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin._
 
 Réussite de l’application dépend de l’expérience utilisateur. En tant que développeur vous avez peut-être implémenté certaines fonctionnalités vraiment impressionnant dans votre application, mais si l’application est lente ou complète de pannes, l’utilisateur sera probablement la supprimer.
 
@@ -41,7 +41,7 @@ Une fois téléchargé, lancez le programme d’installation pour ajouter le pro
 
 ## <a name="profilers-and-profiling"></a>Profileurs et profilage
 
-Le profilage est une étape importante et souvent négligée en matière de développement d’applications. Le profilage est une forme de **analyse dynamique programme** -il analyse le programme alors qu’il est en cours d’exécution et en cours d’utilisation. Un profileur est un outil d’exploration de données qui collecte des informations sur la complexité temporelle, l’utilisation des méthodes particulières et la mémoire allouée. Un profileur permet d’Explorer profondeur et analyser ces mesures pour identifier les zones à problème dans le code.
+Le profilage est une étape importante et souvent négligée en matière de développement d’applications. Le profilage est une forme d'**analyse dynamique de programme** - il analyse le programme alors qu’il est en cours d’exécution et en cours d’utilisation. Un profileur est un outil d’exploration de données qui collecte des informations sur la complexité temporelle, l’utilisation de méthodes particulières et la mémoire allouée. Un profileur permet d’explorer en profondeur et d'analyser ces mesures pour identifier les zones à problème dans le code.
 
 Lors de la conception et développement d’une application, il est important de ne pas optimiser prématurément ; Autrement dit, passer du temps à développer votre code dans des zones qui est rarement accessible. Il s’agit de la puissance de profilage. Un profileur fournit l’éclairage les plus couramment utilisées les parties de votre base de code, et vous aide à localiser les zones où vous devez prendre les améliorations d’heure. Les développeurs doivent veiller à comprendre où la plupart du temps est consacré à votre application, et l’utilisation de la mémoire par votre application.
 
@@ -128,7 +128,7 @@ Avant que vous pouvez profiler avec succès de votre application, vous devez aut
 
 ### <a name="launching-the-profiler"></a>Lancement du profileur
 
-Le profileur Xamarin peut être lancé à partir de votre IDE lorsque vous profilez votre application Android ou e/s, ou comme une application autonome.
+Le profileur Xamarin peut être lancé à partir de votre IDE quand vous profilez votre application Android ou iOS. Le profileur peut aussi être lancé comme une application indépendante.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -200,7 +200,7 @@ Xamarin Profiler est composé de cinq sections, comme illustré ci-dessous :
 
 ### <a name="allocations"></a>Allocations
 
-Les informations relatives aux allocations fournit des informations détaillées sur les objets dans l’application comme ils sont en cours de création et le garbage collector.
+Les informations relatives aux allocations fournissent des informations détaillées sur les objets dans l’application lorsqu'ils sont en cours de création et sur le garbage collector.
 
 En haut du profileur est les allocations qui affiche la quantité de mémoire allouée à intervalles réguliers pendant le profilage. Actuellement, le graphique d’allocations est le nombre total d’allocations et non la taille du segment de mémoire à ce stade dans le temps. Dans un sens, il s’arrêtera jamais, seulement jamais augmentera. Cela inclut les objets alloués sur la pile. Selon la version du runtime utilisée, le graphique peut être différent, même pour la même application.
 
@@ -228,7 +228,7 @@ Il existe différentes vues de données dans l’acte d’Allocations, qui perme
 
 -----
 
-La vue de l’inspecteur pour les Allocations fournit les options de filtrage et regroupement d’objets, en fournissant des statistiques sur la mémoire allouée, ainsi que les allocations supérieure, ainsi que les vues pour la Trace de la pile et le chemin d’accès à la racine.
+La vue de l’inspecteur pour les Allocations fournit les options de filtrage et regroupement d’objets, en fournissant des statistiques sur la mémoire allouée, ainsi que les allocations supérieures, ainsi que les vues pour la Trace de la pile et le chemin d’accès à la racine.
 
  -   **Arborescence des appels** – Cela affiche l’arborescence des appels entière de tous les threads dans l’application et inclut des informations sur la mémoire allouée sur chaque nœud. Lorsqu’un élément est sélectionné dans la liste, tous les nœuds frères apparaîtront gris. Vous pouvez développer l’arborescence ou double-cliquez sur l’élément à descendre dans celui-ci. Lors de l’affichage de cette vue de données, l’inspecteur de paramètres d’affichage permet de modifier la façon dont elles sont présentées. Il existe actuellement deux options :
     1.  **Arborescence des appels d’inversé** – il considère que la trace de pile de haut en bas. C’est une option de vue pratique qu’elle indique les méthodes le plus profond où le processeur a consacré sa durée.

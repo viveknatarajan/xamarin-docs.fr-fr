@@ -7,7 +7,7 @@ ms.author: chape
 ms.date: 06/26/2018
 ms.openlocfilehash: e07d36d3e9a5492e6e170b62dbacb36be44dbfa9
 ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38831423"

@@ -1,28 +1,24 @@
 ---
-title: fonctionnalités de plateforme tvOS
-description: Ce document liens vers des articles qui décrivent les fonctionnalités incluses dans les différentes versions de tvOS. Il contient également des liens à un document qui décrit les contrôleurs Siri distant et le Bluetooth.
+title: fonctionnalités de la plateforme tvOS
+description: Ce document contient des liens vers des articles décrivant les fonctionnalités incluses dans les différentes versions de tvOS. Il est également lié à un document qui décrit les contrôleurs Siri Remote et Bluetooth.
 ms.prod: xamarin
 ms.assetid: FB705CAD-B43C-4374-B139-92AB81185429
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: 969c634ffe95c184677ec02877b29fa557380729
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 0b3f44111edc7ed22f9e59692571b38d6c8708e0
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "37066986"
 ---
-# <a name="tvos-platform-features"></a>fonctionnalités de plateforme tvOS
+# <a name="tvos-platform-features"></a>fonctionnalités de la plateforme tvOS
 
-Ces guides décrivent les fonctionnalités présentes dans les versions de tvOS spécifique.
+Ces guides vous montrent les fonctionnalités présentes dans les versions spécifiques de tvOS.
 
-## <a name="introduction-to-tvos-12iostvosplatformintroduction-to-tvos12indexmd"></a>[Présentation de tvOS 12](~/ios/tvos/platform/introduction-to-tvos12/index.md)
-
-> [!WARNING]
-> Prise en charge de Xamarin tvOS 12 est actuellement en version préliminaire, ce qui signifie qu’il peut contenir des bogues, n’est pas complet, et peut changer.
-> Utilisez-le pour seulement l’expérimentation.
+## <a name="introduction-to-tvos-12iostvosplatformintroduction-to-tvos12indexmd"></a>[Introduction à tvOS 12](~/ios/tvos/platform/introduction-to-tvos12/index.md)
 
 Ce document fournit une vue d’ensemble des fonctionnalités nouvelles et mises à jour de tvOS 12 qui sont disponibles pour une utilisation lors de la création d’applications tvOS avec Xamarin.
 
@@ -38,14 +34,14 @@ Cet article présente tous les nouveaux et modifiés API et fonctionnalités dis
 
 Cet article présente tous les nouveaux et modifiés API et fonctionnalités disponibles dans tvOS 9 pour les développeurs de tvOS à l’aide de Xamarin.
 
-## <a name="siri-remote-and-bluetooth-controllersiostvosplatformremote-bluetoothmd"></a>[Contrôleurs Siri distant et Bluetooth](~/ios/tvos/platform/remote-bluetooth.md)
+## <a name="siri-remote-and-bluetooth-controllersiostvosplatformremote-bluetoothmd"></a>[Contrôleurs Siri Remote et Bluetooth](~/ios/tvos/platform/remote-bluetooth.md)
 
-Cet article décrit la prise en charge les contrôleurs de jeu Siri distant et Bluetooth nouvelle dans tvOS les applications développées avec Xamarin.
+Cet article décrit la prise en charge les contrôleurs de jeu nouvelle Siri Remote et Bluetooth dans les applications tvOS créées avec Xamarin.
 
 ## <a name="related-links"></a>Liens connexes
 
 - [Exemples tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS (Apple)](https://developer.apple.com/tvos/)
-- [tvOS les Guides Interface humaine (Apple)](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guide de programmation d’application de tvOS (Apple)](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
-- [Création d’applications tvOS avec Xamarin (vidéo)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
+- [tvOS Human Interface Guides (Apple)](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guide de programmation d’application pour tvOS (Apple)](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Création d’applications pour tvOS avec Xamarin (vidéo)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

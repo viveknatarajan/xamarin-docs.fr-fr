@@ -6,25 +6,25 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/16/2018
-ms.openlocfilehash: 5ccd2a653e5190df11a58477905e868b25878e44
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 07/27/2018
+ms.openlocfilehash: 08eb77878dad9c89754585b87394d2c33900fe83
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39270110"
 ---
 # <a name="xamarinforms-entry"></a>Entrée de Xamarin.Forms
 
 _Texte à ligne unique ou entrée de mot de passe_
 
-Xamarin.Forms `Entry` est utilisé pour l’entrée de texte à ligne unique. Le `Entry`, comme le `Editor` afficher, prend en charge plusieurs types de clavier. En outre, le `Entry` peut être utilisé comme un champ de mot de passe.
+Xamarin.Forms [ `Entry` ](xref:Xamarin.Forms.Entry) est utilisé pour l’entrée de texte à ligne unique. Le `Entry`, comme le [ `Editor` ](xref:Xamarin.Forms.Editor) afficher, prend en charge plusieurs types de clavier. En outre, le `Entry` peut être utilisé comme un champ de mot de passe.
 
 ## <a name="display-customization"></a>Personnalisation de l’affichage
 
 ### <a name="setting-and-reading-text"></a>Définition et de lecture du texte
 
-Le `Entry`, telles que d’autres affichages de présentation de texte, expose le `Text` propriété. Cette propriété peut être utilisée pour définir et lire le texte présenté par le `Entry`. L’exemple suivant montre comment définir le `Text` propriété dans XAML :
+Le `Entry`, telles que d’autres affichages de présentation de texte, expose le [ `Text` ](xref:Xamarin.Forms.Entry.Text) propriété. Cette propriété peut être utilisée pour définir et lire le texte présenté par le `Entry`. L’exemple suivant montre comment définir le `Text` propriété dans XAML :
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -58,6 +58,32 @@ var entry = new Entry { ... MaxLength = 10 };
 ```
 
 Un [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) propriété la valeur 0 indique qu’aucune entrée n’est autorisée et la valeur `int.MaxValue`, qui est la valeur par défaut pour un [ `Entry` ](xref:Xamarin.Forms.Entry), indique qu’il y a aucune limite effective sur le nombre de caractères qui peuvent être entrés.
+
+### <a name="setting-the-cursor-position-and-text-selection-length"></a>Définition de la Position du curseur et la longueur de sélection de texte
+
+Le [ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition) propriété peut être utilisée pour renvoyer ou définir la position à laquelle le caractère suivant sera inséré dans la chaîne stockée dans le [ `Text` ](xref:Xamarin.Forms.Entry.Text) propriété :
+
+```xaml
+<Entry Text="Cursor position set" CursorPosition="5" />
+```
+
+```csharp
+var entry = new Entry { Text = "Cursor position set", CursorPosition = 5 };
+```
+
+La valeur par défaut de la [ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition) propriété est 0, ce qui indique que le texte est inséré au début de la `Entry`.
+
+En outre, le [ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength) propriété peut être utilisée pour retourner ou définir la longueur de sélection de texte dans le `Entry`:
+
+```xaml
+<Entry Text="Cursor position and selection length set" CursorPosition="2" SelectionLength="10" />
+```
+
+```csharp
+var entry = new Entry { Text = "Cursor position and selection length set", CursorPosition = 2, SelectionLength = 10 };
+```
+
+La valeur par défaut de la [ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength) propriété est 0, ce qui indique qu’aucun texte n’est sélectionné.
 
 ### <a name="customizing-the-keyboard"></a>Personnalisation du clavier
 
@@ -180,21 +206,17 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 > [!NOTE]
 > Lorsque le [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) propriété est définie sur `false`, et un clavier personnalisé n’est pas en cours utilisé, la prédiction de texte et automatiques correction de texte est désactivée. Toutefois, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) a été définie qui désactive la prédiction de texte, le `IsTextPredictionEnabled` propriété est ignorée. Par conséquent, la propriété ne peut pas être utilisée pour activer la prédiction de texte pour un `Keyboard` qui désactive explicitement.
 
-### <a name="placeholders"></a>Espaces réservés
+### <a name="setting-placeholder-text"></a>Texte d’espace réservé de paramètre
 
-`Entry` peut être défini pour afficher le texte d’espace réservé quand il ne stocke pas les entrées d’utilisateur. Dans la pratique, cela se produit souvent dans les formulaires afin de clarifier le contenu qui est approprié pour un champ donné. Couleur de texte d’espace réservé ne peut pas être personnalisé et doit être le même quel que soit le `TextColor` paramètre. Si votre conception fait appel à une couleur de l’espace réservé personnalisé, vous devrez revenir à un [convertisseur personnalisé](). Ce qui suit crée un `Entry` avec « Username » comme espace réservé dans XAML :
+Le [ `Entry` ](xref:Xamarin.Forms.Entry) peut être définie pour afficher le texte d’espace réservé quand il ne stocke pas les entrées d’utilisateur. Cela s’effectue en définissant le [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) propriété à un `string`et est souvent utilisé pour indiquer le type de contenu qui est approprié pour le `Entry`. En outre, la couleur de texte d’espace réservé peut être contrôlée en définissant le [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) propriété à un [ `Color` ](xref:Xamarin.Forms.Color):
 
 ```xaml
-<Entry Placeholder="Username" />
+<Entry Placeholder="Username" PlaceholderColor="Olive" />
 ```
-
-En C# :
 
 ```csharp
-var MyEntry = new Entry { Placeholder = "Username" };
+var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
 ```
-
-![](entry-images/placeholder.png "Exemple d’entrée d’espace réservé")
 
 ### <a name="password-fields"></a>Champs de mot de passe
 
