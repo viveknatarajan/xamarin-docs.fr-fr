@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Verrouillage d’écran'
-description: Ce document décrit la classe ScreenLock dans Xamarin.Essentials, ce qui peut demander à conserver l’écran de tomber en veille quand l’application est en cours d’exécution.
+description: La classe ScreenLock a la possibilité d’empêcher l’écran de se mettre en veille pendant l'execution de l'application.
 ms.assetid: 6B67C114-315E-4199-AA72-3F90E85A4909
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "38848568"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **ScreenLock** peut demander à conserver l’écran de tomber en veille quand l’application est en cours d’exécution.
+La classe **ScreenLock** a la possibilité d’empêcher l’écran de se mettre en veille pendant l'execution de l'application.
 
 ## <a name="using-screenlock"></a>Utilisation de **ScreenLock**
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de verrouillage d’écran fonctionne en appelant le `RequestActive` et `RequestRelease` méthodes pour demander de l’écran à partir de la mise hors tension.
+Le verrouillage d’écran peut être activée et désactivée via les méthodes `RequestActive` et `RequestRelease`:
 
 ```csharp
 public class ScreenLockTest
