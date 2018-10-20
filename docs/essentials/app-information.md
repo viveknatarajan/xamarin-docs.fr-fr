@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 7e79b3003f41b8de22950624e44e8c9e0e7e7e31
 ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38831505"
@@ -16,7 +16,7 @@ ms.locfileid: "38831505"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **AppInfo** classe fournit des informations sur votre application.
+La classe **AppInfo** fournit des informations générales sur votre application.
 
 ## <a name="using-appinfo"></a>À l’aide de AppInfo
 
@@ -44,7 +44,7 @@ var version = AppInfo.VersionString;
 var build = AppInfo.BuildString;
 ```
 
-## <a name="displaying-application-settings"></a>Affichage des paramètres d’Application
+## <a name="displaying-application-settings"></a>Afficher les paramètres de l'application
 
 Le **AppInfo** classe peut également afficher une page de paramètres gérés par le système d’exploitation pour l’application :
 
@@ -53,7 +53,7 @@ Le **AppInfo** classe peut également afficher une page de paramètres gérés p
 AppInfo.OpenSettings();
 ```
 
-Cette page de paramètres permet à l’utilisateur à modifier les autorisations d’application et effectuer d’autres tâches spécifiques à la plateforme.
+Cette page de paramètres permet à l’utilisateur de modifier les autorisations d’application et effectuer d’autres tâches spécifiques à la plateforme.
 
 ## <a name="api"></a>API
 

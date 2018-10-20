@@ -1,13 +1,13 @@
 ---
 title: 'Xamarin.Essentials : batterie'
-description: Ce document décrit la classe de la batterie dans Xamarin.Essentials, ce qui vous permet de vérifier les informations de batterie de l’appareil et surveillez les modifications apportées.
+description: La classe batterie vous permet d'obtenir et de surveiller les informations sur la batterie de l’appareil.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 6b87625b3305d0a9ec40593d8b3fe29eb551bbf4
 ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/04/2018
 ms.locfileid: "39514308"
@@ -16,11 +16,11 @@ ms.locfileid: "39514308"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **batterie** classe vous permet de vérifier les informations sur la pile et surveillez les modifications apportées de l’appareil.
+La classe **Battery** vous permet d'obtenir et de surveiller les informations sur la batterie de l’appareil.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **batterie** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **Battery**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -34,7 +34,7 @@ Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et aj
 
 OU mettre à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
@@ -44,11 +44,11 @@ Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 -----
 
