@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Téléphone'
-description: La classe PhoneDialer dans Xamarin.Essentials permet à une application ouvrir un numéro de téléphone dans le Numéroteur
+description: La classe PhoneDialer permet à une application d'ouvrir l’application de téléphonie par défaut en lui transmettant le numéro de téléphone du destinataire.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39130791"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **PhoneDialer** permet à une application ouvrir un numéro de téléphone dans le numéroteur.
+La classe **PhoneDialer** permet à une application d'ouvrir l’application de téléphonie par défaut en lui transmettant le numéro de téléphone du destinataire.
 
 ## <a name="using-phone-dialer"></a>Utilisation de **PhoneDialer**
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité Numéroteur téléphonique fonctionne en appelant le `Open` méthode avec un numéro de téléphone pour ouvrir le numéroteur avec. Lorsque `Open` est demandé à l’API tente automatiquement de mettre en forme le nombre en fonction du code de pays s’il est spécifié.
+La fonctionnalité de courrier électronique fonctionne en appelant la méthode `Open` avec en paramètre une chaine de caractère qui contient le numéro de téléphone à appeler. L’API tentera automatiquement de mettre en forme la chaine de caractère, avec le code de pays s’il est spécifié.
 
 ```csharp
 public class PhoneDialerTest

@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Économiseur d'énergie'
-description: La classe Power permet à un programme obtenir l’état de l’économiseur d’énergie pour déterminer si l’appareil fonctionne dans un mode de faible puissance.
+description: La classe Power vous permet d'obternir et de surveiller les informations sur l'économiseur d’énergie de l’appareil. En rêgle générale, les applications évitent les traitement en arrière-plan lorsque l'économiseur d’énergie de l’appareil est activé.
 ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
 author: charlespetzold
 ms.author: chape
@@ -16,13 +16,13 @@ ms.locfileid: "39353488"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Power** fournit des informations sur l’état du périphérique économiseur d’énergie, ce qui indique si l’appareil est en cours d’exécution dans un mode de faible puissance. Applications doivent éviter le traitement en arrière-plan si l’état d’économiseur d’énergie de l’appareil est activé.
+La classe **Power** vous permet d'obternir et de surveiller les informations sur l'économiseur d’énergie de l’appareil. En rêgle générale, les applications évitent les traitement en arrière-plan lorsque l'économiseur d’énergie de l’appareil est activé.
 
 ## <a name="background"></a>Présentation
 
-Les appareils qui s’exécutent sur les batteries peuvent être définis dans un mode de faible consommation d’énergie-veille. Parfois, les appareils sont permutés dans ce mode automatiquement, par exemple, lorsque la batterie est inférieure à 20 % de leur capacité. Le système d’exploitation répond aux économiseur d’énergie en réduisant les activités qui ont tendance à épuiser la batterie. Les applications peuvent aider à en évitant le traitement en arrière-plan ou autres activités haute puissance lorsque le mode économiseur d’énergie est activé.
+Les appareils contenant des batteries peuvent être mis dans un mode de faible consommation d’énergie. Parfois, les appareils se mettent dans ce mode automatiquement, par exemple, lorsque la batterie est inférieure à 20 % de leur capacité. Le système d’exploitation répond aux économiseur d’énergie en réduisant les activités qui ont tendance à épuiser la batterie. Les applications peuvent contribuer à cet effort en évitant les traitements en arrière-plan ou autres activités gourmandes lorsque le mode économiseur d’énergie est activé.
 
-Pour les appareils Android, le **Power** classe retourne des informations significatives uniquement pour la version d’Android 5.0 (Lollipop) et versions ultérieures.
+Pour les appareils Android, la classe **Power** fonctionne uniquement pour la version d’Android 5.0 (Lollipop) et les versions ultérieures.
 
 ## <a name="using-the-power-class"></a>Utilisation de **Power**
 
@@ -32,16 +32,16 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Obtenir l’état actuel de l’énergie-veille de l’appareil à l’aide de la méthode statique `Power.EnergySaverStatus` propriété :
+Obtenir l’état actuel de l'économiseur d’énergie de l’appareil à l’aide de la méthode statique `Power.EnergySaverStatus` :
 
 ```csharp
 // Get energy saver status
 var status = Power.EnergySaverStatus;
 ```
 
-Cette propriété retourne un membre de la `EnergySaverStatus` énumération, qui est soit `On`, `Off`, ou `Unknown`. Si la propriété retourne `On`, l’application doit éviter de traitement en arrière-plan ou autres activités susceptibles de consommer beaucoup de puissance.
+Cette propriété retourne un membre de l'énumération `EnergySaverStatus`, qui est soit `On`, `Off`, ou `Unknown`. Si la propriété retourne `On`, l’application doit éviter les traitements en arrière-plan ou autres activités gourmandes. Si l’état passe à `Unknown` ou `Off`, l’application peut reprendre les traitements en arrière-plan.
 
-L’application doit également installer un gestionnaire d’événements. La classe **Power** expose un événement est déclenché lorsque l’état de l’économiseur d’énergie change :
+L'événement `EnergySaverStatusChanged` est mis à votre disposition pour surveiller l'évolution de l'économiseur d’énergie :
 
 ```csharp
 public class EnergySaverTest
@@ -59,8 +59,6 @@ public class EnergySaverTest
     }
 }
 ```
-
-Si l’état de l’économiseur d’énergie devient `On`, l’application doit s’arrêter l’exécution de traitement en arrière-plan. Si l’état passe à `Unknown` ou `Off`, l’application puisse reprendre le traitement en arrière-plan.
 
 ## <a name="api"></a>API
 
