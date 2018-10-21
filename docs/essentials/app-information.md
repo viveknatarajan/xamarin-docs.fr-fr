@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Informations sur l’application'
-description: La classe **AppInfo** fournit des informations générales sur votre application. Par exemple, il expose le nom de l’application et la version.
+description: La classe AppInfo fournit des informations générales sur votre application. Par exemple, il expose le nom de l’application et la version.
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
 author: jamesmontemagno
 ms.author: jamont

@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Batterie'
-description: La classe batterie vous permet d'obternir et de surveiller les informations sur la batterie de l’appareil.
+description: La classe Battery vous permet d'obternir et de surveiller les informations sur la batterie de l’appareil.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont

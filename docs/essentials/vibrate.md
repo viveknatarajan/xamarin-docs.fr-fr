@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Vibration'
-description: Ce document décrit la classe de Vibration dans Xamarin.Essentials, ce qui vous permet de démarrer et arrêter la fonctionnalité vibrer pour une quantité de temps souhaitée.
+description: La classe Vibrate a la possibilité d’activer ou de désactiver le retour haptique, la vibration, de l'appareil pour un temps souhaitée.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353865"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Vibration** vous permet de démarrer et arrêter la fonctionnalité vibrer pour une quantité de temps souhaitée.
+La classe **Vibrate** a la possibilité d’activer ou de désactiver le retour haptique, la vibration, de l'appareil pour un temps souhaitée.
 
 ## <a name="getting-started"></a>Prise en main
 
@@ -82,7 +82,7 @@ catch (Exception ex)
 }
 ```
 
-L’annulation de vibration d’appareil peut être demandée avec la `Cancel` méthode :
+L’annulation de la vibration d’appareil peut être demandée avec la méthode `Cancel` :
 
 ```csharp
 try
@@ -107,9 +107,9 @@ Aucune différence de la plateforme.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* Terme uniquement lorsque le périphérique est défini sur « Vibrer sur anneau ».
-* Terme toujours pour 500 millisecondes.
-* Pas possible d’annuler la vibration.
+* Ne vibre que quand l'appareil est mis en mode "vibreur"
+* Vibre toujours pendant exactement 500 millisecondes.
+* Impossible d’annuler la vibration.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

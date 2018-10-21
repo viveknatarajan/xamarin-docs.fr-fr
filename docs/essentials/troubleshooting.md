@@ -18,7 +18,7 @@ ms.locfileid: "37947372"
 
 ## <a name="error-version-conflict-detected-for-xamarinandroidsupportcompat"></a>Erreur : Version conflit est détecté pour Xamarin.Android.Support.Compat
 
-L’erreur suivante peut se produire lors de la mise à jour les packages NuGet (ou l’ajout d’un nouveau package) avec un projet Xamarin.Forms qui utilise Xamarin.Essentials :
+L’erreur suivante peut se produire lors de la mise à jour des paquets NuGet (ou l’ajout d’un nouveau package) avec un projet Xamarin.Forms qui utilise Xamarin.Essentials :
 
 ```
 NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference the package directly from the project to resolve this issue.
@@ -26,10 +26,10 @@ NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference 
  MyApp -> Xamarin.Forms 3.1.0.583944 -> Xamarin.Android.Support.v4 25.4.0.2 -> Xamarin.Android.Support.Compat (= 25.4.0.2).
 ```
 
-Le problème est les dépendances qui ne correspondent pas pour les deux packages de NuGet. Cela peut être résolu en ajoutant manuellement une version spécifique de la dépendance (dans ce cas **Xamarin.Android.Support.Compat**) qui peut prendre en charge les deux.
+Le problème vient des dépendances qui ne correspondent pas pour deux packages de NuGet. Cela peut être résolu en ajoutant manuellement une version spécifique de la dépendance (dans ce cas **Xamarin.Android.Support.Compat**) qui peut prendre en charge les deux.
 
-Pour ce faire, ajoutez le package NuGet qui est la source du conflit manuellement et utiliser le **Version** liste pour sélectionner une version spécifique. Actuellement version 27.0.2.1 du Xamarin.Android.Support.Compat & Xamarin.Android.Support.Core.Util NuGet résout cette erreur.
+Pour ce faire, ajoutez le package NuGet qui est la source du conflit manuellement et utiliser la liste des **Versions** pour sélectionner une version spécifique. Actuellement, les version 27.0.2.1 des NuGet Xamarin.Android.Support.Compat & Xamarin.Android.Support.Core.Util résolvent cette erreur.
 
 Reportez-vous à [ce billet de blog](https://redth.codes/how-to-fix-the-dreaded-version-conflict-nuget-error-in-your-xamarin-android-projects/) pour plus d’informations et une vidéo sur la façon de résoudre le problème.
 
-Si vous rencontrez des problèmes ou les rechercher un bogue envoyez le rapport sur le [Xamarin.Essentials référentiel](http://github.com/xamarin/Essentials).
+Si vous rencontrez des problèmes ou un crash, envoyez le rapport sur le [référentiel Xamarin.Essentials](http://github.com/xamarin/Essentials).

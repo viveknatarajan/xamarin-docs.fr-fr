@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Synthèse vocale'
-description: La classe texttospeech avec le dans permet de Xamarin.Essentials une application utiliser intégrée dans les moteurs de synthèse vocale à énoncer le texte précédent de l’appareil et également pour les langues disponibles requête prenant en charge le moteur.
+description: La classe TextToSpeech permet d’utiliser l'API de sythèse vocale intégrée à la plateforme. Elle vous permet d'énoncer à l'oral un texte.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353611"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **texttospeech avec le** permet à une application d’utiliser intégrée dans les moteurs de synthèse vocale à énoncer le texte précédent de l’appareil et également pour les langues disponibles requête prenant en charge le moteur.
+La classe **TextToSpeech** permet d’utiliser l'API de sythèse vocale intégrée à la plateforme. Elle vous permet d'énoncer à l'oral un texte.
 
 ## <a name="using-text-to-speech"></a>Utilisation de **TextToSpeech**
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de conversion texte-voix fonctionne en appelant le `SpeakAsync` méthode avec le texte et les paramètres facultatifs et retourne la fin de l’énoncé.
+La fonctionnalité de synthèse vocale fonctionne en appelant la méthode `SpeakAsync` avec en paramètre le texte à énoncer et les paramètres facultatifs.
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -46,7 +46,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-Cette méthode prend un facultatif `CancellationToken` pour arrêter l’énoncé lors de son démarrage.
+Cette méthode prend un `CancellationToken` facultatif pour interrompre l’énoncé après son démarrage.
 
 ```csharp
 CancellationTokenSource cts;
@@ -67,7 +67,7 @@ public void CancelSpeech()
 }
 ```
 
-Synthèse vocale sera mettre automatiquement la file d’attente de demandes de reconnaissance vocale à partir du même thread.
+Pour mettre en file d’attente les demandes provenant du même thread :
 
 ```csharp
 bool isBusy = false;
@@ -91,9 +91,9 @@ public void SpeakMultiple()
 }
 ```
 
-### <a name="speech-settings"></a>Paramètres de reconnaissance vocale
+### <a name="speech-settings"></a>Paramètres de synthèse vocale
 
-Pour mieux contrôler la façon dont l’audio est prononcé sauvegarder avec `SpeakSettings` qui permet de définir le Volume, Pitch et paramètres régionaux.
+Pour mieux contrôler la façon dont le texte est prononcé, `SpeakSettings` vous permet de définir le Volume, le Pitch et les paramètres régionaux.
 
 ```csharp
 public async Task SpeakNow()
@@ -110,14 +110,14 @@ public async Task SpeakNow()
 
 Les valeurs prises en charge pour ces paramètres sont les suivantes :
 
-| Paramètre  | Minimum | Maximum |
-| ---------- | :-----: | :-----: |
-| Espacement | 0       | 2.0     |
-| Volume     | 0       | 1.0     |
+| Paramètre | Minimum | Maximum |
+| --------- | :-----: | :-----: |
+| Pitch     | 0       | 2.0     |
+| Volume    | 0       | 1.0     |
 
-### <a name="speech-locales"></a>Paramètres régionaux de reconnaissance vocale
+### <a name="speech-locales"></a>Paramètres régionaux de synthèse vocale
 
-Chaque plateforme propose des paramètres régionaux pour parler de texte précédent dans plusieurs langues et les accents. Chaque plateforme a différents codes et les méthodes de spécification, c’est pourquoi Essentials propose un multiplateforme `Locale` classe et un moyen de les interroger avec `GetLocalesAsync`.
+Chaque plateforme propose des paramètres régionaux pour vocaliser le texte en fonction des langues et des accents. Chaque plateforme a différents codes et méthodes de spécification, c’est pourquoi Xamarin.Essentials propose un multiplateforme classe `Locale`  et un moyen de les interroger avec `GetLocalesAsync`.
 
 ```csharp
 public async Task SpeakNow()
@@ -140,8 +140,8 @@ public async Task SpeakNow()
 
 ## <a name="limitations"></a>Limitations
 
-- File d’attente de l’énoncé n’est pas garantie si elle est appelée sur plusieurs threads.
-- Lecture audio d’arrière-plan n’est pas officiellement pris en charge.
+- La mise en file d’attente de l’énoncé n’est pas garantie si elle est appelée depuis plusieurs threads.
+- La lecture audio en arrière-plan n’est pas officiellement prise en charge.
 
 ## <a name="api"></a>API
 
