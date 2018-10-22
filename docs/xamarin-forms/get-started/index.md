@@ -1,6 +1,6 @@
 ---
 title: Bien démarrer avec Xamarin.Forms
-description: Ce guide présente les notions de base du développement Xamarin.Forms et traite de la création d’applications multiplateformes et multi-écrans.
+description: Xamarin.Forms est un kit de ressources d’interface utilisateur multiplateforme qui permet aux développeurs de créer efficacement des dispositions d’interfaces utilisateur natives pouvant être partagées entre des applications iOS, Android et UWP (plateforme Windows universelle). Cette série présente les notions de base du développement Xamarin.Forms et couvre la création d’applications multiplateformes et multi-écrans.
 ms.prod: xamarin
 ms.assetid: d87d7232-242c-4ec4-81e9-36103d7e8fcf
 ms.technology: xamarin-forms
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 6ac76f41fc0646107102e0d5e59609c0f3969511
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: da5547de1f21b1f02462f47a4e6ffee43dd0d1bf
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35242438"
+ms.lasthandoff: 04/27/2018
+ms.locfileid: "32024324"
 ---
 # <a name="getting-started-with-xamarinforms"></a>Bien démarrer avec Xamarin.Forms
 
