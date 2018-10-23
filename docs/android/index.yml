@@ -1,18 +1,19 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 9e49042380794ea49489e9d92ea122a58fb76bc4
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
+ms.openlocfilehash: f1e860bd5fe08e923fbec90b7ff7da142e7e5871
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33677921"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "39350649"
 documentType: LandingData
 title: Xamarin.Android
 metadata:
   description: Xamarin.Android expose le kit SDK Android complet pour les développeurs .NET.
   author: conceptdev
   ms.author: crdun
-  ms.date: 04/25/2018
+  ms.date: 07/27/2018
   ms.topic: landing-page
+  ms.technology: xamarin-android
 abstract:
   description: Xamarin.Android expose le kit SDK Android complet pour les développeurs .NET. Créez des applications Android entièrement natives à l’aide de C# ou F# dans Visual Studio.
   menu:
@@ -45,6 +46,10 @@ sections:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Applications multi-écran
       href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
+    - image:
+        src: https://docs.microsoft.com/en-us/media/common/i_mobile-app-developement.svg
+      text: Android Pie
+      href: ~/android/platform/pie.md
 - title: Repères
   items:
   - type: list
@@ -117,6 +122,3 @@ sections:
     - title: Exemples
       href: https://developer.xamarin.com/samples/android/all/
       html: <p><a href="https://developer.xamarin.com/samples/android/all/">Exemples Android</a></p>
-    - title: Classeurs
-      href: https://developer.xamarin.com/workbooks#android
-      html: <p><a href="https://developer.xamarin.com/workbooks#android">Android Workbooks</a></p>

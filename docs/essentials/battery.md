@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : batterie'
+title: 'Xamarin.Essentials : Batterie'
 description: La classe batterie vous permet d'obtenir et de surveiller les informations sur la batterie de l’appareil.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 08/04/2018
 ms.locfileid: "39514308"
 ---
-# <a name="xamarinessentials-battery"></a>Xamarin.Essentials : batterie
+# <a name="xamarinessentials-battery"></a>Xamarin.Essentials : Batterie
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
@@ -24,15 +24,15 @@ Pour accéder aux fonctionnalités de l'API **Battery**, quelques étapes de con
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Le `Battery` autorisation est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
+L'autorisation `Battery` est obligatoire et doit être configurée dans le projet Android. Elle peut être ajoutée comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.BatteryStats)]
 ```
 
-OU mettre à jour le manifeste Android :
+OU mettez à jour le manifeste Android :
 
 Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
 
@@ -40,7 +40,7 @@ Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et aj
 <uses-permission android:name="android.permission.BATTERY_STATS" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **batterie** autorisation. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez l'autorisation **batterie**. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -52,7 +52,7 @@ Aucune configuration supplémentaire n’est requise.
 
 -----
 
-## <a name="using-battery"></a>À l’aide de la batterie
+## <a name="using-battery"></a>Utilisation de **Battery**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -60,7 +60,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Vérifiez les informations sur la pile actuelle :
+Vérifiez les informations sur la batterie :
 
 ```csharp
 var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or -1.0 if unable to determine.
