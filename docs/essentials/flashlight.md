@@ -16,17 +16,17 @@ ms.locfileid: "39353358"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **torche** classe a la possibilité d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
+La classe **Flashlight** a la possibilité d’activer ou de désactiver le flash de l’appareil photo afin de l'utiliser comme lampe torche.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **torche** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **Flashlight**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Les autorisations torche et caméra sont requises et doivent être configurées dans le projet Android. Il peut être ajouté comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
@@ -35,16 +35,16 @@ Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et aj
 
 OU mettre à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **torche** et **caméra** autorisations. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+OU cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez les autorisations **torche** et **caméra**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
-En ajoutant ces autorisations [Google Play filtrent automatiquement les périphériques](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sans matériel spécifique. Vous pouvez obtenir contourner ce problème en ajoutant le code suivant à votre fichier AssemblyInfo.cs dans votre projet Android :
+En ajoutant ces autorisations [Google Play filtrent automatiquement les périphériques](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sans matériel spécifique. Vous pouvez contourner ce problème en ajoutant le code suivant à votre fichier AssemblyInfo.cs dans votre projet Android :
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -53,11 +53,11 @@ En ajoutant ces autorisations [Google Play filtrent automatiquement les périph�
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 -----
 
@@ -69,7 +69,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Le torche peut être activée et désactivée via la `TurnOnAsync` et `TurnOffAsync` méthodes :
+La torche peut être activée et désactivée via les méthodes `TurnOnAsync` et `TurnOffAsync`:
 
 ```csharp
 try
@@ -102,7 +102,7 @@ La classe torche a été optimisée basé sur le système d’exploitation de l�
 
 #### <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
 
-Sur les niveaux d’API plus récente, [Torch Mode](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) sera utilisé pour activer ou désactiver l’unité flash de l’appareil.
+Sur les niveaux d’API plus récents, [Torch Mode](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) sera utilisé pour activer ou désactiver le flash de l’appareil.
 
 #### <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
 
@@ -110,11 +110,11 @@ Une texture de surface d’exposition de caméra est créée pour activer ou dé
 
 ### <a name="iostabios"></a>[iOS](#tab/ios)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) sert à activer et désactiver le Torch et le mode Flash de l’appareil.
+[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/)  sera utilisé pour activer ou désactiver le flash de l’appareil.
 
 ### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) est utilisé pour détecter la première lamp à l’arrière de l’appareil pour activer ou désactiver.
+[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp)  sera utilisé pour détecter la première lampe à l’arrière de l’appareil et pour l'activer ou la désactiver.
 
 -----
 

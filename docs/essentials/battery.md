@@ -108,7 +108,7 @@ switch (source)
 }
 ```
 
-Chaque fois qu’une propriétés de la batterie de modifier un événement est déclenché :
+Un événement est déclenché à chaque modification d'une propriété de la batterie :
 
 ```csharp
 public class BatteryTest
@@ -129,17 +129,17 @@ public class BatteryTest
 }
 ```
 
-## <a name="platform-differences"></a>Différences de plateforme
+## <a name="platform-differences"></a>Différences entre les plateformes
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Aucune différence de la plateforme.
+Aucune spécificité pour cette plateforme.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* Appareil doit être utilisé pour tester les API. 
+* L'appareil doit être allumé pour accéder aux API. 
 * Retourne uniquement des `AC` ou `Battery` pour `PowerSource`.
-* Pas possible d’annuler la vibration.
+* Impossible d’annuler la vibration.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

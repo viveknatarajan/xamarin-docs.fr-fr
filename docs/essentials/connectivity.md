@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials : connectivité'
-description: La classe de connectivité dans Xamarin.Essentials vous permet de surveiller les modifications des conditions de réseau de l’appareil, vérifiez l’accès réseau actuelle, et comment il est actuellement connecté.
+title: 'Xamarin.Essentials : Connectivité'
+description: La classe Connectivity vous permet de surveiller les modifications des conditions réseau de l'appareil, de vérifier la connexion réseau actuelle et comment l'appareil est connecté.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 96b4ee0487034c651bec1dfb168fed7567b63c96
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353696"
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials : connectivité
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials : Connectivité
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
@@ -20,35 +20,35 @@ Le **connectivité** classe vous permet de surveiller les modifications dans les
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **connectivité** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **connectivité**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Le `AccessNetworkState` autorisation est obligatoire et doit être configurée dans le projet Android. Il peut être ajouté comme suit :
+L'autorisation `AccessNetworkState` est obligatoire et doit être configurée dans le projet Android. Elle peut être ajoutée comme suit :
 
-Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
 ```
 
-OU mettre à jour le manifeste Android :
+OU mettez à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouver la **autorisations requises :** zone et vérifiez la **état d’accès réseau** autorisation. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez l'autorisation **état d’accès réseau**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 -----
 
@@ -60,7 +60,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Vérifier l’accès réseau actuel :
+Vérifier si l'appareil peut accèder au réseau :
 
 ```csharp
 var current = Connectivity.NetworkAccess;
@@ -73,13 +73,13 @@ if (current == NetworkAccess.Internet)
 
 [Accès réseau](xref:Xamarin.Essentials.NetworkAccess) se situe dans les catégories suivantes :
 
-* **Internet** – accès Local et internet.
-* **ConstrainedInternet** – limité l’accès à internet. Indique la connectivité au portail captive, où un accès local à un portail web est fourni, mais l’accès à Internet nécessite que les informations d’identification spécifiques sont fournies via un portail.
-* **Local** : Local uniquement les accès réseau.
-* **Aucun** – aucune connectivité n’est disponible.
-* **Inconnu** : Impossible de déterminer la connectivité internet.
+* **Internet** : accès local et internet.
+* **ConstrainedInternet** : accès à internet limité. Indique la connectivité via un portail captif, où l'accès à un portail web local est fourni ; l'accès à Internet nécessite que les informations d’identification spécifiques soient fournies via un portail.
+* **Local** : accès local uniquement.
+* **None** : aucune connectivité n’est disponible.
+* **Unknown** : impossible de déterminer la connectivité internet.
 
-Vous pouvez vérifier quel type de [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) l’appareil est activement à l’aide de :
+Vous pouvez vérifier quel [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) est actuellement actif à l’aide de :
 
 ```csharp
 var profiles = Connectivity.Profiles;

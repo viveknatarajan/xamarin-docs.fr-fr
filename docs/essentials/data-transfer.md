@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 31e27556a6681b144084d2177cf3fde8fe8e5459
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353517"
@@ -16,7 +16,7 @@ ms.locfileid: "39353517"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **DataTransfer** classe permet à une application de partager des données telles que des liens web et de texte pour d’autres applications sur l’appareil.
+La classe **DataTransfer** permet à votre application de partager des données, telles que des URL et du texte, avec d’autres applications (préalablement installées sur l'appareil).
 
 ## <a name="using-data-transfer"></a>À l’aide de transfert de données
 
@@ -56,21 +56,21 @@ Interface utilisateur à partager dans une application externe qui s’affiche l
 
 ![Transfert de données](data-transfer-images/data-transfer.png)
 
-## <a name="platform-differences"></a>Différences de plateforme
+## <a name="platform-differences"></a>Différences entre les plateformes
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* `Subject` propriété est utilisée pour l’objet souhaité d’un message.
+* La propriété `Subject` sera utilisée pour l’objet d’un message.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* `Subject` Non utilisé.
-* `Title` Non utilisé.
+* `Subject` ne sera pas utilisé.
+* `Title` ne sera pas utilisé.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` seront par défaut pour le nom de l’Application n’est pas défini.
-* `Subject` Non utilisé.
+* Si `Title` n'est pas défini, il prendra pour valeur par défaut le nom de l'application.
+* `Subject` ne sera pas utilisé.
 
 -----
 

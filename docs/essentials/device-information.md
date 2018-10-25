@@ -78,7 +78,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-iOS n’expose pas d’une API pour les développeurs obtenir le nom de l’appareil iOS spécifique. Au lieu de cela, un identificateur de matériel est retourné comme _iPhone10, 6_ qui fait référence à l’iPhone X. Un mappage de ces identificateurs ne sont pas fournies par Apple, mais peut être trouvée sur [l’iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (une source non officielles source).
+iOS n’expose pas d’API permettant d'obtenir le nom précis de l’appareil iOS utilisé. Au lieu de cela, un identificateur de matériel est retourné, comme _iPhone10, 6_, qui fait référence à l’iPhone X. Aucun mappage de ces identificateurs n'est fourni par Apple, mais vous pouvez le retrouver sur [l’iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (source communautaire/non officielle).
 
 --------------
 

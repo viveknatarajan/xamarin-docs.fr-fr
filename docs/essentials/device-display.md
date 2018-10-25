@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Appareil afficher des informations'
+title: "Xamarin.Essentials : Informations sur l'écran de l'appareil"
 description: Ce document décrit la classe DeviceDisplay dans Xamarin.Essentials, qui fournit des métriques de l’écran de l’appareil sur lequel l’application est en cours d’exécution.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
@@ -7,12 +7,12 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: cb42da4c8c2d0e381a5b00f7e60da6f427d19c66
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353826"
 ---
-# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials : Appareil afficher des informations
+# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials : Informations sur l'écran de l'appareil
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-## <a name="screen-metrics"></a>Métriques de l’écran
+## <a name="screen-metrics"></a>Informations sur l’écran
 
 En plus des informations de base de l’appareil le **DeviceDisplay** classe contient des informations sur l’écran et l’orientation de l’appareil.
 

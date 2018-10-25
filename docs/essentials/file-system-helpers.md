@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 13293ec05261cbdc1e70fd278002d1af18654851
 ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38815616"
@@ -16,7 +16,7 @@ ms.locfileid: "38815616"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **FileSystem** classe contient une série de programmes d’assistance pour trouver les répertoires de cache et les données de l’application et ouvrir des fichiers à l’intérieur du package d’application.
+La classe **FileSystem** contient un ensemble de fonctions facilitant l'accès et l'édition des répertoires de cache et de données de l'application ainsi que l'ouverture de fichiers embarqués dans le package d'application.
 
 ## <a name="using-file-system-helpers"></a>À l’aide des types de système de fichiers
 
@@ -50,12 +50,12 @@ Pour ouvrir un fichier qui est fourni dans le package d’application :
  }
 ```
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Informations d'implémentation de la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 - **CacheDirectory** – retourne le [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir) du contexte actuel.
-- **AppDataDirectory** – retourne le [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) du contexte actuel et sont sauvegardées à l’aide [sauvegarde automatique](https://developer.android.com/guide/topics/data/autobackup.html) démarrage sur les API 23 et versions ultérieures.
+- **AppDataDirectory** : retourne le [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) du contexte actuel qui est sauvegardé lors de la [sauvegarde automatique](https://developer.android.com/guide/topics/data/autobackup.html) , disponible à partir de l'API 23.
 
 Ajouter n’importe quel fichier dans le **actifs** dossier Android du projet et marquer l’Action de génération comme **AndroidAsset** à utiliser avec `OpenAppPackageFileAsync`.
 
