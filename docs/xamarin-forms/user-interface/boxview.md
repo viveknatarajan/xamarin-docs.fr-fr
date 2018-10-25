@@ -6,12 +6,12 @@ ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
-ms.openlocfilehash: 813a913c2c2fb27456c9a489c73b16d5892c4b8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/26/2018
+ms.openlocfilehash: 3ae2fb8110b7e0a5c6c85c489897acc1a03be8d8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997050"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
@@ -35,13 +35,16 @@ Cet article aborde les rubriques suivantes :
 
 ## <a name="setting-boxview-color-and-size"></a>Paramètre BoxView couleur et taille
 
-Très souvent, vous devez définir les trois propriétés suivantes de `BoxView`:
+En général, vous devez définir les propriétés suivantes de `BoxView`:
 
 - [`Color`](xref:Xamarin.Forms.BoxView.Color) Pour définir sa couleur.
+- [`CornerRadius`](xref:Xamarin.Forms.BoxView.CornerRadius) Pour définir son rayon d’angle.
 - [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) Pour définir la largeur de la `BoxView` en unités indépendantes du périphérique.
 - [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) Pour définir la hauteur de la `BoxView`.
 
 Le `Color` propriété est de type `Color`; la propriété peut être définie à tout `Color` valeur, y compris les champs statiques 141 en lecture seule de nommé couleurs allant par ordre alphabétique `AliceBlue` à `YellowGreen`.
+
+Le `CornerRadius` propriété est de type [ `CornerRadius` ](xref:Xamarin.Forms.CornerRadius); la propriété peut être définie à un seul `double` glyphes de largeurs uniformes valeur de rayon d’angle, ou un `CornerRadius` structure définie par quatre `double` valeurs qui sont appliqués à la zone supérieure gauche, en haut à droite, en bas à gauche et bas à droite de la `BoxView`.
 
 Le `WidthRequest` et `HeightRequest` propriétés uniquement jouent un rôle que si le `BoxView` est *sans contrainte* dans mise en page. C’est le cas lorsque le conteneur de disposition doit connaître l’enfant de dimensions, par exemple, lorsque le `BoxView` est un enfant d’une cellule dimensionnée automatiquement dans le `Grid` mise en page. Un `BoxView` est sans contrainte également lorsque son `HorizontalOptions` et `VerticalOptions` propriétés sont définies sur les valeurs autres que `LayoutOptions.Fill`. Si le `BoxView` n’est pas limitée, mais le `WidthRequest` et `HeightRequest` propriétés ne sont pas définies, puis la largeur ou hauteur sont définies sur les valeurs par défaut de 40 unités, ou environ 1/4 pouces sur les appareils mobiles.
 
@@ -58,6 +61,7 @@ Le [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxV
              x:Class="BasicBoxView.MainPage">
 
     <BoxView Color="CornflowerBlue"
+             CornerRadius="10"
              WidthRequest="160"
              HeightRequest="160"
              VerticalOptions="Center"

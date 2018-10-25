@@ -1,38 +1,44 @@
 ---
 title: Polylignes et équations paramétriques
-description: Cet article explique comment à SkiaSharp d’utilisation pour afficher n’importe quelle ligne, vous pouvez définir avec des équations paramétriques et illustre ceci avec l’exemple de code.
+description: Cet article explique comment à SkiaSharp utiliser pour restituer une ligne que vous pouvez définir avec des équations paramétriques et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 9118ca8e23e4c4a9023a1add89e26c4484979c8f
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: d5896a9d4f1aac2ea90d544d638e4adf68d24140
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615793"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polylignes et équations paramétriques
 
-_Permet d’afficher n’importe quelle ligne, que vous pouvez définir avec des équations paramétriques SkiaSharp_
+_Permet d’afficher n’importe quelle ligne que vous pouvez définir avec des équations paramétriques SkiaSharp_
 
-Dans des parties suivantes de ce guide, vous verrez les différentes méthodes qui `SKPath` définit pour afficher certains types de courbes. Toutefois, il est parfois nécessaire de dessiner un type de courbe n’est pas directement pris en charge par `SKPath`. Dans ce cas, vous pouvez utiliser une polyligne (il s’agit d’une collection de lignes connectées) pour dessiner une courbe que vous pouvez définir mathématiquement. Si vous modifiez les lignes suffisamment petit et nombreux révèle suffisante, le résultat doit ressembler à une courbe. Cette spirale est réellement 3 600 lignes peu :
+Dans le [ **SkiaSharp courbes et chemins d’accès** ](../curves/index.md) section de ce guide, vous verrez les différentes méthodes qui [ `SKPath` ](xref:SkiaSharp.SKPath) définit pour afficher certains types de courbes. Toutefois, il est parfois nécessaire de dessiner un type de courbe n’est pas directement pris en charge par `SKPath`. Dans ce cas, vous pouvez utiliser une polyligne (il s’agit d’une collection de lignes connectées) pour dessiner une courbe que vous pouvez définir mathématiquement. Si vous modifiez les lignes suffisamment petit et nombreux révèle suffisante, le résultat doit ressembler à une courbe. Cette spirale est réellement 3 600 lignes peu :
 
 ![](polylines-images/spiralexample.png "Une spirale")
 
 En général, il est préférable de définir une courbe en termes d’une paire d’équations paramétriques. Il s’agit des équations de coordonnées X et Y qui dépendent d’une troisième variable, parfois appelée `t` pour le moment. Par exemple, les équations paramétriques suivantes définissent un cercle avec un rayon de 1 centré au point (0, 0) pour *t* comprise entre 0 et 1 :
 
- x = cos(2πt) y = sin(2πt)
+x = cos(2πt)
+
+y = sin(2πt)
 
  Si vous souhaitez un rayon supérieures à 1, vous pouvez simplement multiplier les valeurs de sinus et le cosinus par ce rayon et si vous avez besoin atteindre le centre d’un autre emplacement, ajoutez ces valeurs :
 
- x = xCenter + radius·cos(2πt) y = yCenter + radius·sin(2πt)
+x = xCenter + radius·cos(2πt)
+
+y = yCenter + radius·sin(2πt)
 
 Pour une ellipse avec parallèle axes horizontal et vertical, deux rayons sont impliqués :
 
-x = xCenter + xRadius·cos(2πt) y = yCenter + yRadius·sin(2πt)
+x = xCenter + xRadius·cos(2πt)
+
+y = yCenter + yRadius·sin(2πt)
 
 Vous pouvez ensuite placer le code de SkiaSharp équivalent dans une boucle qui calcule les différents points et ajoute celles pour un chemin d’accès. Le code de SkiaSharp suivant crée un `SKPath` objet pour une ellipse qui remplit la surface d’affichage. La boucle parcourt les 360 degrés directement. Le centre est la moitié de la largeur et hauteur de la surface d’affichage, et sont donc les rayons des deux :
 
@@ -116,5 +122,5 @@ Notez que le `SKPath` est créé dans un `using` bloc. Cela `SKPath` consomme pl
 
 ## <a name="related-links"></a>Liens associés
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

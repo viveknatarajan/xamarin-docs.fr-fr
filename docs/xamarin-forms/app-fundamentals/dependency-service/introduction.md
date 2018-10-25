@@ -6,12 +6,12 @@ ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/06/2017
-ms.openlocfilehash: 558a05b5fdc4c4f08194b708de886bca342dd860
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 09/15/2018
+ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38995412"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introduction à DependencyService
@@ -20,7 +20,10 @@ ms.locfileid: "38995412"
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService) permet aux applications d’appeler dans les fonctionnalités spécifiques à la plateforme à partir de code partagé. Cette fonctionnalité permet aux applications Xamarin.Forms faire tout ce qu’une application native peut faire.
 
-`DependencyService` est un résolveur de dépendance. Dans la pratique, une interface est définie et `DependencyService` détecte que l’implémentation correcte de cette interface à partir de différents projets de plateforme.
+`DependencyService` est un localisateur de service. Dans la pratique, une interface est définie et `DependencyService` détecte que l’implémentation correcte de cette interface à partir de différents projets de plateforme.
+
+> [!NOTE]
+> Par défaut, le [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) résout uniquement les implémentations de plateforme qui ont des constructeurs sans paramètre. Toutefois, une méthode de résolution de dépendance peut être injectée dans Xamarin.Forms qui utilise un conteneur d’injection de dépendance ou des méthodes de fabrique pour résoudre les implémentations de plateforme. Cette approche peut être utilisée pour résoudre les implémentations de plateforme qui ont des constructeurs avec des paramètres. Pour plus d’informations, consultez [résolution des dépendances dans Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md).
 
 ## <a name="how-dependencyservice-works"></a>Fonctionne de DependencyService
 
@@ -144,7 +147,6 @@ Le [exemple de solution de UsingDependencyService](https://developer.xamarin.com
 
 > [!NOTE]
 > Vous **doit** fournir une implémentation dans chaque projet de plateforme. Si aucune implémentation de l’Interface n’est inscrit, puis le `DependencyService` sera impossible de résoudre la `Get<T>()` méthode lors de l’exécution.
-
 
 ## <a name="related-links"></a>Liens associés
 

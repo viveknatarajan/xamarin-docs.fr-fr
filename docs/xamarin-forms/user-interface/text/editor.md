@@ -6,12 +6,12 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/13/2018
-ms.openlocfilehash: 6e3cf12431440823b1d32d91927bc634f60fd5e2
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 07/31/2018
+ms.openlocfilehash: 23ba73eb4099a9db9e989c68ae7f381e1c96541d
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39270454"
 ---
 # <a name="xamarinforms-editor"></a>Éditeur de Xamarin.Forms
@@ -156,6 +156,18 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 
 > [!NOTE]
 > Lorsque le [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propriété est définie sur `false`et un clavier personnalisé n’est pas utilisé, le vérificateur orthographique natif va être désactivé. Toutefois, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) a été ensemble qui désactive orthographique vérification, tel que [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), le `IsSpellCheckEnabled` propriété est ignorée. Par conséquent, la propriété ne peut pas être utilisée pour activer la vérification orthographique pour un `Keyboard` qui désactive explicitement.
+
+### <a name="setting-placeholder-text"></a>Texte d’espace réservé de paramètre
+
+Le [ `Editor` ](xref:Xamarin.Forms.Editor) peut être définie pour afficher le texte d’espace réservé quand il ne stocke pas les entrées d’utilisateur. Cela s’effectue en définissant le [ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder) propriété à un `string`et est souvent utilisé pour indiquer le type de contenu qui est approprié pour le `Editor`. En outre, la couleur de texte d’espace réservé peut être contrôlée en définissant le [ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor) propriété à un [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
+```
+
+```csharp
+var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
+```
 
 ### <a name="colors"></a>Couleurs
 
