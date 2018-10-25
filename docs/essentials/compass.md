@@ -71,15 +71,15 @@ public class CompassTest
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
-## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
+## <a name="platform-implementation-specifics"></a>Informations d'implémentation de la plateforme 
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Android ne fournit pas d’API pour la lecture de la boussole. Nous utilisons donc l’accéléromètre et le magnétomètre pour calculer le nord magnétique, comme recommandé par Google.
 
-Dans de rares cas, vous verrez peut-être des résultats incohérents, car les capteurs ont besoin d’être étalonnés, ce qui implique le déplacement de votre appareil dans un mouvement décrivant un 8. La meilleure façon de faire cela est d'ouvrir Google Maps, appuyez sur le point de votre emplacement et sélectionnez **Calibrate boussole**/**Calibrer la boussole**.
+Dans de rares cas, vous verrez peut-être des résultats incohérents, car les capteurs ont besoin d’être étalonnés, ce qui implique le déplacement de votre appareil dans un mouvement décrivant un 8. La meilleure façon de faire cela est d'ouvrir Google Maps, d'appuyer sur le point de votre emplacement et de sélectionner **Calibrate boussole**/**Calibrer la boussole**.
 
-Il est bon de noter que d'écouter plusieurs capteurs simultanément via votre application affectera l'intervale entre deux captures de ces derniers.
+Il est bon de noter que l'exécution simultanée de plusieurs capteurs via votre application peut affecter leur vitesse.
 
 ## <a name="low-pass-filter"></a>Filtres passe-bas
 
