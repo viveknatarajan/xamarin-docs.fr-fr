@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Forms DatePicker
-description: Le sélecteur de dates est vue Xamarin.Forms qui permet à l’utilisateur de sélectionner une date. Cet article explique comment utiliser un sélecteur de dates dans une application Xamarin.Forms.
+description: Le sélecteur de dates est une vue de Xamarin.Forms qui permet à l’utilisateur de sélectionner une date. Cet article explique comment utiliser un sélecteur de dates dans une application Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 553957bfa06c7b7a9c5261e426ebee4190de5ebb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7917510e910223fc6ca276bf47b1878c19557a38
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994924"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
-_Une vue de Xamarin.Forms qui permet à l’utilisateur de sélectionner une date_
+_Une vue de Xamarin.Forms qui permet à l’utilisateur de sélectionner une date._
 
 Xamarin.Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) appelle le contrôle de sélecteur de dates de la plateforme et permet à l’utilisateur de sélectionner une date. `DatePicker` définit des huit propriétés :
 
@@ -184,6 +184,9 @@ Lorsque l’exemple est tout d’abord exécuté, les deux `DatePicker` vues son
 En appuyant sur un de le `DatePicker` affiche appelle le sélecteur de dates de plateforme. Les trois plateformes implémentent ce sélecteur de dates de façons très différentes, mais chaque approche est familière aux utilisateurs de cette plateforme :
 
 [![Sélectionnez les jours entre les Dates](datepicker-images/DaysBetweenDatesSelect.png "jours entre les Dates sélectionnez")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "sélectionnez jours entre les Dates")
+
+> [!TIP]
+> Sur Android, le `DatePicker` boîte de dialogue peut être personnalisée en substituant la `CreateDatePickerDialog` méthode dans un convertisseur personnalisé. Cela permet, par exemple, les boutons supplémentaires à ajouter à la boîte de dialogue.
 
 Une fois les deux dates sont sélectionnés, l’application affiche le nombre de jours entre ces dates :
 

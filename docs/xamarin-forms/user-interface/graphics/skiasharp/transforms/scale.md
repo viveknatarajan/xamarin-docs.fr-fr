@@ -4,21 +4,21 @@ description: Thhis article explore la transformation d’échelle SkiaSharp mise
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 94105cbb83e4c6eb3558ca3fc55e505ab41f28fe
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: d4ab7ad5a0fc645c13388d76eb11cbd4e2dd72f8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615601"
 ---
 # <a name="the-scale-transform"></a>La transformation d’échelle
 
 _Découvrir la transformation d’échelle pour la mise à l’échelle des objets à différentes tailles de SkiaSharp_
 
-Comme vous l’avez vu dans [le traduire transformer](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md) article, la transformation de traduction peut déplacer un objet graphique à partir d’un emplacement vers un autre. En revanche, la transformation d’échelle modifie la taille de l’objet de graphique :
+Comme vous l’avez vu dans [ **le traduire transformer** ](translate.md) article, la transformation de traduction peut déplacer un objet graphique à partir d’un emplacement vers un autre. En revanche, la transformation d’échelle modifie la taille de l’objet de graphique :
 
 ![](scale-images/scaleexample.png "Un mot en hauteur mise à l’échelle la taille")
 
@@ -38,7 +38,7 @@ y' = sy du y
 
 Les valeurs par défaut des facteurs de translation sont 0 ; les valeurs par défaut les facteurs d’échelle sont 1.
 
-Le `SKCanvas` classe définit quatre `Scale` méthodes. La première [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/) méthode est pour tenir compte des cas où vous souhaitez que le même horizontal et vertical mise à l’échelle :
+Le `SKCanvas` classe définit quatre `Scale` méthodes. La première [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single)) méthode est pour tenir compte des cas où vous souhaitez que le même horizontal et vertical mise à l’échelle :
 
 ```csharp
 public void Scale (Single s)
@@ -46,14 +46,14 @@ public void Scale (Single s)
 
 Il s’agit *isotropes* mise à l’échelle &mdash; mise à l’échelle qui est le même dans les deux sens. Mise à l’échelle isotropes conserve les proportions de l’objet.
 
-La seconde [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) méthode vous permet de spécifier des valeurs différentes pour la mise à l’échelle horizontale et verticale :
+La seconde [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) méthode vous permet de spécifier des valeurs différentes pour la mise à l’échelle horizontale et verticale :
 
 ```csharp
 public void Scale (Single sx, Single sy)
 ```
 
 Il en résulte *ANISOTROPIQUE* mise à l’échelle.
-La troisième [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/SkiaSharp.SKPoint/) méthode combine les deux facteurs d’échelle dans un seul `SKPoint` valeur :
+La troisième [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(SkiaSharp.SKPoint)) méthode combine les deux facteurs d’échelle dans un seul `SKPoint` valeur :
 
 ```csharp
 public void Scale (SKPoint size)
@@ -61,7 +61,7 @@ public void Scale (SKPoint size)
 
 La quatrième `Scale` méthode sera bientôt décrite.
 
-Le **mise à l’échelle base** page montre le `Scale` (méthode). Le [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) les fichier XAML contient deux `Slider` les éléments qui vous permettent de sélectionner des facteurs de mise à l’échelle horizontale et verticale comprise entre 0 et 10. Le [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) fichier code-behind utilise ces valeurs pour appeler `Scale` avant d’afficher un rectangle arrondi rayée avec une ligne en pointillés et dimensionnée en fonction du texte dans l’angle supérieur gauche angle de la zone :
+Le **mise à l’échelle base** page montre le `Scale` (méthode). Le [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) fichier contient deux `Slider` les éléments qui vous permettent de sélectionner des facteurs de mise à l’échelle horizontale et verticale comprise entre 0 et 10. Le [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) fichier code-behind utilise ces valeurs pour appeler `Scale` avant d’afficher un rectangle arrondi rayée avec une ligne en pointillés et dimensionnée en fonction du texte dans l’angle supérieur gauche angle de la zone :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -113,7 +113,7 @@ Le texte, la largeur de la ligne en pointillés, la longueur des tirets dans cet
 
 ANISOTROPIQUE causes de mise à l’échelle la largeur du trait pour devenir différents pour les lignes aligné sur les axes horizontales et verticales. (Ceci est également évident à partir de la première image dans cette page.) Si vous ne souhaitez pas la largeur du trait pour être affectées par les facteurs d’échelle, affectez-lui la valeur 0 et il sera toujours un pixel de large quel que soit le `Scale` paramètre.
 
-Mise à l’échelle est relatif à l’angle supérieur gauche de la zone de dessin. Cela peut être exactement ce que vous voulez, mais il ne peut pas être. Supposons que vous souhaitez placer le texte et le rectangle vers un autre emplacement sur le canevas et que vous souhaitez mettre à l’échelle par rapport à son centre. Dans ce cas, vous pouvez utiliser la quatrième version de la [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/System.Single/System.Single/) (méthode), qui inclut deux paramètres supplémentaires pour spécifier le centre de mise à l’échelle :
+Mise à l’échelle est relatif à l’angle supérieur gauche de la zone de dessin. Cela peut être exactement ce que vous voulez, mais il ne peut pas être. Supposons que vous souhaitez placer le texte et le rectangle vers un autre emplacement sur le canevas et que vous souhaitez mettre à l’échelle par rapport à son centre. Dans ce cas, vous pouvez utiliser la quatrième version de la [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) (méthode), qui inclut deux paramètres supplémentaires pour spécifier le centre de mise à l’échelle :
 
 ```csharp
 public void Scale (Single sx, Single sy, Single px, Single py)
@@ -170,7 +170,7 @@ Le coin supérieur gauche du rectangle arrondi est positionné `margin` pixels �
 
 Le `Slider` éléments dans ce programme dispose d’une plage de &ndash;10 à 10. Comme vous pouvez le voir, les valeurs négatives vertical mise à l’échelle (par exemple, dans le Android écran dans le centre) entraînent des objets faire pivoter autour de l’axe horizontal qui passe par le centre de mise à l’échelle. Les valeurs négatives horizontal mise à l’échelle (par exemple, comme dans l’écran UWP sur la droite) entraînent des objets faire pivoter autour de l’axe vertical qui transitent dans le centre de mise à l’échelle.
 
-Cette quatrième version de la `Scale` méthode est en fait un raccourci. Vous pouvez souhaiter voir comment cela fonctionne en remplaçant le `Scale` méthode dans ce code par le code suivant :
+La version de la [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) méthode avec les points pivot est un raccourci pour une série de trois `Translate` et `Scale` appels. Vous pouvez souhaiter voir comment cela fonctionne en remplaçant le `Scale` méthode dans le **mise à l’échelle centré** page par le code suivant :
 
 ```csharp
 canvas.Translate(-px, -py);
@@ -191,7 +191,7 @@ Si vous êtes familiarisé avec cet exercice dans d’autres graphiques programm
 
 Avec le successives `Scale` et `Translate` appels, le centre du rectangle arrondi est toujours dans le coin supérieur gauche, mais vous pouvez désormais mettre à l’échelle par rapport à l’angle supérieur gauche du canevas, ce qui correspond également au centre du rectangle arrondi.
 
-À présent, avant cela `Scale` appel ajoutez un autre `Translate` appeler avec les valeurs de centrage :
+À présent, avant cela `Scale` appeler, ajoutez un autre `Translate` appeler avec les valeurs de centrage :
 
 ```csharp
 canvas.Translate(px, py);
@@ -215,7 +215,7 @@ N’oubliez pas que les valeurs par défaut de `sx` et `sy` sont 1. Il est facil
 
 Lorsque vous combinez `Translate` et `Scale` appels, l’ordre est important. Si le `Translate` vient après le `Scale`, les facteurs de translation sont efficacement à l’échelle les facteurs d’échelle. Si le `Translate` vient avant le `Scale`, les facteurs de traduction ne sont pas à l’échelle. Ce processus devient un peu plus clair (bien que plus mathématiques) lorsque l’objet de matrices de transformation est introduite.
 
-Le `SKPath` classe définit en lecture seule [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) propriété qui retourne un `SKRect` à définir l’étendue des coordonnées dans le chemin d’accès. Par exemple, lorsque le `Bounds` propriété est obtenue à partir du chemin hendecagram créé précédemment, le `Left` et `Top` propriétés du rectangle sont d’environ -100, le `Right` et `Bottom` sont des propriétés environ 100 et le `Width` et `Height` propriétés sont environ 200. (La plupart des valeurs réelles est une peu moins, car les points des étoiles sont définis par un cercle avec un rayon de 100, mais seul le point supérieur est parallèle avec les axes horizontales ou verticales).
+Le `SKPath` classe définit en lecture seule [ `Bounds` ](xref:SkiaSharp.SKPath.Bounds) propriété qui retourne un `SKRect` à définir l’étendue des coordonnées dans le chemin d’accès. Par exemple, lorsque le `Bounds` propriété est obtenue à partir du chemin hendecagram créé précédemment, le `Left` et `Top` propriétés du rectangle sont d’environ -100, le `Right` et `Bottom` sont des propriétés environ 100 et le `Width` et `Height` propriétés sont environ 200. (La plupart des valeurs réelles est une peu moins, car les points des étoiles sont définis par un cercle avec un rayon de 100, mais seul le point supérieur est parallèle avec les axes horizontales ou verticales).
 
 La disponibilité de ces informations implique qu’il doit être possible de dériver de mise à l’échelle et de traduire les facteurs de mise à l’échelle d’un chemin d’accès à la taille de la zone de dessin. Le [ **mise à l’échelle ANISOTROPIQUE** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) page illustre cela avec une étoile 11-référencée. Un *ANISOTROPIQUE* mise à l’échelle signifie qu’il n’est pas égale dans le sens horizontal et vertical, ce qui signifie que l’étoile ne conserve ses proportions d’origine. Voici le code approprié le `PaintSurface` gestionnaire :
 
@@ -337,12 +337,12 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Le code affiche également l’étoile est dix fois de plus, chaque fois que la diminution de la mise à l’échelle du facteur de 10 et progressivement en modifiant la couleur du rouge au bleu :
+Le code affiche également l’étoile 10 fois de plus, chaque fois que la diminution de la mise à l’échelle du facteur de 10 et progressivement en modifiant la couleur du rouge au bleu :
 
 [![](scale-images/isotropicscaling-small.png "Capture d’écran triple de la page de mise à l’échelle isotropes")](scale-images/isotropicscaling-large.png#lightbox "Triple capture d’écran de la page de mise à l’échelle isotropes")
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/01/2018
-ms.openlocfilehash: a6eaf08d17f70c43f451361e27555a09c39f26a9
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 420c1de0691de419180dd497a9031ea5e7dd1054
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "37935665"
 ---
 # <a name="xamarinforms-binding-mode"></a>Mode de liaison Xamarin.Forms
@@ -312,6 +312,9 @@ Vous pouvez définir le mode de liaison sur `OneWayToSource` dans le **Alternati
 ```
 
 Maintenant le `Slider` est initialisé à 1 (la valeur par défaut `Scale`) mais manipuler le `Slider` n’affecte pas le `Scale` propriété, donc il n’est pas très utile.
+
+> [!NOTE]
+> Le [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe définit également [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) et [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) propriétés, ce qui peuvent évoluer le `VisualElement` différemment dans le directions horizontale et verticale.
 
 Une application très utile de substituer le mode de liaison par défaut avec `TwoWay` implique la `SelectedItem` propriété du `ListView`. Le mode de liaison par défaut est `OneWayToSource`. Quand une liaison de données est définie sur le `SelectedItem` propriété à référencer une propriété de source dans un ViewModel, cette propriété source est définie à partir de la `ListView` sélection. Toutefois, dans certains cas, vous pourriez également le `ListView` à initialiser à partir du ViewModel.
 

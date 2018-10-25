@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38860665"
 ---
 # <a name="xamarin-live-reload"></a>Rechargement en direct de Xamarin
@@ -26,10 +26,12 @@ Vous permet de Xamarin Live recharger **apporter des modifications à votre XAML
 
 Le rechargement en direct est actuellement disponible uniquement dans Visual Studio 2017.
 
+[![Rejoignez la conversation à https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## <a name="requirements"></a>Configuration requise
 
-* [Visual Studio 2017 version 15.7 ou version ultérieure](https://visualstudio.microsoft.com/vs/) ou version ultérieure avec le **développement Mobile en .NET** charge de travail.
-* [Xamarin.Forms 3.0.0 ou version ultérieure](https://www.nuget.org/packages/Xamarin.Forms/) ou version ultérieure.
+* [Visual Studio 2017 version 15.7 ou version ultérieure](https://visualstudio.microsoft.com/vs/) avec la **développement Mobile en .NET** charge de travail.
+* [Xamarin.Forms 3.0.0 ou version ultérieure](https://www.nuget.org/packages/Xamarin.Forms/).
 
 ## <a name="getting-started"></a>Prise en main
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Installer Xamarin le rechargement en direct à partir de la place de marché Visual Studio
@@ -121,6 +123,8 @@ Non. En fait, vous pouvez même démarrer toutes les cibles votre application pr
 * Uniquement pris en charge dans Visual Studio.
 * Liaison doit être définie sur **ne pas lier** ou **lien les SDK Framework uniquement** 
 * Recharger les ressources à l’échelle de l’application (par exemple, **App.xaml** ou partagé les dictionnaires de ressources), la réinitialisation de navigation de l’application. Cela sera résolu dans la prochaine version de la version préliminaire.
+* Rechargement de ContentView actuellement nécessite de recharger la page conteneur. Cela sera résolu dans la prochaine version de la version préliminaire.
+* Les éléments contenant AutomationId peuvent provoquer un échec de rechargement.
 * La modification XAML pendant le débogage UWP peut entraîner un blocage de l’exécution. Solution de contournement : Utilisez **exécuter sans débogage (Ctrl + F5)** au lieu de **démarrer le débogage (F5)**.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes

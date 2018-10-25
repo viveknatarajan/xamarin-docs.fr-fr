@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: e4b060c703077e140e0f0d2f8c4c2b824c890e8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a0054c79bf0f356bcfcc48389a0a28f68f73a48b
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997116"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Convertisseurs rapide de Xamarin.Forms
@@ -32,6 +32,7 @@ Renderers rapides sont disponibles pour les contrôles suivants dans Xamarin.For
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 
 Fonctionnellement, ces convertisseurs rapides ne sont pas différentes pour les convertisseurs d’origine. Cependant, ils sont actuellement en phase expérimentale et peut uniquement être utilisées en ajoutant la ligne suivante de code à votre `MainActivity` classe avant d’appeler `Forms.Init`:
 

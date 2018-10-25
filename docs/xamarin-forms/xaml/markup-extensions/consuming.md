@@ -6,23 +6,25 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 01/05/2018
-ms.openlocfilehash: a630d7c2acb95b7551c9f5f870078a0efcfc075c
-ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
+ms.date: 08/01/2018
+ms.openlocfilehash: e483716952aa97de4411733006f4fa12c3e6da98
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39393670"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilisation des Extensions de balisage XAML
 
-Extensions de balisage XAML vous aider à améliorer la puissance et la flexibilité de XAML en autorisant les attributs de l’élément à définir à partir de diverses sources. Plusieurs extensions de balisage XAML font partie de la spécification de XAML 2009. Ceux-ci s’affichent dans les fichiers XAML avec l’usage `x` préfixe d’espace de noms et sont communément par ce préfixe. Ceux-ci sont décrits dans les sections ci-dessous :
+Extensions de balisage XAML vous aider à améliorer la puissance et la flexibilité de XAML en autorisant les attributs de l’élément à définir à partir de diverses sources. Plusieurs extensions de balisage XAML font partie de la spécification de XAML 2009. Ceux-ci s’affichent dans les fichiers XAML avec l’usage `x` préfixe d’espace de noms et sont communément par ce préfixe. Cet article aborde les extensions de balisage suivant :
 
-- [`x:Static`](#static) &ndash; référencer les propriétés statiques, des champs ou des membres de l’énumération.
-- [`x:Reference`](#reference) &ndash; référence des éléments dans la page nommés.
-- [`x:Type`](#type) &ndash; Définissez un attribut sur un `System.Type` objet.
-- [`x:Array`](#array) &ndash; construire un tableau d’objets d’un type particulier.
-- [`x:Null`](#null) &ndash; Définissez un attribut sur un `null` valeur.
+- [`x:Static`](#static) – référencer les propriétés statiques, des champs ou des membres de l’énumération.
+- [`x:Reference`](#reference) – référence nommée d’éléments sur la page.
+- [`x:Type`](#type) – la valeur est un attribut un `System.Type` objet.
+- [`x:Array`](#array) – construire un tableau d’objets d’un type particulier.
+- [`x:Null`](#null) – la valeur est un attribut un `null` valeur.
+- [`OnPlatform`](#onplatform) – personnaliser l’apparence de l’interface utilisateur sur une base par plateforme.
+- [`OnIdiom`](#onidiom) – personnaliser l’apparence de l’interface utilisateur en fonction de l’idiome de l’appareil de l’application est en cours d’exécution.
 
 Les extensions de balisage XAML supplémentaires ont toujours été pris en charge par d’autres implémentations XAML et sont également prises en charge par Xamarin.Forms. Ceux-ci sont décrits plus en détail dans d’autres articles :
 
@@ -453,10 +455,89 @@ Voici le programme en cours d’exécution sur les trois plateformes :
 
 Remarquez que quatre de la `Label` éléments ont une police sans serif, mais le centre `Label` a la police sans serif par défaut.
 
+<a name="onplatform" />
+
+## <a name="onplatform-markup-extension"></a>Extension de balisage de OnPlatform
+
+Le `OnPlatform` extension de balisage vous permet de personnaliser l’apparence de l’interface utilisateur sur une base par plateforme. Il fournit les mêmes fonctionnalités que le [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) et [ `On` ](xref:Xamarin.Forms.On) classes, mais avec une représentation plus concise.
+
+Le `OnPlatform` extension de balisage est prise en charge par le [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) (classe), qui définit les propriétés suivantes :
+
+- `Default` de type `object`, définissez une valeur par défaut à appliquer aux propriétés qui représentent les plateformes.
+- `Android` de type `object`, que vous définissez une valeur à appliquer sur Android.
+- `GTK` de type `object`, que vous définissez une valeur à appliquer sur les plateformes GTK.
+- `iOS` de type `object`, que vous définissez une valeur à appliquer sur iOS.
+- `macOS` de type `object`, que vous définissez une valeur à appliquer sur macOS.
+- `Tizen` de type `object`, que vous définissez une valeur à appliquer à la plateforme Tizen.
+- `UWP` de type `object`, que vous définissez une valeur à appliquer à la plateforme Windows universelle.
+- `WPF` de type `object`, que vous définissez une valeur à appliquer à la plateforme Windows Presentation Foundation.
+- `Converter` de type `IValueConverter`, que vous définissez pour un `IValueConverter` implémentation.
+- `ConverterParameter` de type `object`, que vous définissez une valeur à passer à la `IValueConverter` implémentation.
+
+> [!NOTE]
+> L’analyseur XAML autorise le [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) classe sera abrégé en tant que `OnPlatform`.
+
+Le `Default` propriété est la propriété de contenu de `OnPlatformExtension`. Par conséquent, pour les expressions de balisage XAML exprimées avec des accolades, vous pouvez éliminer le `Default=` dans le cadre de l’expression de condition qu’il soit le premier argument.
+
+> [!IMPORTANT]
+> L’analyseur XAML attend que les valeurs du type correct seront fournies aux propriétés consomme le `OnPlatform` extension de balisage. Si la conversion de type est nécessaire, le `OnPlatform` extension de balisage tentera d’effectuer cette opération à l’aide des convertisseurs de valeur par défaut fournis par Xamarin.Forms. Toutefois, il existe certaines conversions de type ne peut pas être effectuées par les convertisseurs de valeur par défaut et dans ce cas le `Converter` propriété doit être définie sur une `IValueConverter` implémentation.
+
+Le **OnPlatform démonstration** page montre comment utiliser le `OnPlatform` extension de balisage :
+
+```xaml
+<BoxView Color="{OnPlatform Yellow, iOS=Red, Android=Green, UWP=Blue}"
+         WidthRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"  
+         HeightRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"
+         HorizontalOptions="Center" />
+```
+
+Dans cet exemple, les trois `OnPlatform` expressions utilisent la version abrégée de le `OnPlatformExtension` nom de la classe. Les trois `OnPlatform` ensemble d’extensions de balisage la [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), et [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriétés de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) des valeurs différentes sur iOS, Android et UWP. Les extensions de balisage fournissent également des valeurs par défaut pour ces propriétés sur les plateformes qui ne sont pas spécifiés, tout en éliminant le `Default=` dans le cadre de l’expression. Notez que les propriétés d’extension de balisage qui sont définies sont séparées par des virgules.
+
+Voici le programme en cours d’exécution sur les trois plateformes :
+
+[![Démonstration de OnPlatform](consuming-images/onplatformdemo-small.png "OnPlatform démonstration")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform démonstration")
+
+<a name="onidiom" />
+
+## <a name="onidiom-markup-extension"></a>Extension de balisage de OnIdiom
+
+Le `OnIdiom` extensions de balisage vous permet de personnaliser l’apparence de l’interface utilisateur en fonction de l’idiome de l’appareil de l’application s’exécute sur. Il est pris en charge par le [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) (classe), qui définit les propriétés suivantes :
+
+- `Default` de type `object`, définissez une valeur par défaut à appliquer aux propriétés qui représentent des idiomes de l’appareil.
+- `Phone` de type `object`, que vous définissez une valeur à appliquer sur les téléphones.
+- `Tablet` de type `object`, que vous définissez une valeur à appliquer aux tablettes.
+- `Desktop` de type `object`, que vous définissez une valeur à appliquer sur les plateformes de bureau.
+- `TV` de type `object`, que vous définissez une valeur à appliquer sur les plateformes TV.
+- `Watch` de type `object`, que vous définissez une valeur à appliquer sur les plateformes d’espion.
+- `Converter` de type `IValueConverter`, que vous définissez pour un `IValueConverter` implémentation.
+- `ConverterParameter` de type `object`, que vous définissez une valeur à passer à la `IValueConverter` implémentation.
+
+> [!NOTE]
+> L’analyseur XAML autorise le [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) classe sera abrégé en tant que `OnIdiom`.
+
+Le `Default` propriété est la propriété de contenu de `OnIdiomExtension`. Par conséquent, pour les expressions de balisage XAML exprimées avec des accolades, vous pouvez éliminer le `Default=` dans le cadre de l’expression de condition qu’il soit le premier argument.
+
+> [!IMPORTANT]
+> L’analyseur XAML attend que les valeurs du type correct seront fournies aux propriétés consomme le `OnIdiom` extension de balisage. Si la conversion de type est nécessaire, le `OnIdiom` extension de balisage tentera d’effectuer cette opération à l’aide des convertisseurs de valeur par défaut fournis par Xamarin.Forms. Toutefois, il existe certaines conversions de type ne peut pas être effectuées par les convertisseurs de valeur par défaut et dans ce cas le `Converter` propriété doit être définie sur une `IValueConverter` implémentation.
+
+Le **OnIdiom démonstration** page montre comment utiliser le `OnIdiom` extension de balisage :
+
+```xaml
+<BoxView Color="{OnIdiom Yellow, Phone=Red, Tablet=Green, Desktop=Blue}"
+         WidthRequest="{OnIdiom 100, Phone=200, Tablet=300, Desktop=400}"
+         HeightRequest="{OnIdiom 100, Phone=200, Tablet=300, Desktop=400}"
+         HorizontalOptions="Center" />
+```
+
+Dans cet exemple, les trois `OnIdiom` expressions utilisent la version abrégée de le `OnIdiomExtension` nom de la classe. Les trois `OnIdiom` ensemble d’extensions de balisage la [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), et [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriétés de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) des valeurs différentes sur les téléphones, tablettes et idiomes de bureau. Les extensions de balisage fournissent également des valeurs par défaut pour ces propriétés sur les idiomes ne sont pas spécifiés, tout en éliminant le `Default=` dans le cadre de l’expression. Notez que les propriétés d’extension de balisage qui sont définies sont séparées par des virgules.
+
+Voici le programme en cours d’exécution sur les trois plateformes :
+
+[![Démonstration de OnIdiom](consuming-images/onidiomdemo-small.png "OnIdiom démonstration")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom démonstration")
+
 ## <a name="define-your-own-markup-extensions"></a>Définir vos propres Extensions de balisage
 
 Si vous avez rencontré un besoin pour une extension de balisage XAML qui n’est pas disponible dans Xamarin.Forms, vous pouvez [créer vos propres](creating.md).
-
 
 ## <a name="related-links"></a>Liens associés
 
