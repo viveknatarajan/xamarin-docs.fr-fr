@@ -53,7 +53,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[Plateformes](xref:Xamarin.Essentials.DeviceInfo.Platforms)
 
-La propriété **[DeviceInfo.Platform](xref:Xamarin.Essentials.DeviceInfo.Platform)** indique la famille de système d'exploitation actuellement utilisé, elle possède les constantes suivantes :
+La propriété `DeviceInfo.Platform`correspond à une chaîne constante mappée au système d'exploitation. Les valeurs peuvent être vérifiées via la classe `Platforms` :
 
 * **DeviceInfo.Platforms.iOS** : iOS
 * **DeviceInfo.Platforms.Android** : Android
@@ -62,7 +62,7 @@ La propriété **[DeviceInfo.Platform](xref:Xamarin.Essentials.DeviceInfo.Platfo
 
 ## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idiomes](xref:Xamarin.Essentials.DeviceInfo.Idioms)
 
-La propriété **[DeviceInfo.Idiom](xref:Xamarin.Essentials.DeviceInfo.Idiom)** indique le type d'appareil actuellement utilisé, elle possède les constantes suivantes :
+La propriété `DeviceInfo.Idiom` correspond à une chaîne constante mappée au type d'appareil sur lequel est exécutée l'application. Les valeurs peuvent être vérifiées via la classe `Idioms` :
 
 * **DeviceInfo.Idioms.Phone** – téléphone
 * **DeviceInfo.Idioms.Tablet** – tablette PC
@@ -70,14 +70,14 @@ La propriété **[DeviceInfo.Idiom](xref:Xamarin.Essentials.DeviceInfo.Idiom)** 
 * **DeviceInfo.Idioms.TV** – TV
 * **DeviceInfo.Idioms.Unsupported** : non pris en charge
 
-## <a name="device-type"></a>[Type d'appareil](xref:Xamarin.Essentials.DeviceInfo.DeviceType)
+## <a name="device-type"></a>Type d'appareil
 
-L'énumérateur **[DeviceType](xref:Xamarin.Essentials.DeviceInfo.DeviceType)** indique si l'application est lancée sur un appareil phyique ou un émulateur, il possède les valeurs possibles suivantes :
+La propriété `DeviceInfo.DeviceType` correspond à une énumération qui détermine si l'application est exécutée sur un appareil physique ou virtuel. Un appareil virtuel peut être un simulateur ou un émulateur.
 
 * **DeviceInfo.DeviceType.Physical** – Appareil physique
 * **DeviceInfo.DeviceType.Virtual** – Emulateur
 
-## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques relatives à l'implémentation de la plateforme
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
