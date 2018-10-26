@@ -1,26 +1,26 @@
 ---
-title: Infrastructures prises en charge et non pris en charge de tvOS
-description: 'Afin d’aider à clarifier les fonctionnalités disponibles pour les applications de tvOS, ce document fournit deux listes d’infrastructures d’Apple : ceux pris en charge par tvOS et ceux non pris en charge par tvOS.'
+title: Frameworks pris en charge et non pris en charge de tvOS
+description: 'Afin d’aider à clarifier les fonctionnalités disponibles pour les applications tvOS, ce document fournit les deux listes d’infrastructures d’Apple : ceux pris en charge par tvOS et ceux non pris en charge par tvOS.'
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 8ba33d028263385eca50f8174124bbe629e3f951
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 85067d1dc95ee63cf905e81fba7afc973f7ec37e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789120"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123185"
 ---
-# <a name="supported-and-unsupported-frameworks-in-tvos"></a>Infrastructures prises en charge et non pris en charge de tvOS
+# <a name="supported-and-unsupported-frameworks-in-tvos"></a>Frameworks pris en charge et non pris en charge de tvOS
 
 <a name="Supported-Frameworks" />
 
-## <a name="supported-frameworks"></a>Infrastructures prises en charge
+## <a name="supported-frameworks"></a>Frameworks pris en charge
 
-Il s’agit d’une liste des infrastructures fournies par Apple pour une utilisation dans vos applications Xamarin.tvOS :
+Il s’agit d’une liste des Frameworks fournies par Apple pour une utilisation dans vos applications Xamarin.tvOS :
 
 * Accélérer
 * AudioToolbox
@@ -70,7 +70,7 @@ Il s’agit d’une liste des infrastructures fournies par Apple pour une utilis
 
 ## <a name="unsupported-frameworks"></a>Non pris en charge des infrastructures
 
-Voici une liste des infrastructures qui sont pris en charge par iOS 9, mais ont été supprimées de prise en charge de tvOS 9 par Apple et par conséquent, ne peut pas être utilisé dans vos applications Xamarin.tvOS :
+Voici une liste des frameworks qui sont pris en charge par iOS 9, mais ont été supprimés de la prise en charge de tvOS 9 par Apple et par conséquent, ne peut pas être utilisé dans vos applications Xamarin.tvOS :
 
 * Comptes
 * Carnet d’adresses
@@ -115,5 +115,5 @@ Voici une liste des infrastructures qui sont pris en charge par iOS 9, mais ont 
 ## <a name="related-links"></a>Liens associés
 
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS les Guides Interface humaine](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guide de programmation d’application de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guide de programmation d’application pour tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

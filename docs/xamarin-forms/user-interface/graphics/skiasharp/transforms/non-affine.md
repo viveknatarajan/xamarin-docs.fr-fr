@@ -4,15 +4,15 @@ description: Cet article explique comment créer une perspective et effets coniq
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 13f2a1160d012a6b7720bd84340a1cdd0f991535
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: da5306ed9c301a7229d2fc5e913a4217e844bbba
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615650"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116145"
 ---
 # <a name="non-affine-transforms"></a>Transformations non affines
 
@@ -61,6 +61,8 @@ Lors de l’affichage des graphiques, toutefois, vous souhaitez éviter quelque 
 Dans cette équation, vous ne souhaitez pas la valeur de z' devenant zéro :
 
 z' = Persp0·x + Persp1·y + Persp2
+
+Par conséquent, ces valeurs ont certaines restrictions pratiques : 
 
 Le `Persp2` cellule peut être zéro ou non nul. Si `Persp2` est zéro, z » est égale à zéro pour le point (0, 0), et qui n’est généralement pas souhaitable, car ce point est très courant dans les graphiques à deux dimensions. Si `Persp2` n’est pas égal à zéro, il y a aucune perte de généralité si `Persp2` est fixée à 1. Par exemple, si vous déterminez que `Persp2` doit être 5, puis vous pouvez simplement diviser ce qui rend toutes les cellules de la matrice à 5, `Persp2` égaux à 1, et le résultat sera le même.
 
@@ -360,8 +362,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     canvas.Clear();
 
-    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedIndex;
-    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedIndex;
+    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedItem;
+    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedItem;
     float taperFraction = (float)taperFractionSlider.Value;
 
     SKMatrix taperMatrix =
@@ -392,9 +394,9 @@ Voici quelques exemples :
 
 [![](non-affine-images/tapertransform-small.png "Capture d’écran triple de la page Transformer conique")](non-affine-images/tapertransform-large.png#lightbox "Triple capture d’écran de la page Transformer conique")
 
-Un autre type de transformations non affines généralisés est rotation 3D, ce qui est présentée dans l’article suivant, [Rotations 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
+Un autre type de transformations non affines généralisés est rotation 3D, ce qui est présentée dans l’article suivant, [ **Rotations 3D**](3d-rotation.md).
 
-La transformation non affine peut transformer un rectangle en n’importe quel quadrilatère convexe. Cela est illustré par la **afficher la matrice Non affines** page. Il est très similaire à la **afficher la matrice Affine** page à partir de la [matrice transforme](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) article, à ceci près qu’il ait une quatrième `TouchPoint` objet pour manipuler le quatrième supérieur de l’image bitmap :
+La transformation non affine peut transformer un rectangle en n’importe quel quadrilatère convexe. Cela est illustré par la **afficher la matrice Non affines** page. Il est très similaire à la **afficher la matrice Affine** page à partir de la [ **matrice transforme** ](matrix.md) article, à ceci près qu’il ait une quatrième `TouchPoint` objet à manipuler la quatrième angle de l’image bitmap :
 
 [![](non-affine-images/shownonaffinematrix-small.png "Capture d’écran triple de la page Afficher la matrice Non affines")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple capture d’écran de la page Afficher la matrice Non affines")
 
@@ -459,14 +461,14 @@ Pour faciliter le calcul, cette méthode obtient la transformation totale en tan
 
 Les coordonnées finales à droite sont les quatre points associés avec les points quatre tactiles. Il s’agit des finales coordonnées des angles de l’image bitmap.
 
-L et H représentent la largeur et la hauteur de la bitmap. La première transformation (`S`) met simplement à l’échelle la bitmap à un carré de 1 pixel. La deuxième transformation est la transformation non affine `N`, et le troisième est la transformation affine `A`. Cette transformation affine étant basée sur trois points, il a comme précédemment affine [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) (méthode) et n’implique pas la quatrième ligne avec le (a, b) point.
+L et H représentent la largeur et la hauteur de la bitmap. La première transformation `S` simplement mettre à l’échelle la bitmap à un carré de 1 pixel. La deuxième transformation est la transformation non affine `N`, et le troisième est la transformation affine `A`. Cette transformation affine étant basée sur trois points, il a comme précédemment affine [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) (méthode) et n’implique pas la quatrième ligne avec le (a, b) point.
 
 Le `a` et `b` afin que la troisième transformation est affine ou pas les valeurs sont calculées. Le code obtient l’inverse de la transformation affine et qui utilise ensuite pour mapper le coin inférieur droit. C’est le point (a, b).
 
-Une autre utilisation des transformations non affines est d’imiter les graphiques en trois dimensions. Dans le prochain article, [Rotations 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md) vous allez apprendre à faire pivoter un graphique à deux dimensions dans l’espace 3D.
+Une autre utilisation des transformations non affines est d’imiter les graphiques en trois dimensions. Dans le prochain article, [ **Rotations 3D** ](3d-rotation.md) vous allez apprendre à faire pivoter un graphique à deux dimensions dans l’espace 3D.
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
