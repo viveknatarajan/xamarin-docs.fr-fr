@@ -1,42 +1,54 @@
 ---
-title: Générateur d’aperçu XAML pour Xamarin.Forms
-description: Cet article explique comment utiliser le Générateur d’aperçu XAML pour voir vos dispositions Xamarin.Forms rendues en cours de frappe. Le Générateur d’aperçu de XAML n’est disponible dans Visual Studio 2017 et Visual Studio pour Mac.
+title: Générateur d’aperçu XAML de Xamarin.Forms
+description: Cet article explique comment utiliser le Générateur d’aperçu XAML pour voir vos dispositions Xamarin.Forms rendues en cours de frappe. Le Générateur d’aperçu XAML est disponible dans Visual Studio 2017 et Visual Studio pour Mac.
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/31/2018
-ms.openlocfilehash: 25c8e1a34f8be5ab2f8491e75fa5aac470d55bc8
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: def7a7a3bdd9e165252c5ad1928b89ec654e5d74
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245857"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108080"
 ---
-# <a name="xaml-previewer-for-xamarinforms"></a>Générateur d’aperçu XAML pour Xamarin.Forms
+# <a name="xaml-previewer-for-xamarinforms"></a>Générateur d’aperçu XAML de Xamarin.Forms
 
-_Consultez vos dispositions Xamarin.Forms rendues telle que vous tapez !_
+_Consultez vos dispositions Xamarin.Forms rendues en cours de frappe !_
 
 ## <a name="requirements"></a>Configuration requise
 
-Les projets requièrent le dernier package Xamarin.Forms NuGet pour l’aperçu de XAML travailler. Aperçu des applications Android nécessite [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Les projets requièrent le dernier package Xamarin.Forms NuGet pour le Générateur d’aperçu XAML travailler. Aperçu des applications Android nécessite [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
-Il existe plus d’informations dans le [notes de publication](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#Xamarin_Forms_Previewer).
+Il existe plus d’informations dans le [notes de version](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#Xamarin_Forms_Previewer).
 
 ## <a name="getting-started"></a>Prise en main
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Utilisez le **vue > autres fenêtres > Aperçu de Xamarin.Forms** menu dans Visual Studio pour ouvrir la fenêtre d’aperçu. Utilisez le **fenêtre > Nouveau groupe d’onglets Vertical** menu pour la positionner côte-à-côte.
+Le Générateur d’aperçu XAML est activé par défaut et peut être contrôlé à partir de la **Outils > Options > Xamarin > Générateur d’aperçu de formulaires** boîte de dialogue. Dans cette boîte de dialogue, vous pouvez sélectionner la vue de document par défaut et l’orientation de fractionnement.
 
-[![Aperçu du contrôle ListView dans Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "aperçu des formulaires dans Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "aperçu des formulaires dans Visual Studio")
+[![Aperçu du contrôle ListView dans Visual Studio](xaml-previewer-images/xamlp-options-vs.png "Options de générateur d’aperçu de formulaires dans Visual Studio")](xaml-previewer-images/xamlp-options-vs.png#lightbox "Options de générateur d’aperçu de formulaires dans Visual Studio")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+Ouverture d’une page XAML fractionne l’éditeur lorsque selon les paramètres sélectionnés dans le **Outils > Options > Xamarin > Générateur d’aperçu de formulaires** boîte de dialogue. Toutefois, ces préférences sont modifiables dans la fenêtre d’éditeur.
 
-Le **aperçu** bouton peut être affiché sur l’éditeur en double-cliquant sur un fichier XAML et en sélectionnant **ouvrir avec > Aperçu de formulaires**. Le volet de visualisation peut ensuite être affiché ou masqué en appuyant sur la **aperçu** situé dans l’angle supérieur droit de n’importe quelle fenêtre de document XAML :
+## <a name="xaml-preview-controls"></a>Contrôles de version préliminaire XAML
 
-[![Aperçu du contrôle ListView dans Visual Studio pour Mac](xaml-previewer-images/xamlp-list-sml.png "aperçu des formulaires dans Visual Studio pour Mac")](xaml-previewer-images/xamlp-list.png#lightbox "aperçu des formulaires dans Visual Studio pour Mac")
+Le haut de la fenêtre d’éditeur possède des boutons pour sélectionner le volet est en cours d’utilisation, avec le bouton du haut vers le volet de conception de commutation et le bouton bas basculer vers le volet de la source. Le bouton central intervertit l’ordre de volet.
+
+[![Aperçu du contrôle ListView dans Visual Studio](xaml-previewer-images/xamlp-controls-vs.png "contrôle de volet de générateur d’aperçu de formulaires dans Visual Studio")](xaml-previewer-images/xamlp-controls-vs.png#lightbox "contrôle de volet de générateur d’aperçu de formulaires dans Visual Studio")
+
+Le bas de la fenêtre d’éditeur possède des boutons verticalement et horizontalement fractionner les volets et pour développer ou réduire le sous-volet actuel.
+
+[![Aperçu du contrôle ListView dans Visual Studio](xaml-previewer-images/xamlp-controls2-vs.png "contrôle de volet de générateur d’aperçu de formulaires dans Visual Studio")](xaml-previewer-images/xamlp-controls2-vs.png#lightbox "contrôle de volet de générateur d’aperçu de formulaires dans Visual Studio")
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
+
+Le **aperçu** bouton est affiché sur l’éditeur lorsque vous ouvrez une page XAML. Le volet de visualisation peut être affiché ou masqué en appuyant sur la **aperçu** bouton dans l’angle supérieur droit de n’importe quelle fenêtre de document XAML :
+
+[![Aperçu du contrôle ListView dans Visual Studio pour Mac](xaml-previewer-images/xamlp-list-sml.png "Générateur d’aperçu de formulaires dans Visual Studio pour Mac")](xaml-previewer-images/xamlp-list.png#lightbox "Générateur d’aperçu de formulaires dans Visual Studio pour Mac")
 
 -----
 
@@ -44,18 +56,18 @@ Le **aperçu** bouton peut être affiché sur l’éditeur en double-cliquant su
 
 Les options en haut du volet d’aperçu sont :
 
-* **Téléphone** – rendu dans un écran de taille de téléphone
-* **Tablet** – rendu dans un écran de la taille de la tablette (Notez il existe des contrôles de zoom à l’angle inférieur droit du volet)
-* **Android** – indiquent la version Android de l’écran
-* **iOS** – indiquent la version iOS de l’écran
-* Portrait (icône) – utilise une orientation portrait pour la version d’évaluation
-* Paysage (icône) – utilise paysage pour la version d’évaluation
+* **Téléphone** – s’affichent dans un écran de téléphone-taille
+* **Tablette** – s’affichent dans un écran de la taille de la tablette (Notez il existe des contrôles de zoom en bas à droite du volet)
+* **Android** – afficher la version Android de l’écran
+* **iOS** – afficher la version iOS de l’écran
+* Portrait (icône) : utilise l’orientation portrait pour la version préliminaire
+* Paysage (icône) – utilise paysage pour la version préliminaire
 
 ## <a name="adding-design-time-data"></a>Ajout de données au moment du Design
 
-Certaines configurations peuvent être difficiles à visualiser exemptes de données liées à des contrôles d’interface utilisateur. Pour que la version préliminaire plus utile, affecter des données statiques pour les contrôles en coder en dur un contexte de liaison (soit dans le code-behind ou à l’aide de XAML).
+Certaines configurations peuvent être difficiles à visualiser sans toutes les données liées à des contrôles d’interface utilisateur. Pour rendre la plus utile de la version préliminaire, affecter des données statiques pour les contrôles par codage en dur un contexte de liaison (soit dans le code-behind ou à l’aide de XAML).
 
-Faire de James Montemagno [billet de blog sur l’ajout de données au moment du design](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) pour apprendre à lier à un ViewModel statique en XAML.
+Reportez-vous à de James Montemagno [billet de blog sur l’ajout de données au moment du design](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) pour voir comment lier à un ViewModel statique dans XAML.
 
 ## <a name="detecting-design-mode"></a>Détection du Mode de conception
 
@@ -76,13 +88,14 @@ Vérifiez les problèmes ci-dessous et le [Xamarin Forums](https://forums.xamari
 
 Procédez aux vérifications ci-dessous.
 
-* Projet doit être généré (compilée) avant d’essayer d’afficher un aperçu des fichiers XAML.
-* L’Agent de concepteur doit être correct la première fois que vous affichez un aperçu d’un fichier XAML, un indicateur de progression s’affiche dans le Générateur d’aperçu, ainsi que des messages de progression, jusqu'à ce qu’il est prêt.
+* Projet doit être généré (compilé) avant de tenter d’afficher un aperçu des fichiers XAML.
+* L’Agent de concepteur doit être de configurer la première fois que vous affichez un aperçu un fichier XAML, un indicateur de progression s’affiche dans le Générateur d’aperçu, ainsi que des messages de progression, jusqu'à ce que cela soit prêt.
 * Essayez de fermer et rouvrir le fichier XAML.
+* Vérifiez que votre `App` classe a un constructeur sans paramètre.
 
-### <a name="invalid-xaml-the-android-project-needs-to-built-before-preview-can-be-created"></a>XAML non valide : Le projet Android doit générés avant l’aperçu peut être créé.
+### <a name="invalid-xaml-the-android-project-needs-to-built-before-preview-can-be-created"></a>XAML non valide : Le projet Android doit avant de pouvoir créer un aperçu
 
-Le Générateur d’aperçu XAML requiert que le projet généré avant le rendu d’une page.
-Si l’erreur suivante s’affiche en haut du volet d’aperçu, générez de nouveau l’application, puis réessayez.
+Le Générateur d’aperçu XAML nécessite que le projet généré avant le rendu d’une page.
+Si l’erreur ci-dessous s’affiche en haut du volet d’aperçu, générez de nouveau l’application et réessayez.
 
-![Message d’erreur : projet doit être généré en premier](xaml-previewer-images/error-not-built-sml.png "message d’erreur : régénérez le projet")
+![Message d’erreur : projet doit être généré en premier](xaml-previewer-images/error-not-built-sml.png "message d’erreur : régénérer le projet")

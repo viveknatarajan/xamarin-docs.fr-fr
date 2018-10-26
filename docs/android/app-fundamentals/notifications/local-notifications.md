@@ -4,15 +4,15 @@ description: Cette section montre comment implémenter des notifications locales
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
-ms.sourcegitcommit: 7ffbecf4a44c204a3fce2a7fb6a3f815ac6ffa21
+ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "39514529"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117679"
 ---
 <a name="compatibility"></a>
 
@@ -26,7 +26,7 @@ Android fournit deux zones système contrôlé pour afficher les icônes de noti
 
 ![Zone de notification d’exemple sur un appareil](local-notifications-images/01-notification-shade.png)
 
-Pour obtenir plus d’informations sur la notification, l’utilisateur peut ouvrir le tiroir de notification (qui se développe chaque icône de notification pour afficher le contenu de la notification) et effectuer toutes les actions associées aux notifications. Capture de l’écran suivant montre un *tiroir de notification* qui correspond à la zone de notification affichée au-dessus :
+Pour obtenir plus d’informations sur la notification, l’utilisateur peut ouvrir le tiroir de notification (qui se développe chaque icône de notification pour afficher le contenu de la notification) et effectuer toutes les actions associées aux notifications. La capture d’écran suivante montre un *tiroir de notification* qui correspond à la zone de notification affichée au-dessus :
 
 [![Tiroir de notification exemple affichant trois notifications](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
@@ -66,9 +66,9 @@ Si vous le souhaitez, les notifications peuvent afficher une grande icône qui r
 
 Notifications à partir d’Android 5.0, peuvent également apparaître sur l’écran de verrouillage :
 
-[![Exemple de notification de l’écran de verrouillage](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
+[![Exemple de notification écran de verrouillage](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
-L’utilisateur peut double-cliquer la notification de l’écran de verrouillage pour déverrouiller l’appareil et accéder à l’application à l’origine de cette notification, ou faites défiler pour faire disparaître la notification. Applications peuvent définir le niveau de visibilité d’une notification pour contrôler ce qui est affiché sur l’écran de verrouillage, et les utilisateurs peuvent choisir s’il faut autoriser le contenu sensible à afficher dans les notifications de l’écran de verrouillage.
+L’utilisateur peut double-cliquer la notification d’écran de verrou pour déverrouiller l’appareil et accéder à l’application à l’origine de cette notification, ou faites défiler pour faire disparaître la notification. Applications peuvent définir le niveau de visibilité d’une notification pour contrôler ce qui est affiché sur l’écran de verrouillage, et les utilisateurs peuvent choisir s’il faut autoriser le contenu sensible à afficher dans les notifications de verrouillage d’écran.
 
 Android 5.0 a introduit un format de présentation de notification de haute priorité appelé *tête haute*. Notifications de tête haute faites glisser vers le bas à partir du haut de l’écran pendant quelques secondes et puis reformatage sauvegarder sur la zone de notification :
 
@@ -117,7 +117,7 @@ Le **YouTube** application est installée avec Android Oreo répertorie deux cat
 
 [![Écrans de notification pour YouTube dans Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
-Chacun de ces catégories correspondant à un canal de notification. L’application YouTube implémente un **notifications de téléchargement** canal et un **Notifications générales** canal. L’utilisateur peut appuyer **notifications de téléchargement**, qui affiche l’écran des paramètres pour le canal de notifications de téléchargement de l’application :
+Chacun de ces catégories correspondant à un canal de notification. L’application YouTube implémente un **Notifications télécharger** canal et un **Notifications générales** canal. L’utilisateur peut appuyer **notifications de téléchargement**, qui affiche l’écran des paramètres pour le canal de notifications de téléchargement de l’application :
 
 [![Télécharger l’écran de notifications pour l’application YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
@@ -664,7 +664,7 @@ Xamarin.Android définit les énumérations suivantes pour la définition de la 
 
 -   `NotificationVisibility.Private` &ndash; Uniquement les informations essentielles sont affichées sur l’écran de verrouillage sécurisé (par exemple, l’icône de notification et le nom de l’application qui a posté il), mais le reste des détails de la notification sont masquées. Par défaut, toutes les notifications `NotificationVisibility.Private`.
 
--   `NotificationVisibility.Secret` &ndash; Rien ne s’affiche sur la sécurité l’écran de verrouillage, même pas l’icône de notification. Le contenu de notification est disponible uniquement après que l’utilisateur déverrouille l’appareil.
+-   `NotificationVisibility.Secret` &ndash; Rien ne s’affiche sur l’écran de verrouillage sécurisé, même pas l’icône de notification. Le contenu de notification est disponible uniquement après que l’utilisateur déverrouille l’appareil.
 
 Pour définir la visibilité d’une notification, applications appel la `SetVisibility` méthode de la `NotificationCompat.Builder` objet, en passant le paramètre de visibilité. Par exemple, cet appel à `SetVisibility` rend la notification `Private`:
 
@@ -755,9 +755,9 @@ if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
 Dans de cet exemple, l’application **Framework cible** est défini sur Android 5.0 et les **Version Android minimale** a la valeur **Android 4.1 (niveau API 16)**. Étant donné que `SetCategory` est disponible dans le niveau d’API 21 et versions ultérieur, cet exemple de code appellera `SetCategory` uniquement lorsqu’il est disponible &ndash; elle n’appelle pas `SetCategory` lorsque le niveau d’API est inférieur à 21.
 
 
-### <a name="lockscreen-visibility"></a>Visibilité de l’écran de verrouillage
+### <a name="lock-screen-visibility"></a>Visibilité d’écran de verrouillage
 
-Étant donné que Android ne prenait pas en charge les notifications de l’écran de verrouillage avant Android 5.0 (niveau d’API 21), `NotificationCompat.Builder` ne prend pas en charge la `SetVisibility` (méthode). Comme expliqué ci-dessus pour `SetCategory`, votre code peut vérifier le niveau d’API au runtime et appelez `SetVisiblity` uniquement lorsqu’il est disponible :
+Étant donné que Android ne prenait pas en charge des notifications de verrouillage d’écran avant Android 5.0 (niveau d’API 21), `NotificationCompat.Builder` ne prend pas en charge la `SetVisibility` (méthode). Comme expliqué ci-dessus pour `SetCategory`, votre code peut vérifier le niveau d’API au runtime et appelez `SetVisiblity` uniquement lorsqu’il est disponible :
 
 ```csharp
 if ((int) Android.OS.Build.Version.SdkInt >= 21) {
@@ -768,7 +768,7 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a expliqué comment créer des notifications locales dans Android. Il décrit l’anatomie d’une notification, vous avez appris comment utiliser `NotificationCompat.Builder` pour créer des notifications, les notifications de style dans les grandes icônes, *Big Text*, *Image* et *boîte de réception*  formats, comment définir des paramètres de métadonnées telles que la priorité, de visibilité et de catégorie de notification et comment lancer une activité à partir d’une notification. Cet article décrit également le fonctionnement de ces paramètres de notification avec la nouvelle frontal, l’écran de verrouillage, et *ne pas déranger* fonctionnalités introduites dans Android 5.0. Enfin, vous avez appris à utiliser `NotificationCompat.Builder` pour assurer la compatibilité avec les versions antérieures d’Android notification.
+Cet article a expliqué comment créer des notifications locales dans Android. Il décrit l’anatomie d’une notification, vous avez appris comment utiliser `NotificationCompat.Builder` pour créer des notifications, les notifications de style dans les grandes icônes, *Big Text*, *Image* et *boîte de réception*  formats, comment définir des paramètres de métadonnées telles que la priorité, de visibilité et de catégorie de notification et comment lancer une activité à partir d’une notification. Cet article décrit également le fonctionnement de ces paramètres de notification avec la nouvelle tête de haute, écran de verrouillage, et *ne pas déranger* fonctionnalités introduites dans Android 5.0. Enfin, vous avez appris à utiliser `NotificationCompat.Builder` pour assurer la compatibilité avec les versions antérieures d’Android notification.
 
 Pour obtenir des instructions sur la conception des notifications pour Android, consultez [Notifications](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 

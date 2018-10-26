@@ -20,7 +20,7 @@ La classe **Flashlight** a la possibilité d’activer ou de désactiver le flas
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **Flashlight** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Flashlight**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

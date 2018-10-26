@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 13293ec05261cbdc1e70fd278002d1af18654851
 ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38815616"
@@ -55,7 +55,7 @@ Pour ouvrir un fichier qui est fourni dans le package d’application :
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 - **CacheDirectory** – retourne le [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir) du contexte actuel.
-- **AppDataDirectory** – retourne le [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) du contexte actuel qui est sauvegardé automatiquement lors de la [sauvegarde automatique](https://developer.android.com/guide/topics/data/autobackup.html) , disponible à partir de l'API 23.
+- **AppDataDirectory** : retourne le [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) du contexte actuel qui est sauvegardé lors de la [sauvegarde automatique](https://developer.android.com/guide/topics/data/autobackup.html) , disponible à partir de l'API 23.
 
 Pour retrouver un fichier dans votre AppPackage, via `OpenAppPackageFileAsync`:
 

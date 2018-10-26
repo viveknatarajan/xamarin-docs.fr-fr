@@ -5,22 +5,22 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
-ms.sourcegitcommit: 213b0315f1d6d0791e255794f87512fb253c492f
+ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "34790098"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122671"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vues de pile dans Xamarin.iOS
 
 _Cet article traite du nouveau contrôle UIStackView dans une application Xamarin.iOS à gérer un ensemble de sous-vues dans soit une pile organisée horizontalement ou verticalement._
 
 > [!IMPORTANT]
-> Veuillez noter que StackView est pris en charge dans le concepteur iOS, vous pouvez rencontrer des bogues de facilité d’utilisation lorsque vous utilisez le canal Stable. Basculer le les canaux bêta ou Alpha doivent permettre de résoudre ce problème. Nous avons décidé de présenter cette procédure pas à pas à l’aide de Xcode jusqu'à ce que les correctifs requis sont implémentées dans le canal Stable.
+> Veuillez noter que StackView est pris en charge dans le concepteur iOS, vous pouvez rencontrer des bogues de facilité d’utilisation lorsque vous utilisez le canal Stable. Le changement de la version bêta ou Alpha canal doit permettre de résoudre ce problème. Nous avons décidé de présenter cette procédure pas à pas à l’aide de Xcode jusqu'à ce que les correctifs requis sont implémentées dans le canal Stable.
 
 Le contrôle de la vue de la pile (`UIStackView`) tire parti de la puissance de disposition automatique et des Classes de taille pour gérer une pile de sous-vues, horizontalement ou verticalement, qui répond dynamiquement à la taille d’écran et l’orientation de l’appareil iOS.
 

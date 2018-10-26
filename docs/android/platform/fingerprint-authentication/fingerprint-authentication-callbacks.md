@@ -1,33 +1,33 @@
 ---
-title: Répond aux rappels de l’authentification
+title: Répondre aux rappels d’authentification
 ms.prod: xamarin
 ms.assetid: 6533AFC9-1A1C-4897-A154-4D4ECFE27761
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: b8a3ed64e66cd97faeff78b4d0b008a1a0b14477
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 17a1c94ad3b9bde67537ea7113352f0fc10d2a08
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110119"
 ---
-# <a name="responding-to-authentication-callbacks"></a>Répond aux rappels de l’authentification
+# <a name="responding-to-authentication-callbacks"></a>Répondre aux rappels d’authentification
 
-Le lecteur d’empreintes digitales s’exécute en arrière-plan sur son propre thread, et lorsqu’elle est terminée, il va signaler les résultats de l’analyse en appelant une méthode de `FingerprintManager.AuthenticationCallback` sur le thread d’interface utilisateur. Une application Android doit fournir son propre gestionnaire qui étend cette classe abstraite, en implémentant les méthodes suivantes :
+Le lecteur d’empreintes digitales s’exécute en arrière-plan sur son propre thread, et lorsqu’il est terminé, il signalera les résultats de l’analyse en appelant une méthode de `FingerprintManager.AuthenticationCallback` sur le thread d’interface utilisateur. Une application Android doit fournir son propre gestionnaire qui étend cette classe abstraite, qui implémente toutes les méthodes suivantes :
 
-* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Appelée quand il existe une erreur irrécupérable. Il est qu'une application ou un utilisateur peut faire pour corriger la situation, sauf éventuellement puis réessayez.
-* **`OnAuthenticationFailed()`** &ndash; Cette méthode est appelée lorsqu’une empreinte digitale a été détectée mais ne pas reconnue par le périphérique.
-* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Appelée quand il existe une erreur récupérable, telles que le doigt qui est passée à rapide sur le moteur d’analyse.
-* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Appelé lorsqu’une empreinte digitale a été reconnue.
+* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Appelée quand il existe une erreur irrécupérable. Il en est rien de plus qu'une application ou un utilisateur peut faire pour corriger la situation sauf éventuellement essayer à nouveau.
+* **`OnAuthenticationFailed()`** &ndash; Cette méthode est appelée lorsqu’une empreinte digitale a été détectée mais n’est ne pas reconnue par l’appareil.
+* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Appelée quand il existe une erreur récupérable, telles que le doigt est passée à rapide sur le scanneur.
+* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Il s’agit quand une empreinte digitale a été reconnue.
 
-Si un `CryptoObject` a été utilisée lors de l’appel `Authenticate`, il est recommandé d’appeler `Cipher.DoFinal` dans `OnAuthenticationSuccessful`.
-`DoFinal` lève une exception si le chiffrement a été falsifié ou mal initialisé, indiquant que le résultat de l’analyseur d’empreintes digitales peut avoir été falsifié en dehors de l’application.
+Si un `CryptoObject` a été utilisé lors de l’appel `Authenticate`, il est recommandé d’appeler `Cipher.DoFinal` dans `OnAuthenticationSuccessful`.
+`DoFinal` lève une exception si le chiffrement a été falsifié ou mal initialisé, indiquant que le résultat de lecteur d’empreintes digitales a peut-être été falsifié en dehors de l’application.
 
 
 > [!NOTE]
-> Il est recommandé pour conserver le poids relativement faible de classe de rappel et de libérer la logique d’application spécifique. Les rappels doivent agir en tant que « cop de trafic « entre l’application Android et les résultats à partir du lecteur d’empreintes digitales.
+> Il est recommandé de conserver le rappel classe relativement légère et gratuits spécifique de logique d’application. Les rappels doivent agir en tant que « cop de trafic » entre l’application Android et les résultats à partir du lecteur d’empreintes digitales.
 
 ## <a name="a-sample-authentication-callback-handler"></a>Un exemple de gestionnaire de rappel d’authentification
 
@@ -91,43 +91,43 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 }
 ```
 
-`OnAuthenticationSucceeded` vérifie si un `Cipher` a été fournie au `FingerprintManager` lorsque `Authentication` a été appelé. Dans ce cas, le `DoFinal` méthode est appelée sur le chiffrement. Cela ferme le `Cipher`, restaurant à son état d’origine. Si un problème est survenu avec le chiffrement, puis `DoFinal` lève une exception et la tentative d’authentification doit être considérée comme ayant échoué.
+`OnAuthenticationSucceeded` vérifie si un `Cipher` a été fourni au `FingerprintManager` lorsque `Authentication` a été appelée. Dans ce cas, le `DoFinal` méthode est appelée sur le chiffrement. Cette méthode ferme le `Cipher`, restaurant à son état d’origine. Si un problème est survenu avec le chiffrement, puis `DoFinal` lève une exception et la tentative d’authentification doit être considérée comme ayant échoué.
 
-Le `OnAuthenticationError` et `OnAuthenticationHelp` rappels chaque réception d’un entier qui indique que le problème a été. La section suivante décrit chacune de l’aide possibles ou les codes d’erreur. Les deux rappels finalités similaires &ndash; pour informer l’application que l’authentification par empreinte digitale a échoué. Est de quoi ils diffèrent par gravité. `OnAuthenticationHelp` est une erreur récupérable utilisateur, telles que le glissement de l’empreinte digitale trop rapide ; `OnAuthenticationError` est plus une erreur grave, par exemple un scanneur d’empreintes digitales endommagé.
+Le `OnAuthenticationError` et `OnAuthenticationHelp` rappels chaque réception d’un entier qui indique quel était le problème. La section suivante explique chaque aide possible ou des codes d’erreur. Les deux rappels servent des objectifs similaires &ndash; pour informer l’application que l’authentification par empreinte digitale a échoué. Quoi ils diffèrent est la gravité. `OnAuthenticationHelp` est une erreur récupérable utilisateur, telles que passant l’empreinte digitale trop rapide ; `OnAuthenticationError` est plus une erreur grave, comme un lecteur d’empreintes digitales endommagé.
 
-Notez que `OnAuthenticationError` sera appelée lors de l’analyse de l’empreinte digitale est annulée le `CancellationSignal.Cancel()` message. Le `errMsgId` paramètre a la valeur 5 (`FingerprintState.ErrorCanceled`). Selon les besoins, une implémentation de la `AuthenticationCallbacks` peut traiter cette situation différemment des autres erreurs. 
+Notez que `OnAuthenticationError` sera appelé lorsque l’analyse de l’empreinte digitale est annulé via la `CancellationSignal.Cancel()` message. Le `errMsgId` paramètre a la valeur 5 (`FingerprintState.ErrorCanceled`). Selon les besoins, une implémentation de la `AuthenticationCallbacks` peut traiter cette situation différemment des autres erreurs. 
 
-`OnAuthenticationFailed` est appelé lorsque l’empreinte digitale a été analysé avec succès mais ne correspond pas à toutes les empreintes digitales inscrits auprès de l’appareil. 
+`OnAuthenticationFailed` est appelé lorsque l’empreinte digitale a été analysé avec succès mais ne correspond pas aux empreintes digitales inscrits auprès de l’appareil. 
 
-## <a name="help-codes-and-error-message-ids"></a>Codes d’aide et l’ID de Message d’erreur 
+## <a name="help-codes-and-error-message-ids"></a>Aide de Codes et les ID de Message d’erreur 
 
-Une liste et une description des codes d’erreur et codes d’aide peuvent être trouvées dans le [documentation du SDK Android](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) pour la classe FingerprintManager. Xamarin.Android représente ces valeurs avec la `Android.Hardware.Fingerprints.FingerprintState` enum :
+Une liste et une description des codes d’erreur et des codes d’aide peuvent se trouver dans le [documentation du SDK Android](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) pour la classe FingerprintManager. Xamarin.Android représente ces valeurs avec le `Android.Hardware.Fingerprints.FingerprintState` enum :
 
 
 -   **`AcquiredGood`** &ndash; (valeur 0) L’image d’acquis est bonne.
 
 
--   **`AcquiredImagerDirty`** &ndash; (valeur 3) L’image de l’empreinte digitale est trop bruyante en raison de moto suspectée ou détecté sur le capteur. Par exemple, il est raisonnable de retourner cet après plusieurs `AcquiredInsufficient` ou détection réelle de dépôts sur le capteur (pixels manquants, quantités, etc.). L’utilisateur est censé prendre des mesures pour nettoyer le capteur lorsque cette valeur est retournée.
+-   **`AcquiredImagerDirty`** &ndash; (valeur 3) L’image de l’empreinte digitale est trop bruyante en raison de saletés suspectée ou détectée sur le capteur. Par exemple, il est raisonnable de revenir à cette après plusieurs `AcquiredInsufficient` ou détection réelle de saletés sur le capteur (pixels manquants, groupes, etc.). L’utilisateur doit intervenir pour nettoyer le capteur lorsque celui-ci est renvoyé.
 
 
 -   **`AcquiredInsufficient`** &ndash; (valeur 2) L’image de l’empreinte digitale est trop bruyante traiter en raison d’une condition détectée (par exemple, l’apparence de sec) ou un capteur éventuellement modifié (voir `AcquiredImagerDirty`.
 
 
 
--   **`AcquiredPartial`** &ndash; (valeur 1) Seule une image d’empreinte digitale partielle a été détectée. Lors de l’inscription, l’utilisateur doit être informé sur ce qui doit se produire pour résoudre ce problème, par exemple, &ldquo;appuyez sur bien de capteur.&rdquo;
+-   **`AcquiredPartial`** &ndash; (valeur 1) Uniquement une image de l’empreinte digitale partielle a été détectée. Lors de l’inscription, l’utilisateur doit être informé sur ce qui doit se produire pour résoudre ce problème, par exemple, &ldquo;Appuyez fermement sur le capteur.&rdquo;
 
 
 
--   **`AcquiredTooFast`** &ndash; (valeur 5) L’image de l’empreinte digitale est incomplet en raison du mouvement rapide. Lorsque principalement approprié pour les capteurs de tableau linéaire, ceci peut aussi arriver si le doigt a été déplacé au cours d’acquisition. L’utilisateur doit être posée pour déplacer le doigt plus lent (linéaire) ou laissez le doigt du capteur de plus de temps.
+-   **`AcquiredTooFast`** &ndash; (valeur 5) L’image de l’empreinte digitale est incomplète en raison de mouvement rapide. Tandis que principalement approprié pour les capteurs de tableau linéaire, cela peut également se produire si le doigt a été déplacé pendant l’acquisition de. L’utilisateur doit être invité à déplacer le doigt plus lent (linéaire) ou laissez le doigt sur le capteur plus de temps.
 
 
 
 
--   **`AcquiredToSlow`** &ndash; (valeur 4) L’image de l’empreinte digitale est illisible en raison d’un manque de mouvement. Cela est plus approprié pour les capteurs de tableau linéaire qui nécessitent un mouvement de balayage.
+-   **`AcquiredToSlow`** &ndash; (la valeur 4) L’image de l’empreinte digitale était illisible en raison du manque de mouvement. Cela est plus approprié pour les capteurs de tableau linéaire qui nécessitent un mouvement de balayage.
 
 
 
--   **`ErrorCanceled`** &ndash; (valeur 5) L’opération a été annulée, car le capteur d’empreintes digitales n’est pas disponible. Par exemple, cela peut se produire lorsque l’utilisateur est basculé, l’appareil est verrouillé ou une autre opération en attente empêche ou la désactive.
+-   **`ErrorCanceled`** &ndash; (valeur 5) L’opération a été annulée, car le capteur d’empreintes digitales n’est pas disponible. Par exemple, cela peut se produire lors de la commutation de l’utilisateur, l’appareil est verrouillé ou une autre opération en attente empêche ou la désactive.
 
 
 
@@ -136,16 +136,16 @@ Une liste et une description des codes d’erreur et codes d’aide peuvent êtr
 
 
 
--   **`ErrorLockout`** &ndash; (valeur 7) L’opération a été annulée parce que l’API est verrouillé en raison du trop grand nombre de tentatives.
+-   **`ErrorLockout`** &ndash; (valeur 7) L’opération a été annulée, car l’API est verrouillé en raison du trop grand nombre de tentatives.
 
 
 
 
--   **`ErrorNoSpace`** &ndash; (valeur 4) État d’erreur retourné pour des opérations telles que l’inscription ; l’opération ne peut pas aboutir, car il n’est pas un stockage suffisant restant pour terminer l’opération.
+-   **`ErrorNoSpace`** &ndash; (la valeur 4) État d’erreur retourné pour les opérations telles que l’inscription ; l’opération ne peut pas être effectuée, car il n’est pas suffisamment de stockage restant pour terminer l’opération.
 
 
 
--   **`ErrorTimeout`** &ndash; (valeur 3) État d’erreur retourné lors de la requête actuelle a été trop longue. Cela est destiné à empêcher les programmes d’attendre indéfiniment pour le capteur d’empreintes digitales. Le délai d’attente est la plateforme et capteur spécifiques, mais il est généralement environ 30 secondes.
+-   **`ErrorTimeout`** &ndash; (valeur 3) État d’erreur retourné lors de la requête actuelle a été trop longue. Cela vise à empêcher les programmes d’attendre indéfiniment pour le capteur d’empreintes digitales. Le délai d’expiration est la plateforme et capteur spécifiques, mais est généralement environ 30 secondes.
 
 
 
@@ -155,6 +155,6 @@ Une liste et une description des codes d’erreur et codes d’aide peuvent êtr
 
 ## <a name="related-links"></a>Liens associés
 
-- [Cipher](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
+- [Chiffrement](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
 - [AuthenticationCallback](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
 - [AuthenticationCallback](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)

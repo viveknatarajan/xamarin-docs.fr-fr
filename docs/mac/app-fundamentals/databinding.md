@@ -4,15 +4,15 @@ description: Cet article couvre l’utilisation de la clé-valeur de codage et e
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 0adb8cda71ca8803c535679da2aecf00f3fa46a5
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 4a391160f2102fd1f069a45eb7c16aec91dfd7e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40250966"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110379"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Liaison de données et la clé-valeur de codage dans Xamarin.Mac
 
@@ -334,7 +334,7 @@ public NSArray People {
 Deux choses à noter ici :
 
 1. Nous avons utilisé un `NSMutableArray` au lieu d’un tableau c# standard ou une collection dans la mesure où il s’agit d’une exigence pour lier des données aux contrôles de AppKit comme **affichages tableau**, **modes plan** et **Collections** .
-2. Le tableau d’employés, nous exposé par un cast sur un `NSArray` pour la liaison de données à des fins et modifié ses c# au format nom, `People`, pour qu’il attend de la liaison de données, `personModelArray` sous la forme **{class_name} tableau** (Remarque que le premier caractère a été effectué en minuscules).
+2. Le tableau d’employés, nous exposé par un cast sur un `NSArray` pour les données de liaison à des fins et modifié ses C# mis en forme de nom, `People`, pour qu’il attend de la liaison de données, `personModelArray` sous la forme **{class_name} tableau**(Notez que le premier caractère a été effectué en minuscules).
 
 Ensuite, nous devons ajouter certaines spécialement nom méthodes publiques pour prendre en charge **contrôleurs de baie** et **arborescence contrôleurs**:
 

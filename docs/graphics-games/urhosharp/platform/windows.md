@@ -1,35 +1,35 @@
 ---
-title: Prise en charge UrhoSharp Windows
-description: Ce document décrit la prise en charge de Windows pour UrhoSharp. Il explique comment créer un projet, configurer et lancer Urho, s’intègrent dans WPF et s’intègrent à la plateforme Windows universelle.
+title: Prise en charge de Windows de UrhoSharp
+description: Ce document aborde la prise en charge de Windows de UrhoSharp. Elle décrit comment créer un projet, configurer et lancer Urho, s’intègrent dans WPF et s’intègrent avec UWP.
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 094eaf0ebe84ce8c1771bd6481ee897463349856
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8aca028ec1015616a9884cd09b7ffa5e04f2e43d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119603"
 ---
-# <a name="urhosharp-windows-support"></a>Prise en charge UrhoSharp Windows
+# <a name="urhosharp-windows-support"></a>Prise en charge de Windows de UrhoSharp
 
-Bien que Urho est une bibliothèque de classes portable et permet la même API à utiliser sur la plateforme différents pour la logique du jeu, vous devez initialiser Urho dans votre pilote plateforme et dans certains cas, vous souhaitez tirer parti des fonctionnalités spécifiques de plateforme .
+Bien que Urho est une bibliothèque de classes portable, et permet à la même API pour être utilisé sur la plateforme différents pour votre logique de jeu, vous devez toujours initialiser Urho dans votre pilote de plateforme spécifique et dans certains cas, vous pouvez tirer parti des fonctionnalités spécifiques de plateforme .
 
-Dans les pages suivantes, supposons que `MyGame` est une sous-classe de la `Application` classe.
+Dans les pages ci-dessous, supposons que `MyGame` est une sous-classe de la `Application` classe.
 
-**Architectures prises en charge :** uniquement Windows 64 bits.
+**Architectures prises en charge :** uniquement 64 bits de Windows.
 
-Vous pouvez voir des exemples complets illustrant comment utiliser cela dans notre [exemples](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
+Vous pouvez voir des exemples complets montrant comment l’utiliser dans notre [exemples](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
 
 ## <a name="standalone-project"></a>Projet autonome
 
 ### <a name="creating-a-project"></a>Création d'un projet
 
-Créer un projet de Console, référence Urho NuGet et assurez-vous que vous pouvez localiser les ressources (les répertoires contenant le répertoire de données).
+Créez un projet Console, référencer le Urho NuGet et assurez-vous que vous pouvez localiser les ressources (les répertoires contenant le répertoire de données).
 
-### <a name="configuring-and-launching-urho"></a>Configuration et lancement Urho
+### <a name="configuring-and-launching-urho"></a>Configurant et en lançant Urho
 
 Pour lancer votre application, procédez comme suit :
 
@@ -46,11 +46,11 @@ new MyGame().Run();
 
 ### <a name="creating-a-project"></a>Création d'un projet
 
-Créer un projet WPF, référence Urho NuGet et assurez-vous que vous pouvez localiser les ressources (les répertoires contenant le répertoire de données).
+Créer un projet WPF, référencer le Urho NuGet et assurez-vous que vous pouvez localiser les ressources (les répertoires contenant le répertoire de données).
 
-### <a name="configuring-and-launching-urho-from-wpf"></a>Configuration et lancer Urho à partir de WPF
+### <a name="configuring-and-launching-urho-from-wpf"></a>Configurant et en lançant Urho de WPF
 
-Créer une sous-classe de `Window` et configurer vos éléments multimédias comme suit :
+Créer une sous-classe de `Window` et configurer vos ressources comme suit :
 
 ```csharp
     public partial class MainWindow : Window
@@ -86,15 +86,15 @@ Créer une sous-classe de `Window` et configurer vos éléments multimédias com
 
 [Exemple complet](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
-## <a name="integrated-with-uwp"></a>Intégré à la plateforme Windows universelle
+## <a name="integrated-with-uwp"></a>Intégré avec UWP
 
 ### <a name="creating-a-project"></a>Création d'un projet
 
-Créer un projet UWP, référence Urho NuGet et assurez-vous que vous pouvez localiser les ressources (les répertoires contenant le répertoire de données).
+Créez un projet UWP, référencer le Urho NuGet et assurez-vous que vous pouvez localiser les ressources (les répertoires contenant le répertoire de données).
 
-### <a name="configuring-and-launching-urho-from-uwp"></a>Configuration et lancer Urho à partir de la plateforme Windows universelle
+### <a name="configuring-and-launching-urho-from-uwp"></a>Configurant et en lançant Urho à partir de UWP
 
-Créer une sous-classe de `Window` et configurer vos éléments multimédias comme suit :
+Créer une sous-classe de `Window` et configurer vos ressources comme suit :
 
 ```csharp
 {
@@ -123,8 +123,8 @@ Créer une sous-classe de `Window` et configurer vos éléments multimédias com
 
 ### <a name="creating-a-project"></a>Création d'un projet
 
-Créer un projet Windows.Forms, référence Urho NuGet et assurez-vous que vous pouvez localiser les ressources (les répertoires contenant le répertoire de données).
+Créez un projet de Windows.Forms, référencer le Urho NuGet et assurez-vous que vous pouvez localiser les ressources (les répertoires contenant le répertoire de données).
 
-### <a name="configuring-and-launching-urho-from-windowsforms"></a>Configuration et lancement Urho de Windows.Forms
+### <a name="configuring-and-launching-urho-from-windowsforms"></a>Configurant et en lançant Urho à partir de Windows.Forms
 
 Lancer Urho à partir de votre formulaire, consultez [exemple complet](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)

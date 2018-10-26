@@ -1,35 +1,35 @@
 ---
-title: Rubriques d’intégration avancée
-description: Ce document décrit les rubriques avancées relatives aux intégrations de classeurs de Xamarin. Elle décrit le package NuGet de Xamarin.Workbook.Integrations et exposition API au sein d’un classeur de Xamarin.
+title: Rubriques de l’intégration avancée
+description: Ce document décrit les rubriques avancées relatives aux intégrations de Xamarin Workbooks. Il aborde le package NuGet de Xamarin.Workbook.Integrations et exposition d’API au sein d’un classeur de Xamarin.
 ms.prod: xamarin
 ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 1aa6b5d0ca574345e1d349ea53df96f554c06bc4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 56ee709b78b8587c2717dc9d25a6357041812d23
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793834"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104204"
 ---
-# <a name="advanced-integration-topics"></a>Rubriques d’intégration avancée
+# <a name="advanced-integration-topics"></a>Rubriques de l’intégration avancée
 
-Les assemblys d’intégration doivent référencer la [ `Xamarin.Workbooks.Integrations` NuGet][nuget]. Découvrez notre [documentation de démarrage rapide](~/tools/workbooks/sdk/index.md) pour plus d’informations sur la mise en route avec le package NuGet.
+Les assemblys d’intégration doivent référencer le [ `Xamarin.Workbooks.Integrations` NuGet][nuget]. Découvrez notre [documentation de démarrage rapide](~/tools/workbooks/sdk/index.md) pour plus d’informations sur la mise en route avec le package NuGet.
 
-Intégration du client est également prises en charge et est initiées en plaçant les fichiers JavaScript ou CSS portant le même nom que l’assembly de l’intégration de l’agent dans le même répertoire. Par exemple, si l’assembly d’intégration de l’agent (qui fait référence à NuGet) est nommé `SampleExternalIntegration.dll`, puis `SampleExternalIntegration.js` et `SampleExternalIntegration.css` seront intégrés dans le client ainsi s’ils existent. Intégration du client est facultatifs.
+Intégrations de client sont également pris en charge et sont initiées en plaçant des fichiers JavaScript ou CSS portant le même nom que l’assembly de l’intégration de l’agent dans le même répertoire. Par exemple, si l’assembly d’intégration de l’agent (qui fait référence à NuGet) est nommé `SampleExternalIntegration.dll`, puis `SampleExternalIntegration.js` et `SampleExternalIntegration.css` seront intégrés dans le client ainsi s’ils existent. Intégrations de client sont facultatifs.
 
-L’intégration externe lui-même peut être insérée comme un NuGet, fournie et référencée directement dans l’application qui héberge l’agent, ou simplement placé en même temps qu’un `.workbook` fichier qui souhaite consommer.
+L’intégration externe lui-même peut être empaquetée en tant qu’un package NuGet, fournie et référencée directement à l’intérieur de l’application qui héberge l’agent, ou simplement placés en même temps qu’un `.workbook` fichier qui souhaite utiliser.
 
-Intégrations externes (l’agent et le client) dans les packages NuGet seront chargées automatiquement lorsque le package est référencé, conformément à la documentation de démarrage rapide, tandis que les assemblys d’intégration livrés avec le classeur devrez référencer ainsi :
+Intégrations externes (agent et client) dans les packages NuGet seront automatiquement chargées lorsque le package est référencé, conformément à la documentation de démarrage rapide, tandis que les assemblys d’intégration fournis en même temps que le classeur devrez référencez-le ainsi :
 
 ```csharp
 #r "SampleExternalIntegration.dll"
 ```
 
-Lorsque vous référencez une intégration de cette façon, il ne sera pas chargé par le client immédiatement&mdash;vous devez appeler du code à partir de l’intégration pour qu’elle soit à charger. Nous allons être ciblant ce bogue à l’avenir.
+Lors du référencement d’une intégration de cette façon, il ne sera pas chargé par le client immédiatement&mdash;vous devrez appeler du code à partir de l’intégration de charge. Nous allons être ciblant ce bogue à l’avenir.
 
-Le `Xamarin.Interactive` PCL fournit une intégration important quelques API. Chaque intégration doit fournir au moins un point d’entrée de l’intégration :
+Le `Xamarin.Interactive` PCL assure une intégration important quelques API. Chaque intégration doit fournir au moins un point d’entrée de l’intégration :
 
 ```csharp
 using Xamarin.Interactive;
@@ -47,15 +47,15 @@ class AgentIntegration : IAgentIntegration
 }
 ```
 
-À ce stade, une fois que l’assembly de l’intégration est référencé, le client charge implicitement les fichiers intégration JavaScript et CSS.
+À ce stade, une fois que l’assembly de l’intégration est référencé, le client charge implicitement les fichiers de l’intégration JavaScript et CSS.
 
 ## <a name="apis"></a>API
 
-Comme avec n’importe quel assembly qui est référencé par un classeur ou dynamique inspecter la session, un de ses API publiques sont accessible à la session. Par conséquent, il est important de disposer d’une surface API sûre et pratique pour les utilisateurs à Explorer.
+Comme avec n’importe quel assembly est référencé par un classeur ou en direct inspecter la session, un de ses API publiques sont accessible à la session. Par conséquent, il est important de disposer d’une surface d’API cohérent et sécurisée pour les utilisateurs à Explorer.
 
-L’assembly de l’intégration est effectivement un pont entre une application ou le Kit de développement logiciel d’intérêt et la session. Il peut fournir de nouvelles API qui ont un sens en particulier dans le cadre d’un classeur ou dynamique inspecter la session, ou ne fournir aucune API publique et simplement exécuter « en arrière-plan » des tâches comme générant l’objet [représentations](~/tools/workbooks/sdk/representations.md).
+L’assembly de l’intégration est effectivement un pont entre une application ou de kit de développement logiciel d’intérêt et de la session. Il peut fournir de nouvelles API qui sont pertinents en particulier dans le contexte d’un classeur ou en direct inspecter la session, ou ne fournir aucune API publique et simplement effectuer des tâches « dans les coulisses » comme produisant l’objet [représentations](~/tools/workbooks/sdk/representations.md).
 
 > [!NOTE]
-> API qui doit être publique, mais ne doit pas être exposés via IntelliSense peut être marqués avec classiques `[EditorBrowsable (EditorBrowsableState.Never)]` attribut.
+> API qui doivent être publique, mais ne doivent pas être exposés via IntelliSense peuvent être marquées avec habituelles `[EditorBrowsable (EditorBrowsableState.Never)]` attribut.
 
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration

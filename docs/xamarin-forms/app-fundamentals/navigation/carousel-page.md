@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: bce3a60f3647a537906cfa11fc1dcfcc6f5cf365
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 48c009b836ac109e0d54cd2fdb036c46e17c4387
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998602"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121501"
 ---
 # <a name="xamarinforms-carousel-page"></a>Page carrousel de Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Le Xamarin.Forms CarouselPage est une page que les utilisateurs peuvent balayer
 
 Le montrent les captures d’écran suivants un [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) sur chaque plateforme :
 
-![](carousel-page-images/thirdpage.png "Élément de Thid CarouselPage")
+![](carousel-page-images/thirdpage.png "CarouselPage troisième élément")
 
 La disposition d’un [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) est identique sur chaque plateforme. Pages peuvent être parcourues par le biais par balayage de droite à gauche pour naviguer vers l’avant via la collection et en faisant glisser vers la gauche à droite pour naviguer vers l’arrière dans la collection. Les captures d’écran suivantes montrent la première page dans un [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) instance :
 

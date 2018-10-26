@@ -4,21 +4,21 @@ description: Cet article fournit une procédure pas à pas pratique de création
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 8285a82920f0d95a88855c5257535048c6de41d5
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: a4cdb76ac1ecea3ee21e7b74314b6d3bfae09719
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854855"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118992"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procédure pas à pas : Liaison d’une bibliothèque Objective-C iOS
 
 _Cet article fournit une procédure pas à pas pratique de création d’une liaison Xamarin.iOS pour une bibliothèque Objective-C existante, InfColorPicker. Elle couvre des sujets tels que la compilation d’une bibliothèque Objective-C statique et en le liant à l’aide de la liaison dans une application Xamarin.iOS._
 
-Lorsque vous travaillez sur iOS, vous pouvez rencontrer des cas où vous souhaitez utiliser une bibliothèque Objective-C de fournisseurs tiers. Dans ces situations, vous pouvez utiliser un Xamarin.iOS _projet de liaison_ pour créer un [liaison C#](~/cross-platform/macios/binding/overview.md) qui vous permettent de consommer la bibliothèque dans vos applications Xamarin.iOS.
+Lorsque vous travaillez sur iOS, vous pouvez rencontrer des cas où vous souhaitez utiliser une bibliothèque Objective-C de fournisseurs tiers. Dans ces situations, vous pouvez utiliser un Xamarin.iOS _projet de liaison_ pour créer un [ C# liaison](~/cross-platform/macios/binding/overview.md) qui vous permettent de consommer la bibliothèque dans vos applications Xamarin.iOS.
 
 En règle générale, dans l’écosystème iOS, vous trouverez bibliothèques dans 3 versions :
 
@@ -39,7 +39,7 @@ Nous aborderons toutes les étapes nécessaires pour utiliser cette API Objectiv
 - Ensuite, montrent comment objectif Sharpie peut réduire la charge de travail en générant automatiquement certaines (mais pas tous) des définitions d’API nécessaires requises par la liaison Xamarin.iOS.
 - Enfin, nous allons créer une application Xamarin.iOS qui utilise la liaison.
 
-L’exemple d’application va vous montrer comment utiliser un délégué fort pour la communication entre l’API InfColorPicker et notre code c#. Une fois que nous avons vu comment utiliser un délégué fort, nous aborderons l’utilisation de délégués faibles pour effectuer les mêmes tâches.
+L’exemple d’application va vous montrer comment utiliser un délégué fort pour la communication entre l’API InfColorPicker et notre C# code. Une fois que nous avons vu comment utiliser un délégué fort, nous aborderons l’utilisation de délégués faibles pour effectuer les mêmes tâches.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -54,13 +54,13 @@ Cet article suppose que vous êtes familiarisé avec Xcode et le langage d’Obj
 
 ## <a name="installing-the-xcode-command-line-tools"></a>Installer les outils de ligne de commande de Xcode
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 
 Comme indiqué ci-dessus, nous allons utiliser les outils de ligne de commande Xcode (en particulier `make` et `lipo`) dans cette procédure pas à pas. Le `make` commande est un utilitaire Unix très courant qui automatise la compilation des programmes exécutables et des bibliothèques à l’aide un _makefile_ qui spécifie comment le programme doit être généré. Le `lipo` commande est un utilitaire de ligne de commande du système d’exploitation X pour la création de fichiers de l’architecture multi ; il combinera plusieurs `.a` fichiers dans un fichier qui peut être utilisé par toutes les architectures matérielles.
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
 Comme indiqué ci-dessus, nous allons utiliser les outils de ligne de commande Xcode sur le **hôte de Build Mac** (spécifiquement `make` et `lipo`) dans cette procédure pas à pas. Le `make` commande est un utilitaire Unix très courant qui automatise la compilation des programmes exécutables et des bibliothèques à l’aide un _makefile_ spécifie comment générer le programme. Le `lipo` commande est un utilitaire de ligne de commande du système d’exploitation X pour la création de fichiers de l’architecture multi ; il combinera plusieurs `.a` fichiers dans un fichier qui peut être utilisé par toutes les architectures matérielles.
@@ -81,11 +81,11 @@ Vous devez utiliser une des méthodes suivantes pour installer les outils :
     Europa:~ kmullins$ xcode-select --install
     ```
 
-    - Vous devrez installer les outils de ligne de commande, cliquez sur le **installer** bouton : [ ![ ] (walkthrough-images/xcode01.png "installation des outils de ligne de commande")](walkthrough-images/xcode01.png#lightbox)
+    - Vous devrez installer les outils de ligne de commande, cliquez sur le **installer** bouton : [ ![](walkthrough-images/xcode01.png "installation des outils de ligne de commande")](walkthrough-images/xcode01.png#lightbox)
 
-    - Les outils seront téléchargés et installés à partir de serveurs Apple : [ ![ ] (walkthrough-images/xcode02.png "téléchargement des outils")](walkthrough-images/xcode02.png#lightbox)
+    - Les outils seront téléchargés et installés à partir de serveurs Apple : [ ![](walkthrough-images/xcode02.png "téléchargement des outils")](walkthrough-images/xcode02.png#lightbox)
 
-- **Téléchargements pour les développeurs d’Apple** -outils de ligne de commande le package est disponible le [téléchargements pour les développeurs d’Apple]() page web. Connectez-vous avec votre ID Apple, puis recherchez et téléchargez les outils de ligne de commande : [ ![ ] (walkthrough-images/xcode03.png "recherche les outils de ligne de commande")](walkthrough-images/xcode03.png#lightbox)
+- **Téléchargements pour les développeurs d’Apple** -outils de ligne de commande le package est disponible le [téléchargements pour les développeurs d’Apple]() page web. Connectez-vous avec votre ID Apple, puis recherchez et téléchargez les outils de ligne de commande : [ ![](walkthrough-images/xcode03.png "recherche les outils de ligne de commande")](walkthrough-images/xcode03.png#lightbox)
 
 Avec les outils de ligne de commande installé, nous sommes prêts poursuivre la procédure pas à pas.
 
@@ -94,7 +94,7 @@ Avec les outils de ligne de commande installé, nous sommes prêts poursuivre la
 Dans cette procédure pas à pas, nous aborderons les étapes suivantes :
 
 - **[Créer une bibliothèque statique](#Creating_A_Static_Library)**  -cette étape implique la création d’une bibliothèque statique de la **InfColorPicker** code Objective-C. La bibliothèque statique aura le `.a` extension de fichier et seront incorporées dans l’assembly .NET du projet de bibliothèque.
-- **[Créer un projet de liaison Xamarin.iOS](#Create_a_Xamarin.iOS_Binding_Project)**  -une fois que nous disposons d’une bibliothèque statique, nous allons l’utiliser pour créer un projet de liaison Xamarin.iOS. Le projet de liaison se compose de la bibliothèque statique que nous venons de créer et de métadonnées sous la forme de code c# qui explique comment l’API Objective-C peut être utilisé. Ces métadonnées sont communément appelé les définitions d’API. Nous allons utiliser **[objectif Sharpie](#Using_Objective_Sharpie)** pour nous aider à créer les définitions d’API.
+- **[Créer un projet de liaison Xamarin.iOS](#Create_a_Xamarin.iOS_Binding_Project)**  -une fois que nous disposons d’une bibliothèque statique, nous allons l’utiliser pour créer un projet de liaison Xamarin.iOS. Le projet de liaison se compose de la bibliothèque statique que nous venons de créer et de métadonnées sous la forme de C# code qui explique comment l’API Objective-C peut être utilisé. Ces métadonnées sont communément appelé les définitions d’API. Nous allons utiliser **[objectif Sharpie](#Using_Objective_Sharpie)** pour nous aider à créer les définitions d’API.
 - **[Normaliser les définitions API](#Normalize_the_API_Definitions)**  - objectif Sharpie fait un travail remarquable pour nous aider à, mais il ne peut pas effectuer toutes les opérations. Nous aborderons certaines modifications que nous devons apporter aux définitions d’API avant de pouvoir être utilisés.
 - **[Utiliser la bibliothèque de liaison](#Using_the_Binding)**  -Enfin, nous allons créer une application Xamarin.iOS pour montrer comment utiliser notre projet de liaison qui vient d’être créée.
 
@@ -245,11 +245,11 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 ## <a name="create-a-xamarinios-binding-project"></a>Créer un projet de liaison de Xamarin.iOS
 
-Avant que nous pouvons utiliser **objectif-Sharpie** pour automatiser le processus de liaison, nous devons créer un projet de liaison Xamarin.iOS pour héberger les définitions d’API (que nous allons utiliser **objectif-Sharpie** pour nous aider à build) et créer la liaison C# pour nous.
+Avant que nous pouvons utiliser **objectif-Sharpie** pour automatiser le processus de liaison, nous devons créer un projet de liaison Xamarin.iOS pour héberger les définitions d’API (que nous allons utiliser **objectif-Sharpie** pour nous aider à build) et créer le C# de liaison pour nous.
 
 Nous allons effectuer les opérations suivantes :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Démarrez Visual Studio pour Mac.
 1. À partir de la **fichier** menu, sélectionnez **New** > **Solution...** :
@@ -271,7 +271,7 @@ La solution va être créée et deux fichiers par défaut seront incluses :
 ![](walkthrough-images/bind03.png "La structure de solution dans l’Explorateur de solutions")
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
 1. Démarrez Visual Studio.
@@ -280,7 +280,7 @@ La solution va être créée et deux fichiers par défaut seront incluses :
 
     ![Démarrez un nouveau projet](walkthrough-images/bind01vs.png "démarrez un nouveau projet")
 
-1. Dans la boîte de dialogue Nouveau projet, sélectionnez **Visual c# > iPhone & iPad > liaisons bibliothèque iOS (Xamarin)**:
+1. Dans la boîte de dialogue Nouveau projet, sélectionnez **Visual C# > iPhone & iPad > liaisons bibliothèque iOS (Xamarin)**:
 
     [![Sélectionnez la bibliothèque de liaisons iOS](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
@@ -292,7 +292,7 @@ La solution va être créée et deux fichiers par défaut seront incluses :
 
 -----
 
-- **ApiDefinition.cs** -ce fichier contient les contrats qui définissent comment les API Objective-C seront encapsulée dans c#.
+- **ApiDefinition.cs** -ce fichier contient les contrats qui définissent comment les API Objective-C est encapsulé dans C#.
 - **Structs.cs** : ce fichier contiendra toutes les structures ou les valeurs d’énumération qui sont requis par les interfaces et délégués.
 
 Nous allons travailler avec ces deux fichiers plus loin dans la procédure pas à pas. Tout d’abord, nous devons ajouter la bibliothèque InfColorPicker au projet de liaison.
@@ -303,7 +303,7 @@ Nous avons notre liaison projet de base prêt, nous devons ajouter la bibliothè
 
 Suivez ces étapes pour ajouter la bibliothèque :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Avec le bouton droit sur le **références natives** dossier dans le panneau solutions, puis sélectionnez **ajouter des références natives**:
 
@@ -316,7 +316,7 @@ Suivez ces étapes pour ajouter la bibliothèque :
 
     ![](walkthrough-images/bind04.png "Y compris un fichier")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Copie le `libInfColorPickerSDK.a` à partir de votre **hôte de Build Mac** et collez-le dans votre projet de liaison.
 
@@ -352,16 +352,16 @@ La prochaine chose que nous devons faire consiste à créer les définitions d�
 
 ## <a name="using-objective-sharpie"></a>À l’aide de Objective Sharpie
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 
-Objectif Sharpie est une ligne de commande outil (fourni par Xamarin) qui vous permet de créer les définitions requises pour lier une bibliothèque Objective-C de tiers 3e à c#. Dans cette section, nous allons utiliser objectif Sharpie pour créer la première **ApiDefinition.cs** pour le projet InfColorPicker.
+Objectif Sharpie est une ligne de commande outil (fourni par Xamarin) qui vous permet de créer les définitions requises pour lier une bibliothèque de Objective-C 3ème partie à C#. Dans cette section, nous allons utiliser objectif Sharpie pour créer la première **ApiDefinition.cs** pour le projet InfColorPicker.
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
-Objectif Sharpie est une ligne de commande outil (fourni par Xamarin) qui vous permet de créer les définitions requises pour lier une bibliothèque Objective-C de tiers 3e à c#. Dans cette section, nous allons utiliser objectif Sharpie sur notre **hôte de Build Mac** pour créer la première **ApiDefinition.cs** pour le projet InfColorPicker.
+Objectif Sharpie est une ligne de commande outil (fourni par Xamarin) qui vous permet de créer les définitions requises pour lier une bibliothèque de Objective-C 3ème partie à C#. Dans cette section, nous allons utiliser objectif Sharpie sur notre **hôte de Build Mac** pour créer la première **ApiDefinition.cs** pour le projet InfColorPicker.
 
 
 -----
@@ -423,7 +423,7 @@ sdk: watchos2.2      arch: armv7
 
 Dans l’exemple ci-dessus, nous constatons que nous avons le `iphoneos9.3` SDK installé sur votre ordinateur. Ces informations en place, nous sommes prêts à analyser le projet InfColorPicker `.h` des fichiers dans la première **ApiDefinition.cs** et `StructsAndEnums.cs` pour le projet InfColorPicker.
 
-Entrez la commande suivante dans le l’application Terminal :
+Entrez la commande suivante dans l’application Terminal :
 
 ```bash
 sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
@@ -462,7 +462,7 @@ Et le **InfColorPicker.enums.cs** et **InfColorPicker.cs** fichiers seront cré�
 
 [![](walkthrough-images/os06.png "Les fichiers InfColorPicker.enums.cs et InfColorPicker.cs")](walkthrough-images/os06.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 
 Ouvrez ces deux fichiers dans le projet de liaison que nous avons créé ci-dessus. Copier le contenu de la **InfColorPicker.cs** de fichiers et collez-la dans la **ApiDefinition.cs** fichier, en remplaçant `namespace ...` bloc de code avec le contenu de la  **InfColorPicker.cs** fichier (en laissant le `using` instructions intactes) :
@@ -470,7 +470,7 @@ Ouvrez ces deux fichiers dans le projet de liaison que nous avons créé ci-dess
 ![](walkthrough-images/os07.png "Le fichier InfColorPickerControllerDelegate")
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
 Ouvrez ces deux fichiers dans le projet de liaison que nous avons créé ci-dessus. Copiez le contenu de la **InfColorPicker.cs** fichier (à partir de la **hôte de Build Mac**) et collez-la dans la **ApiDefinition.cs** fichier, en remplaçant `namespace ...` bloc de code avec le contenu de la **InfColorPicker.cs** fichier (en laissant le `using` instructions intactes).
@@ -498,7 +498,7 @@ Ensuite, nous faisons la même chose avec le contenu de la `InfColorPicker.enums
 
 Vous pouvez également trouver qu’objectif Sharpie a annoté la liaison avec `[Verify]` attributs. Ces attributs indiquent que vous devez vérifier qu’objectif Sharpie fait la chose correcte en comparant la liaison avec la déclaration d’origine de C/Objective-C (qui vous sont fournie dans un commentaire au-dessus de la déclaration de liaison). Une fois que vous avez vérifié les liaisons, vous devez supprimer l’attribut vérifier. Pour plus d’informations, reportez-vous à la [Vérifiez](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) guide.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 
 À ce stade, notre projet de liaison doit être terminé et prêt à générer. Nous allons créer notre projet de liaison et vous assurer que nous avons finalement sans erreurs :
@@ -506,7 +506,7 @@ Vous pouvez également trouver qu’objectif Sharpie a annoté la liaison avec `
 [Générez le projet de liaison et ne vérifiez qu’aucune erreur](walkthrough-images/os12.png)
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
 À ce stade, notre projet de liaison doit être terminé et prêt à générer. Nous allons créer notre projet de liaison et vous assurer que nous avons finalement sans erreurs.
@@ -520,7 +520,7 @@ Vous pouvez également trouver qu’objectif Sharpie a annoté la liaison avec `
 
 Suivez ces étapes pour créer un exemple d’application iPhone à utiliser iOS que bibliothèque de liaison créé ci-dessus :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. **Créer le projet Xamarin.iOS** -ajouter un nouveau projet Xamarin.iOS appelé **InfColorPickerSample** à la solution, comme indiqué dans les captures d’écran suivante :
 
@@ -542,7 +542,7 @@ Suivez ces étapes pour créer un exemple d’application iPhone à utiliser iOS
 
 1. Lorsque vous êtes invité, copiez la **.xib** fichier dans le projet.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. **Créer le projet Xamarin.iOS** -ajouter un nouveau projet Xamarin.iOS nommé **InfColorPickerSample** à l’aide de la **application avec affichage unique** modèle :
 
@@ -562,11 +562,11 @@ Suivez ces étapes pour créer un exemple d’application iPhone à utiliser iOS
 
 -----
 
-Ensuite, jetons un œil rapide à des protocoles dans Objective-C et comment les gérer dans la liaison et le code c#.
+Ensuite, jetons un œil rapide à des protocoles dans Objective-C et comment les gérer dans la liaison et C# code.
 
 ### <a name="protocols-and-xamarinios"></a>Protocoles et Xamarin.iOS
 
-En Objective-C, un protocole définit des méthodes (ou messages) qui peut être utilisé dans certaines circonstances. Conceptuellement, elles sont très similaires aux interfaces en c#. Une différence majeure entre un protocole Objective-C et une interface c# est que les protocoles peuvent avoir des méthodes facultatives - méthodes une classe n’a pas à implémenter. Objective-C utilise la @optional mot clé est utilisé pour indiquer quelles méthodes sont facultatifs. Pour plus d’informations sur les protocoles, consultez [événements, protocoles et délégués](~/ios/app-fundamentals/delegates-protocols-and-events.md).
+En Objective-C, un protocole définit des méthodes (ou messages) qui peut être utilisé dans certaines circonstances. Conceptuellement, elles sont très similaires aux interfaces dans C#. Une différence majeure entre un protocole Objective-C et un C# interface est que les protocoles peuvent avoir des méthodes facultatives - méthodes une classe n’a pas à implémenter. Objective-C utilise la @optional mot clé est utilisé pour indiquer quelles méthodes sont facultatifs. Pour plus d’informations sur les protocoles, consultez [événements, protocoles et délégués](~/ios/app-fundamentals/delegates-protocols-and-events.md).
 
 **InfColorPickerController** a un tel protocole indiqué dans l’extrait de code ci-dessous :
 
@@ -603,7 +603,7 @@ Lors de la compilation, la bibliothèque de liaison Xamarin.iOS créera une clas
 
 Il existe deux façons que nous pouvons implémenter cette interface dans une application Xamarin.iOS :
 
-- **Délégué de fort** -utilisation d’un délégué fort implique la création d’une classe c# qui sous-classe `InfColorPickerControllerDelegate` et substitue les méthodes appropriées. **InfColorPickerController** utilisera une instance de cette classe pour communiquer avec ses clients.
+- **Fort déléguer** -utilisation d’un délégué fort implique la création d’un C# classe qui sous-classe `InfColorPickerControllerDelegate` et substitue les méthodes appropriées. **InfColorPickerController** utilisera une instance de cette classe pour communiquer avec ses clients.
 - **Délégué faible** -un délégué faible est une technique légèrement différente qui implique la création d’une méthode publique sur une classe (tel que `InfColorPickerSampleViewController`) et ensuite exposant cette méthode pour le `InfColorPickerDelegate` de protocole un `Export` attribut.
 
 Délégués forts fournissent Intellisense, la sécurité de type et une meilleure encapsulation. Pour ces raisons, vous devez utiliser des délégués forts dans laquelle vous pouvez, au lieu d’un délégué faible.
@@ -708,7 +708,7 @@ public override void ViewDidLoad ()
 
 ```
 
-**Gérer le colorPickerControllerDidFinish : Message** - lorsque le `ViewController` est terminé, iOS enverra le message `colorPickerControllerDidFinish:` à la `WeakDelegate`. Nous devons créer une méthode c# qui peut gérer ce message. Pour ce faire, nous créer une méthode c# et puis orner avec le `ExportAttribute`. Modifier `ViewController`et ajoutez la méthode suivante à la classe :
+**Gérer le colorPickerControllerDidFinish : Message** - lorsque le `ViewController` est terminé, iOS enverra le message `colorPickerControllerDidFinish:` à la `WeakDelegate`. Nous devons créer un C# méthode capable de gérer ce message. Pour ce faire, nous créons un C# méthode et puis orner avec le `ExportAttribute`. Modifier `ViewController`et ajoutez la méthode suivante à la classe :
 
 ```csharp
 [Export("colorPickerControllerDidFinish:")]

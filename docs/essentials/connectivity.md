@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 96b4ee0487034c651bec1dfb168fed7567b63c96
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353696"
@@ -73,13 +73,13 @@ if (current == NetworkAccess.Internet)
 
 L'énumérateur **[NetworkAccess](xref:Xamarin.Essentials.NetworkAccess)** possède les valeurs possibles suivantes :
 
-* **Internet** : accès local et internet.
-* **ConstrainedInternet** : l’accès à internet limité. Indique la connectivité via un portail captif, l’accès à Internet nécessite que les informations d’identification spécifiques soient fournies via un portail.
+* **Internet** : accès local et à internet.
+* **ConstrainedInternet** : l’accès à internet est limité. Indique la connectivité via un portail captif, l’accès à Internet nécessite que les informations d’identification spécifiques soient fournies via un portail.
 * **Local** : accès local uniquement.
 * **None** : aucune connectivité n’est disponible.
 * **Unknown** : impossible de déterminer la connectivité internet.
 
-Vous pouvez vérifier quel [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) actuellement actif à l’aide de :
+Vous pouvez vérifier quel [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) est actuellement actif à l’aide de :
 
 ```csharp
 var profiles = Connectivity.Profiles;

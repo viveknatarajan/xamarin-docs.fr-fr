@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38860665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109989"
 ---
 # <a name="xamarin-live-reload"></a>Rechargement en direct de Xamarin
 
@@ -22,11 +22,10 @@ Vous permet de Xamarin Live recharger **apporter des modifications à votre XAML
 
 Étant donné que votre application est compilée lors de l’utilisation de rechargement en direct, il fonctionne avec toutes les bibliothèques et des contrôles tiers. Live works de rechargement sur toutes les plateformes Xamarin.Forms prend en charge, y compris Android, iOS et UWP et fonctionne sur toutes les cibles de déploiement valide, y compris les simulateurs, émulateurs et périphériques physiques.
 
-> [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
-
-Le rechargement en direct est actuellement disponible uniquement dans Visual Studio 2017.
-
-[![Rejoignez la conversation à https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> [!NOTE]
+> [L’aperçu instantané de rechargement est terminée.](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
+>
+> Il existe une discussion à ce sujet sur [ ![Rejoignez la conversation à https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## <a name="requirements"></a>Configuration requise
 

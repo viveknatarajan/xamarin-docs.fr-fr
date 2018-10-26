@@ -6,13 +6,13 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 4715685fdf417ba2d08f9ae3d36d6e691fa701fa
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.date: 10/19/2018
+ms.openlocfilehash: aa060bd16bc0220f6a6026106ff6c8d786daebc1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105036"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implémentation d’un HybridWebView
 
@@ -328,7 +328,7 @@ namespace CustomRenderer.Droid
 {
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Android.Webkit.WebView>
     {
-        const string JavaScriptFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
+        const string JavascriptFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
         Context _context;
 
         public HybridWebViewRenderer(Context context) : base(context)
@@ -344,6 +344,7 @@ namespace CustomRenderer.Droid
             {
                 var webView = new Android.Webkit.WebView(_context);
                 webView.Settings.JavaScriptEnabled = true;
+                webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
                 SetNativeControl(webView);
             }
             if (e.OldElement != null)
@@ -355,31 +356,42 @@ namespace CustomRenderer.Droid
             if (e.NewElement != null)
             {
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
-                Control.LoadUrl(string.Format("file:///android_asset/Content/{0}", Element.Uri));
-                InjectJS(JavaScriptFunction);
-            }
-        }
-
-        void InjectJS(string script)
-        {
-            if (Control != null)
-            {
-                Control.LoadUrl(string.Format("javascript: {0}", script));
+                Control.LoadUrl($"file:///android_asset/Content/{Element.Uri}");
             }
         }
     }
 }
 ```
 
-Le `HybridWebViewRenderer` classe charge la page web spécifiée dans le `HybridWebView.Uri` propriété un code natif [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) contrôle et le `invokeCSharpAction` fonction JavaScript est injectée dans la page web, une fois que la page web chargée, avec le `InjectJS` (méthode). Une fois que l’utilisateur entre son nom et clique sur le code HTML `button` élément, le `invokeCSharpAction` fonction JavaScript est exécutée. Cette fonctionnalité s’effectue comme suit :
+Le `HybridWebViewRenderer` classe charge la page web spécifiée dans le `HybridWebView.Uri` propriété un code natif [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) contrôle et le `invokeCSharpAction` fonction JavaScript est injectée dans la page web, une fois la page web terminé son chargement, avec le `OnPageFinished` remplacer dans la `JavascriptWebViewClient` classe :
+
+```csharp
+public class JavascriptWebViewClient : WebViewClient
+{
+    string _javascript;
+
+    public JavascriptWebViewClient(string javascript)
+    {
+        _javascript = javascript;
+    }
+
+    public override void OnPageFinished(WebView view, string url)
+    {
+        base.OnPageFinished(view, url);
+        view.EvaluateJavascript(_javascript, null);
+    }
+}
+```
+
+Une fois que l’utilisateur entre son nom et clique sur le code HTML `button` élément, le `invokeCSharpAction` fonction JavaScript est exécutée. Cette fonctionnalité s’effectue comme suit :
 
 - Condition que le `Control` propriété est `null`, les opérations suivantes sont effectuées :
-  - Native [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) instance est créée et JavaScript est activé dans le contrôle.
+  - Native [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) instance est créée, JavaScript est activé dans le contrôle et un `JavascriptWebViewClient` instance est définie en tant que l’implémentation de `WebViewClient`.
   - Le `SetNativeControl` méthode est appelée pour affecter une référence à natif [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) le contrôle à la `Control` propriété.
 - Si le convertisseur personnalisé est attaché à un nouvel élément Xamarin.Forms :
   - Le [ `WebView.AddJavascriptInterface` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) méthode injecte un nouveau `JSBridge` instance dans le cadre de principal du contexte de JavaScript de l’affichage Web, nommez-la `jsBridge`. Ainsi, les méthodes dans la `JSBridge` classe accessible à partir de JavaScript.
   - Le [ `WebView.LoadUrl` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) méthode charge le fichier HTML qui est spécifié par le `HybridWebView.Uri` propriété. Le code spécifie que le fichier est stocké dans le `Content` dossier du projet.
-  - Le `InjectJS` méthode est appelée pour injecter le `invokeCSharpAction` fonction JavaScript dans la page web.
+  - Dans le `JavascriptWebViewClient` (classe), le `invokeCSharpAction` fonction JavaScript est injectée dans la page web une fois que la page a terminé le chargement.
 - Lorsque l’élément auquel le renderer est attaché change :
   - Les ressources sont libérées.
 
@@ -401,7 +413,8 @@ public class JSBridge : Java.Lang.Object
   {
     HybridWebViewRenderer hybridRenderer;
 
-    if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer)) {
+    if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer))
+    {
       hybridRenderer.Element.InvokeAction (data);
     }
   }
@@ -414,9 +427,6 @@ La classe doit dériver de `Java.Lang.Object`, et les méthodes qui sont exposé
 > Des projets qui utilisent le `[Export]` attribut doit inclure une référence à `Mono.Android.Export`, ou une erreur du compilateur se produit.
 
 Notez que le `JSBridge` classe maintient une `WeakReference` à la `HybridWebViewRenderer` classe. Il s’agit d’éviter de créer une référence circulaire entre les deux classes. Pour plus d’informations, consultez [références faibles](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) sur MSDN.
-
-> [!IMPORTANT]
-> Sur Android Oreo, assurez-vous que le manifeste Android définit le **version Android cible** à **automatique**. Sinon, exécution de ce code génère l’erreur message « invokeCSharpAction n'est pas définie ».
 
 ### <a name="creating-the-custom-renderer-on-uwp"></a>Création du convertisseur personnalisé sur UWP
 

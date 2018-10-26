@@ -4,15 +4,15 @@ description: Ce document présente les techniques de distribution ad hoc princip
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 0907c3bcca9e0955e5ad9f8ed48adac03202cbaa
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 5950143532b2d1d026f73bb254507d7d3022cbf1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112297"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribution ad hoc pour les applications Xamarin.iOS
 
@@ -111,11 +111,11 @@ Une fois que vous avez les composants nécessaires pour créer un profil de dist
 
 7. Cliquez sur le bouton **Generate** pour créer le profil et finaliser le processus.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Vous devrez peut-être quitter Visual Studio pour Mac et obliger Xcode à actualiser sa liste d’identités de signature et de profils de provisionnement disponibles (en suivant les instructions de la section [Téléchargement des profils et des certificats dans Xcode](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)) pour qu’un nouveau profil de distribution soit disponible dans Visual Studio pour Mac.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Vous devrez peut-être quitter Visual Studio et obliger Xcode (sur le Mac de l’hôte de build) à actualiser sa liste d’identités de signature et de profils de provisionnement disponibles (en suivant les instructions de la section [Téléchargement des profils et des certificats dans Xcode](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)) pour qu’un nouveau profil de distribution soit disponible dans Visual Studio.
 
@@ -127,7 +127,7 @@ Vous devrez peut-être quitter Visual Studio et obliger Xcode (sur le Mac de l�
 
 Une fois que vous êtes prêt à effectuer une build finale d’une application Xamarin.iOS, sélectionnez le profil de distribution créé ci-dessus.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
  Dans Visual Studio pour Mac, effectuez les tâches suivantes :
 
@@ -143,7 +143,7 @@ Une fois que vous êtes prêt à effectuer une build finale d’une application 
     ![](ad-hoc-distribution-images/releasexs03.png "Sélectionner l’identité de signature et le profil de distribution")
 5. Cliquez sur le bouton **OK** pour enregistrer les changements.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
  Dans Visual Studio, effectuez les tâches suivantes :
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nom du projet, puis sélectionnez **Propriétés** pour l’ouvrir et le modifier.

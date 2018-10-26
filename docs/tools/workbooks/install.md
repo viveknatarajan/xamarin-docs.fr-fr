@@ -1,35 +1,35 @@
 ---
-title: Configuration requise et Installation de classeurs
-description: Ce document décrit comment télécharger et installer les classeurs Xamarin, décrivant la configuration requise et plates-formes prises en charge.
+title: Configuration requise et Installation de workbooks
+description: Ce document décrit comment télécharger et installer Xamarin Workbooks, abordant la configuration système requise et plates-formes prises en charge.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: a35038a948a89889bbf067a453b7465c1a6a7b49
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 7bef5de57b7ac709ebab4c39feedbec369e6bd14
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268990"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122424"
 ---
-# <a name="workbooks-installation-and-requirements"></a>Configuration requise et Installation de classeurs
+# <a name="workbooks-installation-and-requirements"></a>Configuration requise et Installation de workbooks
 
 <a name="install" />
 
 ## <a name="download-and-install"></a>Téléchargez et installez
 
-# <a name="windowstabwindows"></a>[Fenêtres](#tab/windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-1. Vérifiez le [exigences](#requirements) ci-dessous.
+1. Vérifier le [exigences](#requirements) ci-dessous.
 2. Téléchargez et installez [Xamarin classeurs pour Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
-3. Démarrer [manipulé](~/tools/workbooks/workbook.md) avec des classeurs ou essayer la [exemples](https://developer.xamarin.com/workbooks)
+3. Démarrer [à toucher](~/tools/workbooks/workbook.md) avec des classeurs ou essayer la [exemples](https://developer.xamarin.com/workbooks)
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-1. Vérifiez le [exigences](#Requirements) ci-dessous.
-2. Téléchargez et installez [Xamarin des classeurs pour Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
-3. Démarrer [manipulé](~/tools/workbooks/workbook.md) avec des classeurs ou essayer la [exemples](https://developer.xamarin.com/workbooks)
+1. Vérifier le [exigences](#Requirements) ci-dessous.
+2. Téléchargez et installez [Xamarin Workbooks pour Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+3. Démarrer [à toucher](~/tools/workbooks/workbook.md) avec des classeurs ou essayer la [exemples](https://developer.xamarin.com/workbooks)
 
 -----
 
@@ -37,17 +37,17 @@ ms.locfileid: "36268990"
 
 #### <a name="supported-operating-systems"></a>Supported Operating Systems
 
-- **Mac** -OS X 10.11 ou supérieur
-- **Windows** -Windows 7 ou version ultérieure (avec Internet Explorer ou supérieure à 11 et .NET 4.6.1 ou supérieur)
+- **Mac** -OS X 10.11 ou supérieure
+- **Windows** -Windows 7 ou version ultérieure (avec Internet Explorer 11 ou ultérieur et de .NET 4.6.1 ou version ultérieure)
 
 #### <a name="supported-app-platforms"></a>Plateformes d’applications pris en charge
 
 |Plateforme d’application|Prise en charge du système d’exploitation|Notes|
 |--- |--- |--- |
-|Mac|Prise en charge uniquement sur Mac|
-|iOS|Prise en charge sur Mac et Windows|Xamarin.iOS 11.0 et Xcode 9.0 ou version ultérieure doivent être installé sur le Mac. IOS classeurs en cours d’exécution sur Windows requiert un hôte de build Mac exécutant tous les éléments ci-dessus et le [exécutée à distance iOS Simulator](~/tools/ios-simulator.md) installé sur Windows.|
+|Mac|Uniquement pris en charge sur Mac|
+|iOS|Prise en charge sur Mac et Windows|Xamarin.iOS 11.0 et Xcode 9.0 ou version ultérieure doivent être installé sur le Mac. IOS classeurs en cours d’exécution sur Windows nécessite un hôte de build Mac exécutant tous les éléments ci-dessus et le [Remoted iOS Simulator](~/tools/ios-simulator/index.md) installé sur Windows.|
 |Android|Prise en charge sur Mac et Windows|Doit utiliser émulateur Google, Visual Studio ou Xamarin Android, avec un appareil virtuel > = 5.0|
-|WPF|Prise en charge uniquement sur Windows|
+|WPF|Uniquement pris en charge sur Windows|
 |Console (.NET Framework)|Prise en charge sur Mac et Windows|
 |Console (.NET Core)|Prise en charge sur Mac et Windows|
 
@@ -63,7 +63,7 @@ Attachez toujours les fichiers journaux du client classeurs :
 - Mac : `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
 - Windows : `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
-1.4.x offre également la possibilité de sélectionner le fichier journal dans le Finder (macOS) ou de l’Explorateur (Windows) directement à partir du menu principal :
+1.4.x comprend également la possibilité de sélectionner le fichier journal dans Finder (macOS) ou l’Explorateur (Windows) directement dans le menu principal :
 
 - **Aide > Afficher le fichier journal**
 
@@ -74,7 +74,7 @@ Attachez toujours les fichiers journaux du client classeurs :
 
 ### <a name="platform-version-information"></a>Informations de Version de plateforme
 
-Il est très utile de connaître les détails sur votre système d’exploitation et Xamarin produits installés.
+Il est très utile de connaître les détails sur votre système d’exploitation et les produits Xamarin installés.
 
 Dans le menu principal dans les classeurs :
 
@@ -85,29 +85,29 @@ Dans le menu principal dans les classeurs :
 Visual Studio pour Mac
 
 - **Visual Studio > à propos de Visual Studio > Afficher les détails > Copier les informations**
-- Collez dans le rapport de bogue
+- Collez dans un rapport de bogues
 
 Visual Studio
 
 - **Aide > à propos de Visual Studio > Copier les informations**
-- Faites-nous savoir votre version de système d’exploitation et que vous exécutez Windows 32 bits ou 64 bits.
+- Donnez-nous votre version de système d’exploitation et que vous exécutez Windows 32 bits ou 64 bits.
 
 ### <a name="samples"></a>Exemples
 
-Si vous pouvez attacher ou un lien vers le **.workbooks** fichier que vous rencontrez des problèmes, et qui peut aider à résoudre le bogue plus rapidement.
+Si vous pouvez attacher ou créer un lien vers le **.workbooks** fichier que vous rencontrez des problèmes avec, et qui peut-être aider à résoudre le bogue plus rapidement.
 
 ### <a name="devices"></a>Appareils
 
-Si vous rencontrez des problèmes de connexion de votre iOS ou un classeur Android et ont déjà été [notre page Dépannage](~/tools/workbooks/troubleshooting/index.md), nous aurons besoin de connaître :
+Si vous rencontrez des problèmes de connexion de votre classeur Android ou iOS et déjà archivées [notre page de dépannage](~/tools/workbooks/troubleshooting/index.md), nous devons savoir :
 
 - Nom du périphérique que vous essayez de vous connecter à
 - Version du système d’exploitation de votre appareil
-- Android : Vérifiez que vous utilisez x86 émulateur
+- Android : Vérifiez que vous utilisez un x86 émulateur
 - Android : Quelle plate-forme émulateur utilisez-vous ? Émulateur Google ?
   Émulateur Android de Visual Studio ? Xamarin Android Player ?
-- iOS sur Windows : version du simulateur iOS à distance de Xamarin vous disposez (Vérifiez **Ajout/Suppression de programmes** dans **le panneau de configuration**) ?
-- iOS sur Windows : Veuillez également fournir les informations de Version de plateforme pour votre hôte de build Mac
-- L’appareil a-t-il la connectivité de réseau (vérification via un navigateur web)
+- iOS sur Windows : quelle version du simulateur iOS à distance Xamarin vous avez installé (vérifier **Ajout/Suppression de programmes** dans **le panneau de configuration**) ?
+- iOS sur Windows : fournissez également les informations de Version de plateforme pour votre hôte de build Mac
+- L’appareil a-t-il la connectivité réseau (vérification via le navigateur web) ?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
@@ -115,35 +115,35 @@ Si vous rencontrez des problèmes de connexion de votre iOS ou un classeur Andro
 
 ### <a name="windows"></a>Windows
 
-Selon la façon dont vous avez acquis les classeurs, vous devrez exécuter deux procédures de désinstallation. Veuillez vérifier ces deux éléments pour complètement désinstaller le logiciel.
+Selon la façon dont vous avez acquis des classeurs, vous devrez exécuter deux procédures de désinstallation. Vérifiez ces deux éléments pour complètement désinstaller le logiciel.
 
 #### <a name="visual-studio-installer"></a>Programme d’installation de Visual Studio
 
-Si vous avez Visual Studio 2017, ouvrez **le programme d’installation de Visual Studio**, puis en regardant dans **des composants individuels** pour **Xamarin classeurs**. Si elle est activée, désactivez-la, puis **modifier** à désinstaller.
+Si vous avez Visual Studio 2017, ouvrez **le programme d’installation de Visual Studio**, puis en regardant dans **composants individuels** pour **Xamarin Workbooks**. Si elle est activée, désactivez-la, puis **modifier** à désinstaller.
 
 #### <a name="system-uninstall"></a>Désinstallation du système
 
-Si vous avez installé les classeurs vous-même avec un programme d’installation téléchargé, elle devra être désinstallées via les **applications & fonctionnalités** page des paramètres système sur Windows 10 ou via **Ajout/Suppression de programmes** dans le contrôle Panneau de configuration sur les versions antérieures de Windows.
+Si vous avez installé les classeurs vous-même avec un programme d’installation téléchargé, elle devra être désinstallé le **applications et fonctionnalités** page des paramètres système sur Windows 10 ou via **Ajout/Suppression de programmes** dans le contrôle Panneau de configuration sur les versions antérieures de Windows.
 
 > **Démarrer > Paramètres > système > applications et fonctionnalités**
 
 ![](install-images/windows-remove.png "Comme indiqué dans les classeurs Xamarin &quot;applications &amp; fonctionnalités&quot;")
 
-**Vous devez toujours suivre la procédure pour Installer Visual Studio pour vous assurer de ne pas réinstallé classeurs sans votre connaissance.**
+**Vous devez toujours suivre la procédure pour Visual Studio Installer pour vous assurer de ne pas réinstallé classeurs sans même vous prévenir.**
 
 <a name="uninstall-macos" />
 
 ### <a name="macos"></a>macOS
 
-En commençant par [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin classeurs peuvent être désinstallés d’un terminal en exécutant :
+En commençant par [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin Workbooks peuvent être désinstallés à partir d’un terminal en exécutant :
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
 ```
 
-Le programme de désinstallation décrit en détail les fichiers et répertoires qu’il supprime et demander confirmation avant de continuer.
+Le programme de désinstallation décrit en détail les fichiers et répertoires, elle supprime et demander confirmation avant de continuer.
 
-Passez le `-help` l’argument de la `uninstall` script pour des scénarios plus avancés.
+Passer le `-help` l’argument de la `uninstall` script pour des scénarios plus avancés.
 
 Pour les versions antérieures, vous devez supprimer manuellement les éléments suivants :
 
@@ -154,11 +154,11 @@ Pour les versions antérieures, vous devez supprimer manuellement les éléments
 
 ## <a name="downgrading"></a>La rétrogradation
 
-L’identificateur de lot pour **/Applications/Xamarin Workbooks.app** a été remplacée par `com.xamarin.Inspector` à `com.xamarin.Workbooks` dans la version 1.4, en tant que classeurs et l’inspecteur sont maintenant entièrement fractionnées.
+L’identificateur de bundle pour **Applications/Xamarin Workbooks.app** a été remplacée par `com.xamarin.Inspector` à `com.xamarin.Workbooks` dans la version 1.4, en tant que classeurs et l’inspecteur sont maintenant entièrement séparé.
 
-En raison d’un bogue dans les programmes d’installation plus anciens, il n’est pas possible de rétrograder les versions 1.4 ou ultérieure à l’aide de la 1.3.2 ou programmes d’installation plus anciens.
+En raison d’un bogue dans les programmes d’installation antérieures, il n’est pas possible de rétrograder les versions 1.4 ou ultérieure à l’aide de la 1.3.2 ou programmes d’installation plus anciens.
 
-Rétrogradation de 1.4 ou plus récent à 1.3.2 ou antérieure :
+Pour passer de 1,4 ou plus récent à 1.3.2 ou une version antérieure :
 
-1. [Désinstaller manuellement les classeurs & Inspecteur](#macOS)
-2. Exécutez le 1.3.2 ou antérieure `.pkg` programme d’installation
+1. [Désinstaller Workbooks & Inspector manuellement](#macOS)
+2. Exécutez le 1.3.2 ou une version antérieure `.pkg` programme d’installation

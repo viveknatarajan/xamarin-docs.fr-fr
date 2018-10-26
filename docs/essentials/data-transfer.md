@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 31e27556a6681b144084d2177cf3fde8fe8e5459
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353517"
@@ -70,7 +70,7 @@ Interface utilisateur de partage qui s'affichera alors ressemblera à ceci :
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* Si `Title` n'est pas défini il prendra pour valeur par défaut le nom de l'application.
+* Si `Title` n'est pas défini, il prendra pour valeur par défaut le nom de l'application.
 * `Subject` ne sera pas utilisé.
 
 -----

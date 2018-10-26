@@ -4,15 +4,15 @@ description: Cet article explique comment créer une écran de lancement d’app
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 40b8c38e89e96223bbf657ff06356d9fb2e9d9b3
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 0ec1defa29a4fe85c4ae3e809d8733e68cc268ac
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251065"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116919"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Écrans de lancement pour les applications Xamarin.iOS
 
@@ -28,7 +28,7 @@ Cette courte procédure décrit comment créer un écran de lancement avec soit 
 
 Dans iOS 8 (et versions ultérieures), le développeur peut créer un Storyboard unifiée spécial pour fournir l’écran de lancement au lieu d’utiliser une ou plusieurs images de lancement statique. Lorsque vous créez un table de montage séquentiel de lancement dans le concepteur iOS, utiliser les Classes de taille et de la disposition automatique pour définir différentes dispositions pour les environnements d’affichage différents. À l’aide des Classes de taille et de disposition automatique, le développeur peut créer un écran de lancement unique qui vous semble correct sur tous les appareils et afficher les environnements.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Dans Visual Studio pour Mac, créez un nouveau projet en sélectionnant **fichier > Nouvelle Solution** , puis en choisissant **application avec affichage unique**: 
 
@@ -95,7 +95,7 @@ Dans iOS 8 (et versions ultérieures), le développeur peut créer un Storyboard
 
 13. Enregistrez les modifications dans la table de montage séquentiel. Exécutez l’application sur un simulateur ou un appareil, et l’écran de lancement sera visible que le lancement de l’application.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Créer un nouveau projet. Dans Visual Studio, sélectionnez **fichier > Nouveau > projet > Visual c# > iPhone & iPad > application iOS (Xamarin)**:
 
@@ -140,7 +140,7 @@ Dans iOS 8 (et versions ultérieures), le développeur peut créer un Storyboard
 
     ![Ajouté de contrôleur d’affichage vide à l’aire de conception](launch-screens-images/launch08-vs.png)
 
-9. Définir le **arrière-plan** couleur de la vue principale du contrôleur d’affichage. Sélectionnez la vue en cliquant sur au milieu du contrôleur d’affichage et d’ajuster la couleur d’arrière-plan à l’aide du **fenêtre Propriétés**:
+9. Définir le **arrière-plan** couleur de la vue principale du contrôleur d’affichage. Sélectionnez la vue en cliquant sur au milieu du contrôleur d’affichage et ajuster la couleur d’arrière-plan en utilisant la **fenêtre Propriétés**:
     
     ![Une vue unique avec une couleur d’arrière-plan violet](launch-screens-images/launch09-vs.png)
 
@@ -187,7 +187,7 @@ Pour plus d’informations sur la création d’un écran de lancement avec un S
 
 ## <a name="migrating-to-launch-screen-storyboards"></a>Migration de Storyboards de l’écran de lancement
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Lors de la mise à jour une application existante pour utiliser des tables de montage séquentiel pour ses écrans de lancement, avec le bouton droit cliquez sur le **nom_projet** dans le **l’Explorateur de solutions** et sélectionnez **ajouter**  >  **Nouveau fichier...** . Sélectionnez **iOS** > **écran de lancement** et cliquez sur le **New** bouton :
 
@@ -205,7 +205,7 @@ Pour utiliser le nouveau plan conceptuel en tant qu’un écran de démarrage, p
 
     ![](launch-screens-images/storyboard08.png "Définition de l’écran de démarrage sur le plan conceptuel")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Avec le bouton droit sur le nom du projet dans le **l’Explorateur de solutions** et sélectionnez **ajouter** > **nouveau fichier...** : 
 

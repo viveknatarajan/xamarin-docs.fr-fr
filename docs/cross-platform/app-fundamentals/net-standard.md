@@ -5,13 +5,14 @@ ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: conceptdev
 ms.author: crdun
+ms.custom: video
 ms.date: 07/18/2018
-ms.openlocfilehash: 65ba1915a2a968a14f0ce21bcada76e1b83531b0
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270652"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105829"
 ---
 # <a name="net-standard-library-code-sharing"></a>Partage de code de bibliothèque .NET standard
 
@@ -27,7 +28,7 @@ Cette section décrit comment créer et utiliser une bibliothèque .NET Standard
 
 ### <a name="creating-a-net-standard-library"></a>Création d’une bibliothèque .NET Standard
 
-Ajout d’une bibliothèque .NET Standard à votre solution est assez simple.
+Vous pouvez ajouter une bibliothèque .NET Standard à votre solution avec ces étapes :
 
 1. Dans le **ajouter un nouveau projet** boîte de dialogue, sélectionnez le **.NET Core** catégorie, puis sélectionnez **bibliothèque .NET Standard**:
 
@@ -86,6 +87,10 @@ Une fois qu’une bibliothèque .NET Standard a été créée, vous pouvez ajout
 ![Référencement d’une bibliothèque .NET Standard](net-standard-images/vs04.png "dans Visual Studio, avec le bouton droit sur le nœud Références et choisissez Ajouter une référence... puis basculez vers l’onglet projets de la Solution comme indiqué")
 
 -----
+
+## <a name="net-standard-and-xamarinforms-for-the-net-developer-video"></a>.NET standard et Xamarin.Forms pour les développeurs .NET (vidéo)
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
 
 ## <a name="related-links"></a>Liens associés
 

@@ -1,57 +1,57 @@
 ---
-title: Onglet Barres et les contrôleurs de barre d’onglet dans Xamarin.iOS
-description: Ce document décrit comment les utiliser avec Xamarin.iOS et contrôleurs de barre d’onglet iOS. Il montre comment configurer un UITabBarController, travailler avec des images, définir des valeurs de badge, travail avec des événements et bien plus encore.
+title: Barres d’onglets et contrôleurs de barre d’onglets dans Xamarin.iOS
+description: Ce document décrit les contrôleurs de barre d’onglet iOS et comment les utiliser avec Xamarin.iOS. Il montre comment configurer un UITabBarController, de travailler avec des images, de définir les valeurs de badge, le travail avec des événements et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d8b096774e60ec0e0b69e109fa5da53c25e66d25
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: e4ab46994ed25daaef95a709e4f9df94f3a21cd0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789756"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114676"
 ---
-# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Onglet Barres et les contrôleurs de barre d’onglet dans Xamarin.iOS
+# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barres d’onglets et contrôleurs de barre d’onglets dans Xamarin.iOS
 
-Applications avec onglets sont utilisées dans iOS pour prendre en charge des interfaces utilisateur où plusieurs écrans peuvent être consultées dans aucun ordre particulier. Via le `UITabBarController` (classe), les applications peuvent inclure facilement prise en charge de tels scénarios écrans multiples. `UITabBarController` prend en charge de la gestion des écran multiples, ce qui permet au développeur de se concentrer sur les détails de chaque écran.
+Applications à onglets sont utilisées dans iOS pour prendre en charge des interfaces utilisateur où plusieurs écrans sont accessibles dans aucun ordre particulier. Via le `UITabBarController` (classe), les applications peuvent inclure facilement la prise en charge pour de tels scénarios multi-écran. `UITabBarController` s’occupe de la gestion des écran multiples, ce qui permet au développeur de se concentrer sur les détails de chaque écran.
 
-En règle générale, les onglets des applications sont générées avec le `UITabBarController` étant le `RootViewController` de la fenêtre principale. Toutefois, avec un peu de code supplémentaire, des applications à onglets permet également à la suite à certaines autres écran initial, telles que le scénario où une application présente tout d’abord un écran de connexion, suivi de l’interface à onglets.
+En règle générale, les applications à onglets sont générées avec le `UITabBarController` en cours la `RootViewController` de la fenêtre principale. Toutefois, avec un peu de code supplémentaire, les applications à onglets permet également à la suite pour certains autres écran initial, tels que le scénario dans lequel une application présente tout d’abord un écran de connexion, suivi de l’interface à onglets.
 
-Nous allons examiner à l’aide des onglets ici en passant par une procédure pas à pas d’une application simple. Ensuite, nous allons examiner comment travailler avec des onglets de non - `RootViewController` scénario.
+Nous allons examiner l’utilisation des onglets ici à travers une procédure pas à pas d’une application simple. Ensuite, nous allons étudier comment utiliser des onglets de la non - `RootViewController` scénario.
 
 ## <a name="introducing-uitabbarcontroller"></a>Présentation de UITabBarController
 
-Le `UITabBarController` prend en charge avec onglet développement d’applications par le texte suivant :
+Le `UITabBarController` prend en charge avec onglet développement d’applications par ce qui suit :
 
--  Autoriser plusieurs contrôleurs à être ajouté à celle-ci.
--  En fournissant une interface utilisateur à onglets, via le `UITabBar` (classe), pour autoriser un utilisateur basculer entre les contrôleurs et les vues. 
+-  Autorise plusieurs contrôleurs à ajouter à ce dernier.
+-  En fournissant une interface utilisateur à onglets, via le `UITabBar` (classe), pour autoriser un utilisateur de basculer entre les contrôleurs et leurs points de vue. 
 
 
-Contrôleurs sont ajoutés à la `UITabBarController` via son `ViewControllers` propriété, qui est un `UIViewController` tableau. Le `UITabBarController` elle-même gère le chargement du contrôleur approprié et en le présentant sa vue en fonction de l’onglet sélectionné.
+Contrôleurs sont ajoutés à la `UITabBarController` via son `ViewControllers` propriété, qui est un `UIViewController` tableau. Le `UITabBarController` lui-même gère le chargement du contrôleur approprié et à la présentation de sa vue en fonction de l’onglet sélectionné.
 
 Les onglets sont des instances de la `UITabBarItem` (classe), qui sont contenus dans un `UITabBar` instance. Chaque `UITabBar` instance est accessible via la `TabBarItem` propriété du contrôleur dans chaque onglet.
 
-Pour comprendre le fonctionnement de l’utilisation avec le `UITabBarController`, nous allons étudier la création d’une application simple qui utilise une.
+Pour comprendre comment travailler avec le `UITabBarController`, nous allons étudier la création d’une application simple qui utilise un.
 
-## <a name="tabbed-application-walkthrough"></a>Procédure pas à pas une Application avec onglets
+## <a name="tabbed-application-walkthrough"></a>Procédure pas à pas Application avec onglets
 
 Pour cette procédure pas à pas, nous allons créer l’application suivante :
 
 [![](creating-tabbed-applications-images/00-app.png "Exemple d’application à onglets")](creating-tabbed-applications-images/00-app.png#lightbox)
 
-Bien qu’il existe déjà un modèle d’application à onglets disponibles dans Visual Studio pour Mac, pour cet exemple, nous allons travailler à partir d’un projet vide pour mieux comprendre la façon dont l’application est construite.
+Bien qu’il existe déjà un modèle d’application avec onglets disponibles dans Visual Studio pour Mac, pour cet exemple, nous allons travailler à partir d’un projet vide pour obtenir une meilleure compréhension de la construction de l’application.
 
  <a name="Creating_the_Application" />
 
 
 ### <a name="creating-the-application"></a>Création de l’application
 
-Commençons par créer une nouvelle application.
+Nous allons commencer en créant une nouvelle application.
 
-Sélectionnez le **fichier > Nouveau > Solution** élément de menu dans Visual Studio pour Mac, puis sélectionnez un **iOS > application > projet vide** modèle, nommez le projet `TabbedApplication`, comme indiqué ci-dessous :
+Sélectionnez le **fichier > Nouveau > Solution** élément de menu dans Visual Studio pour Mac, puis sélectionnez un **iOS > application > projet vide** modèle, nommez le projet `TabbedApplication`, comme illustré ci-dessous :
 
 [![](creating-tabbed-applications-images/newsolution1.png "Sélectionnez le modèle de projet vide")](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
@@ -65,7 +65,7 @@ Ensuite, ajoutez une classe vide en sélectionnant **fichier > nouveau fichier**
 
 [![](creating-tabbed-applications-images/02-newclass.png "Ajoutez la classe TabController")](creating-tabbed-applications-images/02-newclass.png#lightbox)
 
-Le `TabController` classe contiendra l’implémentation de la `UITabBarController` qui permettent de gérer un tableau de `UIViewControllers`. Lorsque l’utilisateur sélectionne un onglet, le `UITabBarController` s’occupe de présenter la vue pour le contrôleur de la vue appropriée.
+Le `TabController` classe contiendra l’implémentation de la `UITabBarController` qui gère un tableau de `UIViewControllers`. Lorsque l’utilisateur sélectionne un onglet, le `UITabBarController` s’occupera de présenter l’affichage pour le contrôleur d’affichage approprié.
 
 Pour implémenter le `UITabBarController` nous devons effectuer les opérations suivantes :
 
@@ -74,7 +74,7 @@ Pour implémenter le `UITabBarController` nous devons effectuer les opérations 
 1.  Ajouter le `UIViewController` instances dans un tableau assigné à la `ViewControllers` propriété de la `TabController` . 
 
 
-Ajoutez le code suivant à la `TabController` classe pour effectuer ces étapes :
+Ajoutez le code suivant à la `TabController` classe pour atteindre ces étapes :
 
 ```csharp
 using System;
@@ -109,9 +109,9 @@ namespace TabbedApplication {
 }
 ```
 
-Notez que pour chaque `UIViewController` instance, nous avons défini le `Title` propriété de la `UIViewController`. Lorsque les contrôleurs sont ajoutés à la `UITabBarController`, le `UITabBarController` lira le `Title` pour chaque contrôleur et affichez-le sur l’étiquette de l’onglet associé, comme indiqué ci-dessous :
+Notez que pour chaque `UIViewController` instance, nous définissons le `Title` propriété de la `UIViewController`. Lorsque les contrôleurs sont ajoutés à la `UITabBarController`, le `UITabBarController` lira le `Title` pour chaque contrôleur et l’afficher dans l’étiquette de l’onglet associé comme indiqué ci-dessous :
 
-[![](creating-tabbed-applications-images/00-app.png "L’exemple d’application de s’exécuter")](creating-tabbed-applications-images/00-app.png#lightbox)
+[![](creating-tabbed-applications-images/00-app.png "L’exécution de l’application exemple")](creating-tabbed-applications-images/00-app.png#lightbox)
 
 #### <a name="setting-the-tabcontroller-as-the-rootviewcontroller"></a>Définition de la TabController comme le RootViewController
 
@@ -140,7 +140,7 @@ Pour obtenir le `UITabController` pour charger en tant que le premier écran, no
         }
 ```
 
-Si nous exécutons l’application maintenant, le `UITabBarController` sera chargé avec le premier onglet sélectionné par défaut. Affichage des résultats dans le contrôleur associé d’en sélectionnant une des autres onglets présentées par le `UITabBarController,` comme indiqué ci-dessous dans laquelle l’utilisateur a sélectionné le deuxième onglet :
+Si nous exécutons l’application maintenant, le `UITabBarController` sera chargé avec le premier onglet sélectionné par défaut. Affichage des résultats dans le contrôleur associé de sélection de l’un des autres onglets présenté par le `UITabBarController,` comme indiqué ci-dessous dans lequel l’utilisateur final a sélectionné le deuxième onglet :
 
 [![](creating-tabbed-applications-images/03-secondtab.png "Le deuxième onglet indiqué")](creating-tabbed-applications-images/03-secondtab.png#lightbox)
 
@@ -156,13 +156,13 @@ Maintenant que nous avons une exécution onglet application, nous allons modifie
 
 #### <a name="setting-a-system-item"></a>Définition d’un élément du système
 
-Tout d’abord, nous allons définir le premier onglet à utiliser un élément du système. Dans le constructeur de la `TabController`, supprimez la ligne qui définit le nom du contrôleur `Title` pour le `tab1` de l’instance et le remplacer par le code suivant pour définir le nom du contrôleur `TabBarItem` propriété :
+Tout d’abord, nous allons définir le premier onglet à utiliser un élément du système. Dans le constructeur de la `TabController`, supprimez la ligne qui définit le contrôleur `Title` pour le `tab1` d’instance et remplacez-le par le code suivant pour définir le contrôleur `TabBarItem` propriété :
 
 ```csharp
 tab1.TabBarItem = new UITabBarItem (UITabBarSystemItem.Favorites, 0);
 ```
 
-Lorsque vous créez le `UITabBarItem` à l’aide un `UITabBarSystemItem`, le titre et l’image sont fournies automatiquement par iOS, comme indiqué dans la capture d’écran ci-dessous montrant le **favoris** icône et le titre sur le premier onglet :
+Lorsque vous créez le `UITabBarItem` à l’aide un `UITabBarSystemItem`, le titre et l’image sont fournies automatiquement par iOS, comme illustré dans la capture d’écran ci-dessous montrant le **favoris** icône et le titre sur le premier onglet :
 
  ![](creating-tabbed-applications-images/04a-tabimage.png "Le premier onglet avec une icône représentant une étoile")
 
@@ -171,7 +171,7 @@ Lorsque vous créez le `UITabBarItem` à l’aide un `UITabBarSystemItem`, le ti
 
 #### <a name="setting-the-title-and-image"></a>Définir le titre et l’Image
 
-Outre l’utilisation d’un élément du système, le titre et l’image d’un `UITabBarItem` peut être défini sur des valeurs personnalisées. Par exemple, modifiez le code qui définit les `TabBarItem` propriété du contrôleur nommé `tab2` comme suit :
+Outre l’utilisation d’un élément du système, le titre et l’image d’un `UITabBarItem` peut être défini sur des valeurs personnalisées. Par exemple, modifiez le code qui définit le `TabBarItem` propriété du contrôleur nommé `tab2` comme suit :
 
 ```csharp
 tab2 = new UIViewController ();
@@ -181,21 +181,21 @@ tab2.TabBarItem.Title = "Second";
 tab2.View.BackgroundColor = UIColor.Orange;
 ```
 
-Le code ci-dessus suppose une image nommée `second.png` a été ajouté à la racine du projet dans Visual Studio pour Mac. Nous avons en fait ajouté trois images à notre projet, pour couvrir toutes les résolutions de périphérique, comme indiqué ci-dessous :
+Le code ci-dessus suppose une image nommée `second.png` a été ajouté à la racine du projet dans Visual Studio pour Mac. Nous avons en fait ajouté trois images à notre projet, afin de couvrir toutes les résolutions de périphérique, comme indiqué ci-dessous :
 
- [![](creating-tabbed-applications-images/tabbedimages7new.png "Images ajoutées au projet")](creating-tabbed-applications-images/tabbedimages7new.png#lightbox)
+ [![](creating-tabbed-applications-images/tabbedimages7new.png "Les images ajoutés au projet")](creating-tabbed-applications-images/tabbedimages7new.png#lightbox)
 
-L’image de l’onglet doit être une image png 30 x 30 avec une transparence de résolution normales, 60 x 60 pour haute résolution et 90 x 90 pour iPhone 6 Plus la résolution. Dans notre code, nous avons besoin uniquement de charger le fichier nommé `second.png` et iOS se chargera automatiquement la haute résolution sur les appareils avec un écran retina. Vous pouvez en savoir plus à ce sujet dans le [utilisation des Images](~/ios/app-fundamentals/images-icons/index.md) guides. Par défaut, éléments de barre d’onglet sont gris, avec une teinte bleue lorsque sélectionné.
+L’image de l’onglet doit être un png 30 x 30 avec une transparence pour la résolution normale, 60 x 60 pour la haute résolution et 90 x 90 pour iPhone 6 Plus résolution. Dans notre code, il nous suffit de charger le fichier nommé `second.png` et iOS se chargera automatiquement de la haute résolution sur les appareils avec un écran retina. Vous trouverez plus d’informations à ce sujet dans le [utilisation des Images](~/ios/app-fundamentals/images-icons/index.md) guides. Par défaut, éléments de barre d’onglet sont gris, avec une teinte bleu lorsque sélectionné.
 
 **Remarque**
 
-Les images ci-dessus peut également être ajoutés à la **ressources** directory, qui est un répertoire spécifique dont le contenu est automatiquement copié vers la racine de l’offre groupée d’application :
+Les images ci-dessus peut également être ajoutés à la **ressources** directory, qui est un répertoire spécifique dont le contenu est automatiquement copié vers la racine de l’offre groupée d’applications :
 
 [![](creating-tabbed-applications-images/tabbedapplication8.png "Les images en tant que ressources")](creating-tabbed-applications-images/tabbedapplication8.png#lightbox)
 
-En outre, lorsque nous avons défini le `Title` propriété directement suite le `TabBarItem`, elle remplace toute valeur définie pour `Title` sur le contrôleur lui-même.
+En outre, lorsque nous définissons le `Title` propriété directement suite le `TabBarItem`, elle remplace toute valeur définie pour `Title` sur le contrôleur lui-même.
 
-Lorsque nous exécutons l’application maintenant, le deuxième onglet montre nos titre personnalisé et une image comme indiqué ci-dessous :
+Lorsque nous exécutons l’application maintenant, le deuxième onglet affiche notre titre personnalisé et une image comme indiqué ci-dessous :
 
 [![](creating-tabbed-applications-images/05-customtab.png "Le deuxième onglet avec une icône carrée")](creating-tabbed-applications-images/05-customtab.png#lightbox)
 
@@ -210,11 +210,11 @@ Un onglet peut également afficher un badge. Par exemple, ajoutez la ligne suiva
 tab3.TabBarItem.BadgeValue = "Hi";
 ```
 
-L’exécution de ce entraîne une étiquette rouge avec la chaîne « Hi » dans le coin supérieur gauche de l’onglet comme indiqué ci-dessous :
+Cette exécution entraîne une étiquette rouge avec la chaîne « Hi » dans le coin supérieur gauche de l’onglet comme indiqué ci-dessous :
 
-[![](creating-tabbed-applications-images/06-badge.png "Le deuxième onglet avec un badge Hi")](creating-tabbed-applications-images/06-badge.png#lightbox)
+[![](creating-tabbed-applications-images/06-badge.png "Le deuxième onglet comportant un badge Hi")](creating-tabbed-applications-images/06-badge.png#lightbox)
 
-Le badge est souvent utilisé pour afficher une indication numérique non lue, nouveaux éléments. Pour supprimer le badge, définissez la `BadgeValue` NULL comme indiqué ci-dessous :
+Le badge est souvent utilisé pour afficher une indication numérique non lue, nouveaux éléments. Pour supprimer le badge, définissez le `BadgeValue` sur null comme indiqué ci-dessous :
 
 ```csharp
 tab3.TabBarItem.BadgeValue = null;
@@ -223,33 +223,33 @@ tab3.TabBarItem.BadgeValue = null;
  <a name="Tabs_in_Non-RootViewController_Scenarios" />
 
 
-## <a name="tabs-in-non-rootviewcontroller-scenarios"></a>Onglets dans les scénarios Non-RootViewController
+## <a name="tabs-in-non-rootviewcontroller-scenarios"></a>Onglets dans les scénarios Non RootViewController
 
-Dans l’exemple ci-dessus, nous vous avons montré comment travailler avec un `UITabBarController` lorsqu’il est le `RootViewController` de la fenêtre. Dans cet exemple, nous allons examiner comment utiliser un `UITabBarController` lorsqu’il n’est pas le `RootViewController` et afficher cette création d’utiliser des plans conceptuels.
+Dans l’exemple ci-dessus, nous vous avons montré comment travailler avec un `UITabBarController` lorsqu’il se trouve le `RootViewController` de la fenêtre. Dans cet exemple, nous allons examiner comment utiliser un `UITabBarController` quand il n’est pas le `RootViewController` et afficher cette création d’utiliser les Storyboards.
 
  <a name="Initial_Screen_Example" />
 
 
-### <a name="initial-screen-example"></a>Exemple de l’écran initial
+### <a name="initial-screen-example"></a>Écran initial de l’exemple
 
-Pour ce scénario, l’écran initial est chargé à partir d’un contrôleur qui n’est pas un `UITabBarController`. Quand l’utilisateur interagit avec l’écran en cliquant sur un bouton, le même contrôleur de la vue seront chargé dans un `UITabBarController`, qui est ensuite présenté à l’utilisateur. La capture d’écran suivante montre le flux d’application :
+Pour ce scénario, l’écran initial est chargé à partir d’un contrôleur qui n’est pas un `UITabBarController`. Quand l’utilisateur interagit avec l’écran en appuyant sur un bouton, le même contrôleur d’affichage seront chargé dans un `UITabBarController`, qui est ensuite présenté à l’utilisateur. La capture d’écran suivante montre le flux d’application :
 
 [![](creating-tabbed-applications-images/inital-screen-application.png "Cette capture d’écran montre le flux d’application")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
-Nous pouvons commencer une nouvelle application pour cet exemple. Là encore, nous allons utiliser la **iPhone > applications > projet vide (c#)** modèle, cette fois le projet d’affectation de noms `InitialScreenDemo`.
+Nous allons démarrer une nouvelle application pour cet exemple. Là encore, nous allons utiliser le **iPhone > application > projet vide (C#)** modèle, cette fois le projet d’affectation de noms `InitialScreenDemo`.
 
 
-Dans cet exemple, nous aurons besoin une table de montage séquentiel pour contenir les contrôleurs de la vue. Pour ajouter un plan conceptuel :
+Dans cet exemple nous avons besoin d’une table de montage séquentiel pour contenir notre contrôleurs d’affichage. Pour ajouter une table de montage séquentiel :
 
 - Avec le bouton droit sur le nom du projet, puis sélectionnez **Ajouter > nouveau fichier**.
 
-- Lorsque la boîte de dialogue Nouveau fichier s’affiche, accédez à **iOS > vide iPhone Storyboard**.
+- Lorsque la boîte de dialogue Nouveau fichier s’affiche, accédez à **iOS > iPhone Storyboard vide**.
 
 Appelons cette table de montage séquentiel **MainStoryboard** , comme illustré ci-dessous : 
 
 [![](creating-tabbed-applications-images/new-file-dialog.png "Ajouter un fichier MainStoryboard au projet")](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
-Il existe quelques étapes importantes à noter lors de l’ajout d’un plan conceptuel vers un fichier précédemment non-plan conceptuel, qui sont traitées dans le [Introduction à des plans conceptuels](~/ios/user-interface/storyboards/index.md) guide. Ces équivalents sont :
+Il existe quelques étapes importantes à noter lors de l’ajout d’une table de montage vers un fichier précédemment non-table de montage séquentiel, qui font l’objet dans le [Introduction aux Storyboards](~/ios/user-interface/storyboards/index.md) guide. Ces équivalents sont :
 
  
 1. Ajoutez votre nom de la table de montage séquentiel à la **Interface principale** section de la `Info.plist`:
@@ -264,44 +264,44 @@ Il existe quelques étapes importantes à noter lors de l’ajout d’un plan co
     }
     ```
 
-Nous allons d’avoir besoin de trois contrôleurs d’affichage pour cet exemple. Un, nommé `ViewController1`, sera utilisé en tant que notre contrôleur d’affichage Initial et le premier onglet. Les deux autres, nommés `ViewController2` et `ViewController3`, qui sera utilisée dans les onglets de la deuxième et troisième respectivement.
+Nous allons avoir besoin de trois contrôleurs d’affichage pour cet exemple. L’autre, nommé `ViewController1`, sera utilisé comme notre contrôleur d’affichage Initial et dans le premier onglet. Les deux autres, nommés `ViewController2` et `ViewController3`, qui sera utilisé dans les onglets de la deuxième et troisième respectivement.
 
-Ouvrez le concepteur en double-cliquant sur le fichier MainStoryboard.storyboard et faites glisser trois contrôleurs d’affichage dans l’aire de conception. Nous voulons que chacun de ces contrôleurs de la vue d’avoir leur propre classe correspondant au nom ci-dessus, c’est le cas, sous **identité > classe**, tapez son nom, comme illustré dans la capture d’écran ci-dessous :
+Ouvrez le concepteur en double-cliquant sur le fichier MainStoryboard.storyboard et faites glisser trois contrôleurs d’affichage une session sur l’aire de conception. Nous voulons que chacun de ces contrôleurs d’affichage pour avoir leur propre classe correspondant au nom ci-dessus, c’est le cas, sous **identité > classe**, tapez son nom, comme illustré dans la capture d’écran ci-dessous :
 
 [![](creating-tabbed-applications-images/class-name.png "La valeur de la classe ViewController1")](creating-tabbed-applications-images/class-name.png#lightbox)
 
-Visual Studio pour Mac génère automatiquement les classes et les fichiers de concepteur nécessaires, ceci peut être observé dans la zone de la Solution, comme illustré ci-dessous :
+Visual Studio pour Mac génère automatiquement les classes et les fichiers de concepteur nécessaires, ceci peut être observé dans le panneau Solution, comme illustré ci-dessous :
 
-[![](creating-tabbed-applications-images/solution-pad2.png "Généré automatiquement les fichiers dans le projet")](creating-tabbed-applications-images/solution-pad2.png#lightbox)
+[![](creating-tabbed-applications-images/solution-pad2.png "Fichiers générés automatiquement dans le projet")](creating-tabbed-applications-images/solution-pad2.png#lightbox)
 
  <a name="Creating_the_UI" />
 
 
 #### <a name="creating-the-ui"></a>Création de l’interface utilisateur
 
-Ensuite, nous allons créer une interface utilisateur simple pour chacune des vues de la ViewController à l’aide de Xamarin iOS concepteur.
+Ensuite, nous allons créer une interface utilisateur simple pour chacune des vues de ViewController, à l’aide du Concepteur de Xamarin iOS.
 
-Nous souhaitons faire glisser un `Label` et un `Button` sur ViewController1 à partir de la **boîte à outils** sur le côté droit. Ensuite, nous allons utiliser la zone de propriétés pour modifier le nom et le texte des contrôles à ce qui suit :
+Nous souhaitons faire glisser un `Label` et un `Button` sur ViewController1 à partir de la **boîte à outils** sur le côté droit. Ensuite, nous allons utiliser le panneau Propriétés pour modifier le nom et le texte des contrôles à ce qui suit :
 
 -  **Étiquette** : `Text`  =  **une**
 -  **Bouton** : `Title`  =  **utilisateur exécute une Action initiale**
 
 
-Nous contrôlera la visibilité du bouton de dans un `TouchUpInside` événement et nous devons faire référence dans le code-behind. Nous allons identifier avec le **nom** `aButton` dans la zone Propriétés, comme illustré dans la capture d’écran suivante :
+Nous contrôlera la visibilité de notre bouton dans un `TouchUpInside` événement et nous devons y faire référence dans le code-behind. Nous allons identifier avec le **nom** `aButton` dans le panneau Propriétés, comme illustré dans la capture d’écran suivante :
 
-[![](creating-tabbed-applications-images/abutton-properties.png "Le nom de la valeur aButton dans la zone de propriétés")](creating-tabbed-applications-images/abutton-properties.png#lightbox)
+[![](creating-tabbed-applications-images/abutton-properties.png "Définissez le nom sur aButton dans le panneau Propriétés")](creating-tabbed-applications-images/abutton-properties.png#lightbox)
 
-Votre Surface de conception doit maintenant ressembler à la capture d’écran ci-dessous :
+Votre aire de conception doit maintenant ressembler à la capture d’écran ci-dessous :
 
-[![](creating-tabbed-applications-images/design-surface1.png "Votre Surface de conception doit maintenant ressembler à cette capture d’écran")](creating-tabbed-applications-images/design-surface1.png#lightbox)
+[![](creating-tabbed-applications-images/design-surface1.png "Votre aire de conception doit maintenant ressembler à cette capture d’écran")](creating-tabbed-applications-images/design-surface1.png#lightbox)
 
-Vous allez ajouter un peu plus en détail à `ViewController2` et `ViewController3`, en ajoutant une étiquette à chaque et en modifiant le texte 'Deux' et 'Trois' respectivement. Cela met en surbrillance à l’utilisateur que nous examinons onglet/vue.
+Nous allons ajouter un peu plus en détail pour `ViewController2` et `ViewController3`, en ajoutant une étiquette à chacun et modifier le texte pour 'Deux' et 'Trois' respectivement. Cela met en surbrillance à l’utilisateur que nous nous intéressons à onglet/vue.
 
 #### <a name="wiring-up-the-button"></a>Le bouton de câblage
 
-Nous allons charger `ViewController1` lorsque l’application démarre tout d’abord. Quand l’utilisateur appuie sur le bouton, nous allons masquer le bouton et charger un `UITabBarController` avec la `ViewController1` instance dans le premier onglet.
+Nous allons charger `ViewController1` premier démarrage de l’application. Lorsque l’utilisateur actionne le bouton, nous allons masquer le bouton et charger un `UITabBarController` avec la `ViewController1` instance dans le premier onglet.
 
-Lorsque l’utilisateur relâche le `aButton`, nous souhaitons un événement TouchUpInside doit être déclenchée. Sélectionnez le bouton, puis, dans le **onglet événements** de la zone Propriétés, déclarez le Gestionnaire d’événements – `InitialActionCompleted` – afin qu’il peut apparaître dans le code. Ceci est illustré dans la capture d’écran ci-dessous :
+Lorsque l’utilisateur relâche le `aButton`, nous voulons un déclenchement de l’événement TouchUpInside. Nous allons sélectionner le bouton, puis, dans le **onglet événements** du panneau Propriétés, déclarez le Gestionnaire d’événements – `InitialActionCompleted` – afin de pouvoir y faire référence à dans le code. Ceci est illustré dans la capture d’écran ci-dessous :
 
 [![](creating-tabbed-applications-images/event-handler.png "Lorsque l’utilisateur relâche l’aButton, déclencher un événement de TouchUpInside")](creating-tabbed-applications-images/event-handler.png#lightbox)
 
@@ -314,37 +314,37 @@ partial void InitialActionCompleted (UIButton sender)
     }
 ```
 
-Enregistrez le fichier et exécuter l’application. Nous devons voir écran un s’affiche et le bouton disparaissent sur retoucher.
+Enregistrez le fichier et exécuter l’application. Nous devrions voir l’écran un s’affiche et le bouton disparaissent sur retoucher.
 
 #### <a name="adding-the-tab-bar-controller"></a>Ajout de la barre d’onglet contrôleur
 
-Nous disposons de notre affichage Initial fonctionne comme prévu. Ensuite, nous souhaitons ajouter à un `UITabBarController`, ainsi que les vues 2 et 3. Ouvrez le plan conceptuel dans le concepteur.
+Nous avons maintenant notre affichage Initial fonctionne comme prévu. Ensuite, nous souhaitons ajouter à un `UITabBarController`, ainsi que les vues 2 et 3. Nous allons ouvrir la table de montage séquentiel dans le concepteur.
 
-Dans le **boîte à outils**, recherchez le **onglet barre contrôleur** contrôleurs de & objets déplacer sur l’aire de conception. Comme vous pouvez le voir dans la capture d’écran ci-dessous, le contrôleur de la barre d’onglet est sans interface utilisateur et met donc les deux contrôleurs de la vue avec lui par défaut :
+Dans le **boîte à outils**, recherchez le **contrôleur de barre d’onglet** sous contrôleurs & objets et le déplacer sur l’aire de conception. Comme vous pouvez le voir dans la capture d’écran ci-dessous, le contrôleur de barre d’onglet est sans interface utilisateur et par conséquent apporte deux contrôleurs d’affichage avec elle par défaut :
 
-[![](creating-tabbed-applications-images/tabbarcontroller.png "Ajoutez un contrôleur de barre d’onglet à la disposition")](creating-tabbed-applications-images/tabbarcontroller.png#lightbox)
+[![](creating-tabbed-applications-images/tabbarcontroller.png "Ajout d’un contrôleur de barre d’onglet à la disposition")](creating-tabbed-applications-images/tabbarcontroller.png#lightbox)
 
-Supprimez ces nouveaux contrôleurs de vue en sélectionnant la barre noire au bas et sur la touche SUPPR.
+Supprimer ces nouveaux contrôleurs de vue en sélectionnant la barre noire située en bas, puis en appuyant sur Supprimer.
 
-Dans notre plan conceptuel, nous pouvons utiliser Segues pour traiter les transitions entre le TabBarController et les contrôleurs de la vue. Après l’interaction avec la vue initiale, nous souhaitons charger dans le TabBarController présentée à l’utilisateur. Nous allons configurer dans le concepteur.
+Dans notre table de montage séquentiel, nous pouvons utiliser Segues pour gérer les transitions entre le TabBarController et nos contrôleurs d’affichage. Après l’interaction avec la vue initiale, nous souhaitons charger dans le TabBarController présenté à l’utilisateur. Nous allons configurer cela dans le concepteur.
 
-**CTRL + clic** et **glisser** à partir du bouton à la TabBarController. Sur la souris, un menu contextuel s’affiche. Vous souhaitez utiliser un segue modale. 
+**CTRL + clic** et **glisser** à partir du bouton à la TabBarController. Sur le trajet de souris, un menu contextuel s’affiche. Nous souhaitons utiliser un segue modal. 
  
-Pour configurer chacun de ses onglets, **Ctrl + clic** à partir de la TabBarController à chacune de nos contrôleurs de la vue dans l’ordre d’un à trois, puis sélectionnez la relation **onglet** dans le menu contextuel, comme illustré ci-dessous :
+Pour configurer chacun de nos onglets, **Ctrl + clic** à partir de la TabBarController à chacun de nos contrôleurs d’affichage dans l’ordre d’un à trois, puis sélectionnez la relation **onglet** dans le menu contextuel, comme illustré ci-dessous :
 
 [![](creating-tabbed-applications-images/context-menu.png "Sélectionnez l’onglet relation")](creating-tabbed-applications-images/context-menu.png#lightbox)
 
-Votre plan conceptuel doit ressembler à la capture d’écran ci-dessous :
+Votre Storyboard doit ressembler à la capture d’écran ci-dessous :
 
-[![](creating-tabbed-applications-images/segue-layout.png "Le plan conceptuel doit ressembler à cette capture d’écran")](creating-tabbed-applications-images/segue-layout.png#lightbox)
+[![](creating-tabbed-applications-images/segue-layout.png "La table de montage séquentiel doit ressembler à cette capture d’écran")](creating-tabbed-applications-images/segue-layout.png#lightbox)
 
-Si nous cliquez sur l’un des éléments de barre d’onglet et Explorer le panneau Propriétés, vous pouvez voir un nombre de différentes options, comme illustré ci-dessous :
+Si nous cliquez sur l’un des éléments de barre d’onglet et explorez le panneau Propriétés, vous pouvez voir un nombre de différentes options, comme illustré ci-dessous :
 
-[![](creating-tabbed-applications-images/properties-panel.png "Définir les options de l’onglet dans l’Explorateur de propriétés")](creating-tabbed-applications-images/properties-panel.png#lightbox)
+[![](creating-tabbed-applications-images/properties-panel.png "Définissant les options de l’onglet dans l’Explorateur de propriétés")](creating-tabbed-applications-images/properties-panel.png#lightbox)
 
-Nous pouvons l’utiliser pour modifier certains attributs tels que le badge, le titre et le fichier iOS [identificateur](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/TabBarItem.html), entre autres
+Nous pouvons l’utiliser pour modifier certains attributs tels que le badge, le titre et l’iOS [identificateur](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/TabBarItem.html), entre autres
 
-Si nous enregistrer et exécuter l’application maintenant, nous allons trouvé que le bouton s’affiche de nouveau lorsque l’instance de ViewController1 est chargé dans le TabBarController. Nous allons résoudre ce problème en vérifiant si la vue actuelle est un contrôleur de la vue parent. Dans ce cas, nous savons que nous sommes dans le TabBarController, et par conséquent, le bouton doit être masqué. Nous allons ajouter le code suivant à la classe ViewController1 :
+Si nous enregistrer et exécuter l’application maintenant, nous allons trouver que le bouton s’affiche à nouveau lorsque l’instance de ViewController1 est chargé dans le TabBarController. Nous allons résoudre ce problème en vérifiant si la vue actuelle a un contrôleur d’affichage du parent. Le cas échéant, nous savons que nous sommes à l’intérieur de la TabBarController, et par conséquent, le bouton doit être masqué. Nous allons ajouter le code ci-dessous à la classe ViewController1 :
 
 ```csharp
 public override void ViewDidLoad ()
@@ -356,7 +356,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Lorsque l’application s’exécute et l’utilisateur appuie sur le bouton dans le premier écran, le UITabBarController est chargé avec la vue dans le premier écran placé dans le premier onglet, comme indiqué ci-dessous :
+Lorsque l’application s’exécute et l’utilisateur appuie sur le bouton sur le premier écran, le UITabBarController est chargé avec la vue dans le premier écran placé dans le premier onglet, comme indiqué ci-dessous :
 
 [![](creating-tabbed-applications-images/first-view.png "L’exemple de sortie d’application")](creating-tabbed-applications-images/first-view.png#lightbox)
 
@@ -366,11 +366,11 @@ Lorsque l’application s’exécute et l’utilisateur appuie sur le bouton dan
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article expliqué comment utiliser un `UITabBarController` dans une application. Nous avons décrit comment charger des contrôleurs dans chaque onglet, ainsi que la définition des propriétés sur les onglets ce titre, image et badge. Nous avons examiné puis, à l’aide de plans conceptuels, comment charger un `UITabBarController` lors de l’exécution lorsqu’il n’est pas le `RootViewController` de la fenêtre.
+Cet article a abordé comment utiliser un `UITabBarController` dans une application. Nous avons présenté comment charger des contrôleurs dans chaque onglet, ainsi que comment définir des propriétés sur les onglets ce titre, image et badge. Nous avons examiné puis, à l’aide de storyboards, comment charger un `UITabBarController` lors de l’exécution lorsqu’il n’est pas le `RootViewController` de la fenêtre.
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Création d’Applications avec onglet (exemple)](https://developer.xamarin.com/samples/monotouch/CreatingTabbedApplications/)
+- [Création d’Applications avec onglets (exemple)](https://developer.xamarin.com/samples/monotouch/CreatingTabbedApplications/)
 - [Images.zip](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
 - [Référence de classe de UITabBarController](http://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

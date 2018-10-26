@@ -4,15 +4,15 @@ description: Ce guide présente le Concepteur de Xamarin pour iOS. Il montre com
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: 6905eddbc4488b08f9c9e896efe5f980e0e03345
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: e9c2a42b9108c04f18252a410d40dbc03013f6dd
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242366"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123750"
 ---
 # <a name="ios-designer-basics"></a>principes fondamentaux du Concepteur d’iOS
 
@@ -36,13 +36,13 @@ Le concepteur iOS permet aux développeurs de concevoir visuellement d’interfa
 
 Un contrôleur d’affichage comporte deux parties : une représentation visuelle dans le concepteur iOS et une classe c# associée :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![Un contrôleur d’affichage dans le concepteur iOS](introduction-images/1-storyboardwithviewcontroller-vsmac.png "un contrôleur d’affichage dans le concepteur iOS")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
 
 [![Le code pour un contrôleur d’affichage](introduction-images/2-viewcontrollercode-vsmac.png "le code pour un contrôleur d’affichage")](introduction-images/2-viewcontrollercode-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Un contrôleur d’affichage dans le concepteur iOS](introduction-images/1-storyboardwithviewcontroller-vs.png "un contrôleur d’affichage dans le concepteur iOS")](introduction-images/1-storyboardwithviewcontroller-vs-large.png#lightbox)
 
@@ -52,11 +52,11 @@ Un contrôleur d’affichage comporte deux parties : une représentation visuel
 
 Dans son état par défaut, un contrôleur d’affichage ne fournit pas toutes les fonctionnalités ; Il doit être rempli avec des contrôles. Ces contrôles sont placés dans la vue du contrôleur d’affichage, la zone rectangulaire qui contient l’ensemble du contenu de l’écran. La plupart des contrôleurs d’affichage contient des contrôles courants tels que des boutons, des étiquettes et des champs de texte, comme illustré dans la capture d’écran suivante, qui montre un contrôleur d’affichage qui contient un bouton : 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![Un contrôleur d’affichage qui contient un bouton](introduction-images/3-viewcontrollerwithbutton-vsmac.png "un contrôleur d’affichage qui contient un bouton")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Un contrôleur d’affichage qui contient un bouton](introduction-images/3-viewcontrollerwithbutton-vs.png "un contrôleur d’affichage qui contient un bouton")](introduction-images/3-viewcontrollerwithbutton-vs-large.png#lightbox)
 
@@ -64,13 +64,13 @@ Dans son état par défaut, un contrôleur d’affichage ne fournit pas toutes l
 
 Certains contrôles, tels que des étiquettes contenant du texte statique, peuvent être ajoutées pour le contrôleur d’affichage et y toucher. Toutefois, plus souvent à pas, les contrôles doivent être personnalisés par programmation. Par exemple, le bouton ajouté ci-dessus doit faire quelque chose lorsque l’utilisateur appuie dessus, un gestionnaire d’événements doit être ajouté dans le code.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Pour accéder et manipuler le bouton dans le code, il doit avoir un identificateur unique. Fournir un identificateur unique en sélectionnant le bouton, en ouvrant le **panneau Propriétés**et en définissant son **nom** champ à une valeur telle que « SubmitButton » :
 
 [![Définition de nom d’un bouton dans le panneau Propriétés](introduction-images/4-settingbuttonname-vsmac.png "définissant les nom d’un bouton dans le panneau Propriétés")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Pour accéder et manipuler le bouton dans le code, il doit avoir un identificateur unique. Fournir un identificateur unique en sélectionnant le bouton, en ouvrant le **fenêtre Propriétés**et en définissant son **nom** champ à une valeur telle que « SubmitButton » :
 
@@ -80,13 +80,13 @@ Pour accéder et manipuler le bouton dans le code, il doit avoir un identificate
 
 Maintenant que le bouton a un nom, il est accessible dans le code. Mais comment cela fonctionne-t-il ?
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Dans le **panneau solutions**, la navigation vers **ViewController.cs** et en cliquant sur l’indicateur de divulgation révèle que le contrôleur d’affichage `ViewController` étendues de définition de classe deux fichiers, chacun d’eux contient un [classe partielle](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) définition :
 
 [![Les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "les deux fichiers qui composent la classe ViewController : ViewController.cs et ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Dans le **l’Explorateur de solutions**, la navigation vers **ViewController.cs** et en cliquant sur l’indicateur de divulgation révèle que le contrôleur d’affichage `ViewController` définition de classe s’étend sur deux fichiers, chacun des qui contient un [classe partielle](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) définition :
 
@@ -123,11 +123,11 @@ Le `SubmitButton` déclaration de propriété connecte à l’ensemble du `ViewC
 
 La capture d’écran suivante illustre que IntelliSense reconnaît désormais les `SubmitButton` référencer dans **ViewController.cs**:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![IntelliSense reconnaissant la référence SubmitButton](introduction-images/6-submitbuttonintellisense-vsmac.png "IntelliSense reconnaissant la référence SubmitButton")](introduction-images/6-submitbuttonintellisense-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![IntelliSense reconnaissant la référence SubmitButton](introduction-images/6-submitbuttonintellisense-vs.png "IntelliSense reconnaissant la référence SubmitButton")](introduction-images/6-submitbuttonintellisense-vs-large.png#lightbox)
 
@@ -143,13 +143,13 @@ Cette section présente les différentes parties du concepteur iOS et propose un
 
 ### <a name="launching-the-ios-designer"></a>Lancement du concepteur iOS
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Les projets Xamarin.iOS créés avec Visual Studio pour Mac incluent un storyboard. Pour afficher le contenu d’un storyboard, double-cliquez sur le fichier .storyboard dans le **panneau solutions**:
 
 [![Un storyboard ouvrir dans le concepteur iOS](introduction-images/7-storyboardopen-vsmac.png "un storyboard ouvrir dans le concepteur iOS")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 La plupart des projets Xamarin.iOS créées avec Visual Studio 2015 ou 2017 incluent une table de montage séquentiel. Pour afficher le contenu d’un storyboard, double-cliquez sur le fichier .storyboard dans le **l’Explorateur de solutions**:
 
@@ -163,7 +163,7 @@ La plupart des projets Xamarin.iOS créées avec Visual Studio 2015 ou 2017 incl
 
 Le concepteur iOS a six sections principales :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![Sections du concepteur iOS](introduction-images/8-sixpartsofiosdesigner-vsmac.png "Sections du concepteur iOS")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png#lightbox)
 
@@ -174,7 +174,7 @@ Le concepteur iOS a six sections principales :
 5. **Structure du document** – affiche l’arborescence des contrôles qui composent la disposition de l’interface en cours de modification. En cliquant sur un élément dans l’arborescence de le sélectionner dans le concepteur iOS et afficher ses propriétés dans le **panneau Propriétés**. Cela est pratique pour la sélection d’un contrôle spécifique dans une interface utilisateur profondément imbriquées.
 6. **En bas de barre d’outils** – contient des options pour modifier la façon dont le concepteur iOS affiche le fichier .storyboard ou .xib, y compris les appareils, l’orientation et zoom.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Sections du concepteur iOS](introduction-images/8-sixpartsofiosdesigner-vs.png "Sections du concepteur iOS")](introduction-images/8-sixpartsofiosdesigner-vs-large.png#lightbox)
 
@@ -193,11 +193,11 @@ Le concepteur iOS a six sections principales :
 
 Pour ajouter un contrôle à une interface, faites-le glisser à partir de la **boîte à outils** et déposez-la sur l’aire de conception. Lorsque vous ajoutez ou un contrôle de positionnement, instructions verticales et horizontales mettre en surbrillance les positions de disposition couramment utilisé comme centre vertical, horizontal center et les marges :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
  
 ![Sur l’aire de conception, les instructions mettre en surbrillance les positions de disposition couramment utilisés](introduction-images/9-layoutguides-vsmac.png "sur l’aire de conception, les instructions mettre en surbrillance les positions de disposition couramment utilisés")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Sur l’aire de conception, les instructions mettre en surbrillance les positions de disposition couramment utilisés](introduction-images/9-layoutguides-vs.png "sur l’aire de conception, les instructions mettre en surbrillance les positions de disposition couramment utilisés")
 
@@ -205,7 +205,7 @@ Pour ajouter un contrôle à une interface, faites-le glisser à partir de la **
 
 La ligne bleue en pointillés dans l’exemple ci-dessus fournit des indications alignement visual Centre horizontal pour faciliter l’emplacement du bouton.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 #### <a name="context-menu-commands"></a>Commandes de menu contextuel
 
@@ -213,17 +213,17 @@ Un menu contextuel est disponible à la fois sur l’aire de conception et le **
 
 [![Le menu contextuel sur l’aire de conception](introduction-images/10-contextmenudesignsurface-vsmac.png "le menu contextuel sur l’aire de conception")](introduction-images/10-contextmenudesignsurface-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 -----
 
 ### <a name="constraints-toolbar"></a>Barre d’outils de contraintes
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
  
 [![La barre d’outils de contraintes](introduction-images/11-constraintstoolbar-vsmac.png "la barre d’outils de contraintes")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![La barre d’outils de contraintes](introduction-images/11-constraintstoolbar-vs.png "la barre d’outils de contraintes")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
@@ -237,11 +237,11 @@ Dans les versions précédentes du concepteur iOS, en cliquant sur une vue déj�
 
 - Mode de modification de frame :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![Frame de modification de bouton mode](introduction-images/12a-frameeditingmode-vsmac.png "bouton en mode d’édition de Frame")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Frame de modification de bouton mode](introduction-images/12a-frameeditingmode-vs.png "bouton en mode d’édition de Frame")
 
@@ -249,11 +249,11 @@ Dans les versions précédentes du concepteur iOS, en cliquant sur une vue déj�
 
 - Mode de modification de contrainte :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![Bouton du mode de modification de contrainte](introduction-images/12b-constrainteditingmode-vsmac.png "bouton mode édition de contrainte")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Bouton du mode de modification de contrainte](introduction-images/12b-constrainteditingmode-vs.png "bouton mode édition de contrainte")
 
@@ -270,11 +270,11 @@ Les contraintes de mise à jour / mise à jour des frames réside de bouton à d
 
 La barre d’outils inférieure offre un moyen pour sélectionner l’appareil, l’orientation et zoom permet d’afficher un fichier storyboard ou .xib dans le concepteur iOS :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![La barre d’outils inférieure, permet de sélectionner un appareil et l’orientation de l’aire de conception](introduction-images/13-bottomtoolbar-vsmac.png "la barre d’outils inférieure, permet de sélectionner un appareil et l’orientation de l’aire de conception")](introduction-images/13-bottomtoolbar-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![La barre d’outils inférieure, permet de sélectionner un appareil et l’orientation de l’aire de conception](introduction-images/13-bottomtoolbar-vs.png "la barre d’outils inférieure, permet de sélectionner un appareil et l’orientation de l’aire de conception")](introduction-images/13-bottomtoolbar-vs-large.png#lightbox)
 
@@ -284,11 +284,11 @@ La barre d’outils inférieure offre un moyen pour sélectionner l’appareil, 
 
 Développée, la barre d’outils du bas affiche tous les appareils, orientations et/ou adaptations applicables au document actif. En cliquant sur les modifie l’affichage sur l’aire de conception. 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![La barre d’outils inférieure, développé pour afficher les appareils et les orientations](introduction-images/14-bottomtoolbarexpanded-vsmac.png "la barre d’outils inférieure, développé pour afficher les appareils et des orientations")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![La barre d’outils inférieure, développé pour afficher les appareils et les orientations](introduction-images/14-bottomtoolbarexpanded-vs.png "la barre d’outils inférieure, développé pour afficher les appareils et des orientations")](introduction-images/14-bottomtoolbarexpanded-vs-large.png#lightbox)
 
@@ -301,11 +301,11 @@ Lorsque [classes de taille](~/ios/user-interface/storyboards/unified-storyboards
 - Si **système d’exploitation iPhone** / **Portrait**, est sélectionné, le menu fournit les options pour créer une variante de l’interface pour la largeur compacte, catégorie de taille de hauteur normale. 
 - Si **iPad Pro 9,7"** / **paysage** / **plein écran** est sélectionnée, le menu fournit les options pour créer une variante de l’interface pour la largeur de régulière, de la catégorie de taille de hauteur normale.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![La barre d’outils inférieure utilisé pour faire varier d’une interface par catégorie de taille](introduction-images/15-edittraitsbutton-vsmac.png "la barre d’outils inférieure utilisé pour faire varier d’une interface par catégorie de taille")](introduction-images/15-edittraitsbutton-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![La barre d’outils inférieure utilisé pour faire varier d’une interface par catégorie de taille](introduction-images/15-edittraitsbutton-vs.png "la barre d’outils inférieure utilisé pour faire varier d’une interface par catégorie de taille")](introduction-images/15-edittraitsbutton-vs-large.png#lightbox)
 
@@ -315,11 +315,11 @@ Lorsque [classes de taille](~/ios/user-interface/storyboards/unified-storyboards
 
 L’aire de conception prend en charge le zoom par le biais de plusieurs contrôles :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
  
 ![Les contrôles de zoom dans la barre d’outils inférieure](introduction-images/16-zoomcontrols-vsmac.png "les contrôles de zoom dans la barre d’outils inférieure")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Les contrôles de zoom dans la barre d’outils inférieure](introduction-images/16-zoomcontrols-vs.png "les contrôles de zoom dans la barre d’outils inférieure")
 
@@ -334,7 +334,7 @@ Les contrôles sont les suivantes :
 
 Ces contrôles ajustent le zoom sur l’aire de conception. Elles n’affectent pas l’interface utilisateur de l’application lors de l’exécution.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ### <a name="properties-pad"></a>Panneau Propriétés
 
@@ -345,7 +345,7 @@ Utilisez le **panneau Propriétés** pour modifier l’identité, les styles vis
 
 Le **panneau Propriétés** contient trois sections :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="properties-window"></a>Propriétés (fenêtre)
 
@@ -363,7 +363,7 @@ Le **fenêtre Propriétés** contient trois sections :
 2.  **Disposition** – propriétés qui effectuer le suivi de la position et la taille du contrôle, y compris les contraintes et les cadres, sont répertoriées ici.
 3.  **Événements** : événements et gestionnaires d’événements spécifiés ici. Utile pour gérer les événements tactiles, appuyez sur, faites glisser, etc. Événements peuvent également être gérés directement dans le code.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 #### <a name="editing-properties-in-the-properties-pad"></a>Modification des propriétés dans le panneau Propriétés
 
@@ -373,7 +373,7 @@ En plus de la modification visuelle sur l’aire de conception, le concepteur iO
 
 [![Afficher les propriétés du contrôleur](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "afficher les propriétés du contrôleur")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 #### <a name="editing-properties-in-the-properties-window"></a>Modification des propriétés dans la fenêtre Propriétés
 
@@ -390,11 +390,11 @@ En plus de la modification visuelle sur l’aire de conception, le concepteur iO
 
 #### <a name="default-values"></a>Valeurs par défaut
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 De nombreuses propriétés dans le **panneau Propriétés** afficher aucune valeur ou une valeur par défaut. Toutefois, le code de l’application peut toujours modifier ces valeurs. Le **panneau Propriétés** n’affiche pas les valeurs définies dans le code.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 De nombreuses propriétés dans le **fenêtre Propriétés** afficher aucune valeur ou une valeur par défaut. Toutefois, le code de l’application peut toujours modifier ces valeurs. Le **fenêtre Propriétés** n’affiche pas les valeurs définies dans le code.
 
@@ -402,13 +402,13 @@ De nombreuses propriétés dans le **fenêtre Propriétés** afficher aucune val
 
 #### <a name="event-handlers"></a>Gestionnaires d’événements
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Pour spécifier des gestionnaires d’événements personnalisés pour divers événements, utilisez le **événements** onglet de la **panneau Propriétés**. Par exemple, dans la capture d’écran ci-dessous, un `HandleClick` méthode gère le bouton **Touch dans** événement :
 
 [![Le panneau Propriétés, avec un gestionnaire d’événements pour un bouton](introduction-images/19-buttonpropertiespadevents-vsmac.png "le panneau Propriétés, avec un gestionnaire d’événements pour un bouton")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Pour spécifier des gestionnaires d’événements personnalisés pour divers événements, utilisez le **événements** onglet de la **fenêtre Propriétés**. Par exemple, dans la capture d’écran ci-dessous, un `HandleClick` méthode gère le bouton **Touch dans** événement :
 
@@ -418,13 +418,13 @@ Pour spécifier des gestionnaires d’événements personnalisés pour divers é
 
 Une fois qu’un gestionnaire d’événements a été spécifié, une méthode portant le même nom doit être ajoutée à la classe de contrôleur d’affichage correspondant. Sinon, un `unrecognized selector` exception se produit lorsque l’utilisateur appuie sur le bouton :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![Une exception non reconnu sélecteur](introduction-images/20-unrecognizedselector-vsmac.png "une exception de sélecteur non reconnu")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
 Notez que, après un gestionnaire d’événements a été spécifié dans le **panneau Propriétés**, le concepteur iOS sera immédiatement ouvrir le fichier de code correspondant et offrir à insérer la déclaration de méthode. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Une exception non reconnu sélecteur](introduction-images/20-unrecognizedselector-vs.png "une exception de sélecteur non reconnu")](introduction-images/20-unrecognizedselector-vs-large.png#lightbox)
 
@@ -436,11 +436,11 @@ Pour obtenir un exemple qui utilise des gestionnaires d’événements personnal
 
 Le concepteur iOS peut également afficher la hiérarchie d’une interface de contrôles sous forme de plan. Le contour est disponible en sélectionnant le **structure du Document** onglet, comme indiqué ci-dessous :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![La structure du Document](introduction-images/21-buttonoutlineview-vsmac.png "la structure du Document")](introduction-images/21-buttonoutlineview-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![La structure du Document](introduction-images/21-buttonoutlineview-vs.png "la structure du Document")](introduction-images/21-buttonoutlineview-vs-large.png#lightbox)
 
@@ -448,7 +448,7 @@ Le concepteur iOS peut également afficher la hiérarchie d’une interface de c
 
 Le contrôle sélectionné en mode plan reste synchronisé avec le contrôle sélectionné sur l’aire de conception.  Cette fonctionnalité est utile pour sélectionner un élément dans une hiérarchie d’interface profondément imbriquées.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ## <a name="revert-to-xcode"></a>Revenir à Xcode
 
@@ -458,7 +458,7 @@ Il est possible d’utiliser le concepteur iOS et Xcode Interface Builder de man
 
 Après avoir apporté des modifications dans Xcode Interface Builder, enregistrez le fichier et revenir à Visual Studio pour Mac. Les modifications sont synchronisées au projet Xamarin.iOS.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 -----
 

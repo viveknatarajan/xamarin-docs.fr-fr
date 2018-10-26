@@ -1,58 +1,58 @@
 ---
-title: Extensions d’application Message avancés dans Xamarin.iOS
-description: Cet article montre des techniques avancées pour travailler avec les Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application des Messages et présente les nouvelles fonctionnalités à l’utilisateur.
+title: Extensions d’application Advanced Message dans Xamarin.iOS
+description: Cet article montre des techniques avancées pour travailler avec des Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application Messages et présente les nouvelles fonctionnalités à l’utilisateur.
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: eca3dcc19714251184092fbe136d0078f1ca8d54
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: baceb59116dd907918b34eca4f44293051190954
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788017"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120519"
 ---
-# <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensions d’application Message avancés dans Xamarin.iOS
+# <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensions d’application Advanced Message dans Xamarin.iOS
 
-_Cet article montre des techniques avancées pour travailler avec les Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application des Messages et présente les nouvelles fonctionnalités à l’utilisateur._
+_Cet article montre des techniques avancées pour travailler avec des Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à l’application Messages et présente les nouvelles fonctionnalités à l’utilisateur._
 
 
-Nouveau pour iOS 10, une Extension d’application Message intègre le **Messages** application et affiche le nombre de nouvelles fonctionnalités à l’utilisateur. L’extension peut envoyer des messages interactifs, texte, autocollants et fichiers multimédias.
+Nouveau à iOS 10, une Extension d’application Message intègre le **Messages** application et présente de nouvelles fonctionnalités à l’utilisateur. L’extension peut envoyer des messages interactifs, texte, autocollants et fichiers multimédias.
 
-## <a name="about-message-app-extensions"></a>Sur les Extensions d’application de Message
+## <a name="about-message-app-extensions"></a>À propos des Extensions d’application Message
 
-Comme indiqué ci-dessus, une Extension d’application Message intègre le **Messages** application et affiche le nombre de nouvelles fonctionnalités à l’utilisateur. L’extension peut envoyer des messages interactifs, texte, autocollants et fichiers multimédias. Deux types d’Extension d’application de Message sont disponibles :
+Comme indiqué ci-dessus, une Extension d’application Message intègre le **Messages** application et présente de nouvelles fonctionnalités à l’utilisateur. L’extension peut envoyer des messages interactifs, texte, autocollants et fichiers multimédias. Deux types d’Extension d’application de Message sont disponibles :
 
-- **Les packs d’autocollant** -contient une collection d’autocollants l’utilisateur peut ajouter à un message. Packs d’étiquette peuvent être créés sans écrire de code.
-- **iMessage application** -peut présenter une Interface utilisateur personnalisée au sein de l’application de Messages pour la sélection des autocollants, saisie de texte, y compris les fichiers de support (avec des conversions de type facultatif) et création, modification et envoyer des messages de l’interaction.
+- **Packs d’autocollant** -contient une collection d’autocollants de l’utilisateur peut ajouter à un message. Packs d’autocollant peuvent être créés sans écrire de code.
+- **iMessage application** -peut présenter une Interface utilisateur personnalisée dans l’application Messages pour la sélection autocollants, saisie de texte, y compris les fichiers de support (avec des conversions de type facultatif) et création, modification et envoi de messages de l’interaction.
 
 Extensions des applications Message fournissent trois principaux types de contenu :
 
-- **Messages interactives** -sont un type de contenu de message personnalisé qui génère d’une application, lorsque l’utilisateur appuie sur le message, l’application est lancée au premier plan.
-- **Autocollants** -sont des images générées par l’application qui peut être incluse dans les messages envoyés entre les utilisateurs. Consultez notre [le Générateur de glace](https://developer.xamarin.com/samples/monotouch/ios10/IceCreamBuilder/) exemple d’application pour un exemple d’implémentation d’une application de l’autocollant du Pack.
-- **Tout autre contenu pris en charge** -l’application peut fournir le contenu comme des photos, vidéos, texte ou des liens du type qui a toujours été pris en charge par l’application des Messages.
+- **Des Messages interactifs** -sont un type de contenu de message personnalisé qui génère une application, lorsque l’utilisateur appuie sur le message, l’application est lancée au premier plan.
+- **Autocollants** -sont des images générées par l’application qui peut être incluse dans les messages envoyés entre les utilisateurs. Consultez notre [Ice cream Générateur](https://developer.xamarin.com/samples/monotouch/ios10/IceCreamBuilder/) exemple d’application pour un exemple d’implémentation d’une application du Pack d’autocollant.
+- **Autre contenu pris en charge** -l’application peut fournir le contenu tel que des photos, vidéos, texte ou des liens de type qui a toujours été pris en charge par l’application de Messages.
 
-Nouveau pour iOS 10, l’application Message inclut désormais son propre magasin d’applications dédié, intégrés. Toutes les applications qui incluent les Extensions d’applications de Message seront affiche et promues dans ce magasin. Le tiroir application de nouveaux Messages affiche toutes les applications qui ont été téléchargées à partir du Store de Messages pour fournir un accès rapide aux utilisateurs.
+Nouveau à iOS 10, l’application Message inclut désormais son propre Store application dédié, intégrés. Toutes les applications qui incluent des Extensions d’applications de Message seront affiche et promues dans ce magasin. Le tiroir application de nouveaux Messages affiche toutes les applications qui ont été téléchargées à partir du Store application Messages pour fournir un accès rapide aux utilisateurs.
 
-Également nouveau dans iOS 10, Apple a ajouté les Attribution application Inline qui lui permet de découvrir facilement une application. Par exemple, si un utilisateur envoie le contenu vers un autre à partir d’une application que l’utilisateur 2 n’est installé (par exemple, une vignette par exemple), le nom de l’application émettrice est répertorié sous le contenu de l’historique des messages. Si l’utilisateur appuie sur l’application un nom, le Message App Store nous série ouvert et l’application sélectionnée dans le magasin.
+Également nouveau dans iOS 10, Apple a ajouté les Attribution application Inline qui permet à l’utilisateur à découvrir facilement une application. Par exemple, si un utilisateur envoie le contenu vers un autre à partir d’une application qui n’a pas l’utilisateur 2nd installé (par exemple, un autocollant par exemple), le nom de l’application émettrice est répertorié sous le contenu de l’historique des messages. Si l’utilisateur appuie sur l’application nom, le Store application Message nous est ouvert et l’application sélectionnée dans le magasin.
 
-Extensions des applications de message sont semblables à des applications iOS existantes que le développeur est familier à la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Exemple :
+Extensions des applications de message sont similaires aux applications iOS existantes que le développeur est familier à la création et ils ont accès à toutes les infrastructures standards et les fonctionnalités d’une application iOS standard. Exemple :
 
-- Ils ont accès dans l’application fournisseur.
-- Ils ont accès à payer par Apple.
-- Ils ont accès au matériel de périphérique tels que l’appareil photo.
+- Ils ont accès à l’achat dans l’application.
+- Ils ont accès à Apple Pay.
+- Ils ont accès au matériel tels que l’appareil photo de l’appareil.
 
-Extensions des applications de message sont uniquement pris en charge sur iOS 10, mais le contenu de l’envoi de ces Extensions est visible sur les appareils watchOS et macOS. La nouvelle _récents Page_ ajouté à watchOS 3, affichera autocollants récents qui ont été envoyés à partir du téléphone, y compris celles des Extensions d’applications de Message, et l’utilisateur d’envoyer ces vignettes à partir de la surveillance.
+Extensions des applications de message sont uniquement pris en charge sur iOS 10, toutefois, le contenu qui envoient ces Extensions est visible sur les appareils watchOS et macOS. La nouvelle _récents Page_ ajouté à watchOS 3, affiche les autocollants récents qui ont été envoyés à partir du téléphone, y compris ceux à partir des Extensions d’applications de Message, et l’utilisateur d’envoyer ces autocollants de l’Apple watch.
 
 ## <a name="about-interactive-messages"></a>À propos des Messages interactifs
 
-Messages interactifs présentent une bulle de Message personnalisé et sont fournies par une Extension d’application de Message. Ils permettent à l’utilisateur créer le contenu du Message interactif, insérez-le dans le champ d’entrée de Message et l’envoient.
+Des Messages interactifs présentent une bulle de Message personnalisé et sont fournies par une Extension d’application de Message. Ils permettent à l’utilisateur créer le contenu du Message interactif, insérez-le dans le champ d’entrée de Message et envoient.
 
 [![](advanced-message-app-extensions-images/interactive01.png "Création de contenu de Message interactif")](advanced-message-app-extensions-images/interactive01.png#lightbox)
 
-L’utilisateur destinataire peut répondre à un Message interactif en appuyant sur ses bulles de Message de l’historique des messages pour charger l’Extension d’application de Message qui l’a créée. L’Extension sera être lancé plein écran et autoriser l’utilisateur à composer une réponse et l’envoyer à l’utilisateur d’origine.
+L’utilisateur destinataire peut répondre à un Message interactif en appuyant sur ses bulles de Message dans l’historique des messages pour charger l’Extension d’application de Message qui l’a créée. L’Extension sera être lancé plein écran et autoriser l’utilisateur à rédiger une réponse et le renvoyer à l’utilisateur d’origine.
 
 [![](advanced-message-app-extensions-images/interactive02.png "L’Extension lancé plein écran")](advanced-message-app-extensions-images/interactive02.png#lightbox)
 
@@ -61,45 +61,45 @@ Les rubriques suivantes sont traitées en détail ci-dessous :
 
 - Vue d’ensemble des API de messages
 - Le cycle de vie d’Extension
-- Composer un Message
+- Composition d’un Message
 - Envoi d’un Message
 
 ## <a name="messages-api-overview"></a>Vue d’ensemble des API de messages
 
-Lorsqu’elle est appelée par l’utilisateur, une Extension d’application Message s’affichera au bas de l’historique du Message dans le mode d’affichage compact :
+Lorsqu’elle est appelée par l’utilisateur, une Extension d’application de Message s’affiche en bas de l’historique des messages dans le mode d’affichage compact :
 
 [![](advanced-message-app-extensions-images/interactive03.png "Vue d’ensemble des API de messages")](advanced-message-app-extensions-images/interactive03.png#lightbox)
 
-1. Le `MSMessageAppViewController` objet dans l’Extension d’application de Message est la classe principale qui est appelée lors de l’affichage de l’extension à l’utilisateur.
+1. Le `MSMessageAppViewController` objet dans l’Extension d’application de Message est la classe principale qui est appelée lors de l’extension s’affiche à l’utilisateur.
 2. La conversation est présentée à l’utilisateur comme un `MSConversation` instance d’objet.
-3. La `MSMessage` classe représente une bulle de Message donné dans la conversation.
+3. Le `MSMessage` classe représente une bulle de Message donné dans la conversation.
 4. `MSSession` contrôle la façon dont un message est envoyé.
-5. `MSMessageTemplateLayout` contrôle la façon dont le message s’affiche
+5. `MSMessageTemplateLayout` contrôle comment le message s’affiche
 
 ## <a name="the-extension-lifecycle"></a>Le cycle de vie d’Extension
 
-Examinez le processus d’une Extension d’application Message devient active :
+Examinons le processus d’une Extension d’application Message devient active :
 
 [![](advanced-message-app-extensions-images/interactive04.png "Le processus d’une Extension d’application Message devient active")](advanced-message-app-extensions-images/interactive04.png#lightbox)
 
-1. Lorsqu’une extension est lancée (par exemple sur le contenu de l’application), l’application Message lance un processus.
-2. Le `DidBecomeActive` méthode est appelée et reçoit un `MSConversation` qui représente la conversation dont l’Extension d’application de Message est en cours d’exécution dans.
-3. Étant donné que l’extension est basée dérivé d’un `UIViewController` les deux `ViewWillAppear` et `ViewDidAppear` sont appelées.
+1. Lorsqu’une extension est lancée (par exemple dans le tiroir application), l’application Message lance un processus.
+2. Le `DidBecomeActive` méthode est appelée et reçoit un `MSConversation` qui représente la conversation à laquelle l’Extension d’application de Message est en cours d’exécution dans.
+3. Étant donné que l’extension est basée issu d’un `UIViewController` à la fois `ViewWillAppear` et `ViewDidAppear` sont appelées.
 
-Ensuite, examinez le processus d’une Extension d’application Message devient désactivé :
+Ensuite, examinons le processus d’une Extension d’application Message devient désactivé :
 
 [![](advanced-message-app-extensions-images/interactive05.png "Le processus d’une Extension d’application Message devient désactivé")](advanced-message-app-extensions-images/interactive05.png#lightbox)
 
-1. Lors de l’Extension d’application de Message est en cours de désactivation, le `ViewWillDisappear` méthode est appelée en premier.
+1. Lors de l’Extension d’application de messages est désactivée, le `ViewWillDisappear` méthode est appelée en premier.
 2. Le `ViewDidDisappear` méthode sera appelée.
-3. Le `WillResignActive` méthode est appelée et reçoit un `MSConversation` qui représente la conversation dont l’Extension d’application de Message est en cours d’exécution dans. À ce stade, la connexion entre l’application des Messages et l’extension sont sur le point d’être publié.
-4. À un stade ultérieur, le processus se termine par l’application des Messages.
+3. Le `WillResignActive` méthode est appelée et reçoit un `MSConversation` qui représente la conversation à laquelle l’Extension d’application de Message est en cours d’exécution dans. À ce stade, la connexion entre l’application Messages et l’extension sont sur le point d’être publié.
+4. Ultérieurement, le processus se termine par l’application Messages.
 
-Dans la mesure où une extension est un processus de courte durée, il est arrêté efficacement par le système pour économiser de l’énergie de traitement et la batterie. Le développeur doit Gardez cela à l’esprit lorsque vous concevez et implémentez une Extension d’application de Message.
+Dans la mesure où une extension est un processus de courte durée de vie, elle est arrêtée efficacement par le système pour économiser l’énergie de traitement et de la batterie. Le développeur doit Gardez cela à l’esprit lorsque vous concevez et implémentez une Extension d’application de Message.
 
-## <a name="composing-a-message"></a>Composer un Message
+## <a name="composing-a-message"></a>Composition d’un Message
 
-Une fois l’Extension d’application de Message est en cours d’exécution dans un processus et a affiché son Interface utilisateur, le code suivant peut être utilisé pour composer un nouveau message :
+Une fois que l’Extension d’application de Message est en cours d’exécution dans un processus et a affiché son Interface utilisateur, le code suivant peut être utilisé pour composer un nouveau message :
 
 ```csharp
 MSMessage ComposeMessage (IceCream iceCream, string caption, MSSession session = null)
@@ -122,31 +122,31 @@ MSMessage ComposeMessage (IceCream iceCream, string caption, MSSession session =
 }
 ```
 
-Ce code crée un nouveau `MSMessage` et définir plusieurs propriétés (telles que `Url`). Pendant que le message peut uniquement être créé sur iOS, il peut être envoyé sur iOS et macOS à afficher.
+Ce code crée un nouveau `MSMessage` et définit plusieurs propriétés (telles que `Url`). Tandis que le message peut uniquement être créé sur iOS, il peut être envoyé pour iOS et macOS à afficher.
 
-Si l’utilisateur clique sur la bulle de Message dans la conversation sur macOS, les Mac essaiera d’ouvrir l’adresse spécifiée dans l’URL dans le navigateur web. Par conséquent, le site Web des développeurs doit être en mesure d’afficher qu'une représentation du message dans le navigateur web de macOS en fonction des ordinateurs.
+Si l’utilisateur clique sur la bulle de Message dans la conversation sur macOS, les Mac essaiera d’ouvrir l’adresse spécifiée dans l’URL dans le navigateur web. Par conséquent, le site Web des développeurs doit être en mesure d’afficher qu'une représentation du message dans le navigateur web sur macOS en fonction des ordinateurs.
 
-Le `AccessibilityLabel` propriété est utilisée par les lecteurs d’écran pour lire la transcription de la conversation à l’utilisateur. Le `Layout` propriété spécifie la façon dont le message s’affichera, actuellement uniquement la `MSMessageTemplateLayout` est pris en charge et se présente comme suit :
+Le `AccessibilityLabel` propriété est utilisée par les lecteurs d’écran pour lire la transcription de la conversation à l’utilisateur. Le `Layout` propriété spécifie la façon dont le message s’affichera, actuellement uniquement la `MSMessageTemplateLayout` est pris en charge et ressemble à ceci :
 
 [![](advanced-message-app-extensions-images/interactive06.png "Le modèle MSMessageTemplateLayout")](advanced-message-app-extensions-images/interactive06.png#lightbox)
 
-Le `Image` propriété de la `MSMessageTemplateLayout` fournit du contenu pour le corps principal de la MessageBubble sur l’écran. Le `MediaFileUrl` propriété également fournit du contenu pour le corps de la bulle de Message, mais autorise pour le contenu qui n’est pas pris en charge par `UIImage` (par exemple, un fichier vidéo qui effectuerait une boucle en arrière-plan). Si les deux le `Image` et `MediaFileUrl` propriétés sont fournies, le `Image` propriété aura la priorité. Le `MediaFileUrl` prend en charge PNG, JPEG, GIF et vidéo (dans n’importe quel format qui peut être lu par l’infrastructure de lecteur) formats multimédias.
+Le `Image` propriété de la `MSMessageTemplateLayout` fournit du contenu pour le corps principal de la MessageBubble sur l’écran. Le `MediaFileUrl` propriété également fournit du contenu pour le corps de la bulle de Message, mais autorise pour le contenu qui n’est pas pris en charge par `UIImage` (par exemple, un fichier vidéo qui effectuerait une boucle en arrière-plan). Si les deux le `Image` et `MediaFileUrl` propriétés sont fournies, le `Image` propriété est prioritaire. Le `MediaFileUrl` prend en charge PNG, JPEG, GIF et vidéo (dans n’importe quel format qui peut être lu par l’infrastructure Media Player) formats multimédias.
 
-La taille du média recommandée est pixels de 300 x 300 à la résolution 3 x. Ressources légèrement supérieure et inférieure sont également acceptées et Apple suggère de test avec quelques différentes tailles pour obtenir de meilleurs résultats. L’application Message sera bas-exemple et mettre à l’échelle de ce média selon les besoins.
+La taille du média recommandée est pixels de 300 x 300 à la résolution de 3 x. Ressources légèrement supérieure et inférieures sont également acceptés et Apple suggère quelques tailles différentes pour obtenir les meilleurs résultats de test. L’application Message sera sous-échantillonner et mettre à l’échelle de ce média en fonction des besoins.
 
-Lorsque les ressources sont envoyés au récepteur, tous les médias attachés seront automatiquement transcodé par l’application Messages pour optimiser les à partir de transfert sur les réseaux. Pour cette raison, Apple déconseille notamment le texte dans le média qui est joint au message, car le support sera mis à l’échelle vers le bas et compressé pour la transmission, potentiellement rendant ainsi le texte illisible.
+Lorsque les ressources sont envoyés au destinataire, tous les médias attachés sera automatiquement transcodés par l’application Messages pour les optimiser à partir de transfert sur les réseaux. Pour cette raison, Apple vous découragez toute notamment le texte dans le média qui est joint au message, car le support sera mis à l’échelle vers le bas et compressé pour la transmission, potentiellement rendant ainsi le texte illisible.
 
-Le `ImageTitle` et `ImageSubtitle` propriétés fournissent une description pour le média qui est présentée dans la bulle de Message. Ces propriétés recevront sous forme de texte pour le périphérique de réception où ils seront rendus précisément dans le coin inférieur gauche de l’image.
+Le `ImageTitle` et `ImageSubtitle` propriétés fournissent une description pour le média est présenté dans la bulle de Message. Ces propriétés seront envoyées comme texte à l’appareil de réception où ils seront restitués on ne retrouvait pas dans le coin inférieur gauche de l’image.
 
-Le `Caption`, `SubCaption`, `TrailingCaption` et `TrailingSubcaption` propriétés décrivent l’image supplémentaire et est restituées dans une section sous l’image. Le paramétrage de ces propriétés pour `null` créera une bulle de Message sans la zone de légende :
+Le `Caption`, `SubCaption`, `TrailingCaption` et `TrailingSubcaption` propriétés décrivent l’image supplémentaire et s’affichera dans la section sous l’image. Le paramétrage de ces propriétés pour `null` créera une bulle de Message sans la zone de légende :
 
 [![](advanced-message-app-extensions-images/interactive07.png "Une bulle de Message sans la zone de légende")](advanced-message-app-extensions-images/interactive07.png#lightbox)
 
-La dernière chose à noter est que l’application Messages dessinera icône de l’Extension application de messages dans le coin supérieur gauche de la bulle de Message.
+La dernière chose à noter est que l’application Messages dessinera icône de l’Extension application de Message dans le coin supérieur gauche de la bulle de Message.
 
 ## <a name="sending-a-message"></a>Envoi d’un Message
 
-Une fois un `MSMessage` a été composé, le code suivant peut être utilisé pour envoyer des :
+Une fois un `MSMessage` a été composé, le code suivant peut être utilisé pour l’envoyer :
 
 ```csharp
 public void SendMessage (MSMessage message)
@@ -165,30 +165,30 @@ public void SendMessage (MSMessage message)
 }
 ```
 
-Le `ActiveConversation` propriété de la `MSMessagesAppViewController` contiendront la conversation actuelle l’Extension d’application de Message a été lancée dans.
+Le `ActiveConversation` propriété de la `MSMessagesAppViewController` contiendra la conversation actuelle l’Extension d’application de Message a été lancée dans.
 
 Appelez le `InsertMessage` de la `MSConversation` pour inclure le message dans la conversation et de gérer les erreurs qui peuvent se produire. Si le message est inclus avec succès, la bulle de Message s’affichera dans le champ d’entrée.
 
-En outre, l’extension peut envoyer des différents types de données à la conversation telles que :
+En outre, l’extension peut envoyer différents types de données à la conversation comme :
 
-- **texte** - `ActiveConversation.InsertText ("Message", (error) => {...});`
+- **Texte** - `ActiveConversation.InsertText ("Message", (error) => {...});`
 - **Pièces jointes** - `ActiveConversation.InsertAttachment (new NSUrl ("path"), "filename", (error) => {...});`
 - **Autocollants**  -  `ActiveConversation.InsertSticker (sticker, (obj) => {...});` où `sticker` est un `MSSticker`.
 
-Une fois le nouveau contenu dans le champ d’entrée, l’utilisateur est en mesure d’envoyer le message en cliquant sur le bleu **envoyer** bouton (comme n’importe quel message classique). Il n’existe aucun moyen pour l’Extension d’application de Message envoyer automatiquement le contenu, ce processus est totalement sous le contrôle de l’utilisateur.
+Une fois le nouveau contenu sur le champ d’entrée, l’utilisateur est en mesure d’envoyer le message en appuyant sur le bleu **envoyer** bouton (comme ils le feraient n’importe quel message classique). Il n’existe aucun moyen pour l’Extension d’application de Message envoyer automatiquement le contenu, ce processus est totalement sous le contrôle de l’utilisateur.
 
-## <a name="handling-the-compact-and-expanded-modes"></a>Gérer les Modes Compact et développés
+## <a name="handling-the-compact-and-expanded-modes"></a>Gérer les Modes Compact et développées
 
 Une Extension d’application de Message peut être affichée dans un des deux modes d’affichage différents :
 
-[![](advanced-message-app-extensions-images/interactive08.png "Une Extension d’application Message affiché dans les deux modes d’affichage différents : Compact et développée")](advanced-message-app-extensions-images/interactive08.png#lightbox)
+[![](advanced-message-app-extensions-images/interactive08.png "Une Extension d’application Message affiché dans les deux modes d’affichage différents : Compact & développé")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
-- **Compact** -il s’agit du mode par défaut où l’Extension d’application Message occupe de 25 % en bas de l’affichage du Message. En mode réduit, l’application n’a pas d’accès pour le clavier, le défilement horizontal ou reconnaissances de mouvement de balayage. L’application a accès au champ d’entrée et appelle à `InsertMessage` s’affichera instantanément à l’utilisateur.
-- **Développé** -l’Extension d’application Message remplit toute la vue de Message. Il n’a pas accès au champ d’entrée, mais n’a pas accès au clavier, défilement horizontal et reconnaissances de mouvement de balayage.
+- **Compact** -il s’agit du mode par défaut où l’Extension d’application Message prend jusqu'à 25 % en bas de la vue de Message. En mode Compact, l’application n’a pas accès au clavier, le défilement horizontal ou modules de reconnaissance de mouvement de balayage. L’application a accès au champ d’entrée et appelle à `InsertMessage` s’affichera instantanément à l’utilisateur à cet endroit.
+- **Développé** -l’Extension d’application Message remplit toute la vue de Message. Il n’a pas accès au champ d’entrée, mais a accès au clavier, le défilement horizontal et modules de reconnaissance de mouvement de balayage.
 
-Une Extension d’application de Message est possible entre ces modes par programme ou manuellement par l’utilisateur à tout moment et doit être immédiatement réactive à aucun mode est modifié dans la vue.
+Une Extension d’application de Message est possible entre ces modes par programme ou manuellement par l’utilisateur à tout moment et doit être instantanément réactif à un mode est modifié dans la vue.
 
-Examinons l’exemple suivant de gérer le basculement entre les deux modes d’affichage différents. Deux contrôleurs de vue différents sera nécessaire pour chaque état. Le `StickerBrowserViewController` gère la **Compact** vue et la `AddStickerViewController` gère la **développée** vue :
+Examinons l’exemple suivant de gérer le basculement entre les deux modes d’affichage différent. Deux contrôleurs d’affichage différentes seront nécessaires pour chaque état. Le `StickerBrowserViewController` gère la **Compact** vue et le `AddStickerViewController` gérera le **développé** vue :
 
 ```csharp
 using System;
@@ -359,7 +359,7 @@ namespace MessagesExtension {
 }
 ```
 
-Le `DidTransition` méthode est substituée pour gérer le basculement entre les deux modes :
+Le `DidTransition` méthode est substituée pour gérer le changement entre les deux modes :
 
 ```csharp
 public override void DidTransition (MSMessagesAppPresentationStyle presentationStyle)
@@ -378,33 +378,33 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 }
 ```
 
-Si vous le souhaitez, l’application pourrait avoir utilisé le `WillTransition` méthode pour gérer le changement de mode d’affichage avant qu’il est présenté à l’utilisateur (comme dans l’exemple de générateur de Icecream ci-dessus). Pour plus d’informations, consultez notre [une personnalisation plus poussée autocollant](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md) documentation.
+Si vous le souhaitez, l’application aurait pu utiliser le `WillTransition` méthode pour gérer le changement de mode d’affichage avant qu’il est présenté à l’utilisateur (comme dans l’exemple de générateur de rapports Icecream ci-dessus). Pour plus d’informations, consultez notre [une personnalisation plus poussée autocollant](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md) documentation.
 
 ## <a name="replying-to-a-message"></a>Réponse à un Message
 
-Il existe deux cas nécessitant une Extension d’application Message gérer lors de la réponse à un message :
+Il existe deux cas une Extension d’application de Message doit gérer lors de la réponse à un message :
 
-[![](advanced-message-app-extensions-images/interactive09.png "L’Extension d’application de Message dans les modes inactif et actif")](advanced-message-app-extensions-images/interactive09.png#lightbox)
+[![](advanced-message-app-extensions-images/interactive09.png "L’Extension d’application de messages dans les modes d’inactif à actif")](advanced-message-app-extensions-images/interactive09.png#lightbox)
 
-- **L’extension est inactif** -il est une des bulles de Message de l’Extension application de messages dans la transcription de Message que l’utilisateur peut appuyer pour activer les extensions et poursuivre la conversation interactive.
-- **Extension est Active** -l’utilisateur peut appuyer à bulles de Message de l’Extension d’application Message dans la transcription de Message pour entrer le mode d’affichage développé et continuer le processus interactif à partir de leur point d’interruption.
+- **L’extension est inactif** -il est une des bulles de Message de l’Extension d’application Message dans la transcription de Message que l’utilisateur peut appuyer pour activer les extensions et poursuivre la conversation interactive.
+- **Extension est Active** -l’utilisateur peut appuyer la bulle de Message de l’Extension application de messages dans la transcription de Message à entrer le mode d’affichage développé et à continuer le processus interactif à partir de l’endroit où il s’était arrêté.
 
 ### <a name="the-extension-is-inactive"></a>L’Extension est inactif
 
-Lorsque l’utilisateur clique sur une bulle de Message par l’utilisateur dans la transcription de Message et l’Extension d’application de Message est inactive, le processus suivant se produit :
+Lors de l’appui sur une bulle de Message par l’utilisateur dans la transcription de Message et l’Extension d’application de Message est inactive, le processus suivant se produit :
 
 [![](advanced-message-app-extensions-images/interactive10.png "Gestion d’une bulle de Message inactif")](advanced-message-app-extensions-images/interactive10.png#lightbox)
 
 1. L’utilisateur appuie sur la bulle de Message de l’extension.
 2. Lorsqu’une extension est lancée, l’application Message lance un processus.
-3. Le `DidBecomeActive` méthode est appelée et reçoit un `MSConversation` qui représente la conversation dont l’Extension d’application de Message est en cours d’exécution dans.
-4. Étant donné que l’extension est basée dérivé d’un `UIViewController` les deux `ViewWillAppear` et `ViewDidAppear` sont appelées.
+3. Le `DidBecomeActive` méthode est appelée et reçoit un `MSConversation` qui représente la conversation à laquelle l’Extension d’application de Message est en cours d’exécution dans.
+4. Étant donné que l’extension est basée issu d’un `UIViewController` à la fois `ViewWillAppear` et `ViewDidAppear` sont appelées.
 
 Lorsque le processus est terminé, l’Extension d’application de Message s’affiche dans le mode d’affichage développé.
 
-### <a name="the-extension-is-active"></a>L’Extension est actif.
+### <a name="the-extension-is-active"></a>L’Extension est Active
 
-Lorsqu’une bulle de Message est tapée par l’utilisateur dans la transcription de Message et l’Extension d’application de Message est active, le processus suivant se produit :
+Lors de l’appui sur une bulle de Message par l’utilisateur dans la transcription de Message et l’Extension d’application de Message est active, le processus suivant se produit :
 
 [![](advanced-message-app-extensions-images/interactive11.png "Gestion d’une bulle de Message active")](advanced-message-app-extensions-images/interactive11.png#lightbox)
 
@@ -415,9 +415,9 @@ Lorsqu’une bulle de Message est tapée par l’utilisateur dans la transcripti
 
 Là encore, lorsque le processus est terminé, l’Extension d’application de Message s’affiche dans le mode d’affichage développé.
 
-### <a name="accessing-the-selected-message"></a>L’accès au Message sélectionné
+### <a name="accessing-the-selected-message"></a>Accédez au Message sélectionné
 
-Dans les deux cas, lorsque l’utilisateur appuie sur une bulle de Message appartenant à l’Extension d’application de Message, elle devra accéder à la `MSMessage` qui a été tapée à l’aide de la `SelectedMessage` propriété de la `MSConversation`.
+Dans les deux cas, lorsque l’utilisateur appuie sur une bulle de Message appartenant à l’Extension d’application de Message, elle devra accéder à la `MSMessage` que l'on a cliqué sur à l’aide de la `SelectedMessage` propriété de la `MSConversation`.
 
 Exemple :
 
@@ -451,19 +451,19 @@ namespace MessageExtension
 }
 ```
 
-Le message sélectionné doit être indiqué dans l’interface utilisateur de l’Extension application de Message et l’utilisateur doit être autorisé à composer une réponse.
+Le message sélectionné doit être affiché dans l’interface utilisateur de l’Extension application de Message et l’utilisateur doit être autorisé à composer une réponse.
 
 ## <a name="removing-partially-completed-messages"></a>Suppression partiellement terminée des Messages
 
-Lors de l’envoi des différentes étapes d’interactif d’une conversation entre deux l’utilisateur de la conversation, les bulles de Message partiellement terminée peut commencer à encombrer la transcription de Message :
+Lors de l’envoi les différentes étapes d’une conversation interactive entre deux l’utilisateur dans la conversation, le Message remonte ensuite partiellement exécuté peut commencer à encombrer la transcription de Message :
 
-[![](advanced-message-app-extensions-images/interactive12.png "Les bulles de Message partiellement terminée peuvent encombrer la transcription de Message")](advanced-message-app-extensions-images/interactive12.png#lightbox)
+[![](advanced-message-app-extensions-images/interactive12.png "Le Message remonte ensuite partiellement exécuté peuvent encombrer la transcription de Message")](advanced-message-app-extensions-images/interactive12.png#lightbox)
 
-Au lieu de cela, l’Extension d’application de Message doit réduire le précédent Message remonte dans un commentaire concis dans la transcription de Message :
+Au lieu de cela, l’Extension d’application de Message doit réduire le précédent Message remonte ensuite dans un commentaire concis dans la transcription de Message :
 
 [![](advanced-message-app-extensions-images/interactive13.png "Réduction des bulles de Message précédent dans la transcription de Message")](advanced-message-app-extensions-images/interactive13.png#lightbox)
 
-Ceci est géré à l’aide un `MSSession` pour réduire toutes les étapes existants. Par conséquent, le `DidSelectMessage` méthode de la `MSMessagesAppViewController` classe peut être modifiée pour ressembler à ce qui suit :
+Ceci est géré à l’aide un `MSSession` pour réduire toutes les étapes existantes. Par conséquent, le `DidSelectMessage` méthode de la `MSMessagesAppViewController` classe peut être modifiée pour ressembler à ceci :
 
 ```csharp
 public override void DidSelectMessage (MSMessage message, MSConversation conversation)
@@ -498,34 +498,34 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 }
 ```
 
-Si le message sélectionné a déjà une sortie `MSSession`, il est utilisé sans quoi une nouvelle `MSSession` est créé. Le `SummaryText` propriété de la `MSMessage` est utilisée pour ajouter une légende pour les étapes précédentes réduits. Si le `SummaryText` est définie sur `null`, les étapes précédentes de la conversation seront supprimés en totalité à partir de la transcription de la Conversation.
+Si le message sélectionné a déjà une sortie `MSSession`, il est utilisé ; sinon un nouveau `MSSession` est créé. Le `SummaryText` propriété de la `MSMessage` est utilisée pour ajouter une légende pour les étapes précédentes réduits. Si le `SummaryText` propriété est définie sur `null`, les étapes précédentes de la conversation va être complètement supprimés de la transcription de Conversation.
 
 ## <a name="advanced-message-api-features"></a>Message API fonctionnalités avancées
 
-Avec les fonctionnalités de base de la nouvelle API Message abordée en détail ci-dessus, allons examiner les certaines des fonctionnalités plus avancées qui Apple a intégré dans l’infrastructure.
+Avec les fonctionnalités de base de la nouvelle API de Message détaillées ci-dessus, ensuite d’examiner certaines des fonctionnalités plus avancées qui Apple a intégré à l’infrastructure.
 
-Tout d’abord, il existe plusieurs autres méthodes de remplacement dans la `MSMessagesAppViewController` classe qui fournissent un accès plus détaillé à la conversation :
+Tout d’abord, il existe plusieurs autres méthodes de remplacement dans la `MSMessagesAppViewController` classe qui fournissent un accès plus approfondi à la conversation :
 
-- `DidStartSendingMessage` -Ceci est appelé lorsque l’utilisateur appuie sur le bouton Envoyer. Cela ne signifie pas que le message a été réellement remise au destinataire, simplement que le processus d’envoi a été démarré.
-- `DidCancelSendingMessage` -Cela se produit lorsque l’utilisateur appuie sur le *X* situé dans l’angle supérieur droit de la bulle de Message dans la transcription de la Conversation.
-- `DidReceiveMessage` -Cette méthode est appelée lorsque l’Extension d’application de messages est active un un nouveau message a été reçu à partir d’un des participants à la conversation.
+- `DidStartSendingMessage` -Il est appelé lorsque l’utilisateur actionne le bouton Envoyer. Cela ne signifie pas que le message a bien été remise au destinataire, simplement que le processus d’envoi a été démarré.
+- `DidCancelSendingMessage` -Cela se produit lorsque l’utilisateur actionne le *X* situé dans l’angle supérieur droit de la bulle de Message dans la transcription de Conversation.
+- `DidReceiveMessage` : Cette méthode est appelée lorsque l’Extension d’application de Message est active un un nouveau message a été reçu à partir d’un des participants à la conversation.
 
 ### <a name="group-conversations"></a>Conversations de groupe
 
-Une Extension d’application Message utilisable pendant que les utilisateurs sont impliqués dans des conversations de groupe (avec des personnes de 3 ou plus), et cela aura prendre en considération lorsque vous concevez et implémentez une Extension d’application de Message.
+Une Extension d’application de Message utilisable pendant que les utilisateurs sont impliqués dans des conversations de groupe (avec des personnes de 3 ou plus) et cela aura prendre en considération lorsque vous concevez et implémentez une Extension d’application de Message.
 
 Examinons l’interaction suivante dans une conversation de groupe avec trois utilisateurs :
 
 [![](advanced-message-app-extensions-images/interactive14.png "Interaction dans une conversation de groupe avec trois utilisateurs")](advanced-message-app-extensions-images/interactive14.png#lightbox)
 
-1. L’utilisateur 1 envoie un Message interactif de groupe demandant l’utilisateur 2 et 3 de l’utilisateur de choisir un remplissage d’un hamburger.
-2. L’utilisateur 2 choisit tomatoes.
-3. L’utilisateur 3 choisit cornichons.
-4. Choix de l’utilisateur 2 et 3 utilisateur arrive à utilisateur 1 presque simultanément. Par conséquent, les choix de l’utilisateur 2 est réduite en une ligne de résumé et n’est pas disponible. Cet incident pourrait ont également été retourné, avec le choix de l’utilisateur 2 est affiché et l’utilisateur 3 de réduit.
+1. L’utilisateur 1 envoie un Message interactif groupe demandant l’utilisateur 2 et 3 de l’utilisateur à choisir un remplissage de votre hamburger.
+2. L’utilisateur 2 choisit tomates.
+3. Utilisateur 3 choisit les condiments.
+4. Choix du utilisateur 2 et 3 utilisateur arrive à utilisateur 1 presque simultanément. Par conséquent, les choix de l’utilisateur 2 est réduite en une ligne de résumé et n’est pas disponible. Ce cas pourrait ont également été retourné, avec choix de l’utilisateur 2 affiché et l’utilisateur 3 du réduit.
 
-Dans les deux cas, ce comportement est indésirable 1 de l’utilisateur doit pouvoir accéder aux options d’utilisateur 2 et 3 utilisateur. Pour gérer cette situation, Apple suggère que l’Extension d’application Message stocke l’état du message dans le cloud et utilisez la propriété URL de la `MSMessage` (qui est envoyée entre les utilisateurs) pour accéder à cet état.
+Dans les deux cas, ce comportement est indésirable comme utilisateur 1 doit être en mesure d’accéder aux choix de 2 de l’utilisateur et de 3 de l’utilisateur. Pour gérer cette situation, Apple suggère que l’Extension d’application de Message stocke l’état du message dans le cloud et utilisez la propriété URL de la `MSMessage` (qui est envoyée entre les utilisateurs) pour accéder à cet état.
 
-Lorsque l’utilisateur envoie un message, un jeton de session est généré et envoyé vers le cloud avec l’état actuel du message. Lorsqu’un utilisateur clique sur une bulle de Message dans la transcription de la Conversation, le jeton de session est utilisé pour récupérer l’état de session en cours à partir du cloud.
+Lorsque l’utilisateur envoie un message, un jeton de session est généré et envoyé vers le cloud avec l’état du message en cours. Lorsqu’un utilisateur appuie sur une bulle de Message dans la transcription de Conversation, le jeton de session est utilisé pour récupérer l’état de session actuel à partir du cloud.
 
 ### <a name="sender-identifiers"></a>Identificateurs de l’émetteur
 
@@ -533,21 +533,21 @@ Pour discuter de l’accès à l’identificateur de l’expéditeur d’un mess
 
 [![](advanced-message-app-extensions-images/interactive15.png "Envoi d’identificateurs de conversation de groupe")](advanced-message-app-extensions-images/interactive15.png#lightbox)
 
-1. Là encore, utilisateur 1 envoie un Message interactif groupe demandant l’utilisateur 2 et 3 de l’utilisateur de choisir un remplissage d’un hamburger.
-2. L’utilisateur 3 choisit cornichons.
-3. Choix de l’utilisateur 3 arrive à utilisateur 1 et 2 de l’utilisateur n’a pas encore répondu.
-4. Apple étant très concernée par la confidentialité des utilisateurs, l’Extension d’application Message connaît uniquement un identificateur Unique (comme un `NSUUID`) qui est assigné à chaque participant de la conversation. Sur l’appareil local, seul l’identificateur de l’utilisateur actuel est connu.
-5. Le `MSMessage` a un `SenderIdentifier` propriété qui correspond à l’un de l’utilisateur dans la liste des participants connue de l’extension.
-6. Chaque périphérique de l’utilisateur possède sa propre copie de la liste des participants où là encore, l’identificateur de l’utilisateur local uniquement est connu.
-7. Lorsqu’un message est envoyé, son `SenderIdentifier` propriété est également connue de l’utilisateur local.
+1. Là encore, l’utilisateur 1 envoie un Message interactif de groupe demandant l’utilisateur 2 et 3 de l’utilisateur à choisir un remplissage de votre hamburger.
+2. Utilisateur 3 choisit les condiments.
+3. Choix de l’utilisateur de 3 arrive à utilisateur 1 et 2 de l’utilisateur n’a pas encore répondu.
+4. Étant donné que Apple est très préoccupée par la confidentialité des utilisateurs, l’Extension d’application Message connaît uniquement un identificateur Unique (comme un `NSUUID`) qui est assigné à chaque participant de la conversation. Sur l’appareil local, l’identificateur de l’utilisateur actuel uniquement est connu.
+5. Le `MSMessage` a un `SenderIdentifier` propriété qui correspond à celui de l’utilisateur dans la liste des participants connue à l’extension.
+6. Chaque appareil de l’utilisateur a sa propre copie de la liste des participants où là encore, l’identificateur de l’utilisateur local uniquement est connu.
+7. Lorsqu’un message est envoyé, son `SenderIdentifier` propriété est également connue pour être celui de l’utilisateur local.
 
-Les identificateurs de l’expéditeur peuvent être utilisés comme suit :
+Les identificateurs de l’expéditeur peut être utilisés comme suit :
 
-- En examinant la liste des participants l’extension peut obtenir le nombre d’utilisateurs dans la conversation.
-- Lorsque l’extension reçoit un message à partir d’un utilisateur, il peut conserver le suivi de l’identificateur d’expéditeur. S’il reçoit un autre message avec le même identificateur de l’expéditeur, l’extension sait qu’il est dans le même utilisateur.
-- Ils peuvent être utilisés pour identifier un utilisateur spécifique dans la conversation.
+- En examinant la liste des participants, l’extension peut obtenir le nombre d’utilisateurs dans la conversation.
+- Lorsque l’extension reçoit un message à partir d’un utilisateur, il peut conserver une trace de l’identificateur d’expéditeur. S’il reçoit un autre message avec le même identificateur de l’expéditeur, l’extension sait qu’il est du même utilisateur.
+- Elles peuvent servir pour aider à identifier un utilisateur spécifique dans la conversation.
 
-L’identificateur d’expéditeur peut être utilisé dans tous les champs de texte de la `MSMessageTemplateLayout` en lui attribuant un signe dollar (`$`). Exemple :
+L’identificateur d’expéditeur peut être utilisé dans tous les champs de texte de la `MSMessageTemplateLayout` en faisant précéder par un signe dollar (`$`). Exemple :
 
 ```csharp
 // Pass along the sender identifier
@@ -557,11 +557,11 @@ layout.Caption = string.format("${0} wants pickles.",Conversation.LocalParticipa
 
 Lorsque l’application Messages affiche une bulle de Message avec ce type de mise en forme, il remplacera le `$uuid...` avec le nom de contact du participant à la conversation qui a envoyé le message.
 
-L’identificateur d’expéditeur étant unique sur chaque appareil, examinez le diagramme ci-dessus, notez de que 1 utilisateur et périphérique de l’utilisateur 3 a un identificateur d’expéditeur unique différent pour chaque participant à la conversation.
+L’identificateur d’expéditeur étant unique sur chaque appareil, examinez le diagramme ci-dessus, notez de que 1 utilisateur et périphérique de l’utilisateur 3 a un autre identificateur unique de l’expéditeur pour chaque participant à la conversation.
 
-Les identificateurs de l’expéditeur sont limités à l’installation de l’Extension d’application de Message. Par conséquent, si un utilisateur désinstalle et réinstalle l’Extension d’application Message nouveaux identificateurs expéditeur sera générés pour la nouvelle installation.
+Les identificateurs de l’expéditeur sont limitées à l’installation de l’Extension d’application de Message. Par conséquent, si un utilisateur désinstalle et réinstalle l’Extension d’application Message nouveaux identificateurs expéditeur sera générés pour la nouvelle installation.
 
-Pour accéder à l’identificateur, l’extension peut utiliser le code suivant :
+Pour accéder aux identificateurs de l’expéditeur, l’extension peut utiliser le code suivant :
 
 ```csharp
 public override void DidStartSendingMessage (MSMessage message, MSConversation conversation)
@@ -581,30 +581,30 @@ public override void DidStartSendingMessage (MSMessage message, MSConversation c
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
-Les Messages Interactive générés par une Extension d’application Message seront remis sur les plateformes Apple suivantes :
+Les Messages interactifs générés par une Extension d’application Message sera livrés sur les plateformes Apple suivantes :
 
 - watchOS 3
 - macOS Sierra
 - iOS 10
 
-Des trois plateformes, uniquement iOS 10 permet à l’utilisateur Générer un message interactif. Sur macOS Sierra, si l’utilisateur clique sur une bulle de Message interactif, l’URL associée à la `MSMessage` seront ouverts dans Safari et une représentation du message doit être y est affichée.
+Les trois plateformes, uniquement à iOS 10 permet à l’utilisateur Générer un message interactif. Sur macOS Sierra, si l’utilisateur clique sur une bulle de Message interactif, l’URL associée à la `MSMessage` sera ouvert dans Safari et une représentation du message doit s’afficher ici.
 
-Sur watchOS, l’application Messages peut transférer un message interactif sur un appareil iOS attaché où l’utilisateur peut créer une réponse.
+Dans watchOS, l’application Messages pouvez remise d’un message interactif sur un appareil iOS attaché où l’utilisateur peut créer une réponse.
 
-La nouvelle API de Messages est prise en charge de secours si le message interactif est reçu sur les plateformes plus anciennes Apple :
+La nouvelle API de Messages a prise en charge de secours si le message interactif est reçu sur les anciennes plateformes Apple :
 
 - watchOS 2 +
 - OS X 10.11 +
 - iOS 9 +
 
-Ils seront fournis dans un format de secours comme deux messages distincts :
+Ils seront livrés dans un format de secours comme deux messages distincts :
 
-- L’image sera fournie par la mise en page du modèle.
-- L’autre est l’URL comme indiqué dans le `MSMessage`.
+- Une sera l’image fournie par la mise en page du modèle.
+- L’autre sera l’URL comme indiqué dans le `MSMessage`.
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a présenté les techniques avancées pour travailler avec les Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à la **Messages** application et présente nouvelles fonctionnalités à l’utilisateur.
+Cet article a présenté les techniques avancées pour travailler avec des Extensions d’application de Message dans une solution Xamarin.iOS qui s’intègre à la **Messages** application et les fonctionnalités de nouveau présente à l’utilisateur.
 
 
 ## <a name="related-links"></a>Liens associés

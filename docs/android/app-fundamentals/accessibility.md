@@ -3,31 +3,31 @@ title: Accessibilité sur Android
 ms.prod: xamarin
 ms.assetid: 157F0899-4E3E-4538-90AF-B59B8A871204
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 2a49d15651b8c6ab7417a69d934af5d20bfc13d0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4eb4a97a346f3906c925dc9e324ed9378af0b560
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116170"
 ---
 # <a name="accessibility-on-android"></a>Accessibilité sur Android
 
-Cette page décrit comment utiliser les API d’accessibilité Android pour générer des applications en fonction de la [liste de vérification d’accessibilité](~/cross-platform/app-fundamentals/accessibility.md).
-Reportez-vous à la [iOS accessibilité](~/ios/app-fundamentals/accessibility.md) et [accessibilité du système d’exploitation X](~/mac/app-fundamentals/accessibility.md) pages pour les autres API de la plateforme.
+Cette page décrit comment utiliser les API d’accessibilité Android pour créer des applications en fonction de la [liste de contrôle d’accessibilité](~/cross-platform/app-fundamentals/accessibility.md).
+Reportez-vous à la [iOS accessibilité](~/ios/app-fundamentals/accessibility.md) et [l’accessibilité du système d’exploitation X](~/mac/app-fundamentals/accessibility.md) pages pour les autres API de la plateforme.
 
 
 ## <a name="describing-ui-elements"></a>Décrivant les éléments d’interface utilisateur
 
-Android fournit un `ContentDescription` propriété utilisé par l’API de lecture écran afin de fournir une description accessible de l’objectif du contrôle.
+Android fournit un `ContentDescription` propriété qui est utilisée par les API de lecture écran afin de fournir une description accessible de l’objectif du contrôle.
 
-La description du contenu peut être définie dans c# ou dans le fichier de disposition AXML.
+La description du contenu peut être définie dans le C# ou dans le fichier de disposition AXML.
 
 **C#**
 
-La description peut être définie dans du code pour n’importe quelle chaîne (ou une ressource de chaîne) :
+La description peut être définie dans le code à n’importe quelle chaîne (ou une ressource de chaîne) :
 
 ```csharp
 saveButton.ContentDescription = "Save data";
@@ -35,7 +35,7 @@ saveButton.ContentDescription = "Save data";
 
 **Mise en page AXML**
 
-En XML, utilisez des dispositions le `android:contentDescription` attribut :
+En XML dispositions, utilisez le `android:contentDescription` attribut :
 
 ```xml
 <ImageButton
@@ -46,8 +46,8 @@ En XML, utilisez des dispositions le `android:contentDescription` attribut :
 
 ### <a name="use-hint-for-textview"></a>Utilisez l’indicateur pour TextView
 
-Pour `EditText` et `TextView` contrôles d’entrée de données, utilisez la `Hint` propriété afin de fournir une description de quel entrée est attendue (au lieu de `ContentDescription`).
-Lorsque du texte a été entré, le texte proprement dit est « lu » au lieu de l’indicateur.
+Pour `EditText` et `TextView` contrôles d’entrée de données, utilisez le `Hint` propriété afin de fournir une description de l’entrée qu’est attendue (au lieu de `ContentDescription`).
+Lorsque du texte a été saisi, le texte lui-même sera « lue » au lieu de l’indicateur.
 
 **C#**
 
@@ -70,11 +70,11 @@ En XML, utilisez les fichiers de mise en page le `android:hint` attribut :
 
 ### <a name="labelfor-links-input-fields-with-labels"></a>Les liens LabelFor champs d’entrée avec étiquettes
 
-Pour associer une étiquette avec un contrôle d’entrée de données, utilisez le `LabelFor` propriété
+Pour associer une étiquette à un contrôle d’entrée de données, utilisez le `LabelFor` propriété
 
 **C#**
 
-En c#, vous devez définir le `LabelFor` décrit la propriété à l’ID de ressource du contrôle ce ce contenu (en général, cette propriété est définie sur une étiquette et fait référence à d’autres contrôles d’entrée) :
+Dans C#, définissez le `LabelFor` décrit la propriété à l’ID de ressource du contrôle ce ce contenu (en général, cette propriété est définie sur une étiquette et fait référence à un autre contrôle d’entrée) :
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);
@@ -84,7 +84,7 @@ tv.LabelFor = Resource.Id.editFirstName;
 
 **Mise en page AXML**
 
-Dans la mise en forme XML utilisent le `android:labelFor` propriété à référencer l’identificateur d’un autre contrôle :
+Dans la mise en page XML utilisent le `android:labelFor` propriété à référencer l’identificateur d’un autre contrôle :
 
 ```xml
 <TextView
@@ -98,9 +98,9 @@ Dans la mise en forme XML utilisent le `android:labelFor` propriété à référ
 
 ### <a name="announce-for-accessibility"></a>Annoncer pour l’accessibilité
 
-Utilisez la `AnnounceForAccessibility` méthode sur n’importe quel afficher le contrôle de communiquer une modification d’état ou les événements aux utilisateurs lors de l’accessibilité est activée. Cette méthode n’est pas requise pour la plupart des opérations où la narration intégrée fournit des commentaires suffisantes, mais doit être utilisée lorsque des informations supplémentaires sont utiles pour l’utilisateur.
+Utilisez le `AnnounceForAccessibility` permet d’afficher (méthode) sur n’importe quel contrôle de communiquer un changement d’état ou des événements aux utilisateurs lors de l’accessibilité est activée. Cette méthode n’est pas requise pour la plupart des opérations où la narration intégrée fournit des commentaires suffisantes, mais doit être utilisée dans lequel des informations supplémentaires peut s’avérer utiles pour l’utilisateur.
 
-Le code suivant montre un appel de l’exemple simple `AnnounceForAccessibility`:
+Le code ci-dessous montre un appel d’exemple simple `AnnounceForAccessibility`:
 
 ```csharp
 button.Click += delegate {
@@ -111,11 +111,11 @@ button.Click += delegate {
 
 ## <a name="changing-focus-settings"></a>Modification des paramètres de Focus
 
-Navigation accessible s’appuie sur les contrôles ayant le focus à l’aide de l’utilisateur à comprendre quelles opérations sont disponibles. Android fournit un `Focusable` propriété pour laquelle vous pouvez marquer des contrôles comme spécifiquement en mesure de recevoir le focus lors de la navigation.
+Navigation accessible s’appuie sur les contrôles ayant le focus à l’aide de l’utilisateur à comprendre quelles opérations sont disponibles. Android fournit un `Focusable` propriété que pouvez marquer des contrôles comme spécifiquement en mesure de recevoir le focus lors de la navigation.
 
 **C#**
 
-Pour empêcher un contrôle à partir de l’obtention du focus avec c#, définissez la `Focusable` propriété `false`:
+Pour empêcher d’un contrôle le focus avec C#, définissez le `Focusable` propriété `false`:
 
 ```csharp
 label.Focusable = false;
@@ -123,18 +123,18 @@ label.Focusable = false;
 
 **Mise en page AXML**
 
-Dans la disposition des fichiers XML ensemble la `android:focusable` attribut :
+Dans la mise en page ensemble de fichiers XML le `android:focusable` attribut :
 
 ```xml
 <android:focusable="false" />
 ```
 
-Vous pouvez également contrôler la commande le focus avec la `nextFocusDown`, `nextFocusLeft`, `nextFocusRight`, `nextFocusUp` attributs, généralement définies dans la mise en page AXML. Utiliser ces attributs pour s’assurer de que l’utilisateur peut parcourir facilement les contrôles sur l’écran.
+Vous pouvez contrôler également l’ordre de focus avec la `nextFocusDown`, `nextFocusLeft`, `nextFocusRight`, `nextFocusUp` attributs, généralement définies dans la disposition AXML. Utilisez ces attributs pour garantir que l’utilisateur peut naviguer facilement dans les contrôles sur l’écran.
 
 
 ## <a name="accessibility-and-localization"></a>Accessibilité et la localisation
 
-Dans les exemples ci-dessus, la description de l’indicateur et le contenu sont directement défini comme la valeur d’affichage. Il est préférable d’utiliser des valeurs dans une **Strings.xml** fichier, comme ceci :
+Dans les exemples ci-dessus, la description de l’indicateur et le contenu sont directement défini la valeur d’affichage. Il est préférable d’utiliser des valeurs dans un **Strings.xml** fichier, comme ceci :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -144,11 +144,11 @@ Dans les exemples ci-dessus, la description de l’indicateur et le contenu sont
 </resources>
 ```
 
-À l’aide du texte à partir d’un fichier de chaînes ci-dessous dans c# et les fichiers de mise en page AXML :
+En utilisant le texte à partir d’un fichier de chaînes est illustrée ci-dessous C# et les fichiers de disposition AXML :
 
 **C#**
 
-Au lieu d’utiliser des littéraux de chaîne dans le code, rechercher les valeurs traduites à partir de fichiers de chaînes avec `Resources.GetText`:
+Au lieu d’utiliser des littéraux de chaîne dans le code, rechercher les valeurs traduites à partir des fichiers de chaînes avec `Resources.GetText`:
 
 ```csharp
 someText.Hint = Resources.GetText (Resource.String.enter_info);
@@ -157,7 +157,7 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 
 **AXML**
 
-Dans la mise en forme XML, les attributs d’accessibilité comme `hint` et `contentDescription` peut être défini sur un identificateur de chaîne :
+Dans la mise en forme XML telles que les attributs d’accessibilité `hint` et `contentDescription` peut être définie sur un identificateur de chaîne :
 
 ```xml
 <TextView
@@ -174,9 +174,9 @@ L’avantage de stocker du texte dans un fichier distinct est que plusieurs trad
 
 ## <a name="testing-accessibility"></a>Test de l’accessibilité
 
-Suivez [suit](http://developer.android.com/training/accessibility/testing.html#how-to) pour activer TalkBack et Explorer par tactile tester l’accessibilité sur les appareils Android.
+Suivez [suit](http://developer.android.com/training/accessibility/testing.html#how-to) pour activer TalkBack et Explorer par Touch tester l’accessibilité sur les appareils Android.
 
-Il se pouvez que vous deviez installer [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) à partir de Google Play si elle n’apparaît pas dans **Paramètres > accessibilité**.
+Vous devrez peut-être installer [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) à partir de Google Play si elle n’apparaît pas dans **Paramètres > accessibilité**.
 
 
 ## <a name="related-links"></a>Liens associés

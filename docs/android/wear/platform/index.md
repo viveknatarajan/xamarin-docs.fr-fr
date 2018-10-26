@@ -1,23 +1,23 @@
 ---
 title: Fonctionnalités de la plateforme du système d’exploitation de l’usure avec Xamarin.Android
-description: Composants clés de la plateforme de système d’exploitation d’usure
+description: Composants clés de la plateforme de système d’exploitation de l’usure
 ms.prod: xamarin
 ms.assetid: E86688B5-B2FE-476A-A2AA-F8CC26EA8D2B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 3e703ebb3d4705980785ec8fea6003ffc1442b54
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 9664da9ab00dce2a3fcc0410c9c4fff189b13bf9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436116"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118303"
 ---
 # <a name="platform-features"></a>Fonctionnalités de la plateforme
 
-Documents de cette section couvrent les fonctionnalités spécifiques à l’usure Android. Vous trouverez ici une rubrique qui explique comment créer un WatchFace.
+Documents dans cette section couvrent les fonctionnalités spécifiques à Android Wear. Vous trouverez ici une rubrique qui explique comment créer un WatchFace.
  
 ##  <a name="creating-a-watch-faceandroidwearplatformcreating-a-watchfacemd"></a>[Création d’un cadran de montre](~/android/wear/platform/creating-a-watchface.md)
 
-Une procédure pas à pas pour implémenter un service de face espion personnalisé pour porter Android. Vous trouverez des instructions pour la création d’un élément supprimé service de face espion numériques, et plus de code est ajouté pour créer un type de style analogique Espion avec des fonctionnalités supplémentaires.
+Une procédure pas à pas pour implémenter un service de visage espion personnalisé pour Android Wear. Instructions sont fournies pour la création d’un élément supprimé service de visage espion numérique, et puis davantage de code est ajouté pour créer une face de style analogique Espion avec des fonctionnalités supplémentaires.

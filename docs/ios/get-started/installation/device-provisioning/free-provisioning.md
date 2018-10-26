@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 0f2418994e02c9e83506071f14901d22af4b8a66
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: 503dae8253b3c0bb82038dd54b5d97ff632b439b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353319"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115033"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Provisionnement gratuit pour les applications Xamarin.iOS
 
@@ -87,7 +87,7 @@ Suivez les étapes ci-dessous pour tester votre application Xamarin.iOS à l’a
 
 ### <a name="deploy-your-xamarinios-app"></a>Déployer votre application Xamarin.iOS
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Connectez votre appareil iOS à l’hôte de build Mac via une connexion USB ou [sans fil](~/ios/deploy-test/wireless-deployment.md).
 2. Dans le **Panneau Solutions** de Visual Studio pour Mac, double-cliquez sur **Info.plist**.
@@ -106,7 +106,7 @@ Suivez les étapes ci-dessous pour tester votre application Xamarin.iOS à l’a
 9. Cliquez sur **OK** pour enregistrer et fermer les **Options de projet**.
 10. Sélectionnez votre appareil iOS, et exécutez l’application.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Vérifiez que Visual Studio 2017 a été [appairé à un hôte de build Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Connectez votre appareil iOS à l’hôte de build Mac via une connexion USB ou [sans fil](~/ios/deploy-test/wireless-deployment.md).

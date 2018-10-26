@@ -6,27 +6,27 @@ ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 07/02/2018
-ms.openlocfilehash: b828e62ef1037bf47a2ae5fb303fbf8fcace6549
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/22/2018
+ms.openlocfilehash: de1ac47a56bf8d75eefb2ed6c7237f2f63f56ecc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997131"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105946"
 ---
 # <a name="xaml-compilation-in-xamarinforms"></a>Compilation XAML dans Xamarin.Forms
 
 _XAML peut être éventuellement compilé directement en langage intermédiaire (IL) avec le compilateur XAML (XAMLC)._
 
-XAMLC offre un certain nombre d’avantages :
+Compilation de XAML offre un nombre d’avantages :
 
 - Il effectue une vérification au moment de la compilation du code XAML et informe l’utilisateur des erreurs rencontrées.
 - Il supprime une partie du temps de chargement et d’instanciation pour les éléments XAML.
 - Il permet de réduire la taille de fichier de l’assembly final en n’incluant plus les fichiers .xaml.
 
-XAMLC est désactivé par défaut pour assurer la compatibilité descendante. Il peut être activé au niveau de l’assembly et la classe en ajoutant le `XamlCompilation` attribut.
+Compilation de XAML est désactivée par défaut pour assurer la compatibilité descendante. Il peut être activé au niveau de l’assembly et la classe en ajoutant le [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribut.
 
-L’exemple de code suivant illustre l’activation de XAMLC au niveau de l’assembly :
+L’exemple de code suivant illustre la compilation XAML activation au niveau de l’assembly :
 
 ```csharp
 using Xamarin.Forms.Xaml;
@@ -38,9 +38,12 @@ namespace PhotoApp
 }
 ```
 
-Dans cet exemple, la vérification de tous les XAML contenue dans l’assembly lors de la compilation se fera, avec des erreurs XAML signalés au moment de la compilation plutôt que d’exécution. Par conséquent, le `assembly` de préfixe pour le `XamlCompilation` attribut spécifie que l’attribut s’applique à la totalité de l’assembly.
+Dans cet exemple, la vérification de tous les XAML contenue dans l’assembly lors de la compilation se fera, avec des erreurs XAML signalés au moment de la compilation plutôt que d’exécution. Par conséquent, le `assembly` de préfixe pour le [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribut spécifie que l’attribut s’applique à la totalité de l’assembly.
 
-L’exemple de code suivant illustre l’activation de XAMLC au niveau de la classe :
+> [!NOTE]
+> Le [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribut et la [ `XamlCompilationOptions` ](xref:Xamarin.Forms.Xaml.XamlCompilationOptions) énumération se trouvent dans le `Xamarin.Forms.Xaml` espace de noms, qui doit être importé à les utiliser.
+
+L’exemple de code suivant illustre la compilation XAML activation au niveau de la classe :
 
 ```csharp
 using Xamarin.Forms.Xaml;
@@ -55,10 +58,9 @@ public class HomePage : ContentPage
 Dans cet exemple, lors de la compilation la vérification de le XAML pour la `HomePage` classe sera effectuée et erreurs signalés comme faisant partie du processus de compilation.
 
 > [!NOTE]
-> Le `XamlCompilation` attribut et la `XamlCompilationOptions` énumération se trouvent dans le `Xamarin.Forms.Xaml` espace de noms, qui doit être importé à les utiliser.
-
+> Liaisons compilées peuvent être activées pour améliorer les performances de liaison de données dans les applications Xamarin.Forms. Pour plus d’informations, consultez [liaisons compilé](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 ## <a name="related-links"></a>Liens associés
 
-- [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
-- [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)
+- [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
+- [`XamlCompilationOptions`](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

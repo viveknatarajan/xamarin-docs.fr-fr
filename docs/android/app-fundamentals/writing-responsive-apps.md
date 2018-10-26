@@ -1,21 +1,21 @@
 ---
-title: L’écriture d’Applications réactives
+title: Écriture d’Applications réactives
 ms.prod: xamarin
 ms.assetid: 452DF940-6331-55F0-D130-002822BBED55
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b8c113b67b3fbfa57ca86c72e11ddeb0e4e1a9ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a1642c4cbb790cf09d2a31e629408afc61d5b7ab
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763499"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121774"
 ---
-# <a name="writing-responsive-applications"></a>L’écriture d’Applications réactives
+# <a name="writing-responsive-applications"></a>Écriture d’Applications réactives
 
-Une des clés pour conserver une interface graphique utilisateur réactive consiste à effectuer des tâches longues sur un thread d’arrière-plan afin de l’interface graphique utilisateur ne se bloquer. Supposons que vous souhaitez calculer une valeur à afficher à l’utilisateur, mais cette valeur est 5 secondes pour calculer :
+Une des clés à la maintenance d’une interface graphique utilisateur réactive consiste à effectuer des tâches longues sur un thread d’arrière-plan afin de l’interface graphique utilisateur ne sont bloqué. Supposons que nous voulons calculer une valeur à afficher à l’utilisateur, mais cette valeur prend 5 secondes pour calculer :
 
 ```csharp
 public class ThreadDemo : Activity
@@ -43,7 +43,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-Cela fonctionne, mais l’application sera « se bloque » pendant 5 secondes tandis que la valeur est calculée. Pendant ce temps, l’application ne répond pas à l’intervention de l’utilisateur. Pour contourner ce problème, nous souhaitons nos calculs sur un thread d’arrière-plan :
+Cela fonctionne, mais l’application sera « bloquer » pendant 5 secondes tandis que la valeur est calculée. Pendant ce temps, l’application ne répond pas à l’interaction de l’utilisateur. Pour contourner ce problème, nous voulons faire nos calculs sur un thread d’arrière-plan :
 
 ```csharp
 public class ThreadDemo : Activity
@@ -71,7 +71,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-Maintenant nous calculons la valeur sur un thread d’arrière-plan afin de notre interface utilisateur reste réactive pendant le calcul. Toutefois, lorsque le calcul est effectué, notre application tombe en panne, en laissant cela dans le journal :
+Maintenant, nous calculons la valeur sur un thread d’arrière-plan afin de notre interface graphique utilisateur reste réactive pendant le calcul. Toutefois, lorsque le calcul est terminé, notre application tombe en panne, en laissant cela dans le journal :
 
 ```shell
 E/mono    (11207): EXCEPTION handling: Android.Util.AndroidRuntimeException: Exception of type 'Android.Util.AndroidRuntimeException' was thrown.
@@ -82,7 +82,7 @@ E/mono    (11207):   at Android.Widget.TextView.set_Text (IEnumerable`1 value)
 E/mono    (11207):   at MonoDroidDebugging.Activity1.SlowMethod ()
 ```
 
-Il s’agit, car vous devez mettre à jour l’interface utilisateur à partir du thread d’interface utilisateur graphique. Notre code met à jour l’interface utilisateur à partir du thread de pool de threads, à l’origine de l’application à se bloquer. Nous avons besoin calculer la valeur sur le thread d’arrière-plan, mais ne la mise à jour sur le thread d’interface graphique utilisateur, qui est géré avec [Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
+Il s’agit, car vous devez mettre à jour l’interface utilisateur graphique à partir du thread d’interface utilisateur graphique. Notre code met à jour l’interface utilisateur graphique à partir du thread de pool de threads, à l’origine de l’application se bloque. Nous devons calculer notre valeur sur le thread d’arrière-plan, mais ne la mise à jour sur le thread de GUI, qui est géré avec [Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
 
 ```csharp
 public class ThreadDemo : Activity
@@ -110,6 +110,6 @@ public class ThreadDemo : Activity
 }
 ```
 
-Ce code fonctionne comme prévu. Cette interface utilisateur reste réactive et correctement mises à jour une fois le calcul comple.
+Ce code fonctionne comme prévu. Cette interface utilisateur reste réactive et obtient correctement mis à jour une fois le calcul comple.
 
-Notez que cette technique n’est pas uniquement utilisée pour calculer une valeur coûteuse. Il peut être utilisé avec toutes les tâches longues qui peuvent être effectués en arrière-plan, comme un appel de service web ou le téléchargement des données internet.
+Notez que cette technique n’est pas simplement utilisée pour calculer une valeur de coûteuse. Il peut être utilisé pour n’importe quelle tâche longue qui peut être effectué en arrière-plan, comme un appel de service web ou le téléchargement de données internet.

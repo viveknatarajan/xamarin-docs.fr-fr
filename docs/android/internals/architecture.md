@@ -3,15 +3,15 @@ title: Architecture
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: e6a30247c13deab871bf230aba53b9963981fd02
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997398"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121124"
 ---
 # <a name="architecture"></a>Architecture
 
@@ -71,7 +71,7 @@ Vous devez être prudent lors de la mettre à disposition gérés des Wrappers R
 Les sous-classes de wrapper RCW managé sont où réside peut-être toute la logique spécifique à l’application « intéressante ». Ceux-ci incluent custom [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) sous-classes (telles que la [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) type dans le modèle de projet par défaut). (Plus précisément, ce sont les *Java.Lang.Object* sous-classes ainsi faire *pas* contiennent un [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) attribut personnalisé ou [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) est *false*, qui est la valeur par défaut.)
 
 Gérés comme des wrappers RCW gérés sous-classes de wrapper CCW contient également une référence globale, accessible via le [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propriété. Tout comme avec des wrappers RCW gérés, des références globales peuvent être libérées explicitement en appelant [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
-Contrairement à callable wrappers gérés *plus grand soin* doit être effectuée avant la suppression des instances de ce type, comme *Dispose()* binaire de l’instance s’arrêtera le mappage entre l’instance Java (une instance d’un Wrapper CCW Android) et l’instance gérée.
+Contrairement à callable wrappers gérés *plus grand soin* doit être effectuée avant la suppression des instances de ce type, comme *Dispose()*- binaire de l’instance s’arrêtera le mappage entre l’instance Java (une instance d’un Wrapper CCW Android) et l’instance gérée.
 
 
 ### <a name="java-activation"></a>Activation de Java
@@ -88,7 +88,7 @@ Il existe deux scénarios dans lesquels le *(IntPtr, JniHandleOwnership)* constr
 
 
 Notez que (2) est une abstraction de fuite. En Java, comme dans c#, les appels aux méthodes virtuelles à partir d’un constructeur toujours appeler l’implémentation de la méthode la plus dérivée. Par exemple, le [TextView (contexte, AttributeSet, int) constructeur](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) appelle la méthode virtuelle [TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), qui est lié en tant que le [ Propriété de TextView.DefaultMovementMethod](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
-Par conséquent, si un type [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) ont été (1) [sous-classe TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [remplacer TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)et (3) [activer une instance de ce classe par le biais de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) substituées *DefaultMovementMethod* propriété peut être appelée avant le constructeur ACW avait une chance de s’exécuter, et il se produit avant que le constructeur c# eu une chance de s’exécuter.
+Par conséquent, si un type [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) ont été (1) [sous-classe TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [remplacer TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)et (3) [activer une instance de ce classe par le biais de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) substituées *DefaultMovementMethod* propriété peut être appelée avant le constructeur ACW avait une chance de s’exécuter, et il se produit avant le C# constructeur eu l’occasion exécuter.
 
 Cela est pris en charge en instanciant une instance LogTextBox via la [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) constructeur lorsque l’instance ACW LogTextBox entre d’abord dans le code géré et puis en appelant le [ LogTextBox (contexte, IAttributeSet, int)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) constructeur *sur la même instance* lorsque le constructeur ACW s’exécute.
 

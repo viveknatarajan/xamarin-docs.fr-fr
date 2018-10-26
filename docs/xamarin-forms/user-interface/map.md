@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: d74ad52a2926fb30a528aeba29156259390c3edf
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: f787adcba78a13f6d4cad3fb446350a65e960aca
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947242"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123607"
 ---
 # <a name="xamarinforms-map"></a>Mappage de Xamarin.Forms
 
@@ -180,7 +180,7 @@ Valide `MapType` les valeurs sont :
 
 ### <a name="map-region-and-mapspan"></a>MapSpan et région
 
-Comme indiqué dans l’extrait de code ci-dessus, en fournissant un `MapSpan` instance à un constructeur de la carte définit la vue initiale (point central et un niveau de zoom) de la carte lorsqu’il est chargé. Le `MoveToRegion` méthode sur la classe map peut ensuite être utilisée pour changé le niveau de zoom ou de la position de la carte. Il existe deux façons de créer un nouveau `MapSpan` instance :
+Comme indiqué dans l’extrait de code ci-dessus, en fournissant un `MapSpan` instance à un constructeur de la carte définit la vue initiale (point central et un niveau de zoom) de la carte lorsqu’il est chargé. Le `MoveToRegion` méthode sur la classe map peut ensuite être utilisée pour modifier le niveau de zoom ou de la position de la carte. Il existe deux façons de créer un nouveau `MapSpan` instance :
 
 -  **MapSpan.FromCenterAndRadius()** -méthode statique pour créer une étendue d’un `Position` et en spécifiant un `Distance` .
 -  **nouvelle MapSpan ()** -constructeur qui utilise un `Position` et les degrés de latitude et longitude à afficher.

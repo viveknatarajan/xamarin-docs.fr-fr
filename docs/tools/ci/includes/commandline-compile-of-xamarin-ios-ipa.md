@@ -1,5 +1,5 @@
 
-La ligne de commande suivante pour spécifier une version Release de la solution **SOLUTION_FILE.sln** pour iPhone. L’emplacement de la loi peut être défini en spécifiant le le `IpaPackageDir` propriété sur la ligne de commande :
+La ligne de commande suivante pour spécifier une version Release de la solution **SOLUTION_FILE.sln** pour iPhone. L’emplacement de la loi peut être défini en spécifiant le `IpaPackageDir` propriété sur la ligne de commande :
 
  - Sur le Mac, à l’aide de **xbuild**:
 
@@ -10,7 +10,7 @@ La ligne de commande suivante pour spécifier une version Release de la solution
 
 Le **xbuild** commande se trouve généralement dans le répertoire **/Library/Frameworks/Mono.framework/Commands**.
 
- - Sous Windows, à l’aide de **msbuild**:
+ - Sur Windows, à l’aide de **msbuild**:
 
         msbuild /p:Configuration="Release" 
             /p:Platform="iPhone" 
@@ -19,7 +19,7 @@ Le **xbuild** commande se trouve généralement dans le répertoire **/Library/F
             /t:Build MyProject.sln
 
 
-**MSBuild** pas développe automatiquement `$( )` expressions transmis par la ligne de commande. Pour cette raison, il est recommandé d’utiliser un chemin d’accès complet lors de la définition du `IpaPackageDir` à la ligne de commande.
+**MSBuild** ne sont pas développées automatiquement `$( )` expressions passées par la ligne de commande. Pour cette raison, il est recommandé d’utiliser un chemin d’accès complet lors de la définition du `IpaPackageDir` en ligne de commande.
 
 
 Consultez le [Notes de publication pour iOS 9.8](https://developer.xamarin.com/releases/ios/xamarin.ios_9/xamarin.ios_9.8/#New_MSBuild_property_IpaPackageDir_to_customize_.ipa_output_location) pour plus d’informations sur la `IpaPackageDir` propriété.

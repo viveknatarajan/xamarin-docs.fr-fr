@@ -4,15 +4,15 @@ description: Cet article explique comment déboguer une application Xamarin.Andr
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1848bb624bf5f4bd627441a17fd077843c94edb9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c30beadf7c2de618952bdf0cd5c03e7ceee2845
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109703"
 ---
 # <a name="debug-on-device"></a>Déboguer sur un appareil
 
@@ -27,7 +27,7 @@ Il est possible de déboguer une application Xamarin.Android sur un appareil And
 
 Une fois qu’un appareil est connecté à votre ordinateur, le débogage d’une application Xamarin.Android est réalisé de la même façon que pour tout autre produit Xamarin ou application .NET. Vérifiez que la configuration **Debug** et l’appareil externe sont sélectionnés dans l’IDE. Les symboles de débogage nécessaires seront ainsi disponibles et l’IDE pourra se connecter à l’application en cours d’exécution : 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Configuration Debug sélectionnée](debug-on-device-images/image1-vs.png)
 
@@ -39,7 +39,7 @@ Une fois l’appareil sélectionné, Xamarin.Android se connecte à celui-ci, d�
 
 ![Point d’arrêt atteint](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![Configuration Debug sélectionnée](debug-on-device-images/image1-xs.png)
 

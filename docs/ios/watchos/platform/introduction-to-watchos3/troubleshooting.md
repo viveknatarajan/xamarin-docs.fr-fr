@@ -1,64 +1,64 @@
 ---
 title: watchOS 3 Résolution des problèmes
-description: Ce document fournit des conseils de dépannage plusieurs utiles lorsque vous travaillez avec watchOS 3 dans Xamarin. Conseils relatifs aux activités, Apple Pay, l’actualisation en arrière-plan, NSURLConnection, confidentialité et au plus.
+description: Ce document fournit plusieurs conseils de dépannage utiles lorsque vous travaillez avec watchOS 3 dans Xamarin. Conseils liés aux activités, Apple Pay, actualisation en arrière-plan, NSURLConnection, confidentialité et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 0aca2c96533e17e4aeb2f57d38a87d39f700fb45
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 497ce4f0ecbd5e4d49d2ff88855ff68dd9a63e43
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791025"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123214"
 ---
 # <a name="watchos-3-troubleshooting"></a>watchOS 3 Résolution des problèmes
 
-_Cet article fournit des conseils de dépannage plusieurs pour travailler avec watchOS 3 dans les applications Xamarin Apple Watch._
+_Cet article fournit plusieurs conseils de dépannage pour travailler avec watchOS 3 dans les applications Xamarin Apple Watch._
 
-Cette page répertorie certains problèmes connus qui peuvent se produire lors de l’utilisation de watchOS 3 avec Xamarin et la solution à ces problèmes.
+Cette page répertorie certains problèmes connus qui peuvent se produire lors de l’utilisation de watchOS 3 avec Xamarin et de la solution à ces problèmes.
 
 ## <a name="activities"></a>Activités
 
-Pour l’activité de partage pour fonctionner correctement, toutes les observations Apple appariés doit exécuter watchOS 3.
+Pour l’activité de partage pour fonctionner correctement, toutes les Apple Watches jumelées doit être en cours d’exécution watchOS 3.
 
 Problèmes connus :
 
 - Réponse à une Notification de partage d’activité parfois échoue.
 - Réponse à une Notification de partage d’activité avec un message risque d’échouer.
-- Texte contextuel au-dessus d’un message de Notification de partage d’activité est incorrecte.
+- Texte contextuel au-dessus d’un message de Notification de partage d’activité seront incorrecte.
 
 ## <a name="apple-pay"></a>Apple Pay
 
 Problèmes connus :
 
-- Si un code d’un calcul ou de date d’expiration incorrect est entré pour un nouveau soins de paiement dans Apple Pay, lors de l’atteinte **suivant** se bloquera le processus en cours d’exécution.
+- Si une date d’expiration incorrecte ou un code de PV est entré pour un nouveau soins de paiement dans Apple Pay, lors de l’atteinte **suivant** se bloquera le processus en cours d’exécution.
 - Achats dans l’application Apple Pay nécessitant un code confidentiel peuvent se bloquer.
 
-## <a name="auto-mac-unlock"></a>Le déverrouillage automatique Mac
+## <a name="auto-mac-unlock"></a>Déverrouillage automatique Mac
 
-Avec watchOS 3 2 (ou version ultérieure) et macOS Sierra bêta 2 (ou supérieure), si l’authentification à deux facteurs est activée sur le compte d’utilisateur iCloud, ils peuvent utiliser leurs Apple Watch automatique déverrouiller leur Mac.
+À l’aide de watchOS 3 2 (ou supérieur) et macOS Sierra bêta 2 (ou supérieur), si l’authentification à deux facteurs est activée sur le compte d’utilisateur iCloud, ils peuvent utiliser leurs Apple Watch pour auto déverrouiller leur Mac.
 
 ## <a name="background-refresh"></a>Actualisation en arrière-plan
 
-Violer les ressources système entraîne une panne d’application watchOS 3 avec les codes d’exception suivants :
+Violation de ressources système entraîne un blocage d’application watchOS 3 avec les codes d’exception suivants :
 
-- **0xc51bad01** -l’application consommé trop de temps processeur.
-- **0xc51bad02** -l’application consommé trop de durée d’exécution.
-- **0xc51bad03** -l’application n’avait pas suffisamment runtime pour terminer la tâche en cours.
+- **0xc51bad01** -l’application consommé beaucoup trop de temps processeur.
+- **0xc51bad02** -l’application consommé beaucoup trop de temps mur.
+- **0xc51bad03** -l’application ne disposait pas de suffisamment de runtime pour terminer la tâche actuelle.
 
 ## <a name="clock"></a>Clock
 
-Complications à partir d’applications d’Apple Watch nouvellement installées peuvent apparaître comme étant vide. Redémarrez l’Apple Watch pour résoudre ce problème.
+Complications à partir des applications Apple Watch nouvellement installées peuvent apparaître comme étant vide. Redémarrez l’Apple Watch pour résoudre ce problème.
 
-## <a name="connectivity"></a>Connectivité
+## <a name="connectivity"></a>connectivité
 
 Problèmes connus :
 
-- watchOS invite pas l’utilisateur pour l’autorisation d’accès pour les données utilisateur protégé sur l’Apple Watch. Autoriser l’accès à l’application iPhone avant d’utiliser des données dans l’application de surveillance.
-- L’Apple Watch peut entrer dans un état où toutes les transmissions WatchConnectivity échouent, redémarrez l’Apple Watch à corriger.
+- watchOS ne demande pas de l’utilisateur l’autorisation d’accès pour les données utilisateur protégé sur l’Apple Watch. Accorder l’accès sur l’application iPhone avant d’utiliser des données dans l’application watch.
+- L’Apple Watch peuvent entrer dans un état où toutes les transmissions WatchConnectivity échouent, redémarrez l’Apple Watch à corriger.
 
 ## <a name="notifications"></a>Notifications
 
@@ -66,25 +66,25 @@ Si une pièce jointe de média est trop volumineux, il s’affiche sur l’iPhon
 
 ## <a name="nsurlconnection"></a>NSURLConnection
 
-N’importe quel `NSURLConnection` les connexions à l’aide des protocoles TLS plus anciens échouent. Pour toutes les connexions SSL/TLS, le chiffrement symétrique RC4 est maintenant désactivé par défaut. En outre, l’API de Transport sécurisé ne prend plus en SSLv3 et il est recommandé que l’application s’arrêter à l’aide d’un chiffrement SHA-1 et 3DES dès que possible.
+N’importe quel `NSURLConnection` connexions à l’aide d’anciens protocoles TLS échouera. Pour toutes les connexions SSL/TLS, le chiffrement symétrique RC4 est désormais désactivé par défaut. En outre, l’API de Transport sécurisé n’est plus prend en charge que les SSLv3 et il est recommandé que l’application s’arrêter à l’aide d’un chiffrement SHA-1 et 3DES dès que possible.
 
-À compter de watchOS 3, sécurité des connexions SSL/TLS est strictement appliquée par Apple. Les applications et les services affectés doivent mis à jour les serveurs web à utiliser les dernières versions du protocole TLS.
+À compter de watchOS 3, sécurité des connexions SSL/TLS est strictement appliquée par Apple. Applications et services concernés doivent mis à jour des serveurs web pour utiliser les dernières versions de protocole TLS.
 
 ## <a name="nsurlsession"></a>NSURLSession
 
-À compter de watchOS 3, le `HTTPBodyStream` propriété de la `NSMutableURLRequest` classe doit être définie sur un flux non ouvert depuis `NSURLConnection` et `NSURLSession` maintenant impose cette exigence.
+À compter de watchOS 3, le `HTTPBodyStream` propriété de la `NSMutableURLRequest` classe doit être définie sur un flux non ouvert depuis `NSURLConnection` et `NSURLSession` applique désormais strictement cette exigence.
 
 ## <a name="privacy"></a>Confidentialité
 
 Problèmes connus :
 
-Lorsque vous travaillez avec `https://` URL à la fois `NSURLSession` et `NSURLConnection` n’est plus prise en charge des suites de chiffrement RC4 pendant la négociation TLS. Un des codes d’erreur suivants peut être généré :
+Lorsque vous travaillez avec `https://` URL à la fois `NSURLSession` et `NSURLConnection` n’est plus prise en charge les suites de chiffrement RC4 pendant la négociation TLS. Un des codes d’erreur suivants peut-être être généré :
 
-- **-1200 ou-98** - pour `NSURLErrorSecurityConnectionFailed` et SecureTransport erreurs.
-- **-1200 [3 :-9824]** -charge http a échoué.
-- **-1200**  -  `NSURLConnection` a rencontré une erreur.
+- **-1200 ou-98** : pour `NSURLErrorSecurityConnectionFailed` et SecureTransport erreurs.
+- **-1200 [3 :-9824]** -échouée de la charge http.
+- **-1200**  -  `NSURLConnection` terminé avec erreur.
 
-À compter de watchOS 3, sécurité des connexions SSL/TLS est strictement appliquée par Apple. Les applications et les services affectés doivent mis à jour les serveurs web à utiliser les dernières versions du protocole TLS. Consultez [NSURLConnection](#NSURLConnection) ci-dessus pour plus d’informations.
+À compter de watchOS 3, sécurité des connexions SSL/TLS est strictement appliquée par Apple. Applications et services concernés doivent mis à jour des serveurs web pour utiliser les dernières versions de protocole TLS. Consultez [NSURLConnection](#NSURLConnection) ci-dessus pour plus d’informations.
 
 ## <a name="snapshots"></a>Snapshots
 
@@ -92,7 +92,7 @@ Applications WatchKit qui n’ont pas adopté la nouvelle `HandelBackgroundTask`
 
 ## <a name="watchkit"></a>WatchKit
 
-Scènes SpriteKit et SceneKit va être suspendues lorsqu’une application entre l’arrière-plan de la station d’accueil watchOS.
+Arrière-plan SpriteKit et SceneKit sera interrompue lorsqu’une application entre l’arrière-plan dans le Dock watchOS.
 
 ## <a name="related-links"></a>Liens associés
 

@@ -4,15 +4,15 @@ description: Ce guide explique le chemin d’accès dans Xamarin.Android
 ms.prod: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5a4ddf606bb71bef10cf99660c198c5a8fdb1b69
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212186"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116795"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Stockage de fichier et l’accès avec Xamarin.Android
 
@@ -79,7 +79,7 @@ Pour optimiser le partage de code, les applications Xamarin.Android (ou les appl
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>Lecture ou écriture dans des fichiers sur un stockage interne
 
-Un de la [API c# pour l’écriture](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) dans un fichier sont suffisantes ; tout ce qui est nécessaire consiste à obtenir le chemin d’accès au fichier qui se trouve dans le répertoire alloué à la l’application. Il est fortement recommandé que l’opération asynchrone de versions des API .NET sont utilisées pour réduire les problèmes qui peuvent être associer avec accès au fichier bloquer le thread principal.
+Un de la [ C# API pour l’écriture](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) dans un fichier sont suffisantes ; tout ce qui est nécessaire consiste à obtenir le chemin d’accès au fichier qui se trouve dans le répertoire alloué à l’application. Il est fortement recommandé que l’opération asynchrone de versions des API .NET sont utilisées pour réduire les problèmes qui peuvent être associer avec accès au fichier bloquer le thread principal.
 
 Cet extrait de code est un exemple d’écriture d’un entier dans un fichier de texte UTF-8 dans le répertoire de stockage interne d’une application :
 

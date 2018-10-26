@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: c3fe98c384a87bdc08ce94e7537d1a6343767561
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353881"
@@ -71,7 +71,7 @@ public class CompassTest
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
-## <a name="platform-implementation-specifics"></a>Informations d'implémentation de la plateforme 
+## <a name="platform-implementation-specifics"></a>Informations d'implémentation de la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

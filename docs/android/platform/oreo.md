@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
 ms.custom: video
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: af560848240fec9558cc63969bcc269eedbd5424
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: e4f0138c0177c046c1e967a3d3625604f73327d6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947284"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103190"
 ---
 # <a name="oreo-features"></a>Fonctionnalités de Oreo
 
@@ -58,7 +58,7 @@ Chacune de ces étapes est expliquée dans les sections suivantes :
 
 Pour ajouter la prise en charge Android Oreo à Visual Studio, procédez comme suit :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 -   Si vous utilisez Visual Studio 2017 : 
 
@@ -68,7 +68,7 @@ Pour ajouter la prise en charge Android Oreo à Visual Studio, procédez comme s
 
 -   Si vous utilisez Visual Studio 2015, nous nous recommandons la rétrogradation de SDK Tools à 25 et à l’aide de l’ancien Gestionnaire d’émulateur Google GUI. Outils du Kit de développement logiciel 25 peuvent toujours être utilisés en même temps que les API 26, 27 et les versions ultérieures et n’affectent pas le développement de nouvelles plateformes. Cela vous donnera une interface pour la gestion de votre Kit de développement logiciel Android pour les versions antérieures de Visual Studio.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 -   Mettre à jour vers la dernière version stable de Visual Studio 2017 pour Mac comme expliqué dans [la mise à jour de Visual Studio pour Mac](https://docs.microsoft.com/visualstudio/mac/update).
 
@@ -82,7 +82,7 @@ Pour plus d’informations sur la prise en charge de Xamarin pour Android Oreo, 
 
 Pour créer un projet avec Xamarin.Android 8.0, vous devez d’abord utiliser le gestionnaire Xamarin Android SDK pour installer la plateforme du Kit de développement logiciel pour **Android 8.0 - Oreo** ou version ultérieure. Vous devez également installer d’Android SDK Tools 26.0 ou version ultérieure.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Démarrez le Gestionnaire du Kit de développement logiciel (dans Visual Studio, cliquez sur **Outils > Android > Gestionnaire Android SDK**).
 
@@ -94,7 +94,7 @@ Pour créer un projet avec Xamarin.Android 8.0, vous devez d’abord utiliser le
 
     [![Sélection d’Android SDK Tools 26 dans le gestionnaire Android SDK](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Démarrez le Gestionnaire du Kit de développement logiciel (dans Visual Studio pour Mac, cliquez sur **Outils > Gestionnaire du kit SDK**).
 
@@ -121,11 +121,11 @@ Lorsque vous créez un projet Android, vous devez configurer les paramètres de 
 
 Si vous tentez de lancer la valeur par défaut en fonction de l’interface graphique utilisateur Google AVD Manager après l’installation d’Android SDK Tools 26.0 d’ou version ultérieure, vous pouvez obtenir la boîte de dialogue erreur suivante, qui vous indique d’utiliser le gestionnaire AVD ligne de commande **avdmanager** à la place :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Boîte de dialogue Avertissement Gestionnaire d’émulateur Android](oreo-images/win/03-avd-warning.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![Boîte de dialogue Avertissement Gestionnaire d’émulateur Android](oreo-images/mac/03-avd-warning.png)
 
@@ -141,7 +141,7 @@ Pour créer des appareils virtuels sans Android Device Manager, suivez les étap
 
 Pour utiliser **avdmanager** pour créer un nouvel appareil virtuel, procédez comme suit :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Ouvrez une fenêtre d’invite de commandes et définissez `JAVA_HOME` à l’emplacement du SDK Java sur votre ordinateur. Pour une installation classique de Xamarin, vous pouvez utiliser la commande suivante :
 
@@ -168,7 +168,7 @@ Après avoir **avdmanager** pour créer votre appareil virtuel, elle sera inclus
 
 [![Nouvel AVD ajouté au menu déroulant des appareils](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1.  Ouvrir un **Terminal** fenêtre et basculez vers l’emplacement du répertoire d’outils du Kit Android SDK sur votre Mac. Pour une installation classique de Xamarin, vous pouvez utiliser la commande suivante :
 
@@ -182,7 +182,7 @@ Après avoir **avdmanager** pour créer votre appareil virtuel, elle sera inclus
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-3.  Lorsque vous êtes invité avec **vous souhaitez créer un profil matériel personnalisé [no]** vous pouvez entrer **aucun** et acceptez le profil matériel par défaut. Si vous dites **Oui**, **avdmanager** vous invitera à une liste de questions pour la personnalisation du profil matériel.
+3.  Lorsque vous êtes invité avec **vous souhaitez créer un profil matériel personnalisé [no]** vous pouvez entrer **aucun** et acceptez le profil matériel par défaut. Si vous dites **Oui**, **avdmanager** vous invitera à une liste de questions permettant de personnaliser le profil matériel.
 
 Une fois que vous utilisez **avdmanager** pour créer votre appareil virtuel, elle sera incluse dans le menu déroulant des appareils :
 

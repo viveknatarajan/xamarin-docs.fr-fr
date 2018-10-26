@@ -1,30 +1,30 @@
 ---
-title: Utilisation avec le Thread d’interface utilisateur dans Xamarin.iOS
-description: Ce document décrit comment travailler avec le Thread d’interface utilisateur dans Xamarin.iOS. Elle décrit l’exécution de thread de l’interface utilisateur fournit un exemple de thread d’arrière-plan et examine asynchrones / d’attente.
+title: Travaillez sur le Thread d’interface utilisateur dans Xamarin.iOS
+description: Ce document décrit comment travailler avec le Thread d’interface utilisateur dans Xamarin.iOS. Il traite de l’exécution de thread de l’interface utilisateur, fournit un exemple de thread d’arrière-plan et examine async/await.
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 4328b84625aff4c92d6e97029ced7dde747d4fc4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6dd55f5c4316ed8f1d4f16d9e282cc2647350518
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790407"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104854"
 ---
-# <a name="working-with-the-ui-thread-in-xamarinios"></a>Utilisation avec le Thread d’interface utilisateur dans Xamarin.iOS
+# <a name="working-with-the-ui-thread-in-xamarinios"></a>Travaillez sur le Thread d’interface utilisateur dans Xamarin.iOS
 
-Interfaces utilisateur des applications sont toujours monothread, même pour les périphériques multithreads : il n'existe qu’une seule représentation sous forme de l’écran et toute modification apportée à ce qui est affiché doivent être coordonnées via un seul « point d’accès ». Ainsi, plusieurs threads d’essayer de mettre à jour le pixel même en même temps (par exemple).
+Interfaces utilisateur d’application sont toujours monothread, même pour les périphériques multithreads : il n'existe qu’une seule représentation sous forme de l’écran et toute modification apportée à ce qui est affiché doit être coordonné via un seul « point d’accès ». Cela empêche plusieurs threads à partir de la mise à jour le même pixel en même temps (par exemple).
 
-Votre code doit uniquement des threads de modifications apportées aux contrôles d’interface à partir de la main de l’utilisateur (ou l’interface utilisateur). Les mises à jour de l’interface utilisateur qui se produisent sur un autre thread (par exemple, un thread d’arrière-plan ou de rappel) ne peuvent pas s’affichent à l’écran, ou peuvent même provoquer un blocage.
+Votre code doit faire uniquement les threads de modifications apportées aux contrôles d’interface à partir de la main de l’utilisateur (ou l’interface utilisateur). Les mises à jour de l’interface utilisateur qui se produisent sur un thread différent (par exemple, un thread de rappel ou d’arrière-plan) ne peuvent pas obtenir rendus à l’écran, ou peuvent même provoquer un blocage.
 
 ## <a name="ui-thread-execution"></a>Exécution du Thread d’interface utilisateur
 
-Lorsque vous créer des contrôles dans une vue, ou gestion d’un événement initiée par l’utilisateur, par exemple une touche, le code s’exécute déjà dans le contexte du thread d’interface utilisateur.
+Lorsque vous créez des contrôles dans une vue, ou gère un événement initié par l’utilisateur comme une pression tactile, le code s’exécute déjà dans le contexte de thread d’interface utilisateur.
 
-Si le code s’exécute sur un thread d’arrière-plan, dans une tâche ou un rappel il est probablement ne pas l’exécution sur le thread d’interface utilisateur. Dans ce cas, vous devez encapsuler le code dans un appel à `InvokeOnMainThread` ou `BeginInvokeOnMainThread` comme suit :
+Si le code s’exécute sur un thread d’arrière-plan, dans une tâche ou d’un rappel il est probablement ne pas l’exécution sur le thread d’interface utilisateur principal. Dans ce cas, vous devez encapsuler le code dans un appel à `InvokeOnMainThread` ou `BeginInvokeOnMainThread` comme suit :
 
 ```csharp
 InvokeOnMainThread ( () => {
@@ -32,9 +32,9 @@ InvokeOnMainThread ( () => {
 });
 ```
 
-Le `InvokeOnMainThread` méthode est définie sur `NSObject` afin qu’il peut être appelée à partir de méthodes définies sur n’importe quel objet UIKit (par exemple, une vue ou une vue contrôleur).
+Le `InvokeOnMainThread` méthode est définie sur `NSObject` afin qu’il peut être appelée à partir de méthodes définies sur n’importe quel objet UIKit (par exemple, une vue ou d’un contrôleur d’affichage).
 
-Lors du débogage des applications de Xamarin.iOS, une erreur est levée si votre code essaie d’accéder à un contrôle d’interface utilisateur à partir d’un thread incorrect. Cela vous aide à détecter et résoudre ces problèmes avec la méthode InvokeOnMainThread. Cela seulement se produit pendant le débogage et ne lève pas d’une erreur dans les versions release. Le message d’erreur apparaîtra comme suit :
+Pendant le débogage des applications Xamarin.iOS, une erreur est levée si votre code essaie d’accéder à un contrôle d’interface utilisateur à partir d’un thread incorrect. Cela vous aide à détecter et résoudre ces problèmes avec la méthode InvokeOnMainThread. Cela seulement se produit pendant le débogage et ne lève pas d’une erreur dans les versions release. Le message d’erreur apparaîtra comme suit :
 
  ![](ui-thread-images/image10.png "Exécution du Thread d’interface utilisateur")
 
@@ -51,7 +51,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-Code lèvera le `UIKitThreadAccessException` pendant le débogage. Pour résoudre le problème (et vous assurer que le contrôle d’interface utilisateur est uniquement accessible à partir du thread d’interface utilisateur), encapsuler tout code qui fait référence à des contrôles d’interface utilisateur à l’intérieur d’un `InvokeOnMainThread` expression comme suit :
+Code lèvera le `UIKitThreadAccessException` pendant le débogage. Pour résoudre le problème (et vous assurer que le contrôle d’interface utilisateur est uniquement accessible à partir du thread d’interface utilisateur principal), encapsuler tout code qui fait référence à des contrôles d’interface utilisateur à l’intérieur d’un `InvokeOnMainThread` expression comme suit :
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -61,16 +61,16 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-Vous ne devez utiliser cette option pour le reste des exemples de ce document, mais il est un concept important à retenir lors de votre application effectue des demandes de réseau, utilise le centre de notifications ou d’autres méthodes qui requièrent un gestionnaire d’achèvement qui s’exécute sur un autre thread.
+Vous ne devez utiliser cela pour le reste des exemples de ce document, mais il est un concept important à retenir lors de votre application effectue des demandes réseau, utilise le centre de notification ou d’autres méthodes qui requièrent un gestionnaire d’achèvement qui s’exécutera sur un autre thread.
 
  <a name="Async_Await_Example" />
 
 
-## <a name="asyncawait-example"></a>Exemple d’asynchrones / d’attente
+## <a name="asyncawait-example"></a>Exemple Async/Await
 
-Lorsque vous utilisez les mots clés de c# 5 asynchrones / d’attente `InvokeOnMainThread` n’est pas nécessaire car lorsqu’une tâche attendue se termine la méthode continue sur le thread appelant.
+Lorsque vous utilisez le C# 5 mots-clé async/await `InvokeOnMainThread` n’est pas nécessaire, car quand une tâche attendue se termine la méthode continue sur le thread appelant.
 
-Cet exemple de code (qui attend sur un appel de méthode délai purement à des fins de démonstration) présente une méthode asynchrone qui est appelée sur le thread d’interface utilisateur (il est un gestionnaire de TouchUpInside). Étant donné que le contenu dans la méthode est appelée sur le thread d’interface utilisateur, l’interface utilisateur opérations telles que la définition du texte sur un `UILabel` ou l’affichage d’un `UIAlertView` peut être appelée en toute sécurité une fois les opérations asynchrones terminées sur les threads d’arrière-plan.
+Cet exemple de code (qui attend sur un appel de méthode délai purement à des fins de démonstration) montre une méthode async qui est appelée sur le thread d’interface utilisateur (il s’agit d’un gestionnaire de TouchUpInside). Étant donné que la méthode conteneur est appelée sur le thread d’interface utilisateur, les opérations de l’interface utilisateur telles que la définition du texte sur un `UILabel` ou montrant un `UIAlertView` peut être appelée en toute sécurité après l’aboutissement des opérations asynchrones sur des threads d’arrière-plan.
 
 ```csharp
 async partial void button2_TouchUpInside (UIButton sender)

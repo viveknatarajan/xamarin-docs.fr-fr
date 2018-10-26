@@ -1,44 +1,44 @@
 ---
-title: 'Procédure pas à pas : Utilisation tactile dans Xamarin.iOS'
-description: Ce document décrit comment gérer tactile dans les applications Xamarin.iOS, traitant des interactions tactiles d’exemple reconnaissances de mouvement et modules de reconnaissance de mouvement personnalisée.
+title: 'Procédure pas à pas : À l’aide de Touch dans Xamarin.iOS'
+description: Ce document décrit comment gérer des entrées tactiles dans les applications Xamarin.iOS, traitant des interactions tactiles d’exemple, les modules de reconnaissance de mouvement et modules de reconnaissance de mouvement personnalisée.
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: fff49599d3843bb09d407316d6964ca54b6a1004
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: bff4d46ac9d5fe893cbb0a2dfa032e1b9f6daa0e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121553"
 ---
-# <a name="walkthrough-using-touch-in-xamarinios"></a>Procédure pas à pas : Utilisation tactile dans Xamarin.iOS
+# <a name="walkthrough-using-touch-in-xamarinios"></a>Procédure pas à pas : À l’aide de Touch dans Xamarin.iOS
 
-Cette procédure pas à pas montre comment écrire du code qui répond à différents types d’événements tactiles. Chaque exemple est contenue dans une autre fenêtre :
+Cette procédure pas à pas montre comment écrire du code qui répond à différents types d’événements tactiles. Chaque exemple est contenue dans un écran distinct :
 
 - [Touch exemples](#Touch_Samples) – comment répondre aux événements tactiles.
-- [Exemples de module de reconnaissance de mouvement](#Gesture_Recognizer_Samples) : comment utiliser des modules de reconnaissance de mouvement intégré.
-- [Exemple personnalisé de reconnaissance de mouvement](#Custom_Gesture_Recognizer) : la création d’un module de reconnaissance de mouvement personnalisée.
+- [Exemples de module de reconnaissance du mouvement](#Gesture_Recognizer_Samples) – comment utiliser des modules de reconnaissance de mouvement intégrés.
+- [Exemple de reconnaissance de mouvement personnalisé](#Custom_Gesture_Recognizer) – comment créer un module de reconnaissance de mouvement personnalisée.
 
 Chaque section contient des instructions pour écrire le code à partir de zéro.
-Le [exemple de code de démarrage](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start) inclut déjà un écran de plan conceptuel et menu terminé :
+Le [à partir d’exemples de code](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start) inclut déjà un écran de storyboard et menu terminée :
 
  [![](ios-touch-walkthrough-images/image3.png "L’exemple inclut l’écran de menu")](ios-touch-walkthrough-images/image3.png#lightbox)
 
-Suivez les instructions ci-dessous pour ajouter du code à la table de montage séquentiel et en savoir plus sur les différents types d’événements tactiles disponibles dans iOS. Vous pouvez également ouvrir le [exemple terminé](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final) pour voir tout ce travail.
+Suivez les instructions ci-dessous pour ajouter du code à la table de montage séquentiel et en savoir plus sur les différents types d’événements tactiles disponibles dans iOS. Vous pouvez également ouvrir le [exemple terminé](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final) pour voir ce que tout fonctionne.
 
 <a name="Touch_Samples"/>
 
-## <a name="touch-samples"></a>Exemples de fonctions tactiles
+## <a name="touch-samples"></a>Exemples de contact
 
-Dans cet exemple, nous illustrerons certaines des fonctions tactiles API. Suivez ces étapes pour ajouter le code requis pour implémenter des événements tactiles :
+Dans cet exemple, nous allons illustrer certaines des fonctions tactiles API. Suivez ces étapes pour ajouter le code requis pour implémenter des événements tactiles :
 
 
-1. Ouvrez le projet **Touch_Start**. Premier exécuter le projet pour vous assurer que tout est OK, ainsi que touch le **se touchent les exemples** bouton. Vous devez voir un écran semblable à la suivante (même si aucun des boutons fonctionne) :
+1. Ouvrez le projet **Touch_Start**. Première exécution du projet pour vous assurer que tout est OK et l’interaction tactile le **exemples Touch** bouton. Vous devez voir un écran semblable à ce qui suit (même si aucun bouton ne fonctionne pas) :
     
-    [![](ios-touch-walkthrough-images/image4.png "Exemple d’application de s’exécuter avec des boutons qui ne fonctionnent pas")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![](ios-touch-walkthrough-images/image4.png "Exemple d’application s’exécuter avec les boutons qui ne fonctionnent pas")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
 1. Modifiez le fichier **TouchViewController.cs** et ajoutez les variables de deux instance suivantes à la classe `TouchViewController`:
@@ -94,13 +94,13 @@ Dans cet exemple, nous illustrerons certaines des fonctions tactiles API. Suivez
     }
     ```
     
-    Cette méthode fonctionne en recherchant un `UITouch` de l’objet et si elle existe effectuer une action selon où la fonction tactile s’est produite :
+    Cette méthode fonctionne en recherchant un `UITouch` de l’objet et si elle existe effectuer une action selon où la pression tactile a eu lieu :
 
-    * _À l’intérieur de TouchImage_ – afficher le texte `Touches Began` dans une étiquette et la modification de l’image.
-    * _À l’intérieur de DoubleTouchImage_ : modifier l’image affichée si le mouvement a un double-clic.
-    * _À l’intérieur de DragImage_ : définir un indicateur indiquant que les fonctions tactiles a démarré. La méthode `TouchesMoved` utilise cet indicateur pour déterminer si `DragImage` doit être déplacé sur l’écran ou non, comme nous le verrons dans l’étape suivante.
+    * _À l’intérieur de TouchImage_ : afficher le texte `Touches Began` dans une étiquette et la modification de l’image.
+    * _À l’intérieur de DoubleTouchImage_ : modifier l’image affichée si le mouvement a été un double-clic.
+    * _À l’intérieur de DragImage_ : définir un indicateur indiquant que la pression tactile a démarré. La méthode `TouchesMoved` utilise cet indicateur pour déterminer si `DragImage` doit être déplacé sur l’écran ou non, comme nous le verrons dans l’étape suivante.
 
-    Le code ci-dessus porte uniquement sur des touches finales, il n’est toujours aucun comportement si l’utilisateur déplace son doigt sur l’écran. Pour répondre à la circulation, implémentez `TouchesMoved` comme indiqué dans le code ci-dessous :
+    Touche individuels ne gère que le code ci-dessus, il n’est toujours aucun comportement si l’utilisateur déplace son doigt sur l’écran. Pour répondre au déplacement des, implémentez `TouchesMoved` comme indiqué dans le code ci-dessous :
 
     ```csharp 
     public override void TouchesMoved(NSSet touches, UIEvent evt)
@@ -129,11 +129,11 @@ Dans cet exemple, nous illustrerons certaines des fonctions tactiles API. Suivez
     }
     ```
 
-    Cette méthode obtient un `UITouch` objet, puis vérifie pour voir où la fonction tactile s’est produite. Si la fonction tactile s’est produite dans `TouchImage`, puis le texte des touches finales déplacé s’affiche sur l’écran. 
+    Cette méthode obtient un `UITouch` objet, puis vérifie pour voir où la pression tactile a eu lieu. Si la pression tactile se sont produites dans `TouchImage`, puis le texte déplacé touche est affiché sur l’écran. 
 
-    Si `touchStartedInside` a la valeur true, nous savons que l’utilisateur a leur doigt `DragImage` et est déplacer. Le code déplacera `DragImage` lorsque l’utilisateur déplace son doigt sur l’écran.
+    Si `touchStartedInside` a la valeur true, nous savons que l’utilisateur dispose de son doigt `DragImage` et il tourne autour. Le code déplacera `DragImage` quand l’utilisateur déplace son doigt sur l’écran.
 
-1. Nous devons gérer le cas lorsque l’utilisateur lève le doigt son désactivé l’écran ou iOS annule l’événement tactile. Pour ce faire, nous implémenterons `TouchesEnded` et `TouchesCancelled` comme indiqué ci-dessous :
+1. Nous avons besoin de gérer les cas où l’utilisateur retire son doigt hors de l’écran ou iOS annule l’événement tactile. Pour ce faire, nous allons implémenter `TouchesEnded` et `TouchesCancelled` comme indiqué ci-dessous :
 
     ```csharp
     public override void TouchesCancelled(NSSet touches, UIEvent evt)
@@ -165,11 +165,11 @@ Dans cet exemple, nous illustrerons certaines des fonctions tactiles API. Suivez
     }
     ```
     
-    Ces deux méthodes réinitialisera le `touchStartedInside` indicateur sur false. `TouchesEnded` afficheront également `TouchesEnded` sur l’écran.
+    Ces deux méthodes réinitialisera la `touchStartedInside` indicateur sur false. `TouchesEnded` affiche également `TouchesEnded` sur l’écran.
 
-1. À ce stade, l’écran tactile des échantillons est terminé. Notez comment l’écran change à mesure que vous interagissez avec chacune des images, comme indiqué dans la capture d’écran suivante :
+1. À ce stade, l’écran tactile des échantillons est terminé. Notez comment l’écran change à mesure que vous interagissez avec chacune des images, comme illustré dans la capture d’écran suivante :
         
-    [![](ios-touch-walkthrough-images/image4.png "Écran de l’application de départ")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![](ios-touch-walkthrough-images/image4.png "L’écran à partir de l’application")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "L’écran une fois que l’utilisateur fait glisser un bouton")](ios-touch-walkthrough-images/image5.png#lightbox)
  
@@ -179,19 +179,19 @@ Dans cet exemple, nous illustrerons certaines des fonctions tactiles API. Suivez
 ##  <a name="gesture-recognizer-samples"></a>Exemples de module de reconnaissance de mouvement
 
 Le [section précédente](#Touch_Samples) vous a montré comment faire glisser un objet autour de l’écran à l’aide des événements tactiles.
-Dans cette section, nous permet de supprimer les événements tactiles et montrent comment utiliser les modules de reconnaissance de mouvement suivantes :
+Dans cette section, nous débarrasser des événements tactiles et montrent comment utiliser les modules de reconnaissance de mouvement suivantes :
 
--  Le `UIPanGestureRecognizer` pour faire glisser une image autour de l’écran.
--  Le `UITapGestureRecognizer` pour répondre aux clics double à l’écran.
+-  Le `UIPanGestureRecognizer` permettant de faire glisser une image autour de l’écran.
+-  Le `UITapGestureRecognizer` pour répondre aux doubles clics sur l’écran.
 
-Si vous exécutez le [exemple de code de démarrage](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start) , puis cliquez sur le **exemples de module de reconnaissance de mouvement** bouton, vous devez voir l’écran suivant :
+Si vous exécutez le [à partir d’exemples de code](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start) , puis cliquez sur le **exemples de module de reconnaissance de mouvement** bouton, vous devez voir l’écran suivant :
 
- [![](ios-touch-walkthrough-images/image6.png "Cliquez sur le bouton d’exemples de module de reconnaissance de mouvement affiche cet écran")](ios-touch-walkthrough-images/image6.png#lightbox)
+ [![](ios-touch-walkthrough-images/image6.png "En cliquant sur le bouton d’exemples de module de reconnaissance de mouvement indique cet écran")](ios-touch-walkthrough-images/image6.png#lightbox)
 
-Suivez ces étapes pour implémenter les reconnaissances de mouvement :
+Suivez ces étapes pour implémenter des modules de reconnaissance de mouvement :
 
 
-1. Modifiez le fichier **GestureViewController.cs** et ajoutez la variable d’instance suivante :
+1. Modifiez le fichier **GestureViewController.cs** et ajoutez la variable d’instance suivant :
 
     ```csharp
     #region Private Variables
@@ -201,7 +201,7 @@ Suivez ces étapes pour implémenter les reconnaissances de mouvement :
     ```
 
     Nous avons besoin de cette variable d’instance pour effectuer le suivi de l’emplacement précédent de l’image.
-Le module de reconnaissance de mouvement panoramique utilisera le `originalImageFrame` valeur pour calculer le décalage nécessaire pour redessiner l’image sur l’écran.
+Le module de reconnaissance de mouvement panoramique utilisera le `originalImageFrame` valeur pour calculer le décalage obligé pour redessiner l’image sur l’écran.
 
 1. Ajoutez la méthode suivante au contrôleur :
 
@@ -220,7 +220,7 @@ Le module de reconnaissance de mouvement panoramique utilisera le `originalImage
     ```
 
     Ce code instancie un `UIPanGestureRecognizer` de l’instance et l’ajoute à une vue.
-Notez que nous affectons une cible au mouvement sous la forme de la méthode `HandleDrag` – cette méthode est fournie à l’étape suivante.
+Notez que nous attribuons une cible pour le mouvement sous la forme de la méthode `HandleDrag` – cette méthode est fournie à l’étape suivante.
 
 1. Pour implémenter HandleDrag, ajoutez le code suivant pour le contrôleur :
 
@@ -246,10 +246,10 @@ Notez que nous affectons une cible au mouvement sous la forme de la méthode `Ha
     }
     ```
 
-    Le code ci-dessus sera tout d’abord vérifier l’état de la reconnaissance de mouvement, puis déplacez l’image autour de l’écran. Avec ce code en place, le contrôleur peut prennent désormais en charge la faire glisser l’un image autour de l’écran.
+    Le code ci-dessus sera tout d’abord vérifier l’état de la reconnaissance de mouvement, puis déplacez l’image autour de l’écran. Avec ce code en place, le contrôleur peut désormais en charge en faisant glisser une image de l’écran.
 
 
-1. Ajouter un `UITapGestureRecognizer` qui modifie l’image qui est affichée dans DoubleTouchImage. Ajoutez la méthode suivante à la `GestureViewController` contrôleur :
+1. Ajouter un `UITapGestureRecognizer` qui modifie l’image qui est affiché dans DoubleTouchImage. Ajoutez la méthode suivante à la `GestureViewController` contrôleur :
 
     ```csharp
     private void WireUpTapGestureRecognizer()
@@ -283,7 +283,7 @@ Notez que nous affectons une cible au mouvement sous la forme de la méthode `Ha
     }
     ```
 
-    Ce code est très similaire au code pour le `UIPanGestureRecognizer` , mais au lieu d’utiliser un délégué pour une cible, nous utilisons un `Action`. 
+    Ce code est très similaire au code pour le `UIPanGestureRecognizer` mais au lieu d’utiliser un délégué pour une cible que nous utilisons un `Action`. 
 
 1. La dernière chose que nous devons faire est de modifier `ViewDidLoad` afin qu’il appelle les méthodes que nous venons d’ajouter. Modifiez ViewDidLoad afin qu’il ressemble au code suivant :
 
@@ -302,13 +302,13 @@ Notez que nous affectons une cible au mouvement sous la forme de la méthode `Ha
     }
     ```
 
-    Notez également que nous initialiser la valeur de `originalImageFrame`.
+    Notez également que nous initialisons la valeur de `originalImageFrame`.
 
 
 1. Exécutez l’application et interagir avec les deux images.
 La capture d’écran suivante est un exemple de ces interactions :
     
-    [![](ios-touch-walkthrough-images/image7.png "Cette capture d’écran montre une interaction glisser")](ios-touch-walkthrough-images/image7.png#lightbox)
+    [![](ios-touch-walkthrough-images/image7.png "Cette capture d’écran montre une interaction de glisser")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 
 
@@ -316,14 +316,14 @@ La capture d’écran suivante est un exemple de ces interactions :
 
 ## <a name="custom-gesture-recognizer"></a>Reconnaissance de mouvement personnalisée
 
-Dans cette section, nous allons appliquer les concepts des sections précédentes pour créer un module de reconnaissance de mouvement personnalisée. Le module de reconnaissance de mouvement personnalisé sera sous-classes `UIGestureRecognizer`et sera reconnaît lorsque l’utilisateur dessine un « V » sur l’écran, puis basculer vers une image bitmap. La capture d’écran suivante est un exemple de l’écran :
+Dans cette section, nous appliquons les concepts dans les sections précédentes pour créer un module de reconnaissance de mouvement personnalisée. La reconnaissance de mouvement personnalisé sera sous-classes `UIGestureRecognizer`et va reconnaître quand l’utilisateur dessine un « V » sur l’écran, puis basculer d’une image bitmap. La capture d’écran suivante est un exemple de cet écran :
 
  [![](ios-touch-walkthrough-images/image8.png "L’application reconnaît lorsque l’utilisateur dessine un « V » sur l’écran")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Suivez ces étapes pour créer un module de reconnaissance de mouvement personnalisé :
 
 
-1. Ajoutez une nouvelle classe au projet nommé `CheckmarkGestureRecognizer`et le rendre ressemble au code suivant :
+1. Ajoutez une nouvelle classe au projet nommé `CheckmarkGestureRecognizer`et qu’elle ressemble à ce qui suit :
 
     ```csharp
     using System;
@@ -438,12 +438,12 @@ Suivez ces étapes pour créer un module de reconnaissance de mouvement personna
     }
     ```
 
-    La méthode de réinitialisation est appelée lorsque le `State` prend le propriété `Recognized` ou `Ended`. Il s’agit de l’heure pour réinitialiser tout état interne défini dans le module de reconnaissance de mouvement personnalisée.
-La classe peut maintenant démarrer prochaine fois que l’utilisateur interagit avec l’application et prêt à retenter la reconnaissance du mouvement.
+    La méthode Reset est appelée lorsque le `State` prend le propriété `Recognized` ou `Ended`. Il s’agit de l’heure pour réinitialiser n’importe quel état interne défini dans le module de reconnaissance de mouvement personnalisée.
+La classe peut désormais rase prochaine fois que l’utilisateur interagit avec l’application et être prêt tenter une nouvelle reconnaissant le mouvement.
 
 
 
-1. Maintenant que nous avons défini un module de reconnaissance de mouvement personnalisé (`CheckmarkGestureRecognizer`) modifier les **CustomGestureViewController.cs** et ajoutez les variables de deux instance suivantes :
+1. Maintenant que nous avons défini un module de reconnaissance de mouvement personnalisé (`CheckmarkGestureRecognizer`) modifier la **CustomGestureViewController.cs** fichier, puis ajoutez les variables de deux instance suivantes :
 
     ```csharp
     #region Private Variables
@@ -452,7 +452,7 @@ La classe peut maintenant démarrer prochaine fois que l’utilisateur interagit
     #endregion
     ```
 
-1. Pour instancier et configurer la reconnaissance de mouvement, ajoutez la méthode suivante au contrôleur :
+1. Pour instancier et configurer notre reconnaissance de mouvement, ajoutez la méthode suivante au contrôleur :
 
     ```csharp
     private void WireUpCheckmarkGestureRecognizer()
@@ -493,15 +493,15 @@ La classe peut maintenant démarrer prochaine fois que l’utilisateur interagit
     }
     ```
 
-1. Exécutez l’application et essayez de dessiner un « V » sur l’écran. Vous devez voir l’image en cours affiche les modifications, comme indiqué dans les captures d’écran suivants :
+1. Exécutez l’application et essayez de dessiner un « V » sur l’écran. Vous devez voir l’image en cours affiche les modifications, comme indiqué dans les captures d’écran suivante :
     
     [![](ios-touch-walkthrough-images/image9.png "Le bouton activé")](ios-touch-walkthrough-images/image9.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image10.png "Le bouton désactivé")](ios-touch-walkthrough-images/image10.png#lightbox)
+    [![](ios-touch-walkthrough-images/image10.png "Le bouton non contrôlé")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 
 
-Ces trois sections présentent les différentes méthodes pour répondre aux événements dans iOS tactiles : à l’aide des événements tactiles, les modules de reconnaissance de mouvement intégrés, ou avec un module de reconnaissance de mouvement personnalisée.
+La méthode ci-dessus trois sections présentent les méthodes différentes pour répondre aux événements dans iOS tactiles : à l’aide des événements tactiles, les modules de reconnaissance de mouvement intégré, ou avec un module de reconnaissance de mouvement personnalisée.
 
 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995639"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115416"
 ---
 # <a name="checking-device-orientation"></a>La vérification d’orientation de l’appareil
 
@@ -29,7 +29,7 @@ L’application à l’aide `DependencyService` aura la structure suivante :
 ![](device-orientation-images/orientation-diagram.png "Structure de l’Application DependencyService")
 
 > [!NOTE]
-> Il est possible de détecter si l’appareil est en mode portrait ou paysage dans le code partagé, comme illustré dans [appareil Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). La méthode décrite dans cet article utilise des fonctionnalités natives pour obtenir plus d’informations, notamment si l’appareil est à l’envers.
+> Il est possible de détecter si l’appareil est en mode portrait ou paysage dans le code partagé, comme illustré dans [orientation de l’appareil](~/xamarin-forms/user-interface/layouts/device-orientation.md#Reacting_to_Changes_in_Orientation). La méthode décrite dans cet article utilise des fonctionnalités natives pour obtenir plus d’informations, notamment si l’appareil est à l’envers.
 
 <a name="Creating_the_Interface" />
 

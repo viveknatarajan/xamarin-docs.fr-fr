@@ -4,15 +4,15 @@ description: Cet article aborde l’utilisation des fenêtres et des panneaux da
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: b60b8a6a7c56347d6abf71f8c5149ddd556d3da8
-ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
+ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "40251279"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106973"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows dans Xamarin.Mac
 
@@ -347,14 +347,14 @@ using Foundation;
 
 namespace SourceWriter
 {
-    public class EditorWidowDelegate : NSWindowDelegate
+    public class EditorWindowDelegate : NSWindowDelegate
     {
         #region Computed Properties
         public NSWindow Window { get; set;}
         #endregion
 
         #region constructors
-        public EditorWidowDelegate (NSWindow window)
+        public EditorWindowDelegate (NSWindow window)
         {
             // Initialize
             this.Window = window;
@@ -427,7 +427,7 @@ Pour attacher une instance de ce délégué à votre fenêtre, utilisez le code 
 
 ```csharp
 // Set delegate
-Window.Delegate = new EditorWidowDelegate(Window);
+Window.Delegate = new EditorWindowDelegate(Window);
 ```
 
 ### <a name="saving-changes-before-closing-the-app"></a>Enregistrer les modifications avant de fermer l’application
@@ -489,7 +489,7 @@ Ce code crée une nouvelle version de notre contrôleur de fenêtre charge de la
 
 Si nous ouvrons le **Windows** menu, vous pouvez voir l’application est automatiquement suivi et de gestion de nos fenêtres ouvertes :
 
-[![](window-images/display05.png "Le menu Windows")](window-images/display05.png#lightbox)
+[![](window-images/display05.png "Le menu windows")](window-images/display05.png#lightbox)
 
 Pour plus d’informations sur l’utilisation des Menus dans une application Xamarin.Mac, veuillez consulter notre [utilisation des Menus](~/mac/user-interface/menu.md) documentation.
 
@@ -759,7 +759,7 @@ Pour ajouter un nouveau panneau, procédez comme suit :
 4. Double-cliquez sur le `DocumentPanel.xib` fichier à ouvrir pour modification dans l’Interface Builder : 
 
     [![](window-images/new02.png "Modification du panneau")](window-images/new02.png#lightbox)
-5. Supprimer la fenêtre existante et faites glisser un panneau à partir de la **inspecteur de bibliothèque** dans le le **Éditeur d’Interface**: 
+5. Supprimer la fenêtre existante et faites glisser un panneau à partir de la **inspecteur de bibliothèque** dans le **Éditeur d’Interface**: 
 
     [![](window-images/panels01.png "Suppression de la fenêtre existante")](window-images/panels01.png#lightbox)
 6. Le panneau de raccordement jusqu'à la **le propriétaire du fichier** - **fenêtre** - **Outlet**: 

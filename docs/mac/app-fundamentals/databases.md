@@ -4,15 +4,15 @@ description: Cet article couvre l’utilisation de la clé-valeur de codage et e
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: db418df0869d73e9f04982fb508fd261304240c0
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 465b4a34d54dbee92461669b16c3b8a13188bbde
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251019"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122203"
 ---
 # <a name="databases-in-xamarinmac"></a>Bases de données dans Xamarin.Mac
 

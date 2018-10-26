@@ -4,15 +4,15 @@ description: Cette procédure pas à pas fournit une explication pas à pas mont
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 36ac1be1274ff90d573aa53e5c86ae0a97709505
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: de0e2c5ff10de9136c4cb5987c80ce22c7b18c4d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105543"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifications à distance avec Firebase Cloud Messaging
 
@@ -42,7 +42,7 @@ Il peut être utile pour vous familiariser avec la [différents types de message
 Avant de poursuivre cette procédure pas à pas, vous devez obtenir les informations d’identification nécessaires pour utiliser des serveurs FCM de Google. Ce processus est expliqué dans [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md#setup_fcm).
 En particulier, vous devez télécharger le **google-services.JSON** fichier à utiliser avec l’exemple de code présenté dans cette procédure pas à pas. Si vous n’avez pas encore créé un projet dans la Console Firebase (ou si vous n’avez pas encore téléchargé le **google-services.JSON** fichier), consultez [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md).
 
-Pour exécuter l’exemple d’application, vous devez un émulateur compatible avec Firebase ou un appareil de test Android. Firebase Cloud Messaging prend en charge les clients qui exécutent sur Android 4.0 ou version ultérieure, et ces appareils doivent également disposer le l’application Google Play Store installée (Google Play Services 9.2.1 ou ultérieure est requise). Si vous n’avez pas encore installé sur votre appareil à l’application Google Play Store, visitez le [Google Play](https://support.google.com/googleplay) site web pour télécharger et l’installer. Alternativement, vous pouvez utiliser l’émulateur du Kit Android SDK avec Google Play Services est installé au lieu d’un appareil de test (il est inutile d’installer le Store Play Google si vous utilisez l’émulateur du Kit Android SDK).
+Pour exécuter l’exemple d’application, vous devez un émulateur compatible avec Firebase ou un appareil de test Android. Firebase Cloud Messaging prend en charge les clients qui exécutent sur Android 4.0 ou version ultérieure, et ces appareils doivent également avoir installé l’application Google Play Store (Google Play Services 9.2.1 ou ultérieure est requise). Si vous n’avez pas encore installé sur votre appareil à l’application Google Play Store, visitez le [Google Play](https://support.google.com/googleplay) site web pour télécharger et l’installer. Alternativement, vous pouvez utiliser l’émulateur du Kit Android SDK avec Google Play Services est installé au lieu d’un appareil de test (il est inutile d’installer le Store Play Google si vous utilisez l’émulateur du Kit Android SDK).
 
 ## <a name="start-an-app-project"></a>Démarrer un projet d’application
 
@@ -53,7 +53,7 @@ Une fois la nouvelle application est créée, l’étape suivante consiste à d�
 
 Dans [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md), vous avez spécifié un nom de package pour l’application prenant en charge FCM. Ce nom de package sert également le [ *ID d’application* ](./firebase-cloud-messaging.md#fcm-in-action-app-id) qui est associé le [clé API](firebase-cloud-messaging.md#fcm-in-action-api-key). Configurer l’application pour utiliser ce nom de package :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Ouvrez les propriétés de la **FCMClient** projet.
 
@@ -65,7 +65,7 @@ Dans l’exemple suivant, le nom du package a la valeur `com.xamarin.fcmexample`
 
 Pendant que vous mettez à jour le **manifeste Android**, également une vérification pour vous assurer que le `Internet` autorisation est activée.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1.  Ouvrez les propriétés de la **FCMClient** projet.
 
@@ -86,7 +86,7 @@ Pendant que vous mettez à jour le **manifeste Android**, également une vérifi
 
 Étant donné que Firebase Cloud Messaging dépend des Services Google Play, le [Xamarin Google Play Services - Base](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Base/) package NuGet doit être ajouté au projet Xamarin.Android. Vous avez besoin version 29.0.0.2 ou version ultérieure.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Dans Visual Studio, cliquez sur **références > Gérer les Packages NuGet...** .
 
@@ -96,7 +96,7 @@ Pendant que vous mettez à jour le **manifeste Android**, également une vérifi
 
     [![L’installation de Base des Services Google Play](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1.  Dans Visual Studio pour Mac, cliquez sur **Packages > ajouter des Packages...** .
 
@@ -123,7 +123,7 @@ Cette instruction effectue la `GoogleApiAvailability` classe **Xamarin.GooglePla
 
 Pour recevoir des messages à partir de FCM, le [Xamarin Firebase - messagerie](https://www.nuget.org/packages/Xamarin.Firebase.Messaging/) package NuGet doit être ajouté au projet d’application. Sans ce package, une application Android ne peut pas recevoir des messages à partir de serveurs FCM.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Dans Visual Studio, cliquez sur **références > Gérer les Packages NuGet...** .
 
@@ -133,7 +133,7 @@ Pour recevoir des messages à partir de FCM, le [Xamarin Firebase - messagerie](
 
     [![L’installation de Xamarin Firebase de messagerie](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1.  Dans Visual Studio pour Mac, cliquez sur **Packages > ajouter des Packages...** .
 
@@ -161,7 +161,7 @@ Les deux premières instructions rendent les types dans les **Xamarin.Firebase.M
 
 L’étape suivante consiste à ajouter le **google-services.JSON** fichier dans le répertoire racine de votre projet :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Copie **google-services.JSON** au dossier du projet.
 
@@ -169,11 +169,14 @@ L’étape suivante consiste à ajouter le **google-services.JSON** fichier dans
 
 3.  Sélectionnez **google-services.JSON** dans le **l’Explorateur de solutions** fenêtre.
 
-4.  Dans le **propriétés** volet, définissez le **Action de génération** à **GoogleServicesJson** (si le **GoogleServicesJson** action de génération n’est pas affichée, Enregistrez et fermez la Solution, puis le rouvrir) :
+4.  Dans le **propriétés** volet, définissez le **Action de génération** à **GoogleServicesJson**:
 
     [![Définition de l’action de génération sur GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+    > [!NOTE] 
+    > Si le **GoogleServicesJson** action de génération n’est pas affichée, enregistrez et fermez la solution, puis le rouvrir.
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1.  Copie **google-services.JSON** au dossier du projet.
 
@@ -273,7 +276,7 @@ void CreateNotificationChannel()
         return;
     }
 
-    var channel = new NotificationChannel(MyFirebaseMessagingService.CHANNEL_ID,
+    var channel = new NotificationChannel(CHANNEL_ID,
                                           "FCM Notifications",
                                           NotificationImportance.Default)
                   {
@@ -419,7 +422,7 @@ Maintenant que les services de récepteur sont en place, code d’application cl
 
 [![Bouton de jeton de journal ajouté à l’écran de l’application](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
-### <a name="log-tokes"></a>Journal tokes
+### <a name="log-tokens"></a>Jetons de journal
 
 Le code ajouté à cette étape est destiné uniquement à des fins de démonstration &ndash; une application cliente de production n’a pas besoin de se connecter les jetons d’inscription. Modifier **Resources/layout/Main.axml** et ajoutez le code suivant `Button` déclaration immédiatement après le `TextView` élément :
 
@@ -432,7 +435,7 @@ Le code ajouté à cette étape est destiné uniquement à des fins de démonstr
   android:text="Log Token" />
 ```
 
-Ajoutez le code suivant à la fin de la `MainActivity.OnCreate` méthode :
+Ajoutez le code suivant à la fin de la méthode `MainActivity.OnCreate` :
 
 ```csharp
 var logTokenButton = FindViewById<Button>(Resource.Id.logTokenButton);

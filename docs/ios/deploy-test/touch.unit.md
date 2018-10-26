@@ -4,15 +4,15 @@ description: Ce document fournit une vue d’ensemble des tests unitaires d’un
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ce2b452d50222ac3561dab5b76915b7ae634934b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd590b65fdf1f83ade3453fa1266d1f6724bb8de
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121826"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Tests unitaires d’applications Xamarin.iOS
 
@@ -21,13 +21,13 @@ Les tests unitaires avec Xamarin.iOS s’effectuent à l’aide du framework Tou
 
 ## <a name="setting-up-a-test-project"></a>Configuration d’un projet de tests
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Pour configurer un framework pour votre projet de tests unitaires, ajoutez simplement à votre solution un projet de type **Projet de tests unitaires iOS**. Cliquez avec le bouton droit sur votre solution, puis sélectionnez **Ajouter > Ajouter un nouveau projet**. Dans la liste, sélectionnez **iOS > Tests > API unifiée > Projet de tests unitaires iOS** (vous pouvez choisir C# ou F#).
 
 ![](touch.unit-images/00.png "Choisir C# ou F#")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Pour configurer un framework pour votre projet de tests unitaires, ajoutez simplement à votre solution un projet de type **Projet de tests unitaires iOS**. Cliquez avec le bouton droit sur votre solution, puis sélectionnez **Ajouter > Nouveau projet...**. Dans la liste, sélectionnez **Visual C# > iOS > Application de tests unitaires (iOS)**.
 
@@ -37,11 +37,11 @@ Pour configurer un framework pour votre projet de tests unitaires, ajoutez simpl
 
 Les étapes précédentes créent un projet de base qui contient un programme Runner simple et qui fait référence au nouvel assembly MonoTouch.NUnitLite. Votre projet doit ressembler à ceci :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![](touch.unit-images/01.png "Projet dans l’Explorateur de solutions")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](touch.unit-images/01a.png "Projet dans l’Explorateur de solutions")
 

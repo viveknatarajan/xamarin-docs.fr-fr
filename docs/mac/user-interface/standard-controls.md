@@ -4,15 +4,15 @@ description: Cet article aborde l’utilisation des contrôles AppKit standard t
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 1760e764c4918f597c95a4c811be9166e33bb1f3
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 9f5bdc9a79c514f0310d29b3d054fb7e9659d669
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40250974"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123789"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Contrôles standard dans Xamarin.Mac
 
@@ -649,7 +649,7 @@ Cet article a examiné en détail à l’utilisation avec les contrôles AppKit 
 
 - [MacControls (exemple)](https://developer.xamarin.com/samples/mac/MacControls/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [Fenêtres](~/mac/user-interface/window.md)
+- [Windows](~/mac/user-interface/window.md)
 - [Liaison de données et codage de clé-valeur](~/mac/app-fundamentals/databinding.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [À propos des contrôles et des vues](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsAll.html#//apple_ref/doc/uid/20000957-CH46-SW1)

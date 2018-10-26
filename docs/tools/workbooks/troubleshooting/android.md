@@ -3,15 +3,15 @@ title: Résolution des problèmes de classeurs de Xamarin sur Android
 description: Ce document fournit des conseils de dépannage pour l’utilisation des classeurs de Xamarin sur Android. Il aborde la prise en charge de l’émulateur, les classeurs qui ne se chargement pas et les autres rubriques.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: b0333e1a40570374ee6218b7a848d2dd1c06b872
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: a93288829ff99027a4b33e7720a7f849df37e9b1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112609"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Résolution des problèmes de classeurs de Xamarin sur Android
 

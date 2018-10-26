@@ -4,15 +4,15 @@ description: Ce document décrit les fonctionnalités de sécurité et confident
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1a28bf394d29c09bfd264f03e0eea6c8b582f271
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 1c88a5c16dbe5559f0b551a97a27ebb893991187
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854751"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120500"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS fonctionnalités de sécurité et confidentialité
 
@@ -72,7 +72,7 @@ Prenons l’exemple suivant de l’accès à HomeKit sur iOS 10 (et supérieur),
 
 ![Un exemple d’alerte NSHomeKitUsageDescription](security-privacy-images/info01.png "NSHomeKitUsageDescription un exemple d’alerte")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Xamarin.iOS pour Visual Studio actuellement ne prend pas en charge la modification de la **Info.plist** éditeur de manifeste de clés de confidentialité à partir de l’e/s par défaut. Au lieu de cela, vous devrez utiliser l’éditeur PList générique, par conséquent, procédez comme suit :
 
@@ -90,7 +90,7 @@ Xamarin.iOS pour Visual Studio actuellement ne prend pas en charge la modificati
     ![Entrez une description](security-privacy-images/InfoPListSetValue.png "Entrez une description")
 7. Enregistrez les modifications dans le fichier.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Pour définir toutes les clés de confidentialité, procédez comme suit :
 

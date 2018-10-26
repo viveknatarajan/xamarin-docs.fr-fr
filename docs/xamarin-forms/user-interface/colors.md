@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1017f108d6808155cac84e98a811a30d09afa134
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: a7acb300dbbd6daa02eace955066d3227834cf67
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986081"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103073"
 ---
 # <a name="colors-in-xamarinforms"></a>Couleurs dans Xamarin.Forms
 
@@ -53,7 +53,7 @@ Ces couleurs sont affichées sur chaque plateforme ci-dessous. Notez que la coul
 
 Utilisez le `Default` pour définir (ou nouveau) une valeur de couleur à la valeur par défaut de plate-forme (que cela représente une couleur sous-jacente différente sur chaque plateforme pour chaque propriété de la présentation).
 
-Les développeurs peuvent utiliser cette valeur pour définir un `Color` propriété mais doit **pas** interroger cette instance pour son composant valeurs RVB (ils tout est prêt à -1).
+Les développeurs peuvent utiliser cette valeur pour définir un `Color` propriété mais doit **pas** interroger cette instance pour les valeurs RVB de ses composants (ils tout est prêt à -1).
 
 ## <a name="colortransparent"></a>Color.Transparent
 

@@ -4,15 +4,15 @@ description: Ce document fournit une introduction aux storyboards dans Xamarin.i
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: bd8fee1b8f1941203bb0e6f00e261cbfbbccc9a7
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106882"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduction aux Storyboards dans Xamarin.iOS
 
@@ -129,7 +129,7 @@ Une fois la transition terminée, l’utilisateur verra le `CallHistoryControlle
 
 Parfois, vous devrez peut-être ajouter une table de montage séquentiel dans un fichier précédemment non-table de montage séquentiel. Cette opération qu’une seule fois dans Visual Studio pour Mac peut être rationalisée en suivant les étapes ci-dessous :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Créer un nouveau fichier de table de montage séquentiel en accédant à **fichier > nouveau fichier > iOS > Storyboard**, comme illustré ci-dessous : 
     
@@ -148,7 +148,7 @@ Parfois, vous devrez peut-être ajouter une table de montage séquentiel dans un
             set;
             }
             
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Créer un nouveau fichier de table de montage séquentiel en cliquant sur le projet à **Ajouter > nouveau fichier > iOS > Storyboard vide**, comme illustré ci-dessous : 
     

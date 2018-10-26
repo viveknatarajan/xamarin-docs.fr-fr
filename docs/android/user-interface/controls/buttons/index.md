@@ -1,26 +1,26 @@
 ---
-title: Boutons de Xamarin.Android
+title: Boutons dans Xamarin.Android
 description: Implémentation des éléments d’interface utilisateur que l’utilisateur appuie sur une action à effectuer
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/18/2017
-ms.openlocfilehash: b741683d7dfe80337a0085ac8d94becb0b518535
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 1eb2ca1881d1710481c84a4420ec644f3a4ab7a5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32435892"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107688"
 ---
-# <a name="buttons-in-xamarinandroid"></a>Boutons de Xamarin.Android
+# <a name="buttons-in-xamarinandroid"></a>Boutons dans Xamarin.Android
 
-La `Button` classe est utilisée pour représenter différents différents styles de bouton dans les écrans Android. Cette section présente les différentes options pour l’utilisation des boutons de Xamarin.Android :
+Le `Button` classe est utilisée pour représenter les divers différents styles de bouton dans les écrans Android. Cette section présente les différentes options pour travailler avec des boutons dans Xamarin.Android :
 
--   [RadioButton](~/android/user-interface/controls/buttons/radio-button.md) permet à l’utilisateur de sélectionner une option à partir d’un jeu.
+-   [Case d’option](~/android/user-interface/controls/buttons/radio-button.md) permet à l’utilisateur de sélectionner une option à partir d’un ensemble.
 
--   [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md) autoriser l’utilisateur à retourner (bascule) un paramètre entre deux États.
+-   [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md) permettent à un paramètre de l’utilisateur à retourner (bascule) entre deux États.
 
 -   [Case à cocher](~/android/user-interface/controls/buttons/check-box.md) est un type spécial de bouton qui peut être activée ou désactivée pour indiquer l’un des deux états possibles.
 

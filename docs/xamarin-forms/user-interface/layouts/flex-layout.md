@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: a6c1b0a4e0df1c25f595ca4eb53079c74b84972e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998581"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108741"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Le Xamarin.Forms FlexLayout
 
@@ -606,7 +606,7 @@ Le **expérience réduire** page crée une `FlexLayout` avec une seule ligne de 
 
 [![La réduction expérimenter Page](flex-layout-images/ShrinkExperiment.png "la réduction expérimenter de Page")](flex-layout-images/ShrinkExperiment-Large.png#lightbox)
 
-Dans la capture d’écran Android, le `Shrink` valeur pour le deuxième `Label` a la valeur 0 et que `Label` s’affiche dans sa pleine chasse. En outre, la quatrième `Label` reçoit un `Shrink` valeur supérieure à un, et il a réduit automatiquement. La capture d’écran UWP montre à la fois `Label` éléments étant données une `Shrink` la valeur 0 pour leur permettre d’être affichés dans leur taille complète, si cela est possible.
+Dans la capture d’écran Android, le `Shrink` valeur pour le deuxième `Label` est définie sur 0 et que `Label` s’affiche dans sa pleine chasse. En outre, la quatrième `Label` reçoit un `Shrink` valeur supérieure à un, et il a réduit automatiquement. La capture d’écran UWP montre à la fois `Label` éléments étant données une `Shrink` la valeur 0 pour leur permettre d’être affichés dans leur taille complète, si cela est possible.
 
 Vous pouvez définir à la fois le `Grow` et `Shrink` valeurs pour prendre en charge des situations où les tailles d’agrégation enfant peuvent parfois être inférieure ou parfois supérieure à la taille de la `FlexLayout`.
 

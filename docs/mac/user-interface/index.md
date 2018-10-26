@@ -4,15 +4,15 @@ description: Ce document contient des liens vers des guides qui décrivent les d
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: b2392f05a03015f903918f15013919be14b99292
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: a12553cf0b7b9584bb8ff7bc04ed326ad4a7ad2a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251256"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107831"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>contrôles d’interface utilisateur macOS dans Xamarin.Mac
 
@@ -24,7 +24,7 @@ Les guides ci-dessous donnent des informations détaillées sur l’utilisation 
 
 Vous pouvez souhaiter de jeter un coup de œil à la [C# exposition de classes / méthodes vers Objective-C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) section de la [éléments internes de Xamarin.Mac](~/mac/internals/how-it-works.md) de document, car il explique le `Register` et `Export` attributs utilisés pour la communication à distance vos classes c# aux objets de Objective-C et des éléments d’interface utilisateur.
 
-## <a name="windowsmacuser-interfacewindowmd"></a>[Fenêtres](~/mac/user-interface/window.md)
+## <a name="windowsmacuser-interfacewindowmd"></a>[Windows](~/mac/user-interface/window.md)
 
 Cet article aborde l’utilisation des fenêtres et des panneaux dans une application Xamarin.Mac. Il aborde la création et gestion des fenêtres et des panneaux dans Xcode et Interface Builder, le chargement de windows et des panneaux à partir de fichiers .storyboard ou .xib, à l’aide de windows et réponse aux fenêtres en code c#.
 

@@ -4,19 +4,19 @@ description: Découvrez comment créer des bitmaps de SkiaSharp et dessinez sur 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: c8ddf8c0829cea319dd93dd9c3686b94ed8eb89e
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615588"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109235"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Création et le dessin sur des images bitmap SkiaSharp
 
-Vous avez vu comment une application peut charger des bitmaps à partir du Web, à partir des ressources d’application et à partir de la bibliothèque de photos de l’utilisateur. Il est également possible de créer de nouvelles images bitmaps au sein de votre application. L’approche la plus simple implique l’un des constructeurs de [ `SKBitmap` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKBitmap.SKBitmap/p/System.Int32/System.Int32/System.Boolean/):
+Vous avez vu comment une application peut charger des bitmaps à partir du Web, à partir des ressources d’application et à partir de la bibliothèque de photos de l’utilisateur. Il est également possible de créer de nouvelles images bitmaps au sein de votre application. L’approche la plus simple implique l’un des constructeurs de [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
 ```csharp
 SKBitmap bitmap = new SKBitmap(width, height);
@@ -37,7 +37,7 @@ La deuxième approche est décrite dans l’article [ **l’accès à des Pixels
 
 ## <a name="drawing-on-the-bitmap"></a>Dessiner sur l’image bitmap
 
-Dessin sur la surface d’une image bitmap est identique à dessiner sur un écran vidéo. Pour dessiner sur un écran vidéo, vous obtenez un `SKCanvas` de l’objet à partir de la `PaintSurface` arguments d’événement. Pour dessiner sur une image bitmap, vous créez un `SKCanvas` à l’aide de l’objet le [ `SKCanvas` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCanvas.SKCanvas/p/SkiaSharp.SKBitmap/) constructeur :
+Dessin sur la surface d’une image bitmap est identique à dessiner sur un écran vidéo. Pour dessiner sur un écran vidéo, vous obtenez un `SKCanvas` de l’objet à partir de la `PaintSurface` arguments d’événement. Pour dessiner sur une image bitmap, vous créez un `SKCanvas` à l’aide de l’objet le [ `SKCanvas` ](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) constructeur :
 
 ```csharp
 SKCanvas canvas = new SKCanvas(bitmap);
@@ -123,9 +123,9 @@ La documentation de la `Clear` méthodes de `SKCanvas` les décrit avec l’inst
 
 `Clear` Il existe dans deux versions différentes : 
 
-- Le [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear/p/SkiaSharp.SKColor/) méthode avec un `SKColor` paramètre remplace les pixels de la surface d’affichage avec pixels de cette couleur.
+- Le [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) méthode avec un `SKColor` paramètre remplace les pixels de la surface d’affichage avec pixels de cette couleur.
 
-- Le [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear()/) méthode sans paramètres remplace les pixels avec la [ `SKColors.Empty` ](https://developer.xamarin.com/api/property/SkiaSharp.SKColors.Empty/) couleur, qui est une couleur dans lequel tous les composants (rouge, vert, bleu et alpha) sont définies à zéro. Cette couleur est parfois appelée « noir transparent ».
+- Le [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear) méthode sans paramètres remplace les pixels avec la [ `SKColors.Empty` ](xref:SkiaSharp.SKColors.Empty) couleur, qui est une couleur dans lequel tous les composants (rouge, vert, bleu et alpha) sont définies à zéro. Cette couleur est parfois appelée « noir transparent ».
 
 Appel de `Clear` sans arguments sur une nouvelle image bitmap initialise l’image bitmap entière pour être entièrement transparent. Quoi que ce soit par la suite dessinée sur la bitmap sera généralement opaques ou partiellement opaques.
 
@@ -151,7 +151,7 @@ Ne `Draw` méthode rend jamais une bitmap plus transparent. Uniquement `Clear` p
 
 ## <a name="bitmap-color-types"></a>Types de couleurs de bitmap
 
-La plus simple `SKBitmap` constructeur vous permet de spécifier un entier pixel largeur et hauteur de la bitmap. Autres `SKBitmap` constructeurs sont plus complexes. Ces constructeurs nécessitent des arguments de deux types d’énumération : [ `SKColorType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColorType/) et [ `SKAlphaType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKAlphaType/). Autres constructeurs utilisent la [ `SKImageInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/) structure qui consolide ces données.
+La plus simple `SKBitmap` constructeur vous permet de spécifier un entier pixel largeur et hauteur de la bitmap. Autres `SKBitmap` constructeurs sont plus complexes. Ces constructeurs nécessitent des arguments de deux types d’énumération : [ `SKColorType` ](xref:SkiaSharp.SKColorType) et [ `SKAlphaType` ](xref:SkiaSharp.SKAlphaType). Autres constructeurs utilisent la [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo) structure qui consolide ces données.
 
 Le `SKColorType` énumération a 9 membres. Chacun de ces membres décrit une façon particulière de stocker les pixels du bitmap :
 
@@ -161,7 +161,7 @@ Le `SKColorType` énumération a 9 membres. Chacun de ces membres décrit une fa
 - `Argb4444` &mdash; chaque pixel est 16 bits, 4 pour alpha, rouge, vert et bleu
 - `Rgba8888` &mdash; chaque pixel est 32 bits, 8 pour le rouge, vert, bleu et alpha
 - `Bgra8888` &mdash; chaque pixel est 32 bits, 8 pour bleu, vert, rouge et alpha
-- `Index8` &mdash; chaque pixel est de 8 bits et représente un index dans un [`SKColorTable`](https://developer.xamarin.com/api/type/SkiaSharp.SKColorTable/)
+- `Index8` &mdash; chaque pixel est de 8 bits et représente un index dans un [`SKColorTable`](xref:SkiaSharp.SKColorTable)
 - `Gray8` &mdash; chaque pixel est de 8 bits représentant une nuance de gris du noir sur blanc
 - `RgbaF16` &mdash; chaque pixel est 64 bits, avec rouge, vert, bleu et alpha dans un format à virgule flottante 16 bits
 
@@ -596,5 +596,5 @@ Une autre tâche courante qui peut être gérée à l’aide des techniques simi
 
 ## <a name="related-links"></a>Liens connexes
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

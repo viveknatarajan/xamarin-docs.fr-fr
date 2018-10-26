@@ -4,15 +4,15 @@ description: Ce document décrit comment déployer sans fil une application Xama
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 02/09/2018
-ms.openlocfilehash: ade7eb7ff26fec8df616401801585e499ddf4206
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118901"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Déploiement sans fil pour les applications Xamarin.iOS et tvOS
 
@@ -26,14 +26,14 @@ La fonctionnalité de déploiement sans fil est disponible à la fois dans Visua
 
 Pour utiliser le déploiement sans fil, vous devez disposer des éléments suivants :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 - macOS 10.12.4
 - La dernière version de Visual Studio pour Mac
 - Xcode 9.0 ou version ultérieure
 - Un appareil avec iOS 11.0 ou tvOS 11.0 et version ultérieure
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - La dernière version de Visual Studio
 - Un appareil avec iOS 11.0 ou tvOS 11.0 et version ultérieure

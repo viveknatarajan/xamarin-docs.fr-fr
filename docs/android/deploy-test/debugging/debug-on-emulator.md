@@ -4,15 +4,15 @@ description: Ce guide explique comment lancer et déboguer des applications dans
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 9e0eade7a2e033838f78f24270ec2bf9d4abc171
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: e40178e43cfcfd261434fab9dd5ca0a9061d3f59
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113779"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Débogage sur l’émulateur Android
 
@@ -25,7 +25,7 @@ L’émulateur Android (installé avec la charge de travail **Développement mob
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Utilisation d’un appareil virtuel préconfiguré
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio inclut des appareils virtuels préconfigurés qui s’affichent dans le menu déroulant des appareils. Par exemple, dans la capture d’écran suivante de Visual Studio 2017, plusieurs appareils virtuels préconfigurés sont disponibles :
 
@@ -48,7 +48,7 @@ Si votre projet Xamarin.Android utilise un niveau Framework cible qui n’est pa
 Vous pouvez cliquer sur **Modifier la cible Android minimale** pour modifier la version d’Android minimale du projet afin qu’elle corresponde au niveau d’API des appareils virtuels disponibles. Vous pouvez également utiliser [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md) pour créer des appareils virtuels qui prennent en charge votre niveau d’API cible.
 Avant de pouvoir configurer les appareils virtuels pour un nouveau niveau d’API, vous devez commencer par installer les images système correspondantes pour ce niveau d’API (consultez [Configuration du kit Android SDK pour Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Visual Studio pour Mac inclut des appareils virtuels préconfigurés qui s’affichent dans le menu déroulant des appareils. Par exemple, dans la capture d’écran suivante, deux appareils virtuels préconfigurés sont disponibles :
 
@@ -73,11 +73,11 @@ Pour modifier des appareils virtuels (ou en créer de nouveaux), vous devez util
 
 En haut de la fenêtre Visual Studio figure un menu déroulant avec lequel vous pouvez sélectionner le mode **Debug** ou **Release**. Si vous choisissez **Debug**, le débogueur est attaché au processus d’application en cours d’exécution dans l’émulateur après le démarrage de l’application. Si vous choisissez **Release**, le débogueur est désactivé (mais vous pouvez toujours exécuter l’application et utiliser des instructions de journal pour le débogage). Après avoir choisi un appareil virtuel dans le menu déroulant des appareils, sélectionnez le mode **Debug** ou **Release**, puis cliquez sur le bouton Lire pour exécuter l’application :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Modes Debug et Mise en production, bouton Lire](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![Modes Debug et Mise en production, bouton Lire](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 

@@ -4,15 +4,15 @@ description: Cet article aborde l’utilisation des boîtes de dialogue et fenê
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f28b52b4904b73f97cd9da575e90ef583e443da
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 8c176944d1bec4850f084043fdab81b5c2d51ceb
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251205"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105205"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Boîtes de dialogue dans Xamarin.Mac
 
@@ -833,7 +833,7 @@ using Foundation;
 
 namespace SourceWriter
 {
-    public class PreferenceWidowDelegate : NSWindowDelegate
+    public class PreferenceWindowDelegate : NSWindowDelegate
     {
         #region Application Access
         public static AppDelegate App {
@@ -846,7 +846,7 @@ namespace SourceWriter
         #endregion
 
         #region constructors
-        public PreferenceWidowDelegate (NSWindow window)
+        public PreferenceWindowDelegate (NSWindow window)
         {
             // Initialize
             this.Window = window;
@@ -893,7 +893,7 @@ namespace SourceWriter
             base.WindowDidLoad ();
 
             // Initialize
-            Window.Delegate = new PreferenceWidowDelegate(Window);
+            Window.Delegate = new PreferenceWindowDelegate(Window);
             Toolbar.SelectedItemIdentifier = "General";
         }
         #endregion
@@ -1103,7 +1103,7 @@ Cet article a examiné en détail à l’utilisation avec Windows modale, feuill
 - [MacWindows (exemple)](https://developer.xamarin.com/samples/mac/MacWindows/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Menus](~/mac/user-interface/menu.md)
-- [Fenêtres](~/mac/user-interface/window.md)
+- [Windows](~/mac/user-interface/window.md)
 - [Barres d’outils](~/mac/user-interface/toolbar.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduction à Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

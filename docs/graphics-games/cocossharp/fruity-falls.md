@@ -1,39 +1,39 @@
 ---
-title: Détails de jeu se situe, agréables
-description: Ce guide passe en revue le jeu Fruity revient, couvrant CocosSharp courants et les concepts de développement de jeux telles que physique, la gestion de contenu, l’état du jeu et la conception de jeu.
+title: Détails du jeu Fruity concernent la plage
+description: Ce guide passe en revue le jeu Fruity concernent la plage, couvrant CocosSharp courants et les concepts de développement de jeux tels que physique, la gestion de contenu, état du jeu et conception de jeux.
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 19b57d41fdf8aa4f8a749cf4979755161a0e7e51
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 959f5eb149ad375d686b17a85eb3d3b8fbdf3659
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33921558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114247"
 ---
-# <a name="fruity-falls-game-details"></a>Détails de jeu se situe, agréables
+# <a name="fruity-falls-game-details"></a>Détails du jeu Fruity concernent la plage
 
-_Ce guide passe en revue le jeu Fruity revient, couvrant CocosSharp courants et les concepts de développement de jeux telles que physique, la gestion de contenu, l’état du jeu et la conception de jeu._
+_Ce guide passe en revue le jeu Fruity concernent la plage, couvrant CocosSharp courants et les concepts de développement de jeux tels que physique, la gestion de contenu, état du jeu et conception de jeux._
 
-Se situe, agréables est un jeu de simple basée sur le physique, dans lequel le joueur trie les fruits rouges et jaunes dans des compartiments de couleur pour gagner des points. L’objectif du jeu est gagner des points autant que possible sans en avertir un dépôt de fruits dans le mauvais emplacement, le jeu de fin.
+Se situe Fruity est un jeu simple, basé sur le moteur physique dans lequel le joueur trie les fruits rouges et jaunes dans des compartiments de couleur pour gagner des points. L’objectif du jeu est de remporter des points autant que possible sans en avertir d’une baisse de fruits dans le mauvais emplacement, mettre fin au jeu.
 
-![](fruity-falls-images/image1.png "L’objectif du jeu est de gagner des points autant que possible sans en avertir un dépôt de fruits dans le mauvais emplacement, le jeu de fin")
+![](fruity-falls-images/image1.png "L’objectif du jeu est de gagner des points autant que possible sans en avertir d’une baisse de fruits dans le mauvais emplacement, mettre fin au jeu")
 
-Se situe, agréables étend les concepts présentés dans le [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) en ajoutant le code suivant :
+Se situe Fruity étend les concepts présentés dans le [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) en ajoutant le code suivant :
 
  - Contenu sous la forme de PNG
  - Physique avancé
  - État du jeu (transition entre les scènes)
- - Possibilité de paramétrer les coefficients jeu via des variables contenues dans une seule classe
+ - Possibilité de paramétrer les coefficients de jeux via des variables contenues dans une classe unique
  - Prise en charge débogage visual intégrée
- - Organisation de code à l’aide des entités de jeu
- - Conception du jeu le focus sur la valeur fun et la relecture
+ - Organisation du code à l’aide d’entités de jeu
+ - Conception de jeux axée sur la valeur de cadre amusant et une relecture
 
-Alors que le [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) le focus sur la présentation de certains concepts CocosSharp, concernent la plage Fruity montre comment mettre tous les éléments en un produit fini de jeu. Étant donné que le BouncingGame fait référence à ce guide, lecteurs doivent tout d’abord qu’ils se familiarisent avec les [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) avant la lecture de ce guide.
+Bien que le [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) axé sur la présentation des principaux concepts de CocosSharp, se situe Fruity montre comment tous les regrouper dans un produit fini de jeu. Étant donné que ce guide fait référence à du BouncingGame, lecteurs doivent tout d’abord se familiariser avec la [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) avant de lire ce guide.
 
-Ce guide couvre l’implémentation et la conception de Fruity recommence pour fournir des informations pour vous aider à rendre votre propre jeu. Elle couvre les rubriques suivantes :
+Ce guide couvre l’implémentation et la conception de Fruity concernent la plage pour fournir des informations pour vous aider à rendre votre propre jeu. Il couvre les rubriques suivantes :
 
 
 - [Classe de GameController](#gamecontroller-class)
@@ -46,18 +46,18 @@ Ce guide couvre l’implémentation et la conception de Fruity recommence pour f
 
 ## <a name="gamecontroller-class"></a>Classe de GameController
 
-Le projet, agréables PCL se situe inclut un `GameController` classe qui est responsable de l’instanciation du jeu et le déplacement entre les séquences. Cette classe est utilisée par les projets Android et iOS d’éliminer le code en double.
+Le projet Fruity PCL se situe inclut un `GameController` classe qui est responsable de l’instanciation du jeu et le déplacement entre les scènes. Cette classe est utilisée par les projets Android et iOS pour éliminer les doublons de code.
 
-Le code contenu dans le `Initialize` méthode est similaire au code dans le`Initialize` méthode dans un modèle CocosSharp inchangé, mais il contient un nombre de modifications.
+Le code contenu dans le `Initialize` méthode est similaire au code dans le`Initialize` méthode dans un modèle de CocosSharp inchangé, mais il contient un nombre de modifications.
 
-Par défaut, le `GameView.ContentManager.SearchPaths` dépendent de la résolution du périphérique. Comme expliqué ci-dessous plus en détail, concernent la plage Fruity utilise le même contenu, quelle que soit la résolution de l’appareil, donc la `Initialize` méthode ajoute la `Images` chemin d’accès (avec aucun des sous-dossiers) à la `SearchPaths`:
+Par défaut, le `GameView.ContentManager.SearchPaths` dépendent de la résolution du périphérique. Comme expliqué ci-dessous plus en détail, se situe Fruity utilise le même contenu, quel que soit la résolution de l’appareil, par conséquent, le `Initialize` méthode ajoute la `Images` chemin d’accès (avec mais pas les sous-dossiers) à la `SearchPaths`:
 
 
 ```csharp
 contentSearchPaths.Add ("Images");
 ```
 
-Nouveaux modèles CocosSharp incluent une classe qui hérite de `CCLayer`, ce qui implique que les éléments visuels de jeu et logique doivent être ajoutés à cette classe. Au lieu de cela, les chutes Fruity utilise plusieurs `CCLayer` instances au contrôle de dessin ordre. Ces `CCLayer` instances sont contenues dans le `GameView` (classe), qui hérite de `CCScene`. Se situe, agréables inclut également plusieurs scènes, le premier étant le `TitleScene`. Par conséquent, le `Initialize` méthode instancie un `TitleScene` instance qui est passé à `RunWithScene`:
+Nouveaux modèles de CocosSharp incluent une classe héritant de `CCLayer`, ce qui implique que les éléments visuels de jeu et la logique doivent être ajoutés à cette classe. Au lieu de cela, se situe Fruity utilise plusieurs `CCLayer` instances au contrôle de dessiner l’ordre. Ces `CCLayer` instances sont contenues dans le `GameView` (classe), qui hérite de `CCScene`. Fruity concernent la plage inclut également plusieurs scènes, le premier étant le `TitleScene`. Par conséquent, le `Initialize` méthode instancie un `TitleScene` instance qui est transmise à `RunWithScene`:
 
 
 ```csharp
@@ -65,7 +65,7 @@ var scene = new TitleScene (GameView);
 GameView.Director.RunWithScene (scene);
 ```
 
-Le contenu pour Fruity est art de faible résolution pixel a été créé pour des raisons esthétiques. Le `GameView.DesignResolution` est définie pour que le jeu est uniquement une largeur de 384 unités et 512 taller :
+Le contenu pour se situe Fruity art de basse résolution pixel a été créé pour des raisons esthétiques. Le `GameView.DesignResolution` est définie afin que le jeu est uniquement une largeur de 384 unités et 512 taller :
 
 
 ```csharp
@@ -80,15 +80,15 @@ Enfin, le `GameController` classe fournit une méthode statique qui peut être a
 
 ## <a name="game-entities"></a>Entités de jeu
 
-Se situe, agréables utilise le modèle d’entité pour la plupart des objets de jeu. Vous trouverez une explication détaillée de ce modèle dans le [guident des entités dans CocosSharp](~/graphics-games/cocossharp/entities.md).
+Se situe Fruity utilise le modèle d’entité pour la plupart des objets de jeu. Vous trouverez une explication détaillée de ce modèle dans le [guident des entités dans CocosSharp](~/graphics-games/cocossharp/entities.md).
 
-Les objets de jeu de mise en application d’entité sont accessibles dans le dossier d’entités dans le **FruityFalls.Common** projet :
+Vous trouverez les objets de jeu de mise en application d’entité dans le dossier d’entités dans le **FruityFalls.Common** projet :
 
 ![](fruity-falls-images/image2.png "Le dossier d’entités dans le projet FruityFalls.Common")
 
-Entités sont des objets qui héritent de `CCNode`et peut avoir des éléments visuels, collision et le comportement de chaque image.
+Entités sont des objets qui héritent de `CCNode`et peut avoir des éléments visuels, les collisions et comportement de chaque image.
 
-Le `Fruit` objet représente une entité CocosSharp classique : il contient un objet visuel, collision et la logique de chaque image. Son constructeur est chargé d’initialiser le Fruit :
+Le `Fruit` objet représente une entité de CocosSharp typiques : il contient un objet visuel, les collisions et logique de chaque image. Son constructeur est responsable de l’initialisation du Fruit :
 
 
 ```csharp
@@ -108,7 +108,7 @@ public Fruit ()
 
 ### <a name="fruit-graphics"></a>Graphique de fruits
 
-Le `CreateFruitGraphic` méthode crée un `CCSprite` de l’instance et l’ajoute à la `Fruit`. Le `IsAntialiased` propriété est définie sur false pour donner le jeu un aspect de granularité. Cette valeur est définie sur false sur tous les `CCSprite` et `CCLabel` instances dans le jeu :
+Le `CreateFruitGraphic` méthode crée un `CCSprite` de l’instance et l’ajoute à la `Fruit`. Le `IsAntialiased` propriété est définie sur false pour donner le jeu un aspect de l’aspect pixélisé. Cette valeur est définie sur false sur tous les `CCSprite` et `CCLabel` instances au cours du jeu :
 
 
 ```csharp
@@ -120,7 +120,7 @@ private void CreateFruitGraphic()
 }
 ```
 
-Chaque fois que le joueur touche un `Fruit` de l’instance avec la `Paddle`, la valeur du point de ce fruits augmente d’un. Cela fournit une stimulation supplémentaires à des lecteurs expérimentés de jongler avec fruits pour des points supplémentaires. La valeur de point de fruits est affichée à l’aide de la `extraPointsLabel` instance.
+Chaque fois que le joueur touche un `Fruit` instance avec le `Paddle`, la valeur de point de ce fruits augmente d’une unité. Cela fournit un défi supplémentaire pour les joueurs expérimentés à jongler fruits pour des points supplémentaires. La valeur de point du fruit est affichée à l’aide de la `extraPointsLabel` instance.
 
 Le `CreateExtraPointsLabel` méthode crée un `CCLabel` de l’instance et l’ajoute à la `Fruit`:
 
@@ -135,7 +135,7 @@ private void CreateExtraPointsLabel()
 }
 ```
 
-Se situe, agréables comprend deux types différents de fruits – cerises et citrons. Le `CreateFruitGraphic` affecte un élément visuel par défaut, mais les éléments visuels de fruits peuvent être modifié via le `FruitColor` propriété, qui à son tour appelle `UpdateGraphics`:
+Fruity concernent la plage comprend deux types différents de fruits – cerises et citrons. Le `CreateFruitGraphic` assigne un élément visuel par défaut, mais les visuels de fruits peuvent être modifié via le `FruitColor` propriété, qui à son tour appelle `UpdateGraphics`:
 
 
 ```csharp
@@ -169,9 +169,9 @@ if (GameCoefficients.ShowCollisionAreas)
 }
 ```
 
-La première instruction if dans `UpdateGraphics` met à jour les graphiques de débogage, qui sont utilisés pour visualiser les zones de collision. Les éléments visuels sont mis hors tension avant une version finale du jeu est effectuée, mais peut être conservée sur pendant le développement pour le débogage physique. La deuxième partie modifie le `graphic.Texture` propriété en appelant `CCTextureCache.SharedTextureCache.AddImage`. Cette méthode permet d’accéder à une texture par nom de fichier. Vous trouverez plus d’informations sur cette méthode dans le [guide Mise en cache de Texture](~/graphics-games/cocossharp/texture-cache.md).
+La première instruction if dans `UpdateGraphics` met à jour les graphiques de débogage, qui sont utilisés pour visualiser les zones de collision. Ces éléments visuels sont désactivés avant une version finale du jeu est effectuée, mais peut être conservée sur pendant le développement pour le débogage physique. La deuxième partie modifie le `graphic.Texture` propriété en appelant `CCTextureCache.SharedTextureCache.AddImage`. Cette méthode permet d’accéder à une texture par nom de fichier. Vous trouverez plus d’informations sur cette méthode dans le [guide Mise en cache de Texture](~/graphics-games/cocossharp/texture-cache.md).
 
-Le `extraPointsLabel` couleur est ajustée pour conserver le contraste avec l’image de fruits et son `PositionY` valeur est ajustée au centre de la `CCLabel` sur des fruits `CCSprite`:
+Le `extraPointsLabel` couleur est ajustée pour conserver le contraste avec l’image de fruits et son `PositionY` valeur est ajustée au centre de la `CCLabel` sur les fruits `CCSprite`:
 
 ![](fruity-falls-images/image3.png "La couleur extraPointsLabel est ajustée pour conserver le contraste avec l’image de fruits, et sa valeur PositionY est ajustée pour centrer le CCLabel sur les fruits CCSprite")
 
@@ -180,11 +180,11 @@ Le `extraPointsLabel` couleur est ajustée pour conserver le contraste avec l’
 
 ### <a name="collision"></a>Collision
 
-Se situe, agréables implémente une solution de collision personnalisé à l’aide des objets dans le dossier de la géométrie :
+Se situe Fruity met en œuvre une solution de collision personnalisé à l’aide des objets dans le dossier de la géométrie :
 
-![](fruity-falls-images/image5.png "Se situe, agréables implémente une solution de collision personnalisé à l’aide des objets dans le dossier de la géométrie")
+![](fruity-falls-images/image5.png "Se situe Fruity implémente une solution de collision personnalisé à l’aide des objets dans le dossier de géométrie")
 
-Collision dans Fruity concernent la plage est implémentée à l’aide du `Circle` ou `Polygon` objet, généralement avec l’un de ces deux types ajoutés en tant qu’enfant d’une entité. Par exemple, le `Fruit` objet a un `Circle` appelé `Collision` dont il initialise dans son `CreateCollision` (méthode) :
+Collision dans Fruity concernent la plage est implémentée à l’aide du `Circle` ou `Polygon` objet, généralement avec l’une de ces deux types ajoutés en tant qu’enfant d’une entité. Par exemple, le `Fruit` objet a un `Circle` appelé `Collision` qui il initialise dans son `CreateCollision` méthode :
 
 
 ```csharp
@@ -196,7 +196,7 @@ private void CreateCollision()
 }
 ```
 
-Notez que la `Circle` classe hérite de la `CCNode` classe, donc elle peut être ajoutée en tant qu’enfant à des entités du jeu :
+Notez que le `Circle` classe hérite de la `CCNode` classe, et peut être ajouté en tant qu’enfant à des entités de notre jeu :
 
 
 ```csharp
@@ -227,7 +227,7 @@ La physique dans Fruity concernent la plage peut être divisée en deux catégor
 
 ### <a name="movement-using-velocity-and-acceleration"></a>Déplacement à l’aide de la vitesse et l’accélération
 
-Se situe, agréables utilise `Velocity` et `Acceleration` valeurs pour contrôler le déplacement de ses entités, similaire à la [BouncingGame](~/graphics-games/cocossharp/bouncing-game.md). Entités implémentent la logique de déplacement dans une méthode nommée `Activity`, qui est appelé une fois par frame. Par exemple, nous pouvons voir l’implémentation de déplacement dans la `Fruit` classe `Activity` méthode :
+Utilise des chutes Fruity `Velocity` et `Acceleration` valeurs pour contrôler le déplacement de ses entités, similaire à la [BouncingGame](~/graphics-games/cocossharp/bouncing-game.md). Entités implémentent leur logique de déplacement dans une méthode nommée `Activity`, qui est appelé une fois par trame. Par exemple, nous pouvons voir l’implémentation du mouvement dans le `Fruit` classe `Activity` méthode :
 
 ```csharp
 public void Activity(float frameTimeInSeconds)
@@ -245,9 +245,9 @@ public void Activity(float frameTimeInSeconds)
     this.Position += Velocity * frameTimeInSeconds;
 }
 ```
-Le `Fruit` objet est unique dans son implémentation de glissement : une valeur qui ralentit la vitesse par rapport à la rapidité Fruit est mobile. Cette implémentation de glisser fournit un *rapidité terminal*, qui est la vitesse maximale à une instance de fruits pouvant être. Faites glisser ralentit également le mouvement horizontal de fruits, ce qui rend le jeu légèrement plus facile à lire.
+Le `Fruit` objet est unique dans son implémentation de glisser – une valeur qui ralentit la vitesse par rapport à la rapidité Fruit bouge. Cette implémentation du glisser fournit un *velocity terminal*, qui est la vitesse maximale qui une instance de fruits peut être classées. Faites glisser ralentit également le déplacement horizontal de fruits, ce qui rend le jeu légèrement plus facile à lire.
 
-Le `Paddle` objet s’applique également `Velocity` dans son `Activity` (méthode), mais son `Velocity` est calculée à l’aide un `desiredLocation` valeur :
+Le `Paddle` objet s’applique également `Velocity` dans son `Activity` (méthode), mais sa `Velocity` est calculée à l’aide un `desiredLocation` valeur :
 
 
 ```csharp
@@ -264,7 +264,7 @@ public void Activity(float frameTimeInSeconds)
 }
 ```
 
-En règle générale, les jeux qui utilisent `Velocity` pour contrôler la position de leurs objets de ne pas directement définie positions de l’entité, au moins pas après l’initialisation. Au lieu de définir directement la `Paddle` position, la `Paddle.HandleInput` méthode attribue le `desiredLocation` valeur :
+En règle générale, les jeux qui utilisent `Velocity` pour contrôler la position de leur faire objets pas directement définie des positions de l’entité, au moins pas après l’initialisation. Au lieu de définir directement la `Paddle` position, la `Paddle.HandleInput` méthode attribue le `desiredLocation` valeur :
 
 ```csharp
 public void HandleInput(CCPoint touchPoint)
@@ -275,7 +275,7 @@ public void HandleInput(CCPoint touchPoint)
 
 ### <a name="collision"></a>Collision
 
-Se situe, agréables implémente semi réaliste collision entre les fruits et d’autres objets collidable, comme le `Paddle` et `GameScene.Splitter`. Pour vous aider à déboguer collision, zones de collision Fruity concernent la plage peuvent être rendus visibles en modifiant le `GameCoefficients.ShowDebugInfo` dans le `GameCoefficients.cs` fichier :
+Se situe Fruity implémente semi-structurées réaliste collision entre les fruits et d’autres objets collidable telles que le `Paddle` et `GameScene.Splitter`. Pour aider à déboguer collision, zones de collision se situe Fruity peuvent être rendus visibles en modifiant le `GameCoefficients.ShowDebugInfo` dans le `GameCoefficients.cs` fichier :
 
 
 ```csharp
@@ -311,7 +311,7 @@ private void Activity(float frameTimeInSeconds)
 }
 ```
 
-`PerformCollision` gère tous les collision `Fruit` instances avec d’autres objets : 
+`PerformCollision` gère la collision tous `Fruit` instances avec d’autres objets : 
 
 
 ```csharp
@@ -331,7 +331,7 @@ private void PerformCollision()
 
 #### <a name="fruitvsborders"></a>FruitVsBorders
 
-`FruitVsBorders` collision effectue sa propre logique pour collision plutôt que de compter sur la logique contenue dans une autre classe. Cette différence existe, car la collision entre les fruits et les bordures de l’écran n’est pas parfaitement solide : il est possible pour les fruits d’envoyer aux mouvements de la manette de jeu prudent hors des limites de l’écran. Sur l’écran lorsqu’il est atteint avec la manette de jeu rebondit fruits, mais si le joueur lentement exécute un push de fruits déplacera au-delà du bord et en dehors de l’écran :
+`FruitVsBorders` collision effectue sa propre logique de collision, plutôt que de compter sur la logique contenue dans une classe différente. Cette différence existe, car la collision entre les bordures de l’écran et les fruits n’est pas parfaitement solide : il est possible pour les fruits d’envoyer hors des limites de l’écran à un mouvement de la raquette prudent. Fruits rebondit sur l’écran lorsqu’il est atteint avec la raquette, mais si le joueur lentement exécute un push de fruits déplacera au-delà du bord et en dehors de l’écran :
 
 
 ```csharp
@@ -354,7 +354,7 @@ private void FruitVsBorders(Fruit fruit)
 
 #### <a name="fruitvsbins"></a>FruitVsBins
 
-Le `FruitVsBins` (méthode) est chargée de vérifier si les fruits se trouve dans un des deux emplacements. Dans ce cas, puis le lecteur est attribué à points (si la correspondance de couleurs le fruits/bin) ou la partie se termine (si les couleurs ne correspondent pas) :
+Le `FruitVsBins` (méthode) est chargée de vérifier si les fruits sont passées dans un des deux emplacements. Dans ce cas, puis le joueur est attribué à points (si la correspondance des couleurs le fruits/bin) ou le jeu se termine (si les couleurs ne correspondent pas) :
 
 
 ```csharp
@@ -383,11 +383,11 @@ private void FruitVsBins(Fruit fruit)
 
 #### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle et FruitPolygonCollision
 
-Fruits et manette de jeu et de fruits et fractionnées (la zone séparant les deux emplacements) collision les deux s’appuient sur la `FruitPolygonCollision` (méthode). Cette méthode comprend trois parties :
+Fruits ou la raquette et fruits et séparateur (la zone en séparant les deux emplacements) collision les deux s’appuient sur le `FruitPolygonCollision` (méthode). Cette méthode comporte trois parties :
 
-1. Vérifier si les objets sont en conflit
-1. Déplacer les objets (uniquement les fruits dans Fruity revient) afin qu’ils ne se chevauchent plus
-1. Ajuster la rapidité des objets (uniquement les fruits dans Fruity revient) pour simuler un rebond que le code suivant illustre les points faites ci-dessus :
+1. Tester si les objets sont en conflit
+1. Déplacer les objets (simplement les fruits d’un se situe Fruity) afin qu’ils ne se chevauchent plus
+1. Ajustez la rapidité des objets (simplement les fruits d’un se situe Fruity) pour simuler un rebond que le code suivant illustre les points créées précédemment :
 
 
 ```csharp
@@ -414,42 +414,42 @@ private static bool FruitPolygonCollision(Fruit fruit, Polygon polygon, CCPoint 
 }
 ```
 
-Réponse de collision se situe, agréables est unilatérale – d’uniquement les fruits rapidité et position sont ajustées. Il est important de noter que les autres jeux peut-être avoir des collisions qui a un impact sur les deux objets impliqués, comme un caractère envoyant un boulder ou deux voitures en panne dans l’autre.
+Réponse de collision Fruity concernent la plage est unilatérale – uniquement les fruits vélocité sont ajustées. Il est important de noter que les autres jeux peut-être avoir des collisions qui a un impact sur les deux objets impliqués, notamment un caractère de transmettre un boulder ou deux voitures se bloque à eux.
 
-Les mathématiques qui sous-tendent la logique de collision contenue dans le `Polygon` et `CollisionResponse` classes est dépasse le cadre de ce guide, mais comme écrite, ces méthodes peuvent être utilisées pour de nombreux types de jeux. Le polygone et `CollisionResponse` classes prennent en charge même polygones non rectangulaires et convexes, ce code peut être utilisée pour de nombreux types de jeux.
+Les mathématiques qui sous-tendent la logique de collision contenue dans le `Polygon` et `CollisionResponse` classes n’entre pas dans le cadre de ce guide, mais en tant qu’écrit, ces méthodes peuvent être utilisées pour de nombreux types de jeux. Le polygone et `CollisionResponse` classes même en charge les polygones non rectangulaires et convexes, donc ce code peut être utilisé pour de nombreux types de jeux.
 
  
 
 
 ## <a name="game-content"></a>Jeu de contenu
 
-L’illustration du Fruity revient immédiatement distingue le jeu le BouncingGame. Alors que les conceptions de jeu sont similaires, lecteurs verront immédiatement un changement des deux jeux. Joueurs souvent décident essayez un jeu par ses éléments visuels. Par conséquent, il est essentiel que les développeurs investissent des ressources lors de l’élaboration visuellement attrayante jeu.
+L’art dans Fruity revient immédiatement distingue le jeu du BouncingGame. Si les conceptions de jeu sont similaires, les joueurs verront immédiatement un changement des deux jeux. Les joueurs décident souvent d’essayer un jeu par ses éléments visuels. Par conséquent, il est essentiel que les développeurs investissent des ressources dans la fabrication visuellement agréables jeu.
 
-L’illustration du Fruity concernent la plage a été créée avec les objectifs suivants :
+L’art pour Fruity concernent la plage a été créé avec les objectifs suivants :
 
- - Thème cohérent
- - Mettant l’accent sur un seul caractère – le singe Xamarin
- - Expérience de couleurs vives à créer une relaxation agréable
- - Créer un contraste entre le premier plan et d’arrière-plan afin de faciliter suivre visuellement les objets de jeu
- - Possibilité de créer des effets visuels simples sans les animations de ressources
+ - Thème cohérents
+ - Mettant l’accent sur un seul caractère – le monkey Xamarin
+ - Expérience de couleurs vives pour créer un assouplissement agréable
+ - Créer un contraste entre le premier plan et d’arrière-plan pour les objets de jeu sont faciles à suivre visuellement
+ - Possibilité de créer des effets visuels simples sans les animations comportant beaucoup de ressources
 
 
 ### <a name="content-location"></a>Emplacement du contenu
 
-Se situe, agréables inclut tout son contenu dans le dossier Images dans le projet Android :
+Se situe Fruity inclut tout son contenu dans le dossier Images dans le projet Android :
 
-![](fruity-falls-images/image7.png "Se situe, agréables inclut tout son contenu dans le dossier Images dans le projet Android")
+![](fruity-falls-images/image7.png "Se situe Fruity inclut tout son contenu dans le dossier Images dans le projet Android")
 
 Ces mêmes fichiers sont liés dans le projet iOS pour éviter la duplication, et c’est le cas apportées aux fichiers avoir un impact sur les deux projets :
 
 ![](fruity-falls-images/image8.png "Ces mêmes fichiers sont liés dans le projet iOS pour éviter la duplication, et c’est le cas apportées aux fichiers avoir un impact sur les deux projets")
 
-Il est important de noter que le contenu n’est pas contenu dans le **%ld** ou **Hd** dossiers, qui font partie du modèle CocosSharp par défaut. Le **%ld** et **Hd** dossiers sont destinés à être utilisés pour les jeux qui fournissent les deux ensembles de contenu : un pour les appareils de faible résolution, tels que des téléphones et pour les appareils haute résolution, tels que les tablettes. L’art Fruity concernent la plage est intentionnellement créé avec une granularité esthétique, et il est inutile de fournir du contenu pour différentes tailles d’écran. Par conséquent, le **%ld** et **Hd** dossiers ont été complètement supprimés à partir du projet.
+Il est important de noter que le contenu n’est pas contenu dans le **%ld** ou **Hd** dossiers, qui font partie du modèle de CocosSharp par défaut. Le **%ld** et **Hd** dossiers sont destinées à être utilisées pour les jeux qui fournissent les deux ensembles de contenu : un pour les appareils de faible résolution, tels que des téléphones et l’autre pour les appareils de résolution plus élevée, comme les tablettes. L’art de revient de Fruity est intentionnellement créé avec un aspect pixélisé esthétique, et il est inutile de fournir du contenu pour différentes tailles d’écran. Par conséquent, le **%ld** et **Hd** dossiers ont été complètement supprimés à partir du projet.
 
 
-### <a name="gamescene-layering"></a>GameScene superposition
+### <a name="gamescene-layering"></a>Superposition de GameScene
 
-Comme mentionné précédemment dans ce guide, le `GameScene` est responsable de toutes les instanciation de l’objet de jeu, le positionnement et la logique entre les objets (tels que les collisions). Tous les objets sont ajoutés à un des quatre `CCLayer` instances :
+Comme mentionné plus haut dans ce guide, le `GameScene` est responsable de tous les instanciation de l’objet de jeu, de positionnement et logique entre les objets (par exemple, des collisions). Tous les objets sont ajoutés à un des quatre `CCLayer` instances :
 
 
 ```csharp
@@ -492,7 +492,7 @@ private void CreateBackground()
 
 ### <a name="vine-entity"></a>Entité de vigne
 
-Le `Vine` entité est utilisée uniquement pour le contenu, il n’a aucun impact sur le jeu. Il est composé de vingt `CCSprite` instances, un nombre sélectionné par essais et erreurs pour vous assurer que la vigne atteint toujours en haut de l’écran :
+Le `Vine` entité est utilisée uniquement pour le contenu : il n’a aucun impact sur le jeu. Elle est composée de vingt `CCSprite` instances, un nombre sélectionné par essais et erreurs pour nous assurer la vigne atteint toujours en haut de l’écran :
 
 
 ```csharp
@@ -509,13 +509,13 @@ public Vine ()
 }
 ```
 
-Le premier `CCSprite` est positionné de sorte que son bord inférieur corresponde à la position de la vigne. Cela s’effectue en affectant le AnchorPoint `new CCPoint(.5f, 0)`. Le `AnchorPoint` propriété utilise *normalisées coordonnées* la plage comprise entre 0 et 1, quelle que soit la taille de la `CCSprite`:
+Le premier `CCSprite` est positionné de sorte que son bord inférieur corresponde à la position de la vigne. Cela s’effectue en définissant le AnchorPoint `new CCPoint(.5f, 0)`. Le `AnchorPoint` propriété utilise *normalisées coordonnées* la plage comprise entre 0 et 1, quel que soit la taille de la `CCSprite`:
 
-![](fruity-falls-images/image9.png "La propriété AnchorPoint utilise des coordonnées normalisées la plage comprise entre 0 et 1, quelle que soit la taille de la CCSprite")
+![](fruity-falls-images/image9.png "La propriété AnchorPoint utilise des coordonnées normalisées la plage comprise entre 0 et 1, quel que soit la taille de la CCSprite")
 
-Sprites de vigne suivantes sont positionnées à l’aide de la `graphic.ContentSize.Height` valeur, qui retourne la hauteur de l’image en pixels. Le diagramme suivant montre comment le graphique vigne vignettes vers le haut :
+Les sprites vigne suivantes sont positionnées à l’aide de la `graphic.ContentSize.Height` valeur, qui retourne la hauteur de l’image en pixels. Le diagramme suivant montre comment le graphique vigne vignettes vers le haut :
 
-![](fruity-falls-images/image10.png "Ce diagramme montre comment le graphique vigne vignettes vers le haut")
+![](fruity-falls-images/image10.png "Ce diagramme illustre comment le graphique vigne vignettes vers le haut")
 
 Depuis l’origine de la `Vine` entité figure au bas de la vigne, puis il le positionnement est simple, comme indiqué dans le `Paddle.CreateVines` méthode :
 
@@ -537,11 +537,11 @@ private void CreateVines()
 }
 ```
 
-La vigne instances dans le `Paddle` entité ont également le comportement intéressant de rotation. Étant donné que la `Paddle` entité en tant qu’ensemble fait pivoter en fonction de l’entrée de lecteur (qui ce guide couvre plus en détail ci-dessous), le `Vine` instances sont également affectés par cette rotation. Toutefois, faire pivoter le `Vine` instances avec le `Paddle` produit un effet visuel indésirable, comme le montre l’animation suivante :
+La vigne instances dans le `Paddle` entité ont également intéressant de comportement de rotation. Dans la mesure où le `Paddle` entity dans son ensemble fait pivoter en fonction de l’entrée d’un joueur (ce qui ce guide aborde plus en détail ci-dessous), le `Vine` instances sont également affectés par cette rotation. Toutefois, faire pivoter le `Vine` instances avec le `Paddle` produit un effet indésirable visual comme illustré dans l’animation suivante :
 
-![](fruity-falls-images/image11.gif "Toutefois, faire pivoter les instances de vigne ainsi que de la manette de jeu produit un effet visuel indésirable comme indiqué dans l’animation suivante")
+![](fruity-falls-images/image11.gif "Toutefois, faire pivoter les instances de vigne ainsi que de la raquette produit un effet indésirable visual comme indiqué dans l’animation suivante")
 
-De contrer le `Paddle` rotation, le `leftVine` et `rightVine` instances pivotent la direction opposée de la manette de jeu, comme indiqué dans le `Paddle.Activity` méthode :
+Pour neutraliser le `Paddle` rotation, la `leftVine` et `rightVine` instances pivotent la direction opposée de la raquette, comme indiqué dans le `Paddle.Activity` méthode :
 
 
 ```csharp
@@ -556,14 +556,14 @@ public void Activity(float frameTimeInSeconds)
 }
 ```
 
-Notez qu’une petite quantité de rotation est ajoutée à la vigne via le `vineAngle` coefficient. Cette valeur peut être modifiée pour ajuster la quantité faire pivoter les vines.
+Notez qu’une petite quantité de rotation est ajoutée à la vigne via le `vineAngle` coefficient. Cette valeur peut être modifiée pour ajuster combien les vines faire pivoter.
 
 
 ## <a name="gamecoefficients"></a>GameCoefficients
 
-Chaque bon jeu étant le produit de l’itération, concernent la plage Fruity inclut une classe appelée `GameCoefficients` qui contrôle la façon dont le jeu est lu. Cette classe contient des variables expressives, qui sont utilisés dans le jeu de contrôle physique, mise en page, la génération automatique et le score.
+Chaque bon jeu étant le produit de l’itération, se situe Fruity inclut une classe appelée `GameCoefficients` qui contrôle comment le jeu est lu. Cette classe contient des variables expressifs, qui sont utilisées dans le contrôle physique, disposition, lors de la génération et la notation du jeu.
 
-Par exemple, la physique fruits est contrôlée par les variables suivantes :
+Par exemple, la physique de fruits est contrôlée par les variables suivantes :
 
 
 ```csharp
@@ -589,11 +589,11 @@ public static class GameCoefficients
 }
 ```
 
-Comme le nom le laisse supposer, ces variables peuvent être utilisées pour ajuster la rapidité de fruits se situe, comment horizontal mouvement ralentit dans le temps et rebond de manette de jeu.
+Comme les noms l’indiquent, ces variables peuvent être utilisées pour ajuster la rapidité fruits concernent la plage, comment horizontale ralentissement du mouvement vers le bas dans le temps et raquette rebond.
 
-Coefficients jeu stockées dans les fichiers de code ou des données (par exemple, XML) peuvent être particulièrement utiles pour les équipes avec les concepteurs de jeu qui ne sont pas également aux programmeurs.
+Jeu coefficients stockés dans des fichiers de code ou de données (par exemple, XML) peuvent être particulièrement utiles pour les équipes avec les concepteurs de jeux qui ne sont pas également des programmeurs.
 
-La `GameCoefficients` classe inclut également des valeurs pour les informations de débogage telles que la génération automatique d’informations ou collision de zones sous tension :
+Le `GameCoefficients` classe inclut également des valeurs pour les informations de débogage telle que la génération d’informations ou collision zones sous tension :
 
 
 ```csharp
@@ -610,7 +610,7 @@ public static class GameCoefficients
 
 ## <a name="conclusion"></a>Conclusion
 
-Ce guide exploré le jeu Fruity recommence. Il couvert les concepts, y compris le contenu, physique et la gestion de l’état du jeu.
+Ce guide a exploré le jeu Fruity concernent la plage. Il couvert les concepts, y compris le contenu, physique et la gestion de l’état du jeu.
 
 ## <a name="related-links"></a>Liens connexes
 

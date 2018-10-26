@@ -4,15 +4,15 @@ description: Ce document contient des liens aux guides qui décrivent les concep
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: de337291554e81a2434dcc30c163f4789fc832eb
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111210"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110470"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Principes de base application Xamarin.iOS
 
@@ -48,7 +48,7 @@ Cet article examine comment utiliser des images dans Xamarin.iOS, des images de 
 
 ## <a name="localizationiosapp-fundamentalslocalizationindexmd"></a>[Localisation](~/ios/app-fundamentals/localization/index.md)
 
-Ce guide couvre le l’ajout des encodages à une application Xamarin.iOS pour prendre en charge de l’internationalisation.
+Ce guide couvre l’ajout des encodages à une application Xamarin.iOS pour prendre en charge de l’internationalisation.
 
 ## <a name="working-with-property-listsiosapp-fundamentalsindexmd"></a>[Utilisation des listes de propriétés](~/ios/app-fundamentals/index.md)
 
@@ -60,7 +60,7 @@ Apple a apporté plusieurs améliorations à la sécurité et confidentialité d
 
 ## <a name="threadingiosapp-fundamentalsthreadingmd"></a>[Thread](~/ios/app-fundamentals/threading.md)
 
-Cet article présente le threading dans une application Xamarin.iOS et parle un peu le le pool de threads .NET, des applications réactives et le garbage collection.
+Cet article présente le threading dans une application Xamarin.iOS et communique avec un peu sur le pool de threads .NET, des applications réactives et le garbage collection.
 
 ## <a name="touchiosapp-fundamentalstouchindexmd"></a>[Entrées tactiles](~/ios/app-fundamentals/touch/index.md)
 

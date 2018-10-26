@@ -4,15 +4,15 @@ description: Ce document décrit comment utiliser des tâches en arrière-plan p
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 9d304ee64e7716413febc475e721f5eb39043109
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120994"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding avec des tâches
 
@@ -20,7 +20,7 @@ La façon la plus simple pour effectuer backgrounding dans iOS consiste à divis
 
 Tâches en arrière-plan peuvent être divisés en trois catégories :
 
-1.  **Les tâches en arrière-plan-Safe** : appelée n’importe où dans le l’application où vous avez une tâche vous ne souhaitez pas interrompue doit l’application, entrez l’arrière-plan.
+1.  **Les tâches en arrière-plan-Safe** : appelée n’importe où dans l’application où vous avez une tâche vous ne voulez interrompue doit l’application, entrez l’arrière-plan.
 1.  **Les tâches DidEnterBackground** : appelée pendant la `DidEnterBackground` méthode de cycle de vie d’application pour faciliter le nettoyage et l’enregistrement d’état.
 1.  **En arrière-plan transferts (iOS 7 +)** -un type spécial de tâche en arrière-plan utilisé pour effectuer les transferts de réseau sur iOS 7. Contrairement aux tâches récurrentes, transferts en arrière-plan ont une limite de temps prédéterminée.
 

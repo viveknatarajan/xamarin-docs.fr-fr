@@ -4,23 +4,23 @@ description: Cet article explique comment utiliser SkiaSharp pour dessiner des c
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 4eb56a8728607c4d6744a2b5584c8880a95ce49a
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 91cf14f531b527054b46779e571dae6eacebe765
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615090"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123425"
 ---
 # <a name="skiasharp-curves-and-paths"></a>Chemins d’accès et des courbes de SkiaSharp
 
 _Découvrez comment utiliser SkiaSharp pour dessiner des courbes et utiliser les fonctionnalités de chemin d’accès_
 
-L’exploration de [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) a commencé à méthodes et propriétés dans le [SkiaSharp lignes et chemins d’accès](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md) article. Les articles ici continuent avec les méthodes qui ajoutent des courbes à un `SKPath` objets et exploiter d’autres fonctionnalités puissantes de chemin d’accès. Vous verrez comment vous pouvez spécifier un chemin d’accès complet dans une chaîne de texte concis, comment utiliser les effets de chemin d’accès et comment aller dans les profondeurs de chemin d’accès.
+L’exploration de [ `SKPath` ](xref:SkiaSharp.SKPath) a commencé à méthodes et propriétés dans le [ **SkiaSharp lignes et chemins d’accès** ](../paths/index.md) article. Les articles ici continuent avec les méthodes qui ajoutent des courbes à un `SKPath` de l’objet et exploiter d’autres fonctionnalités puissantes de chemin d’accès. Vous verrez comment vous pouvez spécifier un chemin d’accès complet dans une chaîne de texte concis, comment utiliser les effets de chemin d’accès et comment aller dans les profondeurs de chemin d’accès.
 
-Tous les exemples de programmes dans cette section apparaissent sous l’en-tête **courbes et chemins d’accès de plus** dans la page d’accueil de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme et dans le [ **Courbes** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) dossier de la solution.
+Vous trouverez tous les exemples de programmes dans cette section dans le **SkiaSharp courbes et chemins d’accès** page de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programme, puis, dans le [  **Courbes** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) dossier de la solution.
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[Trois façons de dessiner un arc](arcs.md)
 
@@ -53,5 +53,5 @@ Obtenir des informations sur les chemins d’accès et d’énumérer le contenu
 
 ## <a name="related-links"></a>Liens associés
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

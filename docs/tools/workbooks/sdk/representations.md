@@ -1,33 +1,33 @@
 ---
-title: Représentations sous forme de classeurs de Xamarin
-description: Ce document décrit le pipeline de représentation Xamarin classeurs, ce qui permet le rendu des résultats riches pour tout code qui retourne une valeur.
+title: Représentations dans Xamarin Workbooks
+description: Ce document décrit le pipeline de représentation sous forme de Xamarin Workbooks, ce qui permet le rendu des résultats riches pour tout code qui retourne une valeur.
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: d4d8fa164b9f52e2c5331aa2c08fdddf232572d4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d9aafbe13e06875b6577a4d2308e419932fd1589
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794161"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103710"
 ---
-# <a name="representations-in-xamarin-workbooks"></a>Représentations sous forme de classeurs de Xamarin
+# <a name="representations-in-xamarin-workbooks"></a>Représentations dans Xamarin Workbooks
 
-## <a name="representations"></a>représentations sous forme de
+## <a name="representations"></a>Représentations sous forme de
 
-Dans une session de classeur ou d’inspecteur, le code qui s’exécute et produit un résultat (par exemple, une méthode retournant une valeur ou le résultat d’une expression) est traité via le pipeline de la représentation sous forme de l’agent. Tous les objets, à l’exception des primitives telles que des entiers, apparaîtront pour produire des graphiques interactifs membre et passent via un processus pour fournir des représentations sous forme autre que le client peut rendre plus riche. Objets de toute taille et la profondeur sont pris en charge en toute sécurité (y compris les cycles et les énumérables infinies) en raison de la communication à distance et la réflexion différée et interactif.
+Dans une session de classeur ou d’inspecteur, le code est exécuté et produit un résultat (par exemple, une méthode retournant une valeur ou le résultat d’une expression) qui est traité via le pipeline de représentation de l’agent. Tous les objets, à l’exception de primitives tels que les entiers, apparaîtront pour produire des graphes de membre interactive et un processus pour fournir des représentations autre que le client peut rendre plus riche. Objets de toute taille et la profondeur sont pris en charge en toute sécurité (y compris les cycles et les énumérables infinie) en raison de la communication à distance et différée et interactive de la réflexion.
 
-Les classeurs Xamarin fournit quelques types communs à tous les agents et les clients qui autorisent les élaborés de résultats. [`Color`][xir-color] est un exemple d’un tel type, où l’agent est chargée de convertir par exemple sur iOS, `CGColor` ou `UIColor` d’objets en un `Xamarin.Interactive.Representations.Color` objet.
+Xamarin Workbooks fournit quelques types communs à tous les agents et les clients qui permettent de rendu riche des résultats. [`Color`][xir-color] est un exemple d’un tel type, où par exemple sur iOS, l’agent est responsable de la conversion `CGColor` ou `UIColor` des objets dans un `Xamarin.Interactive.Representations.Color` objet.
 
-En plus des représentations communes, l’intégration du SDK fournit des API pour la sérialisation personnalisée représentations sous forme de l’agent et le rendu des représentations dans le client.
+En plus des représentations communes, l’intégration du SDK fournit des API pour la sérialisation personnalisées représentations dans l’agent et le rendu des représentations dans le client.
 
 ## <a name="external-representations"></a>Représentations externes
 
-[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] Fournit la capacité d’enregistrer un [ `RepresentationProvider` ] [ repp], qu’une intégration doit implémenter pour convertir un objet arbitraire à un formulaire indépendant pour effectuer le rendu. Ces formes agnostiques doivent implémenter la [ `ISerializableObject` ] [ serobj] interface.
+[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] offre la possibilité d’inscrire un [ `RepresentationProvider` ] [ repp], lequel une intégration doit implémenter pour convertir à partir d’un objet arbitraire à un formulaire indépendant pour effectuer le rendu. Ces formes agnostiques doivent implémenter le [ `ISerializableObject` ] [ serobj] interface.
 
-Mise en œuvre le `ISerializableObject` interface ajoute une méthode de sérialisation qui contrôle précisément la manière dont les objets sont sérialisés. Le `Serialize` méthode attend qu’un développeur spécifierez exactement quelles propriétés sont à sérialiser, et ce que sera le nom final. Examinez le `Person` de l’objet dans notre [`KitchenSink` exemple] [exemple], nous pouvons voir comment cela fonctionne :
+Implémentation de la `ISerializableObject` interface ajoute une méthode Serialize qui contrôle avec précision la façon dont les objets sont sérialisés. Le `Serialize` méthode attend qu’un développeur spécifierez exactement quelles propriétés sont à sérialiser, et quel sera le nom final. Examinez le `Person` de l’objet dans notre [`KitchenSink` exemple] [exemple], nous pouvons voir comment cela fonctionne :
 
 ```csharp
 public sealed class Person : ISerializableObject
@@ -41,7 +41,7 @@ public sealed class Person : ISerializableObject
 }
 ```
 
-Si nous voulons fournir un sur-ensemble ou un sous-ensemble des propriétés de l’objet d’origine, nous pouvons faire avec `Serialize`. Par exemple, nous pouvons procéder comme suit pour fournir un précalculé `Age` propriété sur `Person`:
+Si nous souhaitions offrir un sur-ensemble ou un sous-ensemble de propriétés à partir de l’objet d’origine, nous pouvons le faire avec `Serialize`. Par exemple, nous pouvons procéder comme suit pour fournir un précalculé `Age` propriété sur `Person`:
 
 ```csharp
 public sealed class Person : ISerializableObject
@@ -65,13 +65,13 @@ public sealed class Person : ISerializableObject
 ```
 
 > [!NOTE]
-> API qui produisent `ISerializableObject` objets directement n’avez pas besoin d’être gérés par un `RepresentationProvider`. Si l’objet que vous voulez afficher est **pas** un `ISerializableObject`, vous pouvez gérer les encapsulant dans votre `RepresentationProvider`.
+> Les API qui produisent `ISerializableObject` objets directement n’avez pas besoin d’être gérés par un `RepresentationProvider`. Si l’objet que vous souhaitez afficher est **pas** un `ISerializableObject`, vous pouvez gérer les encapsulant dans votre `RepresentationProvider`.
 
 ### <a name="rendering-a-representation"></a>Une représentation sous forme de rendu
 
-Les convertisseurs sont implémentées dans JavaScript et auront accès à la version de l’objet représenté par JavaScript `ISerializableObject`. La copie JavaScript aura également une `$type` propriété qui indique le nom du type .NET de type chaîne.
+Convertisseurs sont implémentées dans JavaScript et auront accès à une version JavaScript de l’objet représenté par le biais de `ISerializableObject`. La copie de JavaScript aura également un `$type` propriété qui indique le nom de type .NET de type chaîne.
 
-Nous vous recommandons d’utiliser TypeScript pour le code d’intégration de client, qui compile naturellement à la vanille JavaScript. Dans les deux cas, le SDK fournit [typages] [ typings] qui peut être référencé directement par TypeScript ou pour donner simplement manuellement si vous écrivez vanille JavaScript est préféré.
+Nous vous recommandons d’utiliser TypeScript pour le code d’intégration de client, qui bien entendu se compile en vanilla JavaScript. Dans les deux cas, le SDK fournit [typages] [ typings] qui peut être référencé directement par TypeScript ou simplement appelé manuellement si vous écrivez vanille JavaScript est préféré.
 
 Le point d’intégration principale pour le rendu est `xamarin.interactive.RendererRegistry`:
 
@@ -85,7 +85,7 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 );
 ```
 
-Ici, `PersonRenderer` implémente la `Renderer` interface. Consultez le [typages] [ typings] pour plus d’informations.
+Ici, `PersonRenderer` implémente le `Renderer` interface. Consultez le [typages] [ typings] pour plus d’informations.
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
 [xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
