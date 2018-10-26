@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Connectivité'
-description: La classe Connectivity vous permet d'obtenir des informations sur la connexion de l'appareil au réseau.
+description: La classe Connectivity vous permet de surveiller les modifications des conditions réseau de l'appareil, de vérifier la connexion réseau actuelle et comment l'appareil est connecté.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
@@ -16,11 +16,11 @@ ms.locfileid: "39353696"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Connectivity** vous permet d'obtenir des informations sur la connexion de l'appareil au réseau.
+La classe Connectivity vous permet de surveiller les modifications des conditions réseau de l'appareil, de vérifier la connexion réseau actuelle et comment l'appareil est connecté.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **connectivité** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **connectivité**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -74,12 +74,12 @@ if (current == NetworkAccess.Internet)
 L'énumérateur **[NetworkAccess](xref:Xamarin.Essentials.NetworkAccess)** possède les valeurs possibles suivantes :
 
 * **Internet** : accès local et à internet.
-* **ConstrainedInternet** : l’accès à internet est limité. Indique la connectivité via un portail captif, l’accès à Internet nécessite que les informations d’identification spécifiques soient fournies via un portail.
+* **ConstrainedInternet** : accès à internet limité. Indique la connectivité via un portail captif, où l'accès à un portail web local est fourni ; l'accès à Internet nécessite que les informations d’identification spécifiques soient fournies via un portail.
 * **Local** : accès local uniquement.
 * **None** : aucune connectivité n’est disponible.
 * **Unknown** : impossible de déterminer la connectivité internet.
 
-Vous pouvez vérifier quel [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) est actuellement actif à l’aide de :
+Vous pouvez vérifier quel [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) est actuellement actif à l’aide de :
 
 ```csharp
 var profiles = Connectivity.Profiles;
@@ -110,7 +110,7 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>Limitations
 
-Il est important de noter que ce n'est pas parceque `NetworkAccess` indique `Internet` que l'appareil peut accèder a tout internet. En raison des différences entre les plateformes concernant la connectivité impossible de garantir l'accès à une certaine URL à 100%. Par exemple, l'appareil peut être connecté à un routeur qui n'est pas connecté à internet. Dans ce cas `NetworkAccess` indiquera `Internet` alors qu'une connexion active ne sera pas disponible.
+Il est important de noter que ce n'est pas parce que `NetworkAccess` indique `Internet` que l'appareil peut accéder à tout internet. En raison des différences entre les plateformes concernant la connectivité, il est impossible de garantir l'accès à une certaine URL à 100%. Par exemple, l'appareil peut être connecté à un routeur qui n'est pas connecté à internet. Dans ce cas, `NetworkAccess` indique `Internet` alors qu'aucune connexion active n'est disponible.
 
 ## <a name="api"></a>API
 
