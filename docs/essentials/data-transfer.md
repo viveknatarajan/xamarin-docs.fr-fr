@@ -51,7 +51,7 @@ public class DataTransferTest
 }
 ```
 
-Interface utilisateur de partage qui s'affichera alors ressemblera à ceci :
+Interface utilisateur à partager dans une application externe qui s’affiche lorsque la demande est effectuée :
 
 ![Transfert de données](data-transfer-images/data-transfer.png)
 
