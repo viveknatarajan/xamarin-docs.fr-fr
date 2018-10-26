@@ -1,33 +1,33 @@
 ---
-title: Comment utiliser des cartes Google et l’emplacement avec Xamarin.Android
-description: Cet article explique comment utiliser des cartes et un emplacement avec Xamarin.Android. Elle traite tous les éléments de tirer parti de l’application de cartes intégrées à directement à l’aide de la V2 mappe des API Android de Google.
+title: Comment utiliser Google Maps et un emplacement avec Xamarin.Android
+description: Cet article explique comment utiliser des cartes et emplacement avec Xamarin.Android. Il couvre tout depuis en tirant parti de l’application des cartes intégrées à l’utilisation de la V2 mappe des API Android de Google directement.
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: a861e43152870933ba684bf693a1bd3d3ac5bd0b
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: fa7fff86e9a7e23bf332f2d62c3ec1a6ed3c54e1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935371"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117127"
 ---
-# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Comment utiliser des cartes Google et l’emplacement avec Xamarin.Android
+# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Comment utiliser Google Maps et un emplacement avec Xamarin.Android
 
-_Cet article explique comment utiliser des cartes et un emplacement avec Xamarin.Android. Elle traite tous les éléments de tirer parti de l’application de cartes intégrées à directement à l’aide de la V2 mappe des API Android de Google._
+_Cet article explique comment utiliser des cartes et emplacement avec Xamarin.Android. Il couvre tout depuis en tirant parti de l’application des cartes intégrées à l’utilisation de la V2 mappe des API Android de Google directement._
 
 ## <a name="maps-overview"></a>Vue d’ensemble de mappages
 
-Technologies de mappage sont un complément omniprésent sur des appareils mobiles. Les ordinateurs portables et les ordinateurs de bureau n’ont souvent des conscience de l’emplacement prédéfini. En revanche, les appareils mobiles utilisent ces applications pour trouver les périphériques et pour afficher des informations d’emplacement modification. Android intègre une technologie puissante et intégrée qui affiche les données d’emplacement sur des cartes à l’aide du matériel d’emplacement qui peut-être être disponible sur l’appareil. Cet article traite tout un éventail de ce que les applications maps sous Xamarin.Android ont à offrir, notamment : 
+Technologies de mappage sont un complément omniprésent sur des appareils mobiles. Les ordinateurs portables et ordinateurs de bureau n’ont tendance à avoir connaissance des emplacements intégrée. Quant à eux, les périphériques mobiles utilisent ces applications pour localiser les appareils et pour afficher des informations d’emplacement variation. Android a technologie puissante et intégrée qui affiche les données d’emplacement sur les cartes à l’aide de matériel d’emplacement qui peut-être être disponible sur l’appareil. Cet article aborde un spectre de ce que les applications de cartes sous Xamarin.Android ont à offrir, notamment : 
 
--  À l’aide de la fonction intégrée est mappé à l’application pour ajouter rapidement des fonctionnalités de mappage.
--  Utilisation de l’API de mappages pour contrôler l’affichage d’une carte.
+-  À l’aide intégrée mappe l’application pour ajouter rapidement des fonctionnalités de mappage.
+-  Utilisation de l’API de cartes pour contrôler l’affichage d’une carte.
 -  À l’aide de diverses techniques pour ajouter des superpositions de graphiques.
 
 Les rubriques de cette section couvrent une large gamme de fonctionnalités de mappage.
-Tout d’abord, elles expliquent comment tirer parti des applications de cartes intégrées d’Android et comment afficher une vue panoramique rue d’un emplacement. Ensuite, elles présentent l’utilisation de l’API de mappages d’incorporer des fonctionnalités de mappage directement dans une application, qui décrivent les deux le contrôle la position et l’affichage d’une carte, ainsi que comment ajouter des superpositions de graphiques.
+Tout d’abord, elles expliquent comment tirer parti des applications de cartes intégrées d’Android et comment afficher une vue panoramique rue d’un emplacement. Puis, ils abordent l’utilisation de l’API de cartes pour incorporer des fonctions de mappage directement dans une application, qui décrivent les deux le contrôle la position et l’affichage d’une carte, ainsi que l’ajout de superpositions graphiques.
 
 
 ## <a name="related-links"></a>Liens associés
@@ -35,5 +35,5 @@ Tout d’abord, elles expliquent comment tirer parti des applications de cartes 
 - [MapsAndLocationDemo_v3 (exemple)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [Cycle de vie des activités](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obtention d’une clé API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Liste des modes : Appel des Applications de Google sur les appareils Android](http://developer.android.com/guide/appendix/g-app-intents.html)
-- [Emplacement et des mappages](http://developer.android.com/guide/topics/location/index.html)
+- [Liste des intentions : Appel d’Applications de Google sur les appareils Android](http://developer.android.com/guide/appendix/g-app-intents.html)
+- [Emplacement et mappages](http://developer.android.com/guide/topics/location/index.html)

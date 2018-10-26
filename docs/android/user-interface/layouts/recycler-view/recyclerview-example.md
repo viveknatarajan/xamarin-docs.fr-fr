@@ -4,15 +4,15 @@ description: Un exemple d’application qui illustre l’utilisation de Recycler
 ms.prod: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
-ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
+ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108650"
 ---
 # <a name="a-basic-recyclerview-example"></a>Un exemple de RecyclerView base
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 Ce code réside dans l’activité principale `OnCreate` (méthode). Le constructeur pour le Gestionnaire de disposition requiert un *contexte*, la `MainActivity` est passé à l’aide de `this` comme indiqué ci-dessus.
 
-Au lieu d’utiliser le le predefind `LinearLayoutManager`, vous pouvez incorporer dans un gestionnaire de disposition personnalisée qui affiche deux `CardView` éléments côte-à-côte, implémentation d’un effet d’animation déforment parcourir la collection de photos. Plus loin dans ce guide, vous verrez un exemple montrant comment modifier la disposition en échangeant dans un gestionnaire de mise en page différente.
+Au lieu d’utiliser le predefind `LinearLayoutManager`, vous pouvez incorporer dans un gestionnaire de disposition personnalisée qui affiche deux `CardView` éléments côte-à-côte, implémentation d’un effet d’animation déforment parcourir la collection de photos. Plus loin dans ce guide, vous verrez un exemple montrant comment modifier la disposition en échangeant dans un gestionnaire de mise en page différente.
 
 <a name="view-holder" />
 

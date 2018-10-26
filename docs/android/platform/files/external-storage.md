@@ -4,15 +4,15 @@ description: Ce guide traite des accès aux fichiers sur un stockage externe dan
 ms.prod: xamarin
 ms.assetid: 40da10b2-a207-4f9c-a2dd-165d9b662f33
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 380100d38febf567fde94096455fd846d9d3d2d3
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.openlocfilehash: fa0ad282fedecec8f5ca4e94e7119c36ef182261
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212189"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116015"
 ---
 # <a name="external-storage"></a>Stockage externe
 
@@ -140,13 +140,13 @@ Toutes les applications Android doivent déclarer une des deux autorisations pou
 > [!NOTE]
 > Si l’utilisateur accorde `WRITE_EXTERNAL_STORAGE`, puis `READ_EXTERNAL_STORAGE` est également implicitement accordée. Il n’est pas nécessaire de demander des autorisations à la fois dans **AndroidManifest.xml**.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Les autorisations peuvent également être ajoutées à l’aide de la **manifeste Android** onglet de la **propriétés de la solution**:
 
 ![Explorateur de solutions - autorisations requises pour Visual Studio 2017](./images/required-permissions.w157.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Les autorisations peuvent également être ajoutées à l’aide de la **manifeste Android** onglet de la **Panneau de propriétés de solution**:
 

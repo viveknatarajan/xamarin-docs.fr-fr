@@ -3,25 +3,25 @@ title: Principes des ressources Android
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 207644f5a5d3d346214ba090dcd450e55fde2657
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110132"
 ---
 # <a name="android-resource-basics"></a>Principes des ressources Android
 
 Presque toutes les applications Android aura une sorte de ressources dans au minimum, ils ont souvent les dispositions d’interface utilisateur sous la forme de fichiers XML. Création d’une application Xamarin.Android tout d’abord, les ressources par défaut sont configurées par le modèle de projet Xamarin.Android :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Fichiers de ressources](android-resource-basics-images/01-resource-files-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![Fichiers de ressources](android-resource-basics-images/01-resource-files-xs.png)
  
@@ -44,11 +44,11 @@ Les cinq fichiers qui composent les ressources par défaut ont été créés dan
 
 Création de ressources est aussi simple que l’ajout de fichiers dans le répertoire du type de ressource en question. La capture d’écran ci-dessous montre les ressources de chaîne pour les paramètres régionaux allemands ont été ajoutés à un projet. Lorsque **Strings.xml** a été ajouté au fichier, le **Action de génération** a été défini automatiquement sur **AndroidResource** par les outils Xamarin.Android :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Action pour Strings.xml AndroidResource la valeur de génération](android-resource-basics-images/02-build-action-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![Action pour Strings.xml AndroidResource la valeur de génération](android-resource-basics-images/02-build-action-xs.png)
  

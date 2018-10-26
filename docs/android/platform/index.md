@@ -1,22 +1,22 @@
 ---
 title: Fonctionnalités de la plateforme de Xamarin.Android
-description: Documents dans cette section couvrent les fonctionnalités spécifiques à Android. Vous trouverez ici des sujets tels que l’utilisation de Fragments, l’utilisation avec des cartes et encapsulation des données avec les fournisseurs de contenu.
+description: Documents dans cette section couvrent les fonctionnalités spécifiques à Android. Vous trouverez ici des rubriques, à l’aide de Fragments de travailler avec des cartes et encapsulation des données avec les fournisseurs de contenu.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 07/27/2018
-ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+author: conceptdev
+ms.author: crdun
+ms.date: 08/21/2018
+ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104698"
 ---
 # <a name="platform-features"></a>Fonctionnalités de la plateforme
 
-_Documents dans cette section couvrent les fonctionnalités spécifiques à Android. Vous trouverez ici des sujets tels que l’utilisation de Fragments, l’utilisation avec des cartes et encapsulation des données avec les fournisseurs de contenu._
+_Documents dans cette section couvrent les fonctionnalités spécifiques à Android. Vous trouverez ici des rubriques, à l’aide de Fragments de travailler avec des cartes et encapsulation des données avec les fournisseurs de contenu._
 
 ## <a name="android-beamandroidplatformandroid-beammd"></a>[Android Beam](~/android/platform/android-beam.md)
 
@@ -46,9 +46,9 @@ Android 3.0 a introduit des Fragments, en montrant comment prendre en charge des
 Ce guide explique comment Android 6.0 prend en charge _la liaison application_, une technique qui permet aux applications mobiles répondre aux URL sur les sites Web. Il étudie la façon d’implémenter la liaison application dans une application Android 6.0 et comment configurer un site Web pour accorder des autorisations à l’application mobile pour gérer les liens d’application pour le domaine.
 
 
-##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Aperçu de P Android](~/android/platform/android-p.md)
+##  <a name="android-9-pieandroidplatformpiemd"></a>[Graphique à secteurs 9 Android](~/android/platform/pie.md)
 
-Cet article fournit un aperçu des nouvelles fonctionnalités de la version préliminaire de P Android, explique comment préparer Xamarin.Android pour le développement de P Android et fournit des exemples de code qui illustre l’utilisation des fonctionnalités Android P clés dans les applications Xamarin.Android.
+Cet article fournit un aperçu des nouvelles fonctionnalités de graphique à secteurs Android, explique comment préparer Xamarin.Android pour le développement Android à secteurs et fournit un exemple d’application qui illustre l’utilisation du graphique à secteurs Android affichage découpage et notification Nouveautés dans Applications Xamarin.Android.
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)
@@ -59,14 +59,14 @@ Cet article fournit un aperçu des nouvelles fonctionnalités de Android Oreo, e
 
 ##  <a name="android-7-nougatandroidplatformnougatmd"></a>[Android 7 Nougat](~/android/platform/nougat.md)
 
-Cet article fournit une vue d’ensemble détaillée des nouvelles fonctionnalités introduites dans Android Nougat 7.0.
+Cet article fournit une vue d’ensemble des nouvelles fonctionnalités introduites dans Android Nougat 7.0.
 
 
 
 
 ##  <a name="android-6-marshmallowandroidplatformmarshmallowmd"></a>[Android 6 Marshmallow](~/android/platform/marshmallow.md)
 
-Cet article fournit une vue d’ensemble détaillée des nouvelles fonctionnalités introduites dans Android Marshmallow 6.0.
+Cet article fournit une vue d’ensemble des nouvelles fonctionnalités introduites dans Android Marshmallow 6.0.
 
 
 
@@ -86,7 +86,7 @@ Android 4.4 (KitKat) livrée avec une multitude de fonctionnalités pour les uti
 
 ##  <a name="android-41-jelly-beanandroidplatformjelly-beanmd"></a>[Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
-Ce document vous fournit une vue d’ensemble détaillée des nouvelles fonctionnalités pour les développeurs qui ont été introduites dans Android 4.1. Ces fonctionnalités incluent : améliorée des notifications, les mises à jour Android faisceaux de partager des fichiers volumineux, les mises à jour de la découverte de réseau peer-to-peer multimédia, les animations, les nouvelles autorisations.
+Ce document vous fournit une vue d’ensemble des nouvelles fonctionnalités pour les développeurs qui ont été introduites dans Android 4.1. Ces fonctionnalités incluent : améliorée des notifications, les mises à jour Android faisceaux de partager des fichiers volumineux, les mises à jour de la découverte de réseau peer-to-peer multimédia, les animations, les nouvelles autorisations.
 
 
 
@@ -98,12 +98,12 @@ Il couvre plusieurs nouvelles technologies d’interface utilisateur et examine 
 
 ##  <a name="working-with-the-android-manifestandroid-manifestmd"></a>[Travailler avec le manifeste Android](android-manifest.md)
 
-Cet article introducts le fichier AndroidManifest.xml, et comment il peut-être être utilisés pour contrôler les fonctionnalités et décrivent la configuration requise d’un Mono pour une application Android.
+Cet article présente le fichier AndroidManifest.xml, et la façon dont il est peut-être utilisé pour contrôler les fonctionnalités et décrivent la configuration requise d’un Mono pour une application Android.
 
 
 ##  <a name="introduction-to-content-providersandroidplatformcontent-providersindexmd"></a>[Introduction aux fournisseurs de contenu](~/android/platform/content-providers/index.md)
 
-Un ContentProvider encapsule un référentiel de données et fournit une API pour y accéder. Le fournisseur existe dans le cadre d’une application Android qui généralement fournit également une interface utilisateur pour l’affichage et la gestion des données. Le principal avantage de l’utilisation d’un fournisseur de contenu est permettant aux autres applications facilement accéder aux données encapsulées à l’aide d’un objet de client de fournisseur (appelé un ContentResolver). Ensemble un fournisseur de contenu et le programme de résolution de contenu offrent une API cohérente entre les applications pour accéder aux données qui est simple à créer et consommer. Ce document montre comment accéder à et générer Contentprovider avec Xamarin.Android.
+Un ContentProvider encapsule un référentiel de données et fournit une API pour y accéder. Le fournisseur existe dans le cadre d’une application Android qui fournit également une interface utilisateur pour l’affichage et la gestion des données. Le principal avantage de l’utilisation d’un fournisseur de contenu est permettant aux autres applications facilement accéder aux données encapsulées à l’aide d’un objet de client de fournisseur (appelé un ContentResolver). Ensemble un fournisseur de contenu et le programme de résolution de contenu offrent une API cohérente entre les applications pour accéder aux données qui est simple à créer et consommer. Ce document montre comment accéder à et générer Contentprovider avec Xamarin.Android.
 
 
 

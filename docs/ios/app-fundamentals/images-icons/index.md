@@ -1,64 +1,64 @@
 ---
-title: Images et des icônes dans Xamarin.iOS
-description: Cette section inclut une variété d’articles qui couvrent l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, de lancer des écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées.
+title: Images et icônes dans Xamarin.iOS
+description: Cette section inclut une variété d’articles abordons l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, lancez les écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées.
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 444e3cbd88dfd3ff50153d858367ecd0310d240a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 09afcac8dcecd5a1d05961c2981c0940fff00a01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102358"
 ---
-# <a name="images-and-icons-in-xamarinios"></a>Images et des icônes dans Xamarin.iOS
+# <a name="images-and-icons-in-xamarinios"></a>Images et icônes dans Xamarin.iOS
 
-_Cette section inclut une variété d’articles qui couvrent l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, de lancer des écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées._
+_Cette section inclut une variété d’articles abordons l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, lancez les écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées._
 
-Il existe plusieurs façons de cette image actifs sont utilisés à l’intérieur d’une application iOS. À partir de simplement afficher une image dans le cadre de l’interface utilisateur d’une application, assigner à un contrôle d’interface utilisateur comme un `UIButton` ou `UIImageView`, à la fourniture des icônes et écrans de démarrage, Xamarin.iOS permet de facilement ajouter la grande illustration d’une application iOS comme suit : 
+Il existe plusieurs façons de cette image actifs sont utilisés à l’intérieur d’une application iOS. À partir de simplement afficher une image dans le cadre de l’interface utilisateur d’une application, telles que l’affectation à un contrôle d’interface utilisateur une `UIButton` ou `UIImageView`, à fournissant des icônes et écrans de lancement, Xamarin.iOS permet de facilement ajouter une illustration excellente à une application iOS comme suit : 
 
-- **Résolution des Images indépendantes** – utiliser d’iOS intégrée pour utiliser des images de résolutions de différents appareils et types (iPhone, iPad, etc.).
-- **Image de catalogues Asset** -utilisez **Asset catalogues Image** à gérer et de regrouper tous les versions d’une ressource requise par une application donnée.
-- **Images dans le concepteur iOS** -le concepteur iOS permet de définir des images pour les contrôles.
-- **Les images dans le Code** – utilisez le `UIImage` des méthodes de la classe à charger et utiliser des ressources d’image et les assigner aux contrôles d’interface utilisateur en code c#.
-- **Icône de l’application** -définir l’icône d’application requis par chaque application iOS. Voici l’icône appuieront par l’utilisateur à partir de l’écran d’accueil pour lancer l’application iOS. En outre, cette icône est utilisée par le centre de jeu, le cas échéant.
-- **Mettre en évidence icône** -définir l’icône d’actualités de l’application. Chaque fois que l’utilisateur entre le nom d’une application dans la recherche Spotlight, cette icône s’affiche.
-- **Icône des paramètres** -définir l’application **paramètres** icône. Si l’utilisateur entre le **paramètres** application sur son appareil iOS, cette icône s’affichera à la fin de la liste des paramètres de l’application. 
-- **Lancer des écrans** -définir l’écran de lancement de l’application. Une fois que l’utilisateur clique sur l’icône d’application et avant la première vue s’affiche, un écran vide s’affiche. Heureusement, iOS prend en charge l’affichage d’une image à la place de l’écran vide à l’aide d’un plan conceptuel. 
-- **Icône d’iTunes** -fournir une icône iTune. Si vous utilisez la méthode Ad Hoc de la livraison d’une application (que ce soit pour les utilisateurs d’entreprise ou bêta sur les appareils réels), le développeur doit également inclure un 512 x 512 et une image de 1024 x 1024 qui permet de représenter l’application dans iTunes.
-- **Icônes de document** -utiliser une image sous forme d’icône pour n’importe quel type de document spécifique qui prend en charge ou qui crée une application Xamarin.iOS.
+- **Résolution des Images indépendantes** – utiliser la prise en charge intégrée d’iOS permet d’utiliser des images de résolutions de périphérique différent et types (iPhone, iPad, etc.).
+- **Ensembles d’images catalogue Asset** -utilisez **ensembles d’images catalogue Asset** pour gérer et de regrouper toutes les versions d’une ressource image donnée requise par une application.
+- **Les images dans le concepteur iOS** -le concepteur iOS permet de définir des images pour les contrôles.
+- **Les images dans le Code** – utilisez le `UIImage` pour charger et utiliser des ressources d’image et affectez-les à des contrôles d’interface utilisateur dans les méthodes de la classe C# code.
+- **Icône d’application** -définir l’icône d’application requis par chaque application iOS. Voici l’icône de l’utilisateur appuie à partir de l’écran d’accueil pour lancer l’application iOS. En outre, cette icône est utilisée par Game Center, le cas échéant.
+- **Icône de Spotlight** -définir l’icône de Spotlight de l’application. Chaque fois que l’utilisateur entre le nom d’une application dans la recherche Spotlight, cette icône s’affiche.
+- **Icône des paramètres** -définir l’application **paramètres** icône. Si l’utilisateur entre le **paramètres** application sur leur appareil iOS, cette icône s’affichera à la fin de la liste des paramètres de l’application. 
+- **Écrans de lancement** -définir l’écran de démarrage de l’application. Une fois que l’utilisateur appuie sur l’icône d’application et avant la première vue s’affiche, un écran vide s’affichera. Heureusement, iOS prend en charge l’affichage d’une image à la place de l’écran vide à l’aide d’une table de montage séquentiel. 
+- **Icône d’iTunes** -fournir une icône iTune. Si vous utilisez la méthode Ad-Hoc de la fourniture d’une application (soit pour les utilisateurs d’entreprise ou de test bêta sur des appareils réels), le développeur doit également inclure un 512 x 512 et une image de 1 024 x 1 024 qui sera utilisée pour représenter l’application dans iTunes.
+- **Icônes de document** -utiliser une image en tant qu’icône pour n’importe quel type de document spécifique qui prend en charge ou en crée une application Xamarin.iOS.
 
-Il existe plusieurs considérations qui doivent être prises en compte lors de la création des ressources d’image pour une application iOS, ainsi que plusieurs endroits où ces ressources seront utilisées. Chacun de ces ont une incidence sur la non seulement combien ressources d’image sera nécessaire, mais la création de ces ressources. Les rubriques suivantes décrivent les types de ressources d’images qui seront nécessaires, comment ces ressources sont incluses dans l’offre groupée de l’application et comment les ressources d’image sont consommés pour fournir les fonctionnalités requises :
+Il existe plusieurs considérations qui doivent être prises en compte lors de la création des ressources d’image pour une application iOS, ainsi que plusieurs endroits où ces ressources seront utilisées. Chacune d'entre elles a une incidence sur la non seulement comment de nombreuses ressources d’image sera nécessaire, mais comment ces ressources sont créées. Les rubriques suivantes décrivent les types de ressources d’images qui seront nécessaires, comment ces ressources sont incluses dans l’offre groupée de l’application et comment les ressources d’image sont utilisés pour fournir la fonctionnalité requise :
 
 
 ## <a name="displaying-an-imageiosapp-fundamentalsimages-iconsdisplaying-an-imagemd"></a>[Affichage d'une image](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
 
-Cet article couvre notamment une ressource d’image dans une application Xamarin.iOS et affichage de cette image à l’aide de code c# ou en l’assignant à un contrôle dans le concepteur iOS.
+Cet article aborde notamment une ressource image dans une application Xamarin.iOS et l’affichage de cette image à l’aide de code c# ou en l’assignant à un contrôle dans le concepteur iOS.
 
 ## <a name="application-iconsiosapp-fundamentalsimages-iconsapp-iconsmd"></a>[Icônes d'application](~/ios/app-fundamentals/images-icons/app-icons.md)
 
-Cet article explique comment y compris et la gestion d’un composant de l’image dans une application Xamarin.iOS à utiliser comme icône de l’application.
+Cette article explique comment y compris et la gestion d’une ressource image dans une application Xamarin.iOS à utiliser comme icône d’application.
 
 ## <a name="alternate-app-iconsiosapp-fundamentalsimages-iconsalternate-app-iconsmd"></a>[Autres icônes d’applications](~/ios/app-fundamentals/images-icons/alternate-app-icons.md)
 
-Apple a ajouté plusieurs améliorations à iOS 10.3 qui permettent à une application de gérer son icône :
+Apple a ajouté plusieurs améliorations à iOS 10.3 qui permettent à une application gérer son icône :
 
- - `ApplicationIconBadgeNumber` -Obtient ou définit le badge de l’icône de l’application dans le Springboard.
- - `SupportsAlternateIcons` -If `true` l’application a un autre jeu d’icônes.
- - `AlternateIconName` -Retourne le nom de l’icône de remplacement actuellement sélectionné ou `null` si vous utilisez l’icône du premier.
- - `SetAlternameIconName` -Utilisez cette méthode pour basculer l’icône de l’application sur l’icône de remplacement donné.
+ - `ApplicationIconBadgeNumber` -Obtient ou définit le badge de l’icône d’application Springboard.
+ - `SupportsAlternateIcons` -If `true` l’application a un autre ensemble d’icônes.
+ - `AlternateIconName` -Retourne le nom de l’icône de remplacement actuellement sélectionné ou `null` si vous utilisez l’icône principale.
+ - `SetAlternameIconName` -Utilisez cette méthode pour basculer d’icône de l’application vers l’icône de remplacement donné.
 
 
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Écrans de lancement](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
-Cet article couvre à l’aide d’un type spécial de la table de montage séquentiel pour fournir un écran de lancement universel pour chaque taille de périphérique iOS et la résolution.
+Cet article couvre à l’aide d’un type spécial de plan conceptuel pour fournir un écran de lancement universelle pour chaque taille de périphérique iOS et la résolution.
 
 ## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Types de document personnalisé](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
-Cet article explique comment y compris et la gestion d’un composant de l’image dans une application Xamarin.iOS à utiliser comme une icône de Type de Document personnalisé.
+Cet article explique comment, y compris et la gestion d’une ressource image dans une application Xamarin.iOS à être utilisé comme une icône de Type de Document personnalisé.
 
 
 

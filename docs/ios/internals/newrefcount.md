@@ -1,41 +1,41 @@
 ---
-title: Nouvelle référence système dans Xamarin.iOS de comptage
-description: Ce document décrit améliorée décompte Xamarin de références système, activée par défaut dans toutes les applications Xamarin.iOS.
+title: Nouveau décompte de références système dans Xamarin.iOS
+description: Ce document décrit améliorée décompte de Xamarin de références système, activée par défaut dans toutes les applications Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: f2e40ca1fdd4a02d62e45004b75f3abefda781a5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 3a40605dd58cac0bcf14c156ecf65aa3fec52bc6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103385"
 ---
-# <a name="new-reference-counting-system-in-xamarinios"></a>Nouvelle référence système dans Xamarin.iOS de comptage
+# <a name="new-reference-counting-system-in-xamarinios"></a>Nouveau décompte de références système dans Xamarin.iOS
 
-Xamarin.iOS 9.2.1 a introduit une meilleure décompte de références système à toutes les applications par défaut. Il peut être utilisé pour éliminer de nombreux problèmes de mémoire qui étaient difficiles à détecter et corriger les versions antérieures de Xamarin.iOS.
+Xamarin.iOS 9.2.1 a introduit l’améliorée de comptage de références système à toutes les applications par défaut. Il peut être utilisé pour éliminer de nombreux problèmes de mémoire qui étaient difficiles à suivre et corriger dans les versions antérieures de Xamarin.iOS.
 
-## <a name="enabling-the-new-reference-counting-system"></a>L’activation de la nouvelle référence système de comptage
+## <a name="enabling-the-new-reference-counting-system"></a>L’activation de la nouvelle référence de système de comptage
 
-À compter de Xamarin 9.2.1 ref nouveau système de comptage est activé pour **tous les** applications par défaut.
+À compter de Xamarin 9.2.1 la référence de nouveau système d’inventaire est activée pour **tous les** applications par défaut.
 
-Si vous développez une application existante, vous pouvez vérifier le fichier .csproj pour vous assurer que toutes les occurrences de `MtouchUseRefCounting` ont la valeur `true`, comme ci-dessous :
+Si vous développez une application existante, vous pouvez vérifier le fichier .csproj pour vous assurer que toutes les occurrences de `MtouchUseRefCounting` sont définies sur `true`, comme ci-dessous :
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-Si elle est définie sur `false` votre application ne l’utiliserez pas les nouveaux outils.
+Si elle est définie sur `false` votre application n’utilisera pas les nouveaux outils.
 
 ### <a name="using-older-versions-of-xamarin"></a>À l’aide de versions antérieures de Xamarin
 
-Xamarin.iOS 7.2.1). et ci-dessus propose un aperçu amélioré notre nouvelle du comptage de références système.
+Xamarin.iOS 7.2.1 et un aperçu de notre nouveau décompte de références système amélioré des fonctionnalités ci-dessus.
 
 **API classique :**
 
-Pour activer ce nouveau système de comptage de référence, vérifiez le **le décompte d’extension** case à cocher se trouve dans le **avancé** onglet de votre projet **les options de Build iOS** , comme indiqué ci-dessous : 
+Pour activer ce nouveau système de comptage de référence, cochez la **utiliser l’extension de comptage de références** case à cocher se trouve dans le **avancé** onglet de votre projet **des options Build iOS** , comme indiqué ci-dessous : 
 
 [![](newrefcount-images/image1.png "Activer le nouveau système de comptage de référence")](newrefcount-images/image1.png#lightbox)
 
@@ -43,18 +43,18 @@ Notez que ces options ont été supprimées dans les versions plus récentes de 
 
  **[API unifiée :](~/cross-platform/macios/unified/index.md)**
 
- Décompte nouvelle extension est nécessaire pour l’API unifiée et doit être activé par défaut. Les versions antérieures de votre IDE ne peuvent pas avoir cette valeur automatiquement vérifiée et vous devrez placer vous-même une vérification par celui-ci.
+ La nouvelle extension de décompte est requise pour l’API unifiée et doit être activée par défaut. Les versions antérieures de votre IDE ne peuvent pas avoir cette valeur automatiquement vérifiée et il se peut que vous deviez placer vous-même une vérification par celui-ci.
 
     
 > [!IMPORTANT]
-> Une version antérieure de cette fonctionnalité depuis autour MonoTouch 5.2 mais elle était uniquement disponible pour **sgen** comme un aperçu expérimentale. Cette nouvelle version améliorée est désormais également disponible pour le **Boehm** le garbage collector.
+> Une version antérieure de cette fonctionnalité depuis autour MonoTouch 5.2, mais était uniquement disponible pour **sgen** en tant qu’un aperçu expérimental. Cette nouvelle version améliorée est désormais également disponible pour le **Boehm** RÉCUPÉRATEUR de mémoire.
 
 
-Il historiquement deux types d’objets gérés par Xamarin.iOS : celles qui ont été simplement un wrapper autour d’un objet natif (objets homologues) et ceux qui étendu ou incorporé de nouvelles fonctionnalités (objets dérivés) - généralement en conservant l’état de la mémoire supplémentaire. Auparavant, il était possible que nous avons augmenter un objet homologue avec état (par exemple en ajoutant un gestionnaire d’événement c#), mais que nous permettent de l’objet accédez non référencés et puis collectées. Cela peut entraîner un blocage ultérieurement (par exemple, si le runtime Objective-C rappelé dans l’objet managé).
+Par le passé ont été deux types d’objets gérés par Xamarin.iOS : ceux qui ont été simplement un wrapper autour d’un objet natif (objets homologues) et celles qui étendu ou incorporé (objets dérivés) - de nouvelles fonctionnalités généralement en conservant l’état de la mémoire supplémentaire. Auparavant, il était possible que nous aurions pu augmenter un objet homologue avec état (par exemple en ajoutant un C# Gestionnaire d’événements), mais que nous laissons l’objet accédez non référencés et puis collectées. Cela peut provoquer un incident par la suite (par exemple, si le runtime Objective-C rappelé dans l’objet managé).
 
-Le nouveau système met automatiquement à niveau les objets homologues dans des objets qui sont gérés par le runtime lorsqu’elles stockent les informations supplémentaires.
+Le nouveau système met automatiquement à niveau les objets homologues dans des objets qui sont gérés par le runtime lorsqu’ils stockent des informations supplémentaires.
 
-Cette approche résout différentes pannes qui se sont produits dans des situations telles que celle-ci :
+Cette action a résolu plusieurs incidents qui se sont produits dans des situations comme celle-ci :
 
 ```csharp
 class MyTableSource : UITableViewSource {
@@ -72,10 +72,10 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-Sans l’extension de nombre de référence, ce code bloquait car `cell` devient pouvant être collecté et donc son `TouchDown` délégué, qui convertit en un pointeur en suspens.
+Sans l’extension de comptage de référence, ce code se bloque, car `cell` devient pouvant être collecté et donc sa `TouchDown` délégué, qui est traduit en un pointeur non résolue.
 
-L’extension de nombre de référence garantit l’objet managé reste actif et empêche sa collection, autant de l’objet natif est conservée par le code natif.
+L’extension de nombre de référence garantit l’objet managé reste actif et empêche sa collection, fournie par l’objet natif est conservée par le code natif.
 
-Le nouveau système supprime également la nécessité de *la plupart des* privé champs utilisés dans les liaisons - qui est l’approche par défaut afin de maintenir l’instance de la sauvegarde. L’éditeur de liens managé est assez intelligente pour supprimer tous ceux *inutiles* extension du nombre de champs à partir d’applications à l’aide de la nouvelle référence.
+Le nouveau système supprime également la nécessité de *la plupart des* privé champs utilisés dans les liaisons - qui est l’approche par défaut afin de maintenir l’instance de stockage. L’éditeur de liens managé est suffisamment intelligent pour supprimer tous ceux *inutiles* extension compter les champs à partir d’applications à l’aide de la nouvelle référence.
 
-Cela signifie que les instances de chaque objet géré consomment moins de mémoire qu’avant. Elle résout également un problème connexe où certains champs de stockage contiendrait les références qui n’étaient pas nécessaire en plus par le runtime Objective-C, ce qui permet de libérer de la mémoire.
+Cela signifie que les instances de chaque objet managé consomment moins de mémoire qu’avant. Il permet également de résoudre un problème connexe, où certains champs de stockage contiendrait les références qui ont été est devenu inutile par le runtime Objective-C, ce qui complique la libérer de la mémoire.

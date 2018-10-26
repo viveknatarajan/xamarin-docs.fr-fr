@@ -4,15 +4,15 @@ description: Ce guide présente Renderscript et explique comment utiliser l’in
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 3331eb579f0aa2d7f29508773c588455c134f56a
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241186"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108728"
 ---
 # <a name="an-introduction-to-renderscript"></a>Introduction à Renderscript
 
@@ -48,11 +48,12 @@ Il existe trois concepts importants pour l’utilisation de Renderscripts dans u
 
 3. **Mémoire allouée** &ndash; données sont passées vers et à partir d’un noyau via un  _[Allocation](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)_. Un noyau peut avoir une entrée ou de sortie d’Allocation.
 
-Le [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) espace de noms contient les classes permettant d’interagir avec le runtime Renderscript. En particulier, le [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) classe gère le cycle de vie et les ressources du moteur Renderscript. L’application Android doit initialiser une ou plusieurs [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) objets. Une Allocation est une API managée qui est responsable de l’allocation et l’accès à la mémoire est partagée entre l’application Android et le runtime Renderscript. En règle générale, une Allocation est créée pour l’entrée, et éventuellement un autre d’Allocation est créée pour contenir la sortie du noyau. Le moteur d’exécution Renderscript et les classes de wrapper managé associé seront gérer l’accès à la mémoire détenue par les Allocations, il n’est pas nécessaire pour un développeur d’application Android pour effectuer tout travail supplémentaire.
+Le [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) espace de noms contient les classes permettant d’interagir avec le runtime Renderscript. En particulier, le [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) classe gère le cycle de vie et les ressources du moteur Renderscript. L’application Android doit initialiser une ou plusieurs [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+Objets. Une Allocation est une API managée qui est responsable de l’allocation et l’accès à la mémoire est partagée entre l’application Android et le runtime Renderscript. En règle générale, une Allocation est créée pour l’entrée, et éventuellement un autre d’Allocation est créée pour contenir la sortie du noyau. Le moteur d’exécution Renderscript et les classes de wrapper managé associé seront gérer l’accès à la mémoire détenue par les Allocations, il n’est pas nécessaire pour un développeur d’application Android pour effectuer tout travail supplémentaire.
 
 Une Allocation contient un ou plusieurs [Android.Renderscripts.Elements](https://developer.xamarin.com/api/type/Android.Renderscripts.Element/).
 Les éléments sont un type spécialisé qui décrivent les données de chaque Allocation.
-Les types d’élément de la sortie d’Allocation doit correspondre à la les types de l’élément d’entrée. Lors de l’exécution, un Renderscript itérer sur chaque élément dans l’Allocation d’entrée en parallèle et écrire les résultats vers la sortie d’Allocation. Il existe deux types d’éléments :
+Les types d’élément de la sortie de l’Allocation doit correspondre les types de l’élément d’entrée. Lors de l’exécution, un Renderscript itérer sur chaque élément dans l’Allocation d’entrée en parallèle et écrire les résultats vers la sortie d’Allocation. Il existe deux types d’éléments :
 
 - **type simple** &ndash; sur le plan conceptuel, il est identique à un type de données C, `float` ou un `char`.
 
@@ -60,7 +61,8 @@ Les types d’élément de la sortie d’Allocation doit correspondre à la les 
 
 Le moteur Renderscript effectue une vérification à l’exécution pour vous assurer que les éléments dans chaque Allocation sont compatibles avec ce qui est requis par le noyau. Si le type de données des éléments de l’Allocation ne correspondre pas le type de données que le noyau attend, une exception sera levée.
 
-Tous les noyaux Renderscript seront encapsulés par un type qui est un descendant de la [ `Android.Renderscripts.Script` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/) classe. Le `Script` classe est utilisée pour définir les paramètres d’un Renderscript, définissez approprié `Allocations`, et exécuter le Renderscript. Il existe deux `Script` sous-classes dans le Kit Android SDK :
+Tous les noyaux Renderscript seront encapsulés par un type qui est un descendant de la [`Android.Renderscripts.Script`](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/)
+. Le `Script` classe est utilisée pour définir les paramètres d’un Renderscript, définissez approprié `Allocations`, et exécuter le Renderscript. Il existe deux `Script` sous-classes dans le Kit Android SDK :
 
 
 - **`Android.Renderscripts.ScriptIntrinsic`** &ndash; Certaines des tâches de Renderscript plus courantes sont fournies dans le Kit Android SDK et sont accessibles par une sous-classe de la [ScriptIntrinsic](https://developer.xamarin.com/api/type/Android.Renderscripts.ScriptIntrinsic/) classe. Il est inutile pour un développeur d’étapes supplémentaires pour utiliser ces scripts dans leur application, car elles sont déjà fournies.
@@ -107,13 +109,15 @@ Veuillez consulter la documentation API pour plus d’informations sur chacun de
 
 Les étapes de base pour l’utilisation de Renderscript dans une application Android sont décrites ci-après.
 
-**Créer un contexte Renderscript** &ndash; le [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) classe est un wrapper managé autour du contexte Renderscript et détermine l’initialisation, la gestion des ressources et nettoyer. L’objet Renderscript est créé à l’aide de la `RenderScript.Create` méthode de fabrique, qui prend un contexte Android (par exemple, une activité) en tant que paramètre. La ligne de code suivante montre comment initialiser le contexte Renderscript :
+**Créer un contexte Renderscript** &ndash; le [`Renderscript`](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/)
+classe est un wrapper managé autour du contexte Renderscript et détermine l’initialisation, la gestion des ressources et nettoyer. L’objet Renderscript est créé à l’aide de la `RenderScript.Create` méthode de fabrique, qui prend un contexte Android (par exemple, une activité) en tant que paramètre. La ligne de code suivante montre comment initialiser le contexte Renderscript :
 
 ```csharp
 Android.Renderscripts.RenderScript renderScript = RenderScript.Create(this);
 ```
 
-**Créer des Allocations** &ndash; selon le script intrinsèque, il peut être nécessaire créer un ou deux `Allocation`s. Le [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) classe a plusieurs méthodes de fabrique pour faciliter l’instanciation d’une allocation pour un type intrinsèque. Par exemple, l’extrait de code suivant montre comment créer d’Allocation pour les Bitmaps.
+**Créer des Allocations** &ndash; selon le script intrinsèque, il peut être nécessaire créer un ou deux `Allocation`s. Le [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+classe possède plusieurs méthodes de fabrique pour faciliter l’instanciation d’une allocation pour un type intrinsèque. Par exemple, l’extrait de code suivant montre comment créer d’Allocation pour les Bitmaps.
 
 ```csharp
 Android.Graphics.Bitmap originalBitmap;

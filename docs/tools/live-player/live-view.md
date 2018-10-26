@@ -4,15 +4,15 @@ title: XAML Live Aperçu avant impression
 description: Ce document explique comment utiliser Xamarin Live Player pour live aperçu des pages XAML, apporter des modifications pour le XAML et voir les modifications s’affichent instantanément sur appareil.
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 200d19aa0a13d0557e52cb90021190978838ed39
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 1602c98eceaff607c79400a37c4ace60d5bf8807
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110594"
 ---
 # <a name="xaml-live-previewing"></a>XAML Live Aperçu avant impression
 
@@ -70,7 +70,7 @@ Avant de pouvoir utiliser Xamarin Live Player avec votre appareil Android, vous 
 
 ## <a name="deploying-to-android-emulator"></a>Déploiement sur l’émulateur Android
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Ouvrez la page XAML que vous souhaitez l’aperçu instantané dans l’éditeur Visual Studio 2017 :
 
@@ -84,7 +84,7 @@ Avant de pouvoir utiliser Xamarin Live Player avec votre appareil Android, vous 
 
     ![](live-view-images/vs-image3.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Ouvrez la page XAML que vous souhaitez l’aperçu instantané dans Visual Studio pour l’éditeur de Mac :
 

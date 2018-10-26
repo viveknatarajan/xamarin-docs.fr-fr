@@ -4,15 +4,15 @@ description: Cet article aborde notamment une ressource image dans une applicati
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 4b2bddeb6b04b5c5288f501fce0d6bb03e0b6584
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: b29820cb69702f7570e10a555ebe9e3e0824653f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251218"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104152"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Affichage d’une image dans Xamarin.iOS
 
@@ -22,7 +22,7 @@ _Cet article aborde notamment une ressource image dans une application Xamarin.i
 
 Lorsque vous ajoutez une image pour une utilisation dans une application Xamarin.iOS, le développeur utilise une _catalogue_ pour prendre en charge de chaque appareil iOS et la résolution requise par une application.
 
-Ajouté dans iOS 7, **ensembles d’images catalogues Asset** contiennent toutes les versions ou les représentations sous forme d’une image qui est nécessaires pour prendre en charge de divers périphériques et facteurs pour une application d’échelle. Au lieu d’utiliser le nom de fichier de ressources image (consultez [Images indépendantes de résolution et Image Nomenclature](~/ios/app-fundamentals/images-icons/displaying-an-image.md)), **ensembles d’images** utiliser un fichier Json pour spécifier quelle image appartient à quels appareils et/ou la résolution . Il s’agit de la meilleure façon de gérer et prendre en charge des images dans iOS (à partir d’iOS 9 ou version ultérieure).
+Ajouté dans iOS 7, **ensembles d’images catalogues Asset** contiennent toutes les versions ou les représentations sous forme d’une image qui est nécessaires pour prendre en charge de divers périphériques et facteurs pour une application d’échelle. Au lieu d’utiliser le nom du fichier de ressources d’image, **ensembles d’images** utiliser un fichier Json pour spécifier quelle image appartient à quels appareils et/ou la résolution. Il s’agit de la meilleure façon de gérer et prendre en charge des images dans iOS (à partir d’iOS 9 ou version ultérieure).
 
 ## <a name="adding-images-to-an-asset-catalog-image-set"></a>Ajout d’images à une image de catalogue actif défini
 
@@ -30,7 +30,7 @@ Comme indiqué ci-dessus, un **ensembles d’images catalogues Asset** contienne
 
 Pour créer un nouvel ensemble de l’image et ajouter des images, procédez comme suit :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Dans le **l’Explorateur de solutions**, double-cliquez sur le `Assets.xcassets` fichier à ouvrir pour modification :
 
@@ -48,7 +48,7 @@ Lorsque vous utilisez un **Image définie** dans le concepteur iOS, il suffit de
 
 ![](displaying-an-image-images/imageset06.png "Sélectionnez le nom d’un ensemble d’image dans la liste déroulante")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Ouvrir le catalogue de composants à partir de la **l’Explorateur de solutions**, dans le coin supérieur gauche, cliquez sur le **Plus** bouton :
 
@@ -88,11 +88,11 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 
 À compter d’iOS 8, spéciale **vecteur** classe qu’ajoutée au **ensembles d’images** qui permet au développeur d’inclure un **PDF** mis en forme d’image vectorielle dans la cassette au lieu de cela, y compris fichiers bitmap individuels avec les différentes résolutions. À l’aide de cette méthode, fournissez un fichier de vecteur unique pour le `@1x` résolution (mis en forme en tant que fichier PDF vecteur) et le `@2x` et `@3x` versions du fichier seront générées au moment de la compilation et incluses dans le bundle de l’application.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![](displaying-an-image-images/imageset05.png "Images de vecteur dans l’éditeur de catalogues de composants")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](displaying-an-image-images/asset8.png "Images de vecteur dans l’éditeur de catalogues de composants")
 
@@ -116,11 +116,11 @@ En fonction de la conception d’une application iOS, il peut arriver lorsque le
 
 Pour obtenir facilement cet effet, basculez le _Mode de rendu_ de la ressource Image à **Image de modèle**:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![](displaying-an-image-images/templateimage01.png "Le Mode de rendu défini sur Image de modèle")](displaying-an-image-images/templateimage01.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](displaying-an-image-images/templateimage01vs.png "Le Mode de rendu défini sur modèle")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
@@ -128,11 +128,11 @@ Pour obtenir facilement cet effet, basculez le _Mode de rendu_ de la ressource I
 
 À partir du concepteur iOS, affecter la ressource Image à un contrôle d’interface utilisateur, puis définissez le **teinte** à mettre en couleur de l’image :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 [![](displaying-an-image-images/templateimage03.png "Définir la teinte à colorer l’image")](displaying-an-image-images/templateimage03.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](displaying-an-image-images/templateimage03vs.png "Définir la teinte à colorer l’image")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
@@ -169,14 +169,14 @@ Lorsque vous travaillez avec des images dans les catalogues de ressources il peu
 
 Pour ajouter un nouveau catalogue de ressources au projet :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Avec le bouton droit sur le **nom_projet** dans le **l’Explorateur de solutions** et sélectionnez **ajouter** > **nouveau fichier...**
 2. Sélectionnez **iOS** > **catalogue**, entrez un **nom** pour la collection et cliquez sur le **New** bouton :
 
     ![](displaying-an-image-images/asset01.png "Création d’un nouveau catalogue d’actifs")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Dans l’Explorateur de solutions, cliquez sur **catalogues de composants** dossier, puis sélectionnez **Ajouter > Nouveau catalogue d’actifs**.
 2. Donnez-lui un nom et cliquez sur **ajouter**:
@@ -219,7 +219,7 @@ Pour plus d’informations sur les icônes et des images, consultez la documenta
 
 Une fois qu’une image a été ajoutée à un projet Xamarin.iOS à l’aide d’un élément multimédia de catalogues, il peut facilement être affiché sur une table de montage séquentiel à l’aide un `UIImageView` dans le concepteur iOS. Par exemple, si le composant de l’Image suivante a été ajoutée :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![](displaying-an-image-images/display01.png "Un exemple de que composant de l’Image a été ajoutée.")
 
@@ -242,7 +242,7 @@ Procédez comme suit pour l’afficher dans une table de montage séquentiel :
 7. Faites glisser la poignée de « T » en forme sur chaque bord de la **affichage de l’Image** vers le côté correspondant de l’écran pour l’image sur les côtés « épingler ». De cette façon, le **affichage de l’Image** sera variations de l’écran est redimensionné.
 8. Enregistrez les modifications dans la table de montage séquentiel.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](displaying-an-image-images/display01vs.png "Un exemple de que composant de l’Image a été ajoutée.")
 

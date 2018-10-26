@@ -4,15 +4,15 @@ description: Ce document décrit comment configurer une application ARKit dans X
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 728082eb27684c2176feb2038b7948986ce6a694
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351689"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103892"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>À l’aide de ARKit avec UrhoSharp dans Xamarin.iOS
 
@@ -25,7 +25,7 @@ Cette page explique comment connecter ces deux mondes afin de créer des applica
 
 ## <a name="the-basics"></a>Principes de base
 
-Nous voulons est présentent du contenu 3D par-dessus le monde entier par l’iPhone.   L’idée consiste à fusionner le contenu sera disponible à partir de l’appareil photo du téléphone avec le contenu 3D et quand l’utilisateur du téléphone déplace autour de la pièce pour vous assurer que l’objet 3D se comportent comme elles fait partie de cet espace - cela par ancrage les objets dans ce monde.
+Nous voulons est présentent du contenu 3D par-dessus le monde entier par l’iPhone/iPad.   L’idée consiste à fusionner le contenu en provenance de photo l’appareil avec le contenu 3D et que l’utilisateur de l’appareil ne se déplace la salle pour vous assurer que l’objet 3D se comportent comme elles fait partie de cet espace - cela par ancrage les objets dans ce monde.
 
 ![Figure animée dans ARKit](urhosharp-images/image1.gif)
 

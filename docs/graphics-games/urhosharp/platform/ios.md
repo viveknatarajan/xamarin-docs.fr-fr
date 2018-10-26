@@ -1,23 +1,23 @@
 ---
-title: UrhoSharp iOS et la prise en charge de tvOS
-description: Ce document traite des e/s et prend en charge de tvOS pour UrhoSharp. Il décrit comment créer un projet, configurer et lancer Urho et effectuer une incorporation personnalisée de Urho.
+title: UrhoSharp iOS et tvOS prise en charge
+description: Ce document aborde iOS et tvOS prise en charge de UrhoSharp. Il décrit comment créer un projet, configurer et lancer Urho et effectuer une incorporation personnalisée de Urho.
 ms.prod: xamarin
 ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7e8975b6885f6c902634e05aafca0b8ee60a981c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f15ae458c6bd613b59700908ad7c121315e377ab
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108273"
 ---
-# <a name="urhosharp-ios-and-tvos-support"></a>UrhoSharp iOS et la prise en charge de tvOS
+# <a name="urhosharp-ios-and-tvos-support"></a>UrhoSharp iOS et tvOS prise en charge
 
-Bien que Urho est une bibliothèque de classes portable et permet la même API à utiliser sur la plateforme différents pour la logique du jeu, vous devez initialiser Urho dans votre pilote plateforme et dans certains cas, vous souhaitez tirer parti des fonctionnalités spécifiques de plateforme .
+Bien que Urho est une bibliothèque de classes portable, et permet à la même API pour être utilisé sur la plateforme différents pour votre logique de jeu, vous devez toujours initialiser Urho dans votre pilote de plateforme spécifique et dans certains cas, vous pouvez tirer parti des fonctionnalités spécifiques de plateforme .
 
-Dans les pages suivantes, supposons que `MyGame` est un sublcass de la `Application` classe.
+Dans les pages ci-dessous, supposons que `MyGame` est un sublcass de la `Application` classe.
 
 ## <a name="ios-and-tvos"></a>iOS et tvOS
 
@@ -25,11 +25,11 @@ Dans les pages suivantes, supposons que `MyGame` est un sublcass de la `Applicat
 
 ## <a name="creating-a-project"></a>Création d'un projet
 
-Créer un projet iOS, puis ajouter des données dans le répertoire de ressources et vérifiez que tous les fichiers ont **BundleResource** comme le **Action de génération**.
+Créer un projet iOS, puis ajouter des données dans le répertoire de ressources et assurez-vous que tous les fichiers ont **BundleResource** en tant que le **Action de génération**.
 
 ![Le programme d’installation de projet](ios-images/image-4.png "ajouter des données dans le répertoire de ressources")
 
-## <a name="configuring-and-launching-urho"></a>Configuration et lancement Urho
+## <a name="configuring-and-launching-urho"></a>Configurant et en lançant Urho
 
 Ajouter à l’aide des instructions pour la `Urho` et `Urho.iOS` espaces de noms, puis ajoutez ce code pour l’initialisation Urho, ainsi que le lancement de votre application :
 
@@ -37,7 +37,7 @@ Ajouter à l’aide des instructions pour la `Urho` et `Urho.iOS` espaces de nom
 new MyGame().Run();
 ```
 
-Notez que puisqu’iOS attend `FinishedLaunching` pour terminer, vous devez la file d’attente l’appel à `Run()` pour exécuter une fois la méthode terminée, il s’agit d’un idiome commun :
+Notez que dans la mesure où iOS attend `FinishedLaunching` pour terminer, vous devez la file d’attente l’appel à `Run()` pour exécuter une fois la méthode terminée, il s’agit d’un idiome courant :
 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)
@@ -53,11 +53,11 @@ async void LaunchGame()
 }
 ```
 
-Il est important de désactiver les optimisations PNG, car l’optimiseur PNG par défaut iOS générera des images qui Urho ne peuvent pas consommer actuellement correctement.
+Il est important de désactiver les optimisations PNG, car l’optimiseur PNG iOS par défaut générera des images qui Urho ne peut pas consommer actuellement correctement
 
 ## <a name="custom-embedding-of-urho"></a>Incorporation personnalisé de Urho
 
-Vous peut également avoir Urho prendre sur l’écran de l’ensemble de l’application, et pour l’utiliser en tant que composant de votre application, vous pouvez créer un `UrhoSurface` qui est un `UIView` que vous pouvez incorporer dans votre application existante.
+Vous peut également avoir Urho reprendre l’écran de l’application entière, et pour l’utiliser en tant que composant de votre application, vous pouvez créer un `UrhoSurface` qui est un `UIView` que vous pouvez incorporer dans votre application existante.
 
 C’est ce que vous devez faire :
 

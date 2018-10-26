@@ -3,22 +3,25 @@ title: LinearLayout
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: b7564d95c9a472276846b4773d355d8167f37efe
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d8ee5f867c9a4d724c54c14b5afdd005f1b805d3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846404"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115768"
 ---
 # <a name="linearlayout"></a>LinearLayout
 
-[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) est un [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) qui affiche les enfants [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) éléments dans une direction linéaire, verticalement ou horizontalement.
+[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) est un [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+qui affiche les enfants [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+éléments dans une direction linéaire, verticalement ou horizontalement.
 
-Vous devez être prudent lorsque vous trop forte à l’aide de la [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/).
-Si vous commencez l’imbrication multiple [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s, vous souhaiterez peut-être envisager d’utiliser un [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) à la place.
+Vous devez être prudent lorsque vous excessif à l’aide de la [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/).
+Si vous commencez l’imbrication multiple [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s, vous souhaiterez envisager d’utiliser un [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
+à la place.
 
 Démarrer un nouveau projet nommé **HelloLinearLayout**.
 
@@ -100,9 +103,14 @@ Ouvrez **Resources/Layout/Main.axml** et insérez le code suivant :
 </LinearLayout>
 ```
 
-Examinez attentivement ce code XML. Il existe une racine [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) qui définit son orientation verticale &ndash; tous les enfants [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)s (dont il a deux) sera empilé verticalement. Le premier enfant est une autre [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) qui utilise une orientation horizontale et le deuxième enfant est un [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) qui utilise une orientation verticale. Chacun de ces imbriqués [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s contient plusieurs [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) éléments qui sont orientés entre eux dans les conditions définies par leur parent [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/).
+Examinez attentivement ce code XML. Il existe une racine [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+qui définit son orientation à la verticale &ndash; tous les enfants [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)s (dont il dispose de deux) sera empilé verticalement. Le premier enfant est un autre [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+qui utilise une orientation horizontale et le deuxième enfant est un [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+qui utilise une orientation verticale. Chacun d'entre eux imbriqué [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s contient plusieurs [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
+éléments qui sont orientées entre eux de la manière définie par leur parent [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/).
 
-À présent ouvrir **HelloLinearLayout.cs** et veillez à ce qu’il charge le **Resources/Layout/Main.axml** mise en page dans le [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) méthode :
+Ouvrez maintenant **HelloLinearLayout.cs** et n’oubliez pas qu’il charge le **Resources/Layout/Main.axml** mise en page dans le [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+méthode :
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -112,13 +120,14 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-Le [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) méthode charge le fichier de disposition pour le [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), spécifié par l’ID de ressource &ndash; `Resources.Layout.Main` fait référence à la **ressources/disposition / Main.axml** fichier de disposition.
+Le [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) méthode charge le fichier de disposition pour le [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), spécifié par l’ID de ressource &ndash; `Resources.Layout.Main` fait référence à la **disposition/ressources / Main.axml** fichier de disposition.
 
 Exécutez l'application. Vous devez voir les éléments suivants :
 
-[![Capture d’écran de l’application LinearLayout première horizontalement, verticalement seconde](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
+[![Capture d’écran de l’application LinearLayout première organisée horizontalement, verticalement seconde](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-Notez comment les attributs XML définissent le comportement de chaque vue. Tenter d’expérimenter avec différentes valeurs pour `android:layout_weight` pour voir comment la taille d’écran est distribuée en fonction du poids de chaque élément. Consultez le [les objets de mise en forme commune](http://developer.android.com/guide/topics/ui/declaring-layout.html) document pour plus d’informations sur la façon [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) gère la `android:layout_weight` attribut.
+Notez comment les attributs XML définissent le comportement de chaque vue. Essayez d’expérimenter avec différentes valeurs pour `android:layout_weight` pour voir comment la taille d’écran sont répartie en fonction du poids de chaque élément. Consultez le [les objets de mise en forme courantes](http://developer.android.com/guide/topics/ui/declaring-layout.html) document pour en savoir plus sur la façon [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+gère la `android:layout_weight` attribut.
 
 
 ## <a name="references"></a>Références
@@ -126,6 +135,6 @@ Notez comment les attributs XML définissent le comportement de chaque vue. Tent
 -   [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 
 -   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
 
-*Des parties de cette page sont des modifications en fonction de travail créés et partagés par projet Android Open Source utilisés en fonction des conditions décrites dans le*
-[*Creative Commons 2.5 Attribution de licence* ](http://creativecommons.org/licenses/by/2.5/).
+*Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Android Open Source Project et utilisé conformément aux conditions décrites dans le*
+[*licence Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/).
 

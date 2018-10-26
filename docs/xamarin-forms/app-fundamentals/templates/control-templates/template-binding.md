@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 86de2ad6009365b3debbe1a2310651002b023219
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106427"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Liaison à partir d’un ControlTemplate de Xamarin.Forms
 
@@ -156,13 +156,24 @@ public class HomePageCS : ContentPage
 }
 ```
 
+Vous pouvez également lier aux propriétés de modèle de vue directement, afin que vous n’avez pas besoin de déclarer `BindableProperty`s pour `HeaderText` et `FooterText` sur le `ContentPage`, en liant le modèle de contrôle à Parent.BindingContext. _PropertyName_ , par exemple :
+
+```xaml
+<ControlTemplate x:Key="TealTemplate">
+  <Grid>
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.HeaderText}" ... />
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.FooterText}" ... />
+  </Grid>
+</ControlTemplate>
+```
+
 Pour plus d’informations sur la liaison de données pour les ViewModels, consultez [à partir des liaisons de données à MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 ## <a name="summary"></a>Récapitulatif
 
 Cet article, présenté à l’aide de liaisons de modèles pour effectuer la liaison de données à partir d’un modèle de contrôle. Liaisons de modèles permettent de lient des contrôles dans un modèle de contrôle aux données aux propriétés publiques, permettant des valeurs de propriété sur les contrôles dans le modèle de contrôle pour être facilement modifié.
-
-
 
 ## <a name="related-links"></a>Liens associés
 

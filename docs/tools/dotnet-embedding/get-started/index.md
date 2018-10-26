@@ -1,39 +1,39 @@
 ---
-title: Prise en main de l’incorporation de .NET
-description: Ce document des liens vers des guides pas à pas qui décrivent comment utiliser .NET incorporation dans C, Java, Android, projets Objective-C, iOS et macOS.
+title: Mise en route avec l’incorporation de .NET
+description: Ce document des liens vers des guides qui expliquent comment utiliser l’incorporation de .NET dans C, Java, Android, les projets Objective-C, iOS et macOS.
 ms.prod: xamarin
 ms.assetid: AF8A4798-EBDD-4E73-997B-C3D4FC5E9685
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 9829881dcb374b141bdf7fc578266ec66d90315b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 96a80d76afb769dae456e7ff9bdad32b137c6fed
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793056"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106208"
 ---
-# <a name="getting-started-with-net-embedding"></a>Prise en main de l’incorporation de .NET
+# <a name="getting-started-with-net-embedding"></a>Mise en route avec l’incorporation de .NET
 
 ## <a name="ccmd"></a>[C](c.md)
 
-Incorporer le code .NET dans vos applications C.
+Incorporer du code .NET dans vos applications C.
 
 ## <a name="javajavaindexmd"></a>[Java](java/index.md)
 
-Explique comment incorporer dans les applications Java sur différentes plateformes.
+Comment incorporer dans les applications Java sur différentes plateformes.
 
 ### <a name="androidjavaandroidmd"></a>[Android](java/android.md)
 
-Conseils Android spécifiques pour l’incorporation de code .NET.
+Conseils de spécifique à Android pour l’incorporation de code .NET.
 
 ## <a name="objective-cobjective-cindexmd"></a>[Objective-C](objective-c/index.md)
 
-Comment incorporer dans l’objectif-C.
+Comment incorporer dans Objective-C.
 
 ### <a name="iosobjective-ciosmd"></a>[iOS](objective-c/ios.md)
 
-obtenir des conseils iOS spécifiques pour l’incorporation de code .NET.
+conseils de spécifique à iOS pour l’incorporation de code .NET.
 
 ### <a name="macosobjective-cmacosmd"></a>[macOS](objective-c/macos.md)
 

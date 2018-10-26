@@ -4,15 +4,15 @@ description: Ce document contient des liens vers des guides qui décrivent les d
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 12/17/2015
-ms.openlocfilehash: e085cf33615d216e1ce9963254050ef2b623ae40
-ms.sourcegitcommit: d0da5ce4158239abd2b36f67550e9b475055766a
+ms.openlocfilehash: 376286b73c92cba40de183043b86cb4ffb5e699d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39320802"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108715"
 ---
 # <a name="xamarinmac-application-fundamentals"></a>Principes de base application Xamarin.Mac
 
@@ -24,7 +24,7 @@ Tout au long de l’API Apple exposées via c#, certains modèles et idiomes app
 
 Pour une grande partie de votre temps à développer avec Xamarin.Mac, vous pouvez donc réfléchir, lire et écrire en c#, sans se soucier de bien avec les API Objective-C sous-jacente. Cependant, parfois, allez à lire la documentation de l’API d’Apple, traduire une réponse de Stack Overflow à une solution à votre problème, ou que vous comparer à un exemple existant.
 
-## <a name="console-appsmacapp-fundamentalsconsolemd"></a>[Applications console](~/mac/app-fundamentals/console.md)
+## <a name="console-appsmacapp-fundamentalsconsolemd"></a>[Applications de console](~/mac/app-fundamentals/console.md)
 
 Vous pouvez également créer des applications de console « headless » qui accèdent aux API de macOS native à l’aide de Xamarin.Mac.
 

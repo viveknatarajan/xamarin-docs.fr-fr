@@ -4,14 +4,14 @@ description: Ce document décrit MonoTouch.Dialog (serveur maître cible. (D), u
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: bee4b460552c7273021b16955b52ba3d95d3e07c
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: a948d5beca6c09dc77e5c86d3f281851e4839ff0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107987"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduction à MonoTouch.Dialog pour Xamarin.iOS
 

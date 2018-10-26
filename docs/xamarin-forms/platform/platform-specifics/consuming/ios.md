@@ -6,13 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/06/2018
-ms.openlocfilehash: 98d4ce241c01bd09c68d86c583f12fdc7a11db0f
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.date: 10/01/2018
+ms.openlocfilehash: 69f754db0fd9661fb317f43c7cda546b0b510265
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39175188"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119405"
 ---
 # <a name="ios-platform-specifics"></a>Caractéristiques de la plateforme d’iOS
 
@@ -377,6 +377,7 @@ Sur iOS, les fonctionnalités spécifiques à la plateforme suivantes sont fourn
 - Contrôle si le titre de page est affiché comme un titre de grande taille dans la barre de navigation de page. Pour plus d’informations, consultez [affichage des grands titres](#large_title).
 - Définition de la visibilité de barre d’état sur un [ `Page` ](xref:Xamarin.Forms.Page). Pour plus d’informations, consultez [définissant la visibilité de barre d’état sur une Page](#set_status_bar_visibility).
 - S’assurer de ce contenu de la page est positionné sur une zone de l’écran qui est sécurisé pour tous les appareils iOS. Pour plus d’informations, consultez [activer le repère de disposition de zone sans échec](#safe_area_layout).
+- Définir le style de présentation des pages modales sur un iPad. Pour plus d’informations, consultez [définir le Style de présentation Page modale sur un iPad](#modal-page-presentation-style).
 
 <a name="navigationpage-hideseparatorbar" />
 
@@ -681,6 +682,51 @@ protected override void OnAppearing()
     Padding = safeInsets;
 }
 ```
+
+<a name="modal-page-presentation-style" />
+
+### <a name="setting-the-modal-page-presentation-style-on-an-ipad"></a>Définir le Style de présentation Page modale sur un iPad
+
+Cette plate-forme spécifique est utilisé pour définir le style de présentation d’une page modale sur un iPad. Elle est consommée dans XAML en définissant le `Page.ModalPresentationStyle` propriété pouvant être liée à un `UIModalPresentationStyle` valeur d’énumération :
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.ModalPresentationStyle="FormSheet">
+    ...
+</ContentPage>
+```
+
+Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+public class iOSModalFormSheetPageCS : ContentPage
+{
+    public iOSModalFormSheetPageCS()
+    {
+        On<iOS>().SetModalPresentationStyle(UIModalPresentationStyle.FormSheet);
+        ...
+    }
+}
+```
+
+Le `Page.On<iOS>` méthode spécifie que cette plateforme spécifique s’exécute uniquement sur iOS. Le `Page.SetModalPresentationStyle` (méthode), dans le [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espace de noms, est utilisé pour définir le style de présentation modale sur un [ `Page` ](xref:Xamarin.Forms.Page) en spécifiant une des opérations suivantes `UIModalPresentationStyle` énumération valeurs :
+
+- `FullScreen`, qui définit le style de présentation modale pour englober la totalité de l’écran. Par défaut, les pages modales sont affichés à l’aide de ce style de présentation.
+- `FormSheet`, qui définit le style de présentation modale centrée sur et inférieure à l’écran.
+
+En outre, le `GetModalPresentationStyle` méthode peut être utilisée pour récupérer la valeur actuelle de la `UIModalPresentationStyle` énumération est appliquée à la [ `Page` ](xref:Xamarin.Forms.Page).
+
+Le résultat est que le le style de présentation modale sur un [ `Page` ](xref:Xamarin.Forms.Page) peuvent être définies :
+
+[![](ios-images/modal-presentation-style-small.png "Styles de présentation modale sur un iPad")](ios-images/modal-presentation-style-large.png#lightbox "modale Styles de présentation sur un iPad")
+
+> [!NOTE]
+> Les pages qui utilisent cette plateforme spécifique pour définir le style de présentation modale doivent utiliser la navigation modale. Pour plus d’informations, consultez [Pages modales Xamarin.Forms](~/xamarin-forms/app-fundamentals/navigation/modal.md).
 
 ## <a name="layouts"></a>Dispositions
 

@@ -6,13 +6,13 @@ ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 06/18/2018
-ms.openlocfilehash: 30cbb2c3aebdafe2ebf35598c520ae725e01ce65
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/21/2018
+ms.openlocfilehash: a83e31cd117689e3af2f5357331408de55edaecf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995142"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102748"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Espaces de noms XAML dans Xamarin.Forms
 
@@ -42,13 +42,14 @@ Le tableau suivant présente le `x` attributs d’espace de noms pris en charge 
 |--- |--- |
 |`x:Arguments`|Spécifie les arguments de constructeur pour un constructeur non défini par défaut, ou pour une déclaration d’objet de fabrique (méthode).|
 |`x:Class`|Spécifie l’espace de noms et le nom d’une classe définie dans XAML. Le nom de classe doit correspondre au nom de classe du fichier code-behind. Notez que cette construction ne peut apparaître dans l’élément racine d’un fichier XAML.|
+|`x:DataType`|Spécifie le type de l’objet auquel l’élément XAML et ses enfants seront lié.|
 |`x:FactoryMethod`|Spécifie une méthode de fabrique qui peut être utilisée pour initialiser un objet.|
 |`x:FieldModifier`|Spécifie le niveau d’accès pour les champs générés pour les éléments XAML nommés.|
 |`x:Key`|Spécifie une clé définie par l’utilisateur unique pour chaque ressource dans un `ResourceDictionary`. La valeur de clé est utilisée pour récupérer la ressource XAML et est généralement utilisée comme argument pour le `StaticResource` extension de balisage.|
 |`x:Name`|Spécifie un nom d’objet de runtime pour l’élément XAML. Paramètre `x:Name` est similaire à la déclaration d’une variable dans le code.|
 |`x:TypeArguments`|Spécifie les arguments de type générique au constructeur d’un type générique.|
 
-Pour plus d’informations sur la `x:FieldModifier` d’attribut, consultez [modificateurs de champ](~/xamarin-forms/xaml/field-modifiers.md). Pour plus d’informations sur la `x:Arguments`, `x:FactoryMethod`, et `x:TypeArguments` attributs, consultez [en passant les Arguments dans XAML](~/xamarin-forms/xaml/passing-arguments.md).
+Pour plus d’informations sur la `x:DataType` d’attribut, consultez [liaisons compilé](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md). Pour plus d’informations sur la `x:FieldModifier` d’attribut, consultez [modificateurs de champ](~/xamarin-forms/xaml/field-modifiers.md). Pour plus d’informations sur la `x:Arguments`, `x:FactoryMethod`, et `x:TypeArguments` attributs, consultez [en passant les Arguments dans XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 Dans XAML, les déclarations d’espace de noms héritent à partir de l’élément parent à l’élément enfant. Par conséquent, lorsque vous définissez un espace de noms dans l’élément racine d’un fichier XAML, tous les éléments dans ce fichier héritent de la déclaration d’espace de noms.
 

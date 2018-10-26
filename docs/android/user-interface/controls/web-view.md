@@ -3,19 +3,20 @@ title: Affichage Web
 ms.prod: xamarin
 ms.assetid: 807F214A-166D-B342-0BBA-525517577F6B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 8d7b0e1abc8eb11bf812a111764b9cccfb41e041
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: ae0b67de5856e6baef9a4989a93e65ead2854a62
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241173"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110080"
 ---
 # <a name="web-view"></a>Affichage Web
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) vous permet de créer votre propre fenêtre d’affichage des pages web (ou même développer un navigateur terminé). Dans ce didacticiel, vous allez créer une simple [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) qui peut afficher et parcourir des pages web.
+[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) vous permet de créer votre propre fenêtre d’affichage des pages web (ou même développer un navigateur terminé). Dans ce didacticiel, vous allez créer une simple [`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)
+qui peut afficher et parcourir des pages web.
 
 Créez un projet nommé **HelloWebView**.
 
@@ -74,7 +75,8 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-Ensuite, utilisez le code suivant pour le [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) méthode :
+Ensuite, utilisez le code suivant pour le [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+méthode :
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -118,7 +120,8 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 }
 ```
 
-Cela [ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent)) méthode de rappel sera appelée chaque fois qu’un bouton est enfoncé alors que l’activité est en cours d’exécution. La condition à l’intérieur utilise le [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) pour vérifier si la touche enfoncée est la **retour** bouton et si le [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) est en mesure de navigation (si elle a un historique). Si les deux sont true, puis le [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) méthode est appelée, ce qui permet d’accéder étape précédent dans le [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) historique. Retour `true` indique que l’événement a été géré. Si cette condition n’est pas remplie, l’événement est envoyé au système.
+Cette [`OnKeyDown(int, KeyEvent)`](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))
+méthode de rappel sera appelée chaque fois qu’un bouton est enfoncé alors que l’activité est en cours d’exécution. La condition à l’intérieur utilise le [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) pour vérifier si la touche enfoncée est la **retour** bouton et si le [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) est en mesure de navigation (si elle a un historique). Si les deux sont true, puis le [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) méthode est appelée, ce qui permet d’accéder étape précédent dans le [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) historique. Retour `true` indique que l’événement a été géré. Si cette condition n’est pas remplie, l’événement est envoyé au système.
 
 Exécutez de nouveau l'application. Vous devez maintenant être en mesure de suivre les liens et reviennent en arrière dans l’historique de la page :
 

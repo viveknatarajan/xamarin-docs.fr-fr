@@ -1,35 +1,35 @@
 ---
 title: PhotoKit dans Xamarin.iOS
-description: Ce document décrit PhotoKit, traitant de ses objets de modèle, comment les données de modèle de requête et l’enregistrement des modifications à la bibliothèque de photos.
+description: Ce document décrit PhotoKit, traitant ses objets de modèle, comment interroger des données de modèle et l’enregistrement des modifications apportées à la bibliothèque de photos.
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 4aeeec5b96e24c654407ad672930c0cb78592450
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d59cac9403a244ce553d84e0590b8a9c3d4d2f30
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787895"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102709"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit dans Xamarin.iOS
 
-PhotoKit est une nouvelle infrastructure qui permet aux applications de la bibliothèque d’images de système de requête et créer des interfaces utilisateur personnalisées pour afficher et modifier son contenu. Il comprend des classes qui représentent l’image et vidéos actifs, ainsi que les collections de ressources, comme des albums et des dossiers.
+PhotoKit est une nouvelle infrastructure qui permet aux applications d’interroger la bibliothèque d’images système et créer des interfaces utilisateur personnalisées pour afficher et modifier son contenu. Il inclut un nombre de classes qui représentent l’image et les ressources vidéo, ainsi que les collections de ressources telles que des albums et des dossiers.
 
 ## <a name="model-objects"></a>Objets de modèle
 
-PhotoKit représente ces ressources qu’il appelle des objets de modèle. Les objets de modèle qui représentent les photos et vidéos eux-mêmes sont de type `PHAsset`. A `PHAsset` contient des métadonnées telles que le type de média de la ressource et sa date de création.
-De même, la `PHAssetCollection` et `PHCollectionList` classes contiennent respectivement les métadonnées sur les collections de ressources et les listes de collection. Collections de ressources sont des groupes de ressources, telles que tous les photos et vidéos pour une année donnée. De même, les listes de collection sont des groupes de collections actif, telles que les photos et vidéos regroupés par année.
+PhotoKit représente ces ressources qu’il appelle les objets de modèle. Les objets de modèle qui représentent les photos et vidéos eux-mêmes sont de type `PHAsset`. Un `PHAsset` contient des métadonnées telles que le type de média de la ressource et sa date de création.
+De même, le `PHAssetCollection` et `PHCollectionList` classes contiennent respectivement les métadonnées sur les collections de ressource et les listes de la collection. Collections de ressource sont des groupes de ressources, tels que toutes les photos et vidéos pour une année donnée. De même, les listes de collection sont des groupes de ressource collections, telles que photos et vidéos regroupés par année.
 
 ## <a name="querying-model-data"></a>Interrogation des données de modèle
 
-PhotoKit facilite pour interroger des données de modèle via une variété de méthodes d’extraction. Par exemple, pour récupérer toutes les images, vous appelez `PFAsset.Fetch`, en passant le `PHAssetMediaType.Image` le type de média.
+PhotoKit facilite pour interroger des données de modèle par le biais de différentes méthodes d’extraction. Par exemple, pour récupérer toutes les images, vous appelleriez `PFAsset.Fetch`, en passant le `PHAssetMediaType.Image` le type de média.
 
     PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 
-Le `PHFetchResult` instance contient alors tous les `PFAsset` instances représentant des images. Pour obtenir les images proprement dites, vous utilisez la `PHImageManager` (ou la version mise en cache, `PHCachingImageManager`) pour effectuer une demande pour l’image en appelant `RequestImageForAsset`. Par exemple, le code suivant récupère une image pour chaque élément multimédia dans un `PHFetchResult` à afficher dans une cellule de vue de collection :
+Le `PHFetchResult` instance contiendrait tous les `PFAsset` instances représentant des images. Pour obtenir les images proprement dites, vous utilisez le `PHImageManager` (ou la version mise en cache, `PHCachingImageManager`) pour effectuer une demande pour l’image en appelant `RequestImageForAsset`. Par exemple, le code suivant récupère une image pour chaque élément multimédia dans un `PHFetchResult` à afficher dans une cellule d’affichage de collection :
 
 
     public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
@@ -46,9 +46,9 @@ Il en résulte dans une grille d’images, comme indiqué ci-dessous :
 
 ![](photokit-images/image4.png "L’application en cours d’exécution affiche une grille d’images")
  
-## <a name="saving-changes-to-the-photo-library"></a>Enregistrement des modifications apportées à la bibliothèque de photos
+## <a name="saving-changes-to-the-photo-library"></a>Enregistrer les modifications de la bibliothèque de photos
 
-Qui est la gestion d’interrogation et la lecture des données. Vous pouvez également écrire des modifications de revenir à la bibliothèque. Étant donné que plusieurs applications concernées sont en mesure d’interagir avec la bibliothèque de photos système, vous pouvez inscrire un observateur pour être averti des modifications à l’aide d’un PhotoLibraryObserver. Ensuite, lorsque les modifications sont effectués, votre application peut mettre à jour en conséquence. Par exemple, voici une implémentation simple pour recharger la vue de collection ci-dessus :
+Voilà comment gérer l’interrogation et la lecture des données. Vous pouvez également écrire des modifications de revenir à la bibliothèque. Étant donné que plusieurs applications concernées sont en mesure d’interagir avec la bibliothèque de photos du système, vous pouvez inscrire un observateur pour être averti des modifications à l’aide d’un PhotoLibraryObserver. Ensuite, lorsque les modifications sont effectués, votre application peut mettre à jour en conséquence. Par exemple, voici une implémentation simple pour recharger la vue de collection ci-dessus :
 
     class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
     {
@@ -69,11 +69,11 @@ Qui est la gestion d’interrogation et la lecture des données. Vous pouvez ég
         }
     }
     
-Pour réellement écrire les modifications à partir de votre application, vous créez une demande de modification. Chacune des classes de modèle a une classe de demande de modification associée. Par exemple, pour modifier un PHAsset, vous créez un PHAssetChangeRequest. Les étapes pour effectuer les modifications qui sont mises à jour dans la bibliothèque de photos et envoyées aux observateurs comme ci-dessus sont :
+Pour réellement écrire les modifications à partir de votre application, vous créez une demande de modification. Chacune des classes de modèle a une classe de demande de modification associée. Par exemple, pour modifier un PHAsset, vous créez un PHAssetChangeRequest. Les étapes pour effectuer des modifications qui sont mises à jour dans la bibliothèque de photos et envoyées aux observateurs comme celui illustré ci-dessus sont :
 
 -   Effectuer l’opération de modification.
 -   Enregistrer les données d’image filtré à une instance de PHContentEditingOutput.
--   Effectuer une demande de modification à publier le formulaire de modifications la sortie de modification.
+-   Effectuer une demande de modification à publier le formulaire de modifications la sortie d’édition.
 
 Voici un exemple qui écrit une modification sur une image qui applique un filtre de noir Image Core :
 

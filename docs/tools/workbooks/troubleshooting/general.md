@@ -3,15 +3,15 @@ title: Solutions de contournement et problèmes connus
 description: Ce document décrit les problèmes connus et solutions de contournement pour les classeurs de Xamarin. Il aborde les problèmes de CultureInfo, les problèmes JSON et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: d362698d2844ae6d96bba4929d509f5373742578
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 221ed97db17da62f513448b6c85d4df205a7cbaf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350993"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110306"
 ---
 # <a name="known-issues--workarounds"></a>Solutions de contournement et problèmes connus
 

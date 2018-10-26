@@ -1,20 +1,21 @@
 ---
+redirect_url: /xamarin/xamarin-forms/user-interface/graphics/skiasharp/
 title: Dessin 2D avec SkiaSharp
 description: Ce document fournit une vue d’ensemble d’inter-plateformes 2D dessiner avec SkiaSharp. Il est lié à des guides pas à pas qui décrivent SkiaSharp et ses diverses API.
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 7207f33e56f566a5528d93f9957e2ff780a22a65
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 95f259ce054b14a2301bb9549f809d5e4f407884
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615520"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109898"
 ---
-# <a name="2d-drawing-with-skiasharp"></a>Dessin 2D avec SkiaSharp
+# <a name="2d-drawing-with-skiasharp"></a>Dessin SkiaSharp avec 2D
 
 SkiaSharp fournit une API c# puissant qui permet d’effectuer des graphismes 2D. Il est alimenté par [bibliothèque de Skia de Google](http://skia.org), la même bibliothèque qui alimente les piles de graphique Google Chrome, Firefox et Android.
 
@@ -28,55 +29,15 @@ Une vue d’ensemble des principaux concepts de SkiaSharp et exemple de code pou
 
 ## <a name="skiasharp-tutorials-for-xamarinformsxamarin-formsuser-interfacegraphicsskiasharpindexmd"></a>[Didacticiels de SkiaSharp pour Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)
 
-Découvrez comment travailler avec cross platform graphiques qui s’affichent dans Xamarin.Forms :
-
-- [Principes de base de dessin](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md)
-  * [Dessin d’un cercle simple](~/xamarin-forms/user-interface/graphics/skiasharp/basics/circle.md)
-  * [Intégration avec Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
-  * [Pixels et des unités indépendantes du périphérique](~/xamarin-forms/user-interface/graphics/skiasharp/basics/pixels.md)
-  * [Animation de base](~/xamarin-forms/user-interface/graphics/skiasharp/basics/animation.md)
-  * [L’intégration de texte et des graphiques](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md)
-  * [Principes de base bitmap](~/xamarin-forms/user-interface/graphics/skiasharp/basics/bitmaps.md)
-- [Lignes et chemins d’accès](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md)
-  * [Lignes et embouts de trait](~/xamarin-forms/user-interface/graphics/skiasharp/paths/lines.md)
-  * [Principes fondamentaux de chemin d’accès](~/xamarin-forms/user-interface/graphics/skiasharp/paths/paths.md)
-  * [Les types de remplissage de chemin d’accès](~/xamarin-forms/user-interface/graphics/skiasharp/paths/fill-types.md)
-  * [Polylignes et équations paramétriques](~/xamarin-forms/user-interface/graphics/skiasharp/paths/polylines.md)
-  * [Points et tirets](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)
-  * [Peinture au doigt](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
-- [Transformations](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/index.md)
-  * [La transformation de traduction](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)
-  * [La transformation d’échelle](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/scale.md)
-  * [La transformation de rotation](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md)
-  * [La transformation d’inclinaison](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/skew.md)
-  * [Transformations de matrice](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md)
-  * [Manipulations tactiles](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md)
-  * [Transformations non affines](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)
-  * [Rotation 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
-- [Courbes et chemins d’accès](~/xamarin-forms/user-interface/graphics/skiasharp/curves/index.md)
-  * [Trois façons de dessiner un arc](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
-  * [Trois types de courbes Bézier](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
-  * [Données de chemin SVG](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
-  * [Détourage avec chemins d’accès et régions](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
-  * [Effets de tracé](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
-  * [Chemins et texte](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
-  * [Informations de chemin et énumération](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
-- [Bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
-  * [Affichage de bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
-  * [Création et dessin sur des bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
-  * [Rognage de bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
-  * [Affichage segmenté de bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
-  * [Enregistrement de bitmaps dans des fichiers](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
-  * [Accès aux bits de pixel de bitmap](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
-  * [Animation de bitmaps](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
+Découvrez comment travailler avec cross platform graphiques qui s’affichent dans Xamarin.Forms.
 
 ## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[Remarques spécifiques de la plateforme](~/graphics-games/skiasharp/platform.md)
 
 Cette page décrit les instructions d’installation pour SkiaSharp sur différentes plateformes, y compris iOS, Android, macOS et Windows.
 
-## <a name="api-documentationhttpsdeveloperxamarincomapinamespaceskiasharp"></a>[Documentation de l’API](https://developer.xamarin.com/api/namespace/SkiaSharp/)
+## <a name="api-documentationhttpsdocsmicrosoftcomdotnetapiskiasharp"></a>[Documentation de l’API](https://docs.microsoft.com/dotnet/api/skiasharp)
 
-Vous pouvez parcourir le [documentation de l’API](https://developer.xamarin.com/api/namespace/SkiaSharp/) pour SkiaSharp sur notre site web.
+Vous pouvez parcourir le [documentation de l’API](https://docs.microsoft.com/dotnet/api/skiasharp) pour SkiaSharp.
 
 ## <a name="work-in-progress"></a>Travail en cours
 

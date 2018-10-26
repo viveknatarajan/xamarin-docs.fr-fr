@@ -1,23 +1,23 @@
 ---
 title: Bien démarrer avec C
-description: Ce document décrit comment utiliser l’incorporation de .NET pour incorporer le code .NET dans une application C. Elle explique comment utiliser l’incorporation de .NET dans Visual Studio 2017 et Visual Studio pour Mac.
+description: Ce document décrit comment utiliser l’incorporation de .NET pour incorporer du code .NET dans une application C. Elle explique comment utiliser l’incorporation de .NET dans Visual Studio 2017 et Visual Studio pour Mac.
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 04/19/2018
-ms.openlocfilehash: 248d44f23495e45d9d35b34622de0f3b85ca3e8d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a16821e83dc169d7800162e1eaf45c4be661185a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794096"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106804"
 ---
 # <a name="getting-started-with-c"></a>Bien démarrer avec C
 
 ## <a name="requirements"></a>Configuration requise
 
-Pour utiliser .NET incorporation avec C, vous aurez besoin d’un ordinateur Mac ou Windows qui exécute :
+Pour utiliser l’incorporation de .NET avec C, vous aurez besoin d’un ordinateur Mac ou Windows qui exécute :
 
 ### <a name="macos"></a>macOS
 
@@ -30,11 +30,11 @@ Pour utiliser .NET incorporation avec C, vous aurez besoin d’un ordinateur Mac
 * Windows 7, 8, 10 ou version ultérieure
 * Visual Studio 2015 ou version ultérieure
 
-## <a name="installing-net-embedding-from-nuget"></a>L’installation de .NET incorporation de NuGet
+## <a name="installing-net-embedding-from-nuget"></a>Installation d’incorporation de .NET à partir de NuGet
 
-Suivez ces [instructions](~/tools/dotnet-embedding/get-started/install/install.md) pour installer et configurer l’incorporation de .NET pour votre projet.
+Suivez ces [instructions](~/tools/dotnet-embedding/get-started/install/install.md) pour installer et configurer .NET incorporation pour votre projet.
 
-(Éventuellement avec des chemins d’accès et des numéros de version différents), vous devez configurer l’appel de la commande doit ressembler à :
+L’appel de commande, vous devez configurer ressemblera (éventuellement avec des numéros de version différents et les chemins d’accès) :
 
 ### <a name="visual-studio-for-mac"></a>Visual Studio pour Mac
 
@@ -71,12 +71,12 @@ Generating binding code...
     Generated: mono_embeddinator.h
 ```
 
-Étant donné que la `--compile` indicateur a été passé à l’outil, l’incorporation de .NET doit également avoir compilé les fichiers de sortie dans une bibliothèque partagée, ce qui se trouve en regard des fichiers générés, un **libmanaged.dylib** fichier sur macOS et **managed.dll** sur Windows.
+Dans la mesure où le `--compile` indicateur a été passé à l’outil, l’incorporation de .NET doit également avoir compilé les fichiers de sortie dans une bibliothèque partagée, vous pouvez trouver en regard des fichiers générés, un **libmanaged.dylib** fichier sur macOS et **managed.dll** sur Windows.
 
-Pour utiliser la bibliothèque partagée, vous pouvez inclure le **managed.h** fichier d’en-tête C, qui fournit les déclarations C correspondant aux gérés API de bibliothèque et de lien avec mentionnées précédemment compilée bibliothèque partagée.
+Pour utiliser la bibliothèque partagée, vous pouvez inclure le **managed.h** fichier d’en-tête C, qui fournit les déclarations C correspondant à respectifs managed API de bibliothèque et un lien avec mentionné précédemment compilé bibliothèque partagée.
 
 ## <a name="further-reading"></a>informations supplémentaires
 
 * [Limitations de l’incorporation de .NET](~/tools/dotnet-embedding/limitations.md)
-* [Contribue au projet open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [Contribution au projet open source](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [Codes d’erreur et descriptions](~/tools/dotnet-embedding/errors.md)
