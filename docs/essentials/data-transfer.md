@@ -26,9 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de transfert de données fonctionne en appelant la méthode `RequestAsync` avec en paramètre un `ShareTextRequest` qui contient les informations à partager avec l'application destinatrice.
-
-Le texte et les Uri peuvent être mélangés, et chaque plateforme filtrera en fonction du contenu.
+La fonctionnalité transfert de données fonctionne en appelant le `RequestAsync` méthode avec une charge de requête de données qui inclut des informations à partager avec d’autres applications. Texte et les Uri peuvent être mélangés, et chaque plateforme gérera un filtrage basé sur le contenu.
 
 ```csharp
 public class DataTransferTest
