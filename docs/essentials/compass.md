@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Compass'
+title: 'Xamarin.Essentials : Boussole'
 description: Ce document décrit la classe Compass dans Xamarin.Essentials, ce qui vous permet d’analyser l’en-tête de l’appareil le nord magnétique.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
@@ -7,16 +7,16 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: c3fe98c384a87bdc08ce94e7537d1a6343767561
 ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353881"
 ---
-# <a name="xamarinessentials-compass"></a>Xamarin.Essentials : Compass
+# <a name="xamarinessentials-compass"></a>Xamarin.Essentials : Boussole
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **boussole** classe vous permet de surveiller l’en-tête de l’appareil le nord magnétique.
+La classe **Compass** vous permet d'obtenir des informations sur l'orientation de l’appareil par rapport au nord magnétique.
 
 ## <a name="using-compass"></a>À l’aide de la boussole
 
@@ -70,25 +70,25 @@ public class CompassTest
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Informations d'implémentation de la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android ne fournit pas d’une API pour la récupération de la boussole. Nous allons utiliser l’accéléromètre et magnétomètre pour calculer le titre le nord magnétique, ce qui est recommandé par Google.
+Android ne fournit pas d’API pour la lecture de la boussole. Nous utilisons donc l’accéléromètre et le magnétomètre pour calculer le nord magnétique, comme recommandé par Google.
 
 Dans de rares cas, vous peut-être voir des résultats incohérents, car les capteurs besoin d’être étalonné, ce qui implique le déplacement de votre appareil dans un mouvement de la figure 8. La meilleure façon de faire cela doit ouvrir Google Maps, appuyez sur le point de votre emplacement et sélectionnez **Calibrate boussole**.
 
-Sachez qui exécute plusieurs capteurs à partir de votre application en même temps peut régler la vitesse du capteur.
+Il est bon de noter que l'exécution simultanée de plusieurs capteurs via votre application peut affecter leur vitesse.
 
 ## <a name="low-pass-filter"></a>Filtres passe-bas
 
-En raison de la façon la boussole Android valeurs sont mis à jour et calculés il peut être nécessaire pour lisser les valeurs. A _faible passer filtre_ peuvent être appliquées que la moyenne des sinus et le cosinus valeurs des angles et peut être activée en définissant le `ApplyLowPassFilter` propriété sur le `Compass` classe :
+En raison de la façon dont la boussole Android met à jour ses valeurs il peut être nécessaire de lisser la sortie. Un _filtre passe bas_ peut être appliqué en fonction de la moyenne des sinus et des cosinus des angles et peut être activé en définissant la propriété `ApplyLowPassFilter` sur la classe `Compass` :
 
 ```csharp
 Compass.ApplyLowPassFilter = true;
 ```
 
-Cela est uniquement appliqué sur la plateforme Android. Plus d’informations peut être lu [ici](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
+Cette fonctionnalité est uniquement appliquable sur la plateforme Android. Plus d’informations [ici](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
 
 --------------
 

@@ -6,13 +6,13 @@ ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 47cd79611cfeaf48c0422772d8f3e75eb57ba771
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/04/2018
+ms.openlocfilehash: b8e851e735fa39d015e22ce511c39ad825bc97c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996051"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119987"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -216,7 +216,67 @@ C# ci-dessus fait beaucoup. Nous allons décomposer :
 
 Notez qu’une classe pour la cellule personnalisée n’est jamais définie. Au lieu de cela, le `ViewCell`de propriété de la vue est définie pour une instance particulière de `ViewCell`.
 
+## <a name="row-height"></a>Hauteur de ligne
 
+Le [ `TableView` ](xref:Xamarin.Forms.TableView) classe a deux propriétés qui peuvent être utilisées pour modifier la hauteur des cellules :
+
+- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) : définit la hauteur de chaque ligne à un `int`.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) – les lignes ont différentes hauteurs si la valeur `true`. Notez que lorsque vous définissez cette propriété pour `true`, hauteurs de lignes seront automatiquement calculées et appliqués par Xamarin.Forms.
+
+Lorsque la hauteur du contenu dans une cellule dans un [ `TableView` ](xref:Xamarin.Forms.TableView) est modifié, la ligne hauteur est implicitement mis à jour sur Android et la plateforme universelle Windows (UWP). Toutefois, sur iOS il doit être forcé à mettre à jour en définissant le [ `HasUnevenRows` ](xref:Xamarin.Forms.TableView.HasUnevenRows) propriété `true` et en appelant le [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) (méthode).
+
+L’exemple XAML suivant montre un [ `TableView` ](xref:Xamarin.Forms.TableView) qui contient un [ `ViewCell` ](xref:Xamarin.Forms.ViewCell):
+
+```xaml
+<ContentPage ...>
+    <TableView ...
+               HasUnevenRows="true">
+        <TableRoot>
+            ...
+            <TableSection ...>
+                ...
+                <ViewCell x:Name="_viewCell"
+                          Tapped="OnViewCellTapped">
+                    <Grid Margin="15,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Tap this cell." />
+                        <Label x:Name="_target"
+                               Grid.Row="1"
+                               Text="The cell has changed size."
+                               IsVisible="false" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
+```
+
+Lorsque le [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) est activé par un clic, le `OnViewCellTapped` Gestionnaire d’événements est exécuté :
+
+```csharp
+void OnViewCellTapped(object sender, EventArgs e)
+{
+    _target.IsVisible = !_target.IsVisible;
+    _viewCell.ForceUpdateSize();
+}
+```
+
+Le `OnViewCellTapped` Gestionnaire d’événements affiche ou masque la seconde [ `Label` ](xref:Xamarin.Forms.Label) dans le [ `ViewCell` ](xref:Xamarin.Forms.ViewCell)et met à jour explicitement de taille de la cellule en appelant le [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) (méthode).
+
+Les captures d’écran suivantes montrent la cellule avant d’être mis sur écoute sur :
+
+![](tableview-images/cell-beforeresize.png "ViewCell avant d’en cours de redimensionnement")
+
+Les captures d’écran suivantes montrent la cellule après être mis sur écoute sur :
+
+![](tableview-images/cell-afterresize.png "ViewCell après redimensionnement")
+
+> [!IMPORTANT]
+> Il est fort probable de dégradation des performances si cette fonctionnalité est utilisée de manière excessive.
 
 ## <a name="related-links"></a>Liens associés
 

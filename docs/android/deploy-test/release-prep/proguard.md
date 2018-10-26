@@ -4,15 +4,15 @@ description: Xamarin.Android ProGuard est un réducteur, un optimiseur et un pr�
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 998232119159c5dc3a284dd51d55dc381271a4e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321374"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117393"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -323,11 +323,11 @@ Le message d’erreur suivant peut s’afficher lorsque ProGuard lit son fichier
 
 Ce problème se produit en général sur Windows, car le fichier `.cfg` utilise un codage incorrect. ProGuard ne peut pas gérer la _marque d’ordre d’octet_ (BOM, byte order mark) susceptible d’être présente dans les fichiers texte. En présence d’une marque d’ordre d’octet, ProGuard quitte avec l’erreur ci-dessus. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Pour éviter ce problème, modifiez le fichier de configuration personnalisé à partir d’un éditeur de texte qui autorise l’enregistrement du fichier sans marque d’ordre d’octet. Pour résoudre ce problème, assurez-vous que l’encodage de votre éditeur de texte est défini sur `UTF-8`. Par exemple, l’éditeur de texte [Bloc-notes ++](https://notepad-plus-plus.org/) peut enregistrer des fichiers sans marque d’ordre d’octet en sélectionnant **Encodage &gt; Encoder en UTF-8 (sans BOM)** lors de l’enregistrement du fichier. 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Pour éviter ce problème, enregistrez votre fichier de configuration personnalisé à partir d’un éditeur de texte qui vous permet d’omettre la marque d’ordre d’octet. 
 

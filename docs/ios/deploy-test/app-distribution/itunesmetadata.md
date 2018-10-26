@@ -4,15 +4,15 @@ description: Cet article présente le fichier iTunesMetadata.plist, qui permet d
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 39e1af5edf91ffd6811fa8d221fd56580f3b33da
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: af1ad32e605bbbe899ec8596a60cdabf226372db
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111302"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Fichier iTunesMetadata.plist dans les applications Xamarin.iOS
 
@@ -285,7 +285,7 @@ Les clés suivantes sont incluses dans tous les fichiers `iTunesMetadata.plist` 
 
 ## <a name="creating-an-itunesmetadataplist-file"></a>Création d’un fichier iTunesMetadata.plist
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
  Quand vous utilisez un fichier `iTunesMetadata.plist` dans Visual Studio pour Mac, vous avez deux options :
 
@@ -337,7 +337,7 @@ Effectuez ce qui suit :
 6. Dans la boîte de dialogue Ouvrir un fichier, sélectionnez le fichier `iTunesMetadata.plist` créé ci-dessus, puis cliquez sur le bouton **OK**.
 7. Laissez à l’option **Action de génération** de ce fichier la valeur **Aucune**.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Le plugin Xamarin pour Visual Studio ne prend en charge qu’un éditeur visuel pour les fichiers `Info.plist` et `Entitlement.plist`, vous devez donc créer votre fichier `iTunesMetadata.plist` dans un éditeur de texte standard et l’inclure manuellement dans votre projet Xamarin.iOS.
 
