@@ -1,42 +1,42 @@
 ---
-title: Xamarin.Android vs. Bureau - différences dans le Runtime Mono
+title: Visual Studio Xamarin.Android. Bureau - différences dans le Runtime Mono
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: b1302bcf8d6835cac356d96b538d134891648420
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 115d715214d7af3174c41d9d82e894ce429dab42
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120903"
 ---
 # <a name="limitations"></a>Limitations
 
-Étant donné que les applications sur Android requièrent la génération de types de proxy Java pendant le processus de génération, il n’est pas possible de générer tout le code lors de l’exécution.
+Dans la mesure où les applications sur Android requièrent la génération de types de proxy de Java pendant le processus de génération, il n’est pas possible de générer tout le code lors de l’exécution.
 
 Voici les limitations de Xamarin.Android par rapport au bureau Mono :
 
 
 ## <a name="limited-dynamic-language-support"></a>Prise en charge limitée de langage dynamique
 
- [Les wrappers RCW Android](~/android/platform/java-integration/android-callable-wrappers.md) sont nécessaires à tout moment, le runtime Android doit appeler le code managé. Les wrappers RCW Android sont générées au moment de la compilation, en fonction de l’analyse statique du code IL. Le résultat net de cet : vous *ne peut pas* utiliser les langages dynamiques (IronPython, IronRuby, etc.) dans tout scénario où le sous-classement de types Java est requis (y compris le sous-classement indirect), car il n’existe aucun moyen de l’extraction de ces types dynamiques au moment de la compilation pour générer les wrappers Android nécessaires.
+ [Les wrappers RCW Android](~/android/platform/java-integration/android-callable-wrappers.md) sont nécessaires à tout moment, le runtime Android a besoin pour appeler le code managé. Les wrappers RCW Android sont générées au moment de la compilation, en fonction de l’analyse statique du langage intermédiaire. Le résultat net de cela : vous *ne peut pas* utiliser des langages dynamiques (IronPython, IronRuby, etc.) dans tout scénario où le sous-classement de types Java est requis (y compris le sous-classement indirect), comme il n’existe aucun moyen d’extraction de ces types dynamiques au moment de la compilation pour générer les wrappers RCW Android nécessaires.
 
 
-## <a name="limited-java-generation-support"></a>Prise en charge de la génération Java limité
+## <a name="limited-java-generation-support"></a>Prise en charge de la génération Java limitée
 
-[Les Wrappers RCW Android](~/android/platform/java-integration/android-callable-wrappers.md) doivent être générés dans l’ordre pour le code Java appeler du code managé. *Par défaut*, les wrappers RCW Android contiendra uniquement les (certains) déclaré de constructeur et les méthodes qui remplacent une méthode virtuelle de Java (autrement dit, il a [ `RegisterAttribute` ](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)) ou implémenter une (méthode) interface Java interface même a `Attribute`).
+[Les Wrappers RCW Android](~/android/platform/java-integration/android-callable-wrappers.md) doivent être générés dans l’ordre pour le code Java appeler du code managé. *Par défaut*, les wrappers RCW Android contiendra uniquement (certains) déclaré de constructeur et les méthodes de substituent une méthode virtuelle de Java (par exemple, il a [ `RegisterAttribute` ](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)) ou implémenter un (méthode) interface Java interface même a `Attribute`).
   
-Avant la version 4.1, aucune des méthodes supplémentaires ne peuvent être déclarés. Avec la version 4.1, [le `Export` et `ExportField` des attributs personnalisés peuvent être utilisés pour déclarer des méthodes de Java et les champs dans le Wrapper Android](~/android/platform/java-integration/working-with-jni.md).
+Avant la version 4.1, aucune des méthodes supplémentaires ne peuvent être déclarés. Avec la version 4.1, [le `Export` et `ExportField` des attributs personnalisés peuvent être utilisés pour déclarer des méthodes Java et les champs dans le Wrapper Android](~/android/platform/java-integration/working-with-jni.md).
 
 ### <a name="missing-constructors"></a>Constructeurs manquants
 
 Constructeurs restent difficile, sauf si [ `ExportAttribute` ](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute) est utilisé. L’algorithme permettant de générer des constructeurs de wrapper RCW Android est qu’un constructeur de Java sera émis si :
 
 1. Il existe un mappage de Java pour tous les types de paramètre
-2. La classe de base déclare du même constructeur &ndash; cela est nécessaire car le wrapper Android *doit* appeler le constructeur de classe de base correspondante ; les arguments par défaut peuvent être utilisés (tel qu’il n’existe aucun moyen facile de déterminer les valeurs doivent être utilisées dans Java).
+2. La classe de base déclare le constructeur même &ndash; cela est nécessaire car le wrapper RCW Android *doit* appeler le constructeur de classe de base correspondante ; les arguments par défaut peuvent être utilisés (comme il n’existe aucun moyen simple déterminer les valeurs doivent être utilisées dans Java).
 
 Par exemple, considérons la classe suivante :
 
@@ -49,7 +49,7 @@ class MyIntentService : IntentService {
 }
 ```
 
-Lors de cette recherche parfaitement logique, le wrapper RCW Android résultant *dans les versions Release* ne contient pas un constructeur par défaut. Par conséquent, si vous essayez de démarrer ce service (par exemple, [ `Context.StartService` ](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/)), l’opération échoue :
+Bien que cette recherche parfaitement logique, le wrapper RCW Android résultant *dans les versions Release* ne contient pas un constructeur par défaut. Par conséquent, si vous essayez de démarrer ce service (par exemple, [ `Context.StartService` ](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/)), il échoue :
 
 ```shell
 E/AndroidRuntime(31766): FATAL EXCEPTION: main
@@ -72,7 +72,7 @@ E/AndroidRuntime(31766):        at android.app.ActivityThread.handleCreateServic
 E/AndroidRuntime(31766):        ... 10 more
 ```
 
-La solution de contournement consiste à déclarer un constructeur par défaut, avec orner le `ExportAttribute`et définissez la [ `ExportAttribute.SuperStringArgument` ](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/): 
+La solution de contournement consiste à déclarer un constructeur par défaut, avec orner le `ExportAttribute`et définissez le [ `ExportAttribute.SuperStringArgument` ](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/): 
 
 ```csharp
 [Service]
@@ -87,12 +87,12 @@ class MyIntentService : IntentService {
 ```
 
 
-### <a name="generic-c-classes"></a>Classes génériques c#
+### <a name="generic-c-classes"></a>Générique C# classes
 
-Classes génériques c# ne sont que partiellement prises en charge. Les limitations suivantes :
+Générique C# sont partiellement, en classes. Les limitations suivantes existent :
 
 
--   Types génériques ne peuvent pas utiliser `[Export]` ou `[ExportField`]. Toute tentative génère une `XA4207` erreur.
+-   Types génériques ne peuvent pas utiliser `[Export]` ou `[ExportField`]. Une telle tentative génère une `XA4207` erreur.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -120,7 +120,7 @@ Classes génériques c# ne sont que partiellement prises en charge. Les limitati
     }
     ```
 
--   `[ExportField]` ne peut pas être utilisé sur les méthodes qui retournent `void`:
+-   `[ExportField]` ne peut pas être utilisé sur les méthodes qui retournent des `void`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -150,8 +150,8 @@ Classes génériques c# ne sont que partiellement prises en charge. Les limitati
 
 ## <a name="partial-java-generics-support"></a>Prise en charge des génériques Java partielle
 
-Le Java génériques liaison prennent en charge est limité. En particulier, les membres d’une classe d’instance générique qui est dérivé d’une autre classe générique (non instanciée) sont laissés exposées en tant que Java.Lang.Object. Par exemple, [Android.Content.Intent.GetParcelableExtra](https://developer.xamarin.com/api/member/Android.Content.Intent.GetParcelableExtra/p/System.String/) méthode Java.Lang.Object est retournée. Cela est dû effacées génériques de Java.
-Nous avons des classes qui ne s’appliquent pas cette limitation, mais elles sont ajustées manuellement.
+Le Java génériques liaison prennent en charge est limité. En particulier, les membres dans une classe d’instance générique qui est dérivée d’une autre classe générique (non instanciée) sont laissés exposées en tant que Java.Lang.Object. Par exemple, [Android.Content.Intent.GetParcelableExtra](https://developer.xamarin.com/api/member/Android.Content.Intent.GetParcelableExtra/p/System.String/) méthode Java.Lang.Object est retournée. Cela est dû effacés génériques de Java.
+Nous disposons des classes qui ne s’appliquent pas cette limitation, mais elles sont ajustées manuellement.
 
 
 ## <a name="related-links"></a>Liens associés
