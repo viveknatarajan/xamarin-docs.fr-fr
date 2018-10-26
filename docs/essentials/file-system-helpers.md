@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.Essentials : Système de fichiers'
-description: La classe FileSystem contient un ensemble de fonctions facilitant l'accès et l'édition des répertoires de cache et de données de l'application ainsi que l'ouverture de fichiers embarqués dans du package d'application.
+title: 'Xamarin.Essentials : Système de fichiers'
+description: La classe FileSystem contient un ensemble de fonctions facilitant l'accès aux répertoires de cache et de données de l'application ainsi que l'ouverture de fichiers embarqués dans le package d'application.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "38815616"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **FileSystem** contient un ensemble de fonctions facilitant l'accès et l'édition des répertoires de cache et de données de l'application ainsi que l'ouverture de fichiers embarqués dans du package d'application.
+La classe **FileSystem** contient un ensemble de fonctions facilitant l'accès et l'édition des répertoires de cache et de données de l'application ainsi que l'ouverture de fichiers embarqués dans le package d'application.
 
 ## <a name="using-file-system-helpers"></a>Utilisation de **FileSystem**
 
@@ -32,7 +32,7 @@ Le répertoire `CacheDirectory` contient les **données en cache**. Les données
 var cacheDir = FileSystem.CacheDirectory;
 ```
 
-Le répertoire `AppDataDirectory` contient les **données embarquées avec l'application**. Ces fichiers sont sauvegardés dans le système d'application et seront synchronisé lorsque le système se synchronisera, voir les **Implémentations spécifiques par plateforme** ci-dessous.
+Le répertoire `AppDataDirectory` contient les **données embarquées avec l'application**. Ces fichiers sont sauvegardés dans le système d'application et seront synchronisé lorsque le système se synchronisera, voir les **Caractéristiques d'implémentation de la plateforme** ci-dessous.
 
 ```csharp
 var mainDir = FileSystem.AppDataDirectory;
@@ -50,7 +50,7 @@ Pour ouvrir un fichier qui est fourni dans le package d’application :
  }
 ```
 
-## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
+## <a name="platform-implementation-specifics"></a>Informations d'implémentation de la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -74,13 +74,13 @@ Pour retrouver un fichier dans votre AppPackage, via `OpenAppPackageFileAsync`:
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-- **CacheDirectory** – retourne le [LocalCacheFolder](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder)...
-- **AppDataDirectory** – retourne le [LocalFolder](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) qui est sauvegardée dans le cloud.
+- **CacheDirectory** – retourne le répertoire [LocalCacheFolder](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder)...
+- **AppDataDirectory** – retourne le répertoire [LocalFolder](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) qui est sauvegardée dans le cloud.
 
 Pour retrouver un fichier dans votre AppPackage, via `OpenAppPackageFileAsync`:
 
 - Ajoutez vos fichiers à la racine du projet UWP.
-- Marquez ces fichiers avec l'action de génération **contenu**.
+- Marquez ces fichiers avec l'option **Générer action en tant que contenu**.
 
 --------------
 
