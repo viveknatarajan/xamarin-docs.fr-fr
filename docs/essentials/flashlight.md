@@ -69,7 +69,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Le torche peut être activée et désactivée via les méthodes `TurnOnAsync` et `TurnOffAsync`:
+La torche peut être activée et désactivée via les méthodes `TurnOnAsync` et `TurnOffAsync`:
 
 ```csharp
 try
@@ -94,11 +94,11 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques d'implémentation de la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-La classe torche a été optimisée en fonction du système d’exploitation de l’appareil.
+La classe Flashlight a été optimisée en fonction du système d’exploitation de l’appareil.
 
 ## <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
 
@@ -106,7 +106,7 @@ Sur les niveaux d’API plus récents, [Torch Mode](https://developer.android.co
 
 ## <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
 
-Un élément d'interface utilisateur de type caméta est créé afin d'activer et de désactiver le flash de l'appareil.
+Une texture de surface de caméra est créée afin d'activer et de désactiver le flash de l'appareil.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
