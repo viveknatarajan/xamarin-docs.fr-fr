@@ -1,32 +1,32 @@
 ---
-title: NSString dans Xamarin.iOS et Xamarin.Mac
-description: Ce document décrit comment Xamarin.iOS en toute transparence convertit les objets NSString aux objets de chaîne c#, lorsque cela n’arrive pas.
+title: Chaîne NSString dans Xamarin.iOS et Xamarin.Mac
+description: Ce document décrit comment Xamarin.iOS convertit en toute transparence les objets de chaîne NSString à C# lorsque cela n’arrive pas les objets, de chaîne.
 ms.prod: xamarin
 ms.assetid: 785744B3-42E2-4590-8F41-435325E609B9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: baf36700ab4d608296a9a67e234ce613da9ca077
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: cc9e3f992642f3cdc3d16fe6f829b6a6c06b50fc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786088"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115029"
 ---
-# <a name="nsstring-in-xamarinios-and-xamarinmac"></a>NSString dans Xamarin.iOS et Xamarin.Mac
+# <a name="nsstring-in-xamarinios-and-xamarinmac"></a>Chaîne NSString dans Xamarin.iOS et Xamarin.Mac
 
-La conception de Xamarin.iOS et Xamarin.Mac appelle pour l’API de l’utilisation d’exposer du type de chaîne de .NET natif, `string`, pour la manipulation de chaînes dans c# et d’autres langages de programmation .NET et pour exposer la chaîne en tant que le type de données exposé par l’API au lieu du `NSString` type de données.
+La conception de Xamarin.iOS et Xamarin.Mac appelle pour l’utiliser l’API pour exposer du type de chaîne de .NET natif, `string`, pour la manipulation de chaîne dans C# et d’autres langages de programmation de .NET et pour exposer la chaîne en tant que le type de données exposé par l’API au lieu de le `NSString` type de données.
 
-Cela signifie que les développeurs doivent ont pas de conserver les chaînes qui sont destinés à être utilisés pour appeler Xamarin.iOS et de l’API de Xamarin.Mac (unifié) dans un type spécial (`Foundation.NSString`), ils peuvent continuer à utiliser de Mono `System.String` pour toutes les opérations et chaque fois que une API dans Xamarin.iOS ou Xamarin.Mac nécessite une chaîne, notre liaison API prend en charge les informations de marshaling.
+Cela signifie que les développeurs ne doivent pas obligé de conserver les chaînes qui sont destinées à être utilisées pour appeler dans Xamarin.iOS et Xamarin.Mac API (unifiée) dans un type spécial (`Foundation.NSString`), ils peuvent continuer à utiliser de Mono `System.String` pour toutes les opérations et chaque fois que une API dans Xamarin.iOS ou Xamarin.Mac nécessite une chaîne, notre liaison API prend en charge les informations de marshaling.
 
-Par exemple, la propriété de « texte » Objective-C sur une `UILabel` de type `NSString`, est déclaré comme suit :
+Par exemple, la propriété « text » de Objective-C sur une `UILabel` de type `NSString`, est déclarée comme suit :
 
 ```objc
 @property(nonatomic, copy) NSString *text
 ```
 
-Ces informations sont exposées dans Xamarin.iOS en tant que :
+Cela est exposé dans Xamarin.iOS en tant que :
 
 ```csharp
 class UILabel {
@@ -34,19 +34,19 @@ class UILabel {
 }
 ```
 
-En arrière-plan, l’implémentation de cette propriété marshale la chaîne c# dans une `NSString` et appelle le `objc_msgSend` méthode dans la même manière qu’Objective-C.
+Dans les coulisses, l’implémentation de cette propriété marshale le C# chaîne en un `NSString` et appelle le `objc_msgSend` méthode dans la même manière qu’Objective-C.
 
-Il existe un certain nombre de tiers Objective-C API qui n’utilisent pas une `NSString`, mais à la place utiliser une chaîne C (un «*char*»). Dans ce cas, vous pouvez toujours utiliser le type de données de chaîne C#, mais vous devez utiliser le [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) pour informer le Générateur de liaison cette chaîne ne doit pas être marshalée en tant qu’attribut un `NSString`, mais à la place sous forme de chaîne C.
+Un certain nombre d’API Objective-C-tiers qui n’utilisent pas un `NSString`, mais à la place utiliser une chaîne C (une «*char*»). Dans ce cas, vous pouvez toujours utiliser le C# la chaîne de type de données, mais vous devez utiliser le [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) attribut pour informer le Générateur de liaison cette chaîne ne doit pas être marshalée en tant qu’un `NSString`, mais sous forme de chaîne C à la place.
 
  <a name="Exceptions_to_the_Rule" />
 
 ## <a name="exceptions-to-the-rule"></a>Exceptions à la règle
 
-Dans Xamarin.iOS et Xamarin.Mac, nous avons apporté une exception à cette règle. La décision entre lorsque nous exposons `string`s, et lorsque nous avons un except et exposer `NSString`s, est effectuée si le `NSString` méthode pourrait faire une comparaison de pointeur au lieu d’une comparaison de contenu.
+Dans Xamarin.iOS et Xamarin.Mac, nous avons apporté une exception à cette règle. La décision entre lorsque nous exposons `string`s, et lorsque nous rendre un except et exposer `NSString`s, est effectuée si le `NSString` méthode pourrait faire une comparaison de pointeur au lieu d’une comparaison de contenu.
 
-Cela peut se produire lorsqu’une API Objective-C utilise publique `NSString` constante comme un jeton qui représente une action, au lieu de comparer le contenu réel de la chaîne.
+Cela peut se produire lorsqu’une API Objective-C utilise un public `NSString` constante en tant que jeton qui représente une action, au lieu de comparer le contenu réel de la chaîne.
 
-Dans ce cas, `NSString` API est exposées, et il existe une minorité d’API qui a ce paramètre. Vous remarquerez également que les propriétés NSString sont exposées dans certaines classes. Ceux `NSString` propriétés exposées pour les éléments tels que des notifications. Ceux qui sont propriétés généralement ressemblent à ceci :
+Dans ce cas, `NSString`  API est exposées, et il existe une minorité d’API que vous le faire. Vous remarquerez également que les propriétés de chaîne NSString sont exposées dans des classes. Ceux `NSString` propriétés sont exposées pour les éléments tels que les notifications. Ce sont les propriétés généralement ressemblent à ceci :
 
 ```csharp
 class Foo {
@@ -55,7 +55,7 @@ class Foo {
 ```
 Les notifications sont des clés qui sont utilisées pour la `NSNotification` classe lorsque vous souhaitez inscrire pour un événement particulier en cours de diffusion par le runtime.
 
-Clés généralement se présenter comme suit :
+Clés ressemblent généralement quelque chose comme ceci :
 
 ```csharp
 class Foo {
@@ -63,4 +63,4 @@ class Foo {
 }
 ```
 
-Un autre emplacement où `NSString`s sont exposés dans l’API n’est que les jetons qui sont utilisés en tant que paramètres à certaines API dans iOS ou OS X qui prennent `NSDictionary` objets en tant que paramètres. Le dictionnaire contient généralement `NSString` clés. Xamarin.iOS, par convention, ceux statique `NSString` propriétés en ajoutant le nom de « Clé ».
+Un autre emplacement où `NSString`s sont exposés dans l’API est sous forme de jetons qui sont utilisés comme paramètres à certaines API dans iOS ou OS X qui acceptent `NSDictionary` objets en tant que paramètres. Le dictionnaire contient généralement `NSString` clés. Xamarin.iOS, par convention, ceux statique `NSString` propriétés en ajoutant le nom de « Clé ».

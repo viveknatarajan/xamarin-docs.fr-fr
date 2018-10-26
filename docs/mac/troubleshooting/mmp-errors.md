@@ -5,21 +5,21 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: f5cf4a9003d3fb468ffcf337c33730cb12238c44
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 3c7b7c39eb714dbd47049c9440c188667a75e48f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792756"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106271"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Messages d’erreur Xamarin.Mac (mmp)
 
 ## <a name="mm0xxx-mmp-error-messages"></a>MM0xxx : messages d’erreur mmp
 
-Par exemple, paramètres, environnement, manquant d’outils.
+Par exemple, paramètres, environnement, manque d’outils.
 
 <a name="MM0000" />
 
@@ -27,19 +27,19 @@ Par exemple, paramètres, environnement, manquant d’outils.
 
 Une condition d’erreur inattendue s’est produite. Veuillez [un rapport de bogue](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) avec autant d’informations que possible, notamment :
 
-* Journaux, de la génération complète avec un maximum de commentaires (par exemple, `-v -v -v -v` dans les **les arguments supplémentaires mmp**) ;
-* Un cas de test minimale que reproduire l’erreur ; et
+* Build complète des journaux, avec un maximum de commentaires (par exemple, `-v -v -v -v` dans le **arguments mmp supplémentaires**) ;
+* Un cas de test minimale pour reproduire l’erreur ; et
 * Toutes les informations de version
 
-Pour obtenir des informations sur la version exacte le plus simple consiste à utiliser le **Xamarin Studio** menu, **sur Xamarin Studio** élément, **afficher les détails** bouton et copier/coller la version informations (vous pouvez utiliser la **copier les informations** bouton).
+Le moyen le plus simple pour obtenir des informations de version exacte consiste à utiliser le **Xamarin Studio** menu, **sur Xamarin Studio** élément, **afficher les détails** bouton et copier/coller la version informations (vous pouvez utiliser la **copier les informations** bouton).
 
 <a name="MM0001" />
 
-#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001 : Cette version de Xamarin.Mac requiert Mono {0} (la version actuelle de Mono est {1}). Mettez à jour le Mono.framework à partir de http://mono-project.com/Downloads
+#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001 : Cette version de Xamarin.Mac nécessite Mono {0} (la version actuelle de Mono est {1}). Mettez à jour le Mono.framework à partir de http://mono-project.com/Downloads
 
 <a name="MM0003" />
 
-#### <a name="mm0003-application-name-0exe-conflicts-with-an-sdk-or-product-assembly-dll-name"></a>MM0003 : Nom de l’Application '{0}.exe' est en conflit avec un nom d’assembly (.dll) SDK ou du produit.
+#### <a name="mm0003-application-name-0exe-conflicts-with-an-sdk-or-product-assembly-dll-name"></a>MM0003 : Nom de l’Application '{0}.exe' est en conflit avec un nom d’assembly (.dll) produit ou le Kit de développement logiciel.
 
 <a name="MM0007" />
 
@@ -47,11 +47,11 @@ Pour obtenir des informations sur la version exacte le plus simple consiste à u
 
 <a name="MM0008" />
 
-#### <a name="mm0008-you-should-provide-one-root-assembly-only-found-0-assemblies-1"></a>MM0008 : Vous devez fournir un assembly racine uniquement, il est trouvé {0} assemblys : '{1}'
+#### <a name="mm0008-you-should-provide-one-root-assembly-only-found-0-assemblies-1"></a>MM0008 : Vous devez fournir un seul assembly racine uniquement, elle est trouvé {0} assemblys : '{1}'
 
 <a name="MM0010" />
 
-#### <a name="mm0010-could-not-parse-the-command-line-arguments-0"></a>MM0010 : Impossible d’analyser les arguments de ligne de commande : {0}
+#### <a name="mm0010-could-not-parse-the-command-line-arguments-0"></a>MM0010 : N’a pas pu analyser les arguments de ligne de commande : {0}
 
 <!-- 0013 is unused -->
 
@@ -61,7 +61,7 @@ Pour obtenir des informations sur la version exacte le plus simple consiste à u
 
 <a name="MM0017" />
 
-#### <a name="mm0017-you-should-provide-a-root-assembly"></a>MM0017 : Vous devez fournir un assembly racine
+#### <a name="mm0017-you-should-provide-a-root-assembly"></a>MM0017 : Vous devez fournir un assembly de racine
 
 <a name="MM0018" />
 
@@ -69,7 +69,7 @@ Pour obtenir des informations sur la version exacte le plus simple consiste à u
 
 <a name="MM0020" />
 
-#### <a name="mm0020-the-valid-options-for-0-are-1"></a>MM0020 : Les options valides pour '{0}'sont'{1}'.
+#### <a name="mm0020-the-valid-options-for-0-are-1"></a>MM0020 : Les options valides pour '{0}« sont »{1}».
 
 <a name="MM0023" />
 
@@ -81,23 +81,23 @@ Pour obtenir des informations sur la version exacte le plus simple consiste à u
 
 <a name="MM0043" />
 
-#### <a name="mm0043-the-boehm-garbage-collector-is-not-supported-the-sgen-garbage-collector-has-been-selected-instead"></a>MM0043 : Le garbage collector de Boehm n’est pas pris en charge. Le garbage collector de SGen a été sélectionné à la place.
+#### <a name="mm0043-the-boehm-garbage-collector-is-not-supported-the-sgen-garbage-collector-has-been-selected-instead"></a>MM0043 : Le garbage collector de Boehm n’est pas pris en charge. Le RÉCUPÉRATEUR de mémoire SGen a été sélectionné à la place.
 
 <a name="MM0050" />
 
-#### <a name="mm0050-you-cannot-provide-a-root-assembly-if---no-root-assembly-is-passed"></a>MM0050 : Impossible d’indiquer un assembly racine si--assembly non-racine est passé.
+#### <a name="mm0050-you-cannot-provide-a-root-assembly-if---no-root-assembly-is-passed"></a>MM0050 : Impossible d’indiquer un assembly de racine si--non-racine-assembly est passé.
 
 <a name="MM0051" />
 
-#### <a name="mm0051-an-output-directory---output-is-required-if---no-root-assembly-is-passed"></a>MM0051 : Un répertoire de sortie (--sortie) est requis si--assembly non-racine est passé.
+#### <a name="mm0051-an-output-directory---output-is-required-if---no-root-assembly-is-passed"></a>MM0051 : Un répertoire de sortie (--sortie) est requis si--non-racine-assembly est passé.
 
 <a name="MM0053" />
 
-#### <a name="mm0053-cannot-disable-new-refcount-with-the-unified-api"></a>MM0053 : Impossible de désactiver nouveau compteur refcount avec l’API unifiée.
+#### <a name="mm0053-cannot-disable-new-refcount-with-the-unified-api"></a>MM0053 : Impossible de désactiver nouveau refcount avec l’API unifiée.
 
 <a name="MM0056" />
 
-#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056 : Impossible de trouver Xcode dans un de nos emplacements par défaut. Installez Xcode ou passer un chemin d’accès personnalisé à l’aide de--sdkroot =<path>
+#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056 : Impossible de trouver Xcode à notre emplacements par défaut. Installez Xcode, ou passez un chemin d’accès personnalisé à l’aide de--sdkroot =<path>
 
 <a name="MM0059" />
 
@@ -105,7 +105,7 @@ Pour obtenir des informations sur la version exacte le plus simple consiste à u
 
 <a name="MM0060" />
 
-#### <a name="mm0060-could-not-find-the-currently-selected-xcode-on-the-system-xcode-select---print-path-returned-0-but-that-directory-does-not-exist"></a>MM0060 : Le Xcode actuellement sélectionnée est introuvable sur le système. 'xcode sélection--print-path' retournée '{0}', mais ce répertoire n’existe pas.
+#### <a name="mm0060-could-not-find-the-currently-selected-xcode-on-the-system-xcode-select---print-path-returned-0-but-that-directory-does-not-exist"></a>MM0060 : Xcode actuellement sélectionné est introuvable sur le système. 'xcode-select--print-path' retourné '{0}', mais ce répertoire n’existe pas.
 
 <a name="MM0068" />
 
@@ -113,13 +113,13 @@ Pour obtenir des informations sur la version exacte le plus simple consiste à u
 
 <a name="MM0071" />
 
-#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071 : Plateforme d’inconnu : *. Cela indique généralement un bogue dans Xamarin.Mac ; Veuillez archiver un rapport de bogue à https://bugzilla.xamarin.com avec un cas de test.
+#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071 : Plateforme inconnue : *. Cela indique généralement un bogue dans Xamarin.Mac ; Veuillez soumettre un rapport de bogue à https://bugzilla.xamarin.com avec un cas de test.
 
-Cela indique généralement un bogue dans Xamarin.Mac ; Veuillez archiver un rapport de bogue à [ https://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) avec un cas de test.
+Cela indique généralement un bogue dans Xamarin.Mac ; Veuillez soumettre un rapport de bogue à [ https://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) avec un cas de test.
 
 <a name="MM0079" />
 
-#### <a name="mm0079-internal-error---no-executable-was-copied-into-the-app-bundle-please-contact-supportxamarincom"></a>MM0079 : Erreur interne : aucun fichier exécutable n’a été copié dans le lot d’applications. Veuillez contacter 'support@xamarin.com'
+#### <a name="mm0079-internal-error---no-executable-was-copied-into-the-app-bundle-please-contact-supportxamarincom"></a>MM0079 : Erreur interne - aucun fichier exécutable a été copiée dans le bundle d’applications. Veuillez contacter 'support@xamarin.com'
 
 <a name="MM0080" />
 
@@ -130,15 +130,15 @@ Cela indique généralement un bogue dans Xamarin.Mac ; Veuillez archiver un ra
 
 <a name="MM0091" />
 
-#### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091 : Cette version de Xamarin.Mac requiert la * Kit de développement logiciel (fourni avec Xcode *). Soit vous devez mettre à niveau Xcode pour obtenir les fichiers d’en-tête requis, utilisez le bureau d’enregistrement dynamique ou définir le comportement de l’éditeur de liens géré vers la plateforme de lien ou lien Framework kits de développement logiciel uniquement (pour tenter d’éviter les nouvelles API).
+#### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091 : Cette version de Xamarin.Mac nécessite le * Kit de développement logiciel (livré avec Xcode *). Soit mise à niveau de Xcode pour obtenir les fichiers d’en-tête requis ou utiliser le bureau d’enregistrement dynamique ou la valeur est le comportement de l’éditeur de liens managé lien plateforme ou le lien les SDK Framework uniquement (éviter les nouvelles API).
 
-Xamarin.Mac requiert les fichiers d’en-tête, à partir de la version du Kit de développement logiciel spécifié dans le message d’erreur pour générer votre application avec le bureau d’enregistrement statique. La méthode recommandée pour corriger cette erreur consiste à mettre à niveau Xcode pour obtenir le Kit de développement logiciel requis, cela inclut tous les fichiers d’en-tête requis. Si vous disposez de plusieurs versions de Xcode installé, ou que vous souhaitez utiliser un Xcode dans un emplacement non définis par défaut, veillez à définir l’emplacement de Xcode correct dans les préférences de l’IDE de.
+Xamarin.Mac requiert les fichiers d’en-tête, à partir de la version SDK spécifié dans le message d’erreur, pour générer votre application avec le bureau d’enregistrement statique. La méthode recommandée pour corriger cette erreur consiste à mettre à niveau de Xcode pour obtenir le Kit de développement logiciel requis, cela inclut tous les fichiers d’en-tête requis. Si vous disposez de plusieurs versions de Xcode installée, ou que vous souhaitez utiliser un Xcode dans un emplacement non défini par défaut, veillez à définir l’emplacement de Xcode correct dans les préférences de l’IDE.
 
-Une solution de potentielle, d’autre, consiste à activer l’éditeur de liens managé. Cela supprimera inutilisé API, dans la plupart des cas, la nouvelle API où les fichiers d’en-tête sont manquants (ou incomplets). Cela ne fonctionne pas si votre projet utilise des API qui a été introduit dans un kit de développement logiciel plus récent que celui votre Xcode fournit toutefois.
+Une solution potentielle, alternative, consiste à activer l’éditeur de liens géré. Cela supprimera inutilisé API, y compris, dans la plupart des cas, la nouvelle API où les fichiers d’en-tête sont manquantes (ou incomplets). Cela ne fonctionne pas si votre projet utilise des API qui a été introduit dans un kit SDK plus récent que celui votre Xcode fournit toutefois.
 
-Une solution alternative deuxième potentielle, est à utiliser le bureau d’enregistrement dynamique à la place. Cela sera imposer un coût de démarrage en inscrivant dynamiquement des types mais supprimer la spécification de fichier d’en-tête. 
+Une solution alternative ensuite potentielle, est à utiliser le bureau d’enregistrement dynamique à la place. Cela s’imposer un coût de démarrage en inscrivant dynamiquement des types mais la spécification de fichier d’en-tête. 
 
-Une solution de dernier-paille serait d’utiliser une version antérieure de Xamarin.Mac, une qui prend en charge le Kit de développement logiciel votre projet requiert.
+Une solution de dernière-paille consisterait à utiliser une version antérieure de Xamarin.Mac, qui prend en charge le SDK de votre projet requiert.
 
 <a name="MM0097" />
 
@@ -146,27 +146,27 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM0098" />
 
-#### <a name="mm0098-aot-compilation-is-only-available-on-unified"></a>MM0098 : Compilation d’AOA est uniquement disponible sur unifiée
+#### <a name="mm0098-aot-compilation-is-only-available-on-unified"></a>MM0098 : Compilation AOT est uniquement disponible sur unifiés
 
 <a name="MM0099" />
 
-#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MM0099 : Erreur interne {0}. Veuillez archiver un rapport de bogue à un cas de test (http://bugzilla.xamarin.com).
+#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MM0099 : Erreur interne {0}. Veuillez soumettre un rapport de bogue avec un cas de test (http://bugzilla.xamarin.com).
 
 <a name="MM0114" />
 
-#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114 : Hybride AOA compilation nécessite tous les assemblys à AOA compilé.
+#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114 : Compilation AOT hybride compilation nécessite tous les assemblys AOT compilé.
 
 ## <a name="mm1xxx-file-copy--symlinks-project-related"></a>MM1xxx : copie d’un fichier / liens symboliques (projet lié)
 
 <a name="MM1034" />
 
-#### <a name="mm1034-could-not-create-symlink-file---target-error-number"></a>MM1034 : N’a pas pu créer le lien symbolique '{file}' -> '{target}' : erreur {number}
+#### <a name="mm1034-could-not-create-symlink-file---target-error-number"></a>MM1034 : N’a pas pu créer le lien symbolique '{file}' -> '{'target} : erreur {number}
 
-### <a name="mm14xx-product-assemblies"></a>MM14xx : Les assemblages de produit
+### <a name="mm14xx-product-assemblies"></a>MM14xx : Assemblages de produit
 
 <a name="MM1401" />
 
-#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401 : Requis '{0}' assembly il manque des références
+#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401 : Requis '{0}' assembly est manquant dans les références
 
 <a name="MM1402" />
 
@@ -182,15 +182,15 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM1405" />
 
-#### <a name="mm1405-usefullxammacframework-must-always-target-framework-net-45-not-0-which-is-invalid"></a>MM1405 : useFullXamMacFramework doit toujours cibler framework .NET 4.5, pas '{0}' qui n’est pas valide
+#### <a name="mm1405-usefullxammacframework-must-always-target-framework-net-45-not-0-which-is-invalid"></a>MM1405 : useFullXamMacFramework doit toujours cibler le framework .NET 4.5, pas '{0}' qui n’est pas valide
 
 <a name="MM1406" />
 
-#### <a name="mm1406-target-framework-0-is-invalid-when-targetting-xamarinmac-45-net-framwork"></a>MM1406 : Framework cible '{0}' n’est pas valide lorsque ciblé Xamarin.Mac 4.5 .NET Framework.
+#### <a name="mm1406-target-framework-0-is-invalid-when-targetting-xamarinmac-45-net-framwork"></a>MM1406 : Framework cible '{0}' n’est pas valide lorsque ciblant .NET 4.5 de Xamarin.Mac framwork.
 
 <a name="MM1407" />
 
-#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407 : Incompatibilité de référence de Xamarin.Mac '{0}'et framework cible sélectionné'{1}'.
+#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407 : Incompatibilité entre la référence de Xamarin.Mac '{0}« et un framework cible sélectionné »{1}».
 
 ### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx : Erreurs Assembly collecte (ne nécessitant ne pas l’éditeur de liens)
 
@@ -202,7 +202,7 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM1600" />
 
-#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600 : Pas une O de faire correspondre la bibliothèque dynamique (en-tête inconnu ' 0 x{0}») : {1}.
+#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600 : Pas une Mach-O bibliothèque dynamique (en-tête inconnu ' 0 x{0}») : {1}.
 
 <a name="MM1601" />
 
@@ -210,11 +210,11 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM1602" />
 
-#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602 : Pas une O de faire correspondre la bibliothèque dynamique (en-tête inconnu ' 0 x{0}») : {1}.
+#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602 : Pas une Mach-O bibliothèque dynamique (en-tête inconnu ' 0 x{0}») : {1}.
 
 <a name="MM1603" />
 
-#### <a name="mm1603-unknown-format-for-fat-entry-at-position-0-in-1"></a>MM1603 : Le format inconnu pour l’entrée fat à la position {0} dans {1}.
+#### <a name="mm1603-unknown-format-for-fat-entry-at-position-0-in-1"></a>MM1603 : Le format inconnu pour fat entrée à la position {0} dans {1}.
 
 <a name="MM1604" />
 
@@ -234,7 +234,7 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM2003" />
 
-#### <a name="mm2003-option-0-will-be-ignored-since-linking-is-disabled"></a>MM2003 : Option '{0}' sera ignoré, car la liaison est désactivée.
+#### <a name="mm2003-option-0-will-be-ignored-since-linking-is-disabled"></a>MM2003 : Option '{0}' va être ignorée car la liaison est désactivée.
 
 <a name="MM2004" />
 
@@ -242,15 +242,15 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM2005" />
 
-#### <a name="mm2005-definitions-from-0-could-not-be-parsed"></a>MM2005 : Les définitions à partir de '{0}' a pas pu être analysé.
+#### <a name="mm2005-definitions-from-0-could-not-be-parsed"></a>MM2005 : Les définitions à partir de '{0}' ne peut pas être analysée.
 
 <a name="MM2006" />
 
-#### <a name="mm2006-native-library-0-was-referenced-but-could-not-be-found"></a>MM2006 : La bibliothèque Native '{0}' a été référencé mais est introuvable.
+#### <a name="mm2006-native-library-0-was-referenced-but-could-not-be-found"></a>MM2006 : Bibliothèque Native '{0}' a été référencé mais est introuvable.
 
 <a name="MM2007" />
 
-#### <a name="mm2007-xamarinmac-unified-api-against-a-full-net-profile-does-not-support-linking-pass-the--nolink-flag"></a>MM2007 : Xamarin.Mac unifiée API par rapport à un profil .NET complet ne gère pas de liaison. Passez l’indicateur - nolink.
+#### <a name="mm2007-xamarinmac-unified-api-against-a-full-net-profile-does-not-support-linking-pass-the--nolink-flag"></a>MM2007 : API unifiée de Xamarin.Mac par rapport à un profil .NET complet ne gère pas de liaison. Passer l’indicateur - nolink.
 
 <a name="MM2009" />
 
@@ -258,7 +258,7 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM2010" />
 
-#### <a name="mm2010-unknown-httpmessagehandler-0-valid-values-are-httpclienthandler-default-cfnetworkhandler-or-nsurlsessionhandler"></a>MM2010 : HttpMessageHandler inconnu `{0}`. Les valeurs valides sont HttpClientHandler (par défaut), CFNetworkHandler ou NSUrlSessionHandler
+#### <a name="mm2010-unknown-httpmessagehandler-0-valid-values-are-httpclienthandler-default-cfnetworkhandler-or-nsurlsessionhandler"></a>MM2010 : HttpMessageHandler inconnu `{0}`. Les valeurs valides sont HttpClientHandler (valeur par défaut), CFNetworkHandler ou NSUrlSessionHandler
 
 <a name="MM2011" />
 
@@ -266,15 +266,15 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012 : Premier uniquement {0} de {1} « Référencée par « avertissements indiqués. ** Ce message lié à 2009 \*\*
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012 : Premier seule {0} de {1} « Référencée par « avertissements affichés. ** Ce message lié à 2009 \*\*
 
 <a name="MM2013" />
 
-#### <a name="mm2013-failed-to-resolve-the-reference-to-0-referenced-in-1-the-app-will-not-include-the-referenced-assembly-and-may-fail-at-runtime"></a>MM2013 : Impossible de résoudre la référence à «{0}«, référencée dans »{1}». L’application n’inclut pas de l’assembly référencé et peut échouer au moment de l’exécution.
+#### <a name="mm2013-failed-to-resolve-the-reference-to-0-referenced-in-1-the-app-will-not-include-the-referenced-assembly-and-may-fail-at-runtime"></a>MM2013 : Impossible de résoudre la référence à «{0}«, référencé dans »{1}». L’application n’inclut pas l’assembly référencé et risque d’échouer lors de l’exécution.
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014 : Xamarin.Mac Extensions ne permettent pas de liaison. La demande de liaison est ignorée. ** Ce message est obsolète dans XM 3.6 et + \*\*
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014 : Les Extensions de Xamarin.Mac ne prennent pas en charge le liaison. La demande de liaison est ignorée. ** Ce message est obsolète dans XM 3.6 et + \*\*
 
 <!-- 2015 used by mtouch -->
 
@@ -288,19 +288,19 @@ Une solution de dernier-paille serait d’utiliser une version antérieure de Xa
 
 <a name="MM202x" />
 
-#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x : Échec de la liaison optimiseur traitement `...`.
+#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x : Échec de l’optimiseur de liaison traitement `...`.
 
 <a name="MM2100" />
 
-#### <a name="mm2100-xamarinmac-classic-api-does-not-support-platform-linking"></a>MM2100 : Xamarin.Mac classique API ne prend pas en charge le liant de plateforme.
+#### <a name="mm2100-xamarinmac-classic-api-does-not-support-platform-linking"></a>MM2100 : Xamarin.Mac classique API ne prend pas en charge la liaison de plateforme.
 
 <a name="MM2103" />
 
-#### <a name="mm2103-error-processing-assembly--"></a>MM2103 : Erreur lors du traitement assembly '\*' : *
+#### <a name="mm2103-error-processing-assembly--"></a>MM2103 : Traitement de l’erreur assembly '\*' : *
 
 Une erreur inattendue s’est produite lors du traitement d’un assembly.
 
-L’assembly à l’origine du problème est nommé dans le message d’erreur. Pour résoudre ce problème à l’assembly sera doivent être fournies dans un [des bogues, rapport](https://bugzilla.xamarin.com) ainsi que d’un journal de génération complète avec commentaires activée (c'est-à-dire `-v -v -v -v` dans le **mtouch supplémentaires arguments**).
+L’assembly qui provoque le problème est nommé dans le message d’erreur. Pour résoudre ce problème à l’assembly devrez être fournie dans un [des bogues, rapport](https://bugzilla.xamarin.com) ainsi que d’un journal de génération complète avec le niveau de détail activée (par exemple, `-v -v -v -v` dans le **arguments mtouch supplémentaires**).
 
 <a name="MM2104" />
 
@@ -312,11 +312,11 @@ Consultez https://msdn.microsoft.com/library/x0w2664k.aspx pour plus d’informa
 
 ## <a name="mm3xxx-aot"></a>MM3xxx : AOA
 
-### <a name="mm30xx-aot-general-errors"></a>MM30xx : Erreurs AOA (général)
+### <a name="mm30xx-aot-general-errors"></a>MM30xx : Erreurs de compilation AOT (général)
 
 <a name="MM3001" />
 
-#### <a name="mm3001-could-not-aot-the-assembly-0"></a>MM3001 : Ne peut pas AOA l’assembly '{0}'
+#### <a name="mm3001-could-not-aot-the-assembly-0"></a>MM3001 : Ne peut pas AOT l’assembly '{0}'
 
 <!-- 3002 used by mtouch -->
 <!-- 3003 used by mtouch -->
@@ -328,7 +328,7 @@ Consultez https://msdn.microsoft.com/library/x0w2664k.aspx pour plus d’informa
 
 <a name="MM3009" />
 
-#### <a name="mm3009-aot-of-0-was-requested-but-was-not-found"></a>MM3009 : AOA de '{0}' a été demandée mais n’a été trouvé
+#### <a name="mm3009-aot-of-0-was-requested-but-was-not-found"></a>MM3009 : AOT de '{0}' a été demandée mais n’a été trouvé
 
 <a name="MM3010" />
 
@@ -346,7 +346,7 @@ Consultez https://msdn.microsoft.com/library/x0w2664k.aspx pour plus d’informa
 
 <a name="MM4134" />
 
-#### <a name="mm4134-your-application-is-using-the-0-framework-which-isnt-included-in-the-macos-sdk-youre-using-to-build-your-app-this-framework-was-introduced-in-osx-2-while-youre-building-with-the-macos-1-sdk-this-configuration-is-not-supported-with-the-static-registrar-pass---registrardynamic-as-an-additional-mmp-argument-in-your-projects-mac-build-option-to-select-alternatively-select-a-newer-sdk-in-your-apps-mac-build-options"></a>MM4134 : Votre application est à l’aide de la '{0}' infrastructure, qui n’est pas inclus dans le SDK de MacOS que vous utilisez pour générer votre application (cette infrastructure a été introduite dans OSX {2}, tandis que vous créez avec MacOS {1} SDK.) Cette configuration n’est pas pris en charge avec le bureau d’enregistrement statique (passer--bureau d’enregistrement : dynamique comme argument mmp supplémentaires dans générer des Mac sélectionner l’option de votre projet). Vous pouvez également sélectionner un kit de développement logiciel plus récent dans les options de génération de Mac de votre application.
+#### <a name="mm4134-your-application-is-using-the-0-framework-which-isnt-included-in-the-macos-sdk-youre-using-to-build-your-app-this-framework-was-introduced-in-osx-2-while-youre-building-with-the-macos-1-sdk-this-configuration-is-not-supported-with-the-static-registrar-pass---registrardynamic-as-an-additional-mmp-argument-in-your-projects-mac-build-option-to-select-alternatively-select-a-newer-sdk-in-your-apps-mac-build-options"></a>MM4134 : Votre application est à l’aide de la «{0}' framework, qui n’est pas inclus dans le SDK de MacOS que vous utilisez pour générer votre application (cette infrastructure a été introduite dans OSX {2}, tandis que vous créez avec MacOS {1} SDK.) Cette configuration n’est pas pris en charge avec le bureau d’enregistrement statique (pass--registrar : dynamiques comme argument mmp supplémentaires dans Build Mac possibilité de votre projet de sélectionner). Sélectionnez également un SDK plus récente dans les options de Build Mac de votre application.
 
 ## <a name="mm5xxx-gcc-and-toolchain"></a>MM5xxx : GCC et la chaîne d’outils
 
@@ -360,7 +360,7 @@ Consultez https://msdn.microsoft.com/library/x0w2664k.aspx pour plus d’informa
 
 <a name="MM5103" />
 
-#### <a name="mm5103-failed-to-compile-error-code---0-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM5103 : Échec de compilation. Code d’erreur - {0}. Un rapport de bogue au niveau du fichier. http://bugzilla.xamarin.com
+#### <a name="mm5103-failed-to-compile-error-code---0-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM5103 : Échec de compilation. Code d’erreur - {0}. Veuillez soumettre un rapport de bogue à http://bugzilla.xamarin.com
 
 <!-- 5104 used by mtouch -->
 
@@ -368,7 +368,7 @@ Consultez https://msdn.microsoft.com/library/x0w2664k.aspx pour plus d’informa
 
 <a name="MM5202" />
 
-#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202 : Mono.framework MDK est manquant. Installez le MDK pour votre version de Mono.framework à partir de http://mono-project.com/Downloads
+#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202 : Mono.framework MDK est manquant. Installez le MDK pour votre version Mono.framework à partir de http://mono-project.com/Downloads
 
 <a name="MM5203" />
 
@@ -384,7 +384,7 @@ Consultez https://msdn.microsoft.com/library/x0w2664k.aspx pour plus d’informa
 
 <a name="MM5218" />
 
-#### <a name="mm5218-cant-ignore-the-dynamic-symbol-symbol---ignore-dynamic-symbolsymbol-because-it-was-not-detected-as-a-dynamic-symbol"></a>MM5218 : Impossible d’ignorer le symbole dynamique {symbol} (--symbole dynamique ignorer = {symbol}), car il n’a pas été détecté comme un symbole dynamique.
+#### <a name="mm5218-cant-ignore-the-dynamic-symbol-symbol---ignore-dynamic-symbolsymbol-because-it-was-not-detected-as-a-dynamic-symbol"></a>MM5218 : Impossible d’ignorer le symbole dynamique {symbole} (--symbole dynamique ignorer = {symbol}), car il n’a pas été détecté comme un symbole dynamique.
 
 Consultez le [mtouch équivalent avertissement](~/ios/troubleshooting/mtouch-errors.md#MT5218).
 
@@ -421,7 +421,7 @@ Consultez le [mtouch équivalent avertissement](~/ios/troubleshooting/mtouch-err
 
 <a name="MM5308" />
 
-#### <a name="mm5308-xcode-license-agreement-may-not-have-been-accepted--please-launch-xcode"></a>MM5308 : Contrat de licence Xcode peut ne pas avoir été acceptée.  Lancez Xcode.
+#### <a name="mm5308-xcode-license-agreement-may-not-have-been-accepted--please-launch-xcode"></a>MM5308 : Contrat de licence Xcode peut ne pas avoir été acceptée.  Veuillez lancer Xcode.
 
 <a name="MM5309" />
 
@@ -429,12 +429,12 @@ Consultez le [mtouch équivalent avertissement](~/ios/troubleshooting/mtouch-err
 
 <a name="MM5310" />
 
-#### <a name="mm5310-installnametool-failed-with-an-error-code-0-check-build-log-for-details"></a>MM5310 : install_name_tool a échoué avec un code d’erreur '{0}'. Vérifiez le journal de génération pour plus d’informations.
+#### <a name="mm5310-installnametool-failed-with-an-error-code-0-check-build-log-for-details"></a>MM5310 : install_name_tool a échoué avec un code d’erreur «{0}». Vérifiez le journal de génération pour plus d’informations.
 
 <!-- MM6xxx: mmp internal tools -->
 <!-- MM7xxx: reserved -->
 
-## <a name="mm8xxx-runtime"></a>MM8xxx : exécution
+## <a name="mm8xxx-runtime"></a>MM8xxx : runtime
 
 ### <a name="mm800x-misc"></a>MM800x : divers
 
@@ -458,5 +458,5 @@ Consultez le [mtouch équivalent avertissement](~/ios/troubleshooting/mtouch-err
 
 <a name="MM8017" />
 
-#### <a name="mm8017-the-boehm-garbage-collector-is-not-supported-please-use-sgen-instead"></a>MM8017 : Le garbage collector de Boehm n’est pas pris en charge. Utilisez plutôt SGen.
+#### <a name="mm8017-the-boehm-garbage-collector-is-not-supported-please-use-sgen-instead"></a>MM8017 : Le garbage collector de Boehm n’est pas pris en charge. Utilisez plutôt la SGen.
 

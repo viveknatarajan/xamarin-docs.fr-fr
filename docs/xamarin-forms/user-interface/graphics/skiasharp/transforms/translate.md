@@ -1,18 +1,18 @@
 ---
 title: La transformation de traduction
-description: Cette article examiens comment utiliser la transformation de traduction pour décaler des graphiques de SkiaSharp dans les applications Xamarin.Forms et illustre ceci avec l’exemple de code.
+description: Cet article examine comment utiliser la transformation de traduction pour décaler des graphiques de SkiaSharp dans les applications Xamarin.Forms et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 02361b5b2d00015ce168c075dc19522b6c04e446
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 2171c8f0b2926a645fb98df52bae2391449bf89c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615442"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120929"
 ---
 # <a name="the-translate-transform"></a>La transformation de traduction
 
@@ -24,19 +24,19 @@ Traduction est également utile pour l’animation et pour les effets de texte s
 
 ![](translate-images/translateexample.png "Ombre du texte, de gravure et de relief avec la traduction")
 
-Le [ `Translate` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/System.Single/System.Single/) méthode dans `SKCanvas` a deux paramètres qui provoquent des objets graphiques dessinés par la suite être décalés horizontalement et verticalement :
+Le [ `Translate` ](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) méthode dans `SKCanvas` a deux paramètres qui provoquent des objets graphiques dessinés par la suite être décalés horizontalement et verticalement :
 
 ```csharp
 public void Translate (Single dx, Single dy)
 ```
 
-Ces arguments peuvent être négatifs. Une seconde [ `Translate` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/SkiaSharp.SKPoint/) méthode combine les valeurs de translation de deux dans un seul `SKPoint` valeur :
+Ces arguments peuvent être négatifs. Une seconde [ `Translate` ](xref:SkiaSharp.SKCanvas.Translate(SkiaSharp.SKPoint)) méthode combine les valeurs de translation de deux dans un seul `SKPoint` valeur :
 
 ```csharp
 public void Translate (SKPoint point)
 ```
 
-Le **accumulées traduire** page de la [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemple de programme illustre que plusieurs appels de la `Translate` méthode sont cumulatifs. Le [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe affiche 20 versions du même rectangle, chacun d’eux offset du rectangle précédent juste assez afin qu’ils étirement le long de la diagonale. Voici le `PaintSurface` Gestionnaire d’événements :
+Le **accumulées traduire** page de la [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemple de programme illustre que plusieurs appels de la `Translate` méthode sont cumulatifs. Le [ `AccumulatedTranslatePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe affiche 20 versions du même rectangle, chacun d’eux offset du rectangle précédent juste assez afin qu’ils étirement le long de la diagonale. Voici le `PaintSurface` Gestionnaire d’événements :
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -132,13 +132,15 @@ Chacun des trois exemples montre une autre manière d’annuler la `Translate` a
 
 Le premier exemple appelle simplement `Translate` là encore, mais avec des valeurs négatives. Étant donné que le `Translate` appels sont cumulatifs, cette séquence d’appels restaure simplement la traduction total pour les valeurs par défaut de zéro.
 
-Le deuxième exemple appelle [ `ResetMatrix` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ResetMatrix()/). Par conséquent, toutes les transformations revenir à leur état par défaut.
+Le deuxième exemple appelle [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix). Par conséquent, toutes les transformations revenir à leur état par défaut.
 
-Le troisième exemple enregistre l’état de la de la `SKCanvas` objet avec un appel à [ `Save` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Save()/) puis restaure l’état avec un appel à [ `Restore` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Restore/). Il s’agit de la façon la plus polyvalente pour manipuler des transformations pour une série d’opérations de dessin. Ces `Save` et `Restore` appelle la fonction comme une pile : vous pouvez appeler `Save` plusieurs fois, puis appelez `Restore` inverse séquence pour revenir à l’état précédent. Le `Save` méthode retourne un entier, et vous pouvez passer cet entier à [ `RestoreToCount` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RestoreToCount/) efficacement appeler `Restore` plusieurs fois. Le [ `SaveCount` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.SaveCount/) propriété retourne le nombre d’états actuellement enregistrés sur la pile.
+Le troisième exemple enregistre l’état de la `SKCanvas` objet avec un appel à [ `Save` ](xref:SkiaSharp.SKCanvas.Save) puis restaure l’état avec un appel à [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore). Il s’agit de la façon la plus polyvalente pour manipuler des transformations pour une série d’opérations de dessin. Ces `Save` et `Restore` appelle la fonction comme une pile : vous pouvez appeler `Save` plusieurs fois, puis appelez `Restore` inverse séquence pour revenir à l’état précédent. Le `Save` méthode retourne un entier, et vous pouvez passer cet entier à [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) efficacement appeler `Restore` plusieurs fois. Le [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) propriété retourne le nombre d’états actuellement enregistrés sur la pile.
+
+Vous pouvez également utiliser le [ `SKAutoCanvasRestore` ](xref:SkiaSharp.SKAutoCanvasRestore) classe permettant de restaurer l’état de la zone de dessin. Le constructeur de cette classe est destiné à être appelée un `using` instruction ; la zone de dessin état est restauré automatiquement à la fin de la `using` bloc. 
 
 Toutefois, vous n’avez pas à vous soucier des transformations conservant à partir d’un seul appel de la `PaintSurface` gestionnaire à la suivante. Chaque nouvel appel à `PaintSurface` offre une nouvelle `SKCanvas` objet avec des transformations par défaut.
 
-Une autre utilisation courante de la `Translate` transformation est pour le rendu d’un objet visuel qui a été initialement créé à l’aide de coordonnées qui sont pratiques pour le dessin. Par exemple, vous souhaiterez peut-être spécifier les coordonnées d’une horloge analogique avec un centre au point (0, 0). Vous pouvez ensuite utiliser des transformations pour l’afficher où vous le souhaitez. Cela est illustré dans le [**Hendecagram tableau**] page. Le [ `HendecagramArrayPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs) classe commence par créer un `SKPath` objet pour une étoile 11-référencée. Le `HendecagramPath` objet est défini comme public, statique et en lecture seule afin qu’il est accessible à partir d’autres programmes de démonstration. Il est créé dans un constructeur statique :
+Une autre utilisation courante de la `Translate` transformation est pour le rendu d’un objet visuel qui a été initialement créé à l’aide de coordonnées qui sont pratiques pour le dessin. Par exemple, vous souhaiterez peut-être spécifier les coordonnées d’une horloge analogique avec un centre au point (0, 0). Vous pouvez ensuite utiliser des transformations pour afficher l’horloge où vous le souhaitez. Cette technique est illustrée dans le [**Hendecagram tableau**] page. Le [ `HendecagramArrayPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs) classe commence par créer un `SKPath` objet pour une étoile 11-référencée. Le `HendecagramPath` objet est défini comme public, statique et en lecture seule afin qu’il est accessible à partir d’autres programmes de démonstration. Il est créé dans un constructeur statique :
 
 ```csharp
 public class HendecagramArrayPage : ContentPage
@@ -263,7 +265,7 @@ public class HendecagramAnimationPage : ContentPage
 }
 ```
 
-Le `angle` champ est animé de 0 à 360 degrés toutes les 5 secondes. Le `PaintSurface` Gestionnaire utilise la `angle` propriété de deux manières : pour spécifier la teinte de la couleur dans le `SKColor.FromHsl` (méthode) et en tant qu’argument à la `Math.Sin` et `Math.Cos` méthodes pour régir l’emplacement de l’étoile :
+Le `angle` champ est animé de degrés de 0 à 360 degrés toutes les 5 secondes. Le `PaintSurface` Gestionnaire utilise la `angle` propriété de deux manières : pour spécifier la teinte de la couleur dans le `SKColor.FromHsl` (méthode) et en tant qu’argument à la `Math.Sin` et `Math.Cos` méthodes pour régir l’emplacement de l’étoile :
 
 ```csharp
 public class HendecagramAnimationPage : ContentPage
@@ -302,5 +304,5 @@ Notez que l’étoile conserve l’orientation même comme il tourne autour du c
 
 ## <a name="related-links"></a>Liens associés
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

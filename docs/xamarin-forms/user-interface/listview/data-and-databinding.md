@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 71e1655b6bc05c621ee97fcf826ce8b468f0dd48
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 4f80682c5d8c4f5231fbdd2e081fdcf7962aa969
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351494"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103723"
 ---
 # <a name="listview-data-sources"></a>Sources de données de ListView
 
@@ -89,7 +89,7 @@ Liaison de données fonctionne en synchronisation des objets comme modifier leur
 Pour plus d’informations sur la liaison de données, consultez [notions de base de données liaison](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) qui est la quatrième partie de la [articles de la série principes de base XAML Xamarin.Forms](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### <a name="binding-cells"></a>Liaison de cellules
-Propriétés de cellules (et des cellules enfants) peuvent être liées aux propriétés d’objets dans le `ItemsSource`. Par exemple, un ListView peut servir à présenter une liste des employés avec des images.
+Propriétés de cellules (et des cellules enfants) peuvent être liées aux propriétés d’objets dans le `ItemsSource`. Par exemple, un ListView peut servir à présenter une liste d’employés.
 
 La classe employee :
 

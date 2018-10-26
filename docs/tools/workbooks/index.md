@@ -1,29 +1,29 @@
 ---
 title: Xamarin Workbooks
-description: Les classeurs de Xamarin fournissent un mélange de documentation et le code qui est parfait pour une expérimentation, et création de guides et d’apprentissage aides.
+description: Xamarin Workbooks fournissent un mélange de documentation et le code qui est parfait pour l’expérimentation, d’apprentissage et création de repères et matériel pédagogique.
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-author: topgenorth
-ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: 57ef9cb3a45dbf1c6271a1475c27fdd38d2fd96b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+author: lobrien
+ms.author: laobri
+ms.date: 10/23/2018
+ms.openlocfilehash: d0aed1b501b86a23d4008ba9618b0e459178ca24
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33922637"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121891"
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
-Les classeurs de Xamarin fournissent un mélange de documentation et le code qui est parfait pour une expérimentation, et création de guides et d’apprentissage aides.
+Xamarin Workbooks fournissent un mélange de documentation et le code qui est parfait pour l’expérimentation, d’apprentissage et création de repères et matériel pédagogique.
 
-Créer un classeur c# rich pour Android, iOS, Mac, WPF ou Console et obtenir des résultats dynamiques instantanées lorsque vous Découvrez ces API.
+Créer une riche C# classeur pour Android, iOS, Mac, WPF, ou Console et obtenir des résultats en direct instantanée en tant que vous Découvrez ces API.
 
-Les classeurs Xamarin est un logiciel open source. Développement se produit dans la boîte de dialogue sur GitHub. Nous invitons les utilisateurs concernés et aux développeurs de participer au projet.
+Xamarin Workbooks est un logiciel open source. Développement se produit dans l’ouvrir sur GitHub. Nous invitons les utilisateurs intéressés et aux développeurs d’Impliquez-vous dans le projet.
 
-<a class="github-button" href="https://github.com/Microsoft/workbooks" data-size="large" aria-label="View Microsoft/workbooks on GitHub">Rejoignez-nous sur GitHub !</a>
+[Rejoignez-nous sur GitHub](https://github.com/Microsoft/workbooks)
 
-Faites un essai et faites-nous savoir ce que vous pensez, ou si vous [de rencontrer des bogues](~/tools/workbooks/install.md#reporting-bugs). Nous avons un [forum](https://forums.xamarin.com/categories/inspector) trop !
+Essayez-la et dites-nous ce que vous pensez, ou si vous [rencontrez des bogues](~/tools/workbooks/install.md#reporting-bugs). Nous avons un [forum](https://forums.xamarin.com/categories/inspector) trop !
 
 [![](images/interactive-1.0.0-urho-planet-earth-small.png "Un exemple de classeur en fonction de UrhoSharp")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
@@ -33,14 +33,12 @@ Informations sur l’obtention des classeurs installés sur votre ordinateur Mac
 
 ## <a name="interactive-workbooksworkbookmd"></a>[Workbooks interactifs](workbook.md)
 
-Introduction à l’utilisation de classeurs de Xamarin.
+Introduction à l’utilisation de Xamarin Workbooks.
 
-## <a name="samplessamplesindexmd"></a>[Exemples](samples/index.md)
+## <a name="samples"></a>Exemples
 
-Il existe une grande variété de [exemples de classeurs](https://developer.xamarin.com/workbooks/) disponibles, y compris ceux mis en surbrillance [ici](samples/index.md).
+Il existe un large éventail de [classeurs disponibles sur GitHub d’exemples](https://github.com/xamarin/workbooks).
 
 ## <a name="integration-sdksdkindexmd"></a>[Kit SDK d’intégration](sdk/index.md)
 
-Il est possible d’étendre des classeurs Xamarin avec les convertisseurs et les représentations sous forme de données personnalisé. Intégrations sont écrites en c# et TypeScript/JavaScript.
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+Il est possible d’étendre des classeurs de Xamarin avec les convertisseurs et les représentations sous forme de données personnalisées. Intégrations sont écrits avec C# et TypeScript/JavaScript.

@@ -1,38 +1,38 @@
 ---
-title: Encodages internationalisation dans Xamarin.iOS
-description: Ce document décrit les encodages internationalisation dans Xamarin.iOS, en traitant les encodages disponibles et comment les ajouter à une application.
+title: Encodages d’internationalisation dans Xamarin.iOS
+description: Ce document décrit les encodages d’internationalisation dans Xamarin.iOS, en traitant les encodages disponibles et comment les ajouter à une application.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 4963b0f95ae48ee56462a82d2f82a8dcaa231a23
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 7c59b6f1ac269c57ab720aeb6999c0f0d178bab3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784124"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112497"
 ---
-# <a name="internationalization-encodings-in-xamarinios"></a>Encodages internationalisation dans Xamarin.iOS
+# <a name="internationalization-encodings-in-xamarinios"></a>Encodages d’internationalisation dans Xamarin.iOS
 
-Pas de tous les encodages sont inclus dans la bibliothèque de classes Xamarin.iOS par défaut.
+Pas tous les encodages sont inclus dans la bibliothèque de classes Xamarin.iOS par défaut.
 
-Pour réduire la taille de l’application, Xamarin.iOS n’inclut pas un encodage spécifique, et vous devez demander à mtouch à inclure les assemblys contenant la prise en charge pour l’encodage que vous avez besoin.
+Pour réduire la taille de l’application, Xamarin.iOS n’inclut pas de n’importe quel encodage spécifique, et vous devez demander à mtouch à inclure les assemblys contenant la prise en charge pour l’encodage que vous avez besoin.
 
-Pour cela, en sélectionnant les encodages supplémentaires à partir du volet de la Build/avancé iOS dans Visual Studio pour Mac ou Visual Studio :
+Cette opération est effectuée en sélectionnant les encodages supplémentaires à partir du volet de la Build/avancé iOS dans Visual Studio pour Mac ou Visual Studio :
 
  [![](encodings-images/00.png "En sélectionnant les encodages supplémentaires")](encodings-images/00.png#lightbox)
 
  [![](encodings-images/00a.png "En sélectionnant les encodages supplémentaires")](encodings-images/00a.png#lightbox)
 
-Vous pouvez sélectionner un d'entre eux :
+Vous pouvez sélectionner une d’elles :
 
--  IDÉOGRAMME : pour Chineese, japonais et coréen
+-  CJC : pour Chineese, japonais et coréen
 -  mideast : arabe, hébreu, turc et Latin5.
 -  autres : cyrillique, Baltique, vietnamien, ukrainien et thaï
 -  rares : EBCDIC encodages et autres pages de codes rares
--  Ouest : latins Pâques et Europe occidentale
--  toutes les
+-  Ouest : langues latines, Pâques et Europe occidentale
+-  all
 
 
  <a name="cjk" />
@@ -125,7 +125,7 @@ Vous pouvez sélectionner un d'entre eux :
  <a name="west" />
 
 
-## <a name="west"></a>Ouest
+## <a name="west"></a>Ouest des États-Unis
 
 -  CP10000
 -  CP10079

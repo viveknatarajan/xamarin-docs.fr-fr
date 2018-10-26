@@ -1,50 +1,50 @@
 ---
 title: Icônes de Document personnalisées dans Xamarin.iOS
-description: Cet article explique comment y compris et la gestion d’un composant de l’image dans une application Xamarin.iOS à utiliser comme une icône de Type de Document personnalisé.
+description: Cet article explique comment, y compris et la gestion d’une ressource image dans une application Xamarin.iOS à être utilisé comme une icône de Type de Document personnalisé.
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/23/2017
-ms.openlocfilehash: 415500050e4e957ca635c4b18004716dd44a162d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 51abd00f9a21b702811bb3897f273deff54f7d01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784147"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110483"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Icônes de Document personnalisées dans Xamarin.iOS
 
-_Cet article explique comment y compris et la gestion d’un composant de l’image dans une application Xamarin.iOS à utiliser comme une icône de Type de Document personnalisé._
+_Cet article explique comment, y compris et la gestion d’une ressource image dans une application Xamarin.iOS à être utilisé comme une icône de Type de Document personnalisé._
 
-Si une application Xamarin.iOS prend en charge le chargement d’un type de document particulier, le développeur peut fournir des icônes que le système utilisera lorsqu’il rencontre ce type de document, par exemple quand un utilisateur appuie sur une pièce jointe dans le *Application de messagerie* en tant que illustrée ici :
+Si une application Xamarin.iOS prend en charge le chargement d’un type de document particulier, le développeur peut fournir des icônes que le système utilisera quand il rencontre ce type de document, par exemple quand un utilisateur appuie sur une pièce jointe dans le *Application Mail* en tant que indiqué ici :
 
  [![](custom-document-types-images/17.png "Un exemple d’icônes de type de document")](custom-document-types-images/17.png#lightbox)
 
-Le développeur peut ajouter des informations de type de document pour un format de fichier l’application est capable d’ouvrir en incluant des entrées de dictionnaire pour la `CFBundleTypeName` chaîne et `LSItemContentTypes` tableau dans l’application `Info.plist`. Les icônes pour le type de document aller dans le `CFBundleTypeIconFiles` tableau. Si une icône de document n’est pas fournie, iOS sera dériver l’une de l’icône d’application.
-Icônes peuvent être fournies pour plusieurs tailles, optimisés pour les différentes résolutions d’appareil. 
+Le développeur peut ajouter des informations de type de document pour un format de fichier l’application est capable d’ouvrir en incluant des entrées de dictionnaire pour la `CFBundleTypeName` chaîne et `LSItemContentTypes` tableau dans l’application `Info.plist`. Les icônes pour le type de document aller dans le `CFBundleTypeIconFiles` tableau. Si une icône de document n’est pas fourni, un à partir de l’icône d’application dérivera iOS.
+Icônes peuvent être fournies pour différentes tailles, optimisés pour les différentes résolutions d’appareil. 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
-Pour attribuer ces valeurs dans Visual Studio pour Mac, utilisez le **Types de documents** sous le **avancé** onglet sur le `Info.plist` l’éditeur pour ajouter le type de document et de lui assigner des icônes. Par exemple, voici une capture d’écran montrant l’enregistrement pour la prise en charge PDF :
+Pour affecter ces valeurs dans Visual Studio pour Mac, utilisez le **Types de documents** section sous le **avancé** onglet sur le `Info.plist` éditeur pour ajouter le type de document et de lui assigner des icônes d’image. Par exemple, voici une capture d’écran montrant l’enregistrement pour la prise en charge PDF :
 
  [![](custom-document-types-images/18.png "La section Types de documents sous l’onglet Avancé de l’éditeur 'Info.plist'")](custom-document-types-images/18.png#lightbox)
  
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Pour attribuer à ces valeurs dans Visual Studio, utilisez le **Types de documents** sous le **avancé** onglet sur le `Info.plist`:
+Pour affecter ces valeurs dans Visual Studio, utilisez le **Types de documents** section sous le **avancé** onglet sur le `Info.plist`:
 
  ![](custom-document-types-images/doc01w.png "Ouvrez la section Types de documents sous l’onglet Avancé")
 
 Cliquez sur le **ajouter un Type de Document** bouton et renseignez les champs obligatoires :
 
-![](custom-document-types-images/doc02w.png "L’écran Ajouter un Type de Document")
+![](custom-document-types-images/doc02w.png "Le formulaire Ajouter un Type de Document")
 
 -----
 
 
-Pour plus d’informations sur les types de document, consultez Apple [uniforme référence d’identificateurs de Type](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) et [Document Interaction programmation rubriques pour iOS](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+Pour plus d’informations sur les types de documents, consultez d’Apple [uniforme référence d’identificateurs de Type](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) et [rubriques de programmation Interaction de Document pour iOS](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
 
 
 ## <a name="related-links"></a>Liens associés

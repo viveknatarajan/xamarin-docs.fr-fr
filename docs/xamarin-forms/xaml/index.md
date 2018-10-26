@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/18/2018
-ms.openlocfilehash: f593e5d084d8cd7071d17195663478d430d994b7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4045f3a1d31b1c0c8b69e840d3943b6ce258b894
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113584"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Langage de balisage d’Application eXtensible (XAML)
 
@@ -37,7 +37,7 @@ XAML peut être éventuellement compilé directement en langage intermédiaire (
 
 ## <a name="xaml-previewerxaml-previewermd"></a>[Générateur d’aperçu XAML](xaml-previewer.md)
 
-Le [Générateur d’aperçu XAML](~/xamarin-forms/xaml/xaml-previewer.md) annoncé à Xamarin évoluer 2016 est disponible pour le test dans le canal Alpha.
+Le [Générateur d’aperçu XAML](~/xamarin-forms/xaml/xaml-previewer.md) affiche un aperçu en direct d’un page côte-à-côte avec le balisage XAML, ce qui vous permet de voir votre interface utilisateur de rendu en cours de frappe.
 
 ## <a name="xaml-namespacesnamespacesmd"></a>[Espaces de noms XAML](namespaces.md)
 

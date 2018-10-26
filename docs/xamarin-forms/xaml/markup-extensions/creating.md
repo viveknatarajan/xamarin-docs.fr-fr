@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: d4b3d5c65ddf8be433d1f8e182774aa839f60357
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 6b61d03910d908f5fab0d946ed97c88b1e32885d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995594"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109547"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Création d’Extensions de balisage XAML
 
@@ -152,7 +152,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` est utile lorsqu’un fichier XAML doit accéder à un fichier image stocké comme une ressource incorporée dans le projet de bibliothèque .NET Standard. Il utilise le `Source` propriété pour appeler la méthode statique `ImageSource.FromResource` (méthode). Cette méthode requiert un nom de ressource complet, qui comprend le nom de l’assembly, le nom du dossier et le nom de fichier séparées par des points. Le `ImageResourceExtension` n’avez besoin de nom de l’assembly partie parce qu’il obtient le nom de l’assembly à l’aide de la réflexion et ajoute à la `Source` propriété. Malgré tout, `ImageSource.FromResource` doit être appelé à partir de l’assembly qui contient l’image bitmap, ce qui signifie que cette extension de ressource XAML ne peut pas faire partie d’une bibliothèque externe, sauf si les images sont également dans cette bibliothèque. (Consultez le [ **Images incorporées** ](~/xamarin-forms/user-interface/images.md#embedded_images) article pour plus d’informations sur l’accès aux bitmaps stockés en tant que ressources incorporées.)
+`ImageResourceExtension` est utile lorsqu’un fichier XAML doit accéder à un fichier image stocké comme une ressource incorporée dans le projet de bibliothèque .NET Standard. Il utilise le `Source` propriété pour appeler la méthode statique `ImageSource.FromResource` (méthode). Cette méthode requiert un nom de ressource complet, qui comprend le nom de l’assembly, le nom du dossier et le nom de fichier séparées par des points. Le `ImageResourceExtension` n’avez besoin de nom de l’assembly partie parce qu’il obtient le nom de l’assembly à l’aide de la réflexion et ajoute à la `Source` propriété. Malgré tout, `ImageSource.FromResource` doit être appelé à partir de l’assembly qui contient l’image bitmap, ce qui signifie que cette extension de ressource XAML ne peut pas faire partie d’une bibliothèque externe, sauf si les images sont également dans cette bibliothèque. (Consultez le [ **Images incorporées** ](~/xamarin-forms/user-interface/images.md#embedded-images) article pour plus d’informations sur l’accès aux bitmaps stockés en tant que ressources incorporées.)
 
 Bien que `ImageResourceExtension` nécessite le `Source` propriété à définir, le `Source` propriété est indiquée dans un attribut en tant que la propriété de contenu de la classe. Cela signifie que la `Source=` partie de l’expression entre accolades peut être omis. Dans le **démonstration de ressource d’Image** page, le `Image` éléments extraire en utilisant le nom du dossier et le nom de fichier séparées par des points de deux images :
 

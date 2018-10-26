@@ -7,12 +7,12 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: 49f2d96fb7f95ab880d5cfafa420afbbe933c1ad
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 17e62d68f8ad2c7deff500216c0bb095ca8f4275
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117445"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Résumé du chapitre 4. Défilement de la pile
 
@@ -95,7 +95,7 @@ Le [ `BoxView` ](xref:Xamarin.Forms.BoxView) affiche une zone rectangulaire de l
 
 Si le `BoxView` est limité (son `HorizontalOptions` et `VerticalOptions` propriétés ont leurs paramètres par défaut de `LayoutOptions.Fill`), le `BoxView` remplit l’espace disponible pour lui. Si le `BoxView` n’est pas limitée (avec `HorizontalOptions` et `LayoutOptions` paramètres de `Start`, `Center`, ou `End`), il a une dimension par défaut du carré de 40 unités. Un `BoxView` peut être limité dans une dimension et sans contraintes dans l’autre.
 
-Souvent, vous devez définir le le [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) et [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriétés de `BoxView` afin de lui donner une taille spécifique. Ceci est illustré par la [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) exemple.
+Souvent, vous devez définir le [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) et [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriétés de `BoxView` afin de lui donner une taille spécifique. Ceci est illustré par la [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) exemple.
 
 Vous pouvez utiliser plusieurs instances de `StackLayout` pour combiner un `BoxView` et plusieurs `Label` instances dans un `Frame` pour afficher une couleur particulière, puis placez chacun de ces vues dans une `StackLayout` dans un `ScrollView` pour créer l’attrayante liste de couleurs affichées dans le [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) exemple :
 

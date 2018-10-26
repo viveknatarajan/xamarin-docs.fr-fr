@@ -1,66 +1,66 @@
 ---
 title: Débogage des intégrations
-description: Ce document décrit comment déboguer des intégrations de classeurs de Xamarin, côté agent et côté client sur Windows et Mac.
+description: Ce document décrit comment déboguer des intégrations de Xamarin Workbooks, côté agent et côté client sur Windows et Mac.
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 6e37b1ac3d0fb78b5737ebe97b5a28ab40adb648
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 86d9c6af93e7f59eb0e819730e46324688df7566
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36269055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105998"
 ---
 # <a name="debugging-integrations"></a>Débogage des intégrations
 
-## <a name="debugging-agent-side-integrations"></a>Le débogage côté agent intégrations
+## <a name="debugging-agent-side-integrations"></a>Débogage des intégrations de côté de l’agent
 
-Débogage côté agent intégrations mieux faire, utilisez les méthodes de journalisation fournies par le `Log` classe dans `Xamarin.Interactive.Logging`. Consultez le [ `API docs` ](https://developer.xamarin.com/api/type/Xamarin.Interactive.Logging.Log/) pour les méthodes à appeler.
+Débogage des intégrations de côté de l’agent est mieux effectué en utilisant les méthodes de journalisation fournies par le `Log` classe dans `Xamarin.Interactive.Logging`. Consultez le [ `API docs` ](https://developer.xamarin.com/api/type/Xamarin.Interactive.Logging.Log/) pour les méthodes à appeler.
 
-Sur macOS, des messages de journal apparaissent dans les deux le visualiseur du journal (**fenêtre > visionneuse du journal**) et dans le journal du client. Sous Windows, les messages s’affichent uniquement dans le journal du client, car il n’existe aucune visionneuse du journal.
+Sur macOS, les messages de journal s’affichent dans les deux le menu de visionneuse du journal (**fenêtre > visionneuse du journal**) et dans le journal du client. Sur Windows, messages apparaissent uniquement dans le journal du client, car il n’existe aucune visionneuse du journal.
 
 Le journal du client est aux emplacements suivants sur macOS et Windows :
 
 - Mac : `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
 - Windows : `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
-Une chose à savoir est que lors du chargement des intégrations via classiques `#r` mécanisme pendant le développement, l’assembly d’intégration est récupéré comme un _dépendance_ du classeur et empaqueté avec elle, si un chemin d’accès absolu est non utilisé. Cela peut entraîner des modifications s’affichent ne pas propager, comme si la reconstruction de l’intégration n’avait aucun effet.
+Il faut être conscient est que lors du chargement des intégrations via habituelles `#r` mécanisme pendant le développement, l’assembly de l’intégration est récupéré en tant qu’un _dépendance_ du classeur et empaqueté avec lui, si un chemin d’accès absolu est non utilisé. Cela peut entraîner des modifications s’affichent ne pas propagation, comme si la reconstruction de l’intégration n’avait aucun effet.
 
-## <a name="debugging-client-side-integrations"></a>Débogage des intégrations côté client
+## <a name="debugging-client-side-integrations"></a>Débogage des intégrations de côté client
 
-Comme les intégrations côté client sont écrites en JavaScript et chargées dans la surface du navigateur web (consultez la [architecture](~/tools/workbooks/sdk/architecture.md) documentation), la meilleure façon de les déboguer à l’aide des outils de développement de WebKit sur Mac, ou à l’aide du sélecteur de F12 sur Windows .
+Comme les intégrations côté client sont écrites en JavaScript et chargées dans notre surface du navigateur web (voir la [architecture](~/tools/workbooks/sdk/architecture.md) documentation), la meilleure façon de les déboguer à l’aide des outils de développement WebKit sur Mac, ou à l’aide du sélecteur de F12 sur Windows .
 
-Les deux ensembles d’outils permettent d’afficher la source de JavaScript/TypeScript, définir des points d’arrêt, afficher la sortie de la console, inspecter et modifier le modèle DOM.
+Les deux ensembles d’outils permettent d’afficher le code source JavaScript/TypeScript, de définir des points d’arrêt, d’afficher la sortie de la console et d’inspecter et de modifier le modèle DOM.
 
 ### <a name="mac"></a>Mac
 
-Pour activer les outils de développement pour les classeurs Xamarin sur Mac, exécutez la commande suivante dans votre terminal :
+Pour activer les outils de développement pour Xamarin Workbooks sur Mac, exécutez la commande suivante dans votre terminal :
 
 ```shell
 defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
-puis redémarrez les classeurs de Xamarin. Une fois que vous procédez ainsi, vous devez voir **Inspecter un élément** s’affichent dans le menu contextuel et un nouveau **développeur** volet seront disponible dans les préférences de classeurs. Cette option vous permet de choisir si vous souhaitez que les outils de développement ouverts au démarrage :
+puis redémarrez Xamarin Workbooks. Une fois que vous le faites, vous devez voir **Inspecter un élément** s’affichent dans le menu contextuel et un nouveau **développeur** volet sera disponible dans les préférences de classeurs. Cette option vous permet de choisir si vous souhaitez que les outils de développement ouverts au démarrage :
 
 [![Volet de développeur](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png#lightbox)
 
-Cette option est uniquement redémarrage ainsi, vous devez redémarrer le client de classeurs afin qu’il prenne effet sur les classeurs. Activer les outils de développement via le menu contextuel ou les préférences affiche l’interface utilisateur familière de Safari :
+Cette préférence est redémarrage seule ainsi, vous devrez redémarrer le client de classeurs pour qu’elle prenne effet sur les classeurs. Activer les outils de développement via le menu contextuel ou les préférences affiche l’interface familière de Safari :
 
-[![Outils de développement Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png#lightbox)
+[![Outils de développement de Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png#lightbox)
 
-Pour plus d’informations sur les outils de développement Safari, consultez le [documentation d’inspecteur WebKit][webkit-docs].
+Pour plus d’informations sur l’utilisation des outils de développement de Safari, consultez le [documentation d’inspecteur WebKit][webkit-docs].
 
 ### <a name="windows"></a>Windows
 
-Sous Windows, l’équipe IE fournit un outil appelé « Sélecteur F12 » qui est un débogueur distant pour les instances d’Internet Explorer incorporés. Vous pouvez trouver l’outil à l’emplacement suivant :
+Sur Windows, l’équipe IE fournit un outil appelé « Sélecteur F12 » qui est un débogueur distant pour les instances d’Internet Explorer embedded. Vous pouvez trouver l’outil à l’emplacement suivant :
 
 ```shell
 C:\Windows\System32\F12\F12Chooser.exe
 ```
 
-Exécution F12 sélecteur et vous devez voir l’instance embedded optimisant la surface du client de classeurs dans la liste. Choisissez et le F12 familier des outils de débogage à partir d’Internet Explorer seront affiche, attachée au client :
+Exécution Sélecteur F12, vous devriez voir l’instance qui alimente la surface de client de classeurs dans la liste. Choisissez et le F12 familière des outils de débogage à partir d’Internet Explorer seront affiche, attaché au client :
 
 [![Outils F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png#lightbox)
 

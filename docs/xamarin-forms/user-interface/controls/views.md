@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: 52d8d5f6eb38e5cb501d6284d08f7317981e0dcf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 18/10/2018
+ms.openlocfilehash: a51a3bb7726baa9142579a518767dc722870ee06
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998971"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107525"
 ---
 # <a name="xamarinforms-views"></a>Vues Xamarin.Forms
 
@@ -22,7 +22,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 
 ## <a name="views-for-presentation"></a>Affichages de présentation
 
-### <a name="label"></a>Ajouter des contrôles
+### <a name="label"></a>Etiquette
 
 |     |     |
 | --- | --- |
@@ -93,7 +93,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 
 |     |     |
 | --- | --- |
-| [`Stepper`](xref:Xamarin.Forms.Stepper) permet à l’utilisateur à sélectionner un `double` valeur à partir d’une plage de valeurs incrémentielles spécifié avec le [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum), [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), et [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) propriétés.<br /><br />[Documentation de l’API](xref:Xamarin.Forms.Stepper) | [![Exemple d’exécution pas à pas](views-images/Stepper.png "exemple d’exécution pas à pas")](views-images/Stepper-Large.png#lightbox "exemple d’exécution pas à pas")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
+| [`Stepper`](xref:Xamarin.Forms.Stepper) permet à l’utilisateur à sélectionner un `double` valeur à partir d’une plage de valeurs incrémentielles spécifié avec le [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum), [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), et [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) propriétés.<br /><br />[Documentation de l’API](xref:Xamarin.Forms.Stepper)  / [Guide](~/xamarin-forms/user-interface/stepper.md) / [exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) | [![Exemple d’exécution pas à pas](views-images/Stepper.png "exemple d’exécution pas à pas")](views-images/Stepper-Large.png#lightbox "exemple d’exécution pas à pas")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
 ### <a name="switch"></a>Basculer
@@ -114,7 +114,7 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 
 |     |     |
 | --- | --- |
-| [`TimePicker`](xref:Xamarin.Forms.TimePicker) permet à l’utilisateur à sélectionner une fois avec le sélecteur d’heure de plateforme. Le [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) propriété est l’heure sélectionnée. Une application peut surveiller les modifications dans le `Time` propriété en installant un gestionnaire pour le [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) événement.<br /><br />[Documentation de l’API](xref:Xamarin.Forms.TimePicker) | [![Exemple de TimePicker](views-images/TimePicker.png "TimePicker exemple")](views-images/TimePicker-Large.png#lightbox "TimePicker exemple")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
+| [`TimePicker`](xref:Xamarin.Forms.TimePicker) permet à l’utilisateur à sélectionner une fois avec le sélecteur d’heure de plateforme. Le [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) propriété est l’heure sélectionnée. Une application peut surveiller les modifications dans le `Time` propriété en installant un gestionnaire pour le [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) événement.<br /><br />[Documentation de l’API](xref:Xamarin.Forms.TimePicker) / [Guide](~/xamarin-forms/user-interface/timepicker.md) / [exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker) | [![Exemple de TimePicker](views-images/TimePicker.png "TimePicker exemple")](views-images/TimePicker-Large.png#lightbox "TimePicker exemple")<br />[Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-for-editing-text"></a>Vues de modification de texte

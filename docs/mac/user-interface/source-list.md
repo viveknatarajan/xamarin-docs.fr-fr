@@ -4,15 +4,15 @@ description: Cet article aborde l’utilisation des listes de sources dans une a
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: de51395192ab009f5c7fa338a4414ba553610b8c
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 7fa6b128572490ce1fe330b722181e33bbad1ffd
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251034"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122047"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listes de sources dans Xamarin.Mac
 

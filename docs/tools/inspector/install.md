@@ -1,32 +1,32 @@
 ---
 title: Configuration requise et Installation de l’inspecteur
-description: Ce document décrit comment installer l’inspecteur de Xamarin et traite le système d’exploitation pris en charge IDE et plateformes d’applications.
+description: Ce document décrit comment installer Xamarin Inspector et traite le système d’exploitation pris en charge, IDE et plateformes d’applications.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 690329aa1577c66b3aa2794342a8e367477d3a74
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 2357003e3a855981f053c48a596b932d9ba36d90
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066921"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104951"
 ---
 # <a name="inspector-installation-and-requirements"></a>Configuration requise et Installation de l’inspecteur
 
 ## <a name="download-and-installation"></a>Téléchargement et Installation
 
-# <a name="windowstabwindows"></a>[Fenêtres](#tab/windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-1. Téléchargez et installez [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) et sélectionnez le **développement pour appareils mobiles avec .NET** la charge de travail.
-1. [Connectez-vous](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) pour activer votre abonnement d’entreprise.
+1. Téléchargez et installez [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) et sélectionnez le **développement Mobile en .NET** charge de travail.
+1. [Connectez-vous](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) pour activer votre abonnement Enterprise.
 1. [Inspecter](~/tools/inspector/inspect.md) votre propre application !
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 1. Téléchargez et installez [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/mac/).
-1. [Connectez-vous](https://docs.microsoft.com/visualstudio/mac/activation) pour activer votre abonnement d’entreprise.
+1. [Connectez-vous](https://docs.microsoft.com/visualstudio/mac/activation) pour activer votre abonnement Enterprise.
 1. [Inspecter](~/tools/inspector/inspect.md) votre propre application !
 
 -----
@@ -35,61 +35,61 @@ ms.locfileid: "37066921"
 
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 
-- **Mac** -OS X 10.11 ou supérieur
-- **Windows** -Windows 7 ou version ultérieure (avec Internet Explorer ou supérieure à 11 et .NET 4.6.1 ou supérieur)
+- **Mac** -OS X 10.11 ou supérieure
+- **Windows** -Windows 7 ou version ultérieure (avec Internet Explorer 11 ou ultérieur et de .NET 4.6.1 ou version ultérieure)
 
-### <a name="supported-ides"></a>Prise en charge IDE
+### <a name="supported-ides"></a>IDE pris en charge
 
 - Visual Studio pour Mac
-- Visual Studio 2017, avec **développement pour appareils mobiles avec .NET** la charge de travail
+- Visual Studio 2017 avec **développement Mobile en .NET** charge de travail
 
-Inspection de l’application en temps réel est disponible pour les clients d’entreprise.
+Inspection de l’application en direct est disponible pour les clients d’entreprise.
 
 <a name="supported-platforms" />
 
 ### <a name="supported-app-platforms"></a>Plateformes d’applications pris en charge
 
-|Plateforme d’application|Prise en charge IDE|Notes|
+|Plateforme d’application|Prise en charge de l’IDE|Notes|
 |--- |--- |--- |
 |Mac|Uniquement pris en charge dans Visual Studio pour Mac|
 |iOS|Prise en charge dans Visual Studio 2017 et Visual Studio pour Mac| |
-|Android|Prise en charge dans Visual Studio 2017 et Visual Studio pour Mac|Doivent cibler Android > = 4.0.3, avec **fastdev** activé.<br />Doit utiliser des émulateurs de Google, Visual Studio ou Xamarin Android. Les émulateurs Android 7 n’autorise pas de contrôle pour l’instant.|
+|Android|Prise en charge dans Visual Studio 2017 et Visual Studio pour Mac|Doit cibler Android > = 4.0.3, avec **fastdev** activé.<br />Doit utiliser des émulateurs de Google, Visual Studio ou Xamarin Android. Les émulateurs Android 7 n’autorise pas l’inspection pour l’instant.|
 |WPF|Uniquement pris en charge dans Visual Studio 2017|
 
 <a name="reporting-bugs" />
 
 ## <a name="reporting-bugs"></a>Signalement des bogues
 
-Bogues doivent être signalées directement via Visual Studio :
+Bogues doivent être signalés directement par le biais de Visual Studio :
 
 - **Aide > envoyer des commentaires > signaler un problème**
 
-Merci d’inclure toutes les informations suivantes :
+Veuillez inclure toutes les informations suivantes :
 
 ### <a name="platform-version-information"></a>Informations de Version de plateforme
 
-Ces informations sont essentielles.
+Ces informations sont vitales.
 
 Visual Studio pour Mac
 
 - **Visual Studio > à propos de Visual Studio > Afficher les détails > Copier les informations**
-- Collez dans le rapport de bogue
+- Collez dans un rapport de bogues
 
 Visual Studio
 
 - **Aide > à propos de Visual Studio > Copier les informations**
-- Faites-nous savoir votre version de système d’exploitation et que vous exécutez Windows 32 bits ou 64 bits.
+- Donnez-nous votre version de système d’exploitation et que vous exécutez Windows 32 bits ou 64 bits.
 
 ### <a name="log-files"></a>Fichiers journaux
 
-Attachez toujours IDE et l’inspecteur de fichiers journaux du client.
+Attachez toujours IDE et inspecteur de fichiers journaux du client.
 
 Client de l’inspecteur
 
 - Mac : `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
 - Windows : `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
-1.4.x offre également la possibilité de sélectionner le fichier journal dans le Finder (macOS) ou de l’Explorateur (Windows) directement à partir du menu principal :
+1.4.x comprend également la possibilité de sélectionner le fichier journal dans Finder (macOS) ou l’Explorateur (Windows) directement dans le menu principal :
 
 - **Aide > Afficher le fichier journal**
 
@@ -100,23 +100,23 @@ Visual Studio pour Mac
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- Le contenu de Visual Studio **sortie** volet peut également être informatif.
+- Le contenu de Visual Studio **sortie** volet peut également être informative.
 
 ### <a name="project-settings"></a>Paramètres du projet
 
-Si vous pouvez attacher le **.csproj** pour le projet que vous voulez inspecter, il serait très utile. Il est plus facile que posées par les paramètres individuels.
+Si vous pouvez attacher le **.csproj** pour le projet que vous voulez inspecter, il peut être extrêmement utile. Cela est plus facile que de parler de paramètres individuels.
 
 Veuillez également confirmer que vous êtes dans la configuration Debug.
 
-### <a name="selected-devices"></a>Périphériques sélectionnés
+### <a name="selected-devices"></a>Appareils sélectionnés
 
-Pour Android et iOS, il est essentiel que nous savons quel périphérique que vous effectuez le débogage lorsque vous souhaitez examiner. Nous devons savoir :
+Pour Android et iOS, il est essentiel que nous savons quel appareil que vous déboguez sur lorsque vous voulez inspecter. Nous devons savoir :
 
 - Nom du périphérique, comme indiqué dans votre IDE
 - Version du système d’exploitation de votre appareil
-- Android : Vérifiez que vous utilisez x86 émulateur
+- Android : Vérifiez que vous utilisez un x86 émulateur
 - Android : Quelle plate-forme émulateur utilisez-vous ? Émulateur Google ? Émulateur Android de Visual Studio ? Xamarin Android Player ?
 - L’application que vous déboguez correctement s’affichent et fonctionnent dans l’appareil ?
-- L’appareil a-t-il la connectivité de réseau (vérification via un navigateur web)
+- L’appareil a-t-il la connectivité réseau (vérification via le navigateur web) ?
 
 [client-bugs]: https://github.com/Microsoft/workbooks/issues/new

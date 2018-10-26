@@ -4,15 +4,15 @@ description: Cet article explique comment créer des graphiques de SkiaSharp qui
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 23dcc6f11f40283a220aba47b33717e7e5740dbe
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: bf9b0388ff3b024439cfc3488e4057ba32fdab6b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615845"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115079"
 ---
 # <a name="integrating-with-xamarinforms"></a>L’intégration avec Xamarin.Forms
 
@@ -44,7 +44,7 @@ Pour cette page, le `SKCanvasView` classe est instanciée dans le [TapToggleFill
 
 Notez que le `skia` déclaration d’espace de noms XML.
 
-Le `Tapped` gestionnaire pour le `TapGestureRecognizer` objet bascule simplement la valeur d’un champ booléen et appelle le [ `InvalidateSurface` ](https://developer.xamarin.com/api/member/SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface()/) méthode de `SKCanvasView`:
+Le `Tapped` gestionnaire pour le `TapGestureRecognizer` objet bascule simplement la valeur d’un champ booléen et appelle le [ `InvalidateSurface` ](xref:SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface) méthode de `SKCanvasView`:
 
 ```csharp
 bool showFill = true;
@@ -84,15 +84,15 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Le `StrokeWidth` propriété a été définie à 50 pour accentuer la différence. Vous pouvez également voir la largeur de la ligne entière en dessinant l’intérieur tout d’abord, puis sur le contour. Par défaut, les graphiques chiffres dessiné plus loin dans le `PaintSurface` Gestionnaire d’événements masquer celles du plus haut dans le gestionnaire.
+Le `StrokeWidth` propriété a été définie à 50 pour accentuer la différence. Vous pouvez également voir la largeur de la ligne entière en dessinant l’intérieur tout d’abord, puis sur le contour. Par défaut, les graphiques chiffres qui sont dessinées ultérieurement dans le `PaintSurface` Gestionnaire d’événements masquer celles du plus haut dans le gestionnaire.
 
-Le **couleur Explorer** page illustre comment vous pouvez également intégrer des graphiques de SkiaSharp avec d’autres éléments Xamarin.Forms et également la différence entre les deux autres méthodes pour définir les couleurs dans SkiaSharp. La méthode statique [ `SKColor.FromHsl` ](https://developer.xamarin.com/api/member/SkiaSharp.SKColor.FromHsl/p/System.Single/System.Single/System.Single/System.Byte/) méthode crée un `SKColor` valeur basée sur le modèle de Teinte-Saturation-Luminosité :
+Le **couleur Explorer** page illustre comment vous pouvez également intégrer des graphiques de SkiaSharp avec d’autres éléments Xamarin.Forms et également la différence entre les deux autres méthodes pour définir les couleurs dans SkiaSharp. La méthode statique [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) méthode crée un `SKColor` valeur basée sur le modèle de Teinte-Saturation-Luminosité :
 
 ```csharp
 public static SKColor FromHsl (Single h, Single s, Single l, Byte a)
 ```
 
-La méthode statique [ `SKColor.FromHsv` ](https://developer.xamarin.com/api/member/SkiaSharp.SKColor.FromHsv/p/System.Single/System.Single/System.Single/System.Byte/) méthode crée un `SKColor` valeur basée sur le modèle de valeur de Teinte-Saturation similaire :
+La méthode statique [ `SKColor.FromHsv` ](xref:SkiaSharp.SKColor.FromHsv(System.Single,System.Single,System.Single,System.Byte)) méthode crée un `SKColor` valeur basée sur le modèle de valeur de Teinte-Saturation similaire :
 
 ```csharp
 public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
@@ -100,7 +100,7 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 
 Dans les deux cas, le `h` plages argument comprise entre 0 et 360. Le `s`, `l`, et `v` arguments comprises entre 0 et 100. Le `a` (alpha ou l’opacité) plages argument comprise entre 0 et 255.
 
-Le [ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) fichier crée deux `SKCanvasView` des objets dans un `StackLayout` côte à côte avec `Slider` et `Label` vues permettant aux utilisateurs de sélectionner TSL et Valeurs de couleur TSL :
+Le [ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) fichier crée deux `SKCanvasView` des objets dans un `StackLayout` côte à côte avec `Slider` et `Label` vues permettant aux utilisateurs de sélectionner TSL et TSL valeurs de couleur :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -240,5 +240,5 @@ Mais la meilleure façon de faire une idée des deux modèles consiste à les te
 
 ## <a name="related-links"></a>Liens associés
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemple)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
