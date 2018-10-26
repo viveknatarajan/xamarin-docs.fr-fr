@@ -50,7 +50,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-L'événement `ScreenMetricsChanged` est mis à votre disposition pour surveiller l'évolution des informations sur l'écran :
+La classe **DeviceDisplay** expose également un événement auquel il est possible de s'inscrire et qui se déclenche à chaque fois qu'une information de l'écran est modifiée :
 
 ```csharp
 public class ScreenMetricsTest
