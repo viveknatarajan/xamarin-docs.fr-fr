@@ -1,31 +1,26 @@
 ---
-title: Rechargement en direct
+title: Rechargement en direct de Xamarin (version préliminaire)
 description: Voir les modifications apportées à votre XAML répercutées en temps réel, sans nécessiter une autre compilation et déployez.
 ms.prod: xamarin
 ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/11/2018
-ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+robots: noindex
+ms.date: 10/26/2018
+ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
+ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109989"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50142334"
 ---
-# <a name="xamarin-live-reload"></a>Rechargement en direct de Xamarin
-
-![Preview](~/media/shared/preview.png)
-
-Vous permet de Xamarin Live recharger **apporter des modifications à votre XAML et mis à jour en temps réel, sans nécessiter une autre compilation et déployer**. Toute modification apportée à votre XAML sera redéployée sur Enregistrer et répercutées sur votre cible de déploiement.
-
-Étant donné que votre application est compilée lors de l’utilisation de rechargement en direct, il fonctionne avec toutes les bibliothèques et des contrôles tiers. Live works de rechargement sur toutes les plateformes Xamarin.Forms prend en charge, y compris Android, iOS et UWP et fonctionne sur toutes les cibles de déploiement valide, y compris les simulateurs, émulateurs et périphériques physiques.
+# <a name="xamarin-live-reload-preview"></a>Rechargement en direct de Xamarin (version préliminaire)
 
 > [!NOTE]
-> [L’aperçu instantané de rechargement est terminée.](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
->
-> Il existe une discussion à ce sujet sur [ ![Rejoignez la conversation à https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> La version préliminaire de Xamarin Live recharger s’est terminée, et nous souhaitons remercier tout le monde de vos commentaires. Veuillez lire notre [feuille de route](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) pour Visual Studio 2019 pour en savoir plus sur les nouvelles fonctionnalités de productivité que nous travaillons pour Xamarin.Forms. Cette extension reste disponible pour Visual Studio 2017, mais vous ne recevrez pas les mises à jour futures.
+
+Vous permet de Xamarin Live recharger **apporter des modifications à votre XAML et mis à jour en temps réel, sans nécessiter une autre compilation et déployer**. Toute modification apportée à votre XAML sera redéployée sur Enregistrer et répercutées sur votre cible de déploiement.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -86,7 +81,7 @@ Live fonctionne de recharger avec les modifications apportées à n’importe qu
 ## <a name="frequently-asked-questions"></a>Questions fréquemment posées 
 ### <a name="is-xamarin-live-reload-available-on-visual-studio-for-mac"></a>Est Xamarin Live recharger disponibles dans Visual Studio pour Mac ? 
 
-La version préliminaire initiale de Xamarin Live recharger est uniquement disponible pour Visual Studio 2017. Prise en charge pour Visual Studio pour Mac est prévue pour une version ultérieure.
+Non, la version préliminaire de Xamarin Live recharger est uniquement disponible pour Visual Studio 2017.
 
 ### <a name="does-this-work-with-all-libraries-such-as-prism"></a>Cela fonctionne avec toutes les bibliothèques, telles que Prism ? 
 
@@ -94,7 +89,7 @@ La version préliminaire initiale de Xamarin Live recharger est uniquement dispo
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>Quelles modifications redéployer pour le rechargement en direct ? 
 
-Le rechargement en direct s’applique uniquement les modifications apportées à XAML ou CSS. Si vous apportez des modifications dans un fichier c#, une recompilation sera nécessaire. Prise en charge de rechargement c# est prévue pour une version ultérieure.
+Le rechargement en direct s’applique uniquement les modifications apportées à XAML ou CSS. Si vous apportez des modifications dans un fichier c#, une recompilation sera nécessaire. 
 
 ### <a name="what-platforms-are-supported"></a>Quelles plateformes sont prises en charge ? 
 
@@ -121,8 +116,8 @@ Non. En fait, vous pouvez même démarrer toutes les cibles votre application pr
 
 * Uniquement pris en charge dans Visual Studio.
 * Liaison doit être définie sur **ne pas lier** ou **lien les SDK Framework uniquement** 
-* Recharger les ressources à l’échelle de l’application (par exemple, **App.xaml** ou partagé les dictionnaires de ressources), la réinitialisation de navigation de l’application. Cela sera résolu dans la prochaine version de la version préliminaire.
-* Rechargement de ContentView actuellement nécessite de recharger la page conteneur. Cela sera résolu dans la prochaine version de la version préliminaire.
+* Recharger les ressources à l’échelle de l’application (par exemple, **App.xaml** ou partagé les dictionnaires de ressources), la réinitialisation de navigation de l’application. 
+* Rechargement de ContentView actuellement nécessite de recharger la page conteneur.
 * Les éléments contenant AutomationId peuvent provoquer un échec de rechargement.
 * La modification XAML pendant le débogage UWP peut entraîner un blocage de l’exécution. Solution de contournement : Utilisez **exécuter sans débogage (Ctrl + F5)** au lieu de **démarrer le débogage (F5)**.
 
