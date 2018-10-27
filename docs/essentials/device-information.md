@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Informations sur l’appareil'
-description: Ce document décrit la classe DeviceInfo dans Xamarin.Essentials, qui fournit des informations sur l’appareil, l’application est en cours d’exécution.
+description: La classe DeviceInfo fournit des informations générales sur l’appareil.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353800"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **DeviceInfo** classe fournit des informations sur l’appareil que l’application est en cours d’exécution.
+La classe **DeviceInfo** fournit des informations générales sur l’appareil.
 
 ## <a name="using-deviceinfo"></a>À l’aide de DeviceInfo
 
@@ -72,9 +72,9 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="device-type"></a>Type d'appareil
 
-`DeviceInfo.DeviceType` met en corrélation une énumération pour déterminer si l’application s’exécute sur un appareil physique ou virtuel. Un appareil virtuel est un simulateur ou un émulateur.
+La propriété `DeviceInfo.DeviceType` correspond à une énumération qui détermine si l'application est exécutée sur un appareil physique ou virtuel. Un appareil virtuel peut être un simulateur ou un émulateur.
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques relatives à l'implémentation de la plateforme
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 

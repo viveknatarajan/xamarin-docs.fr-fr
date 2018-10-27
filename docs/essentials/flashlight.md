@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Torche'
-description: Ce document décrit la classe torche dans Xamarin.Essentials, ce qui permet d’activer ou désactiver photo de l’appareil flash à transformer en une torche.
+description: La classe Flashlight a la possibilité d’activer ou de désactiver le flash de l’appareil photo afin de l'utiliser comme lampe torche.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
@@ -33,7 +33,7 @@ Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoute
 [assembly: UsesPermission(Android.Manifest.Permission.Camera)]
 ```
 
-OU mettre à jour le manifeste Android :
+Ou mettez à jour le manifeste Android :
 
 Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
 
@@ -94,11 +94,11 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques d'implémentation de la plateforme
 
 ### <a name="androidtabandroid"></a>[Android](#tab/android)
 
-La classe torche a été optimisée basé sur le système d’exploitation de l’appareil.
+La classe Flashlight a été optimisée en fonction du système d’exploitation de l’appareil.
 
 #### <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
 

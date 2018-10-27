@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Essentials : Informations sur l'écran de l'appareil"
-description: Ce document décrit la classe DeviceDisplay dans Xamarin.Essentials, qui fournit des métriques de l’écran de l’appareil sur lequel l’application est en cours d’exécution.
+description: La classe DeviceDisplay fournit des informations à propos de l’écran de l’appareil.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353826"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **DeviceDisplay** classe fournit des informations à propos des métriques d’écran de l’appareil, l’application est en cours d’exécution.
+La classe **DeviceDisplay** fournit des informations à propos de l’écran de l’appareil.
 
 ## <a name="using-devicedisplay"></a>À l’aide de DeviceDisplay
 
@@ -50,7 +50,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-Le **DeviceDisplay** classe expose également un événement est déclenché chaque fois qu’un écran de modifications des métriques qui peut être abonné à :
+La classe **DeviceDisplay** expose également un événement auquel il est possible de s'inscrire et qui se déclenche à chaque fois qu'une information de l'écran est modifiée :
 
 ```csharp
 public class ScreenMetricsTest
