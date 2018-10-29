@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 08/04/2018
 ms.locfileid: "39514308"
 ---
-# <a name="xamarinessentials-battery"></a>Xamarin.Essentials : Batterie
+# <a name="xamarinessentials-battery"></a>Xamarin.Essentials : Battery
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
@@ -26,7 +26,7 @@ Pour accéder aux fonctionnalités de l'API **Battery**, quelques étapes de con
 
 L'autorisation `Battery` est obligatoire et doit être configurée dans le projet Android. Elle peut être ajoutée comme suit :
 
-Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** qui se trouve dans le dossier **Properties** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.BatteryStats)]
@@ -34,13 +34,13 @@ Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoute
 
 OU mettez à jour le manifeste Android :
 
-Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
+Ouvrez le fichier **AndroidManifest.xml** dans le dossier **Proprerties** et ajoutez le code suivant dans le nœud **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez l'autorisation **batterie**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **Manifeste Android**, repérez la zone "**Autorisations requises :**" et cochez l'autorisation **Batterie**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
