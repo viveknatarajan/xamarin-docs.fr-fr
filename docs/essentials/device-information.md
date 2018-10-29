@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Informations sur l’appareil'
-description: La classe DeviceInfo fournit des informations générales sur l’appareil.
+description: La classe DeviceInfo fournit des informations sur l'appareil sur lequel s'exécute l'application.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353800"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **DeviceInfo** fournit des informations générales sur l’appareil.
+La classe **DeviceInfo** fournit des informations sur l'appareil sur lequel s'exécute l'application.
 
 ## <a name="using-deviceinfo"></a>Utilisation de **DeviceInfo**
 
@@ -53,35 +53,32 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[Plateformes](xref:Xamarin.Essentials.DeviceInfo.Platforms)
 
-La propriété `DeviceInfo.Platform`correspond à une chaîne constante mappée au système d'exploitation. Les valeurs peuvent être vérifiées via la classe `Platforms` :
+`DeviceInfo.Platform` correspond à une chaîne constante qui mappe au système d’exploitation. Les valeurs peuvent être vérifiées avec la `Platforms` classe :
 
-* **DeviceInfo.Platforms.iOS** : iOS
-* **DeviceInfo.Platforms.Android** : Android
-* **DeviceInfo.Platforms.UWP** : UWP
-* **DeviceInfo.Platforms.Unsupported** : non pris en charge
+- **DeviceInfo.Platforms.iOS** – iOS
+- **DeviceInfo.Platforms.Android** : Android
+- **DeviceInfo.Platforms.UWP** – UWP
+- **DeviceInfo.Platforms.Unsupported** : non pris en charge
 
 ## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idiomes](xref:Xamarin.Essentials.DeviceInfo.Idioms)
 
-La propriété `DeviceInfo.Idiom` correspond à une chaîne constante mappée au type d'appareil sur lequel est exécutée l'application. Les valeurs peuvent être vérifiées via la classe `Idioms` :
+`DeviceInfo.Idiom` met en corrélation une chaîne constante qui correspond au type d’appareil, l’application est en cours d’exécution. Les valeurs peuvent être vérifiées avec la `Idioms` classe :
 
-* **DeviceInfo.Idioms.Phone** – téléphone
-* **DeviceInfo.Idioms.Tablet** – tablette PC
-* **DeviceInfo.Idioms.Desktop** : ordinateur de bureau
-* **DeviceInfo.Idioms.TV** – TV
-* **DeviceInfo.Idioms.Unsupported** : non pris en charge
+- **DeviceInfo.Idioms.Phone** – téléphone
+- **DeviceInfo.Idioms.Tablet** – Tablet PC
+- **DeviceInfo.Idioms.Desktop** : bureau
+- **DeviceInfo.Idioms.TV** – TV
+- **DeviceInfo.Idioms.Unsupported** : non pris en charge
 
 ## <a name="device-type"></a>Type d'appareil
 
-La propriété `DeviceInfo.DeviceType` correspond à une énumération qui détermine si l'application est exécutée sur un appareil physique ou virtuel. Un appareil virtuel peut être un simulateur ou un émulateur.
+`DeviceInfo.DeviceType` met en corrélation une énumération pour déterminer si l’application s’exécute sur un appareil physique ou virtuel. Un appareil virtuel est un simulateur ou un émulateur.
 
-* **DeviceInfo.DeviceType.Physical** – Appareil physique
-* **DeviceInfo.DeviceType.Virtual** – Emulateur
-
-## <a name="platform-implementation-specifics"></a>Caractéristiques relatives à l'implémentation de la plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-iOS n’expose pas d’API permettant d'obtenir le nom précis de l’appareil iOS utilisé. Au lieu de cela, un identificateur de matériel est retourné, comme _iPhone10, 6_, qui fait référence à l’iPhone X. Aucun mappage de ces identificateurs n'est fourni par Apple, mais vous pouvez le retrouver sur [l’iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (source communautaire/non officielle).
+iOS n’expose pas d’une API pour les développeurs obtenir le nom de l’appareil iOS spécifique. Au lieu de cela, un identificateur de matériel est retourné comme _iPhone10, 6_ qui fait référence à l’iPhone X. Un mappage de ces identificateurs ne sont pas fournies par Apple, mais peut être trouvée sur [l’iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (une source non officielles source).
 
 --------------
 
