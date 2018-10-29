@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de courrier électronique fonctionne en appelant la méthode `ComposeAsync` avec en paramètre un `EmailMessage` qui contient les informations à envoyer avec l'application destinatrice.
+La fonctionnalité Email appelle la méthode ComposeAsync avec EmailMessage qui contient des informations sur l'e-mail :
 
 ```csharp
 public class EmailTest
