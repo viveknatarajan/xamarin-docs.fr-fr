@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Presse-papiers'
+title: 'Xamarin.Essentials : Clipboard'
 description: La classe Clipboard permet de copier et coller du texte dans le presse-papiers système, partagé entre les applications.
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
@@ -16,7 +16,7 @@ ms.locfileid: "38842613"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Clipboard** permet de copier et coller du texte dans le presse-papiers système, partagé entre les applications.
+La classe **Clipboard** permet de copier-coller du texte dans le Presse-papiers système, qui est partagé entre les applications.
 
 ## <a name="using-clipboard"></a>Utilisation de **Clipboard**
 
