@@ -46,14 +46,14 @@ var build = AppInfo.BuildString;
 
 ## <a name="displaying-application-settings"></a>Afficher les paramètres de l'application
 
-La classe **AppInfo** peut également afficher la page des paramètres systèmes gérés par le système d’exploitation spécifiquement pour l’application :
+La classe **AppInfo** peut également afficher la page des paramètres système gérés par le système d’exploitation spécifiquement pour l’application :
 
 ```csharp
 // Display settings page
 AppInfo.OpenSettings();
 ```
 
-Cette page de paramètres permet à l’utilisateur de modifier les autorisations d’application et effectuer d’autres tâches spécifiques à la plateforme.
+Cette page de paramètres permet à l’utilisateur de modifier les autorisations d’application et d’effectuer d’autres tâches spécifiques à la plateforme.
 
 ## <a name="api"></a>API
 
