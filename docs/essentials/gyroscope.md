@@ -18,7 +18,7 @@ ms.locfileid: "39353624"
 
 La classe **Gyroscope** vous permet d'obtenir des informations sur la rotation de l’appareil sur les trois axes principaux.
 
-## <a name="using-gyroscope"></a>Utilisation de **Gyroscope**
+## <a name="using-gyroscope"></a>Utilisation de Gyroscope
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
