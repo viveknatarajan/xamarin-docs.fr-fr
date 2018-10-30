@@ -20,7 +20,7 @@ La classe **Geolocation** fournit des API permettant de récupérer les coordonn
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **Geolocation** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Geolocation**, quelques étapes de configuration spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -28,7 +28,7 @@ Les autorisations `AccessCoarseLocation` et `AccessFineLocation` sont obligatoir
 En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer également que votre application utilise les fonctionnalités matérielles.
 Elles peuvent être ajoutées comme suit :
 
-Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** dans le dossier **Proprerties** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]
@@ -40,7 +40,7 @@ Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoute
 
 Ou mettez à jour le manifeste Android :
 
-Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest** :
+Ouvrez le fichier **AndroidManifest.xml** dans le dossier **Properties** et ajoutez le code suivant dans le nœud **manifest** :
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -50,7 +50,7 @@ Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et aj
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez les autorisations **ACCESS_COARSE_LOCATION** et **ACCESS_FINE_LOCATION**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **Android manifest**, recherchez la zone "**Required permissions:**" et cochez les autorisations **ACCESS_COARSE_LOCATION** et **ACCESS_FINE_LOCATION**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -58,7 +58,7 @@ Le fichier **Info.plist** doit contenir la clé `NSLocationWhenInUseUsageDescrip
 
 Ouvrez l’éditeur de plist et ajoutez la propriété **Privacy - Location When In Use Usage Description** et renseignez un texte à afficher à l’utilisateur.
 
-Ou modifier manuellement le fichier **Info.plist** et ajoutez :
+Ou modifiez manuellement le fichier **Info.plist** et ajoutez :
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -79,7 +79,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-L’API Geolocation demandera automatiquement de consentement de l'utilisateur lorsque cela sera nécessaire.
+L’API Geolocation demandera automatiquement le consentement de l'utilisateur lorsque cela sera nécessaire.
 
 Vous pouvez obtenir la dernière [position](xref:Xamarin.Essentials.Location) connue de l’appareil, appelez la méthode `GetLastKnownLocationAsync`. Cela est souvent plus rapide que de demander une nouvelle lecture, mais cela peut être moins précis.
 
@@ -143,42 +143,42 @@ Le tableau suivant présente la précision par plateforme :
 ### <a name="lowest"></a>Minimale
 
 | Plateforme | Distance (en mètres) |
-| ---------- | -------------------- |
-| Android    | 500                  |
-| iOS        | 3 000                |
-| UWP        | 1000 - 5000          |
+| --- | --- |
+| Android | 500 |
+| iOS | 3 000 |
+| UWP | 1000 - 5000 |
 
 ### <a name="low"></a>Faible
 
 | Plateforme | Distance (en mètres) |
-| ---------- | -------------------- |
-| Android    | 500                  |
-| iOS        | 1000                 |
-| UWP        | 300 - 3000           |
+| --- | --- |
+| Android | 500 |
+| iOS | 1000 |
+| UWP | 300 - 3000 |
 
 ### <a name="medium-default"></a>Moyenne (valeur par défaut)
 
 | Plateforme | Distance (en mètres) |
-| ---------- | -------------------- |
-| Android    | 100 - 500            |
-| iOS        | 100                  |
-| UWP        | 30-500               |
+| --- | --- |
+| Android | 100 - 500 |
+| iOS | 100 |
+| UWP | 30-500 |
 
 ### <a name="high"></a>Haute
 
 | Plateforme | Distance (en mètres) |
-| ---------- | -------------------- |
-| Android    | 0 - 100              |
-| iOS        | 10                   |
-| UWP        | < = 10               |
+| --- | --- |
+| Android | 0 - 100 |
+| iOS | 10 |
+| UWP | < = 10 |
 
 ### <a name="best"></a>Meilleur
 
 | Plateforme | Distance (en mètres) |
-| ---------- | -------------------- |
-| Android    | 0 - 100              |
-| iOS        | ~0                   |
-| UWP        | < = 10               |
+| --- | --- |
+| Android | 0 - 100 |
+| iOS | ~0 |
+| UWP | < = 10 |
 
 <a name="calculate-distance" />
 
