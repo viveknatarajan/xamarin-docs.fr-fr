@@ -76,7 +76,7 @@ public class CompassTest
 
 Android ne fournit pas d’API pour la lecture de la boussole. Nous utilisons donc l’accéléromètre et le magnétomètre pour calculer le nord magnétique, comme recommandé par Google.
 
-Dans de rares cas, vous peut-être voir des résultats incohérents, car les capteurs besoin d’être étalonné, ce qui implique le déplacement de votre appareil dans un mouvement de la figure 8. La meilleure façon de faire cela doit ouvrir Google Maps, appuyez sur le point de votre emplacement et sélectionnez **Calibrate boussole**.
+Dans de rares cas, vous verrez peut-être des résultats incohérents, car les capteurs ont besoin d’être étalonnés, ce qui implique le déplacement de votre appareil dans un mouvement décrivant un 8. La meilleure façon de le faire consiste à ouvrir Google Maps, à appuyer sur le point correspondant à votre emplacement et à sélectionner **Calibrer la boussole**.
 
 Il est bon de noter que l'exécution simultanée de plusieurs capteurs via votre application peut affecter leur vitesse.
 
