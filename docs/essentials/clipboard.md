@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.Essentials : Presse-papiers'
-description: La classe Clipboard permet de copier et coller du texte dans le presse-papiers système, partagé entre les applications.
+title: 'Xamarin.Essentials : Clipboard'
+description: La classe Clipboard permet de copier-coller du texte dans le Presse-papiers système, qui est partagé entre les applications.
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
@@ -12,13 +12,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38842613"
 ---
-# <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials : Presse-papiers
+# <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials : Clipboard
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Clipboard** permet de copier et coller du texte dans le presse-papiers système, partagé entre les applications.
+La classe **Clipboard** permet de copier-coller du texte dans le Presse-papiers système, qui est partagé entre les applications.
 
-## <a name="using-clipboard"></a>À l’aide du Presse-papiers
+## <a name="using-clipboard"></a>Utilisation de **Clipboard**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

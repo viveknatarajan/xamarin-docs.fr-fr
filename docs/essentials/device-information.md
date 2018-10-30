@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Informations sur l’appareil'
-description: La classe DeviceInfo fournit des informations générales sur l’appareil.
+description: La classe DeviceInfo fournit des informations sur l'appareil sur lequel s'exécute l'application.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
@@ -16,9 +16,9 @@ ms.locfileid: "39353800"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **DeviceInfo** fournit des informations générales sur l’appareil.
+La classe **DeviceInfo** fournit des informations sur l'appareil sur lequel s'exécute l'application.
 
-## <a name="using-deviceinfo"></a>À l’aide de DeviceInfo
+## <a name="using-deviceinfo"></a>Utilisation de **DeviceInfo**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

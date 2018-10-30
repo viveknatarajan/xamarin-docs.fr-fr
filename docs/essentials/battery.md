@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Batterie'
+title: 'Xamarin.Essentials : Battery'
 description: La classe batterie vous permet d'obtenir et de surveiller les informations sur la batterie de l’appareil.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 08/04/2018
 ms.locfileid: "39514308"
 ---
-# <a name="xamarinessentials-battery"></a>Xamarin.Essentials : Batterie
+# <a name="xamarinessentials-battery"></a>Xamarin.Essentials : Battery
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
@@ -40,7 +40,7 @@ Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et aj
 <uses-permission android:name="android.permission.BATTERY_STATS" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez l'autorisation **batterie**. Cela met automatiquement à jour le **AndroidManifest.xml** fichier.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **Manifeste Android**, repérez la zone "**Autorisations requises :**" et cochez l'autorisation **Batterie**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -60,7 +60,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Vérifiez les informations sur la batterie :
+Vérifiez les informations actuelles de la batterie :
 
 ```csharp
 var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or -1.0 if unable to determine.
@@ -137,7 +137,7 @@ Aucune spécificité pour cette plateforme.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* L'appareil doit être allumé pour accéder aux API. 
+* L'appareil doit être en cours d'utilisation pour tester les API. 
 * Retourne uniquement des `AC` ou `Battery` pour `PowerSource`.
 * Impossible d’annuler la vibration.
 
