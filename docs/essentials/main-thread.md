@@ -22,7 +22,7 @@ La classe **MainThread** permet aux applications d’exécuter du code sur le th
 
 La plupart des systèmes d’exploitation, y compris iOS, Android et la plateforme Windows universelle, utilisent un modèle de thread unique pour le code de l’interface utilisateur. Ce modèle est nécessaire pour sérialiser les événements d’interface utilisateur, y compris les séquences de touches et d'entrées tactiles. Ce thread est souvent appelé le _thread principal_ ou _thread d’interface utilisateur_ ou _thread d’interface utilisateur_. L’inconvénient de ce modèle est que tout le code qui accède aux éléments d’interface utilisateur doit s’exécuter sur le thread principal de l’application.
 
-Les applications doivent parfois d’utiliser des événements qui appellent le Gestionnaire d’événements sur un thread secondaire de l’exécution. (Les classes Xamarin.Essentials [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md), et [`OrientationSensor`](orientation-sensor.md) peuvent retourner des informations sur des threads secondaires lorsqu’ils sont très utilisés.) Si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, il doit exécuter ce code sur le thread principal. La classe **MainThread** permet à l’application d’exécuter ce code sur le thread principal.
+Les applications doivent parfois utiliser des événements qui appellent le Gestionnaire d’événements sur un thread secondaire de l’exécution. (Les classes Xamarin.Essentials [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md), et [`OrientationSensor`](orientation-sensor.md) peuvent retourner des informations sur des threads secondaires lorsqu’ils sont très utilisés.) Si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, il doit exécuter ce code sur le thread principal. La classe **MainThread** permet à l’application d’exécuter ce code sur le thread principal.
 
 ## <a name="running-code-on-the-main-thread"></a>Code en cours d’exécution sur le Thread principal
 
@@ -61,7 +61,7 @@ MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 
 ## <a name="determining-if-code-is-running-on-the-main-thread"></a>Déterminer si le Code s’exécute sur le Thread principal
 
-La classe `MainThread` permet également à une application de déterminer si un bloc de code particulier est en cours d’exécution sur le thread principal. Le `IsMainThread` retourne de la propriété `true` si le code appelant la propriété est en cours d’exécution sur le thread principal. Un programme peut utiliser cette propriété pour exécuter un code différent pour le thread principal ou un thread secondaire :
+La classe `MainThread` permet également à une application de déterminer si un bloc de code particulier est en cours d’exécution sur le thread principal. Le `IsMainThread` retourne la propriété `true` si le code appelant la propriété est en cours d’exécution sur le thread principal. Un programme peut utiliser cette propriété pour exécuter un code différent pour le thread principal ou un thread secondaire :
 
 ```csharp
 if (MainThread.IsMainThread)
