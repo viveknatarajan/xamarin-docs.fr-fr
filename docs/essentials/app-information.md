@@ -53,7 +53,7 @@ La classe **AppInfo** peut également afficher la page des paramètres systèmes
 AppInfo.OpenSettings();
 ```
 
-Cette page de paramètres permet à l’utilisateur de modifier les autorisations d’application et effectuer d’autres tâches spécifiques à la plateforme.
+Cette page de paramètres permet à l’utilisateur de modifier les autorisations d’application et d’effectuer d’autres tâches spécifiques à la plateforme.
 
 ## <a name="api"></a>API
 
