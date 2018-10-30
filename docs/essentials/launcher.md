@@ -16,7 +16,7 @@ ms.locfileid: "39573631"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Launcher** permet à une application d'ouvrir un URI. Ceci est surtout utilisé pour déclancher des `DeepLinks` via les schémas d’URI personnalisés d’une autre application. Si vous souhaitez seulement ouvrir le navigateur sur un site Web, reportez-vous à la documentation sur le **[navigateur](open-browser.md)**.
+La classe **Launcher** permet à une application d'ouvrir un URI. Ceci est surtout utilisé pour déclencher des `DeepLinks` via les schémas d’URI personnalisés d’une autre application. Si vous souhaitez seulement ouvrir le navigateur sur un site Web, reportez-vous à la documentation sur le **[navigateur](open-browser.md)**.
 
 ## <a name="using-launcher"></a>Utilisation de **Launcher**
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Pour ouvrir un URI, passez un objet `Uri` ou un `string` à la méthode `OpenAsync`. Si vous le souhaitez, la fonction `CanOpenAsync` peut être utilisée pour vérifier si le schéma d’URI que vous passez saura être géré par une application de l’appareil.
+Pour ouvrir un URI, passez un objet `Uri` ou `string` à la méthode `OpenAsync`. Si vous le souhaitez, la fonction `CanOpenAsync` peut être utilisée pour vérifier si le schéma d’URI que vous transmettez pourra être géré par une application de l’appareil.
 
 ```csharp
 public class LauncherTest
