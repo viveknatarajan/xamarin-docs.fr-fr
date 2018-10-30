@@ -20,7 +20,7 @@ La classe **Flashlight** a la possibilité d’activer ou de désactiver le flas
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **Flashlight**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Flashlight**, quelques étapes de configuration spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -35,16 +35,16 @@ Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoute
 
 Ou mettez à jour le manifeste Android :
 
-Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
+Ouvrez le fichier **AndroidManifest.xml** dans le dossier **Properties** et ajoutez le code suivant dans le nœud **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-OU cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez les autorisations **torche** et **caméra**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
+OU cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **Android manifest**, repérez la zone "**Require permissions:**" et cochez les autorisations **Flashlight** et **Camera**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
-En ajoutant ces autorisations [Google Play filtrent automatiquement les périphériques](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sans matériel spécifique. Vous pouvez contourner ce problème en ajoutant le code suivant à votre fichier AssemblyInfo.cs dans votre projet Android :
+En ajoutant ces autorisations [Google Play filtrent automatiquement les périphériques](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sans matériel spécifique. Vous pouvez obtenir contourner ce problème en ajoutant le code suivant à votre fichier AssemblyInfo.cs dans votre projet Android :
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -96,23 +96,23 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques d'implémentation de la plateforme
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+### <a name="androidtabandroid"></a>[Android](#tab/android)
 
 La classe Flashlight a été optimisée en fonction du système d’exploitation de l’appareil.
 
-## <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
+#### <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
 
 Sur les niveaux d’API plus récents, [Torch Mode](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) sera utilisé pour activer ou désactiver le flash de l’appareil.
 
-## <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
+#### <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
 
 Une texture de surface de caméra est créée afin d'activer et de désactiver le flash de l'appareil.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+### <a name="iostabios"></a>[iOS](#tab/ios)
 
 [AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/)  sera utilisé pour activer ou désactiver le flash de l’appareil.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 [Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp)  sera utilisé pour détecter la première lampe à l’arrière de l’appareil et pour l'activer ou la désactiver.
 
