@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Économiseur d'énergie'
+title: 'Xamarin.Essentials : État de l’économiseur d’énergie'
 description: La classe Power vous permet d'obternir et de surveiller les informations sur l'économiseur d’énergie de l’appareil. En rêgle générale, les applications évitent les traitement en arrière-plan lorsque l'économiseur d’énergie de l’appareil est activé.
 ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
 author: charlespetzold
@@ -12,11 +12,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353488"
 ---
-# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials : Économiseur d'énergie
+# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials : État de l’économiseur d’énergie
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Power** vous permet d'obternir et de surveiller les informations sur l'économiseur d’énergie de l’appareil. En rêgle générale, les applications évitent les traitement en arrière-plan lorsque l'économiseur d’énergie de l’appareil est activé.
+La classe **Power** fournit des informations sur l’état de économiseur d’énergie de l'appareil, ce qui indique si ce dernier fonctionne en mode économique. Les applications doivent éviter le traitement en arrière-plan si l’’économiseur d’énergie de l’appareil est activé.
 
 ## <a name="background"></a>Présentation
 
@@ -41,7 +41,7 @@ var status = Power.EnergySaverStatus;
 
 Cette propriété retourne un membre de l'énumération `EnergySaverStatus`, qui est soit `On`, `Off`, ou `Unknown`. Si la propriété retourne `On`, l’application doit éviter les traitements en arrière-plan ou autres activités gourmandes. Si l’état passe à `Unknown` ou `Off`, l’application peut reprendre les traitements en arrière-plan.
 
-L'événement `EnergySaverStatusChanged` est mis à votre disposition pour surveiller l'évolution de l'économiseur d’énergie :
+L’application doit également installer un gestionnaire d’événements. La classe **Power** expose un événement qui est déclenché lorsque l’état de l’économiseur d’énergie change :
 
 ```csharp
 public class EnergySaverTest
