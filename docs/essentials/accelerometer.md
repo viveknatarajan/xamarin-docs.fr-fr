@@ -5,18 +5,18 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 53e7ca70184270662d27043387da836ad44432fe
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 98793d82e553ffe45bf3cd37314a6fe70d856f2f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40184426"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102670"
 ---
-# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials : Accéléromètre
+# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials : accéléromètre
 
 ![Préversion NuGet](~/media/shared/pre-release.png)
 
-La classe **Accelerometer** vous permet de surveiller le capteur de l’accéléromètre de l’appareil, qui indique l’accélération de l’appareil dans un espace tridimensionnel.
+La classe **Accelerometer** permet de surveiller le capteur de type accéléromètre de l’appareil, qui indique l’accélération de l’appareil dans un espace en trois dimensions.
 
 ## <a name="using-accelerometer"></a>Utilisation de **Accelerometer**
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Pour écouter les changements d’accélération il suffit d'appeler les méthodes `Start` et `Stop`. Toutes les variations peuvent être écoutés via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
+La fonctionnalité de l’accéléromètre fonctionne en appelant les méthodes `Start` et `Stop` qui permettent d’écouter les changements d’accélération. Tous les changements sont renvoyés via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
 
 ```csharp
 
@@ -77,11 +77,11 @@ L’axe des X est horizontal et pointe vers la droite, l’axe des Y est vertica
 
 Exemples :
 
-* Lorsque l’appareil est à plat sur une table et est poussé par son côté gauche vers la droite, la valeur d’accélération x est un nombre positive.
+- Lorsque l’appareil est à plat sur une table et est poussé par son côté gauche vers la droite, la valeur d’accélération x est un nombre positive.
 
-* Lorsque l’appareil est à plat sur une table, la valeur de l’accélération est +1.00 G ou (+9,81 m/s^2), qui correspond à l’accélération de l’appareil (0 m/s^2) moins la force de gravité (-9,81 m/s^2) et standardisée en G.
+- Lorsque l’appareil est à plat sur une table, la valeur de l’accélération est +1.00 G ou (+9,81 m/s^2), qui correspond à l’accélération de l’appareil (0 m/s^2) moins la force de gravité (-9,81 m/s^2) et standardisée en G.
 
-* Lorsque l’appareil est à plat sur une table et est poussé vers le ciel avec une accélération de A m/s^2, la valeur d’accélération est égale à A+9,81, qui correspond à l’accélération de l’appareil (+A m/s^2) moins la force de gravité (-9,81 m/s^2) et standardisée en G.
+- Lorsque l’appareil est à plat sur une table et est poussé vers le ciel avec une accélération de A m/s^2, la valeur de l’accélération est égale à A+9,81, qui correspond à l’accélération de l’appareil (+A m/s^2) moins la force de gravité (-9,81 m/s^2) et normalisée en G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

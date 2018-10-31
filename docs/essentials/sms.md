@@ -1,24 +1,24 @@
 ---
-title: 'Xamarin.Essentials : SMS'
-description: La classe Sms dans Xamarin.Essentials permet à une application ouvrir l’application de SMS par défaut avec un message à envoyer à un destinataire spécifié.
+title: 'Xamarin.Essentials : SMS'
+description: La classe Sms de Xamarin.Essentials permet à une application d’ouvrir l’application SMS par défaut avec un message spécifié à envoyer à un destinataire.
 ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a93a67b83ea8f435a5e3ad5d26e1d6cbbb7092f7
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.openlocfilehash: fa55a17e99a11861b98c4d515df882ed3af58a0b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38815595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102735"
 ---
-# <a name="xamarinessentials-sms"></a>Xamarin.Essentials : SMS
+# <a name="xamarinessentials-sms"></a>Xamarin.Essentials : SMS
 
-![Version préliminaire NuGet](~/media/shared/pre-release.png)
+![Préversion NuGet](~/media/shared/pre-release.png)
 
-Le **Sms** classe permet à une application ouvrir l’application de SMS par défaut avec un message à envoyer à un destinataire spécifié.
+La classe **Sms** permet à une application d’ouvrir l’application SMS par défaut avec un message spécifié à envoyer à un destinataire.
 
-## <a name="using-sms"></a>À l’aide de Sms
+## <a name="using-sms"></a>Utiliser Sms
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,7 +26,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité SMS fonctionne en appelant le `ComposeAsync` méthode un `SmsMessage` qui contient le destinataire et le corps du message, qui sont tous deux facultatifs.
+Pour utiliser la fonctionnalité SMS, appelez la méthode `ComposeAsync` avec un `SmsMessage` contenant le destinataire et le corps du message, tous deux facultatifs.
 
 ```csharp
 public class SmsTest
@@ -50,7 +50,31 @@ public class SmsTest
 }
 ```
 
+Vous pouvez également transmettre plusieurs destinataires à un `SmsMessage` :
+
+```csharp
+public class SmsTest
+{
+    public async Task SendSms(string messageText, string[] recipients)
+    {
+        try
+        {
+            var message = new SmsMessage(messageText, recipients);
+            await Sms.ComposeAsync(message);
+        }
+        catch (FeatureNotSupportedException ex)
+        {
+            // Sms is not supported on this device.
+        }
+        catch (Exception ex)
+        {
+            // Other error has occurred.
+        }
+    }
+}
+```
+
 ## <a name="api"></a>API
 
-- [Code source de SMS](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
-- [Documentation de l’API de SMS](xref:Xamarin.Essentials.Sms)
+- [Code source de Sms](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
+- [Documentation de l’API Sms](xref:Xamarin.Essentials.Sms)

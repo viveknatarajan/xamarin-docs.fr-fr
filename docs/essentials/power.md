@@ -1,30 +1,30 @@
 ---
-title: 'Xamarin.Essentials : État de l’économiseur d’énergie'
-description: La classe Power permet à un programme obtenir l’état de l’économiseur d’énergie pour déterminer si l’appareil fonctionne dans un mode de faible puissance.
+title: 'Xamarin.Essentials : État d’économie d’énergie'
+description: La classe Power permet à un programme d’obtenir l’état d’économie d’énergie pour déterminer si l’appareil fonctionne en mode faible consommation d’énergie.
 ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 06/27/2018
-ms.openlocfilehash: 760a305280269734034a817182a8c2a07894ca2b
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 5a89dba16a93b007c5d7312221d8d33e00c7404a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110002"
 ---
-# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials : État de l’économiseur d’énergie
+# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials : État d’économie d’énergie
 
-![Version préliminaire NuGet](~/media/shared/pre-release.png)
+![Préversion NuGet](~/media/shared/pre-release.png)
 
-Le **Power** classe fournit des informations sur l’état du périphérique économiseur d’énergie, ce qui indique si l’appareil est en cours d’exécution dans un mode de faible puissance. Applications doivent éviter le traitement en arrière-plan si l’état d’économiseur d’énergie de l’appareil est activé.
+La classe **Power** fournit des informations sur l’état d’économie d’énergie de l’appareil, qui indique si ce dernier fonctionne en mode faible consommation d’énergie. Les applications doivent de préférence éviter le traitement en arrière-plan lorsque l’économie d’énergie de l’appareil est activée.
 
 ## <a name="background"></a>Présentation
 
-Les appareils qui s’exécutent sur les batteries peuvent être définis dans un mode de faible consommation d’énergie-veille. Parfois, les appareils sont permutés dans ce mode automatiquement, par exemple, lorsque la batterie est inférieure à 20 % de leur capacité. Le système d’exploitation répond aux économiseur d’énergie en réduisant les activités qui ont tendance à épuiser la batterie. Les applications peuvent aider à en évitant le traitement en arrière-plan ou autres activités haute puissance lorsque le mode économiseur d’énergie est activé.
+Les appareils qui fonctionnent sur batterie peuvent être mis en mode faible consommation d’énergie. Parfois, ce basculement se fait automatiquement, par exemple, lorsque la batterie est à moins de 20 % de sa capacité. En mode économie d’énergie, le système d’exploitation réduit les activités qui ont tendance à épuiser la batterie. Les applications peuvent aller dans ce sens en évitant le traitement en arrière-plan ou autres activités énergivores lorsque le mode économie d’énergie est activé.
 
-Pour les appareils Android, le **Power** classe retourne des informations significatives uniquement pour la version d’Android 5.0 (Lollipop) et versions ultérieures.
+Pour les appareils Android, la classe **Power** ne retourne des informations significatives que pour Android version 5.0 (Lollipop) et les versions ultérieures.
 
-## <a name="using-the-power-class"></a>À l’aide de la classe de l’alimentation
+## <a name="using-the-power-class"></a>Utiliser la classe Power
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -32,16 +32,16 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Obtenir l’état actuel de l’énergie-veille de l’appareil à l’aide de la méthode statique `Power.EnergySaverStatus` propriété :
+Utilisez la propriété statique `Power.EnergySaverStatus` pour connaître l’état d’économie d’énergie actuel de l’appareil :
 
 ```csharp
 // Get energy saver status
 var status = Power.EnergySaverStatus;
 ```
 
-Cette propriété retourne un membre de la `EnergySaverStatus` énumération, qui est soit `On`, `Off`, ou `Unknown`. Si la propriété retourne `On`, l’application doit éviter de traitement en arrière-plan ou autres activités susceptibles de consommer beaucoup de puissance.
+Cette propriété retourne un membre de l’énumération `EnergySaverStatus` : `On`, `Off` ou `Unknown`. Si elle retourne `On`, l’application doit de préférence éviter le traitement en arrière-plan ou autres activités susceptibles de consommer beaucoup d’énergie.
 
-L’application doit également installer un gestionnaire d’événements. Le **Power** classe expose un événement est déclenché lorsque l’état de l’économiseur d’énergie change :
+L’application doit également installer un gestionnaire d’événements. La classe **Power** expose un événement qui est déclenché lorsque l’état d’économie d’énergie change :
 
 ```csharp
 public class EnergySaverTest
@@ -60,9 +60,9 @@ public class EnergySaverTest
 }
 ```
 
-Si l’état de l’économiseur d’énergie devient `On`, l’application doit s’arrêter l’exécution de traitement en arrière-plan. Si l’état passe à `Unknown` ou `Off`, l’application puisse reprendre le traitement en arrière-plan.
+Si l’état d’économie d’énergie devient `On`, l’application doit arrêter le traitement en arrière-plan. S’il passe à `Unknown` ou `Off`, elle peut reprendre le traitement en arrière-plan.
 
 ## <a name="api"></a>API
 
-- [Code de source d’alimentation](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Power)
-- [Documentation de l’API](xref:Xamarin.Essentials.Power)
+- [Code source de Power](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Power)
+- [Documentation de l’API Power](xref:Xamarin.Essentials.Power)
