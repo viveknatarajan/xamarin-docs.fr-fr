@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Capteur d’orientation'
+title: 'Xamarin.Essentials : OrientationSensor'
 description: La classe OrientationSensor vous permet de surveiller l’orientation d’un appareil dans l’espace à trois dimensions.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: charlespetzold
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353813"
 ---
-# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials : Capteur d’orientation
+# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials : OrientationSensor
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
@@ -21,7 +21,7 @@ La classe **OrientationSensor** vous permet d'obtenir des informations sur l'ori
 > [!NOTE]
 > Cette classe sert à déterminer l’orientation d’un appareil dans l’espace 3D. Si vous avez besoin déterminer si le périphérique d’affichage est en mode portrait ou paysage, utilisez la propriété `Orientation` de l'objet `ScreenMetrics` disponible dans l'API [`DeviceDisplay`](device-display.md).
 
-## <a name="using-orientationsensor"></a>Utilisation de **OrientationSensor**
+## <a name="using-orientationsensor"></a>Utilisation de OrientationSensor
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -29,8 +29,8 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de **capteur d'orientation** fonctionne en appelant les méthodes `Start` et `Stop` pour démarrer et arrêter l'écoute.
-L'événement `ReadingChanged` est mis à votre disposition pour surveiller l'évolution de l'orientation de l'appareil :
+Le `OrientationSensor` est activé en appelant le `Start` (méthode) pour surveiller les modifications apportées à l’orientation de l’appareil et désactivé en appelant le `Stop` (méthode).
+Toutes les modifications sont renvoyées via la `ReadingChanged` événement. Voici un exemple d’utilisation :
 
 ```csharp
 
@@ -73,12 +73,12 @@ public class OrientationSensorTest
 }
 ```
 
-Les lectures de l'`OrientationSensor` sont retournés sous la forme d’un [`Quaternion`](xref:System.Numerics.Quaternion) qui décrit l’orientation de l’appareil en fonction des deux systèmes de coordonnées 3D :
+`OrientationSensor` lectures sont retournés sous la forme d’un [ `Quaternion` ](xref:System.Numerics.Quaternion) qui décrit l’orientation de l’appareil en fonction des deux systèmes de coordonnées 3D :
 
 L’appareil (généralement un téléphone ou tablette) dispose d’un système de coordonnées 3D avec les axes suivants :
 
 - L'axe X positif pointe vers la droite de l'écran en mode portrait.
-- L’axe Y positif pointe vers le haut de écran en mode portrait.
+- L’axe Y positif pointe vers le haut de l'écran en mode portrait.
 - L’axe Z positif pointe en dehors de l’écran.
 
 Le système de coordonnées 3D de la terre a les axes suivants :
@@ -93,7 +93,7 @@ La valeur d'un `Quaternion` est très étroitement liée à la rotation autour d
 
 (un<sub>x</sub>·sin(Θ/2), un<sub>y</sub>·sin(Θ/2), un<sub>z</sub>·sin(Θ/2), cos(Θ/2))
 
-Il s’agit des systèmes de coordonnées droites, donc avec le curseur de la main droite référencée dans le sens positif de l’axe de rotation, la courbe des doigts indiquent la direction de rotation d’angle positif.
+Il s’agit de systèmes de coordonnées de droitier, avec le pouce de la main droite pointé dans la direction positive de l’axe de rotation, la courbe des doigts indique la direction de rotation pour les angles positifs.
 
 Exemples :
 
