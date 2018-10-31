@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/04/2018
-ms.openlocfilehash: c98dcc30ac89e3df0338df02e14a32575c0dc847
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: a6c0cd057082a6fa4793ca3de18cefd00243e9e3
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39203034"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235062"
 ---
 # <a name="xamarinforms-label"></a>Étiquette de Xamarin.Forms
 
@@ -22,13 +22,13 @@ Le [ `Label` ](xref:Xamarin.Forms.Label) vue est utilisée pour afficher du text
 
 ## <a name="text-decorations"></a>Ornements de texte
 
-Ornements de texte souligné et barré peuvent être appliquées à [ `Label` ](xref:Xamarin.Forms.Label) instances en définissant le `Label.TextDecoration` propriété à un ou plusieurs `TextDecoration` membres de l’énumération :
+Ornements de texte souligné et barré peuvent être appliquées à [ `Label` ](xref:Xamarin.Forms.Label) instances en définissant le `Label.TextDecorations` propriété à un ou plusieurs `TextDecorations` membres de l’énumération :
 
 - `None`
 - `Underline`
 - `Strikethrough`
 
-L’exemple XAML suivant montre comment définir le `Label.TextDecoration` propriété :
+L’exemple XAML suivant montre comment définir le `Label.TextDecorations` propriété :
 
 ```xaml
 <Label Text="This is underlined text." TextDecorations="Underline"  />
@@ -44,7 +44,7 @@ var strikethroughLabel = new Label { Text = "This is text with strikethrough.", 
 var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
 ```
 
-L’émission des captures d’écran suivante le `TextDecoration` appliqués aux membres de l’énumération [ `Label` ](xref:Xamarin.Forms.Label) instances :
+L’émission des captures d’écran suivante le `TextDecorations` appliqués aux membres de l’énumération [ `Label` ](xref:Xamarin.Forms.Label) instances :
 
 ![](label-images/label-textdecorations.png "Étiquettes avec décorations de texte")
 
@@ -158,7 +158,7 @@ Le `FormattedText` propriété est de type [ `FormattedString` ](xref:Xamarin.Fo
 - [`Style`](xref:Xamarin.Forms.Span.Style) – le style à appliquer à l’étendue.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – le texte de l’étendue.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – la couleur du texte dans l’étendue.
-- `TextDecoration` -les ornements à appliquer au texte dans l’étendue. Pour plus d’informations, consultez [ornements de texte](#text-decorations).
+- `TextDecorations` -les ornements à appliquer au texte dans l’étendue. Pour plus d’informations, consultez [ornements de texte](#text-decorations).
 
 En outre, le [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) propriété peut être utilisée pour définir une collection de modules de reconnaissance de mouvement qui répondront aux mouvements sur le [ `Span` ](xref:Xamarin.Forms.Span).
 

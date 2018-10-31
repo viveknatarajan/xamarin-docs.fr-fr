@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 01359d8b5fc402c83006c1c227375557fd2d7149
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a9d7f1eb0051035d6bfcc47e18fb0bdd00b60f5d
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122450"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235114"
 ---
 # <a name="xamarinios-errors"></a>Erreurs de Xamarin.iOS
 
@@ -28,9 +28,9 @@ Par exemple, paramètres, environnement, manque d’outils.
 
 <a name="MT0000" />
 
-### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpbugzillaxamarincom"></a>MT0000 : Une erreur inattendue - Veuillez remplir un rapport de bogue à http://bugzilla.xamarin.com
+### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000 : Une erreur inattendue - Veuillez remplir un rapport de bogue à https://github.com/xamarin/xamarin-macios/issues/new
 
-Une condition d’erreur inattendue s’est produite. Veuillez [un rapport de bogue](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) avec autant d’informations que possible, notamment :
+Une condition d’erreur inattendue s’est produite. Veuillez [un rapport de bogue](https://github.com/xamarin/xamarin-macios/issues/new) avec autant d’informations que possible, notamment :
 
 * Build complète des journaux, avec un maximum de commentaires (par exemple, `-v -v -v -v` dans le **arguments mtouch supplémentaires**) ;
 * Un cas de test minimale pour reproduire l’erreur ; et

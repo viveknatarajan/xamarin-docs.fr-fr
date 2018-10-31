@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: cf85f8d64026b436c7552033525b9d0f381fd687
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: c7a84a8bd00c5685feef84bfc4aacf02e5891c55
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156975"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234984"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Création d’applications mobiles avec xamarin.Forms
 
-<p><img src="Images/Cover-sml.png" title="Création d’applications mobiles avec Xamarin.Forms" align="left" />Le livre <i>création d’applications mobiles avec Xamarin.Forms</i> par Charles Petzold est un guide pour apprendre à écrire des applications Xamarin.Forms. La seule condition requise est la connaissance du langage de programmation c#. Ce livre fournit une exploration complète dans l’interface utilisateur de Xamarin.Forms et couvre également l’animation, MVVM, déclencheurs, les comportements, des dispositions personnalisées, des convertisseurs personnalisés et bien plus encore. 
+<p><img src="images/cover-sml.png" title="Création d’applications mobiles avec Xamarin.Forms" align="left" />Le livre <i>création d’applications mobiles avec Xamarin.Forms</i> par Charles Petzold est un guide pour apprendre à écrire des applications Xamarin.Forms. La seule condition requise est la base de connaissances de la C# langage de programmation. Ce livre fournit une exploration complète dans l’interface utilisateur de Xamarin.Forms et couvre également l’animation, MVVM, déclencheurs, les comportements, des dispositions personnalisées, des convertisseurs personnalisés et bien plus encore. 
 
 Le livre a été publié dans le ressort de 2016 et n’a pas été mis à jour depuis. Il existe une grande partie dans le carnet qui seront utiles reste, mais certains le [matériau est obsolète](#ways-in-which-the-book-is-outdated), et certaines rubriques ne sont plus entièrement correcte ou terminée. 
 
