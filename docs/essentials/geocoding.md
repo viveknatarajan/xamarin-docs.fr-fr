@@ -20,15 +20,15 @@ Le **géocodage** classe fournit des API aux Géocode un placemark un coordonné
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder à la **géocodage** fonctionnalité de la configuration spécifique de plate-forme suivante est requise.
+Pour accéder aux fonctionnalités de l'API **Geocoding**, quelques étapes de configuration spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Aucune configuration supplémentaire n’est requis.
+Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
@@ -50,7 +50,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Obtention de [emplacement](xref:Xamarin.Essentials.Location) coordonnées d’une adresse :
+Obtenir les [coordonnées géographiques](xref:Xamarin.Essentials.Location) d’une adresse :
 
 ```csharp
 try
@@ -74,9 +74,9 @@ catch (Exception ex)
 }
 ```
 
-L’altitude n’est pas toujours disponible. S’il n’est pas disponible, le `Altitude` propriété peut être `null` ou la valeur peut être zéro. Si l’altitude est disponible, la valeur est en mètres au-dessus de plus haut niveau de la mer.
+L’altitude n’est pas toujours disponible. Si elle n’est pas disponible, la propriété `Altitude` pourra être soit `null`, soit zéro. Si l’altitude est disponible, la valeur sera exprimée en mètres par rapport au plus haut niveau de la mer.
 
-Obtention de [placemarks](xref:Xamarin.Essentials.Placemark) pour un ensemble existant de coordonnées :
+Obtenir l'adresse ([placemark](xref:Xamarin.Essentials.Placemark)) à partir de coordonnées :
 
 ```csharp
 try
@@ -116,7 +116,7 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>Distance entre deux emplacements
 
-Le [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) classes définissent les méthodes pour calculer la distance entre deux emplacements. Consultez l’article [ **Xamarin.Essentials : géolocalisation** ](geolocation.md#calculate-distance) pour obtenir un exemple.
+Les classes [`Location`](xref:Xamarin.Essentials.Location) et [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) définissent les méthodes permettant de calculer la distance entre deux emplacements géographiques. Consultez l’article [**Xamarin.Essentials : Géolocalisation**](geolocation.md#calculate-distance) pour obtenir un exemple.
 
 ## <a name="api"></a>API
 
