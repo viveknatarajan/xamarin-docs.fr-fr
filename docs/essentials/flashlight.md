@@ -24,7 +24,7 @@ Pour accéder aux fonctionnalités de l'API **Flashlight**, quelques étapes de 
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Les autorisations torche et caméra sont requises et doivent être configurées dans le projet Android. Il peut être ajouté comme suit :
+Les autorisations `Flashlight` et `Camera` sont obligatoires et doivent être configurées dans le projet Android. Elles peuvent être ajoutées comme suit :
 
 Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
 
@@ -61,7 +61,7 @@ Aucune configuration supplémentaire n’est requise.
 
 -----
 
-## <a name="using-flashlight"></a>À l’aide de torche
+## <a name="using-flashlight"></a>Utilisation de **Flashlight**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -106,7 +106,7 @@ Sur les niveaux d’API plus récents, [Torch Mode](https://developer.android.co
 
 #### <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
 
-Une texture de surface d’exposition de caméra est créée pour activer ou désactiver le `FlashMode` de l’unité de l’appareil photo. 
+Une texture de surface de caméra est créée afin d'activer et de désactiver le `FlashMode` de l'appareil. 
 
 ### <a name="iostabios"></a>[iOS](#tab/ios)
 

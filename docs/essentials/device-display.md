@@ -18,7 +18,7 @@ ms.locfileid: "39353826"
 
 La classe **DeviceDisplay** fournit des informations à propos de l’écran de l’appareil.
 
-## <a name="using-devicedisplay"></a>À l’aide de DeviceDisplay
+## <a name="using-devicedisplay"></a>Utilisation de **DeviceDisplay**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -28,7 +28,7 @@ using Xamarin.Essentials;
 
 ## <a name="screen-metrics"></a>Informations sur l’écran
 
-En plus des informations de base de l’appareil le **DeviceDisplay** classe contient des informations sur l’écran et l’orientation de l’appareil.
+En plus des **[informations générales sur l’appareil](device-information.md)**, la classe **DeviceDisplay** contient des informations sur l’écran et l’orientation de l’appareil.
 
 ```csharp
 // Get Metrics
