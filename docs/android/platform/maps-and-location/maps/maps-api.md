@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 69fc4fe8f8cd6031d592289e81d4c8a5ee14e054
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
-ms.translationtype: HT
+ms.openlocfilehash: a89211e4576b8d22b45bb4f675241d47c49270e6
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "36935137"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235036"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>À l’aide de l’API de cartes Google dans votre application
 
-À l’aide de l’application Maps est très utile, mais parfois vous souhaitez inclure des cartes directement dans votre application. Outre l’intégrée mappe application, Google propose également un [API de mappage native pour Android](hhttps://developers.google.com/maps/documentation/android-sdk/intro).
+À l’aide de l’application Maps est très utile, mais parfois vous souhaitez inclure des cartes directement dans votre application. Outre l’intégrée mappe application, Google propose également un [API de mappage native pour Android](https://developers.google.com/maps/documentation/android-sdk/intro).
 L’API de cartes est approprié pour les cas où vous souhaitez conserver davantage de contrôle sur l’expérience de mappage. Les choses sont possibles avec l’API de cartes sont les suivantes :
 
 -  Modification par programmation le point de vue de la carte.
