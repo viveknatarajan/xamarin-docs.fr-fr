@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials : Géocodage'
-description: La classe de géocodage dans Xamarin.Essentials fournit des API pour les deux Géocode un placemark un coordonnées positionnels et inverser des coordonnées de Géocode vers un placemark.
+description: La classe Geocoding fournit les API permettant de transformer des adresses physiques de lieux _(placemark)_ en coordonnées géographiques et vice versa.
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353673"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **géocodage** classe fournit des API aux Géocode un placemark un coordonnées positionnels et inverser des coordonnées de Géocode vers un placemark.
+La classe **Geocoding** fournit les API permettant de transformer des adresses physiques de lieux _(placemark)_ en coordonnées géographiques et vice versa.
 
 ## <a name="getting-started"></a>Prise en main
 
@@ -32,9 +32,9 @@ Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Une clé API Bing Maps est requise pour utiliser la fonctionnalité de géocodage. Inscrivez-vous pour bénéficier d’un [Bing Maps](https://www.bingmapsportal.com/) compte. Sous **mon compte > Mes clés** créer une nouvelle clé et le remplissage des informations en fonction de votre type d’application (qui doit être **publique application Windows (UWP, 8.x et les versions antérieures)** pour les applications UWP).
+Une clé d'API Bing Maps est requise pour utiliser la fonctionnalité de géocodage. Inscrivez-vous sur [Bing Maps](https://www.bingmapsportal.com/) et créez un compte. Sous **mon compte > Mes clés** vous pouvez créer une nouvelle clé en renseignant des informations sur votre application (qui doit être une **application publique Windows (UWP, 8.x et les versions antérieures)**).
 
-Très tôt dans la vie de votre application avant d’appeler une **géocodage** méthodes définissent la clé d’API :
+Aussi tôt que possible dans l'exécution de votre application, avant d'appeler une autre fonction de **Geocoding**, renseignez votre clé d'API comme ceci :
 
 ```csharp
 Geocoding.MapKey = "YOUR-KEY-HERE";
@@ -42,7 +42,7 @@ Geocoding.MapKey = "YOUR-KEY-HERE";
 
 -----
 
-## <a name="using-geocoding"></a>À l’aide de géocodage
+## <a name="using-geocoding"></a>Utilisation de **Geocoding**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 

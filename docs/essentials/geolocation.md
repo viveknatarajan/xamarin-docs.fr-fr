@@ -24,7 +24,7 @@ Pour accéder aux fonctionnalités de l'API **Geolocation**, quelques étapes de
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Épais et l’emplacement précis des autorisations sont nécessaires et doivent être configurées dans le projet Android. En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer que votre application utilise les fonctionnalités matérielles dans le fichier manifeste. Il peut être ajouté comme suit :
+Les autorisations `AccessCoarseLocation` et `AccessFineLocation` sont obligatoires et doivent être configurées dans le projet Android. En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer également que votre application utilise les fonctionnalités matérielles. Elles peuvent être ajoutées comme suit :
 
 Ouvrez le fichier **AssemblyInfo.cs** dans le dossier **Proprerties** et ajoutez :
 
@@ -38,7 +38,7 @@ Ouvrez le fichier **AssemblyInfo.cs** dans le dossier **Proprerties** et ajoutez
 
 Ou mettez à jour le manifeste Android :
 
-Ouvrez le **AndroidManifest.xml** fichier sous le **propriétés** dossier et ajoutez le code suivant à l’intérieur de la **manifeste** nœud :
+Ouvrez le fichier **AndroidManifest.xml** dans le dossier **Properties** et ajoutez le code suivant dans le nœud **manifest** :
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -56,7 +56,7 @@ Le fichier **Info.plist** doit contenir la clé `NSLocationWhenInUseUsageDescrip
 
 Ouvrez l’éditeur de plist et ajoutez la propriété **Privacy - Location When In Use Usage Description** et renseignez un texte à afficher à l’utilisateur.
 
-Ou modifier manuellement le fichier et ajoutez ce qui suit :
+Ou modifiez manuellement le fichier **Info.plist** et ajoutez :
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -69,7 +69,7 @@ Vous devez définir l'autorisation `Location` pour l’application. Ouvrez le **
 
 -----
 
-## <a name="using-geolocation"></a>À l’aide de géolocalisation
+## <a name="using-geolocation"></a>Utilisation de **Geolocation**
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -182,7 +182,7 @@ Le tableau suivant présente la précision par plateforme :
 
 ## <a name="distance-between-two-locations"></a>Distance entre deux emplacements
 
-Le [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) classes définissent `CalculateDistance` méthodes qui vous permettent de calculer la distance entre deux emplacements géographiques. Cette valeur calculée distance ne tient pas routes ou autres voies de compte et est simplement la distance la plus courte entre les deux points le long de la surface de la terre, également connu sous le _distance orthodromique_ ou quand, le distance « vol d’oiseau. »
+Les classes [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) définissent les méthodes `CalculateDistance` permettant de calculer la distance entre deux emplacements géographiques. Cette valeur calculée ne tient pas en compte les routes ou autres voies, il s'agit simplement de la distance la plus courte entre les deux points le long de la surface de la terre, également connu sous le nom de _distance orthodromique_ ou encore le distance « à vol d’oiseau. »
 
 Voici un exemple :
 

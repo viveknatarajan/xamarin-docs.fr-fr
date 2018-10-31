@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: b51e8b3d931ccbb511afe7d06d9be66fa104fb46
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121839"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235075"
 ---
 # <a name="xamarinandroid-errors-matrix"></a>Matrice des erreurs Xamarin.Android
 
@@ -40,7 +40,7 @@ Ce document fournit des informations sur les différents codes d’erreur à par
 
 |Code d'erreur|Description|
 |--- |--- |
-|XA0000|Erreur inattendue : Veuillez renseigner une [des bogues, rapport](http://bugzilla.xamarin.com).|
+|XA0000|Erreur inattendue : Veuillez renseigner une [des bogues, rapport](https://github.com/xamarin/xamarin-android/issues/new).|
 |XA0001|'-nom_unité a été fourni sans aucune action spécifique au périphérique.|
 |XA0002|La variable d’environnement n’a pas pu être analyser '{0}'.|
 |XA0003|Nom de l’application '{0}.exe' est en conflit avec un nom d’assembly (.dll) produit ou le Kit de développement logiciel.|
