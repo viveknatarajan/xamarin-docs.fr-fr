@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: abf9bf3875f9d64f136224607a6539005fa651c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f50efb7b78db67b310ccddec3eb94bfe4d2e521
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301251"
 ---
 # <a name="android-localization"></a>Localisation Android
 
@@ -36,7 +36,7 @@ Cette valeur sera un identificateur de paramètres régionaux qui contient un co
 
 Voici quelques exemples usuels :
 
-* `en_US` pour l’anglais (États-Unis Statees)
+* `en_US` pour l’anglais (États-Unis)
 * `es_ES` pour l’espagnol (Espagne)
 * `ja_JP` pour le japonais (Japon)
 * `zh_CN` pour le chinois (Chine)
@@ -188,7 +188,7 @@ Valide `quantity` commutateurs sont :
 * Deux
 * quelques
 * many
-* other
+* autre
 
 Ils sont décrits plus en détail dans le [docs Android](http://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Si une langue donnée ne requiert pas de Gestion « spécial », celles `quantity` chaînes va être ignorées (par exemple, en anglais utilise uniquement `one` et `other`; en spécifiant un `zero` chaîne n’a aucun effet, il ne sera pas utilisé).
 

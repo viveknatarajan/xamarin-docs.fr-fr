@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 01dd59d5e94b473316b03f9035d38305fad42880
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 392a0e6c76357ce106477ec4d5037673e5702b43
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994500"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301238"
 ---
 # <a name="xamarinforms-grid"></a>Grille de Xamarin.Forms
 
@@ -22,12 +22,12 @@ ms.locfileid: "38994500"
 
 Cet article couvre :
 
-- **[Objectif](#Purpose)**  &ndash; utilisations courantes pour `Grid`.
-- **[Utilisation](#Usage)**  &ndash; comment utiliser `Grid` pour atteindre votre conception de votre choix.
-  - **[Lignes et colonnes](#Rows_and_Columns)**  &ndash; spécifier les lignes et colonnes pour le `Grid`.
-  - **[Placer des vues](#Placing_Views)**  &ndash; ajouter des vues à la grille à des lignes et colonnes spécifiques.
-  - **[Espacement](#Spacing)**  &ndash; configurer les espaces entre les lignes et colonnes.
-  - **[Étendues](#Spans)**  &ndash; configurer les éléments à s’étendre sur plusieurs lignes ou colonnes.
+- **[Objectif](#purpose)**  &ndash; utilisations courantes pour `Grid`.
+- **[Utilisation](#usage)**  &ndash; comment utiliser `Grid` pour atteindre votre conception de votre choix.
+  - **[Lignes et colonnes](#rows-and-columns)**  &ndash; spécifier les lignes et colonnes pour le `Grid`.
+  - **[Placer des vues](#placing-views-in-a-grid)**  &ndash; ajouter des vues à la grille à des lignes et colonnes spécifiques.
+  - **[Espacement](#spacing)**  &ndash; configurer les espaces entre les lignes et colonnes.
+  - **[Étendues](#spans)**  &ndash; configurer les éléments à s’étendre sur plusieurs lignes ou colonnes.
 
 ![](grid-images/grid.png "Exploration de la grille")
 
@@ -42,8 +42,6 @@ Cet article couvre :
 ## <a name="usage"></a>Utilisation
 
 Contrairement aux tables traditionnelles, `Grid` ne déduit pas le nombre et la taille des lignes et des colonnes à partir du contenu. Au lieu de cela, `Grid` a `RowDefinitions` et `ColumnDefinitions` collections. Ces derniers contiennent les définitions de combien de lignes et de colonnes seront disposés. Les vues sont ajoutés à `Grid` avec la ligne spécifiée et les index de colonne, qui identifient quels ligne et la colonne d’une vue doit être placée dans.
-
-<a name="Rows_and_Columns" />
 
 ### <a name="rows-and-columns"></a>Lignes et colonnes
 
@@ -83,8 +81,6 @@ grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUni
 grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
 grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
 ```
-
-<a name="Placing_Views" />
 
 ### <a name="placing-views-in-a-grid"></a>Placer des vues dans une grille
 
