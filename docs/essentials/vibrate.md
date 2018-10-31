@@ -16,17 +16,17 @@ ms.locfileid: "39353865"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Vibrate** a la possibilité d’activer ou de désactiver le retour haptique, la vibration, de l'appareil pour un temps souhaitée.
+La classe **Vibration** permet de démarrer et d'arrêter la fonctionnalité de vibration pendant une durée souhaitée.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **Vibration** quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Vibration**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 L'autorisation `Vibrate` est obligatoire et doit être configurée dans le projet Android. Elle peut être ajoutée comme suit :
 
-Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** dans le dossier **Properties** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
@@ -34,13 +34,13 @@ Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoute
 
 Ou mettez à jour le manifeste Android :
 
-Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
+Ouvrez le fichier **AndroidManifest.xml** dans le dossier **Properties** et ajoutez le code suivant dans le nœud **Manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez l'autorisation **vibrer**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **Android manifest**, repérez la zone "**Required permissions:**" et cochez l'autorisation **Vibrate**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
