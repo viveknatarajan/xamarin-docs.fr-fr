@@ -16,7 +16,7 @@ ms.locfileid: "38848568"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **ScreenLock** a la possibilité d’empêcher l’écran de se mettre en veille pendant l'execution de l'application.
+La classe **ScreenLock** peut demander d'empêcher le passage en mode veille de l’écran quand l’application est en cours d’exécution.
 
 ## <a name="using-screenlock"></a>Utilisation de **ScreenLock**
 
