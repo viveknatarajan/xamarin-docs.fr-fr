@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Téléphone'
+title: 'Xamarin.Essentials : Le Numéroteur téléphonique'
 description: La classe PhoneDialer permet à une application d'ouvrir l’application de téléphonie par défaut en lui transmettant le numéro de téléphone du destinataire.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
@@ -12,11 +12,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/18/2018
 ms.locfileid: "39130791"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials : Téléphone
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials : Le Numéroteur téléphonique
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **PhoneDialer** permet à une application d'ouvrir l’application de téléphonie par défaut en lui transmettant le numéro de téléphone du destinataire.
+La classe **PhoneDialer** permet à une application d'ouvrir un numéro de téléphone dans le numéroteur.
 
 ## <a name="using-phone-dialer"></a>Utilisation de **PhoneDialer**
 
