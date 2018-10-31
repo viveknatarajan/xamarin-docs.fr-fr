@@ -16,7 +16,7 @@ ms.locfileid: "39353611"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **TextToSpeech** permet d’utiliser l'API de sythèse vocale intégrée à la plateforme. Elle vous permet d'énoncer à l'oral un texte.
+La classe TextToSpeech permet à une application d'utiliser les moteurs de synthèse vocale intégrés pour énoncer du texte à partir de l'appareil, mais aussi pour interroger les langues disponibles que le moteur peut prendre en charge.
 
 ## <a name="using-text-to-speech"></a>Utilisation de **TextToSpeech**
 
@@ -111,9 +111,9 @@ public async Task SpeakNow()
 Les valeurs prises en charge pour ces paramètres sont les suivantes :
 
 | Paramètre | Minimum | Maximum |
-| --------- | :-----: | :-----: |
-| Pitch     | 0       | 2.0     |
-| Volume    | 0       | 1.0     |
+| --- | :---: | :---: |
+| Espacement | 0 | 2.0 |
+| Volume | 0 | 1.0 |
 
 ### <a name="speech-locales"></a>Paramètres régionaux de synthèse vocale
 
