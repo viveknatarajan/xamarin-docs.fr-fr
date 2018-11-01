@@ -5,12 +5,12 @@ ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 06/26/2018
-ms.openlocfilehash: 608cd00a2134e6e3fee89c7ae25bf4627d8b23be
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: db2e79ed5c471c11e2d3dc1afe360843e5dfea6a
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112310"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675443"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials : MainThread
 
@@ -23,6 +23,10 @@ La classe **MainThread** permet aux applications d’exécuter du code sur le th
 La plupart des systèmes d’exploitation, notamment iOS, Android et la plateforme Windows universelle, utilisent un modèle monothread pour le code qui touche à l’interface utilisateur. Ce modèle est nécessaire pour sérialiser les événements de l’interface utilisateur, et en particulier les frappes et entrées tactiles. Ce thread est souvent appelé _thread principal_, _thread d’interface utilisateur_ ou _thread d’IU_. Son inconvénient est que tout le code qui accède aux éléments d’interface utilisateur doit s’exécuter sur le thread principal de l’application. 
 
 Les applications ont parfois besoin d’utiliser des événements qui appellent le Gestionnaire d’événements sur un thread secondaire d’exécution. (Les classes Xamarin.Essentials [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) et [`OrientationSensor`](orientation-sensor.md) sont toutes susceptibles de retourner des informations sur un thread secondaire lorsque le débit utilisé est important.) Si le gestionnaire d’événements a besoin d’accéder à des éléments d’interface utilisateur, il doit exécuter ce code sur le thread principal. La classe **MainThread** permet à l’application de se charger de cette exécution.
+
+## <a name="get-started"></a>Prise en main
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="running-code-on-the-main-thread"></a>Exécuter du code sur le thread principal
 
