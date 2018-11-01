@@ -16,7 +16,7 @@ ms.locfileid: "39353748"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **préférences** classe permet de stocker les préférences de l’application dans un magasin de clé/valeur.
+La classe **Preferences** permet de stocker les préférences de l’application dans un magasin de clé/valeur.
 
 ## <a name="using-preferences"></a>À l’aide des préférences
 
@@ -66,9 +66,9 @@ Les types de données suivants sont pris en charge dans **préférences**:
 
 ## <a name="implementation-details"></a>Détails d’implémentation
 
-Valeurs de `DateTime` sont stockées dans un format de fichier binaire de 64 bits (entier long) à l’aide de deux méthodes définies par le `DateTime` classe : le [ `ToBinary` ](xref:System.DateTime.ToBinary) méthode est utilisée pour encoder le `DateTime` valeur et le [ `FromBinary` ](xref:System.DateTime.FromBinary(System.Int64)) méthode décode la valeur. Consultez la documentation de ces méthodes pour les ajustements apportés à décodé valeurs lorsque un `DateTime` est stocké qui est pas une valeur de temps universel coordonné (UTC).
+Les valeurs de `DateTime` sont stockées en format binaire 64 bits (entier long) à l’aide de deux méthodes définies par la classe `DateTime` : la méthode [`ToBinary`](xref:System.DateTime.ToBinary) est utilisée pour encoder la valeur `DateTime` et la méthode [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) décode la valeur. Consultez la documentation de ces méthodes pour les ajustements susceptibles d'être apportés aux valeurs décodées lorsqu'une valeur `DateTime` est stockée et n'est pas une valeur de temps universel coordonné (UTC).
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
+## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 

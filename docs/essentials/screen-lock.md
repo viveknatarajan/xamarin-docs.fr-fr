@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 3c8110b7abc86fe1d12485579f134997718540e6
 ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38848568"
@@ -16,7 +16,7 @@ ms.locfileid: "38848568"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Le **ScreenLock** classe peut demander à conserver l’écran de tomber en veille quand l’application est en cours d’exécution.
+La classe **ScreenLock** peut demander d'empêcher le passage en mode veille de l’écran quand l’application est en cours d’exécution.
 
 ## <a name="using-screenlock"></a>À l’aide de ScreenLock
 
