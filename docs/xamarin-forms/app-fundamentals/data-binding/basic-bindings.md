@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b52f249b184d49731fd5decdb5877c70e29a3b84
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38998070"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675196"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Liaisons de base de Xamarin.Forms
 
@@ -94,7 +94,7 @@ Toutefois, y compris le nom de classe est un rappel de l’objet cible.
 
 Lorsque vous manipulez le `Slider`, le `Label` fait pivoter en conséquence :
 
-[![Code Basice liaison](basic-bindings-images/basiccodebinding-small.png "liaison du Code de base")](basic-bindings-images/basiccodebinding-large.png#lightbox "liaison du Code de base")
+[![Liaison du Code de base](basic-bindings-images/basiccodebinding-small.png "liaison du Code de base")](basic-bindings-images/basiccodebinding-large.png#lightbox "liaison du Code de base")
 
 Le **base liaison Xaml** page est identique à **liaison de Code base** , à ceci près qu’il définit la liaison de données entier dans XAML :
 

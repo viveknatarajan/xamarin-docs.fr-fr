@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a3d0edbd933339ee8b8a0a277a4f2493cc8dc70e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 25f6cf341fcf47d5dc5320f73855bb2a4e29a9e8
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675521"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Page maître / détails de Xamarin.Forms
 
@@ -45,7 +45,7 @@ La page de détails contient une barre de navigation, dont le contenu est dépen
 Le comportement de l’expérience de navigation entre les pages maître et détail est dépendant de la plate-forme :
 
 - Sur iOS, la page de détails *diapositives* vers la droite, comme les diapositives de page maître de gauche et la partie gauche du code de page est toujours visible.
-- Sur Android, les pages de détail et maître sont *superposés* sur eux.
+- Sur Android, les pages de détail et maître sont *à superposer* sur eux.
 - Sur UWP, les pages de détail et maître sont *permutées*.
 
 Un comportement similaire est appliqué en mode paysage, sauf que la page maître sur iOS et Android a une largeur similaire en tant que la page maître en mode portrait, par conséquent, plus de la page de détails seront visibles.

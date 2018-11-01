@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 34e923e4df76680ad8d0be5f2844ef56b32af4db
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 625564eebf83b3075f61b1a25bde1a78abe1ca2e
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674910"
 ---
 # <a name="creating-a-custom-xamarinforms-theme"></a>Création d’un thème personnalisé Xamarin.Forms
 
@@ -26,7 +26,8 @@ Les trois `BoxView`s indiqué sur la [page de thèmes](~/xamarin-forms/user-inte
 
 Pour comprendre comment ils fonctionnent, le balisage suivant crée un style équivalent qui vous pouvez ajouter directement à votre **App.xaml**.
 
-Remarque la `Class` attribut `Style` (par opposition à la [ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) attribut disponible dans les versions antérieures de Xamarin.Forms).
+Remarque la `Class` attribut `Style` (par opposition à la [`x:Key`](~/xamarin-forms/user-interface/styles/inheritance.md)
+attribut disponible dans les versions antérieures de Xamarin.Forms).
 
 ```xml
 <ResourceDictionary>
@@ -200,7 +201,7 @@ namespace ThemesDemo.Droid
 
         protected override bool CanBeApplied()
         {
-            return Container != null && (int)Android.OS.Build.VERSION.SdkInt >= 21;
+            return Container != null && Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop;
         }
 
         protected override void OnAttachedInternal()

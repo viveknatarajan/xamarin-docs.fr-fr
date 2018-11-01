@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/15/2018
-ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 3c8cc31c21f354b60001cefb919b51bf4d42da9f
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38995412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675014"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introduction à DependencyService
 
@@ -42,7 +42,7 @@ La structure de l’application est expliquée par le diagramme suivant :
 
 ### <a name="interface"></a>Interface
 
-L’interface que vous concevez définira l’interaction avec des fonctionnalités spécifiques à la plateforme. Soyez prudent si vous développez un composant à être partagé en tant que composant ou package Nuget. Conception d’API peut ou l’échec d’un package. L’exemple ci-dessous spécifie une interface simple pour parler de texte qui permet une grande flexibilité en spécifiant les mots à énoncer mais laisse l’implémentation pour être personnalisées pour chaque plateforme :
+L’interface que vous concevez définira l’interaction avec des fonctionnalités spécifiques à la plateforme. Soyez prudent si vous développez un composant à être partagé en tant que composant ou package NuGet. Conception d’API peut ou l’échec d’un package. L’exemple ci-dessous spécifie une interface simple pour parler de texte qui permet une grande flexibilité en spécifiant les mots à énoncer mais laisse l’implémentation pour être personnalisées pour chaque plateforme :
 
 ```csharp
 public interface ITextToSpeech {

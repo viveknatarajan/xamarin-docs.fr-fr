@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 954a0967e034e0321964e12ca0725ae2a85e3bc6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675209"
 ---
 # <a name="xamarinforms-triggers"></a>Déclencheurs de Xamarin.Forms
 
@@ -85,7 +85,8 @@ Les déclencheurs peuvent également être ajoutés à un `Style` déclaration s
 
 Déclencheurs de données utilisent la liaison de données pour surveiller un autre contrôle pour provoquer le `Setter`s appelée. Au lieu du `Property` dans un déclencheur de propriété, affectez la `Binding` attribut à surveiller pour la valeur spécifiée.
 
-L’exemple ci-dessous utilise la syntaxe de liaison de données `{Binding Source={x:Reference entry}, Path=Text.Length}` qui est la façon dont nous faisons référence aux propriétés de contrôle à un autre. Lorsque la longueur de la `entry` est égal à zéro, le déclencheur est activé. Dans cet exemple le déclencheur désactive le bouton lorsque l’entrée est vide.
+L’exemple ci-dessous utilise la syntaxe de liaison de données `{Binding Source={x:Reference entry}, Path=Text.Length}`
+qui est la façon dont nous faisons référence aux propriétés de contrôle à un autre. Lorsque la longueur de la `entry` est égal à zéro, le déclencheur est activé. Dans cet exemple le déclencheur désactive le bouton lorsque l’entrée est vide.
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -164,7 +165,7 @@ Les propriétés exposées par l’action du déclencheur peuvent être définie
 
 Soyez prudent lorsque vous partagez des déclencheurs dans un `ResourceDictionary`, une instance sera partagée parmi les contrôles afin de n’importe quel état une fois configuré s’applique à toutes les.
 
-Notez que les déclencheurs d’événements ne prennent pas en charge `EnterActions` et `ExitActions` [ci-dessous](#enterexit).    
+Notez que les déclencheurs d’événements ne prennent pas en charge `EnterActions` et `ExitActions` [ci-dessous](#enterexit).
 
 <a name="multi" />
 
@@ -202,7 +203,6 @@ Le déclencheur de plusieurs mises à jour uniquement son contrôle lorsque tout
 
 Cela est possible avec un `IValueConverter`. Le code de convertisseur ci-dessous transformations le `Text.Length` de liaison dans un `bool` qui indique si un champ est vide ou non :
 
-
 ```csharp
 public class MultiTriggerConverter : IValueConverter
 {
@@ -234,7 +234,7 @@ Pour utiliser ce convertisseur dans un déclencheur multiple, d’abord l’ajou
 Le XAML est indiqué ci-dessous. Notez les différences suivantes du premier exemple de déclencheur de multiples :
 
 * Le bouton a `IsEnabled="false"` la valeur par défaut.
-* Les conditions du déclencheur multi utilisent le convertisseur pour activer la `Text.Length` valeur dans une valeur booléenne.
+* Les conditions du déclencheur multi utilisent le convertisseur pour activer la `Text.Length` valeur dans un `boolean`.
 * Lorsque toutes les conditions sont `true`, la méthode setter rend le bouton `IsEnabled` propriété `true`.
 
 ```xaml
@@ -266,7 +266,6 @@ Le XAML est indiqué ci-dessous. Notez les différences suivantes du premier exe
 
 Ces captures d’écran montrent la différence entre les deux exemples de déclencheur multi ci-dessus. Dans la partie supérieure des écrans, de saisie de texte seul `Entry` est suffisant pour activer la **enregistrer** bouton.
 Dans la partie inférieure de l’écran, le **connexion** bouton reste inactif jusqu'à ce que les deux champs contiennent des données.
-
 
 ![](triggers-images/multi-requireall.png "Exemples multiTrigger")
 

@@ -1,25 +1,25 @@
 ---
-title: Cycle de vie de Xamarin.Forms
-description: Cet article explique comment réagir à l’application du cycle de vie, y compris les méthodes de cycle de vie, les événements de navigation de page et les événements de navigation modale.
+title: Cycle de vie des applications Xamarin.Forms
+description: Cet article explique comment répondre à l’application du cycle de vie, notamment les méthodes de cycle de vie, les événements de navigation de page et les événements de navigation modale.
 ms.prod: xamarin
 ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: fb651494b63a77ede47dd246ee054b5c67af2a35
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 5bdce8d1752b3d7273ffec233b120266909999c4
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240267"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675118"
 ---
-# <a name="xamarinforms-app-lifecycle"></a>Cycle de vie de Xamarin.Forms
+# <a name="xamarinforms-app-lifecycle"></a>Cycle de vie des applications Xamarin.Forms
 
 Le [ `Application` ](xref:Xamarin.Forms.Application) classe de base offre les fonctionnalités suivantes :
 
 * [Les méthodes de cycle de vie](#Lifecycle_Methods) `OnStart`, `OnSleep`, et `OnResume`.
-* [Page événements de navigation](#page) [ `PageAppearing` ](xref:Xamarin.Forms.Application.PageAppearing), [ `PageDisappearing` ](xref:Xamarin.Forms.Application.PageDisappearing).
+* [Événements de navigation de page](#page) [ `PageAppearing` ](xref:Xamarin.Forms.Application.PageAppearing), [ `PageDisappearing` ](xref:Xamarin.Forms.Application.PageDisappearing).
 * [Événements de navigation modale](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping`, et `ModalPopped`.
 
 <a name="Lifecycle_Methods" />
@@ -32,12 +32,12 @@ Le [ `Application` ](xref:Xamarin.Forms.Application) classe contient trois méth
 
 * **OnSleep** -appelée chaque fois que l’application passe à l’arrière-plan.
 
-* **OnResume** -appelée lors de la reprise de l’application, après l’envoi à l’arrière-plan.
+* **OnResume** -appelé lors de la reprise de l’application, après l’envoi à l’arrière-plan.
 
 Notez qu’il existe *aucune* méthode pour l’arrêt de l’application.
-Dans des circonstances normales (ie. pas un incident) arrêt de l’application se produit à partir de la *OnSleep* état, sans les notifications supplémentaires à votre code.
+Dans des circonstances normales (autrement dit, pas un incident), arrêt de l’application aura lieu à partir de la *OnSleep* état, sans des notifications supplémentaires à votre code.
 
-Pour observer lorsque ces méthodes sont appelées, implémentez un `WriteLine` appeler dans chaque (comme indiqué ci-dessous) et de test sur chaque plateforme.
+Pour observer lorsque ces méthodes sont appelées, vous devez implémenter un `WriteLine` appeler dans chaque (comme indiqué ci-dessous) et de test sur chaque plateforme.
 
 ```csharp
 protected override void OnStart()
@@ -54,7 +54,7 @@ protected override void OnResume()
 }
 ```
 
-Lors de la mise à jour *antérieure* applications Xamarin.Forms (par exemple). créer avec Xamarin.Forms 1.3 ou antérieure), vérifiez que l’activité principale Android inclut `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` dans le `[Activity()]` attribut. Si ce n’est pas présent, vous pourrez observer la `OnStart` méthode est appelée sur la rotation ainsi qu’au premier démarrage de l’application. Cet attribut est automatiquement inclus dans les modèles d’application Xamarin.Forms actuels.
+Lors de la mise à jour *plus anciens* applications Xamarin.Forms (par exemple). créer avec Xamarin.Forms 1.3 ou une version antérieure), vérifiez que l’activité principale Android comprend `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` dans le `[Activity()]` attribut. S’il n’est pas présent, vous pourrez observer le `OnStart` méthode est appelée sur la rotation, ainsi que lors du premier démarrage de l’application. Cet attribut est automatiquement inclus dans les modèles d’application Xamarin.Forms en cours.
 
 <a name="page" />
 
@@ -62,26 +62,26 @@ Lors de la mise à jour *antérieure* applications Xamarin.Forms (par exemple). 
 
 Il existe deux événements sur le [ `Application` ](xref:Xamarin.Forms.Application) classe qui fournissent une notification de pages apparaît et disparaît :
 
-- [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) -déclenché lorsqu’une page est sur le point de s’affichent à l’écran.
+- [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) -déclenché lorsqu’une page est sur le point d’apparaître sur l’écran.
 - [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing) -déclenché lorsqu’une page est sur le point de disparaître de l’écran.
 
 Ces événements peuvent être utilisés dans les scénarios où vous souhaitez effectuer le suivi des pages comme ils apparaissent sur l’écran.
 
 > [!NOTE]
-> Le [ `PageAppearing` ](xref:Xamarin.Forms.Application.PageAppearing) et [ `PageDisappearing` ](xref:Xamarin.Forms.Application.PageDisappearing) sont déclenchés à partir de la [ `Page` ](xref:Xamarin.Forms.Page) classe de base immédiatement après le [ `Page.Appearing` ](xref:Xamarin.Forms.Page.Appearing) et [ `Page.Disappearing` ](xref:Xamarin.Forms.Page.Disappearing) événements, respectivement.
+> Le [ `PageAppearing` ](xref:Xamarin.Forms.Application.PageAppearing) et [ `PageDisappearing` ](xref:Xamarin.Forms.Application.PageDisappearing) événements sont déclenchés à partir de la [ `Page` ](xref:Xamarin.Forms.Page) classe de base immédiatement après le [ `Page.Appearing` ](xref:Xamarin.Forms.Page.Appearing) et [ `Page.Disappearing` ](xref:Xamarin.Forms.Page.Disappearing) événements, respectivement.
 
 <a name="modal" />
 
 ## <a name="modal-navigation-events"></a>Événements de Navigation modale
 
-Il existe quatre événements sur le [ `Application` ](xref:Xamarin.Forms.Application) (classe), chacun ayant leurs propres arguments d’événement, qui vous permettent de répondre aux pages modales qui est indiqué et sera ignoré :
+Il existe quatre événements sur le [ `Application` ](xref:Xamarin.Forms.Application) (classe), chacun ayant leurs propres arguments d’événement, qui vous permettent de répondre à des pages modales étant indiqué et sera ignoré :
 
 * **ModalPushing** - `ModalPushingEventArgs`
 * **ModalPushed** - `ModalPushedEventArgs`
-* **ModalPopping** - le `ModalPoppingEventArgs` classe contient un `Cancel` propriété. Lorsque `Cancel` a la valeur `true` la fenêtre contextuelle modale est annulée.
+* **ModalPopping** - le `ModalPoppingEventArgs` classe contient un `Cancel` propriété. Lorsque `Cancel` est défini sur `true` la fenêtre contextuelle modale est annulée.
 * **ModalPopped** - `ModalPoppedEventArgs`
 
 > [!NOTE]
-> Pour implémenter les méthodes de cycle de vie des applications et les événements de navigation modale, avant tout`Application` méthodes de création d’une application Xamarin.Forms (ie. les applications écrites dans la version 1.2 ou antérieure qui utilisent un statique `GetMainPage` méthode) ont été mis à jour pour créer un par défaut `Application` qui est défini comme parent de `MainPage`.
+> Pour implémenter les méthodes de cycle de vie des applications et les événements de navigation modale, avant tout`Application` méthodes de création d’une application Xamarin.Forms (autrement dit, les applications écrites dans la version 1.2 ou une version antérieure qui utilisent un statique `GetMainPage` méthode) ont été mis à jour pour créer un par défaut `Application` qui est défini comme parent de `MainPage`.
 >
-> Xamarin.Forms les applications qui utilisent ce comportement hérité doivent être mis à jour vers une `Application` sous-classe comme décrit dans la [classe Application](~/xamarin-forms/app-fundamentals/application-class.md) page.
+> Les applications Xamarin.Forms qui utilisent ce comportement hérité doivent être mis à jour à un `Application` sous-classe comme décrit dans le [classe Application](~/xamarin-forms/app-fundamentals/application-class.md) page.

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 4b22b15cfe5aaa836b65fc75f847b88c8e00e80b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7ecf7244fb2ccbe0e4163c89941f9de5138ba713
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674949"
 ---
 # <a name="using-adonet-with-android"></a>À l’aide d’ADO.NET avec Android
 
@@ -38,7 +38,7 @@ Avec le bouton droit **références > modifier les références...**  puis cliqu
 
 Nous allons utiliser le `Mono.Data.Sqlite.SqliteConnection` classe pour créer un fichier de base de données vide, puis à instancier `SqliteCommand` objets que nous pouvons utiliser pour exécuter des instructions SQL par rapport à la base de données.
 
-**Création d’une base de données vide** &ndash; appeler le `CreateFile` avec valide (méthode) (ie. accessible en écriture) chemin d’accès du fichier. Vous devez vérifier si le fichier existe déjà avant d’appeler cette méthode, sinon une nouvelle base de données (vide) est créé par-dessus l’ancienne version, et les données dans l’ancien fichier seront perdues.
+**Création d’une base de données vide** &ndash; appeler le `CreateFile` méthode avec un chemin d’accès de fichier (par exemple, accessible en écriture) valide. Vous devez vérifier si le fichier existe déjà avant d’appeler cette méthode, sinon une nouvelle base de données (vide) est créé par-dessus l’ancienne version, et les données dans l’ancien fichier seront perdues.
 `Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);` Le `dbPath` variable doit être déterminée selon les règles décrites précédemment dans ce document.
 
 **Création d’une connexion de base de données** &ndash; une fois que le fichier de base de données SQLite a été créé, vous pouvez créer un objet de connexion pour accéder aux données. La connexion est construite avec une chaîne de connexion qui prend la forme de `Data Source=file_path`, comme illustré ici :
@@ -143,7 +143,7 @@ public static string DoSomeDataAccess ()
 
 ## <a name="more-complex-queries"></a>Requêtes plus complexes
 
-SQLite autorisant des commandes SQL arbitraires à exécuter sur les données, vous pouvez effectuer tout ce qui `CREATE`, `INSERT`, `UPDATE`, `DELETE`, ou `SELECT` instructions que vous le souhaitez. Vous pouvez découvrir les commandes SQL prises en charge par SQLite sur le site Web de Sqlite. Les instructions SQL sont exécutées à l’aide d’une des trois méthodes sur un `SqliteCommand` objet :
+SQLite autorisant des commandes SQL arbitraires à exécuter sur les données, vous pouvez effectuer tout ce qui `CREATE`, `INSERT`, `UPDATE`, `DELETE`, ou `SELECT` instructions que vous le souhaitez. Vous pouvez découvrir les commandes SQL prises en charge par SQLite sur le site Web de SQLite. Les instructions SQL sont exécutées à l’aide d’une des trois méthodes sur un `SqliteCommand` objet :
 
 -   **ExecuteNonQuery** &ndash; généralement utilisé pour l’insertion de données ou de la création de table. La valeur de retour pour certaines opérations est le nombre de lignes affectées, sinon il est -1.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63f0d4d7ce5f056d8e1db6bc297258c6bc070086
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675547"
 ---
 <a name="compatibility"></a>
 
@@ -747,7 +747,7 @@ De même, votre application peut utiliser `NotificationCompat.InboxStyle` et `No
 Pour prendre en charge les versions antérieures de l’emplacement où Android, `SetCategory` est non disponible, votre code peut vérifier le niveau d’API pendant l’exécution pour appeler de manière conditionnelle `SetCategory` lorsque le niveau d’API est égal à ou supérieur à Android 5.0 (niveau 21 d’API) :
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetCategory (Notification.CategoryEmail);
 }
 ```
@@ -760,7 +760,7 @@ Dans de cet exemple, l’application **Framework cible** est défini sur Android
 Étant donné que Android ne prenait pas en charge des notifications de verrouillage d’écran avant Android 5.0 (niveau d’API 21), `NotificationCompat.Builder` ne prend pas en charge la `SetVisibility` (méthode). Comme expliqué ci-dessus pour `SetCategory`, votre code peut vérifier le niveau d’API au runtime et appelez `SetVisiblity` uniquement lorsqu’il est disponible :
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= 21) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetVisibility (Notification.Public);
 }
 ```

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: ddffb45b8cd8d47371e4ab57f30a467cea45b27d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e31bb46569ed96d514ec87eacaf9f3912dcf3237
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117770"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675157"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Gestion de fichiers dans Xamarin.Forms
 
@@ -107,7 +107,7 @@ listView.ItemsSource = monkeys;
 
 <a name="Embedding_in_Shared_Projects" />
 
-### <a name="embedding-in-shared-projects"></a>L’incorporation dans les projets partagés
+## <a name="embedding-in-shared-projects"></a>L’incorporation dans les projets partagés
 
 Projets partagés peuvent également contenir des fichiers en tant que ressources incorporées, toutefois, étant donné que le contenu d’un projet partagé est compilé dans les projets de références, la ressource de fichier Qu'id peuvent changer incorporée dans le préfixe utilisé pour. Cela signifie que l’ID de ressource pour chaque fichier incorporé peut être différente pour chaque plateforme.
 

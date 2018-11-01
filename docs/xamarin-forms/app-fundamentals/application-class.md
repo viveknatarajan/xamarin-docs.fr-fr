@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: cebdd6fafafae7d1cd6258e6200808731e3c4f29
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9acd1b8f25696267578f5cc269eb1b0c738be571
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675092"
 ---
 # <a name="xamarinforms-app-class"></a>Classe d’application Xamarin.Forms
 
@@ -208,7 +208,7 @@ Doit hériter de la page principale dans le projet UWP `WindowsPage`:
 </forms:WindowsPage>
 ```
 
-Construction de la c# code-behind doit appeler `LoadApplication` pour créer une instance de votre Xamarin.Forms `App`. Notez qu’il est recommandé d’utiliser explicitement l’espace de noms d’application pour qualifier le `App` , car les applications UWP également possèdent leurs propres `App` classe sans rapport avec Xamarin.Forms.
+Le C# code-behind de la construction doit appeler `LoadApplication` pour créer une instance de votre Xamarin.Forms `App`. Notez qu’il est recommandé d’utiliser explicitement l’espace de noms d’application pour qualifier le `App` , car les applications UWP également possèdent leurs propres `App` classe sans rapport avec Xamarin.Forms.
 
 ```csharp
 public sealed partial class MainPage
