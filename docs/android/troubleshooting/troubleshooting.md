@@ -93,7 +93,7 @@ Xamarin.Android prend en charge les propriétés système suivantes :
 
 -   *Debug.mono.Debug*: si une chaîne non vide, cela équivaut à `*mono-debug*`.
 
--   *Debug.mono.env*: séparées par une barre verticale («*|*') liste des variables d’environnement à exporter pendant le démarrage de l’application, *avant* mono a été initialisé. Cela permet de définir des variables d’environnement que la journalisation mono contrôle.
+-   *Debug.mono.env*: séparées par une barre verticale '*|*' liste des variables d’environnement à exporter pendant le démarrage de l’application, *avant* mono a été initialisé. Cela permet de définir des variables d’environnement que la journalisation mono contrôle.
 
     - *Remarque*: étant donné que la valeur est '*|*'-séparés, la valeur doit avoir un niveau supplémentaire de guillemets, comme le \` *interpréteur de commandes adb* \` commande supprimera un jeu de guillemets.
 

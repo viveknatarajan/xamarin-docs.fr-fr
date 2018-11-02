@@ -47,7 +47,7 @@ Vous utilisez peut-être un encodage n’est pas ajouté par défaut. Vérifier 
 Le membre a été probablement supprimé par l’éditeur de liens et par conséquent n’existe pas dans l’assembly lors de l’exécution.  Il existe plusieurs solutions à cela :
 
 -  Ajouter le [[conserver]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) au membre d’attribut.  Cela empêchera l’éditeur de liens de le supprimer.
--  Lors de l’appel [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , utilisez le **- nolink** ou **- linksdkonly** options. -    **-nolink** désactive toutes les liaisons.
+-  Lors de l’appel [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , utilisez le **-nolink** ou **-linksdkonly** options. -    **-nolink**   désactive toutes les liaisons.
 -    **-linksdkonly** sera uniquement lier des assemblys Xamarin.iOS fourni, tel que *monotouch.dll* ou xamarin.ios.dll.
 
 Notez que les assemblys sont liées afin que le fichier exécutable obtenu est plus petit ; Par conséquent, la désactivation de la liaison peut entraîner un fichier exécutable plus volumineux qu’est souhaitable.

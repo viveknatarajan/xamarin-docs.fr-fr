@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f45ea53429b30e634c99403b4159606fc616a4a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 667c98d3140d460a6d4b3a26bd898f4c169d6d85
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120110"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234880"
 ---
 # <a name="linking-xamarinios-apps"></a>Liaison d’applications Xamarin.iOS
 
@@ -53,7 +53,7 @@ Les trois options principales proposées sont décrites ci-dessous :
 
 ### <a name="dont-link"></a>Ne pas lier
 
-La désactivation de la liaison permet de garantir qu’aucun assembly n’est modifié. Pour des raisons de performances, il s’agit du paramètre par défaut lorsque votre IDE cible le simulateur iOS. Pour les builds d’appareils cela doit uniquement être utilisé comme solution de contournement chaque fois que l’éditeur de liens contient un bogue qui empêche l’exécution de votre application. Si votre application ne fonctionne qu’avec *-nolink*, veuillez soumettre un [rapport de bogue](http://bugzilla.xamarin.com).
+La désactivation de la liaison permet de garantir qu’aucun assembly n’est modifié. Pour des raisons de performances, il s’agit du paramètre par défaut lorsque votre IDE cible le simulateur iOS. Pour les builds d’appareils cela doit uniquement être utilisé comme solution de contournement chaque fois que l’éditeur de liens contient un bogue qui empêche l’exécution de votre application. Si votre application ne fonctionne qu’avec *-nolink*, veuillez soumettre un [rapport de bogue](https://github.com/xamarin/xamarin-macios/issues/new).
 
 Cela correspond à l’option *-nolink* durant l’utilisation de l’outil en ligne de commande mtouch.
 
