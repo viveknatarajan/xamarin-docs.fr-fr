@@ -3,15 +3,15 @@ title: Processus de génération
 ms.prod: xamarin
 ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 63e86ef89c8d736640e7677fee6147feacc87bdc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998239"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108923"
 ---
 # <a name="build-process"></a>Processus de génération
 
@@ -327,7 +327,8 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
     Voici des exemples : si `abi` est `armeabi` et si `versionCode` dans le manifeste est `123`, `{abi}{versionCode}` produit un code de version `1123` quand `$(AndroidCreatePackagePerAbi)` a la valeur True ; sinon il produit la valeur 123.
     Si `abi` est `x86_64` et `versionCode` dans le manifeste est `44`. Ceci produit `544` quand `$(AndroidCreatePackagePerAbi)` est True ; sinon, il produit la valeur `44`.
 
-    Si nous incluons une chaîne avec remplissage à gauche `{abi}{versionCode:0000}`, ceci produit `50044`, car nous remplissons le `versionCode` à gauche avec `0`. Vous pouvez aussi utiliser le remplissage décimal, comme `{abi}{versionCode:D4}`, qui fait la même chose que l’exemple précédent.
+    Si nous incluons une chaîne avec remplissage à gauche `{abi}{versionCode:0000}`, ceci produit `50044`, car nous remplissons le `versionCode` à gauche avec `0`. Vous pouvez également utiliser le remplissage décimal tel que `{abi}{versionCode:D4}`
+    qui fait la même chose que l’exemple précédent.
 
     Seules les chaînes avec le format de remplissage « 0 » et « Dx » sont prises en charge, car la valeur DOIT être un entier.
     

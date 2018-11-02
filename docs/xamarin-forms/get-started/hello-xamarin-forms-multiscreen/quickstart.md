@@ -1,18 +1,19 @@
 ---
 title: Xamarin.Forms multi-écran - Démarrage rapide
 description: Cet article montre comment étendre l’application Phoneword en ajoutant un second écran de manière à suivre l’historique des appels pour l’application.
+zone_pivot_groups: platform
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: a4e27f1810a16b5d13838d2e2c1067950586fab3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 957c3e0d3b0637c8b536d920a05397bc711dfb7d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996179"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123477"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms multi-écran - Démarrage rapide
 
@@ -20,9 +21,9 @@ Ce guide de démarrage rapide montre comment étendre l’application Phoneword 
 
 [![](quickstart-images/intro-app-examples-sml.png "Application Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Application Phoneword")
 
-Étendez l’application Phoneword comme suit :
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="update-the-app-with-visual-studio"></a>Mettre à jour l’application avec Visual Studio
 
 1. Lancez Visual Studio. Dans la page de démarrage, cliquez sur **Ouvrir un projet...** puis, dans la boîte de dialogue **Ouvrir un projet**, sélectionnez le fichier solution pour le projet Phoneword :
 
@@ -160,11 +161,15 @@ Ce guide de démarrage rapide montre comment étendre l’application Phoneword 
 
 13. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **Phoneword.Droid**, puis sélectionnez **Définir comme projet de démarrage**.
 14. Dans la barre d’outils de Visual Studio, appuyez sur le bouton **Démarrer** (le bouton triangulaire qui ressemble à un bouton Lire) pour lancer l’application dans un émulateur Android.
-15. Si vous possédez un appareil iOS et répondez à la configuration requise Mac pour le développement Xamarin.Forms, utilisez une technique similaire pour déployer l’application sur l’appareil iOS. Vous pouvez aussi déployer l’application sur le [simulateur distant iOS](~/tools/ios-simulator.md).
+15. Si vous possédez un appareil iOS et répondez à la configuration requise Mac pour le développement Xamarin.Forms, utilisez une technique similaire pour déployer l’application sur l’appareil iOS. Vous pouvez aussi déployer l’application sur le [simulateur distant iOS](~/tools/ios-simulator/index.md).
 
-    Remarque : Les appels téléphoniques ne sont pas pris en charge sur tous les simulateurs.
+    > [!NOTE]
+    > Les appels téléphoniques ne sont pas pris en charge dans les émulateurs d’appareils.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
+
+## <a name="update-the-app-with-visual-studio-for-mac"></a>Mettre à jour l’application avec Visual Studio pour Mac
 
 1. Lancez Visual Studio pour Mac. Dans la page de démarrage, cliquez sur **Ouvrir...** puis, dans la boîte de dialogue, sélectionnez le fichier solution pour le projet Phoneword :
 
@@ -314,12 +319,12 @@ Ce guide de démarrage rapide montre comment étendre l’application Phoneword 
 
     ![](quickstart-images/xs/phone-result-android.png "Émulateur Android")
 
-    Remarque : Les appels téléphoniques ne sont pas pris en charge dans les émulateurs Android.
+    > [!NOTE]
+    > Les appels téléphoniques ne sont pas pris en charge dans les émulateurs d’appareils.
 
------
+::: zone-end
 
 Félicitations ! Vous avez terminé une application Xamarin.Forms multi-écran. La [rubrique suivante](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md) de ce guide passe en revue les étapes qui ont été effectuées dans cette procédure pas à pas afin de comprendre la navigation entre les pages et la liaison de données avec Xamarin.Forms.
-
 
 ## <a name="related-links"></a>Liens associés
 

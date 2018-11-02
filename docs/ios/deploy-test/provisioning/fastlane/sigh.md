@@ -1,20 +1,20 @@
 ---
-title: 'fastlane pour iOS : sigh'
+title: fastlane pour iOS - sigh
 description: Ce document décrit la commande sigh de fastlane, qui sert à créer, renouveler et réparer des profils de provisionnement pour toutes les configurations de build Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 8eedc86807035887cade48c42868649b362b7cb2
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 88cc4899956b03d7236d7aa5c2bd30a5f6880507
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119512"
 ---
-# <a name="fastlane-for-ios--sigh"></a>fastlane pour iOS : sigh
+# <a name="fastlane-for-ios-sigh"></a>fastlane pour iOS - sigh
 
 > [!IMPORTANT]
 > fastlane recommande l’utilisation de [`match`](~/ios/deploy-test/provisioning/fastlane/match.md) pour la génération et la gestion de vos profils d’approvisionnement. Utilisez sigh directement seulement si vous voulez avoir un contrôle total de la signature de code et si vous maîtrisez suffisamment ce sujet.

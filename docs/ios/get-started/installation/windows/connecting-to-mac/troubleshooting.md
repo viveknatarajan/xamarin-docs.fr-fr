@@ -4,15 +4,15 @@ description: Ce guide fournit des étapes de résolution des problèmes qui peuv
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 575e6705679539af6d3e5fae3ffc5721d9f79ba6
-ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
+ms.openlocfilehash: cfc4ecc5bf7ebc5e4c4dae8094fe3eb4ece34068
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36291046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112496"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Résolution des problèmes de connexion pour un hôte de build Xamarin.iOS
 
@@ -305,7 +305,7 @@ Causes connues :
 
 - **Fonctionnalité de sécurité Xamarin 4.1** : Cette erreur _se produit_ si vous revenez à la version antérieure Xamarin 4.0 après avoir utilisé Xamarin 4.1 ou une version ultérieure. Dans ce cas, l’erreur est associée à l’avertissement « La clé privée est chiffrée mais la phrase secrète est vide ». Il s’agit d’un changement _intentionnel_ en raison d’une nouvelle fonctionnalité de sécurité de Xamarin 4.1. **Correctif recommandé** : supprimer **id\_rsa** et **id\_rsa.pub** de **%LOCALAPPDATA%\Xamarin\MonoTouch**, puis reconnectez-vous à l’hôte de build Mac.
 
-- **Restriction de sécurité SSH** : Quand ce message est associé à l’avertissement supplémentaire « Impossible d’authentifier l’utilisateur avec les clés SSH », il signifie généralement que l’un des fichiers ou répertoires dans le chemin d’accès complet **$HOME/.ssh/authorized\_clés** sur le Mac dispose d’autorisations d’écriture activées pour d’_autres_ membres ou des membres du _groupe_. **Correctif courant** : Exécutez `chmod og-w "$HOME"` dans une invite de commandes Terminal sur le Mac. Pour plus d’informations sur le fichier ou répertoire particulier à l’origine du problème, exécutez `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` dans Terminal, puis ouvrez le fichier **sshd.log** à partir de votre bureau et recherchez « Authentication refused: bad ownership or modes » (Authentification refusée : propriété ou modes incorrects).
+- **Restriction de sécurité SSH** : quand ce message est associé à l’avertissement supplémentaire « Impossible d’authentifier l’utilisateur avec les clés SSH », il signifie généralement que l’un des fichiers ou répertoires du chemin complet **$HOME/.ssh/authorized\_keys** sur le Mac dispose d’autorisations d’écriture activées pour d’_autres_ membres ou des membres du _groupe_. **Correctif courant** : Exécutez `chmod og-w "$HOME"` dans une invite de commandes Terminal sur le Mac. Pour plus d’informations sur le fichier ou répertoire particulier à l’origine du problème, exécutez `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` dans Terminal, puis ouvrez le fichier **sshd.log** à partir de votre bureau et recherchez « Authentication refused: bad ownership or modes » (Authentification refusée : propriété ou modes incorrects).
 
 ### <a name="solutions-cannot-be-loaded-from-a-network-share"></a>Impossible de charger des solutions à partir d’un partage réseau
 

@@ -4,15 +4,15 @@ description: Cet article explique comment configurer un appareil Android et le c
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 838e0df80334d6865466b189a65a3f7c590bb590
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 88b09070f41ec586ab0eed82173763bb1706dc62
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103372"
 ---
 # <a name="set-up-device-for-development"></a>Configurer un appareil pour le développement
 
@@ -144,7 +144,7 @@ La dernière étape consiste à connecter l’appareil à l’ordinateur. Pour c
 
 ### <a name="connecting-over-wifi"></a>Connexion via le Wi-Fi
 
-Par défaut, [Android Debug Bridge](http://developer.android.com/tools/help/adb.html) (*ADB*) est configuré pour communiquer avec les appareils Android via une connexion USB. Il est possible de le reconfigurer pour qu’il utilise le protocole TCP/IP au lieu d’une connexion USB. Pour ce faire, l’appareil et l’ordinateur doivent utiliser le même réseau Wi-Fi. Pour configurer votre environnement de manière à permettre le débogage via une connexion Wi-Fi, effectuez ce qui suit à partir de la ligne de commande :
+Par défaut, [Android Debug Bridge](http://developer.android.com/tools/help/adb.html) (*ADB*) est configuré pour communiquer avec les appareils Android via une connexion USB. Il est possible de le reconfigurer pour qu’il utilise le protocole TCP/IP au lieu d’une connexion USB. Pour ce faire, l’appareil et l’ordinateur doivent utiliser le même réseau Wi-Fi. Pour configurer votre environnement de manière à permettre le débogage via une connexion Wi-Fi, effectuez ce qui suit à partir de la ligne de commande :
 
 1.  Déterminez l’adresse IP de votre appareil Android. L’une des méthodes possibles pour déterminer l’adresse IP de l’appareil est de regarder sous **Paramètres > Wi-Fi**, et d’appuyer sur le réseau Wi-Fi auquel est connecté l’appareil. L’écran Paramètres s’ouvre et affiche des informations sur la connexion réseau, comme dans la capture d’écran ci-dessous :
 

@@ -5,25 +5,25 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: 573ab05c066c7ecd064942ba502634c97224d1d7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 0e3a37364b5715650fc893ec4549749b0788087a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786033"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119772"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello, iOS Multiscreen
 
-##  <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Première partie : Guide de démarrage rapide](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
+## <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Première partie : Guide de démarrage rapide](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
 
-Dans la première partie de ce guide, nous allons ajouter un deuxième écran à notre application Phoneword pour suivre l’historique des numéros appelés avec notre application.
+La première partie de ce guide permet d’ajouter un deuxième écran à l’exemple d’application Phoneword pour effectuer le suivi de l’historique des numéros entrés.
 
-##  <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Seconde partie : expérience approfondie](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
+## <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Seconde partie : En profondeur](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
-Dans la seconde partie de ce document, nous allons examiner ce que nous avons créé et discuter de l’architecture, de la navigation et des autres nouveaux concepts iOS rencontrés en chemin.
+La deuxième partie de ce document décrit ce qui a été généré et traite de l’architecture, de la navigation ainsi que des nouveaux concepts iOS rencontrés en chemin.
 
 ## <a name="related-links"></a>Liens associés
 

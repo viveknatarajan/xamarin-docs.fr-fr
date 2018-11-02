@@ -4,15 +4,15 @@ description: Ce document décrit l’éditeur de liens Xamarin.iOS, qui sert à 
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 4bcfc821359e74b34dc2ee11419e8ee86f8cccee
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 7f45ea53429b30e634c99403b4159606fc616a4a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321455"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120110"
 ---
 # <a name="linking-xamarinios-apps"></a>Liaison d’applications Xamarin.iOS
 
@@ -26,13 +26,13 @@ L’éditeur de liens utilise l’analyse statique pour déterminer les différe
 
 ## <a name="linker-behavior"></a>Comportement de l'éditeur de liens
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Le processus de liaison peut être personnalisé via le menu déroulant du comportement de l’éditeur de liens dans **Options du projet**. Pour accéder à ce processus, double-cliquez sur le projet iOS et accédez à **Build iOS > Options de l’éditeur de liens**, comme illustré ci-dessous :
 
 [![](linker-images/image1.png "Options de l’éditeur de liens")](linker-images/image1.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Le processus de liaison peut être personnalisé via le menu déroulant du comportement de l’éditeur de liens dans **Propriétés du projet** dans Visual Studio.
 
@@ -55,7 +55,7 @@ Les trois options principales proposées sont décrites ci-dessous :
 
 La désactivation de la liaison permet de garantir qu’aucun assembly n’est modifié. Pour des raisons de performances, il s’agit du paramètre par défaut lorsque votre IDE cible le simulateur iOS. Pour les builds d’appareils cela doit uniquement être utilisé comme solution de contournement chaque fois que l’éditeur de liens contient un bogue qui empêche l’exécution de votre application. Si votre application ne fonctionne qu’avec *-nolink*, veuillez soumettre un [rapport de bogue](http://bugzilla.xamarin.com).
 
-Cela correspond à l’option *-nolink* lors de l’utilisation de l’outil de ligne de commande mtouch.
+Cela correspond à l’option *-nolink* durant l’utilisation de l’outil en ligne de commande mtouch.
 
 <a name="Link_SDK_assemblies_only" />
 

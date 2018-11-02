@@ -4,15 +4,15 @@ description: TestFlight est un outil racheté par Apple. Il constitue le princip
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: efb0a59ac43ca3e0c4959caa8478a51512e29a3a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 87be250bdc425558a8e386a8209596e18f13b3ed
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785685"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120515"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Utilisation de TestFlight pour distribuer des applications Xamarin.iOS
 
@@ -50,7 +50,7 @@ Vous pouvez vérifier si votre profil de distribution contient le droit bêta au
 
 Le workflow suivant décrit les étapes à effectuer pour commencer à utiliser TestFlight afin de tester les versions bêta de votre application :
 
-1. Si votre application est nouvelle, créez un [enregistrement iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
+1. Pour les nouvelles applications, créez un [enregistrement iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
 2. [Archivez et publiez](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) votre application dans iTunes Connect.
 3. Gérez le bêta testing :
     - Ajoutez les métadonnées.
@@ -98,7 +98,7 @@ Une fois que vous avez créé l’enregistrement iTunes Connect, vous pouvez cha
 
 Tout d’abord, générez votre [distribuable final](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) dans l’IDE, puis [soumettez votre application à Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) par le biais du programme Application Loader ou de la fonction Archiver dans Xcode.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ###  <a name="create-an-archive"></a>Créer une archive
 
@@ -126,7 +126,7 @@ Tout d’abord, générez votre [distribuable final](~/ios/deploy-test/app-distr
 
  Pour plus d’informations sur ces étapes, consultez la section [Soumission de votre application à Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ###  <a name="building-your-final-distributable"></a>Génération de votre distribuable final
  Le plug-in Xamarin pour Visual Studio ne prend pas en charge l’archivage des applications Xamarin.iOS pour la publication sur l’App Store. Pour publier une application iOS à partir de Visual Studio, vous avez le choix entre les Ces équivalents sont :

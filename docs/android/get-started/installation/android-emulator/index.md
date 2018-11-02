@@ -4,15 +4,15 @@ description: Vous pouvez exécuter l’émulateur Android dans diverses configur
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 06/22/2018
-ms.openlocfilehash: f281227ae6ee17548e9c4653d52c7ae6d2bfff2d
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+author: conceptdev
+ms.author: crdun
+ms.date: 08/27/2018
+ms.openlocfilehash: 6ce8f633cdc0fd4616673eb047d640a8703b3a30
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935033"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102527"
 ---
 # <a name="android-emulator-setup"></a>Configuration de l’émulateur Android
 
@@ -29,8 +29,7 @@ Les sections ci-dessous décrivent comment accélérer l’émulateur Android po
 
 ### <a name="hardware-acceleration-for-emulator-performanceandroidget-startedinstallationandroid-emulatorhardware-accelerationmd"></a>[Accélération matérielle pour les performances de l’émulateur](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
 
-Guide pratique pour préparer votre ordinateur afin d’optimiser les performances de l’émulateur Android.
-Comme l’émulateur Android peut être extrêmement lent sans accélération matérielle, nous vous recommandons d’activer l’accélération matérielle sur votre ordinateur avant d’utiliser l’émulateur.
+Comment préparer votre ordinateur pour optimiser les performances de l’émulateur Android à l’aide de la technologie de virtualisation Hyper-V ou HAXM. Comme l’émulateur Android peut être extrêmement lent sans accélération matérielle, nous vous recommandons d’activer l’accélération matérielle sur votre ordinateur avant d’utiliser l’émulateur.
 
 ### <a name="managing-virtual-devices-with-the-android-device-managerandroidget-startedinstallationandroid-emulatordevice-managermd"></a>[Gestion des appareils virtuels avec Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)
 

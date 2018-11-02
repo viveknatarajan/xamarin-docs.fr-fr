@@ -4,15 +4,15 @@ description: Les droits sont des fonctionnalités et des autorisations de sécur
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/15/2017
-ms.openlocfilehash: 7e5ace306b580ba76986e89367de84e5bfd9cc40
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 08/13/2018
+ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785302"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103411"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Utilisation des droits dans Xamarin.iOS
 
@@ -20,25 +20,24 @@ _Les droits sont des fonctionnalités et des autorisations de sécurité particu
 
 Dans iOS, les applications s’exécutent dans un _bac à sable (sandbox)_, qui fournit un ensemble de règles visant à limiter l’accès entre l’application et certaines ressources système ou données utilisateur. Utilisez des _droits_ pour demander au système d’augmenter le bac à sable afin d’ajouter des fonctionnalités à votre application.
 
-Pour étendre les fonctionnalités de votre application, ajoutez les droits appropriés dans le fichier Entitlements.plist de l’application. Seules certaines fonctionnalités peuvent être étendues. Celles-ci sont répertoriées dans le guide [Utilisation des fonctionnalités](~/ios/deploy-test/provisioning/capabilities/index.md) et décrites [ci-dessous](#keyreference). Les droits sont passés au système sous forme de paires clé-valeur. En règle générale, un seul droit est requis pour chaque fonctionnalité. Les clés et valeurs spécifiques sont décrites dans la section [Informations de référence sur les clés de droits](#keyreference), plus loin dans ce guide.
+Pour étendre les fonctionnalités de votre application, ajoutez les droits appropriés dans le fichier Entitlements.plist de l’application. Seules certaines fonctionnalités peuvent être étendues. Celles-ci sont répertoriées dans le guide [Utilisation des fonctionnalités](~/ios/deploy-test/provisioning/capabilities/index.md) et décrites [ci-dessous](#entitlement-key-reference). Les droits sont passés au système sous forme de paires clé-valeur. En règle générale, un seul droit est requis pour chaque fonctionnalité. Les clés et valeurs spécifiques sont décrites dans la section [Informations de référence sur les clés de droits](#entitlement-key-reference), plus loin dans ce guide.
 Visual Studio pour Mac et Visual Studio offrent une interface simple pour l’ajout de droits dans une application Xamarin.iOS à l’aide de l’éditeur Entitlements.plist.
 Ce guide présente l’éditeur Entitlements.plist et explique comment l’utiliser. Il fournit également des informations de référence sur l’ensemble des droits que vous pouvez ajouter à un projet iOS pour chaque fonctionnalité.
 
 ## <a name="entitlements-and-provisioning"></a>Droits et provisionnement
 
-
-Le fichier Entitlements.plist est utilisé pour spécifier les droits et signer le bundle d’application.
+Le fichier Entitlements.plist sert à spécifier les droits et à signer le bundle d’applications.
 
 Toutefois, un provisionnement supplémentaire est nécessaire pour garantir la signature correcte du code de l’application. Le profil de provisionnement utilisé doit contenir un ID d’application pour lequel la fonctionnalité requise est activée. Pour plus d’informations sur la procédure à suivre, consultez le guide [Utilisation des fonctionnalités](~/ios/deploy-test/provisioning/capabilities/index.md).
 
 > [!IMPORTANT]
-> Le fichier Entitlements.plist permet de renseigner plus facilement les propriétés appropriées pour une application utilisant des fonctionnalités, mais il ne permet pas de générer un profil d’approvisionnement, car il n’est pas lié à un compte de développeur Apple. Vous devez générer un profil de provisionnement à partir du portail des développeurs pour pouvoir déployer et distribuer l’application.
+> Le fichier Entitlements.plist permet de renseigner les propriétés appropriées d’une application utilisant des fonctionnalités. Toutefois, il ne permet pas de générer un profil de provisionnement, car il n’est pas lié à un compte de développeur Apple. Vous devez générer un profil de provisionnement à partir du portail des développeurs pour pouvoir déployer et distribuer l’application.
 
 ## <a name="set-entitlements-in-a-xamarinios-project"></a>Définir des droits dans un projet Xamarin.iOS
 
 En plus de sélectionner et configurer les services d’application nécessaires quand vous définissez l’ID d’application, vous devez configurer les droits dans le projet Xamarin.iOS en modifiant les fichiers **Info.plist** et  **Entitlements.plist**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Pour configurer les droits dans Visual Studio pour Mac, effectuez les étapes suivantes :
 
@@ -55,7 +54,7 @@ Pour configurer les droits dans Visual Studio pour Mac, effectuez les étapes su
 5. Sélectionnez et configurez les droits requis pour l’application Xamarin.iOS afin qu’ils correspondent à la configuration définie au moment de la création de l’ID d’application.
 6. Enregistrez les modifications apportées au fichier **Entitlements.plist**.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Pour configurer les droits dans Visual Studio, effectuez les étapes suivantes :
 
@@ -74,10 +73,7 @@ Pour configurer les droits dans Visual Studio, effectuez les étapes suivantes 
 5. Sélectionnez et configurez les droits requis pour l’application Xamarin.iOS afin qu’ils correspondent à la configuration définie au moment de la création de l’ID d’application.
 6. Enregistrez les modifications apportées au fichier **Entitlements.plist**.
 
-
 -----
-
-<a name="add-new" />
 
 ## <a name="adding-a-new-entitlementsplist-file"></a>Ajout d’un nouveau fichier Entitlements.plist
 
@@ -91,8 +87,6 @@ Pour ajouter un fichier Entitlements.plist à votre projet Xamarin.iOS, effectue
 2.  Dans la boîte de dialogue Nouveau fichier, sélectionnez **iOS > Liste de propriétés** et nommez la liste « Entitlements » :
 
     ![Boîte de dialogue Nouveau fichier](entitlements-images/image2.png)
-
-<a name="keyreference" />
 
 ## <a name="entitlement-key-reference"></a>Informations de référence sur les clés de droits
 
@@ -150,11 +144,11 @@ Vous pouvez ajouter les clés de droits par le biais du panneau source de l’é
 ### <a name="push-notifications"></a>Push Notifications
 
 - **Clé** : aps-environment
-- **Chaîne** : `production` OU `development`
+- **Chaîne** : `development` ou `production`
 
 ### <a name="siri"></a>Siri
 
-- **Description** : SiriKit permet à une application iOS de fournir des services qui sont accessibles à Siri et à l’application Maps sur un appareil iOS par le biais d’App Extensions et des nouveaux frameworks Intents et Intents UI. Pour plus d’informations, consultez le guide Présentation de SiriKit.
+- **Description** : SiriKit permet à une application iOS de fournir des services accessibles à Siri et à l’application Maps sur un appareil iOS à l’aide des extensions d’application, ainsi que des nouveaux frameworks Intents et Intents UI. Pour plus d’informations, consultez le guide Présentation de SiriKit.
     - **Clé** : com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>VPN personnel
@@ -203,6 +197,12 @@ Vous pouvez ajouter les clés de droits par le biais du panneau source de l’é
 - **Description** : Wireless Accessory Configuration permet à votre application de configurer des accessoires WiFi MFI
     - **Clé** : com.apple.external-accessory.wireless-configuration
     - **Valeur booléenne** : YES
+
+### <a name="classkit"></a>ClassKit
+
+- **Description** : ClassKit permet aux enseignants d’afficher la progression de l’étudiant sur les activités qui lui ont été affectées dans votre application.
+    - **Clé** : com.apple.developer.ClassKit-environment
+    - **Chaîne** : `development` ou `production`
 
 ## <a name="summary"></a>Récapitulatif
 

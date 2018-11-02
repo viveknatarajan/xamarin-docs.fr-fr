@@ -4,15 +4,15 @@ description: Ce guide explique comment planifier des applications et comment uti
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780529"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104841"
 ---
 # <a name="ios-build-mechanics"></a>Mécanismes de génération d’iOS
 
@@ -27,7 +27,7 @@ Les vitesses de génération Xamarin peuvent également être affectées par div
 
 ## <a name="timing-apps"></a>Minutage des applications
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Pour activer la sortie MSBuild de diagnostic dans Visual Studio pour Mac :
 
@@ -40,7 +40,7 @@ Pour activer la sortie MSBuild de diagnostic dans Visual Studio pour Mac :
 7. Afficher la sortie de diagnostic dans le Panneau Erreurs (Afficher > Panneaux > Erreurs) en cliquant sur le bouton Sortie de génération
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Pour activer la sortie MSBuild de diagnostic dans Visual Studio :
 
@@ -69,7 +69,7 @@ Total time: 1554 ms
 
 Les outils Xamarin fonctionnent techniquement sur n’importe quel Mac pouvant exécuter OS X 10.10 Yosemite ou version ultérieure. Toutefois, les expériences de développement et les durées de génération peuvent être gênées par les performances du Mac.
 
-Dans l’état déconnecté, Visual Studio sur Windows effectue uniquement la phase de compilation C# et n’essaie pas d’effectuer de liaison ou de compilation AOT, d’empaqueter l’application dans un ensemble _.app_ ou de signer l’ensemble d’applications. (La phase de compilation C# constitue rarement un goulot d’étranglement.) Essayez d’identifier où dans le pipeline la génération ralentit en effectuant la génération directement sur l’hôte de build Mac dans Visual Studio pour Mac.
+À l’état déconnecté, Visual Studio pour Windows exécute uniquement la phase de compilation C#. Il n’essaie pas d’effectuer de liaison ou de compilation AOT, d’empaqueter l’application dans un bundle _.app_ , ou de signer le bundle d’applications. (La phase de compilation C# constitue rarement un goulot d’étranglement.) Essayez d’identifier où dans le pipeline la génération ralentit en effectuant la génération directement sur l’hôte de build Mac dans Visual Studio pour Mac.
 
 
 En outre, la connexion réseau entre l’ordinateur Windows et l’hôte de build Mac constitue l’un des emplacements les plus courants à l’origine de la lenteur. Cela peut être dû à un obstacle physique sur le réseau, à l’utilisation d’une connexion sans fil ou au fait de devoir passer par un ordinateur saturé (par exemple, un service Mac dans le cloud).
@@ -131,7 +131,7 @@ La réduction de la taille de l’application peut aussi réduire la durée de l
   - La génération d’une architecture unique (par exemple, ARM64) est plus rapide qu’une architecture FAT binaire (par exemple, ARMv7 + ARM64)
   - Évitez d’optimiser les fichiers PNG lors du débogage
   - Envisagez de lier tous les assemblys. Optimisez chaque assembly. 
-  - Désactivez la création de symboles de débogage à l’aide de `--dsym=false`. Toutefois, vous devez être conscient que le fait de désactiver cette option signifie que les rapports d’incidents peuvent uniquement générer des symboles de débogage sur l’ordinateur qui a généré l’application et uniquement si l’application n’a pas été supprimée.
+  - Désactivation de la création de symboles de débogage à l’aide de `--dsym=false`. Toutefois, vous devez être conscient que le fait de désactiver cette option signifie que les rapports d’incidents peuvent uniquement générer des symboles de débogage sur l’ordinateur qui a généré l’application et uniquement si l’application n’a pas été supprimée.
 
  
 Voici certaines choses à éviter :

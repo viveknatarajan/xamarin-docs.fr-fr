@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
-ms.openlocfilehash: 75e6d25f95a0a3f18c83fe73f67ad4a7797f0924
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.openlocfilehash: 504f20f6575e559d7c4965643b74b407d5e84de8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34470328"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112348"
 ---
 # <a name="xamarinforms-requirements"></a>Configuration requise pour Xamarin.Forms
 
@@ -25,7 +25,7 @@ Reportez-vous à l’article [Installation](~/cross-platform/get-started/install
 Les applications Xamarin.Forms peuvent être écrites pour les systèmes d’exploitation suivants :
 
 - iOS 8 ou ultérieur
-- Android 4.0.3 (API 15) ou ultérieur ([plus de détails](#android))
+- Android 4.4 (API 19) ou version ultérieure ([plus d’informations](#android))
 - Plateforme Windows universelle Windows 10 ([plus de détails](#windows10))
 
 Il est supposé que les développeurs connaissent [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) et les [projets partagés](~/cross-platform/app-fundamentals/shared-projects.md).
@@ -50,15 +50,15 @@ Ces plateformes ne sont pas prises en charge lors de l’utilisation de Xamarin.
 
 Les dernières versions d’Android SDK Tools et de la plateforme d’API Android doivent être installées. Vous pouvez effectuer une mise à jour vers les versions les plus récentes à l’aide du [Gestionnaire Android SDK](~/android/get-started/installation/android-sdk.md).
 
-De plus, la version cible/de compilation pour les projets Android **doit** avoir la valeur *Utiliser la dernière plateforme installée*. La version minimale peut toutefois être API 15 pour pouvoir continuer à prendre en charge les appareils qui utilisent Android 4.0.3 et ultérieur. Ces valeurs sont définies dans les **Options du projet** :
+De plus, la version cible/de compilation pour les projets Android **doit** avoir la valeur *Utiliser la dernière plateforme installée*. Toutefois, vous pouvez définir la version minimale à API 19, ce qui vous permet de continuer à prendre en charge les appareils utilisant Android 4.4 et les versions ultérieures. Ces valeurs sont définies dans les **Options du projet** :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 **Options du projet > Application > Propriétés de l’application**
 
 ![](installation-images/options-android-vs-sml.png "Options de build Android dans Visual Studio")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 **Générer > Général**
 

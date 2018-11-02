@@ -3,32 +3,44 @@ title: Installation de Xamarin
 description: Cette section présente les bonnes pratiques relatives à l’installation et à la configuration de Xamarin dans Visual Studio.
 ms.prod: xamarin
 ms.assetid: 0f813a14-2f0c-415d-8667-4563f3dc06e8
-author: asb3993
-ms.author: amburns
-ms.date: 09/29/2017
-ms.openlocfilehash: 71d5f743a5c1e2bd159a7267ddecfdc611eb2db8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: conceptdev
+ms.author: crdun
+ms.custom: video
+ms.date: 08/08/2018
+ms.openlocfilehash: 231c3fa03de77d9f89d215bfae03266f37b1dc5f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780415"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115952"
 ---
 # <a name="installing-xamarin"></a>Installation de Xamarin
 
-_Cette section offre une vue d’ensemble des pratiques possibles d’installation et de configuration de Xamarin dans Visual Studio._
+_Guide pratique pour configurer Visual Studio et Xamarin afin de commencer à générer des applications mobiles avec .NET._
 
-##  <a name="installing-xamarin-in-visual-studio-on-windowscross-platformget-startedinstallationwindowsmd"></a>[Installation de Xamarin dans Visual Studio sur les systèmes Windows](~/cross-platform/get-started/installation/windows.md)
+## <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Cet article explique comment installer Xamarin pour Visual Studio sur un ordinateur Windows.
+## <a name="installing-xamarin-on-windows"></a>Installation de Xamarin sur Windows
 
-##  <a name="installing-visual-studio-for-macvisualstudiomacinstallation"></a>[Installation de Visual Studio pour Mac](/visualstudio/mac/installation/)
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
 
-Cet article explique comment installer Visual Studio pour Mac.
+## <a name="step-by-step-instructions"></a>Instructions pas à pas
 
-##  <a name="uninstalling-xamarincross-platformget-startedinstallationuninstalling-xamarinmd"></a>[Désinstallation de Xamarin](~/cross-platform/get-started/installation/uninstalling-xamarin.md)
+[!include[](~/cross-platform/includes/install-xamarin-windows.md)]
 
-Cet article explique comment désinstaller Xamarin Studio ou autre produit Xamarin sur un ordinateur Mac ou Windows.
+## <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
-##  <a name="xamarin-firewall-configuration-instructionsfirewallmd"></a>[Instructions de configuration du pare-feu Xamarin](firewall.md)
+## <a name="installing-xamarin-on-macos"></a>Installation de Xamarin sur macOS
 
-Liste des ordinateurs hôtes que vous devez ajouter à la liste verte de votre pare-feu pour permettre l’utilisation de la plateforme Xamarin dans votre entreprise.
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-for-Mac-for-Mobile-Development-with-NET/player]
+
+## <a name="step-by-step-instructions"></a>Instructions pas à pas
+
+En plus de cette vidéo, il existe un [guide d’installation pas à pas](/visualstudio/mac/installation/), qui traite de Visual Studio pour Mac et de Xamarin.
+
+-----
+
+## <a name="related-links"></a>Liens associés
+
+- [Désinstallation de Xamarin](~/cross-platform/get-started/installation/uninstalling-xamarin.md)
+- [Instructions de configuration du pare-feu Xamarin](firewall.md)

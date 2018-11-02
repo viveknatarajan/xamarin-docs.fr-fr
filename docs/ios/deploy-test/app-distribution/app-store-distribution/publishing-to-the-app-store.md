@@ -4,15 +4,15 @@ description: Ce document explique comment configurer, générer et publier une a
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: 7560f66acc3a3ea683e75be2ae85f908036e008c
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 944b10c579abd3fa6e68a2c0497602600af4f4c1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780507"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111432"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publication d’applications Xamarin.iOS sur l’App Store
 
@@ -89,7 +89,7 @@ Pour des instructions détaillées, consultez [Création d’un profil de distri
 
 Les nouveaux projets Xamarin.iOS configurent automatiquement les **configurations de build** **Debug** et _Release_. Pour configurer correctement la build **Release**, effectuez ces étapes :
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. À partir du **panneau Solutions**, ouvrez **Info.plist**. Sélectionnez **Provisionnement manuel**. Enregistrez et fermez le fichier.
 2. Cliquez avec le bouton droit sur le **Nom du projet** dans le **panneau Solutions**, sélectionnez **Options** et accédez à l’onglet **Build iOS**.
@@ -119,7 +119,7 @@ Les nouveaux projets Xamarin.iOS configurent automatiquement les **configuration
 
 15. Cliquez sur **OK** pour enregistrer les changements apportés aux propriétés du projet.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Vérifiez que Visual Studio 2017 a été [appairé à un hôte de build Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Cliquez avec le bouton droit sur le **Nom du projet** dans **l’Explorateur de solutions** et sélectionnez **Propriétés**.
@@ -171,7 +171,7 @@ Pour savoir comment procéder, lisez le guide [Configuration d’une application
 
 Avec vos paramètres de build correctement configurés et iTunes Connect en attente de votre soumission, vous pouvez générer votre application et la soumettre à Apple.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Dans Visual Studio pour Mac, sélectionnez la configuration de build **Release** et un appareil (pas un simulateur) pour lequel effectuer la génération.
 
@@ -230,7 +230,7 @@ Avec vos paramètres de build correctement configurés et iTunes Connect en atte
     >
     > Pour résoudre cette erreur, consultez [ce post sur les forums Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!NOTE]
 > Actuellement, Visual Studio 2017 ne prend pas en charge le workflow **Archiver pour publication** qui se trouve dans Visual Studio pour Mac.
@@ -247,12 +247,12 @@ Avec vos paramètres de build correctement configurés et iTunes Connect en atte
 
 4. Pour trouver le fichier .ipa sur l’ordinateur Windows, cliquez avec le bouton droit sur le nom du projet Xamarin.iOS dans **l’Explorateur de solutions** de Visual Studio 2017 et choisissez **Ouvrir le dossier dans l’Explorateur de fichiers**. Ensuite, dans l’**Explorateur de fichiers** Windows qui vient de s’ouvrir, accédez au sous-répertoire **bin/iPhone/Release**. À moins d’avoir [personnalisé l’emplacement de sortie du fichier .ipa](#customize-the-ipa-location), vous devriez le trouver dans ce répertoire.
 5. Pour voir le fichier .ipa plutôt sur l’hôte de build Mac, cliquez avec le bouton droit sur le nom du projet Xamarin.iOS dans **l’Explorateur de solutions** de Visual Studio 2017 (sur Windows) et sélectionnez **Afficher le fichier IPA sur le serveur de builds**. La fenêtre du **Finder** s’ouvre sur l’hôte de build Mac avec le fichier .ipa sélectionné.
-6. Sur l’hôte de build Mac, ouvrez **Application Launcher**. Dans Xcode, sélectionnez **Xcode > Open Developer Tool > Application Launcher**.
+6. Sur l’hôte de build Mac, ouvrez **Application Loader**. Dans Xcode, sélectionnez **Xcode > Open Developer Tool (Ouvrir l’outil de développement) > Application Loader**.
 
     > [!NOTE]
     > Pour plus d’informations sur l’outil, consultez la [documentation d’Apple sur Application Loader](https://help.apple.com/itc/apploader/#/apdS673accdb).
 
-7. Connectez-vous à Application Launcher (notez que vous devez [créer un mot de passe spécifique à l’application](https://support.apple.com/ht204397) pour votre identifiant Apple).
+7. Connectez-vous à Application Loader (notez que vous devez [créer un mot de passe spécifique à l’application](https://support.apple.com/ht204397) pour votre identifiant Apple).
 8. Sélectionnez **Deliver Your App (Livrer votre application)**, puis cliquez sur le bouton **Choose (Choisir)**  :
 
     ![Sélectionner Distribuer votre app](publishing-to-the-app-store-images/publishvs01.png "Sélectionner Distribuer votre app")

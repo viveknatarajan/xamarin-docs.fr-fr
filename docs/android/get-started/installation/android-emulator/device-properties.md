@@ -1,25 +1,27 @@
 ---
 title: Modification des propriétés d’appareil virtuel Android
 description: Cet article explique comment utiliser Android Device Manager pour modifier les propriétés de profil d’un appareil virtuel Android.
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/30/2018
-ms.openlocfilehash: 75ac85c67825e5db1b663d00f10eee6d093bfc1f
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 9007157cfd96b82a5781b3bdc3ffb4fe63f4e422
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733627"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119616"
 ---
 # <a name="editing-android-virtual-device-properties"></a>Modification des propriétés d’appareil virtuel Android
 
 _Cet article explique comment utiliser Android Device Manager pour modifier les propriétés de profil d’un appareil virtuel Android._
 
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="android-device-manager-on-windows"></a>Android Device Manager sur Windows
 
 **Android Device Manager** prend en charge la modification des propriétés de profil d’un appareil virtuel Android. Les écrans **Nouvel appareil** et **Modifier l’appareil** répertorient les propriétés de l’appareil virtuel dans la première colonne et les valeurs correspondantes de chaque propriété dans la seconde colonne (comme illustré dans cet exemple) : 
 
@@ -41,8 +43,10 @@ Vous pouvez modifier les propriétés en suivant les instructions ci-dessous :
 
     ![Modification d’une propriété d’entier](device-properties-images/win/03-integer-value.png)
 
+::: zone-end
+::: zone pivot="macos"
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+## <a name="android-device-manager-on-macos"></a>Android Device Manager sur macOS
 
 **Android Device Manager** prend en charge la modification des propriétés de profil d’un appareil virtuel Android. Les écrans **Nouvel appareil** et **Modifier l’appareil** répertorient les propriétés de l’appareil virtuel dans la première colonne et les valeurs correspondantes de chaque propriété dans la seconde colonne (comme illustré dans cet exemple) : 
 
@@ -64,7 +68,7 @@ Vous pouvez modifier les propriétés en suivant les instructions ci-dessous :
 
     ![Modification d’une propriété d’entier](device-properties-images/mac/03-integer-value.png)
 
------
+::: zone-end
 
 Le tableau suivant présente en détail les propriétés répertoriées dans les écrans **Nouvel appareil** et **Éditeur d’appareil** :
 

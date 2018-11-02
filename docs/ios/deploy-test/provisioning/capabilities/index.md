@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: c897b1f5fbdf950e6858d7b73ebed60049f60e8e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120942"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Utilisation des fonctionnalités dans Xamarin.iOS
 
@@ -73,7 +73,7 @@ Cette section décrit comment utiliser le provisionnement automatique de Visual 
 
 ## <a name="using-the-ide"></a>Utilisation de l'IDE
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Les fonctionnalités sont ajoutées au fichier **Entitlements.plist** dans Visual Studio pour Mac. Pour ajouter des fonctionnalités, utilisez les étapes suivantes :
 
@@ -93,7 +93,7 @@ Les fonctionnalités sont ajoutées au fichier **Entitlements.plist** dans Visua
 
     ![Ajouter des fonctionnalités au fichier entitlements.plist](images/image18.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Les fonctionnalités sont ajoutées à **Entitlements.plist**. Pour ajouter des fonctionnalités dans Visual Studio 2017, utilisez les étapes suivantes :
 
@@ -206,12 +206,12 @@ Une fois que vous avez ajouté une fonctionnalité côté serveur, il vous reste
 
 La liste ci-dessous décrit quelques-uns des problèmes les plus courants susceptibles d’entraver le développement d’une application avec un service d’application activé.
 
--   Assurez-vous que l’ID correct a été créé et enregistré de manière appropriée dans la section **Certificates, Identifiers & Profiles** du portail des développeurs d’Apple.
--   Assurez-vous que le service a été ajouté à l’ID d’application (ou d’extension) et qu’il est configuré pour utiliser l’identificateur App Group/Merchant ID/Container créé précédemment dans la section **Certificates, Identifiers & Profiles** du portail des développeurs d’Apple.
--   Assurez-vous que les profils de provisionnement et les ID d’application ont été installés, et que le fichier d’application **Info.plist** (dans le projet Xamarin) utilise l’un des ID d’application configurés plus haut.
--   Assurez-vous que le service approprié est activé dans le fichier d’application **Entitlements.plist** (dans le projet Xamarin).
+-   Vérifiez que l’ID approprié a été créé et inscrit correctement dans la section  **Certificates, IDs & Profiles (Certificats, ID et profils)** du portail des développeurs Apple.
+-   Vérifiez que le service a été ajouté à l’ID d’application (ou d’extension) et qu’il est configuré pour utiliser le groupe d’applications/l’identifiant de commerçant/le conteneur créé ci-dessus dans la section  **Certificates, IDs & Profiles (Certificats, ID et profils)** du portail des développeurs Apple.
+-   Vérifiez que les profils de provisionnement et les ID d’applications ont été installés, et que le fichier **Info.plist** de l’application (dans le projet Xamarin) utilise l’un des ID d’applications configurés ci-dessus.
+-   Vérifiez que le service approprié est activé dans le fichier **Entitlements.plist** de l’application (dans le projet Xamarin).
 -   Assurez-vous que les clés de confidentialité appropriées sont définies dans le fichier Info.plist
--   Assurez-vous que, dans la section **Signature du bundle iOS** de l’application, le paramètre **Droits personnalisés** est défini sur **Entitlements.plist**. Ce n’est _pas_ le paramètre par défaut pour les builds Debug et iOS Simulator.
+-   Dans la section  **Signature du bundle iOS** de l’application, vérifiez que le paramètre  **Droits personnalisés** a la valeur **Entitlements.plist**. Il ne s’agit  _pas_ du paramètre par défaut pour les builds Debug et iOS Simulator.
 
 <a name="summary" />
 

@@ -1,122 +1,37 @@
 ---
 title: Résolution des problèmes de l’émulateur Android
 description: Cet article explique comment diagnostiquer et résoudre les problèmes qui peuvent se produire quand vous utilisez l’émulateur Android.
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 4F053CC9-9378-47CB-8002-978A6558C4D0
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 06/22/2018
-ms.openlocfilehash: 1d13a3dae509fea4a2e955c4ad206a81a57e75ed
-ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
+author: conceptdev
+ms.author: crdun
+ms.date: 08/27/2018
+ms.openlocfilehash: 5f8d977c126cfe4bdfdb48470841ee17de6bda31
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39067332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117731"
 ---
 # <a name="android-emulator-troubleshooting"></a>Résolution des problèmes de l’émulateur Android
 
-_Cet article décrit les problèmes et les messages d’avertissement les plus courants durant la configuration et l’exécution de l’émulateur Android, puis propose des conseils et des solutions._
+_Cet article décrit les problèmes et les messages d’avertissement les plus courants qui se produisent durant la configuration et l’exécution de l’émulateur Android. De plus, il décrit les solutions permettant de résoudre ces erreurs, et fournit divers conseils pour vous aider à diagnostiquer les problèmes d’émulateur._
 
-<a name="perfwarn" />
+::: zone pivot="windows"
 
-## <a name="performance-warnings"></a>avertissements liés aux performances
+## <a name="deployment-issues-on-windows"></a>Problèmes de déploiement sur Windows
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+L’émulateur peut afficher certains messages d’erreur quand vous déployez votre application. Les erreurs et les solutions les plus courantes sont expliquées ici.
 
-À compter de Visual Studio 2017 version 15.4, une boîte de dialogue d’avertissement sur les performances peut s’afficher lorsque vous déployez votre application pour la première fois sur l’émulateur Android. Ces boîtes de dialogue d’avertissement sont expliquées ci-dessous.
+### <a name="deployment-errors"></a>Erreurs de déploiement
 
-### <a name="computer-does-not-contain-an-intel-procesor"></a>L’ordinateur ne contient pas de processeur Intel
-
-![L’ordinateur ne contient pas de processeur Intel](troubleshooting-images/01-no-intel-processor.png)
-
-Si cette boîte de dialogue s’affiche, votre ordinateur n’est pas équipé d’un processeur Intel, lequel est requis pour l’accélération de l’émulateur du kit Android SDK. Si votre ordinateur n’est pas équipé d’un processeur Intel, nous recommandons d’utiliser un appareil Android physique pour le développement.
-
-### <a name="hyper-v-is-installed-or-active"></a>Hyper-V est installé ou actif
-
-![Hyper-V est installé ou actif](troubleshooting-images/02-hyper-v-active.png)
-
-Si cette boîte de dialogue s’affiche, Hyper-V est installé ou actif et doit être désactivé. La section [Désactivation d’Hyper-V](#disable-hyperv) explique comment résoudre ce problème.
-
-### <a name="haxm-is-not-installed"></a>Le Gestionnaire HAXM n'est pas installé
-
-![Le Gestionnaire HAXM n'est pas installé](troubleshooting-images/03-haxm-not-installed.png)
-
-Cette boîte de dialogue indique que votre ordinateur est équipé d’un processeur Intel, qu’Hyper-V est désactivé, mais que le Gestionnaire HAXM n’est pas installé.
-La section [Installation du Gestionnaire HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md#install-haxm) décrit la procédure d’installation du Gestionnaire HAXM.
-
-### <a name="haxm-process-not-running"></a>Le processus HAXM n’est pas en cours d’exécution
-
-![Le processus HAXM n’est pas en cours d’exécution](troubleshooting-images/04-haxm-process-not-running.png)
-
-Cette boîte de dialogue s’affiche si votre ordinateur est équipé d’un processeur Intel, Hyper-V est désactivé, le Gestionnaire HAXM Intel est installé, mais que le processus HAXM n’est pas en cours d’exécution. Pour résoudre ce problème, ouvrez une fenêtre d’invite de commandes et entrez la commande suivante :
-
-```cmd
-sc query intelhaxm
-```
-
-Si le processus HAXM est en cours d’exécution, la sortie de la commande doit être similaire à ce qui suit :
-
-```cmd
-SERVICE_NAME: intelhaxm
-    TYPE               : 1  KERNEL_DRIVER
-    STATE              : 4  RUNNING
-                            (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
-    WIN32_EXIT_CODE    : 0  (0x0)
-    SERVICE_EXIT_CODE  : 0  (0x0)
-    CHECKPOINT         : 0x0
-    WAIT_HINT          : 0x0
-```
-
-Si `STATE` n’a pas la valeur `RUNNING`, consultez [How to Use the Intel Hardware Accelerated Execution Manager](https://software.intel.com/en-us/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator) pour résoudre le problème.
-
-
-### <a name="other-failures"></a>Autres échecs
-
-![Autres échecs](troubleshooting-images/05-other-failure.png)
-
-Cette boîte de dialogue s’affiche si votre ordinateur est équipé d’un processeur Intel, Hyper-V est désactivé, Intel HAXM est installé, le processus HAXM est en cours d’exécution, mais que le démarrage de l’émulateur échoue pour une raison inconnue.
-Pour résoudre cette erreur, consultez [How to Use the Intel Hardware Accelerated Execution Manager](https://software.intel.com/en-us/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator).
-
-### <a name="disabling-performance-warnings"></a>Désactivation des avertissements liés aux performances
-
-Si vous préférez ne pas afficher les avertissements liés aux performances, vous pouvez les désactiver. Dans Visual Studio, cliquez sur **Outils > Options > Xamarin > Paramètres Android** et désactivez l’option **Avertir si l'accélération AVD n'est pas prise en charge (HAXM)**  :
-
-[![Désactivation des avertissements d’accélération AVD](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png#lightbox)
-
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
-
-À partir de Visual Studio pour Mac version 7.2 (build 559), une boîte de dialogue d’avertissement concernant le niveau de performance peut s’afficher quand vous déployez votre application pour la première fois sur l’Émulateur Android. Ces boîtes de dialogue d’avertissement sont expliquées ci-dessous.
-
-### <a name="haxm-is-not-installed"></a>Le Gestionnaire HAXM n'est pas installé
-
-![Le Gestionnaire HAXM n'est pas installé](troubleshooting-images/03-haxm-not-installed.png)
-
-Cette boîte de dialogue indique qu’HAXM n’est pas installé.
-La section [Installation du Gestionnaire HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md#install-haxm) décrit la procédure d’installation du Gestionnaire HAXM.
-
-### <a name="haxm-process-not-running"></a>Le processus HAXM n’est pas en cours d’exécution
-
-![Le processus HAXM n’est pas en cours d’exécution](troubleshooting-images/04-haxm-process-not-running.png)
-
-Cette boîte de dialogue s’affiche si le processus HAXM n’est pas en cours d’exécution. Pour plus d’informations sur la résolution de ce problème, consultez [How to Use the Intel Hardware Accelerated Execution Manager](https://software.intel.com/en-us/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator).
-
-### <a name="other-failures"></a>Autres échecs
-
-![Autres échecs](troubleshooting-images/05-other-failure.png)
-
-Cette boîte de dialogue s’affiche si l’émulateur ne parvient pas à démarrer pour une raison inconnue. Pour résoudre cette erreur, consultez [How to Use the Intel Hardware Accelerated Execution Manager](https://software.intel.com/en-us/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator).
-
------
-
-## <a name="deployment-issues"></a>Problèmes de déploiement
-
-Si un message d’erreur indiquant que l’installation de l’APK sur l’émulateur a échoué ou que l’exécution d’Android Debug Bridge (**adb**) a échoué, vérifiez que le kit Android SDK peut se connecter à votre émulateur. Pour ce faire, effectuez les étapes suivantes :
+Si vous voyez s’afficher un message d’erreur indiquant l’échec de l’installation de l’APK sur l’émulateur ou l’échec de l’exécution d’**adb** (Android Debug Bridge), vérifiez que le kit Android SDK peut se connecter à votre émulateur. Pour vérifier la connectivité de l’émulateur, effectuez les étapes suivantes :
 
 1. Lancez l’émulateur à partir d’**Android Device Manager** (sélectionnez votre appareil virtuel et cliquez sur **Démarrer**).
 
-2. Ouvrez une invite de commandes et accédez au dossier d’installation d’**adb**. Par exemple, sur Windows, il peut s’agir du dossier : **C:\\Program Files (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**.
+2. Ouvrez une invite de commandes et accédez au dossier d’installation d’**adb**. Si le kit Android SDK est installé à son emplacement par défaut, **adb** se trouve sur **C:\\Program Files (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**. Sinon, modifiez ce chemin pour indiquer l’emplacement du kit Android SDK sur votre ordinateur.
 
 3. Tapez la commande suivante :
 
@@ -134,85 +49,258 @@ Si un message d’erreur indiquant que l’installation de l’APK sur l’émul
 5. Si l’émulateur n’apparaît pas dans cette liste, démarrez le **Gestionnaire du kit Android SDK**, appliquez les mises à jour, puis essayez à nouveau de lancer l’émulateur.
 
 
-## <a name="haxm-issues"></a>Problèmes liés à HAXM
+### <a name="mmio-access-error"></a>Erreur d’accès MMIO
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Si vous voyez s’afficher un message indiquant qu’**une erreur d’accès MMIO s’est produite**, redémarrez l’émulateur.
 
-Si l’émulateur Android ne démarre pas correctement, il s’agit souvent de problèmes liés à HAXM. Les problèmes liés à HAXM sont souvent le résultat de conflits avec d’autres technologies de virtualisation, de paramètres incorrects ou d’un pilote HAXM obsolète.
 
-<a name="virt-conflicts" />
+<a name="gps-win" />
 
-### <a name="haxm-virtualization-conflicts"></a>Conflits de virtualisation HAXM
+## <a name="missing-google-play-services"></a>Google Play Services manquant
 
-HAXM peut entrer en conflit avec d’autres technologies qui utilisent la virtualisation, comme Hyper-V, Windows Device Guard et certains logiciels antivirus :
+Si Google Play Services ou Google Play Store n’est pas installé sur l’appareil virtuel que vous exécutez dans l’émulateur, cela signifie souvent que l’appareil virtuel a été créé sans que ces paquets soient inclus. Quand vous créez un appareil virtuel (consultez [Gestion des appareils virtuels avec Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), veillez à sélectionner l’une des options suivantes, ou les deux :
 
-- **Hyper-V** &ndash; Si vous utilisez une version de Windows antérieure à la **mise à jour de Windows du 10 avril 2018 (build 1803)** et qu’Hyper-V est activé, suivez les étapes fournies dans [Désactivation d’Hyper-V](#disable-hyperv).
+- Les **API Google**&ndash; incluent Google Play Services dans l’appareil virtuel.
+- **Google Play Store** &ndash; inclut Google Play Store dans l’appareil virtuel.
 
-- **Device Guard** &ndash; Device Guard et Credential Guard peuvent empêcher la désactivation d’Hyper-V sur les ordinateurs Windows. Pour désactiver Device Guard et Credential Guard, consultez [Désactivation de Device Guard](#disable-devguard).
+Par exemple, cet appareil virtuel inclut Google Play Services et Google Play Store :
 
-- **Logiciel antivirus** &ndash; Si vous exécutez un logiciel antivirus qui utilise la virtualisation à assistance matérielle (comme Avast), désactivez ou désinstallez ce logiciel, redémarrez et essayez à nouveau de démarrer l’émulateur du kit Android SDK.
+[![Exemple d’AVD avec Google Play Services et Google Play Store activés](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
 
+> [!NOTE]
+> Les images Google Play Store sont disponibles uniquement pour certains types d’appareil de base tels que Pixel, Pixel 2, Nexus 5 et Nexus 5X.
+
+
+<a name="perf-win" />
+
+## <a name="performance-issues"></a>Problèmes de performances
+
+Les problèmes de performances sont généralement causés par l’un des facteurs suivants :
+
+- L’émulateur s’exécute sans accélération matérielle
+
+- L’appareil virtuel exécuté dans l’émulateur n’utilise pas une image système x86
+
+Les sections suivantes décrivent ces scénarios de façon plus détaillée.
+
+### <a name="hardware-acceleration-is-not-enabled"></a>Accélération matérielle non activée
+
+Si l’accélération matérielle n’est pas activée, le démarrage d’un appareil virtuel à partir de Device Manager entraîne l’affichage d’une boîte de dialogue avec un message d’erreur indiquant que la plateforme WHPX (plateforme d’hyperviseur Windows) n’est pas configurée correctement :
+
+![Exemple d’avertissement de Device Manager](troubleshooting-images/win/01-dev-mgr-warning-w158.png)
+
+Si ce message d’erreur s’affiche, consultez [Problèmes d’accélération matérielle](#accel-issues-win) ci-dessous afin de connaître les étapes à suivre pour vérifier et activer l’accélération matérielle.
+
+
+### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>L’accélération est activée mais l’émulateur s’exécute trop lentement 
+
+Bien souvent, ce problème se produit si vous n’utilisez pas une image x86 dans votre AVD (appareil virtuel). Quand vous créez un appareil virtuel (consultez [Gestion des appareils virtuels avec Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), veillez à sélectionner une image système x86 :
+
+[![Sélection d’une image système x86 pour un appareil virtuel](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
+
+
+<a name="accel-issues-win" />
+
+## <a name="hardware-acceleration-issues"></a>Problèmes d’accélération matérielle
+
+Que vous utilisiez Hyper-V ou HAXM pour l’accélération matérielle, vous risquez d’être confronté à des problèmes de configuration ou des conflits avec les autres logiciels de votre ordinateur. Vous pouvez vérifier si l’accélération matérielle est activée (ainsi que la méthode d’accélération utilisée par l’émulateur) en ouvrant une invite de commandes et en entrant la commande suivante :
+
+```cmd
+"C:\Program Files (x86)\Android\android-sdk\emulator\emulator-check.exe" accel
+```
+
+Cette commande suppose que le kit Android SDK est installé à l’emplacement par défaut : **C:\\Program Files (x86)\\Android\\android-sdk**. Sinon, modifiez le chemin ci-dessus pour indiquer l’emplacement du kit Android SDK sur votre ordinateur.
+
+### <a name="hardware-acceleration-not-available"></a>Accélération matérielle non disponible
+
+Si Hyper-V est disponible, un message similaire à l’exemple suivant est retourné à partir de la commande **emulator-check.exe accel** :
+
+```cmd
+HAXM is not installed, but Windows Hypervisor Platform is available.
+```
+
+Si HAXM est disponible, un message similaire à l’exemple suivant est retourné :
+
+```cmd
+HAXM version 6.2.1 (4) is installed and usable.
+```
+
+Si l’accélération matérielle n’est pas disponible, un message similaire à l’exemple suivant s’affiche (l’émulateur recherche HAXM, s’il ne parvient pas à trouver Hyper-V) :
+
+```cmd
+HAXM is not installed on this machine
+```
+
+Si l’accélération matérielle n’est pas disponible, consultez la section [Accélération avec Hyper-V](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vswin#hyper-v-win) pour savoir comment activer l’accélération matérielle sur votre ordinateur.
 
 ### <a name="incorrect-bios-settings"></a>Paramètres du BIOS incorrects
 
-Si vous utilisez HAXM sur un PC Windows, HAXM ne fonctionne pas sauf si la technologie de virtualisation (Intel VT-x) est activée dans le BIOS. Si VT-x est désactivé, une erreur semblable à la suivante s’affiche lorsque vous essayez de démarrer l’émulateur Android :
+Si le BIOS n’a pas été configuré correctement pour prendre en charge l’accélération matérielle, un message similaire à l’exemple suivant s’affiche quand vous exécutez la commande **emulator-check.exe accel** :
+
+```cmd
+VT feature disabled in BIOS/UEFI
+```
+
+Pour corriger ce problème, redémarrez le BIOS de l’ordinateur et activez les options suivantes :
+
+- Technologie de virtualisation (peut avoir une autre appellation selon le fabricant de la carte mère).
+- Prévention de l’exécution des données matérielle.
+
+Si l’accélération matérielle est activée et si le BIOS est configuré de manière appropriée, l’émulateur doit s’exécuter correctement en tirant parti de l’accélération matérielle.
+Toutefois, des problèmes spécifiques à Hyper-V et HAXM peuvent se produire, comme expliqué ci-après.
+
+
+### <a name="hyper-v-issues"></a>Problèmes liés à Hyper-V
+
+Dans certains cas, l’activation d’**Hyper-V** et de la **Plateforme d’hyperviseur Windows** dans la boîte de dialogue **Activer ou désactiver des fonctionnalités Windows** peut poser des problèmes pour Hyper-V. Pour vérifier si Hyper-V est activé, effectuez les étapes suivantes :
+
+1. Dans la zone de recherche Windows, entrez **powershell**.
+
+2. Cliquez avec le bouton droit sur **Windows PowerShell** dans les résultats de la recherche, puis sélectionnez **Exécuter en tant qu’administrateur**.
+
+3. Dans la console PowerShell, entrez la commande suivante :
+
+    ```powershell
+    Get-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online
+    ```
+
+    Si Hyper-V n’est pas activé, un message similaire à l’exemple suivant s’affiche pour indiquer que l’état d’Hyper-V est **Désactivé** :
+
+    ```
+    FeatureName      : Microsoft-Hyper-V-All
+    DisplayName      : Hyper-V
+    Description      : Provides services and management tools for creating and running virtual machines and their resources.
+    RestartRequired  : Possible
+    State            : Disabled
+    CustomProperties : 
+    ```
+
+4. Dans la console PowerShell, entrez la commande suivante :
+
+    ```powershell
+    Get-WindowsOptionalFeature -FeatureName HypervisorPlatform -Online
+    ```
+    Si l’hyperviseur n’est pas activé, un message similaire à l’exemple suivant s’affiche pour indiquer que l’état de la plateforme d’hyperviseur est **Désactivé** :
+
+    ```
+    FeatureName      : HypervisorPlatform
+    DisplayName      : Windows Hypervisor Platform
+    Description      : Enables virtualization software to run on the Windows hypervisor
+    RestartRequired  : Possible
+    State            : Disabled
+    CustomProperties : 
+    ```
+
+Si Hyper-V et/ou la plateforme d’hyperviseur ne sont pas activés, utilisez les commandes PowerShell suivantes pour les activer :
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All
+```
+
+Une fois ces commandes exécutées, redémarrez. 
+
+Pour plus d’informations sur l’activation d’Hyper-V (notamment sur les techniques permettant d’activer Hyper-V à l’aide de l’outil Gestion et maintenance des images de déploiement), consultez [Installer Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+
+
+### <a name="haxm-issues"></a>Problèmes liés à HAXM
+
+Les problèmes liés à HAXM sont souvent le résultat de conflits avec d’autres technologies de virtualisation, de paramètres incorrects ou d’un pilote HAXM obsolète.
+
+### <a name="haxm-process-is-not-running"></a>Le processus HAXM n’est pas en cours d’exécution
+
+Si HAXM est installé, vous pouvez vérifier que le processus HAXM est en cours d’exécution en ouvrant une invite de commandes et en entrant la commande suivante :
+
+```cmd
+sc query intelhaxm
+```
+
+Si le processus HAXM est en cours d’exécution, vous devez voir s’afficher une sortie similaire au résultat suivant :
+
+```cmd
+SERVICE_NAME: intelhaxm
+    TYPE               : 1  KERNEL_DRIVER
+    STATE              : 4  RUNNING
+                            (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+    WIN32_EXIT_CODE    : 0  (0x0)
+    SERVICE_EXIT_CODE  : 0  (0x0)
+    CHECKPOINT         : 0x0
+    WAIT_HINT          : 0x0
+```
+
+Si `STATE` n’a pas la valeur `RUNNING`, consultez [How to Use the Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator) pour résoudre le problème.
+
+
+<a name="virt-conflicts" />
+
+#### <a name="haxm-virtualization-conflicts"></a>Conflits de virtualisation HAXM
+
+HAXM peut entrer en conflit avec d’autres technologies qui utilisent la virtualisation, comme Hyper-V, Windows Device Guard et certains logiciels antivirus :
+
+- **Hyper-V** &ndash; Si vous utilisez une version de Windows antérieure à la **mise à jour de Windows du 10 avril 2018 (build 1803)** et si Hyper-V est activé, suivez les étapes indiquées dans [Désactivation d’Hyper-V](#disable-hyperv) pour permettre l’activation d’HAXM.
+
+- **Device Guard** &ndash; Device Guard et Credential Guard peuvent empêcher la désactivation d’Hyper-V sur les ordinateurs Windows. Pour désactiver Device Guard et Credential Guard, consultez [Désactivation de Device Guard](#disable-devguard).
+
+- **Logiciel antivirus** &ndash; Si vous exécutez un logiciel antivirus qui utilise l’assistance matérielle à la virtualisation (comme Avast), désactivez ou désinstallez ce logiciel, redémarrez, puis réessayez d’exécuter l’émulateur Android.
+
+
+#### <a name="incorrect-bios-settings"></a>Paramètres du BIOS incorrects
+
+Si vous utilisez HAXM sur un PC Windows, HAXM ne fonctionne pas sauf si la technologie de virtualisation (Intel VT-x) est activée dans le BIOS. Si VT-x est désactivé, une erreur similaire à ce qui suit s’affiche quand vous essayez de démarrer l’émulateur Android :
 
 **Cet ordinateur répond à la configuration requise pour HAXM, mais la technologie Intel de virtualisation (VT-x) n’est pas activée.**
 
-Pour corriger cette erreur, démarrez l’ordinateur dans le BIOS, activez VT-x et SLAT (Second Level Address Translation), puis redémarrez l’ordinateur dans Windows.
+Pour corriger cette erreur, démarrez l’ordinateur dans le BIOS, activez VT-x et SLAT (traduction d’adresse de second niveau), puis redémarrez l’ordinateur dans Windows.
 
 <a name="disable-hyperv" />
 
-### <a name="disabling-hyper-v"></a>Désactivation d'Hyper-V
+#### <a name="disabling-hyper-v"></a>Désactivation d'Hyper-V
 
 Si vous utilisez une version de Windows antérieure à la **mise à jour de Windows du 10 avril 2018 (build 1803)** et qu’Hyper-V est activé, vous devez désactiver Hyper-V et redémarrer votre ordinateur pour installer et utiliser HAXM. Si vous utilisez la **mise à jour de Windows du 10 avril 2018 (build 1803)** ou une version ultérieure, l’émulateur Android version 27.2.7 ou ultérieure peut utiliser Hyper-V (au lieu de HAXM) pour l’accélération matérielle ; il n’est donc pas nécessaire de désactiver Hyper-V.
 
 Vous pouvez désactiver Hyper-V à partir du Panneau de configuration en effectuant les étapes suivantes :
 
-1. Dans la zone de recherche Windows, entrez **Programmes et**, puis cliquez sur **Programmes et fonctionnalités** dans les résultats de la recherche.
+1. Entrez **fonctionnalités Windows** dans la zone de recherche Windows, puis sélectionnez **Activer ou désactiver les fonctionnalités Windows** dans les résultats de la recherche.
 
-2. Dans la boîte de dialogue **Programmes et fonctionnalités** du Panneau de configuration, cliquez sur **Activer ou désactiver des fonctionnalités Windows** :
+2. Décochez **Hyper-V** :
 
-    ![Activer ou désactiver des fonctionnalités Windows](troubleshooting-images/win/07-turn-windows-features.png)
+    ![Désactivation d’Hyper-V dans la boîte de dialogue Fonctionnalités de Windows](troubleshooting-images/win/03-uncheck-hyper-v.png)
 
-3. Décochez **Hyper-V** et redémarrez l’ordinateur :
+3. Redémarrez l'ordinateur.
 
-    ![Désactivation d’Hyper-V dans la boîte de dialogue Fonctionnalités de Windows](troubleshooting-images/win/08-uncheck-hyper-v.png)
-
-Vous pouvez également utiliser l’applet de commande Powershell suivante pour désactiver Hyper-V :
+Vous pouvez également utiliser la commande PowerShell suivante pour désactiver l’hyperviseur Hyper-V :
 
 `Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor`
 
-Intel HAXM et Microsoft Hyper-V ne peuvent pas être actifs en même temps. Malheureusement, il n’existe aucun moyen de basculer entre Hyper-V et HAXM sans avoir à redémarrer votre ordinateur. 
+Intel HAXM et Microsoft Hyper-V ne peuvent pas être actifs en même temps. Malheureusement, il n’existe aucun moyen de passer d’Hyper-V à HAXM, et inversement, sans avoir à redémarrer l’ordinateur. 
 
 Dans certains cas, la procédure ci-dessus ne permet pas de désactiver Hyper-V si Device Guard et Credential Guard sont activés. Si vous ne parvenez pas à désactiver Hyper-V (ou s’il semble être désactivé mais que l’installation d’HAXM échoue toujours), utilisez la procédure de la section suivante pour désactiver Device Guard et Credential Guard.
 
 <a name="disable-devguard" />
 
-### <a name="disabling-device-guard"></a>Désactivation de Device Guard
+#### <a name="disabling-device-guard"></a>Désactivation de Device Guard
 
-Device Guard et Credential Guard peuvent empêcher la désactivation d’Hyper-V sur les ordinateurs Windows. Ce problème apparaît généralement sur les ordinateurs joints au domaine qui sont configurés et contrôlés par une organisation propriétaire.
-Sur Windows 10, effectuez les étapes suivantes pour savoir si **Device Guard** est en cours d’exécution :
+Device Guard et Credential Guard peuvent empêcher la désactivation d’Hyper-V sur les ordinateurs Windows. Cette situation est souvent un problème pour les machines jointes à un domaine, qui sont configurées et contrôlées par une organisation propriétaire. Sur Windows 10, effectuez les étapes suivantes pour savoir si **Device Guard** est en cours d’exécution :
 
-1. Dans la **zone de recherche Windows**, tapez **Informations système** pour démarrer l’application **Informations système**.
+1. Entrez **Info système** dans la zone de recherche Windows, puis sélectionnez **Informations système** dans les résultats de la recherche.
 
 2. Dans **Résumé système**, vérifiez si **Sécurité basée sur la virtualisation de Device Guard** est présent et **En cours d’exécution** :
 
-   [![Device Guard est présent et en cours d’exécution](troubleshooting-images/win/09-device-guard-sml.png)](troubleshooting-images/win/09-device-guard.png#lightbox)
+   [![Device Guard est présent et en cours d’exécution](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
 
 Si Device Guard est activé, effectuez les étapes suivantes pour le désactiver :
 
 1. Vérifiez qu’**Hyper-V** est désactivé (sous **Activer ou désactiver des fonctionnalités Windows**) comme décrit dans la section précédente.
 
-2. Dans la zone de recherche Windows, tapez **gpedit** et sélectionnez **Modifier la stratégie de groupe** dans les résultats de la recherche. Cette opération lance l’**Éditeur de stratégie de groupe locale**.
+2. Dans la zone de recherche Windows, entrez **gpedit**, puis sélectionnez le résultat de la recherche **Modifier la stratégie de groupe**. Ces étapes permettent de lancer l’**Éditeur d’objets de stratégie de groupe**.
 
 3. Dans l’**Éditeur de stratégie de groupe locale**, accédez à **Configuration ordinateur > Modèles d’administration > Système > Device Guard** :
 
-   [![Device Guard dans l’Éditeur de stratégie de groupe locale](troubleshooting-images/win/10-group-policy-editor-sml.png)](troubleshooting-images/win/10-group-policy-editor.png#lightbox)
+   [![Device Guard dans l’Éditeur de stratégie de groupe locale](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
 
 4. Modifiez **Activer la sécurité basée sur la virtualisation** en le passant à **Désactivé** (comme illustré ci-dessus) et quittez l’**Éditeur de stratégie de groupe locale**.
 
-5. Dans la zone de recherche Windows, tapez **cmd**. Cliquez avec le bouton droit sur **Invite de commandes** dans les résultats de la recherche et sélectionnez **Exécuter en tant qu’administrateur**.
+5. Dans la zone de recherche Windows, entrez **cmd**. Cliquez avec le bouton droit sur **Invite de commandes** dans les résultats de la recherche et sélectionnez **Exécuter en tant qu’administrateur**.
 
 6. Copiez et collez les commandes suivantes dans la fenêtre d’invite de commandes (si lecteur **Z:** est utilisé, choisissez une lettre de lecteur non utilisée) :
 
@@ -225,7 +313,7 @@ Si Device Guard est activé, effectuez les étapes suivantes pour le désactiver
         bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=Z:
         mountvol Z: /d
 
-7. Redémarrez votre ordinateur. Dans l’écran de démarrage, une invite similaire à la suivante doit s’afficher :
+7. Redémarrez votre ordinateur. Dans l’écran de démarrage, vous devez voir s’afficher une invite similaire au message suivant :
 
    **Voulez-vous désactiver Credential Guard ?**
 
@@ -233,11 +321,190 @@ Si Device Guard est activé, effectuez les étapes suivantes pour le désactiver
 
 8. Une fois que l’ordinateur a redémarré, vérifiez de nouveau qu’Hyper-V est désactivé (comme décrit dans les étapes précédentes).
 
-Si Hyper-V n’est toujours pas désactivé, les stratégies de votre ordinateur joint au domaine peuvent vous empêcher de désactiver Device Guard ou Credential Guard. Dans ce cas, vous pouvez demander une dérogation à votre administrateur de domaine afin que vous soyez autorisé à ne pas utiliser Credential Guard. Ou bien, vous pouvez utiliser un ordinateur qui n’est pas joint au domaine pour utiliser HAXM.
+Si Hyper-V n’est toujours pas désactivé, les stratégies de votre ordinateur joint au domaine peuvent vous empêcher de désactiver Device Guard ou Credential Guard. Dans ce cas, vous pouvez demander à votre administrateur de domaine de faire une exception en vous autorisant à ne pas utiliser Credential Guard. Sinon, vous pouvez également utiliser un ordinateur non joint à un domaine pour utiliser HAXM.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
-Si l’émulateur Android ne démarre pas correctement, il s’agit souvent de problèmes liés à HAXM. Les problèmes liés à HAXM sont souvent le résultat de conflits avec d’autres technologies de virtualisation, de paramètres incorrects ou d’un pilote HAXM obsolète. Essayez de réinstaller le pilote HAXM, en utilisant la procédure décrite dans [Installation d’HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md#install-haxm).
+## <a name="additional-troubleshooting-tips"></a>Conseils supplémentaires pour la résolution des problèmes
 
------
+Les suggestions suivantes sont souvent utiles pour diagnostiquer les problèmes d’émulateur Android.
 
+### <a name="starting-the-emulator-from-the-command-line"></a>Démarrage de l’émulateur à partir de la ligne de commande
+
+Si l’émulateur n’est pas déjà en cours d’exécution, vous pouvez le démarrer à partir de la ligne de commande (au lieu de Visual Studio) pour voir sa sortie. En règle générale, les images AVD de l’émulateur Android sont stockées à l’emplacement suivant (remplacez *nom_utilisateur* par votre nom d’utilisateur Windows) :
+
+**C:\\Users\\*nom_utilisateur*\\.android\\avd**
+
+Vous pouvez lancer l’émulateur avec une image AVD à partir de cet emplacement en passant le nom de dossier de l’AVD. Par exemple, cette commande permet de lancer un fichier AVD nommé **Pixel_API_27** :
+
+```cmd
+"C:\Program Files (x86)\Android\android-sdk\emulator\emulator.exe" -partition-size 512 -no-boot-anim -verbose -feature WindowsHypervisorPlatform -avd Pixel_API_27 -prop monodroid.avdname=Pixel_API_27
+```
+
+Cet exemple suppose que le kit Android SDK est installé à l’emplacement par défaut : **C:\\Program Files (x86)\\Android\\android-sdk**. Sinon, modifiez le chemin ci-dessus pour indiquer l’emplacement du kit Android SDK sur votre ordinateur.
+
+Quand vous exécutez cette commande, elle génère de nombreuses lignes de sortie au démarrage de l’émulateur. En particulier, les lignes telles que celles de l’exemple suivant s’affichent si l’accélération matérielle est activée et qu’elle fonctionne correctement (dans cet exemple, HAXM est utilisé pour l’accélération matérielle) :
+
+```cmd
+emulator: CPU Acceleration: working
+emulator: CPU Acceleration status: HAXM version 6.2.1 (4) is installed and usable.
+```
+
+### <a name="viewing-device-manager-logs"></a>Affichage des journaux de Device Manager
+
+Bien souvent, vous pouvez diagnostiquer les problèmes d’émulateur en consultant les journaux de Device Manager. Ces journaux sont écrits à l’emplacement suivant :
+
+**C:\\Users\\*nom_utilisateur*\\AppData\\Roaming\\XamarinDeviceManager**
+
+Vous pouvez afficher chaque fichier **DeviceManager.log** à l’aide d’un éditeur de texte tel que le Bloc-notes. L’exemple suivant d’entrée de journal indique que HAXM est introuvable sur l’ordinateur :
+
+```cmd
+Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel Corporation)] not present on the system
+```
+
+
+
+::: zone-end
+::: zone pivot="macos"
+
+## <a name="deployment-issues-on-macos"></a>Problèmes de déploiement sur macOS
+
+L’émulateur peut afficher certains messages d’erreur quand vous déployez votre application. Les erreurs et les solutions les plus courantes sont expliquées ci-dessous.
+
+### <a name="deployment-errors"></a>Erreurs de déploiement
+
+Si vous voyez s’afficher un message d’erreur indiquant l’échec de l’installation de l’APK sur l’émulateur ou l’échec de l’exécution d’**adb** (Android Debug Bridge), vérifiez que le kit Android SDK peut se connecter à votre émulateur. Pour vérifier la connectivité, effectuez les étapes suivantes :
+
+1. Lancez l’émulateur à partir d’**Android Device Manager** (sélectionnez votre appareil virtuel et cliquez sur **Démarrer**).
+
+2. Ouvrez une invite de commandes et accédez au dossier d’installation d’**adb**. Si le kit Android SDK est installé à son emplacement par défaut, **adb** se trouve sur **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**. Sinon, modifiez ce chemin pour indiquer l’emplacement du kit Android SDK sur votre ordinateur.
+
+3. Tapez la commande suivante :
+
+   ```shell
+   adb devices
+   ```
+
+4. Si l’émulateur est accessible à partir du kit Android SDK, l’émulateur doit apparaître dans la liste des appareils connectés. Exemple :
+
+   ```shell
+   List of devices attached
+   emulator-5554   device
+   ```
+
+5. Si l’émulateur n’apparaît pas dans cette liste, démarrez le **Gestionnaire du kit Android SDK**, appliquez les mises à jour, puis essayez à nouveau de lancer l’émulateur.
+
+
+### <a name="mmio-access-error"></a>Erreur d’accès MMIO
+
+Si vous voyez s’afficher le message indiquant qu’**une erreur d’accès MMIO s’est produite**, redémarrez l’émulateur.
+
+<a name="gps-mac" />
+
+## <a name="missing-google-play-services"></a>Google Play Services manquant
+
+Si Google Play Services ou Google Play Store n’est pas installé sur l’appareil virtuel que vous exécutez dans l’émulateur, cela signifie généralement que l’appareil virtuel a été créé sans que ces paquets soient inclus. Quand vous créez un appareil virtuel (consultez [Gestion des appareils virtuels avec Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), veillez à sélectionner l’une des options suivantes, ou les deux :
+
+- Les **API Google**&ndash; incluent Google Play Services dans l’appareil virtuel.
+- **Google Play Store** &ndash; inclut Google Play Store dans l’appareil virtuel.
+
+Par exemple, cet appareil virtuel inclut Google Play Services et Google Play Store :
+
+[![Exemple d’AVD avec Google Play Services et Google Play Store activés](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
+
+> [!NOTE]
+> Les images Google Play Store sont disponibles uniquement pour certains types d’appareil de base tels que Pixel, Pixel 2, Nexus 5 et Nexus 5X.
+
+
+<a name="perf-mac" />
+
+## <a name="performance-issues"></a>Problèmes de performances
+
+Les problèmes de performances sont généralement causés par l’un des facteurs suivants :
+
+- L’émulateur s’exécute sans accélération matérielle
+
+- L’appareil virtuel exécuté dans l’émulateur n’utilise pas une image système x86
+
+Les sections suivantes décrivent ces scénarios de façon plus détaillée.
+
+### <a name="hardware-acceleration-is-not-enabled"></a>Accélération matérielle non activée
+
+Si l’accélération matérielle n’est pas activée, une boîte de dialogue peut s’afficher en indiquant que l’**appareil va s’exécuter sans accélération** quand vous aurez déployé votre application sur l’émulateur Android. Si vous n’êtes pas certain que l’accélération matérielle est activée sur votre ordinateur (ou si vous souhaitez savoir quelle technologie fournit l’accélération), consultez [Problèmes d’accélération matérielle](#accel-issues-mac) ci-dessous afin de connaître les étapes à suivre pour vérifier et activer l’accélération matérielle.
+
+
+### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>L’accélération est activée mais l’émulateur s’exécute trop lentement 
+
+Bien souvent, ce problème se produit si vous n’utilisez pas une image x86 dans votre appareil virtuel. Quand vous créez un appareil virtuel (consultez [Gestion des appareils virtuels avec Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), veillez à sélectionner une image système x86 :
+
+[![Sélection d’une image système x86 pour un appareil virtuel](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
+
+<a name="accel-issues-mac" />
+
+## <a name="hardware-acceleration-issues"></a>Problèmes d’accélération matérielle
+
+Que vous utilisiez le framework Hypervisor ou HAXM pour activer l’accélération matérielle de l’émulateur, vous pouvez être confronté à des problèmes d’installation ou à des problèmes d’obsolescence d’une version de macOS. Les sections suivantes peuvent vous aider à résoudre ce problème.
+
+<a name="hypervisor-issues" />
+
+### <a name="hypervisor-framework-issues"></a>Problèmes liés au framework Hypervisor
+
+Si vous utilisez macOS 10.10 ou une version ultérieure sur un Mac récent, l’émulateur Android utilise automatiquement le framework Hypervisor pour l’accélération matérielle. Toutefois, certains Macs plus anciens ou exécutant une version de macOS antérieure à la version 10.10 risquent de ne pas prendre en charge le framework Hypervisor.
+
+Pour déterminer si votre Mac prend en charge ou non le framework Hypervisor, ouvrez une fenêtre Terminal, puis entrez la commande suivante :
+
+```bash
+sysctl kern.hv_support
+```
+
+Si votre Mac prend en charge le framework Hypervisor, la commande ci-dessus retourne le résultat suivant :
+
+```bash
+kern.hv_support: 1
+```
+
+Si le framework Hypervisor n’est pas disponible sur votre Mac, vous pouvez suivre les étapes décrites dans [Accélération avec HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#haxm-mac) pour utiliser HAXM à la place.
+
+
+### <a name="haxm-issues"></a>Problèmes liés à HAXM
+
+Si l’émulateur Android ne démarre pas correctement, cela est souvent dû à des problèmes liés à HAXM. Les problèmes liés à HAXM sont souvent le résultat de conflits avec d’autres technologies de virtualisation, de paramètres incorrects ou d’un pilote HAXM obsolète. Essayez de réinstaller le pilote HAXM, en utilisant la procédure décrite dans [Installation d’HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#install-haxm-mac).
+
+
+## <a name="additional-troubleshooting-tips"></a>Conseils supplémentaires pour la résolution des problèmes
+
+Les suggestions suivantes sont souvent utiles pour diagnostiquer les problèmes d’émulateur Android.
+
+### <a name="starting-the-emulator-from-the-command-line"></a>Démarrage de l’émulateur à partir de la ligne de commande
+
+Si l’émulateur n’est pas déjà en cours d’exécution, vous pouvez le démarrer à partir de la ligne de commande (au lieu de Visual Studio pour Mac) pour voir sa sortie. En règle générale, les images AVD de l’émulateur Android sont stockées à l’emplacement suivant :
+
+**~/.android/avd**
+
+Vous pouvez lancer l’émulateur avec une image AVD à partir de cet emplacement en passant le nom de dossier de l’AVD. Par exemple, cette commande permet de lancer un fichier AVD nommé **Pixel_2_API_28** :
+
+```cmd
+~/Library/Developer/Xamarin/android-sdk-macosx/emulator/emulator -partition-size 512 -no-boot-anim -verbose -feature WindowsHypervisorPlatform -avd Pixel_2_API_28 -prop monodroid.avdname=Pixel_2_API_28
+```
+
+Si le kit Android SDK est installé à son emplacement par défaut, l’émulateur se trouve dans le répertoire **~/Library/Developer/Xamarin/android-sdk-macosx/emulator**. Sinon, modifiez ce chemin pour indiquer l’emplacement du kit Android SDK sur votre Mac.
+
+Quand vous exécutez cette commande, elle génère de nombreuses lignes de sortie au démarrage de l’émulateur. En particulier, les lignes telles que celles de l’exemple suivant s’affichent si l’accélération matérielle est activée et qu’elle fonctionne correctement (dans cet exemple, le framework Hypervisor est utilisé pour l’accélération matérielle) :
+
+```cmd
+emulator: CPU Acceleration: working
+emulator: CPU Acceleration status: Hypervisor.Framework OS X Version 10.13
+```
+
+### <a name="viewing-device-manager-logs"></a>Affichage des journaux de Device Manager
+
+Bien souvent, vous pouvez diagnostiquer les problèmes d’émulateur en consultant les journaux de Device Manager. Ces journaux sont écrits à l’emplacement suivant :
+
+**~/Library/Logs/XamarinDeviceManager**
+
+Vous pouvez afficher chaque fichier **Android Devices.log** en double-cliquant dessus pour l’ouvrir dans l’application Console. L’exemple suivant d’entrée de journal indique que HAXM est introuvable :
+
+```cmd
+Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel Corporation)] not present on the system
+```
+
+::: zone-end

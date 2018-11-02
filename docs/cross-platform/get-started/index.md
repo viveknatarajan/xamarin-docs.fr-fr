@@ -7,14 +7,14 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 35c7605f9682bef9e93fb4f25404659662126a9d
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 3b1769dec78f65544e8996e21cb8ae003e4af198
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242025"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111328"
 ---
-# <a name="getting-started-with-xamarin"></a>Bien démarrer avec Xamarin
+# <a name="get-started-with-xamarin"></a>Bien démarrer avec Xamarin
 
 Avant de commencer, consultez la [configuration requise](requirements.md) et les [instructions d’installation](installation/index.md) pour être sûr que tout est prêt.
 
@@ -27,7 +27,6 @@ Si vous souhaitez créer une application en utilisant des technologies d’inter
 
 - [Démarrage rapide Android](~/android/get-started/hello-android/hello-android-quickstart.md)
 - [Démarrage rapide iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
-- [Bien démarrer avec Mac](~/mac/get-started/hello-mac.md)
 
 ## <a name="getting-started-with-mobile-development"></a>Bien démarrer avec le développement mobile
 

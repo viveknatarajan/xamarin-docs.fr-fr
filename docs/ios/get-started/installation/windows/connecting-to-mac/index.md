@@ -4,15 +4,15 @@ description: Ce guide décrit comment utiliser Appairer avec un Mac pour connect
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: c4e28c1f3e058977d6f9072b70f17717a2b27585
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d55760f1fdd6912b973cc1e7a65415a0f2c6eb47
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786075"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104087"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Appairer avec un Mac pour le développement Xamarin.iOS
 
@@ -226,7 +226,7 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 Les paramètres transmis à `msbuild` dans l’exemple ci-dessus sont :
 
 - `ServerAddress` : adresse IP de l’hôte de build Mac.
-- `ServerUser` : nom d’utilisateur à employer lors de la connexion à l’hôte de build Mac.
+- `ServerUser` : nom d’utilisateur à employer pour la connexion à l’hôte de build Mac.
   Utilisez votre nom d’utilisateur système plutôt que votre nom complet.
 - `ServerPassword` : mot de passe à utiliser lors de la connexion à l’hôte de build Mac.
  
@@ -246,6 +246,6 @@ Cet article a décrit comment utiliser Appairer avec un Mac pour connecter Visua
 - [Résolution des problèmes de connexion](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
 - [Agent de build Mac Xamarin - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introduction à Xamarin.iOS pour Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
-- [Remoted iOS Simulator pour Windows](~/tools/ios-simulator.md)
+- [Remoted iOS Simulator pour Windows](~/tools/ios-simulator/index.md)
 - [Déploiement sans fil](~/ios/deploy-test/wireless-deployment.md)
 

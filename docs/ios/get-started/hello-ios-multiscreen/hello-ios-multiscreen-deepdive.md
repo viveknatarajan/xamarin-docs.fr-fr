@@ -5,15 +5,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: d698cd1511e82116180a8af46891973f5f90343b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111223"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118966"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS multiécran - Immersion
 
@@ -22,15 +22,13 @@ Au cours de la procédure pas à pas de démarrage rapide, nous avons généré 
 Dans ce guide, nous présentons le modèle *MVC (Model-View-Controller)* et son rôle dans l’architecture et la navigation iOS.
 Ensuite, nous nous intéressons au contrôleur de navigation pour apprendre à l’utiliser afin d’offrir une expérience de navigation naturelle dans iOS.
 
-<a name="Model_View_Controller" />
-
 ## <a name="model-view-controller-mvc"></a>Modèle MVC (Model-View-Controller)
 
-Dans le didacticiel [Hello, iOS](~/ios/get-started/hello-ios/index.md), nous avons appris que les applications iOS ont une seule *fenêtre* et que les contrôleurs d’affichage sont responsables du chargement de leurs *hiérarchies d’affichage de contenu* dans cette fenêtre. Dans la deuxième procédure pas à pas Phoneword, nous avons ajouté un deuxième écran à notre application et passé certaines données (une liste de numéros de téléphone) entre les deux écrans, comme l’illustre le diagramme ci-dessous :
+Dans le tutoriel [Hello, iOS](~/ios/get-started/hello-ios/index.md), nous avons appris que les applications iOS ont une seule *fenêtre* et que les contrôleurs de vues sont responsables du chargement de leurs *hiérarchies de vues de contenu* dans cette fenêtre. Dans la deuxième procédure pas à pas Phoneword, nous avons ajouté un deuxième écran à notre application et passé certaines données (une liste de numéros de téléphone) entre les deux écrans, comme l’illustre le diagramme ci-dessous :
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "Ce diagramme illustre le passage de données entre deux écrans")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-Dans notre exemple, les données étaient collectées dans le premier écran, passées du premier contrôleur d’affichage au deuxième, puis affichés par le deuxième écran. Cette séparation des écrans, contrôleurs d’affichage et données suit le modèle *, MVC (Model-View-Controller)*. Dans les sections suivantes, nous présentons les avantages de ce modèle, ses composants et la manière dont nous l’utilisons dans notre application Phoneword.
+Dans notre exemple, les données étaient collectées dans le premier écran, passées du premier contrôleur de vue au second, puis affichées par le second écran. Cette séparation des écrans, contrôleurs de vues et données suit le modèle *MVC (modèle-vue-contrôleur)*. Dans les sections suivantes, nous présentons les avantages de ce modèle, ses composants et la manière dont nous l’utilisons dans notre application Phoneword.
 
 ### <a name="benefits-of-the-mvc-pattern"></a>Avantages du modèle MVC
 
@@ -56,64 +54,64 @@ Dans certains cas, la partie Model du modèle MVC peut être vide. Par exemple, 
 
 ### <a name="view"></a>Vue
 
-Un affichage (View) est un composant chargé du rendu de l’interface utilisateur. Dans presque toutes les plateformes qui utilisent le modèle MVC, l’interface utilisateur se compose d’une hiérarchie d’affichages. Un affichage dans le modèle MVC peut être perçu comme une hiérarchie d’affichage avec un affichage unique (appelé affichage racine) en haut de la hiérarchie et autant d’affichages enfants (appelés sous-affichages) en dessous. Dans iOS, la hiérarchie d’affichage de contenu d’un écran correspond au composant View du modèle MVC.
+Un affichage (View) est un composant chargé du rendu de l’interface utilisateur. Dans presque toutes les plateformes qui utilisent le modèle MVC, l’interface utilisateur se compose d’une hiérarchie d’affichages. Un affichage dans le modèle MVC peut être perçu comme une hiérarchie d’affichage avec un affichage unique (appelé affichage racine) en haut de la hiérarchie et autant d’affichages enfants (appelés sous-affichages) en dessous. Dans iOS, la hiérarchie de vues de contenu d’un écran correspond au composant Vue du modèle MVC.
 
 ### <a name="controller"></a>Contrôleur
 
 L’objet Controller est le composant qui relie tous les éléments ensemble et qui est représenté dans iOS par `UIViewController`. Nous pouvons le considérer comme le code de stockage d’un écran ou d’un ensemble d’affichages. L’objet Controller (ou contrôleur) est chargé d’écouter les demandes émises par l’utilisateur et de retourner la hiérarchie d’affichage appropriée. Il écoute les demandes émises à partir de l’affichage (clics de bouton, entrée de texte, etc.) et effectue le traitement, la modification de l’affichage et le rechargement de l’affichage appropriés. Le contrôleur est également responsable de la création ou de la récupération de l’objet Model à partir du magasin de données existant dans l’application et du remplissage de l’affichage avec ses données.
 
-Les contrôleurs peuvent également gérer d’autres contrôleurs. Par exemple, un contrôleur peut charger un autre contrôleur s’il a besoin d’afficher un autre écran ou il peut gérer une pile de contrôleurs pour surveiller leur ordre et les transitions entre eux. Dans la section suivante, nous allons voir un exemple de contrôleur qui gère d’autres contrôleurs au fur et à mesure que nous présenterons un type spécial de contrôleur d’affichage iOS appelé *contrôleur de navigation*.
+Les contrôleurs peuvent également gérer d’autres contrôleurs. Par exemple, un contrôleur peut charger un autre contrôleur s’il a besoin d’afficher un autre écran ou il peut gérer une pile de contrôleurs pour surveiller leur ordre et les transitions entre eux. Dans la section suivante, nous allons voir un exemple de contrôleur qui gère d’autres contrôleurs au fur et à mesure que nous présenterons un type spécial de contrôleur de vue iOS appelé *contrôleur de navigation*.
 
 ## <a name="navigation-controller"></a>Contrôleur de navigation
 
-Dans l’application Phoneword, nous avons utilisé un contrôleur de navigation pour mieux gérer la navigation entre plusieurs écrans. Le contrôleur de navigation est un `UIViewController` spécialisé représenté par la classe `UINavigationController`. Au lieu de gérer une seule hiérarchie d’affichage de contenu, le contrôleur de navigation gère d’autres contrôleurs d’affichage, ainsi que sa propre hiérarchie d’affichage de contenu spéciale sous la forme d’une barre d’outils de navigation qui inclut un titre, un bouton Précédent et d’autres fonctionnalités facultatives.
+Dans l’application Phoneword, nous avons utilisé un contrôleur de navigation pour mieux gérer la navigation entre plusieurs écrans. Le contrôleur de navigation est un `UIViewController` spécialisé représenté par la classe `UINavigationController`. Au lieu de gérer une seule hiérarchie de vues de contenu, le contrôleur de navigation gère d’autres contrôleurs de vues, ainsi que sa propre hiérarchie de vues de contenu spéciale sous la forme d’une barre d’outils de navigation qui inclut un titre, un bouton Précédent et d’autres fonctionnalités facultatives.
 
-Le contrôleur de navigation est commun dans les applications iOS et assure la navigation pour des applications iOS de base comme l’application **Réglages**, comme l’illustre la capture d’écran ci-dessous :
+Le contrôleur de navigation est courant dans les applications iOS. Il permet de naviguer dans les applications iOS de base telles que l’application **Settings**, comme l’illustre la capture d’écran ci-dessous :
 
- [![](hello-ios-multiscreen-deepdive-images/01.png "Le contrôleur de navigation assure la navigation des applications iOS comme l’application Réglages illustrée ici")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "Le contrôleur de navigation permet de naviguer dans les applications iOS telles que l’application Settings illustrée ici")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 Le contrôleur de navigation remplit trois fonctions principales :
 
--  **Il fournit des hooks pour la navigation en avant** : Le contrôleur de navigation utilise une métaphore de navigation hiérarchique où les hiérarchies d’affichage de contenu sont *envoyées* dans une *pile de navigation* . Vous pouvez considérer qu’une pile de navigation est comme une pile de cartes à jouer, dans laquelle seule la carte du dessus est visible, comme l’illustre le diagramme ci-dessous :  
+-  **Il fournit des crochets pour la navigation vers l’avant** : le contrôleur de navigation utilise une métaphore de navigation hiérarchique où les hiérarchies de vues de contenu sont *envoyées (push)* dans une *pile de navigation*. Vous pouvez considérer qu’une pile de navigation est comme une pile de cartes à jouer, dans laquelle seule la carte du dessus est visible, comme l’illustre le diagramme ci-dessous :  
 
     [![](hello-ios-multiscreen-deepdive-images/02.png "Ce diagramme illustre la navigation sous forme de pile de cartes")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
--  **Il fournit éventuellement un bouton Précédent** : Quand nous envoyons un nouvel élément dans la pile de navigation, la barre de titre peut afficher automatiquement un *bouton Précédent* qui permet à l’utilisateur de revenir en arrière. En appuyant sur le bouton Précédent, le contrôleur d’affichage actif est *retiré* de la pile de navigation et la précédente hiérarchie d’affichage de contenu dans la fenêtre se charge :  
+-  **Il fournit éventuellement un bouton Précédent** : Quand nous envoyons un nouvel élément dans la pile de navigation, la barre de titre peut afficher automatiquement un *bouton Précédent* qui permet à l’utilisateur de revenir en arrière. En appuyant sur le bouton Précédent, le contrôleur de vue actif est *retiré* de la pile de navigation, et la précédente hiérarchie de vues de contenu se charge dans la fenêtre :  
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "Ce diagramme illustre le retrait d’une carte de la pile")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Il fournit une barre de titre** : la partie supérieure du contrôleur de navigation est appelée *barre de titre*. Celle-ci est chargée d’afficher le titre du contrôleur d’affichage, comme l’illustre le diagramme ci-dessous :  
+-  **Il fournit une barre de titre** : la partie supérieure du contrôleur de navigation est appelée *barre de titre*. Elle est chargée d’afficher le titre du contrôleur de vue, comme l’illustre le diagramme ci-dessous :  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "La barre de titre est chargée d’afficher le titre du contrôleur de vue")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 ### <a name="root-view-controller"></a>Contrôleur de vue racine
 
-Un contrôleur de navigation ne gère pas une hiérarchie de vue de contenu, il n’a donc rien à afficher de lui-même.
+Un contrôleur de navigation ne gère pas une hiérarchie de vues de contenu, il n’a donc rien à afficher de lui-même.
 Un contrôleur de navigation est plutôt couplé à un *contrôleur de vue racine* :
 
- [![](hello-ios-multiscreen-deepdive-images/05.png "Un contrôleur de navigation est associé à un contrôleur de vue racine")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/05.png "Un contrôleur de navigation est couplé à un contrôleur de vue racine")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-Le contrôleur de vue racine représente le premier contrôleur de vue dans la pile du contrôleur de navigation. La hiérarchie de vue de contenu du contrôleur de vue racine est la première hiérarchie de vue de contenu à être chargée dans la fenêtre. Si nous souhaitons mettre toute notre application dans la pile du contrôleur de navigation, nous pouvons déplacer le Segue sans source dans le contrôleur de navigation, et définir le contrôleur de vue de notre premier écran en tant que contrôleur de vue racine, comme nous l’avons fait dans l’application Phoneword :
+Le contrôleur de vue racine représente le premier contrôleur de vue dans la pile du contrôleur de navigation. La hiérarchie de vues de contenu du contrôleur de vue racine est la première hiérarchie de vues de contenu à être chargée dans la fenêtre. Si nous souhaitons mettre toute notre application dans la pile du contrôleur de navigation, nous pouvons déplacer le Segue sans source dans le contrôleur de navigation, et définir le contrôleur de vue de notre premier écran en tant que contrôleur de vue racine, comme nous l’avons fait dans l’application Phoneword :
 
- [![](hello-ios-multiscreen-deepdive-images/06.png "Le segue sans source définit le contrôleur de vue des premiers écrans en tant que contrôleur de vue racine")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "Le Segue sans source définit le contrôleur de vue des premiers écrans en tant que contrôleur de vue racine")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Options de navigation supplémentaires
 
-Le contrôleur de navigation est couramment utilisé pour prendre en charge la navigation dans iOS. Toutefois, il ne représente pas la seule option. Un [contrôleur de barre d’onglets](~/ios/user-interface/controls/creating-tabbed-applications.md) peut scinder une application en différentes zones fonctionnelles. Un [contrôleur de vue fractionné](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) permet de créer des vues maître/détail. La combinaison des contrôleurs de navigation à ces autres paradigmes de navigation fournit de nombreuses manières flexibles de présenter du contenu iOS, et de naviguer dans celui-ci.
+Le contrôleur de navigation est couramment utilisé pour prendre en charge la navigation dans iOS. Toutefois, il ne représente pas la seule option. Un [contrôleur de barre d’onglets](~/ios/user-interface/controls/creating-tabbed-applications.md) peut scinder une application en différentes zones opérationnelles. Un [contrôleur de vue fractionné](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) permet de créer des vues maître/détail. La combinaison des contrôleurs de navigation à ces autres paradigmes de navigation fournit de nombreuses manières flexibles de présenter du contenu iOS, et de naviguer dans celui-ci.
 
 ## <a name="handling-transitions"></a>Gestion des transitions
 
-Dans la procédure pas à pas Phoneword, nous avons traité la transition entre les deux contrôleurs d’affichage de deux manières différentes : tout d’abord avec un Segue de Storyboard, puis par programmation. Examinons ces deux options de plus près.
+Dans la procédure pas à pas Phoneword, nous avons traité la transition entre les deux contrôleurs de vues de deux manières différentes : d’abord avec un Segue de Storyboard, puis par programmation. Examinons ces deux options de plus près.
 
 ### <a name="prepareforsegue"></a>PrepareForSegue
 
-Lorsque nous ajoutons un Segue avec une action **Afficher** au Storyboard, nous demandons à iOS d’envoyer le deuxième contrôleur d’affichage dans la pile du contrôleur de navigation :
+Quand nous ajoutons un Segue avec une action **Afficher** au Storyboard, nous demandons à iOS d’envoyer (push) le deuxième contrôleur de vue dans la pile du contrôleur de navigation :
 
  [![](hello-ios-multiscreen-deepdive-images/09.png "Définition du type de segue à partir d’une liste déroulante")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
-L’ajout d’un Segue au Storyboard suffit à créer une transition simple entre les écrans. Si nous voulons passer des données entre les contrôleurs d’affichage, nous devons remplacer la méthode `PrepareForSegue` et gérer les données nous-mêmes :
+L’ajout d’un Segue au Storyboard suffit à créer une transition simple entre les écrans. Si nous souhaitons passer des données entre les contrôleurs de vues, nous devons remplacer la méthode `PrepareForSegue` et gérer les données nous-mêmes :
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
@@ -124,7 +122,7 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 ```
 
 iOS appelle `PrepareForSegue` juste avant que la transition ne se produise et passe le Segue que nous avons créé dans le Storyboard à la méthode.
-À ce stade, nous devons définir manuellement le contrôleur d’affichage de destination du Segue. Le code suivant obtient un handle vers le contrôleur d’affichage de destination et le caste dans la classe adéquate, CallHistoryController, dans cet exemple :
+À ce stade, nous devons définir manuellement le contrôleur de vue de destination du Segue. Le code suivant obtient un handle vers le contrôleur de vue de destination et le caste dans la classe appropriée, CallHistoryController, dans le cas présent :
 
 ```csharp
 CallHistoryController callHistoryContoller = segue.DestinationViewController as CallHistoryController;
@@ -153,8 +151,8 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 
 ### <a name="navigation-without-segues"></a>Navigation sans Segues
 
-Le processus de transition entre le premier contrôleur d’affichage et le deuxième dans le code est le même qu’avec un Segue, mais plusieurs étapes doivent être effectuées manuellement.
-Tout d’abord, nous utilisons `this.NavigationController` pour obtenir une référence au contrôleur de navigation dont la pile est celle où nous nous trouvons actuellement. Ensuite, nous utilisons la méthode `PushViewController` du contrôleur de navigation pour envoyer manuellement le contrôleur d’affichage suivant dans la pile, en passant le contrôleur d’affichage et une option d’animation de la transition (nous affectons la valeur `true`).
+Le processus de transition entre le premier contrôleur de vue et le deuxième dans le code est le même qu’avec un Segue, mais plusieurs étapes doivent être effectuées manuellement.
+Tout d’abord, nous utilisons `this.NavigationController` pour obtenir une référence au contrôleur de navigation dont la pile est celle où nous nous trouvons. Nous utilisons ensuite la méthode `PushViewController` du contrôleur de navigation pour envoyer manuellement le contrôleur de vue suivant dans la pile, en passant le contrôleur de vue et une option d’animation de la transition (nous affectons la valeur `true`).
 
 Le code suivant gère la transition entre l’écran Phoneword et l’écran de l’historique des appels :
 
@@ -162,7 +160,7 @@ Le code suivant gère la transition entre l’écran Phoneword et l’écran de 
 this.NavigationController.PushViewController (callHistory, true);
 ```
 
-Pour pouvoir effectuer la transition vers le contrôleur d’affichage suivant, nous devons d’abord l’instancier manuellement à partir du Storyboard en appelant `this.Storyboard.InstantiateViewController` et en passant l’ID de Storyboard du `CallHistoryController` :
+Pour pouvoir effectuer la transition vers le contrôleur de vue suivant, nous devons d’abord l’instancier manuellement à partir du Storyboard en appelant `this.Storyboard.InstantiateViewController` et en passant l’ID de Storyboard de `CallHistoryController` :
 
 ```csharp
 CallHistoryController callHistory =
@@ -193,9 +191,9 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 L’application Phoneword a introduit plusieurs concepts qui ne sont pas traités dans ce guide. Ces concepts sont notamment :
 
--  **Création automatique de contrôleurs d’affichage** : Quand nous entrons un nom de classe pour le contrôleur d’affichage dans le **Panneau Propriétés**, le concepteur iOS vérifie si cette classe existe, puis génère la classe de stockage du contrôleur d’affichage pour nous. Pour plus d’informations sur ce concept et d’autres fonctionnalités du concepteur iOS, reportez-vous au guide de [présentation du concepteur iOS](~/ios/user-interface/designer/introduction.md).
--  **Contrôleur d’affichage Table** : `CallHistoryController` est un contrôleur d’affichage Table. Un contrôleur d’affichage Table contient un affichage Table, l’outil de disposition et d’affichage de données le plus courant dans iOS. Les tables dépassent le cadre du présent guide. Pour plus d’informations sur les contrôleurs d’affichage Table, reportez-vous au guide d’[utilisation des tables et cellules](~/ios/user-interface/controls/tables/index.md).
--   **ID de Storyboard** : La définition de l’ID de Storyboard crée une classe de contrôleur d’affichage en Objective-C, qui contient le code-behind du contrôleur d’affichage dans le Storyboard. Nous utilisons l’ID de Storyboard pour trouver la classe Objective-C et instancier le contrôleur d’affichage dans le Storyboard. Pour plus d’informations sur les ID de Storyboard, reportez-vous au guide de [présentation des Storyboards](~/ios/user-interface/storyboards/index.md).
+-  **Création automatique de contrôleurs de vues** : quand nous entrons un nom de classe pour le contrôleur de vue dans le **Panneau Propriétés**, le concepteur iOS vérifie si cette classe existe, puis génère la classe de support du contrôleur de vue pour nous. Pour plus d’informations sur ce concept et d’autres fonctionnalités du concepteur iOS, reportez-vous au guide de [présentation du concepteur iOS](~/ios/user-interface/designer/introduction.md).
+-  **Contrôleur de vue de tableau** : `CallHistoryController` est un contrôleur de vue de tableau. Un contrôleur de vue de tableau contient une vue de tableau, l’outil de disposition et d’affichage de données le plus courant dans iOS. Les tables dépassent le cadre du présent guide. Pour plus d’informations sur les contrôleurs de vues de tableau, consultez le guide d’[utilisation des tableaux et des cellules](~/ios/user-interface/controls/tables/index.md).
+-   **ID de Storyboard** : la définition de l’ID de Storyboard crée une classe de contrôleur de vue en Objective-C, qui contient le code-behind du contrôleur de vue dans le Storyboard. Nous utilisons l’ID de Storyboard pour trouver la classe Objective-C et instancier le contrôleur de vue dans le Storyboard. Pour plus d’informations sur les ID de Storyboard, reportez-vous au guide de [présentation des Storyboards](~/ios/user-interface/storyboards/index.md).
 
 ## <a name="summary"></a>Récapitulatif
 
