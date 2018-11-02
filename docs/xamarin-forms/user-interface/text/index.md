@@ -1,36 +1,36 @@
 ---
-title: Texte de Xamarin.Forms
-description: Xamarin.Forms a trois vues principales pour travailler avec du texte, et cet article explique comment les utiliser pour entrer et afficher du texte dans les applications de Xamarin.Forms.
+title: Texte dans Xamarin.Forms
+description: Xamarin.Forms a trois vues principales pour travailler avec du texte, et cet article explique comment les utiliser pour entrer et afficher du texte dans les applications Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: c5bd157299c9388b561f316e65f2ba290bd15224
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 10/26/2018
+ms.openlocfilehash: 60dd54ff8ed06cbeea3a3e202e7058ea7747ea3d
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244985"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911565"
 ---
-# <a name="text-in-xamarinforms"></a>Texte de Xamarin.Forms
+# <a name="text-in-xamarinforms"></a>Texte dans Xamarin.Forms
 
-_À l’aide de Xamarin.Forms pour entrer ou afficher du texte._
+_À l’aide de Xamarin.Forms pour entrer ou afficher le texte._
 
-Xamarin.Forms propose trois vues principales pour travailler avec du texte :
+Xamarin.Forms a trois vues principales pour travailler avec du texte :
 
-- **[Étiquette](#Label)**  &mdash; pour la présentation de texte unique ou plusieurs ligne. Peut afficher plusieurs options de mise en forme dans la même ligne.
-- **[Entrée](#Entry)**  &mdash; de saisie de texte n'est qu’une seule ligne. Entrée comporte un mode de mot de passe.
-- **[Éditeur de](#Editor)**  &mdash; de saisie de texte qui peut prendre plus d’une ligne.
+- **[Étiquette](#Label)**  &mdash; de présentation de texte unique ou multiligne. Peut afficher du texte avec plusieurs options de mise en forme dans la même ligne.
+- **[Entrée](#Entry)**  &mdash; de saisie de texte qui n'est qu’une seule ligne. Entrée a un mode de mot de passe.
+- **[Éditeur](#Editor)**  &mdash; de saisie de texte qui peut prendre plus d’une ligne.
 
-Apparence de texte peut être modifié à l’aide intégrée ou personnalisée [styles](#Styles) et certains contrôles prennent en charge personnalisée [polices](#Fonts).
+Apparence du texte peut être modifié à l’aide d’intégrés ou personnalisés [styles](#Styles) et certains contrôles prennent en charge personnalisée [polices](#Fonts).
 
 <a name="Label" />
 
 ## <a name="labellabelmd"></a>[Label](label.md)
 
-Le `Label` vue est utilisée pour afficher le texte. Il peut afficher plusieurs lignes de texte ou d’une seule ligne de texte. `Label` plusieurs options de mise en forme utilisées dans inline peut présenter texte. L’affichage de l’étiquette peut encapsuler ou texte tronqué lorsqu’il ne peut pas tenir sur une seule ligne.
+Le `Label` vue est utilisée pour afficher le texte. Il peut afficher plusieurs lignes de texte ou une seule ligne de texte. `Label` peut présenter texte avec plusieurs options de mise en forme utilisées dans inline. La vue de l’étiquette peut inclure dans un wrapper ou texte tronqué lorsqu’il ne peut pas tenir sur une seule ligne.
 
 ![](images/label.png "Exemple d’étiquette")
 
@@ -42,7 +42,7 @@ Pour plus d’informations sur la personnalisation de la police utilisée dans u
 
 ## <a name="entryentrymd"></a>[Entrée](entry.md)
 
-`Entry` est utilisé pour accepter l’entrée de ligne de texte unique. `Entry` offres de contrôlent les couleurs, mais ne peut pas avoir personnalisé de polices. `Entry` contient un mode de mot de passe et peuvent afficher le texte d’espace réservé jusqu'à ce que l’entrée de texte.
+`Entry` est utilisé pour accepter l’entrée de texte à ligne unique. `Entry` offre un contrôle sur les polices et couleurs. `Entry` dispose d’un mode de mot de passe et peut afficher du texte de l’espace réservé jusqu'à ce que l’entrée de texte.
 
 ![](images/entry.png "Exemple d’entrée")
 
@@ -54,7 +54,7 @@ Notez que, contrairement à `Label`, `Entry` ne peut pas avoir de paramètres de
 
 ## <a name="editoreditormd"></a>[Éditeur](editor.md)
 
-`Editor` est utilisé pour accepter l’entrée de texte multiligne. `Editor` peut avoir une couleur d’arrière-plan personnalisée, mais la couleur du texte et de police ne peut pas être modifiée.
+`Editor` est utilisé pour accepter l’entrée de texte multiligne. `Editor` offre un contrôle sur les polices et couleurs.
 
 ![](images/editor.png "Exemple d’éditeur")
 
@@ -71,8 +71,6 @@ Le `Label` contrôle prend en charge les paramètres de police différente à l�
 ## <a name="stylesstylesmd"></a>[Styles](styles.md)
 
 Reportez-vous à [travailler avec des styles](~/xamarin-forms/user-interface/styles/index.md) pour savoir comment configurer la police, [couleur](~/xamarin-forms/user-interface/colors.md)et d’autres propriétés d’affichage qui s’appliquent à plusieurs contrôles.
-
-
 
 ## <a name="related-links"></a>Liens associés
 

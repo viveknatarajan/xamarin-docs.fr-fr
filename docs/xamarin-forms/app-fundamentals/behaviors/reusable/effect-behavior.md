@@ -1,22 +1,22 @@
 ---
 title: EffectBehavior réutilisable
-description: Les comportements sont une approche utile pour l’ajout d’un effet à un contrôle, suppression d’effet de maquette code à partir de fichiers code-behind de gestion. Cet article montre à l’aide d’un comportement de Xamarin.Forms pour ajouter un effet à un contrôle.
+description: Les comportements sont une approche utile pour l’ajout d’un effet à un contrôle, suppression d’effet de maquette code à partir de fichiers code-behind de gestion. Cet article montre comment créer et consommer un comportement de Xamarin.Forms pour ajouter un effet à un contrôle.
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 1ce7eda6f556041cbffc3793b00e8e2cba44d3d0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2696f0103ce1aa969039c982fb9b82f89b37811e
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995779"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911591"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior réutilisable
 
-_Les comportements sont une approche utile pour l’ajout d’un effet à un contrôle, suppression d’effet de maquette code à partir de fichiers code-behind de gestion. Cet article montre à l’aide d’un comportement de Xamarin.Forms pour ajouter un effet à un contrôle._
+_Les comportements sont une approche utile pour l’ajout d’un effet à un contrôle, suppression d’effet de maquette code à partir de fichiers code-behind de gestion. Cet article montre comment créer et consommer un comportement de Xamarin.Forms pour ajouter un effet à un contrôle._
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -28,6 +28,9 @@ Les propriétés de comportement suivantes doivent être définies pour utiliser
 - **Nom** – la valeur de la [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) attribut pour la classe de l’effet.
 
 Pour plus d’informations sur les effets, consultez [effets](~/xamarin-forms/app-fundamentals/effects/index.md).
+
+> [!NOTE]
+> Le `EffectBehavior` est une classe personnalisée qui peut se trouver dans le [effet Behavior (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/), et ne fait pas partie de Xamarin.Forms.
 
 ## <a name="creating-the-behavior"></a>Création d’un comportement
 
