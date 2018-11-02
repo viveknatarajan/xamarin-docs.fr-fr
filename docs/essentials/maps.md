@@ -71,9 +71,9 @@ public class MapsTest
 }
 ```
 
-## <a name="extension-methods"></a>méthodes d’extension.
+## <a name="extension-methods"></a>Méthodes d’extension
 
-Si vous avez déjà une référence à un `Location` ou `Placemark`, vous pouvez utiliser la méthode d’extension intégrée `OpenMapsAsync` avec `MapsLaunchOptions` facultatif :
+Si vous avez déjà une référence à un emplacement `Location` ou à un repère `Placemark`, vous pouvez utiliser la méthode d’extension intégrée `OpenMapsAsync` avec le paramètre facultatif `MapsLaunchOptions`:
 
 ```csharp
 public class MapsTest
@@ -102,7 +102,7 @@ public class MapsTest
 }
 ```
 
-## <a name="platform-differences"></a>Différences de plateformes
+## <a name="platform-differences"></a>Différences entre les plateformes
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
