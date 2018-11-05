@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: dd48d917b669e5f83eaafa2f1ba5af5d9a19a342
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 78b7235d8c9e45c2179b1cca2827f45fe6edd8b2
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675105"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Bien démarrer avec Xamarin.Essentials
 
@@ -66,7 +66,7 @@ Xamarin.Essentials est disponible sous forme de package NuGet qui peut être ajo
     # <a name="androidtabandroid"></a>[Android](#tab/android)
 
     Xamarin.Essentials prend en charge une version minimale d’Android 4.4, correspondant au niveau d’API 19, mais la version Android cible pour la compilation doit être 8.1, correspondant au niveau de l’API 27. (Dans Visual Studio, ces deux versions sont définies dans la boîte de dialogue Propriétés du projet pour le projet Android, dans l’onglet Manifeste Android. (Dans Visual Studio pour Mac, elles sont définies dans la boîte de dialogue Options du projet pour le projet Android, dans l’onglet Application Android.) 
-    
+
     Xamarin.Essentials installe la version 27.0.2.1 des bibliothèques Xamarin.Android.Support dont il a besoin. Les autres bibliothèques Xamarin.Android.Support requises par votre application doivent également être mises à jour vers la version 27.0.2.1 à l’aide du Gestionnaire de package NuGet. Toutes les bibliothèques Xamarin.Android.Support utilisées par votre application doivent être identiques, et doivent avoir au moins la version 27.0.2.1. Consultez la [page Résolution des problèmes](troubleshooting.md) si vous rencontrez des problèmes d’ajout du package NuGet Xamarin.Essentials ou de mise à jour des packages NuGet dans votre solution.
 
     Dans `MainLauncher` pour le projet Android ou n’importe quel `Activity` qui est lancé Xamarin.Essentials doit être initialisé dans la méthode `OnCreate` :
