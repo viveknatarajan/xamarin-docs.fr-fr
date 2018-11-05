@@ -30,7 +30,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de l’accéléromètre fonctionne en appelant les méthodes `Start` et `Stop` qui permettent d’écouter les changements d’accélération. Tous les changements sont renvoyés via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
+Pour écouter les changements d’accélération, il suffit d'appeler les méthodes `Start` et `Stop`. Toutes les variations peuvent être écoutées via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
 
 ```csharp
 
