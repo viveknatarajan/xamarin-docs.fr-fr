@@ -16,17 +16,17 @@ ms.locfileid: "39353865"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Vibration** permet de démarrer et d'arrêter la fonctionnalité de vibration pendant une durée souhaitée.
+Le **Vibration** classe vous permet de démarrer et arrêter la fonctionnalité vibrer pour une quantité de temps souhaitée.
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **Vibration**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Vibration**, quelques étapes de configurations propres aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 L'autorisation `Vibrate` est obligatoire et doit être configurée dans le projet Android. Elle peut être ajoutée comme suit :
 
-Ouvrez le fichier **AssemblyInfo.cs** dans le dossier **Properties** et ajoutez :
+Ouvrez le **AssemblyInfo.cs** de fichiers sous le **propriétés** dossier et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
