@@ -16,7 +16,7 @@ ms.locfileid: "39130791"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **PhoneDialer** permet à une application d'ouvrir un numéro de téléphone dans le numéroteur.
+Le **PhoneDialer** classe permet à une application ouvrir un numéro de téléphone dans le numéroteur.
 
 ## <a name="using-phone-dialer"></a>Utilisation de **PhoneDialer**
 
