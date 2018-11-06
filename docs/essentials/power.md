@@ -16,7 +16,7 @@ ms.locfileid: "39353488"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Power** fournit des informations sur l’état de économiseur d’énergie de l'appareil, ce qui indique si ce dernier fonctionne en mode économique. Les applications doivent éviter le traitement en arrière-plan si l’’économiseur d’énergie de l’appareil est activé.
+Le **Power** classe fournit des informations sur l’état du périphérique économiseur d’énergie, ce qui indique si l’appareil est en cours d’exécution dans un mode de faible puissance. Applications doivent éviter le traitement en arrière-plan si l’état d’économiseur d’énergie de l’appareil est activé.
 
 ## <a name="background"></a>Présentation
 
@@ -41,7 +41,7 @@ var status = Power.EnergySaverStatus;
 
 Cette propriété retourne un membre de l'énumération `EnergySaverStatus`, qui est soit `On`, `Off`, ou `Unknown`. Si la propriété retourne `On`, l’application doit éviter les traitements en arrière-plan ou autres activités gourmandes. Si l’état passe à `Unknown` ou `Off`, l’application peut reprendre les traitements en arrière-plan.
 
-L’application doit également installer un gestionnaire d’événements. La classe **Power** expose un événement qui est déclenché lorsque l’état de l’économiseur d’énergie change :
+L’application doit également installer un gestionnaire d’événements. Le **Power** classe expose un événement est déclenché lorsque l’état de l’économiseur d’énergie change :
 
 ```csharp
 public class EnergySaverTest
