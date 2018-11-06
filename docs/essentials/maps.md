@@ -12,13 +12,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353933"
 ---
-# <a name="xamarinessentials-maps"></a>Xamarin.Essentials : Maps
+# <a name="xamarinessentials-maps"></a>Xamarin.Essentials : mappages
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Maps** permet à une application d'ouvrir l'application cartographique installée sur le téléphone sur un emplacement ou un repère spécifique.
+Le **mappe** classe permet à une application ouvrir l’application de cartes installées à un emplacement spécifique ou à placemark.
 
-## <a name="using-maps"></a>Utilisation de **Maps**
+## <a name="using-maps"></a>À l’aide de cartes
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -97,7 +97,7 @@ public class MapsTest
 
 --------------
 
-## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
