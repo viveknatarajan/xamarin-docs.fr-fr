@@ -16,26 +16,26 @@ ms.locfileid: "39361000"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-Xamarin.Essentials simplifie l’accès aux API natives pour les développeurs.
+Xamarin.Essentials fournit aux développeurs des API interplateformes pour leurs applications mobiles.
 
-Android, iOS et UWP possèdent des systèmes d’exploitation et des API différentes. En utilisant Xamarin, en C#, les développeurs ont accès à toutes ces API tels qu’ils le feraient nativement. Xamarin.Essentials rassemble ces API en une API multiplateforme unique qui fonctionne avec n’importe quel Xamarin.Forms, Android, iOS ou application UWP. Les API Xamarin.Essentials sont accessibles à partir de code partagé, quelle que soit la méthode de création de l’interface utilisateur.
+Android, iOS et UWP offrent un système d’exploitation unique et les API que les développeurs ont accès à tout en tirant parti de Xamarin c# de la plateforme. Xamarin.Essentials fournit une API de multi-plateforme unique qui fonctionne avec n’importe quel Xamarin.Forms, Android, iOS ou application UWP qui sont accessibles à partir de code partagé, quel que soit le mode de création de l’interface utilisateur.
 
 ## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Prise en main de Xamarin.Essentials](get-started.md?context=xamarin/xamarin-forms)
 
-Suivez le [guide de démarrage](get-started.md) pour installer le paquet NuGet **Xamarin.Essentials** dans votre application Xamarin.Forms, Android, iOS ou les projets UWP.
+Suivez le [guide de démarrage](get-started.md) pour installer le paquet NuGet **Xamarin.Essentials** dans votre application Xamarin.Forms, Android, iOS ou dans les projets UWP.
 
 ## <a name="feature-guides"></a>Guide des fonctionnalités
 
-Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamarin.Essentials dans vos applications :
+Suivez les guides pour intégrer ces fonctionnalités Xamarin.Essentials dans vos applications :
 
-* [Accéléromètre](accelerometer.md?context=xamarin/xamarin-forms) : obtenir l’accélération de l’appareil autour de trois axes.
+* [Accéléromètre](accelerometer.md?context=xamarin/xamarin-forms) : récupérer des données de l’accélération de l’appareil dans un espace tridimensionnel.
 * [Informations sur l’application](app-information.md?context=xamarin/xamarin-forms) : obtenir des informations générales sur l’application.
 * [Batterie](battery.md?context=xamarin/xamarin-forms) : obtenir le niveau, la source et l’état de la batterie.
 * [Presse-papiers](clipboard.md?context=xamarin/xamarin-forms) : rapidement et facilement définir ou lire le texte dans le Presse-papiers.
 * [Boussole](compass.md?context=xamarin/xamarin-forms) – boussole analyse les modifications.
 * [Connectivité](connectivity.md?context=xamarin/xamarin-forms) : vérifier l’état de connectivité et détecter les modifications.
 * [Transfert de données](data-transfer.md?context=xamarin/xamarin-forms) – envoyer le site Web et texte URI vers d’autres applications.
-* [Informations d’affichage de périphérique](device-display.md?context=xamarin/xamarin-forms) – obtenir des métriques de l’écran et l’orientation de l’appareil.
+* [Informations sur l'écran de l'appareil](device-display.md?context=xamarin/xamarin-forms) : obtenir les dimensions de l’écran et l’orientation de l’appareil.
 * [Informations sur l’appareil](device-information.md?context=xamarin/xamarin-forms) – Découvrez le service l’appareil en toute simplicité.
 * [E-mail](email.md?context=xamarin/xamarin-forms) – facilement envoyer des messages électroniques.
 * [Assistances de système de fichiers](file-system-helpers.md?context=xamarin/xamarin-forms) – facilement enregistrer des fichiers de données d’application.
@@ -57,11 +57,11 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [SMS](sms.md?context=xamarin/xamarin-forms) – créer un message SMS pour l’envoi.
 * [Synthèse vocale](text-to-speech.md?context=xamarin/xamarin-forms) – Vocalize texte sur l’appareil.
 * [Suivi des versions](version-tracking.md?context=xamarin/xamarin-forms) : effectuer le suivi de la version des applications et des numéros de build.
-* [Vibration](vibrate.md?context=xamarin/xamarin-forms) : déclancher un retour haptique/une vibration.
+* [Vibration](vibrate.md?context=xamarin/xamarin-forms) – rendre l’appareil de vibration.
 
 ## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[Résolution des problèmes](troubleshooting.md?context=xamarin/xamarin-forms)
 
-Cette documentation vous aidera à déterminer l'origine de vos problèmes et répond à des questions fréquentes.
+Cette documentation vous aidera à déterminer l'origine de vos problèmes et à répondre aux questions courantes.
 
 ## <a name="api-documentationxrefxamarinessentials"></a>[Documentation de l’API](xref:Xamarin.Essentials)
 
