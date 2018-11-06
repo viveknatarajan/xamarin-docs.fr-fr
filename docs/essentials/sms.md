@@ -16,7 +16,7 @@ ms.locfileid: "38815595"
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Sms** permet à une application d'ouvrir l’application SMS par défaut avec un message à envoyer à un destinataire spécifié.
+Le **Sms** classe permet à une application ouvrir l’application de SMS par défaut avec un message à envoyer à un destinataire spécifié.
 
 ## <a name="using-sms"></a>Utilisation de **Sms**
 
