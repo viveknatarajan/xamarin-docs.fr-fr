@@ -20,13 +20,11 @@ La classe **Geolocation** fournit des API permettant de récupérer les coordonn
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **Geolocation**, quelques étapes de configuration spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Geolocation**, quelques étapes de configurations propres aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Les autorisations `AccessCoarseLocation` et `AccessFineLocation` sont obligatoires et doivent être configurées dans le projet Android.
-En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer également que votre application utilise les fonctionnalités matérielles.
-Elles peuvent être ajoutées comme suit :
+Épais et l’emplacement précis des autorisations sont nécessaires et doivent être configurées dans le projet Android. En outre, si votre application cible Android 5.0 (niveau 21 d’API) ou une version ultérieure, vous devez déclarer que votre application utilise les fonctionnalités matérielles dans le fichier manifeste. Il peut être ajouté comme suit :
 
 Ouvrez le fichier **AssemblyInfo.cs** dans le dossier **Proprerties** et ajoutez :
 
@@ -50,15 +48,15 @@ Ouvrez le fichier **AndroidManifest.xml** dans le dossier **Properties** et ajou
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **Android manifest**, recherchez la zone "**Required permissions:**" et cochez les autorisations **ACCESS_COARSE_LOCATION** et **ACCESS_FINE_LOCATION**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android**, trouvez la zone "**autorisations requises :**" et cochez les autorisations **ACCESS_COARSE_LOCATION** et **ACCESS_FINE_LOCATION**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 Le fichier **Info.plist** doit contenir la clé `NSLocationWhenInUseUsageDescription` afin d’accéder à l’emplacement de l’appareil.
 
-Ouvrez l’éditeur de plist et ajoutez la propriété **Privacy - Location When In Use Usage Description** et renseignez un texte à afficher à l’utilisateur.
+Ouvrez l’éditeur de plist, ajoutez la propriété **Privacy - Location When In Use Usage Description** et renseignez un texte à afficher à l’utilisateur.
 
-Ou modifiez manuellement le fichier **Info.plist** et ajoutez :
+Ou modifier manuellement le fichier et ajoutez ce qui suit :
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -67,7 +65,7 @@ Ou modifiez manuellement le fichier **Info.plist** et ajoutez :
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Vous devez définir l'autorisation `Location` pour l’application. Ouvrez le **Package.appxmanifest**, sélectionnez l'onglet **fonctionnalités** et cochez **Location**.
+Vous devez définir l'autorisation `Location` pour l’application. Ouvrez **Package.appxmanifest**, sélectionnez l'onglet **fonctionnalités** et cochez **Location**.
 
 -----
 
@@ -79,9 +77,9 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-L’API Geolocation demandera automatiquement le consentement de l'utilisateur lorsque cela sera nécessaire.
+L’API Geoloation également invitera l’utilisateur pour les autorisations lorsque cela est nécessaire.
 
-Vous pouvez obtenir la dernière [position](xref:Xamarin.Essentials.Location) connue de l’appareil, appelez la méthode `GetLastKnownLocationAsync`. Cela est souvent plus rapide que de demander une nouvelle lecture, mais cela peut être moins précis.
+Vous pouvez obtenir la dernière [position](xref:Xamarin.Essentials.Location) connue de l’appareil en appelant la méthode `GetLastKnownLocationAsync`. Cela est souvent plus rapide que de demander une nouvelle lecture, mais cela peut être moins précis.
 
 ```csharp
 try
@@ -184,7 +182,7 @@ Le tableau suivant présente la précision par plateforme :
 
 ## <a name="distance-between-two-locations"></a>Distance entre deux emplacements
 
-Les classes [`Location`](xref:Xamarin.Essentials.Location) et [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) définissent les méthodes `CalculateDistance` permettant de calculer la distance entre deux emplacements géographiques. Cette valeur calculée ne tient pas en compte les routes ou autres voies, il s'agit simplement de la distance la plus courte entre les deux points le long de la surface de la terre, également connu sous le nom de _distance orthodromique_ ou encore le distance « à vol d’oiseau. »
+Le [ `Location` ](xref:Xamarin.Essentials.Location) et [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) classes définissent `CalculateDistance` méthodes qui vous permettent de calculer la distance entre deux emplacements géographiques. Cette valeur calculée distance ne tient pas routes ou autres voies de compte et est simplement la distance la plus courte entre les deux points le long de la surface de la terre, également connu sous le _distance orthodromique_ ou quand, le distance « vol d’oiseau. »
 
 Voici un exemple :
 
@@ -194,9 +192,7 @@ Location sanFrancisco = new Location(37.783333, -122.416667);
 double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
 ```
 
-Le constructeur de la classe `Location` prend des arguments de latitude et longitude, dans cet ordre. Une latitude positive décrit une position située au Nord de l'équateur et une longitude positive décrit une position à l'Est du Prime Meridian (Greenwich).
-
-Utilisez l’argument final de `CalculateDistance` pour préciser si vous voulez un résultat en miles ou kilomètres. La classe `Location` définit également les convertisseurs `KilometersToMiles` et `MilesToKilometers` pour la conversion entre les deux unités.
+Le `Location` constructeur a des arguments de latitude et longitude dans cet ordre. Positif sont des valeurs de latitude au nord de l’Équateur et sont des valeurs de longitude positive à l’est. Utilisez l’argument final de `CalculateDistance` pour spécifier les miles ou kilomètres. Le `Location` classe définit également `KilometersToMiles` et `MilesToKilometers` méthodes pour la conversion entre les deux unités.
 
 ## <a name="api"></a>API
 
