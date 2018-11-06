@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Suivi de versions'
+title: 'Xamarin.Essentials : Suivi de Version'
 description: La classe VersionTracking vous permet de vérifier la version de votre application et son numéro de build. Cette classe vous permet également d'obtenir des informations supplémentaires telles que si c’est la première fois l’application lancée.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
@@ -12,11 +12,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353657"
 ---
-# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials : Suivi de versions
+# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials : Suivi de Version
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **VersionTracking** vous permet de vérifier la version et les numéros de build des applications, ainsi que des informations supplémentaires, telles que s'il s'agit du tout premier lancement de l’application ou de la version actuelle, obtenir les du informations du build précédent et bien plus encore.
+Le **VersionTracking** classe vous permet de vérifier la version des applications et des numéros de build, ainsi que de voir des informations supplémentaires telles que si c’est la première fois l’application lancée jamais ou pour la version actuelle, obtenez le précédent informations de build et bien plus encore.
 
 ## <a name="using-version-tracking"></a>Utilisation de **VersionTracking**
 
@@ -70,7 +70,7 @@ var versionHistory = VersionTracking.VersionHistory;
 var buildHistory = VersionTracking.BuildHistory;
 ```
 
-## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
 
 Toutes les informations de version sont stockées à l’aide des[préférences](preferences.md) de Xamarin.Essentials, sont stockées avec comme nom de fichier **[votre-application-PACKAGE-ID].xamarinessentials.versiontracking** et suivent la même persistance des données que décrite dans la documentation des [préférences](preferences.md#persistence).
 
