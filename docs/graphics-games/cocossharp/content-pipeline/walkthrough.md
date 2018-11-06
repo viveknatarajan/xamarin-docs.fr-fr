@@ -6,12 +6,12 @@ ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: fdc57e7028d3a16f9a9d2504caf1f2414d0ac94f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 84f825c19aa1ac08fbcf3e732077304218768bcc
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102982"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983599"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>À l’aide de l’outil de Pipeline de MonoGame
 
@@ -84,7 +84,7 @@ Examinons certaines des options plus importantes pour le projet de contenu.
 
 ### <a name="output-folder"></a>Dossier de sortie
 
-Il s’agit du dossier (relatif au projet contenu proprement dit) où la sortie **.xnb** fichiers seront enregistrés. Pour simplifier les choses, nous allons utiliser le même dossier pour contenir notre entrée et de sortie des fichiers. En d’autres termes, nous allons modifier le **dossier de sortie** être **.\**  :
+Il s’agit du dossier (relatif au projet contenu proprement dit) où la sortie **.xnb** fichiers seront enregistrés. Pour simplifier les choses, nous allons utiliser le même dossier pour contenir notre entrée et de sortie des fichiers. En d’autres termes, nous allons modifier le **dossier de sortie** être **.\\**  :
 
 ![](walkthrough-images/image10.png "")
 

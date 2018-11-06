@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d161a267c8ffa5040327db8e6e4f867a324b04f2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105804"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983612"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Utilisation de Tables dans le concepteur iOS
 
@@ -73,7 +73,7 @@ La première modification à la table de montage séquentiel est la suppression 
 
 1.  Sélectionnez la barre en bas du contrôleur d’affichage et supprimez-le.
 2.  Faites glisser un **contrôleur de Navigation** et un **contrôleur d’affichage Table** sur le plan conceptuel à partir de la boîte à outils. 
-3.  Créer un segue entre le contrôleur d’affichage racine et le deuxième contrôleur d’affichage de Table qui vient d’être ajouté. Pour créer le segue, contrôle + faire glisser *à partir de la cellule de détail* à la UITableViewController nouvellement ajouté. Choisissez l’option **afficher*** sous **sélection Segue**. 
+3.  Créer un segue entre le contrôleur d’affichage racine et le deuxième contrôleur d’affichage de Table qui vient d’être ajouté. Pour créer le segue, contrôle + faire glisser *à partir de la cellule de détail* à la UITableViewController nouvellement ajouté. Choisissez l’option **afficher** sous **sélection Segue**. 
 4.  Sélectionnez le nouveau segue que vous avez créé et lui donner un identificateur pour référencer ce segue dans le code. Cliquez sur le segue, puis entrez `TaskSegue` pour le **identificateur** dans le **panneau Propriétés**, comme suit :    
   [![Nommage segue dans Panneau de propriétés](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
