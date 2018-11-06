@@ -21,7 +21,7 @@ La classe **Geocoding** fournit les API permettant de transformer des adresses p
 
 ## <a name="getting-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **Geocoding**, quelques étapes de configuration spécifiques aux plateformes sont nécessaires.
+Pour accéder aux fonctionnalités de l'API **Geocoding**, quelques étapes de configurations propres aux plateformes sont nécessaires.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -33,9 +33,9 @@ Aucune configuration supplémentaire n’est requise.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Une clé d'API Bing Maps est requise pour utiliser la fonctionnalité de géocodage. Inscrivez-vous sur [Bing Maps](https://www.bingmapsportal.com/) et créez un compte. Sous **mon compte > Mes clés** vous pouvez créer une nouvelle clé en renseignant des informations sur votre application (qui doit être une **application publique Windows (UWP, 8.x et les versions antérieures)**).
+Une clé d'API Bing Maps est requise pour utiliser la fonctionnalité de géocodage. Inscrivez-vous sur [Bing Maps](https://www.bingmapsportal.com/) et créez un compte. Sous **mon compte > Mes clés**, vous pouvez créer une nouvelle clé en renseignant des informations sur votre application (qui doit être une **application publique Windows (UWP, 8.x et les versions antérieures)**).
 
-Aussi tôt que possible dans l'exécution de votre application, avant d'appeler une autre fonction de **Geocoding**, renseignez votre clé d'API comme ceci :
+Très tôt dans la vie de votre application avant d’appeler une **géocodage** méthodes définissent la clé d’API :
 
 ```csharp
 Geocoding.MapKey = "YOUR-KEY-HERE";
