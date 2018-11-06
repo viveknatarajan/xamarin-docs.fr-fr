@@ -12,11 +12,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353280"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials : Broswer
+<a name="xamarinessentials-browser"></a>Xamarin.Essentials : navigateur
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe Browser permet à une application d'ouvrir un lien web dans le navigateur optimisé du système ou dans le navigateur externe.
+Le **navigateur** classe permet à une application ouvrir un lien web dans le navigateur par défaut du système optimisé ou un navigateur externe.
 
 ## <a name="using-browser"></a>Utilisation de **Browser**
 
@@ -38,7 +38,7 @@ public class BrowserTest
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
