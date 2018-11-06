@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials : Lanceur Inter-app'
+title: Lanceur de Xamarin.Essentials
 description: La classe Lanceur dans Xamarin.Essentials permet à une application ouvrir un URI par le système.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
@@ -12,11 +12,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 08/06/2018
 ms.locfileid: "39573631"
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials : Lanceur Inter-app
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials : Lanceur
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe **Launcher** permet à une application d'ouvrir un URI. Ceci est surtout utilisé pour déclencher des `DeepLinks` via les schémas d’URI personnalisés d’une autre application. Si vous souhaitez seulement ouvrir le navigateur sur un site Web, reportez-vous à la documentation sur le **[navigateur](open-browser.md)**.
+Le **Lanceur** classe permet à une application ouvrir un URI par le système. Cela est souvent utilisé lors de la profondeur de liaison dans les schémas d’URI personnalisés d’une autre application. Si vous souhaitez pour ouvrir le navigateur sur un site Web, reportez-vous à la **[navigateur](open-browser.md)** API.
 
 ## <a name="using-launcher"></a>Utilisation de **Launcher**
 
