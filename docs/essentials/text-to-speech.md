@@ -12,13 +12,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 07/30/2018
 ms.locfileid: "39353611"
 ---
-# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials : Synthèse vocale
+# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials : Synthèse vocale
 
 ![Version préliminaire NuGet](~/media/shared/pre-release.png)
 
-La classe TextToSpeech permet à une application d'utiliser les moteurs de synthèse vocale intégrés pour énoncer du texte à partir de l'appareil, mais aussi pour interroger les langues disponibles que le moteur peut prendre en charge.
+Le **texttospeech avec le** classe permet à une application d’utiliser intégrée dans les moteurs de synthèse vocale à énoncer le texte précédent de l’appareil et également pour les langues disponibles requête prenant en charge le moteur.
 
-## <a name="using-text-to-speech"></a>Utilisation de **TextToSpeech**
+## <a name="using-text-to-speech"></a>À l’aide de la synthèse vocale
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
