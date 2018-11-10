@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: e9c2a42b9108c04f18252a410d40dbc03013f6dd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8622c40e41071d6c05b05abbe2d5d8a8a844ebde
+ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123750"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51285584"
 ---
 # <a name="ios-designer-basics"></a>principes fondamentaux du Concepteur d’iOS
 
@@ -459,6 +459,14 @@ Il est possible d’utiliser le concepteur iOS et Xcode Interface Builder de man
 Après avoir apporté des modifications dans Xcode Interface Builder, enregistrez le fichier et revenir à Visual Studio pour Mac. Les modifications sont synchronisées au projet Xamarin.iOS.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+## <a name="revert-to-xcode"></a>Revenir à Xcode
+
+Il est possible d’utiliser le concepteur iOS et Xcode Interface Builder indifféremment, mais Xcode Interface Builder est uniquement disponible sur Mac. Pour ouvrir un fichier de storyboard ou .xib dans Xcode Interface Builder sur un Mac, ouvrez la solution qui contient le projet Xamarin.iOS dans [Visual Studio pour Mac](/visualstudio/mac/), avec le bouton droit sur le fichier et sélectionnez **ouvrir avec > Xcode Interface Générateur**, comme illustré par la capture d’écran ci-dessous :
+
+[![Ouverture d’un storyboard dans Xcode Interface Builder](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "ouverture d’un storyboard dans Xcode Interface Builder")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
+
+Après avoir apporté des modifications dans Xcode Interface Builder, enregistrez le fichier et revenir à Visual Studio pour Mac. Les modifications sont synchronisées au projet Xamarin.iOS.
 
 -----
 

@@ -9,10 +9,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
 ms.openlocfilehash: 80f37e1753362ec0503b70e49a2206684c0fedb5
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
+ms.lasthandoff: 11/08/2018
 ms.locfileid: "50675326"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Conseils de dépannage pour Xamarin.iOS 
@@ -47,8 +47,8 @@ Vous utilisez peut-être un encodage n’est pas ajouté par défaut. Vérifier 
 Le membre a été probablement supprimé par l’éditeur de liens et par conséquent n’existe pas dans l’assembly lors de l’exécution.  Il existe plusieurs solutions à cela :
 
 -  Ajouter le [[conserver]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) au membre d’attribut.  Cela empêchera l’éditeur de liens de le supprimer.
--  Lors de l’appel [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , utilisez le **-nolink** ou **-linksdkonly** options. -     **-nolink**   désactive toutes les liaisons.
--    **-linksdkonly** sera uniquement lier des assemblys Xamarin.iOS fourni, tel que *monotouch.dll* ou xamarin.ios.dll.
+-  Lors de l’appel [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , utilisez le **-nolink** ou **-linksdkonly** options.** -    -nolink**   désactive toutes les liaisons.
+-    **-linksdkonly**   sera uniquement lier des assemblys Xamarin.iOS fourni, tel que *monotouch.dll* ou xamarin.ios.dll.
 
 Notez que les assemblys sont liées afin que le fichier exécutable obtenu est plus petit ; Par conséquent, la désactivation de la liaison peut entraîner un fichier exécutable plus volumineux qu’est souhaitable.
 

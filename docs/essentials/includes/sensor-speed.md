@@ -1,17 +1,17 @@
 ---
 ms.topic: include
 ms.openlocfilehash: e4dfd1ac12f3010939d483381a785091d71599ed
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353267"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51210598"
 ---
 ## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[Vitesse de capteur](xref:Xamarin.Essentials.SensorSpeed)
 
-- **Le plus rapide** : obtenir les données de capteur aussi rapidement que possible (ne pas renvoie toujours sur le thread d’interface utilisateur).
-- **Jeu** – taux approprié pour les jeux (ne pas renvoie toujours sur le thread d’interface utilisateur).
-- **Normal** – taux par défaut approprié pour les modifications de l’orientation d’écran.
-- **L’interface utilisateur** – taux approprié pour l’interface utilisateur général.
+- **Le plus rapide** : obtenir les données de capteur aussi rapidement que possible (aucune garantie de retour sur le thread d’interface utilisateur).
+- **Jeu** : débit adapté aux jeux (aucune garantie de retour sur le thread d’interface utilisateur).
+- **Normal** : débit par défaut adapté aux changements d’orientation de l’écran.
+- **UI** : débit adapté à une interface utilisateur général.
 
-Si votre gestionnaire d’événements n’est pas garanti à exécuter sur le thread d’interface utilisateur et si le Gestionnaire d’événements doit accéder aux éléments d’interface utilisateur, utilisez la [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) méthode à exécuter ce code sur le thread d’interface utilisateur.
+Si votre gestionnaire d’événements ne garantit pas l’exécution sur le thread d’interface utilisateur et si le gestionnaire d’événements doit accéder aux éléments de l’interface utilisateur, utilisez la méthode [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) pour exécuter ce code sur le thread d’interface utilisateur.
