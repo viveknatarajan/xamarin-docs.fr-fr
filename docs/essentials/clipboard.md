@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials : Clipboard'
-description: La classe Clipboard permet de copier-coller du texte dans le Presse-papiers système, qui est partagé entre les applications.
+title: 'Xamarin.Essentials : Presse-papiers'
+description: Ce document décrit la classe Clipboard de Xamarin.Essentials, qui vous permet de copier et de coller du texte dans le Presse-papiers système entre les applications.
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 41b15b480fa23bd49667b68e904043e4f1a95732
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 8dd238da678dfb5773801137d313b286590aa463
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38842613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675534"
 ---
-# <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials : Clipboard
+# <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials : Presse-papiers
 
-![Version préliminaire NuGet](~/media/shared/pre-release.png)
+![Préversion NuGet](~/media/shared/pre-release.png)
 
-La classe **Clipboard** permet de copier-coller du texte dans le Presse-papiers système, qui est partagé entre les applications.
+La classe **Clipboard** vous permet de copier et de coller du texte dans le Presse-papiers système entre les applications.
 
-## <a name="using-clipboard"></a>Utilisation de **Clipboard**
+## <a name="get-started"></a>Prise en main
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-clipboard"></a>Utilisation du Presse-papiers
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,19 +30,19 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Pour vérifier si le **Presse-papiers** a actuellement prêt à coller du texte :
+Pour vérifier si le **Presse-papiers** contient du texte prêt à être collé :
 
 ```csharp
 var hasText = Clipboard.HasText;
 ```
 
-Pour définir le texte du **Presse-papiers**:
+Pour définir du texte dans le **Presse-papiers** :
 
 ```csharp
 Clipboard.SetText("Hello World");
 ```
 
-Pour lire le texte à partir du **Presse-papiers**:
+Pour lire du texte à partir du **Presse-papiers** :
 
 ```csharp
 var text = await Clipboard.GetTextAsync();
@@ -46,5 +50,5 @@ var text = await Clipboard.GetTextAsync();
 
 ## <a name="api"></a>API
 
-- [Code source de Presse-papiers](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
-- [Documentation de l’API du Presse-papiers](xref:Xamarin.Essentials.Clipboard)
+- [Code source de la fonctionnalité de Presse-papiers](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
+- [Documentation sur l’API de Presse-papiers](xref:Xamarin.Essentials.Clipboard)

@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials : Préférences'
-description: Ce document décrit la classe Préférences dans Xamarin.Essentials, qui enregistre les préférences de l’application dans un magasin de clés/valeurs. Elle explique comment utiliser la classe et les types de données qui peuvent être stockées.
+title: 'Xamarin.Essentials : préférences'
+description: Ce document décrit la classe Preferences de Xamarin.Essentials, qui enregistre les préférences de l’application dans un magasin de clés/valeurs. Il explique comment utiliser la classe et les types de données pouvant être stockés.
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 4a45587c79cfbbcd1198f100915e698289f74950
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: 3562ec840f824f6a8aeed1a61c7b27985a5ddf72
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675469"
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials : Préférences
+# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials : préférences
 
-![Version préliminaire NuGet](~/media/shared/pre-release.png)
+![Préversion NuGet](~/media/shared/pre-release.png)
 
-La classe **Preferences** permet de stocker les préférences de l’application dans un magasin de clé/valeur.
+La classe **Preferences** permet de stocker les préférences d’application dans un magasin de clés/valeurs.
 
-## <a name="using-preferences"></a>À l’aide des préférences
+## <a name="get-started"></a>Prise en main
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-preferences"></a>Utilisation des préférences
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,19 +30,19 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Pour enregistrer une valeur pour une donnée _clé_ dans Préférences :
+Pour enregistrer la valeur d’une _clé_ donnée dans les préférences :
 
 ```csharp
 Preferences.Set("my_key", "my_value");
 ```
 
-Pour récupérer une valeur de préférences ou une valeur par défaut n’est pas défini :
+Pour récupérer une valeur à partir des préférences, ou une valeur par défaut si elle n’est pas définie :
 
 ```csharp
 var myValue = Preferences.Get("my_key", "default_value");
 ```
 
-Pour supprimer le _clé_ des préférences :
+Pour supprimer la _clé_ des préférences :
 
 ```csharp
 Preferences.Remove("my_key");
@@ -50,11 +54,11 @@ Pour supprimer toutes les préférences :
 Preferences.Clear();
 ```
 
-Outre ces méthodes, chacune accepter dans facultatif `sharedName` qui peut être utilisé pour créer des conteneurs supplémentaires de préférence. Lire les détails d’implémentation de plateforme ci-dessous.
+En plus de ces méthodes, vous pouvez utiliser un `sharedName` facultatif qui permet de créer des conteneurs supplémentaires pour des préférences. Lisez les spécificités d’implémentation en fonction de la plateforme, ci-dessous.
 
 ## <a name="supported-data-types"></a>Types de données pris en charge
 
-Les types de données suivants sont pris en charge dans **préférences**:
+Les types de données suivants sont pris en charge dans **Preferences** :
 
 - **bool**
 - **double**
@@ -64,35 +68,35 @@ Les types de données suivants sont pris en charge dans **préférences**:
 - **string**
 - **DateTime**
 
-## <a name="implementation-details"></a>Détails d’implémentation
+## <a name="implementation-details"></a>Détails de l’implémentation
 
-Les valeurs de `DateTime` sont stockées en format binaire 64 bits (entier long) à l’aide de deux méthodes définies par la classe `DateTime` : la méthode [`ToBinary`](xref:System.DateTime.ToBinary) est utilisée pour encoder la valeur `DateTime` et la méthode [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) décode la valeur. Consultez la documentation de ces méthodes pour les ajustements susceptibles d'être apportés aux valeurs décodées lorsqu'une valeur `DateTime` est stockée et n'est pas une valeur de temps universel coordonné (UTC).
+Les valeurs de `DateTime` sont stockées dans un format binaire 64 bits (entier long) à l’aide de deux méthodes définies par la classe `DateTime` : la méthode [`ToBinary`](xref:System.DateTime.ToBinary) sert à encoder la valeur de `DateTime`, alors que la méthode [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) sert à décoder la valeur. Consultez la documentation de ces méthodes pour connaître les ajustements qui peuvent être apportés aux valeurs décodées quand un `DateTime` stocké n’est pas une valeur UTC (temps universel coordonné).
 
-## <a name="platform-implementation-specifics"></a>Implémentations spécifiques par plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Toutes les données sont stockées dans [préférences partagées](https://developer.android.com/training/data-storage/shared-preferences.html). Si aucun `sharedName` est spécifié pour les préférences partagées par défaut sont utilisées, sinon le nom est utilisé pour obtenir un **privé** partagée préférences avec le nom spécifié.
+Toutes les données sont stockées dans les [Préférences partagées](https://developer.android.com/training/data-storage/shared-preferences.html). Si aucun `sharedName` n’est spécifié, les préférences partagées par défaut sont utilisées. Sinon, le nom sert à obtenir des préférences partagées **privées** avec le nom spécifié.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[Valeurs NSUserDefaults](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/user-defaults) est utilisé pour stocker des valeurs sur les appareils iOS. Si aucun `sharedName` est spécifié le `StandardUserDefaults` sont utilisé, sinon le nom est utilisé pour créer un nouveau `NSUserDefaults` portant le nom spécifié est utilisé pour le `NSUserDefaultsType.SuiteName`.
+[NSUserDefaults](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/user-defaults) permet de stocker des valeurs sur les appareils iOS. Si aucun `sharedName` n’est spécifié, `StandardUserDefaults` est utilisé. Sinon, le nom sert à créer un `NSUserDefaults` avec le nom spécifié utilisé pour `NSUserDefaultsType.SuiteName`.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdatacontainer) est utilisé pour stocker les valeurs sur l’appareil. Si aucun `sharedName` porte la `LocalSettings` sont utilisées, sinon le nom est utilisé pour créer un nouveau conteneur à l’intérieur de `LocalSettings`.
+[ApplicationDataContainer](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdatacontainer) permet de stocker les valeurs sur l’appareil. Si aucun `sharedName` n’est spécifié, `LocalSettings` est utilisé. Sinon, le nom sert à créer un conteneur dans `LocalSettings`.
 
 --------------
 
 ## <a name="persistence"></a>Persistance
 
-Désinstallation de l’application est que tous les _préférences_ à supprimer. Il existe une exception à cela, ce qui, pour les applications qui ciblent et s’exécutent sur Android 6.0 (niveau d’API 23) ou version ultérieure, qui sont à l’aide de [ __sauvegarde automatique__](https://developer.android.com/guide/topics/data/autobackup). Cette fonctionnalité est activée par défaut et conserve notamment des données d’application __préférences partagées__, qui est ce que le **préférences** utilise des API. Vous pouvez le désactiver en suivant Google [documentation](https://developer.android.com/guide/topics/data/autobackup).
+La désinstallation de l’application entraîne la suppression de toutes les _Préférences_. Il existe une exception à cette règle. Il s’agit du cas où les applications ciblent (et s’exécutent sur) Android 6.0 (niveau d’API 23) ou version ultérieure, et utilisent la [__sauvegarde automatique__](https://developer.android.com/guide/topics/data/autobackup). Cette fonctionnalité est activée par défaut et conserve les données de l’application, notamment les __Préférences partagées__, utilisées par l’API de **Préférences**. Vous pouvez désactiver cette fonctionnalité en suivant la [documentation](https://developer.android.com/guide/topics/data/autobackup) de Google.
 
 ## <a name="limitations"></a>Limitations
 
-Lorsque vous stockez une chaîne, cette API est destinée à stocker de petites quantités de texte.  Performances peuvent être été si vous essayez d’utiliser pour stocker de grandes quantités de texte.
+Quand vous stockez une chaîne, cette API permet de stocker de petites quantités de texte.  Les performances risquent d’être médiocres si vous essayez de l’utiliser pour stocker de grandes quantités de texte.
 
 ## <a name="api"></a>API
 
-- [Préférences de code source](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
-- [Documentation sur les préférences d’API](xref:Xamarin.Essentials.Preferences)
+- [Code source de la fonctionnalité des préférences](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
+- [Documentation sur l’API de préférences](xref:Xamarin.Essentials.Preferences)

@@ -1,50 +1,52 @@
 ---
-title: 'Xamarin.Essentials : Torche'
-description: La classe Flashlight a la possibilité d’activer ou de désactiver le flash de l’appareil photo afin de l'utiliser comme lampe torche.
+title: 'Xamarin.Essentials : lampe de poche'
+description: Ce document décrit la classe Flashlight de Xamarin.Essentials, qui permet d’activer ou de désactiver le flash de l’appareil photo de l’appareil pour transformer celui-ci en lampe de poche.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 8c471f64c14a2e41693c450e02f89e7ac845d060
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: d1a2ad675d615b48b8e8f8433065c5bd0bbae1d0
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675079"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials : Torche
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials : lampe de poche
 
-![Version préliminaire NuGet](~/media/shared/pre-release.png)
+![Préversion NuGet](~/media/shared/pre-release.png)
 
-La classe **Flashlight** a la possibilité d’activer ou de désactiver le flash de l’appareil photo afin de l'utiliser comme lampe torche.
+La classe **Flashlight** permet d’activer ou de désactiver le flash de l’appareil photo de l’appareil pour transformer celui-ci en lampe de poche.
 
-## <a name="getting-started"></a>Prise en main
+## <a name="get-started"></a>Prise en main
 
-Pour accéder aux fonctionnalités de l'API **Flashlight**, quelques étapes de configurations spécifiques aux plateformes sont nécessaires.
+[!include[](~/essentials/includes/get-started.md)]
+
+Pour accéder à la fonctionnalité de **lampe de poche**, la configuration suivante spécifique à la plateforme est obligatoire.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Les autorisations `Flashlight` et `Camera` sont obligatoires et doivent être configurées dans le projet Android. Elles peuvent être ajoutées comme suit :
+Les autorisations Flashlight et Camera sont obligatoires, et doivent être configurées dans le projet Android. Vous pouvez le faire de plusieurs façons, comme indiqué ci-dessous :
 
-Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **propriétés** et ajoutez :
+Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **Propriétés** et ajoutez :
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
 [assembly: UsesPermission(Android.Manifest.Permission.Camera)]
 ```
 
-Ou mettez à jour le manifeste Android :
+OU mettez à jour le manifeste Android :
 
-Ouvrez le fichier **AndroidManifest.xml** sous le dossier **propriétés** et ajoutez le code suivant à l’intérieur du nœud **manifest**.
+Ouvrez le fichier **AndroidManifest.xml** sous le dossier **Propriétés** et ajoutez ce qui suit dans le nœud du **manifeste**.
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-OU cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **manifeste Android** trouvez la zone "**autorisations requises :**" et cochez les autorisations **torche** et **caméra**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
+Vous pouvez également cliquer avec le bouton droit sur le projet Android, et ouvrir les propriétés du projet. Sous **Manifeste Android**, recherchez la zone **Autorisations nécessaires**, puis cochez les autorisations **FLASHLIGHT** et **CAMERA**. Cela entraîne la mise à jour automatique du fichier **AndroidManifest.xml**.
 
-En ajoutant ces autorisations [Google Play filtrent automatiquement les périphériques](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sans matériel spécifique. Vous pouvez contourner ce problème en ajoutant le code suivant à votre fichier AssemblyInfo.cs dans votre projet Android :
+Si vous ajoutez ces autorisations, [Google Play va filtrer automatiquement les appareils](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) n’ayant pas un matériel spécifique. Vous pouvez contourner ce problème en ajoutant ce qui suit au fichier AssemblyInfo.cs de votre projet Android :
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -61,7 +63,7 @@ Aucune configuration supplémentaire n’est requise.
 
 -----
 
-## <a name="using-flashlight"></a>Utilisation de **Flashlight**
+## <a name="using-flashlight"></a>Utilisation de la lampe de poche
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -69,7 +71,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La torche peut être activée et désactivée via les méthodes `TurnOnAsync` et `TurnOffAsync`:
+Vous pouvez activer et désactiver la lampe de poche à l’aide des méthodes `TurnOnAsync` et `TurnOffAsync` :
 
 ```csharp
 try
@@ -94,31 +96,31 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>Caractéristiques d'implémentation de la plateforme
+## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
 ### <a name="androidtabandroid"></a>[Android](#tab/android)
 
 La classe Flashlight a été optimisée en fonction du système d’exploitation de l’appareil.
 
-#### <a name="api-level-23-and-higher"></a>Niveau d’API 23 et versions ultérieures
+#### <a name="api-level-23-and-higher"></a>Niveau d’API 23 et plus
 
-Sur les niveaux d’API plus récents, [Torch Mode](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) sera utilisé pour activer ou désactiver le flash de l’appareil.
+Avec les nouveaux niveaux d’API, le [mode Torche](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) permet d’activer ou de désactiver le flash de l’appareil.
 
-#### <a name="api-level-22-and-lower"></a>API de niveau 22 et inférieur
+#### <a name="api-level-22-and-lower"></a>Niveau d’API 22 et moins
 
-Une texture de surface de caméra est créée afin d'activer et de désactiver le `FlashMode` de l'appareil. 
+Une texture de surface d’appareil photo est créée pour activer ou désactiver le `FlashMode` de l’unité d’appareil photo. 
 
 ### <a name="iostabios"></a>[iOS](#tab/ios)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/)  sera utilisé pour activer ou désactiver le flash de l’appareil.
+[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) permet d’activer et de désactiver le mode Torche et Flash de l’appareil.
 
 ### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp)  sera utilisé pour détecter la première lampe à l’arrière de l’appareil et pour l'activer ou la désactiver.
+[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) permet de détecter l’activation ou la désactivation de la première lampe à l’arrière de l’appareil.
 
 -----
 
 ## <a name="api"></a>API
 
-- [Code source de torche](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
-- [Documentation de torche API](xref:Xamarin.Essentials.Flashlight)
+- [Code source de la fonctionnalité de lampe de poche](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Documentation sur l’API de lampe de poche](xref:Xamarin.Essentials.Flashlight)

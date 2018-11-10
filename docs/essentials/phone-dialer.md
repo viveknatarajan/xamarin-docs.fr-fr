@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials : Le Numéroteur téléphonique'
-description: La classe PhoneDialer dans Xamarin.Essentials permet à une application ouvrir un numéro de téléphone dans le Numéroteur
+title: 'Xamarin.Essentials : clavier téléphonique'
+description: La classe PhoneDialer de Xamarin.Essentials permet à une application de composer un numéro de téléphone sur le clavier.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 34a6c80836d8cb42b1f8fd95718fe248d4701c0f
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: bccc76e1602c475a5e4cc9a95d498d11f9a379b1
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675417"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials : Le Numéroteur téléphonique
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials : clavier téléphonique
 
-![Version préliminaire NuGet](~/media/shared/pre-release.png)
+![Préversion NuGet](~/media/shared/pre-release.png)
 
-La classe **PhoneDialer** permet à une application d'ouvrir un numéro de téléphone dans le numéroteur.
+La classe **PhoneDialer** permet à une application de composer un numéro de téléphone sur le clavier.
 
-## <a name="using-phone-dialer"></a>À l’aide du Numéroteur téléphonique
+## <a name="get-started"></a>Prise en main
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-phone-dialer"></a>Utilisation du clavier téléphonique
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,7 +30,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité Numéroteur téléphonique fonctionne en appelant le `Open` méthode avec un numéro de téléphone pour ouvrir le numéroteur avec. Lorsque `Open` est demandé à l’API tente automatiquement de mettre en forme le nombre en fonction du code de pays s’il est spécifié.
+La fonctionnalité de clavier téléphonique appelle la méthode `Open` pour composer un numéro de téléphone sur le clavier. Quand `Open` est demandé, l’API tente automatiquement d’appliquer le format approprié au numéro en fonction de l’indicatif téléphonique international, s’il est spécifié.
 
 ```csharp
 public class PhoneDialerTest
@@ -55,5 +59,5 @@ public class PhoneDialerTest
 
 ## <a name="api"></a>API
 
-- [Code source du Numéroteur téléphonique](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
-- [Documentation de l’API de Numéroteur téléphonique](xref:Xamarin.Essentials.PhoneDialer)
+- [Code source de la fonctionnalité de clavier téléphonique](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
+- [Documentation sur l’API de clavier téléphonique](xref:Xamarin.Essentials.PhoneDialer)

@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials : E-mail'
-description: La classe Email permet à une application d'ouvrir l’application de messagerie par défaut en lui transmettant des informations sur le message pré-composé, tel que le sujet, le corps et les destinataires (à, CC, Cci).
+title: 'Xamarin.Essentials : e-mail'
+description: La classe Email de Xamarin.Essentials permet à une application d’ouvrir l’application de messagerie par défaut en utilisant des informations spécifiques, notamment l’objet, le corps et les destinataires (À, CC, CCI).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f113cebfebf4238fd4b75ad8ab248e2abf61efea
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: c8d4a83caf6832f911193067324915fd6226b380
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353904"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674962"
 ---
-# <a name="xamarinessentials-email"></a>Xamarin.Essentials : E-mail
+# <a name="xamarinessentials-email"></a>Xamarin.Essentials : e-mail
 
-![Version préliminaire NuGet](~/media/shared/pre-release.png)
+![Préversion NuGet](~/media/shared/pre-release.png)
 
-La classe **Email** permet à une application d'ouvrir l’application de messagerie par défaut en lui transmettant des informations sur le message pré-composé, tel que le sujet, le corps et les destinataires (à, CC, Cci).
+La classe **Email** permet à une application d’ouvrir l’application de messagerie par défaut en utilisant des informations spécifiques, notamment l’objet, le corps et les destinataires (À, CC, CCI).
 
-## <a name="using-email"></a>Utilisation de **Email**
+## <a name="get-started"></a>Prise en main
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-email"></a>Utilisation de l’e-mail
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,7 +30,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité Email appelle la méthode `ComposeAsync` avec `EmailMessage` qui contient des informations sur l'e-mail :
+La fonctionnalité d’e-mail appelle la méthode `ComposeAsync` d’un `EmailMessage` contenant des informations sur l’e-mail :
 
 ```csharp
 public class EmailTest
@@ -59,5 +63,5 @@ public class EmailTest
 
 ## <a name="api"></a>API
 
-- [Code source de messagerie](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
-- [Documentation des API d’e-mail](xref:Xamarin.Essentials.Email)
+- [Code source de la fonctionnalité d’e-mail](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [Documentation sur l’API d’e-mail](xref:Xamarin.Essentials.Email)

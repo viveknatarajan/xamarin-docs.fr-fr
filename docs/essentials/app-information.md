@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials : Informations sur l’application'
-description: La classe **AppInfo** fournit des informations générales sur votre application. Par exemple, il expose le nom de l’application et la version. Par exemple, il expose le nom de l’application et la version.
+title: 'Xamarin.Essentials : informations sur l’application'
+description: Ce document décrit la classe AppInfo de Xamarin.Essentials, qui fournit des informations sur votre application. Par exemple, il expose le nom et la version de l’application.
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 7e79b3003f41b8de22950624e44e8c9e0e7e7e31
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 62ecf890ba6b3276db89e93c2699e0406dbe4d45
+ms.sourcegitcommit: a635312ffec816ba357a92b66c8c5221c8d9044c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831505"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965615"
 ---
-# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials : Informations sur l’application
+# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials : informations sur l’application
 
-![Version préliminaire NuGet](~/media/shared/pre-release.png)
+![Préversion NuGet](~/media/shared/pre-release.png)
 
-La classe **AppInfo** fournit des informations générales sur votre application.
+La classe **AppInfo** fournit des informations sur votre application.
 
-## <a name="using-appinfo"></a>Utilisation de **AppInfo**
+## <a name="get-started"></a>Prise en main
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-appinfo"></a>Utilisation d’AppInfo
 
 Ajoutez une référence à Xamarin.Essentials dans votre classe :
 
@@ -26,7 +30,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-## <a name="obtaining-application-information"></a>Obtenir des informations sur l’application
+## <a name="obtaining-application-information"></a>Obtention d’informations sur l’application :
 
 Les informations suivantes sont exposées via l’API :
 
@@ -44,18 +48,18 @@ var version = AppInfo.VersionString;
 var build = AppInfo.BuildString;
 ```
 
-## <a name="displaying-application-settings"></a>Afficher les paramètres de l'application
+## <a name="displaying-application-settings"></a>Affichage des paramètres de l’application
 
-La classe **AppInfo** peut également afficher la page des paramètres systèmes gérés par le système d’exploitation spécifiquement pour l’application :
+La classe **AppInfo** peut également afficher une page de paramètres gérés par le système d’exploitation pour l’application :
 
 ```csharp
 // Display settings page
-AppInfo.OpenSettings();
+AppInfo.ShowSettingsUI();
 ```
 
-Cette page de paramètres permet à l’utilisateur de modifier les autorisations d’application et d’effectuer d’autres tâches spécifiques à la plateforme.
+Cette page de paramètres permet à l’utilisateur de changer les autorisations de l’application et d’effectuer d’autres tâches spécifiques à la plateforme.
 
 ## <a name="api"></a>API
 
-- [Code source de AppInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
-- [Documentation de l’API de AppInfo](xref:Xamarin.Essentials.AppInfo)
+- [Code source d’AppInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
+- [Documentation sur l’API d’AppInfo](xref:Xamarin.Essentials.AppInfo)
