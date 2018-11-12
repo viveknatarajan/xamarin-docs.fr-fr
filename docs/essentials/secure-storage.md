@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : SecureStorage'
 description: Ce document décrit la classe SecureStorage de Xamarin.Essentials qui permet de stocker en toute sécurité des paires clé/valeur simples. Il explique comment utiliser la classe et expose les caractéristiques de mise en œuvre de la plateforme et ses limitations.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
@@ -72,6 +72,22 @@ Dans les propriétés du projet, sous **Signature du bundle iOS**, définissez l
 
 > [!TIP]
 > En cas de déploiement sur un appareil iOS, ce droit n’est pas obligatoire et doit être supprimé.
+ ```xml
+  <key>keychain-access-groups</key>
+  <array>
+    <string>com.[company].[app]</string>
+  </array>
+```
+
+Vous pouvez ensuite ajouter le PropertyGroup suivant dans le fichier .csproj de votre application iOS :
+
+```xml
+  <PropertyGroup Condition=" '$(Platform)' == 'iPhoneSimulator' ">
+    <CodesignEntitlements>Entitlements.Simulator.plist</CodesignEntitlements>
+  </PropertyGroup>
+```
+
+Ceci activera automatiquement la configuration de l'accès au trousseau lors de l'execution de l'application sur un simulateur.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
@@ -122,12 +138,11 @@ Pour supprimer une certaine clé, appelez :
 SecureStorage.Remove("oauth_token");
 ```
 
-Pour supprimer toutes les clés, appelez :
+Pour supprimer tous les ensembles clé-valeur du stockage sécurisé :
 
 ```csharp
 SecureStorage.RemoveAll();
 ```
-
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
@@ -158,8 +173,11 @@ Dans certains cas, les données KeyChain sont synchronisées avec iCloud, et il 
 Ces valeurs chiffrées sont stockées dans `ApplicationData.Current.LocalSettings`, à l’intérieur d’un conteneur, avec le nom **[VOTRE-ID-D-APPLICATION].xamarinessentials**.
 
 **SecureStorage** utilise l’API [Préférences](preferences.md) et suit la persistance des données décrite dans la documentation [Préférences](preferences.md#persistence).
-
 -----
+
+## <a name="persistence"></a>Persistance
+
+**SecureStorage** utilise l'API [préférences](preferences.md) et elle suit les mêmes spécificités de persistance des données décrites dans la documentation des [préférences](preferences.md#persistence).
 
 ## <a name="limitations"></a>Limitations
 

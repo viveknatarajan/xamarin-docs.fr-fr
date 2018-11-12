@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : État d’économie d’énergie'
 description: La classe Power permet à un programme d’obtenir l’état d’économie d’énergie pour déterminer si l’appareil fonctionne en mode faible consommation d’énergie.
 ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
@@ -65,7 +65,6 @@ public class EnergySaverTest
 ```
 
 Si l’état d’économie d’énergie devient `On`, l’application doit arrêter le traitement en arrière-plan. S’il passe à `Unknown` ou `Off`, elle peut reprendre le traitement en arrière-plan.
-
 ## <a name="api"></a>API
 
 - [Code source de Power](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Power)

@@ -1,5 +1,5 @@
----
-title: 'Xamarin.Essentials : Synthèse vocale'
+﻿---
+title: 'Xamarin.Essentials : Synthèse vocale'
 description: La classe Synthèse vocale dans Xamarin.Essentials permet à une application d’utiliser les moteurs de synthèse vocale intégrés pour énoncer le texte à partir de l’appareil et également pour interroger les langages disponibles pris en charge par le moteur.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : boussole'
 description: Ce document décrit la classe Compass de Xamarin.Essentials, qui vous permet de superviser le cap du nord magnétique de l’appareil.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
@@ -31,6 +31,7 @@ using Xamarin.Essentials;
 ```
 
 La fonctionnalité de boussole appelle les méthodes `Start` et `Stop` pour écouter les changements relatifs à la boussole. Tous les changements sont renvoyés via l’événement `ReadingChanged`. Voici un exemple :
+Toutes les modifications sont renvoyées par l'événement « ReadingChanged ». Voici un exemple :
 
 ```csharp
 public class CompassTest

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : préférences'
 description: Ce document décrit la classe Preferences de Xamarin.Essentials, qui enregistre les préférences de l’application dans un magasin de clés/valeurs. Il explique comment utiliser la classe et les types de données pouvant être stockés.
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
@@ -48,7 +48,7 @@ Pour supprimer la _clé_ des préférences :
 Preferences.Remove("my_key");
 ```
 
-Pour supprimer toutes les préférences :
+Pour supprimer tous les ensembles clé-valeur des préférences :
 
 ```csharp
 Preferences.Clear();
@@ -56,7 +56,7 @@ Preferences.Clear();
 
 En plus de ces méthodes, vous pouvez utiliser un `sharedName` facultatif qui permet de créer des conteneurs supplémentaires pour des préférences. Lisez les spécificités d’implémentation en fonction de la plateforme, ci-dessous.
 
-## <a name="supported-data-types"></a>Types de données pris en charge
+## <a name="supported-data-types"></a>Types de données prises en charge
 
 Les types de données suivants sont pris en charge dans **Preferences** :
 

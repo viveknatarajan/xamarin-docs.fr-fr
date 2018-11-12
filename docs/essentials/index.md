@@ -1,4 +1,4 @@
----
+﻿---
 title: Xamarin.Essentials
 description: Ce document contient des liens vers les documentations concernant Xamarin.Essentials. Xamarin.Essentials rassemble les API natives en une API multiplateforme unique pour les applications mobiles.
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A

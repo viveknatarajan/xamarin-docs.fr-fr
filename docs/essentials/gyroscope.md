@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : gyroscope'
 description: La classe Gyroscope de Xamarin.Essentials vous permet de superviser le capteur gyroscopique de l’appareil, qui mesure la rotation autour des trois axes principaux de l’appareil.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
@@ -31,9 +31,9 @@ using Xamarin.Essentials;
 ```
 
 La fonctionnalité de gyroscope appelle les méthodes `Start` et `Stop` pour écouter les changements relatifs au gyroscope. Tous les changements sont renvoyés via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
+L'événement `ReadingChanged` est mis à votre disposition pour surveiller l'évolution de la rotation de l'appareil :
 
 ```csharp
-
 public class GyroscopeTest
 {
     // Set speed delay for monitoring changes.

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : verrouillage d’écran'
 description: Ce document décrit la classe ScreenLock de Xamarin.Essentials, qui permet d’empêcher l’écran de passer en veille quand l’application est en cours d’exécution.
 ms.assetid: 6B67C114-315E-4199-AA72-3F90E85A4909

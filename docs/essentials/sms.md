@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : SMS'
 description: La classe Sms de Xamarin.Essentials permet à une application d’ouvrir l’application SMS par défaut avec un message spécifié à envoyer à un destinataire.
 ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
@@ -31,6 +31,8 @@ using Xamarin.Essentials;
 ```
 
 Pour utiliser la fonctionnalité SMS, appelez la méthode `ComposeAsync` avec un `SmsMessage` contenant le destinataire et le corps du message, tous deux facultatifs.
+
+Le corps du message et le destinataires sont deux champs facultatifs, si ils ne sont pas renseignés par votre applications ils devront alors être renseignés par l'utilisateur dans l'application de SMS.
 
 ```csharp
 public class SmsTest

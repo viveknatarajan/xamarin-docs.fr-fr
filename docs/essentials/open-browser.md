@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : Ouvrir le navigateur'
 description: La classe Browser dans Xamarin.Essentials permet à une application d’ouvrir un lien web dans le navigateur préféré du système optimisé ou le navigateur externe.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
@@ -33,7 +33,6 @@ using Xamarin.Essentials;
 La fonctionnalité Browser fonctionne en appelant la méthode `OpenAsync` avec `Uri` et `BrowserLaunchMode`.
 
 ```csharp
-
 public class BrowserTest
 {
     public async Task OpenBrowser(Uri uri)

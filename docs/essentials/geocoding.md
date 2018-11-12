@@ -1,6 +1,7 @@
----
+﻿---
 title: 'Xamarin.Essentials : géocodage'
 description: La classe Geocoding de Xamarin.Essentials fournit des API qui permettent à la fois de géocoder un repère en coordonnées de position, et d’inverser les coordonnées de géocodage en un repère.
+
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont

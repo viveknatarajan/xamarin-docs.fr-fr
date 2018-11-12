@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : composants d’assistance de système de fichiers'
 description: La classe FileSystem de Xamarin.Essentials contient une série de composants d’assistance qui permettent de rechercher les répertoires de cache et de données de l’application, ainsi que d’ouvrir des fichiers contenus dans le paquet d’application.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84

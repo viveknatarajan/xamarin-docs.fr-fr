@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : magnétomètre'
 description: La classe Magnetometer de Xamarin.Essentials vous permet de superviser le capteur magnétométrique de l’appareil, qui indique l’orientation de l’appareil par rapport au champ magnétique terrestre.
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
@@ -33,7 +33,6 @@ using Xamarin.Essentials;
 La fonctionnalité de magnétomètre appelle les méthodes `Start` et `Stop` pour écouter les changements relatifs au magnétomètre. Tous les changements sont renvoyés via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
 
 ```csharp
-
 public class MagnetometerTest
 {
     // Set speed delay for monitoring changes.
