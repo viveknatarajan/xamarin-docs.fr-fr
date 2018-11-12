@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : e-mail'
 description: La classe Email de Xamarin.Essentials permet à une application d’ouvrir l’application de messagerie par défaut en utilisant des informations spécifiques, notamment l’objet, le corps et les destinataires (À, CC, CCI).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629

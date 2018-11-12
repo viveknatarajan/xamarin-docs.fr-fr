@@ -1,6 +1,6 @@
----
-title: 'Xamarin.Essentials : suivi des versions'
-description: La classe VersionTracking de Xamarin.Essentials vous permet de connaître les numéros de version et de build des applications. Elle vous permet également de voir des informations supplémentaires, par exemple le premier lancement de l’application ou, pour la version actuelle, d’obtenir les informations de build précédentes, etc.
+﻿---
+title: 'Xamarin.Essentials : Suivi de Version'
+description: La classe VersionTracking vous permet de vérifier la version de votre application et son numéro de build. Cette classe vous permet également d'obtenir des informations supplémentaires telles que si c’est la première fois l’application lancée.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
@@ -12,13 +12,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50674858"
 ---
-# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials : suivi des versions
+# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials : Suivi de Version
 
 ![Préversion NuGet](~/media/shared/pre-release.png)
 
 La classe **VersionTracking** vous permet de connaître les numéros de version et de build des applications. Elle vous permet également de voir des informations supplémentaires, par exemple le premier lancement de l’application ou, pour la version actuelle, d’obtenir les informations de build précédentes, etc.
 
-## <a name="get-started"></a>Prise en main
+## <a name="using-version-tracking"></a>Utilisation de **VersionTracking**
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -30,13 +30,13 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La première fois que vous utilisez la classe **VersionTracking**, elle commence par effectuer le suivi de la version actuelle. Vous devez appeler `Track` tôt et uniquement dans votre application à chaque chargement pour vérifier que les informations de la version actuelle font l’objet d’un suivi :
+La première fois que vous utilisez la classe **VersionTracking** elle démarrera le suivi de la version actuelle. Vous devez appeler la fonction `Track` au plus tôt dans votre application, à chaque fois que celle-ci est lancée afin de s'assurer que les informations sur la version actuelle soient suivies :
 
 ```csharp
 VersionTracking.Track();
 ```
 
-Une fois le `Track` initial appelé, les informations de version peuvent être lues :
+Après le premier appel de `Track` vous pouvez lire les informations de version :
 
 ```csharp
 
@@ -76,7 +76,7 @@ var buildHistory = VersionTracking.BuildHistory;
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
-Toutes les informations de version sont stockées à l’aide de l’API de [préférences](preferences.md) de Xamarin.Essentials. Elles sont également stockées avec un nom de fichier de type **[VOTRE-PAQUET-D’APPLICATION-ID].xamarinessentials.versiontracking** et suivent la même persistance de données décrite dans la documentation sur [Preferences](preferences.md#persistence).
+Toutes les informations de version sont stockées à l’aide des[préférences](preferences.md) de Xamarin.Essentials, sont stockées avec comme nom de fichier **[votre-application-PACKAGE-ID].xamarinessentials.versiontracking** et suivent la même persistance des données que décrite dans la documentation des [préférences](preferences.md#persistence).
 
 ## <a name="api"></a>API
 

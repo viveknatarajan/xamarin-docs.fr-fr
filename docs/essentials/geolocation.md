@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : géolocalisation'
 description: Ce document décrit la classe Geolocation de Xamarin.Essentials, qui fournit des API permettant de récupérer les coordonnées de géolocalisation de l’appareil.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357

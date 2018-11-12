@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : lampe de poche'
 description: Ce document décrit la classe Flashlight de Xamarin.Essentials, qui permet d’activer ou de désactiver le flash de l’appareil photo de l’appareil pour transformer celui-ci en lampe de poche.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : informations sur l’application'
 description: Ce document décrit la classe AppInfo de Xamarin.Essentials, qui fournit des informations sur votre application. Par exemple, il expose le nom et la version de l’application.
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA

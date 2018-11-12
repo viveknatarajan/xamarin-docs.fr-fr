@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Xamarin.Essentials : Capteur d’orientation'
 description: La classe Capteur d’orientation vous permet de surveiller l’orientation d’un appareil dans l’espace tridimensionnel.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
@@ -34,6 +34,7 @@ using Xamarin.Essentials;
 ```
 
 `OrientationSensor` est activé en appelant la méthode `Start` pour surveiller les modifications apportées à l’orientation de l’appareil. Il est désactivé en appelant la méthode `Stop`. Tous les changements sont renvoyés via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
+Toutes les modifications sont renvoyées via la `ReadingChanged` événement. Voici un exemple d’utilisation :
 
 ```csharp
 
@@ -81,14 +82,14 @@ Les lectures `OrientationSensor` sont retournées sous la forme d’un [`Quatern
 L’appareil (en général, un téléphone ou une tablette) dispose d’un système de coordonnées 3D avec les axes suivants :
 
 - L’axe X positif pointe vers la droite de l’écran en mode portrait.
-- L’axe Y positif pointe vers le haut de l’appareil en mode portrait.
+- L’axe Y positif pointe vers le haut de l'écran en mode portrait.
 - L’axe Z positif pointe en dehors de l’écran.
 
 Le système de coordonnées 3D de la terre a les axes suivants :
 
 - L’axe X positif est la tangente de la surface de la terre et pointe vers l’est.
 - L’axe Y positif est aussi la tangente de la surface de la terre et pointe vers le nord.
-- L’axe Z positif est perpendiculaire à la surface de la terre et pointe vers le haut.
+- L’axe Z positif est perpendiculaire à la surface de la terre et pointe vers la direction opposée au centre de la terre.
 
 `Quaternion` décrit la rotation du système de coordonnées de l’appareil par rapport au système de coordonnées de la terre.
 
