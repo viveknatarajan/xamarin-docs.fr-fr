@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 106357e9442d51fdd31bb30b4f0342e2b59f67fd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118485"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526661"
 ---
 # <a name="ios-app-architecture"></a>Architecture d’application iOS
 
@@ -118,7 +118,7 @@ Notre application a démarré à ce stade, Mono est en cours d’exécution, nou
 
 ## <a name="generator"></a>Générateur
 
-Xamarin.iOS contient des définitions pour chaque API iOS unique. Vous pouvez parcourir ces sur le [MaciOS github référentiel](https://github.com/xamarin/xamarin-macios/tree/master/src). Ces définitions contiennent des interfaces avec des attributs, ainsi que les méthodes nécessaires et propriétés. Par exemple, le code suivant est est utilisé pour définir un UIToolbar dans le UIKit [espace de noms](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327). Notez qu’il s’agit d’une interface avec un nombre de méthodes et propriétés :
+Xamarin.iOS contient des définitions pour chaque API iOS unique. Vous pouvez parcourir ces sur le [MaciOS github référentiel](https://github.com/xamarin/xamarin-macios/tree/master/src). Ces définitions contiennent des interfaces avec des attributs, ainsi que les méthodes nécessaires et propriétés. Par exemple, le code suivant est utilisé pour définir un UIToolbar dans le UIKit [espace de noms](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327). Notez qu’il s’agit d’une interface avec un nombre de méthodes et propriétés :
 
 ```csharp
 [BaseType (typeof (UIView))]

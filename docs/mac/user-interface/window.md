@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106973"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526973"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows dans Xamarin.Mac
 
 _Cet article aborde l’utilisation des fenêtres et des panneaux dans une application Xamarin.Mac. Il décrit la création des fenêtres et des panneaux dans Xcode et Interface Builder, les charger à partir des tables de montage séquentiel et les fichiers .xib et leur utilisation par programmation._
 
-Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès à la même Windows et panneaux qui un développeur travaillant dans *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et maintenir les panneaux et Windows (ou éventuellement pour les créer directement en code c#).
+Lorsque vous travaillez avec C# et .NET dans une application Xamarin.Mac, vous avez accès à la même Windows et panneaux qui un développeur travaillant *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et maintenir les panneaux et Windows (ou éventuellement pour les créer directement en code c#).
 
 En fonction de son objectif, une application Xamarin.Mac peut présenter un ou plusieurs Windows sur l’écran pour gérer et coordonner les informations qu’il affiche et fonctionne avec. Les principales fonctions d’une fenêtre sont :
 
@@ -284,7 +284,7 @@ Exemple :
 MyWindow.PerformClose(this);
 ```
 
-Tente de fermer le `MyWindow` `NSWindow` instance. Si elle a réussi, la fenêtre sera fermée, sinon le son d’alerte est émis et le ne restera ouvert.
+Tente de fermer le `MyWindow` `NSWindow` instance. Si elle a réussi, la fenêtre sera fermée, sinon le son d’alerte est émis et le reste ouverte.
 
 <a name="Close" />
 
@@ -377,7 +377,7 @@ namespace SourceWriter
                 alert.AddButton ("Cancel");
                 var result = alert.RunSheetModal (Window);
 
-                // Take action based on resu;t
+                // Take action based on result
                 switch (result) {
                 case 1000:
                     // Grab controller
@@ -751,14 +751,14 @@ Dans le **inspecteur d’attributs**, vous disposez des options suivantes spéci
 
 Pour ajouter un nouveau panneau, procédez comme suit :
 
-1. Dans le **l’Explorateur de solutions**, avec le bouton droit sur le projet et sélectionnez **ajouter** > **nouveau fichier...** .
+1. Dans le **l’Explorateur de solutions**, avec le bouton droit sur le projet et sélectionnez **ajouter** > **nouveau fichier..** .
 2. Dans la boîte de dialogue Nouveau fichier, sélectionnez **Xamarin.Mac** > **fenêtre Cocoa avec contrôleur**:
 
     [![](window-images/panels00.png "Ajoutez un nouveau contrôleur de fenêtre")](window-images/panels00.png#lightbox)
 3. Entrez `DocumentPanel` comme **Nom**, puis cliquez sur le bouton **Nouveau**.
 4. Double-cliquez sur le `DocumentPanel.xib` fichier à ouvrir pour modification dans l’Interface Builder : 
 
-    [![](window-images/new02.png "Modification du panneau")](window-images/new02.png#lightbox)
+    [![](window-images/new02.png "Le panneau de montage")](window-images/new02.png#lightbox)
 5. Supprimer la fenêtre existante et faites glisser un panneau à partir de la **inspecteur de bibliothèque** dans le **Éditeur d’Interface**: 
 
     [![](window-images/panels01.png "Suppression de la fenêtre existante")](window-images/panels01.png#lightbox)

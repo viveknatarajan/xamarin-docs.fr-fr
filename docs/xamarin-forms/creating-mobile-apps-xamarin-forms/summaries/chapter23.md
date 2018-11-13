@@ -4,15 +4,15 @@ description: 'Création d’applications mobiles avec Xamarin.Forms : résumé 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 83a445555f9f184f735c105370de20665ad704a3
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 4bfa2bed7061e031c55ccbdb7f576aa02c17581a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156754"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563990"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Résumé du chapitre 23. Déclencheurs et comportements
 
@@ -152,7 +152,7 @@ Le [ **ToggleLabel** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 Le [ **FormattedTextToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) exemple étend ce concept en basculant entre deux `FormattedString` objets.
 
-Le [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) classe dans le **Xamarin.FormsBook.Toolkit** dérive de la bibliothèque `ContentView`, définit un `IsToggled` propriété et incorpore un `ToggleBehavior` pour le bouton bascule logique. Cela rend plus facile de définir le bouton bascule dans XAML, comme illustré par la [ **TranditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) exemple.
+Le [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) classe dans le **Xamarin.FormsBook.Toolkit** dérive de la bibliothèque `ContentView`, définit un `IsToggled` propriété et incorpore un `ToggleBehavior` pour le bouton bascule logique. Cela rend plus facile de définir le bouton bascule dans XAML, comme illustré par la [ **TraditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) exemple.
 
 Le [ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) inclut un [ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) classe qui dérive de `ToggleBase` et utilise un [ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)classe pour construire un bouton bascule qui ressemble à la Xamarin.Forms `Switch`.
 

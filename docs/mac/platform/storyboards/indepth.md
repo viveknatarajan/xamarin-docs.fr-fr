@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 469ae19021ae524c302b8a9920aaa64bb4a681f4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117289"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528456"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Utilisation des Storyboards dans Xamarin.Mac
 
@@ -150,7 +150,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Si vous le souhaitez, vous pouvez remplacer le `ShouldPerfromSegue` (méthode) et contrôle ou non le Segue est réellement exécuté via C# code. Pour les contrôleurs d’affichage manuellement présenté, appeler leurs `DismissController` méthode pour les supprimer à partir de l’affichage lorsqu’ils ne sont plus nécessaires.
+Si vous le souhaitez, vous pouvez remplacer le `ShouldPerformSegue` (méthode) et contrôle ou non le Segue est réellement exécuté via C# code. Pour les contrôleurs d’affichage manuellement présenté, appeler leurs `DismissController` méthode pour les supprimer à partir de l’affichage lorsqu’ils ne sont plus nécessaires.
 
 <a name="Creating-Custom-Segues" />
 
@@ -227,7 +227,7 @@ Les contrôleurs de fenêtre contiennent et contrôlent les différents types de
 2. Le `Storyboard` propriété contiendra la table de montage séquentiel qui le contrôleur de fenêtre a été chargé à partir, sinon `null` si ne pas chargé à partir d’une table de montage séquentiel.
 3. Vous pouvez appeler la `DismissController` méthode pour fermer la fenêtre donnée et le supprime de la vue.
 
-Comme les contrôleurs d’affichage, fenêtre contrôleurs implémenter le `PerformSegue`, `PrepareForSegue` et `ShouldPerfromSegue` méthodes et peut être utilisé comme source d’une opération de Segue.
+Comme les contrôleurs d’affichage, fenêtre contrôleurs implémenter le `PerformSegue`, `PrepareForSegue` et `ShouldPerformSegue` méthodes et peut être utilisé comme source d’une opération de Segue.
 
 Contrôleur de fenêtre sont chargés pour les fonctionnalités suivantes d’une application de macOS :
 
@@ -259,7 +259,7 @@ Les modules de reconnaissance de mouvement suivantes sont disponibles dans macOS
 
 ## <a name="using-storyboard-references"></a>Utilisation de références de table de montage séquentiel
 
-Une référence de table de montage séquentiel vous permet de prendre une conception de table de montage séquentiel volumineuses et complexe et la décomposer en plus petites tables de montage séquentiel obtient référencés à partir de la version d’origine, par conséquent, suppression de suppression de la complexité et de rendre individuels résultant des Storyboards plus facile à la conception et mettre à jour.
+Une référence de table de montage séquentiel vous permet de prendre une conception de table de montage séquentiel volumineuses et complexe et la décomposer en plus petites tables de montage séquentiel obtient référencés à partir de l’original, par conséquent, de suppression de la complexité et de faciliter les Storyboards individuels qui en résulte concevoir et gérer.
 
 En outre, une référence de table de montage séquentiel peut fournir un _ancre_ à un autre scène dans la même table de montage séquentiel ou une scène spécifique sur une autre.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: 904db0b97a8b21fd51722b70a63386a53e3f5347
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82dd175222289676c3dacd80522c55e71ba12180
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104035"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526831"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vues de collection dans Xamarin.Mac
 
 _Cet article décrit l’utilisation des vues de collection dans une application Xamarin.Mac. Il couvre la création et gestion des vues de collection dans Xcode et Interface Builder et leur utilisation par programmation._
 
-Lors de l’utilisation de c# et .NET dans une application Xamarin.Mac, le développeur a accès à la même vue de Collection AppKit qui contrôle un développeur travaillant dans *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, le développeur utilise de Xcode _Interface Builder_ pour créer et gérer des vues de Collection.
+Lorsque vous travaillez avec C# et .NET dans une application Xamarin.Mac, le développeur a accès à la même vue de Collection AppKit qui contrôle un développeur travaillant *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, le développeur utilise de Xcode _Interface Builder_ pour créer et gérer des vues de Collection.
 
 Un `NSCollectionView` affiche une grille de sous-vues organisées à l’aide un `NSCollectionViewLayout`. Chaque sous-affichage dans la grille est représenté par un `NSCollectionViewItem` qui gère le chargement du contenu de la vue à partir d’un `.xib` fichier.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a202dd32bcde5cf91cce3f597c9ea7c17f4adbcd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd97dbbe102c5a755c4a8974cf1a952c0050ac7c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113565"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527181"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Modes plan dans Xamarin.Mac
 
 _Cet article aborde l’utilisation des modes plan dans une application Xamarin.Mac. Il décrit la création et gestion des modes plan dans Xcode et Interface Builder et leur utilisation par programmation._
 
-Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès aux mêmes hiérarchique qui consulte un développeur travaillant dans *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et gérer vos modes de plan (ou éventuellement pour les créer directement en code c#).
+Lorsque vous travaillez avec C# et .NET dans une application Xamarin.Mac, que vous avez accès à la structure du même vues dont un développeur travaillant *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et gérer vos modes de plan (ou éventuellement pour les créer directement en code c#).
 
 Un mode plan est un type de Table qui permet à l’utilisateur développer ou réduire des lignes de données hiérarchiques. Comme une vue de Table, une vue hiérarchique affiche les données pour un ensemble d’éléments associés, avec des lignes représentant des éléments individuels et des colonnes représentant les attributs de ces éléments. Contrairement à une vue de Table dans une vue hiérarchique des éléments ne sont pas dans une liste plate, ils sont organisés dans une hiérarchie, comme les fichiers et dossiers sur un disque dur.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 50c7b05261cf3f07ea37373cdcdcc8f250243647
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108975"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527272"
 ---
 # <a name="android-platform-specifics"></a>Caractéristiques de la plateforme Android
 
@@ -270,7 +270,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 Il en résulte que défilement rapide des données dans un [ `ListView` ](xref:Xamarin.Forms.ListView) peut être activé, ce qui modifie la taille du curseur de défilement :
 
-[![](android-images/fastscroll.png "ListView FastScroll spécifique à la plateforme")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll spécifique à la plateforme")](android-images/fastscroll-large.png#lightbox "ListView FastScroll spécifique à la plateforme")
 
 <a name="webview-mixed-content" />
 
@@ -490,7 +490,7 @@ Le `Application.On<Android>` méthode spécifie que cette plateforme spécifique
 
 Le résultat est que le clavier logiciel entrée zone mode d’opération peut être défini quand un contrôle d’entrée a le focus :
 
-[![](android-images/pan-resize.png "Clavier logiciel fonctionne en Mode spécifique à la plateforme")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Clavier réversible d’exploitation en Mode spécifique à la plateforme")](android-images/pan-resize-large.png#lightbox "clavier logiciel fonctionne en Mode spécifique à la plateforme")
 
 <a name="disable_lifecycle_events" />
 

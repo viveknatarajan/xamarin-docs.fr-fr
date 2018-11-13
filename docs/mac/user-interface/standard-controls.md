@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9f5bdc9a79c514f0310d29b3d054fb7e9659d669
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 150d5a35a2ccae63a1ff9969f5751b0e93c12454
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123789"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526999"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Contrôles standard dans Xamarin.Mac
 
 _Cet article aborde l’utilisation des contrôles AppKit standard tels que des boutons, des étiquettes, des champs de texte, des cases à cocher et segmenté des contrôles dans une application Xamarin.Mac. Il décrit en les ajoutant à une interface avec Interface Builder et interagir avec elles dans le code._
 
-Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès aux mêmes AppKit qui contrôle un développeur travaillant dans *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et tenir à jour vos contrôles Appkit (ou éventuellement pour les créer directement en code c#).
+Lorsque vous travaillez avec C# et .NET dans une application Xamarin.Mac, que vous avez accès à la même AppKit qui contrôle un développeur travaillant *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et tenir à jour vos contrôles Appkit (ou éventuellement pour les créer directement en code c#).
 
 Les contrôles AppKit sont les éléments d’interface utilisateur qui sont utilisés pour créer l’Interface utilisateur de votre application Xamarin.Mac. Ils se composent des éléments tels que des boutons, des étiquettes, des champs de texte, des cases à cocher et des contrôles segmentés, entraînant des actions instantanées ou résultats visibles lorsqu’un utilisateur manipule les.
 

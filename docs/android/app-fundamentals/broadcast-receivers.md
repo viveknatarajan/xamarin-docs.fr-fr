@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 51bd3dd4c27dce19344f7660c31a0d4e741e1ad4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a411d4d85877c9868ec49f92b53ca8d7a81f9959
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121137"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528531"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Récepteurs de diffusion dans Xamarin.Android
 
@@ -97,7 +97,7 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Les applications qui ciblent Android 8.0 (niveau d’API 26) ou une version ultérieure ne peut pas inscrire statiquement pour une diffusion implicite. Les applications peuvent toujours statiquement s’inscrire pour une diffusion explicite. Il existe une petite liste des diffusions implicites qui sont exempts de cette restriction. Ces exceptions sont décrites dans le [implicite des Exceptions de diffusion](https://developer.android.com/guide/components/broadcast-exceptions.html) guide dans la documentation d’Android. Applications qui sont intéressées par des diffusions implicites doivent faire tout de façon dynamique à l’aide de la `RegisterReceiver` (méthode). Cela est décrit ci-après.
+Les applications qui ciblent Android 8.0 (niveau d’API 26) ou une version ultérieure ne peut pas inscrire statiquement pour une diffusion implicite. Les applications peuvent toujours statiquement s’inscrire pour une diffusion explicite. Il existe une petite liste de diffusions implicites qui sont exempts de cette restriction. Ces exceptions sont décrites dans le [implicite des Exceptions de diffusion](https://developer.android.com/guide/components/broadcast-exceptions.html) guide dans la documentation d’Android. Applications qui sont intéressées par des diffusions implicites doivent faire tout de façon dynamique à l’aide de la `RegisterReceiver` (méthode). Cela est décrit ci-après.
 
 ### <a name="context-registering-a-broadcast-receiver"></a>Contexte à l’inscription d’un récepteur de diffusion
 

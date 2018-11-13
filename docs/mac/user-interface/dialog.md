@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8c176944d1bec4850f084043fdab81b5c2d51ceb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 0c95e4bcecb2ae787714b8ac6973646caada1b3e
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105205"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528856"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Boîtes de dialogue dans Xamarin.Mac
 
-Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès aux mêmes boîtes de dialogue et Windows modale qui un développeur travaillant dans *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et maintenir votre modale Windows (ou éventuellement pour les créer directement en code c#).
+Lorsque vous travaillez avec C# et .NET dans une application Xamarin.Mac, vous avez accès aux mêmes boîtes de dialogue et Windows modale qui un développeur travaillant *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et maintenir votre modale Windows (ou éventuellement pour les créer directement en code c#).
 
 Une boîte de dialogue s’affiche en réponse à une action de l’utilisateur et fournit généralement des utilisateurs de façons de procéder à l’action. Une boîte de dialogue nécessite une réponse de l’utilisateur avant d’être fermée.
 

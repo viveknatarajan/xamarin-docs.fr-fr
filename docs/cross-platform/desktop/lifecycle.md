@@ -5,12 +5,12 @@ description: Ce document compare les similitudes et les différences entre le cy
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: cf25cf956fbf9fd566520d9067f0d98a9a7624aa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107111"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526791"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Visual Studio WPF. Cycle de vie des applications Xamarin.Forms
 
@@ -53,7 +53,7 @@ Il est techniquement possible à restituer dans deux vues de plateforme distinct
 
 ### <a name="views"></a>Affichages
 
-La hiérarchie visual pour les deux infrastructures est similaire. WPF est un peu plus approfondie en raison de sa prise en charge pour les documents WYSIWYG.
+La hiérarchie d’objets visuel pour les deux infrastructures est similaire. WPF est un peu plus approfondie en raison de sa prise en charge pour les documents WYSIWYG.
 
 **WPF**
 
@@ -83,7 +83,7 @@ Xamarin.Forms est principalement axé sur les scénarios mobiles. Par conséquen
 |--- |--- |--- |
 |Activation initiale|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |Indiqué|Window.IsVisibleChanged|Page.Appearing|
-|Hidden|Window.IsVisibleChanged|Page.Disapearing|
+|Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |Suspendre/perdu le focus|Window.OnDeactivated|Page.OnSleep|
 |Focus activé/obtenu|Window.OnActivated|Page.OnResume|
 |Closed|Window.OnClosing + Window.OnClosed|N/A|
@@ -179,11 +179,11 @@ Si vous ne définissez pas la `ResourceDictionary`, une erreur d’exécution es
 
 ## <a name="styles"></a>Styles
 
-Les styles sont également entièrement pris en charge dans Xamarin.Forms et peut être utilisé pour thème les éléments de Xamarin.Forms qui composent l’interface utilisateur. Ils prennent en charge l’héritage (propriétés, événements et données), les déclencheurs via `BasedOn`et les recherches de ressources pour les valeurs. Les styles sont appliqués aux éléments soit explicitement par le biais du `Style` propriété, ou implicitement en ne fournissant ne pas une clé de ressource - comme WPF.
+Les styles sont également entièrement pris en charge dans Xamarin.Forms et peut être utilisé pour thème les éléments de Xamarin.Forms qui composent l’interface utilisateur. Ils prennent en charge l’héritage (propriétés, événements et données), les déclencheurs via `BasedOn`et les recherches de ressources pour les valeurs. Les styles sont appliqués aux éléments, soit explicitement par le biais du `Style` propriété, ou implicitement par non-spécification d’une clé de ressource - comme WPF.
 
 ### <a name="device-styles"></a>Styles d’appareils
 
-WPF a un ensemble de propriétés prédéfinies (stockées en tant que valeurs statiques sur un ensemble de classes statiques telles que `SystemColors`) qui déterminent les couleurs système, les polices et les mesures sous la forme de valeurs et clés de ressource. Xamarin.Forms est similaire, mais définit un ensemble de [Styles d’appareils](~/xamarin-forms/user-interface/styles/device.md) pour représenter les mêmes choses. Ces styles sont fournies par le Framework et les valeurs en fonction de l’environnement d’exécution (par exemple, d’accessibilité).
+WPF a un ensemble de propriétés prédéfinies (stockées en tant que valeurs statiques sur un ensemble de classes statiques telles que `SystemColors`) qui imposent des couleurs, polices et mesures système sous la forme de valeurs et clés de ressource. Xamarin.Forms est similaire, mais définit un ensemble de [Styles d’appareils](~/xamarin-forms/user-interface/styles/device.md) pour représenter les mêmes choses. Ces styles sont fournies par l’infrastructure et les valeurs en fonction de l’environnement d’exécution (par exemple, d’accessibilité).
 
 **WPF**
 

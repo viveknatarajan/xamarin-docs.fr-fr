@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 4bbb217fa8a3192905d016763b961e182224aa67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108767"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527012"
 ---
 # <a name="android-job-scheduler"></a>Planificateur de travaux Android
 
@@ -42,7 +42,7 @@ Le Planificateur de travaux Android est une infrastructure intégrée dans le sy
 * Un `Android.App.Job.JobService` est une classe abstraite qui doit être étendue avec la logique que le travail sera exécuté sur le thread principal de l’application. Cela signifie que le `JobService` est responsable de la manière dont le travail doit être exécutée de façon asynchrone.
 * Un `Android.App.Job.JobInfo` objet contient les critères pour guider Android lorsque le travail doit s’exécuter.
 
-Pour planifier le travail avec le Planificateur de travaux Android, une application Xamarin.Android doit encapsuler le code dans une classe qui étend la `JobService` classe. `JobService` a trois méthodes de cycle de vie qui peut être appelé pendant la durée de vie de la tâche :
+Pour planifier le travail avec le Planificateur de travaux Android, une application Xamarin.Android doit encapsuler le code dans une classe qui étend la `JobService` classe. `JobService` a trois méthodes de cycle de vie qui peuvent être appelés pendant la durée de vie de la tâche :
 
 * **bool OnStartJob (paramètres JobParameters)** &ndash; cette méthode est appelée par le `JobScheduler` pour effectuer le travail et s’exécute sur le thread principal de l’application. Il incombe à le `JobService` pour effectuer le travail de façon asynchrone et `true` si fonctionne restant, ou `false` si le travail est effectué.
     
@@ -130,10 +130,10 @@ public static class JobSchedulerHelpers
     }
 }
 
-// Sample usage - creates a JobBuilder for a DownloadJob andsets the Job ID to 1.
+// Sample usage - creates a JobBuilder for a DownloadJob and sets the Job ID to 1.
 var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 
-var jobInfo = jobBuilder.Build();  // creats a JobInfo object.
+var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 ```
 
 Une fonctionnalité puissante du planificateur Android est la possibilité de contrôler quand une tâche s’exécute ou dans quelles conditions une tâche peut s’exécuter. Le tableau suivant décrit certaines des méthodes sur `JobInfo.Builder` qui permettent à une application influencer lors de l’exécution d’une tâche :  
@@ -186,7 +186,7 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 Pour planifier un travail, une application Xamarin.Android obtiendra une référence à la `JobScheduler` service système et appelez le `JobScheduler.Schedule` méthode avec le `JobInfo` objet qui a été créé à l’étape précédente. `JobScheduler.Schedule` est retournée immédiatement avec une des deux valeurs entières :
 
-* **JobScheduler.ResultSuccess** &ndash; le travail a été correctement planifiée. 
+* **JobScheduler.ResultSuccess** &ndash; le travail a été planifié. 
 * **JobScheduler.ResultFailure** &ndash; Impossible de planifier le travail. Cela est généralement dû à en conflit `JobInfo` paramètres.
 
 Ce code est un exemple de planification d’un travail et d’avertir l’utilisateur des résultats de la tentative de planification :
@@ -211,7 +211,7 @@ Il est possible d’annuler toutes les tâches qui ont été planifiées, ou sim
 
 ```csharp
 // Cancel all jobs
-jobSchduler.CancelAll(); 
+jobScheduler.CancelAll(); 
 
 // to cancel a job with jobID = 1
 jobScheduler.Cancel(1)

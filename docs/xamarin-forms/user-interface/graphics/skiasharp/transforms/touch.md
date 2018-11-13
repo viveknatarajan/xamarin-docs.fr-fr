@@ -7,12 +7,12 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: 6f7236a3650c04098edbef92f3d6ed620be501c3
-ms.sourcegitcommit: a635312ffec816ba357a92b66c8c5221c8d9044c
+ms.openlocfilehash: 747c04d028b4c4ee142de04abd118572c5bea781
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "39615390"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527103"
 ---
 # <a name="touch-manipulations"></a>Manipulations tactiles
 
@@ -229,7 +229,7 @@ public partial class BitmapScalingPage : ContentPage
                         if (!float.IsNaN(scaleX) && !float.IsInfinity(scaleX) &&
                             !float.IsNaN(scaleY) && !float.IsInfinity(scaleY))
                         {
-                            // If smething bad hasn't happened, calculate a scale and translation matrix
+                            // If something bad hasn't happened, calculate a scale and translation matrix
                             SKMatrix scaleMatrix = 
                                 SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
 
@@ -1060,7 +1060,7 @@ Le code effectue une itération sur la collection et affiche l’accumulation de
 
 Une opération de mise à l’échelle nécessite généralement un mouvement de pincement à l’aide de deux doigts. Toutefois, il est possible d’implémenter la mise à l’échelle avec un seul doigt en demandant le doigt à déplacer les angles d’une image bitmap.
 
-Cela est illustré dans le **unique à l’échelle de coin doigt** page. Étant donné que cet exemple utilise un type quelque peu différent de mise à l’échelle que qui implémentées dans le `TouchManipulationManager` (classe), il n’utilise pas cette classe ou la `TouchManipulationBitmap` classe. Au lieu de cela, toute la logique de tactile est dans le fichier code-behind. Il s’agit d’une logique un peu plus simple que d’habitude, car il effectue le suivi à la fois qu’un seul doigt et ignore simplement les doigts secondaire qui peuvent être toucher l’écran.
+Cela est illustré dans le **unique à l’échelle de coin doigt** page. Étant donné que cet exemple utilise un type de mise à l’échelle à un peu différent qui implémentée dans le `TouchManipulationManager` (classe), il n’utilise pas cette classe ou la `TouchManipulationBitmap` classe. Au lieu de cela, toute la logique de tactile est dans le fichier code-behind. Il s’agit d’une logique un peu plus simple que d’habitude, car il effectue le suivi à la fois qu’un seul doigt et ignore simplement les doigts secondaire qui peuvent être toucher l’écran.
 
 Le [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml) page instancie le `SKCanvasView` classe et crée un `TouchEffect` objet de suivi des événements tactiles :
 

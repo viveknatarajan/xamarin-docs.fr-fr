@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 69f754db0fd9661fb317f43c7cda546b0b510265
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: afecf5c173e919bd20015aadd8a874f492dc4e34
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119405"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527077"
 ---
 # <a name="ios-platform-specifics"></a>Caractéristiques de la plateforme d’iOS
 
@@ -332,7 +332,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 Le résultat qui est spécifié `UpdateMode` est appliqué à la [ `Picker` ](xref:Xamarin.Forms.Picker), qui contrôle lorsque la sélection d’éléments se produit :
 
-[![](ios-images/picker-updatemode.png "Sélecteur UpdateMode spécifiques à la plateforme")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
+[![](ios-images/picker-updatemode.png "Sélecteur UpdateMode spécifiques à la plateforme")](ios-images/picker-updatemode-large.png#lightbox "sélecteur UpdateMode spécifiques à la plateforme")
 
 <a name="slider-updateontap" />
 
@@ -721,7 +721,7 @@ Le `Page.On<iOS>` méthode spécifie que cette plateforme spécifique s’exécu
 
 En outre, le `GetModalPresentationStyle` méthode peut être utilisée pour récupérer la valeur actuelle de la `UIModalPresentationStyle` énumération est appliquée à la [ `Page` ](xref:Xamarin.Forms.Page).
 
-Le résultat est que le le style de présentation modale sur un [ `Page` ](xref:Xamarin.Forms.Page) peuvent être définies :
+Le résultat est que le style de présentation modale sur un [ `Page` ](xref:Xamarin.Forms.Page) peuvent être définies :
 
 [![](ios-images/modal-presentation-style-small.png "Styles de présentation modale sur un iPad")](ios-images/modal-presentation-style-large.png#lightbox "modale Styles de présentation sur un iPad")
 
@@ -777,7 +777,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 Le résultat est qu’un [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) peut désactiver ce qui retarde la réception de contenu finales, par conséquent, qui dans ce scénario la [ `Slider` ](xref:Xamarin.Forms.Slider) reçoit le mouvement plutôt que la [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) page de la [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage):
 
-[![](ios-images/scrollview-delay-content-touches.png "Délai de ScrollView contenu touche spécifiques à la plateforme")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
+[![](ios-images/scrollview-delay-content-touches.png "Délai de ScrollView contenu touche spécifiques à la plateforme")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView délai contenu touche spécifiques à la plateforme")
 
 ## <a name="application"></a>Application
 

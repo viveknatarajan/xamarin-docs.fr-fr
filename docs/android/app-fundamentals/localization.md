@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f50efb7b78db67b310ccddec3eb94bfe4d2e521
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
-ms.translationtype: MT
+ms.openlocfilehash: 833bdc0fd087fcf8dbb8cce3b8b23f427302f5e7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301251"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526869"
 ---
 # <a name="android-localization"></a>Localisation Android
 
@@ -188,7 +188,7 @@ Valide `quantity` commutateurs sont :
 * Deux
 * quelques
 * many
-* autre
+* other
 
 Ils sont décrits plus en détail dans le [docs Android](http://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Si une langue donnée ne requiert pas de Gestion « spécial », celles `quantity` chaînes va être ignorées (par exemple, en anglais utilise uniquement `one` et `other`; en spécifiant un `zero` chaîne n’a aucun effet, il ne sera pas utilisé).
 
@@ -207,7 +207,7 @@ Dans cette capture d’écran, les quatre images sont enregistrées dans le **dr
 
 Vous pouvez également fournir des autres types d’alternative, les ressources spécifiques au langage, y compris les dispositions, des animations et des fichiers bruts. Cela signifie que vous pouvez fournir une disposition d’écran spécifique pour un ou plusieurs de vos langages cible, par exemple, vous pouvez créer une disposition en particulier pour l’allemand permettant d’étiquettes de texte très longues.
 
-Android 4.2 a introduit la prise en charge de [de droite à gauche (les) langues](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) si vous définissez le paramètre d’application `android:supportsRtl="true"`. Le qualificateur de ressource `"ldrtl"` peut être inclus dans un nom direcory pour contenir les dispositions personnalisées qui sont conçues pour l’affichage de droite à gauche.
+Android 4.2 a introduit la prise en charge de [de droite à gauche (les) langues](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) si vous définissez le paramètre d’application `android:supportsRtl="true"`. Le qualificateur de ressource `"ldrtl"` peut être inclus dans un nom de répertoire pour contenir des dispositions personnalisées qui sont conçues pour l’affichage de droite à gauche.
 
 Pour plus d’informations sur les noms de répertoire ressource et de secours, reportez-vous à la documentation Android pour [fournir des ressources alternatives](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
@@ -225,7 +225,7 @@ Le nom de l’application est facile à localiser à l’aide un `@string/id` da
 
 Android 4.2 et versions ultérieures prend complètement en charge les dispositions de droite à gauche, décrites en détail dans le [blog prend en charge Native de droite à gauche](http://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
 
-Lorsque vous utilisez Android 4.2 (niveau d’API 17) et la plus récente, alignement valeurs peuvent être spécifiées avec `start` et `end` au lieu de `left` et `right` (par exemple `android:paddingStart`). Il existe également des nouvelles API comme `LayoutDirection`, `TextDirection`, et `TextAlignment` pour aider à créer des écrans qui s’adaptent pour les lecteurs de droite à gauche.
+Lorsque vous utilisez Android 4.2 (niveau d’API 17) et l’alignement plus récente, les valeurs peuvent être spécifiées avec `start` et `end` au lieu de `left` et `right` (par exemple `android:paddingStart`). Il existe également des nouvelles API comme `LayoutDirection`, `TextDirection`, et `TextAlignment` pour aider à créer des écrans qui s’adaptent pour les lecteurs de droite à gauche.
 
 La capture d’écran suivante montre le [localisée **Tasky** exemple](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) en arabe :
 

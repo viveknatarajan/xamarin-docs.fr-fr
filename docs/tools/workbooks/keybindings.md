@@ -6,12 +6,12 @@ ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: fdb581706ad40635f082509230ae28961d5b428e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 87af9f824117b20250c02a3e070652607626de44
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111237"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526141"
 ---
 # <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Raccourcis clavier de Xamarin classeurs éditeur
 

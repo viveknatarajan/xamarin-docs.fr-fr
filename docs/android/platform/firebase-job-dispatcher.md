@@ -1,5 +1,5 @@
 ---
-title: Répartiteur de travail firebase
+title: Répartiteur de travail Firebase
 description: Ce guide explique comment planifier le travail en arrière-plan à l’aide de la bibliothèque de répartiteur de travail Firebase à partir de Google.
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 4ae1fb71209f8116b17ee7e2cb44318ef790d831
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 91bafbbdaee805ad128766bf0a770cb711597a85
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116164"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526921"
 ---
-# <a name="firebase-job-dispatcher"></a>Répartiteur de travail firebase
+# <a name="firebase-job-dispatcher"></a>Répartiteur de travail Firebase
 
 _Ce guide explique comment planifier le travail en arrière-plan à l’aide de la bibliothèque de répartiteur de travail Firebase à partir de Google._
 
@@ -44,9 +44,9 @@ Le répartiteur de travail Firebase est une bibliothèque à partir de Google qu
 * Un `Firebase.JobDispatcher.RetryStrategy` contient des informations sur ce qui doit être effectué quand une tâche ne parvient pas à s’exécuter correctement. La stratégie de nouvelle tentative spécifie la durée d’attente avant d’essayer de réexécuter la tâche. 
 * Un `Firebase.JobDispatcher.Constraint` est une valeur facultative qui décrit une condition qui doit être remplie pour que le travail puisse exécuter, telles que l’appareil se trouve sur un réseau sans compteur ou de chargement.
 * Le `Firebase.JobDispatcher.Job` est une API qui unifie les API précédentes dans pour une unité de travail qui peut être planifiée par le `JobDispatcher`. Le `Job.Builder` classe est utilisée pour instancier un `Job`.
-* Un `Firebasee.JobDispatcher.JobDispatcher` utilise trois API précédentes pour planifier le travail avec le système d’exploitation et de fournir un moyen d’annuler les travaux, si nécessaire.
+* Un `Firebase.JobDispatcher.JobDispatcher` utilise trois API précédentes pour planifier le travail avec le système d’exploitation et de fournir un moyen d’annuler les travaux, si nécessaire.
 
-Pour planifier le travail avec le répartiteur de travail Firebase, une application Xamarin.Android doit encapsuler le code dans un type qui étend la `JobService` classe. `JobService` a trois méthodes de cycle de vie qui peut être appelé pendant la durée de vie de la tâche :
+Pour planifier le travail avec le répartiteur de travail Firebase, une application Xamarin.Android doit encapsuler le code dans un type qui étend la `JobService` classe. `JobService` a trois méthodes de cycle de vie qui peuvent être appelés pendant la durée de vie de la tâche :
 
 * **`bool OnStartJob(IJobParameters parameters)`** &ndash; Cette méthode est où le travail se produira et doit toujours être implémenté. Il s’exécute sur le thread principal. Cette méthode retournera `true` si fonctionne restant, ou `false` si le travail est effectué. 
 * **`bool OnStopJob(IJobParameters parameters)`** &ndash; Il s’agit quand le travail est interrompu pour une raison quelconque. Elle doit retourner `true` si le travail doit être replanifié pour une utilisation ultérieure.
@@ -177,7 +177,7 @@ Chacune de ces rubriques est étudiées plus en détail dans les sections suivan
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-jarameters-to-a-job"></a>Jarameters de passage à un travail
+#### <a name="passing-parameters-to-a-job"></a>Passage de paramètres à un travail
 
 Paramètres sont passés à une tâche en créant un `Bundle` qui est passé avec la `Job.Builder.SetExtras` méthode :
 
@@ -252,7 +252,7 @@ Les deux types de stratégies de nouvelle tentative sont identifiés par ces val
 Il est possible de définir un personnalisé `RetryStrategy` avec la `FirebaseJobDispatcher.NewRetryStrategy` (méthode). Elle accepte trois paramètres :
 
 1. `int policy` &ndash; Le _stratégie_ fait partie de la précédente `RetryStrategy` valeurs, `RetryStrategy.RetryPolicyLinear`, ou `RetryStrategy.RetryPolicyExponential`.
-2. `int intialBackoffSeconds` &ndash; Le _interruption initiale_ est un délai, en secondes, qui est requis avant d’essayer de réexécuter la tâche. La valeur par défaut est 30 secondes. 
+2. `int initialBackoffSeconds` &ndash; Le _interruption initiale_ est un délai, en secondes, qui est requis avant d’essayer de réexécuter la tâche. La valeur par défaut est 30 secondes. 
 3. `int maximumBackoffSeconds` &ndash; Le _interruption maximale_ valeur déclare le nombre maximal de secondes du délai avant d’essayer de réexécuter la tâche. La valeur par défaut est 3 600 secondes. 
 
 ```csharp

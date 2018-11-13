@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: d755160043191f93247fd09e99f23eb85831fa8b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113896"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528778"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>watchOS applications séances d’entraînement dans Xamarin
 
@@ -469,7 +469,7 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 Également nouveau à watchOS 3, sont le mouvement interrompu (`HKWorkoutEventType.MotionPaused`) et la reprise de mouvement (`HKWorkoutEventType.MotionResumed`) événements. Ces événements sont déclenchés automatiquement par HealthKit pendant un exercice en cours d’exécution lorsque l’utilisateur démarre et cesse de se déplacer.
 
-Lorsque l’application reçoit un événement de mouvement est suspendu, il doit s’arrêter la collecte de données jusqu'à ce que l’utilisateur reprend le mouvement et la réception de l’événement mouvement reprend. Application de l’application doit être interrompue pas la session d’entraînement en réponse à un événement de mouvement en pause.
+Lorsque l’application reçoit un événement de mouvement est suspendu, il doit s’arrêter la collecte de données jusqu'à ce que l’utilisateur reprend le mouvement et la réception de l’événement mouvement reprend. Application doit être interrompue pas la session d’entraînement en réponse à un événement de mouvement en pause.
 
 > [!IMPORTANT]
 > Les événements de mouvement en pause et reprise de mouvement sont uniquement pris en charge pour le Type d’activité RunningWorkout (`HKWorkoutActivityType.Running`).

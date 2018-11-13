@@ -8,18 +8,18 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: e4f0138c0177c046c1e967a3d3625604f73327d6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0c5e048dd3f3496691b83eb10d377d012efedc72
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103190"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528765"
 ---
 # <a name="oreo-features"></a>Fonctionnalités de Oreo
 
 _La prise en main à l’aide de Xamarin.Android pour développer des applications pour la dernière version d’Android._
 
-[Android 8.0 Oreo](https://developer.android.com/index.html) est la dernière version d’Android disponible à partir de Google. Android Oreo offre de nombreuses fonctionnalités nouvelles d’intérêt pour les développeurs Xamarin.Android. Ces fonctionnalités incluent des canaux de notification, des badges de notification, des polices personnalisées dans XML, les polices téléchargeables, le remplissage automatique et une image dans l’image (PIP). Android Oreo inclut de nouvelles API pour ces fonctionnalités performantes de nouveau, et ces API est disponibles pour les applications Xamarin.Android lorsque vous utilisez Xamarin.Android 8.0 et versions ultérieures.
+[Android 8.0 Oreo](https://developer.android.com/index.html) est la dernière version d’Android disponible à partir de Google. Android Oreo offre de nombreuses fonctionnalités nouvelles d’intérêt pour les développeurs Xamarin.Android. Ces fonctionnalités incluent des canaux de notification, des badges de notification, des polices personnalisées dans XML, les polices téléchargeables, le remplissage automatique et une image dans l’image (PIP). Android Oreo inclut de nouvelles API pour ces nouvelles fonctionnalités, et ces API est disponibles pour les applications Xamarin.Android lorsque vous utilisez Xamarin.Android 8.0 et versions ultérieures.
 
 [![Image de héros Android Oreo](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
@@ -66,7 +66,7 @@ Pour ajouter la prise en charge Android Oreo à Visual Studio, procédez comme s
 
     2. Utilisez le [SDK Manager](~/android/get-started/installation/android-sdk.md) pour installer le niveau d’API 26.0 ou version ultérieur.
 
--   Si vous utilisez Visual Studio 2015, nous nous recommandons la rétrogradation de SDK Tools à 25 et à l’aide de l’ancien Gestionnaire d’émulateur Google GUI. Outils du Kit de développement logiciel 25 peuvent toujours être utilisés en même temps que les API 26, 27 et les versions ultérieures et n’affectent pas le développement de nouvelles plateformes. Cela vous donnera une interface pour la gestion de votre Kit de développement logiciel Android pour les versions antérieures de Visual Studio.
+-   Si vous utilisez Visual Studio 2015, nous vous recommandons de SDK Tools déclassement 25 et à l’aide de l’ancien Gestionnaire d’émulateur Google GUI. Outils du Kit de développement logiciel 25 peuvent toujours être utilisés en même temps que les API 26, 27 et les versions ultérieures et n’affectent pas le développement de nouvelles plateformes. Cela vous donnera une interface pour la gestion de votre Kit de développement logiciel Android pour les versions antérieures de Visual Studio.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 

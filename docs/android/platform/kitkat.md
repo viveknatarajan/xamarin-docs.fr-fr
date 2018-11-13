@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b62943fce8a1137c3bde1c629cc4cee9b2b44f3f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103307"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527328"
 ---
 # <a name="kitkat-features"></a>Fonctionnalités de KitKat
 
@@ -282,7 +282,7 @@ TransitionManager.Go (scene1, transition);
 
 ### <a name="translucent-ui"></a>Interface utilisateur translucide
 
-KitKat vous renforcez votre contrôle sur le thème de votre application avec des barres d’état et la navigation transclucent facultatif. Vous pouvez modifier la transparence d’éléments d’interface utilisateur système dans le même fichier XML que vous utilisez pour définir votre thème Android. KitKat présente les propriétés suivantes :
+KitKat vous renforcez votre contrôle sur le thème de votre application avec des barres de navigation et d’état translucides facultatifs. Vous pouvez modifier la transparence d’éléments d’interface utilisateur système dans le même fichier XML que vous utilisez pour définir votre thème Android. KitKat présente les propriétés suivantes :
 
 -  `windowTranslucentStatus` -Lorsque la valeur true, rend la barre d’état supérieur translucide.
 
@@ -322,7 +322,7 @@ La capture d’écran ci-dessous montre le thème ci-dessus avec l’état trans
 
 Le Framework de l’accès de stockage (SAF) est une nouvelle façon pour les utilisateurs à interagir avec le contenu stocké comme les images, vidéos et documents. Au lieu de présenter des utilisateurs avec une boîte de dialogue pour choisir une application de gérer le contenu, KitKat ouvre une nouvelle interface utilisateur qui permet aux utilisateurs d’accéder à leurs données dans un emplacement d’agrégation. Une fois que le contenu a été choisi, l’utilisateur retourne à l’application qui a demandé le contenu et l’expérience de l’application continue normalement.
 
-Cette modification nécessite deux actions sur le côté développeur : tout d’abord, les applications qui nécessitent le contenu des fournisseurs doivent être mis à jour vers une nouvelle façon de reqesting contenu. Ensuite, applications qui écrivent des données à un `ContentProvider` doivent être modifiés pour utiliser la nouvelle infrastructure. Les deux scénarios dépendent de la nouvelle [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
+Cette modification nécessite deux actions sur le côté développeur : tout d’abord, les applications qui nécessitent le contenu des fournisseurs doivent être mis à jour vers une nouvelle façon de recherche du contenu. Ensuite, applications qui écrivent des données à un `ContentProvider` doivent être modifiés pour utiliser la nouvelle infrastructure. Les deux scénarios dépendent de la nouvelle [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
 API.
 
 #### <a name="documentsprovider"></a>DocumentsProvider
@@ -344,7 +344,7 @@ StartActivityForResult (intent, save_request_code);
 
 Appel `StartActivityForResult` lance l’UI SAF, dont l’utilisateur peut ensuite Parcourir pour choisir une image :
 
-[![Capture d’écran de l’exemple d’une application à l’aide de l’infrastructure d’accès de stockage pour naviguer vers une image](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![Capture d’écran de l’exemple d’une application à l’aide de l’infrastructure d’accès de stockage pour la navigation vers une image](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 Une fois que l’utilisateur a choisi une image, `OnActivityResult` retourne le `Android.Net.Uri` du fichier choisi. L’exemple de code ci-dessous affiche la sélection de l’image de l’utilisateur :
 
@@ -424,7 +424,7 @@ Notez que le chargement et l’impression de contenu web nécessitent l’autori
 L’option d’impression s’affiche généralement dans l’activité [menu options](http://developer.android.com/guide/topics/ui/menus.html#options-menu).
 Le menu options permet aux utilisateurs d’effectuer des actions sur une activité. Il est dans l’angle supérieur droit de l’écran et ressemble à ceci :
 
-[![Capture d’écran de l’exemple d’affichés d’élément de menu Imprimer dans l’angle supérieur droit de l’écran](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
+[![Capture d’écran de l’exemple d’élément de menu Imprimer affiché dans l’angle supérieur droit de l’écran](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 Éléments de menu supplémentaires peuvent être définies dans le *menu*répertoire sous *ressources*. Le code ci-dessous définit un menu exemple appelé [impression](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
@@ -547,7 +547,7 @@ Un Service HCE doit également être enregistrés avec le manifeste de l’appli
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
     IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-    MetaData("andorid.nfc.cardemulation.host.apdu_service",
+    MetaData("android.nfc.cardemulation.host.apdu_service",
     Resource="@xml/hceservice")]
 
 class HceService : HostApduService
@@ -599,7 +599,7 @@ La capture d’écran ci-dessous illustre le compteur de l’étape en action :
 
 [![Capture d’écran de l’application de SensorsActivity afficher un compteur de l’étape](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
-Vous pouvez créer un `SensorManager` en appelant `GetSystemService(SensorService)` et en convertissant le résultat comme un `SensorManager`. Pour utiliser le compteur de l’étape, appelez `GetDeafultSensor` sur le `SensorManager`. Vous pouvez inscrire le capteur et écouter les modifications dans le nombre d’étape à l’aide de la [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
+Vous pouvez créer un `SensorManager` en appelant `GetSystemService(SensorService)` et en convertissant le résultat comme un `SensorManager`. Pour utiliser le compteur de l’étape, appelez `GetDefaultSensor` sur le `SensorManager`. Vous pouvez inscrire le capteur et écouter les modifications dans le nombre d’étape à l’aide de la [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
 interface, comme l’illustre l’exemple de code ci-dessous :
 
 ```csharp
@@ -689,7 +689,7 @@ Outre les modifications décrites ci-dessus, KitKat vous permet de :
 -  *Suspendre des Animations* -suspendre et reprendre des animations créées avec le [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    .
 
--  *Dynamiquement modification de texte en lecture* -indiquent les parties de l’interface utilisateur qui mettent à jour dynamiquement par un nouveau texte en tant que « zones dynamiques » avec le nouveau [ `accesibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *Dynamiquement modification de texte en lecture* -indiquent les parties de l’interface utilisateur qui mettent à jour dynamiquement par un nouveau texte en tant que « zones dynamiques » avec le nouveau [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    attribut pour le nouveau texte lira automatiquement en mode d’accessibilité.
 
 -  *Améliorer l’expérience de l’Audio* -Vérifiez effectue le suivi plus fort avec le [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)
@@ -703,7 +703,7 @@ Outre les modifications décrites ci-dessus, KitKat vous permet de :
 -  *Contrôle à distance* -avec peu de modifications sur le matériel et les logiciels côté KitKat vous permet d’activer un appareil équipé d’un émetteur de runtime d’intégration dans un contrôle à distance à l’aide du `ConsumerIrService`et d’interagir avec les périphériques avec le nouveau [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
    API.
 
-Pour plus d’informations sur les modifications de l’API ci-dessus, reportez-vous à la Google [Android 4.4 API](http://developer.android.com/about/versions/android-4.4.html) vue d’ensemble.
+Pour plus d’informations sur les modifications de l’API ci-dessus, reportez-vous à Google [Android 4.4 API](http://developer.android.com/about/versions/android-4.4.html) vue d’ensemble.
 
 
 ## <a name="summary"></a>Récapitulatif

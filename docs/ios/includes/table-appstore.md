@@ -23,7 +23,7 @@
 |6021|Newsstand|
 |6022|Catalogues|
 
-Genres de sous-système de jeux (6014) :
+Sous-genres de jeux (6014) :
 
 |ID du genre|Nom du genre|
 |---|---|
@@ -47,7 +47,7 @@ Genres de sous-système de jeux (6014) :
 |7018|Jeux d’esprit|
 |7019|Word|
 
-Sous-genres de Newstand (6021) :
+Sous-genres de kiosques à journaux (6021) :
 
 |ID du genre|Nom du genre|
 |---|---|

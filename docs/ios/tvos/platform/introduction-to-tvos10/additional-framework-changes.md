@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8f7094cebf284f301e08faae8d94c99a73964d55
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ca9856251d35a741d496b6e8b45b07e851e0e89
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114286"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528609"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Modifications des infrastructures supplémentaires tvOS 10
 
@@ -85,7 +85,7 @@ Les améliorations suivantes ont été apportées à l’infrastructure Foundati
 
  - Utilisez la nouvelle [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) classe pour effectuer les calculs d’intervalle de date et heure telles que des durées, pour comparer les intervalles et de test pour les intersections d’intervalle.
  - Plusieurs nouvelles propriétés ont été ajoutées à la [NSLocal](https://developer.apple.com/reference/foundation/nslocale) classe pour acquérir les informations locales et les formats d’affichage disponible.
- - Utilisez la nouvelle [NSMeasuerment](https://developer.apple.com/reference/foundation/nsmeasurement) classe pour convertir entre différentes unités de mesure (UDM) ou effectuer des calculs sur les valeurs d’unités différentes.
+ - Utilisez la nouvelle [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) classe pour convertir entre différentes unités de mesure (UDM) ou effectuer des calculs sur les valeurs d’unités différentes.
  - Utilisez la nouvelle [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) classe à mettre en forme des mesures localisées pour l’affichage à l’utilisateur final.
  - Utilisez la nouvelle [NSUnit](https://developer.apple.com/reference/foundation/nsunit) et [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) classes pour représenter des unités spécifiques.
 
@@ -182,7 +182,7 @@ Les améliorations suivantes ont été apportées au framework UIKit dans tvOS 1
  - La nouvelle `UIGraphicsRender` classe fournit une méthode orientée objet de création des fichiers bitmap ou des fichiers PDF à partir de UIKit rendu ou Core Graphics et remplace déconseillées `UIGraphicsBeginImageContext` (méthode).
  - Le `UIUserInterfaceStyle` classe a été ajoutée pour déterminer quel thème de l’interface utilisateur (sombre ou clair) est actuellement actif.
  - Nouvelle prise en charge d’animation interruptible, totalement interactives fondé sur l’objet a été ajouté et van être lié aux gestes. De Veuillez consultez Apple [UIViewAnimating Protocol Reference](https://developer.apple.com/reference/uikit/uiviewanimating), [référence de classe UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider protocole référence](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Référence de classe UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) et [référence de classe UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) pour plus d’informations.
- - La nouvelle `UIPreviewInteraction` et `UIPreviewInteractionDelegate` permettent à l’application de l’application fournir une interface personnalisée pour les opérations de lecture et pop.
+ - La nouvelle `UIPreviewInteraction` et `UIPreviewInteractionDelegate` permettent à l’application fournir une interface personnalisée pour les opérations de lecture et pop.
  - La nouvelle `UIAccessibilityCustomRotor` classe permet à l’application fournir des fonctionnalités personnalisées, spécifiques à un contexte pour les technologies d’assistance telles que le doublage.
  - Utilisez le `UIAccessibilityIsAssistiveTouchRunning` et `UIAccessibilityAssistiveTouchStatusDidChangeNotification` symboles pour déterminer si l’assistance tactile est activé.
  - Utilisez le `UIAccessibilityHearingDevicePairedEar` et `UIAccessibilityHearingDevicePairedEarDidChangeNotification` pour obtenir l’état de tous les symboles associés auditifs IFM.

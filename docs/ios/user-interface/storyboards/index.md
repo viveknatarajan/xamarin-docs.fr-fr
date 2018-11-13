@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106882"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51564003"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduction aux Storyboards dans Xamarin.iOS
 
@@ -100,11 +100,11 @@ NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController 
+    var callHistoryController = segue.DestinationViewController 
                                   as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 }
 ```
@@ -112,14 +112,14 @@ NSObject sender)
 Dans cet exemple, le `PrepareForSegue` méthode sera appelée lorsque le segue est déclenché par l’utilisateur. Nous devons d’abord créer une instance de contrôleur d’affichage « réception » et le définir comme le de destination du segue contrôleur d’affichage. Cette opération est effectuée par la ligne de code ci-dessous :
 
 ```csharp
-var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 La méthode a désormais la possibilité de définir des propriétés sur le `DestinationViewController`. Dans cet exemple nous avons tiré parti de cela en passant une liste appelée `PhoneNumbers` à la `CallHistoryController` et l’affecter à un objet du même nom :
 
 ```csharp
-if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 ```
 
@@ -368,7 +368,7 @@ Reportez-vous à la solution Storyboards.Conditional dans les [exemple de tables
 
 ## <a name="using-storyboard-references"></a>Utilisation de références de table de montage séquentiel
 
-Une référence de table de montage séquentiel vous permet de prendre une conception de table de montage séquentiel volumineuses et complexe et la décomposer en plus petites tables de montage séquentiel obtient référencés à partir de la version d’origine, par conséquent, suppression de suppression de la complexité et de rendre individuels résultant des Storyboards plus facile à la conception et mettre à jour.
+Une référence de table de montage séquentiel vous permet de prendre une conception de table de montage séquentiel volumineuses et complexe et la décomposer en plus petites tables de montage séquentiel obtient référencés à partir de l’original, par conséquent, de suppression de la complexité et de faciliter les Storyboards individuels qui en résulte concevoir et gérer.
 
 En outre, une référence de table de montage séquentiel peut fournir un _ancre_ à un autre scène dans la même table de montage séquentiel ou une scène spécifique sur une autre.
 

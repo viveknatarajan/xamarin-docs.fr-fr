@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: b29820cb69702f7570e10a555ebe9e3e0824653f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104152"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526558"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Affichage d’une image dans Xamarin.iOS
 
@@ -41,7 +41,7 @@ Pour créer un nouvel ensemble de l’image et ajouter des images, procédez com
 3. Sélectionnez le nouveau jeu d’images et l’éditeur s’affichera :
 
     ![](displaying-an-image-images/imageset03.png "L’éditeur d’ensemble de l’Image")
-4. À ce stade, faites glisser dans des images pour chacun des différents appareils et et résolutions nécessaires. 
+4. À ce stade, faites glisser dans des images pour chacun des différents appareils et résolutions nécessaires. 
 5. Double-cliquez sur le nouvel ensemble image **nom** dans le **liste Assets** pour le modifier : ![](displaying-an-image-images/imageset04.png "nom du nouveau jeu d’images de la modification")
 
 Lorsque vous utilisez un **Image définie** dans le concepteur iOS, il suffit de sélectionner le nom dans la liste déroulante dans l’éditeur de propriétés :
@@ -54,7 +54,7 @@ Lorsque vous utilisez un **Image définie** dans le concepteur iOS, il suffit de
 
     ![](displaying-an-image-images/asset5.png "Cliquez sur le signe Plus de bouton")
 
-2. Sélectionnez **ajouter un ensemble de Image** et l’éditeur d’ensemble de l’Image s’affichera pour le nouvel ensemble de l’image. À ce stade, faites glisser dans des images pour chacun des différents appareils et et résolutions nécessaires. 
+2. Sélectionnez **ajouter un ensemble de Image** et l’éditeur d’ensemble de l’Image s’affichera pour le nouvel ensemble de l’image. À ce stade, faites glisser dans des images pour chacun des différents appareils et résolutions nécessaires. 
 
     ![](displaying-an-image-images/asset7.png "Éditeur d’ensembles de l’image")
 

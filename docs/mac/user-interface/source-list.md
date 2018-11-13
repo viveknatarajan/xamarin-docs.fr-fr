@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fa6b128572490ce1fe330b722181e33bbad1ffd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82e4dfb9add7002fd7d3568d0ec946ea38dfd530
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122047"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526394"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listes de sources dans Xamarin.Mac
 
 _Cet article aborde l’utilisation des listes de sources dans une application Xamarin.Mac. Il décrit la création et gestion des listes de sources dans Xcode et Interface Builder et interagir avec elles dans le code c#._
 
-Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès à la même Source qui répertorie un développeur travaillant dans *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et gérer vos listes de sources (ou éventuellement pour les créer directement en code c#).
+Lorsque vous travaillez avec C# et .NET dans une application Xamarin.Mac, que vous avez accès à la même Source qui répertorie un développeur travaillant *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et gérer vos listes de sources (ou éventuellement pour les créer directement en code c#).
 
 Une liste de Source est un type spécial de mode plan permet d’afficher la source d’une action, telles que la barre latérale dans Finder ou iTunes.
 

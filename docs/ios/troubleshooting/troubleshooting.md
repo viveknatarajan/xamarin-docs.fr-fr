@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 80f37e1753362ec0503b70e49a2206684c0fedb5
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "50675326"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527168"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Conseils de dépannage pour Xamarin.iOS 
 
@@ -187,7 +187,7 @@ Cela signifie que vous liez une bibliothèque statique compilée avec le code th
 
 ## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException : Tentative de JIT compile (méthode) (un wrapper managé au code managé) Foo[]:System.Collections.Generic.ICollection'1.get_Count ()
 
-Le suffixe [] indique que vous ou la bibliothèque de classes appelle une méthode sur un tableau dans une collection générique, tel que IEnumerable <>, ICollection <> ou <> de IList. Pour résoudre ce problème, vous pouvez explicitement force le compilateur AOT pour inclure la méthode de ce type en appelant la méthode vous-même, et en vérifiant que ce code est exécuté avant l’appel qui a déclenché l’exception. Dans ce cas, vous pouvez écrire :
+Le suffixe [] indique que vous ou la bibliothèque de classes appelle une méthode sur un tableau dans une collection générique, tel que IEnumerable <>, ICollection <> ou <> de IList. Pour résoudre ce problème, vous pouvez forcer explicitement le compilateur AOT pour inclure la méthode de ce type en appelant la méthode vous-même, et en vérifiant que ce code est exécuté avant l’appel qui a déclenché l’exception. Dans ce cas, vous pouvez écrire :
 
 ```csharp
 Foo [] array = null;
@@ -354,11 +354,11 @@ Pour résoudre ce problème, vous devez conserver une référence à « actionS
 
 ## <a name="project-always-runs-in-the-ipad-simulator"></a>Projet toujours s’exécute dans le simulateur iPad
 
-Le programme d’installation de l’iPhone SDK 4.0 installe 2 kits de développement logiciel - le Kit de développement logiciel 3.2, pour créer des applications iPad uniquement et le SDK 4.0, utilisé pour iPhone de construction et des applications universelles. Il installe également un simulateur 3.2, qui simule uniquement sur un iPad, et un simulateur 4.0 qui simule les iPhone ou iPhone 4. Tous les kits de développement logiciel et des simulateurs plus anciens sont supprimés.
+Le programme d’installation de l’iPhone SDK 4.0 installe 2 kits de développement logiciel - le Kit de développement logiciel 3.2, pour créer des applications iPad uniquement et le SDK 4.0, utilisé pour créer des applications universelles et iPhone. Il installe également un simulateur 3.2, qui simule uniquement sur un iPad, et un simulateur 4.0 qui simule les iPhone ou iPhone 4. Tous les kits de développement logiciel et des simulateurs plus anciens sont supprimés.
 
 Visual Studio pour les options de génération de projet iPhone Mac incluent un paramètre pour la version SDK qui sera utilisé dans la génération de votre application. Ce paramètre se trouve dans **Options du projet -> Build -> iPhone Build**.
 
-Nouveaux projets dans Visual Studio pour Mac utilisent le plus ancien Kit de développement logiciel en tant que leur paramètre de SDK par défaut, et si le Kit de développement logiciel spécifié n’existe pas, Visual Studio pour Mac utilise la plus proche qu’il peut trouver pour générer votre application. Ceci afin que les projets ne seraient pas toujours requre du dernier SDK. Toutefois, cela entraîne actuellement dans le Kit de développement logiciel de 3,2 en cours utilisé - ce qui se traduit dans le simulateur iPad utilisé.
+Nouveaux projets dans Visual Studio pour Mac utilisent le plus ancien Kit de développement logiciel en tant que leur paramètre de SDK par défaut, et si le Kit de développement logiciel spécifié n’existe pas, Visual Studio pour Mac utilise la plus proche qu’il peut trouver pour générer votre application. Ceci afin que les projets ne nécessite pas toujours du dernier SDK. Toutefois, cela entraîne actuellement dans le Kit de développement logiciel de 3,2 en cours utilisé - ce qui se traduit dans le simulateur iPad utilisé.
 
 Pour résoudre ce problème en utilisant le SDK 4.0, accédez à **Options du projet -> Build -> iPhone Build**> et modifiez la valeur SDK sur « 4.0 » à l’aide de la liste déroulante. Vous devez effectuer cette opération pour chaque combinaison de plateforme, accessibles via les listes déroulantes en haut du Panneau de configuration.
 

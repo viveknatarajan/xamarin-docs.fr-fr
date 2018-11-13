@@ -4,15 +4,15 @@ description: Le bouton répond à un cliquez ou appuyez sur dirigeant d’une ap
 ms.prod: xamarin
 ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/26/2018
-ms.openlocfilehash: ed711efe7f4b138b3ba61437dc96f8aa07d17aeb
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cdff3e721aa91733e995e95ead533a3ad7b41a77
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "35244914"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563925"
 ---
 # <a name="xamarinforms-button"></a>Bouton de Xamarin.Forms
 

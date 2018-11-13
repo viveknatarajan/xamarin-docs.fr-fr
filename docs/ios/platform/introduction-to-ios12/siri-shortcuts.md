@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 9954a27b0cc857efa158e8cbc0281737c822f0c7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9034799355d01a3ade20a78540d6ecac43d9cc8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131146"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526895"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Raccourcis de Siri dans Xamarin.iOS
 
@@ -292,7 +292,7 @@ Dans le [soupe Chef référentiel](https://github.com/xamarin/ios-samples/tree/m
 En particulier, notez que ce projet comprend :
 
 - **ApiDefinitions.cs** – un fichier généré ci-dessus par objectif Sharpie et ajoutés à ce projet. De ce fichier **Action de génération** a la valeur **ObjcBindingApiDefinition**.
-- **StructsAndEnums.cs** : un autre fichier genrated ci-dessus par objectif Sharpie et ajoutés à ce projet. De ce fichier **Action de génération** a la valeur **ObjcBindingCoreSource**.
+- **StructsAndEnums.cs** – un autre fichier généré ci-dessus par objectif Sharpie et ajoutés à ce projet. De ce fichier **Action de génération** a la valeur **ObjcBindingCoreSource**.
 - Un **référence Native** à **libOrderSoupIntentStaticLib.a**, la bibliothèque statique générée ci-dessus.
 
 > [!NOTE]
@@ -336,7 +336,7 @@ Après la lecture d’une intention, il est encapsulé dans un [ `INInteraction`
 Le `INInteraction` reçoit un [`Identifier`](https://developer.xamarin.com/api/property/Intents.INInteraction.Identifier/)
 qui correspond à l’ID unique de l’ordre (cela sera utile ultérieurement lors de la suppression des dons intentions qui ne sont plus valides). Ensuite, l’interaction est donnée à Siri.
 
-L’appel à la `order.Intent` getter extractions un `OrderSoupIntent` qui représente l’ordre en définissant son `Quantity`, `Soup`, `Options`et l’image, et et une expression d’appel à utiliser comme une suggestion lorsque l’utilisateur enregistre une phrase pour Siri à Associez l’intention :
+L’appel à la `order.Intent` getter extractions un `OrderSoupIntent` qui représente l’ordre en définissant son `Quantity`, `Soup`, `Options`et d’image et d’une expression d’appel à utiliser comme une suggestion lorsque l’utilisateur enregistre une phrase pour Siri à associer dans le but :
 
 ```csharp
 public OrderSoupIntent Intent

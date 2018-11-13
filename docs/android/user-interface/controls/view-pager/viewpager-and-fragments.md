@@ -1,5 +1,5 @@
 ---
-title: ViewPager avec des Fragments
+title: ViewPager avec des fragments
 description: ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation de geste. Navigation geste permet à l’utilisateur balayez gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter une interface utilisateur swipeable avec ViewPager, à l’aide de Fragments en tant que les pages de données.
 ms.prod: xamarin
 ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
@@ -7,21 +7,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: def46f69b139ef52bb6e65a1c415b9c899e63897
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109417"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528427"
 ---
-# <a name="viewpager-with-fragments"></a>ViewPager avec des Fragments
+# <a name="viewpager-with-fragments"></a>ViewPager avec des fragments
 
 _ViewPager est un gestionnaire de disposition qui vous permet d’implémenter la navigation de geste. Navigation geste permet à l’utilisateur balayez gauche et droite pour parcourir les pages de données. Ce guide explique comment implémenter une interface utilisateur swipeable avec ViewPager, à l’aide de Fragments en tant que les pages de données._
 
  
 ## <a name="overview"></a>Vue d'ensemble
 
-`ViewPager` est souvent utilisé conjointement avec des fragments afin qu’il soit plus facile à gérer le cycle de vie de chaque page dans le `ViewPager`. Dans cette procédure pas à pas, `ViewPager` est utilisé pour créer un une application appelée **FlashCardPager** qui présente une série de problèmes mathématiques sur des cartes flash. Chaque carte flash est implémenté comme un fragment. L’utilisateur fait glisser sa gauche et droite via les cartes flash et appuie sur un problème de mathématiques pour afficher sa réponse. Cette application crée un `Fragment` instance pour chaque carte flash et l’implémente un adaptateur dérivé `FragmentPagerAdapter`. Dans [Viewpager et les vues](~/android/user-interface/controls/view-pager/viewpager-and-views.md), l’essentiel du travail a été effectuée `MainActivity` méthodes de cycle de vie. Dans **FlashCardPager**, l’essentiel du travail est effectuées à un `Fragment` dans un de ses méthodes de cycle de vie. 
+`ViewPager` est souvent utilisé conjointement avec des fragments afin qu’il soit plus facile à gérer le cycle de vie de chaque page dans le `ViewPager`. Dans cette procédure pas à pas, `ViewPager` est utilisé pour créer une application nommée **FlashCardPager** qui présente une série de problèmes mathématiques sur des cartes flash. Chaque carte flash est implémenté comme un fragment. L’utilisateur fait glisser sa gauche et droite via les cartes flash et appuie sur un problème de mathématiques pour afficher sa réponse. Cette application crée un `Fragment` instance pour chaque carte flash et l’implémente un adaptateur dérivé `FragmentPagerAdapter`. Dans [Viewpager et les vues](~/android/user-interface/controls/view-pager/viewpager-and-views.md), l’essentiel du travail a été effectuée `MainActivity` méthodes de cycle de vie. Dans **FlashCardPager**, l’essentiel du travail est effectuées à un `Fragment` dans un de ses méthodes de cycle de vie. 
 
 Ce guide ne couvre pas les principes fondamentaux de fragments &ndash; si vous n’êtes pas encore familiarisé avec des fragments dans Xamarin.Android, consultez [Fragments](~/android/platform/fragments/index.md) pour vous aider à bien démarrer avec des fragments. 
 

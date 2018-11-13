@@ -1,18 +1,19 @@
 ---
-title: Comment puis-je mettre à jour NuGet ?
+title: Comment mettre à jour NuGet ?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 40DDE713-DE80-422F-BE34-A732E40C3F81
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ac990024e99d8e49f921ce4b49a793731e332913
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 11/25/2015
+ms.openlocfilehash: 511b80013c13ae0d34f803255d0ed7fd6c09a988
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270226"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526405"
 ---
-# <a name="how-can-i-update-nuget"></a>Comment puis-je mettre à jour NuGet ?
+# <a name="how-can-i-update-nuget"></a>Comment mettre à jour NuGet ?
 
 Vous trouverez les mises à jour de NuGet, extensions et des compléments sous la **mises à jour** onglet dans le **Gestionnaire de Package NuGet**. Navigation détaillée pour rechercher les mises à jour dans Visual Studio pour Mac et Visual Studio est ci-dessous. 
 

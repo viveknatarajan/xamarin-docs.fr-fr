@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: 34406ce8d4276ba36ab2ddd49e73681ff2fef773
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103749"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563340"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Profiler Xamarin résolution des problèmes
 
@@ -79,7 +79,7 @@ Normalement, il s’en raison de l’impossibilité de se lancer sur le simulate
 
 #### <a name="to-watch-a-specific-thread"></a>Pour visionner un thread spécifique
 
-Si vous avez un thread que vous souhaitez regarder plus précisément, il serait idéal pour nommer le thread sur le tout début de sa création afin que get `ThreadName` au lieu de `0x0`. Par exemple pour définir le nom de thread comme interface utilisateur, vous pouvez utiliser le code suivant :
+Si vous avez un thread que vous souhaitez regarder plus précisément, il serait idéal pour nommer le thread au tout début de sa création pour obtenir `ThreadName` au lieu de `0x0`. Par exemple, pour définir le nom de thread comme `UI`, vous pouvez utiliser le code suivant :
 
 ```csharp
 RunOnUiThread (() => {

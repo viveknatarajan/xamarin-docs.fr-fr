@@ -7,12 +7,12 @@ ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c4d92784654db8e566b41c8270dbe2095bd28b94
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 354338aedf67a02918858cbab71d866e5cd8ec9d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156598"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527142"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Résumé du chapitre 22. Animation
 
@@ -48,7 +48,7 @@ Toutes les méthodes d’animation dans `ViewExtensions` retourner `Task<bool>` 
 
 ### <a name="composite-animations"></a>Animations composite
 
-Vous pouvez combiner des animations attendues et non attendu pour créer des animations composites. Voici les animations dans `ViewExtensions` qui ciblent le `TranslatonX`, `TranslationY`, et `Scale` propriétés de transformation :
+Vous pouvez combiner des animations attendues et non attendu pour créer des animations composites. Voici les animations dans `ViewExtensions` qui ciblent le `TranslationX`, `TranslationY`, et `Scale` propriétés de transformation :
 
 - [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing))
 - [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))
@@ -134,7 +134,7 @@ Le [ **TryAwaitableAnimation** ](https://github.com/xamarin/xamarin-forms-book-s
 
 ## <a name="deeper-into-animations"></a>Plus profondément dans les animations
 
-Le système d’animation Xamarin.Forms peut être un peu déroutant. Outre le `Easing` (classe), le système d’animation comprend le `ViewExtensions`, `Animation`, et `AnimationExtension` classification des caractéristiques.
+Le système d’animation Xamarin.Forms peut être un peu déroutant. Outre le `Easing` (classe), le système d’animation comprend le `ViewExtensions`, `Animation`, et `AnimationExtension` classes.
 
 ### <a name="viewextensions-class"></a>Classe de ViewExtensions
 
@@ -144,7 +144,7 @@ Vous avez déjà vu [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions). Il 
 
 Le [ `Animation` ](xref:Xamarin.Forms.AnimationExtensions) classe a un [constructeur](xref:Xamarin.Forms.Animation.%23ctor(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Action)) avec cinq arguments pour définir le rappel et les méthodes terminés et les paramètres de l’animation.
 
-Animations enfants peuvent être ajoutées avec [ `Add` ](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)), [ `Insert` ](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)), [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double)), et et de la surcharge de [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
+Animations enfants peuvent être ajoutées avec [ `Add` ](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)), [ `Insert` ](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)), [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double))et la surcharge de [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
 
 L’objet d’animation est ensuite démarré avec un appel à la [ `Commit` ](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) (méthode).
 
@@ -162,7 +162,7 @@ Le [ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-sa
 
 ### <a name="beyond-the-high-level-animation-methods"></a>Au-delà des méthodes de haut niveau d’animation
 
-Le [ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) exemple montre également comment exécuter des animations qui vont au-delà de la propriétés ciblé par la `ViewExtensions` méthodes. Dans un exemple, une série de périodes d’obtenir plus de temps ; dans un autre exemple, un `BackgroundColor` propriété est animée.
+Le [ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) exemple montre également comment exécuter des animations qui dépassent les propriétés ciblées par le `ViewExtensions` méthodes. Dans un exemple, une série de périodes d’obtenir plus de temps ; dans un autre exemple, un `BackgroundColor` propriété est animée.
 
 ### <a name="more-of-your-own-awaitable-methods"></a>Plusieurs de vos propres méthodes pouvant être attendus
 

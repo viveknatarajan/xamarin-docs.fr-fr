@@ -4,15 +4,15 @@ description: Cet article fournit une introduction aux propriétés pouvant être
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 241579d51d1f0af84655f439bad3adb879404e91
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8dc53c37894af70d5183fe5c44b018fdf25af616
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995386"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563847"
 ---
 # <a name="bindable-properties"></a>Propriétés pouvant être liées
 
@@ -54,7 +54,7 @@ Au minimum, un identificateur doit être spécifié lorsque vous créez un [ `Bi
 - Le nom de la [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty).
 - Type de la propriété.
 - Le type de l’objet propriétaire.
-- La valeur par défaut pour la propriété. Cela garantit que la propriété retourne toujours une valeur par défaut particulier lorsqu’il n’est pas définie, et il peut être différent de la valeur par défaut pour le type de la propriété. La valeur par défaut seront restaurées lorsque la [ `ClearValue` ](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) méthode est appelée sur la propriété peut être liée.
+- Valeur par défaut de la propriété. Cela garantit que la propriété retourne toujours une valeur par défaut particulier lorsqu’il n’est pas définie, et il peut être différent de la valeur par défaut pour le type de la propriété. La valeur par défaut seront restaurées lorsque la [ `ClearValue` ](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) méthode est appelée sur la propriété peut être liée.
 
 Le code suivant montre un exemple d’une propriété pouvant être liée, avec un identificateur et les valeurs pour les quatre paramètres obligatoires :
 
@@ -67,7 +67,7 @@ Cette opération crée un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProp
 
 Si vous le souhaitez, lorsque vous créez un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) de l’instance, ce qui suit paramètres peuvent être spécifiés :
 
-- Le mode de liaison. Cela est utilisé pour spécifier la direction dans laquelle seront propager les modifications de valeur de propriété. Dans le mode de liaison par défaut, les modifications seront propagées à partir de la *source* à la *cible*.
+- Mode de liaison. Cela est utilisé pour spécifier la direction dans laquelle seront propager les modifications de valeur de propriété. Dans le mode de liaison par défaut, les modifications seront propagées à partir de la *source* à la *cible*.
 - Un délégué de validation qui sera appelé lorsque la valeur de propriété est définie. Pour plus d’informations, consultez [les rappels de Validation](#validation).
 - Un délégué de modification de propriété qui sera appelé lorsque la valeur de propriété a changé. Pour plus d’informations, consultez [détecter les modifications de propriété](#propertychanges).
 - Une propriété de modification de délégué qui sera appelé lorsque la valeur de propriété est modifiée. Ce délégué a la même signature que le délégué de modification de propriété.

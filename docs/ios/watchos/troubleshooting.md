@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: feaa0c3547c01490a8ada82b17b4c7a824e03b0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7bfb0cad8bbc025bc5dba39abe3699ae77ee83ba
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114643"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526479"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS résolution des problèmes
 
@@ -35,7 +35,7 @@ Cette page contient des informations supplémentaires et des solutions de contou
 
 <a name="deploy" />
 
-- Les versions antérieures de Visual Studio pour Mac incorrectement affichent l’une du le **AppleCompanionSettings** icônes comme étant 88 x 88 pixels ; ce qui entraîne un **erreur d’icône manquant** si vous essayez d’envoyer à l’application Store.
+- Les versions antérieures de Visual Studio pour Mac incorrectement affichent l’une de la **AppleCompanionSettings** icônes comme étant 88 x 88 pixels ; ce qui entraîne un **erreur d’icône manquant** si vous essayez d’envoyer à l’App Store.
     Cette icône doit être 87 x 87 pixels (29 unités pour **@3x** les écrans rétine). Vous ne pouvez pas résoudre ce problème dans Visual Studio pour Mac - modifier la ressource image dans Xcode ou modifier manuellement le **Contents.json** fichier (pour correspondre à [cet exemple](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
 - Si le projet d’espion Extension **Info.plist > ID d’ensemble WKApp** n’est pas [correctement définie](~/ios/watchos/get-started/project-references.md) pour correspondre à l’application Watch **ID d’offre groupée**, le débogueur ne parviendra pas à se connecter et Visual Studio pour Mac devront attendre avec le message *« En attente pour la connexion du débogueur »*.

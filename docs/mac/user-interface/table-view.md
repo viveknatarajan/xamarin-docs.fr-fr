@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a8c55c8b4ff3fbd515aad8bf45c52a0b549af9f
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
-ms.translationtype: MT
+ms.openlocfilehash: 0d89fff81d1d13baa578068bcaef11dd5af00e14
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285597"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527051"
 ---
 # <a name="table-views-in-xamarinmac"></a>Vues de table dans Xamarin.Mac
 
 _Cet article aborde l’utilisation des vues de table dans une application Xamarin.Mac. Il décrit la création de vues de table dans Xcode et Interface Builder et interagir avec elles dans le code._
 
-Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès à la même Table qui affiche un développeur travaillant dans *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et gérer vos vues de Table (ou éventuellement pour les créer directement en code c#).
+Lorsque vous travaillez avec C# et .NET dans une application Xamarin.Mac, que vous avez accès à la même Table qui affiche un développeur travaillant *Objective-C* et *Xcode* est. Comme Xamarin.Mac s’intègre directement à Xcode, vous pouvez utiliser de Xcode _Interface Builder_ pour créer et gérer vos vues de Table (ou éventuellement pour les créer directement en code c#).
 
 Une vue de Table affiche les données dans un format tabulaire qui contient une ou plusieurs colonnes d’informations dans plusieurs lignes. Selon le type de vue de Table en cours de création, l’utilisateur peut trier par colonne, réorganiser les colonnes, ajouter des colonnes, supprimer des colonnes ou modifier les données contenues dans la table.
 

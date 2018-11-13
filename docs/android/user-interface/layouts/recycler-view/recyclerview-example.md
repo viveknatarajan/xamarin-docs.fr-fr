@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d71c4f0f3221d06c22876329a5933273d8d6f92d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108650"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526765"
 ---
 # <a name="a-basic-recyclerview-example"></a>Un exemple de RecyclerView base
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 Ce code réside dans l’activité principale `OnCreate` (méthode). Le constructeur pour le Gestionnaire de disposition requiert un *contexte*, la `MainActivity` est passé à l’aide de `this` comme indiqué ci-dessus.
 
-Au lieu d’utiliser le predefind `LinearLayoutManager`, vous pouvez incorporer dans un gestionnaire de disposition personnalisée qui affiche deux `CardView` éléments côte-à-côte, implémentation d’un effet d’animation déforment parcourir la collection de photos. Plus loin dans ce guide, vous verrez un exemple montrant comment modifier la disposition en échangeant dans un gestionnaire de mise en page différente.
+Au lieu d’utiliser prédéfinis `LinearLayoutManager`, vous pouvez incorporer dans un gestionnaire de disposition personnalisée qui affiche deux `CardView` éléments côte-à-côte, implémentation d’un effet d’animation déforment parcourir la collection de photos. Plus loin dans ce guide, vous verrez un exemple montrant comment modifier la disposition en échangeant dans un gestionnaire de mise en page différente.
 
 <a name="view-holder" />
 
@@ -391,7 +391,7 @@ Cette modification du code remplace vertical `LinearLayoutManager` avec un `Grid
 
 [![Capture d’écran de l’exemple d’application avec un défilement horizontal des photos dans une grille](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
-En modifiant une seule ligne de code, est est possible de modifier l’application d’affichage pour utiliser une autre disposition avec un comportement différent.
+En modifiant une seule ligne de code, il est possible de modifier l’application d’affichage pour utiliser une autre disposition avec un comportement différent.
 Notez que ni le code d’adaptateur, ni la mise en page XML a dû être modifiés pour changer le style de disposition. 
 
 Dans la rubrique suivante, [étend l’exemple de RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md), cet exemple de base d’application est étendue pour gérer les événements de clic de l’élément et mettre à jour `RecyclerView` lorsque les modifications de source de données sous-jacentes.

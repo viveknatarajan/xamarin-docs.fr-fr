@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118875"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527329"
 ---
 # <a name="device-orientation"></a>Orientation de l’appareil
 
@@ -96,7 +96,7 @@ Xamarin.Forms ne propose pas de tous les événements natifs pour avertir votre 
 > [!NOTE]
 > Il existe un package NuGet existant et gratuit pour recevoir des notifications de changements d’orientation dans le code partagé. Consultez le [référentiel GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) pour plus d’informations.
 
-Il est également possible de remplacer le [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) méthode sur un `Page`, insertion de toute disposition modifier logique. Le `OnSizeAllocated` méthode est appelée chaque fois qu’un `Page` est allouée à une nouvelle taille, ce qui se produit se rotation de l’appareil. Notez que l’implémentation de base de `OnSizeAllocated` effectue des fonctions de disposition importantes, il est donc important d’appeler l’implémentation de base dans la substitution :
+Il est également possible de remplacer le [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) méthode sur un `Page`, insertion de toute disposition modifier logique. Le `OnSizeAllocated` méthode est appelée chaque fois qu’un `Page` est allouée à une nouvelle taille, ce qui se produit chaque fois que l’appareil est pivoté. Notez que l’implémentation de base de `OnSizeAllocated` effectue des fonctions de disposition importantes, il est donc important d’appeler l’implémentation de base dans la substitution :
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)

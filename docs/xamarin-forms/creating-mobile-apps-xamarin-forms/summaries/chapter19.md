@@ -7,12 +7,12 @@ ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 07/18/2018
-ms.openlocfilehash: 01985cf253c0f33c52128386b36c11af50381ee1
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 84d21738298360eb8829a569b152a131e6543709
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156682"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526778"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Résumé du chapitre 19. Vues de collection
 
@@ -60,7 +60,7 @@ Le [ **ListViewList** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 ### <a name="the-row-separator"></a>Le séparateur de ligne
 
-Sur iOS et Android affiche, une fine ligne sépare les lignes. Vous pouvez contrôler ceci avec la [ `SeparatorVisibiliy` ](xref:Xamarin.Forms.ListView.SeparatorVisibility) et [ `SeparatorColor` ](xref:Xamarin.Forms.ListView.SeparatorColor) propriétés. `SeparatorVisibility` propriété est de type [ `SeparatorVisbility` ](xref:Xamarin.Forms.SeparatorVisibility), une énumération avec deux membres :
+Sur iOS et Android affiche, une fine ligne sépare les lignes. Vous pouvez contrôler ceci avec la [ `SeparatorVisibility` ](xref:Xamarin.Forms.ListView.SeparatorVisibility) et [ `SeparatorColor` ](xref:Xamarin.Forms.ListView.SeparatorColor) propriétés. `SeparatorVisibility` propriété est de type [ `SeparatorVisibility` ](xref:Xamarin.Forms.SeparatorVisibility), une énumération avec deux membres :
 
 - [`Default`](xref:Xamarin.Forms.SeparatorVisibility.Default), le paramètre par défaut
 - [`None`](xref:Xamarin.Forms.SeparatorVisibility.None)

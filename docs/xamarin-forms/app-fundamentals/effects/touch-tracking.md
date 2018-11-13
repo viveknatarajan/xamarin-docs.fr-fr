@@ -1,56 +1,56 @@
 ---
-title: Appel des événements à partir des effets
-description: Un effet peut définir et appeler un événement signalant des modifications en mode natif sous-jacent. Cet article explique comment implémenter de bas niveau tactile doigt de suivi et comment générer des événements qui indiquent l’activité des fonctions tactiles.
+title: Appel d’événements à partir d’effets
+description: Un effet peut définir et appeler un événement, signalant les modifications dans la vue native sous-jacente. Cet article explique comment implémenter les doigts de l’interaction tactile multipoint de bas niveau de suivi et comment générer des événements qui indiquent l’activité de tactile.
 ms.prod: xamarin
 ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: e363cae4dd72a25e4768395410d4e56a8db30eba
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 0a5e2c1a7a7807da91fd98e617467ea251a25bc0
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34050154"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527402"
 ---
-# <a name="invoking-events-from-effects"></a>Appel des événements à partir des effets
+# <a name="invoking-events-from-effects"></a>Appel d’événements à partir d’effets
 
-_Un effet peut définir et appeler un événement signalant des modifications en mode natif sous-jacent. Cet article explique comment implémenter de bas niveau tactile doigt de suivi et comment générer des événements qui indiquent l’activité des fonctions tactiles._
+_Un effet peut définir et appeler un événement, signalant les modifications dans la vue native sous-jacente. Cet article explique comment implémenter les doigts de l’interaction tactile multipoint de bas niveau de suivi et comment générer des événements qui indiquent l’activité de tactile._
 
-L’effet décrit dans cet article donne accès aux événements tactiles de bas niveau. Ces événements de bas niveau ne sont pas disponibles par le biais du `GestureRecognizer` classes, mais elles sont essentielles pour certains types d’applications. Par exemple, un finger-paint les besoins de l’application pour effectuer le suivi des doigts mesure qu’ils passent à l’écran. Un clavier musique doit détecter les clics et mises à jour sur les clés individuelles, mais aussi un doigt élargissement variable à partir d’une clé à l’autre dans un glissando.
+L’effet décrite dans cet article fournit l’accès aux événements tactiles de bas niveau. Ces événements de bas niveau ne sont pas disponibles via existant `GestureRecognizer` classes, mais elles sont vitales à certains types d’applications. Par exemple, un finger-paint les besoins de l’application pour effectuer le suivi de chaque doigt lorsqu’ils passent à l’écran. Un clavier de musique doit détecter les clics et libère sur les clés individuelles, mais aussi un doigt élargissement variable à partir d’une clé à l’autre dans un glissando.
 
-Un effet est idéal pour le suivi de tactile doigt, car elle peut être jointe à un élément de Xamarin.Forms.
+Un effet est idéal pour le suivi de l’interaction tactile multipoint doigt, car elle peut être jointe à n’importe quel élément Xamarin.Forms.
 
 ## <a name="platform-touch-events"></a>Événements tactiles de plateforme
 
-L’iOS, Android et plateforme Windows universelle tous incluent une API de bas niveau qui permet aux applications de détecter tactile activité. Ces plateformes que tous faire la distinction entre les trois types de base des événements tactiles :
+L’iOS, Android et plateforme Windows universelle incluent toutes une API de bas niveau qui permet aux applications de détecter touch activité. Ces plateformes que tous faire la distinction entre les trois types de base des événements tactiles :
 
-- *Enfoncé*, quand l’utilisateur touche l’écran
-- *Déplacé*, lorsque toucher l’écran doigt
-- *Publié*, lorsque le doigt est lancé à partir de l’écran
+- *Enfoncé*, lorsqu’un doigt touche l’écran
+- *Déplacé*, lorsqu’un doigt touche l’écran se déplace
+- *Publié*, lorsque le doigt est libéré de l’écran
 
-Dans un environnement tactile, plusieurs doigts peuvent se toucher l’écran en même temps. Les différentes plates-formes d’incluent un numéro d’identification (ID) qui permet aux applications pour faire la distinction entre plusieurs doigts.
+Dans un environnement de l’interaction tactile multipoint, plusieurs doigts peuvent se toucher l’écran en même temps. Les différentes plateformes incluent un numéro d’identification (ID) d’applications peuvent utiliser pour faire la distinction entre plusieurs doigts.
 
-Dans iOS, le `UIView` classe définit trois méthodes substituables, `TouchesBegan`, `TouchesMoved`, et `TouchesEnded` correspondant à ces trois événements de base. L’article [suivi de doigt tactiles](~/ios/app-fundamentals/touch/touch-tracking.md) explique comment utiliser ces méthodes. Toutefois, un programme d’iOS n’a pas besoin de substituer une classe qui dérive de `UIView` d’utiliser ces méthodes. IOS `UIGestureRecognizer` définit également ces mêmes trois méthodes et vous pouvez attacher une instance d’une classe qui dérive de `UIGestureRecognizer` aux `UIView` objet.
+Dans iOS, le `UIView` classe définit trois méthodes substituables, `TouchesBegan`, `TouchesMoved`, et `TouchesEnded` correspondant à ces trois événements de base. L’article [suivi de l’interaction tactile multipoint doigt](~/ios/app-fundamentals/touch/touch-tracking.md) explique comment utiliser ces méthodes. Toutefois, un programme iOS sans devoir remplacer une classe qui dérive de `UIView` d’utiliser ces méthodes. IOS `UIGestureRecognizer` définit également ces mêmes trois méthodes et vous pouvez attacher une instance d’une classe qui dérive de `UIGestureRecognizer` aux `UIView` objet.
 
-Dans Android, le `View` classe définit une méthode substituable nommée `OnTouchEvent` pour traiter toutes les activités tactile. Le type de l’activité tactile est défini par les membres de l’énumération `Down`, `PointerDown`, `Move`, `Up`, et `PointerUp` comme décrit dans l’article [suivi de doigt tactiles](~/android/app-fundamentals/touch/touch-tracking.md). Le Android `View` définit également un événement nommé `Touch` qui permet à un gestionnaire d’événements est attaché à aucun `View` objet.
+Dans Android, le `View` classe définit une méthode substituable nommée `OnTouchEvent` pour traiter toutes les activités tactile. Le type de l’activité tactile est défini par les membres de l’énumération `Down`, `PointerDown`, `Move`, `Up`, et `PointerUp` comme décrit dans l’article [suivi de l’interaction tactile multipoint doigt](~/android/app-fundamentals/touch/touch-tracking.md). Android `View` définit également un événement nommé `Touch` qui permet à un gestionnaire d’événements à attacher aux `View` objet.
 
-Dans la plateforme de Windows universelle (UWP), le `UIElement` classe définit les événements nommés `PointerPressed`, `PointerMoved`, et `PointerReleased`. Ceux-ci sont décrits dans l’article [article de traiter une entrée de pointeur sur le site MSDN](/windows/uwp/input-and-devices/handle-pointer-input/) et la documentation API pour le [ `UIElement` ](/uwp/api/windows.ui.xaml.uielement/) classe.
+Dans la plateforme de Windows universelle (UWP), le `UIElement` classe définit les événements nommés `PointerPressed`, `PointerMoved`, et `PointerReleased`. Ceux-ci sont décrits dans l’article [article gérer une entrée de pointeur sur MSDN](/windows/uwp/input-and-devices/handle-pointer-input/) et la documentation API pour le [ `UIElement` ](/uwp/api/windows.ui.xaml.uielement/) classe.
 
-Le `Pointer` API dans la plateforme Windows universelle est destiné à unifier la souris, tactile et stylet. La raison pour laquelle le `PointerMoved` événement est appelé lorsque la souris se trouve sur un élément même lorsque le bouton de la souris n’est pas enfoncé. Le `PointerRoutedEventArgs` objet qui accompagne ces événements possède une propriété nommée `Pointer` qui a une propriété nommée `IsInContact` qui indique si un bouton de la souris est enfoncé ou un doigt est en contact avec l’écran.
+Le `Pointer` API dans la plateforme Windows universelle est destinée à unifier la souris, tactile et entrée du stylet. Pour cette raison, le `PointerMoved` événement est appelé lorsque la souris se trouve sur un élément même lorsque le bouton de la souris n’est pas enfoncé. Le `PointerRoutedEventArgs` objet qui accompagne ces événements possède une propriété nommée `Pointer` qui a une propriété nommée `IsInContact` qui indique si un bouton de la souris est enfoncé ou un doigt est en contact avec l’écran.
 
-En outre, UWP définit deux événements plus nommés `PointerEntered` et `PointerExited`. Celles-ci indiquent quand une souris ou un doigt déplace d’un élément vers un autre. Par exemple, considérez les deux éléments adjacents nommées A et b. Les deux éléments ont installé des gestionnaires pour les événements de pointeur. Lorsqu’un doigt appuie sur A, le `PointerPressed` événement est appelé. Comme le doigt A appelle `PointerMoved` événements. Si le doigt de A à B, A appelle un `PointerExited` événement et B appelle un `PointerEntered` événement. Si le doigt est ensuite libéré, B appelle un `PointerReleased` événement.
+En outre, la plateforme Windows universelle définit deux événements plus nommés `PointerEntered` et `PointerExited`. Ces erreurs indiquent que lorsque la souris ou du doigt se déplace d’un élément à un autre. Par exemple, considérez les deux éléments adjacents nommées A et b. Les deux éléments ont installé des gestionnaires pour les événements de pointeur. Lorsqu’un doigt appuie sur A, le `PointerPressed` événement est appelé. Comme le doigt se déplace, A appelle `PointerMoved` événements. Si le doigt se déplace de A à B, A appelle un `PointerExited` B et événements appelle un `PointerEntered` événement. Si le doigt est ensuite libéré, B appelle un `PointerReleased` événement.
 
-La plateforme iOS et Android utilisent diffèrent de la plateforme Windows universelle : la vue qui obtient d’abord l’appel à `TouchesBegan` ou `OnTouchEvent` quand l’utilisateur touche l’affichage continue obtenir tous les le tactile activité même si si le doigt à différentes vues. La plateforme Windows universelle peut se comporter de la même façon si l’application capture le pointeur : dans le `PointerEntered` Gestionnaire d’événements, les appels de l’élément `CapturePointer` , puis obtient toutes les activités tactile à partir de ce doigt.
+Les plateformes iOS et Android sont différents à partir de la plateforme Windows universelle : la vue qui obtient d’abord l’appel à `TouchesBegan` ou `OnTouchEvent` lorsqu’un doigt touche l’affichage se poursuit obtenir toutes les activités touch, même si le doigt se déplace vers différentes vues. La plateforme Windows universelle peut se comporter de même si l’application capture le pointeur : dans le `PointerEntered` Gestionnaire d’événements, les appels de l’élément `CapturePointer` et obtient ensuite toutes les activités tactile à partir de ce doigt.
 
-L’approche de la plateforme Windows universelle s’avère très utile pour certains types d’applications, par exemple, un clavier de la musique. Chaque clé peut gérer les événements tactiles pour cette clé et détecter lorsqu’un doigt a glissé à partir d’une clé à l’autre le `PointerEntered` et `PointerExited` les événements.
+L’approche UWP s’avère très utile pour certains types d’applications, par exemple, un clavier de la musique. Chaque clé peut gérer les événements tactiles pour cette clé et détecter lorsqu’un doigt a glissé à partir d’une clé à un autre en utilisant le `PointerEntered` et `PointerExited` événements.
 
-Pour cette raison, l’effet de suivi des fonctions tactiles décrit dans cet article implémente l’approche de la plateforme Windows universelle.
+Pour cette raison, l’effet de suivi de tactile décrite dans cet article implémente l’approche UWP.
 
-## <a name="the-touch-tracking-effect-api"></a>L’API d’effet le suivi de l’interaction tactile
+## <a name="the-touch-tracking-effect-api"></a>L’API d’effet-suivi tactile
 
-Le [ **Touch des démonstrations effet suivi** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) exemple contient les classes (et une énumération) qui implémentent le suivi tactile bas niveau. Ces types appartiennent à l’espace de noms `TouchTracking` et commencer par le mot `Touch`. Le **TouchTrackingEffectDemos** projet de bibliothèque Standard .NET inclut le `TouchActionType` énumération pour le type des événements tactiles :
+Le [ **Touch des démonstrations de suivi effet** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) exemple contient les classes (et une énumération) qui implémentent le suivi tactile de bas niveau. Ces types appartiennent à l’espace de noms `TouchTracking` et commencent par le mot `Touch`. Le **TouchTrackingEffectDemos** projet de bibliothèque .NET Standard inclut la `TouchActionType` énumération pour le type d’événements tactiles :
 
 ```csharp
 public enum TouchActionType
@@ -64,7 +64,7 @@ public enum TouchActionType
 }
 ```
 
-Toutes les plateformes incluent également un événement qui indique que l’événement de touche a été annulée.
+Toutes les plateformes incluent également un événement qui indique que l’événement tactile a été annulée.
 
 Le `TouchEffect` dérive de la classe dans la bibliothèque .NET Standard `RoutingEffect` et définit un événement nommé `TouchAction` et une méthode nommée `OnTouchAction` qui appelle le `TouchAction` événement :
 
@@ -86,9 +86,9 @@ public class TouchEffect : RoutingEffect
 }
 ```
 
-Notez également le `Capture` propriété. Pour capturer les événements tactiles, une application doit définir cette propriété `true` avant une `Pressed` événement. Sinon, les événements tactiles se comportent comme celles de la plateforme Windows universelle.
+Notez également le `Capture` propriété. Pour capturer les événements tactiles, une application doit définir cette propriété `true` avant un `Pressed` événement. Sinon, les événements tactiles se comportent comme celles de la plateforme Windows universelle.
 
-La `TouchActionEventArgs` classe dans la bibliothèque .NET Standard contient toutes les informations qui accompagnent chaque événement :
+Le `TouchActionEventArgs` classe dans la bibliothèque .NET Standard contient toutes les informations qui accompagne chaque événement :
 
 ```csharp
 public class TouchActionEventArgs : EventArgs
@@ -111,19 +111,19 @@ public class TouchActionEventArgs : EventArgs
 }
 ```
 
-Une application peut utiliser le `Id` propriété pour le suivi des doigts individuels. Notez le `IsInContact` propriété. Cette propriété est toujours `true` pour `Pressed` événements et `false` pour `Released` événements. Il est également toujours `true` pour `Moved` événements sur iOS et Android. Le `IsInContact` propriété peut être `false` pour `Moved` événements sur la plateforme Windows universelle lorsque le programme est en cours d’exécution sur le bureau et le pointeur de la souris se déplace sans bouton enfoncé.
+Une application peut utiliser le `Id` propriété pour suivre chaque doigt. Notez que le `IsInContact` propriété. Cette propriété est toujours `true` pour `Pressed` événements et `false` pour `Released` événements. Il est également toujours `true` pour `Moved` événements sur iOS et Android. Le `IsInContact` propriété peut être `false` pour `Moved` événements sur la plateforme Windows universelle lorsque le programme est en cours d’exécution sur le bureau et le pointeur de la souris se déplace sans un bouton enfoncé.
 
-Vous pouvez utiliser la `TouchEffect` classe dans vos propres applications, en incluant le fichier dans le projet de bibliothèque .NET Standard de la solution et en ajoutant une instance de la `Effects` collection de n’importe quel élément de Xamarin.Forms. Joindre un gestionnaire pour le `TouchAction` événement pour obtenir les événements tactiles.
+Vous pouvez utiliser la `TouchEffect` classe dans vos propres applications, en incluant le fichier dans le projet de bibliothèque .NET Standard de la solution et en ajoutant une instance de la `Effects` collection de n’importe quel élément Xamarin.Forms. Attacher un gestionnaire pour le `TouchAction` événement pour obtenir les événements tactiles.
 
-Pour utiliser `TouchEffect` dans votre application, vous devez également les implémentations de plateforme incluses dans **TouchTrackingEffectDemos** solution.
+Pour utiliser `TouchEffect` dans votre propre application, vous devez également incluses dans les implémentations de plateforme **TouchTrackingEffectDemos** solution.
 
-## <a name="the-touch-tracking-effect-implementations"></a>Les implémentations de l’effet de suivi de l’interaction tactile
+## <a name="the-touch-tracking-effect-implementations"></a>Les implémentations de l’effet de suivi de tactile
 
-L’iOS, Android et UWP implémentations de la `TouchEffect` sont décrites ci-dessous à partir de l’implémentation la plus simple (UWP) et se terminant par l’implémentation d’e/s, car il n’est présente une structure plus complexe que les autres.
+L’iOS, Android et UWP implémentations de la `TouchEffect` sont décrites ci-dessous à partir de l’implémentation la plus simple (UWP) et se terminant par l’implémentation d’iOS, car il n’est présente une structure plus complexe que les autres.
 
-### <a name="the-uwp-implementation"></a>L’implémentation de la plateforme Windows universelle
+### <a name="the-uwp-implementation"></a>L’implémentation UWP
 
-L’implémentation de la plateforme Windows universelle de `TouchEffect` est la plus simple. Comme d’habitude, dérive de la classe `PlatformEffect` et inclut les deux attributs de l’assembly :
+L’implémentation UWP de `TouchEffect` est la plus simple. Comme d’habitude, dérive de la classe `PlatformEffect` et inclut deux attributs d’assembly :
 
 ```csharp
 [assembly: ResolutionGroupName("XamarinDocs")]
@@ -138,7 +138,7 @@ namespace TouchTracking.UWP
 }
 ```
 
-Le `OnAttached` remplacement enregistre des informations en tant que champs et attache des gestionnaires pour tous les événements de pointeur :
+Le `OnAttached` remplacement enregistre des informations en tant que champs et attache les gestionnaires à tous les événements de pointeur :
 
 ```csharp
 public class TouchEffect : PlatformEffect
@@ -204,7 +204,7 @@ public class TouchEffect : PlatformEffect
 }
 ```
 
-`OnPointerPressed` vérifie également la valeur de la `Capture` propriété dans la classe d’effet dans la bibliothèque .NET Standard et les appels `CapturePointer` si elle est `true`.
+`OnPointerPressed` vérifie également la valeur de la `Capture` propriété dans la classe de l’effet dans la bibliothèque .NET Standard et les appels `CapturePointer` s’il s’agit `true`.
 
  Les autres gestionnaires d’événements UWP sont encore plus simples :
 
@@ -222,9 +222,9 @@ public class TouchEffect : PlatformEffect
 
 ### <a name="the-android-implementation"></a>L’implémentation Android
 
-Les implémentations Android et iOS sont nécessairement plus complexes, car ils doivent implémenter le `Exited` et `Entered` événements lorsqu’un doigt à partir d’un élément à un autre. Les deux implémentations sont structurées de la même façon.
+Les implémentations iOS et Android sont nécessairement plus complexes, car ils doivent implémenter le `Exited` et `Entered` événements lorsqu’un doigt se déplace d’un élément à un autre. Les deux implémentations sont structurées de manière similaire.
 
-Le Android `TouchEffect` classe installe un gestionnaire pour le `Touch` événement :
+Android `TouchEffect` classe installe un gestionnaire pour le `Touch` événement :
 
 ```csharp
 view = Control == null ? Container : Control;
@@ -246,15 +246,15 @@ public class TouchEffect : PlatformEffect
     ...
 ```
 
-Le `viewDictionary` Obtient une nouvelle entrée à chaque fois que le `OnAttached` substitution est appelée :
+Le `viewDictionary` Obtient une nouvelle entrée chaque fois que le `OnAttached` substitution est appelée :
 
 ```csharp
 viewDictionary.Add(view, this);
 ```
 
-L’entrée est supprimée du dictionnaire dans `OnDetached`. Chaque instance de `TouchEffect` est associé à une vue particulière n’est attaché à l’effet. Le dictionnaire statique permet de les `TouchEffect` instance pour énumérer toutes les vues et leurs correspondantes `TouchEffect` instances. Cela est nécessaire pour autoriser pour transférer les événements à partir d’une vue à l’autre.
+L’entrée est supprimée à partir du dictionnaire dans `OnDetached`. Chaque instance de `TouchEffect` est associé à une vue associée à l’effet. Le dictionnaire statique permet les `TouchEffect` instance pour l’énumération de toutes les autres vues et leur correspondant `TouchEffect` instances. Cela est nécessaire pour autoriser pour transférer les événements à partir d’une vue à l’autre.
 
-Android assigne un code d’ID pour les événements tactiles qui permet à une application effectuer le suivi des doigts. Le `idToEffectDictionary` associe ce code ID avec un `TouchEffect` instance. Un élément est ajouté à ce dictionnaire lorsque le `Touch` gestionnaire est appelé pour presse doigt :
+Android attribue un code d’ID à des événements tactiles qui permet à une application effectuer le suivi de chaque doigt. Le `idToEffectDictionary` associe ce code d’ID avec un `TouchEffect` instance. Un élément est ajouté à ce dictionnaire lorsque le `Touch` gestionnaire est appelé pour un press doigt :
 
 ```csharp
 void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
@@ -273,7 +273,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 
 ```
 
-L’élément est supprimé de la `idToEffectDictionary` quand le doigt est publié à partir de l’écran. Le `FireEvent` méthode accumule simplement toutes les informations nécessaires pour appeler le `OnTouchAction` méthode :
+L’élément est supprimé à partir de la `idToEffectDictionary` lorsque le doigt est libéré de l’écran. Le `FireEvent` méthode accumule simplement toutes les informations nécessaires pour appeler le `OnTouchAction` méthode :
 
 ```csharp
 void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
@@ -293,7 +293,7 @@ void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Poin
 }
 ```
 
-Tous les autres types de fonctions tactiles sont traitées de deux manières différentes : si le `Capture` propriété est `true`, l’événement tactile est une traduction relativement simple à le `TouchEffect` plus d’informations. Il est plus complexe lorsque `Capture` est `false` , car les événements tactiles doivent être déplacés d’une vue à un autre. Il incombe à le `CheckForBoundaryHop` (méthode), qui est appelé pendant les événements de déplacement. Cette méthode utilise les deux dictionnaires statiques. Il énumère les `viewDictionary` pour déterminer la vue qui affecte actuellement le doigt, et il utilise `idToEffectDictionary` pour stocker actuel `TouchEffect` instance (et par conséquent, l’affichage actuel) associé à un ID spécifique :
+Tous les autres types de fonctions tactiles sont traitées de deux manières différentes : si le `Capture` propriété est `true`, l’événement tactile est une traduction relativement simple à le `TouchEffect` plus d’informations. Il est plus compliqué lorsque `Capture` est `false` , car les événements tactiles doivent être déplacés à partir d’une vue à un autre. C’est la responsabilité de la `CheckForBoundaryHop` (méthode), qui est appelé pendant les événements de déplacement. Cette méthode utilise les deux dictionnaires statiques. Il énumère la `viewDictionary` pour déterminer la vue qui le doigt touche actuellement, et il utilise `idToEffectDictionary` pour stocker actuel `TouchEffect` instance (et par conséquent, la vue actuelle) associé à un ID spécifique :
 
 ```csharp
 void CheckForBoundaryHop(int id, Point pointerLocation)
@@ -334,13 +334,13 @@ void CheckForBoundaryHop(int id, Point pointerLocation)
 }
 ```
 
-Si une modification dans a eu lieu le `idToEffectionDictionary`, la méthode appelle potentiellement `FireEvent` pour `Exited` et `Entered` au transfert d’une vue à l’autre. Toutefois, le doigt peut-être avoir été déplacé vers une zone occupée par une vue sans une `TouchEffect`, ou à partir de cette zone pour une vue avec l’effet associé.
+S’il y a eu un changement dans le `idToEffectDictionary`, la méthode appelle potentiellement `FireEvent` pour `Exited` et `Entered` au transfert d’une vue à l’autre. Toutefois, le doigt peut-être avoir été déplacé vers une zone occupée par un affichage sans un attaché `TouchEffect`, ou à partir de cette zone à une vue avec l’effet attaché.
 
-Notez le `try` et `catch` bloquer lors de l’accès à la vue. Dans une page qui est accédée à qui revient à la page d’accueil, le `OnDetached` méthode n’est pas appelée et les éléments restent dans le `viewDictionary` mais Android les considère comme supprimé.
+Notez que le `try` et `catch` bloquer lors de l’accès à la vue. Dans une page qui est accédée à qui, puis revient à la page d’accueil, le `OnDetached` méthode n’est pas appelée et les éléments restent dans le `viewDictionary` mais Android les considère comme supprimé.
 
 ### <a name="the-ios-implementation"></a>L’implémentation d’iOS
 
-L’implémentation iOS est similaire à l’implémentation Android, sauf que les e/s `TouchEffect` classe doit instancier un dérivé de `UIGestureRecognizer`. Il s’agit d’une classe dans le projet iOS nommé `TouchRecognizer`. Cette classe gère deux dictionnaires statiques qui stockent `TouchRecognizer` instances :
+L’implémentation d’iOS est similaire à l’implémentation Android, sauf que l’iOS `TouchEffect` classe doit instancier un dérivé de `UIGestureRecognizer`. Il s’agit d’une classe dans le projet iOS nommé `TouchRecognizer`. Cette classe gère deux dictionnaires statiques qui stockent `TouchRecognizer` instances :
 
 ```csharp
 static Dictionary<UIView, TouchRecognizer> viewDictionary =
@@ -352,13 +352,13 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 
 Quantité de la structure de ce `TouchRecognizer` classe est semblable à la Android `TouchEffect` classe.
 
-## <a name="putting-the-touch-effect-to-work"></a>Fait de placer l’effet tactile travail
+## <a name="putting-the-touch-effect-to-work"></a>Placez l’effet tactile travail
 
-Le [ **TouchTrackingEffectDemos** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) programme contient cinq pages de tester l’effet de suivi tactile pour les tâches courantes.
+Le [ **TouchTrackingEffectDemos** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) programme contienne cinq pages de tester l’effet de suivi des fonctions tactiles pour les tâches courantes.
 
-Le **BoxView faisant** page vous permet d’ajouter `BoxView` éléments à un `AbsoluteLayout` et faites-les glisser autour de l’écran. Le [fichier XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) instancie deux `Button` vues pour l’ajout de `BoxView` éléments à la `AbsoluteLayout` et en désactivant le `AbsoluteLayout`.
+Le **BoxView en faisant glisser** page vous permet d’ajouter `BoxView` éléments à un `AbsoluteLayout` et faites-les glisser autour de l’écran. Le [les fichiers XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) instancie deux `Button` vues pour l’ajout de `BoxView` éléments à la `AbsoluteLayout` et en désactivant le `AbsoluteLayout`.
 
-La méthode dans le [fichier code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml.cs) qui ajoute un nouveau `BoxView` à la `AbsoluteLayout` ajoute également un `TouchEffect` de l’objet à le `BoxView` et attache un gestionnaire d’événements de l’effet :
+La méthode dans le [fichier code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml.cs) qui ajoute un nouveau `BoxView` à la `AbsoluteLayout` ajoute également un `TouchEffect` de l’objet à le `BoxView` et attache un gestionnaire d’événements à l’effet :
 
 ```csharp
 void AddBoxViewToLayout()
@@ -379,7 +379,7 @@ void AddBoxViewToLayout()
 }
 ```
 
-Le `TouchAction` Gestionnaire d’événements traite tous les événements tactiles pour tous les le `BoxView` éléments, mais il doit prudent : il ne peut pas autoriser des deux doigts sur un seul `BoxView` , car le programme implémente uniquement en faisant glisser et deux doigts retournerait interférer avec eux. Pour cette raison, la page définit une classe incorporée pour chaque doigt actuellement suivi :
+Le `TouchAction` Gestionnaire d’événements traite tous les événements tactiles pour tous les le `BoxView` éléments, mais il a besoin pour une preuve de prudence : il ne peut pas autoriser des deux doigts sur un seul `BoxView` , car le programme implémente seulement la faisant glisser et seraient de deux doigts interférer entre eux. Pour cette raison, la page définit une classe incorporée pour chaque doigt actuellement suivi :
 
 ```csharp
 class DragInfo
@@ -398,9 +398,9 @@ class DragInfo
 Dictionary<BoxView, DragInfo> dragDictionary = new Dictionary<BoxView, DragInfo>();
 ```
 
-Le `dragDictionary` contient une entrée pour chaque `BoxView` en cours de glissement.
+Le `dragDictionary` contient une entrée pour chaque `BoxView` actuellement glissé.
 
-Le `Pressed` action tactile ajoute un élément à ce dictionnaire et le `Released` action le supprime. Le `Pressed` logique doit vérifier s’il existe déjà un élément dans le dictionnaire qui `BoxView`. Dans ce cas, le `BoxView` est déjà déplacé et le nouvel événement est une seconde finger sur ce même `BoxView`. Pour le `Moved` et `Released` actions, le Gestionnaire d’événements doit vérifier si le dictionnaire a une entrée pour cette `BoxView` et que la fonction tactile `Id` propriété que vous faites glisser `BoxView` correspond à celui de l’entrée de dictionnaire :
+Le `Pressed` tactile action ajoute un élément à ce dictionnaire et le `Released` action le supprime. Le `Pressed` logique doit vérifier s’il existe déjà un élément dans le dictionnaire pour qui `BoxView`. Dans ce cas, le `BoxView` est déjà en cours d’un glisser le nouvel événement est un deuxième doigt sur ce même `BoxView`. Pour le `Moved` et `Released` actions, le Gestionnaire d’événements doit vérifier si le dictionnaire a une entrée pour ce `BoxView` et que la pression tactile `Id` propriété pour que l’utilisateur glisser `BoxView` correspond à celui de l’entrée de dictionnaire :
 
 ```csharp
 void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -442,17 +442,17 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 }
 ```
 
-Le `Pressed` logique définit le `Capture` propriété de la `TouchEffect` à l’objet `true`. Cela a pour effet de diffusion de tous les événements ultérieurs pour ce doigt sur le même gestionnaire d’événements.
+Le `Pressed` jeux de logique le `Capture` propriété de la `TouchEffect` objet `true`. Cela a pour effet de diffusion de tous les événements suivants pour ce doigt sur le même gestionnaire d’événements.
 
-Le `Moved` logique déplace le `BoxView` en modifiant le `LayoutBounds` propriété jointe. Le `Location` propriété des arguments d’événement est toujours relatif au `BoxView` déplacé et si le `BoxView` est déplacé à un rythme constant, le `Location` propriétés des événements consécutifs doit être environ le même. Par exemple, si un doigt appuie sur le `BoxView` dans son centre, le `Pressed` action stocke un `PressPoint` propriété de (50, 50), qui reste le même pour les événements suivants. Si le `BoxView` est déplacé en diagonale à un rythme constant, les `Location` propriétés durant la `Moved` action peut-être être des valeurs de (55, 55), auquel cas la `Moved` logique ajoute 5 à la position horizontale et verticale de la `BoxView`. Cette opération déplace la `BoxView` afin que son centre est de nouveau directement sous le doigt.
+Le `Moved` logique déplace le `BoxView` en modifiant le `LayoutBounds` propriété jointe. Le `Location` propriété des arguments d’événement est toujours relatif le `BoxView` déplacé et si le `BoxView` est déplacé à une vitesse constante, le `Location` propriétés des événements consécutifs sera environ le même. Par exemple, si un doigt appuie sur le `BoxView` dans son centre, le `Pressed` action stocke un `PressPoint` propriété de (50, 50), qui reste le même pour les événements suivants. Si le `BoxView` est déplacé en diagonale à une vitesse constante, le `Location` propriétés durant la `Moved` action peut-être être des valeurs de (55, 55), auquel cas la `Moved` logique ajoute 5 à la position horizontale et verticale de la `BoxView`. Cette opération déplace le `BoxView` afin que son centre est à nouveau directement sous le doigt.
 
-Vous pouvez déplacer plusieurs `BoxView` éléments simultanément à l’aide de différents doigts.
+Vous pouvez déplacer plusieurs `BoxView` éléments simultanément à l’aide de doigts différents.
 
-[![](touch-tracking-images/boxviewdragging-small.png "Capture d’écran de triple de la page en faisant glisser des BoxView")](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple capture d’écran de la page BoxView en faisant glisser")
+[![](touch-tracking-images/boxviewdragging-small.png "Triple capture d’écran de la page en faisant glisser des BoxView")](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple capture d’écran de la page BoxView en faisant glisser")
 
-### <a name="subclassing-the-view"></a>Sous-classer la vue
+### <a name="subclassing-the-view"></a>Sous-classement de la vue
 
-Il est souvent plus facile pour un élément de Xamarin.Forms gérer ses propres événements tactiles. Le **déplaçable en faisant glisser de BoxView** page fonctionne comme le **BoxView en faisant glisser** page, mais les éléments qui est des instances de l’utilisateur fait glisser un [ `DraggableBoxView` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/DraggableBoxView.cs) classe qui dérive de `BoxView`:
+Souvent, il est plus facile pour un élément de Xamarin.Forms gérer ses propres événements tactiles. Le **déplaçable en faisant glisser de BoxView** page fonctionne comme le **BoxView en faisant glisser** page, mais les éléments qui est des instances de l’utilisateur fait glisser un [ `DraggableBoxView` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/DraggableBoxView.cs) classe qui dérive de `BoxView`:
 
 ```csharp
 class DraggableBoxView : BoxView
@@ -503,19 +503,19 @@ class DraggableBoxView : BoxView
 }
 ```
 
-Le constructeur crée et attache la `TouchEffect`et définit le `Capture` propriété lorsque cet objet est instancié. Aucun dictionnaire n’est requise, car la classe elle-même stocke `isBeingDragged`, `pressPoint`, et `touchId` valeurs associées à chaque doigt. Le `Moved` gestion modifie le `TranslationX` et `TranslationY` propriétés pour la logique fonctionne même si le parent de la `DraggableBoxView` n’est pas un `AbsoluteLayout`.
+Le constructeur crée et attache le `TouchEffect`et définit le `Capture` propriété lorsque cet objet est instancié. Aucun dictionnaire n’est nécessaire, car la classe elle-même stocke `isBeingDragged`, `pressPoint`, et `touchId` valeurs associées à chaque doigt. Le `Moved` gestion modifie le `TranslationX` et `TranslationY` propriétés pour la logique fonctionne même si le parent de la `DraggableBoxView` n’est pas un `AbsoluteLayout`.
 
-### <a name="integrating-with-skiasharp"></a>Intégration avec SkiaSharp
+### <a name="integrating-with-skiasharp"></a>L’intégration avec SkiaSharp
 
-Les deux démonstrations nécessitent des graphiques, et utilisent SkiaSharp à cet effet. Vous souhaiterez peut-être en savoir plus sur [à l’aide de SkiaSharp dans Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) avant que vous étudiez ces exemples. Les deux premiers articles (« Basics de dessin SkiaSharp » et « SkiaSharp lignes et les chemins d’accès ») couvrent tout ce dont vous avez besoin ici.
+Les deux démonstrations nécessitent des graphiques, et utilisent SkiaSharp à cet effet. Vous souhaiterez peut-être en savoir plus sur [à l’aide de SkiaSharp dans Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) avant de vous examinerez ces exemples. Les deux premiers articles (« Principes de base de dessin SkiaSharp » et « SkiaSharp lignes et chemins d’accès ») couvrent tout ce dont vous avez besoin ici.
 
-Le **Ellipse dessin** page vous permet de dessiner une ellipse en passant le doigt sur l’écran. Selon la façon dont vous déplacez votre doigt, vous pouvez dessiner l’ellipse à partir de l’angle supérieur gauche de l’angle inférieur droit, ou à partir de n’importe quel autre angle vers le coin opposé. Les points de suspension est dessiné avec une couleur aléatoire et une opacité.
+Le **Ellipse dessin** page vous permet de dessiner une ellipse en passant votre doigt sur l’écran. Selon la façon dont vous déplacez votre doigt, vous pouvez dessiner l’ellipse à partir de l’angle supérieur gauche de l’angle inférieur droit, ou à partir de n’importe quel autre coin vers le coin opposé. L’ellipse est dessinée avec une couleur aléatoire et une opacité.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "Capture d’écran de triple de la page de dessin de l’Ellipse")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple capture d’écran de la page de dessin des points de suspension")
+[![](touch-tracking-images/ellipsedrawing-small.png "Capture d’écran triple de la page de dessin de l’Ellipse")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple capture d’écran de la page de dessin de l’Ellipse")
 
-Si vous sélectionnez puis parmi les points de suspension, vous pouvez faire glisser vers un autre emplacement. Cela nécessite une technique appelée « le test de positionnement, » qui implique la recherche de l’objet graphique à un moment donné. Les points de suspension SkiaSharp ne sont pas des éléments de Xamarin.Forms, pour qu’ils ne peuvent pas exécuter leur propre `TouchEffect` de traitement. Le `TouchEffect` doivent s’appliquer à l’ensemble du `SKCanvasView` objet.
+Si vous touchez puis l’un des ellipses, vous pouvez faire glisser vers un autre emplacement. Cela nécessite une technique appelée « le test d’atteinte, » ce qui implique la recherche de l’objet graphique à un moment donné. Les points de suspension SkiaSharp ne sont pas des éléments de Xamarin.Forms, afin qu’ils ne peuvent pas effectuer leurs propres `TouchEffect` de traitement. Le `TouchEffect` doivent s’appliquer à l’ensemble du `SKCanvasView` objet.
 
-Le [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml) fichier instancie le `SKCanvasView` dans une seule cellule `Grid`. Le `TouchEffect` objet est attaché à qui `Grid`:
+Le [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml) fichier instancie le `SKCanvasView` dans une seule cellule `Grid`. Le `TouchEffect` objet est attaché au qui `Grid`:
 
 ```xaml
 <Grid x:Name="canvasViewGrid"
@@ -531,9 +531,9 @@ Le [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/
 </Grid>
 ```
 
-Dans Android et la plateforme Windows universelle, le `TouchEffect` peut être attaché directement à la `SKCanvasView`, mais sur iOS qui ne fonctionne pas. Notez que la `Capture` est définie sur `true`.
+Dans Android et la plateforme Windows universelle, le `TouchEffect` peut être attaché directement à la `SKCanvasView`, mais sur iOS qui ne fonctionne pas. Notez que le `Capture` propriété est définie sur `true`.
 
-Chaque ellipse SkiaSharp effectue le rendu est représenté par un objet de type `EllipseDrawingFigure`:
+Chaque ellipse qui restitue SkiaSharp est représenté par un objet de type `EllipseDrawingFigure`:
 
 ```csharp
 class EllipseDrawingFigure
@@ -585,9 +585,9 @@ class EllipseDrawingFigure
 }
 ```
 
-Le `StartPoint` et `EndPoint` propriétés sont utilisées lorsque le programme traite tactile d’entrée ; la `Rectangle` propriété est utilisée pour dessiner l’ellipse. Le `LastFingerLocation` propriété entre en jeu lors de l’ellipse est déplacée et la `IsInEllipse` contribue à la méthode dans le test de positionnement. La méthode retourne `true` si le point est à l’intérieur de l’ellipse.
+Le `StartPoint` et `EndPoint` propriétés sont utilisées lorsque le programme traite une entrée ; tactile le `Rectangle` propriété est utilisée pour dessiner l’ellipse. Le `LastFingerLocation` propriété intervient lors de l’ellipse est déplacée et le `IsInEllipse` aides à la méthode dans le test de positionnement. La méthode retourne `true` si le point est à l’intérieur de l’ellipse.
 
-Le [fichier code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml.cs) conserve trois collections :
+Le [fichier code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml.cs) gère trois collections :
 
 ```csharp
 Dictionary<long, EllipseDrawingFigure> inProgressFigures = new Dictionary<long, EllipseDrawingFigure>();
@@ -621,7 +621,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-La partie plus délicate du traitement tactile est le `Pressed` gestion. Cette propriété est si le test de positionnement est effectué, mais si le code détecte une ellipse sous le doigt de l’utilisateur, cette sélection seulement peut être déplacée que si elle n’est pas actuellement glissé par un autre doigt. S’il n’existe aucun ellipse sous le doigt de l’utilisateur, le code commence le processus de dessin d’une ellipse nouvelle :
+La partie la plus délicate du traitement tactile est le `Pressed` gestion. C’est là où le test de positionnement est effectué, mais si le code détecte une ellipse sous le doigt de l’utilisateur, cette ellipse peut uniquement être déplacé si elle n’est pas actuellement glissé par un autre doigt. S’il n’existe aucun ellipse sous le doigt de l’utilisateur, le code commence le processus de dessin d’une ellipse nouvelle :
 
 ```csharp
 case TouchActionType.Pressed:
@@ -681,11 +681,11 @@ case TouchActionType.Pressed:
     break;
 ```
 
-L’autre exemple SkiaSharp est la **doigt peinture** page. Vous pouvez sélectionner une couleur de contour et la largeur du trait à partir de deux `Picker` vues, puis dessinez avec un ou plusieurs doigts :
+L’exemple de SkiaSharp autres est le **peinture au doigt** page. Vous pouvez sélectionner une couleur de trait et l’épaisseur du trait à partir de deux `Picker` des vues et puis dessinez avec un ou plusieurs doigts :
 
-[![](touch-tracking-images/fingerpaint-small.png "Capture d’écran de triple de la page de dessin du doigt")](touch-tracking-images/fingerpaint-large.png#lightbox "Triple capture d’écran de la page de dessin du doigt")
+[![](touch-tracking-images/fingerpaint-small.png "Capture d’écran triple de la page de peinture au doigt")](touch-tracking-images/fingerpaint-large.png#lightbox "Triple capture d’écran de la page de peinture au doigt")
 
-Cet exemple nécessite également une classe distincte pour représenter chaque ligne peinte sur l’écran :
+Cet exemple nécessite également une classe distincte pour représenter chaque ligne peint à l’écran :
 
 ```csharp
 class FingerPaintPolyline
@@ -703,14 +703,14 @@ class FingerPaintPolyline
 }
 ```
 
-Un `SKPath` objet utilisé pour afficher chaque ligne. Le [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/FingerPaintPage.xaml.cs) fichier gère deux collections de ces objets, une de ces polylignes en cours de saisie et l’autre pour les polylignes terminées :
+Un `SKPath` objet est utilisé pour afficher chaque ligne. Le [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/FingerPaintPage.xaml.cs) fichier gère deux collections de ces objets, une pour ces polylignes en cours de saisie et un autre pour les polylignes terminées :
 
 ```csharp
 Dictionary<long, FingerPaintPolyline> inProgressPolylines = new Dictionary<long, FingerPaintPolyline>();
 List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 ```
 
-Le `Pressed` le traitement crée un nouveau `FingerPaintPolyline`, appels `MoveTo` sur l’objet de chemin d’accès pour stocker le point de départ et ajoute cet objet à le `inProgressPolylines` dictionnaire. Le `Moved` le traitement des appels `LineTo` sur l’objet de chemin d’accès avec la nouvelle position doigt et le `Released` traitement transfère la polyligne terminée à partir de `inProgressPolylines` à `completedPolylines`. Une fois encore, le code de dessin de SkiaSharp réel est relativement simple :
+Le `Pressed` traitement crée un nouveau `FingerPaintPolyline`, appels `MoveTo` sur l’objet de chemin d’accès pour stocker le point initial et ajoute cet objet à le `inProgressPolylines` dictionnaire. Le `Moved` traitement des appels `LineTo` sur l’objet de chemin d’accès avec la nouvelle position du doigt et le `Released` traitement transfère la polyligne terminée à partir de `inProgressPolylines` à `completedPolylines`. Une fois encore, le code de dessin de SkiaSharp réelle est relativement simple :
 
 ```csharp
 SKPaint paint = new SKPaint
@@ -743,21 +743,21 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ### <a name="tracking-view-to-view-touch"></a>Suivi-Affichage tactile
 
-Tous les exemples précédents ont défini la `Capture` propriété de la `TouchEffect` à `true`, soit lorsque la `TouchEffect` a été créé ou lorsque le `Pressed` s’est produite lors de l’événement. Cela garantit que le même élément reçoit tous les événements associés avec le doigt première pression sur la vue. L’exemple final effectue *pas* définir `Capture` à `true`. Cela provoque un comportement différent lorsqu’un doigt en contact avec l’écran se déplace d’un élément à un autre. L’élément qui déplace le doigt reçoit un événement avec un `Type` propriété `TouchActionType.Exited` et le deuxième élément reçoit un événement avec un `Type` paramètre `TouchActionType.Entered`.
+Tous les exemples précédents ont défini la `Capture` propriété de la `TouchEffect` à `true`, soit lorsque le `TouchEffect` a été créé ou lorsque le `Pressed` événement s’est produit. Cela garantit que le même élément reçoit tous les événements associés au doigt enfoncé tout d’abord la vue. L’exemple final *pas* définir `Capture` à `true`. Cela provoque un comportement différent quand un doigt en contact avec l’écran se déplace d’un élément vers un autre. L’élément qui le doigt se déplace du reçoit un événement avec un `Type` propriété définie sur `TouchActionType.Exited` et le deuxième élément reçoit un événement avec un `Type` paramètre `TouchActionType.Entered`.
 
-Ce type de traitement de l’interaction tactile est très utile pour un clavier de la musique. Une clé doit être en mesure de détecter lorsqu’elle est activée, mais aussi lorsqu’un doigt diapositives à partir d’une clé à un autre.
+Ce type de traitement de tactile est très utile pour un clavier de musique. Une clé doit être en mesure de détecter lorsqu’il est appuyé sur celui-ci, mais également lorsqu’un doigt diapositives à partir d’une clé à un autre.
 
-Le **clavier en mode silencieux** page définit petit [ `WhiteKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/WhiteKey.cs) et [ `BlackKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BlackKey.cs) les classes qui dérivent de [ `Key` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/Key.cs), lequel dérive `BoxView`.
+Le **clavier en mode silencieux** page définit petit [ `WhiteKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/WhiteKey.cs) et [ `BlackKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BlackKey.cs) classes qui dérivent [ `Key` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/Key.cs), qui dérive à son `BoxView`.
 
-La `Key` classe est prête à être utilisée dans un programme de musique réel. Il définit les propriétés publiques nommées `IsPressed` et `KeyNumber`, qui sert à définir pour le code de touche établi par la norme MIDI. Le `Key` classe définit également un événement nommé `StatusChanged`, qui est appelé lorsque le `IsPressed` de propriété est modifiée.
+Le `Key` classe est prête à être utilisée dans un programme de musique réelle. Il définit les propriétés publiques nommées `IsPressed` et `KeyNumber`, qui est destiné à être définie sur le code de touche établi par la norme MIDI. Le `Key` classe définit également un événement nommé `StatusChanged`, qui est appelé lorsque le `IsPressed` les modifications de propriété.
 
-Plusieurs doigts sont autorisées sur chaque clé. Pour cette raison, le `Key` classe maintient une `List` des numéros d’identification de tous les doigts actuellement toucher cette clé tactile :
+Plusieurs doigts sont autorisées sur chaque clé. Pour cette raison, le `Key` classe maintient une `List` les tactile des numéros d’ID de tous les doigts touchant actuellement cette clé :
 
 ```csharp
 List<long> ids = new List<long>();
 ```
 
-Le `TouchAction` Gestionnaire d’événements ajoute un ID pour le `ids` liste pour les deux un `Pressed` type d’événement et un `Entered` type, mais uniquement lorsque le `IsInContact` propriété est `true` pour la `Entered` événement. L’ID est supprimé de la `List` pour un `Released` ou `Exited` événement :
+Le `TouchAction` Gestionnaire d’événements ajoute un ID pour le `ids` liste pour les deux un `Pressed` type d’événement et un `Entered` type, mais uniquement lorsque le `IsInContact` propriété est `true` pour le `Entered` événement. L’ID est supprimé de la `List` pour un `Released` ou `Exited` événement :
 
 ```csharp
 void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -787,21 +787,21 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 ```
 
-Le `AddToList` et `RemoveFromList` méthodes vérifient si le `List` a changé entre vide et non vide et dans ce cas, appelle la `StatusChanged` événement.
+Le `AddToList` et `RemoveFromList` méthodes à la fois vérifient si les `List` a changé entre vide et non vide et si tel est le cas, appelle le `StatusChanged` événement.
 
-Les différentes `WhiteKey` et `BlackKey` éléments sont disposés dans la page [fichier XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml), ce qui convient le mieux lorsque le téléphone est maintenu en mode paysage :
+Les différents `WhiteKey` et `BlackKey` éléments sont organisés dans la page [les fichiers XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml), ce qui convient le mieux lorsque le téléphone est maintenu dans un mode paysage :
 
-[![](touch-tracking-images/silentkeyboard-small.png "Capture d’écran de triple de la page en mode silencieux clavier")](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple capture d’écran de la page de clavier en mode silencieux")
+[![](touch-tracking-images/silentkeyboard-small.png "Capture d’écran triple de la page de clavier en mode silencieux")](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple capture d’écran de la page de clavier en mode silencieux")
 
 Si vous balayage votre doigt sur les clés, vous verrez par les légères modifications de couleur que les événements tactiles sont transférés à partir d’une clé à un autre.
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a montré comment appeler des événements dans un effet et comment écrire et utilisez un effet qui implémente le traitement de bas niveau tactile.
+Cet article a montré comment appeler des événements dans un effet et comment écrire et utiliser un effet qui implémente le traitement de l’interaction tactile multipoint bas niveau.
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Suivi de doigt tactiles dans iOS](~/ios/app-fundamentals/touch/touch-tracking.md)
-- [Doigt tactile suivi des modifications dans Android](~/android/app-fundamentals/touch/touch-tracking.md)
+- [Suivi d’un doigt de l’interaction tactile multipoint dans iOS](~/ios/app-fundamentals/touch/touch-tracking.md)
+- [Doigt de l’interaction tactile multipoint suivi des modifications dans Android](~/android/app-fundamentals/touch/touch-tracking.md)
 - [Effet de suivi tactile (exemple)](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9a6f7f5c82808b6430ba1aa6178a543945ae2634
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a25a1c3be8c952536c0ef40b7f7c4a64f5748516
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104906"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527233"
 ---
 # <a name="touch-in-android"></a>Entrées tactiles dans Android
 
@@ -134,7 +134,7 @@ L’extrait de code XML suivant montre comment ajouter de manière déclarative 
     android:layout_height="match_parent" />
 ```
 
-Le `GestureOverlayView` a plusieurs événements qui seront déclenchées pendant le processus de dessin d’un mouvement. L’événement la plus intéressante est `GesturePeformed`. Cet événement est déclenché lorsque l’utilisateur a terminé de dessiner leur mouvement.
+Le `GestureOverlayView` a plusieurs événements qui seront déclenchées pendant le processus de dessin d’un mouvement. L’événement la plus intéressante est `GesturePerformed`. Cet événement est déclenché lorsque l’utilisateur a terminé de dessiner leur mouvement.
 
 Lorsque cet événement est déclenché, l’activité de demande à un `GestureLibrary` à essayer de faire correspondre le mouvement créés par l’utilisateur avec l’un des gestes par l’outil de mouvement. `GestureLibrary` Retourne une liste d’objets de prédiction.
 

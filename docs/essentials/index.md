@@ -1,4 +1,4 @@
-﻿---
+---
 title: Xamarin.Essentials
 description: Ce document contient des liens vers les documentations concernant Xamarin.Essentials. Xamarin.Essentials rassemble les API natives en une API multiplateforme unique pour les applications mobiles.
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
@@ -57,7 +57,7 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [Stockage sécurisé](secure-storage.md?context=xamarin/xamarin-forms) : stocker des données en toute sécurité.
 * [SMS](sms.md?context=xamarin/xamarin-forms) : créer un message SMS à envoyer.
 * [Synthèse vocale](text-to-speech.md?context=xamarin/xamarin-forms) : énoncer du texte sur l’appareil.
-* [Suivi des versions](version-tracking.md?context=xamarin/xamarin-forms) : effectuer le suivi de la version des applications et des numéros de build.
+* [Suivi des versions](version-tracking.md?context=xamarin/xamarin-forms) : obtenir la version de l'application et les numéros de build.
 * [Vibreur](vibrate.md?context=xamarin/xamarin-forms) : faire vibrer l’appareil.
 
 ## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[Résolution des problèmes](troubleshooting.md?context=xamarin/xamarin-forms)

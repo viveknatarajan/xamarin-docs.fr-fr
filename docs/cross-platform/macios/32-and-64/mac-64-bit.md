@@ -6,12 +6,12 @@ ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
 author: conceptdev
 ms.author: crdun
 ms.date: 02/22/2018
-ms.openlocfilehash: 3667f129cb566f71e9afd2969af13fe5b9682882
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9bd70fec5d6d3bbbc4855980e1542bd4e486acaa
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109378"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528518"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Mise à jour des applications unifiées Xamarin.Mac vers 64 bits
 
@@ -21,7 +21,7 @@ Le **fichier** > **New** modèle de projet Xamarin.Mac crée des applications 64
 
 ## <a name="targeting-64-bit"></a>Ciblage de 64 bits
 
-1. Ouvrez le **Options du projet** fenêtre pour que vous êtes à votre application Xamarin.Mac :
+1. Ouvrez le **Options du projet** fenêtre pour votre application Xamarin.Mac :
 
    ![Le menu contextuel pour le projet](mac-64-bit-images/1-contextual_menu-vsmac.png "le menu contextuel du projet")
 
@@ -36,7 +36,7 @@ Le **fichier** > **New** modèle de projet Xamarin.Mac crée des applications 64
 La première fois que vous générez ou exécutez votre application avec prise en charge 64 bits, vous pouvez rencontrer des erreurs de lien à partir de problèmes clang ou de l’exécution. Ces erreurs peuvent se produire si le tiers dépendances — par exemple, des références natives dans votre Xamarin.Mac ou projets de liaisons ou chargé manuellement les infrastructures de l’échelle du système, n’ont pas été mis à jour pour 64 bits.
 
 > [!TIP]
-> Conversion de votre projet vers 64 bits constitue un changement majeur et peut découvrir indirectement des erreurs de programmation différents. En particulier, elle peut changer la taille et l’alignement des structures de données, ce qui affecte les signatures p/invoke et le code natif lié dans votre projet. Pour passer en revue les avertissements de génération étant donnés et tester votre application informées par la suite pour intercepter les problèmes potentiels.
+> Conversion de votre projet vers 64 bits constitue un changement majeur et peut découvrir indirectement des erreurs de programmation différents. En particulier, elle peut changer la taille et l’alignement des structures de données, ce qui affecte les signatures p/invoke et le code natif lié dans votre projet. Pour passer en revue des avertissements donnés de génération et de tester votre application minutieusement par la suite pour intercepter les problèmes potentiels.
 
 #### <a name="example-error-resulting-from-a-dynamically-linked-third-party-dependency-that-does-not-target-64-bit"></a>Exemple d’erreur résultant d’une dépendance tierce liées dynamiquement qui ne cible pas 64 bits :
 

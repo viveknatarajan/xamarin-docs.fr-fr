@@ -4,15 +4,15 @@ description: 'Création d’applications mobiles avec Xamarin.Forms : résumé 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156728"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563769"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Résumé du chapitre 20. E/s de fichier et asynchrone
 
@@ -28,7 +28,7 @@ Plusieurs exemples de programmes dans ce livre ont utilisé le [ `WebRequest` ](
 > [!NOTE]
 > Xamarin.Forms les programmes doivent utiliser [ `HttpClient` ](xref:System.Net.Http.HttpClient) plutôt que [ `WebRequest` ](xref:System.Net.WebRequest) pour accéder aux fichiers via internet. `HttpClient` prend en charge les opérations asynchrones.
 
-Une approche plus moderne pour le traitement asynchrone est disponible dans .NET et c#. Cela implique le [ `Task` ](xref:System.Threading.Tasks.Task) et [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) classes et autres types dans le [ `System.Threading` ](xref:System.Threading) et [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) espaces de noms, ainsi que c# 5.0 `async` et `await` mots clés. C’est ce que ce chapitre se concentre sur.
+Une approche plus moderne pour le traitement asynchrone est disponible dans .NET et c#. Cela implique le [ `Task` ](xref:System.Threading.Tasks.Task) et [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) classes et autres types dans le [ `System.Threading` ](xref:System.Threading) et [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) espaces de noms, ainsi que le C# 5.0 `async` et `await` mots clés. C’est ce que ce chapitre se concentre sur.
 
 ## <a name="from-callbacks-to-await"></a>À partir des rappels pour attendre
 

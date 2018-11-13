@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: e3cfc9a345c8ab92b35ad428b550ec42de6312e5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120292"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563509"
 ---
 # <a name="location-services"></a>Services de localisation
 
@@ -190,7 +190,7 @@ Cette méthode accepte deux paramètres :
 
 Pour avertir une application Xamarin.Android d’une mise à jour de l’emplacement, le fournisseur de localisation multiplication appellera le `LocationCallBack.OnLocationResult(LocationResult result)`. Le `Android.Gms.Location.LocationResult` paramètre contiendra les informations d’emplacement de mise à jour.
 
-Lorsque le fournisseur de localisation multiplication détecte une modification de la disponibilité des données de localisation, il appellera le `LocationProvider.OnLocationAvaibility(LocationAvailability
+Lorsque le fournisseur de localisation multiplication détecte une modification de la disponibilité des données de localisation, il appellera le `LocationProvider.OnLocationAvailability(LocationAvailability
 locationAvailability)` (méthode). Si le `LocationAvailability.IsLocationAvailable` retourne de la propriété `true`, puis on peut supposer que les résultats de l’emplacement appareil signalé par `OnLocationResult` sont aussi précis et à jour comme requis par le `LocationRequest`. Si `IsLocationAvailable` est false, aucun résultat de l’emplacement n’est retourné par `OnLocationResult`.
 
 Cet extrait de code est un exemple d’implémentation de la `LocationCallback` objet :
@@ -253,9 +253,9 @@ Il est judicieux de conserver le `LocationManager` comme une variable de classe,
 
 ### <a name="request-location-updates-from-the-locationmanager"></a>Demander des mises à jour de l’emplacement à partir de la LocationManager
 
-Une fois que l’application a une référence à la `LocationManager`, il doit indiquer le `LocationManager` quel type d’informations d’emplacement qui sont requis, et la fréquence à laquelle cette information est mise à jour. Cela en appelant `RequestionLocationUpdates` sur la `LocationManager` objet et en passant des critères pour les mises à jour et un rappel qui recevra les mises à jour de l’emplacement. Ce rappel est un type qui doit implémenter le `ILocationListener` interface (décrite plus en détail plus loin dans ce guide).
+Une fois que l’application a une référence à la `LocationManager`, il doit indiquer le `LocationManager` quel type d’informations d’emplacement qui sont requis, et la fréquence à laquelle cette information est mise à jour. Cela en appelant `RequestLocationUpdates` sur la `LocationManager` objet et en passant des critères pour les mises à jour et un rappel qui recevra les mises à jour de l’emplacement. Ce rappel est un type qui doit implémenter le `ILocationListener` interface (décrite plus en détail plus loin dans ce guide).
 
-Le `RequestionLocationUpdates` méthode indique à l’emplacement du système Service que votre application souhaite commencer à recevoir des mises à jour de l’emplacement. Cette méthode vous permet de spécifier le fournisseur, ainsi que les seuils de temps et de distance pour contrôler la fréquence de mise à jour. Par exemple, la méthode ci-dessous sous emplacement de demandes mises à jour depuis le fournisseur de localisation GPS chaque 2 000 millisecondes, et uniquement si l’emplacement change plus de 1 mètre :
+Le `RequestLocationUpdates` méthode indique à l’emplacement du système Service que votre application souhaite commencer à recevoir des mises à jour de l’emplacement. Cette méthode vous permet de spécifier le fournisseur, ainsi que les seuils de temps et de distance pour contrôler la fréquence de mise à jour. Par exemple, la méthode ci-dessous demande l’emplacement des mises à jour à partir du fournisseur de localisation GPS chaque 2 000 millisecondes, et uniquement si l’emplacement change plus de 1 mètre :
 
 ```csharp
 // For this example, this method is part of a class that implements ILocationListener, described below

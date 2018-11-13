@@ -4,15 +4,15 @@ description: CocosSharp peut être utilisé pour ajouter forme précis, l’imag
 ms.prod: xamarin
 ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: c823eb27552f0a42ad428ed6f36790e925079295
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 00c6b40e7611b0111d2ed2d0fabb3f60619d481a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998805"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563548"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Utilisation de CocosSharp dans Xamarin.Forms
 
@@ -216,9 +216,9 @@ Maintenant que `GameScene` est défini, nous pouvons retourner à `HomePage` et 
 
 
 ```csharp
-// Keep the GameScene at class scope
-// so the button click events can access it:
-GameScene gameScene;
+// Keep the GameScene at class scope
+// so the button click events can access it:
+GameScene gameScene;
 ```
 
 Nous pouvons maintenant compiler notre projet et exécutez-le pour voir CocosSharp en cours d’exécution. Nous n’avons pas ajouté quoi que ce soit à notre `GameScene,` donc la moitié supérieure de notre page est noir – la couleur par défaut d’une scène de CocosSharp :
@@ -288,8 +288,8 @@ Notre application simple utilise le `CCDrawNode` classe pour dessiner un cercle.
 
 
 ```csharp
-circle.PositionX = 20;
-circle.PositionY = 50;
+circle.PositionX = 20;
+circle.PositionY = 50;
 ```
 
 Il est important de noter que les objets de CocosSharp sont positionnés par les valeurs de position explicites, par opposition à la plupart des vues Xamarin.Forms, qui sont placées automatiquement en fonction du comportement de leurs contrôles de disposition du parent.
@@ -298,14 +298,14 @@ Nous allons ajouter le code pour autoriser l’utilisateur à cliquer sur un des
 
 
 ```csharp
-public void MoveCircleLeft()
+public void MoveCircleLeft()
 {
-    circle.PositionX -= 10;
+    circle.PositionX -= 10;
 }
 
-public void MoveCircleRight()
+public void MoveCircleRight()
 {
-    circle.PositionX += 10;
+    circle.PositionX += 10;
 }
 ```
 
@@ -313,27 +313,27 @@ Ensuite, nous allons ajouter des gestionnaires pour les deux boutons de `HomePag
 
 
 ```csharp
-void CreateBottomHalf(Grid grid)
+void CreateBottomHalf(Grid grid)
 {
-    // We'll use a StackLayout to organize our buttons
-    var stackLayout = new StackLayout();
+    // We'll use a StackLayout to organize our buttons
+    var stackLayout = new StackLayout();
 
-    // The first button will move the circle to the left when it is clicked:
-    var moveLeftButton = new Button {
-        Text = "Move Circle Left"
-    };
-    moveLeftButton.Clicked += (sender, e) => gameScene.MoveCircleLeft ();
-    stackLayout.Children.Add (moveLeftButton);
+    // The first button will move the circle to the left when it is clicked:
+    var moveLeftButton = new Button {
+        Text = "Move Circle Left"
+    };
+    moveLeftButton.Clicked += (sender, e) => gameScene.MoveCircleLeft ();
+    stackLayout.Children.Add (moveLeftButton);
 
-    // The second button will move the circle to the right when clicked:
-    var moveCircleRight = new Button {
-        Text = "Move Circle Right"
-    };
-    moveCircleRight.Clicked += (sender, e) => gameScene.MoveCircleRight ();
-    stackLayout.Children.Add (moveCircleRight);
+    // The second button will move the circle to the right when clicked:
+    var moveCircleRight = new Button {
+        Text = "Move Circle Right"
+    };
+    moveCircleRight.Clicked += (sender, e) => gameScene.MoveCircleRight ();
+    stackLayout.Children.Add (moveCircleRight);
 
-    // The stack layout will be in the bottom half (row 1):
-    grid.Children.Add (stackLayout, 0, 1);
+    // The stack layout will be in the bottom half (row 1):
+    grid.Children.Add (stackLayout, 0, 1);
 }
 ```
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: b9aa29507ebb37e3912b1027419e47c82832dfa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dfc0e1cb7239381ef2f495b0f9774d390b0dc82e
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116509"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527194"
 ---
 # <a name="creating-android-services"></a>Création de Services Android
 
@@ -47,7 +47,7 @@ Il existe quatre types de services Android :
 
 * **`IntentService`** &ndash; Un _`IntentService`_ est une sous-classe spécialisée de la `Service` classe qui simplifie la création de service et l’utilisation. Un `IntentService` est destiné à gérer les appels autonomes individuels. Contrairement à un service, qui peut gérer simultanément plusieurs appels, une `IntentService` ressemble plus un _fonctionne le processeur de la file d’attente_ &ndash; travail est la file d’attente et un `IntentService` traite chaque travail d’un à la fois sur un seul thread de travail. En règle générale, un`IntentService` n’est pas lié à une activité ou un Fragment. 
 
-* **Service démarré** &ndash; A _service démarré_ est un service qui a été démarré par un autre composant Android (par exemple, une activité) et est d’exécuter en permanence en arrière-plan jusqu'à ce que quelque chose indique explicitement la arrêt du service. Contrairement à un service lié, un service démarré n’a pas de tous les clients directement liés à celui-ci. Pour cette raison, il est important de concevoir des services de prise en main afin qu’ils peuvent être redémarrés normalement en fonction des besoins.
+* **Service démarré** &ndash; A _service démarré_ est un service qui a été démarré par un autre composant Android (par exemple, une activité) et est exécuté en continu en arrière-plan jusqu'à ce que quelque chose indique explicitement la arrêt du service. Contrairement à un service lié, un service démarré n’a pas de tous les clients directement liés à celui-ci. Pour cette raison, il est important de concevoir des services de prise en main afin qu’ils peuvent être redémarrés normalement en fonction des besoins.
 
 * **Service hybride** &ndash; A _service hybride_ est un service qui a les caractéristiques d’un _service démarré_ et un _lié service_. Un service hybride peut être démarré par lorsqu’un composant est lié à il ou elle peut être démarrée par un événement. Un composant client peut ou ne peut pas être lié à ce service hybride. Un service hybride continue de fonctionner jusqu'à ce qu’il est informé explicitement pour arrêter ou jusqu'à ce qu’aucun client plus lié à celui-ci.
 
@@ -59,7 +59,7 @@ Il est également possible d’exécuter un service dans son propre processus su
 
 ### <a name="background-execution-limits-in-android-80"></a>Limites de l’exécution en arrière-plan dans Android 8.0
 
-À compter de Android 8.0 (niveau d’API 26), une application Android n’est plus avoir la capacité d’exécuter librement en arrière-plan. En cas de premier plan, une application peut démarrer et exécuter les services sans aucune restriction. Quand une application passe en arrière-plan, Android accorder à l’application un certain laps de temps pour démarrer et utiliser des services. Une fois ce délai passé, l’application ne peut plus démarrer tous les services et tous les services qui ont été démarrées va être interrompues. À ce point est n’est pas possible de l’application effectuer des tâches. Android considère qu’une application soit au premier plan si une des conditions suivantes est remplie :
+À compter de Android 8.0 (niveau d’API 26), une application Android n’est plus avoir la capacité d’exécuter librement en arrière-plan. En cas de premier plan, une application peut démarrer et exécuter les services sans aucune restriction. Quand une application passe en arrière-plan, Android accorder à l’application un certain laps de temps pour démarrer et utiliser des services. Une fois ce délai passé, l’application ne peut plus démarrer tous les services et tous les services qui ont été démarrées va être interrompues. À ce stade, il n’est pas possible de l’application effectuer des tâches. Android considère qu’une application soit au premier plan si une des conditions suivantes est remplie :
 
 * Il existe une activité visible (démarré ou suspendu).
 * L’application a démarré un service de premier plan.
@@ -70,7 +70,7 @@ Il existe certaines situations où, même si une application est en arrière-pla
 * L’application reçoit une diffusion. 
 * L’application reçoit un exécute un `PendingIntent` en réponse à une Notification.
 
-Les applications Xamarin.Android existantes peut-être modifier la façon dont ils effectuent le travail en arrière-plan pour éviter les problèmes qui peuvent se produire sur Android 8.0. Voici certaines pratiques alterantives à un service Android :
+Les applications Xamarin.Android existantes peut-être modifier la façon dont ils effectuent le travail en arrière-plan pour éviter les problèmes qui peuvent se produire sur Android 8.0. Voici certaines des méthodes pratiques pour un service Android :
 
 * **Planification du travail à exécuter en arrière-plan à l’aide du Planificateur de travaux Android ou [répartiteur de travail Firebase](~/android/platform/firebase-job-dispatcher.md)**  &ndash; ces deux bibliothèques fournissent une infrastructure pour les applications permet de répartir le travail en arrière-plan dans à _travaux_, une petite unité de travail. Applications peuvent ensuite planifier le travail avec le système d’exploitation, ainsi que certains critères sur lorsque le travail peut s’exécuter.
 * **Démarrer le service au premier plan** &ndash; un service de premier plan est utile pour lorsque l’application doit effectuer certaines tâches en arrière-plan et l’utilisateur peut être amené à interagir périodiquement avec cette tâche. Le service de premier plan affiche une notification persistante afin que l’utilisateur est conscient que l’application s’exécute une tâche en arrière-plan et qu’il offre également un moyen pour surveiller ou interagir avec la tâche. Un exemple serait une application podcasting lire un podcast à l’utilisateur ou peut-être téléchargé un épisode du podcast afin qu’il peut être apprécié plus tard. 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: 420fabf7b1f4c5bf4cacdeaf10823ae3233f5bd0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113233"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528557"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Services limités dans Xamarin.Android
 
@@ -234,7 +234,7 @@ Pour utiliser un service lié, un client (par exemple, une activité) doit insta
 
 * **Un `Intent`**  &ndash; l’intention doit identifier de manière explicite quel service pour se connecter à.
 * **Un `IServiceConnection` objet** &ndash; cet objet est un intermédiaire qui fournit des méthodes de rappel pour avertir le client du service lié est démarré et arrêté.
-* **[`Android.Content.Bind`](https://developer.xamarin.com/api/type/Android.Content.Bind/) enum** &ndash; ce paramètre est un jeu d’indicateurs sont sont utilisés par le système pour lier lorsque l’objet. La valeur la plus couramment utilisée est [ `Bind.AutoCreate` ](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), qui démarre automatiquement le service si elle n’est pas déjà en cours d’exécution.
+* **[`Android.Content.Bind`](https://developer.xamarin.com/api/type/Android.Content.Bind/) enum** &ndash; ce paramètre est un jeu d’indicateurs utilisées par le système pour la liaison lorsque l’objet. La valeur la plus couramment utilisée est [ `Bind.AutoCreate` ](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), qui démarre automatiquement le service si elle n’est pas déjà en cours d’exécution.
 
 L’extrait de Code suivant est un exemple montrant comment démarrer un service lié dans une activité à l’aide d’une intention explicite :
 
