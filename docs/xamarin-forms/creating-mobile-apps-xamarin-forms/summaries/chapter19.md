@@ -4,15 +4,15 @@ description: 'Création d’applications mobiles avec Xamarin.Forms : résumé 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 84d21738298360eb8829a569b152a131e6543709
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: HT
+ms.openlocfilehash: 30fa9e86a82441052641c44a6c2ff8a682792267
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526778"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563613"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Résumé du chapitre 19. Vues de collection
 
