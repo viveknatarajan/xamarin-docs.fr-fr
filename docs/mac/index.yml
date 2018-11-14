@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: cd5071d4f1970acd9a34b53ec631b25f15c71fcc
-ms.sourcegitcommit: 7e4070bc104d612b6754ea35dd5a49c5c3d45f4a
+ms.openlocfilehash: 7e6831a78d13cf3ae46a3a921c4b4420c430e28a
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39350678"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617421"
 documentType: LandingData
 title: Xamarin.Mac
 metadata:
@@ -51,7 +51,7 @@ sections:
     - href: ~/mac/get-started/index.md
       html: Didacticiels pour vous aider à bien démarrer avec Xamarin.Mac. Vérifiez que tout est installé correctement et créez vos premières applications Mac.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/mac/get-started/index.md
       title: Prise en main
     - href: ~/mac/app-fundamentals/
@@ -81,7 +81,7 @@ sections:
     - href: ~/mac/internals/
       html: Informations supplémentaires sur les éléments internes de Xamarin.Mac et l’assistance à l’aide de fonctionnalités telles que l’accessibilité.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+        src: https://docs.microsoft.com/media/common/i_config-tools.svg
         href: ~/mac/internals/
       title: Concepts avancés et éléments internes
 - title: Référence
@@ -91,6 +91,6 @@ sections:
     className: cardsD
     items:
     - title: API
-      html: <p><a href="https://developer.xamarin.com/api/root/monomac-lib/">Documentation sur les API Mac</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinmac-3.0">Bibliothèque de classes de base</a></p>
+      html: <p><a href="https://developer.xamarin.com/api/root/monomac-lib/">Documentation sur les API Mac</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0">Bibliothèque de classes de base</a></p>
     - title: Exemples
       html: <p><a href="https://developer.xamarin.com/samples/mac/all/">Exemples Mac</a></p>

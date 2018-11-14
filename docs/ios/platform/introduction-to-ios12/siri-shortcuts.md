@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: f9034799355d01a3ade20a78540d6ecac43d9cc8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526895"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617759"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Raccourcis de Siri dans Xamarin.iOS
 
@@ -695,7 +695,7 @@ Avec ces modifications en place, l’application s’exécutera sur un appareil 
 
 ### <a name="automatic-provisioning"></a>Provisionnement automatique
 
-Notez que vous pouvez utiliser [l’approvisionnement automatique](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) pour exécuter la plupart de ces tâches directement dans l’IDE de configuration.
+Notez que vous pouvez utiliser [l’approvisionnement automatique](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) pour exécuter la plupart de ces tâches directement dans l’IDE de configuration.
 Toutefois, l’approvisionnement automatique ne configure pas les groupes d’applications. Vous devez configurer manuellement le **Entitlements.plist** fichiers portant le nom du groupe d’application que vous souhaitez utiliser, visitez le portail des développeurs Apple pour créer le groupe de l’application, affectez ce groupe de l’application à chaque ID d’application créé par automatique approvisionnement, régénérez les profils de provisionnement (application, extension Intents, extension d’IU Intents) à inclure le groupe de l’application nouvellement créée, puis télécharger et les installer.
 
 ## <a name="related-links"></a>Liens connexes

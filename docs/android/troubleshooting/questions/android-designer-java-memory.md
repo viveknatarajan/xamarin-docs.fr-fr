@@ -1,5 +1,5 @@
 ---
-title: Réglage des paramètres de mémoire Java pour Android designer
+title: Réglage des paramètres de mémoire Java pour le concepteur Android
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: cf0df42ba398944a99cc4179b94f0d3cb8ba503e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118056"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617239"
 ---
-# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Réglage des paramètres de mémoire Java pour Android designer
+# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Réglage des paramètres de mémoire Java pour le concepteur Android
 
 Les paramètres de mémoire par défaut qui sont utilisés lors du démarrage de la `java` traiter d’Android designer peut être incompatible avec certaines configurations système.
 
@@ -35,7 +35,7 @@ Les noms de propriété suivantes correspondent aux java indiqué [option de lig
 
 1.  Ouvrez votre solution dans Visual Studio.
 
-2.  Sélectionnez chaque projet Android, un par un dans l’Explorateur de solutions, cliquez sur [afficher tous les fichiers](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx) deux fois sur chaque projet. Vous pouvez ignorer les projets qui ne contiennent aucun `.axml` fichiers de disposition. Cette étape garantit que chaque répertoire du projet contient un `.csproj.user` fichier.
+2.  Sélectionnez chaque projet Android, un par un dans l’Explorateur de solutions, cliquez sur [afficher tous les fichiers](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) deux fois sur chaque projet. Vous pouvez ignorer les projets qui ne contiennent aucun `.axml` fichiers de disposition. Cette étape garantit que chaque répertoire du projet contient un `.csproj.user` fichier.
 
 3.  Quittez Visual Studio.
 

@@ -1,4 +1,10 @@
 ### YamlMime:YamlDocument
+ms.openlocfilehash: 091f94f66e07309ca5c6cc6ba69e0631e17eb0c0
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617278"
 documentType: LandingData
 title: Conseils multiplateforme
 metadata:
@@ -7,12 +13,6 @@ metadata:
   ms.author: crdun
   ms.date: 04/25/2018
   ms.topic: landing-page
-  ms.openlocfilehash: 9a08ccb3b00990a8b8425a2eb95d1f2390dda30e
-  ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
-  ms.translationtype: HT
-  ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/03/2018
-  ms.locfileid: "32436383"
 abstract:
   description: Xamarin fournit une solution de développement multiplateforme pour applications mobiles, de tablette et de bureau. Cette section fournit des détails qui s’appliquent quelles que soient les plates-formes ciblées.
   menu:
@@ -60,7 +60,7 @@ sections:
     - href: ~/cross-platform/get-started/index.md
       html: Didacticiels pour vous aider à bien démarrer avec Xamarin. Vérifiez que tout est installé correctement et générez vos premières applications.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/cross-platform/get-started/index.md
       title: Prise en main
     - href: ~/cross-platform/platform
@@ -78,7 +78,7 @@ sections:
     - href: ~/cross-platform/deploy-test/performance.md
       html: Lignes directrices pour la performance et la sécurité des applications.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_code-performance.svg
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
         href: ~/cross-platform/deploy-test/performance.md
       title: Niveau de performance et sécurité
     - href: ~/cross-platform/deploy-test/
@@ -90,7 +90,7 @@ sections:
     - href: ~/cross-platform/desktop/
       html: Conseils pour les développeurs de bureau .NET intéressés par le développement d’applications mobiles.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_xplat-code.svg
+        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
         href: ~/cross-platform/desktop/
       title: Développeurs de bureau
 - title: Plateformes

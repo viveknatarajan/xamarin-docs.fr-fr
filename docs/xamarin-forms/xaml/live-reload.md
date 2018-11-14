@@ -8,17 +8,17 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
-ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
+ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50142334"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617655"
 ---
 # <a name="xamarin-live-reload-preview"></a>Rechargement en direct de Xamarin (version préliminaire)
 
 > [!NOTE]
-> La version préliminaire de Xamarin Live recharger s’est terminée, et nous souhaitons remercier tout le monde de vos commentaires. Veuillez lire notre [feuille de route](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) pour Visual Studio 2019 pour en savoir plus sur les nouvelles fonctionnalités de productivité que nous travaillons pour Xamarin.Forms. Cette extension reste disponible pour Visual Studio 2017, mais vous ne recevrez pas les mises à jour futures.
+> La version préliminaire de Xamarin Live recharger s’est terminée, et nous souhaitons remercier tout le monde de vos commentaires. Veuillez lire notre [feuille de route](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) pour Visual Studio 2019 pour en savoir plus sur les nouvelles fonctionnalités de productivité que nous travaillons pour Xamarin.Forms. Cette extension reste disponible pour Visual Studio 2017, mais vous ne recevrez pas les mises à jour futures.
 
 Vous permet de Xamarin Live recharger **apporter des modifications à votre XAML et mis à jour en temps réel, sans nécessiter une autre compilation et déployer**. Toute modification apportée à votre XAML sera redéployée sur Enregistrer et répercutées sur votre cible de déploiement.
 
@@ -46,9 +46,9 @@ Ajout de rechargement en direct pour les applications mobiles existantes est pos
 
 2. Ajouter le **Xamarin.LiveReload** package NuGet :
 
-    a. **.NET standard** : installer le **Xamarin.LiveReload** NuGet dans votre bibliothèque .NET Standard 2.0. Il ne doit pas être installé dans vos projets de plateforme. Vérifiez que le **source du Package** a la valeur **tous les**.
+    A. **.NET standard** : installer le **Xamarin.LiveReload** NuGet dans votre bibliothèque .NET Standard 2.0. Il ne doit pas être installé dans vos projets de plateforme. Vérifiez que le **source du Package** a la valeur **tous les**.
     
-    b. **Projets partagés** : installer le **Xamarin.LiveReload** NuGet dans tous les projets de plateforme (par exemple Android, iOS, UWP, etc.). Vérifiez que le **source du Package** a la valeur **tous les**.
+    B. **Projets partagés** : installer le **Xamarin.LiveReload** NuGet dans tous les projets de plateforme (par exemple Android, iOS, UWP, etc.). Vérifiez que le **source du Package** a la valeur **tous les**.
 
     [![Ajouter un NuGet de rechargement en direct de Xamarin avec le Gestionnaire de Package NuGet](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
@@ -121,7 +121,7 @@ Non. En fait, vous pouvez même démarrer toutes les cibles votre application pr
 * Les éléments contenant AutomationId peuvent provoquer un échec de rechargement.
 * La modification XAML pendant le débogage UWP peut entraîner un blocage de l’exécution. Solution de contournement : Utilisez **exécuter sans débogage (Ctrl + F5)** au lieu de **démarrer le débogage (F5)**.
 
-## <a name="troubleshooting"></a>Résolution des problèmes
+## <a name="troubleshooting"></a>Dépannage
 
 ### <a name="error-codes"></a>Codes d’erreur
 

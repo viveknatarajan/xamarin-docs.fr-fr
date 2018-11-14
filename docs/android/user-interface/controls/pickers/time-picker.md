@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 911101d44e3ae401910b35b93d85ba3f79ddd35a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08fa9000a1fd9c97f7881a4a13c15fabfa6dda47
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103983"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617668"
 ---
 # <a name="time-picker"></a>Sélecteur d’heure
 
@@ -279,7 +279,7 @@ Ce changement force l’indicateur passé à la `TimePickerDialog` constructeur 
 
 [![Boîte de dialogue TimePicker au format 24 heures](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png#lightbox)
 
-Étant donné que le gestionnaire appelle [DateTime.ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring%28v=vs.110%29.aspx) pour imprimer la durée de l’activité `TextView`, l’heure est toujours imprimé dans le format AM/PM de 12 heures par défaut.
+Étant donné que le gestionnaire appelle [DateTime.ToShortTimeString](xref:System.DateTime.ToShortDateString*) pour imprimer la durée de l’activité `TextView`, l’heure est toujours imprimé dans le format AM/PM de 12 heures par défaut.
 
 
 
@@ -291,7 +291,7 @@ Cet article a expliqué comment afficher un `TimePicker` widget comme une boîte
 ## <a name="related-links"></a>Liens associés
 
 - [DialogFragment](https://developer.xamarin.com/api/type/Android.App.DialogFragment/)
-- [TimePicker](https://developer.xamarin.com/api/type/Android.Widget.TimePicker/)
+- [Sélecteur d’heure](https://developer.xamarin.com/api/type/Android.Widget.TimePicker/)
 - [TimePickerDialog](https://developer.xamarin.com/api/type/Android.App.TimePickerDialog/)
 - [TimePickerDialog.IOnTimeSetListener](https://developer.xamarin.com/api/type/Android.App.TimePickerDialog+IOnTimeSetListener/)
 - [TimePickerDemo (exemple)](https://developer.xamarin.com/samples/monodroid/UserInterface/TimePickerDemo)

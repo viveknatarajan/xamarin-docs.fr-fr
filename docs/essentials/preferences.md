@@ -1,16 +1,16 @@
-﻿---
+---
 title: 'Xamarin.Essentials : préférences'
 description: Ce document décrit la classe Preferences de Xamarin.Essentials, qui enregistre les préférences de l’application dans un magasin de clés/valeurs. Il explique comment utiliser la classe et les types de données pouvant être stockés.
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3562ec840f824f6a8aeed1a61c7b27985a5ddf72
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: d50fe3853ab87d5bc14ac15a442140218a1b0fe0
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675469"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617551"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials : préférences
 
@@ -48,7 +48,7 @@ Pour supprimer la _clé_ des préférences :
 Preferences.Remove("my_key");
 ```
 
-Pour supprimer tous les ensembles clé-valeur des préférences :
+Pour supprimer toutes les préférences :
 
 ```csharp
 Preferences.Clear();
@@ -56,7 +56,7 @@ Preferences.Clear();
 
 En plus de ces méthodes, vous pouvez utiliser un `sharedName` facultatif qui permet de créer des conteneurs supplémentaires pour des préférences. Lisez les spécificités d’implémentation en fonction de la plateforme, ci-dessous.
 
-## <a name="supported-data-types"></a>Types de données prises en charge
+## <a name="supported-data-types"></a>Types de données pris en charge
 
 Les types de données suivants sont pris en charge dans **Preferences** :
 
@@ -80,11 +80,11 @@ Toutes les données sont stockées dans les [Préférences partagées](https://d
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[NSUserDefaults](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/user-defaults) permet de stocker des valeurs sur les appareils iOS. Si aucun `sharedName` n’est spécifié, `StandardUserDefaults` est utilisé. Sinon, le nom sert à créer un `NSUserDefaults` avec le nom spécifié utilisé pour `NSUserDefaultsType.SuiteName`.
+[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults) permet de stocker des valeurs sur les appareils iOS. Si aucun `sharedName` n’est spécifié, `StandardUserDefaults` est utilisé. Sinon, le nom sert à créer un `NSUserDefaults` avec le nom spécifié utilisé pour `NSUserDefaultsType.SuiteName`.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdatacontainer) permet de stocker les valeurs sur l’appareil. Si aucun `sharedName` n’est spécifié, `LocalSettings` est utilisé. Sinon, le nom sert à créer un conteneur dans `LocalSettings`.
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) permet de stocker les valeurs sur l’appareil. Si aucun `sharedName` n’est spécifié, `LocalSettings` est utilisé. Sinon, le nom sert à créer un conteneur dans `LocalSettings`.
 
 --------------
 

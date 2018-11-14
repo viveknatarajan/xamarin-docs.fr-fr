@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 008fc22d654478df3151706101ef07bc0a23acb8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4d5319005b28c5afa0906c44cfa59f0cad40de76
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111503"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617616"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 dans Xamarin.iOS
 
@@ -373,7 +373,7 @@ La fonctionnalité de titre final de ARKit 2 est l’adoption d’Apple de Pixar
 
 Dans ARKit, il est essentiel gérer les ressources manuellement. Non seulement cela autorise-t-elle fréquences d’images élevés, il s’agit en fait _nécessaire_ afin d’éviter une confusion entre « gel de l’écran. » Le framework ARKit est différé sur la définition d’un nouveau frame de l’appareil photo ([`ARSession.CurrentFrame`](https://developer.xamarin.com/api/property/ARKit.ARSession.CurrentFrame/)). Jusqu'à ce que l’actuel [ `ARFrame` ](https://developer.xamarin.com/api/type/ARKit.ARFrame/) a `Dispose()` appelé dessus, ARKit n’offre pas un nouveau frame ! Cela entraîne la vidéo « geler » même si le reste de l’application est réactif. La solution consiste à toujours accéder aux `ARSession.CurrentFrame` avec un `using` bloquer ou appeler manuellement `Dispose()` dessus.
 
-Tous les objets dérivés de `NSObject` sont `IDisposable` et `NSObject` implémente le [modèle Dispose](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/dispose-pattern), de sorte que vous devez généralement suivre [ce modèle d’implémentation `Dispose` sur une dérivée classe](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose).
+Tous les objets dérivés de `NSObject` sont `IDisposable` et `NSObject` implémente le [modèle Dispose](https://docs.microsoft.com/dotnet/standard/design-guidelines/dispose-pattern), de sorte que vous devez généralement suivre [ce modèle d’implémentation `Dispose` sur une dérivée classe](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).
 
 ### <a name="manipulating-transform-matrices"></a>Manipulation des matrices de transformation
 

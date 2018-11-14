@@ -5,12 +5,12 @@ description: Ce document compare et contraste WPF de Xamarin.Forms. Il aborde le
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 43eadacebf7ed877dfa28381ad77117d5988ca4b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d3e772c270f6003d01e3e7b487f69f682fec2d61
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119825"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617590"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>Visual Studio WPF. Xamarin.Forms : Similitudes et différences
 
@@ -60,7 +60,7 @@ Comme WPF, la seule méthode requise est un `ProvideValue` méthode pour retourn
 
 ## <a name="binding-infrastructure"></a>Infrastructure de liaison
 
-Un des principaux concepts reportés est une infrastructure de liaison de données pour se connecter de propriétés visuelles aux propriétés de données .NET. Ainsi, les modèles architecturaux tels que MVVM. La conception de base est identique : vous avez une classe de base peut être liée [BindableObject](xref:Xamarin.Forms.BindableObject), dans WPF, c’est le [DependencyObject](https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx) classe. Cette classe de base est utilisée comme l’ancêtre de racine pour tous les objets qui participeront en tant que cibles de liaison de données. Les classes dérivées exposent puis [BindableProperty](xref:Xamarin.Forms.BindableProperty) objets qui agissent en tant que le stockage de sauvegarde pour les valeurs de propriété (elles sont définies comme [DependencyProperty](https://msdn.microsoft.com/library/system.windows.dependencyproperty(v=vs.110).aspx) objets dans WPF).
+Un des principaux concepts reportés est une infrastructure de liaison de données pour se connecter de propriétés visuelles aux propriétés de données .NET. Ainsi, les modèles architecturaux tels que MVVM. La conception de base est identique : vous avez une classe de base peut être liée [BindableObject](xref:Xamarin.Forms.BindableObject), dans WPF, c’est le [DependencyObject](xref:System.Windows.DependencyObject) classe. Cette classe de base est utilisée comme l’ancêtre de racine pour tous les objets qui participeront en tant que cibles de liaison de données. Les classes dérivées exposent puis [BindableProperty](xref:Xamarin.Forms.BindableProperty) objets qui agissent en tant que le stockage de sauvegarde pour les valeurs de propriété (elles sont définies comme [DependencyProperty](xref:System.Windows.DependencyProperty) objets dans WPF).
 
 ### <a name="defining-bindable-properties"></a>Définition des propriétés pouvant être liées
 

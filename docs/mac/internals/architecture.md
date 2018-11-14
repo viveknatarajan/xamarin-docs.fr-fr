@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 04/12/2017
-ms.openlocfilehash: 7b9b3b648f6ac66859714052e916407026da10d4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: HT
+ms.openlocfilehash: 1ea38b527acaa89b9f25690de4e55664a7afd9e8
+ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526934"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51579828"
 ---
 # <a name="xamarinmac-architecture"></a>Architecture de Xamarin.Mac
 
@@ -145,7 +145,7 @@ Une fois que le Xamarin.Mac.dll a été créé, l’outil d’empaquetage, `mmp`
 - Créer une structure de bundle d’application.
 - Copiez vos assemblys managés.
 - Si la liaison est activée, exécutez l’éditeur de liens géré pour optimiser vos assemblys en supprimant les composants inutilisés.
-- Créer une application de lancement, la liaison dans le code de lanceur parlé, ainsi que le code registar en mode statique.
+- Créer une application de lancement, la liaison dans le code de lanceur parlé, ainsi que le code d’inscription en mode statique.
 
 Il s’agit, exécuter en tant que partie de l’utilisateur les processus qui compile le code utilisateur dans un assembly de génération de cette référence Xamarin.Mac.dll et exécutions `mmp` pour le rendre un package
 
