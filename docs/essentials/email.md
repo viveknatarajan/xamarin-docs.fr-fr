@@ -1,16 +1,16 @@
-﻿---
+---
 title: 'Xamarin.Essentials : e-mail'
 description: La classe Email de Xamarin.Essentials permet à une application d’ouvrir l’application de messagerie par défaut en utilisant des informations spécifiques, notamment l’objet, le corps et les destinataires (À, CC, CCI).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: c8d4a83caf6832f911193067324915fd6226b380
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 3c2958cc4572c2f87c46c9edc5fc194284658f24
+ms.sourcegitcommit: 704d4cfd418c17b0e85a20c33a16d2419db0be71
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674962"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51691748"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials : e-mail
 
@@ -60,6 +60,23 @@ public class EmailTest
     }
 }
 ```
+
+
+## <a name="platform-differences"></a>Différences entre les plateformes
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Aucune différence entre les plateformes.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+Aucune différence entre les plateformes.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Prend uniquement en charge `PlainText` comme `BodyFormat`, la tentative d’envoi de `Html` lèvera une `FeatureNotSupportedException`.
+
+-----
 
 ## <a name="api"></a>API
 

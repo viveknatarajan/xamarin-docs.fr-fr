@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 815e3ddf44ae94b6b26a325599de1f4c1f6714a8
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121124"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681538"
 ---
 # <a name="architecture"></a>Architecture
 
@@ -33,7 +33,8 @@ Pour plus d’informations sur la façon dont les classes Android communiquent a
 
 Packages d’applications Android sont des conteneurs ZIP avec une *.apk* extension de fichier. Packages d’applications Xamarin.Android ont la même structure et disposition sous forme de packages d’Android normales, avec les ajouts suivants :
 
--   Les assemblys d’application (qui contient le langage intermédiaire) sont *stockées* non compressé dans le *assemblys* dossier. Au cours du processus de démarrage dans la version génère la *.apk* est *mmap()* ed dans le processus et les assemblys sont chargés à partir de la mémoire. Cela permet un démarrage plus rapide d’application, comme assemblys n’êtes pas obligé d’être extrait avant l’exécution. - *Remarque :* les informations d’emplacement Assembly comme [Assembly.Location](xref:System.Reflection.Assembly.Location) et [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
+-   Les assemblys d’application (qui contient le langage intermédiaire) sont *stockées* non compressé dans le *assemblys* dossier. Au cours du processus de démarrage dans la version génère la *.apk* est *mmap()* ed dans le processus et les assemblys sont chargés à partir de la mémoire. Cela permet un démarrage plus rapide d’application, comme assemblys n’êtes pas obligé d’être extrait avant l’exécution.  
+-   *Remarque :* les informations d’emplacement Assembly comme [Assembly.Location](xref:System.Reflection.Assembly.Location) et [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
     *ne peut pas se reposer* dans la mise en production builds. Ils n’existent pas sous forme d’entrées de système de fichiers distinct, et ils n’ont à aucun emplacement utilisable.
 
 
@@ -44,7 +45,7 @@ Contiennent également des applications Xamarin.Android *Android Callable Wrappe
 
 
 
-## <a name="android-callable-wrappers"></a>Wrappers RCW Android
+## <a name="android-callable-wrappers"></a>Wrappers pouvant être appelés par Android
 
 - **Les wrappers RCW Android** sont un [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) pont qui servent à tout moment, le runtime Android a besoin pour appeler le code managé. Les wrappers RCW Android sont des méthodes virtuelles peut être substituée et d’interfaces Java peuvent être implémentées. Consultez le [présentation de l’intégration Java](~/android/platform/java-integration/index.md) doc pour plus d’informations.
 

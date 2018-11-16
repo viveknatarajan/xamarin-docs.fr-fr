@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: 63e86ef89c8d736640e7677fee6147feacc87bdc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b63efb3f9bfa432f15415e652cd5d59f929c4488
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108923"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617785"
 ---
 # <a name="build-process"></a>Processus de génération
 
@@ -195,7 +195,7 @@ Les [propriétés de signature](#Signing_Properties) sont également impliquées
 
 -   **AndroidTlsProvider** &ndash; valeur de chaîne qui spécifie le fournisseur TLS qui doit être utilisé dans une application. Les valeurs possibles sont :
 
-    - `btls` : utilise [BoringSSL](https://boringssl.googlesource.com/boringssl) pour la communication TLS avec [HttpWebRequest](https://msdn.microsoft.com/en-us/library/system.net.httpwebrequest.aspx).
+    - `btls` : utilise [BoringSSL](https://boringssl.googlesource.com/boringssl) pour la communication TLS avec [HttpWebRequest](xref:System.Net.HttpWebRequest).
       Cela permet d’utiliser TLS 1.2 sur toutes les versions d’Android.
 
     - `legacy` : utilise l’implémentation historique gérée de SSL pour l’interaction réseau. Ceci *ne prend pas* en charge TLS 1.2.

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527168"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681564"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Conseils de dépannage pour Xamarin.iOS 
 
@@ -46,9 +46,10 @@ Vous utilisez peut-être un encodage n’est pas ajouté par défaut. Vérifier 
 
 Le membre a été probablement supprimé par l’éditeur de liens et par conséquent n’existe pas dans l’assembly lors de l’exécution.  Il existe plusieurs solutions à cela :
 
--  Ajouter le [[conserver]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) au membre d’attribut.  Cela empêchera l’éditeur de liens de le supprimer.
--  Lors de l’appel [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , utilisez le **-nolink** ou **-linksdkonly** options.** -    -nolink**   désactive toutes les liaisons.
--    **-linksdkonly**   sera uniquement lier des assemblys Xamarin.iOS fourni, tel que *monotouch.dll* ou xamarin.ios.dll.
+- Ajouter le [ `[Preserve]` ](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) au membre d’attribut.  Cela empêchera l’éditeur de liens de le supprimer.
+- Lors de l’appel [ **mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), utilisez le **- nolink** ou **- linksdkonly** options :
+  - **-nolink** désactive toutes les liaisons.
+  - **-linksdkonly** sera uniquement lier des assemblys Xamarin.iOS fourni, tel que **xamarin.ios.dll**, tout en conservant tous les types dans les assemblys créés par l’utilisateur (ie. vos projets d’application).
 
 Notez que les assemblys sont liées afin que le fichier exécutable obtenu est plus petit ; Par conséquent, la désactivation de la liaison peut entraîner un fichier exécutable plus volumineux qu’est souhaitable.
 
