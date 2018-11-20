@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 10/19/2016
-ms.openlocfilehash: 6cf19efcd2fa0f9d74034214bfa6a4e60ce0f9e2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 777e8d2880313b5a793d6257cc0fd9d8299cb94d
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103879"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528479"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Débogage d’un plantage natif dans une application Xamarin.Mac
 
@@ -159,7 +159,7 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 
 ```
 
-Ce guide vous aide à détecter les bogues de cette nature s’ils se produisent, à les signaler correctement pour qu’ils puissent être corrigés et à les contourner dans votre code en attendant qu’ils soient corrigés.
+Ce guide vous aide à détecter les bogues de cette nature s’ils se produisent, à les signaler correctement pour qu’ils puissent être résolus et à les contourner dans votre code en attendant.
 
 ### <a name="locating"></a>Localisation
 

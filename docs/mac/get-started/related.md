@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: ae1ac9b40a0e6a62076a6143e64fa8beb82df6c5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 745328aeb884031863d8d85caca1e4a6563fc916
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107312"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526947"
 ---
 # <a name="xamarinmac-related-documentation"></a>Xamarin.Mac - Documentation connexe
 
@@ -26,7 +26,7 @@ En plus de la section Mac de [developer.xamarin.com](~/mac/get-started/index.md)
 
 ## <a name="user-interface"></a>Interface utilisateur
 
-Quand il utilise C# et .NET dans une application Xamarin.Mac, le développeur a accès aux mêmes contrôles d’interface utilisateur qu’un développeur travaillant dans *Objective-C* et *Xcode*. Comme Xamarin.Mac s’intègre directement à Xcode, le développeur peut utiliser _Interface Builder_ de Xcode pour créer et gérer les interfaces utilisateur d’une application (ou éventuellement pour les créer directement en code C#).
+Quand il utilise C# et .NET dans une application Xamarin.Mac, le développeur a accès aux mêmes contrôles d’interface utilisateur qu’un développeur qui utilise *Objective-C* et *Xcode*. Comme Xamarin.Mac s’intègre directement à Xcode, le développeur peut utiliser _Interface Builder_ de Xcode pour créer et gérer les interfaces utilisateur d’une application (ou éventuellement pour les créer directement en code C#).
 
 Les guides ci-dessous donnent des informations détaillées sur l’utilisation des éléments macOS dans une application Xamarin.Mac :
 

@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 092b67ba13a3c8e5405b894929f6e00fb8b21240
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0ec24e49e03237829474515a9abe9b014d10014f
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122658"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527116"
 ---
 # <a name="hello-ios--quickstart"></a>Hello.iOS - Démarrage rapide
 
@@ -257,7 +257,7 @@ Cette procédure pas à pas décrit comment créer une application nommée Phone
     ![](hello-ios-quickstart-images/image27.png "Sélectionnez un simulateur, puis appuyez sur Démarrer")
 
     > [!NOTE]
-    > Actuellement, en raison d’une exigence d’Apple, un certificat de développement ou une *identité de signature* sont éventuellement nécessaires pour générer votre code pour un appareil ou un simulateur. Suivez les étapes indiquées dans le [guide de provisionnement des appareils](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) pour les obtenir.
+    > En raison d’une exigence d’Apple, vous devez disposer d’un certificat de développement ou d’une *identité de signature* afin de générer du code pour un appareil ou un simulateur. Suivez les étapes indiquées dans le [guide de provisionnement des appareils](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) pour les obtenir.
 
 28. L’application est alors lancée dans le simulateur iOS :
 

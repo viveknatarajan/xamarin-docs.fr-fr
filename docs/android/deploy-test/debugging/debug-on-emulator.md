@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: e40178e43cfcfd261434fab9dd5ca0a9061d3f59
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d595a487d87c7e30c87a0347d25404d0b2f7dbc
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113779"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527311"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Débogage sur l’émulateur Android
 
@@ -87,7 +87,7 @@ Après le démarrage de l’émulateur, Xamarin.Android déploie l’application
 
 ![Émulateur exécutant une application vide](debug-on-emulator-images/emulator-running.png)
 
-Vous pouvez laisser l’émulateur s’exécuter ; il n’est pas nécessaire de le fermer et d’attendre qu’il redémarre chaque fois que l’application est lancée. Lors de la première exécution d’une application Xamarin.Android dans l’émulateur, le runtime partagé Xamarin.Android pour le niveau d’API ciblé est installé, suivi de l’application. L’installation du runtime peut prendre un certain temps, soyez donc patient. L’installation du runtime est réalisée uniquement lors du premier déploiement de l’application Xamarin.Android sur l’émulateur . Les déploiements suivants sont plus rapides, car seule l’application est copiée sur l’émulateur.
+Vous pouvez laisser l’émulateur s’exécuter ; il n’est pas nécessaire de le fermer et d’attendre qu’il redémarre chaque fois que l’application est lancée. La première fois qu’une application Xamarin.Android est exécutée dans l’émulateur, le runtime partagé Xamarin.Android pour le niveau d’API ciblé est installé, suivi de l’application. L’installation du runtime peut prendre un certain temps, soyez donc patient. L’installation du runtime est réalisée uniquement lors du premier déploiement de l’application Xamarin.Android sur l’émulateur . Les déploiements suivants sont plus rapides, car seule l’application est copiée sur l’émulateur.
 
 <a name="quick-boot" />
 
