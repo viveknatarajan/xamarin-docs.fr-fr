@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 84870de28ffd30b2d29fb5d8fbea815e1fd0d9c4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3397c931dcb23a29b0682699512a5b4c9018de38
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996436"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171064"
 ---
 # <a name="custom-video-transport-controls"></a>Contrôles de transport vidéo personnalisés
 
@@ -212,7 +212,7 @@ namespace FormsVideoLibrary.UWP
 
 Implémentation de la **lire**, **Pause**, et **arrêter** functions n’est pas suffisante pour prendre en charge les contrôles de transport. Fréquence à laquelle le **lire** et **Pause** commandes sont implémentées avec le même bouton qui change d’apparence pour indiquer si la vidéo est actuellement en cours de lecture ou en pause. En outre, le bouton même ne doit pas être activé que si la vidéo n’a pas encore chargé.
 
-Ces exigences impliquent que le lecteur vidéo doit proposer un état indiquant si elle est la lecture ou en pause, ou s’il n’est pas encore prêt à lire une vidéo. (Les trois plateformes prennent également en charge les propriétés qui indiquent si la vidéo peut être suspendue ou peut être déplacée vers une nouvelle position, mais ces propriétés sont applicables pour la diffusion en continu de vidéo plutôt que des fichiers vidéo, afin qu’ils ne sont pas pris en charge dans le `VideoPlayer` décrites ici.)
+Ces exigences impliquent que le lecteur vidéo doit proposer un état indiquant si elle est la lecture ou en pause, ou s’il n’est pas encore prêt à lire une vidéo. (Chaque plate-forme prend également en charge les propriétés qui indiquent si la vidéo peut être suspendue ou peut être déplacée vers une nouvelle position, mais ces propriétés sont applicables pour la diffusion en continu de vidéo plutôt que des fichiers vidéo, afin qu’ils ne sont pas pris en charge dans le `VideoPlayer` décrites ici.)
 
 Le **VideoPlayerDemos** projet inclut un `VideoStatus` énumération avec trois membres :
 
@@ -532,7 +532,7 @@ Pour cette raison, le point de code 0x23F5 ne peut pas être utilisé pour **lir
 
 - 0x25B6 (triangle noir pointant vers la droite) ou &#x25B6; pour **lire**
 
-Cela est pris en charge par les trois plateformes, à ceci près qu’il s’agit d’un triangle noir ordinaire qui ne ressemble pas à l’apparence 3D de **Pause** et **arrêter**. Une possibilité consiste à suivre le point de code 0x25B6 avec un code variante :
+Cela est pris en charge par chaque plateforme, à ceci près qu’il s’agit d’un triangle noir ordinaire qui ne ressemble pas à l’apparence 3D de **Pause** et **arrêter**. Une possibilité consiste à suivre le point de code 0x25B6 avec un code variante :
 
 - 0x25B6 suivie 0xFE0F (variant 16) ou &#x25B6; &#xFE0F; pour **lire**
 

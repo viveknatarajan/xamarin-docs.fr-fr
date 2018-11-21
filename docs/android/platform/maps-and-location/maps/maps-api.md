@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: fb7d18e6434e32941531d2c37cd8b938ec21ba90
-ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
+ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027325"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171038"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>À l’aide de l’API de cartes Google dans votre application
 
@@ -223,7 +223,7 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 
 Il existe cinq types de cartes disponibles à partir de l’API mappe de Google :
 
--  **Normal** -il s’agit du type de mappage par défaut. Il montre les routes et importantes fonctionnalités naturelles, ainsi que certains points artificielle d’intérêt (par exemple, des bâtiments et des ponts).
+-  **Normal** -il s’agit du type de mappage par défaut. Il montre les routes et importantes fonctionnalités naturelles, ainsi que des points artificiels qui vous intéresse (par exemple, des bâtiments et des ponts).
 
 -  **Satellite** -cette carte affiche des photographies satellite.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: f79ee7af9106eea8a4792c0e4bb10c5ad5a367a9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 53179170afa1381a562699a39baaa716ecc6a5a6
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111075"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171194"
 ---
 # <a name="images-in-xamarinforms"></a>Images dans Xamarin.Forms
 
@@ -40,7 +40,7 @@ Le [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) propriété détermine comment 
 
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill) -Étire l’image remplisse complètement et exactement la zone d’affichage. Cela peut entraîner l’image est déformée.
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Découpe l’image afin qu’il remplisse la zone d’affichage tout en conservant l’aspect (ie. sans distorsion).
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Partout l’image (si nécessaire) afin que l’image entière s’adapte à la zone d’affichage, avec espace ajouté pour le haut/bas ou les côtés selon si l’image est largeur ou hauteur.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Partout l’image (si nécessaire) afin que l’image entière s’adapte à la zone d’affichage, avec espace ajouté pour le haut/bas ou les côtés selon que l’image est largeur ou hauteur.
 
 Les images peuvent être chargées à partir d’un [fichier local](#Local_Images), un [ressource incorporée](#embedded-images), ou [téléchargé](#Downloading_Images).
 

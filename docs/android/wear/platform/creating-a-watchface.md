@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: f46e0d27a39c7734e63bf5603ef2e47cd5fa7aa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 067a39838fbfe3f1b33ac0d30b5069366b11e407
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105530"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172000"
 ---
 # <a name="creating-a-watch-face"></a>Création d’un cadran de montre
 
@@ -302,7 +302,7 @@ Ce code XML effectue les opérations suivantes :
 
 3.  Déclare une image drawable appelée `preview` qui sera affiché à l’écran de sélection de sélecteur espion.
 
-4.  Inclut un `intent-filter` pour informer Android qui `MyWatchFaceSevice` affichent un cadran de montre.
+4.  Inclut un `intent-filter` pour informer Android qui `MyWatchFaceService` affichent un cadran de montre.
 
 Qui termine le code de base `WatchFace` exemple. L’étape suivante consiste à ajouter les ressources nécessaires.
 

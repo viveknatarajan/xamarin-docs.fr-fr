@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: 8952f98045d9830e9b8f25a7d4b93a5e4310cb32
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 9226e1d26dcc49b6ec82b71f7757eb0e22cd66ec
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351578"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171974"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Résolution des dépendances dans Xamarin.Forms
 
@@ -149,7 +149,7 @@ public VideoPlayerRenderer(ILogger logger)
 }
 ```
 
-Sur les trois plateformes, l’inscription de type avec le conteneur d’injection de dépendance est réalisée par le `RegisterTypes` (méthode), qui est appelé avant la plateforme de chargement de l’application avec le `LoadApplication(new App())` (méthode). L’exemple suivant montre le `RegisterTypes` méthode sur la plateforme iOS :
+Sur toutes les plateformes, l’inscription de type avec le conteneur d’injection de dépendance est réalisée par le `RegisterTypes` (méthode), qui est appelé avant la plateforme de chargement de l’application avec le `LoadApplication(new App())` (méthode). L’exemple suivant montre le `RegisterTypes` méthode sur la plateforme iOS :
 
 ```csharp
 void RegisterTypes()
@@ -196,7 +196,7 @@ boxView.Effects.Add(touchEffect);
 
 Le `TouchEffect` classe est un [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) qui est implémentée sur chaque plateforme par un `TouchEffect` classe qui a un `PlatformEffect`. La plateforme `TouchEffect` classe fournit les fonctionnalités permettant de faire glisser le `BoxView` autour de la page. Pour plus d’informations sur ces classes d’effet, consultez [appel d’événements à partir des effets](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
-Sur les trois plateformes, les `TouchEffect` classe possède le constructeur suivant, ce qui nécessite un `ILogger` argument :
+Sur toutes les plateformes, les `TouchEffect` classe possède le constructeur suivant, ce qui nécessite un `ILogger` argument :
 
 ```csharp
 public TouchEffect(ILogger logger)
@@ -205,7 +205,7 @@ public TouchEffect(ILogger logger)
 }
 ```
 
-Sur les trois plateformes, l’inscription de type avec le conteneur d’injection de dépendance est réalisée par le `RegisterTypes` (méthode), qui est appelé avant la plateforme de chargement de l’application avec le `LoadApplication(new App())` (méthode). L’exemple suivant montre le `RegisterTypes` méthode sur la plateforme Android :
+Sur toutes les plateformes, l’inscription de type avec le conteneur d’injection de dépendance est réalisée par le `RegisterTypes` (méthode), qui est appelé avant la plateforme de chargement de l’application avec le `LoadApplication(new App())` (méthode). L’exemple suivant montre le `RegisterTypes` méthode sur la plateforme Android :
 
 ```csharp
 void RegisterTypes()
@@ -240,7 +240,7 @@ public PhotoPicker(ILogger logger)
 }
 ```
 
-Sur les trois plateformes, l’inscription de type avec le conteneur d’injection de dépendance est réalisée par le `RegisterTypes` (méthode), qui est appelé avant la plateforme de chargement de l’application avec le `LoadApplication(new App())` (méthode). L’exemple suivant montre le `RegisterTypes` méthode sur UWP :
+Sur toutes les plateformes, l’inscription de type avec le conteneur d’injection de dépendance est réalisée par le `RegisterTypes` (méthode), qui est appelé avant la plateforme de chargement de l’application avec le `LoadApplication(new App())` (méthode). L’exemple suivant montre le `RegisterTypes` méthode sur UWP :
 
 ```csharp
 void RegisterTypes()

@@ -7,12 +7,12 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 6d223dd051dccf7af84e4e6c35238f4ad026b00a
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: eebfe40bca6db92bae1f2fdcc9cbff3173dc4e51
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615624"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172013"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>L’accès aux bits de pixel de bitmap SkiaSharp
 
@@ -35,7 +35,7 @@ SkiaSharp fournit plusieurs techniques permettant d’accéder aux bits de pixel
 
 Vous pouvez considérer les deux premières techniques comme « niveau élevé » et les deux en tant que « niveau faible ». Il existe d’autres méthodes et propriétés que vous pouvez utiliser, mais ce sont les plus précieuses.
 
-Pour vous permettre de voir les différences de performances entre ces techniques, le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) application contient une page nommée **Bitmap dégradé** qui Crée une image bitmap avec les pixels qui combinent des nuances de rouges et bleus pour créer un dégradé. Le programme crée huit copies différentes de cette image bitmap, tout à l’aide de différentes techniques permettant de définir les pixels du bitmap. Chacun de ces huit bitmaps est créé dans une méthode distincte qui également définit une brève description de la technique et calcule le temps nécessaire pour définir tous les pixels. Chaque méthode effectue une itération sur la logique de la valeur de pixel 100 fois pour obtenir une meilleure estimation des performances. 
+Pour vous permettre de voir les différences de performances entre ces techniques, le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) application contient une page nommée **Bitmap dégradé** qui Crée une image bitmap avec les pixels qui combinent des nuances de rouges et bleus pour créer un dégradé. Le programme crée huit copies différentes de cette image bitmap, tout à l’aide de différentes techniques permettant de définir les pixels du bitmap. Chacun de ces huit bitmaps est créé dans une méthode distincte qui également définit une brève description de la technique et calcule le temps nécessaire pour définir tous les pixels. Chaque méthode effectue une itération sur la logique de la valeur de pixel 100 fois pour obtenir une meilleure estimation des performances.
 
 ### <a name="the-setpixel-method"></a>La méthode SetPixel
 
@@ -55,7 +55,7 @@ Voici la méthode **Bitmap dégradé** qui définit le contenu d’un bitmap en 
 public class GradientBitmapPage : ContentPage
 {
     const int REPS = 100;
-        
+
     Stopwatch stopwatch = new Stopwatch();
     ···
     SKBitmap FillBitmapSetPixel(out string description, out int milliseconds)
@@ -107,7 +107,7 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 
     stopwatch.Restart();
 
-    SKColor[] pixels = new SKColor[256 * 256]; 
+    SKColor[] pixels = new SKColor[256 * 256];
 
     for (int rep = 0; rep < REPS; rep++)
         for (int row = 0; row < 256; row++)
@@ -135,7 +135,7 @@ Potentiellement la technique la plus efficace pour accéder aux pixels du bitmap
 IntPtr pixelsAddr = bitmap.GetPixels();
 ```
 
-.NET [ `IntPtr` ](xref:System.IntPtr) type représente un pointeur. Elle est appelée `IntPtr` car il s’agit de la longueur d’un entier sur le processeur natif de l’ordinateur sur lequel le programme est exécuté, généralement 32 bits ou 64 bits de longueur. Le `IntPtr` qui `GetPixels` retourne est l’adresse du bloc de mémoire à l’aide de l’objet bitmap pour stocker ses pixels réel. 
+.NET [ `IntPtr` ](xref:System.IntPtr) type représente un pointeur. Elle est appelée `IntPtr` car il s’agit de la longueur d’un entier sur le processeur natif de l’ordinateur sur lequel le programme est exécuté, généralement 32 bits ou 64 bits de longueur. Le `IntPtr` qui `GetPixels` retourne est l’adresse du bloc de mémoire à l’aide de l’objet bitmap pour stocker ses pixels réel.
 
 Vous pouvez convertir le `IntPtr` dans un langage c# pointeur type en utilisant la [ `ToPointer` ](xref:System.IntPtr.ToPointer) (méthode). La syntaxe de pointeur c# est identique à C et C++ :
 
@@ -313,7 +313,7 @@ SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
                 buffer[row, col, 2] = (byte)row;   // blue
                 buffer[row, col, 3] = 0xFF;        // alpha
             }
-    
+
     unsafe
     {
         fixed (byte* ptr = buffer)
@@ -459,7 +459,7 @@ public class GradientBitmapPage : ContentPage
 
     void Display(SKCanvas canvas, int index, SKRect rect)
     {
-        string text = String.Format("{0}: {1:F1} msec", descriptions[index], 
+        string text = String.Format("{0}: {1:F1} msec", descriptions[index],
                                     (double)elapsedTimes[index] / REPS);
 
         SKRect bounds = new SKRect();
@@ -497,7 +497,7 @@ Voici un tableau qui consolide les temps d’exécution en millisecondes :
 
 Comme prévu, l’appel `SetPixel` fois 65 536 est la moins effeicient permet de définir les pixels d’une image bitmap. Remplissage d’un `SKColor` tableau et en définissant le `Pixels` propriété sont bien meilleure et même les comparaisons avec de la `GetPixels` et `SetPixels` techniques. Utilisation de `uint` les valeurs de pixel est généralement plus rapide que paramètre distinct `byte` composants et la conversion le `SKColor` valeur en entier non signé ajoute une certaine surcharge pour le processus.
 
-Il est également intéressant de comparer les dégradés différents : les premières lignes de toutes les trois plateformes sont identiques et afficher le dégradé comme il était prévu. Cela signifie que le `SetPixel` (méthode) et le `Pixels` propriété créer correctement des pixels à partir de couleurs, quel que soit le format de pixel sous-jacent.
+Il est également intéressant de comparer les dégradés différents : les premières lignes de chaque plateforme sont les mêmes et afficher le dégradé comme il était prévu. Cela signifie que le `SetPixel` (méthode) et le `Pixels` propriété créer correctement des pixels à partir de couleurs, quel que soit le format de pixel sous-jacent.
 
 Les deux lignes suivantes du iOS et Android captures d’écran sont également les mêmes, ce qui permet de confirmer que les petits `MakePixel` méthode est correctement définie pour la valeur par défaut `Rgba8888` format de pixel pour ces plateformes.
 
@@ -511,13 +511,13 @@ BB GG RR AA
 
 Il s’agit du `Bgra8888` classement plutôt que `Rgba8888` classement. Le `Brga8888` format est la valeur par défaut pour la plateforme Windows universelle, c’est pourquoi les dégradés sur la dernière ligne de cette capture d’écran sont les mêmes que la première ligne. Mais les deux lignes intermédiaires sont incorrectes, car le code de création de ces bitmaps supposées un `Rgba8888` classement.
 
-Si vous souhaitez utiliser le même code pour accéder aux bits de pixel sur les trois plateformes, vous pouvez créer explicitement un `SKBitmap` à l’aide du `Rgba8888` ou `Bgra8888` format. Si vous souhaitez effectuer un cast `SKColor` valeurs pixels du bitmap, utilisez `Bgra8888`.
+Si vous souhaitez utiliser le même code pour accéder aux bits de pixel sur chaque plateforme, vous pouvez créer explicitement un `SKBitmap` à l’aide du `Rgba8888` ou `Bgra8888` format. Si vous souhaitez effectuer un cast `SKColor` valeurs pixels du bitmap, utilisez `Bgra8888`.
 
 ## <a name="random-access-of-pixels"></a>Accès aléatoire de pixels
 
-Le `FillBitmapBytePtr` et `FillBitmapUintPtr` méthodes dans le **Bitmap dégradé** page tiré parti de `for` boucles conçus pour remplir l’image bitmap de manière séquentielle, à partir de la ligne supérieure à la ligne du bas et dans chaque ligne de gauche à droite. Le pixel puisse être défini avec la même instruction qui incrémenté le pointeur. 
+Le `FillBitmapBytePtr` et `FillBitmapUintPtr` méthodes dans le **Bitmap dégradé** page tiré parti de `for` boucles conçus pour remplir l’image bitmap de manière séquentielle, à partir de la ligne supérieure à la ligne du bas et dans chaque ligne de gauche à droite. Le pixel puisse être défini avec la même instruction qui incrémenté le pointeur.
 
-Il est parfois nécessaire accéder aux pixels au hasard, plutôt que séquentielle. Si vous utilisez le `GetPixels` approche, vous devez calculer les pointeurs basés sur la ligne et colonne. Cela est illustré dans le **arc-en-ciel sinus** page, qui crée une image bitmap montrant un arc-en-ciel sous la forme d’un cycle d’une courbe de sinus. 
+Il est parfois nécessaire accéder aux pixels au hasard, plutôt que séquentielle. Si vous utilisez le `GetPixels` approche, vous devez calculer les pointeurs basés sur la ligne et colonne. Cela est illustré dans le **arc-en-ciel sinus** page, qui crée une image bitmap montrant un arc-en-ciel sous la forme d’un cycle d’une courbe de sinus.
 
 Les couleurs de l’arc-en-ciel sont plus faciles à créer à l’aide de la palette de couleurs TSL (teinte, saturation, luminosité). Le `SKColor.FromHsl` méthode crée un `SKColor` valeur à l’aide de valeurs de teinte comprises entre 0 et 360 (comme les angles d’un cercle mais allant de rouge, vert et bleu et revenir à rouge) et les valeurs de saturation et de luminosité comprises entre 0 et 100. Pour les couleurs de l’arc-en-ciel, la saturation doit être définie sur un maximum de 100 et la luminosité à un point milieu de 50.
 
@@ -617,7 +617,7 @@ Très nombreuses tâches de traitement d’image impliquent la modification des 
 
 Pour chaque couleur du pixel, le premier `Slider` ajoute une valeur comprise entre 0 et 360 la teinte, mais utilise ensuite l’opérateur modulo pour conserver le résultat comprise entre 0 et 360, efficacement un décalage dans le spectre des couleurs (comme la capture d’écran UWP montre). La seconde `Slider` vous permet de sélectionner un facteur multiplicateur entre 0,5 et 2 à appliquer à la saturation et la troisième `Slider` fait de même pour la luminosité, comme illustré dans la capture d’écran Android.
 
-Le programme maintient deux images bitmaps, la bitmap source d’origine nommée `srcBitmap` et le bitmap de destination ajustée nommé `dstBitmap`. Chaque fois qu’un `Slider` est déplacé, le programme calcule tous les pixels de nouveau dans `dstBitmap`. Bien sûr, les utilisateurs seront faire des essais en déplaçant le `Slider` vues très rapidement, donc les meilleures performances que vous pouvez gérer. Cela implique la `GetPixels` méthode pour les bitmaps de la source et la destination. 
+Le programme maintient deux images bitmaps, la bitmap source d’origine nommée `srcBitmap` et le bitmap de destination ajustée nommé `dstBitmap`. Chaque fois qu’un `Slider` est déplacé, le programme calcule tous les pixels de nouveau dans `dstBitmap`. Bien sûr, les utilisateurs seront faire des essais en déplaçant le `Slider` vues très rapidement, donc les meilleures performances que vous pouvez gérer. Cela implique la `GetPixels` méthode pour les bitmaps de la source et la destination.
 
 Le **réglage des couleurs** page ne contrôle pas le format de couleur des images bitmap source et de destination. Au lieu de cela, elle contient une logique légèrement différente pour `SKColorType.Rgba8888` et `SKColorType.Bgra8888` formats. La source et la destination peuvent être de différents formats, et le programme continue de fonctionner.
 
@@ -764,7 +764,7 @@ public class PosterizePage : ContentPage
 
             for (int i = 0; i < pixelCount; i++)
             {
-                *ptr++ &= 0xE0E0E0FF; 
+                *ptr++ &= 0xE0E0E0FF;
             }
         }
 

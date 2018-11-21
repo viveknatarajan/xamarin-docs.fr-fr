@@ -1,5 +1,5 @@
 ---
-title: Lignes et embouts de trait
+title: Lignes et extrémités de trait
 description: Cet article explique comment utiliser SkiaSharp pour dessiner des lignes avec des embouts de trait différents dans les applications Xamarin.Forms et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
@@ -7,14 +7,14 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 6dc7737290bf7eacb3ba0e0bca0ddcfcd4aacba3
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 6e0377b71badfae0d0e6a1a6ffdaf1d67a7f3ad9
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615260"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171415"
 ---
-# <a name="lines-and-stroke-caps"></a>Lignes et embouts de trait
+# <a name="lines-and-stroke-caps"></a>Lignes et extrémités de trait
 
 _Découvrez comment utiliser SkiaSharp pour dessiner des lignes avec des embouts de trait différents_
 
@@ -224,7 +224,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-La capture d’écran présente divers `Picker` sélections sur les trois plateformes :
+Les captures d’écran d’afficher diverses `Picker` sélections :
 
 [![](lines-images/multiplelines-small.png "Capture d’écran triple de la page de plusieurs lignes")](lines-images/multiplelines-large.png#lightbox "Triple capture d’écran de la page de plusieurs lignes")
 

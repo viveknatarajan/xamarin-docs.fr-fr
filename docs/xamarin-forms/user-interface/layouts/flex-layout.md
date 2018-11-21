@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 44d75322f151850b11e4da90486168c04496eca7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 731eb8cbcf062556e4c37b444376825527f662df
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51564016"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171558"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Le Xamarin.Forms FlexLayout
 
@@ -31,7 +31,7 @@ Xamarin.Forms [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) est une nouveauté
 
 ## <a name="common-usage-scenarios"></a>Scénarios d’utilisation courants
 
-Le **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** exemple de programme contienne plusieurs pages de ce illustrer utilisations courantes de `FlexLayout` et vous permet de faire des essais avec ses propriétés.
+Le **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** exemple de programme contienne plusieurs pages qui illustrent certaines utilisations courantes de `FlexLayout` et vous permet de faire des essais avec ses propriétés.
 
 ### <a name="using-flexlayout-for-a-simple-stack"></a>À l’aide de FlexLayout pour une pile simple
 
@@ -187,7 +187,7 @@ public partial class PhotoWrappingPage : ContentPage
 }
 ```
 
-Voici le programme en cours d’exécution sur les trois plateformes, progressivement défilés de haut en bas :
+Voici le programme en cours d’exécution, progressivement défilé de haut en bas :
 
 [![La Page d’habillage de Photo](flex-layout-images/PhotoWrapping.png "la Page d’habillage de Photo")](flex-layout-images/PhotoWrapping-Large.png#lightbox)
 
@@ -242,7 +242,7 @@ Le **Salut disposition** page de la **[FlexLayoutDemos](https://developer.xamari
 </ContentPage>
 ```
 
-Ici, il s’exécute sur les trois plateformes :
+Ici, il s’exécute :
 
 [![La Page de disposition Salut](flex-layout-images/HolyGrailLayout.png "la Page de disposition Salut")](flex-layout-images/HolyGrailLayout-Large.png#lightbox)
 
@@ -384,7 +384,7 @@ Dans chacun des trois `FlexLayout` consulte, une valeur vide `Label` précède l
 
 ## <a name="the-bindable-properties-in-detail"></a>Les propriétés pouvant être liées en détail
 
-Maintenant que vous avez vu certaines applications courantes de `FlexLayout`, les propriétés de `FlexLayout` peuvent être examinés plus en détail. 
+Maintenant que vous avez vu certaines applications courantes de `FlexLayout`, les propriétés de `FlexLayout` peuvent être examinés plus en détail.
 `FlexLayout` définit six propriétés pouvant être liées que vous définissez sur le `FlexLayout` lui-même, soit dans le code ou XAML, l’alignement et l’orientation du contrôle. (Une de ces propriétés, [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position), n’est pas couverte dans cet article.)
 
 Vous pouvez expérimenter avec cinq restant des propriétés pouvant être liées à l’aide de la **faire des essais** page de la **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** exemple. Cette page permet d’ajouter ou supprimer des enfants à partir d’un `FlexLayout` et pour définir des combinaisons des cinq propriétés pouvant être liées. Tous les enfants de la `FlexLayout` sont `Label` vues de différentes couleurs et tailles, avec le `Text` propriété définie sur un nombre correspondant à sa position dans le `Children` collection.
@@ -735,7 +735,7 @@ button {
 
 Plusieurs `FlexLayout` jointes propriétés pouvant être liées sont référencées ici. Dans le `label.empty` sélecteur, vous verrez la `flex-grow` attribut, qui définit le style vide `Label` pour fournir un espace vide ci-dessus le `Button`. Le `image` sélecteur contient un `order` attribut et un `align-self` attribut, qui correspondent aux `FlexLayout` attaché propriétés pouvant être liées.
 
-Vous avez vu que vous pouvez définir des propriétés directement sur le `FlexLayout` et vous pouvez définir des propriétés pouvant être liées jointes sur les enfants d’un `FlexLayout`. Ou bien, vous pouvez définir ces propriétés indirectement à l’aide de styles de basée sur XAML traditionnels ou des styles CSS. Ce qui est important doit connaître et comprendre ces propriétés. Ces propriétés sont ce qui rend le `FlexLayout` réellement flexible. 
+Vous avez vu que vous pouvez définir des propriétés directement sur le `FlexLayout` et vous pouvez définir des propriétés pouvant être liées jointes sur les enfants d’un `FlexLayout`. Ou bien, vous pouvez définir ces propriétés indirectement à l’aide de styles de basée sur XAML traditionnels ou des styles CSS. Ce qui est important doit connaître et comprendre ces propriétés. Ces propriétés sont ce qui rend le `FlexLayout` réellement flexible.
 
 ## <a name="flexlayout-with-xamarinuniversity"></a>FlexLayout avec Xamarin.University
 

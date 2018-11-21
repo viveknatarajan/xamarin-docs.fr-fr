@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: fa375720730630065609e328b343e16578c6f1df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131190"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171597"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Solutions de secours de liaison Xamarin.Forms
 
@@ -44,7 +44,7 @@ Au lieu de la définition [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.Fal
 > [!NOTE]
 > Il n’est pas possible de définir le `FallbackValue` propriété avec une expression de liaison.
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 ![Liaison de FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue liaison")
 
@@ -93,7 +93,7 @@ Au lieu de la définition [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.T
 > [!NOTE]
 > Il n’est pas possible de définir le `TargetNullValue` propriété avec une expression de liaison.
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![Liaison de TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "TargetNullValue liaison")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue liaison")
 

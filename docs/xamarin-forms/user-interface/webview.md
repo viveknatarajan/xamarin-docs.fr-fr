@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/02/2018
-ms.openlocfilehash: 8d68afaf0edf178bba6f18d3071de029e111edee
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 10/24/2018
+ms.openlocfilehash: 02ea94fa67491384e6ca6768e429ee96b46c6143
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118667"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171337"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -37,7 +37,8 @@ ms.locfileid: "50118667"
 Pour afficher un site Web à partir d’internet, définissez le `WebView`de [ `Source` ](xref:Xamarin.Forms.WebViewSource) propriété vers une URL de chaîne :
 
 ```csharp
-var browser = new WebView {
+var browser = new WebView
+{
   Source = "http://xamarin.com"
 };
 ```
@@ -70,6 +71,8 @@ Ce qui suit montre comment activer un domaine spécifique (dans ce cas xamarin.c
             </dict>
         </dict>
     </dict>
+    ...
+</key>
 ```
 
 Il est recommandé d’activer uniquement certains domaines de contourner ATS, ce qui vous permet d’utiliser des sites approuvés tout en bénéficiant de la sécurité supplémentaire sur des domaines non approuvés. Ce qui suit illustre la méthode la moins sécurisée de désactiver ATS pour l’application :
@@ -80,6 +83,8 @@ Il est recommandé d’activer uniquement certains domaines de contourner ATS, c
         <key>NSAllowsArbitraryLoads </key>
         <true/>
     </dict>
+    ...
+</key>
 ```
 
 Consultez [App Transport Security](~/ios/app-fundamentals/ats.md) pour plus d’informations sur cette nouvelle fonctionnalité dans iOS 9.
@@ -178,9 +183,12 @@ Le `BaseUrl` doit être défini sur le chemin d’accès du regroupement princip
 
 ```csharp
 [assembly: Dependency (typeof (BaseUrl_iOS))]
-namespace WorkingWithWebview.iOS{
-  public class BaseUrl_iOS : IBaseUrl {
-    public string Get() {
+namespace WorkingWithWebview.iOS
+{
+  public class BaseUrl_iOS : IBaseUrl
+  {
+    public string Get()
+    {
       return NSBundle.MainBundle.BundlePath;
     }
   }
@@ -205,9 +213,12 @@ Sur Android, le `BaseUrl` doit être défini sur `"file:///android_asset/"`:
 
 ```csharp
 [assembly: Dependency (typeof(BaseUrl_Android))]
-namespace WorkingWithWebview.Android {
-  public class BaseUrl_Android : IBaseUrl {
-    public string Get() {
+namespace WorkingWithWebview.Android
+{
+  public class BaseUrl_Android : IBaseUrl
+  {
+    public string Get()
+    {
       return "file:///android_asset/";
     }
   }
@@ -218,7 +229,8 @@ Sur Android, les fichiers dans le **actifs** dossier est également accessible v
 
 ```csharp
 var assetManager = MainActivity.Instance.Assets;
-using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
+using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
+{
   var html = streamReader.ReadToEnd ();
 }
 ```
@@ -261,50 +273,49 @@ Pour activer ce scénario, utilisez les méthodes de navigation intégrées et l
 Commencez par créer la page de la vue du navigateur :
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="WebViewDemo.InAppDemo"
-Title="In App Browser">
-    <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="10,10">
-                <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="backClicked" />
-                <Button Text="Forward" HorizontalOptions="End" Clicked="forwardClicked" />
-            </StackLayout>
-            <WebView x:Name="Browser" WidthRequest="1000" HeightRequest="1000" />
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewSample.InAppBrowserXaml"
+             Title="Browser">
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="OnBackButtonClicked" />
+            <Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="OnForwardButtonClicked" />
         </StackLayout>
-    </ContentPage.Content>
+        <!-- WebView needs to be given height and width request within layouts to render. -->
+        <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" />
+    </StackLayout>
 </ContentPage>
 ```
 
-Dans notre code-behind :
+Dans le code-behind :
 
 ```csharp
-public partial class InAppDemo : ContentPage
+public partial class InAppBrowserXaml : ContentPage
 {
-  //sets the URL for the browser in the page at creation
-    public InAppDemo (string URL)
+    public InAppBrowserXaml(string URL)
     {
-        InitializeComponent ();
-        Browser.Source = URL;
+        InitializeComponent();
+        webView.Source = URL;
     }
 
-
-    private void backClicked(object sender, EventArgs e)
+    async void OnBackButtonClicked(object sender, EventArgs e)
     {
-    // Check to see if there is anywhere to go back to
-        if (Browser.CanGoBack) {
-            Browser.GoBack ();
-        } else { // If not, leave the view
-            Navigation.PopAsync ();
+        if (webView.CanGoBack)
+        {
+            webView.GoBack();
+        }
+        else
+        {
+            await Navigation.PopAsync();
         }
     }
 
-    private void forwardClicked(object sender, EventArgs e)
+    void OnForwardButtonClicked(object sender, EventArgs e)
     {
-        if (Browser.CanGoForward) {
-            Browser.GoForward ();
+        if (webView.CanGoForward)
+        {
+            webView.GoForward();
         }
     }
 }
@@ -316,45 +327,38 @@ C’est tout !
 
 ## <a name="events"></a>Événements
 
-WebView déclenche deux événements pour vous aider à répondre aux modifications d’état :
+WebView déclenche les événements suivants pour vous aider à répondre aux modifications d’état :
 
-- **Navigation dans** &ndash; événement déclenché lorsque l’affichage Web commence à charger une nouvelle page.
-- **Cible de la navigation** &ndash; événement déclenché lorsque la page est chargée et la navigation s’est arrêté.
+- **Navigation dans** : événement déclenché lorsque l’affichage Web commence à charger une nouvelle page.
+- **Cible de la navigation** : événement déclenché lorsque la page est chargée et la navigation s’est arrêté.
+- **ReloadRequested** : événement déclenché lorsqu’une demande est faite pour recharger le contenu actuel.
 
-Si vous prévoyez d’utiliser des pages Web qui prennent beaucoup de temps pour charger, envisagez d’utiliser ces événements pour implémenter un indicateur d’état. Par exemple le XAML ressemble à ceci :
+Si vous prévoyez d’utiliser des pages Web qui prennent beaucoup de temps pour charger, envisagez d’utiliser le `Navigating` et `Navigated` événements pour implémenter un indicateur d’état. Par exemple le XAML ressemble à ceci :
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="WebViewDemo.LoadingDemo" Title="Loading Demo">
-  <ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewSample.LoadingLabelXaml"
+             Title="Loading Demo">
     <StackLayout>
-      <Label x:Name="LoadingLabel"
-        Text="Loading..."
-        HorizontalOptions="Center"
-        IsVisible="false" />
-      <WebView x:Name="Browser"
-      HeightRequest="1000"
-      WidthRequest="1000"
-      Navigating="webOnNavigating"
-      Navigated="webOnEndNavigating" />
+        <!--Loading label should not render by default.-->
+        <Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
+        <WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
     </StackLayout>
-  </ContentPage.Content>
 </ContentPage>
 ```
 
 Les deux gestionnaires d’événements :
 
 ```csharp
-void webOnNavigating (object sender, WebNavigatingEventArgs e)
+void webviewNavigating(object sender, WebNavigatingEventArgs e)
 {
-    LoadingLabel.IsVisible = true;
+    labelLoading.IsVisible = true;
 }
 
-void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
+void webviewNavigated(object sender, WebNavigatedEventArgs e)
 {
-    LoadingLabel.IsVisible = false;
+    labelLoading.IsVisible = false;
 }
 ```
 
@@ -365,6 +369,18 @@ Il en résulte dans la sortie suivante (chargement) :
 Chargement terminé :
 
 ![](webview-images/loading-end.png "Exemple d’événements de navigation WebView")
+
+## <a name="reloading-content"></a>Rechargement du contenu
+
+[`WebView`](xref:Xamarin.Forms.WebView) a un `Reload` méthode qui peut être utilisée pour recharger le contenu actuel :
+
+```csharp
+var webView = new WebView();
+...
+webView.Reload();
+```
+
+Lorsque le `Reload` méthode est appelée le `ReloadRequested` événement est déclenché, indiquant qu’une demande a été apportée à recharger le contenu actuel.
 
 ## <a name="performance"></a>Performances
 
@@ -447,7 +463,7 @@ Grille *sans* WidthRequest & HeightRequest. Grille est une des dispositions quel
 
 ## <a name="invoking-javascript"></a>Appel de JavaScript
 
-Le [ `WebView` ](xref:Xamarin.Forms.WebView) inclut la possibilité d’appeler une fonction JavaScript à partir de c# et retourner des résultats au code c# appelant. Pour cela, avec la [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) (méthode), qui est indiqué dans l’exemple suivant tiré le [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) exemple :
+[`WebView`](xref:Xamarin.Forms.WebView) inclut la possibilité d’appeler une fonction JavaScript à partir de C#et retourner des résultats à l’appeler C# code. Pour cela, avec la [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) (méthode), qui est indiqué dans l’exemple suivant tiré le [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) exemple :
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };

@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1e42fdfdf7f90a4efb639ce8ca94f45a49f59c35
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: eaee5d7921b99ea5e14cca9f03e33699a74b06f3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563977"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172247"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Résumé du chapitre 28. Emplacement et mappages
 
-> [!NOTE] 
+> [!NOTE]
 > Notes sur cette page indiquent des zones où Xamarin.Forms est différente de la matière présentée dans le livre.
 
 Xamarin.Forms prend en charge un [ `Map` ](xref:Xamarin.Forms.Maps.Map) élément dérivé `View`. En raison des exigences de plate-forme spéciales liées à l’utilisation de cartes, elles sont implémentées dans un assembly distinct, **Xamarin.Forms.Maps**, impliquent l’intervention d’un autre espace de noms : `Xamarin.Forms.Maps`.
@@ -194,7 +194,7 @@ Le [LongitudeZoomPage.xaml](https://github.com/xamarin/xamarin-forms-book-sample
 
 ### <a name="the-phones-location"></a>L’emplacement du téléphone
 
-Le [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) propriété du `Map` fonctionne un peu différemment sur les trois plateformes que le [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) fichier montre :
+Le [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) propriété du `Map` fonctionne un peu différemment sur chaque plateforme en tant que le [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) fichier montre :
 
 - Sur iOS, un point bleu indique l’emplacement du téléphone, mais vous devez accéder manuellement
 - Sur Android, une icône s’affiche que quand vous appuyez déplace le mappage à l’emplacement du téléphone

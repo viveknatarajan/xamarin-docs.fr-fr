@@ -1,5 +1,5 @@
 ---
-title: Pixels et des unités indépendantes du périphérique
+title: Unités indépendantes de l’appareil et pixels
 description: Cet article explore les différences entre les coordonnées de SkiaSharp et Xamarin.Forms et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 9da46f128eeb502e0f40e5861f3d04c66491565b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: d4c890853cb6db334416fc31feb2205a203faa4a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615299"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171922"
 ---
-# <a name="pixels-and-device-independent-units"></a>Pixels et des unités indépendantes du périphérique
+# <a name="pixels-and-device-independent-units"></a>Unités indépendantes de l’appareil et pixels
 
 _Découvrez les différences entre les coordonnées de SkiaSharp et Xamarin.Forms_
 
@@ -97,7 +97,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 La méthode commence à la première ligne de texte avec une coordonnée X de 20 (pour une petite marge à gauche) et une coordonnée Y de `fontSpacing`, qui est un peu plus que ce qui est nécessaire pour afficher la hauteur totale de la première ligne de texte en haut de la surface d’affichage. Après chaque appel à `DrawText`, la coordonnée Y est augmentée par incréments d’une ou deux de `fontSpacing`.
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![](pixels-images/surfacesize-small.png "Capture d’écran triple de la page de la taille de la Surface")](pixels-images/surfacesize-large.png#lightbox "Triple capture d’écran de la page de la taille de la Surface")
 
@@ -140,7 +140,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Ici, il s’exécute sur les trois plateformes :
+Ici, il s’exécute :
 
 [![](pixels-images/ellipsefill-small.png "Capture d’écran triple de la page de la taille de la Surface")](pixels-images/ellipsefill-large.png#lightbox "Triple capture d’écran de la page de la taille de la Surface")
 

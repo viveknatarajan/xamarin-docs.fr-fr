@@ -1,5 +1,5 @@
 ---
-title: Trois façons de dessiner un Arc
+title: Trois façons de dessiner un arc
 description: Cet article explique comment utiliser SkiaSharp pour définir des arcs de trois façons différentes et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 2bb5729ff369abb6e432bfd72ab240c0ce07f28a
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 49b2ee9cf9c8fbdb2f850461241459126750b123
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615403"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172221"
 ---
-# <a name="three-ways-to-draw-an-arc"></a>Trois façons de dessiner un Arc
+# <a name="three-ways-to-draw-an-arc"></a>Trois façons de dessiner un arc
 
 _Découvrez comment utiliser SkiaSharp pour définir des arcs de trois façons différentes_
 
@@ -412,7 +412,7 @@ public partial class TangentArcPage : InteractivePage
 }
 ```
 
-Voici le **les Arc tangente** page en cours d’exécution sur les trois plateformes :
+Voici le **les Arc tangente** page en cours d’exécution :
 
 [![](arcs-images/tangentarc-small.png "Capture d’écran triple de la page de tangente Arc")](arcs-images/tangentarc-large.png#lightbox "Triple capture d’écran de la page de l’Arc de tangente")
 
@@ -487,7 +487,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![](arcs-images/roundedheptagon-small.png "Capture d’écran triple de la page de l’arrondi de sur un heptagone")](arcs-images/roundedheptagon-large.png#lightbox "Triple capture d’écran de la page sur un heptagone d’arrondi")
 
@@ -582,7 +582,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Ici, il s’exécute sur les trois plateformes :
+Ici, il s’exécute :
 
 [![](arcs-images/ellipticalarc-small.png "Capture d’écran triple de la page de l’Arc elliptique")](arcs-images/ellipticalarc-large.png#lightbox "Triple capture d’écran de la page de l’Arc elliptique")
 

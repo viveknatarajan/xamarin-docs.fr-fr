@@ -7,12 +7,12 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 876594440c28fb0f30e0438f2ef02ae7fe89040c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: cd91f145d41d5e3bbb2f8061e04d87fdc495f1aa
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526505"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171051"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Enregistrement de bitmaps de SkiaSharp dans des fichiers
 
@@ -44,7 +44,7 @@ Le [ `SKBitmap` ](xref:SkiaSharp.SKBitmap) classe contient plusieurs méthodes n
 
 En outre, le [ `SKCodec` ](xref:SkiaSharp.SKCodec) classe a deux méthodes nommées `Create` qui peut créer un `SKCodec` de l’objet d’une source compressée et permettre à une application permettant d’impliquer plus dans le processus de décodage. (Le `SKCodec` classe est illustrée dans l’article [ **animer les Bitmaps de SkiaSharp** ](animating.md#gif-animation) dans le cadre de décodage d’un fichier GIF animé.)
 
-Quand vous encodez un bitmap, des informations supplémentaires sont requises : l’encodeur doit connaître le format de fichier particulier que l’application veut utiliser (JPEG ou PNG ou quelque chose d’autre). Si un format avec perte de données est souhaité, l’encodage devez également connaître le niveau de qualité souhaité. 
+Quand vous encodez un bitmap, des informations supplémentaires sont requises : l’encodeur doit connaître le format de fichier particulier que l’application veut utiliser (JPEG ou PNG ou quelque chose d’autre). Si un format avec perte de données est souhaité, l’encodage devez également connaître le niveau de qualité souhaité.
 
 Le `SKBitmap` classe définit un [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) méthode avec la syntaxe suivante :
 
@@ -60,7 +60,7 @@ Parmi les [ `Encode` ](xref:SkiaSharp.SKImage.Encode) méthodes définies par `S
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>Code spécifique à la plateforme pour l’enregistrement des fichiers bitmap
 
-Lorsque vous encodez un `SKBitmap` mettre en forme l’objet dans un fichier particulier, en règle générale, vous obtiendrez avec un objet de flux quelconque, ou un tableau de données. Certaines de la `Encode` méthodes (y compris celui dont aucun paramètre défini par `SKImage`) retournent un [ `SKData` ](xref:SkiaSharp.SKData) objet, ce qui peut être converti en un tableau d’octets à l’aide de la [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) (méthode). Ces données doivent ensuite être enregistrées dans un fichier. 
+Lorsque vous encodez un `SKBitmap` mettre en forme l’objet dans un fichier particulier, en règle générale, vous obtiendrez avec un objet de flux quelconque, ou un tableau de données. Certaines de la `Encode` méthodes (y compris celui dont aucun paramètre défini par `SKImage`) retournent un [ `SKData` ](xref:SkiaSharp.SKData) objet, ce qui peut être converti en un tableau d’octets à l’aide de la [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) (méthode). Ces données doivent ensuite être enregistrées dans un fichier.
 
 Enregistrer un fichier dans le stockage local d’application est très simple, car vous pouvez utiliser standard `System.IO` classes et méthodes pour cette tâche. Cette technique est illustrée dans l’article [ **animer les Bitmaps de SkiaSharp** ](animating.md#bitmap-animation) dans le cadre de l’animation d’une série de bitmaps de l’ensemble de Mandelbrot.
 
@@ -81,7 +81,7 @@ Cette interface définit également le `PickPhotoAsync` (méthode), qui est util
 
 Pour `SavePhotoAsync`, le premier argument est un tableau d’octets qui contient l’image bitmap déjà codé dans un format de fichier particulier, tel que JPEG ou PNG. Il est possible qu’une application est utile isoler les bitmaps qu'il crée dans un dossier particulier, qui est spécifié dans le paramètre suivant, suivi du nom de fichier. La méthode retourne une valeur booléenne indiquant le succès ou non.
 
-Voici comment `SavePhotoAsync` est implémentée sur les trois plateformes :
+Les sections suivantes décrivent comment `SavePhotoAsync` est implémentée sur chaque plateforme.
 
 ### <a name="the-ios-implementation"></a>L’implémentation d’iOS
 
@@ -107,7 +107,7 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-Malheureusement, il n’existe aucun moyen de spécifier un nom de fichier ou un dossier pour l’image. 
+Malheureusement, il n’existe aucun moyen de spécifier un nom de fichier ou un dossier pour l’image.
 
 Le **Info.plist** fichier dans le projet iOS nécessite une clé indiquant qu’il ajoute des images à la bibliothèque de photos :
 
@@ -276,7 +276,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 }
 ```
 
-Le `SKManagedWStream` dérive de la classe `SKWStream` (ce qui signifie « flux accessible en écriture »). Le `Encode` méthode écrit le fichier bitmap encodée dans ce flux de données. Les commentaires dans ce code font référence à certaines vous devrez peut-être effectuer de vérification des erreurs. 
+Le `SKManagedWStream` dérive de la classe `SKWStream` (ce qui signifie « flux accessible en écriture »). Le `Encode` méthode écrit le fichier bitmap encodée dans ce flux de données. Les commentaires dans ce code font référence à certaines vous devrez peut-être effectuer de vérification des erreurs.
 
 Le **enregistrer les Formats de fichier** page dans le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) application utilise un code similaire pour vous permettre de faire des essais avec l’enregistrement d’une image bitmap dans les différents formats.
 
@@ -341,7 +341,7 @@ Le fichier XAML contient une `SKCanvasView` qui affiche une image bitmap, tandis
                    HorizontalOptions="FillAndExpand" />
         </StackLayout>
 
-        <Button Text="Save" 
+        <Button Text="Save"
                 Clicked="OnButtonClicked">
             <Button.Triggers>
                 <DataTrigger TargetType="Button"
@@ -435,9 +435,9 @@ public partial class SaveFileFormatsPage : ContentPage
 
 Le `Clicked` gestionnaire pour la `Button` fonctionne-t-il tous les réelles. Il obtient deux arguments pour `Encode` à partir de la `Picker` et `Slider`et utilise ensuite le code présenté précédemment pour créer un `SKManagedWStream` pour le `Encode` (méthode). Les deux `Entry` vues fournissent des noms de fichiers et de dossier pour le `SavePhotoAsync` (méthode).
 
-La plupart de cette méthode est consacrée au traitement des problèmes ou des erreurs. Si `Encode` crée un tableau vide, cela signifie que le format de fichier particulier n’est pas pris en charge. Si `SavePhotoAsync` retourne `false`, le fichier n’a pas été enregistré avec succès. 
+La plupart de cette méthode est consacrée au traitement des problèmes ou des erreurs. Si `Encode` crée un tableau vide, cela signifie que le format de fichier particulier n’est pas pris en charge. Si `SavePhotoAsync` retourne `false`, le fichier n’a pas été enregistré avec succès.
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![Enregistrer des Formats de fichier](saving-images/SaveFileFormats.png "enregistrer des Formats de fichier")](saving-images/SaveFileFormats-Large.png#lightbox)
 
@@ -688,7 +688,7 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-Le **enregistrer** Gestionnaire de bouton utilise simplifié [ `Encode` ](xref:SkiaSharp.SKImage.Encode) méthode à partir de `SKImage`. Cette méthode encode en utilisant le format PNG. Le `SKImage` objet est créé selon `saveBitmap`et le `SKData` objet contient le fichier PNG encodé. 
+Le **enregistrer** Gestionnaire de bouton utilise simplifié [ `Encode` ](xref:SkiaSharp.SKImage.Encode) méthode à partir de `SKImage`. Cette méthode encode en utilisant le format PNG. Le `SKImage` objet est créé selon `saveBitmap`et le `SKData` objet contient le fichier PNG encodé.
 
 Le `ToArray` méthode `SKData` Obtient un tableau d’octets. C’est ce qui est passé à la `SavePhotoAsync` (méthode), ainsi que d’un nom de dossier fixe et un nom de fichier unique construit à partir de la date et heure actuelles.
 

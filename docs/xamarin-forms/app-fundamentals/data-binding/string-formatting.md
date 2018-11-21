@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: a876e81c67b6ec61a2cb29143cb001a7d6160032
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998145"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170947"
 ---
 # <a name="xamarinforms-string-formatting"></a>Mise en forme de chaîne de Xamarin.Forms
 
@@ -119,7 +119,7 @@ Si vous avez besoin afficher la gauche ou droite des accolades dans votre chaîn
 
 Les jeux de section dernière le `BindingContext` à la valeur de `Math.PI` et l’affiche avec la mise en forme par défaut et deux types de mise en forme numérique.
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![Mise en forme de chaîne](string-formatting-images/stringformatting-small.png "mise en forme de chaîne")](string-formatting-images/stringformatting-large.png#lightbox "mise en forme de chaîne")
 

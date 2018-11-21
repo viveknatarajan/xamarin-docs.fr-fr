@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 12a97989ac675d2504a2c626da73ebccb596b99b
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: d83b2f249bb0afe4257544d6da731dbc9ac3e317
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563561"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170934"
 ---
 # <a name="xamarinforms-slider"></a>Curseur de Xamarin.Forms
 
@@ -109,7 +109,7 @@ Voici le programme en cours d’exécution sur iOS, Android et Universal Windows
 
 [![Code de base de curseur](slider-images/BasicSliderCode.png "Code de base de curseur")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-La seconde `Label` affiche le texte « (non initialisé) » jusqu'à ce que le `Slider` est manipulé, ce qui entraîne le premier `ValueChanged` événement à déclencher. Notez que le nombre de décimales affichées est différent pour les trois plateformes. Ces différences portent sur les implémentations de plateforme de la `Slider` et sont décrits plus loin dans cet article dans la section [différences d’implémentation de plateforme](#implementations).
+La seconde `Label` affiche le texte « (non initialisé) » jusqu'à ce que le `Slider` est manipulé, ce qui entraîne le premier `ValueChanged` événement à déclencher. Notez que le nombre de décimales affichées est différent pour chaque plateforme. Ces différences portent sur les implémentations de plateforme de la `Slider` et sont décrits plus loin dans cet article dans la section [différences d’implémentation de plateforme](#implementations).
 
 ### <a name="creating-a-slider-in-xaml"></a>Création d’un curseur dans XAML
 

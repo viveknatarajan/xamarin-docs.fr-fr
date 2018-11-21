@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: bd865471e3efe42c44a8996a8e364b1c478b69e7
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 8354539288613353dcb7a792ace335daa5dc8f27
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615676"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171142"
 ---
 # <a name="path-effects-in-skiasharp"></a>Effets de chemin d’accès dans SkiaSharp
 
@@ -923,7 +923,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Vous pouvez utiliser cet effet avec contour ou remplissage selon le `Style` propriété de la `SKPaint` objet. Il est ici sur les trois plateformes :
+Vous pouvez utiliser cet effet avec contour ou remplissage selon le `Style` propriété de la `SKPaint` objet. Ici, il s’exécute :
 
 [![](effects-images/anotherroundedheptagon-small.png "Capture d’écran triple de la page d’un autre sur un heptagone arrondi")](effects-images/anotherroundedheptagon-large.png#lightbox "Triple capture d’écran de la page d’un autre sur un heptagone arrondi")
 
@@ -1068,7 +1068,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Ici, il s’exécute en mode paysage sur les trois plateformes :
+Ici, il s’exécute en mode paysage :
 
 [![](effects-images/jittertext-small.png "Le triple de la capture d’écran de la page de texte instabilité")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 

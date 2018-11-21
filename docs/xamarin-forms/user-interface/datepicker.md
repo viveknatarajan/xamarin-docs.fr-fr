@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 104985a4221cc6e5e6aa56420c1a41ee4c736b8d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: b5d01aa451c9ab9be081b666e8c7ce51f58a3096
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563691"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172312"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
@@ -181,7 +181,7 @@ Lorsque l’exemple est tout d’abord exécuté, les deux `DatePicker` vues son
 
 [![Jours entre les Dates de début](datepicker-images/DaysBetweenDatesStart.png "jours entre les Dates de début")](datepicker-images/DaysBetweenDatesStart-Large.png#lightbox "jours entre les Dates de début")
 
-En appuyant sur un de le `DatePicker` affiche appelle le sélecteur de dates de plateforme. Les trois plateformes implémentent ce sélecteur de dates de façons très différentes, mais chaque approche est familière aux utilisateurs de cette plateforme :
+En appuyant sur un de le `DatePicker` affiche appelle le sélecteur de dates de plateforme. Les plateformes d’implémentent ce sélecteur de dates de façons très différentes, mais chaque approche est familière aux utilisateurs de cette plateforme :
 
 [![Sélectionnez les jours entre les Dates](datepicker-images/DaysBetweenDatesSelect.png "jours entre les Dates sélectionnez")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "sélectionnez jours entre les Dates")
 

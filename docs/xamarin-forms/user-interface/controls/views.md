@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 18/10/2018
-ms.openlocfilehash: a51a3bb7726baa9142579a518767dc722870ee06
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 13/11/2018
+ms.openlocfilehash: b14cb6fd96bb5da1ba2f8612daa51b2db4242630
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107525"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172338"
 ---
 # <a name="xamarinforms-views"></a>Vues Xamarin.Forms
 
@@ -71,6 +71,13 @@ Les vues sont des objets d’interface utilisateur tels que des étiquettes, des
 |     |     |
 | --- | --- |
 | [`Button`](xref:Xamarin.Forms.Button) est un objet rectangulaire qui affiche du texte, et qui déclenche un [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) événement été dessus.<br /><br />[Documentation de l’API](xref:Xamarin.Forms.Button) / [Guide](~/xamarin-forms/user-interface/button.md) / [exemple](https://developer.xamarin.com/samples/UserInterface/ButtonDemos/) | [![Exemple de bouton](views-images/Button.png "bouton exemple")](views-images/Button-Large.png#lightbox "exemple de bouton")<br /> [Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ButtonDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml) avec [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml.cs) |
+|     |     |
+
+### <a name="imagebutton"></a>ImageButton
+
+|     |     |
+| --- | --- |
+| `ImageButton` est l’objet rectangulaire qui affiche une image, et qui déclenche un `Clicked` événement été dessus.<br /><br /> [Guide](~/xamarin-forms/user-interface/imagebutton.md) / [exemple](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/) | [![Exemple de ImageButton](views-images/ImageButton.png "ImageButton exemple")](views-images/ImageButton-Large.png#lightbox "ImageButton exemple")<br /> [Code c# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) avec [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="searchbar"></a>SearchBar

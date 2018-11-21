@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 0c5e048dd3f3496691b83eb10d377d012efedc72
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: ca9c4ed0871b91bed82f746ccb36af9fb32816c0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528765"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171779"
 ---
 # <a name="oreo-features"></a>Fonctionnalités de Oreo
 
@@ -131,7 +131,7 @@ Si vous tentez de lancer la valeur par défaut en fonction de l’interface grap
 
 -----
 
-Ce message s’affiche, car Google ne fournit plus un autonome Gestionnaire AVD de l’interface graphique utilisateur qui prend en charge les API 26.0 et versions ultérieur. Pour Android 8.0 Oreo, vous devez utiliser le Gestionnaire d’émulateur Android Xamarin ou la ligne de commande `avdmanager` outil pour créer des appareils virtuels pour Android Oreo.
+Ce message s’affiche, car Google ne fournit plus autonome Gestionnaire AVD de l’interface graphique utilisateur qui prend en charge les API 26.0 et versions ultérieur. Pour Android 8.0 Oreo, vous devez utiliser le Gestionnaire d’émulateur Android Xamarin ou la ligne de commande `avdmanager` outil pour créer des appareils virtuels pour Android Oreo.
 
 Pour utiliser le Gestionnaire d’appareils Android pour créer et gérer des appareils virtuels, consultez [la gestion des appareils virtuels avec le Gestionnaire d’appareils Android](~/android/get-started/installation/android-emulator/device-manager.md).
 Pour créer des appareils virtuels sans Android Device Manager, suivez les étapes décrites dans la section suivante.
@@ -248,7 +248,7 @@ Vous pouvez également créer un fichier XML family de la police qui décrit plu
 
 ### <a name="downloadable-fonts"></a>Polices téléchargeables
 
-À compter d’Android Oreo, les applications peuvent demander des polices à partir d’un fournisseur, plutôt que de leur regroupement dans le fichier APK. Les polices sont téléchargées à partir du réseau uniquement en fonction des besoins. Cette fonctionnalité réduit la taille des APK, la conservation d’un téléphone cellulaire mémoire et l’utilisation des données. Vous pouvez également utiliser cette fonctionnalité sur les versions d’API Android 14 et versions ultérieures en installant le package Android 26 Libary prise en charge.
+À compter d’Android Oreo, les applications peuvent demander des polices à partir d’un fournisseur, plutôt que de leur regroupement dans le fichier APK. Les polices sont téléchargées à partir du réseau uniquement en fonction des besoins. Cette fonctionnalité réduit la taille des APK, la conservation d’un téléphone cellulaire mémoire et l’utilisation des données. Vous pouvez également utiliser cette fonctionnalité sur les versions d’API Android 14 et versions ultérieures en installant le package Android 26 de bibliothèque de prise en charge.
 
 Lorsque votre application a besoin d’une police, vous créez un `FontsRequest` objet (en spécifiant la police à télécharger) et transmettez-le à un `FontsContract` méthode pour télécharger la police. Les étapes suivantes décrivent le processus de téléchargement de police plus en détail :
 

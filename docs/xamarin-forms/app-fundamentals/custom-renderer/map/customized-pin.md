@@ -6,13 +6,13 @@ ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.date: 10/24/2018
+ms.openlocfilehash: ab5315d169615430f5f5a733c0fa8c2ca9caa4b0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203083"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172299"
 ---
 # <a name="customizing-a-map-pin"></a>Personnalisation d’un code confidentiel de carte
 
@@ -422,9 +422,10 @@ protected override MarkerOptions CreateMarker(Pin pin)
 }
 ```
 
-Cette méthode crée un nouveau `MarkerOption` instance pour chaque `Pin` instance. Après avoir défini la position, une étiquette et une adresse du marqueur, son icône est défini avec la `SetIcon` (méthode). Cette méthode prend un `BitmapDescriptor` objet contenant les données nécessaires à l’affichage de l’icône, avec le `BitmapDescriptorFactory` classe fournissant des méthodes d’assistance pour simplifier la création de la `BitmapDescriptor`.
+Cette méthode crée un nouveau `MarkerOption` instance pour chaque `Pin` instance. Après avoir défini la position, une étiquette et une adresse du marqueur, son icône est défini avec la `SetIcon` (méthode). Cette méthode prend un `BitmapDescriptor` objet contenant les données nécessaires à l’affichage de l’icône, avec le `BitmapDescriptorFactory` classe fournissant des méthodes d’assistance pour simplifier la création de la `BitmapDescriptor`. Pour plus d’informations sur l’utilisation de la `BitmapDescriptorFactory` classe pour personnaliser un marqueur, consultez [personnalisation d’un marqueur](~/android/platform/maps-and-location/maps/maps-api.md).
 
-Pour plus d’informations sur l’utilisation de la `BitmapDescriptorFactory` classe pour personnaliser un marqueur, consultez [personnalisation d’un marqueur](~/android/platform/maps-and-location/maps/maps-api.md).
+> [!NOTE]
+> Si nécessaire, le `GetMarkerForPin` méthode peut être appelée dans votre convertisseur de carte pour récupérer un `Marker` à partir d’un `Pin`.
 
 <a name="Customizing_the_Info_Window" />
 

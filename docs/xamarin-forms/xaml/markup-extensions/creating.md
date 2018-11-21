@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b928c55f447d68b8adfedaa031fd85750ee71267
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: e11f7c95ccc65371ec5d844505682103025cd8af
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563704"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172234"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Création d’Extensions de balisage XAML
 
@@ -141,8 +141,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
         }
 
         string assemblyName = GetType().GetTypeInfo().Assembly.GetName().Name;
-
-        return ImageSource.FromResource(assemblyName + "." + Source);
+        return ImageSource.FromResource(assemblyName + "." + Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
     }
 
     object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
@@ -152,7 +151,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` est utile lorsqu’un fichier XAML doit accéder à un fichier image stocké comme une ressource incorporée dans le projet de bibliothèque .NET Standard. Il utilise le `Source` propriété pour appeler la méthode statique `ImageSource.FromResource` (méthode). Cette méthode requiert un nom de ressource complet, qui comprend le nom de l’assembly, le nom du dossier et le nom de fichier séparées par des points. Le `ImageResourceExtension` n’avez besoin de nom de l’assembly partie parce qu’il obtient le nom de l’assembly à l’aide de la réflexion et ajoute à la `Source` propriété. Malgré tout, `ImageSource.FromResource` doit être appelé à partir de l’assembly qui contient l’image bitmap, ce qui signifie que cette extension de ressource XAML ne peut pas faire partie d’une bibliothèque externe, sauf si les images sont également dans cette bibliothèque. (Consultez le [ **Images incorporées** ](~/xamarin-forms/user-interface/images.md#embedded-images) article pour plus d’informations sur l’accès aux bitmaps stockés en tant que ressources incorporées.)
+`ImageResourceExtension` est utile lorsqu’un fichier XAML doit accéder à un fichier image stocké comme une ressource incorporée dans le projet de bibliothèque .NET Standard. Il utilise le `Source` propriété pour appeler la méthode statique `ImageSource.FromResource` (méthode). Cette méthode requiert un nom de ressource complet, qui comprend le nom de l’assembly, le nom du dossier et le nom de fichier séparées par des points. Le deuxième argument de la `ImageSource.FromResource` méthode fournit le nom de l’assembly et est uniquement requis pour les versions release sur UWP. Malgré tout, `ImageSource.FromResource` doit être appelé à partir de l’assembly qui contient l’image bitmap, ce qui signifie que cette extension de ressource XAML ne peut pas faire partie d’une bibliothèque externe, sauf si les images sont également dans cette bibliothèque. (Consultez le [ **Images incorporées** ](~/xamarin-forms/user-interface/images.md#embedded-images) article pour plus d’informations sur l’accès aux bitmaps stockés en tant que ressources incorporées.)
 
 Bien que `ImageResourceExtension` nécessite le `Source` propriété à définir, le `Source` propriété est indiquée dans un attribut en tant que la propriété de contenu de la classe. Cela signifie que la `Source=` partie de l’expression entre accolades peut être omis. Dans le **démonstration de ressource d’Image** page, le `Image` éléments extraire en utilisant le nom du dossier et le nom de fichier séparées par des points de deux images :
 
@@ -178,7 +177,7 @@ Bien que `ImageResourceExtension` nécessite le `Source` propriété à définir
 </ContentPage>
 ```
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![Démonstration de la ressource d’image](creating-images/imageresourcedemo-small.png "démonstration de la ressource d’Image")](creating-images/imageresourcedemo-large.png#lightbox "démonstration de la ressource d’Image")
 
@@ -199,7 +198,6 @@ Le `GetService` appel avec un argument de `typeof(IProvideValueTarget)` renvoie 
 ## <a name="conclusion"></a>Conclusion
 
 Extensions de balisage XAML jouent un rôle essentiel dans XAML en étendant la possibilité de définir les attributs à partir de diverses sources. En outre, si les extensions de balisage XAML existantes ne fournissent pas exactement ce dont vous avez besoin, vous pouvez également écrire votre propre.
-
 
 ## <a name="related-links"></a>Liens associés
 

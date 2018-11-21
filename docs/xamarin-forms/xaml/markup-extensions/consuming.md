@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: ecb0adb09c7d6b8bca2f1ee228b8cbdaad1d0314
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563951"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171714"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilisation des Extensions de balisage XAML
 
@@ -137,7 +137,7 @@ Le dernier exemple affiche la `Device.RuntimePlatform` valeur. Le `Environment.N
 </Label>
 ```
 
-Voici l’exemple en cours d’exécution sur les trois plateformes :
+Voici l’exemple en cours d’exécution :
 
 [![Démonstration de x : Static](consuming-images/staticdemo-small.png "x : Static démonstration")](consuming-images/staticdemo-large.png#lightbox "démonstration de x : Static")
 
@@ -181,7 +181,7 @@ Le **x : Reference démonstration** page montre deux utilisations de `x:Referen
 </ContentPage>
 ```
 
-Les deux `x:Reference` expressions utilisent la version abrégée de le `ReferenceExtension` nom de la classe et d’éliminer le `Name=` dans le cadre de l’expression. Dans le premier exemple, le `x:Reference` extension de balisage est incorporée dans le `Binding` extension de balisage. Notez que le `Source` et `StringFormat` paramètres sont séparés par des virgules. Voici le programme en cours d’exécution sur les trois plateformes :
+Les deux `x:Reference` expressions utilisent la version abrégée de le `ReferenceExtension` nom de la classe et d’éliminer le `Name=` dans le cadre de l’expression. Dans le premier exemple, le `x:Reference` extension de balisage est incorporée dans le `Binding` extension de balisage. Notez que le `Source` et `StringFormat` paramètres sont séparés par des virgules. Voici le programme en cours d’exécution :
 
 [![Démonstration de x : Reference](consuming-images/referencedemo-small.png "démonstration de x : Reference")](consuming-images/referencedemo-large.png#lightbox "démonstration de x : Reference")
 
@@ -449,7 +449,7 @@ Le **x : Null démonstration** page illustre un scénario lorsque `x:Null` peut
 
 Puis vous découvrez que pour l’une de la `Label` éléments, vous voulez tous les paramètres de propriété dans le caractère implicite `Style` à l’exception de la `FontFamily`, que vous souhaitez être la valeur par défaut. Vous pouvez définir un autre `Style` pour ce faire, mais une approche plus simple consiste simplement à définir le `FontFamily` propriété de la particulier `Label` à `x:Null`, comme illustré dans le centre de `Label`.
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![Démonstration de x : Null](consuming-images/nulldemo-small.png "x : Null démonstration")](consuming-images/nulldemo-large.png#lightbox "démonstration de x : Null")
 
@@ -493,7 +493,7 @@ Le **OnPlatform démonstration** page montre comment utiliser le `OnPlatform` ex
 
 Dans cet exemple, les trois `OnPlatform` expressions utilisent la version abrégée de le `OnPlatformExtension` nom de la classe. Les trois `OnPlatform` ensemble d’extensions de balisage la [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), et [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriétés de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) des valeurs différentes sur iOS, Android et UWP. Les extensions de balisage fournissent également des valeurs par défaut pour ces propriétés sur les plateformes qui ne sont pas spécifiés, tout en éliminant le `Default=` dans le cadre de l’expression. Notez que les propriétés d’extension de balisage qui sont définies sont séparées par des virgules.
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![Démonstration de OnPlatform](consuming-images/onplatformdemo-small.png "OnPlatform démonstration")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform démonstration")
 
@@ -531,7 +531,7 @@ Le **OnIdiom démonstration** page montre comment utiliser le `OnIdiom` extensio
 
 Dans cet exemple, les trois `OnIdiom` expressions utilisent la version abrégée de le `OnIdiomExtension` nom de la classe. Les trois `OnIdiom` ensemble d’extensions de balisage la [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), et [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriétés de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) des valeurs différentes sur les téléphones, tablettes et idiomes de bureau. Les extensions de balisage fournissent également des valeurs par défaut pour ces propriétés sur les idiomes ne sont pas spécifiés, tout en éliminant le `Default=` dans le cadre de l’expression. Notez que les propriétés d’extension de balisage qui sont définies sont séparées par des virgules.
 
-Voici le programme en cours d’exécution sur les trois plateformes :
+Voici le programme en cours d’exécution :
 
 [![Démonstration de OnIdiom](consuming-images/onidiomdemo-small.png "OnIdiom démonstration")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom démonstration")
 

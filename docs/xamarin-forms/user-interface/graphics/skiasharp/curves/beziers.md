@@ -1,5 +1,5 @@
 ---
-title: Trois Types de courbes de Bézier
+title: Trois types de courbes Bézier
 description: Cet article explique comment utiliser SkiaSharp pour restituer des courbes de Bézier cubiques, quadratiques et coniques dans les applications Xamarin.Forms et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 1da0ee6155548a38057e4c7bf49ae5b90d445d79
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 60024be0c39bd215a828acfd8a4ac6294eeac9d8
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615338"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172351"
 ---
-# <a name="three-types-of-bzier-curves"></a>Trois Types de courbes de Bézier
+# <a name="three-types-of-bzier-curves"></a>Trois types de courbes Bézier
 
 _Explorer l’utilisation de SkiaSharp pour restituer des courbes de Bézier cubiques, quadratiques et coniques_
 
@@ -89,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Ici, il s’exécute sur les trois plateformes :
+Ici, il s’exécute :
 
 [![](beziers-images/beziercurve-small.png "Capture d’écran triple de la page de la courbe de Bézier")](beziers-images/beziercurve-large.png#lightbox "Triple capture d’écran de la page de la courbe de Bézier")
 
@@ -207,7 +207,7 @@ float Magnitude(SKPoint v)
 
 Le début et points de terminaison (`point0` et `point3`) sont calculées selon les équations paramétriques normales pour le cercle. Étant donné que le cercle est centré à (0, 0), ces points peuvent également être traitées comme des vecteurs radiales à partir du centre du cercle à la circonférence. Les points de contrôle se trouvent sur les lignes de tangente au cercle, afin qu’ils soient perpendiculairement à ces vecteurs radiales. Un vecteur à un angle droit à un autre est simplement le vecteur d’origine avec les coordonnées X et Y échangées et qu’un d’eux apportées négatif.
 
-Voici le programme en cours d’exécution sur les trois plateformes avec trois angles différents :
+Voici le programme s’exécute avec des angles différents :
 
 [![](beziers-images/beziercirculararc-small.png "Capture d’écran triple de la page d’Arc de cercle de Bézier")](beziers-images/beziercirculararc-large.png#lightbox "Triple capture d’écran de la page d’Arc de cercle de Bézier")
 
@@ -289,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Les points sont interpolés selon une valeur sinusoïdal OSCILLANTE de `t`. Les points interpolées sont ensuite utilisés pour construire une série de quatre courbes de Bézier connectées. Voici l’animation en cours d’exécution sur les trois plateformes montrant la progression à partir d’un cercle en carré :
+Les points sont interpolés selon une valeur sinusoïdal OSCILLANTE de `t`. Les points interpolées sont ensuite utilisés pour construire une série de quatre courbes de Bézier connectées. Voici l’animation en cours d’exécution :
 
 [![](beziers-images/squaringthecircle-small.png "Capture d’écran triple de la Squaring la page de cercle")](beziers-images/squaringthecircle-large.png#lightbox "Triple capture d’écran de la Squaring la page de cercle")
 
@@ -338,7 +338,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Il peut être un bon exercice pour tracer ces coordonnées sur le document de graphique pour voir comment elles sont liées. Le signe de l’infini est centré autour du point (0, 0), et les deux boucles disposent de centres de (–150, 0) et (150, 0) et de rayons de 100. Dans la série de `CubicTo` commandes, vous pouvez voir les coordonnées de points de contrôle sur les valeurs de –95 et –205 X (ces valeurs sont –150 plus et moins 55), 205 et 95 (150 plus et moins 55), ainsi que 250 et –250 pour les côtés gauche et droit. La seule exception est lorsque le signe de l’infini dépasse lui-même dans le centre. Dans ce cas, les points de contrôle ont des coordonnées avec une combinaison de 50 et -50 à Aplanissez la courbe près du centre.
 
-Voici le signe de l’infini sur les trois plateformes :
+Voici le signe de l’infini :
 
 [![](beziers-images/bezierinfinity-small.png "Capture d’écran triple de la page de l’infini Bézier")](beziers-images/bezierinfinity-large.png#lightbox "Triple capture d’écran de la page de l’infini de Bézier")
 
@@ -401,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Et ici il est en cours d’exécution sur les trois plateformes :
+Et ici il est en cours d’exécution :
 
 [![](beziers-images/quadraticcurve-small.png "Capture d’écran triple de la page de la courbe quadratique")](beziers-images/quadraticcurve-large.png#lightbox "Triple capture d’écran de la page de la courbe quadratique")
 
@@ -479,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Ici, il s’exécute sur les trois plateformes :
+Ici, il s’exécute :
 
 [![](beziers-images/coniccurve-small.png "Capture d’écran triple de la page de la courbe conique")](beziers-images/coniccurve-large.png#lightbox "Triple capture d’écran de la page de la courbe conique")
 

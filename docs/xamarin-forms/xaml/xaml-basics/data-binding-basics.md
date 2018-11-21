@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: e0ad67db0671996e594f9c5d48b329a5d676fc1d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563431"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171766"
 ---
 # <a name="part-4-data-binding-basics"></a>Partie 4. Principes fondamentaux de liaison de données
 
@@ -327,7 +327,7 @@ Beaucoup mieux. Tout ce qui est nécessaire est maintenant embellir le modèle d
 </ContentPage>
 ```
 
-Remarquez l’utilisation de `OnPlatform` pour définir la taille d’un `BoxView` et la hauteur de la `ListView` lignes. Bien que les valeurs pour les trois plateformes sont identiques, le balisage peut être facilement adapté pour les autres valeurs d’affiner l’affichage.
+Remarquez l’utilisation de `OnPlatform` pour définir la taille d’un `BoxView` et la hauteur de la `ListView` lignes. Bien que les valeurs pour toutes les plateformes sont identiques, le balisage peut être facilement adapté pour les autres valeurs d’affiner l’affichage.
 
 ## <a name="binding-value-converters"></a>Convertisseurs de valeur de liaison
 

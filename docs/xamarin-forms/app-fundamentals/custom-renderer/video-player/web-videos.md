@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 566f056bd616c918ce274b9c7406d94fdc265ea2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7f40d0d11fc932121b4ff7789969bbb1e354024c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994557"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172208"
 ---
 # <a name="playing-a-web-video"></a>Lecture d’une vidéo Web
 
@@ -465,7 +465,7 @@ Le `VideoSourceConverter` classe convertit la chaîne en un `UriVideoSource`. Lo
 
 [![Lire la vidéo Web](web-videos-images/playwebvideo-small.png "lecture vidéo Web")](web-videos-images/playwebvideo-large.png#lightbox "lire la vidéo sur le Web")
 
-Sur chacune des trois plateformes, les contrôles de transport fondu s’ils n’envisagent pas mais peuvent être restaurées pour afficher en appuyant sur la vidéo.
+Sur chacune des plateformes, les contrôles de transport fondu s’ils n’envisagent pas mais peuvent être restaurées pour afficher en appuyant sur la vidéo.
 
 Vous pouvez empêcher la vidéo de démarrage automatique en définissant le `AutoPlay` propriété `false`:
 

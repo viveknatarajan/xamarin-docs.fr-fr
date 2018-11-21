@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 7ee701c659e0051f5509934dbf0d86e9b3890c9a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 150818379a31fe7b22c1f04a49aba146df84c11c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563869"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171116"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Partie 1. Bien démarrer avec XAML
 
@@ -26,7 +26,7 @@ Pour commencer à modifier votre premier fichier XAML, utilisez Visual Studio ou
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Dans Windows, utilisez Visual Studio pour sélectionner **fichier > Nouveau > projet** à partir du menu. Dans le **nouveau projet** boîte de dialogue, sélectionnez **Visual C# > multiplateforme** à gauche, puis **Mobile App (Xamarin.Forms)** à partir de la liste dans le centre. 
+Dans Windows, utilisez Visual Studio pour sélectionner **fichier > Nouveau > projet** à partir du menu. Dans le **nouveau projet** boîte de dialogue, sélectionnez **Visual C# > multiplateforme** à gauche, puis **Mobile App (Xamarin.Forms)** à partir de la liste dans le centre.
 
 ![](get-started-with-xaml-images/win/newprojectdialog.w157.png "Boîte de dialogue Nouveau projet")
 
@@ -36,7 +36,7 @@ Dans l’écran suivant, sélectionnez le **application vide** modèle et le **.
 
 ![](get-started-with-xaml-images/win/newcrossplatformapp.png "Boîte de dialogue nouvelle application")
 
-Appuyez sur **OK**. 
+Appuyez sur **OK**.
 
 Quatre projets sont créés dans la solution : le **XamlSamples** bibliothèque .NET Standard, **XamlSamples.Android**, **XamlSamples.iOS**et la plateforme Windows universelle solution, **XamlSamples.UWP**.
 
@@ -52,7 +52,7 @@ Dans la boîte de dialogue suivante, nommez le projet de **XamlSamples** (ou ce 
 
 ![](get-started-with-xaml-images/mac/newprojectdialog2.png "Nouvelle boîte de dialogue projet 2")
 
-Appuyez sur **suivant**. 
+Appuyez sur **suivant**.
 
 Dans la boîte de dialogue suivante, vous pouvez sélectionner un emplacement pour le projet :
 
@@ -60,7 +60,7 @@ Dans la boîte de dialogue suivante, vous pouvez sélectionner un emplacement po
 
 Appuyez sur **créer**
 
-Trois projets sont créés dans la solution : le **XamlSamples** bibliothèque .NET Standard, **XamlSamples.Android**, et **XamlSamples.iOS**. 
+Trois projets sont créés dans la solution : le **XamlSamples** bibliothèque .NET Standard, **XamlSamples.Android**, et **XamlSamples.iOS**.
 
 -----
 
@@ -75,7 +75,7 @@ Dans le **XamlSamples** bibliothèque .NET Standard sont une paire de fichiers a
 - **App.XAML**, le fichier XAML ; et
 - **App.Xaml.cs**, un C# *code-behind* fichier associé au fichier XAML.
 
-Vous devrez cliquez sur la flèche en regard **App.xaml** pour afficher le fichier code-behind. 
+Vous devrez cliquez sur la flèche en regard **App.xaml** pour afficher le fichier code-behind.
 
 Les deux **App.xaml** et **App.xaml.cs** contribuent à une classe nommée `App` qui dérive de `Application`. La plupart des autres classes avec les fichiers XAML contribuent à une classe qui dérive de `ContentPage`; ces fichiers utilisent XAML pour définir le contenu visuel d’une page entière. Cela est vrai pour les deux autres fichiers dans le **XamlSamples** projet :
 
@@ -92,8 +92,8 @@ Le **MainPage.xaml** fichier ressemble à ceci (bien que la mise en forme peut �
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin Forms!" 
-               VerticalOptions="Center" 
+        <Label Text="Welcome to Xamarin Forms!"
+               VerticalOptions="Center"
                HorizontalOptions="Center" />
     </StackLayout>
 
@@ -129,7 +129,7 @@ namespace XamlSamples
 }
 ```
 
-Le `MainPage` dérive de la classe `ContentPage`, mais notez le `partial` définition de classe. Cela suggère qu’il doit y avoir une autre définition de classe partielle pour `MainPage`, mais où est-il ? Et ce qui est qui `InitializeComponent` méthode ? 
+Le `MainPage` dérive de la classe `ContentPage`, mais notez le `partial` définition de classe. Cela suggère qu’il doit y avoir une autre définition de classe partielle pour `MainPage`, mais où est-il ? Et ce qui est qui `InitializeComponent` méthode ?
 
 Lorsque Visual Studio génère le projet, il analyse le fichier XAML pour générer un C# fichier de code. Si vous regardez le **XamlSamples\XamlSamples\obj\Debug** répertoire, vous trouverez un fichier nommé **XamlSamples.MainPage.xaml.g.cs**. Le « g » signifie généré. Voici la définition de classe partielle de `MainPage` qui contient la définition de la `InitializeComponent` méthode appelée à partir de la `MainPage` constructeur. Ces deux partielle `MainPage` définitions de classe peuvent ensuite être compilées ensemble. Selon que le XAML est compilé ou non, le fichier XAML ou une forme binaire du fichier XAML est incorporée dans le fichier exécutable.
 
@@ -137,7 +137,7 @@ Lors de l’exécution de code dans les appels de projet de plateforme en partic
 
 Bien que normalement ne pas devoir passer trop de temps avec les fichiers de code générés, parfois exceptions runtime sont déclenchées sur le code dans les fichiers générés, donc vous devez être familiarisé avec eux.
 
-Lorsque vous compilez et exécutez ce programme, le `Label` élément apparaît dans le centre de la page, comme le suggère le XAML. Les trois plateformes de gauche à droite sont iOS, Android et UWP :
+Lorsque vous compilez et exécutez ce programme, le `Label` élément apparaît dans le centre de la page, comme le suggère le XAML :
 
 [![](get-started-with-xaml-images/xamlsamples.png "Affichage de Xamarin.Forms par défaut")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "affichage de Xamarin.Forms par défaut")
 
@@ -159,7 +159,7 @@ Pour ajouter d’autres XAML en fonction du `ContentPage` classes à votre proje
 
 -----
 
-Deux fichiers sont ajoutés au projet, **HelloXamlPage.xaml** et le fichier code-behind **HelloXamlPage.xaml.cs**. 
+Deux fichiers sont ajoutés au projet, **HelloXamlPage.xaml** et le fichier code-behind **HelloXamlPage.xaml.cs**.
 
 ## <a name="setting-page-content"></a>Définition du contenu de Page
 
@@ -170,7 +170,7 @@ Modifier le **HelloXamlPage.xaml** de fichiers afin que les balises uniquement s
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamlSamples.HelloXamlPage">
     <ContentPage.Content>
-        
+
     </ContentPage.Content>
 </ContentPage>
 ```
