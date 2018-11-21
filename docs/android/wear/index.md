@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: bd8973b59853a4898336ba153de4835bad46e232
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75b78f27fd6b3a726de9075ce36364168401ec60
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113051"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171470"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -51,7 +51,7 @@ Vous pouvez trouver un nombre de [exemples](https://developer.xamarin.com/sample
 |Exemple|Description|Capture d'écran|
 |--- |--- |--- |
 |[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|Un exemple simple des principes fondamentaux de projets portable, y compris les GridViewPager et notifications interactives.|![Capture d’écran de Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Une démonstration simple du contrôle WatchViewStub qui détecte la forme de l’écran et charge automatiquement la disposition correcte.  Voir comment WatchViewStub fonctionne le **Resources/layout/main_actvity.xml** mise en page.|![Capture d’écran de WatchViewStub](images/watchview.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Une démonstration simple du contrôle WatchViewStub qui détecte la forme de l’écran et charge automatiquement la disposition correcte.  Voir comment WatchViewStub fonctionne le **Resources/layout/main_activity.xml** mise en page.|![Capture d’écran de WatchViewStub](images/watchview.png)|
 |[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|Démonstration de pages de notification de l’usure, sous la forme d’étapes de recette. Notifications sont créées dans RecipeService.cs.|![Capture d’écran de RecipeAssistant](images/recipeassist.png)|
 |[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|Exemple amusant de l’interaction avec un « assistant » appelé Eliza, à l’aide de notifications interactives usure pour créer une conversation à l’aide de réponses toutes.|![Capture d’écran de ElizaChat](images/eliza.png)|
 |[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager implémente le modèle de navigation 2D, où l’utilisateur passe verticalement puis horizontalement pour naviguer dans les options et le contenu.|![Capture d’écran de GridViewPager](images/gridviewpager.png)|

@@ -6,13 +6,13 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: 3eb978780222da2050fc91dfa41c68ef4bd3b6f4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/24/2018
+ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996293"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171376"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Page à onglets Xamarin.Forms
 
@@ -32,13 +32,13 @@ La disposition d’un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)et ses ongl
 
 - Sur iOS, la liste des onglets apparaît au bas de l’écran et la zone de détails se situe au-dessus. Chaque onglet est doté d’une image d’icône qui doit être un 30 x 30 PNG avec une transparence pour la résolution normale, 60 x 60 pour la haute résolution et 90 x 90 pour iPhone 6 Plus résolution. S’il existe plus de cinq onglets, un *plus* onglet s’affiche, ce qui peut être utilisé pour accéder les onglets supplémentaires. Pour plus d’informations sur le chargement des images dans une application Xamarin.Forms, consultez [utilisation des Images](~/xamarin-forms/user-interface/images.md). Pour plus d’informations sur la configuration requise d’icône, consultez [création d’Applications avec onglet](~/ios/user-interface/controls/creating-tabbed-applications.md).
 
-    > [!NOTE]
+  > [!NOTE]
   > Notez que le `TabbedRenderer` pour iOS a un substituable `GetIcon` méthode qui peut être utilisée pour charger des icônes d’onglets à partir d’une source spécifiée. Ce remplacement permet d’utiliser les images SVG sous forme d’icônes sur un `TabbedPage`. En outre, les versions sélectionnées et d’une icône peuvent être fournies.
 
 - Sur Android, la liste des onglets apparaît en haut de l’écran par défaut, et la zone de détails est ci-dessous. Toutefois, la liste d’onglets peut être déplacée vers le bas de l’écran avec un spécifique à la plateforme. Pour plus d’informations, consultez [emplacement des paramètres de barre d’outils TabbedPage et couleur](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
 
-    > [!NOTE]
-  > Notez que lorsque vous utilisez AppCompat sur Android, chaque onglet affiche également une icône. En outre, le `TabbedPageRenderer` pour Android AppCompat a un substituable `SetTabIcon` méthode qui peut être utilisé pour charger des icônes d’onglets à partir d’un personnalisé `Drawable`. Ce remplacement permet d’utiliser les images SVG sous forme d’icônes sur un `TabbedPage`.
+  > [!NOTE]
+  > Notez que lorsque vous utilisez AppCompat sur Android, chaque onglet affiche également une icône. En outre, le `TabbedPageRenderer` pour Android AppCompat a un substituable `GetIconDrawable` méthode qui peut être utilisé pour charger des icônes d’onglets à partir d’un personnalisé `Drawable`. Ce remplacement permet d’utiliser les images SVG sous forme d’icônes sur un `TabbedPage`, et fonctionne avec les deux haut et bas des barres d’onglets. Vous pouvez également le remplaçables `SetTabIcon` méthode peut être utilisée pour charger des icônes d’onglets à partir d’un personnalisé `Drawable` pour les barres de l’onglet supérieur.
 
 - Windows tablet facteurs de forme-, les onglets ne sont pas toujours visibles et les utilisateurs doivent Balayage vers le bas (ou avec le bouton droit, s’ils ont une souris attachée) pour afficher les onglets dans un `TabbedPage` (comme indiqué ci-dessous).
 
