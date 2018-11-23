@@ -7,13 +7,13 @@ ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/31/2016
-ms.openlocfilehash: 215aa88b7e97a67242bd991dde0e66c445b47b0a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 10/24/2018
+ms.openlocfilehash: a4a3a1d35b675091319646a03fb0362e4d250b0e
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526404"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171883"
 ---
 # <a name="automate-xamarinforms-testing-with-app-center"></a>Automatiser les tests Xamarin.Forms avec App Center
 
@@ -38,7 +38,7 @@ Reportez-vous à [Xamarin.UITest](/appcenter/test-cloud/uitest/) pour vérifier 
 
 UITest automatise l’interface utilisateur en activant des contrôles à l’écran et en effectuant des entrées partout où un utilisateur interagit normalement avec l’application. Pour activer des tests qui peuvent *appuyer sur un bouton* ou *entrer du texte dans une zone*, le code de test a besoin d’un moyen d’identifier les contrôles à l’écran.
 
-Pour permettre au code UITest de référencer des contrôles, chaque contrôle a besoin d’un identificateur unique. Dans Xamarin.Forms, la méthode recommandée pour définir cet identificateur est d’utiliser la propriété `AutomationId` comme indiqué ci-dessous :
+Pour permettre au code UITest de référencer des contrôles, chaque contrôle a besoin d’un identificateur unique. Dans Xamarin.Forms, la méthode recommandée pour définir cet identificateur est d’utiliser la propriété [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) comme indiqué ci-dessous :
 
 ```csharp
 var b = new Button {
@@ -51,17 +51,19 @@ var l = new Label {
 };
 ```
 
-La propriété `AutomationId` peut également être définie en XAML :
+La propriété [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) peut également être définie en XAML :
 
 ```xaml
 <Button x:Name="b" AutomationId="MyButton" Text="Click me"/>
 <Label x:Name="l" AutomationId="MyLabel" Text="Hello, Xamarin.Forms!" />
 ```
 
-Une valeur `AutomationId` unique doit être ajoutée à tous les contrôles requis pour les tests (notamment les boutons, entrées de texte et étiquettes dont la valeur peut être interrogée).
-
 > [!NOTE]
-> Notez qu’une exception `InvalidOperationException` est levée si plusieurs tentatives de définition de la propriété `AutomationId` d’un élément `Element` sont effectuées.
+> [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) est une [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) et peut donc être aussi définie avec une expression de liaison.
+
+Une valeur [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) unique doit être ajoutée à tous les contrôles requis pour les tests (notamment les boutons, entrées de texte et étiquettes dont la valeur peut être interrogée).
+
+> [!WARN] Notez qu’une exception `InvalidOperationException` est levée si plusieurs tentatives de définition de la propriété [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) d’un élément [`Element`](xref:Xamarin.Forms.Element) sont effectuées.
 
 ### <a name="ios-application-project"></a>Projet d’application iOS
 
@@ -102,16 +104,16 @@ Pour plus d’informations sur l’écriture de tests UITest, consultez [Documen
 
 ### <a name="use-automationid-in-the-xamarinforms-ui"></a>Utiliser AutomationId dans l’interface utilisateur Xamarin.Forms
 
-Avant de pouvoir écrire tout test UITest, l’interface utilisateur de l’application Xamarin.Forms doit pouvoir contenir des scripts. Vérifiez que tous les contrôles dans l’interface utilisateur ont une valeur `AutomationId` afin de pouvoir être référencés dans le code de test.
+Avant de pouvoir écrire tout test UITest, l’interface utilisateur de l’application Xamarin.Forms doit pouvoir contenir des scripts. Vérifiez que tous les contrôles de l’interface utilisateur ont une valeur [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) afin de pouvoir être référencés dans le code de test.
 
 #### <a name="referring-to-the-automationid-in-uitests"></a>Référence à AutomationId dans les tests UITest
 
-Lors de l’écriture de tests UITest, la valeur `AutomationId` est exposée différemment sur chaque plateforme :
+Lors de l’écriture de tests UITest, la valeur [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) est exposée différemment sur chaque plateforme :
 
 - **iOS** utilise le champ `id`.
 - **Android** utilise le champ `label`.
 
-Pour écrire des tests UITest multiplateformes qui recherchent la valeur `AutomationId` à la fois sur iOS et Android, utilisez la requête de test `Marked` :
+Pour écrire des tests UITest multiplateformes qui recherchent la valeur [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) à la fois sur iOS et Android, utilisez la requête de test `Marked` :
 
 ```csharp
 app.Query(c=>c.Marked("MyButton"))
@@ -200,7 +202,7 @@ Après avoir ajouté Xamarin.UITest à la solution Xamarin.Forms, il est possibl
 
 ## <a name="summary"></a>Récapitulatif
 
-Les applications Xamarin.Forms peuvent être facilement testées avec **Xamarin.UITest** à l’aide d’un mécanisme simple pour exposer `AutomationId` comme identificateur de vue unique pour l’automatisation de test. Une fois qu’un projet UITest a été ajouté à une solution Xamarin.Forms, les étapes de l’écriture et de l’exécution des tests pour une application Xamarin.Forms sont les mêmes que pour une application Xamarin.Android ou Xamarin.iOS.
+Les applications Xamarin.Forms peuvent être facilement testées avec **Xamarin.UITest** à l’aide d’un mécanisme simple permettant d’exposer [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) comme identificateur de vue unique pour l’automatisation de test. Une fois qu’un projet UITest a été ajouté à une solution Xamarin.Forms, les étapes de l’écriture et de l’exécution des tests pour une application Xamarin.Forms sont les mêmes que pour une application Xamarin.Android ou Xamarin.iOS.
 
 Pour plus d’informations sur la façon d’envoyer des tests à App Center Test, consultez [Envoi de tests UITest](/appcenter/test-cloud/preparing-for-upload/uitest/). Pour plus d’informations sur UITest, consultez [Documentation App Center Test](/appcenter/test-cloud/).
 
