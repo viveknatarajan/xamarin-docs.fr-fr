@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: bb70dac34847cf46bd06cc20b87df8ea5f72105a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 40d4a6cbd3bb8e3bd4c55c50c69f85f91d94feac
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115183"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459926"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit dans Xamarin.iOS
 
@@ -423,14 +423,14 @@ namespace MonkeyCall
             // Define handle types
             var handleTypes = new [] { (NSNumber)(int)CXHandleType.PhoneNumber };
 
-            // Get Image Mask
-            var maskImage = UIImage.FromFile ("telephone_receiver.png");
+            // Get Image Template
+            var templateImage = UIImage.FromFile ("telephone_receiver.png");
 
             // Setup the initial configurations
             Configuration = new CXProviderConfiguration ("MonkeyCall") {
                 MaximumCallsPerCallGroup = 1,
                 SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
-                IconMaskImageData = maskImage.AsPNG(),
+                IconTemplateImageData = templateImage.AsPNG(),
                 RingtoneSound = "musicloop01.wav"
             };
 
@@ -459,14 +459,14 @@ namespace MonkeyCall
             activeCall.StartingConnectionChanged += (call) => {
                 if (call.isConnecting) {
                     // Inform system that the call is starting
-                    Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNsDate());
+                    Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
                 }
             };
 
             activeCall.ConnectedChanged += (call) => {
                 if (call.isConnected) {
                     // Inform system that the call has connected
-                    provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNsDate ());
+                    provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
                 }
             };
 
@@ -606,11 +606,11 @@ Lorsqu’une instance de ce délégué est créée, il est passé le `ActiveCall
 var handleTypes = new [] { (NSNumber)(int)CXHandleType.PhoneNumber };
 ```
 
-Et il obtient le masque qui est appliqué à l’icône de l’application lorsqu’un appel est en cours :
+Et il obtient l’image de modèle qui est appliqué à l’icône de l’application lorsqu’un appel est en cours :
 
 ```csharp
-// Get Image Mask
-var maskImage = UIImage.FromFile ("telephone_receiver.png");
+// Get Image Template
+var templateImage = UIImage.FromFile ("telephone_receiver.png");
 ```
 
 Ces valeurs obtient regroupées dans un `CXProviderConfiguration` qui sera utilisé pour configurer le `CXProvider`:
@@ -620,7 +620,7 @@ Ces valeurs obtient regroupées dans un `CXProviderConfiguration` qui sera utili
 Configuration = new CXProviderConfiguration ("MonkeyCall") {
     MaximumCallsPerCallGroup = 1,
     SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
-    IconMaskImageData = maskImage.AsPNG(),
+    IconTemplateImageData = templateImage.AsPNG(),
     RingtoneSound = "musicloop01.wav"
 };
 ```
@@ -959,14 +959,14 @@ public override void PerformStartCallAction (CXProvider provider, CXStartCallAct
     activeCall.StartingConnectionChanged += (call) => {
         if (call.IsConnecting) {
             // Inform system that the call is starting
-            Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNsDate());
+            Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
         }
     };
 
     activeCall.ConnectedChanged += (call) => {
         if (call.IsConnected) {
             // Inform system that the call has connected
-            Provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNsDate ());
+            Provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
         }
     };
 
@@ -1044,7 +1044,7 @@ Une application peut effectuer les types de personnalisations suivants :
 
 - Afficher un nom localisé.
 - Activer la prise en charge de l’appel vidéo.
-- Personnaliser les boutons de l’interface utilisateur en appel à l’aide de sa propre icône image masquée. Interaction utilisateur avec des boutons personnalisés est envoyée directement à l’application à traiter. 
+- Personnaliser les boutons de l’interface utilisateur en appel à l’aide de sa propre icône d’image de modèle. Interaction utilisateur avec des boutons personnalisés est envoyée directement à l’application à traiter. 
 
 ### <a name="action-errors"></a>Erreurs d’action
 

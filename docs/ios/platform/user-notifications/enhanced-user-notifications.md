@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: d1b1a59b432315532844f8fca3b613ff3392a7b5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bfbb8c2b189defeb6efb07388ea34425c239c061
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459887"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Améliorations des Notifications utilisateur dans Xamarin.iOS
 
@@ -58,7 +58,7 @@ Voici quelques exemples de Notifications locales :
 - Alertes de rappel
 - Emplacement des déclencheurs prenant en charge
 
-Pour plus d’informations, consultez le site d’Apple [Local et le Guide de programmation de Notification à distance](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) documentation.
+Pour plus d’informations, consultez le site d’Apple [Local et le Guide de programmation de Notification à distance](https://developer.apple.com/documentation/usernotifications) documentation.
 
 ### <a name="about-remote-notifications"></a>À propos des Notifications à distance
 
@@ -80,7 +80,7 @@ Il existe deux types de Notifications à distance disponibles pour une applicati
 - **Accessible sur utilisateur** -ceux-ci s’affichent pour l’utilisateur sur l’appareil.
 - **Mises à jour en mode silencieux** -ils fournissent un mécanisme pour mettre à jour le contenu d’une application iOS en arrière-plan. Lorsqu’une mise à jour en mode silencieux est reçue, l’application peut contacter l’extraction de serveurs remove vers le bas le contenu le plus récent.
 
-Pour plus d’informations, consultez le site d’Apple [Local et le Guide de programmation de Notification à distance](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) documentation.
+Pour plus d’informations, consultez le site d’Apple [Local et le Guide de programmation de Notification à distance](https://developer.apple.com/documentation/usernotifications) documentation.
 
 ### <a name="about-the-existing-notifications-api"></a>À propos de l’API existant de Notifications
 
@@ -202,7 +202,7 @@ Le jeton qui est envoyé à l’application côté serveur du développeur doit 
 
 Le jeton fait Office de clé qui relie la notification et l’application utilisée pour ouvrir ou de répondre à la notification.
 
-Pour plus d’informations, consultez le site d’Apple [Local et le Guide de programmation de Notification à distance](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) documentation.
+Pour plus d’informations, consultez le site d’Apple [Local et le Guide de programmation de Notification à distance](https://developer.apple.com/documentation/usernotifications) documentation.
 
 ## <a name="notification-delivery"></a>Remise de notification
 
@@ -672,4 +672,4 @@ Cet article a présenté toutes les méthodes que la Notification des utilisateu
 - [Exemples iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
 - [Référence de l’infrastructure Usernotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Guide de programmation Notification locaux et distants](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
+- [Guide de programmation Notification locaux et distants](https://developer.apple.com/documentation/usernotifications)

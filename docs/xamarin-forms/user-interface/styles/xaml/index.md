@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 5145572b30302e58c36250fff40e8b637fcd221f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2607298bdc0842f60a1d1a3299bed61bbea925a1
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995073"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459861"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Styler des applications Xamarin.Forms à l’aide de Styles de XAML
 
 ## <a name="introductionintroductionmd"></a>[Introduction](introduction.md)
 
-Les applications Xamarin.Forms contiennent souvent plusieurs contrôles qui ont une apparence identique. Définition de l’apparence de chaque contrôle individuel peut être répétitive et sujet aux erreurs. Au lieu de cela, les styles peuvent être créés que personnaliser l’apparence de contrôle par les propriétés de regroupement et les paramètres disponibles sur le type de contrôle.
+Les applications Xamarin.Forms contiennent souvent plusieurs contrôles qui ont une apparence identique. Définition de l’apparence de chaque contrôle individuel peut être répétitive et sujet aux erreurs. Au lieu de cela, vous peuvent créer les styles qui personnaliser l’apparence du contrôle en regroupant et en définissant des propriétés disponibles sur le type de contrôle.
 
 ## <a name="explicit-stylesexplicitmd"></a>[Styles explicites](explicit.md)
 

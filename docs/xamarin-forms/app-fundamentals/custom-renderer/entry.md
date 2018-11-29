@@ -6,13 +6,13 @@ ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 30326b8d52f39268015bdcbee1b84b9d9e5516b9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 11/26/2018
+ms.openlocfilehash: 7fea736b0a04a69fd64100ae1d6bcd42c244359f
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998958"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459848"
 ---
 # <a name="customizing-an-entry"></a>Personnalisation d’une entrée
 
@@ -31,6 +31,9 @@ Le processus de rendu peut être exploitée pour implémenter les personnalisati
 1. [Créer](#Creating_the_Custom_Renderer_on_each_Platform) le convertisseur personnalisé pour le contrôle sur chaque plateforme.
 
 Chaque élément maintenant nous reviendrons à son tour, pour implémenter un [ `Entry` ](xref:Xamarin.Forms.Entry) contrôle qui a une couleur d’arrière-plan différente sur chaque plateforme.
+
+> [!IMPORTANT]
+> Cet article explique comment créer un convertisseur personnalisé simple. Toutefois, il n’est pas nécessaire de créer un convertisseur personnalisé pour implémenter un `Entry` qui a une couleur d’arrière-plan différente sur chaque plateforme. Pouvez plus facilement le faire à l’aide de la [ `Device` ](xref:Xamarin.Forms.Device) (classe), ou le `OnPlatform` extension de balisage, pour fournir des valeurs spécifiques à la plateforme. Pour plus d’informations, consultez [fournissant des valeurs spécifiques à la plateforme](~/xamarin-forms/platform/device.md#providing-platform-specific-values) et [Extension de balisage OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
 <a name="Creating_the_Custom_Entry_Control" />
 

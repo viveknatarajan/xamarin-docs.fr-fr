@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: e41f19c1a2d02537f300ae82b7f3d45bc6571e1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 076c6464359a58c2b36d157d9620673b0644cd4a
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112453"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459835"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>conception de l’interface utilisateur.Storyboard/.XIB-less dans Xamarin.Mac
 
@@ -34,7 +34,7 @@ Lorsque vous créez une nouvelle application Xamarin.Mac Cocoa, vous obtenez une
 
 Pour basculer vers une fenêtre Xibless pour une application, procédez comme suit :
 
-1. Ouvrez l’application que vous souhaitez cesser d’utiliser `.stroyboard` ou fichiers .xib pour définir l’interface utilisateur dans Visual Studio pour Mac.
+1. Ouvrez l’application que vous souhaitez cesser d’utiliser `.storyboard` ou fichiers .xib pour définir l’interface utilisateur dans Visual Studio pour Mac.
 2. Dans le **panneau solutions**, avec le bouton droit sur le **Main.storyboard** ou **MainWindow.xib** fichier et sélectionnez **supprimer**: 
 
     ![Suppression de la fenêtre ou storyboard principal](xibless-ui-images/switch01.png "suppression de la fenêtre ou storyboard principal")
@@ -371,5 +371,5 @@ Cet article a examiné en détail la création d’interface d’utilisateur d�
 - [MacXibless (exemple)](https://developer.xamarin.com/samples/mac/MacXibless/)
 - [Windows](~/mac/user-interface/window.md)
 - [Menus](~/mac/user-interface/menu.md)
-- [macOS Human Interface Guidelines pour](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Human Interface Guidelines pour macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
 - [Introduction à Windows](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/WinPanel/Introduction.html)
