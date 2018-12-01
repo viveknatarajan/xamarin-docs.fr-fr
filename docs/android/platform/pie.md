@@ -1,5 +1,5 @@
 ---
-title: Graphique à secteurs 9 Android
+title: Android 9 Pie
 description: Comment commencer à développer des applications pour Android 9 à secteurs à l’aide de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: c353341af8899960b12437d55602415a02953cbc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
+ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111559"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710021"
 ---
 # <a name="android-pie-features"></a>Fonctionnalités de graphique à secteurs Android
 
@@ -24,9 +24,7 @@ _Comment commencer à développer des applications pour Android 9 à secteurs à
 
 Cet article est structuré pour vous aider à commencer le développement d’applications Xamarin.Android pour Android à secteurs. Il explique comment installer les mises à jour nécessaires, configurer le Kit de développement et préparer un émulateur ou un périphérique pour le test. Il fournit un aperçu des nouvelles fonctionnalités de graphique à secteurs Android et fournit des exemples de code source qui illustre comment utiliser certaines des principales fonctionnalités de graphique à secteurs Android.
 
-![Preview](~/media/shared/preview.png)
-
-Xamarin.Android 9.0 prend en charge de version préliminaire pour Android à secteurs. Pour plus d’informations sur la prise en charge de Xamarin.Android pour Android à secteurs, consultez le [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notes de publication.
+Xamarin.Android 9.0 prend en charge pour Android à secteurs. Pour plus d’informations sur la prise en charge de Xamarin.Android pour Android à secteurs, consultez le [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notes de publication.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -142,7 +140,7 @@ Notez que l’arrière-plan blanc de l’application n’est pas autorisé à é
 
 Si vous avez besoin des informations plus détaillées sur la zone de découpage sur l’appareil, vous pouvez utiliser la nouvelle [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) classe. `DisplayCutout` représente la zone de l’affichage ne peut pas être utilisé pour afficher le contenu. Vous pouvez utiliser ces informations pour récupérer l’emplacement et la forme du découpage afin que votre application n’essaie pas d’afficher le contenu de cette zone non fonctionnelle.
 
-Pour plus d’informations sur les nouvelles fonctionnalités de découpage de P Android, consultez [prise en charge du découpage affichage](https://developer.android.com/preview/features#cutout).
+Pour plus d’informations sur les nouvelles fonctionnalités de découpage de P Android, consultez [prise en charge du découpage affichage](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
 
 
@@ -223,12 +221,12 @@ La nouvelle [WifiRttManager](https://developer.android.com/reference/android/net
 
 ### <a name="multi-camera-support"></a>Prise en charge plusieurs caméra
 
-Nombre d’appareils Android plus récent ont des caméras de double-front et/ou double différée qui sont utiles pour des fonctionnalités telles que la vision stéréo, effets visuels améliorés et la fonctionnalité de zoom améliorée. P Android introduit une nouvelle [plusieurs caméras](https://developer.android.com/preview/features#camera) API qui permet à votre application d’utiliser un *caméra logique* (ou *logique plusieurs caméras*) qui repose sur deux ou plusieurs caméras de surveillance physiques.
+Nombre d’appareils Android plus récent ont des caméras de double-front et/ou double différée qui sont utiles pour des fonctionnalités telles que la vision stéréo, effets visuels améliorés et la fonctionnalité de zoom améliorée. P Android introduit une nouvelle [plusieurs caméras](https://developer.android.com/about/versions/pie/android-9.0#camera) API qui permet à votre application d’utiliser un *caméra logique* (ou *logique plusieurs caméras*) qui repose sur deux ou plusieurs caméras de surveillance physiques.
 Pour déterminer si l’appareil prend en charge une caméra multiples logique, vous pouvez examiner les fonctionnalités de chaque appareil photo sur l’appareil pour voir si elle prend en charge [RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA).
 
 Graphique à secteurs Android inclut également un nouveau [Configurationsession](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) classe qui peut être utilisée pour aider à réduire les délais durant la capture initiale et éliminent le besoin pour démarrer et lancer le flux de l’appareil photo.
 
-Pour plus d’informations sur l’appareil photo multi prennent en charge dans Android P, consultez [plusieurs caméras photo et prise en charge les mises à jour](https://developer.android.com/preview/features#camera).
+Pour plus d’informations sur l’appareil photo multi prennent en charge dans Android P, consultez [plusieurs caméras photo et prise en charge les mises à jour](https://developer.android.com/about/versions/pie/android-9.0#camera).
 
 
 ### <a name="other-features"></a>Autres fonctionnalités
@@ -256,7 +254,7 @@ Lorsque la Version Android cible est définie au niveau de l’API 28, il existe
 
 -  Accès direct à répertoire de données d’une autre application par chemin d’accès n’est plus autorisée.
 
-Pour plus d’informations sur les modifications de comportement pour les applications qui ciblent Android P, consultez [changements de comportement](https://developer.android.com/preview/behavior-changes.html#p-apps).
+Pour plus d’informations sur les modifications de comportement pour les applications qui ciblent Android P, consultez [changements de comportement](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 
 
 ## <a name="sample-code"></a>Exemple de code
