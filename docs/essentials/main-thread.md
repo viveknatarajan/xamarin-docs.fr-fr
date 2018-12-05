@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Xamarin.Essentials : MainThread'
 description: La classe MainThread permet aux applications d’exécuter du code sur le thread principal de l'application. Elle permet également de déterminer si un bloc de code particulier est en cours d’exécution sur le thread principal ou non.
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1

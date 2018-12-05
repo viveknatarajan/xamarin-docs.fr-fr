@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Xamarin.Essentials : vibration'
 description: Ce document décrit la classe Vibration de Xamarin.Essentials, qui vous permet de démarrer et d’arrêter la fonctionnalité de vibration pendant la durée souhaitée.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E

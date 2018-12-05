@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Xamarin.Essentials : clavier téléphonique'
 description: La classe PhoneDialer de Xamarin.Essentials permet à une application de composer un numéro de téléphone sur le clavier.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F

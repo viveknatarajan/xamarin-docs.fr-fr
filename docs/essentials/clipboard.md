@@ -1,5 +1,5 @@
-﻿---
-title: 'Xamarin.Essentials : Clipboard'
+---
+title: 'Xamarin.Essentials : Presse-papiers'
 description: Ce document décrit la classe Clipboard de Xamarin.Essentials, qui vous permet de copier et de coller du texte dans le Presse-papiers système entre les applications.
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno

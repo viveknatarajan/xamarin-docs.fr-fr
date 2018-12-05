@@ -57,7 +57,7 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [Stockage sécurisé](secure-storage.md?context=xamarin/xamarin-forms) : stocker des données en toute sécurité.
 * [SMS](sms.md?context=xamarin/xamarin-forms) : créer un message SMS à envoyer.
 * [Synthèse vocale](text-to-speech.md?context=xamarin/xamarin-forms) : énoncer du texte sur l’appareil.
-* [Suivi des versions](version-tracking.md?context=xamarin/xamarin-forms) : obtenir la version de l'application et les numéros de build.
+* [Suivi des versions](version-tracking.md?context=xamarin/xamarin-forms) : effectuer le suivi de la version des applications et des numéros de build.
 * [Vibreur](vibrate.md?context=xamarin/xamarin-forms) : faire vibrer l’appareil.
 
 ## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[Résolution des problèmes](troubleshooting.md?context=xamarin/xamarin-forms)

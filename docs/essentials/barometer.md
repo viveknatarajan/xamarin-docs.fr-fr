@@ -30,7 +30,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité Baromètre fonctionne en appelant les méthodes `Start` et `Stop` qui permettent d’écouter les changements de lecture de la pression du baromètre en kilopascal. Tous les changements sont renvoyés via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
+La fonctionnalité Baromètre fonctionne en appelant les méthodes `Start` et `Stop` qui permettent d’écouter les changements de lecture de la pression du baromètre en kilopascal. Toutes les variations peuvent être écoutées via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
 
 ```csharp
 

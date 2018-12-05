@@ -1,4 +1,4 @@
-﻿---
+---
 title: Xamarin.Essentials Cartes
 description: La classe Cartes dans Xamarin.Essentials permet à une application d’ouvrir l’application de cartes installée à un emplacement spécifique.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33

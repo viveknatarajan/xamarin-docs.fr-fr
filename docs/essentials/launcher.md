@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Xamarin.Essentials : Lanceur Inter-app'
 description: La classe Lanceur dans Xamarin.Essentials permet à une application d’ouvrir un URI par le système.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
@@ -44,7 +44,7 @@ public class LauncherTest
 }
 ```
 
-## <a name="platform-differences"></a>Différences de plateformes
+## <a name="platform-differences"></a>Différences entre les plateformes
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -60,7 +60,7 @@ Plus d’informations sur l’implémentation d’iOS sont disponibles [ici](htt
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Aucunes différences de plateformes.
+Aucune différence entre les plateformes.
 
 -----
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Bien démarrer avec Xamarin.Essentials
 description: Xamarin.Essentials fournit une API inter-plateformes unique qui fonctionne avec n’importe quelle application Android, iOS ou UWP qui est accessible à partir du code partagé, quel que soit le mode de création de l’interface utilisateur.
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
@@ -26,7 +26,7 @@ Xamarin.Essentials prend en charge les plateformes et les systèmes d’exploita
 | Plateforme | Version |
 | --- | --- |
 | Android | 4.4 (API 19) ou version ultérieure |
-| iOS |10.0 ou version ultérieure |       |
+| iOS |10.0 ou version ultérieure |
 | UWP | 10.0.16299.0 ou version ultérieure |
 
 ## <a name="installation"></a>Installation

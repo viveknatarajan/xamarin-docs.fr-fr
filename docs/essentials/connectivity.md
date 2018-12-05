@@ -1,5 +1,5 @@
-﻿---
-title: 'Xamarin.Essentials : Connectivity
+---
+title: 'Xamarin.Essentials : Connectivité'
 description: La classe Connectivité dans Xamarin.Essentials vous permet de surveiller les modifications des conditions réseau de l’appareil, l’accès au réseau actuel et le mode de connexion actuel.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675404"
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials : Connectivity
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials : Connectivité
 
 ![Préversion NuGet](~/media/shared/pre-release.png)
 
@@ -26,7 +26,7 @@ Pour accéder à la fonctionnalité **Connectivité**, la configuration suivante
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-L’autorisation `AccessNetworkState` est obligatoire et doit être configurée dans le projet Android. Vous pouvez l’ajouter des façons suivantes :
+L’autorisation `AccessNetworkState` est obligatoire, et doit être configurée dans le projet Android. Vous pouvez l’ajouter des façons suivantes :
 
 Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **Propriétés** et ajoutez :
 
@@ -42,7 +42,7 @@ Ouvrez le fichier **AndroidManifest.xml** sous le dossier **Propriétés** et aj
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **Manifeste Android** recherchez la zone **Autorisations requises :** et vérifiez l’autorisation **État d’accès réseau**. Cela met automatiquement à jour le fichier **AndroidManifest.xml**.
+Ou cliquez avec le bouton droit sur le projet Android et ouvrez les propriétés du projet. Sous **Manifeste Android** recherchez la zone **Autorisations requises :** et vérifiez l’autorisation **État d’accès réseau**. Cela entraîne la mise à jour automatique du fichier **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
