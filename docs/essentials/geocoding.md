@@ -4,17 +4,15 @@ description: La classe Geocoding de Xamarin.Essentials fournit des API qui perme
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 3202d4ace85c68042425ca5f23641ca7a76a6c7e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.date: 11/04/2018
+ms.openlocfilehash: 0f44f179588c564ac9fa46d42ec18de6d303e239
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528388"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898977"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials : géocodage
-
-![Préversion NuGet](~/media/shared/pre-release.png)
 
 La classe **Geocoding** fournit des API qui permettent de géocoder un repère en coordonnées de position, et d’inverser les coordonnées de géocodage en un repère.
 
@@ -36,10 +34,10 @@ Aucune configuration supplémentaire n’est requise.
 
 Une clé API Bing Maps est nécessaire pour utiliser la fonctionnalité de géocodage. Inscrivez-vous pour obtenir un compte [Bing Maps](https://www.bingmapsportal.com/) gratuit. Sous **Mon compte > Mes clés**, créez une clé, puis indiquez les informations nécessaires en fonction de votre type d’application (qui doit être **Application Windows publique (UWP, 8.x et versions antérieures)** pour les applications UWP).
 
-Très tôt dans la vie de votre application, avant d’appeler une méthode de **géocodage**, définissez la clé API :
+Très tôt dans la vie de votre application, avant d’appeler une méthode de **géocodage**, définissez la clé API (uniquement disponible sur UWP) :
 
 ```csharp
-Geocoding.MapKey = "YOUR-KEY-HERE";
+Platform.MapServiceToken = "YOUR-KEY-HERE";
 ```
 
 -----

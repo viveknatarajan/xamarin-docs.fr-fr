@@ -4,17 +4,15 @@ description: La classe Gyroscope de Xamarin.Essentials vous permet de superviser
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 1d42658160855e260e0d159c58a1f95e7a8c7d4c
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 1e19585e238d66568364be7ccdbdb52d22b04066
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674725"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898509"
 ---
 # <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials : gyroscope
-
-![Préversion NuGet](~/media/shared/pre-release.png)
 
 La classe **Gyroscope** vous permet de superviser le capteur gyroscopique de l’appareil, qui mesure la rotation autour des trois axes principaux de l’appareil.
 
@@ -30,7 +28,7 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-La fonctionnalité de gyroscope appelle les méthodes `Start` et `Stop` pour écouter les changements relatifs au gyroscope. Toutes les variations peuvent être écoutées via l’événement `ReadingChanged`. Voici un exemple d’utilisation :
+La fonctionnalité de gyroscope appelle les méthodes `Start` et `Stop` pour écouter les changements relatifs au gyroscope. Tous les changements sont renvoyés via l’événement `ReadingChanged` en rad/s. Voici un exemple d’utilisation :
 
 ```csharp
 
@@ -48,7 +46,7 @@ public class GyroscopeTest
     void Gyroscope_ReadingChanged(object sender, GyroscopeChangedEventArgs e)
     {
         var data = e.Reading;
-        // Process Angular Velocity X, Y, and Z
+        // Process Angular Velocity X, Y, and Z reported in rad/s
         Console.WriteLine($"Reading: X: {data.AngularVelocity.X}, Y: {data.AngularVelocity.Y}, Z: {data.AngularVelocity.Z}");
     }
 

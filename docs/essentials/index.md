@@ -4,17 +4,15 @@ description: Ce document contient des liens vers les documentations concernant X
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/30/2018
-ms.openlocfilehash: b81102c6c0e0d65aaa46b2d32e34db536ab58e03
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.date: 11/04/2018
+ms.openlocfilehash: 0f4271e5c0c9de53a83a840f7fe0a83b594a06fa
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "39361000"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898639"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
-
-![Préversion NuGet](~/media/shared/pre-release.png)
 
 Xamarin.Essentials fournit aux développeurs des API inter-plateformes pour leurs applications mobiles.
 
@@ -35,7 +33,6 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [Presse-papiers](clipboard.md?context=xamarin/xamarin-forms) : définir ou lire rapidement et facilement du texte dans le Presse-papiers.
 * [Boussole](compass.md?context=xamarin/xamarin-forms) : analyser les modifications dans la boussole.
 * [Connectivité](connectivity.md?context=xamarin/xamarin-forms) : vérifier l’état de la connectivité et détecter les modifications.
-* [Transfert de données](data-transfer.md?context=xamarin/xamarin-forms) : envoyer du texte et les URI de sites web vers d’autres applications.
 * [Informations d’affichage de l’appareil](device-display.md?context=xamarin/xamarin-forms) : obtenir l’orientation et les métriques de l’écran de l’appareil.
 * [Informations sur l’appareil](device-information.md?context=xamarin/xamarin-forms) : découvrir l’appareil en toute simplicité.
 * [E-mail](email.md?context=xamarin/xamarin-forms) : envoyer facilement des e-mails.
@@ -51,10 +48,9 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [Ouvrir le navigateur](open-browser.md?context=xamarin/xamarin-forms) : ouvrir rapidement et facilement un navigateur sur un site web spécifique.
 * [Capteur d’orientation](orientation-sensor.md?context=xamarin/xamarin-forms) : récupérer l’orientation de l’appareil dans un espace tridimensionnel.
 * [Numéroteur téléphonique](phone-dialer.md?context=xamarin/xamarin-forms) : ouvrir le Numéroteur téléphonique.
-* [Alimentation](power.md?context=xamarin/xamarin-forms) : obtenir l’état de l’économiseur d’énergie de l’appareil.
 * [Préférences](preferences.md?context=xamarin/xamarin-forms) : ajouter rapidement et facilement des préférences persistantes.
-* [Verrouillage d’écran](screen-lock.md?context=xamarin/xamarin-forms) : maintenir l’écran de l’appareil en éveil.
 * [Stockage sécurisé](secure-storage.md?context=xamarin/xamarin-forms) : stocker des données en toute sécurité.
+* [Partager](share.md?context=xamarin/xamarin-forms) : envoyer du texte et des URI de sites web à d’autres applications.
 * [SMS](sms.md?context=xamarin/xamarin-forms) : créer un message SMS à envoyer.
 * [Synthèse vocale](text-to-speech.md?context=xamarin/xamarin-forms) : énoncer du texte sur l’appareil.
 * [Suivi des versions](version-tracking.md?context=xamarin/xamarin-forms) : effectuer le suivi de la version des applications et des numéros de build.

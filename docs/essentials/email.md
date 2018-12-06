@@ -4,17 +4,15 @@ description: La classe Email de Xamarin.Essentials permet à une application d�
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 3c2958cc4572c2f87c46c9edc5fc194284658f24
-ms.sourcegitcommit: 704d4cfd418c17b0e85a20c33a16d2419db0be71
+ms.date: 11/04/2018
+ms.openlocfilehash: d7d2536fca32fe3ae9f9692031645c42edb4ea61
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51691748"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898658"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials : e-mail
-
-![Préversion NuGet](~/media/shared/pre-release.png)
 
 La classe **Email** permet à une application d’ouvrir l’application de messagerie par défaut en utilisant des informations spécifiques, notamment l’objet, le corps et les destinataires (À, CC, CCI).
 
@@ -66,7 +64,7 @@ public class EmailTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Aucune différence entre les plateformes.
+Les clients de messagerie pour Android ne prennent pas tous en charge `Html`, car il n’y a aucun moyen de le détecter. Nous vous recommandons d’utiliser `PlainText` pour envoyer des e-mails.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 

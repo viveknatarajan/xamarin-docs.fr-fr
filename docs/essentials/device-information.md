@@ -4,17 +4,15 @@ description: Ce document décrit la classe DeviceInfo de Xamarin.Essentials, qui
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 530b04446703d78452357b2c9f9089e59ebf6e6c
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: b78c04d30871552f9b1e18a42c871e24464c4802
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674811"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898951"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials : informations sur l’appareil
-
-![Préversion NuGet](~/media/shared/pre-release.png)
 
 La classe **DeviceInfo** fournit des informations sur l’appareil où l’application s’exécute.
 
@@ -57,22 +55,23 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[Plateformes](xref:Xamarin.Essentials.DeviceInfo.Platforms)
 
-`DeviceInfo.Platform` est mis en corrélation avec une chaîne constante mappée au système d’exploitation. Vous pouvez vérifier les valeurs avec la classe `Platforms` :
+`DeviceInfo.Platform` est mis en corrélation avec une chaîne constante mappée au système d’exploitation. Vous pouvez vérifier les valeurs avec le struct `DevicePlatform` :
 
-- **DeviceInfo.Platforms.iOS** - iOS
-- **DeviceInfo.Platforms.Android** - Android
-- **DeviceInfo.Platforms.UWP** - UWP
-- **DeviceInfo.Platforms.Unsupported** - Non pris en charge
+- **DevicePlatform.iOS** – iOS
+- **DevicePlatform.Android** – Android
+- **DevicePlatform.UWP** – UWP
+- **DevicePlatform.Unknown** – Inconnu
 
 ## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idiomes](xref:Xamarin.Essentials.DeviceInfo.Idioms)
 
-`DeviceInfo.Idiom` est mis en corrélation avec une chaîne constante mappée au type d’appareil sur lequel l’application s’exécute. Vous pouvez vérifier les valeurs avec la classe `Idioms` :
+`DeviceInfo.Idiom` est mis en corrélation avec une chaîne constante mappée au type d’appareil sur lequel l’application s’exécute. Vous pouvez vérifier les valeurs avec le struct `DeviceIdiom` :
 
-- **DeviceInfo.Idioms.Phone** - Téléphone
-- **DeviceInfo.Idioms.Tablet** - Tablette
-- **DeviceInfo.Idioms.Desktop** - Poste de travail
-- **DeviceInfo.Idioms.TV** - TV
-- **DeviceInfo.Idioms.Unsupported** - Non pris en charge
+- **DeviceIdiom.Phone** – Téléphone
+- **DeviceIdiom.Tablet** – Tablette
+- **DeviceIdiom.Desktop** – Ordinateur de bureau
+- **DeviceIdiom.TV** – TV
+- **DeviceIdiom.Watch** – Espion
+- **DeviceIdiom.Unknown** – Inconnu
 
 ## <a name="device-type"></a>Type d'appareil
 

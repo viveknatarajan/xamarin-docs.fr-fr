@@ -4,17 +4,15 @@ description: Ce document décrit la classe Compass de Xamarin.Essentials, qui vo
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 51812f9b4f88d77bf553a26ef3a6802239e338e0
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 55dd10bff21b7d082b225277d0100232d5efd4f3
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675495"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898782"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials : boussole
-
-![Préversion NuGet](~/media/shared/pre-release.png)
 
 La classe **Compass** vous permet de superviser le cap du nord magnétique de l’appareil.
 
@@ -86,13 +84,13 @@ Sachez que l’exécution simultanée de plusieurs capteurs à partir de votre a
 
 ## <a name="low-pass-filter"></a>Filtre passe-bas
 
-En raison du mode de mise à jour et de calcul des valeurs de la boussole Android, il peut s’avérer nécessaire d’affiner ces valeurs. Vous pouvez appliquer un _filtre passe-bas_ qui fait la moyenne des valeurs de sinus et de cosinus des angles, en définissant la propriété `ApplyLowPassFilter` de la classe `Compass` :
+En raison du mode de mise à jour et de calcul des valeurs de la boussole Android, il peut s’avérer nécessaire d’affiner ces valeurs. Vous pouvez appliquer un _filtre passe-bas_ qui fait la moyenne des valeurs de sinus et de cosinus des angles, en utilisant la surcharge de méthode `Start` qui accepte le paramètre `bool applyLowPassFilter` :
 
 ```csharp
-Compass.ApplyLowPassFilter = true;
+Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
 ```
 
-Cela s’applique uniquement à la plateforme Android. Vous trouverez plus d’informations [ici](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
+Il est appliqué uniquement sur la plateforme Android et le paramètre est ignoré sur iOS et UWP.  Vous trouverez plus d’informations [ici](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
 
 --------------
 

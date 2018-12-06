@@ -4,17 +4,15 @@ description: La classe Navigateur dans Xamarin.Essentials permet à une applicat
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: a68837ac4447dabcf52a1d1b27913adf80b4cbd7
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: ea2a10c11a77fcb2b3ce142d176522ebf0310725
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675391"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898870"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials : Broswer
-
-![Préversion NuGet](~/media/shared/pre-release.png)
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials : Navigateur
 
 La classe **Browser** permet à une application d’ouvrir un lien web dans le navigateur préféré du système optimisé ou le navigateur externe.
 
@@ -36,12 +34,14 @@ La fonctionnalité Browser fonctionne en appelant la méthode `OpenAsync` avec `
 
 public class BrowserTest
 {
-    public async Task OpenBrowser(Uri uri)
+    public async Task<bool> OpenBrowser(Uri uri)
     {
-        await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        return await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 }
 ```
+
+Cette méthode retourne des résultats une fois que le navigateur a été _lancé_ et pas nécessairement quand il est _fermé_ par l’utilisateur.  Le résultat `bool` indique si le lancement a réussi ou non.
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
