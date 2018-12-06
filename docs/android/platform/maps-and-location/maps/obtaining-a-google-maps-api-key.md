@@ -126,7 +126,7 @@ Une fois que vous avez récupéré l’empreinte SHA-1 du magasin de clés de si
 
    [![Cliquez sur le bouton Activer dans la section tableau de bord](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-À ce stade, le projet d’API a été créé et l’API Android de Google Maps v2 a été ajouté à ce dernier. Toutefois, vous ne pouvez pas utiliser cette API dans votre projet jusqu'à ce que vous créez des informations d’identification pour celle-ci. La section suivante explique comment créer une clé d’API et de la liste blanche une application Xamarin.Android afin qu’il est autorisé à utiliser cette clé.
+À ce stade, le projet d’API a été créé et l’API Android de Google Maps v2 a été ajouté à ce dernier. Toutefois, vous ne pouvez pas utiliser cette API dans votre projet jusqu'à ce que vous créez des informations d’identification pour celle-ci. La section suivante explique comment créer une clé d’API et de la liste verte une application Xamarin.Android afin qu’il est autorisé à utiliser cette clé.
 
 ## <a name="obtaining-the-api-key"></a>Obtention de la clé d’API
 
