@@ -1,6 +1,6 @@
 ---
-title: Principes de base Application Xamarin.Forms
-description: Explorer les principes fondamentaux du développement d’applications Xamarin.Forms, y compris tous les concepts principaux requis via à finitions telles que l’accessibilité et la localisation.
+title: Notions de base des applications Xamarin.Forms
+description: Exploration des principes fondamentaux du développement d’applications Xamarin.Forms, y compris tous les concepts principaux nécessaires, jusqu’aux touches finales comme l’accessibilité et la localisation.
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
@@ -9,12 +9,12 @@ ms.author: dabritch
 ms.date: 02/28/2017
 ms.openlocfilehash: 515dbd2683619cfcfb7a6c8ecac6bc147265ef7d
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38995610"
 ---
-# <a name="xamarinforms-application-fundamentals"></a>Principes de base Application Xamarin.Forms
+# <a name="xamarinforms-application-fundamentals"></a>Notions de base des applications Xamarin.Forms
 
 ## <a name="accessibilityaccessibilityindexmd"></a>[Accessibilité](accessibility/index.md)
 
@@ -22,63 +22,63 @@ Conseils pour incorporer des fonctionnalités accessibles (par exemple, la prise
 
 ## <a name="app-classapplication-classmd"></a>[Classe d’application](application-class.md)
 
-Le `Application` classe est le point de départ pour Xamarin.Forms : chaque application doit implémenter une sous-classe `App` pour définir la page initiale. Il fournit également la `Properties` collection pour le stockage de données simple. Elle peut être définie en c# ou XAML.
+La classe `Application` est le point de départ de Xamarin.Forms : chaque application doit implémenter une sous-classe `App` pour définir la page initiale. Elle fournit aussi la collection `Properties` pour le stockage simple des données. Elle peut être définie en C# ou XAML.
 
 ## <a name="app-lifecycleapp-lifecyclemd"></a>[Cycle de vie d’application](app-lifecycle.md)
 
-Le `Application` classe `OnStart`, `OnSleep`, et `OnResume` méthodes, ainsi que les événements de navigation modale, vous permettent de gérer les événements de cycle de vie d’application avec du code personnalisé.
+Les méthodes `OnStart`, `OnSleep`, et `OnResume` de la classe `Application`, ainsi que les événements de navigation modale, vous permettent de gérer les événements de cycle de vie des applications avec du code personnalisé.
 
 ## <a name="behaviorsbehaviorsindexmd"></a>[Comportements](behaviors/index.md)
 
-Contrôles d’interface utilisateur peuvent facilement être étendues sans sous-classement à l’aide de comportements pour ajouter des fonctionnalités.
+Les contrôles d’interface utilisateur peuvent facilement être étendus sans utilisation de sous-classes à l’aide de comportements qui ajoutent des fonctionnalités.
 
 ## <a name="custom-rendererscustom-rendererindexmd"></a>[Renderers personnalisés](custom-renderer/index.md)
 
-Les convertisseurs personnalisés permettent aux développeurs 'override' le rendu par défaut des contrôles Xamarin.Forms pour personnaliser leur apparence et leur comportement sur chaque plateforme (à l’aide de kits de développement natifs si vous le souhaitez).
+Les convertisseurs personnalisés permettent aux développeurs de « remplacer » le rendu par défaut des contrôles Xamarin.Forms pour personnaliser leur apparence et leur comportement sur chaque plateforme (avec des SDK natifs s’ils le souhaitent).
 
 ## <a name="data-bindingdata-bindingindexmd"></a>[Liaison de données](data-binding/index.md)
 
-Liaison de données lie les propriétés de deux objets, ce qui permet des modifications dans une propriété à automatiquement répercutées dans l’autre propriété. Liaison de données fait partie intégrante de Model-View-ViewModel ([MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md)) architecture de l’application.
+La liaison de données lie les propriétés de deux objets pour que les changements d’une propriété soient automatiquement répercutés sur l’autre propriété. La liaison de données fait partie intégrante de l’architecture d’application modèle-vue-vue modèle ([MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md)).
 
 ## <a name="dependency-servicedependency-serviceindexmd"></a>[Service de dépendance](dependency-service/index.md)
 
-Le `DependencyService` fournit un localisateur simple afin que vous puissiez aux interfaces de code dans votre code partagé et fournissent des implémentations spécifiques à la plateforme qui sont résolues automatiquement, ce qui vous permet de référencer des fonctionnalités spécifiques à la plateforme dans Xamarin.Forms.
+Le `DependencyService` fournit un localisateur simple pour vous permettre de coder dans des interfaces dans votre code partagé, et fournit des implémentations propres à la plateforme qui sont résolues automatiquement pour simplifier la référence des fonctionnalités propres à la plateforme dans Xamarin.Forms.
 
 ## <a name="effectseffectsindexmd"></a>[Effets](effects/index.md)
 
-Les effets permettent les contrôles natifs sur chaque plateforme pour être personnalisées et sont généralement utilisés pour les styles de petites modifications.
+Les effets permettent de personnaliser les contrôles natifs de chaque plateforme et sont généralement utilisés pour les petits changements de style.
 
 ## <a name="filesfilesmd"></a>[Fichiers](files.md)
 
-Gestion avec Xamarin.Forms de fichiers est possible à l’aide de code dans une bibliothèque .NET Standard, ou en utilisant des ressources incorporées.
+La gestion de fichiers avec Xamarin.Forms est possible à l’aide de code dans une bibliothèque .NET Standard, ou en utilisant des ressources incorporées.
 
 ## <a name="gesturesgesturesindexmd"></a>[Gestes](gestures/index.md)
 
-Xamarin.Forms [ `GestureRecognizer` ](xref:Xamarin.Forms.GestureRecognizer) tap, pincement et des mouvements de panoramique prend en charge la classe sur les contrôles d’interface utilisateur.
+La classe Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) prend en charge les appuis, les pincements et les mouvements panoramiques sur les contrôles d’interface utilisateur.
 
 ## <a name="localizationlocalizationindexmd"></a>[Localisation](localization/index.md)
 
-L’infrastructure de localisation .NET intégrée peut être utilisé pour générer des applications multilingues multiplateforme avec Xamarin.Forms.
+Le framework de localisation .NET intégré peut être utilisé pour créer des applications multilingues multiplateformes avec Xamarin.Forms.
 
 ## <a name="local-databasesdatabasesmd"></a>[Bases de données locales](databases.md)
 
-Xamarin.Forms prend en charge les applications pilotées par base de données en utilisant le moteur de base de données SQLite, ce qui rend possible charger et enregistrer des objets dans le code partagé.
+Xamarin.Forms prend en charge les applications pilotées par base de données à l’aide du moteur de base de données SQLite, ce qui permet de charger et d’enregistrer des objets dans du code partagé.
 
 ## <a name="messaging-centermessaging-centermd"></a>[Centre de messagerie](messaging-center.md)
 
-Xamarin.Forms `MessagingCenter` permet d’afficher des modèles et autres composants de communiquer avec sans avoir rien à savoir sur eux en dehors d’un contrat de Message simple.
+Le `MessagingCenter` de Xamarin.Forms permet aux modèles de vue et aux autres composants de communiquer sans avoir aucun lien entre eux autre qu’un simple contrat de message.
 
 ## <a name="navigationnavigationindexmd"></a>[Navigation](navigation/index.md)
 
-Xamarin.Forms fournit un nombre d’expériences de navigation de page différente, selon le `Page` en cours d’utilisation.
+Xamarin.Forms propose plusieurs expériences différentes de navigation dans les pages, selon le type de `Page` utilisé.
 
 ## <a name="templatestemplatesindexmd"></a>[Modèles](templates/index.md)
 
-Modèles de contrôle permettent de facilement des thèmes et re-theme pages d’application lors de l’exécution, tandis que les modèles de données offrent la possibilité de définir la présentation des données sur les contrôles pris en charge.
+Les modèles de contrôle permettent de facilement créer et recréer des thèmes pour les pages d’application au moment de l’exécution, tandis que les modèles de données offrent la possibilité de définir la présentation des données sur les contrôles pris en charge.
 
 ## <a name="triggerstriggersmd"></a>[Déclencheurs](triggers.md)
 
-Mettre à jour des contrôles en répondant aux modifications apportées aux propriétés et événements dans XAML.
+Mettent à jour les contrôles en répondant aux changements de propriété et aux événements en XAML.
 
 
 ## <a name="related-links"></a>Liens associés
