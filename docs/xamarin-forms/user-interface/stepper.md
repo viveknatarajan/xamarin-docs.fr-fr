@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
-ms.openlocfilehash: 53485d0d948f31b69f74b6933d05c14f69fa64c0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111507"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052204"
 ---
 # <a name="xamarinforms-stepper"></a>Exécution pas à pas de Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
 
 _Utiliser une exécution pas à pas pour la sélection d’une valeur numérique à partir d’une plage de valeurs._
 

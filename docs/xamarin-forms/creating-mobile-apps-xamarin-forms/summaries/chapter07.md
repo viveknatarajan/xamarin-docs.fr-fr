@@ -7,16 +7,18 @@ ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1dc4fe12d3ca23a9ca87c3be7819c970683db469
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: ce4dde3716176daf826678809339afb84c25d84a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563496"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052567"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Résumé du chapitre 7. XAML et code
 
-> [!NOTE] 
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
+
+> [!NOTE]
 > Notes sur cette page indiquent des zones où Xamarin.Forms est différente de la matière présentée dans le livre.
 
 Xamarin.Forms prend en charge un langage de balisage basé sur XML appelé l’Extensible Application Markup Language ou le XAML (prononcé « zammel »). XAML offre une alternative à c# dans la définition de la disposition de l’interface utilisateur d’une application Xamarin.Forms et dans la définition des liaisons entre les éléments d’interface utilisateur et les données sous-jacentes.
@@ -39,7 +41,7 @@ Parfois, une propriété doit être définie à un objet qui ne peuvent pas êtr
 
 Une bibliothèque de classes Portable Xamarin.Forms peut contenir une page XAML quand il est tout d’abord créé, ou vous pouvez ajouter une page XAML à un projet existant. Dans la boîte de dialogue Ajouter un nouvel élément, choisissez l’élément qui fait référence à une page XAML, ou `ContentPage` et XAML. (Pas un `ContentView`.)
 
-> [!NOTE] 
+> [!NOTE]
 > Options de Visual Studio ont été modifiés depuis la rédaction de ce chapitre.
 
 Deux fichiers sont créés : un fichier XAML avec la .xaml d’extension de nom de fichier et un fichier c# avec l’extension. xaml.cs. Le fichier c# est souvent appelé le *code-behind* du fichier XAML. Le fichier code-behind est une définition de classe partielle qui dérive de `ContentPage`. Au moment de la génération, le XAML est analysé et une autre définition de classe partielle est générée pour la même classe. Cette classe générée inclut une méthode nommée `InitializeComponent` qui est appelée à partir du constructeur du fichier code-behind.

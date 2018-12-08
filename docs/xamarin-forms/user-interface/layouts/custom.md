@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 0c16fd3930926a05ed7796391962d0fc8996dc96
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a1027b1fd738c80cf5917effc66957f77a337ecf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995373"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054565"
 ---
 # <a name="creating-a-custom-layout"></a>Création d’une disposition personnalisée
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CustomLayout/WrapLayout/)
 
 _Xamarin.Forms définit quatre classes de mise en page – StackLayout, DispositionAbsolue, RelativeLayout et grille, et chacune dispose ses enfants d’une manière différente. Toutefois, il est parfois nécessaire organiser le contenu de la page à l’aide d’une disposition non fournie par Xamarin.Forms. Cet article explique comment écrire une classe de disposition personnalisée et illustre une classe de WrapLayout orientation accents qui réorganise ses enfants horizontalement sur la page et encapsule ensuite afficher les enfants suivants à des lignes supplémentaires._
 

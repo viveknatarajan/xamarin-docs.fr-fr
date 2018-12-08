@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 175c7f17d70c1aa6b8d6bf388cc24fd0f97e7f00
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: dbcb86c6076d717966639a8c6117bc59c17e86bf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617642"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050181"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Reconnaissance vocale à l’aide de l’API reconnaissance vocale de Microsoft
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
 
 _L’API de reconnaissance vocale de Microsoft est une API basée sur le cloud qui fournit des algorithmes pour traiter la langue parlée. Cet article explique comment utiliser l’API Microsoft Speech Recognition REST pour convertir l’audio en texte dans une application Xamarin.Forms._
 

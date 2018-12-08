@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 084c0c292cb7e527d74c77937bc69f76fc8c0658
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114314"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059754"
 ---
 # <a name="xamarinforms-device-class"></a>Classe de périphérique de Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
 
 Le [ `Device` ](xref:Xamarin.Forms.Device) classe contient un nombre de propriétés et méthodes pour aider les développeurs de personnaliser la disposition et les fonctionnalités sur une base par plateforme.
 
@@ -113,7 +115,7 @@ Vous pouvez également le `OnIdiom` extension de balisage peut être utilisée d
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
-Le [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valeur récupère un [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valeur d’énumération qui représente le sens du flux actuel utilisé par l’appareil. Direction du flux est la direction dans laquelle les éléments d’interface utilisateur sur la page sont analysés par le œil. Ces valeurs sont les suivantes :
+Le [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valeur récupère un [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valeur d’énumération qui représente le sens du flux actuel utilisé par l’appareil. Le sens du flux est la direction dans laquelle les éléments d’interface utilisateur sur la page sont analysés par l’œil. Ces valeurs sont les suivantes :
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
@@ -215,4 +217,4 @@ Xamarin.Forms `Device` classe permet de contrôler les mises en page et les fonc
 
 - [Exemple d’appareil](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
 - [Exemple de styles](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [APPAREIL](xref:Xamarin.Forms.Device)
+- [Appareil](xref:Xamarin.Forms.Device)

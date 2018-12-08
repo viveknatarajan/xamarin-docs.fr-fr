@@ -7,14 +7,16 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 3c0ee238e0fc72aaea2f73e11317fea7b7a63fb7
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 4801aa12acf8eca2384cc5b41d677f7cb0bdd90d
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171493"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052049"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp bruit et la composition
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Graphismes vectoriels simple ont tendance à être non naturelles. Les lignes droites, des courbes lissées et des couleurs unies ne se présenter comme les imperfections des objets du monde réel. Lorsque vous travaillez sur les graphiques générés par l’ordinateur pour le film 1982 _Tron_, authentique scientifique Ken Perlin a commencé à développer des algorithmes qui permettant de donner ces images textures plus réalistes processus aléatoire. En 1997, Ken Perlin a gagné une récompense Academy pour une prime en technique. Son travail est venu à être connu comme un bruit de Perlin, et il est pris en charge dans SkiaSharp. Voici un exemple :
 

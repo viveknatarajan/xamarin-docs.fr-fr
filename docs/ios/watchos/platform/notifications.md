@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 53ec1b0777827e7f4faf81110507787c65dfaf63
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f5961987e28c09ad703988083f1b127cd7b9dbd0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103931"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057325"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS Notifications dans Xamarin
 
@@ -126,7 +126,7 @@ Il est également possible d’utiliser le [ligne de commande](~/ios/watchos/tro
 
 ### <a name="example-notification-payload"></a>Exemple charge utile de Notification
 
-Dans le [espion Kit catalogue](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/) exemple il est un exemple de fichier charge utile JSON **NotificationPayload.json** (répertoriés ci-dessous).
+Dans le [espion Kit catalogue](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) exemple il est un exemple de fichier charge utile JSON **NotificationPayload.json** (répertoriés ci-dessous).
 
 ```csharp
 {
@@ -152,5 +152,5 @@ Dans le [espion Kit catalogue](https://developer.xamarin.com/samples/monotouch/W
 ## <a name="related-links"></a>Liens associés
 
 - [WatchNotifications (notifications locales) (exemple)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (exemple)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [WatchKitCatalog (exemple)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [Documentation de Notifications de Kit d’espion d’Apple](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

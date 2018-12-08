@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 4a1393e60422313c781010c0d70a1a85eb671d34
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8587cade1c5b4a6882f21603ee869f94f38fd04a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112390"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058832"
 ---
 # <a name="native-views-in-c"></a>Vues natives en c#
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeEmbedding/)
 
 _Vues natives à partir d’iOS, Android et UWP peuvent être référencées directement à partir des pages Xamarin.Forms créées à l’aide de c#. Cet article montre comment ajouter des vues natives à une disposition de Xamarin.Forms créée à l’aide de c# et comment remplacer la disposition des vues personnalisées pour corriger leur utilisation de l’API de mesure._
 

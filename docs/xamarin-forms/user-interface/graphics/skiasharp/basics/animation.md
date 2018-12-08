@@ -7,14 +7,16 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 1357f0be1ba4c15c4046e92f8556c957b9c4bd46
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8a533dd48acf698667044d600338555b6c00a0ae
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122242"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057625"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animation de base dans SkiaSharp
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Découvrez comment animer vos graphiques SkiaSharp_
 

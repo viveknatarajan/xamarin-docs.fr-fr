@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 53c5f17672cc46ef097e979154a8911f8cdaef63
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171714"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054124"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilisation des Extensions de balisage XAML
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 Extensions de balisage XAML vous aider à améliorer la puissance et la flexibilité de XAML en autorisant les attributs de l’élément à définir à partir de diverses sources. Plusieurs extensions de balisage XAML font partie de la spécification de XAML 2009. Ceux-ci s’affichent dans les fichiers XAML avec l’usage `x` préfixe d’espace de noms et sont communément par ce préfixe. Cet article aborde les extensions de balisage suivant :
 

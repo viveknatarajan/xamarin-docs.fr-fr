@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: 1d9f07a089eabedf07bef49c9815fe7e93128f09
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3f68b7c1ef9603d4a6d21e0c00a4cc8f4f7d818a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997254"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058523"
 ---
 # <a name="creating-platform-specifics"></a>Création de caractéristiques de la plateforme
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
 
 _Éditeurs peuvent créer leurs propres caractéristiques de la plateforme avec des effets. Un effet fournit les fonctionnalités spécifiques, ce qui sont ensuite exposée via un spécifique à la plateforme. Le résultat est un effet plus facilement consommable via XAML et un code fluent API. Cet article montre comment exposer un effet à l’aide spécifique à la plateforme._
 

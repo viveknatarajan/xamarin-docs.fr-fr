@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: d83b2f249bb0afe4257544d6da731dbc9ac3e317
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: ac5ad85f7bdd08b0d071e7c333c959e94dcbc53f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170934"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057485"
 ---
 # <a name="xamarinforms-slider"></a>Curseur de Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
 
 _Utilisez un curseur de sélection à partir d’une plage de valeurs continues._
 

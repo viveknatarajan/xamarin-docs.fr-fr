@@ -7,14 +7,18 @@ ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 5bd063f82cc1d09c6b2e9100429889a23a2eda7f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24c33c61002130fe645bba54c307394bbc2e0656
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111511"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060376"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>Mosaïque de bitmap SkiaSharp
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
 
 Comme vous l’avez vu dans les deux précédents articles, le [ `SKShader` ](xref:SkiaSharp.SKShader) classe peut créer des dégradés linéaires ou circulaires. Cet article se concentre sur la `SKShader` objet qui utilise une image bitmap à la vignette d’une zone. L’image bitmap peut être répété horizontalement et verticalement, soit dans son orientation d’origine ou vous pouvez également cliquer retournée horizontalement et verticalement. La symétrie permet d’éviter les discontinuités entre les vignettes :
 

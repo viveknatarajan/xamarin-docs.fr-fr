@@ -7,14 +7,16 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: ebd4db28b2c20bd2b9e1d93e03dd101ebc5da663
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131683"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055035"
 ---
 # <a name="porter-duff-blend-modes"></a>Modes de fusion de porter-Duff
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Les modes de blend Duff de Porter sont nommés d’après les Thomas Porter et Tom Duff, qui a développé un algèbre de la composition lors de l’utilisation pour cinématographique Lucasfilm. Leur livre [ _Images numériques de composition_ ](https://graphics.pixar.com/library/Compositing/paper.pdf) a été publié dans le numéro de juillet 1984 de _infographie_, pages de 253 à 259. Ces modes de fusion sont essentielles pour la composition, qui est rassemblant les différentes images dans une scène composite :
 

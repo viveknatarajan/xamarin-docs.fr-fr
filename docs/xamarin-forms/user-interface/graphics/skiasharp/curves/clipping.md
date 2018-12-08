@@ -1,5 +1,5 @@
 ---
-title: Détourage avec chemins d’accès et régions
+title: Détourage avec tracés et régions
 description: Cet article explique comment utiliser des chemins d’accès SkiaSharp aux graphiques de clip à des zones spécifiques et pour créer des zones et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,16 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 87f1ad3956bdb43c82a7ab57ea9171e9a28dd558
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 4f8b6b7ea0db8d46886c3391f1aef3ba20a5be44
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615286"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057442"
 ---
-# <a name="clipping-with-paths-and-regions"></a>Détourage avec chemins d’accès et régions
+# <a name="clipping-with-paths-and-regions"></a>Détourage avec tracés et régions
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Utiliser des chemins d’accès aux images à des zones spécifiques et pour créer des zones_
 

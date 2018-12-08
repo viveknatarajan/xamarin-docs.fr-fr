@@ -7,14 +7,16 @@ ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 3726a93ccf43fd9a2afdc2c46bb63e0f6ef7ad51
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 399f19ba4ec1ed8494e8269fc4cd0682b466a31a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615247"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056553"
 ---
 # <a name="the-rotate-transform"></a>La transformation de rotation
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Explorez les effets et les animations possibles avec la transformation de rotation de SkiaSharp_
 

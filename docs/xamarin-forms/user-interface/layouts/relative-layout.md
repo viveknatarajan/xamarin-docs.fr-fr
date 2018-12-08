@@ -1,44 +1,46 @@
 ---
 title: Xamarin.Forms RelativeLayout
-description: Cet article explique comment utiliser la classe RelativeLayout de Xamarin.Forms pour créer des interfaces utilisateur que n’importe quelle taille d’écran à l’échelle.
+description: Cet article explique comment utiliser la classe de RelativeLayout de Xamarin.Forms pour créer des interfaces utilisateur qui n’importe quelle taille d’écran à l’échelle.
 ms.prod: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 712092e58a7a7358ba1fa808614822c7988e6105
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 4bd4524f4bf84327571609c8fb43dec164c9db56
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245053"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061224"
 ---
 # <a name="xamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
-`RelativeLayout` est utilisé pour la position et les vues de taille par rapport aux propriétés des vues frères ou de mise en page. Contrairement aux `AbsoluteLayout`, `RelativeLayout` n’a pas le concept de l’ancre de déplacement et ne dispose pas des fonctions de positionnement des éléments par rapport à bas ou les bords droit de la disposition. `RelativeLayout` prend en charge de positionnement des éléments en dehors de ses propres limites.
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
-[![](relative-layout-images/layouts-sml.png "Les dispositions de Xamarin.Forms")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms dispositions")
+`RelativeLayout` est utilisé pour la position et les vues de taille par rapport aux propriétés des vues frère ou de mise en page. Contrairement aux `AbsoluteLayout`, `RelativeLayout` n’a pas le concept de l’ancrage du déplacement et n’a pas de fonctionnalités pour positionner des éléments par rapport à bas ou bords droits de la disposition. `RelativeLayout` prend en charge de positionnement des éléments en dehors de ses propres limites.
+
+[![](relative-layout-images/layouts-sml.png "Dispositions Xamarin.Forms")](relative-layout-images/layouts.png#lightbox "dispositions Xamarin.Forms")
 
 ## <a name="purpose"></a>Objectif
 
-`RelativeLayout` peut être utilisée pour placer des vues sur l’écran par rapport à la disposition générale ou à d’autres vues.
+`RelativeLayout` peut être utilisé pour positionner des vues sur l’écran par rapport à la disposition générale ou à d’autres vues.
 
-![](relative-layout-images/flag.png "Exploration du RelativeLayout")
+![](relative-layout-images/flag.png "Exploration de RelativeLayout")
 
 ## <a name="usage"></a>Utilisation
 
-### <a name="understanding-constraints"></a>Présentation des contraintes
+### <a name="understanding-constraints"></a>Contraintes de présentation
 
-Positionnement et le redimensionnement d’une vue dans un `RelativeLayout` est effectuée avec les contraintes. Une expression de contrainte peut inclure les informations suivantes :
+Positionnement et dimensionnement d’une vue dans un `RelativeLayout` s’effectue avec des contraintes. Une expression de contrainte peut inclure les informations suivantes :
 
-- **Type** &ndash; si la contrainte est par rapport au parent ou à une autre vue.
+- **Type** &ndash; si la contrainte est relatif au parent ou à un autre affichage.
 - **Propriété** &ndash; la propriété à utiliser comme base pour la contrainte.
 - **Facteur** &ndash; le facteur à appliquer à la valeur de propriété.
-- **Constante** &ndash; la valeur à utiliser en tant que décalage de la valeur.
-- **ElementName** &ndash; le nom de la vue de la contrainte est associée.
+- **Constante** &ndash; la valeur à utiliser en tant qu’offset de la valeur.
+- **ElementName** &ndash; le nom de la vue de la contrainte est relative.
 
-En XAML, les contraintes sont exprimées sous forme `ConstraintExpression`s. Prenons l'exemple suivant :
+Dans XAML, les contraintes sont exprimées sous forme `ConstraintExpression`s. Prenons l'exemple suivant :
 
 ```xaml
 <BoxView Color="Green" WidthRequest="50" HeightRequest="50"
@@ -54,7 +56,7 @@ En XAML, les contraintes sont exprimées sous forme `ConstraintExpression`s. Pre
                              Constant=-100}" />
 ```
 
-En c#, les contraintes sont exprimées un peu différemment, à l’aide de fonctions au lieu des expressions sur la vue. Les contraintes sont spécifiés en tant qu’arguments à la mise en page `Add` méthode :
+Dans C#, contraintes sont exprimées en un peu différemment, à l’aide de fonctions plutôt que des expressions sur la vue. Les contraintes sont spécifiées en tant qu’arguments à la mise en page `Add` méthode :
 
 ```csharp
 layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
@@ -70,17 +72,17 @@ layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
 
 Notez les aspects suivants de la disposition ci-dessus :
 
-- Le `x` et `y` les contraintes sont spécifiées avec leurs contraintes.
-- En c#, les contraintes relatives sont définies en tant que fonctions. Comme les concepts `Factor` ne sont pas, mais peuvent être implémentées manuellement.
-- La zone de `x` coordonnée est définie en tant que la moitié de la largeur de la page parente, -100.
-- La zone de `y` coordonnée est définie en tant que la moitié de la hauteur de la page parente, -100.
+- Le `x` et `y` les contraintes sont spécifiées avec leurs propres contraintes.
+- Dans C#, relatifs contraintes sont définies en tant que fonctions. Concepts comme `Factor` ne sont pas actuellement, mais peuvent être implémentées manuellement.
+- La zone `x` coordonnée est définie en tant que la moitié de la largeur de la page parente, -100.
+- La zone `y` coordonnée est définie en tant que la moitié de la hauteur de la page parente, -100.
 
 > [!NOTE]
-> En raison du mode contraintes sont définies, il est possible d’effectuer des mises en page plus complexes dans c# que peut être spécifié avec XAML.
+> En raison du mode contraintes sont définies, il est possible d’élaborer des dispositions plus complexes dans C# que peut être spécifié avec XAML.
 
-Les deux exemples ci-dessus définissent les contraintes en tant que `RelativeToParent` &ndash; , autrement dit, leurs valeurs sont par rapport à l’élément parent. Il est également possible de définir des contraintes par rapport à une autre vue. Cela permet pour les dispositions plus intuitives (pour le développeur) et que vous pouvez apporter plus clairement l’objectif de votre code de mise en page.
+Les deux exemples ci-dessus définissent des contraintes comme `RelativeToParent` &ndash; , autrement dit, leurs valeurs sont par rapport à l’élément parent. Il est également possible de définir des contraintes par rapport à une autre vue. Cela permet des dispositions plus intuitives (pour le développeur) et peut rendre l’intention de votre code de mise en page plus évidentes.
 
-Envisagez une disposition où un élément doit être inférieure à une autre de 20 pixels. Si les deux éléments sont définis avec des valeurs constantes, la limite inférieure peut avoir son `Y` contrainte définie en tant que constante qui est de 20 pixels supérieure à la `Y` contrainte de l’élément supérieur. Cette approche se situe courte si l’élément supérieur est placé à l’aide d’une part, afin que la taille en pixels n’est pas connue. Dans ce cas, la restriction de l’élément en fonction de la position d’un autre élément est plus robuste :
+Envisagez une mise en page où un élément doit être inférieure à une autre de 20 pixels. Si les deux éléments sont définis avec des valeurs constantes, faible peut avoir son `Y` contrainte définie en tant que constante qui est de 20 pixels supérieure à la `Y` contrainte de l’élément supérieur. Cette approche s’avère insuffisant, si l’élément supérieur est positionné à l’aide d’une part, afin que la taille en pixels n’est pas connue. Dans ce cas, il est plus robuste de contraindre l’élément en fonction de la position d’un autre élément :
 
 ```xaml
 <RelativeLayout>
@@ -103,7 +105,7 @@ Envisagez une disposition où un élément doit être inférieure à une autre d
 </RelativeLayout>
 ```
 
-Pour accomplir la même disposition en c# :
+Pour accomplir la même disposition dans C#:
 
 ```csharp
 layout.Children.Add (redBox, Constraint.RelativeToParent ((parent) => {
@@ -126,7 +128,7 @@ layout.Children.Add (blueBox, Constraint.RelativeToView (redBox, (Parent, siblin
     }));
 ```
 
-Ce code produit la sortie suivante, avec la position de la zone bleue déterminée _relatif_ à la position de la zone rouge :
+Cela génère la sortie suivante, avec la position de la zone bleue déterminée _relatif_ à la position de la zone rouge :
 
 ![](relative-layout-images/red-blue-box.png "RelativeLayout avec BoxViews rouge et bleu")
 
@@ -137,12 +139,12 @@ Vues disposés par `RelativeLayout` ont deux options pour spécifier leur taille
 - `HeightRequest & WidthRequest`
 - `RelativeLayout.WidthConstraint` & `RelativeLayout.HeightConstraint`
 
-`HeightRequest` et `WidthRequest` spécifier la destination de hauteur et largeur de la vue, mais peut être substituée par des dispositions en fonction des besoins. `WidthConstraint` et `HeightConstraint` prennent en charge la définition de la hauteur et la largeur en tant que valeur par rapport aux propriétés de la mise en page ou d’une autre vue, ou comme une valeur constante.
+`HeightRequest` et `WidthRequest` spécifient la hauteur prévue et la largeur de la vue, mais peut être substituée par les dispositions en fonction des besoins. `WidthConstraint` et `HeightConstraint` en charge la définition de la hauteur et largeur en tant que valeur par rapport aux propriétés de la mise en page ou d’une autre vue, ou comme une valeur constante.
 
 ## <a name="exploring-a-complex-layout"></a>Exploration d’une disposition complexe
-Forces et faiblesses pour créer des dispositions particuliers ont chacun des dispositions. Tout au long de cette série d’articles de la mise en page, un exemple d’application a été créé avec la même disposition implémentée à l’aide de trois dispositions différentes.
+Chacune des mises en page ont des forces et faiblesses pour créer des dispositions particuliers. Tout au long de cette série d’articles de la mise en page, un exemple d’application a été créé avec la même disposition de page implémentée à l’aide de trois dispositions différentes.
 
-Considérez le code XAML suivant :
+Prenez en compte le XAML suivant :
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -219,11 +221,11 @@ Title="RelativeLayout">
 </ContentPage>
 ```
 
-Le code ci-dessus génère le schéma suivant :
+Le code ci-dessus génère la disposition suivante :
 
 ![](relative-layout-images/relative.png "RelativeLayout complexe")
 
-Notez que `RelativeLayouts`s sont imbriquées, car dans certains cas d’imbrication des dispositions peut être plus facile à présenter tous les éléments dans la même disposition. Notez également que certains éléments sont `RelativeToView`, car qui permet de mise en page plus facile et intuitif lorsque les relations entre les vues de guident de positionnement.
+Notez que `RelativeLayouts`s sont imbriquées, car dans certains cas des dispositions d’imbrication peut être plus facile que de présenter tous les éléments dans la même disposition. Notez également que certains éléments sont `RelativeToView`, car qui permet de disposition plus facile et plus intuitive lorsque les relations entre les vues de guident de positionnement.
 
 
 ## <a name="related-links"></a>Liens associés

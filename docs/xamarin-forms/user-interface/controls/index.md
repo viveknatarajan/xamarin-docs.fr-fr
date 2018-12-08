@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 7aa8b47a6d851ea67de7817ecd1f0e924822bfb0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 9a149711b52b0ea7a6548c2070b20d708e747174
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994985"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050671"
 ---
 # <a name="controls-reference"></a>Informations de référence sur les contrôles
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Une description de tous les éléments visuels utilisés pour construire une application Xamarin.Forms._
 

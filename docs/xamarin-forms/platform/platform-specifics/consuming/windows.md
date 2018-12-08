@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 2130bbbedbab66fac9427947ca42f21c346360ce
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 39922ffaa144892c87d271e9b24524dc0a0a941a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38998412"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061918"
 ---
 # <a name="windows-platform-specifics"></a>Caractéristiques de la plateforme Windows
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
 _Caractéristiques de la plateforme vous autorisons à utiliser les fonctionnalités qui est disponible uniquement sur une plateforme spécifique, sans avoir à implémenter des convertisseurs personnalisés ou des effets. Cet article montre comment utiliser Windows-spécificités de la plateforme qui sont intégrés dans Xamarin.Forms._
 

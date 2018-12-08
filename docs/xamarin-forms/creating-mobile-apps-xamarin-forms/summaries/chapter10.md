@@ -7,14 +7,16 @@ ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 2c9493706930bd3c2ffd54835d963d9847e82e76
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: f326d0434fd2565c30890dea0838168c9d8b4287
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563795"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054739"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Résumé du chapitre 10. Extensions de balisage XAML
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 
 Normalement, l’analyseur XAML convertit n’importe quelle chaîne définie comme valeur d’attribut sur le type de la propriété en fonction de conversion des types de données .NET de base, standard ou un [ `TypeConverter` ](xref:Xamarin.Forms.TypeConverter) dérivé est attaché à la propriété ou son type avec un [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute).
 

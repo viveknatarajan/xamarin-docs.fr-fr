@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 3f82e4b7d52988bfef9736ace8c476a9cd2da02b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 102ff15ea0e0002b783f993c59eb50d03a5ece63
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994742"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051067"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Définition de propriété de ItemsSource d’un sélecteur
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
 
 _La vue de sélecteur est un contrôle pour la sélection d’un élément de texte à partir d’une liste de données. Cet article explique comment remplir un sélecteur de données en définissant la propriété ItemsSource et comment répondre à la sélection d’éléments par l’utilisateur._
 

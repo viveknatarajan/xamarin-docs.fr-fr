@@ -7,14 +7,16 @@ ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 82ffecd41115bc91df9732793f5e22e721dbdee4
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 7b3695ce145c2ca58238e2c9a601923cbcefa182
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563899"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053115"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Résumé du chapitre 22. Animation
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
 
 Vous avez vu que vous pouvez créer vos propres animations à l’aide de la minuterie Xamarin.Forms ou `Task.Delay`, mais il est généralement plus simple, avec les fonctionnalités d’animation fournies par Xamarin.Forms. Trois classes implémentent ces animations :
 

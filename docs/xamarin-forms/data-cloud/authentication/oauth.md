@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 504b2789ef61b0339d1c32e92c852a779a193b52
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 786f1503fcc0cc07f76a7cdc55731d341607429f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854764"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053194"
 ---
 # <a name="authenticating-users-with-an-identity-provider"></a>Authentification des utilisateurs avec un fournisseur d’identité
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
 
 _Xamarin.Auth est un kit de développement logiciel inter-plateformes pour l’authentification des utilisateurs et le stockage de leurs comptes. Il inclut les authentificateurs OAuth qui prennent en charge pour l’utilisation de fournisseurs d’identité comme Google, Microsoft, Facebook et Twitter. Cet article explique comment utiliser Xamarin.Auth pour gérer le processus d’authentification dans une application Xamarin.Forms._
 

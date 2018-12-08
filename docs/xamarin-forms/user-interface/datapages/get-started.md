@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1fb8a06111271d453c578cd3d2db97ec8689c995
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: ef3ec5f8d1a2ded8fc7cae34663f10ab6eb7c86f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38828209"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052969"
 ---
 # <a name="getting-started-with-datapages"></a>Mise en route avec les pages de données
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
 
 ![](~/media/shared/preview.png "Cette API est actuellement en version préliminaire")
 

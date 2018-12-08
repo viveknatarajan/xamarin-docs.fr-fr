@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: 61a7d2261ac35621482e9810a0fdb69a6061ae6a
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 93bb138b3a78b6052715ab987a4634a18cdce317
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38997069"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054500"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Animations simples dans Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/basic/)
 
 _La classe ViewExtensions fournit des méthodes d’extension qui peuvent être utilisées pour construire des animations simples. Cet article montre comment créer et annuler des animations à l’aide de la classe ViewExtensions._
 

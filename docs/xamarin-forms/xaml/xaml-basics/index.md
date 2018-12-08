@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 348cbc07586a5d8536efafe67103258936c1c705
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0f39eb78d46b6156231a165f950f4698e63fc073
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563210"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055739"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Principes de base XAML de Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 XAML (eXtensible Application Markup Language) : permet aux développeurs de définir des interfaces utilisateur dans les applications Xamarin.Forms à l’aide d’un balisage au lieu de code. XAML n’est jamais nécessaire dans un programme de Xamarin.Forms, mais il est souvent plus concise et plus visuelle cohérente à code équivalent et potentiellement compatible avec les outils. XAML est particulièrement bien adapté pour une utilisation avec l’architecture d’application MVVM (Model-View-ViewModel) populaires : XAML définit la vue qui est liée au code du ViewModel par le biais des liaisons de données basées sur XAML.
 

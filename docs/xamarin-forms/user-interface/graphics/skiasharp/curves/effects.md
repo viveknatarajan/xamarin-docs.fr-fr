@@ -7,14 +7,16 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: 8354539288613353dcb7a792ace335daa5dc8f27
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 835663b2d9a9fa8557a31570f91492da95be7a9a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171142"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059189"
 ---
 # <a name="path-effects-in-skiasharp"></a>Effets de chemin d’accès dans SkiaSharp
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Découvrir les divers effets de chemin d’accès qui autorise des chemins d’accès à utiliser pour le contour et en remplissant_
 

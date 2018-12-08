@@ -7,14 +7,16 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 02ee84560b29fa95d0a16259d5bbbd6bc0144063
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171207"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053076"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Création et le dessin sur des images bitmap SkiaSharp
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Vous avez vu comment une application peut charger des bitmaps à partir du Web, à partir des ressources d’application et à partir de la bibliothèque de photos de l’utilisateur. Il est également possible de créer de nouvelles images bitmaps au sein de votre application. L’approche la plus simple implique l’un des constructeurs de [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e11f7c95ccc65371ec5d844505682103025cd8af
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 531fb9500bdbf9d07ac3f781113768395465bd50
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172234"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050554"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Création d’Extensions de balisage XAML
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 Sur le niveau par programmation, une extension de balisage XAML est une classe qui implémente le [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) ou [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface. Vous pouvez explorer le code source des extensions de balisage standard décrit ci-dessous dans le [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) du référentiel GitHub de Xamarin.Forms.
 

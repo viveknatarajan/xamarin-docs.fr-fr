@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: b7ea75c13d84cf9fe74d7a606f6127aaa6bbe3b2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4b33d1d149d3ac85d01dfcbe0d144416fd953426
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996332"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052888"
 ---
 # <a name="native-views-in-xaml"></a>Vues natives en XAML
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
 
 _Vues natives à partir d’iOS, Android et la plateforme Windows universelle peuvent être référencées directement à partir de fichiers de XAML de Xamarin.Forms. Propriétés et gestionnaires d’événements peuvent être définies sur les vues natives, et ils peuvent interagir avec les vues Xamarin.Forms. Cet article montre comment utiliser les vues natives à partir de fichiers de XAML de Xamarin.Forms._
 

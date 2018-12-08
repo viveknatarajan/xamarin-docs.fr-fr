@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 0c7e0d01a75d72204ca086fc1b0639d584220651
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171571"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059741"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Partie 2. Syntaxe XAML essentielle
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _XAML est principalement conçu pour l’instanciation et initialisation d’objets. Mais souvent, propriétés doivent être définies pour des objets complexes qui ne peuvent pas facilement être représentées sous forme de chaînes XML, et parfois, les propriétés définies par une classe doivent être définies sur une classe enfant. Ces deux besoins nécessitent les fonctionnalités de syntaxe XAML essentielles des éléments de propriété et les propriétés jointes._
 

@@ -7,14 +7,16 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 07df66e69186803e3322bd71a4b3b37710655de4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131122"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055009"
 ---
 # <a name="the-non-separable-blend-modes"></a>Les modes de fusion non séparables
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Comme vous l’avez vu dans l’article [ **SkiaSharp séparable blend modes**](separable.md), les modes de blend séparables effectuer des opérations sur les canaux rouges, vert et bleus séparément. Les modes de fusion non séparables ne peuvent pas. En opérant sur les niveaux de teinte, Saturation et de luminosité de couleur, les modes de fusion non séparables peuvent modifier les couleurs de façons intéressantes :
 

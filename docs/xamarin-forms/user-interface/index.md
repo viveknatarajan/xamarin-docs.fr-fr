@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: 452596d3eda9daae4b985490929c1e920a9d936e
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: ecf8a1e6d7c248c7141039844324d45d28700854
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170908"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049340"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Vues de l’Interface utilisateur de Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Comment utiliser les vues fournies par Xamarin.Forms_
 
@@ -29,6 +31,10 @@ Le `BoxView` est simplement un rectangle coloré simple, mais il peut être util
 ## <a name="buttonbuttonmd"></a>[Button](button.md)
 
 Le `Button` répond à un cliquez ou appuyez sur dirigeant d’une application à exécuter une tâche particulière.
+
+## <a name="collectionviewcollectionviewmd"></a>[CollectionView](collectionview.md)
+
+Le `CollectionView` est une vue flexible et plus performant pour la présentation des listes de données à l’aide des spécifications de mise en page différente.
 
 ## <a name="colorscolorsmd"></a>[Couleurs](colors.md)
 
@@ -54,7 +60,7 @@ Comment incorporer des graphiques dans une application Xamarin.Forms à l’aide
 
 Images peuvent être partagées entre les plateformes avec Xamarin.Forms, ils peuvent être chargés spécifiquement pour chaque plateforme, ou ils peuvent être téléchargés pour l’affichage.
 
-## <a name="imagebutonimagebuttonmd"></a>[ImageButon](imagebutton.md)
+## <a name="imagebuttonimagebuttonmd"></a>[ImageButton](imagebutton.md)
 
 Le `ImageButton` affiche une image et répond à un cliquez ou appuyez sur dirigeant d’une application à exécuter une tâche particulière.
 
@@ -102,6 +108,10 @@ Les thèmes de Xamarin.Forms définissent une apparence visuelle spécifique pou
 
 Le `TimePicker` permet à un utilisateur de sélectionner une heure. Il est implémenté à l’aide du sélecteur d’heure pris en charge par la plateforme particulière sur laquelle l’application est exécutée sur.
 
+## <a name="visualvisualmd"></a>[Élément visuel](visual.md)
+
+Cet article présente Xamarin.Forms visuel, qui restitue des vues de façon identique, ou en grande partie identique, sur iOS et Android.
+
 ## <a name="visual-state-managervisual-state-managermd"></a>[Gestionnaire d’état visuel](visual-state-manager.md)
 
 Le Gestionnaire d’état visuel fournit une manière structurée pour déclencher des modifications dans l’interface utilisateur à partir du code, y compris de disposition qui s’adapte aux modifications de taille ou l’orientation de l’appareil.
@@ -110,8 +120,7 @@ Le Gestionnaire d’état visuel fournit une manière structurée pour déclench
 
 Xamarin.Forms utilise le contrôle de navigateur web natifs sur chaque plateforme et peuvent afficher des sites Web, des ressources locales et des chaînes Html générés.
 
-
 ## <a name="related-links"></a>Liens associés
 
 - [Introduction à Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Galerie de Xamarin.Forms (exemple)](https://developer.xamarin.com/samples/FormsGallery/)
+- [Galerie Xamarin.Forms (exemple)](https://developer.xamarin.com/samples/FormsGallery/)

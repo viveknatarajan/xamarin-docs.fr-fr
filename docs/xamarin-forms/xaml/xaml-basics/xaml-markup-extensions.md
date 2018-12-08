@@ -7,14 +7,16 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 3/27/2018
-ms.openlocfilehash: bffddfdb67238287b868b01edad88bc8d43e5bb1
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a93503762528885dfc7d3b5400bf4ec716ea9fab
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563834"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056212"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Partie 3. Extensions de balisage XAML
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _Extensions de balisage XAML constituent une fonctionnalité importante dans XAML qui permettent d’être définie sur des objets ou des valeurs qui sont référencés indirectement à partir d’autres sources. Extensions de balisage XAML sont particulièrement importantes pour le partage d’objets et le référencement de constantes utilisées dans une application, mais ils trouver leur plus grande utilité dans les liaisons de données._
 

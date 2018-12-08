@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2018
-ms.openlocfilehash: f5fdaa55f91656d8560fb9ad2eb2b938d5c9a02f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 056183511db3b43c9faccc9fe1d3fe25153dbc09
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171844"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057520"
 ---
 # <a name="xamarinforms-timepicker"></a>Xamarin.Forms TimePicker
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
 
 _Une vue de Xamarin.Forms qui permet à l’utilisateur à sélectionner une heure._
 

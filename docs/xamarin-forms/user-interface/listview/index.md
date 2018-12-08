@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: dc039a7a984fae9bd856a9e7147ad899f86f0592
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 9da3bd65dfb5cc6f9ca6bd0e2930003e6ac3d182
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "35244998"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059257"
 ---
 # <a name="xamarinforms-listview"></a>ListView de Xamarin.Forms
 
-ListView est une vue pour la présentation des listes de données, en particulier longues listes qui requièrent un défilement. Ce guide vous explique comment utiliser ListView :
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/WorkingWithListview)
+
+Vue est une vue pour la présentation des listes de données, en particulier longues listes qui requièrent un défilement. Ce guide vous explique comment utiliser ListView :
 
 1. **[Sources de données](data-and-databinding.md)**  &ndash; remplir un ListView avec des données, avec ou sans liaison de données.
 2. **[Apparence de cellule](customizing-cell-appearance.md)**  &ndash; personnaliser l’apparence des cellules intégrés ou créer votre propre cellule personnalisée.

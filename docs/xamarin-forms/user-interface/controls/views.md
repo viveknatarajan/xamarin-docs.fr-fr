@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 13/11/2018
-ms.openlocfilehash: b14cb6fd96bb5da1ba2f8612daa51b2db4242630
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 819eff30f9d9aa9107df3bffaa749a2c078431a5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172338"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061117"
 ---
 # <a name="xamarinforms-views"></a>Vues Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Vues Xamarin.Forms sont les blocs de construction d’interfaces utilisateur mobiles multiplateformes._
 
@@ -198,4 +200,4 @@ Ces deux classes dérivent les [ `InputView` ](xref:Xamarin.Forms.InputView) (cl
 - [Introduction à Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Exemple de Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
 - [Exemples Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Documentation de l’API Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Documentation sur les API Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

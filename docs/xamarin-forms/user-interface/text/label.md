@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/04/2018
-ms.openlocfilehash: a6c0cd057082a6fa4793ca3de18cefd00243e9e3
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: c611828e2dc3ee7a373836ec01af90d4899f97f6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235062"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062216"
 ---
 # <a name="xamarinforms-label"></a>Étiquette de Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
 
 _Texte affiché dans Xamarin.Forms_
 

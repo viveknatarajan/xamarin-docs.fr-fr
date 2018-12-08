@@ -1,5 +1,5 @@
 ---
-title: Les Types de remplissage de chemin d’accès
+title: Types de remplissage des tracés
 description: Cet article examine les différents effets possibles avec les types de remplissage de chemin d’accès SkiaSharp et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: d16f6f6023c1db0223d5d5863e19116147f948d1
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: d99bb4722beb86c3cd2f49077fb778b8d8f61397
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615468"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051806"
 ---
-# <a name="the-path-fill-types"></a>Les Types de remplissage de chemin d’accès
+# <a name="the-path-fill-types"></a>Types de remplissage des tracés
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Découvrir les différents effets possibles avec les types de remplissage de chemin d’accès SkiaSharp_
 
