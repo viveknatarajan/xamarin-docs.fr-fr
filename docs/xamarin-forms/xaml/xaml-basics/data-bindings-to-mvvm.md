@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 2376ff986db985c3764c90c3af76ea74c2936a29
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563145"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054031"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Partie 5. Liaisons de données à MVVM
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _Le modèle d’architecture Model-View-ViewModel (MVVM) a été inventé avec XAML à l’esprit. Le modèle met en œuvre une séparation entre les trois couches logicielles, l’interface utilisateur XAML, appelée la vue ; les données sous-jacentes, appelées le modèle ; et un intermédiaire entre la vue et le modèle, appelé le ViewModel. La vue et le ViewModel sont souvent connectés via des liaisons de données définies dans le fichier XAML. BindingContext pour la vue est généralement une instance du ViewModel._
 

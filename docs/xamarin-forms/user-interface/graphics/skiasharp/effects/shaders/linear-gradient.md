@@ -7,14 +7,16 @@ ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: de563c4780a57e439abab61378919501ce88b11b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9551a3b8e093dbb49a55a3761543602c40e81023
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131078"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053574"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Dégradé linéaire SkiaSharp
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Le [ `SKPaint` ](xref:SkiaSharp.SKPaint) classe définit un [ `Color` ](xref:SkiaSharp.SKPaint.Color) propriété qui est utilisée pour tracer des lignes ou de remplir des zones avec une couleur unie. Vous pouvez également tracer des lignes d’ou remplir les zones avec _dégradés_, qui sont progressive dégradés de couleurs :
 

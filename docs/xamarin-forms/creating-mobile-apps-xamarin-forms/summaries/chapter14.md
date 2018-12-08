@@ -7,14 +7,16 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 6393794a20a80fae43e31a96efd4941f4b633c28
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a67a2e12a12039755970a78739ea2ca3d2ffae08
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563717"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053488"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Résumé du chapitre 14. Disposition absolue
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
 Comme `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) dérive `Layout<View>` et hérite d’un `Children` propriété. `AbsoluteLayout` implémente un système de disposition qui exige que le programmeur spécifier les positions de ses enfants et, éventuellement, de leur taille. La position est spécifiée par le coin supérieur gauche de l’enfant par rapport à l’angle supérieur gauche de la `AbsoluteLayout` en unités indépendantes du périphérique. `AbsoluteLayout` implémente également une fonctionnalité de dimensionnement et de positionnement proportionnel.
 

@@ -7,14 +7,16 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 750f357819a85077b3f272a7a10cbd3928186681
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a4f69287a6f97f3181d88a2d93d308df2676476a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110288"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052687"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotations 3D dans SkiaSharp
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Utiliser des transformations non affines pour faire pivoter des objets 2D dans l’espace 3D._
 

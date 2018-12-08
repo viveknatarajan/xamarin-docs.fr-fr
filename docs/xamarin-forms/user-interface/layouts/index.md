@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: cff5f9c15f4608ecfb643d2c49dd636df8b18b5c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: df2bd07ad5d91c237320b74d7a81828ba1c062c2
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995753"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053271"
 ---
 # <a name="layouts-in-xamarinforms"></a>Dispositions dans Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 Xamarin.Forms a plusieurs dispositions et les fonctionnalités pour organiser le contenu sur l’écran.
 

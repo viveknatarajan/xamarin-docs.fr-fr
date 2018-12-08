@@ -6,12 +6,12 @@ ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 9ff92270be7cbdef43a4d6eb1548f1f010d9869f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1d124a1bac751035d2b2e654f2dc411381158fc8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112451"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059322"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Utilisation de watchOS localisation dans Xamarin
 
@@ -204,4 +204,4 @@ Lors du test avec un espion, modifier la langue de la surveillance dans le **App
 
 ## <a name="related-links"></a>Liens associés
 
-- [WatchLocalization (exemple)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchLocalization/)
+- [WatchLocalization (exemple)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchLocalization/)

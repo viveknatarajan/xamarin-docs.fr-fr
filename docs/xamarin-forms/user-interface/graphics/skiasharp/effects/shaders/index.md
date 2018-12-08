@@ -7,14 +7,16 @@ ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: fe6f02727110fbaa55b788e1716d10b369b5f51a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f16600b6f90755722d031c0fdc21fff1a66673ae
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131707"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059932"
 ---
 # <a name="skiasharp-shaders"></a>Nuanceurs de SkiaSharp
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Vous pouvez définir le [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) propriété du `SKPaint` à un objet de type [ `SKShader` ](xref:SkiaSharp.SKShader) pour créer plusieurs types de dégradés, un modèle de bitmap en mosaïque ou le bruit de Perlin.
 

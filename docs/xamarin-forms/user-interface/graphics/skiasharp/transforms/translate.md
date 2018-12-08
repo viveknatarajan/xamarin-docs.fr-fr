@@ -7,14 +7,16 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 2171c8f0b2926a645fb98df52bae2391449bf89c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a51a441aeacf265093b82ddb65237887b0a30719
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120929"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053832"
 ---
 # <a name="the-translate-transform"></a>La transformation de traduction
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Découvrez comment utiliser la transformation de traduction pour décaler des graphiques de SkiaSharp_
 

@@ -7,14 +7,16 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 3571da005f48bda630b4202b804f3efe9c892f60
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172325"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053621"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Données de chemin SVG dans SkiaSharp
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Définir les chemins d’accès à l’aide de chaînes de texte dans le format Scalable Vector Graphics_
 

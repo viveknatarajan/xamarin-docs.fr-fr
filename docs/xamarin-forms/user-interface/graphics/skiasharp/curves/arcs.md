@@ -7,14 +7,16 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 49b2ee9cf9c8fbdb2f850461241459126750b123
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: fc08824ba973f5d50dbe92950d57c4ea8ecc3147
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172221"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054010"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Trois façons de dessiner un arc
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Découvrez comment utiliser SkiaSharp pour définir des arcs de trois façons différentes_
 

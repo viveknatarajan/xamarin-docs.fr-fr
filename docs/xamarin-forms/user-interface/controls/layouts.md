@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 224eb2ee3958e5979382a3dc5e70110fdce51879
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 520a90030200a1371b15331868ec6e325c6d3694
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994600"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053329"
 ---
 # <a name="xamarinforms-layouts"></a>Dispositions Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Dispositions Xamarin.Forms sont utilisées pour composer des contrôles d’interface utilisateur dans des structures visual._
 
@@ -117,4 +119,4 @@ Ces classes dérivent [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1).
 - [Introduction à Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Exemple de Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
 - [Exemples Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Documentation de l’API Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Documentation sur les API Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

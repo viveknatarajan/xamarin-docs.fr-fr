@@ -1,5 +1,5 @@
 ---
-title: Énumération et les informations de chemin d’accès
+title: Informations et énumération de tracés
 description: Cet article explique comment obtenir des informations sur les chemins d’accès SkiaSharp et énumérer le contenu et illustre ceci avec l’exemple de code.
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: 6efefe11b31428f41bfa945aff93aa70aa764870
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 98975d51c31b8e8c52d184c631194388cd6cfa87
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615273"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053898"
 ---
-# <a name="path-information-and-enumeration"></a>Énumération et les informations de chemin d’accès
+# <a name="path-information-and-enumeration"></a>Informations et énumération de tracés
+
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Obtenir des informations sur les chemins d’accès et d’énumérer le contenu_
 
