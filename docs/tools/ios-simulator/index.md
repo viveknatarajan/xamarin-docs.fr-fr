@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2018
-ms.openlocfilehash: 21229bc9d56865d6365f8ddfe4dd2046fbabc03d
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: 4a45d4fb7aaad504c7bb5628f1e521a39463b06f
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681525"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899068"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Remoted iOS Simulator pour Windows
 
@@ -34,7 +34,7 @@ La barre d’outils en haut de la fenêtre du simulateur contient un nombre de b
 
 - **Accueil** – simule le bouton accueil sur un appareil iOS.
 - **Verrou** : verrouille le simulateur (faites défiler pour déverrouiller).
-- **Capture d’écran** – enregistre une capture d’écran du simulateur (stocké dans **Pictures\Xamarin\iOS simulateur\**).
+- **Capture d’écran** – enregistre une capture d’écran du simulateur (stocké dans **Pictures\Xamarin\iOS simulateur\\**).
 - [**Paramètres** ](#settings) – affiche le clavier, emplacement et autres paramètres.
 - [**Autres options** ](#other-options) – permet d’afficher diverses options de simulateur telles que rotation, agiter mouvements et un ID tactile.
 
