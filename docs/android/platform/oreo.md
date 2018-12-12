@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: ca9c4ed0871b91bed82f746ccb36af9fb32816c0
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 765494b5d9a55aedd9c9b3f0ea29ea389346ae3c
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171779"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267623"
 ---
 # <a name="oreo-features"></a>Fonctionnalités de Oreo
 
@@ -26,7 +26,7 @@ _La prise en main à l’aide de Xamarin.Android pour développer des applicatio
 Cet article est structuré pour vous aider à commencer le développement d’applications Xamarin.Android pour Android 8.0 Oreo. Il explique comment installer les mises à jour nécessaires, configurer le Kit de développement et créer un émulateur (ou périphérique) pour le test. Il fournit également un aperçu des nouvelles fonctionnalités de Android 8.0 Oreo, avec des liens vers des exemples d’applications qui illustrent l’utilisation des fonctionnalités d’Android Oreo dans les applications Xamarin.Android.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont nécessaire pour utiliser les fonctionnalités d’Android Oreo dans les applications basées sur Xamarin :
 
@@ -74,7 +74,7 @@ Pour ajouter la prise en charge Android Oreo à Visual Studio, procédez comme s
 
 -----
 
-Pour plus d’informations sur la prise en charge de Xamarin pour Android Oreo, consultez le [notes de publication de Xamarin.Android 8.0](https://developer.xamarin.com/releases/android/xamarin.android_8/xamarin.android_8.0/).
+Pour plus d’informations sur la prise en charge de Xamarin pour Android Oreo, consultez le [notes de publication de Xamarin.Android 8.0](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
 
 
 

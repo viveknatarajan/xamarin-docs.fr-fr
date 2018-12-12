@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267636"
 ---
 # <a name="android-pie-features"></a>Fonctionnalités de graphique à secteurs Android
 
@@ -24,9 +24,9 @@ _Comment commencer à développer des applications pour Android 9 à secteurs à
 
 Cet article est structuré pour vous aider à commencer le développement d’applications Xamarin.Android pour Android à secteurs. Il explique comment installer les mises à jour nécessaires, configurer le Kit de développement et préparer un émulateur ou un périphérique pour le test. Il fournit un aperçu des nouvelles fonctionnalités de graphique à secteurs Android et fournit des exemples de code source qui illustre comment utiliser certaines des principales fonctionnalités de graphique à secteurs Android.
 
-Xamarin.Android 9.0 prend en charge pour Android à secteurs. Pour plus d’informations sur la prise en charge de Xamarin.Android pour Android à secteurs, consultez le [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notes de publication.
+Xamarin.Android 9.0 prend en charge pour Android à secteurs. Pour plus d’informations sur la prise en charge de Xamarin.Android pour Android à secteurs, consultez le [Android P Developer Preview 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1) notes de publication.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La liste suivante est nécessaire pour utiliser les fonctionnalités de graphique à secteurs Android dans les applications basées sur Xamarin :
 

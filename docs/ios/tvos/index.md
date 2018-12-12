@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: cbec49844d34ab8ad04282b383de15093ecdd891
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ada563fee78e579906e7f765a0120d8bfff67402
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118277"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267506"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Introduction à tvOS dans Xamarin
 
@@ -64,11 +64,11 @@ Exemples d’applications tvOS générées avec Xamarin :
 
 En outre, Apple fournit les exemples d’applications suivants qui peuvent être transcodé en c# pour travailler avec prise en charge de Xamarin pour les applications tvOS :
 
-- [DemoBots : Création d’un jeu d’inter-plateformes avec SpriteKit et GameplayKit](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
+- [DemoBots : Création d’un jeu multiplateforme avec SpriteKit et GameplayKit](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
 
 ## <a name="known-issues-and-troubleshooting"></a>Problèmes connus et dépannage
 
-Si vous rencontrez des problèmes de génération de tvOS avec Xamarin, vérifiez le [notes de publication](http://releases.xamarin.com/), [Xamarin.iOS Forums](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), et [GitHub ](https://github.com/xamarin/xamarin-macios/issues) pour les problèmes existants.
+Si vous rencontrez des problèmes de génération de tvOS avec Xamarin, vérifiez le [notes de publication](https://docs.microsoft.com/xamarin/ios/release-notes/), [Xamarin.iOS Forums](https://forums.xamarin.com/categories/ios), [Xamarin Bugzilla Tracker](https://bugzilla.xamarin.com/query.cgi?product=iOS), et [GitHub ](https://github.com/xamarin/xamarin-macios/issues) pour les problèmes existants.
 
 Signaler de nouveaux problèmes et les suggestions [sur GitHub](https://github.com/xamarin/xamarin-macios/issues).
 
