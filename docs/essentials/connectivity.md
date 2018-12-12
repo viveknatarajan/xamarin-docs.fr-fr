@@ -4,17 +4,15 @@ description: La classe Connectivité dans Xamarin.Essentials vous permet de surv
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: bc0cd206881356a92128c758f0225f98f88c2814
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 3c29fc85d20e3a4d91a1ae63feca1cb668af141e
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675404"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899017"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials : Connectivité
-
-![Préversion NuGet](~/media/shared/pre-release.png)
 
 La classe **Connectivité** vous permet de surveiller les modifications des conditions réseau de l’appareil, l’accès au réseau actuel et le mode de connexion actuel.
 
@@ -84,7 +82,7 @@ if (current == NetworkAccess.Internet)
 Vous pouvez vérifier le type de [profil de connexion](xref:Xamarin.Essentials.ConnectionProfile) utilisé activement par l’appareil avec ce qui suit :
 
 ```csharp
-var profiles = Connectivity.Profiles;
+var profiles = Connectivity.ConnectionProfiles;
 if (profiles.Contains(ConnectionProfile.WiFi))
 {
     // Active Wi-Fi connection.
@@ -105,7 +103,7 @@ public class ConnectivityTest
     void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs  e)
     {
         var access = e.NetworkAccess;
-        var profiles = e.Profiles;
+        var profiles = e.ConnectionProfiles;
     }
 }
 ```
