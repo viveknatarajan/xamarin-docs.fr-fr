@@ -52,7 +52,7 @@ items:
       href: user-interface/menu.md
     - name: Contrôles standard
       href: user-interface/standard-controls.md
-    - name: Barres d’outils
+    - name: Barres d'outils
       href: user-interface/toolbar.md
     - name: Vues Table
       href: user-interface/table-view.md
@@ -222,13 +222,13 @@ items:
     - name: Messages d’erreur (mmp)
       href: troubleshooting/mmp-errors.md
   - name: Notes de publication
-    href: https://developer.xamarin.com/releases/mac/
+    href: https://docs.microsoft.com/xamarin/mac/release-notes/
   - name: Exemples
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: ea86a8d1b392acc1a27902c6c95a4b6ed763ecd8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: eccff6d2397c1b85bf5b17d71d13dbfa27f94277
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110421"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267493"
