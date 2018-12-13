@@ -1,6 +1,6 @@
 ---
-title: Liaisons de base de Xamarin.Forms
-description: Cet article explique comment utiliser Xamarin.Forms liaison de données, qui lie une paire de propriétés entre deux objets, au moins un d'entre eux est généralement un objet d’interface utilisateur. Ces deux objets sont appelées la cible et la source.
+title: Liaisons de base Xamarin.Forms
+description: Cet article explique comment utiliser une liaison de données Xamarin.Forms, qui lie une paire de propriétés entre deux objets, dont au moins un est généralement un objet d’interface utilisateur. Ces deux objets sont appelés la cible et la source.
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
@@ -9,23 +9,23 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675196"
 ---
-# <a name="xamarinforms-basic-bindings"></a>Liaisons de base de Xamarin.Forms
+# <a name="xamarinforms-basic-bindings"></a>Liaisons de base Xamarin.Forms
 
-Une liaison de données Xamarin.Forms lie une paire de propriétés entre deux objets, au moins un d'entre eux est généralement un objet d’interface utilisateur. Ces deux objets sont appelés les *cible* et *source*:
+Une liaison de données Xamarin.Forms lie une paire de propriétés entre deux objets, dont au moins un est généralement un objet d’interface utilisateur. Ces deux objets sont appelés la *cible* et la *source* :
 
-- Le *cible* est l’objet (et la propriété) sur laquelle la liaison de données est définie.
-- Le *source* est l’objet (et la propriété) référencé par la liaison de données.
+- La *cible* est l’objet (et la propriété) sur lequel la liaison de données est définie.
+- La *source* est l’objet (et la propriété) référencé par la liaison de données.
 
-Cette distinction peut parfois être un peu à confusion : dans le cas le plus simple, flux de données de la source à la cible, ce qui signifie que la valeur de la propriété cible est définie à partir de la valeur de la propriété source. Toutefois, dans certains cas, peuvent également de flux de données à partir de la cible à la source ou dans les deux sens. Pour éviter toute confusion, n’oubliez pas que la cible est toujours l’objet sur lequel la liaison de données est définie, même si elle est fournissant des données non réception de données.
+Cette distinction peut parfois porter à confusion : dans le cas le plus simple, les données circulent de la source vers la cible, ce qui signifie que la valeur de la propriété cible est définie à partir de la valeur de la propriété source. Toutefois, dans certains cas, les données peuvent également circuler de la cible vers la source ou dans les deux sens. Pour éviter toute confusion, n’oubliez pas que la cible est toujours l’objet sur lequel la liaison de données est définie, même si elle fournit des données au lieu d’en recevoir.
 
 ## <a name="bindings-with-a-binding-context"></a>Liaisons avec un contexte de liaison
 
-Bien que les liaisons de données sont généralement spécifiés entièrement dans XAML, il est intéressant de voir les liaisons de données dans le code. Le **liaison de la base Code** page contient un fichier XAML avec un `Label` et un `Slider`:
+Les liaisons de données sont généralement spécifiées entièrement en XAML, mais il est intéressant de voir des liaisons de données dans le code. La page **Basic Code Binding** (Liaison de code élémentaire) contient un fichier XAML avec un `Label` et un `Slider` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -46,18 +46,18 @@ Bien que les liaisons de données sont généralement spécifiés entièrement d
 </ContentPage>
 ```
 
-Le `Slider` est défini pour une plage de 0 à 360. L’objectif de ce programme est de faire pivoter le `Label` en manipulant le `Slider`.
+L’élément `Slider` est défini pour une plage de 0 à 360. L’objectif de ce programme est de faire pivoter l’objet `Label` en manipulant l’élément `Slider`.
 
-Sans liaisons de données, vous devez définir le `ValueChanged` événements de la `Slider` à un gestionnaire d’événements qui accède à la `Value` propriété de la `Slider` et affecte cette valeur la `Rotation` propriété de la `Label`. La liaison de données automatise ce travail ; le Gestionnaire d’événements et le code qu’il contient ne sont plus nécessaires.
+Sans liaisons de données, vous devez définir l’événement `ValueChanged` de l’élément `Slider` sur un gestionnaire d’événements qui accède à la propriété `Value` de l’élément `Slider` et définit cette valeur sur la propriété `Rotation` de l’objet `Label`. La liaison de données automatise ce travail ; le gestionnaire d’événements et le code qu’il contient ne sont plus nécessaires.
 
-Vous pouvez définir une liaison sur une instance de n’importe quelle classe qui dérive de [ `BindableObject` ](xref:Xamarin.Forms.BindableObject), qui inclut `Element`, `VisualElement`, `View`, et `View` dérivés.  La liaison est toujours définie sur l’objet cible. La liaison fait référence à l’objet source. Pour définir la liaison de données, utilisez les deux membres suivants de la classe cible :
+Vous pouvez définir une liaison sur une instance de n’importe quelle classe qui dérive de [`BindableObject`](xref:Xamarin.Forms.BindableObject) et qui inclut les dérivés `Element`, `VisualElement`, `View` et `View`.  La liaison est toujours définie sur l’objet cible. La liaison fait référence à l’objet source. Pour définir la liaison de données, utilisez les deux membres suivants de la classe cible :
 
-- Le [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) propriété spécifie l’objet source.
-- Le [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) méthode spécifie la propriété cible et la propriété source.
+- La propriété [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) spécifie l’objet source.
+- La méthode [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) spécifie la propriété cible et la propriété source.
 
-Dans cet exemple, le `Label` est la cible de liaison et le `Slider` est la source de liaison. Modifications dans le `Slider` source affectent la rotation de la `Label` cible. Flux de données à partir de la source à la cible.
+Dans cet exemple, l’objet `Label` est la cible de la liaison et l’élément `Slider` en est la source. Des modifications dans l’élément `Slider` source affectent la rotation de l’objet `Label` cible. Les données circulent de la source vers la cible.
 
-Le `SetBinding` méthode définie par `BindableObject` a un argument de type [ `BindingBase` ](xref:Xamarin.Forms.BindingBase) à partir de laquelle le [ `Binding` ](xref:Xamarin.Forms.Binding) dérive de la classe, mais il existe d’autres `SetBinding` méthodes défini par le [ `BindableObjectExtensions` ](xref:Xamarin.Forms.BindableObjectExtensions) classe. Le fichier code-behind dans le **liaison de la base Code** exemple utilise une simple [ `SetBinding` ](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*) méthode d’extension à partir de cette classe.
+La méthode `SetBinding` définie par `BindableObject` a un argument de type [`BindingBase`](xref:Xamarin.Forms.BindingBase) à partir duquel la classe [`Binding`](xref:Xamarin.Forms.Binding) dérive, mais d’autres méthodes `SetBinding` sont définies par la classe [`BindableObjectExtensions`](xref:Xamarin.Forms.BindableObjectExtensions). Le fichier code-behind dans l’exemple **Basic Code Binding** utilise une méthode d’extension [`SetBinding`](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*) plus simple à partir de cette classe.
 
 ```csharp
 public partial class BasicCodeBindingPage : ContentPage
@@ -72,31 +72,31 @@ public partial class BasicCodeBindingPage : ContentPage
 }
 ```
 
-Le `Label` objet étant la cible de liaison qui est l’objet sur lequel cette propriété est définie et sur lequel la méthode est appelée. Le `BindingContext` propriété indique la source de liaison, qui est le `Slider`.
+L’objet `Label` est la cible de la liaison et constitue donc l’objet sur lequel cette propriété est définie et sur lequel la méthode est appelée. La propriété `BindingContext` indique la source de la liaison, à savoir l’élément `Slider`.
 
-Le `SetBinding` méthode est appelée sur la cible de liaison, mais spécifie la propriété cible et la propriété source. La propriété cible est spécifiée comme un `BindableProperty` objet : `Label.RotationProperty`. La propriété source est spécifiée sous forme de chaîne et indique le `Value` propriété du `Slider`.
+La méthode `SetBinding` est appelée sur la cible de la liaison, mais spécifie la propriété cible et la propriété source. La propriété cible est spécifiée en tant qu’objet `BindableProperty` : `Label.RotationProperty`. La propriété source est spécifiée en tant que chaîne et indique la propriété `Value` de l’élément `Slider`.
 
-Le `SetBinding` méthode révèle une des règles plus importantes des liaisons de données :
+La méthode `SetBinding` révèle l’une des règles les plus importantes des liaisons de données :
 
 *La propriété cible doit reposer sur une propriété pouvant être liée.*
 
-Cette règle implique que l’objet cible doit être une instance d’une classe qui dérive de `BindableObject`. Consultez le [ **propriétés pouvant être liées** ](~/xamarin-forms/xaml/bindable-properties.md) article pour une vue d’ensemble des objets pouvant être liés et des propriétés pouvant être liées.
+Cette règle implique que l’objet cible doit être une instance d’une classe qui dérive de `BindableObject`. Consultez l’article [**Propriétés pouvant être liées**](~/xamarin-forms/xaml/bindable-properties.md) pour obtenir une vue d’ensemble des objets et des propriétés pouvant être liés.
 
-Il n’est pas le cas pour la propriété source, qui est spécifié sous forme de chaîne. En interne, la réflexion est utilisée pour accéder à la propriété réelle. Dans ce cas particulier, toutefois, le `Value` propriété est également appuyée par une propriété pouvant être liée.
+Il n’y a pas de règle de ce type pour la propriété source, qui est spécifiée en tant que chaîne. En interne, la réflexion est utilisée pour accéder à la propriété réelle. Dans ce cas particulier, toutefois, la propriété `Value` repose également sur une propriété pouvant être liée.
 
-Le code peut être quelque peu simplifié : le `RotationProperty` propriété pouvant être liée est définie par `VisualElement`et héritée par `Label` et `ContentPage` , donc le nom de classe n’est pas nécessaire dans le `SetBinding` appeler :
+Le code peut être quelque peu simplifié : la propriété pouvant être liée `RotationProperty` est définie par `VisualElement` et héritée par `Label` et `ContentPage`. Par conséquent, le nom de la classe n’est pas requis dans l’appel `SetBinding` :
 
 ```csharp
 label.SetBinding(RotationProperty, "Value");
 ```
 
-Toutefois, y compris le nom de classe est un rappel de l’objet cible.
+Toutefois, inclure le nom de classe permet de se rappeler de l’objet cible.
 
-Lorsque vous manipulez le `Slider`, le `Label` fait pivoter en conséquence :
+Lorsque vous manipulez l’objet `Slider`, l’objet `Label` pivote en conséquence :
 
-[![Liaison du Code de base](basic-bindings-images/basiccodebinding-small.png "liaison du Code de base")](basic-bindings-images/basiccodebinding-large.png#lightbox "liaison du Code de base")
+[![Basic Code Binding](basic-bindings-images/basiccodebinding-small.png "Basic Code Binding")](basic-bindings-images/basiccodebinding-large.png#lightbox "Basic Code Binding")
 
-Le **base liaison Xaml** page est identique à **liaison de Code base** , à ceci près qu’il définit la liaison de données entier dans XAML :
+La page **Basic Xaml Binding** (Liaison Xaml de base) est identique à la page **Basic Code Binding**, si ce n’est qu’elle définit la liaison de données entière en XAML :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -118,24 +118,24 @@ Le **base liaison Xaml** page est identique à **liaison de Code base** , à cec
 </ContentPage>
 ```
 
-Comme dans le code, la liaison de données est définie sur l’objet cible, qui est le `Label`. Deux extensions de balisage XAML sont impliquées. Il s’agit instantanément reconnaissables par des délimiteurs d’accolade :
+Comme dans le code, la liaison de données est définie sur l’objet cible, qui est l’objet `Label`. Deux extensions de balisage XAML sont impliquées. Elles sont instantanément reconnaissables à leurs accolades de délimitation :
 
-- Le `x:Reference` extension de balisage est nécessaire pour référencer l’objet source, qui est la `Slider` nommé `slider`.
-- Le `Binding` liens d’extension de balisage la `Rotation` propriété de la `Label` à la `Value` propriété de la `Slider`.
+- L’extension de balisage `x:Reference` est nécessaire pour référencer l’objet source, qui est l’objet `Slider` nommé `slider`.
+- L’extension de balisage `Binding` lie la propriété `Rotation` de l’objet `Label` à la propriété `Value` de l’élément `Slider`.
 
-Consultez l’article [Extensions de balisage XAML](~/xamarin-forms/xaml/markup-extensions/index.md) pour plus d’informations sur les extensions de balisage XAML. Le `x:Reference` extension de balisage est prise en charge par le [ `ReferenceExtension` ](xref:Xamarin.Forms.Xaml.ReferenceExtension) classe ; `Binding` est pris en charge par le [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) classe. En tant que le code XML les préfixes d’espace de noms indiquent, `x:Reference` fait partie de la spécification de XAML 2009, tandis que `Binding` fait partie de Xamarin.Forms. Notez que les guillemets n’apparaissent entre accolades.
+Pour plus d’informations sur les extensions de balisage XAML, consultez l’article [Extensions de balisage XAML](~/xamarin-forms/xaml/markup-extensions/index.md). L’extension de balisage `x:Reference` est prise en charge par la classe [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) ; `Binding` est prise en charge par la classe [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension). Comme l’indiquent les préfixes d’espace de noms XML, `x:Reference` fait partie de la spécification XAML 2009, tandis que `Binding` fait partie de Xamarin.Forms. Notez qu’aucun guillemet n’apparaît entre les accolades.
 
-Il est facile d’oublier le `x:Reference` extension de balisage lors de la définition du `BindingContext`. Il est courant de définir par inadvertance la propriété directement sur le nom de la source de liaison comme suit :
+Il est facile d’oublier l’extension de balisage `x:Reference` lors de la définition de `BindingContext`. Il est courant de définir par inadvertance la propriété directement sur le nom de la source de la liaison, comme suit :
 
 ```xaml
 BindingContext="slider"
 ```
 
-Mais ce n’est pas approprié. Ce balisage définit le `BindingContext` propriété un `string` objet dont les caractères de l’orthographe « curseur » !
+Mais ce n'est pas correct. Ce balisage définit la propriété `BindingContext` sur un objet `string` dont les caractères forment le mot « slider ».
 
-Notez que la propriété source est spécifiée avec la [ `Path` ](xref:Xamarin.Forms.Xaml.BindingExtension.Path) propriété du `BindingExtension`, qui correspond à la [ `Path` ](xref:Xamarin.Forms.Binding.Path) propriété de la [ `Binding` ](xref:Xamarin.Forms.Binding) classe.
+Notez que la propriété source est spécifiée avec la propriété [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) de `BindingExtension`, qui correspond à la propriété [`Path`](xref:Xamarin.Forms.Binding.Path) de la classe [`Binding`](xref:Xamarin.Forms.Binding).
 
-Le balisage affiché sur le **liaison de base XAML** page peut être simplifiée : les extensions de balisage XAML comme `x:Reference` et `Binding` peut avoir *propriété de contenu* attributs définis pour XAML extensions de balisage signifie que le nom de propriété n’a pas besoin s’affichent. Le `Name` propriété est la propriété de contenu de `x:Reference`et le `Path` propriété est la propriété de contenu de `Binding`, ce qui signifie que vous pouvez les éliminer des expressions :
+Le balisage affiché dans la page **Basic XAML Binding** peut être simplifié : les extensions de balisage XAML telles que `x:Reference` et `Binding` peuvent avoir des attributs de *propriété de contenu* définis, ce qui signifie pour des extensions de balisage XAML que le nom de propriété n’a pas besoin d’apparaître. La propriété `Name` est la propriété de contenu de `x:Reference` et la propriété `Path` est la propriété de contenu de `Binding`, ce qui signifie que vous pouvez les éliminer des expressions :
 
 ```xaml
 <Label Text="TEXT"
@@ -146,11 +146,11 @@ Le balisage affiché sur le **liaison de base XAML** page peut être simplifiée
        Rotation="{Binding Value}" />
 ```
 
-## <a name="bindings-without-a-binding-context"></a>Liaisons sans un contexte de liaison
+## <a name="bindings-without-a-binding-context"></a>Liaisons sans contexte de liaison
 
-Le `BindingContext` propriété est un composant important de liaisons de données, mais il n’est pas toujours nécessaire. L’objet source à la place peut être spécifié dans le `SetBinding` appeler ou le `Binding` extension de balisage.
+La propriété `BindingContext` est un composant important des liaisons de données, mais elle n’est pas toujours nécessaire. L’objet source peut être spécifié à la place dans l’appel `SetBinding` ou dans l’extension de balisage `Binding`.
 
-Cela est illustré dans le **Alternative Code liaison** exemple. Le fichier XAML est similaire à la **liaison de la base Code** échantillonner, sauf que le `Slider` est défini pour contrôler le `Scale` propriété de la `Label`. Pour cette raison, le `Slider` est défini pour une plage de &ndash;2 à 2 :
+Cela est illustré dans l’exemple **Alternative Code Binding** (Liaison de code alternative). Le fichier XAML est similaire à l’exemple **Basic Code Binding**, si ce n’est que l’élément `Slider` est défini pour contrôler la propriété `Scale` de l’objet `Label`. Pour cette raison, l’élément `Slider` est défini pour une plage allant de &ndash;2 à 2 :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -172,7 +172,7 @@ Cela est illustré dans le **Alternative Code liaison** exemple. Le fichier XAML
 </ContentPage>
 ```
 
-Le fichier code-behind définit la liaison avec le [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) méthode définie par `BindableObject`. L’argument est un [constructeur](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) pour le [ `Binding` ](xref:Xamarin.Forms.Binding) classe :
+Le fichier code-behind définit la liaison avec la méthode [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) définie par `BindableObject`. L’argument est un [constructeur](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) pour la classe [`Binding`](xref:Xamarin.Forms.Binding) :
 
 ```csharp
 public partial class AlternativeCodeBindingPage : ContentPage
@@ -186,22 +186,22 @@ public partial class AlternativeCodeBindingPage : ContentPage
 }
 ```
 
-Le `Binding` constructeur a 6 de paramètres, donc la `source` paramètre est spécifié avec un argument nommé. L’argument est le `slider` objet.
+Le constructeur `Binding` possède 6 paramètres, si bien que le paramètre `source` est spécifié avec un argument nommé. L’argument est l’élément `slider`.
 
-Ce programme en cours d’exécution peut être un peu surprenant :
+L’exécution de ce programme peut être quelque peu surprenante :
 
-[![Liaison du Code de remplacement](basic-bindings-images/alternativecodebinding-small.png "Code alternatif liaison")](basic-bindings-images/alternativecodebinding-large.png#lightbox "liaison du Code de remplacement")
+[![Alternative Code Binding](basic-bindings-images/alternativecodebinding-small.png "Alternative Code Binding")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Alternative Code Binding")
 
-L’écran iOS sur la gauche montre comment l’écran se présente lorsque la page s’affiche tout d’abord. Où est le `Label`?
+L’écran iOS de gauche montre à quoi ressemble l’écran lorsque la page apparaît initialement. Où est l’objet `Label` ?
 
-Le problème est que le `Slider` a une valeur initiale de 0. Cela entraîne le `Scale` propriété de la `Label` pour être également définie sur 0, en remplaçant sa valeur par défaut de 1. Il en résulte le `Label` initialement invisible. Comme le montrer les captures d’écran Android et Universal Windows Platform (UWP), vous pouvez manipuler la `Slider` pour rendre le `Label` apparaissent à nouveau, mais sa disparition initiale est déconcertante.
+Le problème est que l’élément `Slider` a une valeur initiale de 0. Par conséquent, la propriété `Scale` de l’objet `Label` est également définie sur 0, ce qui remplace sa valeur par défaut 1. Il en résulte que l’objet `Label` est initialement invisible. Comme les captures d’écran d’Android et de la plateforme Windows universelle l’illustrent, vous pouvez manipuler l’élément `Slider` pour faire réapparaître l’objet `Label`, mais sa disparition initiale est déconcertante.
 
-Vous allez découvrir dans le [prochain article](binding-mode.md) comment éviter ce problème en initialisant le `Slider` à partir de la valeur par défaut de la `Scale` propriété.
+Vous découvrirez dans le [prochain article](binding-mode.md) comment éviter ce problème en initialisant l’élément `Slider` à partir de la valeur par défaut de la propriété `Scale`.
 
 > [!NOTE]
-> Le [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe définit également [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) et [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) propriétés, ce qui peuvent évoluer le `VisualElement` différemment dans le directions horizontale et verticale.
+> La classe [`VisualElement`](xref:Xamarin.Forms.VisualElement) définit également les propriétés [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) et [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY), qui peuvent redimensionner l’élément `VisualElement` dans les directions horizontale et verticale.
 
-Le **Alternative XAML liaison** page montre la liaison équivalente entièrement dans XAML :
+La page **Alternative XAML Binding** (Liaison XAML alternative) illustre une liaison équivalente entièrement en XAML :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -224,21 +224,21 @@ Le **Alternative XAML liaison** page montre la liaison équivalente entièrement
 </ContentPage>
 ```
 
-Maintenant le `Binding` extension de balisage a deux propriétés à définir, `Source` et `Path`, séparées par une virgule. Si vous préférez, ils peuvent apparaître sur la même ligne :
+Maintenant, l’extension de balisage `Binding` a deux propriétés définies, `Source` et `Path`, séparées par une virgule. Elles peuvent apparaître sur la même ligne, si vous préférez :
 
 ```xaml
 Scale="{Binding Source={x:Reference slider}, Path=Value}" />
 ```
 
-Le `Source` propriété est définie sur un `x:Reference` extension de balisage qui comporte la même syntaxe que le paramètre le `BindingContext`. Notez que les guillemets ne s’affichent entre accolades, et que les deux propriétés doivent être séparées par une virgule.
+La propriété `Source` est définie sur une extension de balisage `x:Reference` qui possède autrement la même syntaxe que la définition de `BindingContext`. Notez qu’aucun guillemet ne figure entre les accolades et que les deux propriétés doivent être séparées par une virgule.
 
-La propriété de contenu de la `Binding` extension de balisage est `Path`, mais la `Path=` partie de l’extension de balisage peut uniquement être éliminée si c’est la première propriété dans l’expression. Pour éliminer la `Path=` partie, vous devez échanger les deux propriétés :
+La propriété de contenu de l’extension de balisage `Binding` est `Path`, mais la partie `Path=` de l’extension de balisage peut être éliminée seulement s’il s’agit de la première propriété dans l’expression. Pour éliminer la partie `Path=`, vous devez échanger les deux propriétés :
 
 ```xaml
 Scale="{Binding Value, Source={x:Reference slider}}" />
 ```
 
-Bien que les extensions de balisage XAML sont généralement délimitées par des accolades, ils peuvent également être exprimés en tant qu’éléments de l’objet :
+Bien que les extensions de balisage XAML soient généralement délimitées par des accolades, elles peuvent également être exprimées en tant qu’éléments objets :
 
 ```xaml
 <Label Text="TEXT"
@@ -252,7 +252,7 @@ Bien que les extensions de balisage XAML sont généralement délimitées par de
 </Label>
 ```
 
-Maintenant le `Source` et `Path` propriétés sont des attributs XAML réguliers : les valeurs apparaissent entre guillemets et les attributs ne sont pas séparés par une virgule. Le `x:Reference` extension de balisage peut également constituer un élément objet :
+Maintenant, les propriétés `Source` et `Path` sont des attributs XAML réguliers : les valeurs apparaissent entre guillemets et les attributs ne sont pas séparés par une virgule. L’extension de balisage `x:Reference` peut également devenir un élément objet :
 
 ```xaml
 <Label Text="TEXT"
@@ -269,25 +269,25 @@ Maintenant le `Source` et `Path` propriétés sont des attributs XAML réguliers
 </Label>
 ```
 
-Cette syntaxe n’est pas commune, mais il est parfois nécessaire lorsque des objets complexes sont impliqués.
+Cette syntaxe n’est pas courante, mais elle est parfois nécessaire lorsque des objets complexes sont impliqués.
 
-Les exemples présentés jusqu'à présent, définissent le `BindingContext` propriété et la `Source` propriété du `Binding` à un `x:Reference` extension de balisage pour référencer une autre vue dans la page. Ces deux propriétés sont de type `Object`, et elles peuvent être définies à n’importe quel objet qui inclut les propriétés qui conviennent pour les sources de liaison.
+Les exemples présentés jusqu'à présent définissent la propriété `BindingContext` et la propriété `Source` de `Binding` sur une extension de balisage `x:Reference` pour référencer une autre vue dans la page. Ces deux propriétés sont de type `Object` et elles peuvent être définies sur n’importe quel objet incluant des propriétés qui conviennent pour des sources de liaison.
 
-Dans les articles à l’avance, vous découvrirez que vous pouvez définir le `BindingContext` ou `Source` propriété à un `x:Static` extension de balisage pour référencer la valeur d’une propriété statique ou d’un champ, ou un `StaticResource` extension de balisage pour référencer un objet stocké dans un dictionnaire de ressources, ou directement à un objet, qui est généralement (mais pas toujours) une instance d’un ViewModel.
+Dans les articles à venir, vous découvrirez que vous pouvez définir la propriété `BindingContext` ou `Source` sur une extension de balisage `x:Static` pour référencer la valeur d’un champ ou d’une propriété statique, ou une extension de balisage `StaticResource` pour référencer un objet stocké dans un dictionnaire de ressources, ou directement sur un objet, qui est généralement (mais pas toujours) une instance d’un ViewModel.
 
-Le `BindingContext` propriété peut également être définie sur une `Binding` objet afin que le `Source` et `Path` propriétés de `Binding` définir le contexte de liaison.
+La propriété `BindingContext` peut également être définie sur un objet `Binding`, afin que les propriétés `Source` et `Path` de `Binding` définissent le contexte de liaison.
 
-## <a name="binding-context-inheritance"></a>Héritage de contexte de liaison
+## <a name="binding-context-inheritance"></a>Héritage du contexte de liaison
 
-Dans cet article, vous avez vu que vous pouvez spécifier l’objet source en utilisant le `BindingContext` propriété ou le `Source` propriété de la `Binding` objet. Si les deux sont définis, le `Source` propriété de la `Binding` est prioritaire sur la `BindingContext`.
+Dans cet article, vous avez vu que vous pouvez spécifier l’objet source en utilisant la propriété `BindingContext` ou la propriété `Source` de l’objet `Binding`. Si les deux sont définis, la propriété `Source` de `Binding` est prioritaire sur `BindingContext`.
 
-Le `BindingContext` propriété a une caractéristique extrêmement importante :
+La propriété `BindingContext` a une caractéristique extrêmement importante :
 
-*Le paramètre de la `BindingContext` propriété est héritée via l’arborescence visuelle.*
+*Le paramètre de la propriété `BindingContext` est hérité via l’arborescence d'éléments visuels.*
 
-Comme vous le verrez, cela peut être très pratique pour simplifier les expressions de liaison et dans certains cas &mdash; en particulier dans les scénarios de Model-View-ViewModel (MVVM) &mdash; , il est essentiel.
+Comme vous le verrez, cela peut être très pratique pour simplifier les expressions de liaison et dans certains cas &mdash; en particulier dans les scénarios MVVM (modèle-vue-vue modèle) &mdash; c’est essentiel.
 
-Le **l’héritage du contexte de liaison** exemple est une simple démonstration de l’héritage du contexte de liaison :
+L’exemple **Binding Context Inheritance** (Héritage du contexte de liaison) est une simple illustration de l’héritage du contexte de liaison :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -320,14 +320,14 @@ Le **l’héritage du contexte de liaison** exemple est une simple démonstratio
 </ContentPage>
 ```
 
-Le `BindingContext` propriété de la `StackLayout` est défini sur le `slider` objet. Ce contexte de liaison est hérité par les deux le `Label` et le `BoxView`, à la fois de qui ont leur `Rotation` propriétés définies sur le `Value` propriété de la `Slider`:
+La propriété `BindingContext` de `StackLayout` est définie sur l’élément `slider`. Ce contexte de liaison est hérité par les deux objets `Label` et `BoxView`, qui ont tous les deux leur propriété `Rotation` définie sur la propriété `Value` de l’élément `Slider` :
 
-[![L’héritage du contexte de liaison](basic-bindings-images/bindingcontextinheritance-small.png "l’héritage du contexte de liaison")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "l’héritage du contexte de liaison")
+[![Binding Context Inheritance](basic-bindings-images/bindingcontextinheritance-small.png "Binding Context Inheritance")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "Binding Context Inheritance")
 
-Dans le [prochain article](binding-mode.md), vous verrez comment le *mode de liaison* peut modifier le flux de données entre les objets source et cible.
+Dans le [prochain article](binding-mode.md), vous verrez comment le *mode de liaison* peut modifier le flux de données entre les objets cible et source.
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Démonstrations de liaison de données (exemple)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Chapitre de liaison de données à partir du livre de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Démos des liaisons de données (exemple)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Chapitre sur les liaisons de données dans la documentation de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

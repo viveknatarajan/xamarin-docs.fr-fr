@@ -1,6 +1,6 @@
 ---
-title: Liaison à partir d’un ControlTemplate de Xamarin.Forms
-description: Liaisons de modèles permettent de lient des contrôles dans un modèle de contrôle aux données aux propriétés publiques, permettant des valeurs de propriété sur les contrôles dans le modèle de contrôle pour être facilement modifié. Cet article montre comment utiliser des liaisons de modèles pour effectuer la liaison de données à partir d’un modèle de contrôle.
+title: Liaison à partir d’un ControlTemplate Xamarin.Forms
+description: Les liaisons de modèle permettent aux contrôles dans un modèle de contrôle de lier aux données des propriétés publiques et ainsi permettre de modifier facilement les valeurs de propriété sur les contrôles du modèle de contrôle. Cet article montre comment utiliser les liaisons de modèle pour effectuer une liaison de données à partir d’un modèle de contrôle.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50106427"
 ---
-# <a name="binding-from-a-xamarinforms-controltemplate"></a>Liaison à partir d’un ControlTemplate de Xamarin.Forms
+# <a name="binding-from-a-xamarinforms-controltemplate"></a>Liaison à partir d’un ControlTemplate Xamarin.Forms
 
-_Liaisons de modèles permettent de lient des contrôles dans un modèle de contrôle aux données aux propriétés publiques, permettant des valeurs de propriété sur les contrôles dans le modèle de contrôle pour être facilement modifié. Cet article montre comment utiliser des liaisons de modèles pour effectuer la liaison de données à partir d’un modèle de contrôle._
+_Les liaisons de modèle permettent aux contrôles dans un modèle de contrôle de lier aux données des propriétés publiques et ainsi permettre de modifier facilement les valeurs de propriété sur les contrôles du modèle de contrôle. Cet article montre comment utiliser les liaisons de modèle pour effectuer une liaison de données à partir d’un modèle de contrôle._
 
-Un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) est utilisé pour lier la propriété d’un contrôle dans un modèle de contrôle à une propriété peut être liée sur le parent de la *cible* vue propriétaire du modèle de contrôle. Par exemple, au lieu de définir le texte affiché par [ `Label` ](xref:Xamarin.Forms.Label) instances à l’intérieur de la [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate), vous pouvez utiliser une liaison de modèle pour lier le [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) propriété aux propriétés pouvant être liées qui définissent le texte à afficher.
+Un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) est utilisé pour lier la propriété d’un contrôle dans un modèle de contrôle à une propriété pouvant être liée sur le parent de la vue *cible* propriétaire du modèle de contrôle. Par exemple, au lieu de définir le texte affiché par des instances de [`Label`](xref:Xamarin.Forms.Label) à l’intérieur du [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate), vous pouvez utiliser une liaison de modèle pour lier la propriété [`Label.Text`](xref:Xamarin.Forms.Label.Text) à des propriétés pouvant être liées qui définissent le texte à afficher.
 
-A [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) est similaire à une [ `Binding` ](xref:Xamarin.Forms.Binding), sauf que le *source* d’un `TemplateBinding` est toujours automatiquement définie sur le parent de la *cible* vue propriétaire du modèle de contrôle. Toutefois, notez que l’utilisation d’un `TemplateBinding` en dehors d’un [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) n’est pas pris en charge.
+Un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) est similaire à un [`Binding`](xref:Xamarin.Forms.Binding), sauf que la *source* d’un `TemplateBinding` est toujours automatiquement définie sur le parent de la vue *cible* propriétaire du modèle de contrôle. Toutefois, notez que l’utilisation d’un `TemplateBinding` en dehors d’un [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) n’est pas prise en charge.
 
-## <a name="creating-a-templatebinding-in-xaml"></a>Création d’un objet TemplateBinding dans XAML
+## <a name="creating-a-templatebinding-in-xaml"></a>Création d’un objet TemplateBinding en XAML
 
-Dans XAML, un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) est créé à l’aide de la [ `TemplateBinding` ](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) extension de balisage, comme illustré dans l’exemple de code suivant :
+En XAML, vous créez un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) à l’aide de l’extension de balisage [`TemplateBinding`](xref:Xamarin.Forms.Xaml.TemplateBindingExtension), comme illustré dans l’exemple de code suivant :
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -37,7 +37,7 @@ Dans XAML, un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) est cré
 </ControlTemplate>
 ```
 
-Au lieu de définir la [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) propriétés en texte statique, les propriétés peuvent utiliser des liaisons de modèles à lier à des propriétés pouvant être liées sur le parent de la *cible* vue qui possède le [ `ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Toutefois, notez que les liaisons de modèles lient `Parent.HeaderText` et `Parent.FooterText`, plutôt que `HeaderText` et `FooterText`. Il s’agit, car dans cet exemple, les propriétés pouvant être liées sont définies sur le grand-parent de la *cible* afficher, au lieu de la page parente, comme illustré dans l’exemple de code suivant :
+Au lieu de définir les propriétés [`Label.Text`](xref:Xamarin.Forms.Label.Text) comme texte statique, vous pouvez faire en sorte que les propriétés utilisent des liaisons de modèles afin d’établir une liaison à des propriétés pouvant être liées sur le parent de la vue *cible* propriétaire du [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). Toutefois, notez que les liaisons de modèles établissent une liaison à `Parent.HeaderText` et `Parent.FooterText`, plutôt que `HeaderText` et `FooterText`. En effet, dans cet exemple, les propriétés pouvant être liées sont définies sur le grand-parent de la vue *cible*, plutôt que sur le parent, comme illustré dans l’exemple de code suivant :
 
 ```xaml
 <ContentPage ...>
@@ -47,7 +47,7 @@ Au lieu de définir la [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) propriét
 </ContentPage>
 ```
 
-Le *source* du modèle de liaison est automatiquement définie sur le parent de la *cible* vue propriétaire du modèle de contrôle, qui est ici la [ `ContentView` ](xref:Xamarin.Forms.ContentView) instance. Le modèle de liaison utilise le [ `Parent` ](xref:Xamarin.Forms.Element.Parent) propriété pour retourner l’élément parent de la `ContentView` instance, ce qui est le [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) instance. Par conséquent, à l’aide un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) dans le [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) à lier à `Parent.HeaderText` et `Parent.FooterText` localise les propriétés pouvant être liées qui sont définies sur le `ContentPage`, en tant que illustrées dans l’exemple de code suivant :
+La *source* de la liaison de modèle est définie automatiquement sur le parent de la vue *cible* propriétaire du modèle de contrôle, qui est ici l’instance de [`ContentView`](xref:Xamarin.Forms.ContentView). La liaison de modèle utilise la propriété [`Parent`](xref:Xamarin.Forms.Element.Parent) pour retourner l’élément parent de l’instance de `ContentView`, qui est l’instance de [`ContentPage`](xref:Xamarin.Forms.ContentPage). Par conséquent, l’utilisation d’un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) dans le [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) pour établir une liaison à `Parent.HeaderText` et à `Parent.FooterText` localise les propriétés pouvant être liées qui sont définies sur le `ContentPage`, comme illustré dans l’exemple de code suivant :
 
 ```csharp
 public static readonly BindableProperty HeaderTextProperty =
@@ -64,13 +64,13 @@ public string FooterText {
 }
 ```
 
-Cela provoque l’affichage indiqué dans les captures d’écran suivante :
+Cela donne l’affichage illustré dans les captures d’écran suivantes :
 
-![](template-binding-images/teal-theme.png "Modèle de contrôle en bleu-vert à l’aide de liaisons de modèles")
+![](template-binding-images/teal-theme.png "Modèle de contrôle bleu-vert utilisant des liaisons de modèle")
 
 ## <a name="creating-a-templatebinding-in-c35"></a>Création d’un objet TemplateBinding en C&#35;
 
-En c#, un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) est créé à l’aide de la `TemplateBinding` constructeur, comme illustré dans l’exemple de code suivant :
+En C#, vous créez un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) à l’aide du constructeur `TemplateBinding`, comme illustré dans l’exemple de code suivant :
 
 ```csharp
 class TealTemplate : Grid
@@ -88,7 +88,7 @@ class TealTemplate : Grid
 }
 ```
 
-Au lieu de définir la [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) propriétés en texte statique, les propriétés peuvent utiliser des liaisons de modèles à lier à des propriétés pouvant être liées sur le parent de la *cible* vue qui possède le [ `ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). La liaison de modèle est créée à l’aide de la [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) (méthode), en spécifiant un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) instance comme second paramètre. Notez que les liaisons de modèles de lier à `Parent.HeaderText` et `Parent.FooterText`, car les propriétés pouvant être liées sont définies sur le grand-parent de la *cible* afficher, au lieu de la page parente, comme illustré dans l’exemple de code suivant :
+Au lieu de définir les propriétés [`Label.Text`](xref:Xamarin.Forms.Label.Text) comme texte statique, vous pouvez faire en sorte que les propriétés utilisent des liaisons de modèles afin d’établir une liaison à des propriétés pouvant être liées sur le parent de la vue *cible* propriétaire du [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). La liaison de modèle est créée à l’aide de la méthode [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)), en spécifiant une instance de [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) comme second paramètre. Notez que les liaisons de modèle établissent une liaison à `Parent.HeaderText` et `Parent.FooterText`, car les propriétés pouvant être liées sont définies sur le grand-parent de la vue *cible*, plutôt que sur le parent, comme illustré dans l’exemple de code suivant :
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -110,9 +110,9 @@ public class HomePageCS : ContentPage
 
 Les propriétés pouvant être liées sont définies sur le `ContentPage`, comme indiqué précédemment.
 
-### <a name="binding-a-bindableproperty-to-a-viewmodel-property"></a>Un BindableProperty de liaison à une propriété ViewModel
+### <a name="binding-a-bindableproperty-to-a-viewmodel-property"></a>Liaison d’un BindableProperty à une propriété ViewModel
 
-Comme indiqué précédemment, un [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) lie la propriété d’un contrôle dans un modèle de contrôle à une propriété peut être liée sur le parent de la *cible* vue propriétaire du modèle de contrôle. À son tour, ces propriétés pouvant être liées peuvent être liées aux propriétés dans ViewModels.
+Comme indiqué précédemment, un [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) lie la propriété d’un contrôle dans un modèle de contrôle à une propriété pouvant être liée sur le parent de la vue *cible* propriétaire du modèle de contrôle. À leur tour, ces propriétés peuvent être liées à des propriétés dans des ViewModels.
 
 L’exemple de code suivant définit deux propriétés sur un ViewModel :
 
@@ -124,7 +124,7 @@ public class HomePageViewModel
 }
 ```
 
-Le `HeaderText` et `FooterText` propriétés ViewModel peuvent être liées à, comme indiqué dans l’exemple de code XAML suivant :
+Des liaisons peuvent être établies aux propriétés de ViewModel `HeaderText` et `FooterText`, comme indiqué dans l’exemple de code XAML suivant :
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:SimpleTheme;assembly=SimpleTheme"
@@ -138,7 +138,7 @@ Le `HeaderText` et `FooterText` propriétés ViewModel peuvent être liées à, 
 </ContentPage>
 ```
 
-Le `HeaderText` et `FooterText` propriétés pouvant être liées sont liées à la `HomePageViewModel.HeaderText` et `HomePageViewModel.FooterText` propriétés, en raison du paramètre le [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) à une instance de la `HomePageViewModel` classe. En général, il en résulte des propriétés de contrôle dans le [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) lié aux [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) instances sur le [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), qui à son tour de lier à Propriétés du ViewModel.
+Les propriétés pouvant être liées `HeaderText` et `FooterText` sont liées aux propriétés `HomePageViewModel.HeaderText` et `HomePageViewModel.FooterText`, car le [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) a été défini sur une instance de la classe `HomePageViewModel`. Globalement, cela a comme conséquence la liaison des propriétés de contrôle dans le [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) à des instances de [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) sur le [`ContentPage`](xref:Xamarin.Forms.ContentPage), qui à leur tour sont liées à des propriétés du ViewModel.
 
 Le code C# équivalent est affiché dans l’exemple de code suivant :
 
@@ -156,7 +156,7 @@ public class HomePageCS : ContentPage
 }
 ```
 
-Vous pouvez également lier aux propriétés de modèle de vue directement, afin que vous n’avez pas besoin de déclarer `BindableProperty`s pour `HeaderText` et `FooterText` sur le `ContentPage`, en liant le modèle de contrôle à Parent.BindingContext. _PropertyName_ , par exemple :
+Vous pouvez également lier directement aux propriétés du modèle d’affichage, ce qui vous évite de devoir déclarer des `BindableProperty`s pour `HeaderText` et `FooterText` sur le `ContentPage`, en liant le modèle de contrôle à Parent.BindingContext._PropertyName_, par exemple :
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -169,18 +169,18 @@ Vous pouvez également lier aux propriétés de modèle de vue directement, afin
 </ControlTemplate>
 ```
 
-Pour plus d’informations sur la liaison de données pour les ViewModels, consultez [à partir des liaisons de données à MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
+Pour plus d’informations sur la liaison de données à des ViewModels, consultez [Des liaisons de données à MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article, présenté à l’aide de liaisons de modèles pour effectuer la liaison de données à partir d’un modèle de contrôle. Liaisons de modèles permettent de lient des contrôles dans un modèle de contrôle aux données aux propriétés publiques, permettant des valeurs de propriété sur les contrôles dans le modèle de contrôle pour être facilement modifié.
+Dans cet article, vous avez vu comment utiliser les liaisons de modèle pour effectuer une liaison de données à partir d’un modèle de contrôle. Les liaisons de modèle permettent aux contrôles dans un modèle de contrôle de lier aux données des propriétés publiques et ainsi permettre de modifier facilement les valeurs de propriété sur les contrôles du modèle de contrôle.
 
 ## <a name="related-links"></a>Liens associés
 
-- [Principes fondamentaux de liaison de données](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [Liaisons de données à MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
-- [Thème simple avec la liaison de modèle (exemple)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
-- [Thème simple avec la liaison de modèle et le ViewModel (exemple)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/)
+- [Notions de base sur la liaison de données](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+- [Des liaisons de données à MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [Thème simple avec liaison de modèle (exemple)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
+- [Thème simple avec liaison de modèle et ViewModel (exemple)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/)
 - [TemplateBinding](xref:Xamarin.Forms.TemplateBinding)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentView](xref:Xamarin.Forms.ContentView)

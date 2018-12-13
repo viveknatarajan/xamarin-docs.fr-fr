@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms compilé des liaisons
-description: Cet article explique comment utiliser des liaisons compilés pour améliorer les performances de liaison de données dans les applications Xamarin.Forms.
+title: Liaisons compilées Xamarin.Forms
+description: Cet article explique comment utiliser des liaisons compilées pour améliorer les performances des liaisons de données dans les applications Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
 ms.technology: xamarin-forms
@@ -9,38 +9,38 @@ ms.author: dabritch
 ms.date: 10/25/2018
 ms.openlocfilehash: 0b350082c834076a1d69427644259087d64bf26a
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50111526"
 ---
-# <a name="xamarinforms-compiled-bindings"></a>Xamarin.Forms compilé des liaisons
+# <a name="xamarinforms-compiled-bindings"></a>Liaisons compilées Xamarin.Forms
 
-_Liaisons compilées sont résolus plus rapidement que les liaisons classiques, améliorant ainsi les performances de liaison de données dans les applications Xamarin.Forms._
+_Les liaisons compilées sont résolues plus rapidement que les liaisons classiques. Elles améliorent ainsi les performances des liaisons de données dans les applications Xamarin.Forms._
 
-Liaisons de données a deux problèmes principaux :
+Les liaisons de données présentent deux problèmes principaux :
 
-1. Il n’existe aucune validation de la compilation des expressions de liaison. Au lieu de cela, les liaisons sont résolues lors de l’exécution. Par conséquent, toutes les liaisons non valides ne sont pas détectées avant l’exécution lorsque l’application ne se comporte pas comme prévu, ou les messages d’erreur apparaissent.
-1. Ils ne sont pas rentables. Les liaisons sont résolues lors de l’exécution à l’aide d’inspection d’objets à usage général (reflection) et la surcharge de procéder varie d’une plateforme.
+1. Aucune validation des expressions de liaison n’a lieu au moment de la compilation. À la place, les liaisons sont résolues au moment de l’exécution. Par conséquent, les liaisons non valides ne sont pas détectées avant l’exécution, lorsque l’application ne se comporte pas comme prévu ou que des messages d’erreur apparaissent.
+1. Elles ne sont pas rentables. Les liaisons sont résolues au moment de l’exécution via l’inspection (réflexion) des objets à usage général et la surcharge de cette opération varie d’une plateforme à l’autre.
 
-Liaisons compilées améliorent les performances de liaison de données dans les applications Xamarin.Forms en résolvant les expressions de liaison au moment de la compilation plutôt que de runtime. En outre, cette validation au moment de la compilation des expressions de liaison permet un meilleur développeur expérience de dépannage car les liaisons non valides sont signalés comme erreurs de build.
+Les liaisons compilées améliorent les performances de liaison de données dans les applications Xamarin.Forms en résolvant les expressions de liaison au moment de la compilation plutôt qu’au moment de l’exécution. En outre, cette validation des expressions de liaison au moment de la compilation favorise une meilleure expérience de dépannage pour les développeurs, car les liaisons non valides sont signalées comme erreurs de build.
 
-Le processus d’utilisation de liaisons compilées consiste à :
+Le processus permettant d’utiliser des liaisons compilées est le suivant :
 
-1. Activer la compilation de XAML. Pour plus d’informations sur la compilation de XAML, consultez [XAML Compilation](~/xamarin-forms/xaml/xamlc.md).
-1. Définir un `x:DataType` attribut sur un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) pour le type de l’objet qui le `VisualElement` et ses enfants seront lié. Notez que cet attribut peut être défini de nouveau à n’importe quel emplacement dans une hiérarchie d’affichage.
+1. Activez la compilation XAML. Pour plus d’informations sur la compilation XAML, consultez [Compilation XAML](~/xamarin-forms/xaml/xamlc.md).
+1. Définissez un attribut `x:DataType` sur un objet [`VisualElement`](xref:Xamarin.Forms.VisualElement) correspondant au type de l’objet auquel `VisualElement` et ses enfants seront liés. Notez que cet attribut peut être redéfini à tout emplacement dans une hiérarchie d’affichage.
 
 > [!NOTE]
-> Il est recommandé de définir le `x:DataType` attribut au même niveau dans la hiérarchie d’affichage comme le [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) est défini.
+> Il est recommandé de définir l’attribut `x:DataType` dans la hiérarchie d’affichage au niveau où [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) est défini.
 
-Au moment de la compilation XAML, les expressions de liaison non valide seront signalées comme erreurs de build. Toutefois, le compilateur XAML signalera uniquement pour la première expression de liaison non valide qu’il rencontre une erreur de build. Toutes les expressions de liaison valide qui sont définies sur le `VisualElement` ou ses enfants seront compilées, que le [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) est défini en XAML ou de code. Compilation d’une expression de liaison génère du code compilé qui aura une valeur d’une propriété sur le *source*et défini sur la propriété sur le *cible* qui est spécifié dans le balisage. En outre, en fonction de l’expression de liaison, le code généré peut observer les modifications dans la valeur de la *source* propriété et actualiser le *cible* propriété et peut pousser des modifications à partir de la *cible* vers le *source*.
+Au moment de la compilation XAML, toutes les expressions de liaison non valides seront signalées comme erreurs de build. Toutefois, le compilateur XAML signalera uniquement une erreur de build pour la première expression de liaison non valide qu’il rencontrera. Toutes les expressions de liaison valides qui sont définies sur l’objet `VisualElement` ou ses enfants seront compilées, que [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) soit défini en XAML ou dans le code. La compilation d’une expression de liaison génère du code compilé qui obtiendra une valeur d’une propriété de la *source* et la définira sur la propriété de la *cible* spécifiée dans le balisage. En outre, en fonction de l’expression de liaison, le code généré peut observer des modifications dans la valeur de la propriété *source* et actualiser la propriété *cible*, et il peut renvoyer (push) des modifications à partir de la *cible* vers la *source*.
 
 > [!IMPORTANT]
-> Liaisons compilées sont actuellement désactivées pour toutes les expressions de liaison qui définissent le [ `Source` ](xref:Xamarin.Forms.Binding.Source) propriété. Il s’agit, car le `Source` propriété est toujours définie à l’aide de la `x:Reference` extension de balisage, qui ne peut pas être résolue au moment de la compilation.
+> Les liaisons compilées sont actuellement désactivées pour toutes les expressions de liaison qui définissent la propriété [`Source`](xref:Xamarin.Forms.Binding.Source). Cela tient au fait que la propriété `Source` est toujours définie à l’aide de l’extension de balisage `x:Reference`, qui ne peut pas être résolue au moment de la compilation.
 
-## <a name="using-compiled-bindings"></a>À l’aide de liaisons compilées
+## <a name="using-compiled-bindings"></a>Utilisation des liaisons compilées
 
-Le **compilés un sélecteur de couleurs** page illustre l’utilisation de compilées liaisons entre les vues Xamarin.Forms et les propriétés de ViewModel :
+La page **Compiled Color Selector** (Sélecteur de couleur compilé) illustre l’utilisation de liaisons compilées entre les vues Xamarin.Forms et les propriétés du ViewModel :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -68,26 +68,26 @@ Le **compilés un sélecteur de couleurs** page illustre l’utilisation de comp
 </ContentPage>
 ```
 
-La racine [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) instancie le `HslColorViewModel` et initialise le `Color` propriété dans les balises d’élément de propriété pour le [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) propriété. Cette racine `StackLayout` définit également la `x:DataType` d’attribut en tant que type ViewModel, ce qui indique que les expressions de liaison à la racine `StackLayout` hiérarchie d’affichage sera compilée. Cela peut être vérifié en modifiant les expressions de liaison à lier à une propriété inexistante ViewModel, ce qui entraîne une erreur de build.
+La racine [`StackLayout`](xref:Xamarin.Forms.StackLayout) instancie `HslColorViewModel` et initialise la propriété `Color` dans les balises d’élément de propriété pour la propriété [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). Cette racine `StackLayout` définit également l’attribut `x:DataType` en tant que type de ViewModel, ce qui indique que toutes les expressions de liaison figurant dans la hiérarchie d’affichage `StackLayout` racine seront compilées. Cela peut être vérifié en modifiant les expressions de liaison à lier à une propriété de ViewModel inexistante, ce qui entraînera une erreur de build.
 
 > [!IMPORTANT]
-> Le `x:DataType` attribut permettre être redéfini à tout moment dans une hiérarchie d’affichage.
+> L’attribut `x:DataType` peut être redéfini à tout emplacement dans une hiérarchie d’affichage.
 
-Le [ `BoxView` ](xref:Xamarin.Forms.BoxView), [ `Label` ](xref:Xamarin.Forms.Label) éléments, et [ `Slider` ](xref:Xamarin.Forms.Slider) vues héritent du contexte de liaison à partir de la [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). Ces vues sont toutes les cibles de liaison qui font référence à des propriétés de source dans le ViewModel. Pour le [ `BoxView.Color` ](xref:Xamarin.Forms.BoxView.Color) propriété et le [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) propriété, les liaisons de données sont `OneWay` – les propriétés dans la vue sont définies à partir des propriétés dans le ViewModel. Toutefois, le [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propriété utilise un `TwoWay` liaison. Cela permet à chaque `Slider` à définir à partir du ViewModel, ainsi que pour le ViewModel à définir à partir de chaque `Slider`.
+Les éléments [`BoxView`](xref:Xamarin.Forms.BoxView), [`Label`](xref:Xamarin.Forms.Label) et les vues [`Slider`](xref:Xamarin.Forms.Slider) héritent du contexte de liaison de [`StackLayout`](xref:Xamarin.Forms.StackLayout). Ces vues sont toutes les cibles de liaison qui référencent les propriétés de la source dans le ViewModel. Pour la propriété [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) et la propriété [`Label.Text`](xref:Xamarin.Forms.Label.Text), les liaisons de données sont `OneWay` – les propriétés dans la vue sont définies à partir des propriétés dans le ViewModel. Toutefois, la propriété [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) utilise une liaison `TwoWay`. Cela permet de définir chaque élément `Slider` à partir du ViewModel, ainsi que le ViewModel à partir de chaque élément `Slider`.
 
-Lors de la première exécution de l’application, le [ `BoxView` ](xref:Xamarin.Forms.BoxView), [ `Label` ](xref:Xamarin.Forms.Label) éléments, et [ `Slider` ](xref:Xamarin.Forms.Slider) éléments ont tous la valeur à partir du ViewModel selon initial `Color` propriété est définie lorsque le ViewModel a été instancié. Ceci est illustré dans les captures d’écran suivante :
+À la première exécution de l’application, les éléments [`BoxView`](xref:Xamarin.Forms.BoxView), [`Label`](xref:Xamarin.Forms.Label) et [`Slider`](xref:Xamarin.Forms.Slider) sont tous définis à partir du ViewModel basé sur la propriété `Color` initiale définie lorsque le ViewModel a été instancié. Ceci est illustré dans les captures d’écran suivantes :
 
-[![Compilé le sélecteur de couleurs](compiled-bindings-images/compiledcolorselector-small.png "compilé le sélecteur de couleurs")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "compilé le sélecteur de couleurs")
+[![Compiled Color Selector](compiled-bindings-images/compiledcolorselector-small.png "Compiled Color Selector")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "Compiled Color Selector")
 
-Comme les curseurs sont manipulées, le [ `BoxView` ](xref:Xamarin.Forms.BoxView) et [ `Label` ](xref:Xamarin.Forms.Label) éléments sont mis à jour en conséquence.
+Lorsque les curseurs sont manipulés, les éléments [`BoxView`](xref:Xamarin.Forms.BoxView) et [`Label`](xref:Xamarin.Forms.Label) sont mis à jour en conséquence.
 
-Pour plus d’informations sur ce sélecteur de couleurs, consultez [ViewModels et les Notifications de modification de propriété](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#viewmodels-and-property-change-notifications).
+Pour plus d’informations sur ce sélecteur de couleur, consultez [ViewModels et notifications de modification de propriété](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#viewmodels-and-property-change-notifications).
 
-## <a name="using-compiled-bindings-in-a-datatemplate"></a>Utilisation de liaisons compilées dans un DataTemplate
+## <a name="using-compiled-bindings-in-a-datatemplate"></a>Utilisation des liaisons compilées dans un DataTemplate
 
-Liaisons dans un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) sont interprétées dans le contexte de l’objet basé sur un modèle. Par conséquent, lorsque l’aide compilée liaisons dans un `DataTemplate`, le `DataTemplate` doit déclarer le type de son objet de données à l’aide de la `x:DataType` attribut.
+Les liaisons figurant dans un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) sont interprétées dans le contexte de l’objet basé sur le modèle. Par conséquent, lorsque vous utilisez des liaisons compilées dans un `DataTemplate`, le `DataTemplate` doit déclarer le type de son objet de données à l’aide de l’attribut `x:DataType`.
 
-Le **compilé une liste de couleurs** page illustre l’utilisation de liaisons compilées dans un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate):
+La page **Compiled Color List** (Liste de couleurs compilée) illustre l’utilisation des liaisons compilées dans un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -120,21 +120,21 @@ Le **compilé une liste de couleurs** page illustre l’utilisation de liaisons 
 </ContentPage>
 ```
 
-Le [ `ListView.ItemsSource` ](xref:Xamarin.Forms.ListView) propriété est définie sur la méthode statique `NamedColor.All` propriété. Le `NamedColor` classe utilise la réflexion .NET pour énumérer tous les champs publics statiques dans le [ `Color` ](xref:Xamarin.Forms.Color) structure et les stocker avec leurs noms dans une collection qui est accessible à partir de la méthode statique `All` propriété. Par conséquent, le `ListView` est rempli avec toutes les `NamedColor` instances. Pour chaque élément dans le `ListView`, le contexte de l’élément de liaison est défini un `NamedColor` objet. Le [ `BoxView` ](xref:Xamarin.Forms.BoxView) et [ `Label` ](xref:Xamarin.Forms.Label) éléments dans le [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) sont liés aux `NamedColor` propriétés.
+La propriété [`ListView.ItemsSource`](xref:Xamarin.Forms.ListView) est définie sur la propriété `NamedColor.All` statique. La classe `NamedColor` utilise la réflexion .NET pour énumérer tous les champs publics statiques dans la structure [`Color`](xref:Xamarin.Forms.Color) et pour les stocker avec leurs noms dans une collection accessible à partir de la propriété `All` statique. Par conséquent, l’objet `ListView` est rempli avec toutes les instances de `NamedColor`. Pour chaque élément figurant dans `ListView`, le contexte de liaison de l’élément est défini sur un objet `NamedColor`. Les éléments [`BoxView`](xref:Xamarin.Forms.BoxView) et [`Label`](xref:Xamarin.Forms.Label) dans l’objet [`ViewCell`](xref:Xamarin.Forms.ViewCell) sont liés aux propriétés de `NamedColor`.
 
-Notez que le [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) définit le `x:DataType` attribut qui sera la `NamedColor` type, indiquant que toute expressions de liaison dans le `DataTemplate` hiérarchie d’affichage sera compilée. Cela peut être vérifié en modifiant les expressions de liaison pour lier à un inexistante `NamedColor` propriété, ce qui entraîne une erreur de build.
+Notez que le [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) définit l’attribut `x:DataType` en tant que type de `NamedColor`, ce qui indique que toutes les expressions de liaison figurant dans la hiérarchie d’affichage `DataTemplate` seront compilées. Cela peut être vérifié en modifiant les expressions de liaison à lier à une propriété de `NamedColor` inexistante, ce qui entraînera une erreur de build.
 
-Lors de la première exécution de l’application, le [ `ListView` ](xref:Xamarin.Forms.ListView) est rempli avec `NamedColor` instances. Lorsqu’un élément dans le `ListView` est sélectionnée, le [ `BoxView.Color` ](xref:Xamarin.Forms.BoxView.Color) propriété est définie sur la couleur de l’élément sélectionné dans le `ListView`:
+À la première exécution de l’application, [`ListView`](xref:Xamarin.Forms.ListView) est rempli avec les instances de `NamedColor`. Lorsqu’un élément dans `ListView` est sélectionné, la propriété [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) est définie sur la couleur de l’élément sélectionné dans `ListView` :
 
-[![Compilé liste couleur](compiled-bindings-images/compiledcolorlist-small.png "compilé liste Couleur]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
+[![Compiled Color List](compiled-bindings-images/compiledcolorlist-small.png "Compiled Color List]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
 
-Sélection d’autres éléments dans le [ `ListView` ](xref:Xamarin.Forms.BoxView) met à jour de la couleur de la [ `BoxView` ](xref:Xamarin.Forms.BoxView).
+La sélection d’autres éléments dans l’objet [`ListView`](xref:Xamarin.Forms.BoxView) met à jour la couleur de l’objet [`BoxView`](xref:Xamarin.Forms.BoxView).
 
-## <a name="combining-compiled-bindings-with-classic-bindings"></a>Liaisons combinant compilé avec des liaisons classiques
+## <a name="combining-compiled-bindings-with-classic-bindings"></a>Combinaison de liaisons compilées avec des liaisons classiques
 
-Expressions de liaison sont compilées uniquement pour la hiérarchie d’affichage qui le `x:DataType` l’attribut est défini sur. À l’inverse, toutes les vues dans une hiérarchie sur lequel le `x:DataType` attribut n’est pas défini utilisera les liaisons classiques. Par conséquent, il est possible de combiner des liaisons compilés et classique sur une page. Par exemple, dans la précédente section les vues dans le [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) utilisent des liaisons compilées, alors que le [ `BoxView` ](xref:Xamarin.Forms.BoxView) qui est défini sur la couleur sélectionnée dans le [ `ListView` ](xref:Xamarin.Forms.ListView) pas.
+Les expressions de liaison sont compilées uniquement pour la hiérarchie d’affichage sur laquelle l’attribut `x:DataType` est défini. À l’inverse, toutes les vues dans une hiérarchie sur laquelle l’attribut `x:DataType` n’est pas défini utiliseront des liaisons classiques. Par conséquent, il est possible de combiner des liaisons compilées et classiques sur une page. Par exemple, dans la section précédente, les vues figurant dans le [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) utilisent des liaisons compilées, alors que ce n’est pas le cas du [`BoxView`](xref:Xamarin.Forms.BoxView) qui est défini sur la couleur sélectionnée dans l’objet [`ListView`](xref:Xamarin.Forms.ListView).
 
-Structuration prudent de `x:DataType` attributs peuvent ainsi entraîner une page à l’aide de liaisons compilés et classiques. Vous pouvez également le `x:DataType` attribut permettre être redéfini à tout moment dans une hiérarchie d’affichage à `null` à l’aide de la `x:Null` extension de balisage. Cela indique que les expressions de liaison dans la hiérarchie d’affichage utilisent les liaisons classiques. Le *liaisons mixte* page illustre cette approche :
+La structuration prudente des attributs `x:DataType` permet ainsi d’obtenir une page utilisant des liaisons compilées et classiques. Vous pouvez également redéfinir l’attribut `x:DataType` à tout moment dans une hiérarchie d’affichage sur `null` à l’aide de l’extension de balisage `x:Null`. Cela indique que toutes les expressions de liaison figurant dans la hiérarchie d’affichage utiliseront des liaisons classiques. La page *Mixed Bindings* (Liaisons mixtes) illustre cette approche :
 
 ```xaml
 <StackLayout x:DataType="local:HslColorViewModel">
@@ -156,21 +156,21 @@ Structuration prudent de `x:DataType` attributs peuvent ainsi entraîner une pag
 </StackLayout>   
 ```
 
-La racine [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) définit le `x:DataType` attribut qui sera la `HslColorViewModel` type, indiquant que toute expression de liaison à la racine `StackLayout` hiérarchie d’affichage sera compilée. Toutefois, interne `StackLayout` redéfinit le `x:DataType` attribut `null` avec la `x:Null` expression de balisage. Par conséquent, les expressions de liaison dans interne `StackLayout` utilisent des liaisons classiques. Uniquement les [ `BoxView` ](xref:Xamarin.Forms.BoxView), au sein de la racine `StackLayout` afficher la hiérarchie, les liaisons utilise compilé.
+Le [`StackLayout`](xref:Xamarin.Forms.StackLayout) racine définit l’attribut `x:DataType` en tant que type `HslColorViewModel`, ce qui indique que toutes les expressions de liaison figurant dans la hiérarchie d’affichage `StackLayout` racine seront compilées. Toutefois, le `StackLayout` interne redéfinit l’attribut `x:DataType` sur `null` avec l’expression de balisage `x:Null`. Par conséquent, les expressions de liaison figurant dans le `StackLayout` interne utilisent des liaisons classiques. Seul l’objet [`BoxView`](xref:Xamarin.Forms.BoxView), au sein de la hiérarchie d’affichage `StackLayout` racine, utilise des liaisons compilées.
 
-Pour plus d’informations sur la `x:Null` expression de balisage, consultez [x : Null Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#null).
+Pour plus d'informations sur l’expression de balisage `x:Null`, consultez [Extension de balisage x:Null](~/xamarin-forms/xaml/markup-extensions/consuming.md#null).
 
 ## <a name="performance"></a>Performances
 
-Liaisons compilées améliorent les performances, avec l’avantage de performances des variables de liaison de données. Tests unitaires révèle que :
+Les liaisons compilées améliorent de façon variable les performances de liaison de données. Les tests unitaires révèlent que :
 
-- Une liaison compilée qui utilise la notification de modification de propriété (c'est-à-dire un `OneWay`, `OneWayToSource`, ou `TwoWay` liaison) est résolu plus rapides qu’une liaison classique d’environ 8 fois.
-- Une liaison compilée qui n’utilise pas les notifications de modification de propriété (c'est-à-dire un `OneTime` liaison) est résolue environ de 20 fois plus rapides que d’une liaison classique.
-- Définissant le [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) sur une liaison compilée qui utilise la propriété notification de modification (par exemple, un `OneWay`, `OneWayToSource`, ou `TwoWay` liaison) est environ 5 fois plus rapide que de définir la `BindingContext`sur une liaison classique.
-- Définition de la [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) notification de modification sur une liaison compilée qui n’utilise pas de propriété (par exemple, un `OneTime` liaison) est environ 7 fois plus rapide que paramètre le `BindingContext` sur une liaison classique.
+- Une liaison compilée qui utilise la notification de modification de propriété (c'est-à-dire une liaison `OneWay`, `OneWayToSource` ou `TwoWay`) est résolue environ 8 fois plus vite qu’une liaison classique.
+- Une liaison compilée qui n’utilise pas la notification de modification de propriété (c'est-à-dire une liaison `OneTime`) est résolue environ 20 fois plus vite qu’une liaison classique.
+- La définition du [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) sur une liaison compilée qui utilise la notification de modification de propriété (c'est-à-dire une liaison `OneWay`, `OneWayToSource` ou `TwoWay`) est environ 5 fois plus rapide que la définition du `BindingContext` sur une liaison classique.
+- La définition du [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) sur une liaison compilée qui n’utilise pas la notification de modification de propriété (c'est-à-dire une liaison `OneTime`) est environ 7 fois plus rapide que la définition du `BindingContext` sur une liaison classique.
 
-Ces différences de performances peuvent être accrus sur les appareils mobiles, dépendantes de la plateforme utilisée, la version du système d’exploitation utilisé et l’appareil sur lequel l’application est en cours d’exécution.
+Ces différences de performances peuvent être accrues sur les appareils mobiles, selon la plateforme utilisée, la version du système d’exploitation utilisé et l’appareil sur lequel l’application s’exécute.
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Démonstrations de liaison de données (exemple)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Démos des liaisons de données (exemple)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)

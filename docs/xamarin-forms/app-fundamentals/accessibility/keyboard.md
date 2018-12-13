@@ -1,6 +1,6 @@
 ---
 title: Navigation au clavier
-description: Au lieu d’utiliser la séquence d’onglet par défaut, il est parfois nécessaire paramétrer votre interface utilisateur en spécifiant la séquence de l’onglet avec une combinaison des propriétés TabIndex et IsTapStop.
+description: Au lieu d’utiliser la séquence des tabulations par défaut, il est parfois nécessaire de paramétrer votre interface utilisateur en spécifiant la séquence des tabulations avec une combinaison des propriétés TabIndex et IsTapStop.
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 10/15/2018
 ms.openlocfilehash: f703dff56d2947c35a9bc76e0eb909bfe9023bac
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50131165"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Navigation au clavier dans Xamarin.Forms
 
-Certains utilisateurs peuvent avoir des difficultés à utiliser les applications qui ne fournissent pas les accès clavier appropriés. Vous spécifiez un ordre de tabulation des contrôles permet la navigation au clavier et prépare les pages d’application pour recevoir l’entrée dans un ordre particulier.
+Certains utilisateurs peuvent avoir des difficultés à utiliser des applications qui ne fournissent pas un accès par clavier approprié. La spécification d’un ordre des tabulations pour les contrôles permet la navigation au clavier et prépare les pages d’application à recevoir des entrées dans un ordre particulier.
 
-Par défaut, l’ordre de tabulation des contrôles est le même ordre dans lequel ils sont répertoriés dans le XAML ou ajoutés par programme à une collection d’enfants. Cet ordre est l’ordre dans lequel les contrôles naviguera via avec un clavier et l’ordre par défaut est souvent le meilleur ordre possible. Toutefois, l’ordre par défaut n’est pas toujours le même que l’ordre attendu, comme indiqué dans l’exemple de code XAML suivant :
+Par défaut, l’ordre de tabulation des contrôles correspond à celui où ils sont listés en XAML ou ajoutés par programmation à une collection enfant. Cet ordre est l’ordre dans lequel vous naviguerez entre les contrôles avec un clavier et constitue souvent le meilleur ordre possible. Toutefois, l’ordre par défaut ne correspond pas toujours à l’ordre attendu, comme le montre l’exemple de code XAML suivant :
 
 ```xaml
 <Grid>
@@ -49,29 +49,29 @@ Par défaut, l’ordre de tabulation des contrôles est le même ordre dans lequ
 </Grid>
 ```
 
-La capture d’écran suivante montre l’ordre de tabulation par défaut pour cet exemple de code :
+La capture d’écran suivante montre l’ordre des tabulations par défaut pour cet exemple de code :
 
-![](keyboard-images/default-tab-order.png "Ordre par défaut basée sur la ligne")
+![](keyboard-images/default-tab-order.png "Ordre des tabulations par défaut, basé sur les lignes")
 
-L’ordre de tabulation est basé sur une ligne et est l’ordre que les contrôles sont répertoriés dans le XAML. Par conséquent, en appuyant sur la touche Tab parcourt prénom [ `Entry` ](xref:Xamarin.Forms.Entry) instances, suivis par nom de famille `Entry` instances. Toutefois, une expérience plus intuitive consisterait à utiliser une navigation par onglets de la colonne en premier, afin que l’utilisation de la touche Tab parcourt les paires nom-prénom. Cela est possible en spécifiant l’ordre de tabulation des contrôles d’entrée.
+L’ordre des tabulations est ici basé sur les lignes et correspond à l’ordre dans lequel les contrôles sont listés dans le code XAML. Par conséquent, lorsque vous appuyez sur la touche Tab, vous parcourez les instances [`Entry`](xref:Xamarin.Forms.Entry) de prénom, puis les instances `Entry` de nom de famille. Toutefois, une expérience plus intuitive consisterait à utiliser un parcours des tabulations par colonne en premier, afin de parcourir les paires prénom-nom de famille en appuyant sur la touche Tab. Cela est possible en spécifiant l’ordre de tabulation des contrôles d’entrée.
 
 > [!NOTE]
-> Sur la plateforme Windows universelle, les raccourcis clavier qui fournissent une manière intuitive permettant aux utilisateurs de naviguer rapidement et d’interagir avec l’interface utilisateur visible de l’application via un clavier au lieu de via tactile ou d’une souris peuvent être définies. Pour plus d’informations, consultez [clés d’accès de paramètre VisualElement](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys).
+> Sur la plateforme Windows universelle, vous pouvez définir des raccourcis clavier pour permettre aux utilisateurs de naviguer rapidement de manière intuitive et d’interagir avec l’interface utilisateur visible de l’application via le clavier plutôt que tactilement ou avec la souris. Pour plus d’informations, consultez [Définition des clés d’accès de VisualElement](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys).
 
-## <a name="setting-the-tab-order"></a>Définition de l’ordre de tabulation
+## <a name="setting-the-tab-order"></a>Définition de l’ordre des tabulations
 
-Le `VisualElement.TabIndex` propriété est utilisée pour indiquer l’ordre dans lequel [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) instances recevoir le focus lorsque l’utilisateur parcourt les contrôles en appuyant sur la touche Tab. La valeur par défaut de la propriété est 0, et il peut être définie sur any `int` valeur.
+La propriété `VisualElement.TabIndex` sert à indiquer l’ordre dans lequel les instances [`VisualElement`](xref:Xamarin.Forms.VisualElement) doivent recevoir le focus lorsque l’utilisateur parcourt les contrôles en appuyant sur la touche Tab. La valeur par défaut de la propriété est 0 et elle peut être définie sur une valeur `int` quelconque.
 
-Les règles suivantes s’appliquent quand à l’aide de l’ordre de tabulation par défaut ou en définissant le `TabIndex` propriété :
+Les règles suivantes s’appliquent lorsque vous utilisez l’ordre des tabulations par défaut ou définissez la propriété `TabIndex` :
 
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances avec un `TabIndex` égale à 0 sont ajoutés à l’ordre de tabulation selon leur ordre de déclaration dans les collections XAML ou enfant.
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances avec un `TabIndex` supérieure à 0 sont ajoutés à l’ordre de tabulation selon leur `TabIndex` valeur.
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances avec un `TabIndex` inférieures à 0 sont ajoutés à l’ordre de tabulation et apparaître avant tout la valeur zéro.
- - Est en conflit sur une `TabIndex` sont résolus par ordre de déclaration.
+ - Les instances [`VisualElement`](xref:Xamarin.Forms.VisualElement) avec une propriété `TabIndex` égale à 0 sont ajoutées à l’ordre des tabulations sur la base de leur ordre de déclaration dans le code XAML ou les collections enfants.
+ - Les instances [`VisualElement`](xref:Xamarin.Forms.VisualElement) avec une propriété `TabIndex` supérieure à 0 sont ajoutées à l’ordre des tabulations sur la base de leur valeur `TabIndex`.
+ - Les instances [`VisualElement`](xref:Xamarin.Forms.VisualElement) avec une propriété `TabIndex` inférieure à 0 sont ajoutées à l’ordre des tabulations et apparaissent avant toute valeur zéro.
+ - Les conflits sur une propriété `TabIndex` sont résolus par ordre de déclaration.
 
-Après avoir défini un ordre de tabulation, en appuyant sur la touche Tab se répète le focus via des contrôles dans l’ordre croissant `TabIndex` ordre, encapsuleur au début, une fois que le contrôle final est atteinte.
+Après avoir défini l’ordre des tabulations, en appuyant sur la touche Tab, vous déplacez le focus d’un contrôle à l’autre, dans l’ordre croissant de `TabIndex`, en revenant au premier contrôle après avoir atteint le contrôle final.
 
-L’exemple XAML suivant montre le `TabIndex` propriété sur les contrôles d’entrée pour activer la navigation par onglets de la colonne en premier :
+L’exemple XAML suivant montre la propriété `TabIndex` définie sur les contrôles d’entrée pour activer le parcours des tabulations par colonne en premier :
 
 ```xaml
 <Grid>
@@ -106,21 +106,21 @@ L’exemple XAML suivant montre le `TabIndex` propriété sur les contrôles d�
 </Grid>
 ```
 
-La capture d’écran suivante montre l’ordre de tabulation pour cet exemple de code :
+La capture d’écran suivante montre l’ordre des tabulations pour cet exemple de code :
 
-![](keyboard-images/correct-tab-order.png "Ordre de tabulation en colonnes")
+![](keyboard-images/correct-tab-order.png "Ordre des tabulations basé sur les colonnes")
 
-L’ordre de tabulation est basée sur une colonne. Par conséquent, en appuyant sur la touche Tab parcourt prénom-surname [ `Entry` ](xref:Xamarin.Forms.Entry) paires.
+L’ordre des tabulations est ici basé sur les colonnes. Par conséquent, lorsque vous appuyez sur la touche Tab, vous parcourez les paires [`Entry`](xref:Xamarin.Forms.Entry) prénom-nom de famille.
 
-## <a name="excluding-controls-from-the-tab-order"></a>À l’exclusion des contrôles à partir de l’ordre de tabulation
+## <a name="excluding-controls-from-the-tab-order"></a>Exclusion de certains contrôles de l’ordre des tabulations
 
-Outre la définition de l’ordre de tabulation des contrôles, il peut être nécessaire d’exclure les contrôles de l’ordre de tabulation. Ceci est une façon de réaliser en définissant le [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement) propriété des contrôles à `false`, car les contrôles désactivés sont exclus de l’ordre de tabulation.
+Outre la définition de l’ordre de tabulation des contrôles, il peut s’avérer nécessaire d’exclure certains contrôles de l’ordre des tabulations. Une façon de procéder consiste à définir la propriété [`IsEnabled`](xref:Xamarin.Forms.VisualElement) des contrôles sur `false`, car les contrôles désactivés sont exclus de l’ordre de tabulation.
 
-Toutefois, il peut être nécessaire d’exclure les contrôles de l’ordre de tabulation même lorsqu’ils ne sont pas désactivés. Cela peut être obtenue avec la `VisualElement.IsTapStop` propriété, qui indique si un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) est inclus dans la navigation par onglets. Sa valeur par défaut est `true`, et lorsque sa valeur est `false` le contrôle est ignoré par l’infrastructure de navigation de l’onglet, indépendamment de si un `TabIndex` est définie.
+Toutefois, il peut être nécessaire d’exclure des contrôles de l’ordre de tabulation même lorsqu’ils ne sont pas désactivés. Cela peut se faire avec la propriété `VisualElement.IsTapStop`, qui indique si un [`VisualElement`](xref:Xamarin.Forms.VisualElement) est inclus dans le parcours des tabulations. Sa valeur par défaut est `true`, et lorsque sa valeur est `false`, le contrôle est ignoré par l’infrastructure de parcours des tabulations, indépendamment de la définition d’une propriété `TabIndex`.
 
 ## <a name="supported-controls"></a>Contrôles pris en charge
 
-Le `TabIndex` et `IsTapStop` propriétés sont prises en charge sur les contrôles suivants, qui acceptent les entrées au clavier sur une ou plusieurs plateformes :
+Les propriétés `TabIndex` et `IsTapStop` sont prises en charge sur les contrôles suivants, qui acceptent une entrée au clavier sur une ou plusieurs plateformes :
 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`DatePicker`](xref:Xamarin.Forms.DatePicker)
@@ -137,7 +137,7 @@ Le `TabIndex` et `IsTapStop` propriétés sont prises en charge sur les contrôl
 - [`TimePicker`](xref:Xamarin.Forms.TimePicker)
 
 > [!NOTE]
-> Chacun de ces contrôles n’est pas actif sur toutes les plateformes.
+> Tous ces contrôles ne sont pas activables par tabulation sur toutes les plateformes.
 
 ## <a name="related-links"></a>Liens associés
 

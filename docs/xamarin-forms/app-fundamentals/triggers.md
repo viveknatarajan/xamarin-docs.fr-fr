@@ -1,6 +1,6 @@
 ---
-title: Déclencheurs de Xamarin.Forms
-description: Cet article explique comment utiliser des déclencheurs de Xamarin.Forms pour répondre aux modifications de l’interface utilisateur avec XAML. Autoriser les déclencheurs vous permettent d’exprimer de manière déclarative dans XAML, les actions qui modifient l’apparence des contrôles basés sur des événements ou des modifications de propriété.
+title: Déclencheurs Xamarin.Forms
+description: Cet article explique comment utiliser des déclencheurs Xamarin.Forms pour répondre aux modifications de l’interface utilisateur avec du code XAML. Les déclencheurs vous permettent d’exprimer des actions de manière déclarative en XAML. Les actions en question modifient l’apparence des contrôles en fonction des événements ou des modifications apportées aux propriétés.
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
@@ -9,33 +9,33 @@ ms.author: dabritch
 ms.date: 07/01/2016
 ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675209"
 ---
-# <a name="xamarinforms-triggers"></a>Déclencheurs de Xamarin.Forms
+# <a name="xamarinforms-triggers"></a>Déclencheurs Xamarin.Forms
 
-Autoriser les déclencheurs vous permettent d’exprimer de manière déclarative dans XAML, les actions qui modifient l’apparence des contrôles basés sur des événements ou des modifications de propriété.
+Les déclencheurs vous permettent d’exprimer des actions de manière déclarative en XAML. Les actions en question modifient l’apparence des contrôles en fonction des événements ou des modifications apportées aux propriétés.
 
-Vous pouvez affecter un déclencheur directement à un contrôle, ou ajoutez-le à un dictionnaire de ressources de niveau page ou au niveau de l’application à appliquer à plusieurs contrôles.
+Vous pouvez affecter directement un déclencheur à un contrôle, ou vous pouvez l’ajouter à un dictionnaire de ressources de niveau page ou de niveau application afin de l’appliquer à plusieurs contrôles.
 
-Il existe quatre types de déclencheur :
+Il existe quatre types de déclencheurs :
 
-* [Déclencheur de propriété](#property) -se produit lorsqu’une propriété sur un contrôle est définie à une valeur particulière.
+* [Déclencheur de propriétés](#property) : activé lorsqu’une propriété d’un contrôle est définie sur une valeur particulière.
 
-* [Déclencheur de données](#data) - utilise des données de liaison de déclencheur basée sur les propriétés d’un autre contrôle.
+* [Déclencheur de données](#data) : utilise la liaison de données pour son déclenchement, en se basant sur les propriétés d’un autre contrôle.
 
-* [Déclencheur d’événement](#event) -se produit lorsqu’un événement se produit sur le contrôle.
+* [Déclencheur d’événements](#event) : activé lorsqu’un événement se produit au niveau d’un contrôle.
 
-* [Déclencheur de multiples](#multi) -permet à plusieurs conditions du déclencheur à définir avant une action se produit.
+* [Déclencheur multiple](#multi) : permet de définir plusieurs conditions de déclenchement avant qu’une action ne se produise.
 
 <a name="property" />
 
 ## <a name="property-triggers"></a>Déclencheurs de propriété
 
-Un déclencheur simple peut être exprimé entièrement dans XAML, ajout d’un `Trigger` élément d’un contrôle déclenche la collection.
-Cet exemple montre un déclencheur qui modifie un `Entry` couleur d’arrière-plan lorsqu’il reçoit le focus :
+Un déclencheur simple peut être exprimé entièrement en XAML, en ajoutant un élément `Trigger` à la collection de déclencheurs d’un contrôle.
+Cet exemple montre un déclencheur qui modifie la couleur d’arrière-plan d’un `Entry` lorsqu’il reçoit le focus :
 
 ```xaml
 <Entry Placeholder="enter name">
@@ -48,21 +48,21 @@ Cet exemple montre un déclencheur qui modifie un `Entry` couleur d’arrière-p
 </Entry>
 ```
 
-Les parties importantes de la déclaration du déclencheur sont :
+Les parties importantes de la déclaration d’un déclencheur sont :
 
-* **TargetType** -le type de contrôle auquel le déclencheur s’applique.
+* **TargetType** : type du contrôle auquel le déclencheur est appliqué.
 
-* **Propriété** -la propriété sur le contrôle qui est surveillé.
+* **Property** : propriété du contrôle qui est supervisé.
 
-* **Valeur** -la valeur, lorsqu’il se produit pour la propriété surveillée, qui entraîne l’activation du déclencheur.
+* **Value** : valeur qui entraîne l’activation du déclencheur, pour la propriété supervisée.
 
-* **Méthode Setter** -une collection de `Setter` éléments peuvent être ajoutés et lorsque la condition de déclenchement est remplie. Vous devez spécifier le `Property` et `Value` à définir.
+* **Setter** : collection d’éléments `Setter` qui peuvent être ajoutés lorsque la condition de déclenchement est remplie. Vous devez spécifier le `Property` et le `Value` à définir.
 
-* **EnterActions et ExitActions** (non affiché) : sont écrits en code et peut être utilisé en plus (ou à la place de) `Setter` éléments. Ils sont [ci-dessous](#enterexit).
+* **EnterActions et ExitActions** (non montrés ici) : sont écrits en code et peuvent être utilisés en plus des éléments `Setter` (ou à leur place). Ils sont [décrits ci-dessous](#enterexit).
 
-### <a name="applying-a-trigger-using-a-style"></a>Application d’un déclencheur à l’aide d’un Style
+### <a name="applying-a-trigger-using-a-style"></a>Application d’un déclencheur à l’aide d’un style
 
-Les déclencheurs peuvent également être ajoutés à un `Style` déclaration sur un contrôle, dans une page ou d’une application `ResourceDictionary`. Cet exemple déclare un style implicite (ie. aucun `Key` est défini) ce qui signifie qu’elle s’applique à tous les `Entry` contrôles sur la page.
+Les déclencheurs peuvent également être ajoutés à une déclaration `Style` dans le `ResourceDictionary` d’un contrôle, d’une page ou d’une d’application. Cet exemple déclare un style implicite (c’est-à-dire qu’aucun `Key` n’est défini), ce qui signifie qu’il s’applique à tous les contrôles `Entry`de la page.
 
 ```xaml
 <ContentPage.Resources>
@@ -83,10 +83,10 @@ Les déclencheurs peuvent également être ajoutés à un `Style` déclaration s
 
 ## <a name="data-triggers"></a>Déclencheurs de données
 
-Déclencheurs de données utilisent la liaison de données pour surveiller un autre contrôle pour provoquer le `Setter`s appelée. Au lieu du `Property` dans un déclencheur de propriété, affectez la `Binding` attribut à surveiller pour la valeur spécifiée.
+Les déclencheurs de données utilisent la liaison de données pour superviser un autre contrôle afin de provoquer l’appel de `Setter`. Au lieu de l’attribut `Property` d’un déclencheur de propriété, définissez l’attribut `Binding` de manière à surveiller la valeur spécifiée.
 
 L’exemple ci-dessous utilise la syntaxe de liaison de données `{Binding Source={x:Reference entry}, Path=Text.Length}`
-qui est la façon dont nous faisons référence aux propriétés de contrôle à un autre. Lorsque la longueur de la `entry` est égal à zéro, le déclencheur est activé. Dans cet exemple le déclencheur désactive le bouton lorsque l’entrée est vide.
+qui est celle utilisée pour référencer les propriétés d’un autre contrôle. Lorsque la longueur de `entry` est égale à zéro, le déclencheur est activé. Dans cet exemple, le déclencheur désactive le bouton lorsque l’entrée est vide.
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -109,15 +109,15 @@ qui est la façon dont nous faisons référence aux propriétés de contrôle à
 </Button>
 ```
 
-Conseil : lorsque vous évaluez `Path=Text.Length` toujours fournir une valeur par défaut pour la propriété cible (par exemple). `Text=""`), car sinon elle sera `null` et le déclencheur ne fonctionne pas comme prévu.
+Conseil : Lorsque vous évaluez `Path=Text.Length`, fournissez toujours une valeur par défaut pour la propriété cible (par exemple, `Text=""`), car sinon, sa valeur sera `null` et le déclencheur ne fonctionnera pas comme prévu.
 
-Outre la spécification `Setter`s, vous pouvez également fournir [ `EnterActions` et `ExitActions` ](#enterexit).
+En plus de spécifier des `Setter`, vous pouvez également fournir [`EnterActions` et `ExitActions`](#enterexit).
 
 <a name="event" />
 
 ## <a name="event-triggers"></a>Déclencheurs d’événements
 
-Le `EventTrigger` élément nécessite uniquement un `Event` propriété, tel que `"Clicked"` dans l’exemple ci-dessous.
+L’ élément `EventTrigger` nécessite uniquement une propriété `Event`, comme `"Clicked"` dans l’exemple ci-dessous.
 
 ```xaml
 <EventTrigger Event="Clicked">
@@ -125,7 +125,7 @@ Le `EventTrigger` élément nécessite uniquement un `Event` propriété, tel qu
 </EventTrigger>
 ```
 
-Notez qu’il existe aucune `Setter` les éléments, mais plutôt une référence à une classe définie par `local:NumericValidationTriggerAction` qui nécessite le `xmlns:local` pour être déclarée dans la page du XAML :
+Notez qu’il n’y a aucun élément `Setter`, mais plutôt une référence à une classe définie par `local:NumericValidationTriggerAction` qui nécessite que `xmlns:local` soit déclaré dans le code XAML de la page :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,15 +133,15 @@ Notez qu’il existe aucune `Setter` les éléments, mais plutôt une référenc
              xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 ```
 
-Implémente la classe elle-même `TriggerAction` qui signifie qu’il doit fournir un remplacement pour le `Invoke` méthode est appelée chaque fois que l’événement déclencheur se produit.
+La classe implémente `TriggerAction`, ce qui signifie qu’elle doit fournir un remplacement pour la méthode `Invoke` qui est appelée chaque fois que l’événement déclencheur se produit.
 
 Une implémentation d’action de déclencheur doit :
 
-* Implémenter le modèle générique `TriggerAction<T>` classe, avec le paramètre générique correspondant avec le type de contrôle pour le déclencheur sera appliqué. Vous pouvez utiliser comme superclasse `VisualElement` pour écrire les actions du déclencheur qui fonctionnent avec un large éventail de contrôles, ou spécifient un type de contrôle comme `Entry`.
+* Implémenter la classe générique `TriggerAction<T>`, avec le paramètre générique correspondant au type de contrôle auquel le déclencheur doit être appliqué. Vous pouvez utiliser des superclasses telles que `VisualElement` pour écrire des actions de déclencheur qui fonctionnent avec un large éventail de contrôles, ou vous pouvez spécifier un type de contrôle comme `Entry`.
 
-* Remplacer le `Invoke` méthode - Ceci est appelé chaque fois que les critères de déclenchement sont satisfaits.
+* Remplacer la méthode `Invoke` qui est appelée chaque fois que les critères de déclenchement sont remplis.
 
-* Si vous le souhaitez exposer des propriétés qui peuvent être définies dans le XAML lorsque le déclencheur est déclaré (tel que `Anchor`, `Scale`, et `Length` dans cet exemple).
+* Si vous le souhaitez, vous pouvez exposer des propriétés qui peuvent être définies dans le code XAML lorsque le déclencheur est déclaré (comme `Anchor`, `Scale` et `Length` dans cet exemple).
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -155,7 +155,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-Les propriétés exposées par l’action du déclencheur peuvent être définies dans la déclaration XAML comme suit :
+Les propriétés exposées par l’action du déclencheur peuvent être définies dans la déclaration XAML de la façon suivante :
 
 ```xaml
 <EventTrigger Event="TextChanged">
@@ -163,17 +163,17 @@ Les propriétés exposées par l’action du déclencheur peuvent être définie
 </EventTrigger>
 ```
 
-Soyez prudent lorsque vous partagez des déclencheurs dans un `ResourceDictionary`, une instance sera partagée parmi les contrôles afin de n’importe quel état une fois configuré s’applique à toutes les.
+Soyez prudent lorsque vous partagez des déclencheurs dans un `ResourceDictionary`. En effet, une même instance sera partagée entre plusieurs contrôles, donc tout état configuré une fois sera appliqué à tous les autres contrôles.
 
-Notez que les déclencheurs d’événements ne prennent pas en charge `EnterActions` et `ExitActions` [ci-dessous](#enterexit).
+Notez que les déclencheurs d’événements ne prennent pas en charge `EnterActions` et `ExitActions` qui sont [décrits plus bas](#enterexit).
 
 <a name="multi" />
 
-## <a name="multi-triggers"></a>Plusieurs déclencheurs
+## <a name="multi-triggers"></a>Déclencheurs multiples
 
-Un `MultiTrigger` ressemble à un `Trigger` ou `DataTrigger` , à ceci près qu’il peut y avoir plus d’une condition. Toutes les conditions doivent être remplies avant le `Setter`s sont déclenchées.
+Un `MultiTrigger` est similaire à un `Trigger` ou à un `DataTrigger`, à ceci près qu’il peut avoir plusieurs conditions. Toutes les conditions doivent être remplies avant que les `Setter` ne soient déclenchés.
 
-Voici un exemple d’un déclencheur pour un bouton qui est lié à deux entrées différentes (`email` et `phone`) :
+Voici un exemple de déclencheur pour un bouton qui lie deux entrées différentes (`email` et `phone`) :
 
 ```xaml
 <MultiTrigger TargetType="Button">
@@ -191,17 +191,17 @@ Voici un exemple d’un déclencheur pour un bouton qui est lié à deux entrée
 </MultiTrigger>
 ```
 
-Le `Conditions` collection peut contenir également `PropertyCondition` éléments comme suit :
+La collection `Conditions` peut également contenir des éléments `PropertyCondition` comme ceci :
 
 ```xaml
 <PropertyCondition Property="Text" Value="OK" />
 ```
 
-### <a name="building-a-require-all-multi-trigger"></a>Création d’un déclencheur de plusieurs « nécessitent tous »
+### <a name="building-a-require-all-multi-trigger"></a>Création d’un déclencheur multiple de type « tout exiger »
 
-Le déclencheur de plusieurs mises à jour uniquement son contrôle lorsque toutes les conditions sont remplies. Tests pour une « toutes les longueurs de champ sont zéro » (par exemple, une page de connexion où toutes les entrées doivent être terminées) est difficile, car vous voulez une condition « où Text.Length > 0 », mais il ne peut pas être exprimé en XAML.
+Le déclencheur multiple ne met à jour son contrôle que lorsque toutes les conditions sont remplies. La condition « toutes les longueurs de champs sont égales à zéro » (par exemple, une page de connexion où toutes les entrées doivent être effectuées) est difficile à tester, car cela nécessite une condition où « Text.Length > 0 », ce qui ne peut pas être exprimé en XAML.
 
-Cela est possible avec un `IValueConverter`. Le code de convertisseur ci-dessous transformations le `Text.Length` de liaison dans un `bool` qui indique si un champ est vide ou non :
+Pour cela, vous devez utiliser un `IValueConverter`. Le code de convertisseur ci-dessous transforme la liaison `Text.Length` en un `bool` qui indique si un champ est vide ou non :
 
 ```csharp
 public class MultiTriggerConverter : IValueConverter
@@ -223,7 +223,7 @@ public class MultiTriggerConverter : IValueConverter
 }
 ```
 
-Pour utiliser ce convertisseur dans un déclencheur multiple, d’abord l’ajouter au dictionnaire de ressources de la page (avec un personnalisé `xmlns:local` définition de l’espace de noms) :
+Pour utiliser ce convertisseur dans un déclencheur multiple, ajoutez-le d’abord au dictionnaire de ressources de la page (avec une définition d’espace de noms `xmlns:local` personnalisée) :
 
 ```xaml
 <ResourceDictionary>
@@ -231,11 +231,11 @@ Pour utiliser ce convertisseur dans un déclencheur multiple, d’abord l’ajou
 </ResourceDictionary>
 ```
 
-Le XAML est indiqué ci-dessous. Notez les différences suivantes du premier exemple de déclencheur de multiples :
+Le code XAML est fourni ci-dessous. Notez les différences suivantes par rapport au premier exemple de déclencheur multiple :
 
-* Le bouton a `IsEnabled="false"` la valeur par défaut.
-* Les conditions du déclencheur multi utilisent le convertisseur pour activer la `Text.Length` valeur dans un `boolean`.
-* Lorsque toutes les conditions sont `true`, la méthode setter rend le bouton `IsEnabled` propriété `true`.
+* Dans le bouton, `IsEnabled="false"` est défini par défaut.
+* Les conditions du déclencheur multiple utilisent le convertisseur pour transformer la valeur `Text.Length` en un `boolean`.
+* Lorsque toutes les conditions sont `true`, la méthode setter définit la propriété `IsEnabled` du bouton sur `true`.
 
 ```xaml
 <Entry x:Name="user" Text="" Placeholder="user name" />
@@ -264,18 +264,18 @@ Le XAML est indiqué ci-dessous. Notez les différences suivantes du premier exe
 </Button>
 ```
 
-Ces captures d’écran montrent la différence entre les deux exemples de déclencheur multi ci-dessus. Dans la partie supérieure des écrans, de saisie de texte seul `Entry` est suffisant pour activer la **enregistrer** bouton.
-Dans la partie inférieure de l’écran, le **connexion** bouton reste inactif jusqu'à ce que les deux champs contiennent des données.
+Ces captures d’écran montrent la différence entre les deux exemples de déclencheurs multiples. Dans la partie supérieure des écrans, l’entrée de texte dans un seul `Entry` suffit à activer le bouton **Save** (Enregistrer).
+Dans la partie inférieure de l’écran, le bouton **Login** (Connexion) reste inactif jusqu’à ce que les deux champs contiennent des données.
 
-![](triggers-images/multi-requireall.png "Exemples multiTrigger")
+![](triggers-images/multi-requireall.png "Exemples de déclencheurs multiples")
 
 <a name="enterexit" />
 
 ## <a name="enteractions-and-exitactions"></a>EnterActions et ExitActions
 
-Une autre consiste à implémenter les modifications lorsqu’un déclencheur se produit en ajoutant `EnterActions` et `ExitActions` collections et en spécifiant `TriggerAction<T>` implémentations.
+Une autre façon d’implémenter des modifications lorsqu’un déclencheur est activé est d’ajouter des collections `EnterActions` et `ExitActions`, et de spécifier des implémentations `TriggerAction<T>`.
 
-Vous pouvez fournir *à la fois* `EnterActions` et `ExitActions` ainsi que `Setter`s dans un déclencheur, mais sachez qui le `Setter`s sont appelées immédiatement (elles n’attendent pas que le `EnterAction` ou `ExitAction` à Terminer). Vous pouvez également vous pouvez effectuer tous les éléments dans le code et utiliser pas `Setter`s du tout.
+Vous pouvez fournir *à la fois* `EnterActions` et `ExitActions` ainsi que des `Setter` dans un déclencheur. Sachez toutefois que les `Setter` sont appelés immédiatement (ils n’attendent pas la fin de `EnterAction` ou de `ExitAction`). Vous pouvez également tout effectuer dans le code sans utiliser de `Setter`.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -295,7 +295,7 @@ Vous pouvez fournir *à la fois* `EnterActions` et `ExitActions` ainsi que `Sett
 </Entry>
 ```
 
-Comme toujours, lorsqu’une classe est référencée dans XAML doit déclarer un espace de noms tels que `xmlns:local` comme indiqué ici :
+Comme toujours, lorsqu’une classe est référencée dans du code XAML, vous devez déclarer un espace de noms tel que `xmlns:local`, comme indiqué ici :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -303,7 +303,7 @@ Comme toujours, lorsqu’une classe est référencée dans XAML doit déclarer u
              xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 ```
 
-Le `FadeTriggerAction` code est illustré ci-dessous :
+Ce code `FadeTriggerAction` est fourni ci-dessous:
 
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
@@ -325,11 +325,11 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 }
 ```
 
-Remarque : `EnterActions` et `ExitActions` sont ignorés sur **déclencheurs d’événements**.
+Remarque : `EnterActions` et `ExitActions` sont ignorés par les **déclencheurs d’événements**.
 
 
 
 ## <a name="related-links"></a>Liens associés
 
 - [Exemples de déclencheurs](https://developer.xamarin.com/samples/WorkingWithTriggers)
-- [Documentation de l’API Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)
+- [Documentation sur les API Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)

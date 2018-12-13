@@ -1,6 +1,6 @@
 ---
-title: Implémentation de synthèse vocale
-description: Cet article explique comment utiliser la classe Xamarin.Forms DependencyService rappelle API synthèse vocale natif de chaque plateforme.
+title: Implémentation de la synthèse vocale
+description: Cet article explique comment utiliser la classe DependencyService de Xamarin.Forms pour appeler l’API de synthèse vocale native de chaque plateforme.
 ms.prod: xamarin
 ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
 ms.technology: xamarin-forms
@@ -9,30 +9,30 @@ ms.author: dabritch
 ms.date: 09/18/2017
 ms.openlocfilehash: 6d1948214b97a1b536b07b6420c32e4d27124518
 ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "38997541"
 ---
-# <a name="implementing-text-to-speech"></a>Implémentation de synthèse vocale
+# <a name="implementing-text-to-speech"></a>Implémentation de la synthèse vocale
 
-Cet article vous guide lors de la création d’une application multiplateforme qui utilise [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) pour accéder aux API synthèse vocale natifs :
+Cet article vous montre comment créer une application multiplateforme qui utilise [`DependencyService`](xref:Xamarin.Forms.DependencyService) pour accéder aux API de synthèse vocale natives :
 
-- **[Création de l’Interface](#Creating_the_Interface)**  &ndash; comprendre comment l’interface est créée dans le code partagé.
-- **[iOS implémentation](#iOS_Implementation)**  &ndash; Apprenez à implémenter l’interface en code natif pour iOS.
-- **[Implémentation Android](#Android_Implementation)**  &ndash; Apprenez à implémenter l’interface en code natif pour Android.
-- **[Implémentation de UWP](#WindowsImplementation)**  &ndash; Apprenez à implémenter l’interface en code natif pour la plateforme Windows universelle (UWP).
-- **[Mise en œuvre dans le Code partagé](#Implementing_in_Shared_Code)**  &ndash; Apprenez à utiliser `DependencyService` pour appeler l’implémentation native à partir de code partagé.
+- **[Création de l’interface](#Creating_the_Interface)** &ndash; Découvrez comment créer l’interface dans le code partagé.
+- **[Implémentation iOS ](#iOS_Implementation)** &ndash; Apprenez à implémenter l’interface dans le code natif pour iOS.
+- **[Implémentation Android ](#Android_Implementation)** &ndash; Apprenez à implémenter l’interface dans le code natif pour Android.
+- **[Implémentation UWP](#WindowsImplementation)** &ndash; Apprenez à implémenter l’interface dans le code natif pour la plateforme Windows universelle (UWP).
+- **[Implémentation dans le code partagé](#Implementing_in_Shared_Code)** &ndash; Apprenez à utiliser `DependencyService` pour appeler l’implémentation native à partir du code partagé.
 
-L’application à l’aide `DependencyService` aura la structure suivante :
+L’application qui utilise `DependencyService` aura la structure suivante :
 
-![](text-to-speech-images/tts-diagram.png "Structure de l’Application DependencyService")
+![](text-to-speech-images/tts-diagram.png "Structure de l’application avec DependencyService")
 
 <a name="Creating_the_Interface" />
 
 ## <a name="creating-the-interface"></a>Création de l'interface utilisateur
 
-Tout d’abord, créez une interface dans le code partagé qui exprime la fonctionnalité que vous envisagez d’implémenter. Pour cet exemple, l’interface contient une méthode unique, `Speak`:
+Tout d’abord, créez une interface dans le code partagé qui expose la fonctionnalité que vous souhaitez implémenter. Dans cet exemple, l’interface contient une seule méthode, `Speak` :
 
 ```csharp
 public interface ITextToSpeech
@@ -41,16 +41,16 @@ public interface ITextToSpeech
 }
 ```
 
-Codage par rapport à cette interface dans le code partagé permettent à l’application de Xamarin.Forms accéder à l’API reconnaissance vocale sur chaque plateforme.
+Le codage par rapport à cette interface dans le code partagé permettra à l’application Xamarin.Forms d’accéder aux API de synthèse vocale sur chaque plateforme.
 
 > [!NOTE]
-> Classes implémentant l’interface doivent avoir un constructeur sans paramètre pour travailler avec le `DependencyService`.
+> Les classes implémentant l’interface doivent avoir un constructeur sans paramètre pour fonctionner avec `DependencyService`.
 
 <a name="iOS_Implementation" />
 
-## <a name="ios-implementation"></a>Implémentation d’iOS
+## <a name="ios-implementation"></a>Implémentation iOS
 
-L’interface doit être implémentée dans chaque projet d’application de plateforme spécifique. Notez que la classe a un constructeur sans paramètre afin que le `DependencyService` peut créer des instances.
+L’interface doit être implémentée dans le projet d’application de chaque plateforme. Notez que la classe a un constructeur sans paramètre pour permettre à `DependencyService` de créer des instances.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
@@ -78,13 +78,13 @@ namespace DependencyServiceSample.iOS
 }
 ```
 
-Le `[assembly]` attribut inscrit la classe en tant qu’implémentation de la `ITextToSpeech` interface, ce qui signifie que `DependencyService.Get<ITextToSpeech>()` peut être utilisé dans le code partagé pour créer une instance de celui-ci.
+L’attribut `[assembly]` inscrit la classe en tant qu’implémentation de l’interface `ITextToSpeech`, ce qui signifie que `DependencyService.Get<ITextToSpeech>()` peut être utilisé dans le code partagé pour créer une instance de celle-ci.
 
 <a name="Android_Implementation" />
 
 ## <a name="android-implementation"></a>Implémentation Android
 
-Le code Android est plus complexe que la version iOS : il requiert la classe d’implémentation d’hériter de spécifique à Android `Java.Lang.Object` et pour implémenter le `IOnInitListener` interface également. Il requiert également l’accès au contexte Android actuel, qui est exposé par le `MainActivity.Instance` propriété.
+Le code Android est plus complexe que la version iOS, car il requiert que la classe d’implémentation hérite de l’objet `Java.Lang.Object` pour Android et qu’elle implémente également l’interface `IOnInitListener`. De plus, il doit accéder au contexte Android actuel, qui est exposé par la propriété `MainActivity.Instance`.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
@@ -119,13 +119,13 @@ namespace DependencyServiceSample.Droid
 }
 ```
 
-Le `[assembly]` attribut inscrit la classe en tant qu’implémentation de la `ITextToSpeech` interface, ce qui signifie que `DependencyService.Get<ITextToSpeech>()` peut être utilisé dans le code partagé pour créer une instance de celui-ci.
+L’attribut `[assembly]` inscrit la classe en tant qu’implémentation de l’interface `ITextToSpeech`, ce qui signifie que `DependencyService.Get<ITextToSpeech>()` peut être utilisé dans le code partagé pour créer une instance de celle-ci.
 
 <a name="WindowsImplementation" />
 
-## <a name="universal-windows-platform-implementation"></a>Implémentation de plateforme Windows universelle
+## <a name="universal-windows-platform-implementation"></a>Implémentation sur la plateforme Windows universelle
 
-La plateforme Windows universelle a une API reconnaissance vocale dans le `Windows.Media.SpeechSynthesis` espace de noms. Le seul inconvénient consiste à penser à cochez le **Microphone** fonctionnalité dans le manifeste, sinon accéder à la reconnaissance vocale API sont bloqués.
+La plateforme Windows universelle fournit une API de synthèse vocale dans l’espace de noms `Windows.Media.SpeechSynthesis`. La seule mise en garde est de penser à activer la fonctionnalité **Microphone** dans le manifeste, car sinon l’accès aux API de synthèse vocale sera bloqué.
 
 ```csharp
 [assembly:Dependency(typeof(TextToSpeechImplementation))]
@@ -143,13 +143,13 @@ public class TextToSpeechImplementation : ITextToSpeech
 }
 ```
 
-Le `[assembly]` attribut inscrit la classe en tant qu’implémentation de la `ITextToSpeech` interface, ce qui signifie que `DependencyService.Get<ITextToSpeech>()` peut être utilisé dans le code partagé pour créer une instance de celui-ci.
+L’attribut `[assembly]` inscrit la classe en tant qu’implémentation de l’interface `ITextToSpeech`, ce qui signifie que `DependencyService.Get<ITextToSpeech>()` peut être utilisé dans le code partagé pour créer une instance de celle-ci.
 
 <a name="Implementing_in_Shared_Code" />
 
-## <a name="implementing-in-shared-code"></a>Mise en œuvre dans le Code partagé
+## <a name="implementing-in-shared-code"></a>Implémentation dans le code partagé
 
-Nous pouvons maintenant écrire et tester le code partagé qui accède à l’interface de synthèse vocale. Cette page simple inclut un bouton qui déclenche la fonctionnalité de reconnaissance vocale. Il utilise le `DependencyService` pour obtenir une instance de la `ITextToSpeech` interface &ndash; lors de l’exécution, cette instance sera l’implémentation spécifique à la plateforme qui a un accès complet pour le Kit de développement natif.
+Nous pouvons maintenant écrire et tester le code partagé qui accède à l’interface de synthèse vocale. Cette page simple contient un bouton qui déclenche la fonctionnalité de synthèse vocale. `DependencyService` est utilisé pour obtenir une instance de l’interface `ITextToSpeech` &ndash; au moment de l’exécution, cette instance constitue l’implémentation spécifique de la plateforme qui a un accès total au SDK natif.
 
 ```csharp
 public MainPage ()
@@ -166,13 +166,13 @@ public MainPage ()
 }
 ```
 
-Exécutez cette application sur iOS, Android ou UWP et en appuyant sur le bouton entraîne l’application en parlant pour vous, en utilisant la Kit de développement logiciel de reconnaissance vocale native sur chaque plateforme.
+Quand un clic sur ce bouton est enregistré dans cette application exécutée sur iOS, Android ou UWP, l’application vous parle, en utilisant le SDK de synthèse vocale natif sur chaque plateforme.
 
- ![iOS et Android bouton synthèse vocale](text-to-speech-images/running.png "exemple de texte par synthèse vocale")
+ ![Bouton de synthèse vocale sur iOS et Android](text-to-speech-images/running.png "Exemple de synthèse vocale")
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [À l’aide de DependencyService (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
-- [DependencyServiceSample](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
+- [Utilisation de DependencyService (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [DependencyService (exemple)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
 

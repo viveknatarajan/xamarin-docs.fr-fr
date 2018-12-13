@@ -1,6 +1,6 @@
 ---
 title: EffectBehavior réutilisable
-description: Les comportements sont une approche utile pour l’ajout d’un effet à un contrôle, suppression d’effet de maquette code à partir de fichiers code-behind de gestion. Cet article montre comment créer et consommer un comportement de Xamarin.Forms pour ajouter un effet à un contrôle.
+description: Les comportements constituent une approche utile pour ajouter un effet à un contrôle, en supprimant des fichiers code-behind le code réutilisable qui gère les effets. Cet article montre comment créer et consommer un comportement Xamarin.Forms pour ajouter un effet à un contrôle.
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
@@ -9,36 +9,36 @@ ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 2696f0103ce1aa969039c982fb9b82f89b37811e
 ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/01/2018
 ms.locfileid: "50911591"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior réutilisable
 
-_Les comportements sont une approche utile pour l’ajout d’un effet à un contrôle, suppression d’effet de maquette code à partir de fichiers code-behind de gestion. Cet article montre comment créer et consommer un comportement de Xamarin.Forms pour ajouter un effet à un contrôle._
+_Les comportements constituent une approche utile pour ajouter un effet à un contrôle, en supprimant des fichiers code-behind le code réutilisable qui gère les effets. Cet article montre comment créer et utiliser un comportement Xamarin.Forms pour ajouter un effet à un contrôle._
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
-Le `EffectBehavior` classe est un comportement personnalisé Xamarin.Forms réutilisable qui ajoute un [ `Effect` ](xref:Xamarin.Forms.Effect) instance à un contrôle lorsque le comportement est attaché au contrôle et supprime le `Effect` lorsque le comportement est l’instance détachée à partir du contrôle.
+La classe `EffectBehavior` est un comportement personnalisé Xamarin.Forms réutilisable qui ajoute une instance [ `Effect` ](xref:Xamarin.Forms.Effect) à un contrôle quand le comportement est attaché au contrôle et supprime l’instance `Effect` quand le comportement est détaché du contrôle.
 
 Les propriétés de comportement suivantes doivent être définies pour utiliser le comportement :
 
-- **Groupe** – la valeur de la [ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute) attribut pour la classe de l’effet.
-- **Nom** – la valeur de la [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) attribut pour la classe de l’effet.
+- **Group** – valeur de l’attribut [ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute) pour la classe de l’effet.
+- **Name** – valeur de l’attribut [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) pour la classe de l’effet.
 
-Pour plus d’informations sur les effets, consultez [effets](~/xamarin-forms/app-fundamentals/effects/index.md).
+Pour plus d’informations sur les effets, consultez [Effets](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 > [!NOTE]
-> Le `EffectBehavior` est une classe personnalisée qui peut se trouver dans le [effet Behavior (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/), et ne fait pas partie de Xamarin.Forms.
+> `EffectBehavior` est une classe personnalisée qui peut se trouver dans l’[exemple Comportement Effet](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/) et qui ne fait pas partie de Xamarin.Forms.
 
-## <a name="creating-the-behavior"></a>Création d’un comportement
+## <a name="creating-the-behavior"></a>Création du comportement
 
-Le `EffectBehavior` classe dérive de la [ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1) (classe), où `T` est un [ `View` ](xref:Xamarin.Forms.View). Cela signifie que la `EffectBehavior` classe peut être attachée à n’importe quel contrôle Xamarin.Forms.
+La classe `EffectBehavior` dérive de la classe [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), où `T` est une [`View`](xref:Xamarin.Forms.View). Cela signifie que la classe `EffectBehavior` peut être attachée à n’importe quel contrôle Xamarin.Forms.
 
 ### <a name="implementing-bindable-properties"></a>Implémentation des propriétés pouvant être liées
 
-Le `EffectBehavior` classe définit deux [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) instances, qui sont utilisés pour ajouter un [ `Effect` ](xref:Xamarin.Forms.Effect) à un contrôle lorsque le comportement est attaché au contrôle. Ces propriétés s’affichent dans l’exemple de code suivant :
+La classe `EffectBehavior` définit deux instances [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), qui sont utilisées pour ajouter un [`Effect`](xref:Xamarin.Forms.Effect) à un contrôle quand le comportement est attaché au contrôle. Ces propriétés sont présentées dans l’exemple de code suivant :
 
 ```csharp
 public class EffectBehavior : Behavior<View>
@@ -61,11 +61,11 @@ public class EffectBehavior : Behavior<View>
 }
 ```
 
-Lorsque le `EffectBehavior` est consommée, le `Group` propriété doit être définie à la valeur de la [ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute) attribut pour l’effet. En outre, le `Name` propriété doit être définie à la valeur de la [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) attribut pour la classe de l’effet.
+Quand l’`EffectBehavior` est consommé, la propriété `Group` doit être définie avec la valeur de l’attribut [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) de l’effet. De plus, la propriété `Name` doit être définie avec la valeur de l’attribut [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) de la classe de l’effet.
 
-### <a name="implementing-the-overrides"></a>Implémenter les remplacements
+### <a name="implementing-the-overrides"></a>Implémentation des remplacements
 
-Le `EffectBehavior` substitue le [ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) et [ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) méthodes de la [ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1) classe, comme indiqué dans le code suivant exemple :
+La classe `EffectBehavior` remplace les méthodes [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) et [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) de la classe [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), comme illustré dans l’exemple de code suivant :
 
 ```csharp
 public class EffectBehavior : Behavior<View>
@@ -86,11 +86,11 @@ public class EffectBehavior : Behavior<View>
 }
 ```
 
-Le [ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) méthode exécute le programme d’installation en appelant le `AddEffect` méthode, en passant le contrôle attaché en tant que paramètre. Le [ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) méthode exécute un nettoyage en appelant le `RemoveEffect` méthode, en passant le contrôle attaché en tant que paramètre.
+La méthode [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) effectue la configuration en appelant la méthode `AddEffect` pour passer le contrôle attaché en tant que paramètre. La méthode [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) effectue le nettoyage en appelant la méthode `RemoveEffect` pour passer le contrôle attaché en tant que paramètre.
 
 ### <a name="implementing-the-behavior-functionality"></a>Implémentation de la fonctionnalité de comportement
 
-L’objectif du comportement consiste à ajouter le [ `Effect` ](xref:Xamarin.Forms.Effect) définies dans le `Group` et `Name` propriétés à un contrôle lorsque le comportement est attaché au contrôle et supprimez le `Effect` lorsque le comportement est détachée à partir du contrôle. La fonctionnalité de comportement principale est illustrée dans l’exemple de code suivant :
+L’objectif du comportement consiste à ajouter l’[`Effect`](xref:Xamarin.Forms.Effect) défini dans les propriétés `Group` et `Name` à un contrôle quand le comportement est attaché au contrôle et à supprimer l’`Effect` quand le comportement est détaché du contrôle. La fonctionnalité de comportement clé est illustrée dans l’exemple de code suivant :
 
 ```csharp
 public class EffectBehavior : Behavior<View>
@@ -122,13 +122,13 @@ public class EffectBehavior : Behavior<View>
 }
 ```
 
-Le `AddEffect` méthode est exécutée en réponse à la `EffectBehavior` qui est attaché à un contrôle et il reçoit le contrôle attaché en tant que paramètre. La méthode ajoute ensuite l’effet récupéré du contrôle [ `Effects` ](xref:Xamarin.Forms.Element.Effects) collection. Le `RemoveEffect` méthode est exécutée en réponse à la `EffectBehavior` en cours de détachement à partir d’un contrôle et il reçoit le contrôle attaché en tant que paramètre. La méthode puis supprime l’effet du contrôle [ `Effects` ](xref:Xamarin.Forms.Element.Effects) collection.
+La méthode `AddEffect` est exécutée en réponse à l’attachement de l’`EffectBehavior` à un contrôle et reçoit le contrôle attaché en tant que paramètre. La méthode ajoute ensuite l’effet récupéré à la collection [`Effects`](xref:Xamarin.Forms.Element.Effects) du contrôle. La méthode `RemoveEffect` est exécutée en réponse au détachement de l’`EffectBehavior` d’un contrôle et reçoit le contrôle détaché en tant que paramètre. La méthode supprime ensuite l’effet de la collection [`Effects`](xref:Xamarin.Forms.Element.Effects) du contrôle.
 
-Le `GetEffect` méthode utilise le [ `Effect.Resolve` ](xref:Xamarin.Forms.Effect.Resolve(System.String)) méthode pour récupérer le [ `Effect` ](xref:Xamarin.Forms.Effect). L’effet se trouve dans une concaténation de la `Group` et `Name` les valeurs de propriété. Si une plate-forme ne fournit pas l’effet, le `Effect.Resolve` méthode retournera un non -`null` valeur.
+La méthode `GetEffect` utilise la méthode [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) pour récupérer l’[`Effect`](xref:Xamarin.Forms.Effect). L’effet se trouve dans une concaténation des valeurs de la propriété `Group` et `Name`. Si une plateforme ne fournit pas l’effet, la méthode `Effect.Resolve` retourne une valeur non `null`.
 
-## <a name="consuming-the-behavior"></a>Utilisation du comportement
+## <a name="consuming-the-behavior"></a>Consommation du comportement
 
-Le `EffectBehavior` classe peut être attachée à la [ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors) collection d’un contrôle, comme illustré dans l’exemple de code XAML suivant :
+La classe `EffectBehavior` peut être attachée à la collection [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) d’un contrôle, comme illustré dans l’exemple de code XAML suivant :
 
 ```xaml
 <Label Text="Label Shadow Effect" ...>
@@ -151,22 +151,22 @@ label.Behaviors.Add (new EffectBehavior {
 });
 ```
 
-Le `Group` et `Name` propriétés du comportement sont définies sur les valeurs de la [ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute) et [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) attributs pour la classe d’effet dans chaque spécifiques à la plateforme projet.
+Les propriétés `Group` et `Name` du comportement sont définies avec les valeurs des attributs [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) et [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) de la classe de l’effet dans chaque projet spécifique à une plateforme.
 
-Lors de l’exécution, lorsque le comportement est attaché à la [ `Label` ](xref:Xamarin.Forms.Label) contrôle, le `Xamarin.LabelShadowEffect` figurera dans le contrôle [ `Effects` ](xref:Xamarin.Forms.Element.Effects) collection. Il en résulte une ombre ajoutée au texte affiché par le `Label` contrôler, comme indiqué dans les captures d’écran suivante :
+Lors de l’exécution, quand le comportement est attaché au contrôle [`Label`](xref:Xamarin.Forms.Label), le `Xamarin.LabelShadowEffect` est ajouté à la collection [ `Effects` ](xref:Xamarin.Forms.Element.Effects) du contrôle. Il en résulte l’ajout d’une ombre au texte affiché par le contrôle `Label`, comme illustré dans les captures d’écran suivantes :
 
-![](effect-behavior-images/screenshots.png "Exemple d’Application avec EffectsBehavior")
+![](effect-behavior-images/screenshots.png "Exemple d’application avec EffectsBehavior")
 
-L’avantage d’utiliser ce comportement pour ajouter et supprimer les effets des contrôles est que le code de gestion d’effet de maquette peut être supprimée à partir de fichiers code-behind.
+L’avantage d’utiliser ce comportement pour ajouter et supprimer des effets dans des contrôles est que le code réutilisable qui gère les effets peut être supprimé des fichiers code-behind.
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a montré à l’aide d’un comportement pour ajouter un effet à un contrôle. Le `EffectBehavior` classe est un comportement personnalisé Xamarin.Forms réutilisable qui ajoute un [ `Effect` ](xref:Xamarin.Forms.Effect) instance à un contrôle lorsque le comportement est attaché au contrôle et supprime le `Effect` lorsque le comportement est l’instance détachée à partir du contrôle.
+Cet article a décrit l’utilisation d’un comportement pour ajouter un effet à un contrôle. La classe `EffectBehavior` est un comportement personnalisé Xamarin.Forms réutilisable qui ajoute une instance [ `Effect` ](xref:Xamarin.Forms.Effect) à un contrôle quand le comportement est attaché au contrôle et supprime l’instance `Effect` quand le comportement est détaché du contrôle.
 
 
 ## <a name="related-links"></a>Liens associés
 
 - [Effets](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Comportement de l’effet (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
-- [Comportement](xref:Xamarin.Forms.Behavior)
-- [Comportement<T>](xref:Xamarin.Forms.Behavior`1)
+- [Comportement Effect (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+- [Behavior](xref:Xamarin.Forms.Behavior)
+- [Behavior<T>](xref:Xamarin.Forms.Behavior`1)

@@ -1,6 +1,6 @@
 ---
-title: Ajout d’un module de reconnaissance de mouvement de balayage
-description: Cet article explique comment reconnaître un mouvement de balayage qui se produisent sur une vue.
+title: Ajout d’un module de reconnaissance des mouvements de balayage
+description: Cet article explique comment reconnaître un mouvement de balayage qui se produit sur une vue.
 ms.prod: xamarin
 ms.assetid: 164976C2-1429-49FB-9EB6-621E2681C19B
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 08/14/2018
 ms.openlocfilehash: 95e95d8849824cd2dc31c2019627cc5adbbefeec
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50131145"
 ---
-# <a name="adding-a-swipe-gesture-recognizer"></a>Ajout d’un module de reconnaissance de mouvement de balayage
+# <a name="adding-a-swipe-gesture-recognizer"></a>Ajout d’un module de reconnaissance des mouvements de balayage
 
-_Un mouvement de balayage se produit lorsqu’un doigt est déplacé sur l’écran dans le sens horizontal ou vertical et est souvent utilisé pour lancer la navigation via le contenu. Les exemples de code dans cet article sont extraites de la [mouvement de balayage](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/) exemple._
+_Un mouvement de balayage se produit quand un doigt est déplacé verticalement ou horizontalement sur l’écran. Il est souvent utilisé pour lancer l’exploration du contenu. Les exemples de code dans cet article sont tirés de l’exemple [Mouvement de balayage](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)._
 
-Pour rendre un [ `View` ](xref:Xamarin.Forms.View) reconnaître un mouvement de balayage, créez un [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) de l’instance, définissez le [ `Direction` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) propriété à un [ `SwipeDirection` ](xref:Xamarin.Forms.SwipeDirection) valeur d’énumération (`Left`, `Right`, `Up`, ou `Down`), définissez éventuellement le [ `Threshold` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) propriété, gérez le [ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) événement, et ajoutez la reconnaissance de mouvement de nouveau à la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) collection sur la vue. Le code suivant montre l’exemple un `SwipeGestureRecognizer` attaché à un [ `BoxView` ](xref:Xamarin.Forms.BoxView):
+Pour qu’un [`View`](xref:Xamarin.Forms.View) reconnaisse un mouvement de balayage, créez une instance [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer), définissez la propriété [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) sur une valeur d’énumération [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) (`Left`, `Right`, `Up` ou `Down`), définissez éventuellement la propriété [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold), traitez l’événement [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped), et ajoutez le nouveau module de reconnaissance de geste sur la collection [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) sur la vue. L'exemple de code suivant montre un `SwipeGestureRecognizer` attaché à un [`BoxView`](xref:Xamarin.Forms.BoxView) :
 
 ```xaml
 <BoxView Color="Teal" ...>
@@ -28,7 +28,7 @@ Pour rendre un [ `View` ](xref:Xamarin.Forms.View) reconnaître un mouvement de 
 </BoxView>
 ```
 
-Voici l’équivalent C# code :
+Voici le code C# équivalent :
 
 ```csharp
 var boxView = new BoxView { Color = Color.Teal, ... };
@@ -38,23 +38,23 @@ leftSwipeGesture.Swiped += OnSwiped;
 boxView.GestureRecognizers.Add(leftSwipeGesture);
 ```
 
-Le [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) classe inclut également un [ `Threshold` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) propriété, ce qui peut éventuellement être définie pour une `uint` valeur qui représente la distance de balayage minimale qui doit être atteint pour un balayez pour être reconnus, en unités indépendantes du périphérique. La valeur par défaut de cette propriété est 100, ce qui signifie que n’importe quel où les balayages qui sont que moins de 100 unités indépendantes du périphérique seront ignorées.
+La classe [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) inclut également une propriété [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold), qui peut éventuellement être définie sur une valeur `uint` qui représente la distance de balayage minimale devant être parcourue pour qu’un balayage soit reconnu, en unités indépendantes de l’appareil. La valeur par défaut de cette propriété est 100, ce qui signifie qu’un balayage inférieur à 100 unités indépendantes de l’appareil est ignoré.
 
-## <a name="recognizing-the-swipe-direction"></a>Reconnaissant la direction de balayage
+## <a name="recognizing-the-swipe-direction"></a>Reconnaissance du sens du balayage
 
-Dans les exemples ci-dessus, le [ `Direction` ](xref:Xamarin.Forms.SwipedEventArgs.Direction) propriété est définie sur une valeur à partir d’un seul le [ `SwipeDirection` ](xref:Xamarin.Forms.SwipeDirection) énumération. Toutefois, il est également possible de définir cette propriété à plusieurs valeurs à partir de la `SwipeDirection` énumération, afin que le [ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) événement est déclenché en réponse à un balayage dans plusieurs directions. Toutefois, la contrainte est qu’un seul [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) peut seulement reconnaître où les balayages qui se produisent sur le même axe. Par conséquent, où les balayages qui se produisent sur l’axe horizontal peuvent être reconnus en définissant le `Direction` propriété `Left` et `Right`:
+Dans les exemples ci-dessus, la propriété [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) est définie sur une seule valeur de l’énumération [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection). Toutefois, il est également possible de définir cette propriété sur plusieurs valeurs de l’énumération `SwipeDirection`, pour que l’événement [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) soit déclenché en réponse à un balayage dans plusieurs directions. Toutefois, la contrainte est qu’un seul [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) peut seulement reconnaître les balayages qui se produisent sur le même axe. Par conséquent, les balayages qui se produisent sur l’axe horizontal peuvent être reconnus en définissant la propriété `Direction` sur `Left` et `Right` :
 
 ```xaml
 <SwipeGestureRecognizer Direction="Left,Right" Swiped="OnSwiped"/>
 ```
 
-De même, où les balayages qui se produisent sur l’axe vertical peuvent être reconnus en définissant le [ `Direction` ](xref:Xamarin.Forms.SwipedEventArgs.Direction) propriété `Up` et `Down`:
+De même, les balayages qui se produisent sur l’axe vertical peuvent être reconnus en définissant la propriété [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) sur `Up` et `Down` :
 
 ```csharp
 var swipeGesture = new SwipeGestureRecognizer { Direction = SwipeDirection.Up | SwipeDirection.Down };
 ```
 
-Vous pouvez également un [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) pour chaque passage de direction peut être créée afin qu’il reconnaisse où les balayages dans chaque direction :
+Sinon, un [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) pour chaque direction de balayage peut être créé afin de reconnaître les balayages dans toutes les directions :
 
 ```xaml
 <BoxView Color="Teal" ...>
@@ -67,7 +67,7 @@ Vous pouvez également un [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeG
 </BoxView>
 ```
 
-Voici l’équivalent C# code :
+Voici le code C# équivalent :
 
 ```csharp
 var boxView = new BoxView { Color = Color.Teal, ... };
@@ -87,11 +87,11 @@ boxView.GestureRecognizers.Add(downSwipeGesture);
 ```
 
 > [!NOTE]
-> Dans les exemples ci-dessus, le même gestionnaire d’événements répond à la [ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) déclenchement des événements. Toutefois, chaque [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) instance peut utiliser un autre gestionnaire d’événements si nécessaire.
+> Dans les exemples ci-dessus, le même gestionnaire d’événements répond au déclenchement de l’événement [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped). Toutefois, chaque instance [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) peut utiliser un autre gestionnaire d’événements si nécessaire.
 
 ## <a name="responding-to-the-swipe"></a>Réponse au balayage
 
-Un gestionnaire d’événements pour le [ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) événement est illustré dans l’exemple suivant :
+Un gestionnaire d'événements pour l’événement [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) est illustré dans l’exemple suivant :
 
 ```csharp
 void OnSwiped(object sender, SwipedEventArgs e)
@@ -114,11 +114,11 @@ void OnSwiped(object sender, SwipedEventArgs e)
 }
 ```
 
-Le [ `SwipedEventArgs` ](xref:Xamarin.Forms.SwipedEventArgs) peut être examiné pour déterminer la direction du balayage, avec une logique personnalisée de réponse pour le passage en fonction des besoins. La direction du balayage peut être obtenue à partir de la [ `Direction` ](xref:Xamarin.Forms.SwipedEventArgs.Direction) propriété des arguments d’événement, qui sera défini à une des valeurs de la [ `SwipeDirection` ](xref:Xamarin.Forms.SwipeDirection) énumération. En outre, les arguments d’événement ont également un [ `Parameter` ](xref:Xamarin.Forms.SwipedEventArgs.Parameter) propriété qui sera définie à la valeur de la [ `CommandParameter` ](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) propriété, s’il est défini.
+Les [`SwipedEventArgs`](xref:Xamarin.Forms.SwipedEventArgs) peuvent être examinés pour déterminer le sens du balayage, avec une logique personnalisée répondant au balayage en fonction des besoins. Vous pouvez obtenir le sens du balayage à partir de la propriété [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) des arguments d’événement, définie sur une des valeurs de l’énumération [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection). Par ailleurs, les arguments d’événement ont également une propriété [`Parameter`](xref:Xamarin.Forms.SwipedEventArgs.Parameter) définie sur la valeur de la propriété [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter), le cas échéant.
 
-## <a name="using-commands"></a>À l’aide de commandes
+## <a name="using-commands"></a>Utilisation de commandes
 
-Le [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) classe inclut également [ `Command` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Command) et [ `CommandParameter` ](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) propriétés. Ces propriétés sont généralement utilisées dans les applications qui utilisent le modèle Model-View-ViewModel (MVVM). Le `Command` propriété définit le `ICommand` à appeler lorsqu’un mouvement de balayage est reconnu, avec le `CommandParameter` définissant un objet à passer à la propriété le `ICommand.` l’exemple de code suivant montre comment lier le `Command` propriété à un `ICommand` défini dans le modèle de vue dont l’instance est défini comme la page [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext):
+La classe [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) inclut également les propriétés [`Command`](xref:Xamarin.Forms.SwipeGestureRecognizer.Command) et [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter). Ces propriétés sont généralement utilisées dans les applications qui utilisent le modèle modèle-vue-vue modèle (MVVM). La propriété `Command` définit le `ICommand` à appeler quand un mouvement de balayage est reconnu, avec la propriété `CommandParameter` définissant un objet à passer à `ICommand.`. L’exemple de code suivant montre comment lier la propriété `Command` à un `ICommand` défini dans le modèle de vue dont l’instance est définie comme page [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) :
 
 ```csharp
 var boxView = new BoxView { Color = Color.Teal, ... };
@@ -137,11 +137,11 @@ Le code XAML équivalent est :
 </BoxView>
 ```
 
-`SwipeCommand` est une propriété de type `ICommand` défini dans l’instance de modèle de vue qui est défini comme la page [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext). Lorsqu’un mouvement de balayage est reconnu, le `Execute` méthode de la `SwipeCommand` objet sera exécuté. L’argument pour le `Execute` méthode est la valeur de la [ `CommandParameter` ](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) propriété. Pour plus d’informations sur les commandes, consultez [l’Interface de commande](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
+`SwipeCommand` est une propriété de type `ICommand` définie dans l’instance de modèle de vue qui est définie comme page [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). Quand un mouvement de balayage est reconnu, la méthode `Execute` de l’objet `SwipeCommand` est exécutée. L’argument de la méthode `Execute` est la valeur de la propriété [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter). Pour plus d’informations sur les commandes, consultez [Interface de commande](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
 ## <a name="creating-a-swipe-container"></a>Création d’un conteneur de balayage
 
-Le `SwipeContainer` (classe), ce qui est illustré dans l’exemple de code suivant, est une classe de reconnaissance de balayage généralisée être wrappé autour d’un [ `View` ](xref:Xamarin.Forms.View) pour effectuer la reconnaissance de mouvement de balayage :
+La classe `SwipeContainer`, illustrée dans l’exemple de code suivant, est une classe de reconnaissance de balayage généralisée encapsulable autour d’un [`View`](xref:Xamarin.Forms.View) pour la reconnaissance de mouvement de balayage :
 
 ```csharp
 public class SwipeContainer : ContentView
@@ -165,9 +165,9 @@ public class SwipeContainer : ContentView
 }
 ```
 
-Le `SwipeContainer` classe crée [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) objets pour toutes les directions de balayage de quatre et l’attache `Swipe` gestionnaires d’événements. Ces gestionnaires d’événements appeler le `Swipe` événement défini par le `SwipeContainer`.
+La classe `SwipeContainer` crée des objets [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) pour les 4 directions de balayage et attache les gestionnaires d'événements `Swipe`. Ces gestionnaires d’événements appellent l’événement `Swipe` défini par le `SwipeContainer`.
 
-L’exemple de code XAML suivant montre le `SwipeContainer` classe habillage un [ `BoxView` ](xref:Xamarin.Forms.BoxView):
+L’exemple de code XAML suivant montre la classe `SwipeContainer` qui encapsule un [`BoxView`](xref:Xamarin.Forms.BoxView) :
 
 ```xaml
 <ContentPage ...>
@@ -179,7 +179,7 @@ L’exemple de code XAML suivant montre le `SwipeContainer` classe habillage un 
 </ContentPage>
 ```
 
-Le code suivant montre l’exemple comment la `SwipeContainer` encapsule un [ `BoxView` ](xref:Xamarin.Forms.BoxView) dans un C# page :
+L’exemple de code suivant montre comment `SwipeContainer` encapsule un [`BoxView`](xref:Xamarin.Forms.BoxView) dans une page C# :
 
 ```csharp
 public class SwipeContainerPageCS : ContentPage
@@ -201,7 +201,7 @@ public class SwipeContainerPageCS : ContentPage
 }
 ```
 
-Lorsque le [ `BoxView` ](xref:Xamarin.Forms.BoxView) reçoit un mouvement de balayage, le [ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) événement dans le [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer) est déclenché. Ceci est géré par le `SwipeContainer` (classe), qui se déclenche son propre `Swipe` événement. Cela `Swipe` événement est géré sur la page. Le [ `SwipedEventArgs` ](xref:Xamarin.Forms.SwipedEventArgs) peut ensuite être examiné pour déterminer la direction du balayage, avec une logique personnalisée de réponse pour le passage en fonction des besoins.
+Quand [`BoxView`](xref:Xamarin.Forms.BoxView) reçoit un mouvement de balayage, l’événement [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) dans [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) est déclenché. Cet événement est traité par la classe `SwipeContainer` qui déclenche son propre événement `Swipe`. Cet événement `Swipe` est traité dans la page. Les [`SwipedEventArgs`](xref:Xamarin.Forms.SwipedEventArgs) peuvent ensuite être examinés pour déterminer le sens du balayage, avec une logique personnalisée répondant au balayage en fonction des besoins.
 
 ## <a name="related-links"></a>Liens connexes
 

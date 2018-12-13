@@ -1,6 +1,6 @@
 ---
 title: Localisation de droite à gauche
-description: Localisation de droite à gauche ajoute la prise en charge de la direction du flux de droite à gauche pour les applications Xamarin.Forms.
+description: La localisation de droite à gauche ajoute la prise en charge de la direction de flux de droite à gauche pour les applications Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429
 ms.technology: xamarin-forms
@@ -10,39 +10,39 @@ ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: 67b0d90290b18c7a5b55c5e3496b54970a8cfc38
 ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51617603"
 ---
 # <a name="right-to-left-localization"></a>Localisation de droite à gauche
 
-_Localisation de droite à gauche ajoute la prise en charge de la direction du flux de droite à gauche pour les applications Xamarin.Forms._
+_La localisation de droite à gauche ajoute la prise en charge de la direction de flux de droite à gauche pour les applications Xamarin.Forms._
 
 > [!NOTE]
-> Localisation de droite à gauche requiert l’utilisation d’API 17 ou version ultérieure sur Android et iOS 9 ou version ultérieure.
+> La localisation de droite à gauche nécessite l’utilisation d’iOS 9 ou version ultérieure, et de l’API 17 ou version ultérieure sur Android.
 
-Direction du flux est la direction dans laquelle les éléments d’interface utilisateur sur la page sont analysés par le œil. Certains langages, tels que l’arabe et l’hébreu, requièrent que les éléments d’interface utilisateur sont disposés dans un sens de déroulement de droite à gauche. Cela est possible en définissant le [ `VisualElement.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété. Cette propriété obtient ou définit la direction dans le flux d’éléments de l’interface utilisateur au sein de tout élément parent qui contrôle leur disposition et doit être défini à un de la [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valeurs d’énumération :
+La direction de flux est la direction dans laquelle les éléments d’IU sur la page sont analysés par l’œil. Dans certaines langues, par exemple l’arabe et l’hébreu, les éléments d’IU doivent être disposés de droite à gauche. Pour ce faire, définissez la propriété [`VisualElement.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection). Cette propriété obtient ou définit la direction de flux des éléments d’IU dans les éléments parents qui contrôlent leur disposition. Elle doit avoir l’une des valeurs d’énumération de [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) :
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-Définition de la [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété [ `RightToLeft` ](xref:Xamarin.Forms.FlowDirection.RightToLeft) sur un élément généralement définit l’alignement à droite, l’ordre de lecture de droite à gauche et la disposition du contrôle à partir de droite à gauche :
+L’affectation à la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) de la valeur [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) pour un élément permet généralement de définir l’alignement à droite, l’ordre de lecture de droite à gauche et la direction de flux du contrôle de droite à gauche :
 
-[![TodoItemPage en arabe avec un sens de déroulement de droite à gauche](rtl-images/TodoItemPage-Arabic.png "TodoItemPage en arabe avec un sens de déroulement de droite à gauche")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage en arabe avec un sens de déroulement de droite à gauche")
-
-> [!TIP]
-> Vous ne devez définir le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété sur la disposition initiale. Modification de cette valeur lors de l’exécution provoque un processus coûteux de disposition qui affectent les performances.
-
-La valeur par défaut [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valeur de propriété pour un élément sans parent est [ `LeftToRight` ](xref:Xamarin.Forms.FlowDirection.LeftToRight), tandis que la valeur par défaut `FlowDirection` pour un élément avec un parent est [ `MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). Par conséquent, un élément hérite le `FlowDirection` valeur de propriété à partir de son parent dans l’arborescence visuelle et n’importe quel élément peut remplacer la valeur qu’il obtient à partir de son parent.
+[![TodoItemPage en arabe avec une direction de flux de droite à gauche](rtl-images/TodoItemPage-Arabic.png "TodoItemPage en arabe avec une direction de flux de droite à gauche")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage en arabe avec une direction de flux de droite à gauche")
 
 > [!TIP]
-> Lors de la localisation d’une application pour des langues de droite à gauche, définissez la [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété sur une disposition de page ou racine. Conséquence, tous les éléments contenus dans la page, ou la présentation racine, de réagir de façon appropriée à la direction du flux.
+> Vous devez uniquement définir la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) pour la disposition initiale. Si vous changez cette valeur au moment de l’exécution, cela alourdit le processus de disposition et affecte le niveau de performance.
 
-## <a name="respecting-device-flow-direction"></a>En respectant le sens de déroulement d’appareil
+La valeur de propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) par défaut pour un élément sans parent est [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight), alors que le `FlowDirection` par défaut d’un élément avec parent est [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). Un élément hérite donc de la valeur de propriété `FlowDirection` de son parent dans l’arborescence d’éléments visuels, et un élément peut remplacer la valeur qu’il obtient de son parent.
 
-En respectant le sens de déroulement de l’appareil selon la langue sélectionnée et la région est un choix explicite de développeur et ne se produit pas automatiquement. Il est possible en définissant le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété sur une page ou la mise en page de la racine, à la `static` [ `Device.FlowDirection` ](xref:Xamarin.Forms.Device.FlowDirection) valeur :
+> [!TIP]
+> Quand vous localisez une application pour les langues lues de droite à gauche, définissez la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) dans une page ou une disposition racine. Ainsi, tous les éléments contenus dans la page ou la disposition racine répondent correctement à la direction de flux.
+
+## <a name="respecting-device-flow-direction"></a>Respect de la direction de flux de l’appareil
+
+Le respect de la direction de flux de l’appareil en fonction de la langue et de la région sélectionnées est un choix explicite du développeur et n’est pas automatique. Pour ce faire, affectez à la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) d’une page ou d’une disposition racine la valeur `static` [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection) :
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -52,15 +52,15 @@ En respectant le sens de déroulement de l’appareil selon la langue sélection
 this.FlowDirection = Device.FlowDirection;
 ```
 
-Tous les éléments enfants de la page ou la mise en page de la racine, par défaut puis hériteront le [ `Device.FlowDirection` ](xref:Xamarin.Forms.Device.FlowDirection) valeur.
+Tous les éléments enfants de la page, ou de la disposition racine, héritent par défaut de la valeur [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection).
 
-## <a name="platform-setup"></a>Programme d’installation de plateforme
+## <a name="platform-setup"></a>Configuration de la plateforme
 
-Le programme d’installation de plateforme spécifique est requis pour activer les paramètres régionaux de droite à gauche.
+Une configuration de plateforme spécifique est obligatoire pour permettre l’activation des paramètres régionaux de droite à gauche.
 
 ### <a name="ios"></a>iOS
 
-Les paramètres régionaux de droite à gauche requis doivent être ajouté comme un langage pris en charge pour les éléments de tableau pour le `CFBundleLocalizations` clé dans **Info.plist**. L’exemple suivant montre l’arabe ayant été ajouté au tableau pour le `CFBundleLocalizations` clé :
+Les paramètres régionaux de droite à gauche nécessaires doivent être ajoutés aux éléments de tableau de la clé `CFBundleLocalizations` dans **Info.plist** en tant que langue prise en charge. L’exemple suivant montre que l’arabe a été ajouté au tableau pour la clé `CFBundleLocalizations` :
 
 ```xml
 <key>CFBundleLocalizations</key>
@@ -70,18 +70,18 @@ Les paramètres régionaux de droite à gauche requis doivent être ajouté comm
 </array>
 ```
 
-![Les langues prises en charge de info.plist](rtl-images/ios-locales.png "Info.plist langues prises en charge")
+![Langues prises en charge par Info.plist](rtl-images/ios-locales.png "Langues prises en charge par Info.plist")
 
-Pour plus d’informations, consultez [principes fondamentaux de la localisation dans iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
+Pour plus d’informations, consultez les [Principes de base de la localisation dans iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
 
-Localisation de droite à gauche peut ensuite être testée en modifiant la langue et région sur le simulateur d’appareil/paramètres régionaux de droite à gauche qui a été spécifié dans **Info.plist**.
+Vous pouvez ensuite tester la localisation de droite à gauche en remplaçant la langue et la région de l’appareil/du simulateur par des paramètres régionaux de droite à gauche spécifiés dans **Info.plist**.
 
 > [!WARNING]
-> Veuillez noter que si vous modifiez la langue et région aux paramètres régionaux de droite à gauche sur iOS, toute [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) vues lèvera une exception si vous n’incluez pas les ressources requises pour les paramètres régionaux. Par exemple, lorsque vous testez une application en chiffres arabes qui a un `DatePicker`, vérifiez que **mideast** est sélectionné dans le **internationalisation** section de la **Build iOS** volet.
+> Notez qu’à partir du moment où vous changez la langue et la région en introduisant des paramètres régionaux de droite à gauche sur iOS, les vues [`DatePicker`](xref:Xamarin.Forms.DatePicker) lèvent une exception si vous n’incluez pas les ressources nécessaires pour ces paramètres régionaux. Par exemple, quand vous testez une application en arabe comportant `DatePicker`, vérifiez que **mideast** est sélectionné dans la section **Internationalisation** du volet **Build iOS**.
 
 ### <a name="android"></a>Android
 
-L’application **AndroidManifest.xml** fichier doit être mis à jour afin que le `<uses-sdk>` les collections de nœuds le `android:minSdkVersion` 17, l’attribut et la `<application>` les collections de nœuds le `android:supportsRtl` attribut `true`:
+Le fichier **AndroidManifest.xml** de l’application doit être mis à jour pour que le nœud `<uses-sdk>` affecte la valeur 17 à l’attribut `android:minSdkVersion`, et que le nœud `<application>` affecte la valeur `true` à l’attribut `android:supportsRtl` :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -92,11 +92,11 @@ L’application **AndroidManifest.xml** fichier doit être mis à jour afin que 
 </manifest>
 ```
 
-Localisation de droite à gauche peut ensuite être testée en modifiant l’appareil/émulateur pour utiliser la langue de droite à gauche, ou en activant **sens de la disposition de droite à gauche Force** dans **Paramètres > Options pour développeurs**.
+Vous pouvez ensuite tester la localisation de droite à gauche en changeant l’appareil/émulateur pour qu’il utilise la langue de droite à gauche, ou en activant l’option permettant de **forcer la disposition DàG (de droite à gauche)** dans **Paramètres > Options pour développeurs**.
 
 ### <a name="universal-windows-platform-uwp"></a>Plateforme Windows universelle (UWP)
 
-Les ressources linguistiques requises doivent être spécifiés dans le `<Resources>` nœud de la **Package.appxmanifest** fichier. L’exemple suivant montre l’arabe ayant été ajouté à la `<Resources>` nœud :
+Vous devez spécifier les ressources linguistiques nécessaires dans le nœud `<Resources>` du fichier **Package.appxmanifest**. L’exemple suivant montre que l’arabe a été ajouté au nœud `<Resources>` :
 
 ```xml
 <Resources>
@@ -106,7 +106,7 @@ Les ressources linguistiques requises doivent être spécifiés dans le `<Resour
 </Resources>
 ```
 
-En outre, UWP nécessite que la culture par défaut de l’application est explicitement définie dans la bibliothèque .NET Standard. Cela est possible en définissant le `NeutralResourcesLanguage` attribut `AssemblyInfo.cs`, ou dans une autre classe, à la culture par défaut :
+De plus, avec UWP vous devez définir explicitement la culture par défaut de l’application dans la bibliothèque .NET Standard. Pour ce faire, affectez la culture par défaut à l’attribut `NeutralResourcesLanguage` dans `AssemblyInfo.cs` ou une autre classe :
 
 ```csharp
 using System.Resources;
@@ -114,42 +114,42 @@ using System.Resources;
 [assembly: NeutralResourcesLanguage("en")]
 ```
 
-Localisation de droite à gauche peut ensuite être testée en modifiant la langue et région sur l’appareil aux paramètres régionaux de droite à gauche appropriée.
+Vous pouvez ensuite tester la localisation de droite à gauche en remplaçant la langue et la région de l’appareil/du simulateur par les paramètres régionaux de droite à gauche appropriés.
 
 ## <a name="limitations"></a>Limitations
 
-Localisation de droite à gauche de Xamarin.Forms a actuellement un nombre de limitations :
+La localisation de droite à gauche de Xamarin.Forms présente un certain nombre de limitations :
 
-- [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) emplacement du bouton, emplacement d’élément de barre d’outils et l’animation de transition est contrôlée par les paramètres régionaux de périphérique, et non le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
-- [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) ne retourne pas de sens de balayage.
-- [`Image`](xref:Xamarin.Forms.Image) ne retourne pas de contenu visuel.
-- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) et [ `DisplayActionSheet` ](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) l’orientation est contrôlée par les paramètres régionaux de périphérique, et non le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
-- [`WebView`](xref:Xamarin.Forms.WebView) contenu qui ne respecte pas la [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
-- Un `TextDirection` propriété doit être ajouté, pour contrôler l’alignement du texte.
+- Pour [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), l’emplacement du bouton, l’emplacement des éléments de barre d’outils et l’animation de transition sont contrôlés par les paramètres régionaux de l’appareil, et non par la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- La direction de balayage de [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) ne se retourne pas.
+- Le contenu visuel de [`Image`](xref:Xamarin.Forms.Image) ne se retourne pas.
+- L’orientation de [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) et [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) est contrôlée par les paramètres régionaux de l’appareil, et non par la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- Le contenu de [`WebView`](xref:Xamarin.Forms.WebView) ne respecte pas la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- Vous devez ajouter une propriété `TextDirection` pour contrôler l’alignement du texte.
 
 ### <a name="ios"></a>iOS
 
-- [`Stepper`](xref:Xamarin.Forms.Stepper) l’orientation est contrôlée par les paramètres régionaux de périphérique, et non le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
-- [`EntryCell`](xref:Xamarin.Forms.EntryCell) alignement du texte est contrôlé par les paramètres régionaux de périphérique, et non le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) mouvements et l’alignement ne sont pas inversés.
+- L’orientation de [`Stepper`](xref:Xamarin.Forms.Stepper) est contrôlée par les paramètres régionaux de l’appareil, et non par la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- L’alignement du texte de [`EntryCell`](xref:Xamarin.Forms.EntryCell) est contrôlé par les paramètres régionaux de l’appareil, et non par la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- Les mouvements et l’alignement de [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) ne sont pas inversés.
 
 ### <a name="android"></a>Android
 
-- [`SearchBar`](xref:Xamarin.Forms.SearchBar) l’orientation est contrôlée par les paramètres régionaux de périphérique, et non le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) sélection élective est contrôlée par les paramètres régionaux de périphérique, et non le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
+- L’orientation de [`SearchBar`](xref:Xamarin.Forms.SearchBar) est contrôlée par les paramètres régionaux de l’appareil, et non par la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- Le placement de [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) est contrôlé par les paramètres régionaux de l’appareil, et non par la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 
 ### <a name="uwp"></a>UWP
 
-- [`Editor`](xref:Xamarin.Forms.Editor) alignement du texte est contrôlé par les paramètres régionaux de périphérique, et non le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
-- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété n’est pas héritée par [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) enfants.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) alignement du texte est contrôlé par les paramètres régionaux de périphérique, et non le [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) propriété.
+- L’alignement du texte de [`Editor`](xref:Xamarin.Forms.Editor) est contrôlé par les paramètres régionaux de l’appareil, et non par la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
+- La propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) n’est pas héritée par les enfants de [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage).
+- L’alignement du texte de [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) est contrôlé par les paramètres régionaux de l’appareil, et non par la propriété [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection).
 
-## <a name="right-to-left-language-support-with-xamarinuniversity"></a>De droite à gauche langage prend en charge avec Xamarin.University
+## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Prise en charge linguistique de droite à gauche avec Xamarin.University
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Droite à gauche Xamarin.Forms 3.0 prend en charge, par [Xamarin University](https://university.xamarin.com/)**
+**Prise en charge de droite à gauche à l’aide de Xamarin.Forms 3.0, par [Xamarin University](https://university.xamarin.com/)**
 
 ## <a name="related-links"></a>Liens connexes
 
-- [TodoLocalizedRTL exemple d’application](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)
+- [Exemple d’application TodoLocalizedRTL](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)

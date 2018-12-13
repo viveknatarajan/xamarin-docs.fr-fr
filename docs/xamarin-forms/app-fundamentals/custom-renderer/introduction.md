@@ -1,6 +1,6 @@
 ---
-title: Introduction aux convertisseurs personnalisés
-description: Cet article fournit une introduction aux convertisseurs personnalisés et décrit le processus de création d’un convertisseur personnalisé.
+title: Présentation des renderers personnalisés
+description: Cet article présente les renderers personnalisés et décrit leur processus de création.
 ms.prod: xamarin
 ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 01/19/2016
 ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50108429"
 ---
-# <a name="introduction-to-custom-renderers"></a>Introduction aux convertisseurs personnalisés
+# <a name="introduction-to-custom-renderers"></a>Présentation des renderers personnalisés
 
-_Renderers personnalisés fournissent une approche puissante permettant de personnaliser l’apparence et le comportement des contrôles Xamarin.Forms. Elles peuvent servir pour les styles de petites modifications ou sophistiquée disposition spécifique à la plateforme et personnalisation du comportement. Cet article fournit une introduction aux convertisseurs personnalisés et décrit le processus de création d’un convertisseur personnalisé._
+_Les renderers personnalisés fournissent une approche puissante pour personnaliser l’apparence et le comportement des contrôles Xamarin.Forms. Ils peuvent être utilisés aussi bien pour les petits changements de style que pour la personnalisation sophistiquée de la disposition et du comportement d’une plateforme. Cet article présente les renderers personnalisés et décrit leur processus de création._
 
-Xamarin.Forms [Pages, des dispositions et des contrôles](~/xamarin-forms/user-interface/controls/index.md) présenter une API commune pour décrire des interfaces utilisateur mobiles multiplateformes. Chaque page, la disposition et le contrôle sont restitué différemment sur chaque plateforme, à l’aide un `Renderer` classe qui crée à son tour un contrôle natif (correspondant à la représentation sous forme de Xamarin.Forms), elle organise sur l’écran et ajoute le comportement spécifié dans le code partagé.
+Les [pages, dispositions et contrôles](~/xamarin-forms/user-interface/controls/index.md) Xamarin.Forms présentent une API commune pour décrire des interfaces utilisateur mobiles multiplateformes. Chaque page, disposition et contrôle est restitué différemment sur chaque plateforme avec une classe `Renderer` qui crée à son tour un contrôle natif (correspondant à la représentation de Xamarin.Forms), le dispose sur l’écran et ajoute le comportement spécifié dans le code partagé.
 
-Les développeurs peuvent implémenter leurs propres classes `Renderer` pour personnaliser l’apparence et/ou le comportement d’un contrôle. Renderers personnalisés pour un type donné peuvent être ajoutés au projet d’une application pour personnaliser le contrôle au même endroit tout en autorisant le comportement par défaut sur d’autres plateformes ; ou différents convertisseurs personnalisés peuvent être ajoutés à chaque projet d’application pour créer une apparence différente sur iOS, Android et la plateforme universelle Windows (UWP). Toutefois, en implémentant une classe de convertisseur personnalisé pour effectuer une personnalisation de contrôle simple est souvent une réponse activable. Effets simplifient ce processus et sont généralement utilisés pour les styles de petites modifications. Pour plus d’informations, consultez [Effets](~/xamarin-forms/app-fundamentals/effects/index.md).
+Les développeurs peuvent implémenter leurs propres classes `Renderer` pour personnaliser l’apparence et/ou le comportement d’un contrôle. Vous pouvez ajouter des renderers personnalisés pour un type donné à un projet d’application afin de personnaliser le contrôle dans un emplacement tout en autorisant le comportement par défaut sur d’autres plateformes. Vous pouvez également ajouter différents renderers personnalisés à chaque projet d’application pour créer une apparence différente sur iOS, Android et la plateforme universelle Windows (UWP). Cependant, l’implémentation d’une classe de renderer personnalisée pour effectuer une simple personnalisation d’un contrôle est souvent une réponse trop lourde. Les effets simplifient ce processus et sont généralement utilisés pour les petits changements de style. Pour plus d’informations, consultez [Effets](~/xamarin-forms/app-fundamentals/effects/index.md).
 
-## <a name="examining-why-custom-renderers-are-necessary"></a>Examen pourquoi personnalisé convertisseurs sont nécessaires
+## <a name="examining-why-custom-renderers-are-necessary"></a>Pourquoi les renderers personnalisés sont-ils nécessaires ?
 
-Modification de l’apparence d’un contrôle Xamarin.Forms, sans utiliser un convertisseur personnalisé, est un processus en deux étapes qui implique la création d’un contrôle personnalisé par l’intermédiaire de sous-classement et d’utilisation du contrôle personnalisé à la place le contrôle d’origine. L’exemple de code suivant montre un exemple de sous-classement le `Entry` contrôle :
+Le changement de l’apparence d’un contrôle Xamarin.Forms, sans renderer personnalisé, est un processus en deux étapes qui implique la création d’un contrôle personnalisé par l’intermédiaire d’une sous-classe, puis la consommation du contrôle personnalisé à la place du contrôle d’origine. L’exemple de code suivant montre un exemple d’utilisation d’une sous-classe du contrôle `Entry` :
 
 ```csharp
 public class MyEntry : Entry
@@ -36,7 +36,7 @@ public class MyEntry : Entry
 }
 ```
 
-Le `MyEntry` contrôle est un `Entry` contrôlent où le `BackgroundColor` est défini sur gris et peuvent être référencées dans Xaml en déclarant un espace de noms pour son emplacement et en utilisant le préfixe d’espace de noms sur l’élément de contrôle. Le code suivant montre l’exemple comment la `MyEntry` contrôle personnalisé peut être consommé par un `ContentPage`:
+Le contrôle `MyEntry` est un contrôle `Entry` où `BackgroundColor` est de couleur grise. Vous pouvez le référencer en XAML en déclarant un espace de noms pour son emplacement et en utilisant le préfixe d’espace de noms sur l’élément de contrôle. L’exemple de code suivant montre comment le contrôle personnalisé `MyEntry` peut être consommé par `ContentPage` :
 
 ```xaml
 <ContentPage
@@ -49,49 +49,49 @@ Le `MyEntry` contrôle est un `Entry` contrôlent où le `BackgroundColor` est d
 </ContentPage>
 ```
 
-Le `local` préfixe d’espace de noms peut être quelconque. Toutefois, le `namespace` et `assembly` valeurs doivent correspondre les détails du contrôle personnalisé. Une fois que l’espace de noms est déclaré, le préfixe est utilisé pour référencer le contrôle personnalisé.
+Le préfixe d’espace de noms `local` peut varier. Toutefois, les valeurs `namespace` et `assembly` doivent correspondre aux détails du contrôle personnalisé. Une fois l’espace de noms déclaré, le préfixe est utilisé pour référencer le contrôle personnalisé.
 
 > [!NOTE]
-> Définir le `xmlns` est beaucoup plus simple dans les projets de bibliothèque .NET Standard que les projets partagés. Une bibliothèque .NET Standard est compilée dans un assembly, il est facile de déterminer ce qu’il le `assembly=CustomRenderer` valeur doit être. Lorsque vous utilisez des projets partagés, toutes les ressources partagées (y compris le XAML) sont compilés dans chacun des projets de références, ce qui signifie que si l’iOS, Android et UWP projets ont leurs propres *noms d’assemblys* il est impossible d’écrire le `xmlns` déclaration, car la valeur doit être différent pour chaque application. Contrôles personnalisés dans XAML pour les projets partagés nécessitera chaque projet d’application à être configuré avec le même nom d’assembly.
+> Il est beaucoup plus simple de définir `xmlns` dans des projets de bibliothèque .NET Standard que dans des projets partagés. Une bibliothèque .NET Standard étant compilée dans un assembly, il est facile de déterminer ce que la valeur `assembly=CustomRenderer` doit être. Quand vous utilisez des projets partagés, toutes les ressources partagées (y compris le XAML) sont compilées dans chacun des projets de référence. Si les projets iOS, Android et UWP ont leurs propres *noms d’assemblys*, il est alors impossible d’écrire la déclaration `xmlns` puisque la valeur doit être différente pour chaque application. Les contrôles personnalisés en XAML pour les projets partagés nécessitent que chaque projet d’application soit configuré avec le même nom d’assembly.
 
-Le `MyEntry` contrôle personnalisé est ensuite rendu sur chaque plateforme, avec un arrière-plan gris, comme indiqué dans les captures d’écran suivante :
+Le contrôle personnalisé `MyEntry` est ensuite restitué sur chaque plateforme, avec un arrière-plan de couleur grise, comme le montrent les captures d’écran suivantes :
 
-![](introduction-images/screenshots.png "Contrôle personnalisé de MyEntry sur chaque plateforme")
+![](introduction-images/screenshots.png "Contrôle personnalisé MyEntry sur chaque plateforme")
 
-Modification de la couleur d’arrière-plan du contrôle sur chaque plateforme a été accomplie purement par le biais de sous-classe le contrôle. Toutefois, cette technique est limitée qu’elle permet d’obtenir comme il n’est pas possible de tirer parti des améliorations spécifiques à la plateforme et les personnalisations. Lorsqu’ils sont requis, les convertisseurs personnalisés doivent être implémentés.
+Pour changer la couleur d’arrière-plan du contrôle sur chaque plateforme, nous avons recouru exclusivement à une sous-classe du contrôle. Le champ d’action de cette technique est toutefois limité, car il n’est pas possible de tirer parti des améliorations et des personnalisations spécifiques à la plateforme. Quand ils sont nécessaires, des renderers personnalisés doivent être implémentés.
 
-## <a name="creating-a-custom-renderer-class"></a>Création d’une classe de convertisseur personnalisé
+## <a name="creating-a-custom-renderer-class"></a>Création d’une classe de renderer personnalisé
 
-Le processus de création d’une classe de convertisseur personnalisé est comme suit :
+Le processus de création d’une classe de renderer personnalisé est le suivant :
 
-1. Créer une sous-classe de la classe de convertisseur qui restitue le contrôle natif.
-1. Substituez la méthode qui restitue le contrôle natif et écrire une logique afin de personnaliser le contrôle. Souvent, le `OnElementChanged` méthode est utilisée pour restituer le contrôle natif, ce qui est appelé lorsque le contrôle de Xamarin.Forms correspondant est créé.
-1. Ajouter un `ExportRenderer` d’attribut à la classe de convertisseur personnalisé pour spécifier qu’il sera être utilisé pour restituer le contrôle Xamarin.Forms. Cet attribut est utilisé pour inscrire le renderer personnalisé avec Xamarin.Forms.
+1. Créez une sous-classe de la classe de renderer qui restitue le contrôle natif.
+1. Remplacez la méthode qui restitue le contrôle natif et écrivez la logique pour le personnaliser. La méthode `OnElementChanged` est souvent utilisée pour restituer le contrôle natif, qui est appelé quand le contrôle Xamarin.Forms correspondant est créé.
+1. Ajoutez un attribut `ExportRenderer` à la classe du renderer personnalisé pour spécifier qu’il sera utilisé pour restituer le contrôle Xamarin.Forms. Cet attribut est utilisé pour inscrire le renderer personnalisé auprès de Xamarin.Forms.
 
 > [!NOTE]
-> Pour la plupart des éléments de Xamarin.Forms, il est facultatif pour fournir un convertisseur personnalisé dans chaque projet de plateforme. Si un convertisseur personnalisé n’est pas inscrit, le convertisseur par défaut pour la classe de base du contrôle sera être utilisé. Toutefois, les convertisseurs personnalisés sont nécessaires dans chaque projet de plateforme lors du rendu d’un [vue](xref:Xamarin.Forms.View) ou [ViewCell](xref:Xamarin.Forms.ViewCell) élément.
+> Pour la plupart des éléments Xamarin.Forms, il est facultatif de fournir un renderer personnalisé dans chaque projet de plateforme. Si un renderer personnalisé n’est pas inscrit, le renderer par défaut de la classe de base du contrôle est utilisé. Toutefois, des renderers personnalisés sont nécessaires dans chaque projet de plateforme au moment de la restitution d’un élément [View](xref:Xamarin.Forms.View) ou [ViewCell](xref:Xamarin.Forms.ViewCell).
 
-Les rubriques de cette série fournira des démonstrations et des explications de ce processus pour différents éléments de Xamarin.Forms.
+Les rubriques de cette série fournissent des démonstrations et des explications de ce processus pour différents éléments Xamarin.Forms.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-Si un contrôle personnalisé est contenu dans un projet de bibliothèque .NET Standard qui a été ajouté à la solution (autrement dit, pas la bibliothèque .NET Standard créée par Visual Studio pour le modèle de projet d’application de Xamarin.Forms Mac/Visual Studio), une exception peut se produire dans iOS quand tente d’accéder au contrôle personnalisé. Si ce problème se produit peut être résolu en créant une référence au contrôle personnalisé à partir de la `AppDelegate` classe :
+Si un contrôle personnalisé est contenu dans un projet de bibliothèque .NET Standard ajouté à la solution (autrement dit, pas la bibliothèque .NET Standard créée par le modèle de projet d’application Xamarin.Forms dans Visual Studio pour Mac/Visual Studio), une exception peut se produire dans iOS lors d’une tentative d’accès au contrôle personnalisé. Si ce problème se produit, vous pouvez le résoudre en créant une référence au contrôle personnalisé à partir de la classe `AppDelegate` :
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere
 ```
 
-Cela force le compilateur doit reconnaître le `ClassInPCL` le type à sa résolution. Vous pouvez également le `Preserve` attribut peut être ajouté à la `AppDelegate` classe pour obtenir le même résultat :
+Le compilateur est ainsi forcé à reconnaître le type `ClassInPCL` en le résolvant. Vous pouvez également ajouter l’attribut `Preserve` à la classe `AppDelegate` pour obtenir le même résultat :
 
 ```csharp
 [assembly: Preserve (typeof (ClassInPCL))]
 ```
 
-Cette opération crée une référence à la `ClassInPCL` type, indiquant qu’il n’est nécessaire lors de l’exécution. Pour plus d’informations, consultez [Code préservation](~/ios/deploy-test/linker.md).
+Une référence au type `ClassInPCL` est alors créée, indiquant son caractère obligatoire au moment de l’exécution. Pour plus d’informations, consultez [Conservation du code](~/ios/deploy-test/linker.md).
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article propose une introduction aux convertisseurs personnalisés et a décrit le processus de création d’un convertisseur personnalisé. Renderers personnalisés fournissent une approche puissante permettant de personnaliser l’apparence et le comportement des contrôles Xamarin.Forms. Elles peuvent servir pour les styles de petites modifications ou sophistiquée disposition spécifique à la plateforme et personnalisation du comportement.
+Dans cet article, nous avons examiné les renderers personnalisés et décrit leur processus de création. Les renderers personnalisés fournissent une approche puissante pour personnaliser l’apparence et le comportement des contrôles Xamarin.Forms. Ils peuvent être utilisés aussi bien pour les petits changements de style que pour la personnalisation sophistiquée de la disposition et du comportement d’une plateforme.
 
 
 ## <a name="related-links"></a>Liens associés

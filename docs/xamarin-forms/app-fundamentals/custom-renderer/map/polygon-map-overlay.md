@@ -1,6 +1,6 @@
 ---
 title: Mise en surbrillance d’une région sur une carte
-description: Cet article explique comment ajouter un segment de recouvrement de polygone à une carte, pour mettre en surbrillance une région sur la carte. Les polygones sont une forme fermée et que leurs intérieurs renseigné.
+description: Cet article explique comment ajouter une superposition polygonale à une carte afin de mettre en surbrillance une région de la carte. Les polygones sont une forme fermée dont l’intérieur est plein.
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
@@ -9,37 +9,37 @@ ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 0a11e9c25922531727ad2fee3bbed9c8d4e2b80c
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998132"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Mise en surbrillance d’une région sur une carte
 
-_Cet article a expliqué comment ajouter un segment de recouvrement de polygone à une carte, pour mettre en surbrillance une région sur la carte. Les polygones sont une forme fermée et que leurs intérieurs renseigné._
+_Cet article explique comment ajouter une superposition polygonale à une carte afin de mettre en surbrillance une région de la carte. Les polygones sont une forme fermée dont l’intérieur est plein._
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Une superposition est un graphique en couche sur une carte. Superpositions prend en charge le dessin contenu graphique qui s’adapte à la carte, comme elle est redimensionnée. Les captures d’écran suivantes montrent le résultat de l’ajout d’un segment de recouvrement de polygone à une carte :
+Une superposition est une forme graphique posée sur une carte. Les superpositions prennent en charge le tracé de contenu graphique qui s’ajuste à la carte quand celle-ci est zoomée. Les captures d’écran suivantes montrent le résultat de l’ajout d’une superposition polygonale sur une carte :
 
 ![](polygon-map-overlay-images/screenshots.png)
 
-Quand un [ `Map` ](xref:Xamarin.Forms.Maps.Map) contrôle est restitué par une application Xamarin.Forms, dans iOS le `MapRenderer` classe est instanciée, ce qui instancie à son tour native `MKMapView` contrôle. Sur la plateforme Android, le `MapRenderer` classe instancie native `MapView` contrôle. Sur la plateforme de Windows universelle (UWP), le `MapRenderer` classe instancie native `MapControl`. Le processus de rendu peut être exploitée pour implémenter les personnalisations spécifiques à la plateforme mappage en créant un convertisseur personnalisé pour un `Map` sur chaque plateforme. Le processus pour effectuer cette opération est la suivante :
+Quand un contrôle [`Map`](xref:Xamarin.Forms.Maps.Map) est restitué par une application Xamarin.Forms, dans iOS, la classe `MapRenderer` est instanciée, entraînant à son tour l’instanciation d’un contrôle `MKMapView` natif. Sur la plateforme Android, la classe `MapRenderer` instancie un contrôle `MapView` natif. Sur la plateforme Windows universelle (UWP), la classe `MapRenderer` instancie un `MapControl` natif. Il est possible de tirer profit du processus de rendu pour implémenter des personnalisations de carte spécifiques à la plateforme en créant un renderer personnalisé pour un `Map` sur chaque plateforme. Le processus pour y parvenir est le suivant :
 
-1. [Créer](#Creating_the_Custom_Map) une carte personnalisée Xamarin.Forms.
-1. [Consommer](#Consuming_the_Custom_Map) la carte personnalisée à partir de Xamarin.Forms.
-1. [Personnaliser](#Customizing_the_Map) la carte en créant un convertisseur personnalisé pour la carte sur chaque plateforme.
+1. [Créez](#Creating_the_Custom_Map) une carte personnalisée Xamarin.Forms.
+1. [Consommez](#Consuming_the_Custom_Map) la carte personnalisée à partir de Xamarin.Forms.
+1. [Personnalisez](#Customizing_the_Map) la carte en créant un renderer personnalisé pour la carte sur chaque plateforme.
 
 > [!NOTE]
 > [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) doit être initialisé et configuré avant utilisation. Pour plus d’informations, consultez [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
-Pour plus d’informations sur la personnalisation d’une carte à l’aide d’un convertisseur personnalisé, consultez [personnalisation d’un code confidentiel de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
+Pour plus d’informations sur la personnalisation d’une carte à l’aide d’un renderer personnalisé, consultez [Personnalisation d’une épingle de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
 <a name="Creating_the_Custom_Map" />
 
 ### <a name="creating-the-custom-map"></a>Création de la carte personnalisée
 
-Créer une sous-classe de la [ `Map` ](xref:Xamarin.Forms.Maps.Map) (classe), qui ajoute un `ShapeCoordinates` propriété :
+Créez une sous-classe de la classe [ `Map` ](xref:Xamarin.Forms.Maps.Map), qui ajoute une propriété `ShapeCoordinates` :
 
 ```csharp
 public class CustomMap : Map
@@ -53,13 +53,13 @@ public class CustomMap : Map
 }
 ```
 
-Le `ShapeCoordinates` propriété stocke une collection de coordonnées qui définissent la région à mettre en surbrillance.
+La propriété `ShapeCoordinates` stocke une collection de coordonnées qui définissent la région à mettre en surbrillance.
 
 <a name="Consuming_the_Custom_Map" />
 
-### <a name="consuming-the-custom-map"></a>Utilisation de la carte personnalisée
+### <a name="consuming-the-custom-map"></a>Consommation de la carte personnalisée
 
-Consommer le `CustomMap` contrôle en déclarant une instance de celle-ci dans l’instance de la page XAML :
+Consommez le contrôle `CustomMap` en déclarant une instance à lui dans l’instance de la page XAML :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -72,7 +72,7 @@ Consommer le `CustomMap` contrôle en déclarant une instance de celle-ci dans l
 </ContentPage>
 ```
 
-Vous pouvez également utiliser le `CustomMap` contrôle en déclarant une instance de celle-ci dans l’instance de page c# :
+Ou consommez le contrôle `CustomMap` en déclarant une instance à lui dans l’instance de la page C# :
 
 ```csharp
 public class MapPageCS : ContentPage
@@ -90,7 +90,7 @@ public class MapPageCS : ContentPage
 }
 ```
 
-Initialiser le `CustomMap` contrôler en fonction des besoins :
+Initialisez le contrôle `CustomMap` comme suit :
 
 ```csharp
 public partial class MapPage : ContentPage
@@ -108,17 +108,17 @@ public partial class MapPage : ContentPage
 }
 ```
 
-Cette initialisation spécifie une série de coordonnées de latitude et longitude, pour définir la région de la carte à mettre en surbrillance. Il positionne ensuite la vue de la carte avec le [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) (méthode), ce qui modifie la position et le niveau de zoom de la carte en créant un [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan) à partir d’un [ `Position` ](xref:Xamarin.Forms.Maps.Position) et un [ `Distance` ](xref:Xamarin.Forms.Maps.Distance).
+Cette initialisation spécifie une série de coordonnées de latitude et de longitude pour définir la région de la carte à mettre en surbrillance. Ensuite, elle positionne la vue de la carte avec la méthode [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion*), laquelle change la position et le niveau de zoom de la carte en créant un [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan) à partir d’une [ `Position` ](xref:Xamarin.Forms.Maps.Position) et d’une [ `Distance` ](xref:Xamarin.Forms.Maps.Distance).
 
 <a name="Customizing_the_Map" />
 
 ### <a name="customizing-the-map"></a>Personnalisation de la carte
 
-Un convertisseur personnalisé doit maintenant être ajouté à chaque projet d’application pour ajouter la superposition de polygone à la carte.
+Un renderer personnalisé doit maintenant être ajouté à chaque projet d’application pour ajouter la superposition polygonale à la carte.
 
-#### <a name="creating-the-custom-renderer-on-ios"></a>Création du convertisseur personnalisé sur iOS
+#### <a name="creating-the-custom-renderer-on-ios"></a>Création du renderer personnalisé sur iOS
 
-Créer une sous-classe de la `MapRenderer` classe et substituer sa `OnElementChanged` méthode pour ajouter la superposition de polygone :
+Créez une sous-classe de la classe `MapRenderer` et remplacez sa méthode `OnElementChanged` pour ajouter la superposition polygonale :
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -166,14 +166,14 @@ namespace MapOverlay.iOS
 
 ```
 
-Cette méthode effectue la configuration suivante, sous réserve que le convertisseur personnalisé est attaché à un nouvel élément Xamarin.Forms :
+Cette méthode procède à la configuration suivante, sous réserve que le renderer personnalisé soit attaché à un nouvel élément Xamarin.Forms :
 
-- Le `MKMapView.OverlayRenderer` propriété est définie sur un délégué correspondant.
-- La collection de coordonnées de latitude et longitude sont récupérés à partir de la `CustomMap.ShapeCoordinates` propriété et stockées en tant que tableau de `CLLocationCoordinate2D` instances.
-- Le polygone est créé en appelant la méthode statique `MKPolygon.FromCoordinates` (méthode), qui spécifie la latitude et la longitude de chaque point.
-- Le polygone est ajouté à la carte en appelant le `MKMapView.AddOverlay` (méthode). Cette méthode ferme automatiquement le polygone en dessinant une ligne qui relie le premier et dernier point.
+- La propriété `MKMapView.OverlayRenderer` est définie sur un délégué correspondant.
+- La collection de coordonnées de latitude et de longitude est récupérée dans la propriété `CustomMap.ShapeCoordinates` et stockée sous forme de tableau d’instances `CLLocationCoordinate2D`.
+- Le polygone est créé en appelant la méthode `MKPolygon.FromCoordinates` statique, qui spécifie la latitude et la longitude de chaque point.
+- Le polygone est ajouté à la carte en appelant la méthode `MKMapView.AddOverlay`. Cette méthode ferme automatiquement le polygone en traçant une ligne qui relie le premier point au dernier.
 
-Ensuite, implémentez la `GetOverlayRenderer` méthode pour personnaliser le rendu de la superposition :
+Ensuite, implémentez la méthode `GetOverlayRenderer` pour personnaliser le rendu de la superposition :
 
 ```csharp
 public class CustomMapRenderer : MapRenderer
@@ -197,9 +197,9 @@ public class CustomMapRenderer : MapRenderer
 }
 ```
 
-#### <a name="creating-the-custom-renderer-on-android"></a>Création du convertisseur personnalisé sur Android
+#### <a name="creating-the-custom-renderer-on-android"></a>Création du renderer personnalisé sur Android
 
-Créer une sous-classe de la `MapRenderer` classe et substituer sa `OnElementChanged` et `OnMapReady` méthodes pour ajouter la superposition de polygone :
+Créez une sous-classe de la classe `MapRenderer` et remplacez ses méthodes `OnElementChanged` et `OnMapReady` pour ajouter la superposition polygonale :
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -249,11 +249,11 @@ namespace MapOverlay.Droid
 }
 ```
 
-Le `OnElementChanged` méthode récupère la collection de coordonnées de latitude et longitude à partir de la `CustomMap.ShapeCoordinates` propriété et les stocke dans une variable membre. Il appelle ensuite la `MapView.GetMapAsync` (méthode), qui obtient sous-jacent `GoogleMap` qui est lié à la vue, sous réserve que le convertisseur personnalisé est attaché à un nouvel élément Xamarin.Forms. Une fois le `GoogleMap` instance n’est disponible, le `OnMapReady` méthode sera appelée, où le polygone est créé en instanciant un `PolygonOptions` objet qui spécifie la latitude et la longitude de chaque point. Le polygone est ensuite ajouté à la carte en appelant le `NativeMap.AddPolygon` (méthode). Cette méthode ferme automatiquement le polygone en dessinant une ligne qui relie le premier et dernier point.
+La méthode `OnElementChanged` récupère la collection de coordonnées de latitude et de longitude dans la propriété `CustomMap.ShapeCoordinates` et les stocke dans une variable membre. Elle appelle ensuite la méthode `MapView.GetMapAsync`, qui obtient la `GoogleMap` sous-jacente qui est liée à la vue, sous réserve que le renderer personnalisé soit attaché à un nouvel élément Xamarin.Forms. Une fois que l’instance `GoogleMap` est disponible, la méthode `OnMapReady` est appelée, où le polygone est créé en instanciant un objet `PolygonOptions` qui spécifie la latitude et la longitude de chaque point. Le polygone est ensuite ajouté à la carte en appelant la méthode `NativeMap.AddPolygon`. Cette méthode ferme automatiquement le polygone en traçant une ligne qui relie le premier point au dernier.
 
-#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Création du convertisseur personnalisé sur la plateforme Windows universelle
+#### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Création du renderer personnalisé sur la plateforme Windows universelle
 
-Créer une sous-classe de la `MapRenderer` classe et substituer sa `OnElementChanged` méthode pour ajouter la superposition de polygone :
+Créez une sous-classe de la classe `MapRenderer` et remplacez sa méthode `OnElementChanged` pour ajouter la superposition polygonale :
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -293,19 +293,19 @@ namespace MapOverlay.UWP
 }
 ```
 
-Cette méthode effectue les opérations suivantes, si le convertisseur personnalisé est attaché à un nouvel élément Xamarin.Forms :
+Cette méthode procède aux opérations suivantes, sous réserve que le renderer personnalisé soit attaché à un nouvel élément Xamarin.Forms :
 
-- La collection de coordonnées de latitude et longitude sont récupérés à partir de la `CustomMap.ShapeCoordinates` propriété et convertie en un `List` de `BasicGeoposition` coordonnées.
-- Le polygone est créé en instanciant un `MapPolygon` objet. Le `MapPolygon` classe est utilisée pour afficher une forme multipoint sur la carte en définissant son `Path` propriété un `Geopath` objet qui contient les coordonnées de la forme.
-- Le polygone est rendu sur la carte en l’ajoutant à la `MapControl.MapElements` collection. Notez que le polygone est fermé automatiquement en dessinant une ligne qui relie le premier et dernier point.
+- La collection de coordonnées de latitude et de longitude est récupérée dans la propriété `CustomMap.ShapeCoordinates` et convertie en `List` de coordonnées `BasicGeoposition`.
+- Le polygone est créé en instanciant un objet `MapPolygon`. La classe `MapPolygon` est utilisée pour afficher une forme multipoint sur la carte en définissant sa propriété `Path` sur un objet `Geopath` qui contient les coordonnées de la forme.
+- Le polygone est rendu sur la carte en l’ajoutant à la collection `MapControl.MapElements`. Notez que le polygone est automatiquement fermé en traçant une ligne qui relie le premier point au dernier.
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a expliqué comment ajouter un segment de recouvrement de polygone à une carte, pour mettre en surbrillance une région de la carte. Les polygones sont une forme fermée et que leurs intérieurs renseigné.
+Cet article a expliqué comment ajouter une superposition polygonale à une carte afin de mettre en surbrillance une région de la carte. Les polygones sont une forme fermée dont l’intérieur est plein.
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Polygone de carte de superposition (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
+- [Superposition polygonale sur une carte (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
 - [Personnalisation d’une épingle de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

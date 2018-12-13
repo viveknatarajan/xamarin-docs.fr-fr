@@ -1,6 +1,6 @@
 ---
-title: Comportements joints
-description: Comportements joints sont les classes static avec un ou plusieurs des propriétés jointes. Cet article montre comment créer et consommer des comportements joints.
+title: Comportements attachés
+description: Les comportements attachés sont des classes avec une ou plusieurs propriétés attachées. Cet article montre comment créer et utiliser des comportements attachés.
 ms.prod: xamarin
 ms.assetid: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E
 ms.technology: xamarin-forms
@@ -9,29 +9,29 @@ ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 2c9bd9ad4e7572b9eae6f0073da8a2c8f1e7c9fc
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38995344"
 ---
-# <a name="attached-behaviors"></a>Comportements joints
+# <a name="attached-behaviors"></a>Comportements attachés
 
-_Comportements joints sont les classes static avec un ou plusieurs des propriétés jointes. Cet article montre comment créer et consommer des comportements joints._
+_Les comportements attachés sont des classes avec une ou plusieurs propriétés attachées. Cet article montre comment créer et consommer des comportements attachés._
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
-Une propriété jointe est un type spécial de propriété pouvant être liée. Ils sont définis dans une classe mais jointe à d’autres objets, et ils sont reconnaissables dans XAML en tant qu’attributs qui contiennent une classe et un nom de propriété séparés par un point.
+Les propriétés attachées constituent un type particulier de propriété liable. Elles sont définies dans une seule classe, mais attachées à d’autres objets. En XAML, elles sont reconnaissables car elles sont représentées sous forme d’attributs contenant un nom de classe et un nom de propriété séparés par un point.
 
-Une propriété jointe peut définir un `propertyChanged` délégué qui sera exécutée lorsque la valeur de la propriété change, par exemple lorsque la propriété est définie sur un contrôle. Lorsque le `propertyChanged` délégué s’exécute, il a passé une référence au contrôle sur lequel elle est attachée et les paramètres qui contiennent les valeurs anciennes et nouvelles pour la propriété. Ce délégué peut être utilisé pour ajouter de nouvelles fonctionnalités au contrôle associé à la propriété en manipulant la référence est passée, comme suit :
+Une propriété attachée peut définir un délégué `propertyChanged` qui est exécuté quand la valeur de la propriété change, par exemple quand la propriété est définie sur un contrôle. Lorsque le délégué `propertyChanged` s’exécute, il est passé comme référence au contrôle sur lequel il est actuellement attaché, tout comme les paramètres qui contiennent les valeurs anciennes et nouvelles de la propriété. Vous pouvez utiliser ce délégué pour ajouter de nouvelles fonctionnalités au contrôle auquel la propriété est attachée en manipulant la référence qui y est passée, comme suit :
 
-1. Le `propertyChanged` délégué effectue un cast de la référence de contrôle, qui est reçue en tant qu’un [ `BindableObject` ](xref:Xamarin.Forms.BindableObject), vers le type de contrôle le comportement est conçu pour améliorer.
-1. Le `propertyChanged` délégué modifie les propriétés du contrôle, et appelle des méthodes du contrôle ou des gestionnaires d’événements inscrit pour les événements exposés par le contrôle, pour implémenter la fonctionnalité de comportement principale.
+1. Le délégué `propertyChanged` caste la référence du contrôle, qui est reçue comme [`BindableObject`](xref:Xamarin.Forms.BindableObject), en type de contrôle que le comportement est conçu pour améliorer.
+1. Le délégué `propertyChanged` modifie les propriétés du contrôle, appelle les méthodes du contrôle ou inscrit les gestionnaires d’événements aux événements exposés par le contrôle, pour implémenter la fonctionnalité clé du comportement.
 
-Un problème avec les comportements joints est qu’elles sont définies dans un `static` (classe), avec `static` propriétés et méthodes. Cela rend difficile de créer des comportements joints qui présentent l’état. En outre, les comportements de Xamarin.Forms ont remplacé comportements joints en tant que la meilleure approche pour la construction de comportement. Pour plus d’informations sur les comportements de Xamarin.Forms, consultez [les comportements de Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) et [réutilisable comportements](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+Le problème avec les comportements attachés est qu’ils sont définis dans une classe `static` avec des méthodes et des propriétés `static`. Il est donc difficile de créer des comportements attachés qui ont un état. De plus, les comportements Xamarin.Forms ont remplacé les comportements attachés comme approche préférée pour construire des comportements. Pour plus d’informations sur les comportements Xamarin.Forms, consultez [Comportements Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) et [Comportements réutilisables](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
 
 ## <a name="creating-an-attached-behavior"></a>Création d’un comportement attaché
 
-L’exemple d’application montre un `NumericValidationBehavior`, qui met en évidence la valeur entrée par l’utilisateur dans un [ `Entry` ](xref:Xamarin.Forms.Entry) contrôler en rouge, si elle n’est pas un `double`. Le comportement est indiqué dans l’exemple de code suivant :
+L’exemple d’application montre un `NumericValidationBehavior`, qui met en évidence la valeur entrée par l’utilisateur dans un contrôle [`Entry`](xref:Xamarin.Forms.Entry) en rouge, si elle n’est pas un `double`. Le comportement est illustré dans l’exemple de code suivant :
 
 ```csharp
 public static class NumericValidationBehavior
@@ -78,11 +78,11 @@ public static class NumericValidationBehavior
 }
 ```
 
-Le `NumericValidationBehavior` classe contient une propriété jointe nommée `AttachBehavior` avec un `static` méthodes getter et setter, qui contrôle l’ajout ou la suppression du comportement au contrôle auquel il est attaché. Registres de la propriété jointe la `OnAttachBehaviorChanged` méthode qui sera exécutée lorsque la valeur de la propriété change. Cette méthode inscrit ou annulation inscrit un gestionnaire d’événements pour le [ `TextChanged` ](xref:Xamarin.Forms.Entry.TextChanged) événement, selon la valeur de la `AttachBehavior` propriété jointe. La fonctionnalité principale du comportement est fournie par le `OnEntryTextChanged` (méthode), qui analyse la valeur entrée dans le [ `Entry` ](xref:Xamarin.Forms.Entry) par l’utilisateur et définit le `TextColor` propriété rouge si la valeur n’est pas un `double`.
+La classe `NumericValidationBehavior` contient une propriété attachée nommée `AttachBehavior` avec une méthode getter ou setter `static`, qui contrôle l’ajout ou la suppression du comportement dans le contrôle auquel il est attaché. Cette propriété attachée inscrit la méthode `OnAttachBehaviorChanged` qui est exécutée au changement de la valeur de la propriété. Cette méthode inscrit ou désinscrit un gestionnaire d’événements pour l’événement [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), selon la valeur de la propriété attachée `AttachBehavior`. La fonctionnalité clé du comportement est fournie par la méthode `OnEntryTextChanged`, qui analyse la valeur entrée dans l’[`Entry`](xref:Xamarin.Forms.Entry) par l’utilisateur et définit la propriété `TextColor` sur rouge si la valeur n’est pas un `double`.
 
-## <a name="consuming-an-attached-behavior"></a>Utilisation d’un comportement attaché
+## <a name="consuming-an-attached-behavior"></a>Consommation d’un comportement attaché
 
-Le `NumericValidationBehavior` classe peut être consommée en ajoutant le `AttachBehavior` propriété jointe un [ `Entry` ](xref:Xamarin.Forms.Entry) contrôler, comme illustré dans l’exemple de code XAML suivant :
+Vous pouvez consommer la classe `NumericValidationBehavior` en ajoutant la propriété attachée `AttachBehavior` à un contrôle [`Entry`](xref:Xamarin.Forms.Entry), comme illustré dans l’exemple de code XAML suivant :
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:WorkingWithBehaviors;assembly=WorkingWithBehaviors" ...>
@@ -92,42 +92,42 @@ Le `NumericValidationBehavior` classe peut être consommée en ajoutant le `Atta
 </ContentPage>
 ```
 
-L’équivalent [ `Entry` ](xref:Xamarin.Forms.Entry) en c# est illustré dans l’exemple de code suivant :
+Le contrôle [`Entry`](xref:Xamarin.Forms.Entry) équivalent en C# est présenté dans l’exemple de code suivant :
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, true);
 ```
 
-Lors de l’exécution, le comportement répondra à l’interaction avec le contrôle, en fonction de l’implémentation de comportement. Les captures d’écran suivantes illustrent le comportement d’attaché répondre à l’entrée non valide :
+Lors de l’exécution, le comportement répond à l’interaction avec le contrôle en fonction de l’implémentation de comportement. Les captures d’écran suivantes illustrent le comportement attaché répondant à une entrée non valide :
 
-[![](attached-images/screenshots-sml.png "Exemple d’Application avec un comportement attaché")](attached-images/screenshots.png#lightbox "exemple d’Application avec un comportement attaché")
+[![](attached-images/screenshots-sml.png "Exemple d’application avec un comportement attaché")](attached-images/screenshots.png#lightbox "Exemple d’application avec un comportement attaché")
 
 > [!NOTE]
-> Comportements joints sont écrites pour un type de contrôle spécifique (ou une superclasse qui permettre s’appliquent à de nombreux contrôles), et elles doivent uniquement être ajoutées à un contrôle compatible. Tentative d’attachement d’un comportement à un contrôle incompatible entraîne un comportement inconnu et dépend de l’implémentation de comportement.
+> Les comportements attachés sont écrits pour un type de contrôle spécifique (ou une superclasse qui peut s’appliquer à de nombreux contrôles) et doivent être ajoutés à un contrôle compatible uniquement. La tentative d’attachement d’un comportement à un contrôle incompatible entraîne un comportement inconnu et dépend de l’implémentation de comportement.
 
-### <a name="removing-an-attached-behavior-from-a-control"></a>Suppression d’un comportement attaché à partir d’un contrôle
+### <a name="removing-an-attached-behavior-from-a-control"></a>Suppression d’un comportement attaché d’un contrôle
 
-Le `NumericValidationBehavior` classe peut être supprimée à partir d’un contrôle en définissant le `AttachBehavior` propriété jointe `false`, comme illustré dans l’exemple de code XAML suivant :
+Vous pouvez supprimer la classe `NumericValidationBehavior` d’un contrôle en définissant la propriété attachée `AttachBehavior` sur `false`, comme illustré dans l’exemple de code XAML suivant :
 
 ```xaml
 <Entry Placeholder="Enter a System.Double" local:NumericValidationBehavior.AttachBehavior="false" />
 ```
 
-L’équivalent [ `Entry` ](xref:Xamarin.Forms.Entry) en c# est illustré dans l’exemple de code suivant :
+Le contrôle [`Entry`](xref:Xamarin.Forms.Entry) équivalent en C# est présenté dans l’exemple de code suivant :
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, false);
 ```
 
-Lors de l’exécution, le `OnAttachBehaviorChanged` méthode sera exécutée lorsque la valeur de la `AttachBehavior` propriété jointe est définie `false`. Le `OnAttachBehaviorChanged` méthode inscrira puis retirer le Gestionnaire d’événements pour le [ `TextChanged` ](xref:Xamarin.Forms.Entry.TextChanged) événement, en garantissant que le comportement n’est pas exécuté lorsque l’utilisateur interagit avec le contrôle.
+Lors de l’exécution, la méthode `OnAttachBehaviorChanged` est exécutée quand la valeur de la propriété attachée `AttachBehavior` est définie sur `false`. La méthode `OnAttachBehaviorChanged` désinscrit le gestionnaire d’événements pour l’événement [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) pour garantir que le comportement n’est pas exécuté quand l’utilisateur interagit avec le contrôle.
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a montré comment créer et consommer des comportements joints. Comportements joints sont `static` classes avec un ou plusieurs des propriétés jointes.
+Cet article a montré comment créer et consommer des comportements attachés. Les comportements attachés sont des classes `static` avec une ou plusieurs propriétés attachées.
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Comportements joints (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/attachednumericvalidationbehavior/)
+- [Comportements attachés (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/attachednumericvalidationbehavior/)

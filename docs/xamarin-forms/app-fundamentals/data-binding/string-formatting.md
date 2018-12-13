@@ -1,6 +1,6 @@
 ---
-title: Mise en forme de chaîne de Xamarin.Forms
-description: Cet article explique comment utiliser des liaisons de données de Xamarin.FOrms pour formater et afficher les objets sous forme de chaînes. Pour cela, en définissant le StringFormat de la liaison vers une chaîne de mise en forme de .NET standard avec un espace réservé.
+title: Formatage de chaîne dans Xamarin.Forms
+description: Cet article explique comment utiliser les liaisons de données Xamarin.Forms pour formater et afficher des objets sous forme de chaînes. Pour cela, vous devez définir le StringFormat de la liaison sur une chaîne de formatage .NET standard avec un espace réservé.
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52170947"
 ---
-# <a name="xamarinforms-string-formatting"></a>Mise en forme de chaîne de Xamarin.Forms
+# <a name="xamarinforms-string-formatting"></a>Formatage de chaîne dans Xamarin.Forms
 
-Il est parfois pratique d’utiliser des liaisons de données pour la représentation sous forme de chaîne d’un objet ou une valeur. Par exemple, vous souhaiterez peut-être utiliser un `Label` pour afficher la valeur actuelle d’un `Slider`. Dans cette liaison de données, le `Slider` est la source et la cible est le `Text` propriété de la `Label`.
+Il est parfois pratique d’utiliser des liaisons de données pour afficher la représentation de chaîne d’un objet ou d’une valeur. Par exemple, vous souhaiterez peut-être utiliser un objet `Label` pour afficher la valeur actuelle d’un élément `Slider`. Dans cette liaison de données, l’élément `Slider` est la source, et la cible est la propriété `Text` de l’objet `Label`.
 
-Lors de l’affichage de chaînes dans le code, l’outil le plus puissant est statique [ `String.Format` ](xref:System.String.Format(System.String,System.Object)) (méthode). La chaîne de mise en forme inclut la mise en forme de codes spécifiques à différents types d’objets, et vous pouvez inclure d’autres types de texte, ainsi que les valeurs de mise en forme. Consultez le [mise en forme des Types dans .NET](/dotnet/standard/base-types/formatting-types/) article pour plus d’informations sur la mise en forme de chaîne.
+Lors de l’affichage de chaînes dans le code, l’outil le plus puissant est la méthode statique [`String.Format`](xref:System.String.Format(System.String,System.Object)). La chaîne de formatage inclut des codes de formatage spécifiques à différents types d’objets, et vous pouvez inclure un autre texte avec les valeurs en cours de formatage. Pour plus d’informations sur le formatage de chaîne, consultez [Mettre en forme des types dans .NET](/dotnet/standard/base-types/formatting-types/).
 
-## <a name="the-stringformat-property"></a>La propriété StringFormat
+## <a name="the-stringformat-property"></a>Propriété StringFormat
 
-Cette fonctionnalité est reportée dans des liaisons de données : vous définissez le [ `StringFormat` ](xref:Xamarin.Forms.BindingBase.StringFormat) propriété du `Binding` (ou le [ `StringFormat` ](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) propriété de la `Binding` extension de balisage) à un mise en forme de chaîne avec un espace réservé de .NET standard :
+Cette fonctionnalité est reportée dans les liaisons de données : vous définissez la propriété [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) de `Binding` (ou la propriété [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) de l’extension de balisage `Binding`) sur une chaîne de formatage standard avec un espace réservé :
 
 ```xaml
 <Slider x:Name="slider" />
@@ -31,13 +31,13 @@ Cette fonctionnalité est reportée dans des liaisons de données : vous défin
                       StringFormat='The slider value is {0:F2}'}" />
 ```
 
-Notez que la chaîne mise en forme est délimitée par des caractères de guillemets simples (apostrophe) afin d’éviter l’analyseur XAML en traitant les accolades en tant qu’une autre extension de balisage XAML. Sinon, cette chaîne sans le caractère guillemet simple est la même chaîne que vous utiliseriez pour afficher une valeur à virgule flottante dans un appel à `String.Format`. Une spécification de mise en forme de `F2` provoque la valeur à afficher avec deux décimales.
+Notez que la chaîne de formatage est délimitée par des guillemets simples (apostrophes) afin d’aider l’analyseur XAML à éviter de traiter les accolades comme une autre extension de balisage XAML. Sinon, cette chaîne sans le guillemet simple est la même chaîne que vous utiliseriez pour afficher une valeur à virgule flottante dans un appel à `String.Format`. Une spécification de formatage `F2` entraîne l’affichage de la valeur avec deux décimales.
 
-Le `StringFormat` propriété est pertinente uniquement lorsque la propriété cible est de type `string`, et le mode de liaison est `OneWay` ou `TwoWay`. Pour des liaisons bidirectionnelles, le `StringFormat` est uniquement applicable aux valeurs en passant de la source à la cible.
+La propriété `StringFormat` est pertinente uniquement lorsque la propriété cible est de type `string` et que le mode de liaison est `OneWay` ou `TwoWay`. Pour des liaisons bidirectionnelles, la propriété `StringFormat` est applicable uniquement à des valeurs transmises de la source vers la cible.
 
-Comme vous le verrez dans l’article suivant sur le [chemin de liaison](binding-path.md), liaisons de données peuvent devenir assez complexe et plus complexes. Lors du débogage de ces liaisons de données, vous pouvez ajouter un `Label` dans le fichier XAML avec un `StringFormat` pour afficher des résultats intermédiaires. Même si vous l’utilisez pour afficher un type d’objet, qui peut être utile uniquement.
+Comme vous le verrez dans l’article suivant sur le [chemin de liaison](binding-path.md), les liaisons de données peuvent devenir relativement complexes. Lors du débogage des liaisons de données, vous pouvez ajouter un `Label` dans le fichier XAML avec un `StringFormat` pour afficher des résultats intermédiaires. Même si vous l’utilisez uniquement pour afficher le type d’un objet, il peut être utile.
 
-Le **mise en forme de chaîne** page illustre plusieurs utilisations de la `StringFormat` propriété :
+La page **String Formatting** (Formatage de chaîne) illustre plusieurs utilisations de la propriété `StringFormat` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -101,33 +101,33 @@ Le **mise en forme de chaîne** page illustre plusieurs utilisations de la `Stri
 </ContentPage>
 ```
 
-Les liaisons sur le `Slider` et `TimePicker` illustrent l’utilisation de spécifications de format particulier à `double` et `TimeSpan` des types de données. Le `StringFormat` qui affiche le texte à partir de la `Entry` affichage montre comment spécifier des guillemets doubles dans la chaîne mise en forme à l’aide de la `&quot;` entité HTML.
+Les liaisons sur les éléments `Slider` et `TimePicker` illustrent l’utilisation de spécifications de format propres aux types de données `double` et `TimeSpan`. Le `StringFormat` qui affiche le texte à partir de la vue `Entry` montre comment spécifier des guillemets doubles dans la chaîne de formatage à l’aide de l’entité HTML `&quot;`.
 
-La section suivante dans le fichier XAML est un `StackLayout` avec un `BindingContext` définie sur une `x:Static` extension de balisage qui fait référence à la méthode statique `DateTime.Now` propriété. La première liaison a pas de propriétés :
+La section suivante du fichier XAML est un `StackLayout` avec un `BindingContext` défini sur une extension de balisage `x:Static` qui référence la propriété statique `DateTime.Now`. La première liaison n’a pas de propriétés :
 
 ```xaml
 <Label Text="{Binding}" />
 ```
 
-Ceci affiche simplement le `DateTime` valeur de la `BindingContext` avec la mise en forme par défaut. La deuxième liaison affiche le `Ticks` propriété du `DateTime`, tandis que les deux autres liaisons affichent le `DateTime` lui-même avec mise en forme spécifique. Notez que cela `StringFormat`:
+Elle affiche simplement la valeur `DateTime` du `BindingContext` avec le formatage par défaut. La deuxième liaison affiche la propriété `Ticks` du `DateTime`, tandis que les deux autres liaisons affichent le `DateTime` lui-même avec un formatage spécifique. Notez ce `StringFormat` :
 
 ```xaml
 <Label Text="{Binding StringFormat='The {{0:MMMM}} specifier produces {0:MMMM}'}" />
 ```
 
-Si vous avez besoin afficher la gauche ou droite des accolades dans votre chaîne de mise en forme, utilisez simplement une paire d’eux.
+Si vous avez besoin d’afficher des accolades gauches ou droites dans votre chaîne de formatage, utilisez-en simplement une paire.
 
-Les jeux de section dernière le `BindingContext` à la valeur de `Math.PI` et l’affiche avec la mise en forme par défaut et deux types de mise en forme numérique.
+La dernière section définit le `BindingContext` sur la valeur de `Math.PI` et l’affiche avec le formatage par défaut et deux types différents de formatage numérique.
 
 Voici le programme en cours d’exécution :
 
-[![Mise en forme de chaîne](string-formatting-images/stringformatting-small.png "mise en forme de chaîne")](string-formatting-images/stringformatting-large.png#lightbox "mise en forme de chaîne")
+[![String Formatting](string-formatting-images/stringformatting-small.png "String Formatting")](string-formatting-images/stringformatting-large.png#lightbox "String Formatting")
 
-## <a name="viewmodels-and-string-formatting"></a>ViewModels et mise en forme de chaîne
+## <a name="viewmodels-and-string-formatting"></a>Objets ViewModel et formatage de chaîne
 
-Lorsque vous utilisez `Label` et `StringFormat` pour afficher la valeur d’une vue qui est également la cible d’un ViewModel, vous pouvez soit définir la liaison de la vue à la `Label` ou depuis le ViewModel à la `Label`. En général, la deuxième approche est préférable car elle vérifie que les liaisons entre la vue et le ViewModel fonctionnent.
+Lorsque vous utilisez `Label` et `StringFormat` pour afficher la valeur d’une vue qui est également la cible d’un ViewModel, vous pouvez définir la liaison de la vue à l’objet `Label` ou du ViewModel à l’objet `Label`. En général, la deuxième approche est préférable car elle vérifie que les liaisons fonctionnent entre la vue et le ViewModel.
 
-Cette approche est illustrée dans le **mieux sélecteur de couleurs** exemple qui utilise le même ViewModel comme le **Simple sélecteur de couleurs** programme indiqué dans le [ **Mode de liaison** ](binding-mode.md) article :
+Cette approche est illustrée dans l’exemple **Better Color Selector** (Meilleur sélecteur de couleur) qui utilise le même ViewModel que le programme **Simple Color Selector** (Sélecteur de couleur simple) illustré dans l’article [**Mode de liaison**](binding-mode.md) :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -172,18 +172,18 @@ Cette approche est illustrée dans le **mieux sélecteur de couleurs** exemple q
 </ContentPage>    
 ```
 
-Il existe désormais trois paires de `Slider` et `Label` éléments qui sont liés à la même propriété dans la source du `HslColorViewModel` objet. La seule différence est que `Label` a un `StringFormat` propriété à afficher chaque `Slider` valeur.
+Il existe désormais trois paires d’éléments `Slider` et `Label` qui sont liés à la même propriété source de l’objet `HslColorViewModel`. La seule différence est que l’objet `Label` a une propriété `StringFormat` pour afficher chaque valeur `Slider`.
 
-[![Sélecteur de couleurs mieux](string-formatting-images/bettercolorselector-small.png "mieux sélecteur de couleurs")](string-formatting-images/bettercolorselector-large.png#lightbox "mieux sélecteur de couleurs")
+[![Better Color Selector](string-formatting-images/bettercolorselector-small.png "Better Color Selector")](string-formatting-images/bettercolorselector-large.png#lightbox "Better Color Selector")
 
-Vous vous demandez peut-être comment vous pouvez afficher les valeurs RVB (rouge, verts et bleus) au format traditionnel à deux chiffres hexadécimaux. Ces valeurs entières ne sont pas directement disponibles à partir de la `Color` structure. Une solution consisterait à calculer les valeurs entières des composantes de couleur dans le ViewModel et les exposer en tant que propriétés. Vous pouvez puis mettez-les en forme à l’aide de la `X2` spécification de mise en forme.
+Vous vous demandez peut-être comment afficher les valeurs RVB (rouge, vert, bleu) au format hexadécimal à deux chiffres traditionnel. Ces valeurs entières ne sont pas directement disponibles à partir de la structure `Color`. Une solution consisterait à calculer les valeurs entières des composantes de couleur dans le ViewModel et à les exposer en tant que propriétés. Vous pourriez alors les formater à l’aide de la spécification de formatage `X2`.
 
-Une autre approche est plus générale : vous pouvez écrire un *convertisseur de valeurs de liaison* comme indiqué dans le prochain article, [ **convertisseurs de valeur de liaison**](converters.md).
+Une autre approche est plus générale : vous pouvez écrire un *convertisseur de valeurs de liaison* comme indiqué dans le prochain article, [**Convertisseurs de valeurs de liaison**](converters.md).
 
-Le prochain article, toutefois, explore le [ **chemin de liaison** ](binding-path.md) plus décrit en détail et montrent comment vous pouvez l’utiliser pour référencer des sous-propriétés et éléments des collections.
+Le prochain article, toutefois, explore le [**chemin de liaison**](binding-path.md) plus en détail et montre comment vous pouvez l’utiliser pour référencer des sous-propriétés et des éléments dans des collections.
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Démonstrations de liaison de données (exemple)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Chapitre de liaison de données à partir du livre de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Démos des liaisons de données (exemple)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Chapitre sur les liaisons de données dans la documentation de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

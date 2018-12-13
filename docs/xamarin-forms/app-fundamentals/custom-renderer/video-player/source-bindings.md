@@ -1,6 +1,6 @@
 ---
-title: Liaison de sources vidéo du lecteur
-description: Cet article explique comment lier des sources vidéo pour le lecteur vidéo, à l’aide de Xamarin.Forms.
+title: Liaison de sources vidéo au lecteur
+description: Cet article explique comment lier des sources vidéo au lecteur vidéo à l’aide de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
 ms.technology: xamarin-forms
@@ -9,14 +9,14 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: b0efdc1a20f52231f15b7a08eb86962e2079c678
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35240028"
 ---
-# <a name="binding-video-sources-to-the-player"></a>Liaison de sources vidéo du lecteur
+# <a name="binding-video-sources-to-the-player"></a>Liaison de sources vidéo au lecteur
 
-Lorsque le `Source` propriété de la `VideoPlayer` affichage est défini sur un nouveau fichier vidéo, la vidéo existante s’arrête et la nouvelle vidéo commence. Cela est illustré par le **sélectionner la vidéo Web** page de la [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) exemple. Cette page inclut un `ListView` avec les titres des trois vidéos référencés à partir de la **App.xaml** fichier :
+Quand la propriété `Source` de l’affichage `VideoPlayer` est définie sur un nouveau fichier vidéo, la lecture de la vidéo existante s’arrête et celle de la nouvelle vidéo commence. Cela est illustré par la page **Sélectionner une vidéo web** de l’exemple [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/). La page inclut un `ListView` avec les titres des trois vidéos référencées à partir du fichier **App.xaml** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -47,7 +47,7 @@ Lorsque le `Source` propriété de la `VideoPlayer` affichage est défini sur un
 </ContentPage>
 ```
 
-Lorsqu’une vidéo est sélectionnée, le `ItemSelected` Gestionnaire d’événements dans le fichier code-behind est exécutée. Le gestionnaire supprime toutes les valeurs vides et des apostrophes le titre et l’utilise en tant que clé pour obtenir d’une des ressources définies dans le **App.xaml** fichier. Que `UriVideoSource` objet est ensuite affecté à la `Source` propriété de la `VideoPlayer`.
+Quand une vidéo est sélectionnée, le gestionnaire d’événements `ItemSelected` dans le fichier code-behind est exécuté. Le gestionnaire supprime les espaces et les apostrophes du titre et l’utilise en tant que clé pour obtenir l’une des ressources définies dans le fichier **App.xaml**. Cet objet `UriVideoSource` est ensuite défini sur la propriété `Source` du `VideoPlayer`.
 
 ```csharp
 namespace VideoPlayerDemos
@@ -71,11 +71,11 @@ namespace VideoPlayerDemos
 }
 ```
 
-Lorsque le chargement de la page, aucun élément n’est sélectionné dans le `ListView`, donc vous devez sélectionner l’une pour la vidéo commencer la lecture :
+Lors du premier chargement de la page, aucun élément n’est sélectionné dans le `ListView` de sorte que vous devez en sélectionner un pour commencer la lecture de la vidéo :
 
-[![Sélectionnez la vidéo Web](source-bindings-images/selectwebvideo-small.png "sélectionnez vidéo Web")](source-bindings-images/selectwebvideo-large.png#lightbox "sélectionnez vidéo sur le Web")
+[![Sélectionner une vidéo web](source-bindings-images/selectwebvideo-small.png "Sélectionner une vidéo web")](source-bindings-images/selectwebvideo-large.png#lightbox "Sélectionner une vidéo web")
 
-Le `Source` propriété du `VideoPlayer` est soutenu par une propriété pouvant être liée, ce qui signifie qu’il peut être la cible d’une liaison de données. Cela est illustré par le **lier à VideoPlayer** page. Le balisage dans le **BindToVideoPlayer.xaml** fichier est pris en charge par la classe suivante qui encapsule un titre d’une vidéo et correspondante `VideoSource` objet :
+La propriété `Source` de `VideoPlayer` repose sur une propriété pouvant être liée, ce qui signifie qu’elle peut être la cible d’une liaison de données. Cela est illustré par la page **Lier à VideoPlayer**. La balise dans le fichier **BindToVideoPlayer.xaml** est prise en charge par la classe suivante qui encapsule un titre d’une vidéo et un objet `VideoSource` correspondant :
 
 ```csharp
 namespace VideoPlayerDemos
@@ -94,7 +94,7 @@ namespace VideoPlayerDemos
 }
 ```
 
-Le `ListView` dans les **BindToVideoPlayer.xaml** fichier contient un tableau de ces `VideoInfo` objets, chacun d’eux initialisée avec un titre de la vidéo et la `UriVideoSource` objet du dictionnaire de ressources dans  **App.XAML**:
+Le `ListView` dans le fichier **BindToVideoPlayer.xaml** contient un tableau de ces objets `VideoInfo`, chacun d’eux initialisé avec un titre de vidéo et l’objet `UriVideoSource` du dictionnaire de ressources dans  **App.XAML** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,9 +133,9 @@ Le `ListView` dans les **BindToVideoPlayer.xaml** fichier contient un tableau de
 </ContentPage>
 ```
 
-Le `Source` propriété de la `VideoPlayer` est lié à la `ListView`. Le `Path` de la liaison est spécifiée en tant que `SelectedItem.VideoSource`, qui est un tracé composite constituée de deux propriétés : `SelectedItem` est une propriété de `ListView`. L’élément sélectionné est de type `VideoInfo`, qui a un `VideoSource` propriété.
+La propriété `Source` de `VideoPlayer` est liée au `ListView`. Le `Path` de la liaison est spécifié en tant que `SelectedItem.VideoSource`, qui est un tracé composite constitué de deux propriétés : `SelectedItem` est une propriété de `ListView`. L’élément sélectionné est de type `VideoInfo`, qui a une propriété `VideoSource`.
 
-Comme avec la première **sélectionner la vidéo Web** page, aucun élément n’est sélectionné initialement à partir de la `ListView`, de sorte que vous devez sélectionner une des vidéos avant le début de la lecture.
+Comme avec la première page **Sélectionner une vidéo web**, aucun élément n’est sélectionné initialement à partir du `ListView` de sorte que vous devez sélectionner l’une des vidéos avant le début de la lecture.
 
 
 ## <a name="related-links"></a>Liens associés
