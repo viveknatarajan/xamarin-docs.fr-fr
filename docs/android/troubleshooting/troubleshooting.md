@@ -95,7 +95,7 @@ Xamarin.Android prend en charge les propriétés système suivantes :
 
 -   *Debug.mono.env*: Séparées par une barre verticale (\« *|*') liste des variables d’environnement à exporter pendant le démarrage de l’application, *avant* mono a été initialisé. Cela permet de définir des variables d’environnement que la journalisation mono contrôle.
 
-    - *Remarque*: Dans la mesure où la valeur est «*|*'-séparés, la valeur doit avoir un niveau supplémentaire de guillemets, comme le \`*interpréteur de commandes adb*\` commande supprime un jeu de guillemets.
+    - *Remarque*: Dans la mesure où la valeur est *|*'-séparés, la valeur doit avoir un niveau supplémentaire de guillemets, comme le \`*interpréteur de commandes adb*\` commande supprime un jeu de guillemets.
 
     - *Remarque*: Les valeurs de propriété système Android peuvent excéder 92 caractères.
 
@@ -103,7 +103,7 @@ Xamarin.Android prend en charge les propriétés système suivantes :
 
             adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
--   *Debug.mono.log*: Une virgule («*,*') liste des composants qui doit afficher des messages supplémentaires dans le journal de débogage Android. Par défaut, rien n’est défini. Composants :
+-   *Debug.mono.log*: Une virgule (*,*') liste des composants qui doit afficher des messages supplémentaires dans le journal de débogage Android. Par défaut, rien n’est défini. Composants :
 
     -   *tous les*: Tous les messages d’impression
     -   *GC*: Imprimer les messages associés au GC.
@@ -201,7 +201,7 @@ Il existe quatre messages des conséquences :
 -  Destruction de référence faible global : il s’agit des lignes qui commencent par *-w-* .
 
 
-Dans tous les messages, le *grefc* valeur est le nombre de références globales qui Xamarin.Android a créé, tandis que le *grefwc* valeur est le nombre de références faibles globales qui Xamarin.Android a créé. Le *gérer* ou *obj-handle* valeur est la valeur du handle JNI et le caractère situé après le « */*» est le type de valeur du handle :   */l* pour référence locale, */G* pour les références globales, et */W* pour les références faibles globales.
+Dans tous les messages, le *grefc* valeur est le nombre de références globales qui Xamarin.Android a créé, tandis que le *grefwc* valeur est le nombre de références faibles globales qui Xamarin.Android a créé. Le *gérer* ou *obj-handle* valeur est la valeur du handle JNI et le caractère situé après le */* est le type de valeur du handle :   */l* pour référence locale, */G* pour les références globales, et */W* pour les références faibles globales.
 
 Dans le cadre du processus de GC, globales références (+ g +) sont converties en références globaux faibles (à l’origine a + w + et - g-), un GC côté Java est lancé, la référence faible globale est vérifiée pour voir si elles ont été collectées. Si elle est toujours actif, un nouveau gref est créé autour de la référence faible (+ g +, -w-), sinon la référence faible est détruite (-w).
 
@@ -325,7 +325,7 @@ Vérifiez que vous utilisez le nom correct de simulateur, c'est-à-dire [le nom 
 
 ## <a name="installfailedinvalidapk-when-installing-a-package"></a>INSTALLER\_échec\_non valide\_APK lors de l’installation d’un package
 
-Les noms de package Android *doit* contiennent un point («*.*'). Modifier le nom de votre package afin qu’il contienne une période.
+Les noms de package Android *doit* contiennent un point (*.*'). Modifier le nom de votre package afin qu’il contienne une période.
 
 -   Dans Visual Studio :
     -   Cliquez avec le bouton droit sur votre projet > Propriétés
