@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: c2c0e516c864ec4073d5bb54b77754f58064d6b0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f498aab5bfaffc08a22f62a318f8f9f73ab0afca
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116743"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609907"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Conseils de dépannage de Xamarin.Mac
 
@@ -77,7 +77,7 @@ Le **autoriser les connexions réseau sortantes (Client)** autorisation est néc
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException : aucune donnée n’est disponible pour l’encodage 437
  
-Lorsque vous incluez des bibliothèques tierces 3e dans votre application Xamarin.Mac, vous pouvez obtenir une erreur sous la forme « System.NotSupportedException : aucune donnée n’est disponible pour l’encodage 437 » lorsque vous tentez de compiler et exécuter l’application. Par exemple, les bibliothèques, telles que `Ionic.Zip.ZipFile`, peut lever cette exception au cours de l’opération.
+Lorsque vous incluez des bibliothèques tierces 3e dans votre application Xamarin.Mac, vous pouvez obtenir une erreur sous la forme « System.NotSupportedException : Aucune donnée n’est disponible pour l’encodage 437" lorsque vous tentez de compiler et exécuter l’application. Par exemple, les bibliothèques, telles que `Ionic.Zip.ZipFile`, peut lever cette exception au cours de l’opération.
 
 Cela peut être résolu en ouvrant les options pour le projet Xamarin.Mac, en accédant à **Build Mac** > **internationalisation** et en vérifiant la **ouest** internationalisation :
 
@@ -110,10 +110,6 @@ Pour les projets Xamarin.Mac existants, vous devez créer manuellement le **Enti
 Entrez `Entitlements` pour le nom et cliquez sur le **New** bouton. Si votre projet inclut déjà un fichier de droits, vous devrez l’ajouter au projet au lieu de créer un nouveau fichier :
 
 [![Vérification de l’écrasement d’un fichier](troubleshooting-images/entitlements04.png "vérifier le remplacement d’un fichier")](troubleshooting-images/entitlements04-large.png#lightbox)
-
-## <a name="contacting-support-business-or-enterprise-licenses"></a>Contacter le support (licences business ou entreprise)
-
-Si vous disposez d’une entreprise ou une licence d’entreprise, vous pouvez demander de l’aide directement à partir d’ingénieurs de Xamarin via des tickets de support. Consultez [xamarin.com/support](http://xamarin.com/support) pour plus d’informations.
 
 ## <a name="community-support-on-the-forums"></a>Prise en charge de la Communauté sur les forums
 

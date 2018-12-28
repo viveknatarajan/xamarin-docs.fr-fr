@@ -1,18 +1,18 @@
 ---
 title: Résumé du chapitre 1. Comment Xamarin.Forms est-il intégré ?
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 1. Comment Xamarin.Forms est-il intégré ?'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 1. Comment Xamarin.Forms est-il intégré ?'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 552cff71911b0f5ee118e15cb543e16bbfa19bd3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 40f319a67ecc2ca81243c8ac7c415266c1ea0b5c
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050963"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746854"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Résumé du chapitre 1. Comment Xamarin.Forms est-il intégré ?
 
@@ -25,9 +25,9 @@ Une des tâches plus désagréables de programmation consiste à porter un code 
 
 ## <a name="cross-platform-mobile-development"></a>Développement mobile multiplateforme
 
-Ce problème est courant lors du ciblage de plateformes mobiles. Actuellement, il existe deux principales plateformes mobiles, de la famille de Apple de l’iPhone et iPad exécutant le système d’exploitation iOS et le système d’exploitation Android qui s’exécute sur un large éventail de téléphones et tablettes. Une autre plate-forme significative est Universal Windows Platform (UWP de Microsoft), ce qui permet à un programme unique cibler Windows 10 et Windows 10 Mobile.
+Ce problème est courant lors du ciblage de plateformes mobiles. Actuellement, il existe deux principales plateformes mobiles, de la famille de Apple de l’iPhone et iPad exécutant le système d’exploitation iOS et le système d’exploitation Android qui s’exécute sur un large éventail de téléphones et tablettes. Une autre plate-forme significative est Universal Windows Platform (UWP de Microsoft), ce qui permet à un programme unique cibler à la fois Windows 10.
 
-Un fournisseur de logiciels qui souhaite cibler ces plateformes doit faire face à des paradigmes de l’interface utilisateur différents, les trois différents environnements de développement, les trois différentes interfaces de programmation, et&mdash;peut-être plus maladroitement&mdash;trois différents langages de programmation : Objective-C pour l’iPhone et iPad, Java pour Android, et C# pour Windows.
+Un fournisseur de logiciels qui souhaite cibler ces plateformes doit faire face à des paradigmes de l’interface utilisateur différents, les trois différents environnements de développement, les trois différentes interfaces de programmation, et&mdash;peut-être plus maladroitement&mdash;trois langages de programmation différents : Objective-C pour l’iPhone et iPad, Java pour Android, et C# pour Windows.
 
 ## <a name="the-c-and-net-solution"></a>La solution c# et .NET
 
@@ -42,16 +42,14 @@ Les développeurs peuvent utiliser la plateforme Xamarin pour écrire des applic
 
 ## <a name="introducing-xamarinforms"></a>Présentation de Xamarin.Forms
 
-Lorsque vous ciblez plusieurs plateformes mobiles, Xamarin.Forms permet le partage de code encore plus. Un seul programme écrit pour Xamarin.Forms peut cibler cinq plateformes distinctes :
+Lorsque vous ciblez plusieurs plateformes mobiles, Xamarin.Forms permet le partage de code encore plus. Un seul programme écrit pour Xamarin.Forms peut cibler ces plateformes :
 
 - iOS pour les programmes qui s’exécutent sur l’iPhone, iPad et iPod touch
 - Android pour les programmes qui s’exécutent sur les téléphones et tablettes Android
-- la plateforme Windows universelle pour cibler Windows 10 et Windows 10 Mobile
-- l’API de Runtime Windows de Windows 8.1
-- l’API de Runtime Windows de Windows Phone 8.1
+- la plateforme Windows universelle pour cible Windows 10
 
 > [!NOTE]
-> Xamarin.Forms ne gère plus de Windows 8.1, Windows Phone 8.1 ou Windows 10 Mobile, mais les applications Xamarin.Forms s’exécutent sur le bureau Windows 10. Il est également prise en charge de la version préliminaire de la [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), et [Tizen](/xamarin-forms/platform/tizen.md) plateformes.
+> Xamarin.Forms ne gère plus de Windows 8.1, Windows Phone 8.1 ou Windows 10 Mobile, mais les applications Xamarin.Forms s’exécutent sur le bureau Windows 10. Il est également prise en charge de la version préliminaire de la [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), et [Tizen](~/xamarin-forms/platform/tizen.md) plateformes.
 
 La majeure partie d’un programme de Xamarin.Forms existe dans une bibliothèque ou un SAP. Chacune des plateformes se compose d’un stub de petite application qui appelle ce code partagé.
 
@@ -59,10 +57,7 @@ Les APIs Xamarin.Forms mapper à des contrôles natifs sur chaque plateforme, af
 
 [![Capture d’écran de triple des visuels de plateforme partage](images/ch01fg03-small.png "contrôles Xamarin.Forms sur chaque plateforme")](images/ch01fg03-large.png#lightbox "contrôles Xamarin.Forms sur chaque plateforme")
 
-Les captures d’écran de gauche à droite affichent un iPhone, un téléphone Android et un téléphone Windows 10 Mobile.
-
-> [!NOTE]
-> Xamarin.Forms ne gère plus de Windows 10 Mobile.
+Les captures d’écran de gauche à droite affichent un iPhone et un téléphone Android :
 
 Sur chaque écran, la page contient un Xamarin.Forms [ `Label` ](xref:Xamarin.Forms.Label) pour afficher du texte, un [ `Button` ](xref:Xamarin.Forms.Button) pour l’initiation d’actions, un [ `Switch` ](xref:Xamarin.Forms.Switch) pour Si vous choisissez une valeur activé/désactivé et un [ `Slider` ](xref:Xamarin.Forms.Slider) pour spécifier une valeur dans une plage continue. Les quatre de ces vues sont des enfants d’un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) sur un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).
 

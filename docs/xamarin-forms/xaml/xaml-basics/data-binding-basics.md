@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 65316bde1d1c709028eae39c19e5dc318821ff70
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055726"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746880"
 ---
 # <a name="part-4-data-binding-basics"></a>Partie 4. Principes fondamentaux de liaison de données
 
@@ -22,7 +22,7 @@ _Liaisons de données permettent les propriétés de deux objets à lier afin qu
 
 ## <a name="data-bindings"></a>Liaisons de données
 
-Liaisons de données connectent des propriétés de deux objets, appelés le *source* et *cible*. Dans le code, les deux étapes sont requises : le `BindingContext` propriété de l’objet cible doit être définie à l’objet source et le `SetBinding` (méthode) (souvent utilisée conjointement avec la `Binding` classe) doit être appelée sur l’objet cible pour lier une propriété de ce objet à une propriété de l’objet source.
+Liaisons de données connectent des propriétés de deux objets, appelés le *source* et *cible*. Dans le code, les deux étapes sont requises : Le `BindingContext` propriété de l’objet cible doit être définie à l’objet source et le `SetBinding` (méthode) (souvent utilisée conjointement avec la `Binding` classe) doit être appelée sur l’objet cible à lier une propriété de cet objet à une propriété de la source objet.
 
 La propriété cible doit être une propriété pouvant être liée, ce qui signifie que l’objet cible doit dériver de `BindableObject`. La documentation en ligne de Xamarin.Forms indique quelles propriétés sont des propriétés pouvant être liées. Une propriété de `Label` comme `Text` est associé à la propriété peut être liée `TextProperty`.
 
@@ -71,7 +71,7 @@ Le `Slider` contient un `x:Name` attribut qui est référencé par les deux `Lab
 
 Le `x:Reference` extension de liaison définit une propriété nommée `Name` pour définir le nom de l’élément référencé, dans ce cas `slider`. Toutefois, le `ReferenceExtension` classe qui définit le `x:Reference` extension de balisage définit également un `ContentProperty` attribut `Name`, ce qui signifie qu’il n’est pas explicitement requis. Juste pour diverses, la première `x:Reference` inclut « nom = « mais pas la seconde :
 
-```csharp
+```xaml
 BindingContext="{x:Reference Name=slider}"
 …
 BindingContext="{x:Reference slider}"
@@ -79,7 +79,7 @@ BindingContext="{x:Reference slider}"
 
 Le `Binding` extension de balisage elle-même peut avoir plusieurs propriétés, comme le `BindingBase` et `Binding` classe. Le `ContentProperty` pour `Binding` est `Path`, mais le « chemin d’accès = « partie de l’extension de balisage peut être omis si le chemin d’accès est le premier élément dans le `Binding` extension de balisage. Le premier exemple a « chemin d’accès = « mais le deuxième exemple omet :
 
-```csharp
+```xaml
 Rotation="{Binding Path=Value}"
 …
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -87,7 +87,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 Les propriétés peuvent tous être sur une seule ligne ou divisée en plusieurs lignes :
 
-```csharp
+```xaml
 Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
@@ -96,7 +96,7 @@ Faire tout ce qui est pratique.
 
 Notez que le `StringFormat` propriété dans la seconde `Binding` extension de balisage. Dans Xamarin.Forms, les liaisons n’effectuent pas de conversion de type implicite, et si vous avez besoin afficher un objet autre qu’une chaîne sous forme de chaîne vous devez fournir un convertisseur de type ou utiliser `StringFormat`. Dans les coulisses, la méthode statique `String.Format` méthode est utilisée pour implémenter `StringFormat`. Qui est potentiellement un problème, car les spécifications de mise en forme .NET impliquent des accolades, qui sont également utilisés pour délimiter des extensions de balisage. Cette opération crée un risque de confusion de l’analyseur XAML. Pour éviter cela, placez la chaîne de mise en forme entière entre guillemets simples :
 
-```csharp
+```xaml
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -117,7 +117,7 @@ La solution à ces informations et autres problèmes implique le `Mode` proprié
 
 Le programme suivant montre une utilisation courante de la `OneWayToSource` et `TwoWay` modes de liaison. Quatre `Slider` vues sont destinées au contrôle de la `Scale`, `Rotate`, `RotateX`, et `RotateY` propriétés d’un `Label`. Dans un premier temps, il semble que si ces quatre propriétés de la `Label` doit être des cibles de liaison de données, car chacun est définie un `Slider`. Toutefois, le `BindingContext` de `Label` peut être qu’un seul objet, et il existe quatre curseurs différents.
 
-Pour cette raison, toutes les liaisons sont définies apparemment descendante façons : le `BindingContext` de chacun des quatre curseurs est défini sur le `Label`, et les liaisons sont définies sur le `Value` propriétés des curseurs. À l’aide de la `OneWayToSource` et `TwoWay` modes, ces `Value` propriétés peuvent définir les propriétés de la source, qui sont le `Scale`, `Rotate`, `RotateX`, et `RotateY` propriétés de la `Label`:
+Pour cette raison, toutes les liaisons sont définies apparemment descendante façons : Le `BindingContext` de chacun des quatre curseurs est défini sur le `Label`, et les liaisons sont définies sur le `Value` propriétés des curseurs. À l’aide de la `OneWayToSource` et `TwoWay` modes, ces `Value` propriétés peuvent définir les propriétés de la source, qui sont le `Scale`, `Rotate`, `RotateX`, et `RotateY` propriétés de la `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1a73896e4f98a6535bcd7ed66f478d168b01157f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 204dd903586164691d068a956e741c406df10b36
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526882"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746867"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Autorisations dans Xamarin.Android
 
@@ -54,7 +54,7 @@ Ce document explique comment ajouter des autorisations à une application Xamari
 
 <a name="requirements" />
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Il est fortement recommandé d’inclure dans les projets de Xamarin.Android le [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) package NuGet. Cette autorisation de rétroporter package va API spécifiques pour les versions antérieures d’Android, en fournissant un commun de l’interface sans devoir constamment vérifier la version d’Android utilisée par l’application est en cours d’exécution.
 
@@ -139,7 +139,7 @@ else
 
 Il est recommandé d’informer l’utilisateur quant à la raison pour laquelle une autorisation est nécessaire pour une application afin qu’une décision éclairée est possible d’accorder l’autorisation. Un exemple serait une application qui accepte des photos et géo-tags les. Il est clair à l’utilisateur que l’autorisation de l’appareil photo est nécessaire, mais il peut être difficile de comprendre l’application doit également l’emplacement de l’appareil. Le raisonnement doit afficher un message pour aider l’utilisateur à comprendre pourquoi l’autorisation de l’emplacement est souhaitable et que l’autorisation de l’appareil photo est nécessaire.
 
-Le `ActivityCompat.ShouldShowRequestPermissionRational` méthode est utilisée pour déterminer si la logique qui doit être indiquée à l’utilisateur. Cette méthode retournera `true` si la logique pour une autorisation donnée doit être affichée. Cette capture d’écran montre un exemple d’un Snackbar affichée par une application qui explique pourquoi l’application a besoin de connaître l’emplacement de l’appareil :
+Le `ActivityCompat.ShouldShowRequestPermissionRationale` méthode est utilisée pour déterminer si la logique qui doit être indiquée à l’utilisateur. Cette méthode retournera `true` si la logique pour une autorisation donnée doit être affichée. Cette capture d’écran montre un exemple d’un Snackbar affichée par une application qui explique pourquoi l’application a besoin de connaître l’emplacement de l’appareil :
 
 ![Raisonnement pour l’emplacement](permissions-images/07-rationale-snackbar.png) 
 

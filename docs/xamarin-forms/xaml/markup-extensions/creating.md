@@ -1,18 +1,18 @@
 ---
 title: Création d’Extensions de balisage XAML
-description: Cet article explique comment définir vos propres extensions de balisage XAML de Xamarin.Forms personnalisées. Une extension de balisage XAML est une classe qui implémente l’interface IMarkupExtension IMarkupExtension.
+description: Cet article explique comment définir vos propres extensions de balisage XAML de Xamarin.Forms personnalisées. Une extension de balisage XAML est une classe qui implémente le IMarkupExtension ou IMarkupExtension<T> interface.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 531fb9500bdbf9d07ac3f781113768395465bd50
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e69d4b9dcf93c095804c5ac46527c03049580d1c
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050554"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746802"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Création d’Extensions de balisage XAML
 

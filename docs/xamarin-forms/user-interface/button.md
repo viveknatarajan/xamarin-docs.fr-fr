@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 7108b24f73d1f7389bf37fe8640061ae3e077300
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 250b3de2ef41ce488165f3149c72ce28c39e53a3
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054422"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746893"
 ---
 # <a name="xamarinforms-button"></a>Bouton de Xamarin.Forms
 
@@ -138,7 +138,7 @@ button.Clicked += OnButtonClicked;
 
 ## <a name="disabling-the-button"></a>Désactivation du bouton
 
-Parfois, une application est dans un état particulier où un particulier `Button` clic n’est pas une opération valide. Dans ce cas, le `Button` doit être désactivée en définissant son `IsEnabled` propriété `false`. L’exemple classique est un `Entry` contrôle pour un nom de fichier accompagné d’une ouverture de fichier `Button`: le `Button` doit être activée uniquement si du texte a été tapé dans le `Entry`.
+Parfois, une application est dans un état particulier où un particulier `Button` clic n’est pas une opération valide. Dans ce cas, le `Button` doit être désactivée en définissant son `IsEnabled` propriété `false`. L’exemple classique est un `Entry` contrôle pour un nom de fichier accompagné d’une ouverture de fichier `Button`: Le `Button` doit être activée uniquement si du texte a été tapé dans le `Entry`.
 Vous pouvez utiliser un `DataTrigger` pour cette tâche, comme indiqué dans le [ **données déclencheurs** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) article.
 
 ## <a name="using-the-command-interface"></a>À l’aide de l’interface de commande
@@ -409,7 +409,7 @@ Le résultat est que le `Label` utilise uniquement un doigt est en contact avec 
 
 [![Appuyez sur et relâchez le bouton](button-images/PressAndReleaseButton.png "appuyez et relâchez le bouton")](button-images/PressAndReleaseButton-Large.png)
 
-Ce type de comportement a des applications pour les jeux : un doigt maintenu sur un `Button` peut être un objet écran on à déplacer dans une orientation particulière.
+Ce type de comportement a des applications pour les jeux : Un doigt maintenu sur un `Button` peut être un objet écran on à déplacer dans une orientation particulière.
 
 <a name="button-appearance" />
 
@@ -573,7 +573,7 @@ L’exemple XAML suivant montre comment définir un état visuel pour le `Presse
 
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
-</ImageButton>
+</Button>
 ```
 
 Le `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) Spécifie que quand le [ `Button` ](xref:Xamarin.Forms.Button) est enfoncé, son [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propriété va être changée de son valeur par défaut de 1 à 0,8. Le `Normal` `VisualState` Spécifie que quand le `Button` est dans un état normal, son `Scale` propriété est définie sur 1. Par conséquent, l’effet global est que lorsque le `Button` est enfoncé, il est remises à l’échelle pour être légèrement plus petits et lorsque le `Button` est publié, il est remises à l’échelle à sa taille par défaut.
@@ -582,7 +582,7 @@ Pour plus d’informations sur les états visuels, consultez [le Gestionnaire d�
 
 ## <a name="creating-a-toggle-button"></a>Création d’un bouton bascule
 
-Il est possible de sous-classe `Button` afin qu’il fonctionne comme un commutateur activé / désactivé : appuyez sur le bouton qu’une seule fois pour activer/désactiver le bouton sur, puis appuyez sur Nouveau pour la désactiver.
+Il est possible de sous-classe `Button` afin qu’il fonctionne comme un commutateur activé / désactivé : Appuyez une fois le bouton pour activer/désactiver le bouton sur, puis appuyez sur Nouveau pour la désactiver.
 
 Ce qui suit `ToggleButton` dérive de la classe `Button` et définit un événement nommé `Toggled` et une propriété booléenne nommée `IsToggled`. Voici les deux mêmes propriétés définies par le Xamarin.Forms [ `Switch` ](xref:Xamarin.Forms.Switch):
 

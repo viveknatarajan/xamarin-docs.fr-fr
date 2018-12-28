@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681564"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609933"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Conseils de dépannage pour Xamarin.iOS 
 
@@ -98,7 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
-## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException : Aucun constructeur trouvée pour Foo.Bar::ctor(System.IntPtr)
+## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException : Aucun constructeur trouvé pour Foo.Bar::ctor(System.IntPtr)
 
 Cette erreur se produit lors de l’exécution lorsque le code tente d’instancier une instance des classes que vous avez référencé à partir de votre fichier Interface Builder. Cela signifie que vous avez oublié d’ajouter un constructeur qui accepte un IntPtr unique en tant que paramètre.
 
@@ -123,7 +123,7 @@ Les fichiers de concepteur sont générés à l’aide des paramètres d’espac
 
 Namespace paramètres se trouvent dans la boîte de dialogue Options du projet. L’espace de noms par défaut se trouve dans le **général -> Paramètres principaux** section. Si elle est vide, le nom de votre projet est utilisé en tant que la valeur par défaut. Vous trouverez des paramètres d’espace de noms plus avancés dans le **Code Source -> stratégies de noms .NET** section.
 
-## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>Avertissement pour les actions : la méthode privée « Foo » n’est jamais utilisée. (CS0169)
+## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>Avertissement pour les actions : La méthode privée « Foo » n’est jamais utilisée. (CS0169)
 
 Actions pour les fichiers de générateur d’interface sont connectées pour les widgets par réflexion lors de l’exécution, cet avertissement est attendu.
 
@@ -212,7 +212,7 @@ Ce problème est très rare et extrêmement difficiles à reproduire - il géné
 
 Veuillez joindre les journaux XS, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{horodatage} .log**, et **composants-{horodatage} .log**(dans les versions antérieures de XS/MonoDevelop, envoyez simplement **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
- **Remarque : Le problème ci-dessus a été résolu dans XS 2.2 finale**
+ **REMARQUE : Le problème ci-dessus a été résolu dans XS 2.2 finale**
 
 ## <a name="compiled-application-is-very-large"></a>Application compilée est très volumineux
 
@@ -398,7 +398,7 @@ Cela est interdit en tant que le nom d’exécutable dans CFBundleExecutable - m
 
  * « La valeur ne doit pas inclure toute extension du nom de ». - [http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
-## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Erreur : « 0 x 43 de type d’attribut personnalisé n'est pas pris en charge » lors de double-clic sur des fichiers .xib
+## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Erreur : « Le type d’attribut personnalisé 0 x 43 n’est pas pris en charge » lors de double-clic sur des fichiers .xib
 
 Cela est dû à une tentative d’ouverture des fichiers .xib lorsque les variables d’environnement sont définies de manière incorrecte. Cela ne doit pas se produire à l’utilisation normale de Visual Studio pour Mac/Xamarin.iOS et rouvrir Visual Studio pour Mac à partir / applications doit résoudre le problème.
 
@@ -413,26 +413,6 @@ Pour vérifier l’action de génération, cliquez avec le bouton droit sur le f
 
 ## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException : Aucune donnée n’est disponible pour l’encodage 437
 
-Lorsque vous incluez des bibliothèques tierces 3e dans votre application Xamarin.iOS, vous pouvez obtenir une erreur sous la forme « System.NotSupportedException : aucune donnée n’est disponible pour l’encodage 437 » lorsque vous tentez de compiler et exécuter l’application. Par exemple, les bibliothèques, telles que `Ionic.Zip.ZipFile`, peut lever cette exception au cours de l’opération.
+Lorsque vous incluez des bibliothèques tierces 3e dans votre application Xamarin.iOS, vous pouvez obtenir une erreur sous la forme « System.NotSupportedException : Aucune donnée n’est disponible pour l’encodage 437" lorsque vous tentez de compiler et exécuter l’application. Par exemple, les bibliothèques, telles que `Ionic.Zip.ZipFile`, peut lever cette exception au cours de l’opération.
 
 Cela peut être résolu en ouvrant les options pour le projet Xamarin.iOS, en accédant à **Build iOS** > **internationalisation** et en vérifiant la **ouest** internationalisation.
-
-
-
-<a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
-
-
-## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>Ne peut pas mettre à niveau vers Indie/Business à partir du compte d’essai
-
-Si vous a récemment acheté de Xamarin.iOS et démarrée précédemment une version d’évaluation de Xamarin.iOS, vous devrez peut-être effectuer les étapes suivantes pour obtenir cette modification de licence prélevée par Visual Studio pour Mac ou Visual Studio.
-
--  Fermez Visual Studio pour Mac/Visual Studio
--  Supprimez tous les fichiers ~/Library/MonoTouch sur Mac ou %PROGRAMDATA%\MonoTouch\License\ pour Windows
--  Ouvrez à nouveau Visual Studio pour Mac/Visual Studio et générer un projet Xamarin.iOS
-
-
-## <a name="receiving-activation-incomplete-error-message"></a>Réception de Message d’erreur « Activation incomplet »
-
-Ce problème peut se produire lors de l’utilisation de Xamarin.iOS pour Visual Studio. Pour résoudre ce problème, envoyez les journaux à partir de l’emplacement suivant pour [ contact@xamarin.com ](mailto:contact@xamarin.com).
-
--  Emplacement du journal : %LocalAppData%/Xamarin/Logs
