@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: 5cb53006d7cc965f378f6e971bfc623f0c4cbd60
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c40762ad4d165c1e5a29bdf9dc6d3c0fdb8581f7
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899106"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411724"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Bien démarrer avec Xamarin.Essentials
 
@@ -33,7 +33,7 @@ Xamarin.Essentials est disponible sous forme de package NuGet qui peut être ajo
 
 1. Téléchargez et installez [Visual Studio](http://visualstudio.com) avec [Visual Studio Tools pour Xamarin](~/cross-platform/get-started/installation/index.md).
 
-2. Ouvrez un projet existant ou créez un projet à l’aide du modèle d’application vide sous **Visual Studio C#**  (Android, iPhone et iPad ou inter-plateformes). **Important** : en cas d’ajout à un projet UWP, vérifiez que la build 16299 ou une version ultérieure est définie dans les propriétés du projet.
+2. Ouvrez un projet existant ou créez un projet à l’aide du modèle d’application vide sous **Visual Studio C#**  (Android, iPhone et iPad ou inter-plateformes). **Important** : En cas d’ajout à un projet UWP, vérifiez que la build 16299 ou ultérieure est définie dans les propriétés du projet.
 
 3. Ajouter le package NuGet **Xamarin.Essentials** à chaque projet :
 
@@ -47,9 +47,6 @@ Xamarin.Essentials est disponible sous forme de package NuGet qui peut être ajo
     # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
     Dans le panneau de l’Explorateur de solutions, cliquez avec le bouton droit sur le nom du projet et sélectionnez **Ajouter > Ajouter des packages NuGet...**. Recherchez **Xamarin.Essentials** et installez le package dans **Tous** les projets, notamment les bibliothèques Android, iOS et .NET Standard.
-
-    > [!TIP]
-    > Cochez la case **Afficher les packages en préversion** lorsque le NuGet [**Xamarin.Essentials** ](https://www.nuget.org/packages/Xamarin.Essentials)est en préversion.
 
     -----
 
