@@ -1,26 +1,24 @@
 ---
 title: Stockage et l’accès aux données dans le stockage Azure
-description: Stockage Azure est une solution de stockage cloud évolutif qui peut être utilisée pour stocker des données non structurées et structurées. Cet article montre comment utiliser Xamarin.Forms pour stocker des données texte et binaires dans le stockage Azure et comment accéder aux données.
+description: Stockage Azure est une solution de stockage cloud évolutif qui peut être utilisée pour stocker des données non structurées et structurées. Cet article explique comment utiliser Xamarin.Forms pour stocker des données texte et binaires dans le stockage Azure et comment accéder aux données.
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2017
-ms.openlocfilehash: 1f920eb36eab3e451b20aa91734f00cee5ba6485
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/28/2018
+ms.openlocfilehash: 4ecffa0902d186b659e7df07dbcf17053e29c818
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059218"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814009"
 ---
 # <a name="storing-and-accessing-data-in-azure-storage"></a>Stockage et l’accès aux données dans le stockage Azure
 
 [![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 
 _Stockage Azure est une solution de stockage cloud évolutif qui peut être utilisée pour stocker des données non structurées et structurées. Cet article montre comment utiliser Xamarin.Forms pour stocker des données texte et binaires dans le stockage Azure et comment accéder aux données._
-
-## <a name="overview"></a>Vue d'ensemble
 
 Stockage Azure fournit quatre services de stockage :
 
@@ -69,9 +67,6 @@ Le processus d’intégration d’un compte de stockage Azure dans une applicati
 1. Ajouter le [bibliothèque cliente Azure Storage](https://www.nuget.org/packages/WindowsAzure.Storage/) à l’application Xamarin.Forms.
 1. Configurer la chaîne de connexion de stockage. Pour plus d’informations, consultez [connexion au stockage Azure](#connecting).
 1. Ajouter `using` directives pour la `Microsoft.WindowsAzure.Storage` et `Microsoft.WindowsAzure.Storage.Blob` espaces de noms pour les classes qui accèderont à stockage Azure.
-
-> [!NOTE]
-> Bien que cet exemple utilise un projet d’accès partagé, la bibliothèque cliente de stockage Azure maintenant prend également en charge consommée à partir d’un projet de bibliothèque de classes Portable (PCL).
 
 <a name="connecting" />
 
@@ -263,15 +258,10 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 Après avoir récupéré une référence de conteneur, la méthode récupère une référence d’objet blob pour l’objet blob spécifié. L’objet blob est ensuite supprimée avec le `DeleteIfExistsAsync` (méthode).
 
-## <a name="summary"></a>Récapitulatif
-
-Cet article a montré comment utiliser Xamarin.Forms pour stocker des données texte et binaires dans le stockage Azure et comment accéder aux données. Stockage Azure est une solution de stockage cloud évolutif qui peut être utilisée pour stocker des données non structurées et structurées.
-
-
 ## <a name="related-links"></a>Liens associés
 
 - [Stockage Azure (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 - [Présentation du stockage](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [Comment utiliser le stockage d’objets Blob à partir de Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [À l’aide de Signatures d’accès partagé (SAP)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
-- [Windows Azure Storage](https://www.nuget.org/packages/WindowsAzure.Storage/)
+- [Windows Azure Storage (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)
