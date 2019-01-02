@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 505b5bfb9681e5bc30ff84aa90c8e148ed6db4b1
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171597"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058283"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Valeurs de repli pour les liaisons Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Une liaison de données échoue parfois car la source de la liaison ne peut pas être résolue ou parce que la liaison réussit mais retourne une valeur `null`. De tels scénarios peuvent être gérés avec des convertisseurs de valeurs ou du code supplémentaire, mais il est possible de renforcer les liaisons de données en définissant des valeurs de repli à utiliser si le processus de liaison échoue. Pour cela, vous pouvez définir les propriétés [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) et [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) dans une expression de liaison. Comme ces propriétés résident dans la classe [`BindingBase`](xref:Xamarin.Forms.BindingBase), elles peuvent être utilisées avec des liaisons, des liaisons compilées et l’extension de balisage `Binding`.
 

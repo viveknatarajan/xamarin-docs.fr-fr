@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 6d1948214b97a1b536b07b6420c32e4d27124518
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 0351436259bb782e4f8e3a3405b9620c4e8b20bb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38997541"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050749"
 ---
 # <a name="implementing-text-to-speech"></a>Implémentation de la synthèse vocale
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 
 Cet article vous montre comment créer une application multiplateforme qui utilise [`DependencyService`](xref:Xamarin.Forms.DependencyService) pour accéder aux API de synthèse vocale natives :
 
@@ -175,4 +177,3 @@ Quand un clic sur ce bouton est enregistré dans cette application exécutée su
 
 - [Utilisation de DependencyService (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [DependencyService (exemple)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
-

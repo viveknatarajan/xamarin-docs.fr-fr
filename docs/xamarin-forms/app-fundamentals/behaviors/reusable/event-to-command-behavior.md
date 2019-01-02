@@ -7,18 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 8bf8f86cf708806d1c17b3fe4eda0755f98fd646
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 1c2aea9a5dead1962cfd4bb71d1a1211e8b98ee9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563184"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056705"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior réutilisable
 
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+
 _Vous pouvez utiliser des comportements pour associer des commandes à des contrôles qui n’ont pas été conçus pour interagir avec des commandes. Cet article montre comment créer et consommer un comportement Xamarin.Forms pour appeler une commande quand un événement est déclenché._
 
-## <a name="overview"></a>Vue d’ensemble
+## <a name="overview"></a>Vue d'ensemble
 
 La classe `EventToCommandBehavior` est un comportement personnalisé Xamarin.Forms réutilisable qui exécute une commande en réponse à *tout* déclenchement d’événement. Par défaut, les arguments d’événement de l’événement sont passés à la commande et peuvent être éventuellement convertis par une implémentation [`IValueConverter`](xref:Xamarin.Forms.IValueConverter).
 

@@ -9,14 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/13/2018
-ms.openlocfilehash: f836d6212dfdff6c9840e2d780def3df72bc7c27
-ms.sourcegitcommit: 744c0a50420bb091fca8b92a84c20e61c741cf9e
+ms.openlocfilehash: fcd7f1b9d88b7305f9cccd12a799d71c793c42b4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52742883"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057455"
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms - Démarrage rapide
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/Phoneword/)
 
 Cette procédure pas à pas illustre comment créer une application qui convertit un numéro de téléphone alphanumérique (entré par l’utilisateur) en numéro de téléphone numérique, puis compose le numéro. L’application finale est indiquée ci-dessous :
 

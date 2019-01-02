@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: 7fea736b0a04a69fd64100ae1d6bcd42c244359f
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: 775ef2a38cf423536072358299ac4f30db974d9a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459848"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056994"
 ---
 # <a name="customizing-an-entry"></a>Personnalisation d’une entrée
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/entry/)
 
 _Le contrôle Entry Xamarin.Forms permet de modifier une seule ligne de texte. Cet article montre comment créer un renderer personnalisé pour le contrôle Entry afin de permettre aux développeurs de remplacer le rendu natif par défaut par leur propre personnalisation spécifique à la plateforme._
 

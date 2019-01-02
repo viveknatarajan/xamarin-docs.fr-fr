@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: b1ebe2694ad5fa996b8b679cfb31a203588de05c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 1e7a96b2f33d7dc89c4373ab612ac3d26692f64e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998997"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060457"
 ---
 # <a name="customizing-a-viewcell"></a>Personnalisation d’une ViewCell
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/viewcell/)
 
 _Une ViewCell Xamarin.Forms est une cellule qui peut être ajoutée à une ListView ou TableView, qui contient une vue définie par le développeur. Cet article montre comment créer un renderer personnalisé pour une ViewCell hébergée à l’intérieur d’un contrôle ListView Xamarin.Forms. Cela empêche les appels répétés des calculs de disposition Xamarin.Forms pendant le défilement de ListView._
 
@@ -565,7 +567,7 @@ Le `DataTemplate` est stocké dans le dictionnaire de ressources de niveau appli
 </DataTemplate>
 ```
 
-Le `DataTemplate` spécifie les contrôles permettant d’afficher le contenu de la cellule ainsi que leurs disposition et apparence. Deux contrôles `TextBlock` et un contrôle `Image` sont utilisés pour afficher le contenu de la cellule par le biais de la liaison de données. En outre, une instance du `ConcatImageExtensionConverter` est utilisée pour concaténer l’extension de fichier `.jpg` à chaque nom de fichier image. Ainsi, le contrôle `Image` peut charger et afficher l’image quand sa propriété `Source` est définie.
+Le `DataTemplate` spécifie les contrôles permettant d’afficher le contenu de la cellule ainsi que leurs disposition et apparence. Deux contrôles `TextBlock` et un contrôle `Image` sont utilisés pour afficher le contenu de la cellule par le biais de la liaison de données. En outre, une instance de `ConcatImageExtensionConverter` est utilisée pour concaténer l’extension de fichier `.jpg` à chaque nom de fichier image. Ainsi, le contrôle `Image` peut charger et afficher l’image quand sa propriété `Source` est définie.
 
 ## <a name="summary"></a>Récapitulatif
 

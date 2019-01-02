@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 95e95d8849824cd2dc31c2019627cc5adbbefeec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2e28d3e7035eb570b2053d39cec8b8d91dada6f0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131145"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059416"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>Ajout d’un module de reconnaissance des mouvements de balayage
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
 
 _Un mouvement de balayage se produit quand un doigt est déplacé verticalement ou horizontalement sur l’écran. Il est souvent utilisé pour lancer l’exploration du contenu. Les exemples de code dans cet article sont tirés de l’exemple [Mouvement de balayage](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)._
 

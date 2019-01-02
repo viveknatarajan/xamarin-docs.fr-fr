@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 0511cd1a4cf76368623c56ef53cd98323114f98e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38994674"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058988"
 ---
 # <a name="hierarchical-navigation"></a>Navigation hiérarchique
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 
 _La classe NavigationPage propose une expérience de navigation hiérarchique où l’utilisateur est en mesure de parcourir les pages, vers l’avant et vers l’arrière, comme il le souhaite. La classe implémente la navigation sous forme de pile LIFO (dernier entré, premier sorti) d’objets Pages. Cet article montre comment utiliser la classe NavigationPage pour effectuer la navigation dans une pile de pages._
 
@@ -89,7 +91,7 @@ Quand la méthode [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) es
 Toutefois, l’ordre exact dans lequel ces événements se produisent dépend de la plateforme. Pour plus d’informations, consultez le [chapitre 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) de l’ouvrage de Charles Petzold sur Xamarin.Forms.
 
 > [!NOTE]
-> Les appels aux substitutions [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) et [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) ne peuvent pas être traités comme des indications de garantie de navigation entre les pages. Par exemple, sur iOS, la substitution `OnDisappearing` est appelée sur la page active quand l’application se ferme.
+> Les appels des substitutions [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) et [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) ne peuvent pas être considérés comme des indications garanties de la navigation entre les pages. Par exemple, sur iOS, la substitution `OnDisappearing` est appelée sur la page active quand l’application se ferme.
 
 ### <a name="popping-pages-from-the-navigation-stack"></a>Retrait de pages de la pile de navigation
 
@@ -125,7 +127,7 @@ Cette méthode retire de la pile de navigation toutes les pages sauf la [`Page`]
 
 ### <a name="animating-page-transitions"></a>Animation des transitions de page
 
-La propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de chaque page fournit également des méthodes d’envoi et de retrait substituées qui incluent un paramètre `boolean` qui détermine s’il faut afficher une animation de page durant la navigation, comme illustré dans l’exemple de code suivant :
+La propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de chaque page fournit également des méthodes d’envoi et de dépilation substituées qui incluent un paramètre `boolean` contrôlant l’affichage d’une animation de page durant la navigation, comme indiqué dans l’exemple de code suivant :
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -147,15 +149,15 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-L’affectation de la valeur `false` au paramètre `boolean` désactive l’animation de transition de page, tandis que l’affectation de la valeur `true` active l’animation de transition de page, si elle est prise en charge par la plateforme sous-jacente. Toutefois, les méthodes d’envoi et de retrait qui ne disposent pas de ce paramètre activent l’animation par défaut.
+Si vous affectez au paramètre `boolean` la valeur `false`, l’animation de transition de page est désactivée. En revanche, si vous affectez au paramètre la valeur `true` l’animation de transition de page est activée, à condition qu’elle soit prise en charge par la plateforme sous-jacente. Toutefois, les méthodes d’envoi et de dépilation qui n’ont pas ce paramètre activent l’animation par défaut.
 
 <a name="Passing_Data_when_Navigating" />
 
-## <a name="passing-data-when-navigating"></a>Transmission de données lors de la navigation
+## <a name="passing-data-when-navigating"></a>Passage des données durant la navigation
 
 Il est parfois nécessaire pour une page de transmettre des données à une autre page lors de la navigation. Il existe pour cela deux techniques : transmettre les données par le biais d’un constructeur de page, et définir les données comme [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la nouvelle page. Nous allons maintenant examiner chacune de ces techniques.
 
-### <a name="passing-data-through-a-page-constructor"></a>Transmission de données par le biais d’un constructeur de page
+### <a name="passing-data-through-a-page-constructor"></a>Passage des données via un constructeur de page
 
 La technique la plus simple pour transmettre des données à une autre page lors de la navigation est de faire appel à un paramètre de constructeur de page, comme illustré dans l’exemple de code suivant :
 
@@ -184,7 +186,7 @@ Les données sont ensuite affichées dans la page en définissant la propriété
 
 ### <a name="passing-data-through-a-bindingcontext"></a>Transmission de données par le biais d’un BindingContext
 
-Une autre approche pour transmettre des données à une autre page lors de la navigation consiste à affecter les données comme [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la nouvelle page, comme indiqué dans l’exemple de code suivant :
+Il existe une autre approche pour passer des données à une autre page durant la navigation. Elle consiste à affecter les données au [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la nouvelle page, comme indiqué dans l’exemple de code suivant :
 
 ```csharp
 async void OnNavigateButtonClicked (object sender, EventArgs e)
@@ -202,7 +204,7 @@ async void OnNavigateButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Ce code affecte l’instance de `Contact` comme [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de l’instance de `SecondPage`, puis accède à `SecondPage`.
+Ce code affecte au [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de l’instance`SecondPage` l’instance de `Contact`, puis accède à `SecondPage`.
 
 `SecondPage` utilise ensuite la liaison de données pour afficher les données de l’instance de `Contact`, comme indiqué dans l’exemple de code XAML suivant :
 

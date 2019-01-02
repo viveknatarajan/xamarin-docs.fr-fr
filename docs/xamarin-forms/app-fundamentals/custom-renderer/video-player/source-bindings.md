@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0efdc1a20f52231f15b7a08eb86962e2079c678
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 0fe170aaa880aebcaff7899c440a0522e1f83a0c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240028"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051119"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Liaison de sources vidéo au lecteur
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Quand la propriété `Source` de l’affichage `VideoPlayer` est définie sur un nouveau fichier vidéo, la lecture de la vidéo existante s’arrête et celle de la nouvelle vidéo commence. Cela est illustré par la page **Sélectionner une vidéo web** de l’exemple [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/). La page inclut un `ListView` avec les titres des trois vidéos référencées à partir du fichier **App.xaml** :
 

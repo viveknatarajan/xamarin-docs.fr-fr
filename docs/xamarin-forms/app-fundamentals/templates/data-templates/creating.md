@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 63f9bf82bc8e637aced1afa5d5699ac1e8dc3f8c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4eea0db32bcfae4dc2ecdec8c2e494989515ef00
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994613"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060224"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Création d’un DataTemplate Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
 
 _Vous pouvez créer des modèles de données inline, dans un ResourceDictionary, à partir d’un type personnalisé ou à partir du type de cellule Xamarin.Forms approprié. Cet article explore chaque technique._
 

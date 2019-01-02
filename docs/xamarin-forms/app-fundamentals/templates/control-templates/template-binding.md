@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 49f66164c707f91f298b2e5cb09b35f1767186cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106427"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051579"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Liaison à partir d’un ControlTemplate Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
 
 _Les liaisons de modèle permettent aux contrôles dans un modèle de contrôle de lier aux données des propriétés publiques et ainsi permettre de modifier facilement les valeurs de propriété sur les contrôles du modèle de contrôle. Cet article montre comment utiliser les liaisons de modèle pour effectuer une liaison de données à partir d’un modèle de contrôle._
 

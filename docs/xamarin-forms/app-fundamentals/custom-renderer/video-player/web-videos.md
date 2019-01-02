@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 7f40d0d11fc932121b4ff7789969bbb1e354024c
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 06b95c40b12aa93b79f25c3adf12b74bda232267
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172208"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056624"
 ---
 # <a name="playing-a-web-video"></a>Lecture d’une vidéo web
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 La classe `VideoPlayer` définit une propriété `Source` utilisée pour spécifier la source du fichier vidéo ainsi qu’une propriété `AutoPlay`. `AutoPlay` a la valeur par défaut `true`, ce qui signifie que la lecture de la vidéo doit démarrer automatiquement après la définition de `Source` :
 

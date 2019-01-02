@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 67b0d90290b18c7a5b55c5e3496b54970a8cfc38
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: c4098bfe40a252da2adbe7a7a2cd4c0f105ad1c8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617603"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050411"
 ---
 # <a name="right-to-left-localization"></a>Localisation de droite à gauche
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)
 
 _La localisation de droite à gauche ajoute la prise en charge de la direction de flux de droite à gauche pour les applications Xamarin.Forms._
 

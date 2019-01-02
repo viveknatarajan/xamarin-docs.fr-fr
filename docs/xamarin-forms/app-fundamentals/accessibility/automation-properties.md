@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: c720b9f38d2a34155face10b75f5f054f3313711
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f59a528916d2cc5efd19ba7c35a7b4f041ecbe09
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131138"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056160"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propriétés d’automatisation dans Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
 _Xamarin.Forms permet de définir des valeurs d’accessibilité sur les éléments d’interface utilisateur à l’aide de propriétés jointes à partir de la classe AutomationProperties, qui à leur tour définissent des valeurs natives d’accessibilité. Cet article explique comment utiliser la classe AutomationProperties pour permettre à un lecteur d’écran d’énoncer les éléments figurant dans la page._
 

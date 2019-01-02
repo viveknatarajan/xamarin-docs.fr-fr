@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 59e9f4c61bda86faa5a55d70ef91411adb14da6d
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 36f01fb309f174e0ed7c709fb77f133b101ef8e0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38996804"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061091"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Ajout d’un module de reconnaissance des mouvements panoramiques
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
 
 _Le mouvement panoramique est utilisé pour détecter le mouvement des doigts sur l’écran et l’appliquer au contenu. Il est implémenté avec la classe `PanGestureRecognizer`. Un scénario courant du mouvement panoramique est l’exécution d’un panoramique horizontal et vertical d’une image pour que tout le contenu de l’image soit visible quand il est affiché dans une fenêtre d’affichage plus petite que les dimensions de l’image. Cette action est accomplie en déplaçant l’image dans la fenêtre d’affichage, elle est illustrée dans cet article._
 

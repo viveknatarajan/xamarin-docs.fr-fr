@@ -7,22 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/19/2018
-ms.openlocfilehash: aa060bd16bc0220f6a6026106ff6c8d786daebc1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3b8cf7ec8a42ed031699d8f5e02f32c6eb61458
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105036"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053859"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implémentation d’un HybridWebView
 
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
+
 _Les contrôles d’interface utilisateur personnalisés Xamarin.Forms doivent dériver de la classe View, qui est utilisée pour placer des dispositions et des contrôles sur l’écran. Cet article montre comment créer un renderer personnalisé pour un contrôle personnalisé HybridWebView, qui montre comment améliorer les contrôles web propres à la plateforme web pour permettre d’appeler du code C# à partir de JavaScript._
 
-Chaque vue Xamarin.Forms est accompagnée d’un renderer pour chaque plateforme qui crée une instance d’un contrôle natif. Quand un élément [`View`](xref:Xamarin.Forms.View) est restitué par une application Xamarin.Forms, dans iOS, la classe `ViewRenderer` est instanciée, entraînant à son tour l’instanciation d’un contrôle `UIView` natif. Sur la plateforme Android, la classe `ViewRenderer` instancie un contrôle `View`. Sur la plateforme Windows universelle (UWP), la classe `ViewRenderer` instancie un contrôle `FrameworkElement` natif. Pour plus d’informations sur les classes de renderer et de contrôle natif auxquelles les contrôles Xamarin.Forms sont mappés, consultez [Classes de base de renderer et contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Chaque vue Xamarin.Forms est accompagnée d’un renderer pour chaque plateforme qui crée une instance d’un contrôle natif. Quand un élément [`View`](xref:Xamarin.Forms.View) est restitué par une application Xamarin.Forms, dans iOS, la classe `ViewRenderer` est instanciée, entraînant à son tour l’instanciation d’un contrôle `UIView` natif. Sur la plateforme Android, la classe `ViewRenderer` instancie un contrôle `View`. Sur la plateforme Windows universelle (UWP), la classe `ViewRenderer` instancie un contrôle `FrameworkElement` natif. Pour plus d’informations sur le renderer et les classes de contrôle natif auxquels les contrôles Xamarin.Forms sont mappés, consultez [Classes de base de renderer et contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Le diagramme suivant illustre la relation entre l’élément [`View`](xref:Xamarin.Forms.View) et les contrôles natifs correspondants qui l’implémentent :
 
-![](hybridwebview-images/view-classes.png "Relation entre la classe View et les classes natives qui l’implémentent")
+![](hybridwebview-images/view-classes.png "Relation entre la classe View et son implémentation de classes natives")
 
 Il est possible d’utiliser le processus de rendu pour implémenter des personnalisations spécifiques à la plateforme en créant un renderer personnalisé pour un élément [`View`](xref:Xamarin.Forms.View) sur chaque plateforme. Le processus pour y parvenir est le suivant :
 
@@ -151,7 +153,7 @@ Le processus de création de la classe de renderer personnalisé est le suivant�
 1. Ajoutez un attribut `ExportRenderer` à la classe de renderer personnalisé afin de spécifier qu’il sera utilisé pour restituer le contrôle personnalisé Xamarin.Forms. Cet attribut est utilisé pour inscrire le renderer personnalisé auprès de Xamarin.Forms.
 
 > [!NOTE]
-> Pour la plupart des éléments Xamarin.Forms, il est facultatif de fournir un renderer personnalisé dans chaque projet de plateforme. Si un renderer personnalisé n’est pas inscrit, le renderer par défaut de la classe de base du contrôle est utilisé. Toutefois, les renderers personnalisés sont nécessaires dans chaque projet de plateforme au moment de la restitution d’un élément [View](xref:Xamarin.Forms.View).
+> Pour la plupart des éléments Xamarin.Forms, il est facultatif de fournir un renderer personnalisé dans chaque projet de plateforme. Si un renderer personnalisé n’est pas inscrit, le renderer par défaut de la classe de base du contrôle est utilisé. Toutefois, les renderers personnalisés sont nécessaires dans chaque projet de plateforme lors du rendu d’un élément [View](xref:Xamarin.Forms.View).
 
 Le diagramme suivant illustre les responsabilités de chaque projet dans l’exemple d’application ainsi que les relations qu’ils entretiennent les uns avec les autres :
 
@@ -161,7 +163,7 @@ Le contrôle personnalisé `HybridWebView` est restitué par des classes de rend
 
 ![](hybridwebview-images/screenshots.png "HybridWebView sur chaque plateforme")
 
-La classe `ViewRenderer` expose la méthode `OnElementChanged`, qui est appelée quand le contrôle personnalisé Xamarin.Forms est créé pour restituer le contrôle web natif correspondant. Cette méthode prend un paramètre `ElementChangedEventArgs` qui contient les propriétés `OldElement` et `NewElement`. Ces propriétés représentent, respectivement, l’élément Xamarin.Forms auquel le renderer *était* attaché et l’élément Xamarin.Forms auquel le renderer *est* attaché. Dans l’exemple d’application, la propriété `OldElement` sera `null` et la propriété `NewElement` contiendra une référence à l’instance `HybridWebView`.
+La classe `ViewRenderer` expose la méthode `OnElementChanged`, qui est appelée quand le contrôle personnalisé Xamarin.Forms est créé pour restituer le contrôle web natif correspondant. Cette méthode prend un paramètre `ElementChangedEventArgs` qui contient les propriétés `OldElement` et `NewElement`. Ces propriétés représentent respectivement l’élément Xamarin.Forms auquel le renderer *était* attaché et l’élément Xamarin.Forms auquel le renderer *est* attaché. Dans l’exemple d’application, la propriété `OldElement` sera `null` et la propriété `NewElement` contiendra une référence à l’instance `HybridWebView`.
 
 Une version substituée de la méthode `OnElementChanged`, dans chaque classe de renderer spécifique à la plateforme, est l’emplacement où effectuer l’instanciation et la personnalisation du contrôle web natif. La méthode `SetNativeControl` doit être utilisée pour instancier le contrôle web natif, et cette méthode affecte également la référence de contrôle à la propriété `Control`. De plus, une référence au contrôle Xamarin.Forms qui est restitué peut être obtenue par le biais de la propriété `Element`.
 

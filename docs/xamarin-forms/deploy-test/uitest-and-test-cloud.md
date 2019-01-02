@@ -8,14 +8,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: a4a3a1d35b675091319646a03fb0362e4d250b0e
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 41b23b9521b0324aeb6e94cd48ae5525c7639e07
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171883"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052107"
 ---
 # <a name="automate-xamarinforms-testing-with-app-center"></a>Automatiser les tests Xamarin.Forms avec App Center
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UsingUITest/)
 
 _Le composant UITest de Xamarin peut être utilisé avec Xamarin.Forms pour écrire des tests d’interface utilisateur à exécuter dans le cloud sur des centaines d’appareils._
 
@@ -30,7 +32,7 @@ Ce guide part du principe que vous connaissez Xamarin.UITest. Les guides suivant
 
 Une fois qu’un projet UITest a été ajouté à une solution Xamarin.Forms, les étapes de l’écriture et de l’exécution des tests pour une application Xamarin.Forms sont les mêmes que pour une application Xamarin.Android ou Xamarin.iOS.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Reportez-vous à [Xamarin.UITest](/appcenter/test-cloud/uitest/) pour vérifier que votre projet est prêt pour les tests d’interface utilisateur automatisés.
 

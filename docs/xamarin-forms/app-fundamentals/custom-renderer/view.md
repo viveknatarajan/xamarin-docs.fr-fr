@@ -7,18 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 8ee9926eb3b726673711141e7c75a68b607d02d3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 22392603e337205dcdd4909dc61b6c22ca2f00b9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994700"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057968"
 ---
 # <a name="implementing-a-view"></a>Implémentation d’une vue
 
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+
 _Les contrôles d’interface utilisateur personnalisés Xamarin.Forms doivent dériver de la classe View, qui est utilisée pour placer des dispositions et des contrôles sur l’écran. Cet article montre comment créer un renderer personnalisé pour un contrôle personnalisé Xamarin.Forms qui est utilisé afin d’afficher un flux vidéo d’aperçu à partir de la caméra de l’appareil._
 
-Chaque vue Xamarin.Forms est accompagnée d’un renderer pour chaque plateforme qui crée une instance d’un contrôle natif. Quand un élément [`View`](xref:Xamarin.Forms.View) est restitué par une application Xamarin.Forms, dans iOS, la classe `ViewRenderer` est instanciée, entraînant à son tour l’instanciation d’un contrôle `UIView` natif. Sur la plateforme Android, la classe `ViewRenderer` instancie un contrôle `View` natif. Sur la plateforme Windows universelle (UWP), la classe `ViewRenderer` instancie un contrôle `FrameworkElement` natif. Pour plus d’informations sur le renderer et les classes de contrôle natif auxquels les contrôles Xamarin.Forms sont mappés, consultez [Classes de base de renderer et contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Chaque vue Xamarin.Forms est accompagnée d’un renderer pour chaque plateforme qui crée une instance d’un contrôle natif. Quand un élément [`View`](xref:Xamarin.Forms.View) est restitué par une application Xamarin.Forms dans iOS, la classe `ViewRenderer` est instanciée, entraînant à son tour l’instanciation d’un contrôle `UIView` natif. Sur la plateforme Android, la classe `ViewRenderer` instancie un contrôle `View` natif. Sur la plateforme Windows universelle (UWP), la classe `ViewRenderer` instancie un contrôle `FrameworkElement` natif. Pour plus d’informations sur le renderer et les classes de contrôle natif auxquels les contrôles Xamarin.Forms sont mappés, consultez [Classes de base de renderer et contrôles natifs](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 Le diagramme suivant illustre la relation entre l’élément [`View`](xref:Xamarin.Forms.View) et les contrôles natifs correspondants qui l’implémentent :
 
@@ -153,7 +155,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 
 Un nouveau contrôle natif doit uniquement être instancié une seule fois, quand la propriété `Control` a la valeur `null`. Vous devez uniquement configurer le contrôle et vous abonner aux gestionnaires d’événements quand le renderer personnalisé est attaché à un nouvel élément Xamarin.Forms. De même, vous devez vous désabonner de tous les gestionnaires d’événements auxquels vous vous êtes abonné uniquement quand l’élément auquel le renderer est attaché change. Le choix de cette approche permet de créer un renderer personnalisé performant qui ne subit pas de fuites de mémoire.
 
-Chaque classe de renderer personnalisé est décorée avec un attribut `ExportRenderer` qui inscrit le renderer auprès de Xamarin.Forms. L’attribut accepte deux paramètres : le nom de type du contrôle personnalisé Xamarin.Forms en cours de rendu et le nom de type du renderer personnalisé. Le préfixe `assembly` de l’attribut spécifie que l’attribut s’applique à la totalité de l’assembly.
+Chaque classe de renderer personnalisé est décorée avec un attribut `ExportRenderer` qui inscrit le renderer auprès de Xamarin.Forms. L’attribut accepte deux paramètres : le nom de type du contrôle personnalisé Xamarin.Forms en cours de restitution et le nom de type du renderer personnalisé. Le préfixe `assembly` de l’attribut spécifie que l’attribut s’applique à la totalité de l’assembly.
 
 Les sections suivantes décrivent l’implémentation de chaque classe de renderer personnalisé spécifique à la plateforme.
 
