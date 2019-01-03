@@ -30,6 +30,7 @@
 ### [Dictionnaires de ressources](xaml/resource-dictionaries.md)
 ### [XAML Standard (préversion)](xaml/standard/index.md)
 #### [Contrôles](xaml/standard/controls.md)
+### [Chargement de XAML lors de l’exécution](xaml/runtime-load.md)
 ## [Notions de base des applications](app-fundamentals/index.md)
 ### [Accessibilité](app-fundamentals/accessibility/index.md)
 #### [Propriétés d’automatisation](app-fundamentals/accessibility/automation-properties.md)
