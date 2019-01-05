@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: db442f45c615b680264e79262f62062eb6a6bfd5
+ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171038"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012293"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>À l’aide de l’API de cartes Google dans votre application
 
@@ -45,7 +45,7 @@ La première étape consiste à obtenir une clé de l’API Google Maps (Notez q
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Installer les Kit de développement logiciel de Services Google Play
 
-Google Play Services est une technologie à partir de Google qui permet aux applications Android tirer parti des diverses fonctionnalités de Google, Google + dans l’application de facturation et cartes. Ces fonctionnalités sont accessibles sur les appareils Android en tant que services d’arrière-plan, f qui sont contenus dans le [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en).
+Google Play Services est une technologie à partir de Google qui permet aux applications Android tirer parti des diverses fonctionnalités de Google, Google + dans l’application de facturation et cartes. Ces fonctionnalités sont accessibles sur les appareils Android en tant que services d’arrière-plan, qui sont contenus dans le [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en).
 
 Applications Android interagissent avec les Services Google Play via la bibliothèque de client Google Play Services. Cette bibliothèque contient les interfaces et classes pour les services individuels tels que des cartes. Le diagramme suivant montre la relation entre une application Android et les Services Google Play :
 
@@ -236,7 +236,7 @@ Il existe cinq types de cartes disponibles à partir de l’API mappe de Google�
 
 L’image ci-dessous illustre trois des différents types de cartes, de gauche à droite (normal, hybride, un terrain) :
 
-[![Trois mappent des captures d’écran exemple : normale, hybrides et le Terrain](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
+[![Trois carte captures d’écran : Normal, hybrides et le Terrain](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 Le `GoogleMap.MapType` propriété est utilisée pour définir ou modifier le type de carte s’affiche. L’extrait de code suivant montre comment afficher une carte satellite.
 
