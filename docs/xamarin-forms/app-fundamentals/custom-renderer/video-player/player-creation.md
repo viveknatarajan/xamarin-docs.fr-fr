@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 0090ec798e8d7b1dfb9bd8e25f09d71ec0353b45
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 69e5d74bf9beea02ca8accf6e1f8eb1ccaa5c9fa
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171909"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061957"
 ---
 # <a name="creating-the-platform-video-players"></a>Création des lecteurs vidéo de la plateforme
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 La solution [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) contient tout le code afin d’implémenter un lecteur vidéo pour Xamarin.Forms. Elle inclut également une série de pages qui montre comment utiliser le lecteur vidéo dans une application. L’ensemble du code `VideoPlayer` et ses renderers de plateforme se trouvent dans des dossiers de projet nommés `FormsVideoLibrary` et utilisent également l’espace de noms `FormsVideoLibrary`. Cela doit faciliter la copie des fichiers dans votre propre application et la référence des classes.
 
@@ -460,7 +462,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-Une autre propriété est nécessaire pour commencer la lecture d’une vidéo : il s’agit de la propriété essentielle `Source` qui fait référence à un fichier vidéo. L’implémentation de la propriété `Source` est décrite dans l’article suivant, [Lecture d’une vidéo web](web-videos.md).
+Une autre propriété supplémentaire est nécessaire pour commencer la lecture d’une vidéo : Il s’agit de la propriété `Source` cruciale qui fait référence à un fichier vidéo. L’implémentation de la propriété `Source` est décrite dans l’article suivant, [Lecture d’une vidéo web](web-videos.md).
 
 
 ## <a name="related-links"></a>Liens associés

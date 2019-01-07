@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 03dbaa36cc1fa4a6a169f9456e0fd5b0fdc0d295
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563938"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056957"
 ---
 # <a name="xamarinforms-binding-mode"></a>Mode de liaison Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Dans l’[article précédent](basic-bindings.md), les pages **Alternative Code Binding** (Liaison de code alternative) et **Alternative XAML Binding** (Liaison XAML alternative) présentaient un objet `Label` avec sa propriété `Scale` liée à la propriété `Value` d’un élément `Slider`. Comme la valeur initiale `Slider` est 0, la propriété `Scale` du `Label` était définie sur 0 au lieu de 1 et le `Label` disparaissait.
 
@@ -41,7 +43,7 @@ Dans l’exemple [**DataBindingDemos**](https://developer.xamarin.com/samples/xa
 </ContentPage>
 ```
 
-Dans un premier temps, cela peut sembler inversé : désormais, le `Label` est la source de la liaison de données et le `Slider` en est la cible. La liaison référence la propriété `Opacity` du `Label`, qui a une valeur par défaut de 1.
+Dans un premier temps, cela peut sembler inversé : Désormais, le `Label` est la source de la liaison de données et le `Slider` en est la cible. La liaison référence la propriété `Opacity` du `Label`, qui a une valeur par défaut de 1.
 
 Comme vous pouvez l’imaginer, le `Slider` est initialisé à la valeur 1 à partir de la valeur `Opacity` initiale du `Label`. Ceci est illustré dans la capture d’écran iOS de gauche :
 
@@ -112,7 +114,7 @@ La page **Simple Color Selector** (Sélecteur de couleur simple) illustre l’ut
 
 Le ViewModel est la source de la liaison de données. Le ViewModel *ne définit pas* de propriétés pouvant être liées, mais il implémente un mécanisme de notification qui permet d’avertir l’infrastructure de liaison lorsque la valeur d’une propriété change. Ce mécanisme de notification est l’interface [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) qui définit une propriété unique nommée [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Une classe qui implémente cette interface déclenche généralement l’événement lorsque l’une de ses propriétés publiques change de valeur. L’événement n’a pas besoin d’être déclenché si la propriété ne change jamais. (L’interface `INotifyPropertyChanged` est également implémentée par `BindableObject` et un événement `PropertyChanged` est déclenché chaque fois qu’une propriété pouvant être liée change de valeur.)
 
-La classe `HslColorViewModel` définit cinq propriétés : les propriétés `Hue`, `Saturation`, `Luminosity` et `Color` sont liées entre elles. Lorsque l’un des trois composants de couleur change de valeur, la propriété `Color` est recalculée et les événements `PropertyChanged` sont déclenchés pour les quatre propriétés :
+La classe `HslColorViewModel` définit cinq propriétés : Les propriétés `Hue`, `Saturation`, `Luminosity` et `Color` sont liées entre elles. Lorsque l’un des trois composants de couleur change de valeur, la propriété `Color` est recalculée et les événements `PropertyChanged` sont déclenchés pour les quatre propriétés :
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -256,7 +258,7 @@ Le fichier XAML **Simple Color Selector** instancie le `HslColorViewModel` dans 
 </ContentPage>
 ```
 
-`BoxView`, `Label` et les trois vues `Slider` héritent du contexte de liaison de l’objet `Grid`. Ces vues sont toutes des cibles de liaison qui référencent les propriétés sources dans le ViewModel. Pour la propriété `Color` de `BoxView` et la propriété `Text` de `Label`, les liaisons de données sont `OneWay` : les propriétés dans la vue sont définies à partir des propriétés dans le ViewModel.
+`BoxView`, `Label` et les trois vues `Slider` héritent du contexte de liaison de l’objet `Grid`. Ces vues sont toutes des cibles de liaison qui référencent les propriétés sources dans le ViewModel. Pour la propriété `Color` de `BoxView` et la propriété `Text` de `Label`, les liaisons de données sont `OneWay` : Les propriétés dans la vue sont définies à partir des propriétés dans ViewModel.
 
 La propriété `Value` de `Slider`, toutefois, est `TwoWay`. Cela permet de définir chaque élément `Slider` à partir du ViewModel, ainsi que le ViewModel à partir de chaque élément `Slider`.
 
@@ -414,9 +416,9 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 
 Chaque paramètre d’application est une propriété qui est enregistrée dans le dictionnaire de propriétés de Xamarin.Forms, dans une méthode nommée `SaveState` et chargée à partir de ce dictionnaire dans le constructeur. Vers le bas de cette classe, deux méthodes aident à rationaliser les objets ViewModel et à les rendre moins sujets aux erreurs. La méthode `OnPropertyChanged` du bas possède un paramètre facultatif qui est défini sur la propriété appelante. Il permet d’éviter les fautes d’orthographe lors de la spécification du nom de la propriété sous forme de chaîne.
 
-La méthode `SetProperty` dans la classe fait encore plus : elle compare la valeur définie sur la propriété avec la valeur stockée en tant que champ, et elle appelle `OnPropertyChanged` seulement si ces deux valeurs ne sont pas identiques.
+La méthode `SetProperty` dans la classe fait encore plus : Elle compare la valeur définie sur la propriété avec la valeur stockée en tant que champ, et elle appelle `OnPropertyChanged` seulement si ces deux valeurs ne sont pas identiques.
 
-La classe `SampleSettingsViewModel` définit deux propriétés pour la couleur d’arrière-plan : la propriété `BackgroundNamedColor` est de type `NamedColor`, qui est une classe également incluse dans la solution **DataBindingDemos**. La propriété `BackgroundColor` est de type `Color` et est obtenue à partir de la propriété `Color` de l’objet `NamedColor`.
+La classe `SampleSettingsViewModel` définit deux propriétés pour la couleur d’arrière-plan : La propriété `BackgroundNamedColor` est de type `NamedColor`, qui est une classe également incluse dans la solution **DataBindingDemos**. La propriété `BackgroundColor` est de type `Color` et est obtenue à partir de la propriété `Color` de l’objet `NamedColor`.
 
 La classe `NamedColor` utilise la réflexion .NET pour énumérer tous les champs publics statiques dans la structure `Color` de Xamarin.Forms et pour les stocker avec leurs noms dans une collection accessible à partir de la propriété statique `All` :
 
@@ -562,7 +564,7 @@ public partial class App : Application
 
 Pour plus d’informations sur les méthodes de cycle de vie d’application, consultez l’article [**Cycle de vie d’application**](~/xamarin-forms/app-fundamentals/app-lifecycle.md).
 
-Presque tout le reste est géré dans le fichier **SampleSettingsPage.xaml**. Le `BindingContext` de la page est défini à l’aide d’une extension de balisage `Binding` : la source de la liaison est la propriété statique `Application.Current`, qui est l’instance de la classe `App` dans le projet et le `Path` est défini sur la propriété `Settings`, qui est l’objet `SampleSettingsViewModel` :
+Presque tout le reste est géré dans le fichier **SampleSettingsPage.xaml**. Le `BindingContext` de la page est défini à l’aide d’une extension de balisage `Binding` : La source de la liaison est la propriété statique `Application.Current`, qui est l’instance de la classe `App` dans le projet et le `Path` est défini sur la propriété `Settings`, qui est l’objet `SampleSettingsViewModel` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

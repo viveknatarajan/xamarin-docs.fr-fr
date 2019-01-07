@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 09fe3587e4e435383822e50bd12616747b807f82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7eea0a4eba201d7332c5e3e5222729bcb5e14a07
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108455"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054059"
 ---
 # <a name="localization"></a>Localisation
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
 
 _Vous pouvez localiser les applications Xamarin.Forms à l’aide de fichiers de ressources.NET._
 
@@ -73,7 +75,7 @@ L’arborescence de la solution montre les fichiers liés. Vous *devez* modifier
 
 Par défaut, quand des références aux chaînes fortement typées sont générées, elles sont `internal` pour l’assembly. En effet, l’outil de build par défaut pour les fichiers RESX génère le fichier **.designer.cs** avec des propriétés `internal`.
 
-Sélectionnez le fichier **AppResources.resx**, puis affichez le panneau **Propriétés** pour voir où cet outil de build est configuré. La capture d’écran ci-dessous montre l’**outil personnalisé : ResXFileCodeGenerator**.
+Sélectionnez le fichier **AppResources.resx**, puis affichez le panneau **Propriétés** pour voir où cet outil de build est configuré. La capture d’écran ci-dessous montre **l’outil personnalisé : ResXFileCodeGenerator**.
 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -556,7 +558,7 @@ namespace UsingResxLocalization.Android
 Une fois ce code ajouté au projet d’application Android, il peut afficher automatiquement les chaînes traduites.
 
 > [!NOTE]
->️ **AVERTISSEMENT :** Si les chaînes traduites fonctionnent correctement dans vos builds Android de MISE EN PRODUCTION mais pas pendant le débogage, cliquez avec le bouton droit sur **Projet Android**, sélectionnez **Options > Build > Build Android**, puis vérifiez que l’option **Déploiement d’assembly rapide** n’est PAS cochée. Cette option entraîne des problèmes de chargement de ressources. Vous ne devez pas l’utiliser si vous testez des applications localisées.
+>️ **AVERTISSEMENT :** Si les chaînes traduites fonctionnent correctement dans vos builds Android de MISE EN PRODUCTION mais pas pendant le débogage, cliquez avec le bouton droit sur **Projet Android**, sélectionnez **Options > Build > Build Android**, puis vérifiez que l’option **Déploiement d’assembly rapide** n’est PAS cochée. Cette option entraîne des problèmes de chargement de ressources. Vous ne devez pas l’utiliser si vous testez des applications localisées.
 
 Pour plus d’informations sur la localisation Android, consultez [Localisation Android](~/android/app-fundamentals/localization.md).
 

@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: a8858839c51e519ac50dd59d223a6c15cee9e6bf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dff57b142745729d5d38db4cce892bb1d55796a6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123451"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059728"
 ---
 # <a name="preparing-an-application-for-release"></a>Préparation d’une application pour la mise en production
-
 
 Une fois qu’une application a été codée et testée, il est nécessaire de préparer un paquet pour la distribution. La première tâche de préparation de ce package consiste à générer l’application à mettre en production, ce qui implique principalement de définir différents attributs d’application.
 
@@ -63,7 +62,6 @@ Dans ces exemples, `@drawable/icon` fait référence à un fichier d’icône qu
 ```
 
 Normalement, `using Android.App` est déclaré au niveau de la partie supérieure de **AssemblyInfo.cs** (l’espace de noms de l’attribut `Application` est `Android.App`) ; toutefois, vous devrez peut-être ajouter cette instruction `using` si elle n’est pas déjà présente.
-
 
 <a name="Versioning" />
 
@@ -137,7 +135,6 @@ Les options de contrôle de l’éditeur de liens sont les suivantes :
 
 La liaison peut avoir des effets secondaires inattendus. Il est donc important de tester à nouveau une application en mode Mise en production sur un appareil physique.
 
-
 ### <a name="proguard"></a>ProGuard
 
 *ProGuard* est un outil du kit Android SDK qui lie et obfusque le code Java. ProGuard est généralement utilisé pour créer des applications plus petites en réduisant l’encombrement des grandes bibliothèques (comme Services Google Play) qui se trouvent dans votre APK. ProGuard supprime le bytecode Java non utilisé, ce qui réduit la taille de l’application. Par exemple, l’utilisation de ProGuard sur de petites applications Xamarin.Android permet généralement de réduire la taille d’environ 24 % &ndash; sur des applications plus grandes avec de multiples dépendances de bibliothèques, la réduction de la taille est encore plus importante. 
@@ -184,7 +181,6 @@ Le manifeste Android contient l’attribut `android:debuggable`, qui contrôle s
 ```
 
 Notez que les builds Debug définissent automatiquement certaines autorisations pour faciliter le débogage (comme **Internet** et **ReadExternalStorage**). Toutefois, les builds Debug n’utilisent que les autorisations que vous configurez explicitement. Si vous découvrez qu’en basculant vers la build de mise en production votre application perd une autorisation qui était disponible dans la build Debug, vérifiez que vous avez explicitement activé cette autorisation dans la liste **Autorisations nécessaires**, comme décrit dans [Autorisations](~/android/app-fundamentals/permissions.md). 
- 
 
 <a name="dotfuscator" id="dotfuscator" />
 
@@ -228,7 +224,6 @@ L’option **Compilation AOT** (sur la page [Propriétés de création de packag
 
 L’option **Compilation AOT** requiert une licence Entreprise ou supérieure. Cette option est disponible uniquement lorsque le projet est configuré pour le mode Mise en production et elle est désactivée par défaut. Pour plus d’informations sur la compilation AOT, consultez [AOT](http://www.mono-project.com/docs/advanced/aot/).
 
-
 #### <a name="llvm-optimizing-compiler"></a>Compilateur d'optimisation LLVM
 
 Le _compilateur d’optimisation LLVM_ crée du code compilé plus petit et plus rapide et convertit en code natif les assembys compilés en AOT, mais au détriment de la vitesse de génération qui est plus lente. Le compilateur LLVM est désactivé par défaut. Pour utiliser le compilateur LLVM, l’option **Compilation AOT** doit être activée au préalable (sur la page [Propriétés de création de packages](#Set_Packaging_Properties)).
@@ -257,16 +252,13 @@ Les propriétés de création de package peuvent être définies dans les **Opti
 
 Nombre de ces propriétés, comme **Utiliser le runtime partagé** et **Utiliser Fast Deployment**, sont prévues pour le mode Debug. Toutefois, lorsque l’application est configurée pour le mode Mise en production, d’autres paramètres permettent de déterminer la manière dont l’application est [optimisée en termes de taille et de vitesse d’exécution](#shrink_apk), [la manière dont elle est protégée contre la falsification](#protect_app) et la manière dont elle peut être ajoutée à un package pour prendre en charge différentes architectures et restrictions de taille.
 
-
 ### <a name="specify-supported-architectures"></a>Spécifier les architectures prises en charge
 
 Lors de la préparation d’une application Xamarin.Android pour sa mise en production, il est nécessaire de spécifier les architectures de processeur qui sont prises en charge. Un même APK peut contenir du code machine permettant la prise en charge de plusieurs architectures différentes. Pour plus d’informations sur la prise en charge de plusieurs architectures de processeur, consultez [Architectures de processeur](~/android/app-fundamentals/cpu-architectures.md).
 
-
 ### <a name="generate-one-package-apk-per-selected-abi"></a>Générer un package (.APK) par ABI sélectionnée
 
 Lorsque cette option est activée, un APK est créé pour chacune des ABI prises en charge (sélectionnées sous l’onglet **Avancé**, comme décrit dans [Architectures de processeur](~/android/app-fundamentals/cpu-architectures.md)), plutôt qu’un seul grand APK pour toutes les ABI prises en charge. Cette option est disponible uniquement quand le projet est configuré pour le mode Mise en production et elle est désactivée par défaut.
-
 
 ### <a name="multi-dex"></a>Multi-Dex
 
@@ -292,7 +284,6 @@ Une fois que toutes les étapes ci-dessus sont terminées, compilez l’applicat
 
 -----
 
-
 <a name="archive" />
 
 ## <a name="archive-for-publishing"></a>Archiver pour publication
@@ -310,7 +301,6 @@ Pour commencer le processus de publication, cliquez avec le bouton droit sur le 
 Vous pouvez également créer une archive en cliquant avec le bouton droit sur la solution dans l’**Explorateur de solutions**, puis en sélectionnant **Archiver tout...** , ce qui génère la solution et archive tous les projets Xamarin pouvant générer une archive :
 
 [![Archiver tout](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
-
 
 **Archiver** et **Archiver tout** lancent automatiquement le **Gestionnaire d’archives**. Pour lancer directement le **Gestionnaire d’archives**, cliquez sur l’élément de menu **Outils > Gestionnaire d’archives...**  :
 
@@ -370,7 +360,6 @@ Dans cet exemple, le **Gestionnaire d’archives** répertorie une seule applica
 
 [![Signer et distribuer](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
-
 Vous pouvez y sélectionner le canal de distribution :
 
 -   **Ad-Hoc** &ndash; Enregistre un APK signé sur disque de manière à pouvoir en charger une version test sur des appareils Android. Poursuivez avec [Signature du paquet d’application](~/android/deploy-test/signing/index.md) pour apprendre à créer une identité de signature Android, à créer un certificat de signature pour les applications Android et à publier une version &ldquo;ad hoc&rdquo; de l’application sur disque. Il s’agit d’un bon moyen de créer un APK de test.
@@ -380,7 +369,6 @@ Vous pouvez y sélectionner le canal de distribution :
     Poursuivez avec [Publication sur Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) pour apprendre comment signer et publier un APK sur Google Play Store.
 
 -----
-
 
 ## <a name="related-links"></a>Liens associés
 

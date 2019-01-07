@@ -6,13 +6,13 @@ ms.assetid: 1A674212-72DB-4AA4-B626-A4EC135AD1A0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2018
-ms.openlocfilehash: 933368f7ca1435ece4f20945b2f8e905f7584217
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 12/11/2018
+ms.openlocfilehash: 422311c766584cbd27d0ab0c42adee042e9aac3e
+ms.sourcegitcommit: 408b78dd6eded4696469e316af7922a5991f2211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899382"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246293"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
@@ -50,7 +50,7 @@ Dans chaque `ContentPage`, des instances `ContentPage` peuvent être ajoutées �
 
 ## <a name="bootstrapping-a-shell-application"></a>Amorçage d’une application Shell
 
-Pour amorcer une application Shell, vous définissez la propriété `MainPage` de la classe `App` sur une nouvelle instance `Shell` :
+Pour amorcer une application Shell, vous définissez la propriété `MainPage` de la classe `App` sur une instance d’un fichier Shell :
 
 ```csharp
 namespace TailwindTraders.Mobile
@@ -62,13 +62,13 @@ namespace TailwindTraders.Mobile
             InitializeComponent();
 
             Forms.SetFlags("Shell_Experimental");
-            MainPage = new Shell();
+            MainPage = new TheShell();
         }
     }
 }
 ```
 
-La classe `Shell` est un fichier XAML qui décrit la structure visuelle de votre application.
+La classe `TheShell` est un fichier XAML qui décrit la structure visuelle de votre application.
 
 > [!IMPORTANT]
 > Shell étant en phase expérimentale, vous pouvez uniquement l’utiliser en ajoutant `Forms.SetFlags("Shell_Experimental");` soit à votre classe `App`, avant de créer l’instance `Shell`, soit à votre projet de plateforme, avant d’appeler la méthode `Forms.Init`.
@@ -83,13 +83,13 @@ Un fichier Shell se compose de trois éléments hiérarchiques :
 
 Aucun de ces éléments ne représente une interface utilisateur, mais plutôt l’organisation de la structure visuelle de l’application. À partir de ces éléments, Shell génère l’interface utilisateur de navigation pour le contenu.
 
-Le code XAML suivant montre un exemple simple d’un fichier`Shell` :
+Le code XAML suivant montre un exemple simple d’un fichier Shell :
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -97,7 +97,7 @@ Le code XAML suivant montre un exemple simple d’un fichier`Shell` :
                 <local:HomePage />
             </ShellContent>
         </ShellSection>
-    <ShellItem>
+    </ShellItem>
 </Shell>
 ```
 
@@ -117,8 +117,8 @@ Vous pouvez augmenter le nombre d’éléments du menu volant en ajoutant des in
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -349,7 +349,7 @@ Vous pouvez définir le style des onglets à l’aide de styles XAML ou en fourn
 
 Shell inclut une expérience de navigation basée sur les URI. Les URI fournissent une expérience de navigation améliorée qui permet d’accéder à n’importe quelle page de l’application sans avoir à suivre une hiérarchie de navigation définie. De plus, l’utilisateur peut revenir en arrière sans avoir à visiter toutes les pages de la pile de navigation.
 
-Cette navigation basée sur les URI fait appel à des routes, segments d’URI utilisés pour naviguer dans l’application. Le fichier `Shell` doit déclarer un schéma de route, un hôte de route et une route :
+Cette navigation basée sur les URI fait appel à des routes, segments d’URI utilisés pour naviguer dans l’application. Le fichier Shell doit déclarer un schéma de route, un hôte de route et une route :
 
 ```xaml
 <Shell ...
@@ -362,9 +362,9 @@ Cette navigation basée sur les URI fait appel à des routes, segments d’URI u
 
 Combinées, les valeurs de propriété `RouteScheme`, `RouteHost` et `Route` forment l’URI racine `app://www.microsoft.com/tailwindtraders`.
 
-Chaque élément de la classe `Shell` peut également définir une propriété de routage utilisable dans une navigation programmatique.
+Chaque élément du fichier Shell peut également définir une propriété de routage utilisable dans une navigation programmatique.
 
-Dans le constructeur `Shell`, ou à tout autre emplacement qui s’exécute avant qu’une route ne soit appelée, vous pouvez explicitement inscrire des routes supplémentaires pour toutes les pages qui ne sont pas représentées par un élément Shell (telles que les instances `MenuItem`) :
+Dans le constructeur de fichier Shell, ou à tout autre emplacement qui s’exécute avant qu’une route ne soit appelée, vous pouvez explicitement inscrire des routes supplémentaires pour toutes les pages qui ne sont pas représentées par un élément Shell (telles que les instances `MenuItem`) :
 
 ```csharp
 Routing.RegisterRoute("productcategory", typeof(ProductCategoryPage));
@@ -435,7 +435,7 @@ void OnShellNavigating(object sender, ShellNavigatingEventArgs e)
 
 La classe `ShellNavigatingEventArgs` fournit les propriétés suivantes :
 
-| Propriété | Type | Description |
+| Property | Type | Description |
 |---|---|---|
 | Actuel | `ShellNavigationState` | URI de la page actuelle. |
 | Source | `ShellNavigationState` | URI représentant l’origine de la navigation. |
@@ -447,7 +447,7 @@ De plus, la classe `ShellNavigatingEventArgs` fournit une méthode `Cancel`.
 
 La classe `ShellNavigatedEventArgs` fournit les propriétés suivantes :
 
-| Propriété | Type | Description |
+| Property | Type | Description |
 |---|---|---|
 | Actuel | `ShellNavigationState` | URI de la page actuelle. |
 | Précédent| `ShellNavigationState` | URI de la page précédente. |

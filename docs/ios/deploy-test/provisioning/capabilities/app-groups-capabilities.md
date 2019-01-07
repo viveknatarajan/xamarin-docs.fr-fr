@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 4ce04f21a3e520fea9da5d538fb7cc0ac098ad31
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56284f1d3c5fec479badf91852acba2bf538bddd
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119835"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411737"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Fonctionnalités App Group dans Xamarin.iOS
 
@@ -34,12 +34,12 @@ Pour créer un App Group, effectuez les étapes suivantes :
 
 1.  Accédez au  [Centre des développeurs iOS](https://developer.apple.com/account/) d’Apple et connectez-vous à l’aide de votre  **compte** .
 2.  Sélectionnez **Certificates, Identifiers & Profiles**.
-3.  Sous **Identifiers (Identificateurs)** sélectionnez  **App Groups (Groupes d’applications)** et cliquez sur le bouton **+**  pour créer un groupe.
+3.  Sous **Identifiers**, sélectionnez **App Groups** et cliquez sur le bouton **+** pour créer un groupe.
 4.  Entrez un  **Name (Nom)** et un **Identifier (Identificateur)** pour le nouveau groupe, puis cliquez sur le bouton  **Continue (Continuer)** : 
    
     ![Détails de l’ajout d’un App Group](app-groups-capabilities-images/image52.png)
 
-5.  Cliquez sur le bouton **Register (Inscrire)** pour créer le groupe, puis sur  **Done (Terminé)** pour retourner à la liste des groupes d’applications inscrits.
+5.  Cliquez sur le bouton **Register** pour créer le groupe et sur **Done** pour revenir à la liste des App Groups inscrits.
 
 ## <a name="configure-an-app-to-use-app-groups"></a>Configurer une application pour utiliser des App Groups
 
@@ -48,15 +48,15 @@ Une fois que vous avez créé l’App Group, configurez les ID d’application p
 Effectuez ce qui suit :
 
 1.  Accédez au  [Centre des développeurs iOS](https://developer.apple.com/account/) d’Apple, puis connectez-vous à l’aide d’un compte de développeur Apple.
-2.  Dans le menu **Program Resources (Ressources de programme)** , sélectionnez **Certificates, IDs & Profiles (Certificats, ID et profils)**.
-3.  Sous **Identifiers (Identificateurs)** sélectionnez  **App IDs (ID d’applications)** et cliquez sur le bouton **+**  pour créer un ID.
+2.  Dans le menu **Program Resources**, sélectionnez **Certificates, Identifiers & Profiles**.
+3.  Sous **Identifiers**, sélectionnez **App IDs** et cliquez sur le bouton **+** pour créer un ID d’application.
 4.  Entrez un nom pour l’ID d’application et attribuez-lui un ID d’application explicite.
-5.  Sous **App Services** activez **App Groups (Groupes d’applications)**, puis cliquez sur le bouton Continue (Continuer) :
+5.  Sous **App Services**, activez **App Groups**, puis cliquez sur le bouton Continue :
 
     ![Ajouter un App Group (App Services)](app-groups-capabilities-images/image53.png)
 
 6.  Vérifiez les paramètres, puis cliquez sur le bouton  **Register (Inscrire)** pour créer l’ID d’application.
-7.  Cliquez sur le bouton **Done (Terminé)** pour retourner à la liste des ID d’applications inscrits.
+7.  Cliquez sur le bouton **Done** pour revenir à la liste des ID d’application inscrits.
 8.  Sélectionnez dans la liste l’ID d’application créé, puis cliquez sur le bouton  **Edit (Modifier)** :
 
     ![Sélectionner l’ID d’application dans la liste](app-groups-capabilities-images/image54.png)
@@ -69,7 +69,7 @@ Effectuez ce qui suit :
 
     ![Ajouter un App Group](app-groups-capabilities-images/image56.png)
 
-11. Cliquez sur le bouton  **Assign (Affecter)** , puis sur le bouton  **Done (Terminé)** pour retourner à la liste des ID d’applications inscrits.
+11. Cliquez sur le bouton **Assign**, puis sur le bouton **Done** pour revenir à la liste des ID d’application inscrits.
 12. Répétez ces étapes pour chaque application (ou extension) devant utiliser l’App Group.
 
 ## <a name="next-steps"></a>Étapes suivantes

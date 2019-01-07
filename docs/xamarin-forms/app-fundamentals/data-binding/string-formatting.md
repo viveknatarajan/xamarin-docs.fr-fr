@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 2dd7efb9f295143775961afb97e70b5f241d1337
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170947"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056121"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formatage de chaîne dans Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Il est parfois pratique d’utiliser des liaisons de données pour afficher la représentation de chaîne d’un objet ou d’une valeur. Par exemple, vous souhaiterez peut-être utiliser un objet `Label` pour afficher la valeur actuelle d’un élément `Slider`. Dans cette liaison de données, l’élément `Slider` est la source, et la cible est la propriété `Text` de l’objet `Label`.
 
@@ -22,7 +24,7 @@ Lors de l’affichage de chaînes dans le code, l’outil le plus puissant est l
 
 ## <a name="the-stringformat-property"></a>Propriété StringFormat
 
-Cette fonctionnalité est reportée dans les liaisons de données : vous définissez la propriété [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) de `Binding` (ou la propriété [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) de l’extension de balisage `Binding`) sur une chaîne de formatage standard avec un espace réservé :
+Cette fonctionnalité est reportée dans les liaisons de données : Vous définissez la propriété [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) de `Binding` (ou la propriété [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) de l’extension de balisage `Binding`) sur une chaîne de formatage standard avec un espace réservé :
 
 ```xaml
 <Slider x:Name="slider" />
@@ -178,7 +180,7 @@ Il existe désormais trois paires d’éléments `Slider` et `Label` qui sont li
 
 Vous vous demandez peut-être comment afficher les valeurs RVB (rouge, vert, bleu) au format hexadécimal à deux chiffres traditionnel. Ces valeurs entières ne sont pas directement disponibles à partir de la structure `Color`. Une solution consisterait à calculer les valeurs entières des composantes de couleur dans le ViewModel et à les exposer en tant que propriétés. Vous pourriez alors les formater à l’aide de la spécification de formatage `X2`.
 
-Une autre approche est plus générale : vous pouvez écrire un *convertisseur de valeurs de liaison* comme indiqué dans le prochain article, [**Convertisseurs de valeurs de liaison**](converters.md).
+Une autre approche est plus générale : Vous pouvez écrire un *convertisseur de valeurs de liaison* comme indiqué dans le prochain article, [**Convertisseurs de valeurs de liaison**](converters.md).
 
 Le prochain article, toutefois, explore le [**chemin de liaison**](binding-path.md) plus en détail et montre comment vous pouvez l’utiliser pour référencer des sous-propriétés et des éléments dans des collections.
 

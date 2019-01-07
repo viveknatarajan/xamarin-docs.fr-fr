@@ -7,21 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 62dae2f85abb7327e133f008e27e2519ccdc2f68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675196"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051981"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Liaisons de base Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Une liaison de données Xamarin.Forms lie une paire de propriétés entre deux objets, dont au moins un est généralement un objet d’interface utilisateur. Ces deux objets sont appelés la *cible* et la *source* :
 
 - La *cible* est l’objet (et la propriété) sur lequel la liaison de données est définie.
 - La *source* est l’objet (et la propriété) référencé par la liaison de données.
 
-Cette distinction peut parfois porter à confusion : dans le cas le plus simple, les données circulent de la source vers la cible, ce qui signifie que la valeur de la propriété cible est définie à partir de la valeur de la propriété source. Toutefois, dans certains cas, les données peuvent également circuler de la cible vers la source ou dans les deux sens. Pour éviter toute confusion, n’oubliez pas que la cible est toujours l’objet sur lequel la liaison de données est définie, même si elle fournit des données au lieu d’en recevoir.
+Cette distinction peut parfois porter à confusion : Dans le cas le plus simple, les données circulent de la source vers la cible, ce qui signifie que la valeur de la propriété cible est définie à partir de la valeur de la propriété source. Toutefois, dans certains cas, les données peuvent également circuler de la cible vers la source ou dans les deux sens. Pour éviter toute confusion, n’oubliez pas que la cible est toujours l’objet sur lequel la liaison de données est définie, même si elle fournit des données au lieu d’en recevoir.
 
 ## <a name="bindings-with-a-binding-context"></a>Liaisons avec un contexte de liaison
 
@@ -84,7 +86,7 @@ Cette règle implique que l’objet cible doit être une instance d’une classe
 
 Il n’y a pas de règle de ce type pour la propriété source, qui est spécifiée en tant que chaîne. En interne, la réflexion est utilisée pour accéder à la propriété réelle. Dans ce cas particulier, toutefois, la propriété `Value` repose également sur une propriété pouvant être liée.
 
-Le code peut être quelque peu simplifié : la propriété pouvant être liée `RotationProperty` est définie par `VisualElement` et héritée par `Label` et `ContentPage`. Par conséquent, le nom de la classe n’est pas requis dans l’appel `SetBinding` :
+Le code peut être quelque peu simplifié : La propriété pouvant être liée `RotationProperty` est définie par `VisualElement` et héritée par `Label` et `ContentPage`. Par conséquent, le nom de la classe n’est pas requis dans l’appel `SetBinding` :
 
 ```csharp
 label.SetBinding(RotationProperty, "Value");
@@ -135,7 +137,7 @@ Mais ce n'est pas correct. Ce balisage définit la propriété `BindingContext` 
 
 Notez que la propriété source est spécifiée avec la propriété [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) de `BindingExtension`, qui correspond à la propriété [`Path`](xref:Xamarin.Forms.Binding.Path) de la classe [`Binding`](xref:Xamarin.Forms.Binding).
 
-Le balisage affiché dans la page **Basic XAML Binding** peut être simplifié : les extensions de balisage XAML telles que `x:Reference` et `Binding` peuvent avoir des attributs de *propriété de contenu* définis, ce qui signifie pour des extensions de balisage XAML que le nom de propriété n’a pas besoin d’apparaître. La propriété `Name` est la propriété de contenu de `x:Reference` et la propriété `Path` est la propriété de contenu de `Binding`, ce qui signifie que vous pouvez les éliminer des expressions :
+Le balisage affiché dans la page **Basic XAML Binding** peut être simplifié : Les extensions de balisage XAML telles que `x:Reference` et `Binding` peuvent avoir des attributs de *propriété de contenu* définis, ce qui signifie pour des extensions de balisage XAML que le nom de propriété n’a pas besoin d’apparaître. La propriété `Name` est la propriété de contenu de `x:Reference` et la propriété `Path` est la propriété de contenu de `Binding`, ce qui signifie que vous pouvez les éliminer des expressions :
 
 ```xaml
 <Label Text="TEXT"
@@ -252,7 +254,7 @@ Bien que les extensions de balisage XAML soient généralement délimitées par 
 </Label>
 ```
 
-Maintenant, les propriétés `Source` et `Path` sont des attributs XAML réguliers : les valeurs apparaissent entre guillemets et les attributs ne sont pas séparés par une virgule. L’extension de balisage `x:Reference` peut également devenir un élément objet :
+Maintenant, les propriétés `Source` et `Path` sont des attributs XAML réguliers : Les valeurs apparaissent entre guillemets et les attributs ne sont pas séparés par une virgule. L’extension de balisage `x:Reference` peut également devenir un élément objet :
 
 ```xaml
 <Label Text="TEXT"

@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: f3b1f5c11a02710de8d0ffd09741acb3017f5cb6
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: cefcc7084b2abab4af61f07ef1f33a4f4c363f69
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "43780492"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815202"
 ---
 # <a name="introduction-to-mobile-development"></a>Introduction au développement mobile
 
@@ -61,7 +61,7 @@ Dans les deux cas, les applications Xamarin utilisent un runtime qui gère autom
 
 Les applications Xamarin sont basées sur un sous-ensemble de la bibliothèque de classes de base .NET, appelé profil Xamarin Mobile. Ce profil a été créé spécialement pour les applications mobiles, et il est inclus dans MonoTouch.dll et Mono.Android.dll (pour iOS et Android respectivement). Ceci est très similaire à la façon dont les applications Silverlight (et Moonlight) sont basées sur le profil .NET Silverlight/Moonlight. En effet, le profil Xamarin Mobile est équivalent au profil Silverlight 4.0, mais contient des classes supplémentaires issues de la bibliothèque de classes de base.
 
-Pour obtenir la liste complète des classes et des assemblys disponibles, consultez la [liste des assemblys Xamarin.iOS](~/cross-platform/internals/available-assemblies.md) et la [liste des assemblys Xamarin.Android](~/cross-platform/internals/available-assemblies.md).
+Pour obtenir la liste complète des classes et des assemblys disponibles, consultez la [liste des assemblys Xamarin.iOS](~/cross-platform/internals/available-assemblies.md?context=xamarin/ios) et la [liste des assemblys Xamarin.Android](~/cross-platform/internals/available-assemblies.md?context=xamarin/android).
 
 Outre la bibliothèque de classes de base, ces fichiers .dll incluent des wrappers pour quasiment tout le SDK iOS et Android SDK, ce qui permet aux API de SDK sous-jacentes d’être appelées directement à partir du code C#.
 

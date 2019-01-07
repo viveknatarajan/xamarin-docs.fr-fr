@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 93218289cefe26c523bf14721202f7ec4743f022
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527363"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057611"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Gestion des fichiers dans Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
 
 _La gestion de fichiers avec Xamarin.Forms est possible à l’aide de code dans une bibliothèque .NET Standard, ou en utilisant des ressources incorporées._
 
@@ -62,7 +64,7 @@ Ces opérations sont démontrées dans l’exemple d’application, qui inclut u
 
 ## <a name="loading-files-embedded-as-resources"></a>Chargement de fichiers incorporés en tant que ressources
 
-Pour incorporer un fichier dans un assembly **.NET Standard**, créez ou ajoutez un fichier, puis vérifiez que **Action de génération = EmbeddedResource**.
+Pour incorporer un fichier dans un assembly **.NET Standard**, créez ou ajoutez un fichier, puis vérifiez que **Action de génération : EmbeddedResource**.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

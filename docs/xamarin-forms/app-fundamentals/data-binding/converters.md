@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 28892692133020de1fa5a6eb007bb3f9bcf2612b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4594da09d48a0888a88cbce9ab135a007eb6f4cd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997478"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054329"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Convertisseurs de valeurs de liaison Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Les liaisons de données transfèrent généralement des données d’une propriété source vers une propriété cible et, dans certains cas, de la propriété cible vers la propriété source. Ce transfert est direct lorsque les propriétés source et cible sont du même type, ou quand un type peut être converti vers l’autre type via une conversion implicite. Lorsque ce n’est pas le cas, une conversion de type doit avoir lieu.
 
@@ -45,7 +47,7 @@ Vous définissez une instance de cette classe sur la propriété [`Converter`](x
 
 La méthode `Convert` est appelée lorsque les données sont transférées de la source vers la cible dans des liaisons `OneWay` ou `TwoWay`. Le paramètre `value` correspond à l’objet ou la valeur de la source de liaison de données. La méthode doit retourner une valeur du type de la cible de liaison de données. La méthode illustrée ici caste le paramètre `value` en `int` puis le compare à 0 pour une valeur renvoyée `bool`.
 
-La méthode `ConvertBack` est appelée lorsque les données sont transférées de la cible vers la source dans des liaisons `TwoWay` ou `OneWayToSource`. `ConvertBack` effectue la conversion inverse : il suppose que le paramètre `value` est un `bool` issu de la cible et le convertit en une valeur renvoyée `int` pour la source.
+La méthode `ConvertBack` est appelée lorsque les données sont transférées de la cible vers la source dans des liaisons `TwoWay` ou `OneWayToSource`. `ConvertBack` effectue la conversion inverse : Il suppose que le paramètre `value` est un `bool` issu de la cible et le convertit en une valeur renvoyée `int` pour la source.
 
 Si la liaison de données inclut également un paramètre `StringFormat`, le convertisseur de valeurs est appelé avant que le résultat soit formaté en tant que chaîne.
 
@@ -130,7 +132,7 @@ public class BoolToObjectConverter<T> : IValueConverter
 }
 ```
 
-La page **Switch Indicators** (Indicateurs de commutateur) montre comment l’utiliser pour afficher la valeur d’une vue `Switch`. Bien qu’il soit courant d’instancier des convertisseurs de valeur comme des ressources dans un dictionnaire de ressources, cette page montre une alternative : chaque convertisseur de valeurs est instancié entre des balises d’élément de propriété `Binding.Converter`. `x:TypeArguments` indique l’argument générique, et `TrueObject` et `FalseObject` sont tous les deux définis sur des objets de ce type :
+La page **Switch Indicators** (Indicateurs de commutateur) montre comment l’utiliser pour afficher la valeur d’une vue `Switch`. Bien qu’il soit courant d’instancier des convertisseurs de valeur comme des ressources dans un dictionnaire de ressources, cette page montre une alternative : Chaque convertisseur de valeurs est instancié entre des balises d’élément de propriété `Binding.Converter`. `x:TypeArguments` indique l’argument générique, et `TrueObject` et `FalseObject` sont tous les deux définis sur des objets de ce type :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 5ffc167b1e5695663dff6005f3d7e0ba0ea958db
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 0c63e33309802f0945ad94a858af45f6b29b2cc4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172104"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050777"
 ---
 # <a name="xamarinforms-binding-path"></a>Liaison de données Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Dans tous les exemples précédents de liaison de données, la propriété [`Path`](xref:Xamarin.Forms.Binding.Path) de la classe `Binding` (ou la propriété [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) de l’extension de balisage `Binding`) a été définie sur une propriété unique. Il est en fait possible de définir `Path` sur une *sous-propriété* (une propriété d’une propriété) ou un membre d’une collection.
 
@@ -140,7 +142,7 @@ Voici le programme en cours d’exécution :
 
 ## <a name="debugging-complex-paths"></a>Débogage de chemins complexes
 
-Les définitions de chemins complexes peuvent être difficiles à construire : vous devez connaître le type de chaque sous-propriété ou le type des éléments dans la collection pour ajouter correctement la sous-propriété suivante, mais les types eux-mêmes n’apparaissent pas dans le chemin. Une bonne technique consiste à générer le chemin de façon incrémentielle et d’examiner les résultats intermédiaires. Pour ce dernier exemple, vous pouvez commencer sans aucune définition `Path` :
+Les définitions de chemins complexes peuvent être difficiles à construire : Vous devez connaître le type de chaque sous-propriété ou le type des éléments dans la collection pour ajouter correctement la sous-propriété suivante, mais les types eux-mêmes n’apparaissent pas dans le chemin. Une bonne technique consiste à générer le chemin de façon incrémentielle et d’examiner les résultats intermédiaires. Pour ce dernier exemple, vous pouvez commencer sans aucune définition `Path` :
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 05c77c4c47841a897d0d1de5c3ba004db524ea2d
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 235a30293939333555c52b8d9e00bcf25ddd4dbd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "36310138"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055959"
 ---
 # <a name="xamarinforms-local-databases"></a>Bases de données locales Xamarin.Forms
+
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
 
 _Xamarin.Forms prend en charge les applications pilotées par base de données à l’aide du moteur de base de données SQLite, ce qui permet de charger et d’enregistrer des objets dans du code partagé. Cet article explique comment les applications Xamarin.Forms peuvent lire et écrire des données dans une base de données SQLite locale à l’aide de SQLite.Net._
 
@@ -36,7 +38,7 @@ Pour ajouter la prise en charge SQLite dans une bibliothèque.NET Standard Xamar
 
 Il existe plusieurs packages NuGet avec des noms similaires. Le bon package a les attributs suivants :
 
-- **Créé par :** Frank A. Krueger
+- **Créé par :** Frank A. Krueger
 - **ID**  sqlite-net-pcl
 - **Lien NuGet :** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
