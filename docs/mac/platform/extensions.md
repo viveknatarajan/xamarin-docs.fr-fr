@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de l’Extension Xamarin.Mac
+title: Prise en charge de l’extension Xamarin.Mac
 description: Ce document décrit la prise en charge de Xamarin.Mac pour les extensions de recherche, le partage et aujourd'hui. Il examine les limitations et problèmes connus, des liens vers une procédure pas à pas et l’exemple d’application et fournit des conseils pour travailler avec des extensions.
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 60b981a764a2656210730ae0602ff32dc580cd0a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0f4d6bb042f8bc8d48b45d7148984a53e3ce3437
+ms.sourcegitcommit: e3e851080e6ea0b77e355487a61348d8e0419b09
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117562"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060068"
 ---
-# <a name="xamarinmac-extension-support"></a>Prise en charge de l’Extension Xamarin.Mac
+# <a name="xamarinmac-extension-support"></a>Prise en charge de l’extension Xamarin.Mac
 
-Dans la version préliminaire de Xamarin.Mac 2.10 prise en charge a été ajoutée pour plusieurs points d’extension macOS :
+Dans Xamarin.Mac 2.10 prise en charge a été ajoutée pour plusieurs points d’extension de macOS :
 
 - Finder
 - Partager
@@ -59,10 +59,10 @@ Un exemple de projet Xamarin.Mac contenant un petit, obtenir des exemples foncti
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a examiné en rapide à l’utilisation avec des extensions dans une application de version Xamarin.Max 2.10 (et supérieure).
+Cet article a examiné en rapide à l’utilisation avec des extensions dans une application Xamarin.Mac en version 2.10 (et supérieure).
 
 ## <a name="related-links"></a>Liens associés
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [Human Interface Guidelines pour macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
