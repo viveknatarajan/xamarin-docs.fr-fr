@@ -1,18 +1,18 @@
 ---
 title: Résumé du chapitre 3. Détails du texte
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 3. Détails du texte'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 3. Détails du texte'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: db1ab31249cc40d3496770877e492d652bcfc517
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052593"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207844"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Résumé du chapitre 3. Détails du texte
 
@@ -28,7 +28,7 @@ Lorsque le [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) et
 
 Lorsque le `HorizontalOptions` et `VerticalOptions` propriétés sont définies sur les valeurs autres que `LayoutOptions.Fill`, la taille de la `Label` est régie par l’espace nécessaire pour restituer le texte, jusqu'à la taille de son conteneur rend disponible pour le `Label`. Le `Label` est dite *sans contrainte* et détermine sa taille.
 
-(Remarque : les termes du contrat *contraint* et *sans contrainte* peut-être absurdes, une vue sans contrainte est généralement inférieure à une vue contrainte. En outre, ces termes ne sont pas utilisés régulièrement dans les premiers chapitres du livre.)
+(Remarque : Les termes du contrat *contraint* et *sans contrainte* peut-être absurdes, une vue sans contrainte est généralement inférieure à une vue contrainte. En outre, ces termes ne sont pas utilisés régulièrement dans les premiers chapitres du livre.)
 
 Une vue comme un `Label` peut être limité dans une dimension et sans contraintes dans l’autre. Un `Label` sera uniquement habiller le texte sur plusieurs lignes si elle est contrainte horizontalement.
 
@@ -99,9 +99,9 @@ Enfin, deux propriétés statiques en lecture seule définissent la valeur de co
 
 `Color.Default` Permet d’appliquer le modèle de couleurs de la plateforme, et par conséquent a une signification différente dans différents contextes sur différentes plateformes. Par défaut, les jeux de couleurs de plateforme sont :
 
-- iOS : texte sombre sur un arrière-plan clair
-- Android : Clair sur un arrière-plan foncé (dans le livre) foncé texte ou sur un arrière-plan clair (pour la conception de matériau via AppCompat dans le **master** branche de l’exemple de référentiel de code)
-- UWP : Texte de foncé sur un arrière-plan clair
+- iOS : Texte sombre sur un arrière-plan clair
+- Android : Texte sur un arrière-plan foncé (dans le livre) ou texte sombre sur un arrière-plan clair de lumière (pour Material Design via AppCompat dans le **master** branche de l’exemple de référentiel de code)
+- UWP : Texte sombre sur un arrière-plan clair
 
 Le `Color.Accent` valeur les résultats dans une couleur spécifique à la plateforme (et parfois sélectionnables par l’utilisateur) qui est visible sur un arrière-plan sombre ou clair.
 
@@ -109,7 +109,7 @@ Le `Color.Accent` valeur les résultats dans une couleur spécifique à la plate
 
 Les différentes plateformes ont un modèle de couleurs par défaut, comme indiqué dans la liste ci-dessus.
 
-Lorsque vous ciblez Android, il est possible de basculer vers un schéma sombre sur clair en spécifiant un thème clair dans le fichier Android.Manifest.xml ou en [AppCompat Ajout et Material Design](~/xamarin-forms/platform/android/appcompat.md).
+Lorsque vous ciblez Android, il est possible de basculer vers un schéma sombre sur clair en spécifiant un thème clair dans le fichier Android.Manifest.xml ou en [AppCompat Ajout et Material Design](~/xamarin-forms/platform/android/appcompat-material-design.md).
 
 Pour les plateformes Windows, le thème de couleur est généralement sélectionné par l’utilisateur, mais vous pouvez ajouter un `RequestedTheme` attribut la valeur `Light` ou `Dark` dans le fichier App.xaml de la plateforme. Par défaut, le fichier App.xaml dans le projet UWP contient un `RequestedTheme` attribut la valeur `Light`.
 

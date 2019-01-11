@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110713"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207932"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principes de conception de l’API de Xamarin.Android
 
@@ -111,9 +111,9 @@ if (goodSource.Count != 4) // false
 
 Méthodes Java sont transformés en propriétés, le cas échéant :
 
--  La paire de méthodes Java `T getFoo()` et `void setFoo(T)` sont transformés en le `Foo` propriété. Exemple : [Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/).
+-  La paire de méthodes Java `T getFoo()` et `void setFoo(T)` sont transformés en le `Foo` propriété. Exemple : [Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/).
 
--  La méthode Java `getFoo()` est transformé en la propriété Foo en lecture seule. Exemple : [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/).
+-  La méthode Java `getFoo()` est transformé en la propriété Foo en lecture seule. Exemple : [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/).
 
 -  Propriétés à définir uniquement ne sont pas générées.
 
@@ -322,6 +322,6 @@ Par exemple, considérez [Activity.requestWindowFeature (int featureID)](http://
 Dans ce cas, nous nous efforçons de regrouper des constantes connexes dans une énumération .NET et remapper la méthode prenne l’énumération à la place.
 Ce faisant, nous sommes en mesure d’offrir la sélection IntelliSense des valeurs potentielles.
 
-L’exemple ci-dessus devient : [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/)).
+L’exemple ci-dessus devient : [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/).
 
-Notez qu’il s’agit d’un processus très manuel pour déterminer les constantes vont ensemble, et quelles API utilisent ces constantes. Envoyez des bogues pour toute utilisation de constantes dans l’API qui serait mieux exprimée en tant qu’énumération.
+Notez qu’il s’agit d’un processus très manuel pour déterminer les constantes vont ensemble, et quelles API utilisent ces constantes. Envoyez des bogues pour les constantes utilisées dans l’API qui serait mieux exprimée en tant qu’énumération.

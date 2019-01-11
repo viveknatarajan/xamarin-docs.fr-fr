@@ -7,12 +7,12 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 40f319a67ecc2ca81243c8ac7c415266c1ea0b5c
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 58d3b3ae067913a85c3ada5f5b35e64511523ff8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746854"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207906"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Résumé du chapitre 1. Comment Xamarin.Forms est-il intégré ?
 
@@ -49,7 +49,7 @@ Lorsque vous ciblez plusieurs plateformes mobiles, Xamarin.Forms permet le parta
 - la plateforme Windows universelle pour cible Windows 10
 
 > [!NOTE]
-> Xamarin.Forms ne gère plus de Windows 8.1, Windows Phone 8.1 ou Windows 10 Mobile, mais les applications Xamarin.Forms s’exécutent sur le bureau Windows 10. Il est également prise en charge de la version préliminaire de la [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), et [Tizen](~/xamarin-forms/platform/tizen.md) plateformes.
+> Xamarin.Forms ne gère plus de Windows 8.1, Windows Phone 8.1 ou Windows 10 Mobile, mais les applications Xamarin.Forms s’exécutent sur le bureau Windows 10. Il est également prise en charge de la version préliminaire de la [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), et [Tizen](~/xamarin-forms/platform/other/tizen.md) plateformes.
 
 La majeure partie d’un programme de Xamarin.Forms existe dans une bibliothèque ou un SAP. Chacune des plateformes se compose d’un stub de petite application qui appelle ce code partagé.
 
