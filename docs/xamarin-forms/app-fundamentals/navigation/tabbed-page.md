@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d19d8590171e585b6f65b2a63fc9847d7d672a56
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4e2d33276c865695d70abb2d8e00b3b80d446839
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058406"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207984"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Page à onglets Xamarin.Forms
 
@@ -37,7 +37,7 @@ La disposition d’un [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), et ses ongl
   > [!NOTE]
   > Notez que le `TabbedRenderer` pour iOS a une méthode `GetIcon` substituable que vous pouvez utiliser pour charger des icônes d’onglets à partir d’une source spécifiée. Cette substitution permet d’utiliser des images SVG en tant qu’icônes sur un `TabbedPage`. Vous pouvez aussi fournir des versions sélectionnées et désélectionnées d’une icône.
 
-- Sur Android, la liste des onglets apparaît en haut de l’écran par défaut, et la zone de détails est au-dessous. Toutefois, la liste d’onglets peut être déplacée vers le bas de l’écran à l’aide de paramètres propres à la plateforme. Pour plus d’informations, consultez [Définition de l’emplacement et de la couleur de la barre d’outils TabbedPage](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
+- Sur Android, la liste des onglets apparaît en haut de l’écran par défaut, et la zone de détails est au-dessous. Toutefois, la liste d’onglets peut être déplacée vers le bas de l’écran à l’aide de paramètres propres à la plateforme. Pour plus d’informations, consultez [Définition de l’emplacement et de la couleur de la barre d’outils TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
   > [!NOTE]
   > Notez que quand vous utilisez AppCompat sur Android, chaque onglet affiche également une icône. De plus, le `TabbedPageRenderer` pour Android AppCompat a une méthode `GetIconDrawable` substituable que vous pouvez utiliser pour charger des icônes d’onglets à partir d’un `Drawable` personnalisé. Cette substitution rend possible l’utilisation d’images SVG comme icônes sur un `TabbedPage`, et fonctionne à la fois avec les barres d’onglets supérieures et inférieures. En guise d’alternative, vous pouvez utiliser la méthode `SetTabIcon` substituable pour charger des icônes d’onglets à partir d’un `Drawable` personnalisé pour les barres d’onglets supérieures.
