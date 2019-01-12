@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1c88a5c16dbe5559f0b551a97a27ebb893991187
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 119fd478727a002622861c94462b93b75720a992
+ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120500"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249201"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS fonctionnalités de sécurité et confidentialité
 
@@ -27,7 +27,7 @@ Apple a apporté plusieurs améliorations à la sécurité et confidentialité d
 Les modifications générales suivantes ont été apportées à la sécurité et confidentialité dans iOS 10 :
 
 - Le Common Data Security Architecture (CDSA) API a été déconseillée et doit être remplacé par l’API SecKey pour générer des clés asymétriques.
-- La nouvelle `NSAllowsArbitraryLoadsInWebContent` clé peut être ajouter à la d’une application **Info.plist** de fichiers et autorise les pages web se charge correctement alors que la protection de la sécurité de Transport d’Apple (ATS) est toujours activée pour le reste de l’application. Pour plus d’informations, consultez notre [App Transport Security](~/ios/app-fundamentals/ats.md) documentation.
+- La nouvelle `NSAllowsArbitraryLoadsInWebContent` clé peut être ajoutée à la d’une application **Info.plist** de fichiers et autorise les pages web se charge correctement alors que la protection de la sécurité de Transport d’Apple (ATS) est toujours activée pour le reste de l’application. Pour plus d’informations, consultez notre [App Transport Security](~/ios/app-fundamentals/ats.md) documentation.
 - Étant donné que le nouveau Presse-papiers dans iOS 10 et macOS Sierra permet à l’utilisateur copier et coller entre les appareils, l’API a été développée pour autoriser un Presse-papiers pour être limité à un appareil spécifique et être horodaté à effacer automatiquement à un moment donné. En outre, les tables de montage nommés ne sont plus conservées et doivent être remplacés par les conteneurs de la table de montage partagés.
 - Pour toutes les connexions SSL/TLS, le chiffrement symétrique RC4 est désormais désactivé par défaut. En outre, l’API de Transport sécurisé ne gère plus SSLv3 et il est recommandé que le développeur de cesser d’utiliser le chiffrement SHA-1 et 3DES dès que possible.
 
@@ -51,9 +51,9 @@ La confidentialité suivante liées aux clés sont disponibles :
 - **Confidentialité - Description de l’utilisation de mise à jour d’intégrité** (`NSHealthUpdateUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application souhaite modifier les données de contrôle d’intégrité de l’utilisateur. Pour plus d’informations, consultez le site d’Apple [référence de classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore).
 - **Confidentialité - Description de l’utilisation de HomeKit** (`NSHomeKitUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application souhaite accéder aux données de Configuration de l’utilisateur HomeKit.
 - **Confidentialité - Description d’emplacement toujours l’utilisation** (`NSLocationAlwaysUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application veut aient toujours accès à l’emplacement de l’utilisateur.
-- [Déconseillé] **Confidentialité - Description de l’utilisation d’emplacement** (`NSLocationUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application souhaite accéder à l’emplacement de l’utilisateur. *Remarque : Cette clé a été déconseillée dans iOS 8 (et supérieur). Utilisez `NSLocationAlwaysUsageDescription` ou `NSLocationWhenInUseUsageDescription` à la place.*
+- [Déconseillé] **Confidentialité - Description de l’utilisation d’emplacement** (`NSLocationUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application souhaite accéder à l’emplacement de l’utilisateur. *REMARQUE : Cette clé a été déconseillée dans iOS 8 (et supérieur). Utilisez `NSLocationAlwaysUsageDescription` ou `NSLocationWhenInUseUsageDescription` à la place.*
 - **Confidentialité - emplacement lors de la Description de l’utilisation utilisation** (`NSLocationWhenInUseUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application souhaite accéder à l’emplacement de l’utilisateur pendant son exécution.
-- [Déconseillé] **Confidentialité - Description de l’utilisation de bibliothèque multimédia** -permet au développeur décrire la raison pour laquelle l’application souhaite accéder à la bibliothèque multimédia de l’utilisateur. *Remarque : Cette clé a été déconseillée dans iOS 8 (et supérieur). Utilisez `NSAppleMusicUsageDescription` à la place.*
+- [Déconseillé] **Confidentialité - Description de l’utilisation de bibliothèque multimédia** -permet au développeur décrire la raison pour laquelle l’application souhaite accéder à la bibliothèque multimédia de l’utilisateur. *REMARQUE : Cette clé a été déconseillée dans iOS 8 (et supérieur). Utilisez `NSAppleMusicUsageDescription` à la place.*
 - **Confidentialité - Description de l’utilisation de Microphone** (`NSMicrophoneUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application souhaite accéder au microphone d’appareils.
 - **Confidentialité - Description de l’utilisation de mouvement** (`NSMotionUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application souhaite accéder accéléromètre de l’appareil.
 - **Confidentialité - Description de l’utilisation de bibliothèque de photos** (`NSPhotoLibraryUsageDescription`)-permet au développeur décrire la raison pour laquelle l’application souhaite accéder à la bibliothèque de photos de l’utilisateur.

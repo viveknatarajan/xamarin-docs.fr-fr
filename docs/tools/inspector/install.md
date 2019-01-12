@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2357003e3a855981f053c48a596b932d9ba36d90
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
+ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104951"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249188"
 ---
 # <a name="inspector-installation-and-requirements"></a>Configuration requise et Installation de l’inspecteur
 
@@ -31,7 +31,7 @@ ms.locfileid: "50104951"
 
 -----
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 
@@ -52,7 +52,7 @@ Inspection de l’application en direct est disponible pour les clients d’entr
 |Plateforme d’application|Prise en charge de l’IDE|Notes|
 |--- |--- |--- |
 |Mac|Uniquement pris en charge dans Visual Studio pour Mac|
-|iOS|Prise en charge dans Visual Studio 2017 et Visual Studio pour Mac| |
+|iOS|Prise en charge dans Visual Studio 2017 et Visual Studio pour Mac| Comportement de l’éditeur de liens doit être définie sur **ne pas lier** (sous **Build iOS** options projets) |
 |Android|Prise en charge dans Visual Studio 2017 et Visual Studio pour Mac|Doit cibler Android > = 4.0.3, avec **fastdev** activé.<br />Doit utiliser des émulateurs de Google, Visual Studio ou Xamarin Android. Les émulateurs Android 7 n’autorise pas l’inspection pour l’instant.|
 |WPF|Uniquement pris en charge dans Visual Studio 2017|
 
