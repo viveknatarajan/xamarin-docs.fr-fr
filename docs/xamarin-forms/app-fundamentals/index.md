@@ -6,13 +6,13 @@ ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/03/2018
-ms.openlocfilehash: 015a7dfa3d55b411e6626ae2ac70fd2930661e65
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/08/2018
+ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898990"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207815"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Notions de base des applications Xamarin.Forms
 
@@ -27,6 +27,10 @@ La classe `Application` est le point de départ de Xamarin.Forms : chaque appli
 ## <a name="app-lifecycleapp-lifecyclemd"></a>[Cycle de vie d’application](app-lifecycle.md)
 
 Les méthodes `OnStart`, `OnSleep`, et `OnResume` de la classe `Application`, ainsi que les événements de navigation modale, vous permettent de gérer les événements de cycle de vie des applications avec du code personnalisé.
+
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indexation d’applications et liens ciblés](deep-linking.md)
+
+L’indexation d’applications permet aux applications, qui sinon auraient été oubliées après quelques utilisations, de rester pertinentes en apparaissant dans les résultats de recherche. Les liens ciblés permettent aux applications de répondre à un résultat de recherche qui contient des données d’application, généralement en parcourant une page référencée à partir d’un lien ciblé.
 
 ## <a name="behaviorsbehaviorsindexmd"></a>[Comportements](behaviors/index.md)
 
