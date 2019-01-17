@@ -1,18 +1,19 @@
 ---
-title: 'Xamarin.Essentials : préférences'
+title: 'Xamarin.Essentials: Préférences'
 description: Ce document décrit la classe Preferences de Xamarin.Essentials, qui enregistre les préférences de l’application dans un magasin de clés/valeurs. Il explique comment utiliser la classe et les types de données pouvant être stockés.
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 0144cdd4e12d53e0ac82af24a932825491db9e41
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/15/2019
+ms.custom: video
+ms.openlocfilehash: 6d57b5ce9cb61363eef24b230f6cf71894f66198
+ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899082"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317880"
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials : préférences
+# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Préférences
 
 La classe **Preferences** permet de stocker les préférences d’application dans un magasin de clés/valeurs.
 
@@ -68,7 +69,7 @@ Les types de données suivants sont pris en charge dans **Preferences** :
 
 ## <a name="implementation-details"></a>Détails de l’implémentation
 
-Les valeurs de `DateTime` sont stockées dans un format binaire 64 bits (entier long) à l’aide de deux méthodes définies par la classe `DateTime` : la méthode [`ToBinary`](xref:System.DateTime.ToBinary) sert à encoder la valeur de `DateTime`, alors que la méthode [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) sert à décoder la valeur. Consultez la documentation de ces méthodes pour connaître les ajustements qui peuvent être apportés aux valeurs décodées quand un `DateTime` stocké n’est pas une valeur UTC (temps universel coordonné).
+Les valeurs de `DateTime` sont stockées dans un format binaire 64 bits (entier long) à l’aide de deux méthodes définies par la classe `DateTime` : La méthode [`ToBinary`](xref:System.DateTime.ToBinary) est utilisée pour encoder la valeur `DateTime`, tandis que la méthode [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) décode la valeur. Consultez la documentation de ces méthodes pour connaître les ajustements qui peuvent être apportés aux valeurs décodées quand un `DateTime` stocké n’est pas une valeur UTC (temps universel coordonné).
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
@@ -98,3 +99,9 @@ Quand vous stockez une chaîne, cette API permet de stocker de petites quantité
 
 - [Code source de la fonctionnalité des préférences](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
 - [Documentation sur l’API de préférences](xref:Xamarin.Essentials.Preferences)
+
+## <a name="related-video"></a>Vidéo associée
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Preferences-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
