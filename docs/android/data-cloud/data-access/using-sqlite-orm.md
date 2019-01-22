@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 741e18d84c25bb4479480949a271a5845e99daa1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c552d97f64b28ed47a9226047862bffcfa8c9e3
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118459"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418684"
 ---
 # <a name="using-sqlitenet-with-android"></a>Utilisation de SQLite.NET avec Android
 
@@ -22,8 +22,8 @@ Pour inclure la bibliothèque de SQLite.NET dans une application Xamarin, ajoute
 
 - **Nom du package :** sqlite-net-pcl
 - **Auteur :** Frank A. Krueger
-- **ID :** sqlite-net-pcl
-- **URL :** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **ID**  sqlite-net-pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Package NuGet de SQLite.NET](using-sqlite-orm-images/image1a-sml.png "package NuGet de SQLite.NET")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -136,7 +136,7 @@ Attributs courants que vous pouvez appliquer à vos classes pour contrôler la f
 -   **[MaxLength(value)]**  &ndash; Restreindre la longueur d’une propriété de texte, lors de la tentative d’insertion d’une base de données. Code de consommation, cela doit valider avant l’insertion de l’objet que cet attribut est uniquement « coché » lors de l’insertion d’une base de données ou l’opération de mise à jour est tentée.
 
 -   **[Ignore]**  &ndash; Provoque de SQLite.NET pour ignorer cette propriété.
-    Cela est particulièrement utile pour les propriétés qui ont un type qui ne peut pas être stocké dans la base de données ou des propriétés que les collections du modèle qui ne peut pas être résolues automatiquement être SQLite.
+    Cela est particulièrement utile pour les propriétés qui ont un type qui ne peut pas être stocké dans la base de données ou des propriétés qui modélisent des collections qui ne peut pas être résolues automatiquement par SQLite.
 
 -   **[Unique]**  &ndash; Garantit que les valeurs dans la colonne de base de données sous-jacente sont uniques.
 
@@ -205,7 +205,7 @@ Vous pouvez vérifier le `rowcount` pour confirmer le nombre de lignes affecté 
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Utilisation de SQLite.NET avec plusieurs Threads
 
-SQLite prend en charge trois modes de threads : *seul thread*, *multithread*, et *sérialisé*. Si vous souhaitez accéder à la base de données à partir de plusieurs threads sans aucune restriction, vous pouvez configurer SQLite à utiliser le **sérialisé** en mode de thread. Il est important de définir ce mode au début de votre application (par exemple, au début de la `OnCreate` méthode).
+SQLite prend en charge trois modes de threads : *Seul thread*, *multithread*, et *sérialisé*. Si vous souhaitez accéder à la base de données à partir de plusieurs threads sans aucune restriction, vous pouvez configurer SQLite à utiliser le **sérialisé** en mode de thread. Il est important de définir ce mode au début de votre application (par exemple, au début de la `OnCreate` méthode).
 
 Pour modifier le mode de thread, appelez `SqliteConnection.SetConfig`. Par exemple, cette ligne de code configure SQLite pour **sérialisé** mode : 
 
