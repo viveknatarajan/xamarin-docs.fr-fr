@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 719efc87b8843d0d2fcd2643aab23aa6849d940a
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746906"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841378"
 ---
 # <a name="images-in-xamarinmac"></a>Images dans Xamarin.Mac
 
@@ -82,7 +82,7 @@ Les éléments suivants doivent être prises en considération lors de l’utili
 - N’est pas prise en charge complète de vecteur et le fichier PDF seront rastérisé vers une bitmap au moment de la compilation et les bitmaps fournies dans l’application finale.
 - Vous ne pouvez pas ajuster la taille de l’image une fois qu’il a été défini dans le catalogue de ressources. Si vous essayez de redimensionner l’image (soit dans le code ou à l’aide de la disposition automatique et les Classes de taille) l’image est déformée comme toute autre image bitmap.
 
-Lorsque vous utilisez un **Image définie** dans Xcode Interface Builder, vous pouvez simplement sélectionner le nom dans la liste déroulante dans le **inspecteur d’attributs**: **
+Lorsque vous utilisez un **Image définie** dans Xcode Interface Builder, vous pouvez simplement sélectionner le nom dans la liste déroulante dans le **inspecteur d’attributs**:
 
 ![Sélection d’une image défini dans l’Interface Builder de Xcode](image-images/imageset06.png "vous sélectionnez une image haute dans Interface Builder de Xcode")
 
