@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 88f973715f216f5d68eb2b3dc5582502cf5d605d
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 84e0a5d37b757d14750f6bd3119d8695b35d7544
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479730"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841365"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Géolocalisation
 
@@ -95,7 +95,7 @@ catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
 }
-catch (FeatureNotEnableException fneEx)
+catch (FeatureNotEnabledException fneEx)
 {
     // Handle not enabled on device exception
 }
@@ -128,7 +128,7 @@ catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
 }
-catch (FeatureNotEnableException fneEx)
+catch (FeatureNotEnabledException fneEx)
 {
     // Handle not enabled on device exception
 }
@@ -197,10 +197,10 @@ Voici un exemple :
 ```csharp
 Location boston = new Location(42.358056, -71.063611);
 Location sanFrancisco = new Location(37.783333, -122.416667);
-double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnit.Miles);
+double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
 ```
 
-Le constructeur `Location` a des arguments de latitude et de longitude dans cet ordre. Les valeurs de latitude positives sont au nord de l’équateur, et les valeurs de longitude positives sont à l’est du premier méridien. Utilisez le dernier argument pour `CalculateDistance` afin de spécifier des miles ou des kilomètres. La classe `Location` définit également les méthodes `KilometersToMiles` et `MilesToKilometers` pour effectuer la conversion entre les deux unités.
+Le constructeur `Location` a des arguments de latitude et de longitude dans cet ordre. Les valeurs de latitude positives sont au nord de l’équateur, et les valeurs de longitude positives sont à l’est du premier méridien. Utilisez le dernier argument pour `CalculateDistance` afin de spécifier des miles ou des kilomètres. La classe `UnitConverters` définit également les méthodes `KilometersToMiles` et `MilesToKilometers` pour effectuer la conversion entre les deux unités.
 
 ## <a name="api"></a>API
 
