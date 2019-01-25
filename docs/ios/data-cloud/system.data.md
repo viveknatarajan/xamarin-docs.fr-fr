@@ -6,12 +6,13 @@ ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 4e9b782cf266a96f30c79eaf139ef88332e02dca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/25/2015
+ms.openlocfilehash: 014de47660f2c0ac8295495e417b3d5def135470
+ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119832"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54879314"
 ---
 # <a name="systemdata-in-xamarinios"></a>System.Data dans Xamarin.iOS
 
@@ -110,7 +111,7 @@ class Demo {
 > Comme indiqué dans l’exemple de code ci-dessus, il est déconseillé d’incorporer des chaînes dans les commandes SQL, car elle rend votre code vulnérable aux [injection SQL](http://en.wikipedia.org/wiki/SQL_injection).
 
 
-### <a name="using-command-parameters"></a>À l’aide des paramètres de commande
+### <a name="using-command-parameters"></a>Utilisation des paramètres de commande
 
 Le code suivant montre comment utiliser les paramètres de commande pour insérer du texte d’entré par l’utilisateur en toute sécurité dans la base de données (même si le texte contient des caractères SQL spéciaux comme unique-apostrophe) :
 
