@@ -5,7 +5,7 @@ items:
   - name: Bien démarrer
     href: get-started/index.md
     items:
-    - name: Configuration requise
+    - name: Spécifications
       displayName: System requirements
       href: get-started/requirements.md
     - name: Installation
@@ -32,7 +32,7 @@ items:
     - name: Création d’applications multiplateformes
       href: app-fundamentals/building-cross-platform-applications/index.md
       items:
-      - name: Vue d’ensemble
+      - name: Vue d'ensemble
         href: app-fundamentals/building-cross-platform-applications/overview.md
       - name: 'Partie 1 : Présentation de la plateforme mobile Xamarin'
         href: app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md
@@ -46,7 +46,7 @@ items:
         href: app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md
       - name: 'Partie 6 : Test et approbations de l’App Store'
         href: app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md
-      - name: 'Étude de cas : Tasky'
+      - name: 'Étude de cas : Tasky'
         href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
     expanded: true
   - name: Partage de code
@@ -74,6 +74,8 @@ items:
         href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
     - name: Packages NuGet (manuels)
       href: app-fundamentals/nuget-manual.md
+    - name: Utiliser les bibliothèques C/C++ dans des applications multiplateformes
+      href: cpp/index.md
   - name: Prise en charge linguistique
     href: platform/index.md
     items:
@@ -86,7 +88,7 @@ items:
     - name: F#
       href: platform/fsharp/index.md
       items:
-      - name: Bien démarrer
+      - name: Prise en main
         href: platform/fsharp/overview.md
       - name: Exemples F#
         href: platform/fsharp/samples.md
@@ -153,7 +155,7 @@ items:
         href: troubleshooting/questions/pcl-support-libraries.md
       - name: API de réflexion de bibliothèque de classes portable
         href: troubleshooting/questions/pcl-reflection.md
-      - name: 'Étude de cas de bibliothèque de classes portable : Comment résoudre des problèmes liés à System.Diagnostics.Tracing pour le package NuGet Microsoft TPL Dataflow ?'
+      - name: 'Étude de cas PCL : Comment résoudre des problèmes liés à System.Diagnostics.Tracing pour le package NuGet Microsoft TPL Dataflow ?'
         href: troubleshooting/questions/pcl-case-study.md
       - name: Comment mettre à jour NuGet ?
         href: troubleshooting/questions/nuget-update.md
@@ -190,9 +192,9 @@ items:
   - name: Exemples
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 6de69aacc37d17086e49ae1a7571879686168a42
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5eb01503b809979ebbc6598cf1cde985d3431bad
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130243"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841326"
