@@ -7,13 +7,14 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 09/06/2018
-ms.openlocfilehash: 67ab5b9bd711cb10a20b1365effea1627d0f7688
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.custom: video
+ms.date: 01/22/2019
+ms.openlocfilehash: 5618f15d60a26d2ad3d84ff0e3674936c0c01ca3
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479782"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Gestion des appareils virtuels avec Android Device Manager
 
@@ -32,7 +33,7 @@ Cet article explique comment utiliser Android Device Manager pour créer, dupliq
 Vous utilisez Android Device Manager pour créer et configurer des _appareils virtuels Android_ (AVD) que vous exécutez dans l’[émulateur Android](~/android/deploy-test/debugging/debug-on-emulator.md).
 Chaque AVD est une configuration d’émulateur qui simule un appareil Android physique. Vous pouvez ainsi exécuter et tester votre application dans diverses configurations qui simulent différents appareils Android physiques.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour utiliser Android Device Manager, vous devez disposer des éléments suivants :
 
@@ -205,7 +206,7 @@ Xamarin Studio n’est pas compatible avec Android Device Manager.
 Vous utilisez Android Device Manager pour créer et configurer des *appareils virtuels Android* (AVD) que vous exécutez dans l’[émulateur Android](~/android/deploy-test/debugging/debug-on-emulator.md).
 Chaque AVD est une configuration d’émulateur qui simule un appareil Android physique. Vous pouvez ainsi exécuter et tester votre application dans diverses configurations qui simulent différents appareils Android physiques.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour utiliser Android Device Manager, vous devez disposer des éléments suivants :
 
@@ -388,7 +389,7 @@ Pour contourner ce problème, effectuez les étapes suivantes :
 
    ![Emplacement du fichier journal d’Android Device Manager](device-manager-images/win/30-log-files.png)
 
-2. Double-cliquez pour ouvrir l’un des fichiers journaux et recherchez le **chemin du fichier config**. Exemple :
+2. Double-cliquez pour ouvrir l’un des fichiers journaux et recherchez le **chemin du fichier config**. Par exemple :
 
    [![Chemin du fichier config dans le fichier journal](device-manager-images/win/31-config-file-path-sml.png)](device-manager-images/win/31-config-file-path.png#lightbox)
 
@@ -502,3 +503,9 @@ Ce guide vous a présenté Android Device Manager, disponible dans Visual Studio
 - [Notes de publication de SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+
+## <a name="related-video"></a>Vidéo associée
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/How-to-Create-and-Manage-Your-Own-Android-Emulators/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

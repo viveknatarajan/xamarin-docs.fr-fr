@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 0351436259bb782e4f8e3a3405b9620c4e8b20bb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: af40dc99dffd6e04ad0d408aea58b23c5446461e
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479756"
 ---
 # <a name="implementing-text-to-speech"></a>Implémentation de la synthèse vocale
 
@@ -86,7 +86,21 @@ L’attribut `[assembly]` inscrit la classe en tant qu’implémentation de l’
 
 ## <a name="android-implementation"></a>Implémentation Android
 
-Le code Android est plus complexe que la version iOS, car il requiert que la classe d’implémentation hérite de l’objet `Java.Lang.Object` pour Android et qu’elle implémente également l’interface `IOnInitListener`. De plus, il doit accéder au contexte Android actuel, qui est exposé par la propriété `MainActivity.Instance`.
+Le code Android est plus complexe que la version iOS. Il doit accéder au contexte Android actuel, qui est exposé par la propriété `MainActivity.Instance` :
+
+```csharp
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+{
+    internal static MainActivity Instance { get; private set; }
+
+    protected override void OnCreate(Bundle bundle)
+    {
+        ...
+    }
+}
+```
+
+Il requiert aussi que la classe d’implémentation hérite de l’objet `Java.Lang.Object` pour Android et qu’elle implémente également l’interface `IOnInitListener`.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]

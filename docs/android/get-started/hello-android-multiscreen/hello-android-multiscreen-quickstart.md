@@ -1,5 +1,5 @@
 ---
-title: Hello, Android multi-écran - Démarrage rapide
+title: 'Hello, Android multi-écran : Démarrage rapide'
 description: Ce guide en deux parties étend l’application Phoneword de manière à gérer un second écran. Vous allez également y découvrir les composants des applications Android et plonger au cœur de l’architecture Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 774661b36a41e4791207a54892663af13de3b3d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dcc60243957bb1a7720c08dc7a5ce51caf585ce8
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120487"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418658"
 ---
-# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android multi-écran - Démarrage rapide
+# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android multi-écran : Démarrage rapide
 
 _Ce guide en deux parties étend l’application Phoneword de manière à gérer un second écran. Vous allez également y découvrir les composants des applications Android et plonger au cœur de l’architecture Android._
 
@@ -26,7 +26,7 @@ Dans la partie de ce guide présentant la procédure pas à pas, vous allez ajou
 
 La seconde partie, [En profondeur](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md), examine ce que vous avez généré et décrit l’architecture, la navigation et d’autres nouveaux concepts Android que vous avez rencontrés en chemin.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide reprenant là où [Hello, Android](~/android/get-started/hello-android/index.md) s’est arrêté, vous devez avoir terminé [Hello, Android - Démarrage rapide](~/android/get-started/hello-android/hello-android-quickstart.md).
 Si vous souhaitez accéder directement à la procédure pas à pas ci-dessous, vous pouvez télécharger la version complète de [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) (à partir de Hello, Android - Démarrage rapide) et l’utiliser pour démarrer la procédure pas à pas.
@@ -143,7 +143,7 @@ translationHistoryButton.Click += (sender, e) =>
 };
 ```
 
-Mettez à jour le bouton **Traduire** pour ajouter le numéro de téléphone à la liste des `phoneNumbers`. La handler `Click` de `TranslateHistoryButton` doit être semblable au code suivant :
+Mettez à jour le bouton **Traduire** pour ajouter le numéro de téléphone à la liste des `phoneNumbers`. La handler `Click` de `translateButton` doit être semblable au code suivant :
 
 ```csharp
 // Add code to translate number

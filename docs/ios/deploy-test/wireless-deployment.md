@@ -6,13 +6,14 @@ ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 02/09/2018
-ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.custom: video
+ms.date: 01/22/2019
+ms.openlocfilehash: 6d64acdcc84c16f33a1f543bf1c9506ae7c8e347
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479691"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Déploiement sans fil pour les applications Xamarin.iOS et tvOS
 
@@ -20,7 +21,7 @@ Une part importante du workflow du développeur consiste au déploiement sur un 
 
 Ce guide détaille comment coupler et déployer sur un appareil sur le réseau.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La fonctionnalité de déploiement sans fil est disponible à la fois dans Visual Studio pour Mac et dans Visual Studio.
 
@@ -58,7 +59,7 @@ Le processus de couplage suivant ne doit se produire qu’une seule fois par app
 
 1. Ouvrez Xcode et allez à **Fenêtre > Appareils et simulateurs**.
 2. Branchez votre appareil iOS sur votre Mac à l’aide d’un câble Lightning. Vous devrez peut-être sélectionner **Faire confiance à cet ordinateur** sur votre appareil.
-3. Sélectionnez votre appareil, puis cochez la case **Connexion via réseau** pour coupler votre appareil :  ![Fenêtre Appareil et simulateur affichant l’option Connexion via réseau](wireless-deployment-images/image2.png)
+3. Sélectionnez votre appareil, puis cochez la case **Se connecter via le réseau** pour coupler votre appareil :  ![Fenêtre Appareil et simulateur affichant l’option Se connecter via le réseau](wireless-deployment-images/image2.png)
 
 ### <a name="pairing-an-apple-tv-with-xcode"></a>Couplage d’un Apple TV avec Xcode
 
@@ -105,3 +106,9 @@ Le débogage sans fil est automatiquement activé après le déploiement sans fi
 ## <a name="related-links"></a>Liens associés
 
 - [Coupler un appareil sans fil avec Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
+
+## <a name="related-video"></a>Vidéo associée
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Debug-to-iOS-Devices-Over-Wi-Fi/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
