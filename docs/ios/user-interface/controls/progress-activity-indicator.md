@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: cb56af300444020a543c16afb0dfb48015fc2153
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d39170d0109d7f81d3f02ec36381ebcd46c0143d
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102592"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233521"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Progression et les indicateurs d’activité dans Xamarin.iOS
 
 Il est probable que votre application aura à effectuer de longues tâches telles que le chargement ou le traitement des données et que ce délai peut entraîner un délai de mise à jour de votre interface utilisateur en cours d’exécution. Pendant ce temps, vous devez toujours utiliser un indicateur de progression pour rassurer l’utilisateur que le système est occupé à faire le travail. Cela donne le contrôle utilisateur que l’application fonctionne sur leur demande, il n’attend pas de leur avis, et peut fournir un moyen de détaillant exactement la durée pendant laquelle il devra attendre.
 
-iOS fournit deux méthodes principales pour fournir cette indication de la progression dans votre application : indicateurs d’activité (y compris un spécifique _réseau_ indicateur d’activité) et les barres de progression.
+iOS fournit deux méthodes principales pour fournir cette indication de la progression dans votre application : Indicateurs d’activité (y compris un spécifique _réseau_ indicateur d’activité) et les barres de progression.
 
 ## <a name="activity-indicator"></a>Indicateur d’activité
 
@@ -32,7 +32,7 @@ Apple a les suggestions suivantes pour l’utilisation des indicateurs de l’ac
 
 ### <a name="implementing-an-activity-indicator"></a>Implémentation d’un indicateur d’activité
 
-Un indicateur d’activité est implémenté via le [ `UIActivityIndictorView` ](https://developer.xamarin.com/api/type/UIKit.UIActivityIndicatorView/) classe pour indiquer qu’un `UIActivity` est en cours.
+Un indicateur d’activité est implémenté via le [ `UIActivityIndictorView` ](xref:UIKit.UIActivityIndicatorView) classe pour indiquer qu’un `UIActivity` est en cours.
 
 ### <a name="activity-indicators-and-storyboards"></a>Storyboards et des indicateurs de l’activité
 
@@ -68,7 +68,7 @@ Apple a les suggestions suivantes pour l’utilisation des barres de progression
 
 ### <a name="implementing-an-progress-bar"></a>Implémentation d’une barre de progression
 
-Une barre de progression est créée en instanciant un [`UIProgressView`](https://developer.xamarin.com/api/type/UIKit.UIProgressView/)
+Une barre de progression est créée en instanciant un [`UIProgressView`](xref:UIKit.UIProgressView)
 
 ### <a name="progress-bars-and-storyboards"></a>Barres de progression et les tables de montage séquentiel
 

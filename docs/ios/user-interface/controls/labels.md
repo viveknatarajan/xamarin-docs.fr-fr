@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 7c52ce9fcdd290958a53af7fa91ef93a2caff7b5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cca74ac74e5077822193f6dd97a69f8d9b823561
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108962"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233287"
 ---
 # <a name="labels-in-xamarinios"></a>Étiquettes dans Xamarin.iOS
 
@@ -20,7 +20,7 @@ Le `UILabel` contrôle est utilisé pour l’affichage unique et plusieurs ligne
 
 ## <a name="implementing-a-label"></a>Implémentation d’une étiquette
 
-Une nouvelle étiquette est créée en instanciant un [ `UILabel` ](https://developer.xamarin.com/api/type/UIKit.UILabel/):
+Une nouvelle étiquette est créée en instanciant un [ `UILabel` ](xref:UIKit.UILabel):
 
 ```csharp
 UILabel label = new UILabel();

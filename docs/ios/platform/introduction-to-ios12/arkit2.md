@@ -1,5 +1,5 @@
 ---
-title: ARKit 2 dans Xamarin.iOS
+title: ARKit 2 in Xamarin.iOS
 description: Ce document décrit les mises à jour à ARKit dans iOS 12. Il se concentre sur l’utilisation des images et des objets de référence pour la détection inclut le code de l’environnement de sprites et décrit les problèmes courants dans la programmation de ARKit.
 ms.prod: xamarin
 ms.assetid: af758092-1523-4ab7-aa53-c37a81fb156a
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 4d5319005b28c5afa0906c44cfa59f0cad40de76
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 7f3c196eafd71e8571ea49a17784e5290e7ef44e
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617616"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233599"
 ---
-# <a name="arkit-2-in-xamarinios"></a>ARKit 2 dans Xamarin.iOS
+# <a name="arkit-2-in-xamarinios"></a>ARKit 2 in Xamarin.iOS
 
 ARKit a considérablement évolué depuis son introduction dernière année dans iOS 11. Tout d’abord, vous pouvez maintenant détecter verticale, ainsi que des plans horizontaux, ce qui améliore considérablement la faisabilité des expériences de réalité augmentée intérieur. En outre, il existe de nouvelles fonctionnalités :
 
@@ -25,17 +25,17 @@ ARKit a considérablement évolué depuis son introduction dernière année dans
 
 ## <a name="recognizing-reference-objects"></a>Reconnaissance des objets de référence
 
-Une fonctionnalité de showcase ARKit 2 est la possibilité de reconnaître les images de référence et des objets. Images de référence peuvent être chargées à partir des fichiers d’image normale ([abordée plus tard](#more-tracking-configurations)), mais référence les objets doivent être analysés, à l’aide de l’axés sur le développeur [ `ARObjectScanningConfiguration` ](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/).
+Une fonctionnalité de showcase ARKit 2 est la possibilité de reconnaître les images de référence et des objets. Images de référence peuvent être chargées à partir des fichiers d’image normale ([abordée plus tard](#more-tracking-configurations)), mais référence les objets doivent être analysés, à l’aide de l’axés sur le développeur [ `ARObjectScanningConfiguration` ](xref:ARKit.ARObjectScanningConfiguration).
 
-### <a name="sample-app-scanning-and-detecting-3d-objects"></a>Exemple d’application : analyse et de détection d’objets 3D
+### <a name="sample-app-scanning-and-detecting-3d-objects"></a>Exemple d’application : Analyse et détection d’objets 3D
 
 Le [d’analyse et de détection d’objets 3D](https://developer.xamarin.com/samples/monotouch/ios12/ScanningAndDetecting3DObjects/) exemple est un port d’un [projet d’Apple](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) qui montre :
 
-* À l’aide de gestion d’application état [ `NSNotification` ](https://developer.xamarin.com/api/type/Foundation.NSNotification/) objets
+* À l’aide de gestion d’application état [ `NSNotification` ](xref:Foundation.NSNotification) objets
 * Visualisation personnalisée
 * Mouvements complexes
 * Objet d’analyse
-* Stocker un [`ARReferenceObject`](https://developer.xamarin.com/api/type/ARKit.ARReferenceObject/)
+* Stocker un [`ARReferenceObject`](xref:ARKit.ARReferenceObject)
 
 Analyse un objet de référence est batterie - et sollicitant beaucoup le processeur et les appareils plus anciens ont souvent des difficultés à atteindre suivi stable.
 
@@ -55,7 +55,7 @@ En outre utilise un jeu incorporé des États et transitions en `AppState.Scanni
 * `Scan.ScanState.Scanning`
 * `Scan.ScanState.AdjustingOrigin`
 
-L’application utilise une architecture réactive qui publie les notifications de transition d’état à [ `NSNotificationCenter` ](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/) et s’abonne à ces notifications. Le programme d’installation ressemble à cet extrait de code à partir de `ViewController.cs`:
+L’application utilise une architecture réactive qui publie les notifications de transition d’état à [ `NSNotificationCenter` ](xref:Foundation.NSNotificationCenter) et s’abonne à ces notifications. Le programme d’installation ressemble à cet extrait de code à partir de `ViewController.cs`:
 
 ```csharp
 // Configure notifications for application state changes
@@ -119,11 +119,11 @@ internal void EnterStateTesting()
 
 L’application montre le bas niveau « point cloud » de l’objet contenu dans un cadre englobant projetés sur un plan horizontal détecté.
 
-Ce nuage de points est disponible pour les développeurs dans le [ `ARFrame.RawFeaturePoints` ](https://developer.xamarin.com/api/property/ARKit.ARFrame.RawFeaturePoints/) propriété. Visualisation du nuage de points efficacement peut être un problème épineux. Itération sur les points, puis créant et en plaçant un nouveau nœud SceneKit pour chaque point supprimerais la fréquence d’images. Vous pouvez également, s’effectue de façon asynchrone, il y aurait un décalage. L’exemple gère les performances avec une stratégie de trois parties :
+Ce nuage de points est disponible pour les développeurs dans le [ `ARFrame.RawFeaturePoints` ](xref:ARKit.ARFrame.RawFeaturePoints) propriété. Visualisation du nuage de points efficacement peut être un problème épineux. Itération sur les points, puis créant et en plaçant un nouveau nœud SceneKit pour chaque point supprimerais la fréquence d’images. Vous pouvez également, s’effectue de façon asynchrone, il y aurait un décalage. L’exemple gère les performances avec une stratégie de trois parties :
 
 * À l’aide de code unsafe pour épingler les données de placent et interprètent les données comme une mémoire tampon brute d’octets.
-* Conversion de cette mémoire tampon brute dans un [ `SCNGeometrySource` ](https://developer.xamarin.com/api/type/SceneKit.SCNGeometrySource/) et la création d’un « modèle » [ `SCNGeometryElement` ](https://developer.xamarin.com/api/type/SceneKit.SCNGeometryElement/) objet.
-* Rapidement « assemblage » les données brutes et le modèle à l’aide [`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](https://developer.xamarin.com/api/member/SceneKit.SCNGeometry.Create/p/SceneKit.SCNGeometrySource[]/SceneKit.SCNGeometryElement[]/)
+* Conversion de cette mémoire tampon brute dans un [ `SCNGeometrySource` ](xref:SceneKit.SCNGeometrySource) et la création d’un « modèle » [ `SCNGeometryElement` ](xref:SceneKit.SCNGeometryElement) objet.
+* Rapidement « assemblage » les données brutes et le modèle à l’aide [`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
 
 ```csharp
 internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color, float size)
@@ -251,11 +251,11 @@ La deuxième chose intéressante effectuée par rapport aux gestes est la façon
 
 Maintenant, vous pouvez utiliser les éléments suivants comme base pour une expérience de réalité mixte :
 
-* Uniquement l’accéléromètre de périphérique ([`AROrientationTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.AROrientationTrackingConfiguration/), iOS 11)
-* Faces ([`ARFaceTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARFaceTrackingConfiguration/), iOS 11)
-* Images de référence ([`ARImageTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARImageTrackingConfiguration/), iOS 12)
-* Analyse des objets 3D ([`ARObjectScanningConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/), iOS 12)
-* Odométrie inertie Visual ([`ARWorldTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARWorldTrackingConfiguration/)amélioré dans iOS 12)
+* Uniquement l’accéléromètre de périphérique ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration), iOS 11)
+* Faces ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), iOS 11)
+* Images de référence ([`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration), iOS 12)
+* Analyse des objets 3D ([`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration), iOS 12)
+* Odométrie inertie Visual ([`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration)amélioré dans iOS 12)
 
 `AROrientationTrackingConfiguration`, présentés dans [ce billet de blog et F# exemple](https://github.com/lobrien/FSharp_Face_AR), est plus limité et fournit une mauvaise expérience de réalité mixte, car il place uniquement les objets numériques en relation avec le mouvement de l’appareil, sans essayer de lier l’appareil et dans l’écran le monde réel.
 
@@ -299,8 +299,8 @@ ARKit 2 prend en charge « l’environnement sprites » qui utilise des images
 
 Pour pouvoir utiliser la texture de l’environnement :
 
-* Votre [ `SCNMaterial` ](https://developer.xamarin.com/api/type/SceneKit.SCNMaterial/) objets doivent utiliser [ `SCNLightingModel.PhysicallyBased` ](https://developer.xamarin.com/api/property/SceneKit.SCNLightingModel.PhysicallyBased/) et affecter une valeur dans la plage de 0 à 1 pour [ `Metalness.Contents` ](https://developer.xamarin.com/api/property/SceneKit.SCNMaterial.Metalness/) et [ `Roughness.Contents` ](https://developer.xamarin.com/api/property/SceneKit.SCNMaterialProperty.Contents/) et
-* Votre configuration de suivi doit définir [ `EnvironmentTexturing` ](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing/)  =  [AREnvironmentTexturing.Automatic'](https://developer.xamarin.com/api/field/ARKit.AREnvironmentTexturing.Automatic/) :
+* Votre [ `SCNMaterial` ](xref:SceneKit.SCNMaterial) objets doivent utiliser [ `SCNLightingModel.PhysicallyBased` ](xref:SceneKit.SCNLightingModel.PhysicallyBased) et affecter une valeur dans la plage de 0 à 1 pour [ `Metalness.Contents` ](xref:SceneKit.SCNMaterial.Metalness) et [ `Roughness.Contents` ](xref:SceneKit.SCNMaterialProperty.Contents) et
+* Votre configuration de suivi doit définir [ `EnvironmentTexturing` ](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [AREnvironmentTexturing.Automatic'](xref:ARKit.AREnvironmentTexturing.Automatic) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -323,7 +323,7 @@ Bien que la texture parfaitement réfléchissante indiquée dans l’extrait de 
 
 ### <a name="shared-and-persistent-ar-experiences"></a>Expériences de AR partagés et permanents
 
-Un autre ajout majeur à ARKit 2 est le [ `ARWorldMap` ](https://developer.xamarin.com/api/type/ARKit.ARWorldMap/) (classe), ce qui vous permet de partager ou stocker des données de suivi de monde. Vous obtenez la carte du monde actuel avec [ `ARSession.GetCurrentWorldMapAsync` ](https://developer.xamarin.com/api/member/ARKit.ARSession.GetCurrentWorldMapAsync()/) ou [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>` ](https://developer.xamarin.com/api/member/ARKit.ARSession.GetCurrentWorldMap/p/System.Action%7BARKit.ARWorldMap,Foundation.NSError%7D/) :
+Un autre ajout majeur à ARKit 2 est le [ `ARWorldMap` ](xref:ARKit.ARWorldMap) (classe), ce qui vous permet de partager ou stocker des données de suivi de monde. Vous obtenez la carte du monde actuel avec [ `ARSession.GetCurrentWorldMapAsync` ](xref:ARKit.ARSession.GetCurrentWorldMapAsync) ou [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>` ](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
 
 ```csharp
 // Local storage
@@ -346,7 +346,7 @@ Pour partager ou restaurer la carte du monde :
 
 1. Charger les données à partir du fichier,
 2. Décompresse dans un `ARWorldMap` objet,
-3. Utiliser comme la valeur de la [ `ARWorldTrackingConfiguration.InitialWorldMap` ](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.InitialWorldMap/) propriété :
+3. Utiliser comme la valeur de la [ `ARWorldTrackingConfiguration.InitialWorldMap` ](xref:ARKit.ARWorldTrackingConfiguration.InitialWorldMap) propriété :
 
 ```csharp
 var data = NSData.FromArray(File.ReadAllBytes(PersistentWorldController.PersistenWorldPath));
@@ -361,7 +361,7 @@ var configuration = new ARWorldTrackingConfiguration
 };
 ```
 
-Le `ARWorldMap` contient seulement les données de suivi de monde non visibles et [ `ARAnchor` ](https://developer.xamarin.com/api/type/ARKit.ARAnchor/) objets, c’est le cas _pas_ contiennent des ressources numériques. Pour partager une géométrie ou imagerie, vous devrez développer votre propre stratégie appropriée à votre cas d’usage (par exemple en stockage/la transmission uniquement l’emplacement et l’orientation de la géométrie et de son application statique `SCNGeometry` ou peut-être en stockage/la transmission objets sérialisés). L’avantage de la `ARWorldMap` est que les ressources, une fois placés par rapport à un partage `ARAnchor`, apparaîtra cohérente entre les périphériques ou les sessions.
+Le `ARWorldMap` contient seulement les données de suivi de monde non visibles et [ `ARAnchor` ](xref:ARKit.ARAnchor) objets, c’est le cas _pas_ contiennent des ressources numériques. Pour partager une géométrie ou imagerie, vous devrez développer votre propre stratégie appropriée à votre cas d’usage (par exemple en stockage/la transmission uniquement l’emplacement et l’orientation de la géométrie et de son application statique `SCNGeometry` ou peut-être en stockage/la transmission objets sérialisés). L’avantage de la `ARWorldMap` est que les ressources, une fois placés par rapport à un partage `ARAnchor`, apparaîtra cohérente entre les périphériques ou les sessions.
 
 ### <a name="universal-scene-description-file-format"></a>Format de fichier de Description de la scène universel
 
@@ -371,15 +371,15 @@ La fonctionnalité de titre final de ARKit 2 est l’adoption d’Apple de Pixar
 
 ### <a name="manual-resource-management"></a>Gestion des ressources manuelle
 
-Dans ARKit, il est essentiel gérer les ressources manuellement. Non seulement cela autorise-t-elle fréquences d’images élevés, il s’agit en fait _nécessaire_ afin d’éviter une confusion entre « gel de l’écran. » Le framework ARKit est différé sur la définition d’un nouveau frame de l’appareil photo ([`ARSession.CurrentFrame`](https://developer.xamarin.com/api/property/ARKit.ARSession.CurrentFrame/)). Jusqu'à ce que l’actuel [ `ARFrame` ](https://developer.xamarin.com/api/type/ARKit.ARFrame/) a `Dispose()` appelé dessus, ARKit n’offre pas un nouveau frame ! Cela entraîne la vidéo « geler » même si le reste de l’application est réactif. La solution consiste à toujours accéder aux `ARSession.CurrentFrame` avec un `using` bloquer ou appeler manuellement `Dispose()` dessus.
+Dans ARKit, il est essentiel gérer les ressources manuellement. Non seulement cela autorise-t-elle fréquences d’images élevés, il s’agit en fait _nécessaire_ afin d’éviter une confusion entre « gel de l’écran. » Le framework ARKit est différé sur la définition d’un nouveau frame de l’appareil photo ([`ARSession.CurrentFrame`](xref:ARKit.ARSession.CurrentFrame). Jusqu'à ce que l’actuel [ `ARFrame` ](xref:ARKit.ARFrame) a `Dispose()` appelé dessus, ARKit n’offre pas un nouveau frame ! Cela entraîne la vidéo « geler » même si le reste de l’application est réactif. La solution consiste à toujours accéder aux `ARSession.CurrentFrame` avec un `using` bloquer ou appeler manuellement `Dispose()` dessus.
 
 Tous les objets dérivés de `NSObject` sont `IDisposable` et `NSObject` implémente le [modèle Dispose](https://docs.microsoft.com/dotnet/standard/design-guidelines/dispose-pattern), de sorte que vous devez généralement suivre [ce modèle d’implémentation `Dispose` sur une dérivée classe](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).
 
 ### <a name="manipulating-transform-matrices"></a>Manipulation des matrices de transformation
 
-Dans n’importe quelle application 3D, vous allez être confronté à des matrices de transformation de 4 x 4 qui décrivent de manière compacte comment déplacer, faire pivoter et déformer un objet dans l’espace 3D. Dans SceneKit, il s’agit des [ `SCNMatrix4` ](https://developer.xamarin.com/api/type/SceneKit.SCNMatrix4/) objets.  
+Dans n’importe quelle application 3D, vous allez être confronté à des matrices de transformation de 4 x 4 qui décrivent de manière compacte comment déplacer, faire pivoter et déformer un objet dans l’espace 3D. Dans SceneKit, il s’agit des [ `SCNMatrix4` ](xref:SceneKit.SCNMatrix4) objets.  
 
-Le [ `SCNNode.Transform` ](https://developer.xamarin.com/api/property/SceneKit.SCNNode.Transform/) propriété retourne le `SCNMatrix4` matrice de transformation pour le [ `SCNNode` ](https://developer.xamarin.com/api/type/SceneKit.SCNNode/) _comme soutenu par_ ligne-major `simdfloat4x4` type. Par conséquent, par exemple :
+Le [ `SCNNode.Transform` ](xref:SceneKit.SCNNode.Transform) propriété retourne le `SCNMatrix4` matrice de transformation pour le [ `SCNNode` ](xref:SceneKit.SCNNode) _comme soutenu par_ ligne-major `simdfloat4x4` type. Par conséquent, par exemple :
 
 ```csharp
 var node = new SCNNode { Position = new SCNVector3(2, 3, 4) };  

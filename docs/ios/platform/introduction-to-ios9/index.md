@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 2f9cc72dcbe506d22c8a986bcf59ddaa6355f043
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: becba36655a5247a11decb7dc54334f9397ecdfc
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103248"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233534"
 ---
 # <a name="introduction-to-ios-9"></a>Introduction à iOS 9
 
@@ -38,7 +38,7 @@ Pour en savoir plus, consultez notre [présentation 3D Touch](~/ios/platform/3d-
 
 Nouveau à iOS 9, App Transport Security (ATS) applique des connexions sécurisées entre les ressources internet (par exemple, le serveur de l’application back-end) et votre application. ATS garantit que toutes les communications internet sont conformes pour sécuriser la connexion meilleures pratiques, ce qui empêche la divulgation accidentelle d’informations sensibles directement par le biais de votre application ou une bibliothèque qui il consomme.
 
-Étant donné que ATS est activé par défaut dans les applications développées pour iOS 9 et OS X 10.11 (El Capitan), toutes les connexions à l’aide de [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) ou [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) sera soumis pour Exigences de sécurité ATS. Si vos connexions ne répondent pas à ces besoins, ils échoueront avec une exception.
+Étant donné que ATS est activé par défaut dans les applications développées pour iOS 9 et OS X 10.11 (El Capitan), toutes les connexions à l’aide de [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) ou [NSUrlSession](xref:Foundation.NSUrlSession) sera soumis pour Exigences de sécurité ATS. Si vos connexions ne répondent pas à ces besoins, ils échoueront avec une exception.
 
 Pour en savoir plus sur ATS, veuillez consulter notre [App Transport Security](~/ios/app-fundamentals/ats.md) guide.
 
@@ -78,7 +78,7 @@ Pour plus d’informations, consultez notre [les améliorations de recherche](~/
 
 ## <a name="new-stack-view"></a>Nouvelle vue de la pile
 
-Le contrôle de la vue de la pile ([UIStackView](https://developer.xamarin.com/api/type/UIKit.UIStackView/)) tire parti de la puissance de disposition automatique et des Classes de taille pour gérer une pile de sous-vues (verticale ou horizontale) qui répond dynamiquement à la taille d’écran et l’orientation de l’appareil iOS.
+Le contrôle de la vue de la pile ([UIStackView](xref:UIKit.UIStackView) exploite la puissance de la disposition automatique et les Classes de taille pour gérer une pile de sous-vues (verticale ou horizontale) qui répond dynamiquement à la taille d’écran et l’orientation de l’appareil iOS.
 
 En utilisant le contrôle de la vue de la pile, la quantité de travail nécessaire à la disposition de qu'une interface utilisateur est considérablement réduite. La disposition de tous les sous-vues attachée à une vue de la pile sont gérés automatiquement, selon les propriétés de développeur défini comme axe, distribution, alignement et espacement.
 
@@ -87,7 +87,7 @@ Pour plus d’informations, consultez notre [Introduction à la vue de la pile](
 
 ## <a name="collection-view-changes"></a>Afficher les modifications de collection
 
-Dans iOS 9, la vue de Collection ([UICollectionView](https://developer.xamarin.com/api/type/UIKit.UICollectionView/)) maintenant prend en charge faites glisser la réorganisation des éléments prêts à l’emploi en ajoutant un nouveau module de reconnaissance de geste par défaut et plusieurs nouvelles méthodes de prise en charge.
+Dans iOS 9, la vue de Collection ([UICollectionView](xref:UIKit.UICollectionView) maintenant prend en charge faites glisser la réorganisation des éléments prêts à l’emploi en ajoutant un nouveau module de reconnaissance de geste par défaut et plusieurs nouvelles méthodes de prise en charge.
 
 À l’aide de ces nouvelles méthodes, vous pouvez facilement implémenter glisser pour réorganiser dans votre vue de Collection et avez la possibilité de personnaliser l’apparence des éléments au cours de n’importe quelle étape du processus de réorganisation.
 
@@ -150,9 +150,9 @@ Pour plus d’informations, consultez notre [présentation Touch ID](~/ios/platf
 
 Dans iOS 9, Apple a apporté présentant une interface utilisateur retournée plus facile que jamais en fournissant la prise en charge complète pour les langues de droite à gauche. Ce dernier est détaillé ci-après :
 
-- Standard [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) contrôles seront inverser automatiquement selon les paramètres régionaux et linguistiques des appareils iOS de droite à gauche.
-- Le [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) classe fournit des attributs qui vous permettent de définir la manière dont une vue donnée doit apparaître lorsque retournée de droite à gauche.
-- La possibilité de faire pivoter une image par programmation à l’aide de la [FlipsForRightToLeftLayoutDirection](https://developer.xamarin.com/api/property/UIKit.UIImage.FlipsForRightToLeftLayoutDirection/) propriété de la [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/) classe.
+- Standard [UIKit](xref:UIKit) contrôles seront inverser automatiquement selon les paramètres régionaux et linguistiques des appareils iOS de droite à gauche.
+- Le [UIView](xref:UIKit.UIView) classe fournit des attributs qui vous permettent de définir la manière dont une vue donnée doit apparaître lorsque retournée de droite à gauche.
+- La possibilité de faire pivoter une image par programmation à l’aide de la [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) propriété de la [UIImage](xref:UIKit.UIImage) classe.
 
 Pour plus d’informations, consultez le site d’Apple [langues prenant en charge de droite à gauche](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) documentation.
 

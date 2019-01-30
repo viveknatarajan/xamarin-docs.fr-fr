@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: 3f15eaf9171ac44b870239fb5ffa14edd6210360
-ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
+ms.openlocfilehash: c68cdc443f11ec6709a9d6fdde8ce10cd9db6733
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54879301"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233677"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Vue d’ensemble des liaisons Objective-C
 
@@ -72,11 +72,11 @@ Lire le [docs d’objectif Sharpie](~/cross-platform/macios/binding/objective-sh
 
 ## <a name="how-binding-works"></a>Fonctionne de la liaison
 
-Il est possible d’utiliser le [[inscrire]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attribut, [[Exporter]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) attribut, et [appel de sélecteur manuel Objective-C](~/ios/internals/objective-c-selectors.md) ensemble à lier manuellement new (précédemment types Objective-C non liés).
+Il est possible d’utiliser le [[inscrire]](xref:Foundation.RegisterAttribute) attribut, [[Exporter]](xref:Foundation.ExportAttribute) attribut, et [appel de sélecteur manuel Objective-C](~/ios/internals/objective-c-selectors.md) ensemble à lier manuellement new (précédemment types Objective-C non liés).
 
-Tout d’abord, trouver un type que vous souhaitez lier. Pour la discussion à des fins (et la simplicité), nous allons lier la [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (qui a déjà été lié dans [Foundation.NSEnumerator](https://developer.xamarin.com/api/type/Foundation.NSEnumerator/); l’implémentation ci-après est simplement par exemple à des fins).
+Tout d’abord, trouver un type que vous souhaitez lier. Pour la discussion à des fins (et la simplicité), nous allons lier la [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (qui a déjà été lié dans [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); l’implémentation ci-après est simplement par exemple à des fins).
 
-Ensuite, nous devons créer la C# type. Nous devrons probablement placer ces données dans un espace de noms ; dans la mesure où Objective-C ne prend pas en charge les espaces de noms, nous devons utiliser le `[Register]` attribut pour modifier le nom de type Xamarin.iOS s’inscrivent auprès du runtime Objective-C. Le C# type doit également hériter [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
+Ensuite, nous devons créer la C# type. Nous devrons probablement placer ces données dans un espace de noms ; dans la mesure où Objective-C ne prend pas en charge les espaces de noms, nous devons utiliser le `[Register]` attribut pour modifier le nom de type Xamarin.iOS s’inscrivent auprès du runtime Objective-C. Le C# type doit également hériter [Foundation.NSObject](xref:Foundation.NSObject):
 
 ```csharp
 namespace Example.Binding {

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 00bf7290d5f7165feb5b67cd91c15a96b7d3eaf8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c409fcc018379401c1ab40573495da12a8220c5a
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118368"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233664"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Contrôles personnalisés dans le Concepteur de Xamarin pour iOS
 
@@ -20,12 +20,12 @@ _Le Concepteur de Xamarin pour iOS prend en charge le rendu des contrôles perso
 
 Le Concepteur de Xamarin pour iOS est un outil puissant permettant de visualiser l’interface utilisateur d’une application et fournit WYSIWYG édition prise en charge pour la plupart des vues d’iOS et les contrôleurs d’affichage. Votre application peut également contenir des contrôles personnalisés qui étendent ceux intégrés dans iOS. Si ces contrôles personnalisés sont écrits avec quelques recommandations à l’esprit, elles peuvent également être rendues par le concepteur, en fournissant une expérience d’édition encore plus riche iOS. Ce document examine ces instructions.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Un contrôle qui répond à toutes les exigences suivantes s’affichera sur l’aire de conception :
 
-1.  Il est une sous-classe directe ou indirecte de [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) ou [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIView/Controller). Autres [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) sous-classes apparaît sous la forme d’une icône sur l’aire de conception.
-2.  Il a un [RegisterAttribute](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) à exposer à Objective-C.
+1.  Il est une sous-classe directe ou indirecte de [UIView](xref:UIKit.UIView) ou [UIViewController](xref:UIKit.UIViewController). Autres [NSObject](xref:Foundation.NSObject) sous-classes apparaît sous la forme d’une icône sur l’aire de conception.
+2.  Il a un [RegisterAttribute](xref:Foundation.RegisterAttribute) à exposer à Objective-C.
 3.  Il a [le constructeur de IntPtr requis](~/ios/internals/api-design/index.md).
 4.  Il implémente soit le [IComponent](xref:System.ComponentModel.IComponent) interface ou a un [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) définie sur True.
 
@@ -38,17 +38,17 @@ Le concepteur ne prend pas en charge le chargement des bibliothèques Objective-
 Une propriété déclarée par un contrôle personnalisé s’affiche dans le panneau de la propriété si les conditions suivantes sont remplies :
 
 1.  La propriété a un accesseur Get public et un accesseur Set.
-1.  La propriété a une [ExportAttribute](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) ainsi qu’un [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) définie sur True.
-1.  Le type de propriété est un type numérique, le type d’énumération, la chaîne, la bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/), ou [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/). Cette liste de types pris en charge peut être développée à l’avenir.
+1.  La propriété a une [ExportAttribute](xref:Foundation.ExportAttribute) ainsi qu’un [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) définie sur True.
+1.  Le type de propriété est un type numérique, le type d’énumération, la chaîne, la bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), ou [UIImage](xref:UIKit.UIImage). Cette liste de types pris en charge peut être développée à l’avenir.
 
 
 La propriété peut également être décorée avec un [attribut DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) pour spécifier l’étiquette qui s’affiche pour lui dans le panneau de la propriété.
 
 ## <a name="initialization"></a>Initialisation
 
-Pour `UIViewController` sous-classes, vous devez utiliser le [ViewDidLoad](https://developer.xamarin.com/api/member/UIKit.UIViewController.ViewDidLoad/) méthode pour le code qui dépend des vues que vous avez créé dans le concepteur.
+Pour `UIViewController` sous-classes, vous devez utiliser le [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) méthode pour le code qui dépend des vues que vous avez créé dans le concepteur.
 
-Pour `UIView` et d’autres `NSObject` sous-classes, le [AwakeFromNib](https://developer.xamarin.com/api/member/Foundation.NSObject.AwakeFromNib/) méthode est l’emplacement recommandé pour effectuer l’initialisation de votre contrôle personnalisé après qu’il est chargé à partir du fichier de disposition. Il s’agit, car toutes les propriétés personnalisées définies dans le panneau de la propriété ne seront pas définies lorsque le constructeur du contrôle est exécuté, mais ils seront définis avant `AwakeFromNib` est appelée :
+Pour `UIView` et d’autres `NSObject` sous-classes, le [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) méthode est l’emplacement recommandé pour effectuer l’initialisation de votre contrôle personnalisé après qu’il est chargé à partir du fichier de disposition. Il s’agit, car toutes les propriétés personnalisées définies dans le panneau de la propriété ne seront pas définies lorsque le constructeur du contrôle est exécuté, mais ils seront définis avant `AwakeFromNib` est appelée :
 
 
 ```csharp
@@ -138,7 +138,7 @@ Pour corriger cette situation, soit initialiser le `Counter` propriété ailleur
 
 Sur l’aire de conception, un contrôle personnalisé doit respecter quelques restrictions :
 
--  Ressources de groupe d’application ne sont pas disponibles en mode Création. Les images sont disponibles lors du chargement via [UIImage méthodes](https://developer.xamarin.com/api/type/UIKit.UIImage/%2fM) .
+-  Ressources de groupe d’application ne sont pas disponibles en mode Création. Les images sont disponibles lors du chargement via [UIImage méthodes](xref:UIKit.UIImage) .
 -  Les opérations asynchrones, telles que les demandes web, ne doivent pas être effectuées en mode Création. L’aire de conception ne prend pas en charge l’animation ou les autres mises à jour asynchrones à l’interface utilisateur du contrôle.
 
 

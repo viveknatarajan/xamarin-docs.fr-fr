@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: b98d1fcf0917b9e25d774a92d56bf90bdd291978
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 9d1f54fa4753ba2ef44ba9b8b48a84a3ca932c4b
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998628"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233846"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Mise en page pour les applications de tablette et bureau
 
@@ -33,7 +33,7 @@ Cette page décrit brièvement :
 
 Appareils d’écran supérieure sont disponibles pour toutes les plateformes prises en charge par Xamarin.Forms.
 
-### <a name="ipads-ios"></a>iPad (iOS)
+### <a name="ipads-ios"></a>iPads (iOS)
 
 Le modèle Xamarin.Forms inclut automatiquement la prise en charge de l’iPad en configurant le **Info.plist > appareils** à **universelle** (ce qui signifie que les iPhone et iPad sont pris en charge).
 
@@ -86,7 +86,7 @@ Cette approche peut être développée pour apporter des modifications significa
 
 ### <a name="leveraging-masterdetailpage"></a>En tirant parti de MasterDetailPage
 
-Le [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) est idéal pour les écrans plus grands, en particulier sur l’iPad où il utilise le [ `UISplitViewController` ](https://developer.xamarin.com/api/type/UIKit.UISplitViewController/) pour fournir une expérience iOS native.
+Le [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) est idéal pour les écrans plus grands, en particulier sur l’iPad où il utilise le [ `UISplitViewController` ](xref:UIKit.UISplitViewController) pour fournir une expérience iOS native.
 
 Révision [ce billet de blog Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/) pour voir comment vous pouvez adapter votre interface utilisateur afin que les téléphones utilisent une disposition et écrans plus grands peuvent utiliser une autre (avec le `MasterDetailPage`).
 

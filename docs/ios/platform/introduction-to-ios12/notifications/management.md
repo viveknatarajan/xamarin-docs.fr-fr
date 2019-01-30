@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: a7a3bb8f720f1c6a2370a2510659693bb28ea09b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 96fce269784ad0ac41fd1685ac7ac6b957932bd8
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111515"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233170"
 ---
 # <a name="notification-management-in-xamarinios"></a>Gestion de notification dans Xamarin.iOS
 
@@ -28,8 +28,8 @@ Extraits de code dans ce guide proviennent de cet exemple d’application.
 
 ## <a name="notification-management-screen"></a>Écran de gestion de notification
 
-Dans l’exemple d’application, `ManageNotificationsViewController` définit une interface utilisateur qui permet aux utilisateurs indépendamment activer et désactiver les notifications rouge et les notifications vert. Il s’agit une norme [`UIViewController`](https://developer.xamarin.com/api/type/UIKit.UIViewController/)
-contenant un [ `UISwitch` ](https://developer.xamarin.com/api/type/UIKit.UISwitch/) pour chaque type de notification. Le commutateur pour les deux types de notification d’activation/la désactivation enregistre, dans les valeurs par défaut de l’utilisateur, la préférence utilisateur pour ce type de notification :
+Dans l’exemple d’application, `ManageNotificationsViewController` définit une interface utilisateur qui permet aux utilisateurs indépendamment activer et désactiver les notifications rouge et les notifications vert. Il s’agit une norme [`UIViewController`](xref:UIKit.UIViewController)
+contenant un [ `UISwitch` ](xref:UIKit.UISwitch) pour chaque type de notification. Le commutateur pour les deux types de notification d’activation/la désactivation enregistre, dans les valeurs par défaut de l’utilisateur, la préférence utilisateur pour ce type de notification :
 
 ```csharp
 partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
@@ -41,7 +41,7 @@ partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
 > [!NOTE]
 > L’écran de gestion de notification vérifie également si l’utilisateur a désactivé complètement les notifications pour l’application. Dans ce cas, elle masque les bascules pour les types de notification individuelle. Pour ce faire, l’écran de gestion de notification :
 >
-> - Appels [ `UNUserNotificationCenter.Current.GetNotificationSettingsAsync` ](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync()/) et examine les [ `AuthorizationStatus` ](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationSettings.AuthorizationStatus/) propriété.
+> - Appels [ `UNUserNotificationCenter.Current.GetNotificationSettingsAsync` ](xref:UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync) et examine les [ `AuthorizationStatus` ](xref:UserNotifications.UNNotificationSettings.AuthorizationStatus) propriété.
 > - Masque les bascules pour les types de notification individuelle si les notifications ont été complètement désactivées pour l’application.
 > - Vérifie à nouveau si les notifications ont été désactivées chaque fois que l’application passe au premier plan, dans la mesure où l’utilisateur peut activer/désactiver les notifications dans les réglages iOS à tout moment.
 
@@ -61,7 +61,7 @@ partial void HandleTapRedNotificationButton(UIButton sender)
 iOS à des liens ciblés vers l’écran de gestion de notification d’une application de centre de Notification et les paramètres de notification de l’application dans l’application paramètres. Pour faciliter cela, une application doit :
 
 - Indiquer qu’un écran de gestion de notification est disponible en passant `UNAuthorizationOptions.ProvidesAppNotificationSettings` à la demande d’autorisation de notification de l’application.
-- Implémentez le `OpenSettings` méthode à partir de [ `IUNUserNotificationCenterDelegate` ](https://developer.xamarin.com/api/type/UserNotifications.IUNUserNotificationCenterDelegate/).
+- Implémentez le `OpenSettings` méthode à partir de [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
 ### <a name="authorization-request"></a>Demande d’autorisation
 

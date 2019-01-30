@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 369e1a37cc75bb4d10cc71d8f79ed1dd473378ba
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119434"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55234028"
 ---
 # <a name="binding-types-reference-guide"></a>Guide de référence des types de liaison
 
@@ -860,7 +860,7 @@ Ce qui suit C# types de données sont pris en charge pour être encapsulées dan
 * nuint
 * Enums
 
-#### <a name="nsstring"></a>Chaîne NSString
+#### <a name="nsstring"></a>NSString
 
 [`[BindAs]`](#BindAsAttribute) fonctionne conjointement avec [enums soutenu par une constante de chaîne NSString](#enum-attributes) pour pouvoir créer une meilleure API .NET, par exemple :
 
@@ -1181,7 +1181,7 @@ public class MyClass {
 }
 ```
 
-Les utilisateurs de votre code peuvent ensuite facilement s’abonner aux notifications publiées sur le [NSDefaultCenter](https://developer.xamarin.com/api/property/Foundation.NSNotificationCenter.DefaultCenter/) à l’aide de code similaire à celui-ci :
+Les utilisateurs de votre code peuvent ensuite facilement s’abonner aux notifications publiées sur le [NSDefaultCenter](xref:Foundation.NSNotificationCenter.DefaultCenter) à l’aide de code similaire à celui-ci :
 
 ```csharp
 var token = MyClass.Notifications.ObserverDidStart ((notification) => {
@@ -1203,7 +1203,7 @@ La valeur retournée à partir de `ObserveDidStart` peut être utilisé pour fac
 token.Dispose ();
 ```
 
-Ou vous pouvez appeler [NSNotification.DefaultCenter.RemoveObserver](https://developer.xamarin.com/api/member/Foundation.NSNotificationCenter.RemoveObserver/p/Foundation.NSObject//) et passer le jeton. Si votre notification contient des paramètres, vous devez spécifier un programme d’assistance `EventArgs` interface, comme suit :
+Ou vous pouvez appeler [NSNotification.DefaultCenter.RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) et passer le jeton. Si votre notification contient des paramètres, vous devez spécifier un programme d’assistance `EventArgs` interface, comme suit :
 
 ```csharp
 interface MyClass {
@@ -1226,7 +1226,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-La méthode ci-dessus génère un `MyScreenChangedEventArgs` classe avec le `ScreenX` et `ScreenY` propriétés qui permettent d’extraire les données à partir de la [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) dictionnaire à l’aide de clés `ScreenXKey` et `ScreenYKey` respectivement et appliquer les conversions appropriées. Le `[ProbePresence]` attribut est utilisé pour le générateur pour détecter si la clé est définie le `UserInfo`, au lieu de tenter d’extraire la valeur. Cela est utilisé pour les cas où la présence de la clé est la valeur (en général pour les valeurs booléennes).
+La méthode ci-dessus génère un `MyScreenChangedEventArgs` classe avec le `ScreenX` et `ScreenY` propriétés qui permettent d’extraire les données à partir de la [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) dictionnaire à l’aide de clés `ScreenXKey` et `ScreenYKey` respectivement et appliquer les conversions appropriées. Le `[ProbePresence]` attribut est utilisé pour le générateur pour détecter si la clé est définie le `UserInfo`, au lieu de tenter d’extraire la valeur. Cela est utilisé pour les cas où la présence de la clé est la valeur (en général pour les valeurs booléennes).
 
 Cela vous permet d’écrire du code comme suit :
 
@@ -1498,7 +1498,7 @@ Cela est généralement utilisé pour les rappels qui sont définis comme suit d
 typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 
-Voir aussi : [CCallback](#CCallback).
+Voir aussi : [CCallback](#CCallback).
 
 <a name="CCallback" />
 
@@ -1512,7 +1512,7 @@ Cela est généralement utilisé pour les rappels qui sont définis comme suit d
 typedef returnType (*SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 
-Voir aussi : [BlockCallback](#BlockCallback).
+Voir aussi : [BlockCallback](#BlockCallback).
 
 ### <a name="params"></a>params
 
@@ -1942,13 +1942,13 @@ Vous pouvez également appliquer l’attribut au niveau de l’assembly, et il s
 
 Avec Xamarin.iOS 8.0, nous avons introduit la prise en charge pour créer facilement des classes fortement typées qui encapsulent `NSDictionaries`.
 
-Pendant qu’il a toujours été possible d’utiliser le [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) de type de données avec une API manuelle, il est désormais beaucoup plus simple pour ce faire.  Pour plus d’informations, consultez [en exposant des Types forts](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
+Pendant qu’il a toujours été possible d’utiliser le [DictionaryContainer](xref:Foundation.DictionaryContainer) de type de données avec une API manuelle, il est désormais beaucoup plus simple pour ce faire.  Pour plus d’informations, consultez [en exposant des Types forts](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
 
 <a name="StrongDictionary" />
 
 ### <a name="strongdictionary"></a>StrongDictionary
 
-Quand cet attribut est appliqué à une interface, le générateur produit une classe avec le même nom que l’interface qui dérive de [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) et transforme chaque propriété définie dans l’interface dans un fortement typées méthodes getter et setter pour le dictionnaire.
+Quand cet attribut est appliqué à une interface, le générateur produit une classe avec le même nom que l’interface qui dérive de [DictionaryContainer](xref:Foundation.DictionaryContainer) et transforme chaque propriété définie dans l’interface dans un fortement typées méthodes getter et setter pour le dictionnaire.
 
 Cela génère automatiquement une classe qui peut être instanciée à partir d’un existant `NSDictionary` ou qui a été créé à nouveau.
 

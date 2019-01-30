@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 8a2755de3dc43ccff88cbdf4dc9c4f9ba2d532c0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ddd3e1e6cc3a3a9b42ddb7a597ed2db0ee495d41
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111539"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233313"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Boutons d’action de notification dynamique dans Xamarin.iOS
 
@@ -35,9 +35,9 @@ Créez et inscrivez les catégories de notification pendant une application est 
 Par exemple, dans le [exemple d’application](#sample-app-redgreennotifications), le `FinishedLaunching` méthode `AppDelegate` effectue les opérations suivantes :
 
 - Définit une catégorie pour les notifications rouge et l’autre pour les notifications vert
-- Enregistre ces catégories en appelant le [`SetNotificationCategories`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.SetNotificationCategories/)
+- Enregistre ces catégories en appelant le [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
 méthode de `UNUserNotificationCenter`
-- Attache un seul [`UNNotificationAction`](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationAction/)
+- Attache un seul [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 à chaque catégorie
 
 L’exemple de code suivant montre comment cela fonctionne :
@@ -74,12 +74,12 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-En fonction de ce code, toutes les notifications, dont la propriété [`Content.CategoryIdentifier`](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationContent.CategoryIdentifier/)
+En fonction de ce code, toutes les notifications, dont la propriété [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 « red-catégorie » ou « green-catégorie » sera, par défaut, afficher un **faire pivoter de 20°** bouton d’action.
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>Gestion dans l’application de boutons d’action de notification
 
-`UNUserNotificationCenter` a un `Delegate` propriété de type [ `IUNUserNotificationCenterDelegate` ](https://developer.xamarin.com/api/type/UserNotifications.UNUserNotificationCenterDelegate_Extensions/).
+`UNUserNotificationCenter` a un `Delegate` propriété de type [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
 Dans l’exemple d’application, `AppDelegate` définit lui-même en tant que délégué du centre de notification utilisateur dans `FinishedLaunching`:
 
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-Ensuite, `AppDelegate` implémente [`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse/)
+Ensuite, `AppDelegate` implémente [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 pour gérer les clics de bouton d’action :
 
 ```csharp
@@ -125,7 +125,7 @@ Cette implémentation de `DidReceiveNotificationResponse` ne gère pas la notifi
 
 Une extension de contenu de notification contient un contrôleur d’affichage qui définit l’interface personnalisée pour une notification.
 
-Ce contrôleur d’affichage peut utiliser le `GetNotificationActions` et `SetNotificationActions` méthodes sur ses [`ExtensionContext`](https://developer.xamarin.com/api/property/UIKit.UIViewController.ExtensionContext/)
+Ce contrôleur d’affichage peut utiliser le `GetNotificationActions` et `SetNotificationActions` méthodes sur ses [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 propriété pour accéder et modifier des boutons d’action de la notification.
 
 Dans l’exemple d’application, contrôleur d’affichage de l’extension contenu notification modifie les boutons d’action uniquement lorsqu’il répond à un clic sur un bouton d’action existante.

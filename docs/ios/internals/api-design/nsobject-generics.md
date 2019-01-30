@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 39faa4670b17cdf4853bfe24ff104765ca541b9f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 512280e9c298cfbcea6f693b0691236fd1cf5a5f
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106212"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233690"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Sous-classes génériques NSObject dans Xamarin.iOS
 
 ## <a name="using-generics-with-nsobjects"></a>L’utilisation de génériques avec NSObjects
 
-Depuis Xamarin.iOS 7.2.1, vous pouvez utiliser des génériques dans les sous-classes de `NSObject` (par exemple [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/)).
+Depuis Xamarin.iOS 7.2.1, vous pouvez utiliser des génériques dans les sous-classes de `NSObject` (par exemple [UIView](xref:UIKit.UIView).
 
 Vous pouvez désormais créer des classes génériques, comme celle-ci :
 
@@ -54,7 +54,7 @@ class Generic<T> : NSObject where T: NSObject
 }
 ```
 
-**Raison**: le paramètre de type générique est un `NSObject`, de sorte que la signature de sélecteur pour `myMethod:` peut être exposé en toute sécurité à Objective-C (il sera toujours `NSObject` ou une sous-classe de celui-ci).
+**Raison**: Le paramètre de type générique est un `NSObject`, de sorte que la signature de sélecteur pour `myMethod:` peut être exposé en toute sécurité à Objective-C (il sera toujours `NSObject` ou une sous-classe de celui-ci).
 
 **Mauvais**:
 
@@ -151,7 +151,7 @@ class MyClass : NSObject
 }
 ```
 
-**Raison**: cela n’est pas autorisé parce que Xamarin.iOS ne connaît pas le type à utiliser pour l’argument de type `T` lorsque la méthode est appelée à partir d’Objective-C.
+**Raison**: Cela n’est pas autorisé parce que Xamarin.iOS ne connaît pas le type à utiliser pour l’argument de type `T` lorsque la méthode est appelée à partir d’Objective-C.
 
 Une alternative consiste à créer une méthode spécialisée et à la place de l’exporter :
 
@@ -188,7 +188,7 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**Raison :** tout comme les méthodes génériques, les besoins d’exécution de Xamarin.iOS pour être en mesure de connaître le type à utiliser pour l’argument de type générique T.
+**Raison :** Tout comme les méthodes génériques, le runtime Xamarin.iOS doit être en mesure de connaître le type à utiliser pour l’argument de type générique T.
 
 Par exemple les membres que l’instance elle-même est utilisé (dans la mesure où il y aura jamais d’une instance générique<T>, il sera toujours générique<SomeSpecificClass>), mais pour les membres statiques ne sont pas présents.
 

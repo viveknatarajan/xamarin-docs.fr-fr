@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 25b17dbebebf7bcae92ebdc294c798101d39b987
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d5b7d4a372704079343a357c1d341a5260fcf583
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121618"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233274"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Contrôles d’Interface utilisateur dans Xamarin.iOS
 
@@ -54,13 +54,13 @@ Un utilisateur spécifique de cas pour les sélecteurs pour définir la date et/
 
 ## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[Indicateurs de progression et d’activité](progress-activity-indicator.md)
 
-iOS fournit deux méthodes principales pour indiquer la progression dans votre application : indicateurs d’activité (y compris un spécifique _réseau_ indicateur d’activité) et les barres de progression.
+iOS fournit deux méthodes principales pour indiquer la progression dans votre application : Indicateurs d’activité (y compris un spécifique _réseau_ indicateur d’activité) et les barres de progression.
 
 ## <a name="search-barssearchbarmd"></a>[Barres de recherche](searchbar.md)
 
 Le UISearchBar est utilisé pour effectuer des recherches dans une liste de valeurs. 
 
-## <a name="sliders-steppers-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[Curseurs, les exécutions pas à pas et les contrôles segmentés](slider-switch-segmented-controls.md)
+## <a name="sliders-switches-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[Curseurs, commutateurs et contrôles segmentés](slider-switch-segmented-controls.md)
 
 Le contrôle slider permet une sélection simple d’une valeur numérique dans une plage. iOS utilise le `UISwitch` comme entrée d’une valeur booléenne qui peut être représentée par une case sur d’autres plateformes. Un contrôle segmenté est une façon organisée pour permettre aux utilisateurs d’interagir avec un petit nombre d’options.
 

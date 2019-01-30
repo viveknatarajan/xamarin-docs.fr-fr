@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: fc08824ba973f5d50dbe92950d57c4ea8ecc3147
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054010"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233989"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Trois façons de dessiner un arc
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Ces méthodes sont identiques à Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) et [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) méthodes. IOS [ `AddArc` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArc/p/System.Boolean/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) méthode est similaire, mais est limitée aux arcs de cercle sur la circonférence d’un cercle plutôt que généralisé à une ellipse.
+Ces méthodes sont identiques à Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) et [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) méthodes. IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) méthode est similaire, mais est limitée aux arcs de cercle sur la circonférence d’un cercle plutôt que généralisé à une ellipse.
 
 Les deux méthodes commencent par un `SKRect` valeur qui définit l’emplacement et la taille d’une ellipse :
 
@@ -58,7 +58,7 @@ La courbe ajoutée au chemin avec le `AddArc` ou `ArcTo` méthode est simplement
 
 ![](arcs-images/anglearc.png "L’arc angle par lui-même")
 
-Le `startAngle` ou `sweepAngle` arguments peuvent être négatifs : l’arc est dans le sens horaire pour les valeurs positives de `sweepAngle` et pour les valeurs négatives dans le sens inverse des aiguilles.
+Le `startAngle` ou `sweepAngle` arguments peuvent être négatifs : L’arc est dans le sens horaire pour les valeurs positives de `sweepAngle` et pour les valeurs négatives dans le sens inverse des aiguilles.
 
 Toutefois, `AddArc` est *pas* définir un contour fermé. Si vous appelez `LineTo` après `AddArc`, une ligne est dessinée à partir de la fin de l’arc au point dans le `LineTo` (méthode) et les mêmes vaut `ArcTo`.
 
@@ -226,7 +226,7 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-Cela `ArcTo` méthode est similaire à la PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) (fonction) (page 532) et l’iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) (méthode).
+Cela `ArcTo` méthode est similaire à la PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) (fonction) (page 532) et l’iOS [ `AddArcToPoint` ](xref:CoreGraphics.CGPath.AddArcToPoint(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat)) (méthode).
 
 Le `ArcTo` méthode implique les trois points :
 
@@ -521,7 +521,7 @@ Si cette ellipse inclinée est ensuite placée afin qu’il touche les deux poin
 
 ![](arcs-images/ellipticalarcellipse1.png "Le premier ensemble d’arcs elliptiques")
 
-Ces deux arcs puissent être distinguées de deux manières : l’arc supérieur est supérieure à l’arc en bas, et comme l’arc est dessiné de gauche à droite, l’arc supérieur est dessiné dans un sens des aiguilles, tandis que l’arc bas est dessiné dans le sens inverse des aiguilles.
+Ces deux arcs peuvent être distingués de deux manières : L’arc supérieur est supérieure à l’arc en bas, et comme l’arc est dessiné de gauche à droite, l’arc supérieur est dessiné dans un sens des aiguilles, tandis que l’arc bas est dessiné dans le sens inverse des aiguilles.
 
 Il est également possible d’ajuster l’ellipse entre les deux points dans une autre façon :
 

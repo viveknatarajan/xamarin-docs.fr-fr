@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
-ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
+ms.openlocfilehash: 650ed00557a3dd819ab2920a7646f93199b98b9e
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609933"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233950"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Conseils de dépannage pour Xamarin.iOS 
 
@@ -75,7 +75,7 @@ TypeName XXXX {
 
 La définition ci-dessus est générée automatiquement par Visual Studio pour Mac pour tous les fichiers XIB que vous ajoutez à Visual Studio pour Mac dans le `NAME_OF_YOUR_XIB_FILE.designer.xib.cs` fichier.
 
-En outre, les types contenant le code ci-dessus doivent être une sous-classe de [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/).  Si le type conteneur est dans un espace de noms, il doit également avoir un [[inscrire]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attribut qui fournit un nom de type sans espace de noms (comme Interface Builder ne prend pas en charge les espaces de noms de types) :
+En outre, les types contenant le code ci-dessus doivent être une sous-classe de [NSObject](xref:Foundation.NSObject).  Si le type conteneur est dans un espace de noms, il doit également avoir un [[inscrire]](xref:Foundation.RegisterAttribute) attribut qui fournit un nom de type sans espace de noms (comme Interface Builder ne prend pas en charge les espaces de noms de types) :
 
 ```csharp
 namespace Samples.GLPaint {
@@ -98,7 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
-## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException : Aucun constructeur trouvé pour Foo.Bar::ctor(System.IntPtr)
+## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException: Aucun constructeur trouvé pour Foo.Bar::ctor(System.IntPtr)
 
 Cette erreur se produit lors de l’exécution lorsque le code tente d’instancier une instance des classes que vous avez référencé à partir de votre fichier Interface Builder. Cela signifie que vous avez oublié d’ajouter un constructeur qui accepte un IntPtr unique en tant que paramètre.
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Cela signifie que vous liez une bibliothèque statique compilée avec le code thumb dans votre projet. À compter de la version SDK iPhone 3.1 (ou version ultérieure au moment de la rédaction) Apple a introduit un bogue dans son éditeur de liens lors de la liaison du code non Thumb (Xamarin.iOS) avec le code Thumb (votre bibliothèque statique). Vous devrez effectuer une liaison avec une version non Thumb de votre bibliothèque statique pour atténuer ce problème.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException : Tentative de JIT compile (méthode) (un wrapper managé au code managé) Foo[]:System.Collections.Generic.ICollection'1.get_Count ()
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException: Tentative de JIT compile (méthode) (un wrapper managé au code managé) Foo[]:System.Collections.Generic.ICollection'1.get_Count ()
 
 Le suffixe [] indique que vous ou la bibliothèque de classes appelle une méthode sur un tableau dans une collection générique, tel que IEnumerable <>, ICollection <> ou <> de IList. Pour résoudre ce problème, vous pouvez forcer explicitement le compilateur AOT pour inclure la méthode de ce type en appelant la méthode vous-même, et en vérifiant que ce code est exécuté avant l’appel qui a déclenché l’exception. Dans ce cas, vous pouvez écrire :
 
@@ -283,7 +283,7 @@ Visual Studio pour Mac 2.2 comporte un bogue qui provoque son ne pas détecter l
 
 ## <a name="error-afcfilerefwrite-returned-1-during-upload"></a>Erreur « AFCFileRefWrite retourné : 1 » lors du chargement
 
-Lors du téléchargement d’une application sur votre appareil, vous pouvez recevoir une erreur « AFCFileRefWrite retourné : 1 ». Cela peut se produire si vous avez un fichier de longueur nulle.
+Lors du téléchargement d’une application sur votre appareil, vous pouvez recevoir une erreur « AFCFileRefWrite retourné : 1". Cela peut se produire si vous avez un fichier de longueur nulle.
 
 ## <a name="error-mtouch-failed-with-no-output"></a>Erreur « échoué sans aucune sortie de mtouch »
 
@@ -317,7 +317,7 @@ Procédez comme suit :
 -  Créer un fichier Info.plist personnalisé pour le projet et définir explicitement MinimumOSVersion 3.0 qu’il contient.   Cela remplacera la valeur de MinimumOSVersion 3.2 définie par Xamarin.iOS.   Si vous ne le faites pas, il se peut que l’application ne sera pas en mesure d’exécuter sur un iPhone.
 -  Reconstruction, zip et du téléchargement iTunes se connectent.
 
-## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Exception non gérée : System.Exception : Impossible de trouver le sélecteur someSelector : sur le {type}
+## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Exception non prise en charge : System.Exception : Impossible de trouver le sélecteur someSelector : sur le {type}
 
 Cette exception est provoquée par une des trois choses :
 
@@ -411,7 +411,7 @@ Ce problème peut se manifester sous plusieurs formes et ne produit pas toujours
 Pour vérifier l’action de génération, cliquez avec le bouton droit sur le fichier .xib et choisissez **Action de génération**.
 
 
-## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException : Aucune donnée n’est disponible pour l’encodage 437
+## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException: Aucune donnée n’est disponible pour l’encodage 437
 
 Lorsque vous incluez des bibliothèques tierces 3e dans votre application Xamarin.iOS, vous pouvez obtenir une erreur sous la forme « System.NotSupportedException : Aucune donnée n’est disponible pour l’encodage 437" lorsque vous tentez de compiler et exécuter l’application. Par exemple, les bibliothèques, telles que `Ionic.Zip.ZipFile`, peut lever cette exception au cours de l’opération.
 

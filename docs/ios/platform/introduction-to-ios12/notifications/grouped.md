@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 278986b29e629995a202f474242670f5524c45ff
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2e23bb13ad35e9a7a6386d881fe64f817ca8e216
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111521"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233261"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Notifications groupées dans Xamarin.iOS
 
@@ -30,7 +30,7 @@ Extraits de code dans ce guide proviennent de cet exemple d’application.
 
 ## <a name="request-authorization-and-allow-foreground-notifications"></a>Demander l’autorisation et autoriser les notifications de premier plan
 
-Qu’une application puisse envoyer des notifications locales, il doit demander l’autorisation pour ce faire. Dans l’exemple d’application [ `AppDelegate` ](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/), le [ `FinishedLaunching` ](https://developer.xamarin.com/api/member/UIKit.UIApplicationDelegate.FinishedLaunching/p/UIKit.UIApplication/Foundation.NSDictionary/) méthode demande cette autorisation :
+Qu’une application puisse envoyer des notifications locales, il doit demander l’autorisation pour ce faire. Dans l’exemple d’application [ `AppDelegate` ](xref:UIKit.UIApplicationDelegate), le [ `FinishedLaunching` ](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) méthode demande cette autorisation :
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -46,7 +46,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Le [ `Delegate` ](https://developer.xamarin.com/api/property/UserNotifications.UNUserNotificationCenter.Delegate/) (défini ci-dessus) pour un [ `UNUserNotificationCenter` ](https://developer.xamarin.com/api/type/UserNotifications.UNUserNotificationCenter/) décide si une application de premier plan doit afficher une notification entrante en appelant le Gestionnaire d’achèvement passé à [`WillPresentNotification`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification/p/UserNotifications.IUNUserNotificationCenterDelegate/UserNotifications.UNUserNotificationCenter/UserNotifications.UNNotification/System.Action%7BUserNotifications.UNNotificationPresentationOptions%7D/):
+Le [ `Delegate` ](xref:UserNotifications.UNUserNotificationCenter.Delegate) (défini ci-dessus) pour un [ `UNUserNotificationCenter` ](xref:UserNotifications.UNUserNotificationCenter) décide si une application de premier plan doit afficher une notification entrante en appelant le Gestionnaire d’achèvement passé à [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
 
 ```csharp
 [Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
@@ -56,7 +56,7 @@ public void WillPresentNotification(UNUserNotificationCenter center, UNNotificat
 }
 ```
 
-Le [ `UNNotificationPresentationOptions.Alert` ](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationPresentationOptions/) paramètre indique que l’application doit afficher l’alerte, mais pas un signal sonore ou un badge de mise à jour.
+Le [ `UNNotificationPresentationOptions.Alert` ](xref:UserNotifications.UNNotificationPresentationOptions) paramètre indique que l’application doit afficher l’alerte, mais pas un signal sonore ou un badge de mise à jour.
 
 ## <a name="threaded-notifications"></a>Notifications de threads
 
@@ -80,8 +80,8 @@ void StartNewThread()
 Pour envoyer une notification de thread, l’exemple d’application :
 
 - Vérifie si l’application dispose d’autorisations pour envoyer une notification.
-- Crée un [`UNMutableNotificationContent`](https://developer.xamarin.com/api/type/UserNotifications.UNMutableNotificationContent/)
-objet pour la notification du contenu et définit son [`ThreadIdentifier`](https://developer.xamarin.com/api/property/UserNotifications.UNMutableNotificationContent.ThreadIdentifier/)
+- Crée un [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+objet pour la notification du contenu et définit son [`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
 à l’identificateur de thread créé ci-dessus.
 - Crée une demande et planifie la notification :
 

@@ -6,12 +6,12 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: bdb401cd9fd3cfa1e33acec1252cfffbd8be3ebd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: da7064997b8a10d4a4604861a405e13dd23a08cf
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116639"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233911"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifications des infrastructures supplémentaires iOS 9
 
@@ -64,7 +64,7 @@ Pour plus d’informations, consultez les documents suivants :
 - [Démarrage rapide de CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) -présentation d’Apple de CloudKit.
 - [Référence de JS CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) -documentation de CloudKit JS d’Apple.
 - [Référence de Services Web de CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) -référence d’Apple qui décrit l’interface HTTP de CloudKit.
-- [Catalogue de CloudKit : Présentation de CloudKit (Cocoa et JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) -exemple d’application d’Apple à l’aide de CloudKit et CloudKit JS.
+- [Catalogue de CloudKit : Une présentation de CloudKit (Cocoa et JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) -exemple d’application d’Apple à l’aide de CloudKit et CloudKit JS.
 
 > [!IMPORTANT]
 > Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs à gérer correctement le Règlement général sur la protection des données (RGPD) de l’Union européenne.
@@ -75,7 +75,7 @@ Apple comprenait les modifications suivantes à l’infrastructure Foundation da
 
 ### <a name="changes-to-nsbundle"></a>Modifications apportées aux NSBundle
 
-Les modifications suivantes ont été apportées à la [NSBundle](https://developer.xamarin.com/api/type/Foundation.NSBundle/) classe pour iOS 9 :
+Les modifications suivantes ont été apportées à la [NSBundle](xref:Foundation.NSBundle) classe pour iOS 9 :
 
 * `GetPreservationPriorityForTag (NSString tag)` -Obtient la priorité actuelle de la conservation pour les ressources avec la balise spécifiée. Les valeurs valides sont dans la plage `0.0` à `1.0`, ressources avec la priorité la plus basse seront purgés tout d’abord.
 * `SetPreservationPriorityForTag (double priority, NSSet tags)` : Définit la priorité actuelle de la préservation des ressources avec les balises donnés. Les valeurs valides sont dans la plage `0.0` à `1.0`, ressources avec la priorité la plus basse seront purgés tout d’abord.
@@ -84,7 +84,7 @@ Pour plus d’informations, consultez le site d’Apple [NSBundle référence](h
 
 ### <a name="changes-to-nsprocessinfo"></a>Modifications apportées aux NSProcessInfo
 
-Chaque processus en cours d’exécution sur un appareil iOS a un seul, _Agent des informations de processus_ (PIA). Utilisez le [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) classe pour fournir des informations sur les PIA et contrôle courant et la gestion thermique pour un processus donné.
+Chaque processus en cours d’exécution sur un appareil iOS a un seul, _Agent des informations de processus_ (PIA). Utilisez le [NSProcessInfo](xref:Foundation.NSProcessInfo) classe pour fournir des informations sur les PIA et contrôle courant et la gestion thermique pour un processus donné.
 
 Par exemple, pour contrôler l’arrêt automatique d’un processus, vous pouvez utiliser le code suivant :
 
@@ -103,7 +103,7 @@ Pour plus d’informations, consultez le site d’Apple [NSProcessInfo référen
 
 ### <a name="reacting-to-low-power-mode"></a>Réagir au Mode de faible consommation d’énergie
 
-Utilisez le `LowPowerModeEnabled` propriété de la [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) classe pour déterminer si le Mode d’alimentation faible a été activé sur l’appareil iOS que l’application est en cours d’exécution. Exemple :
+Utilisez le `LowPowerModeEnabled` propriété de la [NSProcessInfo](xref:Foundation.NSProcessInfo) classe pour déterminer si le Mode d’alimentation faible a été activé sur l’appareil iOS que l’application est en cours d’exécution. Exemple :
 
 ```csharp
 // Is the device in low power mode?
@@ -175,7 +175,7 @@ Apple comprenait les modifications suivantes à la [Safari Services](https://dev
 
 - Vous pouvez maintenant utiliser le nouveau [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) classe pour afficher le contenu web au sein d’une application Xamarin.iOS. Il offre la possibilité de partager des données de sites Web et les cookies avec l’application Safari et inclut plusieurs fonctionnalités de Safari (par exemple, le lecteur et le remplissage automatique). [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) fonctionnalités un **fait** bouton qui retournera des utilisateurs à votre application lorsqu’ils sont terminés de consulter le contenu web.
 
-Étant donné que le [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) classe est conçue pour afficher une seule page de contenu web, vous devez envisager de l’utiliser pour remplacer les [WKWebKit](https://developer.xamarin.com/api/type/WebKit.WKWebView/) ou [UIWebView](https://developer.xamarin.com/api/type/UIKit.UIWebView/)contrôles au sein de vos applications existantes de Xamarin.iOS.
+Étant donné que le [SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) classe est conçue pour afficher une seule page de contenu web, vous devez envisager de l’utiliser pour remplacer les [WKWebKit](xref:WebKit.WKWebView) ou [UIWebView](xref:UIKit.UIWebView)contrôles au sein de vos applications existantes de Xamarin.iOS.
 
 ### <a name="displaying-a-website"></a>Affichage d’un site Web
 
@@ -191,7 +191,7 @@ PresentViewController(controller, true, null);
 
 ## <a name="uikit-framework-changes"></a>Modifications du Framework UIKit
 
-Apple a inclus de nombreuses améliorations à plusieurs éléments de la [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) framework pour iOS 9. Les sections suivantes décrit en détail ces modifications.
+Apple a inclus de nombreuses améliorations à plusieurs éléments de la [UIKit](xref:UIKit) framework pour iOS 9. Les sections suivantes décrit en détail ces modifications.
 
 ### <a name="3d-touch-events"></a>Événements tactiles 3D
 
@@ -203,7 +203,7 @@ Pour plus d’informations, consultez notre [présentation 3D Touch](~/ios/platf
 
 ### <a name="document-open-in-place-functionality"></a>Fonctionnalités de Open in situ de document
 
-En utilisant le `FinishedLaunching (application, launchOptions)` ou `WillFinishLaunching (Application, launchOptions)` méthodes de la [UIApplicationDelegate](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/) (classe), vous pouvez désormais ouvrir un document et modifiez-le en place (par opposition à une copie de travail).
+En utilisant le `FinishedLaunching (application, launchOptions)` ou `WillFinishLaunching (Application, launchOptions)` méthodes de la [UIApplicationDelegate](xref:UIKit.UIApplicationDelegate) (classe), vous pouvez désormais ouvrir un document et modifiez-le en place (par opposition à une copie de travail).
 
 Pour prendre en charge la nouvelle fonctionnalité open in situ, ajoutez le `LSSupportsOpeningDocumentsInPlace` clés à votre application Xamarin.iOS **Info.plist** fichier avec une valeur de `YES`.
 
@@ -221,7 +221,7 @@ La nouvelle `NSDataAsset` classe permet à une application Xamarin.iOS extraire 
 
 ### <a name="new-layout-anchors"></a>Les nouvelles ancres de disposition
 
-La nouvelle `NSLayoutAnchor` et `NSLayoutDimension` classes de point d’ancrage de disposition fonctionnent avec les nouvelles propriétés d’ancrage de la [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) classe (tel que `LeadingAnchor` et `WidthAnchor`) pour faciliter la mise en page dans iOS 9.
+La nouvelle `NSLayoutAnchor` et `NSLayoutDimension` classes de point d’ancrage de disposition fonctionnent avec les nouvelles propriétés d’ancrage de la [UIView](xref:UIKit.UIView) classe (tel que `LeadingAnchor` et `WidthAnchor`) pour faciliter la mise en page dans iOS 9.
 
 Consultez notre [Introduction aux Storyboards unifiés](~/ios/user-interface/storyboards/unified-storyboards.md) documentation pour plus d’informations sur l’utilisation des Classes de taille et de mise en forme automatique dans une application Xamarin.iOS et un d’Apple [NSLayoutAnchor référence](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor), [ Référence de NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) et [UIView référence](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) pour plus d’informations.
 
@@ -231,11 +231,11 @@ La nouvelle `UILayoutGuide` classe peut être utilisée pour fournir des marges 
 
 ### <a name="text-input-in-notifications-modifications"></a>Entrée de texte dans les Modifications de Notifications
 
-Le [UIUserNotificationAction](https://developer.xamarin.com/api/type/UIKit.UIUserNotificationAction/) classe a un nouvel `Behavior` propriété qui peut être utilisée pour prendre en charge la saisie de texte à partir des notifications.
+Le [UIUserNotificationAction](xref:UIKit.UIUserNotificationAction) classe a un nouvel `Behavior` propriété qui peut être utilisée pour prendre en charge la saisie de texte à partir des notifications.
 
 ### <a name="uiapplicationdelegate-changes"></a>Modifications de UIApplicationDelegate
 
-Bien que pas officiellement déconseillé par Apple, ils suggèrent en remplaçant tous les appels à la `FinishedLaunching (UIApplication application)` méthode de la [UIApplicationDelegate](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/) classe avec une le `FinishedLaunching (UIApplication application, NSDictionary launchOptions)` ou `WillFinishLaunching (UIApplication application, NSDictionary launchOptions)` méthodes.
+Bien que pas officiellement déconseillé par Apple, ils suggèrent en remplaçant tous les appels à la `FinishedLaunching (UIApplication application)` méthode de la [UIApplicationDelegate](xref:UIKit.UIApplicationDelegate) classe avec une le `FinishedLaunching (UIApplication application, NSDictionary launchOptions)` ou `WillFinishLaunching (UIApplication application, NSDictionary launchOptions)` méthodes.
 
 Consultez d’Apple [UIApplicationDelegate référence](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intf/UIApplicationDelegate) pour plus d’informations.
 
@@ -251,7 +251,7 @@ Consultez d’Apple [UIAttachment référence](https://developer.apple.com/libra
 
 ### <a name="uipickerview-and-uidatepicker-changes"></a>UIPickerView et UIDatePicker modifications
 
-Avant d’iOS 9, le [UIPickerView](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) et le [UIDatePicker](https://developer.xamarin.com/api/type/UIKit.UIDatePicker/) contrôles ont été non redimensionnable et est redimensionné automatiquement pour remplir la largeur de leur conteneur (généralement la largeur de l’appareil iOS a été de l’application en cours d’exécution).
+Avant d’iOS 9, le [UIPickerView](xref:UIKit.UIPickerView) et le [UIDatePicker](xref:UIKit.UIDatePicker) contrôles ont été non redimensionnable et est redimensionné automatiquement pour remplir la largeur de leur conteneur (généralement la largeur de l’appareil iOS a été de l’application en cours d’exécution).
 
 Dans iOS 9, le redimensionnement automatique ne se produit plus et les contrôles sont rendus sur une largeur de 320 point sur tous les appareils iOS, quelle que soit la taille de l’écran et l’orientation.
 

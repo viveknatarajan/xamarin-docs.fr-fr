@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/20/2018
-ms.openlocfilehash: b0a5d3e75ebbcd70a60a3e4e76eebe166117d31c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0b3fb7d467ae64e2cbfdb61644b1537bc5ae1161
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131081"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233066"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>À l’aide de l’infrastructure de langage naturel avec Xamarin.iOS
 
@@ -20,7 +20,7 @@ Introduit dans iOS 12, l’infrastructure de langage naturel permet le traitemen
 
 L’infrastructure de langage naturel pouvez également utiliser des modèles personnalisés Core ML pour classer et identifier le texte dans des contextes spécifiques.
 
-Le [NSLinguisticTagger](https://developer.xamarin.com/api/type/Foundation.NSLinguisticTagger/) classe est toujours disponible. Toutefois, l’infrastructure de langage naturel est le mécanisme par défaut à utiliser pour le traitement en langage naturel.
+Le [NSLinguisticTagger](xref:Foundation.NSLinguisticTagger) classe est toujours disponible. Toutefois, l’infrastructure de langage naturel est le mécanisme par défaut à utiliser pour le traitement en langage naturel.
 
 ## <a name="sample-app-xamarinnl"></a>Exemple d’application : XamarinNL
 
@@ -151,7 +151,7 @@ Le **Générateur de jetons** onglet de l’exemple d’application montre comme
 Appuyez sur la **mots** ou **phrases** bouton pour extraire une liste de jetons. Chaque jeton est associé à un mot ou une phrase dans le texte d’origine.
 
 `ShowTokens` fractionne l’entrée de l’utilisateur en jetons en appelant le [`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
-méthode d’un `NLTokenizer`. Cette méthode retourne un tableau de [`NSValue`](https://developer.xamarin.com/api/type/Foundation.NSValue/)
+méthode d’un `NLTokenizer`. Cette méthode retourne un tableau de [`NSValue`](xref:Foundation.NSValue)
 objets, chaque habillage un `NSRange` valeur correspondant à un jeton dans le texte d’origine.
 
 ```csharp

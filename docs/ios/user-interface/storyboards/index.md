@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51564003"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233560"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduction aux Storyboards dans Xamarin.iOS
 
@@ -23,7 +23,7 @@ Avant que le format de fichier Storyboard a été introduit par Apple comme une 
 Un Storyboard peut être créé, ouvert et modifié avec le Concepteur de Xamarin iOS. Ce guide effectue également une procédure pas à pas comment utiliser le concepteur pour créer vos plans conceptuels depuis tout en utilisant c# pour programmer le volet de navigation.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Tables de montage séquentiel utilisable avec le concepteur dans Visual Studio pour Mac iOS ou avec Visual Studio 2015 et 2017 avec les charges de travail Xamarin installés.
 
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Lorsque vous créez une table de montage séquentiel à l’aide du concepteur, l’IDE ajoute automatiquement le [[inscrire]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attribut en haut de la `designer.cs` classe et vous transmettez un identificateur de chaîne, qui est identique à l’ID de plan conceptuel spécifié dans le étape précédente. Cela lie le c# à la scène pertinentes dans le Storyboard.
+Lorsque vous créez une table de montage séquentiel à l’aide du concepteur, l’IDE ajoute automatiquement le [[inscrire]](xref:Foundation.RegisterAttribute) attribut en haut de la `designer.cs` classe et vous transmettez un identificateur de chaîne, qui est identique à l’ID de plan conceptuel spécifié dans le étape précédente. Cela lie le c# à la scène pertinentes dans le Storyboard.
 
 À un moment donné vous souhaiterez peut-être ajouter une classe existante qui a été **pas** créé dans le concepteur. Dans ce cas, vous pouvez enregistrer cette classe comme d’habitude :
 
@@ -319,13 +319,13 @@ Avant de commencer, suivez les étapes 1 à 8 ci-dessus. Dans ces étapes nous c
 
 1. Maintenant, nous allons créer notre interface utilisateur et ajouter des affichages supplémentaires répertoriées à la `MainViewController` afin qu’il apparaisse comme celle-ci dans la capture d’écran ci-dessous :
 
-    - Champ UITextField
-        - Nom : PasswordTextField
-        - Espace réservé : « entrez le mot de passe Secret »
+    - UITextField
+        - Nom : PasswordTextField
+        - Espace réservé : « Entrez le mot de passe Secret »
     - UILabel
-        - Texte : « erreur : incorrect de mot de passe. Vous ne sont pas transmettre ! »
-        - Couleur : rouge
-        - Alignement : centre
+        - Texte : « Erreur : Mot de passe incorrect. Vous ne sont pas transmettre ! »
+        - Couleur : Rouge
+        - Alignement : Center
         - Lignes : 2
         - Case à cocher « Masqué » activée 
         

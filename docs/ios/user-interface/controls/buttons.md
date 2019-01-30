@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2018
-ms.openlocfilehash: 35fc743944c04dd1fdb8e035ba94ad6aeb6156ea
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: a98ddc2622682f2c105a6aff32e94bd92a5b11f2
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38986002"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233248"
 ---
 # <a name="buttons-in-xamarinios"></a>Boutons dans Xamarin.iOS
 
@@ -75,7 +75,7 @@ button.TouchUpInside += (sender, e) => {
 ```
 
 > [!NOTE]
-> `TouchUpInside` n’est pas l’événement de bouton disponible uniquement. `UIButton` est une classe enfant de `UIControl`, qui définit [grand nombre d’événements différents](https://developer.xamarin.com/api/type/UIKit.UIControlEvent/).
+> `TouchUpInside` n’est pas l’événement de bouton disponible uniquement. `UIButton` est une classe enfant de `UIControl`, qui définit [grand nombre d’événements différents](xref:UIKit.UIControlEvent).
 
 ### <a name="using-the-ios-designer-to-specify-button-event-handlers"></a>À l’aide du concepteur iOS pour spécifier des gestionnaires d’événements de bouton
 
@@ -90,7 +90,7 @@ Pour l’événement approprié, tapez le nom d’un nouveau gestionnaire d’é
 `UIButton` les contrôles peuvent exister dans un nombre d’états différents, spécifié par un `UIControlState` valeur – `Normal`, `Disabled`, `Focused`, `Highlighted`, etc. Chaque état peut être donné à un style unique, spécifié par programmation ou avec le concepteur iOS.
 
 > [!NOTE]
-> Pour obtenir la liste complète de tous les `UIControlState` valeurs, examinons le [`UIKit.UIControlState enumeration`](https://developer.xamarin.com/api/type/UIKit.UIControlState/)
+> Pour obtenir la liste complète de tous les `UIControlState` valeurs, examinons le [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
 > Documentation.
 
 Par exemple, pour définir la couleur de titre et la couleur de l’ombre pour `UIControlState.Normal`:

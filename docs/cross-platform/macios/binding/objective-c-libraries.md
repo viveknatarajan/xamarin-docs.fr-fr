@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 42e357c0fbb4b858866e15d638177d6823de0f09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 33f27d2585f4fb4d65181cbfd9211ea87b837e73
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112674"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233885"
 ---
 # <a name="binding-objective-c-libraries"></a>Bibliothèques de liaison Objective-C
 
@@ -214,7 +214,7 @@ attribut et mappées directement à C# propriétés. Tout comme les méthodes, l
 et le [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
 Attributs.
 
-Lorsque vous utilisez le [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) attribut sur une propriété sous btouch natif de l’arrière-plan lie en fait deux méthodes : la méthode getter et setter. Le nom que vous fournissez à exporter est le **basename** et l’accesseur Set est calculée en ajoutant le mot « jeu », l’activation de la première lettre de la **basename** en majuscules et rendre le sélecteur de prendre un argument. Cela signifie que `[Export ("label")]` appliquée sur une propriété lie plutôt le « label » et « setLabel : « méthodes Objective-C.
+Lorsque vous utilisez le [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) attribut sur une propriété sous btouch natif de l’arrière-plan lie en fait deux méthodes : la méthode getter et setter. Le nom que vous fournissez à exporter est le **basename** et l’accesseur Set est calculée en ajoutant le mot « jeu », l’activation de la première lettre de la **basename** en majuscules et rendre le sélecteur de prendre un argument. Cela signifie que `[Export ("label")]` appliquée sur une propriété lie plutôt le « label » et « setLabel : » Méthodes objective-C.
 
 Parfois, les propriétés Objective-C ne suivent pas le modèle décrit ci-dessus et le nom est remplacé manuellement. Dans ce cas, vous pouvez contrôler la façon dont que la liaison est générée à l’aide de la [`[Bind]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAttribute) 
 attribut sur l’accesseur Get ou Set, par exemple :
@@ -674,7 +674,7 @@ Veuillez consulter la [ `[BindAs]` ](~/cross-platform/macios/binding/binding-typ
 
 ### <a name="binding-notifications"></a>Notifications de liaison
 
-Les notifications sont des messages qui sont publiés sur le `NSNotificationCenter.DefaultCenter` et sont utilisés comme un mécanisme pour diffuser des messages à partir d’une partie de l’application vers un autre. Les développeurs s’abonner aux notifications en général à l’aide de la [NSNotificationCenter](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/)de [AddObserver](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/M/AddObserver/) (méthode). Lorsqu’une application publie un message vers le centre de notification, il contient généralement une charge utile stockée dans le [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) dictionnaire. Ce dictionnaire est faiblement typé et l’obtention des informations hors il est sujet aux erreurs, comme les utilisateurs doivent généralement lire dans la documentation, les clés sont disponibles sur le dictionnaire et les types des valeurs qui peuvent être stockées dans le dictionnaire. La présence de clés parfois est utilisée comme une valeur booléenne également.
+Les notifications sont des messages qui sont publiés sur le `NSNotificationCenter.DefaultCenter` et sont utilisés comme un mécanisme pour diffuser des messages à partir d’une partie de l’application vers un autre. Les développeurs s’abonner aux notifications en général à l’aide de la [NSNotificationCenter](xref:Foundation.NSNotificationCenter)de [AddObserver](xref:Foundation.NSNotificationCenter.AddObserver(Foundation.NSString,System.Action{Foundation.NSNotification})) (méthode). Lorsqu’une application publie un message vers le centre de notification, il contient généralement une charge utile stockée dans le [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) dictionnaire. Ce dictionnaire est faiblement typé et l’obtention des informations hors il est sujet aux erreurs, comme les utilisateurs doivent généralement lire dans la documentation, les clés sont disponibles sur le dictionnaire et les types des valeurs qui peuvent être stockées dans le dictionnaire. La présence de clés parfois est utilisée comme une valeur booléenne également.
 
 Le Générateur de liaison Xamarin.iOS prend en charge pour les développeurs à lier des notifications. Pour ce faire, vous définissez le [`[Notification]`](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)
 attribut sur une propriété qui a été également été marqués avec un [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute)
@@ -703,7 +703,7 @@ public class MyClass {
 }
 ```
 
-Les utilisateurs de votre code peuvent ensuite facilement s’abonner aux notifications publiées sur le [NSDefaultCenter](https://developer.xamarin.com/api/property/Foundation.NSNotificationCenter.DefaultCenter/) à l’aide de code similaire à celui-ci :
+Les utilisateurs de votre code peuvent ensuite facilement s’abonner aux notifications publiées sur le [NSDefaultCenter](xref:Foundation.NSNotificationCenter.DefaultCenter) à l’aide de code similaire à celui-ci :
 
 ```csharp
 var token = MyClass.Notifications.ObserverDidStart ((notification) => {
@@ -717,7 +717,7 @@ La valeur retournée à partir de `ObserveDidStart` peut être utilisé pour fac
 token.Dispose ();
 ```
 
-Ou vous pouvez appeler [NSNotification.DefaultCenter.RemoveObserver](https://developer.xamarin.com/api/member/Foundation.NSNotificationCenter.RemoveObserver/p/Foundation.NSObject/) et passer le jeton. Si votre notification contient des paramètres, vous devez spécifier un programme d’assistance `EventArgs` interface, comme suit :
+Ou vous pouvez appeler [NSNotification.DefaultCenter.RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) et passer le jeton. Si votre notification contient des paramètres, vous devez spécifier un programme d’assistance `EventArgs` interface, comme suit :
 
 ```csharp
 interface MyClass {
@@ -740,7 +740,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-La méthode ci-dessus génère un `MyScreenChangedEventArgs` classe avec le `ScreenX` et `ScreenY` propriétés qui permettent d’extraire les données à partir de la [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) dictionnaire à l’aide de clés de « ScreenXKey » et « ScreenYKey » respectivement et appliquer les conversions appropriées. Le `[ProbePresence]` attribut est utilisé pour le générateur pour détecter si la clé est définie le `UserInfo`, au lieu de tenter d’extraire la valeur. Cela est utilisé pour les cas où la présence de la clé est la valeur (en général pour les valeurs booléennes).
+La méthode ci-dessus génère un `MyScreenChangedEventArgs` classe avec le `ScreenX` et `ScreenY` propriétés qui permettent d’extraire les données à partir de la [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) dictionnaire à l’aide de clés de « ScreenXKey » et « ScreenYKey » respectivement et appliquer les conversions appropriées. Le `[ProbePresence]` attribut est utilisé pour le générateur pour détecter si la clé est définie le `UserInfo`, au lieu de tenter d’extraire la valeur. Cela est utilisé pour les cas où la présence de la clé est la valeur (en général pour les valeurs booléennes).
 
 Cela vous permet d’écrire du code comme suit :
 
@@ -918,7 +918,7 @@ Le `Volume` propriété est définie comme nullable float, car la convention en 
 
 Pour ce faire, vous devez effectuer quelques opérations :
 
-* Créer une classe fortement typée, qui sous-classe [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) et fournit les diverses méthodes getter et setter pour chaque propriété.
+* Créer une classe fortement typée, qui sous-classe [DictionaryContainer](xref:Foundation.DictionaryContainer) et fournit les diverses méthodes getter et setter pour chaque propriété.
 * Déclarer des surcharges pour les méthodes qui prennent des `NSDictionary` à prendre la nouvelle version fortement typée.
 
 Vous pouvez créer la classe fortement typée soit manuellement ou utiliser le générateur pour effectuer le travail pour vous.  Tout d’abord, nous explorons comment effectuer cette opération manuellement afin de comprendre ce qui se passe, puis sur l’approche automatique.
@@ -1405,4 +1405,4 @@ Nous nécessitaient copie le protocole à chaque implémentation, mais dans ce c
 
 - [Exemple de liaison](https://developer.xamarin.com/samples/BindingSample/)
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

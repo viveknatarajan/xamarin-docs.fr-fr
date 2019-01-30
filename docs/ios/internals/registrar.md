@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 8/29/2018
-ms.openlocfilehash: cdd57095b03c24472abec5646ee3a70350770d7c
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cd9e92e2c96d0a0696633e49869f2661e410d343
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "34786172"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233586"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Bureau d’enregistrement de type pour Xamarin.iOS
 
@@ -22,10 +22,10 @@ Ce document décrit le système d’inscription de type utilisé par Xamarin.iOS
 
 Lors du démarrage, Xamarin.iOS s’inscrira :
 
-- Classes avec un [[inscrire]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) attribut en tant que classes d’Objective-C.
-- Classes avec un [[Category]](https://developer.xamarin.com/api/type/CRuntime.CategoryAttribute) attribut comme des catégories d’Objective-C.
-- Interfaces avec un [[Protocol]](https://developer.xamarin.com/api/type/Foundation.ProtocolAttribute/) attribut en tant que les protocoles Objective-C.
-- Les membres avec une [[Exporter]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/), rendant possible pour Objective-C pour y accéder.
+- Classes avec un [[inscrire]](xref:Foundation.RegisterAttribute) attribut en tant que classes d’Objective-C.
+- Classes avec un [[Category]](xref:ObjCRuntime.CategoryAttribute) attribut comme des catégories d’Objective-C.
+- Interfaces avec un [[Protocol]](xref:Foundation.ProtocolAttribute) attribut en tant que les protocoles Objective-C.
+- Les membres avec une [[Exporter]](xref:Foundation.ExportAttribute), rendant possible pour Objective-C pour y accéder.
 
 Par exemple, considérez le managé `Main` méthode courant dans les applications Xamarin.iOS :
 

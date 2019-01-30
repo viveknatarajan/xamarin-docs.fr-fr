@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 8b3b9a5b110432f33e06edf7ab51c582681e4ea3
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617759"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233729"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Raccourcis de Siri dans Xamarin.iOS
 
@@ -24,7 +24,7 @@ iOS 12 ajoute des raccourcis Siri, ce qui permet de tous les types d’applicati
 
 Raccourcis doivent servir à accélérer la capacité d’un utilisateur pour accomplir une tâche courante – dans de nombreux cas sans avoir à ouvrir l’application en question.
 
-## <a name="sample-app-soup-chef"></a>Exemple d’application : soupe Chef
+## <a name="sample-app-soup-chef"></a>Exemple d’application : Soupe Chef
 
 Pour mieux comprendre les raccourcis de Siri, examinons le [soupe Chef](https://developer.xamarin.com/samples/monotouch/ios12/SoupChef/) exemple d’application. Chef de soupe permet aux utilisateurs de passer des commandes à partir d’un restaurant soupe imaginaire, afficher leur historique de commande et définir des expressions à utiliser lors de la commande soupe en interagissant avec Siri.
 
@@ -72,9 +72,9 @@ Le **Info.plist** fichier contient également les éléments suivants :
 </array>
 ```
 
-Cela `NSUserActivityTypes` paire clé/valeur indique que le Chef de soupe sache comment gérer un `OrderSoupIntent`et un [ `NSUserActivity` ](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/) ayant une [ `ActivityType` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ActivityType/) de « com.xamarin.SoupChef.viewMenu ».
+Cela `NSUserActivityTypes` paire clé/valeur indique que le Chef de soupe sache comment gérer un `OrderSoupIntent`et un [ `NSUserActivity` ](xref:Foundation.NSUserActivity) ayant une [ `ActivityType` ](xref:Foundation.NSUserActivity.ActivityType) de « com.xamarin.SoupChef.viewMenu ».
 
-Activités et les objectifs personnalisés transmis à l’application elle-même, par opposition à ses extensions, sont gérées dans le `AppDelegate` (un [ `UIApplicationDelegate` ](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/)) par le [ `ContinueUserActivity` ](https://developer.xamarin.com/api/member/UIKit.UIApplicationDelegate.ContinueUserActivity/) (méthode).
+Activités et les objectifs personnalisés transmis à l’application elle-même, par opposition à ses extensions, sont gérées dans le `AppDelegate` (un [ `UIApplicationDelegate` ](xref:UIKit.UIApplicationDelegate) par le [ `ContinueUserActivity` ](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) (méthode).
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -89,7 +89,7 @@ Le **Entitlements.plist** de fichiers dans le **SoupChef** projet contient les �
 <true/>
 ```
 
-Cette configuration indique que l’application utilise le groupe d’application « group.com.xamarin.SoupChef ». Le **SoupChefIntents** extension d’application utilise ce même groupe d’application, ce qui permet les deux projets à partager [`NSUserDefaults`](https://developer.xamarin.com/api/type/Foundation.NSUserDefaults/)
+Cette configuration indique que l’application utilise le groupe d’application « group.com.xamarin.SoupChef ». Le **SoupChefIntents** extension d’application utilise ce même groupe d’application, ce qui permet les deux projets à partager [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 Données.
 
 Le `com.apple.developer.siri` clé indique que l’application interagit avec Siri.
@@ -103,7 +103,7 @@ Pour créer un raccourci qui ouvre une application pour afficher le contenu spé
 
 ### <a name="setting-up-an-nsuseractivity"></a>Configuration d’un NSUserActivity
 
-Dans l’écran de menu, `SoupMenuViewController` crée un `NSUserActivity` et lui attribue le contrôleur d’affichage [ `UserActivity` ](https://developer.xamarin.com/api/property/UIKit.UIResponder.UserActivity/) propriété :
+Dans l’écran de menu, `SoupMenuViewController` crée un `NSUserActivity` et lui attribue le contrôleur d’affichage [ `UserActivity` ](xref:UIKit.UIResponder.UserActivity) propriété :
 
 ```csharp
 public override void ViewDidLoad()
@@ -149,8 +149,8 @@ public static NSUserActivity ViewMenuActivity {
 Notez en particulier les points suivants :
 
 - Paramètre `EligibleForPrediction` à `true` indique que Siri peut prédire cette activité et de faire apparaître sous forme de raccourci.
-- Le [ `ContentAttributeSet` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ContentAttributeSet/) tableau est une norme [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) utilisé pour inclure un `NSUserActivity` dans les résultats de recherche iOS.
-- [`SuggestedInvocationPhrase`](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.SuggestedInvocationPhrase/) est une expression qui Siri suggère à l’utilisateur comme un choix potentiel lorsque vous assignez une expression à un raccourci.
+- Le [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) tableau est une norme [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) utilisé pour inclure un `NSUserActivity` dans les résultats de recherche iOS.
+- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) est une expression qui Siri suggère à l’utilisateur comme un choix potentiel lorsque vous assignez une expression à un raccourci.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>Gestion d’un raccourci NSUserActivity
 
@@ -517,7 +517,7 @@ Une extension d’IU Intents fournit une interface utilisateur personnalisée po
 
 ### <a name="soupchefintentsui--infoplist-and-entitlementsplist"></a>SoupChefIntentsUI – Info.plist et Entitlements.plist
 
-#### <a name="soupchefintentsui-infoplist"></a>SoupChefIntentsUI – Info.plist
+#### <a name="soupchefintentsui-infoplist"></a>SoupChefIntentsUI – Info.plist
 
 Le **Info.plist** dans le **SoupChefIntentsUI** projet définit le **identificateur de Bundle** comme `com.xamarin.SoupChef.SoupChefIntentsui`.
 
@@ -547,7 +547,7 @@ Dans l’exemple ci-dessus **Info.plist**:
 - `NSExtensionPointIdentifier` Spécifie le type d’extension d’application (consultez [documentation d’Apple](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) pour plus d’informations).
 - `NSExtensionMainStoryboard` Spécifie la table de montage séquentiel qui définit l’interface principale de cette extension
 
-#### <a name="soupchefintentsui-entitlementsplist"></a>SoupChefIntentsUI – fichier Entitlements.plist
+#### <a name="soupchefintentsui-entitlementsplist"></a>SoupChefIntentsUI – Entitlements.plist
 
 Le **SoupChefIntentsUI** projet n’a pas besoin un **Entitlements.plist** fichier.
 
@@ -600,7 +600,7 @@ public void ConfigureView(
 
 Soupe Chef fournit une interface pour affecter un raccourci de la voix à chaque commande, ce qui permet à la soupe ordre avec Siri. En fait, l’interface utilisée pour enregistrer et affecter des raccourcis de la voix est fourni par iOS et nécessite peu de code personnalisé.
 
-Dans `OrderDetailViewController`, lorsqu’un utilisateur appuie sur la table **ajouter à Siri** ligne, le [ `RowSelected` ](https://developer.xamarin.com/api/member/UIKit.UITableViewSource.RowSelected/) méthode présente un écran pour ajouter ou modifier un raccourci vocal :
+Dans `OrderDetailViewController`, lorsqu’un utilisateur appuie sur la table **ajouter à Siri** ligne, le [ `RowSelected` ](xref:UIKit.UITableViewSource.RowSelected*) méthode présente un écran pour ajouter ou modifier un raccourci vocal :
 
 ```csharp
 public override void RowSelected(UITableView tableView, NSIndexPath indexPath)

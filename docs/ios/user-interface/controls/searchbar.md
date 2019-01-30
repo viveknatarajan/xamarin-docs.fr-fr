@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 923eebc2674abdbbd66d9db11bebf9f503928569
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c46aa1244699671d46560b0029197981a86d005
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107320"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233326"
 ---
 # <a name="search-bars-in-xamarinios"></a>Barres de recherche dans Xamarin.iOS
 
@@ -84,7 +84,7 @@ Ces propriétés sont expliquées ci-dessous :
 
 - **Invite de texte, l’espace réservé,** – ces propriétés sont utilisées pour proposer et indiquer comment les utilisateurs doivent utiliser la barre de recherche. Par exemple, si votre application affiche une liste des magasins, vous pouvez utiliser la propriété d’invite pour signaler que les utilisateurs peuvent « entrer une ville, le nom de l’article ou le Code postal »
 - **Rechercher le Style** – vous pouvez définir la barre de recherche pour être **Prominent** ou **minimale**. À l’aide de l’importante colorer tout le reste à l’écran, à l’exception de la recherche de la barre, provoquant le focus à dessiner à la barre de recherche. La barre de recherche du style minimale s’intégreront avec son environnement.
-- **Fonctionnalités** : l’activation de ces propriétés n’affiche que l’élément d’interface utilisateur. La fonctionnalité doit être implémentée pour ces en déclenchant l’événement correct comme indiqué dans le [documentation sur les API de barre de recherche](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
+- **Fonctionnalités** : l’activation de ces propriétés n’affiche que l’élément d’interface utilisateur. La fonctionnalité doit être implémentée pour ces en déclenchant l’événement correct comme indiqué dans le [documentation sur les API de barre de recherche](xref:UIKit.UISearchBar)
     - Affiche les résultats de recherche / signets – affiche une icône de résultats de recherche ou des signets sur la barre de recherche
     - Affiche le bouton Annuler – permet aux utilisateurs de quitter la fonction de recherche. Il est recommandé que cette option est sélectionnée.
     - Affiche barre d’outils : Cela permet aux utilisateurs limiter l’étendue de leur recherche. Par exemple, lors de la recherche dans l’application musique l’utilisateur peut sélectionner si qu’ils veulent rechercher Apple Music ou leur bibliothèque pour une chanson donnée ou d’un artiste. Pour afficher les différentes options, ajoutez un tableau de titres pour le **ScopeBarTitles** propriété.
