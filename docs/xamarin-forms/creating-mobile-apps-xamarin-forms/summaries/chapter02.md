@@ -1,18 +1,18 @@
 ---
 title: Résumé du chapitre 2. Anatomie d’une application
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 2. Anatomie d’une application'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 2. Anatomie d’une application'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 948d25ce379944691053a5ff76ba3b2284385251
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2236faa67367fa2104280f42ee28056613d1901b
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052635"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292257"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Résumé du chapitre 2. Anatomie d’une application
 
@@ -206,4 +206,4 @@ Ces deux propriétés sont définies uniquement par `Label`, tandis que le `Hori
 - [Chapitre 2, texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
 - [Exemples de chapitre 2](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 - [Chapitre 2 F# exemples](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
-- [Bien démarrer avec Xamarin.Forms](~/xamarin-forms/get-started/index.md)
+- [Bien démarrer avec Xamarin.Forms](~/get-started/index.md)

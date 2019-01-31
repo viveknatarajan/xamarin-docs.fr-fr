@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 8f84c960f17f56fce2a1bba143a215ce930f6f4e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 6f5af5fde46676cf669e6c02fb83f4aac5d31c46
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996107"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292088"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Introduction aux Styles de Xamarin.Forms
 
@@ -45,7 +45,7 @@ Les applications Xamarin.Forms contiennent souvent plusieurs contrôles qui ont 
 </ContentPage>
 ```
 
-L’exemple de code suivant montre la page équivalente créée en c# :
+L’exemple de code suivant montre la page équivalente créée en C# :
 
 ```csharp
 public class NoStylesPageCS : ContentPage
@@ -82,13 +82,13 @@ public class NoStylesPageCS : ContentPage
 }
 ```
 
-Chaque [ `Label` ](xref:Xamarin.Forms.Label) instance a les valeurs de propriété identiques pour contrôler l’apparence du texte affiché par le `Label`. Cela provoque l’affichage indiqué dans les captures d’écran suivante :
+Chaque [ `Label` ](xref:Xamarin.Forms.Label) instance a les valeurs de propriété identiques pour contrôler l’apparence du texte affiché par le `Label`. Cela donne l’affichage illustré dans les captures d’écran suivantes :
 
 [![](introduction-images/no-styles.png "Étiquette d’apparence sans Styles")](introduction-images/no-styles-large.png#lightbox "apparence sans Styles de l’étiquette")
 
 Définition de l’apparence de chaque contrôle individuel peut être répétitive et sujet aux erreurs. Au lieu de cela, vous pouvez créé un style qui définit l’apparence, puis appliquée pour les contrôles requis.
 
-## <a name="creating-a-style"></a>Création d’un Style
+## <a name="create-a-style"></a>Créer un style
 
 Le [ `Style` ](xref:Xamarin.Forms.Style) classe regroupe une collection de valeurs de propriété dans un objet qui peut ensuite être appliqué à plusieurs instances de l’élément visuel. Cela permet de réduire le balisage répétitif et permet une apparence des applications à modifier plus facilement.
 
@@ -97,7 +97,7 @@ Bien que les styles ont été conçus principalement pour les applications basé
 - [`Style`](xref:Xamarin.Forms.Style) instances créées en XAML sont généralement définies dans un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) qui est affectée à la [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) collection d’un contrôle, page, ou à la [ `Resources` ](xref:Xamarin.Forms.Application.Resources) collecte de l’application.
 - [`Style`](xref:Xamarin.Forms.Style) les instances créées en c# sont généralement définies dans la classe de la page, ou dans une classe qui est accessible dans le monde entier.
 
-Choix de l’emplacement définir un [ `Style` ](xref:Xamarin.Forms.Style) impacts où il peut être utilisé :
+Le fait de choisir où définir [`Style`](xref:Xamarin.Forms.Style) impacte l’emplacement où il peut être utilisé :
 
 - [`Style`](xref:Xamarin.Forms.Style) instances définies au niveau du contrôle peuvent uniquement être appliquées au contrôle et à ses enfants.
 - [`Style`](xref:Xamarin.Forms.Style) instances définies au niveau de la page peuvent uniquement être appliquées à la page et à ses enfants.
@@ -135,12 +135,7 @@ Les articles de cette section montrent et expliquent comment créer et appliquer
 >
 > Avant de Xamarin.Forms 2.2, le [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) propriété a été utilisée pour identifier des éléments individuels dans une application pour l’identification dans l’interface utilisateur de test et dans des moteurs de thème comme Pixate. Toutefois, 2.2 de Xamarin.Forms a introduit le [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) propriété, qui a remplacé le [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) propriété. Pour plus d’informations, consultez [Xamarin.Forms automatiser les tests avec Xamarin.UITest et Test Cloud](~/xamarin-forms/deploy-test/uitest-and-test-cloud.md).
 
-## <a name="summary"></a>Récapitulatif
-
-Les applications Xamarin.Forms contiennent souvent plusieurs contrôles qui ont une apparence identique. Définition de l’apparence de chaque contrôle individuel peut être répétitive et sujet aux erreurs. Au lieu de cela, les styles peuvent être créés que personnaliser l’apparence de contrôle par les propriétés de regroupement et les paramètres disponibles sur le type de contrôle.
-
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Extensions de balisage XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Style](xref:Xamarin.Forms.Style)

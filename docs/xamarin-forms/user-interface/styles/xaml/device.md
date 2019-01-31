@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 6c1c7bd12922f127ff7f4eecdc982ede419fc515
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fd5181040c1805d3fdabdae4803bbe32c6bb6652
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055934"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292231"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Styles d’appareils dans Xamarin.Forms
 
@@ -123,12 +123,7 @@ Les captures d’écran suivantes montrent les styles de périphérique sur chaq
 
 ![](device-images/maximum-size.png "Styles d’unité volumineuse accessible sur chaque plateforme")
 
-## <a name="summary"></a>Récapitulatif
-
-Xamarin.Forms inclut six *dynamique* styles, connu sous le nom *appareil* définit le style, dans le [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe. Tous les six styles applicable uniquement aux [ `Label` ](xref:Xamarin.Forms.Label) instances.
-
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Styles de texte](~/xamarin-forms/user-interface/text/styles.md)
 - [Extensions de balisage XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

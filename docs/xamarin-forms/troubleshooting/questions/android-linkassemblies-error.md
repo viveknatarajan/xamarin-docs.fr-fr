@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 7360ee9064049bcebfd88f0cd36b5938d5337be3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b027dd23b9144a865bc16b55ebac71855bae0725
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105283"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292036"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Erreur de génération Android : échouée inattendu de la tâche LinkAssemblies le
 
-Vous pouvez voir un message d’erreur `The "LinkAssemblies" task failed unexpectedly` lorsque la génération d’un projet Xamarin.Android qui utilise les formulaires. Cela se produit lorsque l’éditeur de liens est active (en général sur un *version* build pour réduire la taille du package d’application) ; et il se produit car les cibles Android ne sont pas mis à jour vers la dernière version de framework. (Plus d’informations : [Xamarin.Forms pour Android exigences](~/xamarin-forms/get-started/installation.md#android))
+Vous pouvez voir un message d’erreur `The "LinkAssemblies" task failed unexpectedly` lorsque la génération d’un projet Xamarin.Android qui utilise les formulaires. Cela se produit lorsque l’éditeur de liens est active (en général sur un *version* build pour réduire la taille du package d’application) ; et il se produit car les cibles Android ne sont pas mis à jour vers la dernière version de framework. (Plus d’informations : [Xamarin.Forms pour Android exigences](~/get-started/installation.md#android))
 
 La résolution de ce problème consiste à s’assurer que vous avez les dernières versions du Kit Android SDK pris en charge et définissez le **Framework cible** à **utiliser la plateforme plus récente installée**. Il est également recommandé que vous avez défini le **Version Android cible** à **Version du Framework cible utilisation** et le **version Android minimale** supérieure ou égale à 15 de l’API. Cela est considéré comme la configuration prise en charge.
 
@@ -24,7 +24,7 @@ La résolution de ce problème consiste à s’assurer que vous avez les derniè
 
 1.  Cliquez avec le bouton droit sur le projet Android.
 2.  Accédez à **Générer > Général > ciblent Framework**.
-3.  Définir le **Framework cible : utiliser la plateforme plus récente installée**.
+3.  Définir le **ciblent Framework : Utiliser la plateforme plus récente installée**.
 4.  Toujours dans les options du projet, accédez à **Générer > Application Android**.
 5.  Définir le **version minimale d’Android** au niveau d’API 15 ou version ultérieure & le **version Android cible** à **automatique - Utilisez la version target framework**.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 5b3d6f486f802fda1a384b7a8e53b104c1251fdd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fcbdeac5ebceccddee68fcca635a3935944ecac8
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058244"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291932"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Styles explicites dans Xamarin.Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "53058244"
 
 _Un style explicite est celle qui est appliquée sélectivement à des contrôles en définissant leurs propriétés de Style._
 
-## <a name="creating-an-explicit-style-in-xaml"></a>Création d’un Style explicite dans XAML
+## <a name="create-an-explicit-style-in-xaml"></a>Créer un style explicite dans XAML
 
 Pour déclarer un [ `Style` ](xref:Xamarin.Forms.Style) au niveau de la page, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) doit être ajouté à la page et ensuite un ou plusieurs `Style` déclarations peuvent être incluses dans le `ResourceDictionary`. Un `Style` est effectuée *explicite* en donnant sa déclaration un `x:Key` attribut, ce qui lui donne une clé descriptive dans la `ResourceDictionary`. *Explicite* styles doivent ensuite être appliquées à des éléments spécifiques de visual en définissant leurs [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriétés.
 
@@ -70,7 +70,7 @@ Le [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) définit troi
 
 En outre, la dernière [ `Label` ](xref:Xamarin.Forms.Label) a un [ `Style` ](xref:Xamarin.Forms.Style) appliquée, mais remplace également la [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) propriété à un autre `Color`valeur.
 
-### <a name="creating-an-explicit-style-at-the-control-level"></a>Création d’un Style explicite sur le contrôle de niveau
+### <a name="create-an-explicit-style-at-the-control-level"></a>Créer un style explicite au niveau du contrôle
 
 Outre la création de *explicite* styles au niveau de la page, ils peuvent également être créés au niveau du contrôle, comme indiqué dans l’exemple de code suivant :
 
@@ -97,7 +97,7 @@ Dans cet exemple, le *explicite* [ `Style` ](xref:Xamarin.Forms.Style) instances
 
 Pour plus d’informations sur la création de styles dans une application [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), consultez [Styles globaux](~/xamarin-forms/user-interface/styles/application.md).
 
-## <a name="creating-an-explicit-style-in-c35"></a>Création d’un Style explicite en C&#35;
+## <a name="create-an-explicit-style-in-c35"></a>Créer un style explicite en C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) instances peuvent être ajoutées à une page [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) collection en c# en créant un nouveau [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)et puis en ajoutant le `Style` instances pour le `ResourceDictionary`, comme illustré dans la exemple de code suivant :
 
@@ -181,13 +181,7 @@ public class ExplicitStylesPageCS : ContentPage
 
 Le constructeur définit trois *explicite* styles sont appliqués à la page [ `Label` ](xref:Xamarin.Forms.Label) instances. Chaque `Style` est utilisé pour afficher du texte dans une couleur différente, et d’établir la police options de disposition de taille et horizontal et vertical. Chaque `Style` est appliqué à un autre `Label` en définissant son [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriétés. En outre, la dernière `Label` a un `Style` appliquée, mais remplace également la `TextColor` propriété vers un autre `Color` valeur.
 
-## <a name="summary"></a>Récapitulatif
-
-Un [ `Style` ](xref:Xamarin.Forms.Style) est effectuée *explicite* en donnant sa déclaration un `x:Key` d’attribut et le sélectivement appliquer ensuite aux contrôles en définissant leur [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriétés.
-
-
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Extensions de balisage XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Styles de base (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
