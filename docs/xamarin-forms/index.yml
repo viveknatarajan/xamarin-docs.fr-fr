@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 892a6dccae7bf0ec673b19e830fc01e3f9e39833
-ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
+ms.openlocfilehash: 95df735c07def5b3f7a0ad2e7e3eb1e114cc5e8f
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609894"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292244"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -35,30 +35,38 @@ sections:
     - image:
         src: https://docs.microsoft.com/media/common/i_setup.svg
       text: Installation
-      href: ~/xamarin-forms/get-started/installation.md
+      href: ~/get-started/installation.md
     - image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       text: Première application
-      href: ~/xamarin-forms/get-started/first-app.md
+      href: ~/get-started/first-app/index.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Démarrage rapide
-      href: ~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md
+      text: 'Démarrage rapide : application'
+      href: ~/get-started/quickstarts/single-page.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Applications multi-écran
-      href: ~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md
+      text: 'Démarrage rapide : application multipage'
+      href: ~/get-started/quickstarts/multi-page.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: 'Démarrage rapide : base de données locale'
+      href: ~/get-started/quickstarts/database.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: 'Démarrage rapide : style'
+      href: ~/get-started/quickstarts/styling.md
 - title: Repères
   items:
   - type: list
     style: cards
     className: cardsB
     items:
-    - href: ~/xamarin-forms/get-started/index.md
+    - href: ~/get-started/quickstarts/index.md
       html: Didacticiels pour vous aider à bien démarrer avec Xamarin.Forms. Vérifiez que tout est installé correctement et générez vos premières applications Xamarin.Forms.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/xamarin-forms/get-started/index.md
+        href: ~/get-started/quickstarts/index.md
       title: Prise en main
     - href: ~/xamarin-forms/xaml/
       html: Créez des interfaces utilisateur de façon déclarative et partagez-les entre les plateformes mobiles et de bureau.
