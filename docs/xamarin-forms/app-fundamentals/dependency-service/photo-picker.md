@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 3452c79621013690f967e065c7afaf0768a50c3f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5c4d43723bc23d8a16be8fec0a895a31ab8bcfdc
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057486"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233963"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Sélection d’une photo dans la bibliothèque d’images
 
@@ -50,7 +50,7 @@ Cette interface est implémentée dans chaque plateforme à l’aide de code sp�
 
 ## <a name="ios-implementation"></a>Implémentation iOS
 
-L’implémentation iOS de l’interface `IPicturePicker` utilise [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) de la manière décrite dans la recette [**Choisir une photo dans la galerie**](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) et l’[exemple de code](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
+L’implémentation iOS de l’interface `IPicturePicker` utilise [`UIImagePickerController`](xref:UIKit.UIImagePickerController) de la manière décrite dans la recette [**Choisir une photo dans la galerie**](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) et l’[exemple de code](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery).
 
 L’implémentation iOS est contenue dans la classe [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) dans le projet iOS de l’exemple de code. Pour que cette classe soit visible par le manager `DependencyService`, la classe doit être identifiée par un attribut [`assembly`] de type `Dependency`, être publique et implémenter de manière explicite l’interface `IPicturePicker` :
 

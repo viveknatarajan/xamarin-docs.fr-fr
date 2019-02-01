@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 2754e135bee090ce47796dfa1ae39eed2b5f27c5
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: dedd2768bfa843e529e2eddcaed3b102c0a2efbd
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059585"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233508"
 ---
 # <a name="accessing-the-devices-video-library"></a>Accès à la vidéothèque de l’appareil
 
@@ -40,7 +40,7 @@ Chacune des plateformes contient une classe nommée `VideoPicker` qui implément
 
 ### <a name="the-ios-video-picker"></a>Sélecteur de vidéos iOS
 
-Le `VideoPicker` IOS utilise le [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) iOS pour accéder à la bibliothèque d’images, en spécifiant que la recherche doit être limitée aux vidéos (appelées « films ») dans la propriété `MediaType` iOS. Notez que `VideoPicker` implémente de manière explicite l’interface `IVideoPicker`. Notez également l’attribut `Dependency` qui identifie cette classe comme un service de dépendance. Il s’agit des deux conditions qui permettent à Xamarin.Forms de rechercher le service de dépendance dans le projet de plateforme :
+Le `VideoPicker` IOS utilise le [`UIImagePickerController`](xref:UIKit.UIImagePickerController) iOS pour accéder à la bibliothèque d’images, en spécifiant que la recherche doit être limitée aux vidéos (appelées « films ») dans la propriété `MediaType` iOS. Notez que `VideoPicker` implémente de manière explicite l’interface `IVideoPicker`. Notez également l’attribut `Dependency` qui identifie cette classe comme un service de dépendance. Il s’agit des deux conditions qui permettent à Xamarin.Forms de rechercher le service de dépendance dans le projet de plateforme :
 
 ```csharp
 using System;

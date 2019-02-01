@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 667c98d3140d460a6d4b3a26bd898f4c169d6d85
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: 04f92988d4d367abd5e6e864d4450aee2e6c1df2
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234880"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233794"
 ---
 # <a name="linking-xamarinios-apps"></a>Liaison d’applications Xamarin.iOS
 
@@ -147,7 +147,7 @@ Les utilisateurs peuvent sélectionner d’uniquement lier les assemblys du Kit 
 
 Cela se produit en général car ils ne souhaitent pas ajouter manuellement des attributs `[Preserve]` à leur code.  L’effet secondaire est que les bibliothèques tierces ne seront pas liées, il s’agit là en général d’une bonne valeur par défaut, car il n’est pas possible de savoir si une bibliothèque tierce est conviviale ou pas à l’éditeur de liens.
 
-Si vous avez une bibliothèque dans votre projet ou si vous êtes un développeur de bibliothèques réutilisables et souhaitez que l’éditeur de liens traite votre assembly comme pouvant être lié, il vous suffit d’ajouter l’attribut de niveau d’assembly[`LinkerSafe`](https://developer.xamarin.com/api/type/Foundation.LinkerSafeAttribute/), comme suit :
+Si vous avez une bibliothèque dans votre projet ou si vous êtes un développeur de bibliothèques réutilisables et souhaitez que l’éditeur de liens traite votre assembly comme pouvant être lié, il vous suffit d’ajouter l’attribut de niveau d’assembly[`LinkerSafe`](xref:Foundation.LinkerSafeAttribute), comme suit :
 
 ```csharp
 [assembly:LinkerSafe]

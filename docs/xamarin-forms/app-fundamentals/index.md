@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 2178c9f4115c42396635e22cb0688695b590ec26
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207815"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292153"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Notions de base des applications Xamarin.Forms
 
@@ -28,7 +28,7 @@ La classe `Application` est le point de départ de Xamarin.Forms : chaque appli
 
 Les méthodes `OnStart`, `OnSleep`, et `OnResume` de la classe `Application`, ainsi que les événements de navigation modale, vous permettent de gérer les événements de cycle de vie des applications avec du code personnalisé.
 
-## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indexation d’applications et liens ciblés](deep-linking.md)
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indexation de l’application et lien profond](deep-linking.md)
 
 L’indexation d’applications permet aux applications, qui sinon auraient été oubliées après quelques utilisations, de rester pertinentes en apparaissant dans les résultats de recherche. Les liens ciblés permettent aux applications de répondre à un résultat de recherche qui contient des données d’application, généralement en parcourant une page référencée à partir d’un lien ciblé.
 
@@ -87,8 +87,3 @@ Les modèles de contrôle permettent de facilement créer et recréer des thème
 ## <a name="triggerstriggersmd"></a>[Déclencheurs](triggers.md)
 
 Mettent à jour les contrôles en répondant aux changements de propriété et aux événements en XAML.
-
-
-## <a name="related-links"></a>Liens associés
-
-- [Introduction à Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
