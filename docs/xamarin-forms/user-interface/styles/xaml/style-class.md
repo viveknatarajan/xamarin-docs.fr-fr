@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 2de21f19e2789c94c02b5d2e9c13fc06963e1a7f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: dd749a4a78adbab5317f1ae5ca6334caa009b9b3
+ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293021"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55668548"
 ---
 # <a name="xamarinforms-style-classes"></a>Classes de Style de Xamarin.Forms
 
@@ -206,7 +206,7 @@ Dans cet exemple, la première [ `BoxView` ](xref:Xamarin.Forms.BoxView) est un 
 ![](style-class-images/boxviews.png "BoxViews stylé avec les classes de style")
 
 > [!IMPORTANT]
-> Plusieurs classes de style peuvent être appliqués à un contrôle, car la [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) propriété est de type `IList<string>`.
+> Plusieurs classes de style peuvent être appliqués à un contrôle, car la [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) propriété est de type `IList<string>`. Lorsque cela se produit, les classes de style sont appliquées dans l’ordre croissant d’ordre de la liste. Par conséquent, lorsque plusieurs classes de style définissent des propriétés identiques, la propriété dans la classe de style qui se trouve dans la position la plus élevée de la liste sont prioritaires.
 
 Le code c# équivalent est :
 
