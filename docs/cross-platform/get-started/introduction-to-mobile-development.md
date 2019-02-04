@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: cefcc7084b2abab4af61f07ef1f33a4f4c363f69
-ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
+ms.openlocfilehash: 5470a70570a431c1adc3053d9f8f389cec31cf85
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "53815202"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292075"
 ---
 # <a name="introduction-to-mobile-development"></a>Introduction au développement mobile
 
@@ -65,13 +65,9 @@ Pour obtenir la liste complète des classes et des assemblys disponibles, consul
 
 Outre la bibliothèque de classes de base, ces fichiers .dll incluent des wrappers pour quasiment tout le SDK iOS et Android SDK, ce qui permet aux API de SDK sous-jacentes d’être appelées directement à partir du code C#.
 
-
-
 ### <a name="application-output"></a>Sortie de l’application
 
 Lorsque les applications Xamarin sont compilées, un paquet d’application est créé (un fichier .app dans iOS ou un fichier .apk dans Android). Ces fichiers ne se distinguent pas des paquets d’application générés à l’aide des IDE par défaut de la plateforme, et peuvent être déployés exactement de la même façon.
-
-
 
 ## <a name="getting-started"></a>Prise en main
 
@@ -83,22 +79,15 @@ Dans la prochaine étape, vous allez commencer à créer une application en suiv
 
 ![](introduction-to-mobile-development-images/ios.png "Hello, iOS")
 
-
 * [**Hello, Android**](~/android/get-started/hello-android/index.md)
 
 ![](introduction-to-mobile-development-images/android.png "Hello, Android")
 
-
-* [**Introduction à Xamarin.Forms**](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-
-
-
-
+* [**Bien démarrer avec Xamarin.Forms**](~/get-started/index.md)
 
 ## <a name="summary"></a>Récapitulatif
 
-Ce document vous a présenté la plateforme Xamarin. Les choses sérieuses commenceront lorsque vous aurez créé et configuré votre première application. Pour commencer, lisez les guides [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) et [Introduction à Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md).
-
+Ce document vous a présenté la plateforme Xamarin. Les choses sérieuses commenceront lorsque vous aurez créé et configuré votre première application. Pour commencer, lisez les guides [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) et [Bien démarrer avec Xamarin.Forms](~/get-started/index.md).
 
 ## <a name="related-links"></a>Liens associés
 
