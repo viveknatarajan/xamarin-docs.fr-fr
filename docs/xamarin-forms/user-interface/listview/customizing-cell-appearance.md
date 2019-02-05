@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 7c19cc0f2d1f72706926d640bb7fad9323a9e17f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 067ff4758ca78f7d706c7be96ffecd10e4e57965
+ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53049454"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712070"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personnaliser l’apparence de cellule de ListView
 
@@ -120,6 +120,7 @@ Le XAML ci-dessus fait beaucoup. Nous allons décomposer :
 - La cellule personnalisée est imbriquée dans une `DataTemplate`, ce qui se trouve dans `ListView.ItemTemplate`. Ceci est le même processus qu’à l’aide de n’importe quelle autre cellule.
 - `ViewCell` est le type de la cellule personnalisée. L’enfant de la `DataTemplate` élément doit être d’ou dériver du type `ViewCell`.
 - Notez qu’à l’intérieur du `ViewCell`, disposition est gérée par un `StackLayout`. Cette disposition permet de personnaliser la couleur d’arrière-plan. Notez que n’importe quelle propriété de `StackLayout` qui est peut être liée peut être lié à l’intérieur d’une cellule personnalisée, mais qui n’est pas indiqué ici.
+- À l’intérieur de la `ViewCell`, disposition peut être gérée par toute disposition Xamarin.Forms. 
 
 ### <a name="cnum"></a>C&num;
 
