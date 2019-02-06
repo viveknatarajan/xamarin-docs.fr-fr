@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 53c5f17672cc46ef097e979154a8911f8cdaef63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3fdb2a3853c1320b6bd0b8a02701acd6883bf226
+ms.sourcegitcommit: 999b9f254c56ff18ebd391fd0de2f0d6e95e35b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054124"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55748080"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilisation des Extensions de balisage XAML
 
@@ -33,7 +33,7 @@ Les extensions de balisage XAML supplémentaires ont toujours été pris en char
 - `StaticResource` &ndash; référencer des objets à partir d’un dictionnaire de ressources, comme décrit dans l’article [ **dictionnaires de ressources**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` &ndash; répondre aux modifications des objets dans un dictionnaire de ressources, comme décrit dans l’article [ **Styles dynamiques**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` &ndash; établir un lien entre les propriétés de deux objets, comme décrit dans l’article [ **une liaison de données**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; effectue la liaison de données à partir d’un modèle de contrôle, comme indiqué dans l’article [ **à partir d’un modèle de contrôle de liaison**](/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/).
+- `TemplateBinding` &ndash; effectue la liaison de données à partir d’un modèle de contrôle, comme indiqué dans l’article [ **à partir d’un modèle de contrôle de liaison**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding/).
 
 Le [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) mise en page utilise l’extension de balisage personnalisée [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Cette extension de balisage est décrite dans l’article [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
@@ -84,7 +84,7 @@ L’analyseur XAML permet également la `StaticExtension` classe sera abrégé e
 </Label>
 ```
 
-Cela peut être simplifié encore plus loin, mais la modification introduit une nouvelle syntaxe : il se compose de placer la `StaticExtension` classe et le nouveau membre entre accolades. L’expression résultante est définie directement à la `FontSize` attribut :
+Vous pouvez simplifier encore plus loin, mais la modification introduit une nouvelle syntaxe : Il se compose de placer la `StaticExtension` classe et le nouveau membre entre accolades. L’expression résultante est définie directement à la `FontSize` attribut :
 
 ```xaml
 <Label Text="Label No. 3"
