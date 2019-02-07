@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 3fdb2a3853c1320b6bd0b8a02701acd6883bf226
-ms.sourcegitcommit: 999b9f254c56ff18ebd391fd0de2f0d6e95e35b9
+ms.openlocfilehash: 965f56f7996cc7cf8a06e4201cc4bcf2ea35fb71
+ms.sourcegitcommit: 93c45e456218746df4f4a03bbe93493da0a90153
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55748080"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760717"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Utilisation des Extensions de balisage XAML
 
@@ -33,7 +33,7 @@ Les extensions de balisage XAML supplémentaires ont toujours été pris en char
 - `StaticResource` &ndash; référencer des objets à partir d’un dictionnaire de ressources, comme décrit dans l’article [ **dictionnaires de ressources**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` &ndash; répondre aux modifications des objets dans un dictionnaire de ressources, comme décrit dans l’article [ **Styles dynamiques**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` &ndash; établir un lien entre les propriétés de deux objets, comme décrit dans l’article [ **une liaison de données**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; effectue la liaison de données à partir d’un modèle de contrôle, comme indiqué dans l’article [ **à partir d’un modèle de contrôle de liaison**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding/).
+- `TemplateBinding` &ndash; effectue la liaison de données à partir d’un modèle de contrôle, comme indiqué dans l’article [ **à partir d’un modèle de contrôle de liaison**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
 
 Le [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) mise en page utilise l’extension de balisage personnalisée [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Cette extension de balisage est décrite dans l’article [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
