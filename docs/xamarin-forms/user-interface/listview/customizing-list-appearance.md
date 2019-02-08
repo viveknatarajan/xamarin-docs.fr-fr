@@ -6,24 +6,19 @@ ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 8adac1711271324b70731a085088bd8805391d31
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059455"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831793"
 ---
 # <a name="customizing-listview-appearance"></a>Personnaliser l’apparence de ListView
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 
-`ListView` a des options pour contrôler la présentation de la liste globale, en plus de sous-jacent `ViewCell`s. Les options sont les suivantes :
-
-- [**Regroupement** ](#Grouping) &ndash; grouper des éléments dans ListView pour faciliter la navigation et une organisation améliorée.
-- [**En-têtes et pieds de page** ](#Headers_and_Footers) &ndash; afficher des informations au début et à la fin de la vue défile avec les autres éléments.
-- [**Séparateurs de ligne** ](#Row_Separators) &ndash; afficher ou masquer les lignes du séparateur entre les éléments.
-- [**Les lignes de hauteur variable** ](#Row_Heights) &ndash; par défaut, toutes les lignes ont la même hauteur, mais cela peut être modifié pour autoriser des lignes avec différentes hauteurs à afficher.
+[`ListView`](xref:Xamarin.Forms.ListView) a la possibilité de contrôler la présentation de la liste, en plus de la [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) instances pour chaque ligne dans la liste.
 
 <a name="Grouping" />
 
@@ -83,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-Dans le code ci-dessus nous pouvons également appeler `Add` sur les éléments de `groups`, qui sont des instances du type `PageTypeGroup`. Cela est possible, car `PageTypeGroup` hérite `List<PageModel>`. Il s’agit d’un exemple de la liste du modèle de listes indiqué ci-dessus.
+Dans le code ci-dessus, nous pouvons également appeler `Add` sur les éléments de `groups`, qui sont des instances du type `PageTypeGroup`. Cela est possible, car `PageTypeGroup` hérite `List<PageModel>`. Il s’agit d’un exemple de la liste du modèle de listes indiqué ci-dessus.
 
 Voici le XAML pour l’affichage de la liste groupée :
 
@@ -205,6 +200,14 @@ Pour créer un en-tête personnalisé et le pied de page, définissez les vues d
 ```
 
 ![](customizing-list-appearance-images/header-custom.png "ListView personnalisé d’en-tête et pied de page")
+
+## <a name="scrollbar-visibility"></a>Visibilité de barre de défilement
+
+[`ListView`](xref:Xamarin.Forms.ListView) a `HorizontalScrollBarVisibility` et `VerticalScrollBarVisibility` propriétés, qui obtient ou définit un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valeur représentant le moment où la barre de défilement horizontale ou verticale, est visible. Les deux propriétés peuvent être définies sur les valeurs suivantes :
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) Indique le comportement de barre de défilement par défaut pour la plateforme, et est la valeur par défaut pour le `HorizontalScrollBarVisibility` et `VerticalScrollBarVisibility` propriétés.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) Indique que les barres de défilement seront visibles, même lorsque le contenu ne tient pas dans la vue.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) Indique que les barres de défilement ne seront pas visibles, événement si le contenu ne tient pas dans la vue.
 
 <a name="Row_Separators" />
 

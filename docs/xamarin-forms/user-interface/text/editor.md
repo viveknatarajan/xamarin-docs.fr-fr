@@ -6,13 +6,13 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/31/2018
-ms.openlocfilehash: 2fe1ad168186740fd71d25814e68b1109e097597
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: 4011863553935052c230def403f4ebc281c51d92
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052622"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831870"
 ---
 # <a name="xamarinforms-editor"></a>Éditeur de Xamarin.Forms
 
@@ -45,6 +45,18 @@ Pour lire le texte, accéder à la `Text` propriété en c# :
 
 ```csharp
 var text = MyEditor.Text;
+```
+
+### <a name="setting-placeholder-text"></a>Texte d’espace réservé de paramètre
+
+Le [ `Editor` ](xref:Xamarin.Forms.Editor) peut être définie pour afficher le texte d’espace réservé quand il ne stocke pas les entrées d’utilisateur. Cela s’effectue en définissant le [ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder) propriété à un `string`et est souvent utilisé pour indiquer le type de contenu qui est approprié pour le `Editor`. En outre, la couleur de texte d’espace réservé peut être contrôlée en définissant le [ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor) propriété à un [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
+```
+
+```csharp
+var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
 ```
 
 ### <a name="limiting-input-length"></a>Limiter la longueur d’entrée
@@ -159,17 +171,22 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 > [!NOTE]
 > Lorsque le [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propriété est définie sur `false`et un clavier personnalisé n’est pas utilisé, le vérificateur orthographique natif va être désactivé. Toutefois, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) a été ensemble qui désactive orthographique vérification, tel que [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), le `IsSpellCheckEnabled` propriété est ignorée. Par conséquent, la propriété ne peut pas être utilisée pour activer la vérification orthographique pour un `Keyboard` qui désactive explicitement.
 
-### <a name="setting-placeholder-text"></a>Texte d’espace réservé de paramètre
+### <a name="enabling-and-disabling-text-prediction"></a>Activation et désactivation de la prédiction de texte
 
-Le [ `Editor` ](xref:Xamarin.Forms.Editor) peut être définie pour afficher le texte d’espace réservé quand il ne stocke pas les entrées d’utilisateur. Cela s’effectue en définissant le [ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder) propriété à un `string`et est souvent utilisé pour indiquer le type de contenu qui est approprié pour le `Editor`. En outre, la couleur de texte d’espace réservé peut être contrôlée en définissant le [ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor) propriété à un [ `Color` ](xref:Xamarin.Forms.Color):
+Le `IsTextPredictionEnabled` propriété détermine si la prédiction de texte et automatiques correction du texte est activée. Par défaut, la propriété est définie `true`. Comme l’utilisateur entre du texte, des prédictions de word sont présentées.
+
+Toutefois, pour certains scénarios d’entrée de texte, comme la saisie d’un nom d’utilisateur, de la prédiction de texte et de texte automatique correction offre une expérience négatif et doit être désactivée en définissant le `IsTextPredictionEnabled` propriété `false`:
 
 ```xaml
-<Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
+<Editor ... IsTextPredictionEnabled="false" />
 ```
 
 ```csharp
-var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
+var editor = new Editor { ... IsTextPredictionEnabled = false };
 ```
+
+> [!NOTE]
+> Lorsque le `IsTextPredictionEnabled` propriété est définie sur `false`, et un clavier personnalisé n’est pas en cours utilisé, la prédiction de texte et automatiques correction de texte est désactivée. Toutefois, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) a été définie qui désactive la prédiction de texte, le `IsTextPredictionEnabled` propriété est ignorée. Par conséquent, la propriété ne peut pas être utilisée pour activer la prédiction de texte pour un `Keyboard` qui désactive explicitement.
 
 ### <a name="colors"></a>Couleurs
 

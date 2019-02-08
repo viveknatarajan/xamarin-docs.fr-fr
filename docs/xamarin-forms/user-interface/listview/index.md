@@ -7,32 +7,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 9da3bd65dfb5cc6f9ca6bd0e2930003e6ac3d182
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 967d4ae65bdb47adf824f20f47c7b32e24211f9a
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059257"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831808"
 ---
 # <a name="xamarinforms-listview"></a>ListView de Xamarin.Forms
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/WorkingWithListview)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/WorkingWithListview)
 
-Vue est une vue pour la présentation des listes de données, en particulier longues listes qui requièrent un défilement. Ce guide vous explique comment utiliser ListView :
-
-1. **[Sources de données](data-and-databinding.md)**  &ndash; remplir un ListView avec des données, avec ou sans liaison de données.
-2. **[Apparence de cellule](customizing-cell-appearance.md)**  &ndash; personnaliser l’apparence des cellules intégrés ou créer votre propre cellule personnalisée.
-3. **[Liste d’apparence](customizing-list-appearance.md)**  &ndash; personnaliser l’apparence du ListView. Définir des en-têtes et pieds de page, activez les groupes et modifier la hauteur des lignes.
-4. **[Interactivité](interactivity.md)**  &ndash; gèrent les clics et les sélections, implémenter extraire pour actualiser et ajouter des actions contextuelles.
-5. **[Performances](performance.md)**  &ndash; éviter les problèmes de performances.
+[`ListView`](xref:Xamarin.Forms.ListView) est une vue pour la présentation des listes de données, en particulier longues listes qui requièrent un défilement.
 
 ## <a name="use-cases"></a>Cas d’usage
+
 Assurez-vous que ListView est le contrôle approprié pour vos besoins. ListView peut être utilisé dans n’importe quelle situation où vous affichez les listes permettant le défilement de données. ListView prend en charge la liaison de données et des actions contextuelles.
 
 ListView ne doit pas être confondu avec [TableView](~/xamarin-forms/user-interface/tableview.md). Le contrôle TableView constitue une meilleure option chaque fois que vous avez une liste non liées à des options ou des données. Par exemple, l’application de paramètres iOS qui a un ensemble d’options principalement prédéfini, est mieux adaptée à utiliser TableView que ListView.
 
 Notez qu’un ListView est préférable également adapté aux données homogènes &ndash; , autrement dit, toutes les données doivent être du même type. Il s’agit, car le seul type de cellule peut être utilisé pour chaque ligne dans la liste. TableViews peut prendre en charge plusieurs types de cellules, afin qu’ils soient une meilleure option lorsque vous avez besoin de combiner des vues.
-
 
 ## <a name="components"></a>Composants
 ListView comportant des composants disponibles pour tester la fonctionnalité native de chaque plateforme. Chacun de ces composants est décrit ci-dessous :
@@ -62,7 +56,6 @@ ListView prend en charge un nombre de styles d’interaction, y compris :
 ![](images/context-default.png "ListView avec des Actions contextuelles")
 
 Pour en savoir plus sur les fonctionnalités d’interactivité de ListView, consultez [Actions & interactivité avec ListView](interactivity.md).
-
 
 ## <a name="related-links"></a>Liens associés
 

@@ -7,23 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 067ff4758ca78f7d706c7be96ffecd10e4e57965
-ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
+ms.openlocfilehash: 1e57764dacf7ae0599df46f13bd4f5505c4cc4a2
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55712070"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831779"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personnaliser l’apparence de cellule de ListView
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
 
-ListView présente la liste à défilement, ce qui peut être personnalisé à l’aide de `ViewCell`s. `ViewCells` peut être utilisé pour afficher du texte et des images, indiquant un état true/false et recevoir des entrées d’utilisateur.
-
-Il existe deux approches pour obtenir l’aspect souhaité à partir de cellules de ListView :
-
-- **[Personnaliser des cellules intégrés](#Built_in_Cells)**  &ndash; implémentation simplifiée et meilleures performances au détriment des possibilités de personnalisation.
-- **[Création de cellules personnalisés](#customcells)**  &ndash; plus de contrôle sur le résultat final, mais peuvent avoir des problèmes de performances si ne pas implémentée correctement.
+[`ListView`](xref:Xamarin.Forms.ListView) présente la liste à défilement, ce qui peut être personnalisé à l’aide de `ViewCell`s. `ViewCells` peut être utilisé pour afficher du texte et des images, indiquant un état true/false et recevoir des entrées d’utilisateur.
 
 <a name="Built_in_Cells" />
 

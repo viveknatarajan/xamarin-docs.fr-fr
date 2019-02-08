@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 08ac86674e4f10d6bd17d765de2bcdf7c2d3f901
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 79b973784dd978bff15c7a706083c70df83ba1c8
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061757"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831844"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Vérification orthographique à l’aide de l’API vérification orthographique Bing
 
@@ -154,6 +154,9 @@ Ce code effectue une itération dans le `FlaggedTokens` collection et remplace t
 ![](spell-check-images/before-spell-check.png "Avant la vérification orthographique")
 
 ![](spell-check-images/after-spell-check.png "Après vérification orthographique")
+
+> [!NOTE]
+> L’exemple ci-dessus utilise `Replace` par souci de simplicité, mais sur une grande quantité de texte, il pourrait remplacer le jeton incorrect. L’API fournit le `offset` valeur qui doit être utilisée dans les applications de production pour identifier l’emplacement approprié dans le texte source pour effectuer une mise à jour.
 
 ## <a name="summary"></a>Récapitulatif
 
