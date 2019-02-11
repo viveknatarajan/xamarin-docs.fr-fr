@@ -7,17 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 97b3e5323329d2df024e05f1829b12b239b37299
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 52cd8a15f1b5b232deef62a8e87910b092aad94c
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103047"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831948"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuration d’une application dans iTunes Connect
 
 > [!IMPORTANT]
-> Apple [a indiqué](https://developer.apple.com/news/?id=05072018a) qu’à partir de juillet 2018 toutes les applications et mises à jour envoyées à l’App Store doivent avoir été créées avec le Kit de développement logiciel (SDK) d’iOS 11 et [prendre en charge l’écran de l’iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [a indiqué](https://developer.apple.com/ios/submit/) qu’à partir de mars 2019 toutes les applications et mises à jour envoyées à l’App Store doivent avoir été créées avec le kit SDK d’iOS 12.1 ou ultérieur, inclus dans Xcode 10.1 ou ultérieur.
+> Les applications doivent aussi prendre en charge les tailles d’écran de l’iPhone XS et de l’iPad Pro 12,9".
 
 iTunes Connect est une suite d’outils web qui permettent, entre autres choses, de gérer des applications iOS sur l’App Store. Vous devez préparer correctement votre application Xamarin.iOS dans iTunes Connect avant de pouvoir la soumettre pour évaluation à Apple, et ensuite la mettre en vente ou la proposer gratuitement dans l’App Store.
 
@@ -116,7 +117,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 7. Cliquez sur le bouton **Save (Enregistrer)** en haut de l’écran pour enregistrer vos changements.
 
 > [!NOTE]
-> Remarque : Apple rejettera la soumission de votre application si les captures d’écran ou la vidéo d’aperçu de l’application ne correspondent pas aux fonctionnalités réelles de cette dernière.
+> Remarque : Apple rejette votre application si les captures d’écran ou la vidéo d’aperçu de l’application ne correspondent pas aux fonctionnalités réelles de cette dernière.
 
 <a name="metadata" />
 
@@ -188,7 +189,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 6. Cliquez sur le bouton **Save (Enregistrer)** en haut de l’écran pour enregistrer vos changements.
 
 > [!IMPORTANT]
-> Remarque : Apple rejettera la soumission de votre application si le nom, la description, les nouveautés, les mots clés ou les URL ne correspondent pas aux fonctionnalités réelles de l’application.
+> Remarque : Apple rejette votre application si le nom, la description, les nouveautés, les mots clés ou les URL ne correspondent pas aux fonctionnalités réelles de l’application.
 
 <a name="general" />
 
@@ -208,7 +209,7 @@ Apple suggère de suivre les recommandations suivantes pour concevoir des icône
 - Créez une icône appropriée pour votre application.
 - Créez une icône simple et cohérente avec la conception de votre application.
 - Évitez d’utiliser des mots dans votre icône.
-- Pensez de manière globale : une seule icône d’application est utilisée dans tous les App Store du monde.
+- Pensez à l’échelle internationale : une seule icône d’application est utilisée dans tous les App Store du monde.
 
 Une image de 1 024 x 1 024 pixels est nécessaire pour l’icône d’application affichée dans l’App Store.
 
@@ -233,7 +234,7 @@ Toutes les applications doivent avoir une classification dans l’App Store. Cet
 Quand vous créez des applications pour enfants, l’App Store propose une catégorie spéciale destinée aux enfants de 11 ans et moins. Même si votre application n’est pas spécifiquement destinée aux enfants, vous aidez vos clients à faire de bons choix en leur fournissant des classifications de contenu appropriées.
 
 > [!IMPORTANT]
-> Remarque : Apple rejettera toute soumission d’application jugée obscène, pornographique, offensante ou diffamatoire.
+> Remarque : Apple rejette toute application jugée obscène, pornographique, offensante ou diffamatoire.
 
 ### <a name="copyright-and-company-information"></a>Informations sur le copyright et la société
 
@@ -256,7 +257,7 @@ Effectuez ce qui suit dans [iTunes Connect](https://itunesconnect.apple.com/WebO
 6. Cliquez sur le bouton **Save (Enregistrer)** en haut de l’écran pour enregistrer vos changements.
 
 > [!NOTE]
-> Remarque : Apple rejettera la soumission de votre application si sa catégorie ou sa classification ne correspond pas aux fonctionnalités réelles de l’application.
+> Remarque : Apple rejette votre application si sa catégorie ou sa classification ne correspond pas aux fonctionnalités réelles de l’application.
 
 <a name="game-center" />
 
@@ -348,7 +349,7 @@ Pour plus d’informations sur l’utilisation des achats dans l’application a
 
 ## <a name="viewing-application-reviews"></a>Affichage des avis relatifs à l’application
 
-Une fois que votre application a été publiée sur l’App Store, les utilisateurs qui l’ont achetée ou téléchargée gratuitement peuvent rédiger des avis et laisser des évaluations (étoiles). Utilisez cette section pour consulter ces avis. Exemple :
+Une fois que votre application a été publiée sur l’App Store, les utilisateurs qui l’ont achetée ou téléchargée gratuitement peuvent rédiger des avis et laisser des évaluations (étoiles). Utilisez cette section pour consulter ces avis. Par exemple :
 
 [![](itunesconnect-images/reviews01.png "Affichage des revues de l’application")](itunesconnect-images/reviews01.png#lightbox)
 
@@ -359,7 +360,7 @@ Cet article explique comment utiliser iTunes Connect pour préparer une applicat
 ## <a name="related-links"></a>Liens associés
 
 - [Utilisation d’images](~/ios/app-fundamentals/images-icons/index.md)
-- [Guide du workflow de développement d’applications iOS : distribution d’applications](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
+- [Guide du workflow de développement d’applications iOS : Distribution d’applications](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
 - [Conseils pour la soumission à l’App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Recommandations pour l’évaluation dans l’App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Guide du développeur iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1)

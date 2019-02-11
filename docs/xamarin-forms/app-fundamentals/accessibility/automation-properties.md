@@ -6,13 +6,13 @@ ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
-ms.openlocfilehash: f59a528916d2cc5efd19ba7c35a7b4f041ecbe09
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/18/2018
+ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056160"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831987"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propriétés d’automatisation dans Xamarin.Forms
 
@@ -138,6 +138,43 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 
 > [!NOTE]
 > Notez que la méthode [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) peut également être utilisée pour définir la propriété jointe `AutomationProperties.IsInAccessibleTree` – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+
+## <a name="accessibility-intricacies"></a>Subtilités de l’accessibilité
+
+Les sections suivantes décrivent les subtilités de la définition des valeurs d’accessibilité sur certains contrôles.
+
+### <a name="navigationpage"></a>NavigationPage
+
+Sur Android, pour définir le texte que les lecteurs d’écran liront pour la flèche Retour dans la barre d’action d’une [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), définissez les propriétés `AutomationProperties.Name` et `AutomationProperties.HelpText` dans une [`Page`](xref:Xamarin.Forms.Page). Toutefois, notez que cette opération n’a aucun effet sur les boutons Retour du système d’exploitation.
+
+### <a name="masterdetailpage"></a>MasterDetailPage
+
+Sur iOS et la plateforme Windows universelle (UWP), pour définir le texte que les lecteurs d’écran liront pour le bouton bascule d’une [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), définissez les propriétés `AutomationProperties.Name` et `AutomationProperties.HelpText` dans la `MasterDetailPage` ou la propriété `Icon` dans la page `Master`.
+
+Sur Android, pour définir le texte que les lecteurs d’écran liront pour le bouton bascule dans une [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), ajoutez des ressources de chaîne au projet Android :
+
+```xml
+<resources>
+        <string name="app_name">Xamarin Forms Control Gallery</string>
+        <string name="btnMDPAutomationID_open">Open Side Menu message</string>
+        <string name="btnMDPAutomationID_close">Close Side Menu message</string>
+</resources>
+```
+
+Ensuite, définissez la propriété `AutomationId` de la propriété `Icon` de la page `Master` sur la chaîne appropriée :
+
+```csharp
+var master = new ContentPage { ... };
+master.Icon.AutomationId = "btnMDPAutomationID";
+```
+
+### <a name="toolbaritem"></a>ToolbarItem
+
+Sur iOS, Android et UWP, les lecteurs d’écran liront la valeur de propriété `Text` des instances [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem), à condition que les valeurs `AutomationProperties.Name` ou `AutomationProperties.HelpText` ne soient pas définies.
+
+Sur iOS et UWP, la valeur de propriété `AutomationProperties.Name` remplacera la valeur de propriété `Text` lue par le lecteur d’écran.
+
+Sur Android, les valeurs de propriété `AutomationProperties.Name` et/ou `AutomationProperties.HelpText` remplaceront complètement les valeurs de propriété `Text` à la fois visibles et lues par les lecteurs d’écran. Notez qu’il s’agit d’une limitation des API inférieures à 26.
 
 ## <a name="related-links"></a>Liens associés
 

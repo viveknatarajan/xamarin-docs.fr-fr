@@ -7,19 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: de3af76b8479562ba048c5b62167df0f2b2a51f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 14cf2910767e9c205e5ddc8f580020505f54ef46
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115131"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832026"
 ---
 # <a name="app-store-distribution"></a>Distribution dans l’App Store
 
 Une fois l’application Xamarin.iOS développée, la prochaine étape du cycle de vie du développement du logiciel consiste à la distribuer aux utilisateurs à l’aide de l’App Store d’iTunes. Il s’agit de la manière la plus courante de distribuer des applications. En publiant une application sur l’App Store d’Apple, vous la mettez à la disposition des consommateurs du monde entier.
 
 > [!IMPORTANT]
-> Apple [a indiqué](https://developer.apple.com/news/?id=05072018a) qu’à partir de juillet 2018 toutes les applications et mises à jour envoyées à l’App Store doivent avoir été créées avec le Kit de développement logiciel (SDK) d’iOS 11 et [prendre en charge l’écran de l’iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [a indiqué](https://developer.apple.com/ios/submit/) qu’à partir de mars 2019 toutes les applications et mises à jour envoyées à l’App Store doivent avoir été créées avec le kit SDK d’iOS 12.1 ou ultérieur, inclus dans Xcode 10.1 ou ultérieur.
+> Les applications doivent aussi prendre en charge les tailles d’écran de l’iPhone XS et de l’iPad Pro 12,9".
 
 La distribution d’une application, tout comme son développement, nécessite le provisionnement d’applications à l’aide du *profil de provisionnement* approprié. Les profils de provisionnement sont des fichiers qui contiennent les informations sur le code de signature, ainsi que l’identité de l’application et le mécanisme de distribution prévu. Ils contiennent également des informations relatives aux appareils sur lesquels l’application peut être déployée pour la distribution hors App Store.
 
@@ -63,11 +64,11 @@ Vous pouvez sélectionner le même **ID d’application** et les mêmes **appare
 
 Sinon, il est possible de demander un certificat via la boîte de dialogue Preferences de Xcode. Pour ce faire, suivez les étapes ci-dessous :
 
-1.   Sélectionnez votre équipe, puis cliquez sur **Gérer des certificats...** : [![](images/selectteam.png "Sélectionnez l’équipe et cliquez sur Voir les détails")](images/selectteam.png#lightbox)
+1.   Sélectionnez votre équipe, puis cliquez sur **Gérer les certificats…**  : [![](images/selectteam.png "Sélectionner l’équipe et afficher les détails")](images/selectteam.png#lightbox)
 
-2.   Cliquez ensuite sur le bouton **Créer** à côté de **Certificat de distribution iOS** : [![](images/selectcert.png "Créer un certificat de distribution iOS")](images/selectcert.png#lightbox)
+2.   Cliquez ensuite sur le bouton **Créer** à côté de **iOS Distribution Certificate (Certificat de distribution iOS)**  : [![](images/selectcert.png "Créer un certificat de distribution iOS")](images/selectcert.png#lightbox)
 
-3.   En fonction des privilèges de l’équipe, soit l’identité de signature sera générée, comme ci-dessous, soit vous devez attendre qu’un agent ou un administrateur d’équipe l’approuve : [![](images/generated.png "L’identité de signature est générée et une boîte de dialogue s’affiche")](images/generated.png#lightbox)
+3.   En fonction de vos privilèges d’équipe, l’identité de signature est générée, comme indiqué ci-dessous. Sinon, vous devez attendre qu’un agent ou un administrateur d’équipe l’approuve : [![](images/generated.png "L’identité de signature est générée et une boîte de dialogue s’affiche")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
