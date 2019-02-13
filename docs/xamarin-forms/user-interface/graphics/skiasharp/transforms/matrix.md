@@ -7,12 +7,12 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: dd38d91a808bed715c92c0fc7d98d6786fc43f67
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 192f0745874b54989ab9070014dae2a5e9e98110
+ms.sourcegitcommit: 605f7c480c3f7b5dd364fdb1bd4d983de8f7ed25
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054646"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56213775"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Transformations de matrice dans SkiaSharp
 
@@ -64,11 +64,11 @@ Cette matrice 1-par-3 est ensuite multipliée par la matrice de transformation e
 
 Les points convertis à l’aide de la multiplication de matrice standard, sont les suivantes :
 
-x' = x
+`x' = x`
 
-y' = y
+`y' = y`
 
-z' = 1
+`z' = 1`
 
 C’est la transformation par défaut.
 
@@ -90,9 +90,9 @@ La multiplication est désormais comme suit :
 
 Voici les formules de transformation :
 
-x' = x + tx
+`x' = x + tx`
 
-y' = y + ty
+`y' = y + ty`
 
 Facteurs d’échelle ont une valeur par défaut de 1. Lorsque vous appelez le `Scale` méthode sur un nouveau `SKCanvas` de l’objet, la matrice de transformation résultant contient le `sx` et `sy` arguments dans les cellules diagonales :
 
@@ -104,9 +104,9 @@ Facteurs d’échelle ont une valeur par défaut de 1. Lorsque vous appelez le `
 
 Les formules de transformation sont les suivantes :
 
-x' = mise en sx x
+`x' = sx · x`
 
-y' = sy du y
+`y' = sy · y`
 
 La matrice de transformation après l’appel `Skew` contient les deux arguments dans les cellules de matrice adjacents aux facteurs d’échelle :
 
@@ -118,9 +118,9 @@ La matrice de transformation après l’appel `Skew` contient les deux arguments
 
 Les formules de transformation sont :
 
-x' = x + xSkew mise en y
+`x' = x + xSkew · y`
 
-y' = ySkew du x + y
+`y' = ySkew · x + y`
 
 Pour un appel à `RotateDegrees` ou `RotateRadians` pour un angle de α, la matrice de transformation est comme suit :
 
@@ -132,9 +132,9 @@ Pour un appel à `RotateDegrees` ou `RotateRadians` pour un angle de α, la matr
 
 Voici les formules de transformation :
 
-x' = cos(α) du x - mise en sin(α) y
+`x' = cos(α) · x - sin(α) · y`
 
-y' = sin(α) du x - mise en cos(α) y
+`y' = sin(α) · x - cos(α) · y`
 
 Une fois α 0 degré, il est la matrice d’identité. Une fois α 180 degrés, la matrice de transformation est comme suit :
 
@@ -228,11 +228,11 @@ Le `Persp0`, `Persp1`, et `Persp2` cellules sont décrites dans l’article [ **
               │ TransX  TransY  1 │
 </pre>
 
-x' = ScaleX du x + mise en SkewX y + TransX
+`x' = ScaleX · x + SkewX · y + TransX`
 
-y' = SkewX du x + mise en ScaleY y + TransY
+`y' = SkewX · x + ScaleY · y + TransY`
 
-z' = 1
+`z' = 1`
 
 Il s’agit de la transformation affine à deux dimensions terminée. La transformation affine conserve les lignes parallèles, ce qui signifie qu’un rectangle n’est jamais transformé en autre chose qu’un parallélogramme.
 
@@ -259,7 +259,7 @@ SKMatrix.Concat(ref R, ref A, ref B);
 
 Ces effectuer la multiplication suivante :
 
-R = B × A
+`R = B × A`
 
 Les autres méthodes ont uniquement deux paramètres. Le premier paramètre est modifié et au retour de l’appel de méthode, contient le produit de deux matrices. Les deux `PostConcat` méthodes sont appelées comme suit :
 
@@ -271,7 +271,7 @@ SKMatrix.PostConcat(ref A, ref B);
 
 Ces appels effectuer l’opération suivante :
 
-A = A × B
+`A = A × B`
 
 Les deux `PreConcat` méthodes sont similaires :
 
@@ -283,7 +283,7 @@ SKMatrix.PreConcat(ref A, ref B);
 
 Ces appels effectuer l’opération suivante :
 
-A = B × A
+`A = B × A`
 
 Les versions de ces méthodes avec tous les `ref` arguments sont légèrement plus efficaces en appelant les implémentations sous-jacentes, mais il peut être déroutant à une personne lisant votre code et en supposant que quoi que ce soit avec un `ref` argument est modifié par la méthode. En outre, il est souvent utile de passer un argument qui est un résultat de l’un de le `Make` méthodes, par exemple :
 
@@ -361,7 +361,7 @@ SKMatrix.PostConcat(ref A, C);
 
 Il s’agit d’une série de multiplications successives, par conséquent, le résultat est comme suit :
 
-UN × × B C
+`A × B × C`
 
 Multiplications consécutifs aident à comprendre ce que fait chaque transformation. La transformation d’échelle augmente la taille des coordonnées de chemin d’accès d’un facteur de 3, afin des coordonnées allant de – 300 à 300. La transformation de rotation fait pivoter l’étoile autour de son origine. La transformation de traduction il déplace ensuite par 300 pixels vers la droite et vers le bas, afin que tous les coordonnées deviennent positif.
 
