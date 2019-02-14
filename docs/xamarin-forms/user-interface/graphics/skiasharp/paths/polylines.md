@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: c6328135e0310c7b10b89bf2e32ce62869b15cfb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e7327deead917f55d1e7ac8af5302b6dccf6fead
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059984"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240355"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polylignes et équations paramétriques
 
@@ -26,21 +26,21 @@ Dans le [ **SkiaSharp courbes et chemins d’accès** ](../curves/index.md) sect
 
 En général, il est préférable de définir une courbe en termes d’une paire d’équations paramétriques. Il s’agit des équations de coordonnées X et Y qui dépendent d’une troisième variable, parfois appelée `t` pour le moment. Par exemple, les équations paramétriques suivantes définissent un cercle avec un rayon de 1 centré au point (0, 0) pour *t* comprise entre 0 et 1 :
 
-x = cos(2πt)
+`x = cos(2πt)`
 
-y = sin(2πt)
+`y = sin(2πt)`
 
  Si vous souhaitez un rayon supérieures à 1, vous pouvez simplement multiplier les valeurs de sinus et le cosinus par ce rayon et si vous avez besoin atteindre le centre d’un autre emplacement, ajoutez ces valeurs :
 
-x = xCenter + radius·cos(2πt)
+`x = xCenter + radius·cos(2πt)`
 
-y = yCenter + radius·sin(2πt)
+`y = yCenter + radius·sin(2πt)`
 
 Pour une ellipse avec parallèle axes horizontal et vertical, deux rayons sont impliqués :
 
-x = xCenter + xRadius·cos(2πt)
+`x = xCenter + xRadius·cos(2πt)`
 
-y = yCenter + yRadius·sin(2πt)
+`y = yCenter + yRadius·sin(2πt)`
 
 Vous pouvez ensuite placer le code de SkiaSharp équivalent dans une boucle qui calcule les différents points et ajoute celles pour un chemin d’accès. Le code de SkiaSharp suivant crée un `SKPath` objet pour une ellipse qui remplit la surface d’affichage. La boucle parcourt les 360 degrés directement. Le centre est la moitié de la largeur et hauteur de la surface d’affichage, et sont donc les rayons des deux :
 

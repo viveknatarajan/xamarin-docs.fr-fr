@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: 835663b2d9a9fa8557a31570f91492da95be7a9a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ee1df713315559c076fbfaed6f5a34057940ff36
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059189"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240394"
 ---
 # <a name="path-effects-in-skiasharp"></a>Effets de chemin d’accès dans SkiaSharp
 
@@ -416,13 +416,13 @@ Recherchez très proches et vous verrez que ce ne sont pas réellement des cercl
 
 Une chaîne ou un câble de répartition uniforme se bloque sous la forme d’une caténaire. Un arch généré sous la forme d’une caténaire inversé bénéficie d’une distribution égale de la pression dans le poids d’un arc. La caténaire comporte une description de mathématique apparemment simple :
 
-y = une mise en COSH(x / a)
+`y = a · cosh(x / a)`
 
 Le *cosh* est la fonction cosinus hyperbolique. Pour *x* égal à 0, *cosh* est égal à zéro et *y* est égal à *un*. C’est le centre de la caténaire. Comme le *cosinus* (fonction), *cosh* est dite *même*, ce qui signifie que *cosh(–x)* est égal à *cosh(x)*, et les valeurs augmentent permettant d’accroître les arguments positifs ou négatifs. Ces valeurs décrivent les courbes qui forment les côtés de la caténaire.
 
 Recherche la valeur appropriée de *un* en fonction de la caténaire aux dimensions de la page du téléphone n’est pas un calcul direct. Si *w* et *h* sont la largeur et la hauteur d’un rectangle, la valeur optimale de *un* satisfait l’équation suivante :
 
-COSH (w/2/a) = 1 + h / a
+`cosh(w / 2 / a) = 1 + h / a`
 
 La méthode suivante dans le [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpore que l’égalité en faisant référence à deux expressions de gauche et droite du signe égal en tant que `left` et `right`. Pour de petites valeurs de *un*, `left` est supérieur à `right`; pour des valeurs élevées de *un*, `left` est inférieure à `right`. Le `while` boucle réduit dans sur une valeur optimale de *un*:
 
@@ -794,13 +794,13 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-Si vous examinez attentivement les résultats, vous verrez que les lignes de hachurage rouge et bleu ne sont pas limités précisément le rectangle à coins arrondis. (Cela est apparemment une caractéristique du code sous-jacent Skia.) Si ce n’est pas satisfaisant, une autre approche est indiquée pour les lignes de hachurage diagonales en vert : le rectangle à coins arrondis est utilisé comme un tracé de détourage et les lignes de hachurage sont dessinées sur la page entière.
+Si vous examinez attentivement les résultats, vous verrez que les lignes de hachurage rouge et bleu ne sont pas limités précisément le rectangle à coins arrondis. (Cela est apparemment une caractéristique du code sous-jacent Skia.) Si ce n’est pas satisfaisant, une autre approche est indiquée pour les lignes de hachurage diagonales en vert : Le rectangle à coins arrondis est utilisé comme un tracé de détourage et les lignes de hachurage sont dessinées sur la page entière.
 
 Le `PaintSurface` gestionnaire se termine par un appel à simplement rayer le rectangle à coins arrondis, afin de voir la différence avec les lignes de hachurage rouge et bleu :
 
 [![](effects-images/hatchfill-small.png "Capture d’écran triple de la page de hachurage de remplissage")](effects-images/hatchfill-large.png#lightbox "Triple capture d’écran de la page de hachurage de remplissage")
 
-L’écran Android ne ressemble pas vraiment comme celle-ci : la mise à l’échelle de la capture d’écran a provoqué le fines lignes rouges et la dynamique pour consolider en lignes rouges apparemment plus larges et les espaces plus large.
+L’écran Android ne ressemble pas vraiment comme celle-ci : La mise à l’échelle de la capture d’écran a provoqué les fines lignes rouges et les espaces minces à consolider en lignes rouges apparemment plus larges et les espaces plus large.
 
 ## <a name="filling-with-a-path"></a>Remplir avec un chemin d’accès
 
@@ -1086,7 +1086,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 Seuls les deux premiers arguments sont requis. La méthode accède au chemin d’accès référencé par le `src` argument, modifie les données de chemin d’accès basées sur les propriétés de trait dans le `SKPaint` objet (y compris le `PathEffect` propriété), puis écrit les résultats dans le `dst` chemin d’accès. Le `resScale` paramètre permet de réduire la précision pour créer un chemin d’accès de destination plus petits et le `cullRect` argument peut éliminer les contours en dehors d’un rectangle.
 
-Une utilisation de base de cette méthode n’implique pas du tout les effets de chemin d’accès : si le `SKPaint` objet possède ses `Style` propriété définie sur `SKPaintStyle.Stroke`et effectue *pas* ont son `PathEffect` définie, alors `GetFillPath` crée un chemin d’accès qui représente un *contour* du chemin d’accès source comme s’il avait été dessiné par les propriétés de peinture.
+Une utilisation de base de cette méthode n’implique pas les effets de chemin d’accès : Si le `SKPaint` objet possède ses `Style` propriété définie sur `SKPaintStyle.Stroke`et effectue *pas* ont son `PathEffect` définie, alors `GetFillPath` crée un chemin d’accès qui représente un *contour*du chemin d’accès source comme s’il avait été dessiné par les propriétés de peinture.
 
 Par exemple, si le `src` chemin d’accès est un cercle de rayon 500, simple et le `SKPaint` objet spécifie une épaisseur de contour de 100, puis le `dst` chemin d’accès devient deux cercles concentriques, l’autre avec un rayon de 450 et l’autre avec un rayon de 550. La méthode est appelée `GetFillPath` car remplissant ce `dst` chemin d’accès est le même que le contour du `src` chemin d’accès. Mais vous pouvez également tracer le `dst` chemin d’accès pour afficher les contours du chemin d’accès.
 

@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233989"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240433"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Trois façons de dessiner un arc
 
@@ -107,9 +107,9 @@ Comme vous pouvez le voir, l’angle de début et de l’angle de balayage peuve
 
 Cette approche pour générer un arc est par algorithme le plus simple, et il est facile de dériver les équations paramétriques qui décrivent l’arc. Si nous connaissons la taille et l’emplacement de l’ellipse et les angles de début et de balayage, le début et points de terminaison de l’arc peut être calculées à l’aide de trigonométrie simple :
 
-x = oval. MidX + (oval. La largeur / 2) * cos(angle)
+`x = oval.MidX + (oval.Width / 2) * cos(angle)`
 
-y = oval. MidY + (oval. Hauteur / 2) * sin(angle)
+`y = oval.MidY + (oval.Height / 2) * sin(angle)`
 
 Le `angle` valeur est soit `startAngle` ou `startAngle + sweepAngle`.
 
@@ -606,9 +606,9 @@ Le rayon du cercle est de 100 unités et l’hypoténuse du triangle est 150 uni
 
 Les coordonnées du point tangent peuvent ensuite être calculées à l’aide de ces informations :
 
-x = 112·cos(41.8) = 83
+`x = 112·cos(41.8) = 83`
 
-y = 112·sin(41.8) = 75
+`y = 112·sin(41.8) = 75`
 
 Les quatre points de tangentes sont tout ce qui est nécessaire d’établir une connexion de l’infini centrée sur le point (0, 0) à rayon du cercle de 100 :
 

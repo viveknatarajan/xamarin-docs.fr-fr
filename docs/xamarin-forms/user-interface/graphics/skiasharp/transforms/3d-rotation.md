@@ -7,12 +7,12 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: a4f69287a6f97f3181d88a2d93d308df2676476a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7ac9ec458f16357ef50e23c459a9b0e1f79bdd97
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052687"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240368"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotations 3D dans SkiaSharp
 
@@ -63,25 +63,25 @@ Dans un système de graphismes 3D, un point en 3D (x, y, z) est converti en une 
 
 Analogue à 2D transforme qui se produisent en trois dimensions, les transformations 3D sont supposées se déroulent en quatre dimensions. La quatrième dimension est appelée W, et l’espace 3D est supposé exister au sein de l’espace 4D où W coordonnées sont égale à 1. Les formules de transformation sont les suivantes :
 
-x' = M11·x + M21·y + M31·z + M41
+`x' = M11·x + M21·y + M31·z + M41`
 
-y' = M12·x + M22·y + M32·z + M42
+`y' = M12·x + M22·y + M32·z + M42`
 
-z' = M13·x + M23·y + M33·z + M43
+`z' = M13·x + M23·y + M33·z + M43`
 
-w' = M14·x + M24·y + M34·z + M44
+`w' = M14·x + M24·y + M34·z + M44`
 
 Il est évident à partir de la transformation de formules qui les cellules `M11`, `M22`, `M33` sont des facteurs d’échelle dans les directions X, Y et Z, et `M41`, `M42`, et `M43` sont des facteurs de translation dans la X, Y, Z directions.
 
 Pour convertir ces coordonnées à l’espace 3D où W est égal à 1, x », y', et z 'coordonnées sont tous divisées par w' :
 
-x » = x' / w'
+`x" = x' / w'`
 
-y » = y' / w'
+`y" = y' / w'`
 
-z » = z' / w'
+`z" = z' / w'`
 
-w » = l ' / w' = 1
+`w" = w' / w' = 1`
 
 Cette division par w » propose une perspective dans l’espace 3D. Si w » est égal à 1, alors aucune perspective se produit.
 
@@ -140,7 +140,7 @@ La raison pour le nom d’argument `depth` sera bientôt évident. Ce code crée
 
 Les formules de transformation entraînent le calcul suivant de w':
 
-w' =-z / profondeur + 1
+`w' = –z / depth + 1`
 
 Cela sert à réduire les coordonnées X et Y lorsque les valeurs Z sont inférieures à zéro (conceptuellement derrière le plan XY) et d’augmenter les coordonnées X et Y pour les valeurs positives de Z. Lorsque la coordonnée Z est égale à `depth`, puis l ' est égal à zéro et coordonnées deviennent infinies. Graphiques en trois dimensions sont conçus autour d’une métaphore de caméra et le `depth` valeur ici représente la distance de l’appareil photo à partir de l’origine du système de coordonnées. Si un objet graphique a un Z coordonner le c'est-à-dire `depth` unités à partir de l’origine, il est toucher sur le plan conceptuel de l’objectif de l’appareil photo et devient volumineuse à l’infini.
 
@@ -173,9 +173,9 @@ w' = M14·x + M24·y + M44
 
 En outre, le z' coordonnée est également sans intérêt ici. Lorsqu’un objet 3D est affiché dans un système de graphismes 2D, il est réduit à un objet à deux dimensions en ignorant les valeurs des coordonnées Z. Les formules de transformation sont simplement ces deux :
 
-x » = x' / w'
+`x" = x' / w'`
 
-y » = y' / w'
+`y" = y' / w'`
 
 Cela signifie que la troisième ligne *et* troisième colonne de la matrice 4 x 4 peut être ignoré.
 
@@ -208,17 +208,17 @@ Maintenant, il peut être utilisé pour transformer un point 2D :
 
 Les formules de transformation sont :
 
-x' = cos (α) ·x
+`x' = cos(α)·x`
 
-y' = y
+`y' = y`
 
-z' = (sin (α) / profondeur) ·x + 1
+`z' = (sin(α)/depth)·x + 1`
 
 À présent diviser tout en z » :
 
-x » = cos (α) ·x / ((sin (α) / profondeur) ·x + 1)
+`x" = cos(α)·x / ((sin(α)/depth)·x + 1)`
 
-y » = y / ((sin (α) / profondeur) ·x + 1)
+`y" = y / ((sin(α)/depth)·x + 1)`
 
 Lorsque les objets 2D pivotent avec un angle positif autour de l’axe Y, puis positif X valeurs reculent à l’arrière-plan lors de la valeur négative valeurs X sont fournis au premier plan. Les valeurs X semblent se rapprocher de l’axe des Y (qui est régie par la valeur de cosinus) en tant que coordonnées plus éloigné de l’axe des Y devient plus petits ou qu’elles se plus éloigné de la visionneuse ou proche de la visionneuse.
 
