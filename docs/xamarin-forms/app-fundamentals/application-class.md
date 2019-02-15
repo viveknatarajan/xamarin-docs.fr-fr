@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 9acd1b8f25696267578f5cc269eb1b0c738be571
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
+ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675092"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078418"
 ---
 # <a name="xamarinforms-app-class"></a>Classe App Xamarin.Forms
 
@@ -149,7 +149,6 @@ public class App : Xamarin.Forms.Application
 Cette classe est ensuite instanciée dans chaque projet spécifique à la plateforme, puis passée à la méthode `LoadApplication`, où le `MainPage` est chargé et affiché à l’utilisateur.
 Le code adapté à chaque plateforme est indiqué dans les sections suivantes. Les derniers modèles de solutions Xamarin.Forms contiennent déjà tout ce code, qui a été préconfiguré pour votre application.
 
-
 ### <a name="ios-project"></a>Projet iOS
 
 La classe `AppDelegate` iOS hérite de `FormsApplicationDelegate`. Elle doit :
@@ -196,8 +195,6 @@ public class MainActivity : FormsAppCompatActivity
 
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>Projet Windows universel (UWP) pour Windows 10
 
-Pour plus d’informations sur la prise en charge UWP dans Xamarin.Forms, consultez [Configurer des projets Windows](~/xamarin-forms/platform/windows/installation/index.md).
-
 La page principale du projet UWP doit hériter de `WindowsPage` :
 
 ```xaml
@@ -222,4 +219,6 @@ public sealed partial class MainPage
  }
 ```
 
-Notez que `Forms.Init()` doit être appelé dans **App.xaml.cs** vers la ligne 63.
+Notez que `Forms.Init()` doit être appelé à partir d’**App.xaml.cs** dans le projet UWP.
+
+Pour plus d’informations, consultez l’article [Projets d’installation Windows](~/xamarin-forms/platform/windows/installation/index.md) qui inclut des étapes pour ajouter un projet UWP à une solution Xamarin.Forms existante ne ciblant pas UWP.
