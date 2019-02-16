@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a9e23f1bfa6099c64a0a60d78ecc3c6283a86a96
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6a2b8c99156963ae167aecd29a618d0feeffbdc7
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108084"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321127"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>watchOS contrôles Image dans Xamarin
 
-watchOS fournit un [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) contrôle pour afficher des images et animations simples. Certains contrôles peuvent également avoir une image d’arrière-plan (par exemple, les boutons, les groupes et les contrôleurs d’interface).
+watchOS fournit un [ `WKInterfaceImage` ](xref:WatchKit.WKInterfaceImage) contrôle pour afficher des images et animations simples. Certains contrôles peuvent également avoir une image d’arrière-plan (par exemple, les boutons, les groupes et les contrôleurs d’interface).
 
 ![](image-images/image-walkway.png "Affichage d’une image de l’Apple Watch") ![ ] (image-images/image-animation.png "Apple Watch avec animation simple")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
@@ -99,7 +99,7 @@ animatedImage.StopAnimating ();
 
 <a name="cache" />
 
-## <a name="appendix-caching-images-watchos-1"></a>Annexe : Mise en cache d’Images (watchOS 1)
+## <a name="appendix-caching-images-watchos-1"></a>Annexe : La mise en cache d’Images (watchOS 1)
 
 > [!IMPORTANT]
 > watchOS 3 applications s’exécutent entièrement sur l’appareil. Les informations suivantes sont pour les applications watchOS 1 uniquement.

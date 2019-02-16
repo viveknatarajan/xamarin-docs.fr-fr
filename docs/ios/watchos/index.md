@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a85d00d0b2a368e05b16b1f2f9422e9e24fccb12
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 29f7480845dc4e8e608477e1eeb7f2e35d8f5490
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107643"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321088"
 ---
 # <a name="building-watchos-apps-with-xamarin"></a>Création d’applications avec Xamarin de watchOS
 
@@ -20,13 +20,13 @@ ms.locfileid: "50107643"
 
 <!-- watch images courtesy of http://infinitapps.com/bezel/ -->
 
-##  <a name="getting-startedioswatchosget-startedindexmd"></a>[Prise en main](~/ios/watchos/get-started/index.md)
+## <a name="getting-startedioswatchosget-startedindexmd"></a>[Prise en main](~/ios/watchos/get-started/index.md)
 
-* [Introduction à watchOS](~/ios/watchos/get-started/intro-to-watchos.md)
-* [Informations d’installation](~/ios/watchos/get-started/installation.md) – prise en charge de la surveillance du système d’exploitation de Xamarin est disponible dans notre version stable, mais il est considéré comme un « Preview ».
+* [Introduction à watchOS](~/ios/watchos/get-started/intro-to-watchos.md).
+* [Informations d’installation](~/ios/watchos/get-started/installation.md).
 * Générer votre [première application watchOS](~/ios/watchos/get-started/hello-watch.md) à l’aide de Xamarin.
 
-##  <a name="user-interfaceioswatchosuser-interfaceindexmd"></a>[Interface utilisateur](~/ios/watchos/user-interface/index.md)
+## <a name="user-interfaceioswatchosuser-interfaceindexmd"></a>[Interface utilisateur](~/ios/watchos/user-interface/index.md)
 
 Vue d’ensemble des contrôles inclus dans l’exemple d’application de catalogue de Kit espion, y compris le [image](~/ios/watchos/user-interface/image.md), [table](~/ios/watchos/user-interface/menu.md) [menu](~/ios/watchos/user-interface/menu.md), et [saisie de texte](~/ios/watchos/user-interface/text-input.md) contrôles.
 
@@ -34,18 +34,18 @@ Vue d’ensemble des contrôles inclus dans l’exemple d’application de catal
 
 Comment inclure des fonctionnalités spécifiques de watchOS telle [Notifications](~/ios/watchos/platform/notifications.md) et [Complications](~/ios/watchos/platform/complications.md) dans des applications cadran.
 
-##  <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[Principes de base de l’application](~/ios/watchos/app-fundamentals/index.md)
+## <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[Principes de base de l’application](~/ios/watchos/app-fundamentals/index.md)
 
 Utilisation de différents aspects de l’API, watchOS, y compris le [parent application](~/ios/watchos/app-fundamentals/parent-app.md), [icônes](~/ios/watchos/app-fundamentals/icons.md), [disposition](~/ios/watchos/app-fundamentals/layout.md), [navigation](~/ios/watchos/app-fundamentals/navigation.md), [tailles d’écran](~/ios/watchos/app-fundamentals/screen-sizes.md), et [paramètres](~/ios/watchos/app-fundamentals/settings.md).
 
-##  <a name="deployment-and-testingioswatchosdeploy-testindexmd"></a>[Déploiement et test](~/ios/watchos/deploy-test/index.md)
+## <a name="deployment-and-testingioswatchosdeploy-testindexmd"></a>[Déploiement et test](~/ios/watchos/deploy-test/index.md)
 
 Liste de vérification et des instructions pour déployer des applications de l’Apple Watch des appareils, de test et à l’App Store.
 
-##  <a name="troubleshootingioswatchostroubleshootingmd"></a>[Résolution des problèmes](~/ios/watchos/troubleshooting.md)
+## <a name="troubleshootingioswatchostroubleshootingmd"></a>[Résolution des problèmes](~/ios/watchos/troubleshooting.md)
 
 Problèmes connus et solutions de contournement.
 
-##  <a name="api-documentationhttpsdeveloperxamarincomapinamespacewatchkit"></a>[Documentation de l’API](https://developer.xamarin.com/api/namespace/WatchKit/)
+## <a name="api-documentationxrefwatchkit"></a>[Documentation de l’API](xref:WatchKit)
 
 Couverture de classe et la méthode de l’API du Kit espion.

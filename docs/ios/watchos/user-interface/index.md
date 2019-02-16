@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2016
-ms.openlocfilehash: a7be193cee60b40f70b3dd4a840e0a26ccb8c3b2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8ef76f24b017f5e3e6bec9d39534f3626e79147
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109001"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321101"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>watchOS contrôles d’Interface utilisateur dans Xamarin
 
@@ -31,17 +31,17 @@ Les noms de tous les contrôles de programmation est préfixé avec `WKInterface
 |Image|Utilisez `myImage.SetImage("MyWatchImage")` pour charger des images sur la surveillance, ou `WKInterfaceDevice.CurrentDevice.AddCachedImage` à les mettre en cache pour une utilisation répétée sur la surveillance.<br />[Documentation sur le contrôle image](~/ios/watchos/user-interface/image.md)<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ImageDetailController.cs)|![](Images/image.png)|
 |Séparateur|Utiliser les séparateurs pour aider à créer attrayante regardez des interfaces utilisateur.<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SeparatorDetailController.cs)|![](Images/separator.png)| 
 |Carte|L’image de carte est statiquement affiché sur l’observation mais vous pouvez contrôler de nombreux aspects de son apparence, y compris l’ajout des codes confidentiels.<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MapDetailController.cs)|![](Images/map.png)|
-|FILM & InlineMove|Films peuvent soit ouvert sur leur propre ou inline<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs)|![](Images/movie.png)|
+|Movie & InlineMove|Films peuvent soit ouvert sur leur propre ou inline<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs)|![](Images/movie.png)|
 |Regrouper|Utiliser des groupes pour aider à créer attrayante regardez des interfaces utilisateur.<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GroupDetailController.cs)|![](Images/group.png)|
 |Table|Une version simplifiée des tables sur iOS. Implémentez `DidSelectRow` pour répondre à la sélection de l’utilisateur (ou utilisez un segue).<br />[Documentation sur le contrôle table](~/ios/watchos/user-interface/table.md)<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/Table%20Detail%20Controller/TableDetailController.cs)|![](Images/table.png)|
 |Appareil|`WKInterfaceDevice.CurrentDevice` inclut des propriétés telles que `ScreenBounds`, `ScreenScale`, et `PreferredContentSizeCategory`.<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/DeviceDetailController.cs)|![](Images/device.png)|
 |[Menu](~/ios/watchos/user-interface/menu.md)|Définir le menu de presse de force dans la table de montage séquentiel et implémentez les actions pour chaque bouton dans le code.<br />[Documentation sur le contrôle (Force Touch) menu](~/ios/watchos/user-interface/menu.md)<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ControllerDetailController.cs)|![](Images/controller.png)|
 |Entrée de texte|Utilisez `PresentTextInputController` et `WKTextInputMode` énumération.<br />[Documentation d’entrée de texte](~/ios/watchos/user-interface/text-input.md)<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
 |Couronne numérique|Le Crown numérique peut être utilisé pour un sélecteur de lecteur, ou sa rotation peut être suivie dans le code.<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
-|Mouvements|Il existe quatre types de reconnaissance de mouvement qui peuvent être ajoutées à une scène : Tap, effectuez un balayage, panoramique et LongPress.<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
+|Mouvements|Il existe quatre types de reconnaissance de mouvement qui peuvent être ajoutées à une scène : TAP, effectuez un balayage, panoramique et LongPress.<br />[Code de catalogue](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
 
 
 ## <a name="related-links"></a>Liens associés
 
 - [WatchKitCatalog (exemple)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Regardez la référence d’API de Kit](https://developer.xamarin.com/api/namespace/WatchKit/)
+- [Regardez la référence d’API de Kit](xref:WatchKit)

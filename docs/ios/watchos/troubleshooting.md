@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7bfb0cad8bbc025bc5dba39abe3699ae77ee83ba
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 70ef341c066c77e214761d75c173faef00266e4c
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526479"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321153"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS résolution des problèmes
 
-Cette page contient des informations supplémentaires et des solutions de contournement pour les fonctionnalités en cours de développement. Certaines de ces solutions de contournement s’appliquent uniquement aux versions de notre version préliminaire.
+Cette page contient des informations supplémentaires et des solutions de contournement pour les problèmes que vous pouvez rencontrer.
 
 - [Problèmes connus](#knownissues)
 
@@ -45,7 +45,7 @@ Cette page contient des informations supplémentaires et des solutions de contou
 - Concepteur iOS n’affiche pas les flèches de point d’entrée pour les contrôleurs d’interface coup de œil ou de Notification.
 
 - Vous ne pouvez pas ajouter deux `WKNotificationControllers` de montage.
-    Solution de contournement : Le `notificationCategory` dans le storyboard XML est toujours inséré avec la même `id`. Pour contourner ce problème, vous pouvez ajouter deux (ou plus) contrôleurs de Notification, ouvrez le fichier d’animation dans un éditeur de texte et modifiez manuellement le `id` élément unique.
+    Solution de contournement : Le `notificationCategory` dans le storyboard XML est toujours inséré avec la même `id`. Pour contourner ce problème, vous pouvez ajouter deux (ou plus) contrôleurs de Notification, ouvrez le fichier d’animation dans un éditeur de texte et modifiez manuellement le `id` élément unique.
 
     [![](troubleshooting-images/duplicate-id-sml.png "Ouvrir le fichier de storyboard dans un éditeur de texte et modifiez manuellement l’élément id pour être unique")](troubleshooting-images/duplicate-id.png#lightbox)
 
@@ -97,7 +97,7 @@ Il est facile de supprimer le canal alpha sur Mac OS X à l’aide de la **aper�
 
 2. Faites glisser une nouvelle `InterfaceController` sur le plan conceptuel :
 
-    ![](troubleshooting-images/add-1.png "Un InterfaceController")
+    ![](troubleshooting-images/add-1.png "A InterfaceController")
 
 3. Vous pouvez maintenant faire glisser des contrôles sur le contrôleur d’interface (par exemple). étiquettes et les boutons), mais Impossible de créer des prises de courant ou actions encore, car il n’est pas **.h** fichier d’en-tête. Les étapes suivantes entraîne requis **.h** fichier d’en-tête doit être créé.
 
@@ -268,7 +268,7 @@ Exemple :
  --sdkroot /Applications/Xcode.app/Contents/Developer/
 ```
 
-### <a name="--device"></a>--APPAREIL
+### <a name="--device"></a>--device
 
 L’appareil de simulateur à exécuter. Cela peut être spécifié de deux manières, à l’aide de l’udid d’un appareil spécifique, ou à l’aide d’une combinaison de type de runtime et d’appareils.
 
