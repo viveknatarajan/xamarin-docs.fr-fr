@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: fa0ad282fedecec8f5ca4e94e7119c36ef182261
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 846a8fd45b8e39fb11270374af47a5b6cb83fa01
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116015"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666933"
 ---
 # <a name="external-storage"></a>Stockage externe
 
@@ -53,16 +53,16 @@ Le paramètre `GetExternalFilesDir()` est une chaîne qui spécifie un _réperto
 
 | `Android.OS.Environment` | Répertoire |
 |-|-|
-| DirectoryAlarms | **_PRIVÉ\_externe\_stockage_  /alarmes** |
-| DirectoryDcim | **_PRIVÉ\_EXTERNE\_STOCKAGE_/DCIM** |
-| DirectoryDownloads | **_PRIVÉ\_externe\_stockage_  /télécharger** |
-| DirectoryDocuments | **_PRIVÉ\_externe\_stockage_  /Documents** |
-| DirectoryMovies | **_PRIVÉ\_externe\_stockage_/Movies** |
+| DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
+| DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |
+| DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
+| DirectoryDocuments | **_PRIVATE\_EXTERNAL\_STORAGE_/Documents** |
+| DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
 | DirectoryMusic | **_PRIVÉ\_externe\_stockage_/Music** |
-| DirectoryNotifications | **_PRIVÉ\_externe\_stockage_  /notifications** |
-| DirectoryPodcasts | **_PRIVÉ\_externe\_stockage_/Podcasts** |
-| DirectoryRingtones | **_PRIVÉ\_externe\_stockage_/Ringtones** |
-| DirectoryPictures | **_PRIVÉ\_externe\_stockage_Pictures** |
+| DirectoryNotifications | **_PRIVATE\_EXTERNAL\_STORAGE_/Notifications** |
+| DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
+| DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
+| DirectoryPictures | **_PRIVATE\_EXTERNAL\_STORAGE_/Pictures** |
 
 Pour les appareils qui ont plusieurs partitions de stockage externe, chaque partition aura un répertoire qui est destiné aux fichiers privés. La méthode `Android.Content.Context.GetExternalFilesDirs(string type)` renvoie un tableau de `Java.IO.Files`. Chaque objet représente un répertoire spécifique à l’application privé sur tous les périphériques de stockage de partagés/externe où l’application peut placer les fichiers qu’il détient.
 
@@ -80,7 +80,7 @@ Fichiers publics sont des fichiers qui existent sur un stockage externe qui ne s
 Ce document fait référence au répertoire de stockage de fichiers publics sur un stockage externe comme _PUBLIC\_externe\_stockage_.
 
 
-Android prend également en charge le concept de répertoires d’application _PUBLIC\_externe\_stockage_. Ces répertoires sont exactement les mêmes que l’application diretories pour `_PRIVATE\_EXTERNAL\_STORAGE_` et sont décrits dans le tableau dans la section précédente. La méthode `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` retournera un `Java.IO.File` objet qui correspondent à un répertoire d’application publique. Le `directoryType` paramètre est un paramètre obligatoire et ne peut pas être `null`.
+Android prend également en charge le concept de répertoires d’application _PUBLIC\_externe\_stockage_. Ces répertoires sont exactement les mêmes que les répertoires d’application pour `_PRIVATE\_EXTERNAL\_STORAGE_` et sont décrits dans le tableau dans la section précédente. La méthode `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` retournera un `Java.IO.File` objet qui correspondent à un répertoire d’application publique. Le `directoryType` paramètre est un paramètre obligatoire et ne peut pas être `null`.
 
 Par exemple, l’appel `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` renvoie une chaîne qui ressemble à :
 
