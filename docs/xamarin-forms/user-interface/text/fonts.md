@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 1b90a3184b89ba9147525a87b52e048bbb59f5af
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9441522af53a1240707eeb21ff9f583501d2491d
+ms.sourcegitcommit: 16a42b69176a40cde71e177079b11e15d300d042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061147"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56795444"
 ---
 # <a name="fonts-in-xamarinforms"></a>Polices dans Xamarin.Forms
 
@@ -97,27 +97,19 @@ Est une bonne source d’informations de police pour iOS [iosfonts.com](http://i
 
 ## <a name="setting-the-font-in-xaml"></a>Définition de la police dans XAML
 
-Xamarin.Forms contrôle ce texte d’affichage ont toutes un `Font` propriété qui peut être définie dans XAML. Le plus simple pour définir la police dans XAML consiste à utiliser les valeurs d’énumération taille nommée, comme illustré dans cet exemple :
+Xamarin.Forms contrôle ce texte d’affichage ont toutes un `FontSize` propriété qui peut être définie dans XAML. Le plus simple pour définir la police dans XAML consiste à utiliser les valeurs d’énumération taille nommée, comme illustré dans cet exemple :
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-Il existe un convertisseur intégré pour le `Font` propriété qui permet à tous les paramètres de police à être exprimé comme une valeur de chaîne dans XAML. Les exemples suivants montrent comment vous pouvez spécifier des attributs de police et de tailles dans XAML :
+Il existe un convertisseur intégré pour le `FontSize` propriété qui permet à tous les paramètres de police à être exprimé comme une valeur de chaîne dans XAML. En outre, le `FontAttributes` propriété peut être utilisée pour spécifier les attributs de police :
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
 <Label Text="Biggest NamedSize" FontSize="Large" />
 <Label Text="Use size 72" FontSize="72" />
-```
-
-Pour spécifier plusieurs `Font` combiner des paramètres, les paramètres requis dans un seul `Font` chaîne d’attribut. La chaîne d’attribut de police doit être mis en forme en tant que `"[font-face],[attributes],[size]"`. L’ordre des paramètres est important, tous les paramètres sont facultatifs et plusieurs `attributes` peut être spécifié, par exemple :
-
-```xaml
-<Label Text="Small bold text" Font="Bold, Micro" />
-<Label Text="Medium custom font" Font="MarkerFelt-Thin, 42" />
-<Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
 ```
 
 [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) peut également être utilisé dans XAML pour restituer une police différente sur chaque plateforme. L’exemple ci-dessous utilise un type de police personnalisée sur iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-fin</span>) et spécifie uniquement taille/attributs sur d’autres plateformes :
@@ -151,7 +143,7 @@ Les étapes requises pour chaque plateforme sont décrites ci-dessous. En inclua
 Il est possible d’afficher une police personnalisée, tout d’abord s’assurer qu’elle est chargée, puis référence par nom à l’aide de Xamarin.Forms `Font` méthodes.
 Suivez les instructions de [ce billet de blog](http://blog.xamarin.com/custom-fonts-in-ios/):
 
-1. Ajouter le fichier de police avec **Action de génération : BundleResource**, et
+1. Ajouter le fichier de police avec **Action de génération : BundleResource**, and
 2. Mise à jour le **Info.plist** fichier (**polices fournies par l’application**, ou `UIAppFonts`, key), puis
 3. Reporter en nom partout où vous définissez une police dans Xamarin.Forms !
 
