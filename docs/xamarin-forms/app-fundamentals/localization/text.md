@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 7eea0a4eba201d7332c5e3e5222729bcb5e14a07
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6f12670dd463471ba1e337802453c775adbe16a7
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054059"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666946"
 ---
 # <a name="localization"></a>Localisation
 
@@ -347,13 +347,14 @@ L’implémentation suivante du service de dépendance `ILocalize` doit être pl
 
 namespace UsingResxLocalization.iOS
 {
-public class Localize : UsingResxLocalization.ILocalize
+    public class Localize : UsingResxLocalization.ILocalize
     {
         public void SetLocale (CultureInfo ci)
         {
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
         }
+
         public CultureInfo GetCurrentCultureInfo ()
         {
             var netLanguage = "en";
@@ -385,9 +386,12 @@ public class Localize : UsingResxLocalization.ILocalize
             }
             return ci;
         }
+
         string iOSToDotnetLanguage(string iOSLanguage)
         {
-            var netLanguage = iOSLanguage;
+            // .NET cultures don't support underscores
+            string netLanguage = iOSLanguage.Replace("_", "-");
+
             //certain languages need to be converted to CultureInfo equivalent
             switch (iOSLanguage)
             {
@@ -403,6 +407,7 @@ public class Localize : UsingResxLocalization.ILocalize
             }
             return netLanguage;
         }
+
         string ToDotnetFallbackLanguage (PlatformCulture platCulture)
         {
             var netLanguage = platCulture.LanguageCode; // use the first part of the identifier (two chars, usually);
@@ -431,7 +436,6 @@ public class Localize : UsingResxLocalization.ILocalize
 > Par exemple, l’écran iOS **Réglages > Général Langue &amp; Région** vous permet de configurer la **Langue** de votre téléphone en choisissant **Anglais** mais comme vous avez défini la **Région** à **Espagne**, cela donne la chaîne de paramètres régionaux `"en-ES"`. En cas d’échec de la création de `CultureInfo`, le code utilise uniquement les deux premières lettres pour sélectionner la langue d’affichage.
 >
 > Les développeurs doivent modifier les méthodes `iOSToDotnetLanguage` et `ToDotnetFallbackLanguage` pour prendre en compte les cas spécifiques liés aux langues prises en charge.
-
 
 Certains éléments d’interface utilisateur définis par le système sont automatiquement traduits par iOS, par exemple le bouton **OK** du contrôle `Picker`. Pour forcer iOS à traduire ces éléments, nous devons indiquer les langues que nous prenons en charge dans le fichier **Info.plist**. Vous pouvez ajouter ces valeurs via **Info.plist > Source**, comme indiqué ici :
 
