@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 3bfb8a10eab1a8a75a3f2048de1ce219df9bde66
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 854b3fdbd34444cfb052d36287cf5cd47a36a2e0
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057663"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666907"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Page maître/détail Xamarin.Forms
 
@@ -48,7 +48,7 @@ Le comportement de l’expérience de navigation entre les pages maîtres et les
 
 - Sur iOS, la page de détail *glisse* vers la droite tandis que la page maître glisse à partir de la gauche. La partie gauche de la page de détail est toujours visible.
 - Sur Android, les pages de détail et les pages maîtres se *superposent*.
-- Sur UWP, les pages de détail et les pages maîtres sont *échangées*.
+- Sur UWP, la page maître glisse à partir de la gauche vers la page de détails, la recouvrant en partie, à condition que la propriété [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) soit définie sur `Popover`. Pour plus d’informations, consultez [Contrôle du comportement d’affichage de la page de détail](#Controlling_the_Detail_Page_Display_Behavior).
 
 Un comportement similaire se produit en mode paysage, à la différence que la page maître sur iOS et Android a une largeur similaire à celle de la page maître en mode portrait. Ainsi, une plus grande partie de la page de détail est visible.
 
@@ -291,7 +291,6 @@ Toutefois, la valeur de la propriété [`MasterBehavior`](xref:Xamarin.Forms.Mas
 ## <a name="summary"></a>Récapitulatif
 
 Cet article a montré comment utiliser [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) et comment naviguer entre ses pages d’informations. `MasterDetailPage` de Xamarin.Forms est une page qui gère deux pages d’informations liées : une page maître présentant des éléments et une page de détail présentant les détails relatifs aux éléments de la page maître.
-
 
 ## <a name="related-links"></a>Liens associés
 
