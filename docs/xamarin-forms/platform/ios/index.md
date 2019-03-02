@@ -7,16 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2018
-ms.openlocfilehash: 83946929874ae37caab459eed970c50b74154d66
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292335"
 ---
+
 # <a name="ios-platform-features"></a>Fonctionnalités de la plateforme iOS
 
-Développement d’applications Xamarin.Forms pour iOS nécessite Visual Studio. Le [page spécifications](~/get-started/installation.md) contient plus d’informations sur les conditions préalables.
+Développement d’applications Xamarin.Forms pour iOS nécessite Visual Studio. Le [page spécifications](~/get-started/requirements.md) contient plus d’informations sur les conditions préalables.
 
 ## <a name="platform-specifics"></a>Caractéristiques de la plateforme
 

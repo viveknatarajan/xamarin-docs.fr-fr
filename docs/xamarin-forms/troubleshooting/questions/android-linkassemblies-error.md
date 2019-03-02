@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: b027dd23b9144a865bc16b55ebac71855bae0725
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 552ad4d2de6e2560dc4301a9b5cc0ce6a5edb348
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292036"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197107"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Erreur de génération Android : échouée inattendu de la tâche LinkAssemblies le
 
-Vous pouvez voir un message d’erreur `The "LinkAssemblies" task failed unexpectedly` lorsque la génération d’un projet Xamarin.Android qui utilise les formulaires. Cela se produit lorsque l’éditeur de liens est active (en général sur un *version* build pour réduire la taille du package d’application) ; et il se produit car les cibles Android ne sont pas mis à jour vers la dernière version de framework. (Plus d’informations : [Xamarin.Forms pour Android exigences](~/get-started/installation.md#android))
+Vous pouvez voir un message d’erreur `The "LinkAssemblies" task failed unexpectedly` lorsque la génération d’un projet Xamarin.Android qui utilise les formulaires. Cela se produit lorsque l’éditeur de liens est active (en général sur un *version* build pour réduire la taille du package d’application) ; et il se produit car les cibles Android ne sont pas mis à jour vers la dernière version de framework. (Plus d’informations : [Xamarin.Forms pour Android exigences](~/get-started/requirements.md#android))
 
 La résolution de ce problème consiste à s’assurer que vous avez les dernières versions du Kit Android SDK pris en charge et définissez le **Framework cible** à **utiliser la plateforme plus récente installée**. Il est également recommandé que vous avez défini le **Version Android cible** à **Version du Framework cible utilisation** et le **version Android minimale** supérieure ou égale à 15 de l’API. Cela est considéré comme la configuration prise en charge.
 

@@ -9,16 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: aacc63af53d7408b61f01054d49fa2b436588fc7
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293042"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197548"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Immersion dans Xamarin.Forms-démarrage rapide
 
-Dans le [Xamarin.Forms-démarrage rapide](~/get-started/index.md), l’application de notes de publication a été générée. Cet article passe en revue les éléments générés afin d’acquérir les notions de base du fonctionnement des applications Xamarin.Forms.
+Dans le [Xamarin.Forms-démarrage rapide](~/get-started/index.yml), l’application de notes de publication a été générée. Cet article passe en revue les éléments générés afin d’acquérir les notions de base du fonctionnement des applications Xamarin.Forms.
 
 ::: zone pivot="windows"
 
@@ -373,7 +373,7 @@ Pour plus d’informations sur la navigation hiérarchique, consultez [Navigatio
 
 La liaison de données permet de simplifier la façon dont une application Xamarin.Forms affiche ses données et interagit avec elles. Elle établit une connexion entre l’interface utilisateur et l’application sous-jacente. La classe [`BindableObject`](xref:Xamarin.Forms.BindableObject) contient une grande partie de l’infrastructure pour prendre en charge la liaison de données.
 
-La liaison de données connecte deux objets, appelés la *source* et la *cible*. L’objet *source* fournit les données. L’objet *cible* consomme (et affiche souvent) les données de l’objet source. Par exemple, un objet [`Editor`](xref:Xamarin.Forms.Editor) (objet *cible*) lie couramment sa propriété [`Text`](xref:Xamarin.Forms.Editor.Text) à une propriété `string` publique dans un objet *source*. Le diagramme suivant illustre la relation de liaison :
+La liaison de données connecte deux objets, appelés la *source* et la *cible*. L’objet *source* fournit les données. L’objet *cible* consomme (et affiche souvent) les données de l’objet source. Par exemple, un [ `Editor` ](xref:Xamarin.Forms.Editor) (*cible* objet) lie couramment sa [ `Text` ](xref:Xamarin.Forms.Editor.Text) propriété publique `string` propriété dans un *source* objet. Le diagramme suivant illustre la relation de liaison :
 
 ![](deepdive-images/data-binding.png "Liaison de données")
 

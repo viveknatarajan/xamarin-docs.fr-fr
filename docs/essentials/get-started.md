@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: d359ea6e56234f14f185ea578fca3a0346e0df50
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 7152e37c4035ac5f9a259fa48b91d5f29752d1f7
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233716"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197132"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Bien démarrer avec Xamarin.Essentials
 
@@ -31,7 +31,7 @@ Xamarin.Essentials prend en charge les plateformes et les systèmes d’exploita
 
 Xamarin.Essentials est disponible sous forme de package NuGet qui peut être ajouté à n’importe quel projet nouveau ou existant à l’aide de Visual Studio.
 
-1. Téléchargez et installez [Visual Studio](http://visualstudio.com) avec [Visual Studio Tools pour Xamarin](~/cross-platform/get-started/installation/index.md).
+1. Téléchargez et installez [Visual Studio](http://visualstudio.com) avec [Visual Studio Tools pour Xamarin](~/get-started/installation/index.md).
 
 2. Ouvrez un projet existant ou créez un projet à l’aide du modèle d’application vide sous **Visual Studio C#**  (Android, iPhone et iPad ou inter-plateformes). **Important** : En cas d’ajout à un projet UWP, vérifiez que la build 16299 ou ultérieure est définie dans les propriétés du projet.
 
