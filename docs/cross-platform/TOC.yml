@@ -2,29 +2,12 @@ items:
 - name: Multiplateforme
   href: index.yml
   items:
-  - name: Bien démarrer
+  - name: Création d’applications mobiles
     href: get-started/index.md
     items:
     - name: Spécifications
       displayName: System requirements
       href: get-started/requirements.md
-    - name: Installation
-      href: get-started/installation/index.md
-      items:
-      - name: Installation de Xamarin sur Windows
-        href: get-started/installation/windows.md
-        items:
-        - name: Installation des préversions Xamarin (Windows)
-          href: get-started/installation/windows-preview.md
-      - name: Installation de Visual Studio pour Mac
-        href: /visualstudio/mac/installation/
-        items:
-        - name: Installation des préversions Xamarin (Mac)
-          href: /visualstudio/mac/update/
-      - name: Instructions de configuration du pare-feu Xamarin
-        href: get-started/installation/firewall.md
-      - name: Désinstallation de Xamarin
-        href: get-started/installation/uninstalling-xamarin.md
     - name: Introduction au développement mobile
       href: get-started/introduction-to-mobile-development.md
     - name: Introduction au service SDLC mobile
@@ -192,9 +175,9 @@ items:
   - name: Exemples
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 5eb01503b809979ebbc6598cf1cde985d3431bad
-ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
+ms.openlocfilehash: 083bc3dc1dbd392977b0d4902e37fe0f78513c29
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841326"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197327"

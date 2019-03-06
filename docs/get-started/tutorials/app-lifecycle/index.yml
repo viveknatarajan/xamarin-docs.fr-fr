@@ -1,0 +1,30 @@
+### YamlMime:Tutorial
+title: Didacticiel sur le cycle de vie des applications Xamarin.Forms
+metadata:
+  title: Didacticiel sur le cycle de vie des applications Xamarin.Forms
+  description: Familiarisez-vous avec le cycle de vie des applications Xamarin.Forms et découvrez comment conserver des données au fil de l’évolution de leur état tout au long de leur cycle de vie.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 08/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 5c41d91f9d41eadfd7dc574c8cffc4f63f6f7575
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198895"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Répondre aux changements d’état du cycle de vie
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/lifecycle.md)]
+- title: Conserver les données quelle que soit l’évolution de leur état pendant leur cycle de vie
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/persist-data.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

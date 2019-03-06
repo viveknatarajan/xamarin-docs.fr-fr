@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 430fcdc6066c677d74955670cef0979b19802835
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: c52714a36b204d8e92baa87f3aa7389c1b08260c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292106"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197522"
 documentType: LandingData
 title: Conseils multiplateforme
 metadata:
@@ -58,11 +58,11 @@ sections:
     className: cardsB
     items:
     - href: ~/cross-platform/get-started/index.md
-      html: Didacticiels pour vous aider à bien démarrer avec Xamarin. Vérifiez que tout est installé correctement et générez vos premières applications.
+      html: Introduction au développement d’applications mobiles avec Xamarin.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/cross-platform/get-started/index.md
-      title: Prise en main
+      title: Création d’applications mobiles
     - href: ~/cross-platform/platform
       html: Xamarin prend en charge les langages C#, F# et le moteur de création de modèles Razor.
       image:
@@ -93,21 +93,3 @@ sections:
         src: https://docs.microsoft.com/media/common/i_xplat-code.svg
         href: ~/cross-platform/desktop/
       title: Développeurs de bureau
-- title: Plateformes
-  items:
-  - type: list
-    style: cards
-    className: cardsD
-    items:
-    - title: Xamarin.Forms
-      href: ~/xamarin-forms/index.yml
-      html: <p><a href="~/get-started/quickstarts/index.md">Bien démarrer</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Principes de base de l’application</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interface utilisateur</a><br /><a href="~/xamarin-forms/platform/index.md">Fonctionnalités de la plateforme</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Déploiement et test</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Services de données et cloud</a><br /><a href="~/xamarin-forms/internals/index.md">Concepts avancés et éléments internes</a></p>
-    - title: Android
-      href: ~/android/index.yml
-      html: <p><a href="~/android/get-started/index.md">Bien démarrer</a><br /><a href="~/android/app-fundamentals/index.md">Principes de base de l’application</a><br /><a href="~/android/user-interface/index.md">Interface utilisateur</a><br /><a href="~/android/platform/index.md">Fonctionnalités de la plateforme</a><br /><a href="~/android/deploy-test/index.md">Déploiement et test</a><br /><a href="~/android/data-cloud/index.md">Services de données et cloud</a><br /><a href="~/android/internals/index.md">Concepts avancés et éléments internes</a></p>
-    - title: iOS
-      href: ~/ios/index.yml
-      html: <p><a href="~/ios/get-started/index.md">Bien démarrer</a><br /><a href="~/ios/app-fundamentals/index.md">Principes de base de l’application</a><br /><a href="~/ios/user-interface/index.md">Interface utilisateur</a><br /><a href="~/ios/platform/index.md">Fonctionnalités de la plateforme</a><br /><a href="~/ios/deploy-test/index.md">Déploiement et test</a><br /><a href="~/ios/data-cloud/index.md">Services de données et cloud</a><br /><a href="~/ios/internals/index.md">Concepts avancés et éléments internes</a></p>
-    - title: Mac
-      href: ~/mac/index.yml
-      html: <p><a href="~/mac/get-started/index.md">Bien démarrer</a><br /><a href="~/mac/app-fundamentals/index.md">Principes de base de l’application</a><br /><a href="~/mac/user-interface/index.md">Interface utilisateur</a><br /><a href="~/mac/platform/index.md">Fonctionnalités de la plateforme</a><br /><a href="~/mac/deploy-test/index.md">Déploiement et test</a><br /><a href="~/mac/internals/index.md">Concepts avancés et éléments internes</a></p>

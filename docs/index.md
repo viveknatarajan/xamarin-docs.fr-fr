@@ -2,33 +2,27 @@
 layout: HubPage
 hide_bc: true
 title: Documentation de Xamarin
-description: Xamarin vous permet de créer des applications natives pour Android, iOS et macOS en utilisant du code .NET et des interfaces utilisateur spécifiques à la plateforme. Xamarin.Forms vous permet de créer des applications natives, avec du code d’interface utilisateur partagé écrit en C# ou XAML.
-ms.date: 08/08/2018
+description: 'Xamarin vous permet de créer des applications natives pour Android, iOS et macOS en utilisant du code .NET et des interfaces utilisateur spécifiques à la plateforme. Xamarin.Forms vous permet de créer des applications natives, avec du code d’interface utilisateur partagé écrit en C# ou XAML.'
+ms.date: 02/12/2019
 featureFlags:
-- clicktale
-ms.openlocfilehash: 0a444626c86c6bb26739b1a9a94582404c729d27
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292105"
+  - clicktale
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="~/get-started/index.md">
+                <a href="~/get-started/installation/index.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage" style='background-position: 0px 0px; background-image: url("https://docs.microsoft.com/media/common/i_get-started.svg"); background-size: cover;'>
-                                        <img style="display: none;" alt="Get Started" src="https://docs.microsoft.com/media/common/i_get-started.svg" data-linktype="external" data-hoverimage="https://docs.microsoft.com/media/common/i_get-started.svg">
+                                    <div class="cardImage" style='background-position: 0px 0px; background-image: url("https://docs.microsoft.com/media/common/i_download-install.svg"); background-size: cover;'>
+                                        <img style="display: none;" alt="Get Started" src="https://docs.microsoft.com/media/common/i_download-install.svg" data-linktype="external" data-hoverimage="https://docs.microsoft.com/media/common/i_download-install.svg">
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3 class="x-hidden-focus">Bien démarrer</h3>
-                                    <p>Créez des applications pour Android, iOS et UWP.</p>
+                                    <h3 class="x-hidden-focus">Configuration et installation</h3>
+                                    <p>Découvrez comment installer Visual Studio Tools pour Xamarin.</p>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +60,7 @@ ms.locfileid: "55292105"
                                 </div>
                                 <div class="cardText">
                                     <h3 class="x-hidden-focus">Xamarin University</h3>
-                                    <p>Apprenez gratuitement en ligne ou suivez en direct nos cours dynamiques.</p>
+                                    <p>Apprenez en ligne gratuitement grâce à l’autoformation.</p>
                                 </div>
                             </div>
                         </div>
@@ -79,30 +73,230 @@ ms.locfileid: "55292105"
         <h1 class="screenReader">Documentation de Xamarin</h1>
         <ul class="pivots">
             <li>
-                <a href="#platforms">Plateformes</a>
-                <ul id="platforms">
+                <li>
+                <a href="#get-started">Bien démarrer</a>
+                <ul id="get-started">
                     <li>
-                        <a data-default="true" href="#XamarinForms">Xamarin.Forms</a>
-                        <ul id="XamarinForms" class="cardsC">
+                        <a href="#get-started1"></a>
+                        <ul id="get-started1" class="cardsL">
                             <li>
-                                <a href="~/get-started/index.md">
+                               <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>En savoir plus sur Xamarin</h3>
+                                                <h4>Créer des applications Android et iOS multiplateformes avec Xamarin.Forms à l’aide de C# et .NET dans Visual Studio sur Windows et macOS.</h4>
+                                                <ul class="noBullet">
+                                                    <li><a class="barLink" href="~/cross-platform/get-started/introduction-to-mobile-development.md"><img  src="https://docs.microsoft.com/media/logos/logo_xamarin.svg" alt="" />Les applications Xamarin sont natives</a></li>
+                                                    <li><a class="barLink" href="~/cross-platform/desktop/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt="" />Xamarin pour les développeurs de bureau .NET</a></li>
+                                                    <li><a class="barLink" href="~/android/get-started/java-developers.md"><img  src="https://docs.microsoft.com/media/logos/logo_java.svg" alt="" />Xamarin pour les développeurs Java</a></li>
+                                                    <li><a class="barLink" href="~/ios/get-started/objective-c-developers/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt=" icon" />Xamarin pour les développeurs Objective-C</a></li>
+                                                    <li><a class="barLink" href="~/xamarin-forms/data-cloud/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_azure.svg" alt="" />Xamarin et Azure</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Démarrage rapide</h3>
+                                                <h4>Suivez ces guides pour créer vos premières applications Android et iOS multiplateformes avec Xamarin.Forms, qui vous prendront chaque fois 5 minutes.</h4>
+                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                    <tr>
+                                                        <td style="border-top-color:transparent!important;padding-left:0;">
+                                                            <ul class="noBullet">
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/quickstarts/single-page.md">
+                                                                        <img src="~/media/icons/i_xaml-forms.svg" alt="">
+Fichier > Nouvelle application mobile </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/quickstarts/multi-page.md">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_class.svg" alt="">
+Ajouter une navigation </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/quickstarts/database.md">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="">
+Ajouter une base de données </a>
+                                                                </li>
+                                                                 <li>
+                                                                    <a class="barLink" href="~/get-started/quickstarts/styling.md">
+                                                                        <img src="https://docs.microsoft.com/xamarin/media/icons/i_user-interface.svg" alt="">
+Styliser l’application </a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-top-color:transparent!important;padding-left:0;">
+                                                            <ul class="noBullet">
+                                                                <li>
+                                                                    <a class="barLink" href="~/cross-platform/index.yml">
+                                                                    <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt="">
+Conseils de développement Xamarin</a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Didacticiels</h3>
+                                                <h4>Familiarisez-vous avec les concepts associés à la création d’applications Android et iOS multiplateformes à l’aide de Xamarin.Forms.</h4>
+                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                    <tr>
+                                                        <td style="border-top-color:transparent!important;padding-left:0;">
+                                                            <ul class="noBullet">
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/stacklayout/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_dashboard.svg" alt="">
+Disposition de pile </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/label/index.yml">
+                                                                        <img src="~/media/icons/i_form-label.svg" alt="">
+Étiquette </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/button/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_button.svg" alt="">
+Boutons </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/entry/index.yml">
+                                                                        <img src="~/media/icons/i_form-entry.svg" alt="">
+Entrée de texte </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/editor/index.yml">
+                                                                        <img src="~/media/icons/i_form-editor.svg" alt="">
+Éditeur de texte </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/image/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_account-management.svg" alt="">
+Images </a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                        <td style="border-top-color:transparent!important;padding-left:0;">
+                                                            <ul class="noBullet">
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/grid/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_table.svg" alt="">
+Disposition de grille </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/listview/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_sharepoint-list.svg" alt="">
+Listes </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/pop-ups/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_alert.svg" alt="">
+Fenêtres contextuelles </a>
+                                                                </li>                                                                
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/app-lifecycle/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_agile.svg" alt="">
+Cycle de vie d’application </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/local-database/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="">
+Base de données </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="barLink" href="~/get-started/tutorials/web-service/index.yml">
+                                                                        <img src="https://docs.microsoft.com/media/common/i_server.svg" alt="">
+Services Web </a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                     <div>
+                        <ul class="cardsL">
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>Créer des applications Xamarin à plateforme unique</h3>
+                                                <h4>Toutes les applications Xamarin peuvent partager du code entre elles et avec d’autres plateformes .NET, tout comme elles peuvent intégrer les fonctionnalités Xamarin.Forms.</h4>
+                                                 <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
+                                                <ul class="noBullet">
+                                                    <li>
+                                                        <a class="barLink" href="~/android/index.yml">
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_android.svg" alt="Android logo">
+Android</a>
+                                                    </li>
+                                                    </ul></td><td style="border-top-color:transparent!important;padding-left:0;"><ul class="noBullet">
+                                                    <li>
+                                                        <a class="barLink" href="~/ios/index.yml">
+                                                            <img src="https://docs.microsoft.com/media/common/i_web-apps.svg" alt="iOS logo">
+iOS</a>
+                                                    </li>
+                                                    </ul></td><td style="border-top-color:transparent!important;padding-left:0;"><ul class="noBullet">
+                                                    <li>
+                                                        <a class="barLink" href="~/mac/index.yml">
+                                                            <img src="https://docs.microsoft.com/media/common/i_xplat-code.svg" alt="Mac">
+Mac</a>
+                                                    </li>
+                                                </ul></td></tr></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="#xamarin-forms">Xamarin.Forms</a>
+                <ul id="xamarin-forms">
+                    <li>
+                        <a href="#XamarinForms"> </a>
+                        <ul id="XamarinForms" class="cardsC">
+                            <!--li>
+                                <a href="~/xamarin-forms/get-started/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Get Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
+                                                        <img alt="Getting Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Bien démarrer</h3>
-                                                    <p>Didacticiels pour vous aider à bien démarrer avec Xamarin.Forms. Vérifiez que tout est installé correctement et générez votre première application.</p>
+                                                    <h3>Getting Started</h3>
+                                                    <p>Tutorials to get you up and running with Xamarin.Forms. Make sure everything is installed correctly, and build your first app.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                            </li>
+                            </li-->
                             <li>
                                 <a href="~/xamarin-forms/app-fundamentals/index.md">
                                     <div class="cardSize">
@@ -134,7 +328,7 @@ ms.locfileid: "55292105"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Interface utilisateur</h3>
-                                                    <p>Découvrez les contrôles d’interface utilisateur disponibles sur Android, iOS et Windows.</p>
+                                                    <p>Découvrez les contrôles d’interface utilisateur disponibles sur l’ensemble des plateformes prises en charge.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -180,7 +374,7 @@ ms.locfileid: "55292105"
                                 </a>
                             </li>
                             <li>
-                                <a href="~/essentials/index.md?context=xamarin/xamarin-forms">
+                                <a href="~/essentials/index.md?context=xamarin-test/xamarin-forms">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -191,7 +385,7 @@ ms.locfileid: "55292105"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>API interplateformes pour les tâches courantes, comme l’accès aux fichiers, les informations d’appareil, les fonctionnalités matérielles et plus encore.</p>
+                                                    <p>API multiplateformes pour les tâches d’application courantes.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -205,12 +399,12 @@ ms.locfileid: "55292105"
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Data & Cloud Services" src="~/media/index/xamarin-forms-data-cloud.svg?branch=master" data-linktype="external">
+                                                        <img alt="Data and Cloud Services" src="~/media/index/xamarin-forms-data-cloud.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Services de données et cloud</h3>
-                                                    <p>Stockage de données et accès aux services de cloud comme Microsoft Azure.</p>
+                                                    <p>Stockage de données et accès aux services de cloud.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -256,6 +450,44 @@ ms.locfileid: "55292105"
                                 </a>
                             </li>
                             <li>
+                                <a href="~/xamarin-forms/samples/index.yml">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Samples" src="https://docs.microsoft.com/en-us/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Exemples d’applications</h3>
+                                                    <p>Démos d’apps et de code complètes pour Xamarin.Forms, sur Windows, iOS et Android.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/user-interface/graphics/skiasharp/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="SkiaSharp Graphics in Xamarin.Forms" src="~/media/index/xamarin-graphics-skia.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Livre électronique sur le graphisme SkiaSharp</h3>
+                                                    <p>Graphisme vectoriel multiplateforme et animation avec SkiaSharp.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -293,752 +525,143 @@ ms.locfileid: "55292105"
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="~/xamarin-forms/user-interface/graphics/skiasharp/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="SkiaSharp Graphics in Xamarin.Forms" src="~/media/index/xamarin-graphics-skia.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Livre électronique sur le graphisme SkiaSharp</h3>
-                                                    <p>Graphisme vectoriel multiplateforme et animation avec SkiaSharp.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/xamarin-forms/samples/index.yml">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Samples" src="https://docs.microsoft.com/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Exemples d’applications</h3>
-                                                    <p>Démos d’apps et de code complètes pour Xamarin.Forms, sur Windows, iOS et Android.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#Android">Android</a>
-                        <ul id="Android" class="cardsC">
-                            <li>
-                                <a href="~/android/get-started/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Get Started" src="~/media/index/xamarin-android-get-started.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Bien démarrer avec Android</h3>
-                                                    <p>Didacticiels pour vous aider à bien démarrer avec Xamarin.Android. Vérifiez que tout est installé correctement et générez votre première application.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/android/app-fundamentals/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-android-fundamentals.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Notions de base des applications</h3>
-                                                    <p>Tout ce que vous devez savoir pour créer des applications, par exemple l’utilisation de fichiers, d’images, de bases de données, et bien plus encore.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/android/user-interface/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="User Interface" src="~/media/index/xamarin-android-ui.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Interface utilisateur Android</h3>
-                                                    <p>Découvrez tous les widgets d’interface utilisateur disponibles sur Android.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/android/platform/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-android-platform-features.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Fonctionnalités de la plateforme Android</h3>
-                                                    <p>Utilisez des fonctionnalités spécifiques à la plateforme ainsi que les derniers ajouts apportés à Android.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/essentials/index.md?context=xamarin/android">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Xamarin.Essentials" src="~/media/index/xamarin-essentials.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Xamarin.Essentials</h3>
-                                                    <p>API interplateformes pour les tâches courantes, comme l’accès aux fichiers, les informations d’appareil, les fonctionnalités matérielles et plus encore.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/android/data-cloud/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Data & Cloud Services" src="~/media/index/xamarin-android-data-cloud.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Services de données et cloud</h3>
-                                                    <p>Stockage de données et accès aux services de cloud.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/android/deploy-test/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Deployment and Testing" src="~/media/index/xamarin-cross-platform-deployment.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Déploiement et test</h3>
-                                                    <p>Instructions pour générer et déployer vos applications, et conseils pour les tester au préalable.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/android/internals/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Advanced Concepts and Internals" src="~/media/index/xamarin-android-internals.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Concepts avancés et éléments internes</h3>
-                                                    <p>Fonctionnement de Xamarin.Android.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/android/wear/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Android Wear" src="~/media/index/xamarin-android-wear.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Wear</h3>
-                                                    <p>Création d’applications pour Android Wear.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/android/samples/index.yml">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Samples" src="https://docs.microsoft.com/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Exemples d’applications</h3>
-                                                    <p>Exemples de téléphones et de tablettes Android pour vous aider à être opérationnel.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#iOS">iOS</a>
-                        <ul id="iOS" class="cardsC">
-                            <li>
-                                <a href="~/ios/get-started/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Get Started" src="~/media/index/xamarin-ios-get-started.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Bien démarrer avec iOS</h3>
-                                                    <p>Didacticiels pour vous aider à bien démarrer avec Xamarin.iOS. Vérifiez que tout est installé correctement et générez votre première application.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/app-fundamentals/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-ios-fundamentals.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Notions de base des applications</h3>
-                                                    <p>Tout ce que vous devez savoir pour créer des applications, par exemple l’utilisation de fichiers, d’images, de bases de données, et bien plus encore.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/user-interface/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="User Interface" src="~/media/index/xamarin-ios-ui.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Interface utilisateur iOS</h3>
-                                                    <p>Découvrez tous les contrôles UIKit disponibles sur iOS.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/platform/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-ios-features.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Fonctionnalités de la plateforme iOS</h3>
-                                                    <p>Utilisez des fonctionnalités spécifiques à la plateforme comme Face ID, ARKit et les derniers ajouts apportés à iOS.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/essentials/index.md?context=xamarin/ios">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Xamarin.Essentials" src="~/media/index/xamarin-essentials.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Xamarin.Essentials</h3>
-                                                    <p>API interplateformes pour les tâches courantes, comme l’accès aux fichiers, les informations d’appareil, les fonctionnalités matérielles et plus encore.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/data-cloud/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Data & Cloud Services" src="~/media/index/xamarin-ios-data-cloud.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Services de données et cloud</h3>
-                                                    <p>Stockage de données et accès aux services de cloud.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/deploy-test/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Deployment and Testing" src="~/media/index/xamarin-cross-platform-deployment.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Déploiement et test</h3>
-                                                    <p>Instructions pour générer et déployer vos applications, et conseils pour les tester au préalable.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/internals/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Advanced Concepts and Internals" src="~/media/index/xamarin-ios-internals.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Concepts avancés et éléments internes</h3>
-                                                    <p>Fonctionnement de Xamarin.iOS.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/watchos/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="watchOS" src="~/media/index/xamarin-ios-watchos.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>watchOS</h3>
-                                                    <p>Création d'applications pour watchOS.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/tvos/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="tvOS" src="~/media/index/xamarin-ios-tvos.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>tvOS</h3>
-                                                    <p>Création d’applications TV à l’aide de tvOS.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/ios/samples/index.yml">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Samples" src="https://docs.microsoft.com/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Exemples d’applications</h3>
-                                                    <p>Démos d’applications et de code pour iPhone, iPad, Apple Watch et Apple TV.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a data-default="true" href="#Mac">Mac</a>
-                        <ul id="Mac" class="cardsC">
-                            <li>
-                                <a href="~/mac/get-started/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Get Started" src="~/media/index/xamarin-mac-get-started.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Bien démarrer avec Mac</h3>
-                                                    <p>Didacticiels pour vous aider à bien démarrer avec Xamarin.Mac. Vérifiez que tout est installé correctement et générez votre première application.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/mac/app-fundamentals/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-mac-fundamentals.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Notions de base des applications</h3>
-                                                    <p>Tout ce que vous devez savoir pour créer des applications, par exemple l’utilisation de fichiers, d’images, de bases de données, et bien plus encore.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/mac/user-interface/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="User Interface" src="~/media/index/xamarin-mac-ui.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Interface utilisateur Mac</h3>
-                                                    <p>Découvrez tous les contrôles AppKit disponibles sur macOS.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/mac/platform/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Mac Platform Features" src="~/media/index/xamarin-mac-platform-features.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Fonctionnalités de la plateforme Mac</h3>
-                                                    <p>Utilisez des fonctionnalités spécifiques à la plateforme ainsi que les derniers ajouts apportés à macOS.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/mac/deploy-test/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Deployment and Testing" src="~/media/index/xamarin-cross-platform-deployment.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Déploiement et test</h3>
-                                                    <p>Instructions pour générer et déployer vos applications, et conseils pour les tester au préalable.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/mac/internals/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Advanced Concepts and Internals" src="~/media/index/xamarin-mac-internals.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Concepts avancés et éléments internes</h3>
-                                                    <p>Fonctionnement de Xamarin.Mac.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/mac/samples/index.yml">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Samples" src="https://docs.microsoft.com/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Exemples d’applications</h3>
-                                                    <p>Exemples d’applications macOS pour vous aider à démarrer avec le développement C# pour le poste de travail Mac.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a data-default="true" href="#Cross-Platform">Multiplateforme</a>
-                        <ul id="Cross-Platform" class="cardsC">
-                            <li>
-                                <a href="~/cross-platform/get-started/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Get Started" src="~/media/index/xamarin-cross-platform-get-started.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Bien démarrer</h3>
-                                                    <p>Apprenez à créer des applications multiplateformes pour des plateformes mobiles et de bureau à l’aide de Xamarin pour Android, iOS, macOS, UWP et bien plus encore.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/cross-platform/app-fundamentals/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Sharing Code" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Partage de code</h3>
-                                                    <p>En savoir plus sur les différentes options pour le partage de code et de bibliothèques entre Android, iOS et Windows.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/cross-platform/platform/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Language Support" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Prise en charge linguistique</h3>
-                                                    <p>Les projets Xamarin peuvent être écrits en C# et en F# et consomment des bibliothèques écrites en Visual Basic. Les modèles Razor sont également pris en charge.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/cross-platform/deploy-test/performance.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Deployment and Testing" src="https://docs.microsoft.com/media/illustrations/team-services-agile-track.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Niveau de performance et sécurité</h3>
-                                                    <p>Lignes directrices pour la performance et la sécurité des applications.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/cross-platform/deploy-test/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Deployment and Testing" src="~/media/index/xamarin-cross-platform-deployment.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Déploiement et débogage</h3>
-                                                    <p>Conseils pour le débogage et le déploiement.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/cross-platform/desktop/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Deployment and Testing" src="~/media/index/xamarin-cross-platform-desktop.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Développeurs de bureau</h3>
-                                                    <p>Conseils pour les développeurs de bureau .NET intéressés par le développement d’applications mobiles.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/cross-platform/samples/index.yml">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Samples" src="https://docs.microsoft.com/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Exemples</h3>
-                                                    <p>Applications prédéfinies multiplateformes pour tester Xamarin.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#graphics-games">Graphisme et jeux</a>
-                <ul id="graphics-games">
+                <a href="#tools">Outils</a>
+                <ul id="tools">
                     <li>
                         <a href="#architecture1"></a>
                         <ul id="architecture1" class="cardsC">
                             <li>
-                                <a href="~/xamarin-forms/user-interface/graphics/skiasharp/index.md">
+                                <a href="/visualstudio/ide/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-graphics-skia.svg?branch=master" alt="SkiaSharp" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>SkiaSharp</h3>
-                                                    <p>Graphismes 2D multiplateformes pour les plateformes mobiles et de bureau.</p>
+                                                    <h3>Visual Studio 2017</h3>
+                                                    <p>En savoir plus sur le développement avec Visual Studio 2017.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/visualstudio/mac/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Visual Studio pour Mac</h3>
+                                                    <p>En savoir plus sur le développement .NET sur macOS avec Visual Studio pour Mac.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/tools/ios-simulator/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="~/media/index/xamarin-tools-windows-simulator.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>iOS Simulator pour Windows</h3>
+                                                    <p>Interagissez avec iOS Simulator sur Windows à l’aide de Visual Studio.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!--li>
+                                <a href="~/tools/inspector/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="~/media/index/xamarin-tools-inspector.svg?branch=master" alt="Xamarin Inspector" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Xamarin Inspector</h3>
+                                                    <p>Understand and debug your user interface.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li-->
+                            <li>
+                                <a href="~/tools/profiler/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="~/media/index/xamarin-tools-profiler.svg?branch=master" alt="Xamarin Profiler" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Xamarin Profiler</h3>
+                                                    <p>Identifiez et résolvez les problèmes de performances.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/tools/dotnet-embedding/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="~/media/index/xamarin-cross-platform-dotnet-embedding.svg" alt=".NET Embedding" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Incorporation .NET</h3>
+                                                    <p>Permet à d’autres langages de programmation d’utiliser votre code .NET existant.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/tools/ci/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="https://docs.microsoft.com/en-us/media/illustrations/teams-fast-track.svg" alt="Continuous Integration" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Intégration continue</h3>
+                                                    <p>Guide pratique pour incorporer des projets Xamarin dans un pipeline de création et d’intégration continu.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1106,129 +729,25 @@ ms.locfileid: "55292105"
                     </li>
                 </ul>
             </li>
+        </ul>
+    </div>
+    <div class="container centered pageFooter">
+        <h2>Rester en contact avec nous</h2>
+        <ul class="links">
+           <li>
+                <a href="http://blog.xamarin.com/"> Blog </a>
+            </li>
             <li>
-                <a href="#tools">Outils</a>
-                <ul id="tools">
-                    <li>
-                        <a href="#architecture1"></a>
-                        <ul id="architecture1" class="cardsC">
-                            <li>
-                                <a href="~/tools/ios-simulator/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-windows-simulator.svg?branch=master" alt="Remoted iOS Simulator for Windows" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Remoted iOS Simulator pour Windows</h3>
-                                                    <p>Interagissez avec iOS Simulator sur Windows à l’aide de Visual Studio.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/tools/inspector/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-inspector.svg?branch=master" alt="Xamarin Inspector" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Xamarin Inspector</h3>
-                                                    <p>Découvrez et déboguez votre interface utilisateur.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/tools/profiler/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-profiler.svg?branch=master" alt="Xamarin Profiler" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Xamarin Profiler</h3>
-                                                    <p>Identifiez et résolvez les problèmes de performances.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/tools/workbooks/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg" alt="Xamarin Workbooks" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Xamarin Workbooks</h3>
-                                                    <p>Découvrez la plateforme Xamarin et C# de manière interactive.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/tools/dotnet-embedding/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-cross-platform-dotnet-embedding.svg" alt=".NET Embedding" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Incorporation .NET</h3>
-                                                    <p>Permet à d’autres langages de programmation d’utiliser votre code .NET existant.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/tools/ci/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="Continuous Integration" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Intégration continue</h3>
-                                                    <p>Guide pratique pour incorporer des projets Xamarin dans un pipeline de création et d’intégration continu.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <a href="https://forums.xamarin.com/"> Forums </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/xamarinhq"> Twitter </a>
+            </li>
+            <li>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin"> Stack Overflow </a>
+            </li>
+            <li>
+                <a href="https://dotnet.microsoft.com/platform/community"> Communauté des développeurs </a>
             </li>
         </ul>
     </div>

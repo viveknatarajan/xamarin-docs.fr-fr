@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Didacticiel Bases de données locales Xamarin.Forms
+metadata:
+  title: Didacticiel Bases de données locales Xamarin.Forms
+  description: Apprenez à utiliser le package NuGet SQLite.NET pour incorporer des opérations de base de données dans une application Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 12/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: b4cd264d11df081fb190044000e73cf012092667
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198565"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Ajouter SQLite.NET
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/add-sqlite.md)]
+- title: Créer des classes d’accès aux données
+  durationInMinutes: 5
+  content: >
+    [!INCLUDE [](includes/create-data-access-classes.md)]
+- title: Utiliser des classes d’accès aux données
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/consume-data-access-classes.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'
