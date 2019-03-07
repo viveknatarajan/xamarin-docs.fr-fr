@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056957"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557280"
 ---
 # <a name="xamarinforms-binding-mode"></a>Mode de liaison Xamarin.Forms
 
@@ -101,10 +101,7 @@ Le raisonnement est qu’une liaison sur la propriété `SelectedItem` doit abou
 
 ### <a name="one-time-bindings"></a>Liaisons à usage unique
 
-Plusieurs propriétés disposent du mode de liaison par défaut `OneTime`. Ces équivalents sont :
-
-- Propriété `IsTextPredictionEnabled` de `Entry`
-- Propriétés `Text`, `BackgroundColor` et `Style` de `Span`.
+Plusieurs propriétés ont le mode de liaison par défaut `OneTime`, y compris la propriété `IsTextPredictionEnabled` de `Entry`.
 
 Les propriétés cibles disposant du mode de liaison `OneTime` sont mises à jour uniquement lorsque le contexte de liaison change. Pour les liaisons sur ces propriétés cibles, cela simplifie l’infrastructure de liaison, car il n’est pas nécessaire de surveiller les modifications des propriétés sources.
 
