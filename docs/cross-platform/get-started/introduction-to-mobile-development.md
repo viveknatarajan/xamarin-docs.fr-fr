@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 5470a70570a431c1adc3053d9f8f389cec31cf85
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 0062c5da4db206a9fe4dc0030a104ec034ab97f1
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292075"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197158"
 ---
 # <a name="introduction-to-mobile-development"></a>Introduction au développement mobile
 
@@ -83,11 +83,11 @@ Dans la prochaine étape, vous allez commencer à créer une application en suiv
 
 ![](introduction-to-mobile-development-images/android.png "Hello, Android")
 
-* [**Bien démarrer avec Xamarin.Forms**](~/get-started/index.md)
+* [**Bien démarrer avec Xamarin.Forms**](~/get-started/index.yml)
 
 ## <a name="summary"></a>Récapitulatif
 
-Ce document vous a présenté la plateforme Xamarin. Les choses sérieuses commenceront lorsque vous aurez créé et configuré votre première application. Pour commencer, lisez les guides [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) et [Bien démarrer avec Xamarin.Forms](~/get-started/index.md).
+Ce document vous a présenté la plateforme Xamarin. Les choses sérieuses commenceront lorsque vous aurez créé et configuré votre première application. Pour commencer, lisez les guides [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) et [Bien démarrer avec Xamarin.Forms](~/get-started/index.yml).
 
 ## <a name="related-links"></a>Liens associés
 

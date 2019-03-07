@@ -1,22 +1,17 @@
 ---
 title: Bien démarrer avec Xamarin
-description: Ce document fournit des liens vers des guides qui décrivent comment bien démarrer avec le développement Xamarin. Le contenu lié explique comment générer une première application, fournit une introduction générale au développement mobile et examine les offres de formation avec Xamarin University.
+description: 'Ce document fournit des liens vers des guides qui décrivent comment bien démarrer avec le développement Xamarin. Le contenu lié explique comment générer une première application, fournit une introduction générale au développement mobile et examine les offres de formation avec Xamarin University.'
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 1b98dcb175c7e28e0ae101bea172aa2a98d3502e
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292166"
 ---
-# <a name="get-started-with-xamarin"></a>Bien démarrer avec Xamarin
 
-Avant de commencer, consultez la [configuration requise](requirements.md) et les [instructions d’installation](installation/index.md) pour être sûr que tout est prêt.
+# <a name="building-mobile-apps"></a>Création d’applications mobiles
+
+Avant de commencer, consultez la [configuration requise](requirements.md) et les [instructions d’installation](~/get-started/installation/index.md) pour être sûr que tout est prêt.
 
 ## <a name="build-your-first-app"></a>Créer votre première application
 
@@ -57,4 +52,4 @@ Découvrez Visual Studio pour Mac, l’environnement de développement intégré
 ## <a name="related-links"></a>Liens associés
 
 - [Configuration système requise](requirements.md)
-- [Instructions d'installation](~/cross-platform/get-started/installation/index.md)
+- [Instructions d'installation](~/get-started/installation/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 396c6a19a86c3c8f5429d5da1251d69fc8d57309
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5f2617272cfdc84fa2b835ce44919d2599a1dce6
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114078"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197197"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduction à Xamarin.iOS pour Visual Studio
 
@@ -35,12 +35,12 @@ Il existe quelques exigences à respecter lors du développement pour iOS dans V
 Un certain nombre d’options de configuration sont disponibles pour vous permettre de déterminer laquelle fonctionne le mieux pour vos besoins de développement. Elles sont notamment les suivantes :
 
 -  Utilisez un Mac comme ordinateur de développement principal et exécutez une machine virtuelle Windows sur laquelle Visual Studio est installé. Nous recommandons d’utiliser un logiciel de machine virtuelle comme [Parallels](http://www.parallels.com/products/desktop/) ou [VMWare](http://www.vmware.com/products/fusion/).
--  Utilisez un Mac exactement comme un hôte de build. Dans ce scénario, il serait connecté au même réseau qu’un ordinateur Windows sur lequel les outils [nécessaires](~/cross-platform/get-started/installation/windows.md#installation) sont installés.
+-  Utilisez un Mac exactement comme un hôte de build. Dans ce scénario, il serait connecté au même réseau qu’un ordinateur Windows sur lequel les outils [nécessaires](~/get-started/installation/windows.md#installation) sont installés.
 
 Dans les deux cas, vous devez effectuer les étapes suivantes :
 
 - [Installer Visual Studio pour Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Installer les outils Xamarin sur Windows](~/cross-platform/get-started/installation/windows.md)
+- [Installer les outils Xamarin sur Windows](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Connexion au Mac
 
