@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
-ms.openlocfilehash: ce1ba235a309e2388bd5eea7d70a1d72852fc615
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/26/2019
+ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831857"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557036"
 ---
 # <a name="xamarinforms-label"></a>Étiquette de Xamarin.Forms
 
@@ -157,10 +157,13 @@ Le `FormattedText` propriété est de type [ `FormattedString` ](xref:Xamarin.Fo
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – la taille de la police du texte dans l’étendue.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – la couleur du texte dans l’étendue. Cette propriété est obsolète et a été remplacée par le `TextColor` propriété.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -le multiplicateur à appliquer à la hauteur de ligne par défaut de l’étendue. Pour plus d’informations, consultez [hauteur de ligne](#line-height).
-- [`Style`](xref:Xamarin.Forms.Span.Style) – le style à appliquer à l’étendue.
+- [`Text`](xref:Xamarin.Forms.Span.Text)  – le style à appliquer à l’étendue.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – le texte de l’étendue.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – la couleur du texte dans l’étendue.
 - `TextDecorations` -les ornements à appliquer au texte dans l’étendue. Pour plus d’informations, consultez [ornements de texte](#text-decorations).
+
+> [!NOTE]
+> Le [ `BackgroundColor` ](xref:Xamarin.Forms.Span.BackgroundColor), [ `Text` ](xref:Xamarin.Forms.Span.Text), et [ `Text` ](xref:Xamarin.Forms.Span.Text) propriétés pouvant être liées ont un mode de liaison par défaut de [ `OneWay` ](xref:Xamarin.Forms.BindingMode). Pour plus d’informations sur ce mode de liaison, consultez [le Mode de liaison par défaut](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) dans le [Mode de liaison](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) guide.
 
 En outre, le [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) propriété peut être utilisée pour définir une collection de modules de reconnaissance de mouvement qui répondront aux mouvements sur le [ `Span` ](xref:Xamarin.Forms.Span).
 

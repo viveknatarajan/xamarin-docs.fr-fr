@@ -1,19 +1,14 @@
 ---
 title: Texte dans Xamarin.Forms
-description: Xamarin.Forms a trois vues principales pour travailler avec du texte, et cet article explique comment les utiliser pour entrer et afficher du texte dans les applications Xamarin.Forms.
+description: 'Xamarin.Forms a trois vues principales pour travailler avec du texte, et cet article explique comment les utiliser pour entrer et afficher du texte dans les applications Xamarin.Forms.'
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 0563921a59bc698e2360a06b482c7f4994e56f6e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060010"
 ---
+
 # <a name="text-in-xamarinforms"></a>Texte dans Xamarin.Forms
 
 [![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
@@ -66,7 +61,7 @@ Consultez le [éditeur](editor.md) article pour plus d’informations.
 
 ## <a name="fontsfontsmd"></a>[Polices](fonts.md)
 
-Le `Label` contrôle prend en charge les paramètres de police différente à l’aide de polices intégrés sur chaque plateforme ou des polices personnalisées inclus avec votre application. Consultez le [polices](fonts.md) article pour plus d’informations.
+De nombreux contrôles prennent en charge les paramètres de police différente à l’aide de polices intégrés sur chaque plateforme, ou des polices personnalisées inclus avec votre application. Consultez le [polices](fonts.md) article pour plus d’informations.
 
 <a name="Styles" />
 

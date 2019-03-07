@@ -6,7 +6,7 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2018
+ms.date: 02/22/2019
 ---
 
 # <a name="ios-platform-features"></a>Fonctionnalités de la plateforme iOS
@@ -25,8 +25,11 @@ Les fonctionnalités spécifiques à la plateforme suivantes sont fournies pour 
 
 Les fonctionnalités spécifiques à la plateforme suivantes sont fournies pour les vues Xamarin.Forms sur iOS :
 
+- Définition de la [ `Cell` ](xref:Xamarin.Forms.Cell) couleur d’arrière-plan. Pour plus d’informations, consultez [couleur d’arrière-plan sur iOS](cell-background-color.md).
 - S’assurer qu’entrée texte s’adapte à un [ `Entry` ](xref:Xamarin.Forms.Entry) en ajustant la taille de police. Pour plus d’informations, consultez [taille de police d’entrée sur iOS](entry-font-size.md).
 - Définir la couleur du curseur dans un [ `Entry` ](xref:Xamarin.Forms.Entry). Pour plus d’informations, consultez [entrée curseur couleur sur iOS](entry-cursor-color.md).
+- Contrôle si [ `ListView` ](xref:Xamarin.Forms.ListView) cellules d’en-tête flottant pendant le défilement. Pour plus d’informations, consultez [Style d’en-tête de groupe ListView sur iOS](listview-group-header-style.md).
+- Contrôle si les animations de ligne sont désactivées lorsque le [ `ListView` ](xref:Xamarin.Forms.ListView) collection items est en cours de mise à jour. Pour plus d’informations, consultez [ListView ligne Animations sur iOS](listview-row-animations.md).
 - Définir le style du séparateur sur un [ `ListView` ](xref:Xamarin.Forms.ListView). Pour plus d’informations, consultez [Style de séparateur de ListView sur iOS](listview-separator-style.md).
 - Contrôle si la sélection d’éléments se produit dans un [ `Picker` ](xref:Xamarin.Forms.Picker). Pour plus d’informations, consultez [sélecteur d’élément de sélection sur iOS](picker-selection.md).
 - L’activation de la [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propriété à définir en appuyant sur une position sur le [ `Slider` ](xref:Xamarin.Forms.Slider) barre, plutôt que d’avoir à faire glisser le `Slider` thumb. Pour plus d’informations, consultez [curseur Thumb appuyez sur iOS](slider-thumb.md).

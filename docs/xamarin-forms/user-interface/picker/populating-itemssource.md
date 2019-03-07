@@ -6,13 +6,13 @@ ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
-ms.openlocfilehash: 8e05a5f1c52183f29f22cbcd9655c26dc934e7d8
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 02/26/2019
+ms.openlocfilehash: 2c7daca80a207d0c060fc3a867b1eda03dd65258
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207846"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557075"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Définition de propriété de ItemsSource d’un sélecteur
 
@@ -27,7 +27,9 @@ Xamarin.Forms 2.3.4 a amélioré la [ `Picker` ](xref:Xamarin.Forms.Picker) vue 
 Un [ `Picker` ](xref:Xamarin.Forms.Picker) peut être rempli de données en définissant son [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propriété un `IList` collection. Chaque élément dans la collection doit être d’ou dérivé, tapez `object`. Éléments peuvent être ajoutés dans XAML en initialisant le `ItemsSource` propriété à partir d’un tableau d’éléments :
 
 ```xaml
-<Picker x:Name="picker" Title="Select a monkey">
+<Picker x:Name="picker"
+        Title="Select a monkey"
+        TitleColor="Red">
   <Picker.ItemsSource>
     <x:Array Type="{x:Type x:String}">
       <x:String>Baboon</x:String>
@@ -57,7 +59,7 @@ monkeyList.Add("Golden Lion Tamarin");
 monkeyList.Add("Howler Monkey");
 monkeyList.Add("Japanese Macaque");
 
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.ItemsSource = monkeyList;
 ```
 
@@ -101,18 +103,21 @@ Cette méthode obtient le [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.Selected
 > [!NOTE]
 > Un [ `Picker` ](xref:Xamarin.Forms.Picker) puisse être initialisé pour afficher un élément spécifique en définissant le [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) ou [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) propriétés. Toutefois, ces propriétés doivent être définies après l’initialisation de la [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) collection.
 
-## <a name="populating-a-picker-with-data-using-data-binding"></a>Remplissage d’un sélecteur de données à l’aide de la liaison de données
+## <a name="populating-a-picker-with-data-using-data-binding"></a>Remplir un sélecteur de données à l’aide de la liaison de données
 
 Un [ `Picker` ](xref:Xamarin.Forms.Picker) peut être également rempli de données à l’aide de la liaison de données à lier son [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propriété un `IList` collection. Dans XAML, cela est possible avec la [ `Binding` ](xref:Xamarin.Forms.Xaml.BindingExtension) extension de balisage :
 
 ```xaml
-<Picker Title="Select a monkey" ItemsSource="{Binding Monkeys}" ItemDisplayBinding="{Binding Name}" />
+<Picker Title="Select a monkey"
+        TitleColor="Red"
+        ItemsSource="{Binding Monkeys}"
+        ItemDisplayBinding="{Binding Name}" />
 ```
 
 Le code c# équivalent est indiqué ci-dessous :
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.ItemDisplayBinding = new Binding("Name");
 ```
@@ -137,6 +142,7 @@ Liaison de données peut être utilisée pour définir un objet la [ `SelectedIt
 
 ```xaml
 <Picker Title="Select a monkey"
+        TitleColor="Red"
         ItemsSource="{Binding Monkeys}"
         ItemDisplayBinding="{Binding Name}"
         SelectedItem="{Binding SelectedMonkey}" />
@@ -149,7 +155,7 @@ Liaison de données peut être utilisée pour définir un objet la [ `SelectedIt
 Le code c# équivalent est indiqué ci-dessous :
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.SetBinding(Picker.SelectedItemProperty, "SelectedMonkey");
 picker.ItemDisplayBinding = new Binding("Name");
@@ -174,11 +180,7 @@ Le [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) lie les données d
 > [!NOTE]
 > Notez que le [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) et [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) deux propriétés prennent en charge des liaisons bidirectionnelles par défaut.
 
-## <a name="summary"></a>Récapitulatif
-
-Le [ `Picker` ](xref:Xamarin.Forms.Picker) vue est un contrôle pour la sélection d’un élément de texte à partir d’une liste de données. Cet article a expliqué comment remplir un `Picker` avec des données en définissant le [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propriété et comment répondre à la sélection d’éléments par l’utilisateur. Cette approche, ce qui a été introduite dans Xamarin.Forms 2.3.4, est l’approche recommandée pour interagir avec un `Picker`.
-
-## <a name="related-links"></a>Liens associés
+## <a name="related-links"></a>Liens connexes
 
 - [Démonstration de sélecteur (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 - [Monkey application (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)

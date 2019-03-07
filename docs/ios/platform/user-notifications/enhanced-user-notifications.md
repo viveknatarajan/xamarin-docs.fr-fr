@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: bfbb8c2b189defeb6efb07388ea34425c239c061
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: 0f77f9014cf7bfad510927f0f12a3e70b387036f
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459887"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557319"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Améliorations des Notifications utilisateur dans Xamarin.iOS
 
@@ -274,7 +274,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>Gestion des Notifications de l’application de premier plan
 
-Nouveau à iOS 10, une application peut gérer les Notifications différemment lorsqu’il est au premier plan et une Notification est déclenchée. En fournissant un `UNUserNotificationCenterDelegate` et l’implémentation de la `UserNotificationCenter` (méthode), l’application peut prendre en charge la responsabilité pour l’affichage de la Notification. Exemple :
+Nouveau à iOS 10, une application peut gérer les Notifications différemment lorsqu’il est au premier plan et une Notification est déclenchée. En fournissant un `UNUserNotificationCenterDelegate` et l’implémentation de la `WillPresentNotification` (méthode), l’application peut prendre en charge la responsabilité pour l’affichage de la Notification. Exemple :
 
 ```csharp
 using System;

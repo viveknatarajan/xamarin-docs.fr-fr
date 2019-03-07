@@ -6,13 +6,13 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
-ms.openlocfilehash: 4011863553935052c230def403f4ebc281c51d92
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/26/2018
+ms.openlocfilehash: ed49c1d11e30d19b2dc60066c3c35568ade43198
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831870"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557101"
 ---
 # <a name="xamarinforms-editor"></a>Éditeur de Xamarin.Forms
 
@@ -58,6 +58,22 @@ Le [ `Editor` ](xref:Xamarin.Forms.Editor) peut être définie pour afficher le 
 ```csharp
 var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
 ```
+
+### <a name="preventing-text-entry"></a>Empêche l’entrée de texte
+
+Les utilisateurs peuvent être évitées de modifier le texte dans un [ `Editor` ](xref:Xamarin.Forms.Editor) en définissant le `IsReadOnly` propriété, qui a comme valeur par défaut de `false`, à `true`:
+
+```xaml
+<Editor Text="This is a read-only Editor"
+        IsReadOnly="true" />
+```
+
+```csharp
+var editor= new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
+```
+
+> [!NOTE]
+> Le `IsReadonly` propriété ne modifie pas l’apparence visuelle d’un [ `Editor` ](xref:Xamarin.Forms.Editor), contrairement à la `IsEnabled` qui modifie également l’apparence visuelle de le `Editor` au gris, puis.
 
 ### <a name="limiting-input-length"></a>Limiter la longueur d’entrée
 

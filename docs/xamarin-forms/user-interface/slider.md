@@ -6,13 +6,13 @@ ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: ac5ad85f7bdd08b0d071e7c333c959e94dcbc53f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 02/27/2019
+ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057485"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557306"
 ---
 # <a name="xamarinforms-slider"></a>Curseur de Xamarin.Forms
 
@@ -38,6 +38,8 @@ Le `Slider` force le `Value` propriété afin qu’il soit entre `Minimum` et `M
 `Slider` définit un [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) événement est déclenché quand le `Value` modifications, soit par le biais de manipulation d’utilisateur le `Slider` ou lorsque le programme définit le `Value` propriété directement. Un `ValueChanged` événement est également déclenché quand le `Value` propriété est convertie comme décrit dans le paragraphe précédent.
 
 Le [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) objet qui accompagne le `ValueChanged` événement a deux propriétés, tous deux de type `double`: [ `OldValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) et [ `NewValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). Au moment où l’événement est déclenché, la valeur de `NewValue` est identique à la `Value` propriété de la `Slider` objet.
+
+`Slider` définit également `DragStarted` et `DragCompleted` événements, qui sont déclenchés au début et à la fin de l’action glisser. Contrairement à la [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) événement, le `DragStarted` et `DragCompleted` les événements sont déclenchés uniquement via la manipulation d’utilisateur de la `Slider`. Lorsque le `DragStarted` événement est déclenché, le `DragStartedCommand`, de type `ICommand`, est exécutée. De même, lorsque le `DragCompleted` événement est déclenché, le `DragCompletedCommand`, de type `ICommand`, est exécutée.
 
 > [!WARNING]
 > N’utilisez pas les options de disposition horizontale sans contrainte de `Center`, `Start`, ou `End` avec `Slider`. Sur Android et UWP, le `Slider` est réduite à une barre de longueur nulle et sur iOS, la barre est très court. Conservez la valeur par défaut `HorizontalOptions` paramètre `Fill`et n’utilisez pas une largeur de `Auto` lors du placement de `Slider` dans un `Grid` mise en page.
@@ -203,7 +205,7 @@ Le **des liaisons de curseur base** page montre comment écrire un programme pre
 </ContentPage>
 ```
 
-Le `Rotation` propriété du premier `Label` est lié à la `Value` propriété de la `Slider`, comme est le `Text` propriété du deuxième `Label` avec un `StringFormat` spécification. Le **des liaisons de curseur base** page fonctions un peu différemment dans les deux pages précédentes : lorsque la page s’affiche tout d’abord, le second `Label` affiche la chaîne de texte avec la valeur. Il s’agit d’un avantage de l’utilisation de la liaison de données. Pour afficher un texte sans liaison de données, vous devez initialiser spécifiquement le `Text` propriété de la `Label` ou simuler le déclenchement de le `ValueChanged` événement en appelant le Gestionnaire d’événements à partir du constructeur de classe.
+Le `Rotation` propriété du premier `Label` est lié à la `Value` propriété de la `Slider`, comme est le `Text` propriété du deuxième `Label` avec un `StringFormat` spécification. Le **des liaisons de curseur base** page fonctions un peu différemment dans les deux pages précédentes : Lorsque la page s’affiche tout d’abord, le second `Label` affiche la chaîne de texte avec la valeur. Il s’agit d’un avantage de l’utilisation de la liaison de données. Pour afficher un texte sans liaison de données, vous devez initialiser spécifiquement le `Text` propriété de la `Label` ou simuler le déclenchement de le `ValueChanged` événement en appelant le Gestionnaire d’événements à partir du constructeur de classe.
 
 <a name="precautions" />
 
