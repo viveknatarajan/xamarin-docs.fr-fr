@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: bc404986a83d0150c490486c20f780bf4e7f5a9e
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: c9be74bcc6e5d149856e06c98d3bef9a841d4bab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557202"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667306"
 ---
 # <a name="xamarinforms-entry"></a>Entrée de Xamarin.Forms
 
@@ -321,6 +321,9 @@ Entrée expose deux événements :
 
 - [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; déclenché lorsque le texte modifié dans l’entrée. Fournit le texte avant et après la modification.
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; déclenché lorsque l’utilisateur s’est terminée entrée en appuyant sur la touche Retour sur le clavier.
+
+> [!NOTE]
+> Le [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) (classe), à partir de laquelle [ `Entry` ](xref:Xamarin.Forms.Entry) hérite, a également [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) et [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)événements.
 
 ### <a name="completed"></a>Terminé
 
