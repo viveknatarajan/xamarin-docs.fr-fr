@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 7056f7beb623bee32c767a3f2827efa6eb2a6136
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 87015163eca9fdb2fb8cee35e74d5031314fd42e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118797"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670821"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Utilisation des listes de propriétés dans Xamarin.iOS
 
@@ -110,7 +110,7 @@ Le panneau avancées contrôle les types de document et les schémas d’URL qui
 
 Pour les applications qui prennent en charge l’ouverture des types de fichiers spécifiques, iOS fournit le `CFBundleDocumentTypes` clé. Si nous voulons que notre application pour prendre en charge certains types de fichiers connus - par exemple un fichier PDF - nous serait ajouter la valeur PDF à la clé. Cette section fournit un moyen pratique d’entrer les données qui est stocké dans le `CFBundleDocumentTypes` clé dans le `Info.plist` fichier.
 
-Reportez-vous à la documentation sur [enregistrer le fichier de Types de votre application prend en charge](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) pour plus d’informations sur la façon de configurer ces valeurs.
+Reportez-vous à la documentation sur [enregistrer le fichier de Types de votre application prend en charge](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) pour plus d’informations sur la façon de configurer ces valeurs.
 
 ## <a name="utis"></a>UTI
 
@@ -146,7 +146,7 @@ Visual Studio pour Mac détecte également le Type de propriété, comme indiqu�
 
  [![](property-lists-images/image33.png "Les types de propriétés disponibles")](property-lists-images/image33.png#lightbox)
 
-Passez en revue d’Apple [ressources connexes d’application](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) des liens pour plus d’informations sur les propriétés facultatives.
+Passez en revue d’Apple [ressources connexes d’application](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) des liens pour plus d’informations sur les propriétés facultatives.
 
  <a name="Entitlements" />
 
@@ -158,7 +158,7 @@ Cet article a montré à l’aide les éditeurs .plist graphique et Avancé pour
 ## <a name="related-links"></a>Liens associés
 
 - [IDE](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide)
-- [Ressources liées à l’application](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
-- [Inscrit le fichier de Types de votre application prend en charge](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
+- [Ressources liées à l’application](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
+- [Inscrit le fichier de Types de votre application prend en charge](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
 - [Implémentation de schémas d’URL personnalisée](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 - [Référence de Format de catalogue Asset](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/index.html#//apple_ref/doc/uid/TP40015170-CH18-SW1)

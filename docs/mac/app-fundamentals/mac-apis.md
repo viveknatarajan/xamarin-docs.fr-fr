@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/02/2017
-ms.openlocfilehash: 209ce2b5fb2fbb357f23e6ccc9bb849fbfedc81d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c387bbead1ac56d7f4c4c05a79c430302e50aec1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115651"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668281"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>macOS API pour les développeurs Xamarin.Mac
 
@@ -57,7 +57,7 @@ Maintenant que vous avez trouvé le sélecteur d’Objective-C que vous devez ap
 
     - `NSTableView x;`
     - `x.` [ctrl + espace si la liste n’apparaît pas).
-    - `CanDrag` [Entrée]
+    - `CanDrag` [enter]
     - Avec le bouton droit de la méthode, atteindre la déclaration pour ouvrir le navigateur de l’Assembly dans lequel vous pouvez comparer la `Export` d’attribut pour le sélecteur en question
 
 2. Rechercher la liaison de la classe entière. Étant donné que nous savons qu’il est une instance de `NSTableView` vous pouvez taper :
@@ -68,7 +68,7 @@ Maintenant que vous avez trouvé le sélecteur d’Objective-C que vous devez ap
 
 3. Vous pouvez utiliser la [documentation en ligne API Xamarin.Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
 
-4. Miguel fournit une vue de « Rosetta Pierre » des APIs Xamarin.Mac [ici](http://tirania.org/tmp/rosetta.html) que vous pouvez rechercher via une API donnée. Si votre API n’est pas AppKit ou macOS spécifique, vous pouvez le trouver là.
+4. Miguel fournit une vue de « Rosetta Pierre » des APIs Xamarin.Mac [ici](https://tirania.org/tmp/rosetta.html) que vous pouvez rechercher via une API donnée. Si votre API n’est pas AppKit ou macOS spécifique, vous pouvez le trouver là.
 
 <!--
 Note: In some cases, the assembly browser can hit a bug where it will open but not jump to the right definition. Keep that tab open, switch back to your source code and try again.

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: e5a5e44a61d352b5de05564ebb7192d21ed83dfa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528804"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668892"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notifications à distance avec Google Cloud Messaging
 
@@ -617,7 +617,7 @@ GCM, transfère à son tour, ce message à votre application cliente. Commençon
 
 ### <a name="try-it"></a>Essayez !
 
-Nous sommes maintenant prêts à tester notre application client. Si vous utilisez un émulateur ou si votre appareil auprès de GCM communique via le Wi-Fi, vous devez ouvrir les ports TCP suivants sur votre pare-feu pour les messages GCM obtenir à l’aide : 5228, 5229 et 5230.
+Nous sommes maintenant prêts à tester notre application client. Si vous utilisez un émulateur ou si votre périphérique communique avec GCM par Wi-Fi, vous devez ouvrir les ports TCP suivants sur votre pare-feu pour les messages GCM obtenir à l’aide : 5228, 5229 et 5230.
 
 Démarrez votre application cliente et observez la fenêtre Sortie. Après le `RegistrationIntentService` reçoit correctement l’inscription d’une jeton de GCM, la fenêtre de sortie doit afficher le jeton avec la sortie du journal qui ressemble à ce qui suit :
 
@@ -657,7 +657,7 @@ Lorsque vous ouvrez la barre d’état de notification pour afficher les notific
 
 Félicitations, votre application a reçu sa première notification à distance.
 
-Notez que GCM les messages seront ne sont plus reçus si l’application est arrêtée de force. Pour reprendre les notifications après un arrêt forcé, l’application doit être redémarrée manuellement. Pour plus d’informations sur cette stratégie Android, consultez [lancer des contrôles sur les applications arrêtées](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) et cela [post de dépassement de capacité de pile](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
+Notez que GCM les messages seront ne sont plus reçus si l’application est arrêtée de force. Pour reprendre les notifications après un arrêt forcé, l’application doit être redémarrée manuellement. Pour plus d’informations sur cette stratégie Android, consultez [lancer des contrôles sur les applications arrêtées](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) et cela [post de dépassement de capacité de pile](https://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
  
 ## <a name="summary"></a>Récapitulatif

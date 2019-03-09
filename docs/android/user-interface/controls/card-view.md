@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 019d89261687d1139ebced9400afbdf5eaf7a128
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109196"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670647"
 ---
 # <a name="cardview"></a>CardView
 
@@ -29,7 +29,7 @@ Ce guide explique comment ajouter la `CardView` projet de package pour votre Xam
 
 <a name="requirements" />
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce qui suit est requis pour utiliser la nouvelle Android 5.0 et ultérieures fonctionnalités (y compris `CardView`) dans les applications basées sur Xamarin :
 
@@ -37,7 +37,7 @@ Ce qui suit est requis pour utiliser la nouvelle Android 5.0 et ultérieures fon
 
 -  **Kit de développement logiciel Android** &ndash; Android 5.0 (API 21) ou version ultérieure doit être installé via le gestionnaire Android SDK.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 peut être utilisé si vous êtes spécifiquement niveau d’API ciblé 23 et versions antérieur. JDK 1.8 est disponible à partir de [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+-  **Java JDK 1.8** &ndash; JDK 1.7 peut être utilisé si vous êtes spécifiquement niveau d’API ciblé 23 et versions antérieur. JDK 1.8 est disponible à partir de [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Votre application doit également inclure le `Xamarin.Android.Support.v7.CardView` package. Pour ajouter le `Xamarin.Android.Support.v7.CardView` package dans Visual Studio pour Mac :
 
@@ -56,7 +56,7 @@ Pour ajouter le `Xamarin.Android.Support.v7.CardView` package dans Visual Studio
 3. Lorsque **bibliothèque de prise en charge de Xamarin v7 CardView** s’affiche, cliquez sur **installer**.
 
 Pour savoir comment configurer un projet d’application Android 5.0, consultez [paramètre configurer un projet Android 5.0](~/android/platform/lollipop.md).
-Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas :, y compris un NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas : Inclusion d’un package NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 
 ## <a name="introducing-cardview"></a>Présentation de CardView

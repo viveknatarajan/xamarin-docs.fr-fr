@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 78f9aa47cce2fe0059bd7f4d4ff637d14fb8c669
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 68c2ae6eace2669d2ea6c77d72f4476d767c0a7d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112518"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672441"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitâche pour iPad dans Xamarin.iOS
 
@@ -197,7 +197,7 @@ Si cette application est exécutée sur un iPad avec un clavier matériel connec
 
 [![](multitasking-images/keyboard03.png "La fenêtre contextuelle des raccourcis clavier")](multitasking-images/keyboard03.png#lightbox)
 
-Consultez l’exemple [multi-tâches application](http://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) pour un exemple d’implémentation.
+Consultez l’exemple [multi-tâches application](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) pour un exemple d’implémentation.
 
 <a name="Resource-Management-Considerations" />
 

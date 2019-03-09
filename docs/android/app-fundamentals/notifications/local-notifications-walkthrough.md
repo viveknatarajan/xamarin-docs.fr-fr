@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 7cf1dde6c65d2971cecd0a59a2e11d6c2d50ee2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e60ed6cc49921fc7b6e8e2616a6b0bf6f8abb401
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119187"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670088"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Procédure pas à pas : utilisation des notifications locales dans Xamarin.Android
 
@@ -255,7 +255,7 @@ Lorsque vous cliquez sur la notification, il doit disparaître, et nos autres ac
 
 [![Capture d’écran de deuxième activité](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
-Félicitations ! À ce stade vous avez terminé la procédure pas à pas Android notification locale et que vous avez un exemple fonctionnel que vous pouvez faire référence à. Il y a beaucoup plus aux notifications que nous avons montré ici, par conséquent, si vous souhaitez plus d’informations, jeter un œil [documentation de Google sur les notifications](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
+Félicitations ! À ce stade vous avez terminé la procédure pas à pas Android notification locale et que vous avez un exemple fonctionnel que vous pouvez faire référence à. Il y a beaucoup plus aux notifications que nous avons montré ici, par conséquent, si vous souhaitez plus d’informations, jeter un œil [documentation de Google sur les notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 
 ## <a name="summary"></a>Récapitulatif
@@ -265,7 +265,7 @@ Cette procédure pas à pas utilisé `NotificationCompat.Builder` pour créer et
 
 ## <a name="related-links"></a>Liens associés
 
-- [LocalNotifications (exemple)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
+- [LocalNotifications (sample)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
 - [Canaux de Notification Android Oreo](https://blog.xamarin.com/android-oreo-notification-channels/)
 - [Notification](https://developer.xamarin.com/api/type/Android.App.Notification/)
 - [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)

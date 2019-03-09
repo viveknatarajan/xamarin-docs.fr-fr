@@ -6,74 +6,74 @@ ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 97cd3655ac47a017d9590e1890b93d74f10a9c34
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 0ec264e0f3d381fdac46c79dd479da2bc768954f
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780302"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668333"
 ---
 # <a name="accessibility-in-xamarin-apps"></a>Accessibilité dans les applications Xamarin
 
 _Assurez-vous que vos applications sont utilisables par l’audience la plus large possible_
 
-Accessibilité fait référence au concept de conception des interfaces utilisateur application fonctionnent bien des fonctions d’assistance à un affichage et une entrée de système d’exploitation comme type de grande taille, contraste élevé, faire un zoom, lecture de l’écran (TTS), piles de commentaires visual ou tactiles, et autres méthodes d’entrée.
+Accessibilité fait référence au concept de conception des interfaces utilisateur application qui fonctionnent bien des fonctions d’assistance d’Affichage et d’entrée de système d’exploitation comme type volumineux, contraste élevé, un zoom avant, lecture d’écran (synthèse vocale), des piles de commentaires visual ou HAPTIQUE, et autres méthodes d’entrée.
 
-Poste de travail et mobile, iOS, Android et Windows fournissent générées dans les API qui aident les développeurs à générer des applications accessibles, tel que [Google TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) et [VoiceOver d’Apple](http://www.apple.com/accessibility/ios/voiceover/).
+Plateformes de bureau et mobiles comme iOS, Android et Windows fournissent intégrées dans les API qui aident les développeurs à créer des applications accessibles, tel que [Google TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) et [VoiceOver d’Apple](http://www.apple.com/accessibility/ios/voiceover/).
 
-## <a name="platform-specific-apis"></a>API spécifiques à la plateforme
+## <a name="platform-specific-apis"></a>API propres aux plateformes
 
 Pour implémenter les recommandations dans ce document, utilisez les API fournies par chaque plateforme :
 
 - [**Accessibilité Android**](~/android/app-fundamentals/accessibility.md)
-- [**e/s d’accessibilité**](~/ios/app-fundamentals/accessibility.md)
+- [**iOS d’accessibilité**](~/ios/app-fundamentals/accessibility.md)
 - [**Système d’exploitation X accessibilité**](~/mac/app-fundamentals/accessibility.md)
 - [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
 <a name="checklist" />
 
-## <a name="accessibility-checklist"></a>Liste de vérification d’accessibilité
+## <a name="accessibility-checklist"></a>Liste de contrôle d’accessibilité
 
-Suivez les conseils suivants pour vous assurer que vos applications sont accessibles à l’audience plus large possible. Extraire le [Android aide-mémoire de test d’accessibilité](http://developer.android.com/training/accessibility/testing.html) et [page d’accessibilité d’Apple](http://www.apple.com/accessibility/) pour plus d’informations.
+Suivez ces conseils pour vous assurer que vos applications sont accessibles à l’audience plus large possible. Découvrez le [Android aide-mémoire de test d’accessibilité](https://developer.android.com/training/accessibility/testing.html) et [page d’accessibilité d’Apple](http://www.apple.com/accessibility/) pour plus d’informations.
 
-### <a name="support-large-fonts-and-high-contrast"></a>Prend en charge des polices de grande taille et de contraste élevé
+### <a name="support-large-fonts-and-high-contrast"></a>Prend en charge des polices de grande taille et le contraste élevé
 
-Évitez les dimensions de contrôle de coder en dur et, au lieu de cela, préférez les dispositions peuvent redimensionner pour prendre en compte la taille de police supérieure.
-Tester les jeux de couleurs en mode de contraste élevé pour s’assurer qu’ils sont lisibles.
+Évitez les dimensions de contrôle de coder en dur et, au lieu de cela, préférez les dispositions qui peuvent être redimensionné pour prendre en charge des tailles de police supérieures.
+Tester sa palette de couleurs en mode de contraste élevé pour vous assurer qu’ils sont accessibles en lecture.
 
-### <a name="make-the-user-interface-self-describing"></a>Vérifiez l’utilisateur interface autodescriptifs
+### <a name="make-the-user-interface-self-describing"></a>Rendre l’utilisateur interface autodescriptifs
 
-Baliser tous les éléments de votre interface utilisateur avec un texte descriptif et les indicateurs qui sont compatibles avec l’écran de la lecture des API sur chaque plateforme.
+Baliser tous les éléments de votre interface utilisateur avec un texte descriptif et les indicateurs qui sont compatibles avec l’écran de la lecture d’API sur chaque plateforme.
 
-### <a name="ensure-that-images-and-icons-have-an-alternate-text-description"></a>Assurez-vous que les icônes et les images ont une description texte de remplacement
+### <a name="ensure-that-images-and-icons-have-an-alternate-text-description"></a>Assurez-vous que les images et icônes ont une description de texte de remplacement
 
-Images et des icônes qui font partie de l’interface utilisateur (par exemple, des boutons ou des indicateurs d’état, par exemple) doivent être balisés avec une description accessible.
+Images et icônes qui font partie de l’interface utilisateur (par exemple, des boutons ou des indicateurs d’état, par exemple) doivent être marqués avec une description accessible.
 
-### <a name="design-the-visual-tree-with-accessible-navigation-in-mind"></a>Conception de l’arborescence d’éléments visuels avec une navigation accessible à l’esprit
+### <a name="design-the-visual-tree-with-accessible-navigation-in-mind"></a>Conception de l’arborescence visuelle avec navigation accessible à l’esprit
 
-Utilisez les contrôles de disposition appropriée ou API permettant de naviguer entre les contrôles à l’aide d’autres méthodes d’entrée suit le même flux logique comme à l’aide de l’écran tactile.
+Utilisez les contrôles de disposition appropriée ou API afin que la navigation entre les contrôles à l’aide d’autres méthodes d’entrée suivant le même flux logique comme à l’aide de l’écran tactile.
 
-Exclure les éléments inutiles de lecteurs d’écran (images décoratifs ou étiquettes pour les champs qui sont déjà accessibles, par exemple).
+Exclure les éléments inutiles de lecteurs d’écran (images décoratives ou étiquettes pour les champs qui sont déjà accessibles, par exemple).
 
-### <a name="dont-rely-on-audio-or-color-cues-alone"></a>Ne vous fiez les signaux audio ou de couleur uniquement
+### <a name="dont-rely-on-audio-or-color-cues-alone"></a>Ne vous fiez les signaux audio ou la couleur uniquement
 
-Éviter les situations où l’indication unique de progression, de saisie semi-automatique ou un autre état est un son ou un changement de couleur. Soit vous devez concevoir l’interface utilisateur pour inclure des signaux visuels Effacer (avec son et de couleur pour le renforcement uniquement) ou ajouter des indicateurs d’accessibilité spécifiques.
+Éviter les situations où l’indication exclusive de progression, de saisie semi-automatique ou d’un autre état est un son ou un changement de couleur. Soit concevoir l’interface utilisateur pour inclure des signaux visuels clair (avec son et la couleur pour le renforcement uniquement), ou ajouter des indicateurs d’accessibilité spécifiques.
 
-Lors du choix de couleurs, essayez d’éviter une palette est difficile de distinguer des utilisateurs avec des personnes.
+Lors du choix des couleurs, essayez d’éviter une palette est difficile de faire la distinction pour les utilisateurs avec daltonisme.
 
-### <a name="captioning-for-video-text-for-audio"></a>Sous-titrage pour le texte d’une vidéo, audio
+### <a name="captioning-for-video-text-for-audio"></a>Sous-titrage codé pour le texte d’une vidéo, audio
 
-Fournir des légendes pour le contenu vidéo et d’un script accessible en lecture pour le contenu audio. Il s’avère également utile fournir des contrôles qui ajustent la vitesse du contenu audio ou vidéo et vous assurer de ce volume et boutons de lecture/pause sont faciles à trouver et utiliser.
+Fournir des légendes pour le contenu vidéo et un script lisible pour le contenu audio. Il est également utile de fournir des contrôles qui s’ajustent la vitesse du contenu audio ou vidéo et vous assurer de ce volume et boutons de lecture/pause sont faciles à trouver et à utiliser.
 
 ### <a name="localize"></a>Localize
 
-Les descriptions d’accessibilité peuvent (et doivent) être localisées dans lequel l’application prend en charge plusieurs langues.
+Les descriptions d’accessibilité peuvent (et doivent) être localisées où l’application prend en charge plusieurs langues.
 
 
 
 ## <a name="related-links"></a>Liens associés
 
 - [Accessibilité Android](~/android/app-fundamentals/accessibility.md)
-- [e/s d’accessibilité](~/ios/app-fundamentals/accessibility.md)
+- [iOS d’accessibilité](~/ios/app-fundamentals/accessibility.md)
 - [Système d’exploitation X accessibilité](~/mac/app-fundamentals/accessibility.md)
 - [Accessibilité de Xamarin.Forms](~/xamarin-forms/app-fundamentals/accessibility/index.md)

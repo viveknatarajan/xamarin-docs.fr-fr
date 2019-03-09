@@ -1,19 +1,14 @@
 ---
 title: Liaison d’une bibliothèque Java
-description: La Communauté Android a de nombreuses bibliothèques Java que vous pouvez utiliser dans votre application ; Ce guide explique comment incorporer des bibliothèques Java dans votre application Xamarin.Android en créant une bibliothèque de liaisons.
+description: "La Communauté Android a de nombreuses bibliothèques Java que vous pouvez utiliser dans votre application\_; Ce guide explique comment incorporer des bibliothèques Java dans votre application Xamarin.Android en créant une bibliothèque de liaisons."
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c41aecf5f8c65ad5bfba5361b77d7c7fc047cda4
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171610"
 ---
+
 # <a name="binding-a-java-library"></a>Liaison d’une bibliothèque Java
 
 _La Communauté Android a de nombreuses bibliothèques Java que vous pouvez utiliser dans votre application ; Ce guide explique comment incorporer des bibliothèques Java dans votre application Xamarin.Android en créant une bibliothèque de liaisons._
@@ -103,7 +98,7 @@ La documentation de l’API doit être la valeur par défaut doclet Java8, Java7
 
 ## <a name="including-a-native-library-in-a-binding"></a>Y compris une bibliothèque Native dans une liaison
 
-Il peut être nécessaire d’inclure un **.so** bibliothèque dans un projet de liaison Xamarin.Android dans le cadre de la liaison d’une bibliothèque Java. Lorsque le code Java encapsulé s’exécute, Xamarin.Android ne pourra pas passer l’appel JNI et le message d’erreur _java.lang.UnsatisfiedLinkError : méthode Native introuvable :_ apparaîtra dans le logcat out pour l’application.
+Il peut être nécessaire d’inclure un **.so** bibliothèque dans un projet de liaison Xamarin.Android dans le cadre de la liaison d’une bibliothèque Java. Lorsque le code Java encapsulé s’exécute, Xamarin.Android ne pourra pas passer l’appel JNI et le message d’erreur _java.lang.UnsatisfiedLinkError : Méthode native introuvable :_ apparaîtra dans le logcat out pour l’application.
 
 La solution à ce problème consiste à charger manuellement le **.so** bibliothèque avec un appel à `Java.Lang.JavaSystem.LoadLibrary`. Par exemple, en supposant qu’un projet Xamarin.Android a partagé bibliothèque **libpocketsphinx_jni.so** inclus dans le projet de liaison avec une action de génération **EmbeddedNativeLibrary**, l’extrait de code suivant (exécuté avant d’utiliser la bibliothèque partagée) chargera le **.so** bibliothèque :
 
@@ -145,5 +140,5 @@ Les guides de scénario de liaison suivants peuvent vous aider à lier une bibli
 ## <a name="related-links"></a>Liens associés
 
 - [Utilisation de JNI](~/android/platform/java-integration/working-with-jni.md)
-- [Métadonnées GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Métadonnées GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [Utilisation de bibliothèques natives](~/android/platform/native-libraries.md)

@@ -1,19 +1,14 @@
 ---
 title: Introduction à Contentprovider
-description: Le système d’exploitation Android utilise des fournisseurs de contenu pour faciliter l’accès aux données partagées telles que des fichiers multimédias, les contacts et les informations de calendrier. Cet article présente la classe ContentProvider et fournit deux exemples illustrant comment l’utiliser.
+description: 'Le système d’exploitation Android utilise des fournisseurs de contenu pour faciliter l’accès aux données partagées telles que des fichiers multimédias, les contacts et les informations de calendrier. Cet article présente la classe ContentProvider et fournit deux exemples illustrant comment l’utiliser.'
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 4105200c48e41b142fc71e3a524023790b683cdb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105985"
 ---
+
 # <a name="intro-to-contentproviders"></a>Introduction à Contentprovider
 
 _Le système d’exploitation Android utilise des fournisseurs de contenu pour faciliter l’accès aux données partagées telles que des fichiers multimédias, les contacts et les informations de calendrier. Cet article présente la classe ContentProvider et fournit deux exemples illustrant comment l’utiliser._
@@ -46,8 +41,8 @@ Les rubriques de cette section fournissent des exemples simples de consommation 
 ## <a name="related-links"></a>Liens associés
 
 - [Démonstration de ContactsAdapter (exemple)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
-- [SimpleContentProvider (exemple)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
-- [Guide du développeur de fournisseurs de contenu](http://developer.android.com/guide/topics/providers/content-providers.html)
+- [SimpleContentProvider (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
+- [Guide du développeur de fournisseurs de contenu](https://developer.android.com/guide/topics/providers/content-providers.html)
 - [Référence de classe de ContentProvider](https://developer.xamarin.com/api/type/Android.Content.ContentProvider/)
 - [Référence de classe de ContentResolver](https://developer.xamarin.com/api/type/Android.Content.ContentResolver/)
 - [Référence de classe de ListView](https://developer.xamarin.com/api/type/Android.Widget.ListView/)

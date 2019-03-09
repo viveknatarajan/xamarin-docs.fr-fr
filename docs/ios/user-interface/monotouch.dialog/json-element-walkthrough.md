@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 24d73bfcc28601f6a7ebbecb71d8c0e9f6864ac3
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 07bcbfe046fd689e08eed4e64495b56d083ceeb8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675339"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671518"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>L’utilisation de JSON pour créer une interface utilisateur dans Xamarin.iOS
 
@@ -169,7 +169,7 @@ Cet article vous a montré comment créer un à l’aide de l’interface avec l
 
 ## <a name="related-links"></a>Liens connexes
 
-- [MTDJsonDemo (exemple)](https://developer.xamarin.com/samples/MTDJsonDemo/)
+- [MTDJsonDemo (sample)](https://developer.xamarin.com/samples/MTDJsonDemo/)
 - [Capture vidéo - Miguel de Icaza crée un écran de connexion iOS avec MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
 - [Capture vidéo - créer facilement des interfaces utilisateur iOS avec MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [Introduction à MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
@@ -177,5 +177,5 @@ Cet article vous a montré comment créer un à l’aide de l’interface avec l
 - [Procédure pas à pas API de réflexion](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Boîte de dialogue MonoTouch sur Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
 - [Application de TweetStation](https://github.com/migueldeicaza/TweetStation)
-- [Référence de classe de UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Référence de classe de UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [Référence de classe de UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Référence de classe de UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

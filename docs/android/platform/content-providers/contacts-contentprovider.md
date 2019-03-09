@@ -1,19 +1,19 @@
 ---
-title: À l’aide de contentprovider des Contacts
+title: Utilisation du ContentProvider des contacts
 ms.prod: xamarin
 ms.assetid: 21C5D1B4-3783-6090-33AB-78A484E65925
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: 95d11ef692ec8b43c128cb55a21d0973151cd24a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48bb334e7e400d57e7eddc23b0b4ff183a7eba9b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120435"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669412"
 ---
-# <a name="using-the-contacts-contentprovider"></a>À l’aide de contentprovider des Contacts
+# <a name="using-the-contacts-contentprovider"></a>Utilisation du ContentProvider des contacts
 
 Code qu’utilise accéder aux données exposées par un `ContentProvider` ne nécessite pas une référence à la `ContentProvider` classe du tout. Au lieu de cela, un Uri est utilisé pour créer un curseur sur les données exposées par le `ContentProvider`. Android utilise l’Uri pour rechercher le système pour l’application qui expose un `ContentProvider` avec cet identificateur. L’Uri est une chaîne, généralement dans un format DNS inversé comme `com.android.contacts/data`.
 
@@ -108,7 +108,7 @@ var cursor = (ICursor)loader.LoadInBackground();
 
 Le `CursorLoader` garantit que toutes les opérations de curseur sont effectuées sur un thread d’arrière-plan et peuvent intelligemment réutiliser un curseur existant entre les instances d’activité quand une activité est redémarrée (par exemple, en raison d’une modification de configuration) plutôt que recharger les données à nouveau.
 
-Les versions Android antérieures peuvent également utiliser le `CursorLoader` classe à l’aide de la [bibliothèques de prise en charge v4](http://developer.android.com/tools/support-library/index.html).
+Les versions Android antérieures peuvent également utiliser le `CursorLoader` classe à l’aide de la [bibliothèques de prise en charge v4](https://developer.android.com/tools/support-library/index.html).
 
 
 

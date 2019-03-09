@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 134b8e93279dd60f860e44a444e75e0200e66b99
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cf2221380e5ddbd8278cc2d387c6eb185d990c1a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "30764448"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671896"
 ---
 # <a name="auto-complete"></a>Saisie semi-automatique
 
@@ -205,5 +205,5 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 *Certaines parties de cette page sont des modifications basées sur le travail créé et partagé par Android Open Source Project et utilisé conformément aux conditions décrites dans le* 
  [ *licence Creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/) *. Ce didacticiel est basé sur le* 
- [ *didacticiel Android semi-automatique*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+ [ *didacticiel Android semi-automatique*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
  *.*

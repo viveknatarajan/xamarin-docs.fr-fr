@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 1749de49607596fa2b8e555fec471af1d18b8ce9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3b5eae4d218fdc66f7f99f0aab8aa32af3cbabf4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116678"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667360"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Pris en charge des assemblys par Xamarin pour tvOS
 
@@ -20,28 +20,28 @@ ms.locfileid: "50116678"
 
 Il s’agit d’une liste des assemblys pris en charge par Xamarin pour vos applications Xamarin.tvOS. Vous trouverez ci-dessous la liste détaillée de ces.  Certaines omissions notables incluent `System.EnterpriseServices`, la pile ASP.NET et Windows.Forms.
 
-|Assembly|Ajouté|Compatibilité d’API|
+|Assembly|Added|Compatibilité d’API|
 |---|---|---|
 |Mono.CompilerServices.SymbolWriter.dll|1.0|Pour les writers de compilateur.|
 |Mono.Data.Sqlite.dll|1.2|Fournisseur ADO.NET pour SQLite ; consultez [limitations](~/ios/data-cloud/system.data.md).|
 |Mono.Data.Tds.dll|1.2|Prise en charge du protocole TDS ; utilisé pour [System.Data.SqlClient](xref:System.Data.SqlClient) prise en charge dans [System.Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|API de chiffrement.|
 |monotouch.dll|1.0|Cet assembly contient la [liaison c# à l’API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
-|mscorlib.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |OpenTK.dll|1.0|L’objet OpenGL/OpenAL orientée services API, [étendus pour fournir la prise en charge des appareils iPhone](https://developer.xamarin.com/api/namespace/OpenGLES/).|
-|System.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), ainsi que des types à partir d’espaces de noms suivants : <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
-|System.Core.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Data.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx), [avec certaines fonctionnalités supprimées](~/ios/data-cloud/system.data.md).|
+|System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), ainsi que des types à partir d’espaces de noms suivants : <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
+|System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.Data.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx), [avec certaines fonctionnalités supprimées](~/ios/data-cloud/system.data.md).|
 |System.Data.Service.Client.dll|3.x|Client oData complète.|
 |System.Drawing|1.0|System.Drawing API - API classique uniquement.<br />_System.Drawing n’est pas pris en charge dans l’API unifiée pour le Xamarin.Mac .NET 4.5 ou les infrastructures mobiles._|
-|System.Json.dll|1.1|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Runtime.Serialization.dll|?|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) qu’à présent dans la pile [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.Web.dll|?|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), ainsi que des types à partir d’espaces de noms suivants : <ul><li>Système</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
-|System.Transactions.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); dans le cadre de [System.Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) prennent en charge.|
+|System.Json.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.Runtime.Serialization.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) qu’à présent dans la pile [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.Web.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), ainsi que des types à partir d’espaces de noms suivants : <ul><li>Système</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
+|System.Transactions.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); dans le cadre de [System.Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) prennent en charge.|
 |System.Web.Services|1.1|[Services Web de base](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services) du profil .NET 3.5, avec les fonctionnalités de serveur supprimé.|
-|System.Xml.dll|1.0|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|
-|System.Xml.Linq.dll|1.0|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 
 <a name="Summary" />
 

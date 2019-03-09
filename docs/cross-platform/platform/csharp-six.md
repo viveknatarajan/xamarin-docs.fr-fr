@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 16ee512395b2658b26bc7a489eabecec3656fa93
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d5478a09c461ec8f1bf51efaa7b4dc2f862d69b4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115755"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668935"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 nouvelles fonctionnalités vue d’ensemble
 
@@ -46,12 +46,12 @@ L’exemple d’application est un programme de ligne de commande qui s’exécu
 
 ## <a name="compiler"></a>Compilateur
 
-Mono C# compilateur 6 est inclus dans Mono 4.0 et versions ultérieur, qui est [disponible gratuitement en téléchargement](http://www.mono-project.com/download/).
+Mono C# compilateur 6 est inclus dans Mono 4.0 et versions ultérieur, qui est [disponible gratuitement en téléchargement](https://www.mono-project.com/download/).
 Visual Studio pour Mac met automatiquement à jour l’installation de Mono sur votre système.
 
 Les utilisateurs Windows doivent disposer [Visual Studio 2015 ou 2017 ^](https://visualstudio.microsoft.com/) installée pour compiler C# 6 code (même si vous choisissez Xamarin Studio pour Windows en tant que votre IDE).
 
-^ ou *[outils de génération Microsoft 2015](http://www.microsoft.com/download/details.aspx?id=48159)* pour la commande de ligne compilation ou serveurs de build, par exemple.
+^ ou *[outils de génération Microsoft 2015](https://www.microsoft.com/download/details.aspx?id=48159)* pour la commande de ligne compilation ou serveurs de build, par exemple.
 
 ## <a name="using-c-6"></a>À l’aide de C# 6
 

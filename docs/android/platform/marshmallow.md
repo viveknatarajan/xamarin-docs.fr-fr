@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 0393b9a994c1fd62f51cff01a88aa73f71019d53
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a396f4fe59db36b134843d2538bcb470a452a85b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113454"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668580"
 ---
 # <a name="marshmallow-features"></a>Fonctionnalités de marshmallow
 
@@ -23,10 +23,10 @@ Cet article fournit une description des nouvelles fonctionnalités dans Android 
 
 ## <a name="overview"></a>Vue d'ensemble
 
-[Android Marshmallow 6.0](http://developer.android.com/about/versions/marshmallow/index.html), est la prochaine Android majeure version après Android Lollipop.
+[Android Marshmallow 6.0](https://developer.android.com/about/versions/marshmallow/index.html), est la prochaine Android majeure version après Android Lollipop.
 Xamarin.Android prend en charge d’Android Marshmallow, qui inclut :
 
--   **Liaisons d’API 23/Android 6.0** &ndash; Android 6.0 ajoute plusieurs nouvelles API pour les nouvelles fonctionnalités décrites ci-dessous ; ces API sont disponibles pour les applications Xamarin.Android lorsque vous ciblez le niveau d’API 23. Pour plus d’informations sur les API 6.0 Android, consultez [Android 6.0 API](http://developer.android.com/preview/api-overview.html). 
+-   **Liaisons d’API 23/Android 6.0** &ndash; Android 6.0 ajoute plusieurs nouvelles API pour les nouvelles fonctionnalités décrites ci-dessous ; ces API sont disponibles pour les applications Xamarin.Android lorsque vous ciblez le niveau d’API 23. Pour plus d’informations sur les API 6.0 Android, consultez [Android 6.0 API](https://developer.android.com/preview/api-overview.html). 
 
 [![Images de héros de tablettes et téléphones Marshmallow en cours d’exécution](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
@@ -56,7 +56,7 @@ En outre, les nombreuses mises à jour de bibliothèque Android core ont été p
 
 En outre, les nombreuses mises à jour de bibliothèque Android core ont été publiés avec Android Marshmallow, et ces mises à jour fournissent de nouvelles fonctionnalités pour Android Marshmallow et versions antérieures d’Android. Cet article explique comment créer des applications avec Android Marshmallow, et il fournit qu'une vue d’ensemble de la nouvelle fonctionnalité met en évidence dans Android 6.0. 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont nécessaire pour utiliser les nouvelles fonctionnalités d’Android Marshmallow dans les applications basées sur Xamarin : 
 
@@ -66,9 +66,9 @@ Les éléments suivants sont nécessaire pour utiliser les nouvelles fonctionnal
 
 -   **Kit de développement logiciel Android** &ndash; Android 6.0 SDK (API 23) ou version ultérieure doit être installé via le gestionnaire Android SDK.
 
--   **Kit de développement Java** &ndash; Xamarin.Android nécessite [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou version ultérieure si vous développez pour le niveau d’API 24 ou supérieure (JDK 1.8 prend également en charge les niveaux d’API antérieures à 24, y compris Marshmallow). La version 64 bits du JDK 1.8 est requise si vous utilisez des contrôles personnalisés ou le Générateur d’aperçu de formulaires.
+-   **Kit de développement Java** &ndash; Xamarin.Android nécessite [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou version ultérieure si vous développez pour le niveau d’API 24 ou supérieure (JDK 1.8 prend également en charge les niveaux d’API antérieures à 24, y compris Marshmallow). La version 64 bits du JDK 1.8 est requise si vous utilisez des contrôles personnalisés ou le Générateur d’aperçu de formulaires.
 
-Vous pouvez continuer à utiliser [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si vous êtes développement spécifiquement pour le niveau d’API 23 ou une version antérieure. 
+Vous pouvez continuer à utiliser [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si vous êtes développement spécifiquement pour le niveau d’API 23 ou une version antérieure. 
 
 
 ## <a name="getting-started"></a>Prise en main
@@ -104,7 +104,7 @@ Pour créer un projet Xamarin.Android pour Android Marshmallow, vous devez tout 
     [![Sélectionner les packages de kit de développement logiciel Android 6.0 dans le Gestionnaire de kit de développement logiciel Android.](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
 
 Vous devez installer la version d’Android SDK Tools 24.3.4 ou version ultérieure.
-Pour plus d’informations sur l’utilisation du gestionnaire Android SDK pour installer le Kit de développement logiciel Android 6.0, consultez [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html).
+Pour plus d’informations sur l’utilisation du gestionnaire Android SDK pour installer le Kit de développement logiciel Android 6.0, consultez [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
 
 
@@ -120,7 +120,7 @@ Lorsque vous créez un projet Android, vous devez configurer les paramètres de 
 
 Si vous utilisez un émulateur, démarrez le Gestionnaire d’AVD Android et créer un nouvel appareil en utilisant les paramètres suivants :
 
--   APPAREIL : Nexus 5, 6 ou 9.
+-   Périphérique : Nexus 5, 6 ou 9.
 -   Cible : Android 6.0 - niveau d’API 23
 -   ABI : x86
 
@@ -128,7 +128,7 @@ Par exemple, cet appareil virtuel est configuré pour émuler un Nexus 5 :
 
 [![Configuration d’un AVD à l’aide de périphérique Nexus 5, Android 6.0 cible et Intel Atom (x86)](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png#lightbox)
 
-Si vous utilisez un appareil physique comme un Nexus 5, 6 ou 9, vous pouvez installer une image d’aperçu d’Android Marshmallow. Pour plus d’informations sur la mise à jour de votre appareil vers Android Marshmallow, consultez [Images du système matériel](http://developer.android.com/preview/download.html#images).
+Si vous utilisez un appareil physique comme un Nexus 5, 6 ou 9, vous pouvez installer une image d’aperçu d’Android Marshmallow. Pour plus d’informations sur la mise à jour de votre appareil vers Android Marshmallow, consultez [Images du système matériel](https://developer.android.com/preview/download.html#images).
 
 
 
@@ -192,7 +192,7 @@ Cette application ne stocke pas vos empreintes digitales (ou votre mot de passe)
 La nouvelle fonctionnalité d’Interactions vocales introduite dans Android Marshmallow permet aux utilisateurs de votre application à utiliser la voix pour confirmer actions et sélectionner parmi une liste d’options. Pour plus d’informations sur les Interactions vocales, consultez [vue d’ensemble de l’API d’Interaction de voix](https://developers.google.com/voice-actions/interaction/). 
 
 Consultez [ajouter une Conversation à votre application Android avec des Interactions vocales](https://blog.xamarin.com/add-a-conversation-to-your-android-app-with-voice-interactions/) pour plus d’informations (y compris les exemples de code) sur l’implémentation des Interactions vocales dans les applications Xamarin.Android.
-Vous trouverez un exemple d’application qui illustre comment utiliser l’API d’Interaction vocale dans une application Xamarin.Android : [Interactions vocales](https://github.com/jamesmontemagno/MarshmallowSamples/tree/master/VoiceInteractions).
+Vous trouverez un exemple d’application qui illustre comment utiliser l’API d’Interaction vocale dans une application Xamarin.Android : [Voix Interactions](https://github.com/jamesmontemagno/MarshmallowSamples/tree/master/VoiceInteractions).
 
 
 
@@ -247,7 +247,7 @@ Android Lollipop introduit [Material Design](http://www.google.com/design/spec/m
 
 -   **Onglets Material** &ndash; le nouveau `TabLayout` widget fournit une disposition horizontale pour afficher les onglets comme moyen d’implémenter la navigation de niveau supérieur dans votre application.
 
-Pour tirer parti de la [bibliothèque de prise en charge de conception](http://developer.android.com/tools/support-library/features.html#design) dans votre application Xamarin.Android, téléchargez et installez Xamarin [Design de bibliothèque de prise en charge de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) package NuGet.
+Pour tirer parti de la [bibliothèque de prise en charge de conception](https://developer.android.com/tools/support-library/features.html#design) dans votre application Xamarin.Android, téléchargez et installez Xamarin [Design de bibliothèque de prise en charge de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) package NuGet.
 
 Consultez [magnifiques Material Design avec la bibliothèque de conception de prise en charge Android](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) pour plus d’informations (y compris les exemples de code) à l’aide de la bibliothèque de prise en charge de conception de documents dans les applications Xamarin.Android.
 Xamarin fournit un exemple d’application qui la démonstration de la nouvelle bibliothèque de conception Android sur Xamarin.Android &ndash; [Cheesesquare](https://developer.xamarin.com/samples/monodroid/android5.0/Cheesesquare).
@@ -267,7 +267,7 @@ Pour plus d’informations sur la bibliothèque de conception, consultez [biblio
 
 En plus d’Android Marshmallow, Google a annoncé des mises à jour à plusieurs bibliothèques Android core. Xamarin prend en charge de Xamarin.Android pour ces mises à jour via plusieurs packages de NuGet-version préliminaire : 
 
--   [Services Google Play](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) &ndash; la dernière version des Services Google Play inclut la nouvelle *application invite* fonctionnalité, ce qui permet aux utilisateurs de partager leur application avec vos amis. Pour plus d’informations sur cette fonctionnalité, consultez [Reach de développer votre application avec App invite Google](http://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
+-   [Services Google Play](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) &ndash; la dernière version des Services Google Play inclut la nouvelle *application invite* fonctionnalité, ce qui permet aux utilisateurs de partager leur application avec vos amis. Pour plus d’informations sur cette fonctionnalité, consultez [Reach de développer votre application avec App invite Google](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
 
 -   [Les bibliothèques de prise en charge Android](https://www.nuget.org/packages?q=xamarin+support+library) &ndash; ces packages NuGet offrent des fonctionnalités qui sont uniquement disponibles pour la bibliothèque API tout en assurant la compatibilité descendante des versions du framework Android API. 
 
@@ -281,7 +281,7 @@ Cet article a introduit Android Marshmallow et expliqué comment installer et co
 
 ## <a name="related-links"></a>Liens associés
 
-- [Android Marshmallow 6.0](http://developer.android.com/about/versions/marshmallow/index.html)
+- [Android Marshmallow 6.0](https://developer.android.com/about/versions/marshmallow/index.html)
 - [Obtenir le kit SDK Android](https://developer.android.com/sdk/index.html#Other)
 - [Vue d’ensemble de la fonctionnalité](https://developer.android.com/preview/api-overview.html)
 - [Notes de publication](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1.99/)

@@ -7,12 +7,12 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: de27e151a475856f0789285dddc1526613e0b828
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 604067ac853bd53707e059b7db4abf2cfade21ce
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053142"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668957"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animer des bitmaps de SkiaSharp
 
@@ -508,7 +508,7 @@ Le [ `FrameInfo` ](xref:SkiaSharp.SKCodec.FrameInfo) propriété du `SKCodec` cl
 
 `SKCodec` définit une propriété nommée [ `Info` ](xref:SkiaSharp.SKCodec.Info) de type [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo), mais que `SKImageInfo` indique de valeur (au moins pour cette image) que le type de couleur est `SKColorType.Index8`, ce qui signifie que chaque pixel est un index dans un type de couleur. Pour éviter de déranger avec des tables de couleurs, le programme utilise le [ `Width` ](xref:SkiaSharp.SKImageInfo.Width) et [ `Height` ](xref:SkiaSharp.SKImageInfo.Height) plus d’informations à partir de cette structure pour la construction est propre en couleurs `ImageInfo` valeur. Chaque `SKBitmap` est créé à partir de là.
 
-Le `GetPixels` méthode de `SKBitmap` retourne un `IntPtr` référençant les bits de pixel de bitmap. Ces bits de pixel n’ont pas encore été définies. Que `IntPtr` est passée à une de le [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) méthodes de `SKCodec`. Cette méthode copie le frame à partir du fichier GIF dans l’espace de mémoire référencé par le `IntPtr`. Le [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions.%23ctor(System.Int32,System.Boolean)) constructeur indique le nombre d’images :
+Le `GetPixels` méthode de `SKBitmap` retourne un `IntPtr` référençant les bits de pixel de bitmap. Ces bits de pixel n’ont pas encore été définies. Que `IntPtr` est passée à une de le [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) méthodes de `SKCodec`. Cette méthode copie le frame à partir du fichier GIF dans l’espace de mémoire référencé par le `IntPtr`. Le [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions) constructeur indique le nombre d’images :
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage

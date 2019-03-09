@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: d8ee5f867c9a4d724c54c14b5afdd005f1b805d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3d0394f6b2388918f728bd5a25e9e809a832ca6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115768"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670972"
 ---
 # <a name="linearlayout"></a>LinearLayout
 
-[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) est un [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
 qui affiche les enfants [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
 éléments dans une direction linéaire, verticalement ou horizontalement.
 
@@ -126,7 +126,7 @@ Exécutez l'application. Vous devez voir les éléments suivants :
 
 [![Capture d’écran de l’application LinearLayout première organisée horizontalement, verticalement seconde](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-Notez comment les attributs XML définissent le comportement de chaque vue. Essayez d’expérimenter avec différentes valeurs pour `android:layout_weight` pour voir comment la taille d’écran sont répartie en fonction du poids de chaque élément. Consultez le [les objets de mise en forme courantes](http://developer.android.com/guide/topics/ui/declaring-layout.html) document pour en savoir plus sur la façon [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+Notez comment les attributs XML définissent le comportement de chaque vue. Essayez d’expérimenter avec différentes valeurs pour `android:layout_weight` pour voir comment la taille d’écran sont répartie en fonction du poids de chaque élément. Consultez le [les objets de mise en forme courantes](https://developer.android.com/guide/topics/ui/declaring-layout.html) document pour en savoir plus sur la façon [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
 gère la `android:layout_weight` attribut.
 
 

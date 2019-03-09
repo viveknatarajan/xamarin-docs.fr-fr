@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 54c9e4fad71d74fe40fc119592a45f6c94b47056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b73428531deeacc7bdea271cdc0c2872038e99
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122255"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666957"
 ---
 # <a name="gallery"></a>Galerie
 
@@ -37,7 +37,7 @@ pour un `ImageAdapter` instance est définie et enregistrée dans un champ local
 Ensuite, il implémente certaines méthodes requises héritées [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/).
 Le constructeur et le [`Count`](https://developer.xamarin.com/api/property/Android.Widget.BaseAdapter.Count/)
 propriété sont explicites. Normalement, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/p/System.Int32/)
-doit retourner l’objet en question à la position spécifiée dans l’adaptateur, mais elle est ignorée pour cet exemple. De même, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/p/System.Int32/)
+doit retourner l’objet en question à la position spécifiée dans l’adaptateur, mais elle est ignorée pour cet exemple. Likewise, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/p/System.Int32/)
 doit retourner l’id de ligne de l’élément, mais il n’est pas nécessaire ici.
 
 La méthode effectue le travail pour appliquer une image à un [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
@@ -57,7 +57,7 @@ Démarrer un nouveau projet nommé *HelloGallery*.
 
 [![Capture d’écran du nouveau projet Android dans la boîte de dialogue Nouvelle Solution](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
-Rechercher des photos que vous souhaitez utiliser, ou [télécharger ces exemples d’images](http://developer.android.com/shareables/sample_images.zip).
+Rechercher des photos que vous souhaitez utiliser, ou [télécharger ces exemples d’images](https://developer.android.com/shareables/sample_images.zip).
 Ajouter les fichiers image pour le projet **ressources/Drawable** directory. Dans le **propriétés** fenêtre, définissez l’Action de génération pour chacun d’eux à **AndroidResource**.
 
 Ouvrez **Resources/Layout/Main.axml** et insérez le code suivant :

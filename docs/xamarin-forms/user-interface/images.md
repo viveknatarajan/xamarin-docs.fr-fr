@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1a08803930eaaa3c2c5c5f8b8aa9561a9a7b8d88
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 5c1d73acfef7a4384db7220daf7319251eb61f85
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557241"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670985"
 ---
 # <a name="images-in-xamarinforms"></a>Images dans Xamarin.Forms
 
@@ -44,7 +44,7 @@ Le [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) propriété détermine comment 
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Découpe l’image afin qu’il remplisse la zone d’affichage tout en conservant l’aspect (ie. sans distorsion).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Partout l’image (si nécessaire) afin que l’image entière s’adapte à la zone d’affichage, avec espace ajouté pour le haut/bas ou les côtés selon que l’image est largeur ou hauteur.
 
-Les images peuvent être chargées à partir d’un [fichier local](#Local_Images), un [ressource incorporée](#embedded-images), ou [téléchargé](#Downloading_Images). En outre, les icônes de police peuvent être affichées par le [ `Image` ](xref:Xamarin.Forms.Image) vue en spécifiant les données d’icône de police dans un `FontImageSource` objet. Pour plus d’informations, consultez [afficher des icônes de police](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) dans le [polices](~/xamarin-forms/user-interface/text/fonts.md) guide.
+Les images peuvent être chargées à partir d’un [fichier local](#local-images), un [ressource incorporée](#embedded-images), ou [téléchargé](#downloading-images). En outre, les icônes de police peuvent être affichées par le [ `Image` ](xref:Xamarin.Forms.Image) vue en spécifiant les données d’icône de police dans un `FontImageSource` objet. Pour plus d’informations, consultez [afficher des icônes de police](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) dans le [polices](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
 ## <a name="local-images"></a>Images locales
 
@@ -92,7 +92,7 @@ La meilleure façon de gérer les images depuis iOS 9 consiste à faire glisser 
 
 Avant d’iOS 9, versions rétine de l’image peut être placées dans le **ressources** dossier - deux et trois fois la résolution avec un **@2x** ou **@3x**suffixes sur le nom de fichier avant l’extension de fichier (par exemple). **myimage@2x.png**). Toutefois, cette méthode d’utilisation des images dans une application iOS a été déconseillée par Apple. Pour plus d’informations, consultez [tailles d’Image et les noms de fichiers](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Les images Android autre résolution doivent être placés dans [répertoires spécialement nommée](http://developer.android.com/guide/practices/screens_support.html) dans le projet Android, comme indiqué dans la capture d’écran suivante :
+Les images Android autre résolution doivent être placés dans [répertoires spécialement nommée](https://developer.android.com/guide/practices/screens_support.html) dans le projet Android, comme indiqué dans la capture d’écran suivante :
 
 [![Emplacement de l’Image de résolutions multiples Android](images-images/xs-highdpisolution-sml.png "emplacement de l’Image de résolutions multiples Android")](images-images/xs-highdpisolution.png#lightbox "emplacement de l’Image de résolutions multiples Android")
 
@@ -296,7 +296,7 @@ Icônes et écrans de démarrage pour les applications Xamarin.Forms se fait dan
 
 ## <a name="icons"></a>Icônes
 
-Consultez le [iOS utilisation des Images](~/ios/app-fundamentals/images-icons/index.md), [Google iconographie](http://developer.android.com/design/style/iconography.html), et [les instructions pour les ressources en mosaïque et icône](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) pour plus d’informations sur la création de ces ressources d’application.
+Consultez le [iOS utilisation des Images](~/ios/app-fundamentals/images-icons/index.md), [Google iconographie](https://developer.android.com/design/style/iconography.html), et [les instructions pour les ressources en mosaïque et icône](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) pour plus d’informations sur la création de ces ressources d’application.
 
 En outre, les icônes de police peuvent être affichées par le [ `Image` ](xref:Xamarin.Forms.Image) vue en spécifiant les données d’icône de police dans un `FontImageSource` objet. Pour plus d’informations, consultez [afficher des icônes de police](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) dans le [polices](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
@@ -316,5 +316,5 @@ Images d’écran de démarrage et d’icône d’application sont configurés e
 
 - [WorkingWithImages (exemple)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
 - [iOS utilisation d’Images](~/ios/app-fundamentals/images-icons/index.md)
-- [Iconographie Android](http://developer.android.com/design/style/iconography.html)
+- [Iconographie Android](https://developer.android.com/design/style/iconography.html)
 - [Instructions pour les ressources en mosaïque et icône](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

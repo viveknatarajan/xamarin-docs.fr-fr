@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 859afcf6ab9f3acfb56104fa68683ba28d913ce4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5363e3a2210bdcf1efb870ac808ecb37584de6a7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117126"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668918"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Remplissage d’une Table avec des données dans Xamarin.iOS
 
@@ -34,7 +34,7 @@ Un `UITableViewSource` sous-classe est affectée à chaque `UITableView`. La vue
 
 Il existe uniquement deux méthodes obligatoires nécessaires pour créer une table à afficher des données :
 
--   **RowsInSection** – retour un [ `nint` ](http://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) le nombre total de lignes de données de la table doit s’afficher.
+-   **RowsInSection** – retour un [ `nint` ](https://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) le nombre total de lignes de données de la table doit s’afficher.
 -   **GetCell** – retour un `UITableCellView` rempli avec les données de l’index de ligne correspondant transmis à la méthode.
 
 
@@ -297,4 +297,4 @@ Vous pouvez personnaliser davantage l’apparence de l’en-tête et le pied de 
 
 ## <a name="related-links"></a>Liens associés
 
-- [WorkingWithTables (exemple)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)
+- [WorkingWithTables (sample)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)

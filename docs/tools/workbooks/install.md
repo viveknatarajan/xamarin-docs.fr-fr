@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 7bef5de57b7ac709ebab4c39feedbec369e6bd14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1303f21225d3ae7b7d3a796e4845afbfe554a22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122424"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667709"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Configuration requise et Installation de workbooks
 
@@ -33,7 +33,7 @@ ms.locfileid: "50122424"
 
 -----
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 #### <a name="supported-operating-systems"></a>Supported Operating Systems
 
@@ -105,8 +105,8 @@ Si vous rencontrez des problèmes de connexion de votre classeur Android ou iOS 
 - Android : Vérifiez que vous utilisez un x86 émulateur
 - Android : Quelle plate-forme émulateur utilisez-vous ? Émulateur Google ?
   Émulateur Android de Visual Studio ? Xamarin Android Player ?
-- iOS sur Windows : quelle version du simulateur iOS à distance Xamarin vous avez installé (vérifier **Ajout/Suppression de programmes** dans **le panneau de configuration**) ?
-- iOS sur Windows : fournissez également les informations de Version de plateforme pour votre hôte de build Mac
+- iOS sur Windows : Quelle version du simulateur iOS à distance Xamarin vous avez installé (vérifier **Ajout/Suppression de programmes** dans **le panneau de configuration**) ?
+- iOS sur Windows : Fournissez également les informations de Version de plateforme pour votre hôte de build Mac
 - L’appareil a-t-il la connectivité réseau (vérification via le navigateur web) ?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
@@ -160,5 +160,5 @@ En raison d’un bogue dans les programmes d’installation antérieures, il n�
 
 Pour passer de 1,4 ou plus récent à 1.3.2 ou une version antérieure :
 
-1. [Désinstaller Workbooks & Inspector manuellement](#macOS)
+1. [Désinstaller Workbooks & Inspector manuellement](#uninstall-macos)
 2. Exécutez le 1.3.2 ou une version antérieure `.pkg` programme d’installation

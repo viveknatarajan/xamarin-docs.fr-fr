@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 347793934b01d26d22455189c12b0f1d5213a40b
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: c5a4247b2e10706014c9f92a487803e4a718c1a6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170973"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671974"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 
-Xamarin.Android utilise Mono [RÉCUPÉRATEUR de mémoire générationnel Simple](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/). Il s’agit d’un RÉCUPÉRATEUR de mémoire mark-and-sweep avec deux générations et un *espace d’objets volumineux*, avec deux types de collections : 
+Xamarin.Android utilise Mono [RÉCUPÉRATEUR de mémoire générationnel Simple](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/). Il s’agit d’un RÉCUPÉRATEUR de mémoire mark-and-sweep avec deux générations et un *espace d’objets volumineux*, avec deux types de collections : 
 
 -   Collections mineures (segment de mémoire Gen0 de collecte) 
 -   Collections majeures (tas espacement collecte Gen1 et des objets volumineux). 
@@ -37,16 +37,16 @@ Il existe trois catégories de types d’objets.
 -   **Objets managés**: types de font *pas* héritent [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) , par exemple [System.String](xref:System.String). 
     Ils sont collectés normalement par le garbage collector. 
 
--   **Les objets Java**: les types Java qui sont présents dans la machine virtuelle du runtime Android, mais pas exposées à la machine virtuelle Mono. Ceux-ci sont ennuyeux et ne seront pas traitées davantage. Ils sont collectés normalement par le runtime Android machine virtuelle. 
+-   **Les objets Java**: Types Java qui sont présents dans la machine virtuelle du runtime Android, mais non exposées à la machine virtuelle Mono. Ceux-ci sont ennuyeux et ne seront pas traitées davantage. Ils sont collectés normalement par le runtime Android machine virtuelle. 
 
 -   **Objets de l’homologue**: les types qui implémentent [IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) , par exemple, tous les [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) et [Java.Lang.Throwable](https://developer.xamarin.com/api/type/Java.Lang.Throwable/) sous-classes. Les instances de ces types ont deux « halfs » un *homologue managé* et un *homologue natif*. L’homologue géré est une instance de la C# classe. L’homologue natif est une instance d’une classe Java dans le runtime Android machine virtuelle et le C# [IJavaObject.Handle](https://developer.xamarin.com/api/property/Android.Runtime.IJavaObject.Handle/) propriété contient une référence globale de JNI à l’homologue natif. 
 
 
 Il existe deux types de pairs natifs :
 
--   **Framework homologues** : les types « Normal » Java qui savent rien de Xamarin.Android, par exemple, [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/).
+-   **Framework homologues** : Les types Java « Normal » qui savent rien de Xamarin.Android, par exemple, [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/).
 
--   **Utilisateur homologues** : [Android Callable Wrappers](~/android/platform/java-integration/working-with-jni.md) qui sont généré au moment de la génération pour chaque sous-classe Java.Lang.Object présente dans l’application.
+-   **Utilisateur homologues** : [Les Wrappers RCW Android](~/android/platform/java-integration/working-with-jni.md) qui sont généré au moment de la génération pour chaque sous-classe Java.Lang.Object présente dans l’application.
 
 
 Qu’il sont a deux machines virtuelles au sein d’un processus de Xamarin.Android, il existe deux types de garbage collection :
@@ -69,7 +69,7 @@ Le résultat final est qu’une instance d’un objet homologue se trouvera tant
 
 ## <a name="object-cycles"></a>Cycles de l’objet
 
-Objets de pair sont logiquement présentes dans le runtime Android et Mono de la machine virtuelle. Par exemple, un [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) instance managée homologue aura un correspondant [android.app.Activity](http://developer.android.com/reference/android/app/Activity.html) instance du framework homologue Java. Tous les objets qui héritent de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) peut s’attendre à avoir des représentations dans les deux machines virtuelles. 
+Objets de pair sont logiquement présentes dans le runtime Android et Mono de la machine virtuelle. Par exemple, un [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) instance managée homologue aura un correspondant [android.app.Activity](https://developer.android.com/reference/android/app/Activity.html) instance du framework homologue Java. Tous les objets qui héritent de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) peut s’attendre à avoir des représentations dans les deux machines virtuelles. 
 
 Tous les objets dont la représentation dans les deux machines virtuelles seront ont des durées de vie qui sont étendues par rapport aux objets qui sont présents uniquement dans une seule machine virtuelle (comme un [ `System.Collections.Generic.List<int>` ](xref:System.Collections.Generic.List%601)). Appel [GC. Collecter](xref:System.GC.Collect) ne collectons pas nécessairement ces objets, comme le GC Xamarin.Android doit s’assurer que l’objet n’est pas référencé par une machine virtuelle avant sa collecte. 
 
@@ -102,10 +102,10 @@ Le pont GC fonctionne pendant un nettoyage Mono et les figures out quels homolog
 
 Ce processus complexe est ce qui permet aux sous-classes de `Java.Lang.Object` à référence librement existe-t-il des objets ; il supprime toutes les restrictions sur le Java objets peuvent être liés à C#. En raison de cette complexité, le processus de pont peut être très coûteux et peut provoquer des pauses notables dans une application. Si l’application rencontre des pauses significatifs, il est conseillé de rechercher un des trois implémentations de pont de GC suivantes : 
 
--   **Tarjan** -une entièrement nouvelle conception du pont GC basée sur [algorithme de Robert Tarjan et vers l’arrière référence la propagation](http://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
+-   **Tarjan** -une entièrement nouvelle conception du pont GC basée sur [algorithme de Robert Tarjan et vers l’arrière référence la propagation](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
     Il offre les meilleures performances sous nos charges de travail simulées, mais il a également le partage de code expérimentale plus volumineux. 
 
--   **Nouvelle** -révision majeure du code d’origine, résolution des deux instances de comportement quadratique mais en conservant l’algorithme principal (selon [algorithme de Kosaraju](http://en.wikipedia.org/wiki/Kosaraju's_algorithm) pour recherche fortement des composants connectés). 
+-   **Nouvelle** -révision majeure du code d’origine, résolution des deux instances de comportement quadratique mais en conservant l’algorithme principal (selon [algorithme de Kosaraju](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) pour recherche fortement des composants connectés). 
 
 -   **Ancien** -l’implémentation d’origine (considéré comme le plus stable des trois). Il s’agit d’une application doit utiliser si le pont le `GC_BRIDGE` pauses sont acceptables. 
 
@@ -166,7 +166,7 @@ using (var d = Drawable.CreateFromPath ("path/to/filename"))
     imageView.SetImageDrawable (d);
 ```
 
-La méthode ci-dessus est sécurisée, car l’homologue qui [Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) retourne fait référence à un homologue de Framework, *pas* un homologue de l’utilisateur. Le `Dispose()` appeler à la fin de la `using` bloc rompt la relation entre managé [Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) et framework [Drawable](http://developer.android.com/reference/android/graphics/drawable/Drawable.html) instances, ce qui permet de l’instance de Java être collectées dès que le runtime Android a besoin. Cela serait *pas* être sûr si l’instance d’homologue auquel un homologue de l’utilisateur ; nous utilisons ici des informations de « externes » pour *savoir* qui le `Drawable` ne peut pas faire référence à un homologue de l’utilisateur et donc le `Dispose()` appeler est plus sûr. 
+La méthode ci-dessus est sécurisée, car l’homologue qui [Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) retourne fait référence à un homologue de Framework, *pas* un homologue de l’utilisateur. Le `Dispose()` appeler à la fin de la `using` bloc rompt la relation entre managé [Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) et framework [Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) instances, ce qui permet de l’instance de Java être collectées dès que le runtime Android a besoin. Cela serait *pas* être sûr si l’instance d’homologue auquel un homologue de l’utilisateur ; nous utilisons ici des informations de « externes » pour *savoir* qui le `Drawable` ne peut pas faire référence à un homologue de l’utilisateur et donc le `Dispose()` appeler est plus sûr. 
 
 
 #### <a name="disposing-other-types"></a>Suppression d’autres Types 
@@ -351,14 +351,14 @@ Le garbage collector de Xamarin.Android peut être configuré en définissant le
 
 Le `MONO_GC_PARAMS` variable d’environnement est une liste séparée par des virgules des paramètres suivants : 
 
--   `nursery-size` = *taille* : définit la taille de la « nursery ». La taille est spécifiée en octets et doit être une puissance de deux. Les suffixes `k` , `m` et `g` peuvent être utilisées pour spécifier les kilo, méga et gigaoctets, respectivement. La « nursery » est la première génération (de deux). Une plus grande nursery accélérera généralement le programme mais évidemment utilise davantage de mémoire. La « nursery » par défaut de taille 512 Ko. 
+-   `nursery-size` = *taille* : Définit la taille de la « nursery ». La taille est spécifiée en octets et doit être une puissance de deux. Les suffixes `k` , `m` et `g` peuvent être utilisées pour spécifier les kilo, méga et gigaoctets, respectivement. La « nursery » est la première génération (de deux). Une plus grande nursery accélérera généralement le programme mais évidemment utilise davantage de mémoire. La « nursery » par défaut de taille 512 Ko. 
 
--   `soft-heap-limit` = *taille* : le nombre maximal de cibles gérées consommation de mémoire pour l’application. Lors de l’utilisation de la mémoire est inférieure à la valeur spécifiée, le GC est optimisé pour la durée d’exécution (collections moins). 
+-   `soft-heap-limit` = *taille* : La consommation de mémoire managée maximale cible pour l’application. Lors de l’utilisation de la mémoire est inférieure à la valeur spécifiée, le GC est optimisé pour la durée d’exécution (collections moins). 
     Au-delà de cette limite, le GC est optimisé pour l’utilisation de la mémoire (collections plus). 
 
--   `evacuation-threshold` = *seuil* : définit le seuil d’évacuation en pourcentage. La valeur doit être un entier compris entre 0 et 100. La valeur par défaut est 66. Si la phase de balayage de la collection détecte que le niveau d’occupation d’un type de bloc de tas spécifique est inférieure à ce pourcentage, il le fera une collection de copie pour ce type de bloc dans la collection majeure suivante, restaurant ainsi l’occupation à presque 100 %. La valeur 0 désactive d’évacuation. 
+-   `evacuation-threshold` = *seuil* : Définit le seuil d’évacuation en pourcentage. La valeur doit être un entier compris entre 0 et 100. La valeur par défaut est 66. Si la phase de balayage de la collection détecte que le niveau d’occupation d’un type de bloc de tas spécifique est inférieure à ce pourcentage, il le fera une collection de copie pour ce type de bloc dans la collection majeure suivante, restaurant ainsi l’occupation à presque 100 %. La valeur 0 désactive d’évacuation. 
 
--   `bridge-implementation` = *implémentation de combler* : Ceci définit l’option de pont de GC pour aider à GC de résoudre les problèmes de performances. Il existe trois valeurs possibles : *ancien* , *nouveau* , *tarjan*.
+-   `bridge-implementation` = *implémentation de combler* : Cela définira l’option GC pont pour aider à résoudre les problèmes de performances de GC. Il existe trois valeurs possibles : *ancien* , *nouveau* , *tarjan*.
 
 -   `bridge-require-precise-merge`: Le Tarjan pont contient une optimisation, ce qui peut, dans de rares occasions, un objet à être collectées un GC dès qu’il est tout d’abord garbage. Y compris de cette option désactive cette optimisation, rendre les catalogues globaux plus prévisible, mais potentiellement plus lent.
 

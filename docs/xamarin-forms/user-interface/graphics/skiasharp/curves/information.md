@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: 98975d51c31b8e8c52d184c631194388cd6cfa87
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b5d32f486b45005534adc8929caf6158d1c62a4b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053898"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671401"
 ---
 # <a name="path-information-and-enumeration"></a>Informations et énumération de tracés
 
@@ -140,7 +140,7 @@ Le **MONOCYCLE moitié-canal** page anime un dessin minimaliste sur un MONOCYCLE
 
 [![](information-images/unicyclehalfpipe-small.png "Triple capture d’écran de la page d’un canal moitié MONOCYCLE")](information-images/unicyclehalfpipe-large.png#lightbox "Triple capture d’écran de la page de canal MONOCYCLE moitié")
 
-Le `SKPaint` objet utilisé pour le contour du canal de moitié et le MONOCYCLE est défini en tant que champ dans le [ `UnicycleHalfPipePage` ]() classe. Également défini est le `SKPath` objet pour le MONOCYCLE :
+Le `SKPaint` objet utilisé pour le contour du canal de moitié et le MONOCYCLE est défini en tant que champ dans le `UnicycleHalfPipePage` classe. Également défini est le `SKPath` objet pour le MONOCYCLE :
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -253,7 +253,7 @@ Il est parfois souhaitable d’appliquer une algorithmique transformer un chemin
 
 La plupart de ces lettres sont constitués de lignes droites, mais ces lignes droites ont apparemment été détournés en courbes. Comment est-ce possible ?
 
-La clé est que les lignes droites d’origine sont répartis en une série de lignes droites plus petits. Ces droites individuelles plus petites peuvent ensuite être manipulées de différentes façons pour former une courbe. 
+La clé est que les lignes droites d’origine sont répartis en une série de lignes droites plus petits. Ces droites individuelles plus petites peuvent ensuite être manipulées de différentes façons pour former une courbe.
 
 Pour faciliter ce processus, le [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemple contient statique [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) classe avec un `Interpolate` méthode décompose un ligne droite dans nombreuses lignes courtes qui sont une seule unité de longueur. En outre, la classe contient plusieurs méthodes qui convertissent les trois types de courbes de Bézier en une série de petits traits qui se rapprochent de la courbe. (Les formules paramétriques ont été présentés dans l’article [ **trois Types de courbes de Bézier**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) Ce processus est appelé _APLANISSEMENT_ la courbe :
 

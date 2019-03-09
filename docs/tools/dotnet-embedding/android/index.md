@@ -5,13 +5,8 @@ ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 author: lobrien
 ms.author: laobri
 ms.date: 06/15/2018
-ms.openlocfilehash: 5c8d493bf54ee1a8a1e7d4b3266451c78a4aa51e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123680"
 ---
+
 # <a name="net-embedding-on-android"></a>.NET incorporation sur Android
 
 Dans certains cas, vous souhaiterez sans doute ajouter une bibliothèque .NET de Xamarin à un projet Android natif existant. Pour ce faire, vous pouvez utiliser la [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/) outil pour transformer votre bibliothèque .NET en une bibliothèque native qui peut être incorporée dans une application Android native basée sur Java.
@@ -26,7 +21,7 @@ Pour Xamarin.Android travailler avec l’incorporation de .NET, vous devez les �
 
 -   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) ou version ultérieure doit être installé.
 
--   **Kit de développement Java** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou version ultérieure doit être installé.
+-   **Kit de développement Java** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou version ultérieure doit être installé.
 
 
 ## <a name="using-embeddinator-4000"></a>À l’aide de Embeddinator-4000
@@ -62,9 +57,9 @@ Pour Xamarin.Android travailler avec l’incorporation de .NET, vous devez les �
 
 -   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) ou version ultérieure doit être installé.
 
--   **Kit de développement Java** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou version ultérieure doit être installé.
+-   **Kit de développement Java** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou version ultérieure doit être installé.
 
--   **Mono** &ndash; [5.0 Mono](http://www.mono-project.com/download/) ou version ultérieure doit être installé (mono est installé avec Visual Studio pour Mac).
+-   **Mono** &ndash; [5.0 Mono](https://www.mono-project.com/download/) ou version ultérieure doit être installé (mono est installé avec Visual Studio pour Mac).
 
 
 ## <a name="using-embeddinator-4000"></a>À l’aide de Embeddinator-4000

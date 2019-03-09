@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: 18dac665eec1c5d3ac64065c37e73022670c1ba5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48ef40ce8560fd9fbb842dde70622d968591ab98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108845"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666903"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Fourniture de compatibilité avec le Package de prise en charge Android descendante
 
-L’utilité des Fragments serait limitée sans des raisons de compatibilité avec des appareils (11 de niveau API) 3.0 préalables à Android vers l’arrière. Pour fournir cette fonctionnalité, Google a introduit le [bibliothèque de prise en charge](http://developer.android.com/sdk/compatibility-library.html) (appelé à l’origine le *bibliothèque de compatibilité Android* quand il a été publié) les backports certaines des API à partir de versions plus récentes de Android aux anciennes versions d’Android. Il est le Package de prise en charge Android qui permet aux appareils exécutant Android 1.6 (API de niveau 4) pour Android 2.3.3. (Niveau d’API 10).
+L’utilité des Fragments serait limitée sans des raisons de compatibilité avec des appareils (11 de niveau API) 3.0 préalables à Android vers l’arrière. Pour fournir cette fonctionnalité, Google a introduit le [bibliothèque de prise en charge](https://developer.android.com/sdk/compatibility-library.html) (appelé à l’origine le *bibliothèque de compatibilité Android* quand il a été publié) les backports certaines des API à partir de versions plus récentes de Android aux anciennes versions d’Android. Il est le Package de prise en charge Android qui permet aux appareils exécutant Android 1.6 (API de niveau 4) pour Android 2.3.3. (Niveau d’API 10).
 
 > [!NOTE]
 > Uniquement les `ListFragment` et `DialogFragment` sont disponibles via le Package de prise en charge Android. Aucune autre Fragment sous-classes, telles que le `PreferenceFragment,` sont pris en charge dans le Package de prise en charge Android. Ils ne fonctionnent pas dans les 3.0 applications préalables à Android. 

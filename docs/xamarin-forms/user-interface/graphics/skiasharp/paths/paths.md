@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 006e4c2b2de56fef96c561e788992649f6582d24
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 833e24e91a37b92eb5025aacdc9509f092b823cd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054935"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672084"
 ---
 # <a name="path-basics-in-skiasharp"></a>Principes fondamentaux de chemin d’accès dans SkiaSharp
 
@@ -28,26 +28,26 @@ Un chemin d’accès de graphiques est encapsulée par la [ `SKPath` ](xref:Skia
 
 Un profil de charge commence généralement par un appel à la méthode suivante de `SKPath`:
 
-- [`MoveTo`](SkiaSharp.SKPath.MoveTo*) Pour commencer un nouveau profil
+- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) Pour commencer un nouveau profil
 
 L’argument de cette méthode est un point unique, vous pouvez exprimer sous la forme d’un `SKPoint` valeur ou en tant que distinct X et Y des coordonnées. Le `MoveTo` appel établit un point au début de contour et un initial *point actuel*. Vous pouvez appeler les méthodes suivantes pour continuer le contour avec une ligne ou de la courbe à partir du point actuel à un point spécifié dans la méthode, qui devient alors le nouveau point actuel :
 
-- [`LineTo`](SkiaSharp.SKPath.LineTo*) Pour ajouter une ligne droite pour le chemin d’accès
-- [`ArcTo`](SkiaSharp.SKPath.ArcTo*) Pour ajouter un arc, qui est une ligne sur la circonférence d’un cercle ou une ellipse
-- [`CubicTo`](SkiaSharp.SKPath.CubicTo*) Pour ajouter une courbe de Bézier cubique
-- [`QuadTo`](SkiaSharp.SKPath.QuadTo*) Pour ajouter une courbe de Bézier quadratique
-- [`ConicTo`](SkiaSharp.SKPath.ConicTo*) Pour ajouter une rational quadratique spline de Bézier, qui peut rendre avec précision les sections conique (points de suspension, paraboles ou et hyperboles)
+- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) Pour ajouter une ligne droite pour le chemin d’accès
+- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) Pour ajouter un arc, qui est une ligne sur la circonférence d’un cercle ou une ellipse
+- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*) Pour ajouter une courbe de Bézier cubique
+- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*) Pour ajouter une courbe de Bézier quadratique
+- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) Pour ajouter une rational quadratique spline de Bézier, qui peut rendre avec précision les sections conique (points de suspension, paraboles ou et hyperboles)
 
 Aucun de ces cinq méthodes contient toutes les informations nécessaires pour décrire la ligne ou la courbe. Chacune de ces cinq méthodes fonctionne conjointement avec le point actuel établi par l’appel de méthode qui la précède immédiatement. Par exemple, le `LineTo` méthode ajoute une ligne droite pour le contour basé sur le point actuel, par conséquent, le paramètre `LineTo` n'est qu’un seul point.
 
 Le `SKPath` classe définit également les méthodes qui ont les mêmes noms que ces six méthodes, mais avec un `R` au début :
 
-- [`RMoveTo`]((SkiaSharp.SKPath.RMoveTo*))
-- [`RLineTo`](SkiaSharp.SKPath.RLineTo*)
-- [`RArcTo`](SkiaSharp.SKPath.RArcTo*)
-- [`RCubicTo`](SkiaSharp.SKPath.RCubicTo*)
-- [`RQuadTo`](SkiaSharp.SKPath.RQuadTo*)
-- [`RConicTo`](SkiaSharp.SKPath.RConicTo*)
+- [`RMoveTo`](xref:SkiaSharp.SKPath.RMoveTo*)
+- [`RLineTo`](xref:SkiaSharp.SKPath.RLineTo*)
+- [`RArcTo`](xref:SkiaSharp.SKPath.RArcTo*)
+- [`RCubicTo`](xref:SkiaSharp.SKPath.RCubicTo*)
+- [`RQuadTo`](xref:SkiaSharp.SKPath.RQuadTo*)
+- [`RConicTo`](xref:SkiaSharp.SKPath.RConicTo*)
 
 Le `R` est l’acronyme *relatif*. Ces méthodes ont la même syntaxe que les méthodes correspondantes sans le `R` mais sont par rapport au point actuel. Ils sont pratiques pour le dessin des parties similaires d’un chemin d’accès dans une méthode que vous appelez plusieurs fois.
 

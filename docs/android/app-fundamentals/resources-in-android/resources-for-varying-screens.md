@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: df8ee3da8a1341cd1dd879e8e70687d9fbd9957b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63cbe556783ffe22512ff5312817d522120bd15e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117432"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670569"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Création de ressources pour différents écrans
 
@@ -30,7 +30,7 @@ Quelques termes et concepts sont importants à comprendre pour prendre en charge
 
 - **Pixels indépendants de densité (dp)** &ndash; une unité virtuelle pour autoriser les mises en page à être conçu indépendant de densité. Cette formule est utilisée pour convertir les dp en pixels de l’écran :
 
-    px &equals; dp &times; PPP &divide; 160
+    px &equals; dp &times; dpi &divide; 160
 
 - **Orientation** &ndash; l’orientation de l’écran est considéré comme paysage lorsqu’il est plus large que haute. En revanche, orientation portrait est lorsque l’écran est plus haut que large. L’orientation peut changer pendant la durée de vie d’une application que l’utilisateur fait pivoter l’appareil.
 
@@ -50,21 +50,21 @@ Toutefois, il est possible que la mise à l’échelle entraînera bitmaps flou.
 
 ### <a name="declare-the-supported-screen-size"></a>Déclarer la taille d’écran prises en charge
 
-Déclaration de la taille d’écran garantit que seuls les appareils pris en charge peuvent télécharger l’application. Cela s’effectue en définissant le [prend en charge-écrans](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) élément dans le **AndroidManifest.xml** fichier. Cet élément est utilisé pour spécifier les tailles d’écran sont prises en charge par l’application. Un écran donné est censé être pris en charge si l’application peut placer correctement ses dispositions pour remplir l’écran. À l’aide de cet élément de manifeste, l’application s’afficheront pas dans [ *Google Play* ](https://play.google.com/) pour les appareils qui ne respectent pas les spécifications de l’écran. Toutefois, l’application s’exécutera sur les périphériques avec écrans non pris en charge, mais les dispositions peuvent sembler floues et sans aspect pixélisé.
+Déclaration de la taille d’écran garantit que seuls les appareils pris en charge peuvent télécharger l’application. Cela s’effectue en définissant le [prend en charge-écrans](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) élément dans le **AndroidManifest.xml** fichier. Cet élément est utilisé pour spécifier les tailles d’écran sont prises en charge par l’application. Un écran donné est censé être pris en charge si l’application peut placer correctement ses dispositions pour remplir l’écran. À l’aide de cet élément de manifeste, l’application s’afficheront pas dans [ *Google Play* ](https://play.google.com/) pour les appareils qui ne respectent pas les spécifications de l’écran. Toutefois, l’application s’exécutera sur les périphériques avec écrans non pris en charge, mais les dispositions peuvent sembler floues et sans aspect pixélisé.
 
 Écran pris en charge sixes sont déclarés dans le **Properites/AndroidManifest.xml** fichier de la solution :
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Manifeste Android](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
-[![Manifeste Android](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
-Modifier **AndroidManifest.xml** à inclure [prend en charge-écrans](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+Modifier **AndroidManifest.xml** à inclure [prend en charge-écrans](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -178,7 +178,7 @@ Ce site Web indiqueront la création de bitmaps qui ciblent les quatre densités
 
 Android s’exécute sur un nombre déconcertante d’appareils, et la combinaison de tailles d’écran et densités d’écran peut sembler insurmontable. Les conseils suivants peuvent aider à réduire l’effort nécessaire pour prendre en charge de différents appareils :
 
-- **Seulement concevoir et développer ce dont vous avez besoin** &ndash; il existe de nombreux périphériques ici, mais certains existent dans les facteurs de forme rares qui peuvent prendre des efforts considérables pour concevoir et développer pour. Le [ **taille de l’écran et la densité** ](http://developer.android.com/resources/dashboard/screens.html) tableau de bord est une page fournie par Google qui fournit des données sur la répartition de la matrice de densité de tailles d’écran/écran. Cette répartition fournit un aperçu sur l’effort de développement de la prise en charge des écrans.
+- **Seulement concevoir et développer ce dont vous avez besoin** &ndash; il existe de nombreux périphériques ici, mais certains existent dans les facteurs de forme rares qui peuvent prendre des efforts considérables pour concevoir et développer pour. Le [ **taille de l’écran et la densité** ](https://developer.android.com/resources/dashboard/screens.html) tableau de bord est une page fournie par Google qui fournit des données sur la répartition de la matrice de densité de tailles d’écran/écran. Cette répartition fournit un aperçu sur l’effort de développement de la prise en charge des écrans.
 
 - **Utiliser des points de distribution plutôt que de Pixels** -Pixels devient problématiques en tant que les modifications de densité d’écran. Faire pas coder en dur les valeurs de pixel. Évitez les pixels en faveur de point de distribution (pixels indépendants de densité).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 69952b0bac884fe8b14edcbb87aa8fad47594880
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526558"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670700"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Affichage d’une image dans Xamarin.iOS
 
@@ -42,7 +42,7 @@ Pour créer un nouvel ensemble de l’image et ajouter des images, procédez com
 
     ![](displaying-an-image-images/imageset03.png "L’éditeur d’ensemble de l’Image")
 4. À ce stade, faites glisser dans des images pour chacun des différents appareils et résolutions nécessaires. 
-5. Double-cliquez sur le nouvel ensemble image **nom** dans le **liste Assets** pour le modifier : ![](displaying-an-image-images/imageset04.png "nom du nouveau jeu d’images de la modification")
+5. Double-cliquez sur le nouvel ensemble image **nom** dans le **liste Assets** pour le modifier : ![](displaying-an-image-images/imageset04.png "Nom du nouveau jeu d’images de la modification")
 
 Lorsque vous utilisez un **Image définie** dans le concepteur iOS, il suffit de sélectionner le nom dans la liste déroulante dans l’éditeur de propriétés :
 
@@ -213,7 +213,7 @@ Pour tout autre format d’image, incluez l’extension portant le nom. Exemple 
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 ```
 
-Pour plus d’informations sur les icônes et des images, consultez la documentation Apple sur [personnaliser les icônes et les instructions de création d’Image](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
+Pour plus d’informations sur les icônes et des images, consultez la documentation Apple sur [personnaliser les icônes et les instructions de création d’Image](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
 ## <a name="displaying-an-image-in-a-storyboards"></a>Affichage d’une image dans un storyboards
 

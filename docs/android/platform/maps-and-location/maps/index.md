@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: fa7fff86e9a7e23bf332f2d62c3ec1a6ed3c54e1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117127"
 ---
+
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Comment utiliser Google Maps et un emplacement avec Xamarin.Android
 
 _Cet article explique comment utiliser des cartes et emplacement avec Xamarin.Android. Il couvre tout depuis en tirant parti de l’application des cartes intégrées à l’utilisation de la V2 mappe des API Android de Google directement._
@@ -32,8 +27,8 @@ Tout d’abord, elles expliquent comment tirer parti des applications de cartes 
 
 ## <a name="related-links"></a>Liens associés
 
-- [MapsAndLocationDemo_v3 (exemple)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
+- [MapsAndLocationDemo_v3 (sample)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [Cycle de vie des activités](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obtention d’une clé API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Liste des intentions : Appel d’Applications de Google sur les appareils Android](http://developer.android.com/guide/appendix/g-app-intents.html)
-- [Emplacement et mappages](http://developer.android.com/guide/topics/location/index.html)
+- [Liste des intentions : Ouverture des Applications de Google sur les appareils Android](https://developer.android.com/guide/appendix/g-app-intents.html)
+- [Emplacement et mappages](https://developer.android.com/guide/topics/location/index.html)

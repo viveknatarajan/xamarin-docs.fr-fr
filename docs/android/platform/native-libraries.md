@@ -1,19 +1,19 @@
 ---
-title: À l’aide de bibliothèques natives
+title: Utilisation de bibliothèques natives
 ms.prod: xamarin
 ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 0df39dc51cf17e1b9ecfd2279d047020f0237cb6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1195685db9e85e7fba006272ef300e22d47d1fa6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123089"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666356"
 ---
-# <a name="using-native-libraries"></a>À l’aide de bibliothèques natives
+# <a name="using-native-libraries"></a>Utilisation de bibliothèques natives
 
 Xamarin.Android prend en charge l’utilisation de bibliothèques natives via le mécanisme standard de PInvoke. Vous pouvez également regrouper des bibliothèques natives supplémentaires qui ne font pas partie du système d’exploitation dans votre fichier .apk.
 
@@ -40,7 +40,7 @@ Vous pouvez également modifier votre fichier projet pour spécifier expliciteme
 </ItemGroup>
 ```
 
-Pour plus d’informations sur l’utilisation de bibliothèques natives, consultez [assurer l’interopérabilité avec les bibliothèques natives](http://www.mono-project.com/docs/advanced/pinvoke/).
+Pour plus d’informations sur l’utilisation de bibliothèques natives, consultez [assurer l’interopérabilité avec les bibliothèques natives](https://www.mono-project.com/docs/advanced/pinvoke/).
 
 ## <a name="debugging-native-code-with-visual-studio-2017"></a>Débogage du Code natif avec Visual Studio 2017
 
@@ -59,5 +59,5 @@ Visual Studio C++ les développeurs peuvent voir le [SanAngeles_NativeDebug](htt
 
 ## <a name="related-links"></a>Liens associés
 
-- [SanAngeles_NativeDebug (exemple)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
+- [SanAngeles_NativeDebug (sample)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
 - [Développement d’Applications natives Xamarin Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

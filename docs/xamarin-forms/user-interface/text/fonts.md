@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
-ms.openlocfilehash: fc989ef73c9248bd359c9b1d35aaa9bdde846690
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557050"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669555"
 ---
 # <a name="fonts-in-xamarinforms"></a>Polices dans Xamarin.Forms
 
@@ -140,7 +140,7 @@ Les étapes requises pour chaque plateforme sont décrites ci-dessous. En inclua
 ### <a name="ios"></a>iOS
 
 Il est possible d’afficher une police personnalisée, tout d’abord s’assurer qu’elle est chargée, puis référence par nom à l’aide de Xamarin.Forms `Font` méthodes.
-Suivez les instructions de [ce billet de blog](http://blog.xamarin.com/custom-fonts-in-ios/):
+Suivez les instructions de [ce billet de blog](https://blog.xamarin.com/custom-fonts-in-ios/):
 
 1. Ajouter le fichier de police avec **Action de génération : BundleResource**, and
 2. Mise à jour le **Info.plist** fichier (**polices fournies par l’application**, ou `UIAppFonts`, key), puis

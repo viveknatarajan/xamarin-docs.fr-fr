@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 1cb71fa2c73b9ab151555559b22def4be1cf5c73
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 81bb4e302f81b58eec91ea2a2aef985adbf72e2c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112765"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670920"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
@@ -19,7 +19,7 @@ Le [GridViewPager](https://developer.xamarin.com/samples/GridViewPager/) exemple
 
 ![Capture d’écran de GridViewPager sur un écran carré](gridviewpager-images/gridviewpager.png)
 
-Tout d’abord ajouter le [Xamarin Android Wear prise en charge](http://www.nuget.org/packages/Xamarin.Android.Wear/) package NuGet à votre projet.
+Tout d’abord ajouter le [Xamarin Android Wear prise en charge](https://www.nuget.org/packages/Xamarin.Android.Wear/) package NuGet à votre projet.
 
 La mise en page XML ressemble à ceci :
 
@@ -31,8 +31,8 @@ La mise en page XML ressemble à ceci :
     android:keepScreenOn="true" />
 ```
 
-Créer un [`GridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(ou sous-classe comme [`FragmentGridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+Créer un [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(ou sous-classe comme [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 pour fournir des vues pour afficher en tant que l’utilisateur navigue.
 
 Le [exemple d’adaptateur](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) montre comment implémenter les méthodes requises, y compris des remplacements pour `RowCount`, `GetColumnCount`, `GetBackground`, et `GetFragment`
@@ -49,4 +49,4 @@ pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 
 - [Doc de sélecteur 2D de Google](https://developer.android.com/training/wearables/ui/2d-picker.html)
 - [Android.support.wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-- [GridViewPager (exemple)](https://developer.xamarin.com/samples/GridViewPager/)
+- [GridViewPager (sample)](https://developer.xamarin.com/samples/GridViewPager/)

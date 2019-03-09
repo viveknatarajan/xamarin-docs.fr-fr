@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: db442f45c615b680264e79262f62062eb6a6bfd5
-ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
+ms.openlocfilehash: 12ff6f615b30e53704fee6368c9d7f171f881df0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012293"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671063"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>À l’aide de l’API de cartes Google dans votre application
 
@@ -297,7 +297,7 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-L’API Maps fournit un [CameraPosition](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) qui regroupera toutes les valeurs possibles pour la position de la caméra. Une instance de cette classe peut être fournie à la [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) méthode qui retournera un `CameraUpdate` objet. L’API de cartes inclut également le [CameraPosition.Builder](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) classe qui fournit une API fluent création `CameraPosition` objets.
+L’API Maps fournit un [CameraPosition](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) qui regroupera toutes les valeurs possibles pour la position de la caméra. Une instance de cette classe peut être fournie à la [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) méthode qui retournera un `CameraUpdate` objet. L’API de cartes inclut également le [CameraPosition.Builder](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) classe qui fournit une API fluent création `CameraPosition` objets.
 L’extrait de code suivant montre un exemple de création un `CameraUpdate` à partir d’un `CameraPosition` et son utilisation pour modifier la position de la caméra sur un `GoogleMap`:
 
 ```csharp
@@ -342,7 +342,7 @@ L’API Maps fournit un [marqueur](https://developers.google.com/android/referen
 
 ##### <a name="adding-a-marker"></a>Ajout d’un marqueur
 
-Pour ajouter un marqueur à un mappage, il convient de créer un nouveau [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) de l’objet, puis appelez le [AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) méthode sur un `GoogleMap` instance. Cette méthode retournera un [marqueur](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) objet.
+Pour ajouter un marqueur à un mappage, il convient de créer un nouveau [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) de l’objet, puis appelez le [AddMarker](https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) méthode sur un `GoogleMap` instance. Cette méthode retournera un [marqueur](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) objet.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -580,5 +580,5 @@ Rappelez-vous qu’une fenêtre d’info est statique `View` est restituée en t
 - [Mappe les Google Android API v2](https://developers.google.com/maps/documentation/android-sdk/intro)
 - [Services de Google Play APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)
 - [Obtention d’une clé de l’API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [utilise-library](https://developer.android.com/guide/topics/manifest/uses-library-element)
-- [utilise la fonctionnalité](https://developer.android.com/guide/topics/manifest/uses-feature-element)
+- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element)
+- [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element)

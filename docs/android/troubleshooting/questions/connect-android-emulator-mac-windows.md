@@ -1,5 +1,5 @@
 ---
-title: Il est possible de se connecter à des émulateurs Android fonctionne sur un Mac à partir d’une machine virtuelle Windows ?
+title: Est-il possible de se connecter à des émulateurs Android exécutés sur un Mac à partir d’une machine virtuelle Windows ?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 6e66bf4edb4269aa0f3b765df4a08b78c128f763
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 35bfdb92ccfffe54f0ca10dc001d8919703a5bd8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115631"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668151"
 ---
-# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Il est possible de se connecter à des émulateurs Android fonctionne sur un Mac à partir d’une machine virtuelle Windows ?
+# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Est-il possible de se connecter à des émulateurs Android exécutés sur un Mac à partir d’une machine virtuelle Windows ?
 
 Pour vous connecter à l’émulateur Android en cours d’exécution sur un Mac à partir d’une machine virtuelle de Windows, utilisez les étapes suivantes :
 
@@ -35,9 +35,9 @@ Pour vous connecter à l’émulateur Android en cours d’exécution sur un Mac
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    Le port portant un numéro impair est celui utilisé pour se connecter à `adb`. Voir aussi [ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    Le port portant un numéro impair est celui utilisé pour se connecter à `adb`. Voir aussi [ https://developer.android.com/tools/devices/emulator.html#emulatornetworking ](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4.  _Option 1_: utilisation [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
+4.  _Option 1_: Utilisation [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
     pour transférer des paquets TCP entrants reçus en externe sur le port 5555 (ou tout autre port que vous aimez) au port impaires sur l’interface de bouclage (**127.0.0.1 5555** dans cet exemple), et pour transférer les paquets sortants dans l’autre sens :
 
     ```bash
@@ -50,7 +50,7 @@ Pour vous connecter à l’émulateur Android en cours d’exécution sur un Mac
 
     (Option 1 est généralement plus facile que Option 2, en particulier si **Préférences système > sécurité et confidentialité > pare-feu** est allumé.) 
 
-    _Option 2_: utilisation [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
+    _Option 2_: Utilisation [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
     Pour rediriger les paquets TCP port `5555` (ou tout autre port que vous le souhaitez) sur le [mise en réseau partagé](http://kb.parallels.com/en/4948) interface au port impaires sur l’interface de bouclage (`127.0.0.1:5555` dans cet exemple) :
 
     ```bash
@@ -95,7 +95,7 @@ Petit Avertissement : Si vous utilisez le port `5555` pour le port local, `adb`
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>À l’aide de l’autre technique `adb -H` n’est pas pris en charge
 
-En théorie, une autre approche consisterait à utiliser `adb`de fonctionnalité intégrée pour se connecter à un `adb` server s’exécutant sur un ordinateur distant (consultez par exemple [ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325)).
+En théorie, une autre approche consisterait à utiliser `adb`de fonctionnalité intégrée pour se connecter à un `adb` server s’exécutant sur un ordinateur distant (consultez par exemple [ https://stackoverflow.com/a/18551325 ](https://stackoverflow.com/a/18551325)).
 Mais les extensions de l’IDE de Xamarin.Android ne fournissent pas possible de configurer cette option.
 
 ## <a name="contact-information"></a>Informations de contact

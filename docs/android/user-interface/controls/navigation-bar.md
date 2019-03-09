@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: ce80fab39c814204631c5cc408c3f0ee99a329e6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9455cac81a0f9ea81e08cf63397e45c1698e1c1b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110555"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670010"
 ---
 # <a name="navigation-bar"></a>Barre de navigation
 
@@ -71,4 +71,4 @@ tv.SystemUiVisibilityChange +=
 
 - [SystemUIVisibilityDemo (exemple)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
 - [Présentation d’Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plateforme 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
+- [Plateforme 4.0 Android](https://developer.android.com/sdk/android-4.0.html)

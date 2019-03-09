@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6f5af5fde46676cf669e6c02fb83f4aac5d31c46
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 4048ec78d48b810b39d46fbcb7708860c478cce3
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292088"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667202"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Introduction aux Styles de Xamarin.Forms
 
@@ -133,7 +133,7 @@ Les articles de cette section montrent et expliquent comment créer et appliquer
 > [!NOTE]
 > **Qu’est StyleId ?**
 >
-> Avant de Xamarin.Forms 2.2, le [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) propriété a été utilisée pour identifier des éléments individuels dans une application pour l’identification dans l’interface utilisateur de test et dans des moteurs de thème comme Pixate. Toutefois, 2.2 de Xamarin.Forms a introduit le [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) propriété, qui a remplacé le [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) propriété. Pour plus d’informations, consultez [Xamarin.Forms automatiser les tests avec Xamarin.UITest et Test Cloud](~/xamarin-forms/deploy-test/uitest-and-test-cloud.md).
+> Avant de Xamarin.Forms 2.2, le [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) propriété a été utilisée pour identifier des éléments individuels dans une application pour l’identification dans l’interface utilisateur de test et dans des moteurs de thème comme Pixate. Toutefois, 2.2 de Xamarin.Forms a introduit le [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) propriété, qui a remplacé le [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) propriété.
 
 ## <a name="related-links"></a>Liens connexes
 

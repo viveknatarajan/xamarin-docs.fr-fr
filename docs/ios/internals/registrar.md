@@ -6,13 +6,13 @@ ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 8/29/2018
-ms.openlocfilehash: cd9e92e2c96d0a0696633e49869f2661e410d343
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 08/29/2018
+ms.openlocfilehash: 83340ce2d5db145c29166d90d3a5180b1767d7ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233586"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672493"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Bureau d’enregistrement de type pour Xamarin.iOS
 
@@ -144,7 +144,7 @@ Voici quelques exemples des erreurs interceptées par le bureau d’enregistreme
 
     ```csharp
     [Register]
-    class MyDemo : NSObject 
+    class MyDemo : NSObject
     {
         [Export ("foo:")]
         void Foo (NSString str);
@@ -178,7 +178,7 @@ Voici quelques exemples des erreurs interceptées par le bureau d’enregistreme
 
 Voici quelques éléments à prendre en compte sur le nouveau bureau d’enregistrement :
 
-- Certaines des bibliothèques tierces doivent être mis à jour pour fonctionner avec le nouveau système d’inscription. Consultez [requis modifications](#required_modifications) ci-dessous pour plus d’informations.
+- Certaines des bibliothèques tierces doivent être mis à jour pour fonctionner avec le nouveau système d’inscription. Consultez [requis modifications](#required-modifications) ci-dessous pour plus d’informations.
 
 - Un inconvénient à court terme est également que Clang doit être utilisé si l’infrastructure de comptes est utilisée (il s’agit, car Apple **accounts.h** en-tête peut uniquement être compilé par Clang). Ajouter `--compiler:clang` aux arguments mtouch supplémentaires à utiliser Clang si vous utilisez Xcode 4.6 ou une version antérieure (Xamarin.iOS sélectionne automatiquement Clang dans Xcode 5.0 ou version ultérieure.)
 
@@ -203,6 +203,8 @@ L’ancien système d’inscription présente les inconvénients suivants :
 - Vous pouvez exporter des deux méthodes avec la même signature Objective-C. Une nouvelle fois celui est appelée à partir d’Objective-C était-elle aléatoire (mais ce problème n’était pas aussi courante que le précédent, principalement parce que la seule façon de rencontrer en fait ce bogue a été de substituer la méthode managée dans d’autres).
 - L’ensemble de méthodes qui ont été exportée était légèrement différente entre les builds dynamiques et statiques.
 - Il ne fonctionne pas correctement lors de l’exportation des classes génériques (quelle implémentation générique exacte exécutée lors de l’exécution serait aléatoire, ce qui entraîne un comportement indéterminé).
+
+<a name="required-modifications" />
 
 ## <a name="new-registrar-required-changes-to-bindings"></a>Nouveau bureau d’enregistrement : modifications aux liaisons requises
 

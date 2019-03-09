@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4b9c39a0ced9a264f501d78142c3bdfd556593ed
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: ff94211086956e36da377445d90359789b62fc60
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "30771318"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668320"
 ---
 # <a name="material-theme"></a>Thème matériau
 
@@ -37,7 +37,7 @@ Vous pouvez utiliser un thème unique pour une application entière, ou vous pou
 Thème de matériel est pris en charge uniquement sur Android 5.0 et versions ultérieures, vous ne pouvez pas utiliser (ou un thème personnalisé dérivé de matériel de thème) au thème de votre application pour l’exécution sur des versions antérieures d’Android. Toutefois, vous pouvez configurer votre application pour utiliser le thème de matériel sur les appareils Android 5.0 et normalement revenir à un thème antérieures lorsqu’elle s’exécute sur les versions antérieures d’Android (consultez le [compatibilité](#compatibility) section de cet article pour plus d’informations).
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités de thème de matériel Android 5.0 dans les applications basées sur Xamarin :
 
@@ -45,7 +45,7 @@ Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités
 
 -  **Kit de développement logiciel Android** &ndash; Android 5.0 (API 21) ou version ultérieure doit être installé via le gestionnaire Android SDK.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 peut être utilisé si vous êtes spécifiquement niveau d’API ciblé 23 et versions antérieur. JDK 1.8 est disponible à partir de [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+-  **Java JDK 1.8** &ndash; JDK 1.7 peut être utilisé si vous êtes spécifiquement niveau d’API ciblé 23 et versions antérieur. JDK 1.8 est disponible à partir de [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Pour savoir comment configurer un projet d’application Android 5.0, consultez [paramètre configurer un projet Android 5.0](~/android/platform/lollipop.md).
 
@@ -274,7 +274,7 @@ Cet article a présenté le nouveau style d’interface utilisateur matériau th
 
 ## <a name="related-links"></a>Liens associés
 
-- [ThemeSwitcher (exemple)](https://developer.xamarin.com/samples/monodroid/android5.0/ThemeSwitcher)
+- [ThemeSwitcher (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/ThemeSwitcher)
 - [Présentation d’interface (lollipop)](../platform/lollipop.md)
 - [CardView](controls/card-view.md)
 - [Autres ressources](../app-fundamentals/resources-in-android/alternate-resources.md)

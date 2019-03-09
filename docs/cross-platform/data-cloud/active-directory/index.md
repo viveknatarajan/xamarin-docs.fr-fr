@@ -6,23 +6,18 @@ ms.assetid: 0A74766A-B583-47AF-986C-FEA8F5CBF9CD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 9d34b38cf30a9d5a21f5d106f78823a2b077ef7c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780569"
 ---
+
 # <a name="microsoft-azure-active-directory"></a>Microsoft Azure Active Directory
 
 
-Azure Active Directory permet aux développeurs de sécuriser les ressources telles que des fichiers, des liens et API Web, Office 365 et plus à l’aide du même compte professionnel employés utilisent pour se connecter à leurs systèmes ou vérifier leurs messages électroniques.
+Azure Active Directory permet aux développeurs de sécuriser les ressources telles que des fichiers, des liens et API Web, Office 365 et bien plus encore avec le même compte d’organisation qu’employés utilisent pour se connecter à leurs systèmes ou vérifier leurs e-mails.
 
 ## <a name="getting-started"></a>Prise en main
 
-Suivez les [des instructions de mise en route](~/cross-platform/data-cloud/active-directory/get-started/index.md) pour configurer le portail Azure et ajouter l’authentification Active Directory à vos applications Xamarin.
+Suivez le [mise en route des instructions](~/cross-platform/data-cloud/active-directory/get-started/index.md) pour configurer le portail Azure et ajouter l’authentification Active Directory à vos applications Xamarin.
 
-1. [L’inscription auprès d’Azure Active Directory](~/cross-platform/data-cloud/active-directory/get-started/register.md) sur la *windowsazure.com* portal, puis
+1. [L’inscription à Azure Active Directory](~/cross-platform/data-cloud/active-directory/get-started/register.md) sur le *windowsazure.com* portail, puis
 2. [Configurer les services](~/cross-platform/data-cloud/active-directory/get-started/configure.md).
 3. Raccorder une des opérations suivantes :
 
@@ -32,5 +27,5 @@ Une fois que vous avez ajouté l’authentification Active Directory à une appl
 
 ## <a name="graph-api"></a>API Graph
 
-Découvrez comment accéder à la [API Graph](~/cross-platform/data-cloud/active-directory/graph.md) à l’aide de Xamarin (également décrite dans notre [blog](http://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/)).
+Découvrez comment accéder à la [API Graph](~/cross-platform/data-cloud/active-directory/graph.md) à l’aide de Xamarin (également abordés dans notre [blog](https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/)).
 

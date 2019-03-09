@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 243408ce6e2236b75ea35dfd17633a9a24493c1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ee07e4b47ed9e1bdca0efc814ad44e513f68e80
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102800"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672363"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Recherche avec le balisage Web dans Xamarin.iOS
 
@@ -163,7 +163,7 @@ Apple prend actuellement en charge les types de schéma suivants à partir de sc
  - InteractionCount
  - Offres
  - Organisation
- - Gammedeprix
+ - PriceRange
  - Recipe (Recette)
  - SearchAction
 
@@ -209,7 +209,7 @@ Enfin, le code HTML suivant ajoutez une action pour obtenir des instructions à 
 
 ```
 
-Pour plus d’informations, consultez le site d’Apple [Site de développement application recherche](http://developer.apple.com/ios/search/).
+Pour plus d’informations, consultez le site d’Apple [Site de développement application recherche](https://developer.apple.com/ios/search/).
 
 
 

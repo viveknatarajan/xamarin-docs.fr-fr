@@ -1,19 +1,14 @@
 ---
 title: Introduction aux Storyboards dans Xamarin.iOS
-description: Ce document fournit une introduction aux storyboards dans Xamarin.iOS. Il décrit l’utilisation d’une table de montage séquentiel pour définir une interface utilisateur, enchaînements et comment utiliser le concepteur iOS pour modifier des fichiers de la table de montage séquentiel.
+description: 'Ce document fournit une introduction aux storyboards dans Xamarin.iOS. Il décrit l’utilisation d’une table de montage séquentiel pour définir une interface utilisateur, enchaînements et comment utiliser le concepteur iOS pour modifier des fichiers de la table de montage séquentiel.'
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233560"
 ---
+
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduction aux Storyboards dans Xamarin.iOS
 
 Dans ce guide, nous allons expliquer quelles un Storyboard est et examiner certains des composants clés, tels que Segues. Nous allons étudier comment les Storyboards peuvent être créés et utilisés, et quels sont les avantages que qu’ils utilisent pour un développeur.
@@ -492,5 +487,5 @@ Cet article présente le concept des Storyboards et comment ils peuvent être ut
 
 - [Table de montage séquentiel manuelle (exemple)](https://developer.xamarin.com/samples/ManualStoryboard/)
 - [Introduction au concepteur iOS](~/ios/user-interface/designer/introduction.md)
-- [Conversion vers des animations](http://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
+- [Conversion vers des animations](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [Référence de classe de UIStoryboard](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

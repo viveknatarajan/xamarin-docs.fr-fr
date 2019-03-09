@@ -1,19 +1,19 @@
 ---
-title: À l’aide de Jenkins avec Xamarin
+title: Utilisation de Jenkins avec Xamarin
 description: Ce document décrit comment utiliser Jenkins pour l’intégration continue avec les applications Xamarin. Il explique comment installer, configurer et utiliser Jenkins.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: lobrien
 ms.author: laobri
 ms.date: 03/23/2017
-ms.openlocfilehash: f9d6775b5d31aa98087b8b8cb6aa1401429afd96
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7f66c97ce4b7880d32dfd87aec0691a26a08cfd2
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120682"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669425"
 ---
-# <a name="using-jenkins-with-xamarin"></a>À l’aide de Jenkins avec Xamarin
+# <a name="using-jenkins-with-xamarin"></a>Utilisation de Jenkins avec Xamarin
 
 _Ce guide explique comment configurer Jenkins en tant qu’un serveur d’intégration continue et d’automatiser la compilation des applications mobiles créées avec Xamarin. Il décrit comment installer Jenkins sur OS X, configurez-le et paramétrer des tâches pour compiler des applications Xamarin.iOS et Xamarin.Android lorsque les modifications sont validées dans le système de gestion de code source._
 
@@ -32,7 +32,7 @@ Une fois que Jenkins est configurée et plug-ins nécessaires ont été install�
 
 Ce guide vous guide configurer un serveur Jenkins couvrant chacune de ces points. À la fin de celui-ci, nous devrions avoir une bonne compréhension de comment installer et configurer Jenkins pour créer des extensions IPA et le fichier APK pour nos projets mobiles Xamarin.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Le serveur de builds idéale est un ordinateur autonome dédié à l’unique but de génération et test éventuellement l’application. Un ordinateur dédié permet de s’assurer que les artefacts pouvant être nécessaires pour d’autres rôles (tel que celui d’un serveur web) ne pas polluer la build. Par exemple, si le serveur de builds joue également un serveur web, le serveur web peut nécessiter une version en conflit de certains bibliothèque commune. En raison de ce conflit le serveur web peut ne pas fonctionne correctement ou Jenkins peut créer des builds qui ne fonctionnent pas lors du déploiement sur les utilisateurs.
 
@@ -153,7 +153,7 @@ Dans l’ordre pour une station de travail macOS interagir avec un serveur TFS, 
     ```
     $ tf
     Team Explorer Everywhere Command Line Client (version 11.0.0.201306181526)
-    
+
     Available commands and their options:
     ```
 
@@ -230,7 +230,7 @@ La première tâche est Jenkins est de récupérer le code source à partir du s
 
 #### <a name="using-git-for-source-code-control"></a>À l’aide de Git pour le contrôle de Code Source
 
-Si vous utilisez TFS pour le contrôle de code source, [ignorer](#Using_TFS_for_Source_Code_Management) cette section et passez à la section suivante à l’aide de TFS.
+Si vous utilisez TFS pour le contrôle de code source, [ignorer](#Using-TFS-for-Source-Code-Management) cette section et passez à la section suivante à l’aide de TFS.
 
 Jenkins prend en charge Git prêts à l’emploi : aucun plug-ins supplémentaires ne sont nécessaires. Pour utiliser Git, cliquez sur le **Git** case d’option et entrez l’URL pour le dépôt Git, comme indiqué dans la capture d’écran suivante :
 

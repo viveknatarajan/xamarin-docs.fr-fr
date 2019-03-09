@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 8e95e674f52cb23be769473e27dc8eb785a77820
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116041"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668749"
 ---
 # <a name="introduction-to-ios-8"></a>Introduction à iOS 8
 
@@ -26,7 +26,7 @@ Ce guide présente les nouvelles API pour les développeurs de Xamarin.iOS.
 
 Il existe également certaines API qui ont été déconseillées dans iOS 8, qui sont détaillées à la fin de ce document.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour créer des applications iOS 8 dans Visual Studio pour Mac :
 
@@ -101,7 +101,7 @@ Fonctionnement de sélecteur de document avec un lecteur d’iCloud les utilisat
 
 Pour en savoir plus sur le sélecteur de documents de façon plus approfondie et pour apprendre à intégrer dans une application Xamarin.iOS, reportez-vous à la [présentation pour le sélecteur de documents](~/ios/platform/document-picker.md) guide.
 
-### <a name="handoff"></a>Procédure de transfert
+### <a name="handoff"></a>Handoff
 
 Procédure de transfert, qui fait partie de la fonctionnalité de continuité d’activité plus grande, prend d’aller plus loin pour intégrer OS X et iOS. Cela inclut AirDrop inter-plateformes, la possibilité de prendre des appels de l’iPhone, SMS sur les iPad et Mac et améliorations de la connexion à partir de votre iPhone.
 
@@ -151,7 +151,7 @@ Pour plus d’informations, consultez notre [SpriteKit](~/ios/platform/gaming/sp
 ## <a name="other-changes"></a>Autres modifications
 Ainsi que les modifications majeures dans iOS 8 décrites ci-dessus, Apple a mis à jour en outre les nombreuses infrastructures existantes. Ceux-ci sont décrits ci-dessous :
 
-- **[Image de base](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  : Apple a développé lors de son infrastructure de traitement d’image en ajoutant une meilleure prise en charge pour la détection de régions rectangulaires, et les codes QR à l’intérieur des images. Mike Bluestein explore ceci dans son blog post intitulée [détection d’images dans iOS 8](http://blog.xamarin.com/image-detection-in-ios-8/)
+- **[Image de base](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  : Apple a développé lors de son infrastructure de traitement d’image en ajoutant une meilleure prise en charge pour la détection de régions rectangulaires, et les codes QR à l’intérieur des images. Mike Bluestein explore ceci dans son blog post intitulée [détection d’images dans iOS 8](https://blog.xamarin.com/image-detection-in-ios-8/)
 
 ## <a name="deprecated-apis"></a>API déconseillées
 Avec toutes les améliorations apportées dans iOS 8, un certain nombre d’API ont déconseillées. Certaines d'entre elles sont détaillées ci-dessous.

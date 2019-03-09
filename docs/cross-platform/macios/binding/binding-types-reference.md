@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: d460bf867ce09e614be76d0a4a7ffef01420cf82
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55234028"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669477"
 ---
 # <a name="binding-types-reference-guide"></a>Guide de référence des types de liaison
 
@@ -1851,7 +1851,7 @@ Le `SmartLink` propriété doit être définie sur true pour permettre à Xamari
 
 Le `WeakFrameworks` propriété fonctionne de la même façon que le `Frameworks` propriété, à ceci près qu’au moment de la liaison, le `-weak_framework` spécificateur est passé à gcc pour chacun des frameworks répertoriés.
 
-`WeakFrameworks` rend possible pour les bibliothèques et des applications à lier faiblement sur les infrastructures de plate-forme afin qu’ils puissent les utiliser éventuellement s’ils sont disponibles, mais ne prennent pas une dépendance dure sur ces derniers, ce qui est utile si votre bibliothèque sert à ajouter des fonctionnalités supplémentaires sur plus récente versions d’iOS. Pour plus d’informations sur la liaison faible, consultez la documentation d’Apple sur [liaison faible](http://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
+`WeakFrameworks` rend possible pour les bibliothèques et des applications à lier faiblement sur les infrastructures de plate-forme afin qu’ils puissent les utiliser éventuellement s’ils sont disponibles, mais ne prennent pas une dépendance dure sur ces derniers, ce qui est utile si votre bibliothèque sert à ajouter des fonctionnalités supplémentaires sur plus récente versions d’iOS. Pour plus d’informations sur la liaison faible, consultez la documentation d’Apple sur [liaison faible](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
 
 Bons candidats pour la liaison faible serait `Frameworks` comme des comptes, `CoreBluetooth`, `CoreImage`, `GLKit`, `NewsstandKit` et `Twitter` dans la mesure où elles sont uniquement disponibles dans iOS 5.
 

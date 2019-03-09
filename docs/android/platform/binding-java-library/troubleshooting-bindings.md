@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f54da980834b44bbca7dc8619943769f8f429a7a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0bb7cbb6160865af5b1e40d40c7b999a8bd5ebc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115287"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668515"
 ---
 # <a name="troubleshooting-bindings"></a>Résolution des problèmes de liaisons
 
@@ -74,12 +74,12 @@ Ce fichier fournit une liste de toutes les API Java que Xamarin.Android essaie d
 Cette section répertorie certains des problèmes ou messages d’erreur courants que mon se produisent lorsque vous tentez de lier une bibliothèque Android.
 
 
-### <a name="problem-java-version-mismatch"></a>Problème : Incompatibilité de Version Java
+### <a name="problem-java-version-mismatch"></a>Problème : Incompatibilité de Version de Java
 
 Parfois, les types ne seront pas générés ou des pannes inattendues peuvent se produire, car vous utilisez une version plus récente ou une version antérieure de Java par rapport à la bibliothèque qui a été compilée avec. Recompiler la bibliothèque Android avec la même version du JDK qui utilise votre projet Xamarin.Android.
 
 
-### <a name="problem-at-least-one-java-library-is-required"></a>Problème : au moins une bibliothèque Java est requise
+### <a name="problem-at-least-one-java-library-is-required"></a>Problème : Au moins une bibliothèque Java est requise
 
 Vous recevez l’erreur « au moins une bibliothèque Java est requise, » même si un. Fichier JAR a été ajoutée.
 
@@ -136,15 +136,15 @@ Le texte généré C# source ne génère pas. Substitution de paramètre de la m
 
 Xamarin.Android inclut une variété de champs de Java qui sont mappés aux enums dans le C# liaisons. Cela peut entraîner des incompatibilités de type dans les liaisons générés. Pour résoudre ce problème, les signatures de méthode créées à partir du Générateur de liaison doivent être modifiés pour utiliser les énumérations. Pour plus d’imformation, consultez [Enums correction](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md).
 
-### <a name="problem-noclassdeffounderror-in-packaging"></a>Problème : Les NoClassDefFoundError dans emballage
+### <a name="problem-noclassdeffounderror-in-packaging"></a>Problème : NoClassDefFoundError dans emballage
 
 `java.lang.NoClassDefFoundError` est levée dans l’étape d’empaquetage.
 
 #### <a name="possible-causes"></a>Causes possibles :
 
-La raison la plus probable de cette erreur est qu’une bibliothèque Java obligatoire doit être ajouté au projet d’application (**.csproj**). . Fichiers JAR ne sont pas résolues automatiquement. Une liaison de la bibliothèque Java n’est pas toujours générée par rapport à un assembly d’utilisateur qui n’existe pas dans l’appareil cible ou l’émulateur (tels que Google Maps **maps.jar**). Cela n’est pas le cas pour la prise en charge du projet de bibliothèque Android, comme la bibliothèque. Fichier JAR est incorporé dans la dll de bibliothèque. Par exemple : [bogue 4288](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
+La raison la plus probable de cette erreur est qu’une bibliothèque Java obligatoire doit être ajouté au projet d’application (**.csproj**). . Fichiers JAR ne sont pas résolues automatiquement. Une liaison de la bibliothèque Java n’est pas toujours générée par rapport à un assembly d’utilisateur qui n’existe pas dans l’appareil cible ou l’émulateur (tels que Google Maps **maps.jar**). Cela n’est pas le cas pour la prise en charge du projet de bibliothèque Android, comme la bibliothèque. Fichier JAR est incorporé dans la dll de bibliothèque. Exemple : [Bogue 4288](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
 
-### <a name="problem-duplicate-custom-eventargs-types"></a>Problème : Dupliquer des types personnalisés EventArgs
+### <a name="problem-duplicate-custom-eventargs-types"></a>Problème : Types d’EventArgs personnalisés en double
 
 Build échoue en raison de types d’EventArgs personnalisés en double. Ce type d’erreur se produit :
 
@@ -182,7 +182,7 @@ Il s’agit par conception afin que les noms longs sur les types d’argument é
         name="argsType">DialogClickEventArgs</attr>
 ```
 
-### <a name="problem-class-does-not-implement-interface-method"></a>Problème : La classe n’implémente pas de méthode d’interface
+### <a name="problem-class-does-not-implement-interface-method"></a>Problème : Classe n’implémente pas de méthode d’interface
 
 Un message d’erreur est généré indiquant qu’une classe générée n’implémente pas une méthode qui est requise pour une interface qui implémente la classe générée. Toutefois, en examinant le code généré, vous pouvez voir que la méthode est implémentée.
 
@@ -222,7 +222,7 @@ Il s’agit d’un problème qui se produit avec les méthodes Java de liaison a
     </attr>
     ```
 
-### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problème : Les Collisions sur les Classes internes de nom / propriétés
+### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problème : Nommez les conflits entre les Classes internes / propriétés
 
 Visibilité en conflit sur les objets hérités.
 
@@ -238,7 +238,7 @@ En Java, pas obligatoire qu’une classe dérivée avoir la même visibilité qu
 
 ### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>Problème : Un **.so** bibliothèque requise par la liaison est n’est pas chargé
 
-Certains projets de liaison peuvent également dépendre de fonctionnalités dans un **.so** bibliothèque. Il est possible que Xamarin.Android automatiquement ne chargera pas le **.so** bibliothèque. Lorsque le code Java encapsulé s’exécute, Xamarin.Android ne pourra pas passer l’appel JNI et le message d’erreur _java.lang.UnsatisfiedLinkError : méthode Native introuvable :_ apparaîtra dans le logcat out pour l’application.
+Certains projets de liaison peuvent également dépendre de fonctionnalités dans un **.so** bibliothèque. Il est possible que Xamarin.Android automatiquement ne chargera pas le **.so** bibliothèque. Lorsque le code Java encapsulé s’exécute, Xamarin.Android ne pourra pas passer l’appel JNI et le message d’erreur _java.lang.UnsatisfiedLinkError : Méthode native introuvable :_ apparaîtra dans le logcat out pour l’application.
 
 La solution à ce problème consiste à charger manuellement le **.so** bibliothèque avec un appel à `Java.Lang.JavaSystem.LoadLibrary`. Par exemple, en supposant qu’un projet Xamarin.Android a partagé bibliothèque **libpocketsphinx_jni.so** inclus dans le projet de liaison avec une action de génération **EmbeddedNativeLibrary**, l’extrait de code suivant (exécuté avant d’utiliser la bibliothèque partagée) chargera le **.so** bibliothèque :
 
@@ -253,7 +253,7 @@ Dans cet article, nous répertoriées de résolution des problèmes courants ass
 
 ## <a name="related-links"></a>Liens associés
 
-- [Projets de bibliothèque](http://developer.android.com/tools/projects/index.html#LibraryProjects)
+- [Projets de bibliothèque](https://developer.android.com/tools/projects/index.html#LibraryProjects)
 - [Utilisation de JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Activer la sortie de Diagnostic](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output)
 - [Xamarin pour les développeurs Android](~/android/get-started/java-developers.md)

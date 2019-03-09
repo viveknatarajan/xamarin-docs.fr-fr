@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2018
-ms.openlocfilehash: 2d9dc54801c4df084007a2903becf0c68bf1c6df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0613411e5436a0ea8ed08bf4af52dae84a9a701c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109963"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670885"
 ---
 # <a name="user-profile"></a>Profil utilisateur
 
@@ -110,6 +110,6 @@ Utilisation avec le profil utilisateur est similaire à l’interaction avec d�
 
 ## <a name="related-links"></a>Liens associés
 
-- [ContactsProviderDemo (exemple)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
+- [ContactsProviderDemo (sample)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
 - [Présentation d’Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plateforme 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
+- [Plateforme 4.0 Android](https://developer.android.com/sdk/android-4.0.html)

@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: aaceada84b151856506ede66907274e2457c23d4
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: fcdd712313becd1335479013f44886086dde7bff
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854797"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668060"
 ---
 # <a name="binding-troubleshooting"></a>Résolution des problèmes de liaison
 
@@ -23,9 +23,9 @@ Bien que Xamarin.Mac couvre une grande partie de l’API d’Apple, parfois, vou
 
 Si vous êtes confronté à une API d’Apple, la première étape consiste à informer Xamarin que vous ayez accès à une section de l’API que nous n’avons pas la couverture pour encore. [Signaler un bogue](#reporting-bugs) noter l’API manquante. Nous utilisons des rapports à partir de clients à hiérarchiser les API que nous allons travailler. En outre, si vous avez une licence d’entreprise ou d’entreprise, et ce manque d’une liaison bloque votre progression, suivez également les instructions de [prise en charge](http://xamarin.com/support) pour remettre un ticket. Nous ne pouvons pas promettre une liaison, mais dans certains cas nous pouvons contourner vous un travail.
 
-Une fois que vous avertir Xamarin (le cas échéant) de votre liaison manquant, l’étape suivante consiste à prendre en compte la liaison vous-même. Nous avons un guide complet [ici](~/cross-platform/macios/binding/overview.md) et de la documentation officielle [ici](http://brendanzagaeski.appspot.com/xamarin/0002.html) pour l’habillage des liaisons Objective-C à la main. Si vous appelez une API C, vous pouvez utiliser le mécanisme P/Invoke de #, la documentation est [ici](http://www.mono-project.com/docs/advanced/pinvoke/).
+Une fois que vous avertir Xamarin (le cas échéant) de votre liaison manquant, l’étape suivante consiste à prendre en compte la liaison vous-même. Nous avons un guide complet [ici](~/cross-platform/macios/binding/overview.md) et de la documentation officielle [ici](http://brendanzagaeski.appspot.com/xamarin/0002.html) pour l’habillage des liaisons Objective-C à la main. Si vous appelez une API C, vous pouvez utiliser C#du mécanisme P/Invoke, documentation est [ici](https://www.mono-project.com/docs/advanced/pinvoke/).
 
-Si vous décidez de travailler sur la liaison, vous-même, sachez que les erreurs dans la liaison peuvent produire toutes sortes de pannes intéressantes dans le runtime natif. En particulier, soyez très prudent que votre signature en C# correspond à la signature native dans le nombre d’arguments et la taille de chaque argument. Cela peut corrompre la mémoire et/ou de la pile et vous pourrez se bloquer immédiatement ou à un moment donné arbitraire dans le futur ou corrompre des données.
+Si vous décidez de travailler sur la liaison, vous-même, sachez que les erreurs dans la liaison peuvent produire toutes sortes de pannes intéressantes dans le runtime natif. En particulier, soyez très prudent que votre signature dans C# correspond à la signature native dans le nombre d’arguments et la taille de chaque argument. Cela peut corrompre la mémoire et/ou de la pile et vous pourrez se bloquer immédiatement ou à un moment donné arbitraire dans le futur ou corrompre des données.
 
 ## <a name="argument-exceptions-when-passing-null-to-a-binding"></a>Exceptions d’argument lors du passage de null à une liaison
 
@@ -36,7 +36,7 @@ Si vous rencontrez un cas où vous en passant `null` lève un `ArgumentNullExcep
 1. Vérifiez la documentation d’Apple ou les exemples pour voir si vous pouvez trouver la preuve qu’il accepte `nil`. Si vous êtes familiarisé avec Objective-C, vous pouvez écrire un petit programme de test pour le vérifier.
 2. [Signaler un bogue](#reporting-bugs).
 3. Vous pouvez contourner le bogue Si vous pouvez éviter d’appeler l’API avec `null`, une vérification de valeur null simple autour des appels peut être une simple solution de contournement.
-4. Toutefois, certaines API exigent passant null pour désactiver ou de désactiver certaines fonctionnalités. Dans ce cas, vous pouvez contourner le problème en affichant l’Explorateur d’assembly (consultez [recherche le membre c# pour un sélecteur donné](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copie de la liaison et la suppression de la vérification de valeur null. Veillez à entrer un bogue (étape 2) si vous le faites, votre liaison copié ne recevoir des mises à jour et correctifs que nous prenons dans Xamarin.Mac, et cela doit être considéré comme une solution de contournement à court terme.
+4. Toutefois, certaines API exigent passant null pour désactiver ou de désactiver certaines fonctionnalités. Dans ce cas, vous pouvez contourner le problème en affichant l’Explorateur d’assembly (consultez [recherche le C# membre pour un sélecteur donné](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copie de la liaison et la suppression de la vérification de valeur null. Veillez à entrer un bogue (étape 2) si vous le faites, votre liaison copié ne recevoir des mises à jour et correctifs que nous prenons dans Xamarin.Mac, et cela doit être considéré comme une solution de contournement à court terme.
 
 <a name="reporting-bugs"/>
 
@@ -60,4 +60,4 @@ Dans la mesure du possible, essayez d’inclure :
 ## <a name="related-links"></a>Liens connexes
 
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -1,19 +1,14 @@
 ---
 title: Introduction à MonoTouch.Dialog pour Xamarin.iOS
-description: Ce document décrit MonoTouch.Dialog (serveur maître cible. (D), une infrastructure pour le développement de l’interface utilisateur rapide et déclaratif avec Xamarin.iOS. Elle explique comment utiliser les APIs MonoTouch.Dialog pour créer une interface dans le code ou JSON et utiliser des fonctionnalités comme les extraire pour actualiser, recherche, chargement de l’image d’arrière-plan et bien plus encore.
+description: 'Ce document décrit MonoTouch.Dialog (serveur maître cible. (D), une infrastructure pour le développement de l’interface utilisateur rapide et déclaratif avec Xamarin.iOS. Elle explique comment utiliser les APIs MonoTouch.Dialog pour créer une interface dans le code ou JSON et utiliser des fonctionnalités comme les extraire pour actualiser, recherche, chargement de l’image d’arrière-plan et bien plus encore.'
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: c291a440a1937d2b0f1c229e3fa969caedba9ab9
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675456"
 ---
+
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduction à MonoTouch.Dialog pour Xamarin.iOS
 
 MonoTouch.Dialog, appelé par le serveur cible maître. D pour faire court, est un kit de développement de l’interface utilisateur rapid qui permet aux développeurs de créer des écrans de l’application et de navigation à l’aide des informations plutôt que de la création de contrôleurs d’affichage, des tables, etc. fastidieuses. Par conséquent, il fournit une simplification significative de la réduction de développement et le code de l’interface utilisateur. Par exemple, considérez la capture d’écran suivante :
@@ -55,7 +50,7 @@ Par exemple, chaque fois qu’une table est nécessaire, une source de données 
 SERVEUR CIBLE MAÎTRE. D qui simplifie en encapsulant tout ce code dans une API générique pour la création de table. Ensuite, il fournit une abstraction placée sur cette API autorise pour un objet déclaratif de syntaxe qui facilite encore davantage de liaison. Par conséquent, il existe deux API disponibles dans le serveur cible maître. D :
 
 -   **API de bas niveau éléments** : *API Elements* repose sur la création d’une arborescence hiérarchique d’éléments qui représentent des écrans et leurs composants. L’API Elements offre aux développeurs plus de flexibilité et de contrôle dans la création d’interfaces utilisateur. En outre, l’API d’éléments a prise en charge avancée pour la définition déclarative via JSON, ce qui permet à la fois extrêmement rapide déclaration, mais aussi génération dynamique de l’interface utilisateur à partir d’un serveur. 
--   **API de réflexion de haut niveau** : également connu sous le *liaison*  *API* , dans les classes sont annotées avec des indications d’interface utilisateur, puis le serveur cible maître. D automatiquement crée des écrans basés sur les objets et fournit une liaison entre ce qui est affichée (et éventuellement modifiée) sur l’écran, et l’objet sous-jacent sauvegarde.   L’exemple ci-dessus illustre l’utilisation de l’API de réflexion. Cette API ne fournit pas le contrôle précis que les API d’éléments, mais il simplifie encore davantage en générant automatiquement à la hiérarchie d’éléments en fonction d’attributs de classe. 
+-   **API de réflexion de haut niveau** : également connu sous le *liaison* *API* , dans les classes sont annotées avec des indications d’interface utilisateur, puis le serveur cible maître. D automatiquement crée des écrans basés sur les objets et fournit une liaison entre ce qui est affichée (et éventuellement modifiée) sur l’écran, et l’objet sous-jacent sauvegarde.   L’exemple ci-dessus illustre l’utilisation de l’API de réflexion. Cette API ne fournit pas le contrôle précis que les API d’éléments, mais il simplifie encore davantage en générant automatiquement à la hiérarchie d’éléments en fonction d’attributs de classe. 
 
 
 SERVEUR CIBLE MAÎTRE. Compressé avec un grand nombre de D est fourni intégrées dans les éléments d’interface utilisateur pour la création de l’écran, mais il reconnaît également la nécessité d’éléments personnalisés et les dispositions d’écran avancées. Par conséquent, l’extensibilité est la que première classe proposées conservées sur l’API. Les développeurs peuvent étendre les éléments existants ou créer de nouveaux et ensuite intégrer en toute transparence.
@@ -263,7 +258,7 @@ L’espace réservé et la valeur peuvent être null. Toutefois, la légende est
 En outre le `KeyboardType` propriété peut être définie au moment de la création du style du type de clavier souhaité pour l’entrée de données. Cela peut être utilisé pour configurer le clavier en utilisant les valeurs de `UIKeyboardType` comme indiqué ci-dessous :
 
 -  Numérique
--  Téléphone
+-  Phone
 -  URL
 -  Messagerie
 
@@ -393,7 +388,7 @@ Le `JsonElement` est une sous-classe de `RootElement` qui étend un `RootElement
 Le `JsonElement` est un `RootElement` qui peut être instancié sous deux formes. Crée une version un `RootElement` qui chargera le contenu à la demande. Ceux-ci sont créés à l’aide de la `JsonElement` des constructeurs qui acceptent un argument supplémentaire à la fin, l’url à charger le contenu à partir de :
 
 ```csharp
-var je = new JsonElement ("Dynamic Data", "http://tirania.org/tmp/demo.json");
+var je = new JsonElement ("Dynamic Data", "https://tirania.org/tmp/demo.json");
 ```
 
 L’autre forme crée les données à partir d’un fichier local ou existant `System.Json.JsonObject` que vous avez déjà analysé :
@@ -591,8 +586,8 @@ Cet article a abordé beaucoup d’informations sur MonoTouch.Dialog. Il décrit
 - [Capture vidéo - créer facilement des interfaces utilisateur iOS avec MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [Procédure pas à pas : création d’une application à l’aide de l’API Elements](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Procédure pas à pas : création d’une application à l’aide de l’API Reflection](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
-- [Procédure pas à pas : utilisation d’un élément JSON pour créer une interface utilisateur](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
+- [Procédure pas à pas : À l’aide d’un élément JSON pour créer une Interface utilisateur](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [Balisage JSON de MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
 - [Boîte de dialogue MonoTouch sur Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [Référence de classe de UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Référence de classe de UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [Référence de classe de UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Référence de classe de UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

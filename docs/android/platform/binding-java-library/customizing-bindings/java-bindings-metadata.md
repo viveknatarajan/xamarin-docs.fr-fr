@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 858f1e5c0bd2af85b419bb9a1cffb7d484f3f7e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113402"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669893"
 ---
 # <a name="java-bindings-metadata"></a>Métadonnées de liaisons Java
 
@@ -77,7 +77,7 @@ Vous permet de passer à discuter **Metadata.xml** plus en détail.
 ## <a name="metadataxml-transform-file"></a>Fichier de transformation de fichier Metadata.Xml
 
 Comme nous l’avons déjà appris, le fichier **Metadata.xml** est utilisée par le Générateur de liaisons pour influencer la création de l’assembly de liaison.
-Le format de métadonnées utilise [XPath](https://www.w3.org/TR/xpath/) syntaxe et est presque identique à la *GAPI métadonnées* décrit dans [GAPI métadonnées](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) guide. Cette implémentation est presque une implémentation complète de XPath 1.0 et prend donc en charge les éléments dans la norme 1.0. Ce fichier est un puissant mécanisme de XPath en fonction de modifier, ajouter, masquer ou déplacer tout élément ou attribut dans le fichier de l’API. Tous les éléments de règle dans la spécification de métadonnées incluent un attribut de chemin d’accès pour identifier le nœud auquel la règle doit être appliquée. Les règles sont appliquées dans l’ordre suivant :
+Le format de métadonnées utilise [XPath](https://www.w3.org/TR/xpath/) syntaxe et est presque identique à la *GAPI métadonnées* décrit dans [GAPI métadonnées](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) guide. Cette implémentation est presque une implémentation complète de XPath 1.0 et prend donc en charge les éléments dans la norme 1.0. Ce fichier est un puissant mécanisme de XPath en fonction de modifier, ajouter, masquer ou déplacer tout élément ou attribut dans le fichier de l’API. Tous les éléments de règle dans la spécification de métadonnées incluent un attribut de chemin d’accès pour identifier le nœud auquel la règle doit être appliquée. Les règles sont appliquées dans l’ordre suivant :
 
 * **Ajout de nœud** &ndash; ajoute un nœud enfant au nœud spécifié par l’attribut de chemin d’accès.
 * **attr** &ndash; définit la valeur d’un attribut de l’élément spécifié par l’attribut de chemin d’accès.
@@ -219,11 +219,11 @@ L’exemple suivant illustre une expression XPath pour la modification du nom de
     name="managedName">NewMethodName</attr>
 ```
 
-### <a name="managedtype"></a>Type géré
+### <a name="managedtype"></a>managedType
 
 `managedType` permet de modifier le type de retour d’une méthode. Dans certaines situations le Générateur de liaisons déduira correctement le type de retour d’une méthode Java, ce qui entraîne une erreur de compilation. Une solution possible dans cette situation consiste à modifier le type de retour de la méthode.
 
-Par exemple, le Générateur de liaisons estime que la méthode Java `de.neom.neoreadersdk.resolution.compareTo()` doit retourner un `int`, ce qui entraîne le message d’erreur **erreur CS0535 : ' fr. Neom.Neoreadersdk.Resolution' n’implémente pas le membre d’interface 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. L’extrait de code suivant montre comment modifier le type de retour de généré C# méthode à partir d’un `int` à un `Java.Lang.Object`: 
+Par exemple, le Générateur de liaisons estime que la méthode Java `de.neom.neoreadersdk.resolution.compareTo()` doit retourner un `int`, ce qui entraîne le message d’erreur **erreur CS0535 : « ALLEMAGNE. Neom.Neoreadersdk.Resolution' n’implémente pas le membre d’interface 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. L’extrait de code suivant montre comment modifier le type de retour de généré C# méthode à partir d’un `int` à un `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -347,4 +347,4 @@ Cet article décrit comment Xamarin.Android utilise les métadonnées pour trans
 
 - [Utilisation de JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Liaison d’une bibliothèque Java](~/android/platform/binding-java-library/index.md)
-- [Métadonnées GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Métadonnées GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

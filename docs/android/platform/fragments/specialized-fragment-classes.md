@@ -1,19 +1,19 @@
 ---
-title: Classes de Fragment spécialisé
+title: Classes de fragment spécialisé
 ms.prod: xamarin
 ms.assetid: 7A0AEB2C-EE77-63BF-652A-DA049B691C64
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 1011d74be971a3acba33c8f2f811e8f89e20cfc4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75d95d630415cdaa4c0c1ed3b8ddebb32b8e3c4d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108442"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670063"
 ---
-# <a name="specialized-fragment-classes"></a>Classes de Fragment spécialisé
+# <a name="specialized-fragment-classes"></a>Classes de fragment spécialisé
 
 L’API de Fragments fournit autres sous-classes qui encapsulent certaines des fonctionnalités plus courantes utilisées dans les applications. Ces sous-classes sont :
 
@@ -191,7 +191,7 @@ public class AlertDialogFragment : DialogFragment
 
 ## <a name="preferencefragment"></a>PreferenceFragment
 
-Pour aider à gérer les préférences, l’API de Fragments fournit le `PreferenceFragment` sous-classe. Le `PreferenceFragment` est similaire à la [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; affiche une hiérarchie de préférences de l’utilisateur dans un Fragment. Lorsque l’utilisateur interagit avec les préférences, elles seront automatiquement enregistrées à [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
+Pour aider à gérer les préférences, l’API de Fragments fournit le `PreferenceFragment` sous-classe. Le `PreferenceFragment` est similaire à la [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; affiche une hiérarchie de préférences de l’utilisateur dans un Fragment. Lorsque l’utilisateur interagit avec les préférences, elles seront automatiquement enregistrées à [SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences.html).
 Dans Android 3.0 ou des applications plus élevées, utilisez le `PreferenceFragment` pour gérer les préférences dans les applications. L’illustration suivante montre un exemple d’un `PreferenceFragment`:
 
 [![PreferencesFragment exemple avec inline, boîte de dialogue et les préférences de lancement](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)

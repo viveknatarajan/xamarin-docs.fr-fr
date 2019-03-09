@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: 213632ae26ae60797e39bc718a95057fb7238609
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8882a7cd36eab5e7905585f5de4d6585dfb53439
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113350"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672259"
 ---
 # <a name="available-assemblies"></a>Assemblys disponibles
 
@@ -37,7 +37,7 @@ Il s’agit d’assemblys disponibles dans le **Gestionnaire de références > a
 > |Assembly|Compatibilité d’API|Xamarin iOS|Xamarin Android|Xamarin Mac|
 > |--------|-----------------|-----------|---------------|-----------|
 > |FSharp.Core.dll| |✓|✓|✓|
-> |l18N.dll|Inclut CJC, MidEast, autres, Rare, ouest|✓|✓|✓|
+> |l18N.dll|Includes CJK, MidEast, Other, Rare, West|✓|✓|✓|
 > |Microsoft.CSharp.dll| |✓|✓|✓|
 > |Mono.CSharp.dll| |✓|✓|✓|
 > |Mono.Data.Sqlite.dll|Fournisseur ADO.NET pour SQLite ; reportez-vous aux restrictions.|✓|✓|✓|
@@ -45,7 +45,7 @@ Il s’agit d’assemblys disponibles dans le **Gestionnaire de références > a
 > |Mono.Dynamic.&#8203;Interpreter.dll| |✓| | |
 > |Mono.Security.dll|API de chiffrement.|✓|✓|✓|
 > |monotouch.dll|Cet assembly contient la liaison à l’API CocoaTouch c#. Cela est uniquement disponible dans les projets iOS Classic.|✓| | |
-> |MonoTouch. &#8203;1.dll de la boîte de dialogue| |✓| | |
+> |MonoTouch.&#8203;Dialog-1.dll| |✓| | |
 > |MonoTouch.&#8203;NUnitLite.dll| |✓| | |
 > |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |OpenTK-1.0.dll|L’objet OpenGL/OpenAL orientée services API, étendues pour assurer la prise en charge des appareils iPhone.|✓|✓|✓|
@@ -53,22 +53,22 @@ Il s’agit d’assemblys disponibles dans le **Gestionnaire de références > a
 > |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
 > |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx) , avec [supprimé certaines fonctionnalités](~/ios/data-cloud/system.data.md).|✓|✓|✓|
+> |System.Data.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx) , avec [supprimé certaines fonctionnalités](~/ios/data-cloud/system.data.md).|✓|✓|✓|
 > |System.Data.&#8203;Services.&#8203;Client.dll|Client oData complète.|✓|✓|✓|
 > |System.IO.&#8203;Compression| |✓|✓|✓|
 > |System.IO.&#8203;Compression.&#8203;FileSystem| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.Net.&#8203;Http.dll| |✓|✓|✓|
 > |System.&#8203;Numerics.dll| |✓|✓|✓|
-> |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.&#8203;ServiceModel.dll|Pile WCF telle qu’elle est [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.dll|Pile WCF telle qu’elle est [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.&#8203;ServiceModel.&#8203;Internals.dll| |✓|✓|✓|
-> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), ainsi que des types à partir d’espaces de noms suivants : <br />Système<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |System.&#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); dans le cadre de [System.Data](~/ios/data-cloud/system.data.md) prennent en charge.|✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), ainsi que des types à partir d’espaces de noms suivants : <br />Système<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |System.&#8203;Transactions.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); dans le cadre de [System.Data](~/ios/data-cloud/system.data.md) prennent en charge.|✓|✓|✓|
 > |System.Web.&#8203;Services.dll|Services Web de base à partir du profil .NET 3.5, avec les fonctionnalités de serveur supprimé.|✓|✓|✓|
 > |System.&#8203;Windows.dll| |✓|✓|✓|
-> |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.&#8203;Xml.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
 > |Xamarin.iOS.dll|Cet assembly contient la liaison à l’API CocoaTouch c#. Cela est utilisé uniquement dans les projets iOS unifiée.|✓| | |
 > |Java.Interop.dll| | |✓| |

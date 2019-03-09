@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: a4cdb76ac1ecea3ee21e7b74314b6d3bfae09719
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118992"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669269"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procédure pas à pas : Liaison d’une bibliothèque Objective-C iOS
 
@@ -41,7 +41,7 @@ Nous aborderons toutes les étapes nécessaires pour utiliser cette API Objectiv
 
 L’exemple d’application va vous montrer comment utiliser un délégué fort pour la communication entre l’API InfColorPicker et notre C# code. Une fois que nous avons vu comment utiliser un délégué fort, nous aborderons l’utilisation de délégués faibles pour effectuer les mêmes tâches.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Cet article suppose que vous êtes familiarisé avec Xcode et le langage d’Objective-C et que vous avez lu nos [liaison Objective-C](~/cross-platform/macios/binding/index.md) documentation. En outre, ce qui suit est nécessaire pour terminer les étapes suivantes :
 
@@ -81,11 +81,11 @@ Vous devez utiliser une des méthodes suivantes pour installer les outils :
     Europa:~ kmullins$ xcode-select --install
     ```
 
-    - Vous devrez installer les outils de ligne de commande, cliquez sur le **installer** bouton : [ ![](walkthrough-images/xcode01.png "installation des outils de ligne de commande")](walkthrough-images/xcode01.png#lightbox)
+    - Vous devrez installer les outils de ligne de commande, cliquez sur le **installer** bouton :   [![](walkthrough-images/xcode01.png "Installation des outils de ligne de commande")](walkthrough-images/xcode01.png#lightbox)
 
-    - Les outils seront téléchargés et installés à partir de serveurs Apple : [ ![](walkthrough-images/xcode02.png "téléchargement des outils")](walkthrough-images/xcode02.png#lightbox)
+    - Les outils seront téléchargés et installés à partir de serveurs Apple :   [![](walkthrough-images/xcode02.png "Téléchargement des outils")](walkthrough-images/xcode02.png#lightbox)
 
-- **Téléchargements pour les développeurs d’Apple** -outils de ligne de commande le package est disponible le [téléchargements pour les développeurs d’Apple]() page web. Connectez-vous avec votre ID Apple, puis recherchez et téléchargez les outils de ligne de commande : [ ![](walkthrough-images/xcode03.png "recherche les outils de ligne de commande")](walkthrough-images/xcode03.png#lightbox)
+- **Téléchargements pour les développeurs d’Apple** -outils de ligne de commande le package est disponible le [téléchargements pour les développeurs d’Apple](https://developer.apple.com/downloads/index.action) page web. Connectez-vous avec votre ID Apple, puis recherchez et téléchargez les outils de ligne de commande : [![](walkthrough-images/xcode03.png "Recherche les outils de ligne de commande")](walkthrough-images/xcode03.png#lightbox)
 
 Avec les outils de ligne de commande installé, nous sommes prêts poursuivre la procédure pas à pas.
 
@@ -184,7 +184,7 @@ Création d’un fat binaire est un processus en trois étapes :
 
 Bien que ces trois étapes sont plutôt simples, et il peut être nécessaire de les répéter dans le futur quand la bibliothèque Objective-C reçoit des mises à jour ou si nous exigeons des correctifs de bogues. Si vous décidez d’automatiser ces étapes, il permettra de simplifier la maintenance future et la prise en charge du projet de liaison iOS.
 
-Il existe de nombreux outils disponibles pour automatiser des tâches - un script shell, [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), et [rendre](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Lorsque nous avons installé les outils de ligne de commande Xcode, nous avons également installé Assurez-vous, par conséquent, autrement dit le système de génération qui sera utilisé pour cette procédure pas à pas. Voici un **Makefile** que vous pouvez utiliser pour créer une bibliothèque partagée architecture multi qui fonctionne sur un appareil iOS et le simulateur pour toutes les bibliothèques :
+Il existe de nombreux outils disponibles pour automatiser des tâches - un script shell, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), et [rendre](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Lorsque nous avons installé les outils de ligne de commande Xcode, nous avons également installé Assurez-vous, par conséquent, autrement dit le système de génération qui sera utilisé pour cette procédure pas à pas. Voici un **Makefile** que vous pouvez utiliser pour créer une bibliothèque partagée architecture multi qui fonctionne sur un appareil iOS et le simulateur pour toutes les bibliothèques :
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -733,6 +733,6 @@ Cet article a présenté le processus de création et à l’aide d’un projet 
 - [Détails de liaison](~/cross-platform/macios/binding/overview.md)
 - [Guide de référence de Types de liaison](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin pour les développeurs Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Règles de conception de .NET Framework](http://msdn.microsoft.com/library/ms229042.aspx)
+- [Règles de conception de .NET Framework](https://msdn.microsoft.com/library/ms229042.aspx)
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

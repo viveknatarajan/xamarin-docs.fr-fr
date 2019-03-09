@@ -6,12 +6,12 @@ ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: badd23ebb78e61e7d7650ff6d0973226359fd9d5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c1c03e0ec17ade57536b4ed121469e3ae2274e75
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117100"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668970"
 ---
 # <a name="monogame-gamepad-reference"></a>Référence de GamePad MonoGame
 
@@ -30,7 +30,7 @@ Le `GamePad` classe fournit un moyen normalisé de lecture de l’entrée sur n�
 - `GetState` – Retourne l’état actuel des boutons du contrôleur, bâtons analogiques et pavé directionnel.
 - `GetCapabilities` – Retourne des informations sur les fonctionnalités du matériel, telles que si le contrôleur a certains boutons ou prend en charge de vibration.
 
-### <a name="example-moving-a-character"></a>Exemple : Déplacement d’un caractère
+### <a name="example-moving-a-character"></a>Exemple : Déplacement d’un caractère
 
 Le code suivant illustre l’utilisation de la clé de curseur gauche pour déplacer un caractère en définissant son `XVelocity` et `YVelocity` propriétés. Ce code part du principe que `characterInstance` est une instance d’un objet qui a `XVelocity` et `YVelocity` propriétés :
 
@@ -42,9 +42,9 @@ characterInstance.XVelocity = gamePadState.ThumbSticks.Left.X * characterInstanc
 characterInstance.YVelocity = gamePadState.ThumbSticks.Left.Y * characterInstance.MaxSpeed;
 ```
 
-### <a name="example-detecting-pushes"></a>Exemple : Détection de notifications Push
+### <a name="example-detecting-pushes"></a>Exemple : Détection de notifications Push
 
-`GamePadState` Fournit des informations sur l’état actuel du contrôleur, par exemple si un certain bouton est enfoncé. Certaines actions, notamment à rendre un caractère de saut, exiger la vérification si le bouton a été envoyé (n’était pas la dernière image, mais est arrêté ce frame) ou libéré (était la dernière image, mais pas vers le bas de ce frame). 
+`GamePadState` Fournit des informations sur l’état actuel du contrôleur, par exemple si un certain bouton est enfoncé. Certaines actions, notamment à rendre un caractère de saut, exiger la vérification si le bouton a été envoyé (n’était pas la dernière image, mais est arrêté ce frame) ou libéré (était la dernière image, mais pas vers le bas de ce frame).
 
 Pour effectuer ce type de logique, les variables locales qui stockent le frame précédent `GamePadState` et le frame actuel `GamePadState` doit être créé. L’exemple suivant montre comment stocker et utiliser le frame précédent `GamePadState` pour implémenter le moment du saut :
 
@@ -59,7 +59,7 @@ protected override void Update(GameTime gameTime)
     // store off the last state before reading the new one:
     lastFrameGamePadState = currentGamePadState;
     currentGamePadState = GamePad.GetState(PlayerIndex.One);
-    bool wasAButtonPushed = 
+    bool wasAButtonPushed =
 currentGamePadState.Buttons.A == ButtonState.Pressed
         && lastFrameGamePadState.Buttons.A == ButtonState.Released;
     if(wasAButtonPushed)
@@ -70,7 +70,7 @@ currentGamePadState.Buttons.A == ButtonState.Pressed
 }
 ```
 
-### <a name="example-checking-for-buttons"></a>Exemple : Vérification des boutons
+### <a name="example-checking-for-buttons"></a>Exemple : Vérification des boutons
 
 `GetCapabilities` peut être utilisé pour vérifier si un contrôleur dispose d’un matériel spécifique, tel qu’un bouton particulier ou le stick analogique. Le code suivant montre comment vérifier pour les boutons de B et Y sur un contrôleur dans un jeu qui nécessite la présence des deux boutons :
 
@@ -89,7 +89,7 @@ if(!hasBButton || !hasXButton)
 les applications iOS prennent en charge l’entrée de contrôleur de jeu sans fil.
 
 > [!IMPORTANT]
-> Les packages NuGet pour MonoGame 3.5 n’incluent pas de prise en charge des contrôleurs de jeu sans fil. À l’aide de la classe GamePad sur iOS nécessite la génération 3.5 MonoGame à partir de la source ou à l’aide de fichiers binaires MonoGame 3.6 NuGet. 
+> Les packages NuGet pour MonoGame 3.5 n’incluent pas de prise en charge des contrôleurs de jeu sans fil. À l’aide de la classe GamePad sur iOS nécessite la génération 3.5 MonoGame à partir de la source ou à l’aide de fichiers binaires MonoGame 3.6 NuGet.
 
 ### <a name="ios-game-controller"></a>Contrôleur de jeu iOS
 
@@ -105,7 +105,7 @@ Jeux de Apple TV peuvent utiliser le Siri Remote ou les contrôleurs de jeu sans
 
 *Siri Remote* est le périphérique d’entrée natif pour Apple TV. Bien que les valeurs à partir de l’instance distante de Siri peuvent être lues via des événements (comme indiqué dans le [Siri Remote et Bluetooth contrôleurs guide](~/ios/tvos/platform/remote-bluetooth.md)), la `GamePad` classe peut retourner des valeurs à partir de l’instance distante de Siri.
 
-Notez que `GamePad` peut uniquement lire l’entrée à partir du bouton play et touchez surface : 
+Notez que `GamePad` peut uniquement lire l’entrée à partir du bouton play et touchez surface :
 
 ![](input-images/image2.png "Notez que GamePad peut uniquement lire l’entrée à partir du bouton play et touchez surface")
 
@@ -113,7 +113,7 @@ Depuis la pression tactile déplacement de l’aire de conception est en lecture
 
 ### <a name="apple-tv-game-controller"></a>Contrôleur de jeu de TV Apple
 
-Contrôleurs de jeu pour Apple TV se comportent comme des contrôleurs de jeu pour les applications iOS. Pour plus d’informations, consultez le [iOS section de contrôleur de jeu](#iOS_Game_Controller). 
+Contrôleurs de jeu pour Apple TV se comportent comme des contrôleurs de jeu pour les applications iOS. Pour plus d’informations, consultez le [iOS section de contrôleur de jeu](#iOS-game-controller). 
 
 ## <a name="xbox-one"></a>Xbox One
 

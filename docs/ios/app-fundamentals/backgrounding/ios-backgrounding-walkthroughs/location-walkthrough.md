@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d6dac02ac82b74c9b0e33f5fff0b82223df1f47
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108676"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669191"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Procédure pas à pas - l’emplacement en arrière-plan dans Xamarin.iOS
 
@@ -103,7 +103,7 @@ Cette procédure pas à pas explique certaines clé backgrounding concepts, y co
 
     Voici quelques points importants qui se produit dans cette méthode. Tout d’abord, nous effectuons une vérification pour voir si l’application a accès aux données d’emplacement sur l’appareil. Nous le vérifier en appelant `LocationServicesEnabled` sur le `CLLocationManager`. Cette méthode retournera **false** si l’utilisateur a refusé l’application à accéder aux informations d’emplacement.
 
-1. Ensuite, indiquez la fréquence à laquelle le Gestionnaire d’emplacement pour mettre à jour. `CLLocationManager` offre de nombreuses options pour le filtrage et la configuration des données d’emplacement, y compris la fréquence des mises à jour. Dans cet exemple, définissez le `DesiredAccuracy` pour mettre à jour chaque fois que l’emplacement est modifié par un compteur. Pour plus d’informations sur la configuration de fréquence de mise à jour d’emplacement et d’autres préférences, reportez-vous à la [référence de classe CLLocationManager](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) dans la documentation Apple.
+1. Ensuite, indiquez la fréquence à laquelle le Gestionnaire d’emplacement pour mettre à jour. `CLLocationManager` offre de nombreuses options pour le filtrage et la configuration des données d’emplacement, y compris la fréquence des mises à jour. Dans cet exemple, définissez le `DesiredAccuracy` pour mettre à jour chaque fois que l’emplacement est modifié par un compteur. Pour plus d’informations sur la configuration de fréquence de mise à jour d’emplacement et d’autres préférences, reportez-vous à la [référence de classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) dans la documentation Apple.
 
 1. Enfin, appelez `StartUpdatingLocation` sur la `CLLocationManager` instance. Cela indique le Gestionnaire d’emplacement pour obtenir un correctif initial sur l’emplacement actuel et démarrer l’envoi des mises à jour
 

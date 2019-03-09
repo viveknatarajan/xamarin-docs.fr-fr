@@ -1,25 +1,20 @@
 ---
 title: Xamarin Profiler
-description: Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, et de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin.
+description: 'Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, et de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin.'
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 237ee1a39907f9ebf0eb88db9fff1fbdab691f5e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112590"
 ---
+
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
 _Ce guide présente les principales fonctionnalités du profileur Xamarin. Il permet de consulter les profileurs, le profilage, et de savoir quand les utiliser à bon escient et dans un flux de travail standard pour le profilage d’applications de Xamarin._
 
 Réussite de l’application dépend de l’expérience utilisateur final. En tant que développeur vous avez peut-être implémenté certaines fonctionnalités étonnantes vraiment dans votre application, mais si l’application est lente ou complète de pannes, l’utilisateur sera probablement en débarrasser.
 
-Historiquement, Mono a présenté un profileur de ligne de commande puissant pour la collecte des informations sur les programmes en cours d’exécution dans le runtime Mono appelé le [Générateur de profils de journal Mono](http://www.mono-project.com/docs/debug+profile/profile/profiler/). Le Xamarin Profiler une interface graphique pour le Générateur de profils de journal Mono et prend en charge le profilage Android, iOS, tvOS et les applications Mac sur Mac et Android, iOS et tvOS des applications sur Windows.
+Historiquement, Mono a présenté un profileur de ligne de commande puissant pour la collecte des informations sur les programmes en cours d’exécution dans le runtime Mono appelé le [Générateur de profils de journal Mono](https://www.mono-project.com/docs/debug+profile/profile/profiler/). Le Xamarin Profiler une interface graphique pour le Générateur de profils de journal Mono et prend en charge le profilage Android, iOS, tvOS et les applications Mac sur Mac et Android, iOS et tvOS des applications sur Windows.
 
 Le Xamarin Profiler a un nombre d’instruments disponibles pour le profilage, Profiler de temps, les Cycles et les Allocations. Ce guide explore ce que ces instruments mesurent et comment ils analysent votre application et explique la signification des données présentées sur chaque écran.
 
@@ -53,11 +48,11 @@ Le Xamarin Profiler fournit aux développeurs un moyen pour profiler des applica
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
-Actuellement, le Profiler Xamarin peuvent être utilisée pour tester des applications Xamarin.iOS, Xamarin.Android et Xamarin.Mac sur Mac (Via Visual Studio pour Mac). Le profileur est un processus distinct à partir de l’IDE, et par conséquent, en plus de la lancer à partir de Visual Studio pour Mac, il peut être utilisé comme une application autonome pour examiner .exe et `.mlpd` les fichiers qui ont été produites à partir de la [profileur mono journal](http://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Actuellement, le Profiler Xamarin peuvent être utilisée pour tester des applications Xamarin.iOS, Xamarin.Android et Xamarin.Mac sur Mac (Via Visual Studio pour Mac). Le profileur est un processus distinct à partir de l’IDE, et par conséquent, en plus de la lancer à partir de Visual Studio pour Mac, il peut être utilisé comme une application autonome pour examiner .exe et `.mlpd` les fichiers qui ont été produites à partir de la [profileur mono journal](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Actuellement, le Profiler Xamarin peuvent être utilisée pour tester les applications Xamarin.Android sur Windows (par le biais de Visual Studio et Visual Studio pour Mac). Le profileur est un processus distinct à partir de l’IDE, et par conséquent, en plus de lancement à partir de Visual Studio, il peut être utilisé comme une application autonome pour examiner .exe et `.mlpd` les fichiers qui ont été produites à partir de la [Générateur de profils de journal mono](http://www.mono-project.com/docs/debug+profile/profile/profiler/) .
+Actuellement, le Profiler Xamarin peuvent être utilisée pour tester les applications Xamarin.Android sur Windows (par le biais de Visual Studio et Visual Studio pour Mac). Le profileur est un processus distinct à partir de l’IDE, et par conséquent, en plus de lancement à partir de Visual Studio, il peut être utilisé comme une application autonome pour examiner .exe et `.mlpd` les fichiers qui ont été produites à partir de la [Générateur de profils de journal mono](https://www.mono-project.com/docs/debug+profile/profile/profiler/) .
 
 -----
 
@@ -196,7 +191,7 @@ Le Xamarin Profiler est composé de cinq sections, comme illustré ci-dessous :
 - **Instrumenter liste** – ce rapport répertorie tous les instruments chargés pour la session de profilage.
 - **Tracer le graphique** – ces graphiques concernent horizontalement les instruments dans la liste des instruments. Un curseur (indiqué en dessous de Profiler de temps) peut être utilisé pour modifier l’échelle.
 - **Instrumenter zone détails** -contient les données affichées par la vue sélectionnée de l’Instrument actuel. Nous allons examiner ces vues plus en détail dans la section ci-dessous.
-- **Affichage de l’inspecteur** – contient les sections qui peuvent être sélectionnées par le contrôle segmenté. Les sections sont dépendantes de l’instrument sélectionné et inclut : paramètres de Configuration, les statistiques, les informations de Trace de la pile et chemin d’accès aux racines.
+- **Affichage de l’inspecteur** – contient les sections qui peuvent être sélectionnées par le contrôle segmenté. Les sections sont dépendantes de l’instrument sélectionné et comprend : Paramètres de configuration, les statistiques, les informations de Trace de la pile et chemin d’accès aux racines.
 
 ### <a name="allocations"></a>Allocations
 
@@ -323,7 +318,7 @@ Sélectionnez **mise à jour** pour continuer.
 
 ### <a name="sgen-garbage-collector-and-profiling"></a>SGen Garbage Collector et profilage
 
-Le [SGen](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/) RÉCUPÉRATEUR de mémoire est utilisé pour toutes les plateformes de Xamarin.
+Le [SGen](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) RÉCUPÉRATEUR de mémoire est utilisé pour toutes les plateformes de Xamarin.
 
 SGen est un GC générationnel, laquelle alloue les objets d’une application en trois segments de mémoire, Nursery, segment de mémoire principal et l’espace d’objet volumineux. Cela permet une exécution plus rapide du garbage collection. SGen est actuellement le GC par défaut pour Xamarin.Android et les applications Xamarin.iOS unifiée.
 

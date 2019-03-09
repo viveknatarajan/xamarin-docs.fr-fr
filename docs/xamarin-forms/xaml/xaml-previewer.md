@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
-ms.openlocfilehash: 4258eca8e18229420ceb043a010c896137187653
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.openlocfilehash: 7834b87687db8fd1a3d51a40a4657b24e46bac17
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240381"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670400"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Générateur d’aperçu XAML de Xamarin.Forms
 
@@ -21,7 +21,7 @@ _Consultez vos dispositions Xamarin.Forms rendues en cours de frappe !_
 
 ## <a name="requirements"></a>Spécifications
 
-Les projets requièrent le dernier package Xamarin.Forms NuGet pour le Générateur d’aperçu XAML travailler. Aperçu des applications Android nécessite [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Les projets requièrent le dernier package Xamarin.Forms NuGet pour le Générateur d’aperçu XAML travailler. Aperçu des applications Android nécessite [JDK 1.8 x64](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Il existe plus d’informations dans le [notes de version](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#Xamarin_Forms_Previewer).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 51ccf3faa2524035a30b26af6652959699663e24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118511"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672532"
 ---
 # <a name="application-icons-in-xamarinios"></a>Icônes d’application dans Xamarin.iOS
 
@@ -46,7 +46,7 @@ Les tailles de ressource d’image et les résolutions suivantes seront nécessa
 
     ||3 x|
     |---|---|
-    |Icône d’application|180 x 180|
+    |Icône d’application|180x180|
     |Spotlight|120x120|
     |Paramètres|87 x 87|
 
@@ -70,7 +70,7 @@ Les tailles de ressource d’image et les résolutions suivantes seront nécessa
 
 - **iPad : iOS 9 et 10**
 
-    ||2 x (iPad Pro)|
+    ||2x (iPad Pro)|
     |---|---|
     |Icône d’application|167x167<sup>6</sup>|
     |Spotlight|120x120<sup>6</sup>|
@@ -80,7 +80,7 @@ Les tailles de ressource d’image et les résolutions suivantes seront nécessa
 
     ||1 x|x 2|
     |---|---|---|
-    |Icône d’application|76 x 76|152 x 152|
+    |Icône d’application|76 x 76|152x152|
     |Spotlight|40 x 40|80 x 80|
     |Paramètres|-|-|
 
@@ -212,4 +212,4 @@ Pour spécifier les illustrations iTunes, effectuez les tâches suivantes :
 
 - [Utilisation d’Images (exemple)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Icône personnalisée et les instructions de création d’Image](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))
+- [Icône personnalisée et les instructions de création d’Image](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

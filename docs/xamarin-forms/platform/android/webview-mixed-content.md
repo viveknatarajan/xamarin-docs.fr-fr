@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 7523862f3677eb775f59af0091ed59fec8c85e31
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 8897736878d0ddee22cdad073cc16deb8ce824e1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209814"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671739"
 ---
 # <a name="webview-mixed-content-on-android"></a>WebView mixte de contenu sur Android
 
 [![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
-Cette spécifiques à la plateforme Android contrôle si un [ `WebView` ](xref:Xamarin.Forms.WebView) pouvez affiche un contenu mixte dans les applications qui ciblent les API 21 ou version ultérieure. Contenu mixte est un contenu qui sont initialement chargée sur une connexion HTTPS, mais qui charge des ressources (telles que des images, audio, vidéo, feuilles de style, scripts) via une connexion HTTP. Elle est consommée dans XAML en définissant le [ `WebView.MixedContentMode` ](x:ref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) propriété attachée à une valeur de la [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) énumération :
+Cette spécifiques à la plateforme Android contrôle si un [ `WebView` ](xref:Xamarin.Forms.WebView) pouvez affiche un contenu mixte dans les applications qui ciblent les API 21 ou version ultérieure. Contenu mixte est un contenu qui sont initialement chargée sur une connexion HTTPS, mais qui charge des ressources (telles que des images, audio, vidéo, feuilles de style, scripts) via une connexion HTTP. Elle est consommée dans XAML en définissant le [ `WebView.MixedContentMode` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) propriété attachée à une valeur de la [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) énumération :
 
 ```xaml
 <ContentPage ...

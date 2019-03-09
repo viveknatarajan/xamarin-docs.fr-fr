@@ -1,19 +1,19 @@
 ---
-title: Gestion des Fragments
+title: Gestion des fragments
 ms.prod: xamarin
 ms.assetid: 02C5E8F0-32EF-4FD9-DC8B-04650E20722C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 107877d0e92d3a46101812b78bc0b414c0fbb320
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e0430b8ed9c42030441021e71c3b08b1ddccc57
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105465"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670543"
 ---
-# <a name="managing-fragments"></a>Gestion des Fragments
+# <a name="managing-fragments"></a>Gestion des fragments
 
 Pour faciliter la gestion des Fragments, Android fournit la `FragmentManager` classe. Chaque activité possède une instance de `Android.App.FragmentManager` chargé de rechercher ou modifier dynamiquement ses Fragments. Chaque ensemble de ces modifications est appelé un *transaction*et est effectuée en utilisant l’une des API contenues dans la classe `Android.App.FragmentTransation`, qui est gérée par le `FragmentManager`. Une activité peut démarrer une transaction comme suit :
 
@@ -40,7 +40,7 @@ fragmentTx.Commit();
 
 Si une transaction est validée après `Activity.OnSaveInstanceState()` est appelée, une exception sera levée. Cela se produit, car lorsque l’activité enregistre son état, Android enregistre également l’état de tous les Fragments hébergés. Si toutes les transactions Fragment sont validées après ce stade, l’état de ces transactions seront perdue lors de la restauration de l’activité.
 
-Il est possible d’enregistrer les transactions de Fragment à l’activité [pile back](http://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) en effectuant un appel à `FragmentTransaction.AddToBackStack()`. Cela permet à l’utilisateur de naviguer vers l’arrière via Fragment change lorsque le **retour** bouton est enfoncé. Sans un appel à cette méthode, les Fragments sont supprimés seront détruits et ne sera pas disponibles si l’utilisateur accède par le biais de l’activité.
+Il est possible d’enregistrer les transactions de Fragment à l’activité [pile back](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) en effectuant un appel à `FragmentTransaction.AddToBackStack()`. Cela permet à l’utilisateur de naviguer vers l’arrière via Fragment change lorsque le **retour** bouton est enfoncé. Sans un appel à cette méthode, les Fragments sont supprimés seront détruits et ne sera pas disponibles si l’utilisateur accède par le biais de l’activité.
 
 L’exemple suivant montre comment utiliser le `AddToBackStack` méthode d’un `FragmentTransaction` pour remplacer un Fragment, tout en conservant l’état du premier Fragment sur la pile de retour :
 

@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
-ms.date: 3/27/2018
-ms.openlocfilehash: a93503762528885dfc7d3b5400bf4ec716ea9fab
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/27/2018
+ms.openlocfilehash: 86abe932e9c244e1a959042cfc995bc184f89cc9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056212"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671284"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Partie 3. Extensions de balisage XAML
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Notez que le mot clé `clr-namespace` est suivi par un signe deux-points, puis le nom d’espace de noms de .NET, suivi par un point-virgule, le mot clé `assembly`, un signe égal et le nom de l’assembly.
 
-Oui, un signe deux-points suit `clr-namespace` mais signe égal suit `assembly`. La syntaxe a été définie de cette façon délibérément : déclarations d’espace de noms XML plus faire référence à un URI qui commence un nom de schéma d’URI tel que `http`, qui est toujours suivi par un signe deux-points. Le `clr-namespace` partie de cette chaîne est destiné à reproduire cette convention.
+Oui, un signe deux-points suit `clr-namespace` mais signe égal suit `assembly`. La syntaxe a été définie de cette façon délibérément : La plupart des déclarations d’espace de noms XML référencent un URI qui commence un nom de schéma d’URI tel que `http`, qui est toujours suivi par un signe deux-points. Le `clr-namespace` partie de cette chaîne est destiné à reproduire cette convention.
 
 Les deux ces déclarations d’espace de noms sont incluses dans le **StaticConstantsPage** exemple. Notez que le `BoxView` dimensions sont définies pour `Math.PI` et `Math.E`, mais à l’échelle par un facteur de 100 :
 
@@ -547,7 +547,7 @@ Voici un exemple :
 </ContentPage>
 ```
 
-La leçon plus importantes à suivre à partir de cet exemple est sans doute la syntaxe de l’extension de balisage : aucun guillemets ne doit apparaître entre les accolades d’une extension de balisage. Lorsque vous tapez l’extension de balisage dans un fichier XAML, il est naturel de délimiter les valeurs des propriétés entre guillemets. Résistez à la tentation !
+La leçon plus importantes à suivre à partir de cet exemple est sans doute la syntaxe de l’extension de balisage : Les guillemets ne doit apparaître entre les accolades d’une extension de balisage. Lorsque vous tapez l’extension de balisage dans un fichier XAML, il est naturel de délimiter les valeurs des propriétés entre guillemets. Résistez à la tentation !
 
 Voici le programme en cours d’exécution :
 

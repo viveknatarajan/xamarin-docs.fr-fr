@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207932"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668489"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principes de conception de l’API de Xamarin.Android
 
@@ -76,13 +76,13 @@ Les liaisons à la plateforme Android sont contenus dans le `Mono.Android.dll` a
 
 L’API Android utilisent les collections java.util largement pour fournir des listes, des jeux et des cartes. Nous exposons ces éléments à l’aide de la [System.Collections.Generic](xref:System.Collections.Generic) interfaces dans notre liaison. Les mappages fondamentaux sont :
 
--   [java.util.Set<E> ](http://developer.android.com/reference/java/util/Set.html) est mappé au type de système [ICollection<T>](xref:System.Collections.Generic.ICollection`1), classe d’assistance [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
+-   [java.util.Set<E> ](https://developer.android.com/reference/java/util/Set.html) est mappé au type de système [ICollection<T>](xref:System.Collections.Generic.ICollection`1), classe d’assistance [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/).
 
--   [java.util.List<E> ](http://developer.android.com/reference/java/util/List.html) est mappé au type de système [IList<T>](xref:System.Collections.Generic.IList`1), classe d’assistance [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
+-   [java.util.List<E> ](https://developer.android.com/reference/java/util/List.html) est mappé au type de système [IList<T>](xref:System.Collections.Generic.IList`1), classe d’assistance [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/).
 
--   [java.util.Map < K, V >](http://developer.android.com/reference/java/util/Map.html) est mappé au type de système [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), classe d’assistance [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
+-   [java.util.Map < K, V >](https://developer.android.com/reference/java/util/Map.html) est mappé au type de système [IDictionary < TKey, TValue >](xref:System.Collections.Generic.IDictionary`2), classe d’assistance [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/).
 
--   [java.util.Collection<E> ](http://developer.android.com/reference/java/util/Collection.html) est mappé au type de système [ICollection<T>](xref:System.Collections.Generic.ICollection`1), classe d’assistance [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
+-   [java.util.Collection<E> ](https://developer.android.com/reference/java/util/Collection.html) est mappé au type de système [ICollection<T>](xref:System.Collections.Generic.ICollection`1), classe d’assistance [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/).
 
 Nous avons fourni des classes d’assistance pour faciliter plus rapidement copyless marshaling de ces types. Lorsque cela est possible, nous vous recommandons d’utiliser ces fourni des collections au lieu de l’implémentation de l’infrastructure fournie, comme [ `List<T>` ](xref:System.Collections.Generic.List`1) ou [ `Dictionary<TKey, TValue>` ](xref:System.Collections.Generic.Dictionary`2). Le [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) implémentations utilisent une collection Java native en interne et ne requièrent donc pas copier vers et depuis une collection native lors du passage à un membre de l’API Android.
 
@@ -240,11 +240,11 @@ Les types imbriqués sont « déplacées » pour être frères de l’interfac
 
 Par exemple, considérez le [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) interface.
 Le *Parcelable* interface contient les méthodes, les types imbriqués et les constantes. Le *Parcelable* méthodes d’interface sont placés dans le [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) interface.
-Le *Parcelable* constantes de l’interface sont placés dans le [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) type. Imbriqué [android.os.Parcelable.ClassLoaderCreator <t> </t> ](http://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) et [android.os.Parcelable.Creator <t> </t> ](http://developer.android.com/reference/android/os/Parcelable.Creator.html) types ne sont actuellement pas lié en raison des limitations dans notre prise en charge les génériques ; Si elles ont été prises en charge, ils doivent être présents en tant que le *Android.OS.IParcelableClassLoaderCreator* et *Android.OS.IParcelableCreator* interfaces. Par exemple, l’imbriquée [android.os.IBinder.DeathRecpient](http://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) interface est liée en tant que le [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) interface.
+Le *Parcelable* constantes de l’interface sont placés dans le [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) type. Imbriqué [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) et [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) types ne sont actuellement pas lié en raison des limitations dans notre prise en charge les génériques ; Si elles ont été prises en charge, ils doivent être présents en tant que le *Android.OS.IParcelableClassLoaderCreator* et *Android.OS.IParcelableCreator* interfaces. Par exemple, l’imbriquée [android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) interface est liée en tant que le [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) interface.
 
 
 > [!NOTE]
-> À compter de Xamarin.Android 1.9, constantes d’interface de Java sont <em>dupliqué</em> de code dans le but de simplifier le portage de Java. Cela contribue à améliorer le portage de code Java qui s’appuie sur [fournisseur android](http://developer.android.com/reference/android/provider/package-summary.html) constantes de l’interface.
+> À compter de Xamarin.Android 1.9, constantes d’interface de Java sont <em>dupliqué</em> de code dans le but de simplifier le portage de Java. Cela contribue à améliorer le portage de code Java qui s’appuie sur [fournisseur android](https://developer.android.com/reference/android/provider/package-summary.html) constantes de l’interface.
 
 Outre les types ci-dessus, il existe quatre autres modifications :
 
@@ -257,9 +257,9 @@ Outre les types ci-dessus, il existe quatre autres modifications :
 1. Le *Consts* type est désormais obsolète.
 
 
-Pour le *android.os.Parcelable* interface, cela signifie qu’il y aura désormais un [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) type pour contenir les constantes. Par exemple, le [Parcelable.CONTENTS_FILE_DESCRIPTOR](http://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) constante va être liée en tant que le [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) constante, au lieu de comme le  *ParcelableConsts.ContentsFileDescriptor* constante.
+Pour le *android.os.Parcelable* interface, cela signifie qu’il y aura désormais un [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) type pour contenir les constantes. Par exemple, le [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) constante va être liée en tant que le [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) constante, au lieu de comme le  *ParcelableConsts.ContentsFileDescriptor* constante.
 
-Pour les interfaces contenant des constantes qui implémentent des autres interfaces contenant encore plus de constantes, l’union de toutes les constantes est désormais générée. Par exemple, le [android.provider.MediaStore.Video.VideoColumns](http://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) interface implémente la [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) interface. Toutefois, avant 1.9, les [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) type n’a aucun moyen d’accéder à l’une des constantes déclarées sur [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
+Pour les interfaces contenant des constantes qui implémentent des autres interfaces contenant encore plus de constantes, l’union de toutes les constantes est désormais générée. Par exemple, le [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) interface implémente la [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) interface. Toutefois, avant 1.9, les [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) type n’a aucun moyen d’accéder à l’une des constantes déclarées sur [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/).
 Par conséquent, l’expression Java *MediaStore.Video.VideoColumns.TITLE* doit être lié à l’expression c# *MediaStore.Video.MediaColumnsConsts.Title* qui est difficile à découvrir sans effectuer de lecture grand nombre de documentation Java. Dans 1.9, l’expression c# équivalente sera [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
 
 En outre, envisagez la [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) type, qui implémente le Java *Parcelable* interface. Dans la mesure où elle implémente l’interface, toutes les constantes sur cette interface sont accessibles « via » le type de regroupement, par exemple, *Bundle.CONTENTS_FILE_DESCRIPTOR* est une expression Java parfaitement valide.
@@ -270,8 +270,8 @@ Enfin, les types avec une *Consts* tels que *Android.OS.ParcelableConsts* sont m
 
 ## <a name="resources"></a>Ressources
 
-Images, les descriptions de disposition, les BLOB et les dictionnaires de chaîne peuvent être inclus dans votre application en tant que [fichiers de ressources](http://developer.android.com/guide/topics/resources/providing-resources.html).
-Diverses API Android sont conçus pour [opèrent sur les ID de ressource](http://developer.android.com/guide/topics/resources/accessing-resources.html) au lieu de traiter les images, binaire ou chaînes d’objets BLOB directement.
+Images, les descriptions de disposition, les BLOB et les dictionnaires de chaîne peuvent être inclus dans votre application en tant que [fichiers de ressources](https://developer.android.com/guide/topics/resources/providing-resources.html).
+Diverses API Android sont conçus pour [opèrent sur les ID de ressource](https://developer.android.com/guide/topics/resources/accessing-resources.html) au lieu de traiter les images, binaire ou chaînes d’objets BLOB directement.
 
 Par exemple, une application exemple Android qui contient une disposition de l’interface utilisateur ( `main.axml`), une chaîne de la table internationalisation ( `strings.xml`) et certaines icônes ( `drawable-*/icon.png`) conserve ses ressources dans le répertoire « Ressources » de l’application :
 
@@ -317,7 +317,7 @@ Vous devez utiliser `Resource.Drawable.icon` pour référencer le `drawable/icon
 
 Natif API Android ont de nombreuses méthodes qui utilisent ou renvoient une valeur int qui doit être mappé à un champ constant pour déterminer ce que signifie l’int. Pour utiliser ces méthodes, l’utilisateur est nécessaire de consulter la documentation pour voir les constantes sont des valeurs appropriées, ce qui est loin d’être idéal.
 
-Par exemple, considérez [Activity.requestWindowFeature (int featureID)](http://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
+Par exemple, considérez [Activity.requestWindowFeature (int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int)).
 
 Dans ce cas, nous nous efforçons de regrouper des constantes connexes dans une énumération .NET et remapper la méthode prenne l’énumération à la place.
 Ce faisant, nous sommes en mesure d’offrir la sélection IntelliSense des valeurs potentielles.

@@ -1,17 +1,17 @@
 ---
 title: Prise en main Sharpie objectif
-description: Ce document fournit une vue d’ensemble de Sharpie objectif, l’outil utilisé pour automatiser la création de liaisons c# pour le code Objective-C.
+description: Ce document fournit une vue d’ensemble de Sharpie objectif, l’outil utilisé pour automatiser la création de C# liaisons au code Objective-C.
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: da8c51c4ba4df74afac950bbff867221e7307d6e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854777"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670114"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Prise en main Sharpie objectif
 
@@ -36,7 +36,7 @@ Exécutez le programme d’installation et de suivre toutes les invites à l’�
 
 ## <a name="basic-walkthrough"></a>Procédure de base
 
-Objectif Sharpie est un outil de ligne de commande fournis par Xamarin qui aide à créer les définitions nécessaires pour lier une bibliothèque Objective-C de tiers 3e à c#.
+Objectif Sharpie est un outil de ligne de commande fourni par Xamarin qui aide à créer les définitions requises pour lier une bibliothèque de Objective-C 3ème partie à C#.
 Même si vous utilisez Sharpie objectif, le développeur *sera* devez modifier les fichiers générés une fois objectif Sharpie terminée pour résoudre les problèmes qui ne peuvent pas être gérées automatiquement par l’outil.
 
 Si possible, objectif Sharpie annote les API avec lesquelles elle a des doutes sur la façon de lier correctement (nombreuses constructions dans le code natif sont ambiguës).
@@ -48,7 +48,7 @@ L’objectif Sharpie génère une paire de fichiers - [ `ApiDefinition.cs` et `S
 > Objectif Sharpie est fourni avec un **majeure** règle pour une utilisation correcte : vous devez absolument lui transmettre les arguments de ligne de commande du compilateur clang correct afin de garantir l’analyse correcte. Il s’agit, car le Sharpie objectif phase d’analyse est simplement un outil [implémentée par rapport à l’API de libtooling clang](http://clang.llvm.org/docs/LibTooling.html).
 
 Cela signifie qu’objectif Sharpie a toute la puissance de Clang (le compilateur C/Objective-C/C++ qui en fait compile la bibliothèque native, que vous devez effectuer la liaison) et tous ses connaissances interne des fichiers d’en-tête pour la liaison.
-Au lieu de convertir le texte analysé [AST](http://en.wikipedia.org/wiki/Abstract_syntax_tree) au code de l’objet, objectif Sharpie traduit l’AST a un c# liaison « squelette » approprié pour l’entrée à la `bmac` et `btouch` les outils de liaison Xamarin.
+Au lieu de convertir le texte analysé [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) au code de l’objet, objectif Sharpie traduit l’AST pour un C# liaison « structurer » approprié pour l’entrée à la `bmac` et `btouch` Xamarin les outils de liaison.
 
 Si objectif Sharpie échoue lors de l’analyse, cela signifie que clang erronées lors de son analyse phase tente de construire l’AST, et vous devez identifier la raison.
 
@@ -62,4 +62,4 @@ Si la bibliothèque que vous êtes intéressé est disponible en tant qu’un Co
 ## <a name="related-links"></a>Liens associés
 
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

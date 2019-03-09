@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 6f5af4cea0c223b9ddc7cd72331676f5f92f2509
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e02b5631aff76e35300ae4d7dd5e3c6652f6e3da
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055197"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668835"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barres d’onglets et contrôleurs de barre d’onglets dans Xamarin.iOS
 
@@ -61,7 +61,7 @@ Sélectionnez le **fichier > Nouveau > Solution** élément de menu dans Visual 
 
 ### <a name="adding-the-uitabbarcontroller"></a>Ajout de la UITabBarController
 
-Ensuite, ajoutez une classe vide en sélectionnant **fichier > nouveau fichier** et en choisissant le **général : classe vide** modèle. Nommez le fichier `TabController` comme indiqué ci-dessous :
+Ensuite, ajoutez une classe vide en sélectionnant **fichier > nouveau fichier** et en choisissant le **général : Vide la classe** modèle. Nommez le fichier `TabController` comme indiqué ci-dessous :
 
 [![](creating-tabbed-applications-images/02-newclass.png "Ajoutez la classe TabController")](creating-tabbed-applications-images/02-newclass.png#lightbox)
 
@@ -283,8 +283,8 @@ Ensuite, nous allons créer une interface utilisateur simple pour chacune des vu
 
 Nous souhaitons faire glisser un `Label` et un `Button` sur ViewController1 à partir de la **boîte à outils** sur le côté droit. Ensuite, nous allons utiliser le panneau Propriétés pour modifier le nom et le texte des contrôles à ce qui suit :
 
--  **Étiquette** : `Text`  =  **une**
--  **Bouton** : `Title`  =  **utilisateur exécute une Action initiale**
+-  **Étiquette** : `Text` = **Un**
+-  **Bouton** : `Title` = **Utilisateur exécute une Action initiale**
 
 
 Nous contrôlera la visibilité de notre bouton dans un `TouchUpInside` événement et nous devons y faire référence dans le code-behind. Nous allons identifier avec le **nom** `aButton` dans le panneau Propriétés, comme illustré dans la capture d’écran suivante :
@@ -372,4 +372,4 @@ Cet article a abordé comment utiliser un `UITabBarController` dans une applicat
 
 - [Création d’Applications avec onglets (exemple)](https://developer.xamarin.com/samples/monotouch/CreatingTabbedApplications/)
 - [Images.zip](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
-- [Référence de classe de UITabBarController](http://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)
+- [Référence de classe de UITabBarController](https://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: c2eed44a7c684b91ceed4493a83ff3b4e1578b5f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: cade72aaad60c30993f6b11e98704addd218ffae
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209314"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667488"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Ajout de AppCompat et conception matérielle
 
@@ -80,11 +80,11 @@ Un style supplémentaire doit être inclus dans le **valeurs-v21** dossier pour 
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Mise à jour AndroidManifest.xml
+### <a name="4-update-androidmanifestxml"></a>4. Update AndroidManifest.xml
 
 Pour vous assurer de ce nouveau thème informations sont utilisé, définissez le thème dans le **AndroidManifest** fichier en ajoutant `android:theme="@style/MyTheme"` (laissez le reste du code XML, telle qu’elle était).
 
-**Properties/Androidmanifest.Xml**
+**Properties/AndroidManifest.xml**
 
 ```xml
 ...
@@ -114,7 +114,7 @@ Créer **Tabbar.axml** et **Toolbar.axml** des fichiers dans le **ressources/dis
 ```
 
 Quelques propriétés pour les onglets ont été définies, y compris la gravité de l’onglet à `fill` et mode à `fixed`.
-Si vous avez un grand nombre d’onglets peut vouloir passer cela à défilement - Lisez Android [TabLayout documentation](http://developer.android.com/reference/android/support/design/widget/TabLayout.html) pour en savoir plus.
+Si vous avez un grand nombre d’onglets peut vouloir passer cela à défilement - Lisez Android [TabLayout documentation](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) pour en savoir plus.
 
 **Resources/layout/Toolbar.axml**
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 84c4b699ba2c046eeb70963f3df71ca9a4760f3b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61b3fee9009afb86ccd3fd0e16d7812a8e90feb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104178"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672792"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Contrôles de la caméra manuelle dans Xamarin.iOS
 
@@ -45,7 +45,7 @@ La mise entre parenthèses de Capture est basée sur les paramètres des contrô
 
 En termes simples, mise entre parenthèses de Capture est une rafale de toujours images prises avec un large éventail de paramètres d’image à l’image.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour effectuer les étapes présentées dans cet article :
 
@@ -276,7 +276,7 @@ Avec ce code en place, les contrôles de la caméra manuel peut être facilement
 
 En permettant à l’utilisateur final à prendre directement les contrôles du focus, une application peut fournir un contrôle plus artistique sur l’image extraite.
 
-Par exemple, un photographe professionnel peut atténuer le focus d’une image pour obtenir un [Bokeh effet](http://en.wikipedia.org/wiki/Bokeh):
+Par exemple, un photographe professionnel peut atténuer le focus d’une image pour obtenir un [Bokeh effet](https://en.wikipedia.org/wiki/Bokeh):
 
 [![](intro-to-manual-camera-controls-images/image2.png "Un effet Bokeh")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
@@ -517,7 +517,7 @@ Avant d’aborder les détails de contrôle de l’exposition d’une applicatio
 Les trois éléments de base qui sont combinent pour contrôler l’exposition sont :
 
 -  **Vitesse d’obturation** – il s’agit la durée pendant laquelle l’obturateur est ouvert pour vous permettre de lumière sur le capteur de caméra. La plus courte lors de que l’obturateur est ouvert, moins la lumière est permettent et la plus nette de l’image est (moins de flou de mouvement). Plus l’obturateur est ouvert, le plus clair est en et plus de mouvement flou qui se produit.
--  **Mappage de ISO** – il s’agit d’un terme emprunté à partir de la photographie du film et fait référence à la sensibilité des produits chimiques du film à la lumière. Les valeurs de faible ISO de film ont moins de granularité et plus fine reproduction de couleur ; des valeurs faibles ISO sur capteurs numériques ont moins de bruit capteur mais moins luminosité. Plus la valeur ISO, plus l’image sera lumineux, mais avec plus de bruit de capteur. « ISO » sur un capteur numérique est une mesure de [gain électronique](http://en.wikipedia.org/wiki/Gain), pas une fonctionnalité physique. 
+-  **Mappage de ISO** – il s’agit d’un terme emprunté à partir de la photographie du film et fait référence à la sensibilité des produits chimiques du film à la lumière. Les valeurs de faible ISO de film ont moins de granularité et plus fine reproduction de couleur ; des valeurs faibles ISO sur capteurs numériques ont moins de bruit capteur mais moins luminosité. Plus la valeur ISO, plus l’image sera lumineux, mais avec plus de bruit de capteur. « ISO » sur un capteur numérique est une mesure de [gain électronique](https://en.wikipedia.org/wiki/Gain), pas une fonctionnalité physique. 
 -  **Ouverture de l’objectif** – c’est la taille de l’ouverture de l’objectif. Sur tous les appareils iOS, l’objectif est fixe, par conséquent, les deux seules valeurs qui peuvent être utilisées pour ajuster l’exposition sont la vitesse d’obturation et ISO.
 
 
@@ -817,7 +817,7 @@ La nouvelle iOS 8 exposition API permet à l’application prendre le contrôle 
 
 Avant d’aborder les détails de contrôle de l’équilibre des blancs dans une application IOS 8. Jetons un œil rapide à blanc comment équilibrer works :
 
-Dans l’étude de la perception de la couleur, la [CIE 1931 RVB des couleurs espace et espace de couleurs CIE 1931 XYZ](http://en.wikipedia.org/wiki/CIE_1931_color_space) sont des espaces de couleurs mathématiquement pour la première. Ils ont été créés par la Commission internationale de l’éclairage (CIE) dans 1931.
+Dans l’étude de la perception de la couleur, la [CIE 1931 RVB des couleurs espace et espace de couleurs CIE 1931 XYZ](https://en.wikipedia.org/wiki/CIE_1931_color_space) sont des espaces de couleurs mathématiquement pour la première. Ils ont été créés par la Commission internationale de l’éclairage (CIE) dans 1931.
 
 [![](intro-to-manual-camera-controls-images/image17.png "Espace de couleurs de l’espace de couleurs RVB de CIE 1931 et CIE 1931 XYZ")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
@@ -825,7 +825,7 @@ Le graphique ci-dessus nous montre toutes les couleurs visible à le œil humain
 
 Visible dans le graphique, il existe des valeurs X et Y peuvent être tracées sur le graphique qui serait en dehors de la plage de la vision humaine, et par conséquent ces couleurs ne peut pas être reproduits par un appareil photo.
 
-La courbe la plus petite dans le graphique ci-dessus est appelée le [Planckian emplacement](http://en.wikipedia.org/wiki/Planckian_locus), qui exprime la température de couleur (en degrés kelvin), les plus élevées sur le côté bleu (plus chaud) et des chiffres d’inférieur sur le côté rouge (REFROIDISSEUR). Ils sont utiles pour les situations d’éclairage classique.
+La courbe la plus petite dans le graphique ci-dessus est appelée le [Planckian emplacement](https://en.wikipedia.org/wiki/Planckian_locus), qui exprime la température de couleur (en degrés kelvin), les plus élevées sur le côté bleu (plus chaud) et des chiffres d’inférieur sur le côté rouge (REFROIDISSEUR). Ils sont utiles pour les situations d’éclairage classique.
 
 Dans les conditions d’éclairage mixte, les ajustements de l’équilibre des blancs devrez s’écarter de l’emplacement Planckian pour apporter les modifications requises. Dans ces situations, que l’ajustement devra être décalés soit sur le vert ou mettre à l’échelle côté rouge/magenta de la CIE.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 60751437b891579c97acee0e032defcca2b510f6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233859"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668736"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introduction à la 3D Touch dans Xamarin.iOS
 
@@ -86,7 +86,7 @@ Si l’utilisateur appuie sur plus difficile, celui-ci doit entrer la vue de mes
 
 ### <a name="checking-for-3d-touch-availability"></a>Vérifie la disponibilité 3D Touch
 
-Lorsque vous travaillez avec un [UIViewController]() vous pouvez utiliser le code suivant pour voir si l’appareil iOS que l’application est en cours d’exécution prend en charge 3D Touch :
+Lorsque vous travaillez avec un `UIViewController` vous pouvez utiliser le code suivant pour voir si l’appareil iOS que l’application est en cours d’exécution prend en charge 3D Touch :
 
 ```csharp
 public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
@@ -101,7 +101,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
         ...
 ```
 
-Cette méthode peut être appelée avant *ou après* `ViewDidLoad()`. 
+Cette méthode peut être appelée avant *ou après* `ViewDidLoad()`.
 
 ### <a name="handling-peek-and-pop"></a>POP et gestion d’aperçu
 
@@ -281,7 +281,7 @@ Ici nous allons la définir deux éléments d’Action rapide statiques avec les
 * `UIApplicationShortcutItemType` -Est une valeur de chaîne que nous utiliserons pour identifier l’élément dans notre application. Pour plus d'informations, consultez la section suivante.
 
 > [!IMPORTANT]
-> Éléments de raccourci Action rapides qui sont définies dans le `Info.plist` ne peut pas accéder au fichier avec le `Application.ShortcutItems` propriété. Elles sont transmises uniquement à la `HandleShortcutItem` Gestionnaire d’événements. 
+> Éléments de raccourci Action rapides qui sont définies dans le `Info.plist` ne peut pas accéder au fichier avec le `Application.ShortcutItems` propriété. Elles sont transmises uniquement à la `HandleShortcutItem` Gestionnaire d’événements.
 
 
 

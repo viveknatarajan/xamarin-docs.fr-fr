@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9e83c9a8c1e2740596a981598cafbbfb65e2caf2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24fc14b0342591c56f5bf91862b0d94759a42834
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119239"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670101"
 ---
 # <a name="jelly-bean-features"></a>Jelly Bean fonctionnalités
 
@@ -32,7 +32,7 @@ Enfin, plusieurs nouvelles autorisations ont été ajoutées dans Android 4.1.
 
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour développer des applications Xamarin.Android à l’aide de Jelly Bean nécessite Xamarin.Android 4.2.6 ou supérieur et Android 4.1 (niveau API 16) être installé via le gestionnaire Android SDK comme indiqué dans la capture d’écran suivante :
 
@@ -79,7 +79,7 @@ Comme le `TimeAnimator` instance est en cours d’exécution, il appelle `ITimeA
 
 ### <a name="application-stack-navigation"></a>Navigation de pile d’application
 
-Android 4.1 améliore la navigation de pile d’application qui a été introduite dans 3.0 Android. En spécifiant le `ParentName` propriété de la `ActivityAttribute`, Android peut ouvrir l’activité parente appropriée lorsque l’utilisateur appuie sur le [bouton](http://developer.android.com/design/patterns/navigation.html#up-vs-back) sur la barre d’action - Android instancie l’activité spécifiée par le `ParentName`propriété. Cela permet aux applications conserver la hiérarchie d’activités qui rendent une tâche donnée.
+Android 4.1 améliore la navigation de pile d’application qui a été introduite dans 3.0 Android. En spécifiant le `ParentName` propriété de la `ActivityAttribute`, Android peut ouvrir l’activité parente appropriée lorsque l’utilisateur appuie sur le [bouton](https://developer.android.com/design/patterns/navigation.html#up-vs-back) sur la barre d’action - Android instancie l’activité spécifiée par le `ParentName`propriété. Cela permet aux applications conserver la hiérarchie d’activités qui rendent une tâche donnée.
 
 Pour la plupart des applications définissant le `ParentName` sur l’activité est suffisamment d’informations pour Android fournir le comportement correct pour naviguer dans la pile d’applications ; Android sera synthétiser la pile de retour nécessaires en créant une série d’intentions pour chaque activité parent. Toutefois, comme il s’agit d’une pile d’applications artificiel, chaque activité synthétique n’aura pas l’état enregistré ayant une activité naturelle. Pour fournir l’état enregistré pour une activité parente synthétique, une activité peut remplacer le `OnPrepareNavigationUpTaskStack` (méthode). Cette méthode reçoit un `TaskStackBuilder` objets d’instance qui auront un ensemble d’intention que Android utilisera pour créer la pile de retour. L’activité peut modifier ces intentions afin que, comme la création de l’activité synthétique, il recevra les informations d’état approprié.
 
@@ -145,11 +145,11 @@ mediaActionPlayer.Release();
 
 
 
-### <a name="connectivity"></a>connectivité
+### <a name="connectivity"></a>Connectivité
 
 
 
-#### <a name="android-beam"></a>FAISCEAU Android
+#### <a name="android-beam"></a>Android Beam
 
 FAISCEAU Android est une technologie de NFC en autorisant les appareils Android deux communiquer entre eux. Android 4.1 fournit une meilleure prise en charge pour le transfert de fichiers volumineux. Lors de l’utilisation de la nouvelle méthode `NfcAdapter.SetBeamPushUris()` Android bascule entre les mécanismes de transport autre (par exemple, Bluetooth) pour atteindre une vitesse de transfert rapide.
 
@@ -284,6 +284,6 @@ Cet article s’est passé pour présenter les mises à jour les notifications, 
 ## <a name="related-links"></a>Liens associés
 
 - [Exemple d’Animation de temps (exemple)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TimeAnimatorExample/)
-- [Android 4.1 API](http://developer.android.com/about/versions/android-4.1.html)
-- [Tâches et les piles Back](http://developer.android.com/guide/components/tasks-and-back-stack.html)
-- [Navigation précédent et à distance](http://developer.android.com/design/patterns/navigation.html)
+- [Android 4.1 API](https://developer.android.com/about/versions/android-4.1.html)
+- [Tâches et les piles Back](https://developer.android.com/guide/components/tasks-and-back-stack.html)
+- [Navigation précédent et à distance](https://developer.android.com/design/patterns/navigation.html)

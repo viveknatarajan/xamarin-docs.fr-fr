@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: b20760d3e8d7e168b0f0508222d8ae0b743a9368
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9fbbe7d33428c1274d78ed882ced3985b8459072
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058910"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671479"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Partie 5 : Stratégies de partage de code pratiques
 
@@ -201,7 +201,7 @@ Le stockage isolé est une API commune pour enregistrer et charger des fichiers 
 
 Il est le mécanisme par défaut pour l’accès de fichier dans Windows Phone (Silverlight) qui a été implémenté dans Xamarin.iOS et Xamarin.Android pour autoriser le code d’accès au fichier commun à écrire. Le `System.IO.IsolatedStorage` classe peut être référencée dans les trois plateformes dans une [projet partagé](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Reportez-vous à la [vue d’ensemble du stockage isolé pour Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) pour plus d’informations.
+Reportez-vous à la [vue d’ensemble du stockage isolé pour Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) pour plus d’informations.
 
 Les API de stockage isolé ne sont pas disponibles dans [bibliothèques de classes portables](~/cross-platform/app-fundamentals/pcl.md). Une alternative pour la bibliothèque de classes portable est la [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
@@ -295,7 +295,7 @@ Actions de qu'une application mobile peut prendre dans ces situations sont les s
 -  Même si le réseau est disponible, il est conseillé de vérifier la connectivité avec le serveur cible avant de lancer d’autres demandes. Cela empêchera les opérations de réseau de l’application à partir de l’expiration du délai à plusieurs reprises et permettent également un message d’erreur plus explicite à afficher à l’utilisateur.
 
 
-Il existe un [Xamarin.iOS exemple](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) disponible (qui est basé sur Apple [exemple de code de l’accessibilité](http://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) afin de détecter la disponibilité du réseau.
+Il existe un [Xamarin.iOS exemple](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) disponible (qui est basé sur Apple [exemple de code de l’accessibilité](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) afin de détecter la disponibilité du réseau.
 
 
 ## <a name="webservices"></a>WebServices
@@ -387,7 +387,7 @@ Pour le code qui n’utilise pas la bibliothèque parallèle de tâches, chaque 
 
 IOS et Android syntaxe requiert une classe de 'contexte' soit disponible, ce qui signifie que le code doit passer cet objet dans toutes les méthodes qui nécessitent un rappel sur le thread d’interface utilisateur.
 
-Pour effectuer des appels de thread d’interface utilisateur dans le code partagé, suivez le [IDispatchOnUIThread exemple](http://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (avec autorisation de [ @follesoe ](http://jonas.follesoe.no/)). Déclarez et un programme pour un `IDispatchOnUIThread` interface dans le code partagé et ensuite implémenter les classes spécifiques à la plateforme, comme illustré ici :
+Pour effectuer des appels de thread d’interface utilisateur dans le code partagé, suivez le [IDispatchOnUIThread exemple](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (avec autorisation de [ @follesoe ](http://jonas.follesoe.no/)). Déclarez et un programme pour un `IDispatchOnUIThread` interface dans le code partagé et ensuite implémenter les classes spécifiques à la plateforme, comme illustré ici :
 
 ```csharp
 // program to the interface in shared code

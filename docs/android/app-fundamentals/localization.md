@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 634131025b322b64e89ece3b4c9d092e6b17a373
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 1f3e6dcc81c75d12a1dbba8fefc62a85178c8c24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579815"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670661"
 ---
 # <a name="android-localization"></a>Localisation Android
 
@@ -32,7 +32,7 @@ Les paramètres régionaux actuels peuvent être interrogée via le contexte act
 var lang = Resources.Configuration.Locale; // eg. "es_ES"
 ```
 
-Cette valeur sera un identificateur de paramètres régionaux qui contient un code de langue et un code de paramètres régionaux, séparés par un trait de soulignement. Pour référence, voici une [liste des paramètres régionaux Java](http://www.oracle.com/technetwork/java/javase/locales-137662.html) et [Android pris en charge les paramètres régionaux via StackOverflow](http://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
+Cette valeur sera un identificateur de paramètres régionaux qui contient un code de langue et un code de paramètres régionaux, séparés par un trait de soulignement. Pour référence, voici une [liste des paramètres régionaux Java](https://www.oracle.com/technetwork/java/javase/locales-137662.html) et [Android pris en charge les paramètres régionaux via StackOverflow](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
 
 Voici quelques exemples usuels :
 
@@ -190,7 +190,7 @@ Valide `quantity` commutateurs sont :
 * many
 * other
 
-Ils sont décrits plus en détail dans le [docs Android](http://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Si une langue donnée ne requiert pas de Gestion « spécial », celles `quantity` chaînes va être ignorées (par exemple, en anglais utilise uniquement `one` et `other`; en spécifiant un `zero` chaîne n’a aucun effet, il ne sera pas utilisé).
+Ils sont décrits plus en détail dans le [docs Android](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Si une langue donnée ne requiert pas de Gestion « spécial », celles `quantity` chaînes va être ignorées (par exemple, en anglais utilise uniquement `one` et `other`; en spécifiant un `zero` chaîne n’a aucun effet, il ne sera pas utilisé).
 
 ### <a name="images"></a>Images
 
@@ -209,7 +209,7 @@ Vous pouvez également fournir des autres types d’alternative, les ressources 
 
 Android 4.2 a introduit la prise en charge de [de droite à gauche (les) langues](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) si vous définissez le paramètre d’application `android:supportsRtl="true"`. Le qualificateur de ressource `"ldrtl"` peut être inclus dans un nom de répertoire pour contenir des dispositions personnalisées qui sont conçues pour l’affichage de droite à gauche.
 
-Pour plus d’informations sur les noms de répertoire ressource et de secours, reportez-vous à la documentation Android pour [fournir des ressources alternatives](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
+Pour plus d’informations sur les noms de répertoire ressource et de secours, reportez-vous à la documentation Android pour [fournir des ressources alternatives](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 
 ### <a name="app-name"></a>Nom de l’application
@@ -252,7 +252,7 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>Test de l’appareil
 
 Pour tester sur un appareil, modifiez la langue dans le **paramètres** application.
-**Conseil :** rendre Notez les icônes et l’emplacement des éléments de menu afin que vous pouvez revenir à la langue à la configuration d’origine.
+**Conseil :** Rendre une note des icônes et l’emplacement des éléments de menu afin que vous pouvez revenir à la langue à la configuration d’origine.
 
 
 ## <a name="summary"></a>Récapitulatif
@@ -264,7 +264,7 @@ Cet article aborde les principes fondamentaux de la localisation d’application
 ## <a name="related-links"></a>Liens associés
 
 - [Tasky (localisé dans le code) (exemple)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
-- [Localisation des ressources de Android](http://developer.android.com/guide/topics/resources/localization.html)
+- [Localisation des ressources de Android](https://developer.android.com/guide/topics/resources/localization.html)
 - [Vue d’ensemble de la localisation inter-plateformes](~/cross-platform/app-fundamentals/localization.md)
 - [Localisation de Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
-- [Localisation d’iOS](~/ios/app-fundamentals/localization/index.md)
+- [Localisation iOS](~/ios/app-fundamentals/localization/index.md)

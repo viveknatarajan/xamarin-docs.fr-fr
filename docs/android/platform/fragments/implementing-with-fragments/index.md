@@ -8,13 +8,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: b068169ee3f44932f8ee13d2546804f7b2d2a645
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103060"
 ---
+
 # <a name="implementing-fragments---walkthrough"></a>Implémentation des fragments - procédure pas à pas
 
 _Les fragments sont des composants autonomes et modulaires qui peuvent aider à gérer la complexité des applications Android qui ciblent les appareils avec un large éventail de tailles d’écran. Cet article décrit comment créer et utiliser des fragments lors du développement d’applications Xamarin.Android._
@@ -50,7 +45,7 @@ Le [deuxième partie de cette procédure pas à pas](./walkthrough-landscape.md)
 
 ## <a name="related-links"></a>Liens associés
 
-- [FragmentsWalkthrough (exemple)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
+- [FragmentsWalkthrough (sample)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
 - [Vue d’ensemble du Concepteur](~/android/user-interface/android-designer/index.md)
-- [Implémentation des Fragments](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [Package de support](http://developer.android.com/sdk/compatibility-library.html)
+- [Implémentation des Fragments](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [Package de support](https://developer.android.com/sdk/compatibility-library.html)

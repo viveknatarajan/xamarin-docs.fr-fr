@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: ed6d3c1cfc14bd0dece5ffe494cc02fd8f608b1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: af9be54b4509f7202618d9d68210eb534f63ccbf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117276"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671635"
 ---
 # <a name="setup-and-installation"></a>Installation et configuration
 
 _Cet article décrit les étapes d’installation et les détails de configuration requises pour préparer votre ordinateur et les appareils pour le développement Android Wear. À la fin de cet article, vous disposerez d’un travail d’installation de l’usure de Xamarin.Android intégrée à Visual Studio pour Mac et/ou Microsoft Visual Studio, et vous serez prêt à créer votre première application Xamarin.Android usure._
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Les éléments suivants sont requis pour créer des applications basées sur Xamarin Android Wear :
 
@@ -28,9 +28,9 @@ Les éléments suivants sont requis pour créer des applications basées sur Xam
 
 -   **Kit de développement logiciel Android** -Kit de développement logiciel Android 5.0.1 (API 21) ou version ultérieure doit être installé via le gestionnaire Android SDK.
 
--   **Kit de développement Java** &ndash; le développement Xamarin Android nécessite [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) si vous êtes développement pour le niveau d’API 24 ou supérieure (JDK 1.8 prend également en charge les niveaux d’API antérieures à 24).
+-   **Kit de développement Java** &ndash; le développement Xamarin Android nécessite [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) si vous êtes développement pour le niveau d’API 24 ou supérieure (JDK 1.8 prend également en charge les niveaux d’API antérieures à 24).
 
-Vous pouvez continuer à utiliser [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si vous êtes développement spécifiquement pour le niveau d’API 23 ou une version antérieure.
+Vous pouvez continuer à utiliser [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si vous êtes développement spécifiquement pour le niveau d’API 23 ou une version antérieure.
 
 > [!IMPORTANT]
 > Xamarin.Android ne prend pas en charge JDK 9.
@@ -123,4 +123,4 @@ Pour en savoir plus sur l’empaquetage d’applications de l’usure, consultez
 
 ## <a name="related-links"></a>Liens associés
 
-- [SkeletonWear (exemple)](https://developer.xamarin.com/samples/SkeletonWear/)
+- [SkeletonWear (sample)](https://developer.xamarin.com/samples/SkeletonWear/)

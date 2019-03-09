@@ -1,19 +1,19 @@
 ---
-title: Bouton bascule
+title: ToggleButton
 ms.prod: xamarin
 ms.assetid: 9ADA8FCF-63ED-897A-DD56-D7D86535A92C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 22eb8f999450ed8fb46b1f7809c92540be13aa65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 841a11f9cb48786a046802288ce05e7ae186688a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105920"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671714"
 ---
-# <a name="togglebutton"></a>Bouton bascule
+# <a name="togglebutton"></a>ToggleButton
 
 Dans cette section, vous allez créer un bouton utilisé spécifiquement pour le basculement entre deux États, à l’aide de la [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) widget. Ce widget est une excellente alternative pour les cases d’option si vous avez deux États simples qui s’excluent mutuellement (« on » et « off », par exemple). Android 4.0 (API niveau 14) a introduit une alternative au bouton bascule appelé un [ `Switch` ](https://developer.xamarin.com/api/type/Android.Widget.Switch/).
 
@@ -47,12 +47,12 @@ Notez que le [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.W
 Exécutez l'application.
 
 
-**Conseil :** si vous avez besoin modifier l’état vous-même (par exemple lors du chargement une enregistré [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), utiliser la [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+**Conseil :** Si vous avez besoin modifier l’état vous-même (par exemple lors du chargement une enregistré [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), utiliser la [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
 accesseur Set de propriété ou [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
 .
 
 
 ## <a name="related-links"></a>Liens associés
 
-- [ToggleButton](http://developer.android.com/reference/android/widget/ToggleButton.html)
-- [Commutateur](http://developer.android.com/reference/android/widget/Switch.html)
+- [ToggleButton](https://developer.android.com/reference/android/widget/ToggleButton.html)
+- [Commutateur](https://developer.android.com/reference/android/widget/Switch.html)

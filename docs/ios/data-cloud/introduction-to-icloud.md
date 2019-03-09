@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: d40c932c560b3827cccacd4f9bafa155dcf26056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113324"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668879"
 ---
 # <a name="using-icloud-with-xamarinios"></a>À l’aide d’iCloud avec Xamarin.iOS
 
@@ -33,7 +33,7 @@ Ce document aborde les deux premiers types - paires clé-valeur et les sous-clas
 > [!IMPORTANT]
 > Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs à gérer correctement le Règlement général sur la protection des données (RGPD) de l’Union européenne.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 - La dernière version stable de Xamarin.iOS
 - Xcode 8 ou version ultérieure
@@ -45,7 +45,7 @@ Applications doivent être configurées pour utiliser iCloud dans les [portail d
 
 Pour configurer correctement une application à accéder à iCloud :
 
--   **Trouver votre ID d’équipe** -connexion à [developer.apple.com](http://developer.apple.com) et visitez le **Member Center > Your Account > Developer Account Summary** pour obtenir votre ID d’équipe (ou ID individuel pour les développeurs uniques ). Il sera une chaîne de 10 caractères ( **A93A5CM278** par exemple)-cela fait partie de l’identificateur « conteneur ».
+-   **Trouver votre ID d’équipe** -connexion à [developer.apple.com](https://developer.apple.com) et visitez le **Member Center > Your Account > Developer Account Summary** pour obtenir votre ID d’équipe (ou ID individuel pour les développeurs uniques ). Il sera une chaîne de 10 caractères ( **A93A5CM278** par exemple)-cela fait partie de l’identificateur « conteneur ».
 
 -   **Créer un nouvel ID d’application** - pour créer un ID d’application, suivez les étapes décrites dans le [d’approvisionnement pour la section de Store Technologies du guide de provisionnement des appareils](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)et veillez à consulter **iCloud** comme un service autorisées :
 
@@ -144,7 +144,7 @@ NSNotificationCenter.DefaultCenter.AddObserver (
 
 Votre code peut alors prendre une action avec la liste de clés modifiées, telles que la mise à jour une copie locale ou l’interface utilisateur avec les nouvelles valeurs.
 
-Raisons de modification possibles sont : ServerChange (0), InitialSyncChange (1) ou QuotaViolationChange (2). Vous pouvez accéder à la raison et effectuer un traitement différent si nécessaire (par exemple, vous devrez peut-être supprimer certaines clés à la suite d’un *QuotaViolationChange*).
+Les causes possibles de modification sont : ServerChange (0), InitialSyncChange (1) ou QuotaViolationChange (2). Vous pouvez accéder à la raison et effectuer un traitement différent si nécessaire (par exemple, vous devrez peut-être supprimer certaines clés à la suite d’un *QuotaViolationChange*).
 
 ## <a name="document-storage"></a>Stockage de documents
 
@@ -417,7 +417,7 @@ Les utilisateurs recevront également différents avertissements lorsqu’ils te
 ## <a name="icloud-backup"></a>Sauvegarde iCloud
 
 Bien que la sauvegarde sur iCloud n’est pas une fonctionnalité qui est accessible directement par les développeurs, la manière dont vous concevez votre application peut affecter l’expérience utilisateur.
-Apple fournit [iOS recommandations de stockage de données](http://developer.apple.com/icloud/documentation/data-storage/) pour les développeurs à suivre dans leurs applications iOS.
+Apple fournit [iOS recommandations de stockage de données](https://developer.apple.com/icloud/documentation/data-storage/) pour les développeurs à suivre dans leurs applications iOS.
 
 Le plus important est que votre application stocke des fichiers volumineux qui ne sont pas générées par l’utilisateur (par exemple, une application de lecteurs du magazine qui stocke hundred-plus mégaoctets de contenu par problème). Apple préfère que vous ne stockez pas de ce type de données pour lesquelles il sera être sauvegardé sur iCloud et remplir inutilement le quota d’utilisateur iCloud.
 
@@ -437,6 +437,6 @@ Enfin, il inclus une brève discussion sur la façon dont l’ajout de la sauveg
 
 - [Introduction à iCloud (exemple)](https://developer.xamarin.com/samples/monotouch/IntroductionToiCloud)
 - [Exemple de Code séminaire d’iCloud](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
-- [iCloud séminaire diapositives](http://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
+- [iCloud séminaire diapositives](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)
-- [Stockage iCloud](http://support.apple.com/kb/HT4847)
+- [Stockage iCloud](https://support.apple.com/kb/HT4847)

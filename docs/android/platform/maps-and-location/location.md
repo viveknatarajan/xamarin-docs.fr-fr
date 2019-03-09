@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 05a2187a5e8dc010f04e89757b566eaf44cb5fd6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563509"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668936"
 ---
 # <a name="location-services"></a>Services de localisation
 
@@ -32,7 +32,7 @@ Dans Android, quel que soit le API que vous choisissez d’utiliser des données
 
 Plusieurs technologies sont utilisées en interne afin d’identifier l’emplacement de l’utilisateur. Le matériel utilisé varie selon le type de *fournisseur de localisation* sélectionné pour le travail de collecte des données. Android utilise trois fournisseurs de localisation :
 
--   **Fournisseur de GPS** &ndash; GPS indique l’emplacement plus précis, utilise le plus de puissance et fonctionne mieux extérieur. Ce fournisseur utilise une combinaison de GPS et GPS assisté ([aGPS](http://en.wikipedia.org/wiki/Assisted_GPS)), qui retourne des données GPS collectées par tours de téléphonie mobiles.
+-   **Fournisseur de GPS** &ndash; GPS indique l’emplacement plus précis, utilise le plus de puissance et fonctionne mieux extérieur. Ce fournisseur utilise une combinaison de GPS et GPS assisté ([aGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), qui retourne des données GPS collectées par tours de téléphonie mobiles.
 
 -   **Fournisseur de réseau** &ndash; fournit une combinaison de données Wi-Fi et cellulaire, y compris les données aGPS collectées par tours de cellule. Il utilise moins d’énergie que le fournisseur de GPS, mais retourne les données d’emplacement de précision différentes.
 
@@ -59,7 +59,7 @@ Pour définir les autorisations, développez le **propriétés** dossier dans le
 Une de ces autorisations indique à Android que votre application a besoin d’autorisation de l’utilisateur pour accéder aux fournisseurs d’emplacement. Appareils API niveau 22 (Android 5.1) d’exécution ou faible demande à l’utilisateur pour accorder ces autorisations à chaque fois que l’application est installée. Sur les appareils exécutant des API de niveau 23 (Android 6.0) ou une version ultérieure, l’application doit effectuer une vérification d’autorisation d’exécution avant d’effectuer une demande du fournisseur de localisation. 
 
 > [!NOTE]
->Remarque : L’affectation `ACCESS_FINE_LOCATION` implique l’accès à des données d’emplacement approximative et fine. Vous ne devez jamais définir uniquement les deux autorisations la *minimale* autorisation votre application a besoin pour fonctionner.
+>Remarque : Paramètre `ACCESS_FINE_LOCATION` implique l’accès à des données d’emplacement approximative et fine. Vous ne devez jamais définir uniquement les deux autorisations la *minimale* autorisation votre application a besoin pour fonctionner.
 
 Cet extrait de code est un exemple de comment vérifier qu’une application a l’autorisation pour le `ACCESS_FINE_LOCATION` autorisation :
 
@@ -84,7 +84,7 @@ Le fournisseur de localisation de multiplication est la meilleure méthode pour 
  
 Le fournisseur de localisation multiplication API fournit une variété d’autres outils pour permettre aux applications de géolocalisation, y compris les gardiennage virtuel et la surveillance de l’activité. Dans cette section, nous allons le focus sur les principes fondamentaux de la configuration de la `LocationClient`, l’établissement des fournisseurs et l’obtention de l’emplacement de l’utilisateur.
 
-Le fournisseur de localisation multiplication fait partie de [Google Play Services](http://developer.android.com/google/play-services/index.html).
+Le fournisseur de localisation multiplication fait partie de [Google Play Services](https://developer.android.com/google/play-services/index.html).
 Le package de Google Play Services doit être installé et configuré correctement dans l’application pour le fournisseur de localisation multiplication API pour travailler, et l’appareil doit avoir l’APK Google Play Services installé.
 
 Avant d’une application Xamarin.Android application peut utiliser le fournisseur de localisation de multiplication, il doit ajouter la **Xamarin.GooglePlayServices.Maps** package au projet. En outre, ce qui suit `using` instructions doivent être ajoutées à tous les fichiers sources qui font référence les classes décrites ci-dessous :
@@ -231,7 +231,7 @@ Le Service d’emplacement Android est une API plus anciennes pour l’utilisati
 
 Le Service d’emplacement est mieux adapté aux applications qui doivent s’exécuter sur les appareils qui n’ont pas de Google Play Services est installé.
 
-Le Service d’emplacement est un type spécial de [Service](http://developer.android.com/guide/components/services.html) géré par le système. Un Service système interagit avec le matériel du périphérique et est toujours en cours d’exécution. Pour exploiter les mises à jour de l’emplacement dans notre application, nous abonner aux mises à jour de l’emplacement du Service d’emplacement de système à l’aide un `LocationManager` et un `RequestLocationUpdates` appeler.
+Le Service d’emplacement est un type spécial de [Service](https://developer.android.com/guide/components/services.html) géré par le système. Un Service système interagit avec le matériel du périphérique et est toujours en cours d’exécution. Pour exploiter les mises à jour de l’emplacement dans notre application, nous abonner aux mises à jour de l’emplacement du Service d’emplacement de système à l’aide un `LocationManager` et un `RequestLocationUpdates` appeler.
 
 Pour obtenir l’emplacement de l’utilisateur à l’aide du Service d’emplacement Android implique plusieurs étapes :
 
@@ -356,11 +356,11 @@ Ce guide a couvert obtenir l’emplacement de l’utilisateur à l’aide du Ser
 ## <a name="related-links"></a>Liens associés
 
 - [Emplacement (exemple)](https://developer.xamarin.com/samples/Location/)
-- [FusedLocationProvider (exemple)](https://developer.xamarin.com/samples/FusedLocationProvider/)
-- [Services Google Play](http://developer.android.com/google/play-services/index.html)
+- [FusedLocationProvider (sample)](https://developer.xamarin.com/samples/FusedLocationProvider/)
+- [Services Google Play](https://developer.android.com/google/play-services/index.html)
 - [Classe de critères](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [Classe de LocationManager](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)
 - [Classe de LocationListener](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/)
-- [LocationClient API](http://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
-- [LocationListener API](http://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
+- [LocationClient API](https://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
+- [LocationListener API](https://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
 - [LocationRequest API](https://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html)

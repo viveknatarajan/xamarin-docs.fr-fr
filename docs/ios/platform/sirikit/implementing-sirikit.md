@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: ea037aaaac97d9f326f1a2fbcb28d97c9d8a9b45
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d5c1394bee2ca2419904b077522fac9d03d825
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110249"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669441"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implémentation de SiriKit dans Xamarin.iOS
 
@@ -209,7 +209,7 @@ En raison de la sécurité stricte qu’Apple a placé autour de l’infrastruct
 
 Les opérations suivantes sur votre Mac :
 
-1. Dans un navigateur web, accédez à [ http://developer.apple.com ](http://developer.apple.com) et connectez-vous à votre compte.
+1. Dans un navigateur web, accédez à [ https://developer.apple.com ](https://developer.apple.com) et connectez-vous à votre compte.
 2. Cliquez sur **certificats**, **identificateurs** et **profils**.
 3. Sélectionnez **profils de provisionnement** et sélectionnez **ID d’application**, puis cliquez sur le **+** bouton.
 4. Entrez un **nom** pour le nouveau profil.
@@ -471,7 +471,7 @@ Pour ajouter un `AppIntentVocabulary.plist` fichier au projet d’application, p
     [![](implementing-sirikit-images/plist04.png "La valeur est le nom ParameterNames et le Type de tableau")](implementing-sirikit-images/plist04.png#lightbox)
 6. Cliquez sur le **+** pour ajouter une nouvelle clé avec la **Type** de `String` et la valeur en tant qu’un des noms de paramètres disponibles. Par exemple, `INStartWorkoutIntent.workoutName`:
 
-    [![](implementing-sirikit-images/plist05.png "La clé INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05.png#lightbox)
+    [![](implementing-sirikit-images/plist05.png "The INStartWorkoutIntent.workoutName key")](implementing-sirikit-images/plist05.png#lightbox)
 7. Ajouter le `ParameterVocabulary` clés pour le `ParameterVocabularies` clé avec la **Type** de `Array`:
 
     [![](implementing-sirikit-images/plist06.png "Ajouter la clé de ParameterVocabulary à la clé ParameterVocabularies avec le Type de tableau")](implementing-sirikit-images/plist06.png#lightbox)
@@ -536,7 +536,7 @@ Pour ajouter un `AppIntentVocabulary.plist` fichier au projet d’application, p
     [![](implementing-sirikit-images/plist04w.png "La valeur est le nom ParameterNames et le Type de tableau")](implementing-sirikit-images/plist04w.png#lightbox)
 6. Cliquez sur le **+** pour ajouter une nouvelle clé avec la **Type** de `String` et la valeur en tant qu’un des noms de paramètres disponibles. Par exemple, `INStartWorkoutIntent.workoutName`:
 
-    [![](implementing-sirikit-images/plist05w.png "La clé INStartWorkoutIntent.workoutName")](implementing-sirikit-images/plist05w.png#lightbox)
+    [![](implementing-sirikit-images/plist05w.png "The INStartWorkoutIntent.workoutName key")](implementing-sirikit-images/plist05w.png#lightbox)
 7. Ajouter le `ParameterVocabulary` clés pour le `ParameterVocabularies` clé avec la **Type** de `Array`:
 
     [![](implementing-sirikit-images/plist06w.png "Ajouter la clé de ParameterVocabulary à la clé ParameterVocabularies avec le Type de tableau")](implementing-sirikit-images/plist06w.png#lightbox)

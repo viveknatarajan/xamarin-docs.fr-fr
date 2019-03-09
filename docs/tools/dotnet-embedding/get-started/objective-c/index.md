@@ -1,29 +1,24 @@
 ---
 title: Mise en route avec Objective-C
-description: Ce document décrit comment commencer à utiliser l’incorporation de .NET avec Objective-C. Il aborde la configuration requise, l’installation de l’incorporation de .NET à partir de NuGet et les plateformes prises en charge.
+description: 'Ce document décrit comment commencer à utiliser l’incorporation de .NET avec Objective-C. Il aborde la configuration requise, l’installation de l’incorporation de .NET à partir de NuGet et les plateformes prises en charge.'
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: c7bac0612679131383d3b89f24904c8083fa925b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103099"
 ---
+
 # <a name="getting-started-with-objective-c"></a>Mise en route avec Objective-C
 
 Il s’agit de la page de démarrage pour Objective-C, qui couvre les notions de base pour toutes les plateformes prises en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour utiliser l’incorporation de .NET avec Objective-C, vous aurez besoin d’un Mac en cours d’exécution :
 
 * macOS 10.12 (Sierra) ou version ultérieure
 * Xcode 8.3.2 ou version ultérieure
-* [Mono 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](https://www.mono-project.com/download/)
 
 Vous pouvez installer [Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/mac/) pour modifier et compiler votre C# code.
 

@@ -6,12 +6,12 @@ ms.assetid: 1D3261CE-AC96-4296-8A53-A76A42B927A8
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 6445d595c9d8ca47e187fdcd158cd5a801a96407
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 42034261c374183346c8072eb42014f43a4fe22c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103203"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667605"
 ---
 # <a name="entities-in-cocossharp"></a>Entités dans CocosSharp
 
@@ -37,7 +37,7 @@ Le jeu terminé doit ressembler à ceci :
 
 Entités de jeux sont des classes qui définissent des objets nécessitant la logique de rendu, collision, physique ou l’intelligence artificielle. Heureusement, les entités présentes dans la base de code d’un jeu correspondent souvent aux objets conceptuels dans un jeu. Lorsque cela est vrai, identifiant les entités nécessaires dans un jeu est plus facilement possible. 
 
-Par exemple, un espace à thème [em filmer jeu](http://en.wikipedia.org/wiki/Shoot_%27em_up) peut inclure les entités suivantes :
+Par exemple, un espace à thème [em filmer jeu](https://en.wikipedia.org/wiki/Shoot_%27em_up) peut inclure les entités suivantes :
 
  - `PlayerShip`
  - `EnemyShip`

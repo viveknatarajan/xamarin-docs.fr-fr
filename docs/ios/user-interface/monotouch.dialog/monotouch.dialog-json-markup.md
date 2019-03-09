@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 775f378be383674e2bf90e2e8a72d82033ef0fbf
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 8edabfc6fa3988af0dd38dbfd9daeb1c4003c33e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675238"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670764"
 ---
 # <a name="monotouchdialog-json-markup"></a>Balisage Json MonoTouch.Dialog
 
@@ -252,7 +252,7 @@ La propriété background définit la couleur d’arrière-plan de la cellule. L
  <a name="caption" />
 
 
-### <a name="caption"></a>Légende
+### <a name="caption"></a>caption
 
 La chaîne principale à afficher sur l’élément de rendu. La police et la couleur peuvent être personnalisés en définissant le `"textcolor"` et `"font"` propriétés. Le style de rendu est déterminé par le `"style"` propriété.
 
@@ -272,7 +272,7 @@ La police à utiliser pour la légende ou le texte de détail. Le format d’une
 Spécifications de police valides sont les suivantes :
 
 -  « Helvetica »
--  « Helvetica-14 »
+-  "Helvetica-14"
 
 
  <a name="linebreak" />
@@ -424,7 +424,7 @@ Vous utilisez des éléments d’entrée pour autoriser l’utilisateur à entre
  <a name="autocorrect" />
 
 
-### <a name="autocorrect"></a>correction automatique
+### <a name="autocorrect"></a>autocorrect
 
 Détermine le style de la correction automatique à utiliser pour l’entrée. Les valeurs possibles sont true ou false (ou les chaînes `"yes"` et `"no"`).
 
@@ -444,7 +444,7 @@ Le style de mise en majuscules à utiliser pour l’entrée. Les valeurs possibl
  <a name="caption" />
 
 
-### <a name="caption"></a>Légende
+### <a name="caption"></a>caption
 
 La légende à utiliser pour l’entrée
 
@@ -469,7 +469,7 @@ Le type de clavier à utiliser pour la saisie de données. Les valeurs possibles
  <a name="placeholder" />
 
 
-### <a name="placeholder"></a>Espace réservé
+### <a name="placeholder"></a>espace réservé
 
 Le texte d’indication qui s’affiche lorsque l’entrée a une valeur vide.
 
@@ -545,6 +545,6 @@ Vous pouvez créer une cellule que lorsque j’appuie incorpore un UIWebView qui
 {
         "type": "html",
         "caption": "Miguel's blog",
-        "url": "http://tirania.org/blog" 
+        "url": "https://tirania.org/blog" 
 }
 ```

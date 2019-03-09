@@ -1,5 +1,5 @@
 ---
-title: Audio Android
+title: Android Audio
 description: Le système d’exploitation Android fournit une prise en charge complète multimédias, englobant ainsi l’audio et vidéo. Ce guide se concentre sur audio dans Android et couvre la lecture et l’enregistrement audio à l’aide du lecteur audio intégré et les classes de l’enregistreur, ainsi que l’API de bas niveau audio. Il aborde également l’utilisation des événements Audio de diffusion par d’autres applications, afin que les développeurs peuvent créer des applications conformes.
 ms.prod: xamarin
 ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 9b7e9354250881074fc6f0db5d97dc83e4d3fa77
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a1a9dd06fb3cd6899dd3a564072bb63e413edf22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114663"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667546"
 ---
-# <a name="android-audio"></a>Audio Android
+# <a name="android-audio"></a>Android Audio
 
 _Le système d’exploitation Android fournit une prise en charge complète multimédias, englobant ainsi l’audio et vidéo. Ce guide se concentre sur audio dans Android et couvre la lecture et l’enregistrement audio à l’aide du lecteur audio intégré et les classes de l’enregistreur, ainsi que l’API de bas niveau audio. Il aborde également l’utilisation des événements Audio de diffusion par d’autres applications, afin que les développeurs peuvent créer des applications conformes._
 
@@ -34,7 +34,7 @@ Android fournit la prise en charge complète pour multimédia. Cet article exami
 4.  **Utilisation de bas niveau Audio** &ndash; lecture audio à l’aide de la `AudioTrack` classe en écrivant directement dans les mémoires tampons. L’enregistrement audio à l’aide de la `AudioRecord` classe et en lisant directement à partir de mémoires tampons.
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide nécessite Android 2.0 (API de niveau 5) ou une version ultérieure. Veuillez noter que le débogage audio sur Android doit être effectué sur un appareil.
 
@@ -124,7 +124,7 @@ Enregistrement audio avec la `MediaRecorder` implique les étapes suivantes :
 
 2. Spécifier quel périphérique matériel à utiliser pour capturer l’entrée audio via le [SetAudioSource](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioSource/p/Android.Media.AudioSource/) (méthode).
 
-3. Définir le format audio du fichier de sortie en utilisant le [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) (méthode). Pour obtenir la liste de types audio pris en charge, consultez [Android pris en charge des Formats Media](http://developer.android.com/guide/appendix/media-formats.html).
+3. Définir le format audio du fichier de sortie en utilisant le [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) (méthode). Pour obtenir la liste de types audio pris en charge, consultez [Android pris en charge des Formats Media](https://developer.android.com/guide/appendix/media-formats.html).
 
 4. Appelez le [SetAudioEncoder](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioEncoder/p/Android.Media.AudioEncoder/) méthode pour définir le type d’encodage de l’audio.
 
@@ -210,7 +210,7 @@ Focus audio est une idée similaire et empêche plusieurs applications de lire o
 
 Focus audio peut être accordé immédiatement, ou initialement refusé et accordé ultérieurement. Par exemple, si un application demandes audio le focus lors d’un appel téléphonique, celles-ci seront refusées, mais le focus peut également bénéficier d’une fois que l’appel est terminé. Dans ce cas, un écouteur est inscrit afin de réagir en conséquence si le focus audio n’est pas possible. Demande de focus audio est utilisé pour déterminer si elle est OK pour lire ou enregistrer l’audio.
 
-Pour plus d’informations sur le focus audio, consultez [la gestion de Focus Audio](http://developer.android.com/training/managing-audio/audio-focus.html).
+Pour plus d’informations sur le focus audio, consultez [la gestion de Focus Audio](https://developer.android.com/training/managing-audio/audio-focus.html).
 
 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: edba18eea3ea2b7b843dba70ff0b4b67cbab1ab1
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 20b09ab44eaaaa21535d50b947449e253652cc62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557114"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672480"
 ---
 # <a name="xamarinforms-map"></a>Mappage de Xamarin.Forms
 
@@ -127,7 +127,7 @@ Certaines d'entre elles sont présentées dans la capture d’écran ci-dessous�
 
 ![Autorisations requises pour Android](map-images/android-map-permissions.png "les autorisations requises pour Android")
 
-Les deux derniers sont requis, car les applications nécessitent une connexion réseau pour télécharger les données cartographiques. En savoir plus sur Android [autorisations](http://developer.android.com/reference/android/Manifest.permission.html) pour en savoir plus.
+Les deux derniers sont requis, car les applications nécessitent une connexion réseau pour télécharger les données cartographiques. En savoir plus sur Android [autorisations](https://developer.android.com/reference/android/Manifest.permission.html) pour en savoir plus.
 
 ### <a name="universal-windows-platform"></a>Plateforme Windows universelle
 
