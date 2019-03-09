@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials : lampe de poche'
+title: 'Xamarin.Essentials: Lampe torche'
 description: Ce document décrit la classe Flashlight de Xamarin.Essentials, qui permet d’activer ou de désactiver le flash de l’appareil photo de l’appareil pour transformer celui-ci en lampe de poche.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 3f8e9e2e8608467367af6523c8b89bd8f757d491
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c2caf1583e3099903cb0b05628ed6b2984a954d9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899055"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671414"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials : lampe de poche
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lampe torche
 
 La classe **Flashlight** permet d’activer ou de désactiver le flash de l’appareil photo de l’appareil pour transformer celui-ci en lampe de poche.
 
@@ -24,7 +24,7 @@ Pour accéder à la fonctionnalité de **lampe de poche**, la configuration suiv
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Les autorisations Flashlight et Camera sont obligatoires, et doivent être configurées dans le projet Android. Vous pouvez le faire de plusieurs façons, comme indiqué ci-dessous :
+Les autorisations Flashlight et Camera sont obligatoires, et doivent être configurées dans le projet Android. Vous pouvez l’ajouter des façons suivantes :
 
 Ouvrez le fichier **AssemblyInfo.cs** sous le dossier **Propriétés** et ajoutez :
 
@@ -44,7 +44,7 @@ Ouvrez le fichier **AndroidManifest.xml** sous le dossier **Propriétés** et aj
 
 Vous pouvez également cliquer avec le bouton droit sur le projet Android, et ouvrir les propriétés du projet. Sous **Manifeste Android**, recherchez la zone **Autorisations nécessaires**, puis cochez les autorisations **FLASHLIGHT** et **CAMERA**. Cela entraîne la mise à jour automatique du fichier **AndroidManifest.xml**.
 
-Si vous ajoutez ces autorisations, [Google Play va filtrer automatiquement les appareils](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) n’ayant pas un matériel spécifique. Vous pouvez contourner ce problème en ajoutant ce qui suit au fichier AssemblyInfo.cs de votre projet Android :
+Si vous ajoutez ces autorisations, [Google Play va filtrer automatiquement les appareils](https://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) n’ayant pas un matériel spécifique. Vous pouvez contourner ce problème en ajoutant ce qui suit au fichier AssemblyInfo.cs de votre projet Android :
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]

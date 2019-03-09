@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: 7152e37c4035ac5f9a259fa48b91d5f29752d1f7
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 0ba748823f980f65d1a341d2b2c15610440bf05e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197132"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668294"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Bien démarrer avec Xamarin.Essentials
 
@@ -102,6 +102,6 @@ Xamarin.Essentials est disponible sous forme de package NuGet qui peut être ajo
 
 Nous recommandons aux développeurs qui découvrent Xamarin de consulter [Bien démarrer avec le développement de Xamarin](~/cross-platform/getting-started/index.md).
 
-Consultez le [référentiel GitHub Xamarin.Essentials](http://github.com/xamarin/Essentials) pour afficher le code source actuel, ce qui se prépare, des exemples d’exécution et pour cloner le référentiel. Les contributions de la communauté sont les bienvenues !
+Consultez le [référentiel GitHub Xamarin.Essentials](https://github.com/xamarin/Essentials) pour afficher le code source actuel, ce qui se prépare, des exemples d’exécution et pour cloner le référentiel. Les contributions de la communauté sont les bienvenues !
 
 Parcourez la [documentation de l’API](xref:Xamarin.Essentials) pour découvrir toutes les fonctionnalités de Xamarin.Essentials.
