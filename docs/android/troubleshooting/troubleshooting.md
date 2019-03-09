@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: ccf5d97ff553fd304c4a3af158085d490bb665b7
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: b2f11bd09e1b1b3fd7af29a026229494a081ad11
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267597"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668554"
 ---
 # <a name="troubleshooting-tips"></a>Conseils de dépannage
 
@@ -77,7 +77,7 @@ Visual Studio pour Mac écrit toujours les journaux de déploiement de périphé
 ## <a name="android-debug-log-output"></a>Sortie de journal de débogage Android
 
 Android écrira le nombre de messages à la [journal de débogage Android](~/android/deploy-test/debugging/android-debug-log.md).
-Xamarin.Android utilise les propriétés système Android pour contrôler la génération de messages supplémentaires dans le journal de débogage Android. Les propriétés système Android peuvent être définies via la *setprop* commande au sein de la [Android Debug Bridge (adb)](http://developer.android.com/guide/developing/tools/adb.html):
+Xamarin.Android utilise les propriétés système Android pour contrôler la génération de messages supplémentaires dans le journal de débogage Android. Les propriétés système Android peuvent être définies via la *setprop* commande au sein de la [Android Debug Bridge (adb)](https://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE
@@ -91,19 +91,19 @@ Propriétés système sont lus pendant le démarrage du processus et doivent don
 
 Xamarin.Android prend en charge les propriétés système suivantes :
 
--   *Debug.mono.Debug*: Si une chaîne non vide, cela équivaut à `*mono-debug*`.
+-   *debug.mono.debug*: Si une chaîne non vide, cela équivaut à `*mono-debug*`.
 
--   *Debug.mono.env*: Séparées par une barre verticale (\« *|*') liste des variables d’environnement à exporter pendant le démarrage de l’application, *avant* mono a été initialisé. Cela permet de définir des variables d’environnement que la journalisation mono contrôle.
+-   *debug.mono.env*: Séparées par une barre verticale (\« *|*') liste des variables d’environnement à exporter pendant le démarrage de l’application, *avant* mono a été initialisé. Cela permet de définir des variables d’environnement que la journalisation mono contrôle.
 
-    - *Remarque*: Dans la mesure où la valeur est *|*'-séparés, la valeur doit avoir un niveau supplémentaire de guillemets, comme le \`*interpréteur de commandes adb*\` commande supprime un jeu de guillemets.
+    - *Remarque* : Dans la mesure où la valeur est *|*'-séparés, la valeur doit avoir un niveau supplémentaire de guillemets, comme le \`*interpréteur de commandes adb*\` commande supprime un jeu de guillemets.
 
-    - *Remarque*: Les valeurs de propriété système Android peuvent excéder 92 caractères.
+    - *Remarque* : Les valeurs de propriété système Android peuvent excéder 92 caractères.
 
     - Exemple :
 
             adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
--   *Debug.mono.log*: Une virgule (*,*') liste des composants qui doit afficher des messages supplémentaires dans le journal de débogage Android. Par défaut, rien n’est défini. Composants :
+-   *debug.mono.log*: Une virgule (*,*') liste des composants qui doit afficher des messages supplémentaires dans le journal de débogage Android. Par défaut, rien n’est défini. Composants :
 
     -   *tous les*: Tous les messages d’impression
     -   *GC*: Imprimer les messages associés au GC.

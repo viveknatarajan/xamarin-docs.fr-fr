@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: f21eca052ef13fd0e3d6efa261e1ff70b3b14372
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1a9856a5b6257c82b2072e9eb44be481373abfcf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120708"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671856"
 ---
 # <a name="splash-screen"></a>Écran de démarrage
 
@@ -34,7 +34,7 @@ Ce guide décrit une technique pour implémenter un écran de démarrage dans un
 [![Écran d’accueil du logo de Xamarin exemple suivi d’écran de l’application](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide part du principe que l’application cible Android API niveau 15 (Android 4.0.3) ou une version ultérieure. L’application doit également avoir le **Xamarin.Android.Support.v4** et **Xamarin.Android.Support.v7.AppCompat** ajoutés au projet les packages NuGet.
 
@@ -52,7 +52,7 @@ L’écran de démarrage est implémenté en tant qu’activité qui affiche la 
 
 L’écran de démarrage affiche un document XML drawable dans l’arrière-plan de l’activité de l’écran de démarrage. Il est nécessaire d’utiliser une image bitmap (par exemple, le format PNG ou JPG) pour l’image à afficher.
 
-Dans ce guide, nous utilisons un [couche liste](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) pour centrer l’image d’écran de démarrage dans l’application. L’extrait de code suivant est un exemple d’un `drawable` à l’aide de la ressource une `layer-list`:
+Dans ce guide, nous utilisons un [couche liste](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) pour centrer l’image d’écran de démarrage dans l’application. L’extrait de code suivant est un exemple d’un `drawable` à l’aide de la ressource une `layer-list`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -228,6 +228,6 @@ Ce guide décrit une manière d’implémenter un écran de démarrage dans une 
 
 ## <a name="related-links"></a>Liens associés
 
-- [SplashScreen (exemple)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
-- [liste de couche Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [SplashScreen (sample)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
+- [liste de couche Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [ Modèles de conception matérielle - écrans de lancement](https://material.io/design/communication/launch-screen.html#usage)

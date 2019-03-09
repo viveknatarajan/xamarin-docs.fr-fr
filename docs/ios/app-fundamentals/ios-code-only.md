@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2fa554264578ec626567ef7d28377ac80bde21d3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2b3ba0a0cf31ae2c2d631da8b595390c973957d6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060172"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670673"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Création d’interfaces utilisateur iOS dans le code dans Xamarin.iOS
 
@@ -20,7 +20,7 @@ L’interface utilisateur d’une application iOS est comme une vitrine : l’a
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Le diagramme ci-dessous illustre les relations entre la fenêtre, les affichages, les sous-affichages et le contrôleur d’affichage qui font apparaître l’interface utilisateur dans l’écran de l’appareil : 
+Le diagramme ci-dessous illustre les relations entre la fenêtre, les affichages, les sous-affichages et le contrôleur d’affichage qui font apparaître l’interface utilisateur dans l’écran de l’appareil :
 
 [![](ios-code-only-images/image9.png "Ce diagramme illustre les relations entre la fenêtre, des vues, sous-vues et contrôleur d’affichage")](ios-code-only-images/image9.png#lightbox)
 
@@ -28,7 +28,7 @@ Ces hiérarchies d’affichage peuvent être construites à l’aide de la [conc
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
-Le diagramme ci-dessous illustre les relations entre la fenêtre, les affichages, les sous-affichages et le contrôleur d’affichage qui font apparaître l’interface utilisateur dans l’écran de l’appareil : 
+Le diagramme ci-dessous illustre les relations entre la fenêtre, les affichages, les sous-affichages et le contrôleur d’affichage qui font apparaître l’interface utilisateur dans l’écran de l’appareil :
 
 [![](ios-code-only-images/image9.png "Ce diagramme illustre les relations entre la fenêtre, des vues, sous-vues et contrôleur d’affichage")](ios-code-only-images/image9.png#lightbox)
 
@@ -65,9 +65,9 @@ Le modèle de projet vide ajoute 4 fichiers au projet :
 ## <a name="ios-templates"></a>modèles d’iOS
 
 
-Visual Studio pour Mac ne fournit pas d’un modèle vide. Tous les modèles sont fournis avec une prise en charge de table de montage séquentiel, qui recommande d’Apple en tant que le principal moyen de créer une interface utilisateur. Toutefois, il est possible de créer votre interface utilisateur entièrement en code. 
+Visual Studio pour Mac ne fournit pas d’un modèle vide. Tous les modèles sont fournis avec une prise en charge de table de montage séquentiel, qui recommande d’Apple en tant que le principal moyen de créer une interface utilisateur. Toutefois, il est possible de créer votre interface utilisateur entièrement en code.
 
-Les étapes ci-dessous vous guident lors de la suppression de la table de montage séquentiel à partir d’une application : 
+Les étapes ci-dessous vous guident lors de la suppression de la table de montage séquentiel à partir d’une application :
 
 
 1. Utilisez le modèle d’application avec affichage unique pour créer un nouveau projet d’iOS :
@@ -291,7 +291,7 @@ Window.RootViewController = navController;
 Maintenant lorsque l’application chargée, le `CustomViewController` est chargé à l’intérieur d’un contrôleur de navigation :
 
  [![](ios-code-only-images/customvc.png "Le CustomViewController est chargé à l’intérieur d’un contrôleur de navigation")](ios-code-only-images/customvc.png#lightbox)
- 
+
 En cliquant sur le bouton, sera _push_ un nouveau contrôleur d’affichage dans la pile de navigation :
 
 [![](ios-code-only-images/customvca.png "Un contrôleur d’affichage est placé sur la pile de navigation")](ios-code-only-images/customvca.png#lightbox)
@@ -306,7 +306,7 @@ Par exemple, nous allons modifier le `CustomViewController` pour créer un écra
 
 ### <a name="adding-the-text-fields"></a>Ajouter les champs de texte
 
-Tout d’abord, supprimer le Gestionnaire d’événements et de bouton qui a été ajouté dans le [l’initialisation de la vue](#Initializing_the_View) section. 
+Tout d’abord, supprimer le Gestionnaire d’événements et de bouton qui a été ajouté dans le [l’initialisation de la vue](#initializing-the-view) section. 
 
 Ajouter un contrôle pour le nom d’utilisateur en créant et en initialisant une `UITextField` et en l’ajoutant à la hiérarchie d’affichage, comme indiqué ci-dessous :
 
@@ -359,7 +359,7 @@ public class CustomViewController : UIViewController
             SecureTextEntry = true
         };
 
-      View.AddSubview(usernameField); 
+      View.AddSubview(usernameField);
       View.AddSubview(passwordField);
    }
 }
@@ -414,7 +414,7 @@ Avec ces modifications, la vue ressemblera à ceci :
 iOS fournit une fonctionnalité pour ajouter plusieurs vues à la hiérarchie d’affichage à l’aide de `AddSubviews`.
 
 ```csharp
-View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton }); 
+View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 ```
 
 ## <a name="adding-button-functionality"></a>Ajout de fonctionnalités de bouton
@@ -610,12 +610,12 @@ Pour plus d’informations sur la création d’un écran de lancement, consulte
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>Création d’une image de lancement pour iOS préliminaire 8 applications
 
-Une image statique peut être utilisée en plus un .xib ou d’un écran de lancement de Storyboard si votre application cible des versions antérieures à iOS 8. 
+Une image statique peut être utilisée en plus un .xib ou d’un écran de lancement de Storyboard si votre application cible des versions antérieures à iOS 8.
 
 Cette image statique peut être définie dans le fichier Info.plist, ou comme un catalogue de ressources (pour iOS 7) dans votre application. Vous devrez fournir des images distinctes pour chaque taille de périphérique (320 x 480, 640 x 960, 640 x 1136) que votre application peut s’exécuter sur. Pour plus d’informations sur les tailles d’écran de lancement, afficher le [Images d’écran de lancement](~/ios/app-fundamentals/images-icons/launch-screens.md) guide.
 
 > [!IMPORTANT]
-> Si votre application ne dispose d’aucun écran de lancement, vous pouvez remarquer qu’il ne s’adapte complètement l’écran. Si c’est le cas, vous devez vous assurer d’inclure au moins, une image de 640 x 1136 nommée `Default-568@2x.png` à votre fichier Info.plist. 
+> Si votre application ne dispose d’aucun écran de lancement, vous pouvez remarquer qu’il ne s’adapte complètement l’écran. Si c’est le cas, vous devez vous assurer d’inclure au moins, une image de 640 x 1136 nommée `Default-568@2x.png` à votre fichier Info.plist.
 
 ## <a name="summary"></a>Récapitulatif
 

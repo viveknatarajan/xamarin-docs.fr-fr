@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/5/2018
-ms.openlocfilehash: 02c95fbdde8b264fc34d5a8785be03b2dfcddba7
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: 2f46638afe1aca74b572050e00bfc4a85d1d963d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267353"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669152"
 ---
 # <a name="troubleshooting-ios-12-development-with-xamarin"></a>Résolution des problèmes de développement 12 iOS avec Xamarin
 
@@ -41,4 +41,4 @@ Signaler des problèmes de nouveau sur [Communauté de développeurs](https://de
 Pour discuter des questions sur la façon d’implémenter des fonctionnalités de 12 iOS spécifique dans Xamarin.iOS, jeter un œil :
 
 - Le [Forums de Xamarin](http://forums.xamarin.com/categories/ios)
-- [Dépassement de capacité de la pile](http://stackoverflow.com/search?tab=newest&q=xamarin)
+- [Dépassement de capacité de la pile](https://stackoverflow.com/search?tab=newest&q=xamarin)

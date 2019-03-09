@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: e71e79b58d912ecb697576e92ae921a848f24f4c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527389"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671162"
 ---
 # <a name="alternate-resources"></a>Autres ressources
 
@@ -43,10 +43,10 @@ Les règles suivantes s’appliquent lorsque vous ajoutez des qualificateurs à 
 
 Les qualificateurs possibles sont répertoriées ci-dessous pour référence :
 
-- **MCC et NMC** &ndash; le [code pays mobile](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) et éventuellement le [code réseau mobile](http://en.wikipedia.org/wiki/Mobile_Network_Code) (NMC). La carte SIM fournira la MCC, tandis que l’appareil est connecté au réseau fournira le NMC. Bien qu’il soit possible de paramètres régionaux de cible à l’aide de l’indicatif du pays mobiles, l’approche recommandée consiste à utiliser le qualificateur de langue spécifié ci-dessous. Par exemple, pour les ressources cibles en Allemagne, le qualificateur serait `mcc262`. Pour les ressources cibles de T-Mobile dans le fuseau horaire, le qualificateur est `mcc310-mnc026`.
+- **MCC et NMC** &ndash; le [code pays mobile](https://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) et éventuellement le [code réseau mobile](https://en.wikipedia.org/wiki/Mobile_Network_Code) (NMC). La carte SIM fournira la MCC, tandis que l’appareil est connecté au réseau fournira le NMC. Bien qu’il soit possible de paramètres régionaux de cible à l’aide de l’indicatif du pays mobiles, l’approche recommandée consiste à utiliser le qualificateur de langue spécifié ci-dessous. Par exemple, pour les ressources cibles en Allemagne, le qualificateur serait `mcc262`. Pour les ressources cibles de T-Mobile dans le fuseau horaire, le qualificateur est `mcc310-mnc026`.
   Pour une liste complète des codes de pays mobiles et réseau mobile consultez <http://mcc-mnc.com/>.
 
-- **Langage** &ndash; deux lettres [code ISO 639-1 langue](http://en.wikipedia.org/wiki/ISO_639-1) et éventuellement suivie de deux lettres [code de région ISO 3166-alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
+- **Langage** &ndash; deux lettres [code ISO 639-1 langue](https://en.wikipedia.org/wiki/ISO_639-1) et éventuellement suivie de deux lettres [code de région ISO 3166-alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   Si les deux qualificateurs sont fournis, ils sont séparés par un `-r`. Par exemple, pour les paramètres régionaux en parlant le Français de la cible, puis le qualificateur de `fr` est utilisé. Pour cibler les paramètres régionaux franco-canadiens, le `fr-rCA` serait utilisé. Pour obtenir une liste complète des codes de langue et région, consultez [Codes pour la représentation des noms de langues](http://www.loc.gov/standards/iso639-2/php/English_list.php) et [les éléments de code et les noms de pays](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).
 
 - **Plus petite largeur** &ndash; spécifie la largeur d’écran plus petit vise à s’exécuter sur l’application. Couvert plus en détail dans [création de ressources pour faire varier les écrans](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
@@ -123,7 +123,7 @@ Les qualificateurs possibles sont répertoriées ci-dessous pour référence :
 -  **Version de la plateforme (niveau API)** &ndash; au niveau de l’API pris en charge par l’appareil dans le format v*N*, où *N* est le niveau d’API ciblé. Par exemple, v11 ciblera niveau 11 (Android 3.0) de l’API appareil.
 
 
-Pour plus d’informations sur la ressource qualificateurs consultez [fournissant des ressources](http://developer.android.com/guide/topics/resources/providing-resources.html) sur le site Web Android aux développeurs.
+Pour plus d’informations sur la ressource qualificateurs consultez [fournissant des ressources](https://developer.android.com/guide/topics/resources/providing-resources.html) sur le site Web Android aux développeurs.
 
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Comment Android détermine les ressources à utiliser

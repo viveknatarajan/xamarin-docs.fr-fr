@@ -5,13 +5,13 @@ ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 09/0/2018
-ms.openlocfilehash: fb0e1c42efc6bb51dcd899c7e6017007a82d5c7f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 09/09/2018
+ms.openlocfilehash: c7953748e79bd43bc14601c1f0ea05d1a36adf08
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105933"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668126"
 ---
 # <a name="fonts"></a>Polices
 
@@ -21,7 +21,7 @@ ms.locfileid: "50105933"
 
 Après avoir ciblant API 26 ou l’installation de la bibliothèque de prise en charge Android v26, il existe deux façons d’utiliser des polices dans une application Android :
 
-1. **Package de la police en tant que Android ressource** &ndash; ainsi que la police est toujours disponible pour l’application, mais augmente la taille du fichier APK. 
+1. **Package de la police en tant que Android ressource** &ndash; ainsi que la police est toujours disponible pour l’application, mais augmente la taille du fichier APK.
 2. **Télécharger les polices** &ndash; Android prend également en charge le téléchargement d’une police à partir d’un _fournisseur de police_. Le fournisseur de police vérifie si la police est déjà sur l’appareil. Si nécessaire, la police est téléchargée et mis en cache sur l’appareil. Cette police peut être partagée entre plusieurs applications.
 
 Polices similaires (ou une police qui peut-être avoir plusieurs styles différents) peut-être être regroupée en _familles de polices_. Cela permet aux développeurs de spécifier certains attributs de la police, telles que son poids, et Android sélectionne automatiquement la police appropriée à partir de la famille de polices.
@@ -30,15 +30,15 @@ La bibliothèque de prise en charge Android v26 sera prise en charge de rétropo
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<font-family 
+<font-family
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-     <font  android:font="@font/sourcesanspro_regular" 
-            android:fontStyle="normal" 
+     <font  android:font="@font/sourcesanspro_regular"
+            android:fontStyle="normal"
             android:fontWeight="400"
-            app:font="@font/sourcesanspro_regular" 
-            app:fontStyle="normal" 
+            app:font="@font/sourcesanspro_regular"
+            app:fontStyle="normal"
             app:fontWeight="400" />
 
 </font-family>
@@ -60,7 +60,7 @@ Ce guide sera tout d’abord aborder l’utilisation des polices comme une resso
 
 ## <a name="fonts-as-a-resource"></a>Polices en tant que ressource
 
-Empaquetage d’une police dans un APK Android permet de s’assurer qu’il est toujours disponible à l’application. Un fichier de polices (soit un. TTF ou un. Fichier OTF) est ajouté à une application Xamarin.Android comme toute autre ressource, en copiant les fichiers dans un sous-répertoire dans le **ressources** dossier d’un projet Xamarin.Android. Ressources de polices sont conservées dans un **police** du sous-répertoire de le **ressources** dossier du projet. 
+Empaquetage d’une police dans un APK Android permet de s’assurer qu’il est toujours disponible à l’application. Un fichier de polices (soit un. TTF ou un. Fichier OTF) est ajouté à une application Xamarin.Android comme toute autre ressource, en copiant les fichiers dans un sous-répertoire dans le **ressources** dossier d’un projet Xamarin.Android. Ressources de polices sont conservées dans un **police** du sous-répertoire de le **ressources** dossier du projet.
 
 > [!NOTE]
 > Les polices doivent avoir un **Action de génération** de **AndroidResource** ou qu’ils ne seront pas empaquetés dans le fichier APK final. L’action de génération doit être automatiquement définie par l’IDE.
@@ -81,23 +81,23 @@ Le code XML suivant est un exemple d’une famille de polices pour le _Sources S
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto">
-    <font android:font="@font/sourcesanspro_regular" 
-          android:fontStyle="normal" 
+    <font android:font="@font/sourcesanspro_regular"
+          android:fontStyle="normal"
           android:fontWeight="400"
-          app:font="@font/sourcesanspro_regular" 
-          app:fontStyle="normal" 
+          app:font="@font/sourcesanspro_regular"
+          app:fontStyle="normal"
           app:fontWeight="400" />
-    <font android:font="@font/sourcesanspro_bold" 
-          android:fontStyle="normal" 
-          android:fontWeight="800" 
-          app:font="@font/sourcesanspro_bold" 
-          app:fontStyle="normal" 
+    <font android:font="@font/sourcesanspro_bold"
+          android:fontStyle="normal"
+          android:fontWeight="800"
+          app:font="@font/sourcesanspro_bold"
+          app:fontStyle="normal"
           app:fontWeight="800" />
-    <font android:font="@font/sourcesanspro_italic" 
-          android:fontStyle="italic" 
+    <font android:font="@font/sourcesanspro_italic"
+          android:fontStyle="italic"
           android:fontWeight="400"
-          app:font="@font/sourcesanspro_italic" 
-          app:fontStyle="italic" 
+          app:font="@font/sourcesanspro_italic"
+          app:fontStyle="italic"
           app:fontWeight="400" />
 </font-family>
 ```
@@ -109,13 +109,13 @@ Le `fontStyle` attribut a deux valeurs possibles :
 
 Le `fontWeight` attribut correspond à la CSS `font-weight` attribut et fait référence à l’épaisseur de la police. Il s’agit d’une valeur dans la plage de 100 à 900. La liste suivante décrit les valeurs de poids de police courantes et leur nom :
 
-* **Mince** &ndash; 100
+* **Thin** &ndash; 100
 * **Très clair** &ndash; 200
 * **Lumière** &ndash; 300
 * **Normal** &ndash; 400
 * **Support** &ndash; 500
-* **Semi gras** &ndash; 600
-* **Gras** &ndash; 700
+* **Semi Bold** &ndash; 600
+* **Bold** &ndash; 700
 * **Très gras** &ndash; 800
 * **Noir** &ndash; 900
 
@@ -153,7 +153,7 @@ textView1.Typeface = typeface;
 
 ## <a name="downloading-fonts"></a>Téléchargement de polices
 
-Au lieu de l’empaquetage de polices en tant que ressource d’application, Android peuvent télécharger des polices à partir d’une source distante. Cela aura un effet souhaitable de réduire la taille du fichier APK. 
+Au lieu de l’empaquetage de polices en tant que ressource d’application, Android peuvent télécharger des polices à partir d’une source distante. Cela aura un effet souhaitable de réduire la taille du fichier APK.
 
 Les polices sont téléchargées avec l’aide d’un _fournisseur de police_. Il s’agit d’un fournisseur de contenu spécialisé qui gère le téléchargement et la mise en cache de polices à toutes les applications sur l’appareil. Android 8.0 inclut un fournisseur de police pour télécharger des polices à partir de la [Google police référentiel](http://fonts.google.com). Ce fournisseur de police par défaut est rétroportée dans le niveau d’API 14 avec la bibliothèque de prise en charge Android v26.
 
@@ -172,12 +172,12 @@ Quel que soit l’approche qui est utilisée, les fichiers de ressources qui doi
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:fontProviderAuthority="com.google.android.gms.fonts" 
-             android:fontProviderPackage="com.google.android.gms" 
-             android:fontProviderQuery="VT323" 
+             android:fontProviderAuthority="com.google.android.gms.fonts"
+             android:fontProviderPackage="com.google.android.gms"
+             android:fontProviderQuery="VT323"
              android:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
-             app:fontProviderAuthority="com.google.android.gms.fonts" 
-             app:fontProviderPackage="com.google.android.gms" 
+             app:fontProviderAuthority="com.google.android.gms.fonts"
+             app:fontProviderPackage="com.google.android.gms"
              app:fontProviderQuery="VT323"
              app:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
 >
@@ -195,9 +195,9 @@ Une fois que les polices sont définies, il peut être nécessaire de fournir de
 
 ### <a name="font-certificates"></a>Certificats de police
 
-Si le fournisseur de police n’est pas préinstallé sur l’appareil, ou si l’application utilise le `Xamarin.Android.Support.Compat` bibliothèque, Android requiert les certificats de sécurité du fournisseur de police. Ces certificats sont listés dans un fichier de ressources de tableau est conservé dans **ressources/valeurs** directory. 
+Si le fournisseur de police n’est pas préinstallé sur l’appareil, ou si l’application utilise le `Xamarin.Android.Support.Compat` bibliothèque, Android requiert les certificats de sécurité du fournisseur de police. Ces certificats sont listés dans un fichier de ressources de tableau est conservé dans **ressources/valeurs** directory.
 
-Par exemple, le code XML suivant est nommé **Resources/values/fonts_cert.xml** et stocke les certificats pour le fournisseur de police de Google : 
+Par exemple, le code XML suivant est nommé **Resources/values/fonts_cert.xml** et stocke les certificats pour le fournisseur de police de Google :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -223,7 +223,7 @@ Avec ces fichiers de ressources en place, l’application est capable de téléc
 
 ### <a name="declaring-downloadable-fonts-as-resources"></a>Déclaration des polices à télécharger en tant que ressources
 
-En répertoriant les polices téléchargeables dans le **AndroidManifest.XML**, Android en mode asynchrone télécharge les polices au premier démarrage de l’application. La police d’eux-mêmes sont répertoriés dans un fichier de ressources de tableau, semblable à celui-ci : 
+En répertoriant les polices téléchargeables dans le **AndroidManifest.XML**, Android en mode asynchrone télécharge les polices au premier démarrage de l’application. La police d’eux-mêmes sont répertoriés dans un fichier de ressources de tableau, semblable à celui-ci :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -234,7 +234,7 @@ En répertoriant les polices téléchargeables dans le **AndroidManifest.XML**, 
 </resources>
 ```
 
-Pour télécharger ces polices, ils doivent être déclarés dans **AndroidManifest.XML** en ajoutant `meta-data` en tant qu’enfant de le `application` élément. Par exemple, si les polices téléchargeables sont déclarés dans un fichier de ressources à **Resources/values/downloadable_fonts.xml**, puis cet extrait de code aurait à ajouter au manifeste : 
+Pour télécharger ces polices, ils doivent être déclarés dans **AndroidManifest.XML** en ajoutant `meta-data` en tant qu’enfant de le `application` élément. Par exemple, si les polices téléchargeables sont déclarés dans un fichier de ressources à **Resources/values/downloadable_fonts.xml**, puis cet extrait de code aurait à ajouter au manifeste :
 
 ```xml
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
@@ -242,14 +242,14 @@ Pour télécharger ces polices, ils doivent être déclarés dans **AndroidManif
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>Téléchargement d’une police avec les API de police
 
-Il est possible de télécharger par programme une police en instanciant un [ `FontRequest` ](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html) objet et en le passant à la `FontContractCompat.RequestFont` (méthode). Le `FontContractCompat.RequestFont` (méthode) tout d’abord vérifier si la police existe déjà sur l’appareil et si nécessaire est en mode asynchrone requête du fournisseur de police et tentent de télécharger la police pour l’application. Si `FontRequest` est impossible de télécharger la police, Android utilise la police système par défaut. 
+Il est possible de télécharger par programme une police en instanciant un [ `FontRequest` ](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html) objet et en le passant à la `FontContractCompat.RequestFont` (méthode). Le `FontContractCompat.RequestFont` (méthode) tout d’abord vérifier si la police existe déjà sur l’appareil et si nécessaire est en mode asynchrone requête du fournisseur de police et tentent de télécharger la police pour l’application. Si `FontRequest` est impossible de télécharger la police, Android utilise la police système par défaut.
 
 Un `FontRequest` objet contient des informations qui servira par le fournisseur de police pour localiser et télécharger une police. Un `FontRequest` nécessite quatre éléments d’information :
 
 1. **Autorité de fournisseur de police** &ndash; l’autorité du fournisseur de police à utiliser pour la demande.
 2. **Package de la police** &ndash; le package pour le fournisseur de police à utiliser pour la demande. Cela est utilisé pour vérifier l’identité du fournisseur.
 3. **Requête de police** &ndash; il s’agit d’une chaîne qui aide le fournisseur de police de localiser la police demandée. Plus d’informations sur la requête de police sont spécifiques au fournisseur de police. Les détails de la chaîne sont spécifiques au fournisseur de police. Le [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) classe dans le [polices téléchargeables](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) exemple d’application fournit des informations sur le format de requête pour les polices à partir de la Collection Source Google les polices Open.
-4. **Certificats de fournisseur de police** &ndash; avec la liste des ensembles de hachages pour les certificats que le fournisseur doit être signé avec un tableau des ressources. 
+4. **Certificats de fournisseur de police** &ndash; avec la liste des ensembles de hachages pour les certificats que le fournisseur doit être signé avec un tableau des ressources.
 
 Cet extrait de code est un exemple d’instanciation d’un nouvel `FontRequest` objet :
 
@@ -257,14 +257,14 @@ Cet extrait de code est un exemple d’instanciation d’un nouvel `FontRequest`
 FontRequest request = new FontRequest("com.google.android.gms.fonts", "com.google.android.gms", <FontToDownload>, Resource.Array.com_google_android_gms_fonts_certs);
 ```
 
-Dans l’extrait précédent `FontToDownload` est une requête qui vous aide à la police de la collection de polices Google Open Source. 
+Dans l’extrait précédent `FontToDownload` est une requête qui vous aide à la police de la collection de polices Google Open Source.
 
 Avant de transmettre le `FontRequest` à la `FontContractCompat.RequestFont` (méthode), deux objets qui doivent être créées :
 
 * **`FontsContractCompat.FontRequestCallback`** &ndash; Il s’agit d’une classe abstraite qui doit être étendue. Il est un rappel qui sera appelé lorsque `RequestFont` est terminé. Une application Xamarin.Android doit sous-classe `FontsContractCompat.FontRequestCallback` et remplacer le `OnTypefaceRequestFailed` et `OnTypefaceRetrieved`, en fournissant les actions à entreprendre lorsque le téléchargement échoue ou réussit respectivement.
 * **`Handler`** &ndash; Il s’agit d’un `Handler` qui sera utilisé par `RequestFont` pour télécharger la police sur un thread, si nécessaire. Polices doivent **pas** être téléchargé sur le thread d’interface utilisateur.
 
-Cet extrait de code est un exemple d’un C# classe qui télécharge façon asynchrone une police à partir de la collection de polices Google Open Source. Il implémente la `FontRequestCallback` interface et déclenche une C# événement lorsque `FontRequest` terminée. 
+Cet extrait de code est un exemple d’un C# classe qui télécharge façon asynchrone une police à partir de la collection de polices Google Open Source. Il implémente la `FontRequestCallback` interface et déclenche une C# événement lorsque `FontRequest` terminée.
 
 ```csharp
 public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
@@ -332,7 +332,7 @@ Pour utiliser ce programme d’assistance, un nouveau `FontDownloadHelper` est c
 ```csharp
 var fontHelper = new FontDownloadHelper();
 
-fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) => 
+fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 {
     //React to the request
 };

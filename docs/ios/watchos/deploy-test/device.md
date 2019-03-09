@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f4a21e25f418cc81d5f210098ded648b3d70ae14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c15e9205b96a02caa182e47b71c6d36c8bff1aa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116730"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671050"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Test sur les appareils Apple Watch
 
@@ -93,7 +93,7 @@ Une fois que vous avez configuré votre appareil, les ID d’application et les 
 
 Si une erreur se produit lors de l’utilisation de déploiement le **Affichage > blocs > journal de l’appareil** pour voir plus d’informations sur l’erreur. Certaines erreurs et leurs causes sont répertoriées ci-dessous :
 
-### <a name="error-mt3001-could-not-aot-the-assembly"></a>Erreur MT3001 : Ne peut pas AOT l’assembly
+### <a name="error-mt3001-could-not-aot-the-assembly"></a>Erreur MT3001 : Impossible de pas AOT l’assembly
 
 Cela peut se produire lors de la génération en mode débogage pour le déployer sur un appareil Apple Watch.
 
@@ -152,7 +152,7 @@ Si le **sortie de l’Application** fenêtre se bloque en affichant
 waiting for debugger to connect
 ```
 
-Vérifiez si un des packages NuGet qui ont été incluses dans votre projet a une dépendance **Microsoft.Bcl.Build**. Cela est ajoutée automatiquement avec certaines bibliothèques publiée par Microsoft, y compris le fameux [Microsoft Http Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http/).
+Vérifiez si un des packages NuGet qui ont été incluses dans votre projet a une dépendance **Microsoft.Bcl.Build**. Cela est ajoutée automatiquement avec certaines bibliothèques publiée par Microsoft, y compris le fameux [Microsoft Http Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http/).
 
 Le **Microsoft.Bcl.Build.targets** fichier est ajouté à la **.csproj** peut interférer avec l’empaquetage des extensions iOS lors du déploiement. Vous pouvez suivre la [bogue](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
 Une solution de contournement possible consiste à modifier le fichier .csproj et déplacer manuellement le **Microsoft.Bcl.Build.targets** pour être le dernier élément.

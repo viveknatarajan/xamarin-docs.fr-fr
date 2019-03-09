@@ -6,18 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: f13b716e6ead8db8e0adafd180790c67bb82a6bc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112037"
 ---
+
 # <a name="android-wear-controls"></a>Contrôles Android Wear
 
 Android Wear applications peuvent utiliser de nombreux contrôles mêmes déjà en cours d’utilisation pour les applications Android régulières, y compris `Button`, `TextView`et drawables de l’image. Les contrôles de disposition, y compris `ScrollView`, `LinearLayout`, et `RelativateLayout` peut également être utilisé.
 
-Cette page des liens vers les contrôles de spécifique à Android Wear à partir de la [portable bibliothèque d’interface utilisateur](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) disponibles dans les projets Xamarin via la [prise en charge et portable](http://www.nuget.org/packages/Xamarin.Android.Wear/) package NuGet. Ces contrôles sont les suivants :
+Cette page des liens vers les contrôles de spécifique à Android Wear à partir de la [portable bibliothèque d’interface utilisateur](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) disponibles dans les projets Xamarin via la [prise en charge et portable](https://www.nuget.org/packages/Xamarin.Android.Wear/) package NuGet. Ces contrôles sont les suivants :
 
 -   **GridViewPager** &ndash; créer une interface de navigation à deux dimensions où l’utilisateur fait défiler verticalement puis horizontalement pour effectuer une sélection (pour plus d’informations, consultez [GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)) :
 

@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: c68cdc443f11ec6709a9d6fdde8ce10cd9db6733
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 4f08468d08e12ad77cacbac66b55ad8fc6ead433
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233677"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667962"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Vue d’ensemble des liaisons Objective-C
 
@@ -74,7 +74,7 @@ Lire le [docs d’objectif Sharpie](~/cross-platform/macios/binding/objective-sh
 
 Il est possible d’utiliser le [[inscrire]](xref:Foundation.RegisterAttribute) attribut, [[Exporter]](xref:Foundation.ExportAttribute) attribut, et [appel de sélecteur manuel Objective-C](~/ios/internals/objective-c-selectors.md) ensemble à lier manuellement new (précédemment types Objective-C non liés).
 
-Tout d’abord, trouver un type que vous souhaitez lier. Pour la discussion à des fins (et la simplicité), nous allons lier la [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (qui a déjà été lié dans [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); l’implémentation ci-après est simplement par exemple à des fins).
+Tout d’abord, trouver un type que vous souhaitez lier. Pour la discussion à des fins (et la simplicité), nous allons lier la [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (qui a déjà été lié dans [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); l’implémentation ci-après est simplement par exemple à des fins).
 
 Ensuite, nous devons créer la C# type. Nous devrons probablement placer ces données dans un espace de noms ; dans la mesure où Objective-C ne prend pas en charge les espaces de noms, nous devons utiliser le `[Register]` attribut pour modifier le nom de type Xamarin.iOS s’inscrivent auprès du runtime Objective-C. Le C# type doit également hériter [Foundation.NSObject](xref:Foundation.NSObject):
 

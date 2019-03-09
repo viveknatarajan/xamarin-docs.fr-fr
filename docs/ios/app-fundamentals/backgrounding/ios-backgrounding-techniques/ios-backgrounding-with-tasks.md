@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120994"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669828"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding avec des tâches
 
@@ -67,7 +67,7 @@ public override void DidEnterBackground (UIApplication application) {
 Nous commençons en substituant le `DidEnterBackground` méthode dans le `AppDelegate`, où nous enregistrons notre tâche via `BeginBackgroundTask` comme nous l’avons fait dans l’exemple précédent. Ensuite, nous générer un nouveau thread et d’effectuer de notre tâche à long terme. Notez que le `EndBackgroundTask` est maintenant appelé à partir d’à l’intérieur de la tâche à long terme, étant donné que le `DidEnterBackground` méthode ont déjà renvoyé.
 
 > [!IMPORTANT]
-> iOS utilise un [mécanisme de surveillance](http://developer.apple.com/library/ios/qa/qa1693/_index.html) pour vous assurer que l’interface utilisateur d’une application reste réactive. Une application qui se consacre beaucoup trop de temps dans `DidEnterBackground` cesse de répondre dans l’interface utilisateur. Permet de lancer des tâches à exécuter en arrière-plan `DidEnterBackground` à retourner dans un délai raisonnable, que l’interface utilisateur reste réactive et empêche l’arrêt de l’application de l’agent de surveillance.
+> iOS utilise un [mécanisme de surveillance](https://developer.apple.com/library/ios/qa/qa1693/_index.html) pour vous assurer que l’interface utilisateur d’une application reste réactive. Une application qui se consacre beaucoup trop de temps dans `DidEnterBackground` cesse de répondre dans l’interface utilisateur. Permet de lancer des tâches à exécuter en arrière-plan `DidEnterBackground` à retourner dans un délai raisonnable, que l’interface utilisateur reste réactive et empêche l’arrêt de l’application de l’agent de surveillance.
 
 
 ## <a name="handling-background-task-time-limits"></a>Limitation de durée de tâche en arrière-plan gestion

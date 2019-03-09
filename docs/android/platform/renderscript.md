@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8364310d23739c05ff97ea8aa8fa4c56f89ea40c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108728"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670725"
 ---
 # <a name="an-introduction-to-renderscript"></a>Introduction à Renderscript
 
@@ -20,7 +20,7 @@ _Ce guide présente Renderscript et explique comment utiliser l’intrinsèque R
 
 ## <a name="overview"></a>Vue d'ensemble
 
-RenderScript est une infrastructure de programmation créée par Google pour améliorer les performances des applications Android qui nécessitent d’importantes ressources de calculs. Il s’agit d’un bas niveau, hautes performances API basée sur [C99](http://en.wikipedia.org/wiki/C99). S’agissant d’un API qui s’exécutera sur les processeurs, GPU ou DSP de bas niveau, Renderscript convient bien pour les applications Android qui devra peut-être effectuer les opérations suivantes :
+RenderScript est une infrastructure de programmation créée par Google pour améliorer les performances des applications Android qui nécessitent d’importantes ressources de calculs. Il s’agit d’un bas niveau, hautes performances API basée sur [C99](https://en.wikipedia.org/wiki/C99). S’agissant d’un API qui s’exécutera sur les processeurs, GPU ou DSP de bas niveau, Renderscript convient bien pour les applications Android qui devra peut-être effectuer les opérations suivantes :
 
 * Graphiques
 * Traitement d’image
@@ -72,7 +72,7 @@ Tous les noyaux Renderscript seront encapsulés par un type qui est un descendan
 
 Ces deux types, le `StringIntrinsic` est pris en charge par Xamarin.Android. Ce guide explique comment utiliser des scripts intrinsèques dans une application Xamarin.Android.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide concerne les applications Xamarin.Android ce niveau d’API cible 17 ou version ultérieure. L’utilisation de _scripts utilisateur_ n’est pas couverte dans ce guide.
 
@@ -161,4 +161,4 @@ Ce guide a présenté Renderscript et comment l’utiliser dans une application 
 - [Espace de noms Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/)
 - [Une Image avec Renderscript de flou](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/drawing/blur_an_image_with_renderscript)
 - [Renderscript](https://developer.android.com/guide/topics/renderscript/compute.html)
-- [Didacticiel : Prise en main Renderscript](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)
+- [Tutoriel : Prise en main Renderscript](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)

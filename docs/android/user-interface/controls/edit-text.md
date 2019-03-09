@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: e708ceb4b0487cb07ae5a55fae5e96f0e41f17f6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d42cec1ee0939bead9ede83a042f5b6cbb5298cd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119499"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670868"
 ---
 # <a name="edit-text"></a>Modifier le texte
 
@@ -64,7 +64,7 @@ Exécutez l’application et entrez du texte dans le champ de texte. Quand vous 
 
 [![Exemples de saisie de texte dans EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Certaines parties de cette page sont des modifications basées sur le travail créé et* [ *partagé par Android Open Source Project* ](http://code.google.com/policies.html) *et utilisé conformément aux conditions décrites dans le* [ *Licence creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/) *. Ce didacticiel est basé sur le* [ *didacticiel d’Android formulaire Stuff* ](http://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
+*Certaines parties de cette page sont des modifications basées sur le travail créé et* [ *partagé par Android Open Source Project* ](http://code.google.com/policies.html) *et utilisé conformément aux conditions décrites dans le* [ *Licence creative Commons 2.5 Attribution* ](http://creativecommons.org/licenses/by/2.5/) *. Ce didacticiel est basé sur le* [ *didacticiel d’Android formulaire Stuff* ](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 
 ## <a name="related-links"></a>Liens associés

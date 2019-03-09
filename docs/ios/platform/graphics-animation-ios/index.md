@@ -6,16 +6,12 @@ ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 4e329c02015de0eccaebac9ffe40e1dc2691a207
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110106"
+ms.date: 03/18/2017
 ---
+
 # <a name="graphics-and-animation-in-ios"></a>Graphismes et Animation dans iOS
 
-![Images/00_final_app.png](images/00-final-app.png "une exécution de l’application exemple") 
+![Images/00_final_app.png](images/00-final-app.png "une exécution de l’application exemple")
 
 ##  <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Image de base](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
 
@@ -32,6 +28,3 @@ Cet article examine l’infrastructure Core Animation, en montrant comment elle 
 ##  <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[À l’aide des graphismes de base et Core Animation](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 
 Cet article montre étape par étape comment créer une application qui utilise des graphismes de base et Core Animation. Il montre comment dessiner sur l’écran en réponse à l’interaction tactile utilisateur, ainsi que comment animer une image à parcourir le long d’un chemin d’accès.
-
-
-

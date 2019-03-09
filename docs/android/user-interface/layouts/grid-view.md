@@ -1,28 +1,28 @@
 ---
-title: GridView
+title: Affichage de grille
 ms.prod: xamarin
 ms.assetid: 6992C4FF-ECBB-3493-AEE6-3E063C1A8C54
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9ec27402aefd28ded4cf53e7e9fa52eedd2b86b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63164d90419f3a49d9eb52a52d02e05fbee43dbf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103008"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667618"
 ---
-# <a name="gridview"></a>GridView
+# <a name="gridview"></a>Affichage de grille
 
-[`GridView`](https://developer.xamarin.com/api/type/Android.Widget.GridView/) est un [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+[`GridView`](https://developer.xamarin.com/api/type/Android.Widget.GridView/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
 qui affiche les éléments dans une grille à deux dimensions, permettant le défilement. Les éléments de grille sont automatiquement insérés à la disposition en utilisant un [ `ListAdapter` ](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/).
 
 Dans ce didacticiel, vous allez créer une grille d’images miniatures. Lorsqu’un élément est sélectionné, un message toast affichera la position de l’image.
 
 Démarrer un nouveau projet nommé **HelloGridView**.
 
-Rechercher des photos que vous souhaitez utiliser, ou [télécharger ces exemples d’images](http://developer.android.com/shareables/sample_images.zip). Ajouter les fichiers image pour le projet **ressources/Drawable** directory. Dans le **propriétés** fenêtre, définissez l’Action de génération pour chacun d’eux à **AndroidResource**.
+Rechercher des photos que vous souhaitez utiliser, ou [télécharger ces exemples d’images](https://developer.android.com/shareables/sample_images.zip). Ajouter les fichiers image pour le projet **ressources/Drawable** directory. Dans le **propriétés** fenêtre, définissez l’Action de génération pour chacun d’eux à **AndroidResource**.
 
 Ouvrez le **Resources/Layout/Main.axml** de fichiers et insérez le code suivant :
 
@@ -130,7 +130,7 @@ public class ImageAdapter : BaseAdapter
 ```
 
 Tout d’abord, cela permet d’implémenter des méthodes requises héritées de [ `BaseAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/). Le constructeur et le [ `Count` ](https://developer.xamarin.com/api/property/Android.Widget.BaseAdapter.Count/) propriété sont explicites. Normalement, [`GetItem(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItem/)
-doit retourner l’objet en question à la position spécifiée dans l’adaptateur, mais elle est ignorée pour cet exemple. De même, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/)
+doit retourner l’objet en question à la position spécifiée dans l’adaptateur, mais elle est ignorée pour cet exemple. Likewise, [`GetItemId(int)`](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetItemId/)
 doit retourner l’id de ligne de l’élément, mais il n’est pas nécessaire ici.
 
 La première méthode nécessaire est [ `GetView()` ](https://developer.xamarin.com/api/member/Android.Widget.BaseAdapter.GetView/).

@@ -6,12 +6,13 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: da7064997b8a10d4a4604861a405e13dd23a08cf
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 03/19/2017
+ms.openlocfilehash: f7106c9b23fa71b32043ef8190691d798c36370d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233911"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672571"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Modifications des infrastructures supplémentaires iOS 9
 
@@ -195,9 +196,9 @@ Apple a inclus de nombreuses améliorations à plusieurs éléments de la [UIKit
 
 ### <a name="3d-touch-events"></a>Événements tactiles 3D
 
-Nouveau iOS 9 iPhone 6 s et iPhone 6 s Plus, 3D Touch ajoute des mouvements sensibles pression à vos applications iOS. Par conséquent, si votre application est en cours d’exécution sur iOS 9 (ou version ultérieure) et l’appareil iOS est capable de prise en charge 3D Touch, modifications apportées à la pression provoqueront la `TouchesMoved` déclenchement d’événement. 
+Nouveau iOS 9 iPhone 6 s et iPhone 6 s Plus, 3D Touch ajoute des mouvements sensibles pression à vos applications iOS. Par conséquent, si votre application est en cours d’exécution sur iOS 9 (ou version ultérieure) et l’appareil iOS est capable de prise en charge 3D Touch, modifications apportées à la pression provoqueront la `TouchesMoved` déclenchement d’événement.
 
-En raison de ce changement de comportement, vos applications iOS doivent être préparées pour la `TouchesMoved` événement à appeler plus souvent, même si le X / Y coordonnées n’ont pas changé. 
+En raison de ce changement de comportement, vos applications iOS doivent être préparées pour la `TouchesMoved` événement à appeler plus souvent, même si le X / Y coordonnées n’ont pas changé.
 
 Pour plus d’informations, consultez notre [présentation 3D Touch](~/ios/platform/3d-touch.md) guide.
 

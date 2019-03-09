@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: fa41affc57714254a12623f79da3dc1396ecd009
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267636"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670134"
 ---
 # <a name="android-pie-features"></a>Fonctionnalités de graphique à secteurs Android
 
@@ -34,7 +34,7 @@ La liste suivante est nécessaire pour utiliser les fonctionnalités de graphiqu
 
 -   **Xamarin.Android** &ndash; Xamarin.Android 9.0.0.17 ou version ultérieure doit être installé avec Visual Studio (Xamarin.Android est automatiquement installé dans le cadre de la **développement Mobile en .NET** charge de travail).
 
--   **Kit de développement Java** &ndash; 9.0 Android Xamarin développement nécessite [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (ou vous pouvez essayer la version préliminaire de distribution Microsoft de la [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 est automatiquement installé dans le cadre de la **développement Mobile en .NET** charge de travail.
+-   **Kit de développement Java** &ndash; 9.0 Android Xamarin développement nécessite [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (ou vous pouvez essayer la version préliminaire de distribution Microsoft de la [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 est automatiquement installé dans le cadre de la **développement Mobile en .NET** charge de travail.
 
 -   **Kit de développement logiciel Android** &ndash; API SDK Android 28 ou version ultérieure doit être installé via le gestionnaire Android SDK.
 
@@ -270,4 +270,4 @@ Il inclus des liens vers la documentation de l’API et les rubriques du dévelo
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Graphique à secteurs 9 Android](https://developer.android.com/about/versions/pie/)
+- [Android 9 Pie](https://developer.android.com/about/versions/pie/)

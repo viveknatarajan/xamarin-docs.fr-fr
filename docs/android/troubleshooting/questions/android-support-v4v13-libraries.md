@@ -1,5 +1,5 @@
 ---
-title: Xamarin Android plus intelligents prennent en charge v4 / v13 les Packages NuGet
+title: Packages NuGet v4 / v13 de prise en charge Xamarin Android plus intelligents
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C
@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 43627884c2f8bc4d9e5b5faa2c3af08f74487b65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a990d933c258812b2b3d3374fb6435af06f729ea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114639"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671791"
 ---
-# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>Xamarin Android plus intelligents prennent en charge v4 / v13 les Packages NuGet
+# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>Packages NuGet v4 / v13 de prise en charge Xamarin Android plus intelligents
 
 ## <a name="about-the-android-support-libraries"></a>Sur les bibliothèques de prise en charge Android
 
-Google a créé des bibliothèques de prise en charge pour que les nouvelles fonctionnalités disponibles pour les versions antérieures d’Android. En règle générale, les bibliothèques de prise en charge bénéficient d’un numéro de version dans leur nom, qui est le plus bas niveau d’API Android qu’ils sont compatibles avec (ex : prise en charge-v4 est utilisable uniquement sur les API de niveau 4 et versions ultérieures. Plus d’informations dans ce [discussion Stack Overflow](http://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
+Google a créé des bibliothèques de prise en charge pour que les nouvelles fonctionnalités disponibles pour les versions antérieures d’Android. En règle générale, les bibliothèques de prise en charge bénéficient d’un numéro de version dans leur nom, qui est le plus bas niveau d’API Android qu’ils sont compatibles avec (par exemple : Prise en charge-v4 utilisable uniquement sur les API de niveau 4 et versions ultérieures. Plus d’informations dans ce [discussion Stack Overflow](https://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
 
 Deux des bibliothèques de prise en charge : `Support-v4` et `Support-v13` ne peuvent pas être utilisées ensemble dans la même application, autrement dit, ils s’excluent mutuellement. Il s’agit, car `Support-v13` réellement contient tous les types et l’implémentation de `Support-v4`. Si vous essayez de référence à la fois dans le même projet, vous rencontrerez des erreurs de type en double.
 

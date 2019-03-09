@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: ed49c1d11e30d19b2dc60066c3c35568ade43198
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 3131963efa3d4ba4de9ff63c741c276a62e9d12d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557101"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670413"
 ---
 # <a name="xamarinforms-editor"></a>Éditeur de Xamarin.Forms
 
@@ -258,6 +258,9 @@ Assurez-vous que les couleurs d’arrière-plan et le texte que vous choisissez 
 
 - [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; déclenché lorsque le texte modifié dans l’éditeur. Fournit le texte avant et après la modification.
 - [Terminé](xref:Xamarin.Forms.Editor.Completed) &ndash; déclenché lorsque l’utilisateur s’est terminée entrée en appuyant sur la touche Retour sur le clavier.
+
+> [!NOTE]
+> Le [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) (classe), à partir de laquelle [ `Entry` ](xref:Xamarin.Forms.Entry) hérite, a également [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) et [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)événements.
 
 ### <a name="completed"></a>Terminé
 
