@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7b7fa2ea99a58b875bc1dc579455511aa9bf72d1
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: b3981572e4d2629fd88d1e255fc7459bfe8912f1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172091"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669009"
 ---
 # <a name="kitkat-features"></a>Fonctionnalités de KitKat
 
@@ -33,7 +33,7 @@ Android 4.4 (API niveau 19), également appelé « KitKat », a été publiée
 
 Ce guide fournit des conseils pour migrer une application Xamarin.Android pour KitKat, ainsi que d’une vue d’ensemble de KitKat pour les développeurs Xamarin.Android.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pour développer des applications Xamarin.Android à l’aide de KitKat, vous devez *Xamarin.Android 4.11.0* ou supérieur et Android 4.4 (API niveau 19) installé via le gestionnaire Android SDK, comme illustré par la capture d’écran suivante :
 
@@ -96,7 +96,7 @@ KitKat simplifie la messagerie de l’utilisateur en regroupant tous les contenu
 
 ### <a name="webview-apps"></a>Applications WebView
 
-[WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) obtenu une modernisation à KitKat. La plus importante modification est ajoutée à la sécurité pour le chargement de contenu dans un `WebView`. Bien que la plupart des applications qui ciblent des versions d’API plus anciennes devrait fonctionner comme prévu, tester des applications qui utilisent la `WebView` classe est fortement recommandée. Pour plus d’informations sur les APIs WebView affectées, consultez l’Android [migration vers WebView Android 4.4](http://developer.android.com/guide/webapps/migrating.html) documentation.
+[WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) obtenu une modernisation à KitKat. La plus importante modification est ajoutée à la sécurité pour le chargement de contenu dans un `WebView`. Bien que la plupart des applications qui ciblent des versions d’API plus anciennes devrait fonctionner comme prévu, tester des applications qui utilisent la `WebView` classe est fortement recommandée. Pour plus d’informations sur les APIs WebView affectées, consultez l’Android [migration vers WebView Android 4.4](https://developer.android.com/guide/webapps/migrating.html) documentation.
 
 <a name="user_experience" />
 
@@ -259,7 +259,7 @@ Une transition personnalisée peut être définie dans un fichier de ressources 
 
 [![Emplacement du fichier transition.xml sous le répertoire de ressources/transition](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
 
-L’exemple de code suivant définit une transition qui anime pendant 5 secondes et utilise le [dépassement interpolateur](http://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
+L’exemple de code suivant définit une transition qui anime pendant 5 secondes et utilise le [dépassement interpolateur](https://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
 
 ```xml
 <changeBounds
@@ -396,7 +396,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 Notez que [`ContentResolver.OpenOutputStream(Android.Net.Uri)`](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.OpenOutputStream/(Android.Net.Uri))
 Retourne un `System.IO.Stream`, de sorte que tout le processus de diffusion en continu peuvent être écrits en .NET.
 
-Pour plus d’informations sur le chargement, création et modification de contenu avec l’infrastructure d’accès de stockage, consultez le [documentation Android pour l’infrastructure d’accès de stockage](http://developer.android.com/guide/topics/providers/document-provider.html).
+Pour plus d’informations sur le chargement, création et modification de contenu avec l’infrastructure d’accès de stockage, consultez le [documentation Android pour l’infrastructure d’accès de stockage](https://developer.android.com/guide/topics/providers/document-provider.html).
 
 ### <a name="printing"></a>Impression
 
@@ -421,7 +421,7 @@ Notez que le chargement et l’impression de contenu web nécessitent l’autori
 
 ##### <a name="print-menu-item"></a>Élément de Menu Imprimer
 
-L’option d’impression s’affiche généralement dans l’activité [menu options](http://developer.android.com/guide/topics/ui/menus.html#options-menu).
+L’option d’impression s’affiche généralement dans l’activité [menu options](https://developer.android.com/guide/topics/ui/menus.html#options-menu).
 Le menu options permet aux utilisateurs d’effectuer des actions sur une activité. Il est dans l’angle supérieur droit de l’écran et ressemble à ceci :
 
 [![Capture d’écran de l’exemple d’élément de menu Imprimer affiché dans l’angle supérieur droit de l’écran](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
@@ -656,7 +656,7 @@ Le redémarrage de l’appareil rétablit le nombre d’étape 0. Votre applicat
 
 ### <a name="screen-recording"></a>Enregistrement d’écran
 
-KitKat inclut un nouvel écran enregistrement des fonctionnalités afin que les développeurs peuvent enregistrer des applications en action. Enregistrement d’écran est disponible via le [Android Debug Bridge (ADB)](http://developer.android.com/tools/help/adb.html) client, ce qui peut être téléchargé en tant que partie du SDK Android.
+KitKat inclut un nouvel écran enregistrement des fonctionnalités afin que les développeurs peuvent enregistrer des applications en action. Enregistrement d’écran est disponible via le [Android Debug Bridge (ADB)](https://developer.android.com/tools/help/adb.html) client, ce qui peut être téléchargé en tant que partie du SDK Android.
 
 Pour enregistrer votre écran, connectez votre appareil ; Ensuite, recherchez votre installation du Kit Android SDK, accédez à la **outils de plateforme** répertoire et exécutez le **adb** client :
 
@@ -678,18 +678,18 @@ Vous pouvez trouver votre vidéo sur votre appareil, il apparaît dans votre gal
 
 Outre les modifications décrites ci-dessus, KitKat vous permet de :
 
--  *Utiliser le mode plein écran* -KitKat introduit une nouvelle [mode immersif](http://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) pour Explorer le contenu, jouer à des jeux et exécutant d’autres applications susceptibles de bénéficier d’une expérience plein écran.
+-  *Utiliser le mode plein écran* -KitKat introduit une nouvelle [mode immersif](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) pour Explorer le contenu, jouer à des jeux et exécutant d’autres applications susceptibles de bénéficier d’une expérience plein écran.
 
 -  *Personnaliser les Notifications* -obtenir des détails supplémentaires concernant les notifications système avec le [`NotificationListenerService`](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/)
    . Cela vous permet de présenter les informations d’une manière différente à l’intérieur de votre application.
 
--  *Mettre en miroir des ressources Drawable* -ressources Drawable ont un nouveau [`autoMirrored`](http://developer.android.com/reference/android/R.attr.html#autoMirrored)
+-  *Mettre en miroir des ressources Drawable* -ressources Drawable ont un nouveau [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
    attribut qui indique au système de créer une version mise en miroir pour les images qui nécessitent le retournement pour la disposition de gauche à droite.
 
 -  *Suspendre des Animations* -suspendre et reprendre des animations créées avec le [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    .
 
--  *Dynamiquement modification de texte en lecture* -indiquent les parties de l’interface utilisateur qui mettent à jour dynamiquement par un nouveau texte en tant que « zones dynamiques » avec le nouveau [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *Dynamiquement modification de texte en lecture* -indiquent les parties de l’interface utilisateur qui mettent à jour dynamiquement par un nouveau texte en tant que « zones dynamiques » avec le nouveau [ `accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    attribut pour le nouveau texte lira automatiquement en mode d’accessibilité.
 
 -  *Améliorer l’expérience de l’Audio* -Vérifiez effectue le suivi plus fort avec le [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)
@@ -703,7 +703,7 @@ Outre les modifications décrites ci-dessus, KitKat vous permet de :
 -  *Contrôle à distance* -avec peu de modifications sur le matériel et les logiciels côté KitKat vous permet d’activer un appareil équipé d’un émetteur de runtime d’intégration dans un contrôle à distance à l’aide du `ConsumerIrService`et d’interagir avec les périphériques avec le nouveau [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
    API.
 
-Pour plus d’informations sur les modifications de l’API ci-dessus, reportez-vous à Google [Android 4.4 API](http://developer.android.com/about/versions/android-4.4.html) vue d’ensemble.
+Pour plus d’informations sur les modifications de l’API ci-dessus, reportez-vous à Google [Android 4.4 API](https://developer.android.com/about/versions/android-4.4.html) vue d’ensemble.
 
 
 ## <a name="summary"></a>Récapitulatif
@@ -714,5 +714,5 @@ Cet article introduit certaines des nouvelles API disponibles dans Android 4.4 (
 ## <a name="related-links"></a>Liens associés
 
 - [Exemple de KitKat](https://developer.xamarin.com/samples/KitKat/)
-- [Android 4.4 API](http://developer.android.com/about/versions/android-4.4.html)
-- [KitKat Android](http://developer.android.com/about/versions/kitkat.html)
+- [Android 4.4 API](https://developer.android.com/about/versions/android-4.4.html)
+- [KitKat Android](https://developer.android.com/about/versions/kitkat.html)
