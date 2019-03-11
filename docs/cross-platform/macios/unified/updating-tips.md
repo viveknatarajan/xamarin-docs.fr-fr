@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce5c8f7cf30407e64464c412359263b52e134675
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: a5083e1d31377caece1b8fb4faf33b6e3ff88202
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267389"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672454"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Conseils pour la mise à jour du code vers l’API unifiée
 
@@ -88,7 +88,7 @@ Certaines choses peuvent être corrigées manuellement sont les suivantes :
 
  * `NSAction` a été [remplacé](~/cross-platform/macios/unified/overview.md#NSAction) avec le .NET starndard `Action`. Des délégués simple (paramètre unique) ont également été remplacés par `Action<T>`.
 
-Enfin, reportez-vous à la [différences d’API unifiée de classique v](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) pour rechercher les modifications apportées aux API dans votre code. Recherche [cette page](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) aidera à trouver les API classiques et qu’ils ont été mis à jour.
+Enfin, reportez-vous à la [différences d’API unifiée de classique v](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) pour rechercher les modifications apportées aux API dans votre code. Recherche [cette page](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) aidera à trouver les API classiques et qu’ils ont été mis à jour.
 
 **Remarque :** le `MonoTouch.Dialog` espace de noms reste le même après la migration. Si votre code utilise **MonoTouch.Dialog** vous devez continuer à utiliser cet espace de noms ; *pas* modifier `MonoTouch.Dialog` à `Dialog`!
 
@@ -170,7 +170,7 @@ Lors de la création d’une annotation personnalisée en sous-classant MKAnnota
 * Substituez la méthode SetCoordinate et définissez votre champ
 * Appelez SetCoordinate dans votre constructeur avec le paramètre de coordonnées passé dans
 
-Il doit ressembler à ce qui suit :
+Celui-ci doit se présenter comme suit :
 
 ```csharp
 class BasicPinAnnotation : MKAnnotation

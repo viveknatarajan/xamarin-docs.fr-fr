@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: cd80154602cc22668768fe217da7371b77ded003
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fa32783617fce99514560677184f17be904cd42d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112377"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670319"
 ---
 # <a name="launching-the-maps-application"></a>Lancement de l’Application de mappages
 
@@ -55,7 +55,7 @@ Les versions de l’URI qui prennent une requête (à savoir les rues adresse ou
 
 
 
-Pour plus d’informations sur les schémas d’URI géographique, consultez [afficher un emplacement sur une carte](http://developer.android.com/guide/components/intents-common.html#Maps).
+Pour plus d’informations sur les schémas d’URI géographique, consultez [afficher un emplacement sur une carte](https://developer.android.com/guide/components/intents-common.html#Maps).
 
 
 ## <a name="street-view"></a>Vue rue

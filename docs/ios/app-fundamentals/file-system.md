@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/12/2018
-ms.openlocfilehash: 38422682849de60a3f43e513ef48011d32b030ef
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 09e05fcfe10a994e14aa605b203ea67efae80d62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579867"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672623"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Accès au système de fichiers dans Xamarin.iOS
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/FileSystemSampleCode/)
 
-Vous pouvez utiliser Xamarin.iOS et `System.IO` classes dans le *bibliothèque de classes de Base (BCL) .NET* pour accéder au système de fichier iOS. Le `File` classe vous permet de créer, supprimer et lire des fichiers et le `Directory` classe vous permet de créer, supprimer ou énumérer le contenu des répertoires. Vous pouvez également utiliser `Stream` sous-classes, ce qui peuvent fournir un degré plus élevé de contrôle sur les opérations de fichier (par exemple, la compression ou la position de recherche au sein d’un fichier).
+Vous pouvez utiliser Xamarin.iOS et `System.IO` classes dans le *bibliothèque de classes de Base (BCL) .NET* pour accéder au système de fichier iOS. La classe `File` permet de créer, supprimer et lire des fichiers, et la classe `Directory` permet de créer, supprimer ou énumérer le contenu des répertoires. Vous pouvez également utiliser `Stream` sous-classes, ce qui peuvent fournir un degré plus élevé de contrôle sur les opérations de fichier (par exemple, la compression ou la position de recherche au sein d’un fichier).
 
 iOS impose certaines restrictions sur une application peut faire avec le système de fichiers pour préserver la sécurité des données d’une application et de protéger les utilisateurs à partir d’applications MALIGNES. Ces restrictions font partie de la *Application Sandbox* – un ensemble de règles qui limite l’accès d’une application pour les fichiers, les préférences, les ressources réseau, matériel, etc. Une application est limitée à la lecture et écriture de fichiers dans son répertoire de base (emplacement d’installation) ; Il ne peut pas accéder aux fichiers de l’application à un autre.
 
@@ -205,7 +205,7 @@ Ces répertoires, comment déterminer leur chemin d’accès et leurs objectifs 
 |Bibliothèque /|Le répertoire de la bibliothèque est un bon emplacement pour stocker les fichiers qui ne sont pas créés directement par l’utilisateur, telles que les bases de données ou d’autres fichiers générés par l’application. Le contenu de ce répertoire n’est jamais exposé à l’utilisateur via iTunes.<br /><br />Vous pouvez créer vos propres sous-répertoires dans la bibliothèque ; Toutefois, il existe déjà certains créé par le système répertoires ici que vous devez connaître, y compris les préférences et les Caches.<br /><br />Le contenu de ce répertoire (à l’exception du sous-répertoire Caches) est sauvegardé par iTunes. Les répertoires personnalisés que vous créez dans la bibliothèque seront sauvegardés.|
 |Bibliothèque/Préférences /|Fichiers de préférences spécifiques à l’application sont stockées dans ce répertoire. Ne créez pas directement ces fichiers. Au lieu de cela, utilisez la `NSUserDefaults` classe.<br /><br />Le contenu de ce répertoire est sauvegardé par iTunes.|
 |Bibliothèque/Caches /|Le répertoire de Caches est un bon emplacement pour stocker les fichiers de données qui peuvent aider votre application s’exécuter, mais qui peut être facilement recréées. L’application doit créer et supprimer ces fichiers en fonction des besoins et être en mesure de recréer ces fichiers si nécessaire. iOS 5 peut également supprimer ces fichiers (dans les situations de stockage faible), mais elle ne sera pas le faire pendant l’exécution de l’application.<br /><br />Le contenu de ce répertoire n’est pas sauvegardé par iTunes, ce qui signifie qu’ils ne seront pas présents si l’utilisateur restaure un appareil, et ils ne soient pas présents après avoir installé une version mise à jour de votre application.<br /><br />Par exemple, au cas où votre application ne peut pas se connecter au réseau, vous pouvez utiliser le répertoire de Caches pour stocker les fichiers de données ou pour fournir une bonne expérience hors connexion. L’application peut enregistrer et récupérer ces données rapidement en attendant des réponses du réseau, mais il ne doit pas nécessairement être sauvegardées et peut facilement être récupéré ou recréé après une restauration ou une version mise à jour.|
-|TMP /|Les applications peuvent stocker des fichiers temporaires qui sont nécessaires uniquement pour une courte période dans ce répertoire. Pour économiser l’espace, les fichiers doivent être supprimés lorsqu’ils ne sont plus nécessaires. Le système d’exploitation peut également supprimer des fichiers à partir de ce répertoire quand une application n’est pas en cours d’exécution.<br /><br />Le contenu de ce répertoire n’est pas sauvegardé par iTunes.<br /><br />Par exemple, le répertoire tmp peut servir à stocker les fichiers temporaires qui sont téléchargés pour l’affichage à l’utilisateur (par exemple, les avatars Twitter ou les pièces jointes), mais qui peut être supprimé une fois qu’ils ont été affichées (et téléchargées à nouveau s’ils sont nécessaires à l’avenir) .|
+|tmp/|Les applications peuvent stocker des fichiers temporaires qui sont nécessaires uniquement pour une courte période dans ce répertoire. Pour économiser l’espace, les fichiers doivent être supprimés lorsqu’ils ne sont plus nécessaires. Le système d’exploitation peut également supprimer des fichiers à partir de ce répertoire quand une application n’est pas en cours d’exécution.<br /><br />Le contenu de ce répertoire n’est pas sauvegardé par iTunes.<br /><br />Par exemple, le répertoire tmp peut servir à stocker les fichiers temporaires qui sont téléchargés pour l’affichage à l’utilisateur (par exemple, les avatars Twitter ou les pièces jointes), mais qui peut être supprimé une fois qu’ils ont été affichées (et téléchargées à nouveau s’ils sont nécessaires à l’avenir) .|
 
 Cette capture d’écran montre la structure de répertoires dans une fenêtre Finder :
 
@@ -357,5 +357,5 @@ Cet article vous a montré que les opérations de système de fichiers avec Xama
 ## <a name="related-links"></a>Liens connexes
 
 - [Exemple de code du système de fichiers](https://developer.xamarin.com/samples/FileSystemSampleCode/)
-- [Guide de programmation de système de fichiers](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
-- [Inscrit le fichier de Types de votre application prend en charge](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)
+- [Guide de programmation de système de fichiers](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
+- [Inscrit le fichier de Types de votre application prend en charge](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

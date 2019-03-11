@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 85e4e98cfbc96936c19642a200885b54cf745aa4
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 4799d6aaa095127e242c5e0750db686519d0c21d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617512"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670790"
 ---
 # <a name="localization"></a>Localisation
 
@@ -111,7 +111,7 @@ Si les données en entrée par l’utilisateur de l’application, l’analyser 
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Consultez le [l’analyse de chaînes numériques](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) et [l’analyse de chaînes de Date et heure](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) articles MSDN pour plus d’informations.
+Consultez le [l’analyse de chaînes numériques](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) et [l’analyse de chaînes de Date et heure](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) articles MSDN pour plus d’informations.
 
 <a name="rtl" />
 
@@ -131,7 +131,7 @@ IOS et Android prennent en charge les dispositions de droite à gauche et le ren
 
 Différentes langues définissent l’ordre de tri de leurs alphabets différemment, même lorsqu’ils utilisent le même jeu de caractères.
 
-Consultez le [détail de la comparaison de chaînes](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) dans [meilleures pratiques pour l’utilisation de chaînes dans le .NET Framework](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) pour obtenir un exemple où langue (CultureInfo) affecte l’ordre de tri.
+Consultez le [détail de la comparaison de chaînes](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) dans [meilleures pratiques pour l’utilisation de chaînes dans le .NET Framework](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) pour obtenir un exemple où langue (CultureInfo) affecte l’ordre de tri.
 
 Il est peu probable que les fonctionnalités de base de données intégrée sur les plateformes mobiles prendront en charge de tri spécifiques au langage classement afin de vous être amené à implémenter le code supplémentaire dans votre logique métier.
 
@@ -312,5 +312,5 @@ Poursuivez la lecture des détails techniques pour la plateforme qui que vous in
 ## <a name="related-links"></a>Liens associés
 
 - [Vue d’ensemble de la localisation d’Apple](https://developer.apple.com/internationalization/)
-- [Liste de vérification de la localisation d’Android](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [Meilleures pratiques pour développer des Applications mondialisables (MSDN)](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
+- [Liste de vérification de la localisation d’Android](https://developer.android.com/distribute/tools/localization-checklist.html)
+- [Meilleures pratiques pour développer des Applications mondialisables (MSDN)](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

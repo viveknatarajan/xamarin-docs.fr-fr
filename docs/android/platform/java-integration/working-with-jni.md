@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: c674112f629f2054f81d72ee2b71268836e48b7a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8ad2dde701814c0977e25e6e58272c0aa01ca4ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106713"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672844"
 ---
 # <a name="working-with-jni"></a>Utilisation de JNI
 
@@ -37,7 +37,7 @@ Ce document explique :
 
 
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 JNI, telle qu’exposée via la [espace de noms Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/), est disponible dans chaque version de Xamarin.Android.
 Pour lier les interfaces et les types Java, vous devez utiliser Xamarin.Android 4.0 ou version ultérieure.
@@ -56,7 +56,7 @@ L’objectif premier est purement pour plus de commodité et l’encapsulation d
 
 
 
-## <a name="android-callable-wrappers"></a>Wrappers RCW Android
+## <a name="android-callable-wrappers"></a>Wrappers pouvant être appelés par Android
 
 Les wrappers RCW Android (ACW) sont requis chaque fois que le runtime Android (ART) doit appeler du code managé ; ces wrappers sont requis, car il n’existe aucun moyen pour inscrire des classes avec l’ART lors de l’exécution.
 (Plus précisément, le [DefineClass](http://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/functions.html#wp15986) (fonction) JNI n’est pas pris en charge par le runtime Android. Les wrappers RCW Android donc composent l’absence de prise en charge de l’inscription de type runtime.)
@@ -86,7 +86,7 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 ```
 
 
-### <a name="implementation-details"></a>Détails d’implémentation
+### <a name="implementation-details"></a>Détails de l’implémentation
 
 *Le reste de cet article fournit des détails d’implémentation susceptibles d’être modifiées sans préavis* (et est présentée ici uniquement parce que les développeurs peuvent être curieux de savoir ce qui se passe sous le capot).
 
@@ -156,7 +156,7 @@ En règle générale, Xamarin.Android génère automatiquement le code Java qui 
 
 -   Android prend en charge les noms d’actions dans les attributs XML de disposition, par exemple le [android : onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) attribut XML. Lorsqu’il est spécifié, l’instance de vue gonflé tente de rechercher la méthode Java.
 
--   Le [java.io.Serializable](http://developer.android.com/reference/java/io/Serializable.html) interface requiert `readObject` et `writeObject` méthodes. Dans la mesure où ils ne sont pas membres de cette interface, notre implémentation managée correspondante n’expose pas ces méthodes pour le code Java.
+-   Le [java.io.Serializable](https://developer.android.com/reference/java/io/Serializable.html) interface requiert `readObject` et `writeObject` méthodes. Dans la mesure où ils ne sont pas membres de cette interface, notre implémentation managée correspondante n’expose pas ces méthodes pour le code Java.
 
 -   Le [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.Os.Parcelable/) interface attend qu’une classe d’implémentation doit avoir un champ statique `CREATOR` de type `Parcelable.Creator`. Le code Java généré requiert un champ explicit. Avec notre scénario standard, il n’existe aucun moyen pour le champ de sortie dans le code Java à partir du code managé.
 
@@ -248,12 +248,12 @@ Consultez le [références de Type JNI](#_JNI_Type_References) section pour plus
 
 ### <a name="binding-fields"></a>Champs de liaison
 
-Champs de Java sont exposés en tant que C# propriétés, par exemple le champ Java [java.lang.System.in](http://developer.android.com/reference/java/lang/System.html#in) est lié en tant que le C# propriété [Java.Lang.JavaSystem.In](https://developer.xamarin.com/api/property/Java.Lang.JavaSystem.In/).
+Champs de Java sont exposés en tant que C# propriétés, par exemple le champ Java [java.lang.System.in](https://developer.android.com/reference/java/lang/System.html#in) est lié en tant que le C# propriété [Java.Lang.JavaSystem.In](https://developer.xamarin.com/api/property/Java.Lang.JavaSystem.In/).
 En outre, étant donné que JNI fait la distinction entre les champs statiques et les champs d’instance, différentes méthodes servir lors de l’implémentation des propriétés.
 
 La liaison de champ implique trois ensembles de méthodes :
 
-1.  Le *obtenir l’id de champ* (méthode). Le *obtenir l’id de champ* méthode est chargée de retourner un champ gérer cela le *obtenir la valeur du champ* et *définir la valeur du champ* méthodes utiliseront. Obtention de l’id de champ nécessite de connaître la déclaration de type, le nom du champ et le [signature de type JNI](#_JNI_Type_Signatures) du champ.
+1.  Le *obtenir l’id de champ* (méthode). Le *obtenir l’id de champ* méthode est chargée de retourner un champ gérer cela le *obtenir la valeur du champ* et *définir la valeur du champ* méthodes utiliseront. Obtention de l’id de champ nécessite de connaître la déclaration de type, le nom du champ et le [signature de type JNI](#JNI_Type_Signatures) du champ.
 
 1.  Le *obtenir la valeur du champ* méthodes. Ces méthodes requièrent le handle de champ et sont responsables de lire la valeur du champ à partir de Java.
     La méthode à utiliser varie selon le type de champ.
@@ -280,7 +280,7 @@ public static System.IO.Stream In
 }
 ```
 
-Remarque : Nous utilisons [InputStreamInvoker.FromJniHandle](https://developer.xamarin.com/api/member/Android.Runtime.InputStreamInvoker.FromJniHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) pour convertir la référence JNI dans un `System.IO.Stream` instance et nous utilisons `JniHandleOwnership.TransferLocalRef` car [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/) Retourne une référence locale.
+Remarque : Nous utilisons [InputStreamInvoker.FromJniHandle](https://developer.xamarin.com/api/member/Android.Runtime.InputStreamInvoker.FromJniHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) pour convertir la référence JNI dans un `System.IO.Stream` instance et nous utilisons `JniHandleOwnership.TransferLocalRef` car [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/) retourne un référence locale.
 
 Un grand nombre de la [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) types ont `FromJniHandle` référence sur les méthodes qui convertira un JNI dans le type souhaité.
 
@@ -288,11 +288,11 @@ Un grand nombre de la [Android.Runtime](https://developer.xamarin.com/api/namesp
 
 ### <a name="method-binding"></a>Liaison de méthode
 
-Méthodes Java sont exposées en tant que C# méthodes et en tant que C# propriétés. Par exemple, la méthode Java [java.lang.Runtime.runFinalizersOnExit](http://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) méthode est liée en tant que le [Java.Lang.Runtime.RunFinalizersOnExit](https://developer.xamarin.com/api/member/Java.Lang.Runtime.RunFinalizersOnExit/) (méthode) et le [java.lang.Object.getClass ](http://developer.android.com/reference/java/lang/Object.html#getClass) méthode est liée en tant que le [Java.Lang.Object.Class](https://developer.xamarin.com/api/property/Java.Lang.Object.Class/) propriété.
+Méthodes Java sont exposées en tant que C# méthodes et en tant que C# propriétés. Par exemple, la méthode Java [java.lang.Runtime.runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) méthode est liée en tant que le [Java.Lang.Runtime.RunFinalizersOnExit](https://developer.xamarin.com/api/member/Java.Lang.Runtime.RunFinalizersOnExit/) (méthode) et le [java.lang.Object.getClass ](https://developer.android.com/reference/java/lang/Object.html#getClass) méthode est liée en tant que le [Java.Lang.Object.Class](https://developer.xamarin.com/api/property/Java.Lang.Object.Class/) propriété.
 
 Appel de méthode est un processus en deux étapes :
 
-1.  Le *obtenir l’id de la méthode* pour la méthode à appeler. Le *obtenir l’id de la méthode* méthode est chargée de retourner un handle de méthode qui utilisent les méthodes d’appel de méthode. Obtention de l’id de la méthode nécessite de connaître le la déclaration de type, le nom de la méthode et le [signature de type JNI](#_JNI_Type_Signatures) de la méthode.
+1.  Le *obtenir l’id de la méthode* pour la méthode à appeler. Le *obtenir l’id de la méthode* méthode est chargée de retourner un handle de méthode qui utilisent les méthodes d’appel de méthode. Obtention de l’id de la méthode nécessite de connaître le la déclaration de type, le nom de la méthode et le [signature de type JNI](#JNI_Type_Signatures) de la méthode.
 
 1.  Appelez la méthode.
 
@@ -308,7 +308,7 @@ Liaison de méthode est potentiellement plus qu’appel de méthode. Liaison de 
 
 #### <a name="static-methods"></a>Méthodes statiques
 
-Liaison d’une méthode statique implique l’utilisation de `JNIEnv.GetStaticMethodID` pour obtenir un handle de méthode, puis respectant `JNIEnv.CallStatic*Method` (méthode), selon le type de retour de la méthode. Voici un exemple d’une liaison pour le [Runtime.getRuntime](http://developer.android.com/reference/java/lang/Runtime.html#getRuntime()) méthode :
+Liaison d’une méthode statique implique l’utilisation de `JNIEnv.GetStaticMethodID` pour obtenir un handle de méthode, puis respectant `JNIEnv.CallStatic*Method` (méthode), selon le type de retour de la méthode. Voici un exemple d’une liaison pour le [Runtime.getRuntime](https://developer.android.com/reference/java/lang/Runtime.html#getRuntime()) méthode :
 
 ```csharp
 static IntPtr id_getRuntime;
@@ -388,7 +388,7 @@ Pour les liaisons de classe, cela peut être le comportement correct si le type 
 1.  Si le type de runtime actuel est le même que le type déclarant, puis appeler le constructeur de Java et utilisez [Object.SetHandle](https://developer.xamarin.com/api/member/Java.Lang.Object.SetHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) pour stocker le handle retourné par `JNIEnv.NewInstance` .
 
 
-Par exemple, considérez le [java.lang.Integer(int)](http://developer.android.com/reference/java/lang/Integer.html#Integer(int)) constructeur. Cela est lié en tant que :
+Par exemple, considérez le [java.lang.Integer(int)](https://developer.android.com/reference/java/lang/Integer.html#Integer(int)) constructeur. Cela est lié en tant que :
 
 ```csharp
 // Cache the constructor's method handle for later use
@@ -634,7 +634,7 @@ int>` délégué qui fait référence à la `n_Add` (méthode), puis appelle [JN
 
 Enfin, le `n_Add` méthode est chargée pour le marshaling des paramètres JNI pour les types managés correspondants, puis appelez de délégation de la méthode.
 
-Remarque : Utilisez toujours `JniHandleOwnership.DoNotTransfer` lors de l’obtention d’un MCW sur une instance de Java. En les traitant comme une référence locale (et par conséquent, l’appel `JNIEnv.DeleteLocalRef`) s’arrête géré -&gt; Java -&gt; des transitions de pile.
+Remarque : Toujours utiliser `JniHandleOwnership.DoNotTransfer` lors de l’obtention d’un MCW sur une instance de Java. En les traitant comme une référence locale (et par conséquent, l’appel `JNIEnv.DeleteLocalRef`) s’arrête géré -&gt; Java -&gt; des transitions de pile.
 
 
 
@@ -807,7 +807,7 @@ Cela n’est pas nécessaire : nous avons l’avez liée à un C# `int[]`, ou u
 
 Le `Invoker` définition de type doit hériter `Java.Lang.Object`, implémentez l’interface appropriée et de fournir toutes les méthodes de connexion référencées dans la définition d’interface. Il existe une solution qui suggère plusieurs qui diffère d’une liaison de la classe : le `class_ref` ID de champ et de méthode doivent être membres d’instance, les membres non statiques.
 
-La raison de préférer les membres d’instance a trait aux `JNIEnv.GetMethodID` comportement dans le runtime Android. (Il peut s’agir de comportement de Java ainsi ; il n’a pas été testé). `JNIEnv.GetMethodID` retourne la valeur null lorsque vous recherchez une méthode qui provient d’une interface implémentée et pas l’interface déclarée. Prendre en compte la [java.util.SortedMap&lt;K, V&gt; ](http://developer.android.com/reference/java/util/SortedMap.html) interface Java, qui implémente le [java.util.Map&lt;K, V&gt; ](http://developer.android.com/reference/java/util/Map.html) interface. Carte fournit un [effacer](http://developer.android.com/reference/java/util/Map.html#clear()) (méthode), par conséquent apparemment raisonnable `Invoker` définition pour SortedMap serait :
+La raison de préférer les membres d’instance a trait aux `JNIEnv.GetMethodID` comportement dans le runtime Android. (Il peut s’agir de comportement de Java ainsi ; il n’a pas été testé). `JNIEnv.GetMethodID` retourne la valeur null lorsque vous recherchez une méthode qui provient d’une interface implémentée et pas l’interface déclarée. Prendre en compte la [java.util.SortedMap&lt;K, V&gt; ](https://developer.android.com/reference/java/util/SortedMap.html) interface Java, qui implémente le [java.util.Map&lt;K, V&gt; ](https://developer.android.com/reference/java/util/Map.html) interface. Carte fournit un [effacer](https://developer.android.com/reference/java/util/Map.html#clear()) (méthode), par conséquent apparemment raisonnable `Invoker` définition pour SortedMap serait :
 
 ```csharp
 // Fails at runtime. DO NOT FOLLOW
@@ -1095,7 +1095,7 @@ using (var value = new Java.Lang.Object (lref, JniHandleOwnership.TransferLocalR
 
 
 
-### <a name="using-javalangobjectgetobjectlttgt"></a>À l’aide de Java.Lang.Object.GetObject&lt;T&gt;()
+### <a name="using-javalangobjectgetobjectlttgt"></a>Using Java.Lang.Object.GetObject&lt;T&gt;()
 
 `Java.Lang.Object` fournit un [Java.Lang.Object.GetObject&lt;T&gt;(handle IntPtr, JniHandleOwnership transfert)](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) méthode qui peut être utilisée pour créer un wrapper CCW managé du type spécifié.
 
@@ -1125,7 +1125,7 @@ Java.Lang.String value = Java.Lang.Object.GetObject<Java.Lang.String>( lrefStrin
 
 Pour rechercher un champ ou une méthode dans JNI, le type déclarant pour le champ ou la méthode doit être consulté en premier. Le [Android.Runtime.JNIEnv.FindClass(string)](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.FindClass/(System.String)) méthode est utilisée pour rechercher des types Java. Le paramètre de chaîne est la *simplifié de référence de type* ou *référence de type complet* pour le type Java. Consultez le [section Références de Type JNI](#_JNI_Type_References) pour plus d’informations sur les références de type simplifié et complet.
 
-Remarque : contrairement à tous les autres `JNIEnv` méthode qui retourne des instances d’objet, `FindClass` retourne une référence globale, pas une référence locale.
+Remarque : Contrairement à tous les autres `JNIEnv` méthode qui retourne des instances d’objet, `FindClass` retourne une référence globale, pas une référence locale.
 
 <a name="_Instance_Fields" />
 
@@ -1391,7 +1391,7 @@ La signature de type JNI serait :
 (ILjava/lang/String;[I)J
 ```
 
-En général, il est *fortement* recommandé d’utiliser le `javap` commande permet de déterminer les signatures JNI. Par exemple, la Signature de Type JNI de la [java.lang.Thread.State.valueOf(String)](http://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) méthode est « (Ljava/lang/String) ; Ljava/lang/Thread$ état ; », tandis que le JNI tapez la Signature de la [ java.lang.Thread.State.values](http://developer.android.com/reference/java/lang/Thread.State.html#values) méthode est « () [Ljava/lang/Thread$ état ; ». Surveiller les points-virgules de fin ; ces *sont* dans le cadre de la signature de type JNI.
+En général, il est *fortement* recommandé d’utiliser le `javap` commande permet de déterminer les signatures JNI. Par exemple, la Signature de Type JNI de la [java.lang.Thread.State.valueOf(String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) méthode est « (Ljava/lang/String) ; Ljava/lang/Thread$ état ; », tandis que le JNI tapez la Signature de la [ java.lang.Thread.State.values](https://developer.android.com/reference/java/lang/Thread.State.html#values) méthode est « () [Ljava/lang/Thread$ état ; ». Surveiller les points-virgules de fin ; ces *sont* dans le cadre de la signature de type JNI.
 
 <a name="_JNI_Type_References" />
 
@@ -1400,7 +1400,7 @@ En général, il est *fortement* recommandé d’utiliser le `javap` commande pe
 Références de type JNI sont différents des références à des types Java. Vous ne pouvez pas utiliser des noms de types qualifiés complets Java comme `java.lang.String` JNI, vous devez plutôt utiliser les variantes de JNI `"java/lang/String"` ou `"Ljava/lang/String;"`, selon le contexte ; voir ci-dessous pour plus d’informations.
 Il existe quatre types de références de type JNI :
 
--  **Intégré**
+-  **built-in**
 -  **simplified**
 -  **type**
 -  **array**
@@ -1433,12 +1433,12 @@ Il existe deux façons de dériver une référence de type simplifiée :
 1.  Lire la sortie de `'unzip -l android.jar | grep JavaName'` .
 
 
-Une des deux entraîne le type Java [java.lang.Thread.State](http://developer.android.com/reference/java/lang/Thread.State.html) qui est mappé à la référence de type simplifiée `java/lang/Thread$State`.
+Une des deux entraîne le type Java [java.lang.Thread.State](https://developer.android.com/reference/java/lang/Thread.State.html) qui est mappé à la référence de type simplifiée `java/lang/Thread$State`.
 
 
 ### <a name="type-references"></a>Références de type
 
-Une référence de type est une référence de type intégré ou une référence de type simplifiée avec un `'L'` préfixe et un `';'` suffixe. Pour le type Java [java.lang.String](http://developer.android.com/reference/java/lang/String.html), la référence de type simplifié est `"java/lang/String"`, tandis que la référence de type est `"Ljava/lang/String;"`.
+Une référence de type est une référence de type intégré ou une référence de type simplifiée avec un `'L'` préfixe et un `';'` suffixe. Pour le type Java [java.lang.String](https://developer.android.com/reference/java/lang/String.html), la référence de type simplifié est `"java/lang/String"`, tandis que la référence de type est `"Ljava/lang/String;"`.
 
 Références de type sont utilisés avec des références de type tableau et avec des Signatures de JNI.
 
@@ -1491,7 +1491,7 @@ Par exemple, `int[]` est `"[I"`, `int[][]` est `"[[I"`, et `java.lang.Object[]` 
 *La plupart des* du temps, comme indiqué par le biais JNI, les génériques Java *n’existent pas*.
 Il existe certaines « plis », mais ces soucis sont dans la façon dont Java interagit avec les génériques, pas avec comment JNI recherche et appelle les membres génériques.
 
-Il n’existe aucune différence entre un type générique ou membre et un type non générique ou un membre lors de l’interaction via JNI. Par exemple, le type générique [java.lang.Class&lt;T&gt; ](http://developer.android.com/reference/java/lang/Class.html) est également le type générique « brut » `java.lang.Class`, qui ont toutes deux la même référence de type simplifiée, `"java/lang/Class"`.
+Il n’existe aucune différence entre un type générique ou membre et un type non générique ou un membre lors de l’interaction via JNI. Par exemple, le type générique [java.lang.Class&lt;T&gt; ](https://developer.android.com/reference/java/lang/Class.html) est également le type générique « brut » `java.lang.Class`, qui ont toutes deux la même référence de type simplifiée, `"java/lang/Class"`.
 
 
 ## <a name="java-native-interface-support"></a>Prise en charge de l’Interface Native Java
@@ -1563,6 +1563,6 @@ Traiter directement avec JNI est une expérience terrible qui doit être évité
 
 ## <a name="related-links"></a>Liens associés
 
-- [SanityTests (exemple)](https://developer.xamarin.com/samples/SanityTests/)
+- [SanityTests (sample)](https://developer.xamarin.com/samples/SanityTests/)
 - [Spécification de l’Interface Native Java](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/jniTOC.html)
 - [Fonctions de l’Interface Native Java](http://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html)

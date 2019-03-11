@@ -1,19 +1,14 @@
 ---
 title: Ressources Android
-description: Cet article présente le concept de ressources Android dans Xamarin.Android et documentons comment les utiliser. Il explique comment utiliser des ressources dans votre application Android pour prendre en charge la localisation d’applications et plusieurs appareils, y compris les densités et tailles d’écran.
+description: 'Cet article présente le concept de ressources Android dans Xamarin.Android et documentons comment les utiliser. Il explique comment utiliser des ressources dans votre application Android pour prendre en charge la localisation d’applications et plusieurs appareils, y compris les densités et tailles d’écran.'
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d9cd6bf3ae51c6e27be88481e412995bd4113c17
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117256"
 ---
+
 # <a name="android-resources"></a>Ressources Android
 
 _Cet article présente le concept de ressources Android dans Xamarin.Android et documentons comment les utiliser. Il explique comment utiliser des ressources dans votre application Android pour prendre en charge la localisation d’applications et plusieurs appareils, y compris les densités et tailles d’écran._
@@ -71,6 +66,6 @@ Cet article prennent plus d’informations sur l’utilisation des ressources et
 ## <a name="related-links"></a>Liens associés
 
 - [Utilisation de ressources Android](~/android/app-fundamentals/resources-in-android/android-assets.md)
-- [Notions de base des applications](http://developer.android.com/guide/topics/fundamentals.html)
-- [Ressources d'application](http://developer.android.com/guide/topics/resources/index.html)
-- [Prise en charge de plusieurs écrans](http://developer.android.com/guide/practices/screens_support.html)
+- [Notions de base des applications](https://developer.android.com/guide/topics/fundamentals.html)
+- [Ressources d'application](https://developer.android.com/guide/topics/resources/index.html)
+- [Prise en charge de plusieurs écrans](https://developer.android.com/guide/practices/screens_support.html)

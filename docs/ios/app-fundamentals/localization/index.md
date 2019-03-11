@@ -1,19 +1,14 @@
 ---
 title: Localisation dans Xamarin.iOS
-description: Ce document décrit les fonctionnalités de localisation iOS et comment utiliser ces fonctionnalités dans les applications Xamarin.iOS. Il aborde la langue, paramètres régionaux, les fichiers de chaînes, images de lancement et bien plus encore.
+description: 'Ce document décrit les fonctionnalités de localisation iOS et comment utiliser ces fonctionnalités dans les applications Xamarin.iOS. Il aborde la langue, paramètres régionaux, les fichiers de chaînes, images de lancement et bien plus encore.'
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 906489aa3947df24662cbbd0473333caccc032c7
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527259"
 ---
+
 # <a name="localization-in-xamarinios"></a>Localisation dans Xamarin.iOS
 
 _Ce document décrit les fonctionnalités de localisation du Kit de développement logiciel iOS et comment y accéder avec Xamarin._
@@ -22,11 +17,11 @@ Reportez-vous à la [encodages d’internationalisation](encodings.md) pour obte
 
 ## <a name="ios-platform-features"></a>fonctionnalités de la plateforme iOS
 
-Cette section décrit certaines des fonctionnalités de localisation dans iOS. Passez à la [section suivante](#basics) pour afficher des fichiers et des exemples de code spécifique.
+Cette section décrit certaines des fonctionnalités de localisation dans iOS. Passez à la [section suivante](#Localization-basics-in-iOS) pour afficher des fichiers et des exemples de code spécifique.
 
 ### <a name="language"></a>Langue
 
-Les utilisateurs choisir leur langue dans le **paramètres** application. Ce paramètre affecte les chaînes de langue et les images affichées par le système d’exploitation et les applications. 
+Les utilisateurs choisir leur langue dans le **paramètres** application. Ce paramètre affecte les chaînes de langue et les images affichées par le système d’exploitation et les applications.
 
 Pour déterminer la langue utilisée dans une application, obtenir le premier élément du `NSBundle.MainBundle.PreferredLocalizations`:
 
@@ -59,7 +54,7 @@ La première valeur peut être mis en cache par le système d’exploitation et 
 > [!NOTE]
 > Mono (le runtime .NET sur laquelle repose Xamarin.iOS) et iOS d’Apple API ne prennent pas en charge les ensembles identiques de combinaisons de langue/région.
 > Pour cette raison, il est possible de sélectionner une combinaison de langue/région dans iOS **paramètres** application qui ne mappe pas à une valeur valide dans Mono. Par exemple, la définition de langage d’un iPhone vers l’anglais et sa région à l’Espagne entraîne les API suivantes générer des valeurs différentes :
-> 
+>
 > - `CurrentThead.CurrentCulture`: en-US (API de Mono)
 > - `CurrentThread.CurrentUICulture`: en-US (API de Mono)
 > - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (API Apple)
@@ -76,14 +71,14 @@ Les fonctionnalités suivantes d’e/s sont facilement exploitées dans Xamarin 
 
 ### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Spécifiant la valeur par défaut et les langues prises en charge dans le fichier Info.plist
 
-Dans [technique Q & A QA1828 : comment iOS détermine la langue pour votre application](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple décrit le mode de sélection d’une langue à utiliser dans une application iOS. Les facteurs suivants un impact sur la langue s’affiche :
+Dans [un QA1828 questions techniques : Comment iOS détermine la langue pour votre application](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple décrit le mode de sélection d’une langue à utiliser dans une application iOS. Les facteurs suivants un impact sur la langue s’affiche :
 
 - L’utilisateur privilégié du langues (trouvée dans le **paramètres** application)
 - Les localisations fourni avec l’application (dossiers .lproj)
 - `CFBundleDevelopmentRegion` (**Info.plist** valeur qui spécifie la langue par défaut pour l’application)
 - `CFBundleLocalizations` (**Info.plist** tableau spécifiant les localisations tout pris en charge)
 
-Comme indiqué dans la Technical questions et réponses, `CFBundleDevelopmentRegion` représente la région par défaut et la langue d’une application. Si l’application ne gère pas explicitement une des langues par défaut d’un utilisateur, il utilisera la langue spécifiée par ce champ. 
+Comme indiqué dans la Technical questions et réponses, `CFBundleDevelopmentRegion` représente la région par défaut et la langue d’une application. Si l’application ne gère pas explicitement une des langues par défaut d’un utilisateur, il utilisera la langue spécifiée par ce champ.
 
 > [!IMPORTANT]
 > iOS 11 s’applique ce mécanisme de sélection de langue plus strictement que les versions précédentes du système d’exploitation. Pour cette raison, n’importe quelle application iOS 11 qui ne déclare pas explicitement son localisations pris en charge : soit en y compris les dossiers .lproj ou en définissant une valeur pour `CFBundleLocalizations` – peut d’afficher une autre langue dans iOS 11 qu’elle le faisait dans iOS 10.
@@ -255,7 +250,7 @@ iOS offre un certain nombre de fonctionnalités pour vous aider à créer des ap
 
 L’émission des captures d’écran suivante le [exemple Tasky localisée](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) en arabe et hébreu (bien que l’anglais a été entré dans les champs) :
 
-[![](images/rtl-ar-sml.png "Localisation en arabe")](images/rtl-ar.png#lightbox "Arabic") 
+[![](images/rtl-ar-sml.png "Localisation en arabe")](images/rtl-ar.png#lightbox "Arabic")
 
 [![](images/rtl-he-sml.png "Localisation en hébreu")](images/rtl-he.png#lightbox "Hebrew")
 
@@ -346,7 +341,7 @@ Dans l’exemple **Mainstoryboard.strings** vous trouverez ci-dessous `UITextFie
 
 > [!IMPORTANT]
 > À l’aide d’une table de montage séquentiel avec les classes de taille, vous risquez de traductions n’apparaissent pas dans l’application. [Notes de publication d’Apple Xcode](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) indiquent qu’une table de montage séquentiel ou un XIB pas localiser correctement si trois éléments sont remplies : il utilise des classes de taille, la localisation de base et la cible de génération sont définies sur universel, et la build cible iOS 7.0. La solution consiste à dupliquer votre fichier de chaînes d’animation dans deux fichiers identiques : **MainStoryboard~iphone.strings** et **MainStoryboard~ipad.strings**, comme illustré dans la capture d’écran suivante :
-> 
+>
 > ![](images/xs-dup-strings.png "Fichiers de chaînes")
 
 <a name="appstore" />

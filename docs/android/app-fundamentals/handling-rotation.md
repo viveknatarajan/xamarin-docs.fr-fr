@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b2361c04ae627dd68d98f9a6bca1238f1694aaa1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 62e64be89e26e5a8412cd34221da581e99fc5e6a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118784"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668217"
 ---
 # <a name="handling-rotation"></a>Rotation de la gestion
 
@@ -308,5 +308,5 @@ Cet article a abordé comment utiliser les fonctionnalités intégrées d’Andr
 
 - [Démonstration de rotation (exemple)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/RotationDemo/)
 - [Cycle de vie des activités](~/android/app-fundamentals/activity-lifecycle/index.md)
-- [Gestion des modifications du Runtime](http://developer.android.com/guide/topics/resources/runtime-changes.html)
+- [Gestion des modifications du Runtime](https://developer.android.com/guide/topics/resources/runtime-changes.html)
 - [Modification de l’Orientation d’écran rapide](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)
