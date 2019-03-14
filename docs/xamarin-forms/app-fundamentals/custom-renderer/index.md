@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: c7ae25688b2f8635a9a89318e0b307e58add7a5a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998741"
 ---
+
 # <a name="xamarinforms-custom-renderers"></a>Convertisseurs personnalisés Xamarin.Forms
 
 _Les interfaces utilisateur Xamarin.Forms sont affichées à l’aide des contrôles natifs de la plateforme cible, ce qui permet aux applications Xamarin.Forms de conserver l’apparence appropriée pour chaque plateforme. Les convertisseurs personnalisés permettent aux développeurs de remplacer ce processus pour personnaliser l’apparence et le comportement des contrôles Xamarin.Forms sur chaque plateforme._
@@ -24,7 +19,7 @@ Les convertisseurs personnalisés fournissent une approche puissante pour person
 
 ## <a name="renderer-base-classes-and-native-controlsrenderersmd"></a>[Classes de base de convertisseur et contrôles natifs](renderers.md)
 
-Chaque contrôle Xamarin.Forms est accompagné d’un convertisseur pour chaque plateforme qui crée une instance de contrôle natif. Cet article liste les classes de convertisseur et de contrôle natif qui implémentent chaque page, disposition, vue et cellule Xamarin.Forms.
+Chaque contrôle Xamarin.Forms est accompagné d’un convertisseur pour chaque plateforme qui crée une instance de contrôle natif. Cet article liste les classes de renderer et de contrôle natif qui implémentent chaque page, disposition, vue et cellule Xamarin.Forms.
 
 ## <a name="customizing-an-entryentrymd"></a>[Personnalisation d’une entrée](entry.md)
 
@@ -40,7 +35,7 @@ Xamarin.Forms.Maps fournit une abstraction multiplateforme pour afficher des car
 
 ## <a name="customizing-a-listviewlistviewmd"></a>[Personnalisation d’un ListView](listview.md)
 
-Un [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms est une vue qui affiche une collection de données sous forme de liste verticale. Cet article montre comment créer un convertisseur personnalisé qui encapsule des contrôles de liste propres à une plateforme et des dispositions de cellule natives afin de mieux contrôler les performances du contrôle de liste natif.
+Un [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms est une vue qui affiche une collection de données sous forme de liste verticale. Cet article montre comment créer un renderer personnalisé qui encapsule des contrôles de liste spécifiques à la plateforme et des dispositions de cellule natives afin de mieux contrôler les performances des contrôles de liste natifs.
 
 ## <a name="customizing-a-viewcellviewcellmd"></a>[Personnalisation d’une ViewCell](viewcell.md)
 
@@ -62,5 +57,4 @@ Cet article montre comment écrire des convertisseurs pour implémenter un contr
 ## <a name="related-links"></a>Liens associés
 
 - [Effets](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Convertisseurs personnalisés (Vidéo Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)
-- [Exemple de convertisseurs personnalisés (Vidéo Xamarin University)](http://bit.ly/xf-customrenderer)
+- [Renderers personnalisés (vidéo Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

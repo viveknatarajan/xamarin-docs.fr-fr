@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: bb9be2140c69578de85128cf7c3a013ad12aa511
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: d5d4274adad64e8555659645533a8e58b845bfa7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617564"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667904"
 ---
 # <a name="building-abi-specific-apks"></a>Création de fichiers APK propres à une interface ABI
 
@@ -29,7 +29,7 @@ Dans certaines situations, il peut être avantageux pour une application d’avo
 -  **Prendre en charge différentes architectures de processeur**  : Si votre application a partagé des bibliothèques pour des processeurs spécifiques, vous ne pouvez distribuer que les bibliothèques partagées pour ce processeur.
 
 
-Plusieurs fichiers APK peuvent compliquer la distribution – un problème résolu par Google Play. Google Play garantit que le fichier APK correct est remis à un appareil basé sur le code de la version de l’application et sur d’autres métadonnées contenues dans **AndroidManifest.XML**. Pour des détails et restrictions spécifiques sur la façon dont Google Play prend en charge plusieurs fichiers APK pour une application, consultez la [documentation de Google sur la prise en charge de plusieurs fichiers APK](http://developer.android.com/google/play/publishing/multiple-apks.html).
+Plusieurs fichiers APK peuvent compliquer la distribution – un problème résolu par Google Play. Google Play garantit que le fichier APK correct est remis à un appareil basé sur le code de la version de l’application et sur d’autres métadonnées contenues dans **AndroidManifest.XML**. Pour des détails et restrictions spécifiques sur la façon dont Google Play prend en charge plusieurs fichiers APK pour une application, consultez la [documentation de Google sur la prise en charge de plusieurs fichiers APK](https://developer.android.com/google/play/publishing/multiple-apks.html).
 
 Ce guide explique comment générer un script pour générer plusieurs fichiers APK pour une application Xamarin.Android, chaque fichier APK ciblant une interface ABI spécifique. Il traitera les thèmes suivants :
 
@@ -45,7 +45,7 @@ Ce guide explique comment générer un script pour générer plusieurs fichiers 
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Création du code de version pour le fichier APK
 
-Pour le code de version, Google recommande un algorithme particulier qui utilise un code de version à sept chiffres (consultez la section *Using a version code scheme* (en anglais) dans [Multiple APK support document](http://developer.android.com/google/play/publishing/multiple-apks.html) (en anglais).
+Pour le code de version, Google recommande un algorithme particulier qui utilise un code de version à sept chiffres (consultez la section *Using a version code scheme* (en anglais) dans [Multiple APK support document](https://developer.android.com/google/play/publishing/multiple-apks.html) (en anglais).
 L’extension de ce modèle de code de version à huit chiffres permet d’inclure des informations sur l’interface ABI dans le code de version, afin de garantir que Google Play distribuera le fichier APK correct à un appareil. La liste suivante explique ce format de code de version à huit chiffres (indexée de gauche à droite) :
 
 -   **Index 0** (en rouge dans le diagramme ci-dessous) &ndash; Un nombre entier pour l’interface ABI :
@@ -187,4 +187,4 @@ Ce guide contient quelques suggestions pour la création de fichiers APK Android
 
 - [OneABIPerAPK (exemple)](https://developer.xamarin.com/samples/OneABIPerAPK/)
 - [Publication d’une application](~/android/deploy-test/publishing/index.md)
-- [Prise en charge de plusieurs fichiers APK pour Google Play](http://developer.android.com/google/play/publishing/multiple-apks.html)
+- [Prise en charge de plusieurs fichiers APK pour Google Play](https://developer.android.com/google/play/publishing/multiple-apks.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 26865fdbfc1cc6f11a978a70bd768e63771bcd4b
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 0053bf97dbcc98c5ffbd6fbddb1e40f884810e60
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197470"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670751"
 ---
 # <a name="windows-installation"></a>Installation sur un système Windows
 
@@ -47,7 +47,7 @@ Xamarin.Android utilise le JDK Java et Android SDK pour créer des application
 
 Pour la plupart des utilisateurs, ces emplacements par défaut fonctionnent sans nécessiter de modifications. Toutefois, vous pouvez souhaiter configurer des emplacements personnalisés pour ces outils dans Visual Studio (par exemple, si vous avez installé le JDK Java, Android SDK ou le NDK dans un autre emplacement). Cliquez sur **Modifier** en regard du chemin que vous souhaitez modifier, puis accédez au nouvel emplacement.
 
-Xamarin.Android utilise [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), qui est nécessaire si vous développez des applications pour le niveau d’API 24 et niveaux supérieurs (JDK 8 prend également en charge les niveaux d’API antérieurs au niveau 24). Vous pouvez continuer d’utiliser [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si vous développez des applications spécifiquement pour le niveau d’API 23 ou des niveaux antérieurs.
+Xamarin.Android utilise [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), qui est nécessaire si vous développez des applications pour le niveau d’API 24 et niveaux supérieurs (JDK 8 prend également en charge les niveaux d’API antérieurs au niveau 24). Vous pouvez continuer d’utiliser [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si vous développez des applications spécifiquement pour le niveau d’API 23 ou des niveaux antérieurs.
 
 > [!IMPORTANT]
 > Xamarin.Android ne prend pas en charge JDK 9.

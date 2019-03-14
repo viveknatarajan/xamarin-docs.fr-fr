@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0d202ff7743361207795d342b29243130f4f056
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e687a724c8455d954969f83b8ee48c87ca9dbb09
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058728"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669776"
 ---
 # <a name="custom-video-transport-controls"></a>Contrôles de transport vidéo personnalisés
 
@@ -451,7 +451,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-status-setting"></a>Paramètre d’état UWP
 
-Le `VideoPlayerRenderer` UWP utilise l’événement `UpdateStatus`, mais il n’en a pas besoin pour définir la propriété `Status`. Le `MediaElement` définit un événement [`CurrentStateChanged`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentStateChanged) qui permet au renderer d’être averti quand la propriété [`CurrentState`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentState) a été modifiée. La propriété est détachée dans le remplacement de `Dispose` :
+Le `VideoPlayerRenderer` UWP utilise l’événement `UpdateStatus`, mais il n’en a pas besoin pour définir la propriété `Status`. Le `MediaElement` définit un événement [`CurrentStateChanged`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentStateChanged) qui permet au renderer d’être averti quand la propriété [`CurrentState`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentState*) a été modifiée. La propriété est détachée dans le remplacement de `Dispose` :
 
 ```csharp
 namespace FormsVideoLibrary.UWP

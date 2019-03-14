@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d1a3090318649e6f04a5b8f44dc4a9b2689a870
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a6cc7ffe52711f4e65f0191f8dc556760e8817ea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119629"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668775"
 ---
 # <a name="debugging-xamarinios-apps"></a>Débogage des applications Xamarin.iOS
 
@@ -26,7 +26,7 @@ Utilisez la prise en charge du débogage natif de Visual Studio pour Mac afin de
 
 Le débogueur Xamarin.iOS est intégré à votre IDE. Il permet aux développeurs de déboguer les applications Xamarin.iOS générées à l’aide de l’un des langages managés pris en charge par Xamarin.iOS dans le simulateur et sur l’appareil.
 
-Le débogueur Xamarin.iOS utilise le [débogueur Mono Soft](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), ce qui signifie que le code généré et le runtime Mono fonctionnent conjointement avec l’IDE pour fournir une expérience utilisateur de débogage. Il s’agit d’une approche différente de celle des débogueurs « durs » comme LLDB ou MDB, qui contrôlent un programme sans connaissance ou coopération du programme débogué.
+Le débogueur Xamarin.iOS utilise le [débogueur Mono Soft](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), ce qui signifie que le code généré et le runtime Mono fonctionnent conjointement avec l’IDE pour fournir une expérience utilisateur de débogage. Il s’agit d’une approche différente de celle des débogueurs « durs » comme LLDB ou MDB, qui contrôlent un programme sans connaissance ou coopération du programme débogué.
 
 ## <a name="setting-breakpoints"></a>Définition de points d’arrêt
 

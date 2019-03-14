@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831987"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672558"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propriétés d’automatisation dans Xamarin.Forms
 
@@ -36,7 +36,7 @@ Chaque plateforme dispose d’un lecteur d’écran différent pour effectuer la
 
 - iOS dispose de VoiceOver. Pour plus d’informations, consultez [Tester l’accessibilité sur votre appareil avec VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) sur developer.apple.com.
 - Android dispose de TalkBack. Pour plus d’informations, consultez [Test de l’accessibilité de votre application](https://developer.android.com/training/accessibility/testing.html#talkback) sur developer.android.com.
-- Windows dispose du Narrateur. Pour plus d’informations, consultez [Vérifier les principaux scénarios d’application à l’aide du Narrateur](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator/).
+- Windows dispose du Narrateur. Pour plus d’informations, consultez [Vérifier les principaux scénarios d’application à l’aide du Narrateur](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator).
 
 Toutefois, le comportement exact d’un lecteur d’écran dépend du logiciel et de sa configuration par l’utilisateur. Par exemple, la plupart des lecteurs d’écran lisent le texte associé à un contrôle lorsque ce dernier reçoit le focus, permettant aux utilisateurs de s’orienter lorsqu’ils se déplacent parmi les contrôles sur la page. Certains lecteurs d’écran lisent également l’interface utilisateur entière de l’application quand une page s’affiche, ce qui permet à l’utilisateur de recevoir tout le contenu informatif disponible de la page avant d’essayer de le parcourir.
 

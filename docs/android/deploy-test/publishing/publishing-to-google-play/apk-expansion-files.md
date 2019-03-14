@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 38568fa9258c7e3de2c3333cdca5dc7d5867319c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56c5aa7f0f8db746fbc6d7f8b5409f7d6c0f5d0d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117096"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666890"
 ---
 # <a name="apk-expansion-files"></a>Fichiers d’extension d’APK
 
@@ -73,7 +73,7 @@ Lorsqu’une application est installée à partir de Google Play, les fichiers d
 
 [![Organigramme d’extension d’APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
-Lorsqu’une application démarre, elle doit vérifier que les fichiers d’extension appropriés existent sur l’appareil. Si ce n’est pas le cas, l’application doit faire une demande auprès du service [Application Licensing](http://developer.android.com/google/play/licensing/index.html) de Google Play. Cette vérification est réalisée à l’aide de la *bibliothèque de vérification de licence (License Verification Library, LVL)* et doit être effectuée pour les applications gratuites et les applications sous licence. Cette bibliothèque est principalement utilisée par les applications payantes afin d’appliquer les restrictions de licence. Toutefois, Google a étendu son usage aux bibliothèques d’extension. Les applications gratuites doivent effectuer la vérification LVL, mais peuvent ignorer les restrictions de licence. La demande LVL doit fournir les informations suivantes relatives aux fichiers d’extension requis par l’application : 
+Lorsqu’une application démarre, elle doit vérifier que les fichiers d’extension appropriés existent sur l’appareil. Si ce n’est pas le cas, l’application doit faire une demande auprès du service [Application Licensing](https://developer.android.com/google/play/licensing/index.html) de Google Play. Cette vérification est réalisée à l’aide de la *bibliothèque de vérification de licence (License Verification Library, LVL)* et doit être effectuée pour les applications gratuites et les applications sous licence. Cette bibliothèque est principalement utilisée par les applications payantes afin d’appliquer les restrictions de licence. Toutefois, Google a étendu son usage aux bibliothèques d’extension. Les applications gratuites doivent effectuer la vérification LVL, mais peuvent ignorer les restrictions de licence. La demande LVL doit fournir les informations suivantes relatives aux fichiers d’extension requis par l’application : 
 
 -   **Taille de fichier** &ndash; la taille de fichier des fichiers d’extension est utilisée dans le cadre de la vérification qui détermine si les fichiers d’extension corrects ont ou non déjà été téléchargés.
 -   **Noms de fichiers** &ndash; il s’agit du nom de fichier (sur l’appareil en cours) sous lequel les packs d’extension doivent être enregistrés.
