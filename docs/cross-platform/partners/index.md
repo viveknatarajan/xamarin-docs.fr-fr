@@ -483,11 +483,11 @@ _Répertoriés par emplacement principal, de nombreux partenaires proposent des 
 |[AGILUX](https://agilux.lu)|Pommerloch, Luxembourg|Agilux est une société de conseil informatique spécialisé dans l’intégration des solutions informatiques pour la gestion commerciale et la comptabilité de PME, développement d’applications mobiles, de commerce électronique et de sites Web|
 
 
-## <a name="macedonia"></a>Macédoine
+## <a name="macedonia"></a>Macédoine du Nord
 
 | Partner | Emplacements | Description |
 | --- | --- | --- |
-|[Code chimie](http://www.codechem.com)|Skopje, Macédoine|Code chimie fournit le développement de logiciels, gestion de projet et consulting services. |
+|[Code chimie](http://www.codechem.com)|Skopje, Macédoine du Nord|Code chimie fournit le développement de logiciels, gestion de projet et consulting services. |
 
 
 ## <a name="mexico"></a>Mexique
