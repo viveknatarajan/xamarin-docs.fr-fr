@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 84e99849e3b3d925747df59ffcde242c145dbe74
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c64714974f6467bcd7e0e4705a1426c83aa691b5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111380"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667588"
 ---
 # <a name="gdb"></a>GDB
 
@@ -163,7 +163,7 @@ Une ombre au tableau : la cible MSBuild `_Gdb` va tuer toutes les instances d�
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` ne fonctionne pas
 
-La fonction `mono_pmip` (utile pour que [obtienne des frames de pile managées ](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) est exportée à partir de `libmonosgen-2.0.so`, qui n’est actuellement pas déroulé par la cible `_Gdb`. (Ceci fera l’objet d’un correctif dans une version future.)
+La fonction `mono_pmip` (utile pour que [obtienne des frames de pile managées ](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) est exportée à partir de `libmonosgen-2.0.so`, qui n’est actuellement pas déroulé par la cible `_Gdb`. (Ceci fera l’objet d’un correctif dans une version future.)
 
 Pour activer des fonctions d’appel situées dans `libmonosgen-2.0.so`, copiez-les de l’appareil cible vers le répertoire `gdb-symbols` :
 

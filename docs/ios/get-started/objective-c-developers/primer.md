@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: bfb20e8eddb4969f3418d0a0dddfcd19f2eeba02
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: df477dc0e4708a1d309810b5b8d4f755f3c49afb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117549"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669815"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Abécédaire du langage C# pour les développeurs Objective-C
 
@@ -143,7 +143,7 @@ Objective-C utilise des *blocs* pour créer des fermetures qui vous permettent d
 };
 ```
 
-Pour plus d’informations sur les expressions lambda, consultez le [Guide de programmation C#](http://msdn.microsoft.com/library/vstudio/bb397687.aspx) de Microsoft.
+Pour plus d’informations sur les expressions lambda, consultez le [Guide de programmation C#](https://msdn.microsoft.com/library/vstudio/bb397687.aspx) de Microsoft.
 
 ## <a name="summary"></a>Récapitulatif
 

@@ -1,5 +1,5 @@
 ---
-title: Hello, Android - En profondeur
+title: 'Hello, Android : Immersion'
 description: Dans ce guide en deux parties, vous allez créer votre première application Xamarin.Android, et approfondir votre compréhension des principes fondamentaux du développement d’applications Android avec Xamarin. Vous y découvrirez les différents outils, concepts et étapes qui sont nécessaires à la création et au déploiement d’une application Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: cdd0a792a76fa411fdc010c3d662a3d1acc2f373
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108809"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670179"
 ---
-# <a name="hello-android-deep-dive"></a>Hello, Android - En profondeur
+# <a name="hello-android-deep-dive"></a>Hello, Android : Immersion
 
 _Dans ce guide en deux parties, vous allez créer votre première application Xamarin.Android, et approfondir votre compréhension des principes fondamentaux du développement d’applications Android avec Xamarin. Vous y découvrirez les différents outils, concepts et étapes qui sont nécessaires à la création et au déploiement d’une application Xamarin.Android._
 
@@ -113,7 +113,7 @@ Le répertoire **Resources** comprend quatre dossiers nommés **drawable**, **la
 
 Le tableau ci-dessous décrit chacun de ces éléments :
 
-- **drawable** &ndash; Ce répertoire contient des [ressources Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html), telles que des images ou des bitmaps.
+- **drawable** &ndash; Ce répertoire contient des [ressources Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html), telles que des images ou des bitmaps.
 
 - **mipmap** &ndash; Ce répertoire contient des fichiers Drawable adaptés aux différentes densités de l’icône du lanceur. Dans le modèle par défaut, le répertoire drawable contient le fichier d’icône d’application **Icon.png**.
 
@@ -269,7 +269,7 @@ Quand `MainActivity` démarre, il crée une vue basée sur le contenu du fichier
 ::: zone-end
 ::: zone pivot="macos"
 
-Dans l’application **Phoneword**, la première chose à faire dans `OnCreate` est de charger l’interface utilisateur créée dans Android Designer. Pour charger l’IU, appelez `SetContentView`, puis passez-lui le *nom de la disposition de ressource* pour le fichier de disposition : **Main.axml**. La disposition est située dans `Resource.Layout.Main`:
+Dans l’application **Phoneword**, la première chose à faire dans `OnCreate` est de charger l’interface utilisateur créée dans Android Designer. Pour charger l’interface utilisateur, appelez `SetContentView`, puis passez-lui le *nom de la disposition de ressource* pour le fichier de disposition : **Main.axml**. La disposition est située dans `Resource.Layout.Main`:
 
 ```csharp
 SetContentView (Resource.Layout.Main);

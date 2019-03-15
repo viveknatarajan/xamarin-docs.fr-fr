@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 1a2739d1a3848303b3086c23c0a28a889250ee2e
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: b89f5329430fed0387443bf923c45cd40181b22e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675508"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668385"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Appareils multicœurs et Xamarin.Android
 
@@ -53,7 +53,7 @@ Chaque ABI prise en charge par Android est identifiée par un nom unique.
 
 Il s’agit du nom d’une EABI pour les UC ARM qui prennent en charge au moins le jeu d’instructions ARMv5TE. Android suit l’ABI little-endian ARM GNU/Linux. Cette ABI ne prend pas en charge les calculs en virgule flottante avec accélération matérielle. Toutes les opérations de virgule flottante sont effectuées par les fonctions d’assistance provenant de la bibliothèque statique `libgcc.a` du compilateur. Les appareils SMP ne sont pas pris en charge par `armeabi`.
 
-**Remarque** : Le code `armeabi` de Xamarin.Android n’est pas thread-safe et ne doit pas être utilisé sur des appareils `armeabi-v7a`multiprocesseur (décrits ci-dessous). L’utilisation de code `aremabi` sur les appareils `armeabi-v7a` à un seul cœur est sûre.
+**Remarque** : Le code `armeabi` de Xamarin.Android n’est pas thread-safe et ne doit pas être utilisé sur des appareils `armeabi-v7a` multiprocesseurs (décrits ci-dessous). L’utilisation de code `aremabi` sur les appareils `armeabi-v7a` à un seul cœur est sûre.
 
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
@@ -84,7 +84,7 @@ C’est le nom d’une ABI pour les processeurs qui prennent en charge le jeu d�
 
 Il s’agit du nom d’une ABI pour les UC MIPS qui prennent en charge au moins le jeu d’instructions `MIPS32r1`. Aucun registre MIPS 16 ni `micromips` ne sont pris en charge par Android.
 
-**Remarque :** Les appareils MIPS ne sont actuellement pas pris en charge par Xamarin.Android, mais le seront dans une version ultérieure.
+**Remarque :** Les appareils MIPS ne sont pas pris en charge par Xamarin.Android, mais le seront dans une version ultérieure.
 
 #### <a name="apk-file-format"></a>Format de fichier APK
 
@@ -125,7 +125,7 @@ Au moment de l’installation du package, les bibliothèques natives dans les `.
 
 Le comportement d’installation des bibliothèques natives Android varie considérablement entre les versions d’Android.
 
-#### <a name="installing-native-libraries-pre-android-40"></a>Installation des bibliothèques natives : Android avant la version 4.0
+#### <a name="installing-native-libraries-pre-android-40"></a>Installation des bibliothèques natives : Pré-Android 4.0
 
 Les versions antérieures à Android 4.0 Ice Cream Sandwich extraient uniquement les bibliothèques natives à partir d’une *ABI unique* dans le `.apk`. Les applications Android de cette période tentent d’abord d’extraire toutes les bibliothèques natives pour l’ABI principale, et si aucune de ces bibliothèques n’existe, Android extrait ensuite toutes les bibliothèques natives pour l’ABI secondaire. Aucune « fusion » n’est effectuée.
 
@@ -154,7 +154,7 @@ lib/armeabi-v7a/libone.so
 lib/armeabi-v7a/libtwo.so
 ```
 
-#### <a name="installing-native-libraries-android-40-ndash-android-403"></a>Installation des bibliothèques natives : Android 4.0 &ndash; Android 4.0.3
+#### <a name="installing-native-libraries-android-40-ndash-android-403"></a>Installation des bibliothèques natives : Android 4.0 &ndash; Android 4.0.3
 
 Android 4.0 Ice Cream Sandwich modifie la logique d’extraction. Il énumère toutes les bibliothèques natives, vérifie si le nom de base du fichier a déjà été extrait. Puis, si les deux conditions suivantes sont remplies, la bibliothèque est extraite :
 
@@ -177,7 +177,7 @@ $APP/lib/libone.so
 $APP/lib/libtwo.so
 ```
 
-Malheureusement, ce comportement repose sur l’ordre, comme décrit dans le document suivant - [Problème 24321 : Galaxy Nexus 4.0.2 utilise le code natif armeabi lorsque armeabi et armeabi-v7a sont tous deux inclus dans l’apk](http://code.google.com/p/android/issues/detail?id=25321).
+Malheureusement, ce comportement dépend de l’ordre, comme décrit dans le document suivant : [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321).
 
 Les bibliothèques natives sont traitées « dans l’ordre » (celui indiqué par, par exemple, unzip) et le *première correspondance* est extraite. Étant donné que le fichier `.apk` contient les versions `armeabi` et `armeabi-v7a` de `libtwo.so` et que `armeabi` est répertorié en premier, c’est la version `armeabi` qui est extraite, et *pas* `armeabi-v7a` :
 
@@ -196,7 +196,7 @@ En outre, même si les deux ABI `armeabi` et `armeabi-v7a` sont spécifiées (co
 Par conséquent, `armeabi` `libmonodroid.so` est trouvé en premier dans le fichier `.apk`. C’est donc `armeabi` `libmonodroid.so` qui est extrait, même si `armeabi-v7a` `libmonodroid.so` est présent et optimisé pour la cible. Cela peut également entraîner des erreurs d’exécution obscures, car `armeabi` n’est pas SMP-safe.
 
 
-##### <a name="installing-native-libraries-android-404-and-later"></a>Installation des bibliothèques natives : Android 4.0.4 et versions ultérieures
+##### <a name="installing-native-libraries-android-404-and-later"></a>Installation des bibliothèques natives : Android 4.0.4 et ultérieur
 
 Android 4.0.4 modifie la logique d’extraction : il énumère toutes les bibliothèques natives, lit le nom de base du fichier, puis extrait la version ABI principale (le cas échéant), ou l’ABI secondaire (le cas échéant). Cela permet un comportement de « fusion ». Autrement dit, si nous avons un `.apk` avec le contenu suivant :
 
@@ -257,6 +257,6 @@ Il expliquait ensuite comment spécifier la prise en charge des ABI dans une app
 
 - [Architecture MIPS](http://www.mips.com/products/product-materials/processor/mips-architecture)
 - [ABI pour l’architecture ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
-- [Kit de développement natif (NDK) Android](http://developer.android.com/tools/sdk/ndk/index.html)
+- [Kit de développement natif (NDK) Android](https://developer.android.com/tools/sdk/ndk/index.html)
 - [Problème 9089 :Nexus One - AUCUNE bibliothèque native n’est chargée à partir d’armeabi s’il existe au moins une bibliothèque armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089)
-- [Problème 24321 : Galaxy Nexus 4.0.2 utilise le code natif armeabi lorsque armeabi et armeabi-v7a sont tous deux inclus dans l’apk](http://code.google.com/p/android/issues/detail?id=25321)
+- [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321)

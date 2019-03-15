@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Mac - Documentation connexe
-description: 'Ce document fournit des liens vers de la documentation pertinente pour les développeurs Xamarin.Mac : documentation Xamarin.iOS, Centre de développement Mac d’Apple et divers guides pas à pas qui décrivent comment générer des interfaces utilisateur avec Xamarin.Mac.'
+description: 'Ce document fournit des liens vers de la documentation pour les développeurs Xamarin.Mac : documentation Xamarin.iOS, Centre de développement Mac d’Apple et divers guides pas à pas qui décrivent comment générer des interfaces utilisateur avec Xamarin.Mac.'
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: 745328aeb884031863d8d85caca1e4a6563fc916
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 87987e79fce2bd5277f8092d09752fe715e2f2ce
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526947"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667650"
 ---
 # <a name="xamarinmac-related-documentation"></a>Xamarin.Mac - Documentation connexe
 
@@ -22,7 +22,7 @@ En plus de la section Mac de [developer.xamarin.com](~/mac/get-started/index.md)
 
 - **[Mac Dev Center](https://developer.apple.com/devcenter/mac/) d’Apple** : Très souvent, un exemple des API à appeler en Objective-C peut être directement converti en C#. Pour plus d’informations sur la procédure à suivre, consultez [Présentation des API Mac](~/mac/app-fundamentals/mac-apis.md).
 
-- [**Dépassement de capacité de la pile**](http://stackoverflow.com/) : Ressource idéale pour des questions simples et isolées telles que [« Comment développer automatiquement tous les nœuds dans un NSOutlineView »](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Ces exemples figurent souvent dans Objective-C et doivent être convertis en C#, mais il existe un sous-ensemble de réponses dans C#.
+- [**Dépassement de capacité de la pile**](https://stackoverflow.com/) : Ressource idéale pour des questions simples et isolées telles que [« Comment développer automatiquement tous les nœuds dans un NSOutlineView »](https://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Ces exemples figurent souvent dans Objective-C et doivent être convertis en C#, mais il existe un sous-ensemble de réponses dans C#.
 
 ## <a name="user-interface"></a>Interface utilisateur
 

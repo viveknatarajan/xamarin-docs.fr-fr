@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 870a9cb20ea962b3c1a342e7222c5e9322537dd1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f545893ca4cde441cd05fc3d8e52ecf0f6aae98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109209"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669490"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Utilisation de mtouch pour grouper des applications Xamarin.iOS
 
@@ -66,7 +66,7 @@ Pour générer des logiciels pour l’appareil, générez votre application à l
 $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
-Dans ce cas particulier, nous utilisons le certificat « Développeur iPhone : Miguel de Icaza » pour nous connecter à l’application. Cette étape est très importante, sinon l’unité physique refuse de charger l’application.
+Dans ce cas particulier, nous utilisons le certificat « Développeur iPhone : Miguel de Icaza » pour signer l’application. Cette étape est très importante, sinon l’unité physique refuse de charger l’application.
 
  <a name="Running_your_Application" />
 
@@ -84,7 +84,7 @@ $ mtouch --sdkroot /Applications/Xcode.app -launchsim Hello.app
 
 Si l’indicateur `--sdkroot` n’est pas défini, il s’affiche par défaut sur xcode-sélectionner le chemin d’accès et devient l’avertissement suivant :
 
-> par exemple : avertissement MT0061 : aucun Xcode.app spécifié (utilisation de --sdkroot), à l’aide du système Xcode comme indiqué par ''xcode-select --print-path': /Applications/Xcode.app/Contents/Developer 
+> par exemple : avertissement MT0061 : aucun Xcode.app spécifié (utilisation de --sdkroot), à l’aide du Xcode système comme indiqué par 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer 
 
 La ligne de commande ci-dessus génère une sortie comme suit :
 
@@ -110,7 +110,7 @@ Si votre application échoue, vous pouvez voir la sortie et l’erreur pour diag
 
 ### <a name="deploying-to-a-device"></a>Déploiement sur un appareil
 
-Pour déployer sur votre appareil, vous devez configurer votre appareil comme décrit dans le document [Gestion des appareils](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) d’Apple. Une fois votre appareil correctement configuré, vous pouvez utiliser la commande mtouch pour déployer un fichier « .app » compilé dans votre appareil. Pour cela, utilisez la commande :
+Pour déployer sur votre appareil, vous devez configurer votre appareil comme décrit dans le document [Gestion des appareils](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) d’Apple. Une fois votre appareil correctement configuré, vous pouvez utiliser la commande mtouch pour déployer un fichier « .app » compilé dans votre appareil. Pour cela, utilisez la commande :
 
 ```bash
 $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app
@@ -118,7 +118,7 @@ $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app
 
 Si l’indicateur `--sdkroot` n’est pas défini, il s’affiche par défaut sur xcode-sélectionner le chemin d’accès et devient l’avertissement suivant :
 
-> par exemple : avertissement MT0061 : aucun Xcode.app spécifié (utilisation de --sdkroot), à l’aide du système Xcode comme indiqué par ''xcode-select --print-path': /Applications/Xcode.app/Contents/Developer 
+> par exemple : avertissement MT0061 : aucun Xcode.app spécifié (utilisation de --sdkroot), à l’aide du Xcode système comme indiqué par 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer 
 
 Ces étapes sont généralement effectuées par Visual Studio pour Mac.
 

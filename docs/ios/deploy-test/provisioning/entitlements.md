@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/13/2018
-ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5ce778d0e6c2d023362ca5c9c691d77548dd7383
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103411"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672597"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Utilisation des droits dans Xamarin.iOS
 
@@ -68,7 +68,7 @@ Pour configurer les droits dans Visual Studio, effectuez les étapes suivantes 
 
     ![](entitlements-images/servicevs02.png "Modification des droits")
 
-    Vous pouvez également double-cliquer sur le fichier **Entitlements.plist** pour l’ouvrir dans l’éditeur de source XML, puis définir les valeurs de propriété et de clé des droits, comme expliqué dans la section [Informations de référence sur les clés de droits](#keyreference) ci-dessous.
+    Vous pouvez également double-cliquer sur le fichier **Entitlements.plist** pour l’ouvrir dans l’éditeur de source XML, puis définir les valeurs de propriété et de clé des droits, comme expliqué dans la section [Informations de référence sur les clés de droits](#entitlement-key-reference) ci-dessous.
 
 5. Sélectionnez et configurez les droits requis pour l’application Xamarin.iOS afin qu’ils correspondent à la configuration définie au moment de la création de l’ID d’application.
 6. Enregistrez les modifications apportées au fichier **Entitlements.plist**.
@@ -109,7 +109,7 @@ Vous pouvez ajouter les clés de droits par le biais du panneau source de l’é
 
 ### <a name="icloud"></a>iCloud
 
-*   **Description** : iCloud offre aux utilisateurs d’appareil iOS un moyen simple et pratique de stocker leur contenu et de le partager entre plusieurs appareils. Avec iCloud, les développeurs peuvent fournir quatre types de stockage différents aux utilisateurs : le stockage Key-value iCloud, le stockage UIDocument, CoreData et l’utilisation directe de CloudKit pour le stockage des fichiers et répertoires. Pour plus d’informations, consultez le guide Présentation d’iCloud.
+*   **Description** : iCloud offre aux utilisateurs d’appareil iOS un moyen simple et pratique de stocker leur contenu et de le partager entre plusieurs appareils. Les développeurs peuvent utiliser iCloud de quatre façons différentes pour fournir un moyen de stockage à leurs utilisateurs : stockage clé-valeur, stockage UIDocument, CoreData et l’utilisation de CloudKit directement pour assurer le stockage de fichiers et répertoires individuels. Pour plus d’informations, consultez le guide Présentation d’iCloud.
 
     - **Documents iCloud et CloudKit**
         - **Clés** : com.apple.developer.ubiquity-container-identifiers
@@ -148,7 +148,7 @@ Vous pouvez ajouter les clés de droits par le biais du panneau source de l’é
 
 ### <a name="siri"></a>Siri
 
-- **Description** : SiriKit permet à une application iOS de fournir des services accessibles à Siri et à l’application Maps sur un appareil iOS à l’aide des extensions d’application, ainsi que des nouveaux frameworks Intents et Intents UI. Pour plus d’informations, consultez le guide Présentation de SiriKit.
+- **Description** : SiriKit permet à une application iOS de fournir des services accessibles à Siri et à l’application Plans sur un appareil iOS à l’aide des extensions d’application, ainsi que des nouveaux frameworks Intents et Intents UI. Pour plus d’informations, consultez le guide Présentation de SiriKit.
     - **Clé** : com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>VPN personnel
@@ -164,9 +164,9 @@ Vous pouvez ajouter les clés de droits par le biais du panneau source de l’é
 
 ### <a name="inter-app-audio"></a>Inter-App Audio
 
-- **Description** : Inter-App Audio permet aux développeurs de diffuser des flux audio en continu entre les applications.
+- **Description** : Inter-App Audio permet aux développeurs de diffuser des flux audio en streaming entre les applications.
     - **Clé** : inter-app-audio
-    - **Valeur booléenne** : YES
+    - **Booléen** : OUI
 
 ### <a name="associated-domains"></a>Associated Domains
 
@@ -184,23 +184,23 @@ Vous pouvez ajouter les clés de droits par le biais du panneau source de l’é
 
 - **Description** : Le framework HomeKit offre une plateforme pour installer, configurer et gérer les appareils domotiques compatibles à partir d’un appareil iOS. Pour plus d’informations sur l’utilisation d’HomeKit, consultez le guide Présentation d’HomeKit.
     - **Clé** : com.apple.developer.homekit
-    - **Valeur booléenne** : YES
+    - **Booléen** : OUI
 
 ### <a name="healthkit"></a>HealthKit
 
-- **Description** : Le framework HealthKit introduit dans iOS 8 fournit un stockage centralisé, coordonné et sécurisé pour les données de santé. Pour plus d’informations sur l’utilisation d’HealthKit, consultez le guide Présentation d’HealthKit.
+- **Description** : Le framework HealthKit introduit dans iOS 8 fournit un stockage centralisé, coordonné et sécurisé pour les données médicales. Pour plus d’informations sur l’utilisation d’HealthKit, consultez le guide Présentation d’HealthKit.
     - **Clé** : com.apple.developer.healthkit
-    - **Valeur booléenne** : YES
+    - **Booléen** : OUI
 
 ### <a name="wireless-accessory-configuration"></a>Configuration d’accessoires sans fil
 
 - **Description** : Wireless Accessory Configuration permet à votre application de configurer des accessoires WiFi MFI
     - **Clé** : com.apple.external-accessory.wireless-configuration
-    - **Valeur booléenne** : YES
+    - **Booléen** : OUI
 
 ### <a name="classkit"></a>ClassKit
 
-- **Description** : ClassKit permet aux enseignants d’afficher la progression de l’étudiant sur les activités qui lui ont été affectées dans votre application.
+- **Description** : ClassKit permet aux enseignants de voir la progression des étudiants sur les activités qui leur ont été affectées dans votre application.
     - **Clé** : com.apple.developer.ClassKit-environment
     - **Chaîne** : `development` ou `production`
 

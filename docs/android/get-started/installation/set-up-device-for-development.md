@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: ce102f189321cbd49b37e7718c1f3d478c322f55
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: e009ec60abc5afd06e43122424c325bbb1bf42ac
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526687"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668866"
 ---
 # <a name="set-up-device-for-development"></a>Configurer un appareil pour le développement
 
@@ -77,7 +77,7 @@ Exécutez l’application **android.bat** dans le répertoire **[chemin d’inst
 ### <a name="download-the-usb-drivers"></a>Télécharger les pilotes USB
 
 Les appareils Google Nexus (à l’exception du Galaxy Nexus) nécessitent le pilote Google USB. Le pilote dont vous avez besoin pour le Galaxy Nexus est [distribué par Samsung](http://www.samsung.com/us/support/downloads/).
-Pour tous les autres appareils Android, vous devez utiliser le [pilote USB fourni par le fabricant](http://developer.android.com/tools/extras/oem-usb.html#Drivers).
+Pour tous les autres appareils Android, vous devez utiliser le [pilote USB fourni par le fabricant](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
 Pour installer le paquet **Google USB Driver**, démarrez le Gestionnaire Android SDK, puis développez le dossier **Extras**, comme indiqué dans la capture d’écran suivante :
 
@@ -144,7 +144,7 @@ La dernière étape consiste à connecter l’appareil à l’ordinateur. Pour c
 
 ### <a name="connecting-over-wifi"></a>Connexion via le Wi-Fi
 
-Par défaut, [Android Debug Bridge](http://developer.android.com/tools/help/adb.html) (*ADB*) est configuré pour communiquer avec les appareils Android via une connexion USB. Il est possible de le reconfigurer pour qu’il utilise le protocole TCP/IP au lieu d’une connexion USB. Pour ce faire, l’appareil et l’ordinateur doivent utiliser le même réseau Wi-Fi. Pour configurer votre environnement de manière à permettre le débogage via une connexion Wi-Fi, effectuez ce qui suit à partir de la ligne de commande :
+Par défaut, [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) est configuré pour communiquer avec les appareils Android via une connexion USB. Il est possible de le reconfigurer pour qu’il utilise le protocole TCP/IP au lieu d’une connexion USB. Pour ce faire, l’appareil et l’ordinateur doivent utiliser le même réseau Wi-Fi. Pour configurer votre environnement de manière à permettre le débogage via une connexion Wi-Fi, effectuez ce qui suit à partir de la ligne de commande :
 
 1.  Déterminez l’adresse IP de votre appareil Android. L’une des méthodes possibles pour déterminer l’adresse IP de l’appareil est de regarder sous **Paramètres > Wi-Fi**, et d’appuyer sur le réseau Wi-Fi auquel est connecté l’appareil. L’écran Paramètres s’ouvre et affiche des informations sur la connexion réseau, comme dans la capture d’écran ci-dessous :
 
@@ -184,9 +184,9 @@ Vous venez de voir comment configurer un appareil Android pour le développement
 
 ## <a name="related-links"></a>Liens associés
 
-- [Android Debug Bridge](http://developer.android.com/tools/help/adb.html)
-- [Utilisation des périphériques matériels](http://developer.android.com/tools/device.html)
+- [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
+- [Utilisation des périphériques matériels](https://developer.android.com/tools/device.html)
 - [Téléchargements des pilotes Samsung](http://www.samsung.com/us/support/downloads/)
-- [Pilotes USB OEM](http://developer.android.com/tools/extras/oem-usb.html#Drivers)
-- [Pilote USB Google](http://developer.android.com/sdk/win-usb.html)
-- [Développeurs XDA : Windows 8 - Problème de pilote ADB/Fastboot résolu](http://forum.xda-developers.com/showthread.php?t=1583801)
+- [Pilotes USB OEM](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
+- [Pilote USB Google](https://developer.android.com/sdk/win-usb.html)
+- [Développeurs XDA : Windows 8 - Problème de pilote ADB/Fastboot résolu](http://forum.xda-developers.com/showthread.php?t=1583801)

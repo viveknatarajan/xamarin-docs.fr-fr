@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: 8a95f89ad41ab793d8c26631f1a967180b4c1779
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b8f36ef407c3acc9b3472539735816649e13b7db
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782331"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672662"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduction au cycle de vie de développement des logiciels mobiles
 
@@ -19,7 +19,7 @@ La création d’applications mobiles peut être aussi simple qu’ouvrir l’ID
 
 Dans ce document, nous allons examiner de façon approfondie la création d’applications mobiles, notamment :
 
-1.   **Processus** : le processus de développement de logiciels est appelé « cycle de vie de développement de logiciels ». Nous allons examiner toutes les phases du cycle de vie de développement de logiciels pour les applications mobiles, qui sont : idée, conception, développement, stabilisation, déploiement et maintenance.
+1.   **Processus** : le processus de développement de logiciels est appelé « cycle de vie de développement de logiciels ». Nous allons examiner toutes les phases du cycle de vie de développement de logiciels pour le développement d’applications mobiles, notamment : Inspiration, conception, développement, stabilisation, déploiement et maintenance.
 1.   **Considérations** : plusieurs aspects doivent être considérés pour la création d’applications mobiles, en particulier pour ce qui diffère des applications web ou pour poste de travail traditionnelles. Nous allons examiner ces considérations et comment elles affectent le développement d’applications mobiles.
 
 Ce document est destiné à répondre à des questions essentielles sur le développement d’applications mobiles, à la fois pour les développeurs d’application débutants et expérimentés. Il adopte une approche assez complète pour présenter la plupart des concepts que vous allez rencontrer au cours de l’ensemble du cycle de vie de développement de logiciels. Ce document peut cependant ne pas être pour tout le monde : si vous avez hâte de commencer à créer des applications, nous vous recommandons de passer directement au guide [Introduction au développement mobile](~/cross-platform/get-started/introduction-to-mobile-development.md), puis de revenir à ce document plus tard.
@@ -58,9 +58,9 @@ En outre, les applications doivent être évaluées dans le contexte du facteur 
 -   **Valeur** : quelle valeur cette application apporte-t-elle aux utilisateurs ? Comment vont-ils l’utiliser ?
 -   **Forme/mobilité** : comment cette application va-t-elle fonctionner dans un facteur de forme mobile ? Comment puis-je ajouter de la valeur avec des technologies mobiles comme le suivi de l’emplacement, l’appareil photo, etc. ?
 
-Pour faciliter la conception des fonctionnalités d’une application, il peut être utile de définir des acteurs et des [cas d’usage](http://en.wikipedia.org/wiki/Use_case). Les acteurs sont des rôles au sein d’une application ; il s’agit souvent d’utilisateurs. Les cas d’usage sont généralement des actions ou des objectifs.
+Pour faciliter la conception des fonctionnalités d’une application, il peut être utile de définir des acteurs et des [cas d’usage](https://en.wikipedia.org/wiki/Use_case). Les acteurs sont des rôles au sein d’une application ; il s’agit souvent d’utilisateurs. Les cas d’usage sont généralement des actions ou des objectifs.
 
-Par exemple, une application de suivi des tâches peut avoir deux acteurs : *utilisateur* et *ami*. Un utilisateur peut *créer une tâche* et peut aussi *partager une tâche* avec un ami. Dans ce cas, la création d’une tâche et le partage d’une tâche sont deux cas d’usage distincts qui, conjointement avec les acteurs, vont déterminer les écrans que vous devez créer, ainsi que les entités et la logique métier à développer.
+Par exemple, une application de suivi des tâches peut avoir deux acteurs : *Utilisateur* et *Ami*. Un utilisateur peut *créer une tâche* et peut aussi *partager une tâche* avec un ami. Dans ce cas, la création d’une tâche et le partage d’une tâche sont deux cas d’usage distincts qui, conjointement avec les acteurs, vont déterminer les écrans que vous devez créer, ainsi que les entités et la logique métier à développer.
 
 Une fois qu’un nombre approprié de cas d’usage et d’acteurs ont été spécifiés, il est beaucoup plus facile de commencer à concevoir une application. Le développement peut alors se concentrer sur la création de l’application, et non pas sur ce qu’est l’application ou sur ce qu’elle devrait faire.
 
@@ -77,7 +77,7 @@ L’expérience utilisateur est généralement modélisée via des maquettes en 
 Lors de la création des maquettes de l’expérience utilisateur, il est important de prendre en compte les recommandations sur l’interface des différentes plateformes ciblées par l’application. L’application doit s’intégrer parfaitement sur chaque plateforme. Les recommandations de conception officielles pour chaque plateforme sont :
 
 1.   **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
-1.   **Android** –  [Design Guidelines](http://developer.android.com/design/index.html)
+1.   **Android** –  [Design Guidelines](https://developer.android.com/design/index.html)
 1.   **UWP** –  [Principes de base de la conception UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 Par exemple, chaque application a une métaphore pour passer d’une section à l’autre dans une application. iOS utilise une barre d’onglets en bas de l’écran, Android utilise une barre d’onglets en haut de l’écran et UWP utilise la vue [Pivot ou onglet](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
@@ -108,7 +108,7 @@ Dans le reste des didacticiels, nous allons nous concentrer principalement sur l
 
 ### <a name="stabilization"></a>Stabilisation
 
-La stabilisation est le processus qui consiste à corriger les bogues de votre application. Il ne s’agit pas seulement du point de vue fonctionnel, par exemple « Elle se bloque quand je clique sur ce bouton », mais également de la facilité d’utilisation et des performances. Il est préférable de commencer la stabilisation très tôt dans le processus de développement, afin que les corrections courantes puissent être faites avant de devenir des sources de coûts. En règle générale, les applications passent par les étapes suivantes : *Prototype*, *Alpha*, *Bêta*, et *Version Release Candidate*. Les définitions de ces étapes varient selon les personnes, mais elles suivent généralement le modèle suivant :
+La stabilisation est le processus qui consiste à corriger les bogues de votre application. Il ne s’agit pas seulement du point de vue fonctionnel, par exemple : « Elle plante quand je clique sur ce bouton », mais également de la facilité d’utilisation et des performances. Il est préférable de commencer la stabilisation très tôt dans le processus de développement, afin que les corrections courantes puissent être faites avant de devenir des sources de coûts. En règle générale, les applications passent par les étapes suivantes : *Prototype*, *Alpha*, *Bêta*, et *Version Release Candidate*. Les définitions de ces étapes varient selon les personnes, mais elles suivent généralement le modèle suivant :
 
 1.   **Prototype** : l’application est toujours en phase de preuve de concept, et seules les fonctionnalités principales ou des parties spécifiques de l’application fonctionnent. Des bogues majeurs y sont présents.
 1.   **Alpha** : les fonctionnalités principales sont généralement entièrement présentes dans le code (qui est généré, mais pas entièrement testé). Des bogues majeurs sont encore présents, des fonctionnalités périphériques peuvent ne pas encore être présentes.
@@ -227,7 +227,7 @@ En raison de la fragmentation extrême des appareils Android, la plupart des per
 #### <a name="security-considerations"></a>Considérations relatives à la sécurité
 
 Dans le système d’exploitation Android, toutes les applications s’exécutent sous une identité distincte et isolée, avec des autorisations limitées. Par défaut, les applications ne peuvent faire que très peu de choses. Par exemple, sans autorisations spéciales, une application ne peut pas envoyer un message texte, déterminer l’état du téléphone ou même accéder à Internet ! Pour accéder à ces fonctionnalités, les applications doivent spécifier les autorisations souhaitées dans un fichier manifeste de l’application et, au moment de leur installation, le système d’exploitation lit ces autorisations, notifie l’utilisateur que l’application demande ces autorisations, puis permet à l’utilisateur de continuer ou d’annuler l’installation.
-Ceci est une étape essentielle dans le modèle de distribution Android en raison du modèle ouvert de store d’applications, étant donné que les applications ne sont pas organisées comme elles le sont par exemple pour iOS. Pour obtenir la liste des autorisations des applications, consultez l’article de référence [Manifest.permission](http://developer.android.com/reference/android/Manifest.permission.html) dans la documentation d’Android.
+Ceci est une étape essentielle dans le modèle de distribution Android en raison du modèle ouvert de store d’applications, étant donné que les applications ne sont pas organisées comme elles le sont par exemple pour iOS. Pour obtenir la liste des autorisations des applications, consultez l’article de référence [Manifest.permission](https://developer.android.com/reference/android/Manifest.permission.html) dans la documentation d’Android.
 
 ### <a name="windows-considerations"></a>Considérations Windows
 
@@ -253,5 +253,5 @@ Ce guide est une introduction au cycle de vie de développement de logiciels pou
 
 - [Introduction au développement mobile](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](http://developer.xamarin.com/get-started-droid/)
+- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
 - [Notions de base des applications](~/cross-platform/app-fundamentals/index.md)

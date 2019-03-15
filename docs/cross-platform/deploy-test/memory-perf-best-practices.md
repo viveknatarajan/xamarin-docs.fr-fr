@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: bd08e1f83f7b1752a2830bda1390ffae4f86b360
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 7f03df796c338380a776f9af26563af2e60e59a1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242405"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672649"
 ---
 # <a name="cross-platform-performance"></a>Niveau de performance multiplateforme
 
@@ -257,7 +257,7 @@ Pour plus d’informations, consultez [Présentation de la prise en charge async
 
 Les langages managés tels que C# utilisent le nettoyage de mémoire pour libérer la mémoire allouée aux objets qui ne sont plus utilisés. Les deux récupérateurs de mémoire utilisés par la plateforme Xamarin sont les suivants :
 
-- [**SGen**](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/) : Il s’agit d’un récupérateur de mémoire générationnel qui est utilisé par défaut sur la plateforme Xamarin.
+- [**SGen**](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) : Il s’agit d’un récupérateur de mémoire générationnel qui est utilisé par défaut sur la plateforme Xamarin.
 - [**Boehm**](http://www.hboehm.info/gc/) : Il s’agit d’un récupérateur de mémoire classique, non générationnel. Il s’agit du récupérateur de mémoire utilisé par défaut pour les applications Xamarin.iOS qui utilisent l’API classique.
 
 SGen utilise l’un des trois segments de mémoire pour allouer de l’espace aux objets :
@@ -334,7 +334,7 @@ Les étapes suivantes peuvent être effectuées pour réduire encore davantage l
 - Réduisez la taille du code managé de l’application. Pour cela, activez l’éditeur de liens pour chaque assembly (*Lier tout* pour les projets iOS et *Lier tous les assemblys* pour les projets Android).
 
 Les applications Android peuvent également être placées dans un APK distinct pour chaque ABI (« architecture »).
-Pour en savoir plus, lisez ce billet de blog : [How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+Pour en savoir plus, consultez ce billet de blog : [How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
 
 <a name="optimizeimages" />
 
