@@ -6,13 +6,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: dff57b142745729d5d38db4cce892bb1d55796a6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059728"
 ---
+
 # <a name="preparing-an-application-for-release"></a>Préparation d’une application pour la mise en production
 
 Une fois qu’une application a été codée et testée, il est nécessaire de préparer un paquet pour la distribution. La première tâche de préparation de ce package consiste à générer l’application à mettre en production, ce qui implique principalement de définir différents attributs d’application.
@@ -222,7 +217,7 @@ Notez que l’option **Regrouper les assemblys dans le code natif** ne signifie 
 
 L’option **Compilation AOT** (sur la page [Propriétés de création de package](#Set_Packaging_Properties)) active la compilation Ahead-of-Time (AOT) des assemblys. Lorsque cette option est activée, la charge de démarrage JIT (Just-In-Time) est réduite en précompilant les assemblys avant l’exécution. Le code natif qui en résulte est dans l’APK avec les assemblys non compilés. Cela réduit le temps de démarrage de l’application, mais au détriment de la taille de l’APK qui est légèrement plus grande.
 
-L’option **Compilation AOT** requiert une licence Entreprise ou supérieure. Cette option est disponible uniquement lorsque le projet est configuré pour le mode Mise en production et elle est désactivée par défaut. Pour plus d’informations sur la compilation AOT, consultez [AOT](http://www.mono-project.com/docs/advanced/aot/).
+L’option **Compilation AOT** requiert une licence Entreprise ou supérieure. **Compilation AOT** est disponible uniquement lorsque le projet est configuré pour le mode Mise en production et elle est désactivée par défaut. Pour plus d’informations sur la compilation AOT, consultez [AOT](https://www.mono-project.com/docs/advanced/aot/).
 
 #### <a name="llvm-optimizing-compiler"></a>Compilateur d'optimisation LLVM
 
@@ -266,7 +261,7 @@ Lorsque l’option **Activer Multi-Dex** est activée, les outils du kit Android
 
 Il est possible qu’une application n’utilise pas toutes les méthodes de toutes les bibliothèques référencées, et donc qu’un outil tel que ProGuard (voir ci-dessus) puisse supprimer du code les méthodes non utilisées. La bonne pratique consiste à activer **Activer Multi-Dex** seulement si cela est absolument nécessaire, autrement dit si l’application référence toujours plus de 65 000 méthodes Java même après avoir utilisé ProGuard.
 
-Pour plus d’informations sur Multi-Dex, consultez [Configurer les applications avec plus de 64K méthodes](http://developer.android.com/tools/building/multidex.html).
+Pour plus d’informations sur Multi-Dex, consultez [Configurer les applications avec plus de 64K méthodes](https://developer.android.com/tools/building/multidex.html).
 
 <a name="Compile" />
 
@@ -316,13 +311,13 @@ Le **Gestionnaire d’archives** est composé d’un volet **Liste des solutions
 
 [![Volets du Gestionnaire d’archives](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
-Le volet **Liste des solutions** affiche toutes les solutions ayant au moins un projet archivé. Il comprend les sections suivantes :
+Le volet **Liste des solutions** affiche toutes les solutions ayant au moins un projet archivé. **Liste des solutions** comprend les sections suivantes :
 
 * **Solution actuelle** &ndash; Affiche la solution actuelle. Notez que cette zone peut être vide s’il n’existe aucune archive pour la solution actuelle.
 * **Toutes les archives** &ndash; Affiche toutes les solutions ayant une archive.
 * Zone de texte **Rechercher** (en haut) &ndash; Filtre les solutions répertoriées dans la liste **Toutes les archives** en fonction de la chaîne de recherche entrée.
 
-Le volet **Liste des archives** affiche la liste de toutes les archives de la solution sélectionnée. Il comprend les sections suivantes :
+Le volet **Liste des archives** affiche la liste de toutes les archives de la solution sélectionnée. **Liste des archives** comprend les sections suivantes :
 
 * **Nom de la solution sélectionnée** &ndash; Affiche le nom de la solution sélectionnée dans le volet **Liste des solutions**. Toutes les informations affichées dans le volet **Liste des archives** font référence à la solution sélectionnée.
 * **Filtre Plateformes** &ndash; Ce champ permet de filtrer les archives par type de plateforme (par exemple, iOS ou Android).
@@ -374,6 +369,6 @@ Vous pouvez y sélectionner le canal de distribution :
 
 - [Appareils multicœurs et Xamarin.Android](~/android/deploy-test/multicore-devices.md)
 - [Architectures de processeur](~/android/app-fundamentals/cpu-architectures.md)
-- [AOT](http://www.mono-project.com/docs/advanced/aot/)
-- [Réduire le code et les ressources](http://developer.android.com/tools/help/proguard.html)
-- [Configurer des applications avec plus de 64 000 méthodes](http://developer.android.com/tools/building/multidex.html)
+- [AOT](https://www.mono-project.com/docs/advanced/aot/)
+- [Réduire le code et les ressources](https://developer.android.com/tools/help/proguard.html)
+- [Configurer des applications avec plus de 64 000 méthodes](https://developer.android.com/tools/building/multidex.html)
