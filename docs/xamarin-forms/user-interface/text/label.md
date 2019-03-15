@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557036"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972674"
 ---
 # <a name="xamarinforms-label"></a>Étiquette de Xamarin.Forms
 
@@ -356,7 +356,7 @@ Le `TapCommand` exécute le `OpenBrowser` méthode, en passant le [ `TapGestureR
 
 ### <a name="creating-a-reusable-hyperlink-class"></a>Création d’une classe réutilisable de lien hypertexte
 
-L’approche précédente à la création d’un lien hypertexte requiert l’écriture de code répétitif chaque fois que vous avez besoin d’un lien hypertexte dans votre application. Toutefois, à la fois le [ `Label` ](xref:Xamarin.Forms.Label) et [ `Span` ](xref:Xamarin.Forms.Span) classes peuvent être une sous-classe pour créer `HyperlinkLabel` et `HyperlinkSpan` classes, avec la reconnaissance de mouvement et la mise en forme du texte code y ajouté.
+L’approche précédente à la création d’un lien hypertexte requiert l’écriture de code répétitif chaque fois que vous avez besoin d’un lien hypertexte dans votre application. Toutefois, à la fois le [ `Label` ](xref:Xamarin.Forms.Label) et [ `Span` ](xref:Xamarin.Forms.Span) classes peuvent être sous-classée pour créer `HyperlinkLabel` et `HyperlinkSpan` classes, avec la reconnaissance de mouvement et le code de mise en forme de texte y a été ajoutée.
 
 L’exemple de code suivant, extrait de la [démonstrations de lien hypertexte](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) exemple, montre un `HyperlinkSpan` classe :
 

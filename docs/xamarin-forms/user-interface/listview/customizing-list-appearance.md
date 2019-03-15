@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831793"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972648"
 ---
 # <a name="customizing-listview-appearance"></a>Personnaliser l’apparence de ListView
 
@@ -206,8 +206,8 @@ Pour créer un en-tête personnalisé et le pied de page, définissez les vues d
 [`ListView`](xref:Xamarin.Forms.ListView) a `HorizontalScrollBarVisibility` et `VerticalScrollBarVisibility` propriétés, qui obtient ou définit un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valeur représentant le moment où la barre de défilement horizontale ou verticale, est visible. Les deux propriétés peuvent être définies sur les valeurs suivantes :
 
 - [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) Indique le comportement de barre de défilement par défaut pour la plateforme, et est la valeur par défaut pour le `HorizontalScrollBarVisibility` et `VerticalScrollBarVisibility` propriétés.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) Indique que les barres de défilement seront visibles, même lorsque le contenu ne tient pas dans la vue.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) Indique que les barres de défilement ne seront pas visibles, événement si le contenu ne tient pas dans la vue.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) Indique que les barres de défilement seront visibles, même lorsque le contenu s’ajuste à la vue.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) Indique que les barres de défilement ne seront pas visibles, même si le contenu ne tient pas dans la vue.
 
 <a name="Row_Separators" />
 

@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms Visual
-description: 'Xamarin.Forms Visual permet des convertisseurs être appliquées de façon sélective aux objets VisualElement, sans avoir aux contrôles Xamarin.Forms de sous-classe.'
+description: 'Xamarin.Forms Visual permet des convertisseurs être appliquées de façon sélective aux objets VisualElement, sans avoir aux vues Xamarin.Forms de sous-classe.'
 ms.prod: xamarin
 ms.assetid: 69228A9C-39C4-46AE-A803-C38EED6FB965
 ms.technology: xamarin-forms
@@ -17,4 +17,4 @@ Xamarin.Forms matériau Visual peut servir à créer des applications de Xamarin
 
 ## <a name="create-a-xamarinforms-visual-renderercreatemd"></a>[Créer un convertisseur de Xamarin.Forms Visual](create.md)
 
-Xamarin.Forms Visual permet des convertisseurs être appliquées de façon sélective à `VisualElement` objets, sans avoir aux contrôles Xamarin.Forms de sous-classe.
+Xamarin.Forms Visual permet des convertisseurs être appliquées de façon sélective à [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) objets, sans avoir aux vues Xamarin.Forms de sous-classe.

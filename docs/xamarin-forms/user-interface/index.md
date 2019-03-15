@@ -105,7 +105,7 @@ Le `TimePicker` permet à un utilisateur de sélectionner une heure. Il est impl
 
 ## <a name="visualvisualindexmd"></a>[Élément visuel](visual/index.md)
 
-Xamarin.Forms Visual permet des convertisseurs être appliquées de façon sélective à `VisualElement` objets, sans avoir aux contrôles Xamarin.Forms de sous-classe.
+Xamarin.Forms matériau Visual peut servir à créer des applications de Xamarin.Forms recherchent identique, ou en grande partie identique, sur iOS et Android.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Gestionnaire d’état visuel](visual-state-manager.md)
 

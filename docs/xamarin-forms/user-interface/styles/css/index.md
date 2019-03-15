@@ -336,7 +336,7 @@ Les sélecteurs CSS suivants sont pris en charge par Xamarin.Forms :
 |`.class`|`.header`|Sélectionne tous les éléments avec le `StyleClass` propriété contenant « header ». Notez que ce sélecteur respecte la casse.|
 |`#id`|`#email`|Sélectionne tous les éléments avec `StyleId` défini sur `email`. Si `StyleId` n’est pas définie, en secours `x:Name`. Lors de l’utilisation de XAML, `x:Name` est préféré sur `StyleId`. Notez que ce sélecteur respecte la casse.|
 |`*`|`*`|Sélectionne tous les éléments.|
-|`element`|`label`|Sélectionne tous les éléments de type `Label`, mais pas des classes. Notez que ce sélecteur respecte la casse.|
+|`element`|`label`|Sélectionne tous les éléments de type `Label`, mais pas les sous-classes. Notez que ce sélecteur respecte la casse.|
 |`^base`|`^contentpage`|Sélectionne tous les éléments avec `ContentPage` comme classe de base, y compris `ContentPage` lui-même. Notez que ce sélecteur respecte la casse et ne fait pas partie de la spécification CSS.|
 |`element,element`|`label,button`|Sélectionne tous les `Button` éléments et tous `Label` éléments. Notez que ce sélecteur respecte la casse.|
 |`element element`|`stacklayout label`|Sélectionne tous les `Label` éléments à l’intérieur d’un `StackLayout`. Notez que ce sélecteur respecte la casse.|
