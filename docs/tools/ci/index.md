@@ -6,14 +6,9 @@ ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: lobrien
 ms.author: laobri
 ms.date: 10/23/2018
-ms.openlocfilehash: 9171eeb461f2e4d363de6e01ea92fa448f04d41a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121631"
 ---
-# <a name="introduction-to-continuous-integration-with-xamarin"></a>Introduction à l’intégration continue avec Xamarin
+
+# <a name="continuous-integration-with-xamarin"></a>Intégration continue avec Xamarin
 
 > [!Video https://youtube.com/embed/wXgnh2Q7Uv8]
 

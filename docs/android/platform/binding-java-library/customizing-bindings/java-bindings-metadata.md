@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 06a7a3b00934b7a2f3eeb4fcfa6fc90071901ba0
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669893"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070902"
 ---
 # <a name="java-bindings-metadata"></a>Métadonnées de liaisons Java
 
@@ -246,7 +246,10 @@ Modifie le type de retour d’une méthode. Cela ne modifie pas l’attribut de 
 
 ### <a name="obfuscated"></a>masqués
 
-Les outils qui masquent les bibliothèques Java peuvent interférer avec le Générateur de liaison de Xamarin.Android et sa capacité à générer C# classes wrapper. Caractéristiques des classes obscurcis incluent : * inclut le nom de classe un **$**, c'est-à-dire **un .class $** * le nom de classe est entièrement compromis entre les caractères minuscules, par exemple,  **a.class**
+Les outils qui masquent les bibliothèques Java peuvent interférer avec le Générateur de liaison de Xamarin.Android et sa capacité à générer C# classes wrapper. Caractéristiques des classes obscurcis sont les suivantes : 
+
+* Le nom de classe inclut un **$**, c'est-à-dire **un .class $**
+* Le nom de classe est entièrement compromis entre les caractères minuscules, par exemple, **a.class**
 
 Cet extrait de code est un exemple montrant comment générer un « non obscurci » C# type :
 

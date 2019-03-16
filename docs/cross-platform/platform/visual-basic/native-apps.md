@@ -6,12 +6,12 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 55c08c1bd0d82f8458e0c07b4202b6275600ff38
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: f62d3cb076019ba49303f2c82f009975d9fbdc50
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671102"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070967"
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Visual Basic.NET dans Xamarin iOS et Android
 
@@ -284,18 +284,6 @@ Pour garantir que votre système de contrôle de version peut stocker la sortie 
 2. Ajouter un _post-build_ script copie la DLL de sortie à partir de ce projet dans le répertoire racine du projet (qui est en dehors de **/bin/**). Selon votre configuration de contrôle de version, la DLL doit maintenant être en mesure d’être ajouté au contrôle de code source.
 
   [![](native-apps-images/image6-vs-sml.png "Événements de build post script de build pour copier la DLL VB")](native-apps-images/image6-vs.png#lightbox)
-
-#### <a name="visual-studio-2015"></a>Visual Studio 2015
-
-1.  Avec le bouton droit sur le projet et choisissez **Propriétés > Compiler** , puis vérifiez toutes les Configurations est sélectionnée dans la zone de peigne en haut à gauche. Cliquez sur le **événements de Build...**  situé en bas à droite.
-
-    [![](native-apps-images/image6.png "La section de compilation de propriétés de projet")](native-apps-images/image6.png#lightbox)
-
-1.  Ajouter un script de post-build qui copie la DLL de sortie à partir de ce projet dans le répertoire racine du projet (qui est en dehors de **/bin/** ). Selon votre configuration de contrôle de version, la DLL doit maintenant être en mesure d’être ajouté au contrôle de code source.
-
-    [![](native-apps-images/image7.png "Fenêtre des événements de build")](native-apps-images/image7.png#lightbox)
-
-#### <a name="all-versions"></a>Toutes les Versions
 
 Prochaine fois que vous générez le projet, l’assembly de bibliothèque de classes Portable est copié à la racine du projet, et lorsque vous vérifiez dans/validation/push vos modifications de la DLL sera stocké (afin qu’il peut être téléchargé sur un Mac avec Visual Studio pour Mac).
 

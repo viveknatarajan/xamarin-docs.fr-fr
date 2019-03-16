@@ -5,12 +5,12 @@ description: Une explication simple montrant comment découpler les formulaires 
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 3d3af9c78b7486e7ebfb063a3cb00fabdbd0f5b7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 4bf1dea170bd6b63209693963d54cc2e16163eea
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617538"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071097"
 ---
 # <a name="desktop-app-porting-guidance"></a>Instructions de transfert d’application de bureau
 
@@ -26,7 +26,7 @@ Pour les applications Windows Forms et WPF écrites avec C# (ou Visual Basic.NET
 
 ## <a name="net-portability-analyzer"></a>Analyseur de portabilité .NET
 
-Prise en charge de Visual Studio 2015 et 2017 la [Analyseur de portabilité .NET](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([télécharger pour Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) qui peut examiner vos applications existantes et vous indiquent la quantité de code peut être porté « tel quel » sur d’autres plateformes . Vous pouvez en savoir plus à partir de ce [vidéo Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
+Visual Studio 2017 et ultérieur prennent en charge la [Analyseur de portabilité .NET](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([télécharger pour Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) qui peut examiner vos applications existantes et vous indiquent la quantité de code peut être porté « tel quel » à d’autres plateformes. Vous pouvez en savoir plus à partir de ce [vidéo Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
 Il existe également un outil de ligne de commande peut être téléchargé à partir de [Analyseur de portabilité sur GitHub](https://github.com/Microsoft/dotnet-apiport) et utilisée pour fournir les mêmes rapports.
 

@@ -6,21 +6,18 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2017
-ms.openlocfilehash: 7b1f96807d77d9db0a892c5e78124eb3a9890edc
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 3e3d426e7b00725eafeba139de5bc46d416c368a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251269"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070889"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Extensions Visual Studio manquantes après l’installation
 
-## <a name="error-message-this-project-is-incompatible-with-the-current-edition-of-visual-studio"></a>Message d’erreur : Ce projet est incompatible avec l’édition actuelle de Visual Studio
+## <a name="error-message-this-project-is-incompatible-with-the-current-edition-of-visual-studio"></a>Message d’erreur : Ce projet est incompatible avec l’édition actuelle de Visual Studio
 
-Vérifiez qu'une version compatible de Visual Studio est installée :
-
--   Visual Studio 2017 (Community, Professional ou Enterprise)
--   Visual Studio 2015 (Community, Professional ou Enterprise)
+Vérifiez que Visual Studio 2017 (Community, Professional ou Enterprise) ou plus récent est installé.
 
 Voir aussi le [configuration requise de Windows](~/cross-platform/get-started/requirements.md#windows-requirements).
 
@@ -40,7 +37,7 @@ Dans certaines situations, le programme d’installation de Xamarin peut automat
 
 5. Parcourez le reste de l’Assistant installation.
 
-## <a name="possible-fix-2-ask-visual-studio-to-set-up-the-extensions-again"></a>Correction possible 2 : Demander à Visual Studio pour configurer les extensions à nouveau
+## <a name="possible-fix-2-ask-visual-studio-to-set-up-the-extensions-again"></a>Correction possible 2 : Demandez à Visual Studio pour configurer les extensions à nouveau
 
 1. Vérifiez si les extensions de Xamarin ont été copiées dans le dossier d’extensions Visual Studio :
 
@@ -99,7 +96,7 @@ Dans certaines situations, le programme d’installation de Xamarin peut automat
 
 10.  Réinstallez la version stable actuelle de Xamarin à partir de [visualstudio.com](https://visualstudio.com/xamarin).
 
-## <a name="possible-fix-4-repair-visual-studio-installation"></a>Correction possible 4 : Installation de réparer Visual Studio
+## <a name="possible-fix-4-repair-visual-studio-installation"></a>Correction possible 4 : Réparer l’installation de Visual Studio
 
 1.  Ouvrez le Windows **programmes et fonctionnalités** Control Panel.
 

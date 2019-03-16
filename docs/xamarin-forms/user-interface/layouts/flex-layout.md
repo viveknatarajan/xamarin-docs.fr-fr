@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: b37070ca627e535f9470916e9f84cdf55bb2aed3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7626c49b2267cbd087a16c310f1b85aea7139823
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056134"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981729"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Le Xamarin.Forms FlexLayout
 
@@ -490,7 +490,7 @@ Comme `AlignItems`, le `AlignContent` propriété également aligne enfants sur 
 
 Dans la capture d’écran iOS, les deux lignes figurent en haut ; dans la capture d’écran Android, ils sont dans le centre ; et dans la capture d’écran UWP ils en bas. Les lignes peuvent également être espacés de différentes manières :
 
-[![La Page de l’expérience : Aligner le contenu 2](flex-layout-images/ExperimentAlignContent2.png "la Page de l’expérience - aligner le contenu 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![La Page de l’expérience :  Aligner le contenu 2](flex-layout-images/ExperimentAlignContent2.png "la Page de l’expérience - aligner le contenu 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 Le `AlignContent` n’a aucun effet lorsqu’il n'existe qu’une seule ligne ou colonne.
 
@@ -517,13 +517,13 @@ Pour les enfants individuels de la `FlexLayout`, cette propriété de configurat
 Pour un `Label` élément nommé `label` (ou exemple), vous pouvez définir le `AlignSelf` propriété dans le code comme suit :
 
 ```csharp
-FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
+FlexLayout.SetAlignSelf(label, FlexAlignSelf.Center);
 ```
 
 Notez qu’il n’existe aucune référence à la `FlexLayout` parent de la `Label`. Dans XAML, vous définissez la propriété comme suit :
 
 ```xaml
-<Label ... FlexAlign.AlignSelf="Center" ... />
+<Label ... FlexLayout.AlignSelf="Center" ... />
 ```
 
 ### <a name="the-order-property"></a>La propriété Order
@@ -580,7 +580,7 @@ Le **base expérimenter** page de la **[FlexLayoutDemos](https://developer.xamar
 
 [![La base de l’expérience Page](flex-layout-images/BasisExperiment.png "la base de l’expérience de Page")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-La capture d’écran d’iOS à gauche montre les deux `Label` éléments en cours donnés hauteurs en unités indépendantes du périphérique. L’écran Android montre les hauteurs sont une fraction de la hauteur totale de l’occasion du `FlexLayout`. Si le `Basis` est définie sur 100 %, puis l’enfant est la hauteur de la `FlexLayout`et seront renvoyées à la colonne suivante et occuper toute la hauteur de cette colonne, comme le montre la capture d’écran UWP : il apparaît comme si les cinq enfants sont organisés dans une ligne , mais elles apparaissent réellement dans cinq colonnes.
+La capture d’écran d’iOS à gauche montre les deux `Label` éléments en cours donnés hauteurs en unités indépendantes du périphérique. L’écran Android montre les hauteurs sont une fraction de la hauteur totale de l’occasion du `FlexLayout`. Si le `Basis` est définie sur 100 %, puis l’enfant est la hauteur de la `FlexLayout`et seront renvoyées à la colonne suivante et occuper toute la hauteur de cette colonne, comme le montre la capture d’écran UWP : Il apparaît que si les cinq enfants sont organisés dans une ligne, mais elles apparaissent réellement dans cinq colonnes.
 
 ### <a name="the-grow-property"></a>La propriété de la croissance
 

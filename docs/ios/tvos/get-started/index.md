@@ -7,16 +7,9 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 84de9d042295aee8ca07ce3372f2e19bdec9f599
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118134"
 ---
-# <a name="getting-started-with-tvos-in-xamarin"></a>Prise en main tvOS dans Xamarin
 
-Xamarin.tvOS permet la création d’applications de tvOS natif avec la flexibilité et l’élégance de la modern C# langage, la puissance de la bibliothèque de classes de Base (BCL) .NET et Visual Studio pour Mac ou Visual Studio 2015 ou 2017 sur Windows.
+# <a name="getting-started-with-tvos-in-xamarin"></a>Prise en main tvOS dans Xamarin
 
 Cette série présente les principes fondamentaux du développement de Xamarin.tvOS. Il passe à partir de l’installation de la prise en charge de tvOS au démarrage, conception, codage et une application en cours d’exécution. Tout au long du processus, il enseigne les compétences et un ensemble d’outils qui est exigé pour fonctionner sur n’importe quelle application Xamarin.tvOS.
 

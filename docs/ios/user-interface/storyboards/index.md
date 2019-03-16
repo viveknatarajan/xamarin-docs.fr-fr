@@ -20,7 +20,7 @@ Un Storyboard peut être créé, ouvert et modifié avec le Concepteur de Xamari
 
 ## <a name="requirements"></a>Spécifications
 
-Tables de montage séquentiel utilisable avec le concepteur dans Visual Studio pour Mac iOS ou avec Visual Studio 2015 et 2017 avec les charges de travail Xamarin installés.
+Tables de montage séquentiel utilisable avec le concepteur dans Visual Studio pour Mac iOS ou avec Visual Studio 2017 avec les charges de travail Xamarin installés.
 
 ## <a name="what-is-a-storyboard"></a>Qu’est une table de montage séquentiel ?
 

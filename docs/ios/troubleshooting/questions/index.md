@@ -1,5 +1,5 @@
 ---
-title: Questions fréquemment posées
+title: Forum aux Questions de Xamarin.iOS
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
@@ -7,14 +7,9 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d2d0af5a69920f392eba1cd655f1d8ab74971be6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107506"
 ---
-# <a name="frequently-asked-questions"></a>Questions fréquemment posées
+
+# <a name="ios-frequently-asked-questions"></a>Forum aux Questions d’iOS
 
 ## <a name="general-questions"></a>Questions générales
 
@@ -58,7 +53,7 @@ Oui, il est possible, mais elle nécessitera généralement que vous signer à n
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[Il est possible de créer une archive .xcarchive à partir de Visual Studio ?](create-xcarchive.md)
 À compter de Xamarin 4, il est possible de créer un `.xcarchive` à partir de Windows en définissant le `ArchiveOnBuild` propriété `true`.
 
-### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Pourquoi ma soumission d’application échoue-t-elle avec le message : « Disallowed paths ( "iTunesMetadata.plist" ) found at ... » ?](itunesmetadata-disallowed-paths.md)
+### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[Pourquoi ma soumission d’application échoue avec : « Chemins non autorisés (« iTunesMetadata.plist ») trouvés sur... » ?](itunesmetadata-disallowed-paths.md)
 Cette erreur est le résultat d’un changement de processus de vérification d’App Store d’Apple. Cette erreur spécifique est _pas_ liés à une version particulière de Xamarin que vous avez installé, par conséquent, la rétrogradation est _pas_ aide. Liens de ce guide pour plus d’informations sur la façon de résoudre le problème.
 
 
@@ -70,7 +65,7 @@ Erreurs avec `RegisterServicePort` et messages d’erreur similaires comme ci-de
 ### <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychainno-codesigning-keysmd"></a>[Pourquoi ma build iOS échoue-t-elle avec le message : no valid iPhone code signing keys found in keychain ?](no-codesigning-keys.md)
 Ce message d’erreur se produit lorsque le projet en question a besoin d’informations d’identification de signature de code valides mais ne parvenez pas à les trouver. Signature de code est requise pour le test et de déploiements sur des appareils iOS physiques ; mais aussi Ad-hoc & application stocker les builds.
 
-### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Pourquoi mon application iOS 9 échoue-t-elle avec le message : System.Exception: Failed to marshal the Objective-C object ?](exception-marshal-obj-c.md)
+### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Pourquoi mon application iOS 9 échoue avec : System.Exception : Impossible de marshaler l’objet Objective-C ?](exception-marshal-obj-c.md)
 Modifications de l’API dans iOS 9 demander un constructeur de rappel à utiliser lors de l’appel de code non managé, comme l’API sous-jacente maintenant il attend.
 
 ### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Erreur d’exécution : l’assembly mscorlib.dll est introuvable ou ne peut pas être chargé](error-mscorlib-not-found.md)
@@ -86,7 +81,7 @@ Ce problème se produit lorsque le *masqué* `.monotouch-32` et `.monotouch-64` 
 ### <a name="ipa-file-is-0-bytesipa-zero-bytesmd"></a>[Le fichier IPA contient 0 octet](ipa-zero-bytes.md)
 Certains problèmes se sont produites dans les versions précédentes de Xamarin qui peut entraîner le fichier IPA sur Windows à être de 0 octet.
 
-### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Erreur IBTool : impossible d’effectuer l’opération.](error-ibtool.md)
+### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[Erreur IBTool : Impossible d’effectuer l’opération.](error-ibtool.md)
 Apple [fixe](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) cela `ibtool` bogue dans Xcode 6.1.1, par conséquent, la mise à niveau à Xcode 6.1.1 ou une version ultérieure est le plus simple.
 
 ### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[Erreur MT1009 : impossible de copier l’assembly](error-mt1009.md)

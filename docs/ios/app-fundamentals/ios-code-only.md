@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2b3ba0a0cf31ae2c2d631da8b595390c973957d6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 28475df4baa225cc9a608607be6ed673ad0e6e8a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670673"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981703"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Création d’interfaces utilisateur iOS dans le code dans Xamarin.iOS
 
@@ -85,19 +85,20 @@ Les étapes ci-dessous vous guident lors de la suppression de la table de montag
 
 1. Enfin, ajoutez le code suivant à votre `FinishedLaunching` méthode dans la classe AppDelegate :
 
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-            // create a new window instance based on the screen size
-            window = new UIWindow(UIScreen.MainScreen.Bounds);
+    ```csharp
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        // create a new window instance based on the screen size
+        window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            // make the window visible
-            window.MakeKeyAndVisible();
+        // make the window visible
+        window.MakeKeyAndVisible();
 
-            return true;
-        }
+        return true;
+    }
+    ```
 
 Le code qui a été ajouté à la `FinishedLaunching` méthode à l’étape 5 ci-dessus, est la quantité minimale de code requis pour créer une fenêtre pour votre application iOS.
-
 
 -----
 

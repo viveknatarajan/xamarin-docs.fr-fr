@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cfb684df89bf800a0d32607b119d1bd3fc297c58
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 41a9ec90b4b734dde7a982ac3d4b2e7b2082321c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123737"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070864"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Disposition automatique avec le Concepteur de Xamarin pour iOS
 
@@ -20,9 +20,9 @@ Disposition automatique (également appelée « disposition adaptatif ») est 
 
 Dans ce guide, nous présentons les contraintes et comment les utiliser dans le Concepteur de Xamarin iOS. Ce guide ne couvre pas l’utilisation des contraintes par programmation. Pour plus d’informations sur l’utilisation par programmation de la disposition automatique, reportez-vous à la [documentation Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Le Concepteur de Xamarin pour iOS est disponible dans Visual Studio pour Mac dans Visual Studio 2015 et 2017 sur Windows.
+Le Concepteur de Xamarin pour iOS est disponible dans Visual Studio pour Mac dans Visual Studio 2017 et version ultérieure sur Windows.
 
 Ce guide suppose la connaissance des composants du concepteur à partir de la [présentation du concepteur iOS](~/ios/user-interface/designer/introduction.md) guide.
 
@@ -56,11 +56,11 @@ Par défaut, aucune contrainte n’est créées ou visible sur l’aire. Au lieu
 
 La barre d’outils de contraintes a été mis à jour et maintenant se compose de deux parties principales :
 
-- **Un élément de bascule du bouton mode contraintes**: auparavant, vous avez entré le mode de contraintes en cliquant à nouveau sur une vue sélectionnée dans l’aire de conception. Vous devez désormais utiliser ce bouton bascule dans la barre de contraintes :
+- **Un élément de bascule du bouton mode contraintes**: Il fallait le mode de contraintes en cliquant à nouveau sur une vue sélectionnée dans l’aire de conception. Vous devez désormais utiliser ce bouton bascule dans la barre de contraintes :
 
   ![Activer/désactiver des modes de contraintes](designer-auto-layout-images/constraints.png)
 
-- **Un bouton « Contraintes de mise à jour » :** il est important de noter que les modifications selon que vous êtes en mode de modification de contraintes.
+- **Un bouton « Contraintes de mise à jour » :** Il est important de noter que les modifications selon que vous êtes en mode de modification de contraintes.
   - En mode de modification de contrainte, ce bouton s’ajuste les contraintes pour faire correspondre l’image de l’élément.
   - En mode d’édition de Frame ce bouton ajuste le cadre de l’élément pour correspondre à la position, que définissant les contraintes.
 
