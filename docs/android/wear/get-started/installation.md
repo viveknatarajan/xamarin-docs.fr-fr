@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: af9be54b4509f7202618d9d68210eb534f63ccbf
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 96fd6d32f37dd90422f05caf33cfda9a65683fd2
+ms.sourcegitcommit: 8dd04ead238be3f46cb6700e8eaa3d87f7b6d533
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671635"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58071032"
 ---
 # <a name="setup-and-installation"></a>Installation et configuration
 
@@ -22,7 +22,7 @@ _Cet article décrit les étapes d’installation et les détails de configurati
 
 Les éléments suivants sont requis pour créer des applications basées sur Xamarin Android Wear :
 
--   **Visual Studio ou Visual Studio pour Mac** &ndash; vous si vous utilisez Visual Studio, Visual Studio Professional 2015 ou ultérieur êtes requis.
+-   **Visual Studio ou Visual Studio pour Mac** &ndash; Visual Studio 2017 Community ou ultérieur est requis.
 
 -   **Xamarin.Android** &ndash; Xamarin.Android 4,17 ou version ultérieure doit être installé et configuré avec Visual Studio ou Visual Studio pour Mac.
 
