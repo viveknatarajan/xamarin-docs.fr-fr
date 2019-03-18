@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: 8622c40e41071d6c05b05abbe2d5d8a8a844ebde
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 2c6409410ecba7df8559c07c3231f5e493c98897
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285584"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071075"
 ---
 # <a name="ios-designer-basics"></a>principes fondamentaux du Concepteur d’iOS
 
 _Ce guide présente le Concepteur de Xamarin pour iOS. Il montre comment utiliser le concepteur iOS à organiser visuellement les contrôles, comment accéder à ces contrôles dans le code et comment modifier les propriétés._
 
-Le Concepteur de Xamarin pour iOS est un concepteur d’interface visuelle similaire à Interface Builder de Xcode et le concepteur Android. Certaines de ses nombreuses fonctionnalités incluent l’intégration transparente avec Visual Studio pour Mac et Visual Studio 2015 et 2017, faites glisser-déplacer, une interface pour la définition des gestionnaires d’événements et la capacité d’afficher des contrôles personnalisés.
+Le Concepteur de Xamarin pour iOS est un concepteur d’interface visuelle similaire à Interface Builder de Xcode et le concepteur Android. Certaines de ses nombreuses fonctionnalités incluent l’intégration transparente avec Visual Studio pour Windows et Mac, faites glisser-déplacer, une interface pour la définition des gestionnaires d’événements et la capacité d’afficher des contrôles personnalisés.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Le concepteur iOS est disponible dans Visual Studio pour Mac et Visual Studio 2015 et 2017 sur Windows. Dans Visual Studio 2015 ou 2017, le concepteur iOS nécessite une connexion à un hôte de build Mac configuré correctement, même si Xcode n’a pas besoin d’exécuter.
+Le concepteur iOS est disponible dans Visual Studio pour Mac et Visual Studio 2017 et version ultérieure sur Windows. Dans Visual Studio pour Windows, le concepteur iOS nécessite une connexion à un hôte de build Mac configuré correctement, même si Xcode n’a pas besoin d’exécuter.
 
 Ce guide suppose que vous connaissez le contenu couvert dans le [guides de mise en route](~/ios/get-started/index.md).
 
@@ -151,7 +151,7 @@ Les projets Xamarin.iOS créés avec Visual Studio pour Mac incluent un storyboa
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-La plupart des projets Xamarin.iOS créées avec Visual Studio 2015 ou 2017 incluent une table de montage séquentiel. Pour afficher le contenu d’un storyboard, double-cliquez sur le fichier .storyboard dans le **l’Explorateur de solutions**:
+La plupart des projets Xamarin.iOS créées avec Visual Studio incluent un storyboard. Pour afficher le contenu d’un storyboard, double-cliquez sur le fichier .storyboard dans le **l’Explorateur de solutions**:
 
 [![Un storyboard ouvrir dans le concepteur iOS](introduction-images/7-storyboardopen-vs.png "un storyboard ouvrir dans le concepteur iOS")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 
