@@ -5,18 +5,18 @@ description: Ce document compare les similitudes et les différences entre le cy
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 5f157f2bbf36076e542a5f96b912cb1788a99052
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526791"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175224"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Visual Studio WPF. Cycle de vie des applications Xamarin.Forms
 
 Xamarin.Forms prend beaucoup de recommandations de conception des frameworks basés sur le XAML qui la précèdent, en particulier de WPF. Toutefois, d’autres manières il s’écarte notablement qui peut être un point permanent pour les personnes qui essayent de migrer sur. Ce document tente d’identifier certains de ces problèmes et fournissent des conseils lorsque cela est possible à bridge connaissances WPF pour Xamarin.Forms.
 
-## <a name="app-lifecycle"></a>Cycle de vie
+## <a name="app-lifecycle"></a>Cycle de vie d’application
 
 Le cycle de vie d’application entre WPF et Xamarin.Forms est similaire. À la fois Démarrer dans le code externe (plate-forme) et lancez l’interface utilisateur via un appel de méthode. La différence est que Xamarin.Forms commence toujours dans un assembly spécifique à la plateforme qui initialise, puis crée l’interface utilisateur pour l’application.
 
@@ -112,7 +112,7 @@ En outre, la plupart des éléments ont des propriétés pour influencer la mani
 | WPF | Xamarin.Forms | Objectif |
 |--- |--- |--- |
 |HorizontalAlignment|HorizontalOptions|Options de gauche/Center/droite/Stretch|
-|Alignement vertical|VerticalOptions|Options haut/centre/bas/Stretch|
+|VerticalAlignment|VerticalOptions|Options haut/centre/bas/Stretch|
 
 > [!NOTE]
 > L’interprétation réelle de ces propriétés varie selon le conteneur parent.
@@ -137,7 +137,7 @@ Les deux plateformes utilisent _propriétés jointes_ afin d’affiner les enfan
 
 ### <a name="rendering"></a>Rendu
 
-Les mécanismes de rendu pour WPF et Xamarin.Forms sont radicalement différentes. Dans WPF, les contrôles que vous créez directement restituent le contenu à pixels sur l’écran. WPF gère deux graphiques d’objets (_arborescences_) pour représenter cela - le _arborescence logique_ représente les contrôles tel que défini dans le code ou XAML et le _arborescence d’éléments visuels_ représente le rendu réel qui se produit sur l’écran qui est effectuée soit directement par l’élément visuel (via une méthode de dessin virtuel), ou via un XAML définis par le `ControlTemplate` qui peut être remplacé ou personnalisé. En règle générale, l’arborescence visuelle est plus complexe car elle inclut ce tels que les bordures autour des étiquettes pour contenu implicite, etc., de contrôles. WPF inclut un ensemble d’API (`LogicalTreeHelper` et `VisualTreeHelper`) pour examiner ces deux graphiques d’objets.
+Les mécanismes de rendu pour WPF et Xamarin.Forms sont radicalement différentes. Dans WPF, les contrôles que vous créez directement restituent le contenu à pixels sur l’écran. WPF gère deux graphiques d’objets (_arborescences_) pour représenter cela - le _arborescence logique_ représente les contrôles tel que défini dans le code ou XAML et le _arborescence d’éléments visuels_ représente le rendu réel qui se produit sur l’écran qui est effectuée soit directement par l’élément visuel (via une méthode de dessin virtuel), ou via un XAML définis par le `ControlTemplate` qui peut être remplacé ou personnalisé. En règle générale, l’arborescence visuelle est plus complexe car il inclut des éléments tels que les bordures autour des étiquettes pour contenu implicite, etc., de contrôles. WPF inclut un ensemble d’API (`LogicalTreeHelper` et `VisualTreeHelper`) pour examiner ces deux graphiques d’objets.
 
 Dans Xamarin.Forms, les contrôles que vous définissez dans un `Page` sont des objets de données simples. Ils sont similaires à la représentation de l’arborescence logique, mais jamais afficher le contenu sur leurs propres. Au lieu de cela, ils sont le _modèle de données_ qui influence le rendu des éléments. Le rendu réel est effectué un [séparer l’ensemble de _convertisseurs visual_ qui sont mappé à chaque type de contrôle](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Ces convertisseurs sont inscrites dans chacun des projets spécifiques à la plateforme par des assemblys spécifiques à la plateforme Xamarin.Forms. Vous pouvez voir une liste [ici](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md). En plus de remplacer ou étendre le convertisseur, Xamarin.Forms prend également en charge [effets](~/xamarin-forms/app-fundamentals/effects/index.md) qui peut être utilisé pour influencer le rendu natif sur une base par plateforme.
 
@@ -151,7 +151,7 @@ Xamarin.Forms n’inclut pas d’un système de graphiques pour les primitives a
 
 ## <a name="resources"></a>Ressources
 
-WPF et Xamarin.Forms les deux présentent le concept de ressources et les dictionnaires de ressources. Vous pouvez placer n’importe quel type d’objet en un `ResourceDictionary` avec une clé et rechercher avec `{StaticResource}` pour les éléments qui ne changera pas, ou `{DynamicResource}` pour des éléments qui peuvent changer dans le dictionnaire lors de l’exécution. L’utilisation et les mécanismes sont identiques à une différence près : Xamarin.Forms nécessite que vous définissiez le `ResourceDictionary` à affecter à la `Resources` propriété alors que WPF crée au préalable une et l’assigne à votre place.
+WPF et Xamarin.Forms les deux présentent le concept de ressources et les dictionnaires de ressources. Vous pouvez placer n’importe quel type d’objet en un `ResourceDictionary` avec une clé et rechercher avec `{StaticResource}` pour les éléments qui ne changera pas, ou `{DynamicResource}` pour des éléments qui peuvent changer dans le dictionnaire lors de l’exécution. L’utilisation et les mécanismes sont les mêmes à une différence près : Xamarin.Forms nécessite que vous définissiez le `ResourceDictionary` à affecter à la `Resources` propriété alors que WPF crée au préalable une et l’assigne à votre place.
 
 Par exemple, consultez la définition ci-dessous :
 

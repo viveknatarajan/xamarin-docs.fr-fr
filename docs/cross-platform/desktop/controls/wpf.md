@@ -5,12 +5,12 @@ description: Ce document compare et contraste WPF de Xamarin.Forms. Il aborde le
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: d3e772c270f6003d01e3e7b487f69f682fec2d61
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 990253cbd31ad79bc47f086dc5bd2b99233f2032
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617590"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175237"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>Visual Studio WPF. Xamarin.Forms : Similitudes et différences
 
