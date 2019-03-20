@@ -5,13 +5,8 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 0f4271e5c0c9de53a83a840f7fe0a83b594a06fa
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898639"
 ---
+
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
 Xamarin.Essentials fournit aux développeurs des API inter-plateformes pour leurs applications mobiles.
@@ -31,8 +26,10 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [Baromètre](barometer.md?context=xamarin/xamarin-forms) : analyser les modifications de la pression sur le baromètre.
 * [Batterie](battery.md?context=xamarin/xamarin-forms) : obtenir le niveau, la source et l’état de la batterie.
 * [Presse-papiers](clipboard.md?context=xamarin/xamarin-forms) : définir ou lire rapidement et facilement du texte dans le Presse-papiers.
+* [Convertisseurs de couleurs](color-converters.md?context=xamarin/xamarin-forms) : méthodes d’assistance pour System.Drawing.Color.
 * [Boussole](compass.md?context=xamarin/xamarin-forms) : analyser les modifications dans la boussole.
 * [Connectivité](connectivity.md?context=xamarin/xamarin-forms) : vérifier l’état de la connectivité et détecter les modifications.
+* [Détecter les secousses](detect-shake.md?context=xamarin/xamarin-forms) : détecter un mouvement de secousse de l’appareil.
 * [Informations d’affichage de l’appareil](device-display.md?context=xamarin/xamarin-forms) : obtenir l’orientation et les métriques de l’écran de l’appareil.
 * [Informations sur l’appareil](device-information.md?context=xamarin/xamarin-forms) : découvrir l’appareil en toute simplicité.
 * [E-mail](email.md?context=xamarin/xamarin-forms) : envoyer facilement des e-mails.
@@ -48,11 +45,13 @@ Les pages suivantes vous guideront pour intégrer les fonctionnalités de Xamari
 * [Ouvrir le navigateur](open-browser.md?context=xamarin/xamarin-forms) : ouvrir rapidement et facilement un navigateur sur un site web spécifique.
 * [Capteur d’orientation](orientation-sensor.md?context=xamarin/xamarin-forms) : récupérer l’orientation de l’appareil dans un espace tridimensionnel.
 * [Numéroteur téléphonique](phone-dialer.md?context=xamarin/xamarin-forms) : ouvrir le Numéroteur téléphonique.
+* [Extensions de plateforme](platform-extensions.md?context=xamarin/xamarin-forms) : méthodes d’assistance pour convertir Rect, Size et Point.
 * [Préférences](preferences.md?context=xamarin/xamarin-forms) : ajouter rapidement et facilement des préférences persistantes.
 * [Stockage sécurisé](secure-storage.md?context=xamarin/xamarin-forms) : stocker des données en toute sécurité.
 * [Partager](share.md?context=xamarin/xamarin-forms) : envoyer du texte et des URI de sites web à d’autres applications.
 * [SMS](sms.md?context=xamarin/xamarin-forms) : créer un message SMS à envoyer.
 * [Synthèse vocale](text-to-speech.md?context=xamarin/xamarin-forms) : énoncer du texte sur l’appareil.
+* [Convertisseurs d’unités](unit-converters.md?context=xamarin/xamarin-forms) : méthodes d’assistance pour convertir des unités.
 * [Suivi des versions](version-tracking.md?context=xamarin/xamarin-forms) : effectuer le suivi de la version des applications et des numéros de build.
 * [Vibreur](vibrate.md?context=xamarin/xamarin-forms) : faire vibrer l’appareil.
 

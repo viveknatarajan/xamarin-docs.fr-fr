@@ -1,18 +1,18 @@
 ---
 title: 'Xamarin.Essentials : Ouvrir le navigateur'
-description: La classe Navigateur dans Xamarin.Essentials permet à une application d’ouvrir un lien web dans le navigateur préféré du système optimisé ou le navigateur externe.
+description: La classe Browser dans Xamarin.Essentials permet à une application d’ouvrir un lien web dans le navigateur préféré du système optimisé ou le navigateur externe.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: ea2a10c11a77fcb2b3ce142d176522ebf0310725
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 03/13/2019
+ms.openlocfilehash: 4a822b4b6738e261b9ddaee02334ad629e1d4879
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898870"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175315"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials : Navigateur
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Visiteur
 
 La classe **Browser** permet à une application d’ouvrir un lien web dans le navigateur préféré du système optimisé ou le navigateur externe.
 
@@ -42,6 +42,24 @@ public class BrowserTest
 ```
 
 Cette méthode retourne des résultats une fois que le navigateur a été _lancé_ et pas nécessairement quand il est _fermé_ par l’utilisateur.  Le résultat `bool` indique si le lancement a réussi ou non.
+
+## <a name="customization"></a>Personnalisation
+
+Lorsque vous utilisez le navigateur préféré du système, plusieurs options de personnalisation sont disponibles pour iOS et Android. Celles-ci incluent un `TitleMode` (Android uniquement) et des options de couleur par défaut pour les `Toolbar` (iOS et Android) et `Controls` (iOS uniquement) qui s’affichent. 
+
+Ces options sont spécifiées à l’aide de `BrowserLaunchOptions` lors de l’appel à `OpenAsync`.
+
+```csharp
+await Browser.OpenAsync(uri, new BrowserLaunchOptions
+                {
+                    LaunchMode = BrowserLaunchMode.SystemPreferred,
+                    TitleMode = BrowserTitleMode.Show,
+                    PreferredToolbarColor = Color.AliceBlue,
+                    PreferredControlColor = Color.Violet
+                });
+```
+
+![Options du navigateur](images/browser-options.png)
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
