@@ -153,8 +153,8 @@ Cette étape nécessite la [précompilé bibliothèques](https://github.com/xama
 
 11. À partir de **l’Explorateur de solutions**, double-cliquez sur le **MathFuncs.Standard** projet.
 12. Accédez à **principaux paramètres**, puis mettez à jour **Namespace par défaut** à **MathFuncs**.
-13. Accédez à la **sortie** paramètres, puis mettez à jour **nom de l’Assembly** à **MathFuncs** puis cliquez sur **OK**.
-14. Accédez à la **compilateur** modifier les paramètres, le **Configuration** à **version**, la définition **les informations de débogage** à  **Symboles uniquement**.
+13. Accédez à la **sortie** paramètres, puis mettez à jour **nom de l’Assembly** à **MathFuncs**.
+14. Accédez à la **compilateur** modifier les paramètres, le **Configuration** à **version**, la définition **les informations de débogage** à  **Symboles uniquement** puis cliquez sur **OK**.
 15. Supprimer **Class1.cs/Getting démarré** à partir du projet (si un d’eux a été inclus dans le cadre du modèle).
 16. **CONTRÔLE + clic** sur le projet **dépendances/références** dossier, puis choisissez **modifier les références**.
 17. Sélectionnez **MathFuncs.Shared** à partir de la **projets** onglet, puis cliquez sur **OK**.
@@ -185,7 +185,7 @@ Le processus d’ajout des bibliothèques natives à la solution de wrapper vari
 
 1. **CONTRÔLE + clic** sur le **MathFuncs.Android** de projet, puis choisissez **nouveau dossier** à partir de la **ajouter** menu nommant **libs**.
 
-2. Pour chaque **ABI** (Application Binary Interface), **contrôle + clic** sur le **libs** dossier, puis choisissez ** Nouveau dossier** à partir de la **ajouter** menu, nommez-le après cela respectifs **ABI**. Dans ce cas :
+2. Pour chaque **ABI** (Application Binary Interface), **contrôle + clic** sur le **libs** dossier, puis choisissez ** Nouveau dossier** à partir de la **ajouter** menu, nommez-le après cela respectifs **ABI**. Dans ce cas :
 
     - arm64-v8a
     - armeabi-v7a

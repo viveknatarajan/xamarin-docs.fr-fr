@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 25c5077b3637c54370fa1a42a9b652ef211c0ed9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0d5df986caa01bba69b03d6502682889e78ecbc7
+ms.sourcegitcommit: ee464f165eee7b4485266c11f167be557a0bacb2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059338"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222313"
 ---
 # <a name="xamarinforms-grid"></a>Grille de Xamarin.Forms
 
@@ -54,7 +54,7 @@ Les informations de ligne et de colonne sont stockées dans `Grid`de `RowDefinit
 - **Absolu** &ndash; tailles des colonnes et des lignes avec des valeurs de hauteur et largeur fixes, spécifiques. Spécifié comme valeur et `GridUnitType.Absolute` en c# et en tant que `#` dans XAML, avec `#` en cours de la valeur souhaitée.
 
 > [!NOTE]
-> Les valeurs de la largeur pour les colonnes sont définies en tant que « * » par défaut dans Xamarin.Forms, ce qui garantit que la colonne remplissent l’espace disponible.
+> Les valeurs de la largeur pour les colonnes sont définies comme `*` par défaut dans Xamarin.Forms, ce qui garantit que la colonne remplissent l’espace disponible. Les valeurs de la hauteur des lignes sont également définies en tant que `*` par défaut. 
 
 Imaginez une application qui a besoin de trois lignes et deux colonnes. La ligne inférieure doit être exactement les 200px en hauteur et la ligne supérieure doit être deux fois la hauteur de la ligne du milieu. La colonne de gauche doit être suffisamment large pour s’ajuster le contenu et la colonne de droite doit remplir l’espace restant.
 
