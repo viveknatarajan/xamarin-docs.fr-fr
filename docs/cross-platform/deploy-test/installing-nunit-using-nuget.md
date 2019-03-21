@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c43b3f3204cba890cb2fa9c4cfc33a23250e0550
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b6b95f730b966ef5edaabbe7b0f333c2cacf5bc5
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112050"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58070837"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>Installation de NUnit 2.6.4 à l’aide de NuGet
 
@@ -25,11 +25,11 @@ Ce guide explique comment installer NUnit 2.6.4 à l’aide de NuGet pour Visua
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Ce guide explique comment repasser de la version 3.0 à la version 2.6.4 de NUnit à l’aide de NuGet dans Visual Studio 2015.
+Ce guide explique comment repasser de la version 3.0 à la version 2.6.4 de NUnit à l’aide de NuGet dans Visual Studio 2015 ou ultérieur.
 
 -----
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Ce guide part du principe que vous disposez déjà d’une solution comprenant un projet d’application mobile et un projet de test.
 
@@ -62,7 +62,7 @@ Dans ce guide, vous avez vu comment repasser de la version 3.0 à la version 2
 
 ## <a name="installing-nunit-264-in-visual-studio"></a>Installation de NUnit 2.6.4 dans Visual Studio
 
-Cette section aborde l’utilisation de la _Console du gestionnaire de package NuGet_ dans Visual Studio 2015, en vue de désinstaller NUnit 3.0 et d’installer NUnit 2.6.4.
+Cette section aborde l’utilisation de la _Console du gestionnaire de package NuGet_ dans Visual Studio 2015 ou ultérieur en vue de désinstaller NUnit 3.0 et d’installer NUnit 2.6.4.
 
 
 1. **Démarrez la console du gestionnaire de package NuGet** : Sélectionnez **Outils > Gestionnaire de package NuGet > Console du gestionnaire de package** :
@@ -105,7 +105,7 @@ Si vous voyez NUnit 3.0 ou une version ultérieure, vous devrez passer à la ve
     
 ## <a name="summary"></a>Récapitulatif
 
-Dans ce guide, vous avez vu comment repasser de la version 3.0 à la version 2.6.4 de NUnit dans Visual Studio 2015, à l’aide de la console du gestionnaire de package.
+Dans ce guide, vous avez vu comment repasser de la version 3.0 à la version 2.6.4 de NUnit dans Visual Studio 2015 ou ultérieur à l’aide de la console du gestionnaire de package.
 
 -----
 

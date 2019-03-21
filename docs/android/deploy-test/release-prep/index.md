@@ -38,7 +38,7 @@ Il est fortement recommandé de spécifier une icône d’application pour chaqu
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Dans Visual Studio 2015 et versions ultérieures, spécifiez l’icône de l’application via la section **Manifeste Android** des **Propriétés** du projet, comme illustré dans la capture d’écran suivante :
+Dans Visual Studio 2017 et ultérieur, spécifiez l’icône de l’application via la section **Manifeste Android** des **Propriétés** du projet, comme illustré dans la capture d’écran suivante :
 
 [![Définir l’icône de l’application](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
@@ -186,7 +186,8 @@ Notez que les builds Debug définissent automatiquement certaines autorisations 
 Même lorsque le [débogage est désactivé](#Disable_Debugging), les pirates peuvent recréer le package d’une application, en ajoutant ou supprimant des options de configuration ou des autorisations. Ils peuvent alors rétroconcevoir, déboguer ou falsifier l’application.
 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) peut être utilisé pour obfusquer le code managé et injecter du code de détection de l’état de sécurité à l’exécution dans une application Xamarin.Android au moment de la génération pour détecter et répondre si l’application s’exécute sur un appareil rooté.
 
-Dotfuscator CE est fourni avec Visual Studio. Toutefois, seul Visual Studio 2015 Update 3 (et versions ultérieures) contient la version correcte fonctionnant avec Xamarin.Android. Pour utiliser Dotfuscator, cliquez sur **Outils > PreEmptive Protection - Dotfuscator**.
+Dotfuscator CE est fourni avec Visual Studio 2017.
+Pour utiliser Dotfuscator, cliquez sur **Outils > PreEmptive Protection - Dotfuscator**.
 
 Pour configurer Dotfuscator CE, consultez [Utilisation de Dotfuscator Community Edition avec Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator).
 Une fois configuré, Dotfuscator CE protégera automatiquement chaque build créée.
