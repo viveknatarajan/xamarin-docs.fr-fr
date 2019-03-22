@@ -223,6 +223,7 @@ _Répertoriés par emplacement principal, de nombreux partenaires proposent des 
 |[CommerceLab](http://www.commercelab.com.au)|Sydney, Australie|Développement de notre application basé à Sydney, apporte des petites entreprises, en ligne et hors ligne, la puissance pour participer à la place de marché moderne|
 |[Datacom](http://www.datacom.co.nz/)|Wellington, Nouvelle Zélande ; Auckland, Nouvelle-Zélande ; Sydney, Australie|Télécommunications conçoit, génèrent et exécutant des systèmes informatiques et les processus d’entreprise.|
 |[Envoy Technologies avancées](http://www.envoyat.com/)|Chatswood, Australie|Envoy se spécialise dans la création, web, mobiles, applications d’entreprise.|
+|[XAM Consulting](http://www.xam-consulting.com/)|Australie large|XAM générer des applications d’entreprise. Équipe de 20 + spécialistes dans Xamarin et sans serveur.|
 |[Solutions Kloud](http://www.kloud.com.au)|Melbourne, Australie|Elle a aidé un grand nombre de marques de plus gros de l’Australie transformer leur activité, de réduire les coûts, de rationaliser les processus et d’introduire révolutionnaires nouveaux services cloud computing|
 |[Marqueur Metro](http://www.markermetro.com/)|Auckland, Nouvelle-Zélande ; Sydney, Australie|Expérience Client de la clé inclut Disney Mobile, Sony, NZTE, Carters Holt Harvey, de la Commonwealth Bank et Air Nouvelle Zélande. Marqueur Metro est fière d’être un partenaire de Xamarin.|
 |[Millipede](http://millipede.com.au)|Melbourne, Australie|Millipede fait partie de fournisseurs de services, une entreprise globale avec des personnes de plus de 8000. Nous sommes un groupe hautement creative d’ingénieurs logiciels, les concepteurs et les experts de l’expérience utilisateur qui se concentrent sur le développement de solutions mobiles meilleures et plus efficaces de consommateur sécurisé bancaires et les applications d’entreprise utilitaire aux jeux mobiles.|
@@ -483,11 +484,11 @@ _Répertoriés par emplacement principal, de nombreux partenaires proposent des 
 |[AGILUX](https://agilux.lu)|Pommerloch, Luxembourg|Agilux est une société de conseil informatique spécialisé dans l’intégration des solutions informatiques pour la gestion commerciale et la comptabilité de PME, développement d’applications mobiles, de commerce électronique et de sites Web|
 
 
-## <a name="macedonia"></a>Macédoine du Nord
+## <a name="macedonia"></a>Macédoine
 
 | Partner | Emplacements | Description |
 | --- | --- | --- |
-|[Code chimie](http://www.codechem.com)|Skopje, Macédoine du Nord|Code chimie fournit le développement de logiciels, gestion de projet et consulting services. |
+|[Code chimie](http://www.codechem.com)|Skopje, Macédoine|Code chimie fournit le développement de logiciels, gestion de projet et consulting services. |
 
 
 ## <a name="mexico"></a>Mexique

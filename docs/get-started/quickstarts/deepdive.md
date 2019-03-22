@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 8674ef47867acf3bca4d05fd6628a58e2f9ad90e
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197548"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329362"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Immersion dans Xamarin.Forms-démarrage rapide
 
@@ -353,7 +353,7 @@ public App ()
 }
 ```
 
-Toutes les instances de [`ContentPage`](xref:Xamarin.Forms.ContentPage) ont une propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) qui expose des méthodes pour modifier la pile de pages. Ces méthodes ne doivent être appelées que si l’application inclut une classe [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Pour accéder à `NoteEntryPage`, il est nécessaire d’appeler la méthode [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) comme illustré dans l’exemple de code ci-dessous :
+Toutes les instances de [`ContentPage`](xref:Xamarin.Forms.ContentPage) ont une propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) qui expose des méthodes pour modifier la pile de pages. Ces méthodes ne doivent être appelées que si l’application inclut une classe [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Pour accéder à `NoteEntryPage`, il est nécessaire d’appeler la méthode [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) comme illustré dans l’exemple de code ci-dessous :
 
 ```csharp
 await Navigation.PushAsync(new NoteEntryPage());
@@ -424,7 +424,7 @@ Le [ `Editor` ](xref:Xamarin.Forms.Editor) dans `NoteEntryPage` lie ensuite à l
 
 Une liaison entre la propriété [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) et la propriété `Text` de l’objet *source* est établie. Modifications apportées dans le `Editor` seront propagées automatiquement à la `Note` objet. De même, si des modifications sont apportées à la `Note.Text` propriété, le moteur de liaison Xamarin.Forms met également à jour le contenu de la `Editor`. Il s’agit là d’une *liaison bidirectionnelle*.
 
-Pour plus d’informations sur la liaison de données, consultez [Xamarin.Forms la liaison de données](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Pour plus d’informations sur la liaison de données, consultez la page [Liaison de données Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="styling"></a>Styles
 
@@ -509,14 +509,14 @@ Les simulateurs constituent un endroit judicieux pour commencer à déployer et 
 
 Cette présentation approfondie a examiné les principes fondamentaux du développement d’applications à l’aide de Xamarin.Forms. Les étapes suggérées ci-dessous incluent la découverte des fonctionnalités suivantes :
 
-- Il existe quatre principaux groupes de contrôles permettant de créer l’interface utilisateur d’une application Xamarin.Forms. Pour plus d’informations, consultez [référence des contrôles](~/xamarin-forms/user-interface/controls/index.md).
-- Liaison de données est une technique pour la liaison des propriétés de deux objets afin que les modifications d’une propriété sont automatiquement répercutées dans l’autre propriété. Pour plus d’informations, consultez [une liaison de données](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- Xamarin.Forms fournit un nombre d’expériences de navigation de page différente, en fonction du type de page utilisé. Pour plus d’informations, consultez [Navigation](~/xamarin-forms/app-fundamentals/navigation/index.md).
-- Styles contribuent à réduire le balisage répétitif et autoriser une apparence des applications à modifier plus facilement. Pour plus d’informations, consultez [styles des applications de Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
-- Extensions de balisage XAML étendent la puissance et la flexibilité de XAML en autorisant les attributs de l’élément à définir à partir de sources autres que des chaînes de texte littéral. Pour plus d’informations, consultez [Extensions de balisage XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
-- Modèles de données offrent la possibilité de définir la présentation des données sur les vues prises en charge. Pour plus d’informations, consultez [Modèles de données](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
-- Chaque page, la disposition et la vue sont restitué différemment sur chaque plateforme à l’aide un `Renderer` classe qui crée à son tour un contrôle natif, elle organise sur l’écran et ajoute le comportement spécifié dans le code partagé. Les développeurs peuvent implémenter leurs propres classes `Renderer` pour personnaliser l’apparence et/ou le comportement d’un contrôle. Pour plus d’informations, consultez [Renderers personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
-- Les effets permettent également de personnaliser les contrôles natifs sur chaque plateforme. Les effets sont créés dans des projets spécifiques à la plateforme en sous-classant la [ `PlatformEffect` ](xref:Xamarin.Forms.PlatformEffect`2) classe et sont utilisés en les attachant à un contrôle Xamarin.Forms approprié. Pour plus d’informations, consultez [Effets](~/xamarin-forms/app-fundamentals/effects/index.md).
+- Il existe quatre principaux groupes de contrôles permettant de créer l’interface utilisateur d’une application Xamarin.Forms. Pour plus d’informations, consultez [Informations de référence sur les contrôles](~/xamarin-forms/user-interface/controls/index.md).
+- La liaison de données est une technique qui permet de lier les propriétés de deux objets afin que les changements d’une propriété soient automatiquement répercutés sur l’autre propriété. Pour plus d’informations, consultez [Liaison de données](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+- Xamarin.Forms propose plusieurs expériences différentes de navigation dans les pages, selon le type de page utilisé. Pour plus d’informations, consultez [Navigation](~/xamarin-forms/app-fundamentals/navigation/index.md).
+- Les styles contribuent à réduire le balisage répétitif et permettent de modifier plus facilement l’apparence des applications. Pour plus d’informations, consultez [Applications de style Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
+- Les extensions de balisage XAML étendent la puissance et la flexibilité du langage XAML en permettant de définir des attributs d’éléments à partir de sources autres que des chaînes de texte littéral. Pour plus d’informations, consultez [Extensions de balisage XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
+- Les modèles de données permettent de définir la présentation des données sur les affichages pris en charge. Pour plus d’informations, consultez [Modèles de données](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+- Chaque page, disposition et affichage est restitué différemment sur chaque plateforme avec une classe `Renderer` qui crée ensuite un contrôle natif, le dispose à l’écran et ajoute le comportement spécifié dans le code partagé. Les développeurs peuvent implémenter leurs propres classes `Renderer` pour personnaliser l’apparence et/ou le comportement d’un contrôle. Pour plus d’informations, consultez [Renderers personnalisés](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+- Les effets permettent également de personnaliser les contrôles natifs sur chaque plateforme. Les effets sont créés dans des projets spécifiques à la plateforme en sous-classant la classe [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2), et sont utilisés en les attachant à un contrôle Xamarin.Forms approprié. Pour plus d’informations, consultez [Effets](~/xamarin-forms/app-fundamentals/effects/index.md).
 - Le code partagé permet d’accéder aux fonctionnalités natives par le biais de la classe [`DependencyService`](xref:Xamarin.Forms.DependencyService). Pour plus d’informations, consultez [Accès aux fonctionnalités natives avec DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 Vous pouvez également consulter [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md), un livre très intéressant écrit par Charles Petzold, pour découvrir Xamarin.Forms plus en détail. Le livre est disponible au format PDF ou dans une variété de formats électroniques.

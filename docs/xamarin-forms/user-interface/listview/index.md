@@ -1,24 +1,22 @@
 ---
 title: ListView de Xamarin.Forms
-description: Ce guide présente le ListView Xamarin.Forms, qui peut être utilisé pour présenter des données dans les listes de belles et interactives.
+description: 'Ce guide présente le ListView Xamarin.Forms, qui peut être utilisé pour présenter des données dans les listes de belles et interactives.'
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 967d4ae65bdb47adf824f20f47c7b32e24211f9a
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831808"
 ---
+
 # <a name="xamarinforms-listview"></a>ListView de Xamarin.Forms
 
 [![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/WorkingWithListview)
 
 [`ListView`](xref:Xamarin.Forms.ListView) est une vue pour la présentation des listes de données, en particulier longues listes qui requièrent un défilement.
+
+> [!IMPORTANT]
+> `CollectionView` est une vue pour la présentation des listes de données à l’aide de spécifications de mise en page différente. Il vise à fournir la plus flexible et performante devoir [ `ListView` ](xref:Xamarin.Forms.ListView). Pour plus d’informations, consultez [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md).
 
 ## <a name="use-cases"></a>Cas d’usage
 
