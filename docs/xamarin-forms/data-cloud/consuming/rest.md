@@ -6,13 +6,13 @@ ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 840dee3213bc117cff82fe52b094dc71f343dcd1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.date: 01/22/2018
+ms.openlocfilehash: 1b25a4a1b65a1473bd122ae9cf7c1a6a72ff9ccc
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668190"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477380"
 ---
 # <a name="consuming-a-restful-web-service"></a>Utilisation d’un Service Web RESTful
 
@@ -38,7 +38,7 @@ Les services web rESTful utilisent généralement des messages JSON pour retourn
 
 La simplicité de REST a permis de rendre la méthode principale pour accéder aux services web dans les applications mobiles.
 
-Vous trouverez des instructions sur la configuration du service REST dans le fichier Lisez-moi qui accompagne l’exemple d’application. Toutefois, lorsque l’exemple d’application est exécuté, il se connecte à un service REST hébergés de Xamarin qui fournit l’accès en lecture seule aux données, comme illustré dans la capture d’écran suivante :
+Lorsque l’exemple d’application est exécuté, il se connecte à un service REST hébergé localement, comme illustré dans la capture d’écran suivante :
 
 ![](rest-images/portal.png "Exemple d’Application")
 
@@ -78,10 +78,6 @@ La table de routage contient un modèle d’itinéraire, et lorsque l’infrastr
 
 Le service REST utilise l’authentification de base. Pour plus d’informations, consultez [l’authentification d’un service web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md). Pour plus d’informations sur le routage de l’API Web ASP.NET, consultez [routage dans ASP.NET Web API](http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) sur le site Web ASP.NET. Pour plus d’informations sur la création du service REST à l’aide d’ASP.NET Core, consultez [création de Services principaux pour les Applications mobiles natives](/aspnet/core/mobile/native-mobile-backend/).
 
-> [!NOTE]
-> L’exemple d’application consomme le service REST hébergés de Xamarin qui fournit l’accès en lecture seule au service web. Par conséquent, les opérations créent, mettre à jour et supprimer des données ne modifiera pas les données utilisées dans l’application. Toutefois, une version principale du service REST est disponible dans le **TodoRESTService** dossier dans l’accompagnement [exemple de code](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/).
-> Si vous hébergez le service REST vous-même, il complète permet créer, mettre à jour, lire et supprimer l’accès aux données.
-
 Le `HttpClient` classe est utilisée pour envoyer et recevoir des demandes via HTTP. Il fournit des fonctionnalités pour envoyer des requêtes HTTP et recevoir des réponses HTTP à partir d’un URI identifié des ressources. Chaque requête est envoyée en tant qu’une opération asynchrone. Pour plus d’informations sur les opérations asynchrones, consultez [vue d’ensemble de la prise en charge asynchrone](~/cross-platform/platform/async.md).
 
 Le `HttpResponseMessage` classe représente un message de réponse HTTP reçu du service web après la réalisation d’une requête HTTP. Il contient des informations sur la réponse, y compris le code d’état, des en-têtes et des corps. Le `HttpContent` classe représente le corps HTTP et des en-têtes de contenu, tel que `Content-Type` et `Content-Encoding`. Le contenu peut être lu à l’aide de la `ReadAs` méthodes, telles que `ReadAsStringAsync` et `ReadAsByteArrayAsync`, selon le format des données.
@@ -93,19 +89,16 @@ Le `HttpClient` instance est déclarée au niveau de la classe afin que l’obje
 ```csharp
 public class RestService : IRestService
 {
-  HttpClient client;
+  HttpClient _client;
   ...
 
   public RestService ()
   {
-    client = new HttpClient ();
-    client.MaxResponseContentBufferSize = 256000;
+    _client = new HttpClient ();
   }
   ...
 }
 ```
-
-Le `HttpClient.MaxResponseContentBufferSize` propriété est utilisée pour spécifier le nombre maximal d’octets à mettre en mémoire tampon lors de la lecture du contenu dans le message de réponse HTTP. La taille par défaut de cette propriété est la taille maximale d’un entier. Par conséquent, la propriété est définie sur une valeur inférieure, comme un dispositif de protection, pour limiter la quantité de données qui accepte l’application en tant que réponse à partir du service web.
 
 ### <a name="retrieving-data"></a>Récupération de données
 
@@ -115,11 +108,11 @@ Le `HttpClient.GetAsync` méthode est utilisée pour envoyer la demande GET au s
 public async Task<List<TodoItem>> RefreshDataAsync ()
 {
   ...
-  // RestUrl = https://developer.xamarin.com:8081/api/todoitems/
-  var uri = new Uri (string.Format (Constants.RestUrl, string.Empty));
+  var uri = new Uri (string.Format (Constants.TodoItemsUrl, string.Empty));
   ...
-  var response = await client.GetAsync (uri);
-  if (response.IsSuccessStatusCode) {
+  var response = await _client.GetAsync (uri);
+  if (response.IsSuccessStatusCode)
+  {
       var content = await response.Content.ReadAsStringAsync ();
       Items = JsonConvert.DeserializeObject <List<TodoItem>> (content);
   }
@@ -138,21 +131,22 @@ Le `HttpClient.PostAsync` méthode est utilisée pour envoyer la demande POST au
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 {
-  // RestUrl = https://developer.xamarin.com:8081/api/todoitems/
-  var uri = new Uri (string.Format (Constants.RestUrl, string.Empty));
+  var uri = new Uri (string.Format (Constants.TodoItemsUrl, string.Empty));
 
   ...
   var json = JsonConvert.SerializeObject (item);
   var content = new StringContent (json, Encoding.UTF8, "application/json");
 
   HttpResponseMessage response = null;
-  if (isNewItem) {
-    response = await client.PostAsync (uri, content);
+  if (isNewItem)
+  {
+    response = await _client.PostAsync (uri, content);
   }
   ...
 
-  if (response.IsSuccessStatusCode) {
-    Debug.WriteLine (@"                TodoItem successfully saved.");
+  if (response.IsSuccessStatusCode)
+  {
+    Debug.WriteLine (@"\tTodoItem successfully saved.");
 
   }
   ...
@@ -175,7 +169,7 @@ Le `HttpClient.PutAsync` méthode est utilisée pour envoyer la demande PUT au s
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 {
   ...
-  response = await client.PutAsync (uri, content);
+  response = await _client.PutAsync (uri, content);
   ...
 }
 ```
@@ -194,12 +188,12 @@ Le `HttpClient.DeleteAsync` méthode est utilisée pour envoyer la demande de su
 ```csharp
 public async Task DeleteTodoItemAsync (string id)
 {
-  // RestUrl = https://developer.xamarin.com:8081/api/todoitems/{0}
-  var uri = new Uri (string.Format (Constants.RestUrl, id));
+  var uri = new Uri (string.Format (Constants.TodoItemsUrl, id));
   ...
-  var response = await client.DeleteAsync (uri);
-  if (response.IsSuccessStatusCode) {
-    Debug.WriteLine (@"                TodoItem successfully deleted.");
+  var response = await _client.DeleteAsync (uri);
+  if (response.IsSuccessStatusCode)
+  {
+    Debug.WriteLine (@"\tTodoItem successfully deleted.");
   }
   ...
 }
@@ -210,11 +204,6 @@ Le service REST envoie un code d’état HTTP le `HttpResponseMessage.IsSuccessS
 - **204 (aucun contenu)** : la demande a été correctement traitée et que la réponse vide est intentionnelle.
 - **400 (demande incorrecte)** – la demande n’est pas comprise par le serveur.
 - **404 (introuvable)** – la ressource demandée n’existe pas sur le serveur.
-
-## <a name="summary"></a>Récapitulatif
-
-Cet article examine comment utiliser un service web RESTful à partir d’une application Xamarin.Forms, à l’aide de la `HttpClient` classe. La simplicité de REST a permis de rendre la méthode principale pour accéder aux services web dans les applications mobiles.
-
 
 ## <a name="related-links"></a>Liens associés
 
