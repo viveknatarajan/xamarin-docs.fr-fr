@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 32d0775baa75b70ebc118457945efc0f6c0acec2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: c84995e210d61e735d12a089f40bf9afa720acb5
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057059"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329284"
 ---
 # <a name="xamarinforms-modal-pages"></a>Pages modales Xamarin.Forms
 
@@ -39,9 +39,9 @@ Pour retourner à la page précédente, l’application dépile la page actuelle
 
 ## <a name="performing-navigation"></a>Navigation
 
-Les méthodes de navigation modale sont exposées par la propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) sur n’importe quel type dérivé [`Page`](xref:Xamarin.Forms.Page). Ces méthodes permettent d’[envoyer (push) des pages modales](#Pushing_Pages_to_the_Modal_Stack) vers la pile modale et de [dépiler des pages modales](#Popping_Pages_from_the_Modal_Stack) de la pile modale.
+Les méthodes de navigation modale sont exposées par la propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) sur n’importe quel type dérivé [`Page`](xref:Xamarin.Forms.Page). Ces méthodes permettent d’[envoyer (push) des pages modales](#Pushing_Pages_to_the_Modal_Stack) vers la pile modale et de [dépiler des pages modales](#Popping_Pages_from_the_Modal_Stack) de la pile modale.
 
-La propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) expose également une propriété [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) à partir de laquelle les pages modales de la pile modale peuvent être obtenues. Toutefois, il n’existe aucun concept de manipulation de pile modale ni d’ajout à la page racine dans la navigation modale. En effet, ces opérations ne sont pas universellement prises en charge sur les plateformes sous-jacentes.
+La propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) expose également une propriété [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) à partir de laquelle les pages modales de la pile modale peuvent être obtenues. Toutefois, il n’existe aucun concept de manipulation de pile modale ni d’ajout à la page racine dans la navigation modale. En effet, ces opérations ne sont pas universellement prises en charge sur les plateformes sous-jacentes.
 
 > [!NOTE]
 > Aucune instance de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) n’est requise pour la navigation entre les pages modales.
@@ -50,7 +50,7 @@ La propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) expos
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>Envoi de pages vers la pile modale
 
-Pour accéder à `ModalPage`, il est nécessaire d’appeler la méthode [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) sur la propriété [`Navigation` ](xref:Xamarin.Forms.VisualElement.Navigation) de la page active, comme indiqué dans l’exemple de code suivant :
+Pour accéder à `ModalPage`, il est nécessaire d’appeler la méthode [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) sur la propriété [`Navigation` ](xref:Xamarin.Forms.NavigableElement.Navigation) de la page active, comme indiqué dans l’exemple de code suivant :
 
 ```csharp
 async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -107,7 +107,7 @@ Sur Android, l’utilisateur peut toujours retourner à la page précédente en 
 
 ### <a name="animating-page-transitions"></a>Animation de transitions de page
 
-La propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de chaque page fournit également des méthodes d’envoi et de dépilation substituées qui incluent un paramètre `boolean` contrôlant l’affichage d’une animation de page durant la navigation, comme indiqué dans l’exemple de code suivant :
+La propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de chaque page fournit également des méthodes d’envoi et de dépilation substituées qui incluent un paramètre `boolean` contrôlant l’affichage d’une animation de page durant la navigation, comme indiqué dans l’exemple de code suivant :
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)

@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: f05de5185f224f8606f38011d8f307ed62d64541
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112869"
 ---
+
 # <a name="signing-the-android-application-package"></a>Signature du paquet d’application Android
 
 Dans [Préparation d’une application pour sa mise en production](~/android/deploy-test/release-prep/index.md), le **Gestionnaire d’archives** a été utilisé pour générer l’application et la placer dans une archive en vue de sa signature et de sa publication. Cette section explique comment créer une identité de signature Android et un nouveau certificat de signature pour les applications Android et comment publier l’application archivée *ad hoc* sur disque. Le fichier APK ainsi créé peut être chargé de façon indépendante (sideloaded) sur les appareils Android sans passer par un App Store.
@@ -42,7 +37,7 @@ Dans [Archiver pour publication](~/android/deploy-test/release-prep/index.md#arc
 
 Une fois **Ad-Hoc** sélectionné, Visual Studio ouvre la page **Identité de signature** de la boîte de dialogue comme illustré dans la capture d’écran suivante. Avant de pouvoir être publié, le fichier .APK doit être signé avec une clé de signature (également appelée un certificat).
 
-Un certificat existant peut être utilisé en cliquant sur le bouton **Importer**, puis en poursuivant par [Signer le fichier APK](#signapkvs). Sinon, cliquez sur le bouton **+** pour créer un nouveau certificat :
+Un certificat existant peut être utilisé en cliquant sur le bouton **Importer**, puis en poursuivant par [Signer le fichier APK](#sign-the-apk). Sinon, cliquez sur le bouton **+** pour créer un nouveau certificat :
 
 [![Identité de signature Ad Hoc](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
@@ -69,7 +64,7 @@ Pour plus d’informations sur le magasin de clés, consultez [Recherche de la s
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
-Après avoir cliqué sur **Ad-Hoc**, Visual Studio pour Mac ouvre la boîte de dialogue **Identité de signature Android** comme illustré dans la capture d’écran suivante. Avant de pouvoir être publié, le fichier .APK doit être signé avec une clé de signature (également appelée un certificat). Si un certificat existe déjà, cliquez sur le bouton **Importer une clé** pour l’importer, puis poursuivez avec [Signer le fichier APK](#signapkxs). Sinon, cliquez sur le bouton **Créer une clé** pour créer un nouveau certificat : 
+Après avoir cliqué sur **Ad-Hoc**, Visual Studio pour Mac ouvre la boîte de dialogue **Identité de signature Android** comme illustré dans la capture d’écran suivante. Avant de pouvoir être publié, le fichier .APK doit être signé avec une clé de signature (également appelée un certificat). Si un certificat existe déjà, cliquez sur le bouton **Importer une clé** pour l’importer, puis poursuivez avec [Signer le fichier APK](#sign-the-apk). Sinon, cliquez sur le bouton **Créer une clé** pour créer un nouveau certificat :
 
 [![Boîte de dialogue Identité de signature Android](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png#lightbox)
 
@@ -92,8 +87,6 @@ Par exemple, la procédure ci-dessus crée une nouvelle clé de signature à l�
 Pour plus d’informations sur le magasin de clés, consultez [Recherche de la signature MD5 ou SHA1 de votre magasin de clés](~/android/deploy-test/signing/keystore-signature.md).
 
 -----
-
-<a name="signapkvs" />
 
 ## <a name="sign-the-apk"></a>Signer l’APK
 
@@ -137,7 +130,7 @@ La boîte de dialogue **Fichier APK de sortie** enregistre l’APK dans le chemi
 
 ![Boîte de dialogue Fichier APK de sortie](images/xs/06-output-apk-file.png)
 
-Ensuite, entrez le mot de passe du certificat (celui qui a été utilisé dans la boîte de dialogue **Créer un autre certificat**) et cliquez sur **OK** : 
+Ensuite, entrez le mot de passe du certificat (celui qui a été utilisé dans la boîte de dialogue **Créer un autre certificat**) et cliquez sur **OK** :
 
 ![Entrer le mot de passe du certificat](images/xs/07-signing-certificate.png)
 

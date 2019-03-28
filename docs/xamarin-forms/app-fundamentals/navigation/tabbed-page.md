@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 4e2d33276c865695d70abb2d8e00b3b80d446839
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 0f0c2e9f3e0a2309db1ad96ff286d6ac17f78bc5
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207984"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329297"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Page à onglets Xamarin.Forms
 
@@ -115,7 +115,7 @@ Pour plus d’informations sur la disposition d’un [`NavigationPage`](xref:Xam
 
 #### <a name="navigation-inside-a-tab"></a>Navigation à l’intérieur d’un onglet
 
-La navigation peut être effectuée à partir du deuxième onglet en appelant la méthode [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) sur la propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de l’instance de [`ContentPage`](xref:Xamarin.Forms.ContentPage), comme illustré dans l’exemple de code suivant :
+La navigation peut être effectuée à partir du deuxième onglet en appelant la méthode [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) sur la propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de l’instance de [`ContentPage`](xref:Xamarin.Forms.ContentPage), comme illustré dans l’exemple de code suivant :
 
 ```csharp
 async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)

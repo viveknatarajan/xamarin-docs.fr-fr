@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: f69acd60d7a80607528e4a39ee6a8bfbc19711f5
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: c5eeb00d4dc5992666a7ba5f9fef2685d5056447
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207971"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329271"
 ---
 # <a name="hierarchical-navigation"></a>Navigation hiérarchique
 
@@ -28,7 +28,7 @@ Pour revenir à la page précédente, l’application dépile la page actuelle, 
 
 ![](hierarchical-images/popping.png "Retrait d’une page de la pile de navigation")
 
-Les méthodes de navigation sont exposées par la propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) sur n’importe quel type dérivé [`Page`](xref:Xamarin.Forms.Page). Ces méthodes permettent d’envoyer des pages dans la pile de navigation, de retirer des pages de la pile de navigation, et d’effectuer des manipulations de la pile.
+Les méthodes de navigation sont exposées par la propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) sur n’importe quel type dérivé [`Page`](xref:Xamarin.Forms.Page). Ces méthodes permettent d’envoyer des pages dans la pile de navigation, de retirer des pages de la pile de navigation, et d’effectuer des manipulations de la pile.
 
 <a name="Performing_Navigation" />
 
@@ -69,7 +69,7 @@ L’instance de [`ContentPage`](xref:Xamarin.Forms.ContentPage) `Page1Xaml` est 
 
 ### <a name="pushing-pages-to-the-navigation-stack"></a>Envoi de pages dans la pile de navigation
 
-Pour accéder à `Page2Xaml`, vous devez appeler la méthode [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) sur la propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de la page active, comme illustré dans l’exemple de code suivant :
+Pour accéder à `Page2Xaml`, vous devez appeler la méthode [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) sur la propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de la page active, comme illustré dans l’exemple de code suivant :
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -114,7 +114,7 @@ L’instance de `Page2Xaml` est ainsi retirée de la pile de navigation, et la n
 
 Toutefois, l’ordre exact dans lequel ces événements se produisent dépend de la plateforme. Pour plus d’informations, consultez le [chapitre 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) de l’ouvrage de Charles Petzold sur Xamarin.Forms.
 
-En plus des méthodes [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) et [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync), la propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de chaque page fournit également une méthode [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync), illustrée dans l’exemple de code suivant :
+En plus des méthodes [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) et [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync), la propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de chaque page fournit également une méthode [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync), illustrée dans l’exemple de code suivant :
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -127,7 +127,7 @@ Cette méthode retire de la pile de navigation toutes les pages sauf la [`Page`]
 
 ### <a name="animating-page-transitions"></a>Animation des transitions de page
 
-La propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de chaque page fournit également des méthodes d’envoi et de dépilation substituées qui incluent un paramètre `boolean` contrôlant l’affichage d’une animation de page durant la navigation, comme indiqué dans l’exemple de code suivant :
+La propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de chaque page fournit également des méthodes d’envoi et de dépilation substituées qui incluent un paramètre `boolean` contrôlant l’affichage d’une animation de page durant la navigation, comme indiqué dans l’exemple de code suivant :
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -276,7 +276,7 @@ Pour plus d’informations sur la liaison de données, consultez [Notions de bas
 
 ## <a name="manipulating-the-navigation-stack"></a>Manipulation de la pile de navigation
 
-La propriété [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) expose une propriété [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) à partir de laquelle les pages dans la pile de navigation peuvent être obtenues. Tandis que Xamarin.Forms gère l’accès à la pile de navigation, la propriété `Navigation` fournit les méthodes [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) et [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) pour manipuler la pile en insérant ou en supprimant des pages.
+La propriété [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) expose une propriété [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) à partir de laquelle les pages dans la pile de navigation peuvent être obtenues. Tandis que Xamarin.Forms gère l’accès à la pile de navigation, la propriété `Navigation` fournit les méthodes [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) et [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) pour manipuler la pile en insérant ou en supprimant des pages.
 
 La méthode [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) insère une page spécifiée dans la pile de navigation avant une page existante spécifiée, comme indiqué dans le diagramme suivant :
 
