@@ -1,18 +1,18 @@
 ---
 title: Créer un convertisseur de Xamarin.Forms Visual
-description: Xamarin.Forms Visual permet des convertisseurs être appliquées de façon sélective aux objets VisualElement, sans avoir aux vues Xamarin.Forms de sous-classe.
+description: Créer des visuels de Xamarin.Forms pour être appliquées de façon sélective aux objets VisualElement, sans avoir aux vues Xamarin.Forms de sous-classe.
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 1bd56d09932c97508dd0a05fbc0eb2bad3af3f0e
-ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
+ms.openlocfilehash: a11c2045fa6119d0689834c35794bc8913c80bd6
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972583"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506965"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Créer un convertisseur de Xamarin.Forms Visual
 
@@ -25,7 +25,7 @@ Xamarin.Forms Visual permet des convertisseurs être créées et appliquées de 
 
 Le processus de création et utilisation d’un convertisseur de Xamarin.Forms Visual est :
 
-1. Créer des convertisseurs de plateforme pour la vue requise. Pour plus d’informations, consultez [créer des convertisseurs](#create-platfomr-renderers).
+1. Créer des convertisseurs de plateforme pour la vue requise. Pour plus d’informations, consultez [créer des convertisseurs](#create-platform-renderers).
 1. Créer un type qui dérive de `IVisual`. Pour plus d’informations, consultez [créer un type IVisual](#create-an-ivisual-type).
 1. Inscrire le `IVisual` type dans le cadre de la `ExportRendererAttribute` qui décore les convertisseurs. Pour plus d’informations, consultez [inscrire le type IVisual](#register-the-ivisual-type).
 1. Utiliser le convertisseur Visual en définissant le [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) propriété sur la vue à le `IVisual` nom. Pour plus d’informations, consultez [consommer le convertisseur Visual](#consume-the-visual-renderer).

@@ -1,19 +1,14 @@
 ---
 title: Caractéristiques de la plateforme
-description: Caractéristiques de la plateforme vous autorisons à utiliser les fonctionnalités qui est disponible uniquement sur une plateforme spécifique, sans avoir à implémenter des convertisseurs personnalisés ou des effets. Cet article explique comment consommer et créer des caractéristiques de la plateforme.
+description: 'Caractéristiques de la plateforme vous autorisons à utiliser les fonctionnalités qui est disponible uniquement sur une plateforme spécifique, sans avoir à implémenter des convertisseurs personnalisés ou des effets. Cet article explique comment consommer et créer des caractéristiques de la plateforme.'
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 44d0cf3a257c00b448a6c70064af2f8e3ba63f69
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207789"
 ---
+
 # <a name="platform-specifics"></a>Caractéristiques de la plateforme
 
 [![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
@@ -43,10 +38,10 @@ Pour plus d’informations sur les spécificités de plateforme fournies par Xam
 Le processus de création spécifique à la plateforme est comme suit :
 
 1. Implémenter des fonctionnalités spécifiques comme conséquence. Pour plus d’informations, consultez [création d’un effet](~/xamarin-forms/app-fundamentals/effects/creating.md).
-1. Créez une classe spécifique à la plateforme qui va exposer l’effet. Pour plus d’informations, consultez [création d’une classe spécifique à la plateforme](#creating).
-1. Dans la classe spécifique à la plateforme, implémentez une propriété jointe pour autoriser le spécifiques à la plateforme à être consommée à partir de XAML. Pour plus d’informations, consultez [Ajout d’une propriété attachée](#attached_property).
-1. Dans la classe spécifique à la plateforme, implémentez les méthodes d’extension pour permettre la spécifiques à la plateforme à consommer via une API de code fluent. Pour plus d’informations, consultez [Ajout de méthodes d’Extension](#extension_methods).
-1. Modifier l’implémentation de l’effet afin que l’effet est appliqué uniquement si la plateforme spécifique a été appelé sur la même plateforme que l’effet. Pour plus d’informations, consultez [création de l’effet](#creating_the_effect).
+1. Créez une classe spécifique à la plateforme qui va exposer l’effet. Pour plus d’informations, consultez [création d’une classe spécifique à la plateforme](#creating-a-platform-specific-class).
+1. Dans la classe spécifique à la plateforme, implémentez une propriété jointe pour autoriser le spécifiques à la plateforme à être consommée à partir de XAML. Pour plus d’informations, consultez [Ajout d’une propriété attachée](#adding-an-attached-property).
+1. Dans la classe spécifique à la plateforme, implémentez les méthodes d’extension pour permettre la spécifiques à la plateforme à consommer via une API de code fluent. Pour plus d’informations, consultez [Ajout de méthodes d’Extension](#adding-extension-methods).
+1. Modifier l’implémentation de l’effet afin que l’effet est appliqué uniquement si la plateforme spécifique a été appelé sur la même plateforme que l’effet. Pour plus d’informations, consultez [création de l’effet](#creating-the-effect).
 
 Le résultat d’exposer un effet que spécifiques à la plateforme est que l’effet peut être consommé plus facilement via XAML et une API de code fluent.
 

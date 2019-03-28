@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 59c61cc637a435f8107256ddcd6bfacfb0466867
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669647"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507017"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Fonctionnalités de concepteur Material Design Xamarin.Android
 
@@ -145,9 +145,9 @@ Lorsqu’une ressource de couleur est modifiée, un message s’affiche avec le 
 
 Le **arrière-plan** couleur dans le concepteur a changé à la nouvelle sélection de couleur, mais cette modification n’a pas encore été enregistrée. À ce stade, vous pouvez effectuer l’une des opérations suivantes :
 
--   Cliquez sur **ignorer les modifications** l’abandon de la nouvelle couleur choisie (ou les choix) et de rétablir le thème à son état d’origine. 
+-   Cliquez sur **ignorer les modifications** l’abandon de la nouvelle couleur choisie (ou les choix) et de rétablir le thème à son état d’origine.
 
--   Appuyez sur <kbd>CTRL + S</kbd> pour enregistrer vos modifications dans le thème actuellement. 
+-   Appuyez sur <kbd>CTRL + S</kbd> pour enregistrer vos modifications dans le thème actuellement.
 
 Dans l’exemple suivant, <kbd>CTRL + S</kbd> a été enfoncé afin que les modifications ont été enregistrées dans **AppTheme**:
 
@@ -300,7 +300,7 @@ Le **ressources** onglet propose une liste de ressources de couleur qui sont dé
 
 ### <a name="material-palette"></a>Palette de matériau
 
-Le **Palette de matériau** onglet s’ouvre le **Palette de couleurs de conception de matériau** décrit [antérieures](#material_palette). Choix d’une valeur de couleur à partir de cette palette de contraint votre choix de couleurs afin qu’il soit cohérent avec la conception de matériau.
+Le **Palette de matériau** onglet s’ouvre le **Palette de couleurs de conception de matériau** décrit [antérieures](#material-design-color-palette). Choix d’une valeur de couleur à partir de cette palette de contraint votre choix de couleurs afin qu’il soit cohérent avec la conception de matériau.
 
 [![Palette de matériau](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
@@ -316,9 +316,9 @@ Lorsqu’une ressource de couleur est modifiée, un message s’affiche avec le 
 
 La couleur dans le concepteur a été modifié, mais cette modification n’a pas encore été enregistrée. À ce stade, vous pouvez effectuer l’une des opérations suivantes :
 
--   Cliquez sur **ignorer les modifications** l’abandon de la nouvelle couleur choisie (ou les choix) et de rétablir le thème à son état d’origine. 
+-   Cliquez sur **ignorer les modifications** l’abandon de la nouvelle couleur choisie (ou les choix) et de rétablir le thème à son état d’origine.
 
--   Appuyez sur  **&#8984; + S** pour enregistrer vos modifications dans un nouveau thème appelé **personnalisé**. 
+-   Appuyez sur  **&#8984; + S** pour enregistrer vos modifications dans un nouveau thème appelé **personnalisé**.
 
 
 ## <a name="summary"></a>Récapitulatif

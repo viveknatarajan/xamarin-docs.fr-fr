@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 30c507a1b78600ef1b9a96e37f88904daaf82987
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 22b5fe703486f0ded3a5b91241e3fe5ce41bbc98
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528570"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507095"
 ---
 # <a name="validation-in-enterprise-apps"></a>Validation dans les applications d’entreprise
 
@@ -22,7 +22,7 @@ Dans le contexte de Model-View-ViewModel (MVVM) de modèle, un modèle de vue ou
 
 [![](validation-images/validation.png "Classes de validation dans l’application mobile eShopOnContainers")](validation-images/validation-large.png#lightbox "classes de Validation dans l’application mobile eShopOnContainers")
 
-**Figure 6-1**: les classes de Validation dans l’application mobile eShopOnContainers
+**Figure 6-1**: Classes de validation dans l’application mobile eShopOnContainers
 
 Afficher les propriétés de modèle qui nécessite une validation sont de type `ValidatableObject<T>`et chaque `ValidatableObject<T>` instance a des règles de validation ajoutés à son `Validations` propriété. Validation est appelée à partir du modèle de vue en appelant le `Validate` méthode de la `ValidatableObject<T>` instance, qui Récupère la validation des règles et les exécute sur le `ValidatableObject<T>` `Value` propriété. Des erreurs de validation sont placés dans le `Errors` propriété de la `ValidatableObject<T>` instance et le `IsValid` propriété de la `ValidatableObject<T>` instance est mise à jour pour indiquer si la validation a réussi ou échoué.
 
@@ -216,7 +216,7 @@ L’application mobile eShopOnContainers informe l’utilisateur des éventuelle
 
 ![](validation-images/validation-login.png "Affichage des erreurs de validation lors de la connexion")
 
-**Figure 6-2 :** affichage des erreurs de validation lors de la connexion
+**Figure 6-2 :** Affichage des erreurs de validation lors de la connexion
 
 ### <a name="highlighting-a-control-that-contains-invalid-data"></a>Mise en surbrillance d’un contrôle qui contient des données non valides
 
@@ -296,7 +296,7 @@ public class EntryLineColorEffect : RoutingEffect
 }
 ```
 
-Le [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) classe représente un effet indépendant de la plateforme qui encapsule un effet interne qui est spécifique à la plateforme. Cela simplifie le processus de suppression d’effet, car il n’existe aucun accès lors de la compilation pour les informations de type pour un effet spécifique à la plateforme. Le `EntryLineColorEffect` appelle le constructeur de classe de base, en passant un paramètre comportant une concaténation de la résolution de nom de groupe et l’ID unique qui est spécifiée sur chaque classe de l’effet de spécifique à la plateforme.
+Le [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) classe représente un effet indépendant de la plateforme qui encapsule un effet interne qui est spécifique à la plateforme. Cela simplifie le processus de suppression de l’effet, car il n’y a pas d’accès au moment de la compilation aux informations de type pour un effet propre à la plateforme. Le `EntryLineColorEffect` appelle le constructeur de classe de base, en passant un paramètre comportant une concaténation de la résolution de nom de groupe et l’ID unique qui est spécifiée sur chaque classe de l’effet de spécifique à la plateforme.
 
 Le code suivant montre l’exemple le `eShopOnContainers.EntryLineColorEffect` implémentation pour iOS :
 
@@ -374,13 +374,13 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-Le `OnAttached` méthode récupère le contrôle natif pour le Xamarin.Forms [ `Entry` ](xref:Xamarin.Forms.Entry) contrôler et met à jour de la couleur de ligne en appelant le `UpdateLineColor` (méthode). Le `OnElementPropertyChanged` remplacement répond aux modifications de propriété pouvant être liée sur le `Entry` contrôle en mettant à jour la couleur de ligne si le fichier joint `LineColor` des modifications de propriété, ou la [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) propriété de la `Entry`modifications. Pour plus d’informations sur les effets, consultez [effets](~/xamarin-forms/app-fundamentals/effects/index.md).
+Le `OnAttached` méthode récupère le contrôle natif pour le Xamarin.Forms [ `Entry` ](xref:Xamarin.Forms.Entry) contrôler et met à jour de la couleur de ligne en appelant le `UpdateLineColor` (méthode). Le `OnElementPropertyChanged` remplacement répond aux modifications de propriété pouvant être liée sur le `Entry` contrôle en mettant à jour la couleur de ligne si le fichier joint `LineColor` des modifications de propriété, ou la [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) propriété de la `Entry`modifications. Pour plus d’informations sur les effets, consultez [Effets](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 Lorsque les données valides sont entrées dans le [ `Entry` ](xref:Xamarin.Forms.Entry) contrôle, il appliquera une ligne noire vers le bas du contrôle, pour indiquer qu’il n’existe aucune erreur de validation. Figure 6-3 montre un exemple.
 
 ![](validation-images/validation-blackline.png "Ligne noire n’indiquant aucune erreur de validation")
 
-**Figure 6-3**: ligne noire n’indiquant aucune erreur de validation
+**Figure 6-3**: Ligne noire n’indiquant aucune erreur de validation
 
 Le [ `Entry` ](xref:Xamarin.Forms.Entry) contrôle possède également un [ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) ajouté à son [ `Triggers` ](xref:Xamarin.Forms.VisualElement.Triggers) collection. Le code suivant montre l’exemple le `DataTrigger`:
 
@@ -403,7 +403,7 @@ Cela [ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) surveille le `UserName.Is
 
 ![](validation-images/validation-redline.png "Ligne rouge indiquant l’erreur de validation")
 
-**Figure 6-4**: ligne rouge indiquant l’erreur de validation
+**Figure 6-4**: Ligne rouge indiquant l’erreur de validation
 
 La ligne dans le [ `Entry` ](xref:Xamarin.Forms.Entry) contrôle reste rouge, tandis que les données entrées ne sont pas valides, sinon elle deviendra noir pour indiquer que les données entrées sont valides.
 
@@ -414,7 +414,7 @@ Pour plus d’informations sur les déclencheurs, consultez [déclencheurs](~/xa
 L’interface utilisateur affiche les messages d’erreur de validation dans les contrôles Label sous chaque contrôle dont les données d’échec de la validation. Le code suivant montre l’exemple le [ `Label` ](xref:Xamarin.Forms.Label) qui affiche un message d’erreur de validation si l’utilisateur n’a pas entré un nom d’utilisateur valide :
 
 ```xaml
-<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
+<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}}"  
        Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 
@@ -430,4 +430,4 @@ Afficher les propriétés de modèle qui nécessite une validation sont de type 
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF de 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)

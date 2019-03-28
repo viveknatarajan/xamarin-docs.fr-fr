@@ -6,12 +6,12 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7d07733ebf62e6e12ccee05f9b72eaf1a74afad2
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34784037"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507160"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>Utilisation de UrhoSharp pour créer un jeu 3D
 
@@ -23,7 +23,7 @@ Avant d’écrire votre premier jeu, vous souhaitez Familiarisez-vous avec les p
 
 Le modèle de scène peut être décrit comme un graphique de scène basé sur les composants. La scène se compose d’une hiérarchie de nœuds de la scène, en commençant à partir du nœud racine, qui représente également la scène entière. Chaque [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) a une transformation 3D (de position, de rotation et de mise à l’échelle), un nom, un ID, ainsi qu’un nombre arbitraire de composants.  Composants de placer un nœud à la durée de vie, elles permettent d’ajouter une représentation visuelle ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), ils peuvent émettre des sons ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), ils peuvent fournir une limite de collision, et ainsi de suite.
 
-Vous pouvez créer votre scènes et les nœuds de programme d’installation à l’aide de la [Urho éditeur](#UrhoEditor), ou vous pouvez effectuer des opérations à partir de votre code c#.  Dans ce document, nous explorerons les choses paramètre à l’aide de code, comme ils illustrent les éléments nécessaires pour vous aider à apparaître sur votre écran
+Vous pouvez créer votre scènes et les nœuds de programme d’installation à l’aide de la [Urho éditeur](#urhoeditor), ou vous pouvez effectuer des opérations à partir de votre code c#.  Dans ce document, nous explorerons les choses paramètre à l’aide de code, comme ils illustrent les éléments nécessaires pour vous aider à apparaître sur votre écran
 
 Outre la définition de votre scène, vous devez configurer un [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), c’est ce qui détermine ce qui doit obtenir affiché à l’utilisateur.
 
@@ -573,6 +573,6 @@ Si vous souhaitez exécuter du code en arrière-plan et mettez ensuite à jour l
 
 Vous pouvez télécharger l’éditeur Urho pour votre plateforme depuis le [site Web Urho](http://urho3d.github.io/), accédez aux téléchargements et choisir la version la plus récente.
 
-## <a name="copyrights"></a>Droits d’auteur
+## <a name="copyrights"></a>Copyrights
 
 Cette documentation contient le contenu d’origine à partir de Xamarin Inc, mais il dessine largement à partir de la documentation open source pour le projet Urho3D et contient des captures d’écran à partir du projet Cocos2D.

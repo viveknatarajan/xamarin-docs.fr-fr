@@ -6,12 +6,12 @@ ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: c1c03e0ec17ade57536b4ed121469e3ae2274e75
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 235166b78dfbd4998086a2925a54137f1922f5d1
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668970"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507004"
 ---
 # <a name="monogame-gamepad-reference"></a>Référence de GamePad MonoGame
 
@@ -113,7 +113,7 @@ Depuis la pression tactile déplacement de l’aire de conception est en lecture
 
 ### <a name="apple-tv-game-controller"></a>Contrôleur de jeu de TV Apple
 
-Contrôleurs de jeu pour Apple TV se comportent comme des contrôleurs de jeu pour les applications iOS. Pour plus d’informations, consultez le [iOS section de contrôleur de jeu](#iOS-game-controller). 
+Contrôleurs de jeu pour Apple TV se comportent comme des contrôleurs de jeu pour les applications iOS. Pour plus d’informations, consultez le [contrôleur de jeu iOS](#ios-game-controller) section. 
 
 ## <a name="xbox-one"></a>Xbox One
 
