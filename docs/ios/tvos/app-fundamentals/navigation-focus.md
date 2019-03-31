@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1cfa51b8e5434480d7d15fbf23d78f8b8735f16a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cb8d1c1d92146e70056c6cf562f2fa1cb028e7c
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112585"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677870"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Utilisation de tvOS Navigation et le Focus dans Xamarin
 
@@ -25,7 +25,7 @@ Cet article décrit le concept de [Focus](#Focus-and-Selection) et comment il es
 
 Ensuite, nous allons examiner comment le Focus peut être utilisé avec [parallaxe](#Focus-and-Parallax) et *Images superposées* pour fournir des indices visuels pour l’état actuel de la Navigation à l’utilisateur final.
 
-Enfin, nous examinerons l’utilisation de [Focus](#Working-with-Focus), [mises à jour le Focus](#Working-with-Focus-Updates), [Focus Guides](#Working-with-Focus-Guides), [le Focus dans les Collections](#Working-with-Focus-in-Collections) et [ L’activation de parallaxe](#Enabling-Parallax) sur les vues d’Image dans vos applications Xamarin.tvOS.
+Enfin, nous examinerons l’utilisation de [Focus](#Working-with-Focus), [mises à jour le Focus](#Working-with-Focus-Updates), [Focus Guides](#Working-with-Focus-Guides), [le Focus dans les Collections](#Working-with-Focus-in-Collections) et [ L’activation de parallaxe](#enabling-parallax) sur les vues d’Image dans vos applications Xamarin.tvOS.
 
 <a name="Navigation" />
 
