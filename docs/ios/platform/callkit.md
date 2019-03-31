@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 40d4a6cbd3bb8e3bd4c55c50c69f85f91d94feac
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: 6db9ff0085c17f07d07a7591f5d735793bfbc5f9
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459926"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678039"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit dans Xamarin.iOS
 
@@ -278,7 +278,7 @@ namespace MonkeyCall
 }
 ```
 
-Le `CallHandleFromURL` et `CallHandleFromActivity` classes sont utilisées dans l’AppDelegate pour obtenir le handle de contact de la personne qui est appelé dans un appel sortant. Pour plus d’informations, consultez le [gère les appels sortants](#Handling-Outgoing-Calls) section ci-dessous.
+Le `CallHandleFromURL` et `CallHandleFromActivity` classes sont utilisées dans l’AppDelegate pour obtenir le handle de contact de la personne qui est appelé dans un appel sortant. Pour plus d’informations, consultez le [gère les appels sortants](#handling-outgoing-calls) section ci-dessous.
 
 ### <a name="the-activecallmanager-class"></a>La classe ActiveCallManager
 
@@ -392,7 +392,7 @@ namespace MonkeyCall
 }
 ```
 
-À nouveau, car il s’agit d’une simulation uniquement, le `ActiveCallManager` uniquement gère une collection de `ActiveCall` objets et a une routine pour la recherche d’un appel donné par son `UUID` propriété. Il inclut également des méthodes pour démarrer, de se terminer et de modifier l’état en attente d’un appel sortant. Pour plus d’informations, consultez le [gère les appels sortants](#Handling-Outgoing-Calls) section ci-dessous.
+À nouveau, car il s’agit d’une simulation uniquement, le `ActiveCallManager` uniquement gère une collection de `ActiveCall` objets et a une routine pour la recherche d’un appel donné par son `UUID` propriété. Il inclut également des méthodes pour démarrer, de se terminer et de modifier l’état en attente d’un appel sortant. Pour plus d’informations, consultez le [gère les appels sortants](#handling-outgoing-calls) section ci-dessous.
 
 ### <a name="the-providerdelegate-class"></a>La classe ProviderDelegate
 
@@ -728,7 +728,7 @@ namespace MonkeyCall
 }
 ```
 
-Le `OpenUrl` et `ContinueUserActivity` remplacement de méthodes sont utilisées lorsque l’application traite un appel sortant. Pour plus d’informations, consultez le [gère les appels sortants](#Handling-Outgoing-Calls) section ci-dessous.
+Le `OpenUrl` et `ContinueUserActivity` remplacement de méthodes sont utilisées lorsque l’application traite un appel sortant. Pour plus d’informations, consultez le [gère les appels sortants](#handling-outgoing-calls) section ci-dessous.
 
 ## <a name="handling-incoming-calls"></a>Gestion des appels entrants
 
@@ -945,9 +945,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-Ici le `CallHandleFromActivity` méthode de la classe d’assistance `StartCallRequest` sert à obtenir le handle à la personne qui est appelée (consultez [la classe StartCallRequest](#The-StartCallRequest-Class) ci-dessus). 
+Ici le `CallHandleFromActivity` méthode de la classe d’assistance `StartCallRequest` sert à obtenir le handle à la personne qui est appelée (consultez [la classe StartCallRequest](#the-startcallrequest-class) ci-dessus).
 
-Le `PerformStartCallAction` méthode de la [ProviderDelegate classe](#The-ProviderDelegate-Class) est utilisé pour démarrer l’appel sortant réel enfin et d’informer le système de son cycle de vie :
+Le `PerformStartCallAction` méthode de la [ProviderDelegate classe](#the-providerdelegate-class) est utilisé pour démarrer l’appel sortant réel enfin et d’informer le système de son cycle de vie :
 
 ```csharp
 public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)
@@ -1034,7 +1034,7 @@ Cette section décrit certains détails supplémentaires que le développeur doi
 - Configuration du fournisseur
 - Erreurs d’action
 - Restrictions du système
-- Données Audio
+- VOIP Audio
 
 ### <a name="provider-configuration"></a>Configuration du fournisseur
 
