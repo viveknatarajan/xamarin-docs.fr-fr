@@ -7,13 +7,8 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: f2a612eea39a3447cae03e2d7b675a46c47aad52
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233742"
 ---
+
 # <a name="introduction-to-ios-10"></a>Introduction à iOS 10
 
 _Cet article présente tous les nouveaux et modifiés API et fonctionnalités disponibles dans iOS 10 pour les développeurs de Xamarin.iOS._
@@ -231,7 +226,7 @@ Les API suivantes ont été déconseillées dans iOS 10 :
 - [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) symboles relatifs au contenu omniprésent ont été déconseillées.
 - `ADBannerView`, `ADInterstitialAd` et les symboles dans le [UIViewController](xref:UIKit.UIViewController) classe ont été déconseillées.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) symboles relatifs aux valeurs à virgule flottante ont été déconseillées.
-- Le `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` et `UIUserNotificationSettings` classes de UIKit ont été déconseillées. Utilisez le [Notifications utilisateur](#User-Notifications) framework à la place.
+- Le `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` et `UIUserNotificationSettings` classes de UIKit ont été déconseillées. Utilisez le [Notifications utilisateur](#user-notifications) framework à la place.
 - Le `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`, `DidReceiveLocalNotification` et `DidReceiveRemoteNotification` WatchKit méthodes ont été déconseillées. Utilisez le `HandleActionForNotification` et `DidReceiveNotification` méthodes à la place.
 - Le `DidReceiveLocalNotification` et `DidReceiveRemoteNotification` méthodes de la [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) ont été déconseillées. Créez une instance de [UNUserNotificationCenterDelegate](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate) qui implémente les méthodes appropriées et assignez-la à la `Delegate` propriété de la [UNUserNotificationCenter](https://developer.apple.com/reference/usernotifications/unusernotificationcenter) objet.
 - Le **Game Center application** a été déconseillé et supprimé à partir d’iOS. Si l’application utilise GameKit, il _doit_ présenter son propre interface pour afficher les fonctionnalités GameKit (leaderboards, etc.).

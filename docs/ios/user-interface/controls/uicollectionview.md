@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 8e114f39a01c2243889c53c855acd7fa8061ed09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f57f2a2bc17690b7a1e0a72c583b0e94519ca4db
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114728"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677987"
 ---
 # <a name="collection-views-in-xamarinios"></a>Vues de collection dans Xamarin.iOS
 
@@ -443,7 +443,7 @@ Dans cet article, nous étudierons une implémentation glisser pour réorganiser
     - [Exemple de réorganisation simple](#Simple-Reordering-Example)
     - [À l’aide d’un module de reconnaissance de mouvement personnalisée](#Using-a-Custom-Gesture-Recognizer)
     - [Dispositions personnalisées et la réorganisation](#Custom-Layouts-and-Reording)
-- [Afficher les modifications de collection](#Collection-View-Changes)
+- [Afficher les modifications de collection](#collection-view-changes)
 
 <a name="Easy-Reordering-of-Items" />
 
@@ -472,11 +472,11 @@ Exemple rapide, démarrez un nouveau projet de Xamarin.iOS et de modifier le **M
 
 Sélectionnez la vue de Collection (il peut être plus facile de le faire à partir de la structure du document). Dans l’onglet Disposition du panneau Propriétés, définissez les tailles suivantes, comme illustré dans la capture d’écran ci-dessous :
 
-- **Taille de cellule**: largeur – 60 | Hauteur – 60
-- **Taille d’en-tête**: largeur – 0 | Hauteur : 0
-- **Taille de pied de page**: largeur – 0 | Hauteur : 0
-- **Min espacement**: pour les cellules – 8 | Lignes : 8
-- **Section des marges**: haut – 16 | Bas – 16 | Gauche – 16 | Droite : 16
+- **Taille de cellule**: Largeur – 60 | Hauteur – 60
+- **Taille d’en-tête**: Largeur – 0 | Hauteur : 0
+- **Taille de pied de page**: Largeur – 0 | Hauteur : 0
+- **Min espacement**: Pour les cellules – 8 | Lignes : 8
+- **Section des marges**: Haut – 16 | Bas – 16 | Gauche – 16 | Droite : 16
 
 [![](uicollectionview-images/quick04.png "Définir la taille de la vue de Collection")](uicollectionview-images/quick04.png#lightbox)
 

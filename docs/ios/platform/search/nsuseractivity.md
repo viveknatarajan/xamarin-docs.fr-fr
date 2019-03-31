@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: acfff90b4b983f92718bb9af1f587a73ec0f8da7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b853bd3bc55a2d4cb613a9f0079aebae9f57027b
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104256"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677857"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Recherche avec NSUserActivity dans Xamarin.iOS
 
@@ -29,7 +29,7 @@ Les propriétés suivantes de `NSUserActivity` sont utilisés pour prendre en ch
 
  - `EligibleForHandoff` – If `true`, cette activité peut être utilisée dans une opération de transfert.
  - `EligibleForSearch` – If `true`, cette activité est ajoutée à l’index sur l’appareil et présentée dans les résultats de la recherche.
- - `EligibleForPublicIndexing` – If `true`, cette activité est ajoutée à l’index de basé sur le cloud d’Apple et présentée aux utilisateurs (via la recherche) que vous n’ont pas encore installé votre application sur son appareil iOS. Consultez le [Public l’indexation de recherche](#Public-Search-Indexing) section ci-dessous pour plus d’informations.
+ - `EligibleForPublicIndexing` – If `true`, cette activité est ajoutée à l’index de basé sur le cloud d’Apple et présentée aux utilisateurs (via la recherche) que vous n’ont pas encore installé votre application sur son appareil iOS. Consultez le [Public l’indexation de recherche](#public-search-indexing) section ci-dessous pour plus d’informations.
  - `Title` – Fournit un titre pour votre activité et s’affiche dans les résultats de recherche. Les utilisateurs peuvent également rechercher le texte du titre lui-même.
  - `Keywords` – Est un tableau de chaînes utilisées pour décrire votre activité qui sera indexée et consultable par l’utilisateur final.
  - `ContentAttributeSet` – Est un `CSSearchableItemAttributeSet` utilisé pour décrire votre activité en détail et fournir un contenu riche dans les résultats de recherche.

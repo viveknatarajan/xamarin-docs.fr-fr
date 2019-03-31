@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7b2f9ab4cf9bad71153d5bdae9ae44ddf091deed
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bf86759832a1aba0ccc1c144981af6ea4eae8670
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106362"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677792"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Déploiement watchOS applications sur l’App Store
 
 > [!IMPORTANT]
-> Veillez à consulter [Guide de soumission du Kit d’Apple Watch](https://developer.apple.com/app-store/watch/)et consultez le [dépannage](#Troubleshooting) section pour les problèmes que vous pouvez avoir.
+> Veillez à consulter [Guide de soumission du Kit d’Apple Watch](https://developer.apple.com/app-store/watch/)et consultez le [dépannage](#troubleshooting) section pour les problèmes que vous pouvez avoir.
 
 - Vérifiez que :
   - [**Profils de provisionnement de distribution** ](#provisioning) créé pour vos projets.
@@ -41,7 +41,7 @@ ms.locfileid: "50106362"
   - (Facultatif) **Valider...**  l’archive.
   - **Envoyer...**  l’archive et suivez les étapes à charger dans iTunes connectent pour révision et approbation.
 
-Lire des conseils spécifiques liés à ces éléments ci-dessous. Consultez le [dépannage](#Troubleshooting) section si vous rencontrez des problèmes.
+Lire des conseils spécifiques liés à ces éléments ci-dessous. Consultez le [dépannage](#troubleshooting) section si vous rencontrez des problèmes.
 
 <a name="provisioning" />
 

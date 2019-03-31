@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a8b31d9f2e9c8921420b1fd50c4092273962f54b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e7fc3d627b5d7a1dc73caa395a9181efb0b5f08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105894"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678000"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Utilisation de tvOS des affichages de tableau dans Xamarin
 
@@ -101,7 +101,7 @@ Pour commencer, effectuez les étapes suivantes :
 1. Pour chaque **Prototype cellule**, sélectionnez-le, puis attribuer une valeur unique **identificateur** dans le **Widget** onglet de la **l’Explorateur de propriétés**. Cette étape est _très important_ car vous en aurez besoin cet identificateur ultérieurement lorsque vous remplissez la table. Par exemple `AttrCell`: 
 
     [![](table-views-images/table12.png "L’onglet de Widget")](table-views-images/table12.png#lightbox)
-1. Vous pouvez également sélectionner pour présenter la cellule comme l’un de la [par défaut des Types de cellule d’affichage de tableau](#Table-View-Cell-Types) via la **Style** liste déroulante ou affectez-lui la valeur **personnalisé** et utiliser l’aire de conception à disposition de la cellule en faisant glisser dans les autres widgets d’interface utilisateur à partir de la **boîte à outils**: 
+1. Vous pouvez également sélectionner pour présenter la cellule comme l’un de la [par défaut des Types de cellule d’affichage de tableau](#table-view-cell-types) via la **Style** liste déroulante ou affectez-lui la valeur **personnalisé** et utiliser l’aire de conception à disposition de la cellule en faisant glisser dans les autres widgets d’interface utilisateur à partir de la **boîte à outils**: 
 
     [![](table-views-images/table13.png "La disposition des cellules")](table-views-images/table13.png#lightbox)
 1. Affecter une valeur unique **nom** à chaque élément d’interface utilisateur dans la conception de la cellule de Prototype dans le **Widget** onglet de la **l’Explorateur de propriétés** donc vous pouvez y accéder ultérieurement dans C# code : 
@@ -142,7 +142,7 @@ Pour commencer, effectuez les étapes suivantes :
 1. Pour chaque **Prototype cellule**, sélectionnez-le, puis attribuer une valeur unique **identificateur** dans le **Widget** onglet de la **l’Explorateur de propriétés**. Cette étape est _très important_ car vous en aurez besoin cet identificateur ultérieurement lorsque vous remplissez la table. Par exemple `AttrCell`: 
 
     [![](table-views-images/table12-vs.png "Affecter un identificateur")](table-views-images/table12-vs.png#lightbox)
-1. Vous pouvez également sélectionner pour présenter la cellule comme l’un de la [par défaut des Types de cellule d’affichage de tableau](#Table-View-Cell-Types) via la **Style** liste déroulante ou affectez-lui la valeur **personnalisé** et utiliser l’aire de conception à disposition de la cellule en faisant glisser dans les autres widgets d’interface utilisateur à partir de la **boîte à outils**: 
+1. Vous pouvez également sélectionner pour présenter la cellule comme l’un de la [par défaut des Types de cellule d’affichage de tableau](#table-view-cell-types) via la **Style** liste déroulante ou affectez-lui la valeur **personnalisé** et utiliser l’aire de conception à disposition de la cellule en faisant glisser dans les autres widgets d’interface utilisateur à partir de la **boîte à outils**: 
 
     [![](table-views-images/table13-vs.png "Le menu déroulant de Style")](table-views-images/table13-vs.png#lightbox)
 1. Affecter une valeur unique **nom** à chaque élément d’interface utilisateur dans la conception de la cellule de Prototype dans le **Widget** onglet de la **l’Explorateur de propriétés** donc vous pouvez y accéder ultérieurement dans C# code : 

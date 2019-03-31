@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6a8e74860efd606ae6dd565ea7e3f67884eefc11
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103216"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677935"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Techniques d’Interaction rapide pour watchOS 3 dans Xamarin
 
@@ -299,7 +299,7 @@ En outre, SpriteKit et SceneKit peuvent être combiné avec des éléments Watch
 
 ## <a name="simple-navigation"></a>Navigation simple
 
-watchOS 3 présente plusieurs façons qu’un développeur peut simplifier la navigation au sein de leurs applications watchOS telles que le nouveau [pagination Vertical](#Vertical-Paging), [prise en charge du module de reconnaissance de mouvement](#Gesture-Recognizer-Support) et [couronne numérique Rotation](#Digital-Crown-Rotation) fonctionnalités présentées ci-dessus.
+watchOS 3 présente plusieurs façons qu’un développeur peut simplifier la navigation au sein de leurs applications watchOS telles que le nouveau [pagination Vertical](#vertical-paging), [prise en charge du module de reconnaissance de mouvement](#gesture-recognizer-support) et [couronne numérique Rotation](#digital-crown-rotation) fonctionnalités présentées ci-dessus.
 
 Le Crown numérique est unique à l’Apple Watch et peut être utilisé de différentes manières pour simplifier la navigation. Par exemple, une application de minuteur permettent la couronne numérique lire à vitesse variable par le biais des longueurs de minuteur disponibles.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 02db7dce6ba38b6c1e943ff189ff69efb7cc1c08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528778"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677831"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>watchOS applications séances d’entraînement dans Xamarin
 
@@ -87,7 +87,7 @@ Une application peut accéder aux données HealthKit de l’utilisateur, il doit
     - Sommeil
 - Autorisation de lire des données :
     - Énergie consommée
-    - distance
+    - Distance
     - Rythme cardiaque  
 
 Avant d’une application peut demander l’autorisation, il doit être configuré pour accéder à HealthKit.
@@ -636,7 +636,7 @@ Si vous le souhaitez, l’application peut calculer et créer un sous-ensemble p
 
 ## <a name="workouts-and-ios-10"></a>Entraînements et iOS 10
 
-Chaque application d’entraînement watchOS 3 a une application de base entraînement iOS 10 parent et nouvelles pour iOS 10, cette application iOS peut être utilisée pour démarrer les Use qui placer l’Apple Watch dans le Mode d’entraînement (sans intervention de l’utilisateur) et exécutez l’application watchOS en mode en cours d’exécution en arrière-plan (consultez [sur en arrière-plan en cours d’exécution](#About-Background-Running) ci-dessus pour plus d’informations).
+Chaque application d’entraînement watchOS 3 a une application de base entraînement iOS 10 parent et nouvelles pour iOS 10, cette application iOS peut être utilisée pour démarrer les Use qui placer l’Apple Watch dans le Mode d’entraînement (sans intervention de l’utilisateur) et exécutez l’application watchOS en mode en cours d’exécution en arrière-plan (consultez [sur en arrière-plan en cours d’exécution](#about-background-running) ci-dessus pour plus d’informations).
 
 Pendant l’exécution de l’application watchOS, il peut utiliser WatchConnectivity pour la messagerie et de communication avec l’application iOS de parent.
 
@@ -649,7 +649,7 @@ Examinons le fonctionnement de ce processus :
 3. Démarrage de l’application watchOS 3 à l’aide de passé dans la Configuration d’entraînement, une nouvelle Session d’entraînement (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> Pour l’application iPhone parente démarrer un exercice sur l’Apple Watch, l’application watchOS 3 doit avoir en cours d’exécution en arrière-plan est activée. Consultez [l’activation en cours d’exécution en arrière-plan](#Enabling-Background-Running) ci-dessus pour plus d’informations.
+> Pour l’application iPhone parente démarrer un exercice sur l’Apple Watch, l’application watchOS 3 doit avoir en cours d’exécution en arrière-plan est activée. Consultez [l’activation en cours d’exécution en arrière-plan](#enabling-background-running) ci-dessus pour plus d’informations.
 
 Ce processus est très similaire au processus de démarrage d’une Session de séances d’entraînement dans l’application watchOS 3 directement. Sur l’iPhone, utilisez le code suivant :
 

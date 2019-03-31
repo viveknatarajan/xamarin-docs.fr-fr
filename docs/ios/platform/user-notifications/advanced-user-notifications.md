@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: b0571f826101576b402368923c2147e35aa9299e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4472654064812142e3281374754ace0042b542bf
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116327"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677753"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notifications utilisateur avancées dans Xamarin.iOS
 
@@ -375,7 +375,7 @@ Pour éliminer cet effet, modifier la `Info.plist` fichier pour l’Extension et
 
 ### <a name="using-media-attachments-in-custom-ui"></a>À l’aide de médias joints dans l’interface utilisateur personnalisée
 
-Étant donné que médias joints (comme indiqué dans le [Ajout médias joints](#Adding-Media-Attachments) section ci-dessus) font partie de la charge utile de Notification, ils sont accessibles et affichés dans l’Extension de contenu de Notification, comme ils seraient dans la valeur par défaut Notification de l’interface utilisateur.
+Étant donné que médias joints (comme indiqué dans le [Ajout médias joints](#adding-media-attachments) section ci-dessus) font partie de la charge utile de Notification, ils sont accessibles et affichés dans l’Extension de contenu de Notification, comme ils seraient dans la valeur par défaut Notification de l’interface utilisateur.
 
 Par exemple, si l’interface utilisateur personnalisée de ci-dessus inclus un `UIImageView` qui ont été exposée au C# , écrivez le code suivant code pourrait être utilisé pour la remplir avec la pièce jointe de média :
 

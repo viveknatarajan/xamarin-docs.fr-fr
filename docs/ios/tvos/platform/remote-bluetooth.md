@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 14c62051afd7489389f154c21b3a76b9aad3f32e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115534"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677948"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri Remote et Bluetooth des contrôleurs de tvOS dans Xamarin
 
@@ -310,7 +310,7 @@ Comme indiqué ci-dessus, en plus de la norme Siri à distance fourni avec l’A
 Si votre application nécessaire l’entrée d’un contrôleur de bas niveau, vous pouvez utilise d’Apple [Framework de contrôleur de jeu](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) qui a les modifications suivantes à tvOS :
 
 - Le profil du contrôleur de jeu Micro (`GCMicroGamepad`) a été ajoutée pour cibler le Siri Remote.
-- La nouvelle `GCEventViewController` classe peut être utilisée pour acheminer des événements de contrôleur de jeu via votre application. Consultez le [déterminer une entrée de contrôleur de jeu](#Determining-Game-Controller-Input) section ci-dessous pour plus d’informations.
+- La nouvelle `GCEventViewController` classe peut être utilisée pour acheminer des événements de contrôleur de jeu via votre application. Consultez le [déterminer une entrée de contrôleur de jeu](#determining-game-controller-input) section ci-dessous pour plus d’informations.
 
 <a name="Game-Controller-Support-Requirements" />
 

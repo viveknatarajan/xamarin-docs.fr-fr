@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122671"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677844"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vues de pile dans Xamarin.iOS
 
@@ -233,7 +233,7 @@ Il existe plusieurs propriétés qui contrôlent la façon dont une vue de la pi
 - **Ligne de base relatif** : si `true`, l’espacement vertical de chaque sous-affichage sera dérivé de sa ligne de base.
 - **Mise en page marges relatif** – place les sous-vues relatif aux marges mise en forme standard.
 
-En règle générale, vous allez utiliser une vue de la pile pour organiser un petit nombre de sous-affichages. Les Interfaces utilisateur plus complexes peuvent être créés par l’imbrication d’une ou plusieurs vues de pile à l’intérieur de l’autre (comme nous l’avons fait le [UIStackView Quickstart](#UIStackView-Quickstart) ci-dessus).
+En règle générale, vous allez utiliser une vue de la pile pour organiser un petit nombre de sous-affichages. Les Interfaces utilisateur plus complexes peuvent être créés par l’imbrication d’une ou plusieurs vues de pile à l’intérieur de l’autre (comme nous l’avons fait le [UIStackView Quickstart](#uistackview-quickstart) ci-dessus).
 
 Vous pouvez affiner l’apparence des interfaces utilisateur en ajoutant des contraintes supplémentaires pour les sous-affichages (par exemple pour le contrôle de la largeur ou hauteur). Toutefois, il convient ne pas à inclure les contraintes en conflit à celles introduites par la vue pile lui-même.
 
