@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: fda8c08cdbdab01f5d68b7f349d5f28f31316290
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: c18eba873dc1a1dae36c401507d55652ed233b00
+ms.sourcegitcommit: 236a346838c421c7d8951f50abbf4f5365559372
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832000"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58641437"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -115,7 +115,7 @@ Toutes ces propriétés peuvent être liés.
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) est utile lorsque vous avez besoin afficher des données de texte que l’utilisateur peut modifier. Il définit les propriétés suivantes :
 
 - `Keyboard` – Le clavier à afficher lors de la modification. Il existe des options pour les éléments tels que des valeurs numériques, e-mail, numéros de téléphone, etc. [Consultez la documentation sur les API](xref:Xamarin.Forms.Keyboard).
-- `Label` – Le texte de l’étiquette à afficher à droite de la zone de texte.
+- `Label` – Le texte de l’étiquette à afficher à gauche de la zone de texte.
 - `LabelColor` – La couleur du texte d’étiquette.
 - `Placeholder` : Texte à afficher dans le champ d’entrée lorsqu’il est null ou vide. Ce texte disparaît lorsque l’entrée de texte commence.
 - `Text` – Le texte dans le champ d’entrée.

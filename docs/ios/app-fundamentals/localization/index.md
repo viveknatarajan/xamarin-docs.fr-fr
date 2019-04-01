@@ -17,7 +17,7 @@ Reportez-vous à la [encodages d’internationalisation](encodings.md) pour obte
 
 ## <a name="ios-platform-features"></a>fonctionnalités de la plateforme iOS
 
-Cette section décrit certaines des fonctionnalités de localisation dans iOS. Passez à la [section suivante](#Localization-basics-in-iOS) pour afficher des fichiers et des exemples de code spécifique.
+Cette section décrit certaines des fonctionnalités de localisation dans iOS. Passez à la [section suivante](#localization-basics-in-ios) pour afficher des fichiers et des exemples de code spécifique.
 
 ### <a name="language"></a>Langue
 
