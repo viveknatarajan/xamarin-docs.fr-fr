@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials : informations sur l’appareil'
+title: 'Xamarin.Essentials: Informations sur l’appareil'
 description: Ce document décrit la classe DeviceInfo de Xamarin.Essentials, qui fournit des informations sur l’appareil où l’application s’exécute.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: b78c04d30871552f9b1e18a42c871e24464c4802
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: a7868277cd5e924d55ad688df1e8e07c81c5f074
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898951"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329323"
 ---
-# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials : informations sur l’appareil
+# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informations sur l’appareil
 
 La classe **DeviceInfo** fournit des informations sur l’appareil où l’application s’exécute.
 
@@ -53,18 +53,18 @@ var idiom = DeviceInfo.Idiom;
 var deviceType = DeviceInfo.DeviceType;
 ```
 
-## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[Plateformes](xref:Xamarin.Essentials.DeviceInfo.Platforms)
+## <a name="platforms"></a>Plateformes
 
-`DeviceInfo.Platform` est mis en corrélation avec une chaîne constante mappée au système d’exploitation. Vous pouvez vérifier les valeurs avec le struct `DevicePlatform` :
+[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform) est mis en corrélation avec une chaîne constante mappée au système d’exploitation. Vous pouvez vérifier les valeurs avec le struct `DevicePlatform` :
 
 - **DevicePlatform.iOS** – iOS
 - **DevicePlatform.Android** – Android
 - **DevicePlatform.UWP** – UWP
 - **DevicePlatform.Unknown** – Inconnu
 
-## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idiomes](xref:Xamarin.Essentials.DeviceInfo.Idioms)
+## <a name="idioms"></a>Idiomes
 
-`DeviceInfo.Idiom` est mis en corrélation avec une chaîne constante mappée au type d’appareil sur lequel l’application s’exécute. Vous pouvez vérifier les valeurs avec le struct `DeviceIdiom` :
+[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom) est mis en corrélation avec une chaîne constante mappée au type d’appareil sur lequel l’application s’exécute. Vous pouvez vérifier les valeurs avec le struct `DeviceIdiom` :
 
 - **DeviceIdiom.Phone** – Téléphone
 - **DeviceIdiom.Tablet** – Tablette
