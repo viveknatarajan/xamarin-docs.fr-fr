@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
+ms.openlocfilehash: 3a59cbb8385fe201d7eef086092c9b393a21cc71
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666351"
 ---
-
 # <a name="xamarinforms-custom-renderers"></a>Convertisseurs personnalisés Xamarin.Forms
 
 _Les interfaces utilisateur Xamarin.Forms sont affichées à l’aide des contrôles natifs de la plateforme cible, ce qui permet aux applications Xamarin.Forms de conserver l’apparence appropriée pour chaque plateforme. Les convertisseurs personnalisés permettent aux développeurs de remplacer ce processus pour personnaliser l’apparence et le comportement des contrôles Xamarin.Forms sur chaque plateforme._
