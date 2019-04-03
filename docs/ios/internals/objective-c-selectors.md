@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: cf39d548dc83fae67e8703d42e9387b8f19504e6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 15db59945f482728f760006095e294bc5628c8bd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669751"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870171"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Sélecteurs objective-C dans Xamarin.iOS
 
@@ -137,15 +137,15 @@ Appel d’un sélecteur comporte trois étapes :
 
 ### <a name="selector-targets"></a>Cibles de sélecteur
 
-Une cible de sélecteur est une instance d’objet ou une classe Objective-C. Si la cible est une instance et provenance d’un type de Xamarin.iOS lié, utilisez la [ `ObjCRuntime.INativeObject.Handle` ](https://developer.xamarin.com/api/property/ObjCRuntime.INativeObject.Handle/) propriété.
+Une cible de sélecteur est une instance d’objet ou une classe Objective-C. Si la cible est une instance et provenance d’un type de Xamarin.iOS lié, utilisez la [ `ObjCRuntime.INativeObject.Handle` ](xref:ObjCRuntime.INativeObject.Handle) propriété.
 
-Si la cible est une classe, utilisez [ `ObjCRuntime.Class` ](https://developer.xamarin.com/api/type/ObjCRuntime.Class/) pour obtenir une référence à l’instance de classe, puis utilisez le [ `Class.Handle` ](https://developer.xamarin.com/api/property/ObjCRuntime.Class.Handle/) propriété.
+Si la cible est une classe, utilisez [ `ObjCRuntime.Class` ](xref:ObjCRuntime.Class) pour obtenir une référence à l’instance de classe, puis utilisez le [ `Class.Handle` ](xref:ObjCRuntime.Class.Handle) propriété.
 
 ### <a name="selector-names"></a>Noms de sélecteur
 
 Les noms de sélecteur sont répertoriés dans la documentation d’Apple. Par exemple, [ `NSString` ](https://developer.apple.com/documentation/foundation/nsstring?language=objc) inclut [ `sizeWithFont:` ](https://developer.apple.com/documentation/foundation/nsstring/1619917-sizewithfont?language=objc) et [ `sizeWithFont:forWidth:lineBreakMode:` ](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont?language=objc) sélecteurs. Le signe deux-points embedded et de fin font partie du nom de sélecteur et ne peut pas être omis.
 
-Une fois que vous avez un nom de sélecteur, vous pouvez créer un [ `ObjCRuntime.Selector` ](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) instance pour celui-ci.
+Une fois que vous avez un nom de sélecteur, vous pouvez créer un [ `ObjCRuntime.Selector` ](xref:ObjCRuntime.Selector) instance pour celui-ci.
 
 ### <a name="calling-objcmsgsend"></a>Appel objc_msgSend
 

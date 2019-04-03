@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: 42cf10e592a37f9a979d05d7784553059923646c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7ed8fc18624f46abd4a9fc293d8c33a1722da7dd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667319"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870259"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Référencement des bibliothèques natives dans Xamarin.iOS
 
@@ -122,8 +122,7 @@ Pour accéder aux méthodes définies dans l’un d'entre eux, vous utilisez [fo
 -  Déterminer la bibliothèque dans laquelle il se trouve dans
 -  Écrire la déclaration P/Invoke appropriée
 
-
-Lorsque vous utilisez P/Invoke, vous devez spécifier le chemin d’accès de la bibliothèque que vous établissez une liaison. Quand à l’aide d’iOS des bibliothèques partagées, vous pouvez soit coder en dur le chemin d’accès, ou vous pouvez utiliser les constantes de commodité, nous avons défini dans notre [classe Constants](https://developer.xamarin.com/api/type/Constants/), ces constantes doivent couvrir les bibliothèques iOS partagés.
+Lorsque vous utilisez P/Invoke, vous devez spécifier le chemin d’accès de la bibliothèque que vous établissez une liaison. Quand à l’aide d’iOS des bibliothèques partagées, vous pouvez soit coder en dur le chemin d’accès, ou vous pouvez utiliser les constantes de commodité, nous avons défini dans notre `Constants`, ces constantes doivent couvrir les bibliothèques iOS partagés.
 
 Par exemple, si vous souhaitez appeler la méthode UIRectFrameUsingBlendMode à partir de la bibliothèque de UIKit d’Apple qui possède cette signature dans C:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: edaf9d90e019729f69f721c0a92826c0148db8df
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 5611d673ecc7af896fd3a9e566e184e408b6b367
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669623"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870090"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Boutons d’action de notification dynamique dans Xamarin.iOS
 
@@ -131,15 +131,15 @@ propriété pour accéder et modifier des boutons d’action de la notification.
 Dans l’exemple d’application, contrôleur d’affichage de l’extension contenu notification modifie les boutons d’action uniquement lorsqu’il répond à un clic sur un bouton d’action existante.
 
 > [!NOTE]
-> Une extension de contenu peut répondre à un appui sur un bouton action dans son contrôleur d’affichage de notification [ `DidReceiveNotificationResponse` ](https://developer.xamarin.com/api/member/UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse/) méthode, déclarée dans le cadre de [IUNNotificationContentExtension](https://developer.xamarin.com/api/type/UserNotificationsUI.IUNNotificationContentExtension/).
+> Une extension de contenu peut répondre à un appui sur un bouton action dans son contrôleur d’affichage de notification [ `DidReceiveNotificationResponse` ](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) méthode, déclarée dans le cadre de [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
 > Même si elle porte le même nom avec le `DidReceiveNotificationResponse` méthode [décrite ci-dessus](#in-app-handling-of-notification-action-buttons), il s’agit d’une autre méthode.
 >
-> Une fois une extension de contenu de notification a terminé le traitement d’un appui sur un bouton, il peut choisir d’indiquer à l’application principale pour gérer ce même appui sur un bouton ou non. Pour ce faire, il doit passer une valeur appropriée de [UNNotificationContentExtensionResponseOption](https://developer.xamarin.com/api/type/UserNotificationsUI.UNNotificationContentExtensionResponseOption/) à son gestionnaire d’achèvement :
+> Une fois une extension de contenu de notification a terminé le traitement d’un appui sur un bouton, il peut choisir d’indiquer à l’application principale pour gérer ce même appui sur un bouton ou non. Pour ce faire, il doit passer une valeur appropriée de [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) à son gestionnaire d’achèvement :
 >
-> - [`Dismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.Dismiss/) Indique que l’interface de notification doit être fermée et que l’application principale n’a pas besoin gérer l’appui sur un bouton.
-> - [`DismissAndForwardAction`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DismissAndForwardAction/) Indique que l’interface de notification doit être fermée et que l’application principale doit également gérer l’appui sur un bouton.
-> - [`DoNotDismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DoNotDismiss/) Indique que l’interface de notification ne doit pas être fermée et que l’application principale n’a pas besoin gérer l’appui sur un bouton.
+> - `Dismiss` Indique que l’interface de notification doit être fermée et que l’application principale n’a pas besoin gérer l’appui sur un bouton.
+> - `DismissAndForwardAction` Indique que l’interface de notification doit être fermée et que l’application principale doit également gérer l’appui sur un bouton.
+> - `DoNotDismiss` Indique que l’interface de notification ne doit pas être fermée et que l’application principale n’a pas besoin gérer l’appui sur un bouton.
 
 L’extension de contenu `DidReceiveNotificationResponse` méthode détermine que l'on a cliqué sur le bouton d’action, fait pivoter l’image dans l’interface de la notification et affiche ou masque un **réinitialiser** bouton d’action :
 

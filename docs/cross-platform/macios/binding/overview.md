@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: 4f08468d08e12ad77cacbac66b55ad8fc6ead433
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: d29239d986ebfe153381915dbe0f4bfbbe738007
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667962"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870337"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Vue d’ensemble des liaisons Objective-C
 
@@ -88,7 +88,7 @@ namespace Example.Binding {
 }
 ```
 
-Troisièmement, passez en revue la documentation Objective-C et créer [ObjCRuntime.Selector](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) instances pour chaque sélecteur que vous souhaitez utiliser. Placez ceux-ci dans le corps de la classe :
+Troisièmement, passez en revue la documentation Objective-C et créer [ObjCRuntime.Selector](xref:ObjCRuntime.Selector) instances pour chaque sélecteur que vous souhaitez utiliser. Placez ceux-ci dans le corps de la classe :
 
 ```csharp
 static Selector selInit       = new Selector("init");
@@ -116,7 +116,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-Cinquièmement, fournissent des méthodes pour chacun des sélecteurs déclarées à l’étape 3. Ces filtres utilisent `objc_msgSend()` pour appeler le sélecteur sur l’objet natif. Notez l’utilisation de [Runtime.GetNSObject()](https://developer.xamarin.com/api/member/ObjCRuntime.Runtime.GetNSObject/(System.IntPtr)) pour convertir un `IntPtr` dans correctement typée `NSObject` (sub) type. Si vous souhaitez que la méthode puisse être appelée à partir du code Objective-C, le membre *doit* être **virtuel**.
+Cinquièmement, fournissent des méthodes pour chacun des sélecteurs déclarées à l’étape 3. Ces filtres utilisent `objc_msgSend()` pour appeler le sélecteur sur l’objet natif. Notez l’utilisation de [Runtime.GetNSObject()](xref:ObjCRuntime.Runtime.GetNSObject*) pour convertir un `IntPtr` dans correctement typée `NSObject` (sub) type. Si vous souhaitez que la méthode puisse être appelée à partir du code Objective-C, le membre *doit* être **virtuel**.
 
 ```csharp
 [Export("nextObject")]

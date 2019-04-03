@@ -1,5 +1,5 @@
 ---
-title: Effectuer la navigation dans une application Xamarin.Forms de plusieurs page
+title: Naviguer dans une application Xamarin.Forms de plusieurs pages
 description: Cet article explique comment activer l’application à page unique, capable de stocker une seule note, dans une application comportant plusieurs page, capable de stocker plusieurs notes.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: f3c5ec1c6d37c74fd9b4fb4980c68a59c9864c05
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.date: 04/01/2019
+ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197366"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854975"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Effectuer la Navigation dans une Application Xamarin.Forms de plusieurs pages
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 Dans ce démarrage rapide, vous allez apprendre comment :
 
@@ -39,7 +39,7 @@ Vous devez mener à bien le [démarrage rapide précédent](single-page.md) avan
 
 ## <a name="update-the-app-with-visual-studio"></a>Mettre à jour l’application avec Visual Studio
 
-1. Lancez Visual Studio. Sur la page de démarrage, cliquez sur **ouvrir un projet / Solution**, puis, dans le **ouvrir un projet** boîte de dialogue Sélectionnez le fichier de solution pour le projet de Notes :
+1. Lancez Visual Studio. Dans la fenêtre de démarrage, cliquez sur le **Notes** solution dans la liste des projets/solutions récentes, ou cliquez sur **ouvrir un projet ou une solution**, puis, dans le **ouvrir un projet/Solution** boîte de dialogue Sélectionnez le fichier de solution pour le projet de Notes :
 
     ![](multi-page-images/vs/open-solution.png "Ouvrir un projet")
 
@@ -285,9 +285,7 @@ Vous devez mener à bien le [démarrage rapide précédent](single-page.md) avan
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -324,7 +322,7 @@ Vous devez mener à bien le [démarrage rapide précédent](single-page.md) avan
 
 ## <a name="update-the-app-with-visual-studio-for-mac"></a>Mettre à jour l’application avec Visual Studio pour Mac
 
-1. Lancez Visual Studio pour Mac. Sur la page de démarrage, cliquez sur **ouvrir...** et dans la boîte de dialogue, sélectionnez le fichier de solution pour le projet de Notes :
+1. Lancez Visual Studio pour Mac. Dans la fenêtre de démarrage, cliquez sur **Open**et dans la boîte de dialogue, sélectionnez le fichier de solution pour le projet de Notes :
 
     ![](multi-page-images/vsmac/open-solution.png "Ouvrir une solution")
 
@@ -570,9 +568,7 @@ Vous devez mener à bien le [démarrage rapide précédent](single-page.md) avan
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -617,9 +613,9 @@ Dans ce démarrage rapide, vous avez appris comment :
 Pour modifier l’application afin qu’il stocke ses données dans une base de données locale SQLite.NET, continuer au démarrage rapide suivant.
 
 > [!div class="nextstepaction"]
-> [Next](database.md)
+> [Suivant](database.md)
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Notes (exemple)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+- [Notes de publication (exemple)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 - [Immersion dans Xamarin.Forms-démarrage rapide](deepdive.md)

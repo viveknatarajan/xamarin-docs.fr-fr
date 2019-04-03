@@ -1,17 +1,17 @@
 ---
 title: Prise en mainF#
-description: Ce document explique comment apprendre F# et utilisez-le pour créer des applications Xamarin avec Visual Studio 2017 et Visual Studio pour Mac.
+description: Ce document explique comment apprendre F# et utilisez-le pour créer des applications Xamarin avec Visual Studio 2019 et Visual Studio pour Mac.
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 044767d52588e48e563a40cb70ef0bfe910f9a3e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2f67983addd03a065383a2940d6e6dfc7076f2be
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112830"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854311"
 ---
 # <a name="getting-started-with-f35"></a>Bien démarrer avec F&#35;
 
@@ -50,8 +50,8 @@ Découvrez le [liste d’exemples de](~/cross-platform/platform/fsharp/samples.m
 
 Il existe une multitude d’informations en ligne pour l’obtention de se familiariser avec le F# language, couvrant tous les proficiencies. Vous trouverez ci-dessous quelques-unes de nos recommandations :
 
--  [F# Software Foundation](http://fsharp.org)
--  [Visual F# portail de développement](http://go.microsoft.com/fwlink/?LinkID=234174)
+-  [F#Software Foundation](http://fsharp.org)
+-  [Portail de développement Visual F#](http://go.microsoft.com/fwlink/?LinkID=234174)
 -  [Visual F# galerie de Code](http://go.microsoft.com/fwlink/?LinkID=124614)
 -  [Visual F# programmation mathématique/Stats](http://go.microsoft.com/fwlink/?LinkId=235173)
 -  [Visual F# graphiques](http://go.microsoft.com/fwlink/?LinkId=235176)

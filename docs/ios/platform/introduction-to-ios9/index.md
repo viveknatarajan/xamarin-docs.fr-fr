@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: becba36655a5247a11decb7dc54334f9397ecdfc
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233534"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870194"
 ---
 # <a name="introduction-to-ios-9"></a>Introduction à iOS 9
 
@@ -58,7 +58,7 @@ Pour en savoir plus sur les nouvelles possibilités de multitâche d’iOS 9, ve
 
 ## <a name="new-contacts-and-contacts-ui-frameworks"></a>Nouveaux Contacts et les infrastructures d’interface utilisateur de Contacts
 
-Avec l’introduction d’iOS 9, Apple a publié deux nouvelles infrastructures, [Contacts](https://developer.xamarin.com/api/namespace/Contacts/) et [ContactsUI](https://developer.xamarin.com/api/namespace/ContactsUI/), qui remplace le carnet d’adresses existante et les infrastructures d’interface utilisateur du livre adresse utilisés par iOS 8 et versions antérieures.
+Avec l’introduction d’iOS 9, Apple a publié deux nouvelles infrastructures, [Contacts](xref:Contacts) et [ContactsUI](xref:ContactsUI), qui remplace le carnet d’adresses existante et les infrastructures d’interface utilisateur du livre adresse utilisés par iOS 8 et versions antérieures.
 
 Ces infrastructures nouvelle, orienté objet fournit les informations suivantes :
 
@@ -103,7 +103,7 @@ Pour plus d’informations, consultez notre [jeu améliorations](~/ios/platform/
 
 ## <a name="homekit-framework-changes"></a>Modifications du Framework HomeKit
 
-Le [HomeKit](https://developer.xamarin.com/api/namespace/HomeKit/) framework, introduit dans iOS 8, fournit la possibilité de configurer et contrôler des accessoires HomeKit activé différents (par exemple, les lumières automatisés, ajoutant des verrous et porte de garage) à partir d’une application Xamarin.iOS. En plus facile à configurer et à configurer, des accessoires HomeKit peuvent être contrôlés via les commandes vocales de Siri.
+Le [HomeKit](xref:HomeKit) framework, introduit dans iOS 8, fournit la possibilité de configurer et contrôler des accessoires HomeKit activé différents (par exemple, les lumières automatisés, ajoutant des verrous et porte de garage) à partir d’une application Xamarin.iOS. En plus facile à configurer et à configurer, des accessoires HomeKit peuvent être contrôlés via les commandes vocales de Siri.
 
 Dans iOS 9, Apple a facilité le programme d’installation, développé les types d’accessoires pris en charge et fourni plus interactions accessoires (tels que le contrôle un accessoire à distance par le biais d’iCloud).
 
@@ -212,7 +212,7 @@ Consultez également les parties iOS de ces exemples (le Guide Mac OS X versions
 
 - [Exemples iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Introduction à la 3D Touch](~/ios/platform/3d-touch.md)
-- [Sécurité de transport de l’application](~/ios/app-fundamentals/ats.md)
+- [Sécurité de Transport de l’application](~/ios/app-fundamentals/ats.md)
 - [Multitâche pour iPad](~/ios/platform/multitasking.md)
 - [Contacts et l’interface utilisateur](~/ios/platform/contacts.md)
 - [Nouvelles API de recherche](~/ios/platform/search/index.md)
@@ -221,7 +221,7 @@ Consultez également les parties iOS de ces exemples (le Guide Mac OS X versions
 - [Améliorations de jeux](~/ios/platform/gaming/index.md)
 - [Présentation d’HomeKit](~/ios/platform/homekit.md)
 - [Introduction à la procédure de transfert](~/ios/platform/handoff.md)
-- [Modifications supplémentaires apportées à l’infrastructure iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [Modifications d’infrastructure supplémentaires iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [Résolution des problèmes](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [iOS 9 pour les développeurs](https://developer.apple.com/ios/pre-release/)
 - [Quelles sont les nouveautés dans iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

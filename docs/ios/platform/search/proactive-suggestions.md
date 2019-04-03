@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677896"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870402"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introduction aux Suggestions proactives dans Xamarin.iOS
 
@@ -51,7 +51,7 @@ Par exemple, si l’utilisateur entre du texte dans un champ de texte marqué `U
 
 ## <a name="media-based-suggestions"></a>Support en fonction des Suggestions
 
-Si l’application lit le média à l’aide du [MPPlayableContentManager](https://developer.xamarin.com/api/type/MediaPlayer.MPPlayableContentManager/) API, iOS 10 permet aux utilisateurs de visualiser la pochette d’album et lire des éléments multimédias via l’application sur l’écran de verrouillage.
+Si l’application lit le média à l’aide du [MPPlayableContentManager](xref:MediaPlayer.MPPlayableContentManager) API, iOS 10 permet aux utilisateurs de visualiser la pochette d’album et lire des éléments multimédias via l’application sur l’écran de verrouillage.
 
 ## <a name="contextual-siri-reminders"></a>Rappels de Siri contextuelles
 
@@ -63,12 +63,12 @@ Autorise l’application contacts (et les coordonnées associées) apparaissent 
 
 ## <a name="ride-sharing-based-suggestions"></a>Tour de partage en fonction des Suggestions
 
-Si une application de partage tour utilise le [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 présente en tant qu’option dans le sélecteur d’application lorsque l’utilisateur est susceptible de vouloir un tour. L’application doit également être enregistrée comme une application de partage de course, en spécifiant le `MKDirectionsModeRideShare` pour le [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) clés dans son `Info.plist` fichier.
+Si une application de partage tour utilise le [MKDirectionsRequest](xref:MapKit.MKDirectionsRequest) API, iOS 10 présente en tant qu’option dans le sélecteur d’application lorsque l’utilisateur est susceptible de vouloir un tour. L’application doit également être enregistrée comme une application de partage de course, en spécifiant le `MKDirectionsModeRideShare` pour le [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) clés dans son `Info.plist` fichier.
 
 Si l’application prend uniquement en charge le partage de tour, la suggestion système débuteriez avec *« Obtenir un tour à... »*, si d’autres types de routage direction (par exemple, Walking ou vélo) sont pris en charge, le système utilisera *« Get directions vers... »*
 
 > [!IMPORTANT]
-> Le [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) objet qui reçoit l’application peut ne pas inclure les informations de longitude et latitude et nécessitera géocodage.
+> Le [MKMapItem](xref:MapKit.MKMapItem) objet qui reçoit l’application peut ne pas inclure les informations de longitude et latitude et nécessitera géocodage.
 
 ## <a name="implementing-proactive-suggestions"></a>Implémentation de Suggestions proactives
 

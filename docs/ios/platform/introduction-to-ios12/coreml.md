@@ -1,5 +1,5 @@
 ---
-title: Core ML 2 dans Xamarin.iOS
+title: Core ML 2 in Xamarin.iOS
 description: Ce document décrit les mises à jour vers Core ML disponible dans le cadre d’e/s 12. En particulier, il examine les améliorations des performances associées à la nouvelle API de prédiction de lot.
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 2d62e42e755a0d3088283adb863dfd684ddeae28
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617577"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869726"
 ---
-# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 dans Xamarin.iOS
+# <a name="core-ml-2-in-xamarinios"></a>Core ML 2 in Xamarin.iOS
 
 Core ML est une technologie machine learning disponible sur iOS, macOS, tvOS et watchOS. Il permet aux applications de faire des prédictions basées sur des modèles d’apprentissage.
 
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for (boucle)
 
-Le `for` version de boucle du test naïvement itère sur le nombre spécifié d’entrées, appeler [ `GetPrediction` ](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/) pour chacun et en ignorant le résultat. La méthode fois la durée nécessaire pour rendre les prédictions :
+Le `for` version de boucle du test naïvement itère sur le nombre spécifié d’entrées, appeler [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) pour chacun et en ignorant le résultat. La méthode fois la durée nécessaire pour rendre les prédictions :
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,7 +94,7 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>GetPredictions (nouvelle API de lot)
 
-La version de lot du test crée un `MLArrayBatchProvider` objet à partir du tableau d’entrée (puisqu’il s’agit d’un paramètre d’entrée requis pour le `GetPredictions` (méthode)), crée un [`MLPredictionOptions`](https://developer.xamarin.com/api/type/CoreML.MLPredictionOptions/)
+La version de lot du test crée un `MLArrayBatchProvider` objet à partir du tableau d’entrée (puisqu’il s’agit d’un paramètre d’entrée requis pour le `GetPredictions` (méthode)), crée un [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
 objet qui empêche les calculs de prédiction soient restreintes à l’UC et utilise le `GetPredictions` API pour extraire les prédictions à nouveau en ignorant le résultat :
 
 ```csharp

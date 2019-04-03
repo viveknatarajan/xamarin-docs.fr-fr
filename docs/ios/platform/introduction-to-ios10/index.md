@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
+ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870246"
 ---
-
 # <a name="introduction-to-ios-10"></a>Introduction à iOS 10
 
 _Cet article présente tous les nouveaux et modifiés API et fonctionnalités disponibles dans iOS 10 pour les développeurs de Xamarin.iOS._
@@ -221,9 +226,9 @@ Pour en savoir plus, consultez notre [des modifications supplémentaires Framewo
 
 Les API suivantes ont été déconseillées dans iOS 10 :
 
-- Le `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` et `CKFetchRecordChangesOperation` classes ont été déconseillées dans CloudKit pour iOS 10. Utilisez le [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) et [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) classes (qui prennent en charge le partage des enregistrements) à la place.
-- Plusieurs [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) API (telles que des abonnements basés sur une requête et zone) ont été déconseillées. Utilisez le [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) et [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) API à la place.
-- [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) symboles relatifs au contenu omniprésent ont été déconseillées.
+- Le `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` et `CKFetchRecordChangesOperation` classes ont été déconseillées dans CloudKit pour iOS 10. Utilisez le [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) et [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) classes (qui prennent en charge le partage des enregistrements) à la place.
+- Plusieurs [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) API (telles que des abonnements basés sur une requête et zone) ont été déconseillées. Utilisez le [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) et [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) API à la place.
+- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) symboles relatifs au contenu omniprésent ont été déconseillées.
 - `ADBannerView`, `ADInterstitialAd` et les symboles dans le [UIViewController](xref:UIKit.UIViewController) classe ont été déconseillées.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) symboles relatifs aux valeurs à virgule flottante ont été déconseillées.
 - Le `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` et `UIUserNotificationSettings` classes de UIKit ont été déconseillées. Utilisez le [Notifications utilisateur](#user-notifications) framework à la place.

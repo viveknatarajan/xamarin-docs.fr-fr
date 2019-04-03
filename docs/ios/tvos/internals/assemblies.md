@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 3b5eae4d218fdc66f7f99f0aab8aa32af3cbabf4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: df50b4280335001f2d27ff23a91e4098eed3ba99
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667360"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870207"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Pris en charge des assemblys par Xamarin pour tvOS
 
@@ -28,7 +28,7 @@ Il s’agit d’une liste des assemblys pris en charge par Xamarin pour vos appl
 |Mono.Security.dll|1.0|API de chiffrement.|
 |monotouch.dll|1.0|Cet assembly contient la [liaison c# à l’API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
 |mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|OpenTK.dll|1.0|L’objet OpenGL/OpenAL orientée services API, [étendus pour fournir la prise en charge des appareils iPhone](https://developer.xamarin.com/api/namespace/OpenGLES/).|
+|OpenTK.dll|1.0|L’objet OpenGL/OpenAL orientée services API, [étendus pour fournir la prise en charge des appareils iPhone](xref:OpenGLES).|
 |System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), ainsi que des types à partir d’espaces de noms suivants : <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
 |System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.Data.dll|1.2|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx), [avec certaines fonctionnalités supprimées](~/ios/data-cloud/system.data.md).|

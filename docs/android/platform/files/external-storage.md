@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 846a8fd45b8e39fb11270374af47a5b6cb83fa01
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: 78051fce44239eea86948988a4d19ac37c5ea0d5
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666933"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854897"
 ---
 # <a name="external-storage"></a>Stockage externe
 
@@ -58,7 +58,7 @@ Le paramètre `GetExternalFilesDir()` est une chaîne qui spécifie un _réperto
 | DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
 | DirectoryDocuments | **_PRIVATE\_EXTERNAL\_STORAGE_/Documents** |
 | DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
-| DirectoryMusic | **_PRIVÉ\_externe\_stockage_/Music** |
+| DirectoryMusic | **_PRIVATE\_EXTERNAL\_STORAGE_/Music** |
 | DirectoryNotifications | **_PRIVATE\_EXTERNAL\_STORAGE_/Notifications** |
 | DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
 | DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
@@ -140,17 +140,17 @@ Toutes les applications Android doivent déclarer une des deux autorisations pou
 > [!NOTE]
 > Si l’utilisateur accorde `WRITE_EXTERNAL_STORAGE`, puis `READ_EXTERNAL_STORAGE` est également implicitement accordée. Il n’est pas nécessaire de demander des autorisations à la fois dans **AndroidManifest.xml**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 Les autorisations peuvent également être ajoutées à l’aide de la **manifeste Android** onglet de la **propriétés de la solution**:
 
-![Explorateur de solutions - autorisations requises pour Visual Studio 2017](./images/required-permissions.w157.png)
+![Explorateur de solutions - autorisations requises pour Visual Studio](./images/required-permissions.w157.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
 
 Les autorisations peuvent également être ajoutées à l’aide de la **manifeste Android** onglet de la **Panneau de propriétés de solution**:
 
-[![Panneau de solutions, des autorisations requises pour Visual Studio pour Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![Ssolution pavé - autorisations requises pour Visual Studio pour Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 

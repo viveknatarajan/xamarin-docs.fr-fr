@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: fb166b69c76ca4c87746358258d97f1cb81cb301
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0f06cf15d3a3ec7eae4742d5d037e233be46d08
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123224"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855183"
 ---
 # <a name="setup-windows-projects"></a>Projets d’installation Windows
 
@@ -22,7 +22,7 @@ Les solutions Xamarin.Forms plus anciennes (ou celles créées sur macOS) n’au
 
 ## <a name="add-a-universal-windows-platform-app"></a>Ajoutez un Windows Universal application de plateforme
 
-Vous devez être en cours d’exécution **Visual Studio 2017** sur **Windows 10** pour générer des applications UWP. Pour plus d’informations sur la plateforme Windows universelle, consultez [Introduction à la plateforme Windows universelle](/windows/uwp/get-started/universal-application-platform-guide/).
+**Visual Studio 2019** sur **Windows 10** est recommandé de créer des applications UWP. Pour plus d’informations sur la plateforme Windows universelle, consultez [Introduction à la plateforme Windows universelle](/windows/uwp/get-started/universal-application-platform-guide/).
 
 UWP est disponible dans Xamarin.Forms 2.1 et versions ultérieures, et Xamarin.Forms.Maps est pris en charge dans Xamarin.Forms 2.2 et versions ultérieures.
 
@@ -59,7 +59,7 @@ Xamarin.Forms.Forms.Init (e); // requires the `e` parameter
 
  7 . Dans le projet UWP, modifiez **MainPage.xaml** en supprimant le `Grid` contenus dans le `Page` élément.
 
- 8. Dans **MainPage.xaml**, ajoutez un nouveau `xmlns` entrée pour `Xamarin.Forms.Platform.UWP`:
+ 8 . Dans **MainPage.xaml**, ajoutez un nouveau `xmlns` entrée pour `Xamarin.Forms.Platform.UWP`:
 
 ```csharp
 xmlns:forms="using:Xamarin.Forms.Platform.UWP"
@@ -75,13 +75,13 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 </forms:WindowsPage>
 ```
 
- 10. Dans le projet UWP, modifiez **MainPage.xaml.cs** pour supprimer la `: Page` spécificateur d’héritage pour le nom de classe (dans la mesure où elle héritera de `WindowsPage` en raison de la modification apportée à l’étape précédente) :
+ 10 . Dans le projet UWP, modifiez **MainPage.xaml.cs** pour supprimer la `: Page` spécificateur d’héritage pour le nom de classe (dans la mesure où elle héritera de `WindowsPage` en raison de la modification apportée à l’étape précédente) :
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": Page"
 ```
 
- 11. Dans **MainPage.xaml.cs**, ajoutez le `LoadApplication` appeler dans le `MainPage` constructeur pour démarrer l’application Xamarin.Forms :
+ 11 . Dans **MainPage.xaml.cs**, ajoutez le `LoadApplication` appeler dans le `MainPage` constructeur pour démarrer l’application Xamarin.Forms :
 
 ```csharp
 // below this existing line
@@ -100,7 +100,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
   * Location
 -->
 
-12. Ajouter des ressources locales (par exemple). fichiers image) à partir des projets de plateforme existants qui sont nécessaires.
+12 . Ajouter des ressources locales (par exemple). fichiers image) à partir des projets de plateforme existants qui sont nécessaires.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 

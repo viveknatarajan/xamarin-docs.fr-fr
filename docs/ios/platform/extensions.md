@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: b21bf4da7cf862bd32e71708f9e3657f577682c2
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 25b27765a35310c5cdbaf5ae19902b1d19eff6ea
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677922"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870272"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensions iOS dans Xamarin.iOS
 
@@ -99,7 +99,7 @@ En outre, les projets de l’Extension exige les éléments suivants :
 
     ![](extensions-images/registerandprincipalclass.png)
 
-Les types spécifiques d’Extensions peuvent avoir des exigences supplémentaires. Par exemple, un **aujourd'hui** ou **centre de notifications** classe principal de l’Extension doit implémenter [INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/).
+Les types spécifiques d’Extensions peuvent avoir des exigences supplémentaires. Par exemple, un **aujourd'hui** ou **centre de notifications** classe principal de l’Extension doit implémenter [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
 > [!IMPORTANT]
 > Si vous démarrez votre projet en utilisant l’une les modèles d’Extensions fournis par Visual Studio pour Mac, la plupart (voire l’ensemble) ces exigences seront fournies et remplies pour vous automatiquement par le modèle.
@@ -462,5 +462,5 @@ Ce document a couvert les Extensions, ce qu’ils sont, le type de Points d’Ex
 
 ## <a name="related-links"></a>Liens connexes
 
-- [ContainerApp (sample)](https://developer.xamarin.com/samples/monotouch/intro-to-extensions)
+- [ContainerApp (exemple)](https://developer.xamarin.com/samples/monotouch/intro-to-extensions)
 - [Création d’extensions dans Xamarin.iOS (vidéo)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)

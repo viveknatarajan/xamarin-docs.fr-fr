@@ -1,19 +1,19 @@
 ---
-title: Installation de Xamarin dans Visual Studio 2017
-description: Ce document décrit comment installer Xamarin dans Visual Studio 2017. Il décrit la configuration requise, le processus d’installation et la vérification de l’installation.
+title: Installation de Xamarin dans Visual Studio 2019
+description: Ce document décrit comment installer Xamarin dans Visual Studio 2019. Il décrit la configuration requise, le processus d’installation et la vérification de l’installation.
 ms.prod: xamarin
 ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 62a10ca57b867255766c02616ee41e57ac166af3
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.openlocfilehash: 5d9f91300194eb45c5f5f3c52403660cf4898a19
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58071045"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58853974"
 ---
-# <a name="installing-xamarin-in-visual-studio-2017"></a>Installation de Xamarin dans Visual Studio 2017
+# <a name="installing-xamarin-in-visual-studio-2019"></a>Installation de Xamarin dans Visual Studio 2019
 
 <a name="requirements" />
 
@@ -23,19 +23,19 @@ Vérifiez la [configuration requise](~/cross-platform/get-started/requirements.m
 
 [!include[](~/cross-platform/includes/install-xamarin-windows.md)]
 
-Dans Visual Studio 2017, vérifiez que Xamarin est installé en cliquant sur le menu **Aide**. Si Xamarin est installé, vous devriez voir l’élément de menu **Xamarin**, comme dans cette capture d’écran :
+Dans Visual Studio 2019, vérifiez que Xamarin est installé en cliquant sur le **aide** menu. Si Xamarin est installé, vous devriez voir l’élément de menu **Xamarin**, comme dans cette capture d’écran :
 
 ![Élément de menu Xamarin dans le menu Aide](windows-images/12-xamarin-menu-item.png "Élément de menu Xamarin dans le menu Aide")
 
 Vous pouvez cliquer sur **Aide > À propos de Microsoft Visual Studio**, puis faire défiler la liste des produits installés pour voir si Xamarin y figure :
 
-![Visual Studio 2017 installé écran products](windows-images/13-xamarin-is-installed.png "Visual Studio 2017 installé écran products")
+![Visual Studio 2019 installé écran products](windows-images/13-xamarin-is-installed.png "Visual Studio 2019 installé écran products")
 
 Pour savoir où trouver les informations de version, consultez [Où trouver les informations de version et les journaux ?](~/cross-platform/troubleshooting/questions/version-logs.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-L’installation de Xamarin dans Visual Studio 2017 vous permet d’écrire du code pour vos applications. Toutefois, vous devrez procéder à une configuration supplémentaire pour générer et déployer vos applications sur un simulateur, un émulateur ou un appareil. Consultez les guides suivants pour terminer l’installation et commencer la création d’applications multiplateformes.
+Installation de Xamarin dans Visual Studio 2019 vous permet de commencer l’écriture de code pour vos applications, mais nécessite une configuration supplémentaire pour générer et déployer vos applications dans le simulateur, émulateur ou un périphérique. Consultez les guides suivants pour terminer l’installation et commencer la création d’applications multiplateformes.
 
 ### <a name="ios"></a>iOS
 
@@ -52,6 +52,6 @@ Pour plus d’informations, consultez le guide [Installation de Xamarin.iOS sur 
 Pour plus d’informations, consultez le guide [Installation de Xamarin.Android sur un système Windows](~/android/get-started/installation/windows.md).
 
 1. [Configuration de Xamarin.Android](~/android/get-started/installation/windows.md#configuration)
-2. [Utilisation de Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md?ide=vs)
-3. [Émulateur SDK Android](~/android/get-started/installation/android-emulator/index.md)
-4. [Configuration de l’appareil pour le développement](~/android/get-started/installation/set-up-device-for-development.md)
+2. [À l’aide du gestionnaire Xamarin Android SDK](~/android/get-started/installation/android-sdk.md?ide=vs)
+3. [Émulateur du kit Android SDK](~/android/get-started/installation/android-emulator/index.md)
+4. [Configurer un appareil pour le développement](~/android/get-started/installation/set-up-device-for-development.md)

@@ -1,21 +1,21 @@
 ---
 title: Bien démarrer avec C
-description: Ce document décrit comment utiliser l’incorporation de .NET pour incorporer du code .NET dans une application C. Elle explique comment utiliser l’incorporation de .NET dans Visual Studio 2017 et Visual Studio pour Mac.
+description: Ce document décrit comment utiliser l’incorporation de .NET pour incorporer du code .NET dans une application C. Elle explique comment utiliser l’incorporation de .NET dans Visual Studio 2019 et Visual Studio pour Mac.
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
 author: lobrien
 ms.author: laobri
 ms.date: 04/19/2018
-ms.openlocfilehash: 66475b7629f01b4229539e1edc323491a7861dfe
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 342ba2a6b51483983df7bd04034a4cef62fd57ff
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668398"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854910"
 ---
 # <a name="getting-started-with-c"></a>Bien démarrer avec C
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Pour utiliser l’incorporation de .NET avec C, vous aurez besoin d’un ordinateur Mac ou Windows qui exécute :
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fa8a48e165764a449af4bc5414d2e66aecea8269
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669191"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870142"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Procédure pas à pas - l’emplacement en arrière-plan dans Xamarin.iOS
 
@@ -72,7 +72,7 @@ Cette procédure pas à pas explique certaines clé backgrounding concepts, y co
     }
     ```
 
-    Le code ci-dessus définit un nombre de propriétés et les autorisations sur le [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) classe :
+    Le code ci-dessus définit un nombre de propriétés et les autorisations sur le [CLLocationManager](xref:CoreLocation.CLLocationManager) classe :
 
     - `PausesLocationUpdatesAutomatically` : Il s’agit d’une valeur booléenne qui peut être définie en fonction de si le système est autorisé à suspendre les mises à jour de l’emplacement. Sur certains appareils par défaut `true`, ce qui peut entraîner l’appareil arrêter de recevoir des mises à jour de l’emplacement après environ 15 minutes en arrière-plan.
     - `RequestAlwaysAuthorization` -Vous devez passer cette méthode pour permettre à l’utilisateur de l’application pour autoriser l’emplacement accessible en arrière-plan. `RequestWhenInUseAuthorization` peut également être passé si vous souhaitez donner à l’utilisateur de l’option pour autoriser l’emplacement accessible uniquement lorsque l’application est au premier plan.

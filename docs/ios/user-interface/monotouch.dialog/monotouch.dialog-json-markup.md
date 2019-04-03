@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 8edabfc6fa3988af0dd38dbfd9daeb1c4003c33e
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670764"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870129"
 ---
 # <a name="monotouchdialog-json-markup"></a>Balisage Json MonoTouch.Dialog
 
-Cette page décrit le balisage Json accepté par de MonoTouch.Dialog [JsonElement](https://developer.xamarin.com/api/type/MonoTouch.Dialog.JsonElement/)
+Cette page décrit le balisage Json accepté par de MonoTouch.Dialog [JsonElement](xref:MonoTouch.Dialog.JsonElement)
 
 Commençons par un exemple. Voici un fichier Json complet qui peut être passé dans JsonElement.
 
@@ -153,7 +153,7 @@ La section contient :
 
 -  `header` (facultatif)
 -  `footer` (facultatif)
--  Tableau `elements`
+-  `elements` array
 
 
  <a name="header" />

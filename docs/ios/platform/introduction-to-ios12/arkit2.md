@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 7f3c196eafd71e8571ea49a17784e5290e7ef44e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 559ef9cc9a3e5ace7a4023e81363825c6861f6d4
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233599"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870311"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 in Xamarin.iOS
 
@@ -394,7 +394,7 @@ Dans Xamarin, le type commun pour manipuler les matrices de transformation est `
 
 ![Visual Studio de ligne-champ colonne-major](images/arkit_row_vs_column.png)
 
-Cohérente avec le choix de l’interprétation de la matrice impérativement le comportement approprié. Dans la mesure où les matrices de transformation 3D sont 4 x 4, les erreurs de cohérence ne produira pas n’importe quel type d’exception lors de la compilation ou même de l’exécution, c’est que les opérations seront agir de façon inattendue. Si votre SceneKit / ARKit objets semblent être bloqué, piloter absent ou instabilité, une matrice de transformation incorrecte a de fortes chances. La solution est simple : [ `NMatrix4.Transpose` ](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) effectuera une transposition in situ d’éléments.
+Cohérente avec le choix de l’interprétation de la matrice impérativement le comportement approprié. Dans la mesure où les matrices de transformation 3D sont 4 x 4, les erreurs de cohérence ne produira pas n’importe quel type d’exception lors de la compilation ou même de l’exécution, c’est que les opérations seront agir de façon inattendue. Si votre SceneKit / ARKit objets semblent être bloqué, piloter absent ou instabilité, une matrice de transformation incorrecte a de fortes chances. La solution est simple : [ `NMatrix4.Transpose` ](xref:OpenTK.NMatrix4.Transpose*) effectuera une transposition in situ d’éléments.
 
 ## <a name="related-links"></a>Liens connexes
 

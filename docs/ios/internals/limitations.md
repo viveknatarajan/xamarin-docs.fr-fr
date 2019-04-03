@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668346"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870174"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitations de Xamarin.iOS
 
@@ -83,7 +83,7 @@ Cependant, l’API de réflexion entière, y compris Type.GetType (« someClass
 Pour appeler une fonction native via un délégué c#, les déclaration du délégué doivent être décorée avec l’un des attributs suivants :
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (de préférence, s’agissant d’inter-plateformes et compatible avec .NET Standard 1.1 +)
-- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+- [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 Ne parvient pas à fournir un de ces attributs entraîne une erreur d’exécution telles que :
 
@@ -100,8 +100,8 @@ Dans Mono standard, il est possible de passer des instances de délégué c# en 
 
 Dans Mono ces ponts sont implémentées par juste-à-temps compilateur. Lorsque l’utilisation du compilateur ahead of time requis par l’iPhone il existe deux limitations importantes à ce stade :
 
--  Vous devez marquer toutes vos méthodes de rappel avec la [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
--  Les méthodes doivent être des méthodes statiques, il n’est pas pris en charge par exemple méthodes. 
+-  Vous devez marquer toutes vos méthodes de rappel avec la [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
+-  Les méthodes doivent être des méthodes statiques, il n’est pas pris en charge par exemple méthodes.
  
 <a name="No_Remoting" />
 

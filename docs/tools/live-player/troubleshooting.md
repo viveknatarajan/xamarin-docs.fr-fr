@@ -6,18 +6,59 @@ ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: eb9d758d72febe0fc0b705d66246c99ade1fc80f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5eb0dcead230e0bb2e7d99241e5d8e5a4115f838
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109690"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855261"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Résolution des problèmes de Xamarin Live Player
 
 ![Fonctionnalité en version préliminaire](~/media/shared/preview.png)
 
-Cet article décrit certains problèmes courants et fournit des étapes pour les corriger.
+> [!NOTE]
+> Acteur de l’aperçu est uniquement disponible dans Visual Studio 2017.
+
+Cet article explique les limitations de Live Player et certains problèmes courants avec les étapes pour les corriger.
+
+## <a name="limitations-of-xamarin-live-player"></a>Limitations de Xamarin Live Player
+
+### <a name="ide-requirements"></a>Exigences de l’IDE
+
+L’aperçu instantané de lecteur est uniquement disponible dans Visual Studio 2017.
+
+### <a name="device-requirements"></a>Exigences de l’appareil
+
+L’application Xamarin Live Player prend en charge les appareils Android suivants :
+
+- Android 4.2 ou version ultérieure.
+- ARM-v7a, v8a de ARM, ARM64-v8a, x 86 ou x86_64 processeur.
+
+### <a name="ios-limitations"></a>limitations d’iOS
+
+Live Player n’est pas disponible pour iOS.
+
+### <a name="xamarinforms-limitations"></a>Limitations de Xamarin.Forms
+
+- Renderers personnalisés ne sont pas pris en charge.
+- Effets ne sont pas pris en charge.
+- Contrôles personnalisés avec des propriétés pouvant être liées personnalisés ne sont pas pris en charge.
+- Ressources incorporées ne sont pas pris en charge (ie. l’incorporation d’images ou autres ressources dans une bibliothèque de classes portable).
+- Infrastructures MVVM de tiers ne sont pas pris en charge (p. ex. Prism, Mvvm Cross, Mvvm Light, etc.).
+
+### <a name="other-project-type-limitations"></a>Autres limitations des types de projet
+
+- Live Player n’est pas destinée à être des projets Android natifs (qui utilisent Android XML pour l’interface utilisateur).
+
+### <a name="miscellaneous-limitations"></a>Autres limitations
+
+- Prise en charge pour la réflexion limitée (actuellement affecte certains packages NuGet populaires, telles que SQLite et Json.NET). Autres packages NuGet peut toujours être pris en charge.
+- Certaines classes système ne peut pas être remplacés (par exemple, vous ne peut pas implémenter une sous-classe).
+- Certaines fonctionnalités de plateforme qui nécessitent un approvisionnement ne fonctionnent pas dans l’application Xamarin Live Player (Toutefois il a été configuré pour les opérations courantes telles que l’accès de galerie de photos).
+- Cibles personnalisées et les étapes de génération sont ignorés. Par exemple, les outils tels que Fody, réajuster, AutoFac et AutoMapper ne peut pas être incorporées.
+- F#projets ne sont pas pris en charge.
+- Scénarios avancés avec des classes génériques personnalisés et les interfaces ne peuvent pas pris en charge.
 
 ## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>Appareil mobile ne se connecte pas après analyse code-barres (ou l’entrée de code)
 
@@ -30,7 +71,7 @@ Se produit lorsque le périphérique mobile Xamarin Live Player en cours d’ex�
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Message « Erreur lors de la tentative de déploiement » dans l’IDE
 
-**« Exception IOException : Impossible de lire les données à partir de la connexion de transport : susceptibles de bloquer l’opération sur un socket non bloquant »**
+**« Exception IOException : Impossible de lire les données à partir de la connexion de transport : Opération sur un socket non bloquant bloquerait »**
 
 Cette erreur se produite souvent lorsque le périphérique mobile Xamarin Live Player en cours d’exécution n’est pas sur le même réseau que l’ordinateur qui exécute Visual Studio. Cela se produit souvent lors de la connexion à un périphérique qui a été précédemment associé avec succès.
 
@@ -43,7 +84,7 @@ Cette erreur se produite souvent lorsque le périphérique mobile Xamarin Live P
 
 Si vous ne pouvez pas connecter à votre appareil via le Wi-Fi vous pouvez tenter de configurer manuellement votre appareil via le fichier de configuration, procédez comme suit :
 
-**Étape 1 : Ouvrez le fichier de configuration**
+**Étape 1 : Fichier de configuration ouvert**
 
 Accédez à votre dossier de données d’application :
 
@@ -52,21 +93,21 @@ Accédez à votre dossier de données d’application :
 
 Vous trouverez dans ce dossier **PlayerDeviceList.xml** si elle n’existe pas, vous devrez créer un.
 
-**Étape 2 : Obtenir l’adresse IP**
+**Étape 2 : Obtenir l’adresse IP**
 
 Dans l’application Xamarin Live Player, accédez à **sur > Test de connexion > Démarrer le Test connexion**.
 
 Prenez note de l’adresse IP, vous devez l’adresse IP répertoriée quand vous configurez votre appareil.
 
-**Étape 3 : Obtenir le code de jumelage**
+**Étape 3 : Obtenir le code de jumelage**
 
 À l’intérieur du drainage de Xamarin Live Player **paire** ou **paire à nouveau**, puis appuyez sur **saisir manuellement**. Un code numérique s’affichera, que vous devez mettre à jour le fichier de configuration.
 
-**Étape 4 : Générer des GUID**
+**Étape 4 : Générer des GUID**
 
 Accédez à : https://www.guidgenerator.com/online-guid-generator.aspx et générer un nouveau guid et assurez-vous qu’Upper Case est activée.
 
-**Étape 5 : Configurer l’appareil**
+**Étape 5 : Configurer l’appareil**
 
 Ouvrez le **PlayerDeviceList.xml** vers le haut dans un éditeur tel que Visual Studio ou Visual Studio Code. Vous devez configurer votre appareil manuellement dans ce fichier. Par défaut, le fichier doit contenir le vide suivant `Devices` élément XML :
 
@@ -119,9 +160,7 @@ Les fichiers AXML ne sont pas actuellement pris en charge dans Xamarin Live Play
 
 Les projets Android de Xamarin.Forms doivent utiliser « Toolbar.axml » et « Tabbar.axml » pour les noms des fichiers de disposition pertinentes. Le modèle par défaut utilise ces noms ; en les renommant entraîne des problèmes de rendu.
 
-Signalez les problèmes supplémentaires sur [bugzilla](https://aka.ms/live-player-report-issue).
-
 ## <a name="related-links"></a>Liens associés
 
-- [Limitations](~/tools/live-player/limitations.md)
 - [Installation](~/tools/live-player/install.md)
+- [Échantillons à utiliser avec Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)

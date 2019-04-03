@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
-ms.openlocfilehash: cdf115c4ea6d6613a1da2d0d2cfa14ed500086f8
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 2bef13e7f465dd213649f88deb572eb661895250
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209184"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854806"
 ---
 # <a name="wpf-platform-setup"></a>Programme d’installation de la plateforme WPF
 
@@ -21,7 +21,7 @@ ms.locfileid: "54209184"
 
 Xamarin.Forms prend désormais en charge de version préliminaire pour Windows Presentation Foundation (WPF). Cet article montre comment ajouter un projet WPF à une solution Xamarin.Forms.
 
-Avant de démarrer, créer une solution Xamarin.Forms dans Visual Studio 2017 ou utiliser une solution Xamarin.Forms existante, par exemple, [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/). Vous pouvez uniquement ajouter des applications WPF à une solution Xamarin.Forms dans Windows.
+Avant de démarrer, créer une solution Xamarin.Forms dans Visual Studio 2019 ou utiliser une solution Xamarin.Forms existante, par exemple, [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/). Vous pouvez uniquement ajouter des applications WPF à une solution Xamarin.Forms dans Windows.
 
 ## <a name="add-a-wpf-project-to-a-xamarinforms-app-with-xamarinuniversity"></a>Ajouter un projet WPF à une application Xamarin.Forms avec Xamarin.University
 
@@ -33,7 +33,7 @@ Avant de démarrer, créer une solution Xamarin.Forms dans Visual Studio 2017 ou
 
 Suivez ces instructions pour ajouter une application WPF qui s’exécutera sur les ordinateurs de bureau Windows 7, 8 et 10 :
 
-1. Dans Visual Studio 2017, cliquez sur le nom de la solution dans le **l’Explorateur de solutions** et choisissez **Ajouter > Nouveau projet...** .
+1. Dans Visual Studio 2019, cliquez sur le nom de la solution dans le **l’Explorateur de solutions** et choisissez **Ajouter > Nouveau projet...** .
 
 2. Dans le **nouveau projet** fenêtre, sélectionnez à gauche **Visual C#** et **bureau classique Windows**. Dans la liste des types de projets, choisissez **application WPF (.NET Framework)**. 
 
@@ -149,7 +149,7 @@ Vous pouvez ajuster la taille initiale de la fenêtre dans WPF **MainWindow.xaml
 Title="BoxViewClock" Height="450" Width="800"
 ```
 
-## <a name="issues"></a>Problèmes
+## <a name="issues"></a>Questions
 
 Il s’agit d’une version préliminaire, vous devez donc vous attendre que pas tout est prêt pour la production. Tous les packages NuGet pour Xamarin.Forms sont prêts pour WPF, et certaines fonctionnalités peuvent être entièrement ne fonctionne pas.
 

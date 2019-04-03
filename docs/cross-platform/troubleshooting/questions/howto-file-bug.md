@@ -1,5 +1,5 @@
 ---
-title: Quand et comment dois-je classer un rapport de bogues ?
+title: Quand et comment dois-je classer un rapport de bogues ?
 description: Ce document décrit quand, où et comment pour envoyer un rapport de bogue. Il fournit également les meilleures pratiques qui permettent aux ingénieurs de mieux diagnostiquer le problème de rapport de bogue.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,19 +7,19 @@ ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: conceptdev
 ms.author: crdun
 ms.date: 08/01/2018
-ms.openlocfilehash: f20740ff1e16187be3d3703b3da07329f6f52daf
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: 1224d38a2230fa2f5c7ca08f6e33c5468886c206
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514336"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855209"
 ---
-# <a name="when-and-how-should-i-file-a-bug-report"></a>Quand et comment dois-je classer un rapport de bogues ?
+# <a name="when-and-how-should-i-file-a-bug-report"></a>Quand et comment dois-je classer un rapport de bogues ?
 
 > [!TIP]
 > Utilisez le **signaler un problème** élément de menu dans Visual Studio &ndash; cela envoie des informations de diagnostic, ainsi que votre rapport de bogue pour aider à résoudre le problème.
 >
-> Il existe des instructions détaillées pour [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) et [Visual Studio pour Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
+> Il existe des instructions détaillées pour [Visual Studio 2019 ou Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio) et [Visual Studio pour Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
 >
 > Vous pouvez rechercher des rapports existants sur le [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) site Web.
 
@@ -47,7 +47,7 @@ Vous pouvez soigneusement décrire les symptômes visibles du problème, surtout
 
 ## <a name="additional-details"></a>Détails supplémentaires
 
-1. <a name="note-1" />[*^*](#ref-1) Dans l’idéal, la description des symptômes « visibles » doit inclure suffisamment de détails afin que les autres clients peuvent vérifier si elles rencontrent le même problème (messages d’erreur même, une dégradation des performances même, même trace de la pile d’un incident, _etc.._ ). Pour « circonstances précis », un bon exemple serait si vous pouvez dire quelque chose comme : « j’atteins normalement le problème 75 % du temps, mais si je modifie cette une chose puis me permet d’éviter le problème complètement. » Un autre exemple similaire d’un « circonstance précis » est si la mise à niveau vers une version antérieure de Xamarin s’arrête le problème.
+1. <a name="note-1" />[*^*](#ref-1) Dans l’idéal, la description des symptômes « visibles » doit inclure suffisamment de détails afin que les autres clients peuvent vérifier si elles rencontrent le même problème (messages d’erreur même, une dégradation des performances même, même trace de la pile d’un incident, _etc.._ ). « Les circonstances précis », un bon exemple serait si vous pouvez dire quelque chose comme : « J’ai normalement le problème se pose 75 % du temps, mais si je modifie cette une chose puis me permet d’éviter le problème complètement. » Un autre exemple similaire d’un « circonstance précis » est si la mise à niveau vers une version antérieure de Xamarin s’arrête le problème.
 
 1. <a name="note-2" />[*^*](#ref-2) Comme vous pouvez l’imaginer, des extraits de texte de l’erreur (ou tout autre texte descriptif unique) sont généralement les meilleurs termes de recherche. Si le rapport de bogue existant est incomplète, puis vous avez la possibilité ajouter des détails ou des fichiers à un nouveau, mieux rapport de bogue.
 

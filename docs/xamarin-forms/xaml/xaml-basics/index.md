@@ -7,26 +7,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: bd6013a0fc1d4f3dfc2d863860052310fed55e4d
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: e85eb64099ba60a2b3663730a6fb058efdac6c60
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292140"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854702"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Principes de base XAML de Xamarin.Forms
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 XAML (eXtensible Application Markup Language) : permet aux développeurs de définir des interfaces utilisateur dans les applications Xamarin.Forms à l’aide d’un balisage au lieu de code. XAML n’est jamais nécessaire dans un programme de Xamarin.Forms, mais il est souvent plus concise et plus visuelle cohérente à code équivalent et potentiellement compatible avec les outils. XAML est particulièrement bien adapté pour une utilisation avec l’architecture d’application populaires MVVM (Model-View-ViewModel) : XAML définit la vue qui est liée au code du ViewModel par le biais des liaisons de données basées sur XAML.
 
 ## <a name="xaml-basics-contents"></a>Contenu de principes de base XAML
 
-* [Vue d’ensemble](#Overview)
-* [Partie 1. Bien démarrer avec XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+* [Vue d'ensemble](#Overview)
+* [Partie 1. Bien démarrer avec XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 * [Partie 2. Syntaxe XAML essentielle](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 * [Partie 3. Extensions de balisage XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-* [Partie 4. Notions de base sur la liaison de données](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+* [Partie 4. Principes fondamentaux de liaison de données](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 * [Partie 5. À partir de la liaison de données à MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 En plus de ces articles principes fondamentaux de XAML, vous pouvez télécharger des chapitres du livre [création d’applications mobiles avec Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
@@ -41,28 +41,28 @@ Les rubriques XAML sont traitées plus en détail dans de nombreux chapitres du 
     <h4>Chapitre 7. Visual Studio XAML. Code</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf">Télécharger le PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md">Résumé</a></td>
+  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md">Récapitulatif</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
     <h4>Chapitre 8. Code et XAML en harmonie</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf">Télécharger le PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md">Résumé</a></td>
+  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md">Récapitulatif</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
     <h4>Chapitre 10. Extensions de balisage XAML</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf">Télécharger le PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md">Résumé</a></td>
+  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md">Récapitulatif</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
     <h4>Chapitre 18. MVVM</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf">Télécharger le PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md">Résumé</a></td></tr>
+  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md">Récapitulatif</a></td></tr>
 </table>
 
 Ces chapitres peuvent être [téléchargé gratuitement](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md).
@@ -89,7 +89,7 @@ Bien sûr, il existe également des inconvénients, principalement liées à des
 -  En général XAML ne peut pas instancier des classes qui ne définissent pas un constructeur sans paramètre. (Toutefois, il est parfois un moyen de contourner cette restriction.)
 -  En général XAML ne peut pas appeler des méthodes. (Là encore, cette restriction peut parfois être surmontée.)
 
-Il n’est pas encore un concepteur visuel pour la génération de XAML dans les applications Xamarin.Forms. Tous les XAML doit être écrit manuellement, mais il est un [Générateur d’aperçu XAML](~/xamarin-forms/xaml/xaml-previewer.md). Aux programmeurs de nouveau XAML souhaiterez souvent générer et exécuter leurs applications, en particulier après tout ce qui peut ne pas être évidemment correct. Même les développeurs avec beaucoup d’expérience dans XAML savent qu’expérimentation récompense.
+Il n’est pas encore un concepteur visuel pour la génération de XAML dans les applications Xamarin.Forms. Tous les XAML doit être écrit manuellement, mais il est un [Générateur d’aperçu XAML](~/xamarin-forms/xaml/xaml-previewer/index.md). Aux programmeurs de nouveau XAML souhaiterez souvent générer et exécuter leurs applications, en particulier après tout ce qui peut ne pas être évidemment correct. Même les développeurs avec beaucoup d’expérience dans XAML savent qu’expérimentation récompense.
 
 XAML est en fait de XML, mais le XAML a certaines fonctionnalités de syntaxe unique. Les plus importants sont :
 

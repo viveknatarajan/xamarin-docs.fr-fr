@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/20/2018
-ms.openlocfilehash: 0b3fb7d467ae64e2cbfdb61644b1537bc5ae1161
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 41f629739b06431a9b20548f61111bc31e911abb
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233066"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870038"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>À l’aide de l’infrastructure de langage naturel avec Xamarin.iOS
 
@@ -33,7 +33,7 @@ Cet exemple d’application montre comment utiliser l’infrastructure de langag
 
 ## <a name="recognizing-languages"></a>Reconnaissance des langues
 
-Le **module de reconnaissance** onglet de l’exemple d’application montre comment utiliser un [`NLLanguageRecognizer`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguageRecognizer/)
+Le **module de reconnaissance** onglet de l’exemple d’application montre comment utiliser un [`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
 pour déterminer la langue pour un bloc de texte.
 
 > [!NOTE]
@@ -43,8 +43,8 @@ pour déterminer la langue pour un bloc de texte.
 
 Appuyez sur la **langage** bouton pour identifier la langue dominante dans l’entrée utilisateur.
 
-Le `HandleDetermineLanguageButtonTap` méthode de la `LanguageRecognizerViewController` utilise le [`GetDominantLanguage`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage/)
-méthode d’un `NLLanguageRecognizer` pour extraire le [`NLLanguage`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguage/)
+Le `HandleDetermineLanguageButtonTap` méthode de la `LanguageRecognizerViewController` utilise le [`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
+méthode d’un `NLLanguageRecognizer` pour extraire le [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 pour la langue principale trouvée dans le texte :
 
 ```csharp
@@ -63,8 +63,8 @@ partial void HandleDetermineLanguageButtonTap(UIButton sender)
 
 Appuyez sur la **probabilités de langage** bouton pour extraire une liste des hypothèses de langage pour l’entrée utilisateur.
 
-Le `HandleLanguageProbabilitiesButtonTap` méthode de la `LanguageRecognizerViewController` classe instancie un `NLLanguageRecognizer` et lui demande de [`Process`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.Process/)
-texte de l’utilisateur. Il appelle ensuite le module de reconnaissance langage [`GetNativeLanguageHypotheses`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses)
+Le `HandleLanguageProbabilitiesButtonTap` méthode de la `LanguageRecognizerViewController` classe instancie un `NLLanguageRecognizer` et lui demande de [`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
+texte de l’utilisateur. Il appelle ensuite le module de reconnaissance langage [`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*)
 méthode qui extrait un dictionnaire de langues et les probabilités associées. Le `LanguageRecognizerTableViewController` classe restitue ensuite ces langages et les probabilités.
 
 ```csharp
@@ -141,16 +141,16 @@ Potentiels `NLLanguage` valeurs incluent :
 - `Urdu`
 - `Vietnamese`
 
-Une liste complète des langues prises en charge est disponible en tant que partie de la [`NLLanguage`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguage/)
+Une liste complète des langues prises en charge est disponible en tant que partie de la [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 documentation de l’API d’enum.
 
 ## <a name="tokenizing-text-into-words-sentences-and-paragraphs"></a>Création de jetons de texte en mots, des phrases et des paragraphes
 
-Le **Générateur de jetons** onglet de l’exemple d’application montre comment séparer un bloc de texte dans ses mots composant ou phrases avec un [ `NLTokenizer` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTokenizer/).
+Le **Générateur de jetons** onglet de l’exemple d’application montre comment séparer un bloc de texte dans ses mots composant ou phrases avec un [ `NLTokenizer` ](xref:NaturalLanguage.NLTokenizer).
 
 Appuyez sur la **mots** ou **phrases** bouton pour extraire une liste de jetons. Chaque jeton est associé à un mot ou une phrase dans le texte d’origine.
 
-`ShowTokens` fractionne l’entrée de l’utilisateur en jetons en appelant le [`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
+`ShowTokens` fractionne l’entrée de l’utilisateur en jetons en appelant le [`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
 méthode d’un `NLTokenizer`. Cette méthode retourne un tableau de [`NSValue`](xref:Foundation.NSValue)
 objets, chaque habillage un `NSRange` valeur correspondant à un jeton dans le texte d’origine.
 
@@ -182,7 +182,7 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 
 ## <a name="tagging-named-entities-and-parts-of-speech"></a>Balisage d’entités nommées et les parties du discours
 
-Le **Baliseur** onglet de l’exemple d’application XamarinNL montre comment utiliser la [`NLTagger`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTagger/)
+Le **Baliseur** onglet de l’exemple d’application XamarinNL montre comment utiliser la [`NLTagger`](xref:NaturalLanguage.NLTagger)
 classe permettant d’associer les catégories et les jetons d’une chaîne d’entrée.
 L’infrastructure de langage naturel inclut la prise en charge intégrée pour identifier les personnes, lieux, les organisations et grammaticales.
 
@@ -192,11 +192,11 @@ L’infrastructure de langage naturel inclut la prise en charge intégrée pour 
 Appuyez sur la **entités nommées** ou **grammaticales** bouton à extraire :
 
 - Un tableau de `NSValue` objets, chaque habillage un `NSRange` d’un jeton dans le texte d’origine.
-- Un tableau de [ `NLTag` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTag/) valeurs – catégories pour le `NSValue` jetons dans le même index de tableau.
+- Un tableau de [ `NLTag` ](xref:NaturalLanguage.NLTag) valeurs – catégories pour le `NSValue` jetons dans le même index de tableau.
 
-Dans `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` et `HandleNamedEntitiesButtonTap` chaque appel `ShowTags`, en passant le long d’un [ `NLTagScheme` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTagScheme/) – soit `NLTagScheme.LexicalClass` (pour les parties du discours) ou `NLTagScheme.NameType` (pour les entités nommées).
+Dans `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` et `HandleNamedEntitiesButtonTap` chaque appel `ShowTags`, en passant le long d’un [ `NLTagScheme` ](xref:NaturalLanguage.NLTagScheme) – soit `NLTagScheme.LexicalClass` (pour les parties du discours) ou `NLTagScheme.NameType` (pour les entités nommées).
 
-`ShowTags` Crée un `NLTagger`, elle l’instancie avec un tableau de `NLTagScheme` types pour laquelle il sera interrogé (dans ce cas, uniquement le passé dans `NLTagScheme` valeur). Il utilise ensuite le [`GetTags`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTagger.GetTags/)
+`ShowTags` Crée un `NLTagger`, elle l’instancie avec un tableau de `NLTagScheme` types pour laquelle il sera interrogé (dans ce cas, uniquement le passé dans `NLTagScheme` valeur). Il utilise ensuite le [`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
 méthode sur le `NLTagger` pour déterminer les balises pertinentes pour le texte dans l’entrée utilisateur.
 
 ```csharp
@@ -253,7 +253,7 @@ Potentiels `NLTag` valeurs incluent :
 - `Word`
 - `WordJoiner`
 
-Une liste complète des balises prises en charge est disponible en tant que partie de la [`NLTag`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTag/)
+Une liste complète des balises prises en charge est disponible en tant que partie de la [`NLTag`](xref:NaturalLanguage.NLTag)
 documentation de l’API d’enum.
 
 ## <a name="related-links"></a>Liens connexes

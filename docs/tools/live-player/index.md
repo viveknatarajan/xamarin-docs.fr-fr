@@ -6,12 +6,12 @@ ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
-ms.openlocfilehash: 75216eb5c5b471b8837da3635b1680cdf80a0bfe
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5b969c6118d1fa23558efaabc87cd53a920f3490
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118004"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855040"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player pour Xamarin.Forms
 
@@ -21,32 +21,27 @@ La version préliminaire Xamarin Live Player est conçue comme une mise en route
 
 ![Fonctionnalité en version préliminaire](~/media/shared/preview.png)
 
+> [!NOTE]
+> Acteur de l’aperçu est uniquement disponible dans Visual Studio 2017.
+
 ## <a name="get-started-with-xamarin-live-player"></a>Prise en main Xamarin Live Player
 
-[![Xamarin Live Player : Code, analyse, Test](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
+[![Xamarin Live Player : Test du code, analyse](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
 1. Télécharger l’application en suivant le [le programme d’installation de Xamarin Live Player](install.md) obtenir des instructions.
 2. Activer la *Xamarin Live Player* dans **préférences**, puis sélectionnez votre appareil à partir de la **appareils** liste.
 3. Gérer les appareils de Live Player pour scanner un code QR pour coupler votre appareil pour Visual Studio.
 4. L’application s’exécute directement sur votre téléphone ou tablette.
 
-## <a name="xamarin-live-player-setupinstallmd"></a>[Programme d’installation de Xamarin Live Player](install.md)
+## [<a name="xamarin-live-player-setup"></a>Programme d’installation de Xamarin Live Player](install.md)
 
 Télécharger Xamarin Live Player et configurer votre IDE pour l’utiliser avec les applications Xamarin.Forms à partir de Visual Studio 2017 ou Visual Studio pour Mac. 
 
-## <a name="xamarin-live-player-appplayermd"></a>[Application Xamarin Live Player](player.md)
+## [<a name="xamarin-live-player-app"></a>Application Xamarin Live Player](player.md)
 
 À l’aide de Xamarin Live Player application.
 
-## <a name="samples-to-try-with-xamarin-live-playersamplesmd"></a>[Exemples pour essayer avec Xamarin Live Player](samples.md)
-
-Liens vers des exemples à utiliser avec l’application Xamarin Live Player.
-
-## <a name="limitationslimitationsmd"></a>[Limitations](limitations.md)
-
-Xamarin Live Player comporte des restrictions sur les fonctionnalités, il peut prendre en charge.
-
-## <a name="troubleshootingtroubleshootingmd"></a>[Résolution des problèmes](troubleshooting.md)
+## [<a name="troubleshooting"></a>Résolution des problèmes](troubleshooting.md)
 
 Trouver de l’aide si des problèmes surgissent.
 

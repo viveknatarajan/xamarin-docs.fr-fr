@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 56456372b13dad5b5040c0c466f2efdf6ecdbc2a
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.openlocfilehash: 009e061726f655999c08192b5839a5c962d35e24
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58071019"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855092"
 ---
 # <a name="using-icloud-with-xamarinios"></a>À l’aide d’iCloud avec Xamarin.iOS
 
@@ -33,11 +33,11 @@ Ce document aborde les deux premiers types - paires clé-valeur et les sous-clas
 > [!IMPORTANT]
 > Apple [fournit des outils](https://developer.apple.com/support/allowing-users-to-manage-data/) pour aider les développeurs à gérer correctement le Règlement général sur la protection des données (RGPD) de l’Union européenne.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 - La dernière version stable de Xamarin.iOS
-- Xcode 8 ou version ultérieure
-- Visual Studio pour Mac ou Visual Studio 2017 et versions ultérieures.
+- Xcode 10
+- Visual Studio pour Mac ou Visual Studio 2019.
 
 ## <a name="preparing-for-icloud-development"></a>Préparation pour le développement d’iCloud
 
