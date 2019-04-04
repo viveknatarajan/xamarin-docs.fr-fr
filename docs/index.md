@@ -2,12 +2,18 @@
 layout: HubPage
 hide_bc: true
 title: Documentation de Xamarin
-description: 'Xamarin vous permet de créer des applications natives pour Android, iOS et macOS en utilisant du code .NET et des interfaces utilisateur spécifiques à la plateforme. Xamarin.Forms vous permet de créer des applications natives, avec du code d’interface utilisateur partagé écrit en C# ou XAML.'
+description: Xamarin vous permet de créer des applications natives pour Android, iOS et macOS en utilisant du code .NET et des interfaces utilisateur spécifiques à la plateforme. Xamarin.Forms vous permet de créer des applications natives, avec du code d’interface utilisateur partagé écrit en C# ou XAML.
 author: conceptdev
 ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
-  - clicktale
+- clicktale
+ms.openlocfilehash: ee92a3430fcce5bcd389d2bfa78762b71d1d5be9
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854000"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -170,7 +176,7 @@ Disposition de pile </a>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/label/index.yml">
                                                                         <img src="~/media/icons/i_form-label.svg" alt="">
-Étiquette </a>
+Etiquette </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/button/index.yml">
@@ -224,7 +230,7 @@ Base de données </a>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/web-service/index.yml">
                                                                         <img src="https://docs.microsoft.com/media/common/i_server.svg" alt="">
-Services Web </a>
+Services web </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -544,12 +550,12 @@ Mac</a>
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visual Studio 2017</h3>
-                                                    <p>En savoir plus sur le développement avec Visual Studio 2017.</p>
+                                                    <h3>Visual Studio 2019</h3>
+                                                    <p>En savoir plus sur le développement avec Visual Studio 2019.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -563,7 +569,7 @@ Mac</a>
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -737,19 +743,24 @@ Mac</a>
         <h2>Rester en contact avec nous</h2>
         <ul class="links">
            <li>
-                <a href="https://blog.xamarin.com/"> Blog </a>
+                <a href="https://blog.xamarin.com/">
+Blog </a>
             </li>
             <li>
-                <a href="https://forums.xamarin.com/"> Forums </a>
+                <a href="https://forums.xamarin.com/">
+Forums </a>
             </li>
             <li>
-                <a href="https://twitter.com/xamarinhq"> Twitter </a>
+                <a href="https://twitter.com/xamarinhq">
+Twitter </a>
             </li>
             <li>
-                <a href="https://stackoverflow.com/questions/tagged/xamarin"> Stack Overflow </a>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin">
+Dépassement de capacité de la pile </a>
             </li>
             <li>
-                <a href="https://dotnet.microsoft.com/platform/community"> Communauté des développeurs </a>
+                <a href="https://dotnet.microsoft.com/platform/community">
+Communauté des développeurs </a>
             </li>
         </ul>
     </div>

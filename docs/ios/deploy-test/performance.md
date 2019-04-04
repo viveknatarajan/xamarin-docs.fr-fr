@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671116"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870389"
 ---
 # <a name="xamarinios-performance"></a>Performances des applications Xamarin.iOS
 
@@ -101,11 +101,11 @@ container.AddSubview (new MyView (container));
 
 Ici, l’objet contenu ne maintient pas le parent actif. Toutefois, le parent maintient l’enfant actif via l’appel effectué à `container.AddSubView`.
 
-Cela se produit également dans les API iOS qui utilisent le modèle de délégué ou de source de données, où une classe homologue contient l’implémentation, par exemple quand vous définissez la propriété [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
-ou [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+Cela se produit également dans les API iOS qui utilisent le modèle de délégué ou de source de données, où une classe homologue contient l’implémentation, par exemple quand vous définissez la propriété [`Delegate`](xref:UIKit.UITableView.Delegate*)
+ou [`DataSource`](xref:UIKit.UITableView.DataSource*)
 dans la classe [`UITableView`](xref:UIKit.UITableView).
 
-Dans le cas de classes créées uniquement pour l’implémentation d’un protocole, par exemple [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), au lieu de créer une sous-classe, vous pouvez implémenter simplement l’interface dans la classe et remplacer la méthode, puis affecter à la propriété `DataSource` la valeur `this`.
+Dans le cas de classes créées uniquement pour l’implémentation d’un protocole, par exemple [`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource), au lieu de créer une sous-classe, vous pouvez implémenter simplement l’interface dans la classe et remplacer la méthode, puis affecter à la propriété `DataSource` la valeur `this`.
 
 #### <a name="weak-attribute"></a>Attribut faible
 
@@ -278,7 +278,7 @@ En particulier, le simulateur ne peut pas simuler les restrictions de mémoire o
 
 Les jeux ont tendance à avoir des boucles étroites pour l’exécution de la logique du jeu et l’actualisation de l’écran. Les fréquences d’images classiques vont de trente à soixante images par seconde. Certains développeurs estiment qu’ils doivent mettre à jour l’écran autant de fois que possible par seconde, en combinant leur simulation de jeu avec des mises à jour de l’écran. Ils sont donc parfois tentés d’aller au-delà de soixante images par seconde.
 
-Toutefois, le serveur d’affichage effectue des mises à jour de l’écran soixante fois par seconde, ce qui correspond à la limite maximale. Ainsi, toute tentative d’actualisation de l’écran qui dépasse cette limite peut entraîner des interruptions et des micro-saccades. Il est préférable de structurer le code pour que les actualisations de l’écran soient synchronisées avec l’actualisation de l’affichage. Pour ce faire, utilisez la classe [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/), qui représente un minuteur approprié aux tâches de visualisation et aux jeux s’exécutant à soixante images par seconde.
+Toutefois, le serveur d’affichage effectue des mises à jour de l’écran soixante fois par seconde, ce qui correspond à la limite maximale. Ainsi, toute tentative d’actualisation de l’écran qui dépasse cette limite peut entraîner des interruptions et des micro-saccades. Il est préférable de structurer le code pour que les actualisations de l’écran soient synchronisées avec l’actualisation de l’affichage. Pour ce faire, utilisez la classe [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink), qui représente un minuteur approprié aux tâches de visualisation et aux jeux s’exécutant à soixante images par seconde.
 
 ## <a name="avoid-core-animation-transparency"></a>Évitez la transparence Core Animation
 
@@ -294,4 +294,4 @@ Cet article a décrit et expliqué les techniques permettant d’accroître le n
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Performances entre plateformes](~/cross-platform/deploy-test/memory-perf-best-practices.md)
+- [Niveau de performance multiplateforme](~/cross-platform/deploy-test/memory-perf-best-practices.md)
