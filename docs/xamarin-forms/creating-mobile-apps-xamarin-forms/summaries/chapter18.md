@@ -1,22 +1,22 @@
 ---
 title: Résumé du chapitre 18. MVVM
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 18. MVVM'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 18. MVVM'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db837ac8bfa1b7a946ee606e9481f9feb2a8a31f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050116"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870220"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Résumé du chapitre 18. MVVM
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 Un des meilleurs moyens de concevoir une application est en séparant l’interface utilisateur à partir du code sous-jacent, ce qui est parfois appelé le *logique métier*. Plusieurs techniques existent, mais celui qui est adapté aux environnements basés sur le XAML est appelé Model-View-ViewModel ou MVVM.
 
@@ -87,7 +87,7 @@ Le `Button` éléments peuvent être facilement remplacées avec `TapGestureReco
 
 ### <a name="a-calculator-almost"></a>Une calculatrice, presque
 
-Le [ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) exemple rend utilisez à la fois le `Execute` et `CanExecute` méthodes de `ICommand`. Il utilise un [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) classe dans le [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) bibliothèque. Le ViewModel contient six propriétés de type `ICommand`. Celles-ci sont initialisées à partir de la [ `Command` constructeur](xref:Xamarin.Forms.Command.%23ctor(System.Action)) et [ `Command` constructeur](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de `Command` et le [ `Command<T>` constructeur](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command%3CT%3E.Command%3CT%3E/p/System.Action%7BT%7D/System.Func%7BT,System.Boolean%7D/) de `Command<T>`. Les touches numériques de la machine à additionner sont liés à la propriété qui est initialisée avec `Command<T>`et un `string` l’argument de `Execute` et `CanExecute` identifie la clé.
+Le [ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) exemple rend utilisez à la fois le `Execute` et `CanExecute` méthodes de `ICommand`. Il utilise un [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) classe dans le [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) bibliothèque. Le ViewModel contient six propriétés de type `ICommand`. Celles-ci sont initialisées à partir de la [ `Command` constructeur](xref:Xamarin.Forms.Command.%23ctor(System.Action)) et [ `Command` constructeur](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de `Command` et le [ `Command<T>` constructeur](https://docs.microsoft.com/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) de `Command<T>`. Les touches numériques de la machine à additionner sont liés à la propriété qui est initialisée avec `Command<T>`et un `string` l’argument de `Execute` et `CanExecute` identifie la clé.
 
 ## <a name="viewmodels-and-the-application-lifecycle"></a>ViewModels et le cycle de vie d’application
 

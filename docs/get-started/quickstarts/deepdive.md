@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 8674ef47867acf3bca4d05fd6628a58e2f9ad90e
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 67b189254cc08fac0323b7df5fcbab5abd994c05
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329362"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855014"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Immersion dans Xamarin.Forms-démarrage rapide
 
@@ -80,6 +80,7 @@ Le projet comprend également un certain nombre de fichiers :
 - **Models\Note.cs** – cette classe définit un `Note` modèle dont les instances stockent les données relatives à chaque note dans l’application.
 - **App.xaml** : balisage XAML pour la classe `App`, qui définit un dictionnaire de ressources pour l’application.
 - **App.xaml.cs** : code-behind pour la classe `App`, qui est chargé de l’instanciation de la première page affichée par l’application sur chaque plateforme et de la gestion des événements du cycle de vie de l’application.
+- **AssemblyInfo.cs** – ce fichier contient un attribut de l’application sur le projet, qui est appliqué au niveau de l’assembly.
 - **NotesPage.xaml** – balisage le XAML pour la `NotesPage` classe, qui définit l’interface utilisateur pour la page affichée lorsque l’application est lancée.
 - **NotesPage.xaml.cs** – le code-behind pour le `NotesPage` (classe), qui contient la logique métier qui est exécutée lorsque l’utilisateur interagit avec la page.
 - **NoteEntryPage.xaml** – balisage le XAML pour la `NoteEntryPage` classe, qui définit l’interface utilisateur pour la page affichée lorsque l’utilisateur entre une note.
@@ -106,9 +107,7 @@ Pour optimiser la réutilisation du code de démarrage, les applications Xamarin
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Notes
 {
     public partial class App : Application
@@ -123,7 +122,17 @@ namespace Notes
 }
 ```
 
-Ce code définit le `MainPage` propriété de la `App` classe à une [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) instance dont le contenu est un `NotesPage` instance. En outre, l’attribut [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) active le compilateur XAML afin que le code XAML soit compilé directement en langage intermédiaire. Pour plus d’informations, consultez [Compilation XAML](~/xamarin-forms/xaml/xamlc.md).
+Ce code définit le `MainPage` propriété de la `App` classe à une [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) instance dont le contenu est un `NotesPage` instance.
+
+En outre, le **AssemblyInfo.cs** fichier contient un attribut unique d’application, qui est appliqué au niveau de l’assembly :
+
+```csharp
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+```
+
+Le [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) attribut active sur le compilateur XAML, afin que XAML soit compilé directement en langage intermédiaire. Pour plus d’informations, consultez [Compilation XAML](~/xamarin-forms/xaml/xamlc.md).
 
 ## <a name="launching-the-application-on-each-platform"></a>Lancement de l’application sur chaque plateforme
 
@@ -523,11 +532,11 @@ Vous pouvez également consulter [_Creating Mobile Apps with Xamarin.Forms_](~/x
 
 ## <a name="related-links"></a>Liens connexes
 
-- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md)
+- [Langage de balisage d’Application eXtensible (XAML)](~/xamarin-forms/xaml/index.md)
 - [Liaison de données](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Informations de référence sur les contrôles](~/xamarin-forms/user-interface/controls/index.md)
 - [Extensions de balisage XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Exemples Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Exemples pour bien démarrer](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
-- [Informations de référence sur les API Xamarin.Forms](xref:Xamarin.Forms)
+- [Référence des API Xamarin.Forms](xref:Xamarin.Forms)
 - [Autoformation gratuite (vidéo)](https://university.xamarin.com/self-guided/)

@@ -1,22 +1,22 @@
 ---
 title: Résumé du chapitre 14. Disposition absolue
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 14. Disposition absolue'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 14. Disposition absolue'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: a67a2e12a12039755970a78739ea2ca3d2ffae08
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7371f134944d7492e51aa2d02247c0ab48345a47
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053488"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870233"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Résumé du chapitre 14. Disposition absolue
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
+[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
 Comme `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) dérive `Layout<View>` et hérite d’un `Children` propriété. `AbsoluteLayout` implémente un système de disposition qui exige que le programmeur spécifier les positions de ses enfants et, éventuellement, de leur taille. La position est spécifiée par le coin supérieur gauche de l’enfant par rapport à l’angle supérieur gauche de la `AbsoluteLayout` en unités indépendantes du périphérique. `AbsoluteLayout` implémente également une fonctionnalité de dimensionnement et de positionnement proportionnel.
 
@@ -26,7 +26,7 @@ Ce chapitre présente également la fonctionnalité importante de *attaché prop
 
 ## <a name="absolutelayout-in-code"></a>DispositionAbsolue dans le code
 
-Vous pouvez ajouter un enfant à la `Children` collection d’un `AbsoluteLayout` à l’aide de la norme [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) (méthode), mais `AbsoluteLayout` fournit également une étendue [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) méthode qui vous permet de spécifier un [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Un autre [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) méthode nécessite uniquement un [ `Point` ](xref:Xamarin.Forms.Point), auquel cas l’enfant n’est pas limitée et se redimensionne.
+Vous pouvez ajouter un enfant à la `Children` collection d’un `AbsoluteLayout` à l’aide de la norme [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) (méthode), mais `AbsoluteLayout` fournit également une étendue [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) méthode qui vous permet de spécifier un [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Un autre [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) méthode nécessite uniquement un [ `Point` ](xref:Xamarin.Forms.Point), auquel cas l’enfant n’est pas limitée et se redimensionne.
 
 Vous pouvez créer un `Rectangle` valeur avec un [constructeur](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)) qui requiert quatre valeurs &mdash; les deux premiers indiquant la position du coin supérieur gauche de l’enfant par rapport à son parent et les deux indiquant le taille de l’enfant. Vous pouvez également utiliser un [constructeur](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)) qui nécessite un `Point` et un [ `Size` ](xref:Xamarin.Forms.Size) valeur.
 

@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 87f59e9f0c2150291a43cdfee4fe6c5dfc2058f8
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 6a0fe95d6d471bfb464234f0540b8398acb22e6a
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57199775"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854767"
 ---
 # <a name="uninstalling-xamarin"></a>Désinstallation de Xamarin
 
@@ -27,9 +27,9 @@ Ce guide peut être utilisé pour désinstaller chaque produit individuellement 
 - [Xamarin.Android](#uninstallandroid)
 - [Xamarin.iOS](#uninstallios)
 - [Xamarin.Mac](#uninstallmac)
-- [Workbooks](#uninstallworkbooks)
+- [Classeurs](#uninstallworkbooks)
 - [Xamarin Profiler](#uninstallprofiler)
-- [Installer](#uninstallinstaller)
+- [Programme d’installation](#uninstallinstaller)
 
 > [!TIP]
 > Nous vous fournissons un [script de désinstallation](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) à utiliser lors de la suppression de Xamarin de votre machine macOS. Pour plus d’informations sur l’utilisation du script, consultez la section [Utilisation du script de désinstallation](#uninstallscript) de ce guide.
@@ -215,32 +215,32 @@ Pour exécuter le script, effectuez les étapes suivantes :
 
 Xamarin est pris en charge dans :
 
-- [Visual Studio 2017](#uninstallvs2017)
+- [Visual Studio 2019 et Visual Studio 2017](#uninstallvs2017)
 - [Visual Studio 2015](#uninstallvs2015)
 - [Visual Studio 2013](#uninstallvs2015) [**Non pris en charge**]
 - [Xamarin Studio](#uninstallxamarinstudio) [**Non pris en charge**]
 
 <a name="uninstallvs2017" />
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+### <a name="visual-studio-2019-and-visual-studio-2017"></a>Visual Studio 2019 et Visual Studio 2017
 
-Xamarin est désinstallé de Visual Studio 2017 en utilisant l’application Visual Studio Installer :
+Xamarin est désinstallé de Visual Studio 2019 et Visual Studio 2017 à l’aide de l’application du programme d’installation :
 
 1. Utilisez le **menu Démarrer** pour ouvrir **Visual Studio Installer**.
 
 2. Appuyez sur le bouton **Modifier** pour l’instance que vous souhaitez modifier.
 
-    [![](uninstalling-xamarin-images/vs2017-02-sml.png "Appuyer sur le bouton Modifier")](uninstalling-xamarin-images/vs2017-02.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-02-sml.png "Appuyez sur le bouton Modifier")](uninstalling-xamarin-images/vs2017-02.png#lightbox)
 
 3. Sous l’onglet **Charges de travail**, décochez l’option  **Développement mobile en .NET** (dans la section **Mobile et jeux**).
 
-    [![](uninstalling-xamarin-images/vs2017-03-sml.png "Décocher la charge de travail Développement mobile")](uninstalling-xamarin-images/vs2017-03.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-03-sml.png "Désactivez la charge de travail de développement Mobile")](uninstalling-xamarin-images/vs2017-03.png#lightbox)
 
 4. Cliquez sur le bouton **Modifier** situé en bas à droite de la fenêtre.
 
 5. Visual Studio Installer va supprimer les composants qui ont été désélectionnés (Visual Studio 2017 doit être fermé pour que Visual Studio Installer puisse apporter les modifications nécessaires).
 
-    [![](uninstalling-xamarin-images/vs2017-04-sml.png "Appuyer sur le bouton Modifier")](uninstalling-xamarin-images/vs2017-04.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-04-sml.png "Appuyez sur le bouton Modifier")](uninstalling-xamarin-images/vs2017-04.png#lightbox)
 
 Pour supprimer les composants Xamarin un à un (par exemple, Profiler ou Workbooks), accédez à l’onglet **Composants individuels** à l’étape 3, puis décochez les composants de votre choix :
 
@@ -248,7 +248,7 @@ Pour supprimer les composants Xamarin un à un (par exemple, Profiler ou Workboo
 
 Pour désinstaller entièrement Visual Studio 2017, choisissez **Désinstaller** dans le menu en regard du bouton **Lancer** (représenté par trois barres superposées).
 
-[![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Désinstaller entièrement Visual Studio")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
+[![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Désinstaller complètement Visual Studio")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
 > Si vous avez installé deux instances (ou plus) de Visual Studio côte à côte (SxS), par exemple une Version et une Préversion, la désinstallation d’une instance peut supprimer certaines fonctionnalités Xamarin de la ou des autres instances de Visual Studio, notamment :
@@ -273,7 +273,7 @@ Pour désinstaller intégralement Visual Studio 2015, utilisez [la réponse du 
 
 Sur les ordinateurs Windows, Xamarin peut être désinstallé via le **Panneau de configuration**. Accédez à **Programmes et fonctionnalités** ou à **Programmes > Désinstaller un programme**, comme illustré ci-dessous :
 
- [![](uninstalling-xamarin-images/image3.png "Accédez à Programmes et fonctionnalités ou à Désinstaller un programme, comme illustré ici")](uninstalling-xamarin-images/image3.png#lightbox) 
+ [![](uninstalling-xamarin-images/image3.png "Accédez à programmes et fonctionnalités ou à désinstaller un programme, comme illustré ici")](uninstalling-xamarin-images/image3.png#lightbox) 
 
 Dans le Panneau de configuration, désinstallez les éléments de votre choix présents ici :
 
@@ -340,7 +340,7 @@ Pour désinstaller Xamarin Studio, recherchez **Xamarin Studio 5.x.x** dans la 
 
 Pour désinstaller Xamarin Studio sur un système Mac, la première chose à faire est de localiser **Xamarin Studio.app** dans le répertoire **/Applications**, puis de le faire glisser dans la **Corbeille**. Vous pouvez aussi cliquer avec le bouton droit et sélectionner **Placer dans la Corbeille**, comme illustré ci-dessous :
 
- [![](uninstalling-xamarin-images/image1.png "Vous pouvez aussi cliquer avec le bouton droit et sélectionner Placer dans la Corbeille, comme illustré ici")](uninstalling-xamarin-images/image1.png#lightbox)
+ [![](uninstalling-xamarin-images/image1.png "Vous pouvez également, avec le bouton droit et sélectionnez Déplacer vers la Corbeille comme illustré ici")](uninstalling-xamarin-images/image1.png#lightbox)
 
 La suppression de ce bundle d’applications a pour effet de désinstaller Xamarin Studio. Toutefois, d’autres fichiers relatifs à Xamarin peuvent subsister dans le système de fichiers.
 
@@ -361,4 +361,4 @@ Cet article a fourni des instructions sur la désinstallation intégrale de Xama
 
 ## <a name="related-links"></a>Liens associés
 
-- [Désinstaller le script (échantillon)](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)
+- [Désinstaller le Script (exemple)](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)

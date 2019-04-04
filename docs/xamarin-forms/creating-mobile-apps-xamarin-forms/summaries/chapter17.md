@@ -1,22 +1,22 @@
 ---
 title: Résumé du chapitre 17. Maîtrise de la grille
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 17. Maîtrise de la grille'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 17. Maîtrise de la grille'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: dc9d57c0edf50f7fe5a7241e64cc727413004252
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050895"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869986"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Résumé du chapitre 17. Maîtrise de la grille
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 Le [ `Grid` ](xref:Xamarin.Forms.Grid) est un mécanisme de disposition puissants qui réorganise ses enfants en lignes et colonnes de cellules. Le code HTML similaire à la différence `table` élément, le `Grid` est destiné uniquement à des fins de disposition plutôt que de présentation.
 
@@ -68,11 +68,11 @@ Le `RowDefinitions` et `ColumnDefinitions` collections ne sont pas strictement o
 
 ### <a name="the-grid-in-code"></a>La grille dans le code
 
-Le [ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) exemple montre comment créer et remplir un `Grid` dans le code. Vous pouvez définir les propriétés jointes pour chaque enfant directement ou indirectement en appelant supplémentaires `Add` méthodes telles que [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) défini par le [Grid.IGridList<T> ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid+IGridList%3CT%3E/) interface.
+Le [ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) exemple montre comment créer et remplir un `Grid` dans le code. Vous pouvez définir les propriétés jointes pour chaque enfant directement ou indirectement en appelant supplémentaires `Add` méthodes telles que [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) défini par le [Grid.IGridList<T> ](xref:Xamarin.Forms.Grid.IGridList`1) interface.
 
 ### <a name="the-grid-bar-chart"></a>Le graphique à barres grille
 
-Le [ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) exemple montre comment ajouter plusieurs `BoxView` éléments à un `Grid` à l’aide de la majeure partie [ `AddHorizontal` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.AddHorizontal/p/System.Collections.Generic.IEnumerable%7BXamarin.Forms.View%7D/) (méthode). Par défaut, ces `BoxView` éléments ont la même largeur. La hauteur de chaque `BoxView` peut ensuite être contrôlé et ressemble à un graphique à barres.
+Le [ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) exemple montre comment ajouter plusieurs `BoxView` éléments à un `Grid` à l’aide de la majeure partie [ `AddHorizontal` ](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) (méthode). Par défaut, ces `BoxView` éléments ont la même largeur. La hauteur de chaque `BoxView` peut ensuite être contrôlé et ressemble à un graphique à barres.
 
 Le `Grid` dans le **GridBarChart** exemple partages un `AbsoluteLayout` parent avec initialement invisible `Frame`. Le programme définit également un `TapGestureRecognizer` sur chaque `BoxView` à utiliser le `Frame` pour afficher des informations sur la barre drainée.
 
@@ -108,4 +108,4 @@ Initialise le programme `Slider` éléments à une plage de 0 à 255 et utilise 
 
 - [Chapitre 17 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [Exemples de chapitre 17](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
-- [Grid](~/xamarin-forms/user-interface/layouts/grid.md)
+- [Grille](~/xamarin-forms/user-interface/layouts/grid.md)
