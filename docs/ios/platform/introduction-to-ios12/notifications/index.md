@@ -1,12 +1,18 @@
 ---
 title: Notifications dans iOS 12
-description: "Ce document des liens vers des guides qui expliquent comment utiliser diverses fonctionnalités liées aux notifications introduites dans iOS 12\_: notifications provisoires notifications groupées, notification, notifications interactives, la gestion des boutons d’action de notification dynamique alertes critiques et."
+description: 'Ce document des liens vers des guides qui expliquent comment utiliser diverses fonctionnalités liées aux notifications introduites dans iOS 12 : notifications provisoires notifications groupées, notification, notifications interactives, la gestion des boutons d’action de notification dynamique alertes critiques et.'
 ms.prod: xamarin
 ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
+ms.openlocfilehash: 8ee42c04c5d79bfd39c34550b5f77427af8f835d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668905"
 ---
 # <a name="notifications-in-ios-12"></a>Notifications dans iOS 12
 

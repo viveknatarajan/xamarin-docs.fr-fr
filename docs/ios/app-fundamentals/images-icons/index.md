@@ -1,14 +1,19 @@
 ---
 title: Images et icônes dans Xamarin.iOS
-description: 'Cette section inclut une variété d’articles abordons l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, lancez les écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées.'
+description: Cette section inclut une variété d’articles abordons l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, lancez les écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées.
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
+ms.openlocfilehash: f359da6b8744e03cfcbd77d48f5f77f216e828f8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670941"
 ---
-
 # <a name="images-and-icons-in-xamarinios"></a>Images et icônes dans Xamarin.iOS
 
 _Cette section inclut une variété d’articles abordons l’utilisation des images dans une application Xamarin.iOS, telles que leur utilisation sous forme d’icônes, lancez les écrans ou les inclure dans les contrôles et en fournissant des icônes pour les types de document personnalisées._

@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
+ms.openlocfilehash: 78908e1b1ad6d3f572ce45c8189d8f4ee48ad6ee
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666354"
 ---
-
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Comment utiliser Google Maps et un emplacement avec Xamarin.Android
 
 _Cet article explique comment utiliser des cartes et emplacement avec Xamarin.Android. Il couvre tout depuis en tirant parti de l’application des cartes intégrées à l’utilisation de la V2 mappe des API Android de Google directement._

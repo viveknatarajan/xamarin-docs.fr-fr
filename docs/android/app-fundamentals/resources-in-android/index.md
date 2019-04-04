@@ -1,14 +1,19 @@
 ---
 title: Ressources Android
-description: 'Cet article présente le concept de ressources Android dans Xamarin.Android et documentons comment les utiliser. Il explique comment utiliser des ressources dans votre application Android pour prendre en charge la localisation d’applications et plusieurs appareils, y compris les densités et tailles d’écran.'
+description: Cet article présente le concept de ressources Android dans Xamarin.Android et documentons comment les utiliser. Il explique comment utiliser des ressources dans votre application Android pour prendre en charge la localisation d’applications et plusieurs appareils, y compris les densités et tailles d’écran.
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
+ms.openlocfilehash: f14b3fd31fdda200f51f429367465677d389b1ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666355"
 ---
-
 # <a name="android-resources"></a>Ressources Android
 
 _Cet article présente le concept de ressources Android dans Xamarin.Android et documentons comment les utiliser. Il explique comment utiliser des ressources dans votre application Android pour prendre en charge la localisation d’applications et plusieurs appareils, y compris les densités et tailles d’écran._

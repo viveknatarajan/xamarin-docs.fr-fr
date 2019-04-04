@@ -1,14 +1,19 @@
 ---
 title: Bien démarrer avec Xamarin
-description: 'Ce document fournit des liens vers des guides qui décrivent comment bien démarrer avec le développement Xamarin. Le contenu lié explique comment générer une première application, fournit une introduction générale au développement mobile et examine les offres de formation avec Xamarin University.'
+description: Ce document fournit des liens vers des guides qui décrivent comment bien démarrer avec le développement Xamarin. Le contenu lié explique comment générer une première application, fournit une introduction générale au développement mobile et examine les offres de formation avec Xamarin University.
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
+ms.openlocfilehash: b9b48d83199f83c69a42785d4d0c4008a5c6a5e1
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197392"
 ---
-
 # <a name="building-mobile-apps"></a>Création d’applications mobiles
 
 Avant de commencer, consultez la [configuration requise](requirements.md) et les [instructions d’installation](~/get-started/installation/index.md) pour être sûr que tout est prêt.

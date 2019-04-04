@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
+ms.openlocfilehash: c553bd6d81e43913b6322b2ff85972a81b87f6cf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666409"
 ---
-
 # <a name="graphics-and-animation-in-ios"></a>Graphismes et Animation dans iOS
 
 ![Images/00_final_app.png](images/00-final-app.png "une exécution de l’application exemple")

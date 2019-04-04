@@ -1,14 +1,19 @@
 ---
 title: Fragments
-description: 'Android 3.0 a introduit des Fragments, en montrant comment prendre en charge des conceptions plus flexibles pour les nombreux différentes tailles d’écran trouvés sur les téléphones et tablettes. Cet article décrit comment utiliser des Fragments pour développer des applications Xamarin.Android et également prendre en charge les Fragments sur les appareils (11 de niveau API) 3.0 préalables à Android.'
+description: Android 3.0 a introduit des Fragments, en montrant comment prendre en charge des conceptions plus flexibles pour les nombreux différentes tailles d’écran trouvés sur les téléphones et tablettes. Cet article décrit comment utiliser des Fragments pour développer des applications Xamarin.Android et également prendre en charge les Fragments sur les appareils (11 de niveau API) 3.0 préalables à Android.
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
+ms.openlocfilehash: 4347ee40b0b72cc2d182ba1ef8f111212dd0ee47
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669724"
 ---
-
 # <a name="fragments"></a>Fragments
 
 _Android 3.0 a introduit des Fragments, en montrant comment prendre en charge des conceptions plus flexibles pour les nombreux différentes tailles d’écran trouvés sur les téléphones et tablettes. Cet article décrit comment utiliser des Fragments pour développer des applications Xamarin.Android et également prendre en charge les Fragments sur les appareils (11 de niveau API) 3.0 préalables à Android._

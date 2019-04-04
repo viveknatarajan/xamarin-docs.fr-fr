@@ -1,13 +1,18 @@
 ---
 title: Mise en route avec Objective-C
-description: 'Ce document décrit comment commencer à utiliser l’incorporation de .NET avec Objective-C. Il aborde la configuration requise, l’installation de l’incorporation de .NET à partir de NuGet et les plateformes prises en charge.'
+description: Ce document décrit comment commencer à utiliser l’incorporation de .NET avec Objective-C. Il aborde la configuration requise, l’installation de l’incorporation de .NET à partir de NuGet et les plateformes prises en charge.
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
+ms.openlocfilehash: 92b11db2ee566bcd9f3f8a3ee3771e163a47589b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670218"
 ---
-
 # <a name="getting-started-with-objective-c"></a>Mise en route avec Objective-C
 
 Il s’agit de la page de démarrage pour Objective-C, qui couvre les notions de base pour toutes les plateformes prises en charge.

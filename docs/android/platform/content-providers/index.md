@@ -1,14 +1,19 @@
 ---
 title: Introduction à Contentprovider
-description: 'Le système d’exploitation Android utilise des fournisseurs de contenu pour faciliter l’accès aux données partagées telles que des fichiers multimédias, les contacts et les informations de calendrier. Cet article présente la classe ContentProvider et fournit deux exemples illustrant comment l’utiliser.'
+description: Le système d’exploitation Android utilise des fournisseurs de contenu pour faciliter l’accès aux données partagées telles que des fichiers multimédias, les contacts et les informations de calendrier. Cet article présente la classe ContentProvider et fournit deux exemples illustrant comment l’utiliser.
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
+ms.openlocfilehash: 60f9420fc630bcfc44a6b19356b2315ac8bcd523
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670309"
 ---
-
 # <a name="intro-to-contentproviders"></a>Introduction à Contentprovider
 
 _Le système d’exploitation Android utilise des fournisseurs de contenu pour faciliter l’accès aux données partagées telles que des fichiers multimédias, les contacts et les informations de calendrier. Cet article présente la classe ContentProvider et fournit deux exemples illustrant comment l’utiliser._

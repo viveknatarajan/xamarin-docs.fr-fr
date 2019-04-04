@@ -1,14 +1,19 @@
 ---
 title: Introduction à MonoTouch.Dialog pour Xamarin.iOS
-description: 'Ce document décrit MonoTouch.Dialog (serveur maître cible. (D), une infrastructure pour le développement de l’interface utilisateur rapide et déclaratif avec Xamarin.iOS. Elle explique comment utiliser les APIs MonoTouch.Dialog pour créer une interface dans le code ou JSON et utiliser des fonctionnalités comme les extraire pour actualiser, recherche, chargement de l’image d’arrière-plan et bien plus encore.'
+description: Ce document décrit MonoTouch.Dialog (serveur maître cible. (D), une infrastructure pour le développement de l’interface utilisateur rapide et déclaratif avec Xamarin.iOS. Elle explique comment utiliser les APIs MonoTouch.Dialog pour créer une interface dans le code ou JSON et utiliser des fonctionnalités comme les extraire pour actualiser, recherche, chargement de l’image d’arrière-plan et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
+ms.openlocfilehash: d5dda3cc22d91248cc31cc526e898a5eabbbefd0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670135"
 ---
-
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introduction à MonoTouch.Dialog pour Xamarin.iOS
 
 MonoTouch.Dialog, appelé par le serveur cible maître. D pour faire court, est un kit de développement de l’interface utilisateur rapid qui permet aux développeurs de créer des écrans de l’application et de navigation à l’aide des informations plutôt que de la création de contrôleurs d’affichage, des tables, etc. fastidieuses. Par conséquent, il fournit une simplification significative de la réduction de développement et le code de l’interface utilisateur. Par exemple, considérez la capture d’écran suivante :

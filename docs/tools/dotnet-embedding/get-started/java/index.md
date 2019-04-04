@@ -1,13 +1,18 @@
 ---
 title: Mise en route avec Java
-description: 'Ce document décrit la prise en main à l’aide de l’incorporation de .NET avec Java. Il aborde la configuration système requise, installation et plateformes prises en charge.'
+description: Ce document décrit la prise en main à l’aide de l’incorporation de .NET avec Java. Il aborde la configuration système requise, installation et plateformes prises en charge.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
+ms.openlocfilehash: 79a483743946c4f7509833867f2afe4b1e055183
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667176"
 ---
-
 # <a name="getting-started-with-java"></a>Mise en route avec Java
 
 Il s’agit de la page de démarrage pour Java, qui couvre les notions de base pour toutes les plateformes prises en charge.
