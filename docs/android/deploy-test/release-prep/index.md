@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
+ms.openlocfilehash: 605db1c2e0dc0cf41288f9d6c9252582ce91d525
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58071062"
 ---
-
 # <a name="preparing-an-application-for-release"></a>Préparation d’une application pour la mise en production
 
 Une fois qu’une application a été codée et testée, il est nécessaire de préparer un paquet pour la distribution. La première tâche de préparation de ce package consiste à générer l’application à mettre en production, ce qui implique principalement de définir différents attributs d’application.

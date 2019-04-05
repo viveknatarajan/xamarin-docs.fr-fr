@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 4b50d230be642466de68c54957a3fe9a79c1093b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670942"
 ---
-
 # <a name="publishing-an-application"></a>Publication d'une application
 
 Vous avez créé une superbe application et des personnes voudront maintenant l’utiliser. Cette section décrit les étapes de la distribution publique d’une application créée avec Xamarin.Android via des canaux comme les e-mails, un serveur web privé, Google Play ou Amazon Appstore pour Android.

@@ -1,14 +1,19 @@
 ---
 title: Introduction aux Storyboards dans Xamarin.iOS
-description: 'Ce document fournit une introduction aux storyboards dans Xamarin.iOS. Il décrit l’utilisation d’une table de montage séquentiel pour définir une interface utilisateur, enchaînements et comment utiliser le concepteur iOS pour modifier des fichiers de la table de montage séquentiel.'
+description: Ce document fournit une introduction aux storyboards dans Xamarin.iOS. Il décrit l’utilisation d’une table de montage séquentiel pour définir une interface utilisateur, enchaînements et comment utiliser le concepteur iOS pour modifier des fichiers de la table de montage séquentiel.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
+ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071110"
 ---
-
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introduction aux Storyboards dans Xamarin.iOS
 
 Dans ce guide, nous allons expliquer quelles un Storyboard est et examiner certains des composants clés, tels que Segues. Nous allons étudier comment les Storyboards peuvent être créés et utilisés, et quels sont les avantages que qu’ils utilisent pour un développeur.

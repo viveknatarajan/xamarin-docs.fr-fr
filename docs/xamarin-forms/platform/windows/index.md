@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
+ms.openlocfilehash: 9367e22ede733ee2d93feccc001836fb4dc02564
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507108"
 ---
-
 # <a name="windows-platform-features"></a>Fonctionnalités de la plateforme Windows
 
 Développement d’applications Xamarin.Forms pour les plateformes Windows requiert Visual Studio. Le [page spécifications](~/get-started/requirements.md) contient plus d’informations sur les conditions préalables.
