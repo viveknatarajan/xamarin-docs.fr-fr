@@ -49,9 +49,9 @@ Contrairement aux tables traditionnelles, `Grid` ne déduit pas le nombre et la 
 
 Les informations de ligne et de colonne sont stockées dans `Grid`de `RowDefinitions`  &  `ColumnDefinitions` propriétés, qui sont des collections de chaque de [ `RowDefinition` ](xref:Xamarin.Forms.RowDefinition) et [ `ColumnDefinition` ](xref:Xamarin.Forms.ColumnDefinition)des objets, respectivement. `RowDefinition` a une propriété unique, `Height`, et `ColumnDefinition` a une propriété unique, `Width`. Les options pour la hauteur et la largeur sont les suivantes :
 
-- **Auto** &ndash; automatiquement les tailles en fonction du contenu dans la ligne ou colonne. Spécifié en tant que [ `GridUnitType.Auto` ](xref:Xamarin.Forms.GridUnitType) en c# ou en tant que `Auto` dans XAML.
-- **Proportional(*)** &ndash; tailles des colonnes et des lignes sous forme de proportion de l’espace restant. Spécifié comme valeur et `GridUnitType.Star` en c# et en tant que `#*` dans XAML, avec `#` en cours de la valeur souhaitée. Spécification d’une ligne/colonne avec `*` entraîne remplir l’espace disponible.
-- **Absolu** &ndash; tailles des colonnes et des lignes avec des valeurs de hauteur et largeur fixes, spécifiques. Spécifié comme valeur et `GridUnitType.Absolute` en c# et en tant que `#` dans XAML, avec `#` en cours de la valeur souhaitée.
+- **Auto** &ndash; automatiquement les tailles en fonction du contenu dans la ligne ou colonne. Spécifié en tant que [ `GridUnitType.Auto` ](xref:Xamarin.Forms.GridUnitType) en C# ou en tant que `Auto` dans XAML.
+- **Proportional(*)** &ndash; tailles des colonnes et des lignes sous forme de proportion de l’espace restant. Spécifié comme valeur et `GridUnitType.Star` en C# et en tant que `#*` dans XAML, avec `#` en cours de la valeur souhaitée. Spécification d’une ligne/colonne avec `*` entraîne remplir l’espace disponible.
+- **Absolu** &ndash; tailles des colonnes et des lignes avec des valeurs de hauteur et largeur fixes, spécifiques. Spécifié comme valeur et `GridUnitType.Absolute` en C# et en tant que `#` dans XAML, avec `#` en cours de la valeur souhaitée.
 
 > [!NOTE]
 > Les valeurs de la largeur pour les colonnes sont définies comme `*` par défaut dans Xamarin.Forms, ce qui garantit que la colonne remplissent l’espace disponible. Les valeurs de la hauteur des lignes sont également définies en tant que `*` par défaut. 
@@ -190,7 +190,7 @@ Notez que le bouton 0 s’étend sur deux colonnes, tout comme sur les calculatr
 <Button Text = "0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
 ```
 
-Et en c# :
+Et en C# :
 
 ```csharp
 Button zeroButton = new Button { Text = "0" };
@@ -294,7 +294,7 @@ BackgroundColor="#404040">
 
 Notez qu’à la fois l’étiquette en haut de la grille et le bouton zéro sont occuping et plusieurs colonnes. Bien qu’une disposition semblable peut être effectuée à l’aide de grilles imbriquées, le `ColumnSpan`  &  `RowSpan` approche est plus simple.
 
-L’implémentation c# :
+L’implémentation C# :
 
 ```csharp
 public CalculatorGridCode ()

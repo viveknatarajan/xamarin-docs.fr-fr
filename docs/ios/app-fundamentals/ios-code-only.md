@@ -42,7 +42,7 @@ Ces hiérarchies d’affichage peuvent être construites à l’aide de la [conc
 
 ## <a name="ios-blank-project-template"></a>modèle de nouveau projet iOS
 
-Tout d’abord, créez un projet iOS dans Visual Studio en utilisant le **fichier > Nouveau projet > Visual c# > iPhone & iPad > application iOS (Xamarin)** projet, illustré ci-dessous :
+Tout d’abord, créez un projet iOS dans Visual Studio en utilisant le **fichier > Nouveau projet > Visual C# > iPhone & iPad > application iOS (Xamarin)** projet, illustré ci-dessous :
 
 [![Boîte de dialogue Nouveau projet](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 

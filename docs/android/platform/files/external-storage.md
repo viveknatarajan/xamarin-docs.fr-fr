@@ -172,7 +172,7 @@ $ adb shell pm revoke com.companyname.app android.permission.WRITE_EXTERNAL_STOR
 
 ## <a name="deleting-files"></a>Suppression de fichiers
 
-Un de la norme c# API peuvent être utilisées pour supprimer un fichier à partir d’un stockage externe, tel que [ `System.IO.File.Delete` ](xref:System.IO.File.Delete*). Il est également possible d’utiliser les API Java au détriment de la portabilité du code. Exemple :
+Un de la norme C# API peuvent être utilisées pour supprimer un fichier à partir d’un stockage externe, tel que [ `System.IO.File.Delete` ](xref:System.IO.File.Delete*). Il est également possible d’utiliser les API Java au détriment de la portabilité du code. Exemple :
 
 ```csharp
 System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/files/count.txt");

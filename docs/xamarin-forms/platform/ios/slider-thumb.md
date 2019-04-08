@@ -30,7 +30,7 @@ Cette spécifiques à la plateforme iOS permet la [ `Slider.Value` ](xref:Xamari
 </ContentPage>
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

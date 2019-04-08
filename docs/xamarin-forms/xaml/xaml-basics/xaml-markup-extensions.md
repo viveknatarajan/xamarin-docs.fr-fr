@@ -389,7 +389,7 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-Vous aurez besoin des déclarations d’espace de noms XML supplémentaires pour accéder aux autres classes. Chaque déclaration d’espace de noms XML supplémentaire définit un nouveau préfixe. Pour accéder aux classes locales à la bibliothèque .NET Standard d’applications partagé, tel que `AppConstants`, les programmeurs XAML utilisent souvent le préfixe `local`. La déclaration d’espace de noms doit indiquer le nom d’espace de noms CLR (Common Language Runtime), également connu sous l’espace de noms nom .NET, qui est le nom qui apparaît dans le langage c# `namespace` définition ou dans un `using` directive :
+Vous aurez besoin des déclarations d’espace de noms XML supplémentaires pour accéder aux autres classes. Chaque déclaration d’espace de noms XML supplémentaire définit un nouveau préfixe. Pour accéder aux classes locales à la bibliothèque .NET Standard d’applications partagé, tel que `AppConstants`, les programmeurs XAML utilisent souvent le préfixe `local`. La déclaration d’espace de noms doit indiquer le nom d’espace de noms CLR (Common Language Runtime), également connu sous l’espace de noms nom .NET, qui est le nom qui apparaît dans le langage C# `namespace` définition ou dans un `using` directive :
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"

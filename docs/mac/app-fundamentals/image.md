@@ -1,6 +1,6 @@
 ---
 title: Images dans Xamarin.Mac
-description: Cet article aborde l’utilisation des images et icônes dans une application Xamarin.Mac. Il décrit la création et la gestion des images nécessaires pour créer l’icône de votre application et l’utilisation d’images dans le code c# et Interface Builder de Xcode.
+description: Cet article aborde l’utilisation des images et icônes dans une application Xamarin.Mac. Il décrit la création et la gestion des images nécessaires pour créer l’icône de votre application et l’utilisation d’images dans le code C# et Interface Builder de Xcode.
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
@@ -16,11 +16,11 @@ ms.locfileid: "54841378"
 ---
 # <a name="images-in-xamarinmac"></a>Images dans Xamarin.Mac
 
-_Cet article aborde l’utilisation des images et icônes dans une application Xamarin.Mac. Il décrit la création et la gestion des images nécessaires pour créer l’icône de votre application et l’utilisation d’images dans le code c# et Interface Builder de Xcode._
+_Cet article aborde l’utilisation des images et icônes dans une application Xamarin.Mac. Il décrit la création et la gestion des images nécessaires pour créer l’icône de votre application et l’utilisation d’images dans le code C# et Interface Builder de Xcode._
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Lorsque vous travaillez avec c# et .NET dans une application Xamarin.Mac, vous avez accès à la même Image et l’icône des outils fournis par un développeur qui travaille *Objective-C* et *Xcode* est.
+Lorsque vous travaillez avec C# et .NET dans une application Xamarin.Mac, vous avez accès à la même Image et l’icône des outils fournis par un développeur qui travaille *Objective-C* et *Xcode* est.
 
 Il existe plusieurs façons de cette image actifs sont utilisés à l’intérieur d’une application macOS (anciennement Mac OS X). À partir de simplement afficher une image dans le cadre de l’interface utilisateur de votre application, affectez à un contrôle d’interface utilisateur comme une barre d’outils ou un élément de liste Source, à la fourniture des icônes, Xamarin.Mac permet de facilement ajouter des illustrations exceptionnelles à vos applications de macOS comme suit : 
 
@@ -107,7 +107,7 @@ Pour ajouter un nouveau catalogue de ressources à votre projet :
 > [!IMPORTANT]
 > Cette méthode d’utilisation des images dans une application macOS a été déconseillée par Apple. Vous devez utiliser [ensembles d’images catalogue Asset](#asset-catalogs) au Gestionnaire de votre application d’images à la place.
 
-Avant de pouvoir utiliser un fichier Image dans votre application Xamarin.Mac (soit en code c# ou à partir de l’Interface Builder) il doit être inclus dans le projet **ressources** dossier comme un **groupe de ressources**. Pour ajouter un fichier à un projet, procédez comme suit :
+Avant de pouvoir utiliser un fichier Image dans votre application Xamarin.Mac (soit en code C# ou à partir de l’Interface Builder) il doit être inclus dans le projet **ressources** dossier comme un **groupe de ressources**. Pour ajouter un fichier à un projet, procédez comme suit :
 
 1. Avec le bouton droit sur le **ressources** dossier dans votre projet dans le **panneau solutions** et sélectionnez **ajouter** > **ajouter des fichiers...** : 
 
@@ -147,7 +147,7 @@ Lors de l’ajout à un projet, qu’ils apparaîtraient comme suit :
 
 ![Les fichiers image dans le panneau Solution](image-images/add03.png "les fichiers image dans le panneau Solution")
 
-Lorsqu’une image est affectée à un élément d’interface utilisateur dans l’Interface Builder choisis simplement le fichier dans le _ImageName_**.** _nomfichier-extension_ format (exemple : **tags.png**). Identiques pour l’utilisation d’une image dans le code c#, vous allez choisir le fichier dans le _ImageName_**.** _nomfichier-extension_ format.
+Lorsqu’une image est affectée à un élément d’interface utilisateur dans l’Interface Builder choisis simplement le fichier dans le _ImageName_**.** _nomfichier-extension_ format (exemple : **tags.png**). Identiques pour l’utilisation d’une image dans le code C#, vous allez choisir le fichier dans le _ImageName_**.** _nomfichier-extension_ format.
 
 Lorsque votre application de Xamarin.Mac est exécuté sur un Mac, le _ImageName_**.** _nomfichier-extension_ image au format sera utilisé sur les écrans de résolution Standard, le **ImageName@2x.filename-extension** image sera automatiquement sélectionnée affichage Retina bases des ordinateurs Mac.
 
@@ -180,9 +180,9 @@ Les étapes ci-dessus fonctionnent pour n’importe quel élément d’interface
 > [!IMPORTANT]
 > Si l’Image n’est pas disponible dans le **nom de l’Image** liste déroulante, fermez votre projet .storyboard dans Xcode et le rouvrir à partir de Visual Studio pour Mac. Si l’image n’est pas toujours disponible, vérifiez que son **Action de génération** est `BundleResource` et que l’image a été ajoutée à la **ressources** dossier.
 
-## <a name="using-images-in-c-code"></a>L’utilisation d’images dans le code c#
+## <a name="using-images-in-c-code"></a>L’utilisation d’images dans le code C#
 
-Lors du chargement d’une image dans la mémoire à l’aide de code c# dans votre application Xamarin.Mac, l’image sera stockée dans un `NSImage` objet. Si le fichier image a été inclus dans le bundle d’applications Xamarin.Mac (inclus dans les ressources), utilisez le code suivant pour charger l’image :
+Lors du chargement d’une image dans la mémoire à l’aide de code C# dans votre application Xamarin.Mac, l’image sera stockée dans un `NSImage` objet. Si le fichier image a été inclus dans le bundle d’applications Xamarin.Mac (inclus dans les ressources), utilisez le code suivant pour charger l’image :
 
 ```csharp
 NSImage image = NSImage.ImageNamed("tags.png");
@@ -447,7 +447,7 @@ Pour plus d’informations sur l’utilisation des modes plan, consultez notre [
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a examiné en détail à l’utilisation des Images et icônes dans une application Xamarin.Mac. Nous avons vu les différents types et utilise des Images, l’utilisation des Images et icônes dans Interface Builder de Xcode et comment travailler avec des Images et icônes dans le code c#.
+Cet article a examiné en détail à l’utilisation des Images et icônes dans une application Xamarin.Mac. Nous avons vu les différents types et utilise des Images, l’utilisation des Images et icônes dans Interface Builder de Xcode et comment travailler avec des Images et icônes dans le code C#.
 
 
 

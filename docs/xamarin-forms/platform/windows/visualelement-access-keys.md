@@ -49,7 +49,7 @@ Cette spécifiques à la plateforme UWP est utilisé pour spécifier une clé d�
 </TabbedPage>
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

@@ -46,7 +46,7 @@ Le `EmptyView` propriété peut être définie sur une chaîne, qui sera affich�
                 EmptyView="No items to display" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -95,7 +95,7 @@ Le `EmptyView` propriété peut être définie à une vue, qui sera affiché lor
 </StackLayout>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -150,7 +150,7 @@ Le `EmptyView` propriété peut être définie à un type personnalisé, dont le
 </StackLayout>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };

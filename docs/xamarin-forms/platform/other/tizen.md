@@ -28,7 +28,7 @@ Pour plus d’informations sur l’ajout du projet Tizen .NET à une solution Xa
 
 ## <a name="documentation"></a>Documentation
 
-- [Documentation de Xamarin.Forms](~/xamarin-forms/index.yml) &ndash; comment générer des applications multiplateformes avec c# et Xamarin.Forms.
+- [Documentation de Xamarin.Forms](~/xamarin-forms/index.yml) &ndash; comment générer des applications multiplateformes avec C# et Xamarin.Forms.
 - [**Developer.tizen.org** ](https://developer.tizen.org/development) &ndash; documentation et les vidéos pour vous aider à créer et déployer des applications de Tizen.
 
 ## <a name="samples"></a>Exemples

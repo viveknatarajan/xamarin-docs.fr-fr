@@ -57,7 +57,7 @@ L’argument `AbsoluteLayout.SetLayoutFlags` et la valeur de retour de `Absolute
 - [`SizeProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.SizeProportional) (12)
 - [`All`](xref:Xamarin.Forms.AbsoluteLayoutFlags.All) (\xFFFFFFFF)
 
-Vous pouvez combiner ces éléments avec le langage c# opérateur de bits OR.
+Vous pouvez combiner ces éléments avec le langage C# opérateur de bits OR.
 
 Avec ces indicateurs définis, certaines propriétés de la `Rectangle` structure de limites de mise en page utilisée pour positionner et dimensionner l’enfant sont interprétés proportionnellement.
 

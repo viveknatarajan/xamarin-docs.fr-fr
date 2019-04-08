@@ -317,7 +317,7 @@ Maintenant, écrire le C# code pour appeler la bibliothèque native. L’objecti
     ```
 
     > [!NOTE]
-    > Cela définit le **DllName** valeur constante selon si la bibliothèque est générée pour **Android** ou **iOS**. Cela est de relever les conventions d’affectation de noms différents utilisées par chaque plateforme correspondante, mais aussi le type de bibliothèque qui est utilisée dans ce cas. Android utilise une bibliothèque dynamique et par conséquent, attend un nom de fichier, y compris d’extension. Pour iOS, «*__Internal*' est nécessaire, car nous utilisons une bibliothèque statique.
+    > Cela définit le **DllName** valeur constante selon si la bibliothèque est générée pour **Android** ou **iOS**. Cela est de relever les conventions d’affectation de noms différents utilisées par chaque plateforme correspondante, mais aussi le type de bibliothèque qui est utilisée dans ce cas. Android utilise une bibliothèque dynamique et par conséquent, attend un nom de fichier, y compris d’extension. Pour iOS, ’*__Internal*' est nécessaire, car nous utilisons une bibliothèque statique.
 
 3. Ajoutez une référence à **System.Runtime.InteropServices** en haut de la **MyMathFuncsWrapper.cs** fichier
 

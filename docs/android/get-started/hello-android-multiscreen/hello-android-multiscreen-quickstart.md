@@ -77,7 +77,7 @@ Créez une seconde activité pour activer le second écran. Dans l’**Explorate
 
 [![Ajouter un nouveau fichier](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
-Dans la boîte de dialogue **Ajouter un nouvel élément**, choisissez **Visual c# > Activité** et nommez le fichier d’activité **ActivitéHistoriqueTraduction.cs**.
+Dans la boîte de dialogue **Ajouter un nouvel élément**, choisissez **Visual C# > Activité** et nommez le fichier d’activité **ActivitéHistoriqueTraduction.cs**.
 
 Remplacez le modèle de code dans **ActivitéHistoriqueTraduction.cs** par le suivant :
 

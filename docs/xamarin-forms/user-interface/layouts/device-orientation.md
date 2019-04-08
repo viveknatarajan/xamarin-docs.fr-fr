@@ -204,7 +204,7 @@ Title="Stack Photo Editor - XAML">
 </ContentPage>
 ```
 
-Certains c# est utilisé pour modifier l’orientation de `outerStack` selon l’orientation de l’appareil :
+Certains C# est utilisé pour modifier l’orientation de `outerStack` selon l’orientation de l’appareil :
 
 ```csharp
 protected override void OnSizeAllocated (double width, double height){

@@ -20,7 +20,7 @@ Dans ce guide, nous allons expliquer quelles un Storyboard est et examiner certa
 
 Avant que le format de fichier Storyboard a été introduit par Apple comme une représentation visuelle de l’interface utilisateur d’une application iOS, les développeurs a créé les fichiers XIB pour chaque contrôleur d’affichage et programmer le volet de navigation entre chaque vue manuellement.  À l’aide d’un Storyboard permet au développeur de définir des contrôleurs d’affichage et la navigation entre eux sur une aire de conception et permet la modification WYSIWYG de l’interface utilisateur de l’application.
 
-Un Storyboard peut être créé, ouvert et modifié avec le Concepteur de Xamarin iOS. Ce guide effectue également une procédure pas à pas comment utiliser le concepteur pour créer vos plans conceptuels depuis tout en utilisant c# pour programmer le volet de navigation.
+Un Storyboard peut être créé, ouvert et modifié avec le Concepteur de Xamarin iOS. Ce guide effectue également une procédure pas à pas comment utiliser le concepteur pour créer vos plans conceptuels depuis tout en utilisant C# pour programmer le volet de navigation.
 
 
 ## <a name="requirements"></a>Spécifications
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Lorsque vous créez une table de montage séquentiel à l’aide du concepteur, l’IDE ajoute automatiquement le [[inscrire]](xref:Foundation.RegisterAttribute) attribut en haut de la `designer.cs` classe et vous transmettez un identificateur de chaîne, qui est identique à l’ID de plan conceptuel spécifié dans le étape précédente. Cela lie le c# à la scène pertinentes dans le Storyboard.
+Lorsque vous créez une table de montage séquentiel à l’aide du concepteur, l’IDE ajoute automatiquement le [[inscrire]](xref:Foundation.RegisterAttribute) attribut en haut de la `designer.cs` classe et vous transmettez un identificateur de chaîne, qui est identique à l’ID de plan conceptuel spécifié dans le étape précédente. Cela lie le C# à la scène pertinentes dans le Storyboard.
 
 À un moment donné vous souhaiterez peut-être ajouter une classe existante qui a été **pas** créé dans le concepteur. Dans ce cas, vous pouvez enregistrer cette classe comme d’habitude :
 

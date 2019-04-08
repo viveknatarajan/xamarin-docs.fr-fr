@@ -26,7 +26,7 @@ Il s’agit d’une liste des assemblys pris en charge par Xamarin pour vos appl
 |Mono.Data.Sqlite.dll|1.2|Fournisseur ADO.NET pour SQLite ; consultez [limitations](~/ios/data-cloud/system.data.md).|
 |Mono.Data.Tds.dll|1.2|Prise en charge du protocole TDS ; utilisé pour [System.Data.SqlClient](xref:System.Data.SqlClient) prise en charge dans [System.Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|API de chiffrement.|
-|monotouch.dll|1.0|Cet assembly contient la [liaison c# à l’API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
+|monotouch.dll|1.0|Cet assembly contient la [liaison C# à l’API CocoaTouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
 |mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |OpenTK.dll|1.0|L’objet OpenGL/OpenAL orientée services API, [étendus pour fournir la prise en charge des appareils iPhone](xref:OpenGLES).|
 |System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), ainsi que des types à partir d’espaces de noms suivants : <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|

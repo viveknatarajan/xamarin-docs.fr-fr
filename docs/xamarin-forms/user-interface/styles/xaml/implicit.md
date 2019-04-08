@@ -86,7 +86,7 @@ Pour plus d’informations sur la création de styles dans une application [ `Re
 
 ## <a name="create-an-implicit-style-in-c35"></a>Créer un style implicite en C&#35;
 
-[`Style`](xref:Xamarin.Forms.Style) instances peuvent être ajoutées à une page [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) collection en c# en créant un nouveau [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)et puis en ajoutant le `Style` instances pour le `ResourceDictionary`, comme illustré dans la exemple de code suivant :
+[`Style`](xref:Xamarin.Forms.Style) instances peuvent être ajoutées à une page [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) collection en C# en créant un nouveau [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)et puis en ajoutant le `Style` instances pour le `ResourceDictionary`, comme illustré dans la exemple de code suivant :
 
 ```csharp
 public class ImplicitStylesPageCS : ContentPage
@@ -135,7 +135,7 @@ L’exemple suivant montre un style implicite qui définit la couleur d’arriè
 
 Placer ce style à un niveau de la page [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) celle-ci est appliquée à tous les [ `Button` ](xref:Xamarin.Forms.Button) instances sur la page, ainsi que pour tous les contrôles qui dérivent de `Button`. Toutefois, si le [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) propriété restés non définie, le style est appliqué uniquement à `Button` instances.
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var buttonStyle = new Style(typeof(Button))

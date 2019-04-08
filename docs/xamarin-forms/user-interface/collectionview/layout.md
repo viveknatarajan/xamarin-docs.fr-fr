@@ -117,7 +117,7 @@ Ou bien, pouvez également le faire en définissant le `ItemsLayout` propriété
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -185,7 +185,7 @@ Ou bien, pouvez également le faire en définissant le `ItemsLayout` propriété
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -241,7 +241,7 @@ Il en résulte dans une liste de ligne unique, ce qui se développe horizontalem
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -297,7 +297,7 @@ Par défaut, un vertical `GridItemsLayout` affichera les éléments dans une seu
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -355,7 +355,7 @@ L’exemple de code suivant montre le paramètre le `ItemSizingStrategy` propri�
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView

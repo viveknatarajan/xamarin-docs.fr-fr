@@ -71,7 +71,7 @@ Le code de cet effet est donné ci-dessous - référencer correctement personnal
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Code c# dans le projet de bibliothèque .NET Standard ou d’un projet partagé
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Code C# dans le projet de bibliothèque .NET Standard ou d’un projet partagé
 
 Le code pour la création d’un angle arrondi `BoxView` utilise [effets](~/xamarin-forms/app-fundamentals/effects/index.md).
 Le rayon de l’angle est appliqué à l’aide un `BindableProperty` et est implémenté en appliquant un [effet](~/xamarin-forms/app-fundamentals/effects/index.md). L’effet nécessite du code spécifique à la plateforme dans le [iOS](#ios) et [Android](#android) projets (voir ci-dessous).
@@ -128,7 +128,7 @@ namespace ThemesDemo
 
 <a name="ios" />
 
-### <a name="c-code-in-the-ios-project"></a>Code c# dans le projet iOS
+### <a name="c-code-in-the-ios-project"></a>Code C# dans le projet iOS
 
 ```csharp
 using System;
@@ -184,7 +184,7 @@ namespace ThemesDemo.iOS
 
 <a name="android" />
 
-### <a name="c-code-in-the-android-project"></a>Code c# dans le projet Android
+### <a name="c-code-in-the-android-project"></a>Code C# dans le projet Android
 
 ```csharp
 using System;

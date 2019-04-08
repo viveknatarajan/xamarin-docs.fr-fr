@@ -77,7 +77,7 @@ Les applications peuvent choisissent d’utiliser les convertisseurs de matéria
 </ContentPage>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 ContentPage contentPage = new ContentPage();

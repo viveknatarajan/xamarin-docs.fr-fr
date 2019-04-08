@@ -78,7 +78,7 @@ Le `Separator`, `Rounded`, et `Circle` chaque jeu de classes de style [ `BoxView
 
 Le `Rotated` style classe a un [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) de [ `VisualElement` ](xref:Xamarin.Forms.VisualElement), ce qui signifie qu’elle peut uniquement être appliqué à `VisualElement` instances. Toutefois, son [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) propriété est définie sur `true`, ce qui garantit qu’il peut être appliqué à tous les contrôles qui dérivent de `VisualElement`, tel que [ `BoxView` ](xref:Xamarin.Forms.BoxView). Pour plus d’informations sur l’application d’un style à un type dérivé, consultez [appliquer un style aux types dérivés](implicit.md#apply-a-style-to-derived-types).
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var separatorBoxViewStyle = new Style(typeof(BoxView))
@@ -208,7 +208,7 @@ Dans cet exemple, la première [ `BoxView` ](xref:Xamarin.Forms.BoxView) est un 
 > [!IMPORTANT]
 > Plusieurs classes de style peuvent être appliqués à un contrôle, car la [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) propriété est de type `IList<string>`. Lorsque cela se produit, les classes de style sont appliquées dans l’ordre croissant d’ordre de la liste. Par conséquent, lorsque plusieurs classes de style définissent des propriétés identiques, la propriété dans la classe de style qui se trouve dans la position la plus élevée de la liste sont prioritaires.
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 ...

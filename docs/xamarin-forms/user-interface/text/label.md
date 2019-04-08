@@ -38,7 +38,7 @@ L’exemple XAML suivant montre comment définir le `Label.TextDecorations` prop
 <Label Text="This is underlined text with strikethrough." TextDecorations="Underline, Strikethrough" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var underlineLabel = new Label { Text = "This is underlined text.", TextDecorations = TextDecorations.Underline };
@@ -72,7 +72,7 @@ L’exemple XAML suivant définit la couleur du texte d’un `Label`:
 </ContentPage>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 public partial class LabelPage : ContentPage
@@ -128,7 +128,7 @@ L’exemple XAML suivant montre comment définir le `MaxLines` propriété sur u
        MaxLines="2" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var label =
@@ -193,7 +193,7 @@ L’exemple XAML suivant montre un `FormattedText` propriété se compose de tro
 </ContentPage>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 public class LabelPageCode : ContentPage
@@ -242,7 +242,7 @@ L’exemple XAML suivant montre comment définir le [ `LineHeight` ](xref:Xamari
        LineHeight="1.8" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var label =
@@ -271,7 +271,7 @@ L’exemple XAML suivant montre comment définir le [ `LineHeight` ](xref:Xamari
 </Label>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var formattedString = new FormattedString();

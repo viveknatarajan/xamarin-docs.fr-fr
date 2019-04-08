@@ -42,7 +42,7 @@ Une disposition peut être liée est remplie avec des données en définissant s
 <Grid BindableLayout.ItemsSource="{Binding Items}" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 IEnumerable<string> items = ...;
@@ -72,7 +72,7 @@ L’apparence de chaque élément dans la disposition peut être liée peut êtr
 </StackLayout>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 DataTemplate circleImageTemplate = ...;
@@ -97,7 +97,7 @@ L’apparence de chaque élément dans la disposition peut être liée peut êtr
             ... />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 DataTemplateSelector dataTemplateSelector = new TechItemTemplateSelector { ... };

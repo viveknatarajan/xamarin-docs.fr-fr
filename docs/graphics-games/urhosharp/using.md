@@ -23,7 +23,7 @@ Avant d’écrire votre premier jeu, vous souhaitez Familiarisez-vous avec les p
 
 Le modèle de scène peut être décrit comme un graphique de scène basé sur les composants. La scène se compose d’une hiérarchie de nœuds de la scène, en commençant à partir du nœud racine, qui représente également la scène entière. Chaque [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) a une transformation 3D (de position, de rotation et de mise à l’échelle), un nom, un ID, ainsi qu’un nombre arbitraire de composants.  Composants de placer un nœud à la durée de vie, elles permettent d’ajouter une représentation visuelle ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), ils peuvent émettre des sons ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), ils peuvent fournir une limite de collision, et ainsi de suite.
 
-Vous pouvez créer votre scènes et les nœuds de programme d’installation à l’aide de la [Urho éditeur](#urhoeditor), ou vous pouvez effectuer des opérations à partir de votre code c#.  Dans ce document, nous explorerons les choses paramètre à l’aide de code, comme ils illustrent les éléments nécessaires pour vous aider à apparaître sur votre écran
+Vous pouvez créer votre scènes et les nœuds de programme d’installation à l’aide de la [Urho éditeur](#urhoeditor), ou vous pouvez effectuer des opérations à partir de votre code C#.  Dans ce document, nous explorerons les choses paramètre à l’aide de code, comme ils illustrent les éléments nécessaires pour vous aider à apparaître sur votre écran
 
 Outre la définition de votre scène, vous devez configurer un [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), c’est ce qui détermine ce qui doit obtenir affiché à l’utilisateur.
 
@@ -138,7 +138,7 @@ Les composants et les nœuds peuvent être exclus de la mise à jour de la scèn
 
 La meilleure façon de structurer votre jeu consiste à créer votre propre composant qui encapsulent un acteur ou un élément sur votre jeu.  Cela rend la fonctionnalité autonome, des ressources utilisées pour l’afficher, son comportement.
 
-Ajouter un comportement à un composant, le plus simple consiste à utiliser des actions, qui sont des instructions que vous pouvez en file d’attente et combiner ces informations avec la programmation async c#.  Cela autorise le comportement de votre composant puisse être très haut niveau et le rend plus simple à comprendre ce qui se passe.
+Ajouter un comportement à un composant, le plus simple consiste à utiliser des actions, qui sont des instructions que vous pouvez en file d’attente et combiner ces informations avec la programmation async C#.  Cela autorise le comportement de votre composant puisse être très haut niveau et le rend plus simple à comprendre ce qui se passe.
 
 Ou bien, vous pouvez contrôler ce qui se passe exactement pour votre composant en mettant à jour les propriétés de votre composant sur chaque trame (présenté dans la section de comportement en fonction du Frame).
 
@@ -376,7 +376,7 @@ using (var file = new File(Context, prefabPath, FileMode.Read))
 
 ## <a name="events"></a>Événements
 
-UrhoObjects générer un nombre d’événements, ceux-ci sont exposés en tant que les événements c# sur les différentes classes qui génèrent les.  En plus de celle de C#-basée sur modèle d’événement, il est également possible d’utiliser une la `SubscribeToXXX` méthodes qui vous permettra de s’abonner et conserver un jeton d’abonnement que vous pouvez utiliser ultérieurement pour annuler l’abonnement.  La différence est que le premier autoriser les appelants de nombreuses pour s’abonner, tandis que la deuxième identité uniquement permet une, mais le lambda-style mieux approche à utiliser et autorise pas encore, de suppression de l’abonnement.  Ils s’excluent mutuellement.
+UrhoObjects générer un nombre d’événements, ceux-ci sont exposés en tant que les événements C# sur les différentes classes qui génèrent les.  En plus de celle de C#-basée sur modèle d’événement, il est également possible d’utiliser une la `SubscribeToXXX` méthodes qui vous permettra de s’abonner et conserver un jeton d’abonnement que vous pouvez utiliser ultérieurement pour annuler l’abonnement.  La différence est que le premier autoriser les appelants de nombreuses pour s’abonner, tandis que la deuxième identité uniquement permet une, mais le lambda-style mieux approche à utiliser et autorise pas encore, de suppression de l’abonnement.  Ils s’excluent mutuellement.
 
 Lorsque vous vous abonnez à un événement, vous devez fournir une méthode qui accepte un argument avec les arguments d’événement approprié.
 
@@ -567,7 +567,7 @@ Et c’est ce que cela donne si vous utilisez une texture sous forme de blocs :
 UrhoSharp est une bibliothèque de thread unique.  Cela signifie que vous ne devriez pas appeler des méthodes dans UrhoSharp à partir d’un thread d’arrière-plan ou risque d’endommager l’état de l’application et probablement se bloquer votre application.
 
 Si vous souhaitez exécuter du code en arrière-plan et mettez ensuite à jour les composants Urho sur l’interface utilisateur principale, vous pouvez utiliser la [`Application.InvokeOnMain(Action)`](https://developer.xamarin.com/api/member/Urho.Application.InvokeOnMain)
-.  En outre, vous pouvez utiliser await de c# et .NET tâches API pour vous assurer que le code est exécuté sur le thread approprié.
+.  En outre, vous pouvez utiliser await de C# et .NET tâches API pour vous assurer que le code est exécuté sur le thread approprié.
 
 ## <a name="urhoeditor"></a>UrhoEditor
 

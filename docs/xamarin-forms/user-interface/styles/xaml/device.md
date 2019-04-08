@@ -71,7 +71,7 @@ Les styles de l’appareil sont liés à l’utilisation de la `DynamicResource`
 
 *APPAREIL* styles peuvent également être dérivés en définissant le [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) propriété le nom de clé pour le style de l’appareil. Dans l’exemple de code ci-dessus, `myBodyStyle` hérite [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle) et définit une couleur de texte accentuées. Pour plus d’informations sur l’héritage de style dynamique, consultez [l’héritage de Style dynamique](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
 
-L’exemple de code suivant montre la page équivalente dans c# :
+L’exemple de code suivant montre la page équivalente dans C# :
 
 ```csharp
 public class DeviceStylesPageCS : ContentPage

@@ -57,7 +57,7 @@ L’exemple XAML suivant montre un `CollectionView` qui peut répondre à la sé
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -98,7 +98,7 @@ Lorsque le `SelectionMode` propriété est définie sur `Single`, un élément u
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -202,7 +202,7 @@ Pour plus d’informations sur les états visuels, consultez [Gestionnaire d’�
                 SelectionMode="None" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView

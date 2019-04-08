@@ -191,7 +191,7 @@ Les deux `x:Reference` expressions utilisent la version abrégée de le `Referen
 
 ## <a name="xtype-markup-extension"></a>x:Type, extension de balisage
 
-Le `x:Type` extension de balisage est l’équivalent XAML du langage c# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) mot clé. Il est pris en charge par le [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) (classe), qui définit une propriété nommée [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) de type `string` dont la valeur est un nom de classe ou structure. Le `x:Type` markup extension retourne le [ `System.Type` ](xref:System.Type) objet de cette classe ou structure. `TypeName` est la propriété de contenu de `TypeExtension`, de sorte que `TypeName=` n’est pas requis quand `x:Type` s’affiche avec des accolades.
+Le `x:Type` extension de balisage est l’équivalent XAML du langage C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) mot clé. Il est pris en charge par le [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) (classe), qui définit une propriété nommée [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) de type `string` dont la valeur est un nom de classe ou structure. Le `x:Type` markup extension retourne le [ `System.Type` ](xref:System.Type) objet de cette classe ou structure. `TypeName` est la propriété de contenu de `TypeExtension`, de sorte que `TypeName=` n’est pas requis quand `x:Type` s’affiche avec des accolades.
 
 Dans Xamarin.Forms, il existe plusieurs propriétés qui ont des arguments de type `Type`. Exemples incluent la [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propriété de `Style`et le [x : TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attribut utilisé pour spécifier des arguments dans les classes génériques. Toutefois, l’analyseur XAML effectue le `typeof` opération automatiquement et le `x:Type` extension de balisage n’est pas utilisée dans ces cas.
 
@@ -406,7 +406,7 @@ Lorsque vous définissez des tableaux de types courants tels que des chaînes ou
 
 ## <a name="xnull-markup-extension"></a>x:Null, extension de balisage
 
-Le `x:Null` extension de balisage est prise en charge par le [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Il ne possède aucune propriété et est simplement l’équivalent XAML du langage c# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) mot clé.
+Le `x:Null` extension de balisage est prise en charge par le [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Il ne possède aucune propriété et est simplement l’équivalent XAML du langage C# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) mot clé.
 
 Le `x:Null` extension de balisage est rarement nécessaire et rarement utilisée, mais si vous ne trouvez pas une nécessité de ce dernier, vous serez féliciterez de l’avoir elle existe.
 

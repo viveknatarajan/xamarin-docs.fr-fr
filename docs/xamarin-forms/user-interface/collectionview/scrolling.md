@@ -166,7 +166,7 @@ Par défaut, la propriété `SnapPointsAlignment` a la valeur `SnapPointsAlignme
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -210,7 +210,7 @@ Le `SnapPointsAlignment.Center` membre indique que les points d’ancrage sont a
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -254,7 +254,7 @@ Le `SnapPointsAlignment.End` membre indique que les points d’ancrage sont alig
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView

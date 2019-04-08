@@ -42,7 +42,7 @@ Ce contrôle spécifique à la plateforme si le texte de barre d’état de coul
 
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

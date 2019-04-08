@@ -104,7 +104,7 @@ La version d’origine `buttonStyle`, définis au niveau de l’application, est
 
 ## <a name="create-a-global-style-in-c35"></a>Créer un style global en C&#35;
 
-[`Style`](xref:Xamarin.Forms.Style) instances peuvent être ajoutées à l’application [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) collection en c# en créant un nouveau [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)et puis en ajoutant le `Style` instances pour le `ResourceDictionary`, en tant que indiqué dans l’exemple de code suivant :
+[`Style`](xref:Xamarin.Forms.Style) instances peuvent être ajoutées à l’application [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) collection en C# en créant un nouveau [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)et puis en ajoutant le `Style` instances pour le `ResourceDictionary`, en tant que indiqué dans l’exemple de code suivant :
 
 ```csharp
 public class App : Application
@@ -128,7 +128,7 @@ public class App : Application
 
 Le constructeur définit un seul *explicite* style pour l’application à [ `Button` ](xref:Xamarin.Forms.Button) instances tout au long de l’application. *Explicite* [ `Style` ](xref:Xamarin.Forms.Style) instances sont ajoutées à la [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) à l’aide de la [ `Add` ](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) méthode, en spécifiant un `key`chaîne pour faire référence à la `Style` instance. Le `Style` instance peut ensuite être appliquée à tous les contrôles du type correct dans l’application. Toutefois, les styles globaux peuvent être *explicite* ou *implicite*.
 
-L’exemple de code suivant montre un c# page appliquant le `buttonStyle` à la page [ `Button` ](xref:Xamarin.Forms.Button) instances :
+L’exemple de code suivant montre un C# page appliquant le `buttonStyle` à la page [ `Button` ](xref:Xamarin.Forms.Button) instances :
 
 ```csharp
 public class ApplicationStylesPageCS : ContentPage

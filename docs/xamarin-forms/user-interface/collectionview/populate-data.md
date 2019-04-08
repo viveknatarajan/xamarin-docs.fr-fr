@@ -53,7 +53,7 @@ Un `CollectionView` est rempli avec des données en définissant son `ItemsSourc
 > [!NOTE]
 > Notez que l’élément `x:Array` nécessite un attribut `Type` qui indique le type des éléments du tableau.
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -86,7 +86,7 @@ Pour plus d’informations sur la façon de modifier le `CollectionView` mise en
 <CollectionView ItemsSource="{Binding Monkeys}" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -137,7 +137,7 @@ L’apparence de chaque élément dans le `CollectionView` peut être définie e
 </CollectionView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 CollectionView collectionView = new CollectionView();
