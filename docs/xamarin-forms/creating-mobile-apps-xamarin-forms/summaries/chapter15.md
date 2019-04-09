@@ -1,22 +1,22 @@
 ---
 title: Résumé du chapitre 15. L’interface interactive
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 15. L’interface interactive'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 15. L’interface interactive'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 6b519b15199373762965a8eeee6c9ae73f125cf3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060431"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870116"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Résumé du chapitre 15. L’interface interactive
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 
 Ce chapitre explore huit `View` dérivés qui permettent d’interagir avec l’utilisateur.
 
@@ -24,12 +24,12 @@ Ce chapitre explore huit `View` dérivés qui permettent d’interagir avec l’
 
 Xamarin.Forms contient 20 instanciables classes dérivées de `View` mais pas `Layout`. Six d'entre eux ont été traités dans les chapitres précédents :
 
-- `Label`: [ **Chapitre 2. Anatomie d’une application**](chapter02.md)
-- `BoxView`: [ **Chapitre 3. Défilement de la pile**](chapter03.md)
-- `Button`: [ **Chapitre 6. Clics de bouton**](chapter06.md)
-- `Image`: [ **Chapitre 13. Bitmaps**](chapter13.md)
-- `ActivityIndicator`: [ **Chapitre 13. Bitmaps**](chapter13.md)
-- `ProgressBar`: [ **Chapitre 14. DispositionAbsolue**](chapter14.md)
+- `Label`: [**Chapitre 2. Anatomie d’une application**](chapter02.md)
+- `BoxView`: [**Chapitre 3. Défilement de la pile**](chapter03.md)
+- `Button`: [**Chapitre 6. Clics de bouton**](chapter06.md)
+- `Image`: [**Chapitre 13. Bitmaps**](chapter13.md)
+- `ActivityIndicator`: [**Chapitre 13. Bitmaps**](chapter13.md)
+- `ProgressBar`: [**Chapitre 14. DispositionAbsolue**](chapter14.md)
 
 Les huit vues dans ce chapitre autoriser efficacement l’utilisateur d’interagir avec les types de données de base .NET :
 
@@ -44,12 +44,12 @@ Vous pouvez considérer de ces vues en tant que représentations interactives vi
 
 Les vues de six restants sont traités dans les chapitres suivants :
 
-- `WebView`: [ **Chapitre 16. Liaison de données**](chapter16.md)
-- `Picker`: [ **Chapitre 19. Vues de collection**](chapter19.md)
-- `ListView`: [ **Chapitre 19. Vues de collection**](chapter19.md)
-- `TableView`: [ **Chapitre 19. Vues de collection**](chapter19.md)
-- `Map`: [ **Chapitre 28. Emplacement et mappages**](chapter28.md)
-- `OpenGLView`: Non traitée dans ce livre (et aucune prise en charge pour les plateformes Windows)
+- `WebView`: [**Chapitre 16. Liaison de données**](chapter16.md)
+- `Picker`: [**Chapitre 19. Vues de collection**](chapter19.md)
+- `ListView`: [**Chapitre 19. Vues de collection**](chapter19.md)
+- `TableView`: [**Chapitre 19. Vues de collection**](chapter19.md)
+- `Map`: [**Chapitre 28. Emplacement et mappages**](chapter28.md)
+- `OpenGLView`: Non couvert dans ce livre (et aucune prise en charge pour les plateformes Windows)
 
 ## <a name="slider-and-stepper"></a>Curseur et l’exécution pas à pas
 
@@ -65,8 +65,8 @@ Le [ `Slider` ](xref:Xamarin.Forms.Slider) est une barre représentant une plage
 
 Les propriétés pouvant être liées qui assortir ces propriétés de vous assurer qu’elles sont cohérentes :
 
-- Pour toutes les trois propriétés, le [ `coerceValue` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty+CoerceValueDelegate/) méthode spécifiée pour la propriété pouvant être liée garantit que `Value` entre `Minimum` et `Maximum`.
-- Le [ `validateValue` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty+ValidateValueDelegate/) méthode sur `MinimumProperty` retourne `false` si `Minimum` est définie sur une valeur supérieure ou égale à `Maximum`et il est similaire pour `MaximumProperty`. Retour `false` à partir de la `validateValue` causes de la méthode un `ArgumentException` à signaler.
+- Pour toutes les trois propriétés, le [ `coerceValue` ](xref:Xamarin.Forms.BindableProperty.CoerceValueDelegate) méthode spécifiée pour la propriété pouvant être liée garantit que `Value` entre `Minimum` et `Maximum`.
+- Le [ `validateValue` ](xref:Xamarin.Forms.BindableProperty.ValidateValueDelegate) méthode sur `MinimumProperty` retourne `false` si `Minimum` est définie sur une valeur supérieure ou égale à `Maximum`et il est similaire pour `MaximumProperty`. Retour `false` à partir de la `validateValue` causes de la méthode un `ArgumentException` à signaler.
 
 `Slider` se déclenche le [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) événement avec un [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) argument lorsque la `Value` propriété change, par programme ou lorsque l’utilisateur manipule le `Slider`.
 
@@ -245,7 +245,7 @@ Le [ **SetTimer** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/m
 
 - [Chapitre 15 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [Exemples de chapitre 15](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
-- [Slider](~/xamarin-forms/user-interface/slider.md)
+- [Curseur](~/xamarin-forms/user-interface/slider.md)
 - [Entrée](~/xamarin-forms/user-interface/text/entry.md)
 - [Éditeur](~/xamarin-forms/user-interface/text/editor.md)
 - [DatePicker](~/xamarin-forms/user-interface/datepicker.md)
