@@ -51,7 +51,7 @@ ms.locfileid: "58641437"
 </TableView>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 Content = new TableView
@@ -164,7 +164,7 @@ L’exemple suivant montre le XAML utilisé pour créer le [ `TableView` ](xref:
 </ContentPage>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var table = new TableView();
