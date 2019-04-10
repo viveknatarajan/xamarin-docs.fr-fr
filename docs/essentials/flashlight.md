@@ -5,12 +5,12 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: c2caf1583e3099903cb0b05628ed6b2984a954d9
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b94ba73b334ac68b256ca840956f987a4ef670ce
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671414"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870103"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lampe torche
 
@@ -22,7 +22,7 @@ La classe **Flashlight** permet d’activer ou de désactiver le flash de l’ap
 
 Pour accéder à la fonctionnalité de **lampe de poche**, la configuration suivante spécifique à la plateforme est obligatoire.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 Les autorisations Flashlight et Camera sont obligatoires, et doivent être configurées dans le projet Android. Vous pouvez l’ajouter des façons suivantes :
 
@@ -51,11 +51,11 @@ Si vous ajoutez ces autorisations, [Google Play va filtrer automatiquement les a
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 Aucune configuration supplémentaire n’est requise.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Aucune configuration supplémentaire n’est requise.
 
@@ -96,7 +96,7 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
-### <a name="androidtabandroid"></a>[Android](#tab/android)
+### [<a name="android"></a>Android](#tab/android)
 
 La classe Flashlight a été optimisée en fonction du système d’exploitation de l’appareil.
 
@@ -108,11 +108,11 @@ Avec les nouveaux niveaux d’API, le [mode Torche](https://developer.android.co
 
 Une texture de surface d’appareil photo est créée pour activer ou désactiver le `FlashMode` de l’unité d’appareil photo. 
 
-### <a name="iostabios"></a>[iOS](#tab/ios)
+### [<a name="ios"></a>iOS](#tab/ios)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) permet d’activer et de désactiver le mode Torche et Flash de l’appareil.
+[AVCaptureDevice](xref:AVFoundation.AVCaptureDevice) permet d’activer et de désactiver le mode Torche et Flash de l’appareil.
 
-### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+### [<a name="uwp"></a>UWP](#tab/uwp)
 
 [Lamp](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp) permet de détecter l’activation ou la désactivation de la première lampe à l’arrière de l’appareil.
 
@@ -120,5 +120,5 @@ Une texture de surface d’appareil photo est créée pour activer ou désactive
 
 ## <a name="api"></a>API
 
-- [Code source de la fonctionnalité de lampe de poche](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
-- [Documentation sur l’API de lampe de poche](xref:Xamarin.Essentials.Flashlight)
+- [Code source Flashlight](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Documentation sur l’API Flashlight](xref:Xamarin.Essentials.Flashlight)

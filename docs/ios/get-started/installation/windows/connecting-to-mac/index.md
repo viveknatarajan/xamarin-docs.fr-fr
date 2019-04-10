@@ -1,35 +1,40 @@
 ---
 title: Appairer avec un Mac pour le développement Xamarin.iOS
-description: "Ce guide décrit comment utiliser Appairer avec un Mac pour connecter Visual Studio 2017 à un hôte de build Mac. Il explique notamment comment activer la connexion à distance sur le Mac, se connecter au Mac à partir de Visual Studio\_2017 et ajouter manuellement un hôte de build Mac à l’ordinateur Windows."
+description: Ce guide décrit comment utiliser Appairer avec un Mac pour connecter Visual Studio 2019 à un hôte de build Mac. Il explique notamment comment activer la connexion à distance sur le Mac, se connecter au Mac à partir de Visual Studio 2019 et ajouter manuellement un hôte de build Mac à l’ordinateur Windows.
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
+ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855144"
 ---
-
 # <a name="pair-to-mac-for-xamarinios-development"></a>Appairer avec un Mac pour le développement Xamarin.iOS
 
-_Ce guide décrit comment utiliser Appairer avec un Mac pour connecter Visual Studio 2017 à un hôte de build Mac._
+_Ce guide décrit comment utiliser Appairer avec un Mac pour connecter Visual Studio 2019 à un hôte de build Mac. Les mêmes instructions s’appliquent à Visual Studio 2017._
 
 ## <a name="overview"></a>Vue d'ensemble
 
-La génération d’applications iOS natives nécessite l’accès aux outils de génération d’Apple, qui s’exécutent seulement sur un Mac. Pour cette raison, Visual Studio 2017 doit se connecter à un Mac accessible via le réseau pour générer des applications Xamarin.iOS.
+La génération d’applications iOS natives nécessite l’accès aux outils de génération d’Apple, qui s’exécutent seulement sur un Mac. Pour cette raison, Visual Studio 2019 doit se connecter à un Mac accessible par le biais du réseau pour générer des applications Xamarin.iOS.
 
-La fonctionnalité Appairer avec un Mac de Visual Studio 2017 permet de découvrir les hôtes de build Mac, de s’y connecter, de s’authentifier auprès d’eux et de les mémoriser afin que les développeurs iOS Windows puissent travailler de manière productive.
+La fonctionnalité Appairer avec un Mac de Visual Studio 2019 permet de découvrir les hôtes de build Mac, de s’y connecter, de s’authentifier auprès d’eux et de les mémoriser afin que les développeurs iOS Windows puissent travailler de manière productive.
 
 Avec Appairer avec un Mac, le flux de travail de développement est le suivant :
 
-- Les développeurs peuvent écrire du code Xamarin.iOS dans Visual Studio 2017.
+- Les développeurs peuvent écrire du code Xamarin.iOS dans Visual Studio 2019.
 
-- Visual Studio 2017 ouvre une connexion réseau à un hôte de build Mac et utilise les outils de génération sur cet ordinateur pour compiler et signer l’application iOS.
+- Visual Studio 2019 ouvre une connexion réseau à un hôte de build Mac et utilise les outils de génération sur cet ordinateur pour compiler et signer l’application iOS.
 
 - Il est inutile d’exécuter une application distincte sur le Mac : Visual Studio 2017 appelle les builds Mac de manière sécurisée via SSH.
 
-- Visual Studio 2017 est averti des modifications dès qu’elles se produisent. Par exemple, quand un appareil iOS est branché sur le Mac ou devient disponible sur le réseau, la barre d’outils iOS est instantanément mise à jour.
+- Visual Studio 2019 est averti des modifications dès qu’elles se produisent. Par exemple, quand un appareil iOS est branché sur le Mac ou devient disponible sur le réseau, la barre d’outils iOS est instantanément mise à jour.
 
-- Plusieurs instances de Visual Studio 2017 peuvent se connecter simultanément au Mac.
+- Plusieurs instances de Visual Studio 2019 peuvent se connecter simultanément au Mac.
 
 - Il est possible d’utiliser la ligne de commande Windows pour générer des applications iOS.
 
@@ -37,11 +42,11 @@ Avec Appairer avec un Mac, le flux de travail de développement est le suivant :
 > 
 > Avant de suivre les instructions fournies dans ce guide, effectuez les étapes ci-dessous :
 > 
-> - Sur un ordinateur Windows, [installez Visual Studio 2017](~/get-started/installation/windows.md)
+> - Sur un ordinateur Windows, [installez Visual Studio 2019](~/get-started/installation/windows.md)
 > - Sur un Mac, [installez Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) et [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 >    - _Vous devez ouvrir manuellement Xcode après l’installation_ afin que celui-ci puisse ajouter des composants supplémentaires.
 >
-> Si vous préférez ne pas installer Visual Studio pour Mac, Visual Studio 2017 peut configurer automatiquement l’hôte de build Mac avec Xamarin.iOS et Mono.
+> Si vous préférez ne pas installer Visual Studio pour Mac, Visual Studio 2019 peut configurer automatiquement l’hôte de build Mac avec Xamarin.iOS et Mono.
 > Vous devez quand même installer et exécuter Xcode.
 > Pour plus d’informations, consultez [Provisionnement Mac automatique](#automatic-mac-provisioning).
 
@@ -61,13 +66,13 @@ Pour configurer l’hôte de build Mac, activez tout d’abord la session à dis
 
     Si le pare-feu macOS est défini pour bloquer les connexions entrantes, vous devrez peut-être autoriser `mono-sgen` à les recevoir. Une alerte s’affiche pour vous demander si c’est le cas.
 
-4. S’il se trouve sur le même réseau que l’ordinateur Windows, le Mac doit maintenant pouvoir être découvert par Visual Studio 2017. Dans le cas contraire, essayez [d’ajouter manuellement un Mac](#manually-add-a-mac) ou examinez le [guide de résolution des problèmes](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md).
+4. S’il se trouve sur le même réseau que l’ordinateur Windows, le Mac doit maintenant pouvoir être découvert par Visual Studio 2019. Dans le cas contraire, essayez [d’ajouter manuellement un Mac](#manually-add-a-mac) ou examinez le [guide de résolution des problèmes](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md).
 
-## <a name="connect-to-the-mac-from-visual-studio-2017"></a>Se connecter au Mac à partir de Visual Studio 2017
+## <a name="connect-to-the-mac-from-visual-studio-2019"></a>Se connecter au Mac à partir de Visual Studio 2019
 
-Maintenant que la session à distance est activée, connectez Visual Studio 2017 au Mac.
+Maintenant que la session à distance est activée, connectez Visual Studio 2019 au Mac.
 
-1. Dans Visual Studio 2017, ouvrez un projet iOS existant ou créez-en un en choisissant **Fichier > Nouveau > Projet**, puis en sélectionnant un modèle de projet iOS.
+1. Dans Visual Studio 2019, ouvrez un projet iOS existant ou créez-en un en choisissant **Fichier > Nouveau > Projet**, puis en sélectionnant un modèle de projet iOS.
 
 2. Ouvrez la boîte de dialogue **Appairer avec un Mac**. 
 
@@ -96,11 +101,11 @@ Maintenant que la session à distance est activée, connectez Visual Studio 2017
 
 5. Appairer avec un Mac configure automatiquement le Mac.
 
-    [Depuis Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Visual Studio 2017 installe ou met à jour Mono et Xamarin.iOS sur un hôte de build Mac connecté si nécessaire (notez que Xcode doit néanmoins être installé manuellement). Pour plus d’informations, consultez [Provisionnement Mac automatique](#automatic-mac-provisioning).
+    [À compter de Visual Studio 2019 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Visual Studio 2019 installe ou met à jour Mono et Xamarin.iOS sur un hôte de build Mac connecté si nécessaire (notez que Xcode doit néanmoins être installé manuellement). Pour plus d’informations, consultez [Provisionnement Mac automatique](#automatic-mac-provisioning).
 
 6. Recherchez l’icône d’état de connexion.
 
-    - Quand Visual Studio 2017 est connecté à un Mac, l’élément de ce Mac dans la boîte de dialogue **Appairer avec un Mac** affiche une icône indiquant qu’il est actuellement connecté :
+    - Quand Visual Studio 2019 est connecté à un Mac, l’élément de ce Mac dans la boîte de dialogue **Appairer avec un Mac** affiche une icône indiquant qu’il est actuellement connecté :
 
         ![Mac connecté](images/connected.png "Mac connecté")
 
@@ -113,7 +118,7 @@ Maintenant que la session à distance est activée, connectez Visual Studio 2017
       >
       > Si vous choisissez **Oublier ce Mac**, vos informations d’identification pour le Mac sélectionné seront oubliées. Pour vous reconnecter à ce Mac, vous devez entrer à nouveau vos nom d’utilisateur et mot de passe.
 
-Si vous vous êtes correctement associé à un hôte de build Mac, vous êtes prêt à générer des applications Xamarin.iOS dans Visual Studio 2017. Examinez le guide [Introduction à Xamarin.iOS pour Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md).
+Si vous vous êtes correctement associé à un hôte de build Mac, vous êtes prêt à générer des applications Xamarin.iOS dans Visual Studio 2019. Examinez le guide [Introduction à Xamarin.iOS pour Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md).
 
 Si vous n’avez pas réussi à vous associer à un Mac, essayez [d’ajouter manuellement un Mac](#manually-add-a-mac) ou examinez le [guide de résolution des problèmes](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md).
 
@@ -125,7 +130,7 @@ Si vous ne voyez pas un Mac particulier répertorié dans la boîte de dialogue 
 
     - Ouvrez **Préférences système > Partage > Session à distance** sur votre Mac :
 
-        [![Adresse IP du Mac dans Préférences système > Partage](images/sharing-ipaddress.png "Adresse IP du Mac dans Préférences système > Partage")](images/sharing.png#lightbox)
+        [![TAdresse IP du Mac dans Préférences système > Partage](images/sharing-ipaddress.png "Adresse IP du Mac dans Préférences système > Partage")](images/sharing.png#lightbox)
 
     - Vous pouvez également utiliser la ligne de commande. Dans Terminal, exécutez cette commande : 
 
@@ -136,9 +141,9 @@ Si vous ne voyez pas un Mac particulier répertorié dans la boîte de dialogue 
 
       Selon votre configuration réseau, vous devrez peut-être utiliser un nom d’interface autre que `en0`. Par exemple : `en1`, `en2`, etc.
 
-2. Dans la boîte de dialogue **Appairer avec un Mac** de Visual Studio 2017, sélectionnez **Ajouter un Mac...** :
+2. Dans la boîte de dialogue **Appairer avec un Mac** de Visual Studio 2019, sélectionnez **Ajouter un Mac...**  :
 
-    [![Bouton Ajouter un Mac dans la boîte de dialogue Appairer avec un Mac](images/addtomac.png "Bouton Ajouter un Mac dans la boîte de dialogue Appairer avec un Mac")](images/addtomac-large.png#lightbox)
+    [![TBouton Ajouter un Mac dans la boîte de dialogue Appairer avec un Mac(images/addtomac.png "Bouton Ajouter un Mac dans la boîte de dialogue Appairer avec un Mac")](images/addtomac-large.png#lightbox)
 
 3. Entrez l’adresse IP du Mac et cliquez sur **Ajouter** :
 
@@ -151,18 +156,18 @@ Si vous ne voyez pas un Mac particulier répertorié dans la boîte de dialogue 
    > [!TIP]
    > Lors de la connexion, utilisez votre nom d’utilisateur système plutôt que votre nom complet.
 
-5. Cliquez sur **Connexion** pour connecter Visual Studio 2017 au Mac via SSH et l’ajouter à la liste des ordinateurs connus.
+5. Cliquez sur **Connexion** pour connecter Visual Studio 2019 au Mac par le biais de SSH et l’ajouter à la liste des ordinateurs connus.
 
 ## <a name="automatic-mac-provisioning"></a>Provisionnement Mac automatique
 
-À partir de [Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Appairer avec un Mac provisionne automatiquement un Mac avec les logiciels nécessaires pour générer des applications Xamarin.iOS : Mono, Xamarin.iOS (le framework logiciel, pas l’IDE Visual Studio pour Mac) et divers outils Xcode (mais pas Xcode lui-même).
+À compter de [Visual Studio 2019 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Appairer avec un Mac provisionne automatiquement un Mac avec les logiciels nécessaires pour générer des applications Xamarin.iOS : Mono, Xamarin.iOS (le framework logiciel, pas l’IDE Visual Studio pour Mac) et divers outils Xcode (mais pas Xcode lui-même).
 
 > [!IMPORTANT]
 > - Appairer avec un Mac ne peut pas installer Xcode ; vous devez l’installer manuellement sur l’hôte de build Mac. Il est requis pour le développement Xamarin.iOS.
 > - Le provisionnement Mac automatique nécessite que la session à distance soit activée sur le Mac, et le Mac doit être accessible via le réseau à l’ordinateur Windows. Pour plus d’informations, consultez [Activer la session à distance sur le Mac](#enable-remote-login-on-the-mac).
 > - Le provisionnement Mac automatique nécessite 3 Go d’espace libre sur le Mac pour l’installation de Xamarin.iOS.
 
-Appairer avec un Mac effectue les installations/mises à jour de logiciels nécessaires quand Visual Studio 2017 se [connecte au Mac](#connect-to-the-mac-from-visual-studio-2017).
+Appairer avec un Mac effectue les installations/mises à jour de logiciels nécessaires quand Visual Studio 2017 se [connecte au Mac](#connect-to-the-mac-from-visual-studio-2019).
 
 ### <a name="mono"></a>Mono
 
@@ -172,7 +177,7 @@ La progression est indiquée par différentes invites, comme illustré par les c
 
 ||Vérification de l’installation|Téléchargement|Installation de
 |---|---|---|---|
-|Mono|[![Installation de Mono manquante](images/mono-missing.png "Installation de Mono manquante")](images/mono-missing-large.png#lightbox)|[![Téléchargement de Mono](images/mono-downloading.png "Téléchargement de Mono")](images/mono-downloading-large.png#lightbox)|[![Installation de Mono](images/mono-installing.png "Installation de Mono")](images/mono-installing-large.png#lightbox)|
+|Mono|[![MInstallation de Mono manquante(images/mono-missing.png "Installation de Mono manquante")](images/mono-missing-large.png#lightbox)|[![DTéléchargement de Mono](images/mono-downloading.png "Téléchargement de Mono")](images/mono-downloading-large.png#lightbox)|[![IInstallation de Mono](images/mono-installing.png "Installation de Mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -180,14 +185,14 @@ Appairer avec un Mac met à niveau Xamarin.iOS sur le Mac pour correspondre à l
 
 > [!IMPORTANT]
 > Appairer avec un Mac ne rétrograde pas Xamarin.iOS sur le Mac de la version alpha/bêta à la version stable. Si Visual Studio pour Mac est installé, définissez votre [canal des versions](https://docs.microsoft.com/visualstudio/mac/update) comme suit :
-> - Si vous utilisez Visual Studio 2017, sélectionnez le canal des mises à jour **Stable** dans Visual Studio pour Mac.
-> - Si vous utilisez Visual Studio 2017 Preview, sélectionnez le canal des mises à jour **Alpha** dans Visual Studio pour Mac.
+> - Si vous utilisez Visual Studio 2019, sélectionnez le canal des mises à jour **Stable** dans Visual Studio pour Mac.
+> - Si vous utilisez Visual Studio 2019 Preview, sélectionnez le canal des mises à jour **Alpha** dans Visual Studio pour Mac.
 
 La progression est indiquée par différentes invites, comme illustré par les captures d’écran suivantes (cliquez pour effectuer un zoom) :
 
 ||Vérification de l’installation|Téléchargement|Installation de
 |---|---|---|---|
-|Xamarin.iOS|[![Installation de Xamarin.iOS manquante](images/xamios-missing.png "Installation de Xamarin.iOS manquante")](images/xamios-missing-large.png#lightbox)|[![Téléchargement de Xamarin.iOS](images/xamios-downloading.png "Téléchargement de Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Installation de Xamarin.iOS](images/xamios-installing.png "Installation de Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![MInstallation de Xamarin.iOS manquante(images/xamios-missing.png "Installation de Xamarin.iOS manquante")](images/xamios-missing-large.png#lightbox)|[![DTéléchargement de Xamarin.iOS](images/xamios-downloading.png "Téléchargement de Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![IInstallation de Xamarin.iOS](images/xamios-installing.png "Installation de Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Licence et outils Xcode
 
@@ -195,7 +200,7 @@ Appairer avec un Mac vérifie également si Xcode a été installé et sa licenc
 
 ||Vérification de l’installation|Acceptation de la licence|
 |---|---|---|
-|Xcode|[![Installation de Xcode manquante](images/xcode-missing.png "Installation de Xcode manquante")](images/xcode-missing-large.png#lightbox)|[![Licence Xcode](images/xcode-license.png "Licence Xcode")](images/xcode-license-large.png#lightbox)|
+|Xcode|[![MInstallation de Xcode manquante(images/xcode-missing.png "Installation de Xcode manquante")](images/xcode-missing-large.png#lightbox)|[![XLicence Xcode](images/xcode-license.png "Licence Xcode")](images/xcode-license-large.png#lightbox)|
 
 En outre, Appairer avec un Mac installe ou met à jour différents packages distribués avec Xcode. Par exemple :
 
@@ -211,7 +216,7 @@ L’installation de ces packages se produit rapidement et sans invite.
 
 ### <a name="troubleshooting-automatic-mac-provisioning"></a>Résolution des problèmes de provisionnement Mac automatique
 
-Si vous rencontrez des problèmes d’utilisation du provisionnement Mac automatique, examinez les journaux IDE Visual Studio 2017, stockés dans **%LOCALAPPDATA%\Xamarin\Logs\15.0**. Ces journaux peuvent contenir des messages d’erreur pour vous aider à mieux diagnostiquer l’échec ou obtenir un support technique.
+Si vous rencontrez des problèmes d’utilisation du provisionnement Mac automatique, examinez les journaux IDE Visual Studio 2019, stockés dans **%LOCALAPPDATA%\Xamarin\Logs\15.0**. Ces journaux peuvent contenir des messages d’erreur pour vous aider à mieux diagnostiquer l’échec ou obtenir un support technique.
 
 ## <a name="build-ios-apps-from-the-windows-command-line"></a>Générer des applications iOS à partir de la ligne de commande Windows
 
@@ -223,21 +228,21 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 
 Les paramètres transmis à `msbuild` dans l’exemple ci-dessus sont :
 
-- `ServerAddress` : adresse IP de l’hôte de build Mac.
-- `ServerUser` : nom d’utilisateur à employer pour la connexion à l’hôte de build Mac.
+- `ServerAddress`  : adresse IP de l’hôte de build Mac.
+- `ServerUser`  : nom d’utilisateur à employer pour la connexion à l’hôte de build Mac.
   Utilisez votre nom d’utilisateur système plutôt que votre nom complet.
-- `ServerPassword` : mot de passe à utiliser lors de la connexion à l’hôte de build Mac.
+- `ServerPassword`  : mot de passe à utiliser lors de la connexion à l’hôte de build Mac.
 
 > [!NOTE]
-> Visual Studio 2017 stocke `msbuild` dans le répertoire suivant : **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
+> Visual Studio 2019 stocke `msbuild` dans le répertoire suivant : **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
 
-La première fois que la fonctionnalité Appairer avec un Mac se connecte à un hôte de build Mac particulier à partir de Visual Studio 2017 ou de la ligne de commande, elle configure les clés SSH. Avec ces clés, les connexions ultérieures ne nécessitent pas de nom d’utilisateur ni de mot de passe. Les clés nouvellement créées sont stockées dans **%LOCALAPPDATA%\Xamarin\MonoTouch**.
+La première fois que la fonctionnalité Appairer avec un Mac se connecte à un hôte de build Mac particulier à partir de Visual Studio 2019 ou de la ligne de commande, elle configure les clés SSH. Avec ces clés, les connexions ultérieures ne nécessitent pas de nom d’utilisateur ni de mot de passe. Les clés nouvellement créées sont stockées dans **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 
 Si le paramètre `ServerPassword` est omis à partir d’un appel de build de ligne de commande, Appairer avec un Mac tente de se connecter à l’hôte de build Mac à l’aide des clés SSH enregistrées.
 
 ## <a name="summary"></a>Récapitulatif
 
-Cet article a décrit comment utiliser Appairer avec un Mac pour connecter Visual Studio 2017 à un hôte de build Mac, ce qui permet aux développeurs Visual Studio 2017 de générer des applications iOS natives avec Xamarin.iOS.
+Cet article a décrit comment utiliser Appairer avec un Mac pour connecter Visual Studio 2019 à un hôte de build Mac, ce qui permet aux développeurs Visual Studio 2019 de générer des applications iOS natives avec Xamarin.iOS.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

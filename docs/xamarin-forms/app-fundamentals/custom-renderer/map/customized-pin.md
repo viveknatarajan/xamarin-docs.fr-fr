@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 15cba21eed510ec13bfa3dc3f176fce30fb4ed68
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059377"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870298"
 ---
 # <a name="customizing-a-map-pin"></a>Personnalisation d’une épingle de carte
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![DTélécharger l’exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
 _Cet article montre comment créer un renderer personnalisé pour le contrôle Map qui affiche une carte native avec une épingle personnalisée et une vue personnalisée des données de l’épingle sur chaque plateforme._
 
@@ -225,9 +225,9 @@ namespace CustomRenderer.iOS
 }
 ```
 
-La méthode `OnElementChanged` procède à la configuration suivante de l’instance [`MKMapView`](https://developer.xamarin.com/api/type/MapKit.MKMapView/), sous réserve que le renderer personnalisé soit attaché à un nouvel élément Xamarin.Forms :
+La méthode `OnElementChanged` procède à la configuration suivante de l’instance [`MKMapView`](xref:MapKit.MKMapView), sous réserve que le renderer personnalisé soit attaché à un nouvel élément Xamarin.Forms :
 
-- La propriété [`GetViewForAnnotation`](https://developer.xamarin.com/api/property/MapKit.MKMapView.GetViewForAnnotation/) est définie sur la méthode `GetViewForAnnotation`. Cette méthode est appelée quand l’[emplacement de l’annotation devient visible sur la carte](#Displaying_the_Annotation), puis est utilisée pour personnaliser l’annotation avant de l’afficher.
+- La propriété [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) est définie sur la méthode `GetViewForAnnotation`. Cette méthode est appelée quand l’[emplacement de l’annotation devient visible sur la carte](#Displaying_the_Annotation), puis est utilisée pour personnaliser l’annotation avant de l’afficher.
 - Des gestionnaires d’événements pour les événements `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` et `DidDeselectAnnotationView` sont inscrits. Ces événements se déclenchent quand l’utilisateur [appuie sur l’accessoire de droite de la légende](#Tapping_on_the_Right_Callout_Accessory_View)et quand il [sélectionne](#Selecting_the_Annotation) et [désélectionne](#Deselecting_the_Annotation) l’annotation, respectivement. Les événements sont désinscrits uniquement quand l’élément auquel le renderer est attaché change.
 
 <a name="Displaying_the_Annotation" />
@@ -273,7 +273,7 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
 Cette méthode garantit que l’annotation s’affiche sous la forme d’une image personnalisée et non d’une épingle définie par le système, et que quand l’utilisateur appuie sur l’annotation, une légende apparaît avec du contenu à gauche et à droite du titre et de l’adresse de l’annotation. Cette opération peut être accomplie de la façon suivante :
 
 1. La méthode `GetCustomPin` est appelée pour retourner les données personnalisées de l’épingle de l’annotation.
-1. Pour économiser la mémoire, la vue de l’annotation est mise en pool pour être réutilisée avec l’appel à [`DequeueReusableAnnotation`](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
+1. Pour économiser la mémoire, la vue de l’annotation est mise en pool pour être réutilisée avec l’appel à [`DequeueReusableAnnotation`](xref:MapKit.MKMapView.DequeueReusableAnnotation*).
 1. La classe `CustomMKAnnotationView` étend la classe `MKAnnotationView` avec les propriétés `Id` et `Url` qui correspondent aux propriétés identiques de l’instance `CustomPin`. Une nouvelle instance de la `CustomMKAnnotationView` est créée, à condition que l’annotation soit `null`:
     - La propriété `CustomMKAnnotationView.Image` est définie sur l’image qui représente l’annotation sur la carte.
     - La propriété `CustomMKAnnotationView.CalloutOffset` est définie sur `CGPoint` qui spécifie que la légende est centrée au-dessus de l’annotation.
@@ -281,7 +281,7 @@ Cette méthode garantit que l’annotation s’affiche sous la forme d’une ima
     - La propriété `CustomMKAnnotationView.RightCalloutAccessoryView` est définie sur le bouton *Information* qui apparaît à droite du titre et de l’adresse de l’annotation.
     - La propriété `CustomMKAnnotationView.Id` est définie sur la propriété `CustomPin.Id` retournée par la méthode `GetCustomPin`. L’annotation peut être ainsi identifiée pour [personnaliser davantage sa légende](#Selecting_the_Annotation), si vous le souhaitez.
     - La propriété `CustomMKAnnotationView.Url` est définie sur la propriété `CustomPin.Url` retournée par la méthode `GetCustomPin`. L’URL est accessible quand l’utilisateur [appuie sur le bouton affiché dans la vue d’accessoire de droite de la légende](#Tapping_on_the_Right_Callout_Accessory_View).
-1. La propriété [`MKAnnotationView.CanShowCallout`](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) est définie sur `true` pour que la légende s’affiche quand l’utilisateur appuie sur l’annotation.
+1. La propriété [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) est définie sur `true` pour que la légende s’affiche quand l’utilisateur appuie sur l’annotation.
 1. L’annotation est retournée pour être affichée sur la carte.
 
 <a name="Selecting_the_Annotation" />

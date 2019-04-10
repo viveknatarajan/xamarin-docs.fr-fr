@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 336f1ec4e4406d2ab40c5e8aea247bd3be9ed765
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ed59f32711bae56672d1d7f114fbb80a906d67ce
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672727"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855287"
 ---
 # <a name="hello-ios--quickstart"></a>Hello.iOS - Démarrage rapide
 
@@ -42,7 +42,7 @@ Le [guide d’installation de Xamarin.iOS sur Mac](~/ios/get-started/installatio
 
 Xamarin.iOS fonctionne avec la configuration suivante :
 
-- Dernière version de Visual Studio 2017 Community, Professional ou Enterprise sur Windows 10, associée à un hôte de build Mac répondant aux spécifications ci-dessus
+- Dernière version de Visual Studio 2019 ou Visual Studio 2019 Community, Professional ou Enterprise sur Windows 10, associée à un hôte de build Mac répondant aux spécifications ci-dessus.
 
 Le [guide d’installation de Xamarin.iOS sur Windows](~/ios/get-started/installation/windows/index.md) est disponible pour obtenir des instructions pas à pas.
 
@@ -496,5 +496,5 @@ Maintenant, le moment est venu d’examiner de plus près les outils et compéte
 
 - [Icônes d’application et images de lancement Xamarin (exemple)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
 - [Hello, iOS (exemple)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [Lignes directrices de l’interface utilisateur iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [Human Interface Guidelines pour iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portail de provisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)

@@ -1,6 +1,6 @@
 ---
 title: Déploiement sans fil pour les applications Xamarin.iOS et tvOS
-description: Ce document décrit comment déployer sans fil une application Xamarin.iOS sur un appareil iOS à partir de Visual Studio pour Mac ou Visual Studio 2017.
+description: Ce document décrit comment déployer sans fil une application Xamarin.iOS sur un appareil iOS à partir de Visual Studio pour Mac ou Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 6d64acdcc84c16f33a1f543bf1c9506ae7c8e347
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479691"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854832"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Déploiement sans fil pour les applications Xamarin.iOS et tvOS
 
@@ -27,14 +27,14 @@ La fonctionnalité de déploiement sans fil est disponible à la fois dans Visua
 
 Pour utiliser le déploiement sans fil, vous devez disposer des éléments suivants :
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
 
 - macOS 10.12.4
 - La dernière version de Visual Studio pour Mac
 - Xcode 9.0 ou version ultérieure
 - Un appareil avec iOS 11.0 ou tvOS 11.0 et version ultérieure
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 - La dernière version de Visual Studio
 - Un appareil avec iOS 11.0 ou tvOS 11.0 et version ultérieure

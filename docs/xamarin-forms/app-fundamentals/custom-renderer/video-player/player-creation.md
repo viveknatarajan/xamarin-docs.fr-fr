@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 2679756cd9a9a60c2d7ab637678ff1d8262b2403
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 4bfbd065c9b17ce402c5a15289c7ff608eb58b23
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669984"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870012"
 ---
 # <a name="creating-the-platform-video-players"></a>Création des lecteurs vidéo de la plateforme
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![DTélécharger l’exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 La solution [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) contient tout le code afin d’implémenter un lecteur vidéo pour Xamarin.Forms. Elle inclut également une série de pages qui montre comment utiliser le lecteur vidéo dans une application. L’ensemble du code `VideoPlayer` et ses renderers de plateforme se trouvent dans des dossiers de projet nommés `FormsVideoLibrary` et utilisent également l’espace de noms `FormsVideoLibrary`. Cela doit faciliter la copie des fichiers dans votre propre application et la référence des classes.
 
@@ -43,7 +43,7 @@ Chacune des plateformes comprend une classe nommée `VideoPlayerRenderer` qui co
 
 ### <a name="the-ios-player-view-controller"></a>Contrôleur d’affichage de lecteur iOS
 
-Plusieurs classes sont impliquées lors de l’implémentation d’un lecteur vidéo dans iOS. L’application crée d’abord un [`AVPlayerViewController`](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/), puis définit la propriété [`Player`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) sur un objet de type [`AVPlayer`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/). Des classes supplémentaires sont nécessaires quand une source vidéo est affectée au lecteur.
+Plusieurs classes sont impliquées lors de l’implémentation d’un lecteur vidéo dans iOS. L’application crée d’abord un [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController), puis définit la propriété [`Player`](xref:AVKit.AVPlayerViewController.Player*) sur un objet de type [`AVPlayer`](xref:AVFoundation.AVPlayer). Des classes supplémentaires sont nécessaires quand une source vidéo est affectée au lecteur.
 
 Comme tous les renderers, le [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) iOS contient un attribut `ExportRenderer` qui identifie l’affichage `VideoPlayer` avec le renderer :
 
@@ -318,7 +318,7 @@ Les sections suivantes décrivent comment la propriété `AreTransportControlsEn
 
 ### <a name="ios-playback-controls"></a>Contrôles de lecture iOS
 
-La propriété du `AVPlayerViewController` iOS qui régit l’affichage des contrôles de transport est [`ShowsPlaybackControls`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.ShowsPlaybackControls/). Voici comment cette propriété est définie dans le `VideoViewRenderer` iOS :
+La propriété du `AVPlayerViewController` iOS qui régit l’affichage des contrôles de transport est [`ShowsPlaybackControls`](xref:AVKit.AVPlayerViewController.ShowsPlaybackControls*). Voici comment cette propriété est définie dans le `VideoViewRenderer` iOS :
 
 ```csharp
 namespace FormsVideoLibrary.iOS

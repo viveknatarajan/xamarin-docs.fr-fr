@@ -4,15 +4,16 @@ description: La classe Map dans Xamarin.Essentials permet à une application d�
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 9797244a9f89d0658b65b132eaf541ed763be97b
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 04/02/2019
+ms.custom: video
+ms.openlocfilehash: c0875534d88ea5b66b3072c35b9d38894fe98934
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898964"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870025"
 ---
-# <a name="xamarinessentials-map"></a>Xamarin.Essentials : Carte
+# <a name="xamarinessentials-map"></a>Xamarin.Essentials: Carte
 
 La classe **Map** permet à une application d’ouvrir l’application de cartes installée à un emplacement spécifique.
 
@@ -102,31 +103,31 @@ public class MapTest
 
 ## <a name="platform-differences"></a>Différences entre les plateformes
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 - `NavigationMode` prend en charge Bicycling (vélo), Driving (voiture) et Walking (marche).
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
-- `NavigationMode` prend en charge Bicycling (vélo), Transit et Walking (marche).
+- `NavigationMode` prend en charge Driving (voiture), Transit et Walking (marche).
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
-- `NavigationMode` prend en charge Bicycling (vélo), Transit et Walking (marche).
+- `NavigationMode` prend en charge Driving (voiture), Transit et Walking (marche).
 
 --------------
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 Android utilise le schéma d’URI `geo:` pour lancer l’application Cartes sur l’appareil. L’utilisateur peut être invité à sélectionner à partir d’une application existante qui prend en charge ce schéma d’URI.  Xamarin.Essentials est testé avec Google Maps, qui prend en charge ce schéma.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 Aucun détail d’implémentation spécifique à la plateforme.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 Aucun détail d’implémentation spécifique à la plateforme.
 
@@ -136,3 +137,9 @@ Aucun détail d’implémentation spécifique à la plateforme.
 
 - [Code source de Map](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Map)
 - [Documentation de l’API Map](xref:Xamarin.Essentials.Map)
+
+## <a name="related-video"></a>Vidéo associée
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Maps-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

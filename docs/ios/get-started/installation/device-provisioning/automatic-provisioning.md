@@ -8,31 +8,32 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 9f198336d3fc9cca3bc79c377749a1211ebbac55
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479678"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855170"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionnement automatique pour Xamarin.iOS
 
-_Une fois Xamarin.iOS installé avec succès, l’étape suivante du développement iOS consiste à configurer l’appareil iOS. Ce guide décrit l’utilisation de la signature automatique pour demander des certificats et profils de développement._
+_Après l’installation de Xamarin.iOS, l’étape suivante dans le développement iOS consiste à provisionner votre appareil iOS. Ce guide décrit l’utilisation de la signature automatique pour demander des certificats et profils de développement._
 
 ## <a name="requirements"></a>Spécifications
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
 
 - Visual Studio pour Mac 7.3 ou version ultérieure
 - Xcode 9 ou supérieure
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-- Visual Studio 2017 Version 15.7 (ou supérieure)
+- Visual Studio 2019
+- OU Visual Studio 2017 Version 15.7 (ou supérieure)
 
 Vous devez également avoir un appairage avec un hôte de build Mac qui a les éléments suivants :
 
-- Xcode 9 ou supérieure
+- Xcode 10 ou version ultérieure
 
 -----
 
@@ -54,7 +55,7 @@ Avant de commencer le processus de signature automatique, vous devez vérifier q
 
 Pour signer automatiquement votre application pour un déploiement sur un appareil iOS, effectuez les opérations suivantes :
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
 
 1. Ouvrez votre projet iOS dans Visual Studio pour Mac.
 
@@ -72,9 +73,9 @@ Pour signer automatiquement votre application pour un déploiement sur un appare
 
     Si la signature automatique échoue, le **bloc de signature automatique** indique la raison de l’erreur.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-1. Appairez Visual Studio 2017 avec un Mac comme décrit dans le guide [Appairer avec un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Appairez Visual Studio 2019 avec un Mac comme décrit dans le guide [Appairer avec un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 2. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nom du projet et sélectionnez **Propriétés**. Ensuite, accédez à l’onglet **Signature du bundle iOS**.
 
@@ -132,7 +133,7 @@ Si votre application utilise l’un de ces droits, Visual Studio pour Mac tente 
 ## <a name="related-links"></a>Liens associés
 
 - [Provisionnement libre](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
-- [Distribution d’une application](~/ios/deploy-test/app-distribution/index.md)
+- [Distribution d’applications](~/ios/deploy-test/app-distribution/index.md)
 - [Résolution des problèmes](~/ios/deploy-test/troubleshooting.md)
 - [Apple - Guide de distribution d’applications](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
 

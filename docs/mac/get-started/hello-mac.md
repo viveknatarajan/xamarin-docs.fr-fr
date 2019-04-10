@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: 02e0484a417b5d42129fa4e7a6ab9576c1817d74
-ms.sourcegitcommit: 8e8f83da636b63d14d1305c43a99736a00b9f590
+ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55969591"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855313"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac – Procédure pas à pas
 
@@ -77,7 +77,7 @@ Visual Studio pour Mac crée l’application Xamarin.Mac et affiche les fichiers
 
 [![](hello-mac-images/project01-sml.png "Affichage par défaut de la nouvelle solution")](hello-mac-images/project01.png#lightbox)
 
-Visual Studio pour Mac utilise la même structure **Solution** et **Projet** que Visual Studio 2017. Une solution est un conteneur qui peut recevoir un ou plusieurs projets ; les projets peuvent inclure des applications, bibliothèques de prise en charge, applications de test, etc. Le modèle **Fichier > Nouveau projet** crée une solution et un projet d’application automatiquement.
+Visual Studio pour Mac utilise la même structure **Solution** et **Projet** que Visual Studio 2019. Une solution est un conteneur qui peut recevoir un ou plusieurs projets ; les projets peuvent inclure des applications, bibliothèques de prise en charge, applications de test, etc. Le modèle **Fichier > Nouveau projet** crée une solution et un projet d’application automatiquement.
 
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Structure d’une application Xamarin.Mac
 

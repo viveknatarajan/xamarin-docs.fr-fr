@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e687a724c8455d954969f83b8ee48c87ca9dbb09
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669776"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870155"
 ---
 # <a name="custom-video-transport-controls"></a>Contrôles de transport vidéo personnalisés
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![DTélécharger l’exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Les contrôles de transport d’un lecteur vidéo incluent les boutons qui effectuent les fonctions **Lecture**, **Pause** et **Arrêt**. Ces boutons sont habituellement identifiés par des icônes familières plutôt que du texte, et les fonctions **Lecture** et **Pause** sont généralement combinées en un seul bouton.
 
@@ -360,7 +360,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Deux propriétés de `AVPlayer` doivent être accessibles : La propriété [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) de type `AVPlayerStatus` et la propriété [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) de type `AVPlayerTimeControlStatus`. Notez que la propriété `Element` (qui correspond au `VideoPlayer`) doit être castée en `IVideoPlayerController` pour définir la propriété `Status`.
+Deux propriétés de `AVPlayer` doivent être accessibles : La propriété [`Status`](xref:AVFoundation.AVPlayer.Status*) de type `AVPlayerStatus` et la propriété [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) de type `AVPlayerTimeControlStatus`. Notez que la propriété `Element` (qui correspond au `VideoPlayer`) doit être castée en `IVideoPlayerController` pour définir la propriété `Status`.
 
 ### <a name="the-android-status-setting"></a>Paramètre d’état Android
 
@@ -540,7 +540,7 @@ Ce symbole est pris en charge par chaque plateforme, à ceci près qu’il s’a
 
 C’est ce qui est utilisé dans la balise ci-dessous. Sur iOS, ce code donne au symbole **Lecture** la même apparence 3D que les boutons **Pause** et **Arrêt**, mais la variante ne fonctionne pas sur Android et UWP.
 
-La page **Transport personnalisé** affecte à la propriété **AreTransportControlsEnabled** la valeur **false** et inclut un élément `ActivityIndicator` affiché lors du chargement de la vidéo ainsi que deux boutons. Des objets `DataTrigger` servent à activer et désactiver l’élément `ActivityIndicator` et les boutons ainsi qu’à basculer le premier bouton entre **Lecture** et **Pause** :
+La page **Transport personnalisé** affecte à la propriété **AreTransportControlsEnabled** la valeur **false** et inclut un élément `ActivityIndicator` affiché lors du chargement de la vidéo ainsi que deux boutons. `DataTrigger`  : ces objets servent à activer et désactiver l’élément `ActivityIndicator` et les boutons, ainsi qu’à basculer le premier bouton entre **Lecture** et **Pause** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

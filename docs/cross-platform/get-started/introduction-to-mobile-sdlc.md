@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: b8f36ef407c3acc9b3472539735816649e13b7db
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672662"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855235"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduction au cycle de vie de développement des logiciels mobiles
 
@@ -72,7 +72,7 @@ Une fois que les caractéristiques et les fonctionnalités de l’application on
 
 L’expérience utilisateur est généralement modélisée via des maquettes en utilisant l’un des nombreux [toolkits de conception](https://docs.microsoft.com/windows/uwp/design/downloads/). Les maquettes permettent de concevoir l’expérience utilisateur sans devoir se soucier de la conception de l’interface utilisateur réelle :
 
- [![](introduction-to-mobile-sdlc-images/balsamiq.png "L’expérience utilisateur est généralement modélisée via des maquettes avec des outils comme Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "L’expérience utilisateur est généralement modélisée par le biais de maquettes avec des outils comme Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 Lors de la création des maquettes de l’expérience utilisateur, il est important de prendre en compte les recommandations sur l’interface des différentes plateformes ciblées par l’application. L’application doit s’intégrer parfaitement sur chaque plateforme. Les recommandations de conception officielles pour chaque plateforme sont :
 
@@ -151,7 +151,7 @@ Ceci permet aux développeurs de disposer d’un canal de distribution potentiel
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### <a name="uwp"></a>UWP 
+#### <a name="uwp"></a>UWP
 
 Les applications UWP sont distribuées aux utilisateurs via le Microsoft Store. Les développeurs soumettent leurs applications pour approbation, qui apparaissent ensuite dans le Store. Pour plus d’informations sur la publication des applications Windows, consultez la documentation UWP sur la [publication](https://docs.microsoft.com/windows/uwp/publish/).
 
@@ -195,7 +195,7 @@ Pour ces raisons, il est important de coder de façon judicieuse, et de déploye
 
 Le multitâche est étroitement contrôlé dans iOS, et votre application doit se conformer à un certain nombre de règles et de comportements quand une autre application passe au premier plan, sans quoi votre application sera arrêtée par iOS.
 
-#### <a name="device-specific-resources"></a>Ressources spécifiques à l’appareil
+#### <a name="device-specific-resources"></a>Ressources propres à l’appareil
 
 Pour un facteur de forme particulier, le matériel peut varier considérablement entre différents modèles. Par exemple, certains appareils ont une caméra à l’arrière, mais d’autres ont également une caméra à l’avant, alors que d’autres en sont complètement dépourvus.
 
@@ -203,7 +203,7 @@ Certains appareils plus anciens (les iPhone 3G et leurs prédécesseurs) n’aut
 
 En raison de ces différences entre les modèles d’appareils, il est important de vérifier la présence d’une fonctionnalité avant de tenter de l’utiliser.
 
-#### <a name="os-specific-constraints"></a>Contraintes spécifiques au système d’exploitation
+#### <a name="os-specific-constraints"></a>Contraintes propres au système d’exploitation
 
 Pour garantir que les applications sont réactives et sécurisées, iOS applique un certain nombre de règles auxquelles les applications doivent se conformer. En plus des règles relatives au multitâche, il existe un certain nombre de méthodes d’événement dont votre application doit retourner dans une quantité de temps déterminée, sinon elle est arrêtée par iOS.
 
@@ -218,7 +218,7 @@ Le multitâche dans Android a deux composants. Le premier est le cycle de vie de
 Le deuxième composant du multitâche dans Android est l’utilisation de services.
 Les services sont des processus d’exécution longue qui existent indépendamment d’une application et qui sont utilisés pour exécuter des processus quand l’application est à l’arrière-plan. Pour plus d’informations, consultez le guide [Création de services](~/android/app-fundamentals/services/index.md).
 
-#### <a name="many-devices-and-many-form-factors"></a>Appareils et facteurs de forme en nombre
+#### <a name="many-devices-and-many-form-factors"></a>Nombreux appareils et facteurs de forme
 
 Google n’impose aucune limite sur les appareils qui peuvent exécuter le système d’exploitation Android. Ce paradigme ouvert aboutit à environnement de produits constitué d’une multitude d’appareils différents présentant une grande hétérogénéité en termes de matériel, de résolutions et de proportions d’écran, de fonctionnalités des appareils et de capacités.
 
@@ -233,7 +233,7 @@ Ceci est une étape essentielle dans le modèle de distribution Android en raiso
 
 #### <a name="multitasking"></a>Multitâche
 
-Le multitâche dans UWP a également deux parties : le cycle de vie pour les pages et les applications, et les processus d’arrière-plan. Chaque écran d’une application est une instance d’une classe Page, qui a des événements associés à un état actif ou inactif (avec des règles spéciales pour gérer l’état inactif ou « désactivé »). 
+Le multitâche dans UWP a également deux parties : le cycle de vie pour les pages et les applications, et les processus d’arrière-plan. Chaque écran d’une application est une instance d’une classe Page, qui a des événements associés à un état actif ou inactif (avec des règles spéciales pour gérer l’état inactif ou « désactivé »).
 
 La deuxième partie fournit des agents d’arrière-plan pour le traitement des tâches même quand l’application n’est pas en cours d’exécution au premier plan. 
 
@@ -249,9 +249,8 @@ Pour plus d’informations sur les considérations de sécurité importantes dan
 
 Ce guide est une introduction au cycle de vie de développement de logiciels pour les appareils mobiles. Il contient des considérations générales pour créer des applications mobiles et passe en revue un certain nombre de considérations spécifiques aux plateformes, notamment la conception, les tests et le déploiement.
 
-## <a name="related-links"></a>Liens associés
+## <a name="next-steps"></a>Étapes suivantes
 
 - [Introduction au développement mobile](~/cross-platform/get-started/introduction-to-mobile-development.md)
-- [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
-- [Notions de base des applications](~/cross-platform/app-fundamentals/index.md)
+- [Bien démarrer avec Xamarin](~/get-started/index.yml)
+- [Partage de code entre plateformes](~/cross-platform/app-fundamentals/index.md)

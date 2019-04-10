@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 12fcf6ff1b289c773e0dce03be4ac62105f6acd4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
+ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669464"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58751259"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS – Exploration approfondie
 
@@ -310,7 +310,7 @@ Pour plus d’informations sur l’utilisation des contrôleurs de vues, consult
 
 Le rôle le plus important du contrôleur de vue est de répondre aux interactions de l’utilisateur, par exemple l’activation des boutons, la navigation, etc. Le moyen le plus simple de gérer les interactions de l’utilisateur consiste à associer un contrôle pour écouter les entrées d’utilisateur et à attacher un gestionnaire d’événements pour répondre à ces entrées. Par exemple, un bouton peut être associé à la réponse à un événement tactile, comme illustré dans l’application Phoneword.
 
-Dans la mesure où vous avez désormais une connaissance plus approfondie des vues et des contrôleurs de vues, intéressons-nous au fonctionnement de cette application.
+Voyons comment cela fonctionne.
 Dans le projet `Phoneword_iOS`, un bouton appelé `TranslateButton` a été ajouté à la hiérarchie de vues de contenu :
 
 [![](hello-ios-deepdive-images/image1.png "Un bouton appelé TranslateButton a été ajouté à la hiérarchie d’affichage de contenu")](hello-ios-deepdive-images/image1.png#lightbox)
