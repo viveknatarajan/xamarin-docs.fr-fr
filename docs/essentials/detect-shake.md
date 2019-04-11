@@ -5,12 +5,12 @@ ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: f1482de3fd1c3e550ac9739d0f815092f7fe753d
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 2a14d739806fef353472a5186a9dbedd8e218662
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58176024"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59019306"
 ---
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Détecter les secousses
 
@@ -28,14 +28,14 @@ Ajoutez une référence à Xamarin.Essentials dans votre classe :
 using Xamarin.Essentials;
 ```
 
-Pour détecter une secousse de l’appareil, vous devez utiliser la fonctionnalité d’accéléromètre en appelant les méthodes `Start` et `Stop` pour écouter les modifications d’accélération et détecter une secousse. Chaque fois qu’une secousse est détectée, un événement `ShakeDetected ` se déclenche. Voici un exemple d’utilisation :
+Pour détecter une secousse de l’appareil, vous devez utiliser la fonctionnalité d’accéléromètre en appelant les méthodes `Start` et `Stop` pour écouter les modifications d’accélération et détecter une secousse. Chaque fois qu’une secousse est détectée, un événement `ShakeDetected ` se déclenche. Il est recommandé d’utiliser `Game` ou une version plus rapide pour `SensorSpeed`. Voici un exemple d’utilisation :
 
 ```csharp
 
 public class DetectShakeTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.UI;
+    SensorSpeed speed = SensorSpeed.Game;
 
     public DetectShakeTest()
     {

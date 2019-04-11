@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 5e47799e704dfbe2c4088016d7055fc616215ea2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8c831dfa45c5028e4f1422467bf3be9210452335
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056462"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59019371"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior réutilisable
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+[![DTélécharger l’exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 
-_Les comportements constituent une approche utile pour ajouter un effet à un contrôle, en supprimant des fichiers code-behind le code réutilisable qui gère les effets. Cet article montre comment créer et utiliser un comportement Xamarin.Forms pour ajouter un effet à un contrôle._
+_Les comportements constituent une approche utile pour ajouter un effet à un contrôle, en supprimant des fichiers code-behind le code réutilisable qui gère les effets. Cet article montre comment créer et consommer un comportement Xamarin.Forms pour ajouter un effet à un contrôle._
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -168,7 +168,7 @@ Cet article a décrit l’utilisation d’un comportement pour ajouter un effet 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Effets](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Comportement Effect (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
-- [Behavior](xref:Xamarin.Forms.Behavior)
-- [Behavior<T>](xref:Xamarin.Forms.Behavior`1)
+- [Effects (Effets)](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [EffectBehavior (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+- [Comportement](xref:Xamarin.Forms.Behavior)
+- [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)
