@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 2fa40925b67e60c5e03e3059c7c369f2a53ce540
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 314bedcb6bb2d7ebf9d8f98428b6a7cad059f73b
+ms.sourcegitcommit: 9e9340999d569a3db01b4b59a0fcf24b8caa869c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672428"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59509951"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introduction au développement de jeux avec Xamarin
 
@@ -24,11 +24,9 @@ Cet article aborde les rubriques suivantes :
 - **Création d’une idée de jeu** – cette section permettre vous aider à créer une nouvelle idée de jeu : la première étape dans la création d’un nouveau jeu.
 - **Technologie de développement de jeux** – ici, nous allons répertorier quelques-unes des technologies inter-plateformes disponibles qui peuvent améliorer votre productivité en tant que développeur de jeux.
 
-
 ## <a name="game-vs-non-game-programming-concepts"></a>Visual Studio de jeu. Concepts de programmation hors jeu
 
 Les programmeurs de déplacement dans le développement de jeux sont souvent confrontés à des nouveaux concepts et modèles de développement. Cette section présente une vue d’ensemble de certaines de ces concepts.
-
 
 ### <a name="the-game-loop"></a>La boucle du jeu
 
@@ -53,7 +51,6 @@ Types de logique qui peut être effectuée sur chaque-image courants sont les su
 
 N’oubliez pas que de nombreuses activités répertoriées ci-dessus peuvent modifier l’état de l’application entière, tandis que de nombreuses applications hors jeu ont tendance à changer d’état en réponse aux événements déclenchés.
 
-
 ### <a name="content-loading-and-unloading"></a>Chargement de contenu et de déchargement
 
 Contenu manuellement le chargement et déchargement (ou en cours de suppression) peut-être être nécessaires selon la technologie que vous utilisez dans le développement. Le chargement et déchargement des ressources manuellement peuvent être nécessaires pour plusieurs raisons :
@@ -63,7 +60,6 @@ Contenu manuellement le chargement et déchargement (ou en cours de suppression)
  - Jeux deviez afficher plus de ressources ne tient pas dans la mémoire RAM. Jeux de « Ouvrir le monde » incluent souvent des environnements de grande taille quels lecteurs peuvent naviguer en toute transparence : c’est avec aucun écran de chargement. Dans ce cas, vous devrez peut-être créer un système personnalisé pour le contenu de diffusion en continu dans et l’utilisation de la gestion de la mémoire.
 
 Formats de fichiers personnalisés peut-être le traitement au moment du chargement, nécessitant le code de chargement personnalisé.
-
 
 ### <a name="math"></a>Math
 
@@ -77,17 +73,13 @@ Si vous êtes familiarisé avec le plan cartésien : qui est à l’aide de coo
 > Certains moteurs/API utilisent un système de coordonnées d’où augmentant la valeur de Y d’un objet sera déplacez-le vers le bas, tandis que les autres systèmes utilisent un système de coordonnées dans lequel les Y positif. Gardez cela à l’esprit si vous déplacez entre les systèmes.
 Fonctions trigonométriques (par exemple, le sinus et le cosinus) sont couramment utilisées dans des jeux 2D qui implémentent toutes les formes de rotation.
 
-
-
 Si vous envisagez de créer un jeu 3D vous aurez probablement besoin de se familiariser avec les concepts d’algèbre linéaire (de rotation et de déplacement dans l’espace 3D), ainsi que certains calcul (pour l’implémentation d’accélération).
-
 
 ### <a name="content-pipelines"></a>Pipelines de contenu
 
 Le terme *pipeline de contenu* fait référence au processus d’un fichier nécessaire pour obtenir à partir de son format lorsque créé (par exemple, un fichier image .png) à son format final lorsqu’il est utilisé dans un jeu. Le format fin varie sur lequel le type de contenu est utilisé, ainsi que de laquelle technologie est utilisée pour présenter le contenu.
 
 Contenu pipelines peuvent être très rapide et ne nécessiter aucun effort manuel. Par exemple, la plupart des moteurs de jeux et des API peut charger le format de fichier .png dans son format non traité. En revanche, des formats plus complexes (tels que les modèles 3D) devront peut-être être traités dans un autre format avant leur chargement, et ce traitement peut prendre un certain temps selon la taille et la complexité de la ressource.
-
 
 ## <a name="game-development-teams"></a>Équipes de développement de jeux
 
@@ -98,7 +90,6 @@ Développement de jeux introduit les nouveaux rôles et des titres pour les pers
 - **Artistes 3D** – artistes 3D sont chargés de créer *composants 3D*. Ceux-ci incluent des modèles 3D pour les environnements, de caractères et de propriétés (meubles plantes et autres objets inanimés). Certaines équipes de faire la distinction entre la 3D et des animations 3D selon la taille de l’équipe. Vous pouvez trouver gratuit art 3D pour votre jeu à [ http://opengameart.org/ ](http://opengameart.org/) .
 - **Concepteur de jeux** – concepteurs de jeux sont chargés de déterminer comment le jeu est lu. Cela peut inclure des décisions de haut niveau tels que le paramètre de jeu, l’objectif global de jeu, et comment faire évoluer un lecteur par le biais du jeu. Concepteurs de jeux peuvent également être impliqués dans les décisions très détaillées comme entrée de mappage à des actions, définition des coefficients de mouvement ou au niveau des sauvegardes et la conception de disposition de niveau. N’oubliez pas que le terme *concepteur* peuvent faire référence à un concepteur de jeux ou un concepteur visuel en fonction du contexte.
 - **Son concepteur** – concepteurs audio sont responsables de ressources audio d’un jeu. Certaines équipes peuvent faire la distinction entre les personnes chargées de la création d’effets sonores et compositeurs, tandis que les équipes plus petites peuvent avoir un seul individu responsable de tous les fichiers audio.
-
 
 ## <a name="creating-a-game-idea"></a>Création d’une idée de jeu
 
@@ -114,11 +105,9 @@ Une autre technique pour la génération de nouvelles idées consiste à prendre
 
 Renouveler les jeux existants est également une expérience de formation, bien que cela peut limiter la viabilité commerciale du produit fini. Le processus de création d’un jeu, même celui qui est un clone précis, offre une expérience de formation précieuse.
 
-
 ## <a name="game-development-technology"></a>Technologie de développement de jeux
 
 Les développeurs à l’aide de Xamarin.Android et Xamarin.iOS ont un large éventail de technologies disponibles pour faciliter le développement de jeux. Cette section décrit certaines des solutions inter-plateformes populaires.
-
 
 ### <a name="cocossharp"></a>CocosSharp
 
@@ -133,7 +122,6 @@ Le jeu en colère araignées géantes est créé avec CocosSharp, et il peut êt
 ![](images/image3.png "Le jeu en colère araignées géantes a été créé avec CocosSharp")
 
 Vous pouvez le télécharger et obtenir plus d’informations sur la [AngryNinjas Github page](https://github.com/xamarin/AngryNinjas).
-
 
 ### <a name="monogame"></a>MonoGame
 
@@ -154,7 +142,6 @@ Bastion :
 ![](images/image8.jpg "Bastion")
 
 Pour commencer à travailler avec MonoGame, rendez-vous sur notre [MonoGame Guides](~/graphics-games/monogame/index.md).
-
 
 ### <a name="urhosharp"></a>UrhoSharp
 
