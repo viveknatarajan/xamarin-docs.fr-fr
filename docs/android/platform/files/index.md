@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2978f0b2bcbdd463876784a9addd7dec055b8af9
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116795"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574817"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Stockage de fichier et l’accès avec Xamarin.Android
 
@@ -66,13 +66,12 @@ Pour optimiser le partage de code, les applications Xamarin.Android (ou les appl
 
 | System.Environment.SpecialFolder | Chemin d’accès  |
 |----------------------|---|
-| `ApplicationData` | **_INTERNE\_stockage_/.config** |
+| `ApplicationData` | **_INTERNAL\_STORAGE_/.config** |
 | `Desktop` | **_INTERNE\_stockage_  /bureau** |
-| `LocalApplicationData` | **_INTERNE\_stockage_/.local/share** |
-| `MyComputer` | **_INTERNE\_stockage_/.local/share** |
+| `LocalApplicationData` | **_INTERNAL\_STORAGE_/.local/share** |
 | `MyDocuments` | **_INTERNE\_STOCKAGE_** |
 | `MyMusic` | **_INTERNE\_stockage_/Music** |
-| `MyPictures` | **_INTERNE\_stockage_/Music** |
+| `MyPictures` | **_INTERNAL\_STORAGE_/Pictures** |
 | `MyVideos` | **_INTERNE\_stockage_/Videos** |
 | `Personal` | **_INTERNE\_STOCKAGE_** |
 

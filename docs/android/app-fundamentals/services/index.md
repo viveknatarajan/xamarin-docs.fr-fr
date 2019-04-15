@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: dfc0e1cb7239381ef2f495b0f9774d390b0dc82e
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ae86ca5fa47169bb5d78eb9d1116e419c23ed6d
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527194"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574804"
 ---
 # <a name="creating-android-services"></a>Création de Services Android
 
@@ -22,7 +22,7 @@ _Ce guide décrit les services de Xamarin.Android, qui sont des composants Andro
 
 Applications mobiles ne sont pas comme les applications de bureau. Ordinateurs de bureau ont la multitude de ressources, telles que l’écran, la mémoire, espace de stockage et un bloc d’alimentation connectée, n’est pas le cas des appareils mobiles. Ces contraintes forcer des applications mobiles à se comporter différemment. Par exemple, le petit écran sur un appareil mobile signifie généralement qu’une seule application (par exemple, activité) est visible à la fois. Autres activités sont déplacées vers l’arrière-plan et placées dans un état suspendu, où ils ne peuvent pas effectuer des tâches. Toutefois, le fait qu’une application Android soit dans l’arrière-plan ne signifie pas qu’il est impossible pour l’application continuer à travailler. 
 
-Les applications Android sont constituées d’au moins un des quatre composants principaux suivants : _activités_, _récepteurs de diffusion_, _fournisseurs de contenu_et _Services_. Les activités sont la pierre angulaire de nombreuses applications Android exceptionnelles, car ils fournissent l’interface utilisateur qui permet à un utilisateur d’interagir avec l’application. Toutefois, lorsqu’il s’agit d’exécution simultanées ou de travail en arrière-plan, les activités ne sont pas toujours le meilleur choix.
+Les applications Android sont constituées d’au moins un des quatre composants principaux suivants : _Activités_, _récepteurs de diffusion_, _fournisseurs de contenu_, et _Services_. Les activités sont la pierre angulaire de nombreuses applications Android exceptionnelles, car ils fournissent l’interface utilisateur qui permet à un utilisateur d’interagir avec l’application. Toutefois, lorsqu’il s’agit d’exécution simultanées ou de travail en arrière-plan, les activités ne sont pas toujours le meilleur choix.
  
 Le mécanisme principal pour le travail en arrière-plan dans Android est le _service_. Un service Android est un composant qui est conçu pour effectuer un travail sans interface utilisateur. Un service peut télécharger un fichier, écouter de la musique ou appliquer un filtre à une image. Services peuvent également être utilisés pour la communication entre processus (_IPC_) entre les applications Android. Par exemple une application Android peut utiliser le service de lecteur de musique qui provient d’une autre application ou une application peut exposer des données (par exemple, les informations de contact d’une personne) vers d’autres applications via un service. 
 
@@ -68,7 +68,7 @@ Il est également possible d’exécuter un service dans son propre processus su
 Il existe certaines situations où, même si une application est en arrière-plan, Android sera sortir de veille de l’application et d’assouplir ces restrictions pendant quelques minutes, ce qui permet d’effectuer un travail de l’application :
 * Une priorité élevée Firebase Cloud Message est reçue par l’application.
 * L’application reçoit une diffusion. 
-* L’application reçoit un exécute un `PendingIntent` en réponse à une Notification.
+* L’application reçoit et exécute un `PendingIntent` en réponse à une Notification.
 
 Les applications Xamarin.Android existantes peut-être modifier la façon dont ils effectuent le travail en arrière-plan pour éviter les problèmes qui peuvent se produire sur Android 8.0. Voici certaines des méthodes pratiques pour un service Android :
 
