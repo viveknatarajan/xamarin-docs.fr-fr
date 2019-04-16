@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/16/2019
 ms.locfileid: "58854988"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Store les données dans une base de données locale SQLite.NET
 
-[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 Dans ce démarrage rapide, vous allez apprendre comment :
 
@@ -451,9 +451,9 @@ Dans ce démarrage rapide, vous avez appris comment :
 Pour appliquer un style l’application avec des styles XAML, passez au démarrage rapide suivant.
 
 > [!div class="nextstepaction"]
-> [Suivant](styling.md)
+> [Next](styling.md)
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Notes de publication (exemple)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [Notes (exemple)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 - [Immersion dans Xamarin.Forms-démarrage rapide](deepdive.md)
