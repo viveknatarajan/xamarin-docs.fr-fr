@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866356"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Utiliser des données de conception avec le Générateur d’aperçu XAML
@@ -36,7 +36,7 @@ Par exemple, vous pouvez ajouter le texte à une étiquette qui est généraleme
 <Label Text={Binding Name} d:Text="Name" />
 ```
 
-[![Ddonnées d’heure de création avec du texte dans une étiquette](xaml-previewer-images/designtimedata-label-sm.png "conception heure des données avec le texte une étiquette")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Concevoir des données d’heure avec le texte dans une étiquette](xaml-previewer-images/designtimedata-label-sm.png "conception heure des données avec le texte une étiquette")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
  Dans cet exemple, sans `d:Text`, le Générateur d’aperçu XAML afficherait rien pour l’étiquette. Au lieu de cela, il affiche « Name » où l’étiquette a des données réelles lors de l’exécution.
 
@@ -46,7 +46,7 @@ Vous pouvez utiliser `d:` avec n’importe quel attribut pour un contrôle Xamar
 <d:Button Text="Design Time Button" />
 ```
 
-[![DCréation des données de temps avec un contrôle bouton](xaml-previewer-images/designtimedata-controls-sm.png "Design des données de temps avec un contrôle de bouton")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Concevoir des données d’heure avec un contrôle bouton](xaml-previewer-images/designtimedata-controls-sm.png "Design des données de temps avec un contrôle de bouton")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 Dans cet exemple, le bouton apparaît uniquement au moment du design. Utilisez cette méthode pour placer un espace réservé dans un [contrôle personnalisé non pris en charge par le Générateur d’aperçu XAML](render-custom-controls.md).
 
@@ -57,7 +57,7 @@ Vous pouvez définir un moment du design pour les images qui sont liées à la p
 ```csharp
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
-[![DCréation des données de temps avec des images](xaml-previewer-images/designtimedata-image-sm.png "données chronologique avec iamges de conception")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![Concevoir des données de temps avec des images](xaml-previewer-images/designtimedata-image-sm.png "données chronologique avec iamges de conception")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Données de temps de conception de ListView
 
@@ -83,7 +83,7 @@ ListView est largement utilisé pour afficher des données dans une application 
 </StackLayout>
 ```
 
-[![Ddonnées d’heure de création avec un ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "concevoir des données chronologiques présentant un ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Concevoir des données chronologiques présentant un ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "concevoir des données chronologiques présentant un ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
 Cet exemple affiche un ListView de trois TextCells dans le Générateur d’aperçu XAML. Vous pouvez modifier `x:String` à un modèle de données existant dans votre projet.
 

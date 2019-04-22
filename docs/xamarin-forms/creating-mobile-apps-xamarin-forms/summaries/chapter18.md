@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870220"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Résumé du chapitre 18. MVVM
 
-[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 Un des meilleurs moyens de concevoir une application est en séparant l’interface utilisateur à partir du code sous-jacent, ce qui est parfois appelé le *logique métier*. Plusieurs techniques existent, mais celui qui est adapté aux environnements basés sur le XAML est appelé Model-View-ViewModel ou MVVM.
 

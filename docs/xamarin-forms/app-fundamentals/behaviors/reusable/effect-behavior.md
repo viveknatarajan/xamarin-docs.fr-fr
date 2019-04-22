@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 8c831dfa45c5028e4f1422467bf3be9210452335
-ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59019371"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior réutilisable
 
-[![DTélécharger l’exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 
-_Les comportements constituent une approche utile pour ajouter un effet à un contrôle, en supprimant des fichiers code-behind le code réutilisable qui gère les effets. Cet article montre comment créer et consommer un comportement Xamarin.Forms pour ajouter un effet à un contrôle._
+_Les comportements constituent une approche utile pour ajouter un effet à un contrôle, en supprimant des fichiers code-behind le code réutilisable qui gère les effets. Cet article montre comment créer et utiliser un comportement Xamarin.Forms pour ajouter un effet à un contrôle._
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -168,7 +168,7 @@ Cet article a décrit l’utilisation d’un comportement pour ajouter un effet 
 
 ## <a name="related-links"></a>Liens associés
 
-- [Effects (Effets)](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [EffectBehavior (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
-- [Comportement](xref:Xamarin.Forms.Behavior)
+- [Effets](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Comportement Effect (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+- [Behavior](xref:Xamarin.Forms.Behavior)
 - [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870194"
 ---
 # <a name="introduction-to-ios-9"></a>Introduction à iOS 9
@@ -34,7 +34,7 @@ Nouveau iOS 9 iPhone 6 s et iPhone 6 s Plus, 3D Touch ajoute des mouvements sens
 
 Pour en savoir plus, consultez notre [présentation 3D Touch](~/ios/platform/3d-touch.md) guide.
 
-## <a name="app-transport-security"></a>Sécurité de Transport de l’application
+## <a name="app-transport-security"></a>Sécurité de transport de l’application
 
 Nouveau à iOS 9, App Transport Security (ATS) applique des connexions sécurisées entre les ressources internet (par exemple, le serveur de l’application back-end) et votre application. ATS garantit que toutes les communications internet sont conformes pour sécuriser la connexion meilleures pratiques, ce qui empêche la divulgation accidentelle d’informations sensibles directement par le biais de votre application ou une bibliothèque qui il consomme.
 
@@ -212,7 +212,7 @@ Consultez également les parties iOS de ces exemples (le Guide Mac OS X versions
 
 - [Exemples iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Introduction à la 3D Touch](~/ios/platform/3d-touch.md)
-- [Sécurité de Transport de l’application](~/ios/app-fundamentals/ats.md)
+- [Sécurité de transport de l’application](~/ios/app-fundamentals/ats.md)
 - [Multitâche pour iPad](~/ios/platform/multitasking.md)
 - [Contacts et l’interface utilisateur](~/ios/platform/contacts.md)
 - [Nouvelles API de recherche](~/ios/platform/search/index.md)
@@ -221,7 +221,7 @@ Consultez également les parties iOS de ces exemples (le Guide Mac OS X versions
 - [Améliorations de jeux](~/ios/platform/gaming/index.md)
 - [Présentation d’HomeKit](~/ios/platform/homekit.md)
 - [Introduction à la procédure de transfert](~/ios/platform/handoff.md)
-- [Modifications d’infrastructure supplémentaires iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [Modifications supplémentaires apportées à l’infrastructure iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [Résolution des problèmes](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [iOS 9 pour les développeurs](https://developer.apple.com/ios/pre-release/)
 - [Quelles sont les nouveautés dans iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

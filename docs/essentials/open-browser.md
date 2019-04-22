@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: 3f9e5a7a1e20b8e7d708ff80712e6262bae4baa7
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869585"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Visiteur
@@ -64,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Caractéristiques de mise en œuvre de la plateforme
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Le Mode de lancement détermine la façon dont le navigateur est lancé :
 
@@ -76,7 +76,7 @@ L’utilisation de [Onglets Chrome personnalisés](https://developer.chrome.com/
 
 Un `Intent` sera utilisé pour demander l’ouverture de l’URI via le navigateur normal du système.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Système par défaut
 
@@ -86,7 +86,7 @@ Un `Intent` sera utilisé pour demander l’ouverture de l’URI via le navigate
 
 La méthode standard `OpenUrl` de l'application principale est utilisée pour lancer le navigateur par défaut en dehors de l'application.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Le navigateur par défaut de l’utilisateur sera toujours exécuté, quel que soit `BrowserLaunchMode`.
 

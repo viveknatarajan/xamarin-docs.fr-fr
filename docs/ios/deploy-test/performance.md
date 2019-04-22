@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
 ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870389"
 ---
 # <a name="xamarinios-performance"></a>Performances des applications Xamarin.iOS
@@ -294,4 +294,4 @@ Cet article a décrit et expliqué les techniques permettant d’accroître le n
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Niveau de performance multiplateforme](~/cross-platform/deploy-test/memory-perf-best-practices.md)
+- [Performances entre plateformes](~/cross-platform/deploy-test/memory-perf-best-practices.md)

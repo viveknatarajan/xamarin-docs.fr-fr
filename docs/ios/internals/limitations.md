@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
 ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870174"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitations de Xamarin.iOS
@@ -80,7 +80,7 @@ Cependant, l’API de réflexion entière, y compris Type.GetType (« someClass
 
 ### <a name="using-delegates-to-call-native-functions"></a>L’utilisation de délégués pour appeler des fonctions natives
 
-Pour appeler une fonction native via un délégué C#, les déclaration du délégué doivent être décorée avec l’un des attributs suivants :
+Pour appeler une fonction native via un délégué c#, les déclaration du délégué doivent être décorée avec l’un des attributs suivants :
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (de préférence, s’agissant d’inter-plateformes et compatible avec .NET Standard 1.1 +)
 - [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
@@ -96,7 +96,7 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
 ### <a name="reverse-callbacks"></a>Inverser les rappels
 
-Dans Mono standard, il est possible de passer des instances de délégué C# en code non managé à la place d’un pointeur de fonction. Le runtime est généralement transformer ces pointeurs fonction en un petit thunk qui permet au code non managé effectuer un rappel dans du code managé.
+Dans Mono standard, il est possible de passer des instances de délégué c# en code non managé à la place d’un pointeur de fonction. Le runtime est généralement transformer ces pointeurs fonction en un petit thunk qui permet au code non managé effectuer un rappel dans du code managé.
 
 Dans Mono ces ponts sont implémentées par juste-à-temps compilateur. Lorsque l’utilisation du compilateur ahead of time requis par l’iPhone il existe deux limitations importantes à ce stade :
 

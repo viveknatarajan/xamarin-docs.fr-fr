@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870116"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Résumé du chapitre 15. L’interface interactive
 
-[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 
 Ce chapitre explore huit `View` dérivés qui permettent d’interagir avec l’utilisateur.
 
@@ -245,7 +245,7 @@ Le [ **SetTimer** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/m
 
 - [Chapitre 15 de texte intégral (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [Exemples de chapitre 15](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
-- [Curseur](~/xamarin-forms/user-interface/slider.md)
+- [Slider](~/xamarin-forms/user-interface/slider.md)
 - [Entrée](~/xamarin-forms/user-interface/text/entry.md)
 - [Éditeur](~/xamarin-forms/user-interface/text/editor.md)
 - [DatePicker](~/xamarin-forms/user-interface/datepicker.md)

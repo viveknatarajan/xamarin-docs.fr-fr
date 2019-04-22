@@ -1,5 +1,5 @@
 ---
-title: Balisage Json MonoTouch.Dialog
+title: MonoTouch.Dialog Json Markup
 description: Ce document décrit la syntaxe JSON qui peut être utilisée pour créer une interface utilisateur de Xamarin.iOS à l’aide de MonoTouch.Dialog.
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
@@ -8,13 +8,13 @@ ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
 ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870129"
 ---
-# <a name="monotouchdialog-json-markup"></a>Balisage Json MonoTouch.Dialog
+# <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json Markup
 
 Cette page décrit le balisage Json accepté par de MonoTouch.Dialog [JsonElement](xref:MonoTouch.Dialog.JsonElement)
 
@@ -153,7 +153,7 @@ La section contient :
 
 -  `header` (facultatif)
 -  `footer` (facultatif)
--  `elements` array
+-  Tableau `elements`
 
 
  <a name="header" />

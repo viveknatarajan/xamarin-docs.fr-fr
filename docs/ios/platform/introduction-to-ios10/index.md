@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
 ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870246"
 ---
 # <a name="introduction-to-ios-10"></a>Introduction à iOS 10
@@ -61,7 +61,7 @@ En outre, 3e partie clavier application Extensions ont les améliorations suivan
 
 Pour plus d’informations, consultez notre [Introduction aux Extensions](~/ios/platform/extensions.md), [intégration des applications Message](~/ios/platform/message-app-integration/index.md), [Introduction aux Suggestions proactives](~/ios/platform/search/proactive-suggestions.md), [ Présentation de SiriKit](~/ios/platform/sirikit/index.md), [Introduction aux Notifications à l’utilisateur](~/ios/platform/user-notifications/index.md) et d’Apple [Guide de programmation d’Extension d’application](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
 
-## <a name="app-search-enhancements"></a>Améliorations de la recherche de l’application
+## <a name="app-search-enhancements"></a>Améliorations de la recherche d’applications
 
 Spotlight de base dans iOS 10 apporte plusieurs améliorations à la recherche d’application telles que :
 
@@ -103,7 +103,7 @@ En outre, l’API CallKit offre la possibilité de créer des Extensions d’app
 
 Pour en savoir plus, consultez notre [présentation Callkit](~/ios/platform/callkit.md) guide.
 
-## <a name="message-app-integration"></a>Intégration de l’application message
+## <a name="message-app-integration"></a>Intégration de l’application Messages
 
 iOS 10 permettant d’inclure une Extension d’application de Message dans la solution Xamarin.iOS qui s’intègre à la **Messages** application et présente de nouvelles fonctionnalités à l’utilisateur. L’extension peut envoyer des messages interactifs, texte, autocollants et fichiers multimédias. Deux types d’Extension d’application de Message sont disponibles :
 
@@ -116,7 +116,7 @@ Pour en savoir plus, consultez notre [intégration des applications Message](~/i
 
 Avec iOS 10, Apple n’importe qui dans les magazines principales et de nouveau aux organisations de produit et des éditeurs indépendants pour vous inscrire et blogueurs et de diffuser du contenu à l’application Apple News. Pour plus d’informations, consultez le site d’Apple [ressources des News](https://newsresources.apple.com/) documentation.
 
-## <a name="providing-haptic-feedback"></a>Retour haptique
+## <a name="providing-haptic-feedback"></a>Activation du retour haptique
 
 Sur l’iPhone 7 et iPhone 7 en outre, Apple a inclus les nouvelles réponses HAPTIQUES qui offrent des moyens supplémentaires de physiquement solliciter l’utilisateur. Utiliser les nouvelles options de rétroaction tactile pour obtenir l’attention des utilisateurs et de renforcer leurs actions.
 
@@ -139,7 +139,7 @@ Une application expose cette fonctionnalité dans le système à l’aide d’un
 
 Pour en savoir plus, consultez notre [Introduction aux Suggestions proactives](~/ios/platform/search/proactive-suggestions.md) guide.
 
-## <a name="request-app-review"></a>Demander une revue de l’application
+## <a name="request-app-review"></a>Demander une révision d’application
 
 Nouveau à iOS 10.3, le `RequestReview()` méthode permet à une application iOS demander à évaluer ou réviser l’utilisateur. Bien que cette méthode peut être appelée à tout moment où il est judicieux de l’expérience utilisateur, le processus de révision est régi et géré par la stratégie de l’App Store. Par conséquent, cette méthode peut ou peut ne pas affiche une alerte et ne doit jamais être appelée en réponse à une action de l’utilisateur, par exemple en appuyant sur un bouton.
 
@@ -194,7 +194,7 @@ Pour en savoir plus, consultez notre [Framework des Notifications utilisateur](~
 
 Nouveau pour iOS 10, le framework compte abonné à la vidéo permet aux applications cette prise en charge authentifié de diffusion en continu ou la vidéo à la demande auprès de leur fournisseur de télévision par câble ou satellite à l’aide d’une seul-expérience de connexion pour l’utilisateur final.
 
-## <a name="wide-color"></a>Large couleur
+## <a name="wide-color"></a>Couleur à spectre large
 
 iOS 10 étend la prise en charge pour les formats de pixel de la plage étendue et des espaces d’une gamme de couleurs dans tout le système, y compris les infrastructures telles que graphismes de base, l’Image de Core, complète et AVFoundation. Prise en charge pour les appareils avec des couleurs large est davantage facilité en fournissant ce comportement dans toute la pile de graphique entière.
 
