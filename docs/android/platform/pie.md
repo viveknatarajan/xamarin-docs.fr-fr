@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
 ms.openlocfilehash: e08324d5a905639e7ecd59bc4c7a5c0f02d0adfe
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854715"
 ---
 # <a name="android-pie-features"></a>Fonctionnalités de graphique à secteurs Android
@@ -43,7 +43,7 @@ La liste suivante est nécessaire pour utiliser les fonctionnalités de graphiqu
 
 Pour commencer à développer des applications Android à secteurs avec Xamarin.Android, vous devez télécharger et installer les derniers outils et les packages de kit de développement logiciel avant de pouvoir créer votre premier projet Android en secteurs :
 
-1. Visual Studio 2019 est recommandé. Si vous utilisez Visual Studio 2017, mettre à jour vers [Visual Studio 2017 version 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou version ultérieure. Si vous utilisez Visual Studio pour Mac, la mise à jour vers [Visual Studio 2017 pour Mac version 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou version ultérieure.
+1. Visual Studio 2019 est recommandé. Si vous utilisez Visual Studio 2017, mettre à jour vers [Visual Studio 2017 version 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou version ultérieure. Si vous utilisez Visual Studio pour Mac, la mise à jour vers [Visual Studio 2017 pour Mac version 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou version ultérieure.
 
 2. Installer **Android à secteurs (API 28)** packages et outils via le Gestionnaire de kit de développement logiciel.
 
@@ -67,11 +67,11 @@ Pour créer un projet avec Xamarin.Android 9.0, vous devez d’abord utiliser le
 
 2. Dans le coin inférieur droit, cliquez sur l’icône d’engrenage et sélectionnez **référentiel > Google (non pris en charge)**:
 
-    [![SParamètr le référentiel à Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![Définition du référentiel à Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
 3. Installer le **à secteurs Android** packages de kit de développement logiciel, qui sont répertoriés en tant que **28 de plateforme Android SDK** dans le **plateformes** onglet (pour plus d’informations sur l’utilisation du Gestionnaire de SDK, consultez [ Le programme d’installation du Kit Android SDK](~/android/get-started/installation/android-sdk.md)) :
 
-    [![Iavant d’installer des packages de graphique à secteurs Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![Installation des packages à secteurs Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
 4. Si vous utilisez un émulateur, créer un appareil virtuel qui prend en charge **API niveau 28**. Pour plus d’informations sur la création d’appareils virtuels, consultez [la gestion des appareils virtuels avec le Gestionnaire d’appareils Android](~/android/get-started/installation/android-emulator/device-manager.md).
 
@@ -111,7 +111,7 @@ Les sections suivantes mettent en évidence ces fonctionnalités et fournissent 
 Ont de nombreux appareils Android plus récents des écrans de bord à bord un *afficher un découpage* (ou « coupe-bande ») en haut de l’affichage pour les appareils photo et de l’orateur.
 La capture d’écran suivante fournit un exemple de l’émulateur d’un découpage :
 
-[![Aémulateur ndroid simulant un découpage](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![Émulateur Android simulant un découpage](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 Pour gérer la façon dont votre fenêtre de l’application affiche son contenu sur les appareils avec un découpage de l’affichage, à secteurs Android a ajouté une nouvelle [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) attribut de disposition de fenêtre. Cet attribut peut être défini à une des valeurs suivantes :
 
@@ -130,7 +130,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 
 Les exemples suivants fournissent des exemples de ces modes de découpage. La première capture d’écran de gauche est de l’application en mode non-plein écran. Dans la capture d’écran du centre, l’application accède plein écran avec `LayoutInDisplayCutoutMode` défini sur `LayoutInDisplayCutoutModeShortEdges`. Notez qu’arrière-plan blanc de l’application s’étend dans la zone de découpage d’affichage :
 
-[![El’exemple d’affichage des modes de découpage dans l’émulateur](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[![Exemple afficher les modes de découpage dans l’émulateur](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
 Dans la capture d’écran finale (ci-dessus à droite), `LayoutInDisplayCutoutMode` est définie sur `LayoutInDisplayCutoutModeShortNever` avant d’entrer en mode plein écran.
 Notez que l’arrière-plan blanc de l’application n’est pas autorisé à étendre à la zone de découpage d’affichage.
@@ -155,7 +155,7 @@ Android à secteurs présente les améliorations suivantes pour améliorer l’e
 
 L’exemple suivant illustre comment utiliser les nouvelles API pour générer une notification qui contient une image. Dans les captures d’écran suivante, une notification de texte est validée et est suivie d’une notification avec une image incorporée. Lorsque les notifications sont développées (comme indiqué sur la droite), le texte de la première notification s’affiche et l’image incorporée dans la deuxième notification est agrandie :
 
-[![Enotification de l’exemple avec image](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![Exemple de notification avec l’image](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
 L’exemple suivant montre comment inclure une image dans une notification à secteurs Android, et illustre l’utilisation de la nouvelle `Person` classe :
 
@@ -211,7 +211,7 @@ Pour plus d’informations sur la création de notifications, consultez [Notific
 
 Graphique à secteurs Android prend en charge IEEE 802.11mc (également appelé _Wi-Fi Round-Trip-heure_ ou _WiFi RTT_), ce qui rend possible pour les applications détecter la distance à un ou les points d’accès Wi-Fi. À l’aide de ces informations, il est possible pour votre application tirer parti des *positionnement intérieur* avec une précision de deux compteurs. Sur les appareils Android qui prennent en charge le matériel pour IEEE 801.11mc, votre application peut offrir des fonctionnalités de navigation par exemple, en fonction du lieu de contrôle des appareils intelligents ou obtenir des instructions étape par étape dans un magasin :
 
-[![Eexemple de navigation intérieur à l’aide de WiFi RTT](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
+[![Exemple de navigation intérieur à l’aide de WiFi RTT](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 La nouvelle [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) classe et plusieurs classes d’assistance fournit les moyens de mesure de distance sur des appareils Wi-Fi. Pour plus d’informations sur l’API de positionnement intérieur introduites dans Android P, consultez [Android.Net.Wifi.Rtt](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
 

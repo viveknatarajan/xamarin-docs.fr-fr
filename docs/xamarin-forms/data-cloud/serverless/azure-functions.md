@@ -8,19 +8,19 @@ ms.author: crdun
 ms.custom: video
 ms.date: 04/02/2019
 ms.openlocfilehash: a54d82a3e7ad95267b4083827faf0e52972417bd
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854858"
 ---
 # <a name="get-started-with-azure-functions"></a>Bien démarrer avec Azure Functions
 
-[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
 
 _Commencez à créer votre première fonction Azure qui interagit avec Xamarin.Forms._
 
-## [<a name="visual-studio-2019"></a>Visual Studio 2019](#tab/windows)
+## <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
 
@@ -28,7 +28,7 @@ _Commencez à créer votre première fonction Azure qui interagit avec Xamarin.F
 
 En plus de la vidéo, vous pouvez suivre ces instructions pour [générer votre première fonction à l’aide de Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
-## [<a name="visual-studio-2017"></a>Visual Studio 2017](#tab/win-vs2017)
+## <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
 
@@ -36,7 +36,7 @@ En plus de la vidéo, vous pouvez suivre ces instructions pour [générer votre 
 
 En plus de la vidéo, vous pouvez suivre ces instructions pour [générer votre première fonction à l’aide de Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
-## [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
+## <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-for-Mac/player]
 

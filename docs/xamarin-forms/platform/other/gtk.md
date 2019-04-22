@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
 ms.openlocfilehash: 7e9bfa841db9f0a76f762bab22050377830d85de
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854871"
 ---
 # <a name="gtk-platform-setup"></a>Installation de plateforme GTK #
@@ -29,7 +29,7 @@ Avant de commencer, créer une solution Xamarin.Forms ou utiliser une solution X
 
 GTK # pour macOS et Linux sont installé dans le cadre de [Mono](https://www.mono-project.com/download/stable/). GTK # pour .NET peut être installé sur Windows avec le [GTK # programme d’installation](https://www.mono-project.com/download/stable/#download-win).
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Suivez ces instructions pour ajouter une application GTK # qui s’exécutera sur le bureau Windows :
 
@@ -110,7 +110,7 @@ Suivez ces instructions pour ajouter une application GTK # qui s’exécutera su
 
     ![GTK # Game of Life](gtk-images/win/gtk-gameoflife.png "GTK # Game of Life")
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Suivez ces instructions pour ajouter une application GTK # qui s’exécutera sur le bureau Mac :
 

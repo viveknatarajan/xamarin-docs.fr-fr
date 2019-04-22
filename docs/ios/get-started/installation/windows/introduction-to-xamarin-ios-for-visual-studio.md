@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
 ms.openlocfilehash: e6f95713fdf3dbe8983c9f51554df7165637fc9a
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855131"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introduction à Xamarin.iOS pour Visual Studio
@@ -91,7 +91,7 @@ La capture d’écran ci-dessous montre les fenêtres Sortie disponibles. Elles 
 
 D’autres volets de sortie de Visual Studio par défaut, comme les volets de débogage et de génération, sont toujours disponibles dans la vue Sortie. Ils sont utilisés pour la sortie de débogage et pour la sortie MSBuild :
 
-- **Débogage**
+- **Déboguer**
 
   [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Sortie du débogage")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 

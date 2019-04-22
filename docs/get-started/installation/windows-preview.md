@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
 ms.openlocfilehash: 9ce56891eeab73f661a9c22cc047c4d0bcb10337
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854793"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Installation de la préversion Xamarin sur W
@@ -38,7 +38,7 @@ La capture d’écran **Programme d’installation de la préversion** ci-dessou
 
 Pendant le processus d’installation, un **Surnom de l’Installation** peuvent être appliqués à l’installation côte à côte (afin de pouvoir les distinguer dans le menu Démarrer), comme indiqué ci-dessous :
 
-[![esurnom de la dit avant d’installer](windows-images/vs2017-nickname-sml.png "modifier le surnom avant installation")](windows-images/vs2017-nickname.png#lightbox)
+[![modifier le surnom avant installation](windows-images/vs2017-nickname-sml.png "modifier le surnom avant installation")](windows-images/vs2017-nickname.png#lightbox)
 
 ### <a name="uninstalling-visual-studio-2019-preview"></a>Désinstallation de Visual Studio 2019 Preview
 

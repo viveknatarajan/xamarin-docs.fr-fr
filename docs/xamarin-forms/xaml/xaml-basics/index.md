@@ -8,25 +8,25 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: e85eb64099ba60a2b3663730a6fb058efdac6c60
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854702"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Principes de base XAML de Xamarin.Forms
 
-[![Délécharger exemple](~/media/shared/download.png) Télécharger l'exemple](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 XAML (eXtensible Application Markup Language) : permet aux développeurs de définir des interfaces utilisateur dans les applications Xamarin.Forms à l’aide d’un balisage au lieu de code. XAML n’est jamais nécessaire dans un programme de Xamarin.Forms, mais il est souvent plus concise et plus visuelle cohérente à code équivalent et potentiellement compatible avec les outils. XAML est particulièrement bien adapté pour une utilisation avec l’architecture d’application populaires MVVM (Model-View-ViewModel) : XAML définit la vue qui est liée au code du ViewModel par le biais des liaisons de données basées sur XAML.
 
 ## <a name="xaml-basics-contents"></a>Contenu de principes de base XAML
 
-* [Vue d'ensemble](#Overview)
-* [Partie 1. Bien démarrer avec XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+* [Vue d’ensemble](#Overview)
+* [Partie 1. Bien démarrer avec XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 * [Partie 2. Syntaxe XAML essentielle](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 * [Partie 3. Extensions de balisage XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-* [Partie 4. Principes fondamentaux de liaison de données](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+* [Partie 4. Notions de base sur la liaison de données](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 * [Partie 5. À partir de la liaison de données à MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 En plus de ces articles principes fondamentaux de XAML, vous pouvez télécharger des chapitres du livre [création d’applications mobiles avec Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
@@ -41,28 +41,28 @@ Les rubriques XAML sont traitées plus en détail dans de nombreux chapitres du 
     <h4>Chapitre 7. Visual Studio XAML. Code</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf">Télécharger le PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md">Récapitulatif</a></td>
+  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md">Résumé</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
     <h4>Chapitre 8. Code et XAML en harmonie</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf">Télécharger le PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md">Récapitulatif</a></td>
+  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md">Résumé</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
     <h4>Chapitre 10. Extensions de balisage XAML</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf">Télécharger le PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md">Récapitulatif</a></td>
+  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md">Résumé</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
     <h4>Chapitre 18. MVVM</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf">Télécharger le PDF</a> </td>
-  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md">Récapitulatif</a></td></tr>
+  <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md">Résumé</a></td></tr>
 </table>
 
 Ces chapitres peuvent être [téléchargé gratuitement](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md).

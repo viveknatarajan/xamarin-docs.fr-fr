@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
 ms.openlocfilehash: 78051fce44239eea86948988a4d19ac37c5ea0d5
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854897"
 ---
 # <a name="external-storage"></a>Stockage externe
@@ -58,7 +58,7 @@ Le paramètre `GetExternalFilesDir()` est une chaîne qui spécifie un _réperto
 | DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
 | DirectoryDocuments | **_PRIVATE\_EXTERNAL\_STORAGE_/Documents** |
 | DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
-| DirectoryMusic | **_PRIVATE\_EXTERNAL\_STORAGE_/Music** |
+| DirectoryMusic | **_PRIVÉ\_externe\_stockage_/Music** |
 | DirectoryNotifications | **_PRIVATE\_EXTERNAL\_STORAGE_/Notifications** |
 | DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
 | DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
@@ -140,17 +140,17 @@ Toutes les applications Android doivent déclarer une des deux autorisations pou
 > [!NOTE]
 > Si l’utilisateur accorde `WRITE_EXTERNAL_STORAGE`, puis `READ_EXTERNAL_STORAGE` est également implicitement accordée. Il n’est pas nécessaire de demander des autorisations à la fois dans **AndroidManifest.xml**.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Les autorisations peuvent également être ajoutées à l’aide de la **manifeste Android** onglet de la **propriétés de la solution**:
 
 ![Explorateur de solutions - autorisations requises pour Visual Studio](./images/required-permissions.w157.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Les autorisations peuvent également être ajoutées à l’aide de la **manifeste Android** onglet de la **Panneau de propriétés de solution**:
 
-[![Ssolution pavé - autorisations requises pour Visual Studio pour Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![Panneau de solutions, des autorisations requises pour Visual Studio pour Mac](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 
@@ -172,7 +172,7 @@ $ adb shell pm revoke com.companyname.app android.permission.WRITE_EXTERNAL_STOR
 
 ## <a name="deleting-files"></a>Suppression de fichiers
 
-Un de la norme C# API peuvent être utilisées pour supprimer un fichier à partir d’un stockage externe, tel que [ `System.IO.File.Delete` ](xref:System.IO.File.Delete*). Il est également possible d’utiliser les API Java au détriment de la portabilité du code. Exemple :
+Un de la norme c# API peuvent être utilisées pour supprimer un fichier à partir d’un stockage externe, tel que [ `System.IO.File.Delete` ](xref:System.IO.File.Delete*). Il est également possible d’utiliser les API Java au détriment de la portabilité du code. Exemple :
 
 ```csharp
 System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/files/count.txt");

@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: db243a9c8dcb25f51bc7926a7aa239531e9c24f6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859009"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Générateur d’aperçu XAML de Xamarin.Forms
@@ -31,7 +31,7 @@ Le Générateur d’aperçu XAML vous montre à quoi votre page XAML de Xamarin.
 
 Vous pouvez ouvrir le Générateur d’aperçu XAML en cliquant sur les flèches dans le volet d’affichage de fractionnement. Si vous souhaitez modifier la valeur par défaut fractionne le comportement de la vue, utilisez le **Outils > Options > Xamarin > Générateur d’aperçu de formulaires** boîte de dialogue. Dans cette boîte de dialogue, vous pouvez sélectionner la vue de document par défaut et l’orientation de fractionnement.
 
-[![Xamarin. Options de générateur d’aperçu de Forms dans Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "options de générateur d’aperçu de Xamarin.Forms dans Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
+[![Options de générateur d’aperçu de Xamarin.Forms dans Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "options de générateur d’aperçu de Xamarin.Forms dans Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
 Lorsque vous ouvrez un fichier XAML, l’éditeur s’ouvre en taille réelle ou suivant pour le Générateur d’aperçu, selon les paramètres sélectionnés dans le **Outils > Options > Xamarin > Générateur d’aperçu de formulaires** boîte de dialogue. Toutefois, le fractionnement peut être modifié pour chaque fichier dans la fenêtre Éditeur.
 
@@ -39,11 +39,11 @@ Lorsque vous ouvrez un fichier XAML, l’éditeur s’ouvre en taille réelle ou
 
 Choisissez si vous souhaitez voir votre code, le Générateur d’aperçu XAML, ou à la fois en sélectionnant ces boutons sur le fractionnement le volet d’affichage. Le bouton central permute ce que le Générateur d’aperçu de côté et votre code se trouvent sur :
 
-[![Xamarin. Générateur d’aperçu des contrôles Forms pour basculer entre la conception, source et le mode fractionné dans Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "contrôle de générateur d’aperçu de Xamarin.Forms pour basculer entre la conception, source et le mode fractionné dans Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Contrôle de générateur d’aperçu de Xamarin.Forms pour basculer entre la conception, source et le mode fractionné dans Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "contrôle de générateur d’aperçu de Xamarin.Forms pour basculer entre la conception, source et le mode fractionné dans Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 Vous pouvez choisir si l’écran est divisée verticalement ou horizontalement, ou réduire un seul volet complètement :
 
-[![Xamarin. Générateur d’aperçu volet orientation des contrôles Forms dans Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "contrôles de l’orientation de volet de générateur d’aperçu de Xamarin.Forms dans Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![Contrôles de l’orientation de volet de générateur d’aperçu de Xamarin.Forms dans Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "contrôles de l’orientation de volet de générateur d’aperçu de Xamarin.Forms dans Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -52,7 +52,7 @@ Vous pouvez choisir si l’écran est divisée verticalement ou horizontalement,
 
 Le **aperçu** bouton est affiché sur l’éditeur lorsque vous ouvrez une page XAML. Afficher ou masquer le Générateur d’aperçu en appuyant sur la **aperçu** bouton dans l’angle supérieur droit de n’importe quelle fenêtre de document XAML :
 
-[![Xamarin. Générateur d’aperçu de formulaires dans Visual Studio pour Mac](xaml-previewer-images/xamlp-list-sml.png "Générateur d’aperçu de Xamarin.Forms dans Visual Studio pour Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Générateur d’aperçu de Xamarin.Forms dans Visual Studio pour Mac](xaml-previewer-images/xamlp-list-sml.png "Générateur d’aperçu de Xamarin.Forms dans Visual Studio pour Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
 
 ::: zone-end
 

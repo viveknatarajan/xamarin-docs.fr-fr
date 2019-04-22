@@ -7,17 +7,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/02/2019
 ms.openlocfilehash: b962390d5a5a365ada93d1778e3efb65839f41c5
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854949"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Remoted iOS Simulator pour Windows
 
 Le simulateur Remoted iOS Simulator pour Windows vous permet de tester vos applications sur un simulateur iOS affichés dans Windows en même temps que Visual Studio 2019 et Visual Studio 2017.
 
-[![iSimulateur de système d’exploitation s’exécutant sur Windows](images/hero-sml.png "simulateur iOS en cours d’exécution sur Windows")](images/hero.png#lightbox)
+[![Simulateur iOS en cours d’exécution sur Windows](images/hero-sml.png "simulateur iOS en cours d’exécution sur Windows")](images/hero.png#lightbox)
 
 ## <a name="getting-started"></a>Bien démarrer
 
@@ -38,13 +38,13 @@ La barre d’outils en haut de la fenêtre du simulateur contient un nombre de b
 - [**Paramètres** ](#settings) – affiche le clavier, emplacement et autres paramètres.
 - [**Autres options** ](#other-options) – permet d’afficher diverses options de simulateur telles que rotation, agiter mouvements et un ID tactile.
 
-    [![iSimulateur de système d’exploitation mappe exemple](images/maps-app-sml.png "simulateur iOS mappe exemple")](images/maps-app.png#lightbox)
+    [![Simulateur iOS mappe exemple](images/maps-app-sml.png "simulateur iOS mappe exemple")](images/maps-app.png#lightbox)
 
 ## <a name="settings"></a>Paramètres
 
 Cliquez sur icône d’engrenage de la barre d’outils pour ouvrir la **paramètres** fenêtre :
 
-[![iParamètres de simulateur de système d’exploitation](images/settings-sml.png "paramètres du simulateur iOS")](images/settings.png#lightbox)
+[![paramètres du simulateur iOS](images/settings-sml.png "paramètres du simulateur iOS")](images/settings.png#lightbox)
 
 Ces paramètres permettent d’activer le clavier physique, choisissez un emplacement de l’appareil doit rapport (emplacements statiques et de déplacement sont tous deux pris en charge), activer Touch ID et réinitialiser le contenu et les paramètres pour le simulateur.
 
@@ -52,7 +52,7 @@ Ces paramètres permettent d’activer le clavier physique, choisissez un emplac
 
 Bouton de sélection de la barre d’outils, vous affichez les autres options telles que rotation, agiter mouvements et en redémarrant. Ces mêmes options peuvent être affichées sous forme de liste en double-cliquant sur n’importe où dans la fenêtre du simulateur :
 
-[![iParamètres supplémentaires de simulateur du système d’exploitation](images/more-sml.png "paramètres supplémentaires du simulateur iOS")](images/more.png#lightbox)
+[![paramètres supplémentaires du simulateur iOS](images/more-sml.png "paramètres supplémentaires du simulateur iOS")](images/more.png#lightbox)
 
 ## <a name="touchscreen-support"></a>Prise en charge de l’écran tactile
 
@@ -64,6 +64,6 @@ De même, le simulateur Remoted iOS Simulator pour Windows traite entrée du sty
 
 Pour désactiver le simulateur Remoted iOS Simulator pour Windows, accédez à **Outils > Options > Xamarin > Paramètres iOS** et décochez la case **Simulator à distance pour Windows**.
 
-[![checkbox à utiliser le simulateur](images/options-sml.png "case à cocher pour utiliser le simulateur")](images/options.png#lightbox)
+[![case à cocher pour utiliser le simulateur](images/options-sml.png "case à cocher pour utiliser le simulateur")](images/options.png#lightbox)
 
 Avec cette option est désactivée, le débogage s’ouvre le simulateur iOS sur le Mac connecté hôte de build.

@@ -7,15 +7,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
 ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855196"
 ---
 # <a name="xamarin-live-player-app"></a>Application Xamarin Live Player
 
-![Fonctionnalité en version préliminaire](~/media/shared/preview.png)
+![Fonctionnalité d’évaluation](~/media/shared/preview.png)
 
 > [!NOTE]
 > Acteur de l’aperçu est uniquement disponible dans Visual Studio 2017.
@@ -38,7 +38,7 @@ Si la connexion est établie, le code doit s’exécuter sur l’appareil presqu
 
 Appuyez sur le bouton informations **(i)** au bas de l’application pour faire apparaître le **Options** menu :
 
-[![Screenshot du menu options](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![Capture d’écran du menu options](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Journaux
 
@@ -50,13 +50,13 @@ Afficher les journaux pour diagnostiquer les problèmes.
 - Informations de version.
 - Envoyer des commentaires.
 
-[![Screenshot des paramètres](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![Capture d’écran des paramètres](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>La gestion des appareils
 
 Pour vous connecter à un appareil pour la première fois, suivez les instructions de [exigences et le programme d’installation](~/tools/live-player/install.md). Vous pouvez associer plusieurs appareils et les gérer via l’IDE.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Dans Visual Studio, choisissez **Outils > Xamarin Live Player > Gérer les appareils...**
 
@@ -70,7 +70,7 @@ Cette fenêtre vous permet d’effectuer les opérations suivantes :
 
 Vous pouvez également accéder à cette fenêtre à partir de la liste des appareils.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 Dans Visual Studio pour Mac, choisissez **Outils > Gérer les appareils (Xamarin Live Player)...**
 

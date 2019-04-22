@@ -9,10 +9,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
 ms.openlocfilehash: 24a9fa0e954ddba1451ba8bf98216550d7d70b51
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854780"
 ---
 # <a name="oreo-features"></a>Fonctionnalités de Oreo
@@ -21,7 +21,7 @@ _La prise en main à l’aide de Xamarin.Android pour développer des applicatio
 
 [Android 8.0 Oreo](https://developer.android.com/index.html) est la dernière version d’Android disponible à partir de Google. Android Oreo offre de nombreuses fonctionnalités nouvelles d’intérêt pour les développeurs Xamarin.Android. Ces fonctionnalités incluent des canaux de notification, des badges de notification, des polices personnalisées dans XML, les polices téléchargeables, le remplissage automatique et une image dans l’image (PIP). Android Oreo inclut de nouvelles API pour ces nouvelles fonctionnalités, et ces API est disponibles pour les applications Xamarin.Android lorsque vous utilisez Xamarin.Android 8.0 et versions ultérieures.
 
-[![Aimage de héros ndroid Oreo](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
+[![Image de héros Android Oreo](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
 Cet article est structuré pour vous aider à commencer le développement d’applications Xamarin.Android pour Android 8.0 Oreo. Il explique comment installer les mises à jour nécessaires, configurer le Kit de développement et créer un émulateur (ou périphérique) pour le test. Il fournit également un aperçu des nouvelles fonctionnalités de Android 8.0 Oreo, avec des liens vers des exemples d’applications qui illustrent l’utilisation des fonctionnalités d’Android Oreo dans les applications Xamarin.Android.
 
@@ -56,7 +56,7 @@ Chacune de ces étapes est expliquée dans les sections suivantes :
 
 Pour ajouter la prise en charge Android Oreo à Visual Studio, procédez comme suit :
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - Pour Visual Studio 2019, utilisez le [SDK Manager](~/android/get-started/installation/android-sdk.md) pour installer le niveau d’API 26.0 ou version ultérieur.
 
@@ -66,7 +66,7 @@ Pour ajouter la prise en charge Android Oreo à Visual Studio, procédez comme s
 
     2. Utilisez le [SDK Manager](~/android/get-started/installation/android-sdk.md) pour installer le niveau d’API 26.0 ou version ultérieur.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 - Mettre à jour vers la dernière version stable de Visual Studio pour Mac comme expliqué dans [la mise à jour de Visual Studio pour Mac](https://docs.microsoft.com/visualstudio/mac/update).
 
@@ -80,29 +80,29 @@ Pour plus d’informations sur la prise en charge de Xamarin pour Android Oreo, 
 
 Pour créer un projet avec Xamarin.Android 8.0, vous devez d’abord utiliser le gestionnaire Xamarin Android SDK pour installer la plateforme du Kit de développement logiciel pour **Android 8.0 - Oreo** ou version ultérieure. Vous devez également installer d’Android SDK Tools 26.0 ou version ultérieure.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Démarrez le Gestionnaire du Kit de développement logiciel (dans Visual Studio, cliquez sur **Outils > Android > Gestionnaire Android SDK**).
 
 2. Installer le **Android 8.0 - Oreo** packages. Si vous utilisez l’émulateur du Kit Android SDK, veillez à inclure le **x86** images du système dont vous aurez besoin :
 
-    [![Sélection Android 8.0 packages dans le gestionnaire Android SDK](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
+    [![Packages Android 8.0 en sélectionnant dans le Gestionnaire de kit de développement logiciel Android.](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
 
 3. Installer **Android SDK Tools 26.0.2** ou version ultérieure, **Android SDK Platform-Tools 26.0.0** ou version ultérieure, et **Android SDK Build-Tools 26.0.0** (ou version ultérieure) :
 
     [![Sélection d’Android SDK Tools 26 dans le gestionnaire Android SDK](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1. Démarrez le Gestionnaire du Kit de développement logiciel (dans Visual Studio pour Mac, cliquez sur **Outils > Gestionnaire du kit SDK**).
 
 2. Installer le **Android 8.0 - Oreo** packages du Kit de développement logiciel. Si vous utilisez l’émulateur du Kit Android SDK, veillez à inclure le **x86** images du système dont vous aurez besoin :
 
-    [![Sélection Android 8.0 packages dans le Gestionnaire de SDK](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
+    [![Sélection des packages Android 8.0 dans le Gestionnaire de kit de développement logiciel](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
 
 3. Installer **Android SDK Tools 26.0.2** ou version ultérieure, **Android SDK Platform-Tools 26.0.0** ou version ultérieure, et **Android SDK Build-Tools 26.0.0** (ou version ultérieure) :
 
-    [![Sélection d’Android SDK Tools 26 dans le Gestionnaire de SDK](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
+    [![Sélection d’Android SDK Tools 26 dans le Gestionnaire du Kit de développement logiciel](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
 
 -----
 
@@ -119,11 +119,11 @@ Lorsque vous créez un projet Android, vous devez configurer les paramètres de 
 
 Si vous tentez de lancer la valeur par défaut en fonction de l’interface graphique utilisateur Google AVD Manager après l’installation d’Android SDK Tools 26.0 d’ou version ultérieure, vous pouvez obtenir la boîte de dialogue erreur suivante, qui vous indique d’utiliser le gestionnaire AVD ligne de commande **avdmanager** à la place :
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Boîte de dialogue Avertissement Gestionnaire d’émulateur Android](oreo-images/win/03-avd-warning.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 ![Boîte de dialogue Avertissement Gestionnaire d’émulateur Android](oreo-images/mac/03-avd-warning.png)
 
@@ -139,7 +139,7 @@ Pour créer des appareils virtuels sans Android Device Manager, suivez les étap
 
 Pour utiliser **avdmanager** pour créer un nouvel appareil virtuel, procédez comme suit :
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Ouvrez une fenêtre d’invite de commandes et définissez `JAVA_HOME` à l’emplacement du SDK Java sur votre ordinateur. Pour une installation classique de Xamarin, vous pouvez utiliser la commande suivante :
 
@@ -164,9 +164,9 @@ Pour utiliser **avdmanager** pour créer un nouvel appareil virtuel, procédez c
 
 Après avoir **avdmanager** pour créer votre appareil virtuel, elle sera incluse dans le menu déroulant des appareils :
 
-[![NNouv AVD ajouté au menu déroulant des appareils](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
+[![Nouvel AVD ajouté au menu déroulant des appareils](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio pour Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
 1.  Ouvrir un **Terminal** fenêtre et basculez vers l’emplacement du répertoire d’outils du Kit Android SDK sur votre Mac. Pour une installation classique de Xamarin, vous pouvez utiliser la commande suivante :
 
@@ -184,7 +184,7 @@ Après avoir **avdmanager** pour créer votre appareil virtuel, elle sera inclus
 
 Une fois que vous utilisez **avdmanager** pour créer votre appareil virtuel, elle sera incluse dans le menu déroulant des appareils :
 
-[![NNouv AVD ajouté au menu déroulant des appareils](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
+[![Nouvel AVD ajouté au menu déroulant des appareils](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
 
 -----
 
@@ -213,7 +213,7 @@ Vous pouvez créer un canal de notification pour chaque type de notification que
 
 Badges de notification sont de petits points qui apparaissent sur les icônes d’application, comme indiqué dans cette capture d’écran :
 
-[![El’exemple des badges de notification sur les icônes d’application](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
+[![Badges de notification d’exemple sur les icônes d’application](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
 
 Ces points indiquent qu’il existe de nouvelles notifications pour un ou plusieurs canaux de notification dans l’application associée à cette icône application &ndash; il s’agit de notifications que l’utilisateur n’a pas encore été fermée ou réactions. Les utilisateurs peuvent long-appuyez sur une icône pour coup les notifications associées à un badge de notification, ignorez ou agissant sur les notifications dans le menu de longue durée, appuyez sur ce appeaars.
 
@@ -352,7 +352,7 @@ Plusieurs exemples de Xamarin.Android sont disponibles pour vous montrer comment
 
 > [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
 
-**Développement d’Android Oreo 8.0 avec C#**
+**Développement d’Android Oreo 8.0 avec c#**
 
 
 ## <a name="summary"></a>Récapitulatif
