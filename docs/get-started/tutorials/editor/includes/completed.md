@@ -1,9 +1,17 @@
+---
+ms.openlocfilehash: e114b674b0c106acfd07a101b22bbf4f437519e8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373369"
+---
 Félicitations ! Vous avez terminé ce didacticiel qui vous a expliqué comment effectuer les opérations suivantes :
 
 > [!div class="checklist"]
-> - Créer un [`Editor`](xref:Xamarin.Forms.Editor) Xamarin.Forms en XAML.
-> - Répondre au texte en cas de changement de `Editor`.
-> - Personnaliser le comportement de `Editor`.
+> - Créer un élément [`Editor`](xref:Xamarin.Forms.Editor) Xamarin.Forms en XAML.
+> - Répondre au texte dans la variable `Editor`.
+> - Personnaliser le comportement de l’élément `Editor`.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

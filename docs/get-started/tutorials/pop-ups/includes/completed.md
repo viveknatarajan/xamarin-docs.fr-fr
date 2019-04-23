@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: eaac96ae4c5b8cb960f52ce635a132f534a5846c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384685"
+---
 Félicitations ! Vous avez terminé ce didacticiel qui vous a expliqué comment effectuer les opérations suivantes :
 
 > [!div class="checklist"]

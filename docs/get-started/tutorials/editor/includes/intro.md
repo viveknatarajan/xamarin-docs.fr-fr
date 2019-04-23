@@ -1,9 +1,17 @@
+---
+ms.openlocfilehash: f0a7a0f66f78739ce191c257de91e4770e65282c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373372"
+---
 Dans ce didacticiel, vous apprendrez à :
 
 > [!div class="checklist"]
-> - Créer un [`Editor`](xref:Xamarin.Forms.Editor) Xamarin.Forms en XAML.
-> - Répondre au texte en cas de changement de `Editor`.
-> - Personnaliser le comportement de `Editor`.
+> - Créer un élément [`Editor`](xref:Xamarin.Forms.Editor) Xamarin.Forms en XAML.
+> - Répondre au texte dans la variable `Editor`.
+> - Personnaliser le comportement de l’élément `Editor`.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

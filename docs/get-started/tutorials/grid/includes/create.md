@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 28e10d1a2404d70d5329936e9bfeeea032a6fe99
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61375371"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Lancez Visual Studio et créez une application Xamarin.Forms vide nommée **GridTutorial**. Assurez-vous que l’application utilise bien .NET Standard comme mécanisme de code partagé.

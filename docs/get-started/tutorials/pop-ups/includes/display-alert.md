@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384693"
+---
 Xamarin.Forms possède une fenêtre contextuelle modale, connue sous le nom d’alerte, pour alerter l’utilisateur ou lui poser des questions simples. Dans cet exercice, vous allez utiliser la méthode [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), à partir de la classe [`Page`](xref:Xamarin.Forms.Page), pour afficher une alerte à l’utilisateur et lui poser une question simple.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

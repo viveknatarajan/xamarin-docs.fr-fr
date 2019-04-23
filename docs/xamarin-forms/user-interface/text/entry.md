@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
 ms.openlocfilehash: c9be74bcc6e5d149856e06c98d3bef9a841d4bab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230232"
 ---
 # <a name="xamarinforms-entry"></a>Entrée de Xamarin.Forms
 
@@ -38,7 +38,7 @@ En C# :
 var MyEntry = new Entry { Text = "I am an Entry" };
 ```
 
-Pour lire le texte, accéder à la `Text` propriété en c# :
+Pour lire le texte, accéder à la `Text` propriété en C# :
 
 ```csharp
 var text = MyEntry.Text;
@@ -168,7 +168,7 @@ Cela peut être accompli dans XAML comme suit :
 <Entry Keyboard="Chat" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var entry = new Entry { Keyboard = Keyboard.Chat };
@@ -201,7 +201,7 @@ L’exemple de code XAML suivant montre comment personnaliser la valeur par déf
 </Entry>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter text here" };
@@ -225,7 +225,7 @@ L’exemple XAML suivant montre comment définir la touche Retour :
 <Entry ReturnType="Send" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var entry = new Entry { ReturnType = ReturnType.Send };
@@ -342,7 +342,7 @@ Il est possible de s’abonner à l’événement terminé dans XAML :
 <Entry Completed="Entry_Completed" />
 ```
 
-et c# :
+et C# :
 
 ```csharp
 var entry = new Entry ();
@@ -371,7 +371,7 @@ Le `TextChanged` peut être abonné à l’événement dans XAML :
 <Entry TextChanged="Entry_TextChanged" />
 ```
 
-et c# :
+et C# :
 
 ```csharp
 var entry = new Entry ();

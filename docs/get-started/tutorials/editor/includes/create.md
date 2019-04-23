@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ce3e0f18d299d2bdf8d9bd81c467d45924d0d2bc
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373371"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Lancez Visual Studio et créez une application Xamarin.Forms vide nommée **EditorTutorial**. Assurez-vous que l’application utilise bien .NET Standard comme mécanisme de code partagé.

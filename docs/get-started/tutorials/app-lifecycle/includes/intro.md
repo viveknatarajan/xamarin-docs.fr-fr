@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 244dfa31045bf71e36577d2ac9e1782a2d506697
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187462"
+---
 Dans ce didacticiel, vous apprendrez à :
 
 > [!div class="checklist"]
@@ -8,7 +16,7 @@ Dans ce didacticiel, vous apprendrez à :
 
 ### <a name="prerequisites"></a>Prérequis
 
-Pour suivre ce didacticiel, vous devez disposer de Visual Studio 2017 (dernière version), sur lequel est installée la charge de travail **Développement mobile en .NET**. Vous aurez également besoin d’un Mac couplé pour générer l’application du didacticiel sur iOS. Pour plus d’informations sur l’installation de la plateforme Xamarin, consultez [Installation de Xamarin](~/get-started/installation/index.md). Pour plus d’informations sur la connexion de Visual Studio 2017 à un hôte de build Mac, consultez l’article [Appairer avec un Mac pour le développement Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+Pour suivre ce didacticiel, vous devez disposer de Visual Studio 2017 (dernière version) sur lequel est installée la charge de travail **Développement mobile en .NET**. Vous aurez également besoin d’un Mac couplé pour générer l’application du didacticiel sur iOS. Pour plus d’informations sur l’installation de la plateforme Xamarin, consultez [Installation de Xamarin](~/get-started/installation/index.md). Pour plus d’informations sur la connexion de Visual Studio 2017 à un hôte de build Mac, consultez l’article [Appairer avec un Mac pour le développement Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 Avant de tenter ce didacticiel, vous devez avoir suivi les guides et didacticiels suivants :
 

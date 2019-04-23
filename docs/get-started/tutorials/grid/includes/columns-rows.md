@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61375386"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Dans **MainPage.xaml**, modifiez la déclaration [`Grid`](xref:Xamarin.Forms.Grid) pour définir des colonnes et des lignes, et pour y placer du contenu :

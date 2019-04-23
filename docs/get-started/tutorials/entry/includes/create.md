@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6d99b6ea5d131e80c14789ddc1eda3f57a2f24a1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61343401"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Lancez Visual Studio et créez une application Xamarin.Forms vide nommée **EntryTutorial**. Assurez-vous que l’application utilise bien .NET Standard comme mécanisme de code partagé.
@@ -20,7 +28,7 @@
     </ContentPage>
     ```
 
-    Ce code définit de manière déclarative l’interface utilisateur de la page, qui comprend une [`Entry`](xref:Xamarin.Forms.Entry) dans un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propriété [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) spécifie le texte d’espace réservé qui apparaît lorsque `Entry` s’affiche pour la première fois.
+    Ce code définit de manière déclarative l’interface utilisateur de la page, qui comprend un élément [`Entry`](xref:Xamarin.Forms.Entry) dans [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propriété [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) spécifie le texte d’espace réservé qui apparaît lorsque `Entry` s’affiche pour la première fois.
 
 1. Dans la barre d’outils Visual Studio, appuyez sur le bouton **Démarrer** (le bouton triangulaire qui ressemble à un bouton de lecture) pour lancer l’application à l’intérieur du simulateur iOS distant ou de l’émulateur Android de votre choix :
 
@@ -48,7 +56,7 @@
     </ContentPage>
     ```
 
-    Ce code définit de manière déclarative l’interface utilisateur de la page, qui comprend une [`Entry`](xref:Xamarin.Forms.Entry) dans un [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propriété [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) spécifie le texte d’espace réservé qui apparaît lorsque `Entry` s’affiche pour la première fois.
+    Ce code définit de manière déclarative l’interface utilisateur de la page, qui comprend un élément [`Entry`](xref:Xamarin.Forms.Entry) dans [`StackLayout`](xref:Xamarin.Forms.StackLayout). La propriété [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) spécifie le texte d’espace réservé qui apparaît lorsque `Entry` s’affiche pour la première fois.
 
 1. Dans la barre d’outils Visual Studio pour Mac, appuyez sur le bouton **Démarrer** (le bouton triangulaire qui ressemble à un bouton de lecture) pour lancer l’application dans le simulateur iOS ou dans l’émulateur Android de votre choix :
 

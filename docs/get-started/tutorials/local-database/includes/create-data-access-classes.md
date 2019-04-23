@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 83e28796a2c387927dddd708da3ee6623f800a35
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61193003"
+---
 Dans cet exercice, vous ajouterez des classes d’accès aux données au projet **LocalDatabaseTutorial** qui sera utilisé pour conserver les données sur les personnes dans la base de données.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

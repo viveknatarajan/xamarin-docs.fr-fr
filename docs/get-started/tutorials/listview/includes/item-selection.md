@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c33db7de63a585cb6fb47aa1145aa724c9eb790f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037475"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Dans **MainPage.xaml**, modifiez la déclaration [`ListView`](xref:Xamarin.Forms.ListView) pour qu’elle définisse les gestionnaires pour les événements [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) et [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) :

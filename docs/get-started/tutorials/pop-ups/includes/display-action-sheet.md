@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384682"
+---
 
 Xamarin.Forms dispose d’une fenêtre contextuelle modale (une feuille d’action) servant à guider les utilisateurs dans une tâche. Dans cet exercice, vous utiliserez la méthode [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) à partir de la classe [`Page`](xref:Xamarin.Forms.Page) afin d’afficher une feuille d’action guidant les utilisateurs dans une tâche.
 

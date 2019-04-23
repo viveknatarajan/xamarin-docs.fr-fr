@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896678"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Dans **MainPage.xaml**, modifiez la déclaration [`Label`](xref:Xamarin.Forms.Label) pour présenter un texte qui utilise plusieurs formats, dans un seul `Label`.

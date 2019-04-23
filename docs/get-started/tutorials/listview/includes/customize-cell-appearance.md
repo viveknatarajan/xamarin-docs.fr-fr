@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037504"
+---
 [`ListView`](xref:Xamarin.Forms.ListView) était auparavant rempli avec des données à l’aide d’un mécanisme de liaison de données. Cependant, malgré la liaison de données à une collection, où chaque objet de la collection définissait plusieurs éléments de données, un seul élément de données était affiché par objet (la propriété `Name` de l’objet `Monkey`).
 
 Dans cet exercice, vous allez modifier le projet **ListViewTutorial** pour que [`ListView`](xref:Xamarin.Forms.ListView) affiche plusieurs éléments de données dans chaque ligne.

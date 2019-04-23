@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a13426f4213d7c306c0de6922d336d4bb7723d72
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037490"
+---
 L’élément [`ListView`](xref:Xamarin.Forms.ListView) est renseigné avec les données à l’aide de la propriété [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), de type `IEnumerable`. L’étape précédente a permis de remplir l’élément `ListView` dans XAML avec un tableau de chaînes. Toutefois, en général un élément `ListView` est renseigné à l’aide de données issues d’une collection, définie par code-behind, qui implémente `IEnumerable`.
 
 Dans cet exercice, vous modifierez le projet **ListViewTutorial** pour remplir l’élément [`ListView`](xref:Xamarin.Forms.ListView) avec des données issues d’une collection d’objets stockés dans un élément `List`.

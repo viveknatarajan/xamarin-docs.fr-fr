@@ -1,134 +1,127 @@
-items:
 - name: Graphisme SkiaSharp dans Xamarin.Forms
   href: index.md
-  items:
-  - name: Principes de base du dessin
-    href: basics/index.md
-    items:
-    - name: Dessin d’un cercle simple
-      href: basics/circle.md
-    - name: Intégration avec Xamarin.Forms
-      href: basics/integration.md
-    - name: Unités indépendantes de l’appareil et pixels
-      href: basics/pixels.md
-    - name: Animation de base
-      href: basics/animation.md
-    - name: Intégration de texte et de graphisme
-      href: basics/text.md
-    - name: Principes de base des bitmaps
-      href: basics/bitmaps.md
-    - name: Transparence
-      href: basics/transparency.md
-    expanded: true
-  - name: Lignes et tracés
-    href: paths/index.md
-    items:
-    - name: Lignes et extrémités de trait
-      href: paths/lines.md
-    - name: Principes de base du tracé
-      href: paths/paths.md
-    - name: Types de remplissage des tracés
-      href: paths/fill-types.md
-    - name: Polylignes et équations paramétriques
-      href: paths/polylines.md
-    - name: Points et tirets
-      href: paths/dots.md
-    - name: Peinture au doigt
-      href: paths/finger-paint.md
-  - name: Transformations
-    href: transforms/index.md
-    items:
-    - name: La transformation de traduction
-      href: transforms/translate.md
-    - name: La transformation d’échelle
-      href: transforms/scale.md
-    - name: La transformation de rotation
-      href: transforms/rotate.md
-    - name: La transformation d’inclinaison
-      href: transforms/skew.md
-    - name: Transformations de matrice
-      href: transforms/matrix.md
-    - name: Manipulations tactiles
-      href: transforms/touch.md
-    - name: Transformations non affines
-      href: transforms/non-affine.md
-    - name: Rotation 3D
-      displayName: Three-D Rotation
-      href: transforms/3d-rotation.md
-  - name: Courbes et tracés
-    href: curves/index.md
-    items:
-    - name: Trois façons de dessiner un arc
-      href: curves/arcs.md
-    - name: Trois types de courbes Bézier
-      href: curves/beziers.md
-    - name: Données de tracé SVG
-      href: curves/path-data.md
-    - name: Détourage avec tracés et régions
-      href: curves/clipping.md
-    - name: Effets de tracé
-      href: curves/effects.md
-    - name: Tracés et texte
-      href: curves/text-paths.md
-    - name: Informations et énumération de tracés
-      href: curves/information.md
-  - name: Bitmaps
-    href: bitmaps/index.md
-    items:
-    - name: Affichage de bitmaps
-      href: bitmaps/displaying.md
-    - name: Création et dessin sur des bitmaps
-      href: bitmaps/drawing.md
-    - name: Rognage de bitmaps
-      href: bitmaps/cropping.md
-    - name: Affichage segmenté de bitmaps
-      href: bitmaps/segmented.md
-    - name: Enregistrement de bitmaps dans des fichiers
-      href: bitmaps/saving.md
-    - name: Accès aux bits de pixel de bitmap
-      href: bitmaps/pixel-bits.md
-    - name: Animation de bitmaps
-      href: bitmaps/animating.md
-  - name: Effets
-    href: effects/index.md
-    items:
-    - name: Nuanceurs
-      href: effects/shaders/index.md
-      items:
-      - name: Dégradé linéaire
-        href: effects/shaders/linear-gradient.md
-      - name: Dégradés circulaires
-        href: effects/shaders/circular-gradients.md
-      - name: Mosaïque de bitmaps
-        href: effects/shaders/bitmap-tiling.md
-      - name: Parasite
-        href: effects/shaders/noise.md
-    - name: Modes de fusion
-      href: effects/blend-modes/index.md
-      items:
-      - name: Modes de fusion Porter-Duff
-        href: effects/blend-modes/porter-duff.md
-      - name: Modes de fusion séparables
-        href: effects/blend-modes/separable.md
-      - name: Modes de fusion non séparables
-        href: effects/blend-modes/non-separable.md
-    - name: Filtres de masque
-      href: effects/mask-filters.md
-    - name: Filtres d’image
-      href: effects/image-filters.md
-    - name: Filtres de couleur
-      href: effects/color-filters.md
-  - name: Exemples indépendants de la plateforme
-    href: ~/graphics-games/skiasharp/introduction.md
-    items:
-    - name: Notes spécifiques à la plateforme
-      href: ~/graphics-games/skiasharp/platform.md
-  - name: Informations de référence sur les API
-    href: /dotnet/api/skiasharp/
   expanded: true
-ms.openlocfilehash: 59cc8bbb28a912ae32ef189c83c5d2e4f3209f31
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130205"
+  items:
+    - name: Principes de base du dessin
+      href: basics/index.md
+      expanded: true
+      items:
+        - name: Dessin d’un cercle simple
+          href: basics/circle.md
+        - name: Intégration avec Xamarin.Forms
+          href: basics/integration.md
+        - name: Unités indépendantes de l’appareil et pixels
+          href: basics/pixels.md
+        - name: Animation de base
+          href: basics/animation.md
+        - name: Intégration de texte et de graphisme
+          href: basics/text.md
+        - name: Principes de base des bitmaps
+          href: basics/bitmaps.md
+        - name: Transparence
+          href: basics/transparency.md
+    - name: Lignes et tracés
+      href: paths/index.md
+      items:
+        - name: Lignes et extrémités de trait
+          href: paths/lines.md
+        - name: Principes de base du tracé
+          href: paths/paths.md
+        - name: Types de remplissage des tracés
+          href: paths/fill-types.md
+        - name: Polylignes et équations paramétriques
+          href: paths/polylines.md
+        - name: Points et tirets
+          href: paths/dots.md
+        - name: Peinture au doigt
+          href: paths/finger-paint.md
+    - name: Transformations
+      href: transforms/index.md
+      items:
+        - name: La transformation de traduction
+          href: transforms/translate.md
+        - name: La transformation d’échelle
+          href: transforms/scale.md
+        - name: La transformation de rotation
+          href: transforms/rotate.md
+        - name: La transformation d’inclinaison
+          href: transforms/skew.md
+        - name: Transformations de matrice
+          href: transforms/matrix.md
+        - name: Manipulations tactiles
+          href: transforms/touch.md
+        - name: Transformations non affines
+          href: transforms/non-affine.md
+        - name: Rotation 3D
+          displayName: Three-D Rotation
+          href: transforms/3d-rotation.md
+    - name: Courbes et tracés
+      href: curves/index.md
+      items:
+        - name: Trois façons de dessiner un arc
+          href: curves/arcs.md
+        - name: Trois types de courbes Bézier
+          href: curves/beziers.md
+        - name: Données de tracé SVG
+          href: curves/path-data.md
+        - name: Détourage avec tracés et régions
+          href: curves/clipping.md
+        - name: Effets de tracé
+          href: curves/effects.md
+        - name: Tracés et texte
+          href: curves/text-paths.md
+        - name: Informations et énumération de tracés
+          href: curves/information.md
+    - name: Bitmaps
+      href: bitmaps/index.md
+      items:
+        - name: Affichage de bitmaps
+          href: bitmaps/displaying.md
+        - name: Création et dessin sur des bitmaps
+          href: bitmaps/drawing.md
+        - name: Rognage de bitmaps
+          href: bitmaps/cropping.md
+        - name: Affichage segmenté de bitmaps
+          href: bitmaps/segmented.md
+        - name: Enregistrement de bitmaps dans des fichiers
+          href: bitmaps/saving.md
+        - name: Accès aux bits de pixel de bitmap
+          href: bitmaps/pixel-bits.md
+        - name: Animation de bitmaps
+          href: bitmaps/animating.md
+    - name: Effects (Effets)
+      href: effects/index.md
+      items:
+        - name: Nuanceurs
+          href: effects/shaders/index.md
+          items:
+            - name: Dégradé linéaire
+              href: effects/shaders/linear-gradient.md
+            - name: Dégradés circulaires
+              href: effects/shaders/circular-gradients.md
+            - name: Mosaïque de bitmaps
+              href: effects/shaders/bitmap-tiling.md
+            - name: Parasite
+              href: effects/shaders/noise.md
+        - name: Modes de fusion
+          href: effects/blend-modes/index.md
+          items:
+            - name: Modes de fusion Porter-Duff
+              href: effects/blend-modes/porter-duff.md
+            - name: Modes de fusion séparables
+              href: effects/blend-modes/separable.md
+            - name: Modes de fusion non séparables
+              href: effects/blend-modes/non-separable.md
+        - name: Filtres de masque
+          href: effects/mask-filters.md
+        - name: Filtres d’image
+          href: effects/image-filters.md
+        - name: Filtres de couleur
+          href: effects/color-filters.md
+    - name: Exemples indépendants de la plateforme
+      href: ~/graphics-games/skiasharp/introduction.md
+      items:
+        - name: Notes spécifiques à la plateforme
+          href: ~/graphics-games/skiasharp/platform.md
+    - name: Informations de référence sur les API
+      href: /dotnet/api/skiasharp/

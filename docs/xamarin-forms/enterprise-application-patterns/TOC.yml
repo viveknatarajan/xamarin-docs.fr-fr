@@ -1,37 +1,30 @@
-items:
 - name: Livre électronique des modèles d’application d’entreprise
   href: index.md
-  items:
-  - name: Préface
-    href: preface.md
-  - name: Introduction
-    href: introduction.md
-  - name: MVVM
-    displayName: Model, View, ViewModel
-    href: mvvm.md
-  - name: Injection de dépendances
-    displayName: DI
-    href: dependency-injection.md
-  - name: Communication entre les composants faiblement couplés
-    href: communicating-between-loosely-coupled-components.md
-  - name: Navigation
-    href: navigation.md
-  - name: Validation
-    href: validation.md
-  - name: Gestion des configurations
-    href: configuration-management.md
-  - name: Microservices conteneurisés
-    href: containerized-microservices.md
-  - name: Authentification et autorisation
-    href: authentication-and-authorization.md
-  - name: Accès aux données distantes
-    href: accessing-remote-data.md
-  - name: Test unitaire
-    href: unit-testing.md
   expanded: true
-ms.openlocfilehash: bbe9a87553babb954e37138458d1f07b95c1f443
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110439"
+  items:
+    - name: Préface
+      href: preface.md
+    - name: Introduction
+      href: introduction.md
+    - name: MVVM
+      displayName: 'Model, View, ViewModel'
+      href: mvvm.md
+    - name: Injection de dépendances
+      displayName: DI
+      href: dependency-injection.md
+    - name: Communication entre les composants faiblement couplés
+      href: communicating-between-loosely-coupled-components.md
+    - name: Navigation
+      href: navigation.md
+    - name: Validation
+      href: validation.md
+    - name: Gestion des configurations
+      href: configuration-management.md
+    - name: Microservices conteneurisés
+      href: containerized-microservices.md
+    - name: Authentification et autorisation
+      href: authentication-and-authorization.md
+    - name: Accès aux données distantes
+      href: accessing-remote-data.md
+    - name: Test unitaire
+      href: unit-testing.md
