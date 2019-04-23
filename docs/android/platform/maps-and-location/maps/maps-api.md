@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 12ff6f615b30e53704fee6368c9d7f171f881df0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 1889154a12a701fb4ce57ef8644699dd978f768e
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671063"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893255"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>À l’aide de l’API de cartes Google dans votre application
 
@@ -41,7 +41,7 @@ Plusieurs étapes doivent être effectuées avant de pouvoir utiliser l’API de
 ### <a name="a-nameobtain-maps-key-obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />Obtenir une clé d’API Google Maps
 
 La première étape consiste à obtenir une clé de l’API Google Maps (Notez que vous ne pouvez pas réutiliser une clé API à partir de l’API de v1 Google Maps héritée). Pour plus d’informations sur la façon d’obtenir et d’utiliser la clé d’API avec Xamarin.Android, consultez [obtention A Google Maps, clé d’API](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
- 
+
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Installer les Kit de développement logiciel de Services Google Play
 
@@ -89,8 +89,8 @@ Les autorisations et les fonctionnalités suivantes doivent être spécifiées d
 -  **OpenGL ES v2** &ndash; l’application doit déclarer l’exigence OpenGL ES v2.
 
 -  **Clé d’API Google Maps** &ndash; clé de l’API est utilisée pour vérifier que l’application est inscrit et autorisée à utiliser les Services Google Play. Consultez [obtention d’une clé d’API Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md) pour plus d’informations sur cette clé.
-   
-- **Demander l’ancien client d’Apache HTTP** &ndash; les applications qui ciblent Android 9.0 (niveau d’API 28) ou version ultérieure doit spécifier que le client HTTP Apache hérité est une bibliothèque facultative à utiliser. 
+
+- **Demander l’ancien client d’Apache HTTP** &ndash; les applications qui ciblent Android 9.0 (niveau d’API 28) ou version ultérieure doit spécifier que le client HTTP Apache hérité est une bibliothèque facultative à utiliser.
 
 -  **Accès aux Services Web de Google-based** &ndash; l’application doit être autorisé à accéder aux services web de Google qui soutiennent les API de cartes Android.
 
@@ -99,6 +99,14 @@ Les autorisations et les fonctionnalités suivantes doivent être spécifiées d
 -  **Accès aux fournisseurs de localisation** &ndash; il s’agit des autorisations facultatives.
    Ils permettent la `GoogleMap` classe pour afficher l’emplacement de l’appareil sur la carte.
 
+En outre, 9 Android a supprimé la bibliothèque de client HTTP Apache à partir de la bootclasspath, et par conséquent, il n’est pas disponible pour les applications qui ciblent des API 28 ou une version ultérieure. La ligne suivante doit être ajoutée à la `application` nœud de votre **AndroidManifest.xml** fichier pour continuer à utiliser le client HTTP Apache dans les applications qui ciblent des API 28 ou une version ultérieure :
+
+```xml
+<application ...>
+   ...
+   <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+</application>
+```
 
 > [!NOTE]
 > Très anciennes versions du SDK Google Play nécessitaient à une application de demander la `WRITE_EXTERNAL_STORAGE` autorisation. Cette exigence n’est plus nécessaire avec les liaisons Xamarin récentes pour les Services Google Play.
@@ -112,7 +120,7 @@ L’extrait de code suivant est un exemple des paramètres qui doivent être ajo
 
     <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-    
+
     <!-- Necessary for apps that target Android 9.0 or higher -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
@@ -131,6 +139,8 @@ L’extrait de code suivant est un exemple des paramètres qui doivent être ajo
         <!-- Put your Google Maps V2 API Key here. -->
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <!-- Necessary for apps that target Android 9.0 or higher -->
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
     </application>
 </manifest>
 ```
@@ -184,7 +194,7 @@ Similaire à d’autres classes de Fragment, il existe deux façons d’ajouter 
     ```
 
 -   **Par programmation** - le `MapFragment` peuvent être instanciés par programmation à l’aide de la [ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) (méthode), puis ajouté à une activité. Cet extrait de code montre la façon la plus simple pour instancier un `MapFragment` de l’objet et l’ajouter à une activité :
-    
+
     ```csharp
         var mapFrag = MapFragment.NewInstance();
         activity.FragmentManager.BeginTransaction()
@@ -195,7 +205,7 @@ Similaire à d’autres classes de Fragment, il existe deux façons d’ajouter 
 
     Il est possible de configurer le `MapFragment` en passant un [ `GoogleMapOptions` ](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) objet `NewInstance`. Ce sujet est abordé dans la section [GoogleMap propriétés](#googlemap_object) qui s’affiche par la suite dans ce guide.
 
-Le `MapFragment.GetMapAsync` méthode est utilisée pour initialiser le [ `GoogleMap` ](#googlemap_object) qui est hébergé par le fragment et obtenir une référence à l’objet de mappage qui est hébergé par le `MapFragment`. Cette méthode prend un objet qui implémente le `IOnMapReadyCallback` interface. 
+Le `MapFragment.GetMapAsync` méthode est utilisée pour initialiser le [ `GoogleMap` ](#googlemap_object) qui est hébergé par le fragment et obtenir une référence à l’objet de mappage qui est hébergé par le `MapFragment`. Cette méthode prend un objet qui implémente le `IOnMapReadyCallback` interface.
 
 Cette interface a une méthode unique, `IMapReadyCallback.OnMapReady(MapFragment map)` qui seront invoqués lorsqu’il est possible que l’application d’interagir avec le `GoogleMap` objet. L’extrait de code suivant montre comment une activité Android peut initialiser un `MapFragment` et implémenter la `IOnMapReadyCallback` interface :
 ```csharp
@@ -205,13 +215,13 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
     {
         base.OnCreate(bundle);
         SetContentView(Resource.Layout.MapLayout);
-    
+
         var mapFragment = (MapFragment) FragmentManager.FindFragmentById(Resource.Id.map);
         mapFragment.GetMapAsync(this);
-    
+
         // remainder of code omitted
     }
-    
+
     public void OnMapReady(GoogleMap map)
     {
         // Do something with the map, i.e. add markers, move to a specific location, etc.
@@ -304,15 +314,15 @@ L’extrait de code suivant montre un exemple de création un `CameraUpdate` à 
 public void OnMapReady(GoogleMap map)
 {
     LatLng location = new LatLng(50.897778, 3.013333);
-    
+
     CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
     builder.Target(location);
     builder.Zoom(18);
     builder.Bearing(155);
     builder.Tilt(65);
-    
+
     CameraPosition cameraPosition = builder.Build();
-    
+
     CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
 
     map.MoveCamera(cameraUpdate);
@@ -350,7 +360,7 @@ public void OnMapReady(GoogleMap map)
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    
+
     map.AddMarker(markerOpt1);
 }
 ```
@@ -383,10 +393,10 @@ public void OnMapReady(GoogleMap map)
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    
+
     var bmDescriptor = BitmapDescriptorFactory.DefaultMarker (BitmapDescriptorFactory.HueCyan);
     markerOpt1.InvokeIcon(bmDescriptor);
-    
+
     map.AddMarker(markerOpt1);
 }
 ```
@@ -520,7 +530,7 @@ void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickE
     if (marker.Id.Equals(gotMauiMarkerId))
     {
         LatLng InMaui = new LatLng(20.72110, -156.44776);
-    
+
         // Move the camera to look at Maui.
         PositionPolarBearGroundOverlay(InMaui);
         googleMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(InMaui, 13));
