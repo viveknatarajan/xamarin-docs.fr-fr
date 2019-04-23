@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
 ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855235"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introduction au cycle de vie de développement des logiciels mobiles
@@ -72,7 +72,7 @@ Une fois que les caractéristiques et les fonctionnalités de l’application on
 
 L’expérience utilisateur est généralement modélisée via des maquettes en utilisant l’un des nombreux [toolkits de conception](https://docs.microsoft.com/windows/uwp/design/downloads/). Les maquettes permettent de concevoir l’expérience utilisateur sans devoir se soucier de la conception de l’interface utilisateur réelle :
 
- [![](introduction-to-mobile-sdlc-images/balsamiq.png "L’expérience utilisateur est généralement modélisée par le biais de maquettes avec des outils comme Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "L’expérience utilisateur est généralement modélisée via des maquettes avec des outils comme Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 Lors de la création des maquettes de l’expérience utilisateur, il est important de prendre en compte les recommandations sur l’interface des différentes plateformes ciblées par l’application. L’application doit s’intégrer parfaitement sur chaque plateforme. Les recommandations de conception officielles pour chaque plateforme sont :
 

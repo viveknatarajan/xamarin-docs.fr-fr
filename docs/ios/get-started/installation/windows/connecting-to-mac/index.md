@@ -8,15 +8,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
 ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855144"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Appairer avec un Mac pour le développement Xamarin.iOS
 
-_Ce guide décrit comment utiliser Appairer avec un Mac pour connecter Visual Studio 2019 à un hôte de build Mac. Les mêmes instructions s’appliquent à Visual Studio 2017._
+_Ce guide explique comment utiliser Appairer avec un Mac pour connecter Visual Studio 2019 à un hôte de build Mac. Les mêmes instructions s’appliquent à Visual Studio 2017._
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -130,7 +130,7 @@ Si vous ne voyez pas un Mac particulier répertorié dans la boîte de dialogue 
 
     - Ouvrez **Préférences système > Partage > Session à distance** sur votre Mac :
 
-        [![TAdresse IP du Mac dans Préférences système > Partage](images/sharing-ipaddress.png "Adresse IP du Mac dans Préférences système > Partage")](images/sharing.png#lightbox)
+        [![Adresse IP du Mac dans Préférences système > Partage](images/sharing-ipaddress.png "Adresse IP du Mac dans Préférences système > Partage")](images/sharing.png#lightbox)
 
     - Vous pouvez également utiliser la ligne de commande. Dans Terminal, exécutez cette commande : 
 
@@ -143,7 +143,7 @@ Si vous ne voyez pas un Mac particulier répertorié dans la boîte de dialogue 
 
 2. Dans la boîte de dialogue **Appairer avec un Mac** de Visual Studio 2019, sélectionnez **Ajouter un Mac...**  :
 
-    [![TBouton Ajouter un Mac dans la boîte de dialogue Appairer avec un Mac(images/addtomac.png "Bouton Ajouter un Mac dans la boîte de dialogue Appairer avec un Mac")](images/addtomac-large.png#lightbox)
+    [![Bouton Ajouter un Mac dans la boîte de dialogue Appairer avec un Mac](images/addtomac.png "Bouton Ajouter un Mac dans la boîte de dialogue Appairer avec un Mac")](images/addtomac-large.png#lightbox)
 
 3. Entrez l’adresse IP du Mac et cliquez sur **Ajouter** :
 
@@ -177,7 +177,7 @@ La progression est indiquée par différentes invites, comme illustré par les c
 
 ||Vérification de l’installation|Téléchargement|Installation de
 |---|---|---|---|
-|Mono|[![MInstallation de Mono manquante(images/mono-missing.png "Installation de Mono manquante")](images/mono-missing-large.png#lightbox)|[![DTéléchargement de Mono](images/mono-downloading.png "Téléchargement de Mono")](images/mono-downloading-large.png#lightbox)|[![IInstallation de Mono](images/mono-installing.png "Installation de Mono")](images/mono-installing-large.png#lightbox)|
+|Mono|[![Installation de Mono manquante](images/mono-missing.png "Installation de Mono manquante")](images/mono-missing-large.png#lightbox)|[![Téléchargement de Mono](images/mono-downloading.png "Téléchargement de Mono")](images/mono-downloading-large.png#lightbox)|[![Installation de Mono](images/mono-installing.png "Installation de Mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -192,7 +192,7 @@ La progression est indiquée par différentes invites, comme illustré par les c
 
 ||Vérification de l’installation|Téléchargement|Installation de
 |---|---|---|---|
-|Xamarin.iOS|[![MInstallation de Xamarin.iOS manquante(images/xamios-missing.png "Installation de Xamarin.iOS manquante")](images/xamios-missing-large.png#lightbox)|[![DTéléchargement de Xamarin.iOS](images/xamios-downloading.png "Téléchargement de Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![IInstallation de Xamarin.iOS](images/xamios-installing.png "Installation de Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Installation de Xamarin.iOS manquante](images/xamios-missing.png "Installation de Xamarin.iOS manquante")](images/xamios-missing-large.png#lightbox)|[![Téléchargement de Xamarin.iOS](images/xamios-downloading.png "Téléchargement de Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Installation de Xamarin.iOS](images/xamios-installing.png "Installation de Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Licence et outils Xcode
 
@@ -200,7 +200,7 @@ Appairer avec un Mac vérifie également si Xcode a été installé et sa licenc
 
 ||Vérification de l’installation|Acceptation de la licence|
 |---|---|---|
-|Xcode|[![MInstallation de Xcode manquante(images/xcode-missing.png "Installation de Xcode manquante")](images/xcode-missing-large.png#lightbox)|[![XLicence Xcode](images/xcode-license.png "Licence Xcode")](images/xcode-license-large.png#lightbox)|
+|Xcode|[![Installation de Xcode manquante](images/xcode-missing.png "Installation de Xcode manquante")](images/xcode-missing-large.png#lightbox)|[![Licence Xcode](images/xcode-license.png "Licence Xcode")](images/xcode-license-large.png#lightbox)|
 
 En outre, Appairer avec un Mac installe ou met à jour différents packages distribués avec Xcode. Par exemple :
 
@@ -228,10 +228,10 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 
 Les paramètres transmis à `msbuild` dans l’exemple ci-dessus sont :
 
-- `ServerAddress`  : adresse IP de l’hôte de build Mac.
-- `ServerUser`  : nom d’utilisateur à employer pour la connexion à l’hôte de build Mac.
+- `ServerAddress` : adresse IP de l’hôte de build Mac.
+- `ServerUser` : nom d’utilisateur à employer pour la connexion à l’hôte de build Mac.
   Utilisez votre nom d’utilisateur système plutôt que votre nom complet.
-- `ServerPassword`  : mot de passe à utiliser lors de la connexion à l’hôte de build Mac.
+- `ServerPassword` : mot de passe à utiliser lors de la connexion à l’hôte de build Mac.
 
 > [!NOTE]
 > Visual Studio 2019 stocke `msbuild` dans le répertoire suivant : **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
