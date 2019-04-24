@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b39fb6157c247416c85846d4d8e63e6e1b7c6028
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60956865"
+---
 |Property|Description|Options|
 |--- |--- |--- |
 |`abi.type`|**Type d’ABI** &ndash; Spécifie le type d’ABI (interface binaire d’application) de l’appareil émulé. L’option **x86** est destinée au jeu d’instructions communément appelé « x86 » ou « IA-32 ». L’option **x86_64** concerne le jeu d’instructions x86 64 bits. L’option **armeabi-v7a** est destinée au jeu d’instructions ARM avec les extensions ARM v7-a. L’option **arm64-v8a** est destinée au jeu d’instructions ARM qui prend en charge AArch64.|x86, x86_64, armeabi-v7a, arm64-v8a|
@@ -30,7 +38,7 @@
 |`hw.gsmModem`|**Prise en charge du modem GSM** &ndash; Détermine si l’appareil émulé inclut un modem qui prend en charge le système radio de téléphonie GSM (Global System for Mobile Communications).|yes, no|
 |`hw.initialOrientation`|**Orientation initiale de l’écran** &ndash; Configure l’orientation initiale de l’écran sur l’appareil émulé (mode portrait ou paysage). En mode portrait, l’écran est plus haut que large. En mode paysage, l’écran est plus large que haut. Lors de l’exécution de l’appareil émulé, vous pouvez modifier l’orientation si le mode portrait et le mode paysage sont tous les deux pris en charge dans le profil de l’appareil.|portrait, landscape|
 |`hw.keyboard`|**Prise en charge du clavier** &ndash; Détermine si l’appareil émulé prend en charge un clavier QWERTY.|yes, no|
-|`hw.keyboard.charmap`|**Nom du charmap du clavier** &ndash; Nom du charmap matériel de cet appareil. REMARQUE : Cela doit toujours être la valeur par défaut **qwerty2** à moins que vous ayez modifié l’image système en conséquence. Ce nom est envoyé au noyau au moment du démarrage. L’utilisation d’un nom incorrect entraîne un appareil virtuel inutilisable.||
+|`hw.keyboard.charmap`|**Nom du charmap du clavier** &ndash; Nom du charmap matériel de cet appareil. REMARQUE : Cela doit toujours être la valeur par défaut **qwerty2** à moins que vous ayez modifié l’image système en conséquence. Ce nom est envoyé au noyau au moment du démarrage. L’utilisation d’un nom incorrect entraîne un appareil virtuel inutilisable.||
 |`hw.keyboard.lid`|**Prise en charge du couvercle du clavier** &ndash; Si la prise en charge du clavier est activée, ce paramètre détermine si le clavier QWERTY peut être fermé/masqué ou ouvert/visible. Ce paramètre est ignoré si hw.keyboard est défini sur false. REMARQUE : La valeur par défaut est false si l’appareil émulé cible le niveau d’API 12 ou supérieur.|yes, no|
 |`hw.lcd.backlight`|**Rétro-éclairage LCD** &ndash; Détermine si un rétro-éclairage LCD est simulé par l’appareil émulé.|yes, no|
 |`hw.lcd.density`|**Densité LCD** &ndash; La densité de l’écran LCD émulé, mesurée en pixels indépendants de la densité ou dp (dp est une unité de pixel virtuelle). Lorsque le paramètre est de 160 dp, chaque dp correspond à un pixel physique. Lors de l’exécution, Android utilise cette valeur pour sélectionner et mettre à l’échelle les ressources/composants appropriés pour un rendu d’affichage correct.|120, 160, 240, 213, 320|

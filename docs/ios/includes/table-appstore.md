@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ef7e0e0e0874857786196452de83d7532b80c347
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61079181"
+---
 |ID du genre|Nom du genre|
 |---|---|
 |6000|Bureau|
@@ -9,7 +17,7 @@
 |6006|Référence|
 |6007|Productivité|
 |6008|Photo et vidéo|
-|6009|Informations|
+|6009|Actualités|
 |6010|Navigation|
 |6011|Musique|
 |6012|Style de vie|
