@@ -24,7 +24,7 @@
 ### [Gestion de résolutions multiples dans CocosSharp](cocossharp/resolutions.md)
 ### [Pipeline de contenu de CocosSharp](cocossharp/content-pipeline/index.md)
 #### [Introduction aux pipelines de contenu](cocossharp/content-pipeline/introduction.md)
-#### [Procédure pas à pas : utilisation du pipeline de contenu avec CocosSharp](cocossharp/content-pipeline/walkthrough.md)
+#### [Procédure pas à pas : utilisation du pipeline de contenu avec CocosSharp](cocossharp/content-pipeline/walkthrough.md)
 ### [Amélioration de la fréquence d’images avec CCSpriteSheet](cocossharp/ccspritesheet.md)
 ### [Mise en cache de textures](cocossharp/texture-cache.md)
 ### [Mathématiques 2D avec CocosSharp](cocossharp/math.md)
