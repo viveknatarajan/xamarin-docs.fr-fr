@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61283156"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Boîtes de dialogue dans Xamarin.Mac
 
@@ -87,7 +87,7 @@ Ou il peut être affiché sous forme de tableau :
 
 ### <a name="save-dialogs"></a>Enregistrer des boîtes de dialogue
 
-La boîte de dialogue Enregistrer donne aux utilisateurs un moyen cohérent pour enregistrer un élément dans une application. La boîte de dialogue Enregistrer a deux états : **minimale** (également appelé réduite) :
+La boîte de dialogue Enregistrer donne aux utilisateurs un moyen cohérent pour enregistrer un élément dans une application. La boîte de dialogue Enregistrer a deux états : **Minimale** (également appelé réduite) :
 
 [![](dialog-images/save01.png "Une boîte de dialogue d’enregistrement")](dialog-images/save01.png#lightbox)
 
@@ -754,7 +754,7 @@ namespace SourceWriter
 }
 ```
 
-Notez que cette classe a fait deux choses ici : tout d’abord, il existe un programme d’assistance `App` propriété afin que l’accès à la **AppDelegate** plus facile. Ensuite, le `Preferences` propriété expose global **AppPreferences** classe pour la liaison de données avec des contrôles d’IU est placé sur cette vue.
+Notez que cette classe a fait deux choses ici : Tout d’abord, il existe un programme d’assistance `App` propriété afin que l’accès à la **AppDelegate** plus facile. Ensuite, le `Preferences` propriété expose global **AppPreferences** classe pour la liaison de données avec des contrôles d’IU est placé sur cette vue.
 
 Ensuite, double-cliquez sur le fichier de Storyboard pour rouvrir dans Interface Builder (et observer les modifications apportées juste au-dessus). Faites glisser les contrôles de l’interface utilisateur nécessaires pour générer l’interface de préférences dans la vue. Pour chaque contrôle, basculez vers le **inspecteur de liaison** et lier les propriétés individuelles de la **AppPreference** classe :
 
@@ -1100,7 +1100,7 @@ Cet article a examiné en détail à l’utilisation avec Windows modale, feuill
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacWindows (exemple)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Menus](~/mac/user-interface/menu.md)
 - [Windows](~/mac/user-interface/window.md)

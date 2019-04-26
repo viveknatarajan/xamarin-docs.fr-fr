@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 7a162d632c98b4e412fa1b7b0c0c40ac945ff09f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945784"
 ---
 # <a name="net-embedding-limitations"></a>Limitations de l’incorporation de .NET
 
@@ -23,7 +23,7 @@ Ce document explique les limitations de l’incorporation de .NET et, si possibl
 
 Il n’est pas possible d’avoir deux runtimes Mono coexistence à l’intérieur de la même application. Cela signifie que vous ne pouvez pas utiliser deux différentes bibliothèques d’incorporation .NET générés à l’intérieur de la même application.
 
-**Solution de contournement :** vous pouvez utiliser le générateur pour créer une bibliothèque unique qui inclut plusieurs assemblys (à partir de différents projets).
+**Solution de contournement :** Vous pouvez utiliser le générateur pour créer une bibliothèque unique qui inclut plusieurs assemblys (à partir de différents projets).
 
 ### <a name="subclassing"></a>Sous-classement
 

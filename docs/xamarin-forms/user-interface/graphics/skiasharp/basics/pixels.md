@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
 ms.openlocfilehash: c1e4a76a70dcac3414d384469f25bad7908ae77f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019950"
 ---
 # <a name="pixels-and-device-independent-units"></a>Unités indépendantes de l’appareil et pixels
 
@@ -55,7 +55,7 @@ public SurfaceSizePage()
 public void DrawText (String text, Single x, Single y, SKPaint paint)
 ```
 
-Si vous spécifiez la chaîne de texte, les coordonnées X et Y où le texte doit commencer et un `SKPaint` objet. La coordonnée X spécifie où le côté gauche du texte est positionné, méfiez-vous : coordonnée Y spécifie la position de la *baseline* du texte. Si vous avez déjà écrit à la main sur papier, la ligne de base est la ligne sur le site de caractères, et en dessous descendent lesquelles jambages (telles que celles sur les lettres g, p, q et y).
+Si vous spécifiez la chaîne de texte, les coordonnées X et Y où le texte doit commencer et un `SKPaint` objet. La coordonnée X spécifie où le côté gauche du texte est positionné, méfiez-vous : La coordonnée Y spécifie la position de la *baseline* du texte. Si vous avez déjà écrit à la main sur papier, la ligne de base est la ligne sur le site de caractères, et en dessous descendent lesquelles jambages (telles que celles sur les lettres g, p, q et y).
 
 Le `SKPaint` objet vous permet de spécifier la couleur du texte, la famille de polices et la taille du texte. Par défaut, le [ `TextSize` ](xref:SkiaSharp.SKPaint.TextSize) propriété a la valeur 12, ce qui entraîne un texte minuscule sur les appareils tels que les téléphones haute résolution. Dans des déploiements autres que les applications la plus simple, vous devez également des informations sur la taille du texte que vous affichez. Le `SKPaint` classe définit un [ `FontMetrics` ](xref:SkiaSharp.SKPaint.FontMetrics) propriété et plusieurs [ `MeasureText` ](xref:SkiaSharp.SKPaint.MeasureText(System.String)) méthodes, mais moins fantaisistes aux besoins de, la [ `FontSpacing` ](xref:SkiaSharp.SKPaint.FontSpacing) propriété attribue une valeur recommandée pour l’espacement des lignes successives de texte.
 

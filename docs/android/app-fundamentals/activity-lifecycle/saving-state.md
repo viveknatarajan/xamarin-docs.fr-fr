@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : enregistrement de l’état d’activité'
+title: 'Procédure pas à pas : enregistrement de l’état de l’activité'
 description: Nous avons abordé la théorie de l’enregistrement d’état dans le guide du cycle de vie activité ; maintenant, nous allons étudier un exemple.
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: c8f92e55648dff469227cc3bad981ad5f6e6d0ac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019125"
 ---
-# <a name="walkthrough---saving-the-activity-state"></a>Procédure pas à pas : enregistrement de l’état d’activité
+# <a name="walkthrough---saving-the-activity-state"></a>Procédure pas à pas : enregistrement de l’état de l’activité
 
 _Nous avons abordé la théorie de l’enregistrement d’état dans le guide du cycle de vie activité ; maintenant, nous allons étudier un exemple._
 

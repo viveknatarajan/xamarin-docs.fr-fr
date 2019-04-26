@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61088081"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vues de pile dans Xamarin.iOS
 
@@ -28,7 +28,7 @@ La disposition de tous les sous-vues attachée à une vue de la pile sont géré
 
 [![](uistackview-images/stacked01.png "Diagramme de disposition de vue de pile")](uistackview-images/stacked01.png#lightbox)
 
-Lorsque vous utilisez un `UIStackView` dans une application Xamarin.iOS, le développeur peut définir soit les sous-vues soit à l’intérieur d’une table de montage séquentiel dans le concepteur iOS, ou en ajoutant et supprimant des sous-vues en code C#.
+Lorsque vous utilisez un `UIStackView` dans une application Xamarin.iOS, le développeur peut définir soit les sous-vues soit à l’intérieur d’une table de montage séquentiel dans le concepteur iOS, ou en ajoutant et supprimant des sous-vues en code c#.
 
 Ce document se compose de deux parties : un démarrage rapide pour vous aider à mettre en œuvre afficher votre pile et puis certains plus de détails techniques sur son fonctionnement.
 

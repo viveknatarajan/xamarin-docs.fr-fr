@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 6545b1423b809e42293302baf3eba9521848edc1
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61237650"
 ---
 # <a name="alerts-in-xamarinmac"></a>Alertes dans Xamarin.Mac
 
@@ -270,7 +270,7 @@ Cet article a examiné en détail à l’utilisation des alertes dans une applic
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacWindows (exemple)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilisation de Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

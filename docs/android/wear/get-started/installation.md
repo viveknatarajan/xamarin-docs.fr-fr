@@ -8,17 +8,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 96fd6d32f37dd90422f05caf33cfda9a65683fd2
-ms.sourcegitcommit: 8dd04ead238be3f46cb6700e8eaa3d87f7b6d533
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58071032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61308033"
 ---
 # <a name="setup-and-installation"></a>Installation et configuration
 
 _Cet article décrit les étapes d’installation et les détails de configuration requises pour préparer votre ordinateur et les appareils pour le développement Android Wear. À la fin de cet article, vous disposerez d’un travail d’installation de l’usure de Xamarin.Android intégrée à Visual Studio pour Mac et/ou Microsoft Visual Studio, et vous serez prêt à créer votre première application Xamarin.Android usure._
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour créer des applications basées sur Xamarin Android Wear :
 

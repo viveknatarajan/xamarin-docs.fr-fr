@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de Windows de UrhoSharp
+title: UrhoSharp Windows Support
 description: Ce document aborde la prise en charge de Windows de UrhoSharp. Il décrit comment créer un projet, configurer et lancer Urho, intégrer avec WPF et s’intègrent avec UWP.
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 471029375d8a61a6c48d94a66d7836807e0da22f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386311"
 ---
-# <a name="urhosharp-windows-support"></a>Prise en charge de Windows de UrhoSharp
+# <a name="urhosharp-windows-support"></a>UrhoSharp Windows Support
 
 Bien que Urho est une bibliothèque de classes portable, et permet à la même API pour être utilisé sur la plateforme différents pour votre logique de jeu, vous devez toujours initialiser Urho dans votre pilote de plateforme spécifique et dans certains cas, vous pouvez tirer parti des fonctionnalités spécifiques de plateforme .
 

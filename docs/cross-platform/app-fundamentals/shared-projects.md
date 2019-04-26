@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: 61096635cd94d0fdd0abe6fda59c4efa41eeceb1
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61193238"
 ---
 # <a name="shared-projects-code-sharing"></a>Partagé de partage de code de projets
 

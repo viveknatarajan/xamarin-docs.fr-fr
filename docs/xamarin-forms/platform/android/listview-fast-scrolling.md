@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
 ms.openlocfilehash: d4b4a72d2bfe77c433c17fa9f427a95121855e01
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61216437"
 ---
 # <a name="listview-fast-scrolling-on-android"></a>Fast ListView le défilement sur Android
 
@@ -35,7 +35,7 @@ Cette spécifiques à la plateforme Android est utilisé pour activer le défile
 </ContentPage>
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

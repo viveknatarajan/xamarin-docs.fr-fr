@@ -8,11 +8,11 @@ ms.author: crdun
 ms.custom: video
 ms.date: 07/18/2018
 ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191310"
 ---
 # <a name="net-standard-library-code-sharing"></a>Partage de code de bibliothèque .NET standard
 
@@ -52,7 +52,7 @@ Les paramètres de la bibliothèque .NET Standard peuvent être affichées et mo
 
 À l’intérieur, vous pouvez modifier votre version de `netstandard` en modifiant le `Target Framework` valeur de liste déroulante.
 
-**En outre :** vous pouvez modifier le `.csproj` directement pour modifier cette valeur.
+**En outre :** Vous pouvez modifier le `.csproj` directement pour modifier cette valeur.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -78,7 +78,7 @@ Les paramètres de la bibliothèque .NET Standard peuvent être affichées et mo
 
 ![Modifier des frameworks de cibles standard de .NET dans les propriétés du projet](net-standard-images/vs03-w157.png "référencer une bibliothèque .NET Standard la même façon que les autres projets")
 
-**En outre :** vous pouvez modifier le `.csproj` directement pour modifier le `TargetFramework` élément modification quelle version est la cible (par exemple). `<TargetFramework>netstandard2.0</TargetFramework>`).
+**En outre :** Vous pouvez modifier le `.csproj` directement pour modifier le `TargetFramework` élément modification quelle version est la cible (par exemple). `<TargetFramework>netstandard2.0</TargetFramework>`).
 
 ### <a name="using-a-net-standard-library-project"></a>À l’aide d’un projet de bibliothèque .NET Standard
 

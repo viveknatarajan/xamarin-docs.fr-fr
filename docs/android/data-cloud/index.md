@@ -8,15 +8,15 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 90db887ca63abe0cd33f9c1616df1d0a496465e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61016852"
 ---
-# <a name="data-and-cloud-services"></a>Données et Services de Cloud
+# <a name="data-and-cloud-services"></a>Services de données et cloud
 
-## <a name="data-and-cloud-services"></a>Données et Services de Cloud
+## <a name="data-and-cloud-services"></a>Services de données et cloud
 
 Applications Xamarin.Android ont souvent besoin d’accéder aux données (à partir d’une base de données local ou à partir du cloud), et la plupart de ces applications consomment des services web implémentés à l’aide d’un large éventail de technologies. Les guides de cette section examiner comment accéder aux données et rendre utiliser des services cloud.
 

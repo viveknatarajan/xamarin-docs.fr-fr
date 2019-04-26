@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: fc95c05c1945464cd9cac8565d8a11ff1b4c7e1d
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61175121"
 ---
 # <a name="adding-a-second-toolbar"></a>Ajout d’une seconde barre d’outils
 
@@ -94,7 +94,7 @@ Pour ajouter des éléments de menu à une base de données secondaire `Toolbar`
 
 4.  Implémenter un gestionnaire de clic dans `OnCreate` pour les nouveaux éléments de menu. 
 
-Les sections suivantes illustrent ce processus en détail : **couper**, **copie**, et **coller** des éléments de menu sont ajoutés à bas `Toolbar`. 
+Les sections suivantes illustrent ce processus en détail : **Couper**, **copie**, et **coller** des éléments de menu sont ajoutés à bas `Toolbar`. 
 
 
 

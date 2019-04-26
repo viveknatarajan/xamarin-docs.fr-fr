@@ -1,5 +1,5 @@
 ---
-title: Liaison d’un. FICHIER JAR
+title: Liaison d’un fichier .JAR
 description: Cette procédure pas à pas fournit des instructions détaillées pour la création d’une bibliothèque de liaisons Java Xamarin.Android à partir d’un Android. Fichier JAR.
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
 ms.openlocfilehash: 3c84b29807fd4a181ed867095645005bf9ba4df0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60957269"
 ---
-# <a name="binding-a-jar"></a>Liaison d’un. FICHIER JAR
+# <a name="binding-a-jar"></a>Liaison d’un fichier .JAR
 
 _Cette procédure pas à pas fournit des instructions détaillées pour la création d’une bibliothèque de liaisons Java Xamarin.Android à partir d’un Android. Fichier JAR._
 

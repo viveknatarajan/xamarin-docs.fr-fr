@@ -1,18 +1,18 @@
 ---
 title: Résumé du chapitre 27. Renderers personnalisés
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 27. Renderers personnalisés'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 27. Renderers personnalisés'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 1a992c192cb4d7fc24490257b67c1b851abcd949
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 96d06626fe0a8a4bb5aca59de454f707d4dfc731
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61331403"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Résumé du chapitre 27. Renderers personnalisés
 
@@ -45,7 +45,7 @@ Vous remarquerez une classe importante nommée `ViewRenderer`. Il s’agit de la
 IOS [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs#L25) a des arguments génériques :
 
 - `TView` limité à [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
-- `TNativeView` limité à [`UIKit.UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/)
+- `TNativeView` limité à [`UIKit.UIView`](xref:UIKit.UIView)
 
 Android [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L17) a des arguments génériques :
 

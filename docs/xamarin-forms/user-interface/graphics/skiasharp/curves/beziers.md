@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
 ms.openlocfilehash: 58cf11b2a88e0c399ee197e9c8365d7deafd0f39
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61229630"
 ---
 # <a name="three-types-of-bzier-curves"></a>Trois types de courbes Bézier
 
@@ -22,7 +22,7 @@ _Explorer l’utilisation de SkiaSharp pour restituer des courbes de Bézier cub
 
 La courbe de Bézier est nommée d’après la Pierre Bézier (1910 : 1999), ingénieur Français chez le constructeur automobile Renault, ce qui a utilisé la courbe pour la conception assistée par ordinateur de corps de la voiture.
 
-Courbes de Bézier sont connus pour être particulièrement bien adapté à la conception interactive : ils sont au comportement correct &mdash; en d’autres termes, il n’existe pas singularités qui provoquent la courbe à devenir infinie ou lourde &mdash; et ils sont généralement esthétiquement :
+Courbes de Bézier sont connus pour être particulièrement bien adapté à la conception interactive : Ils sont au comportement correct &mdash; en d’autres termes, il n’existe pas singularités qui provoquent la courbe à devenir infinie ou lourde &mdash; et ils sont généralement esthétiquement :
 
 ![](beziers-images/beziersample.png "Une courbe de Bézier exemple")
 
@@ -493,7 +493,7 @@ Il est très facile de dériver le point de contrôle et le poids à utiliser le
 
 ![](beziers-images/conicarc.png "Un rendu de l’arc conique d’un arc de cercle")
 
-Vous pouvez utiliser trigonométrie pour déterminer la distance du point de contrôle à partir du centre du cercle : il est le rayon du cercle divisé par le cosinus de la moitié de l’angle α. Pour dessiner un arc circulaire entre le début et les points de terminaison, définissez le poids à ce même cosinus de la moitié de l’angle. Notez que si l’angle est de 180 degrés, puis les tangentes ne rencontrez jamais et que le poids est égal à zéro. Mais pour les angles inférieur à 180 degrés, les calculs fonctionnement correctement.
+Vous pouvez utiliser trigonométrie pour déterminer la distance du point de contrôle à partir du centre du cercle : Il est le rayon du cercle divisé par le cosinus de la moitié de l’angle α. Pour dessiner un arc circulaire entre le début et les points de terminaison, définissez le poids à ce même cosinus de la moitié de l’angle. Notez que si l’angle est de 180 degrés, puis les tangentes ne rencontrez jamais et que le poids est égal à zéro. Mais pour les angles inférieur à 180 degrés, les calculs fonctionnement correctement.
 
 Le **Arc circulaire conique** page illustre cela. Le [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) fichier instancie un `Slider` pour la sélection de l’angle. Le `PaintSurface` gestionnaire dans le [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) fichier code-behind calcule le point de contrôle et le poids :
 

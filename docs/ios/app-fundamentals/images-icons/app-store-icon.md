@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/26/2017
 ms.openlocfilehash: 53e25ae9f4650254f2aaaa03dc8727fae674c9f0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61258089"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Icônes d’application Store dans Xamarin.iOS
 
@@ -25,7 +25,7 @@ Apple suggère de suivre les recommandations suivantes pour concevoir des icône
 - Créez une icône appropriée pour votre application.
 - Créez une icône simple et cohérente avec la conception de votre application.
 - Évitez d’utiliser des mots dans votre icône.
-- Pensez de manière globale : une seule icône d’application est utilisée dans tous les App Store du monde.
+- Pensez à l’échelle internationale : une seule icône d’application est utilisée dans tous les App Store du monde.
 
 Une image de 1 024 x 1 024 pixels est nécessaire pour l’icône d’application affichée dans l’App Store.  Apple indique que l’icône visible dans l’App Store et qui se trouve dans le catalogue de ressources ne peut pas être transparente ni contenir de canal alpha.
 
@@ -46,7 +46,7 @@ Pour ajouter une icône de l’App Store les opérations suivantes :
 
 2. Faites défiler vers le **App Store** icône dans la liste :
 
-    ![Icône de l’App Store](app-store-icon-images/image2.png)
+    ![Icône App Store](app-store-icon-images/image2.png)
 
 3. Cliquez sur l’icône et recherchez votre image de 1 024 x 1 024 pixels. Enregistrer le catalogue de composants.
 

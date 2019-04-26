@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61218187"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Les dégradés circulaires SkiaSharp
 
@@ -140,7 +140,7 @@ Ce code crée un dégradé avec du noir au centre, progressivement sur blanc 100
 
 [![Dégradé radial](circular-gradients-images/RadialGradient.png "dégradé Radial")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-Dans les trois cas, le dégradé remplit le canevas. Dans l’écran iOS à gauche, le dégradé au-delà de rayon se poursuit avec la dernière couleur, qui est le blanche. C’est le résultat de `SKShaderTileMode.Clamp`. L’écran Android montre l’effet de `SKShaderTileMode.Repeat`: À 100 pixels à partir du centre du dégradé recommence avec la première couleur noir. Le dégradé est répété à chaque 100 pixels du rayon de. 
+Dans les trois cas, le dégradé remplit le canevas. Dans l’écran iOS à gauche, le dégradé au-delà de rayon se poursuit avec la dernière couleur, qui est le blanche. C’est le résultat de `SKShaderTileMode.Clamp`. L’écran Android montre l’effet de `SKShaderTileMode.Repeat`: À 100 pixels à partir du centre, le dégradé recommence avec la première couleur noir. Le dégradé est répété à chaque 100 pixels du rayon de. 
 
 L’écran de la plateforme Windows universelle à droite montre comment `SKShaderTileMode.Mirror` provoque des dégradés de l’autre sens. Le dégradé de la première est du noir au centre sur blanc dans un rayon de 100 pixels. L’autre est blanche dans le rayon de 100 pixels sur noir à un rayon de 200 pixels, et le dégradé suivant est annulée à nouveau.
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
 ms.openlocfilehash: 1447526ef925431e3cad5f36d4ce7a528c8ab07c
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386682"
 ---
 # <a name="listview-interactivity"></a>Interactivité de ListView
 
@@ -69,11 +69,11 @@ Souvent, les utilisateurs souhaitent effectuer une opération sur un élément d
 
 ![](interactivity-images/context-default.png "ListView avec des Actions contextuelles")
 
-Actions de contexte peuvent être implémentées en c# et XAML. Vous trouverez ci-dessous des guides pour les deux, mais tout d’abord nous allons examiner certains détails d’implémentation de la clé pour les deux.
+Actions de contexte peuvent être implémentées en C# et XAML. Vous trouverez ci-dessous des guides pour les deux, mais tout d’abord nous allons examiner certains détails d’implémentation de la clé pour les deux.
 
 Actions contextuelles sont créées à l’aide de `MenuItem`s. Appuyez sur pour MenuItems sont déclenchés par le MenuItem lui-même, pas le ListView. Cela est différent à partir de la gestion des événements de clic pour les cellules, où le ListView déclenche l’événement plutôt que la cellule. Étant donné que le ListView déclenche l’événement, son gestionnaire d’événements reçoit des informations de clé, à laquelle l’élément a été sélectionné ou appuyé sur.
 
-Par défaut, un MenuItem n’a aucun moyen de savoir quelle cellule auquel il appartient. `CommandParameter` est disponible sur `MenuItem` pour stocker les objets, tels que l’objet derrière l’écran de MenuItem ViewCell. `CommandParameter` peut être définie en XAML et c#.
+Par défaut, un MenuItem n’a aucun moyen de savoir quelle cellule auquel il appartient. `CommandParameter` est disponible sur `MenuItem` pour stocker les objets, tels que l’objet derrière l’écran de MenuItem ViewCell. `CommandParameter` peut être définie en XAML et C#.
 
 ### <a name="c"></a>C#  
 
@@ -156,7 +156,7 @@ Les utilisateurs s’attendent que l’extraction vers le bas de la liste de don
           IsPullToRefreshEnabled="true" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 listView.IsPullToRefreshEnabled = true;
@@ -170,7 +170,7 @@ Une boucle de progression s’affiche lors de l’actualisation, qui est par dé
           RefreshControlColor="Red" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 listView.RefreshControlColor = Color.Red;

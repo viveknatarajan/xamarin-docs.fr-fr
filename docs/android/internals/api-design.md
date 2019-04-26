@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60954283"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principes de conception de l’API de Xamarin.Android
 
@@ -37,7 +37,7 @@ Voici quelques-unes de nos principes de conception pour la liaison de Xamarin.An
 
 -  Appelez le constructeur de base pour la chaîne.
 
--  Méthodes de substitution doit être effectuée avec le système de remplacement de #.
+-  Méthodes de substitution doit être effectuée avec C#de remplacer le système.
 
 -  Simplifiez les tâches courantes Java et les tâches Java durs rendent possibles.
 

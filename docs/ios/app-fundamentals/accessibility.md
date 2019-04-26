@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/18/2016
 ms.openlocfilehash: aa3e15797ae1dac621ea8a78345044be1387ebaa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61179546"
 ---
 # <a name="accessibility-on-ios"></a>Accessibilité sur iOS
 
@@ -91,7 +91,7 @@ Si l’interface utilisateur est disposé selon une table de montage, vous pouve
 
 Ce fichier est placé dans le **es.lproj** répertoire de contenu espagnol.
 
-**Localizable.Strings**
+**Localizable.strings**
 
 Vous pouvez également les traductions peuvent être ajoutées à la **Localizable.strings** fichier dans le répertoire de contenu localisé (par ex. **es.lproj** pour l’espagnol) :
 
@@ -112,7 +112,7 @@ Reportez-vous à la [iOS localisation guide](~/ios/app-fundamentals/localization
 
 <a name="testing" />
 
-## <a name="testing-accessibility"></a>Test de l’accessibilité
+## <a name="testing-accessibility"></a>Test d’accessibilité
 
 VoiceOver est activée dans le **paramètres** application en accédant à **général > Accessibilité > VoiceOver**:
 
@@ -140,6 +140,6 @@ Tandis que l’inspecteur est visible, utiliser l’icône « X » dans le coi
 
 ## <a name="related-links"></a>Liens associés
 
-- [Accessibilité d’inter-plateformes](~/cross-platform/app-fundamentals/accessibility.md)
+- [Accessibilité multiplateforme](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS d’accessibilité (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
 - [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)

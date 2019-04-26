@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61077878"
 ---
 # <a name="cardview"></a>CardView
 
@@ -29,7 +29,7 @@ Ce guide explique comment ajouter la `CardView` projet de package pour votre Xam
 
 <a name="requirements" />
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Ce qui suit est requis pour utiliser la nouvelle Android 5.0 et ultérieures fonctionnalités (y compris `CardView`) dans les applications basées sur Xamarin :
 

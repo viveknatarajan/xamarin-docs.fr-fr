@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: c409fcc018379401c1ab40573495da12a8220c5a
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61055162"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Contrôles personnalisés dans le Concepteur de Xamarin pour iOS
 
@@ -20,7 +20,7 @@ _Le Concepteur de Xamarin pour iOS prend en charge le rendu des contrôles perso
 
 Le Concepteur de Xamarin pour iOS est un outil puissant permettant de visualiser l’interface utilisateur d’une application et fournit WYSIWYG édition prise en charge pour la plupart des vues d’iOS et les contrôleurs d’affichage. Votre application peut également contenir des contrôles personnalisés qui étendent ceux intégrés dans iOS. Si ces contrôles personnalisés sont écrits avec quelques recommandations à l’esprit, elles peuvent également être rendues par le concepteur, en fournissant une expérience d’édition encore plus riche iOS. Ce document examine ces instructions.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Un contrôle qui répond à toutes les exigences suivantes s’affichera sur l’aire de conception :
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334583"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Résumé du chapitre 18. MVVM
 

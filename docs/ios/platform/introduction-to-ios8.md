@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61317610"
 ---
 # <a name="introduction-to-ios-8"></a>Introduction à iOS 8
 
@@ -26,7 +26,7 @@ Ce guide présente les nouvelles API pour les développeurs de Xamarin.iOS.
 
 Il existe également certaines API qui ont été déconseillées dans iOS 8, qui sont détaillées à la fin de ce document.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour créer des applications iOS 8 dans Visual Studio pour Mac :
 
@@ -95,7 +95,7 @@ Deuxièmement, LocalAuthentication fournit deux méthodes pour authentifier votr
 
 Pour plus d’informations sur Touch ID et pour apprendre à intégrer dans une application Xamarin.iOS, reportez-vous à la [Introduction à TouchID](~/ios/platform/touchid.md) guides.
 
-### <a name="document-picker"></a>Sélecteur de documents
+### <a name="document-picker"></a>Sélecteur de document
 
 Fonctionnement de sélecteur de document avec un lecteur d’iCloud les utilisateurs à l’utilisateur ouvrir des fichiers qui ont été créés dans une autre application, importent et les manipulent et les exporter de nouveau à nouveau. Cela crée un flux de travail intuitif et par conséquent une expérience nettement meilleure, pour les utilisateurs. iCloud la synchronisation va encore plus, toutes les modifications apportées dans une application être reflète également cohérente sur tous vos appareils.
 

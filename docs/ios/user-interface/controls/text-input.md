@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: b309cbdf37acaa71740a4d5d03e4824efd40f359
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200887"
 ---
 # <a name="text-input-in-xamarinios"></a>Entrée de texte dans Xamarin.iOS
 
@@ -20,7 +20,7 @@ Accepter une entrée de texte utilisateur s’effectue avec la `UITextField` pou
 
 Les captures d’écran ci-dessous montrent les icônes de ces contrôles, situés dans le panneau boîte à outils dans Visual Studio pour Mac :
 
- [![](text-input-images/image11a.png "Champ UITextField")](text-input-images/image11a.png#lightbox)
+ [![](text-input-images/image11a.png "UITextField")](text-input-images/image11a.png#lightbox)
 
  [![](text-input-images/image13a.png "UITextView")](text-input-images/image13a.png#lightbox)
 
@@ -29,7 +29,7 @@ Une fois que vous avez nommé l’outlet et enregistré le fichier de Storyboard
  <a name="UITextField" />
 
 
-## <a name="uitextfield"></a>Champ UITextField
+## <a name="uitextfield"></a>UITextField
 
 Le `UITextField` contrôle est plus souvent utilisé pour accepter une seule ligne d’entrée de texte tel qu’un nom d’utilisateur ou le mot de passe. Certaines des options disponibles pour la personnalisation du contrôle sont présentées ici :
 

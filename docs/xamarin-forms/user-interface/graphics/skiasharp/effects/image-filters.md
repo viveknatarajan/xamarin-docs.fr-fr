@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290202"
 ---
 # <a name="skiasharp-image-filters"></a>Filtres d’image SkiaSharp
 
@@ -28,7 +28,7 @@ Cet article montre également à l’aide d’un filtre d’image pour créer un
 
 ## <a name="blurring-vector-graphics-and-bitmaps"></a>Flou des graphiques vectoriels et des bitmaps
 
-L’effet de flou créé par le [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) méthode statique a un avantage significatif sur les méthodes de flou dans le [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) classe : le filtre d’image peut flou à une image bitmap entière. La méthode a la syntaxe suivante :
+L’effet de flou créé par le [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) méthode statique a un avantage significatif sur les méthodes de flou dans le [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) classe : Le filtre d’image peut flou à une image bitmap entière. La méthode a la syntaxe suivante :
 
 ```csharp
 public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
@@ -427,7 +427,7 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-Le premier argument de `SKImageFilter.CreateDistantLitDiffuse` est la direction de la lumière. Positif X et Y coordonnées indiquent que la lumière est pointe vers la droite et vers le bas. Point de coordonnées Z positif dans l’écran. Le fichier XAML vous permet de sélectionner des valeurs Z négatif, mais qui est uniquement afin que vous puissiez voir ce qui se passe : point de vue conceptuel, les coordonnées Z négatif provoquent la lumière pointer hors de l’écran. Pour tout autres puis petites valeurs négatives, l’effet d’éclairage cesse de fonctionner.
+Le premier argument de `SKImageFilter.CreateDistantLitDiffuse` est la direction de la lumière. Positif X et Y coordonnées indiquent que la lumière est pointe vers la droite et vers le bas. Point de coordonnées Z positif dans l’écran. Le fichier XAML vous permet de sélectionner des valeurs Z négatif, mais qui est uniquement afin que vous puissiez voir ce qui se passe : Conceptuellement, les coordonnées Z négatif provoquent la lumière pointer hors de l’écran. Pour tout autres puis petites valeurs négatives, l’effet d’éclairage cesse de fonctionner.
 
 Le `surfaceScale` argument peut varier de -1 à 1. (Les valeurs supérieures ou inférieures n’ont aucun effet.) Il s’agit des valeurs relatives de l’axe Z qui indiquent le déplacement de l’objet de graphique (dans ce cas, il s’agit de la chaîne de texte) à partir de la surface de la zone de dessin. Utilisez les valeurs négatives pour déclencher la chaîne de texte au-dessus de la surface de dessin et les valeurs positives à appuyer sur dans la zone de dessin.
 
@@ -439,7 +439,7 @@ Ces facteurs peuvent être équilibrées pour obtenir un en relief effet lorsque
 
 La capture d’écran Android a une valeur Z égale à 0, ce qui signifie que la lumière pointe uniquement vers le bas et vers la droite. L’arrière-plan n’est pas allumé et la surface de la chaîne de texte n’est pas éclairée soit. La lumière affecte uniquement le bord du texte pour un effet très subtil.
 
-Une autre approche de texte en relief et empreinte présentée dans l’article [le traduire transformer](../transforms/translate.md): la chaîne de texte s’affiche à deux reprises avec différentes couleurs sont décalées légèrement entre eux.
+Une autre approche de texte en relief et empreinte présentée dans l’article [le traduire transformer](../transforms/translate.md): La chaîne de texte s’affiche à deux reprises avec différentes couleurs sont décalées légèrement entre eux.
 
 ## <a name="related-links"></a>Liens connexes
 

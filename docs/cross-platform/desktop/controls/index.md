@@ -1,27 +1,27 @@
 ---
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
 title: Comparaison des contrôles de l’interface utilisateur
-description: Ce document fournit une comparaison des contrôles d’interface utilisateur entre Xamarin.Forms, Windows Forms et WPF. Il contient également des liens à toute autre documentation compare WPF de Xamarin.Forms.
+description: Ce document fournit une comparaison des contrôles d’interface utilisateur entre Xamarin.Forms, Windows Forms et WPF. Il contient également des liens vers d’autres documents qui compare WPF de Xamarin.Forms.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ms.openlocfilehash: d97756952d7de724e1ef573092456e24294a74db
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61273931"
 ---
 # <a name="ui-controls-comparison"></a>Comparaison des contrôles de l’interface utilisateur
 
-Voici une comparaison de Xamarin.Forms des contrôles Windows Forms et WPF, en fonction de [cette table](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls).
+Voici une comparaison des contrôles Xamarin.Forms avec Windows Forms et WPF, en fonction de [cette table](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls).
 
-En savoir plus sur les [similitudes et différences entre WPF et de Xamarin.Forms](wpf.md) pour aider à mettre à jour vos connaissances de bureau pour le développement d’applications mobiles.
+En savoir plus sur la [similitudes et différences entre WPF et Xamarin.Forms](wpf.md) pour aider à mettre à jour vos connaissances de postes de travail pour le développement d’applications mobiles.
 
 |Windows Forms|WPF|Xamarin.Forms|
 |--- |--- |--- |
 |[BindingNavigator](https://msdn.microsoft.com/library/system.windows.forms.bindingnavigator(v=vs.110).aspx)|-|-|
-|[Composant BindingSource](https://msdn.microsoft.com/library/system.windows.forms.bindingsource(v=vs.110).aspx)|[CollectionViewSource](https://msdn.microsoft.com/library/system.windows.data.collectionviewsource(v=vs.110).aspx)|Liaison de propriété, par exemple. BindingContext|
+|[BindingSource](https://msdn.microsoft.com/library/system.windows.forms.bindingsource(v=vs.110).aspx)|[CollectionViewSource](https://msdn.microsoft.com/library/system.windows.data.collectionviewsource(v=vs.110).aspx)|Liaison de propriété, par exemple. BindingContext|
 |[Button](https://msdn.microsoft.com/library/system.windows.forms.button(v=vs.110).aspx)|[Button](https://msdn.microsoft.com/library/system.windows.controls.button(v=vs.110).aspx)|Bouton|
 |[CheckBox](https://msdn.microsoft.com/library/system.windows.forms.checkbox(v=vs.110).aspx)|[CheckBox](https://msdn.microsoft.com/library/system.windows.controls.checkbox(v=vs.110).aspx)|Basculer|
 |[CheckedListBox](https://msdn.microsoft.com/library/system.windows.forms.checkedlistbox(v=vs.110).aspx)|[Zone de liste](https://msdn.microsoft.com/library/system.windows.controls.listbox(v=vs.110).aspx) avec la composition.|ListView avec la composition.|
@@ -35,13 +35,13 @@ En savoir plus sur les [similitudes et différences entre WPF et de Xamarin.Form
 |[FlowLayoutPanel](https://msdn.microsoft.com/library/system.windows.forms.flowlayoutpanel(v=vs.110).aspx)|[WrapPanel](https://msdn.microsoft.com/library/system.windows.controls.wrappanel(v=vs.110).aspx) ou [StackPanel](https://msdn.microsoft.com/library/system.windows.controls.stackpanel(v=vs.110).aspx)|StackLayout ou WrapLayout contrôle personnalisé|
 |[FolderBrowserDialog](https://msdn.microsoft.com/library/system.windows.forms.folderbrowserdialog(v=vs.110).aspx)|-|-|
 |[FontDialog](https://msdn.microsoft.com/library/system.windows.forms.fontdialog(v=vs.110).aspx)|-|-|
-|[formulaire](https://msdn.microsoft.com/library/system.windows.forms.form(v=vs.110).aspx)|[Fenêtre](https://msdn.microsoft.com/library/system.windows.window(v=vs.110).aspx)|Page|
+|[Form](https://msdn.microsoft.com/library/system.windows.forms.form(v=vs.110).aspx)|[Fenêtre](https://msdn.microsoft.com/library/system.windows.window(v=vs.110).aspx)|Page|
 |[GroupBox](https://msdn.microsoft.com/library/system.windows.forms.groupbox(v=vs.110).aspx)|[GroupBox](https://msdn.microsoft.com/library/system.windows.controls.groupbox(v=vs.110).aspx)|-|
 |[HelpProvider](https://msdn.microsoft.com/library/system.windows.forms.helpprovider(v=vs.110).aspx)|Aucun contrôle équivalent (utilisez les info-bulles).|-|
 |[HScrollBar](https://msdn.microsoft.com/library/system.windows.forms.hscrollbar(v=vs.110).aspx)|[Barre de défilement](https://msdn.microsoft.com/library/system.windows.controls.primitives.scrollbar(v=vs.110).aspx) (défilement est intégré aux contrôles conteneurs)|Utilisez ScrollView|
 |[ImageList](https://msdn.microsoft.com/library/system.windows.forms.imagelist(v=vs.110).aspx)|-|-|
-|[Label](https://msdn.microsoft.com/library/system.windows.forms.label(v=vs.110).aspx)|[Label](https://msdn.microsoft.com/library/system.windows.controls.label(v=vs.110).aspx)|Ajouter des contrôles|
-|[LinkLabel](https://msdn.microsoft.com/library/system.windows.forms.linklabel(v=vs.110).aspx)|Aucun contrôle équivalent (vous pouvez utiliser la [lien hypertexte](https://msdn.microsoft.com/library/system.windows.documents.hyperlink(v=vs.110).aspx) classe pour héberger des liens hypertexte dans le contenu de flux).|-|
+|[Label](https://msdn.microsoft.com/library/system.windows.forms.label(v=vs.110).aspx)|[Label](https://msdn.microsoft.com/library/system.windows.controls.label(v=vs.110).aspx)|Etiquette|
+|[LinkLabel](https://msdn.microsoft.com/library/system.windows.forms.linklabel(v=vs.110).aspx)|Aucun contrôle équivalent (vous pouvez utiliser la [Hyperlink](https://msdn.microsoft.com/library/system.windows.documents.hyperlink(v=vs.110).aspx) classe pour héberger des liens hypertexte dans le contenu dynamique).|-|
 |[ListBox](https://msdn.microsoft.com/library/system.windows.forms.listbox(v=vs.110).aspx)|[ListBox](https://msdn.microsoft.com/library/system.windows.controls.listbox(v=vs.110).aspx)|Utiliser ListView|
 |[ListView](https://msdn.microsoft.com/library/system.windows.forms.listview(v=vs.110).aspx)|[ListView](https://msdn.microsoft.com/library/system.windows.controls.listview(v=vs.110).aspx)|Affichage de liste|
 |[MaskedTextBox](https://msdn.microsoft.com/library/system.windows.forms.maskedtextbox(v=vs.110).aspx)|-|-|
@@ -60,14 +60,14 @@ En savoir plus sur les [similitudes et différences entre WPF et de Xamarin.Form
 |[ProgressBar](https://msdn.microsoft.com/library/system.windows.forms.progressbar(v=vs.110).aspx)|[ProgressBar](https://msdn.microsoft.com/library/system.windows.controls.progressbar(v=vs.110).aspx)|Barre de progression|
 |[PropertyGrid](https://msdn.microsoft.com/library/system.windows.forms.propertygrid(v=vs.110).aspx)|-|-|
 |[RadioButton](https://msdn.microsoft.com/library/system.windows.forms.radiobutton(v=vs.110).aspx)|[RadioButton](https://msdn.microsoft.com/library/system.windows.controls.radiobutton(v=vs.110).aspx)|-|
-|[RichTextBox](https://msdn.microsoft.com/library/system.windows.forms.richtextbox(v=vs.110).aspx)|[RichTextBox](https://msdn.microsoft.com/library/system.windows.controls.richtextbox(v=vs.110).aspx)|Éditeur ne prend pas en charge () texte enrichi, l’entrée pour le texte de ligne unique|
+|[RichTextBox](https://msdn.microsoft.com/library/system.windows.forms.richtextbox(v=vs.110).aspx)|[RichTextBox](https://msdn.microsoft.com/library/system.windows.controls.richtextbox(v=vs.110).aspx)|Éditeur ne prend pas en charge () texte enrichi, entrée pour le texte de ligne unique|
 |[SaveFileDialog](https://msdn.microsoft.com/library/system.windows.forms.savefiledialog(v=vs.110).aspx)|[SaveFileDialog](https://msdn.microsoft.com/library/microsoft.win32.savefiledialog(v=vs.110).aspx)|-|
 |[ScrollableControl](https://msdn.microsoft.com/library/system.windows.forms.scrollablecontrol(v=vs.110).aspx)|[ScrollViewer](https://msdn.microsoft.com/library/system.windows.controls.scrollviewer(v=vs.110).aspx)|ScrollView|
 |[SoundPlayer](https://msdn.microsoft.com/library/system.media.soundplayer(v=vs.110).aspx)|[MediaPlayer](https://msdn.microsoft.com/library/system.windows.media.mediaplayer(v=vs.110).aspx)|-|
 |[SplitContainer](https://msdn.microsoft.com/library/system.windows.forms.splitcontainer(v=vs.110).aspx)|[GridSplitter](https://msdn.microsoft.com/library/system.windows.controls.gridsplitter(v=vs.110).aspx)|Envisagez de MasterDetailPage|
 |[StatusStrip](https://msdn.microsoft.com/library/system.windows.forms.statusstrip(v=vs.110).aspx)|[StatusBar](https://msdn.microsoft.com/library/system.windows.controls.primitives.statusbar(v=vs.110).aspx)|-|
 |[TabControl](https://msdn.microsoft.com/library/system.windows.forms.tabcontrol(v=vs.110).aspx)|[TabControl](https://msdn.microsoft.com/library/system.windows.controls.tabcontrol(v=vs.110).aspx)|TabbedPage|
-|[Contrôle TableLayoutPanel](https://msdn.microsoft.com/library/system.windows.forms.tablelayoutpanel(v=vs.110).aspx)|[Grid](https://msdn.microsoft.com/library/system.windows.controls.grid(v=vs.110).aspx)|Grille|
+|[TableLayoutPanel](https://msdn.microsoft.com/library/system.windows.forms.tablelayoutpanel(v=vs.110).aspx)|[Grid](https://msdn.microsoft.com/library/system.windows.controls.grid(v=vs.110).aspx)|Grille|
 |[TextBox](https://msdn.microsoft.com/library/system.windows.forms.textbox(v=vs.110).aspx)|[TextBox](https://msdn.microsoft.com/library/system.windows.controls.textbox(v=vs.110).aspx)|L’éditeur ne prend pas en charge () texte enrichi|
 |[Minuterie](https://msdn.microsoft.com/library/system.windows.forms.timer(v=vs.110).aspx)|[DispatcherTimer](https://msdn.microsoft.com/library/system.windows.threading.dispatchertimer(v=vs.110).aspx)|Device.StartTime()|
 |[ToolStrip](https://msdn.microsoft.com/library/system.windows.forms.toolstrip(v=vs.110).aspx)|[ToolBar](https://msdn.microsoft.com/library/system.windows.controls.toolbar(v=vs.110).aspx)|Page.ToolbarItems et ToolbarItem|
@@ -77,4 +77,4 @@ En savoir plus sur les [similitudes et différences entre WPF et de Xamarin.Form
 |[TreeView](https://msdn.microsoft.com/library/system.windows.forms.treeview(v=vs.110).aspx)|[TreeView](https://msdn.microsoft.com/library/system.windows.controls.treeview(v=vs.110).aspx)|Envisagez de ListView hiérarchique dans un NavigationPage|
 |[UserControl](https://msdn.microsoft.com/library/system.windows.forms.usercontrol(v=vs.110).aspx)|[UserControl](https://msdn.microsoft.com/library/system.windows.controls.usercontrol(v=vs.110).aspx)|Vue ainsi que les convertisseurs personnalisés|
 |[VScrollBar](https://msdn.microsoft.com/library/system.windows.forms.vscrollbar(v=vs.110).aspx)|[ScrollBar](https://msdn.microsoft.com/library/system.windows.controls.primitives.scrollbar(v=vs.110).aspx)|Utilisez ScrollView|
-|[WebBrowser](https://msdn.microsoft.com/library/system.windows.forms.webbrowser(v=vs.110).aspx)|Navigateur web|Affichage Web|
+|[WebBrowser](https://msdn.microsoft.com/library/system.windows.forms.webbrowser(v=vs.110).aspx)|Navigateur web|WebView|

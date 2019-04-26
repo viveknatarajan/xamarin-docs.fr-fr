@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61082266"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Techniques d’Interaction rapide pour watchOS 3 dans Xamarin
 
@@ -96,7 +96,7 @@ Apple suggère ce qui suit lorsque vous travaillez avec des modules de reconnais
 - Ajoutez les modules de reconnaissance de mouvement pour regrouper des éléments au lieu des contrôles individuels. Dans la mesure où l’Apple Watch a une plus petite taille d’écran physiques, les éléments de groupe ont tendance à être plus volumineuses et plus facilités cibles pour l’utilisateur tape. En outre, les modules de reconnaissance de mouvement peuvent entrer en conflit avec intégrées mouvements déjà dans les contrôles d’interface utilisateur native.
 - Définir des relations de dépendance dans la table de montage séquentiel de l’application watch.
 - Certains mouvements sont prioritaires sur les autres types de mouvements, telles que :
-    - Le défilement
+    - Défilement
     - Forcer le tactile
  
 ### <a name="digital-crown-rotation"></a>Rotation de la couronne numérique

@@ -1,17 +1,17 @@
 ---
 title: Exemple du monde réel à l’aide de CocoaPods
-description: Ce document montre comment utiliser Sharpie d’objectif pour générer automatiquement les définitions de liaison c# à partir d’un CocoaPod.
+description: Ce document montre comment utiliser Sharpie d’objectif pour générer automatiquement le C# définitions à partir d’un CocoaPod de liaison.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2018
 ms.openlocfilehash: bac34f662e24c6b08a67cd8da1f41b37b43b3faf
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200313"
 ---
 # <a name="real-world-example-using-cocoapods"></a>Exemple du monde réel à l’aide de CocoaPods
 
@@ -95,4 +95,4 @@ Après avoir généré le **ApiDefinitions.cs** et **StructsAndEnums.cs** fichie
 - [Bibliothèques de liaison Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Procédure pas à pas : Liaison d’une bibliothèque de Objective-C iOS](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

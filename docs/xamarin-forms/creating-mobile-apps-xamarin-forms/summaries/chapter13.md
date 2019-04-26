@@ -1,6 +1,6 @@
 ---
 title: Résumé du chapitre 13. Bitmaps
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 13. Bitmaps'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 13. Bitmaps'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 737e242e14778f38405845541b2ca30d27c3cf5a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334623"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Résumé du chapitre 13. Bitmaps
 
@@ -175,7 +175,7 @@ Lors de l’ajout de bitmaps pour les projets de plateforme, le **Action de gén
 
 - iOS : **BundleResource**
 - Android : **AndroidResource**
-- UWP : **contenu**
+- UWP : **Contenu**
 
 Le [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) exemple crée deux objets de type bouton consistant en `Image` éléments avec un `TapGestureRecognizer` installé. Il est prévu que les objets soient carré d’un pouce. Le `Source` propriété du `Image` est définie à l’aide de `OnPlatform` et `On` objets à référencer les noms de fichiers potentiellement différents sur les plateformes. Les images bitmap incluent les numéros d’indiquant leur taille en pixels, pour voir quelle bitmap de taille est récupéré et affiché.
 

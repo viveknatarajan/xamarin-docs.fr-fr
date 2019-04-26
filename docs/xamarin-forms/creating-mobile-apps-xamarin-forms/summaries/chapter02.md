@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 95defd11a9e568d1089cb2f262cb323045b6c247
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334401"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Résumé du chapitre 2. Anatomie d’une application
 
@@ -104,7 +104,7 @@ Les regroupements d’approche de bibliothèque tous les courantes de code dans 
 
 La plupart des développeurs Xamarin.Forms préfère l’approche de la bibliothèque. Dans cet ouvrage, la plupart des solutions utilisent une bibliothèque. Ceux qui utilisent SAP incluent un **Sap** suffixe du nom de projet.
 
-L’approche SAP le code dans le projet partagé permet d’exécuter un code différent pour les différentes plateformes à l’aide de directives de préprocesseur c# (`#if`, #`elif`, et `#endif`) avec ces prédéfinis des identificateurs :
+L’approche SAP le code dans le projet partagé permet d’exécuter un code différent pour les différentes plateformes à l’aide de directives de préprocesseur C# (`#if`, #`elif`, et `#endif`) avec ces prédéfinis des identificateurs :
 
 - iOS : `__IOS__`
 - Android : `__ANDROID__`
@@ -114,7 +114,7 @@ Dans une bibliothèque partagée, vous pouvez déterminer la plateforme que vous
 
 ## <a name="labels-for-text"></a>Étiquettes de texte
 
-Le [ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) solution montre comment ajouter un nouveau fichier c# à la **Greetings** projet. Ce fichier définit une classe nommée `GreetingsPage` qui dérive de `ContentPage`. Dans cet ouvrage, la plupart des projets contiennent une seule `ContentPage` dérivé dont le nom est le nom du projet avec le suffixe `Page` ajouté.
+Le [ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) solution montre comment ajouter un nouveau fichier C# à la **Greetings** projet. Ce fichier définit une classe nommée `GreetingsPage` qui dérive de `ContentPage`. Dans cet ouvrage, la plupart des projets contiennent une seule `ContentPage` dérivé dont le nom est le nom du projet avec le suffixe `Page` ajouté.
 
 Le `GreetingsPage` constructeur instancie un [ `Label` ](xref:Xamarin.Forms.Label) vue, qui est la vue Xamarin.Forms qui affiche du texte. Le [ `Text` ](xref:Xamarin.Forms.Label.Text) propriété est définie sur le texte affiché par le `Label`. Ce programme définit la `Label` à la `Content` propriété du `ContentPage`. Le constructeur de la `App` classe instancie ensuite `GreetingsPage` et lui affecte son `MainPage` propriété.
 
@@ -133,7 +133,7 @@ Définir un [ `Padding` ](xref:Xamarin.Forms.Page.Padding) propriété sur la pa
 
 ### <a name="solution-2-include-padding-just-for-ios-sap-only"></a>Solution 2. Inclure la marge intérieure simplement pour iOS (SAP uniquement)
 
-Définir une propriété « Marge » uniquement sur iOS à l’aide d’un SAP avec une directive de préprocesseur c#. Cela est illustré dans le [ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) solution.
+Définir une propriété « Marge » uniquement sur iOS à l’aide d’un SAP avec une directive de préprocesseur C#. Cela est illustré dans le [ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) solution.
 
 ### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>Solution 3. Inclure la marge intérieure simplement pour iOS (bibliothèque de classes portable ou SAP)
 

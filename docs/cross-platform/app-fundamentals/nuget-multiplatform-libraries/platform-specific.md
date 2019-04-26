@@ -1,27 +1,27 @@
 ---
-title: Création de projets de bibliothèque spécifique à la plateforme pour NuGet
-description: Ce document décrit comment créer un package NuGet unique qui contient le code spécifique à la plateforme pour plusieurs plateformes.
+title: Création de nouveaux projets de bibliothèque spécifique à la plateforme pour NuGet
+description: Ce document décrit comment créer un seul package NuGet qui contient le code spécifique à la plateforme pour plusieurs plateformes.
 ms.prod: xamarin
 ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
 ms.openlocfilehash: 00a02973d6016ad63e4317279515acc2b4e2e81b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61267204"
 ---
-# <a name="creating-new-platform-specific-library-projects-for-nuget"></a>Création de projets de bibliothèque spécifique à la plateforme pour NuGet
+# <a name="creating-new-platform-specific-library-projects-for-nuget"></a>Création de nouveaux projets de bibliothèque spécifique à la plateforme pour NuGet
 
-Les projets de bibliothèque multiplateformes qui ciblent des plateformes spécifiques, telles qu’iOS et Android, fonctionnent le mieux avec les projets partagés.
+Les projets de bibliothèque multiplateformes qui ciblent des plateformes spécifiques, telles qu’iOS et Android, fonctionnent mieux avec les projets partagés.
 
-NuGet peut contenir de code iOS et Android-spécifique, ainsi que de code .NET commun aux deux.
+Le package NuGet peut contenir de code spécifiques iOS et Android, ainsi que de code .NET commun aux deux.
 
-Plusieurs assemblys sont créés et intégrées à un seul package NuGet. Les normes de NuGet Assurez-vous que le package peut être ajouté à tous les types de projet pris en charge, tels que les projets Xamarin.iOS et Android.
+Plusieurs assemblys sont créés et intégrés à un seul package NuGet. Normes de NuGet garantissent que le package peut être ajouté à tous les types de projet pris en charge, tels que les projets Xamarin.iOS et Android.
 
-## <a name="steps-to-create-a-cross-platform-library-nuget"></a>Étapes de création d’une bibliothèque multiplateforme de NuGet
+## <a name="steps-to-create-a-cross-platform-library-nuget"></a>Étapes de création d’un package NuGet bibliothèque multiplateforme
 
 1. Sélectionnez **fichier > Nouvelle Solution** (ou cliquez avec le bouton droit sur une solution existante et choisissez **Ajouter > Nouveau projet**).
 
@@ -35,32 +35,32 @@ Plusieurs assemblys sont créés et intégrées à un seul package NuGet. Les no
 
 4. Effectuez toutes les étapes de l'Assistant. Les projets suivants sont ajoutés à la solution :
 
-  - **Projet Android** – code Android spécifique peut éventuellement être ajouté à ce projet.
-  - **iOS projet** – code spécifique à iOS peut éventuellement être ajouté à ce projet.
-  - **Projet de NuGet** – aucun code n’est ajouté à ce projet. Il fait référence à d’autres projets et contient la configuration de métadonnées de la sortie du package NuGet.
-  - **Projet partagés** – code commun doit être ajouté à ce projet, y compris le code spécifique à la plateforme à l’intérieur de `#if` directives de compilateur.
+  - **Projet Android** – spécifique à Android code peut éventuellement être ajouté à ce projet.
+  - **Projet iOS** – code spécifique à iOS peut éventuellement être ajouté à ce projet.
+  - **Projet NuGet** – aucun code n’est ajouté à ce projet. Il fait référence à d’autres projets et contient la configuration de métadonnées pour la sortie du package NuGet.
+  - **Projet partagé** – code commun doit être ajouté à ce projet, y compris le code spécifique à la plateforme à l’intérieur `#if` directives de compilateur.
 
-5. Avec le bouton droit sur le projet NuGet et choisissez **Options**, puis ouvrez le **NuGet Package > métadonnées** section et entrez le [métadonnées requises](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (comme facultatif ainsi que toutes les métadonnées) :
+5. Avec le bouton droit sur le projet NuGet et choisissez **Options**, puis ouvrez le **NuGet Package > métadonnées** section et entrez le [métadonnées requises](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (comme facultatifs ainsi que toutes métadonnées) :
 
   [![](platform-specific-images/specific-metadata-sml.png "Entrez les métadonnées requises")](platform-specific-images/specific-metadata.png#lightbox)
 
-6. Également dans le **Options du projet** fenêtre, ouvrez le **les assemblys de référence** section et choisissez les profils de la bibliothèque PCL prend en charge la bibliothèque partagée via « commutateur et de leurre » :
+6. Également dans le **Options du projet** fenêtre, ouvrez le **assemblys de référence** section et choisissez les profils de bibliothèque de classes portable prend en charge la bibliothèque partagée par le biais de « appât and commutateur » :
 
-  ![](platform-specific-images/specific-reference-assemblies.png "Également dans la fenêtre des Options de projet, ouvrez la section d’assemblys de référence et choisissez les profils de la bibliothèque PCL prend en charge la bibliothèque partagée par leurre et commutateur")
+  ![](platform-specific-images/specific-reference-assemblies.png "Également dans la fenêtre Options du projet, ouvrez la section d’assemblys de référence et choisissez les profils de bibliothèque de classes portable prend en charge la bibliothèque partagée par le biais soit")
 
   > [!NOTE]
-> « Commutateur et de leurre » signifie que les assemblys de bibliothèque de classes portables ne contiennent que le API exposée par la bibliothèque (il ne peut pas contenir le code spécifique à la plateforme). Lorsque NuGet est ajouté à un projet Xamarin, les bibliothèques partagées seront compilées par rapport à la bibliothèque PCL, mais les assemblys spécifiques à la plateforme contiennent le code qui est utilisé par l’iOS ou Android projet.
+> « Bait and commutateur » signifie que les assemblys de bibliothèque de classes portable ne contiennent que le API exposée par la bibliothèque (il ne peut pas contenir le code spécifique à la plateforme). Lorsque le package NuGet est ajouté à un projet Xamarin, des bibliothèques partagées seront compilés par rapport à la bibliothèque PCL, mais les assemblys spécifiques à la plateforme contiennent le code qui est réellement utilisé par l’iOS ou Android projet.
 
-7. Avec le bouton droit sur le projet et choisissez **créer un NuGet Package** (ou générer ou déployer la solution) et le **.nupkg** fichier de package NuGet est enregistré dans le **/bin/** dossier ( Debug ou Release, selon la configuration).
+7. Avec le bouton droit sur le projet et choisissez **création d’un NuGet Package** (générer ou déployer la solution) et le **.nupkg** fichier de package NuGet est enregistré dans le **/bin/** dossier ( Debug ou Release, selon la configuration).
 
-  ![](platform-specific-images/create-nuget-package.png "Fichier de package NuGet sera enregistré dans le dossier bin Debug ou Release, selon la configuration")
+  ![](platform-specific-images/create-nuget-package.png "NuGet package fichier sera enregistré dans le dossier bin Debug ou Release, selon la configuration")
 
 
 ## <a name="verifying-the-output"></a>Vérification de la sortie
 
-Les packages NuGet sont également des fichiers ZIP, il est donc possible d’examiner la structure interne du package généré.
+Les packages NuGet sont également des fichiers ZIP, il est donc possible d’inspecter la structure interne du package généré.
 
-Cet écran montre le contenu d’un NuGet spécifiques à une plateforme qui prend en charge d’iOS et Android et que deux assemblys de référence sélectionnés :
+Cette capture d’écran montre le contenu d’un package NuGet spécifique à la plateforme qui prend en charge iOS et Android et ont dû deux assemblys de référence sélectionnés :
 
 ![](platform-specific-images/nuget-output.png "Fichiers contenus dans le package NuGet")
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61236114"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Création de contrôles personnalisés dans Xamarin.Mac
 
@@ -212,7 +212,7 @@ Nous allons ajuster la représentation visuelle du contrôle lorsque son état e
 
 ### <a name="responding-to-user-input"></a>Répondre aux entrées utilisateur
 
-Il existe deux méthodes de base que nous pouvons ajouter l’entrée utilisateur et notre contrôle personnalisé : **remplacer les Routines de gestion de la souris** ou **modules de reconnaissance de mouvement**. Quelle méthode que nous utilisons, doit reposer sur les fonctionnalités requises par notre contrôle.
+Il existe deux manière de base que nous pouvons ajouter l’entrée utilisateur et notre contrôle personnalisé : **Remplacer les Routines de gestion de la souris** ou **les reconnaissances de mouvement**. Quelle méthode que nous utilisons, doit reposer sur les fonctionnalités requises par notre contrôle.
 
 > [!IMPORTANT]
 > Pour n’importe quel contrôle personnalisé que vous créez, vous devez utiliser soit **substituer les méthodes** _ou_ **modules de reconnaissance de mouvement**, mais pas les deux en même temps qu’ils peuvent entrer en conflit entre eux.
@@ -389,7 +389,7 @@ Cet article a examiné en détail la création d’un contrôle d’Interface ut
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacCustomControl (exemple)](https://developer.xamarin.com/samples/mac/MacCustomControl/)
+- [MacCustomControl (sample)](https://developer.xamarin.com/samples/mac/MacCustomControl/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Liaison de données et codage de clé-valeur](~/mac/app-fundamentals/databinding.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

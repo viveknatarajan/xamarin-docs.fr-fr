@@ -1,71 +1,71 @@
 ---
-title: Types natifs pour iOS et Mac OS
-description: Ce document décrit comment les API unifiée de Xamarin mappe les types .NET aux types 32 bits et 64 bits natifs, selon les besoins en fonction de l’architecture cible de compilation.
+title: Types natifs pour iOS et macOS
+description: Ce document décrit comment Unified API de Xamarin mappe les types .NET des types natifs 32 bits et 64 bits, en fonction des besoins en fonction de l’architecture cible de compilation.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
 ms.openlocfilehash: fc2b91a9265fcf09e4f58d5de27a1fdef9350b2d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199627"
 ---
-# <a name="native-types-for-ios-and-macos"></a>Types natifs pour iOS et Mac OS
+# <a name="native-types-for-ios-and-macos"></a>Types natifs pour iOS et macOS
 
 Mac et iOS API utilisent les types de données spécifiques à l’architecture sont toujours 32 bits sur les plateformes 32 bits et 64 bits sur les plateformes 64 bits.
 
 Par exemple, Objective-C mappe le `NSInteger` type de données à `int32_t` sur les systèmes 32 bits et en `int64_t` sur les systèmes 64 bits.
 
-Pour correspondre à ce problème, dans notre API unifiée, nous sommes en remplaçant les utilisations précédentes de `int` (qui dans .NET est définie comme étant toujours `System.Int32`) à un type de données : `System.nint`. Vous pouvez considérer le « n » en ce qui signifie « natifs » pour l’entier natif de type de la plateforme.
+Pour faire correspondre ce comportement, sur notre API unifiée, nous sommes en remplaçant les utilisations précédentes de `int` (qui, dans .NET est défini comme étant toujours `System.Int32`) en un nouveau type de données : `System.nint`. Vous pouvez considérer le « n » comme signifiant « native », afin du natif type entier de la plateforme.
 
 Avec ces nouveaux types de données, le même code source est compilé pour les architectures 32 bits et 64 bits, en fonction de vos indicateurs de compilation.
 
 ## <a name="new-data-types"></a>Nouveaux types de données
 
-Le tableau suivant indique les modifications de nos types de données pour correspondre à ce nouveau monde 32 et 64 bits :
+Le tableau suivant indique les modifications de nos types de données pour faire correspondre ce nouveau monde 32/64 bits :
 
-|Type natif|type de stockage de 32 bits|type de stockage de 64 bits|
+|Type natif|type de sauvegarde de 32 bits|type de sauvegarde de 64 bits|
 |--- |--- |--- |
 |`System.nint`|`System.Int32` (`int`)|`System.Int64` (`long`)|
 |`System.nuint`|`System.UInt32` (`uint`)|`System.UInt64` (`ulong`)|
 |`System.nfloat`|`System.Single` (`float`)|`System.Double` (`double`)|
 
-Nous avons choisi de ces noms pour permettre à votre code c# rechercher plus ou moins de la même façon que le résultat doit ressembler aujourd'hui.
+Nous avons choisi ces noms à autoriser votre C# code pour rechercher plus ou moins la même façon que le résultat doit être dès aujourd'hui.
 
 ### <a name="implicit-and-explicit-conversions"></a>Conversions implicites et explicites
 
-La conception de nouveaux types de données est conçue pour permettre un seul fichier source c# à naturellement utilisent le stockage bits 32 ou 64 en fonction de la plateforme hôte et les paramètres de compilation.
+La conception de nouveaux types de données est conçue pour permettre une seule C# fichier source à utiliser naturellement de 32 ou 64 bits le stockage en fonction de la plateforme hôte et les paramètres de compilation.
 
-Cette opération requise pour concevoir un ensemble de conversions implicites et explicites vers et depuis les types de données spécifiques aux types de données .NET intégraux et à virgule flottante.
+Cette opération requise permis de concevoir un ensemble de conversions implicites et explicites vers et depuis les types de données spécifiques aux types de données intégraux et à virgule flottante .NET.
 
-Opérateurs de conversions implicites sont fournis quand il est sans risque de perte de données (valeurs 32 bits qui est stockés sur un espace de 64 bits).
+Opérateurs de conversions implicites sont fournies lorsqu’il n’existe aucun risque de perte de données (stockage sur un espace de 64 bits de valeurs 32 bits).
 
-Opérateurs de conversion explicite sont fournies lorsqu’il existe un risque potentiel de perte de données (valeur de 64 bits qui est stocké sur un emplacement de stockage 32 ou potentiellement 32).
+Opérateurs de conversions explicites sont fournies lorsqu’il existe un risque potentiel de perte de données (valeur de 64 bits sont stockée sur un emplacement de stockage 32 ou potentiellement 32).
 
- `int`, `uint` et `float` sont toutes implicitement convertible en `nint`, `nuint` et `nfloat` que possible toujours 32 bits en 32 ou 64 bits.
+ `int`, `uint` et `float` sont toutes implicitement convertible en `nint`, `nuint` et `nfloat` comme 32 bits seront toujours tenir dans 32 ou 64 bits.
 
- `nint`, `nuint` et `nfloat` sont toutes implicitement convertible en `long`, `ulong` et `double` comme valeurs de bit 32 ou 64 doit toujours apparaître dans le stockage de 64 bits.
+ `nint`, `nuint` et `nfloat` sont toutes implicitement convertible en `long`, `ulong` et `double` comme valeurs de bit 32 ou 64 sont toujours ajusté dans le stockage de 64 bits.
 
-Vous devez utiliser des conversions explicites de `nint`, `nuint` et `nfloat` dans `int`, `uint` et `float` comme 64 bits de stockage peuvent contenir des types natifs.
+Vous devez utiliser des conversions explicites de `nint`, `nuint` et `nfloat` dans `int`, `uint` et `float` dans la mesure où les types natifs peuvent contenir 64 bits du stockage.
 
 Vous devez utiliser des conversions explicites de `long`, `ulong` et `double` dans `nint`, `nuint` et `nfloat` étant donné que les types natifs peuvent uniquement être en mesure de contenir 32 bits de stockage.
 
 ## <a name="coregraphics-types"></a>Types de CoreGraphics
 
-Les types de données de point, la taille et rectangle qui sont utilisés avec CoreGraphics utilisent 32 ou 64 bits en fonction de l’appareil qu’ils sont exécutent sur.  Lorsque nous liée à l’origine iOS et Mac API nous avons utilisé les structures de données existantes qui se sont produites pour correspondre à la taille de la plateforme hôte (les types de données dans `System.Drawing`).
+Les types de données point, la taille et rectangle qui sont utilisés avec CoreGraphics utilisent 32 ou 64 bits en fonction de l’appareil sur que lequel ils s’exécutent.  Lorsque nous lié à l’origine iOS et Mac API nous avons utilisé des structures de données existantes qui se sont produits pour faire correspondre les tailles de la plateforme hôte (les types de données dans `System.Drawing`).
 
-Lorsque vous déplacez vers **unifié**, vous devez remplacer les instances de `System.Drawing` avec leurs `CoreGraphics` équivalents comme indiqué dans le tableau suivant :
+Lors du déplacement vers **unifiés**, vous devez remplacer les instances de `System.Drawing` avec leurs `CoreGraphics` équivalents, comme indiqué dans le tableau suivant :
 
-|Ancien Type dans System.Drawing|Nouvelle CoreGraphics de Type de données|Description|
+|Ancien Type de System.Drawing|Nouvelle CoreGraphics de Type de données|Description|
 |--- |--- |--- |
-|`RectangleF`|`CGRect`|Blocages flottante les informations de point de rectangle.|
-|`SizeF`|`CGSize`|Blocages flottante pointent les informations sur la taille (largeur, hauteur)|
-|`PointF`|`CGPoint`|Contient une virgule flottante, des points (X, Y)|
+|`RectangleF`|`CGRect`|Blocages flottante des informations de point de rectangle.|
+|`SizeF`|`CGSize`|Les informations de taille (largeur, hauteur) du point de blocages flottante|
+|`PointF`|`CGPoint`|Contient des informations (X, Y) du point de virgule flottante|
 
-Les anciennes données types utilisés valeurs en virgule flottante pour stocker les éléments des structures de données, alors qu’un utilise la nouvelle `System.nfloat`.
+Les valeurs de types utilisés données anciennes float pour stocker les éléments des structures de données, tandis que le nouvel une utilise `System.nfloat`.
 
 ## <a name="related-links"></a>Liens associés
 

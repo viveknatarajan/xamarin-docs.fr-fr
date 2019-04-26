@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
 ms.openlocfilehash: 67b8bac62cacb091323d084e1c7cec9accc30844
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55291971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61394340"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Styles implicites dans Xamarin.Forms
 

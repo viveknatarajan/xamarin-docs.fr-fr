@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/05/2018
 ms.openlocfilehash: bc798d4df19082c67461aede1f40cfbddd85f5b3
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57981616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61034880"
 ---
 # <a name="troubleshooting-ios-12-development-with-xamarin"></a>Résolution des problèmes de développement 12 iOS avec Xamarin
 

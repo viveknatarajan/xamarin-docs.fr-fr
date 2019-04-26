@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61205561"
 ---
 # <a name="porter-duff-blend-modes"></a>Modes de fusion de porter-Duff
 
@@ -279,7 +279,7 @@ Il peut être tentant de remplacer les images bitmap dans le **Duff de Porter gr
 
 ## <a name="using-mattes-with-porter-duff"></a>À l’aide de caches avec Porter-Duff
 
-Le **mur de briques composition** page montre un exemple d’une tâche classique de composition : une image doit être assemblés à partir de plusieurs éléments, y compris un bitmap avec un arrière-plan devant être éliminée. Voici le **SeatedMonkey.jpg** bitmap avec l’arrière-plan problématique :
+Le **mur de briques composition** page montre un exemple d’une tâche de composition classique : Une image doit être assemblés à partir de plusieurs éléments, y compris un bitmap avec un arrière-plan devant être éliminée. Voici le **SeatedMonkey.jpg** bitmap avec l’arrière-plan problématique :
 
 ![Assis Monkey](porter-duff-images/SeatedMonkey.jpg "assis Monkey")
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
 ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250586"
 ---
 # <a name="xamarinforms-stepper"></a>Exécution pas à pas de Xamarin.Forms
 
@@ -182,7 +182,7 @@ Le **base liaisons d’exécution pas à pas** page montre comment écrire une a
 </ContentPage>
 ```
 
-Le [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propriété du premier [ `Label` ](xref:Xamarin.Forms.Label) est lié à la [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propriété de la [ `Stepper` ](xref:Xamarin.Forms.Stepper), comme est le [ `Text` ](xref:Xamarin.Forms.Label.Text) propriété du deuxième `Label` avec un `StringFormat` spécification. Le **base liaisons d’exécution pas à pas** page fonctions un peu différemment dans les deux pages précédentes : lorsque la page s’affiche tout d’abord, le second `Label` affiche la chaîne de texte avec la valeur. Il s’agit d’un avantage de l’utilisation de la liaison de données. Pour afficher un texte sans liaison de données, vous devez initialiser spécifiquement le `Text` propriété de la `Label` ou simuler le déclenchement de la [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) événement en appelant le Gestionnaire d’événements à partir du constructeur de classe .
+Le [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propriété du premier [ `Label` ](xref:Xamarin.Forms.Label) est lié à la [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propriété de la [ `Stepper` ](xref:Xamarin.Forms.Stepper), comme est le [ `Text` ](xref:Xamarin.Forms.Label.Text) propriété du deuxième `Label` avec un `StringFormat` spécification. Le **exécution pas à pas des liaisons de base** page fonctions un peu différemment dans les deux pages précédentes : Lorsque la page s’affiche tout d’abord, le second `Label` affiche la chaîne de texte avec la valeur. Il s’agit d’un avantage de l’utilisation de la liaison de données. Pour afficher un texte sans liaison de données, vous devez initialiser spécifiquement le `Text` propriété de la `Label` ou simuler le déclenchement de la [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) événement en appelant le Gestionnaire d’événements à partir du constructeur de classe .
 
 ## <a name="precautions"></a>Précautions
 

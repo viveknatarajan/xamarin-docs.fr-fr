@@ -7,17 +7,17 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
 ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261166"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Les outils de Sharpie objectif et les commandes
 
 _Vue d’ensemble des outils inclus avec l’objectif Sharpie et les arguments de ligne de commande de les utiliser._
 
-<style type="text/css"> .Terminal-bleu {couleur : rgb(10,96,254) ;} .terminal-vert {color : rgb(12,156,26) ;} .terminal-magenta {color : rgb(152,12,103) ;} </style>
+<style type="text/css"> .terminal-blue { color: rgb(10,96,254); } .terminal-green { color: rgb(12,156,26); } .terminal-magenta { color: rgb(152,12,103); } </style>
 
 
 Une fois objectif Sharpie avec succès [installé](~/cross-platform/macios/binding/objective-sharpie/get-started.md), ouvrez un terminal et vous familiariser avec la <em>commandes</em> objectif Sharpie a à offrir :
@@ -52,13 +52,13 @@ Available Tools:
 
 Objectif Sharpie fournit les outils suivants :
 
-|Outil|Description|
+|Tool|Description|
 |--- |--- |
-|**Xcode**|Fournit des informations sur l’installation de Xcode actuelle et les versions d’iOS et les kits de développement logiciel Mac qui sont disponibles. Nous utiliserons ces informations ultérieurement lorsque nous générons notre liaisons.|
-|**POD**|Recherche, configure, installe (dans un répertoire local) et lie Objective-C [CocoaPod](https://cocoapods.org/) bibliothèques disponibles à partir du référentiel Spec maître. Cet outil évalue la CocoaPod installé pour déduire automatiquement l’entrée correcte à passer à la `bind` outil ci-dessous. Nouveautés de 3.0 !|
+|**xcode**|Fournit des informations sur l’installation de Xcode actuelle et les versions d’iOS et les kits de développement logiciel Mac qui sont disponibles. Nous utiliserons ces informations ultérieurement lorsque nous générons notre liaisons.|
+|**pod**|Recherche, configure, installe (dans un répertoire local) et lie Objective-C [CocoaPod](https://cocoapods.org/) bibliothèques disponibles à partir du référentiel Spec maître. Cet outil évalue la CocoaPod installé pour déduire automatiquement l’entrée correcte à passer à la `bind` outil ci-dessous. Nouveautés de 3.0 !|
 |**bind**|Analyse les fichiers d’en-tête (`*.h`) dans la bibliothèque Objective-C dans initial [ApiDefinition.cs et StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) fichiers.|
 |**update**|Vérifie les versions plus récentes d’objectif Sharpie et télécharge et lance le programme d’installation si celle-ci est disponible.|
-|**vérifier-docs**|Affiche des informations détaillées sur `[Verify]` attributs.|
+|**verify-docs**|Affiche des informations détaillées sur `[Verify]` attributs.|
 |**docs**|Accède à ce document dans votre navigateur par défaut.|
 
 Pour obtenir une aide sur un outil Sharpie d’objectif spécifique, entrez le nom de l’outil et le `-help` option. Par exemple, `sharpie xcode -help` renvoie le résultat suivant :
@@ -89,4 +89,4 @@ Dans l’exemple ci-dessus, nous constatons que nous avons le `iphoneos9.1` SDK 
 ## <a name="related-links"></a>Liens associés
 
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

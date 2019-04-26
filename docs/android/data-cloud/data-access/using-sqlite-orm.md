@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
 ms.openlocfilehash: 6525cb321537a7cefb24feb1e77b532068b098ef
-ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55712083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019672"
 ---
 # <a name="using-sqlitenet-with-android"></a>Utilisation de SQLite.NET avec Android
 
@@ -21,7 +21,7 @@ La bibliothèque de SQLite.NET Xamarin recommande est un ORM très simple qui vo
 Pour inclure la bibliothèque de SQLite.NET dans une application Xamarin, ajoutez le package NuGet suivant à votre projet :
 
 - **Nom du package :** sqlite-net-pcl
-- **Auteur :** Frank A. Krueger
+- **Author :** Frank A. Krueger
 - **ID**  sqlite-net-pcl
 - **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 

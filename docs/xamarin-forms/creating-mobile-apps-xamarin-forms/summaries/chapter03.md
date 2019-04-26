@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334660"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Résumé du chapitre 3. Détails du texte
 
@@ -121,7 +121,7 @@ Définir le [ `FontSize` ](xref:Xamarin.Forms.Label.FontSize) propriété du `La
 
 Vous pouvez également obtenir un plusieurs prédéfini dépend de la plateforme de tailles de police. Statiques [ `Device.GetNamedSize` ](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) (méthode) et [surcharger](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element)) retournent un `double` valeur de taille de police appropriée à la plateforme basée sur les membres de la [ `NamedSize` ](xref:Xamarin.Forms.NamedSize)énumération ([`Default`](xref:Xamarin.Forms.NamedSize.Default), [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro), [ `Small` ](xref:Xamarin.Forms.NamedSize.Small), [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium),  et [ `Large` ](xref:Xamarin.Forms.NamedSize.Large)). La valeur retournée par la `Medium` membre n’est pas nécessairement identique à `Default`. Le [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) exemple affiche le texte avec ces tailles nommées.
 
-Définir le [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) propriété du `Label` à un membre de ces [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) énumération, [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), ou [ `None` ](xref:Xamarin.Forms.FontAttributes.None). Vous pouvez combiner la `Bold` et `Italic` membres avec le langage c# opérateur de bits OR.
+Définir le [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) propriété du `Label` à un membre de ces [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) énumération, [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), ou [ `None` ](xref:Xamarin.Forms.FontAttributes.None). Vous pouvez combiner la `Bold` et `Italic` membres avec le langage C# opérateur de bits OR.
 
 ## <a name="formatted-text"></a>Texte mis en forme
 

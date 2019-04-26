@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: ff94211086956e36da377445d90359789b62fc60
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 512775864f5ad55ddfedd53b83dd02d7b0e1d1f8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61309093"
 ---
 # <a name="material-theme"></a>Thème matériau
 
@@ -37,7 +37,7 @@ Vous pouvez utiliser un thème unique pour une application entière, ou vous pou
 Thème de matériel est pris en charge uniquement sur Android 5.0 et versions ultérieures, vous ne pouvez pas utiliser (ou un thème personnalisé dérivé de matériel de thème) au thème de votre application pour l’exécution sur des versions antérieures d’Android. Toutefois, vous pouvez configurer votre application pour utiliser le thème de matériel sur les appareils Android 5.0 et normalement revenir à un thème antérieures lorsqu’elle s’exécute sur les versions antérieures d’Android (consultez le [compatibilité](#compatibility) section de cet article pour plus d’informations).
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités de thème de matériel Android 5.0 dans les applications basées sur Xamarin :
 
@@ -52,7 +52,7 @@ Pour savoir comment configurer un projet d’application Android 5.0, consultez 
 
 ## <a name="using-the-built-in-themes"></a>À l’aide de ces thèmes
 
-Pour utiliser le thème de matériel le plus simple consiste à configurer votre application pour utiliser un thème intégré sans personnalisation. Si vous ne souhaitez pas configurer explicitement un thème, votre application par défaut `Theme.Material` (le thème sombre). Si votre application n'a qu’une seule activité, vous pouvez configurer un thème au niveau de l’application. Si votre application comporte plusieurs activités, vous pouvez configurer un thème au niveau de l’application afin qu’elle utilise le même thème entre toutes les activités, ou vous pouvez affecter différents thèmes à différentes activités. Les sections suivantes expliquent comment configurer des thèmes au niveau de l’application et au niveau des activités.
+Pour utiliser le thème de matériel le plus simple consiste à configurer votre application pour utiliser un thème intégré sans personnalisation. Si vous ne souhaitez pas configurer explicitement un thème, votre application par défaut `Theme.Material` (le thème sombre). Si votre application n'a qu’une seule activité, vous pouvez configurer un thème au niveau des activités. Si votre application comporte plusieurs activités, vous pouvez configurer un thème au niveau de l’application afin qu’elle utilise le même thème entre toutes les activités, ou vous pouvez affecter différents thèmes à différentes activités. Les sections suivantes expliquent comment configurer des thèmes au niveau de l’application et au niveau des activités.
 
 
 ### <a name="theming-an-application"></a>Une Application de thèmes

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: e4446abc73817eb0672cd10a69ff6f738de0c1e1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61029064"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Hauteur de ligne de redimensionnement automatique dans Xamarin.iOS
 
@@ -112,4 +112,4 @@ Avec ce code en place, lors de l’application est exécutée, chaque ligne sera
 
 ## <a name="related-links"></a>Liens associés
 
-- [GrowRowTable (exemple)](https://developer.xamarin.com/samples/monotouch/GrowRowTable/)
+- [GrowRowTable (sample)](https://developer.xamarin.com/samples/monotouch/GrowRowTable/)

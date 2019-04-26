@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 232fcd1d369eba1daad170986f2e2c4c913a3649
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61307861"
 ---
 # <a name="debug-on-a-wear-device"></a>Déboguer sur un appareil Wear
 
@@ -77,7 +77,7 @@ Utilisez les étapes suivantes pour connecter votre appareil d’usure à votre 
 
     Si le port 4444 n’est pas disponible, vous pouvez utiliser n’importe quel autre port disponible auquel vous avez accès. 
 
-    **Remarque**: Si vous redémarrez Visual Studio ou Visual Studio pour Mac, vous devez exécuter ces commandes pour configurer une connexion à l’appareil de l’usure.
+    **Remarque** : Si vous redémarrez Visual Studio ou Visual Studio pour Mac, vous devez exécuter ces commandes pour configurer une connexion à l’appareil de l’usure.
 
 5.  Lorsque l’appareil Wear vous y invite, confirmez que vous autorisez **ADB débogage**. Dans l’application Android Wear, vous devriez voir l’état changer à :
 

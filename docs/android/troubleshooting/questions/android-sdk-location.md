@@ -1,5 +1,5 @@
 ---
-title: Où puis-je définir mon emplacements du Kit Android SDK ?
+title: Où définir les emplacements de mon kit Android SDK ?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6A9DE6E9-3E27-4DD2-87D2-34E95E5D401C
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 11/16/2017
 ms.openlocfilehash: c004fb7717f78750e7ac1e8dc1856a32ba808638
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227672"
 ---
-# <a name="where-can-i-set-my-android-sdk-locations"></a>Où puis-je définir mon emplacements du Kit Android SDK ?
+# <a name="where-can-i-set-my-android-sdk-locations"></a>Où définir les emplacements de mon kit Android SDK ?
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -55,11 +55,11 @@ L’emplacement par défaut pour chaque chemin d’accès est comme suit :
 
 - Emplacement du NDK Android : 
 
-    **~/Library/Developer/Xamarin/Android-ndk/Android-ndk-r14b**
+    **~/Library/Developer/Xamarin/android-ndk/android-ndk-r14b**
 
 - Emplacement du Kit de développement logiciel (JDK) Java : 
 
-    **/ usr**
+    **/usr**
 
 Notez que le numéro de version de la NDK peut varier. Par exemple, au lieu de **android-ndk-r14b**, il peut s’agir comme une version antérieure **android-ndk-r10e**.
 

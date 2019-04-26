@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: b2968399279fe3e9d160471bbcae08ae091be93e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075654"
 ---
 # <a name="search-apis-in-xamarinios"></a>API de recherche dans Xamarin.iOS
 
@@ -59,7 +59,7 @@ Apple propose les suggestions suivantes concernant le contenu et des actions pou
  - Points de navigation et les fonctionnalités de l’application.
  - Choses comme les nouveaux messages, de contenu ou d’autres types d’éléments affichés par votre application et qui ont récemment été téléchargées vers l’appareil.
 
-## <a name="app-search-enhancements"></a>Améliorations de la recherche de l’application
+## <a name="app-search-enhancements"></a>Améliorations de la recherche d’applications
 
 Spotlight de base dans iOS 10 apporte plusieurs améliorations à la recherche d’application telles que :
 

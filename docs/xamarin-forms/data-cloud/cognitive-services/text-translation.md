@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
 ms.openlocfilehash: 18e5b430d9a56b22a0b4cc72d6aff1c4e3049362
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61329731"
 ---
 # <a name="text-translation-using-the-translator-api"></a>Traduction de texte à l’aide de l’API Translator
 

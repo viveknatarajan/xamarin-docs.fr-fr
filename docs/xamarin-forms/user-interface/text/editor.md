@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
 ms.openlocfilehash: 3131963efa3d4ba4de9ff63c741c276a62e9d12d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61229745"
 ---
 # <a name="xamarinforms-editor"></a>Éditeur de Xamarin.Forms
 
@@ -41,7 +41,7 @@ En C# :
 var MyEditor = new Editor { Text = "I am an Editor" };
 ```
 
-Pour lire le texte, accéder à la `Text` propriété en c# :
+Pour lire le texte, accéder à la `Text` propriété en C# :
 
 ```csharp
 var text = MyEditor.Text;
@@ -130,7 +130,7 @@ Cela peut être accompli dans XAML comme suit :
 <Editor Keyboard="Chat" />
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var editor = new Editor { Keyboard = Keyboard.Chat };
@@ -163,7 +163,7 @@ L’exemple de code XAML suivant montre comment personnaliser la valeur par déf
 </Editor>
 ```
 
-Le code c# équivalent est :
+Le code C# équivalent est :
 
 ```csharp
 var editor = new Editor();

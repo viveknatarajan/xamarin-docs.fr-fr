@@ -8,11 +8,11 @@ ms.workload:
 - xamarin
 ms.date: 10/23/2018
 ms.openlocfilehash: de7cb0d3cce97f251fe6d9625fb1373e6aac7a67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293685"
 ---
 # <a name="devops-with-xamarin"></a>DevOps avec Xamarin
 
@@ -26,7 +26,7 @@ Les tableaux suivants identifient les fonctionnalités DevOps de Visual Studio q
 
 ## <a name="agile-tools"></a>Outils agiles
 
-Lien de référence : **[À propos des outils agiles et de la gestion de projet agile](/azure/devops/boards/backlogs/overview?view=vsts)**
+Lien de référence : **[Sur les outils Agile et de gestion de projet Agile](/azure/devops/boards/backlogs/overview?view=vsts)**
 
 Commentaire général : toutes les fonctionnalités de planification et de suivi sont indépendantes du type de projet et des langages de codage.
 
@@ -40,7 +40,7 @@ Commentaire général : toutes les fonctionnalités de planification et de suiv
 
 ## <a name="modeling"></a>Modélisation
 
-Lien de référence : **[Analyser et modéliser l’architecture](/visualstudio/modeling/analyze-and-model-your-architecture)**
+Lien de référence : **[Analyser et modéliser l’architecture](/visualstudio/modeling/analyze-and-model-your-architecture)**
 
 Les fonctionnalités de conception sont indépendantes du langage de codage ou fonctionnent avec les langages .NET tels que C#. Voir [Rôles de l’architecture et des diagrammes de structure dans le développement logiciel](/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling#ModelingDiagramsTools) pour connaître les aspects liés au code.
 
@@ -67,7 +67,7 @@ Les fonctionnalités de conception sont indépendantes du langage de codage ou f
 
 ## <a name="build"></a>Build
 
-Lien de référence :  **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
+Lien de référence : **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
 
 |Fonctionnalité|Prise en charge par Xamarin|Commentaires supplémentaires|
 |-------------|----------------------------|-------------------------|
@@ -90,7 +90,7 @@ Lien de référence :  **[Azure Pipelines](/azure/devops/pipelines/index?view=vs
 
 ## <a name="improve-code-quality"></a>Améliorer la qualité du code
 
-Lien de référence : **[Améliorer la qualité du code](/visualstudio/test/improve-code-quality)**
+Lien de référence : **[Améliorer la qualité du Code](/visualstudio/test/improve-code-quality)**
 
 |Fonctionnalité|Prise en charge par Xamarin|Commentaires supplémentaires|
 |-------------|----------------------------|-------------------------|
@@ -102,7 +102,7 @@ Lien de référence : **[Améliorer la qualité du code](/visualstudio/test/imp
 
 ## <a name="release-management"></a>Gestion des versions
 
-Lien de référence : **[Générer et mettre en production dans Azure Pipelines et TFS](/azure/devops/pipelines/overview?view=vsts)**
+Lien de référence : **[Build et de publication dans les Pipelines Azure et TFS](/azure/devops/pipelines/overview?view=vsts)**
 
 |Fonctionnalité|Prise en charge par Xamarin|Commentaires supplémentaires|
 |-------------|----------------------------|-------------------------|

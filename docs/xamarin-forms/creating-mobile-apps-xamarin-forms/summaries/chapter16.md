@@ -1,6 +1,6 @@
 ---
 title: Résumé du chapitre 16. Liaison de données
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 16. Liaison de données'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 16. Liaison de données'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: df3cee3fe71553b63bf4b050cad141b66ad98a06
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334204"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Résumé du chapitre 16. Liaison de données
 

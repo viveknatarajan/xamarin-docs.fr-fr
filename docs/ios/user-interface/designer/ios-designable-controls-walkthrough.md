@@ -1,5 +1,5 @@
 ---
-title: Utilisation de contrôles personnalisés avec le concepteur iOS
+title: utilisation de contrôles personnalisés avec le concepteur iOS
 description: Ce document décrit comment créer un contrôle personnalisé et l’utiliser avec le Concepteur de Xamarin pour iOS. Il montre comment rendre le contrôle disponible dans la boîte à outils du concepteur iOS, implémenter le contrôle afin qu’elle s’affiche correctement et concevoir le temps et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,15 +8,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61154427"
 ---
-# <a name="using-custom-controls-with-the-ios-designer"></a>Utilisation de contrôles personnalisés avec le concepteur iOS
+# <a name="using-custom-controls-with-the-ios-designer"></a>utilisation de contrôles personnalisés avec le concepteur iOS
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Le Concepteur de Xamarin pour iOS est disponible dans Visual Studio pour Mac et Visual Studio 2017 et version ultérieure sur Windows.
 

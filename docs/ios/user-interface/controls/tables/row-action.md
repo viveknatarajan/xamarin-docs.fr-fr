@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/25/2017
 ms.openlocfilehash: 6d41f37d4a63db710bb04e35e6e1a4be0dd4f7a4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61408279"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Utilisation des Actions de ligne dans Xamarin.iOS
 
@@ -185,5 +185,5 @@ Si l’utilisateur appuie sur le **Hi** bouton, `Hello World!` sera écrite dans
 
 ## <a name="related-links"></a>Liens associés
 
-- [TableSwipeActions (exemple)](https://developer.xamarin.com/samples/monotouch/TableSwipeActions)
-- [WorkingWithTables (exemple)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)
+- [TableSwipeActions (sample)](https://developer.xamarin.com/samples/monotouch/TableSwipeActions)
+- [WorkingWithTables (sample)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)

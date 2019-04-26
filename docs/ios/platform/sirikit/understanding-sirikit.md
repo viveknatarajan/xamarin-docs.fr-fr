@@ -1,5 +1,5 @@
 ---
-title: Présentation des Concepts de SiriKit
+title: Présentation des concepts de SiriKit
 description: Ce document décrit les concepts clés nécessaires pour travailler avec SiriKit dans une application Xamarin.iOS. Par exemple, il aborde les intentions et la conception d’extensions d’IU Intents, autorisations de SiriKit, une expérience optimale et bien plus encore.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: b2a9e757e8a3407bbb19ae0580e5788eabe84cf0
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61188921"
 ---
-# <a name="understanding-sirikit-concepts"></a>Présentation des Concepts de SiriKit
+# <a name="understanding-sirikit-concepts"></a>Présentation des concepts de SiriKit
 
 _Cet article aborde les concepts fondamentaux qui seront nécessaires pour l’utilisation de SiriKit dans une application Xamarin.iOS._
 
@@ -66,32 +66,32 @@ Il existe de nombreuses façons que l’utilisateur peut initier une interaction
 Par exemple, si l’utilisateur souhaite envoyer un message à leur friend Bobo, ils devront peut-être la conversation suivante avec Siri :
 
 _Utilisateur : Bonjour Siri, envoyer un message MonkeyChat._<br />
-_Siri : auquel ?_<br />
+_Siri : Auxquels ?_<br />
 _Utilisateur : Bobo._<br />
-_Siri : Ce que voulez-vous dire à Bobo ?_<br />
-_Utilisateur : Envoyez bananes plus._<br />
+_Siri : Que voulez-vous dire à Bobo ?_<br />
+_Utilisateur : Veuillez envoyer bananes plus._<br />
 
 Une autre personne peut être la même requête avec une autre conversation :
 
 _Utilisateur : Envoyer un message à Bobo sur MonkeyChat._<br />
-_Siri : Ce que voulez-vous dire à Bobo ?_<br />
-_Utilisateur : Envoyez bananes plus._<br />
+_Siri : Que voulez-vous dire à Bobo ?_<br />
+_Utilisateur : Veuillez envoyer bananes plus._<br />
 
 Et un autre utilisateur peut effectuer une demande encore plus courte :
 
 _Utilisateur : MonkeyChat Bobo envoyez bananes plus._<br />
-_Siri : Ok, ssage envoyez bananes plus à Bobo sur Monkeychat._<br />
+_Siri : OK, ssage envoyez bananes plus à Bobo sur Monkeychat._<br />
 
 Ou même faire la demande même dans une autre langue :
 
 _Utilisateur : MonkeyChat Bobo Veuillez vous plaît envoyer plus de bananes._<br />
-_Siri : Oui, envoyer d’envoi message Veuillez vous plaît, plus de bananes à Bobo sur Monkeychat._<br />
+_Siri : Oui, envoyer d’envoi message Veuillez vous plaît ainsi que de bananes à Bobo sur Monkeychat._<br />
 
 Encore un autre utilisateur peut être très détaillé dans leur conversation :
 
 _Utilisateur : Bonjour Siri, pouvez-vous Veuillez me faire plaisir et lancez l’application MonkeyChat pour envoyer un SMS avec le message, envoyez bananes plus._<br />
-_Siri : auquel ?_<br />
-_Utilisateur : Mon meilleur pal Bobo._<br />
+_Siri : Auxquels ?_<br />
+_Utilisateur : Mon pal meilleures Bobo._<br />
 
 En outre, il existe de nombreuses façons Siri peut répondre à une requête, certaines selon la façon dont la demande a été effectuée :
 
@@ -124,8 +124,8 @@ Il existe trois méthodes principales que l’application peut participer à la 
 Étant donné les informations ci-dessus, examinez l’interaction de la conversation suivante avec l’application MonkeyChat :
 
 _Utilisateur : Bonjour Siri, envoyer un message à Bobo sur MonkeyChat._<br />
-_Siri : Ce que voulez-vous dire à Bobo ?_<br />
-_Utilisateur : Envoyez bananes plus._<br />
+_Siri : Que voulez-vous dire à Bobo ?_<br />
+_Utilisateur : Veuillez envoyer bananes plus._<br />
 
 Le premier rôle de l’application prend à la conversation est d’aider les Siri à comprendre les voix de l’utilisateur :
 
@@ -144,7 +144,7 @@ L’objectif structurée contiendra les informations suivantes :
 - **Domaine :** Messages
 - **Objectif :** sendMessage
 - **Destinataire :** Bobo
-- **Contenu :** envoyez bananes plus
+- **Contenu :** Veuillez envoyer plus bananes
 
 Chaque domaine a en tant qu’ensemble de savoir *Actions* qui peut être effectuée en leur sein et basé sur le domaine et l’Action, de nombreux paramètres peuvent être inclus dans le but de zéro est envoyée à l’application.
 
@@ -290,7 +290,7 @@ Le vocabulaire spécifique d’application définit les mots et expressions spé
 
 Il existe plusieurs parties à un vocabulaire `AppIntentVocabulary.plist` fichier :
 
-- **Application d’exemple utilise** -ils fournissent un ensemble de cas d’utilisation courants pour les requêtes que l’utilisateur peut faire de l’application. Par exemple : *« Démarrer un entraînement avec MonkeyFit ».*
+- **Application d’exemple utilise** -ils fournissent un ensemble de cas d’utilisation courants pour les requêtes que l’utilisateur peut faire de l’application. Exemple : *« Démarrer un entraînement avec MonkeyFit ».*
 - **Paramètres** -ils fournissent un ensemble de types de paramètres non standard spécifiques à l’application. Par exemple, les noms de séances d’entraînement pour l’application MonkeyFit. Il s’agit de :
     - **Une expression** -autorise l’application de définir des termes uniques pour l’application. Par exemple : le type d’entraînement « Bananarific » pour l’application MonkeyFit. 
     - **Prononciation** -donne des indications de prononciation à Siri comme une simple orthographe phonétique une expression donnée. Par exemple, « ba nana ri fic ».

@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: 5bd232293c979566faed2856de7287903da94054
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300401"
 ---
 # <a name="layouts-in-xamarinforms"></a>Dispositions dans Xamarin.Forms
 
@@ -204,7 +204,7 @@ Xamarin.Forms et ses mises en page intégrés sont capables de gérer les modifi
 
 appareils pour iOS, Android et plateforme Windows universelle prennent toutes en charge les tailles d’écran plus grands sur tablette (ainsi que les ordinateurs portables et postes de travail pour Windows). Xamarin.Forms vous permet d’optimiser votre application pour les écrans plus grands en détectant le type d’appareil et l’ajustement de la mise en page, ou à l’aide d’une page totalement différente complètement pour les écrans plus grands.
 
-### <a name="bindable-layoutsbindable-layoutsmd"></a>[Dispositions pouvant être liées](bindable-layouts.md)
+### <a name="bindable-layoutsbindable-layoutsmd"></a>[Dispositions liables](bindable-layouts.md)
 
 Le `BindableLayout` classe permet de n’importe quelle classe de disposition qui dérive de la [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe pour générer son contenu en le liant à une collection d’éléments, avec l’option permettant de définir l’apparence de chaque élément avec un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
 

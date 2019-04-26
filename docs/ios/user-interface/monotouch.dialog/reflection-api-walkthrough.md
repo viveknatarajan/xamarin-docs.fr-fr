@@ -8,11 +8,11 @@ ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
 ms.openlocfilehash: ecbda48ac7b175503701aa64f001c0138cfb423a
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61217397"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Création d’une application Xamarin.iOS à l’aide de l’API de réflexion
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61335300"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Résumé du chapitre 15. L’interface interactive
 

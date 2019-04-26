@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: d6173e1886eaf807decd960b07acc022bb17c04d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61177452"
 ---
 # <a name="lollipop-features"></a>Fonctionnalités d’interface (lollipop)
 
@@ -41,7 +41,7 @@ Outre les améliorations de l’interface utilisateur apportées via le thème d
 -   **Nouvelles API** &ndash; Android 5.0 ajoute de nouvelles API pour la prise en charge de réseau multiples, amélioration de connectivité Bluetooth, la gestion de stockage plus facile et un contrôle plus souple de lecteurs multimédias et les appareils photo. Un nouveau travail de la fonctionnalité de planification est disponible pour exécuter des tâches de façon asynchrone à des heures planifiées. Cette fonctionnalité contribue à améliorer l’autonomie par, par exemple, planification des tâches d’avoir lieu quand l’appareil est branché et la facturation.
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour utiliser les nouvelles fonctionnalités de Android 5.0 dans les applications basées sur Xamarin :
 

@@ -1,6 +1,6 @@
 ---
 title: Résumé du chapitre 5. Gestion des tailles
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 5. Gestion des tailles'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 5. Gestion des tailles'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334398"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Résumé du chapitre 5. Gestion des tailles
 
@@ -80,7 +80,7 @@ Le [ **FitToSizeClock** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 ## <a name="accessibility-issues"></a>Problèmes d’accessibilité
 
-Le **EstimatedFontSize** programme et le **FitToSizeClock** programme les deux contiennent un subtil défaut : si l’utilisateur modifie les paramètres d’accessibilité du téléphone sur Android ou Windows 10 Mobile, le programme n’est plus peut estimer la taille du texte est rendu en fonction de la taille de police. Le [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) exemple illustre ce problème.
+Le **EstimatedFontSize** programme et le **FitToSizeClock** programme les deux contiennent un subtil défaut : Si l’utilisateur modifie les paramètres d’accessibilité du téléphone sur Android ou Windows 10 Mobile, le programme n’est plus peut estimer la taille du texte est rendu en fonction de la taille de police. Le [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) exemple illustre ce problème.
 
 ## <a name="empirically-fitting-text"></a>Ajustement empirique de texte
 

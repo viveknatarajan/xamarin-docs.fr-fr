@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 05f1017f8c4b306996d3e8e165511ff9062a1026
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61047610"
+---
 
 La ligne de commande suivante pour spécifier une version Release de la solution **SOLUTION_FILE.sln** pour iPhone. L’emplacement de la loi peut être défini en spécifiant le `IpaPackageDir` propriété sur la ligne de commande :
 

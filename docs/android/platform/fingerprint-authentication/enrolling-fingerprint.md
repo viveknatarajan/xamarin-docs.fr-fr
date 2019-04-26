@@ -1,5 +1,5 @@
 ---
-title: L’inscription d’une empreinte digitale
+title: Inscription d’une empreinte digitale
 description: Comment définir jusqu'à un verrouillage d’écran et inscrire une empreinte digitale sur un émulateur ou un appareil Android.
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 18903a7d8f6c4033dc3ac7c4c0187a247d023bc1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61027013"
 ---
-# <a name="enrolling-a-fingerprint"></a>L’inscription d’une empreinte digitale
+# <a name="enrolling-a-fingerprint"></a>Inscription d’une empreinte digitale
 
 ## <a name="enrolling-a-fingerprint-overview"></a>L’inscription d’une vue d’ensemble de l’empreinte digitale
 

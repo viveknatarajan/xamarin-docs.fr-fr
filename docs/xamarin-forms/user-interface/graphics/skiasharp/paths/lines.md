@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290718"
 ---
 # <a name="lines-and-stroke-caps"></a>Lignes et extrémités de trait
 
@@ -30,7 +30,7 @@ Pour dessiner des lignes uniques, `SKCanvas` définit une simple [ `DrawLine` ](
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-Par défaut, le [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propriété de nouvellement instancié `SKPaint` objet est 0, ce qui a le même effet en tant que valeur de 1 lors du rendu d’une ligne d’un pixel d’épaisseur. Cela semble très léger sur les appareils haute résolution tels que les téléphones, vous devez donc probablement définir le `StrokeWidth` d’une valeur supérieure. Mais une fois que vous démarrez le traçage des lignes d’une épaisseur dimensionnable, qui déclenche un autre problème : comment doivent le démarre et les extrémités de ces lignes épaisses être restituées ?
+Par défaut, le [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propriété de nouvellement instancié `SKPaint` objet est 0, ce qui a le même effet en tant que valeur de 1 lors du rendu d’une ligne d’un pixel d’épaisseur. Cela semble très léger sur les appareils haute résolution tels que les téléphones, vous devez donc probablement définir le `StrokeWidth` d’une valeur supérieure. Mais une fois que vous commencez à tracer des lignes d’une épaisseur dimensionnable, qui déclenche un autre problème : Comment doivent le démarre et les extrémités de ces lignes épaisses être restituées ?
 
 L’apparence du démarre et la fin des lignes est appelé un *embout de ligne* ou Skia, un *extrémité de trait*. Le mot « limite » dans ce contexte fait référence à un type de hat &mdash; quelque chose qui se trouve sur la fin de la ligne. Vous définissez le [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) propriété de la `SKPaint` objet à un des membres suivants de la [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) énumération :
 

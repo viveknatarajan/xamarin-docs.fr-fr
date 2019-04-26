@@ -6,11 +6,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: c6eaf4dd90b172053b4b87e3427cfe35213c6727
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215876"
 ---
 # <a name="callbacks-on-android"></a>Rappels sur Android
 
@@ -157,7 +157,7 @@ Pour plus d’informations sur l’interopérabilité de Java, consultez l’inn
 
 ## <a name="interfaces"></a>Interfaces
 
-Les interfaces sont à l’instar des classes abstraites, à l’exception d’un détail : Xamarin.Android ne génère pas de Java pour eux. Il s’agit, car avant l’incorporation de .NET, il n’existe pas de nombreux scénarios où Java implémenterait un C# interface.
+Les interfaces sont similaires en tant que classes abstraites, à l’exception d’un détail : Xamarin.Android ne génère pas de Java pour eux. Il s’agit, car avant l’incorporation de .NET, il n’existe pas de nombreux scénarios où Java implémenterait un C# interface.
 
 Supposons que nous avons ce qui suit C# interface :
 
@@ -264,7 +264,7 @@ public class VirtualClass : Java.Lang.Object
 }
 ```
 
-Si vous avez suivi le `abstract` exemple de classe ci-dessus, elle s’exécutera à l’exception d’un détail : _Xamarin.Android ne sont pas rechercher les `Invoker`_ .
+Si vous avez suivi le `abstract` exemple de classe ci-dessus, elle s’exécutera à l’exception d’un détail : _Xamarin.Android ne pas rechercher les `Invoker`_ .
 
 Pour résoudre ce problème, modifiez le C# classe soit `abstract`:
 

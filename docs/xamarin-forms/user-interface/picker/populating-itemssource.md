@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
 ms.openlocfilehash: 2c7daca80a207d0c060fc3a867b1eda03dd65258
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61082874"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Définition de propriété de ItemsSource d’un sélecteur
 
@@ -47,7 +47,7 @@ Un [ `Picker` ](xref:Xamarin.Forms.Picker) peut être rempli de données en déf
 > [!NOTE]
 > Notez que le `x:Array` élément requiert une `Type` attribut indiquant le type des éléments dans le tableau.
 
-Le code c# équivalent est indiqué ci-dessous :
+Le code C# équivalent est indiqué ci-dessous :
 
 ```csharp
 var monkeyList = new List<string>();
@@ -76,7 +76,7 @@ L’exemple de code suivant montre comment récupérer le [ `SelectedItem` ](xre
 <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
 ```
 
-Le code c# équivalent est indiqué ci-dessous :
+Le code C# équivalent est indiqué ci-dessous :
 
 ```csharp
 var monkeyNameLabel = new Label();
@@ -114,7 +114,7 @@ Un [ `Picker` ](xref:Xamarin.Forms.Picker) peut être également rempli de donn�
         ItemDisplayBinding="{Binding Name}" />
 ```
 
-Le code c# équivalent est indiqué ci-dessous :
+Le code C# équivalent est indiqué ci-dessous :
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
@@ -152,7 +152,7 @@ Liaison de données peut être utilisée pour définir un objet la [ `SelectedIt
 <Label Text="{Binding SelectedMonkey.Details}" ... />
 ```
 
-Le code c# équivalent est indiqué ci-dessous :
+Le code C# équivalent est indiqué ci-dessous :
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };

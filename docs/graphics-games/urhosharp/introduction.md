@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: a3e14ebca961e828fc578035adaca5ba2a809438
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34783553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61288522"
 ---
 # <a name="an-introduction-to-urhosharp"></a>Introduction à UrhoSharp
 
@@ -38,7 +38,7 @@ UrhoSharp est un moteur de jeu avec un grand nombre de fonctionnalités prêtes 
 
 ## <a name="getting-started"></a>Prise en main
 
-UrhoSharp est facilement distribué comme un [package NuGet](https://www.nuget.org/) et il peut être ajouté à vos projets c# ou F # qui ciblent Windows, Mac, Android ou iOS.  Le package NuGet est fourni avec les bibliothèques nécessaires pour exécuter votre programme, ainsi que les ressources de base (CoreData) utilisés par le moteur.
+UrhoSharp est facilement distribué comme un [package NuGet](https://www.nuget.org/) et il peut être ajouté à votre C# ou F# les projets qui ciblent Windows, Mac, Android ou iOS.  Le package NuGet est fourni avec les bibliothèques nécessaires pour exécuter votre programme, ainsi que les ressources de base (CoreData) utilisés par le moteur.
 
 ### <a name="urho-as-a-portable-class-library"></a>Urho comme une bibliothèque de classes Portable
 
@@ -187,7 +187,7 @@ L’expression await indique que le voudrez reprendre l’exécution après cett
 
 Le [à l’aide de UrhoSharp](~/graphics-games/urhosharp/using.md) document explore plus en détail les concepts qui sous-tendent Urho et la structure de votre code pour créer un jeu.
 
-## <a name="copyrights"></a>Droits d’auteur
+## <a name="copyrights"></a>Copyrights
 
 Cette documentation contient le contenu d’origine à partir de Xamarin Inc, mais il dessine largement à partir de la documentation open source pour le projet Urho3D et contient des captures d’écran à partir du projet Cocos2D.
 

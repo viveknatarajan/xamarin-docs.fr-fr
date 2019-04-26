@@ -1,5 +1,5 @@
 ---
-title: Fichier IPA est de 0 octet
+title: Le fichier IPA contient 0 octet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 376BBA27-8694-4E63-9976-BF60349D42D8
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 4835c980b6b11c92ec1c81dea69f229aa5652275
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420933"
 ---
-# <a name="ipa-file-is-0-bytes"></a>Fichier IPA est de 0 octet
+# <a name="ipa-file-is-0-bytes"></a>Le fichier IPA contient 0 octet
 
 > [!IMPORTANT]
 > Ce problème a été résolu dans les versions récentes de Xamarin. Toutefois, si le problème se produit sur la dernière version du logiciel, veuillez soumettre un [nouveau bogue](~/cross-platform/troubleshooting/questions/howto-file-bug.md) avec votre contrôle de version complet intégral et les informations de générer la sortie de journal.

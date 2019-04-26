@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 5a944fd8f7dcfdcbb3f025c92b4afac35673416f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61031505"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introduction à macOS Sierra
 
@@ -119,7 +119,7 @@ Pour plus d’informations, consultez le site d’Apple [référence journalisat
 
 <a name="Wide-Color" />
 
-### <a name="wide-color"></a>Large couleur
+### <a name="wide-color"></a>Couleur à spectre large
 
 macOS Sierra étend la prise en charge pour les formats de pixel de la plage étendue et des espaces d’une gamme de couleurs dans tout le système, y compris les infrastructures telles que graphismes de base, l’Image de Core, complète et AVFoundation. Prise en charge pour les appareils avec des couleurs large est davantage facilité en fournissant ce comportement dans toute la pile de graphique entière.
 

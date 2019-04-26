@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: be473580b24dba6b4f08384771e2097d368f8dc8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61276600"
 ---
 # <a name="radiobutton"></a>RadioButton
 
@@ -70,7 +70,7 @@ Chaque capture le [ `RadioButton` ](https://developer.xamarin.com/api/type/Andro
 
 Exécutez l'application.
 
-**Conseil :** si vous avez besoin modifier l’état vous-même (par exemple lors du chargement une enregistré [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), utiliser la [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+**Conseil :** Si vous avez besoin modifier l’état vous-même (par exemple lors du chargement une enregistré [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), utiliser la [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
 accesseur Set de propriété ou [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
 .
 

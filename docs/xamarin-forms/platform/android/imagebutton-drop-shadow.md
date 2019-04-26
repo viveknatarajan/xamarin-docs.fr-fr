@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
 ms.openlocfilehash: 56415aff251149aee01c2e2eb7e335e157180962
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293783"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Ombres ImageButton sur Android
 
@@ -44,7 +44,7 @@ Cette spécifiques à la plateforme Android est utilisée pour activer une ombre
 </ContentPage>
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

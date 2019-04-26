@@ -1,5 +1,5 @@
 ---
-title: Firebase Cloud Messaging
+title: Messagerie cloud Firebase
 description: Firebase Cloud Messaging (FCM) est un service qui simplifie la messagerie entre les applications mobiles et les applications serveur. Cet article fournit une vue d’ensemble du fonctionne de FCM, et explique comment configurer les Services de Google afin que votre application peut utiliser FCM.
 ms.prod: xamarin
 ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
 ms.openlocfilehash: bf0523a98c8e68691228b6e305265277e2925fa3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61017424"
 ---
-# <a name="firebase-cloud-messaging"></a>Firebase Cloud Messaging
+# <a name="firebase-cloud-messaging"></a>Messagerie cloud Firebase
 
 _Firebase Cloud Messaging (FCM) est un service qui simplifie la messagerie entre les applications mobiles et les applications serveur. Cet article fournit une vue d’ensemble du fonctionne de FCM, et explique comment configurer les Services de Google afin que votre application peut utiliser FCM._
 

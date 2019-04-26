@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/03/2018
 ms.openlocfilehash: 1332a7ef5b8e5bb2f1178582bcf058123f1e177c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61308767"
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -40,7 +40,7 @@ Bien que `RecyclerView` est souvent associée à Android 5.0 Lollipop, il est pr
 
 -  **Xamarin.Android** &ndash; Xamarin.Android 4.20 ou version ultérieure doit être installé et configuré avec Visual Studio ou Visual Studio pour Mac.
 
--  Votre projet d’application doit inclure le **Xamarin.Android.Support.v7.RecyclerView** package. Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas :, y compris un NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+-  Votre projet d’application doit inclure le **Xamarin.Android.Support.v7.RecyclerView** package. Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas : Inclusion d’un package NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 
 ### <a name="overview"></a>Vue d'ensemble

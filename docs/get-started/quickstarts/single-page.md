@@ -10,11 +10,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 7b13ab5a4cc0d8e66e260329b5a53397778cb179
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61194363"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Créer une Application Xamarin.Forms de Page unique
 

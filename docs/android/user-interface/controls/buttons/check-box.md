@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: e03595e8d88a2f12341b9e339d0581c631224848
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61268316"
 ---
 # <a name="checkbox"></a>Case à cocher
 
@@ -49,7 +49,7 @@ gère les modifications de son propre état, vous devez uniquement interroger l�
 
 Exécutez-le.
 
-**Conseil :** si vous avez besoin modifier l’état vous-même (par exemple lors du chargement une enregistré [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), utiliser la [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)
+**Conseil :** Si vous avez besoin modifier l’état vous-même (par exemple lors du chargement une enregistré [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference), utiliser la [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)
 accesseur Set de propriété ou [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle)
 .
 

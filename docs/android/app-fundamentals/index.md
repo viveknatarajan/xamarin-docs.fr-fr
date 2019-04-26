@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 1d3bd071eeffb77f94a1b5f35f1df59f2d8c7a8a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61022192"
 ---
 # <a name="xamarinandroid-application-fundamentals"></a>Principes de base Application Xamarin.Android
 
@@ -77,7 +77,7 @@ Cet article décrit comment gérer les changements d’orientation de périphér
 
 
 
-##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Audio Android](~/android/app-fundamentals/android-audio.md)
+##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Android Audio](~/android/app-fundamentals/android-audio.md)
 
 Le système d’exploitation Android fournit une prise en charge complète multimédias, englobant ainsi l’audio et vidéo. Ce guide se concentre sur audio dans Android et couvre la lecture et l’enregistrement audio à l’aide du lecteur audio intégré et les classes de l’enregistreur, ainsi que l’API de bas niveau audio. Il aborde également l’utilisation des événements Audio de diffusion par d’autres applications, afin que les développeurs peuvent créer des applications conformes.
 

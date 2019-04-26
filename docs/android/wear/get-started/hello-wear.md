@@ -1,5 +1,5 @@
 ---
-title: Hello, usure
+title: Hello, Wear
 description: Créer votre première application Android Wear et exécutez-le sur un émulateur d’usure ou un appareil. Cette procédure pas à pas fournit des instructions détaillées pour la création d’un petit projet Android Wear qui gère les clics de bouton et affiche un compteur de clic sur l’appareil de l’usure. Il explique comment déboguer l’application à l’aide d’un émulateur d’usure ou un appareil Wear qui est connecté à un téléphone Android via Bluetooth. Il fournit également un ensemble de conseils de débogage pour Android Wear.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
 ms.openlocfilehash: a8e27063040ff91f72a1cbf932b1b277a5dee63d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61277398"
 ---
-# <a name="hello-wear"></a>Hello, usure
+# <a name="hello-wear"></a>Hello, Wear
 
 _Créer votre première application Android Wear et exécutez-le sur un émulateur d’usure ou un appareil. Cette procédure pas à pas fournit des instructions détaillées pour la création d’un petit projet Android Wear qui gère les clics de bouton et affiche un compteur de clic sur l’appareil de l’usure. Il explique comment déboguer l’application à l’aide d’un émulateur d’usure ou un appareil Wear qui est connecté à un téléphone Android via Bluetooth. Il fournit également un ensemble de conseils de débogage pour Android Wear._
 

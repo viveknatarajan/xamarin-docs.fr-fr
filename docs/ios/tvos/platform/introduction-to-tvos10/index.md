@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 260d01d6aa8344dd3cf107f1ffc34167c457a491
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61269309"
 ---
 # <a name="introduction-to-tvos-10"></a>Introduction à tvOS 10
 
@@ -48,7 +48,7 @@ Nouveau pour tvOS 10, le framework compte abonné à la vidéo permet aux applic
 
 <!--To find out more, please see our [Video Subscriber Account](~/ios/platform-features/introduction-to-ios10/video-subscriber-account/) guide.-->
 
-## <a name="wide-color"></a>Large couleur
+## <a name="wide-color"></a>Couleur à spectre large
 
 tvOS 10 étend la prise en charge pour les formats de pixel de la plage étendue et des espaces d’une gamme de couleurs dans tout le système, y compris les infrastructures telles que graphismes de base, l’Image de Core, complète et AVFoundation. Prise en charge pour les appareils avec des couleurs large est davantage facilité en fournissant ce comportement dans toute la pile de graphique entière.
 

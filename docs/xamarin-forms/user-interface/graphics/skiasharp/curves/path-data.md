@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
 ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019538"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Données de chemin SVG dans SkiaSharp
 
@@ -361,7 +361,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Le [ **points et tirets** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) article décrit comment vous pouvez utiliser la [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) méthode pour créer une ligne en pointillés. Le premier argument est un `float` tableau qui a généralement deux éléments : le premier élément est la longueur des tirets, et le deuxième élément est l’écart entre les tirets. Lorsque le `StrokeCap` propriété est définie sur `SKStrokeCap.Round`, puis les terminaisons arrondis du tiret allonger efficacement la longueur du tiret par la largeur de trait des deux côtés du tiret. Par conséquent, définissant le premier élément du tableau sur 0 crée une ligne en pointillés.
+Le [ **points et tirets** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) article décrit comment vous pouvez utiliser la [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) méthode pour créer une ligne en pointillés. Le premier argument est un `float` tableau qui a généralement deux éléments : Le premier élément est la longueur des tirets, et le deuxième élément est l’écart entre les tirets. Lorsque le `StrokeCap` propriété est définie sur `SKStrokeCap.Round`, puis les terminaisons arrondis du tiret allonger efficacement la longueur du tiret par la largeur de trait des deux côtés du tiret. Par conséquent, définissant le premier élément du tableau sur 0 crée une ligne en pointillés.
 
 La distance entre ces points est régie par le deuxième élément du tableau. Comme vous le verrez bientôt, ces deux `SKPaint` objets sont utilisés pour dessiner les cercles avec un rayon de 90 unités. Par conséquent, la circonférence de ce cercle est 180π, ce qui signifie que les marques de 60 minutes doivent apparaître toutes les unités 3pi, qui est la deuxième valeur de la `float` de tableau dans `minuteMarkPaint`. Les marques de 12 heures doivent apparaître toutes les unités 15π, qui est la valeur de la seconde `float` tableau.
 

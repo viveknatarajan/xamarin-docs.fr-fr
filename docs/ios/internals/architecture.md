@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61036133"
 ---
 # <a name="ios-app-architecture"></a>Architecture d’application iOS
 
@@ -22,7 +22,7 @@ Le diagramme suivant montre une vue d’ensemble de cette architecture :
 
 [ ![](architecture-images/ios-arch-small.png "Ce diagramme montre une vue d’ensemble de l’architecture de la compilation à l’avance de la Time (AOT)")](architecture-images/ios-arch.png#lightbox)
 
-## <a name="native-and-managed-code-an-explanation"></a>Code natif et managé : une explication
+## <a name="native-and-managed-code-an-explanation"></a>Natif et code managé : Une explication
 
 Lors du développement pour Xamarin les termes du contrat *natif et managé* code sont souvent utilisés. [Le code managé](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) est le code qui a son exécution gérée par le [Common Language Runtime de .NET Framework](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), ou dans les cas de Xamarin : le Runtime Mono. Voici ce que nous appelons un langage intermédiaire.
 
@@ -69,7 +69,7 @@ Le pseudo-code ci-dessous montre un exemple de comment procéder :
  }
 ```
 
-**Objective-c :**
+**Objective-C:**
 
 ```objectivec
 @interface MyViewController : UIViewController { }

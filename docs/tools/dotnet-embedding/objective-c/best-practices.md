@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 33138b7858b8bc04a5be30f9fad1709e916f5575
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61364093"
 ---
 # <a name="net-embedding-best-practices-for-objective-c"></a>Incorporation .NET meilleures pratiques pour Objective-C
 
@@ -29,7 +29,7 @@ Il peut être judicieux de créer un assembly différent et plus petit, pour exp
 
 Il existe un prix à payer pour effectuer la transition du code natif à managé (et serveur). Par conséquent, il est préférable d’exposer _regroupée plutôt que bavard_ API pour les développeurs natifs, par exemple,
 
-**Bavardes**
+**Chatty**
 
 ```csharp
 public class Person {
@@ -45,7 +45,7 @@ p.firstName = @"Sebastien";
 p.lastName = @"Pouliot";
 ```
 
-**Regroupée**
+**Chunky**
 
 ```csharp
 public class Person {

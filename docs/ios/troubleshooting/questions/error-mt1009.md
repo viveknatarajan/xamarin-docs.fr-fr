@@ -1,5 +1,5 @@
 ---
-title: 'Erreur MT1009 : N’a pas pu copier l’assembly'
+title: 'Erreur MT1009 : impossible de copier l’assembly'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F9FEDFF5-C84C-42B4-8F25-E34846E7315A
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 4a67537cc53aeecf1b86d11dbf041cea79587dd2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61422007"
 ---
-# <a name="error-mt1009-could-not-copy-the-assembly"></a>Erreur MT1009 : N’a pas pu copier l’assembly
+# <a name="error-mt1009-could-not-copy-the-assembly"></a>Erreur MT1009 : impossible de copier l’assembly
 
 > [!IMPORTANT]
 > Ce problème a été résolu dans les versions récentes de Xamarin.iOS. Toutefois, si le problème se produit sur la dernière version du logiciel, veuillez soumettre un [nouveau bogue](~/cross-platform/troubleshooting/questions/howto-file-bug.md) avec votre contrôle de version complet intégral et les informations de générer la sortie de journal.

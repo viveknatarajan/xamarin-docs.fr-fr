@@ -7,15 +7,15 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: 25b2393d2133c0a1f3f8354584c276fcd7ddaa4b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61305164"
 ---
 # <a name="tablelayout"></a>TableLayout
 
-[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) est un [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
 qui affiche les enfants [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
 éléments dans des lignes et colonnes.
 

@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 48caa70cf2bd408f8afc673b400f7d5a4369e108
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230846"
 ---
 # <a name="objective-c-support"></a>Prise en charge objective-C
 
@@ -204,7 +204,7 @@ En raison `NSDate` référencer date, toutes les conversions entre elle et `Date
 
 Lors de la conversion à partir de `DateTime` à `NSDate`, le `Kind` propriété sur `DateTime` est pris en compte :
 
-|Genre|Résultats|
+|Kind|Résultats|
 |---|---|
 |`Utc`|Conversion est effectuée à l’aide de l’élément fourni `DateTime` en l’état de l’objet.|
 |`Local`|Le résultat de l’appel `ToUniversalTime()` dans les `DateTime` objet est utilisé pour la conversion.|

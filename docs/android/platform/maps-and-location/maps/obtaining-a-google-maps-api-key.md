@@ -1,5 +1,5 @@
 ---
-title: Obtention un Google Maps clé API
+title: Obtention d’une clé API Google Maps
 description: Pour obtenir une clé API de Google Maps pour ajouter des mappages des fonctionnalités à votre application.
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
 ms.openlocfilehash: bfeb9d8fa2a0b5a9b18ab8266500586e2e3b6c68
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155363"
 ---
-# <a name="obtaining-a-google-maps-api-key"></a>Obtention un Google Maps clé API
+# <a name="obtaining-a-google-maps-api-key"></a>Obtention d’une clé API Google Maps
 
 Pour utiliser la fonctionnalité de Google Maps dans Android, vous avez besoin pour vous inscrire à une clé d’API de cartes avec Google. Jusqu'à ce que vous le faites, vous verrez seulement une grille vide au lieu d’une carte dans vos applications. Vous devez vous procurer une clé de v2 API Android de Google Maps - clés à partir de l’ancienne v1 de clé API Android de Google Maps ne fonctionnent pas.
 

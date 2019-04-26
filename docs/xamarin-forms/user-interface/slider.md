@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
 ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250691"
 ---
 # <a name="xamarinforms-slider"></a>Curseur de Xamarin.Forms
 
@@ -56,7 +56,7 @@ Le `Slider` définit également plusieurs propriétés qui affectent son apparen
 
 ## <a name="basic-slider-code-and-markup"></a>Balisage et code de curseur de base
 
-Le [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemple commence par trois pages qui sont fonctionnellement identiques, mais sont implémentées de différentes façons. La première page utilise uniquement du code c#, la deuxième utilise XAML avec un gestionnaire d’événements dans le code et le troisième est possible d’éviter le Gestionnaire d’événements à l’aide de la liaison de données dans le fichier XAML.
+Le [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemple commence par trois pages qui sont fonctionnellement identiques, mais sont implémentées de différentes façons. La première page utilise uniquement du code C#, la deuxième utilise XAML avec un gestionnaire d’événements dans le code et le troisième est possible d’éviter le Gestionnaire d’événements à l’aide de la liaison de données dans le fichier XAML.
 
 ### <a name="creating-a-slider-in-code"></a>Création d’un curseur dans le code
 
@@ -222,7 +222,7 @@ Slider slider = new Slider
 };
 ```
 
-Le compilateur c# génère du code qui définit ces deux propriétés dans la séquence, et à quel moment le `Minimum` propriété est définie sur 10, il est supérieur à la valeur par défaut `Maximum` la valeur 1. Vous pouvez éviter l’exception dans ce cas en définissant le `Maximum` propriété premier :
+Le compilateur C# génère du code qui définit ces deux propriétés dans la séquence, et à quel moment le `Minimum` propriété est définie sur 10, il est supérieur à la valeur par défaut `Maximum` la valeur 1. Vous pouvez éviter l’exception dans ce cas en définissant le `Maximum` propriété premier :
 
 ```csharp
 Slider slider = new Slider

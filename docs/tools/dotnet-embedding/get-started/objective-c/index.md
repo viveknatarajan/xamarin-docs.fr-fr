@@ -7,17 +7,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 92b11db2ee566bcd9f3f8a3ee3771e163a47589b
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61040893"
 ---
 # <a name="getting-started-with-objective-c"></a>Mise en route avec Objective-C
 
 Il s’agit de la page de démarrage pour Objective-C, qui couvre les notions de base pour toutes les plateformes prises en charge.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Pour utiliser l’incorporation de .NET avec Objective-C, vous aurez besoin d’un Mac en cours d’exécution :
 

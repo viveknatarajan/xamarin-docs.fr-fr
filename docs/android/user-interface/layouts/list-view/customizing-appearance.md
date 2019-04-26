@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
 ms.openlocfilehash: fef81fb5e5d2de79508b43a5612bf56af68d0772
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61178436"
 ---
 # <a name="customizing-a-listviews-appearance"></a>Personnalisation de l’apparence d’un ListView
 
@@ -387,6 +387,6 @@ Android tente d’améliorer les performances de `ListView` le défilement en me
 
 ## <a name="related-links"></a>Liens associés
 
-- [BuiltInViews (exemple)](https://developer.xamarin.com/samples/BuiltInViews/)
+- [BuiltInViews (sample)](https://developer.xamarin.com/samples/BuiltInViews/)
 - [AccessoryViews (exemple)](https://developer.xamarin.com/samples/AccessoryViews/)
 - [CustomRowView (exemple)](https://developer.xamarin.com/samples/CustomRowView/)

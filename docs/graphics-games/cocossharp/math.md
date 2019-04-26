@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
 ms.openlocfilehash: ac84d5b28b0f211dccb1697a4b3dbbc9cedf81e9
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61030186"
 ---
 # <a name="2d-math-with-cocossharp"></a>Mathématiques 2D avec CocosSharp
 
@@ -27,7 +27,7 @@ Pour positionner et déplacer les objets avec du code est un élément fondament
 Les développeurs n’ont pas un arrière-plan mathématiques fort, ou qui ont oublié long ces rubriques à partir de l’école, n’êtes pas obligé de vous inquiétez pas : ce document cesse de fonctionner concepts en éléments addictive et accompagne les explications théoriques avec des exemples concrets. En bref, cet article sera répondre à la question de student vieux mathématiques : « Lorsque j’ai réellement devrez utiliser ce sujet ? »
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Bien que ce document se concentre essentiellement sur le côté mathématique de CocosSharp, exemples de code partent du principe utilisation des objets qui héritent de formulaire `CCNode`. En outre, depuis `CCNode` n’inclut pas de valeurs pour la vitesse et l’accélération, le code part du principe de l’utilisation des entités qui fournissent des valeurs telles que VelocityX, VelocityY, AccelerationX et AccelerationY. Pour plus d’informations sur les entités, consultez notre procédure pas à pas sur [entités dans CocosSharp](~/graphics-games/cocossharp/entities.md).
 

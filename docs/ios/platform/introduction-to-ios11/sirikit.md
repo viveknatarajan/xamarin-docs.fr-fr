@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/07/2017
 ms.openlocfilehash: 7e895dc2865880ec2789a40f8cdf047a20f8693b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61400304"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Mises à jour de SiriKit dans iOS 11
 
@@ -118,7 +118,7 @@ Ensuite, ajoutez un nouveau projet d’extension à votre application pour trait
 
 1. Avec le bouton droit sur votre solution et choisissez **Ajouter > Ajouter un nouveau projet...** .
 2. Choisissez le **iOS > Extension > Extension Intents** modèle.
-3. Deux nouveaux projets seront ajoutés : intention et IntentUI. Personnalisation de l’interface est facultative, donc l’échantillon inclut uniquement le code dans le **intention** projet.
+3. Deux nouveaux projets vont être ajoutées : Intention et IntentUI. Personnalisation de l’interface est facultative, donc l’échantillon inclut uniquement le code dans le **intention** projet.
 
 Le projet d’extension est où toutes les demandes de SiriKit seront traitées. Comme aucune extension distincte, il n’a pas automatiquement n’importe quel moyen de communiquer avec votre application principale, il est généralement résolu en implémentant le stockage de fichiers partagés à l’aide de groupes d’applications.
 
@@ -217,7 +217,7 @@ Certaines erreurs que vous pouvez rencontrer lors de l’exemple en cours d’ex
 
 ### <a name="nsinternalinconsistencyexception"></a>NSInternalInconsistencyException
 
-_Objective-C une exception.  Nom : NSInternalInconsistencyException raison : utilisation de la classe < INPreferences : 0x60400082ff00 > à partir d’une application requiert le droit com.apple.developer.siri. Avez-vous activé la fonctionnalité Siri dans votre projet Xcode ?_
+_Objective-C une exception.  Nom : NSInternalInconsistencyException raison : Utilisation de la classe < INPreferences : 0x60400082ff00 > à partir d’une application requiert le droit com.apple.developer.siri. Avez-vous activé la fonctionnalité Siri dans votre projet Xcode ?_
 
 - SiriKit est coché dans **Entitlements.plist**.
 - **Entitlements.plist** est configuré dans le **Options du projet > Build > signature du Bundle iOS**.

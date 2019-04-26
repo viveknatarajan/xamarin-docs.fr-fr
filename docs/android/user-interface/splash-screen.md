@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
 ms.openlocfilehash: 1a9856a5b6257c82b2072e9eb44be481373abfcf
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61308210"
 ---
 # <a name="splash-screen"></a>Écran de démarrage
 
@@ -34,7 +34,7 @@ Ce guide décrit une technique pour implémenter un écran de démarrage dans un
 [![Écran d’accueil du logo de Xamarin exemple suivi d’écran de l’application](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Ce guide part du principe que l’application cible Android API niveau 15 (Android 4.0.3) ou une version ultérieure. L’application doit également avoir le **Xamarin.Android.Support.v4** et **Xamarin.Android.Support.v7.AppCompat** ajoutés au projet les packages NuGet.
 

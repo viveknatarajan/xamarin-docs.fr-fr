@@ -6,11 +6,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ms.openlocfilehash: 5f157f2bbf36076e542a5f96b912cb1788a99052
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61269321"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Visual Studio WPF. Cycle de vie des applications Xamarin.Forms
 
@@ -126,7 +126,7 @@ WPF et Xamarin.Forms utilisent les contrôles de disposition pour positionner de
 |StackPanel|StackLayout|Empilement infinie gauche à droite ou haut-bas|
 |Grille|Grille|Format tabulaire (lignes et colonnes)|
 |DockPanel|N/A|Ancrer à bords de fenêtre|
-|Canvas|DispositionAbsolue|Positionnement des coordonnées de pixel /|
+|Canvas|AbsoluteLayout|Positionnement des coordonnées de pixel /|
 |WrapPanel|N/A|Pile de retour à la ligne|
 |N/A|RelativeLayout|Le positionnement relatif basée sur la règle|
 

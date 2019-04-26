@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 9551a3b8e093dbb49a55a3761543602c40e81023
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158396"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Dégradé linéaire SkiaSharp
 
@@ -27,7 +27,7 @@ Le type de dégradé plus simple est un _linéaire_ dégradé. Le mélange de co
 Ces méthodes retournent un objet de type [ `SKShader` ](xref:SkiaSharp.SKShader) que vous définissez pour le [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) propriété du `SKPaint`. Si le `Shader` propriété n’est pas null, ce paramètre remplace le `Color` propriété. N’importe quelle ligne qui est rayé ou toute zone qui est remplie à l’aide de ce `SKPaint` objet est basé sur le dégradé plutôt que la couleur unie.
 
 > [!NOTE]
-> Le `Shader` propriété est ignorée lorsque vous incluez un `SKPaint` de l’objet dans un `DrawBitmap` appeler. Vous pouvez utiliser la `Color` propriété de `SKPaint` pour définir un niveau de transparence pour l’affichage d’une image bitmap (comme décrit dans l’article [SkiaSharp affichage des bitmaps](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), mais vous ne pouvez pas utiliser le `Shader` propriété d’affichage une image bitmap avec une transparence de dégradé. Autres techniques sont disponibles pour afficher des bitmaps avec dégradé transparents : ceux-ci sont décrits dans les articles [dégradés circulaires SkiaSharp](circular-gradients.md#radial-gradients-for-masking) et [SkiaSharp composition et modes de fusion](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
+> Le `Shader` propriété est ignorée lorsque vous incluez un `SKPaint` de l’objet dans un `DrawBitmap` appeler. Vous pouvez utiliser la `Color` propriété de `SKPaint` pour définir un niveau de transparence pour l’affichage d’une image bitmap (comme décrit dans l’article [SkiaSharp affichage des bitmaps](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), mais vous ne pouvez pas utiliser le `Shader` propriété d’affichage une image bitmap avec une transparence de dégradé. Autres techniques sont disponibles pour afficher des bitmaps avec dégradé transparents : Ceux-ci sont décrits dans les articles [dégradés circulaires SkiaSharp](circular-gradients.md#radial-gradients-for-masking) et [SkiaSharp composition et modes de fusion](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
 
 ## <a name="corner-to-corner-gradients"></a>Coin à dégradés
 
@@ -477,7 +477,7 @@ public class GradientAnimationPage : ContentPage
 
 Le `OnTimerTick` méthode calcule un `angle` valeur qui est animée de 0 à 2π de toutes les 3 secondes. 
 
-Voici une façon de calculer les deux points de dégradé. Un `SKPoint` valeur nommée `vector` est calculée pour l’étendre à partir du centre de la zone de dessin à un point sur le rayon du cercle. La direction de ce vecteur est basée sur les valeurs de sinus et le cosinus de l’angle. Les deux points de dégradé opposés sont ensuite calculées : un point est calculé en soustrayant ce vecteur à partir du point center et autre point est calculée en ajoutant le vecteur vers le point central :
+Voici une façon de calculer les deux points de dégradé. Un `SKPoint` valeur nommée `vector` est calculée pour l’étendre à partir du centre de la zone de dessin à un point sur le rayon du cercle. La direction de ce vecteur est basée sur les valeurs de sinus et le cosinus de l’angle. Les deux points de dégradé opposés sont ensuite calculées : Un point est calculé en soustrayant ce vecteur à partir du point center et autre point est calculée en ajoutant le vecteur vers le point central :
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -617,7 +617,7 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-Les deux points de dégradé dans le `CreateLinearGradient` méthode reposent sur deux des points qui définissent ce chemin d’accès : les deux points sont proches l’angle supérieur gauche. La première est sur le bord supérieur de la zone de dessin et la seconde sur le bord gauche de la zone de dessin. Voici le résultat :
+Les deux points de dégradé dans le `CreateLinearGradient` méthode reposent sur deux des points qui définissent ce chemin d’accès : Les deux points sont proches l’angle supérieur gauche. La première est sur le bord supérieur de la zone de dessin et la seconde sur le bord gauche de la zone de dessin. Voici le résultat :
 
 [![Dégradé arc-en-ciel défectueux](linear-gradient-images/RainbowGradientFaulty.png "dégradé arc-en-ciel défectueux")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 

@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/11/2018
 ms.openlocfilehash: 5c3dd406f1132f51a86ddf574ab7ad0b279bc9ec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215339"
 ---
 # <a name="net-embedding-errors"></a>Erreurs d’incorporation .NET
 
@@ -23,7 +23,7 @@ Par exemple, paramètres, environnement
 
 <a name="EM0000" />
 
-### <a name="em0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcommonoembeddinator-4000issues"></a>EM0000 : Une erreur inattendue - Veuillez remplir un rapport de bogue à https://github.com/mono/Embeddinator-4000/issues
+### <a name="em0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcommonoembeddinator-4000issues"></a>EM0000 : Erreur inattendue : Veuillez remplir un rapport de bogue à https://github.com/mono/Embeddinator-4000/issues
 
 Une condition d’erreur inattendue s’est produite. Veuillez [signaler un problème](https://github.com/mono/Embeddinator-4000/issues) avec autant d’informations que possible, notamment :
 
@@ -35,7 +35,7 @@ Le moyen le plus simple pour obtenir des informations de version exacte consiste
 
 <a name="EM0001" />
 
-### <a name="em0001-could-not-create-output-directory-x"></a>EM0001 : Impossible de créer le répertoire de sortie `X`
+### <a name="em0001-could-not-create-output-directory-x"></a>EM0001 : Impossible de créer répertoire de sortie `X`
 
 Le nom du répertoire spécifié par `-o=DIR` n’existe pas et ne peut pas être créé. Il peut être un nom non valide pour le système de fichiers.
 
@@ -65,7 +65,7 @@ L’outil ne prend pas en charge la cible de compilation `X`. Il est possible qu
 
 <a name="EM0006" />
 
-### <a name="em0006-could-not-find-the-xcode-location"></a>EM0006 : N’a pas pu trouver l’emplacement de Xcode.
+### <a name="em0006-could-not-find-the-xcode-location"></a>EM0006 : L’emplacement de Xcode est introuvable.
 
 L’outil n’a pas trouvé l’emplacement Xcode actuellement sélectionné en utilisant la `xcode-select -p` commande. Veuillez vérifier que cette commande réussit et retourne l’emplacement de Xcode approprié.
 
@@ -89,7 +89,7 @@ Il s’agit d’un problème connu que nous avons l’intention de corriger dans
 
 <a name="EM0010" />
 
-### <a name="em0010-cant-merge-the-frameworks-simulatorframework-and-deviceframework-because-the-file-file-exists-in-both"></a>EM0010 : Impossible de fusionner les infrastructures '{simulatorFramework}' et '{deviceFramework}', car le fichier ' {}' existe dans les deux.
+### <a name="em0010-cant-merge-the-frameworks-simulatorframework-and-deviceframework-because-the-file-file-exists-in-both"></a>EM0010: Impossible de fusionner les infrastructures '{simulatorFramework}' et '{deviceFramework}', car le fichier ' {}' existe dans les deux.
 
 L’outil Impossible de fusionner les frameworks mentionnés dans le message d’erreur, car il existe un fichier commun entre eux.
 
@@ -117,7 +117,7 @@ L’assembly 'X' référencé par l’assembly 'Y', l’outil est introuvable. V
 
 <a name="EM0014" />
 
-### <a name="em0014-could-not-find-product-product-minversion-is-required"></a>EM0014 : N’a pas pu trouver {product} ({product} {min_version} est requis).
+### <a name="em0014-could-not-find-product-product-minversion-is-required"></a>EM0014 : N’a pas trouvé {product} ({product} {min_version} est requis).
 
 La dépendance mentionnée dans le message d’erreur est introuvable sur le système.
 
@@ -129,7 +129,7 @@ La dépendance mentionné dans l’erreur message a été trouvé sur le systèm
 
 <a name="EM0016" />
 
-### <a name="em0016-could-not-create-symlink-file---target-error-number"></a>EM0016 : N’a pas pu créer le lien symbolique '{file}' -> '{'target} : erreur {number}
+### <a name="em0016-could-not-create-symlink-file---target-error-number"></a>EM0016 : Lien symbolique n’a pas pu être créer '{file}' -> '{'target} : erreur {number}
 
 N’a pas pu créer le lien symbolique mentionné dans le message d’erreur.
 
@@ -149,19 +149,19 @@ Cela indique un bogue dans l’incorporation de .NET ; Veuillez soumettre un ra
 
 <!-- 1xxx: code processing -->
 
-## <a name="em1xxx-code-processing"></a>EM1xxx : Traitement de Code
+## <a name="em1xxx-code-processing"></a>EM1xxx : Traitement de code
 
 <a name="EM1010" />
 
-### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010 : Tapez `T` n’est pas généré, car `X` ne sont pas pris en charge.
+### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010 : Type `T` n’est pas généré, car `X` ne sont pas pris en charge.
 
 Il s’agit d’un **avertissement** que le type `T` va être ignorée (par exemple, rien ne sera générée), car elle utilise `X`, une fonctionnalité qui n’est pas pris en charge.
 
-Remarque : Les fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
+Remarque : Fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
 
 <a name="EM1011" />
 
-### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011 : Tapez `T` n’est pas généré, car il ne dispose pas de code de marshaling avec un équivalent natif.
+### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011 : Type `T` n’est pas généré, car il ne dispose pas de code de marshaling avec un équivalent natif.
 
 Il s’agit d’un **avertissement** qui le type `T` va être ignorée (par exemple, rien ne sera générée), car elle expose quelque chose à partir de .NET framework qui nécessite un marshaling supplémentaires.
 
@@ -175,7 +175,7 @@ Il s’agit d’un **avertissement** que le constructeur `C` va être ignorée (
 
 Il doit y avoir un avertissement antérieures, ce qui donne plus d’informations pourquoi tapez `T` n’est pas pris en charge.
 
-Remarque : Les fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
+Remarque : Fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
 
 <a name="EM1021" />
 
@@ -200,7 +200,7 @@ Il s’agit d’un **avertissement** qui la méthode `M` va être ignorée (par 
 
 Il doit y avoir un avertissement antérieures, ce qui donne plus d’informations pourquoi tapez `T` n’est pas pris en charge.
 
-Remarque : Les fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
+Remarque : Fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
 
 <a name="EM1031" />
 
@@ -210,7 +210,7 @@ Il s’agit d’un **avertissement** que la méthode `M` va être ignorée (par 
 
 Il doit y avoir un avertissement antérieures, ce qui donne plus d’informations pourquoi tapez `T` n’est pas pris en charge.
 
-Remarque : Les fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
+Remarque : Fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
 
 <a name="EM1032" />
 
@@ -235,7 +235,7 @@ Il s’agit d’un **avertissement** que la méthode `M` n’est pas généré, 
 
 <a name="EM1034" />
 
-### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034 : Méthode d’Extension `M` n’est pas généré à l’intérieur d’une catégorie, car ils ne peuvent pas être créés sur le type primitif `T`. Une méthode statique normale a été générée.
+### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034 : Méthode d’extension `M` n’est pas généré à l’intérieur d’une catégorie, car ils ne peuvent pas être créés sur le type primitif `T`. Une méthode statique normale a été générée.
 
 Il s’agit d’un **avertissement** que le type de méthode d’extension sur un primivite (par exemple, `System.Int32`) a été trouvé. En Objective-C, il n’est pas possible de créer des catégories sur le type primitif. Au lieu de cela le générateur être produira une méthode statique normale.
 
@@ -247,11 +247,11 @@ Il s’agit d’un **avertissement** qui la propriété `P` va être ignorée (p
 
 Il doit y avoir un avertissement antérieures, ce qui donne plus d’informations pourquoi tapez `T` n’est pas pris en charge.
 
-Remarque : Les fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
+Remarque : Fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
 
 <a name="EM1041" />
 
-### <a name="em1041-indexed-properties-on-t-is-not-generated-because-multiple-indexed-properties-are-not-supported"></a>EM1041 : Les propriétés indexées sur `T` n’est pas généré, car plusieurs propriétés indexées ne sont pas pris en charge.
+### <a name="em1041-indexed-properties-on-t-is-not-generated-because-multiple-indexed-properties-are-not-supported"></a>EM1041 : Propriétés indexées sur `T` n’est pas généré, car plusieurs propriétés indexées ne sont pas pris en charge.
 
 Il s’agit d’un **avertissement** qui les propriétés indexées sur `T` va être ignorée (par exemple, rien ne sera générée), car plusieurs propriétés indexées ne sont pas pris en charge.
 
@@ -263,7 +263,7 @@ Il s’agit d’un **avertissement** qui le champ `F` va être ignorée (par exe
 
 Il doit y avoir un avertissement antérieures, ce qui donne plus d’informations pourquoi tapez `T` n’est pas pris en charge.
 
-Remarque : Les fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
+Remarque : Fonctionnalités prises en charge évoluera avec les nouvelles versions de l’outil.
 
 <a name="EM1051" />
 
@@ -283,7 +283,7 @@ Il s’agit d’un **avertissement** cet élément `E` n’est pas générée co
 
 <a name="EM1053" />
 
-### <a name="em1053-target-e-is-not-supported-for-xamarinios-and-xamarinmac-only-the-framework-option-is-considered-supported-and-should-be-used"></a>EM1053 : Cibler `E` n’est pas pris en charge pour Xamarin.iOS et Xamarin.Mac. Uniquement la `framework` option est considérée comme pris en charge et doit être utilisé.
+### <a name="em1053-target-e-is-not-supported-for-xamarinios-and-xamarinmac-only-the-framework-option-is-considered-supported-and-should-be-used"></a>EM1053 : Cible `E` n’est pas pris en charge pour Xamarin.iOS et Xamarin.Mac. Uniquement la `framework` option est considérée comme pris en charge et doit être utilisé.
 
 Il s’agit d’un **avertissement** qui ciblent `E` est considéré comme non pris en charge pour Xamarin.iOS et Xamarin.Mac cas d’usage. 
 
@@ -293,7 +293,7 @@ Envisagez de supprimer votre `--target` paramètre ou passer `--target=framework
 
 <!-- 2xxx: code generation -->
 
-## <a name="em2xxx-code-generation"></a>EM2xxx : Génération de Code
+## <a name="em2xxx-code-generation"></a>EM2xxx : Génération de code
 
 <!-- 3xxx: reserved -->
 <!-- 4xxx: reserved -->

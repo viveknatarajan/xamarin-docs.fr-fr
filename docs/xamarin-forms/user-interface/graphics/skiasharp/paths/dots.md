@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: f59aa92f5f4f013a2d14b1667f4d0679a7ba82b3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384800"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Points et tirets dans SkiaSharp
 
@@ -26,7 +26,7 @@ SkiaSharp vous permet de dessiner des lignes qui ne sont pas correctes, mais au 
 
 Cela avec une *effet*, qui est une instance de la [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) classe que vous définissez pour le [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) propriété de `SKPaint`. Vous pouvez créer un chemin d’accès (ou les combiner chemin effets) en utilisant l’une des méthodes de création statiques définies par `SKPathEffect`. (`SKPathEffect` est un des six effets pris en charge par SkiaSharp ; les autres sont décrits dans la section [ **SkiaSharp effet**](../effects/index.md).)
 
-Pour dessiner des lignes en pointillés ou en pointillés, utilisez le [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) méthode statique. Il existe deux arguments : il s’agit tout d’abord un tableau de `float` valeurs qui indiquent les longueurs des points et des tirets et la longueur des espaces entre eux. Ce tableau doit avoir un nombre pair d’éléments, et il doit y avoir au moins deux éléments. (Il peut être zéro élément dans le tableau mais qui se traduit par un trait plein.) S’il existe deux éléments, la première est la longueur d’un point ou un tiret et le second est la longueur de l’espacement avant le prochain point ou tiret. S’il existe plus de deux éléments, ils se trouvent dans cet ordre : tiret de longueur, longueur de l’intervalle, longueur du tiret, longueur de l’intervalle et ainsi de suite.
+Pour dessiner des lignes en pointillés ou en pointillés, utilisez le [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) méthode statique. Il existe deux arguments : Il s’agit tout d’abord un tableau de `float` valeurs qui indiquent les longueurs des points et des tirets et la longueur des espaces entre eux. Ce tableau doit avoir un nombre pair d’éléments, et il doit y avoir au moins deux éléments. (Il peut être zéro élément dans le tableau mais qui se traduit par un trait plein.) S’il existe deux éléments, la première est la longueur d’un point ou un tiret et le second est la longueur de l’espacement avant le prochain point ou tiret. S’il existe plus de deux éléments, ils se trouvent dans cet ordre : tiret de longueur, longueur de l’intervalle, longueur du tiret, longueur de l’intervalle et ainsi de suite.
 
 En règle générale, vous souhaitez rendre les longueurs de dash et gap un multiple de la largeur du trait. Si la largeur du trait est 10 pixels, par exemple, puis le tableau {10, 10} Dessine une ligne en pointillés où les points et les espaces sont la même longueur que l’épaisseur du trait.
 

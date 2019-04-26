@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
 ms.openlocfilehash: d1c640bef41e875b3bb427d657c9c239e4c3e16d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61192372"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit dans Xamarin.iOS
 
@@ -167,9 +167,9 @@ Il existe un grand nombre d’autres clés JSON dans chaque étape, un exemple d
 }
 ```
 
-### <a name="barcodes"></a>Codes-barres
+### <a name="barcodes"></a>Barcodes
 
-Formats uniquement 2D sont pris en charge : PDF417, Aztec, QR. Apple des revendications que codes-barres 1D sont inadaptées à l’analyse sur un écran de téléphone rétroéclairé.
+Seuls les formats 2D sont pris en charge : PDF417, Aztec, QR. Apple des revendications que codes-barres 1D sont inadaptées à l’analyse sur un écran de téléphone rétroéclairé.
 
 Texte de remplacement affiché ci-dessous le code-barres est facultatif, certains commerçants souhaitez être en mesure de lire/type manuellement.
 
@@ -225,9 +225,9 @@ Pour créer un, procédez comme ID de Type passe ce qui suit.
 
 La première étape consiste à configurer un ID de Type de passe pour chaque autre _type_ de passe d’être pris en charge. Le transmettre un ID (ou l’identificateur de Type passer) crée un identificateur unique pour le test. Nous allons utiliser cet ID pour lier la passe de votre compte de développeur à l’aide d’un certificat.
 
-1. Dans le [section certificats, identificateurs et profils du portail de provisionnement iOS](https://developer.apple.com/account/overview.action), accédez à **identificateurs** et sélectionnez **passer un ID de Type** . Puis sélectionnez le **+** bouton pour créer un nouveau type de pass : [ ![](passkit-images/passid.png "créer un nouveau type de pass")](passkit-images/passid.png#lightbox)
+1. Dans le [section certificats, identificateurs et profils du portail de provisionnement iOS](https://developer.apple.com/account/overview.action), accédez à **identificateurs** et sélectionnez **passer un ID de Type** . Puis sélectionnez le **+** bouton pour créer un nouveau type de passe : [![](passkit-images/passid.png "Créer un nouveau type de pass")](passkit-images/passid.png#lightbox)
 
-2.   Fournir un **Description** (nom) et **identificateur** (chaîne unique) pour le test. Notez que tous les ID de Type passer doit commencer par la chaîne `pass.` dans cet exemple, nous utilisons `pass.com.xamarin.coupon.banana` : [ ![](passkit-images/register.png "entrer une Description et un identificateur")](passkit-images/register.png#lightbox)
+2.   Fournir un **Description** (nom) et **identificateur** (chaîne unique) pour le test. Notez que tous les ID de Type passer doit commencer par la chaîne `pass.` dans cet exemple, nous utilisons `pass.com.xamarin.coupon.banana` : [![](passkit-images/register.png "Entrer une Description et un identificateur")](passkit-images/register.png#lightbox)
 
 
 3.   Confirmer l’ID de passe en appuyant sur la **inscrire** bouton.
@@ -236,7 +236,7 @@ La première étape consiste à configurer un ID de Type de passe pour chaque au
 
 Pour créer un nouveau certificat pour cet ID de Type de passe, procédez comme suit :
 
-1.  Sélectionnez l’ID de passe nouvellement créé dans la liste, puis cliquez sur **modifier** : [ ![](passkit-images/pass-done.png "sélectionnez le nouvel ID de passer dans la liste")](passkit-images/pass-done.png#lightbox)
+1.  Sélectionnez l’ID de passe nouvellement créé dans la liste, puis cliquez sur **modifier** : [![](passkit-images/pass-done.png "Sélectionnez le nouvel ID de passer dans la liste")](passkit-images/pass-done.png#lightbox)
 
     Ensuite, sélectionnez **Create Certificate...** :
 

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
 ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199778"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Prise en main Sharpie objectif
 

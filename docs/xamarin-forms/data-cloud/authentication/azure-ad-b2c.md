@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61331485"
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Authentification des utilisateurs avec Azure Active Directory B2C
 
@@ -35,8 +35,8 @@ Azure B2C Active de répertoire est un service de gestion d’identité pour les
 Le processus pour intégrer le service de gestion d’identité Azure Active Directory B2C dans une application mobile est comme suit :
 
 1. Créer un locataire Azure Active Directory B2C. Pour plus d’informations, consultez [créer un locataire Azure Active Directory B2C dans le portail Azure](/azure/active-directory-b2c/active-directory-b2c-get-started/).
-1. Inscrire votre application mobile avec le locataire Azure Active Directory B2C. Le processus d’inscription attribue un **ID d’Application** qui identifie de façon unique votre application et un **l’URL de redirection** qui peut être utilisé pour diriger les réponses à votre application. Pour plus d’informations, consultez [Azure Active Directory B2C : inscription de votre application](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
-1. Créer une stratégie d’inscription et la connexion. Cette stratégie définit les expériences clients seront pendant l’inscription et la connexion et spécifie également le contenu des jetons que l’application recevra après son inscription ou de connexion. Pour plus d’informations, consultez [Azure Active Directory B2C : stratégies intégrées](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+1. Inscrire votre application mobile avec le locataire Azure Active Directory B2C. Le processus d’inscription attribue un **ID d’Application** qui identifie de façon unique votre application et un **l’URL de redirection** qui peut être utilisé pour diriger les réponses à votre application. Pour plus d’informations, consultez [Azure Active Directory B2C : Inscrire votre application](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
+1. Créer une stratégie d’inscription et la connexion. Cette stratégie définit les expériences clients seront pendant l’inscription et la connexion et spécifie également le contenu des jetons que l’application recevra après son inscription ou de connexion. Pour plus d’informations, consultez [Azure Active Directory B2C : Les stratégies intégrées](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 1. Utilisez le [bibliothèque d’authentification Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) dans votre application mobile pour initier un flux de travail de l’authentification auprès de votre client Azure Active Directory B2C.
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Chaque requête est envoyée à un locataire Azure Active Directory B2C spécifi
 - Contenu de la page d’inscription.
 - Revendications de jeton que l’application mobile reçoit lorsque la stratégie a été exécutée.
 
-Un locataire Azure Active Directory peut contenir plusieurs stratégies de types différents, ce qui peuvent ensuite être utilisées dans votre application en fonction des besoins. En outre, les stratégies peuvent être réutilisées entre les applications, ce qui vous permet de définir et modifier les expériences d’identité sans modifier votre code. Pour plus d’informations sur les stratégies, consultez [Azure Active Directory B2C : stratégies intégrées](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+Un locataire Azure Active Directory peut contenir plusieurs stratégies de types différents, ce qui peuvent ensuite être utilisées dans votre application en fonction des besoins. En outre, les stratégies peuvent être réutilisées entre les applications, ce qui vous permet de définir et modifier les expériences d’identité sans modifier votre code. Pour plus d’informations sur les stratégies, consultez [Azure Active Directory B2C : Les stratégies intégrées](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 
 ## <a name="setup"></a>Installation
 

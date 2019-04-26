@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
 ms.openlocfilehash: 03e4a5ac8906d2593cbdf3c15f6b2d1f4a2c6d19
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199647"
 ---
 # <a name="objective-sharpie-release-history"></a>Historique des versions de Sharpie objectif
 

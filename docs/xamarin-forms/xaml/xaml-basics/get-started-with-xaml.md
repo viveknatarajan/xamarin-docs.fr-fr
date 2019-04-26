@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
 ms.openlocfilehash: 086ed765781d9297f07574519d2cbc9cf93ac4dd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61344801"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Partie 1. Bien démarrer avec XAML
 
@@ -203,9 +203,9 @@ Le `ContentPage.Content` balises sont appelés *élément property* balises. `Co
 
 Notez également qu’un `Title` attribut a été défini sur la balise racine.
 
-À ce stade, la relation entre les classes, propriétés et XML doit être évidente : Xamarin.Forms d’une classe (tel que `ContentPage` ou `Label`) apparaît dans le fichier XAML comme un élément XML. Propriétés de la classe, y compris `Title` sur `ContentPage` et sept propriétés de `Label`— apparaissent généralement sous la forme d’attributs XML.
+À ce stade, la relation entre les classes, propriétés et XML doit être évidente : Une classe Xamarin.Forms (tel que `ContentPage` ou `Label`) apparaît dans le fichier XAML comme un élément XML. Propriétés de la classe, y compris `Title` sur `ContentPage` et sept propriétés de `Label`— apparaissent généralement sous la forme d’attributs XML.
 
-Il existe de nombreux raccourcis pour définir les valeurs de ces propriétés. Certaines propriétés sont des types de base de données : par exemple, le `Title` et `Text` propriétés sont de type `String`, `Rotation` est de type `Double`, et `IsVisible` (qui est `true` par défaut et est définie ici uniquement pour illustration) est de type `Boolean`.
+Il existe de nombreux raccourcis pour définir les valeurs de ces propriétés. Certaines propriétés sont des types de base de données : Par exemple, le `Title` et `Text` propriétés sont de type `String`, `Rotation` est de type `Double`, et `IsVisible` (c'est-à-dire `true` par défaut et est définie ici uniquement à titre d’illustration) est de type `Boolean`.
 
 Le `HorizontalTextAlignment` propriété est de type `TextAlignment`, qui est une énumération. Pour une propriété de n’importe quel type d’énumération, il vous suffit d’approvisionnement est un nom de membre.
 
