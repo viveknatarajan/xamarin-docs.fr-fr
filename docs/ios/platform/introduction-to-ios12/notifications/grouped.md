@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
 ms.openlocfilehash: 6798c4c5fa7502ba5e99cb8bc209468acaa4a9ec
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61402419"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Notifications groupées dans Xamarin.iOS
 

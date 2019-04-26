@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
 ms.openlocfilehash: 0428a0df157e359ab34a6a71dbba31bdeb6962fa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61224060"
 ---
 # <a name="introduction-to-watchos-3"></a>Introduction à watchOS 3
 
@@ -151,7 +151,7 @@ watchOS 3 comprend plusieurs améliorations à l’infrastructure WatchKit, y co
 - L’application peut obtenir l’état de la couronne numérique à l’aide de la nouvelle [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) classe et de recevoir des mises à jour lorsque l’utilisateur fait pivoter l’à l’aide de la couronne le [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) classe.
 - Le [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) classe inclut désormais la `ApplicationState` (méthode) et [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) constante que l’application peut utiliser pour effectuer le suivi de l’état d’exécution de l’application. `WKExtension` fournit également deux nouvelles méthodes qui peuvent être utilisées pour planifier des tâches en arrière-plan.
 - Le [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) inclut désormais le nouveau `ApplicationWillEnterForeground`, `ApplicationDidEnterBackground` et `HandleBackgroundTasks` méthodes pour surveiller les modifications de l’état de l’application et de gérer les mises à jour de la tâche en arrière-plan.
-- Un nouveau [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) classe a été ajoutée pour fournir les types suivants de la reconnaissance de mouvement pour les applications cadran : [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer ](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) et [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
+- Un nouveau [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) classe a été ajoutée pour fournir les types suivants de la reconnaissance de mouvement pour les applications de surveillance : [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) et [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
 - La nouvelle [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) classe fournit une interface pour n’importe quel HomeKit attachés caméra IP.
 - La nouvelle [WKInterfaceInlineMovie](https://developer.apple.com/reference/watchkit/wkinterfaceinlinemovie) classe permet à l’application afficher un film « affiche « qui est remplacée par la séquence en cours d’exécution lorsque l’utilisateur appuie sur elle.
 - La nouvelle [WKInterfacePaymentButton](https://developer.apple.com/reference/watchkit/wkinterfacepaymentbutton) classe autorise l’application à présenter un bouton Apple Pay dans son interface utilisateur qui lance une demande de paiement lorsque j’appuie.
@@ -162,7 +162,7 @@ Pour en savoir plus, consultez notre [rapide Techniques d’Interaction pour wat
 
 <a name="Workout-App-Enhancements" />
 
-## <a name="workout-app-enhancements"></a>Améliorations d’application séances d’entraînement
+## <a name="workout-app-enhancements"></a>Améliorations apportées à l’application Exercice
 
 Nouveau watchOS 3, séances d’entraînement associé à des applications ont la possibilité d’exécuter en arrière-plan sur l’Apple Watch. Pour activer cette fonctionnalité (et accéder aux données d’HealthKit), l’application doit inclure le `WKBackgroundModes` clé dans le `Info.plist` fichier avec la valeur `workout-processing`.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 9adf514e4fc510617e3f4d801569935ee4a03f25
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093764"
 ---
 # <a name="web-views-in-xamarinios"></a>Affichages Web dans Xamarin.iOS
 
@@ -119,7 +119,7 @@ Navigation dans les utilisateurs à partir de votre application à Safari doit g
 
 améliorations d’iOS 9 Autoriser l’utilisateur à revenir facilement à votre application via un bouton précédent qui est fourni dans le coin supérieur gauche de la page de Safari.
 
-## <a name="app-transport-security"></a>Sécurité de Transport de l’application
+## <a name="app-transport-security"></a>Sécurité de transport de l’application
 
 Sécurité de Transport d’application, ou *ATS* a été introduite par Apple dans iOS 9 pour vous assurer que toutes les communications internet sont conformes pour sécuriser des meilleures pratiques de connexion.
 

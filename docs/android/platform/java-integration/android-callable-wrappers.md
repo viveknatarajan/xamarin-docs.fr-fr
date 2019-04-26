@@ -1,5 +1,5 @@
 ---
-title: Wrappers RCW Android
+title: Wrappers pouvant être appelés par Android
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: 7edbdaa5a690a641523cb5baad7909ed01992aa5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61090865"
 ---
-# <a name="android-callable-wrappers"></a>Wrappers RCW Android
+# <a name="android-callable-wrappers"></a>Wrappers pouvant être appelés par Android
 
 Les Wrappers RCW Android (ACWs) sont requis chaque fois que le runtime Android appelle du code managé. Ces wrappers sont requis, car il n’existe aucun moyen pour inscrire des classes avec l’ART (le runtime Android) lors de l’exécution. (Plus précisément, le [JNI DefineClass() fonction](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) n’est pas pris en charge par le runtime Android.} Les Wrappers RCW Android constituent ainsi l’absence de prise en charge de l’inscription de type runtime. 
 
@@ -96,7 +96,7 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 ```
 
 
-## <a name="implementation-details"></a>Détails d’implémentation
+## <a name="implementation-details"></a>Détails de l’implémentation
 
 *Le reste de cette page fournit des détails d’implémentation susceptibles d’être modifiées sans préavis* (et est présentée ici uniquement parce que les développeurs seront curieux de savoir ce qui se passait). 
 

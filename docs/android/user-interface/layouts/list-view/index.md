@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: a30256722647bbea482970d0c4a751954810d99e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170804"
 ---
 # <a name="listview"></a>Affichage de liste
 
@@ -35,7 +35,7 @@ Tout d’abord, un court didacticiel présente la `ListView` avec un exemple de 
 
 ## <a name="listview-tutorial"></a>Didacticiel de ListView
 
-[`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) est un [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+[`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) is a [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
 qui crée une liste d’éléments à défilement. Les éléments de liste sont automatiquement insérés à la liste en utilisant un [ `IListAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.IListAdapter/).
 
 Dans ce didacticiel, vous allez créer une liste déroulante de noms de pays qui sont lus à partir d’un tableau de chaînes. Lorsqu’un élément de liste est sélectionné, un message toast affichera la position de l’élément dans la liste.
@@ -228,14 +228,14 @@ Cet ensemble de rubriques introduit `ListView` et fourni quelques exemples montr
 ## <a name="related-links"></a>Liens associés
 
 - [AccessoryViews (exemple)](https://developer.xamarin.com/samples/AccessoryViews/)
-- [BasicTableAndroid (exemple)](https://developer.xamarin.com/samples/BasicTableAndroid/)
-- [BasicTableAdapter (exemple)](https://developer.xamarin.com/samples/BasicTableAdapter/)
-- [BuiltInViews (exemple)](https://developer.xamarin.com/samples/BuiltInViews/)
+- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/BasicTableAndroid/)
+- [BasicTableAdapter (sample)](https://developer.xamarin.com/samples/BasicTableAdapter/)
+- [BuiltInViews (sample)](https://developer.xamarin.com/samples/BuiltInViews/)
 - [CustomRowView (exemple)](https://developer.xamarin.com/samples/CustomRowView/)
-- [FastScroll (exemple)](https://developer.xamarin.com/samples/FastScroll/)
-- [SectionIndex (exemple)](https://developer.xamarin.com/samples/SectionIndex/)
-- [SimpleCursorTableAdapter (exemple)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
-- [CursorTableAdapter (exemple)](https://developer.xamarin.com/samples/CursorTableAdapter/)
+- [FastScroll (sample)](https://developer.xamarin.com/samples/FastScroll/)
+- [SectionIndex (sample)](https://developer.xamarin.com/samples/SectionIndex/)
+- [SimpleCursorTableAdapter (sample)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
+- [CursorTableAdapter (sample)](https://developer.xamarin.com/samples/CursorTableAdapter/)
 - [Didacticiel de cycle de vie de l’activité](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Utilisation des Tables et des cellules (Xamarin.iOS)](~/ios/user-interface/controls/tables/index.md)
 - [Référence de classe de ListView](https://developer.xamarin.com/api/type/Android.Widget.ListView/)

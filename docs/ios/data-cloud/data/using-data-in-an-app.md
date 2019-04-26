@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
 ms.openlocfilehash: e3127f85841c13422d9674bcf12373af9222afba
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153734"
 ---
 # <a name="using-data-in-an-ios-app"></a>À l’aide des données dans une application iOS
 
@@ -107,7 +107,7 @@ Vous pouvez le faire facilement dans votre application mobile par un fichier de 
 
 Lorsque vous créez un fichier de base de données de distribution avec votre application, soyez attentif avec l’affectation des noms de tables et de colonnes pour vous assurer qu’ils correspondent aux attentes de votre code, en particulier si vous utilisez SQLite.NET qui s’attendent les noms pour faire correspondre vos classes c# et les propriétés (ou attributs personnalisés associés).
 
-Pour iOS, incluez le fichier de sqlite dans votre application et vérifiez qu’il est marqué avec **Action de génération : contenu**. Placez le code dans le `FinishedLaunching` pour copier le fichier dans un répertoire accessible en écriture *avant* vous appelez les méthodes de données. Le code suivant copie une base de données appelée **data.sqlite**, uniquement s’il n’existe pas déjà.
+Pour iOS, incluez le fichier de sqlite dans votre application et vérifiez qu’il est marqué avec **Action de génération : Contenu**. Placez le code dans le `FinishedLaunching` pour copier le fichier dans un répertoire accessible en écriture *avant* vous appelez les méthodes de données. Le code suivant copie une base de données appelée **data.sqlite**, uniquement s’il n’existe pas déjà.
 
 ```csharp
 // Copy the database across (if it doesn't exist)

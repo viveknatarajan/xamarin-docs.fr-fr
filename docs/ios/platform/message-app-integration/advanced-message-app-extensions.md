@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: baceb59116dd907918b34eca4f44293051190954
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155571"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensions d’application Advanced Message dans Xamarin.iOS
 
@@ -181,7 +181,7 @@ Une fois le nouveau contenu sur le champ d’entrée, l’utilisateur est en mes
 
 Une Extension d’application de Message peut être affichée dans un des deux modes d’affichage différents :
 
-[![](advanced-message-app-extensions-images/interactive08.png "Une Extension d’application Message affiché dans les deux modes d’affichage différents : Compact & développé")](advanced-message-app-extensions-images/interactive08.png#lightbox)
+[![](advanced-message-app-extensions-images/interactive08.png "Une Extension d’application Message affiché dans les deux modes d’affichage différents : Compacter & développée")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -il s’agit du mode par défaut où l’Extension d’application Message prend jusqu'à 25 % en bas de la vue de Message. En mode Compact, l’application n’a pas accès au clavier, le défilement horizontal ou modules de reconnaissance de mouvement de balayage. L’application a accès au champ d’entrée et appelle à `InsertMessage` s’affichera instantanément à l’utilisateur à cet endroit.
 - **Développé** -l’Extension d’application Message remplit toute la vue de Message. Il n’a pas accès au champ d’entrée, mais a accès au clavier, le défilement horizontal et modules de reconnaissance de mouvement de balayage.

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 80142f5eef4b6fdca15709b61c85f09038ddb696
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60952174"
 ---
 # <a name="entry-font-size-on-ios"></a>Taille de police d’entrée sur iOS
 
@@ -33,7 +33,7 @@ Cette spécifiques à la plateforme iOS est utilisé pour mettre à l’échelle
 </ContentPage>
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

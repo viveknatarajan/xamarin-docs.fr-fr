@@ -1,5 +1,5 @@
 ---
-title: Localisation d’applications et des ressources de type chaîne
+title: Localisation d’applications et ressources de type chaîne
 ms.prod: xamarin
 ms.assetid: 374A9DA6-1853-8B98-6954-7FE3F591C07C
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2017
 ms.openlocfilehash: d9d90e371199c8587d61199240523cf0a23f5efd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013278"
 ---
-# <a name="application-localization-and-string-resources"></a>Localisation d’applications et des ressources de type chaîne
+# <a name="application-localization-and-string-resources"></a>Localisation d’applications et ressources de type chaîne
 
 Localisation d’applications consiste à fournir des ressources de remplacement pour cibler une région spécifique ou des paramètres régionaux. Par exemple, vous pouvez fournir des chaînes de langue localisée pour différents pays, ou vous pouvez modifier les couleurs ou la mise en page pour faire correspondre les cultures particuliers. Android charge et utiliser les ressources correspondant aux paramètres régionaux de l’appareil au moment de l’exécution sans aucune modification au code source.
 

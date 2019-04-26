@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
 ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093710"
 ---
 # <a name="fonts-in-xamarinforms"></a>Polices dans Xamarin.Forms
 
@@ -28,7 +28,7 @@ Utilisez les trois propriétés liées à la police de tous les contrôles qui a
 
 - **FontFamily** &ndash; le `string` nom de la police.
 - **FontSize** &ndash; la taille de police comme un `double`.
-- **Attributs de la police** &ndash; une chaîne qui spécifie les informations de style comme *italique* et **gras** (à l’aide de la `FontAttributes` énumération en c#).
+- **Attributs de la police** &ndash; une chaîne qui spécifie les informations de style comme *italique* et **gras** (à l’aide de la `FontAttributes` énumération en C#).
 
 Ce code montre comment créer une étiquette et de spécifier la taille de police et le poids à afficher :
 
@@ -225,7 +225,7 @@ L’exemple XAML suivant a une icône de police unique affichée par un [ `Image
 </Image>
 ```
 
-Ce code affiche une icône de XBox, à partir de la famille de polices Ionicons dans un [ `Image` ](xref:Xamarin.Forms.Image) vue. Notez que, lors de l’unicode, de caractères de cette icône est `\uf30c`, il doit être échappée dans XAML et devient donc `&#xf30c;`. Le code c# équivalent est :
+Ce code affiche une icône de XBox, à partir de la famille de polices Ionicons dans un [ `Image` ](xref:Xamarin.Forms.Image) vue. Notez que, lors de l’unicode, de caractères de cette icône est `\uf30c`, il doit être échappée dans XAML et devient donc `&#xf30c;`. Le code C# équivalent est :
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 396e674bb3e5642f7c54455ee9e30ba5bf232f18
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61030078"
 ---
 # <a name="cell-background-color-on-ios"></a>Couleur d’arrière-plan sur iOS
 
@@ -41,7 +41,7 @@ Cette spécifiques à la plateforme iOS définit la couleur d’arrière-plan pa
 </ContentPage>
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

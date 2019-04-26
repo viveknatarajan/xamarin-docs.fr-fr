@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/26/2018
 ms.openlocfilehash: 69e8b919c5cc925be813cf1f768833ccfd948ada
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61311275"
 ---
 # <a name="tizen-net"></a>Tizen .NET
 
@@ -28,7 +28,7 @@ Pour plus d’informations sur l’ajout du projet Tizen .NET à une solution Xa
 
 ## <a name="documentation"></a>Documentation
 
-- [Documentation de Xamarin.Forms](~/xamarin-forms/index.yml) &ndash; comment générer des applications multiplateformes avec C# et Xamarin.Forms.
+- [Documentation de Xamarin.Forms](~/xamarin-forms/index.yml) &ndash; comment générer des applications multiplateformes avec c# et Xamarin.Forms.
 - [**Developer.tizen.org** ](https://developer.tizen.org/development) &ndash; documentation et les vidéos pour vous aider à créer et déployer des applications de Tizen.
 
 ## <a name="samples"></a>Exemples

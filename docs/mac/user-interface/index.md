@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
 ms.openlocfilehash: a12553cf0b7b9584bb8ff7bc04ed326ad4a7ad2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61281595"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>contrôles d’interface utilisateur macOS dans Xamarin.Mac
 
@@ -38,7 +38,7 @@ Cet article aborde l’utilisation des alertes dans une application Xamarin.Mac.
 
 ## <a name="menusmacuser-interfacemenumd"></a>[Menus](~/mac/user-interface/menu.md)
 
-Les menus sont utilisés dans différentes parties de l’interface utilisateur d’une application Mac à partir du menu principal de l’application en haut de l’écran pour les menus déroulants et menus contextuels qui peuvent apparaître n’importe où dans une fenêtre. Menus font partie intégrante de l’expérience utilisateur d’une application Mac. Cet article aborde l’utilisation des menus Cocoa dans une application Xamarin.Mac.
+Les menus sont utilisés dans différentes parties de l’interface utilisateur d’une application Mac à partir du menu principal de l’application en haut de l’écran pour les menus déroulants et menus contextuels qui peuvent apparaître n’importe où dans une fenêtre. Les menus sont une partie intégrante de l’expérience utilisateur d’une application Mac. Cet article aborde l’utilisation des menus Cocoa dans une application Xamarin.Mac.
 
 ## <a name="standard-controlsmacuser-interfacestandard-controlsmd"></a>[Contrôles standard](~/mac/user-interface/standard-controls.md)
 
@@ -74,4 +74,4 @@ Nous vous suggérons également de jeter un coup de œil à la [Galerie d’exem
 
 ## <a name="related-links"></a>Liens connexes
 
-- [macOS Human Interface Guidelines pour](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Human Interface Guidelines pour macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

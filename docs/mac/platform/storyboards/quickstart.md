@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: 7f7d23a01a3c3c6567d6bab45d0abbfb078fb512
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61033599"
 ---
 # <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboards dans Xamarin.Mac – Guide de démarrage rapide
 
@@ -138,7 +138,7 @@ Pour plus d’informations, consultez notre [utilisation des Images](~/mac/app-f
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacStoryboard (exemple)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
+- [MacStoryboard (sample)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilisation de Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

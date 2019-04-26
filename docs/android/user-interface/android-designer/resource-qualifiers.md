@@ -1,5 +1,5 @@
 ---
-title: Qualificateurs de ressources et les Options de visualisation
+title: Qualificateurs de ressources et options de visualisation
 description: Cette rubrique explique comment définir des ressources qui seront utilisées uniquement lorsque certaines valeurs de qualificateur sont mises en correspondance. Un exemple simple est une ressource de chaîne qualifié de langage. Une ressource de chaîne peut être définie comme la valeur par défaut, avec les autres ressources alternatives définis pour être utilisé dans des langues supplémentaires. Tous les types de ressources peuvent être qualifiés, y compris la mise en page lui-même.
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 9d99e6a59b57b59d585b32befdadc0890d41448c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60950735"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificateurs de ressources et les options de visualisation
 

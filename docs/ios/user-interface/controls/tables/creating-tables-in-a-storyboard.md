@@ -1,5 +1,5 @@
 ---
-title: Utilisation de Tables dans le concepteur iOS
+title: Utilisation des tableaux dans le concepteur iOS
 description: Dans les sections précédentes, nous avons exploré développement à l’aide de Tables. Dans ce cas, la cinquième et dernière section, nous ce que nous avons appris jusqu'à présent, d’agrégation et créer une application de liste de base à l’aide d’une table de montage séquentiel.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
@@ -8,17 +8,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
-ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227551"
 ---
-# <a name="working-with-tables-in-the-ios-designer"></a>Utilisation de Tables dans le concepteur iOS
+# <a name="working-with-tables-in-the-ios-designer"></a>Utilisation des tableaux dans le concepteur iOS
 
 Storyboards WYSIWYG permettent de créer des applications iOS et sont prises en charge dans Visual Studio sur Mac et Windows. Pour plus d’informations sur les tables de montage séquentiel, reportez-vous à la [Introduction aux Storyboards](~/ios/user-interface/storyboards/index.md) document. Tables de montage séquentiel vous permettent également de modifier les dispositions de cellule *dans* la table, ce qui simplifie le développement des tables et des cellules
 
-Lors de la configuration des propriétés d’une vue de table dans le concepteur iOS, il existe deux types de contenu de la cellule que vous pouvez choisir parmi : **dynamique** ou **statique** contenu du Prototype.
+Lorsque vous configurez les propriétés d’une vue de table dans le concepteur iOS, il existe deux types de contenu de la cellule que vous pouvez choisir à partir de : **Dynamique** ou **statique** contenu du Prototype.
 
 <a name="Prototype_Content" />
 
@@ -79,11 +79,11 @@ La première modification à la table de montage séquentiel est la suppression 
 
 5. Ensuite, configurez les deux vues de Table en les sélectionnant et en utilisant le panneau Propriétés. Veillez à sélectionner la vue et pas contrôleur d’affichage : vous pouvez utiliser la structure du Document pour faciliter la sélection.
 
-6.  Modifier le contrôleur d’affichage racine pour être **contenu : Prototypes dynamique** (la vue sur l’aire de conception est étiquetée **Prototype contenu** ) :
+6.  Modifier le contrôleur d’affichage racine pour être **contenu : Prototypes dynamiques** (la vue sur l’aire de conception est étiquetée **Prototype contenu** ) :
 
     [![Définissant la propriété de contenu pour les prototypes dynamiques](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7.  Modifier la nouvelle **UITableViewController** être **contenu : cellules statique**. 
+7.  Modifier la nouvelle **UITableViewController** être **contenu : Cellules statiques**. 
 
 
 8. La nouvelle UITableViewController doit avoir son nom de classe et un identificateur défini. Sélectionnez le contrôleur d’affichage et le type _TaskDetailViewController_ pour le **classe** dans le **panneau Propriétés** – cela créera un nouveau `TaskDetailViewController.cs` fichier dans la Solution Panneau. Entrez le **StoryboardID** comme _détail_, comme illustré dans l’exemple ci-dessous. Il servira ultérieurement pour charger cette vue dans C# code :  
@@ -115,7 +115,7 @@ Ensuite, vous devez créer un bouton qui ajoute de nouvelles tâches, comme illu
 Effectuez ce qui suit : 
 
 -  Faites glisser un **élément de bouton de barre de** à partir de la boîte à outils vers le _côté droit de la barre de navigation_.
--  Dans le **panneau Propriétés**, sous **élément de bouton de barre de** sélectionnez **identificateur : ajouter** (pour le rendre un *+* ainsi que de bouton). 
+-  Dans le **panneau Propriétés**, sous **élément de bouton de barre de** sélectionnez **identificateur : Ajouter** (pour le rendre un *+* ainsi que de bouton). 
 -  Donnez-lui un nom afin qu’il peut être identifié dans le code à un stade ultérieur. Notez que vous devez donner le contrôleur d’affichage racine un nom de classe (par exemple **ItemViewController**) pour vous permettre de définir le nom de l’élément de bouton de barre.
 
 
@@ -130,9 +130,9 @@ Les étapes pour générer la disposition complète sont :
 Sélectionnez la vue de table et ouvrez le **remplissage de la propriété**. Mettre à jour les propriétés suivantes :
 
 -  **Sections**: _2_ 
--  **Style**: _regroupés_
+-  **Style**: _Regroupées_
 -  **Séparateur**: _None_
--  **Sélection**: _aucune sélection_
+-  **Sélection**: _Aucune sélection_
 
 Sélectionnez la section supérieure et, sous **Propriétés > Section d’affichage Table** modifier **lignes** à _3_, comme illustré ci-dessous :
 
@@ -141,15 +141,15 @@ Sélectionnez la section supérieure et, sous **Propriétés > Section d’affic
 
 Pour chaque cellule ouvert le **panneau Propriétés** et définissez :
 
--  **Style**: _personnalisé_
--  **Identificateur**: choisissez un identificateur unique pour chaque cellule (par exemple). «_titre_«, »_notes_«, »_fait_»).
+-  **Style**:  _Personnalisé_
+-  **Identificateur**: Choisissez un identificateur unique pour chaque cellule (par exemple). «_titre_«, »_notes_«, »_fait_»).
 -  Faites glisser les contrôles requis pour produire la disposition indiquée dans la capture d’écran (placer **UILabel**, **champ UITextField** et **UISwitch** sur les cellules corrects et définir les étiquettes en conséquence, Internet Explorer. Titre, des Notes et terminé).
 
 
 Dans la deuxième section, définissez **lignes** à _1_ et saisissez la poignée de redimensionnement inférieure de la cellule à agrandir.
 
 -  **Définir l’identificateur**: une valeur unique (par exemple). « Enregistrer »). 
--  **Définir l’arrière-plan**: _supprimer la couleur_ .
+-  **Définir l’arrière-plan**:  _Supprimer la couleur_ .
 -  Faites glisser deux boutons sur la cellule et définir leurs titres de façon appropriée (par exemple, _enregistrer_ et _supprimer_), comme illustré ci-dessous :
 
    [![définition des deux boutons dans la section inférieure](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)

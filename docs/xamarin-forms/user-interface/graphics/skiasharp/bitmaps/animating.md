@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
 ms.openlocfilehash: 604067ac853bd53707e059b7db4abf2cfade21ce
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61076922"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animer des bitmaps de SkiaSharp
 
@@ -576,7 +576,7 @@ public partial class AnimatedGifPage : ContentPage
 }
 ```
 
-Malgré la `IntPtr` valeur, non `unsafe` code est nécessaire, car le `IntPtr` n’est jamais convertie en une valeur de pointeur c#.
+Malgré la `IntPtr` valeur, non `unsafe` code est nécessaire, car le `IntPtr` n’est jamais convertie en une valeur de pointeur C#.
 
 Une fois que chaque image a été extrait, le constructeur les durées de tous les cadres de totaux et initialise ensuite un autre tableau avec les durées cumulées.
 

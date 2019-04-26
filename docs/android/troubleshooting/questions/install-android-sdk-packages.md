@@ -1,5 +1,5 @@
 ---
-title: Quels packages Android SDK dois-je installer ?
+title: Quels packages Android SDK installer ?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2018
 ms.openlocfilehash: 04a07d5b7f37222515136e5592f31a4583b02fe3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157362"
 ---
-# <a name="which-android-sdk-packages-should-i-install"></a>Quels packages Android SDK dois-je installer ?
+# <a name="which-android-sdk-packages-should-i-install"></a>Quels packages Android SDK installer ?
 
 L’installation du Kit Android SDK n’inclut pas automatiquement tous les packages requis minimales pour le développement. Bien que les développeurs individuels doivent varient, les packages suivants généralement seront nécessaires pour le développement avec Xamarin.Android :
 
@@ -50,5 +50,5 @@ Elles sont uniquement requis si vous souhaitez utiliser les émulateurs Android 
 Android SDK Extras ne sont généralement pas requis ; mais il est utile de connaître les dans la mesure où elles peuvent être requises en fonction de votre cas d’utilisation.
 
 ## <a name="further-reading"></a>informations supplémentaires
-Le guide suivant décrit ces options et approfondit sur les différents packages du SDK manager est disponible : [Guide d’installation Android SDK Manager](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)
+Le guide suivant décrit ces options et approfondit sur les différents packages du SDK manager est disponible : [Guide de configuration du Kit Android SDK Manager](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)
 

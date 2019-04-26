@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
 ms.openlocfilehash: 35bfdb92ccfffe54f0ca10dc001d8919703a5bd8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153358"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Est-il possible de se connecter à des émulateurs Android exécutés sur un Mac à partir d’une machine virtuelle Windows ?
 

@@ -1,21 +1,21 @@
 ---
 title: Liaison Objective-C
-description: Ce document fournit des liens vers les différents guides qui expliquent comment créer des liaisons c# en code Objective-C, permettant aux développeurs de consommer des bibliothèques prêts à l’emploi dans les applications Xamarin.
+description: Ce document fournit des liens vers les différents guides qui expliquent comment créer C# liaisons au code Objective-C, permettant aux développeurs de consommer des bibliothèques prêts à l’emploi dans les applications Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
 ms.openlocfilehash: 3f1e1ce324e849c0c939d936eb6ee1470cf24a3b
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61266606"
 ---
 # <a name="binding-objective-c"></a>Liaison Objective-C
 
-Cette section comprend un grand nombre de documents qui couvrent la création de liaisons aux bibliothèques Objective-C, peuvent donc être appelés à partir d’applications c# créées avec Xamarin.iOS ou Xamarin.Mac.
+Cette section comprend un grand nombre de documents qui couvrent la création de liaisons aux bibliothèques Objective-C, afin qu’ils peuvent être appelées depuis C# applications créées avec Xamarin.iOS ou Xamarin.Mac.
 
 ##  <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Vue d’ensemble](~/cross-platform/macios/binding/overview.md)
 
@@ -23,7 +23,7 @@ Ce document contient certains éléments internes de la façon dont une liaison 
 
 ##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Liaison de bibliothèques Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
-Ce document décrit le processus utilisé pour créer des liaisons c# de l’API de Objective-C et comment les idiomes en Objective-C sont mappées aux idiomes utilisés dans .NET.
+Ce document décrit le processus utilisé pour créer C# liaisons de l’API de Objective-C et comment les idiomes en Objective-C sont mappées aux idiomes utilisés dans .NET.
 Si vous liez simplement les API C, vous devez utiliser le mécanisme de .NET standard pour ce faire, l’infrastructure de P/Invoke.
 
 ##  <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guide de référence de définition de liaison](~/cross-platform/macios/binding/binding-types-reference.md)
@@ -58,4 +58,4 @@ Historiquement [liaison de Mac](~/mac/platform/binding.md) a été un processus 
 - [iOS de liaison](~/ios/platform/binding-objective-c/index.md)
 - [Liaison du Mac](~/mac/platform/binding.md)
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

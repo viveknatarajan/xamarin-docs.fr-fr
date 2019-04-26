@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
 ms.openlocfilehash: 5aabc3a3c2ffbcffc0e12379989f7eb43b03a902
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61399289"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Gestion des entrées tactiles dans les applications Xamarin.iOS
 
@@ -41,4 +41,4 @@ Ce guide sert d’introduction aux entrées tactiles dans iOS. Pour plus d’inf
 
 - [iOS Touch Démarrer (exemple)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
 - [iOS Touch finale (exemple)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)
-- [Peinture avec les doigts (exemple)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint)
+- [FingerPaint (sample)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint)

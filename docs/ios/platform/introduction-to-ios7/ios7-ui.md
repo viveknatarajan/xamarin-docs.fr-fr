@@ -1,5 +1,5 @@
 ---
-title: iOS 7 présentation de l’Interface utilisateur
+title: Vue d’ensemble de l’interface utilisateur iOS 7
 description: iOS 7 introduit une multitude de modifications de l’interface utilisateur. Cet article met en évidence certaines des modifications plus volumineuses, à la fois dans l’apparence visuelle des contrôles et les API qui prennent en charge la nouvelle conception.
 ms.prod: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 132265c27e1d1ba3b8f3fc8db10d7b3cfa746197
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61039006"
 ---
-# <a name="ios-7-user-interface-overview"></a>iOS 7 présentation de l’Interface utilisateur
+# <a name="ios-7-user-interface-overview"></a>Vue d’ensemble de l’interface utilisateur iOS 7
 
 _iOS 7 introduit une multitude de modifications de l’interface utilisateur. Cet article met en évidence certaines des modifications plus volumineuses, à la fois dans l’apparence visuelle des contrôles et les API qui prennent en charge la nouvelle conception._
 
@@ -70,7 +70,7 @@ Cela génère un affichage des alertes standard, avec le sous-affichage qui sont
 
  ![](ios7-ui-images/alert.png "Exemple UIAlertView")
  
- Remarque : UIAlertView a été déconseillé dans iOS 8. Afficher le [contrôleur d’alerte](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) Recipe (Recette) sur l’utilisation d’un affichage des alertes dans iOS 8 et versions ultérieures.
+ Remarque : UIAlertView a été déconseillée dans iOS 8. Afficher le [contrôleur d’alerte](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) Recipe (Recette) sur l’utilisation d’un affichage des alertes dans iOS 8 et versions ultérieures.
 
 ### <a name="uisegmentedcontrol"></a>UISegmentedControl
 

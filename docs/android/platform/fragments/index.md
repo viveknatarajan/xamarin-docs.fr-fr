@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
 ms.openlocfilehash: 4347ee40b0b72cc2d182ba1ef8f111212dd0ee47
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61026037"
 ---
 # <a name="fragments"></a>Fragments
 
@@ -47,7 +47,7 @@ Ce guide contient une couverture complète sur l’utilisation de Fragments, y c
 -   **Package de prise en charge Android** : comment utiliser les bibliothèques qui permettent des Fragments à utiliser dans les versions antérieures d’Android.
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Fragments sont disponibles dans le Kit de développement logiciel Android en commençant par le niveau d’API 11 (Android 3.0), comme illustré dans la capture d’écran suivante :
 

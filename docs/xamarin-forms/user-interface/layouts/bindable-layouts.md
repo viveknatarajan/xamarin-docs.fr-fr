@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61321558"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Dispositions pouvant être liées dans Xamarin.Forms
 
@@ -85,7 +85,7 @@ Dans cet exemple, chaque élément dans le `TopFollowers` collection sera affich
 
 ![Mise en page peut être liée avec un DataTemplate](bindable-layouts-images/top-followers.png "disposition peut être liée avec un modèle de données")
 
-Pour plus d’informations sur les modèles de données, consultez [Xamarin.Forms les modèles de données](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Pour plus d’informations sur les modèles de données, consultez [Modèles de données Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choosing-item-appearance-at-runtime"></a>Choix d’apparence de l’élément lors de l’exécution
 

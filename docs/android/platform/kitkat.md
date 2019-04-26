@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: b3981572e4d2629fd88d1e255fc7459bfe8912f1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60950128"
 ---
 # <a name="kitkat-features"></a>Fonctionnalités de KitKat
 
@@ -33,7 +33,7 @@ Android 4.4 (API niveau 19), également appelé « KitKat », a été publiée
 
 Ce guide fournit des conseils pour migrer une application Xamarin.Android pour KitKat, ainsi que d’une vue d’ensemble de KitKat pour les développeurs Xamarin.Android.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Pour développer des applications Xamarin.Android à l’aide de KitKat, vous devez *Xamarin.Android 4.11.0* ou supérieur et Android 4.4 (API niveau 19) installé via le gestionnaire Android SDK, comme illustré par la capture d’écran suivante :
 
@@ -323,7 +323,7 @@ La capture d’écran ci-dessous montre le thème ci-dessus avec l’état trans
 Le Framework de l’accès de stockage (SAF) est une nouvelle façon pour les utilisateurs à interagir avec le contenu stocké comme les images, vidéos et documents. Au lieu de présenter des utilisateurs avec une boîte de dialogue pour choisir une application de gérer le contenu, KitKat ouvre une nouvelle interface utilisateur qui permet aux utilisateurs d’accéder à leurs données dans un emplacement d’agrégation. Une fois que le contenu a été choisi, l’utilisateur retourne à l’application qui a demandé le contenu et l’expérience de l’application continue normalement.
 
 Cette modification nécessite deux actions sur le côté développeur : tout d’abord, les applications qui nécessitent le contenu des fournisseurs doivent être mis à jour vers une nouvelle façon de recherche du contenu. Ensuite, applications qui écrivent des données à un `ContentProvider` doivent être modifiés pour utiliser la nouvelle infrastructure. Les deux scénarios dépendent de la nouvelle [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
-API.
+API :
 
 #### <a name="documentsprovider"></a>DocumentsProvider
 

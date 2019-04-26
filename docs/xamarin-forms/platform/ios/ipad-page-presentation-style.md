@@ -1,5 +1,5 @@
 ---
-title: iPad modale Style de présentation de Page
+title: Style de présentation de page modale sur iPad
 description: Caractéristiques de la plateforme vous autorisons à utiliser les fonctionnalités qui est disponible uniquement sur une plateforme spécifique, sans avoir à implémenter des convertisseurs personnalisés ou des effets. Cet article explique comment utiliser les jeux de spécifique à la plateforme iOS le style de présentation d’une page modale sur un iPad.
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: b99898301ed6469b6e0d62ae0077b96aa9c4f3eb
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896916"
 ---
-# <a name="ipad-modal-page-presentation-style"></a>iPad modale Style de présentation de Page
+# <a name="ipad-modal-page-presentation-style"></a>Style de présentation de page modale sur iPad
 
 [![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
@@ -28,7 +28,7 @@ Cette spécifiques à la plateforme iOS est utilisé pour définir le style de p
 </ContentPage>
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

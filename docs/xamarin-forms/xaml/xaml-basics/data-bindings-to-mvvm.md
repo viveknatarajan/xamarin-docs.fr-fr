@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61174547"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Partie 5. Liaisons de données à MVVM
 
@@ -35,7 +35,7 @@ Le programme peut utiliser `x:Static` pour obtenir la date et heure actuelles à
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext` est une propriété très spéciale : lorsque vous définissez le `BindingContext` sur un élément, elle est héritée par tous les enfants de cet élément. Cela signifie que tous les enfants de la `StackLayout` ont cette même `BindingContext`, et elles peuvent contenir des liaisons simples aux propriétés de cet objet.
+`BindingContext` est une propriété très spéciale : Lorsque vous définissez le `BindingContext` sur un élément, elle est héritée par tous les enfants de cet élément. Cela signifie que tous les enfants de la `StackLayout` ont cette même `BindingContext`, et elles peuvent contenir des liaisons simples aux propriétés de cet objet.
 
 Dans le **One-Shot DateTime** programme, deux des enfants contiennent des liaisons aux propriétés de le `DateTime` valeur, mais les deux autres enfants contiennent des liaisons qui semblent avoir disparu un chemin de liaison. Cela signifie que le `DateTime` valeur lui-même est utilisée pour le `StringFormat`:
 
@@ -298,7 +298,7 @@ La liaison sur chaque `Label` est la valeur par défaut `OneWay`. Il doit unique
 
 ## <a name="commanding-with-viewmodels"></a>Exécution de commandes avec les ViewModels
 
-Dans de nombreux cas, le modèle MVVM est limité à la manipulation d’éléments de données : les objets d’interface utilisateur dans la vue en parallèle des objets de données dans le ViewModel.
+Dans de nombreux cas, le modèle MVVM est limité à la manipulation d’éléments de données : Objets d’interface utilisateur dans la vue parallèle des objets de données dans le ViewModel.
 
 Toutefois, la vue doit parfois contenir des boutons qui déclenchent des actions différentes dans le ViewModel. Mais le ViewModel ne doit pas contenir `Clicked` gestionnaires pour les boutons, car qui serait lier le ViewModel à un modèle d’interface utilisateur particulier.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
 ms.openlocfilehash: fff6620732ffcaccd13dde7ae31ab03a5106da16
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "37066427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61364406"
 ---
 # <a name="ios-platform-features"></a>fonctionnalités de la plateforme iOS
 
@@ -102,7 +102,7 @@ Nouveau à iOS 10, une Extension d’application Message intègre le **Messages*
 
 ## <a name="multitasking-for-ipadiosplatformmultitaskingmd"></a>[Multitâche pour iPad](~/ios/platform/multitasking.md)
 
-iOS 9 prend en charge de multitâche pour l’exécution des deux applications en même temps sur un matériel spécifique iPad. Multitâche pour iPad est pris en charge via les fonctionnalités suivantes : faites glisser sur, mode fractionné et Picture in Picture.
+iOS 9 prend en charge de multitâche pour l’exécution des deux applications en même temps sur un matériel spécifique iPad. Multitâche pour iPad est pris en charge via les fonctionnalités suivantes : Diapositive sur, mode fractionné et Picture in Picture.
 
 ## <a name="passkitiosplatformpasskitmd"></a>[PassKit](~/ios/platform/passkit.md)
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 82e4dfb9add7002fd7d3568d0ec946ea38dfd530
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290584"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listes de sources dans Xamarin.Mac
 
@@ -624,7 +624,7 @@ Cet article a examiné en détail à l’utilisation des listes de sources dans 
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacOutlines (exemple)](https://developer.xamarin.com/samples/mac/MacOutlines/)
+- [MacOutlines (sample)](https://developer.xamarin.com/samples/mac/MacOutlines/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Vues Table](~/mac/user-interface/table-view.md)
 - [Modes Plan](~/mac/user-interface/outline-view.md)

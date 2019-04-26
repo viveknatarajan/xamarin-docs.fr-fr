@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
 ms.openlocfilehash: 5c1d73acfef7a4384db7220daf7319251eb61f85
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61041040"
 ---
 # <a name="images-in-xamarinforms"></a>Images dans Xamarin.Forms
 
@@ -65,7 +65,7 @@ Adhérant à ces règles de dénomination des fichiers et le positionnement perm
 <Image Source="waterfront.jpg" />
 ```
 
-Le code c# équivalent est comme suit :
+Le code C# équivalent est comme suit :
 
 ```csharp
 var image = new Image { Source = "waterfront.jpg" };
@@ -244,7 +244,7 @@ Les images peuvent être téléchargés automatiquement pour l’affichage, comm
 </ContentPage>
 ```
 
-Le code c# équivalent est comme suit :
+Le code C# équivalent est comme suit :
 
 ```csharp
 var webImage = new Image { Source = ImageSource.FromUri(new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")) };

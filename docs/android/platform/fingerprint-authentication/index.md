@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 70e12abdf61a6a0bfb36d281bcaa6214199e567d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61023468"
 ---
 # <a name="fingerprint-authentication"></a>Authentification par empreinte digitale
 
@@ -46,7 +46,7 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
 
 Ce guide explique comment utiliser le `FingerprintManager` API pour améliorer une application Android avec l’authentification par empreinte digitale. Il explique comment instancier et créer un `CryptoObject` pour aider à sécuriser les résultats à partir du lecteur d’empreintes digitales. Nous allons examiner comment une application doit sous-classe `FingerprintManager.AuthenticationCallback` et répondre aux commentaires à partir du lecteur d’empreintes digitales. Enfin, nous verrons comment inscrire une empreinte digitale sur un appareil ou émulateur Android et comment utiliser **adb** pour simuler une analyse de l’empreinte digitale.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Authentification par empreinte digitale nécessite Android 6.0 (niveau d’API 23) ou plus élevé et un appareil avec un lecteur d’empreintes digitales. 
 

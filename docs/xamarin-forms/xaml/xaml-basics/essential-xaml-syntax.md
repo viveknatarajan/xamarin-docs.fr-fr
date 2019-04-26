@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61407636"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Partie 2. Syntaxe XAML essentielle
 
@@ -143,7 +143,7 @@ Toutefois, la syntaxe d’élément de propriété devient essentiel lorsque la 
 </Label>
 ```
 
-Un autre exemple : le `Grid` a deux propriétés nommées `RowDefinitions` et `ColumnDefinitions`. Ces deux propriétés sont de type `RowDefinitionCollection` et `ColumnDefinitionCollection`, qui sont des collections de `RowDefinition` et `ColumnDefinition` objets. Vous devez utiliser la syntaxe d’élément de propriété pour définir ces collections.
+Un autre exemple : Le `Grid` a deux propriétés nommées `RowDefinitions` et `ColumnDefinitions`. Ces deux propriétés sont de type `RowDefinitionCollection` et `ColumnDefinitionCollection`, qui sont des collections de `RowDefinition` et `ColumnDefinition` objets. Vous devez utiliser la syntaxe d’élément de propriété pour définir ces collections.
 
 Voici le début du fichier XAML pour un `GridDemoPage` (classe), montrant les balises d’élément de propriété pour le `RowDefinitions` et `ColumnDefinitions` collections :
 
@@ -351,7 +351,7 @@ Vous pouvez inclure certainement le `Content` et `Children` propriétés en tant
 </ContentPage>
 ```
 
-La vraie question est : pourquoi sont ces éléments de propriété *pas* requis dans le fichier XAML ?
+La vraie question est : Pourquoi sont ces éléments de propriété *pas* requis dans le fichier XAML ?
 
 Les éléments définis dans Xamarin.Forms pour une utilisation dans XAML peuvent avoir une propriété signalée dans le `ContentProperty` attribut sur la classe. Si vous recherchez la `ContentPage` classe dans la documentation en ligne de Xamarin.Forms, vous verrez cet attribut :
 

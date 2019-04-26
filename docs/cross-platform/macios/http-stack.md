@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
 ms.openlocfilehash: fd48c7148aadd8d156544113e2d719295294bf40
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40250997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261271"
 ---
 # <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>Sélecteur d’implémentation de HttpClient et SSL/TLS pour iOS/Mac OS
 
@@ -30,7 +30,7 @@ Pour ajuster le `HttpClient` utilisé par votre application :
 
 1. Double-cliquez sur le **nom_projet** dans le **l’Explorateur de solutions** pour ouvrir les Options de projet.
 2. Basculez vers le **Build** paramètres pour votre projet (par exemple, **Build iOS** pour une application Xamarin.iOS).
-3. À partir de la **implémentation de HttpClient** liste déroulante, sélectionnez le `HttpClient` tapez comme l’une des opérations suivantes : **NSUrlSession** (recommandé), **CFNetwork**, ou  **Managed**.
+3. À partir de la **implémentation de HttpClient** liste déroulante, sélectionnez le `HttpClient` tapez comme l’une des opérations suivantes : **NSUrlSession** (recommandé), **CFNetwork**, ou **managé**.
 
 [![Implémentation de HttpClient sélectionnables de managé, CFNetwork ou NSUrlSession](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
@@ -104,10 +104,10 @@ Cela rend possible d’utiliser un autre `HttpMessageHandler` à partir de ce qu
 SSL (Secure Socket Layer) et son successeur, TLS (Transport Layer Security), prennent en charge pour HTTP et d’autres connexions réseau via `System.Net.Security.SslStream`. Xamarin.iOS, Xamarin.tvOS ou de Xamarin.Mac `System.Net.Security.SslStream` implémentation appellera l’implémentation de SSL/TLS native d’Apple au lieu d’utiliser l’implémentation managée fournie par Mono. Implémentation native d’Apple prend en charge TLS 1.2.
 
 > [!WARNING]
-> La prochaine version de Xamarin.Mac 4.8 sera prennent uniquement en charge macOS 10.9 ou version ultérieure.
-> Les versions précédentes de Xamarin.Mac pris en charge macOS 10.7 ou une version ultérieure, mais ces versions antérieures de macOS ne disposent pas d’une infrastructure TLS suffisante pour prendre en charge TLS 1.2. Pour cibler macOS 10.7 ou macOS est 10.8, utilisez Xamarin.Mac 4.6 ou une version antérieure.
+> La prochaine version de Xamarin.Mac (4.8) prendra uniquement en charge macOS 10.9 ou ultérieur.
+> Les versions précédentes de Xamarin.Mac prenaient en charge macOS 10.7 ou ultérieur, mais l’infrastructure TLS des anciennes versions de macOS n’était pas suffisante pour prendre en charge TLS 1.2. Pour cibler macOS 10.7 ou macOS 10.8, utilisez Xamarin.Mac 4.6 ou antérieur.
 
-## <a name="app-transport-security"></a>Sécurité de Transport de l’application
+## <a name="app-transport-security"></a>Sécurité de transport de l’application
 
 Apple _App Transport Security_ (ATS) applique des connexions sécurisées entre les ressources internet (par exemple, le serveur de l’application back-end) et votre application. ATS garantit que toutes les communications internet sont conformes pour sécuriser la connexion meilleures pratiques, ce qui empêche la divulgation accidentelle d’informations sensibles directement par le biais de votre application ou une bibliothèque qui il consomme.
 

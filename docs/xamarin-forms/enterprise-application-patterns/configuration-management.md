@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 6f32d8f328232bdfc644da57bdb3201c60010063
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381897"
 ---
 # <a name="configuration-management"></a>Gestion des configurations
 
@@ -34,16 +34,16 @@ Un inconvénient de stocker des données avec le dictionnaire persistant Xamarin
 Lorsque vous utilisez la bibliothèque Xam.Plugins.Settings, une classe statique unique doit être créée qui contient les paramètres d’application et l’utilisateur requis par l’application. L’exemple de code suivant montre la classe de paramètres dans l’application mobile eShopOnContainers :
 
 ```csharp
-public static class Settings  
+public static class Settings  
 {  
-    private static ISettings AppSettings  
-    {  
-        get  
-        {  
-            return CrossSettings.Current;  
-        }  
-    }  
-    ...  
+    private static ISettings AppSettings  
+    {  
+        get  
+        {  
+            return CrossSettings.Current;  
+        }  
+    }  
+    ...  
 }
 ```
 
@@ -57,24 +57,24 @@ Paramètres peuvent être lue et modifiées par le biais du `ISettings` API, qui
 Chaque paramètre se compose d’une clé, une valeur par défaut et une propriété. L’exemple de code suivant affiche tous les éléments de trois pour un paramètre utilisateur qui représente l’URL de base pour les services en ligne que l’application mobile eShopOnContainers se connecte à :
 
 ```csharp
-public static class Settings  
+public static class Settings  
 {  
-    ...  
-    private const string IdUrlBase = "url_base";  
-    private static readonly string UrlBaseDefault = GlobalSetting.Instance.BaseEndpoint;  
-    ...  
+    ...  
+    private const string IdUrlBase = "url_base";  
+    private static readonly string UrlBaseDefault = GlobalSetting.Instance.BaseEndpoint;  
+    ...  
 
-    public static string UrlBase  
-    {  
-        get  
-        {  
-            return AppSettings.GetValueOrDefault<string>(IdUrlBase, UrlBaseDefault);  
-        }  
-        set  
-        {  
-            AppSettings.AddOrUpdateValue<string>(IdUrlBase, value);  
-        }  
-    }  
+    public static string UrlBase  
+    {  
+        get  
+        {  
+            return AppSettings.GetValueOrDefault<string>(IdUrlBase, UrlBaseDefault);  
+        }  
+        set  
+        {  
+            AppSettings.AddOrUpdateValue<string>(IdUrlBase, value);  
+        }  
+    }  
 }
 ```
 
@@ -85,33 +85,33 @@ Le `UrlBase` propriété statique utilise deux méthodes à partir de la `ISetti
 Plutôt que définir une valeur par défaut à l’intérieur du `Settings` (classe), le `UrlBaseDefault` chaîne obtient sa valeur de la `GlobalSetting` classe. Le code suivant montre l’exemple le `BaseEndpoint` propriété et `UpdateEndpoint` méthode dans cette classe :
 
 ```csharp
-public class GlobalSetting  
+public class GlobalSetting  
 {  
-    ...  
-    public string BaseEndpoint  
-    {  
-        get { return _baseEndpoint; }  
-        set  
-        {  
-            _baseEndpoint = value;  
-            UpdateEndpoint(_baseEndpoint);  
-        }  
-    }  
-    ...  
+    ...  
+    public string BaseEndpoint  
+    {  
+        get { return _baseEndpoint; }  
+        set  
+        {  
+            _baseEndpoint = value;  
+            UpdateEndpoint(_baseEndpoint);  
+        }  
+    }  
+    ...  
 
-    private void UpdateEndpoint(string baseEndpoint)  
-    {  
-        RegisterWebsite = string.Format("{0}:5105/Account/Register", baseEndpoint);  
-        CatalogEndpoint = string.Format("{0}:5101", baseEndpoint);  
-        OrdersEndpoint = string.Format("{0}:5102", baseEndpoint);  
-        BasketEndpoint = string.Format("{0}:5103", baseEndpoint);  
-        IdentityEndpoint = string.Format("{0}:5105/connect/authorize", baseEndpoint);  
-        UserInfoEndpoint = string.Format("{0}:5105/connect/userinfo", baseEndpoint);  
-        TokenEndpoint = string.Format("{0}:5105/connect/token", baseEndpoint);  
-        LogoutEndpoint = string.Format("{0}:5105/connect/endsession", baseEndpoint);  
-        IdentityCallback = string.Format("{0}:5105/xamarincallback", baseEndpoint);  
-        LogoutCallback = string.Format("{0}:5105/Account/Redirecting", baseEndpoint);  
-    }  
+    private void UpdateEndpoint(string baseEndpoint)  
+    {  
+        RegisterWebsite = string.Format("{0}:5105/Account/Register", baseEndpoint);  
+        CatalogEndpoint = string.Format("{0}:5101", baseEndpoint);  
+        OrdersEndpoint = string.Format("{0}:5102", baseEndpoint);  
+        BasketEndpoint = string.Format("{0}:5103", baseEndpoint);  
+        IdentityEndpoint = string.Format("{0}:5105/connect/authorize", baseEndpoint);  
+        UserInfoEndpoint = string.Format("{0}:5105/connect/userinfo", baseEndpoint);  
+        TokenEndpoint = string.Format("{0}:5105/connect/token", baseEndpoint);  
+        LogoutEndpoint = string.Format("{0}:5105/connect/endsession", baseEndpoint);  
+        IdentityCallback = string.Format("{0}:5105/xamarincallback", baseEndpoint);  
+        LogoutCallback = string.Format("{0}:5105/Account/Redirecting", baseEndpoint);  
+    }  
 }
 ```
 
@@ -123,42 +123,42 @@ Dans l’application mobile eShopOnContainers, le `SettingsView` expose deux par
 
 ![](configuration-management-images/settings-endpoint.png "Paramètres utilisateur exposés par l’application mobile eShopOnContainers")
 
-**Figure 7-1**: les paramètres utilisateur exposées par l’application mobile eShopOnContainers
+**Figure 7-1**: Paramètres utilisateur exposés par l’application mobile eShopOnContainers
 
 Liaison de données peut être utilisée pour récupérer et définir les paramètres exposés par le `Settings` classe. Pour cela, les contrôles sur la liaison de vue pour afficher les propriétés de modèle qui à son tour accède aux propriétés dans le `Settings` classe et déclencher une propriété modifiée notification si la valeur de paramètres a changé. Pour plus d’informations sur la façon dont l’application mobile eShopOnContainers construit vue modèles et les associe aux vues, consultez [créant automatiquement un modèle de vue avec un localisateur de modèle de vue](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
 Le code suivant montre l’exemple le [ `Entry` ](xref:Xamarin.Forms.Entry) contrôle depuis la `SettingsView` qui permet à l’utilisateur à entrer une URL de point de terminaison de base pour les microservices en conteneur :
 
 ```xaml
-<Entry Text="{Binding Endpoint, Mode=TwoWay}" />
+<Entry Text="{Binding Endpoint, Mode=TwoWay}" />
 ```
 
 Cela [ `Entry` ](xref:Xamarin.Forms.Entry) contrôle se lie le `Endpoint` propriété de la `SettingsViewModel` classe, à l’aide d’une liaison bidirectionnelle. L’exemple de code suivant montre la propriété de point de terminaison :
 
 ```csharp
-public string Endpoint  
+public string Endpoint  
 {  
-    get { return _endpoint; }  
-    set  
-    {  
-        _endpoint = value;  
+    get { return _endpoint; }  
+    set  
+    {  
+        _endpoint = value;  
 
-        if(!string.IsNullOrEmpty(_endpoint))  
-        {  
-            UpdateEndpoint(_endpoint);  
-        }  
+        if(!string.IsNullOrEmpty(_endpoint))  
+        {  
+            UpdateEndpoint(_endpoint);  
+        }  
 
-        RaisePropertyChanged(() => Endpoint);  
-    }  
+        RaisePropertyChanged(() => Endpoint);  
+    }  
 }
 ```
 
-Lorsque le `Endpoint` propriété est définie la `UpdateEndpoint` est appelée, à condition que la valeur fournie est valide, et de modifier la propriété notification est déclenchée. Le code suivant montre l’exemple le `UpdateEndpoint` méthode :
+Lorsque le `Endpoint` propriété est définie la `UpdateEndpoint` est appelée, à condition que la valeur fournie est valide, et de modifier la propriété notification est déclenchée. L’exemple de code suivant montre la méthode `UpdateEndpoint` :
 
 ```csharp
-private void UpdateEndpoint(string endpoint)  
+private void UpdateEndpoint(string endpoint)  
 {  
-    Settings.UrlBase = endpoint;  
+    Settings.UrlBase = endpoint;  
 }
 ```
 
@@ -167,11 +167,11 @@ Cette méthode met à jour le `UrlBase` propriété dans la `Settings` classe av
 Lorsque le `SettingsView` cible, le `InitializeAsync` méthode dans la `SettingsViewModel` classe est exécutée. L’exemple de code suivant illustre cette méthode :
 
 ```csharp
-public override Task InitializeAsync(object navigationData)  
+public override Task InitializeAsync(object navigationData)  
 {  
-    ...  
-    Endpoint = Settings.UrlBase;  
-    ...  
+    ...  
+    Endpoint = Settings.UrlBase;  
+    ...  
 }
 ```
 
@@ -189,4 +189,4 @@ La bibliothèque Xam.Plugins.Settings fournit une cohérence, de type sécurisé
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF de 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Liaison d’une bibliothèque Objective-C iOS'
+title: 'Procédure pas à pas : liaison d’une bibliothèque Objective-C iOS'
 description: Cet article fournit une procédure pas à pas pratique de création d’une liaison Xamarin.iOS pour une bibliothèque Objective-C existante, InfColorPicker. Elle couvre des sujets tels que la compilation d’une bibliothèque Objective-C statique et en le liant à l’aide de la liaison dans une application Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392016"
 ---
-# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procédure pas à pas : Liaison d’une bibliothèque Objective-C iOS
+# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procédure pas à pas : liaison d’une bibliothèque Objective-C iOS
 
 _Cet article fournit une procédure pas à pas pratique de création d’une liaison Xamarin.iOS pour une bibliothèque Objective-C existante, InfColorPicker. Elle couvre des sujets tels que la compilation d’une bibliothèque Objective-C statique et en le liant à l’aide de la liaison dans une application Xamarin.iOS._
 
@@ -41,7 +41,7 @@ Nous aborderons toutes les étapes nécessaires pour utiliser cette API Objectiv
 
 L’exemple d’application va vous montrer comment utiliser un délégué fort pour la communication entre l’API InfColorPicker et notre C# code. Une fois que nous avons vu comment utiliser un délégué fort, nous aborderons l’utilisation de délégués faibles pour effectuer les mêmes tâches.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Cet article suppose que vous êtes familiarisé avec Xcode et le langage d’Objective-C et que vous avez lu nos [liaison Objective-C](~/cross-platform/macios/binding/index.md) documentation. En outre, ce qui suit est nécessaire pour terminer les étapes suivantes :
 

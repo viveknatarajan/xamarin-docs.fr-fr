@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
 ms.openlocfilehash: d525725b58a961afb9c4c5d80962d05f8d08b83e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60876850"
 ---
 # <a name="touch-manipulations"></a>Manipulations tactiles
 
@@ -273,7 +273,7 @@ Le **pivoter Bitmap** page vous permet d’utiliser deux doigts pour la rotation
 
 La première grande différence dans ce programme est la logique de test d’atteinte. Les programmes précédentes utilisés le `Contains` méthode de `SKRect` pour déterminer si le point tactile est dans le rectangle transformé qui correspond à l’image bitmap. Mais comme l’utilisateur manipule la bitmap, l’image bitmap peut être pivoté, et `SKRect` ne peut pas représenter correctement un rectangle pivoté. Vous pouvez la peur que la logique de test de positionnement doit implémenter plutôt complexe géométrie analytique dans ce cas.
 
-Toutefois, un raccourci est disponible : déterminer si un point se trouve dans les limites d’un rectangle transformé est identique à la façon de déterminer si un point transformé inverse se trouve dans les limites du rectangle de transformation. C’est un calcul plus facile de quantité et la logique peut continuer à utiliser le pratique `Contains` méthode :
+Toutefois, un raccourci est disponible : Déterminer si un point se trouve dans les limites d’un rectangle transformé est identique à la façon de déterminer si un point transformé inverse se trouve dans les limites du rectangle de transformation. C’est un calcul plus facile de quantité et la logique peut continuer à utiliser le pratique `Contains` méthode :
 
 ```csharp
 public partial class BitmapRotationPage : ContentPage
@@ -703,7 +703,7 @@ class TouchManipulationBitmap
 
 Dans le `Moved` et `Released` événements, les appels de méthode `Manipulate`. À cette occasion, le `touchDictionary` contient un ou plusieurs `TouchManipulationInfo` objets. Si le `touchDictionary` contient un élément, il est probable que le `PreviousPoint` et `NewPoint` valeurs sont inégales et représentent le mouvement d’un doigt. Si plusieurs doigts touchent l’image bitmap, le dictionnaire contient plusieurs éléments, mais qu’un seul de ces éléments a différents `PreviousPoint` et `NewPoint` valeurs. Les autres ont égal `PreviousPoint` et `NewPoint` valeurs.
 
-Ceci est important : le `Manipulate` méthode peut supposer qu’il traite le mouvement du doigt qu’une seule. Au moment de cet appel, aucune des autres les doigts sont mobile, et si elles sont vraiment déplacez (comme c’est probablement), ces mouvements sont traités dans les appels suivants à `Manipulate`.
+C'est important : Le `Manipulate` méthode peut supposer qu’il traite le mouvement du doigt qu’une seule. Au moment de cet appel, aucune des autres les doigts sont mobile, et si elles sont vraiment déplacez (comme c’est probablement), ces mouvements sont traités dans les appels suivants à `Manipulate`.
 
 Le `Manipulate` méthode copie tout d’abord le dictionnaire dans un tableau pour des raisons pratiques. Il ignore tout élément autre que les deux premières entrées. Si plus de deux doigts tente de manipuler l’image bitmap, les autres sont ignorés. `Manipulate` est le dernier membre de `TouchManipulationBitmap`:
 

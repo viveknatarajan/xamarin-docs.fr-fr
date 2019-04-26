@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 28619f2bf1f864fc147ddaca2b8a59844e173b42
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896180"
 ---
 # <a name="visualelement-legacy-color-mode-on-ios"></a>Mode de couleur VisualElement hérité sur iOS
 
@@ -36,7 +36,7 @@ Cette spécifiques à la plateforme iOS désactive ce mode couleur hérité sur 
 </ContentPage>
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

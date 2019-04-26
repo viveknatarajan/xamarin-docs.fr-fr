@@ -1,5 +1,5 @@
 ---
-title: Introduction au Backgrounding dans iOS
+title: Introduction au backgrounding dans iOS
 description: 'Ce document décrit backgrounding dans iOS : États de l’application, les méthodes de cycle de vie des applications et actualisation d’application en arrière-plan.'
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/24/2018
 ms.openlocfilehash: c533dd54e3b6b11465cfd7daf5b9a93265dbe7b7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61169710"
 ---
-# <a name="introduction-to-backgrounding-in-ios"></a>Introduction au Backgrounding dans iOS
+# <a name="introduction-to-backgrounding-in-ios"></a>Introduction au backgrounding dans iOS
 
 iOS régule très étroitement de traitement en arrière-plan et propose trois approches pour l’implémenter :
 

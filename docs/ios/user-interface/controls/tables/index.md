@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 01/06/2016
 ms.openlocfilehash: 275c7553e465da67ca0780ea6aa9e986ca33b1f8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61379123"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Utilisation des Tables et cellules dans Xamarin.iOS
 
@@ -45,7 +45,7 @@ Ces articles prendra une vision détaillée de l’utilisation de tables, y comp
 
 ## <a name="related-links"></a>Liens associés
 
-- [WorkingWithTables (exemple)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables/)
+- [WorkingWithTables (sample)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables/)
 - [Tables dans les tables de montage séquentiel (exemple)](https://developer.xamarin.com/samples/monotouch/StoryboardTable/)
 - [Introduction aux storyboards](~/ios/user-interface/storyboards/index.md)
 - [Table de montage séquentiel une recette TableView](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/storyboard_a_tableview)

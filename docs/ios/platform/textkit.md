@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: f08e37d17cc32e45232d54cc4a51bb48d7ec94b1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61184519"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit dans Xamarin.iOS
 
@@ -21,7 +21,7 @@ TextKit est une nouvelle API qui offre des fonctionnalités de mise en page et r
 Pour rendre les fonctionnalités de TextKit disponible pour les contrôles standard, plusieurs contrôles de texte iOS ont été réimplémentées à utiliser TextKit, y compris :
 
 -  UITextView
--  Champ UITextField
+-  UITextField
 -  UILabel
 
 ## <a name="architecture"></a>Architecture

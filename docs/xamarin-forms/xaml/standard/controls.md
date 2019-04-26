@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/15/2017
 ms.openlocfilehash: b9bf0e1ba14f4e8584bfd8492776ac7c8668df87
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61175176"
 ---
 # <a name="xaml-standard-preview-controls"></a>Contrôles XAML Standard (version préliminaire)
 
@@ -45,8 +45,8 @@ Il existe également une liste des contrôles qui ont des nouveaux noms de propr
 |Sélecteur, bouton|BorderColor, OutlineColor|BorderBrush|
 |Bouton|BorderWidth|BorderThickness|
 |Barre de progression|Progression|Value|
-|Bouton, entrée, étiquette, éditeur, SearchBar, étendue, police|FontAttributesBold, italique, None|FontStyleItalic, Normal|
-|Bouton, entrée, étiquette, éditeur, SearchBar, étendue, police|Attributs de la police|FontWeights * gras, Normal|
+|Bouton, entrée, étiquette, éditeur, SearchBar, étendue, police|FontAttributesBold, Italic, None|FontStyleItalic, Normal|
+|Bouton, entrée, étiquette, éditeur, SearchBar, étendue, police|FontAttributes|FontWeights *Bold, Normal|
 |InputView|KeyboardDefault, Url, nombre, téléphone, texte, Chat, envoyer par courrier électronique|InputScopeNameValue * par défaut, Url, nombre, TelephoneNumber, texte, Chat, EmailNameOrAddress|
 |StackPanel|StackOrientation|Orientation *|
 

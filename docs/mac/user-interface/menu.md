@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 0a14e3e3eb58b264d1909b6576bbbc4f7e8f4068
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61166596"
 ---
 # <a name="menus-in-xamarinmac"></a>Menus dans Xamarin.Mac
 
@@ -1011,7 +1011,7 @@ Nous allons créer un menu d’ancrage personnalisé pour notre application en p
 1. Dans Visual Studio pour Mac, cliquez sur de l’application projet, puis sélectionnez **ajouter** > **nouveau fichier...** Dans la boîte de dialogue Nouveau fichier, sélectionnez **Xamarin.Mac** > **définition d’Interface vide**, utilisez « DockMenu » pour le **nom** et cliquez sur le **New**  bouton permettant de créer la nouvelle **DockMenu.xib** fichier :
 
     ![Ajout d’une définition d’interface vide](menu-images/dock02.png "Ajout d’une définition d’interface vide")
-2. Dans le **panneau solutions**, double-cliquez sur le **DockMenu.xib** fichier à ouvrir pour modification dans Xcode. Créer un nouveau **Menu** avec les éléments suivants : **adresse**, **Date**, **salutation**, et **Signature** 
+2. Dans le **panneau solutions**, double-cliquez sur le **DockMenu.xib** fichier à ouvrir pour modification dans Xcode. Créer un nouveau **Menu** avec les éléments suivants : **Adresse**, **Date**, **salutation**, et **Signature** 
 
     [![Mise en page de l’interface utilisateur](menu-images/dock03.png "mise en page de l’interface utilisateur")](menu-images/dock03-large.png#lightbox)
 3. Ensuite, nous allons vous connecter à nos nouveaux éléments de menu à nos actions existantes que nous avons créé notre menu personnalisé dans le [Ajout, modification et suppression de Menus](#Adding,_Editing_and_Deleting_Menus) section ci-dessus. Basculez vers le **inspecteur de connexion** et sélectionnez le **répondeur première** dans le **hiérarchie des interfaces**. Faites défiler vers le bas et recherchez le `phraseAddress:` action. Faites glisser une ligne à partir du cercle sur cette action pour le **adresse** élément de menu :
@@ -1051,7 +1051,7 @@ Nous allons créer un bouton déroulant personnalisé pour notre application en 
 1. Modifier le **Main.storyboard** fichier dans Xcode, puis faites glisser un **bouton de menu contextuel** à partir de la **inspecteur de bibliothèque** sur le **panneau** fenêtre que nous avons créé dans le [Menus contextuels](#Contextual_Menus) section : 
 
     [![Ajout d’un bouton de menu contextuel](menu-images/popup01.png "Ajout d’un bouton de menu contextuel")](menu-images/popup01-large.png#lightbox)
-2. Ajouter un nouvel élément de menu et de configurer les titres des éléments dans la fenêtre contextuelle dans laquelle : **adresse**, **Date**, **salutation**, et **Signature** 
+2. Ajouter un nouvel élément de menu et configurer les titres des éléments dans le menu contextuel pour : **Adresse**, **Date**, **salutation**, et **Signature** 
 
     [![Configurer les éléments de menu](menu-images/popup02.png "configuration les éléments de menu")](menu-images/popup02-large.png#lightbox)
 3. Ensuite, nous allons connecter nos nouveaux éléments de menu pour les actions que nous avons créé notre menu personnalisé dans le [Ajout, modification et suppression de Menus](#Adding,_Editing_and_Deleting_Menus) section ci-dessus. Basculez vers le **inspecteur de connexion** et sélectionnez le **répondeur première** dans le **hiérarchie des interfaces**. Faites défiler vers le bas et recherchez le `phraseAddress:` action. Faites glisser une ligne à partir du cercle sur cette action pour le **adresse** élément de menu : 
@@ -1075,7 +1075,7 @@ Cet article a examiné en détail à l’utilisation des menus et des éléments
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacMenus (exemple)](https://developer.xamarin.com/samples/mac/MacMenus/)
+- [MacMenus (sample)](https://developer.xamarin.com/samples/mac/MacMenus/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Human Interface Guidelines pour - Menus](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
 - [Présentation des Menus de l’Application et les listes contextuelles](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

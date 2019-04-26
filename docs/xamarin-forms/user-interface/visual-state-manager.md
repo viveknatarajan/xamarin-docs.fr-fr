@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: 10d62ea050296eb6d36c9861b757ca44d3a2e452
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61026134"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>Le Gestionnaire d’état visuel de Xamarin.Forms
 
@@ -253,7 +253,7 @@ Balisage semblable à celle-ci constitue la base de la **VSM sur vue** page dans
 
 Notez que la seconde `Entry` a également un `DataTrigger` dans le cadre de son `Trigger` collection. Cela entraîne le `Entry` doit être désactivée jusqu'à ce que quelque chose est tapée dans la troisième `Entry`. Voici la page au démarrage en cours d’exécution sur iOS, Android et la plateforme universelle Windows (UWP) :
 
-[![Migration du stockage dans la vue : désactivé](vsm-images/VsmOnViewDisabled.png "VSM sur Affichage - désactivé")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
+[![Migration du stockage dans la vue : Désactivé](vsm-images/VsmOnViewDisabled.png "VSM sur Affichage - désactivé")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
 
 L’état visuel actuel est « Disabled » par conséquent, l’arrière-plan de la deuxième `Entry` est rose sur iOS et Android écrans. L’implémentation UWP de `Entry` n’autorise pas la définition de l’arrière-plan de couleur lorsque le `Entry` est désactivé. 
 
@@ -263,7 +263,7 @@ Lorsque vous entrez du texte dans la troisième `Entry`, le deuxième `Entry` sw
 
 Lorsque vous touchez la seconde `Entry`, il obtient le focus d’entrée. Il passe à l’état « Actif » et se développe à deux fois sa hauteur :
 
-[![VSM dans la vue : concentré](vsm-images/VsmOnViewFocused.png "VSM sur affichage - actif")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
+[![Migration du stockage dans la vue : Concentré](vsm-images/VsmOnViewFocused.png "VSM sur affichage - actif")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
 
 Notez que le `Entry` ne conserve pas l’arrière-plan vert clair lorsqu’il atteint le focus d’entrée. Comme le Gestionnaire d’état visuel bascule entre les états visuels, les propriétés définies par l’état précédent ne sont pas définies. N’oubliez pas que les états visuels s’excluent mutuellement. L’état « Normal » ne signifie pas uniquement que le `Entry` est activé. Cela signifie que le `Entry` est activé et n’a pas le focus d’entrée. 
 
@@ -426,7 +426,7 @@ VisualStateManager.GoToState(this, "Focused");
 
 C’est le seul code de gestionnaire d’état visuel que vous trouverez dans le `VisualElement` classe. Étant donné que `GoToState` est appelée pour chaque objet en fonction de chaque classe qui dérive de `VisualElement`, vous pouvez utiliser le Gestionnaire d’état visuel avec n’importe quel `VisualElement` objet pour répondre à ces modifications.
 
-Curieusement, le nom du groupe d’état visuel « CommonStates » n’est pas référencé explicitement dans `VisualElement`. Le nom du groupe ne fait pas partie de l’API pour le Gestionnaire d’état visuel. Dans un de l’exemple de programme deux montrés jusqu'à présent, vous pouvez modifier le nom du groupe à partir de « CommonStates » pour tout autre élément, et le programme continue de fonctionner. Le nom du groupe est simplement une description générale des États de ce groupe. Il est entendu implicitement que les états visuels dans n’importe quel groupe s’excluent mutuellement : un état et qu’un seul état est en cours à tout moment.
+Curieusement, le nom du groupe d’état visuel « CommonStates » n’est pas référencé explicitement dans `VisualElement`. Le nom du groupe ne fait pas partie de l’API pour le Gestionnaire d’état visuel. Dans un de l’exemple de programme deux montrés jusqu'à présent, vous pouvez modifier le nom du groupe à partir de « CommonStates » pour tout autre élément, et le programme continue de fonctionner. Le nom du groupe est simplement une description générale des États de ce groupe. Il est implicitement entendu que les états visuels dans n’importe quel groupe s’excluent mutuellement : Un état et qu’un seul état est en cours à tout moment.
 
 Si vous souhaitez implémenter vos propres états visuels, vous devez appeler `VisualStateManager.GoToState` à partir du code. Plus souvent, vous apporterez cet appel à partir du fichier code-behind de votre classe de page.
 
@@ -492,11 +492,11 @@ Balisage VSM est attaché à la seconde `Label` (nommé `helpLabel`) et le `Butt
 
 Si le `Entry` ne contient pas un numéro de téléphone valide, puis l’état actuel est « Invalid » et donc la seconde `Label` est visible et le `Button` est désactivé :
 
-[![Validation de la migration du stockage : État non valide](vsm-images/VsmValidationInvalid.png "validation de VSM - non valide")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
+[![Validation de la migration du stockage : État non valide](vsm-images/VsmValidationInvalid.png "validation VSM - non valide")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
 Lorsqu’un numéro de téléphone valide est entré, l’état actuel devient « Valid ». La seconde `Entry` disparaît et la `Button` est maintenant activé :
 
-[![Validation de la migration du stockage : État valide](vsm-images/VsmValidationValid.png "validation VSM - valide")](vsm-images/VsmValidationValid-Large.png#lightbox)
+[![Validation de la migration du stockage : État de valide](vsm-images/VsmValidationValid.png "validation VSM - valide")](vsm-images/VsmValidationValid-Large.png#lightbox)
 
 Le fichier code-behind est doit pour la gestion de la `TextChanged` événement à partir de la `Entry`. Le Gestionnaire utilise une expression régulière pour déterminer si la chaîne d’entrée est valide ou non. La méthode dans le fichier code-behind nommé `GoToState` appelle la méthode statique `VisualStateManager.GoToState` méthode pour les deux `helpLabel` et `submitButton`:
 
@@ -529,7 +529,7 @@ Notez également que le `GoToState` méthode est appelée à partir du construct
 
 Notez que le fichier code-behind doit tenir compte de chaque objet dans la page qui est affectée par ces états visuels et d’appeler `VisualStateManager.GoToState` pour chacun de ces objets. Dans cet exemple, il s’agit uniquement de deux objets (la `Label` et `Button`), mais cela peut signifier plusieurs plus.
 
-Vous vous demandez peut-être : si le fichier code-behind doit faire référence à chaque objet dans la page qui est affectée par ces états visuels, pourquoi ne peut pas le fichier code-behind simplement accéder aux objets directement ? Il peut certainement. Toutefois, l’avantage d’utiliser la migration du stockage est que vous pouvez contrôler les éléments visuels comment réagir à un état différent entièrement dans XAML, ce qui préserve la confidentialité de la conception de l’interface utilisateur dans un emplacement. Cela évite l’apparence visuelle du paramètre en accédant à des éléments visuels directement à partir de code-behind.
+Vous vous demandez peut-être : Si le fichier code-behind doit faire référence à chaque objet dans la page qui est affectée par ces états visuels, pourquoi ne peut pas le fichier code-behind simplement accéder aux objets directement ? Il peut certainement. Toutefois, l’avantage d’utiliser la migration du stockage est que vous pouvez contrôler les éléments visuels comment réagir à un état différent entièrement dans XAML, ce qui préserve la confidentialité de la conception de l’interface utilisateur dans un emplacement. Cela évite l’apparence visuelle du paramètre en accédant à des éléments visuels directement à partir de code-behind.
 
 Il peut être tentant d’envisager de dériver une classe à partir de `Entry` et peut-être définition d’une propriété que vous pouvez définir une fonction de validation externe. La classe qui dérive de `Entry` peut ensuite appeler la `VisualStateManager.GoToState` (méthode). Ce schéma fonctionnerait correctement, mais uniquement si le `Entry` était le seul objet affecté par les différents états visuels. Dans cet exemple, un `Label` et un `Button` sont également affectés. Il n’existe aucun moyen pour le balisage de la migration du stockage attaché à un `Entry` pour contrôler les autres objets sur la page et aucun moyen pour le balisage VSM associés à ces autres objets pour faire référence à une modification dans l’état visuel d’un autre objet.
 

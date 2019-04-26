@@ -9,11 +9,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/29/2018
 ms.openlocfilehash: 4cb3e13ebbe3d9e8aed153528a35ab16c92e2145
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153320"
 ---
 # <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>Comment résoudre une erreur PathTooLongException ?
 
@@ -22,11 +22,11 @@ ms.locfileid: "50108702"
 Les noms de chemin d’accès généré dans un projet Xamarin.Android peuvent être assez longues.
 Par exemple, Impossible de générer un chemin d’accès comme suit lors de la génération :
 
-**C:\\certains\\Directory\\Solution\\projet\\obj\\déboguer\\__library_projects__ \\ Xamarin.Forms.Platform.Android\\library_project_imports\\actifs**
+**C:\\Some\\Directory\\Solution\\Project\\obj\\Debug\\__library_projects__\\Xamarin.Forms.Platform.Android\\library_project_imports\\assets**
 
 Sur Windows (où la longueur maximale pour un chemin d’accès est [260 caractères](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)), un **PathTooLongException** pourrait être produite lors de la génération du projet si un chemin d’accès généré dépasse la longueur maximale. 
 
-## <a name="fix"></a>Correctif
+## <a name="fix"></a>Corriger
 
 Xamarin.Android 8.0, à partir de la `UseShortFileNames` propriété MSBuild peut être définie sur contourner cette erreur. Lorsque cette propriété a la valeur `True` (la valeur par défaut est `False`), le processus de génération utilise des noms de chemin d’accès plus courts pour réduire le risque de produire un **PathTooLongException**.
 Par exemple, lorsque `UseShortFileNames` est défini sur `True`, le chemin d’accès ci-dessus est abrégé en chemin d’accès qui est similaire à ce qui suit :

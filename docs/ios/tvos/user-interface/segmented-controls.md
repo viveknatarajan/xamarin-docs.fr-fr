@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 98a770d05014e0498b805ed9ffa0c84314efc765
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61374999"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Utilisation de contrôles segmentés de tvOS dans Xamarin
 
@@ -42,7 +42,7 @@ Vous ne pouvez pas mélanger le texte et les icônes sur un Segment donné et vo
 
 Apple rend les suggestions suivantes pour travailler avec du texte de Segment :
 
-- **Utilisez faire court, des noms significatifs** -titre du Segment le doit indiquer clairement le type de contenu que l’utilisateur doit attendre lors de la sélection du Segment donné. Par exemple : musique ou des vidéos.
+- **Utilisez faire court, des noms significatifs** -titre du Segment le doit indiquer clairement le type de contenu que l’utilisateur doit attendre lors de la sélection du Segment donné. Exemple : Musique ou des vidéos.
 - **Utiliser la mise en majuscules des mots en majuscule** -chaque mot du titre de Segments doit être en majuscule à l’exception des articles, des conjonctions et prépositions de moins de quatre (4) caractères.
 - **Utiliser courte, titres concentré** -conserver les titres, à courts et ayant le focus sur le type de contenu attendu lorsque le Segment est sélectionné.
 

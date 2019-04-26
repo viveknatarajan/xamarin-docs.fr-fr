@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/03/2017
 ms.openlocfilehash: 85b0c9b0688e9fb310a8f427018a02fe629404bb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61225517"
 ---
 # <a name="watchos-complications-in-xamarin"></a>watchOS Complications dans Xamarin
 
@@ -24,7 +24,7 @@ Notez que chaque application watchOS peut avoir uniquement une complication.
 
 Commencez par lire [documentation d’Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) pour déterminer si votre application est adaptée à une complication. Il existe 5 `CLKComplicationFamily` types d’affichage au choix :
 
-[![](complications-images/all-complications-sml.png "Les types de CLKComplicationFamily 5 disponibles : circulaire petite modulaire de petite, modulaire, des petites, d’utilitaires volumineux")](complications-images/all-complications.png#lightbox)
+[![](complications-images/all-complications-sml.png "Les types CLKComplicationFamily 5 disponibles : Petite taille circulaire, modulaire de petite taille, modulaire de petite taille importante, Normal, normal volumineux")](complications-images/all-complications.png#lightbox)
 
 Applications peuvent implémenter qu’un seul style, ou toutes les cinq, selon les données affichées.
 Vous pouvez également en charge voyage, fournissant des valeurs pour les heures passées ou futures l’utilisateur se trouve la couronne numérique.

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 465b4a34d54dbee92461669b16c3b8a13188bbde
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61378341"
 ---
 # <a name="databases-in-xamarinmac"></a>Bases de données dans Xamarin.Mac
 
@@ -2224,7 +2224,7 @@ Cet article a examiné en détail à l’utilisation de la liaison de données e
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacDatabase (exemple)](https://developer.xamarin.com/samples/mac/MacDatabase/)
+- [MacDatabase (sample)](https://developer.xamarin.com/samples/mac/MacDatabase/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Liaison de données et le codage de clé-valeur](~/mac/app-fundamentals/databinding.md)
 - [Contrôles standard](~/mac/user-interface/standard-controls.md)
@@ -2235,4 +2235,4 @@ Cet article a examiné en détail à l’utilisation de la liaison de données e
 - [Introduction aux liaisons Cocoa sujets de programmation](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CocoaBindings/CocoaBindings.html)
 - [Introduction à la référence de liaisons Cocoa](https://developer.apple.com/library/content/documentation/Cocoa/Reference/CocoaBindingsRef/CocoaBindingsRef.html)
 - [NSCollectionView](https://developer.apple.com/documentation/appkit/nscollectionview)
-- [macOS Human Interface Guidelines pour](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Human Interface Guidelines pour macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

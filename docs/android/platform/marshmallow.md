@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: a396f4fe59db36b134843d2538bcb470a452a85b
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158001"
 ---
 # <a name="marshmallow-features"></a>Fonctionnalités de marshmallow
 
@@ -56,7 +56,7 @@ En outre, les nombreuses mises à jour de bibliothèque Android core ont été p
 
 En outre, les nombreuses mises à jour de bibliothèque Android core ont été publiés avec Android Marshmallow, et ces mises à jour fournissent de nouvelles fonctionnalités pour Android Marshmallow et versions antérieures d’Android. Cet article explique comment créer des applications avec Android Marshmallow, et il fournit qu'une vue d’ensemble de la nouvelle fonctionnalité met en évidence dans Android 6.0. 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont nécessaire pour utiliser les nouvelles fonctionnalités d’Android Marshmallow dans les applications basées sur Xamarin : 
 

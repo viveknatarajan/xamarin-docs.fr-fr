@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 03b80d3fb1ed7c8db108f86b3b3923c20e1d908f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61089816"
 ---
 # <a name="alternative-layout-views"></a>Autres vues de disposition
 
@@ -79,7 +79,7 @@ Lorsque vous cliquez sur le **par défaut** mise en page pour l’afficher, le `
 
 ## <a name="handling-conflicts"></a>Gestion des conflits 
 
-Si vous décidez de modifier la couleur du texte dans le **par défaut** disposition au vert, vous verrez une icône d’avertissement s’affichent sur la disposition liée. Cliquez sur cette disposition pour ouvrir la disposition pour révéler le conflit. Le widget qui a provoqué le conflit est mis en surbrillance avec un cadre rouge et le message suivant s’affiche : *modifications récentes ont provoqué des conflits dans cette disposition alternative*. 
+Si vous décidez de modifier la couleur du texte dans le **par défaut** disposition au vert, vous verrez une icône d’avertissement s’affichent sur la disposition liée. Cliquez sur cette disposition pour ouvrir la disposition pour révéler le conflit. Le widget qui a provoqué le conflit est mis en surbrillance avec un cadre rouge et le message suivant s’affiche : *Modifications récentes ont provoqué des conflits dans cette disposition alternative*. 
 
 [![Les modifications en conflit](alternative-layout-views-images/vs/11-conflicting-change-sml.png "les modifications en conflit")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
  
@@ -101,7 +101,7 @@ Si un `CheckBox` est ajouté à la **par défaut** mise en page, un autre confli
 
 [![Conflit de case à cocher](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "conflit de case à cocher")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
  
-En cliquant sur le **grand land** disposition révèle le conflit. Le message suivant s’affiche : *modifications récentes ont provoqué des conflits dans cette disposition alternative*: 
+En cliquant sur le **grand land** disposition révèle le conflit. Le message suivant s'affiche : *Modifications récentes ont provoqué des conflits dans cette disposition alternative*: 
 
 [![Conflit de mise en page ALT](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "conflit de mise en page Alt")](alternative-layout-views-images/vs/14-alt-layout-conflict.png#lightbox)
 
@@ -179,7 +179,7 @@ Lorsque vous cliquez sur le **par défaut** mise en page pour l’afficher, le `
 
 ## <a name="handling-conflicts"></a>Gestion des conflits 
 
-Si vous décidez de modifier la couleur du texte dans le **par défaut** disposition au vert, vous verrez une icône d’avertissement s’affichent sur la disposition liée. Cliquez sur cette disposition pour ouvrir la disposition pour révéler le conflit. Le widget qui a provoqué le conflit est mis en surbrillance avec un cadre rouge et le message suivant s’affiche : *modifications récentes ont provoqué des conflits dans cette disposition alternative*. 
+Si vous décidez de modifier la couleur du texte dans le **par défaut** disposition au vert, vous verrez une icône d’avertissement s’affichent sur la disposition liée. Cliquez sur cette disposition pour ouvrir la disposition pour révéler le conflit. Le widget qui a provoqué le conflit est mis en surbrillance avec un cadre rouge et le message suivant s’affiche : *Modifications récentes ont provoqué des conflits dans cette disposition alternative*. 
 
 [![Modification en conflit](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
 
@@ -201,7 +201,7 @@ Si un `CheckBox` est ajouté à la **par défaut** mise en page, un autre confli
 
 [![Conflit de case à cocher](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
  
-En cliquant sur le **grand land** disposition révèle le conflit. Le message suivant s’affiche : *modifications récentes ont provoqué des conflits dans cette disposition alternative*. 
+En cliquant sur le **grand land** disposition révèle le conflit. Le message suivant s'affiche : *Modifications récentes ont provoqué des conflits dans cette disposition alternative*. 
 
 [![Conflit de mise en page ALT](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
  

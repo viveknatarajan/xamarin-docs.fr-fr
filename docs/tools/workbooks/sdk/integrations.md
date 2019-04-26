@@ -1,5 +1,5 @@
 ---
-title: Rubriques de l’intégration avancée
+title: Rubriques liées à l’intégration avancée
 description: Ce document décrit les rubriques avancées relatives aux intégrations de Xamarin Workbooks. Il aborde le package NuGet de Xamarin.Workbook.Integrations et exposition d’API au sein d’un classeur de Xamarin.
 ms.prod: xamarin
 ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
@@ -7,13 +7,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: 56ee709b78b8587c2717dc9d25a6357041812d23
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382243"
 ---
-# <a name="advanced-integration-topics"></a>Rubriques de l’intégration avancée
+# <a name="advanced-integration-topics"></a>Rubriques liées à l’intégration avancée
 
 Les assemblys d’intégration doivent référencer le [ `Xamarin.Workbooks.Integrations` NuGet][nuget]. Découvrez notre [documentation de démarrage rapide](~/tools/workbooks/sdk/index.md) pour plus d’informations sur la mise en route avec le package NuGet.
 

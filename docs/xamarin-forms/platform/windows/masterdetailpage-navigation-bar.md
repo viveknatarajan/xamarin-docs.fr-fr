@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: b1a797cfb9384a37c5140995d02b907138ceef6e
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60855067"
 ---
 # <a name="masterdetailpage-navigation-bar-on-windows"></a>Barre de Navigation MasterDetailPage sur Windows
 
@@ -30,7 +30,7 @@ Cette plateforme de plateforme Windows universelle-spécifique est utilisé pour
 
 ```
 
-Vous pouvez également, il peut être consommé à partir de c# à l’aide de l’API fluent :
+Vous pouvez également, il peut être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

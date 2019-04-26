@@ -1,6 +1,6 @@
 ---
 title: Résumé du chapitre 11. Infrastructure Bindable
-description: 'Création d’applications mobiles avec Xamarin.Forms : résumé du chapitre 11. Infrastructure Bindable'
+description: 'Création d’applications mobiles avec Xamarin.Forms : Résumé du chapitre 11. Infrastructure Bindable'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: f9e3326c0f55469cfa84a019a674679d82dfc007
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334368"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Résumé du chapitre 11. Infrastructure Bindable
 
@@ -20,7 +20,7 @@ ms.locfileid: "53054234"
 
 Tous les programmeurs c# est familiarisé avec c# *propriétés*. Les propriétés contiennent une *définir* accesseur et/ou un *obtenir* accesseur. Elles sont souvent appelées *propriétés CLR* pour le Common Language Runtime.
 
-Xamarin.Forms définit une définition de propriété améliorée appelée un *propriété pouvant être liée* encapsulé par le [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) classe et pris en charge par le [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)classe. Ces classes sont associés mais bien distincts : le `BindableProperty` est utilisé pour définir la propriété proprement dite ; `BindableObject` est similaire à `object` : c’est une classe de base des classes qui définissent les propriétés pouvant être liées.
+Xamarin.Forms définit une définition de propriété améliorée appelée un *propriété pouvant être liée* encapsulé par le [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) classe et pris en charge par le [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)classe. Ces classes sont associés mais bien distincts : Le `BindableProperty` est utilisé pour définir la propriété proprement dite ; `BindableObject` est similaire à `object` : c’est une classe de base des classes qui définissent les propriétés pouvant être liées.
 
 ## <a name="the-xamarinforms-class-hierarchy"></a>La hiérarchie de classes de Xamarin.Forms
 

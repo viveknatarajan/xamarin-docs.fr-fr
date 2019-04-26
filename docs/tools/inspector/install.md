@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
 ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
-ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373467"
 ---
 # <a name="inspector-installation-and-requirements"></a>Configuration requise et Installation de l’inspecteur
 
@@ -31,7 +31,7 @@ ms.locfileid: "54249188"
 
 -----
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 

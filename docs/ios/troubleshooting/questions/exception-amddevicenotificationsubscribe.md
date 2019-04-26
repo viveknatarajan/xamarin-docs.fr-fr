@@ -1,5 +1,5 @@
 ---
-title: Erreur System.Exception AMDeviceNotificationSubscribe retournée...
+title: Erreur System.Exception AMDeviceNotificationSubscribe retournée ...
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7E4ACC7E-F4FB-46C1-8837-C7FBAAFB2DC7
@@ -8,19 +8,19 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 4fb0712366422e8810a2db60d40c3b85d9f4cd82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421942"
 ---
-# <a name="systemexception-amdevicenotificationsubscribe-returned-"></a>Erreur System.Exception AMDeviceNotificationSubscribe retournée...
+# <a name="systemexception-amdevicenotificationsubscribe-returned-"></a>Erreur System.Exception AMDeviceNotificationSubscribe retournée ...
 
 > [!IMPORTANT]
 > Ce problème a été résolu dans les versions récentes de Xamarin. Toutefois, si le problème se produit sur la dernière version du logiciel, veuillez soumettre un [nouveau bogue](~/cross-platform/troubleshooting/questions/howto-file-bug.md) avec votre contrôle de version complet intégral et les informations de générer la sortie de journal.
 
 
-## <a name="fix"></a>Correctif
+## <a name="fix"></a>Corriger
 
 1.  Arrêter le `usbmuxd` traiter afin qu’il redémarre le système :
 
@@ -63,4 +63,4 @@ Basé sur les erreurs de `system.log` il semble que ce problème peut être lié
 
 ## <a name="references"></a>Références
 
-*   [Bogue 11789 - MonoTouch.MobileDevice.MobileDeviceException : AMDeviceNotificationSubscribe retournée : 0xe8000063 [NORESPONSE résolus]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)
+*   [Bug 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe retournée : 0XE8000063 [NORESPONSE RÉSOLUE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)

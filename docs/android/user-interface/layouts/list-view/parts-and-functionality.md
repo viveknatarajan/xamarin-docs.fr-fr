@@ -1,5 +1,5 @@
 ---
-title: Parties de ListView et fonctionnalité
+title: Composants et fonctionnement de ListView
 ms.prod: xamarin
 ms.assetid: ABA40FED-FF68-C0B0-BC43-C748CEE585D8
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
 ms.openlocfilehash: 248baa5daceff6db01098a155600ea204547e845
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61319726"
 ---
-# <a name="listview-parts-and-functionality"></a>Parties de ListView et fonctionnalité
+# <a name="listview-parts-and-functionality"></a>Composants et fonctionnement de ListView
 
 
 ## <a name="overview"></a>Vue d'ensemble

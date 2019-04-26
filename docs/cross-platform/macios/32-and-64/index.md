@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 31eb0bfae58ecdca40548e46d1d9d95828be67b4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61347836"
 ---
 # <a name="3264-bit-platform-considerations"></a>Considérations relatives à la plateforme 32/64 bits
 
@@ -79,7 +79,7 @@ Pendant la transition d’Apple à partir d’iOS de 32 bits vers 64 bits, les a
 Ciblage des architectures 32 bits et 64 bits vise à augmenter considérablement la taille d’une application. Toutefois, cela permettrait des appareils récents exécuter du code optimisé tout en prenant en charge des appareils plus anciens.
 
 > [!IMPORTANT]
-> Si vous recevez le message suivant lors de l’envoi d’une application iOS vers l’iTunes App Store, _« avertissement ITMS-9000 : manque de prise en charge 64 bits. Applications téléchargées vers l’App Store à partir du 1er février 2015, la nouvelle iOS doivent inclure la prise en charge de 64 bits et être générées avec iOS 8 SDK, inclus dans Xcode 6 ou version ultérieure. Pour activer 64 bits dans votre projet, nous vous recommandons d’utiliser la valeur par défaut de paramètre « architectures Standard » de la build Xcode pour créer un fichier binaire unique avec du code 32 bits et 64 bits. »_ Vous devez basculer les architectures prises en charge pour une des **ARM64** combinaison (comme indiqué ci-dessus), de recompilation et soumettez à nouveau.
+> Si vous recevez le message suivant lors de l’envoi d’une application iOS vers l’iTunes App Store, _« avertissement ITMS-9000 : Prise en charge de 64 bits manquant. Applications téléchargées vers l’App Store à partir du 1er février 2015, la nouvelle iOS doivent inclure la prise en charge de 64 bits et être générées avec iOS 8 SDK, inclus dans Xcode 6 ou version ultérieure. Pour activer 64 bits dans votre projet, nous vous recommandons d’utiliser la valeur par défaut de paramètre « architectures Standard » de la build Xcode pour créer un fichier binaire unique avec du code 32 bits et 64 bits. »_ Vous devez basculer les architectures prises en charge pour une des **ARM64** combinaison (comme indiqué ci-dessus), de recompilation et soumettez à nouveau.
 
 ## <a name="mac"></a>Mac
 

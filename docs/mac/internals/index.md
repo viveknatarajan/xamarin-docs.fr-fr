@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
 ms.openlocfilehash: 872f26febf3abbe4d659773d2bf2d27348c64513
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61033241"
 ---
 # <a name="under-the-hood-in-xamarinmac"></a>Sous le capot dans Xamarin.Mac
 
@@ -24,6 +24,6 @@ ms.locfileid: "50118771"
 
 Relation de Xamarin.Mac et Objective-C, y compris les concepts tels que la compilation, sélecteurs, bureaux d’enregistrement, lancement de l’application et le générateur.
 
-## <a name="xamarinmac-registrarregistrarmd"></a>[Bureau d’enregistrement de Xamarin.Mac](registrar.md)
+## <a name="xamarinmac-registrarregistrarmd"></a>[Xamarin.Mac registrar](registrar.md)
 
 Xamarin.Mac comble le fossé entre le monde géré et runtime de Cocoa, ce qui permet des classes managées appeler les classes non managées de Objective-C et être rappelé lorsqu’événements se produisent. Le travail requis pour effectuer cette « magiques » est géré par le bureau d’enregistrement, mais comprendre ce qui se passe « en coulisse » peut parfois être utile.

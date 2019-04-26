@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/05/2018
 ms.openlocfilehash: b59fd7c1a9e5f528878b90e1a76fabe5a79bab81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946828"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Frameworks incorporés dans Xamarin.iOS
 
@@ -70,7 +70,7 @@ Applications sans extensions de liens seront toujours avec le runtime Mono stati
 
 Ce comportement peut être remplacé par le développeur d’application, en ajoutant le code suivant en tant qu’argument mtouch supplémentaires dans des options Build iOS du projet :
 
-- `--mono:static`: Lie statiquement avec le runtime Mono.
+- `--mono:static`: Contient des liens avec le runtime Mono statiquement.
 - `--mono:framework`: Liens avec le runtime Mono en tant qu’infrastructure.
 
 Un scénario pour la liaison avec le runtime Mono en tant qu’infrastructure même pour les applications sans extensions consiste à réduire la taille de l’exécutable, pour surmonter les restrictions de taille Qu'apple impose sur le fichier exécutable. Pour référence, le runtime Mono ajoute environ 1,7 Mo par architecture (comme de Xamarin.iOS 8.12, cependant son varie entre les versions et même entre les applications). Le framework Mono ajoute environ 2,3 Mo par architecture, ce qui signifie que pour une application unique-architecture sans extensions, la liaison de l’application est jugée avec le runtime Mono résultant comme une infrastructure sera réduire le fichier exécutable par ~1.7MB, mais ajouter une infrastructure ~2.3MB, dans un alltogether ~0.6MB plus grande application.

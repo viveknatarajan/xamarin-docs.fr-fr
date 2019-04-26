@@ -1,5 +1,5 @@
 ---
-title: Communication entre faiblement couplés de composants
+title: Communication entre les composants faiblement couplés
 description: 'Ce chapitre explique comment l’application mobile eShopOnContainers implémente la publier-s’abonner de modèle, autorisant basée sur message de communication entre les composants qui n’est pas pratique lier par des références d’objet et le type '
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381871"
 ---
-# <a name="communicating-between-loosely-coupled-components"></a>Communication entre faiblement couplés de composants
+# <a name="communicating-between-loosely-coupled-components"></a>Communication entre les composants faiblement couplés
 
 La publication-abonnement modèle est un modèle de messagerie dans lequel les éditeurs envoient des messages sans avoir connaissance de n’importe quel récepteurs, appelés abonnés. De même, les abonnés écoutent les messages spécifiques, sans avoir connaissance d’aucun serveur de publication.
 
@@ -28,7 +28,7 @@ Le [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe fournit la m
 
 ![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Multidiffusion de publication-abonnement fonctionnalités")
 
-**Figure 4-1 :** multidiffusion de publication-abonnement fonctionnalités
+**Figure 4-1 :** Multidiffusion de publication-abonnement fonctionnalités
 
 Les éditeurs envoient des messages à l’aide de la [ `MessagingCenter.Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) (méthode), tandis que les abonnés écoutent les messages à l’aide de la [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) (méthode). En outre, les abonnés peuvent également annuler votre abonnement à partir des abonnements aux messages, si nécessaire, avec le [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) (méthode).
 
@@ -55,16 +55,16 @@ Pour plus d’informations sur [ `MessagingCenter` ](xref:Xamarin.Forms.Messagin
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) les messages sont des chaînes qui sont utilisées pour identifier les messages. L’exemple de code suivant montre les messages définis dans l’application mobile eShopOnContainers :
 
 ```csharp
-public class MessengerKeys  
+public class MessengerKeys  
 {  
-    // Add product to basket  
-    public const string AddProduct = "AddProduct";  
+    // Add product to basket  
+    public const string AddProduct = "AddProduct";  
 
-    // Filter  
-    public const string Filter = "Filter";  
+    // Filter  
+    public const string Filter = "Filter";  
 
-    // Change selected Tab programmatically  
-    public const string ChangeTab = "ChangeTab";  
+    // Change selected Tab programmatically  
+    public const string ChangeTab = "ChangeTab";  
 }
 ```
 
@@ -75,7 +75,7 @@ Dans cet exemple, les messages sont définis à l’aide de constantes. L’avan
 Les serveurs de publication notifier les abonnés d’un message avec l’un de le [ `MessagingCenter.Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) surcharges. L’exemple de code suivant montre la publication la `AddProduct` message :
 
 ```csharp
-MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
 ```
 
 Dans cet exemple, le [ `Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) méthode spécifie trois arguments :
@@ -94,12 +94,12 @@ Le [ `Send` ](xref:Xamarin.Forms.MessagingCenter.Send*) méthode publie le messa
 Abonnés peuvent s’inscrire pour recevoir un message à l’aide d’un de le [ `MessagingCenter.Subscribe` ](xref:Xamarin.Forms.MessagingCenter.Subscribe*) surcharges. L’exemple de code suivant montre comment l’application mobile eShopOnContainers s’abonne à et traite, le `AddProduct` message :
 
 ```csharp
-MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
-    this, MessageKeys.AddProduct, async (sender, arg) =>  
+MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
+    this, MessageKeys.AddProduct, async (sender, arg) =>  
 {  
-    BadgeCount++;  
+    BadgeCount++;  
 
-    await AddCatalogItemAsync(arg);  
+    await AddCatalogItemAsync(arg);  
 });
 ```
 
@@ -115,7 +115,7 @@ Un abonné n’est peut-être pas nécessaire de gérer chaque instance d’un m
 Les abonnés peuvent vous désabonner qu’ils ne souhaitent plus recevoir de messages. Cela est possible avec un de le [ `MessagingCenter.Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) surcharges, comme illustré dans l’exemple de code suivant :
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
 ```
 
 Dans cet exemple, le [ `Unsubscribe` ](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) syntaxe de méthode reflète les arguments de type spécifiés lors de l’abonnement pour recevoir le `AddProduct` message.
@@ -128,4 +128,4 @@ Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe i
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF de 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)

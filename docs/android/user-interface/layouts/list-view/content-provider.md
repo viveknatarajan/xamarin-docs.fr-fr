@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’un ContentProvider
+title: Utilisation d’un ContentProvider
 ms.prod: xamarin
 ms.assetid: 251F7557-328D-0132-F39D-595920A28B87
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: d1ec628de3481820f320a5a8e6ef88fcbaab75a6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61189727"
 ---
-# <a name="using-a-contentprovider"></a>À l’aide d’un ContentProvider
+# <a name="using-a-contentprovider"></a>Utilisation d’un ContentProvider
 
 CursorAdapters peut également être utilisé pour afficher des données à partir d’un ContentProvider.
 Contentprovider vous permettre d’accéder aux données exposées par d’autres applications (y compris les données système Android comme contacts, les informations de support et de calendrier).

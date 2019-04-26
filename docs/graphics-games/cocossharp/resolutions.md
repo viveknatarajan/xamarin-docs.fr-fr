@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 6803dc2668b89ee2d037da8b34e202191dd5465d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61307745"
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Gestion de résolutions multiples dans CocosSharp
 
@@ -22,11 +22,11 @@ CocosSharp fournit des méthodes pour standardiser les dimensions de l’objet d
 Le comportement de résolution par défaut de CocosSharp consiste à faire correspondre des pixels physiques avec les coordonnées dans le jeu. Le tableau suivant montre comment divers appareils affichait un sprite d’environnement en arrière-plan avec la largeur et hauteur de 368 x 240. La première ligne est techniquement pas un appareil réel, mais plutôt le rendu attendu du sprite, quelle que soit la résolution de l’appareil :
 
 
-| **APPAREIL** | **Résolution d’affichage** | **Capture d’écran de l’exemple** |
+| **Appareil** | **Résolution d’affichage** | **Capture d’écran de l’exemple** |
 |--- | --- |--- |
 |Affichage souhaité|368 x 240 (avec des barres noires pour le rapport hauteur / largeur)| ![368 x 240 (avec des barres noires pour le rapport hauteur / largeur)](resolutions-images/image1.png) |
-|iPhone 4 s|960 x 640| ![iPhone 4 s 960 x 640](resolutions-images/image2.png) |
-|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
+|iPhone 4s|960 x 640| ![iPhone 4 s 960 x 640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920x1080](resolutions-images/image3.png) |
 
 Ce document décrit l’utilisation de CocosSharp pour résoudre le problème indiqué dans le tableau ci-dessus. Autrement dit, nous allons aborder le s’afficher comme indiqué dans la première ligne, quelle que soit la résolution d’écran de n’importe quel appareil.
 
@@ -277,7 +277,7 @@ Maintenant si nous exécutons le jeu la texture de 1 000 x 1000 être complètem
 ![](resolutions-images/image12.png "Maintenant si nous exécutons le jeu la texture de 1 000 x 1000 sera entièrement visible")
 
 
-### <a name="defaulttexeltocontentsizeratio-details"></a>Détails de DefaultTexelToContentSizeRatio
+### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio details
 
 Le `DefaultTexelToContentSizeRatio` est propriété `static,` ce qui signifie que tous les composants de l’application partagent la même valeur. L’approche habituelle pour les jeux de ressources pour différentes résolutions doit contenir un ensemble complet de ressources pour chaque catégorie de résolution. Par défaut CocosSharp Visual Studio pour les modèles de Mac fournir **%ld** et **hd** dossiers pour les ressources, ce qui peut être utiles pour les jeux prenant en charge les deux ensembles de textures. Un exemple de dossier contenu avec le contenu peut ressembler :
 
@@ -318,5 +318,5 @@ Cet article explique comment créer des jeux qui s’affiche correctement, quel 
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Présentation de CocosSharp](~/graphics-games/cocossharp/index.md)
+- [CocosSharp Introduction](~/graphics-games/cocossharp/index.md)
 - [Documentation de l’API de CocosSharp](https://developer.xamarin.com/api/namespace/CocosSharp/)

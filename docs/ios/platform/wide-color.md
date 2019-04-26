@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: f139bcceda12752e43a3a8330fa0a0e038e539f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61423561"
 ---
 # <a name="wide-color-in-xamarinios"></a>Large couleur dans Xamarin.iOS
 
@@ -135,7 +135,7 @@ Pour prendre en charge large couleur et large gamme de couleurs à l’intérieu
 - Image de base
 - WebKit
 - SpriteKit
-- Core Animation
+- Animation de base
 - AppKit (pour macOS uniquement)
 
 Par ailleurs, affichage Retina prise en charge a été améliorée pour l’espace de couleurs de plage étendue sRVB et Display P3 affiche.

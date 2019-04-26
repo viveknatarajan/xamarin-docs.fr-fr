@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
 ms.openlocfilehash: 91bafbbdaee805ad128766bf0a770cb711597a85
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61023348"
 ---
 # <a name="firebase-job-dispatcher"></a>Répartiteur de travail Firebase
 
@@ -292,6 +292,6 @@ Ce guide décrit comment utiliser le répartiteur de travail Firebase pour effec
 
 - [Xamarin.Firebase.JobDispatcher sur NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [-répartiteur de travail firebase sur GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
-- [Liaison de Xamarin.Firebase.JobDispatcher](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
+- [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
 - [Planification des travaux intelligente](https://developer.android.com/topic/performance/scheduling.html)
 - [Android batterie et les optimisations de mémoire - Google d’e/s 2016 (vidéo)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 34a9d2d9b8acb05a1b978a70e85038507032faaa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61011785"
 ---
 # <a name="multi-touch-finger-tracking"></a>Suivi de l’interaction tactile multipoint doigt
 
@@ -201,4 +201,4 @@ Vous avez maintenant vu comment vous pouvez suivre chaque doigt sur l’écran e
 ## <a name="related-links"></a>Liens associés
 
 - [Guide d’équivalents iOS Xamarin](~/ios/app-fundamentals/touch/touch-tracking.md)
-- [Peinture avec les doigts (exemple)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint)
+- [FingerPaint (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint)

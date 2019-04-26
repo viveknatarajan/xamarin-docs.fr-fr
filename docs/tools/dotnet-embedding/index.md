@@ -1,23 +1,23 @@
 ---
 title: Incorporation .NET
-description: 'Incorporation .NET permet à votre Code .NET existant (c#, F #, etc.) à être consommés par le code écrit dans d’autres langages de programmation.'
+description: Incorporation .NET permet à votre Code .NET existant (C#, F#, etc.) à être consommés par le code écrit dans d’autres langages de programmation.
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 23233ea8b06e0db580ba99edf2705e3dae5b931f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61363446"
 ---
 # <a name="net-embedding"></a>Incorporation .NET
 
 ![Preview](~/media/shared/preview.png)
 
-Incorporation .NET permet à votre Code .NET existant (c#, F #, etc.) à être consommés à partir d’autres langages de programmation et dans différents environnements différents.
+Incorporation .NET permet à votre Code .NET existant (C#, F#, etc.) à être consommés à partir d’autres langages de programmation et dans différents environnements différents.
 
 Cela signifie que si vous avez une bibliothèque .NET que vous souhaitez utiliser à partir de votre application iOS existante, vous pouvez le faire.   Ou, si vous souhaitez lier à une bibliothèque C++ native, vous pouvez le faire également.   Ou utiliser le code .NET à partir de Java.
 

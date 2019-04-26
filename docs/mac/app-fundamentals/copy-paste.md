@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: f9e05b6d16210021257fe3958966739e526aed18
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61378558"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiez et collez dans Xamarin.Mac
 
@@ -1280,7 +1280,7 @@ Cet article a examiné en détail à l’utilisation de la table de montage dans
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacCopyPaste (exemple)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
+- [MacCopyPaste (sample)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Guide de programmation table de montage](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
-- [macOS Human Interface Guidelines pour](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Human Interface Guidelines pour macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

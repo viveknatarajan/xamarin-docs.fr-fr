@@ -1,5 +1,5 @@
 ---
-title: Marge et marge intérieure
+title: Marge et remplissage
 description: La marge et marge intérieure des propriétés contrôlent le comportement de disposition quand un élément est affiché dans l’interface utilisateur. Cet article illustre la différence entre les deux propriétés et comment les définir.
 ms.prod: xamarin
 ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
 ms.openlocfilehash: 595e673c59d23a45cbaf923a0d58faff2000c296
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61370943"
 ---
-# <a name="margin-and-padding"></a>Marge et marge intérieure
+# <a name="margin-and-padding"></a>Marge et remplissage
 
 _La marge et marge intérieure des propriétés contrôlent le comportement de disposition quand un élément est affiché dans l’interface utilisateur. Cet article illustre la différence entre les deux propriétés et comment les définir._
 
@@ -72,6 +72,6 @@ Cet article ne présente la différence entre la [ `Margin` ](xref:Xamarin.Forms
 
 ## <a name="related-links"></a>Liens associés
 
-- [Marge](xref:Xamarin.Forms.View.Margin)
-- [Marge intérieure](xref:Xamarin.Forms.Layout.Padding)
+- [Margin](xref:Xamarin.Forms.View.Margin)
+- [Padding](xref:Xamarin.Forms.Layout.Padding)
 - [Épaisseur](xref:Xamarin.Forms.Thickness)

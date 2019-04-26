@@ -1,5 +1,5 @@
 ---
-title: Techniques de Backgrounding iOS
+title: Techniques de backgrounding iOS
 description: 'Ce document des liens vers des guides qui décrivent les différentes techniques de backgrounding dans iOS : tâches en arrière-plan, de service de transfert en arrière-plan, de récupération en arrière-plan et de notifications à distance.'
 ms.prod: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 00cca0c75cc79858f6edda5d6fb954611d81161b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61169604"
 ---
-# <a name="ios-backgrounding-techniques"></a>Techniques de Backgrounding iOS
+# <a name="ios-backgrounding-techniques"></a>Techniques de backgrounding iOS
 
 Dans les sections suivantes, nous explorerons les fonctionnalités suivantes d’iOS en même temps que les options de backgrounding existantes :
 

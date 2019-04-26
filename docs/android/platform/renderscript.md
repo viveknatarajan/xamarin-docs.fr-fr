@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: 8364310d23739c05ff97ea8aa8fa4c56f89ea40c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61216411"
 ---
 # <a name="an-introduction-to-renderscript"></a>Introduction à Renderscript
 
@@ -72,7 +72,7 @@ Tous les noyaux Renderscript seront encapsulés par un type qui est un descendan
 
 Ces deux types, le `StringIntrinsic` est pris en charge par Xamarin.Android. Ce guide explique comment utiliser des scripts intrinsèques dans une application Xamarin.Android.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Ce guide concerne les applications Xamarin.Android ce niveau d’API cible 17 ou version ultérieure. L’utilisation de _scripts utilisateur_ n’est pas couverte dans ce guide.
 

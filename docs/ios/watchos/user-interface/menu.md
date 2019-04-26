@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 7696c820ab6fdf19bdef46db31061fb5914e6cf4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60880690"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>watchOS (Force Touch) contrôle de Menu dans Xamarin
 
@@ -40,7 +40,7 @@ Jusqu'à quatre menu éléments peuvent être ajoutés au contrôle de menu. Ils
 
 - Titre, et
 - Image personnalisée, ou
-- Une image de système : accepter, ajouter, de bloc, refuser, Info, peut-être, de plus, couper, Pause, lire, répétez, Resume, partage, lecture aléatoire, l’orateur, la Corbeille.
+- Une image du système : Accepter, ajouter, bloc, de refuser, Info, peut-être, de plus, couper, Pause, lire, répétez, Resume, partage, lecture aléatoire, l’orateur, la Corbeille.
 
 Créer un `Action` en sélectionnant le **événements** section de la **propriétés** panneau, puis en tapant le nom de la méthode d’action. Une méthode partielle sera créée dans le code, qui peut être implémenté dans la classe de contrôleur d’interface, comme suit :
 

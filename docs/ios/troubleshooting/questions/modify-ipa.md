@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420874"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>Puis-je ajouter des fichiers à ou supprimer des fichiers à partir d’un fichier IPA après l’avoir généré dans Visual Studio ?
 
@@ -40,13 +40,13 @@ Pour cet exemple, supposez que le nom du projet Xamarin.iOS est `iPhoneApp1` et 
 
 7.  Décompressez le `.ipa` fichier dans une table temporaire `old/` dossier à l’aide de la commande suivante. Ajuster la `Ad-Hoc` et `iPhoneApp1` nomme en fonction des besoins de votre projet spécifique.
 
-    > répétition bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa - élément ancien /
+    > ditto -xk bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa old/
 
 8.  Conserver la `Terminal.app` fenêtre ouverte.
 
 9.  Supprimer les fichiers souhaités à partir de la `.ipa`. Vous pouvez les déplacer vers la Corbeille à l’aide de la recherche, ou supprimez-les sur la ligne de commande à l’aide `Terminal.app`. Pour afficher le contenu de la `Payload/iPhone` dans le Finder, cliquez sur le fichier et sélectionnez **afficher le contenu du Package**.
 
-10.  À l’aide de la même approche générale comme à l’étape 3, recherchez le fichier journal sous `~/Library/Logs/Xamarin/MonoTouchVS/` qui a le nom du projet et le `generated session id` dans le nom : ![](modify-ipa-images/build-log.png "localiser le journal de génération de projet dans le Finder")
+10.  À l’aide de la même approche générale comme à l’étape 3, recherchez le fichier journal sous `~/Library/Logs/Xamarin/MonoTouchVS/` qui a le nom du projet et le `generated session id` dans le nom : ![](modify-ipa-images/build-log.png "Recherchez le journal de génération de projet dans le Finder")
 
 11.  Ouvrez le journal de génération de l’étape 10, par exemple en double-cliquant dessus.
 

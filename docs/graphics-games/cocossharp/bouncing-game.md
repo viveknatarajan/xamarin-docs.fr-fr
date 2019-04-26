@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
 ms.openlocfilehash: 9fd6c9108695f58bd69a1c4aa307ca2e4be6dede
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61357489"
 ---
 # <a name="bouncinggame-details"></a>Détails de BouncingGame
 
@@ -27,7 +27,7 @@ Cette procédure pas à pas montre comment implémenter un jeu de balle rebondit
 
 Notre jeu terminé doit ressembler à ceci :
 
-![BouncingGame, terminé](bouncing-game-images/image1.png "BouncingGame, terminé")
+![BouncingGame, completed](bouncing-game-images/image1.png "BouncingGame, completed")
 
 ## <a name="unzipping-game-content"></a>Contenu de jeu décompression
 

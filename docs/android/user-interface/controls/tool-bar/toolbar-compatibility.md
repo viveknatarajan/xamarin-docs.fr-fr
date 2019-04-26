@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: 12c19cf1024b78e8be30b7c9f2652019e9854375
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300343"
 ---
 # <a name="toolbar-compatibility"></a>Compatibilité de la barre d’outils
 
@@ -49,7 +49,7 @@ Ensuite, ajoutez le [bibliothèque de prise en charge Android v7 AppCompat](http
 
 [![Package de capture d’écran de V7 Appcompat sélectionné dans gérer les packages NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
-Lorsque ce package NuGet est installé, plusieurs autres packages NuGet sont également installés si ce n’est pas déjà présent (tel que **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, et **Xamarin.Android.Support.Vector.Drawable**). Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas :, y compris un NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+Lorsque ce package NuGet est installé, plusieurs autres packages NuGet sont également installés si ce n’est pas déjà présent (tel que **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, et **Xamarin.Android.Support.Vector.Drawable**). Pour plus d’informations sur l’installation des packages NuGet, consultez [procédure pas à pas : Inclusion d’un package NuGet dans votre projet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Utiliser un thème de AppCompat et la barre d’outils

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61277945"
 ---
 # <a name="accessing-remote-data"></a>Accès aux données distantes
 
@@ -55,7 +55,7 @@ Figure 10-1 illustre l’interaction des classes qui lisent les données de cata
 
 [![](accessing-remote-data-images/catalogdata.png "Récupération des données à partir du microservice de catalogue")](accessing-remote-data-images/catalogdata-large.png#lightbox "récupération des données à partir du microservice de catalogue")
 
-**Figure 10-1**: récupération des données à partir du microservice de catalogue
+**Figure 10-1**: Récupération des données à partir du microservice de catalogue
 
 Lorsque le `CatalogView` cible, le `OnInitialize` méthode dans la `CatalogViewModel` classe est appelée. Cette méthode récupère les données du catalogue à partir du microservice de catalogue, comme illustré dans l’exemple de code suivant :
 
@@ -68,7 +68,7 @@ public override async Task InitializeAsync(object navigationData)
 }
 ```
 
-Cette méthode appelle la `GetCatalogAsync` méthode de la `CatalogService` instance qui a été injecté dans le `CatalogViewModel` par Autofac. Le code suivant montre l’exemple le `GetCatalogAsync` méthode :
+Cette méthode appelle la `GetCatalogAsync` méthode de la `CatalogService` instance qui a été injecté dans le `CatalogViewModel` par Autofac. L’exemple de code suivant montre la méthode `GetCatalogAsync` :
 
 ```csharp
 public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
@@ -160,7 +160,7 @@ Figure 10-2 montre l’interaction des classes qui envoient les données du pani
 
 [![](accessing-remote-data-images/basketdata.png "Envoi de données pour le microservice basket")](accessing-remote-data-images/basketdata-large.png#lightbox "envoi de données pour le microservice de panier d’achat")
 
-**Figure 10-2**: envoi de données pour le microservice de panier d’achat
+**Figure 10-2**: Envoi de données pour le microservice de panier d’achat
 
 Lorsqu’un élément est ajouté au panier d’achat, le `ReCalculateTotalAsync` méthode dans la `BasketViewModel` classe est appelée. Cette méthode met à jour la valeur totale des éléments dans le panier et envoie les données du panier d’achat pour le microservice basket, comme illustré dans l’exemple de code suivant :
 
@@ -233,7 +233,7 @@ Figure 10-3 montre les interactions entre les classes qui suppriment les donnée
 
 ![](accessing-remote-data-images/checkoutdata.png "Données de suppression à partir du microservice de panier d’achat")
 
-**Figure 10-3**: suppression de données à partir du microservice de panier d’achat
+**Figure 10-3**: Suppression des données à partir du microservice de panier d’achat
 
 Lorsque le processus de validation est appelé, le `CheckoutAsync` méthode dans la `CheckoutViewModel` classe est appelée. Cette méthode crée un nouvel ordre, avant d’effacer le panier, comme illustré dans l’exemple de code suivant :
 
@@ -298,7 +298,7 @@ Les applications distribuées, telles que l’application, de référence eShopO
 -   Un cache partagé, qui est accessible par plusieurs processus ou ordinateurs.
 -   Un cache privé, où les données sont stockées localement sur l’appareil qui exécute l’application.
 
-L’application mobile eShopOnContainers utilise un cache privé, où les données sont stockées localement sur l’appareil qui exécute une instance de l’application. Pour plus d’informations sur le cache utilisé par l’application de référence eShopOnContainers, consultez [.NET Microservices : Architecture pour les Applications .NET](https://aka.ms/microservicesebook).
+L’application mobile eShopOnContainers utilise un cache privé, où les données sont stockées localement sur l’appareil qui exécute une instance de l’application. Pour plus d’informations sur le cache utilisé par l’application de référence eShopOnContainers, consultez [.NET Microservices : Architecture pour les applications .NET en conteneurs](https://aka.ms/microservicesebook).
 
 > [!TIP]
 > Considérez le cache comme magasin de données temporaire susceptible de disparaître à tout moment. Assurez-vous que les données sont conservées dans le magasin de données d’origine, ainsi que le cache. Puis de réduire les risques de perte de données si le cache devient indisponible.
@@ -380,7 +380,7 @@ Si une demande échoue encore après un certain nombre de nouvelles tentatives, 
 
 L’application mobile eShopOnContainers n’implémente pas actuellement le modèle nouvelle tentative lors de la création de demandes web RESTful. Toutefois, le `CachedImage` contrôle, fourni par le [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) bibliothèque prend en charge la gestion des erreurs temporaires par une nouvelle tentative de chargement de l’image. En cas de chargement d’image, autre tentative sera effectuée. Le nombre de tentatives spécifié par le `RetryCount` propriété et les nouvelles tentatives se produit après un délai spécifié par le `RetryDelay` propriété. Si ces valeurs de propriété ne sont pas définies explicitement, par défaut les valeurs sont appliquées – 3 pour le `RetryCount` propriété et 250 MS pour la `RetryDelay` propriété. Pour plus d’informations sur la `CachedImage` du contrôle, consultez [la mise en cache des Images](#caching_images).
 
-L’application de référence eShopOnContainers implémente le modèle nouvelle tentative. Pour plus d’informations, y compris une discussion sur la manière de combiner le modèle de nouvelle tentative avec le `HttpClient` de classe, consultez [.NET Microservices : Architecture pour les Applications .NET](https://aka.ms/microservicesebook).
+L’application de référence eShopOnContainers implémente le modèle nouvelle tentative. Pour plus d’informations, y compris une discussion sur la manière de combiner le modèle de nouvelle tentative avec le `HttpClient` de classe, consultez [.NET Microservices : Architecture pour les applications .NET en conteneurs](https://aka.ms/microservicesebook).
 
 Pour plus d’informations sur le modèle nouvelle tentative, consultez le [de nouvelle tentative](/azure/architecture/patterns/retry/) modèle.
 
@@ -397,7 +397,7 @@ Le modèle disjoncteur peut empêcher une application à plusieurs reprises exé
 
 Un disjoncteur agit comme un proxy pour les opérations qui risquent d’échouer. Le proxy doit surveiller le nombre d’échecs récents qui se sont produites et utiliser ces informations pour décider s’il faut autoriser l’opération pour continuer, ou pour retourner une exception immédiatement.
 
-Actuellement, l’application mobile eShopOnContainers n’implémente pas le modèle disjoncteur. Cependant, n’est eShopOnContainers. Pour plus d’informations, consultez [.NET Microservices : Architecture pour les Applications .NET](https://aka.ms/microservicesebook).
+Actuellement, l’application mobile eShopOnContainers n’implémente pas le modèle disjoncteur. Cependant, n’est eShopOnContainers. Pour plus d’informations, consultez [.NET Microservices : Architecture pour les applications .NET en conteneurs](https://aka.ms/microservicesebook).
 
 > [!TIP]
 > Combiner les modèles de disjoncteur et réessayez. Une application peut combiner les modèles de disjoncteur et réessayez en utilisant le modèle de nouvelle tentative pour appeler une opération via un disjoncteur. Toutefois, la logique de nouvelle tentative doit être sensible aux exceptions retournées par le disjoncteur et abandonner les nouvelles tentatives si le disjoncteur indique qu’une erreur n’est pas temporaire.
@@ -416,4 +416,4 @@ Lors de la communication avec les API web, les applications doivent être sensib
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF de 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)

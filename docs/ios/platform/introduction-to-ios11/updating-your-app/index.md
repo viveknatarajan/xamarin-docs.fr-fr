@@ -1,5 +1,5 @@
 ---
-title: La mise à jour de votre application pour iOS 11
+title: Mise à jour de votre application avec iOS 11
 description: Ce document contient des liens vers des guides différents qui décrivent les nouvelles fonctionnalités qui permettent aux développeurs de Xamarin.iOS avec la version d’iOS 11. Par exemple, change de mises à jour de la conception visuelle, App Store, et met à jour de l’icône de l’application.
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
 ms.openlocfilehash: 3193f27c30080a4335abfe969acb3c8b33516469
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386341"
 ---
-# <a name="updating-your-app-to-ios-11"></a>La mise à jour de votre application pour iOS 11
+# <a name="updating-your-app-to-ios-11"></a>Mise à jour de votre application avec iOS 11
 
 Dans iOS 11, Apple a introduit les mises à jour de l’architecture, de nouvelles modifications visual et d’un processus de Connect de mise à jour iTunes. Ce guide explore de chacune de ces modifications, qui vous aideront à faire passer votre application Xamarin.iOS mis à jour pour iOS 11.
 

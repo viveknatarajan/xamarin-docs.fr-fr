@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 835dccaea79467582f56fd4b8b6b3b8f42acd632
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392325"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>La mise à jour d’une application Xamarin.iOS en arrière-plan
 
@@ -162,4 +162,4 @@ Toutefois, APNs permettra de notifications en mode silencieux une « superposit
 
 Dans cette section, nous avons couvert les différentes options de l’actualisation du contenu en arrière-plan pour exécuter des tâches qui ne tiennent pas dans une catégorie nécessaire à l’arrière-plan. Maintenant, nous allons voir certains de ces API en action.
 
- [Étape suivante :-4ème partie - iOS Backgrounding procédures pas à pas](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+ [Suivant : 4ème partie - iOS Backgrounding procédures pas à pas](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)

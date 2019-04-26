@@ -1,7 +1,15 @@
+---
+ms.openlocfilehash: cb29cf52401e7ba8246fc424f65368a38f7e4254
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61024057"
+---
 
-|Name|Version|Niveau d’API|Final|Générer du Code de Version|
+|Nom|Version|Niveau d’API|Final|Générer du Code de Version|
 |--- |--- |--- |--- |--- |
-|Secteur|9.0|28|Août 2018|`BuildVersionCodes.P`|
+|Graphique à secteurs|9.0|28|Août 2018|`BuildVersionCodes.P`|
 |Oreo|8.1|27|Déc 2017|`BuildVersionCodes.OMr1`|
 |Oreo|8.0|26|Août 2017|`BuildVersionCodes.O`|
 |Nougat|7.1|25|Décembre 2016|`BuildVersionCodes.NMr1`|

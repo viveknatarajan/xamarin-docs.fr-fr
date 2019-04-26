@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/17/2018
 ms.openlocfilehash: 3beb511c03b328ecea824bf89355d056df003f3e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946158"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Démonstration de cycle de vie d’application pour Xamarin.iOS
 
@@ -77,4 +77,4 @@ pour fermer l’application iOS. Notez que `WillTerminate` n’est pas appelée,
 
 ## <a name="related-links"></a>Liens connexes
 
-- [LifecycleDemo (exemple)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
+- [LifecycleDemo (sample)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)

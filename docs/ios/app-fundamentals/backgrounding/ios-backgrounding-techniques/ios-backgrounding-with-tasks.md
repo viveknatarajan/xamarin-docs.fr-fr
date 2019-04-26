@@ -1,5 +1,5 @@
 ---
-title: iOS Backgrounding avec des tâches
+title: Backgrounding iOS avec des tâches
 description: Ce document décrit comment utiliser des tâches en arrière-plan pour effectuer des tâches longues après qu’une application est placée en arrière-plan.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170688"
 ---
-# <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding avec des tâches
+# <a name="ios-backgrounding-with-tasks"></a>Backgrounding iOS avec des tâches
 
 La façon la plus simple pour effectuer backgrounding dans iOS consiste à diviser vos exigences backgrounding en tâches et exécuter les tâches en arrière-plan. Les tâches sont sous une limite de temps stricte et obtiennent généralement environ 600 secondes (10 minutes) de temps de traitement après qu’une application a déplacé à l’arrière-plan sur iOS 6 et moins de 10 minutes sur iOS 7 +.
 

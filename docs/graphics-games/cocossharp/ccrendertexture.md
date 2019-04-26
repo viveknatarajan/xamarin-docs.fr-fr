@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
 ms.openlocfilehash: 95227689303a8367785202956a6aaef921c1c593
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085203"
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>Performances et des effets visuels avec CCRenderTexture
 
@@ -67,7 +67,7 @@ L’exemple est codé pour exposer deux problèmes qui peuvent se produire lors 
 
 ### <a name="card-draw-calls"></a>Appels de dessin de carte
 
-Notre code est une simplification de ce qui peut être trouvé dans un intégral *jeu de cartes collectable* (CCG) tel que « Magic : la collecte » ou « Hearthstone ». Notre jeu affiche à la fois les trois cartes uniquement et a un petit nombre d’unités possibles (bleu, vert et orange). En revanche, un jeu complet peut avoir plus de vingt cartes à l’écran à un moment donné, et les joueurs peuvent avoir des centaines de cartes sélectionnables lors de la création de leurs jeux. Bien que notre jeu ne sont pas actuellement affectés par des problèmes de performances, un jeu complet de mise en œuvre similaire peut.
+Notre code est une simplification de ce qui peut être trouvé dans un intégral *jeu de cartes collectable* (CCG) tel que « magique : La collecte » ou « Hearthstone ». Notre jeu affiche à la fois les trois cartes uniquement et a un petit nombre d’unités possibles (bleu, vert et orange). En revanche, un jeu complet peut avoir plus de vingt cartes à l’écran à un moment donné, et les joueurs peuvent avoir des centaines de cartes sélectionnables lors de la création de leurs jeux. Bien que notre jeu ne sont pas actuellement affectés par des problèmes de performances, un jeu complet de mise en œuvre similaire peut.
 
 CocosSharp fournit des détails sur les performances de rendu en exposant les appels de dessin effectuées par trame. Notre `GameLayer.AddedToScene` méthode indique le `GameView.Stats.Enabled` à `true`, se traduisant par des informations de performances affichées en bas à gauche de l’écran :
 

@@ -1,5 +1,5 @@
 ---
-title: 'Pourquoi ma build iOS échoue-t-elle avec : aucun clés de signature de code iPhone valide ne trouvée dans le trousseau ?'
+title: Pourquoi ma build iOS échoue avec le message disant qu’aucun code iPhone valide pour signer les clés n’a été trouvé dans le trousseau ?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9DF24C46-D521-4112-9B21-52EA4E8D90D0
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: fe267db1f83695b3d0e8f3d828f91e01b56ba8ee
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61419663"
 ---
-# <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Pourquoi ma build iOS échoue-t-elle avec : aucun clés de signature de code iPhone valide ne trouvée dans le trousseau ?
+# <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Pourquoi ma build iOS échoue avec le message disant qu’aucun code iPhone valide pour signer les clés n’a été trouvé dans le trousseau ?
 
 ## <a name="cause-of-the-error"></a>Cause de l’erreur
 Ce message d’erreur se produit lorsque le projet en question a besoin d’informations d’identification de signature de code valides mais ne parvenez pas à les trouver. Signature de code est requise pour le test et de déploiements sur des appareils iOS physiques ; mais aussi Ad-hoc & application stocker les builds. 
@@ -35,7 +35,7 @@ Un bogue s’est produite dans Xamarin.Visual Studio 3.11, qui a provoqué le pr
 ### <a name="how-to-fix"></a>Comment la corriger
 Vous pouvez contourner ce problème en supprimant le `<CodesignEntitlements>` indicateur dans le débogage des builds dans le fichier .csproj. Vous pouvez procéder comme suit :
 
-*Avertissement : Erreur dans les fichiers .csproj peut résilier votre projet, il est conseillé de sauvegarder vos fichiers avant de tenter cette.*
+*Avertissement : Erreur dans les fichiers .csproj peut résilier votre projet, il est conseillé de sauvegarder vos fichiers avant de tenter cette.*
 
 1. Cliquez avec le bouton droit sur le projet iOS dans le volet de la solution et sélectionnez **décharger le projet**
 2. Avec le bouton droit, cliquez sur le projet à nouveau et sélectionnez **modifier de [ProjectName] .csproj**

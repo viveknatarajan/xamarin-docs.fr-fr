@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: ad1c7f94467c6f32b9108ab7f6abe85d31679d3a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60952122"
 ---
 # <a name="large-page-titles-on-ios"></a>Grand titres des pages sur iOS
 
@@ -30,7 +30,7 @@ Cette spécifiques à la plateforme iOS est utilisé pour afficher le titre de p
 </NavigationPage>
 ```
 
-Il peut également être consommé à partir de c# à l’aide de l’API fluent :
+Il peut également être consommé à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -54,7 +54,7 @@ Condition que les grands titres sont activés sur le [ `NavigationPage` ](xref:X
 </ContentPage>
 ```
 
-Vous pouvez également le comportement de la page peut être substitué à partir de c# à l’aide de l’API fluent :
+Vous pouvez également le comportement de la page peut être substitué à partir de C# à l’aide de l’API fluent :
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;

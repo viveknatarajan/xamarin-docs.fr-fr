@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 41a9ec90b4b734dde7a982ac3d4b2e7b2082321c
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61413072"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Disposition automatique avec le Concepteur de Xamarin pour iOS
 
@@ -20,7 +20,7 @@ Disposition automatique (également appelée « disposition adaptatif ») est 
 
 Dans ce guide, nous présentons les contraintes et comment les utiliser dans le Concepteur de Xamarin iOS. Ce guide ne couvre pas l’utilisation des contraintes par programmation. Pour plus d’informations sur l’utilisation par programmation de la disposition automatique, reportez-vous à la [documentation Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Le Concepteur de Xamarin pour iOS est disponible dans Visual Studio pour Mac dans Visual Studio 2017 et version ultérieure sur Windows.
 

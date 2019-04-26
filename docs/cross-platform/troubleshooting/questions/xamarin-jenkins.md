@@ -8,11 +8,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 06/05/2018
 ms.openlocfilehash: c2e409b796d5ef2525079e02aafdd0c6e8db5d81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158934"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Pourquoi n’est pas Jenkins prises en charge Microsoft ?
 
@@ -47,7 +47,7 @@ Vos options permettant de définir l’emplacement du SDK peuvent varier selon l
 ### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins signale une licence Xamarin non valide
 Les messages d’erreur pour ce problème sont généralement quelque chose comme
 
-> Erreur de XA9008 : génération à partir de la ligne de commande requiert une licence entreprise
+> Erreur de XA9008 : Génération à partir de la ligne de commande requiert une licence entreprise
 
 ou
 

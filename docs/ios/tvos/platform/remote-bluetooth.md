@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932995"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri Remote et Bluetooth des contrôleurs de tvOS dans Xamarin
 
@@ -51,7 +51,7 @@ Siri distant a des utilisations attendues au sein de votre application tvOS et l
 
 Touch Surface de la Siri Remote est en mesure de détecter une variété de mouvements d’un seul doigt auquel vous pouvez répondre dans votre application Xamarin.tvOS :
 
-|Effectuez un balayage|Clic|Appuyez sur|
+|Balayer|Clic|Taper|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |Déplace la sélection (focus) entre les éléments d’interface utilisateur sur l’écran (haut, bas à gauche, avec le bouton droit). Balayant peut être utilisé pour faire défiler les grandes listes de contenu rapidement à l’aide de l’inertie.|Active l’élément sélectionné (actif) ou joue le rôle du bouton principal dans un jeu. Cliquez et maintenez peuvent activer des menus contextuels ou les fonctions secondaires.|À la légère en appuyant sur la Surface tactile sur les bords agit comme des boutons directionnels sur un boîtier, déplacer le focus, haut, bas, gauche ou droite en fonction de la zone de l’appui sur. Selon l’application, peut être utilisé pour afficher les contrôles masqués.|

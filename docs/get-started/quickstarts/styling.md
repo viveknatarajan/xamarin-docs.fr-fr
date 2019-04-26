@@ -1,5 +1,5 @@
 ---
-title: Style d’une application de Xamarin.Forms multiplateforme
+title: Styliser une application Xamarin.Forms multiplateforme
 description: Cet article explique comment une application de Xamarin.Forms multiplateforme de style avec les styles XAML.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -10,11 +10,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
 ms.openlocfilehash: 56f8632c9cc7d170b4c6594fd51e6aa3e92ad02b
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191241"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Style d’une Application Xamarin.Forms d’inter-plateformes
 

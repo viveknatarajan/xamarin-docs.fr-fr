@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
 ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61076675"
 ---
 # <a name="resource-dictionaries"></a>Dictionnaires de ressources
 
@@ -149,7 +149,7 @@ La version d’origine `PageBackgroundColor` et `NormalTextColor` instances, dé
 
 Toutefois, notez que la barre de l’arrière-plan de la [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) est toujours jaune, étant donné que le [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) propriété est définie sur la valeur de la `PageBackgroundColor` ressource définie dans l’application niveau `ResourceDictionary`.
 
-Voici une autre façon de réfléchir à `ResourceDictionary` priorité : lorsque XAML de l’analyseur rencontre un `StaticResource`, il recherche une clé correspondante en parcourant les via l’arborescence visuelle, à l’aide de la première correspondance qu’il trouve. Si cette recherche se termine à la page et la clé n’a pas encore été trouvée, l’analyseur XAML recherche le `ResourceDictionary` attaché à la `App` objet. Si la clé est toujours introuvable, une exception est levée.
+Voici une autre façon de réfléchir à `ResourceDictionary` priorité : Lorsque l’analyseur XAML rencontre un `StaticResource`, il recherche une clé correspondante en parcourant les via l’arborescence visuelle, à l’aide de la première correspondance qu’il trouve. Si cette recherche se termine à la page et la clé n’a pas encore été trouvée, l’analyseur XAML recherche le `ResourceDictionary` attaché à la `App` objet. Si la clé est toujours introuvable, une exception est levée.
 
 ## <a name="stand-alone-resource-dictionaries"></a>Dictionnaires de ressources autonomes
 
@@ -195,7 +195,7 @@ Vous pouvez instancier `MyResourceDictionary` en le plaçant entre une paire de 
 
 Une instance de `MyResourceDictionary` est défini sur le `Resources` propriété de la `ContentPage` objet.
 
-Toutefois, cette approche présente certaines limitations : le `Resources` propriété de la `ContentPage` fait référence à cette seule `ResourceDictionary`. Dans la plupart des cas, vous souhaitez que l’option d’y compris d’autres `ResourceDictionary` instances et peut-être autres ressources également.
+Toutefois, cette approche présente certaines limitations : Le `Resources` propriété de la `ContentPage` fait référence à cette seule `ResourceDictionary`. Dans la plupart des cas, vous souhaitez que l’option d’y compris d’autres `ResourceDictionary` instances et peut-être autres ressources également.
 
 Cette tâche nécessite des dictionnaires de ressources fusionnés.
 

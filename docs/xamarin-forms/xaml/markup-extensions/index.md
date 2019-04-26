@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075479"
 ---
 # <a name="xaml-markup-extensions"></a>Extensions de balisage XAML
 
@@ -36,7 +36,7 @@ Dans les deux cas, la chaîne de texte la valeur est la `Color` attribut est con
 
 Vous préférerez peut-être à la place définir le `Color` attribut à partir d’une valeur stockée dans un dictionnaire de ressources, ou à partir de la valeur d’une propriété statique d’une classe que vous avez créée ou à partir d’une propriété de type `Color` d’un autre élément dans la page, ou il est construit à partir de Séparez les valeurs de teinte, saturation et de luminosité.
 
-Toutes ces options sont possibles à l’aide des extensions de balisage XAML. Mais ne vous laissez l’expression « extensions de balisage » doivent plus vous effrayer : extensions de balisage XAML sont *pas* extensions au format XML. Même avec les extensions de balisage XAML, XAML est toujours XML juridique.
+Toutes ces options sont possibles à l’aide des extensions de balisage XAML. Mais ne vous laissez l’expression « extensions de balisage » effrayer par : Extensions de balisage XAML sont *pas* extensions au format XML. Même avec les extensions de balisage XAML, XAML est toujours XML juridique.
 
 Une extension de balisage est simplement un moyen différent pour exprimer un attribut d’un élément. Extensions de balisage XAML sont généralement identifiables par un paramètre d’attribut qui est placé entre accolades :
 

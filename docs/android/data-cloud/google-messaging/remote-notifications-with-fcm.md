@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
 ms.openlocfilehash: 0c84f530f759285c2cfc71f60d7b6f80fba6a03d
-ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53814035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61018943"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notifications à distance avec Firebase Cloud Messaging
 
@@ -802,6 +802,6 @@ Cette procédure pas à pas détaillé les étapes d’implémentation Firebase 
 
 ## <a name="related-links"></a>Liens connexes
 
-- [FCMNotifications (exemple)](https://developer.xamarin.com/samples/monodroid/Firebase/FCMNotifications)
+- [FCMNotifications (sample)](https://developer.xamarin.com/samples/monodroid/Firebase/FCMNotifications)
 - [Messagerie cloud Firebase](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)
 - [À propos des Messages FCM](https://firebase.google.com/docs/cloud-messaging/concept-options)

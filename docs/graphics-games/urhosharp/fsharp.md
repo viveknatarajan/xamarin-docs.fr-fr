@@ -1,40 +1,40 @@
 ---
-title: 'Programmation UrhoSharp avec F #'
-description: 'Ce document décrit comment créer une simple application hello world UrhoSharp avec F # dans Visual Studio pour Mac.'
+title: Programmation UrhoSharp avecF#
+description: Ce document décrit comment créer un simple hello world UrhoSharp application à l’aide F# dans Visual Studio pour Mac.
 ms.prod: xamarin
 ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 99e8f8bf04465d0d61086139ba9889eae141207e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61160600"
 ---
-# <a name="programming-urhosharp-with-f"></a>Programmation UrhoSharp avec F #
+# <a name="programming-urhosharp-with-f"></a>Programmation UrhoSharp avecF#
 
-UrhoSharp peut être programmé avec F # avec les mêmes bibliothèques et concepts utilisés par les programmeurs c#. Le [à l’aide de UrhoSharp](~/graphics-games/urhosharp/using.md) article donne une vue d’ensemble du moteur UrhoSharp et doivent être lues avant cet article.
+UrhoSharp peut être programmé avec F# avec les mêmes bibliothèques et concepts utilisés par C# les programmeurs. Le [à l’aide de UrhoSharp](~/graphics-games/urhosharp/using.md) article donne une vue d’ensemble du moteur UrhoSharp et doivent être lues avant cet article.
 
 Telles que de nombreuses bibliothèques origine dans le monde de C++, de nombreuses fonctions de UrhoSharp retournent des valeurs booléennes ou des entiers indiquant la réussite ou l’échec. Vous devez utiliser `|> ignore` pour ignorer ces valeurs.
 
-Le [exemple de programme](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) est un « Hello World » pour UrhoSharp à partir de F #.
+Le [exemple de programme](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) est un « Hello World » pour UrhoSharp de F#.
 
 ## <a name="creating-an-empty-project"></a>Création d’un projet vide
 
-Il n’existe aucun modèle F # pour UrhoSharp encore disponible, par conséquent, pour créer votre propre projet UrhoSharp que vous pouvez démarrer avec la [exemple](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) ou procédez comme suit :
+Il y a aucune F# modèles pour UrhoSharp encore disponible, par conséquent, pour créer votre propre projet UrhoSharp vous pouvez soit commencer par le [exemple](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) ou procédez comme suit :
 
-1. À partir de Visual Studio pour Mac, créer un nouveau **Solution**. Choisissez **iOS > application > application avec affichage unique** et sélectionnez **F #** comme langage d’implémentation. 
+1. À partir de Visual Studio pour Mac, créer un nouveau **Solution**. Choisissez **iOS > application > application avec affichage unique** et sélectionnez **F#** comme langage d’implémentation. 
 1. Supprimer le **Main.storyboard** fichier. Ouvrir le **Info.plist** fichier puis, dans le **iPhone / iPod des informations de déploiement** volet, supprimer le `Main` chaîne dans le **Interface principale** liste déroulante.
 1. Supprimer le **ViewController.fs** également le fichier.
 
 ## <a name="building-hello-world-in-urho"></a>Création de Hello World dans Urho
 
-Vous êtes maintenant prêt à commencer à définir les classes de votre jeu. Au minimum, vous devez définir une sous-classe de `Urho.Application` et substituer sa `Start` (méthode). Pour créer ce fichier, avec le bouton droit sur votre projet F #, choisissez **ajouter un nouveau fichier...**  et ajoutez une classe F # vide à votre projet. Le nouveau fichier sera ajouté à la fin de la liste des fichiers dans votre projet, mais vous devez faire glisser afin qu’il apparaisse *avant* il est utilisé dans **AppDelegate.fs**.
+Vous êtes maintenant prêt à commencer à définir les classes de votre jeu. Au minimum, vous devez définir une sous-classe de `Urho.Application` et substituer sa `Start` (méthode). Pour créer ce fichier, cliquez sur votre F# de projet, choisissez **ajouter un nouveau fichier...**  et ajoutez vide F# classe à votre projet. Le nouveau fichier sera ajouté à la fin de la liste des fichiers dans votre projet, mais vous devez faire glisser afin qu’il apparaisse *avant* il est utilisé dans **AppDelegate.fs**.
 
 1. Ajoutez une référence au package NuGet de Urho.
-1. À partir d’un projet existant de Urho, copier les répertoires (grandes) **CoreData /** et **données /** dans votre projet **ressources /** directory. Dans votre projet F #, cliquez sur le **ressources** dossier et utilisez **ajouter / ajouter un dossier existant** pour ajouter tous ces fichiers à votre projet.
+1. À partir d’un projet existant de Urho, copier les répertoires (grandes) **CoreData /** et **données /** dans votre projet **ressources /** directory. Dans votre F# du projet, avec le bouton droit sur le **ressources** dossier et utilisez **ajouter / ajouter un dossier existant** pour ajouter tous ces fichiers à votre projet.
 
 Structure de votre projet doit maintenant ressembler à :
 

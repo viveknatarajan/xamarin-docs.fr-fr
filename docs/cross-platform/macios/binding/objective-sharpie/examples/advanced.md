@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: c4f7f1e9702fb2ee0f5525343a52e3aacd85d68c
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200278"
 ---
 # <a name="advanced-manual-real-world-example"></a>Avancé (manuel) exemple du monde réel
 
@@ -141,4 +141,4 @@ Pour obtenir une description détaillée du processus de liaison, consultez notr
 ## <a name="related-links"></a>Liens associés
 
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

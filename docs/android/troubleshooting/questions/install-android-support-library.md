@@ -1,5 +1,5 @@
 ---
-title: Comment puis-je installer manuellement les bibliothèques de prise en charge Android requises par les packages Xamarin.Android.Support ?
+title: Comment installer manuellement les bibliothèques de prise en charge Android requises par les packages Xamarin.Android.Support ?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A9CB8CA8-8A6D-405E-B84C-A16CE452C0F7
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 84ee33fe174c01656144e55bc3cbba7c773950fd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153435"
 ---
-# <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Comment puis-je installer manuellement les bibliothèques de prise en charge Android requises par les packages Xamarin.Android.Support ?
+# <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Comment installer manuellement les bibliothèques de prise en charge Android requises par les packages Xamarin.Android.Support ?
 
 ## <a name="example-steps-for-xamarinandroidsupportv4"></a>Exemples d’étapes pour Xamarin.Android.Support.v4 
 
@@ -55,7 +55,7 @@ F16A3455987DBAE5783F058F19F7FCDF
 
 Copie **android\_m2repository.zip** dans le **% LocalAppData%\\Xamarin\\zips\\**  dossier. Renommez le fichier pour utiliser le hachage MD5 du hachage MD5 précédente étape de calcul. Exemple :
 
-**%LocalAppData%\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
+**%LOCALAPPDATA%\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
 
 (Facultatif) Décompressez le fichier dans **% LocalAppData%\\Xamarin\\Xamarin.Android.Support.v4\\23.4.0.0\\contenu\\**  (création d’un **contenu\\m2repository** sous-répertoire). Si vous ignorez cette étape, la première build qui utilise la bibliothèque prendra un peu plus de temps, car il doit effectuer cette étape.
 Le numéro de version du sous-répertoire (**23.4.0.0** dans cet exemple) n’est pas tout à fait identique à la version du package NuGet. Vous pouvez utiliser `ildasm` pour trouver le numéro de version correct :

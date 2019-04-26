@@ -9,11 +9,11 @@ ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
 ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384915"
 ---
 # <a name="xamarin-live-reload-preview"></a>Rechargement en direct de Xamarin (version préliminaire)
 
@@ -119,25 +119,25 @@ Non. En fait, vous pouvez même démarrer toutes les cibles votre application pr
 * Recharger les ressources à l’échelle de l’application (par exemple, **App.xaml** ou partagé les dictionnaires de ressources), la réinitialisation de navigation de l’application. 
 * Rechargement de ContentView actuellement nécessite de recharger la page conteneur.
 * Les éléments contenant AutomationId peuvent provoquer un échec de rechargement.
-* La modification XAML pendant le débogage UWP peut entraîner un blocage de l’exécution. Solution de contournement : Utilisez **exécuter sans débogage (Ctrl + F5)** au lieu de **démarrer le débogage (F5)**.
+* La modification XAML pendant le débogage UWP peut entraîner un blocage de l’exécution. Solution de contournement : Utilisez **exécuter sans débogage (Ctrl + F5)** au lieu de **démarrer le débogage (F5)**.
 
-## <a name="troubleshooting"></a>Dépannage
+## <a name="troubleshooting"></a>Résolution des problèmes
 
 ### <a name="error-codes"></a>Codes d’erreur
 
-* **XLR001**: *le projet actuel fait référence à 'Xamarin.LiveReload' NuGet package version « [VERSION] », mais l’extension Xamarin Live recharger requiert la version « [VERSION] ».*
+* **XLR001**: *Le projet actuel fait référence à 'Xamarin.LiveReload' NuGet package version « [VERSION] », mais l’extension Xamarin Live recharger requiert la version « [VERSION] ».*
 
   Afin de permettre une itération rapide et l’évolution de la fonctionnalité de rechargement en direct, le package nuget et l’extension de Visual Studio doivent correspondre exactement. Mettre à jour votre package nuget pour la même version de l’extension que vous avez installé.
 
-* **XLR002**: *rechargement en direct exige au moins que la propriété « MqttHostname » lors de la génération à partir de la ligne de commande. Également définir 'EnableLiveReload' à 'false' pour désactiver la fonctionnalité.*
+* **XLR002**: *Le rechargement en direct nécessite au moins la propriété « MqttHostname » lors de la génération à partir de la ligne de commande. Également définir 'EnableLiveReload' à 'false' pour désactiver la fonctionnalité.*
 
   Les propriétés requises par le rechargement en direct ne sont pas disponibles quand générer à partir de la ligne de commande (ou dans l’intégration continue) et doit par conséquent être fourni explicitement. 
 
-* **XLR003**: *package nuget de rechargement en direct nécessite l’installation de l’extension Xamarin Live recharger Visual Studio.*
+* **XLR003**: *Le package nuget rechargement en direct exige l’installation de l’extension Xamarin Live recharger Visual Studio.*
 
   A tenté de générer un projet qui référence le package nuget de rechargement en direct, mais l’Extension Visual n’est pas installée.  
 
-* *Exception lors du chargement des assemblys : System.IO.FileNotFoundException : Impossible de charger l’assembly ' Xamarin.Live.Reload, Version = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
+* *Exception lors du chargement des assemblys : System.IO.FileNotFoundException: Could not load assembly 'Xamarin.Live.Reload, Version=0.3.27.0, Culture=neutral, PublicKeyToken='.*
 
   Le projet d’hôte doit être à l’aide de `PackageReference` au lieu de `packages.config`
 

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
 ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085016"
 ---
 # <a name="platform-features"></a>Fonctionnalités de la plateforme
 
@@ -46,7 +46,7 @@ Android 3.0 a introduit des Fragments, en montrant comment prendre en charge des
 Ce guide explique comment Android 6.0 prend en charge _la liaison application_, une technique qui permet aux applications mobiles répondre aux URL sur les sites Web. Il étudie la façon d’implémenter la liaison application dans une application Android 6.0 et comment configurer un site Web pour accorder des autorisations à l’application mobile pour gérer les liens d’application pour le domaine.
 
 
-##  <a name="android-9-pieandroidplatformpiemd"></a>[Graphique à secteurs 9 Android](~/android/platform/pie.md)
+##  <a name="android-9-pieandroidplatformpiemd"></a>[Android 9 Pie](~/android/platform/pie.md)
 
 Cet article fournit un aperçu des nouvelles fonctionnalités de graphique à secteurs Android, explique comment préparer Xamarin.Android pour le développement Android à secteurs et fournit un exemple d’application qui illustre l’utilisation du graphique à secteurs Android affichage découpage et notification Nouveautés dans Applications Xamarin.Android.
 

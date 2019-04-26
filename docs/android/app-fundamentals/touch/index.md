@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 7f957c9ff5a0e7c3a0821978703860ed2f723a92
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013122"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Touchers et gestes dans Xamarin.Android
 
@@ -33,7 +33,7 @@ Ce guide suit un format similaire pour chaque système d’exploitation : tout 
 ## <a name="sections"></a>Sections
 
 -  [Entrées tactiles dans Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Procédure pas à pas : Utilisation des entrées tactiles dans Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+-  [Procédure pas à pas : À l’aide des fonctions tactiles dans Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
 -  [Suivi tactile multipoint](touch-tracking.md)
 
 ## <a name="summary"></a>Récapitulatif
@@ -46,4 +46,4 @@ Dans ce guide, nous avons examiné des entrées tactiles dans Android. Pour les 
 
 - [Android Touch Démarrer (exemple)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
 - [Android Touch finale (exemple)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final)
-- [Peinture avec les doigts (exemple)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint)
+- [FingerPaint (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint)

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
 ms.openlocfilehash: da8aacac1f282fefb6b8d0e84cae168cf3a7148b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953363"
 ---
 # <a name="creating-a-custom-contentprovider"></a>Création d’un ContentProvider personnalisé
 
@@ -319,4 +319,4 @@ protected void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 ## <a name="related-links"></a>Liens associés
 
-- [SimpleContentProvider (exemple)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
+- [SimpleContentProvider (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)

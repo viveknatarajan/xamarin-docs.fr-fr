@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: c61b3fee9009afb86ccd3fd0e16d7812a8e90feb
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384139"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Contrôles de la caméra manuelle dans Xamarin.iOS
 
@@ -45,7 +45,7 @@ La mise entre parenthèses de Capture est basée sur les paramètres des contrô
 
 En termes simples, mise entre parenthèses de Capture est une rafale de toujours images prises avec un large éventail de paramètres d’image à l’image.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Les éléments suivants sont requis pour effectuer les étapes présentées dans cet article :
 

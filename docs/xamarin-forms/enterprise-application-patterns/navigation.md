@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: d306b0c1c0d08129671e27b96911ec771acb658e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61298934"
 ---
 # <a name="enterprise-app-navigation"></a>Enterprise Application Navigation
 
@@ -39,14 +39,14 @@ Un `NavigationService` classe est généralement appelée à partir des modèles
 L’application mobile d’eShopOnContainers utilise la `NavigationService` classe pour fournir une navigation de modèle en premier affichage. Cette classe implémente le `INavigationService` interface, ce qui est indiqué dans l’exemple de code suivant :
 
 ```csharp
-public interface INavigationService  
+public interface INavigationService  
 {  
-    ViewModelBase PreviousPageViewModel { get; }  
-    Task InitializeAsync();  
-    Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase;  
-    Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : ViewModelBase;  
-    Task RemoveLastFromBackStackAsync();  
-    Task RemoveBackStackAsync();  
+    ViewModelBase PreviousPageViewModel { get; }  
+    Task InitializeAsync();  
+    Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase;  
+    Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : ViewModelBase;  
+    Task RemoveLastFromBackStackAsync();  
+    Task RemoveBackStackAsync();  
 }
 ```
 
@@ -76,7 +76,7 @@ builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstanc
 Le `INavigationService` interface est résolue dans le `ViewModelBase` constructeur de classe, comme illustré dans l’exemple de code suivant :
 
 ```csharp
-NavigationService = ViewModelLocator.Resolve<INavigationService>();
+NavigationService = ViewModelLocator.Resolve<INavigationService>();
 ```
 
 Cette commande renvoie une référence à la `NavigationService` objet qui est stocké dans le conteneur d’injection de dépendance Autofac, qui est créé par le `InitNavigation` méthode dans la `App` classe. Pour plus d’informations, consultez [naviguer lorsque l’application est lancée](#navigating_when_the_app_is_launched).
@@ -90,17 +90,17 @@ Xamarin.Forms fournit le [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)
 Au lieu d’utiliser le [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) classe directement, l’enveloppe d’application eShopOnContainers le `NavigationPage` classe dans le `CustomNavigationView` classe, comme indiqué dans l’exemple de code suivant :
 
 ```csharp
-public partial class CustomNavigationView : NavigationPage  
+public partial class CustomNavigationView : NavigationPage  
 {  
-    public CustomNavigationView() : base()  
-    {  
-        InitializeComponent();  
-    }  
+    public CustomNavigationView() : base()  
+    {  
+        InitializeComponent();  
+    }  
 
-    public CustomNavigationView(Page root) : base(root)  
-    {  
-        InitializeComponent();  
-    }  
+    public CustomNavigationView(Page root) : base(root)  
+    {  
+        InitializeComponent();  
+    }  
 }
 ```
 
@@ -109,20 +109,20 @@ L’objectif de ce retour à la ligne est pour faciliter l’application d’un 
 Navigation est effectuée à l’intérieur des classes de modèle de vue en appelant une de la `NavigateToAsync` méthodes, en spécifiant le type de modèle de vue pour la page accédée à, comme illustré dans l’exemple de code suivant :
 
 ```csharp
-await NavigationService.NavigateToAsync<MainViewModel>();
+await NavigationService.NavigateToAsync<MainViewModel>();
 ```
 
 Le code suivant montre l’exemple le `NavigateToAsync` méthodes fournies par la `NavigationService` classe :
 
 ```csharp
-public Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase  
+public Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase  
 {  
-    return InternalNavigateToAsync(typeof(TViewModel), null);  
+    return InternalNavigateToAsync(typeof(TViewModel), null);  
 }  
 
-public Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : ViewModelBase  
+public Task NavigateToAsync<TViewModel>(object parameter) where TViewModel : ViewModelBase  
 {  
-    return InternalNavigateToAsync(typeof(TViewModel), parameter);  
+    return InternalNavigateToAsync(typeof(TViewModel), parameter);  
 }
 ```
 
@@ -131,50 +131,50 @@ Chaque méthode permet de n’importe quelle classe de modèle de vue qui dériv
 Le `InternalNavigateToAsync` méthode exécute la requête de navigation et est illustré dans l’exemple de code suivant :
 
 ```csharp
-private async Task InternalNavigateToAsync(Type viewModelType, object parameter)  
+private async Task InternalNavigateToAsync(Type viewModelType, object parameter)  
 {  
-    Page page = CreatePage(viewModelType, parameter);  
+    Page page = CreatePage(viewModelType, parameter);  
 
-    if (page is LoginView)  
-    {  
-        Application.Current.MainPage = new CustomNavigationView(page);  
-    }  
-    else  
-    {  
-        var navigationPage = Application.Current.MainPage as CustomNavigationView;  
-        if (navigationPage != null)  
-        {  
-            await navigationPage.PushAsync(page);  
-        }  
-        else  
-        {  
-            Application.Current.MainPage = new CustomNavigationView(page);  
-        }  
-    }  
+    if (page is LoginView)  
+    {  
+        Application.Current.MainPage = new CustomNavigationView(page);  
+    }  
+    else  
+    {  
+        var navigationPage = Application.Current.MainPage as CustomNavigationView;  
+        if (navigationPage != null)  
+        {  
+            await navigationPage.PushAsync(page);  
+        }  
+        else  
+        {  
+            Application.Current.MainPage = new CustomNavigationView(page);  
+        }  
+    }  
 
-    await (page.BindingContext as ViewModelBase).InitializeAsync(parameter);  
+    await (page.BindingContext as ViewModelBase).InitializeAsync(parameter);  
 }  
 
-private Type GetPageTypeForViewModel(Type viewModelType)  
+private Type GetPageTypeForViewModel(Type viewModelType)  
 {  
-    var viewName = viewModelType.FullName.Replace("Model", string.Empty);  
-    var viewModelAssemblyName = viewModelType.GetTypeInfo().Assembly.FullName;  
-    var viewAssemblyName = string.Format(  
-                CultureInfo.InvariantCulture, "{0}, {1}", viewName, viewModelAssemblyName);  
-    var viewType = Type.GetType(viewAssemblyName);  
-    return viewType;  
+    var viewName = viewModelType.FullName.Replace("Model", string.Empty);  
+    var viewModelAssemblyName = viewModelType.GetTypeInfo().Assembly.FullName;  
+    var viewAssemblyName = string.Format(  
+                CultureInfo.InvariantCulture, "{0}, {1}", viewName, viewModelAssemblyName);  
+    var viewType = Type.GetType(viewAssemblyName);  
+    return viewType;  
 }  
 
-private Page CreatePage(Type viewModelType, object parameter)  
+private Page CreatePage(Type viewModelType, object parameter)  
 {  
-    Type pageType = GetPageTypeForViewModel(viewModelType);  
-    if (pageType == null)  
-    {  
-        throw new Exception($"Cannot locate page type for {viewModelType}");  
-    }  
+    Type pageType = GetPageTypeForViewModel(viewModelType);  
+    if (pageType == null)  
+    {  
+        throw new Exception($"Cannot locate page type for {viewModelType}");  
+    }  
 
-    Page page = Activator.CreateInstance(pageType) as Page;  
-    return page;  
+    Page page = Activator.CreateInstance(pageType) as Page;  
+    return page;  
 }
 ```
 
@@ -201,10 +201,10 @@ Une fois que la vue est créée et cible, le `InitializeAsync` méthode du modè
 Lorsque l’application est lancée, le `InitNavigation` méthode dans le `App` de classe est appelée. L’exemple de code suivant illustre cette méthode :
 
 ```csharp
-private Task InitNavigation()  
+private Task InitNavigation()  
 {  
-    var navigationService = ViewModelLocator.Resolve<INavigationService>();  
-    return navigationService.InitializeAsync();  
+    var navigationService = ViewModelLocator.Resolve<INavigationService>();  
+    return navigationService.InitializeAsync();  
 }
 ```
 
@@ -216,12 +216,12 @@ La méthode crée un nouveau `NavigationService` objet dans le conteneur d’inj
 Le code suivant montre l’exemple le `NavigationService` `InitializeAsync` méthode :
 
 ```csharp
-public Task InitializeAsync()  
+public Task InitializeAsync()  
 {  
-    if (string.IsNullOrEmpty(Settings.AuthAccessToken))  
-        return NavigateToAsync<LoginViewModel>();  
-    else  
-        return NavigateToAsync<MainViewModel>();  
+    if (string.IsNullOrEmpty(Settings.AuthAccessToken))  
+        return NavigateToAsync<LoginViewModel>();  
+    else  
+        return NavigateToAsync<MainViewModel>();  
 }
 ```
 
@@ -238,9 +238,9 @@ Un de la `NavigateToAsync` méthodes, spécifiés par le `INavigationService` de
 Par exemple, le `ProfileViewModel` classe contient un `OrderDetailCommand` qui est exécuté lorsque l’utilisateur sélectionne une commande sur le `ProfileView` page. À son tour, il exécute le `OrderDetailAsync` (méthode), ce qui est illustré dans l’exemple de code suivant :
 
 ```csharp
-private async Task OrderDetailAsync(Order order)  
+private async Task OrderDetailAsync(Order order)  
 {  
-    await NavigationService.NavigateToAsync<OrderDetailViewModel>(order);  
+    await NavigationService.NavigateToAsync<OrderDetailViewModel>(order);  
 }
 ```
 
@@ -249,15 +249,15 @@ Cette méthode appelle la navigation vers le `OrderDetailViewModel`, en passant 
 Le `InitializeAsync` méthode est définie dans le `ViewModelBase` classe en tant que méthode qui peut être substituée. Cette méthode spécifie un `object` argument qui représente les données à passer à un modèle de vue pendant une opération de navigation. Par conséquent, les classes de modèle de vue qui doivent recevoir des données à partir d’une opération de navigation fournissent leur propre implémentation de la `InitializeAsync` méthode pour effectuer l’initialisation requise. Le code suivant montre l’exemple le `InitializeAsync` méthode à partir de la `OrderDetailViewModel` classe :
 
 ```csharp
-public override async Task InitializeAsync(object navigationData)  
+public override async Task InitializeAsync(object navigationData)  
 {  
-    if (navigationData is Order)  
-    {  
-        ...  
-        Order = await _ordersService.GetOrderAsync(  
-                        Convert.ToInt32(order.OrderNumber), authToken);  
-        ...  
-    }  
+    if (navigationData is Order)  
+    {  
+        ...  
+        Order = await _ordersService.GetOrderAsync(  
+                        Convert.ToInt32(order.OrderNumber), authToken);  
+        ...  
+    }  
 }
 ```
 
@@ -270,13 +270,13 @@ Cette méthode récupère le `Order` détails de l’instance qui a été passé
 Navigation est généralement déclenchée à partir d’une vue par une interaction utilisateur. Par exemple, le `LoginView` effectue la navigation après l’authentification réussie. L’exemple de code suivant montre comment le volet de navigation est appelée par un comportement :
 
 ```xaml
-<WebView ...>  
-    <WebView.Behaviors>  
-        <behaviors:EventToCommandBehavior  
-            EventName="Navigating"  
-            EventArgsConverter="{StaticResource WebNavigatingEventArgsConverter}"  
-            Command="{Binding NavigateCommand}" />  
-    </WebView.Behaviors>  
+<WebView ...>  
+    <WebView.Behaviors>  
+        <behaviors:EventToCommandBehavior  
+            EventName="Navigating"  
+            EventArgsConverter="{StaticResource WebNavigatingEventArgsConverter}"  
+            Command="{Binding NavigateCommand}" />  
+    </WebView.Behaviors>  
 </WebView>
 ```
 
@@ -285,12 +285,12 @@ Lors de l’exécution, le `EventToCommandBehavior` répondra à l’interaction
 À son tour, le `NavigationCommand` exécute le `NavigateAsync` (méthode), ce qui est illustré dans l’exemple de code suivant :
 
 ```csharp
-private async Task NavigateAsync(string url)  
+private async Task NavigateAsync(string url)  
 {  
-    ...          
-    await NavigationService.NavigateToAsync<MainViewModel>();  
-    await NavigationService.RemoveLastFromBackStackAsync();  
-    ...  
+    ...          
+    await NavigationService.NavigateToAsync<MainViewModel>();  
+    await NavigationService.RemoveLastFromBackStackAsync();  
+    ...  
 }
 ```
 
@@ -310,4 +310,4 @@ Ce chapitre présenté un `NavigationService` (classe), qui est utilisé pour ef
 ## <a name="related-links"></a>Liens associés
 
 - [Téléchargez le livre électronique (PDF de 2 Mo)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (exemple)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers (GitHub) (sample)](https://github.com/dotnet-architecture/eShopOnContainers)

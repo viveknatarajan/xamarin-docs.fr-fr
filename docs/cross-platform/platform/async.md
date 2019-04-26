@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
 ms.openlocfilehash: 0a72dead1b6c001f1514f1a089df9b407eb90644
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037308"
 ---
 # <a name="async-support-overview"></a>Présentation de la prise en charge asynchrone
 
@@ -31,7 +31,7 @@ L’exemple d’application effectue une requête web asynchrone simple (sans bl
 
 Prise en charge asynchrone de Xamarin repose sur les fondations de Mono 3.0 et le profil d’API est mis à niveau à partir d’une version compatible avec les mobiles de Silverlight pour être une version compatible avec les mobiles de .NET 4.5 en cours.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 C#5 fonctionnalités nécessitent 3.0 Mono qui est inclus dans 6.4 de Xamarin.iOS et Xamarin.Android 4.8. Vous devrez mettre à niveau votre Mono, Xamarin.iOS, Xamarin.Android et Xamarin.Mac en tirer parti.
 

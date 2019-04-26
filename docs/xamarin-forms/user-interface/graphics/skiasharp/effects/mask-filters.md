@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61289115"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtres de masque de SkiaSharp
 
@@ -180,9 +180,9 @@ Les captures d’écran jusqu'à présent ont montré flou créé avec le `SKBlu
 
 [![Masquer l’expérience de flou](mask-filters-images/MaskBlurExperiment.png "masquer l’expérience de flou")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-La capture d’écran d’iOS affiche les `Solid` style : les caractères de texte sont toujours présents sous forme de traits noires unies, et le flou est ajouté à l’extérieur de ces caractères de texte. 
+La capture d’écran d’iOS affiche les `Solid` style : Les caractères de texte sont toujours présents sous forme de traits noires unies, et le flou est ajouté à l’extérieur de ces caractères de texte. 
 
-La capture d’écran Android dans le milieu affiche les `Outer` style : les traits de caractère proprement dits sont éliminés (comme c’est l’image bitmap) et le flou entoure l’espace vide dans lequel les caractères de texte est apparues qu’une seule fois. 
+La capture d’écran Android dans le milieu affiche les `Outer` style : Les traits de caractère proprement dits sont éliminés (comme c’est l’image bitmap) et le flou entoure l’espace vide dans lequel les caractères de texte est apparues qu’une seule fois. 
 
 La capture d’écran UWP de droite montre le `Inner` style. L’effet de flou est limitée à la zone normalement occupée par les caractères de texte.
 

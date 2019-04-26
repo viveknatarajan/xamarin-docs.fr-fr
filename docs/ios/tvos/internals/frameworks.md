@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: 85067d1dc95ee63cf905e81fba7afc973f7ec37e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61395266"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>Frameworks pris en charge et non pris en charge de tvOS
 
@@ -43,10 +43,10 @@ Il s’agit d’une liste des Frameworks fournies par Apple pour une utilisation
 * Foundation
 * GameController
 * GameKit
-* Jeu
+* GamePlay
 * GLKit
 * ImageIO
-* Verve
+* MachO
 * MediaAccessibility
 * MediaPlayer
 * MediaToolbox
@@ -58,7 +58,7 @@ Il s’agit d’une liste des Frameworks fournies par Apple pour une utilisation
 * OpenGES
 * SceneKit
 * Sécurité
-* SIMD
+* simd
 * SpriteKit
 * StoreKit
 * SystemConfiguration
@@ -73,7 +73,7 @@ Il s’agit d’une liste des Frameworks fournies par Apple pour une utilisation
 Voici une liste des frameworks qui sont pris en charge par iOS 9, mais ont été supprimés de la prise en charge de tvOS 9 par Apple et par conséquent, ne peut pas être utilisé dans vos applications Xamarin.tvOS :
 
 * Comptes
-* Carnet d’adresses
+* AddressBook
 * AddressBookUI
 * AssetsLibrary
 * Contacts

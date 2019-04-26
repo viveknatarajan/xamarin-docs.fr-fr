@@ -1,17 +1,17 @@
 ---
 title: ApiDefinitions & StructsAndEnums fichiers
-description: Ce document décrit les fichiers ApiDefinitions.cs et StructsAndEnums.cs objectif Sharpie génère. Ces fichiers sont ensuite utilisés pour accéder au code Objective-C à partir de c#.
+description: Ce document décrit les fichiers ApiDefinitions.cs et StructsAndEnums.cs objectif Sharpie génère. Ces fichiers sont ensuite utilisés pour accéder au code Objective-C à partir de C#.
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: df8d4508db14116a5b36e893f161ac891d58dc46
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61266369"
 ---
 # <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions & StructsAndEnums fichiers
 
@@ -22,11 +22,11 @@ Dans *certains* cas ces fichiers générés peuvent suffire, mais le plus souven
 
 Parmi les étapes suivantes :
 
-- **Ajustement de noms**: parfois, vous souhaitez ajuster les noms des méthodes et des classes pour faire correspondre les instructions de conception de .NET Framework.
-- **Méthodes ou propriétés**: l’heuristique utilisée par objectif Sharpie parfois sélectionnent une méthode soit transformé en une propriété. À ce stade, vous pouvez décider s’il s’agit du comportement souhaité ou non.
-- **Raccorder des événements**: vous pouvez lier vos classes avec vos classes de délégué et générer automatiquement des événements pour ceux.
-- **Raccorder les Notifications**: il n’est pas possible d’extraire le contrat d’API de notifications à partir des fichiers d’en-tête pure, cette opération nécessite un aller-retour vers la documentation de l’API. Si vous souhaitez que les notifications fortement typées, vous devez mettre à jour le résultat.
-- **API collecte**: À ce stade, vous pouvez choisir de fournir des constructeurs supplémentaires, ajoutez les méthodes (pour permettre la syntaxe d’initialisation sur construction c#), la surcharge d’opérateur et implémenter vos propres interfaces sur le fichier de définitions supplémentaires.
+- **Ajustement de noms**: Parfois, vous devez ajuster les noms des méthodes et des classes pour faire correspondre les instructions de conception de .NET Framework.
+- **Méthodes ou propriétés**: L’heuristique utilisée par objectif Sharpie parfois utilisera une méthode soit transformé en une propriété. À ce stade, vous pouvez décider s’il s’agit du comportement souhaité ou non.
+- **Raccorder des événements**: Vous pouvez lier vos classes avec vos classes de délégué et générer automatiquement des événements pour ceux.
+- **Raccorder les Notifications**: Il n’est pas possible d’extraire le contrat d’API de notifications à partir des fichiers d’en-tête pure, cette opération nécessite un aller-retour vers la documentation de l’API. Si vous souhaitez que les notifications fortement typées, vous devez mettre à jour le résultat.
+- **Collecte de l’API**: À ce stade, vous pouvez choisir de fournir des constructeurs supplémentaires, ajoutez les méthodes (pour permettre C# syntaxe d’initialisation de construction), opérateur de surcharge et implémenter vos propres interfaces sur le fichier de définitions supplémentaires.
 
 Consultez le [une API de liaison](~/cross-platform/macios/binding/objective-c-libraries.md) description pour voir comment ces fichiers s’intègrent dans le processus de liaison, comme illustré dans le diagramme ci-dessous :
 
@@ -37,4 +37,4 @@ Reportez-vous à la [référence des Types de liaison](~/cross-platform/macios/b
 ## <a name="related-links"></a>Liens associés
 
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -1,5 +1,5 @@
 ---
-title: Liaison d’infrastructures natives
+title: Liaison de frameworks natifs
 description: Ce document décrit comment utiliser l’objectif Sharpie - framework permet de créer une liaison vers une bibliothèque distribué en tant qu’infrastructure.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
@@ -7,13 +7,13 @@ author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
 ms.openlocfilehash: ca103ee027597813be51e126aaa05f9aa969af35
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199126"
 ---
-# <a name="binding-native-frameworks"></a>Liaison d’infrastructures natives
+# <a name="binding-native-frameworks"></a>Liaison de frameworks natifs
 
 Parfois, une bibliothèque native est distribuée comme un [framework](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WhatAreFrameworks.html). Objectif Sharpie fournit une fonctionnalité pratique de liaison correctement définie infrastructures via la `-framework` option.
 
@@ -39,5 +39,5 @@ D’une importance particulière est le `-F .` framework recherche chemin d’ac
 ## <a name="related-links"></a>Liens associés
 
 - [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University cours : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
 

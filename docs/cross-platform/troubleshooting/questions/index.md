@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 06aa6569301d1bfdbf9f6fd1e7397a38a9beb6f6
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157191"
 ---
 # <a name="general-frequently-asked-questions"></a>Forum aux Questions général
 
@@ -23,7 +23,7 @@ Ce guide répertorie des ressources et des méthodes pour déterminer si votre b
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[API de réflexion de bibliothèque de classes portable](pcl-reflection.md)
 Microsoft a développé une nouvelle API de réflexion pour une utilisation dans les bibliothèques de classes portables. Si vous avez un code de réflexion existant que vous souhaitez déplacer vers une bibliothèque de classes portable, il peut ne pas fonctionne.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Étude de cas de bibliothèque de classes portable : Comment résoudre des problèmes liés à System.Diagnostics.Tracing pour le package NuGet Microsoft TPL Dataflow ?](pcl-case-study.md)
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Étude de cas de bibliothèque de classes portable : Comment puis-je résoudre des problèmes liés à System.Diagnostics.Tracing pour le package NuGet Microsoft TPL Dataflow ?](pcl-case-study.md)
 Xamarin.iOS et Xamarin.Android n’implémentent pas 100 % de chaque profil PCL acceptant en tant que références. Pour plus de commodité pratique dans Visual Studio pour Mac, Visual Studio et le Gestionnaire de package NuGet, projets Xamarin autorisent l’utilisation de plusieurs profils qui ont uniquement des implémentations incomplètes. Par exemple, ni Xamarin.iOS ni Xamarin.Android actuellement inclut une implémentation complète des types dans le `System.Diagnostics.Tracing` espace de noms de bibliothèque de classes portable. Vous pouvez contourner ce en basculant le projet d’application pour référencer le portable-net45 win8 + wp8 + wpa81 version de la bibliothèque de flux de données TPL.
 
 ## <a name="nuget-packages--xamarin-components"></a>Composants Xamarin et les packages NuGet

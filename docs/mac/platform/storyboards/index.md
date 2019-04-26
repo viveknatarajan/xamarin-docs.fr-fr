@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 166a50021c22aa09be3eecdb8b745a70e75c3d51
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61031455"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introduction aux Storyboards dans Xamarin.Mac
 
@@ -94,7 +94,7 @@ Dans le [démarrage rapide de table de montage séquentiel](~/mac/platform/story
 
 <a name="Working-with-Storyboards" />
 
-## <a name="working-with-storyboards"></a>Utilisation des Storyboards
+## <a name="working-with-storyboards"></a>Utilisation de storyboards
 
 Cette section couvre les données détaillées de [fonctionne avec des Storyboards](~/mac/platform/storyboards/indepth.md) dans une application Xamarin.Mac. Nous prenons un examen approfondi de l’arrière-plan et comment elles sont composées de contrôleurs d’affichage et de la vue. Ensuite, nous allons examiner comment les scènes sont liées par Segues. Enfin, nous allons utiliser les types de Segue personnalisés. 
 

@@ -1,17 +1,17 @@
 ---
 title: Présentation du partage de Code
-description: 'Ce document compare les différentes méthodes de partage de code entre les projets multiplateformes : les projets partagés, bibliothèques de classes portables et .NET Standard, y compris les avantages et les inconvénients de chacun d’eux.'
+description: 'Ce document compare les différentes méthodes de partage de code entre les projets multiplateformes : Partagé projets, bibliothèques de classes portables et .NET Standard, y compris les avantages et les inconvénients de chacun d’eux.'
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
 ms.date: 08/06/2018
 ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
-ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39520283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61228042"
 ---
 # <a name="sharing-code-overview"></a>Présentation du partage de code
 
@@ -135,6 +135,6 @@ Tandis que les projets de bibliothèque de classes portable continueront à êtr
 - [Bibliothèques de classes portables](~/cross-platform/app-fundamentals/pcl.md)
 - [Projets partagés](~/cross-platform/app-fundamentals/shared-projects.md)
 - [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
-- [Étude de cas : Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
+- [Étude de cas : Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Exemple tasky (github)](https://github.com/xamarin/mobile-samples/tree/master/Tasky)
 - [Exemple tasky à l’aide de la bibliothèque de classes portable (github)](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable)
