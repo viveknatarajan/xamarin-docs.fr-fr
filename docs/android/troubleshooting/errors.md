@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
 ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945303"
 ---
 # <a name="xamarinandroid-errors-matrix"></a>Matrice des erreurs Xamarin.Android
 
@@ -78,7 +78,7 @@ Ce document fournit des informations sur les différents codes d’erreur à par
 |XA1103|Impossible de détacher.|
 |XA1104|Échec d’envoi de paquets : {0}.|
 |XA1105|Type de réponse inattendu.|
-|XA1106|Impossible d’obtenir la liste des applications sur l’appareil : demande a expiré.|
+|XA1106|Impossible d’obtenir la liste des applications sur l’appareil : Demande a expiré.|
 |XA1107|Lancement de l’application a échoué.|
 |XA1201|N’a pas pu charger le simulateur : {0}.|
 |XA1301|Bibliothèque native '{0}» ({1}) a été ignoré, car il ne correspond pas à l’architecture(s) de build actuel ({2}).|
@@ -101,7 +101,7 @@ Il s’agit des erreurs de compilation AOT.
 |Code d'erreur|Description|
 |--- |--- |
 |XA3001|Pu pas AOT l’assembly '{0}'.|
-|XA3002|Restriction de AOT : méthode '{0}' doit être statique, car elle est décorée avec [MonoPInvokeCallback].|
+|XA3002|Restriction de AOT : Méthode '{0}' doit être statique, car elle est décorée avec [MonoPInvokeCallback].|
 |XA3003|Options de débogage et--llvm--conflictuelles. Soft-débogage est désactivé.|
 
 
@@ -114,7 +114,7 @@ Il s’agit d’erreurs de génération de code.
 |XA4001|Le modèle principal n’a pas pu être expansed à «{0}».|
 |XA4101|Le bureau d’enregistrement ne peut pas générer une signature pour le type '{0}'.|
 |XA4102|Le bureau d’enregistrement trouvé un type non valide '{0}« dans la signature de méthode'{2}'. Utilisez '{1}' à la place.|
-|XA4103|Le bureau d’enregistrement trouvé un type non valide '{0}« dans la signature de méthode'{2}' : le type implémente INativeObject, mais n’a pas de constructeur qui prend deux (IntPtr, bool) arguments.|
+|XA4103|Le bureau d’enregistrement trouvé un type non valide '{0}« dans la signature de méthode'{2}' : Le type implémente INativeObject, mais n’a pas de constructeur qui prend deux (IntPtr, bool) arguments.|
 |XA4104|Le bureau d’enregistrement ne peut pas marshaler la valeur de retour de type «{0}« dans la signature de méthode'{1}'.|
 |XA4105|Le bureau d’enregistrement ne peut pas marshaler le paramètre de type '{0}« dans la signature de méthode'{1}'.|
 |XA4106|Le bureau d’enregistrement ne peut pas marshaler la valeur de retour pour la structure '{0}« dans la signature de méthode'{1}'.|
@@ -173,24 +173,24 @@ Ces codes d’erreur sont des erreurs de licence et d’activation.
 
 #### <a name="xa9000"></a>XA9000
 
- **Cause :** licence a expiré
+ **Cause :** Licence expirée
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|AVERTISSEMENT|AVERTISSEMENT|AVERTISSEMENT|AVERTISSEMENT|AVERTISSEMENT|
+|WARNING|WARNING|WARNING|WARNING|WARNING|
 
 
 #### <a name="xa9001"></a>XA9001
 
- **Cause :** essai arrivé à expiration
+ **Cause :** Version d’évaluation a expiré
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|AVERTISSEMENT|AVERTISSEMENT|AVERTISSEMENT|AVERTISSEMENT|AVERTISSEMENT|
+|WARNING|WARNING|WARNING|WARNING|WARNING|
 
 
 
@@ -198,29 +198,29 @@ Ces codes d’erreur sont des erreurs de licence et d’activation.
 
  **Cause :** AndroidJavaSource
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
  **Cause :** AndroidJavaLibrary
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
  **Si un assembly de liaison a le fichier .jar incorporé, cela est détecté au moment du Package, pas les temps de génération.**
 
  **Cause :** AndroidNativeLibrary
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
 
 #### <a name="xa9003"></a>XA9003
@@ -231,7 +231,7 @@ Ces codes d’erreur sont des erreurs de licence et d’activation.
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
  **Cause :** System.ServiceModel.Web
 
@@ -239,25 +239,25 @@ Ces codes d’erreur sont des erreurs de licence et d’activation.
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
  **Cause :** Mono.Data.Tds
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
  **Elle est référencée par System.Data.dll, qui est autorisé**
 
  **Cause :** Mono.Android.Export
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|OK|OK|OK|OK|
+|ERROR|OK|OK|OK|OK|
 
 
 
@@ -269,64 +269,64 @@ Ces codes d’erreur sont des erreurs de licence et d’activation.
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 
 #### <a name="xa9005"></a>XA9005
 
- **Cause :** limite de taille (32 Ko).
+ **Cause :** Limite de taille (32 Ko).
 
  **Vérifiées pendant :** Package
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|OK|-|-|-|
+|ERROR|OK|-|-|-|
 
 
 
 #### <a name="xa9006"></a>XA9006
 
- **Cause :** espace de noms System.Data.SqlClient.
+ **Cause :** Espace de noms System.Data.SqlClient.
 
  **Vérifiées pendant :** Package
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 #### <a name="xa9008"></a>XA9008
 
- **Cause :** génération à partir de ligne de commande.
+ **Cause :** Génération à partir de ligne de commande.
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|OK|OK|OK|
+|ERROR|ERROR|OK|OK|OK|
 
 
 #### <a name="xa9009"></a>XA9009
 
- **Cause :** numéro de série manquant.
+ **Cause :** Numéro de série manquant.
 
  **Vérifiées pendant :** Untestable
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|ERREUR|ERREUR|ERREUR|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9010"></a>XA9010
 
  **Cause :** ProductId non valide.
 
- **Vérifiées pendant :** générer
+ **Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|ERREUR|ERREUR|ERREUR|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 Équivalent à XA9018.
 
@@ -334,34 +334,34 @@ Ces codes d’erreur sont des erreurs de licence et d’activation.
 
 #### <a name="xa9011"></a>XA9011
 
- **Cause :** n’a pas pu mettre à jour le fichier de licence (pour le nouveau format de fichier).
+ **Cause :** Impossible de mettre à jour le fichier de licence (pour le nouveau format de fichier).
 
  **Vérifiées pendant :** Activation
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|ERREUR|ERREUR|ERREUR|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 #### <a name="xa9012"></a>XA9012
 
- **Cause :** aucune connexion internet
+ **Cause :** Aucune connexion internet
 
  **Vérifiées pendant :** Activation
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|ERREUR|ERREUR|ERREUR|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9013"></a>XA9013
 
- **Cause :** erreur inconnue
+ **Cause :** Erreur inconnue
 
  **Vérifiées pendant :** Activation
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|ERREUR|ERREUR|ERREUR|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9014"></a>XA9014
@@ -372,27 +372,27 @@ Ces codes d’erreur sont des erreurs de licence et d’activation.
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|ERREUR|ERREUR|ERREUR|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9017"></a>XA9017
 
- **Cause :** serveur d’Activation ne retourne pas une licence valide.
+ **Cause :** Serveur d’activation ne retourne pas une licence valide.
 
  **Vérifiées pendant :** Activation
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|ERREUR|ERREUR|ERREUR|ERREUR|ERREUR|
+|ERROR|ERROR|ERROR|ERROR|ERROR|
 
 
 #### <a name="xa9018"></a>XA9018
 
-**Cause :** licence non valide
+**Cause :** Licence non valide
 
-**Vérifiées pendant :** générer
+**Vérifiées pendant :** Build
 
 |Kit de démarrage|Indie|Business(Trial)|Bureau|Entreprise|
 |--- |--- |--- |--- |--- |
-|-|-|ERREUR|-|-|
+|-|-|ERROR|-|-|
 

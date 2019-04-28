@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61032985"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Utilisation des Storyboards dans Xamarin.Mac
 
@@ -356,7 +356,7 @@ Le code SourceWriter a été entièrement commenté et, le cas échéant, des li
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacStoryboard (exemple)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
+- [MacStoryboard (sample)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilisation de Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

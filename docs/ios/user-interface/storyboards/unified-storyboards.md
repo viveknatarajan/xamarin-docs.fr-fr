@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61430213"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboards unifiés dans Xamarin.iOS
 
@@ -118,7 +118,7 @@ Ce qui suit est une Collection de caractéristique classique le développeur peu
 |--- |--- |
 |`HorizontalSizeClass`|Compact|
 |`VerticalSizeClass`|Normale|
-|`UserInterfaceIdom`|Téléphone|
+|`UserInterfaceIdom`|Phone|
 |`DisplayScale`|2.0|
 
 L’ensemble ci-dessus représente une Collection de caractéristique entièrement qualifié, car il comporte des valeurs pour toutes ses propriétés de trait.
@@ -625,7 +625,7 @@ Consultez la section de la catégorie de taille de cet article pour plus d’inf
 
 ### <a name="adaptive-segue-types"></a>Types de Segue ADAPTATIF
 
-Si le développeur a utilisé des storyboards avant, ils seront familiarisés avec les types de segue existants de **Push**, **modale** et **menu**. Lorsque les Classes de taille sont activés sur un fichier de Storyboard unifiée, Adaptive Segue suivants (qui correspondent à la nouvelle API de contrôleur de vue décrits ci-dessus) sont accessibles : **afficher** et **afficher le détail** .
+Si le développeur a utilisé des storyboards avant, ils seront familiarisés avec les types de segue existants de **Push**, **modale** et **menu**. Lorsque les Classes de taille sont activés sur un fichier de Storyboard unifiée, Adaptive Segue suivants (qui correspondent à la nouvelle API de contrôleur de vue décrits ci-dessus) sont accessibles : **Afficher** et **afficher les détails**.
 
 > [!IMPORTANT]
 > Lorsque les Classes de taille sont activées, existants Enchaînements va être convertis en types de nouveau.

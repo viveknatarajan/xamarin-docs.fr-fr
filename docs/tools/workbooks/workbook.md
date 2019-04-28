@@ -1,5 +1,5 @@
 ---
-title: Classeurs interactifs
+title: Workbooks interactifs
 description: Ce document décrit comment utiliser Xamarin Workbooks pour créer des documents dynamiques contenant C# code pour tester, apprentissage, formation ou Explorer.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
@@ -7,13 +7,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: 71f46535ffd0a99ad78acb8f0e3bbc5870abf33e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61197950"
 ---
-# <a name="interactive-workbooks"></a>Classeurs interactifs
+# <a name="interactive-workbooks"></a>Workbooks interactifs
 
 Vous pouvez utiliser des classeurs comme une application autonome, distincte de votre IDE.
 

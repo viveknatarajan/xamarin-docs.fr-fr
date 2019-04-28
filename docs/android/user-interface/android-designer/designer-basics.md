@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
 ms.openlocfilehash: fe909d72f3c6d6733318b5dcbd1858a1a9e28b37
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61165055"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Principes fondamentaux du Concepteur de Xamarin.Android
 
@@ -45,7 +45,7 @@ Lorsque vous modifiez une mise en page dans le concepteur, vous utilisez les fon
 
 -   **Volet de source** &ndash; fournit une vue de la source XML sous-jacente qui correspond à la conception présentée sur le **aire de conception**.
 
--   **Barre d’outils Concepteur** &ndash; affiche une liste de sélecteurs : **appareil**, **Version**, **thème**, configuration de mise en page et les paramètres de la barre d’Action. Le **barre d’outils Concepteur** comprend également des icônes pour le lancement de l’éditeur de thème et pour l’activation de la grille de création de documents.
+-   **Barre d’outils Concepteur** &ndash; affiche une liste de sélecteurs : **APPAREIL**, **Version**, **thème**, configuration de mise en page et les paramètres de la barre d’Action. Le **barre d’outils Concepteur** comprend également des icônes pour le lancement de l’éditeur de thème et pour l’activation de la grille de création de documents.
 
 -   **Boîte à outils** &ndash; fournit une liste de widgets et dispositions que vous pouvez faire glisser et déposer sur le **aire de conception**.
 
@@ -310,7 +310,7 @@ Lorsque vous modifiez une mise en page dans le concepteur, vous utilisez les fon
 
 -   **Aire de conception** &ndash; facilite la construction visuelle de l’interface utilisateur en vous offrant une représentation modifiable de la façon dont la disposition s’affiche sur l’appareil.
 
--   **Barre d’outils** &ndash; affiche une liste de sélecteurs : **appareil**, **Version**, **thème**, configuration de mise en page et les paramètres de la barre d’Action. La barre d’outils comprend également des icônes pour le lancement de l’éditeur de thème et pour l’activation de la grille de création de documents.
+-   **Barre d’outils** &ndash; affiche une liste de sélecteurs : **APPAREIL**, **Version**, **thème**, configuration de mise en page et les paramètres de la barre d’Action. La barre d’outils comprend également des icônes pour le lancement de l’éditeur de thème et pour l’activation de la grille de création de documents.
 
 -   **Boîte à outils** &ndash; fournit une liste de configurations que vous pouvez faire glisser et déposer sur l’aire de conception et de widgets.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61240507"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows dans Xamarin.Mac
 
@@ -744,14 +744,14 @@ Dans le **inspecteur d’attributs**, vous disposez des options suivantes spéci
 
 [![](window-images/panel03.png "L’inspecteur d’attributs")](window-images/panel03.png#lightbox)
 
-- **Style** -vous permettent d’ajuster le style du panneau à partir de : panneau normal (ressemble à une fenêtre standard), utilitaire du Panneau de configuration (a une plus petite barre de titre), HUD panneau (est translucide et la barre de titre fait partie de l’arrière-plan).
+- **Style** -vous permettent d’ajuster le style du panneau à partir de : Panneau normal (ressemble à une fenêtre standard), utilitaire du Panneau de configuration (a une plus petite barre de titre), HUD panneau (est translucide et la barre de titre fait partie de l’arrière-plan).
 - **Non activation** -détermine dans le panneau de configuration devient la fenêtre de clé.
 - **Document Modal** -si Document modale, le panneau uniquement flotte au-dessus des fenêtres de l’application, sinon elle flotte au-dessus de toutes les.
 
 
 Pour ajouter un nouveau panneau, procédez comme suit :
 
-1. Dans le **l’Explorateur de solutions**, avec le bouton droit sur le projet et sélectionnez **ajouter** > **nouveau fichier..** .
+1. Dans le **l’Explorateur de solutions**, avec le bouton droit sur le projet et sélectionnez **ajouter** > **nouveau fichier...** .
 2. Dans la boîte de dialogue Nouveau fichier, sélectionnez **Xamarin.Mac** > **fenêtre Cocoa avec contrôleur**:
 
     [![](window-images/panels00.png "Ajoutez un nouveau contrôleur de fenêtre")](window-images/panels00.png#lightbox)
@@ -801,7 +801,7 @@ Cet article a examiné en détail à l’utilisation de Windows et des panneaux 
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacWindows (exemple)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
 - [MacInspector (exemple)](https://developer.xamarin.com/samples/mac/MacInspector/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Utilisation des Menus](~/mac/user-interface/menu.md)

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
 ms.openlocfilehash: 8ad2dde701814c0977e25e6e58272c0aa01ca4ca
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085617"
 ---
 # <a name="working-with-jni"></a>Utilisation de JNI
 
@@ -37,7 +37,7 @@ Ce document explique :
 
 
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 JNI, telle qu’exposée via la [espace de noms Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/), est disponible dans chaque version de Xamarin.Android.
 Pour lier les interfaces et les types Java, vous devez utiliser Xamarin.Android 4.0 ou version ultérieure.

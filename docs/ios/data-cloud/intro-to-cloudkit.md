@@ -1,5 +1,5 @@
 ---
-title: CloudKit dans Xamarin.iOS
+title: CloudKit in Xamarin.iOS
 description: Ce document décrit comment utiliser des CloudKit dans Xamarin.iOS. Il fournit une vue d’ensemble de CloudKit et explique comment activer, le CloudKit commodité API, l’évolutivité, des comptes d’utilisateur et les environnements de développement et de production.
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
 ms.openlocfilehash: daea27472ac7c0578c1cfd79ebd96428212fafb3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61165295"
 ---
-# <a name="cloudkit-in-xamarinios"></a>CloudKit dans Xamarin.iOS
+# <a name="cloudkit-in-xamarinios"></a>CloudKit in Xamarin.iOS
 
 Le framework de CloudKit simplifie le développement d’applications qu’iCloud de l’accès. Cela inclut la récupération des données d’application et les droits de ressource ainsi que la possibilité de stocker en toute sécurité les informations de l’application. Ce kit permet aux utilisateurs d’une couche d’anonymat en autorisant l’accès aux applications avec leur ID iCloud sans partager les informations personnelles.
 
@@ -252,7 +252,7 @@ Voici un exemple de création d’une référence par rapport à un enregistreme
 var reference = new CKReference(newRecord, new CKReferenceAction());
 ```
 
-### <a name="assets"></a>Ressources
+### <a name="assets"></a>Assets
 
 Autoriser les ressources pour un fichier de données non structurées volumineux d’être téléchargées sur iCloud et associé à un enregistrement donné :
 
@@ -883,6 +883,6 @@ Cet article a présenté une introduction rapide à l’API de CloudKit. Il a mo
 
 ## <a name="related-links"></a>Liens associés
 
-- [CloudKitAtlas (exemple)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
+- [CloudKitAtlas (sample)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
 - [Introduction à iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Création d’un profil de provisionnement](~/ios/get-started/installation/device-provisioning/index.md)

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/24/2017
 ms.openlocfilehash: 82dd175222289676c3dacd80522c55e71ba12180
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61236029"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vues de collection dans Xamarin.Mac
 
@@ -817,7 +817,7 @@ Cet article a examiné en détail à l’utilisation des vues de Collection dans
 
 ## <a name="related-links"></a>Liens associés
 
-- [MacCollectionNew (exemple)](https://developer.xamarin.com/samples/mac/MacCollectionNew/)
+- [MacCollectionNew (sample)](https://developer.xamarin.com/samples/mac/MacCollectionNew/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Liaison de données et codage de clé-valeur](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)

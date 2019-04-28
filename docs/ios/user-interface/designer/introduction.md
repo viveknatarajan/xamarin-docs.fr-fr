@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
 ms.openlocfilehash: 2c6409410ecba7df8559c07c3231f5e493c98897
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58071075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61080179"
 ---
 # <a name="ios-designer-basics"></a>principes fondamentaux du Concepteur d’iOS
 
@@ -34,7 +34,7 @@ Cette section décrit comment le concepteur iOS facilite la création d’une in
 
 Le concepteur iOS permet aux développeurs de concevoir visuellement d’interface utilisateur d’une application. Comme indiqué dans le [Introduction aux Storyboards](~/ios/user-interface/storyboards/index.md) guide, une table de montage séquentiel décrit les écrans (contrôleurs d’affichage) qui composent une application, les éléments d’interface (vues) placés sur ces contrôleurs d’affichage et de flux de navigation globale de l’application . 
 
-Un contrôleur d’affichage comporte deux parties : une représentation visuelle dans le concepteur iOS et une classe C# associée :
+Un contrôleur d’affichage comporte deux parties : une représentation visuelle dans le concepteur iOS et une classe c# associée :
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio pour Mac](#tab/macos)
 
