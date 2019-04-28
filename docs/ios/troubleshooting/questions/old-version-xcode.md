@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: chamons
 ms.author: chhamo
 ms.date: 04/16/2019
-ms.openlocfilehash: 2a208d39454a33adc849bcccc66802361693e82e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 7cbc14e0a912fe9c55ff672796e839a8dcdfd9b5
+ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61419313"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64347115"
 ---
 # <a name="can-i-use-an-older-version-of-xcode-or-xamarinios"></a>Puis-je utiliser une version antérieure de Xcode ou Xamarin.iOS ?
 
@@ -53,7 +53,7 @@ Il est généralement plus facile mettre à jour progressivement et de suivre le
 Xamarin.iOS en général prend en charge que les versions plus anciennes Xcode chaque fois que possible. Quelques défis potentiels :
 
 - La plus récente Xamarin.iOS peuvent prendre en charge certaines fonctionnalités et API sont absents dans Xcode sélectionné. 
-- Le **bureau d’enregistrement statique** nécessite des fichiers d’en-têtes de Xcode pour créer des applications, ce qui conduit à [ `MT0091` ](~/ios/troubleshooting/mtouch-errors.md#MT0091) ou [ `MT4109` ](~/ios/troubleshooting/mtouch-errors.md#MT4109)' erreurs s’il manquants des API.
+- Le **bureau d’enregistrement statique** nécessite des fichiers d’en-têtes de Xcode pour créer des applications, ce qui conduit à [ `MT0091` ](~/ios/troubleshooting/mtouch-errors.md#MT0091) ou [ `MT4109` ](~/ios/troubleshooting/mtouch-errors.md#MT4109) erreurs si l’API sont manquants.
   - Dans la plupart des cas, l’activation de l’éditeur de liens managé aidera (en supprimant les liaisons gérés pour la nouvelle API) non utilisées.
 - Builds Bitcode (pour tvOS et watchOS) peuvent échouer soumission à l’App Store, sauf si une chaîne d’outils Xcode 9.0 + est utilisé.
 
