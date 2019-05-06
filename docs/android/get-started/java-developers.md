@@ -493,7 +493,7 @@ Pour plus d’informations sur ces techniques, consultez [Présentation de l’i
 
 ## <a name="for-further-reading"></a>Pour obtenir des informations supplémentaires
 
-Le [Guide de programmation C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/) de MSDN est un excellent moyen de commencer à apprendre le langage de programmation C#, et vous pouvez utiliser la [Référence c#](https://docs.microsoft.com/dotnet/csharp/language-reference/) pour rechercher des fonctionnalités spécifiques du langage C#.
+Le [Guide de programmation C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/) de MSDN est un excellent moyen de commencer à apprendre le langage de programmation C#, et vous pouvez utiliser la [Référence C#](https://docs.microsoft.com/dotnet/csharp/language-reference/) pour rechercher des fonctionnalités spécifiques du langage C#.
 
 De la même façon que les connaissances de Java impliquent autant la familiarisation avec les bibliothèques de classes Java que le fait de connaître le langage Java, une connaissance pratique de C# nécessite d’être familiarisé avec le .NET framework. Le paquet d’apprentissage [Passage à C# et .NET Framework pour les développeurs Java](https://www.microsoft.com/download/details.aspx?id=6073) de Microsoft est une bonne solution pour en savoir plus sur .NET Framework à partir d’une perspective Java (tout en obtenant une meilleure compréhension du langage C#).
 
