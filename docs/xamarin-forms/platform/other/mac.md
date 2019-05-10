@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: 3a488b3a9f729da5d4bee8c1262190b15c2e9240
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7ed2cb66524ab3380f65d6d0be74a66c7d01226b
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60902691"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978030"
 ---
 # <a name="mac-platform-setup"></a>Programme d’installation de la plateforme Mac
 
@@ -23,7 +23,7 @@ Avant de commencer, créez (ou utiliser une existante) projet Xamarin.Forms. Vou
 
 > [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
 
-**Ajout d’un projet de macOS pour Xamarin.Forms, par [Xamarin University](https://university.xamarin.com/)**
+**Ajout d’un projet de macOS à Xamarin.Forms vidéo**
 
 ## <a name="adding-a-mac-app"></a>Ajout d’une application Mac
 

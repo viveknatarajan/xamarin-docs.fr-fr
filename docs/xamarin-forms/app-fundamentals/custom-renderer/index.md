@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3a59cbb8385fe201d7eef086092c9b393a21cc71
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666351"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978137"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Convertisseurs personnalisés Xamarin.Forms
 
@@ -58,8 +58,6 @@ Cet article montre comment créer un convertisseur personnalisé pour un contrô
 
 Cet article montre comment écrire des convertisseurs pour implémenter un contrôle `VideoPlayer` qui peut lire des vidéos à partir du web, des vidéos incorporées comme des ressources d’application ou des vidéos stockées dans la vidéothèque sur l’appareil de l’utilisateur. Plusieurs techniques sont présentées, y compris l’implémentation de méthodes et de propriétés en lecture seule pouvant être liées.
 
-
 ## <a name="related-links"></a>Liens associés
 
 - [Effets](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Renderers personnalisés (vidéo Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

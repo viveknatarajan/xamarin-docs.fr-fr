@@ -6,12 +6,12 @@ ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 51a0b81204b743824e24cfed83bd73308fa8d506
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261166"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977662"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Les outils de Sharpie objectif et les commandes
 
@@ -85,8 +85,3 @@ Pour pouvoir commencer le processus de liaison, nous devons obtenir des informat
 <span class="terminal-blue">sdk:</span> watchos2.0      <span class="terminal-green">arch:</span> armv7</pre>
 
 Dans l’exemple ci-dessus, nous constatons que nous avons le `iphoneos9.1` SDK installé sur votre ordinateur et il a `arm64` prise en charge de l’architecture. Nous allons utiliser cette valeur pour tous les exemples dans cette section. Ces informations en place, nous sommes prêts à analyser les fichiers d’en-tête une bibliothèque Objective-C dans initial `ApiDefinition.cs` et `StructsAndEnums.cs` pour le projet de liaison.
-
-## <a name="related-links"></a>Liens associés
-
-- [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

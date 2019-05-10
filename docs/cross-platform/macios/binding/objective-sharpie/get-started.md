@@ -6,12 +6,12 @@ ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fb5e503a82a2b666bf6f8d7d7166475e94546e7
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199778"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978399"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Prise en main Sharpie objectif
 
@@ -58,8 +58,3 @@ Si aucun projet Xcode n’est disponible, vous devez être familiarisé avec le 
 
 **NOUVEAU !** version 3.0 introduit également un outil pour la liaison facilement [CocoaPods](https://cocoapods.org) via la `sharpie pod` commande.
 Si la bibliothèque que vous êtes intéressé est disponible en tant qu’un CocoaPod, nous vous recommandons de que commencer par essayer de lier le CocoaPod avec objectif Sharpie (et non pas tenter de lier directement par rapport à la source).
-
-## <a name="related-links"></a>Liens associés
-
-- [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

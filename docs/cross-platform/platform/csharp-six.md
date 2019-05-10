@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: b69fe417bb521781453042269b9b52609d8e00a0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1a261c009f105994ac0b9c84f3d0ac037c4a3517
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035807"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978497"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 nouvelles fonctionnalités vue d’ensemble
 
@@ -22,7 +22,7 @@ Ce document présente les nouvelles fonctionnalités de C# 6. Il est entièremen
 
 > [!VIDEO https://youtube.com/embed/7UdV7zGPfMU]
 
-**Quelles sont les nouveautés C# 6, par [Xamarin University](https://university.xamarin.com/)**
+**Quelles sont les nouveautés C# 6 vidéo**
 
 ## <a name="using-c-6"></a>À l’aide de C# 6
 

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: e599d4f99877e24e06de2c26ed2cafe48526f6f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8c4dcbe0baf74479e94f8663280e7654b4d58a9d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61346929"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978152"
 ---
 # <a name="binding-ios-libraries"></a>Liaison de bibliothèques d’iOS
 
@@ -38,15 +38,13 @@ Objectif Sharpie 3.0 a introduit la possibilité de lier directement les Cocoapo
 Cette page fournit une procédure de création d’un projet de liaison iOS à l’aide de l’open source [ **InfColorPicker** ](https://github.com/InfinitApps/InfColorPicker) projet Objective-C comme exemple. Le **InfColorPicker** bibliothèque fournit un contrôleur d’affichage réutilisable permettant aux utilisateurs de sélectionner une couleur en fonction de sa représentation sous forme de TSL, effectuer une sélection de couleur plus conviviales.
 Objectif Sharpie permet de faciliter le processus de liaison.
 
-## <a name="xamarin-university-lightning-lecture"></a>Xamarin University Lightning Lecture
+## <a name="video"></a>Vidéo
 
 > [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
 
-**iOS liaisons en C/C++, par [Xamarin University](https://university.xamarin.com/)**
+**iOS liaisons en C /C++ vidéo**
 
 ## <a name="related-links"></a>Liens associés
 
 - [Liaison Objective-C](~/cross-platform/macios/binding/index.md)
 - [Liaison du Mac](~/mac/platform/binding.md)
-- [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

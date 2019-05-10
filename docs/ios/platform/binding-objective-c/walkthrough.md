@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c8adc7ec7f717cf0004f79e3b71123d6daeaee86
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61392016"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978445"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Procédure pas à pas : liaison d’une bibliothèque Objective-C iOS
 
@@ -734,5 +734,3 @@ Cet article a présenté le processus de création et à l’aide d’un projet 
 - [Guide de référence de Types de liaison](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin pour les développeurs Objective-C](~/ios/get-started/objective-c-developers/index.md)
 - [Règles de conception de .NET Framework](https://msdn.microsoft.com/library/ms229042.aspx)
-- [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

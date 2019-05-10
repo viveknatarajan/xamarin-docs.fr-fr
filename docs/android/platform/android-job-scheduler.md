@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d69a96ee55b09ef9fcf1485ec34d986dd40e7662
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60956281"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977969"
 ---
 # <a name="android-job-scheduler"></a>Planificateur de travaux Android
 
@@ -227,4 +227,4 @@ Ce guide décrit comment utiliser le Planificateur de travaux Android pour effec
 - [Référence de l’API de JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)
 - [Planification des tâches comme un pro avec JobScheduler](https://medium.com/google-developers/scheduling-jobs-like-a-pro-with-jobscheduler-286ef8510129)
 - [Android batterie et les optimisations de mémoire - Google d’e/s 2016 (vidéo)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)
-- [Android JobScheduler - René Ruppert - Xamarin University](https://www.youtube.com/watch?v=aSjBBPYjelE)
+- [Android JobScheduler - René Ruppert](https://www.youtube.com/watch?v=aSjBBPYjelE)

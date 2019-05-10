@@ -6,12 +6,12 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 3f1e1ce324e849c0c939d936eb6ee1470cf24a3b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bdf284d66539da3eca35e79d761712012674de0d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266606"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978454"
 ---
 # <a name="binding-objective-c"></a>Liaison Objective-C
 
@@ -45,17 +45,13 @@ Cet article fournit une procédure de création d’un projet de liaison à l’
 
 ### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[Exemples de liaisons](https://github.com/mono/monotouch-bindings)
 
-Une collection de liaisons de fournisseurs tiers qui peuvent être utilisés une référence lors de la création de nouveaux projets de liaison.
+Une collection de liaisons de fournisseurs tiers qui peut être utilisé comme référence lors de la création de nouveaux projets de liaison.
 
 ## <a name="mac"></a>Mac
 
 Historiquement [liaison de Mac](~/mac/platform/binding.md) a été un processus très manuel. Il existe actuellement un [aperçu téléchargeable](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) de prise en charge du projet de liaison Mac pour une future version de Visual Studio pour Mac.
 
-
-
 ## <a name="related-links"></a>Liens associés
 
 - [iOS de liaison](~/ios/platform/binding-objective-c/index.md)
 - [Liaison du Mac](~/mac/platform/binding.md)
-- [Cours de l’Université de Xamarin : Génération d’une bibliothèque de liaisons Objective-C](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Cours de l’Université de Xamarin : Générer une bibliothèque de liaisons Objective-C avec Sharpie objectif](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

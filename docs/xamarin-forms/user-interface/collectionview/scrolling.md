@@ -1,27 +1,24 @@
 ---
-title: Faire défiler un élément dans la vue
+title: Xamarin.Forms CollectionView le défilement
 description: Quand un où les balayages utilisateur pour lancer un défilement, la position de fin du défilement peut être contrôlée afin que les éléments sont affichées. En outre, CollectionView définit deux méthodes ScrollTo, défilement par programmation des éléments dans l’affichage.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: da7f379076b8e193deddc99e9004f051ba006cbb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367563"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048162"
 ---
-# <a name="scroll-an-item-into-view"></a>Faire défiler un élément dans la vue
+# <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.Forms CollectionView le défilement
 
-![Preview](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Cette API est actuellement en version préliminaire")
 
 [![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> Le `CollectionView` est actuellement une version d’évaluation et ne dispose pas de certaines de ses fonctionnalités planifiée. En outre, l’API peut changer que l’implémentation est terminée.
 
 `CollectionView` définit deux `ScrollTo` méthodes, que faire défiler les éléments dans la vue. Une des surcharges fait défiler l’élément à l’index spécifié dans la vue, tandis que l’autre fait défiler l’élément spécifié dans la vue. Les deux surcharges ont des arguments supplémentaires qui peuvent être spécifiées pour indiquer la position exacte de l’élément après que le défilement est terminé et si vous souhaitez animer le défilement.
 

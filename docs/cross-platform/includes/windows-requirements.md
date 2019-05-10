@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: 090d9916206572c2d23fab24236f500b197ddc4f
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.topic: include
+ms.openlocfilehash: a8d762fca98c413d17e2aef791093aeadc0dcd59
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855374"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64987067"
 ---
 ||Recommandé|Notes|
 |---|---|---|
@@ -12,4 +13,4 @@ ms.locfileid: "58855374"
 |**Xamarin.iOS**|SDK iOS 10 (installé sur un Mac)|Pour générer des projets iOS sous Windows, il faut :<ul><li>Visual Studio 2017 (Visual Studio 2019 recommandé), et</li><li>un ordinateur Mac, <a href="~/ios/get-started/installation/windows/connecting-to-mac/index.md">accessible sur le réseau</a> à partir de l’ordinateur Windows, conforme aux exigences minimales pour l’exécution de Xamarin sur macOS.</li></ul>|
 |**Xamarin.Android**|Android 6.0 / API niveau 23|Vous pouvez toujours cibler des versions antérieures d’Android lors de l’utilisation de la dernière version du Kit de développement logiciel (SDK) ou vous pouvez générer à partir de versions antérieures du Kit de développement logiciel (SDK), si nécessaire.|
 |**Xamarin.Forms**||<ul><li>Les applications Xamarin.Forms pour iOS et Android peuvent être déployées sur les plateformes appropriées, comme décrit ci-dessus.</li><li>L’utilisation de Visual Studio signifie aussi que vous pouvez tester des applications pour la plateforme Windows universelle (sur Windows 10) directement sur l’ordinateur de développement.</li></ul>|
-|**Xamarin.Mac**||Les projets Xamarin.Mac (applications de bureau macOS) peuvent être ouverts dans Visual Studio et compilés pour rechercher des erreurs, mais les applications Mac ne peuvent pas actuellement être générées pour la distribution dans Visual Studio. Consultez les notes de publication sur la <a href="https://developer.xamarin.com/releases/vs/xamarin.vs_4/xamarin.vs_4.2/#Xamarin.Mac_minimum_support.">prise en charge de Xamarin.Mac</a> pour plus d’informations sur les limitations des projets Mac dans Visual Studio.|
+|**Xamarin.Mac**||Les projets Xamarin.Mac (applications de bureau macOS) peuvent être ouverts dans Visual Studio et compilés pour rechercher des erreurs, mais les applications Mac ne peuvent pas actuellement être générées pour la distribution dans Visual Studio.|

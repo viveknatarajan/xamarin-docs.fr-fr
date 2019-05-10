@@ -1,27 +1,24 @@
 ---
-title: Spécifier la disposition de CollectionView Xamarin.Forms
+title: Xamarin.Forms CollectionView de disposition
 description: Par défaut, un CollectionView affiche ses éléments dans une liste verticale. Toutefois, grilles et répertorie vertical et horizontal peuvent être spécifiés.
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
-ms.openlocfilehash: 8ed365ed41ac31c66d41f1a32a7a16929cdc6770
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 5543bcc93f3c38b56a4a6caa0ea23b8ccf434e1c
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367605"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048242"
 ---
-# <a name="specify-xamarinforms-collectionview-layout"></a>Spécifier la disposition de CollectionView Xamarin.Forms
+# <a name="xamarinforms-collectionview-layout"></a>Xamarin.Forms CollectionView de disposition
 
-![Preview](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Cette API est actuellement en version préliminaire")
 
 [![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> Le `CollectionView` est actuellement une version d’évaluation et ne dispose pas de certaines de ses fonctionnalités planifiée. En outre, l’API peut changer que l’implémentation est terminée.
 
 `CollectionView` définit les propriétés suivantes qui contrôlent la mise en page :
 
@@ -43,7 +40,7 @@ Ces mises en page peuvent être spécifiés en définissant le `ItemsLayout` pro
 - `SnapPointsAlignment`, de type `SnapPointsAlignment`, spécifie comment les points d’ancrage sont alignées avec les éléments.
 - `SnapPointsType`, de type `SnapPointsType`, spécifie le comportement des points d’ancrage lors du défilement.
 
-Ces propriétés sont secondées par [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objets, ce qui signifie que les propriétés peuvent être des cibles de liaisons de données. Pour plus d’informations sur les points d’ancrage, consultez [points d’alignement](scrolling.md#snap-points) dans le [défiler un élément dans l’affichage](scrolling.md) guide.
+Ces propriétés sont secondées par [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objets, ce qui signifie que les propriétés peuvent être des cibles de liaisons de données. Pour plus d’informations sur les points d’ancrage, consultez [points d’alignement](scrolling.md#snap-points) dans le [Xamarin.Forms CollectionView défilement](scrolling.md) guide.
 
 Le `ItemsLayoutOrientation` énumération définit les membres suivants :
 
@@ -344,7 +341,7 @@ Par défaut, chaque élément dans un `CollectionView` individuellement mesuré 
 - `MeasureFirstItem` : seul le premier élément est mesuré, avec tous les articles suivants étant données la même taille que le premier élément.
 
 > [!IMPORTANT]
-> Le `MeasureFirstItem` stratégie de dimensionnement doit être utilisé dans les situations où la taille de l’élément est destinée à être uniforme sur tous les éléments et entraîne des performances accrues.
+> Le `MeasureFirstItem` stratégie de dimensionnement entraîne de meilleures performances lorsqu’il est utilisé dans les situations où la taille de l’élément est destinée à être uniforme sur tous les éléments.
 
 L’exemple de code suivant montre le paramètre le `ItemSizingStrategy` propriété :
 
@@ -365,8 +362,11 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
+> [!NOTE]
+> L’élément de stratégie de dimensionnement est actuellement uniquement implémenté sur iOS.
+
 ## <a name="related-links"></a>Liens connexes
 
 - [CollectionView (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Localisation de droite à gauche](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Faire défiler un élément dans la vue](scrolling.md)
+- [Xamarin.Forms CollectionView le défilement](scrolling.md)

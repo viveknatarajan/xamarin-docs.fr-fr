@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 5bd232293c979566faed2856de7287903da94054
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 661f27b90882234ddc629ac280690d534aca499d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61300401"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977791"
 ---
 # <a name="layouts-in-xamarinforms"></a>Dispositions dans Xamarin.Forms
 
@@ -23,7 +23,7 @@ Xamarin.Forms a plusieurs dispositions et les fonctionnalités pour organiser le
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Dispositions Xamarin.Forms, par [Xamarin University](https://university.xamarin.com/)**
+**Vidéo de dispositions Xamarin.Forms**
 
 Chaque contrôle de disposition est décrite ci-dessous, ainsi que des détails sur la façon de gérer les changements d’orientation de l’écran :
 

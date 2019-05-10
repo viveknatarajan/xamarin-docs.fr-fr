@@ -6,25 +6,21 @@ ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d09be7b85980e5c5a8eb209dc1b4ff3136c34b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 62b8e82a1191f3213453e9a213ea615e476662d5
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61195590"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978221"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>La mise à jour des applications existantes vers l’API unifiée
 
 > [!IMPORTANT]
-> L’API classique Xamarin, ce qui a précédé l’API unifiée, a été déconseillée. 
+> L’API classique Xamarin, ce qui a précédé l’API unifiée, a été déconseillée.
 > - La dernière version de Xamarin.iOS pour prendre en charge de l’API classique (monotouch.dll) a été 9.10 de Xamarin.iOS.
 > - Xamarin.Mac prend toujours en charge l’API classique, mais il n’est plus mis à jour. Dans la mesure où il est déconseillé, les développeurs doivent déplacer leurs applications vers l’API unifiée.
 
 ## <a name="how-to-update-your-apps"></a>Comment mettre à jour de vos applications
-
-Xamarin University a une vidéo disponible gratuitement **mise à niveau vers l’iOS Unified API**. Visitez [Xamarin University Lightning conférences](http://university.xamarin.com/lightninglectures) regarder !
-
-[ ![](updating-apps-images/xamu-video-sml.png "Xamarin University")](http://university.xamarin.com/lightninglectures)
 
 Il existe trois étapes pour mettre à jour vos applications :
 
