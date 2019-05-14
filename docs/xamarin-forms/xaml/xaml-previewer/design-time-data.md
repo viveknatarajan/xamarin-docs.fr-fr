@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 60074c3c1b69a57d313ad0243246ba6db93dde3d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876326"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557435"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Utiliser des données de conception avec le Générateur d’aperçu XAML
 
@@ -22,7 +22,7 @@ _Certaines dispositions sont difficiles à visualiser les données. Utilisez ces
 
 Données de conception sont fausses données que vous définissez pour faciliter vos contrôles visualiser dans le Générateur d’aperçu XAML. Pour commencer, ajoutez les lignes de code suivantes à l’en-tête de votre page XAML :
 
-```csharp
+```xaml
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -32,17 +32,17 @@ Après avoir ajouté les espaces de noms, vous pouvez placer `d:` devant n’imp
 
 Par exemple, vous pouvez ajouter le texte à une étiquette qui est généralement liée aux données.
 
-```csharp
-<Label Text={Binding Name} d:Text="Name" />
+```xaml
+<Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
 [![Concevoir des données d’heure avec le texte dans une étiquette](xaml-previewer-images/designtimedata-label-sm.png "conception heure des données avec le texte une étiquette")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
- Dans cet exemple, sans `d:Text`, le Générateur d’aperçu XAML afficherait rien pour l’étiquette. Au lieu de cela, il affiche « Name » où l’étiquette a des données réelles lors de l’exécution.
+Dans cet exemple, sans `d:Text`, le Générateur d’aperçu XAML afficherait rien pour l’étiquette. Au lieu de cela, il affiche « Name » ! où l’étiquette a des données réelles lors de l’exécution.
 
 Vous pouvez utiliser `d:` avec n’importe quel attribut pour un contrôle Xamarin.Forms, telles que les couleurs, les tailles de police et l’espacement. Vous pouvez même l’ajouter au contrôle lui-même :
 
-```csharp
+```xaml
 <d:Button Text="Design Time Button" />
 ```
 
@@ -54,7 +54,7 @@ Dans cet exemple, le bouton apparaît uniquement au moment du design. Utilisez c
 
 Vous pouvez définir un moment du design pour les images qui sont liées à la page ou chargée dynamiquement dans Source. Dans votre projet Android, ajoutez l’image que vous souhaitez afficher dans le Générateur d’aperçu XAML pour le **ressources > Drawable** dossier. Dans votre projet iOS, ajoutez l’image à la **ressources** dossier. Vous pouvez ensuite afficher cette image dans le Générateur d’aperçu XAML au moment du design :
 
-```csharp
+```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 [![Concevoir des données de temps avec des images](xaml-previewer-images/designtimedata-image-sm.png "données chronologique avec iamges de conception")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
@@ -63,7 +63,7 @@ Vous pouvez définir un moment du design pour les images qui sont liées à la p
 
 ListView est largement utilisé pour afficher des données dans une application mobile. Toutefois, ils sont difficiles à visualiser les données réelles. Pour utiliser les données de conception avec eux, vous devez créer un tableau de temps de conception à utiliser comme un ItemsSource. Le Générateur d’aperçu XAML présente les nouveautés dans ce tableau dans votre ListView au moment du design.
 
-```csharp
+```xaml
 <StackLayout>
     <ListView ItemsSource="{Binding Items}">
         <d:ListView.ItemsSource>
@@ -87,8 +87,7 @@ ListView est largement utilisé pour afficher des données dans une application 
 
 Cet exemple affiche un ListView de trois TextCells dans le Générateur d’aperçu XAML. Vous pouvez modifier `x:String` à un modèle de données existant dans votre projet.
 
-Reportez-vous à [application de Hanselman.Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L36-L57) pour obtenir un exemple plus complexe.
-
+Reportez-vous à [application de Hanselman.Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) pour obtenir un exemple plus complexe.
 
 ## <a name="alternative-hardcode-a-static-viewmodel"></a>Alternative : Coder en dur un ViewModel statique
 

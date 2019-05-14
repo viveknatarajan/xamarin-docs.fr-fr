@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 971effc34716596ec6be3708ac9da4e68d7bdfee
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: fb5cea018180966e914a5bce5e85cb83fbdf901d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978587"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557245"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensions iOS dans Xamarin.iOS
 
@@ -71,7 +71,7 @@ S’ils choisissent un de votre application d’Extensions, son `UIViewControlle
 
 Les extensions peuvent communiquer avec leurs applications de l’hôte via un [NSExtensionContext](xref:Foundation.NSExtensionContext) objet. Certaines Extensions ont des opérations qui reçoivent des rappels asynchrones avec les résultats. Ces rappels seront exécutées sur des threads d’arrière-plan et l’Extension doit prendre cela en compte ; par exemple, à l’aide [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) s’ils souhaitent mettre à jour de l’interface utilisateur. Consultez le [communique avec l’application hôte](#communicating-with-the-host-app) section ci-dessous pour plus d’informations.
 
-Par défaut, les Extensions et leurs applications de conteneur ne peuvent pas communiquer, en dépit d’en cours installés ensemble. Dans certains cas, l’application de conteneur est essentiellement un conteneur « shipping » vide dont l’objectif est pris en charge une fois que l’Extension est installée. Toutefois, si les circonstances imposent, l’application de conteneur et l’Extension peuvent partager des ressources à partir d’une zone commune. En outre, un **Extension aujourd'hui** peut demander à son application de conteneur pour ouvrir une URL. Ce comportement est illustré dans le [faire évoluer le Widget du compte à rebours](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
+Par défaut, les Extensions et leurs applications de conteneur ne peuvent pas communiquer, en dépit d’en cours installés ensemble. Dans certains cas, l’application de conteneur est essentiellement un conteneur « shipping » vide dont l’objectif est pris en charge une fois que l’Extension est installée. Toutefois, si les circonstances imposent, l’application de conteneur et l’Extension peuvent partager des ressources à partir d’une zone commune. En outre, un **Extension aujourd'hui** peut demander à son application de conteneur pour ouvrir une URL. Ce comportement est illustré dans le [événement compte à rebours Widget](https://github.com/xamarin/ios-samples/tree/master/intro-to-extensions).
 
 ## <a name="creating-an-extension"></a>Création d’une extension
 

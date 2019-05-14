@@ -9,7 +9,7 @@ ms.author: chhamo
 ms.date: 04/16/2019
 ms.openlocfilehash: 7cbc14e0a912fe9c55ff672796e839a8dcdfd9b5
 ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "64347115"
@@ -76,7 +76,7 @@ Il existe un nombre de zones potentielles où choses peuvent mal se passer, nota
 
 Apple réserve le droit aux mises à jour les règles de soumissions App Store à tout moment. Ces modifications de règle sont annoncées uniquement parfois à l’avance. Certaines de ces modifications nécessitent des modifications pour prendre en charge, ce qui nécessiteraient un composant de Xamarin.iOS mis à jour des outils.
 
-En plus des modifications de règle, Apple souvent ajoute des validations supplémentaires pour les applications soumises ou renforce existants. Certaines d'entre elles nécessitent des modifications dans nos outils (par exemple une nouvelle sur liste noire des symboles). Beaucoup d'entre elles sont tout d’abord rencontrés par les clients soumis, car il n’existe aucune annonce (ou liste) des règles.
+En plus des modifications de règle, Apple souvent ajoute des validations supplémentaires pour les applications soumises ou renforce existants. Certaines d'entre elles nécessitent des modifications dans nos outils (par exemple une nouvelle sur liste rouge des symboles). Beaucoup d'entre elles sont tout d’abord rencontrés par les clients soumis, car il n’existe aucune annonce (ou liste) des règles.
 
 ## <a name="summary"></a>Récapitulatif
 
