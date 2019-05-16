@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 63ddc7d34d0bcca4e86cb03b08a6040d20f8f037
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f0e2c93c4a6be0e83c9c4f1607b125b8d240ccc1
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857633"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557214"
 ---
 # <a name="contributing"></a>Contribuer
 
@@ -24,7 +24,7 @@ Pour apporter des corrections et des mises à jour mineures, vous pouvez cliquer
 
 2. Créez une `branch` pour vos modifications.
 
-3. Écrivez votre contenu. Reportez-vous au [modèle](../contributing-guidelines/template.md) et au [guide de style](../contributing-guidelines/voice-tone.md).
+3. Écrivez votre contenu. Reportez-vous au [modèle](contributing-guidelines/template.md) et au [guide de style](contributing-guidelines/voice-tone.md).
 
 4. Soumettez une demande de tirage (pull request) de votre branche à `MicrosoftDocs/xamarin-docs/live`.
 
