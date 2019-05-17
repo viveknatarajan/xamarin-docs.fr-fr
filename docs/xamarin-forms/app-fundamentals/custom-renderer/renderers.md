@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: cdca5294ea12bf8907ea5f6242efea00f384e77e
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 7eeb1aebd0a95ae9ecbcc39e70a3931ee76fb0ce
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329336"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048292"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Classes de base de renderer et contrôles natifs
 
@@ -30,6 +30,9 @@ La classe `MapRenderer` se trouve dans les espaces de noms suivants :
 - **iOS** – Xamarin.Forms.Maps.iOS
 - **Android** – Xamarin.Forms.Maps.Android
 - **Plateforme Windows universelle (UWP)** – Xamarin.Forms.Maps.UWP
+
+> [!NOTE]
+> Pour plus d’informations sur la création de renderers personnalisés pour des applications Shell, consultez [Renderers Xamarin.Forms Shell personnalisés](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
 
 ## <a name="pages"></a>Pages
 
@@ -104,7 +107,3 @@ Le tableau suivant liste les classes de renderer et de contrôle natif qui impl�
 ## <a name="summary"></a>Récapitulatif
 
 Dans cet article, nous avons listé les classes de renderer et de contrôle natif qui implémentent chaque page, disposition, vue et cellule Xamarin.Forms. Chaque contrôle Xamarin.Forms est accompagné d’un renderer pour chaque plateforme qui crée une instance d’un contrôle natif.
-
-## <a name="related-links"></a>Liens associés
-
-- [Renderers personnalisés (vidéo Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

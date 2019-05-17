@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 4583b703d6c6b15105d60a98e7a1064e6a2e9263
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557280"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977785"
 ---
 # <a name="xamarinforms-binding-mode"></a>Mode de liaison Xamarin.Forms
 
@@ -109,7 +109,7 @@ Les propriétés cibles disposant du mode de liaison `OneTime` sont mises à jou
 
 La page **Simple Color Selector** (Sélecteur de couleur simple) illustre l’utilisation d’un ViewModel simple. Les liaisons de données permettent à l’utilisateur de sélectionner une couleur à l’aide de trois éléments `Slider` pour la teinte, la saturation et la luminosité.
 
-Le ViewModel est la source de la liaison de données. Le ViewModel *ne définit pas* de propriétés pouvant être liées, mais il implémente un mécanisme de notification qui permet d’avertir l’infrastructure de liaison lorsque la valeur d’une propriété change. Ce mécanisme de notification est l’interface [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) qui définit une propriété unique nommée [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Une classe qui implémente cette interface déclenche généralement l’événement lorsque l’une de ses propriétés publiques change de valeur. L’événement n’a pas besoin d’être déclenché si la propriété ne change jamais. (L’interface `INotifyPropertyChanged` est également implémentée par `BindableObject` et un événement `PropertyChanged` est déclenché chaque fois qu’une propriété pouvant être liée change de valeur.)
+Le ViewModel est la source de la liaison de données. Le ViewModel *ne définit pas* de propriétés pouvant être liées, mais il implémente un mécanisme de notification qui permet d’avertir l’infrastructure de liaison lorsque la valeur d’une propriété change. Ce mécanisme de notification est l’interface [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) qui définit un événement unique nommé [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Une classe qui implémente cette interface déclenche généralement l’événement lorsque l’une de ses propriétés publiques change de valeur. L’événement n’a pas besoin d’être déclenché si la propriété ne change jamais. (L’interface `INotifyPropertyChanged` est également implémentée par `BindableObject` et un événement `PropertyChanged` est déclenché chaque fois qu’une propriété pouvant être liée change de valeur.)
 
 La classe `HslColorViewModel` définit cinq propriétés : Les propriétés `Hue`, `Saturation`, `Luminosity` et `Color` sont liées entre elles. Lorsque l’un des trois composants de couleur change de valeur, la propriété `Color` est recalculée et les événements `PropertyChanged` sont déclenchés pour les quatre propriétés :
 
@@ -677,7 +677,7 @@ La capture d’écran iOS de gauche montre le programme lors de sa première ex�
 
 [![Sample Settings](binding-mode-images/samplesettings-small.png "Sample Settings")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings")
 
-Les deux autres captures d’écran affichent les paramètres modifiés. Lorsque vous testez cette page, veillez à mettre en veille le programme ou à l’arrêter sur l’appareil ou l’émulateur où il s’exécute. L’arrêt du programme à partir du débogueur Visual Studio n’entraîne pas le remplacement `OnSleep` dans la classe `App` à appeler.
+L’autre capture d’écran montre les paramètres modifiés. Lorsque vous testez cette page, veillez à mettre en veille le programme ou à l’arrêter sur l’appareil ou l’émulateur où il s’exécute. L’arrêt du programme à partir du débogueur Visual Studio n’entraîne pas le remplacement `OnSleep` dans la classe `App` à appeler.
 
 Dans le prochain article, vous verrez comment spécifier un [**formatage de chaîne**](string-formatting.md) des liaisons de données qui sont définies sur la propriété `Text` de `Label`.
 

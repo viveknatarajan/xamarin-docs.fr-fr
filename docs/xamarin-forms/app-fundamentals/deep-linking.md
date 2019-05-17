@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e8bfb01c6f5aa22332d226b8b2768f56a2904a7d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208055"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978507"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexation d’applications et liens ciblés
 
@@ -23,7 +23,7 @@ _L’indexation d’applications permet aux applications, qui sinon auraient ét
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
-**Deep Linking with Xamarin.Forms and Azure, par [Xamarin University](https://university.xamarin.com/)**
+**Vidéo sur la création de liens ciblés avec Xamarin.Forms et Azure**
 
 
 L’indexation d’applications et les liens ciblés Xamarin.Forms fournissent une API servant à publier des métadonnées pour l’indexation d’applications quand les utilisateurs parcourent les applications. Le contenu indexé peut alors être recherché dans Spotlight Search, dans Google Search ou dans une recherche web. Le fait d’appuyer sur un résultat de recherche qui contient un lien ciblé déclenche un événement qui peut être géré par une application et qui est généralement utilisé pour accéder à la page référencée à partir du lien ciblé.

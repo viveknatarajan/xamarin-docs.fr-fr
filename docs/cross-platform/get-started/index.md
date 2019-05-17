@@ -1,18 +1,18 @@
 ---
 title: Bien démarrer avec Xamarin
-description: Ce document fournit des liens vers des guides qui décrivent comment bien démarrer avec le développement Xamarin. Le contenu lié explique comment générer une première application, fournit une introduction générale au développement mobile et examine les offres de formation avec Xamarin University.
+description: Ce document fournit des liens vers des guides qui décrivent comment bien démarrer avec le développement Xamarin. Le contenu lié explique comment créer une première application, puis fournit une introduction générale au développement mobile.
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: b9b48d83199f83c69a42785d4d0c4008a5c6a5e1
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: da2c927bc7d6943066b6b2541d9af98a560c40b5
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197392"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978430"
 ---
 # <a name="building-mobile-apps"></a>Création d’applications mobiles
 
@@ -48,11 +48,11 @@ En choisissant Xamarin et en conservant à l’esprit quelques éléments quand 
 
 Découvrez Visual Studio pour Mac, l’environnement de développement intégré (IDE) pour macOS.
 
-## <a name="get-started-with-xamarin-university"></a>Bien démarrer avec Xamarin University
+## <a name="get-started-video"></a>Vidéo de prise en main
 
 > [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
 
-**Création de votre première application Xamarin.Forms avec Xamarin pour Visual Studio, par [Xamarin University](https://university.xamarin.com)**
+**Création de votre première application Xamarin.Forms avec Xamarin pour Visual Studio**
 
 ## <a name="related-links"></a>Liens associés
 

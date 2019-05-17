@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: ed59f32711bae56672d1d7f114fbb80a906d67ce
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0b063619387d9984e24f6987234605b626289e2d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855287"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978297"
 ---
 # <a name="hello-ios--quickstart"></a>Hello.iOS - Démarrage rapide
 
@@ -26,7 +26,7 @@ Ce guide décrit comment créer une application qui convertit un numéro de tél
 
 Le développement iOS avec Xamarin exige :
 
-- Un Mac exécutant macOS High Sierra (10.13) ou une version ultérieure
+- Un Mac exécutant macOS High Sierra (10.13) ou version ultérieure.
 - La dernière version de Xcode et du kit iOS SDK installée à partir de l’[App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 
 ::: zone pivot="macos"

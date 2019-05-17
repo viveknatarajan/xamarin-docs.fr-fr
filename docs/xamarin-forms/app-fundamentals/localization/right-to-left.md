@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: c4098bfe40a252da2adbe7a7a2cd4c0f105ad1c8
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e74231133c0a52ba0fe4e5589f09aab15e1b9924
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050411"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978597"
 ---
 # <a name="right-to-left-localization"></a>Localisation de droite à gauche
 
@@ -150,7 +150,7 @@ La localisation de droite à gauche de Xamarin.Forms présente un certain nombre
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Prise en charge de droite à gauche à l’aide de Xamarin.Forms 3.0, par [Xamarin University](https://university.xamarin.com/)**
+**Vidéo sur la prise en charge linguistique de droite à gauche avec Xamarin.Forms 3.0**
 
 ## <a name="related-links"></a>Liens connexes
 

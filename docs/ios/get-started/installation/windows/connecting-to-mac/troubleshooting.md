@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: cfc4ecc5bf7ebc5e4c4dae8094fe3eb4ece34068
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112496"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978535"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Résolution des problèmes de connexion pour un hôte de build Xamarin.iOS
 
@@ -124,17 +124,17 @@ L’hôte de build Xamarin des versions antérieures de Xamarin.iOS n’est plus
 
 Causes connues :
 
-- **Limitation** : Cette erreur peut survenir lors d’une tentative de connexion à l’hôte de build à l’aide du _nom complet_ du compte si ce nom comprend un caractère accentué. Il s’agit d’une limitation de la [bibliothèque SSH.NET](https://sshnet.codeplex.com/) que Xamarin utilise pour la connexion SSH. **Solution de contournement** : Voir l’étape 5 ci-dessus.
+- **Limitation** : Cette erreur peut survenir lors d’une tentative de connexion à l’hôte de build à l’aide du _nom complet_ du compte si ce nom comprend un caractère accentué. Il s’agit d’une limitation de la [bibliothèque SSH.NET](https://sshnet.codeplex.com/) que Xamarin utilise pour la connexion SSH. **Solution de contournement** : Consultez l’étape 5 ci-dessus.
 
 #### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>« Authentification impossible avec des clés SSH. Essayez d’abord de vous connecter avec des informations d’identification »
 
 Cause connue :
 
-- **Restriction de sécurité SSH** : Ce message signifie généralement que l’un des fichiers ou répertoires dans le chemin d’accès complet **$HOME/.ssh/authorized\_keys** sur le Mac dispose d’autorisations d’écriture activées pour d’_autres_ membres ou des membres du _groupe_. **Correctif courant** : Exécutez `chmod og-w "$HOME"` dans une invite de commandes Terminal sur le Mac. Pour plus d’informations sur le fichier ou répertoire particulier à l’origine du problème, exécutez `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` dans Terminal, puis ouvrez le fichier **sshd.log** à partir de votre bureau et recherchez « Authentication refused: bad ownership or modes » (Authentification refusée : propriété ou modes incorrects).
+- **Restriction de sécurité SSH** : Ce message signifie généralement que l’un des fichiers ou répertoires dans le chemin d’accès complet **$HOME/.ssh/authorized\_keys** sur le Mac dispose d’autorisations d’écriture activées pour d’_autres_ membres ou des membres du _groupe_. **Correctif courant** : Exécutez `chmod og-w "$HOME"` dans une invite de commandes de Terminal sur le Mac. Pour plus d’informations sur le fichier ou répertoire particulier à l’origine du problème, exécutez `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` dans Terminal, puis ouvrez le fichier **sshd.log** à partir de votre bureau et recherchez « Authentication refused: bad ownership or modes » (Authentification refusée : propriété ou modes incorrects).
 
 #### <a name="trying-to-connect-never-completes"></a>« Tentative de connexion... » ne s’arrête jamais
 
-- **Bogue [n° 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  : Ce problème peut se produire sur Xamarin 4.1 si l’**environnement de démarrage** dans le menu contextuel **Options avancées** de l’utilisateur Mac dans **Préférences Système &gt; Utilisateurs et groupes** est défini sur une valeur autre que **/bin/bash**. (À compter de Xamarin 4.2, ce scénario entraîne le message d’erreur « Connexion impossible ».) **Solution de contournement** : Rétablissez la valeur par défaut d’origine **/bin/bash** pour l’**environnement de démarrage**.
+- **Bogue [n° 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  : Ce problème peut se produire sur Xamarin 4.1 si l’**environnement de démarrage** dans le menu contextuel **Options avancées** de l’utilisateur Mac dans **Préférences Système &gt; Utilisateurs et groupes** est défini sur une valeur autre que **/bin/bash**. (À compter de Xamarin 4.2, ce scénario entraîne le message d’erreur « Connexion impossible ».) **Solution de contournement** : Rétablissez l’**environnement de démarrage** à la valeur par défaut d’origine **/bin/bash**.
 
 <a name="tryagain" />
 
@@ -142,15 +142,15 @@ Cause connue :
 
 Causes signalées :
 
-- **Bogue** : Certains utilisateurs ont vu, avec une erreur plus détaillée dans les fichiers journaux, le message d’erreur « Une erreur inattendue s’est produite pendant la configuration de SSH pour l’utilisateur... L’opération de session a expiré » lors d’une tentative de connexion à l’hôte de build à l’aide d’Active Directory ou d’un autre compte d’utilisateur de domaine de service d’annuaire. **Solution de contournement :** Connectez-vous à l’hôte de build à l’aide d’un compte d’utilisateur local à la place.
+- **Bogue** : Certains utilisateurs ont vu, avec une erreur plus détaillée dans les fichiers journaux, le message d’erreur « Une erreur inattendue s’est produite pendant la configuration de SSH pour l’utilisateur... L’opération de session a expiré » lors d’une tentative de connexion à l’hôte de build à l’aide d’Active Directory ou d’un autre compte d’utilisateur de domaine de service d’annuaire. **Solution de contournement :** Connectez-vous à l’hôte de build à l’aide d’un compte d’utilisateur local.
 
-- **Bogue** : Certains utilisateurs ont vu cette erreur lors d’une tentative de connexion à l’hôte de build en double-cliquant sur le nom du Mac dans la boîte de dialogue de connexion. **Solution de contournement possible** : [Ajoutez manuellement le Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) à l’aide de l’adresse IP.
+- **Bogue** : Certains utilisateurs ont vu cette erreur lors d’une tentative de connexion à l’hôte de build en double-cliquant sur le nom du Mac dans la boîte de dialogue de connexion. **Solution de contournement possible** : [Ajoutez manuellement le Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) à l’aide de l’adresse IP.
 
-- **Bogue [n° 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**  : Certains utilisateurs ont rencontré cette erreur lors de l’utilisation d’une connexion réseau sans fil entre l’hôte de build Mac et Windows. **Solution de contournement possible** : Déplacez les deux ordinateurs sur une connexion réseau câblée.
+- **Bogue [n° 35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**  : Certains utilisateurs ont rencontré cette erreur lors de l’utilisation d’une connexion réseau sans fil entre l’hôte de build Mac et Windows. **Solution de contournement possible** : Reliez les deux ordinateurs à une connexion réseau câblée.
 
-- **Bogue [n° 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**  : Sur Xamarin 4.0, ce message s’affiche chaque fois que le fichier **$HOME/.bashrc** sur le Mac contient une erreur. (À compter de Xamarin 4.1, les erreurs contenues dans le fichier **.bashrc** n’affectent plus le processus de connexion.) **Solution de contournement** : Déplacez le fichier **.bashrc** vers un emplacement de sauvegarde (ou supprimez-le si vous savez que vous n’en avez pas besoin).
+- **Bogue [n° 36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**  : Sur Xamarin 4.0, ce message s’affiche chaque fois que le fichier **$HOME/.bashrc** sur le Mac contient une erreur. (À compter de Xamarin 4.1, les erreurs contenues dans le fichier **.bashrc** n’affectent plus le processus de connexion.) **Solution de contournement** : Déplacez le fichier **.bashrc** vers un emplacement de sauvegarde (ou supprimez-le si vous savez qu’il est inutile).
 
-- **Bogue [n° 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  : Cette erreur peut survenir si l’**environnement de démarrage** dans le menu contextuel **Options avancées** de l’utilisateur Mac dans **Préférences Système > Utilisateurs et groupes** est défini sur une valeur autre que **/bin/bash**. **Solution de contournement** : Rétablissez la valeur par défaut d’origine **/bin/bash** pour l’**environnement de démarrage**.
+- **Bogue [n° 52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  : Cette erreur peut survenir si l’**environnement de démarrage** dans le menu contextuel **Options avancées** de l’utilisateur Mac dans **Préférences Système > Utilisateurs et groupes** est défini sur une valeur autre que **/bin/bash**. **Solution de contournement** : Rétablissez l’**environnement de démarrage** à la valeur par défaut d’origine **/bin/bash**.
 
 - **Limitation** : Cette erreur peut survenir si l’hôte de build Mac est connecté à un routeur qui n’a pas accès à Internet (ou si le Mac utilise un serveur DNS qui expire quand la recherche DNS inversée de l’ordinateur Windows est demandée). Visual Studio met environ 30 secondes pour récupérer l’empreinte digitale SSH et risque de ne pas parvenir à se connecter.
 
@@ -210,7 +210,7 @@ Cette section décrit quelques messages qui peuvent s’afficher dans les fenêt
 
 À partir du moment où vous avez vérifié que Mac et Windows sont tous les deux mis à jour avec le même canal de distribution Xamarin, cet avertissement peut être ignoré.
 
-#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>« Échec de l’exécution de 'ls /usr/bin/mono' : ExitStatus=1 »
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Failed to execute 'ls /usr/bin/mono': ExitStatus=1"
 
 Ce message peut être ignoré tant que le Mac exécute OS X 10.11 (El Capitan) ou une version plus récente. Ce message n’est pas un problème sur OS X 10.11, car Xamarin vérifie également **/usr/local/bin/mono**, qui est l’emplacement attendu correct pour `mono` sur OS X 10.11.
 
@@ -303,9 +303,9 @@ Cette section aborde quelques problèmes qui peuvent se produire une fois Visual
 
 Causes connues :
 
-- **Fonctionnalité de sécurité Xamarin 4.1** : Cette erreur _se produit_ si vous revenez à la version antérieure Xamarin 4.0 après avoir utilisé Xamarin 4.1 ou une version ultérieure. Dans ce cas, l’erreur est associée à l’avertissement « La clé privée est chiffrée mais la phrase secrète est vide ». Il s’agit d’un changement _intentionnel_ en raison d’une nouvelle fonctionnalité de sécurité de Xamarin 4.1. **Correctif recommandé** : supprimer **id\_rsa** et **id\_rsa.pub** de **%LOCALAPPDATA%\Xamarin\MonoTouch**, puis reconnectez-vous à l’hôte de build Mac.
+- **Fonctionnalité de sécurité Xamarin 4.1** : Cette erreur _se produit_ si vous revenez à la version antérieure Xamarin 4.0 après avoir utilisé Xamarin 4.1 ou une version ultérieure. Dans ce cas, l’erreur est associée à l’avertissement « La clé privée est chiffrée mais la phrase secrète est vide ». Il s’agit d’un changement _intentionnel_ en raison d’une nouvelle fonctionnalité de sécurité de Xamarin 4.1. **Correctif recommandé** : Supprimez **id\_rsa** et **id\_rsa.pub** de **%LOCALAPPDATA%\Xamarin\MonoTouch**, puis reconnectez l’hôte de build Mac.
 
-- **Restriction de sécurité SSH** : quand ce message est associé à l’avertissement supplémentaire « Impossible d’authentifier l’utilisateur avec les clés SSH », il signifie généralement que l’un des fichiers ou répertoires du chemin complet **$HOME/.ssh/authorized\_keys** sur le Mac dispose d’autorisations d’écriture activées pour d’_autres_ membres ou des membres du _groupe_. **Correctif courant** : Exécutez `chmod og-w "$HOME"` dans une invite de commandes Terminal sur le Mac. Pour plus d’informations sur le fichier ou répertoire particulier à l’origine du problème, exécutez `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` dans Terminal, puis ouvrez le fichier **sshd.log** à partir de votre bureau et recherchez « Authentication refused: bad ownership or modes » (Authentification refusée : propriété ou modes incorrects).
+- **Restriction de sécurité SSH** : quand ce message est associé à l’avertissement supplémentaire « Impossible d’authentifier l’utilisateur avec les clés SSH », il signifie généralement que l’un des fichiers ou répertoires du chemin complet **$HOME/.ssh/authorized\_keys** sur le Mac dispose d’autorisations d’écriture activées pour d’_autres_ membres ou des membres du _groupe_. **Correctif courant** : Exécutez `chmod og-w "$HOME"` dans une invite de commandes de Terminal sur le Mac. Pour plus d’informations sur le fichier ou répertoire particulier à l’origine du problème, exécutez `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` dans Terminal, puis ouvrez le fichier **sshd.log** à partir de votre bureau et recherchez « Authentication refused: bad ownership or modes » (Authentification refusée : propriété ou modes incorrects).
 
 ### <a name="solutions-cannot-be-loaded-from-a-network-share"></a>Impossible de charger des solutions à partir d’un partage réseau
 
@@ -377,4 +377,4 @@ Si vous résolvez un problème de génération et que vous voulez être certain 
 ## <a name="related-links"></a>Liens associés
 
 - [Appairer avec un Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Agent de build Mac Xamarin - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Vidéo sur l’agent de build Mac Xamarin](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
-ms.date: 07/24/2018
-ms.openlocfilehash: c03e9782fe80a88c70df6b7780c43778f673d10d
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.date: 04/26/2018
+ms.openlocfilehash: 3f51b61cd7dcc3c7b17881b3576aa2c22a45e470
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854559"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64987058"
 ---
 # <a name="system-requirements"></a>Configuration requise
 
@@ -45,7 +45,7 @@ L’utilisation d’un ordinateur Mac pour le développement Xamarin nécessite 
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
 > [!WARNING]
-> Xamarin.Mac 4.8 prend uniquement en charge macOS 10.9 () ou version ultérieure.
+> Xamarin.Mac 4.8 prend uniquement en charge macOS 10.9 (Mavericks) ou version ultérieure.
 > Les versions précédentes de Xamarin.Mac prenaient en charge macOS 10.7 ou ultérieur, mais l’infrastructure TLS des anciennes versions de macOS n’était pas suffisante pour prendre en charge TLS 1.2. Pour cibler macOS 10.7 ou macOS 10.8, utilisez Xamarin.Mac 4.6 ou antérieur.
 
 ## <a name="windows-requirements"></a>Configuration requise pour Windows
