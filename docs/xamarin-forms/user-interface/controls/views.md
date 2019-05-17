@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
 ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 05/16/2019
 ms.locfileid: "61358948"
 ---
 # <a name="xamarinforms-views"></a>Vues Xamarin.Forms
@@ -183,7 +183,7 @@ Ces deux classes dérivent les [ `InputView` ](xref:Xamarin.Forms.InputView) (cl
 
 |     |     |
 | --- | --- |
-| [`ListView`](xref:Xamarin.Forms.ListView) dérive de [ `ItemsView` ](xref:Xamarin.Forms.ItemsView`1) et affiche une liste déroulante d’éléments de données sélectionnables. Définir le [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriété à une collection d’objets et définissez le [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propriété un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objet décrivant la façon dont les éléments sont à mettre en forme. Le [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) événement signale qu’une sélection a été effectuée, qui est disponible en tant que le [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propriété.<br /><br />[Documentation de l’API](xref:Xamarin.Forms.ListView) / [Guide](~/xamarin-forms/user-interface/listview/index.md) / [exemple](https://developer.xamarin.com/samples/WorkingWithListview) | [![exemple de ListView](views-images/ListView.png "Exemple de ListView")](views-images/ListView-Large.png#lightbox "exemple de ListView")<br />[Code C# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+| [`ListView`](xref:Xamarin.Forms.ListView) dérive de [ `ItemsView` ](xref:Xamarin.Forms.ItemsView`1) et affiche une liste déroulante d’éléments de données sélectionnables. Définir le [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriété à une collection d’objets et définissez le [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propriété un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objet décrivant la façon dont les éléments sont à mettre en forme. Le [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) événement signale qu’une sélection a été effectuée, qui est disponible en tant que le [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propriété.<br /><br />[Documentation de l’API](xref:Xamarin.Forms.ListView) / [Guide](~/xamarin-forms/user-interface/listview/index.md) / [exemple](https://developer.xamarin.com/samples/WorkingWithListview) | [![Exemple de ListView](views-images/ListView.png "exemple de ListView")](views-images/ListView-Large.png#lightbox "exemple de ListView")<br />[Code C# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="picker"></a>Sélecteur

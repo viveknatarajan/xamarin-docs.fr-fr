@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: a4cf63b84d0686bc28b02b18a6266908251bdf6f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c24b2c2f0742ee2c6814d9821f3c0603c6e48a96
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61154012"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804927"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Création d’objets d’Interface utilisateur dans Xamarin.iOS
 
@@ -80,7 +80,7 @@ Lorsque vous concevez votre interface utilisateur avec Interface Builder, vous d
 
  [![](creating-ui-objects-images/image6a.png "Bouton de l’éditeur de l’Assistant")](creating-ui-objects-images/image6a.png#lightbox)
 
-Cliquez sur un objet d’interface utilisateur ; puis **faites glisser le contrôle** dans le fichier .h. À ** contrôle glisser **, maintenez enfoncée la touche CTRL puis cliquez sur l’objet d’interface utilisateur que vous créez l’outlet (ou action) pour. Maintenez la touche CTRL pendant que vous faites glisser dans le fichier d’en-tête. Terminer en faisant glisser sous le `@interface` définition. Une ligne bleue doit apparaître avec une légende Outlet insérer ou une Collection de sortie, comme illustré dans la capture d’écran ci-dessous.
+Cliquez sur un objet d’interface utilisateur ; puis **faites glisser le contrôle** dans le fichier .h. Pour **faites glisser le contrôle**, maintenez enfoncée la touche CTRL, puis cliquez sur et sur l’objet d’interface utilisateur que vous créez l’outlet (ou action) pour. Maintenez la touche CTRL pendant que vous faites glisser dans le fichier d’en-tête. Terminer en faisant glisser sous le `@interface` définition. Une ligne bleue doit apparaître avec une légende Outlet insérer ou une Collection de sortie, comme illustré dans la capture d’écran ci-dessous.
 
 Lorsque vous relâchez le clic, vous êtes invité à fournir un nom pour la sortie, ce qui permet de créer un C# propriété qui peut être référencée dans le code :
 

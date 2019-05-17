@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e462346c2c0130c972d098aa2c988bdd61fc360
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370633"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804894"
 ---
 # <a name="xamarinforms-stacklayout"></a>StackLayout de Xamarin.Forms
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
-`StackLayout` organise les vues dans une ligne à dimension unique (« pile »), horizontalement ou verticalement. Vues dans un `StackLayout` peut être dimensionnée en fonction de l’espace dans la disposition à l’aide des options de disposition. Positionnement est déterminé par l’ordre des vues ont été ajoutées à la disposition et les options de disposition des vues.
+[StackLayout](xref:Xamarin.Forms.StackLayout) organise les vues dans une ligne à dimension unique (« pile »), horizontalement ou verticalement. Vues dans un `StackLayout` peut être dimensionnée en fonction de l’espace dans la disposition à l’aide des options de disposition. Positionnement est déterminé par l’ordre des vues ont été ajoutées à la disposition et les options de disposition des vues.
 
 [![](stack-layout-images/layouts-sml.png "Dispositions Xamarin.Forms")](stack-layout-images/layouts.png#lightbox "dispositions Xamarin.Forms")
 
