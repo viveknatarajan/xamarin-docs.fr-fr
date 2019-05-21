@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28846e6e9590d2adf56114fce8bc6056c0112ac1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61321558"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970969"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Dispositions pouvant être liées dans Xamarin.Forms
 
@@ -31,8 +31,10 @@ Ces propriétés peuvent être attachées à la [ `AbsoluteLayout` ](xref:Xamari
 
 Le `Layout<T>` classe expose un [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) collection, à laquelle les éléments enfants d’une mise en page sont ajoutés. Lorsque le `BinableLayout.ItemsSource` propriété est définie sur une collection d’éléments et attachée à un [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)-classe dérivée, chaque élément dans la collection est ajouté à la `Layout<T>.Children` collection pour l’affichage par la mise en page. Le `Layout<T>`-classe dérivée met ensuite à jour ses vues enfants lors de la collection sous-jacente est modifiée. Pour plus d’informations sur le cycle de disposition de Xamarin.Forms, consultez [création d’une disposition personnalisée](~/xamarin-forms/user-interface/layouts/custom.md).
 
+Mises en page peut être liées doivent uniquement utiliser quand la collection d’éléments à afficher est petite et le défilement et la sélection n’est pas nécessaire. Pendant le défilement peut être fourni en encapsulant une disposition peut être liée dans un [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), cela n’est pas recommandé comme pouvant être liées dispositions ne disposent pas de la virtualisation de l’interface utilisateur. Lorsque le défilement est requis, une vue de défilement qui inclut la virtualisation de l’interface utilisateur, tel que [ `ListView` ](xref:Xamarin.Forms.ListView) ou [ `CollectionView` ](xref:Xamarin.Forms.CollectionView), doit être utilisé. Le non-respect de cette recommandation peut entraîner des problèmes de performances.
+
 > [!IMPORTANT]
-> Mises en page peut être liées doivent uniquement utiliser quand la collection d’éléments à afficher est petite et le défilement et la sélection n’est pas nécessaire. Pendant le défilement peut être fourni en encapsulant une disposition peut être liée dans un [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), cela n’est pas recommandé comme pouvant être liées dispositions ne disposent pas de la virtualisation de l’interface utilisateur. Lorsque le défilement est requis, une vue de défilement qui inclut la virtualisation de l’interface utilisateur, tel que [ `ListView` ](xref:Xamarin.Forms.ListView) ou `CollectionView`, doit être utilisé. Le non-respect de cette recommandation peut entraîner des problèmes de performances.
+>Bien qu’il soit techniquement possible de joindre une disposition peut être liée à n’importe quelle classe de disposition qui dérive de la [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) (classe), il n’est pas toujours pratique pour ce faire, en particulier pour le [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) , [ `Grid` ](xref:Xamarin.Forms.Grid), et [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) classes. Par exemple, considérez le scénario de qui souhaite afficher une collection de données dans un [ `Grid` ](xref:Xamarin.Forms.Grid) à l’aide d’une disposition peut être liée, où chaque élément dans la collection est un objet contenant plusieurs propriétés. Chaque ligne dans le `Grid` doit afficher un objet à partir de la collection, avec chaque colonne dans la `Grid` affichant l’une des propriétés de l’objet. Étant donné que le [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) pour la mise en page peut être liée peut contenir uniquement un seul objet, il est nécessaire pour cet objet à être une classe de disposition contenant plusieurs vues qui affichent chacun une des propriétés de l’objet dans un spécifique`Grid` colonne. Bien que ce scénario peut être réalisé avec des mises en page peut être liées, il en résulte un parent `Grid` contenant un enfant `Grid` pour chaque élément dans la collection liée, qui est une utilisation très inefficace et problématique de le `Grid` mise en page.
 
 ## <a name="populating-a-bindable-layout-with-data"></a>Remplissage d’une disposition peut être liée avec des données
 

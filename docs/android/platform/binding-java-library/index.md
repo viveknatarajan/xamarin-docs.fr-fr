@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 016ac7269f334f6df7fba9635897b9608f459284
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60957441"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970217"
 ---
 # <a name="binding-a-java-library"></a>Liaison d’une bibliothèque Java
 
@@ -70,7 +70,7 @@ Lors de la liaison d’une bibliothèque Android existante, il est nécessaire �
 
 * **Y a-t-il des dépendances externes pour la bibliothèque ?** &ndash; Toutes les dépendances Java requises par la bibliothèque Android doivent être inclus dans le projet Xamarin.Android, comme un **ReferenceJar** ou comme un **EmbeddedReferenceJar**. Tous les assemblys natifs doivent être ajoutés au projet de liaison en tant qu’un **EmbeddedNativeLibrary**.  
 
-* **Version de l’API Android est la cible de la bibliothèque Android ?** &ndash; Il n’est pas possible de « rétrograder » le niveau d’API Android ; Assurez-vous que le projet de liaison Xamarin.Android cible la même API niveau (ou version ultérieure) en tant que la bibliothèque Android.
+* **Quelle version de l’API Android ne Android cible de la bibliothèque ?** &ndash; Il n’est pas possible de « rétrograder » le niveau d’API Android ; Assurez-vous que le projet de liaison Xamarin.Android cible la même API niveau (ou version ultérieure) en tant que la bibliothèque Android.
 
 * **Quelle version du JDK a été utilisée pour compiler la bibliothèque ?** &ndash; Erreurs de liaison peuvent se produire si la bibliothèque Android a été créée avec une autre version du JDK à en cours d’utilisation par Xamarin.Android. Si possible, recompiler la bibliothèque Android à l’aide de la même version du JDK qui est utilisé par votre installation de Xamarin.Android.
 

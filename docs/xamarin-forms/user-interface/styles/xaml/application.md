@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 665f5d1653b74997519149cef68e0882f476179d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7b13a192f883ea667977f4d9ae3eea41d8c65e24
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924609"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971174"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Styles globaux dans Xamarin.Forms
 
@@ -49,7 +49,7 @@ Cela [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) définit un
 L’exemple de code suivant montre une application de page XAML le `buttonStyle` à la page [ `Button` ](xref:Xamarin.Forms.Button) instances :
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <Button Text="These buttons" Style="{StaticResource buttonStyle}" />
@@ -71,7 +71,7 @@ Pour plus d’informations sur la création de styles dans une page [ `ResourceD
 Styles de niveau inférieurs dans la hiérarchie d’affichage sont prioritaires sur ceux définis plus haut. Par exemple, si un [ `Style` ](xref:Xamarin.Forms.Style) qui définit [ `Button.TextColor` ](xref:Xamarin.Forms.Button.TextColor) à `Red` au niveau de l’application niveau sera remplacé par un style de niveau page définit `Button.TextColor` à `Green`. De même, un style de niveau page sera remplacé par un style de niveau de contrôle. En outre, si `Button.TextColor` est définie directement sur une propriété de contrôle, il sera prioritaire sur tous les styles. Cette priorité est illustrée dans l’exemple de code suivant :
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonStyle" TargetType="Button">

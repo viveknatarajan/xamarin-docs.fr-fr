@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 41390a36eb303b7e06bcb31f89c23120cede0271
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 6d075f782778313fafff3f26760152a1efbd84c8
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926759"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971037"
 ---
 # <a name="entry-cursor-color-on-ios"></a>Couleur du curseur entrée sur iOS
 
 [![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
-Cette spécifiques à la plateforme définit la couleur de curseur d’une [ `Entry` ](xref:Xamarin.Forms.Entry) une couleur spécifiée. Elle est consommée dans XAML en définissant le [ `Entry.CursorColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) propriété pouvant être liée à un [ `Color` ](xref:Xamarin.Forms.Color):
+Cette spécifiques à la plateforme iOS définit la couleur de curseur d’une [ `Entry` ](xref:Xamarin.Forms.Entry) une couleur spécifiée. Elle est consommée dans XAML en définissant le [ `Entry.CursorColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) propriété pouvant être liée à un [ `Color` ](xref:Xamarin.Forms.Color):
 
 ```xaml
 <ContentPage ...

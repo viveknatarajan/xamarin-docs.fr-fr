@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: f2b569b3e38284db15eac0f4e182dfb38796cce9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b54dce66e234807a3f03251461f8f8c868ce95e9
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61039652"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970956"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Vues de l’Interface utilisateur de Xamarin.Forms
 
@@ -34,7 +34,7 @@ Le `Button` répond à un cliquez ou appuyez sur dirigeant d’une application �
 
 ## <a name="collectionviewcollectionviewindexmd"></a>[CollectionView](collectionview/index.md)
 
-Le `CollectionView` est une vue flexible et plus performant pour la présentation des listes de données à l’aide des spécifications de mise en page différente.
+Le [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) est une vue flexible et plus performant pour la présentation des listes de données à l’aide des spécifications de mise en page différente.
 
 ## <a name="colorscolorsmd"></a>[Couleurs](colors.md)
 

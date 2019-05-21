@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: c0b38453c5e573a13a51b6c001d3324936a8b7fb
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: c5fa46a67496123eb105ae12404d5607032f5ac1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926868"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971146"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Héritage de style dans Xamarin.Forms
 
@@ -29,7 +29,7 @@ Les styles qui héritent d’un style de base peuvent inclure [ `Setter` ](xref:
 Le code suivant illustre *explicite* l’héritage de style dans une page XAML :
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseStyle" TargetType="View">
@@ -80,7 +80,7 @@ Un style peut uniquement hériter de styles au même niveau, ou plus, dans la hi
 Cette chaîne d’héritage est illustrée dans l’exemple de code suivant :
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseStyle" TargetType="View">

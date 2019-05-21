@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
-ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
-ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
+ms.openlocfilehash: 779b39441893324e38843e036614484443e37574
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "61358948"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971287"
 ---
 # <a name="xamarinforms-views"></a>Vues Xamarin.Forms
 
@@ -174,7 +174,7 @@ Ces deux classes dérivent les [ `InputView` ](xref:Xamarin.Forms.InputView) (cl
 
 |     |     |
 | --- | --- |
-| `CollectionView` affiche une liste déroulante peut être sélectionné d’éléments de données, à l’aide des spécifications de mise en page différente. Il vise à fournir la plus flexible et performante devoir [ `ListView` ](xref:Xamarin.Forms.ListView). Définir le `ItemsSource` propriété à une collection d’objets et définissez le `ItemTemplate` propriété un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objet décrivant la façon dont les éléments sont à mettre en forme. Le `SelectionChanged` événement signale qu’une sélection a été effectuée, qui est disponible en tant que le `SelectedItem` propriété.<br /><br />[Guide](~/xamarin-forms/user-interface/collectionview/index.md) / [exemple](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Exemple de CollectionView](views-images/CollectionView.png "CollectionView exemple")](views-images/CollectionView-Large.png#lightbox "CollectionView exemple")<br />[Code C# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
+| [`CollectionView`](xref:Xamarin.Forms.CollectionView) affiche une liste déroulante peut être sélectionné d’éléments de données, à l’aide des spécifications de mise en page différente. Il vise à fournir la plus flexible et performante devoir [ `ListView` ](xref:Xamarin.Forms.ListView). Définir le `ItemsSource` propriété à une collection d’objets et définissez le `ItemTemplate` propriété un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objet décrivant la façon dont les éléments sont à mettre en forme. Le `SelectionChanged` événement signale qu’une sélection a été effectuée, qui est disponible en tant que le `SelectedItem` propriété.<br /><br />[Guide](~/xamarin-forms/user-interface/collectionview/index.md) / [exemple](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Exemple de CollectionView](views-images/CollectionView.png "CollectionView exemple")](views-images/CollectionView-Large.png#lightbox "CollectionView exemple")<br />[Code C# pour cette page](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [page XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
 <a name="listView" />

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e65124df4b20a50091ad93e18621f8e6707ebbe
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250691"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970551"
 ---
 # <a name="xamarinforms-slider"></a>Curseur de Xamarin.Forms
 
@@ -49,10 +49,10 @@ Le `Slider` définit également plusieurs propriétés qui affectent son apparen
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) est la barre de couleur sur le côté gauche du curseur de défilement.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) est la barre de couleur située à droite du curseur de défilement.
 - [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) est la couleur du curseur de défilement.
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) est l’image à utiliser pour le thumb, de type [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource).
+- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty) est l’image à utiliser pour le thumb, de type [ `ImageSource` ](xref:Xamarin.Forms.ImageSource).
 
 > [!NOTE]
-> Le `ThumbColor` et `ThumbImage` propriétés s’excluent mutuellement. Si les deux propriétés sont définies, le `ThumbImage` propriété est prioritaire.
+> Le `ThumbColor` et `ThumbImageSource` propriétés s’excluent mutuellement. Si les deux propriétés sont définies, le `ThumbImageSource` propriété est prioritaire.
 
 ## <a name="basic-slider-code-and-markup"></a>Balisage et code de curseur de base
 
