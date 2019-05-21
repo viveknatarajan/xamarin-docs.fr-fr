@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 130f4e3efdd7b3792f6458ad28fc85654e6e38c8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c1fb596abb580cf42edda21ab71f2c70de59a547
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857430"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924559"
 ---
 # <a name="attached-properties"></a>Propriétés jointes
 
-[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+[![Télécharger l’exemple](~/media/shared/download.png) télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 
 _Une propriété jointe est un type spécial de propriété pouvant être liée, définie dans une classe mais associé à d’autres objets et reconnaissable dans XAML en tant qu’attribut qui contient une classe et un nom de propriété séparés par un point. Cet article fournit une introduction aux propriétés jointes et montre comment créer et de les consommer._
 
@@ -126,7 +126,7 @@ Propriétés jointes peuvent également être ajoutées à un contrôle par un s
 </Style>
 ```
 
-Le [ `Style` ](xref:Xamarin.Forms.Style) peut être appliqué à un [ `Label` ](xref:Xamarin.Forms.Label) en définissant son [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriété le `Style` instance à l’aide de la `StaticResource`extension de balisage, comme illustré dans l’exemple de code suivant :
+Le [ `Style` ](xref:Xamarin.Forms.Style) peut être appliqué à un [ `Label` ](xref:Xamarin.Forms.Label) en définissant son [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriété le `Style` instance à l’aide de la `StaticResource`extension de balisage, comme illustré dans l’exemple de code suivant :
 
 ```xaml
 <Label Text="Label Shadow Effect" Style="{StaticResource ShadowEffectStyle}" />
@@ -147,6 +147,6 @@ Cet article propose une introduction à des propriétés jointes et vous a montr
 
 - [Propriétés pouvant être liées](~/xamarin-forms/xaml/bindable-properties.md)
 - [Espaces de noms XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Effet d’ombre portée (exemple)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [Effet d’ombre portée (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

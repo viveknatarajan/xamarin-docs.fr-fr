@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 32c3651734fcc94dd75372f0c47f0ffb22b4a4ee
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4587bb89ddfe43873e666a07514075f1a952e985
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031372"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926780"
 ---
 # <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Reconnaissance de mouvement panoramique simultanées sur iOS
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Quand un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) est attachée à une vue à l’intérieur d’une vue de défilement, toutes le panoramique mouvements sont capturées par le `PanGestureRecognizer` et ne sont pas passées à la vue de défilement. Par conséquent, la vue de défilement n’est plus défile.
 
@@ -46,6 +46,6 @@ Par conséquent, avec cette spécifiques à la plateforme est activée, lorsque 
 
 ## <a name="related-links"></a>Liens connexes
 
-- [PlatformSpecifics (exemple)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Création de caractéristiques de la plateforme](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

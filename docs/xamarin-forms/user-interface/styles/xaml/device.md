@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: fd5181040c1805d3fdabdae4803bbe32c6bb6652
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 252f3271c7247f7070df66712035938be651e7f4
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345499"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924792"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Styles d’appareils dans Xamarin.Forms
 
@@ -29,7 +29,7 @@ Le *appareil* styles sont :
 - [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
 - [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-Tous les six styles applicable uniquement aux [ `Label` ](xref:Xamarin.Forms.Label) instances. Par exemple, un `Label` qui affiche le corps d’un paragraphe peut définir son [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriété [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle).
+Tous les six styles applicable uniquement aux [ `Label` ](xref:Xamarin.Forms.Label) instances. Par exemple, un `Label` qui affiche le corps d’un paragraphe peut définir son [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriété [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle).
 
 L’exemple de code suivant montre comment utiliser le *appareil* styles dans une page XAML :
 
@@ -109,7 +109,7 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-Le [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriété de chaque [ `Label` ](xref:Xamarin.Forms.Label) instance est définie sur la propriété appropriée à partir de la [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe.
+Le [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriété de chaque [ `Label` ](xref:Xamarin.Forms.Label) instance est définie sur la propriété appropriée à partir de la [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) classe.
 
 ## <a name="accessibility"></a>Accessibilité
 

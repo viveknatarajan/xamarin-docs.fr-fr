@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: fcbdeac5ebceccddee68fcca635a3935944ecac8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 12420f0559d27becb839307d6a1ed4489c895e7d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61394969"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926883"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Styles explicites dans Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Un style explicite est celle qui est appliquée sélectivement à des contrôle
 
 ## <a name="create-an-explicit-style-in-xaml"></a>Créer un style explicite dans XAML
 
-Pour déclarer un [ `Style` ](xref:Xamarin.Forms.Style) au niveau de la page, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) doit être ajouté à la page et ensuite un ou plusieurs `Style` déclarations peuvent être incluses dans le `ResourceDictionary`. Un `Style` est effectuée *explicite* en donnant sa déclaration un `x:Key` attribut, ce qui lui donne une clé descriptive dans la `ResourceDictionary`. *Explicite* styles doivent ensuite être appliquées à des éléments spécifiques de visual en définissant leurs [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriétés.
+Pour déclarer un [ `Style` ](xref:Xamarin.Forms.Style) au niveau de la page, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) doit être ajouté à la page et ensuite un ou plusieurs `Style` déclarations peuvent être incluses dans le `ResourceDictionary`. Un `Style` est effectuée *explicite* en donnant sa déclaration un `x:Key` attribut, ce qui lui donne une clé descriptive dans la `ResourceDictionary`. *Explicite* styles doivent ensuite être appliquées à des éléments spécifiques de visual en définissant leurs [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriétés.
 
 Le code suivant montre l’exemple *explicite* styles déclaré dans XAML dans une page `ResourceDictionary` et appliquée à la page [ `Label` ](xref:Xamarin.Forms.Label) instances :
 
@@ -64,7 +64,7 @@ Le code suivant montre l’exemple *explicite* styles déclaré dans XAML dans u
 </ContentPage>
 ```
 
-Le [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) définit trois *explicite* styles sont appliqués à la page [ `Label` ](xref:Xamarin.Forms.Label) instances. Chaque `Style` est utilisé pour afficher du texte dans une couleur différente, et d’établir la police options de disposition de taille et horizontal et vertical. Chaque `Style` est appliqué à un autre `Label` en définissant son [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriétés à l’aide de la `StaticResource` extension de balisage. Cela provoque l’affichage indiqué dans les captures d’écran suivante :
+Le [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) définit trois *explicite* styles sont appliqués à la page [ `Label` ](xref:Xamarin.Forms.Label) instances. Chaque `Style` est utilisé pour afficher du texte dans une couleur différente, et d’établir la police options de disposition de taille et horizontal et vertical. Chaque `Style` est appliqué à un autre `Label` en définissant son [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriétés à l’aide de la `StaticResource` extension de balisage. Cela provoque l’affichage indiqué dans les captures d’écran suivante :
 
 [![](explicit-images/explicit-styles.png "Exemple de Styles explicites")](explicit-images/explicit-styles-large.png#lightbox "exemple de Styles explicites")
 
@@ -147,9 +147,9 @@ public class ExplicitStylesPageCS : ContentPage
 }
 ```
 
-Le constructeur définit trois *explicite* styles sont appliqués à la page [ `Label` ](xref:Xamarin.Forms.Label) instances. Chaque *explicite* [ `Style` ](xref:Xamarin.Forms.Style) est ajouté à la [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) à l’aide de la [ `Add` ](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) (méthode), en spécifiant un `key` chaîne pour faire référence à la `Style` instance. Chaque `Style` est appliqué à un autre `Label` en définissant leurs [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriétés.
+Le constructeur définit trois *explicite* styles sont appliqués à la page [ `Label` ](xref:Xamarin.Forms.Label) instances. Chaque *explicite* [ `Style` ](xref:Xamarin.Forms.Style) est ajouté à la [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) à l’aide de la [ `Add` ](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) (méthode), en spécifiant un `key` chaîne pour faire référence à la `Style` instance. Chaque `Style` est appliqué à un autre `Label` en définissant leurs [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriétés.
 
-Toutefois, il n’existe aucun avantage un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) ici. Au lieu de cela, [ `Style` ](xref:Xamarin.Forms.Style) instances peuvent être affectées directement à la [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriétés des éléments visuels requis et le `ResourceDictionary` peut être supprimé, comme illustré dans l’exemple suivant exemple de code :
+Toutefois, il n’existe aucun avantage un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) ici. Au lieu de cela, [ `Style` ](xref:Xamarin.Forms.Style) instances peuvent être affectées directement à la [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriétés des éléments visuels requis et le `ResourceDictionary` peut être supprimé, comme illustré dans l’exemple suivant exemple de code :
 
 ```csharp
 public class ExplicitStylesPageCS : ContentPage
@@ -179,7 +179,7 @@ public class ExplicitStylesPageCS : ContentPage
 }
 ```
 
-Le constructeur définit trois *explicite* styles sont appliqués à la page [ `Label` ](xref:Xamarin.Forms.Label) instances. Chaque `Style` est utilisé pour afficher du texte dans une couleur différente, et d’établir la police options de disposition de taille et horizontal et vertical. Chaque `Style` est appliqué à un autre `Label` en définissant son [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriétés. En outre, la dernière `Label` a un `Style` appliquée, mais remplace également la `TextColor` propriété vers un autre `Color` valeur.
+Le constructeur définit trois *explicite* styles sont appliqués à la page [ `Label` ](xref:Xamarin.Forms.Label) instances. Chaque `Style` est utilisé pour afficher du texte dans une couleur différente, et d’établir la police options de disposition de taille et horizontal et vertical. Chaque `Style` est appliqué à un autre `Label` en définissant son [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriétés. En outre, la dernière `Label` a un `Style` appliquée, mais remplace également la `TextColor` propriété vers un autre `Color` valeur.
 
 ## <a name="related-links"></a>Liens connexes
 

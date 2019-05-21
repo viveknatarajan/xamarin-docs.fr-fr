@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/21/2019
-ms.openlocfilehash: 50480f5b21c6f0c855ff6f9aa22b6126c6a6787c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ac71be25492866b1cf2b12d3343c2f4095fc738d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945695"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925787"
 ---
 # <a name="listview-row-animations-on-ios"></a>Animations de ligne de ListView sur iOS
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Ce contrôle de spécifique à la plateforme iOS ligne indique si les animations sont désactivées lorsque le [ `ListView` ](xref:Xamarin.Forms.ListView) collection items est en cours de mise à jour. Elle est consommée dans XAML en définissant le `ListView.RowAnimationsEnabled` propriété pouvant être liée `false`:
 
@@ -48,6 +48,6 @@ Le `ListView.On<iOS>` méthode spécifie que cette plateforme spécifique s’ex
 
 ## <a name="related-links"></a>Liens connexes
 
-- [PlatformSpecifics (exemple)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (exemple)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Création de caractéristiques de la plateforme](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

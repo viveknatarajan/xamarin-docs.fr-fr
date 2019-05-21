@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2019
-ms.openlocfilehash: 7dc9a0c0d7330588dc4a6d3f3dedd4b72211f019
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: bb13113a947fe6ff25f5e96e299828d1d93e20ac
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048028"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65927036"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Styler des applications Xamarin.Forms à l’aide de feuilles de Style en cascade (CSS)
 
@@ -246,7 +246,7 @@ Ce sélecteur identifie l’élément dont [ `StyleId` ](xref:Xamarin.Forms.Elem
 }
 ```
 
-Une classe CSS peut être assignée à un élément XAML en définissant le [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) propriété de l’élément pour le nom de la classe CSS. Par conséquent, dans l’exemple XAML suivant, les styles définis par le `.detailPageTitle` classe sont affectés à la première [ `Label` ](xref:Xamarin.Forms.Label), tandis que les styles définis par le `.detailPageSubtitle` classe sont affectés à la seconde `Label`.
+Une classe CSS peut être assignée à un élément XAML en définissant le [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) propriété de l’élément pour le nom de la classe CSS. Par conséquent, dans l’exemple XAML suivant, les styles définis par le `.detailPageTitle` classe sont affectés à la première [ `Label` ](xref:Xamarin.Forms.Label), tandis que les styles définis par le `.detailPageSubtitle` classe sont affectés à la seconde `Label`.
 
 ```xaml
 <ContentPage ...>

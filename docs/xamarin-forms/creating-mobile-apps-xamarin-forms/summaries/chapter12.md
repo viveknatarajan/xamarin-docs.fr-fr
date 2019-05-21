@@ -7,12 +7,12 @@ ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: bb2cd1c97cc588923e0da1a8793f16445c111f0e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 408f171a3c7c690b700f7be21a3dcaff503467d9
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334344"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926911"
 ---
 # <a name="summary-of-chapter-12-styles"></a>Résumé du chapitre 12. Styles
 
@@ -20,7 +20,7 @@ ms.locfileid: "61334344"
 
 Dans Xamarin.Forms, les styles permettent plusieurs vues partager une collection de paramètres de propriété. Cela réduit le balisage et que vous permet de maintenir cohérentes thèmes visuels.
 
-Les styles sont presque toujours définis et utilisés dans le balisage. Un objet de type [ `Style` ](xref:Xamarin.Forms.Style) est instancié dans un dictionnaire de ressources et la [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propriété d’un élément visuel en utilisant un `StaticResource` ou `DynamicResource` balisage extension.
+Les styles sont presque toujours définis et utilisés dans le balisage. Un objet de type [ `Style` ](xref:Xamarin.Forms.Style) est instancié dans un dictionnaire de ressources et la [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propriété d’un élément visuel en utilisant un `StaticResource` ou `DynamicResource` balisage extension.
 
 ## <a name="the-basic-style"></a>Le Style de base
 

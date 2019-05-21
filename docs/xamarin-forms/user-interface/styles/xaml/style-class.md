@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: dd749a4a78adbab5317f1ae5ca6334caa009b9b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3ef0f96bcc955dcac4231f9eb9cf1ab16ee61aa
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61277802"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925290"
 ---
 # <a name="xamarinforms-style-classes"></a>Classes de Style de Xamarin.Forms
 
@@ -180,7 +180,7 @@ Resources = new ResourceDictionary
 
 ## <a name="consume-style-classes"></a>Consommer des classes de style
 
-Classes de style peuvent être consommées en définissant le [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) propriété du contrôle, qui est de type `IList<string>`, à une liste des noms de classe de style. Les classes de style sont appliquées, fournie par le type du contrôle correspond à la [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) des classes de style.
+Classes de style peuvent être consommées en définissant le [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) propriété du contrôle, qui est de type `IList<string>`, à une liste des noms de classe de style. Les classes de style sont appliquées, fournie par le type du contrôle correspond à la [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) des classes de style.
 
 L’exemple suivant illustre trois [ `BoxView` ](xref:Xamarin.Forms.BoxView) instances, la valeur des classes de style différent :
 
@@ -206,7 +206,7 @@ Dans cet exemple, la première [ `BoxView` ](xref:Xamarin.Forms.BoxView) est un 
 ![](style-class-images/boxviews.png "BoxViews stylé avec les classes de style")
 
 > [!IMPORTANT]
-> Plusieurs classes de style peuvent être appliqués à un contrôle, car la [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) propriété est de type `IList<string>`. Lorsque cela se produit, les classes de style sont appliquées dans l’ordre croissant d’ordre de la liste. Par conséquent, lorsque plusieurs classes de style définissent des propriétés identiques, la propriété dans la classe de style qui se trouve dans la position la plus élevée de la liste sont prioritaires.
+> Plusieurs classes de style peuvent être appliqués à un contrôle, car la [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) propriété est de type `IList<string>`. Lorsque cela se produit, les classes de style sont appliquées dans l’ordre croissant d’ordre de la liste. Par conséquent, lorsque plusieurs classes de style définissent des propriétés identiques, la propriété dans la classe de style qui se trouve dans la position la plus élevée de la liste sont prioritaires.
 
 Le code C# équivalent est :
 

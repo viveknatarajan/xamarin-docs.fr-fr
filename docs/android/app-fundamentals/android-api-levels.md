@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 8690be7551046a26339f58029da5f3f58e18cd15
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1f88525fefb83c92d5e5dda2176d3622bb67c78d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61024068"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924962"
 ---
 # <a name="understanding-android-api-levels"></a>Présentation des niveaux d’API Android
 
@@ -46,7 +46,7 @@ Sur le **manifeste Android** page, définissez la version minimale d’Android s
 
 [![Les versions minimale et cible Android définissent sur la version de Framework cible](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png#lightbox)
 
-Si vous souhaitez assurer la compatibilité descendante avec une version antérieure d’Android, définissez **version minimale d’Android à cibler** la version la plus ancienne d’Android que vous souhaitez que votre application pour prendre en charge. (Notez que le niveau d’API 14 est le niveau d’API minimal requis pour [services Google Play et prise en charge Firebase](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html).) L’exemple de configuration suivant prend en charge des versions Android à partir de l’API niveau 14 par le biais de niveau d’API 25 :
+Si vous souhaitez assurer la compatibilité descendante avec une version antérieure d’Android, définissez **version minimale d’Android à cibler** la version la plus ancienne d’Android que vous souhaitez que votre application pour prendre en charge. (Notez que le niveau d’API 14 est le niveau d’API minimal requis pour [services Google Play et prise en charge Firebase](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html).) L’exemple de configuration suivant prend en charge des versions Android à partir de l’API niveau 14 via le niveau d’API 25 :
 
 [![Compilez à l’aide du niveau d’API 25 Nougat, version minimale d’Android définie au niveau de l’API 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
