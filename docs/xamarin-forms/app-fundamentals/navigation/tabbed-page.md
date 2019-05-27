@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 0f0c2e9f3e0a2309db1ad96ff286d6ac17f78bc5
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 8926813e8efae72efa9af2221318d6f1ff1e344f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329297"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970924"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Page à onglets Xamarin.Forms
 
@@ -44,9 +44,18 @@ La disposition d’un [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), et ses ongl
 
 - Sur les facteurs de forme de tablette Windows, les onglets ne sont pas toujours visibles et les utilisateurs doivent balayer vers le bas (ou cliquer avec le bouton droit, s’ils utilisent une souris) pour afficher les onglets dans un `TabbedPage` (comme illustré ci-dessous).
 
-![](tabbed-page-images/windows-tabs.png "Onglets TabbedPage sur Windows")
+    ![](tabbed-page-images/windows-tabs.png "Onglets TabbedPage sur Windows")
 
 ## <a name="creating-a-tabbedpage"></a>Création d’un TabbedPage
+
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) définit les propriétés suivantes :
+
+- [`BarBackgroundColor`](xref:Xamarin.Forms.TabbedPage.BarBackgroundColor) de type [`Color`](xref:Xamarin.Forms.Color) la couleur d’arrière-plan de la barre d’onglets.
+- [`BarTextColor`](xref:Xamarin.Forms.TabbedPage.BarTextColor) de type [`Color`](xref:Xamarin.Forms.Color) la couleur du texte de la barre d’onglets.
+- [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) de type [`Color`](xref:Xamarin.Forms.Color), la couleur de l’onglet lorsqu’il est sélectionné.
+- [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) de type [`Color`](xref:Xamarin.Forms.Color), la couleur de l’onglet lorsqu’il n’est pas sélectionné.
+
+Toutes ces propriétés s’appuient sur des objets [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), ce qui signifie qu’elles peuvent être personnalisées et être des cibles de liaisons de données.
 
 Deux approches peuvent être adoptées pour créer un [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) :
 
@@ -56,7 +65,7 @@ Deux approches peuvent être adoptées pour créer un [`TabbedPage`](xref:Xamari
 Avec les deux approches, le [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) affiche chaque page quand l’utilisateur sélectionne chaque onglet.
 
 > [!NOTE]
-> Nous vous recommandons de remplir un [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) uniquement avec des instances de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) et [`ContentPage`](xref:Xamarin.Forms.ContentPage). Cela vous aidera à garantir une expérience utilisateur cohérente sur toutes les plateformes.
+> Nous vous recommandons de remplir un [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) uniquement avec des instances de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) et [`ContentPage`](xref:Xamarin.Forms.ContentPage). Cela permet de garantir une expérience utilisateur cohérente sur toutes les plateformes.
 
 <a name="Populating_a_TabbedPage_with_a_Page_Collection" />
 
@@ -70,7 +79,7 @@ L’exemple de code XAML suivant montre un [`TabbedPage`](xref:Xamarin.Forms.Tab
             xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
             x:Class="TabbedPageWithNavigationPage.MainPage">
     <local:TodayPage />
-    <NavigationPage Title="Schedule" Icon="schedule.png">
+    <NavigationPage Title="Schedule" IconImageSource="schedule.png">
         <x:Arguments>
             <local:SchedulePage />
         </x:Arguments>
@@ -86,7 +95,7 @@ public class MainPageCS : TabbedPage
   public MainPageCS ()
   {
     var navigationPage = new NavigationPage (new SchedulePageCS ());
-    navigationPage.Icon = "schedule.png";
+    navigationPage.IconImageSource = "schedule.png";
     navigationPage.Title = "Schedule";
 
     Children.Add (new TodayPageCS ());
@@ -148,7 +157,7 @@ L’exemple de code XAML suivant montre un [`TabbedPage`](xref:Xamarin.Forms.Tab
   </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
+      <ContentPage Title="{Binding Name}" IconImageSource="monkeyicon.png">
         <StackLayout Padding="5, 25">
           <Label Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Center" />
           <Image Source="{Binding PhotoUrl}" WidthRequest="200" HeightRequest="200" />
@@ -204,7 +213,7 @@ public class TabbedPageDemoPageCS : TabbedPage
       ...
 
       var contentPage = new ContentPage {
-        Icon = "monkeyicon.png",
+        IconImageSource = "monkeyicon.png",
         Content = new StackLayout {
           Padding = new Thickness (5, 25),
           Children = {

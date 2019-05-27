@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384682"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193830"
 ---
 
 Xamarin.Forms dispose d’une fenêtre contextuelle modale (une feuille d’action) servant à guider les utilisateurs dans une tâche. Dans cet exercice, vous utiliserez la méthode [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) à partir de la classe [`Page`](xref:Xamarin.Forms.Page) afin d’afficher une feuille d’action guidant les utilisateurs dans une tâche.
@@ -41,7 +41,7 @@ Xamarin.Forms dispose d’une fenêtre contextuelle modale (une feuille d’acti
 
     Remarquez qu’après avoir sélectionné une alternative dans la boîte de dialogue de la feuille d’action, la sélection est affichée dans la fenêtre **de sortie** de Visual Studio.
 
-    Pour plus d’informations sur l’affichage des feuilles d’action, consultez la page [Guider les utilisateurs dans les tâches](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) du guide [Affichage des fenêtres contextuelles](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Pour plus d’informations sur l’affichage des feuilles d’action, voir [Guider les utilisateurs dans les tâches](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) dans le guide [Afficher les fenêtres contextuelles](~/xamarin-forms/user-interface/pop-ups.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -75,4 +75,4 @@ Xamarin.Forms dispose d’une fenêtre contextuelle modale (une feuille d’acti
 
     Remarquez qu’après avoir sélectionné une alternative dans la boîte de dialogue de la feuille d’action, la sélection est affichée dans la fenêtre **de sortie** de Visual Studio pour Mac.
 
-    Pour plus d’informations sur l’affichage des feuilles d’action, consultez la page [Guider les utilisateurs dans les tâches](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) du guide [Affichage des fenêtres contextuelles](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Pour plus d’informations sur l’affichage des feuilles d’action, voir [Guider les utilisateurs dans les tâches](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) dans le guide [Afficher les fenêtres contextuelles](~/xamarin-forms/user-interface/pop-ups.md).

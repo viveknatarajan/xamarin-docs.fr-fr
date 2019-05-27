@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 642a4a63ca2c451c6a085f0e99cebd93babe078d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fbc5ccda4e798b818b4c21dd459bab6b467cba31
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058754"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925441"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passer des paramètres d’effet en tant que propriétés jointes
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
 
 _Les propriétés jointes permettent de définir des paramètres d’effet qui répondent aux changements apportés aux propriétés au moment de l’exécution. Cet article décrit comment utiliser des propriétés jointes pour passer des paramètres à un effet et comment changer un paramètre au moment de l’exécution._
 
@@ -174,7 +174,7 @@ Les effets qui peuvent être consommés en ajoutant des propriétés jointes à 
 </Style>
 ```
 
-Le [`Style`](xref:Xamarin.Forms.Style) peut être appliqué à un contrôle [`Label`](xref:Xamarin.Forms.Label) en définissant sa propriété [`Style`](xref:Xamarin.Forms.VisualElement.Style) sur l’instance `Style` à l’aide de l’extension de balisage `StaticResource`, comme illustré dans l’exemple de code suivant :
+Le [`Style`](xref:Xamarin.Forms.Style) peut être appliqué à un contrôle [`Label`](xref:Xamarin.Forms.Label) en définissant sa propriété [`Style`](xref:Xamarin.Forms.NavigableElement.Style) sur l’instance `Style` à l’aide de l’extension de balisage `StaticResource`, comme illustré dans l’exemple de code suivant :
 
 ```xaml
 <Label Text="Label Shadow Effect" ... Style="{StaticResource ShadowEffectStyle}" />
@@ -440,4 +440,4 @@ Cet article a décrit comment utiliser des propriétés jointes pour passer des 
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Effet d’ombre (exemple)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)
+- [Effet d’ombre (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)

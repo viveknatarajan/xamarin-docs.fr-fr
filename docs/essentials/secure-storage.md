@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: b9838ddb9771cb6ce757a4080520a5edd720531a
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: e0bc4b988905f03edbc66a252cc47a05c441f2c9
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574739"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925830"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Stockage sécurisé
 
@@ -51,7 +51,7 @@ Il est possible de configurer la sauvegarde automatique de façon à ce que la s
     </application>
     ```
 
-2. Créez un fichier XML nommé **auto_backup_rules.xml** dans le répertoire **ressources/xml**. Ensuite, définissez le contenu suivant, qui comporte toutes les préférences partagées à l’exception de `SecureStorage` :
+2. Créez un fichier XML nommé **auto_backup_rules.xml** dans le répertoire **ressources/xml** à l’aide de l’action de génération d’**AndroidResource**. Ensuite, définissez le contenu suivant, qui comporte toutes les préférences partagées à l’exception de `SecureStorage` :
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -132,7 +132,7 @@ SecureStorage.RemoveAll();
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Le [magasin de clés Android](https://developer.android.com/training/articles/keystore.html) est utilisé pour stocker la clé de chiffrement permettant de chiffrer la valeur avant de l’enregistrer dans les [Préférences partagées](https://developer.android.com/training/data-storage/shared-preferences.html) avec le nom de fichier **[VOTRE-ID-DE-PACKAGE-D-APPLICATION].xamarinessentials**.  La clé utilisée dans le fichier de préférences partagées est un _hachage MD5_ de la clé transmise aux API `SecureStorage`.
+Le [magasin de clés Android](https://developer.android.com/training/articles/keystore.html) est utilisé pour stocker la clé de chiffrement permettant de chiffrer la valeur avant de l’enregistrer dans les [Préférences partagées](https://developer.android.com/training/data-storage/shared-preferences.html) avec le nom de fichier **[VOTRE-ID-DE-PACKAGE-D-APPLICATION].xamarinessentials**.  La clé (qui n’est pas une clé de chiffrement, mais la _clé_ de la _valeur_) utilisée dans le fichier de préférences partagées est un _hachage MD5_ de la clé transmise aux API`SecureStorage`.
 
 ## <a name="api-level-23-and-higher"></a>Niveau d’API 23 et plus
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1e7b4b2ce4b7592c2350af20cf516436e244d95f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384693"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193816"
 ---
 Xamarin.Forms possède une fenêtre contextuelle modale, connue sous le nom d’alerte, pour alerter l’utilisateur ou lui poser des questions simples. Dans cet exercice, vous allez utiliser la méthode [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), à partir de la classe [`Page`](xref:Xamarin.Forms.Page), pour afficher une alerte à l’utilisateur et lui poser une question simple.
 
@@ -67,7 +67,7 @@ Xamarin.Forms possède une fenêtre contextuelle modale, connue sous le nom d’
 
     Notez que, après avoir sélectionné une réponse à la question, la réponse s’affiche dans la fenêtre **Sortie** de Visual Studio.
 
-    Pour plus d’informations sur l’affichage des alertes, consultez la rubrique [Affichage d’une alerte](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) dans le guide [Affichage des fenêtres contextuelles](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Pour plus d’informations sur l’affichage des alertes, voir [Afficher une alerte](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) dans le guide [Afficher les fenêtres contextuelles](~/xamarin-forms/user-interface/pop-ups.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio pour Mac](#tab/vsmac)
 
@@ -128,4 +128,4 @@ Xamarin.Forms possède une fenêtre contextuelle modale, connue sous le nom d’
 
     Notez que, après avoir sélectionné une réponse à la question, la réponse s’affiche dans la fenêtre **Sortie de l’application** de Visual Studio pour Mac.
 
-    Pour plus d’informations sur l’affichage des alertes, consultez la rubrique [Affichage d’une alerte](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) dans le guide [Affichage des fenêtres contextuelles](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Pour plus d’informations sur l’affichage des alertes, voir [Afficher une alerte](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) dans le guide [Afficher les fenêtres contextuelles](~/xamarin-forms/user-interface/pop-ups.md).

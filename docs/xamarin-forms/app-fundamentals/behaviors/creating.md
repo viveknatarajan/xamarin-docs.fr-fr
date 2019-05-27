@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: be7263ad0c9112aa640a4558d7fdbaf2a16ce079
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 650c341ab4b599a4eaf0cab81ba6f9129699e15d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57981677"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926028"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Créer des comportements Xamarin.Forms
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
 
 _Les comportements Xamarin.Forms sont créés par dérivation de la classe Behavior ou Behavior&lt;T&gt;. Cet article montre comment créer et consommer des comportements Xamarin.Forms._
 
@@ -174,7 +174,7 @@ L’exemple de code suivant montre un style *explicite* pour le `NumericValidati
 </Style>
 ```
 
-Le [`Style`](xref:Xamarin.Forms.Style) peut être appliqué à un contrôle [`Entry`](xref:Xamarin.Forms.Entry) en définissant sa propriété [`Style`](xref:Xamarin.Forms.VisualElement.Style) sur l’instance `Style` à l’aide de l’extension de balisage `StaticResource`, comme illustré dans l’exemple de code suivant :
+Le [`Style`](xref:Xamarin.Forms.Style) peut être appliqué à un contrôle [`Entry`](xref:Xamarin.Forms.Entry) en définissant sa propriété [`Style`](xref:Xamarin.Forms.NavigableElement.Style) sur l’instance `Style` à l’aide de l’extension de balisage `StaticResource`, comme illustré dans l’exemple de code suivant :
 
 ```xaml
 <Entry Placeholder="Enter a System.Double" Style="{StaticResource NumericValidationStyle}">
@@ -211,7 +211,7 @@ Cet article a montré comment créer et consommer des comportements Xamarin.Form
 
 ## <a name="related-links"></a>Liens associés
 
-- [Comportement Xamarin.Forms (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
-- [Comportement Xamarin.Forms appliqué avec un style (exemple)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehaviorstyle/)
+- [Comportement Xamarin.Forms (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehavior/)
+- [Comportement Xamarin.Forms appliqué avec un style (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/NumericValidationBehaviorStyle/)
 - [Behavior](xref:Xamarin.Forms.Behavior)
 - [Behavior<T>](xref:Xamarin.Forms.Behavior`1)

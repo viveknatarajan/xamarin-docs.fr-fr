@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 05ce2536c04306c2881ccc5dfa5e2016c9025b11
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a64e96e1ee3804cd7aefd9834486613ba8d09d5f
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054489"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005224"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Menu volant Shell Xamarin.Forms
 
-![](~/media/shared/preview.png "Cette API est actuellement en préversion")
-
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Le menu volant est le menu racine d’une application Shell. Il est accessible par une icône ou par balayage en partant du côté de l’écran. Il se compose d’un en-tête facultatif, d’éléments de menu volant et d’éléments de menu facultatifs :
 
@@ -183,15 +181,15 @@ Shell comporte des opérateurs de conversion implicite qui permettent de simplif
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
-    <views:CatsPage Icon="cat.png" />
-    <views:DogsPage Icon="dog.png" />
+    <views:CatsPage IconImageSource="cat.png" />
+    <views:DogsPage IconImageSource="dog.png" />
 </Shell>
 ```
 
 Cette conversion implicite encapsule automatiquement chaque objet [`ContentPage`](xref:Xamarin.Forms.ContentPage) dans des objets `ShellContent` encapsulés dans des objets `Tab`, eux-mêmes encapsulés dans des objets `FlyoutItem`.
 
 > [!IMPORTANT]
-> Dans une application Shell, tous les [`ContentPage`](xref:Xamarin.Forms.ContentPage) enfants d’un objet `ShellContent` sont créés au démarrage de l’application. Si l’on ajoute d’autres objets `ShellContent` suivant cette approche, des pages supplémentaires sont créées au lancement de l’application, ce qui risque de donner une mauvaise expérience de démarrage. Toutefois, Shell est également capable de créer des pages à la demande en réponse à la navigation. Pour plus d’informations, voir [Chargement efficace des pages](tabs.md#efficient-page-loading) dans le guide [Onglets Shell Xamarin.Forms](tabs.md).
+> Dans une application Shell, tous les [`ContentPage`](xref:Xamarin.Forms.ContentPage) enfants d’un objet `ShellContent` sont créés au démarrage de l’application. L’ajout d’autres objets `ShellContent` avec cette approche crée des pages supplémentaires au démarrage de l’application, ce qui peut nuire à l’expérience de démarrage. Mais Shell est également capable de créer des pages à la demande, en réponse à la navigation. Pour plus d’informations, voir [Chargement efficace des pages](tabs.md#efficient-page-loading) dans le guide [Onglets Shell Xamarin.Forms](tabs.md).
 
 ### <a name="flyoutitem-class"></a>Classe FlyoutItem
 
@@ -360,23 +358,18 @@ Les éléments de menu apparaissent de manière facultative sur le menu volant, 
 > [!NOTE]
 > La classe `MenuItem` comporte un événement [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) et une propriété [`Command`](xref:Xamarin.Forms.MenuItem.Command). Par conséquent, les objets `MenuItem` donnent accès à des scénarios qui exécutent une action en réponse au `MenuItem` sélectionné : navigation et ouverture d’un navigateur web sur une page spécifique.
 
-La collection `Shell.MenuItems` définit la liste des objets [`MenuItem`](xref:Xamarin.Forms.MenuItem) qui s’afficheront dans le menu volant. Elle peut être remplie avec des objets `MenuItem` comme dans l’exemple suivant :
+Des objets [`MenuItem`](xref:Xamarin.Forms.MenuItem) peuvent être ajoutés au menu volant comme indiqué dans l’exemple suivant :
 
 ```xaml
-<Shell ...
-       x:Name="self">
+<Shell ...>
     ...            
-    <Shell.MenuItems>
-        <MenuItem Text="Random"
-                  Icon="random.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding RandomPageCommand}" />
-        <MenuItem Text="Help"
-                  Icon="help.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding HelpCommand}"
-                  CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
-    </Shell.MenuItems>    
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />    
 </Shell>
 ```
 
@@ -384,7 +377,10 @@ Ce code ajoute deux objets [`MenuItem`](xref:Xamarin.Forms.MenuItem) au menu vol
 
 [![Capture d’écran du menu volant contenant des objets MenuItem sur iOS et Android](flyout-images/flyout.png "Menu volant Shell contenant des objets MenuItem")](flyout-images/flyout-large.png#lightbox "Menu volant Shell contenant des objets MenuItem")
 
-La premier objet [`MenuItem`](xref:Xamarin.Forms.MenuItem) exécute une `ICommand` nommée `RandomPageCommand`, qui accède à une page aléatoire de l’application. Le second objet `MenuItem` exécute une `ICommand` nommée `HelpCommand`, qui ouvre l’URL spécifiée par la propriété `CommandParameter` dans un navigateur web. Le [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de chaque `MenuItem` est défini sur l’objet sous-classé `Shell`.
+La premier objet [`MenuItem`](xref:Xamarin.Forms.MenuItem) exécute une `ICommand` nommée `RandomPageCommand`, qui accède à une page aléatoire de l’application. Le second objet `MenuItem` exécute une `ICommand` nommée `HelpCommand`, qui ouvre l’URL spécifiée par la propriété `CommandParameter` dans un navigateur web.
+
+> [!NOTE]
+> Le [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de chaque `MenuItem` est hérité de l’objet sous-classé `Shell`.
 
 ## <a name="define-menuitem-appearance"></a>Définir l’apparence de MenuItem
 
@@ -415,8 +411,8 @@ Cet exemple affiche le titre de chaque objet `MenuItem` en italique :
 [![Capture d’écran d’objets MenuItem basés sur des modèles sur iOS et Android](flyout-images/menuitem-templated.png "Objets MenuItem basés sur des modèles Shell")](flyout-images/menuitem-templated-large.png#lightbox "Objets MenuItem basés sur des modèles Shell")
 
 > [!NOTE]
-> Shell fournit les propriétés [`Text`](xref:Xamarin.Forms.MenuItem.Text) et [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) au [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de `MenuItemTemplate`.
+> Shell fournit les propriétés [`Text`](xref:Xamarin.Forms.MenuItem.Text) et [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) au [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de `MenuItemTemplate`.
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Xaminals (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

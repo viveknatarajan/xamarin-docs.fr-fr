@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 9859df6856f118dcfbc6bb4553b10882295866b2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 01db31a797efc4b383f3bda3fbcf3bb91e0d38e1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057248"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926039"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Mise en surbrillance d’une région sur une carte
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polygon/)
 
 _Cet article explique comment ajouter une superposition polygonale à une carte afin de mettre en surbrillance une région de la carte. Les polygones sont une forme fermée dont l’intérieur est plein._
 
@@ -308,6 +308,6 @@ Cet article a expliqué comment ajouter une superposition polygonale à une cart
 
 ## <a name="related-links"></a>Liens associés
 
-- [Superposition polygonale sur une carte (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
+- [Superposition polygonale sur une carte (exemple)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polygon/)
 - [Personnalisation d’une épingle de carte](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

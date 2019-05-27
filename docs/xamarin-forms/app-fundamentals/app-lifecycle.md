@@ -1,41 +1,39 @@
 ---
 title: Cycle de vie des applications Xamarin.Forms
-description: Cet article explique comment répondre au cycle de vie des applications, notamment concernant les méthodes de cycle de vie, les événements de navigation de page et les événements de navigation modale.
+description: Cet article explique comment répondre au cycle de vie des applications, notamment concernant les méthodes de cycle de vie, les événements de notification de page et les événements de navigation modale.
 ms.prod: xamarin
 ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bdce8d1752b3d7273ffec233b120266909999c4
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: b298ee24633e4098a6db8cf47d8e5355d72d7c34
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675118"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970908"
 ---
 # <a name="xamarinforms-app-lifecycle"></a>Cycle de vie des applications Xamarin.Forms
 
-La classe de base [`Application`](xref:Xamarin.Forms.Application) offre les fonctionnalités suivantes :
+La classe de base [`Application`](xref:Xamarin.Forms.Application) offre les fonctionnalités suivantes :
 
-* [Méthodes de cycle de vie](#Lifecycle_Methods) `OnStart`, `OnSleep` et `OnResume`.
-* [Événements de navigation de page](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing), [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
-* [Événements de navigation modale](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping` et `ModalPopped`.
+- [Méthodes de cycle de vie](#Lifecycle_Methods) `OnStart`, `OnSleep` et `OnResume`.
+- [Événements de navigation de page](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing), [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
+- [Événements de navigation modale](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping` et `ModalPopped`.
 
 <a name="Lifecycle_Methods" />
 
 ## <a name="lifecycle-methods"></a>Méthodes de cycle de vie
 
-La classe [`Application`](xref:Xamarin.Forms.Application) contient trois méthodes virtuelles qui peuvent être substituées pour gérer les méthodes de cycle de vie :
+La classe [`Application`](xref:Xamarin.Forms.Application) contient trois méthodes virtuelles qui peuvent être substituées pour répondre aux changements liés au cycle de vie :
 
-* **OnStart** : appelé au démarrage de l’application.
+- `OnStart` : appelé au démarrage de l’application.
+- `OnSleep` : appelé chaque fois que l’application passe à l’arrière-plan.
+- `OnResume` : appelé lors de la reprise de l’application, après son envoi en arrière-plan.
 
-* **OnSleep** : appelé chaque fois que l’application passe à l’arrière-plan.
-
-* **OnResume** : appelé lors de la reprise de l’application, après son envoi en arrière-plan.
-
-Notez qu’il n’existe *aucune* méthode pour arrêter l’application.
-Dans des circonstances normales (c’est-à-dire, en dehors d’un plantage), l’arrêt de l’application est effectué à partir de l’état *OnSleep*, sans autre notification de votre code.
+> [!NOTE]
+> Il n’existe *aucune* méthode pour arrêter l’application. Dans des circonstances normales (c’est-à-dire, en dehors d’un plantage), l’arrêt de l’application est effectué à partir de l’état *OnSleep*, sans autre notification de votre code.
 
 Pour savoir à quel moment ces méthodes sont appelées, implémentez un appel `WriteLine` dans chacune d’elle (comme indiqué ci-dessous) et testez-les sur chaque plateforme.
 
@@ -54,11 +52,12 @@ protected override void OnResume()
 }
 ```
 
-Lorsque vous mettez à jour des applications Xamarin.Forms *plus anciennes* (c’est-à-dire, créées avec Xamarin.Forms 1.3 ou une version antérieure), vérifiez que l’activité principale Android comprend `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` dans l’attribut `[Activity()]`. Si ce n’est pas le cas, vous verrez que la méthode `OnStart` est appelée au moment de la rotation et lors du premier démarrage de l’application. Cet attribut est automatiquement inclus dans les modèles d’application Xamarin.Forms actuels.
+> [!IMPORTANT]
+> Sur Android, la méthode `OnStart` sera appelée sur la rotation tout comme lorsque l’application démarre pour la première fois, si l’activité principale n’a pas de `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation` dans l’attribut `[Activity()]`.
 
 <a name="page" />
 
-## <a name="page-navigation-events"></a>Événements de navigation de page
+## <a name="page-notification-events"></a>Événements de notification de page
 
 Dans la classe [`Application`](xref:Xamarin.Forms.Application), deux événements fournissent une notification d’apparition et de disparition de pages :
 
@@ -76,12 +75,10 @@ Ces événements peuvent être utilisés lorsque vous souhaitez effectuer le sui
 
 La classe [`Application`](xref:Xamarin.Forms.Application) comprend quatre événements qui ont chacun leurs propres arguments d’événement, et qui vous permettent de répondre aux pages modales affichées et ignorées :
 
-* **ModalPushing** - `ModalPushingEventArgs`
-* **ModalPushed** - `ModalPushedEventArgs`
-* **ModalPopping** : la classe `ModalPoppingEventArgs` contient une propriété `Cancel`. Lorsque `Cancel` est défini sur `true`, la fenêtre contextuelle modale est annulée.
-* **ModalPopped** - `ModalPoppedEventArgs`
+- `ModalPushing` : déclenché lors de l’envoi (push) modal d’une page.
+- `ModalPushed` : déclenché une fois l’envoi (push) modal d’une page effectué.
+- `ModalPopping` : déclenché lorsqu’une page est dépilée de façon modale.
+- `ModalPopped` : déclenché une fois qu’une page a été dépilée de façon modale.
 
 > [!NOTE]
-> Pour implémenter les méthodes de cycle de vie des applications et les événements de navigation modale, toutes les méthodes de création d’applications Xamarin.Forms pré-`Application` (autrement dit, les applications écrites avec une version égale ou antérieure à la version 1.2 et qui utilisent une méthode statique `GetMainPage`) ont été mises à jour pour créer un `Application` par défaut qui est défini comme parent de `MainPage`.
->
-> Les applications Xamarin.Forms qui utilisent ce comportement hérité doivent être mises à jour vers une sous-classe `Application`, comme décrit dans la page [Classe Application](~/xamarin-forms/app-fundamentals/application-class.md).
+> Les arguments d’événement `ModalPopping` de type `ModalPoppingEventArgs` contiennent une propriété `Cancel`. Lorsque `Cancel` est défini sur `true`, la fenêtre contextuelle modale est annulée.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: ac0ffbdce6b0c55e8ad9d774d80e3d9b8bf84089
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 20ea72e588e2e3b1d575bd593446bf6724d73d8c
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116444"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971062"
 ---
 # <a name="xamarinforms-accessibility"></a>Accessibilité Xamarin.Forms
 
@@ -24,7 +24,7 @@ Les guides [Accessibilité Android](~/android/app-fundamentals/accessibility.md)
 
 Xamarin.Forms ne prend pas encore en charge *nativement* toutes les API d’accessibilité disponibles sur chacune des plateformes sous-jacentes. Toutefois, il prend en charge la définition de propriétés d’automatisation sur les éléments d’interface utilisateur pour prendre en charge des outils d’aide à la navigation et à la lecture d’écran, ce qui représente une des parties les plus importantes de la création d’applications accessibles. Pour plus d’informations, consultez [Propriétés d’automatisation](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
 
-Les applications Xamarin.Forms peuvent également spécifier l’ordre de tabulation des contrôles. Pour plus d’informations, consultez [Navigation au clavier](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
+Il se peut que les applications Xamarin.Forms aient également un ordre de tabulation de contrôle spécifié afin d’améliorer la facilité d’utilisation et l’accessibilité. Pour plus d’informations, consultez [Accessibilité](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
 
 D’autres API d’accessibilité (comme [PostNotification sur iOS](~/ios/app-fundamentals/accessibility.md)) peuvent être mieux adaptées à l’implémentation d’un [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) ou d’un [convertisseur personnalisé](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Elles ne sont pas abordées dans ce guide.
 
@@ -34,7 +34,7 @@ Les applications Xamarin.Forms ciblent généralement plusieurs plateformes, ce 
 
 - [**Tests iOS**](~/ios/app-fundamentals/accessibility.md)
 - [**Tests Android**](~/android/app-fundamentals/accessibility.md)
-- [**Windows AccScope (MSDN)**](https://msdn.microsoft.com/library/windows/desktop/dn433239)
+- [**Windows AccScope (MSDN)** ](https://msdn.microsoft.com/library/windows/desktop/dn433239)
 
 ## <a name="related-links"></a>Liens associés
 

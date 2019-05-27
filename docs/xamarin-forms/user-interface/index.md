@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: b54dce66e234807a3f03251461f8f8c868ce95e9
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7c3a26854c65de260aa9b3c8ed00966749eb4d9c
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970956"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178075"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Vues de l’Interface utilisateur de Xamarin.Forms
 
@@ -51,6 +51,10 @@ Pages de données fournissent une API pour rapidement et facilement lier une sou
 ## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
 
 Le `DatePicker` permet à un utilisateur de sélectionner une date dans une plage spécifiée. Il est implémenté à l’aide de la prise en charge par la plateforme particulière sur laquelle l’application est exécutée sur le sélecteur de dates.
+
+## <a name="display-pop-upspop-upsmd"></a>[Afficher les fenêtres publicitaires](pop-ups.md)
+
+Xamarin.Forms fournit deux éléments d’interface utilisateur de type fenêtre contextuelle : une alerte et une feuille d’action. Ces éléments d’interface peuvent être utilisés pour afficher des boîtes de dialogue poser des questions simples utilisateurs et aide les utilisateurs via des tâches.
 
 ## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[Graphisme avec SkiaSharp](graphics/skiasharp/index.md)
 

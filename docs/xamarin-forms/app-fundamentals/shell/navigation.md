@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b1709330678a201521fd226d473cd334bcd86f94
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 747fabd68187dbe48b5e68b40916cef45269c4ae
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054269"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005163"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navigation dans Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "Cette API est actuellement en préversion")
-
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell inclut une expérience de navigation basée sur URI qui utilise des itinéraires pour accéder à n’importe quelle page dans l’application, sans avoir à suivre une hiérarchie de navigation définie. De plus, l’utilisateur peut revenir en arrière sans avoir à visiter toutes les pages de la pile de navigation.
 
@@ -274,7 +272,7 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-Cet exemple de code extrait l’éléphant actuellement sélectionné dans `CollectionView` et accède à l’itinéraire `elephantdetails` en passant `elephantName` comme paramètre de requête. Notez que les paramètres de requête seront encodés au format URL pour la navigation, donc « Indian Elephant » deviendra « Indian%20Elephant ».
+Cet exemple de code extrait l’éléphant actuellement sélectionné dans [`CollectionView`](xref:Xamarin.Forms.CollectionView) et accède à l’itinéraire `elephantdetails` en passant par `elephantName` en tant que paramètre de requête. Notez que les paramètres de requête seront encodés au format URL pour la navigation, donc « Indian Elephant » deviendra « Indian%20Elephant ».
 
 Pour recevoir des données, la classe qui représente la page cible de la navigation, ou la classe de l’élément [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la page, doivent comporter un élément `QueryPropertyAttribute` pour chaque paramètre de requête :
 
@@ -341,4 +339,4 @@ La propriété `Command` est définie sur un élément `ICommand` à exécuter l
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Xaminals (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

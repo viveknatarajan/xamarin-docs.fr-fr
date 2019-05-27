@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: d1e43d211f639c422bbed3a6afad9f2136551071
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59690288"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925051"
 ---
 # <a name="set-up-device-for-development"></a>Configurer un appareil pour le développement
 
@@ -135,7 +135,7 @@ La dernière étape consiste à connecter l’appareil à l’ordinateur. Pour c
 
 ### <a name="connecting-over-wifi"></a>Connexion via le Wi-Fi
 
-Par défaut, [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) est configuré pour communiquer avec les appareils Android via une connexion USB. Il est possible de le reconfigurer pour qu’il utilise le protocole TCP/IP au lieu d’une connexion USB. Pour ce faire, l’appareil et l’ordinateur doivent utiliser le même réseau Wi-Fi. Pour configurer votre environnement de manière à permettre le débogage via une connexion Wi-Fi, effectuez ce qui suit à partir de la ligne de commande :
+Par défaut, [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) est configuré pour communiquer avec les appareils Android via une connexion USB. Il est possible de le reconfigurer pour qu’il utilise le protocole TCP/IP au lieu d’une connexion USB. Pour ce faire, l’appareil et l’ordinateur doivent utiliser le même réseau Wi-Fi. Pour configurer votre environnement de manière à permettre le débogage via une connexion Wi-Fi, procédez comme suit à partir de la ligne de commande :
 
 1. Déterminez l’adresse IP de votre appareil Android. L’une des méthodes possibles pour déterminer l’adresse IP de l’appareil est de regarder sous **Paramètres > Wi-Fi**, et d’appuyer sur le réseau Wi-Fi auquel est connecté l’appareil. L’écran Paramètres s’ouvre et affiche des informations sur la connexion réseau, comme dans la capture d’écran ci-dessous :
 

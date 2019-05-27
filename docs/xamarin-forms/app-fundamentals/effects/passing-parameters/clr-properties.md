@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 71d38cf0408af9f52a675aa381c8187ebfe9cc85
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9f3d95b3901295c29c2276bfdd85579b321f9795
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051901"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925424"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passer des paramètres d’effet en tant que propriétés CLR (Common Language Runtime)
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
 
 _Les propriétés CLR (Common Language Runtime) permettent de définir des paramètres d’effet qui ne répondent pas aux changements apportés aux propriétés au moment de l’exécution. Cet article montre comment utiliser des propriétés CLR pour passer des paramètres à un effet._
 
@@ -245,4 +245,4 @@ Cet article a montré comment utiliser des propriétés CLR pour passer des para
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Effet d’ombre (exemple)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [Effet d’ombre (exemple)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)

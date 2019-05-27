@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 489d2a76e6eff661360b24d1872ed1343c74b85e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 847566feec2069dea924bcd2a18abf2b3ddb250b
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261179"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213288"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Utilisation de types natifs dans des applications multiplateformes
 
@@ -36,9 +36,9 @@ Comme indiqué dans le [Sharing Code Options](~/cross-platform/app-fundamentals/
 
 ### <a name="portable-class-library-projects"></a>Projets de bibliothèque de classes portable
 
-Une bibliothèque de classes Portable (PCL) vous permet de cibler les plateformes que vous souhaitez prendre en charge et utiliser des Interfaces pour fournir des fonctionnalités spécifiques à la plateforme.
+Une bibliothèque de classes Portable (PCL) vous permet de cibler les plateformes que vous souhaitez prendre en charge et utiliser des interfaces pour fournir des fonctionnalités spécifiques à la plateforme.
 
-Étant donné que le type de projet de bibliothèque PCL est compilé vers le bas dans un `.DLL` et ne qu’aucune idée de l’API unifiée, vous allez être obligé de continuer à utiliser les types de données existante (`int`, `uint`, `float`) dans la bibliothèque PCL code source et type convertissent les appels vers les bibliothèques de classes portables classes et méthodes dans les applications frontales. Par exemple :
+Étant donné que le type de projet de bibliothèque PCL est compilé vers le bas dans un `.DLL` et ne qu’aucune idée de l’API unifiée, vous allez être obligé de continuer à utiliser les types de données existante (`int`, `uint`, `float`) dans la bibliothèque PCL code source et type convertissent les appels à la bibliothèque de classes portable classes et méthodes dans les applications frontales. Exemple :
 
 ```csharp
 using NativePCL;
@@ -52,7 +52,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 Le type de projet de ressource partagé vous permet d’organiser votre code source dans un projet distinct puis obtient inclus et compilé dans les applications individuels spécifiques à la plateforme front-end, utilisez `#if` comme requis pour gérer les directives de compilateur configuration requise spécifique à la plateforme.
 
-Les applications mobiles qui consomment le code partagé, ainsi que la taille et la complexité du code partagé, il faut prendre en compte lors de l’inter-plateformes avec des types de choix de la méthode de prise en charge des données natives de fin de la taille et la complexité de la face avant le Type de projet de ressources partagée.
+La taille et la complexité des applications mobiles front-end qui consomment le code partagé, ainsi que la taille et la complexité du code partagé, il faut prendre en considération lors du choix de la méthode de prise en charge pour les types de données natifs dans une inter-plateformes Projet de ressources partagées.
 
 En fonction de ces facteurs, les types suivants de solutions peuvent être implémentés à l’aide de la `if __UNIFIED__ ... #endif` directives de compilateur pour gérer les changements spécifiques API unifiée pour le code.
 
@@ -103,7 +103,7 @@ Dans le code ci-dessus, dans la mesure où le `CalculateArea` routine est très 
 
 #### <a name="using-method-overloads"></a>À l’aide de la méthode de surcharge
 
-Dans ce cas, il peut être la solution pour créer une version de surcharge des méthodes à l’aide des types de données 32 bits afin qu’ils prennent désormais `CGRect` en tant que paramètre et/ou la valeur de retour, convertir cette valeur à un `RectangleF` (connaître cette conversion à partir de `nfloat` à `float` est une conversion avec perte de données) et appeler la version d’origine de la routine pour effectuer le travail réel. Exemple :
+Dans ce cas, il peut être la solution pour créer une version de surcharge des méthodes à l’aide des types de données 32 bits afin qu’ils prennent désormais `CGRect` comme un paramètre ou une valeur de retour, convertir cette valeur à un `RectangleF` (connaître cette conversion à partir de `nfloat` à `float` est une conversion avec perte de données) et appeler la version d’origine de la routine pour effectuer le travail réel. Exemple :
 
 ```csharp
 using System;
@@ -127,8 +127,8 @@ namespace NativeShared
         #if __UNIFIED__
             public static nfloat CalculateArea(CGRect rect) {
 
-            // Call original routine to calculate area
-            return (nfloat)CalculateArea((RectangleF)rect);
+                // Call original routine to calculate area
+                return (nfloat)CalculateArea((RectangleF)rect);
 
             }
         #endif
@@ -173,12 +173,12 @@ using System;
 using System.Drawing;
 
 #if __UNIFIED__
-    // Mappings Unified CoreGraphic classes to MonoTouch classes
+    // Map Unified CoreGraphic classes to MonoTouch classes
     using RectangleF = global::CoreGraphics.CGRect;
     using SizeF = global::CoreGraphics.CGSize;
     using PointF = global::CoreGraphics.CGPoint;
 #else
-    // Mappings Unified types to MonoTouch types
+    // Map Unified types to MonoTouch types
     using nfloat = global::System.Single;
     using nint = global::System.Int32;
     using nuint = global::System.UInt32;
@@ -207,14 +207,14 @@ namespace NativeShared
 }
 ```
 
-Notez qu’ici nous avons modifié la `CalculateArea` retour de la méthode un `nfloat` au lieu de la norme `float`. Ceci, afin que nous obtiendrions pas une erreur de compilation lors de _implicitement_ convertir le `nfloat` résultat de notre calcul (dans la mesure où les deux valeurs multipliés sont `nfloat`) dans un `float` valeur de retour.
+Notez qu’ici nous avons modifié la `CalculateArea` méthode pour retourner un `nfloat` au lieu de la norme `float`. Ceci, afin que nous obtiendrions pas une erreur de compilation lors de _implicitement_ convertir le `nfloat` résultat de notre calcul (étant donné que les deux valeurs multipliés sont de type `nfloat`) dans un `float` valeur de retour.
 
 Si le code est compilé et exécuté sur un appareil non API unifiée, le `using nfloat = global::System.Single;` mappe le `nfloat` à un `Single` qui convertit implicitement en un `float` permettant à l’application consommatrice frontal appeler le `CalculateArea` méthode sans modification.
 
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>À l’aide de Conversions de types dans l’application Front-End
 
-Dans le cas où vos applications front-end rendre uniquement un certain nombre d’appels à votre bibliothèque de code partagé, une autre solution peut consister à laisser la bibliothèque inchangée et cast de type dans l’application Xamarin.iOS ou Xamarin.Mac lors de l’appel de la routine existante. Par exemple :
+Dans le cas où vos applications front-end rendre uniquement un certain nombre d’appels à votre bibliothèque de code partagé, une autre solution peut consister à laisser la bibliothèque inchangée et cast de type dans l’application Xamarin.iOS ou Xamarin.Mac lors de l’appel de la routine existante. Exemple :
 
 ```csharp
 using NativeShared;
@@ -236,13 +236,13 @@ Les éléments suivants sont nécessaire pour utiliser Xamarin.Forms pour les in
 - La solution entière doit être à l’aide de la version 1.3.1 (ou version ultérieure) du NuGet Package Xamarin.Forms.
 - Pour n’importe quel rendus personnalisés Xamarin.iOS, utilisez les mêmes types de solutions présentées ci-dessus selon la façon dont le code de l’interface utilisateur a été partagé (projet partagé ou PCL).
 
-Comme dans une application multiplateforme standard, les 32 bits existantes données types doivent être utilisés dans n’importe quel code partagé, inter-plateformes pour la plupart des situations de tous les. Les nouveaux Types de données natif doit uniquement servir lors d’un appel à une API Mac ou iOS à où prendre en charge pour les types prenant en charge les architecture sont requis.
+Comme dans une application multiplateforme standard, les types de données 32 bits existants utiliser dans n’importe quel code partagé, inter-plateformes pour la plupart des situations. Les nouveaux Types de données natif doit uniquement servir lors de l’appel d’une API Mac ou iOS où prendre en charge pour les types d’architecture prenant en charge est nécessaire.
 
 Pour plus d’informations, consultez notre [la mise à jour des applications Xamarin.Forms existantes](https://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/) documentation.
 
 ## <a name="summary"></a>Récapitulatif
 
-Dans cet article, nous avons voir lorsque nous devons utiliser les Types de données natifs dans une application API unifiée et leurs implications inter-plateformes. Nous avons présenté plusieurs solutions qui peuvent être utilisées dans les situations où les nouveaux Types de données natif doit être utilisés dans des bibliothèques multiplateformes. Et nous l’avons vu un guide rapide pour la prise en charge d’API unifiée dans Xamarin.Forms des applications multiplateformes.
+Dans cet article, nous avons vu quand utiliser les Types de données natifs dans une application API unifiée et leurs implications inter-plateformes. Nous avons présenté plusieurs solutions qui peuvent être utilisées dans les situations où les nouveaux Types de données natif doit être utilisés dans des bibliothèques multiplateformes. En outre, nous avons vu un guide rapide pour la prise en charge d’API unifiée dans Xamarin.Forms des applications multiplateformes.
 
 
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 22392603e337205dcdd4909dc61b6c22ca2f00b9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 88be56cae52e881792ec7a187ef7e158790e8a1b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057968"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926597"
 ---
 # <a name="implementing-a-view"></a>Implémentation d’une vue
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
 
 _Les contrôles d’interface utilisateur personnalisés Xamarin.Forms doivent dériver de la classe View, qui est utilisée pour placer des dispositions et des contrôles sur l’écran. Cet article montre comment créer un renderer personnalisé pour un contrôle personnalisé Xamarin.Forms qui est utilisé afin d’afficher un flux vidéo d’aperçu à partir de la caméra de l’appareil._
 
@@ -56,13 +56,13 @@ public class CameraPreview : View
 }
 ```
 
-Le contrôle personnalisé `CameraPreview` est créé dans le projet de bibliothèque de classes portable (PCL) et définit l’API pour le contrôle. Le contrôle personnalisé expose une propriété `Camera` qui est utilisée pour contrôler si le flux vidéo doit être affiché à partir de la caméra avant ou arrière de l’appareil. Si aucune valeur n’est spécifiée pour la propriété `Camera` lors de la création du contrôle, la caméra arrière est spécifiée par défaut.
+Le contrôle personnalisé `CameraPreview` est créé dans le projet de bibliothèque .NET Standard et définit l’API pour le contrôle. Le contrôle personnalisé expose une propriété `Camera` qui est utilisée pour contrôler si le flux vidéo doit être affiché à partir de la caméra avant ou arrière de l’appareil. Si aucune valeur n’est spécifiée pour la propriété `Camera` lors de la création du contrôle, la caméra arrière est spécifiée par défaut.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Consommation du contrôle personnalisé
 
-Le contrôle personnalisé `CameraPreview` peut être référencé en XAML dans le projet PCL en déclarant un espace de noms pour son emplacement et en utilisant le préfixe d’espace de noms sur l’élément de contrôle personnalisé. L’exemple de code suivant montre comment le contrôle personnalisé `CameraPreview` peut être consommé par une page XAML :
+Vous pouvez référencer le contrôle personnalisé `CameraPreview` en XAML dans le projet de bibliothèque .NET Standard en déclarant un espace de noms pour son emplacement et en utilisant le préfixe d’espace de noms sur l’élément de contrôle personnalisé. L’exemple de code suivant montre comment le contrôle personnalisé `CameraPreview` peut être consommé par une page XAML :
 
 ```xaml
 <ContentPage ...
@@ -334,4 +334,4 @@ Cet article a montré comment créer un renderer personnalisé pour un contrôle
 
 ## <a name="related-links"></a>Liens associés
 
-- [CustomRendererView (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+- [CustomRendererView (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)

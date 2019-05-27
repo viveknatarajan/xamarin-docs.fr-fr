@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 634ba351d419b1d18dcc5d5bdbf5e248f510329d
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672558"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971256"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propriétés d’automatisation dans Xamarin.Forms
 
@@ -149,7 +149,7 @@ Sur Android, pour définir le texte que les lecteurs d’écran liront pour la f
 
 ### <a name="masterdetailpage"></a>MasterDetailPage
 
-Sur iOS et la plateforme Windows universelle (UWP), pour définir le texte que les lecteurs d’écran liront pour le bouton bascule d’une [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), définissez les propriétés `AutomationProperties.Name` et `AutomationProperties.HelpText` dans la `MasterDetailPage` ou la propriété `Icon` dans la page `Master`.
+Sur iOS et la plateforme Windows universelle (UWP), pour définir le texte que les lecteurs d’écran liront pour le bouton bascule d’une [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), définissez les propriétés `AutomationProperties.Name` et `AutomationProperties.HelpText` dans la `MasterDetailPage` ou la propriété `IconImageSource` dans la page `Master`.
 
 Sur Android, pour définir le texte que les lecteurs d’écran liront pour le bouton bascule dans une [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), ajoutez des ressources de chaîne au projet Android :
 
@@ -161,11 +161,11 @@ Sur Android, pour définir le texte que les lecteurs d’écran liront pour le b
 </resources>
 ```
 
-Ensuite, définissez la propriété `AutomationId` de la propriété `Icon` de la page `Master` sur la chaîne appropriée :
+Ensuite, définissez la propriété `AutomationId` de la propriété `IconImageSource` de la page `Master` sur la chaîne appropriée :
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### <a name="toolbaritem"></a>ToolbarItem

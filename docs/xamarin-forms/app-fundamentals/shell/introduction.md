@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 20d9fb79d03990824dd884b62138a3e29b3ee04f
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: f6662f20485c6671edcb5a1654569cdd8498607e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054479"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005208"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "Cette API est actuellement en préversion")
-
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell réduit la complexité du développement d’applications mobiles en fournissant les fonctionnalités fondamentales nécessaires à la plupart des applications mobiles, y compris :
 
@@ -30,48 +28,7 @@ Xamarin.Forms Shell réduit la complexité du développement d’applications mo
 En outre, les applications Shell bénéficient d’une vitesse de rendu accrue et d’une consommation de mémoire réduite.
 
 > [!IMPORTANT]
-> Les applications iOS et Android existantes peuvent adopter Shell, bénéficiant immédiatement d’une navigation, de performances et d’une extensibilité améliorées.
-
-Shell étant en phase expérimentale, vous pouvez uniquement l’utiliser en ajoutant `Forms.SetFlags("Shell_Experimental");` à votre projet de plateforme, avant d’appeler la méthode `Forms.Init`.
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-```csharp
-public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-{
-    protected override void OnCreate(Bundle savedInstanceState)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        TabLayoutResource = Resource.Layout.Tabbar;
-        ToolbarResource = Resource.Layout.Toolbar;
-
-        base.OnCreate(savedInstanceState);
-
-        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-        LoadApplication(new App());
-    }
-}
-```
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-```csharp
-public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-{
-    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new App());
-
-        return base.FinishedLaunching(app, options);
-    }
-}
-```
-
-----
+> Xamarin.Forms Shell est uniquement disponible sur iOS et Android. Les applications iOS et Android existantes peuvent adopter Shell, bénéficiant immédiatement d’une navigation, de performances et d’une extensibilité améliorées.
 
 ## <a name="shell-navigation-experience"></a>Expérience de navigation Shell
 
@@ -181,11 +138,11 @@ Dans cet exemple, la classe `AppShell` est un fichier XAML dérivé de la classe
 
 La classe `Shell` définit les propriétés suivantes, qui contrôlent l’apparence d’une application Shell :
 
-- `ShellBackgroundColor`, de type `Color` : propriété jointe qui définit la couleur d’arrière-plan du chrome Shell. La couleur n’apparaît pas derrière le contenu Shell.
-- `ShellDisabledColor`, de type `Color` : propriété jointe qui définit la couleur permettant d’ombrer le texte et les icônes désactivées.
-- `ShellForegroundColor`, de type `Color` : propriété jointe qui définit la couleur permettant d’ombrer le texte et les icônes.
-- `ShellTitleColor`, de type `Color` : propriété jointe qui définit la couleur utilisée pour le titre de la page actuelle.
-- `ShellUnselectedColor`, de type `Color` : propriété jointe qui définit la couleur appliquée au texte et aux icônes désactivés dans le chrome Shell.
+- `BackgroundColor`, de type `Color` : propriété jointe qui définit la couleur d’arrière-plan du chrome Shell. La couleur n’apparaît pas derrière le contenu Shell.
+- `DisabledColor`, de type `Color` : propriété jointe qui définit la couleur permettant d’ombrer le texte et les icônes désactivées.
+- `ForegroundColor`, de type `Color` : propriété jointe qui définit la couleur permettant d’ombrer le texte et les icônes.
+- `TitleColor`, de type `Color` : propriété jointe qui définit la couleur utilisée pour le titre de la page actuelle.
+- `UnselectedColor`, de type `Color` : propriété jointe qui définit la couleur appliquée au texte et aux icônes désactivés dans le chrome Shell.
 
 Toutes ces propriétés sont soutenues par des objets [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), ce qui signifie qu’elles peuvent être des cibles de liaisons de données.
 
@@ -196,7 +153,6 @@ En outre, ces propriétés peuvent être définies à l’aide de feuilles de st
 La classe `Shell` définit les propriétés suivantes qui affectent la disposition du contenu de l’application Shell :
 
 - `NavBarIsVisible`, de type `boolean` : propriété jointe qui définit si la barre de navigation doit être visible lorsqu’une page s’affiche. Cette propriété doit être définie sur une page, et sa valeur par défaut est `true`.
-- `SetPaddingInsets`, de type `bool` : propriété jointe qui contrôle si le contenu de la page apparaît sous le chrome Shell. Cette propriété doit être définie sur une page, et sa valeur par défaut est `false`.
 - `TabBarIsVisible`, de type `bool` : propriété jointe qui définit si la barre d’onglets doit être visible lorsqu’une page s’affiche. Cette propriété doit être définie sur une page, et sa valeur par défaut est `true`.
 - `TitleView`, de type `View` : propriété jointe qui définit l’élément `TitleView` d’une page. Cette propriété doit être définie sur une page.
 
@@ -204,5 +160,5 @@ Toutes ces propriétés sont soutenues par des objets [`BindableProperty`](xref:
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Xaminals (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Propriétés spécifiques de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

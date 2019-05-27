@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0ed4d86054ada0918feccb123ac3a0de8ccf899b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870298"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926722"
 ---
 # <a name="customizing-a-map-pin"></a>Personnalisation d’une épingle de carte
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
 
 _Cet article montre comment créer un renderer personnalisé pour le contrôle Map qui affiche une carte native avec une épingle personnalisée et une vue personnalisée des données de l’épingle sur chaque plateforme._
 
@@ -663,4 +663,4 @@ Cet article vous a montré comment créer un renderer personnalisé pour le cont
 - [Contrôle Maps](~/xamarin-forms/user-interface/map.md)
 - [Cartes iOS](~/ios/user-interface/controls/ios-maps/index.md)
 - [API Cartes](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Épingle personnalisée (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+- [Épingle personnalisée (exemple)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)

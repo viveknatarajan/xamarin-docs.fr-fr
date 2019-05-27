@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: bb58866a0fc0ddb542c0a40eb7a0bd9b37562776
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 784c4d22a112de1adc98d6b7f183f9fa2081a897
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869664"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926272"
 ---
 # <a name="playing-a-web-video"></a>Lecture d’une vidéo web
 
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 La classe `VideoPlayer` définit une propriété `Source` utilisée pour spécifier la source du fichier vidéo ainsi qu’une propriété `AutoPlay`. `AutoPlay` a la valeur par défaut `true`, ce qui signifie que la lecture de la vidéo doit démarrer automatiquement après la définition de `Source` :
 
@@ -449,7 +449,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="setting-a-url-source"></a>Définition de la source d’une URL
 
-Avec l’implémentation de ces propriétés dans les trois renderers, il est possible de lire une vidéo à partir de la source d’une URL. La page **Lire une vidéo web** dans le programme [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/customrenderers/videoplayerdemos/index.md) est définie par le fichier XAML suivant :
+Avec l’implémentation de ces propriétés dans les trois renderers, il est possible de lire une vidéo à partir de la source d’une URL. La page **Lire une vidéo web** dans le programme [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) est définie par le fichier XAML suivant :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -525,4 +525,4 @@ Vous pouvez également définir la propriété `Source` à partir d’un fichier
 
 ## <a name="related-links"></a>Liens associés
 
-- [Démonstrations de lecteur vidéo (exemple)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Démonstrations de lecteur vidéo (exemple)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)

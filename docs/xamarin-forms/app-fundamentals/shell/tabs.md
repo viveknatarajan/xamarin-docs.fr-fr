@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: bc1ca01f4bf5cb8f7ef51c705319fb2cc1a0bd99
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a8da1e96bbdf51899b1780265933402da791a03e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054309"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005161"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Onglets Shell Xamarin.Forms
 
-![](~/media/shared/preview.png "Cette API est actuellement en préversion")
-
-[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Télécharger l’exemple](~/media/shared/download.png) Télécharger l’exemple](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Le niveau de navigation suivant le menu volant dans une application Shell est la barre d’onglets du bas. Lorsque le menu volant est fermé, la barre d’onglets du bas est considérée comme le plus haut niveau de navigation.
 
@@ -70,7 +68,7 @@ Shell comporte des opérateurs de conversion implicite qui permettent de simplif
 Cette conversion implicite encapsule automatiquement l’objet [`ContentPage`](xref:Xamarin.Forms.ContentPage) dans un objet `ShellContent`, qui est encapsulé dans un objet `Tab`, lui-même encapsulé dans un objet `FlyoutItem`.
 
 > [!IMPORTANT]
-> Dans une application Shell, tous les [`ContentPage`](xref:Xamarin.Forms.ContentPage) enfants d’un objet `ShellContent` sont créés au démarrage de l’application. Si l’on ajoute d’autres objets `ShellContent` suivant cette approche, des pages supplémentaires sont créées au lancement de l’application, ce qui risque de donner une mauvaise expérience de démarrage. Toutefois, Shell est également capable de créer des pages à la demande en réponse à la navigation. Pour plus d’informations, voir [Chargement efficace des pages](tabs.md#efficient-page-loading).
+> Dans une application Shell, tous les [`ContentPage`](xref:Xamarin.Forms.ContentPage) enfants d’un objet `ShellContent` sont créés au démarrage de l’application. L’ajout d’autres objets `ShellContent` avec cette approche crée des pages supplémentaires au démarrage de l’application, ce qui peut nuire à l’expérience de démarrage. Toutefois, Shell est également capable de créer des pages à la demande en réponse à la navigation. Pour plus d’informations, voir [Chargement efficace des pages](tabs.md#efficient-page-loading).
 
 ## <a name="bottom-tabs"></a>Onglets du bas
 
@@ -112,8 +110,8 @@ Les opérateurs de conversion implicite de Shell peuvent sinon permettre de supp
        x:Class="Xaminals.AppShell"
        FlyoutBehavior="Disabled">
     <FlyoutItem>
-        <views:CatsPage Icon="cat.png" />
-        <views:DogsPage Icon="dog.png" />
+        <views:CatsPage IconImageSource="cat.png" />
+        <views:DogsPage IconImageSource="dog.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -121,7 +119,7 @@ Les opérateurs de conversion implicite de Shell peuvent sinon permettre de supp
 Cette conversion implicite encapsule automatiquement chaque objet [`ContentPage`](xref:Xamarin.Forms.ContentPage) dans un objet `ShellContent`, les deux étant ensuite encapsulés dans un objet `Tab`.
 
 > [!IMPORTANT]
-> Dans une application Shell, tous les [`ContentPage`](xref:Xamarin.Forms.ContentPage) enfants d’un objet `ShellContent` sont créés au démarrage de l’application. Si l’on ajoute d’autres objets `ShellContent` suivant cette approche, des pages supplémentaires sont créées au lancement de l’application, ce qui risque de donner une mauvaise expérience de démarrage. Toutefois, Shell est également capable de créer des pages à la demande en réponse à la navigation. Pour plus d’informations, voir [Chargement efficace des pages](tabs.md#efficient-page-loading).
+> Dans une application Shell, tous les [`ContentPage`](xref:Xamarin.Forms.ContentPage) enfants d’un objet `ShellContent` sont créés au démarrage de l’application. L’ajout d’autres objets `ShellContent` avec cette approche crée des pages supplémentaires au démarrage de l’application, ce qui peut nuire à l’expérience de démarrage. Toutefois, Shell est également capable de créer des pages à la demande en réponse à la navigation. Pour plus d’informations, voir [Chargement efficace des pages](tabs.md#efficient-page-loading).
 
 ### <a name="tab-class"></a>Classe Tab
 
@@ -228,7 +226,7 @@ Les opérateurs de conversion implicite de Shell peuvent sinon permettre de supp
             <views:CatsPage />
             <views:DogsPage />
         </Tab>
-        <views:MonkeysPage Icon="monkey.png" />
+        <views:MonkeysPage IconImageSource="monkey.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -268,11 +266,11 @@ Ce XAML crée et affiche `CatsPage`, car il s’agit du premier élément de con
 
 La classe `Shell` comporte différentes propriétés qui contrôlent l’apparence des onglets :
 
-- `ShellTabBarBackgroundColor`, de type `Color`, représente une propriété jointe qui définit la couleur d’arrière-plan de la barre d’onglets. Si la propriété n’est pas définie, la valeur de propriété `ShellBackgroundColor` est utilisée.
-- `ShellTabBarDisabledColor`, de type `Color`, représente une propriété jointe qui définit la couleur de la barre d’onglets lorsqu’elle est désactivée. Si la propriété n’est pas définie, la valeur de propriété `ShellDisabledColor` est utilisée.
-- `ShellTabBarForegroundColor`, de type `Color`, représente une propriété jointe qui définit la couleur de premier plan de la barre d’onglets. Si la propriété n’est pas définie, la valeur de propriété `ShellForegroundColor` est utilisée.
-- `ShellTabBarTitleColor`, de type `Color`, représente une propriété jointe qui définit la couleur de titre de la barre d’onglets. Si la propriété n’est pas définie, la valeur de propriété `ShellTitleColor` est utilisée.
-- `ShellTabBarUnselectedColor`, de type `Color`, représente une propriété jointe qui définit la couleur de la barre d’onglets lorsqu’elle n’est pas sélectionnée. Si la propriété n’est pas définie, la valeur de propriété `ShellUnselectedColor` est utilisée.
+- `TabBarBackgroundColor`, de type `Color`, représente une propriété jointe qui définit la couleur d’arrière-plan de la barre d’onglets. Si la propriété n’est pas définie, la valeur de propriété `BackgroundColor` est utilisée.
+- `TabBarDisabledColor`, de type `Color`, représente une propriété jointe qui définit la couleur de la barre d’onglets lorsqu’elle est désactivée. Si la propriété n’est pas définie, la valeur de propriété `DisabledColor` est utilisée.
+- `TabBarForegroundColor`, de type `Color`, représente une propriété jointe qui définit la couleur de premier plan de la barre d’onglets. Si la propriété n’est pas définie, la valeur de propriété `ForegroundColor` est utilisée.
+- `TabBarTitleColor`, de type `Color`, représente une propriété jointe qui définit la couleur de titre de la barre d’onglets. Si la propriété n’est pas définie, la valeur de propriété `TitleColor` est utilisée.
+- `TabBarUnselectedColor`, de type `Color`, représente une propriété jointe qui définit la couleur de la barre d’onglets lorsqu’elle n’est pas sélectionnée. Si la propriété n’est pas définie, la valeur de propriété `UnselectedColor` est utilisée.
 
 Toutes ces propriétés s’appuient sur des objets [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), ce qui signifie qu’elles peuvent être des cibles de liaisons de données.
 
@@ -281,11 +279,11 @@ Par conséquent, les styles XAML peuvent servir à définir l’apparence des on
 ```xaml
 <Style x:Key="BaseStyle"
        TargetType="Element">
-    <Setter Property="Shell.ShellTabBarBackgroundColor"
+    <Setter Property="Shell.TabBarBackgroundColor"
             Value="#3498DB" />
-    <Setter Property="Shell.ShellTabBarTitleColor"
+    <Setter Property="Shell.TabBarTitleColor"
             Value="White" />
-    <Setter Property="Shell.ShellTabBarUnselectedColor"
+    <Setter Property="Shell.TabBarUnselectedColor"
             Value="#B4FFFFFF" />
 </Style>
 ```
@@ -294,6 +292,6 @@ Il est également possible de styliser les onglets avec des feuilles de style en
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Xaminals (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (exemple)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Navigation Shell Xamarin.Forms](navigation.md)
 - [Propriétés spécifiques Shell Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)
