@@ -112,6 +112,7 @@
 #### [Pages modales](app-fundamentals/navigation/modal.md)
 ### [Shell](app-fundamentals/shell/index.md)
 #### [Introduction](app-fundamentals/shell/introduction.md)
+#### [Créer une application d’interpréteur de commandes](app-fundamentals/shell/create.md)
 #### [Menu volant](app-fundamentals/shell/flyout.md)
 #### [Onglets](app-fundamentals/shell/tabs.md)
 #### [Navigation](app-fundamentals/shell/navigation.md)
